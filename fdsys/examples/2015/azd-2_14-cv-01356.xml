@@ -1,0 +1,271 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18be9037a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Arizona</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-03-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-03-27</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-azd-2_14-cv-01356</identifier>
+<identifier type="local">P0b002ee18be9037a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-03-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-03-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-azd-2_14-cv-01356</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-azd-2_14-cv-01356</accessId>
+ <courtType>District</courtType>
+ <courtCode>azd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Arizona</courtState>
+ <courtSortOrder>2040</courtSortOrder>
+ <caseNumber>2:14-cv-01356</caseNumber>
+ <caseOffice>Phoenix Division</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>950</natureSuitCode>
+ <natureSuit>Constitutionality of State Statutes</natureSuit>
+ <cause>42:1983 Civil Rights (Employment Discrimination)</cause>
+ <party fullName="Arizona, State of" lastName="Arizona, State of" role="Defendant"></party>
+ <party firstName="Joseph M" fullName="Joseph M Arpaio" lastName="Arpaio" role="Defendant"></party>
+ <party firstName="Guadalupe" fullName="Guadalupe Arredondo" lastName="Arredondo" role="Plaintiff"></party>
+ <party firstName="Sara Cervantes" fullName="Sara Cervantes Arreola" lastName="Arreola" role="Plaintiff"></party>
+ <party firstName="Susan E" fullName="Susan E Frederick-Gray" lastName="Frederick-Gray" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert Halliday" lastName="Halliday" role="Defendant"></party>
+ <party fullName="Maricopa, County of" lastName="Maricopa, County of" role="Defendant"></party>
+ <party firstName="Bill" fullName="Bill Montgomery" lastName="Montgomery" role="Defendant"></party>
+ <party fullName="Puente Arizona" lastName="Puente Arizona" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Puente Arizona et al v. Arpaio et al</title>
+ <partNumber>2:14-cv-01356</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-azd-2_14-cv-01356/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-cv-01356;14-1356</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Arizona</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Phoenix Division</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Arizona, State of</displayForm>
+ <namePart type="family">Arizona, State of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph M Arpaio</displayForm>
+ <namePart type="family">Arpaio</namePart>
+ <namePart type="given">Joseph M</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Guadalupe Arredondo</displayForm>
+ <namePart type="family">Arredondo</namePart>
+ <namePart type="given">Guadalupe</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sara Cervantes Arreola</displayForm>
+ <namePart type="family">Arreola</namePart>
+ <namePart type="given">Sara Cervantes</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Susan E Frederick-Gray</displayForm>
+ <namePart type="family">Frederick-Gray</namePart>
+ <namePart type="given">Susan E</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Halliday</displayForm>
+ <namePart type="family">Halliday</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Maricopa, County of</displayForm>
+ <namePart type="family">Maricopa, County of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bill Montgomery</displayForm>
+ <namePart type="family">Montgomery</namePart>
+ <namePart type="given">Bill</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Puente Arizona</displayForm>
+ <namePart type="family">Puente Arizona</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-azd-2_14-cv-01356</accessId>
+ <courtType>District</courtType>
+ <courtCode>azd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Arizona</courtState>
+ <courtSortOrder>2040</courtSortOrder>
+ <caseNumber>2:14-cv-01356</caseNumber>
+ <caseOffice>Phoenix Division</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>950</natureSuitCode>
+ <natureSuit>Constitutionality of State Statutes</natureSuit>
+ <cause>42:1983 Civil Rights (Employment Discrimination)</cause>
+ <party fullName="Arizona, State of" lastName="Arizona, State of" role="Defendant"></party>
+ <party firstName="Joseph M" fullName="Joseph M Arpaio" lastName="Arpaio" role="Defendant"></party>
+ <party firstName="Guadalupe" fullName="Guadalupe Arredondo" lastName="Arredondo" role="Plaintiff"></party>
+ <party firstName="Sara Cervantes" fullName="Sara Cervantes Arreola" lastName="Arreola" role="Plaintiff"></party>
+ <party firstName="Susan E" fullName="Susan E Frederick-Gray" lastName="Frederick-Gray" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert Halliday" lastName="Halliday" role="Defendant"></party>
+ <party fullName="Maricopa, County of" lastName="Maricopa, County of" role="Defendant"></party>
+ <party firstName="Bill" fullName="Bill Montgomery" lastName="Montgomery" role="Defendant"></party>
+ <party fullName="Puente Arizona" lastName="Puente Arizona" role="Plaintiff"></party>
+ <state>Arizona</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-azd-2_14-cv-01356-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-azd-2_14-cv-01356/USCOURTS-azd-2_14-cv-01356-0/mods.xml">
+ <titleInfo>
+  <title>Puente Arizona et al v. Arpaio et al</title>
+  <subTitle>ORDER: December 10, 2014, Plaintiffs shall file a memorandum, not to exceed 10pages, which attaches one or more anonymous affidavits and addresses why they show standing in this case. December 17, 2014, Defendants shall file a joint memorandum, not to exceed ten pages, addressing Plaintiffs December 10th filing. No further memoranda will be filed without order of the Court. Signed by Judge David G Campbell on 12/1/2014. (TCA)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-azd-2_14-cv-01356/pdf/USCOURTS-azd-2_14-cv-01356-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bea3d47</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-azd-2_14-cv-01356/USCOURTS-azd-2_14-cv-01356-0</identifier>
+ <identifier type="former granule identifier">azd-2_14-cv-01356_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-azd-2_14-cv-01356/USCOURTS-azd-2_14-cv-01356-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-azd-2_14-cv-01356/pdf/USCOURTS-azd-2_14-cv-01356-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-01356; Puente Arizona et al v. Arpaio et al; </searchTitle>
+  <courtName>United States District Court District of Arizona</courtName>
+  <state>Arizona</state>
+  <accessId>USCOURTS-azd-2_14-cv-01356-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-12-01</dateIssued>
+  <docketText>ORDER: December 10, 2014, Plaintiffs shall file a memorandum, not to exceed 10pages, which attaches one or more anonymous affidavits and addresses why they show standing in this case. December 17, 2014, Defendants shall file a joint memorandum, not to exceed ten pages, addressing Plaintiffs December 10th filing. No further memoranda will be filed without order of the Court. Signed by Judge David G Campbell on 12/1/2014. (TCA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-azd-2_14-cv-01356-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-azd-2_14-cv-01356/USCOURTS-azd-2_14-cv-01356-1/mods.xml">
+ <titleInfo>
+  <title>Puente Arizona et al v. Arpaio et al</title>
+  <subTitle>ORDER - 1. Plaintiffs&apos; motion for a preliminary injunction (Doc. 30) is granted. Until further order of the Court, Defendants are enjoined from enforcing A.R.S. § 2009(A)(3) and the portion of A.R.S. § 13-2008(A) that addresses actions committed &quot;with the intent to obtain or continue employment.&quot; 2. Defendants&apos; motions to dismiss and strike (Docs. 53, 55, 127) are denied. 3. Parties&apos; motions to supplement (Docs. 84, 98, 103, 123) are granted. (See document for further details). Signed by Judge David G Campbell on 1/5/15. (LAD)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-azd-2_14-cv-01356/pdf/USCOURTS-azd-2_14-cv-01356-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bea3d48</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-azd-2_14-cv-01356/USCOURTS-azd-2_14-cv-01356-1</identifier>
+ <identifier type="former granule identifier">azd-2_14-cv-01356_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-azd-2_14-cv-01356/USCOURTS-azd-2_14-cv-01356-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-azd-2_14-cv-01356/pdf/USCOURTS-azd-2_14-cv-01356-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-01356; Puente Arizona et al v. Arpaio et al; </searchTitle>
+  <courtName>United States District Court District of Arizona</courtName>
+  <state>Arizona</state>
+  <accessId>USCOURTS-azd-2_14-cv-01356-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER - 1. Plaintiffs&apos; motion for a preliminary injunction (Doc. 30) is granted. Until further order of the Court, Defendants are enjoined from enforcing A.R.S. § 2009(A)(3) and the portion of A.R.S. § 13-2008(A) that addresses actions committed &quot;with the intent to obtain or continue employment.&quot; 2. Defendants&apos; motions to dismiss and strike (Docs. 53, 55, 127) are denied. 3. Parties&apos; motions to supplement (Docs. 84, 98, 103, 123) are granted. (See document for further details). Signed by Judge David G Campbell on 1/5/15. (LAD)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-azd-2_14-cv-01356-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-azd-2_14-cv-01356/USCOURTS-azd-2_14-cv-01356-2/mods.xml">
+ <titleInfo>
+  <title>Puente Arizona et al v. Arpaio et al</title>
+  <subTitle>ORDER denying 141 Motion for Reconsideration; denying 141 Motion reconsideration. Signed by Judge David G Campbell on 3/27/2015.(DGC, nvo)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-azd-2_14-cv-01356/pdf/USCOURTS-azd-2_14-cv-01356-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bea3d16</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-azd-2_14-cv-01356/USCOURTS-azd-2_14-cv-01356-2</identifier>
+ <identifier type="former granule identifier">azd-2_14-cv-01356_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-azd-2_14-cv-01356/USCOURTS-azd-2_14-cv-01356-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-azd-2_14-cv-01356/pdf/USCOURTS-azd-2_14-cv-01356-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-01356; Puente Arizona et al v. Arpaio et al; </searchTitle>
+  <courtName>United States District Court District of Arizona</courtName>
+  <state>Arizona</state>
+  <accessId>USCOURTS-azd-2_14-cv-01356-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-03-27</dateIssued>
+  <docketText>ORDER denying 141 Motion for Reconsideration; denying 141 Motion reconsideration. Signed by Judge David G Campbell on 3/27/2015.(DGC, nvo)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,208 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181724329">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00548</identifier>
+<identifier type="local">P0b002ee181724329</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_05-cv-00548</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cv-00548</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cv-00548</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>840</natureSuitCode>
+ <natureSuit>Trademark</natureSuit>
+ <cause>15:1114 Trademark Infringement</cause>
+ <party firstName="Jehad" fullName="Jehad Edwan" lastName="Edwan" role="Defendant"></party>
+ <party fullName="Inphonic" lastName="Inphonic" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Inphonic v. Edwan</title>
+ <partNumber>8:05-cv-00548</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00548/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:05-cv-00548;05-548</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jehad Edwan</displayForm>
+ <namePart type="family">Edwan</namePart>
+ <namePart type="given">Jehad</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Inphonic</displayForm>
+ <namePart type="family">Inphonic</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cv-00548</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cv-00548</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>840</natureSuitCode>
+ <natureSuit>Trademark</natureSuit>
+ <cause>15:1114 Trademark Infringement</cause>
+ <party firstName="Jehad" fullName="Jehad Edwan" lastName="Edwan" role="Defendant"></party>
+ <party fullName="Inphonic" lastName="Inphonic" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00548-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00548/USCOURTS-ned-8_05-cv-00548-0/mods.xml">
+ <titleInfo>
+  <title>Inphonic v. Edwan</title>
+  <subTitle>ORDER regarding MOTION for Preliminary Injunction and Request for Evidentiary Hearing and Oral Argument 10 filed by Inphonic, Inc. Hearing on said motion is scheduled for January 4, 2006, at 10:30 a.m. Signed by Judge Lyle E. Strom on 12/29/2005. (JDR)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00548-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174b617</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00548/USCOURTS-ned-8_05-cv-00548-0</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00548_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00548/USCOURTS-ned-8_05-cv-00548-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00548/pdf/USCOURTS-ned-8_05-cv-00548-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00548; Inphonic v. Edwan; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00548-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-12-29</dateIssued>
+  <docketText>ORDER regarding MOTION for Preliminary Injunction and Request for Evidentiary Hearing and Oral Argument 10 filed by Inphonic, Inc. Hearing on said motion is scheduled for January 4, 2006, at 10:30 a.m. Signed by Judge Lyle E. Strom on 12/29/2005. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00548-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00548/USCOURTS-ned-8_05-cv-00548-1/mods.xml">
+ <titleInfo>
+  <title>Inphonic v. Edwan</title>
+  <subTitle>ORDER adopting 24 stipulated order and injunction. This action is dismissed with prejudice, each party to pay its own fees and costs, except as explicitly provided. Signed by Judge Lyle E. Strom on 1/30/2006. (JSF)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00548-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174b616</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00548/USCOURTS-ned-8_05-cv-00548-1</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00548_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00548/USCOURTS-ned-8_05-cv-00548-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00548/pdf/USCOURTS-ned-8_05-cv-00548-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00548; Inphonic v. Edwan; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00548-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-01-30</dateIssued>
+  <docketText>ORDER adopting 24 stipulated order and injunction. This action is dismissed with prejudice, each party to pay its own fees and costs, except as explicitly provided. Signed by Judge Lyle E. Strom on 1/30/2006. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00548-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00548/USCOURTS-ned-8_05-cv-00548-2/mods.xml">
+ <titleInfo>
+  <title>Inphonic v. Edwan</title>
+  <subTitle>ORDER to withdraw exhibits or to show cause why exhibits should not be destroyed.Ordered by Judge Lyle E. Strom. (CJP)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00548-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174b618</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00548/USCOURTS-ned-8_05-cv-00548-2</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00548_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00548/USCOURTS-ned-8_05-cv-00548-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00548/pdf/USCOURTS-ned-8_05-cv-00548-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00548; Inphonic v. Edwan; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00548-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-01-11</dateIssued>
+  <docketText>ORDER to withdraw exhibits or to show cause why exhibits should not be destroyed.Ordered by Judge Lyle E. Strom. (CJP)</docketText>
+</extension>
+</relatedItem>
+</mods>

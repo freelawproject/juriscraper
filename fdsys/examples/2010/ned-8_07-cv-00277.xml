@@ -1,0 +1,420 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a3820">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-14</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00277</identifier>
+<identifier type="local">P0b002ee1817a3820</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_07-cv-00277</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cv-00277</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cv-00277</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1441 Petition for Removal- Civil Rights Act</cause>
+ <party firstName="Charles" fullName="Charles Brizendine" lastName="Brizendine" role="Plaintiff"></party>
+ <party fullName="City of Omaha" lastName="City of Omaha" role="Defendant"></party>
+ <party firstName="Marty" fullName="Marty Conboy" lastName="Conboy" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Curd" lastName="Curd" role="Defendant"></party>
+ <party firstName="John" fullName="John Does 1-10" lastName="Does 1-10" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian Gerrity" lastName="Gerrity" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul D. Kratz" lastName="Kratz" middleName="D." role="Defendant"></party>
+ <party fullName="Omaha Police Department" lastName="Omaha Police Department" role="Defendant"></party>
+ <party firstName="Frank" fullName="Frank Platt" lastName="Platt" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Warren" lastName="Warren" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Brizendine v. City of Omaha, et al</title>
+ <partNumber>8:07-cv-00277</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00277/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:07-cv-00277;07-277</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Charles Brizendine</displayForm>
+ <namePart type="family">Brizendine</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>City of Omaha</displayForm>
+ <namePart type="family">City of Omaha</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marty Conboy</displayForm>
+ <namePart type="family">Conboy</namePart>
+ <namePart type="given">Marty</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Curd</displayForm>
+ <namePart type="family">Curd</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Does 1-10</displayForm>
+ <namePart type="family">Does 1-10</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brian Gerrity</displayForm>
+ <namePart type="family">Gerrity</namePart>
+ <namePart type="given">Brian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Paul D. Kratz</displayForm>
+ <namePart type="family">Kratz</namePart>
+ <namePart type="given">Paul</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Omaha Police Department</displayForm>
+ <namePart type="family">Omaha Police Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Frank Platt</displayForm>
+ <namePart type="family">Platt</namePart>
+ <namePart type="given">Frank</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas Warren</displayForm>
+ <namePart type="family">Warren</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cv-00277</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cv-00277</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1441 Petition for Removal- Civil Rights Act</cause>
+ <party firstName="Charles" fullName="Charles Brizendine" lastName="Brizendine" role="Plaintiff"></party>
+ <party fullName="City of Omaha" lastName="City of Omaha" role="Defendant"></party>
+ <party firstName="Marty" fullName="Marty Conboy" lastName="Conboy" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Curd" lastName="Curd" role="Defendant"></party>
+ <party firstName="John" fullName="John Does 1-10" lastName="Does 1-10" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian Gerrity" lastName="Gerrity" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul D. Kratz" lastName="Kratz" middleName="D." role="Defendant"></party>
+ <party fullName="Omaha Police Department" lastName="Omaha Police Department" role="Defendant"></party>
+ <party firstName="Frank" fullName="Frank Platt" lastName="Platt" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Warren" lastName="Warren" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00277-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-0/mods.xml">
+ <titleInfo>
+  <title>Brizendine v. City of Omaha, et al</title>
+  <subTitle>CONSENT to Jurisdiction by US Magistrate Judge - upon consent of parties, this case is transferred to Magistrate Judge F. A. Gossett for final disposition. Ordered by Judge Laurie Smith Camp. (JSF)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-11-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00277-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181840b2e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-0</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00277_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00277/pdf/USCOURTS-ned-8_07-cv-00277-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00277; Brizendine v. City of Omaha, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00277-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-11-27</dateIssued>
+  <docketText>CONSENT to Jurisdiction by US Magistrate Judge - upon consent of parties, this case is transferred to Magistrate Judge F. A. Gossett for final disposition. Ordered by Judge Laurie Smith Camp. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00277-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-1/mods.xml">
+ <titleInfo>
+  <title>Brizendine v. City of Omaha, et al</title>
+  <subTitle>ORDER. Counsel appeared telephonically for R.16 conference. Progression of the case reviewed. Defendant is given until 1/31/2008 to file any motion for qualified immunity and/or motion for summary judgment. The R.16 conference is continued to 4/28/2008 at 9:30 A.M., by telephone call initiated by plaintiff&apos;s counsel.Ordered by Magistrate Judge F. A. Gossett. (ARL, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00277-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181840c22</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-1</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00277_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00277/pdf/USCOURTS-ned-8_07-cv-00277-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00277; Brizendine v. City of Omaha, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00277-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-01-14</dateIssued>
+  <docketText>ORDER. Counsel appeared telephonically for R.16 conference. Progression of the case reviewed. Defendant is given until 1/31/2008 to file any motion for qualified immunity and/or motion for summary judgment. The R.16 conference is continued to 4/28/2008 at 9:30 A.M., by telephone call initiated by plaintiff&apos;s counsel.Ordered by Magistrate Judge F. A. Gossett. (ARL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00277-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-2/mods.xml">
+ <titleInfo>
+  <title>Brizendine v. City of Omaha, et al</title>
+  <subTitle>ORDER AND NOTICE OF HEARING. Counsel&apos;s motion to withdraw 26 and accompanying motion for continuance 26 are set for hearing on Monday, May 5, 2008 at 11:00 a.m. in Courtroom 6, second floor, Roman L. Hruska U.S. Courthouse, 111 S. 18th Plaza, Omaha, Nebraska. Timothy L. Ashford and plaintiff, Charles Brizendine, are both required to personally attend the hearing. Mr. Ashford shall, no later than April 23, 2008, serve a copy of this Order and Notice of Hearing on Charles Brizendine at his last known address. Mr. Ashford shall, no later than April 30, 2008, timely file proof of service showing compliance with paragraph 3, above, and listing the names and addresses of the persons to whom notice was sent. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-04-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00277-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181840c25</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-2</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00277_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00277/pdf/USCOURTS-ned-8_07-cv-00277-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00277; Brizendine v. City of Omaha, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00277-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-04-17</dateIssued>
+  <docketText>ORDER AND NOTICE OF HEARING. Counsel&apos;s motion to withdraw 26 and accompanying motion for continuance 26 are set for hearing on Monday, May 5, 2008 at 11:00 a.m. in Courtroom 6, second floor, Roman L. Hruska U.S. Courthouse, 111 S. 18th Plaza, Omaha, Nebraska. Timothy L. Ashford and plaintiff, Charles Brizendine, are both required to personally attend the hearing. Mr. Ashford shall, no later than April 23, 2008, serve a copy of this Order and Notice of Hearing on Charles Brizendine at his last known address. Mr. Ashford shall, no later than April 30, 2008, timely file proof of service showing compliance with paragraph 3, above, and listing the names and addresses of the persons to whom notice was sent. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00277-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-3/mods.xml">
+ <titleInfo>
+  <title>Brizendine v. City of Omaha, et al</title>
+  <subTitle>ORDER. The Motion to Withdraw 26 is granted. If substitute counsel does not enter a written appearance in this court before the close of business on May 23, 2008 in full compliance with NEGenR 1.3(d), then the plaintiff will be deemed to be proceeding pro se, that is, without the assistance of counsel. Case Management Deadline set for 5/23/2008. Plaintiff is given a final extension of time until May 30, 2008 to file his written response in opposition to the defendants&apos; pending Motion for Summary Judgment 19. The motion will be deemed ripe for decision on Monday, June 2, 2008. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-05-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00277-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181840c26</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-3</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00277_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00277/pdf/USCOURTS-ned-8_07-cv-00277-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00277; Brizendine v. City of Omaha, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00277-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-05-07</dateIssued>
+  <docketText>ORDER. The Motion to Withdraw 26 is granted. If substitute counsel does not enter a written appearance in this court before the close of business on May 23, 2008 in full compliance with NEGenR 1.3(d), then the plaintiff will be deemed to be proceeding pro se, that is, without the assistance of counsel. Case Management Deadline set for 5/23/2008. Plaintiff is given a final extension of time until May 30, 2008 to file his written response in opposition to the defendants&apos; pending Motion for Summary Judgment 19. The motion will be deemed ripe for decision on Monday, June 2, 2008. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00277-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-4/mods.xml">
+ <titleInfo>
+  <title>Brizendine v. City of Omaha, et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Plaintiff&apos;s claims against the Omaha Police Department, Thomas Warren, Chief of Police, City Attorney Paul D. Kratz, City Prosecutor Marty Conboy, Omaha Police Officer Michael Curd, and Omaha Police Officer Brian Gerrity are hereby dismissed pursuant to Fed. R. Civ. P. 41(a)(2). Defendants&apos; Motion for Summary Judgment 19 is denied as moot as to these defendants. Defendants&apos; Motion for Summary Judgment 19 is denied as to the City of Omaha and Omaha Police Officer Frank Platt, individually and in his official capacity. The plaintiff may file an amended complaint restating his claims against the remaining defendants, i.e., the City of Omaha and Omaha Police Officer Frank Platt, individually and in his official capacity. Any amended complaint shall be filed and served no later than October 15, 2008. Ordered by Magistrate Judge F. A. Gossett. (KBJ)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-09-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00277-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181840c23</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-4</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00277_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00277/pdf/USCOURTS-ned-8_07-cv-00277-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00277; Brizendine v. City of Omaha, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00277-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-09-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Plaintiff&apos;s claims against the Omaha Police Department, Thomas Warren, Chief of Police, City Attorney Paul D. Kratz, City Prosecutor Marty Conboy, Omaha Police Officer Michael Curd, and Omaha Police Officer Brian Gerrity are hereby dismissed pursuant to Fed. R. Civ. P. 41(a)(2). Defendants&apos; Motion for Summary Judgment 19 is denied as moot as to these defendants. Defendants&apos; Motion for Summary Judgment 19 is denied as to the City of Omaha and Omaha Police Officer Frank Platt, individually and in his official capacity. The plaintiff may file an amended complaint restating his claims against the remaining defendants, i.e., the City of Omaha and Omaha Police Officer Frank Platt, individually and in his official capacity. Any amended complaint shall be filed and served no later than October 15, 2008. Ordered by Magistrate Judge F. A. Gossett. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00277-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-5/mods.xml">
+ <titleInfo>
+  <title>Brizendine v. City of Omaha, et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting in part and denying in part 78 Motion for Summary Judgment. The motion is granted as to plaintiff&apos;s state law claims and denied in all other respects. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00277-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181840b2d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-5</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00277_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00277/pdf/USCOURTS-ned-8_07-cv-00277-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00277; Brizendine v. City of Omaha, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00277-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-10-09</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting in part and denying in part 78 Motion for Summary Judgment. The motion is granted as to plaintiff&apos;s state law claims and denied in all other respects. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00277-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-6/mods.xml">
+ <titleInfo>
+  <title>Brizendine v. City of Omaha, et al</title>
+  <subTitle>ORDER granting in part and denying in part 92 defendants&apos; Motion in Limine. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-11-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00277-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181840c24</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-6</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00277_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00277/pdf/USCOURTS-ned-8_07-cv-00277-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00277; Brizendine v. City of Omaha, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00277-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2009-11-02</dateIssued>
+  <docketText>ORDER granting in part and denying in part 92 defendants&apos; Motion in Limine. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00277-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-7/mods.xml">
+ <titleInfo>
+  <title>Brizendine v. City of Omaha, et al</title>
+  <subTitle>ORDER to Withdraw Exhibits or to Show Cause Why Exhibits Should Not Be Destroyed. Ordered by Magistrate Judge F. A. Gossett. (MLF, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00277-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181840b2c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-7</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00277_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00277/USCOURTS-ned-8_07-cv-00277-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00277/pdf/USCOURTS-ned-8_07-cv-00277-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00277; Brizendine v. City of Omaha, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00277-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2010-01-14</dateIssued>
+  <docketText>ORDER to Withdraw Exhibits or to Show Cause Why Exhibits Should Not Be Destroyed. Ordered by Magistrate Judge F. A. Gossett. (MLF, )</docketText>
+</extension>
+</relatedItem>
+</mods>

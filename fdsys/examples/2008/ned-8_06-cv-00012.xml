@@ -1,0 +1,572 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18175cc57">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00012</identifier>
+<identifier type="local">P0b002ee18175cc57</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_06-cv-00012</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cv-00012</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cv-00012</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:12101 Americans with Disabilities Act</cause>
+ <party fullName="Metropolitan Utilities District" lastName="Metropolitan Utilities District" role="Defendant"></party>
+ <party firstName="Janice" fullName="Janice Schmidt" lastName="Schmidt" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Schmidt v. Metropolitan Utilities District</title>
+ <partNumber>8:06-cv-00012</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00012/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:06-cv-00012;06-012</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Metropolitan Utilities District</displayForm>
+ <namePart type="family">Metropolitan Utilities District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Janice Schmidt</displayForm>
+ <namePart type="family">Schmidt</namePart>
+ <namePart type="given">Janice</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cv-00012</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cv-00012</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:12101 Americans with Disabilities Act</cause>
+ <party fullName="Metropolitan Utilities District" lastName="Metropolitan Utilities District" role="Defendant"></party>
+ <party firstName="Janice" fullName="Janice Schmidt" lastName="Schmidt" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00012-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-0/mods.xml">
+ <titleInfo>
+  <title>Schmidt v. Metropolitan Utilities District</title>
+  <subTitle>AMENDED FINAL PROGRESSION ORDER granting 16 Motion to Continue Progression Schedule. Final Pretrial Conference set for 4/9/2007 at 9:00 AM; Jury Trial set for 5/15/2007 before Judge Laurie Smith Camp. Status report re settlement negotiation due 1/29/2007. Signed by Magistrate Judge F. A. Gossett on 7/17/2006. (CLS, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-07-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00012-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181794067</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-0</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00012_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00012/pdf/USCOURTS-ned-8_06-cv-00012-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00012; Schmidt v. Metropolitan Utilities District; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00012-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-07-17</dateIssued>
+  <docketText>AMENDED FINAL PROGRESSION ORDER granting 16 Motion to Continue Progression Schedule. Final Pretrial Conference set for 4/9/2007 at 9:00 AM; Jury Trial set for 5/15/2007 before Judge Laurie Smith Camp. Status report re settlement negotiation due 1/29/2007. Signed by Magistrate Judge F. A. Gossett on 7/17/2006. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00012-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-1/mods.xml">
+ <titleInfo>
+  <title>Schmidt v. Metropolitan Utilities District</title>
+  <subTitle>PROTECTIVE ORDER (granting Motion for Protective Order). The terms of the parties&apos; Stipulated Protective Order 18 are hereby adopted by the court and shall become effective immediately. Signed by Magistrate Judge F. A. Gossett on 7/20/2006. (CLS, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-07-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00012-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817940cd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-1</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00012_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00012/pdf/USCOURTS-ned-8_06-cv-00012-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00012; Schmidt v. Metropolitan Utilities District; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00012-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-07-20</dateIssued>
+  <docketText>PROTECTIVE ORDER (granting Motion for Protective Order). The terms of the parties&apos; Stipulated Protective Order 18 are hereby adopted by the court and shall become effective immediately. Signed by Magistrate Judge F. A. Gossett on 7/20/2006. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00012-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-2/mods.xml">
+ <titleInfo>
+  <title>Schmidt v. Metropolitan Utilities District</title>
+  <subTitle>n accordance with NEGenR 1.3(d). If substitute counsel does not enter an appearance by November 15, 2006, the Motion to Withdraw will be granted and the plaintiff, Janice Schmidt, will be deemed to be proceeding pro se. Moving counsel shall serve a copy of this order on the plaintiff at her last known address and shall file proof of service with the court before the close of business on November 1, 2006. Ordered by Magistrate Judge F. A. Gossett. (CLS, )SCHEDULING ORDER regarding 23 Motion to Withdraw as Attorney. The motion is held in abeyance until November 15, 2006, pending the entry of appearance of substitute counsel. The motion will be granted after substitute counsel enters an appearance i</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00012-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181794063</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-2</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00012_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00012/pdf/USCOURTS-ned-8_06-cv-00012-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00012; Schmidt v. Metropolitan Utilities District; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00012-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-10-17</dateIssued>
+  <docketText>n accordance with NEGenR 1.3(d). If substitute counsel does not enter an appearance by November 15, 2006, the Motion to Withdraw will be granted and the plaintiff, Janice Schmidt, will be deemed to be proceeding pro se. Moving counsel shall serve a copy of this order on the plaintiff at her last known address and shall file proof of service with the court before the close of business on November 1, 2006. Ordered by Magistrate Judge F. A. Gossett. (CLS, )SCHEDULING ORDER regarding 23 Motion to Withdraw as Attorney. The motion is held in abeyance until November 15, 2006, pending the entry of appearance of substitute counsel. The motion will be granted after substitute counsel enters an appearance i</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00012-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-3/mods.xml">
+ <titleInfo>
+  <title>Schmidt v. Metropolitan Utilities District</title>
+  <subTitle>ORDER RE: TRIAL PREPARATION (Civil Jury Trial). Ordered by Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00012-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817940c9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-3</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00012_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00012/pdf/USCOURTS-ned-8_06-cv-00012-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00012; Schmidt v. Metropolitan Utilities District; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00012-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2006-11-14</dateIssued>
+  <docketText>ORDER RE: TRIAL PREPARATION (Civil Jury Trial). Ordered by Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00012-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-4/mods.xml">
+ <titleInfo>
+  <title>Schmidt v. Metropolitan Utilities District</title>
+  <subTitle>ORDER granting 23 Motion to Withdraw as Attorney. Plaintiff, Janice Schmidt, is hereby deemed to be proceeding pro se. Plaintiff is now personally responsible for prosecuting this case on her own behalf in accordance with the Federal Rules of Civil Procedure. The Clerk shall amend the records of the court to show that plaintiff is proceeding pro se and shall mail a copy of this order to Janice Schmidt at her lat know address, together with a copy of the docket sheet. Ordered by Magistrate Judge F. A. Gossett.(MKR )Copies mailed as directed to 15819 Crying Wind Drive, Tampa, Florida 33624</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00012-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181794062</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-4</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00012_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00012/pdf/USCOURTS-ned-8_06-cv-00012-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00012; Schmidt v. Metropolitan Utilities District; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00012-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-11-17</dateIssued>
+  <docketText>ORDER granting 23 Motion to Withdraw as Attorney. Plaintiff, Janice Schmidt, is hereby deemed to be proceeding pro se. Plaintiff is now personally responsible for prosecuting this case on her own behalf in accordance with the Federal Rules of Civil Procedure. The Clerk shall amend the records of the court to show that plaintiff is proceeding pro se and shall mail a copy of this order to Janice Schmidt at her lat know address, together with a copy of the docket sheet. Ordered by Magistrate Judge F. A. Gossett.(MKR )Copies mailed as directed to 15819 Crying Wind Drive, Tampa, Florida 33624</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00012-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-5/mods.xml">
+ <titleInfo>
+  <title>Schmidt v. Metropolitan Utilities District</title>
+  <subTitle>ORDER granting 28 defendant&apos;s motion to schedule a status conference with the parties. A status conference is set for 1/11/07 at 11:00 a.m. Ordered by Magistrate Judge F. A. Gossett.(JSF)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00012-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181794060</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-5</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00012_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00012/pdf/USCOURTS-ned-8_06-cv-00012-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00012; Schmidt v. Metropolitan Utilities District; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00012-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2006-12-18</dateIssued>
+  <docketText>ORDER granting 28 defendant&apos;s motion to schedule a status conference with the parties. A status conference is set for 1/11/07 at 11:00 a.m. Ordered by Magistrate Judge F. A. Gossett.(JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00012-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-6/mods.xml">
+ <titleInfo>
+  <title>Schmidt v. Metropolitan Utilities District</title>
+  <subTitle>MEMORANDUM AND ORDER that the plaintiff shall have until April 9, 2007 to respond to the defendant&apos;s Amended Motion to Compel 36; The Clerk of Court is directed to send a copy of this Memorandum and Order to the plaintiff at her last known address. Ordered by Magistrate Judge F. A. Gossett. (MKR)copies mailed as directed</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00012-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817940cc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-6</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00012_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00012/pdf/USCOURTS-ned-8_06-cv-00012-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00012; Schmidt v. Metropolitan Utilities District; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00012-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2007-03-19</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that the plaintiff shall have until April 9, 2007 to respond to the defendant&apos;s Amended Motion to Compel 36; The Clerk of Court is directed to send a copy of this Memorandum and Order to the plaintiff at her last known address. Ordered by Magistrate Judge F. A. Gossett. (MKR)copies mailed as directed</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00012-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-7/mods.xml">
+ <titleInfo>
+  <title>Schmidt v. Metropolitan Utilities District</title>
+  <subTitle>MEMORANDUM AND ORDER granting 35 and 36 Motion to Compel and Amended Motion to Compel. The Defendant&apos;s Motion for Sanctions 36 is denied without prejudice subject to reassertion at a later date. The Final Progression Order is Amended as Follows: Deposition Deadline. All depositions, whether or not they are intended to be used at trial, shall be completed by 6/15/07; and all motions for summary judgment shall be filed on or before 7/20/07. The Clerk of Court is directed to send a copy of this Memorandum and Order to the Plaintiff at her last known address. Ordered by Judge Laurie Smith Camp. COPIES MAILED (JSF)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-04-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00012-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181794066</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-7</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00012_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00012/pdf/USCOURTS-ned-8_06-cv-00012-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00012; Schmidt v. Metropolitan Utilities District; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00012-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2007-04-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 35 and 36 Motion to Compel and Amended Motion to Compel. The Defendant&apos;s Motion for Sanctions 36 is denied without prejudice subject to reassertion at a later date. The Final Progression Order is Amended as Follows: Deposition Deadline. All depositions, whether or not they are intended to be used at trial, shall be completed by 6/15/07; and all motions for summary judgment shall be filed on or before 7/20/07. The Clerk of Court is directed to send a copy of this Memorandum and Order to the Plaintiff at her last known address. Ordered by Judge Laurie Smith Camp. COPIES MAILED (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00012-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-8/mods.xml">
+ <titleInfo>
+  <title>Schmidt v. Metropolitan Utilities District</title>
+  <subTitle>GENERAL ORDER 07-09 concerning the management of pro se cases including supervision of pro se staff attorneys. Except for motions filed under 28 U.S.C. § 2255, and except for death penalty cases, Judge Kopf is assigned the overall responsibility for the management of pro se cases in the District of Nebraska and all previously filed pro se cases referred to Magistrate Judge Gossett or Magistrate Judge Thalken are herewith reassigned to Magistrate Judge Piester. The clerk&apos;s office shall file this order in each pending case referred to the Pro Se Docket in CM/ECF. Ordered by Chief Judge Bataillon. (JAR)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-07-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00012-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181794068</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-8</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00012_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00012/pdf/USCOURTS-ned-8_06-cv-00012-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00012; Schmidt v. Metropolitan Utilities District; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00012-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2007-07-03</dateIssued>
+  <docketText>GENERAL ORDER 07-09 concerning the management of pro se cases including supervision of pro se staff attorneys. Except for motions filed under 28 U.S.C. § 2255, and except for death penalty cases, Judge Kopf is assigned the overall responsibility for the management of pro se cases in the District of Nebraska and all previously filed pro se cases referred to Magistrate Judge Gossett or Magistrate Judge Thalken are herewith reassigned to Magistrate Judge Piester. The clerk&apos;s office shall file this order in each pending case referred to the Pro Se Docket in CM/ECF. Ordered by Chief Judge Bataillon. (JAR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00012-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-9/mods.xml">
+ <titleInfo>
+  <title>Schmidt v. Metropolitan Utilities District</title>
+  <subTitle>MEMORANDUM AND ORDER - That the Defendants Motion to Dismiss or in the Alternative for MonetarySanctions, Filing No. 39, is granted in part and denied in part as follows:a. Defendants motion to dismiss this case as a discovery sanction isdenied; b. That portion of Defendants motion which seeks an order awardingthe defendant its reasonable expenses, including attorney fees, incurred in the filing of this motion, is granted, and: i. The Defendant is given until August 6, 2007 to file its application for expenses and fees; ii. The Plaintiff is given until August 16, 2007 to file her responseto the application for fees; andiii. Based on these submissions, the court will enter an orderawarding the Defendant its attorney fees and expenses. Thisaward will not be taxed immediately, but will become a part ofthe eventual judgment in this case as between the parties.c. The Defendants request for an extension of the progressiondeadlines is granted, and the deposition deadline is extended toAugust 30, 2007. This case is referred to Magistrate Judge Piesterfor issuance of an amended progression order for final resolution ofthis case.d. On or before August 6, 2007, the Plaintiff shall:i. Provide Defendant with full and complete answers toInterrogatory Nos. 34 and 35; and ii. Produce all documents responsive to Document Request Nos. 4, 5, 6, and 7 or, if she claims she does not have any or all of these documents in her possession, inform the Defendant of where it can obtain the responsive documents and provide the Defendant with the proper releases to obtain any such information. e. In the event that additional information that is responsive to any of Defendants discovery requests becomes available to Plaintiff, including but not limited to information responsive to Interrogatory No. 29, this information shall be disclosed to the Defendant at least five days prior to Plaintiffs deposition, or in the event no deposition is scheduled, five days prior to the deposition deadline. f. Absent good cause shown, the Plaintiff is barred from using any information not disclosed to the defendant in compliance with this order. The Plaintiffs Motion to Compel (Filing No. 40) is denied; The Plaintiffs Motion for Clarification (Filing No. 47) is denied as moot and; The Clerk of Court is directed to send a copy of this Memorandum and Order to the Plaintiff at her last known address. Deposition deadline set for 8/30/2007. Ordered by Judge Laurie Smith Camp. (MKR)Copies mailed as directed.</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-07-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00012-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181794061</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-9</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00012_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00012/pdf/USCOURTS-ned-8_06-cv-00012-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00012; Schmidt v. Metropolitan Utilities District; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00012-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2007-07-26</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - That the Defendants Motion to Dismiss or in the Alternative for MonetarySanctions, Filing No. 39, is granted in part and denied in part as follows:a. Defendants motion to dismiss this case as a discovery sanction isdenied; b. That portion of Defendants motion which seeks an order awardingthe defendant its reasonable expenses, including attorney fees, incurred in the filing of this motion, is granted, and: i. The Defendant is given until August 6, 2007 to file its application for expenses and fees; ii. The Plaintiff is given until August 16, 2007 to file her responseto the application for fees; andiii. Based on these submissions, the court will enter an orderawarding the Defendant its attorney fees and expenses. Thisaward will not be taxed immediately, but will become a part ofthe eventual judgment in this case as between the parties.c. The Defendants request for an extension of the progressiondeadlines is granted, and the deposition deadline is extended toAugust 30, 2007. This case is referred to Magistrate Judge Piesterfor issuance of an amended progression order for final resolution ofthis case.d. On or before August 6, 2007, the Plaintiff shall:i. Provide Defendant with full and complete answers toInterrogatory Nos. 34 and 35; and ii. Produce all documents responsive to Document Request Nos. 4, 5, 6, and 7 or, if she claims she does not have any or all of these documents in her possession, inform the Defendant of where it can obtain the responsive documents and provide the Defendant with the proper releases to obtain any such information. e. In the event that additional information that is responsive to any of Defendants discovery requests becomes available to Plaintiff, including but not limited to information responsive to Interrogatory No. 29, this information shall be disclosed to the Defendant at least five days prior to Plaintiffs deposition, or in the event no deposition is scheduled, five days prior to the deposition deadline. f. Absent good cause shown, the Plaintiff is barred from using any information not disclosed to the defendant in compliance with this order. The Plaintiffs Motion to Compel (Filing No. 40) is denied; The Plaintiffs Motion for Clarification (Filing No. 47) is denied as moot and; The Clerk of Court is directed to send a copy of this Memorandum and Order to the Plaintiff at her last known address. Deposition deadline set for 8/30/2007. Ordered by Judge Laurie Smith Camp. (MKR)Copies mailed as directed.</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00012-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-10/mods.xml">
+ <titleInfo>
+  <title>Schmidt v. Metropolitan Utilities District</title>
+  <subTitle>ORDER on the defendant&apos;s 51 MOTION for Attorney Fees and the plaintiff&apos;s reply to defendant&apos;s motion55: The defendant is awarded, and plaintiff is ordered to pay, $701.00; and This award will not be taxed immediately, but will become a part of the eventual judgment in this case as between the parties. Ordered by Judge Laurie Smith Camp. (MKR)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-09-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00012-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181794064</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-10</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00012_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00012/pdf/USCOURTS-ned-8_06-cv-00012-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00012; Schmidt v. Metropolitan Utilities District; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00012-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2007-09-13</dateIssued>
+  <docketText>ORDER on the defendant&apos;s 51 MOTION for Attorney Fees and the plaintiff&apos;s reply to defendant&apos;s motion55: The defendant is awarded, and plaintiff is ordered to pay, $701.00; and This award will not be taxed immediately, but will become a part of the eventual judgment in this case as between the parties. Ordered by Judge Laurie Smith Camp. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00012-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-11/mods.xml">
+ <titleInfo>
+  <title>Schmidt v. Metropolitan Utilities District</title>
+  <subTitle>MEMORANDUM AND ORDER- By September 26, 2007, defendant shall provide the court with a listing of all discovery requested by the plaintiff as of the date of this order, and as to those discovery requests for which no objection was raised, a statement signed under oath stating that full and complete responses to these discovery requests have been provided to plaintiff; and The Clerk of court is directed to set a pro se case management deadline using the following language: Defendants listing of discovery due by September 26, 2007. ***Pro Se Case Management Deadlines: Pro Se Case Management Deadline set for 9/26/2007 (Defendant&apos;s listing of discovery due by September 26, 2007). Ordered by Judge Laurie Smith Camp. (MKR) copies mailed to plaintiff</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-09-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00012-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817940ce</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-11</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00012_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00012/pdf/USCOURTS-ned-8_06-cv-00012-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00012; Schmidt v. Metropolitan Utilities District; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00012-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2007-09-18</dateIssued>
+  <docketText>MEMORANDUM AND ORDER- By September 26, 2007, defendant shall provide the court with a listing of all discovery requested by the plaintiff as of the date of this order, and as to those discovery requests for which no objection was raised, a statement signed under oath stating that full and complete responses to these discovery requests have been provided to plaintiff; and The Clerk of court is directed to set a pro se case management deadline using the following language: Defendants listing of discovery due by September 26, 2007. ***Pro Se Case Management Deadlines: Pro Se Case Management Deadline set for 9/26/2007 (Defendant&apos;s listing of discovery due by September 26, 2007). Ordered by Judge Laurie Smith Camp. (MKR) copies mailed to plaintiff</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00012-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-12/mods.xml">
+ <titleInfo>
+  <title>Schmidt v. Metropolitan Utilities District</title>
+  <subTitle>s to cross motions for summary judgment. Pro Se Case Management Deadlines: Pro Se Case Management Deadline set for 11/8/2007 - deadline for responses to cross motions for summary judgment. Ordered by Judge Laurie Smith Camp. (Copies mailed to pro se party)(JAE, )MEMORANDUM AND ORDER - The plaintiff&apos;s response to defendant&apos;s motion, 63, and the defendant&apos;s response to the plaintiff&apos;s motion, 67, shall be filedon or before November 8, 2007, at which time these motions will be deemedfully submitted. No reply brief shall be filed except upon leave of the court for good cause shown. The Clerk of the court is directed to set a pro se case management deadline in this case using the following text: November 8, 2007deadline for response</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00012-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18179405f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-12</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00012_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00012/pdf/USCOURTS-ned-8_06-cv-00012-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00012; Schmidt v. Metropolitan Utilities District; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00012-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2007-10-18</dateIssued>
+  <docketText>s to cross motions for summary judgment. Pro Se Case Management Deadlines: Pro Se Case Management Deadline set for 11/8/2007 - deadline for responses to cross motions for summary judgment. Ordered by Judge Laurie Smith Camp. (Copies mailed to pro se party)(JAE, )MEMORANDUM AND ORDER - The plaintiff&apos;s response to defendant&apos;s motion, 63, and the defendant&apos;s response to the plaintiff&apos;s motion, 67, shall be filedon or before November 8, 2007, at which time these motions will be deemedfully submitted. No reply brief shall be filed except upon leave of the court for good cause shown. The Clerk of the court is directed to set a pro se case management deadline in this case using the following text: November 8, 2007deadline for response</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00012-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-13/mods.xml">
+ <titleInfo>
+  <title>Schmidt v. Metropolitan Utilities District</title>
+  <subTitle>MEMORANDUM AND ORDER - The pretrial conference in this matter, currently set to take place on November 20, 2007, at 9:00 a.m., shall be continued until further order of the court; The trial in this matter, currently set to begin December 11, 2007, at 9:00 a.m., shall be continued until further order of court; The courts memorandum, order, and judgment granting Defendants motion for summary judgment 63 and 67 shall be issued within 30 days of the date of this order; and The Clerk of the court is directed to provide a copy of this memorandum andorder to Magistrate Judge Piester. Ordered by Judge Laurie Smith Camp. (Copies mailed to pro se party and Magistrate Judge Piester as directed)(MKR)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-11-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00012-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817940cb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-13</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00012_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00012/pdf/USCOURTS-ned-8_06-cv-00012-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00012; Schmidt v. Metropolitan Utilities District; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00012-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2007-11-15</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - The pretrial conference in this matter, currently set to take place on November 20, 2007, at 9:00 a.m., shall be continued until further order of the court; The trial in this matter, currently set to begin December 11, 2007, at 9:00 a.m., shall be continued until further order of court; The courts memorandum, order, and judgment granting Defendants motion for summary judgment 63 and 67 shall be issued within 30 days of the date of this order; and The Clerk of the court is directed to provide a copy of this memorandum andorder to Magistrate Judge Piester. Ordered by Judge Laurie Smith Camp. (Copies mailed to pro se party and Magistrate Judge Piester as directed)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00012-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-14/mods.xml">
+ <titleInfo>
+  <title>Schmidt v. Metropolitan Utilities District</title>
+  <subTitle>MEMORANDUM AND ORDER - Defendant Metropolitan Utilities Districts motion for summary judgment (filing no. 63) is granted as set forth in this memorandum and order. All claims against Defendant are dismissed with prejudice; Plaintiff Janice Schmidts motion for summary judgment (filing no. 67) is denied; A separate judgment will be entered in accordance with this memorandum and order; and The Clerk of the court is directed to send a copy of this memorandum andorder and the judgment to Plaintiff at her last known address. Ordered by Judge Laurie Smith Camp. (Copies mailed to pro se party)(MKR)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-11-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00012-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817940ca</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-14</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00012_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00012/pdf/USCOURTS-ned-8_06-cv-00012-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00012; Schmidt v. Metropolitan Utilities District; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00012-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2007-11-29</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Defendant Metropolitan Utilities Districts motion for summary judgment (filing no. 63) is granted as set forth in this memorandum and order. All claims against Defendant are dismissed with prejudice; Plaintiff Janice Schmidts motion for summary judgment (filing no. 67) is denied; A separate judgment will be entered in accordance with this memorandum and order; and The Clerk of the court is directed to send a copy of this memorandum andorder and the judgment to Plaintiff at her last known address. Ordered by Judge Laurie Smith Camp. (Copies mailed to pro se party)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00012-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-15/mods.xml">
+ <titleInfo>
+  <title>Schmidt v. Metropolitan Utilities District</title>
+  <subTitle>ORDER denying 79 the Plaintiff&apos;s Motion for Reconsideration of the Memorandum and Order 75. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party)(MKR) Modified on 1/8/2008 to correct filing number (MKR).</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00012-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181794065</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-15</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00012_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00012/USCOURTS-ned-8_06-cv-00012-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00012/pdf/USCOURTS-ned-8_06-cv-00012-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00012; Schmidt v. Metropolitan Utilities District; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00012-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2008-01-07</dateIssued>
+  <docketText>ORDER denying 79 the Plaintiff&apos;s Motion for Reconsideration of the Memorandum and Order 75. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party)(MKR) Modified on 1/8/2008 to correct filing number (MKR).</docketText>
+</extension>
+</relatedItem>
+</mods>

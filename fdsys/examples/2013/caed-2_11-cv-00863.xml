@@ -1,0 +1,348 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a21f67">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00863</identifier>
+<identifier type="local">P0b002ee183a21f67</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_11-cv-00863</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-00863</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-00863</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:205 Denial Social Security Benefits</cause>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Rhonda" fullName="Rhonda Klev" lastName="Klev" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(SS) Klev v. Commissioner of Social Security</title>
+ <partNumber>2:11-cv-00863</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00863/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cv-00863;11-863</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Commissioner of Social Security</displayForm>
+ <namePart type="family">Commissioner of Social Security</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rhonda Klev</displayForm>
+ <namePart type="family">Klev</namePart>
+ <namePart type="given">Rhonda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-00863</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-00863</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:205 Denial Social Security Benefits</cause>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Rhonda" fullName="Rhonda Klev" lastName="Klev" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-00863-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-0/mods.xml">
+ <titleInfo>
+  <title>(SS) Klev v. Commissioner of Social Security</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 4/25/11, ORDERING that plaintiff&apos;s request to proceed in forma pauperis is GRANTED. The Clerk is directed to serve the undersigned&apos;s scheduling order in social security cases. The Clerk is further directed to serve a copy of this order on the United States Marshal. Within 15 days from the date of this order, plaintiff shall submit to the USM all the required documents for service of process. The USM is directed to serve all process without prepayment of costs not later than 60 days from the date of this order. (Kastilahn, A) (cc: USM)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-04-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-00863-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a228fd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-0</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-00863_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00863/pdf/USCOURTS-caed-2_11-cv-00863-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-00863; (SS) Klev v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-00863-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-04-25</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 4/25/11, ORDERING that plaintiff&apos;s request to proceed in forma pauperis is GRANTED. The Clerk is directed to serve the undersigned&apos;s scheduling order in social security cases. The Clerk is further directed to serve a copy of this order on the United States Marshal. Within 15 days from the date of this order, plaintiff shall submit to the USM all the required documents for service of process. The USM is directed to serve all process without prepayment of costs not later than 60 days from the date of this order. (Kastilahn, A) (cc: USM)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-00863-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-1/mods.xml">
+ <titleInfo>
+  <title>(SS) Klev v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Gregory G. Hollows on 9/29/2011 re 14 ORDERING that the Plaintiff&apos;s time to file his summary judgment is hereby EXTENDED from September 26, 2011 to November15, 2011. (Duong, D)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-00863-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a228f7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-1</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-00863_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00863/pdf/USCOURTS-caed-2_11-cv-00863-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-00863; (SS) Klev v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-00863-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-09-30</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Gregory G. Hollows on 9/29/2011 re 14 ORDERING that the Plaintiff&apos;s time to file his summary judgment is hereby EXTENDED from September 26, 2011 to November15, 2011. (Duong, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-00863-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-2/mods.xml">
+ <titleInfo>
+  <title>(SS) Klev v. Commissioner of Social Security</title>
+  <subTitle>ORDER to SHOW CAUSE signed by Magistrate Judge Gregory G. Hollows on 11/23/11 ORDERING that the plaintiff show cause within 14 days why this case should not be dismissed for lack of prosecution. (Manzer, C)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-00863-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a228f8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-2</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-00863_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00863/pdf/USCOURTS-caed-2_11-cv-00863-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-00863; (SS) Klev v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-00863-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-11-23</dateIssued>
+  <docketText>ORDER to SHOW CAUSE signed by Magistrate Judge Gregory G. Hollows on 11/23/11 ORDERING that the plaintiff show cause within 14 days why this case should not be dismissed for lack of prosecution. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-00863-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-3/mods.xml">
+ <titleInfo>
+  <title>(SS) Klev v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Gregory G. Hollows on 1/17/12 ORDERING that the Defendant shall have a first extension of time of 30 days to file his cross-motion for summary judgment. The new due date will be 2/8/12.The parties further stipulate that the Court&apos;s Scheduling Order shall be modified accordingly. (Becknal, R)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-00863-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a228f9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-3</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-00863_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00863/pdf/USCOURTS-caed-2_11-cv-00863-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-00863; (SS) Klev v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-00863-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-01-17</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Gregory G. Hollows on 1/17/12 ORDERING that the Defendant shall have a first extension of time of 30 days to file his cross-motion for summary judgment. The new due date will be 2/8/12.The parties further stipulate that the Court&apos;s Scheduling Order shall be modified accordingly. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-00863-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-4/mods.xml">
+ <titleInfo>
+  <title>(SS) Klev v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Gregory G. Hollows on 2/21/2012 GRANTING a 30-Day Extension of time for Defendant to file a Cross-Motion for Summary Judgment. Motion to be filed by 3/9/2012. (Michel, G)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-00863-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a228fa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-4</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-00863_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00863/pdf/USCOURTS-caed-2_11-cv-00863-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-00863; (SS) Klev v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-00863-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-02-21</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Gregory G. Hollows on 2/21/2012 GRANTING a 30-Day Extension of time for Defendant to file a Cross-Motion for Summary Judgment. Motion to be filed by 3/9/2012. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-00863-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-5/mods.xml">
+ <titleInfo>
+  <title>(SS) Klev v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Gregory G. Hollows on 3/14/2012 GRANTING Request for 30-Day Extension of Time. Defendant&apos;s Cross-Motion for Summary Judgment due by 4/9/2012. (Michel, G)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-00863-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a228fc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-5</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-00863_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00863/pdf/USCOURTS-caed-2_11-cv-00863-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-00863; (SS) Klev v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-00863-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-03-15</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Gregory G. Hollows on 3/14/2012 GRANTING Request for 30-Day Extension of Time. Defendant&apos;s Cross-Motion for Summary Judgment due by 4/9/2012. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-00863-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-6/mods.xml">
+ <titleInfo>
+  <title>(SS) Klev v. Commissioner of Social Security</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 8/23/12 ORDERING that Plaintiff&apos;s MOTION for Summary Judgment 18] is GRANTED in part pursuant to Sentence Four of 42 U.S.C. § 405(g), the Commissioner&apos;s Cross MOTION for Summary Judgment 25 is DENIED, and this matter is REMANDED for further findings in accordance with this order. The Clerk is directed to enter Judgment for plaintiff. Given the satisfactory showing made in the Declaration of Bess M. Brewer 17, the 11/23/11 order to show cause why this case should not be dismissed for lack of prosecution is discharged. CASE CLOSED. (Mena-Sanchez, L)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-00863-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a228fb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-6</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-00863_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00863/pdf/USCOURTS-caed-2_11-cv-00863-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-00863; (SS) Klev v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-00863-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-08-24</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 8/23/12 ORDERING that Plaintiff&apos;s MOTION for Summary Judgment 18] is GRANTED in part pursuant to Sentence Four of 42 U.S.C. § 405(g), the Commissioner&apos;s Cross MOTION for Summary Judgment 25 is DENIED, and this matter is REMANDED for further findings in accordance with this order. The Clerk is directed to enter Judgment for plaintiff. Given the satisfactory showing made in the Declaration of Bess M. Brewer 17, the 11/23/11 order to show cause why this case should not be dismissed for lack of prosecution is discharged. CASE CLOSED. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-00863-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-7/mods.xml">
+ <titleInfo>
+  <title>(SS) Klev v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Allison Claire on 1/3/2013 ORDERING that Plaintiff shall be awarded attorney fees in the amount of SEVEN THOUSAND, FIVE-HUNDRED DOLLARS AND ZERO CENTS ($7,500.00), as authorized by 28 U.S.C. § 2412(d), subject to the terms of the above-referenced Stipulation. (Zignago, K.)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-00863-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a228f6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-7</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-00863_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00863/USCOURTS-caed-2_11-cv-00863-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00863/pdf/USCOURTS-caed-2_11-cv-00863-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-00863; (SS) Klev v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-00863-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Allison Claire on 1/3/2013 ORDERING that Plaintiff shall be awarded attorney fees in the amount of SEVEN THOUSAND, FIVE-HUNDRED DOLLARS AND ZERO CENTS ($7,500.00), as authorized by 28 U.S.C. § 2412(d), subject to the terms of the above-referenced Stipulation. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+</mods>

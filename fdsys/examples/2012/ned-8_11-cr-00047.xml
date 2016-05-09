@@ -1,0 +1,370 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18177ce78">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00047</identifier>
+<identifier type="local">P0b002ee18177ce78</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_11-cr-00047</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cr-00047</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cr-00047</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Balfre" fullName="Balfre Degante-Salinas" lastName="Degante-Salinas" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Degante-Salinas</title>
+ <partNumber>8:11-cr-00047</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00047/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:11-cr-00047;11-047</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Balfre Degante-Salinas</displayForm>
+ <namePart type="family">Degante-Salinas</namePart>
+ <namePart type="given">Balfre</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cr-00047</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cr-00047</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Balfre" fullName="Balfre Degante-Salinas" lastName="Degante-Salinas" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00047-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Degante-Salinas</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Balfre Degante-Salinas - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)[8:11-mj-00021-TDT]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-02-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00047-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dc351</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-0</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00047_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00047/pdf/USCOURTS-ned-8_11-cr-00047-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00047; USA v. Degante-Salinas; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00047-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-02-09</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Balfre Degante-Salinas - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)[8:11-mj-00021-TDT]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00047-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Degante-Salinas</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Balfre Degante-Salinas. Ordered by Magistrate Judge Thomas D. Thalken. (JAB)[8:11-mj-00021-TDT]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-02-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00047-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dc352</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-1</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00047_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00047/pdf/USCOURTS-ned-8_11-cr-00047-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00047; USA v. Degante-Salinas; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00047-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-02-09</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Balfre Degante-Salinas. Ordered by Magistrate Judge Thomas D. Thalken. (JAB)[8:11-mj-00021-TDT]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00047-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Degante-Salinas</title>
+  <subTitle>ORDER granting 23 Motion to Continue Time to File Pretrial Motions as to Balfre Degante-Salinas. Pretrial Motion Deadline set for 4/11/2011. The time between March 28, 2011 and April 11, 2011, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. (SLP)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00047-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dc354</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-2</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00047_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00047/pdf/USCOURTS-ned-8_11-cr-00047-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00047; USA v. Degante-Salinas; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00047-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-03-21</dateIssued>
+  <docketText>ORDER granting 23 Motion to Continue Time to File Pretrial Motions as to Balfre Degante-Salinas. Pretrial Motion Deadline set for 4/11/2011. The time between March 28, 2011 and April 11, 2011, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. (SLP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00047-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Degante-Salinas</title>
+  <subTitle>ORDER denying 26 Motion for Release of Brady Materials as to Balfre Degante-Salinas (1). Ordered by Magistrate Judge F.A. Gossett. (JSF)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-04-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00047-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dc34c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-3</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00047_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00047/pdf/USCOURTS-ned-8_11-cr-00047-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00047; USA v. Degante-Salinas; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00047-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-04-18</dateIssued>
+  <docketText>ORDER denying 26 Motion for Release of Brady Materials as to Balfre Degante-Salinas (1). Ordered by Magistrate Judge F.A. Gossett. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00047-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Degante-Salinas</title>
+  <subTitle>ORDER denying 32 Motion to Extend Time to File Pretrial Motions as to Balfre Degante-Salinas. A party may object to a magistrate judge&apos;s order by filing an &quot;Objection to Magistrate Judge&apos;s Order&quot; within 14 days after being served with the order. The objecting party must comply with all requirements of NECrimR 59.2. Ordered by Magistrate Judge F.A. Gossett. (JAE)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00047-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dc350</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-4</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00047_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00047/pdf/USCOURTS-ned-8_11-cr-00047-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00047; USA v. Degante-Salinas; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00047-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2011-05-20</dateIssued>
+  <docketText>ORDER denying 32 Motion to Extend Time to File Pretrial Motions as to Balfre Degante-Salinas. A party may object to a magistrate judge&apos;s order by filing an &quot;Objection to Magistrate Judge&apos;s Order&quot; within 14 days after being served with the order. The objecting party must comply with all requirements of NECrimR 59.2. Ordered by Magistrate Judge F.A. Gossett. (JAE)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00047-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Degante-Salinas</title>
+  <subTitle>ORDER granting 34 motion to continue as to Balfre Degante-Salinas (1) - Jury Trial set for 8/30/2011 at 09:00 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE, before Senior Judge Lyle E. Strom. Additional time between May 23, 2011, and August 30, 2011, shall be deemed excludable under the requirement of the speedy trial act. Ordered by Senior Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00047-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dc353</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-5</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00047_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00047/pdf/USCOURTS-ned-8_11-cr-00047-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00047; USA v. Degante-Salinas; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00047-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2011-05-23</dateIssued>
+  <docketText>ORDER granting 34 motion to continue as to Balfre Degante-Salinas (1) - Jury Trial set for 8/30/2011 at 09:00 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE, before Senior Judge Lyle E. Strom. Additional time between May 23, 2011, and August 30, 2011, shall be deemed excludable under the requirement of the speedy trial act. Ordered by Senior Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00047-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Degante-Salinas</title>
+  <subTitle>ORDER granting the Defendant&apos;s 48 Motion to Continue sentencing as to Balfre Degante-Salinas (1). ( Sentencing set for 1/4/2012 09:00 AM in Courtroom 5, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Senior Judge Lyle E. Strom); Granting 49 the Defendant&apos;s Motion to late file objections to the presentence investigation report as to Balfre Degante-Salinas (1). Defendant shall have until December 14, 2011, to file objections to the presentence investigation report. Ordered by Senior Judge Lyle E. Strom. (MKR)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00047-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dc34e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-6</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00047_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00047/pdf/USCOURTS-ned-8_11-cr-00047-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00047; USA v. Degante-Salinas; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00047-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2011-11-29</dateIssued>
+  <docketText>ORDER granting the Defendant&apos;s 48 Motion to Continue sentencing as to Balfre Degante-Salinas (1). ( Sentencing set for 1/4/2012 09:00 AM in Courtroom 5, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Senior Judge Lyle E. Strom); Granting 49 the Defendant&apos;s Motion to late file objections to the presentence investigation report as to Balfre Degante-Salinas (1). Defendant shall have until December 14, 2011, to file objections to the presentence investigation report. Ordered by Senior Judge Lyle E. Strom. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00047-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Degante-Salinas</title>
+  <subTitle>ORDER - Defendant&apos;s motion 51 is granted. The motion for deviation from advisory sentencing guidelines (Filing No. 45) is deemed withdrawn as to Balfre Degante-Salinas (1). Ordered by Senior Judge Lyle E. Strom. (AOA)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00047-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dc34d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-7</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00047_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00047/pdf/USCOURTS-ned-8_11-cr-00047-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00047; USA v. Degante-Salinas; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00047-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2011-12-29</dateIssued>
+  <docketText>ORDER - Defendant&apos;s motion 51 is granted. The motion for deviation from advisory sentencing guidelines (Filing No. 45) is deemed withdrawn as to Balfre Degante-Salinas (1). Ordered by Senior Judge Lyle E. Strom. (AOA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00047-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Degante-Salinas</title>
+  <subTitle>ORDER - Defendant&apos;s motions 56 and 57 are granted. Filing Nos. 53 and 54 are stricken as to Balfre Degante-Salinas (1). Ordered by Senior Judge Lyle E. Strom. (AOA)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00047-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dc34f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-8</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00047_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00047/USCOURTS-ned-8_11-cr-00047-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00047/pdf/USCOURTS-ned-8_11-cr-00047-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00047; USA v. Degante-Salinas; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00047-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2012-01-10</dateIssued>
+  <docketText>ORDER - Defendant&apos;s motions 56 and 57 are granted. Filing Nos. 53 and 54 are stricken as to Balfre Degante-Salinas (1). Ordered by Senior Judge Lyle E. Strom. (AOA)</docketText>
+</extension>
+</relatedItem>
+</mods>

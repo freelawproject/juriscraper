@@ -1,11 +1,11 @@
 # History:
 #   2013-08-16: Created by Krist Jin
 #   2014-12-02: Updated by Mike Lissner to remove the summaries code.
+#   2016-02-26: Updated by arderyp: simplified thanks to new id attribute identifying decisions table
+#   2016-03-27: Updated by arderyp: fixed to handled non-standard formatting
 
-from datetime import datetime
-
-from lxml import html
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -15,26 +15,23 @@ class Site(OpinionSite):
         self.url = 'http://www.state.il.us/court/Opinions/recent_supreme.asp'
 
     def _get_download_urls(self):
-        path = '//td[@class="center"]/table[3]//a[contains(@href,".pdf")]/@href'
-        return list(self.html.xpath(path))
+        path = '%s//a/@href' % self._get_decisions_table_cell_path(5)
+        return [href for href in self.html.xpath(path)]
 
     def _get_case_names(self):
-        case_names = []
-        for e in self.html.xpath('//td[@class="center"]/table[3]//a[contains(@href,".pdf")]'):
-            s = html.tostring(e, method='text', encoding='unicode')
-            case_names.append(s)
-        return case_names
+        path = '%s//a/text()' % self._get_decisions_table_cell_path(5)
+        return [text for text in self.html.xpath(path)]
 
     def _get_case_dates(self):
-        path = '//td[@class="center"]/table[3]//tr/td[1]//div/text()'
-        return [datetime.strptime(date_string, '%m/%d/%y').date()
-                for date_string in self.html.xpath(path)]
+        path = '%s//div/text()' % self._get_decisions_table_cell_path(1)
+        return [convert_date_string(date_string) for date_string in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         statuses = []
-        for e in self.html.xpath('//td[@class="center"]/table[3]//tr/td[3]//div/strong[normalize-space(text())]'):
-            s = html.tostring(e, method='text', encoding='unicode')
-            if 'NRel' in s:
+        path = '%s//div' % self._get_decisions_table_cell_path(3)
+        for div in self.html.xpath(path):
+            text = div.xpath('strong/text()')
+            if text and 'NRel' in text:
                 statuses.append('Unpublished')
             else:
                 statuses.append('Published')
@@ -42,15 +39,17 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         docket_numbers = []
-        for s in self.html.xpath('//td[@class="center"]/table[3]//tr/td[3]/div/text()[not(preceding-sibling::br)]'):
-            s = " ".join(s.split())
-            if s:
-                docket_numbers.append(s)
+        path = '%s//div' % self._get_decisions_table_cell_path(3)
+        for div in self.html.xpath(path):
+            text = div.xpath('text()')
+            text = ''.join(text).replace('cons.', '')
+            docket_numbers.append(' '.join(text.split()))
         return docket_numbers
 
     def _get_neutral_citations(self):
-        neutral_citations = []
-        for e in self.html.xpath('//td[@class="center"]/table[3]//tr/td[4]/div'):
-            s = html.tostring(e, method='text', encoding='unicode')
-            neutral_citations.append(s)
-        return neutral_citations
+        path = '%s//div/text()' % self._get_decisions_table_cell_path(4)
+        return [text for text in self.html.xpath(path)]
+
+    def _get_decisions_table_cell_path(self, cell_number):
+        """return path to Nth cell of each row in decisions table"""
+        return '//table[@id="decisions"]//tr/td[%s]' % str(cell_number)

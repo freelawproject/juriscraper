@@ -1,0 +1,328 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817c0f31">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-hc-60186</identifier>
+<identifier type="local">P0b002ee1817c0f31</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_09-hc-60186</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_09-hc-60186</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:09-hc-60186</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType></caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Product Liability</cause>
+ <party fullName="American Capital Ltd." lastName="American Capital Ltd." role="Defendant"></party>
+ <party fullName="Baxter Healthcare Corporation" lastName="Baxter Healthcare Corporation" role="Defendant"></party>
+ <party fullName="Baxter International, Inc." lastName="Baxter International, Inc." role="Defendant"></party>
+ <party fullName="Scientific Protein Laboratories, LLC" lastName="Scientific Protein Laboratories, LLC" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Yeazel Jr." generation="Jr." lastName="Yeazel" role="Plaintiff"></party>
+ <party firstName="Carol" fullName="Carol Ann Yeazel" lastName="Yeazel" middleName="Ann" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Yeazel v. Baxter Healthcare Corporation et al</title>
+ <partNumber>1:09-hc-60186</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-hc-60186/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:09-hc-60186;09-60186</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>American Capital Ltd.</displayForm>
+ <namePart type="family">American Capital Ltd.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Baxter Healthcare Corporation</displayForm>
+ <namePart type="family">Baxter Healthcare Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Baxter International, Inc.</displayForm>
+ <namePart type="family">Baxter International, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scientific Protein Laboratories, LLC</displayForm>
+ <namePart type="family">Scientific Protein Laboratories, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Yeazel Jr.</displayForm>
+ <namePart type="family">Yeazel</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Carol Ann Yeazel</displayForm>
+ <namePart type="family">Yeazel</namePart>
+ <namePart type="given">Carol</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_09-hc-60186</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:09-hc-60186</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType></caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Product Liability</cause>
+ <party fullName="American Capital Ltd." lastName="American Capital Ltd." role="Defendant"></party>
+ <party fullName="Baxter Healthcare Corporation" lastName="Baxter Healthcare Corporation" role="Defendant"></party>
+ <party fullName="Baxter International, Inc." lastName="Baxter International, Inc." role="Defendant"></party>
+ <party fullName="Scientific Protein Laboratories, LLC" lastName="Scientific Protein Laboratories, LLC" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Yeazel Jr." generation="Jr." lastName="Yeazel" role="Plaintiff"></party>
+ <party firstName="Carol" fullName="Carol Ann Yeazel" lastName="Yeazel" middleName="Ann" role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_09-hc-60186-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-hc-60186/USCOURTS-ohnd-1_09-hc-60186-0/mods.xml">
+ <titleInfo>
+  <title>Yeazel v. Baxter Healthcare Corporation et al</title>
+  <subTitle>Order : Plaintiff&apos;s Motion to Exclude the Affidavit of Wilma Cummings is granted in part and denied in part. (Related Doc # 41). Judge James G. Carr on 2/22/2011.(S,AL)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-02-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_09-hc-60186-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e56fe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-hc-60186/USCOURTS-ohnd-1_09-hc-60186-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_09-hc-60186_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-hc-60186/USCOURTS-ohnd-1_09-hc-60186-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-hc-60186/pdf/USCOURTS-ohnd-1_09-hc-60186-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-hc-60186; Yeazel v. Baxter Healthcare Corporation et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_09-hc-60186-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-02-22</dateIssued>
+  <docketText>Order : Plaintiff&apos;s Motion to Exclude the Affidavit of Wilma Cummings is granted in part and denied in part. (Related Doc # 41). Judge James G. Carr on 2/22/2011.(S,AL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_09-hc-60186-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-hc-60186/USCOURTS-ohnd-1_09-hc-60186-1/mods.xml">
+ <titleInfo>
+  <title>Yeazel v. Baxter Healthcare Corporation et al</title>
+  <subTitle>UNDER SEAL Order Defendants&apos; Motion to Exclude Expert Testimony of Dr. Clifford Siporin is granted in part and denied in part.Defendants&apos; Motion to Exclude Expert Testimony of Dr. Suzanne Parisian is granted in part and denied in part. Defendants&apos; Motion to Exclude Expert Testimony of Paul Midler is granted. (Related Doc # 38)34. Judge James G. Carr on 3/21/2011.(S,AL)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_09-hc-60186-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e55b7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-hc-60186/USCOURTS-ohnd-1_09-hc-60186-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_09-hc-60186_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-hc-60186/USCOURTS-ohnd-1_09-hc-60186-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-hc-60186/pdf/USCOURTS-ohnd-1_09-hc-60186-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-hc-60186; Yeazel v. Baxter Healthcare Corporation et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_09-hc-60186-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-03-21</dateIssued>
+  <docketText>UNDER SEAL Order Defendants&apos; Motion to Exclude Expert Testimony of Dr. Clifford Siporin is granted in part and denied in part.Defendants&apos; Motion to Exclude Expert Testimony of Dr. Suzanne Parisian is granted in part and denied in part. Defendants&apos; Motion to Exclude Expert Testimony of Paul Midler is granted. (Related Doc # 38)34. Judge James G. Carr on 3/21/2011.(S,AL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_09-hc-60186-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-hc-60186/USCOURTS-ohnd-1_09-hc-60186-2/mods.xml">
+ <titleInfo>
+  <title>Yeazel v. Baxter Healthcare Corporation et al</title>
+  <subTitle>Order : defendants&apos; motion to dismiss is granted. (Related Doc # 70). Judge James G. Carr on 9/1/2011.(S,AL)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_09-hc-60186-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e56fd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-hc-60186/USCOURTS-ohnd-1_09-hc-60186-2</identifier>
+ <identifier type="former granule identifier">ohnd-1_09-hc-60186_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-hc-60186/USCOURTS-ohnd-1_09-hc-60186-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-hc-60186/pdf/USCOURTS-ohnd-1_09-hc-60186-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-hc-60186; Yeazel v. Baxter Healthcare Corporation et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_09-hc-60186-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-09-01</dateIssued>
+  <docketText>Order : defendants&apos; motion to dismiss is granted. (Related Doc # 70). Judge James G. Carr on 9/1/2011.(S,AL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_09-hc-60186-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-hc-60186/USCOURTS-ohnd-1_09-hc-60186-3/mods.xml">
+ <titleInfo>
+  <title>Yeazel v. Baxter Healthcare Corporation et al</title>
+  <subTitle>Order the plaintiff&apos;s motion for leave to amend, or in the alternative for certification under Fed. R. Civ. P. 54(b) is overruled. (Related Doc # 84). Judge James G. Carr on 12/21/2011.(S,AL)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_09-hc-60186-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e56fc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-hc-60186/USCOURTS-ohnd-1_09-hc-60186-3</identifier>
+ <identifier type="former granule identifier">ohnd-1_09-hc-60186_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-hc-60186/USCOURTS-ohnd-1_09-hc-60186-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-hc-60186/pdf/USCOURTS-ohnd-1_09-hc-60186-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-hc-60186; Yeazel v. Baxter Healthcare Corporation et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_09-hc-60186-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-12-21</dateIssued>
+  <docketText>Order the plaintiff&apos;s motion for leave to amend, or in the alternative for certification under Fed. R. Civ. P. 54(b) is overruled. (Related Doc # 84). Judge James G. Carr on 12/21/2011.(S,AL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_09-hc-60186-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-hc-60186/USCOURTS-ohnd-1_09-hc-60186-4/mods.xml">
+ <titleInfo>
+  <title>Yeazel v. Baxter Healthcare Corporation et al</title>
+  <subTitle>Order plaintiff&apos;s motion to exclude the testimony of Dr. Christopher Cooper is overruled. (Related Doc # 28). Judge James G. Carr on 1/4/2012.(S,AL)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_09-hc-60186-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e55b8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-hc-60186/USCOURTS-ohnd-1_09-hc-60186-4</identifier>
+ <identifier type="former granule identifier">ohnd-1_09-hc-60186_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-hc-60186/USCOURTS-ohnd-1_09-hc-60186-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-hc-60186/pdf/USCOURTS-ohnd-1_09-hc-60186-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-hc-60186; Yeazel v. Baxter Healthcare Corporation et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_09-hc-60186-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-01-04</dateIssued>
+  <docketText>Order plaintiff&apos;s motion to exclude the testimony of Dr. Christopher Cooper is overruled. (Related Doc # 28). Judge James G. Carr on 1/4/2012.(S,AL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_09-hc-60186-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-hc-60186/USCOURTS-ohnd-1_09-hc-60186-5/mods.xml">
+ <titleInfo>
+  <title>Yeazel v. Baxter Healthcare Corporation et al</title>
+  <subTitle>Order : on reconsideration, the prior ruling that there is no reliable evidence of injuries resulting from non-bolus doses of heparin is confirmed. (Related Doc # 89). Judge James G. Carr on 1/12/2012.(S,AL)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_09-hc-60186-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e55b9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-hc-60186/USCOURTS-ohnd-1_09-hc-60186-5</identifier>
+ <identifier type="former granule identifier">ohnd-1_09-hc-60186_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-hc-60186/USCOURTS-ohnd-1_09-hc-60186-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-hc-60186/pdf/USCOURTS-ohnd-1_09-hc-60186-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-hc-60186; Yeazel v. Baxter Healthcare Corporation et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_09-hc-60186-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-01-12</dateIssued>
+  <docketText>Order : on reconsideration, the prior ruling that there is no reliable evidence of injuries resulting from non-bolus doses of heparin is confirmed. (Related Doc # 89). Judge James G. Carr on 1/12/2012.(S,AL)</docketText>
+</extension>
+</relatedItem>
+</mods>

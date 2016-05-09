@@ -1,0 +1,555 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18190d094">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-70015</identifier>
+<identifier type="local">P0b002ee18190d094</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_05-cv-70015</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_05-cv-70015</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:05-cv-70015</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>470</natureSuitCode>
+ <natureSuit>Civil (Rico)</natureSuit>
+ <party fullName="A and S Appraisal Group, Incorporated" lastName="A and S Appraisal Group, Incorporated" role="Defendant"></party>
+ <party fullName="Aaron Rentals, Limited" lastName="Aaron Rentals, Limited" role="Defendant"></party>
+ <party firstName="Terry" fullName="Terry Barnes" lastName="Barnes" role="Defendant"></party>
+ <party fullName="Bergin Financial, Incorporated" lastName="Bergin Financial, Incorporated" role="Plaintiff"></party>
+ <party firstName="Kevin" fullName="Kevin Bluhm" lastName="Bluhm" role="Defendant"></party>
+ <party fullName="Brody Rentals, Limited" lastName="Brody Rentals, Limited" role="Defendant"></party>
+ <party fullName="Burlingame Enterprises, Limited" lastName="Burlingame Enterprises, Limited" role="Defendant"></party>
+ <party fullName="Caliba, L. L. C." lastName="Caliba, L. L. C." role="Defendant"></party>
+ <party fullName="Cancun Properties, Limited" lastName="Cancun Properties, Limited" role="Defendant"></party>
+ <party fullName="Daniel Rentals, Limited" lastName="Daniel Rentals, Limited" role="Defendant"></party>
+ <party firstName="Mary" fullName="Mary Kathryn Decuir" lastName="Decuir" middleName="Kathryn" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul Durnik" lastName="Durnik" role="Defendant"></party>
+ <party fullName="E and R Rentals, Limited" lastName="E and R Rentals, Limited" role="Defendant"></party>
+ <party fullName="First American Title Company" lastName="First American Title Company" role="Defendant"></party>
+ <party fullName="Flagstar Bank" lastName="Flagstar Bank" role="Movant"></party>
+ <party firstName="Willie" fullName="Willie Flowers" lastName="Flowers" role="Defendant"></party>
+ <party fullName="G and G Realty and Consultant" lastName="G and G Realty and Consultant" role="Defendant"></party>
+ <party fullName="G and G Rentals, Limited" lastName="G and G Rentals, Limited" role="Defendant"></party>
+ <party firstName="Stevie" fullName="Stevie Green" lastName="Green" role="Defendant"></party>
+ <party fullName="Grossman Rentals, Limited" lastName="Grossman Rentals, Limited" role="Defendant"></party>
+ <party fullName="H and D Rentals, Limited" lastName="H and D Rentals, Limited" role="Defendant"></party>
+ <party firstName="Janet" fullName="Janet Howard" lastName="Howard" role="Defendant"></party>
+ <party fullName="Jerome Rentals, Limited" lastName="Jerome Rentals, Limited" role="Defendant"></party>
+ <party firstName="Carl" fullName="Carl Jones" lastName="Jones" role="Defendant"></party>
+ <party fullName="LBS Realty, Incorporated" lastName="LBS Realty, Incorporated" role="Defendant"></party>
+ <party firstName="Roderic" fullName="Roderic Light" lastName="Light" role="Defendant"></party>
+ <party fullName="Lincoln Title Company" lastName="Lincoln Title Company" role="Defendant"></party>
+ <party fullName="Lole Rentals, Limited" lastName="Lole Rentals, Limited" role="Defendant"></party>
+ <party firstName="Bilal" fullName="Bilal Muhammad" lastName="Muhammad" role="Defendant"></party>
+ <party firstName="Rosemarie" fullName="Rosemarie Nance" lastName="Nance" role="Defendant"></party>
+ <party fullName="New Detroit Real Estate Management, L. L. C." lastName="New Detroit Real Estate Management, L. L. C." role="Defendant"></party>
+ <party fullName="Omicron Development" lastName="Omicron Development" role="Defendant"></party>
+ <party fullName="Premier Rentals, Incorporated" lastName="Premier Rentals, Incorporated" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Richardson" lastName="Richardson" role="Defendant"></party>
+ <party fullName="Seth Rentals, Limited" lastName="Seth Rentals, Limited" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Shows" lastName="Shows" role="Defendant"></party>
+ <party firstName="Valeria" fullName="Valeria Springer" lastName="Springer" role="Defendant"></party>
+ <party firstName="Barbara" fullName="Barbara Stollman" lastName="Stollman" role="Defendant"></party>
+ <party firstName="Hyman" fullName="Hyman Stollman" lastName="Stollman" role="Defendant"></party>
+ <party fullName="Susan Rentals, Limited" lastName="Susan Rentals, Limited" role="Defendant"></party>
+ <party firstName="Alvin" fullName="Alvin Weathersby" lastName="Weathersby" role="Defendant"></party>
+ <party firstName="Shawn" fullName="Shawn Wesley" lastName="Wesley" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert D. Willey" lastName="Willey" middleName="D." role="Defendant"></party>
+ <party firstName="Dion" fullName="Dion Williams" lastName="Williams" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles Wilson" lastName="Wilson" role="Defendant"></party>
+ <party firstName="Marlon" fullName="Marlon Wilson" lastName="Wilson" role="Defendant"></party>
+ <party fullName="Z and S Enterprises, Incorporated" lastName="Z and S Enterprises, Incorporated" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Bergin Financial, Incorporated v. First American Title Company et al</title>
+ <partNumber>2:05-cv-70015</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-70015/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:05-cv-70015;05-70015</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>A and S Appraisal Group, Incorporated</displayForm>
+ <namePart type="family">A and S Appraisal Group, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Aaron Rentals, Limited</displayForm>
+ <namePart type="family">Aaron Rentals, Limited</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Terry Barnes</displayForm>
+ <namePart type="family">Barnes</namePart>
+ <namePart type="given">Terry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bergin Financial, Incorporated</displayForm>
+ <namePart type="family">Bergin Financial, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kevin Bluhm</displayForm>
+ <namePart type="family">Bluhm</namePart>
+ <namePart type="given">Kevin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brody Rentals, Limited</displayForm>
+ <namePart type="family">Brody Rentals, Limited</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Burlingame Enterprises, Limited</displayForm>
+ <namePart type="family">Burlingame Enterprises, Limited</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Caliba, L. L. C.</displayForm>
+ <namePart type="family">Caliba, L. L. C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cancun Properties, Limited</displayForm>
+ <namePart type="family">Cancun Properties, Limited</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Rentals, Limited</displayForm>
+ <namePart type="family">Daniel Rentals, Limited</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mary Kathryn Decuir</displayForm>
+ <namePart type="family">Decuir</namePart>
+ <namePart type="given">Mary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Paul Durnik</displayForm>
+ <namePart type="family">Durnik</namePart>
+ <namePart type="given">Paul</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>E and R Rentals, Limited</displayForm>
+ <namePart type="family">E and R Rentals, Limited</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>First American Title Company</displayForm>
+ <namePart type="family">First American Title Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Flagstar Bank</displayForm>
+ <namePart type="family">Flagstar Bank</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Willie Flowers</displayForm>
+ <namePart type="family">Flowers</namePart>
+ <namePart type="given">Willie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>G and G Realty and Consultant</displayForm>
+ <namePart type="family">G and G Realty and Consultant</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>G and G Rentals, Limited</displayForm>
+ <namePart type="family">G and G Rentals, Limited</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Stevie Green</displayForm>
+ <namePart type="family">Green</namePart>
+ <namePart type="given">Stevie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Grossman Rentals, Limited</displayForm>
+ <namePart type="family">Grossman Rentals, Limited</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>H and D Rentals, Limited</displayForm>
+ <namePart type="family">H and D Rentals, Limited</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Janet Howard</displayForm>
+ <namePart type="family">Howard</namePart>
+ <namePart type="given">Janet</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jerome Rentals, Limited</displayForm>
+ <namePart type="family">Jerome Rentals, Limited</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Carl Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">Carl</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>LBS Realty, Incorporated</displayForm>
+ <namePart type="family">LBS Realty, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Roderic Light</displayForm>
+ <namePart type="family">Light</namePart>
+ <namePart type="given">Roderic</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lincoln Title Company</displayForm>
+ <namePart type="family">Lincoln Title Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lole Rentals, Limited</displayForm>
+ <namePart type="family">Lole Rentals, Limited</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bilal Muhammad</displayForm>
+ <namePart type="family">Muhammad</namePart>
+ <namePart type="given">Bilal</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rosemarie Nance</displayForm>
+ <namePart type="family">Nance</namePart>
+ <namePart type="given">Rosemarie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>New Detroit Real Estate Management, L. L. C.</displayForm>
+ <namePart type="family">New Detroit Real Estate Management, L. L. C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Omicron Development</displayForm>
+ <namePart type="family">Omicron Development</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Premier Rentals, Incorporated</displayForm>
+ <namePart type="family">Premier Rentals, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Richardson</displayForm>
+ <namePart type="family">Richardson</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Seth Rentals, Limited</displayForm>
+ <namePart type="family">Seth Rentals, Limited</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Shows</displayForm>
+ <namePart type="family">Shows</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Valeria Springer</displayForm>
+ <namePart type="family">Springer</namePart>
+ <namePart type="given">Valeria</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Barbara Stollman</displayForm>
+ <namePart type="family">Stollman</namePart>
+ <namePart type="given">Barbara</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hyman Stollman</displayForm>
+ <namePart type="family">Stollman</namePart>
+ <namePart type="given">Hyman</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Susan Rentals, Limited</displayForm>
+ <namePart type="family">Susan Rentals, Limited</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alvin Weathersby</displayForm>
+ <namePart type="family">Weathersby</namePart>
+ <namePart type="given">Alvin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Shawn Wesley</displayForm>
+ <namePart type="family">Wesley</namePart>
+ <namePart type="given">Shawn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert D. Willey</displayForm>
+ <namePart type="family">Willey</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dion Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Dion</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charles Wilson</displayForm>
+ <namePart type="family">Wilson</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marlon Wilson</displayForm>
+ <namePart type="family">Wilson</namePart>
+ <namePart type="given">Marlon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Z and S Enterprises, Incorporated</displayForm>
+ <namePart type="family">Z and S Enterprises, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_05-cv-70015</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:05-cv-70015</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>470</natureSuitCode>
+ <natureSuit>Civil (Rico)</natureSuit>
+ <party fullName="A and S Appraisal Group, Incorporated" lastName="A and S Appraisal Group, Incorporated" role="Defendant"></party>
+ <party fullName="Aaron Rentals, Limited" lastName="Aaron Rentals, Limited" role="Defendant"></party>
+ <party firstName="Terry" fullName="Terry Barnes" lastName="Barnes" role="Defendant"></party>
+ <party fullName="Bergin Financial, Incorporated" lastName="Bergin Financial, Incorporated" role="Plaintiff"></party>
+ <party firstName="Kevin" fullName="Kevin Bluhm" lastName="Bluhm" role="Defendant"></party>
+ <party fullName="Brody Rentals, Limited" lastName="Brody Rentals, Limited" role="Defendant"></party>
+ <party fullName="Burlingame Enterprises, Limited" lastName="Burlingame Enterprises, Limited" role="Defendant"></party>
+ <party fullName="Caliba, L. L. C." lastName="Caliba, L. L. C." role="Defendant"></party>
+ <party fullName="Cancun Properties, Limited" lastName="Cancun Properties, Limited" role="Defendant"></party>
+ <party fullName="Daniel Rentals, Limited" lastName="Daniel Rentals, Limited" role="Defendant"></party>
+ <party firstName="Mary" fullName="Mary Kathryn Decuir" lastName="Decuir" middleName="Kathryn" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul Durnik" lastName="Durnik" role="Defendant"></party>
+ <party fullName="E and R Rentals, Limited" lastName="E and R Rentals, Limited" role="Defendant"></party>
+ <party fullName="First American Title Company" lastName="First American Title Company" role="Defendant"></party>
+ <party fullName="Flagstar Bank" lastName="Flagstar Bank" role="Movant"></party>
+ <party firstName="Willie" fullName="Willie Flowers" lastName="Flowers" role="Defendant"></party>
+ <party fullName="G and G Realty and Consultant" lastName="G and G Realty and Consultant" role="Defendant"></party>
+ <party fullName="G and G Rentals, Limited" lastName="G and G Rentals, Limited" role="Defendant"></party>
+ <party firstName="Stevie" fullName="Stevie Green" lastName="Green" role="Defendant"></party>
+ <party fullName="Grossman Rentals, Limited" lastName="Grossman Rentals, Limited" role="Defendant"></party>
+ <party fullName="H and D Rentals, Limited" lastName="H and D Rentals, Limited" role="Defendant"></party>
+ <party firstName="Janet" fullName="Janet Howard" lastName="Howard" role="Defendant"></party>
+ <party fullName="Jerome Rentals, Limited" lastName="Jerome Rentals, Limited" role="Defendant"></party>
+ <party firstName="Carl" fullName="Carl Jones" lastName="Jones" role="Defendant"></party>
+ <party fullName="LBS Realty, Incorporated" lastName="LBS Realty, Incorporated" role="Defendant"></party>
+ <party firstName="Roderic" fullName="Roderic Light" lastName="Light" role="Defendant"></party>
+ <party fullName="Lincoln Title Company" lastName="Lincoln Title Company" role="Defendant"></party>
+ <party fullName="Lole Rentals, Limited" lastName="Lole Rentals, Limited" role="Defendant"></party>
+ <party firstName="Bilal" fullName="Bilal Muhammad" lastName="Muhammad" role="Defendant"></party>
+ <party firstName="Rosemarie" fullName="Rosemarie Nance" lastName="Nance" role="Defendant"></party>
+ <party fullName="New Detroit Real Estate Management, L. L. C." lastName="New Detroit Real Estate Management, L. L. C." role="Defendant"></party>
+ <party fullName="Omicron Development" lastName="Omicron Development" role="Defendant"></party>
+ <party fullName="Premier Rentals, Incorporated" lastName="Premier Rentals, Incorporated" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Richardson" lastName="Richardson" role="Defendant"></party>
+ <party fullName="Seth Rentals, Limited" lastName="Seth Rentals, Limited" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Shows" lastName="Shows" role="Defendant"></party>
+ <party firstName="Valeria" fullName="Valeria Springer" lastName="Springer" role="Defendant"></party>
+ <party firstName="Barbara" fullName="Barbara Stollman" lastName="Stollman" role="Defendant"></party>
+ <party firstName="Hyman" fullName="Hyman Stollman" lastName="Stollman" role="Defendant"></party>
+ <party fullName="Susan Rentals, Limited" lastName="Susan Rentals, Limited" role="Defendant"></party>
+ <party firstName="Alvin" fullName="Alvin Weathersby" lastName="Weathersby" role="Defendant"></party>
+ <party firstName="Shawn" fullName="Shawn Wesley" lastName="Wesley" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert D. Willey" lastName="Willey" middleName="D." role="Defendant"></party>
+ <party firstName="Dion" fullName="Dion Williams" lastName="Williams" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles Wilson" lastName="Wilson" role="Defendant"></party>
+ <party firstName="Marlon" fullName="Marlon Wilson" lastName="Wilson" role="Defendant"></party>
+ <party fullName="Z and S Enterprises, Incorporated" lastName="Z and S Enterprises, Incorporated" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_05-cv-70015-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-70015/USCOURTS-mied-2_05-cv-70015-0/mods.xml">
+ <titleInfo>
+  <title>Bergin Financial, Incorporated v. First American Title Company et al</title>
+  <subTitle>OPINION AND ORDER granting 159 Motion for Summary Judgment. Signed by Honorable John Corbett O&apos;Meara. (WBar)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_05-cv-70015-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181996960</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-70015/USCOURTS-mied-2_05-cv-70015-0</identifier>
+ <identifier type="former granule identifier">mied-2_05-cv-70015_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-70015/USCOURTS-mied-2_05-cv-70015-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-70015/pdf/USCOURTS-mied-2_05-cv-70015-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-70015; Bergin Financial, Incorporated v. First American Title Company et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_05-cv-70015-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-29</dateIssued>
+  <docketText>OPINION AND ORDER granting 159 Motion for Summary Judgment. Signed by Honorable John Corbett O&apos;Meara. (WBar)</docketText>
+</extension>
+</relatedItem>
+</mods>

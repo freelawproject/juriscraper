@@ -1,0 +1,153 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c7aaff">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Bankruptcy Court Eastern District of Arkansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-areb-4_13-ap-01021</identifier>
+<identifier type="local">P0b002ee186c7aaff</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-areb-4_13-ap-01021</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-areb-4_13-ap-01021</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>areb</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Arkansas</courtState>
+ <courtSortOrder>3051</courtSortOrder>
+ <caseNumber>4:13-ap-01021</caseNumber>
+ <caseOffice>Little Rock</caseOffice>
+ <party firstName="Larry" fullName="Larry Shaffer" lastName="Shaffer" role="Plaintiff"></party>
+ <party firstName="Allen" fullName="Allen W. Bird II" generation="II" lastName="Bird" middleName="W." role="Defendant"></party>
+ <party fullName="U.S. Trustee (ust)" lastName="U.S. Trustee (ust)" role="U.S. Trustee"></party>
+</extension>
+<titleInfo>
+ <title>Shaffer v. Bird, II</title>
+ <partNumber>4:13-ap-01021</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-areb-4_13-ap-01021/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="preferred citation">4:13-ap-01021;13-1021</identifier>
+<name type="corporate">
+ <namePart>United States Bankruptcy Court Eastern District of Arkansas</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>Little Rock</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Larry Shaffer</displayForm>
+ <namePart type="family">Shaffer</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Allen W. Bird II</displayForm>
+ <namePart type="family">Bird</namePart>
+ <namePart type="given">Allen</namePart>
+ <namePart type="termsOfAddress">II</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Trustee (ust)</displayForm>
+ <namePart type="family">U.S. Trustee (ust)</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>U.S. Trustee</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-areb-4_13-ap-01021</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>areb</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Arkansas</courtState>
+ <courtSortOrder>3051</courtSortOrder>
+ <caseNumber>4:13-ap-01021</caseNumber>
+ <caseOffice>Little Rock</caseOffice>
+ <party firstName="Larry" fullName="Larry Shaffer" lastName="Shaffer" role="Plaintiff"></party>
+ <party firstName="Allen" fullName="Allen W. Bird II" generation="II" lastName="Bird" middleName="W." role="Defendant"></party>
+ <party fullName="U.S. Trustee (ust)" lastName="U.S. Trustee (ust)" role="U.S. Trustee"></party>
+ <state>Arkansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-areb-4_13-ap-01021-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-areb-4_13-ap-01021/USCOURTS-areb-4_13-ap-01021-0/mods.xml">
+ <titleInfo>
+  <title>Shaffer v. Bird, II</title>
+  <subTitle>Order/Written Opinion (RE: related document(s) 23 Motion For Summary Judgment Filed by Wendy R. Howerton on behalf of Plaintiff Larry Shaffer filed by Plaintiff Larry Shaffer) Entered on 1/7/2014(Greenhaw, Kay)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-areb-4_13-ap-01021/pdf/USCOURTS-areb-4_13-ap-01021-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186c7d8df</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-areb-4_13-ap-01021/USCOURTS-areb-4_13-ap-01021-0</identifier>
+ <identifier type="former granule identifier">areb-4_13-ap-01021_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-areb-4_13-ap-01021/USCOURTS-areb-4_13-ap-01021-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-areb-4_13-ap-01021/pdf/USCOURTS-areb-4_13-ap-01021-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-ap-01021; Shaffer v. Bird, II; </searchTitle>
+  <courtName>United States Bankruptcy Court Eastern District of Arkansas</courtName>
+  <state>Arkansas</state>
+  <accessId>USCOURTS-areb-4_13-ap-01021-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-07</dateIssued>
+  <docketText>Order/Written Opinion (RE: related document(s) 23 Motion For Summary Judgment Filed by Wendy R. Howerton on behalf of Plaintiff Larry Shaffer filed by Plaintiff Larry Shaffer) Entered on 1/7/2014(Greenhaw, Kay)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,243 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183d4de6b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-02-22</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_12-cv-10876</identifier>
+<identifier type="local">P0b002ee183d4de6b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-02-22</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-02-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_12-cv-10876</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_12-cv-10876</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:12-cv-10876</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Christine" fullName="Christine Brockelman" lastName="Brockelman" role="Defendant"></party>
+ <party firstName="Martha" fullName="Martha Coakley" lastName="Coakley" role="Defendant"></party>
+ <party firstName="Karen" fullName="Karen Dinardo" lastName="Dinardo" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Murphy" lastName="Murphy" role="Defendant"></party>
+ <party firstName="Iknaton" fullName="Iknaton Rhajik Nzaddi" lastName="Nzaddi" middleName="Rhajik" role="Plaintiff"></party>
+ <party firstName="Kelly" fullName="Kelly Ryan" lastName="Ryan" role="Defendant"></party>
+ <party firstName="Luis" fullName="Luis Spencer" lastName="Spencer" role="Defendant"></party>
+ <party fullName="The Director of Treatment of Bridgwater State Hospital" lastName="The Director of Treatment of Bridgwater State Hospital" role="Defendant"></party>
+ <party firstName="Martin" fullName="Martin Woods" lastName="Woods" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Nzaddi v. Department of Corrections et al</title>
+ <partNumber>1:12-cv-10876</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_12-cv-10876/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-10876;12-10876</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Christine Brockelman</displayForm>
+ <namePart type="family">Brockelman</namePart>
+ <namePart type="given">Christine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Martha Coakley</displayForm>
+ <namePart type="family">Coakley</namePart>
+ <namePart type="given">Martha</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Karen Dinardo</displayForm>
+ <namePart type="family">Dinardo</namePart>
+ <namePart type="given">Karen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Murphy</displayForm>
+ <namePart type="family">Murphy</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Iknaton Rhajik Nzaddi</displayForm>
+ <namePart type="family">Nzaddi</namePart>
+ <namePart type="given">Iknaton</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kelly Ryan</displayForm>
+ <namePart type="family">Ryan</namePart>
+ <namePart type="given">Kelly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Luis Spencer</displayForm>
+ <namePart type="family">Spencer</namePart>
+ <namePart type="given">Luis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The Director of Treatment of Bridgwater State Hospital</displayForm>
+ <namePart type="family">The Director of Treatment of Bridgwater State Hospital</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Martin Woods</displayForm>
+ <namePart type="family">Woods</namePart>
+ <namePart type="given">Martin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_12-cv-10876</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:12-cv-10876</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Christine" fullName="Christine Brockelman" lastName="Brockelman" role="Defendant"></party>
+ <party firstName="Martha" fullName="Martha Coakley" lastName="Coakley" role="Defendant"></party>
+ <party firstName="Karen" fullName="Karen Dinardo" lastName="Dinardo" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Murphy" lastName="Murphy" role="Defendant"></party>
+ <party firstName="Iknaton" fullName="Iknaton Rhajik Nzaddi" lastName="Nzaddi" middleName="Rhajik" role="Plaintiff"></party>
+ <party firstName="Kelly" fullName="Kelly Ryan" lastName="Ryan" role="Defendant"></party>
+ <party firstName="Luis" fullName="Luis Spencer" lastName="Spencer" role="Defendant"></party>
+ <party fullName="The Director of Treatment of Bridgwater State Hospital" lastName="The Director of Treatment of Bridgwater State Hospital" role="Defendant"></party>
+ <party firstName="Martin" fullName="Martin Woods" lastName="Woods" role="Defendant"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_12-cv-10876-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_12-cv-10876/USCOURTS-mad-1_12-cv-10876-0/mods.xml">
+ <titleInfo>
+  <title>Nzaddi v. Department of Corrections et al</title>
+  <subTitle>Judge Richard G. Stearns: MEMORANDUM AND ORDER entered granting 2 Motion for Leave to Proceed in forma pauperis and deferring the assessment of the filing fee; denying without prejudice 3 Motion for TRO and/or Preliminary Injunction. Within forty-two (42) days of the date of this Memorandum and Order, Nzaddi shall submit a certified prison account statement for the six-month period preceding the filing of the Complaint. A copy of this Memorandum and Order shall be sent to the Treasurers Offices at MCI- Shirley (Medium) and Bridgewater State Hospital with the request that they provide Nzaddi, and/or this court, with a certified prison account statement reflecting the average monthly balance and average monthly deposits for the six-month period preceding May 8, 2012. Upon receipt of the certified prison account statement, an Order shall issue assessing Nzaddis filing fee obligations under the in forma pauperis statute. Failure by Nzaddi to comply with this directive to submit a certified prison account statement may result in a dismissal of this action. The Clerk shall issue summonses for defendants Dinardo and Wood. The United States Marshal shall effect service on defendants Dinardo and Wood as directed by the plaintiff, and shall advance the costs of service. Within forty-two (42) days of the date of this Memorandum and Order, Nzaddi shall demonstrate good cause, in writing, why the claims against defendants Coakley, Spencer, Ryan, Brockelman, Murphy or the Director of Treatment should not be dismissed. The order was mailed to plaintiff and to the Treasurer&apos;s Offices at MCI Shirley (Medium) and Bridgewater State Hospital. (PSSA, 4) (Additional attachment(s) added on 5/18/2012: # (1) Errata ERRATTA) (PSSA, 4). (Main Document 5 replaced on 5/18/2012) (PSSA, 4).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_12-cv-10876-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d52579</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_12-cv-10876/USCOURTS-mad-1_12-cv-10876-0</identifier>
+ <identifier type="former granule identifier">mad-1_12-cv-10876_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_12-cv-10876/USCOURTS-mad-1_12-cv-10876-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_12-cv-10876/pdf/USCOURTS-mad-1_12-cv-10876-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-10876; Nzaddi v. Department of Corrections et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_12-cv-10876-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-05-18</dateIssued>
+  <docketText>Judge Richard G. Stearns: MEMORANDUM AND ORDER entered granting 2 Motion for Leave to Proceed in forma pauperis and deferring the assessment of the filing fee; denying without prejudice 3 Motion for TRO and/or Preliminary Injunction. Within forty-two (42) days of the date of this Memorandum and Order, Nzaddi shall submit a certified prison account statement for the six-month period preceding the filing of the Complaint. A copy of this Memorandum and Order shall be sent to the Treasurers Offices at MCI- Shirley (Medium) and Bridgewater State Hospital with the request that they provide Nzaddi, and/or this court, with a certified prison account statement reflecting the average monthly balance and average monthly deposits for the six-month period preceding May 8, 2012. Upon receipt of the certified prison account statement, an Order shall issue assessing Nzaddis filing fee obligations under the in forma pauperis statute. Failure by Nzaddi to comply with this directive to submit a certified prison account statement may result in a dismissal of this action. The Clerk shall issue summonses for defendants Dinardo and Wood. The United States Marshal shall effect service on defendants Dinardo and Wood as directed by the plaintiff, and shall advance the costs of service. Within forty-two (42) days of the date of this Memorandum and Order, Nzaddi shall demonstrate good cause, in writing, why the claims against defendants Coakley, Spencer, Ryan, Brockelman, Murphy or the Director of Treatment should not be dismissed. The order was mailed to plaintiff and to the Treasurer&apos;s Offices at MCI Shirley (Medium) and Bridgewater State Hospital. (PSSA, 4) (Additional attachment(s) added on 5/18/2012: # (1) Errata ERRATTA) (PSSA, 4). (Main Document 5 replaced on 5/18/2012) (PSSA, 4).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_12-cv-10876-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_12-cv-10876/USCOURTS-mad-1_12-cv-10876-1/mods.xml">
+ <titleInfo>
+  <title>Nzaddi v. Department of Corrections et al</title>
+  <subTitle>Judge Richard G. Stearns: MEMORANDUM AND ORDER entered. The Clerk shall reissue summonses for service of the original complaint on defendants Dinardo and Woods. In accordance with this Court&apos;s order dated May 18, 2012, and the plaintiff not having shown good cause why the claims against defendants Coakley, Spencer, Ryan, Brockelman, Murphy and the Director of Treatment should not be dismissed, the claims against these six defendants are DISMISSED pursuant to 28 U.S.C. § 1915(e)(2).(PSSA, 4)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_12-cv-10876-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d52578</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_12-cv-10876/USCOURTS-mad-1_12-cv-10876-1</identifier>
+ <identifier type="former granule identifier">mad-1_12-cv-10876_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_12-cv-10876/USCOURTS-mad-1_12-cv-10876-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_12-cv-10876/pdf/USCOURTS-mad-1_12-cv-10876-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-10876; Nzaddi v. Department of Corrections et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_12-cv-10876-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>Judge Richard G. Stearns: MEMORANDUM AND ORDER entered. The Clerk shall reissue summonses for service of the original complaint on defendants Dinardo and Woods. In accordance with this Court&apos;s order dated May 18, 2012, and the plaintiff not having shown good cause why the claims against defendants Coakley, Spencer, Ryan, Brockelman, Murphy and the Director of Treatment should not be dismissed, the claims against these six defendants are DISMISSED pursuant to 28 U.S.C. § 1915(e)(2).(PSSA, 4)</docketText>
+</extension>
+</relatedItem>
+</mods>

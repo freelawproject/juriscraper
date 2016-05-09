@@ -1,0 +1,402 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18190cc10">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-73593</identifier>
+<identifier type="local">P0b002ee18190cc10</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_05-cv-73593</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_05-cv-73593</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:05-cv-73593</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <party firstName="Lisa" fullName="Lisa Ayers" lastName="Ayers" role="Plaintiff"></party>
+ <party firstName="Alissa" fullName="Alissa Beveridge" lastName="Beveridge" role="Plaintiff"></party>
+ <party firstName="O." fullName="O. Bruce" lastName="Bruce" role="Defendant"></party>
+ <party firstName="Tashiena" fullName="Tashiena Combs" lastName="Combs" role="Plaintiff"></party>
+ <party firstName="Susan" fullName="Susan Davis" lastName="Davis" role="Defendant"></party>
+ <party firstName="Towanda" fullName="Towanda Eppenger" lastName="Eppenger" role="Plaintiff"></party>
+ <party firstName="L." fullName="L. Evans" lastName="Evans" role="Defendant"></party>
+ <party firstName="Tara" fullName="Tara Givens" lastName="Givens" role="Plaintiff"></party>
+ <party firstName="Gwendolyn" fullName="Gwendolyn Graham" lastName="Graham" role="Plaintiff"></party>
+ <party firstName="Shenita" fullName="Shenita Hill" lastName="Hill" role="Plaintiff"></party>
+ <party firstName="Vickie" fullName="Vickie Hoskins" lastName="Hoskins" role="Plaintiff"></party>
+ <party firstName="Kristen" fullName="Kristen Martin" lastName="Martin" role="Plaintiff"></party>
+ <party firstName="Darnell" fullName="Darnell McCollum" lastName="McCollum" role="Plaintiff"></party>
+ <party firstName="Mary" fullName="Mary Meldrum" lastName="Meldrum" role="Plaintiff"></party>
+ <party firstName="Yelitza" fullName="Yelitza Navarro" lastName="Navarro" role="Plaintiff"></party>
+ <party firstName="Salina" fullName="Salina Newell" lastName="Newell" role="Plaintiff"></party>
+ <party firstName="Machelle" fullName="Machelle Pearson" lastName="Pearson" role="Plaintiff"></party>
+ <party firstName="Penny" fullName="Penny Pelton" lastName="Pelton" role="Plaintiff"></party>
+ <party firstName="Judy" fullName="Judy Peoples-Hall" lastName="Peoples-Hall" role="Plaintiff"></party>
+ <party fullName="Rider" lastName="Rider" role="Defendant"></party>
+ <party firstName="Heather" fullName="Heather Robinson" lastName="Robinson" role="Plaintiff"></party>
+ <party fullName="Rogers" lastName="Rogers" role="Defendant"></party>
+ <party firstName="Tracey" fullName="Tracey Schafer" lastName="Schafer" role="Plaintiff"></party>
+ <party firstName="Ava" fullName="Ava Simpson" lastName="Simpson" role="Plaintiff"></party>
+ <party firstName="Sally" fullName="Sally Smith" lastName="Smith" role="Plaintiff"></party>
+ <party firstName="Cherly" fullName="Cherly Soper" lastName="Soper" role="Plaintiff"></party>
+ <party firstName="Pamela" fullName="Pamela Teamer" lastName="Teamer" role="Plaintiff"></party>
+ <party firstName="Juan" fullName="Juan Tiggs" lastName="Tiggs" role="Plaintiff"></party>
+ <party firstName="Jacqueline" fullName="Jacqueline Verellem" lastName="Verellem" role="Plaintiff"></party>
+ <party firstName="Marcia" fullName="Marcia Whelan" lastName="Whelan" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Teamer et al v. Givens et al</title>
+ <partNumber>2:05-cv-73593</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-73593/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:05-cv-73593;05-73593</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Lisa Ayers</displayForm>
+ <namePart type="family">Ayers</namePart>
+ <namePart type="given">Lisa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Alissa Beveridge</displayForm>
+ <namePart type="family">Beveridge</namePart>
+ <namePart type="given">Alissa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>O. Bruce</displayForm>
+ <namePart type="family">Bruce</namePart>
+ <namePart type="given">O.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tashiena Combs</displayForm>
+ <namePart type="family">Combs</namePart>
+ <namePart type="given">Tashiena</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Susan Davis</displayForm>
+ <namePart type="family">Davis</namePart>
+ <namePart type="given">Susan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Towanda Eppenger</displayForm>
+ <namePart type="family">Eppenger</namePart>
+ <namePart type="given">Towanda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>L. Evans</displayForm>
+ <namePart type="family">Evans</namePart>
+ <namePart type="given">L.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tara Givens</displayForm>
+ <namePart type="family">Givens</namePart>
+ <namePart type="given">Tara</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gwendolyn Graham</displayForm>
+ <namePart type="family">Graham</namePart>
+ <namePart type="given">Gwendolyn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Shenita Hill</displayForm>
+ <namePart type="family">Hill</namePart>
+ <namePart type="given">Shenita</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Vickie Hoskins</displayForm>
+ <namePart type="family">Hoskins</namePart>
+ <namePart type="given">Vickie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kristen Martin</displayForm>
+ <namePart type="family">Martin</namePart>
+ <namePart type="given">Kristen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Darnell McCollum</displayForm>
+ <namePart type="family">McCollum</namePart>
+ <namePart type="given">Darnell</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mary Meldrum</displayForm>
+ <namePart type="family">Meldrum</namePart>
+ <namePart type="given">Mary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Yelitza Navarro</displayForm>
+ <namePart type="family">Navarro</namePart>
+ <namePart type="given">Yelitza</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Salina Newell</displayForm>
+ <namePart type="family">Newell</namePart>
+ <namePart type="given">Salina</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Machelle Pearson</displayForm>
+ <namePart type="family">Pearson</namePart>
+ <namePart type="given">Machelle</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Penny Pelton</displayForm>
+ <namePart type="family">Pelton</namePart>
+ <namePart type="given">Penny</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Judy Peoples-Hall</displayForm>
+ <namePart type="family">Peoples-Hall</namePart>
+ <namePart type="given">Judy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Rider</displayForm>
+ <namePart type="family">Rider</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Heather Robinson</displayForm>
+ <namePart type="family">Robinson</namePart>
+ <namePart type="given">Heather</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Rogers</displayForm>
+ <namePart type="family">Rogers</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tracey Schafer</displayForm>
+ <namePart type="family">Schafer</namePart>
+ <namePart type="given">Tracey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ava Simpson</displayForm>
+ <namePart type="family">Simpson</namePart>
+ <namePart type="given">Ava</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sally Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Sally</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Cherly Soper</displayForm>
+ <namePart type="family">Soper</namePart>
+ <namePart type="given">Cherly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Pamela Teamer</displayForm>
+ <namePart type="family">Teamer</namePart>
+ <namePart type="given">Pamela</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Juan Tiggs</displayForm>
+ <namePart type="family">Tiggs</namePart>
+ <namePart type="given">Juan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jacqueline Verellem</displayForm>
+ <namePart type="family">Verellem</namePart>
+ <namePart type="given">Jacqueline</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Marcia Whelan</displayForm>
+ <namePart type="family">Whelan</namePart>
+ <namePart type="given">Marcia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_05-cv-73593</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:05-cv-73593</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <party firstName="Lisa" fullName="Lisa Ayers" lastName="Ayers" role="Plaintiff"></party>
+ <party firstName="Alissa" fullName="Alissa Beveridge" lastName="Beveridge" role="Plaintiff"></party>
+ <party firstName="O." fullName="O. Bruce" lastName="Bruce" role="Defendant"></party>
+ <party firstName="Tashiena" fullName="Tashiena Combs" lastName="Combs" role="Plaintiff"></party>
+ <party firstName="Susan" fullName="Susan Davis" lastName="Davis" role="Defendant"></party>
+ <party firstName="Towanda" fullName="Towanda Eppenger" lastName="Eppenger" role="Plaintiff"></party>
+ <party firstName="L." fullName="L. Evans" lastName="Evans" role="Defendant"></party>
+ <party firstName="Tara" fullName="Tara Givens" lastName="Givens" role="Plaintiff"></party>
+ <party firstName="Gwendolyn" fullName="Gwendolyn Graham" lastName="Graham" role="Plaintiff"></party>
+ <party firstName="Shenita" fullName="Shenita Hill" lastName="Hill" role="Plaintiff"></party>
+ <party firstName="Vickie" fullName="Vickie Hoskins" lastName="Hoskins" role="Plaintiff"></party>
+ <party firstName="Kristen" fullName="Kristen Martin" lastName="Martin" role="Plaintiff"></party>
+ <party firstName="Darnell" fullName="Darnell McCollum" lastName="McCollum" role="Plaintiff"></party>
+ <party firstName="Mary" fullName="Mary Meldrum" lastName="Meldrum" role="Plaintiff"></party>
+ <party firstName="Yelitza" fullName="Yelitza Navarro" lastName="Navarro" role="Plaintiff"></party>
+ <party firstName="Salina" fullName="Salina Newell" lastName="Newell" role="Plaintiff"></party>
+ <party firstName="Machelle" fullName="Machelle Pearson" lastName="Pearson" role="Plaintiff"></party>
+ <party firstName="Penny" fullName="Penny Pelton" lastName="Pelton" role="Plaintiff"></party>
+ <party firstName="Judy" fullName="Judy Peoples-Hall" lastName="Peoples-Hall" role="Plaintiff"></party>
+ <party fullName="Rider" lastName="Rider" role="Defendant"></party>
+ <party firstName="Heather" fullName="Heather Robinson" lastName="Robinson" role="Plaintiff"></party>
+ <party fullName="Rogers" lastName="Rogers" role="Defendant"></party>
+ <party firstName="Tracey" fullName="Tracey Schafer" lastName="Schafer" role="Plaintiff"></party>
+ <party firstName="Ava" fullName="Ava Simpson" lastName="Simpson" role="Plaintiff"></party>
+ <party firstName="Sally" fullName="Sally Smith" lastName="Smith" role="Plaintiff"></party>
+ <party firstName="Cherly" fullName="Cherly Soper" lastName="Soper" role="Plaintiff"></party>
+ <party firstName="Pamela" fullName="Pamela Teamer" lastName="Teamer" role="Plaintiff"></party>
+ <party firstName="Juan" fullName="Juan Tiggs" lastName="Tiggs" role="Plaintiff"></party>
+ <party firstName="Jacqueline" fullName="Jacqueline Verellem" lastName="Verellem" role="Plaintiff"></party>
+ <party firstName="Marcia" fullName="Marcia Whelan" lastName="Whelan" role="Plaintiff"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_05-cv-73593-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-73593/USCOURTS-mied-2_05-cv-73593-0/mods.xml">
+ <titleInfo>
+  <title>Teamer et al v. Givens et al</title>
+  <subTitle>ORDER DISMISSING CASE - Signed by Honorable Denise Page Hood. (JJoh, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_05-cv-73593-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181995c07</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-73593/USCOURTS-mied-2_05-cv-73593-0</identifier>
+ <identifier type="former granule identifier">mied-2_05-cv-73593_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-73593/USCOURTS-mied-2_05-cv-73593-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-73593/pdf/USCOURTS-mied-2_05-cv-73593-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-73593; Teamer et al v. Givens et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_05-cv-73593-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-06</dateIssued>
+  <docketText>ORDER DISMISSING CASE - Signed by Honorable Denise Page Hood. (JJoh, )</docketText>
+</extension>
+</relatedItem>
+</mods>

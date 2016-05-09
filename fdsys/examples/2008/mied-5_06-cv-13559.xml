@@ -1,0 +1,307 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181956263">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-14</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-5_06-cv-13559</identifier>
+<identifier type="local">P0b002ee181956263</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-5_06-cv-13559</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-5_06-cv-13559</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>5:06-cv-13559</caseNumber>
+ <caseOffice>Ann Arbor</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="James" fullName="James Armstrong" lastName="Armstrong" role="Defendant"></party>
+ <party firstName="Patricia" fullName="Patricia L. Caruso" lastName="Caruso" middleName="L." role="Defendant"></party>
+ <party firstName="William" fullName="William Collins" lastName="Collins" role="Defendant"></party>
+ <party firstName="Andrew" fullName="Andrew Jackson" lastName="Jackson" role="Defendant"></party>
+ <party firstName="Frank" fullName="Frank Konieczki" lastName="Konieczki" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott Nobles" lastName="Nobles" role="Defendant"></party>
+ <party firstName="Kenneth" fullName="Kenneth Smith" lastName="Smith" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Smith v. Caruso et al</title>
+ <partNumber>5:06-cv-13559</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-5_06-cv-13559/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:06-cv-13559;06-13559</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Ann Arbor</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>James Armstrong</displayForm>
+ <namePart type="family">Armstrong</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Patricia L. Caruso</displayForm>
+ <namePart type="family">Caruso</namePart>
+ <namePart type="given">Patricia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Collins</displayForm>
+ <namePart type="family">Collins</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Andrew Jackson</displayForm>
+ <namePart type="family">Jackson</namePart>
+ <namePart type="given">Andrew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Frank Konieczki</displayForm>
+ <namePart type="family">Konieczki</namePart>
+ <namePart type="given">Frank</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott Nobles</displayForm>
+ <namePart type="family">Nobles</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kenneth Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Kenneth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-5_06-cv-13559</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>5:06-cv-13559</caseNumber>
+ <caseOffice>Ann Arbor</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="James" fullName="James Armstrong" lastName="Armstrong" role="Defendant"></party>
+ <party firstName="Patricia" fullName="Patricia L. Caruso" lastName="Caruso" middleName="L." role="Defendant"></party>
+ <party firstName="William" fullName="William Collins" lastName="Collins" role="Defendant"></party>
+ <party firstName="Andrew" fullName="Andrew Jackson" lastName="Jackson" role="Defendant"></party>
+ <party firstName="Frank" fullName="Frank Konieczki" lastName="Konieczki" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott Nobles" lastName="Nobles" role="Defendant"></party>
+ <party firstName="Kenneth" fullName="Kenneth Smith" lastName="Smith" role="Plaintiff"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-5_06-cv-13559-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-5_06-cv-13559/USCOURTS-mied-5_06-cv-13559-0/mods.xml">
+ <titleInfo>
+  <title>Smith v. Caruso et al</title>
+  <subTitle>ORDER Denying 2 Motion to Appoint Counsel - Signed by Honorable Mona K Majzoub. (LBar, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-5_06-cv-13559-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a3966d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-5_06-cv-13559/USCOURTS-mied-5_06-cv-13559-0</identifier>
+ <identifier type="former granule identifier">mied-5_06-cv-13559_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-5_06-cv-13559/USCOURTS-mied-5_06-cv-13559-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-5_06-cv-13559/pdf/USCOURTS-mied-5_06-cv-13559-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:06-cv-13559; Smith v. Caruso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-5_06-cv-13559-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-11-16</dateIssued>
+  <docketText>ORDER Denying 2 Motion to Appoint Counsel - Signed by Honorable Mona K Majzoub. (LBar, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-5_06-cv-13559-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-5_06-cv-13559/USCOURTS-mied-5_06-cv-13559-1/mods.xml">
+ <titleInfo>
+  <title>Smith v. Caruso et al</title>
+  <subTitle>REPORT AND RECOMMENDATION re 21 MOTION to Amend 20 MOTION for Summary - Signed by Honorable Mona K Majzoub. (LBar)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-5_06-cv-13559-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a39671</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-5_06-cv-13559/USCOURTS-mied-5_06-cv-13559-1</identifier>
+ <identifier type="former granule identifier">mied-5_06-cv-13559_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-5_06-cv-13559/USCOURTS-mied-5_06-cv-13559-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-5_06-cv-13559/pdf/USCOURTS-mied-5_06-cv-13559-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:06-cv-13559; Smith v. Caruso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-5_06-cv-13559-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-03-14</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION re 21 MOTION to Amend 20 MOTION for Summary - Signed by Honorable Mona K Majzoub. (LBar)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-5_06-cv-13559-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-5_06-cv-13559/USCOURTS-mied-5_06-cv-13559-2/mods.xml">
+ <titleInfo>
+  <title>Smith v. Caruso et al</title>
+  <subTitle>ORDER Adopting 27 Report and Recommendation re 21 Motion for Summary Judgment, filed by Scott Nobles, James Armstrong, Patricia L. Caruso, Frank Konieczki, Andrew Jackson,, Signed by Honorable John Corbett O&apos;Meara. (WBar)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-5_06-cv-13559-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a39670</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-5_06-cv-13559/USCOURTS-mied-5_06-cv-13559-2</identifier>
+ <identifier type="former granule identifier">mied-5_06-cv-13559_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-5_06-cv-13559/USCOURTS-mied-5_06-cv-13559-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-5_06-cv-13559/pdf/USCOURTS-mied-5_06-cv-13559-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:06-cv-13559; Smith v. Caruso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-5_06-cv-13559-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-05-01</dateIssued>
+  <docketText>ORDER Adopting 27 Report and Recommendation re 21 Motion for Summary Judgment, filed by Scott Nobles, James Armstrong, Patricia L. Caruso, Frank Konieczki, Andrew Jackson,, Signed by Honorable John Corbett O&apos;Meara. (WBar)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-5_06-cv-13559-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-5_06-cv-13559/USCOURTS-mied-5_06-cv-13559-3/mods.xml">
+ <titleInfo>
+  <title>Smith v. Caruso et al</title>
+  <subTitle>REPORT AND RECOMMENDATION re 50 MOTION for Summary Judgment - Signed by Honorable Mona K Majzoub. (LBar)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-5_06-cv-13559-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a3966e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-5_06-cv-13559/USCOURTS-mied-5_06-cv-13559-3</identifier>
+ <identifier type="former granule identifier">mied-5_06-cv-13559_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-5_06-cv-13559/USCOURTS-mied-5_06-cv-13559-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-5_06-cv-13559/pdf/USCOURTS-mied-5_06-cv-13559-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:06-cv-13559; Smith v. Caruso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-5_06-cv-13559-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-12-05</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION re 50 MOTION for Summary Judgment - Signed by Honorable Mona K Majzoub. (LBar)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-5_06-cv-13559-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-5_06-cv-13559/USCOURTS-mied-5_06-cv-13559-4/mods.xml">
+ <titleInfo>
+  <title>Smith v. Caruso et al</title>
+  <subTitle>ORDER Adopting 52 Report and Recommendation re 50 Motion for Summary Judgment filed by William Collins, Signed by Honorable John Corbett O&apos;Meara. (WBar)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-5_06-cv-13559-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a3966f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-5_06-cv-13559/USCOURTS-mied-5_06-cv-13559-4</identifier>
+ <identifier type="former granule identifier">mied-5_06-cv-13559_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-5_06-cv-13559/USCOURTS-mied-5_06-cv-13559-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-5_06-cv-13559/pdf/USCOURTS-mied-5_06-cv-13559-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:06-cv-13559; Smith v. Caruso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-5_06-cv-13559-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-01-14</dateIssued>
+  <docketText>ORDER Adopting 52 Report and Recommendation re 50 Motion for Summary Judgment filed by William Collins, Signed by Honorable John Corbett O&apos;Meara. (WBar)</docketText>
+</extension>
+</relatedItem>
+</mods>

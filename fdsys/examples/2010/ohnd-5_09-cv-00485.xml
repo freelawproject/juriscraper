@@ -1,0 +1,224 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815607c8">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-21</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_09-cv-00485</identifier>
+<identifier type="local">P0b002ee1815607c8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-5_09-cv-00485</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_09-cv-00485</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:09-cv-00485</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <cause>29:1132 E.R.I.S.A.-Employee Benefits</cause>
+ <party fullName="Fedex Freight East, Inc." lastName="Fedex Freight East, Inc." role="Defendant"></party>
+ <party fullName="Hartford Holdings, Inc." lastName="Hartford Holdings, Inc." role="Defendant"></party>
+ <party fullName="Hartford Life&amp;Accident Insurance Company" lastName="Hartford Life&amp;Accident Insurance Company" role="Counter-Claimant"></party>
+ <party fullName="Hartford Life&amp;Accident Insurance Company" lastName="Hartford Life&amp;Accident Insurance Company" role="Defendant"></party>
+ <party fullName="Hartford Life, Inc." lastName="Hartford Life, Inc." role="Defendant"></party>
+ <party firstName="David" fullName="David L. Pennell" lastName="Pennell" middleName="L." role="Counter-Defendant"></party>
+ <party firstName="David" fullName="David L. Pennell" lastName="Pennell" middleName="L." role="Plaintiff"></party>
+ <party firstName="Christopher" fullName="Christopher A. Pennell, a Minor" lastName="Pennell, a Minor" middleName="A." role="Plaintiff"></party>
+ <party fullName="The Hartford" lastName="The Hartford" role="Defendant"></party>
+ <party fullName="The Hartford Financial Services Group, Inc." lastName="The Hartford Financial Services Group, Inc." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Pennell v. Hartford Life&amp;Accident Insurance Company et al</title>
+ <partNumber>5:09-cv-00485</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_09-cv-00485/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:09-cv-00485;09-485</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Akron</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Fedex Freight East, Inc.</displayForm>
+ <namePart type="family">Fedex Freight East, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hartford Holdings, Inc.</displayForm>
+ <namePart type="family">Hartford Holdings, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hartford Life&amp;Accident Insurance Company</displayForm>
+ <namePart type="family">Hartford Life&amp;Accident Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Hartford Life&amp;Accident Insurance Company</displayForm>
+ <namePart type="family">Hartford Life&amp;Accident Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hartford Life, Inc.</displayForm>
+ <namePart type="family">Hartford Life, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David L. Pennell</displayForm>
+ <namePart type="family">Pennell</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David L. Pennell</displayForm>
+ <namePart type="family">Pennell</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Christopher A. Pennell, a Minor</displayForm>
+ <namePart type="family">Pennell, a Minor</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>The Hartford</displayForm>
+ <namePart type="family">The Hartford</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The Hartford Financial Services Group, Inc.</displayForm>
+ <namePart type="family">The Hartford Financial Services Group, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_09-cv-00485</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:09-cv-00485</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <cause>29:1132 E.R.I.S.A.-Employee Benefits</cause>
+ <party fullName="Fedex Freight East, Inc." lastName="Fedex Freight East, Inc." role="Defendant"></party>
+ <party fullName="Hartford Holdings, Inc." lastName="Hartford Holdings, Inc." role="Defendant"></party>
+ <party fullName="Hartford Life&amp;Accident Insurance Company" lastName="Hartford Life&amp;Accident Insurance Company" role="Counter-Claimant"></party>
+ <party fullName="Hartford Life&amp;Accident Insurance Company" lastName="Hartford Life&amp;Accident Insurance Company" role="Defendant"></party>
+ <party fullName="Hartford Life, Inc." lastName="Hartford Life, Inc." role="Defendant"></party>
+ <party firstName="David" fullName="David L. Pennell" lastName="Pennell" middleName="L." role="Counter-Defendant"></party>
+ <party firstName="David" fullName="David L. Pennell" lastName="Pennell" middleName="L." role="Plaintiff"></party>
+ <party firstName="Christopher" fullName="Christopher A. Pennell, a Minor" lastName="Pennell, a Minor" middleName="A." role="Plaintiff"></party>
+ <party fullName="The Hartford" lastName="The Hartford" role="Defendant"></party>
+ <party fullName="The Hartford Financial Services Group, Inc." lastName="The Hartford Financial Services Group, Inc." role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_09-cv-00485-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_09-cv-00485/USCOURTS-ohnd-5_09-cv-00485-0/mods.xml">
+ <titleInfo>
+  <title>Pennell v. Hartford Life&amp;Accident Insurance Company et al</title>
+  <subTitle>Memorandum Opinion and Order: Defendant&apos;s Motion for Judgment on the Administrative Record is granted. Plaintiffs&apos; Motion for Summary Judgment is denied and Plaintiffs&apos; request for attorney fees is denied. Defendant shall submit an accounting of the current amount owed in repayment as a result of the overpayment made to Plaintiffs under the Plan. (Related documents 21 and 22). Judge Peter C. Economus on 1/20/10. (BR,S) Modified text on 1/21/2010 (JLG).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_09-cv-00485-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18161ccdd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_09-cv-00485/USCOURTS-ohnd-5_09-cv-00485-0</identifier>
+ <identifier type="former granule identifier">ohnd-5_09-cv-00485_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_09-cv-00485/USCOURTS-ohnd-5_09-cv-00485-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_09-cv-00485/pdf/USCOURTS-ohnd-5_09-cv-00485-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:09-cv-00485; Pennell v. Hartford Life&amp;Accident Insurance Company et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_09-cv-00485-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-21</dateIssued>
+  <docketText>Memorandum Opinion and Order: Defendant&apos;s Motion for Judgment on the Administrative Record is granted. Plaintiffs&apos; Motion for Summary Judgment is denied and Plaintiffs&apos; request for attorney fees is denied. Defendant shall submit an accounting of the current amount owed in repayment as a result of the overpayment made to Plaintiffs under the Plan. (Related documents 21 and 22). Judge Peter C. Economus on 1/20/10. (BR,S) Modified text on 1/21/2010 (JLG).</docketText>
+</extension>
+</relatedItem>
+</mods>

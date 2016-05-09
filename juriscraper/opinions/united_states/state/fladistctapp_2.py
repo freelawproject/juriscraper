@@ -7,8 +7,7 @@
 # - 2014-07-21: Created
 # - 2014-08-28: Updated by mlr.
 
-
-import time
+import re
 from datetime import date
 
 import certifi
@@ -16,6 +15,7 @@ import requests
 from lxml import html
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -92,7 +92,7 @@ class Site(OpinionSite):
         path = "//h1/text()|//h2/text()"
         dates = []
         text = html_tree.xpath(path)[0]
-        case_date = date.fromtimestamp(time.mktime(time.strptime(text.strip(), '%B %d, %Y')))
+        case_date = convert_date_string(text.strip())
         dates.extend([case_date] * int(html_tree.xpath("count(//th//a[contains(., '/')])")))
         return dates
 
@@ -107,5 +107,11 @@ class Site(OpinionSite):
 
     @staticmethod
     def _return_docket_numbers(html_tree):
-        path = "//th//a[contains(., '-')]/*/text()"
-        return list(html_tree.xpath(path))
+        path = "//th//a[contains(., '-')]/*/text() | //th//a[contains(text(),'-')]/text()"
+        dockets = []
+        for text in list(html_tree.xpath(path)):
+            text = text.strip()
+            if re.match('^\w+-\d+$', text):
+                dockets.append(text)
+        return dockets
+

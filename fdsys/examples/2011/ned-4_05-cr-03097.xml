@@ -1,0 +1,594 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181726dcd">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03097</identifier>
+<identifier type="local">P0b002ee181726dcd</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_05-cr-03097</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_05-cr-03097</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:05-cr-03097</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Damien" fullName="Damien D. Brown" lastName="Brown" middleName="D." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Brown</title>
+ <partNumber>4:05-cr-03097</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03097/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:05-cr-03097;05-3097</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Damien D. Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">Damien</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_05-cr-03097</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:05-cr-03097</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Damien" fullName="Damien D. Brown" lastName="Brown" middleName="D." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03097-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER appointing Michael J. Hansen for Damien D. Brown. Signed by Magistrate Judge David L. Piester on 9/28/2005. (CS, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03097-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178aba1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-0</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03097_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03097/pdf/USCOURTS-ned-4_05-cr-03097-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03097; USA v. Brown; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03097-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-09-28</dateIssued>
+  <docketText>ORDER appointing Michael J. Hansen for Damien D. Brown. Signed by Magistrate Judge David L. Piester on 9/28/2005. (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03097-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER as to defendant Damien D. Brown. It is ordered that: (1) This case, insofar as it concerns this defendant, is removed from the trial docket based upon the request of the defendant. (2) A hearing on the defendant&apos;s anticipated plea of guilty is scheduled before Magistrate Judge Piester on the 2nd day of November, 2005, at the hour of 9:00 a.m., in Courtroom No. 2, United States Courthouse and Federal Building, 100 Centennial Mall, North, Lincoln, Nebraska.(3) On or before the date set for the plea proceeding, counsel for plaintiff and for defendant shall provide to the assigned probation officer their respective versions of the offense for purposes of preparing the presentence investigation report. (4) For this defendant, the time between today&apos;s date and the hearing on the anticipated plea of guilty is excluded for purposes of computing the limits under the Speedy Trial Act. See 18 U.S.C. sec. 3161(h)(1)(I)&amp;(h)(8)(A)(B).***Change of Plea Hearing set for 11/2/2005 09:00 AM in Courtroom 2 (Lincoln) before Magistrate Judge David L. Piester; XT excludable started 11/1/2005-11/2/2005; termed 12/5/2005 trial date. Signed by Judge Richard G. Kopf on 11/1/2005. (KLL, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03097-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178aaf4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-1</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03097_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03097/pdf/USCOURTS-ned-4_05-cr-03097-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03097; USA v. Brown; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03097-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-11-01</dateIssued>
+  <docketText>ORDER as to defendant Damien D. Brown. It is ordered that: (1) This case, insofar as it concerns this defendant, is removed from the trial docket based upon the request of the defendant. (2) A hearing on the defendant&apos;s anticipated plea of guilty is scheduled before Magistrate Judge Piester on the 2nd day of November, 2005, at the hour of 9:00 a.m., in Courtroom No. 2, United States Courthouse and Federal Building, 100 Centennial Mall, North, Lincoln, Nebraska.(3) On or before the date set for the plea proceeding, counsel for plaintiff and for defendant shall provide to the assigned probation officer their respective versions of the offense for purposes of preparing the presentence investigation report. (4) For this defendant, the time between today&apos;s date and the hearing on the anticipated plea of guilty is excluded for purposes of computing the limits under the Speedy Trial Act. See 18 U.S.C. sec. 3161(h)(1)(I)&amp;(h)(8)(A)(B).***Change of Plea Hearing set for 11/2/2005 09:00 AM in Courtroom 2 (Lincoln) before Magistrate Judge David L. Piester; XT excludable started 11/1/2005-11/2/2005; termed 12/5/2005 trial date. Signed by Judge Richard G. Kopf on 11/1/2005. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03097-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Damien D. Brown signed by Magistrate Judge David L. Piester on 11/2/2005. (SED)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03097-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178aaf6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-2</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03097_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03097/pdf/USCOURTS-ned-4_05-cr-03097-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03097; USA v. Brown; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03097-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-11-02</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Damien D. Brown signed by Magistrate Judge David L. Piester on 11/2/2005. (SED)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03097-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER striking Transcript - Unredacted, 20 as to defendant Damien D. Brown. No PDF document attached. The party is directed to re-file the document. Signed by Judge Richard G. Kopf on 11/8/2005. (JAR)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03097-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178aaf5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-3</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03097_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03097/pdf/USCOURTS-ned-4_05-cr-03097-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03097; USA v. Brown; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03097-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-11-08</dateIssued>
+  <docketText>ORDER striking Transcript - Unredacted, 20 as to defendant Damien D. Brown. No PDF document attached. The party is directed to re-file the document. Signed by Judge Richard G. Kopf on 11/8/2005. (JAR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03097-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to defendant Damien D. Brown. It is ordered that the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects; ETC.Signed by Judge Richard G. Kopf on 1/12/2006. (KLL, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03097-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178aba4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-4</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03097_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03097/pdf/USCOURTS-ned-4_05-cr-03097-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03097; USA v. Brown; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03097-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-01-12</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to defendant Damien D. Brown. It is ordered that the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects; ETC.Signed by Judge Richard G. Kopf on 1/12/2006. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03097-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>JUDGMENT as to Damien D. Brown (1). Count 1, Defendant pleaded guilty to Count I of the Indictment and is hereby committed to the custody of the United States Bureau of Prisons to be imprisoned for a term of thirty-seven (37) months; three (3) years Supervised Release with Special Conditions; $100 Special Assessment as to defendant(s) Damien D. Brown. Four (4) certified copies to USM. Signed by Judge Richard G. Kopf on 1/26/2006. (GJG, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03097-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178aba3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-5</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03097_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03097/pdf/USCOURTS-ned-4_05-cr-03097-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03097; USA v. Brown; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03097-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2006-01-26</dateIssued>
+  <docketText>JUDGMENT as to Damien D. Brown (1). Count 1, Defendant pleaded guilty to Count I of the Indictment and is hereby committed to the custody of the United States Bureau of Prisons to be imprisoned for a term of thirty-seven (37) months; three (3) years Supervised Release with Special Conditions; $100 Special Assessment as to defendant(s) Damien D. Brown. Four (4) certified copies to USM. Signed by Judge Richard G. Kopf on 1/26/2006. (GJG, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03097-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER APPOINTING COUNSEL - Michael J. Hansen appointed as counsel as to defendant Damien D. Brown as ordered by Magistrate Judge David L. Piester. (SED)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03097-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178aaf3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-6</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03097_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03097/pdf/USCOURTS-ned-4_05-cr-03097-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03097; USA v. Brown; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03097-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2009-03-23</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - Michael J. Hansen appointed as counsel as to defendant Damien D. Brown as ordered by Magistrate Judge David L. Piester. (SED)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03097-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER of Detention pending revocation hearing as to defendant Damien D. Brown as ordered by Magistrate Judge David L. Piester. (SED)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03097-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178aafa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-7</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03097_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03097/pdf/USCOURTS-ned-4_05-cr-03097-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03097; USA v. Brown; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03097-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2009-03-30</dateIssued>
+  <docketText>ORDER of Detention pending revocation hearing as to defendant Damien D. Brown as ordered by Magistrate Judge David L. Piester. (SED)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03097-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER as to defendant Damien D. Brown. On the court&apos;s own motion, and to accommodate a change in the undersigned&apos;s schedule, IT IS ORDERED that Defendant Brown&apos;s revocation hearing is rescheduled to 4:00 p.m. on Friday, May 1, 2009, before the undersigned United States district judge, in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The defendant shall be present unless excused by the court. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-04-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03097-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178aba6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-8</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03097_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03097/pdf/USCOURTS-ned-4_05-cr-03097-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03097; USA v. Brown; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03097-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2009-04-28</dateIssued>
+  <docketText>ORDER as to defendant Damien D. Brown. On the court&apos;s own motion, and to accommodate a change in the undersigned&apos;s schedule, IT IS ORDERED that Defendant Brown&apos;s revocation hearing is rescheduled to 4:00 p.m. on Friday, May 1, 2009, before the undersigned United States district judge, in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The defendant shall be present unless excused by the court. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03097-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER as to defendant Damien D. Brown. It is ordered that: (1) The defendant&apos;s Unopposed Motion to Continue Disposition Hearing 50 is granted; (2) The disposition hearing is rescheduled to 6/17/2009 at 1:00 p.m. The defendant is ordered to appear at such time. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-04-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03097-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178aafb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-9</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03097_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03097/pdf/USCOURTS-ned-4_05-cr-03097-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03097; USA v. Brown; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03097-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2009-04-30</dateIssued>
+  <docketText>ORDER as to defendant Damien D. Brown. It is ordered that: (1) The defendant&apos;s Unopposed Motion to Continue Disposition Hearing 50 is granted; (2) The disposition hearing is rescheduled to 6/17/2009 at 1:00 p.m. The defendant is ordered to appear at such time. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03097-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER as to defendant Damien D. Brown. It is ordered that: (1) The defendant&apos;s Unopposed Motion to Continue Disposition Hearing 55 is granted; (2) The disposition hearing is rescheduled to 8/27/2009 at 1:00 PM. The defendant is ordered to appear at such time. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03097-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178aaf9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-10</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03097_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03097/pdf/USCOURTS-ned-4_05-cr-03097-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03097; USA v. Brown; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03097-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2009-07-14</dateIssued>
+  <docketText>ORDER as to defendant Damien D. Brown. It is ordered that: (1) The defendant&apos;s Unopposed Motion to Continue Disposition Hearing 55 is granted; (2) The disposition hearing is rescheduled to 8/27/2009 at 1:00 PM. The defendant is ordered to appear at such time. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03097-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Damien D. Brown. Mike Hansen, the Federal Public Defender for the District of Nebraska is appointed to represent the above named defendant in this matter. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03097-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178aaf7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-11</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03097_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03097/pdf/USCOURTS-ned-4_05-cr-03097-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03097; USA v. Brown; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03097-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2010-06-23</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Damien D. Brown. Mike Hansen, the Federal Public Defender for the District of Nebraska is appointed to represent the above named defendant in this matter. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03097-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER as to Damien D. Brown. It is ordered that: (1) The defendant&apos;s unopposed motion to continue disposition hearing 70 is granted; (2) The defendant&apos;s disposition hearing is rescheduled to 11/23/2010 at 1:00 PM before Judge Kopf. Ordered by Judge Richard G. Kopf. ( KLL, )</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03097-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178aba5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-12</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03097_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03097/pdf/USCOURTS-ned-4_05-cr-03097-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03097; USA v. Brown; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03097-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2010-09-21</dateIssued>
+  <docketText>ORDER as to Damien D. Brown. It is ordered that: (1) The defendant&apos;s unopposed motion to continue disposition hearing 70 is granted; (2) The defendant&apos;s disposition hearing is rescheduled to 11/23/2010 at 1:00 PM before Judge Kopf. Ordered by Judge Richard G. Kopf. ( KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03097-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER as to defendant Damien D. Brown. It is ordered that: (1) The defendant&apos;s Unopposed Motion to Continue Disposition Hearing 72 is granted; (2) The defendant&apos;s disposition hearing is rescheduled to 1/19/2011 at 12:30 p.m. The Defendant is ordered to appear at such time. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03097-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178aaf8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-13</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03097_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03097/pdf/USCOURTS-ned-4_05-cr-03097-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03097; USA v. Brown; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03097-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2010-11-10</dateIssued>
+  <docketText>ORDER as to defendant Damien D. Brown. It is ordered that: (1) The defendant&apos;s Unopposed Motion to Continue Disposition Hearing 72 is granted; (2) The defendant&apos;s disposition hearing is rescheduled to 1/19/2011 at 12:30 p.m. The Defendant is ordered to appear at such time. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03097-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER as to defendant Damien D. Brown. It is ordered that the defendant&apos;s dispositional hearing is rescheduled to 1/26/2011 at 12:00 PM before Judge Kopf. Termed 1/19/2011 hearing date. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03097-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178aba0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-14</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03097_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03097/pdf/USCOURTS-ned-4_05-cr-03097-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03097; USA v. Brown; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03097-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2010-11-10</dateIssued>
+  <docketText>ORDER as to defendant Damien D. Brown. It is ordered that the defendant&apos;s dispositional hearing is rescheduled to 1/26/2011 at 12:00 PM before Judge Kopf. Termed 1/19/2011 hearing date. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03097-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER as to defendant Damien D. Brown. On the court&apos;s own motion, and to accommodate a change in the undersigned&apos;s schedule, IT IS ORDERED that Defendant Brown&apos;s revocation hearing is rescheduled to Wednesday, February 2, 2011, at 12:00 noon, before the undersigned United States district judge, in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The defendant shall be present unless excused by the court. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03097-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178aba2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-15</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03097_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03097/pdf/USCOURTS-ned-4_05-cr-03097-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03097; USA v. Brown; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03097-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2011-01-06</dateIssued>
+  <docketText>ORDER as to defendant Damien D. Brown. On the court&apos;s own motion, and to accommodate a change in the undersigned&apos;s schedule, IT IS ORDERED that Defendant Brown&apos;s revocation hearing is rescheduled to Wednesday, February 2, 2011, at 12:00 noon, before the undersigned United States district judge, in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The defendant shall be present unless excused by the court. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03097-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER as to defendant Damien D. Brown. It is ordered that: (1) The Defendant&apos;s Unopposed Motion to Continue Disposition Hearing 77 is granted; (2) The Defendant&apos;s disposition hearing is rescheduled to 4/5/2011 at 12:30 PM. The Defendant is ordered to appear at such time. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03097-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178ab9f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-16</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03097_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03097/USCOURTS-ned-4_05-cr-03097-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03097/pdf/USCOURTS-ned-4_05-cr-03097-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03097; USA v. Brown; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03097-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2011-01-31</dateIssued>
+  <docketText>ORDER as to defendant Damien D. Brown. It is ordered that: (1) The Defendant&apos;s Unopposed Motion to Continue Disposition Hearing 77 is granted; (2) The Defendant&apos;s disposition hearing is rescheduled to 4/5/2011 at 12:30 PM. The Defendant is ordered to appear at such time. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+</mods>

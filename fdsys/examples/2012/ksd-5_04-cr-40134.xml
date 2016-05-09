@@ -1,0 +1,174 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181f52b67">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-03-01</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-02-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40134</identifier>
+<identifier type="local">P0b002ee181f52b67</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-03-01</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-03-01</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-5_04-cr-40134</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_04-cr-40134</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:04-cr-40134</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Alejandro" fullName="Alejandro M. Trujillo" lastName="Trujillo" middleName="M." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Trujillo</title>
+ <partNumber>5:04-cr-40134</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40134/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:04-cr-40134;04-40134</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Topeka</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Alejandro M. Trujillo</displayForm>
+ <namePart type="family">Trujillo</namePart>
+ <namePart type="given">Alejandro</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_04-cr-40134</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:04-cr-40134</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Alejandro" fullName="Alejandro M. Trujillo" lastName="Trujillo" middleName="M." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_04-cr-40134-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40134/USCOURTS-ksd-5_04-cr-40134-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Trujillo</title>
+  <subTitle>ORDER granting 14 Motion to Continue Time excluded from February 6, 2012 until March 6, 2012 as to Alejandro M. Trujillo (1) Jury Trial set for 3/6/2012 at 09:30 AM in Courtroom 403 (RDR) before District Judge Richard D. Rogers. Signed by District Judge Richard D. Rogers on 1/9/2012. (meh)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-5_04-cr-40134-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181f54829</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40134/USCOURTS-ksd-5_04-cr-40134-0</identifier>
+ <identifier type="former granule identifier">ksd-5_04-cr-40134_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40134/USCOURTS-ksd-5_04-cr-40134-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40134/pdf/USCOURTS-ksd-5_04-cr-40134-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cr-40134; USA v. Trujillo; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_04-cr-40134-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-09</dateIssued>
+  <docketText>ORDER granting 14 Motion to Continue Time excluded from February 6, 2012 until March 6, 2012 as to Alejandro M. Trujillo (1) Jury Trial set for 3/6/2012 at 09:30 AM in Courtroom 403 (RDR) before District Judge Richard D. Rogers. Signed by District Judge Richard D. Rogers on 1/9/2012. (meh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_04-cr-40134-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40134/USCOURTS-ksd-5_04-cr-40134-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Trujillo</title>
+  <subTitle>ORDER granting 19 Motion to Continue. Time excluded from March 6, 2012 until May 8, 2012 as to Alejandro M. Trujillo (1). Jury Trial set for 5/8/2012 at 09:30 AM in Courtroom 403 (RDR) before District Judge Richard D. Rogers. Signed by District Judge Richard D. Rogers on 2/29/2012. (meh)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-5_04-cr-40134-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181f54828</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40134/USCOURTS-ksd-5_04-cr-40134-1</identifier>
+ <identifier type="former granule identifier">ksd-5_04-cr-40134_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40134/USCOURTS-ksd-5_04-cr-40134-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40134/pdf/USCOURTS-ksd-5_04-cr-40134-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cr-40134; USA v. Trujillo; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_04-cr-40134-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-02-29</dateIssued>
+  <docketText>ORDER granting 19 Motion to Continue. Time excluded from March 6, 2012 until May 8, 2012 as to Alejandro M. Trujillo (1). Jury Trial set for 5/8/2012 at 09:30 AM in Courtroom 403 (RDR) before District Judge Richard D. Rogers. Signed by District Judge Richard D. Rogers on 2/29/2012. (meh)</docketText>
+</extension>
+</relatedItem>
+</mods>

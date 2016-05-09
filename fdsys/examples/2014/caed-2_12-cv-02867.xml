@@ -1,0 +1,344 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c2e63e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02867</identifier>
+<identifier type="local">P0b002ee186c2e63e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-02867</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02867</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02867</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Akintola" lastName="Akintola" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Cate" lastName="Cate" role="Defendant"></party>
+ <party firstName="Lawrence" fullName="Lawrence Fong" lastName="Fong" role="Defendant"></party>
+ <party firstName="R." fullName="R. Galloway" lastName="Galloway" role="Defendant"></party>
+ <party firstName="William" fullName="William Hashimoto" lastName="Hashimoto" role="Defendant"></party>
+ <party firstName="S." fullName="S. Heatley" lastName="Heatley" role="Defendant"></party>
+ <party firstName="K." fullName="K. McLean" lastName="McLean" role="Defendant"></party>
+ <party firstName="Sahir" fullName="Sahir Naseer" lastName="Naseer" role="Defendant"></party>
+ <party firstName="Mourine" fullName="Mourine Ndamuko" lastName="Ndamuko" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Rudas" lastName="Rudas" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="Jalal" fullName="Jalal Soltanian-Zadeh" lastName="Soltanian-Zadeh" role="Defendant"></party>
+ <party firstName="Ricardo" fullName="Ricardo Valdez" lastName="Valdez" role="Plaintiff"></party>
+ <party firstName="L.D." fullName="L.D. Zamora" lastName="Zamora" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Valdez v. Cate et al</title>
+ <partNumber>2:12-cv-02867</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02867/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-02867;12-2867</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Akintola</displayForm>
+ <namePart type="family">Akintola</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Matthew Cate</displayForm>
+ <namePart type="family">Cate</namePart>
+ <namePart type="given">Matthew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lawrence Fong</displayForm>
+ <namePart type="family">Fong</namePart>
+ <namePart type="given">Lawrence</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>R. Galloway</displayForm>
+ <namePart type="family">Galloway</namePart>
+ <namePart type="given">R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Hashimoto</displayForm>
+ <namePart type="family">Hashimoto</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>S. Heatley</displayForm>
+ <namePart type="family">Heatley</namePart>
+ <namePart type="given">S.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>K. McLean</displayForm>
+ <namePart type="family">McLean</namePart>
+ <namePart type="given">K.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sahir Naseer</displayForm>
+ <namePart type="family">Naseer</namePart>
+ <namePart type="given">Sahir</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mourine Ndamuko</displayForm>
+ <namePart type="family">Ndamuko</namePart>
+ <namePart type="given">Mourine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Rudas</displayForm>
+ <namePart type="family">Rudas</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Christopher Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jalal Soltanian-Zadeh</displayForm>
+ <namePart type="family">Soltanian-Zadeh</namePart>
+ <namePart type="given">Jalal</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ricardo Valdez</displayForm>
+ <namePart type="family">Valdez</namePart>
+ <namePart type="given">Ricardo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>L.D. Zamora</displayForm>
+ <namePart type="family">Zamora</namePart>
+ <namePart type="given">L.D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02867</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02867</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Akintola" lastName="Akintola" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Cate" lastName="Cate" role="Defendant"></party>
+ <party firstName="Lawrence" fullName="Lawrence Fong" lastName="Fong" role="Defendant"></party>
+ <party firstName="R." fullName="R. Galloway" lastName="Galloway" role="Defendant"></party>
+ <party firstName="William" fullName="William Hashimoto" lastName="Hashimoto" role="Defendant"></party>
+ <party firstName="S." fullName="S. Heatley" lastName="Heatley" role="Defendant"></party>
+ <party firstName="K." fullName="K. McLean" lastName="McLean" role="Defendant"></party>
+ <party firstName="Sahir" fullName="Sahir Naseer" lastName="Naseer" role="Defendant"></party>
+ <party firstName="Mourine" fullName="Mourine Ndamuko" lastName="Ndamuko" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Rudas" lastName="Rudas" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="Jalal" fullName="Jalal Soltanian-Zadeh" lastName="Soltanian-Zadeh" role="Defendant"></party>
+ <party firstName="Ricardo" fullName="Ricardo Valdez" lastName="Valdez" role="Plaintiff"></party>
+ <party firstName="L.D." fullName="L.D. Zamora" lastName="Zamora" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02867-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02867/USCOURTS-caed-2_12-cv-02867-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Valdez v. Cate et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 11/29/12 ordering plaintiff has 30 days from the date of service of this order, to submit either the filing fee or the application required by section 1915(a). The clerk is directed to mail to the plaintiff a form application to proceed in forma pauperis. (Plummer, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02867-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3ef40</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02867/USCOURTS-caed-2_12-cv-02867-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02867_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02867/USCOURTS-caed-2_12-cv-02867-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02867/pdf/USCOURTS-caed-2_12-cv-02867-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02867; (PC) Valdez v. Cate et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02867-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-11-29</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 11/29/12 ordering plaintiff has 30 days from the date of service of this order, to submit either the filing fee or the application required by section 1915(a). The clerk is directed to mail to the plaintiff a form application to proceed in forma pauperis. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02867-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02867/USCOURTS-caed-2_12-cv-02867-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Valdez v. Cate et al</title>
+  <subTitle>ORDER DIRECTING MONTHLY PAYMENTS be made from Prison Account of Ricardo Valdez signed by Magistrate Judge Edmund F. Brennan on 05/07/13. CDC is to collect payments from plaintiff&apos;s account and forward to the clerk until the $350.00 is paid in full. Clerk to serve this order and a copy of plaintiff&apos;s IFP on the Director of CDC. Clerk to also serve Financial with a copy of this order. (cc: CDC Director and Financial)(Plummer, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02867-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3ef3d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02867/USCOURTS-caed-2_12-cv-02867-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02867_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02867/USCOURTS-caed-2_12-cv-02867-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02867/pdf/USCOURTS-caed-2_12-cv-02867-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02867; (PC) Valdez v. Cate et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02867-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-05-08</dateIssued>
+  <docketText>ORDER DIRECTING MONTHLY PAYMENTS be made from Prison Account of Ricardo Valdez signed by Magistrate Judge Edmund F. Brennan on 05/07/13. CDC is to collect payments from plaintiff&apos;s account and forward to the clerk until the $350.00 is paid in full. Clerk to serve this order and a copy of plaintiff&apos;s IFP on the Director of CDC. Clerk to also serve Financial with a copy of this order. (cc: CDC Director and Financial)(Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02867-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02867/USCOURTS-caed-2_12-cv-02867-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Valdez v. Cate et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 5/8/13 ORDERING that Plaintiffs request to proceed in forma pauperis is GRANTED. Plaintiff shall pay the statutory filing fee of $350. The complaint is DISMISSED with leave to amend within 30 days. The Clerk of the Court shall strike the second amended complaint 11 from this action, and re-file it as a second amended complaint in Valdez v. Cate, No. 2:12-cv-2854. Plaintiffs request for appointment of counsel 3 is DENIED.(Dillon, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02867-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3ef3f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02867/USCOURTS-caed-2_12-cv-02867-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02867_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02867/USCOURTS-caed-2_12-cv-02867-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02867/pdf/USCOURTS-caed-2_12-cv-02867-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02867; (PC) Valdez v. Cate et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02867-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-05-08</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 5/8/13 ORDERING that Plaintiffs request to proceed in forma pauperis is GRANTED. Plaintiff shall pay the statutory filing fee of $350. The complaint is DISMISSED with leave to amend within 30 days. The Clerk of the Court shall strike the second amended complaint 11 from this action, and re-file it as a second amended complaint in Valdez v. Cate, No. 2:12-cv-2854. Plaintiffs request for appointment of counsel 3 is DENIED.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02867-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02867/USCOURTS-caed-2_12-cv-02867-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Valdez v. Cate et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/02/14 ordering that within 21 days of the date of this order, plaintiff shall file either an opposition to the motion to dismiss or a statement of no opposition. (Plummer, M)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02867-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3ef3e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02867/USCOURTS-caed-2_12-cv-02867-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02867_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02867/USCOURTS-caed-2_12-cv-02867-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02867/pdf/USCOURTS-caed-2_12-cv-02867-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02867; (PC) Valdez v. Cate et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02867-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/02/14 ordering that within 21 days of the date of this order, plaintiff shall file either an opposition to the motion to dismiss or a statement of no opposition. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

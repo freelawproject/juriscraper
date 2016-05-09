@@ -1,0 +1,318 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a90a8b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00129</identifier>
+<identifier type="local">P0b002ee183a90a8b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cv-00129</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-00129</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-00129</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>490</natureSuitCode>
+ <natureSuit>Cable/ Satellite TV</natureSuit>
+ <cause>47:553 Unauthorized Reception of Cable Service</cause>
+ <party fullName="Cazadores Grill" lastName="Cazadores Grill" role="Cross Claimant"></party>
+ <party fullName="Cazadores Grill" lastName="Cazadores Grill" role="Cross Defendant"></party>
+ <party fullName="Cazadores Grill" lastName="Cazadores Grill" role="Defendant"></party>
+ <party fullName="Joe Hand Promotions, Inc." lastName="Joe Hand Promotions, Inc." role="Plaintiff"></party>
+ <party firstName="Aquiles" fullName="Aquiles Ramirez" lastName="Ramirez" role="Cross Defendant"></party>
+ <party firstName="Aquiles" fullName="Aquiles Ramirez" lastName="Ramirez" role="Defendant"></party>
+ <party firstName="Claudia" fullName="Claudia Ramirez" lastName="Ramirez" role="Cross Claimant"></party>
+ <party firstName="Claudia" fullName="Claudia Ramirez" lastName="Ramirez" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Joe Hand Promotions, Inc. v. Ramirez et al</title>
+ <partNumber>1:12-cv-00129</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00129/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-00129;12-129</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Cazadores Grill</displayForm>
+ <namePart type="family">Cazadores Grill</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Cazadores Grill</displayForm>
+ <namePart type="family">Cazadores Grill</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cazadores Grill</displayForm>
+ <namePart type="family">Cazadores Grill</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joe Hand Promotions, Inc.</displayForm>
+ <namePart type="family">Joe Hand Promotions, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Aquiles Ramirez</displayForm>
+ <namePart type="family">Ramirez</namePart>
+ <namePart type="given">Aquiles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Aquiles Ramirez</displayForm>
+ <namePart type="family">Ramirez</namePart>
+ <namePart type="given">Aquiles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Claudia Ramirez</displayForm>
+ <namePart type="family">Ramirez</namePart>
+ <namePart type="given">Claudia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Claudia Ramirez</displayForm>
+ <namePart type="family">Ramirez</namePart>
+ <namePart type="given">Claudia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-00129</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-00129</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>490</natureSuitCode>
+ <natureSuit>Cable/ Satellite TV</natureSuit>
+ <cause>47:553 Unauthorized Reception of Cable Service</cause>
+ <party fullName="Cazadores Grill" lastName="Cazadores Grill" role="Cross Claimant"></party>
+ <party fullName="Cazadores Grill" lastName="Cazadores Grill" role="Cross Defendant"></party>
+ <party fullName="Cazadores Grill" lastName="Cazadores Grill" role="Defendant"></party>
+ <party fullName="Joe Hand Promotions, Inc." lastName="Joe Hand Promotions, Inc." role="Plaintiff"></party>
+ <party firstName="Aquiles" fullName="Aquiles Ramirez" lastName="Ramirez" role="Cross Defendant"></party>
+ <party firstName="Aquiles" fullName="Aquiles Ramirez" lastName="Ramirez" role="Defendant"></party>
+ <party firstName="Claudia" fullName="Claudia Ramirez" lastName="Ramirez" role="Cross Claimant"></party>
+ <party firstName="Claudia" fullName="Claudia Ramirez" lastName="Ramirez" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00129-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00129/USCOURTS-caed-1_12-cv-00129-0/mods.xml">
+ <titleInfo>
+  <title>Joe Hand Promotions, Inc. v. Ramirez et al</title>
+  <subTitle>Plaintiff&apos;s Ex Parte application for an order continuing scheduling conference and extending time to complete service ; and ORDER, signed by Magistrate Judge Sandra M. Snyder on 4/18/2012. (Completion of Service Deadline: 6/4/2012; Initial Scheduling Conference previously set for 4/24/2012 has been CONTINUED to 6/5/2012 at 10:00 AM in Courtroom 1 (SMS) before Magistrate Judge Sandra M. Snyder) (Figueroa, O)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00129-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a8fdcc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00129/USCOURTS-caed-1_12-cv-00129-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00129_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00129/USCOURTS-caed-1_12-cv-00129-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00129/pdf/USCOURTS-caed-1_12-cv-00129-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00129; Joe Hand Promotions, Inc. v. Ramirez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00129-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-04-18</dateIssued>
+  <docketText>Plaintiff&apos;s Ex Parte application for an order continuing scheduling conference and extending time to complete service ; and ORDER, signed by Magistrate Judge Sandra M. Snyder on 4/18/2012. (Completion of Service Deadline: 6/4/2012; Initial Scheduling Conference previously set for 4/24/2012 has been CONTINUED to 6/5/2012 at 10:00 AM in Courtroom 1 (SMS) before Magistrate Judge Sandra M. Snyder) (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00129-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00129/USCOURTS-caed-1_12-cv-00129-1/mods.xml">
+ <titleInfo>
+  <title>Joe Hand Promotions, Inc. v. Ramirez et al</title>
+  <subTitle>ORDER STRIKING 30 Answer of Defendant Aquiles Ramirez dba Cazadores Grill, signed by District Judge Lawrence J. O&apos;Neill on 10/2/2012. (Figueroa, O)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00129-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a8fdcb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00129/USCOURTS-caed-1_12-cv-00129-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00129_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00129/USCOURTS-caed-1_12-cv-00129-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00129/pdf/USCOURTS-caed-1_12-cv-00129-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00129; Joe Hand Promotions, Inc. v. Ramirez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00129-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-10-02</dateIssued>
+  <docketText>ORDER STRIKING 30 Answer of Defendant Aquiles Ramirez dba Cazadores Grill, signed by District Judge Lawrence J. O&apos;Neill on 10/2/2012. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00129-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00129/USCOURTS-caed-1_12-cv-00129-2/mods.xml">
+ <titleInfo>
+  <title>Joe Hand Promotions, Inc. v. Ramirez et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s 23 Motion to Strike Affirmative Defenses of Defendant Claudia Ramirez, signed by Magistrate Judge Sandra M. Snyder on 1/2/2013. (Gaumnitz, R)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00129-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a8fdce</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00129/USCOURTS-caed-1_12-cv-00129-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00129_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00129/USCOURTS-caed-1_12-cv-00129-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00129/pdf/USCOURTS-caed-1_12-cv-00129-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00129; Joe Hand Promotions, Inc. v. Ramirez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00129-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s 23 Motion to Strike Affirmative Defenses of Defendant Claudia Ramirez, signed by Magistrate Judge Sandra M. Snyder on 1/2/2013. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00129-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00129/USCOURTS-caed-1_12-cv-00129-3/mods.xml">
+ <titleInfo>
+  <title>Joe Hand Promotions, Inc. v. Ramirez et al</title>
+  <subTitle>ORDER SETTING ASIDE Default of Defendant Aquiles Ramirez re Docs. 8 and 44 signed by Magistrate Judge Sandra M. Snyder on 1/2/2013. (Jessen, A)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00129-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a8fdca</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00129/USCOURTS-caed-1_12-cv-00129-3</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00129_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00129/USCOURTS-caed-1_12-cv-00129-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00129/pdf/USCOURTS-caed-1_12-cv-00129-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00129; Joe Hand Promotions, Inc. v. Ramirez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00129-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>ORDER SETTING ASIDE Default of Defendant Aquiles Ramirez re Docs. 8 and 44 signed by Magistrate Judge Sandra M. Snyder on 1/2/2013. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00129-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00129/USCOURTS-caed-1_12-cv-00129-4/mods.xml">
+ <titleInfo>
+  <title>Joe Hand Promotions, Inc. v. Ramirez et al</title>
+  <subTitle>ORDER DISMISSING CASE (Stipulation), signed by District Judge Lawrence J. O&apos;Neill on 1/11/2013. CASE CLOSED (Martin-Gill, S)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00129-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a8fdcd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00129/USCOURTS-caed-1_12-cv-00129-4</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00129_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00129/USCOURTS-caed-1_12-cv-00129-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00129/pdf/USCOURTS-caed-1_12-cv-00129-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00129; Joe Hand Promotions, Inc. v. Ramirez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00129-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-11</dateIssued>
+  <docketText>ORDER DISMISSING CASE (Stipulation), signed by District Judge Lawrence J. O&apos;Neill on 1/11/2013. CASE CLOSED (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

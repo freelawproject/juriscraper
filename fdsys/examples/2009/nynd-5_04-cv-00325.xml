@@ -1,0 +1,271 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18113bcd9">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-16</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_04-cv-00325</identifier>
+<identifier type="local">P0b002ee18113bcd9</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-5_04-cv-00325</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-5_04-cv-00325</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>5:04-cv-00325</caseNumber>
+ <caseOffice>Syracuse</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>370</natureSuitCode>
+ <natureSuit>Other Fraud</natureSuit>
+ <party fullName="Household Finance Realty Corporation" lastName="Household Finance Realty Corporation" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Macheda" lastName="Macheda" role="Plaintiff"></party>
+ <party firstName="Winifred" fullName="Winifred Macheda" lastName="Macheda" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Macheda et al v. Household Finance Realty Corporation</title>
+ <partNumber>5:04-cv-00325</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_04-cv-00325/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:04-cv-00325;04-325</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Syracuse</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Household Finance Realty Corporation</displayForm>
+ <namePart type="family">Household Finance Realty Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Macheda</displayForm>
+ <namePart type="family">Macheda</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Winifred Macheda</displayForm>
+ <namePart type="family">Macheda</namePart>
+ <namePart type="given">Winifred</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-5_04-cv-00325</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>5:04-cv-00325</caseNumber>
+ <caseOffice>Syracuse</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>370</natureSuitCode>
+ <natureSuit>Other Fraud</natureSuit>
+ <party fullName="Household Finance Realty Corporation" lastName="Household Finance Realty Corporation" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Macheda" lastName="Macheda" role="Plaintiff"></party>
+ <party firstName="Winifred" fullName="Winifred Macheda" lastName="Macheda" role="Plaintiff"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-5_04-cv-00325-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_04-cv-00325/USCOURTS-nynd-5_04-cv-00325-0/mods.xml">
+ <titleInfo>
+  <title>Macheda et al v. Household Finance Realty Corporation</title>
+  <subTitle>MEMORANDUM, DECISION AND ORDER - The defendant&apos;s motion 45 Motion for Summary Judgment, is granted insofar as it seeks partial summary judgment establishing that plaintiffs are not entitled to rescind the portion of the loan that refinanced plaintffs&apos; previous loan with defendant and is otherwise denied. The plaintiffs&apos; motion 48 Motion for Partial Summary Judgment is denied. The parties are directed to file a Joint Status Report on or before July 7, 2008, outlining any outstanding issues, and the estimated length of trial. A Settlement Conference is set for July 31, 2008, @ 10:00 am in Syracuse, NY. Signed by Chief Judge Norman A. Mordue on 6/26/08. (mnm)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-06-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-5_04-cv-00325-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181402dbb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_04-cv-00325/USCOURTS-nynd-5_04-cv-00325-0</identifier>
+ <identifier type="former granule identifier">nynd-5_04-cv-00325_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_04-cv-00325/USCOURTS-nynd-5_04-cv-00325-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_04-cv-00325/pdf/USCOURTS-nynd-5_04-cv-00325-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cv-00325; Macheda et al v. Household Finance Realty Corporation; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-5_04-cv-00325-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-06-26</dateIssued>
+  <docketText>MEMORANDUM, DECISION AND ORDER - The defendant&apos;s motion 45 Motion for Summary Judgment, is granted insofar as it seeks partial summary judgment establishing that plaintiffs are not entitled to rescind the portion of the loan that refinanced plaintffs&apos; previous loan with defendant and is otherwise denied. The plaintiffs&apos; motion 48 Motion for Partial Summary Judgment is denied. The parties are directed to file a Joint Status Report on or before July 7, 2008, outlining any outstanding issues, and the estimated length of trial. A Settlement Conference is set for July 31, 2008, @ 10:00 am in Syracuse, NY. Signed by Chief Judge Norman A. Mordue on 6/26/08. (mnm)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-5_04-cv-00325-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_04-cv-00325/USCOURTS-nynd-5_04-cv-00325-1/mods.xml">
+ <titleInfo>
+  <title>Macheda et al v. Household Finance Realty Corporation</title>
+  <subTitle>ORDER SETTING SETTLEMENT CONFERENCE - the Court has scheduled this case for a settlement conference on 7/31/2008 @ 10:00 AM in Syracuse before Chief Judge Norman A. Mordue. The parties are to complete the attached settlement statement and forward to the chambers of the Hon. Norman A. Mordue, to the attention of Judi L. Roberts, on or before 7/25/2008. In the event that this case does not settle, the Jury Trial will commence on September 8, 2008 @ 9:00 am in Syracuse, New York. Rule 26 Disclosures are due on or before 8/8/2008. Signed by Chief Judge Norman A. Mordue on 7/17/08. (mnm)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-5_04-cv-00325-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181402dbe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_04-cv-00325/USCOURTS-nynd-5_04-cv-00325-1</identifier>
+ <identifier type="former granule identifier">nynd-5_04-cv-00325_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_04-cv-00325/USCOURTS-nynd-5_04-cv-00325-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_04-cv-00325/pdf/USCOURTS-nynd-5_04-cv-00325-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cv-00325; Macheda et al v. Household Finance Realty Corporation; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-5_04-cv-00325-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-07-17</dateIssued>
+  <docketText>ORDER SETTING SETTLEMENT CONFERENCE - the Court has scheduled this case for a settlement conference on 7/31/2008 @ 10:00 AM in Syracuse before Chief Judge Norman A. Mordue. The parties are to complete the attached settlement statement and forward to the chambers of the Hon. Norman A. Mordue, to the attention of Judi L. Roberts, on or before 7/25/2008. In the event that this case does not settle, the Jury Trial will commence on September 8, 2008 @ 9:00 am in Syracuse, New York. Rule 26 Disclosures are due on or before 8/8/2008. Signed by Chief Judge Norman A. Mordue on 7/17/08. (mnm)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-5_04-cv-00325-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_04-cv-00325/USCOURTS-nynd-5_04-cv-00325-2/mods.xml">
+ <titleInfo>
+  <title>Macheda et al v. Household Finance Realty Corporation</title>
+  <subTitle>MEMORANDUM-DECISION&amp;ORDER -- The defendant&apos;s motion 62 Motion for Reconsideration of this Court&apos;s June 26, 2008, 61 Memorandum-Decision and Order is denied. Signed by Chief Judge Norman A. Mordue on 7/18/08. (mnm)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-5_04-cv-00325-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181402dbd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_04-cv-00325/USCOURTS-nynd-5_04-cv-00325-2</identifier>
+ <identifier type="former granule identifier">nynd-5_04-cv-00325_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_04-cv-00325/USCOURTS-nynd-5_04-cv-00325-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_04-cv-00325/pdf/USCOURTS-nynd-5_04-cv-00325-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cv-00325; Macheda et al v. Household Finance Realty Corporation; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-5_04-cv-00325-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-07-18</dateIssued>
+  <docketText>MEMORANDUM-DECISION&amp;ORDER -- The defendant&apos;s motion 62 Motion for Reconsideration of this Court&apos;s June 26, 2008, 61 Memorandum-Decision and Order is denied. Signed by Chief Judge Norman A. Mordue on 7/18/08. (mnm)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-5_04-cv-00325-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_04-cv-00325/USCOURTS-nynd-5_04-cv-00325-3/mods.xml">
+ <titleInfo>
+  <title>Macheda et al v. Household Finance Realty Corporation</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER denying #82 Motion in Limine and granting in part and denying in part #91 Motion in Limine. Plaintiffs&apos; motion to exclude evidence regarding payment to Robert Riedl is denied; Plaintiffs&apos; motion to preclude Defendant from introducing evidence at trial regarding error on forms to IRES for title fees is denied; Plaintiffs&apos; motion to preclude Defendant from offering evidence regarding Plaintiffs&apos; tax forms and Plaintiffs&apos; business is denied; Defendant&apos;s motion to deny Plaintiff&apos;s demand for a jury trial is denied; Defendant&apos;s motion to preclude Plaintiffs from introducing evidence at trial regarding payment to Robert Riedl is denied in part but Plaintiffs are precluded from offering evidence or argument that they did not owe Mr. Riedl more than $62,829; and Defendant&apos;s motion to preclude Plaintiffs from raising claims of representations contrary to terms of loan documents is denied. Signed by Judge Glenn T. Suddaby on 1/15/09. (lmw)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-5_04-cv-00325-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181402dbc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_04-cv-00325/USCOURTS-nynd-5_04-cv-00325-3</identifier>
+ <identifier type="former granule identifier">nynd-5_04-cv-00325_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_04-cv-00325/USCOURTS-nynd-5_04-cv-00325-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_04-cv-00325/pdf/USCOURTS-nynd-5_04-cv-00325-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cv-00325; Macheda et al v. Household Finance Realty Corporation; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-5_04-cv-00325-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-01-15</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER denying #82 Motion in Limine and granting in part and denying in part #91 Motion in Limine. Plaintiffs&apos; motion to exclude evidence regarding payment to Robert Riedl is denied; Plaintiffs&apos; motion to preclude Defendant from introducing evidence at trial regarding error on forms to IRES for title fees is denied; Plaintiffs&apos; motion to preclude Defendant from offering evidence regarding Plaintiffs&apos; tax forms and Plaintiffs&apos; business is denied; Defendant&apos;s motion to deny Plaintiff&apos;s demand for a jury trial is denied; Defendant&apos;s motion to preclude Plaintiffs from introducing evidence at trial regarding payment to Robert Riedl is denied in part but Plaintiffs are precluded from offering evidence or argument that they did not owe Mr. Riedl more than $62,829; and Defendant&apos;s motion to preclude Plaintiffs from raising claims of representations contrary to terms of loan documents is denied. Signed by Judge Glenn T. Suddaby on 1/15/09. (lmw)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-5_04-cv-00325-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_04-cv-00325/USCOURTS-nynd-5_04-cv-00325-4/mods.xml">
+ <titleInfo>
+  <title>Macheda et al v. Household Finance Realty Corporation</title>
+  <subTitle>JUDGMENT DISMISSING ACTION BY REASON OF SETTLEMENT: this action is DISMISSED without prejudice to the right of the parties to secure reinstatement of the case within thirty (30) days after the date of this judgment by making a showing that the settlement was not, in fact, consummated; and the judgment shall become with prejudice after thirty (30) days from the date of this judgment. (lmw)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-5_04-cv-00325-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181402dbf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_04-cv-00325/USCOURTS-nynd-5_04-cv-00325-4</identifier>
+ <identifier type="former granule identifier">nynd-5_04-cv-00325_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_04-cv-00325/USCOURTS-nynd-5_04-cv-00325-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_04-cv-00325/pdf/USCOURTS-nynd-5_04-cv-00325-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cv-00325; Macheda et al v. Household Finance Realty Corporation; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-5_04-cv-00325-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-01-16</dateIssued>
+  <docketText>JUDGMENT DISMISSING ACTION BY REASON OF SETTLEMENT: this action is DISMISSED without prejudice to the right of the parties to secure reinstatement of the case within thirty (30) days after the date of this judgment by making a showing that the settlement was not, in fact, consummated; and the judgment shall become with prejudice after thirty (30) days from the date of this judgment. (lmw)</docketText>
+</extension>
+</relatedItem>
+</mods>

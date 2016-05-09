@@ -1,0 +1,513 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18dd43a48">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-10-29</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-10-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937</identifier>
+<identifier type="local">P0b002ee18dd43a48</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-10-29</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-10-29</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_11-cv-00937</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_11-cv-00937</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:11-cv-00937</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="S." fullName="S. Bokelman" lastName="Bokelman" role="Defendant"></party>
+ <party fullName="Borden" lastName="Borden" role="Defendant"></party>
+ <party firstName="Ken" fullName="Ken Clark" lastName="Clark" role="Defendant"></party>
+ <party firstName="A." fullName="A. Enenmoh" lastName="Enenmoh" role="Defendant"></party>
+ <party firstName="N." fullName="N. Ibanez" lastName="Ibanez" role="Defendant"></party>
+ <party firstName="E." fullName="E. R. Komar" lastName="Komar" middleName="R." role="Defendant"></party>
+ <party fullName="Metts" lastName="Metts" role="Defendant"></party>
+ <party firstName="Wayne" fullName="Wayne L. Pickering" lastName="Pickering" middleName="L." role="Plaintiff"></party>
+ <party firstName="A." fullName="A. Rotman" lastName="Rotman" role="Defendant"></party>
+ <party firstName="E." fullName="E. Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="Jack" fullName="Jack St. Claire" lastName="St. Claire" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Pickering v. Clark et al</title>
+ <partNumber>1:11-cv-00937</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-cv-00937;11-937</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>S. Bokelman</displayForm>
+ <namePart type="family">Bokelman</namePart>
+ <namePart type="given">S.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Borden</displayForm>
+ <namePart type="family">Borden</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ken Clark</displayForm>
+ <namePart type="family">Clark</namePart>
+ <namePart type="given">Ken</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>A. Enenmoh</displayForm>
+ <namePart type="family">Enenmoh</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>N. Ibanez</displayForm>
+ <namePart type="family">Ibanez</namePart>
+ <namePart type="given">N.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>E. R. Komar</displayForm>
+ <namePart type="family">Komar</namePart>
+ <namePart type="given">E.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Metts</displayForm>
+ <namePart type="family">Metts</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wayne L. Pickering</displayForm>
+ <namePart type="family">Pickering</namePart>
+ <namePart type="given">Wayne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>A. Rotman</displayForm>
+ <namePart type="family">Rotman</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>E. Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">E.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jack St. Claire</displayForm>
+ <namePart type="family">St. Claire</namePart>
+ <namePart type="given">Jack</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_11-cv-00937</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:11-cv-00937</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="S." fullName="S. Bokelman" lastName="Bokelman" role="Defendant"></party>
+ <party fullName="Borden" lastName="Borden" role="Defendant"></party>
+ <party firstName="Ken" fullName="Ken Clark" lastName="Clark" role="Defendant"></party>
+ <party firstName="A." fullName="A. Enenmoh" lastName="Enenmoh" role="Defendant"></party>
+ <party firstName="N." fullName="N. Ibanez" lastName="Ibanez" role="Defendant"></party>
+ <party firstName="E." fullName="E. R. Komar" lastName="Komar" middleName="R." role="Defendant"></party>
+ <party fullName="Metts" lastName="Metts" role="Defendant"></party>
+ <party firstName="Wayne" fullName="Wayne L. Pickering" lastName="Pickering" middleName="L." role="Plaintiff"></party>
+ <party firstName="A." fullName="A. Rotman" lastName="Rotman" role="Defendant"></party>
+ <party firstName="E." fullName="E. Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="Jack" fullName="Jack St. Claire" lastName="St. Claire" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00937-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Pickering v. Clark et al</title>
+  <subTitle>ORDER DISMISSING 1 Complaint for Failure to State a Claim WITH LEAVE TO AMEND ; Response Due within Thirty Days signed by Magistrate Judge Dennis L. Beck on 1/11/2012. First Amended Complaint due by 2/13/2012. (Attachments: # (1) Amended Complaint Form)(Sant Agata, S)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd5318c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-0</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00937_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00937; (PC) Pickering v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00937-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-11</dateIssued>
+  <docketText>ORDER DISMISSING 1 Complaint for Failure to State a Claim WITH LEAVE TO AMEND ; Response Due within Thirty Days signed by Magistrate Judge Dennis L. Beck on 1/11/2012. First Amended Complaint due by 2/13/2012. (Attachments: # (1) Amended Complaint Form)(Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00937-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Pickering v. Clark et al</title>
+  <subTitle>***VACATED; pursuant to ORDER (Doc.16)***FINDINGS and RECOMMENDATIONS Recommending Dismissal of Certain Claims and Defendants re 9, signed by Magistrate Judge Dennis L. Beck on 9/10/12. Referred to Judge O&apos;Neill. Objections, If Any, Due Within Fourteen Days. (Gonzalez, R)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd5317a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-1</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00937_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00937; (PC) Pickering v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00937-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-09-11</dateIssued>
+  <docketText>***VACATED; pursuant to ORDER (Doc.16)***FINDINGS and RECOMMENDATIONS Recommending Dismissal of Certain Claims and Defendants re 9, signed by Magistrate Judge Dennis L. Beck on 9/10/12. Referred to Judge O&apos;Neill. Objections, If Any, Due Within Fourteen Days. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00937-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Pickering v. Clark et al</title>
+  <subTitle>ORDER Denying As Moot Plaintiff&apos;s Motion To Stay Order Regarding Service Documents (ECF No. 14), ORDER Vacating FINDINGS AND RECOMMENDATIONS And Granting Plaintiff Leave To File Second Amended Complaint (Doc.10, 11), Amended Complaint Due Within 30 Days, signed by Magistrate Judge Dennis L. Beck on 10/15/2012. (Attachments: # (1) Amended Complaint Form) (Fahrney, E)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd53179</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-2</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00937_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00937; (PC) Pickering v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00937-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-10-15</dateIssued>
+  <docketText>ORDER Denying As Moot Plaintiff&apos;s Motion To Stay Order Regarding Service Documents (ECF No. 14), ORDER Vacating FINDINGS AND RECOMMENDATIONS And Granting Plaintiff Leave To File Second Amended Complaint (Doc.10, 11), Amended Complaint Due Within 30 Days, signed by Magistrate Judge Dennis L. Beck on 10/15/2012. (Attachments: # (1) Amended Complaint Form) (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00937-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Pickering v. Clark et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS Recommending Dismissal of Ation for Failure to State a Claim re 17, signed by Magistrate Judge Dennis L. Beck on 4/20/13. Referred to Judge O&apos;Neill. Fourteen-Day Deadline. (Gonzalez, R)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd53187</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-3</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00937_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00937; (PC) Pickering v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00937-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-04-22</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS Recommending Dismissal of Ation for Failure to State a Claim re 17, signed by Magistrate Judge Dennis L. Beck on 4/20/13. Referred to Judge O&apos;Neill. Fourteen-Day Deadline. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00937-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Pickering v. Clark et al</title>
+  <subTitle>ORDER DIRECTING Clerk of Court to Return Plaintiff&apos;s 32 Lodged Third Amended Complaint, signed by Magistrate Judge Dennis L. Beck on 12/2/2014. (Marrujo, C)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd5318b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-4</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00937_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00937; (PC) Pickering v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00937-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-12-02</dateIssued>
+  <docketText>ORDER DIRECTING Clerk of Court to Return Plaintiff&apos;s 32 Lodged Third Amended Complaint, signed by Magistrate Judge Dennis L. Beck on 12/2/2014. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00937-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Pickering v. Clark et al</title>
+  <subTitle>ORDER Regarding Plaintiff&apos;s Request for Documents 37, signed by Magistrate Judge Dennis L. Beck on 12/29/14: 30-Day Deadline. (Attachments: # (1) USM Instructions Packet) (Hellings, J)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd53177</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-5</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00937_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00937; (PC) Pickering v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00937-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-12-29</dateIssued>
+  <docketText>ORDER Regarding Plaintiff&apos;s Request for Documents 37, signed by Magistrate Judge Dennis L. Beck on 12/29/14: 30-Day Deadline. (Attachments: # (1) USM Instructions Packet) (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00937-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Pickering v. Clark et al</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s Motion to File Third Amended Complaint 35, signed by Magistrate Judge Dennis L. Beck on 1/5/15. (Hellings, J)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd53178</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-6</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00937_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00937; (PC) Pickering v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00937-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s Motion to File Third Amended Complaint 35, signed by Magistrate Judge Dennis L. Beck on 1/5/15. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00937-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Pickering v. Clark et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s 42 Motion for Reconsideration, signed by District Judge Lawrence J. O&apos;Neill on 4/22/15. (Verduzco, M)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd53176</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-7</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00937_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00937; (PC) Pickering v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00937-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2015-04-22</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s 42 Motion for Reconsideration, signed by District Judge Lawrence J. O&apos;Neill on 4/22/15. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00937-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Pickering v. Clark et al</title>
+  <subTitle>DISCOVERY and SCHEDULING ORDER, signed by Magistrate Judge Dennis L. Beck on 4/22/15. (Verduzco, M)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd53188</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-8</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00937_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00937; (PC) Pickering v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00937-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2015-04-22</dateIssued>
+  <docketText>DISCOVERY and SCHEDULING ORDER, signed by Magistrate Judge Dennis L. Beck on 4/22/15. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00937-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Pickering v. Clark et al</title>
+  <subTitle>ORDER denying 49 Motion to propound additional interrogatories signed by Magistrate Judge Dennis L. Beck on 6/25/2015. (Lundstrom, T)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-06-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd5318a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-9</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00937_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00937; (PC) Pickering v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00937-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2015-06-25</dateIssued>
+  <docketText>ORDER denying 49 Motion to propound additional interrogatories signed by Magistrate Judge Dennis L. Beck on 6/25/2015. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00937-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Pickering v. Clark et al</title>
+  <subTitle>ORDER Granting In Part and Denying In Part 60 Plaintiff&apos;s Motion to Modify Discovery and Scheduling Order, signed by Magistrate Judge Dennis L. Beck on 10/27/15. Discovery due by 12/14/2015, Dispositive Motions filed by 2/15/2016. (Gonzalez, R)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-10-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd53189</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-10</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00937_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00937/USCOURTS-caed-1_11-cv-00937-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00937/pdf/USCOURTS-caed-1_11-cv-00937-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00937; (PC) Pickering v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00937-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2015-10-28</dateIssued>
+  <docketText>ORDER Granting In Part and Denying In Part 60 Plaintiff&apos;s Motion to Modify Discovery and Scheduling Order, signed by Magistrate Judge Dennis L. Beck on 10/27/15. Discovery due by 12/14/2015, Dispositive Motions filed by 2/15/2016. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,720 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18d973666">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-09-24</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-09-23</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820</identifier>
+<identifier type="local">P0b002ee18d973666</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-09-24</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-09-24</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_13-cv-00820</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-00820</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-00820</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Agtarap" lastName="Agtarap" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Balzarini" lastName="Balzarini" role="Plaintiff"></party>
+ <party firstName="Kyle" fullName="Kyle Lewis" lastName="Lewis" role="Defendant"></party>
+ <party firstName="Jennifer" fullName="Jennifer Schwartz" lastName="Schwartz" role="Defendant"></party>
+ <party firstName="Wayne" fullName="Wayne Ulit" lastName="Ulit" role="Defendant"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Wang" lastName="Wang" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Balzarini v. Lewis et al</title>
+ <partNumber>1:13-cv-00820</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-00820;13-820</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Agtarap</displayForm>
+ <namePart type="family">Agtarap</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Balzarini</displayForm>
+ <namePart type="family">Balzarini</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kyle Lewis</displayForm>
+ <namePart type="family">Lewis</namePart>
+ <namePart type="given">Kyle</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jennifer Schwartz</displayForm>
+ <namePart type="family">Schwartz</namePart>
+ <namePart type="given">Jennifer</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wayne Ulit</displayForm>
+ <namePart type="family">Ulit</namePart>
+ <namePart type="given">Wayne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey Wang</displayForm>
+ <namePart type="family">Wang</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-00820</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-00820</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Agtarap" lastName="Agtarap" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Balzarini" lastName="Balzarini" role="Plaintiff"></party>
+ <party firstName="Kyle" fullName="Kyle Lewis" lastName="Lewis" role="Defendant"></party>
+ <party firstName="Jennifer" fullName="Jennifer Schwartz" lastName="Schwartz" role="Defendant"></party>
+ <party firstName="Wayne" fullName="Wayne Ulit" lastName="Ulit" role="Defendant"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Wang" lastName="Wang" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00820-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Balzarini v. Lewis et al</title>
+  <subTitle>***Vacated, Per Order 7*** ORDER DENYING 2 Application to Proceed In Forma Pauperis and REQUIRING Plaintiff to PAY Filing Fee in Full within Twenty-One Days; Twenty-One Day Deadline signed by District Judge Lawrence J. O&apos;Neill on 6/5/2013. (Sant Agata, S)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d982872</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-0</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00820_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00820; (PC) Balzarini v. Lewis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00820-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-06-06</dateIssued>
+  <docketText>***Vacated, Per Order 7*** ORDER DENYING 2 Application to Proceed In Forma Pauperis and REQUIRING Plaintiff to PAY Filing Fee in Full within Twenty-One Days; Twenty-One Day Deadline signed by District Judge Lawrence J. O&apos;Neill on 6/5/2013. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00820-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Balzarini v. Lewis et al</title>
+  <subTitle>ORDER Granting Plaintiff&apos;s 6 Motion for Reconsideration; ORDER Granting 2 Plaintiff&apos;s Motion to Proceed In Forma Pauperis, signed by District Judge Lawrence J. O&apos;Neill on 8/14/13. (Gonzalez, R)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d982885</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-1</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00820_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00820; (PC) Balzarini v. Lewis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00820-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-08-14</dateIssued>
+  <docketText>ORDER Granting Plaintiff&apos;s 6 Motion for Reconsideration; ORDER Granting 2 Plaintiff&apos;s Motion to Proceed In Forma Pauperis, signed by District Judge Lawrence J. O&apos;Neill on 8/14/13. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00820-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Balzarini v. Lewis et al</title>
+  <subTitle>***VACATED; pursuant Order24***FINDINGS and RECOMMENDATIONS Regarding Dismissal of Certain Defendants and Claims, signed by Magistrate Judge Barbara A. McAuliffe on 05/15/14. Referred to Judge O&apos;Neill. Thirty-Day Deadline. (Gonzalez, R)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d982828</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-2</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00820_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00820; (PC) Balzarini v. Lewis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00820-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-05-15</dateIssued>
+  <docketText>***VACATED; pursuant Order24***FINDINGS and RECOMMENDATIONS Regarding Dismissal of Certain Defendants and Claims, signed by Magistrate Judge Barbara A. McAuliffe on 05/15/14. Referred to Judge O&apos;Neill. Thirty-Day Deadline. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00820-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Balzarini v. Lewis et al</title>
+  <subTitle>ORDER Directing Plaintiff to File Notice Clarifying his Intent,signed by Magistrate Judge Barbara A. McAuliffe on 6/25/14. (14-Day Deadline) (Martin-Gill, S)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d98282b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-3</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00820_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00820; (PC) Balzarini v. Lewis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00820-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-06-25</dateIssued>
+  <docketText>ORDER Directing Plaintiff to File Notice Clarifying his Intent,signed by Magistrate Judge Barbara A. McAuliffe on 6/25/14. (14-Day Deadline) (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00820-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Balzarini v. Lewis et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS Recommending that Plaintiff&apos;s 20 Motion for an Order to Show Cause for a Preliminary Injunction and Temporary Restraining Order be Denied, with Prejudice, for Lack of Jurisdiction signed by Magistrate Judge Barbara A. McAuliffe on 6/27/2014. Referred to Judge Lawrence J. O&apos;Neill. Objections to F&amp;R due by 7/17/2014. (Sant Agata, S)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d98287a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-4</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00820_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00820; (PC) Balzarini v. Lewis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00820-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-06-30</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS Recommending that Plaintiff&apos;s 20 Motion for an Order to Show Cause for a Preliminary Injunction and Temporary Restraining Order be Denied, with Prejudice, for Lack of Jurisdiction signed by Magistrate Judge Barbara A. McAuliffe on 6/27/2014. Referred to Judge Lawrence J. O&apos;Neill. Objections to F&amp;R due by 7/17/2014. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00820-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Balzarini v. Lewis et al</title>
+  <subTitle>ORDER Recalling Order Directing USM To Serve Amended Complaint And Directing A Copy Of This Order To Be Served On The United States Marshal (ECF No.18), ORDER Vacating Findings And Recommendations Regarding Dismissal Of Certain Defendants And Claims Issued On May 15, 2014 (ECF No.14), ORDER Directing Clerk Of Court To File Lodged Second Amended Complaint (ECF No.16), signed by Magistrate Judge Barbara A. McAuliffe on 7/17/2014. (Fahrney, E)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d982876</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-5</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00820_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00820; (PC) Balzarini v. Lewis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00820-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-07-17</dateIssued>
+  <docketText>ORDER Recalling Order Directing USM To Serve Amended Complaint And Directing A Copy Of This Order To Be Served On The United States Marshal (ECF No.18), ORDER Vacating Findings And Recommendations Regarding Dismissal Of Certain Defendants And Claims Issued On May 15, 2014 (ECF No.14), ORDER Directing Clerk Of Court To File Lodged Second Amended Complaint (ECF No.16), signed by Magistrate Judge Barbara A. McAuliffe on 7/17/2014. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00820-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Balzarini v. Lewis et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS Regarding Dismissal of Certain Defendants and Claims; Thirty Day Deadline signed by Magistrate Judge Barbara A. McAuliffe on 7/26/2014. Referred to Judge Lawrence J. O&apos;Neill. Objections to F&amp;R due by 9/2/2014. (Sant Agata, S)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d982877</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-6</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00820_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00820; (PC) Balzarini v. Lewis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00820-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-07-28</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS Regarding Dismissal of Certain Defendants and Claims; Thirty Day Deadline signed by Magistrate Judge Barbara A. McAuliffe on 7/26/2014. Referred to Judge Lawrence J. O&apos;Neill. Objections to F&amp;R due by 9/2/2014. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00820-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Balzarini v. Lewis et al</title>
+  <subTitle>ORDER Adopting 22 FINDINGS AND RECOMMENDATIONS Regarding 20 Motion for Order to Show Cause for a Preliminary and Temporary Restraining Order signed by District Judge Lawrence J. O&apos;Neill on 7/28/2014. (Sant Agata, S)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d982888</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-7</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00820_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00820; (PC) Balzarini v. Lewis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00820-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-07-28</dateIssued>
+  <docketText>ORDER Adopting 22 FINDINGS AND RECOMMENDATIONS Regarding 20 Motion for Order to Show Cause for a Preliminary and Temporary Restraining Order signed by District Judge Lawrence J. O&apos;Neill on 7/28/2014. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00820-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Balzarini v. Lewis et al</title>
+  <subTitle>ORDER ADOPTING 26 FINDINGS AND RECOMMENDATIONS regarding Dismissal of Certain Defendants and Claims, signed by District Judge Lawrence J. O&apos;Neill on 9/13/14. (Martin-Gill, S)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d982884</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-8</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00820_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00820; (PC) Balzarini v. Lewis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00820-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2014-09-15</dateIssued>
+  <docketText>ORDER ADOPTING 26 FINDINGS AND RECOMMENDATIONS regarding Dismissal of Certain Defendants and Claims, signed by District Judge Lawrence J. O&apos;Neill on 9/13/14. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00820-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Balzarini v. Lewis et al</title>
+  <subTitle>Second Informational ORDER - Notice and Warning of Requirements for Opposing Defendants&apos; Summary Judgment Motion, signed by Magistrate Judge Barbara A. McAuliffe on 10/20/14. (Martin-Gill, S)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d982878</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-9</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00820_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00820; (PC) Balzarini v. Lewis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00820-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2014-10-20</dateIssued>
+  <docketText>Second Informational ORDER - Notice and Warning of Requirements for Opposing Defendants&apos; Summary Judgment Motion, signed by Magistrate Judge Barbara A. McAuliffe on 10/20/14. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00820-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Balzarini v. Lewis et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s 36 Motion to File Supplemental Pleadings, signed by Magistrate Judge Barbara A. McAuliffe on 1/5/15. (Verduzco, M)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d982829</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-10</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00820_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00820; (PC) Balzarini v. Lewis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00820-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s 36 Motion to File Supplemental Pleadings, signed by Magistrate Judge Barbara A. McAuliffe on 1/5/15. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00820-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-11/mods.xml">
+ <titleInfo>
+  <title>(PC) Balzarini v. Lewis et al</title>
+  <subTitle>ORDER Granting Defendants&apos; 38 Motion to Stay Discovery, signed by Magistrate Judge Barbara A. McAuliffe on 1/5/15. (Verduzco, M)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d982879</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-11</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00820_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00820; (PC) Balzarini v. Lewis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00820-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER Granting Defendants&apos; 38 Motion to Stay Discovery, signed by Magistrate Judge Barbara A. McAuliffe on 1/5/15. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00820-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-12/mods.xml">
+ <titleInfo>
+  <title>(PC) Balzarini v. Lewis et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS recommending that 41 Plaintiff&apos;s Request for a Preliminary Injunction be DENIED for Lack of Jurisdiction re 25 Second Amended Prisoner Civil Rights Complaint signed by Magistrate Judge Barbara A. McAuliffe on 5/12/2015. Referred to Judge O&apos;Neill. Objections to F&amp;R due within fourteen (14) days. (Jessen, A)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d98282a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-12</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00820_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00820; (PC) Balzarini v. Lewis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00820-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2015-05-12</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS recommending that 41 Plaintiff&apos;s Request for a Preliminary Injunction be DENIED for Lack of Jurisdiction re 25 Second Amended Prisoner Civil Rights Complaint signed by Magistrate Judge Barbara A. McAuliffe on 5/12/2015. Referred to Judge O&apos;Neill. Objections to F&amp;R due within fourteen (14) days. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00820-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-13/mods.xml">
+ <titleInfo>
+  <title>(PC) Balzarini v. Lewis et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS recommending that 40 Plaintiff&apos;s Motion for Sanctions be DENIED re 25 Second Amended Prisoner Civil Rights Complaint signed by Magistrate Judge Barbara A. McAuliffe on 5/12/2015. Referred to Judge O&apos;Neill. Objections to F&amp;R due within fourteen (14) days. (Jessen, A)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d982875</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-13</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00820_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00820; (PC) Balzarini v. Lewis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00820-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2015-05-12</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS recommending that 40 Plaintiff&apos;s Motion for Sanctions be DENIED re 25 Second Amended Prisoner Civil Rights Complaint signed by Magistrate Judge Barbara A. McAuliffe on 5/12/2015. Referred to Judge O&apos;Neill. Objections to F&amp;R due within fourteen (14) days. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00820-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-14/mods.xml">
+ <titleInfo>
+  <title>(PC) Balzarini v. Lewis et al</title>
+  <subTitle>ORDER STRIKING 48 Plaintiff&apos;s Surreply signed by Magistrate Judge Barbara A. McAuliffe on 5/12/2015. (Jessen, A)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d982887</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-14</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00820_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00820; (PC) Balzarini v. Lewis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00820-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2015-05-13</dateIssued>
+  <docketText>ORDER STRIKING 48 Plaintiff&apos;s Surreply signed by Magistrate Judge Barbara A. McAuliffe on 5/12/2015. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00820-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-15/mods.xml">
+ <titleInfo>
+  <title>(PC) Balzarini v. Lewis et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS recommending that 35 Defendants&apos; Motion for Partial Summary Judgment be GRANTED, Plaintiff&apos;s IFP Status be REVOKED and This Action be DISMISSED Without Prejudice re 25 Amended Prisoner Civil Rights Complaint signed by Magistrate Judge Barbara A. McAuliffe on 5/13/2015. Referred to Judge O&apos;Neill. Objections to F&amp;R due within fourteen (14) days. (Jessen, A)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d982827</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-15</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00820_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00820; (PC) Balzarini v. Lewis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00820-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2015-05-14</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS recommending that 35 Defendants&apos; Motion for Partial Summary Judgment be GRANTED, Plaintiff&apos;s IFP Status be REVOKED and This Action be DISMISSED Without Prejudice re 25 Amended Prisoner Civil Rights Complaint signed by Magistrate Judge Barbara A. McAuliffe on 5/13/2015. Referred to Judge O&apos;Neill. Objections to F&amp;R due within fourteen (14) days. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00820-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-16/mods.xml">
+ <titleInfo>
+  <title>(PC) Balzarini v. Lewis et al</title>
+  <subTitle>ORDER Adopting 50 FINDINGS AND RECOMMENDATIONS DENYING Plaintiff&apos;s 40 Motion for Sanctions signed by District Judge Lawrence J. O&apos;Neill on 6/10/2015. (Sant Agata, S)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-06-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d982873</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-16</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00820_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00820; (PC) Balzarini v. Lewis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00820-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2015-06-11</dateIssued>
+  <docketText>ORDER Adopting 50 FINDINGS AND RECOMMENDATIONS DENYING Plaintiff&apos;s 40 Motion for Sanctions signed by District Judge Lawrence J. O&apos;Neill on 6/10/2015. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00820-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-17/mods.xml">
+ <titleInfo>
+  <title>(PC) Balzarini v. Lewis et al</title>
+  <subTitle>ORDER Adopting 49 FINDINGS AND RECOMMENDATIONS DENYING Plaintiff&apos;s 41 Request for Preliminary Injunction signed by District Judge Lawrence J. O&apos;Neill on 6/10/2015. (Sant Agata, S)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-06-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d982886</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-17</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00820_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00820; (PC) Balzarini v. Lewis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00820-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2015-06-11</dateIssued>
+  <docketText>ORDER Adopting 49 FINDINGS AND RECOMMENDATIONS DENYING Plaintiff&apos;s 41 Request for Preliminary Injunction signed by District Judge Lawrence J. O&apos;Neill on 6/10/2015. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00820-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-18/mods.xml">
+ <titleInfo>
+  <title>(PC) Balzarini v. Lewis et al</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s Motion for Leave to File Supplemental Complaint or Pleading in Closed Action 58, signed by Magistrate Judge Barbara A. McAuliffe on 7/23/15. (Hellings, J)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-07-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-18.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d982874</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-18</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00820_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00820; (PC) Balzarini v. Lewis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00820-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2015-07-23</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s Motion for Leave to File Supplemental Complaint or Pleading in Closed Action 58, signed by Magistrate Judge Barbara A. McAuliffe on 7/23/15. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00820-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-19/mods.xml">
+ <titleInfo>
+  <title>(PC) Balzarini v. Lewis et al</title>
+  <subTitle>ORDER GRANTING Plaintiff&apos;s 60 Motion to Reopen Time to File an Appeal; ORDER DIRECTING the Clerk&apos;s Office to Send a Copy of Order and Judgment to Plaintiff; Fourteen-Day Deadline signed by District Judge Lawrence J. O&apos;Neill on 9/23/2015. (Sant Agata, S)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-09-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-19.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d982871</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-19</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00820_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00820/USCOURTS-caed-1_13-cv-00820-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00820/pdf/USCOURTS-caed-1_13-cv-00820-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00820; (PC) Balzarini v. Lewis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00820-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2015-09-23</dateIssued>
+  <docketText>ORDER GRANTING Plaintiff&apos;s 60 Motion to Reopen Time to File an Appeal; ORDER DIRECTING the Clerk&apos;s Office to Send a Copy of Order and Judgment to Plaintiff; Fourteen-Day Deadline signed by District Judge Lawrence J. O&apos;Neill on 9/23/2015. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

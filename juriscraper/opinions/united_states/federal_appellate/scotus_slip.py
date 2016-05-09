@@ -1,12 +1,17 @@
-import time
-from datetime import date
-
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import titlecase
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
+    CELLS = {
+        'date': 2,
+        'docket': 3,
+        'name': 4,
+        'revision': 5,
+    }
+    BASE_TABLE_ROW_PATH = '//div[@id = "mainbody"]//table//tr'
+
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.supremecourt.gov/opinions/slipopinions.aspx'
@@ -15,34 +20,37 @@ class Site(OpinionSite):
         self.back_scrape_iterable = range(6, 16)
 
     def _get_case_names(self):
-        return [titlecase(text) for text in
-                self.html.xpath('//div[@id = "mainbody"]//table//tr/td/a/text()')]
+        cell_sub_path = 'td[%d]/a/text()' % self.CELLS['name']
+        case_names_path = '%s/%s' % (self.BASE_TABLE_ROW_PATH, cell_sub_path)
+        case_names = self.html.xpath(case_names_path)
+
+        # Append case name for revised opinion records
+        for row in self._get_table_rows():
+            if self._row_has_revision(row):
+                case_names.append(row.xpath(cell_sub_path)[0])
+
+        return case_names
 
     def _get_download_urls(self):
-        path = '//div[@id = "mainbody"]//table//tr/td/a[text()]/@href'
-        return [e for e in self.html.xpath(path)]
+        return self._get_opinion_urls() + self._get_revision_urls()
 
     def _get_case_dates(self):
-        path = '//div[@id = "mainbody"]//table//tr/td[2]/text()'
-        case_dates = []
-        for date_string in self.html.xpath(path):
-            try:
-                case_date = date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%y')))
-            except ValueError:
-                case_date = date.fromtimestamp(time.mktime(time.strptime(date_string, '%m-%d-%y')))
-            case_dates.append(case_date)
-        return case_dates
+        return self._get_opinion_dates() + self._get_revision_dates()
 
     def _get_docket_numbers(self):
-        path = '//div[@id = "mainbody"]//table//tr/td[3]/text()'
-        return [docket_number for docket_number in self.html.xpath(path)]
+        cell_sub_path = 'td[%d]/text()' % self.CELLS['docket']
+        dockets_path = '%s/%s' % (self.BASE_TABLE_ROW_PATH, cell_sub_path)
+        docket_numbers = [docket_number for docket_number in self.html.xpath(dockets_path)]
+
+        # Append docket number for revised opinion records
+        for row in self._get_table_rows():
+            if self._row_has_revision(row):
+                docket_numbers.append(row.xpath(cell_sub_path)[0])
+
+        return docket_numbers
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
-
-    def _get_summaries(self):
-        path = '//div[@id = "mainbody"]//table//tr//td/a/text()'
-        return [summary for summary in self.html.xpath(path)]
 
     def _download_backwards(self, d):
         logger.info("Running backscraper for year: 20{}".format(d))
@@ -52,3 +60,29 @@ class Site(OpinionSite):
             # Setting status is important because it prevents the download
             # function from being run a second time by the parse method.
             self.status = 200
+
+    def _get_opinion_dates(self):
+        return self._get_dates_from_path('%s/td[%d]/text()' % (self.BASE_TABLE_ROW_PATH, self.CELLS['date']))
+
+    def _get_revision_dates(self):
+        return self._get_dates_from_path('%s/td[%d]/a/text()' % (self.BASE_TABLE_ROW_PATH, self.CELLS['revision']))
+
+    def _get_dates_from_path(self, path):
+        return [convert_date_string(date_string) for date_string in self.html.xpath(path)]
+
+    def _get_opinion_urls(self):
+        return self._get_url_from_cell_index(self.CELLS['name'])
+
+    def _get_revision_urls(self):
+        return self._get_url_from_cell_index(self.CELLS['revision'])
+
+    def _get_url_from_cell_index(self, cell):
+        path = '%s/td[%d]/a/@href' % (self.BASE_TABLE_ROW_PATH, cell)
+        return [url for url in self.html.xpath(path)]
+
+    def _row_has_revision(self, row):
+        revision = row.xpath('td[%d]/a' % self.CELLS['revision'])
+        return True if revision else False
+
+    def _get_table_rows(self):
+        return [row for row in self.html.xpath(self.BASE_TABLE_ROW_PATH) if len(row.xpath('td')) > 0]

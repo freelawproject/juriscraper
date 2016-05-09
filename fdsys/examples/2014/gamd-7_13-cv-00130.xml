@@ -1,0 +1,216 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c7bb76">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cv-00130</identifier>
+<identifier type="local">P0b002ee186c7bb76</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-7_13-cv-00130</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-7_13-cv-00130</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>7:13-cv-00130</caseNumber>
+ <caseOffice>Valdosta</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="HARRY" fullName="HARRY LEE BOGGS JR" generation="JR" lastName="BOGGS" middleName="LEE" role="Plaintiff"></party>
+ <party fullName="McMinn" lastName="McMinn" role="Defendant"></party>
+ <party firstName="Avery" fullName="Avery Moody" lastName="Moody" role="Defendant"></party>
+ <party firstName="CALVIN" fullName="CALVIN ORR" lastName="ORR" role="Defendant"></party>
+ <party firstName="BRIAN" fullName="BRIAN OWENS" lastName="OWENS" role="Defendant"></party>
+ <party firstName="William" fullName="William Robertson" lastName="Robertson" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>BOGGS v. Robertson et al</title>
+ <partNumber>7:13-cv-00130</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cv-00130/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">7:13-cv-00130;13-130</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Valdosta</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>HARRY LEE BOGGS JR</displayForm>
+ <namePart type="family">BOGGS</namePart>
+ <namePart type="given">HARRY</namePart>
+ <namePart type="termsOfAddress">JR</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>McMinn</displayForm>
+ <namePart type="family">McMinn</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Avery Moody</displayForm>
+ <namePart type="family">Moody</namePart>
+ <namePart type="given">Avery</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CALVIN ORR</displayForm>
+ <namePart type="family">ORR</namePart>
+ <namePart type="given">CALVIN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>BRIAN OWENS</displayForm>
+ <namePart type="family">OWENS</namePart>
+ <namePart type="given">BRIAN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Robertson</displayForm>
+ <namePart type="family">Robertson</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-7_13-cv-00130</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>7:13-cv-00130</caseNumber>
+ <caseOffice>Valdosta</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="HARRY" fullName="HARRY LEE BOGGS JR" generation="JR" lastName="BOGGS" middleName="LEE" role="Plaintiff"></party>
+ <party fullName="McMinn" lastName="McMinn" role="Defendant"></party>
+ <party firstName="Avery" fullName="Avery Moody" lastName="Moody" role="Defendant"></party>
+ <party firstName="CALVIN" fullName="CALVIN ORR" lastName="ORR" role="Defendant"></party>
+ <party firstName="BRIAN" fullName="BRIAN OWENS" lastName="OWENS" role="Defendant"></party>
+ <party firstName="William" fullName="William Robertson" lastName="Robertson" role="Defendant"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_13-cv-00130-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cv-00130/USCOURTS-gamd-7_13-cv-00130-0/mods.xml">
+ <titleInfo>
+  <title>BOGGS v. Robertson et al</title>
+  <subTitle>ORDER dismissing complaint without prejudice. Ordered by U.S. District Judge Hugh Lawson on 11/20/2013. (nbp)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cv-00130/pdf/USCOURTS-gamd-7_13-cv-00130-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186c8164d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cv-00130/USCOURTS-gamd-7_13-cv-00130-0</identifier>
+ <identifier type="former granule identifier">gamd-7_13-cv-00130_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cv-00130/USCOURTS-gamd-7_13-cv-00130-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cv-00130/pdf/USCOURTS-gamd-7_13-cv-00130-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:13-cv-00130; BOGGS v. Robertson et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_13-cv-00130-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-11-20</dateIssued>
+  <docketText>ORDER dismissing complaint without prejudice. Ordered by U.S. District Judge Hugh Lawson on 11/20/2013. (nbp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_13-cv-00130-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cv-00130/USCOURTS-gamd-7_13-cv-00130-1/mods.xml">
+ <titleInfo>
+  <title>BOGGS v. Robertson et al</title>
+  <subTitle>ORDER denying 10 Motion for Leave to Appeal in forma pauperis. Ordered by U.S. District Judge Hugh Lawson on 1/7/2014. (nbp)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cv-00130/pdf/USCOURTS-gamd-7_13-cv-00130-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186c8164c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cv-00130/USCOURTS-gamd-7_13-cv-00130-1</identifier>
+ <identifier type="former granule identifier">gamd-7_13-cv-00130_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cv-00130/USCOURTS-gamd-7_13-cv-00130-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cv-00130/pdf/USCOURTS-gamd-7_13-cv-00130-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:13-cv-00130; BOGGS v. Robertson et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_13-cv-00130-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-07</dateIssued>
+  <docketText>ORDER denying 10 Motion for Leave to Appeal in forma pauperis. Ordered by U.S. District Judge Hugh Lawson on 1/7/2014. (nbp)</docketText>
+</extension>
+</relatedItem>
+</mods>

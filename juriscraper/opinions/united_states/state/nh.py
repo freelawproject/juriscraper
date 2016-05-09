@@ -8,13 +8,16 @@
 # - 2014-10-17: Updated by mlr to fix regex error.
 # - 2015-06-04: Updated by bwc so regex catches comma, period, or whitespaces
 #   as separator. Simplified by mlr to make regexes more semantic.
-
-import time
+# - 2016-02-20: Updated by arderyp to handle strange format where multiple
+#   case names and docket numbers appear in anchor text for a single case
+#   pdf link. Multiple case names are concatenated, and docket numbers are
+#   concatenated with ',' delimiter
 
 import re
-from juriscraper.OpinionSite import OpinionSite
-
 from datetime import date
+
+from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -23,16 +26,21 @@ class Site(OpinionSite):
         self.url = 'http://www.courts.state.nh.us/supreme/opinions/{current_year}/index.htm'.format(
             current_year=date.today().year)
         self.court_id = self.__module__
-        self.case_name_regex = re.compile('(\d{4}-\d+(?!.*\d{4}-\d+))(?:,|\.|\s?) (.*)')
+        self.link_path = 'id("content")/div//ul//li//a[position()=1]'
+        self.link_text_regex = re.compile('(\d{4}-\d+(?!.*\d{4}-\d+))(?:,|\.|\s?) (.*)')
 
     def _get_case_names(self):
-        path = "id('content')/div//ul//li//a[position()=1]/text()"
         case_names = []
-        for text in self.html.xpath(path):
-            # Uses a negative look ahead to make sure to get the last
-            # occurrence of a docket number.
-            match_case_name = self.case_name_regex.search(text)
-            case_names.extend([match_case_name.group(2)])
+        for link in self.html.xpath(self.link_path):
+            # Text of some links includes info for multiple cases split by <br>
+            # so we'll iterate over each, extract the name, clean it up, then
+            # glue the names together to form one long name. (Example: Feb2016)
+            link_names = []
+            for text in link.xpath('text()'):
+                name_raw = self.link_text_regex.search(text).group(2)
+                if name_raw:
+                    link_names.append(' '.join(name_raw.split()))
+            case_names.append(' and '.join(link_names))
         return case_names
 
     def _get_download_urls(self):
@@ -44,27 +52,28 @@ class Site(OpinionSite):
         return download_url
 
     def _get_case_dates(self):
-        path = "id('content')/div//strong"
-        path_2 = './following-sibling::ul[1]//li|../following-sibling::ul[1]//li'
         dates = []
-        for p_element in self.html.xpath(path):
-            try:
-                date_str = str(p_element.xpath('./text()')[0])
-                d = date.fromtimestamp(time.mktime(time.strptime(re.sub(' ', '', date_str), '%B%d,%Y')))
-                dates.extend([d] * len(p_element.xpath(path_2)))
-            except ValueError:
-                pass
-            except IndexError:
-                pass
+        path = 'id("content")/div//strong'
+        sub_path = './following-sibling::ul[1]//li|../following-sibling::ul[1]//li'
+        for element in self.html.xpath(path):
+            date = convert_date_string(element.xpath('text()')[0])
+            for case in element.xpath(sub_path):
+                dates.append(date)
         return dates
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        path = "id('content')/div//ul//li//a[position()=1]/text()"
         docket_numbers = []
-        for text in self.html.xpath(path):
-            match_docket_nr = re.search('(.*\d{4}-\d+)(?:,|\.|\s?) (.*)', text)
-            docket_numbers.append(match_docket_nr.group(1))
+        for link in self.html.xpath(self.link_path):
+            # Text of some links includes info for multiple cases split by <br> so we'll
+            # iterate over each, extract the docket number, then glue the numbers together
+            # to create a single "xx,yy" docket number. (Example: Feb2016)
+            case_dockets = []
+            for text in link.xpath('text()'):
+                docket = self.link_text_regex.search(text).group(1)
+                if docket:
+                    case_dockets.append(docket)
+            docket_numbers.append(', '.join(case_dockets))
         return docket_numbers

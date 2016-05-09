@@ -1,0 +1,188 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a18f47">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02976</identifier>
+<identifier type="local">P0b002ee183a18f47</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-02976</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02976</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02976</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1441 Petition for Removal</cause>
+ <party fullName="American Brokers Conduit, Inc." lastName="American Brokers Conduit, Inc." role="Defendant"></party>
+ <party fullName="American Home Mortgage Servicing, Inc." lastName="American Home Mortgage Servicing, Inc." role="Defendant"></party>
+ <party fullName="Homeward Residential, Inc." lastName="Homeward Residential, Inc." role="Defendant"></party>
+ <party fullName="JPMorgan Chase Bank, N.A." lastName="JPMorgan Chase Bank, N.A." role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald G. Rosene" lastName="Rosene" middleName="G." role="Plaintiff"></party>
+ <party firstName="Shaun" fullName="Shaun L. Rosene" lastName="Rosene" middleName="L." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Rosene et al v. American Brokers Conduit, Inc. et al</title>
+ <partNumber>2:12-cv-02976</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02976/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-02976;12-2976</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>American Brokers Conduit, Inc.</displayForm>
+ <namePart type="family">American Brokers Conduit, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>American Home Mortgage Servicing, Inc.</displayForm>
+ <namePart type="family">American Home Mortgage Servicing, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Homeward Residential, Inc.</displayForm>
+ <namePart type="family">Homeward Residential, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JPMorgan Chase Bank, N.A.</displayForm>
+ <namePart type="family">JPMorgan Chase Bank, N.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Donald G. Rosene</displayForm>
+ <namePart type="family">Rosene</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Shaun L. Rosene</displayForm>
+ <namePart type="family">Rosene</namePart>
+ <namePart type="given">Shaun</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02976</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02976</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1441 Petition for Removal</cause>
+ <party fullName="American Brokers Conduit, Inc." lastName="American Brokers Conduit, Inc." role="Defendant"></party>
+ <party fullName="American Home Mortgage Servicing, Inc." lastName="American Home Mortgage Servicing, Inc." role="Defendant"></party>
+ <party fullName="Homeward Residential, Inc." lastName="Homeward Residential, Inc." role="Defendant"></party>
+ <party fullName="JPMorgan Chase Bank, N.A." lastName="JPMorgan Chase Bank, N.A." role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald G. Rosene" lastName="Rosene" middleName="G." role="Plaintiff"></party>
+ <party firstName="Shaun" fullName="Shaun L. Rosene" lastName="Rosene" middleName="L." role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02976-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02976/USCOURTS-caed-2_12-cv-02976-0/mods.xml">
+ <titleInfo>
+  <title>Rosene et al v. American Brokers Conduit, Inc. et al</title>
+  <subTitle>ORDER REMANDING CASE to Placer County Superior Court signed by Chief Judge Morrison C. England, Jr on 1/3/13: The time for Homeward to file responses to the Complaint will be in accordance with Code of Civil Procedure Section 430.90. The Clerk of the Court is directed to close the case. (Kaminski, H)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02976-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1fc67</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02976/USCOURTS-caed-2_12-cv-02976-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02976_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02976/USCOURTS-caed-2_12-cv-02976-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02976/pdf/USCOURTS-caed-2_12-cv-02976-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02976; Rosene et al v. American Brokers Conduit, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02976-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER REMANDING CASE to Placer County Superior Court signed by Chief Judge Morrison C. England, Jr on 1/3/13: The time for Homeward to file responses to the Complaint will be in accordance with Code of Civil Procedure Section 430.90. The Clerk of the Court is directed to close the case. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,390 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8a9752">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-01517</identifier>
+<identifier type="local">P0b002ee18a8a9752</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-1_06-cv-01517</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_06-cv-01517</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:06-cv-01517</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Michael" fullName="Michael Haggerty" lastName="Haggerty" role="Defendant"></party>
+ <party firstName="Tim" fullName="Tim Haggerty" lastName="Haggerty" role="Defendant"></party>
+ <party firstName="Constance" fullName="Constance Hines" lastName="Hines" role="Plaintiff"></party>
+ <party firstName="Marshay" fullName="Marshay Hines" lastName="Hines" role="Plaintiff"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Hyde" lastName="Hyde" role="Defendant"></party>
+ <party firstName="Steven" fullName="Steven Krokoff" lastName="Krokoff" role="Defendant"></party>
+ <party firstName="Alfred" fullName="Alfred Martin" lastName="Martin" role="Defendant"></party>
+ <party firstName="John" fullName="John Monte" lastName="Monte" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Mulligan" lastName="Mulligan" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian Plante" lastName="Plante" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian Quinn" lastName="Quinn" role="Defendant"></party>
+ <party firstName="Jeff" fullName="Jeff Roberts" lastName="Roberts" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Shunck" lastName="Shunck" role="Defendant"></party>
+ <party fullName="The Albany Police Department" lastName="The Albany Police Department" role="Defendant"></party>
+ <party fullName="The City of Albany" lastName="The City of Albany" role="Defendant"></party>
+ <party firstName="James" fullName="James W. Tuffey" lastName="Tuffey" middleName="W." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Hines et al v. The City of Albany et al</title>
+ <partNumber>1:06-cv-01517</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-01517/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:06-cv-01517;06-1517</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Albany</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Michael Haggerty</displayForm>
+ <namePart type="family">Haggerty</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tim Haggerty</displayForm>
+ <namePart type="family">Haggerty</namePart>
+ <namePart type="given">Tim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Constance Hines</displayForm>
+ <namePart type="family">Hines</namePart>
+ <namePart type="given">Constance</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Marshay Hines</displayForm>
+ <namePart type="family">Hines</namePart>
+ <namePart type="given">Marshay</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey Hyde</displayForm>
+ <namePart type="family">Hyde</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Steven Krokoff</displayForm>
+ <namePart type="family">Krokoff</namePart>
+ <namePart type="given">Steven</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alfred Martin</displayForm>
+ <namePart type="family">Martin</namePart>
+ <namePart type="given">Alfred</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Monte</displayForm>
+ <namePart type="family">Monte</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Mulligan</displayForm>
+ <namePart type="family">Mulligan</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brian Plante</displayForm>
+ <namePart type="family">Plante</namePart>
+ <namePart type="given">Brian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brian Quinn</displayForm>
+ <namePart type="family">Quinn</namePart>
+ <namePart type="given">Brian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeff Roberts</displayForm>
+ <namePart type="family">Roberts</namePart>
+ <namePart type="given">Jeff</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Shunck</displayForm>
+ <namePart type="family">Shunck</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The Albany Police Department</displayForm>
+ <namePart type="family">The Albany Police Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The City of Albany</displayForm>
+ <namePart type="family">The City of Albany</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James W. Tuffey</displayForm>
+ <namePart type="family">Tuffey</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_06-cv-01517</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:06-cv-01517</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Michael" fullName="Michael Haggerty" lastName="Haggerty" role="Defendant"></party>
+ <party firstName="Tim" fullName="Tim Haggerty" lastName="Haggerty" role="Defendant"></party>
+ <party firstName="Constance" fullName="Constance Hines" lastName="Hines" role="Plaintiff"></party>
+ <party firstName="Marshay" fullName="Marshay Hines" lastName="Hines" role="Plaintiff"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Hyde" lastName="Hyde" role="Defendant"></party>
+ <party firstName="Steven" fullName="Steven Krokoff" lastName="Krokoff" role="Defendant"></party>
+ <party firstName="Alfred" fullName="Alfred Martin" lastName="Martin" role="Defendant"></party>
+ <party firstName="John" fullName="John Monte" lastName="Monte" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Mulligan" lastName="Mulligan" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian Plante" lastName="Plante" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian Quinn" lastName="Quinn" role="Defendant"></party>
+ <party firstName="Jeff" fullName="Jeff Roberts" lastName="Roberts" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Shunck" lastName="Shunck" role="Defendant"></party>
+ <party fullName="The Albany Police Department" lastName="The Albany Police Department" role="Defendant"></party>
+ <party fullName="The City of Albany" lastName="The City of Albany" role="Defendant"></party>
+ <party firstName="James" fullName="James W. Tuffey" lastName="Tuffey" middleName="W." role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_06-cv-01517-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-01517/USCOURTS-nynd-1_06-cv-01517-0/mods.xml">
+ <titleInfo>
+  <title>Hines et al v. The City of Albany et al</title>
+  <subTitle>MEMORANDUM-DECISION &amp; ORDER: granting the # 28 Motion to Amend/Correct the Complaint, counsel shall upload the Amended Complaint to the CM/ECF system; granting in part and denying in part the # 9 Motion to Dismiss as noted herein. The defendant&apos;s shall file an answer to the Amended Complaint within 30 days of the date of this Order. Signed by Senior Judge Neal P. McCurn on 2/8/08. (jmb)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-02-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-01517/pdf/USCOURTS-nynd-1_06-cv-01517-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b1783</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-01517/USCOURTS-nynd-1_06-cv-01517-0</identifier>
+ <identifier type="former granule identifier">nynd-1_06-cv-01517_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-01517/USCOURTS-nynd-1_06-cv-01517-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-01517/pdf/USCOURTS-nynd-1_06-cv-01517-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-01517; Hines et al v. The City of Albany et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_06-cv-01517-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-02-08</dateIssued>
+  <docketText>MEMORANDUM-DECISION &amp; ORDER: granting the # 28 Motion to Amend/Correct the Complaint, counsel shall upload the Amended Complaint to the CM/ECF system; granting in part and denying in part the # 9 Motion to Dismiss as noted herein. The defendant&apos;s shall file an answer to the Amended Complaint within 30 days of the date of this Order. Signed by Senior Judge Neal P. McCurn on 2/8/08. (jmb)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_06-cv-01517-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-01517/USCOURTS-nynd-1_06-cv-01517-1/mods.xml">
+ <titleInfo>
+  <title>Hines et al v. The City of Albany et al</title>
+  <subTitle>MEMORANDUM-DECISION &amp; ORDER: It is ordered that Defendants&apos; # 71 Motion for Summary Judgment is granted in part and denied in part and Plaintiffs&apos; # 77 Cross Motion for Summary Judgment is granted in part and denied in part. It is Ordered that the claims left for trial as to the issue of liability are Plaintiffs&apos; unreasonable seizure claim against defendants Tim Haggerty, Robert Mulligan, Jeffrey Hyde and Robert Shunck and plaintiff Constance Hines&apos;s due process claim against defendants City of Albany, Chief of Police James W. Tuffey, Brian Quinn, Jeff Roberts and Michael Haggerty. Signed by Senior Judge Neal P. McCurn on 6/27/2011. (jmb)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-01517/pdf/USCOURTS-nynd-1_06-cv-01517-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b1784</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-01517/USCOURTS-nynd-1_06-cv-01517-1</identifier>
+ <identifier type="former granule identifier">nynd-1_06-cv-01517_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-01517/USCOURTS-nynd-1_06-cv-01517-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-01517/pdf/USCOURTS-nynd-1_06-cv-01517-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-01517; Hines et al v. The City of Albany et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_06-cv-01517-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-06-27</dateIssued>
+  <docketText>MEMORANDUM-DECISION &amp; ORDER: It is ordered that Defendants&apos; # 71 Motion for Summary Judgment is granted in part and denied in part and Plaintiffs&apos; # 77 Cross Motion for Summary Judgment is granted in part and denied in part. It is Ordered that the claims left for trial as to the issue of liability are Plaintiffs&apos; unreasonable seizure claim against defendants Tim Haggerty, Robert Mulligan, Jeffrey Hyde and Robert Shunck and plaintiff Constance Hines&apos;s due process claim against defendants City of Albany, Chief of Police James W. Tuffey, Brian Quinn, Jeff Roberts and Michael Haggerty. Signed by Senior Judge Neal P. McCurn on 6/27/2011. (jmb)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_06-cv-01517-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-01517/USCOURTS-nynd-1_06-cv-01517-2/mods.xml">
+ <titleInfo>
+  <title>Hines et al v. The City of Albany et al</title>
+  <subTitle>. (jmb)ntiff Constance Hines&apos;s due process claim against defendants City of Albany, Chief of Police James W. Tuffey, Brian Quinn, Jeff Roberts and Michael Haggerty shall be tried regarding damages only. Signed by Senior Judge Neal P. McCurn on 7/1/2011AMENDED MEMORANDUM-DECISION &amp; ORDER: Amending the # 83 Memorandum-Decision &amp; Order. It is ordered that Defendants&apos; # 71 Motion for Summary Judgment is granted in part and denied in part and Plaintiffs&apos; # 77 Cross Motion for Summary Judgment is granted in part and denied in part. The following are the issues of liability and damages left for trial: Plaintiffs&apos; unreasonable seizure claim against defendants Tim Haggerty, Robert Mulligan, Jeffrey Hyde and Robert Shunck. Further Plai</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-01517/pdf/USCOURTS-nynd-1_06-cv-01517-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b1787</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-01517/USCOURTS-nynd-1_06-cv-01517-2</identifier>
+ <identifier type="former granule identifier">nynd-1_06-cv-01517_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-01517/USCOURTS-nynd-1_06-cv-01517-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-01517/pdf/USCOURTS-nynd-1_06-cv-01517-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-01517; Hines et al v. The City of Albany et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_06-cv-01517-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-07-01</dateIssued>
+  <docketText>. (jmb)ntiff Constance Hines&apos;s due process claim against defendants City of Albany, Chief of Police James W. Tuffey, Brian Quinn, Jeff Roberts and Michael Haggerty shall be tried regarding damages only. Signed by Senior Judge Neal P. McCurn on 7/1/2011AMENDED MEMORANDUM-DECISION &amp; ORDER: Amending the # 83 Memorandum-Decision &amp; Order. It is ordered that Defendants&apos; # 71 Motion for Summary Judgment is granted in part and denied in part and Plaintiffs&apos; # 77 Cross Motion for Summary Judgment is granted in part and denied in part. The following are the issues of liability and damages left for trial: Plaintiffs&apos; unreasonable seizure claim against defendants Tim Haggerty, Robert Mulligan, Jeffrey Hyde and Robert Shunck. Further Plai</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_06-cv-01517-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-01517/USCOURTS-nynd-1_06-cv-01517-3/mods.xml">
+ <titleInfo>
+  <title>Hines et al v. The City of Albany et al</title>
+  <subTitle>JUDGMENT FOR ATTORNEY&apos;S FEES: It is ORDERED and ADJUDGED that Plaintiffs&apos; # 101 Motion for Attorney Fees and # 104 Motion for Attorney Fees are GRANTED in part and DENIED in part. It is further ORDERED that Plaintiffs are awarded $132,217.75 in attorney&apos;s fees. It is further ORDERED that Plaintiffs are awarded $1548.62 in costs. (nmk)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-01517/pdf/USCOURTS-nynd-1_06-cv-01517-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b1786</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-01517/USCOURTS-nynd-1_06-cv-01517-3</identifier>
+ <identifier type="former granule identifier">nynd-1_06-cv-01517_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-01517/USCOURTS-nynd-1_06-cv-01517-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-01517/pdf/USCOURTS-nynd-1_06-cv-01517-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-01517; Hines et al v. The City of Albany et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_06-cv-01517-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-06-13</dateIssued>
+  <docketText>JUDGMENT FOR ATTORNEY&apos;S FEES: It is ORDERED and ADJUDGED that Plaintiffs&apos; # 101 Motion for Attorney Fees and # 104 Motion for Attorney Fees are GRANTED in part and DENIED in part. It is further ORDERED that Plaintiffs are awarded $132,217.75 in attorney&apos;s fees. It is further ORDERED that Plaintiffs are awarded $1548.62 in costs. (nmk)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_06-cv-01517-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-01517/USCOURTS-nynd-1_06-cv-01517-4/mods.xml">
+ <titleInfo>
+  <title>Hines et al v. The City of Albany et al</title>
+  <subTitle>DECISION &amp; ORDER denying #122 Defendant&apos;s Motion for stay of judgment pending appeal; and Defendants&apos; application for waiver of supersedeas bond is denied as moot. Signed by Judge Glenn T. Suddaby on 1/5/15. (lmw)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-01517/pdf/USCOURTS-nynd-1_06-cv-01517-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b1785</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-01517/USCOURTS-nynd-1_06-cv-01517-4</identifier>
+ <identifier type="former granule identifier">nynd-1_06-cv-01517_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-01517/USCOURTS-nynd-1_06-cv-01517-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-01517/pdf/USCOURTS-nynd-1_06-cv-01517-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-01517; Hines et al v. The City of Albany et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_06-cv-01517-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>DECISION &amp; ORDER denying #122 Defendant&apos;s Motion for stay of judgment pending appeal; and Defendants&apos; application for waiver of supersedeas bond is denied as moot. Signed by Judge Glenn T. Suddaby on 1/5/15. (lmw)</docketText>
+</extension>
+</relatedItem>
+</mods>

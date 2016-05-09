@@ -1,0 +1,217 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18174a163">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03262</identifier>
+<identifier type="local">P0b002ee18174a163</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_05-cv-03262</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_05-cv-03262</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:05-cv-03262</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Charlie" fullName="Charlie Bush" lastName="Bush" role="Plaintiff"></party>
+ <party fullName="Platte County Jail" lastName="Platte County Jail" role="Defendant"></party>
+ <party firstName="Unknown" fullName="Unknown Spualk" lastName="Spualk" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Bush v. Spualk et al</title>
+ <partNumber>4:05-cv-03262</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03262/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:05-cv-03262;05-3262</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Charlie Bush</displayForm>
+ <namePart type="family">Bush</namePart>
+ <namePart type="given">Charlie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Platte County Jail</displayForm>
+ <namePart type="family">Platte County Jail</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Unknown Spualk</displayForm>
+ <namePart type="family">Spualk</namePart>
+ <namePart type="given">Unknown</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_05-cv-03262</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:05-cv-03262</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Charlie" fullName="Charlie Bush" lastName="Bush" role="Plaintiff"></party>
+ <party fullName="Platte County Jail" lastName="Platte County Jail" role="Defendant"></party>
+ <party firstName="Unknown" fullName="Unknown Spualk" lastName="Spualk" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03262-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03262/USCOURTS-ned-4_05-cv-03262-0/mods.xml">
+ <titleInfo>
+  <title>Bush v. Spualk et al</title>
+  <subTitle>ORDER ON INITIAL REVIEW granting 2 Motion for Leave to Proceed in forma pauperis. Clerk shall send plaintiff one summons and one 285 form. Plaintiff has until 3/21/06 to serve defendants or dismissal may occur. Signed by Magistrate Judge F. A. Gossett on 11/21/2005. COPIES MAILED including appropriate forms. (JSF)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03262-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18177a78a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03262/USCOURTS-ned-4_05-cv-03262-0</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03262_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03262/USCOURTS-ned-4_05-cv-03262-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03262/pdf/USCOURTS-ned-4_05-cv-03262-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03262; Bush v. Spualk et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03262-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-11-21</dateIssued>
+  <docketText>ORDER ON INITIAL REVIEW granting 2 Motion for Leave to Proceed in forma pauperis. Clerk shall send plaintiff one summons and one 285 form. Plaintiff has until 3/21/06 to serve defendants or dismissal may occur. Signed by Magistrate Judge F. A. Gossett on 11/21/2005. COPIES MAILED including appropriate forms. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03262-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03262/USCOURTS-ned-4_05-cv-03262-1/mods.xml">
+ <titleInfo>
+  <title>Bush v. Spualk et al</title>
+  <subTitle>2/5/2005. COPIES MAILED(JSF)ORDER that the Clerk shall send the plaintiff the form for requestingleave to proceed IFP. The plaintiff shall complete the form and return it to the court by 12/27/05, in the absence of which this case may be subject to dismissal without prejudice for failure to prosecute this case with diligence. The plaintiff shall keep the court informed of his current address at all times while this case is pending; as failure to do so could result in dismissal. Signed by Magistrate Judge F. A. Gossett on 1</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03262-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18177a789</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03262/USCOURTS-ned-4_05-cv-03262-1</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03262_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03262/USCOURTS-ned-4_05-cv-03262-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03262/pdf/USCOURTS-ned-4_05-cv-03262-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03262; Bush v. Spualk et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03262-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-12-05</dateIssued>
+  <docketText>2/5/2005. COPIES MAILED(JSF)ORDER that the Clerk shall send the plaintiff the form for requestingleave to proceed IFP. The plaintiff shall complete the form and return it to the court by 12/27/05, in the absence of which this case may be subject to dismissal without prejudice for failure to prosecute this case with diligence. The plaintiff shall keep the court informed of his current address at all times while this case is pending; as failure to do so could result in dismissal. Signed by Magistrate Judge F. A. Gossett on 1</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03262-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03262/USCOURTS-ned-4_05-cv-03262-2/mods.xml">
+ <titleInfo>
+  <title>Bush v. Spualk et al</title>
+  <subTitle>MEMORANDUM AND ORDER - There has been no response by the plaintiff, and the deadline has expired. Therefore, as it appears that this case has been abandoned, the plaintiff&apos;s complaint and the above-entitled action are dismissed without prejudice. A separate judgment will be entered accordingly. Signed by Judge Laurie Smith Camp on 1/3/2006. (JAE, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03262-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18177a78b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03262/USCOURTS-ned-4_05-cv-03262-2</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03262_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03262/USCOURTS-ned-4_05-cv-03262-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03262/pdf/USCOURTS-ned-4_05-cv-03262-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03262; Bush v. Spualk et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03262-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-01-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - There has been no response by the plaintiff, and the deadline has expired. Therefore, as it appears that this case has been abandoned, the plaintiff&apos;s complaint and the above-entitled action are dismissed without prejudice. A separate judgment will be entered accordingly. Signed by Judge Laurie Smith Camp on 1/3/2006. (JAE, )</docketText>
+</extension>
+</relatedItem>
+</mods>

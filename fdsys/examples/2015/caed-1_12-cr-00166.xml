@@ -1,0 +1,286 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8bdfb5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00166</identifier>
+<identifier type="local">P0b002ee18a8bdfb5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cr-00166</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cr-00166</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cr-00166</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Saloome" fullName="Saloome Muhammad" lastName="Muhammad" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Muhammad</title>
+ <partNumber>1:12-cr-00166</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00166/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cr-00166;12-166</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Saloome Muhammad</displayForm>
+ <namePart type="family">Muhammad</namePart>
+ <namePart type="given">Saloome</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cr-00166</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cr-00166</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Saloome" fullName="Saloome Muhammad" lastName="Muhammad" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00166-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00166/USCOURTS-caed-1_12-cr-00166-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Muhammad</title>
+  <subTitle>DETENTION ORDER as to Saloome Muhammad signed by Magistrate Judge Sheila K. Oberto on 7/3/2012. (Rooney, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00166/pdf/USCOURTS-caed-1_12-cr-00166-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6276</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00166/USCOURTS-caed-1_12-cr-00166-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00166_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00166/USCOURTS-caed-1_12-cr-00166-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00166/pdf/USCOURTS-caed-1_12-cr-00166-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00166; USA v. Muhammad; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00166-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-07-05</dateIssued>
+  <docketText>DETENTION ORDER as to Saloome Muhammad signed by Magistrate Judge Sheila K. Oberto on 7/3/2012. (Rooney, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00166-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00166/USCOURTS-caed-1_12-cr-00166-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Muhammad</title>
+  <subTitle>STIPULATION and ORDER For Continuance of Status Conference, signed by Magistrate Judge Dennis L. Beck on 10/5/2012. (Status Conference as to Saloome Muhammad previously set for 10/9/2012 has been CONTINUED to 10/22/2012 at 01:00 PM in Courtroom 9 (DLB) before Magistrate Judge Dennis L. Beck. XT Start: 10/9/2012, XT Stop: 10/22/2012.) (Gaumnitz, R)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00166/pdf/USCOURTS-caed-1_12-cr-00166-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c61e0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00166/USCOURTS-caed-1_12-cr-00166-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00166_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00166/USCOURTS-caed-1_12-cr-00166-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00166/pdf/USCOURTS-caed-1_12-cr-00166-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00166; USA v. Muhammad; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00166-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-10-05</dateIssued>
+  <docketText>STIPULATION and ORDER For Continuance of Status Conference, signed by Magistrate Judge Dennis L. Beck on 10/5/2012. (Status Conference as to Saloome Muhammad previously set for 10/9/2012 has been CONTINUED to 10/22/2012 at 01:00 PM in Courtroom 9 (DLB) before Magistrate Judge Dennis L. Beck. XT Start: 10/9/2012, XT Stop: 10/22/2012.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00166-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00166/USCOURTS-caed-1_12-cr-00166-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Muhammad</title>
+  <subTitle>Stipulation to Continue Motion Hearing; ORDER as to Saloome Muhammad, signed by District Judge Anthony W. Ishii on 10/8/2013. Motion Hearing CONTINUED TO 10/21/2013 at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. (Marrujo, C)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00166/pdf/USCOURTS-caed-1_12-cr-00166-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c61e1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00166/USCOURTS-caed-1_12-cr-00166-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00166_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00166/USCOURTS-caed-1_12-cr-00166-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00166/pdf/USCOURTS-caed-1_12-cr-00166-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00166; USA v. Muhammad; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00166-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-10-08</dateIssued>
+  <docketText>Stipulation to Continue Motion Hearing; ORDER as to Saloome Muhammad, signed by District Judge Anthony W. Ishii on 10/8/2013. Motion Hearing CONTINUED TO 10/21/2013 at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00166-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00166/USCOURTS-caed-1_12-cr-00166-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Muhammad</title>
+  <subTitle>STIPULATION and ORDER to Continue Trial Confirmation and Motion Hearing, Signed by District Judge Anthony W. Ishii on 10/18/2013. The hearing on defendant&apos;s motion to suppress 16 and the government&apos;s motion in limine 17 and the trial confirmation hearing are continued to 11/4/2013 at 01:30 PM in Courtroom 2 before District Judge Anthony W. Ishii. Time previously ordered excluded through 11/13/2013. (Arellano, S.)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00166/pdf/USCOURTS-caed-1_12-cr-00166-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6275</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00166/USCOURTS-caed-1_12-cr-00166-3</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00166_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00166/USCOURTS-caed-1_12-cr-00166-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00166/pdf/USCOURTS-caed-1_12-cr-00166-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00166; USA v. Muhammad; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00166-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-10-18</dateIssued>
+  <docketText>STIPULATION and ORDER to Continue Trial Confirmation and Motion Hearing, Signed by District Judge Anthony W. Ishii on 10/18/2013. The hearing on defendant&apos;s motion to suppress 16 and the government&apos;s motion in limine 17 and the trial confirmation hearing are continued to 11/4/2013 at 01:30 PM in Courtroom 2 before District Judge Anthony W. Ishii. Time previously ordered excluded through 11/13/2013. (Arellano, S.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00166-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00166/USCOURTS-caed-1_12-cr-00166-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Muhammad</title>
+  <subTitle>PRETRIAL ORDER as to Saloome Muhammad signed by District Judge Anthony W. Ishii on 4/15/14. (Nazaroff, H)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00166/pdf/USCOURTS-caed-1_12-cr-00166-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6277</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00166/USCOURTS-caed-1_12-cr-00166-4</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00166_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00166/USCOURTS-caed-1_12-cr-00166-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00166/pdf/USCOURTS-caed-1_12-cr-00166-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00166; USA v. Muhammad; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00166-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-04-15</dateIssued>
+  <docketText>PRETRIAL ORDER as to Saloome Muhammad signed by District Judge Anthony W. Ishii on 4/15/14. (Nazaroff, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00166-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00166/USCOURTS-caed-1_12-cr-00166-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Muhammad</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Saloome Muhammad, signed by District Judge Anthony W. Ishii on 1/6/2015. (Gaumnitz, R)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00166/pdf/USCOURTS-caed-1_12-cr-00166-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6274</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00166/USCOURTS-caed-1_12-cr-00166-5</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00166_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00166/USCOURTS-caed-1_12-cr-00166-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00166/pdf/USCOURTS-caed-1_12-cr-00166-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00166; USA v. Muhammad; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00166-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Saloome Muhammad, signed by District Judge Anthony W. Ishii on 1/6/2015. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+</mods>

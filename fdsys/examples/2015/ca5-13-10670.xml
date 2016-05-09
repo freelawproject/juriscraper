@@ -1,0 +1,358 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8ab1c0">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Fifth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-13-10670</identifier>
+<identifier type="local">P0b002ee18a8ab1c0</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca5-13-10670</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca5-13-10670</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca5</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtSortOrder>1050</courtSortOrder>
+ <caseNumber>13-10670</caseNumber>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Gregg" fullName="Gregg Abbott" lastName="Abbott" role="Appellee"></party>
+ <party firstName="Ted" fullName="Ted Akin" lastName="Akin" role="Appellee"></party>
+ <party firstName="Darlene" fullName="Darlene C. Amrhein" lastName="Amrhein" middleName="C." role="Appellant"></party>
+ <party firstName="Andres" fullName="Andres Andrade" lastName="Andrade" role="Appellee"></party>
+ <party firstName="Hope" fullName="Hope Andrade" lastName="Andrade" role="Appellee"></party>
+ <party firstName="D&apos;Metria" fullName="D&apos;Metria Benson" lastName="Benson" role="Appellee"></party>
+ <party firstName="Baliff" fullName="Baliff Christenson" lastName="Christenson" role="Appellee"></party>
+ <party firstName="Robert" fullName="Robert Clarkson" lastName="Clarkson" role="Appellee"></party>
+ <party firstName="Brett" fullName="Brett Cornwell" lastName="Cornwell" role="Appellee"></party>
+ <party fullName="County Court at Law Fifth District of Texas" lastName="County Court at Law Fifth District of Texas" role="Appellee"></party>
+ <party fullName="Dallas County" lastName="Dallas County" role="Appellee"></party>
+ <party fullName="Dallas Texas Courts &amp; Judges" lastName="Dallas Texas Courts &amp; Judges" role="Appellee"></party>
+ <party firstName="Jerry" fullName="Jerry Fazio" lastName="Fazio" role="Appellee"></party>
+ <party fullName="La Madeleine, Incorporated" lastName="La Madeleine, Incorporated" role="Appellee"></party>
+ <party firstName="Sally" fullName="Sally Montgomery" lastName="Montgomery" role="Appellee"></party>
+ <party firstName="John" fullName="John Ovard" lastName="Ovard" role="Appellee"></party>
+ <party fullName="Owen &amp; Fazio, P.C. Law Firm" lastName="Owen &amp; Fazio, P.C. Law Firm" role="Appellee"></party>
+ <party firstName="Rick" fullName="Rick Perry" lastName="Perry" role="Appellee"></party>
+ <party firstName="Jack" fullName="Jack Pierce" lastName="Pierce" role="Appellee"></party>
+ <party fullName="Regional Administrative Court" lastName="Regional Administrative Court" role="Appellee"></party>
+ <party fullName="State Bar of Texas" lastName="State Bar of Texas" role="Appellee"></party>
+ <party fullName="State of Texas" lastName="State of Texas" role="Appellee"></party>
+ <party fullName="Supreme Court of Texas" lastName="Supreme Court of Texas" role="Appellee"></party>
+ <party fullName="Texas State Legislature" lastName="Texas State Legislature" role="Appellee"></party>
+ <party fullName="Union Security Insurance Company" lastName="Union Security Insurance Company" role="Appellee"></party>
+ <party firstName="John" fullName="John F. Warren" lastName="Warren" middleName="F." role="Appellee"></party>
+</extension>
+<titleInfo>
+ <title>Darlene Amrhein v. La Madeleine, Incorporated, et al</title>
+ <partNumber>13-10670</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-13-10670/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">13-10670;13-10670</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Fifth Circuit</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Gregg Abbott</displayForm>
+ <namePart type="family">Abbott</namePart>
+ <namePart type="given">Gregg</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Ted Akin</displayForm>
+ <namePart type="family">Akin</namePart>
+ <namePart type="given">Ted</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Darlene C. Amrhein</displayForm>
+ <namePart type="family">Amrhein</namePart>
+ <namePart type="given">Darlene</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Andres Andrade</displayForm>
+ <namePart type="family">Andrade</namePart>
+ <namePart type="given">Andres</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Hope Andrade</displayForm>
+ <namePart type="family">Andrade</namePart>
+ <namePart type="given">Hope</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>D&apos;Metria Benson</displayForm>
+ <namePart type="family">Benson</namePart>
+ <namePart type="given">D&apos;Metria</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Baliff Christenson</displayForm>
+ <namePart type="family">Christenson</namePart>
+ <namePart type="given">Baliff</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Clarkson</displayForm>
+ <namePart type="family">Clarkson</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Brett Cornwell</displayForm>
+ <namePart type="family">Cornwell</namePart>
+ <namePart type="given">Brett</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>County Court at Law Fifth District of Texas</displayForm>
+ <namePart type="family">County Court at Law Fifth District of Texas</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Dallas County</displayForm>
+ <namePart type="family">Dallas County</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Dallas Texas Courts &amp; Judges</displayForm>
+ <namePart type="family">Dallas Texas Courts &amp; Judges</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Jerry Fazio</displayForm>
+ <namePart type="family">Fazio</namePart>
+ <namePart type="given">Jerry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>La Madeleine, Incorporated</displayForm>
+ <namePart type="family">La Madeleine, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Sally Montgomery</displayForm>
+ <namePart type="family">Montgomery</namePart>
+ <namePart type="given">Sally</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>John Ovard</displayForm>
+ <namePart type="family">Ovard</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Owen &amp; Fazio, P.C. Law Firm</displayForm>
+ <namePart type="family">Owen &amp; Fazio, P.C. Law Firm</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Rick Perry</displayForm>
+ <namePart type="family">Perry</namePart>
+ <namePart type="given">Rick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Jack Pierce</displayForm>
+ <namePart type="family">Pierce</namePart>
+ <namePart type="given">Jack</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Regional Administrative Court</displayForm>
+ <namePart type="family">Regional Administrative Court</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>State Bar of Texas</displayForm>
+ <namePart type="family">State Bar of Texas</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>State of Texas</displayForm>
+ <namePart type="family">State of Texas</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Supreme Court of Texas</displayForm>
+ <namePart type="family">Supreme Court of Texas</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Texas State Legislature</displayForm>
+ <namePart type="family">Texas State Legislature</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Union Security Insurance Company</displayForm>
+ <namePart type="family">Union Security Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>John F. Warren</displayForm>
+ <namePart type="family">Warren</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca5-13-10670</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca5</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtSortOrder>1050</courtSortOrder>
+ <caseNumber>13-10670</caseNumber>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Gregg" fullName="Gregg Abbott" lastName="Abbott" role="Appellee"></party>
+ <party firstName="Ted" fullName="Ted Akin" lastName="Akin" role="Appellee"></party>
+ <party firstName="Darlene" fullName="Darlene C. Amrhein" lastName="Amrhein" middleName="C." role="Appellant"></party>
+ <party firstName="Andres" fullName="Andres Andrade" lastName="Andrade" role="Appellee"></party>
+ <party firstName="Hope" fullName="Hope Andrade" lastName="Andrade" role="Appellee"></party>
+ <party firstName="D&apos;Metria" fullName="D&apos;Metria Benson" lastName="Benson" role="Appellee"></party>
+ <party firstName="Baliff" fullName="Baliff Christenson" lastName="Christenson" role="Appellee"></party>
+ <party firstName="Robert" fullName="Robert Clarkson" lastName="Clarkson" role="Appellee"></party>
+ <party firstName="Brett" fullName="Brett Cornwell" lastName="Cornwell" role="Appellee"></party>
+ <party fullName="County Court at Law Fifth District of Texas" lastName="County Court at Law Fifth District of Texas" role="Appellee"></party>
+ <party fullName="Dallas County" lastName="Dallas County" role="Appellee"></party>
+ <party fullName="Dallas Texas Courts &amp; Judges" lastName="Dallas Texas Courts &amp; Judges" role="Appellee"></party>
+ <party firstName="Jerry" fullName="Jerry Fazio" lastName="Fazio" role="Appellee"></party>
+ <party fullName="La Madeleine, Incorporated" lastName="La Madeleine, Incorporated" role="Appellee"></party>
+ <party firstName="Sally" fullName="Sally Montgomery" lastName="Montgomery" role="Appellee"></party>
+ <party firstName="John" fullName="John Ovard" lastName="Ovard" role="Appellee"></party>
+ <party fullName="Owen &amp; Fazio, P.C. Law Firm" lastName="Owen &amp; Fazio, P.C. Law Firm" role="Appellee"></party>
+ <party firstName="Rick" fullName="Rick Perry" lastName="Perry" role="Appellee"></party>
+ <party firstName="Jack" fullName="Jack Pierce" lastName="Pierce" role="Appellee"></party>
+ <party fullName="Regional Administrative Court" lastName="Regional Administrative Court" role="Appellee"></party>
+ <party fullName="State Bar of Texas" lastName="State Bar of Texas" role="Appellee"></party>
+ <party fullName="State of Texas" lastName="State of Texas" role="Appellee"></party>
+ <party fullName="Supreme Court of Texas" lastName="Supreme Court of Texas" role="Appellee"></party>
+ <party fullName="Texas State Legislature" lastName="Texas State Legislature" role="Appellee"></party>
+ <party fullName="Union Security Insurance Company" lastName="Union Security Insurance Company" role="Appellee"></party>
+ <party firstName="John" fullName="John F. Warren" lastName="Warren" middleName="F." role="Appellee"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca5-13-10670-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-13-10670/USCOURTS-ca5-13-10670-0/mods.xml">
+ <titleInfo>
+  <title>Darlene Amrhein v. La Madeleine, Incorporated, et al</title>
+  <subTitle>UNPUBLISHED OPINION FILED. [13-10670 Affirmed ] Judge: TMR , Judge: JLD , Judge: LHS. Mandate pull date is 01/26/2015; denying motion recuse judge from panel filed by Appellant Ms. Darlene C. Amrhein [7782691-2]; denying motion for reconsideration filed by Appellant Ms. Darlene C. Amrhein [7568964-2] [13-10670]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-13-10670/pdf/USCOURTS-ca5-13-10670-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b79f8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-13-10670/USCOURTS-ca5-13-10670-0</identifier>
+ <identifier type="former granule identifier">ca5-13-10670_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-13-10670/USCOURTS-ca5-13-10670-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-13-10670/pdf/USCOURTS-ca5-13-10670-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 13-10670; Darlene Amrhein v. La Madeleine, Incorporated, et al; </searchTitle>
+  <courtName>United States Court of Appeals for the Fifth Circuit</courtName>
+  <accessId>USCOURTS-ca5-13-10670-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>UNPUBLISHED OPINION FILED. [13-10670 Affirmed ] Judge: TMR , Judge: JLD , Judge: LHS. Mandate pull date is 01/26/2015; denying motion recuse judge from panel filed by Appellant Ms. Darlene C. Amrhein [7782691-2]; denying motion for reconsideration filed by Appellant Ms. Darlene C. Amrhein [7568964-2] [13-10670]</docketText>
+</extension>
+</relatedItem>
+</mods>

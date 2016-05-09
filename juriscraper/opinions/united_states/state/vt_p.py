@@ -4,6 +4,13 @@ Court Short Name: VT
 Author: Brian W. Carver
 Date created: 18 Aug 2013
 Reviewer: Mike Lissner
+
+If there are errors with the site, you can contact:
+
+ Monica Bombard
+ (802) 828-4784
+
+She's very responsive.
 """
 
 from datetime import datetime

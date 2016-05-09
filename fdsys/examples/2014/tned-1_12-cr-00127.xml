@@ -1,0 +1,342 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c33149">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Tennessee</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_12-cr-00127</identifier>
+<identifier type="local">P0b002ee186c33149</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-tned-1_12-cr-00127</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-tned-1_12-cr-00127</accessId>
+ <courtType>District</courtType>
+ <courtCode>tned</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Tennessee</courtState>
+ <courtSortOrder>2471</courtSortOrder>
+ <caseNumber>1:12-cr-00127</caseNumber>
+ <caseOffice>Chattanooga</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Carlos" fullName="Carlos Fallins" lastName="Fallins" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Fallins</title>
+ <partNumber>1:12-cr-00127</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_12-cr-00127/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cr-00127;12-127</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Tennessee</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Chattanooga</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Carlos Fallins</displayForm>
+ <namePart type="family">Fallins</namePart>
+ <namePart type="given">Carlos</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-tned-1_12-cr-00127</accessId>
+ <courtType>District</courtType>
+ <courtCode>tned</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Tennessee</courtState>
+ <courtSortOrder>2471</courtSortOrder>
+ <caseNumber>1:12-cr-00127</caseNumber>
+ <caseOffice>Chattanooga</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Carlos" fullName="Carlos Fallins" lastName="Fallins" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Tennessee</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-1_12-cr-00127-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Fallins</title>
+  <subTitle>ORDER granting 2 Motion for Writ of Habeas Corpus ad prosequendum as to Carlos Fallins (1). Signed by Magistrate Judge Susan K Lee on 10/9/2012. (SAC, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-tned-1_12-cr-00127-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4e8ac</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-0</identifier>
+ <identifier type="former granule identifier">tned-1_12-cr-00127_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_12-cr-00127/pdf/USCOURTS-tned-1_12-cr-00127-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00127; USA v. Fallins; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-1_12-cr-00127-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-10-09</dateIssued>
+  <docketText>ORDER granting 2 Motion for Writ of Habeas Corpus ad prosequendum as to Carlos Fallins (1). Signed by Magistrate Judge Susan K Lee on 10/9/2012. (SAC, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-1_12-cr-00127-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Fallins</title>
+  <subTitle>REPORT AND RECOMMENDATIONS re Competency as to Carlos Fallins Signed by Magistrate Judge Susan K Lee on 3/19/13. (GRE, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-tned-1_12-cr-00127-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4e8ab</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-1</identifier>
+ <identifier type="former granule identifier">tned-1_12-cr-00127_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_12-cr-00127/pdf/USCOURTS-tned-1_12-cr-00127-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00127; USA v. Fallins; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-1_12-cr-00127-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-03-19</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS re Competency as to Carlos Fallins Signed by Magistrate Judge Susan K Lee on 3/19/13. (GRE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-1_12-cr-00127-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Fallins</title>
+  <subTitle>ORDER adopting Report and Recommendations re 21 Report and Recommendations as to Carlos Fallins (1). Signed by District Judge Curtis L Collier on 4/9/2013. (DJH, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-tned-1_12-cr-00127-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4e992</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-2</identifier>
+ <identifier type="former granule identifier">tned-1_12-cr-00127_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_12-cr-00127/pdf/USCOURTS-tned-1_12-cr-00127-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00127; USA v. Fallins; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-1_12-cr-00127-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-04-09</dateIssued>
+  <docketText>ORDER adopting Report and Recommendations re 21 Report and Recommendations as to Carlos Fallins (1). Signed by District Judge Curtis L Collier on 4/9/2013. (DJH, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-1_12-cr-00127-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Fallins</title>
+  <subTitle>ORDER granting 39 Motion to Continue Competency Hearing as to Carlos Fallins (1). Signed by Magistrate Judge Susan K Lee on 9/25/13. (GRE, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-tned-1_12-cr-00127-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4e98f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-3</identifier>
+ <identifier type="former granule identifier">tned-1_12-cr-00127_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_12-cr-00127/pdf/USCOURTS-tned-1_12-cr-00127-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00127; USA v. Fallins; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-1_12-cr-00127-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-09-25</dateIssued>
+  <docketText>ORDER granting 39 Motion to Continue Competency Hearing as to Carlos Fallins (1). Signed by Magistrate Judge Susan K Lee on 9/25/13. (GRE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-1_12-cr-00127-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Fallins</title>
+  <subTitle>REPORT AND RECOMMENDATIONS re Competency as to Carlos Fallins Signed by Magistrate Judge Susan K Lee on 10/4/13. (GRE, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-tned-1_12-cr-00127-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4e8aa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-4</identifier>
+ <identifier type="former granule identifier">tned-1_12-cr-00127_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_12-cr-00127/pdf/USCOURTS-tned-1_12-cr-00127-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00127; USA v. Fallins; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-1_12-cr-00127-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-10-04</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS re Competency as to Carlos Fallins Signed by Magistrate Judge Susan K Lee on 10/4/13. (GRE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-1_12-cr-00127-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Fallins</title>
+  <subTitle>ORDER adopting Report and Recommendations re 42 Report and Recommendations as to Carlos Fallins (1). Signed by District Judge Curtis L Collier on 10/9/2013. (DJH, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-tned-1_12-cr-00127-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4e990</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-5</identifier>
+ <identifier type="former granule identifier">tned-1_12-cr-00127_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_12-cr-00127/pdf/USCOURTS-tned-1_12-cr-00127-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00127; USA v. Fallins; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-1_12-cr-00127-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-10-09</dateIssued>
+  <docketText>ORDER adopting Report and Recommendations re 42 Report and Recommendations as to Carlos Fallins (1). Signed by District Judge Curtis L Collier on 10/9/2013. (DJH, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-1_12-cr-00127-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Fallins</title>
+  <subTitle>REPORT AND RECOMMENDATIONS on Plea of Guilty as to Carlos Fallins Signed by Magistrate Judge Susan K Lee on 10/16/13. (GRE, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-tned-1_12-cr-00127-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4e8a9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-6</identifier>
+ <identifier type="former granule identifier">tned-1_12-cr-00127_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_12-cr-00127/pdf/USCOURTS-tned-1_12-cr-00127-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00127; USA v. Fallins; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-1_12-cr-00127-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-10-17</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS on Plea of Guilty as to Carlos Fallins Signed by Magistrate Judge Susan K Lee on 10/16/13. (GRE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-1_12-cr-00127-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Fallins</title>
+  <subTitle>ORDER adopting Report and Recommendations re 46 Report and Recommendations on Plea of Guilty as to Carlos Fallins (1). Sentencing is scheduled for 1/23/14 @ 9:00. Signed by District Judge Curtis L Collier on 1/3/14. (KFB, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-tned-1_12-cr-00127-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4e991</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-7</identifier>
+ <identifier type="former granule identifier">tned-1_12-cr-00127_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_12-cr-00127/USCOURTS-tned-1_12-cr-00127-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_12-cr-00127/pdf/USCOURTS-tned-1_12-cr-00127-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00127; USA v. Fallins; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-1_12-cr-00127-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>ORDER adopting Report and Recommendations re 46 Report and Recommendations on Plea of Guilty as to Carlos Fallins (1). Sentencing is scheduled for 1/23/14 @ 9:00. Signed by District Judge Curtis L Collier on 1/3/14. (KFB, )</docketText>
+</extension>
+</relatedItem>
+</mods>

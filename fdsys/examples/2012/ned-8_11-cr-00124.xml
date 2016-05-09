@@ -1,0 +1,258 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b7d38">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00124</identifier>
+<identifier type="local">P0b002ee1817b7d38</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_11-cr-00124</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cr-00124</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cr-00124</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Kevin" fullName="Kevin L. McGhee" lastName="McGhee" middleName="L." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. McGhee</title>
+ <partNumber>8:11-cr-00124</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00124/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:11-cr-00124;11-124</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Kevin L. McGhee</displayForm>
+ <namePart type="family">McGhee</namePart>
+ <namePart type="given">Kevin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cr-00124</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cr-00124</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Kevin" fullName="Kevin L. McGhee" lastName="McGhee" middleName="L." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00124-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00124/USCOURTS-ned-8_11-cr-00124-0/mods.xml">
+ <titleInfo>
+  <title>USA v. McGhee</title>
+  <subTitle>FINDINGS AND RECOMMENDATION that MOTION to Suppress Search and Statement20 be granted as to defendant Kevin L. McGhee. Ordered by Magistrate Judge Thomas D. Thalken. (TRL)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00124-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d1f57</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00124/USCOURTS-ned-8_11-cr-00124-0</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00124_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00124/USCOURTS-ned-8_11-cr-00124-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00124/pdf/USCOURTS-ned-8_11-cr-00124-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00124; USA v. McGhee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00124-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-07-27</dateIssued>
+  <docketText>FINDINGS AND RECOMMENDATION that MOTION to Suppress Search and Statement20 be granted as to defendant Kevin L. McGhee. Ordered by Magistrate Judge Thomas D. Thalken. (TRL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00124-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00124/USCOURTS-ned-8_11-cr-00124-1/mods.xml">
+ <titleInfo>
+  <title>USA v. McGhee</title>
+  <subTitle>ORDER - The plaintiff&apos;s Motion to Extend 32 is granted; plaintiff shall have until August 24, 2011, to submit its objections and brief in support thereof to the findings and recommendation of the magistrate judge as to Kevin L. McGhee (1). Ordered by Senior Judge Lyle E. Strom. (AOA)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00124-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d1f58</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00124/USCOURTS-ned-8_11-cr-00124-1</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00124_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00124/USCOURTS-ned-8_11-cr-00124-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00124/pdf/USCOURTS-ned-8_11-cr-00124-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00124; USA v. McGhee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00124-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-08-11</dateIssued>
+  <docketText>ORDER - The plaintiff&apos;s Motion to Extend 32 is granted; plaintiff shall have until August 24, 2011, to submit its objections and brief in support thereof to the findings and recommendation of the magistrate judge as to Kevin L. McGhee (1). Ordered by Senior Judge Lyle E. Strom. (AOA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00124-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00124/USCOURTS-ned-8_11-cr-00124-2/mods.xml">
+ <titleInfo>
+  <title>USA v. McGhee</title>
+  <subTitle>ORDER overruling 36 Objection to Findings and Recommendation as to Kevin L. McGhee (1); granting 20 Motion to Suppress as to Kevin L. McGhee (1); approving and adopting 31 Findings and Recommendations as to Kevin L. McGhee (1). Trial of this matter is scheduled for November 29, 2011, at 9 a.m. Additional time between September 29, 2011, and November 29, 2011, shall be deemed excludable under the requirement of the speedy trial act. Ordered by Senior Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00124-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d1ef8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00124/USCOURTS-ned-8_11-cr-00124-2</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00124_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00124/USCOURTS-ned-8_11-cr-00124-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00124/pdf/USCOURTS-ned-8_11-cr-00124-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00124; USA v. McGhee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00124-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-09-29</dateIssued>
+  <docketText>ORDER overruling 36 Objection to Findings and Recommendation as to Kevin L. McGhee (1); granting 20 Motion to Suppress as to Kevin L. McGhee (1); approving and adopting 31 Findings and Recommendations as to Kevin L. McGhee (1). Trial of this matter is scheduled for November 29, 2011, at 9 a.m. Additional time between September 29, 2011, and November 29, 2011, shall be deemed excludable under the requirement of the speedy trial act. Ordered by Senior Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00124-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00124/USCOURTS-ned-8_11-cr-00124-3/mods.xml">
+ <titleInfo>
+  <title>USA v. McGhee</title>
+  <subTitle>ORDER granting 40 Plaintiff&apos;s Motion to Dismiss Criminal Case as to Kevin L. McGhee (1). The indictment is dismissed without prejudice. Ordered by Senior Judge Lyle E. Strom. (JSF)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00124-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d1ef6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00124/USCOURTS-ned-8_11-cr-00124-3</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00124_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00124/USCOURTS-ned-8_11-cr-00124-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00124/pdf/USCOURTS-ned-8_11-cr-00124-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00124; USA v. McGhee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00124-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-11-22</dateIssued>
+  <docketText>ORDER granting 40 Plaintiff&apos;s Motion to Dismiss Criminal Case as to Kevin L. McGhee (1). The indictment is dismissed without prejudice. Ordered by Senior Judge Lyle E. Strom. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00124-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00124/USCOURTS-ned-8_11-cr-00124-4/mods.xml">
+ <titleInfo>
+  <title>USA v. McGhee</title>
+  <subTitle>ORDER to Withdraw Exhibits or to Show Cause Why Exhibits Should Not be Destroyed as to defendant Kevin L. McGhee. Ordered by Senior Judge Lyle E. Strom. (MLF, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00124-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d1ef7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00124/USCOURTS-ned-8_11-cr-00124-4</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00124_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00124/USCOURTS-ned-8_11-cr-00124-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00124/pdf/USCOURTS-ned-8_11-cr-00124-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00124; USA v. McGhee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00124-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-01-11</dateIssued>
+  <docketText>ORDER to Withdraw Exhibits or to Show Cause Why Exhibits Should Not be Destroyed as to defendant Kevin L. McGhee. Ordered by Senior Judge Lyle E. Strom. (MLF, )</docketText>
+</extension>
+</relatedItem>
+</mods>

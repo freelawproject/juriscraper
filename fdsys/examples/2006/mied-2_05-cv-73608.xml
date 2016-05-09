@@ -1,0 +1,269 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18195d305">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-19</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-73608</identifier>
+<identifier type="local">P0b002ee18195d305</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-19</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_05-cv-73608</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_05-cv-73608</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:05-cv-73608</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Wayne" fullName="Wayne Groat" lastName="Groat" role="Defendant"></party>
+ <party firstName="George" fullName="George Patrick Merlino" lastName="Merlino" middleName="Patrick" role="Plaintiff"></party>
+ <party fullName="Michigan Department of Corrections" lastName="Michigan Department of Corrections" role="Defendant"></party>
+ <party fullName="Michigan Parole Board" lastName="Michigan Parole Board" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Owens" lastName="Owens" role="Defendant"></party>
+ <party firstName="Melissa" fullName="Melissa Redmond" lastName="Redmond" role="Defendant"></party>
+ <party firstName="John" fullName="John J. Remillet" lastName="Remillet" middleName="J." role="Defendant"></party>
+ <party firstName="John" fullName="John Rubitschun" lastName="Rubitschun" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Wilson" lastName="Wilson" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Merlino v. Michigan Department of Corrections et al</title>
+ <partNumber>2:05-cv-73608</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-73608/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:05-cv-73608;05-73608</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Wayne Groat</displayForm>
+ <namePart type="family">Groat</namePart>
+ <namePart type="given">Wayne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>George Patrick Merlino</displayForm>
+ <namePart type="family">Merlino</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Michigan Department of Corrections</displayForm>
+ <namePart type="family">Michigan Department of Corrections</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michigan Parole Board</displayForm>
+ <namePart type="family">Michigan Parole Board</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Owens</displayForm>
+ <namePart type="family">Owens</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Melissa Redmond</displayForm>
+ <namePart type="family">Redmond</namePart>
+ <namePart type="given">Melissa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John J. Remillet</displayForm>
+ <namePart type="family">Remillet</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Rubitschun</displayForm>
+ <namePart type="family">Rubitschun</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Wilson</displayForm>
+ <namePart type="family">Wilson</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_05-cv-73608</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:05-cv-73608</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Wayne" fullName="Wayne Groat" lastName="Groat" role="Defendant"></party>
+ <party firstName="George" fullName="George Patrick Merlino" lastName="Merlino" middleName="Patrick" role="Plaintiff"></party>
+ <party fullName="Michigan Department of Corrections" lastName="Michigan Department of Corrections" role="Defendant"></party>
+ <party fullName="Michigan Parole Board" lastName="Michigan Parole Board" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Owens" lastName="Owens" role="Defendant"></party>
+ <party firstName="Melissa" fullName="Melissa Redmond" lastName="Redmond" role="Defendant"></party>
+ <party firstName="John" fullName="John J. Remillet" lastName="Remillet" middleName="J." role="Defendant"></party>
+ <party firstName="John" fullName="John Rubitschun" lastName="Rubitschun" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Wilson" lastName="Wilson" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_05-cv-73608-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-73608/USCOURTS-mied-2_05-cv-73608-0/mods.xml">
+ <titleInfo>
+  <title>Merlino v. Michigan Department of Corrections et al</title>
+  <subTitle>ORDER DISMISSING CASE Signed by Honorable Patrick J Duggan. (MOre, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_05-cv-73608-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a702d1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-73608/USCOURTS-mied-2_05-cv-73608-0</identifier>
+ <identifier type="former granule identifier">mied-2_05-cv-73608_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-73608/USCOURTS-mied-2_05-cv-73608-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-73608/pdf/USCOURTS-mied-2_05-cv-73608-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-73608; Merlino v. Michigan Department of Corrections et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_05-cv-73608-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-11-18</dateIssued>
+  <docketText>ORDER DISMISSING CASE Signed by Honorable Patrick J Duggan. (MOre, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_05-cv-73608-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-73608/USCOURTS-mied-2_05-cv-73608-1/mods.xml">
+ <titleInfo>
+  <title>Merlino v. Michigan Department of Corrections et al</title>
+  <subTitle>ORDER denying 4 Motion for Reconsideration, denying 4 Motion for New Trial- Signed by Honorable Patrick J Duggan. (MOre, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_05-cv-73608-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a702d0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-73608/USCOURTS-mied-2_05-cv-73608-1</identifier>
+ <identifier type="former granule identifier">mied-2_05-cv-73608_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-73608/USCOURTS-mied-2_05-cv-73608-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-73608/pdf/USCOURTS-mied-2_05-cv-73608-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-73608; Merlino v. Michigan Department of Corrections et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_05-cv-73608-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-01-24</dateIssued>
+  <docketText>ORDER denying 4 Motion for Reconsideration, denying 4 Motion for New Trial- Signed by Honorable Patrick J Duggan. (MOre, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_05-cv-73608-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-73608/USCOURTS-mied-2_05-cv-73608-2/mods.xml">
+ <titleInfo>
+  <title>Merlino v. Michigan Department of Corrections et al</title>
+  <subTitle>ORDER granting 7 Motion for Certificate of Appealability- Signed by Honorable Patrick J Duggan. (MOre, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_05-cv-73608-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a702d2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-73608/USCOURTS-mied-2_05-cv-73608-2</identifier>
+ <identifier type="former granule identifier">mied-2_05-cv-73608_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-73608/USCOURTS-mied-2_05-cv-73608-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-73608/pdf/USCOURTS-mied-2_05-cv-73608-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-73608; Merlino v. Michigan Department of Corrections et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_05-cv-73608-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-01-25</dateIssued>
+  <docketText>ORDER granting 7 Motion for Certificate of Appealability- Signed by Honorable Patrick J Duggan. (MOre, )</docketText>
+</extension>
+</relatedItem>
+</mods>

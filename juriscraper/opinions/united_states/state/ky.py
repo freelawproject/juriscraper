@@ -7,19 +7,30 @@ History:
     2014-12-15: Updated to fetch 100 results instead of 30. For reasons unknown
                 this returns more recent results, while a smaller value leaves
                 out some of the most recent items.
+    2016-03-16: Restructured by arderyp to pre-process all data at donwload time
+                to work around resources whose case names cannot be fetched to
+                to access restrictions.
 Notes:
-    This scraper is unique. Kentucky does not provide case names in the search
-    results pages, making them almost useless. They have a separate interface
-    though that allows a lookup by case year and number, which *does* provide
+    This scraper is unique. Kentucky does not provide case names in the primary
+    search portal's result page, making them almost useless. They have a secondary
+    search portal that allows a lookup by case year and number, which *does* provide
     the case name (and lots of other information). Note that it only provides
     this information for supreme court cases, so extending this to do kyctapp
     won't be possible.
 
-    Our process is therefore:
-      1. Get anything we can from the search results.
-      1. For extra meta data, query system number two and get back the case
-         name.
-      1. Merge it all.
+    Primary Search Portal:      http://162.114.92.72/dtsearch.asp
+    Secondary Search Portal:    http://162.114.92.78/dockets/SearchbyCaseNumber.htm
+
+    Our two step process is as follows:
+      1. Get the pdf url, case date, and docket number from the Primary Search Portal
+      2. If the above data is valid, use publication year and docket number
+         to fetch case name from Secondary Search Portal
+
+    Unlike other scrapers, all of the metadata above is gathered at download time,
+    saved on the local object, and merely echoed back in by the standard getters.
+    This design allows us to avoid issues with cases that have restricted access
+    in the Secondary Search Portal (example: year=2015, docket=000574).  These
+    restricted resources will be skipped.
 
     Also fun, they use IP addresses instead of DNS and hide them behind HTML
     frames hosted by real domains.
@@ -31,21 +42,25 @@ Notes:
     You can contact support@dtsearch.com with questions about the search
     interface. Best of luck.
 """
-from datetime import datetime
-
-import certifi
 
 import re
+import certifi
 import requests
 from lxml import html
 from requests.exceptions import HTTPError, ConnectionError, Timeout
+
 from juriscraper.AbstractSite import logger
-from juriscraper.DeferringList import DeferringList
-from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
+    CASE_NAMES = []
+    CASE_DATES = []
+    DOWNLOAD_URLS = []
+    DOCKET_NUMBERS = []
+
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -56,133 +71,139 @@ class Site(OpinionSite):
             'cmd': 'search',
             'fuzziness': '0',
             'index': 'D:\\Inetpub\\wwwroot\\indices\\SupremeCourt_Index',
-            # This can be bumped as high as you dream to get back *massive*
-            # result sets.
-            'maxFiles': '100',
-            # This is a dtSearch trick that brings back all results.
-            'request': 'xfirstword',
-            # This provides things in newest-first order, but indeed shows the
-            # most recent N items.
-            'sort': 'Date'
+            'maxFiles': '100',              # Fetch 100 results
+            'request': 'xfirstword',        # dtSearch trick to return all results
+            'sort': 'Date'                  # Order by newest first
         }
         self.method = 'POST'
-        self.docket_number_regex = re.compile('(?P<year>\d{4})-(?P<court>[SC]{2})-(?P<docket_num>\d+)')
+        self.docket_number_regex = re.compile('(?P<year>\d{4})-(?P<court>[SC]{2})-(?P<number>\d+)')
         self.hrefs_contain = 'Opinions'
 
-    def _get_download_urls(self):
-        path = "//a[@href[contains(., '{m}')]]".format(m=self.hrefs_contain)
-        elems = filter(self._has_valid_docket_number, self.html.xpath(path))
-        return [e.xpath('./@href')[0] for e in elems]
+    def _download(self, request_dict={}):
+        html = super(Site, self)._download(request_dict)
+        self._build_data_lists_from_html(html)
+        return html
 
-    def _get_case_names(self):
-        def fetcher(elem):
-            """This reaches out to a secondary system and scrapes the correct
-             info.
-             """
-            if self.method == 'LOCAL':
-                return "No case names fetched during tests."
-            else:
-                ip_addresses = ['162.114.92.72', '162.114.92.78']
-                for ip_address in ip_addresses:
-                    last_item = ip_addresses.index(ip_address) == len(ip_addresses) - 1
-                    url = 'http://%s/dockets/SearchCaseDetail.asp' % ip_address
-                    anchor_text = html.tostring(elem, method='text', encoding='unicode')
-                    m = self.docket_number_regex.search(anchor_text)
-
-                    try:
-                        r = requests.post(
-                            url,
-                            headers={'User-Agent': 'Juriscraper'},
-                            timeout=5,
-                            verify=certifi.where(),
-                            data={
-                                'txtyear': m.group('year'),
-                                'txtcasenumber': m.group('docket_num').strip('0'),
-                                'cmdnamesearh': 'Search',
-                            },
-                        )
-
-                        # Throw an error if a bad status code is returned,
-                        # otherwise, break the loop so we don't try more ip
-                        # addresses than necessary.
-                        r.raise_for_status()
-                        break
-                    except HTTPError, e:
-                        logger.info("404 error connecting to: {ip}".format(
-                            ip=ip_address,
-                        ))
-                        if e.response.status_code == 404 and not last_item:
-                            continue
+    def _build_data_lists_from_html(self, html):
+        # Search second column cells for valid opinions
+        data_cell_path = '//table/tr/td[2]/font'
+        for cell in html.xpath(data_cell_path):
+            # Cell must contain a link
+            if cell.xpath('a'):
+                link_href = cell.xpath('a/@href')[0].strip()
+                link_text = cell.xpath('a/text()')[0].strip()
+                cell_text = cell.xpath('text()')
+                date = self._parse_date_from_cell_text(cell_text)
+                # Cell must contain a parse-able date
+                if date:
+                    docket_match = self.docket_number_regex.search(link_text)
+                    # Cell must contain a docket number conforming to expected format
+                    if docket_match:
+                        if self.method == 'LOCAL':
+                            # Don't fetch names when running tests
+                            name = 'No case names fetched during tests.'
                         else:
-                            raise e
-                    except (ConnectionError, Timeout), e:
-                        logger.info("Timeout/Connection error connecting to: {ip}".format(
-                            ip=ip_address,
-                        ))
-                        if not last_item:
-                            continue
-                        else:
-                            raise e
+                            # Fetch case name from external portal search (see doc string at top for details)
+                            name = self._fetch_case_name(docket_match.group('year'), docket_match.group('number'))
+                        if name:
+                            docket_number = '%s %s %s' % (
+                                docket_match.group('year'),
+                                docket_match.group('court'),
+                                docket_match.group('number'),
+                            )
+                            self.CASE_NAMES.append(name)
+                            self.CASE_DATES.append(date)
+                            self.DOCKET_NUMBERS.append(docket_number)
+                            self.DOWNLOAD_URLS.append(link_href)
 
-                # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
-                if r.encoding == 'ISO-8859-1':
-                    r.encoding = 'cp1252'
+    def _parse_date_from_cell_text(self, cell_text):
+        date = False
+        for text in cell_text:
+            try:
+                date = convert_date_string(text.strip())
+                break
+            except ValueError:
+                pass
+        return date
 
-                # Grab the content
-                text = self._clean_text(r.text)
-                html_tree = html.fromstring(text)
+    def _fetch_case_name(self, year, number):
+        """Fetch case name for a given docket number + publication year pair.
 
-                # And finally, we parse out the good stuff.
-                parties_path = "//tr[descendant::text()[contains(., 'Appell')]]//td[3]//text()"
-                case_name_parts = []
-                for s in html_tree.xpath(parties_path):
-                    if s.strip():
-                        case_name_parts.append(titlecase(s.strip().lower()))
-                    if len(case_name_parts) == 2:
-                        break
-                return ' v. '.join(case_name_parts)
+        Some resources show 'Public Access Restricted' messages and do not
+        provide parseable case name information.  These will be skipped by
+        our system by returning False below.  The only other approach would
+        be to parse the case name from the raw PDF text itself.
+        """
 
-        # Get the docket numbers to use for queries.
-        path = "//a[@href[contains(., '{m}')]]".format(m=self.hrefs_contain)
-        elements = filter(self._has_valid_docket_number, self.html.xpath(path))
-        return DeferringList(seed=elements, fetcher=fetcher)
+        ip_addresses = ['162.114.92.72', '162.114.92.78']
+        for ip_address in ip_addresses:
+            last_ip = (ip_address == ip_addresses[-1])
+            url = 'http://%s/dockets/SearchCaseDetail.asp' % ip_address
 
-    def _get_docket_numbers(self):
-        path = "//a[@href[contains(., '{m}')]]".format(
-            m=self.hrefs_contain)
-        elements = filter(self._has_valid_docket_number, self.html.xpath(path))
-        return map(self._return_docket_number_from_str, elements)
+            try:
+                r = requests.post(
+                    url,
+                    headers={'User-Agent': 'Juriscraper'},
+                    timeout=5,
+                    verify=certifi.where(),
+                    data={
+                        'txtyear': year,
+                        'txtcasenumber': number,
+                        'cmdnamesearh': 'Search',
+                    },
+                )
 
-    def _has_valid_docket_number(self, e):
-        text = html.tostring(e, method='text', encoding='unicode')
-        if self.docket_number_regex.search(text):
-            return True
+                # Throw an error if a bad status code is returned,
+                # otherwise, break the loop so we don't try more ip
+                # addresses than necessary.
+                r.raise_for_status()
+                break
+            except HTTPError, e:
+                logger.info('404 error connecting to: %s' % ip_address)
+                if e.response.status_code == 404 and not last_ip:
+                    continue
+                else:
+                    raise e
+            except (ConnectionError, Timeout), e:
+                logger.info('Timeout/Connection error connecting to: %s' % ip_address)
+                if not last_ip:
+                    continue
+                else:
+                    raise e
+
+        # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
+        if r.encoding == 'ISO-8859-1':
+            r.encoding = 'cp1252'
+
+        # Grab the content
+        page_text = self._clean_text(r.text)
+        html_tree = html.fromstring(page_text)
+
+        # And finally, we parse out the good stuff.
+        parties_path = "//tr[descendant::text()[contains(., 'Appell')]]//td[3]//text()"
+        case_name_parts = []
+        for text in html_tree.xpath(parties_path):
+            text = text.strip()
+            if text:
+                case_name_parts.append(titlecase(text.lower()))
+            if len(case_name_parts) == 2:
+                break
+        if case_name_parts:
+            return ' v. '.join(case_name_parts)
         else:
             return False
 
-    def _return_docket_number_from_str(self, e):
-        s = html.tostring(e, method='text', encoding='unicode')
-        m = self.docket_number_regex.search(s)
-        return '{year} {court} {docket_num}'.format(
-            year=m.group('year'),
-            court=m.group('court'),
-            docket_num=m.group('docket_num')
-        )
+    def _get_download_urls(self):
+        return self.DOWNLOAD_URLS
+
+    def _get_case_names(self):
+        return self.CASE_NAMES
+
+    def _get_docket_numbers(self):
+        return self.DOCKET_NUMBERS
 
     def _get_case_dates(self):
-        path = "//tr[descendant::a[@href[contains(., '{m}')]]]/td[2]".format(
-            m=self.hrefs_contain)
-        elements = filter(self._has_valid_docket_number, self.html.xpath(path))
-        dates = []
-        for e in elements:
-            for s in e.xpath('.//text()'):
-                s = s.strip()
-                try:
-                    dates.append(datetime.strptime(s, '%m/%d/%Y').date())
-                except ValueError:
-                    pass
-        return dates
+        return self.CASE_DATES
 
     def _get_precedential_statuses(self):
-        # noinspection PyUnresolvedReferences
-        return ['Unknown'] * len(self.case_names)
+        return ['Unknown'] * len(self.CASE_NAMES)

@@ -1,0 +1,196 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1813cfbbf">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_06-cv-03490</identifier>
+<identifier type="local">P0b002ee1813cfbbf</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_06-cv-03490</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_06-cv-03490</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:06-cv-03490</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="WAYNE" fullName="WAYNE HACKNEY" lastName="HACKNEY" role="Petitioner"></party>
+ <party firstName="ROBERT" fullName="ROBERT SHANNON" lastName="SHANNON" role="Respondent"></party>
+ <party fullName="THE ATTORNEY GENERAL OF THE STATE OF PENNSYLVANIA" lastName="THE ATTORNEY GENERAL OF THE STATE OF PENNSYLVANIA" role="Respondent"></party>
+ <party fullName="THE DISTRICT ATTORNEY OF THE COUNTY OF PHILADELPHIA" lastName="THE DISTRICT ATTORNEY OF THE COUNTY OF PHILADELPHIA" role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>HACKNEY v. SHANNON et al</title>
+ <partNumber>2:06-cv-03490</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_06-cv-03490/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:06-cv-03490;06-3490</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>WAYNE HACKNEY</displayForm>
+ <namePart type="family">HACKNEY</namePart>
+ <namePart type="given">WAYNE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>ROBERT SHANNON</displayForm>
+ <namePart type="family">SHANNON</namePart>
+ <namePart type="given">ROBERT</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>THE ATTORNEY GENERAL OF THE STATE OF PENNSYLVANIA</displayForm>
+ <namePart type="family">THE ATTORNEY GENERAL OF THE STATE OF PENNSYLVANIA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>THE DISTRICT ATTORNEY OF THE COUNTY OF PHILADELPHIA</displayForm>
+ <namePart type="family">THE DISTRICT ATTORNEY OF THE COUNTY OF PHILADELPHIA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_06-cv-03490</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:06-cv-03490</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="WAYNE" fullName="WAYNE HACKNEY" lastName="HACKNEY" role="Petitioner"></party>
+ <party firstName="ROBERT" fullName="ROBERT SHANNON" lastName="SHANNON" role="Respondent"></party>
+ <party fullName="THE ATTORNEY GENERAL OF THE STATE OF PENNSYLVANIA" lastName="THE ATTORNEY GENERAL OF THE STATE OF PENNSYLVANIA" role="Respondent"></party>
+ <party fullName="THE DISTRICT ATTORNEY OF THE COUNTY OF PHILADELPHIA" lastName="THE DISTRICT ATTORNEY OF THE COUNTY OF PHILADELPHIA" role="Respondent"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_06-cv-03490-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_06-cv-03490/USCOURTS-paed-2_06-cv-03490-0/mods.xml">
+ <titleInfo>
+  <title>HACKNEY v. SHANNON et al</title>
+  <subTitle>MAGISTRATE JUDGE PETER B. SCUDERI&apos;S REPORT AND RECOMMENDATIONS THAT THE PETITION FOR WRIT OF HABEAS CORPUS BE DISMISSED. THERE HAS BEEN NO SUBSTANTIAL SHOWING OF THE DENIAL OF A CONSSTITUTIONAL RIGHT REQUIRING THE ISSUANCE OF A CERTIFICATE OF APPEALABILITY. OBJECTIONS TO R&amp;R DUE BY 1/26/2007. SIGNED BY JUDGE PETER B. SCUDERI ON 1/4/07. (Attachments: # (1) Proposed Order) 1/5/07 ENTERED AND COPIES MAILED, E-MAILED.(pr, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_06-cv-03490-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814bc61c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_06-cv-03490/USCOURTS-paed-2_06-cv-03490-0</identifier>
+ <identifier type="former granule identifier">paed-2_06-cv-03490_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_06-cv-03490/USCOURTS-paed-2_06-cv-03490-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_06-cv-03490/pdf/USCOURTS-paed-2_06-cv-03490-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-03490; HACKNEY v. SHANNON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_06-cv-03490-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-05</dateIssued>
+  <docketText>MAGISTRATE JUDGE PETER B. SCUDERI&apos;S REPORT AND RECOMMENDATIONS THAT THE PETITION FOR WRIT OF HABEAS CORPUS BE DISMISSED. THERE HAS BEEN NO SUBSTANTIAL SHOWING OF THE DENIAL OF A CONSSTITUTIONAL RIGHT REQUIRING THE ISSUANCE OF A CERTIFICATE OF APPEALABILITY. OBJECTIONS TO R&amp;R DUE BY 1/26/2007. SIGNED BY JUDGE PETER B. SCUDERI ON 1/4/07. (Attachments: # (1) Proposed Order) 1/5/07 ENTERED AND COPIES MAILED, E-MAILED.(pr, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_06-cv-03490-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_06-cv-03490/USCOURTS-paed-2_06-cv-03490-1/mods.xml">
+ <titleInfo>
+  <title>HACKNEY v. SHANNON et al</title>
+  <subTitle>ORDER THAT UPON CAREFUL AND INDEPENDENT CONSIDERATION OF THE PLEADINGS AND THE RECORD HEREIN, AND AFTER REVIEW OF THE REPORT AND RECOMMENDATION OF U.S. MAGISTRATE JUDGE PETER B. SCUDERI, AND HAVING RECEIVED NO OBJECTIONS THERETO, IT IS ORDERED THAT THE REPORT AND RECOMMENDATION IS APPROVED AND ADOPTED. THE PETITION FOR WRIT OF HABEAS CORPUS PURSUANT TO 28 USC, SECTION 2254, IS DISMISSED. THERE IS NO PROBABLE CAUSE TO ISSUE A CERTIFICATE OF APPEALABILITY. . SIGNED BY JUDGE BRUCE W. KAUFFMAN ON 1/29/07. 1/30/07 ENTERED AND COPIES MAILED, E-MAILED.(pr, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_06-cv-03490-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814bc61d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_06-cv-03490/USCOURTS-paed-2_06-cv-03490-1</identifier>
+ <identifier type="former granule identifier">paed-2_06-cv-03490_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_06-cv-03490/USCOURTS-paed-2_06-cv-03490-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_06-cv-03490/pdf/USCOURTS-paed-2_06-cv-03490-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-03490; HACKNEY v. SHANNON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_06-cv-03490-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-30</dateIssued>
+  <docketText>ORDER THAT UPON CAREFUL AND INDEPENDENT CONSIDERATION OF THE PLEADINGS AND THE RECORD HEREIN, AND AFTER REVIEW OF THE REPORT AND RECOMMENDATION OF U.S. MAGISTRATE JUDGE PETER B. SCUDERI, AND HAVING RECEIVED NO OBJECTIONS THERETO, IT IS ORDERED THAT THE REPORT AND RECOMMENDATION IS APPROVED AND ADOPTED. THE PETITION FOR WRIT OF HABEAS CORPUS PURSUANT TO 28 USC, SECTION 2254, IS DISMISSED. THERE IS NO PROBABLE CAUSE TO ISSUE A CERTIFICATE OF APPEALABILITY. . SIGNED BY JUDGE BRUCE W. KAUFFMAN ON 1/29/07. 1/30/07 ENTERED AND COPIES MAILED, E-MAILED.(pr, )</docketText>
+</extension>
+</relatedItem>
+</mods>

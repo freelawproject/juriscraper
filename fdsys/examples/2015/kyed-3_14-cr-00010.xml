@@ -1,0 +1,257 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18d84b620">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Kentucky</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-09-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-09-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-3_14-cr-00010</identifier>
+<identifier type="local">P0b002ee18d84b620</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-09-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-09-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-kyed-3_14-cr-00010</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-kyed-3_14-cr-00010</accessId>
+ <courtType>District</courtType>
+ <courtCode>kyed</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Kentucky</courtState>
+ <courtSortOrder>2201</courtSortOrder>
+ <caseNumber>3:14-cr-00010</caseNumber>
+ <caseOffice>Frankfort</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Mark" fullName="Mark Cornell" lastName="Cornell" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael A. Hicks" lastName="Hicks" middleName="A." role="Defendant"></party>
+ <party firstName="Henry" fullName="Henry Irving Ramer" lastName="Ramer" middleName="Irving" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="John" fullName="John G. Westine Jr." generation="Jr." lastName="Westine" middleName="G." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Westine et al</title>
+ <partNumber>3:14-cr-00010</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-3_14-cr-00010/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:14-cr-00010;14-010</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Kentucky</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Frankfort</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Mark Cornell</displayForm>
+ <namePart type="family">Cornell</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael A. Hicks</displayForm>
+ <namePart type="family">Hicks</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Henry Irving Ramer</displayForm>
+ <namePart type="family">Ramer</namePart>
+ <namePart type="given">Henry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John G. Westine Jr.</displayForm>
+ <namePart type="family">Westine</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-kyed-3_14-cr-00010</accessId>
+ <courtType>District</courtType>
+ <courtCode>kyed</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Kentucky</courtState>
+ <courtSortOrder>2201</courtSortOrder>
+ <caseNumber>3:14-cr-00010</caseNumber>
+ <caseOffice>Frankfort</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Mark" fullName="Mark Cornell" lastName="Cornell" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael A. Hicks" lastName="Hicks" middleName="A." role="Defendant"></party>
+ <party firstName="Henry" fullName="Henry Irving Ramer" lastName="Ramer" middleName="Irving" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="John" fullName="John G. Westine Jr." generation="Jr." lastName="Westine" middleName="G." role="Defendant"></party>
+ <state>Kentucky</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-kyed-3_14-cr-00010-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-3_14-cr-00010/USCOURTS-kyed-3_14-cr-00010-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Westine et al</title>
+  <subTitle>MEMORANDUM OPINION AND ORDER as to John G. Westine, Jr.: 1. Westine&apos;s motion to reconsider the Magistrate Judge&apos;s ruling as it pertains to a Bill of Particulars [R. 76] is DENIED; 2. Westine&apos;s motions to reconsider the Magistrate Judge&apos;s rulings regarding his 1992 conviction in the Southern District of Ohio and his denial of bail [R. 77; R. 100] are DENIED; 3. Westine&apos;s motion to reconsider the Magistrate Judge&apos;s ruling regarding his access to Westlaw [R. 80] is DENIED; 4. Westine&apos;s motion to reconsider the Magistrate Judge&apos;s ruling denying him an evidentiary hearing [R. 99] is DENIED; 5. Westine&apos;s motion to dismiss the indictment [R. 30] is DENIED; 6. Westine&apos;s motion to dismiss counts 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 16, 17, 21, 22, 24, 25, 26, and 27 [R. 88] is DENIED; 7. Westine motion to dismiss the forfeiture allegations [R. 89] is DENIED; 8. Westine&apos;s motion to dismiss Count 31 for reasons related to the sufficiency of the evidence [R. 90] is DENIED; and, 9. The Clerk of Court is ORDERED to file the attached copy of the Sixth Circuit&apos;s Order, In re John G. Westine, Jr., No. 02-3717 (6th Cir. Sept. 17, 2002), as an exhibit to this Order. Signed by Judge Gregory F. VanTatenhove on 12/10/2014. (Attachments: # (1) Sixth Circuit Order, In re John G. Westine, Jr., No. 02-3717) (AKR)cc: COR,USP, papercopy to Westine via US Mail</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-3_14-cr-00010/pdf/USCOURTS-kyed-3_14-cr-00010-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d868cb8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-3_14-cr-00010/USCOURTS-kyed-3_14-cr-00010-0</identifier>
+ <identifier type="former granule identifier">kyed-3_14-cr-00010_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-3_14-cr-00010/USCOURTS-kyed-3_14-cr-00010-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-3_14-cr-00010/pdf/USCOURTS-kyed-3_14-cr-00010-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:14-cr-00010; USA v. Westine et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Kentucky</courtName>
+  <state>Kentucky</state>
+  <accessId>USCOURTS-kyed-3_14-cr-00010-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-12-10</dateIssued>
+  <docketText>MEMORANDUM OPINION AND ORDER as to John G. Westine, Jr.: 1. Westine&apos;s motion to reconsider the Magistrate Judge&apos;s ruling as it pertains to a Bill of Particulars [R. 76] is DENIED; 2. Westine&apos;s motions to reconsider the Magistrate Judge&apos;s rulings regarding his 1992 conviction in the Southern District of Ohio and his denial of bail [R. 77; R. 100] are DENIED; 3. Westine&apos;s motion to reconsider the Magistrate Judge&apos;s ruling regarding his access to Westlaw [R. 80] is DENIED; 4. Westine&apos;s motion to reconsider the Magistrate Judge&apos;s ruling denying him an evidentiary hearing [R. 99] is DENIED; 5. Westine&apos;s motion to dismiss the indictment [R. 30] is DENIED; 6. Westine&apos;s motion to dismiss counts 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 16, 17, 21, 22, 24, 25, 26, and 27 [R. 88] is DENIED; 7. Westine motion to dismiss the forfeiture allegations [R. 89] is DENIED; 8. Westine&apos;s motion to dismiss Count 31 for reasons related to the sufficiency of the evidence [R. 90] is DENIED; and, 9. The Clerk of Court is ORDERED to file the attached copy of the Sixth Circuit&apos;s Order, In re John G. Westine, Jr., No. 02-3717 (6th Cir. Sept. 17, 2002), as an exhibit to this Order. Signed by Judge Gregory F. VanTatenhove on 12/10/2014. (Attachments: # (1) Sixth Circuit Order, In re John G. Westine, Jr., No. 02-3717) (AKR)cc: COR,USP, papercopy to Westine via US Mail</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-kyed-3_14-cr-00010-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-3_14-cr-00010/USCOURTS-kyed-3_14-cr-00010-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Westine et al</title>
+  <subTitle>MEMORANDUM OPINION AND ORDER as to John G. Westine, Jr: Having fully considered the issue, the Court hereby concludes that the Government may generally refer to Westine&apos;s 1992 fraud conviction, 1990 tax fraud conviction, and his 1985 injunction surrounding an oil scheme as background evidence. Furthermore, the Government will be able to admit evidence of Westine&apos;s 1992 fraud conviction for those purposes approved of herein, although the specific contours or boundaries of the Government&apos;s proof are questions best left to be decided in the context of trial. Finally, if Westine does decide to testify and it should be determined that evidence of his past convictions is needed for impeachment, then the Government will be permitted to do so. The Government shall submit recommended, appropriate limiting instructions for the jury. It is so ORDERED. Signed by Judge Gregory F. VanTatenhove on 1/2/2015. (AKR)cc: COR,USP</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-3_14-cr-00010/pdf/USCOURTS-kyed-3_14-cr-00010-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d868cb6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-3_14-cr-00010/USCOURTS-kyed-3_14-cr-00010-1</identifier>
+ <identifier type="former granule identifier">kyed-3_14-cr-00010_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-3_14-cr-00010/USCOURTS-kyed-3_14-cr-00010-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-3_14-cr-00010/pdf/USCOURTS-kyed-3_14-cr-00010-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:14-cr-00010; USA v. Westine et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Kentucky</courtName>
+  <state>Kentucky</state>
+  <accessId>USCOURTS-kyed-3_14-cr-00010-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-02</dateIssued>
+  <docketText>MEMORANDUM OPINION AND ORDER as to John G. Westine, Jr: Having fully considered the issue, the Court hereby concludes that the Government may generally refer to Westine&apos;s 1992 fraud conviction, 1990 tax fraud conviction, and his 1985 injunction surrounding an oil scheme as background evidence. Furthermore, the Government will be able to admit evidence of Westine&apos;s 1992 fraud conviction for those purposes approved of herein, although the specific contours or boundaries of the Government&apos;s proof are questions best left to be decided in the context of trial. Finally, if Westine does decide to testify and it should be determined that evidence of his past convictions is needed for impeachment, then the Government will be permitted to do so. The Government shall submit recommended, appropriate limiting instructions for the jury. It is so ORDERED. Signed by Judge Gregory F. VanTatenhove on 1/2/2015. (AKR)cc: COR,USP</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-kyed-3_14-cr-00010-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-3_14-cr-00010/USCOURTS-kyed-3_14-cr-00010-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Westine et al</title>
+  <subTitle>MEMORANDUM OPINION AND ORDER as to Henry Irving Ramer: Ramer&apos;s motion 274 will be GRANTED in PART and DENIED in PART. It is so ORDERED. Signed by Judge Gregory F. VanTatenhove on 5/4/2015. (AKR)cc: COR,USP</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-3_14-cr-00010/pdf/USCOURTS-kyed-3_14-cr-00010-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d868cb5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-3_14-cr-00010/USCOURTS-kyed-3_14-cr-00010-2</identifier>
+ <identifier type="former granule identifier">kyed-3_14-cr-00010_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-3_14-cr-00010/USCOURTS-kyed-3_14-cr-00010-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-3_14-cr-00010/pdf/USCOURTS-kyed-3_14-cr-00010-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:14-cr-00010; USA v. Westine et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Kentucky</courtName>
+  <state>Kentucky</state>
+  <accessId>USCOURTS-kyed-3_14-cr-00010-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-05-04</dateIssued>
+  <docketText>MEMORANDUM OPINION AND ORDER as to Henry Irving Ramer: Ramer&apos;s motion 274 will be GRANTED in PART and DENIED in PART. It is so ORDERED. Signed by Judge Gregory F. VanTatenhove on 5/4/2015. (AKR)cc: COR,USP</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-kyed-3_14-cr-00010-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-3_14-cr-00010/USCOURTS-kyed-3_14-cr-00010-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Westine et al</title>
+  <subTitle>MEMORANDUM OPINION AND ORDER as to John G. Westine, Jr: Westine&apos;s motions at docket entries (R. 202, 206, 213, 260, 261, 285, 325, and 326 are DENIED. Furthermore, the Clerk of Court is hereby Ordered to UNSEAL Westine&apos;s ex parte motions [R. 200; R. 201] and the Government is given one week to RESPOND to Westine&apos;s allegations. Signed by Judge Gregory F. VanTatenhove on 9/11/2015. (AKR)cc: COR,USP</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-09-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-3_14-cr-00010/pdf/USCOURTS-kyed-3_14-cr-00010-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d868cb7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-3_14-cr-00010/USCOURTS-kyed-3_14-cr-00010-3</identifier>
+ <identifier type="former granule identifier">kyed-3_14-cr-00010_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-3_14-cr-00010/USCOURTS-kyed-3_14-cr-00010-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-3_14-cr-00010/pdf/USCOURTS-kyed-3_14-cr-00010-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:14-cr-00010; USA v. Westine et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Kentucky</courtName>
+  <state>Kentucky</state>
+  <accessId>USCOURTS-kyed-3_14-cr-00010-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-09-11</dateIssued>
+  <docketText>MEMORANDUM OPINION AND ORDER as to John G. Westine, Jr: Westine&apos;s motions at docket entries (R. 202, 206, 213, 260, 261, 285, 325, and 326 are DENIED. Furthermore, the Clerk of Court is hereby Ordered to UNSEAL Westine&apos;s ex parte motions [R. 200; R. 201] and the Government is given one week to RESPOND to Westine&apos;s allegations. Signed by Judge Gregory F. VanTatenhove on 9/11/2015. (AKR)cc: COR,USP</docketText>
+</extension>
+</relatedItem>
+</mods>

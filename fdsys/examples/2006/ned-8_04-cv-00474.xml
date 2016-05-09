@@ -1,0 +1,292 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817c70fe">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00474</identifier>
+<identifier type="local">P0b002ee1817c70fe</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_04-cv-00474</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_04-cv-00474</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:04-cv-00474</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1441 Petition for Removal- Breach of Contract</cause>
+ <party fullName="M&amp;M Communications" lastName="M&amp;M Communications" role="Plaintiff"></party>
+ <party fullName="Telephone Management" lastName="Telephone Management" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>M&amp;M Communications v. Telephone Management</title>
+ <partNumber>8:04-cv-00474</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00474/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:04-cv-00474;04-474</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>M&amp;M Communications</displayForm>
+ <namePart type="family">M&amp;M Communications</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Telephone Management</displayForm>
+ <namePart type="family">Telephone Management</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_04-cv-00474</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:04-cv-00474</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1441 Petition for Removal- Breach of Contract</cause>
+ <party fullName="M&amp;M Communications" lastName="M&amp;M Communications" role="Plaintiff"></party>
+ <party fullName="Telephone Management" lastName="Telephone Management" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00474-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00474/USCOURTS-ned-8_04-cv-00474-0/mods.xml">
+ <titleInfo>
+  <title>M&amp;M Communications v. Telephone Management</title>
+  <subTitle>MEMORANDUM AND ORDER-Parties are directedTMC is orde to promptly negotiate a mutally acceptable confidentiality agreement; upon negotiation of a mutually acceptable confidentiality agreement, red to respond to M&amp;M&apos;s written discovery requests within thirty days; upon negotiation of a mutually acceptable confidentiality agreement, TMC is ordered to respond to M&amp;M&apos;s request for production of documents by making all documents and records available for inspection by M&amp;M at TMC&apos;s Portland, Oregon, offices; M&amp;M and TMC are both ordered to make their respective corporate designees available for deposition prior to August 15, 2005; TMC may not schedule the deposition of M&amp;M&apos;s corporate designee until TMC has complied with M&amp;M&apos;s discovery requests by providing answers to written discovery and M&amp;M has completed its inspection of TMC&apos;s records at TMC&apos;s Portland offices. Signed by Judge Lyle E. Strom on 5/2/2005. (MKR, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00474-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c8a78</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00474/USCOURTS-ned-8_04-cv-00474-0</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00474_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00474/USCOURTS-ned-8_04-cv-00474-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00474/pdf/USCOURTS-ned-8_04-cv-00474-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00474; M&amp;M Communications v. Telephone Management; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00474-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-05-02</dateIssued>
+  <docketText>MEMORANDUM AND ORDER-Parties are directedTMC is orde to promptly negotiate a mutally acceptable confidentiality agreement; upon negotiation of a mutually acceptable confidentiality agreement, red to respond to M&amp;M&apos;s written discovery requests within thirty days; upon negotiation of a mutually acceptable confidentiality agreement, TMC is ordered to respond to M&amp;M&apos;s request for production of documents by making all documents and records available for inspection by M&amp;M at TMC&apos;s Portland, Oregon, offices; M&amp;M and TMC are both ordered to make their respective corporate designees available for deposition prior to August 15, 2005; TMC may not schedule the deposition of M&amp;M&apos;s corporate designee until TMC has complied with M&amp;M&apos;s discovery requests by providing answers to written discovery and M&amp;M has completed its inspection of TMC&apos;s records at TMC&apos;s Portland offices. Signed by Judge Lyle E. Strom on 5/2/2005. (MKR, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00474-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00474/USCOURTS-ned-8_04-cv-00474-1/mods.xml">
+ <titleInfo>
+  <title>M&amp;M Communications v. Telephone Management</title>
+  <subTitle>ORDER granting motion for protective order 33 and adopting 39 stipulation and its attached Exhibit A. Signed by Judge Lyle E. Strom on 6/8/2005. (JDR)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-06-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00474-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c8a2f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00474/USCOURTS-ned-8_04-cv-00474-1</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00474_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00474/USCOURTS-ned-8_04-cv-00474-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00474/pdf/USCOURTS-ned-8_04-cv-00474-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00474; M&amp;M Communications v. Telephone Management; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00474-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-06-08</dateIssued>
+  <docketText>ORDER granting motion for protective order 33 and adopting 39 stipulation and its attached Exhibit A. Signed by Judge Lyle E. Strom on 6/8/2005. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00474-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00474/USCOURTS-ned-8_04-cv-00474-2/mods.xml">
+ <titleInfo>
+  <title>M&amp;M Communications v. Telephone Management</title>
+  <subTitle>ORDER withdrawing 49 Motion for Protective Order, granting 52 Motion to Withdraw Document. Signed by Judge Lyle E. Strom on 7/20/2005. (CJP)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-07-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00474-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c8a2e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00474/USCOURTS-ned-8_04-cv-00474-2</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00474_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00474/USCOURTS-ned-8_04-cv-00474-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00474/pdf/USCOURTS-ned-8_04-cv-00474-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00474; M&amp;M Communications v. Telephone Management; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00474-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-07-20</dateIssued>
+  <docketText>ORDER withdrawing 49 Motion for Protective Order, granting 52 Motion to Withdraw Document. Signed by Judge Lyle E. Strom on 7/20/2005. (CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00474-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00474/USCOURTS-ned-8_04-cv-00474-3/mods.xml">
+ <titleInfo>
+  <title>M&amp;M Communications v. Telephone Management</title>
+  <subTitle>ORDER granting 54 Stipulation to extend discovery deadline; discovery deadline is extended from 9/15/05 to 11/15/05; all other deadlines remain in full force and effect. Signed by Judge Lyle E. Strom on 7/21/2005. (CJP)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-07-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00474-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c8a77</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00474/USCOURTS-ned-8_04-cv-00474-3</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00474_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00474/USCOURTS-ned-8_04-cv-00474-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00474/pdf/USCOURTS-ned-8_04-cv-00474-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00474; M&amp;M Communications v. Telephone Management; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00474-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-07-21</dateIssued>
+  <docketText>ORDER granting 54 Stipulation to extend discovery deadline; discovery deadline is extended from 9/15/05 to 11/15/05; all other deadlines remain in full force and effect. Signed by Judge Lyle E. Strom on 7/21/2005. (CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00474-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00474/USCOURTS-ned-8_04-cv-00474-4/mods.xml">
+ <titleInfo>
+  <title>M&amp;M Communications v. Telephone Management</title>
+  <subTitle>ORDER that the motion to withdraw as counsel 61 is granted; Robert M. Slovek and Kutak Rock LLP are deemed withdrawn as counsel for defendant Telephone Management Corporation. Attorney Robert M. Slovek terminated. Signed by Judge Lyle E. Strom on 12/23/2005. (MKR, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00474-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c8a75</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00474/USCOURTS-ned-8_04-cv-00474-4</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00474_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00474/USCOURTS-ned-8_04-cv-00474-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00474/pdf/USCOURTS-ned-8_04-cv-00474-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00474; M&amp;M Communications v. Telephone Management; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00474-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2005-12-23</dateIssued>
+  <docketText>ORDER that the motion to withdraw as counsel 61 is granted; Robert M. Slovek and Kutak Rock LLP are deemed withdrawn as counsel for defendant Telephone Management Corporation. Attorney Robert M. Slovek terminated. Signed by Judge Lyle E. Strom on 12/23/2005. (MKR, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00474-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00474/USCOURTS-ned-8_04-cv-00474-5/mods.xml">
+ <titleInfo>
+  <title>M&amp;M Communications v. Telephone Management</title>
+  <subTitle>ORDER granting 64 Stipulated Motion to Dismiss. This action is dismissed with prejudice, each party to pay their own fees and costs. Signed by Judge Lyle E. Strom on 1/31/2006. (JSF)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00474-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c8a76</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00474/USCOURTS-ned-8_04-cv-00474-5</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00474_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00474/USCOURTS-ned-8_04-cv-00474-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00474/pdf/USCOURTS-ned-8_04-cv-00474-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00474; M&amp;M Communications v. Telephone Management; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00474-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2006-01-31</dateIssued>
+  <docketText>ORDER granting 64 Stipulated Motion to Dismiss. This action is dismissed with prejudice, each party to pay their own fees and costs. Signed by Judge Lyle E. Strom on 1/31/2006. (JSF)</docketText>
+</extension>
+</relatedItem>
+</mods>

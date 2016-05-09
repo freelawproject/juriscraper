@@ -1,0 +1,225 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18128e69d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-19</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_04-cv-00377</identifier>
+<identifier type="local">P0b002ee18128e69d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-19</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-5_04-cv-00377</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_04-cv-00377</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:04-cv-00377</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000e Job Discrimination (Employment)</cause>
+ <party firstName="Earl" fullName="Earl Bond" lastName="Bond" role="Plaintiff"></party>
+ <party firstName="Stephen" fullName="Stephen L. Davis" lastName="Davis" middleName="L." role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael L. Dominguez" lastName="Dominguez" middleName="L." role="Defendant"></party>
+ <party firstName="Dennis" fullName="Dennis Haines" lastName="Haines" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael OHara" lastName="OHara" role="Defendant"></party>
+ <party firstName="James" fullName="James G. Roche" lastName="Roche" middleName="G." role="Defendant"></party>
+ <party fullName="United States Department of the Air Force" lastName="United States Department of the Air Force" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Bond v. Department of the Air Force et al</title>
+ <partNumber>5:04-cv-00377</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_04-cv-00377/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:04-cv-00377;04-377</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Macon</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Earl Bond</displayForm>
+ <namePart type="family">Bond</namePart>
+ <namePart type="given">Earl</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Stephen L. Davis</displayForm>
+ <namePart type="family">Davis</namePart>
+ <namePart type="given">Stephen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael L. Dominguez</displayForm>
+ <namePart type="family">Dominguez</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dennis Haines</displayForm>
+ <namePart type="family">Haines</namePart>
+ <namePart type="given">Dennis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael OHara</displayForm>
+ <namePart type="family">OHara</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James G. Roche</displayForm>
+ <namePart type="family">Roche</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States Department of the Air Force</displayForm>
+ <namePart type="family">United States Department of the Air Force</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_04-cv-00377</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:04-cv-00377</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000e Job Discrimination (Employment)</cause>
+ <party firstName="Earl" fullName="Earl Bond" lastName="Bond" role="Plaintiff"></party>
+ <party firstName="Stephen" fullName="Stephen L. Davis" lastName="Davis" middleName="L." role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael L. Dominguez" lastName="Dominguez" middleName="L." role="Defendant"></party>
+ <party firstName="Dennis" fullName="Dennis Haines" lastName="Haines" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael OHara" lastName="OHara" role="Defendant"></party>
+ <party firstName="James" fullName="James G. Roche" lastName="Roche" middleName="G." role="Defendant"></party>
+ <party fullName="United States Department of the Air Force" lastName="United States Department of the Air Force" role="Defendant"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_04-cv-00377-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_04-cv-00377/USCOURTS-gamd-5_04-cv-00377-0/mods.xml">
+ <titleInfo>
+  <title>Bond v. Department of the Air Force et al</title>
+  <subTitle>ORDER granting 16 Motion to Dismiss Party . Signed by Judge C. Ashley Royal on 8/25/05. (hrm, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_04-cv-00377-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1812b592e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_04-cv-00377/USCOURTS-gamd-5_04-cv-00377-0</identifier>
+ <identifier type="former granule identifier">gamd-5_04-cv-00377_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_04-cv-00377/USCOURTS-gamd-5_04-cv-00377-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_04-cv-00377/pdf/USCOURTS-gamd-5_04-cv-00377-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cv-00377; Bond v. Department of the Air Force et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_04-cv-00377-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-08-25</dateIssued>
+  <docketText>ORDER granting 16 Motion to Dismiss Party . Signed by Judge C. Ashley Royal on 8/25/05. (hrm, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_04-cv-00377-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_04-cv-00377/USCOURTS-gamd-5_04-cv-00377-1/mods.xml">
+ <titleInfo>
+  <title>Bond v. Department of the Air Force et al</title>
+  <subTitle>ORDER granting 24 Motion to Dismiss . Signed by Judge C. Ashley Royal on 1/9/06. (hrm, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_04-cv-00377-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1812b592f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_04-cv-00377/USCOURTS-gamd-5_04-cv-00377-1</identifier>
+ <identifier type="former granule identifier">gamd-5_04-cv-00377_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_04-cv-00377/USCOURTS-gamd-5_04-cv-00377-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_04-cv-00377/pdf/USCOURTS-gamd-5_04-cv-00377-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cv-00377; Bond v. Department of the Air Force et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_04-cv-00377-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-01-09</dateIssued>
+  <docketText>ORDER granting 24 Motion to Dismiss . Signed by Judge C. Ashley Royal on 1/9/06. (hrm, )</docketText>
+</extension>
+</relatedItem>
+</mods>

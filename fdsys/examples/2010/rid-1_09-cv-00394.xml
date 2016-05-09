@@ -1,0 +1,1420 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e8c4a3">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Rhode Island</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_09-cv-00394</identifier>
+<identifier type="local">P0b002ee180e8c4a3</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-rid-1_09-cv-00394</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-rid-1_09-cv-00394</accessId>
+ <courtType>District</courtType>
+ <courtCode>rid</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Rhode Island</courtState>
+ <courtSortOrder>2440</courtSortOrder>
+ <caseNumber>1:09-cv-00394</caseNumber>
+ <caseOffice>Providence</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>368</natureSuitCode>
+ <natureSuit>Asbestos Personal Injury - Prod.liab.</natureSuit>
+ <party fullName="A.O. Smith Corporation" lastName="A.O. Smith Corporation" role="Defendant"></party>
+ <party fullName="A.W. Chesterton Company" lastName="A.W. Chesterton Company" role="Defendant"></party>
+ <party fullName="A.Y. McDonald MFG., Co" lastName="A.Y. McDonald MFG., Co" role="Defendant"></party>
+ <party fullName="AAMCO Transmissions, Inc." lastName="AAMCO Transmissions, Inc." role="Defendant"></party>
+ <party fullName="Acgo Corp." lastName="Acgo Corp." role="Defendant"></party>
+ <party fullName="Alco Valves" lastName="Alco Valves" role="Defendant"></party>
+ <party fullName="Alfa Laval, Inc." lastName="Alfa Laval, Inc." role="Defendant"></party>
+ <party fullName="Allis Chalmers Product Liability Trust" lastName="Allis Chalmers Product Liability Trust" role="Defendant"></party>
+ <party fullName="American Biltrite Inc." lastName="American Biltrite Inc." role="Defendant"></party>
+ <party fullName="American Honda Motor Company Inc." lastName="American Honda Motor Company Inc." role="Defendant"></party>
+ <party fullName="American Standard, Inc. (alias)" lastName="American Standard, Inc. (alias)" role="Defendant"></party>
+ <party fullName="Armstrong International, Inc." lastName="Armstrong International, Inc." role="Defendant"></party>
+ <party fullName="Arvinmeritor, Inc." lastName="Arvinmeritor, Inc." role="Defendant"></party>
+ <party fullName="Aurora Pump Company" lastName="Aurora Pump Company" role="Defendant"></party>
+ <party fullName="Autocar, LLC" lastName="Autocar, LLC" role="Defendant"></party>
+ <party fullName="Bell &amp; Gossett Co." lastName="Bell &amp; Gossett Co." role="Defendant"></party>
+ <party fullName="Bendix Commercial Valve Systems" lastName="Bendix Commercial Valve Systems" role="Defendant"></party>
+ <party fullName="Bird, Inc." lastName="Bird, Inc." role="Defendant"></party>
+ <party fullName="Blackmer Pumps" lastName="Blackmer Pumps" role="Defendant"></party>
+ <party fullName="Bondex International, Inc." lastName="Bondex International, Inc." role="Defendant"></party>
+ <party fullName="Borg Warner Morse Tec Inc." lastName="Borg Warner Morse Tec Inc." role="Defendant"></party>
+ <party fullName="Bridgestone Firestone North American Tire, LLC" lastName="Bridgestone Firestone North American Tire, LLC" role="Defendant"></party>
+ <party fullName="Briggs &amp; Stratton Corp" lastName="Briggs &amp; Stratton Corp" role="Defendant"></party>
+ <party fullName="Buffalo Pumps Inc." lastName="Buffalo Pumps Inc." role="Defendant"></party>
+ <party fullName="Buhler Versatile, Inc." lastName="Buhler Versatile, Inc." role="Defendant"></party>
+ <party fullName="Burnham Corporation" lastName="Burnham Corporation" role="Defendant"></party>
+ <party fullName="Carlisle Corporation" lastName="Carlisle Corporation" role="Defendant"></party>
+ <party fullName="Carquest Corporation" lastName="Carquest Corporation" role="Defendant"></party>
+ <party fullName="Carrier Corporation" lastName="Carrier Corporation" role="Defendant"></party>
+ <party fullName="Case IH, LLC" lastName="Case IH, LLC" role="Defendant"></party>
+ <party fullName="Caterpillar, Inc" lastName="Caterpillar, Inc" role="Defendant"></party>
+ <party fullName="Certainteed Corporation" lastName="Certainteed Corporation" role="Defendant"></party>
+ <party fullName="Chrysler LLC" lastName="Chrysler LLC" role="Defendant"></party>
+ <party fullName="Cleaver-Brooks" lastName="Cleaver-Brooks" role="Defendant"></party>
+ <party firstName="Arletta" fullName="Arletta Cone" lastName="Cone" role="Plaintiff"></party>
+ <party fullName="Conwed Corporation" lastName="Conwed Corporation" role="Defendant"></party>
+ <party fullName="Crane Company" lastName="Crane Company" role="Defendant"></party>
+ <party fullName="Crown, Cork &amp; Seal Company" lastName="Crown, Cork &amp; Seal Company" role="Defendant"></party>
+ <party fullName="D.B. Riley Inc." lastName="D.B. Riley Inc." role="Defendant"></party>
+ <party fullName="DAP, Inc." lastName="DAP, Inc." role="Defendant"></party>
+ <party fullName="Daimler Trucks North America" lastName="Daimler Trucks North America" role="Defendant"></party>
+ <party fullName="Daimler-Chrysler Corp." lastName="Daimler-Chrysler Corp." role="Defendant"></party>
+ <party fullName="Dana Corporation" lastName="Dana Corporation" role="Defendant"></party>
+ <party fullName="Deere &amp; Company" lastName="Deere &amp; Company" role="Defendant"></party>
+ <party fullName="Detroit Diesel Corporation" lastName="Detroit Diesel Corporation" role="Defendant"></party>
+ <party fullName="Domco Products Texas L.P." lastName="Domco Products Texas L.P." role="Defendant"></party>
+ <party fullName="Doonan Trailer Corporation" lastName="Doonan Trailer Corporation" role="Defendant"></party>
+ <party fullName="Dorsey Trailers Inc." lastName="Dorsey Trailers Inc." role="Defendant"></party>
+ <party fullName="Dow Chemical" lastName="Dow Chemical" role="Defendant"></party>
+ <party fullName="ECR International, Inc." lastName="ECR International, Inc." role="Defendant"></party>
+ <party fullName="Eaton Corporation" lastName="Eaton Corporation" role="Defendant"></party>
+ <party fullName="Elliot Turbomachinery Co., Inc." lastName="Elliot Turbomachinery Co., Inc." role="Defendant"></party>
+ <party fullName="Fairbanks Morse Engine" lastName="Fairbanks Morse Engine" role="Defendant"></party>
+ <party fullName="Flowserve US, Inc." lastName="Flowserve US, Inc." role="Defendant"></party>
+ <party fullName="Ford Motor Company" lastName="Ford Motor Company" role="Defendant"></party>
+ <party fullName="Foster Wheeler Corp" lastName="Foster Wheeler Corp" role="Defendant"></party>
+ <party fullName="Freightliner, LLC" lastName="Freightliner, LLC" role="Defendant"></party>
+ <party fullName="Fruehauf Trailer Corporation" lastName="Fruehauf Trailer Corporation" role="Defendant"></party>
+ <party fullName="Gardner-Denver Inc." lastName="Gardner-Denver Inc." role="Defendant"></party>
+ <party fullName="Garlock Sealing Technologies LLS" lastName="Garlock Sealing Technologies LLS" role="Defendant"></party>
+ <party fullName="Gehl Company" lastName="Gehl Company" role="Defendant"></party>
+ <party fullName="General Electric Company" lastName="General Electric Company" role="Defendant"></party>
+ <party fullName="General Motors Corporation" lastName="General Motors Corporation" role="Defendant"></party>
+ <party fullName="Genuine Parts Company" lastName="Genuine Parts Company" role="Defendant"></party>
+ <party fullName="Georgia Pacific Corporation" lastName="Georgia Pacific Corporation" role="Defendant"></party>
+ <party fullName="Goodrich Corporation" lastName="Goodrich Corporation" role="Defendant"></party>
+ <party fullName="Goulds Pumps Inc." lastName="Goulds Pumps Inc." role="Defendant"></party>
+ <party fullName="H.B. Fuller Company" lastName="H.B. Fuller Company" role="Defendant"></party>
+ <party fullName="Harcos Chemicals" lastName="Harcos Chemicals" role="Defendant"></party>
+ <party fullName="Hercules Chemical Co., Inc." lastName="Hercules Chemical Co., Inc." role="Defendant"></party>
+ <party fullName="Hoffco/Comet Industries, Inc." lastName="Hoffco/Comet Industries, Inc." role="Defendant"></party>
+ <party fullName="Honeywell International, Inc" lastName="Honeywell International, Inc" role="Defendant"></party>
+ <party fullName="Hopeman Brothers, Inc." lastName="Hopeman Brothers, Inc." role="Defendant"></party>
+ <party fullName="IMO Industries, Inc." lastName="IMO Industries, Inc." role="Defendant"></party>
+ <party fullName="ITT Industries, Inc." lastName="ITT Industries, Inc." role="Defendant"></party>
+ <party fullName="Ingersoll-Rand Company" lastName="Ingersoll-Rand Company" role="Defendant"></party>
+ <party fullName="International Truck and Engine Corporation" lastName="International Truck and Engine Corporation" role="Defendant"></party>
+ <party fullName="Johnson Controls, Inc" lastName="Johnson Controls, Inc" role="Defendant"></party>
+ <party fullName="K&amp;N Engineering, Inc." lastName="K&amp;N Engineering, Inc." role="Defendant"></party>
+ <party fullName="Kaiser Gypsum Company, Inc." lastName="Kaiser Gypsum Company, Inc." role="Defendant"></party>
+ <party fullName="Kentile Floors, Inc." lastName="Kentile Floors, Inc." role="Defendant"></party>
+ <party fullName="Lennox Industries, Inc." lastName="Lennox Industries, Inc." role="Defendant"></party>
+ <party fullName="Leslie Controls, Inc." lastName="Leslie Controls, Inc." role="Defendant"></party>
+ <party fullName="Lipe-Rollway Corp." lastName="Lipe-Rollway Corp." role="Defendant"></party>
+ <party fullName="Mack Trucks, Inc" lastName="Mack Trucks, Inc" role="Defendant"></party>
+ <party fullName="Marmon Holdings, Inc." lastName="Marmon Holdings, Inc." role="Defendant"></party>
+ <party fullName="Metropolitan Life Insurance Company" lastName="Metropolitan Life Insurance Company" role="Defendant"></party>
+ <party fullName="Michelin North America, Inc." lastName="Michelin North America, Inc." role="Defendant"></party>
+ <party fullName="NACCO Industries, Inc." lastName="NACCO Industries, Inc." role="Defendant"></party>
+ <party fullName="Napa Auto Parts and as parent company to Rayloc" lastName="Napa Auto Parts and as parent company to Rayloc" role="Defendant"></party>
+ <party fullName="Navistar International Corporation" lastName="Navistar International Corporation" role="Defendant"></party>
+ <party fullName="New England Insulation" lastName="New England Insulation" role="Defendant"></party>
+ <party fullName="New Holland North America, Inc." lastName="New Holland North America, Inc." role="Defendant"></party>
+ <party fullName="Nissan North America, Inc." lastName="Nissan North America, Inc." role="Defendant"></party>
+ <party fullName="Northrop Grumman Space &amp; Mission Systems Corp." lastName="Northrop Grumman Space &amp; Mission Systems Corp." role="Defendant"></party>
+ <party fullName="PIC Contractors, Inc" lastName="PIC Contractors, Inc" role="Defendant"></party>
+ <party fullName="Paccar, Inc." lastName="Paccar, Inc." role="Defendant"></party>
+ <party fullName="Packard Motor Car Company" lastName="Packard Motor Car Company" role="Defendant"></party>
+ <party fullName="Packings &amp; Insulation Co." lastName="Packings &amp; Insulation Co." role="Defendant"></party>
+ <party fullName="Pep Boys - Manny, Moe &amp; Jack of Delaware Inc." lastName="Pep Boys - Manny, Moe &amp; Jack of Delaware Inc." role="Defendant"></party>
+ <party fullName="Pneumo Abex Corp" lastName="Pneumo Abex Corp" role="Defendant"></party>
+ <party fullName="R.P.M. International, Inc." lastName="R.P.M. International, Inc." role="Defendant"></party>
+ <party fullName="Robert Bosch LLC" lastName="Robert Bosch LLC" role="Defendant"></party>
+ <party fullName="SVI Corp." lastName="SVI Corp." role="Defendant"></party>
+ <party fullName="Standard Auto Parts Corp." lastName="Standard Auto Parts Corp." role="Defendant"></party>
+ <party fullName="Standard Motor Products, Inc." lastName="Standard Motor Products, Inc." role="Defendant"></party>
+ <party fullName="Standco Industries, Inc." lastName="Standco Industries, Inc." role="Defendant"></party>
+ <party fullName="Sterling Fluid Systems (USA) LLC" lastName="Sterling Fluid Systems (USA) LLC" role="Defendant"></party>
+ <party fullName="Sterling Truck Corp." lastName="Sterling Truck Corp." role="Defendant"></party>
+ <party fullName="TH Agriculture &amp; Nutritional LLC" lastName="TH Agriculture &amp; Nutritional LLC" role="Defendant"></party>
+ <party fullName="TRW Automotive Holdings Corp." lastName="TRW Automotive Holdings Corp." role="Defendant"></party>
+ <party fullName="Taco, Inc." lastName="Taco, Inc." role="Defendant"></party>
+ <party fullName="Tamms Industries, Inc." lastName="Tamms Industries, Inc." role="Defendant"></party>
+ <party fullName="Tenneco Automotive Operating Company, Inc." lastName="Tenneco Automotive Operating Company, Inc." role="Defendant"></party>
+ <party fullName="The B.F. Goodrich Corporation" lastName="The B.F. Goodrich Corporation" role="Defendant"></party>
+ <party fullName="The Falk Corporation" lastName="The Falk Corporation" role="Defendant"></party>
+ <party fullName="The Goodyear Tire &amp; Rubber Company" lastName="The Goodyear Tire &amp; Rubber Company" role="Defendant"></party>
+ <party fullName="The Nash Engineering Compnay" lastName="The Nash Engineering Compnay" role="Defendant"></party>
+ <party fullName="The Utica Boiler Co." lastName="The Utica Boiler Co." role="Defendant"></party>
+ <party fullName="Thompson Hayward Chemical Company" lastName="Thompson Hayward Chemical Company" role="Defendant"></party>
+ <party fullName="Timpte Industries, Inc." lastName="Timpte Industries, Inc." role="Defendant"></party>
+ <party fullName="Toyota Motor North America, Inc." lastName="Toyota Motor North America, Inc." role="Defendant"></party>
+ <party fullName="Toyota Motor Sales, U.S.A., Inc." lastName="Toyota Motor Sales, U.S.A., Inc." role="Defendant"></party>
+ <party fullName="Trailmobile Corporation" lastName="Trailmobile Corporation" role="Defendant"></party>
+ <party fullName="Transtar Industries, Inc." lastName="Transtar Industries, Inc." role="Defendant"></party>
+ <party fullName="Trinity Trailer Mfg., Inc." lastName="Trinity Trailer Mfg., Inc." role="Defendant"></party>
+ <party fullName="Tyco Fire Products, LP" lastName="Tyco Fire Products, LP" role="Defendant"></party>
+ <party fullName="Union Carbide Corporation" lastName="Union Carbide Corporation" role="Defendant"></party>
+ <party fullName="United Gilsonite Laboratories" lastName="United Gilsonite Laboratories" role="Defendant"></party>
+ <party fullName="United Technologies Corporation" lastName="United Technologies Corporation" role="Defendant"></party>
+ <party fullName="Viacom, Inc." lastName="Viacom, Inc." role="Defendant"></party>
+ <party fullName="Volvo Cars of North America, Inc." lastName="Volvo Cars of North America, Inc." role="Defendant"></party>
+ <party fullName="Volvo Trucks of North America, Inc." lastName="Volvo Trucks of North America, Inc." role="Defendant"></party>
+ <party fullName="Wabco Holdings Inc." lastName="Wabco Holdings Inc." role="Defendant"></party>
+ <party fullName="Wagner Brakes Products" lastName="Wagner Brakes Products" role="Defendant"></party>
+ <party fullName="Warren Pumps, Inc." lastName="Warren Pumps, Inc." role="Defendant"></party>
+ <party fullName="Weil McLain" lastName="Weil McLain" role="Defendant"></party>
+ <party fullName="Wilson Trailer Company" lastName="Wilson Trailer Company" role="Defendant"></party>
+ <party fullName="Witchita Clutch Co." lastName="Witchita Clutch Co." role="Defendant"></party>
+ <party fullName="York Co." lastName="York Co." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Cone v. Acgo Corp. et al</title>
+ <partNumber>1:09-cv-00394</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_09-cv-00394/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:09-cv-00394;09-394</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Rhode Island</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Providence</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>A.O. Smith Corporation</displayForm>
+ <namePart type="family">A.O. Smith Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>A.W. Chesterton Company</displayForm>
+ <namePart type="family">A.W. Chesterton Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>A.Y. McDonald MFG., Co</displayForm>
+ <namePart type="family">A.Y. McDonald MFG., Co</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>AAMCO Transmissions, Inc.</displayForm>
+ <namePart type="family">AAMCO Transmissions, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Acgo Corp.</displayForm>
+ <namePart type="family">Acgo Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alco Valves</displayForm>
+ <namePart type="family">Alco Valves</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alfa Laval, Inc.</displayForm>
+ <namePart type="family">Alfa Laval, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Allis Chalmers Product Liability Trust</displayForm>
+ <namePart type="family">Allis Chalmers Product Liability Trust</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>American Biltrite Inc.</displayForm>
+ <namePart type="family">American Biltrite Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>American Honda Motor Company Inc.</displayForm>
+ <namePart type="family">American Honda Motor Company Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>American Standard, Inc. (alias)</displayForm>
+ <namePart type="family">American Standard, Inc. (alias)</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Armstrong International, Inc.</displayForm>
+ <namePart type="family">Armstrong International, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Arvinmeritor, Inc.</displayForm>
+ <namePart type="family">Arvinmeritor, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Aurora Pump Company</displayForm>
+ <namePart type="family">Aurora Pump Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Autocar, LLC</displayForm>
+ <namePart type="family">Autocar, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bell &amp; Gossett Co.</displayForm>
+ <namePart type="family">Bell &amp; Gossett Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bendix Commercial Valve Systems</displayForm>
+ <namePart type="family">Bendix Commercial Valve Systems</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bird, Inc.</displayForm>
+ <namePart type="family">Bird, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Blackmer Pumps</displayForm>
+ <namePart type="family">Blackmer Pumps</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bondex International, Inc.</displayForm>
+ <namePart type="family">Bondex International, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Borg Warner Morse Tec Inc.</displayForm>
+ <namePart type="family">Borg Warner Morse Tec Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bridgestone Firestone North American Tire, LLC</displayForm>
+ <namePart type="family">Bridgestone Firestone North American Tire, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Briggs &amp; Stratton Corp</displayForm>
+ <namePart type="family">Briggs &amp; Stratton Corp</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Buffalo Pumps Inc.</displayForm>
+ <namePart type="family">Buffalo Pumps Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Buhler Versatile, Inc.</displayForm>
+ <namePart type="family">Buhler Versatile, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Burnham Corporation</displayForm>
+ <namePart type="family">Burnham Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Carlisle Corporation</displayForm>
+ <namePart type="family">Carlisle Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Carquest Corporation</displayForm>
+ <namePart type="family">Carquest Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Carrier Corporation</displayForm>
+ <namePart type="family">Carrier Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Case IH, LLC</displayForm>
+ <namePart type="family">Case IH, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Caterpillar, Inc</displayForm>
+ <namePart type="family">Caterpillar, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Certainteed Corporation</displayForm>
+ <namePart type="family">Certainteed Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chrysler LLC</displayForm>
+ <namePart type="family">Chrysler LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cleaver-Brooks</displayForm>
+ <namePart type="family">Cleaver-Brooks</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Arletta Cone</displayForm>
+ <namePart type="family">Cone</namePart>
+ <namePart type="given">Arletta</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Conwed Corporation</displayForm>
+ <namePart type="family">Conwed Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Crane Company</displayForm>
+ <namePart type="family">Crane Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Crown, Cork &amp; Seal Company</displayForm>
+ <namePart type="family">Crown, Cork &amp; Seal Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D.B. Riley Inc.</displayForm>
+ <namePart type="family">D.B. Riley Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DAP, Inc.</displayForm>
+ <namePart type="family">DAP, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daimler Trucks North America</displayForm>
+ <namePart type="family">Daimler Trucks North America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daimler-Chrysler Corp.</displayForm>
+ <namePart type="family">Daimler-Chrysler Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dana Corporation</displayForm>
+ <namePart type="family">Dana Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Deere &amp; Company</displayForm>
+ <namePart type="family">Deere &amp; Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Detroit Diesel Corporation</displayForm>
+ <namePart type="family">Detroit Diesel Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Domco Products Texas L.P.</displayForm>
+ <namePart type="family">Domco Products Texas L.P.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Doonan Trailer Corporation</displayForm>
+ <namePart type="family">Doonan Trailer Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dorsey Trailers Inc.</displayForm>
+ <namePart type="family">Dorsey Trailers Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dow Chemical</displayForm>
+ <namePart type="family">Dow Chemical</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ECR International, Inc.</displayForm>
+ <namePart type="family">ECR International, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Eaton Corporation</displayForm>
+ <namePart type="family">Eaton Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Elliot Turbomachinery Co., Inc.</displayForm>
+ <namePart type="family">Elliot Turbomachinery Co., Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Fairbanks Morse Engine</displayForm>
+ <namePart type="family">Fairbanks Morse Engine</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Flowserve US, Inc.</displayForm>
+ <namePart type="family">Flowserve US, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ford Motor Company</displayForm>
+ <namePart type="family">Ford Motor Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Foster Wheeler Corp</displayForm>
+ <namePart type="family">Foster Wheeler Corp</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Freightliner, LLC</displayForm>
+ <namePart type="family">Freightliner, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Fruehauf Trailer Corporation</displayForm>
+ <namePart type="family">Fruehauf Trailer Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gardner-Denver Inc.</displayForm>
+ <namePart type="family">Gardner-Denver Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Garlock Sealing Technologies LLS</displayForm>
+ <namePart type="family">Garlock Sealing Technologies LLS</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gehl Company</displayForm>
+ <namePart type="family">Gehl Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>General Electric Company</displayForm>
+ <namePart type="family">General Electric Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>General Motors Corporation</displayForm>
+ <namePart type="family">General Motors Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Genuine Parts Company</displayForm>
+ <namePart type="family">Genuine Parts Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Georgia Pacific Corporation</displayForm>
+ <namePart type="family">Georgia Pacific Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Goodrich Corporation</displayForm>
+ <namePart type="family">Goodrich Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Goulds Pumps Inc.</displayForm>
+ <namePart type="family">Goulds Pumps Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>H.B. Fuller Company</displayForm>
+ <namePart type="family">H.B. Fuller Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Harcos Chemicals</displayForm>
+ <namePart type="family">Harcos Chemicals</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hercules Chemical Co., Inc.</displayForm>
+ <namePart type="family">Hercules Chemical Co., Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hoffco/Comet Industries, Inc.</displayForm>
+ <namePart type="family">Hoffco/Comet Industries, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Honeywell International, Inc</displayForm>
+ <namePart type="family">Honeywell International, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hopeman Brothers, Inc.</displayForm>
+ <namePart type="family">Hopeman Brothers, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>IMO Industries, Inc.</displayForm>
+ <namePart type="family">IMO Industries, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ITT Industries, Inc.</displayForm>
+ <namePart type="family">ITT Industries, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ingersoll-Rand Company</displayForm>
+ <namePart type="family">Ingersoll-Rand Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>International Truck and Engine Corporation</displayForm>
+ <namePart type="family">International Truck and Engine Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Johnson Controls, Inc</displayForm>
+ <namePart type="family">Johnson Controls, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>K&amp;N Engineering, Inc.</displayForm>
+ <namePart type="family">K&amp;N Engineering, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kaiser Gypsum Company, Inc.</displayForm>
+ <namePart type="family">Kaiser Gypsum Company, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kentile Floors, Inc.</displayForm>
+ <namePart type="family">Kentile Floors, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lennox Industries, Inc.</displayForm>
+ <namePart type="family">Lennox Industries, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Leslie Controls, Inc.</displayForm>
+ <namePart type="family">Leslie Controls, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lipe-Rollway Corp.</displayForm>
+ <namePart type="family">Lipe-Rollway Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mack Trucks, Inc</displayForm>
+ <namePart type="family">Mack Trucks, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marmon Holdings, Inc.</displayForm>
+ <namePart type="family">Marmon Holdings, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Metropolitan Life Insurance Company</displayForm>
+ <namePart type="family">Metropolitan Life Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michelin North America, Inc.</displayForm>
+ <namePart type="family">Michelin North America, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>NACCO Industries, Inc.</displayForm>
+ <namePart type="family">NACCO Industries, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Napa Auto Parts and as parent company to Rayloc</displayForm>
+ <namePart type="family">Napa Auto Parts and as parent company to Rayloc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Navistar International Corporation</displayForm>
+ <namePart type="family">Navistar International Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>New England Insulation</displayForm>
+ <namePart type="family">New England Insulation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>New Holland North America, Inc.</displayForm>
+ <namePart type="family">New Holland North America, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nissan North America, Inc.</displayForm>
+ <namePart type="family">Nissan North America, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Northrop Grumman Space &amp; Mission Systems Corp.</displayForm>
+ <namePart type="family">Northrop Grumman Space &amp; Mission Systems Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PIC Contractors, Inc</displayForm>
+ <namePart type="family">PIC Contractors, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Paccar, Inc.</displayForm>
+ <namePart type="family">Paccar, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Packard Motor Car Company</displayForm>
+ <namePart type="family">Packard Motor Car Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Packings &amp; Insulation Co.</displayForm>
+ <namePart type="family">Packings &amp; Insulation Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pep Boys - Manny, Moe &amp; Jack of Delaware Inc.</displayForm>
+ <namePart type="family">Pep Boys - Manny, Moe &amp; Jack of Delaware Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pneumo Abex Corp</displayForm>
+ <namePart type="family">Pneumo Abex Corp</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>R.P.M. International, Inc.</displayForm>
+ <namePart type="family">R.P.M. International, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Bosch LLC</displayForm>
+ <namePart type="family">Robert Bosch LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SVI Corp.</displayForm>
+ <namePart type="family">SVI Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Standard Auto Parts Corp.</displayForm>
+ <namePart type="family">Standard Auto Parts Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Standard Motor Products, Inc.</displayForm>
+ <namePart type="family">Standard Motor Products, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Standco Industries, Inc.</displayForm>
+ <namePart type="family">Standco Industries, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sterling Fluid Systems (USA) LLC</displayForm>
+ <namePart type="family">Sterling Fluid Systems (USA) LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sterling Truck Corp.</displayForm>
+ <namePart type="family">Sterling Truck Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>TH Agriculture &amp; Nutritional LLC</displayForm>
+ <namePart type="family">TH Agriculture &amp; Nutritional LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>TRW Automotive Holdings Corp.</displayForm>
+ <namePart type="family">TRW Automotive Holdings Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Taco, Inc.</displayForm>
+ <namePart type="family">Taco, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tamms Industries, Inc.</displayForm>
+ <namePart type="family">Tamms Industries, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tenneco Automotive Operating Company, Inc.</displayForm>
+ <namePart type="family">Tenneco Automotive Operating Company, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The B.F. Goodrich Corporation</displayForm>
+ <namePart type="family">The B.F. Goodrich Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The Falk Corporation</displayForm>
+ <namePart type="family">The Falk Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The Goodyear Tire &amp; Rubber Company</displayForm>
+ <namePart type="family">The Goodyear Tire &amp; Rubber Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The Nash Engineering Compnay</displayForm>
+ <namePart type="family">The Nash Engineering Compnay</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The Utica Boiler Co.</displayForm>
+ <namePart type="family">The Utica Boiler Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thompson Hayward Chemical Company</displayForm>
+ <namePart type="family">Thompson Hayward Chemical Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Timpte Industries, Inc.</displayForm>
+ <namePart type="family">Timpte Industries, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Toyota Motor North America, Inc.</displayForm>
+ <namePart type="family">Toyota Motor North America, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Toyota Motor Sales, U.S.A., Inc.</displayForm>
+ <namePart type="family">Toyota Motor Sales, U.S.A., Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Trailmobile Corporation</displayForm>
+ <namePart type="family">Trailmobile Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Transtar Industries, Inc.</displayForm>
+ <namePart type="family">Transtar Industries, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Trinity Trailer Mfg., Inc.</displayForm>
+ <namePart type="family">Trinity Trailer Mfg., Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tyco Fire Products, LP</displayForm>
+ <namePart type="family">Tyco Fire Products, LP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Union Carbide Corporation</displayForm>
+ <namePart type="family">Union Carbide Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United Gilsonite Laboratories</displayForm>
+ <namePart type="family">United Gilsonite Laboratories</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United Technologies Corporation</displayForm>
+ <namePart type="family">United Technologies Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Viacom, Inc.</displayForm>
+ <namePart type="family">Viacom, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Volvo Cars of North America, Inc.</displayForm>
+ <namePart type="family">Volvo Cars of North America, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Volvo Trucks of North America, Inc.</displayForm>
+ <namePart type="family">Volvo Trucks of North America, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wabco Holdings Inc.</displayForm>
+ <namePart type="family">Wabco Holdings Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wagner Brakes Products</displayForm>
+ <namePart type="family">Wagner Brakes Products</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Warren Pumps, Inc.</displayForm>
+ <namePart type="family">Warren Pumps, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Weil McLain</displayForm>
+ <namePart type="family">Weil McLain</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wilson Trailer Company</displayForm>
+ <namePart type="family">Wilson Trailer Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Witchita Clutch Co.</displayForm>
+ <namePart type="family">Witchita Clutch Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>York Co.</displayForm>
+ <namePart type="family">York Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-rid-1_09-cv-00394</accessId>
+ <courtType>District</courtType>
+ <courtCode>rid</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Rhode Island</courtState>
+ <courtSortOrder>2440</courtSortOrder>
+ <caseNumber>1:09-cv-00394</caseNumber>
+ <caseOffice>Providence</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>368</natureSuitCode>
+ <natureSuit>Asbestos Personal Injury - Prod.liab.</natureSuit>
+ <party fullName="A.O. Smith Corporation" lastName="A.O. Smith Corporation" role="Defendant"></party>
+ <party fullName="A.W. Chesterton Company" lastName="A.W. Chesterton Company" role="Defendant"></party>
+ <party fullName="A.Y. McDonald MFG., Co" lastName="A.Y. McDonald MFG., Co" role="Defendant"></party>
+ <party fullName="AAMCO Transmissions, Inc." lastName="AAMCO Transmissions, Inc." role="Defendant"></party>
+ <party fullName="Acgo Corp." lastName="Acgo Corp." role="Defendant"></party>
+ <party fullName="Alco Valves" lastName="Alco Valves" role="Defendant"></party>
+ <party fullName="Alfa Laval, Inc." lastName="Alfa Laval, Inc." role="Defendant"></party>
+ <party fullName="Allis Chalmers Product Liability Trust" lastName="Allis Chalmers Product Liability Trust" role="Defendant"></party>
+ <party fullName="American Biltrite Inc." lastName="American Biltrite Inc." role="Defendant"></party>
+ <party fullName="American Honda Motor Company Inc." lastName="American Honda Motor Company Inc." role="Defendant"></party>
+ <party fullName="American Standard, Inc. (alias)" lastName="American Standard, Inc. (alias)" role="Defendant"></party>
+ <party fullName="Armstrong International, Inc." lastName="Armstrong International, Inc." role="Defendant"></party>
+ <party fullName="Arvinmeritor, Inc." lastName="Arvinmeritor, Inc." role="Defendant"></party>
+ <party fullName="Aurora Pump Company" lastName="Aurora Pump Company" role="Defendant"></party>
+ <party fullName="Autocar, LLC" lastName="Autocar, LLC" role="Defendant"></party>
+ <party fullName="Bell &amp; Gossett Co." lastName="Bell &amp; Gossett Co." role="Defendant"></party>
+ <party fullName="Bendix Commercial Valve Systems" lastName="Bendix Commercial Valve Systems" role="Defendant"></party>
+ <party fullName="Bird, Inc." lastName="Bird, Inc." role="Defendant"></party>
+ <party fullName="Blackmer Pumps" lastName="Blackmer Pumps" role="Defendant"></party>
+ <party fullName="Bondex International, Inc." lastName="Bondex International, Inc." role="Defendant"></party>
+ <party fullName="Borg Warner Morse Tec Inc." lastName="Borg Warner Morse Tec Inc." role="Defendant"></party>
+ <party fullName="Bridgestone Firestone North American Tire, LLC" lastName="Bridgestone Firestone North American Tire, LLC" role="Defendant"></party>
+ <party fullName="Briggs &amp; Stratton Corp" lastName="Briggs &amp; Stratton Corp" role="Defendant"></party>
+ <party fullName="Buffalo Pumps Inc." lastName="Buffalo Pumps Inc." role="Defendant"></party>
+ <party fullName="Buhler Versatile, Inc." lastName="Buhler Versatile, Inc." role="Defendant"></party>
+ <party fullName="Burnham Corporation" lastName="Burnham Corporation" role="Defendant"></party>
+ <party fullName="Carlisle Corporation" lastName="Carlisle Corporation" role="Defendant"></party>
+ <party fullName="Carquest Corporation" lastName="Carquest Corporation" role="Defendant"></party>
+ <party fullName="Carrier Corporation" lastName="Carrier Corporation" role="Defendant"></party>
+ <party fullName="Case IH, LLC" lastName="Case IH, LLC" role="Defendant"></party>
+ <party fullName="Caterpillar, Inc" lastName="Caterpillar, Inc" role="Defendant"></party>
+ <party fullName="Certainteed Corporation" lastName="Certainteed Corporation" role="Defendant"></party>
+ <party fullName="Chrysler LLC" lastName="Chrysler LLC" role="Defendant"></party>
+ <party fullName="Cleaver-Brooks" lastName="Cleaver-Brooks" role="Defendant"></party>
+ <party firstName="Arletta" fullName="Arletta Cone" lastName="Cone" role="Plaintiff"></party>
+ <party fullName="Conwed Corporation" lastName="Conwed Corporation" role="Defendant"></party>
+ <party fullName="Crane Company" lastName="Crane Company" role="Defendant"></party>
+ <party fullName="Crown, Cork &amp; Seal Company" lastName="Crown, Cork &amp; Seal Company" role="Defendant"></party>
+ <party fullName="D.B. Riley Inc." lastName="D.B. Riley Inc." role="Defendant"></party>
+ <party fullName="DAP, Inc." lastName="DAP, Inc." role="Defendant"></party>
+ <party fullName="Daimler Trucks North America" lastName="Daimler Trucks North America" role="Defendant"></party>
+ <party fullName="Daimler-Chrysler Corp." lastName="Daimler-Chrysler Corp." role="Defendant"></party>
+ <party fullName="Dana Corporation" lastName="Dana Corporation" role="Defendant"></party>
+ <party fullName="Deere &amp; Company" lastName="Deere &amp; Company" role="Defendant"></party>
+ <party fullName="Detroit Diesel Corporation" lastName="Detroit Diesel Corporation" role="Defendant"></party>
+ <party fullName="Domco Products Texas L.P." lastName="Domco Products Texas L.P." role="Defendant"></party>
+ <party fullName="Doonan Trailer Corporation" lastName="Doonan Trailer Corporation" role="Defendant"></party>
+ <party fullName="Dorsey Trailers Inc." lastName="Dorsey Trailers Inc." role="Defendant"></party>
+ <party fullName="Dow Chemical" lastName="Dow Chemical" role="Defendant"></party>
+ <party fullName="ECR International, Inc." lastName="ECR International, Inc." role="Defendant"></party>
+ <party fullName="Eaton Corporation" lastName="Eaton Corporation" role="Defendant"></party>
+ <party fullName="Elliot Turbomachinery Co., Inc." lastName="Elliot Turbomachinery Co., Inc." role="Defendant"></party>
+ <party fullName="Fairbanks Morse Engine" lastName="Fairbanks Morse Engine" role="Defendant"></party>
+ <party fullName="Flowserve US, Inc." lastName="Flowserve US, Inc." role="Defendant"></party>
+ <party fullName="Ford Motor Company" lastName="Ford Motor Company" role="Defendant"></party>
+ <party fullName="Foster Wheeler Corp" lastName="Foster Wheeler Corp" role="Defendant"></party>
+ <party fullName="Freightliner, LLC" lastName="Freightliner, LLC" role="Defendant"></party>
+ <party fullName="Fruehauf Trailer Corporation" lastName="Fruehauf Trailer Corporation" role="Defendant"></party>
+ <party fullName="Gardner-Denver Inc." lastName="Gardner-Denver Inc." role="Defendant"></party>
+ <party fullName="Garlock Sealing Technologies LLS" lastName="Garlock Sealing Technologies LLS" role="Defendant"></party>
+ <party fullName="Gehl Company" lastName="Gehl Company" role="Defendant"></party>
+ <party fullName="General Electric Company" lastName="General Electric Company" role="Defendant"></party>
+ <party fullName="General Motors Corporation" lastName="General Motors Corporation" role="Defendant"></party>
+ <party fullName="Genuine Parts Company" lastName="Genuine Parts Company" role="Defendant"></party>
+ <party fullName="Georgia Pacific Corporation" lastName="Georgia Pacific Corporation" role="Defendant"></party>
+ <party fullName="Goodrich Corporation" lastName="Goodrich Corporation" role="Defendant"></party>
+ <party fullName="Goulds Pumps Inc." lastName="Goulds Pumps Inc." role="Defendant"></party>
+ <party fullName="H.B. Fuller Company" lastName="H.B. Fuller Company" role="Defendant"></party>
+ <party fullName="Harcos Chemicals" lastName="Harcos Chemicals" role="Defendant"></party>
+ <party fullName="Hercules Chemical Co., Inc." lastName="Hercules Chemical Co., Inc." role="Defendant"></party>
+ <party fullName="Hoffco/Comet Industries, Inc." lastName="Hoffco/Comet Industries, Inc." role="Defendant"></party>
+ <party fullName="Honeywell International, Inc" lastName="Honeywell International, Inc" role="Defendant"></party>
+ <party fullName="Hopeman Brothers, Inc." lastName="Hopeman Brothers, Inc." role="Defendant"></party>
+ <party fullName="IMO Industries, Inc." lastName="IMO Industries, Inc." role="Defendant"></party>
+ <party fullName="ITT Industries, Inc." lastName="ITT Industries, Inc." role="Defendant"></party>
+ <party fullName="Ingersoll-Rand Company" lastName="Ingersoll-Rand Company" role="Defendant"></party>
+ <party fullName="International Truck and Engine Corporation" lastName="International Truck and Engine Corporation" role="Defendant"></party>
+ <party fullName="Johnson Controls, Inc" lastName="Johnson Controls, Inc" role="Defendant"></party>
+ <party fullName="K&amp;N Engineering, Inc." lastName="K&amp;N Engineering, Inc." role="Defendant"></party>
+ <party fullName="Kaiser Gypsum Company, Inc." lastName="Kaiser Gypsum Company, Inc." role="Defendant"></party>
+ <party fullName="Kentile Floors, Inc." lastName="Kentile Floors, Inc." role="Defendant"></party>
+ <party fullName="Lennox Industries, Inc." lastName="Lennox Industries, Inc." role="Defendant"></party>
+ <party fullName="Leslie Controls, Inc." lastName="Leslie Controls, Inc." role="Defendant"></party>
+ <party fullName="Lipe-Rollway Corp." lastName="Lipe-Rollway Corp." role="Defendant"></party>
+ <party fullName="Mack Trucks, Inc" lastName="Mack Trucks, Inc" role="Defendant"></party>
+ <party fullName="Marmon Holdings, Inc." lastName="Marmon Holdings, Inc." role="Defendant"></party>
+ <party fullName="Metropolitan Life Insurance Company" lastName="Metropolitan Life Insurance Company" role="Defendant"></party>
+ <party fullName="Michelin North America, Inc." lastName="Michelin North America, Inc." role="Defendant"></party>
+ <party fullName="NACCO Industries, Inc." lastName="NACCO Industries, Inc." role="Defendant"></party>
+ <party fullName="Napa Auto Parts and as parent company to Rayloc" lastName="Napa Auto Parts and as parent company to Rayloc" role="Defendant"></party>
+ <party fullName="Navistar International Corporation" lastName="Navistar International Corporation" role="Defendant"></party>
+ <party fullName="New England Insulation" lastName="New England Insulation" role="Defendant"></party>
+ <party fullName="New Holland North America, Inc." lastName="New Holland North America, Inc." role="Defendant"></party>
+ <party fullName="Nissan North America, Inc." lastName="Nissan North America, Inc." role="Defendant"></party>
+ <party fullName="Northrop Grumman Space &amp; Mission Systems Corp." lastName="Northrop Grumman Space &amp; Mission Systems Corp." role="Defendant"></party>
+ <party fullName="PIC Contractors, Inc" lastName="PIC Contractors, Inc" role="Defendant"></party>
+ <party fullName="Paccar, Inc." lastName="Paccar, Inc." role="Defendant"></party>
+ <party fullName="Packard Motor Car Company" lastName="Packard Motor Car Company" role="Defendant"></party>
+ <party fullName="Packings &amp; Insulation Co." lastName="Packings &amp; Insulation Co." role="Defendant"></party>
+ <party fullName="Pep Boys - Manny, Moe &amp; Jack of Delaware Inc." lastName="Pep Boys - Manny, Moe &amp; Jack of Delaware Inc." role="Defendant"></party>
+ <party fullName="Pneumo Abex Corp" lastName="Pneumo Abex Corp" role="Defendant"></party>
+ <party fullName="R.P.M. International, Inc." lastName="R.P.M. International, Inc." role="Defendant"></party>
+ <party fullName="Robert Bosch LLC" lastName="Robert Bosch LLC" role="Defendant"></party>
+ <party fullName="SVI Corp." lastName="SVI Corp." role="Defendant"></party>
+ <party fullName="Standard Auto Parts Corp." lastName="Standard Auto Parts Corp." role="Defendant"></party>
+ <party fullName="Standard Motor Products, Inc." lastName="Standard Motor Products, Inc." role="Defendant"></party>
+ <party fullName="Standco Industries, Inc." lastName="Standco Industries, Inc." role="Defendant"></party>
+ <party fullName="Sterling Fluid Systems (USA) LLC" lastName="Sterling Fluid Systems (USA) LLC" role="Defendant"></party>
+ <party fullName="Sterling Truck Corp." lastName="Sterling Truck Corp." role="Defendant"></party>
+ <party fullName="TH Agriculture &amp; Nutritional LLC" lastName="TH Agriculture &amp; Nutritional LLC" role="Defendant"></party>
+ <party fullName="TRW Automotive Holdings Corp." lastName="TRW Automotive Holdings Corp." role="Defendant"></party>
+ <party fullName="Taco, Inc." lastName="Taco, Inc." role="Defendant"></party>
+ <party fullName="Tamms Industries, Inc." lastName="Tamms Industries, Inc." role="Defendant"></party>
+ <party fullName="Tenneco Automotive Operating Company, Inc." lastName="Tenneco Automotive Operating Company, Inc." role="Defendant"></party>
+ <party fullName="The B.F. Goodrich Corporation" lastName="The B.F. Goodrich Corporation" role="Defendant"></party>
+ <party fullName="The Falk Corporation" lastName="The Falk Corporation" role="Defendant"></party>
+ <party fullName="The Goodyear Tire &amp; Rubber Company" lastName="The Goodyear Tire &amp; Rubber Company" role="Defendant"></party>
+ <party fullName="The Nash Engineering Compnay" lastName="The Nash Engineering Compnay" role="Defendant"></party>
+ <party fullName="The Utica Boiler Co." lastName="The Utica Boiler Co." role="Defendant"></party>
+ <party fullName="Thompson Hayward Chemical Company" lastName="Thompson Hayward Chemical Company" role="Defendant"></party>
+ <party fullName="Timpte Industries, Inc." lastName="Timpte Industries, Inc." role="Defendant"></party>
+ <party fullName="Toyota Motor North America, Inc." lastName="Toyota Motor North America, Inc." role="Defendant"></party>
+ <party fullName="Toyota Motor Sales, U.S.A., Inc." lastName="Toyota Motor Sales, U.S.A., Inc." role="Defendant"></party>
+ <party fullName="Trailmobile Corporation" lastName="Trailmobile Corporation" role="Defendant"></party>
+ <party fullName="Transtar Industries, Inc." lastName="Transtar Industries, Inc." role="Defendant"></party>
+ <party fullName="Trinity Trailer Mfg., Inc." lastName="Trinity Trailer Mfg., Inc." role="Defendant"></party>
+ <party fullName="Tyco Fire Products, LP" lastName="Tyco Fire Products, LP" role="Defendant"></party>
+ <party fullName="Union Carbide Corporation" lastName="Union Carbide Corporation" role="Defendant"></party>
+ <party fullName="United Gilsonite Laboratories" lastName="United Gilsonite Laboratories" role="Defendant"></party>
+ <party fullName="United Technologies Corporation" lastName="United Technologies Corporation" role="Defendant"></party>
+ <party fullName="Viacom, Inc." lastName="Viacom, Inc." role="Defendant"></party>
+ <party fullName="Volvo Cars of North America, Inc." lastName="Volvo Cars of North America, Inc." role="Defendant"></party>
+ <party fullName="Volvo Trucks of North America, Inc." lastName="Volvo Trucks of North America, Inc." role="Defendant"></party>
+ <party fullName="Wabco Holdings Inc." lastName="Wabco Holdings Inc." role="Defendant"></party>
+ <party fullName="Wagner Brakes Products" lastName="Wagner Brakes Products" role="Defendant"></party>
+ <party fullName="Warren Pumps, Inc." lastName="Warren Pumps, Inc." role="Defendant"></party>
+ <party fullName="Weil McLain" lastName="Weil McLain" role="Defendant"></party>
+ <party fullName="Wilson Trailer Company" lastName="Wilson Trailer Company" role="Defendant"></party>
+ <party fullName="Witchita Clutch Co." lastName="Witchita Clutch Co." role="Defendant"></party>
+ <party fullName="York Co." lastName="York Co." role="Defendant"></party>
+ <state>Rhode Island</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_09-cv-00394-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_09-cv-00394/USCOURTS-rid-1_09-cv-00394-0/mods.xml">
+ <titleInfo>
+  <title>Cone v. Acgo Corp. et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS recommending that the District Court, pursuant to 28 U.S.C. § 1334(c)(1) and 28 U.S.C. § 1452(b), exercise its discretion to GRANT Plaintiffs&apos; Motions to Remand (Document No. 8 in C.A. Nos. 09-393S and 09-395S; Document No. 7 in 09-394S and 09-396S) these asbestos injury cases back to Rhode Island Superior Court, Providence County. Further, recommending that Plaintiffs&apos; accompanying request for a discretionary award of attorneys&apos; fees under 28 U.S.C. § 1447(c) be DENIED because Plaintiffs have not established that DDC&apos;s decision to remove these cases was objectively unreasonable at the time. See Martin v. Franklin Capital Corp., 546 U.S. 132, 141 (2005). In particular, it is noted that the cases relied upon in this recommendation (Diaz, Lent, Gilbert and Hendricks) were all decided after DDC filed for removal in these four cases. (7 in 1:09-cv-00394-S-DLM) MOTION to Remand filed by Arletta Cone, (8 in 1:09-cv-00393-S-LDA) MOTION to Remand filed by Alan Messerlian, Jo-Ann Messerlian, (8 in 1:09-cv-00395-S-DLM) MOTION to Remand filed by Janice Makin, (7 in 1:09-cv-00396-S-LDA) MOTION to Remand filed by Lisa Kroskob ( Objections to R&amp;R due by 1/12/2010). So Ordered by Magistrate Judge Lincoln D. Almond on 12/29/09. (Noel, Jeannine)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_09-cv-00394-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e8d139</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_09-cv-00394/USCOURTS-rid-1_09-cv-00394-0</identifier>
+ <identifier type="former granule identifier">rid-1_09-cv-00394_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_09-cv-00394/USCOURTS-rid-1_09-cv-00394-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_09-cv-00394/pdf/USCOURTS-rid-1_09-cv-00394-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-00394; Cone v. Acgo Corp. et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_09-cv-00394-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-12-29</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS recommending that the District Court, pursuant to 28 U.S.C. § 1334(c)(1) and 28 U.S.C. § 1452(b), exercise its discretion to GRANT Plaintiffs&apos; Motions to Remand (Document No. 8 in C.A. Nos. 09-393S and 09-395S; Document No. 7 in 09-394S and 09-396S) these asbestos injury cases back to Rhode Island Superior Court, Providence County. Further, recommending that Plaintiffs&apos; accompanying request for a discretionary award of attorneys&apos; fees under 28 U.S.C. § 1447(c) be DENIED because Plaintiffs have not established that DDC&apos;s decision to remove these cases was objectively unreasonable at the time. See Martin v. Franklin Capital Corp., 546 U.S. 132, 141 (2005). In particular, it is noted that the cases relied upon in this recommendation (Diaz, Lent, Gilbert and Hendricks) were all decided after DDC filed for removal in these four cases. (7 in 1:09-cv-00394-S-DLM) MOTION to Remand filed by Arletta Cone, (8 in 1:09-cv-00393-S-LDA) MOTION to Remand filed by Alan Messerlian, Jo-Ann Messerlian, (8 in 1:09-cv-00395-S-DLM) MOTION to Remand filed by Janice Makin, (7 in 1:09-cv-00396-S-LDA) MOTION to Remand filed by Lisa Kroskob ( Objections to R&amp;R due by 1/12/2010). So Ordered by Magistrate Judge Lincoln D. Almond on 12/29/09. (Noel, Jeannine)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_09-cv-00394-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_09-cv-00394/USCOURTS-rid-1_09-cv-00394-1/mods.xml">
+ <titleInfo>
+  <title>Cone v. Acgo Corp. et al</title>
+  <subTitle>ORDER granting (8) Motion to Remand; adopting (14) Report and Recommendations in case 1:09-cv-00393-S-LDA; granting (7) Motion to Remand; adopting (12) Report and Recommendations in case 1:09-cv-00394-S-DLM; granting (8) Motion to Remand; adopting (14) Report and Recommendations in case 1:09-cv-00395-S-DLM; granting (7) Motion to Remand; adopting (21) Report and Recommendations in case 1:09-cv-00396-S-LDA in case 1:09-cv-00393-S-LDA. So Ordered by Judge William E. Smith on 1/21/10. (Jackson, Ryan)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_09-cv-00394-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e8d138</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_09-cv-00394/USCOURTS-rid-1_09-cv-00394-1</identifier>
+ <identifier type="former granule identifier">rid-1_09-cv-00394_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_09-cv-00394/USCOURTS-rid-1_09-cv-00394-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_09-cv-00394/pdf/USCOURTS-rid-1_09-cv-00394-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-00394; Cone v. Acgo Corp. et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_09-cv-00394-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-01-25</dateIssued>
+  <docketText>ORDER granting (8) Motion to Remand; adopting (14) Report and Recommendations in case 1:09-cv-00393-S-LDA; granting (7) Motion to Remand; adopting (12) Report and Recommendations in case 1:09-cv-00394-S-DLM; granting (8) Motion to Remand; adopting (14) Report and Recommendations in case 1:09-cv-00395-S-DLM; granting (7) Motion to Remand; adopting (21) Report and Recommendations in case 1:09-cv-00396-S-LDA in case 1:09-cv-00393-S-LDA. So Ordered by Judge William E. Smith on 1/21/10. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+</mods>

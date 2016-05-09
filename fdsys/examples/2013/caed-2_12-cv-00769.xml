@@ -1,0 +1,292 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee184a8d5d8">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-05-10</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-05-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00769</identifier>
+<identifier type="local">P0b002ee184a8d5d8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-05-10</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-05-10</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-00769</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-00769</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-00769</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:416 Denial of Social Security Benefits</cause>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Allan Elder" lastName="Elder" middleName="Allan" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(SS) Elder v. Commissioner of Social Security</title>
+ <partNumber>2:12-cv-00769</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00769/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-00769;12-769</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Commissioner of Social Security</displayForm>
+ <namePart type="family">Commissioner of Social Security</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas Allan Elder</displayForm>
+ <namePart type="family">Elder</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-00769</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-00769</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:416 Denial of Social Security Benefits</cause>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Allan Elder" lastName="Elder" middleName="Allan" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00769-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00769/USCOURTS-caed-2_12-cv-00769-0/mods.xml">
+ <titleInfo>
+  <title>(SS) Elder v. Commissioner of Social Security</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 3/30/12; IT IS HEREBY ORDERED that: Plaintiff&apos;s request to proceed in forma pauperis is granted. The Clerk of the Court is directed to serve the undersigneds scheduling order in social security cases. The Clerk of the Court is further directed to serve a copy of this order on the United States Marshal. Within fifteen days from the date of this order, plaintiff shall submit to the United States Marshal a completed summons and copies of the complaint and to file a statement with the court that said documents have been submitted to the United States Marshal. The United States Marshal is directed to serve all process without prepayment of costs not later than sixty days from the date of this order. Service of process shall be completed by delivering a copy of the summons and complaint to the United States Attorney for the Eastern District of California, and by sending a copy of the summons and complaint by registered or certified mail to the Attorney General of the United States at Washington, D.C. The Marshal shall also send a copy of the summons and complaint by registered or certified mail to the Commissioner of Social Security, c/o Office of General Counsel, 6401 Security Blvd., Room 611, Altmeyer Bldg., Baltimore, MD 21235. (Matson, R)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00769-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a92cbf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00769/USCOURTS-caed-2_12-cv-00769-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00769_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00769/USCOURTS-caed-2_12-cv-00769-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00769/pdf/USCOURTS-caed-2_12-cv-00769-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00769; (SS) Elder v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00769-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-03-30</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 3/30/12; IT IS HEREBY ORDERED that: Plaintiff&apos;s request to proceed in forma pauperis is granted. The Clerk of the Court is directed to serve the undersigneds scheduling order in social security cases. The Clerk of the Court is further directed to serve a copy of this order on the United States Marshal. Within fifteen days from the date of this order, plaintiff shall submit to the United States Marshal a completed summons and copies of the complaint and to file a statement with the court that said documents have been submitted to the United States Marshal. The United States Marshal is directed to serve all process without prepayment of costs not later than sixty days from the date of this order. Service of process shall be completed by delivering a copy of the summons and complaint to the United States Attorney for the Eastern District of California, and by sending a copy of the summons and complaint by registered or certified mail to the Attorney General of the United States at Washington, D.C. The Marshal shall also send a copy of the summons and complaint by registered or certified mail to the Commissioner of Social Security, c/o Office of General Counsel, 6401 Security Blvd., Room 611, Altmeyer Bldg., Baltimore, MD 21235. (Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00769-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00769/USCOURTS-caed-2_12-cv-00769-1/mods.xml">
+ <titleInfo>
+  <title>(SS) Elder v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION and ORDER signed on 9/19/2012 by Magistrate Judge Carolyn K. Delaney EXTENDING TIME for Plaintiff to file a Motion for Summary Judgment, Motion for Summary Judgment due by 10/25/2012. (Michel, G)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00769-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a92cbe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00769/USCOURTS-caed-2_12-cv-00769-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00769_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00769/USCOURTS-caed-2_12-cv-00769-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00769/pdf/USCOURTS-caed-2_12-cv-00769-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00769; (SS) Elder v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00769-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-09-20</dateIssued>
+  <docketText>STIPULATION and ORDER signed on 9/19/2012 by Magistrate Judge Carolyn K. Delaney EXTENDING TIME for Plaintiff to file a Motion for Summary Judgment, Motion for Summary Judgment due by 10/25/2012. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00769-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00769/USCOURTS-caed-2_12-cv-00769-2/mods.xml">
+ <titleInfo>
+  <title>(SS) Elder v. Commissioner of Social Security</title>
+  <subTitle>The new due date will be December 31, 2012. (Kastilahn, A)STIPULATION and ORDER 15 signed by Magistrate Judge Carolyn K. Delaney on 11/29/12 ORDERING that Defendant shall have an extension of time of 30 days to respond to Plaintiff&apos;s motion for summary judgment and/or to file any cross-motions.</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00769-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a92cc0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00769/USCOURTS-caed-2_12-cv-00769-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00769_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00769/USCOURTS-caed-2_12-cv-00769-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00769/pdf/USCOURTS-caed-2_12-cv-00769-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00769; (SS) Elder v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00769-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-11-29</dateIssued>
+  <docketText>The new due date will be December 31, 2012. (Kastilahn, A)STIPULATION and ORDER 15 signed by Magistrate Judge Carolyn K. Delaney on 11/29/12 ORDERING that Defendant shall have an extension of time of 30 days to respond to Plaintiff&apos;s motion for summary judgment and/or to file any cross-motions.</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00769-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00769/USCOURTS-caed-2_12-cv-00769-3/mods.xml">
+ <titleInfo>
+  <title>(SS) Elder v. Commissioner of Social Security</title>
+  <subTitle>udgment and/or file any cross-motions is 1/15/2013. (Waggoner, D)STIPULATION and ORDER signed by Magistrate Judge Carolyn K. Delaney on 1/2/2013 re 17 Stipulation and Proposed Order filed by Commissioner of Social Security ORDERING the new date for defendant to respond to plaintiff&apos;s Motion for Summary J</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00769-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a92cc1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00769/USCOURTS-caed-2_12-cv-00769-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00769_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00769/USCOURTS-caed-2_12-cv-00769-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00769/pdf/USCOURTS-caed-2_12-cv-00769-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00769; (SS) Elder v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00769-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>udgment and/or file any cross-motions is 1/15/2013. (Waggoner, D)STIPULATION and ORDER signed by Magistrate Judge Carolyn K. Delaney on 1/2/2013 re 17 Stipulation and Proposed Order filed by Commissioner of Social Security ORDERING the new date for defendant to respond to plaintiff&apos;s Motion for Summary J</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00769-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00769/USCOURTS-caed-2_12-cv-00769-4/mods.xml">
+ <titleInfo>
+  <title>(SS) Elder v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Carolyn K. Delaney on 1/10/2013 REMANDING this case to the Commissioner of Social Security for further administrative action pursuant to section 205(g) of the Social Security Act, as amended, 42 U.S.C. section 405(g), Sentence 4; DIRECTING the Clerk of Court to enter judgment for the Plaintiff against Defendant Commissioner of Social Security. CASE CLOSED. (Michel, G)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00769-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a92cc2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00769/USCOURTS-caed-2_12-cv-00769-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00769_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00769/USCOURTS-caed-2_12-cv-00769-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00769/pdf/USCOURTS-caed-2_12-cv-00769-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00769; (SS) Elder v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00769-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-10</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Carolyn K. Delaney on 1/10/2013 REMANDING this case to the Commissioner of Social Security for further administrative action pursuant to section 205(g) of the Social Security Act, as amended, 42 U.S.C. section 405(g), Sentence 4; DIRECTING the Clerk of Court to enter judgment for the Plaintiff against Defendant Commissioner of Social Security. CASE CLOSED. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00769-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00769/USCOURTS-caed-2_12-cv-00769-5/mods.xml">
+ <titleInfo>
+  <title>(SS) Elder v. Commissioner of Social Security</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 5/9/2013 GRANTING plaintiff&apos;s 22 Motion for Award of Attorney Fees in the amount of $3,913.45. (Marciel, M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00769-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a92cc3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00769/USCOURTS-caed-2_12-cv-00769-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00769_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00769/USCOURTS-caed-2_12-cv-00769-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00769/pdf/USCOURTS-caed-2_12-cv-00769-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00769; (SS) Elder v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00769-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-05-09</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 5/9/2013 GRANTING plaintiff&apos;s 22 Motion for Award of Attorney Fees in the amount of $3,913.45. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

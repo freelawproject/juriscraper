@@ -1,0 +1,206 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18761e090">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-24</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_07-cv-02601</identifier>
+<identifier type="local">P0b002ee18761e090</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-24</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-24</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_07-cv-02601</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_07-cv-02601</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:07-cv-02601</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1345 Foreclosure</cause>
+ <party firstName="Bruce" fullName="Bruce A. Hoppe" lastName="Hoppe" middleName="A." role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy J. Hoppe" lastName="Hoppe" middleName="J." role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party fullName="Unknown Executors, Administrators, Devisees, Trustees, Creditors, Successors and Assignees of Such Defendants as are or were Partners or in Partnership" lastName="Unknown Executors, Administrators, Devisees, Trustees, Creditors, Successors and Assignees of Such Defendants as are or were Partners or in Partnership" role="Defendant"></party>
+ <party fullName="Unknown Guardians, Conservators and Trustees of Such of the Defendants as are Minors or are in any way Under Legal Disability" lastName="Unknown Guardians, Conservators and Trustees of Such of the Defendants as are Minors or are in any way Under Legal Disability" role="Defendant"></party>
+ <party fullName="Unknown Heirs, Executors, Administrators, Devisees, Legatees, Trustees, Creditors and Assignees" lastName="Unknown Heirs, Executors, Administrators, Devisees, Legatees, Trustees, Creditors and Assignees" role="Defendant"></party>
+ <party fullName="Unknown Spouses" lastName="Unknown Spouses" role="Defendant"></party>
+ <party fullName="Unknown Stockholders, Officers, Successors, Trustees, Creditors and Assignees of Such Defendants as are Existing, Dissolved or Dormant Corporation" lastName="Unknown Stockholders, Officers, Successors, Trustees, Creditors and Assignees of Such Defendants as are Existing, Dissolved or Dormant Corporation" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Hoppe et al</title>
+ <partNumber>2:07-cv-02601</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_07-cv-02601/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:07-cv-02601;07-2601</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bruce A. Hoppe</displayForm>
+ <namePart type="family">Hoppe</namePart>
+ <namePart type="given">Bruce</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Timothy J. Hoppe</displayForm>
+ <namePart type="family">Hoppe</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Unknown Executors, Administrators, Devisees, Trustees, Creditors, Successors and Assignees of Such Defendants as are or were Partners or in Partnership</displayForm>
+ <namePart type="family">Unknown Executors, Administrators, Devisees, Trustees, Creditors, Successors and Assignees of Such Defendants as are or were Partners or in Partnership</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Unknown Guardians, Conservators and Trustees of Such of the Defendants as are Minors or are in any way Under Legal Disability</displayForm>
+ <namePart type="family">Unknown Guardians, Conservators and Trustees of Such of the Defendants as are Minors or are in any way Under Legal Disability</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Unknown Heirs, Executors, Administrators, Devisees, Legatees, Trustees, Creditors and Assignees</displayForm>
+ <namePart type="family">Unknown Heirs, Executors, Administrators, Devisees, Legatees, Trustees, Creditors and Assignees</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Unknown Spouses</displayForm>
+ <namePart type="family">Unknown Spouses</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Unknown Stockholders, Officers, Successors, Trustees, Creditors and Assignees of Such Defendants as are Existing, Dissolved or Dormant Corporation</displayForm>
+ <namePart type="family">Unknown Stockholders, Officers, Successors, Trustees, Creditors and Assignees of Such Defendants as are Existing, Dissolved or Dormant Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_07-cv-02601</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:07-cv-02601</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1345 Foreclosure</cause>
+ <party firstName="Bruce" fullName="Bruce A. Hoppe" lastName="Hoppe" middleName="A." role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy J. Hoppe" lastName="Hoppe" middleName="J." role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party fullName="Unknown Executors, Administrators, Devisees, Trustees, Creditors, Successors and Assignees of Such Defendants as are or were Partners or in Partnership" lastName="Unknown Executors, Administrators, Devisees, Trustees, Creditors, Successors and Assignees of Such Defendants as are or were Partners or in Partnership" role="Defendant"></party>
+ <party fullName="Unknown Guardians, Conservators and Trustees of Such of the Defendants as are Minors or are in any way Under Legal Disability" lastName="Unknown Guardians, Conservators and Trustees of Such of the Defendants as are Minors or are in any way Under Legal Disability" role="Defendant"></party>
+ <party fullName="Unknown Heirs, Executors, Administrators, Devisees, Legatees, Trustees, Creditors and Assignees" lastName="Unknown Heirs, Executors, Administrators, Devisees, Legatees, Trustees, Creditors and Assignees" role="Defendant"></party>
+ <party fullName="Unknown Spouses" lastName="Unknown Spouses" role="Defendant"></party>
+ <party fullName="Unknown Stockholders, Officers, Successors, Trustees, Creditors and Assignees of Such Defendants as are Existing, Dissolved or Dormant Corporation" lastName="Unknown Stockholders, Officers, Successors, Trustees, Creditors and Assignees of Such Defendants as are Existing, Dissolved or Dormant Corporation" role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_07-cv-02601-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_07-cv-02601/USCOURTS-ksd-2_07-cv-02601-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Hoppe et al</title>
+  <subTitle>ORDER entered correcting Doc. 3 by adding to the first page the date the order was signed. Entered by Magistrate Judge David J. Waxse on 1/8/08. (mh)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_07-cv-02601/pdf/USCOURTS-ksd-2_07-cv-02601-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187645713</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_07-cv-02601/USCOURTS-ksd-2_07-cv-02601-0</identifier>
+ <identifier type="former granule identifier">ksd-2_07-cv-02601_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_07-cv-02601/USCOURTS-ksd-2_07-cv-02601-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_07-cv-02601/pdf/USCOURTS-ksd-2_07-cv-02601-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02601; United States of America v. Hoppe et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_07-cv-02601-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-08</dateIssued>
+  <docketText>ORDER entered correcting Doc. 3 by adding to the first page the date the order was signed. Entered by Magistrate Judge David J. Waxse on 1/8/08. (mh)</docketText>
+</extension>
+</relatedItem>
+</mods>

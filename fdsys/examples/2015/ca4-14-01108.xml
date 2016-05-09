@@ -1,0 +1,151 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a89833f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Fourth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca4-14-01108</identifier>
+<identifier type="local">P0b002ee18a89833f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca4-14-01108</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca4-14-01108</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca4</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtSortOrder>1040</courtSortOrder>
+ <caseNumber>14-01108</caseNumber>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <party fullName="Day &amp; Zimmermann International, Incorporated" lastName="Day &amp; Zimmermann International, Incorporated" role="Appellee"></party>
+ <party firstName="Crystal" fullName="Crystal Marie Humphrey" lastName="Humphrey" middleName="Marie" role="Appellant"></party>
+ <party firstName="Robert" fullName="Robert Wayne Humphrey Jr." generation="Jr." lastName="Humphrey" middleName="Wayne" role="Appellant"></party>
+</extension>
+<titleInfo>
+ <title>Robert Humphrey, Jr. v. Day &amp; Zimmermann International</title>
+ <partNumber>14-01108</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca4-14-01108/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">14-01108;14-1108</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Fourth Circuit</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Day &amp; Zimmermann International, Incorporated</displayForm>
+ <namePart type="family">Day &amp; Zimmermann International, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Crystal Marie Humphrey</displayForm>
+ <namePart type="family">Humphrey</namePart>
+ <namePart type="given">Crystal</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Wayne Humphrey Jr.</displayForm>
+ <namePart type="family">Humphrey</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Appellant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca4-14-01108</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca4</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtSortOrder>1040</courtSortOrder>
+ <caseNumber>14-01108</caseNumber>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <party fullName="Day &amp; Zimmermann International, Incorporated" lastName="Day &amp; Zimmermann International, Incorporated" role="Appellee"></party>
+ <party firstName="Crystal" fullName="Crystal Marie Humphrey" lastName="Humphrey" middleName="Marie" role="Appellant"></party>
+ <party firstName="Robert" fullName="Robert Wayne Humphrey Jr." generation="Jr." lastName="Humphrey" middleName="Wayne" role="Appellant"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca4-14-01108-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca4-14-01108/USCOURTS-ca4-14-01108-0/mods.xml">
+ <titleInfo>
+  <title>Robert Humphrey, Jr. v. Day &amp; Zimmermann International</title>
+  <subTitle>UNPUBLISHED PER CURIAM OPINION filed. Originating case number: 6:12-cv-01458-TMC Copies to all parties and the district court/agency. [999503397].. [14-1108]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca4-14-01108/pdf/USCOURTS-ca4-14-01108-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a89de89</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca4-14-01108/USCOURTS-ca4-14-01108-0</identifier>
+ <identifier type="former granule identifier">ca4-14-01108_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca4-14-01108/USCOURTS-ca4-14-01108-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca4-14-01108/pdf/USCOURTS-ca4-14-01108-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 14-01108; Robert Humphrey, Jr. v. Day &amp; Zimmermann International; </searchTitle>
+  <courtName>United States Court of Appeals for the Fourth Circuit</courtName>
+  <accessId>USCOURTS-ca4-14-01108-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-02</dateIssued>
+  <docketText>UNPUBLISHED PER CURIAM OPINION filed. Originating case number: 6:12-cv-01458-TMC Copies to all parties and the district court/agency. [999503397].. [14-1108]</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,205 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1813bc8f6">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_05-cv-04041</identifier>
+<identifier type="local">P0b002ee1813bc8f6</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_05-cv-04041</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_05-cv-04041</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:05-cv-04041</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="TOM" fullName="TOM CORBETT" lastName="CORBETT" role="Respondent"></party>
+ <party fullName="DISTRICT ATTORNEY OF PA" lastName="DISTRICT ATTORNEY OF PA" role="Respondent"></party>
+ <party firstName="CHARLES" fullName="CHARLES ERICKSON" lastName="ERICKSON" role="Respondent"></party>
+ <party firstName="PEDRO" fullName="PEDRO TERREFORTE" lastName="TERREFORTE" role="Petitioner"></party>
+ <party fullName="THE DISTRICT ATTORNEY OF THE COUNTY OF PHILADELPHIA" lastName="THE DISTRICT ATTORNEY OF THE COUNTY OF PHILADELPHIA" role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>TERREFORTE v. ERICKSON et al</title>
+ <partNumber>2:05-cv-04041</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_05-cv-04041/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:05-cv-04041;05-4041</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>TOM CORBETT</displayForm>
+ <namePart type="family">CORBETT</namePart>
+ <namePart type="given">TOM</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>DISTRICT ATTORNEY OF PA</displayForm>
+ <namePart type="family">DISTRICT ATTORNEY OF PA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>CHARLES ERICKSON</displayForm>
+ <namePart type="family">ERICKSON</namePart>
+ <namePart type="given">CHARLES</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>PEDRO TERREFORTE</displayForm>
+ <namePart type="family">TERREFORTE</namePart>
+ <namePart type="given">PEDRO</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>THE DISTRICT ATTORNEY OF THE COUNTY OF PHILADELPHIA</displayForm>
+ <namePart type="family">THE DISTRICT ATTORNEY OF THE COUNTY OF PHILADELPHIA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_05-cv-04041</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:05-cv-04041</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="TOM" fullName="TOM CORBETT" lastName="CORBETT" role="Respondent"></party>
+ <party fullName="DISTRICT ATTORNEY OF PA" lastName="DISTRICT ATTORNEY OF PA" role="Respondent"></party>
+ <party firstName="CHARLES" fullName="CHARLES ERICKSON" lastName="ERICKSON" role="Respondent"></party>
+ <party firstName="PEDRO" fullName="PEDRO TERREFORTE" lastName="TERREFORTE" role="Petitioner"></party>
+ <party fullName="THE DISTRICT ATTORNEY OF THE COUNTY OF PHILADELPHIA" lastName="THE DISTRICT ATTORNEY OF THE COUNTY OF PHILADELPHIA" role="Respondent"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_05-cv-04041-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-04041/USCOURTS-paed-2_05-cv-04041-0/mods.xml">
+ <titleInfo>
+  <title>TERREFORTE v. ERICKSON et al</title>
+  <subTitle>MEMORANDUM AND ORDER THAT PLFF&apos;S MOTION FOR APPOINTMENT OF COUNSEL IS DENIED. SIGNED BY JUDGE LOUIS H. POLLAK ON 3/15/06. 3/16/06 ENTERED AND COPIES MAILED.(kw, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_05-cv-04041-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18149a968</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-04041/USCOURTS-paed-2_05-cv-04041-0</identifier>
+ <identifier type="former granule identifier">paed-2_05-cv-04041_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-04041/USCOURTS-paed-2_05-cv-04041-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_05-cv-04041/pdf/USCOURTS-paed-2_05-cv-04041-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-04041; TERREFORTE v. ERICKSON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_05-cv-04041-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-03-15</dateIssued>
+  <docketText>MEMORANDUM AND ORDER THAT PLFF&apos;S MOTION FOR APPOINTMENT OF COUNSEL IS DENIED. SIGNED BY JUDGE LOUIS H. POLLAK ON 3/15/06. 3/16/06 ENTERED AND COPIES MAILED.(kw, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_05-cv-04041-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-04041/USCOURTS-paed-2_05-cv-04041-1/mods.xml">
+ <titleInfo>
+  <title>TERREFORTE v. ERICKSON et al</title>
+  <subTitle>ORDER THAT: THE REPORT AND RECOMMENDATION IS APPROVED AND ADOPTED. PEDRO TERREFORTE&apos;S PETITION FOR A WRIT OF HABEAS CORPUS IS DENIED. A CERTIFICATE OF APPEALABILITY IS NOT GRANTED. SIGNED BY JUDGE LOUIS H. POLLAK ON 1/3/07. 1/4/07 ENTERED AND COPIES MAILED AND E-MAILED.(fb)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_05-cv-04041-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18149ab0f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-04041/USCOURTS-paed-2_05-cv-04041-1</identifier>
+ <identifier type="former granule identifier">paed-2_05-cv-04041_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-04041/USCOURTS-paed-2_05-cv-04041-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_05-cv-04041/pdf/USCOURTS-paed-2_05-cv-04041-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-04041; TERREFORTE v. ERICKSON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_05-cv-04041-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-04</dateIssued>
+  <docketText>ORDER THAT: THE REPORT AND RECOMMENDATION IS APPROVED AND ADOPTED. PEDRO TERREFORTE&apos;S PETITION FOR A WRIT OF HABEAS CORPUS IS DENIED. A CERTIFICATE OF APPEALABILITY IS NOT GRANTED. SIGNED BY JUDGE LOUIS H. POLLAK ON 1/3/07. 1/4/07 ENTERED AND COPIES MAILED AND E-MAILED.(fb)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,180 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18155ad19">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-15</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_08-cv-01830</identifier>
+<identifier type="local">P0b002ee18155ad19</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_08-cv-01830</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_08-cv-01830</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:08-cv-01830</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>720</natureSuitCode>
+ <natureSuit>Labor Management Relations Act</natureSuit>
+ <cause>28:185 Suit to Compel Arbitration</cause>
+ <party fullName="Earnest Machine Products Company" lastName="Earnest Machine Products Company" role="Defendant"></party>
+ <party fullName="Teamsters Local Union No. 507, IBT" lastName="Teamsters Local Union No. 507, IBT" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Teamsters Local Union No. 507, IBT v. Earnest Machine Products Company</title>
+ <partNumber>1:08-cv-01830</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_08-cv-01830/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-cv-01830;08-1830</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Earnest Machine Products Company</displayForm>
+ <namePart type="family">Earnest Machine Products Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Teamsters Local Union No. 507, IBT</displayForm>
+ <namePart type="family">Teamsters Local Union No. 507, IBT</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_08-cv-01830</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:08-cv-01830</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>720</natureSuitCode>
+ <natureSuit>Labor Management Relations Act</natureSuit>
+ <cause>28:185 Suit to Compel Arbitration</cause>
+ <party fullName="Earnest Machine Products Company" lastName="Earnest Machine Products Company" role="Defendant"></party>
+ <party fullName="Teamsters Local Union No. 507, IBT" lastName="Teamsters Local Union No. 507, IBT" role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_08-cv-01830-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_08-cv-01830/USCOURTS-ohnd-1_08-cv-01830-0/mods.xml">
+ <titleInfo>
+  <title>Teamsters Local Union No. 507, IBT v. Earnest Machine Products Company</title>
+  <subTitle>Memorandum Opinion that: Plaintiff&apos;s Motion for Summary Judgment is granted and the parties are directed to proceed with the grievance and arbitration process on the Nagy Grievance in accordance with Article XIV of the CBA to determine if Mr. Nagy participated in &quot;any unlawful strike, slow down or other stoppage of work&quot; in violation of Article XV of the CBA. Signed by Judge Donald C. Nugent on 1/14/2009. (Related doc 10)(B,B)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_08-cv-01830-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1815f7708</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_08-cv-01830/USCOURTS-ohnd-1_08-cv-01830-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_08-cv-01830_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_08-cv-01830/USCOURTS-ohnd-1_08-cv-01830-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_08-cv-01830/pdf/USCOURTS-ohnd-1_08-cv-01830-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01830; Teamsters Local Union No. 507, IBT v. Earnest Machine Products Company; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_08-cv-01830-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-15</dateIssued>
+  <docketText>Memorandum Opinion that: Plaintiff&apos;s Motion for Summary Judgment is granted and the parties are directed to proceed with the grievance and arbitration process on the Nagy Grievance in accordance with Article XIV of the CBA to determine if Mr. Nagy participated in &quot;any unlawful strike, slow down or other stoppage of work&quot; in violation of Article XV of the CBA. Signed by Judge Donald C. Nugent on 1/14/2009. (Related doc 10)(B,B)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_08-cv-01830-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_08-cv-01830/USCOURTS-ohnd-1_08-cv-01830-1/mods.xml">
+ <titleInfo>
+  <title>Teamsters Local Union No. 507, IBT v. Earnest Machine Products Company</title>
+  <subTitle>Judgment Entry granting Plaintiff&apos;s Motion for Summary Judgment and the Parties are ordered to proceed with the grievance and arbitration process on the Nagy Grievance in accordance with Article XIV of the CBA to determine if Mr. Nagy participated in &quot;any unlawful strike, slow down or other stoppage of work&quot; in violation of Article XV of the CBA. All costs to Defendant. This action is terminated. Signed by Judge Donald C. Nugent on 1/14/2009. (Related doc 10, 14)(B,B)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_08-cv-01830-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1815f7709</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_08-cv-01830/USCOURTS-ohnd-1_08-cv-01830-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_08-cv-01830_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_08-cv-01830/USCOURTS-ohnd-1_08-cv-01830-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_08-cv-01830/pdf/USCOURTS-ohnd-1_08-cv-01830-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01830; Teamsters Local Union No. 507, IBT v. Earnest Machine Products Company; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_08-cv-01830-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-01-15</dateIssued>
+  <docketText>Judgment Entry granting Plaintiff&apos;s Motion for Summary Judgment and the Parties are ordered to proceed with the grievance and arbitration process on the Nagy Grievance in accordance with Article XIV of the CBA to determine if Mr. Nagy participated in &quot;any unlawful strike, slow down or other stoppage of work&quot; in violation of Article XV of the CBA. All costs to Defendant. This action is terminated. Signed by Judge Donald C. Nugent on 1/14/2009. (Related doc 10, 14)(B,B)</docketText>
+</extension>
+</relatedItem>
+</mods>

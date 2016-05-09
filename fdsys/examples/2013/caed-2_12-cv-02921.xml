@@ -1,0 +1,245 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18503c857">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-06-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-06-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02921</identifier>
+<identifier type="local">P0b002ee18503c857</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-06-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-06-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-02921</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02921</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02921</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1332 Diversity-Petition for Removal</cause>
+ <party fullName="Eastbay, Inc." lastName="Eastbay, Inc." role="Defendant"></party>
+ <party fullName="Hat World, Inc." lastName="Hat World, Inc." role="Plaintiff"></party>
+ <party firstName="Gregg" fullName="Gregg Pistochini" lastName="Pistochini" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Hat World, Inc. v. Pistochini et al</title>
+ <partNumber>2:12-cv-02921</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02921/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-02921;12-2921</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Eastbay, Inc.</displayForm>
+ <namePart type="family">Eastbay, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hat World, Inc.</displayForm>
+ <namePart type="family">Hat World, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gregg Pistochini</displayForm>
+ <namePart type="family">Pistochini</namePart>
+ <namePart type="given">Gregg</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02921</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02921</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1332 Diversity-Petition for Removal</cause>
+ <party fullName="Eastbay, Inc." lastName="Eastbay, Inc." role="Defendant"></party>
+ <party fullName="Hat World, Inc." lastName="Hat World, Inc." role="Plaintiff"></party>
+ <party firstName="Gregg" fullName="Gregg Pistochini" lastName="Pistochini" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02921-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02921/USCOURTS-caed-2_12-cv-02921-0/mods.xml">
+ <titleInfo>
+  <title>Hat World, Inc. v. Pistochini et al</title>
+  <subTitle>RELATED CASE ORDER signed by Judge Lawrence K. Karlton on 1/2/13 ORDERING the action denominated 2:12-CV-02921-GEB-DAD is hereby REASSIGNED to Judge Lawrence K. Karlton and Magistrate Judge Edmund F. Brennan for all further proceedings, and any dates currently set in this reassigned case only are hereby VACATED. Henceforth, the caption on documents filed in the reassigned case shall be shown as 2:12-CV- 02921-LKK-EFB. IT IS FURTHER ORDERED that the Clerk of the Court make appropriate adjustments in the assignment of civil cases to compensate for this reassignment.(Matson, R)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02921-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185047f27</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02921/USCOURTS-caed-2_12-cv-02921-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02921_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02921/USCOURTS-caed-2_12-cv-02921-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02921/pdf/USCOURTS-caed-2_12-cv-02921-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02921; Hat World, Inc. v. Pistochini et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02921-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>RELATED CASE ORDER signed by Judge Lawrence K. Karlton on 1/2/13 ORDERING the action denominated 2:12-CV-02921-GEB-DAD is hereby REASSIGNED to Judge Lawrence K. Karlton and Magistrate Judge Edmund F. Brennan for all further proceedings, and any dates currently set in this reassigned case only are hereby VACATED. Henceforth, the caption on documents filed in the reassigned case shall be shown as 2:12-CV- 02921-LKK-EFB. IT IS FURTHER ORDERED that the Clerk of the Court make appropriate adjustments in the assignment of civil cases to compensate for this reassignment.(Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02921-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02921/USCOURTS-caed-2_12-cv-02921-1/mods.xml">
+ <titleInfo>
+  <title>Hat World, Inc. v. Pistochini et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 3/19/2013. A Status Conference was held in Chambers on March 18, 2013. After Hearing, Court ORDERS as follows: Further Status Conference is SET for 4/8/2013 at 2:00 PM in Courtroom 4 (LKK). (Marciel, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02921-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185047f2a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02921/USCOURTS-caed-2_12-cv-02921-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02921_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02921/USCOURTS-caed-2_12-cv-02921-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02921/pdf/USCOURTS-caed-2_12-cv-02921-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02921; Hat World, Inc. v. Pistochini et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02921-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-03-20</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 3/19/2013. A Status Conference was held in Chambers on March 18, 2013. After Hearing, Court ORDERS as follows: Further Status Conference is SET for 4/8/2013 at 2:00 PM in Courtroom 4 (LKK). (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02921-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02921/USCOURTS-caed-2_12-cv-02921-2/mods.xml">
+ <titleInfo>
+  <title>Hat World, Inc. v. Pistochini et al</title>
+  <subTitle>PRETRIAL SCHEDULING ORDER signed by District Judge Troy L. Nunley on 6/11/13: Designation of Expert Witnesses due by 4/28/2014. Discovery due by 2/28/2014. Dispositive Motions filed by 8/28/2014. Final Pretrial Conference set for 11/6/2014 at 02:00 PM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Jury Trial set for 1/12/2015 at 09:00 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. (Kaminski, H)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02921-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185047f29</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02921/USCOURTS-caed-2_12-cv-02921-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02921_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02921/USCOURTS-caed-2_12-cv-02921-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02921/pdf/USCOURTS-caed-2_12-cv-02921-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02921; Hat World, Inc. v. Pistochini et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02921-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-06-12</dateIssued>
+  <docketText>PRETRIAL SCHEDULING ORDER signed by District Judge Troy L. Nunley on 6/11/13: Designation of Expert Witnesses due by 4/28/2014. Discovery due by 2/28/2014. Dispositive Motions filed by 8/28/2014. Final Pretrial Conference set for 11/6/2014 at 02:00 PM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Jury Trial set for 1/12/2015 at 09:00 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02921-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02921/USCOURTS-caed-2_12-cv-02921-3/mods.xml">
+ <titleInfo>
+  <title>Hat World, Inc. v. Pistochini et al</title>
+  <subTitle>STIPULATION and ORDER REGARDING THE EXCHANGE OF INITIAL DISCLOSURES signed by District Judge Troy L. Nunley on 6/19/13. The parties have agreed to exchange thier Rule 26(a)(1) Disclosures on or before 7/12/2013. (Mena-Sanchez, L)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02921-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185047f28</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02921/USCOURTS-caed-2_12-cv-02921-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02921_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02921/USCOURTS-caed-2_12-cv-02921-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02921/pdf/USCOURTS-caed-2_12-cv-02921-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02921; Hat World, Inc. v. Pistochini et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02921-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-06-20</dateIssued>
+  <docketText>STIPULATION and ORDER REGARDING THE EXCHANGE OF INITIAL DISCLOSURES signed by District Judge Troy L. Nunley on 6/19/13. The parties have agreed to exchange thier Rule 26(a)(1) Disclosures on or before 7/12/2013. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,195 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181189b88">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_03-cv-00562</identifier>
+<identifier type="local">P0b002ee181189b88</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-1_03-cv-00562</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_03-cv-00562</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:03-cv-00562</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Village of" fullName="Village of Cobleskill Police Department" lastName="Cobleskill Police Department" role="Defendant"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Loucks" lastName="Loucks" role="Plaintiff"></party>
+ <party firstName="Michael" fullName="Michael O&apos;Brien" lastName="O&apos;Brien" role="Defendant"></party>
+ <party firstName="James" fullName="James Sackett" lastName="Sackett" role="Defendant"></party>
+ <party firstName="County of" fullName="County of Schoharie" lastName="Schoharie" role="Defendant"></party>
+ <party fullName="Schoharie County District Attorney&apos;s Office" lastName="Schoharie County District Attorney&apos;s Office" role="Defendant"></party>
+ <party firstName="Maynard" fullName="Maynard Sullivan III" generation="III" lastName="Sullivan" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Loucks v. County of Schoharie, et al</title>
+ <partNumber>1:03-cv-00562</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_03-cv-00562/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:03-cv-00562;03-562</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Albany</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Village of Cobleskill Police Department</displayForm>
+ <namePart type="family">Cobleskill Police Department</namePart>
+ <namePart type="given">Village of</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey Loucks</displayForm>
+ <namePart type="family">Loucks</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Michael O&apos;Brien</displayForm>
+ <namePart type="family">O&apos;Brien</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Sackett</displayForm>
+ <namePart type="family">Sackett</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>County of Schoharie</displayForm>
+ <namePart type="family">Schoharie</namePart>
+ <namePart type="given">County of</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Schoharie County District Attorney&apos;s Office</displayForm>
+ <namePart type="family">Schoharie County District Attorney&apos;s Office</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Maynard Sullivan III</displayForm>
+ <namePart type="family">Sullivan</namePart>
+ <namePart type="given">Maynard</namePart>
+ <namePart type="termsOfAddress">III</namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_03-cv-00562</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:03-cv-00562</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Village of" fullName="Village of Cobleskill Police Department" lastName="Cobleskill Police Department" role="Defendant"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Loucks" lastName="Loucks" role="Plaintiff"></party>
+ <party firstName="Michael" fullName="Michael O&apos;Brien" lastName="O&apos;Brien" role="Defendant"></party>
+ <party firstName="James" fullName="James Sackett" lastName="Sackett" role="Defendant"></party>
+ <party firstName="County of" fullName="County of Schoharie" lastName="Schoharie" role="Defendant"></party>
+ <party fullName="Schoharie County District Attorney&apos;s Office" lastName="Schoharie County District Attorney&apos;s Office" role="Defendant"></party>
+ <party firstName="Maynard" fullName="Maynard Sullivan III" generation="III" lastName="Sullivan" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_03-cv-00562-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_03-cv-00562/USCOURTS-nynd-1_03-cv-00562-0/mods.xml">
+ <titleInfo>
+  <title>Loucks v. County of Schoharie, et al</title>
+  <subTitle>JUDGMENT/ORDER DISMISSING CASE based on settlement; This action is dismissed with prejudice; The Court retains Jurisdiction to vacate this order and reopen the action if deemed necessary, for 4 months from the date of this order; Signed by Judge Norman A. Mordue on 1/30/06. (kcl, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_03-cv-00562-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813f61af</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_03-cv-00562/USCOURTS-nynd-1_03-cv-00562-0</identifier>
+ <identifier type="former granule identifier">nynd-1_03-cv-00562_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_03-cv-00562/USCOURTS-nynd-1_03-cv-00562-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_03-cv-00562/pdf/USCOURTS-nynd-1_03-cv-00562-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:03-cv-00562; Loucks v. County of Schoharie, et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_03-cv-00562-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-30</dateIssued>
+  <docketText>JUDGMENT/ORDER DISMISSING CASE based on settlement; This action is dismissed with prejudice; The Court retains Jurisdiction to vacate this order and reopen the action if deemed necessary, for 4 months from the date of this order; Signed by Judge Norman A. Mordue on 1/30/06. (kcl, )</docketText>
+</extension>
+</relatedItem>
+</mods>

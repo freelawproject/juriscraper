@@ -1,0 +1,519 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18175f897">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03019</identifier>
+<identifier type="local">P0b002ee18175f897</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_08-cr-03019</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_08-cr-03019</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:08-cr-03019</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Dominick" fullName="Dominick C. Digiorgio" lastName="Digiorgio" middleName="C." role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher G. Digiorgio" lastName="Digiorgio" middleName="G." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Digiorgio et al</title>
+ <partNumber>4:08-cr-03019</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03019/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:08-cr-03019;08-3019</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Dominick C. Digiorgio</displayForm>
+ <namePart type="family">Digiorgio</namePart>
+ <namePart type="given">Dominick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Christopher G. Digiorgio</displayForm>
+ <namePart type="family">Digiorgio</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_08-cr-03019</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:08-cr-03019</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Dominick" fullName="Dominick C. Digiorgio" lastName="Digiorgio" middleName="C." role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher G. Digiorgio" lastName="Digiorgio" middleName="G." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03019-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Digiorgio et al</title>
+  <subTitle>ORDER as to defendant Christopher G. Digiorgio. On the oral motion of defense counsel, and with the agreement of plaintiff&apos;s counsel, it is ordered that the defendant&apos;s detention hearing is scheduled on Monday, March 3, 2008, at 2:00 p.m., before Judge Kopf, in Courtroom No. 1, Robert V. Denney Federal Building and U.S. Courthouse, Lincoln, Nebraska. The defendant shall be present unless excused by the court. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-02-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03019-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0e2e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-0</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03019_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03019/pdf/USCOURTS-ned-4_08-cr-03019-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03019; USA v. Digiorgio et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03019-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-02-27</dateIssued>
+  <docketText>ORDER as to defendant Christopher G. Digiorgio. On the oral motion of defense counsel, and with the agreement of plaintiff&apos;s counsel, it is ordered that the defendant&apos;s detention hearing is scheduled on Monday, March 3, 2008, at 2:00 p.m., before Judge Kopf, in Courtroom No. 1, Robert V. Denney Federal Building and U.S. Courthouse, Lincoln, Nebraska. The defendant shall be present unless excused by the court. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03019-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Digiorgio et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL - Michael J. Hansen appointed as counsel as to defendant Dominick C. Digiorgio as ordered by Magistrate Judge David L. Piester. (SED)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-02-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03019-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0e2a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-1</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03019_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03019/pdf/USCOURTS-ned-4_08-cr-03019-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03019; USA v. Digiorgio et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03019-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-02-28</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - Michael J. Hansen appointed as counsel as to defendant Dominick C. Digiorgio as ordered by Magistrate Judge David L. Piester. (SED)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03019-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Digiorgio et al</title>
+  <subTitle>ORDER that an evidentiary hearing on defendants&apos; Motions to Suppress 18 and 20 will be held before the undersigned on 4/28/08 at 1:00 p.m.; the court has set aside two hours for this hearing; defendants, defendants&apos; counsel, and counsel for the government shall be present at this hearing; trial of this case is continued until further order of the court - ordered by Magistrate Judge David L. Piester. (BMH)ORDER that an evidentiary hearing on defendants&apos; Motions to Suppress 18 and 20 will be held before the undersigned on 4/28/08 at 1:00 p.m.; the court has set aside two hours for this hearing; defendants, defendants&apos; counsel, and counsel for the government shall be present at this hearing; trial of this case is continued until further order of the court - ordered by Magistrate Judge David L. Piester. (BMH)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-03-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03019-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0e27</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-2</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03019_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03019/pdf/USCOURTS-ned-4_08-cr-03019-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03019; USA v. Digiorgio et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03019-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-03-28</dateIssued>
+  <docketText>ORDER that an evidentiary hearing on defendants&apos; Motions to Suppress 18 and 20 will be held before the undersigned on 4/28/08 at 1:00 p.m.; the court has set aside two hours for this hearing; defendants, defendants&apos; counsel, and counsel for the government shall be present at this hearing; trial of this case is continued until further order of the court - ordered by Magistrate Judge David L. Piester. (BMH)ORDER that an evidentiary hearing on defendants&apos; Motions to Suppress 18 and 20 will be held before the undersigned on 4/28/08 at 1:00 p.m.; the court has set aside two hours for this hearing; defendants, defendants&apos; counsel, and counsel for the government shall be present at this hearing; trial of this case is continued until further order of the court - ordered by Magistrate Judge David L. Piester. (BMH)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03019-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Digiorgio et al</title>
+  <subTitle>ORDER granting 23 Motion to Continue Hearing as to Christopher G. Digiorgio(1) and Dominick C. Digiorgio(2). - 1. The government&apos;s unopposed motion to continue the hearing on defendants&apos; motions to suppress, filing 23, is granted. 2. The evidentiary hearing on defendants&apos; motions to suppress, filings 18 and 20, will be held before the undersigned on May 6, 2008 beginning at 2:30 p.m. in Courtroom #2, United States Courthouse, Lincoln, Nebraska. 3. The defendants, defendants&apos; counsel, and counsel for the government shall be present at this hearing. Ordered by Magistrate Judge David L. Piester. (JAB)ORDER granting 23 Motion to Continue Hearing as to Christopher G. Digiorgio(1) and Dominick C. Digiorgio(2). - 1. The government&apos;s unopposed motion to continue the hearing on defendants&apos; motions to suppress, filing 23, is granted. 2. The evidentiary hearing on defendants&apos; motions to suppress, filings 18 and 20, will be held before the undersigned on May 6, 2008 beginning at 2:30 p.m. in Courtroom #2, United States Courthouse, Lincoln, Nebraska. 3. The defendants, defendants&apos; counsel, and counsel for the government shall be present at this hearing. Ordered by Magistrate Judge David L. Piester. (JAB)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-04-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03019-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0e8f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-3</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03019_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03019/pdf/USCOURTS-ned-4_08-cr-03019-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03019; USA v. Digiorgio et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03019-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-04-03</dateIssued>
+  <docketText>ORDER granting 23 Motion to Continue Hearing as to Christopher G. Digiorgio(1) and Dominick C. Digiorgio(2). - 1. The government&apos;s unopposed motion to continue the hearing on defendants&apos; motions to suppress, filing 23, is granted. 2. The evidentiary hearing on defendants&apos; motions to suppress, filings 18 and 20, will be held before the undersigned on May 6, 2008 beginning at 2:30 p.m. in Courtroom #2, United States Courthouse, Lincoln, Nebraska. 3. The defendants, defendants&apos; counsel, and counsel for the government shall be present at this hearing. Ordered by Magistrate Judge David L. Piester. (JAB)ORDER granting 23 Motion to Continue Hearing as to Christopher G. Digiorgio(1) and Dominick C. Digiorgio(2). - 1. The government&apos;s unopposed motion to continue the hearing on defendants&apos; motions to suppress, filing 23, is granted. 2. The evidentiary hearing on defendants&apos; motions to suppress, filings 18 and 20, will be held before the undersigned on May 6, 2008 beginning at 2:30 p.m. in Courtroom #2, United States Courthouse, Lincoln, Nebraska. 3. The defendants, defendants&apos; counsel, and counsel for the government shall be present at this hearing. Ordered by Magistrate Judge David L. Piester. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03019-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Digiorgio et al</title>
+  <subTitle>ORDER granting in part 26 Motion to Transport as to Dominick C. Digiorgio (2). Ordered by Magistrate Judge David L. Piester. (1 Certified copy to USM)(JAB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-04-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03019-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0e93</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-4</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03019_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03019/pdf/USCOURTS-ned-4_08-cr-03019-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03019; USA v. Digiorgio et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03019-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-04-15</dateIssued>
+  <docketText>ORDER granting in part 26 Motion to Transport as to Dominick C. Digiorgio (2). Ordered by Magistrate Judge David L. Piester. (1 Certified copy to USM)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03019-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Digiorgio et al</title>
+  <subTitle>MEMORANDUM AND ORDER regarding Motions to Suppress 18 and 20 as to defendants Christopher G. Digiorgio and Dominick C. Digiorgio. 1. The government is given until May 30, 2008 to file a brief addressing the factual and legal issues raised in defendant Christopher DiGiorgios brief and during the parties&apos; oral argument at the conclusion of the evidentiary hearing. Any issues not briefed by the government as required under this order will be deemed conceded by the government. 2. Defendant Christopher DiGiorgio is given five days thereafter to submit a responsive brief, at which time, his motion will be deemed submitted. Ordered by Magistrate Judge David L. Piester. (JAB)MEMORANDUM AND ORDER regarding Motions to Suppress 18 and 20 as to defendants Christopher G. Digiorgio and Dominick C. Digiorgio. 1. The government is given until May 30, 2008 to file a brief addressing the factual and legal issues raised in defendant Christopher DiGiorgios brief and during the parties&apos; oral argument at the conclusion of the evidentiary hearing. Any issues not briefed by the government as required under this order will be deemed conceded by the government. 2. Defendant Christopher DiGiorgio is given five days thereafter to submit a responsive brief, at which time, his motion will be deemed submitted. Ordered by Magistrate Judge David L. Piester. (JAB)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-05-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03019-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0e92</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-5</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03019_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03019/pdf/USCOURTS-ned-4_08-cr-03019-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03019; USA v. Digiorgio et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03019-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2008-05-23</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding Motions to Suppress 18 and 20 as to defendants Christopher G. Digiorgio and Dominick C. Digiorgio. 1. The government is given until May 30, 2008 to file a brief addressing the factual and legal issues raised in defendant Christopher DiGiorgios brief and during the parties&apos; oral argument at the conclusion of the evidentiary hearing. Any issues not briefed by the government as required under this order will be deemed conceded by the government. 2. Defendant Christopher DiGiorgio is given five days thereafter to submit a responsive brief, at which time, his motion will be deemed submitted. Ordered by Magistrate Judge David L. Piester. (JAB)MEMORANDUM AND ORDER regarding Motions to Suppress 18 and 20 as to defendants Christopher G. Digiorgio and Dominick C. Digiorgio. 1. The government is given until May 30, 2008 to file a brief addressing the factual and legal issues raised in defendant Christopher DiGiorgios brief and during the parties&apos; oral argument at the conclusion of the evidentiary hearing. Any issues not briefed by the government as required under this order will be deemed conceded by the government. 2. Defendant Christopher DiGiorgio is given five days thereafter to submit a responsive brief, at which time, his motion will be deemed submitted. Ordered by Magistrate Judge David L. Piester. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03019-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Digiorgio et al</title>
+  <subTitle>REPORT AND RECOMMENDATION the Honorable Richard G. Kopf,United States District Judge, that: a. Defendant Dominick DiGiorgios motion to suppress, filing 18, be denied. b. Defendant Christopher DiGiorgio&apos;s motion to suppress, filing 20, be denied to extent that it seeks suppression of evidence based on the allegedly illegal traffic stop, and that the motion be granted in all other respects. The parties are notified that a failure to object to this recommendation in accordance with the local rules of practice may be held to be a waiver of any right to appeal the district judge&apos;s adoption of this recommendation. Ordered by Magistrate Judge David L. Piester. (LKL, )REPORT AND RECOMMENDATION the Honorable Richard G. Kopf,United States District Judge, that: a. Defendant Dominick DiGiorgios motion to suppress, filing 18, be denied. b. Defendant Christopher DiGiorgio&apos;s motion to suppress, filing 20, be denied to extent that it seeks suppression of evidence based on the allegedly illegal traffic stop, and that the motion be granted in all other respects. The parties are notified that a failure to object to this recommendation in accordance with the local rules of practice may be held to be a waiver of any right to appeal the district judge&apos;s adoption of this recommendation. Ordered by Magistrate Judge David L. Piester. (LKL, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-06-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03019-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0e2d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-6</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03019_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03019/pdf/USCOURTS-ned-4_08-cr-03019-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03019; USA v. Digiorgio et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03019-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2008-06-19</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION the Honorable Richard G. Kopf,United States District Judge, that: a. Defendant Dominick DiGiorgios motion to suppress, filing 18, be denied. b. Defendant Christopher DiGiorgio&apos;s motion to suppress, filing 20, be denied to extent that it seeks suppression of evidence based on the allegedly illegal traffic stop, and that the motion be granted in all other respects. The parties are notified that a failure to object to this recommendation in accordance with the local rules of practice may be held to be a waiver of any right to appeal the district judge&apos;s adoption of this recommendation. Ordered by Magistrate Judge David L. Piester. (LKL, )REPORT AND RECOMMENDATION the Honorable Richard G. Kopf,United States District Judge, that: a. Defendant Dominick DiGiorgios motion to suppress, filing 18, be denied. b. Defendant Christopher DiGiorgio&apos;s motion to suppress, filing 20, be denied to extent that it seeks suppression of evidence based on the allegedly illegal traffic stop, and that the motion be granted in all other respects. The parties are notified that a failure to object to this recommendation in accordance with the local rules of practice may be held to be a waiver of any right to appeal the district judge&apos;s adoption of this recommendation. Ordered by Magistrate Judge David L. Piester. (LKL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03019-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Digiorgio et al</title>
+  <subTitle>ORDER as to Christopher G. Digiorgio and Dominick C. Digiorgio. It is ordered that: (1) The report and recommendation 42 is adopted. The objections 43 and 46 are denied. (2) Dominick DiGiorgio&apos;s motion 18 to suppress is denied. (3) Christopher C. DiGiorgio&apos;s motion 20 to suppress is granted. Ordered by Judge Richard G. Kopf. ( KLL, )ORDER as to Christopher G. Digiorgio and Dominick C. Digiorgio. It is ordered that: (1) The report and recommendation 42 is adopted. The objections 43 and 46 are denied. (2) Dominick DiGiorgio&apos;s motion 18 to suppress is denied. (3) Christopher C. DiGiorgio&apos;s motion 20 to suppress is granted. Ordered by Judge Richard G. Kopf. ( KLL, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03019-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0e91</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-7</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03019_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03019/pdf/USCOURTS-ned-4_08-cr-03019-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03019; USA v. Digiorgio et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03019-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2008-07-11</dateIssued>
+  <docketText>ORDER as to Christopher G. Digiorgio and Dominick C. Digiorgio. It is ordered that: (1) The report and recommendation 42 is adopted. The objections 43 and 46 are denied. (2) Dominick DiGiorgio&apos;s motion 18 to suppress is denied. (3) Christopher C. DiGiorgio&apos;s motion 20 to suppress is granted. Ordered by Judge Richard G. Kopf. ( KLL, )ORDER as to Christopher G. Digiorgio and Dominick C. Digiorgio. It is ordered that: (1) The report and recommendation 42 is adopted. The objections 43 and 46 are denied. (2) Dominick DiGiorgio&apos;s motion 18 to suppress is denied. (3) Christopher C. DiGiorgio&apos;s motion 20 to suppress is granted. Ordered by Judge Richard G. Kopf. ( KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03019-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Digiorgio et al</title>
+  <subTitle>ORDER granting 48 Motion for New Trial as to Christopher G. Digiorgio (1), and Dominick C. Digiorgio (2). Trial is set for 9:00 a.m., September 22, 2008, before the Honorable Richard G. Kopf in Courtroom 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The time between August 20, 2008 and September 22, 2008 shall be deemed excludable time in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge David L. Piester. (LKL)ORDER granting 48 Motion for New Trial as to Christopher G. Digiorgio (1), and Dominick C. Digiorgio (2). Trial is set for 9:00 a.m., September 22, 2008, before the Honorable Richard G. Kopf in Courtroom 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The time between August 20, 2008 and September 22, 2008 shall be deemed excludable time in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge David L. Piester. (LKL)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03019-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0e2b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-8</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03019_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03019/pdf/USCOURTS-ned-4_08-cr-03019-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03019; USA v. Digiorgio et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03019-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2008-08-20</dateIssued>
+  <docketText>ORDER granting 48 Motion for New Trial as to Christopher G. Digiorgio (1), and Dominick C. Digiorgio (2). Trial is set for 9:00 a.m., September 22, 2008, before the Honorable Richard G. Kopf in Courtroom 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The time between August 20, 2008 and September 22, 2008 shall be deemed excludable time in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge David L. Piester. (LKL)ORDER granting 48 Motion for New Trial as to Christopher G. Digiorgio (1), and Dominick C. Digiorgio (2). Trial is set for 9:00 a.m., September 22, 2008, before the Honorable Richard G. Kopf in Courtroom 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The time between August 20, 2008 and September 22, 2008 shall be deemed excludable time in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge David L. Piester. (LKL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03019-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Digiorgio et al</title>
+  <subTitle>ORDER granting 65 Motion to Dismiss Criminal Case as to Christopher G. Digiorgio (1). Ordered by Judge Richard G. Kopf. (LKL)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-09-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03019-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0e28</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-9</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03019_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03019/pdf/USCOURTS-ned-4_08-cr-03019-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03019; USA v. Digiorgio et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03019-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2008-09-18</dateIssued>
+  <docketText>ORDER granting 65 Motion to Dismiss Criminal Case as to Christopher G. Digiorgio (1). Ordered by Judge Richard G. Kopf. (LKL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03019-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Digiorgio et al</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report as to defendant Dominick C. Digiorgio. It is ordered that:... (2) The defendant&apos;s objection to lack of safety-valve 70 will be resolved at sentencing.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03019-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0e2c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-10</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03019_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03019/pdf/USCOURTS-ned-4_08-cr-03019-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03019; USA v. Digiorgio et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03019-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2008-11-18</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report as to defendant Dominick C. Digiorgio. It is ordered that:... (2) The defendant&apos;s objection to lack of safety-valve 70 will be resolved at sentencing.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03019-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Digiorgio et al</title>
+  <subTitle>ORDER as to defendant Dominick C. Digiorgio. It is ordered that: (1) The defendant&apos;s unopposed motion to continue sentencing hearing 73 is granted; (2) Sentencing is rescheduled to 12/18/2008 at 12:30 PM before Judge Kopf. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03019-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0e90</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-11</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03019_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03019/pdf/USCOURTS-ned-4_08-cr-03019-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03019; USA v. Digiorgio et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03019-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2008-12-01</dateIssued>
+  <docketText>ORDER as to defendant Dominick C. Digiorgio. It is ordered that: (1) The defendant&apos;s unopposed motion to continue sentencing hearing 73 is granted; (2) Sentencing is rescheduled to 12/18/2008 at 12:30 PM before Judge Kopf. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03019-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Digiorgio et al</title>
+  <subTitle>JUDGMENT as to defendant Dominick C. Digiorgio (2). Defendant pleaded guilty to count I of the Indictment and is committed to the Bureau of Prisons for a term of 120 months; 5 years supervised release with special conditions; $100 Special Assessment. Ordered by Judge Richard G. Kopf. (4 Certified copies to USM)(JAB)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03019-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0e2f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-12</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03019_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03019/pdf/USCOURTS-ned-4_08-cr-03019-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03019; USA v. Digiorgio et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03019-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2008-12-19</dateIssued>
+  <docketText>JUDGMENT as to defendant Dominick C. Digiorgio (2). Defendant pleaded guilty to count I of the Indictment and is committed to the Bureau of Prisons for a term of 120 months; 5 years supervised release with special conditions; $100 Special Assessment. Ordered by Judge Richard G. Kopf. (4 Certified copies to USM)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03019-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Digiorgio et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 85 Motion to Vacate (2255) as to Dominick C. Digiorgio (2). A separate judgment will be issued. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(GJG) Civil Case 4:09-cv-03253-RGK closed.</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03019-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0e29</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-13</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03019_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03019/USCOURTS-ned-4_08-cr-03019-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03019/pdf/USCOURTS-ned-4_08-cr-03019-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03019; USA v. Digiorgio et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03019-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2010-01-13</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 85 Motion to Vacate (2255) as to Dominick C. Digiorgio (2). A separate judgment will be issued. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(GJG) Civil Case 4:09-cv-03253-RGK closed.</docketText>
+</extension>
+</relatedItem>
+</mods>

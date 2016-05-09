@@ -1,0 +1,320 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a31c67d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-11-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-11-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00099</identifier>
+<identifier type="local">P0b002ee18a31c67d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-11-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-11-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_13-cv-00099</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-00099</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-00099</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <cause>42:405 Review of HHS Decision (DIWC)</cause>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Stephanie" fullName="Stephanie Arlene Tsouvas" lastName="Tsouvas" middleName="Arlene" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(SS) Tsouvas v. Commissioner of Social Security</title>
+ <partNumber>2:13-cv-00099</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00099/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-00099;13-099</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Commissioner of Social Security</displayForm>
+ <namePart type="family">Commissioner of Social Security</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Stephanie Arlene Tsouvas</displayForm>
+ <namePart type="family">Tsouvas</namePart>
+ <namePart type="given">Stephanie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-00099</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-00099</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <cause>42:405 Review of HHS Decision (DIWC)</cause>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Stephanie" fullName="Stephanie Arlene Tsouvas" lastName="Tsouvas" middleName="Arlene" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-00099-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-0/mods.xml">
+ <titleInfo>
+  <title>(SS) Tsouvas v. Commissioner of Social Security</title>
+  <subTitle>&amp; (B). The Marshal shall also send a copy of the summons and complaint by registered or certified mail to the Commissioner of Social Security. (Meuleman, A) Modified on 1/23/2013 (cc: USM) (Meuleman, A).ORDER signed by Magistrate Judge Allison Claire on 1/22/13 GRANTING 2 Motion to Proceed IFP. The Clerk of the Court is DIRECTED to serve the undersigned&apos;s scheduling order in social security cases. The Clerk of the Court is FURTHER DIRECTED to serve a copy of this order on the United States Marshal. Within 15 days from the date of this order, plaintiff shall submit to the U.S. Marshal a completed summons and copies of the complaint and file a statement with the court that said documents have been submitted to the U.S. Marshal. The U.S. Marshal is DIRECTED to serve all process without prepayment of costs not later than 60 days from the date of this order. Service of process shall be completed by delivering a copy of the summons and complaint to the United States Attorney for the Eastern District of California, and by sending a copy of the summons and complaint by registered or certified mail to the Attorney General of the United States at Washington, D.C. See FRCP 4(i)(1)(A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00099/pdf/USCOURTS-caed-2_13-cv-00099-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a38c623</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-0</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-00099_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00099/pdf/USCOURTS-caed-2_13-cv-00099-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00099; (SS) Tsouvas v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-00099-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-23</dateIssued>
+  <docketText>&amp; (B). The Marshal shall also send a copy of the summons and complaint by registered or certified mail to the Commissioner of Social Security. (Meuleman, A) Modified on 1/23/2013 (cc: USM) (Meuleman, A).ORDER signed by Magistrate Judge Allison Claire on 1/22/13 GRANTING 2 Motion to Proceed IFP. The Clerk of the Court is DIRECTED to serve the undersigned&apos;s scheduling order in social security cases. The Clerk of the Court is FURTHER DIRECTED to serve a copy of this order on the United States Marshal. Within 15 days from the date of this order, plaintiff shall submit to the U.S. Marshal a completed summons and copies of the complaint and file a statement with the court that said documents have been submitted to the U.S. Marshal. The U.S. Marshal is DIRECTED to serve all process without prepayment of costs not later than 60 days from the date of this order. Service of process shall be completed by delivering a copy of the summons and complaint to the United States Attorney for the Eastern District of California, and by sending a copy of the summons and complaint by registered or certified mail to the Attorney General of the United States at Washington, D.C. See FRCP 4(i)(1)(A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-00099-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-1/mods.xml">
+ <titleInfo>
+  <title>(SS) Tsouvas v. Commissioner of Social Security</title>
+  <subTitle>ORDER signed by Magistrate Judge Allison Claire on 8/7/13 EXTENDING Plaintiff&apos;s time to file a Motion for Summary Judgment on or before 9/16/13. (Meuleman, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00099/pdf/USCOURTS-caed-2_13-cv-00099-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a38c624</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-1</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-00099_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00099/pdf/USCOURTS-caed-2_13-cv-00099-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00099; (SS) Tsouvas v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-00099-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-08-08</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Allison Claire on 8/7/13 EXTENDING Plaintiff&apos;s time to file a Motion for Summary Judgment on or before 9/16/13. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-00099-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-2/mods.xml">
+ <titleInfo>
+  <title>(SS) Tsouvas v. Commissioner of Social Security</title>
+  <subTitle>ORDER signed by Magistrate Judge Allison Claire on 10/1/13 GRANTING 18 Motion to Stay. Case Management Deadline: 4/3/2014. (Meuleman, A)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00099/pdf/USCOURTS-caed-2_13-cv-00099-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a38c621</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-2</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-00099_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00099/pdf/USCOURTS-caed-2_13-cv-00099-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00099; (SS) Tsouvas v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-00099-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-10-02</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Allison Claire on 10/1/13 GRANTING 18 Motion to Stay. Case Management Deadline: 4/3/2014. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-00099-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-3/mods.xml">
+ <titleInfo>
+  <title>(SS) Tsouvas v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION and ORDER re: 22 signed by Magistrate Judge Allison Claire on 12/3/13 EXTENDING briefing schedule. (Meuleman, A)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00099/pdf/USCOURTS-caed-2_13-cv-00099-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a38c620</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-3</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-00099_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00099/pdf/USCOURTS-caed-2_13-cv-00099-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00099; (SS) Tsouvas v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-00099-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-12-04</dateIssued>
+  <docketText>STIPULATION and ORDER re: 22 signed by Magistrate Judge Allison Claire on 12/3/13 EXTENDING briefing schedule. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-00099-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-4/mods.xml">
+ <titleInfo>
+  <title>(SS) Tsouvas v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Allison Claire on 1/6/13 ORDERING that Plaintiff shall file her Reply to Defendant&apos;s Cross Motion for Summary Judgment 24 on or before 1/20/2014. (Mena-Sanchez, L)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00099/pdf/USCOURTS-caed-2_13-cv-00099-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a38c625</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-4</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-00099_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00099/pdf/USCOURTS-caed-2_13-cv-00099-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00099; (SS) Tsouvas v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-00099-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Allison Claire on 1/6/13 ORDERING that Plaintiff shall file her Reply to Defendant&apos;s Cross Motion for Summary Judgment 24 on or before 1/20/2014. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-00099-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-5/mods.xml">
+ <titleInfo>
+  <title>(SS) Tsouvas v. Commissioner of Social Security</title>
+  <subTitle>ORDER signed by Magistrate Judge Allison Claire on 8/15/14 GRANTING in part Plaintiff&apos;s 17 Motion for Summary Judgment, DENYING the Commissioner&apos;s 24 Cross-Motion for Summary Judgment and REMANDING CASE for further proceedings consistent with this order. CASE CLOSED. (Manzer, C)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00099/pdf/USCOURTS-caed-2_13-cv-00099-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a38c622</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-5</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-00099_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00099/pdf/USCOURTS-caed-2_13-cv-00099-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00099; (SS) Tsouvas v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-00099-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-08-15</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Allison Claire on 8/15/14 GRANTING in part Plaintiff&apos;s 17 Motion for Summary Judgment, DENYING the Commissioner&apos;s 24 Cross-Motion for Summary Judgment and REMANDING CASE for further proceedings consistent with this order. CASE CLOSED. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-00099-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-6/mods.xml">
+ <titleInfo>
+  <title>(SS) Tsouvas v. Commissioner of Social Security</title>
+  <subTitle>ORDER signed by Magistrate Judge Allison Claire on 11/12/2014 ORDERING 31 that Plaintiff is awarded attorney fees under the Equal Access To Justice Act, 28:2412(d), in the amount of $6,000.00.(Reader, L)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00099/pdf/USCOURTS-caed-2_13-cv-00099-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a38c626</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-6</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-00099_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00099/USCOURTS-caed-2_13-cv-00099-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00099/pdf/USCOURTS-caed-2_13-cv-00099-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00099; (SS) Tsouvas v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-00099-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-11-13</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Allison Claire on 11/12/2014 ORDERING 31 that Plaintiff is awarded attorney fees under the Equal Access To Justice Act, 28:2412(d), in the amount of $6,000.00.(Reader, L)</docketText>
+</extension>
+</relatedItem>
+</mods>

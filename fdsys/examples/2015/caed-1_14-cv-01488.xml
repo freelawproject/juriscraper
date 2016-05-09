@@ -1,0 +1,357 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18ba85844">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-03-10</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-03-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01488</identifier>
+<identifier type="local">P0b002ee18ba85844</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-03-10</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-03-10</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_14-cv-01488</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-01488</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-01488</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Troy" fullName="Troy Leon Clowers Jr." generation="Jr." lastName="Clowers" middleName="Leon" role="Plaintiff"></party>
+ <party fullName="Fresno County Sheriff&apos;s Office, Jail Division" lastName="Fresno County Sheriff&apos;s Office, Jail Division" role="Defendant"></party>
+ <party firstName="Margaret" fullName="Margaret Mims" lastName="Mims" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Clowers v. Mims et al</title>
+ <partNumber>1:14-cv-01488</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01488/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cv-01488;14-1488</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Troy Leon Clowers Jr.</displayForm>
+ <namePart type="family">Clowers</namePart>
+ <namePart type="given">Troy</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Fresno County Sheriff&apos;s Office, Jail Division</displayForm>
+ <namePart type="family">Fresno County Sheriff&apos;s Office, Jail Division</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Margaret Mims</displayForm>
+ <namePart type="family">Mims</namePart>
+ <namePart type="given">Margaret</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-01488</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-01488</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Troy" fullName="Troy Leon Clowers Jr." generation="Jr." lastName="Clowers" middleName="Leon" role="Plaintiff"></party>
+ <party fullName="Fresno County Sheriff&apos;s Office, Jail Division" lastName="Fresno County Sheriff&apos;s Office, Jail Division" role="Defendant"></party>
+ <party firstName="Margaret" fullName="Margaret Mims" lastName="Mims" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01488-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Clowers v. Mims et al</title>
+  <subTitle>ORDER STRIKING 1 COMPLAINT for Lack of Signature and ORDER for Plaintiff to File an Amended Complaint Bearing His Signature Within Thirty (30) Days, signed by Magistrate Judge Gary S. Austin on 9/25/2014. (Attachments: # (1) 1983 Complaint Form). (Jessen, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01488/pdf/USCOURTS-caed-1_14-cv-01488-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ba8de00</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-0</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01488_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01488/pdf/USCOURTS-caed-1_14-cv-01488-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01488; (PC) Clowers v. Mims et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01488-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-09-25</dateIssued>
+  <docketText>ORDER STRIKING 1 COMPLAINT for Lack of Signature and ORDER for Plaintiff to File an Amended Complaint Bearing His Signature Within Thirty (30) Days, signed by Magistrate Judge Gary S. Austin on 9/25/2014. (Attachments: # (1) 1983 Complaint Form). (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01488-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Clowers v. Mims et al</title>
+  <subTitle>ORDER TO SUBMIT Application to Proceed In Forma Pauperis OR Pay Filing Fee Within 45 Days, signed by Magistrate Judge Gary S. Austin on 9/26/2014. (Attachments: # (1) IFP Application). (Jessen, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01488/pdf/USCOURTS-caed-1_14-cv-01488-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ba8de02</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-1</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01488_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01488/pdf/USCOURTS-caed-1_14-cv-01488-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01488; (PC) Clowers v. Mims et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01488-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-09-26</dateIssued>
+  <docketText>ORDER TO SUBMIT Application to Proceed In Forma Pauperis OR Pay Filing Fee Within 45 Days, signed by Magistrate Judge Gary S. Austin on 9/26/2014. (Attachments: # (1) IFP Application). (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01488-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Clowers v. Mims et al</title>
+  <subTitle>ORDER Granting 7 Motion to Proceed in Forma Pauperis and ORDER Directing Payment of Inmate Filing Fee by Fresno County Sheriff, signed by Magistrate Judge Gary S. Austin on 10/21/14. (Attachments: # (1) IFP Motion) (Verduzco, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01488/pdf/USCOURTS-caed-1_14-cv-01488-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ba8de04</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-2</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01488_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01488/pdf/USCOURTS-caed-1_14-cv-01488-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01488; (PC) Clowers v. Mims et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01488-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-10-21</dateIssued>
+  <docketText>ORDER Granting 7 Motion to Proceed in Forma Pauperis and ORDER Directing Payment of Inmate Filing Fee by Fresno County Sheriff, signed by Magistrate Judge Gary S. Austin on 10/21/14. (Attachments: # (1) IFP Motion) (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01488-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Clowers v. Mims et al</title>
+  <subTitle>ORDER DISREGARDING Motion to Proceed in Forma Pauperis as Moot 11, signed by Magistrate Judge Gary S. Austin on 11/6/14. (Hellings, J)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01488/pdf/USCOURTS-caed-1_14-cv-01488-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ba8de01</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-3</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01488_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01488/pdf/USCOURTS-caed-1_14-cv-01488-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01488; (PC) Clowers v. Mims et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01488-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-11-06</dateIssued>
+  <docketText>ORDER DISREGARDING Motion to Proceed in Forma Pauperis as Moot 11, signed by Magistrate Judge Gary S. Austin on 11/6/14. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01488-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Clowers v. Mims et al</title>
+  <subTitle>***VACATED per Order 19*** FINDINGS and RECOMMENDATIONS to Dismiss Case for Failure to Obey Court Orders 2, 13, signed by Magistrate Judge Gary S. Austin on 1/4/15: Objections, if any, due in twenty (20) Days. (Hellings, J)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01488/pdf/USCOURTS-caed-1_14-cv-01488-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ba8ddfe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-4</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01488_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01488/pdf/USCOURTS-caed-1_14-cv-01488-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01488; (PC) Clowers v. Mims et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01488-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>***VACATED per Order 19*** FINDINGS and RECOMMENDATIONS to Dismiss Case for Failure to Obey Court Orders 2, 13, signed by Magistrate Judge Gary S. Austin on 1/4/15: Objections, if any, due in twenty (20) Days. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01488-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Clowers v. Mims et al</title>
+  <subTitle>ORDER Vacating 15 Findings and Recommendations of January 5, 2015, signed by Magistrate Judge Gary S. Austin on 1/29/15. (Verduzco, M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01488/pdf/USCOURTS-caed-1_14-cv-01488-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ba8ddff</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-5</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01488_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01488/pdf/USCOURTS-caed-1_14-cv-01488-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01488; (PC) Clowers v. Mims et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01488-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2015-01-29</dateIssued>
+  <docketText>ORDER Vacating 15 Findings and Recommendations of January 5, 2015, signed by Magistrate Judge Gary S. Austin on 1/29/15. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01488-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Clowers v. Mims et al</title>
+  <subTitle>ORDER DISMISSING COMPLAINT WITH LEAVE TO AMEND signed by Magistrate Judge Gary S. Austin on 2/5/2015. Amended Complaint due by 3/12/2015. (Attachments: # (1) Complaint Form)(Lundstrom, T)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01488/pdf/USCOURTS-caed-1_14-cv-01488-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ba8ddfd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-6</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01488_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01488/pdf/USCOURTS-caed-1_14-cv-01488-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01488; (PC) Clowers v. Mims et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01488-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2015-02-05</dateIssued>
+  <docketText>ORDER DISMISSING COMPLAINT WITH LEAVE TO AMEND signed by Magistrate Judge Gary S. Austin on 2/5/2015. Amended Complaint due by 3/12/2015. (Attachments: # (1) Complaint Form)(Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01488-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Clowers v. Mims et al</title>
+  <subTitle>FINDINGS and RECOMMENDATION That This Action be Dismissed for Failure to State a Claim Upon Which Relief Could be Granted, signed by Magistrate Judge Gary S. Austin on 3/9/2015, referred to Judge Ishii. Objections to F&amp;R Due Within Twenty Days. (Marrujo, C)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01488/pdf/USCOURTS-caed-1_14-cv-01488-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ba8de03</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-7</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01488_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01488/USCOURTS-caed-1_14-cv-01488-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01488/pdf/USCOURTS-caed-1_14-cv-01488-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01488; (PC) Clowers v. Mims et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01488-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2015-03-09</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATION That This Action be Dismissed for Failure to State a Claim Upon Which Relief Could be Granted, signed by Magistrate Judge Gary S. Austin on 3/9/2015, referred to Judge Ishii. Objections to F&amp;R Due Within Twenty Days. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+</mods>

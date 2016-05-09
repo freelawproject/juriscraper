@@ -3,6 +3,7 @@ CourtID: acca
 Reviewer: None
 History:
   2015-01-08: Created by mlr
+  2016-03-17: Website appears to be dead. Scraper disabled in __init__.py.
 """
 
 from datetime import datetime

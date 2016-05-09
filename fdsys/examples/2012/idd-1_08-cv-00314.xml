@@ -1,0 +1,187 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18171f35f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Idaho</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-11</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-cv-00314</identifier>
+<identifier type="local">P0b002ee18171f35f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-11</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-11</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-idd-1_08-cv-00314</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-1_08-cv-00314</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>1:08-cv-00314</caseNumber>
+ <caseOffice>Boise - Southern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="John" fullName="John Hardison" lastName="Hardison" role="Respondent"></party>
+ <party firstName="Dennis" fullName="Dennis Ray Hugill" lastName="Hugill" middleName="Ray" role="Petitioner"></party>
+ <party firstName="Johanna" fullName="Johanna Smith" lastName="Smith" role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Hugill v. Smith</title>
+ <partNumber>1:08-cv-00314</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-cv-00314/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-cv-00314;08-314</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Idaho</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Boise - Southern</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>John Hardison</displayForm>
+ <namePart type="family">Hardison</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Dennis Ray Hugill</displayForm>
+ <namePart type="family">Hugill</namePart>
+ <namePart type="given">Dennis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Johanna Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Johanna</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-1_08-cv-00314</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>1:08-cv-00314</caseNumber>
+ <caseOffice>Boise - Southern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="John" fullName="John Hardison" lastName="Hardison" role="Respondent"></party>
+ <party firstName="Dennis" fullName="Dennis Ray Hugill" lastName="Hugill" middleName="Ray" role="Petitioner"></party>
+ <party firstName="Johanna" fullName="Johanna Smith" lastName="Smith" role="Respondent"></party>
+ <state>Idaho</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_08-cv-00314-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00314/USCOURTS-idd-1_08-cv-00314-0/mods.xml">
+ <titleInfo>
+  <title>Hugill v. Smith</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER granting in part and conditionally denying in part 36 Motion to Dismiss; granting in part and denying in part 38 Objection to Incomplete Lodged Record. The Clerk of Court shall provide Petitioner with a copy of the state court record already lodged. Petitioner shall have 30 days after receipt of the copy of the new state court records provided to him by Respondent in which to file a response. Failure to file anything further will result in dismissal of this case on procedural default grounds and entry of a final judgment. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by cjm)(mailed state court record A-1 to A-3; B-1 to B-9; and C-1 to C-7 with this order by cjm)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_08-cv-00314-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18171f214</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00314/USCOURTS-idd-1_08-cv-00314-0</identifier>
+ <identifier type="former granule identifier">idd-1_08-cv-00314_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00314/USCOURTS-idd-1_08-cv-00314-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-cv-00314/pdf/USCOURTS-idd-1_08-cv-00314-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00314; Hugill v. Smith; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_08-cv-00314-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-03-10</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER granting in part and conditionally denying in part 36 Motion to Dismiss; granting in part and denying in part 38 Objection to Incomplete Lodged Record. The Clerk of Court shall provide Petitioner with a copy of the state court record already lodged. Petitioner shall have 30 days after receipt of the copy of the new state court records provided to him by Respondent in which to file a response. Failure to file anything further will result in dismissal of this case on procedural default grounds and entry of a final judgment. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by cjm)(mailed state court record A-1 to A-3; B-1 to B-9; and C-1 to C-7 with this order by cjm)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_08-cv-00314-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00314/USCOURTS-idd-1_08-cv-00314-1/mods.xml">
+ <titleInfo>
+  <title>Hugill v. Smith</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER granting 36 Motion to Dismiss; granting 46 Motion for Extension of Time to File Response; denying 50 Motion to Refile an Appeal to the Supreme Court; denying 51 Motion for Certificate of Appealability (Notice sent to 9th Cir). The Response 49 has been filed and is considered timely. The Court will not grant a Certificate of Appealability in this case. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by cjm)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_08-cv-00314-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18171f215</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00314/USCOURTS-idd-1_08-cv-00314-1</identifier>
+ <identifier type="former granule identifier">idd-1_08-cv-00314_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00314/USCOURTS-idd-1_08-cv-00314-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-cv-00314/pdf/USCOURTS-idd-1_08-cv-00314-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00314; Hugill v. Smith; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_08-cv-00314-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-10</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER granting 36 Motion to Dismiss; granting 46 Motion for Extension of Time to File Response; denying 50 Motion to Refile an Appeal to the Supreme Court; denying 51 Motion for Certificate of Appealability (Notice sent to 9th Cir). The Response 49 has been filed and is considered timely. The Court will not grant a Certificate of Appealability in this case. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by cjm)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,475 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18d550018">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Louisiana</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-08-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-08-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-02792</identifier>
+<identifier type="local">P0b002ee18d550018</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-08-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-08-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-laed-2_13-cv-02792</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-laed-2_13-cv-02792</accessId>
+ <courtType>District</courtType>
+ <courtCode>laed</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Louisiana</courtState>
+ <courtSortOrder>2211</courtSortOrder>
+ <caseNumber>2:13-cv-02792</caseNumber>
+ <caseOffice>New Orleans</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Keith" fullName="Keith Bickham" lastName="Bickham" role="Consol Defendant"></party>
+ <party firstName="Keith" fullName="Keith Bickham" lastName="Bickham" role="Defendant"></party>
+ <party firstName="Wilfred" fullName="Wilfred Guy Sr." generation="Sr." lastName="Guy" role="Consol Plaintiff"></party>
+ <party firstName="Wilfred" fullName="Wilfred Guy Sr." generation="Sr." lastName="Guy" role="Plaintiff"></party>
+ <party firstName="Beverly" fullName="Beverly T. Kelly" lastName="Kelly" middleName="T." role="Consol Defendant"></party>
+ <party firstName="Beverly" fullName="Beverly T. Kelly" lastName="Kelly" middleName="T." role="Defendant"></party>
+ <party firstName="James" fullName="James M LeBlanc" lastName="LeBlanc" middleName="M" role="Defendant"></party>
+ <party firstName="Coleman" fullName="Coleman Polk" lastName="Polk" role="Consol Defendant"></party>
+ <party firstName="Coleman" fullName="Coleman Polk" lastName="Polk" role="Defendant"></party>
+ <party firstName="Ronnie" fullName="Ronnie Spears" lastName="Spears" role="Consol Defendant"></party>
+ <party firstName="Ronnie" fullName="Ronnie Spears" lastName="Spears" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert C Tanner" lastName="Tanner" middleName="C" role="Consol Defendant"></party>
+ <party firstName="Robert" fullName="Robert C Tanner" lastName="Tanner" middleName="C" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Guy v. LeBlanc et al</title>
+ <partNumber>2:13-cv-02792</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-02792/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-02792;13-2792</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Louisiana</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>New Orleans</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Keith Bickham</displayForm>
+ <namePart type="family">Bickham</namePart>
+ <namePart type="given">Keith</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Consol Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Keith Bickham</displayForm>
+ <namePart type="family">Bickham</namePart>
+ <namePart type="given">Keith</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wilfred Guy Sr.</displayForm>
+ <namePart type="family">Guy</namePart>
+ <namePart type="given">Wilfred</namePart>
+ <namePart type="termsOfAddress">Sr.</namePart>
+ <description>Consol Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Wilfred Guy Sr.</displayForm>
+ <namePart type="family">Guy</namePart>
+ <namePart type="given">Wilfred</namePart>
+ <namePart type="termsOfAddress">Sr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Beverly T. Kelly</displayForm>
+ <namePart type="family">Kelly</namePart>
+ <namePart type="given">Beverly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Consol Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Beverly T. Kelly</displayForm>
+ <namePart type="family">Kelly</namePart>
+ <namePart type="given">Beverly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James M LeBlanc</displayForm>
+ <namePart type="family">LeBlanc</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Coleman Polk</displayForm>
+ <namePart type="family">Polk</namePart>
+ <namePart type="given">Coleman</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Consol Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Coleman Polk</displayForm>
+ <namePart type="family">Polk</namePart>
+ <namePart type="given">Coleman</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ronnie Spears</displayForm>
+ <namePart type="family">Spears</namePart>
+ <namePart type="given">Ronnie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Consol Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ronnie Spears</displayForm>
+ <namePart type="family">Spears</namePart>
+ <namePart type="given">Ronnie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert C Tanner</displayForm>
+ <namePart type="family">Tanner</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Consol Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert C Tanner</displayForm>
+ <namePart type="family">Tanner</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-laed-2_13-cv-02792</accessId>
+ <courtType>District</courtType>
+ <courtCode>laed</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Louisiana</courtState>
+ <courtSortOrder>2211</courtSortOrder>
+ <caseNumber>2:13-cv-02792</caseNumber>
+ <caseOffice>New Orleans</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Keith" fullName="Keith Bickham" lastName="Bickham" role="Consol Defendant"></party>
+ <party firstName="Keith" fullName="Keith Bickham" lastName="Bickham" role="Defendant"></party>
+ <party firstName="Wilfred" fullName="Wilfred Guy Sr." generation="Sr." lastName="Guy" role="Consol Plaintiff"></party>
+ <party firstName="Wilfred" fullName="Wilfred Guy Sr." generation="Sr." lastName="Guy" role="Plaintiff"></party>
+ <party firstName="Beverly" fullName="Beverly T. Kelly" lastName="Kelly" middleName="T." role="Consol Defendant"></party>
+ <party firstName="Beverly" fullName="Beverly T. Kelly" lastName="Kelly" middleName="T." role="Defendant"></party>
+ <party firstName="James" fullName="James M LeBlanc" lastName="LeBlanc" middleName="M" role="Defendant"></party>
+ <party firstName="Coleman" fullName="Coleman Polk" lastName="Polk" role="Consol Defendant"></party>
+ <party firstName="Coleman" fullName="Coleman Polk" lastName="Polk" role="Defendant"></party>
+ <party firstName="Ronnie" fullName="Ronnie Spears" lastName="Spears" role="Consol Defendant"></party>
+ <party firstName="Ronnie" fullName="Ronnie Spears" lastName="Spears" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert C Tanner" lastName="Tanner" middleName="C" role="Consol Defendant"></party>
+ <party firstName="Robert" fullName="Robert C Tanner" lastName="Tanner" middleName="C" role="Defendant"></party>
+ <state>Louisiana</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_13-cv-02792-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-0/mods.xml">
+ <titleInfo>
+  <title>Guy v. LeBlanc et al</title>
+  <subTitle>PARTIAL REPORT AND RECOMMENDATIONS re 1 Complaint filed by Wilfred Guy, Sr. RECOMMENDED that Plaintiff, 42 U.S.C. §1983 claims against defendants, Robert C. Tanner, Warden of BB Sixty Rayburn Correctional Center; Coleman Polk, Sergeant of the BB Sixty Rayburn Correctional Center; Sergeant Ronnie Spears; Keith Bickham, Deputy Warden; and James LeBlanc, Secretary of the Department ofCorrections be DISMISSED WITH PREJUDICE. FURTHER RECOMMENDED that §1983 claim against Executive Staff Officer, Beverly T. Kelly, of the BB Sixty Rayburn Correctional Center should be allowed to proceed forward as it is cognizable. Objections to R&amp;R due by 1/29/2014. Signed by Magistrate Judge Karen Wells Roby.(Reference: All Cases)(cml, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-02792/pdf/USCOURTS-laed-2_13-cv-02792-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d566a89</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-0</identifier>
+ <identifier type="former granule identifier">laed-2_13-cv-02792_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-02792/pdf/USCOURTS-laed-2_13-cv-02792-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02792; Guy v. LeBlanc et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_13-cv-02792-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-15</dateIssued>
+  <docketText>PARTIAL REPORT AND RECOMMENDATIONS re 1 Complaint filed by Wilfred Guy, Sr. RECOMMENDED that Plaintiff, 42 U.S.C. §1983 claims against defendants, Robert C. Tanner, Warden of BB Sixty Rayburn Correctional Center; Coleman Polk, Sergeant of the BB Sixty Rayburn Correctional Center; Sergeant Ronnie Spears; Keith Bickham, Deputy Warden; and James LeBlanc, Secretary of the Department ofCorrections be DISMISSED WITH PREJUDICE. FURTHER RECOMMENDED that §1983 claim against Executive Staff Officer, Beverly T. Kelly, of the BB Sixty Rayburn Correctional Center should be allowed to proceed forward as it is cognizable. Objections to R&amp;R due by 1/29/2014. Signed by Magistrate Judge Karen Wells Roby.(Reference: All Cases)(cml, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_13-cv-02792-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-1/mods.xml">
+ <titleInfo>
+  <title>Guy v. LeBlanc et al</title>
+  <subTitle>ORDER &amp; REASONS : ORDERED that 37 Motion for Preliminary Injunction &amp;Temporary Restraining Order is DENIED. Signed by Magistrate Judge Karen Wells Roby on 6/23/2014. (Reference: All Cases)(cml)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-02792/pdf/USCOURTS-laed-2_13-cv-02792-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d566a88</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-1</identifier>
+ <identifier type="former granule identifier">laed-2_13-cv-02792_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-02792/pdf/USCOURTS-laed-2_13-cv-02792-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02792; Guy v. LeBlanc et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_13-cv-02792-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-06-23</dateIssued>
+  <docketText>ORDER &amp; REASONS : ORDERED that 37 Motion for Preliminary Injunction &amp;Temporary Restraining Order is DENIED. Signed by Magistrate Judge Karen Wells Roby on 6/23/2014. (Reference: All Cases)(cml)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_13-cv-02792-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-2/mods.xml">
+ <titleInfo>
+  <title>Guy v. LeBlanc et al</title>
+  <subTitle>ORDER &amp; REASONS: ORDERED that 39 Motion for Recusal be and hereby DENIED. Signed by Magistrate Judge Karen Wells Roby. (cml)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-02792/pdf/USCOURTS-laed-2_13-cv-02792-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d566b4c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-2</identifier>
+ <identifier type="former granule identifier">laed-2_13-cv-02792_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-02792/pdf/USCOURTS-laed-2_13-cv-02792-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02792; Guy v. LeBlanc et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_13-cv-02792-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-10-09</dateIssued>
+  <docketText>ORDER &amp; REASONS: ORDERED that 39 Motion for Recusal be and hereby DENIED. Signed by Magistrate Judge Karen Wells Roby. (cml)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_13-cv-02792-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-3/mods.xml">
+ <titleInfo>
+  <title>Guy v. LeBlanc et al</title>
+  <subTitle>ORDER &amp; REASONS: ORDERED that 46 Motion to Appoint Counsel is DENIED. Signed by Magistrate Judge Karen Wells Roby. (cml)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-02792/pdf/USCOURTS-laed-2_13-cv-02792-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d566b4e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-3</identifier>
+ <identifier type="former granule identifier">laed-2_13-cv-02792_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-02792/pdf/USCOURTS-laed-2_13-cv-02792-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02792; Guy v. LeBlanc et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_13-cv-02792-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-10-23</dateIssued>
+  <docketText>ORDER &amp; REASONS: ORDERED that 46 Motion to Appoint Counsel is DENIED. Signed by Magistrate Judge Karen Wells Roby. (cml)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_13-cv-02792-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-4/mods.xml">
+ <titleInfo>
+  <title>Guy v. LeBlanc et al</title>
+  <subTitle>tiffs motion for recusation is AFFIRMED. Signed by Judge Susie Morgan. (Reference: Both Cases)(bwn)ORDER AND REASONS - IT IS ORDERED that the Magistrate Judges order and reasons denying Plaintiffs motion for preliminary injunction and/or a temporary restraining order is AFFIRMED. IT IS FURTHER ORDERED that the Magistrate Judges order denying Plain</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-02792/pdf/USCOURTS-laed-2_13-cv-02792-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d566a86</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-4</identifier>
+ <identifier type="former granule identifier">laed-2_13-cv-02792_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-02792/pdf/USCOURTS-laed-2_13-cv-02792-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02792; Guy v. LeBlanc et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_13-cv-02792-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>tiffs motion for recusation is AFFIRMED. Signed by Judge Susie Morgan. (Reference: Both Cases)(bwn)ORDER AND REASONS - IT IS ORDERED that the Magistrate Judges order and reasons denying Plaintiffs motion for preliminary injunction and/or a temporary restraining order is AFFIRMED. IT IS FURTHER ORDERED that the Magistrate Judges order denying Plain</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_13-cv-02792-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-5/mods.xml">
+ <titleInfo>
+  <title>Guy v. LeBlanc et al</title>
+  <subTitle>ORDER ADOPTING REPORT AND RECOMMENDATIONS 29. IT IS ORDERED that plaintiff Wilfred Guy, Sr.s 42 U.S.C. § 1983 claims arising out of grievance one against defendants Warden Robert C. Tanner, Sergeant Coleman Polk, Sergeant Ronnie Spears, Deputy Warden Keith Bickham, and Secretary James LeBlanc are DISMISSED WITH PREJUDICE as frivolous and otherwise for failure to state a claim for which relief can be granted pursuant to 28 U.S.C. § 1915(e), § 1915A, and 42 U.S.C. § 1997e. IT IS FURTHER ORDERED that plaintiff Wilfred Guy, Sr.&apos;s 42 U.S.C. § 1983 claim arising out of grievance one against Beverly T. Kelly, Executive Staff Officer of the BB &quot;Sixty&quot; Rayburn Correctional Center, shall remain pending at this time. IT IS FURTHER ORDERED that plaintiff Wilfred Guy, Sr.&apos;s claims, to the extent they arise out of grievances two, three, or four, are DISMISSED WITHOUT PREJUDICE for failure to exhaust administrative remedies pursuant to 42 U.S.C. § 1997e (a). Signed by Judge Susie Morgan.(Reference: Both Cases)(bwn)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-02792/pdf/USCOURTS-laed-2_13-cv-02792-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d566a87</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-5</identifier>
+ <identifier type="former granule identifier">laed-2_13-cv-02792_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-02792/pdf/USCOURTS-laed-2_13-cv-02792-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02792; Guy v. LeBlanc et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_13-cv-02792-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER ADOPTING REPORT AND RECOMMENDATIONS 29. IT IS ORDERED that plaintiff Wilfred Guy, Sr.s 42 U.S.C. § 1983 claims arising out of grievance one against defendants Warden Robert C. Tanner, Sergeant Coleman Polk, Sergeant Ronnie Spears, Deputy Warden Keith Bickham, and Secretary James LeBlanc are DISMISSED WITH PREJUDICE as frivolous and otherwise for failure to state a claim for which relief can be granted pursuant to 28 U.S.C. § 1915(e), § 1915A, and 42 U.S.C. § 1997e. IT IS FURTHER ORDERED that plaintiff Wilfred Guy, Sr.&apos;s 42 U.S.C. § 1983 claim arising out of grievance one against Beverly T. Kelly, Executive Staff Officer of the BB &quot;Sixty&quot; Rayburn Correctional Center, shall remain pending at this time. IT IS FURTHER ORDERED that plaintiff Wilfred Guy, Sr.&apos;s claims, to the extent they arise out of grievances two, three, or four, are DISMISSED WITHOUT PREJUDICE for failure to exhaust administrative remedies pursuant to 42 U.S.C. § 1997e (a). Signed by Judge Susie Morgan.(Reference: Both Cases)(bwn)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_13-cv-02792-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-6/mods.xml">
+ <titleInfo>
+  <title>Guy v. LeBlanc et al</title>
+  <subTitle>ORDER &amp; REASONS: ORDERED that 67 Motion for Leave to File Amended Complaint is construed as a Motion for Leave to File an Amended and Supplemental Opposition and as such, it is GRANTED. FURTHER ORDERED that the Clerk of Court shall FILE AND DOCKET a copy of Record Document No. 67 as an Amended and Supplemental Opposition Memorandum in response to the defendants pending Motion to Dismiss. Signed by Magistrate Judge Karen Wells Roby. (cml)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-02792/pdf/USCOURTS-laed-2_13-cv-02792-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d566b4f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-6</identifier>
+ <identifier type="former granule identifier">laed-2_13-cv-02792_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-02792/pdf/USCOURTS-laed-2_13-cv-02792-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02792; Guy v. LeBlanc et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_13-cv-02792-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2015-04-30</dateIssued>
+  <docketText>ORDER &amp; REASONS: ORDERED that 67 Motion for Leave to File Amended Complaint is construed as a Motion for Leave to File an Amended and Supplemental Opposition and as such, it is GRANTED. FURTHER ORDERED that the Clerk of Court shall FILE AND DOCKET a copy of Record Document No. 67 as an Amended and Supplemental Opposition Memorandum in response to the defendants pending Motion to Dismiss. Signed by Magistrate Judge Karen Wells Roby. (cml)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_13-cv-02792-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-7/mods.xml">
+ <titleInfo>
+  <title>Guy v. LeBlanc et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS: RECOMMENDED that Wilfred Guy, Sr.&apos;s claims against Beverly T. Kelly, for false disciplinary charges and violation of due process be sua sponte DISMISSED WITH PREJUDICE for failure to state a claim for which relief can be granted until such time as the Heck and Edwards conditions are met. FURTHER RECOMMENDED that the defendant Officer Beverly T. Kellys Motion to Dismiss pursuant to Fed. R. Civ. P. 12(b)(6) be GRANTED to the extent it seeks dismissal of Guys retaliation claim against Officer Kelly for failure to assert a constitutional violation and that Guys retaliation claim against Officer Kelly be DISMISSED WITH PREJUDICE for failure to state a claim for which relief can be granted. Objections to R&amp;R due by 7/9/2015. Signed by Magistrate Judge Karen Wells Roby.(Reference: All Cases)(cml) Modified on 7/9/2015 (cbn). (REMAILED TO PLA ON 7/8/15 AT CURRENT ADDRESS)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-06-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-02792/pdf/USCOURTS-laed-2_13-cv-02792-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d566b4d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-7</identifier>
+ <identifier type="former granule identifier">laed-2_13-cv-02792_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-02792/pdf/USCOURTS-laed-2_13-cv-02792-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02792; Guy v. LeBlanc et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_13-cv-02792-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2015-06-25</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS: RECOMMENDED that Wilfred Guy, Sr.&apos;s claims against Beverly T. Kelly, for false disciplinary charges and violation of due process be sua sponte DISMISSED WITH PREJUDICE for failure to state a claim for which relief can be granted until such time as the Heck and Edwards conditions are met. FURTHER RECOMMENDED that the defendant Officer Beverly T. Kellys Motion to Dismiss pursuant to Fed. R. Civ. P. 12(b)(6) be GRANTED to the extent it seeks dismissal of Guys retaliation claim against Officer Kelly for failure to assert a constitutional violation and that Guys retaliation claim against Officer Kelly be DISMISSED WITH PREJUDICE for failure to state a claim for which relief can be granted. Objections to R&amp;R due by 7/9/2015. Signed by Magistrate Judge Karen Wells Roby.(Reference: All Cases)(cml) Modified on 7/9/2015 (cbn). (REMAILED TO PLA ON 7/8/15 AT CURRENT ADDRESS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_13-cv-02792-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-8/mods.xml">
+ <titleInfo>
+  <title>Guy v. LeBlanc et al</title>
+  <subTitle>ORDER ADOPTING REPORT AND RECOMMENDATIONS 72. IT IS ORDERED that Wilfred Guy Sr.s 42 U.S.C. § 1983 claims against defendant, Officer Beverly T. Kelly, for false disciplinary charges and violation of due process are DISMISSED WITH PREJUDICE for failure to state a claim for which relief can be gran ted until such time as the conditions announced in Heck v. Humphrey, 512 U.S. 477 (1994) and Edwards v. Balisok, 520 U.S. 641 (1997) are met. IT IS FURTHER ORDERED that Officer Beverly T. Kellys Motion to Dismiss pursuant to Fed. R. Civ. P. 12(b)(6) (Rec. Doc. No. 63) is GRANTED to the extent it seeks dismissal of Guys § 1983 retaliation claim for failure to assert a constitutional violation and that Guys § 1983 retaliation claim against Officer Kelly is DISMISSED WITH PREJUDICE for failure to state a claim for which relief can be granted. Signed by Judge Susie Morgan.(Reference: Both Cases)(bwn)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-08-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-02792/pdf/USCOURTS-laed-2_13-cv-02792-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d566a8a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-8</identifier>
+ <identifier type="former granule identifier">laed-2_13-cv-02792_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-02792/USCOURTS-laed-2_13-cv-02792-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-02792/pdf/USCOURTS-laed-2_13-cv-02792-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02792; Guy v. LeBlanc et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_13-cv-02792-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2015-08-10</dateIssued>
+  <docketText>ORDER ADOPTING REPORT AND RECOMMENDATIONS 72. IT IS ORDERED that Wilfred Guy Sr.s 42 U.S.C. § 1983 claims against defendant, Officer Beverly T. Kelly, for false disciplinary charges and violation of due process are DISMISSED WITH PREJUDICE for failure to state a claim for which relief can be gran ted until such time as the conditions announced in Heck v. Humphrey, 512 U.S. 477 (1994) and Edwards v. Balisok, 520 U.S. 641 (1997) are met. IT IS FURTHER ORDERED that Officer Beverly T. Kellys Motion to Dismiss pursuant to Fed. R. Civ. P. 12(b)(6) (Rec. Doc. No. 63) is GRANTED to the extent it seeks dismissal of Guys § 1983 retaliation claim for failure to assert a constitutional violation and that Guys § 1983 retaliation claim against Officer Kelly is DISMISSED WITH PREJUDICE for failure to state a claim for which relief can be granted. Signed by Judge Susie Morgan.(Reference: Both Cases)(bwn)</docketText>
+</extension>
+</relatedItem>
+</mods>

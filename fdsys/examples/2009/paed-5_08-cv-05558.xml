@@ -1,0 +1,204 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1813cec4c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-16</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-5_08-cv-05558</identifier>
+<identifier type="local">P0b002ee1813cec4c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-5_08-cv-05558</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-5_08-cv-05558</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>5:08-cv-05558</caseNumber>
+ <caseOffice>Allentown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>790</natureSuitCode>
+ <natureSuit>Other Labor Litigation</natureSuit>
+ <party firstName="JOHN" fullName="JOHN CZARNECKI" lastName="CZARNECKI" role="Plaintiff"></party>
+ <party fullName="HAMBURG HOLDINGS LIMITED ENTERPRISES, LLC" lastName="HAMBURG HOLDINGS LIMITED ENTERPRISES, LLC" role="Defendant"></party>
+ <party fullName="HAWTHORN MANUFACTURING CORPORATION" lastName="HAWTHORN MANUFACTURING CORPORATION" role="Defendant"></party>
+ <party fullName="HAWTHORN MANUFACTURING CORPORATION" lastName="HAWTHORN MANUFACTURING CORPORATION" role="Unrepresented Party"></party>
+ <party firstName="PATRICK" fullName="PATRICK JAMES" lastName="JAMES" role="Defendant"></party>
+ <party firstName="PATRICK" fullName="PATRICK JAMES" lastName="JAMES" role="Unrepresented Party"></party>
+ <party firstName="JAY" fullName="JAY L. SCHABEL" lastName="SCHABEL" middleName="L." role="Defendant"></party>
+ <party firstName="JAY" fullName="JAY L. SCHABEL" lastName="SCHABEL" middleName="L." role="Unrepresented Party"></party>
+</extension>
+<titleInfo>
+ <title>CZARNECKI v. HAWTHORN MANUFACTURING CORPORATION et al</title>
+ <partNumber>5:08-cv-05558</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-5_08-cv-05558/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:08-cv-05558;08-5558</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Allentown</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>JOHN CZARNECKI</displayForm>
+ <namePart type="family">CZARNECKI</namePart>
+ <namePart type="given">JOHN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>HAMBURG HOLDINGS LIMITED ENTERPRISES, LLC</displayForm>
+ <namePart type="family">HAMBURG HOLDINGS LIMITED ENTERPRISES, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>HAWTHORN MANUFACTURING CORPORATION</displayForm>
+ <namePart type="family">HAWTHORN MANUFACTURING CORPORATION</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>HAWTHORN MANUFACTURING CORPORATION</displayForm>
+ <namePart type="family">HAWTHORN MANUFACTURING CORPORATION</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Unrepresented Party</description>
+</name>
+<name type="personal">
+ <displayForm>PATRICK JAMES</displayForm>
+ <namePart type="family">JAMES</namePart>
+ <namePart type="given">PATRICK</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PATRICK JAMES</displayForm>
+ <namePart type="family">JAMES</namePart>
+ <namePart type="given">PATRICK</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Unrepresented Party</description>
+</name>
+<name type="personal">
+ <displayForm>JAY L. SCHABEL</displayForm>
+ <namePart type="family">SCHABEL</namePart>
+ <namePart type="given">JAY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JAY L. SCHABEL</displayForm>
+ <namePart type="family">SCHABEL</namePart>
+ <namePart type="given">JAY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Unrepresented Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-5_08-cv-05558</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>5:08-cv-05558</caseNumber>
+ <caseOffice>Allentown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>790</natureSuitCode>
+ <natureSuit>Other Labor Litigation</natureSuit>
+ <party firstName="JOHN" fullName="JOHN CZARNECKI" lastName="CZARNECKI" role="Plaintiff"></party>
+ <party fullName="HAMBURG HOLDINGS LIMITED ENTERPRISES, LLC" lastName="HAMBURG HOLDINGS LIMITED ENTERPRISES, LLC" role="Defendant"></party>
+ <party fullName="HAWTHORN MANUFACTURING CORPORATION" lastName="HAWTHORN MANUFACTURING CORPORATION" role="Defendant"></party>
+ <party fullName="HAWTHORN MANUFACTURING CORPORATION" lastName="HAWTHORN MANUFACTURING CORPORATION" role="Unrepresented Party"></party>
+ <party firstName="PATRICK" fullName="PATRICK JAMES" lastName="JAMES" role="Defendant"></party>
+ <party firstName="PATRICK" fullName="PATRICK JAMES" lastName="JAMES" role="Unrepresented Party"></party>
+ <party firstName="JAY" fullName="JAY L. SCHABEL" lastName="SCHABEL" middleName="L." role="Defendant"></party>
+ <party firstName="JAY" fullName="JAY L. SCHABEL" lastName="SCHABEL" middleName="L." role="Unrepresented Party"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-5_08-cv-05558-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_08-cv-05558/USCOURTS-paed-5_08-cv-05558-0/mods.xml">
+ <titleInfo>
+  <title>CZARNECKI v. HAWTHORN MANUFACTURING CORPORATION et al</title>
+  <subTitle>MEMORANDUM AND ORDER THAT PLAINTIFF&apos;S MOTION FOR REMAND IS GRANTED. THE ABOVE-CAPTIONED MATTER IS REMANDED TO THE COURT OF COMMON PLEAS OF BERKS COUNTY, PA. PLAINTIFF&apos;S MOTION TO REQUIRE PAYMENT OF JUST COSTS, ACTUAL EXPENSES AND ATTORNEY&apos;S FEES IS GRANTED IN PART AND DENIED IN PART. PLAINTIFF&apos;S MOTION TO ASSESS COSTS ASSOCIATED WITH PREPARATION OF MOTION TO REQUIRE PAYMENT IS GRANTED IN PART AND DENIED IN PART. DEFENDANT HAMBURG HOLDINGS LIMITED ENTERPRISES, LLC SHOULD REIMBURSE PLAINTIFF FOR ACTUAL COSTS AND EXPENSES, INCLUDING REASONABLE ATTORNEYS FEES, WITHIN FOURTEEN (14) DAYS OF THE DATE OF THIS ORDER IN THE SUM OF $4,700. SIGNED BY HONORABLE C. DARNELL JONES, II ON 1/16/09. 1/20/09 ENTERED AND COPIES MAILED TO UNREPS AND E-MAILED.(ah)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-5_08-cv-05558-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814b4167</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_08-cv-05558/USCOURTS-paed-5_08-cv-05558-0</identifier>
+ <identifier type="former granule identifier">paed-5_08-cv-05558_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_08-cv-05558/USCOURTS-paed-5_08-cv-05558-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-5_08-cv-05558/pdf/USCOURTS-paed-5_08-cv-05558-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:08-cv-05558; CZARNECKI v. HAWTHORN MANUFACTURING CORPORATION et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-5_08-cv-05558-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-16</dateIssued>
+  <docketText>MEMORANDUM AND ORDER THAT PLAINTIFF&apos;S MOTION FOR REMAND IS GRANTED. THE ABOVE-CAPTIONED MATTER IS REMANDED TO THE COURT OF COMMON PLEAS OF BERKS COUNTY, PA. PLAINTIFF&apos;S MOTION TO REQUIRE PAYMENT OF JUST COSTS, ACTUAL EXPENSES AND ATTORNEY&apos;S FEES IS GRANTED IN PART AND DENIED IN PART. PLAINTIFF&apos;S MOTION TO ASSESS COSTS ASSOCIATED WITH PREPARATION OF MOTION TO REQUIRE PAYMENT IS GRANTED IN PART AND DENIED IN PART. DEFENDANT HAMBURG HOLDINGS LIMITED ENTERPRISES, LLC SHOULD REIMBURSE PLAINTIFF FOR ACTUAL COSTS AND EXPENSES, INCLUDING REASONABLE ATTORNEYS FEES, WITHIN FOURTEEN (14) DAYS OF THE DATE OF THIS ORDER IN THE SUM OF $4,700. SIGNED BY HONORABLE C. DARNELL JONES, II ON 1/16/09. 1/20/09 ENTERED AND COPIES MAILED TO UNREPS AND E-MAILED.(ah)</docketText>
+</extension>
+</relatedItem>
+</mods>

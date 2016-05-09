@@ -1,0 +1,313 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180fc1193">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Idaho</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-4_05-cv-00367</identifier>
+<identifier type="local">P0b002ee180fc1193</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-idd-4_05-cv-00367</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-4_05-cv-00367</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>4:05-cv-00367</caseNumber>
+ <caseOffice>Pocatello - Eastern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party firstName="Dave" fullName="Dave Blosch" lastName="Blosch" role="Counter Defendant"></party>
+ <party firstName="Dave" fullName="Dave Blosch" lastName="Blosch" role="Plaintiff"></party>
+ <party firstName="Mary Jo" fullName="Mary Jo Blosch" lastName="Blosch" role="Counter Defendant"></party>
+ <party firstName="Mary Jo" fullName="Mary Jo Blosch" lastName="Blosch" role="Plaintiff"></party>
+ <party fullName="Blosch Crushing Inc" lastName="Blosch Crushing Inc" role="Counter Defendant"></party>
+ <party fullName="Blosch Crushing Inc" lastName="Blosch Crushing Inc" role="Plaintiff"></party>
+ <party fullName="CIT Group/ Equipment Financing Inc., The" lastName="CIT Group/ Equipment Financing Inc., The" role="Cross Defendant"></party>
+ <party fullName="CIT Group/ Equipment Financing Inc., The" lastName="CIT Group/ Equipment Financing Inc., The" role="Defendant"></party>
+ <party fullName="Fab Tec Inc" lastName="Fab Tec Inc" role="Counter Claimant"></party>
+ <party fullName="Fab Tec Inc" lastName="Fab Tec Inc" role="Cross Claimant"></party>
+ <party fullName="Fab Tec Inc" lastName="Fab Tec Inc" role="Cross Defendant"></party>
+ <party fullName="Fab Tec Inc" lastName="Fab Tec Inc" role="Defendant"></party>
+ <party fullName="Johnson Crushers International Inc" lastName="Johnson Crushers International Inc" role="Cross Defendant"></party>
+ <party fullName="Johnson Crushers International Inc" lastName="Johnson Crushers International Inc" role="Defendant"></party>
+ <party fullName="Modern Machinery Co., Inc" lastName="Modern Machinery Co., Inc" role="Counter Claimant"></party>
+ <party fullName="Modern Machinery Co., Inc" lastName="Modern Machinery Co., Inc" role="Counter Defendant"></party>
+ <party fullName="Modern Machinery Co., Inc" lastName="Modern Machinery Co., Inc" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Blosch Crushing Inc et al v. Modern Machinery Co., Inc</title>
+ <partNumber>4:05-cv-00367</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-4_05-cv-00367/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:05-cv-00367;05-367</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Idaho</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Pocatello - Eastern</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Dave Blosch</displayForm>
+ <namePart type="family">Blosch</namePart>
+ <namePart type="given">Dave</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dave Blosch</displayForm>
+ <namePart type="family">Blosch</namePart>
+ <namePart type="given">Dave</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mary Jo Blosch</displayForm>
+ <namePart type="family">Blosch</namePart>
+ <namePart type="given">Mary Jo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mary Jo Blosch</displayForm>
+ <namePart type="family">Blosch</namePart>
+ <namePart type="given">Mary Jo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Blosch Crushing Inc</displayForm>
+ <namePart type="family">Blosch Crushing Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Blosch Crushing Inc</displayForm>
+ <namePart type="family">Blosch Crushing Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>CIT Group/ Equipment Financing Inc., The</displayForm>
+ <namePart type="family">CIT Group/ Equipment Financing Inc., The</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CIT Group/ Equipment Financing Inc., The</displayForm>
+ <namePart type="family">CIT Group/ Equipment Financing Inc., The</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Fab Tec Inc</displayForm>
+ <namePart type="family">Fab Tec Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Fab Tec Inc</displayForm>
+ <namePart type="family">Fab Tec Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Fab Tec Inc</displayForm>
+ <namePart type="family">Fab Tec Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Fab Tec Inc</displayForm>
+ <namePart type="family">Fab Tec Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Johnson Crushers International Inc</displayForm>
+ <namePart type="family">Johnson Crushers International Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Johnson Crushers International Inc</displayForm>
+ <namePart type="family">Johnson Crushers International Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Modern Machinery Co., Inc</displayForm>
+ <namePart type="family">Modern Machinery Co., Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Modern Machinery Co., Inc</displayForm>
+ <namePart type="family">Modern Machinery Co., Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Modern Machinery Co., Inc</displayForm>
+ <namePart type="family">Modern Machinery Co., Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-4_05-cv-00367</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>4:05-cv-00367</caseNumber>
+ <caseOffice>Pocatello - Eastern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party firstName="Dave" fullName="Dave Blosch" lastName="Blosch" role="Counter Defendant"></party>
+ <party firstName="Dave" fullName="Dave Blosch" lastName="Blosch" role="Plaintiff"></party>
+ <party firstName="Mary Jo" fullName="Mary Jo Blosch" lastName="Blosch" role="Counter Defendant"></party>
+ <party firstName="Mary Jo" fullName="Mary Jo Blosch" lastName="Blosch" role="Plaintiff"></party>
+ <party fullName="Blosch Crushing Inc" lastName="Blosch Crushing Inc" role="Counter Defendant"></party>
+ <party fullName="Blosch Crushing Inc" lastName="Blosch Crushing Inc" role="Plaintiff"></party>
+ <party fullName="CIT Group/ Equipment Financing Inc., The" lastName="CIT Group/ Equipment Financing Inc., The" role="Cross Defendant"></party>
+ <party fullName="CIT Group/ Equipment Financing Inc., The" lastName="CIT Group/ Equipment Financing Inc., The" role="Defendant"></party>
+ <party fullName="Fab Tec Inc" lastName="Fab Tec Inc" role="Counter Claimant"></party>
+ <party fullName="Fab Tec Inc" lastName="Fab Tec Inc" role="Cross Claimant"></party>
+ <party fullName="Fab Tec Inc" lastName="Fab Tec Inc" role="Cross Defendant"></party>
+ <party fullName="Fab Tec Inc" lastName="Fab Tec Inc" role="Defendant"></party>
+ <party fullName="Johnson Crushers International Inc" lastName="Johnson Crushers International Inc" role="Cross Defendant"></party>
+ <party fullName="Johnson Crushers International Inc" lastName="Johnson Crushers International Inc" role="Defendant"></party>
+ <party fullName="Modern Machinery Co., Inc" lastName="Modern Machinery Co., Inc" role="Counter Claimant"></party>
+ <party fullName="Modern Machinery Co., Inc" lastName="Modern Machinery Co., Inc" role="Counter Defendant"></party>
+ <party fullName="Modern Machinery Co., Inc" lastName="Modern Machinery Co., Inc" role="Defendant"></party>
+ <state>Idaho</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-4_05-cv-00367-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-4_05-cv-00367/USCOURTS-idd-4_05-cv-00367-0/mods.xml">
+ <titleInfo>
+  <title>Blosch Crushing Inc et al v. Modern Machinery Co., Inc</title>
+  <subTitle>ORDER re: scheduling conference. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by ja, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-4_05-cv-00367-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180fc5ba3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-4_05-cv-00367/USCOURTS-idd-4_05-cv-00367-0</identifier>
+ <identifier type="former granule identifier">idd-4_05-cv-00367_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-4_05-cv-00367/USCOURTS-idd-4_05-cv-00367-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-4_05-cv-00367/pdf/USCOURTS-idd-4_05-cv-00367-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-00367; Blosch Crushing Inc et al v. Modern Machinery Co., Inc; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-4_05-cv-00367-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-09-22</dateIssued>
+  <docketText>ORDER re: scheduling conference. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by ja, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-4_05-cv-00367-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-4_05-cv-00367/USCOURTS-idd-4_05-cv-00367-1/mods.xml">
+ <titleInfo>
+  <title>Blosch Crushing Inc et al v. Modern Machinery Co., Inc</title>
+  <subTitle>ORDER Granting 29 MOTION to Remand and in Opposition to Dismissal filed by Blosch Crushing Inc, Dave Blosch, Mary Jo Blosch, Finding as moot 62 MOTION for Leave to File A Sur-Reply in Opposition to Plaintiffs&apos; Motion to Remand filed by Johnson Crushers International Inc, finding as moot 23 MOTION to Dismiss for Lack of Jurisdiction filed by Fab Tec Inc, finding as moot 21 First MOTION for Extension of Time to Complete Discovery filed by Blosch Crushing Inc, Dave Blosch, Mary Jo Blosch, finding as moot 44 Joint MOTION for Extension of Time to File Response/Reply as to 29 MOTION to Remand and in Opposition to Dismissal filed by Fab Tec Inc. This case is remanded to the Seventh Judicial District of the State of Idaho, in and for the County of Bonneville.. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by ja, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-4_05-cv-00367-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180fc5ba4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-4_05-cv-00367/USCOURTS-idd-4_05-cv-00367-1</identifier>
+ <identifier type="former granule identifier">idd-4_05-cv-00367_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-4_05-cv-00367/USCOURTS-idd-4_05-cv-00367-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-4_05-cv-00367/pdf/USCOURTS-idd-4_05-cv-00367-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-00367; Blosch Crushing Inc et al v. Modern Machinery Co., Inc; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-4_05-cv-00367-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-11</dateIssued>
+  <docketText>ORDER Granting 29 MOTION to Remand and in Opposition to Dismissal filed by Blosch Crushing Inc, Dave Blosch, Mary Jo Blosch, Finding as moot 62 MOTION for Leave to File A Sur-Reply in Opposition to Plaintiffs&apos; Motion to Remand filed by Johnson Crushers International Inc, finding as moot 23 MOTION to Dismiss for Lack of Jurisdiction filed by Fab Tec Inc, finding as moot 21 First MOTION for Extension of Time to Complete Discovery filed by Blosch Crushing Inc, Dave Blosch, Mary Jo Blosch, finding as moot 44 Joint MOTION for Extension of Time to File Response/Reply as to 29 MOTION to Remand and in Opposition to Dismissal filed by Fab Tec Inc. This case is remanded to the Seventh Judicial District of the State of Idaho, in and for the County of Bonneville.. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by ja, )</docketText>
+</extension>
+</relatedItem>
+</mods>

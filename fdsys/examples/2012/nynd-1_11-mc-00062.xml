@@ -1,0 +1,308 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817c0618">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_11-mc-00062</identifier>
+<identifier type="local">P0b002ee1817c0618</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-1_11-mc-00062</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_11-mc-00062</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:11-mc-00062</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType></caseType>
+ <party fullName="Audit Risk Indemnity Association, LLC" lastName="Audit Risk Indemnity Association, LLC" role="Petitioner"></party>
+ <party fullName="BPETCO Litigation Group, Inc." lastName="BPETCO Litigation Group, Inc." role="Petitioner"></party>
+ <party fullName="BPETCO Litigation Group, LLC" lastName="BPETCO Litigation Group, LLC" role="Petitioner"></party>
+ <party fullName="Benefit Concepts International, Inc." lastName="Benefit Concepts International, Inc." role="Petitioner"></party>
+ <party fullName="Benefit Concepts, Inc." lastName="Benefit Concepts, Inc." role="Petitioner"></party>
+ <party fullName="Benistar 419 Plan&amp;Trust" lastName="Benistar 419 Plan&amp;Trust" role="Petitioner"></party>
+ <party fullName="Benistar 419 Plan Services, Inc." lastName="Benistar 419 Plan Services, Inc." role="Petitioner"></party>
+ <party fullName="Benistar Admin Services Employee Stock Ownership Plan" lastName="Benistar Admin Services Employee Stock Ownership Plan" role="Petitioner"></party>
+ <party fullName="Benistar Admin Services, Inc." lastName="Benistar Admin Services, Inc." role="Petitioner"></party>
+ <party fullName="Benistar Group, Ltd." lastName="Benistar Group, Ltd." role="Petitioner"></party>
+ <party fullName="Benistar Insurance Group, Inc." lastName="Benistar Insurance Group, Inc." role="Petitioner"></party>
+ <party fullName="Benistar Ltd." lastName="Benistar Ltd." role="Petitioner"></party>
+ <party firstName="Daniel" fullName="Daniel Carpenter" lastName="Carpenter" role="Petitioner"></party>
+ <party fullName="Carpenter Financial Group Employee Stock Ownership Plan" lastName="Carpenter Financial Group Employee Stock Ownership Plan" role="Petitioner"></party>
+ <party fullName="Carpenter Financial Group, Inc." lastName="Carpenter Financial Group, Inc." role="Petitioner"></party>
+ <party fullName="Carpenter Financial Group, LLC" lastName="Carpenter Financial Group, LLC" role="Petitioner"></party>
+ <party fullName="Carpenter Group, Ltd., Inc." lastName="Carpenter Group, Ltd., Inc." role="Petitioner"></party>
+ <party fullName="STEP Multiple Employer Supplemental Benefit Plan&amp;Trust" lastName="STEP Multiple Employer Supplemental Benefit Plan&amp;Trust" role="Petitioner"></party>
+ <party fullName="STEP Plan Services, Inc." lastName="STEP Plan Services, Inc." role="Petitioner"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Benistar Admin Services, Inc. et al v. United States of America</title>
+ <partNumber>1:11-mc-00062</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_11-mc-00062/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-mc-00062;11-062</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Albany</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Audit Risk Indemnity Association, LLC</displayForm>
+ <namePart type="family">Audit Risk Indemnity Association, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>BPETCO Litigation Group, Inc.</displayForm>
+ <namePart type="family">BPETCO Litigation Group, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>BPETCO Litigation Group, LLC</displayForm>
+ <namePart type="family">BPETCO Litigation Group, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Benefit Concepts International, Inc.</displayForm>
+ <namePart type="family">Benefit Concepts International, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Benefit Concepts, Inc.</displayForm>
+ <namePart type="family">Benefit Concepts, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Benistar 419 Plan&amp;Trust</displayForm>
+ <namePart type="family">Benistar 419 Plan&amp;Trust</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Benistar 419 Plan Services, Inc.</displayForm>
+ <namePart type="family">Benistar 419 Plan Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Benistar Admin Services Employee Stock Ownership Plan</displayForm>
+ <namePart type="family">Benistar Admin Services Employee Stock Ownership Plan</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Benistar Admin Services, Inc.</displayForm>
+ <namePart type="family">Benistar Admin Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Benistar Group, Ltd.</displayForm>
+ <namePart type="family">Benistar Group, Ltd.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Benistar Insurance Group, Inc.</displayForm>
+ <namePart type="family">Benistar Insurance Group, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Benistar Ltd.</displayForm>
+ <namePart type="family">Benistar Ltd.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Carpenter</displayForm>
+ <namePart type="family">Carpenter</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Carpenter Financial Group Employee Stock Ownership Plan</displayForm>
+ <namePart type="family">Carpenter Financial Group Employee Stock Ownership Plan</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Carpenter Financial Group, Inc.</displayForm>
+ <namePart type="family">Carpenter Financial Group, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Carpenter Financial Group, LLC</displayForm>
+ <namePart type="family">Carpenter Financial Group, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Carpenter Group, Ltd., Inc.</displayForm>
+ <namePart type="family">Carpenter Group, Ltd., Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>STEP Multiple Employer Supplemental Benefit Plan&amp;Trust</displayForm>
+ <namePart type="family">STEP Multiple Employer Supplemental Benefit Plan&amp;Trust</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>STEP Plan Services, Inc.</displayForm>
+ <namePart type="family">STEP Plan Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_11-mc-00062</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:11-mc-00062</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType></caseType>
+ <party fullName="Audit Risk Indemnity Association, LLC" lastName="Audit Risk Indemnity Association, LLC" role="Petitioner"></party>
+ <party fullName="BPETCO Litigation Group, Inc." lastName="BPETCO Litigation Group, Inc." role="Petitioner"></party>
+ <party fullName="BPETCO Litigation Group, LLC" lastName="BPETCO Litigation Group, LLC" role="Petitioner"></party>
+ <party fullName="Benefit Concepts International, Inc." lastName="Benefit Concepts International, Inc." role="Petitioner"></party>
+ <party fullName="Benefit Concepts, Inc." lastName="Benefit Concepts, Inc." role="Petitioner"></party>
+ <party fullName="Benistar 419 Plan&amp;Trust" lastName="Benistar 419 Plan&amp;Trust" role="Petitioner"></party>
+ <party fullName="Benistar 419 Plan Services, Inc." lastName="Benistar 419 Plan Services, Inc." role="Petitioner"></party>
+ <party fullName="Benistar Admin Services Employee Stock Ownership Plan" lastName="Benistar Admin Services Employee Stock Ownership Plan" role="Petitioner"></party>
+ <party fullName="Benistar Admin Services, Inc." lastName="Benistar Admin Services, Inc." role="Petitioner"></party>
+ <party fullName="Benistar Group, Ltd." lastName="Benistar Group, Ltd." role="Petitioner"></party>
+ <party fullName="Benistar Insurance Group, Inc." lastName="Benistar Insurance Group, Inc." role="Petitioner"></party>
+ <party fullName="Benistar Ltd." lastName="Benistar Ltd." role="Petitioner"></party>
+ <party firstName="Daniel" fullName="Daniel Carpenter" lastName="Carpenter" role="Petitioner"></party>
+ <party fullName="Carpenter Financial Group Employee Stock Ownership Plan" lastName="Carpenter Financial Group Employee Stock Ownership Plan" role="Petitioner"></party>
+ <party fullName="Carpenter Financial Group, Inc." lastName="Carpenter Financial Group, Inc." role="Petitioner"></party>
+ <party fullName="Carpenter Financial Group, LLC" lastName="Carpenter Financial Group, LLC" role="Petitioner"></party>
+ <party fullName="Carpenter Group, Ltd., Inc." lastName="Carpenter Group, Ltd., Inc." role="Petitioner"></party>
+ <party fullName="STEP Multiple Employer Supplemental Benefit Plan&amp;Trust" lastName="STEP Multiple Employer Supplemental Benefit Plan&amp;Trust" role="Petitioner"></party>
+ <party fullName="STEP Plan Services, Inc." lastName="STEP Plan Services, Inc." role="Petitioner"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Respondent"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_11-mc-00062-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_11-mc-00062/USCOURTS-nynd-1_11-mc-00062-0/mods.xml">
+ <titleInfo>
+  <title>Benistar Admin Services, Inc. et al v. United States of America</title>
+  <subTitle>DECISION and ORDERED, that Magistrate Judge George H. Lowes December 13, 2011 Order (Dkt. No. 12) is AFFIRMED; and it is further ORDERED, that Petitioners Appeal (Dkt. No. 13) of that Order is DENIED; and it is further ORDERED, that Petitioners Motion for stay of compliance date for Governments subpoena (Dkt. No. 13-1) is DENIED AS MOOT. Signed by Senior Judge Lawrence E. Kahn on January 12, 2012. (sas)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_11-mc-00062-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e4778</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_11-mc-00062/USCOURTS-nynd-1_11-mc-00062-0</identifier>
+ <identifier type="former granule identifier">nynd-1_11-mc-00062_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_11-mc-00062/USCOURTS-nynd-1_11-mc-00062-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_11-mc-00062/pdf/USCOURTS-nynd-1_11-mc-00062-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-mc-00062; Benistar Admin Services, Inc. et al v. United States of America; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_11-mc-00062-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-12</dateIssued>
+  <docketText>DECISION and ORDERED, that Magistrate Judge George H. Lowes December 13, 2011 Order (Dkt. No. 12) is AFFIRMED; and it is further ORDERED, that Petitioners Appeal (Dkt. No. 13) of that Order is DENIED; and it is further ORDERED, that Petitioners Motion for stay of compliance date for Governments subpoena (Dkt. No. 13-1) is DENIED AS MOOT. Signed by Senior Judge Lawrence E. Kahn on January 12, 2012. (sas)</docketText>
+</extension>
+</relatedItem>
+</mods>

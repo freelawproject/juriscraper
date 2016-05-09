@@ -1,0 +1,710 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815606ea">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-23</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cr-00517</identifier>
+<identifier type="local">P0b002ee1815606ea</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-5_07-cr-00517</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_07-cr-00517</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:07-cr-00517</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Cory" fullName="Cory Armstrong" lastName="Armstrong" role="Defendant"></party>
+ <party firstName="Ronald" fullName="Ronald Baker" lastName="Baker" role="Defendant"></party>
+ <party firstName="Adolfo" fullName="Adolfo Javier Barragan" lastName="Barragan" middleName="Javier" role="Defendant"></party>
+ <party firstName="Adolfo" fullName="Adolfo Barragan-Rodriguez" lastName="Barragan-Rodriguez" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Clapper" lastName="Clapper" role="Defendant"></party>
+ <party firstName="Candelaria" fullName="Candelaria Gastelum De Iribe" lastName="De Iribe" middleName="Gastelum" role="Defendant"></party>
+ <party firstName="Gregory" fullName="Gregory Dulaney" lastName="Dulaney" role="Defendant"></party>
+ <party firstName="Ronald" fullName="Ronald Falkowski" lastName="Falkowski" role="Defendant"></party>
+ <party firstName="Christina" fullName="Christina Yudith Gastelum Lopez" lastName="Gastelum Lopez" middleName="Yudith" role="Defendant"></party>
+ <party firstName="Dennis" fullName="Dennis Grimes" lastName="Grimes" role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph Paul Host" lastName="Host" middleName="Paul" role="Defendant"></party>
+ <party firstName="David" fullName="David Knepp" lastName="Knepp" role="Defendant"></party>
+ <party firstName="Patricia" fullName="Patricia Knepp" lastName="Knepp" role="Defendant"></party>
+ <party firstName="Miguel" fullName="Miguel Gonzales Morfin" lastName="Morfin" middleName="Gonzales" role="Defendant"></party>
+ <party firstName="Meredith" fullName="Meredith L. Rufener" lastName="Rufener" middleName="L." role="Defendant"></party>
+ <party firstName="Jose" fullName="Jose Guadalupe Sandoval Perez" lastName="Sandoval Perez" middleName="Guadalupe" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party firstName="Lawrence" fullName="Lawrence Welling" lastName="Welling" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Host et al</title>
+ <partNumber>5:07-cr-00517</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cr-00517/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:07-cr-00517;07-517</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Akron</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Cory Armstrong</displayForm>
+ <namePart type="family">Armstrong</namePart>
+ <namePart type="given">Cory</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ronald Baker</displayForm>
+ <namePart type="family">Baker</namePart>
+ <namePart type="given">Ronald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Adolfo Javier Barragan</displayForm>
+ <namePart type="family">Barragan</namePart>
+ <namePart type="given">Adolfo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Adolfo Barragan-Rodriguez</displayForm>
+ <namePart type="family">Barragan-Rodriguez</namePart>
+ <namePart type="given">Adolfo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Clapper</displayForm>
+ <namePart type="family">Clapper</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Candelaria Gastelum De Iribe</displayForm>
+ <namePart type="family">De Iribe</namePart>
+ <namePart type="given">Candelaria</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gregory Dulaney</displayForm>
+ <namePart type="family">Dulaney</namePart>
+ <namePart type="given">Gregory</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ronald Falkowski</displayForm>
+ <namePart type="family">Falkowski</namePart>
+ <namePart type="given">Ronald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Christina Yudith Gastelum Lopez</displayForm>
+ <namePart type="family">Gastelum Lopez</namePart>
+ <namePart type="given">Christina</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dennis Grimes</displayForm>
+ <namePart type="family">Grimes</namePart>
+ <namePart type="given">Dennis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Paul Host</displayForm>
+ <namePart type="family">Host</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Knepp</displayForm>
+ <namePart type="family">Knepp</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Patricia Knepp</displayForm>
+ <namePart type="family">Knepp</namePart>
+ <namePart type="given">Patricia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Miguel Gonzales Morfin</displayForm>
+ <namePart type="family">Morfin</namePart>
+ <namePart type="given">Miguel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Meredith L. Rufener</displayForm>
+ <namePart type="family">Rufener</namePart>
+ <namePart type="given">Meredith</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jose Guadalupe Sandoval Perez</displayForm>
+ <namePart type="family">Sandoval Perez</namePart>
+ <namePart type="given">Jose</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lawrence Welling</displayForm>
+ <namePart type="family">Welling</namePart>
+ <namePart type="given">Lawrence</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_07-cr-00517</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:07-cr-00517</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Cory" fullName="Cory Armstrong" lastName="Armstrong" role="Defendant"></party>
+ <party firstName="Ronald" fullName="Ronald Baker" lastName="Baker" role="Defendant"></party>
+ <party firstName="Adolfo" fullName="Adolfo Javier Barragan" lastName="Barragan" middleName="Javier" role="Defendant"></party>
+ <party firstName="Adolfo" fullName="Adolfo Barragan-Rodriguez" lastName="Barragan-Rodriguez" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Clapper" lastName="Clapper" role="Defendant"></party>
+ <party firstName="Candelaria" fullName="Candelaria Gastelum De Iribe" lastName="De Iribe" middleName="Gastelum" role="Defendant"></party>
+ <party firstName="Gregory" fullName="Gregory Dulaney" lastName="Dulaney" role="Defendant"></party>
+ <party firstName="Ronald" fullName="Ronald Falkowski" lastName="Falkowski" role="Defendant"></party>
+ <party firstName="Christina" fullName="Christina Yudith Gastelum Lopez" lastName="Gastelum Lopez" middleName="Yudith" role="Defendant"></party>
+ <party firstName="Dennis" fullName="Dennis Grimes" lastName="Grimes" role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph Paul Host" lastName="Host" middleName="Paul" role="Defendant"></party>
+ <party firstName="David" fullName="David Knepp" lastName="Knepp" role="Defendant"></party>
+ <party firstName="Patricia" fullName="Patricia Knepp" lastName="Knepp" role="Defendant"></party>
+ <party firstName="Miguel" fullName="Miguel Gonzales Morfin" lastName="Morfin" middleName="Gonzales" role="Defendant"></party>
+ <party firstName="Meredith" fullName="Meredith L. Rufener" lastName="Rufener" middleName="L." role="Defendant"></party>
+ <party firstName="Jose" fullName="Jose Guadalupe Sandoval Perez" lastName="Sandoval Perez" middleName="Guadalupe" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party firstName="Lawrence" fullName="Lawrence Welling" lastName="Welling" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cr-00517-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Host et al</title>
+  <subTitle>Order. Pursuant to Rule 48(a) of Federal Rules of Criminal Procedure and by leave of Court, the United States Attorney for the Northern District of Ohio dismisses the indictment as to Christina Yudith Gastelum Lopez, re 8 Indictment, 108 Motion to Dismiss filed by United States of America. Signed by Judge Christopher A. Boyko on 01/16/08. (M,M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cr-00517-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18161cb94</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-0</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cr-00517_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cr-00517/pdf/USCOURTS-ohnd-5_07-cr-00517-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cr-00517; United States of America v. Host et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cr-00517-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-16</dateIssued>
+  <docketText>Order. Pursuant to Rule 48(a) of Federal Rules of Criminal Procedure and by leave of Court, the United States Attorney for the Northern District of Ohio dismisses the indictment as to Christina Yudith Gastelum Lopez, re 8 Indictment, 108 Motion to Dismiss filed by United States of America. Signed by Judge Christopher A. Boyko on 01/16/08. (M,M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cr-00517-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Host et al</title>
+  <subTitle>Judgment as to Adolfo Barragan-Rodriguez (2), Count(s) 1. Defendant sentenced to the Bureau of Prisons for 52 months followed by 3 years supervised release. Defendant&apos;s fine waived. Special assessment of $100 due immediately and payable to Clerk, U.S. District Court. Defendant remanded to the custody of the U.S. Marshal. Signed by Judge Christopher A. Boyko on 04/21/08. (M,M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-04-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cr-00517-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18161cb81</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-1</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cr-00517_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cr-00517/pdf/USCOURTS-ohnd-5_07-cr-00517-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cr-00517; United States of America v. Host et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cr-00517-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-04-21</dateIssued>
+  <docketText>Judgment as to Adolfo Barragan-Rodriguez (2), Count(s) 1. Defendant sentenced to the Bureau of Prisons for 52 months followed by 3 years supervised release. Defendant&apos;s fine waived. Special assessment of $100 due immediately and payable to Clerk, U.S. District Court. Defendant remanded to the custody of the U.S. Marshal. Signed by Judge Christopher A. Boyko on 04/21/08. (M,M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cr-00517-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-2/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Host et al</title>
+  <subTitle>VACATEDOrder. The Court VACATES the Deportation portion of the sentence and sentencing record as an additional condition of Supervised Release as to Adolfo Barragan-Rodriguez, re 180 Judgment. Signed by Judge Christopher A. Boyko on 04/22/08. (M,M) Modified on 10/4/2011 (M,M).</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-04-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cr-00517-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18161cb96</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-2</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cr-00517_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cr-00517/pdf/USCOURTS-ohnd-5_07-cr-00517-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cr-00517; United States of America v. Host et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cr-00517-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-04-22</dateIssued>
+  <docketText>VACATEDOrder. The Court VACATES the Deportation portion of the sentence and sentencing record as an additional condition of Supervised Release as to Adolfo Barragan-Rodriguez, re 180 Judgment. Signed by Judge Christopher A. Boyko on 04/22/08. (M,M) Modified on 10/4/2011 (M,M).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cr-00517-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-3/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Host et al</title>
+  <subTitle>Order granting 188 Plaintiff&apos;s Motion to Dismiss as to Cory Armstrong (7). The United States Attorney for the Northern District of Ohio dismisses the indictment against Cory Armstrong, Defendant. Signed by Judge Christopher A. Boyko on 05/06/08. (M,M)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-05-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cr-00517-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18161cb79</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-3</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cr-00517_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cr-00517/pdf/USCOURTS-ohnd-5_07-cr-00517-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cr-00517; United States of America v. Host et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cr-00517-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-05-06</dateIssued>
+  <docketText>Order granting 188 Plaintiff&apos;s Motion to Dismiss as to Cory Armstrong (7). The United States Attorney for the Northern District of Ohio dismisses the indictment against Cory Armstrong, Defendant. Signed by Judge Christopher A. Boyko on 05/06/08. (M,M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cr-00517-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-4/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Host et al</title>
+  <subTitle>Order granting 188 Plaintiff&apos;s Motion to Dismiss as to Ronald Baker (11). The United States Attorney for the Northern District of Ohio dismisses the indictment against Ronald Baker, Defendant. Signed by Judge Christopher A. Boyko on 05/06/08. (M,M)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-05-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cr-00517-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18161cb95</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-4</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cr-00517_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cr-00517/pdf/USCOURTS-ohnd-5_07-cr-00517-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cr-00517; United States of America v. Host et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cr-00517-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-05-06</dateIssued>
+  <docketText>Order granting 188 Plaintiff&apos;s Motion to Dismiss as to Ronald Baker (11). The United States Attorney for the Northern District of Ohio dismisses the indictment against Ronald Baker, Defendant. Signed by Judge Christopher A. Boyko on 05/06/08. (M,M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cr-00517-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-5/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Host et al</title>
+  <subTitle>Judgment as to Ronald Falkowski (15), Count(s) 1. Defendant sentenced to the Bureau of Prisons for a term of 46 months followed by 3 years supervised release. Defendant&apos;s fine waived. Special assessment of $100 due immediately and payable to Clerk, U.S. District Court. Defendant remanded to the custody of the United States Marshal. Count(s) 2, 3, Disposed. Judge Christopher A. Boyko on 06/19/08. (M,M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-06-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cr-00517-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18161cb7c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-5</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cr-00517_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cr-00517/pdf/USCOURTS-ohnd-5_07-cr-00517-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cr-00517; United States of America v. Host et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cr-00517-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2008-06-19</dateIssued>
+  <docketText>Judgment as to Ronald Falkowski (15), Count(s) 1. Defendant sentenced to the Bureau of Prisons for a term of 46 months followed by 3 years supervised release. Defendant&apos;s fine waived. Special assessment of $100 due immediately and payable to Clerk, U.S. District Court. Defendant remanded to the custody of the United States Marshal. Count(s) 2, 3, Disposed. Judge Christopher A. Boyko on 06/19/08. (M,M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cr-00517-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-6/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Host et al</title>
+  <subTitle>Order continuing Defendant&apos;s bond and drug/alcohol aftercare as to Michael Clapper, Related document, Bond Revocation Hearing. Judge Christopher A. Boyko on 06/19/08. (M,M)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-06-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cr-00517-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18161cb7d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-6</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cr-00517_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cr-00517/pdf/USCOURTS-ohnd-5_07-cr-00517-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cr-00517; United States of America v. Host et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cr-00517-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2008-06-19</dateIssued>
+  <docketText>Order continuing Defendant&apos;s bond and drug/alcohol aftercare as to Michael Clapper, Related document, Bond Revocation Hearing. Judge Christopher A. Boyko on 06/19/08. (M,M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cr-00517-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-7/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Host et al</title>
+  <subTitle>Judgment as to Michael Clapper (8), Count(s) 1. Defendant sentenced to the Bureau of Prisons for a term of 52 months follwed by 3 years Supervised Release. Defendant&apos;s fine waived. Special Assessment of $100 due immediately and payable to Clerk, US District Court. Defendant to self surrender to the Bureau of Prisons upon notification by United States Marshal. Judge Christopher A. Boyko on 07/10/08. (M,M)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cr-00517-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18161cb7f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-7</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cr-00517_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cr-00517/pdf/USCOURTS-ohnd-5_07-cr-00517-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cr-00517; United States of America v. Host et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cr-00517-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2008-07-10</dateIssued>
+  <docketText>Judgment as to Michael Clapper (8), Count(s) 1. Defendant sentenced to the Bureau of Prisons for a term of 52 months follwed by 3 years Supervised Release. Defendant&apos;s fine waived. Special Assessment of $100 due immediately and payable to Clerk, US District Court. Defendant to self surrender to the Bureau of Prisons upon notification by United States Marshal. Judge Christopher A. Boyko on 07/10/08. (M,M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cr-00517-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-8/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Host et al</title>
+  <subTitle>Judgment as to Patricia Knepp (13), Count(s). Defendant sentenced to 3 years Probation. Defendant is sentenced to 6 months Home Confinement with Electronic Monitoring to commence no later than 30 days from the date of sentencing. The Defendant is given permission to work, attend religious services, medical appointments. Defendant shall pay the cost of Electronic Monitoring. Defendant&apos;s fine waived.v Special Assessment of $100 due immediately and payable to Clerk, U.S. District Court. Defendant shall undergo random drug tests. Upon motion by the Government, Counts 9, 24, 38, 51, 53, 55 are dismissed.. Judge Christopher A. Boyko on 07/10/08. (M,M)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cr-00517-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18161cb7a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-8</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cr-00517_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cr-00517/pdf/USCOURTS-ohnd-5_07-cr-00517-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cr-00517; United States of America v. Host et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cr-00517-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2008-07-10</dateIssued>
+  <docketText>Judgment as to Patricia Knepp (13), Count(s). Defendant sentenced to 3 years Probation. Defendant is sentenced to 6 months Home Confinement with Electronic Monitoring to commence no later than 30 days from the date of sentencing. The Defendant is given permission to work, attend religious services, medical appointments. Defendant shall pay the cost of Electronic Monitoring. Defendant&apos;s fine waived.v Special Assessment of $100 due immediately and payable to Clerk, U.S. District Court. Defendant shall undergo random drug tests. Upon motion by the Government, Counts 9, 24, 38, 51, 53, 55 are dismissed.. Judge Christopher A. Boyko on 07/10/08. (M,M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cr-00517-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-9/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Host et al</title>
+  <subTitle>Judgment as to David Knepp (12), Count(s). Defendant sentenced to the Bureau of Prisons for a term of 30 months followed by 3 years supervised release. Defendant&apos;s fine waived. Defendant shall pay a special assessment of $100 due immediately and payable to Clerk, U.S. District Court. Defendant shall voluntarily surrender to the Bureau of Prisons upon notification by the United States Marshal. Defendant&apos;s bond continued. Upon motion of the Government, the Court dismisses counts 16, 25, and 48 of the indictment as to David Knepp. Judge Christopher A. Boyko on 07/10/08. (M,M)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cr-00517-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18161cb80</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-9</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cr-00517_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cr-00517/pdf/USCOURTS-ohnd-5_07-cr-00517-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cr-00517; United States of America v. Host et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cr-00517-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2008-07-10</dateIssued>
+  <docketText>Judgment as to David Knepp (12), Count(s). Defendant sentenced to the Bureau of Prisons for a term of 30 months followed by 3 years supervised release. Defendant&apos;s fine waived. Defendant shall pay a special assessment of $100 due immediately and payable to Clerk, U.S. District Court. Defendant shall voluntarily surrender to the Bureau of Prisons upon notification by the United States Marshal. Defendant&apos;s bond continued. Upon motion of the Government, the Court dismisses counts 16, 25, and 48 of the indictment as to David Knepp. Judge Christopher A. Boyko on 07/10/08. (M,M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cr-00517-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-10/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Host et al</title>
+  <subTitle>Judgment as to Dennis Grimes (9), Count(s) 1. Defendant sentenced to the Bureau of Prisons for a term of 9 months followed by 3 years supervised release. Defendant&apos;s fine waived. Special assessment of $100 due immediately and payable to Clerk, US District Court. Upon motion of the Government, the Court dismisses counts 19, 21, 27 and 50 of the indictment as to Dennis Grimes. Defendant shall voluntarily surrender to the Bureau of Prisons upon notification by the United States Marshal. Judge Christopher A. Boyko on 07/10/08. (M,M)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cr-00517-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18161ca83</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-10</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cr-00517_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cr-00517/pdf/USCOURTS-ohnd-5_07-cr-00517-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cr-00517; United States of America v. Host et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cr-00517-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2008-07-10</dateIssued>
+  <docketText>Judgment as to Dennis Grimes (9), Count(s) 1. Defendant sentenced to the Bureau of Prisons for a term of 9 months followed by 3 years supervised release. Defendant&apos;s fine waived. Special assessment of $100 due immediately and payable to Clerk, US District Court. Upon motion of the Government, the Court dismisses counts 19, 21, 27 and 50 of the indictment as to Dennis Grimes. Defendant shall voluntarily surrender to the Bureau of Prisons upon notification by the United States Marshal. Judge Christopher A. Boyko on 07/10/08. (M,M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cr-00517-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-11/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Host et al</title>
+  <subTitle>Judgment as to Meredith L. Rufener (16), Count(s) 1. Defendant sentenced to 3 years Probation. Defendant&apos;s fine waived. Defendant is subject to random drug/alcohol tests. Defendant shall participate in out/inpatient or detoxification substance abuse treatment. The Defendant shall participate in an outpatient mental health treatment program as directed by the probation officer. The Defendant shall cooperate in the collection of DNA as directed by the probation officer. The Defendant shall forfeit to the United States any and all property constituting, or derived from, any proceeds he obtained, directly or indirectly, as the result of the instant offense; and any and all of her property used or intended to be used, in any manner or part, to commit or to facilitate the commission of the instant offense. Judge Christopher A. Boyko on 07/17/08. (M,M)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cr-00517-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18161ca81</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-11</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cr-00517_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cr-00517/pdf/USCOURTS-ohnd-5_07-cr-00517-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cr-00517; United States of America v. Host et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cr-00517-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2008-07-18</dateIssued>
+  <docketText>Judgment as to Meredith L. Rufener (16), Count(s) 1. Defendant sentenced to 3 years Probation. Defendant&apos;s fine waived. Defendant is subject to random drug/alcohol tests. Defendant shall participate in out/inpatient or detoxification substance abuse treatment. The Defendant shall participate in an outpatient mental health treatment program as directed by the probation officer. The Defendant shall cooperate in the collection of DNA as directed by the probation officer. The Defendant shall forfeit to the United States any and all property constituting, or derived from, any proceeds he obtained, directly or indirectly, as the result of the instant offense; and any and all of her property used or intended to be used, in any manner or part, to commit or to facilitate the commission of the instant offense. Judge Christopher A. Boyko on 07/17/08. (M,M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cr-00517-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-12/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Host et al</title>
+  <subTitle>Order. Defendant Candelaria Gastelum De Iribe is removable from the United States under 8 U.S.C. 1227(a)(2)(A)(iii) of the Immigration and Nationality Act, in that after entry, defendant was convicted of an aggravated felony, as defined in 8 U.S.C. 1101(a)(43)(B). Further ordered, pursuant to 8 U.S.C. 1228(c), that the defendant be removed from the United States so that promptly upon her release from confinement, the Department of Homeland Security, Immigration and Customs Enforcement, may execute said removal order according to applicable laws and regulations as to Candelaria Gastelum De Iribe, Related document 237 Judgment.. Judge Christopher A. Boyko on 07/24/08. (M,M)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cr-00517-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18161ca82</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-12</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cr-00517_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cr-00517/pdf/USCOURTS-ohnd-5_07-cr-00517-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cr-00517; United States of America v. Host et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cr-00517-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2008-07-29</dateIssued>
+  <docketText>Order. Defendant Candelaria Gastelum De Iribe is removable from the United States under 8 U.S.C. 1227(a)(2)(A)(iii) of the Immigration and Nationality Act, in that after entry, defendant was convicted of an aggravated felony, as defined in 8 U.S.C. 1101(a)(43)(B). Further ordered, pursuant to 8 U.S.C. 1228(c), that the defendant be removed from the United States so that promptly upon her release from confinement, the Department of Homeland Security, Immigration and Customs Enforcement, may execute said removal order according to applicable laws and regulations as to Candelaria Gastelum De Iribe, Related document 237 Judgment.. Judge Christopher A. Boyko on 07/24/08. (M,M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cr-00517-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-13/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Host et al</title>
+  <subTitle>Amended Judgment to Reflect Clerical Change as to Joseph Paul Host (1). Count(s) 1, 2, 3-6, 7, 8, 9-23, dismissed superseding indictment; Count(s) 1s, Defendant sentenced to the Bureau of Prisons for a termof 168 months followed by 3 years supervised release. Defendant&apos;s fine waived. Special Assessment of $100 due immediately and payable to Clerk. U.S. District Court. Defendant remanded to the custody of the United States Marshal.; Count(s) 2s, 3s-6s, dismissed upon motion of United States; Count(s) 7s, 8s, 9s-64s, dismissed upon motion of the United States. Judge Christopher A. Boyko on 08/08/08. (M,M)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cr-00517-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18161cb82</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-13</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cr-00517_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cr-00517/pdf/USCOURTS-ohnd-5_07-cr-00517-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cr-00517; United States of America v. Host et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cr-00517-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2008-08-08</dateIssued>
+  <docketText>Amended Judgment to Reflect Clerical Change as to Joseph Paul Host (1). Count(s) 1, 2, 3-6, 7, 8, 9-23, dismissed superseding indictment; Count(s) 1s, Defendant sentenced to the Bureau of Prisons for a termof 168 months followed by 3 years supervised release. Defendant&apos;s fine waived. Special Assessment of $100 due immediately and payable to Clerk. U.S. District Court. Defendant remanded to the custody of the United States Marshal.; Count(s) 2s, 3s-6s, dismissed upon motion of United States; Count(s) 7s, 8s, 9s-64s, dismissed upon motion of the United States. Judge Christopher A. Boyko on 08/08/08. (M,M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cr-00517-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-14/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Host et al</title>
+  <subTitle>Judgment as to Lawrence Welling (10), Count(s) 1. All counsel and probation officer present. Defendant sentenced to the Bureau of Prisons for 40 months followed by 3 years Supervised Release. Defendant&apos;s fine waived. Defendant shall pay Special Assessment of $100 due immediately and payable to Clerk, U.S. District Court. Defendant shall self-report to the Bureau of Prisons upon notice by the United States Marshal. Conditions of bond continued. Count(s) 14, 2, 3, 42, 64, Disposed. Judge Christopher A. Boyko on 10/08/08. (M,M)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cr-00517-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18161cb7b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-14</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cr-00517_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cr-00517/pdf/USCOURTS-ohnd-5_07-cr-00517-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cr-00517; United States of America v. Host et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cr-00517-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2008-10-09</dateIssued>
+  <docketText>Judgment as to Lawrence Welling (10), Count(s) 1. All counsel and probation officer present. Defendant sentenced to the Bureau of Prisons for 40 months followed by 3 years Supervised Release. Defendant&apos;s fine waived. Defendant shall pay Special Assessment of $100 due immediately and payable to Clerk, U.S. District Court. Defendant shall self-report to the Bureau of Prisons upon notice by the United States Marshal. Conditions of bond continued. Count(s) 14, 2, 3, 42, 64, Disposed. Judge Christopher A. Boyko on 10/08/08. (M,M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cr-00517-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-15/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Host et al</title>
+  <subTitle>Judgment as to Gregory Dulaney (14), Count(s) 1. Defendant sentenced to the Bureau of Prisons for 24 months followed by 3 years Supervised Release. Defendant&apos;s fine waived. Defendant shall pay $100 Special Assessment to Clerk, U.S. District Court. Defendant shall voluntarily surrender to the Bureau of Prisons upon notification by the U.S. Marshal. Counts 17,33, 43, and 52 are dismissed upon motion by the Government. Judge Christopher A. Boyko on 01/23/09. (M,M)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cr-00517-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18161cb7e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-15</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cr-00517_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cr-00517/USCOURTS-ohnd-5_07-cr-00517-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cr-00517/pdf/USCOURTS-ohnd-5_07-cr-00517-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cr-00517; United States of America v. Host et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cr-00517-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2009-01-23</dateIssued>
+  <docketText>Judgment as to Gregory Dulaney (14), Count(s) 1. Defendant sentenced to the Bureau of Prisons for 24 months followed by 3 years Supervised Release. Defendant&apos;s fine waived. Defendant shall pay $100 Special Assessment to Clerk, U.S. District Court. Defendant shall voluntarily surrender to the Bureau of Prisons upon notification by the U.S. Marshal. Counts 17,33, 43, and 52 are dismissed upon motion by the Government. Judge Christopher A. Boyko on 01/23/09. (M,M)</docketText>
+</extension>
+</relatedItem>
+</mods>

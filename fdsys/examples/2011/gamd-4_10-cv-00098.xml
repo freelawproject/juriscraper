@@ -1,0 +1,207 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18128d7d3">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-19</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_10-cv-00098</identifier>
+<identifier type="local">P0b002ee18128d7d3</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-19</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-4_10-cv-00098</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-4_10-cv-00098</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>4:10-cv-00098</caseNumber>
+ <caseOffice>Columbus</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>463</natureSuitCode>
+ <natureSuit>Habeas Corpus - Alien Detainee</natureSuit>
+ <cause>28:2241 Petition for Writ of Habeas Corpus (federa</cause>
+ <party firstName="ERIC" fullName="ERIC HOLDER" lastName="HOLDER" role="Respondent"></party>
+ <party firstName="JANET" fullName="JANET NAPOLITANO" lastName="NAPOLITANO" role="Respondent"></party>
+ <party firstName="FELICIA" fullName="FELICIA SKINNER" lastName="SKINNER" role="Respondent"></party>
+ <party firstName="MICHAEL" fullName="MICHAEL SWINTON" lastName="SWINTON" role="Respondent"></party>
+ <party firstName="Tremis" fullName="Tremis Addenis Woodley" lastName="Woodley" middleName="Addenis" role="Petitioner"></party>
+</extension>
+<titleInfo>
+ <title>Woodley v. Holder et al</title>
+ <partNumber>4:10-cv-00098</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_10-cv-00098/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:10-cv-00098;10-098</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Columbus</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>ERIC HOLDER</displayForm>
+ <namePart type="family">HOLDER</namePart>
+ <namePart type="given">ERIC</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>JANET NAPOLITANO</displayForm>
+ <namePart type="family">NAPOLITANO</namePart>
+ <namePart type="given">JANET</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>FELICIA SKINNER</displayForm>
+ <namePart type="family">SKINNER</namePart>
+ <namePart type="given">FELICIA</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>MICHAEL SWINTON</displayForm>
+ <namePart type="family">SWINTON</namePart>
+ <namePart type="given">MICHAEL</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Tremis Addenis Woodley</displayForm>
+ <namePart type="family">Woodley</namePart>
+ <namePart type="given">Tremis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-4_10-cv-00098</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>4:10-cv-00098</caseNumber>
+ <caseOffice>Columbus</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>463</natureSuitCode>
+ <natureSuit>Habeas Corpus - Alien Detainee</natureSuit>
+ <cause>28:2241 Petition for Writ of Habeas Corpus (federa</cause>
+ <party firstName="ERIC" fullName="ERIC HOLDER" lastName="HOLDER" role="Respondent"></party>
+ <party firstName="JANET" fullName="JANET NAPOLITANO" lastName="NAPOLITANO" role="Respondent"></party>
+ <party firstName="FELICIA" fullName="FELICIA SKINNER" lastName="SKINNER" role="Respondent"></party>
+ <party firstName="MICHAEL" fullName="MICHAEL SWINTON" lastName="SWINTON" role="Respondent"></party>
+ <party firstName="Tremis" fullName="Tremis Addenis Woodley" lastName="Woodley" middleName="Addenis" role="Petitioner"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-4_10-cv-00098-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_10-cv-00098/USCOURTS-gamd-4_10-cv-00098-0/mods.xml">
+ <titleInfo>
+  <title>Woodley v. Holder et al</title>
+  <subTitle>REPORT AND RECOMMENDATION re 1 Petition for Writ of Habeas Corpus, filed by Tremis Addenis Woodley, 14 MOTION to Dismiss Petition for Writ of Habeas Corpus filed by Felicia Skinner, Eric Holder, Janet Napolitano, 15 MOTION to Dismiss a party filed by Michael Swinton. Ordered by US Mag Judge Stephen Hyles on 12/6/10. (AGH) [R&amp;R mailed on 12/07/10 - tls] (Additional attachment(s) added on 12/7/2010: # (1) Mailing Label) (tls).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-4_10-cv-00098-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1812b2703</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_10-cv-00098/USCOURTS-gamd-4_10-cv-00098-0</identifier>
+ <identifier type="former granule identifier">gamd-4_10-cv-00098_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_10-cv-00098/USCOURTS-gamd-4_10-cv-00098-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_10-cv-00098/pdf/USCOURTS-gamd-4_10-cv-00098-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cv-00098; Woodley v. Holder et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-4_10-cv-00098-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-12-06</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION re 1 Petition for Writ of Habeas Corpus, filed by Tremis Addenis Woodley, 14 MOTION to Dismiss Petition for Writ of Habeas Corpus filed by Felicia Skinner, Eric Holder, Janet Napolitano, 15 MOTION to Dismiss a party filed by Michael Swinton. Ordered by US Mag Judge Stephen Hyles on 12/6/10. (AGH) [R&amp;R mailed on 12/07/10 - tls] (Additional attachment(s) added on 12/7/2010: # (1) Mailing Label) (tls).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-4_10-cv-00098-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_10-cv-00098/USCOURTS-gamd-4_10-cv-00098-1/mods.xml">
+ <titleInfo>
+  <title>Woodley v. Holder et al</title>
+  <subTitle>ORDER adopting Report and Recommendations re 20 Report and Recommendations.Ordered by Judge Clay D. Land on 1/4/11 (tls) ***</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-4_10-cv-00098-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1812b2702</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_10-cv-00098/USCOURTS-gamd-4_10-cv-00098-1</identifier>
+ <identifier type="former granule identifier">gamd-4_10-cv-00098_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_10-cv-00098/USCOURTS-gamd-4_10-cv-00098-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_10-cv-00098/pdf/USCOURTS-gamd-4_10-cv-00098-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cv-00098; Woodley v. Holder et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-4_10-cv-00098-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-05</dateIssued>
+  <docketText>ORDER adopting Report and Recommendations re 20 Report and Recommendations.Ordered by Judge Clay D. Land on 1/4/11 (tls) ***</docketText>
+</extension>
+</relatedItem>
+</mods>

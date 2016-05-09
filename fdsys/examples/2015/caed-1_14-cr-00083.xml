@@ -1,0 +1,230 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18b217e4a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-02-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-02-19</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00083</identifier>
+<identifier type="local">P0b002ee18b217e4a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-02-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-02-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_14-cr-00083</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cr-00083</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cr-00083</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Enouche" fullName="Enouche R. Trosclair" lastName="Trosclair" middleName="R." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Trosclair</title>
+ <partNumber>1:14-cr-00083</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00083/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cr-00083;14-083</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Enouche R. Trosclair</displayForm>
+ <namePart type="family">Trosclair</namePart>
+ <namePart type="given">Enouche</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cr-00083</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cr-00083</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Enouche" fullName="Enouche R. Trosclair" lastName="Trosclair" middleName="R." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00083-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00083/USCOURTS-caed-1_14-cr-00083-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Trosclair</title>
+  <subTitle>DETENTION ORDER as to Enouche R. Trosclair signed by Magistrate Judge Kendall J. Newman on 04/15/2014. (Flores, E)[1:14-mj-00062-SAB]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00083/pdf/USCOURTS-caed-1_14-cr-00083-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b22d55c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00083/USCOURTS-caed-1_14-cr-00083-0</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00083_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00083/USCOURTS-caed-1_14-cr-00083-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00083/pdf/USCOURTS-caed-1_14-cr-00083-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00083; USA v. Trosclair; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00083-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-04-15</dateIssued>
+  <docketText>DETENTION ORDER as to Enouche R. Trosclair signed by Magistrate Judge Kendall J. Newman on 04/15/2014. (Flores, E)[1:14-mj-00062-SAB]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00083-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00083/USCOURTS-caed-1_14-cr-00083-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Trosclair</title>
+  <subTitle>ORDER on Motion to Withdraw the Federal Defender as Counsel, Appoint Ad Hoc CJA Counsel, and Defendant&apos;s Consent 15 as to Enouche R. Trosclair (1), signed by Magistrate Judge Barbara A. McAuliffe on 1/5/15: Effective January 12, 2015, Withdrawing the Federal Defender as counsel and appointing Marc Days as ad hoc CJA counsel. (Hellings, J)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00083/pdf/USCOURTS-caed-1_14-cr-00083-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b22d55b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00083/USCOURTS-caed-1_14-cr-00083-1</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00083_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00083/USCOURTS-caed-1_14-cr-00083-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00083/pdf/USCOURTS-caed-1_14-cr-00083-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00083; USA v. Trosclair; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00083-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER on Motion to Withdraw the Federal Defender as Counsel, Appoint Ad Hoc CJA Counsel, and Defendant&apos;s Consent 15 as to Enouche R. Trosclair (1), signed by Magistrate Judge Barbara A. McAuliffe on 1/5/15: Effective January 12, 2015, Withdrawing the Federal Defender as counsel and appointing Marc Days as ad hoc CJA counsel. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00083-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00083/USCOURTS-caed-1_14-cr-00083-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Trosclair</title>
+  <subTitle>STIPULATION and ORDER to Advance Sentencing Hearing as to Enouche R. Trosclair, Signed by District Judge Anthony W. Ishii on 2/12/2015. The Sentencing Hearing now set for 3/9/2015 is ADVANCED to 2/17/2015 at 10:00 AM in Courtroom 2 before District Judge Anthony W. Ishii. (Arellano, S.)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00083/pdf/USCOURTS-caed-1_14-cr-00083-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b22d55e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00083/USCOURTS-caed-1_14-cr-00083-2</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00083_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00083/USCOURTS-caed-1_14-cr-00083-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00083/pdf/USCOURTS-caed-1_14-cr-00083-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00083; USA v. Trosclair; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00083-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-02-12</dateIssued>
+  <docketText>STIPULATION and ORDER to Advance Sentencing Hearing as to Enouche R. Trosclair, Signed by District Judge Anthony W. Ishii on 2/12/2015. The Sentencing Hearing now set for 3/9/2015 is ADVANCED to 2/17/2015 at 10:00 AM in Courtroom 2 before District Judge Anthony W. Ishii. (Arellano, S.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00083-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00083/USCOURTS-caed-1_14-cr-00083-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Trosclair</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Enouche R. Trosclair, signed by District Judge Anthony W. Ishii on 2/19/2015. (Gaumnitz, R)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00083/pdf/USCOURTS-caed-1_14-cr-00083-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b22d55d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00083/USCOURTS-caed-1_14-cr-00083-3</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00083_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00083/USCOURTS-caed-1_14-cr-00083-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00083/pdf/USCOURTS-caed-1_14-cr-00083-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00083; USA v. Trosclair; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00083-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-02-19</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Enouche R. Trosclair, signed by District Judge Anthony W. Ishii on 2/19/2015. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+</mods>

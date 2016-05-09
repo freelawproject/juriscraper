@@ -1,0 +1,242 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815d0501">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_04-cv-01763</identifier>
+<identifier type="local">P0b002ee1815d0501</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-4_04-cv-01763</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-4_04-cv-01763</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>4:04-cv-01763</caseNumber>
+ <caseOffice>Youngstown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>830</natureSuitCode>
+ <natureSuit>Patent</natureSuit>
+ <cause>35:271 Patent Infringement</cause>
+ <party firstName="Jaime" fullName="Jaime Brenkus" lastName="Brenkus" role="Counter-Defendant"></party>
+ <party firstName="Jaime" fullName="Jaime Brenkus" lastName="Brenkus" role="Plaintiff"></party>
+ <party firstName="Ronald" fullName="Ronald Fricke" lastName="Fricke" role="Counter-Claimant"></party>
+ <party firstName="Ronald" fullName="Ronald Fricke" lastName="Fricke" role="Defendant"></party>
+ <party fullName="Healthy Life Marketing, Inc." lastName="Healthy Life Marketing, Inc." role="Counter-Claimant"></party>
+ <party fullName="Healthy Life Marketing, Inc." lastName="Healthy Life Marketing, Inc." role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Herko" lastName="Herko" role="Counter-Claimant"></party>
+ <party firstName="Richard" fullName="Richard Herko" lastName="Herko" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Tilton" lastName="Tilton" role="Counter-Claimant"></party>
+ <party firstName="Robert" fullName="Robert Tilton" lastName="Tilton" role="Defendant"></party>
+ <party firstName="Ernie" fullName="Ernie Zavoral" lastName="Zavoral" role="Counter-Claimant"></party>
+ <party firstName="Ernie" fullName="Ernie Zavoral" lastName="Zavoral" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Brenkus v. Healthy Life Marketing, Inc. et al</title>
+ <partNumber>4:04-cv-01763</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_04-cv-01763/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:04-cv-01763;04-1763</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Youngstown</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jaime Brenkus</displayForm>
+ <namePart type="family">Brenkus</namePart>
+ <namePart type="given">Jaime</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jaime Brenkus</displayForm>
+ <namePart type="family">Brenkus</namePart>
+ <namePart type="given">Jaime</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ronald Fricke</displayForm>
+ <namePart type="family">Fricke</namePart>
+ <namePart type="given">Ronald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Ronald Fricke</displayForm>
+ <namePart type="family">Fricke</namePart>
+ <namePart type="given">Ronald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Healthy Life Marketing, Inc.</displayForm>
+ <namePart type="family">Healthy Life Marketing, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Healthy Life Marketing, Inc.</displayForm>
+ <namePart type="family">Healthy Life Marketing, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Herko</displayForm>
+ <namePart type="family">Herko</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Herko</displayForm>
+ <namePart type="family">Herko</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Tilton</displayForm>
+ <namePart type="family">Tilton</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Tilton</displayForm>
+ <namePart type="family">Tilton</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ernie Zavoral</displayForm>
+ <namePart type="family">Zavoral</namePart>
+ <namePart type="given">Ernie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Ernie Zavoral</displayForm>
+ <namePart type="family">Zavoral</namePart>
+ <namePart type="given">Ernie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-4_04-cv-01763</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>4:04-cv-01763</caseNumber>
+ <caseOffice>Youngstown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>830</natureSuitCode>
+ <natureSuit>Patent</natureSuit>
+ <cause>35:271 Patent Infringement</cause>
+ <party firstName="Jaime" fullName="Jaime Brenkus" lastName="Brenkus" role="Counter-Defendant"></party>
+ <party firstName="Jaime" fullName="Jaime Brenkus" lastName="Brenkus" role="Plaintiff"></party>
+ <party firstName="Ronald" fullName="Ronald Fricke" lastName="Fricke" role="Counter-Claimant"></party>
+ <party firstName="Ronald" fullName="Ronald Fricke" lastName="Fricke" role="Defendant"></party>
+ <party fullName="Healthy Life Marketing, Inc." lastName="Healthy Life Marketing, Inc." role="Counter-Claimant"></party>
+ <party fullName="Healthy Life Marketing, Inc." lastName="Healthy Life Marketing, Inc." role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Herko" lastName="Herko" role="Counter-Claimant"></party>
+ <party firstName="Richard" fullName="Richard Herko" lastName="Herko" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Tilton" lastName="Tilton" role="Counter-Claimant"></party>
+ <party firstName="Robert" fullName="Robert Tilton" lastName="Tilton" role="Defendant"></party>
+ <party firstName="Ernie" fullName="Ernie Zavoral" lastName="Zavoral" role="Counter-Claimant"></party>
+ <party firstName="Ernie" fullName="Ernie Zavoral" lastName="Zavoral" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-4_04-cv-01763-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_04-cv-01763/USCOURTS-ohnd-4_04-cv-01763-0/mods.xml">
+ <titleInfo>
+  <title>Brenkus v. Healthy Life Marketing, Inc. et al</title>
+  <subTitle>Memorandum Opinion and Order: Defendant Healthy Life&apos;s motion for summary judgment is granted; further, defendants Ronald Fricke, Richard Herko, and Robert Tilton&apos;s motion for summary judgment is granted; further, summary judgment is granted, sua sponte, in favor of defendant Zavoral; plaintiff&apos;s motion for summary judgment is denied; further, plaintiff&apos;s amended complaint is dismissed with prejudice, at his cost (Related Doc # 56) and (Related Doc # 57). Approved by Magistrate Judge George J. Limbert on 1/5/07.(S, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-4_04-cv-01763-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816cea3d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_04-cv-01763/USCOURTS-ohnd-4_04-cv-01763-0</identifier>
+ <identifier type="former granule identifier">ohnd-4_04-cv-01763_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_04-cv-01763/USCOURTS-ohnd-4_04-cv-01763-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_04-cv-01763/pdf/USCOURTS-ohnd-4_04-cv-01763-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:04-cv-01763; Brenkus v. Healthy Life Marketing, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-4_04-cv-01763-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-05</dateIssued>
+  <docketText>Memorandum Opinion and Order: Defendant Healthy Life&apos;s motion for summary judgment is granted; further, defendants Ronald Fricke, Richard Herko, and Robert Tilton&apos;s motion for summary judgment is granted; further, summary judgment is granted, sua sponte, in favor of defendant Zavoral; plaintiff&apos;s motion for summary judgment is denied; further, plaintiff&apos;s amended complaint is dismissed with prejudice, at his cost (Related Doc # 56) and (Related Doc # 57). Approved by Magistrate Judge George J. Limbert on 1/5/07.(S, A)</docketText>
+</extension>
+</relatedItem>
+</mods>

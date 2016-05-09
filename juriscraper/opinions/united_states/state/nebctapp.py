@@ -45,18 +45,6 @@ class Site(OpinionSite):
         path = '//tr[contains(@class, "opinion")]/td[1]//text()[normalize-space() != ""]'
         return list(self.html.xpath(path))
 
-    def _get_west_state_citations(self):
-        path = '//tr[contains(@class, "opinion")]/td[2]'
-        cites = []
-        for e in self.html.xpath(path):
-            s = html.tostring(e, method='text', encoding='unicode')
-            if s.strip():
-                cites.append(s.strip())
-            else:
-                # It's a memorandum opinion, s.strip() == ""
-                cites.append(None)
-        return cites
-
     def _download_backwards(self, i):
         host = 'http://supremecourt.ne.gov'
         paths = ['/coa/opinions/2013-06-18',

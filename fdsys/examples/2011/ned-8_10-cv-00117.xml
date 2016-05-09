@@ -1,0 +1,324 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a9c78">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00117</identifier>
+<identifier type="local">P0b002ee1817a9c78</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_10-cv-00117</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_10-cv-00117</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:10-cv-00117</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>820</natureSuitCode>
+ <natureSuit>Copyright</natureSuit>
+ <cause>28:1338 Copyright Infringement</cause>
+ <party fullName="City of Lincoln" lastName="City of Lincoln" role="Counter Claimant"></party>
+ <party fullName="City of Lincoln" lastName="City of Lincoln" role="Defendant"></party>
+ <party firstName="Douglas" fullName="Douglas Clark" lastName="Clark" role="Defendant"></party>
+ <party firstName="Jack" fullName="Jack Daniel" lastName="Daniel" role="Defendant"></party>
+ <party firstName="Bruce" fullName="Bruce D. Dart" lastName="Dart" middleName="D." role="Counter Claimant"></party>
+ <party firstName="Bruce" fullName="Bruce D. Dart" lastName="Dart" middleName="D." role="Defendant"></party>
+ <party firstName="Jane" fullName="Jane Does" lastName="Does" role="Defendant"></party>
+ <party firstName="John" fullName="John Does" lastName="Does" role="Defendant"></party>
+ <party fullName="Douglas County" lastName="Douglas County" role="Defendant"></party>
+ <party firstName="Troy" fullName="Troy Huffman" lastName="Huffman" role="Defendant"></party>
+ <party firstName="Kathleen" fullName="Kathleen Kelley" lastName="Kelley" role="Defendant"></party>
+ <party fullName="Lancaster County" lastName="Lancaster County" role="Defendant"></party>
+ <party firstName="David" fullName="David Montgomery" lastName="Montgomery" role="Defendant"></party>
+ <party fullName="National Swimming Pool Foundation" lastName="National Swimming Pool Foundation" role="Counter Defendant"></party>
+ <party fullName="National Swimming Pool Foundation" lastName="National Swimming Pool Foundation" role="Plaintiff"></party>
+ <party firstName="Adi" fullName="Adi Pour" lastName="Pour" role="Defendant"></party>
+ <party firstName="Mary Sue" fullName="Mary Sue Semerena" lastName="Semerena" role="Defendant"></party>
+ <party firstName="Kerry" fullName="Kerry Winterer" lastName="Winterer" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>National Swimming Pool Foundation v. Kelley et al</title>
+ <partNumber>8:10-cv-00117</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00117/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:10-cv-00117;10-117</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>City of Lincoln</displayForm>
+ <namePart type="family">City of Lincoln</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>City of Lincoln</displayForm>
+ <namePart type="family">City of Lincoln</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Douglas Clark</displayForm>
+ <namePart type="family">Clark</namePart>
+ <namePart type="given">Douglas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jack Daniel</displayForm>
+ <namePart type="family">Daniel</namePart>
+ <namePart type="given">Jack</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bruce D. Dart</displayForm>
+ <namePart type="family">Dart</namePart>
+ <namePart type="given">Bruce</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Bruce D. Dart</displayForm>
+ <namePart type="family">Dart</namePart>
+ <namePart type="given">Bruce</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jane Does</displayForm>
+ <namePart type="family">Does</namePart>
+ <namePart type="given">Jane</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Does</displayForm>
+ <namePart type="family">Does</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Douglas County</displayForm>
+ <namePart type="family">Douglas County</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Troy Huffman</displayForm>
+ <namePart type="family">Huffman</namePart>
+ <namePart type="given">Troy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kathleen Kelley</displayForm>
+ <namePart type="family">Kelley</namePart>
+ <namePart type="given">Kathleen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lancaster County</displayForm>
+ <namePart type="family">Lancaster County</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Montgomery</displayForm>
+ <namePart type="family">Montgomery</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>National Swimming Pool Foundation</displayForm>
+ <namePart type="family">National Swimming Pool Foundation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>National Swimming Pool Foundation</displayForm>
+ <namePart type="family">National Swimming Pool Foundation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Adi Pour</displayForm>
+ <namePart type="family">Pour</namePart>
+ <namePart type="given">Adi</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mary Sue Semerena</displayForm>
+ <namePart type="family">Semerena</namePart>
+ <namePart type="given">Mary Sue</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kerry Winterer</displayForm>
+ <namePart type="family">Winterer</namePart>
+ <namePart type="given">Kerry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_10-cv-00117</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:10-cv-00117</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>820</natureSuitCode>
+ <natureSuit>Copyright</natureSuit>
+ <cause>28:1338 Copyright Infringement</cause>
+ <party fullName="City of Lincoln" lastName="City of Lincoln" role="Counter Claimant"></party>
+ <party fullName="City of Lincoln" lastName="City of Lincoln" role="Defendant"></party>
+ <party firstName="Douglas" fullName="Douglas Clark" lastName="Clark" role="Defendant"></party>
+ <party firstName="Jack" fullName="Jack Daniel" lastName="Daniel" role="Defendant"></party>
+ <party firstName="Bruce" fullName="Bruce D. Dart" lastName="Dart" middleName="D." role="Counter Claimant"></party>
+ <party firstName="Bruce" fullName="Bruce D. Dart" lastName="Dart" middleName="D." role="Defendant"></party>
+ <party firstName="Jane" fullName="Jane Does" lastName="Does" role="Defendant"></party>
+ <party firstName="John" fullName="John Does" lastName="Does" role="Defendant"></party>
+ <party fullName="Douglas County" lastName="Douglas County" role="Defendant"></party>
+ <party firstName="Troy" fullName="Troy Huffman" lastName="Huffman" role="Defendant"></party>
+ <party firstName="Kathleen" fullName="Kathleen Kelley" lastName="Kelley" role="Defendant"></party>
+ <party fullName="Lancaster County" lastName="Lancaster County" role="Defendant"></party>
+ <party firstName="David" fullName="David Montgomery" lastName="Montgomery" role="Defendant"></party>
+ <party fullName="National Swimming Pool Foundation" lastName="National Swimming Pool Foundation" role="Counter Defendant"></party>
+ <party fullName="National Swimming Pool Foundation" lastName="National Swimming Pool Foundation" role="Plaintiff"></party>
+ <party firstName="Adi" fullName="Adi Pour" lastName="Pour" role="Defendant"></party>
+ <party firstName="Mary Sue" fullName="Mary Sue Semerena" lastName="Semerena" role="Defendant"></party>
+ <party firstName="Kerry" fullName="Kerry Winterer" lastName="Winterer" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00117-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00117/USCOURTS-ned-8_10-cv-00117-0/mods.xml">
+ <titleInfo>
+  <title>National Swimming Pool Foundation v. Kelley et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying as moot 32 Motion to Dismiss Party. Ordered by Judge Richard G. Kopf. (ADB, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-07-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00117-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18186c9c1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00117/USCOURTS-ned-8_10-cv-00117-0</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00117_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00117/USCOURTS-ned-8_10-cv-00117-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00117/pdf/USCOURTS-ned-8_10-cv-00117-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00117; National Swimming Pool Foundation v. Kelley et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00117-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-07-07</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying as moot 32 Motion to Dismiss Party. Ordered by Judge Richard G. Kopf. (ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00117-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00117/USCOURTS-ned-8_10-cv-00117-1/mods.xml">
+ <titleInfo>
+  <title>National Swimming Pool Foundation v. Kelley et al</title>
+  <subTitle>ORDER - Plaintiff&apos;s Stipulation for Dismissal 65 is granted, claims against the Douglas County Defendants (Douglas County, Nebraska; Kathleen Kelly; Adi Pour and Douglas Clark) are hereby dismissed with prejudice, with each party to pay its respective attorney&apos;s fees and costs. Plaintiff&apos;s claims against the remaining parties to this litigation remain pending. Ordered by Judge Richard G. Kopf.(KBJ)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00117-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18186c9c0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00117/USCOURTS-ned-8_10-cv-00117-1</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00117_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00117/USCOURTS-ned-8_10-cv-00117-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00117/pdf/USCOURTS-ned-8_10-cv-00117-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00117; National Swimming Pool Foundation v. Kelley et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00117-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-03</dateIssued>
+  <docketText>ORDER - Plaintiff&apos;s Stipulation for Dismissal 65 is granted, claims against the Douglas County Defendants (Douglas County, Nebraska; Kathleen Kelly; Adi Pour and Douglas Clark) are hereby dismissed with prejudice, with each party to pay its respective attorney&apos;s fees and costs. Plaintiff&apos;s claims against the remaining parties to this litigation remain pending. Ordered by Judge Richard G. Kopf.(KBJ)</docketText>
+</extension>
+</relatedItem>
+</mods>

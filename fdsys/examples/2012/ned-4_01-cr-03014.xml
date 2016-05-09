@@ -1,0 +1,314 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1824ff6b4">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-04-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-04-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_01-cr-03014</identifier>
+<identifier type="local">P0b002ee1824ff6b4</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-04-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-04-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_01-cr-03014</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_01-cr-03014</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:01-cr-03014</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party firstName="Kenneth" fullName="Kenneth J. Williams" lastName="Williams" middleName="J." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Williams</title>
+ <partNumber>4:01-cr-03014</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_01-cr-03014/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:01-cr-03014;01-3014</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kenneth J. Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Kenneth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_01-cr-03014</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:01-cr-03014</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party firstName="Kenneth" fullName="Kenneth J. Williams" lastName="Williams" middleName="J." role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_01-cr-03014-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Williams</title>
+  <subTitle>ORDER APPOINTING COUNSEL - Federal Public Defender&apos;s Office appointed to represent defendant Kenneth J. Williams. Ordered by Magistrate Judge Cheryl R. Zwart. (GJG)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_01-cr-03014-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182501fbf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-0</identifier>
+ <identifier type="former granule identifier">ned-4_01-cr-03014_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_01-cr-03014/pdf/USCOURTS-ned-4_01-cr-03014-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:01-cr-03014; United States of America v. Williams; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_01-cr-03014-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-09-26</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - Federal Public Defender&apos;s Office appointed to represent defendant Kenneth J. Williams. Ordered by Magistrate Judge Cheryl R. Zwart. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_01-cr-03014-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Williams</title>
+  <subTitle>ORDER of Detention pending revocation as to defendant Kenneth J. Williams. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_01-cr-03014-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182501f52</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-1</identifier>
+ <identifier type="former granule identifier">ned-4_01-cr-03014_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_01-cr-03014/pdf/USCOURTS-ned-4_01-cr-03014-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:01-cr-03014; United States of America v. Williams; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_01-cr-03014-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-09-30</dateIssued>
+  <docketText>ORDER of Detention pending revocation as to defendant Kenneth J. Williams. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_01-cr-03014-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-2/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Williams</title>
+  <subTitle>ORDER granting 38 Motion to Review as to Kenneth J. Williams. (Copy emailed to US Marshal by CRZ). Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_01-cr-03014-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182501fbd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-2</identifier>
+ <identifier type="former granule identifier">ned-4_01-cr-03014_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_01-cr-03014/pdf/USCOURTS-ned-4_01-cr-03014-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:01-cr-03014; United States of America v. Williams; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_01-cr-03014-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-10-26</dateIssued>
+  <docketText>ORDER granting 38 Motion to Review as to Kenneth J. Williams. (Copy emailed to US Marshal by CRZ). Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_01-cr-03014-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-3/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Williams</title>
+  <subTitle>ORDER granting 40 Motion to Amend as to Kenneth J. Williams. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_01-cr-03014-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182501f50</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-3</identifier>
+ <identifier type="former granule identifier">ned-4_01-cr-03014_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_01-cr-03014/pdf/USCOURTS-ned-4_01-cr-03014-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:01-cr-03014; United States of America v. Williams; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_01-cr-03014-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-11-30</dateIssued>
+  <docketText>ORDER granting 40 Motion to Amend as to Kenneth J. Williams. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_01-cr-03014-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-4/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Williams</title>
+  <subTitle>ORDER granting 42 Motion to Continue. The revocation hearing scheduled in this case shall be continued until the 3rd day of April, 2012, at 12:30 p.m. The Defendant is ordered to appear at such time. Ordered by Senior Judge Richard G. Kopf. (JSF)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_01-cr-03014-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182501f53</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-4</identifier>
+ <identifier type="former granule identifier">ned-4_01-cr-03014_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_01-cr-03014/pdf/USCOURTS-ned-4_01-cr-03014-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:01-cr-03014; United States of America v. Williams; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_01-cr-03014-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-01-09</dateIssued>
+  <docketText>ORDER granting 42 Motion to Continue. The revocation hearing scheduled in this case shall be continued until the 3rd day of April, 2012, at 12:30 p.m. The Defendant is ordered to appear at such time. Ordered by Senior Judge Richard G. Kopf. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_01-cr-03014-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-5/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Williams</title>
+  <subTitle>ORDER granting 44 Motion to Amend as to Kenneth J. Williams (1). The defendant shall transition to reside in his own apartment at Hastings, Nebraska, but must continue with treatment at the Unity House as determined by his counselor and his probation officer and fully participate in that treatment. The Defendant shall comply with all other terms and conditions of his supervised release. Ordered by Magistrate Judge Cheryl R. Zwart. (JSF)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_01-cr-03014-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182501f51</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-5</identifier>
+ <identifier type="former granule identifier">ned-4_01-cr-03014_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_01-cr-03014/pdf/USCOURTS-ned-4_01-cr-03014-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:01-cr-03014; United States of America v. Williams; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_01-cr-03014-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-01-30</dateIssued>
+  <docketText>ORDER granting 44 Motion to Amend as to Kenneth J. Williams (1). The defendant shall transition to reside in his own apartment at Hastings, Nebraska, but must continue with treatment at the Unity House as determined by his counselor and his probation officer and fully participate in that treatment. The Defendant shall comply with all other terms and conditions of his supervised release. Ordered by Magistrate Judge Cheryl R. Zwart. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_01-cr-03014-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-6/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Williams</title>
+  <subTitle>ORDER that at the request of the United States Probation Officer, and with the agreement of counsel, the petition for offender under supervision 24 (and filing 92 in Case No. 4:00CR3044) is dismissed without prejudice. The defendant&apos;s April 3, 2012 revocation hearing is canceled as to defendant Kenneth J. Williams. Ordered by Senior Judge Richard G. Kopf. (JSF)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_01-cr-03014-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182501fbe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-6</identifier>
+ <identifier type="former granule identifier">ned-4_01-cr-03014_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-03014/USCOURTS-ned-4_01-cr-03014-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_01-cr-03014/pdf/USCOURTS-ned-4_01-cr-03014-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:01-cr-03014; United States of America v. Williams; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_01-cr-03014-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-04-02</dateIssued>
+  <docketText>ORDER that at the request of the United States Probation Officer, and with the agreement of counsel, the petition for offender under supervision 24 (and filing 92 in Case No. 4:00CR3044) is dismissed without prejudice. The defendant&apos;s April 3, 2012 revocation hearing is canceled as to defendant Kenneth J. Williams. Ordered by Senior Judge Richard G. Kopf. (JSF)</docketText>
+</extension>
+</relatedItem>
+</mods>

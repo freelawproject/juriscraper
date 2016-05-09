@@ -1,0 +1,270 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18171d32e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-11</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_10-cv-00638</identifier>
+<identifier type="local">P0b002ee18171d32e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-11</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-11</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_10-cv-00638</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_10-cv-00638</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:10-cv-00638</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party fullName="AMERICAN MUSIC THEATER FESTIVAL, INC." lastName="AMERICAN MUSIC THEATER FESTIVAL, INC." role="Plaintiff"></party>
+ <party fullName="JOINT THEATER CENTER, LLC" lastName="JOINT THEATER CENTER, LLC" role="Plaintiff"></party>
+ <party fullName="TD BANK US HOLDING COMPANY" lastName="TD BANK US HOLDING COMPANY" role="Defendant"></party>
+ <party fullName="TD BANK, N.A." lastName="TD BANK, N.A." role="Defendant"></party>
+ <party fullName="TD US P&amp;C HOLDINGS ULC" lastName="TD US P&amp;C HOLDINGS ULC" role="Defendant"></party>
+ <party fullName="THE TORONTO-DOMINION BANK" lastName="THE TORONTO-DOMINION BANK" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>AMERICAN MUSIC THEATER FESTIVAL, INC. et al v. TD BANK, N.A.</title>
+ <partNumber>2:10-cv-00638</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_10-cv-00638/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:10-cv-00638;10-638</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>AMERICAN MUSIC THEATER FESTIVAL, INC.</displayForm>
+ <namePart type="family">AMERICAN MUSIC THEATER FESTIVAL, INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>JOINT THEATER CENTER, LLC</displayForm>
+ <namePart type="family">JOINT THEATER CENTER, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>TD BANK US HOLDING COMPANY</displayForm>
+ <namePart type="family">TD BANK US HOLDING COMPANY</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>TD BANK, N.A.</displayForm>
+ <namePart type="family">TD BANK, N.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>TD US P&amp;C HOLDINGS ULC</displayForm>
+ <namePart type="family">TD US P&amp;C HOLDINGS ULC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>THE TORONTO-DOMINION BANK</displayForm>
+ <namePart type="family">THE TORONTO-DOMINION BANK</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_10-cv-00638</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:10-cv-00638</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party fullName="AMERICAN MUSIC THEATER FESTIVAL, INC." lastName="AMERICAN MUSIC THEATER FESTIVAL, INC." role="Plaintiff"></party>
+ <party fullName="JOINT THEATER CENTER, LLC" lastName="JOINT THEATER CENTER, LLC" role="Plaintiff"></party>
+ <party fullName="TD BANK US HOLDING COMPANY" lastName="TD BANK US HOLDING COMPANY" role="Defendant"></party>
+ <party fullName="TD BANK, N.A." lastName="TD BANK, N.A." role="Defendant"></party>
+ <party fullName="TD US P&amp;C HOLDINGS ULC" lastName="TD US P&amp;C HOLDINGS ULC" role="Defendant"></party>
+ <party fullName="THE TORONTO-DOMINION BANK" lastName="THE TORONTO-DOMINION BANK" role="Defendant"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_10-cv-00638-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cv-00638/USCOURTS-paed-2_10-cv-00638-0/mods.xml">
+ <titleInfo>
+  <title>AMERICAN MUSIC THEATER FESTIVAL, INC. et al v. TD BANK, N.A.</title>
+  <subTitle>MEMORANDUM. ( SIGNED BY HONORABLE J. CURTIS JOYNER ON 2/16/11. ) 2/18/11 ENTERED AND COPIES E-MAILED.(gn, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-02-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_10-cv-00638-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18171ea46</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cv-00638/USCOURTS-paed-2_10-cv-00638-0</identifier>
+ <identifier type="former granule identifier">paed-2_10-cv-00638_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cv-00638/USCOURTS-paed-2_10-cv-00638-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_10-cv-00638/pdf/USCOURTS-paed-2_10-cv-00638-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-00638; AMERICAN MUSIC THEATER FESTIVAL, INC. et al v. TD BANK, N.A.; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_10-cv-00638-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-02-18</dateIssued>
+  <docketText>MEMORANDUM. ( SIGNED BY HONORABLE J. CURTIS JOYNER ON 2/16/11. ) 2/18/11 ENTERED AND COPIES E-MAILED.(gn, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_10-cv-00638-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cv-00638/USCOURTS-paed-2_10-cv-00638-1/mods.xml">
+ <titleInfo>
+  <title>AMERICAN MUSIC THEATER FESTIVAL, INC. et al v. TD BANK, N.A.</title>
+  <subTitle>ORDER THAT DEFT&apos;S MOTION TO DISMISS (DOC #6) IS CONVERTED TO A MOTION FOR SUMMARY JUDGMENT UNDER RULE 56 WITH REGARD TO DEFT&apos;S PRECLUSIONDEFENSES, ETC. RULING ON THE REMAINDER OF THE MOTION TO DISMISS IS RESERVED PENDING RESOLUTION OF THE PRECLUSION ISSUES. ( SIGNED BY HONORABLE J. CURTIS JOYNER ON 2/16/11. ) 2/18/11 ENTERED AND COPIES E-MAILED.(gn, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-02-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_10-cv-00638-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18171ea24</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cv-00638/USCOURTS-paed-2_10-cv-00638-1</identifier>
+ <identifier type="former granule identifier">paed-2_10-cv-00638_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cv-00638/USCOURTS-paed-2_10-cv-00638-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_10-cv-00638/pdf/USCOURTS-paed-2_10-cv-00638-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-00638; AMERICAN MUSIC THEATER FESTIVAL, INC. et al v. TD BANK, N.A.; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_10-cv-00638-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-02-18</dateIssued>
+  <docketText>ORDER THAT DEFT&apos;S MOTION TO DISMISS (DOC #6) IS CONVERTED TO A MOTION FOR SUMMARY JUDGMENT UNDER RULE 56 WITH REGARD TO DEFT&apos;S PRECLUSIONDEFENSES, ETC. RULING ON THE REMAINDER OF THE MOTION TO DISMISS IS RESERVED PENDING RESOLUTION OF THE PRECLUSION ISSUES. ( SIGNED BY HONORABLE J. CURTIS JOYNER ON 2/16/11. ) 2/18/11 ENTERED AND COPIES E-MAILED.(gn, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_10-cv-00638-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cv-00638/USCOURTS-paed-2_10-cv-00638-2/mods.xml">
+ <titleInfo>
+  <title>AMERICAN MUSIC THEATER FESTIVAL, INC. et al v. TD BANK, N.A.</title>
+  <subTitle>MEMORANDUM. ( SIGNED BY HONORABLE J. CURTIS JOYNER ON 1/9/12. ) 1/10/12 ENTERED AND COPIES E-MAILED.(gn, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_10-cv-00638-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18171ea44</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cv-00638/USCOURTS-paed-2_10-cv-00638-2</identifier>
+ <identifier type="former granule identifier">paed-2_10-cv-00638_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cv-00638/USCOURTS-paed-2_10-cv-00638-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_10-cv-00638/pdf/USCOURTS-paed-2_10-cv-00638-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-00638; AMERICAN MUSIC THEATER FESTIVAL, INC. et al v. TD BANK, N.A.; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_10-cv-00638-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-01-10</dateIssued>
+  <docketText>MEMORANDUM. ( SIGNED BY HONORABLE J. CURTIS JOYNER ON 1/9/12. ) 1/10/12 ENTERED AND COPIES E-MAILED.(gn, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_10-cv-00638-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cv-00638/USCOURTS-paed-2_10-cv-00638-3/mods.xml">
+ <titleInfo>
+  <title>AMERICAN MUSIC THEATER FESTIVAL, INC. et al v. TD BANK, N.A.</title>
+  <subTitle>ORDER THAT MOTION FOR SUMMARY JUDGMENT ON DEFT&apos;S PRECLUSION DEFENSES IS GRANTED. JUDGMENT IS ENTERED FOR DEFT AND AGAINST PLFFS. ( SIGNED BY HONORABLE J. CURTIS JOYNER ON 1/9/12. ) 1/10/12 ENTERED AND COPIES E-MAILED.(gn, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_10-cv-00638-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18171ea48</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cv-00638/USCOURTS-paed-2_10-cv-00638-3</identifier>
+ <identifier type="former granule identifier">paed-2_10-cv-00638_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cv-00638/USCOURTS-paed-2_10-cv-00638-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_10-cv-00638/pdf/USCOURTS-paed-2_10-cv-00638-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-00638; AMERICAN MUSIC THEATER FESTIVAL, INC. et al v. TD BANK, N.A.; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_10-cv-00638-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-01-10</dateIssued>
+  <docketText>ORDER THAT MOTION FOR SUMMARY JUDGMENT ON DEFT&apos;S PRECLUSION DEFENSES IS GRANTED. JUDGMENT IS ENTERED FOR DEFT AND AGAINST PLFFS. ( SIGNED BY HONORABLE J. CURTIS JOYNER ON 1/9/12. ) 1/10/12 ENTERED AND COPIES E-MAILED.(gn, )</docketText>
+</extension>
+</relatedItem>
+</mods>

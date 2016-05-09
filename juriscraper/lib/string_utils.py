@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import re
 import geonamescache
+from dateutil import parser
 
 # For use in titlecase
 BIG = ('3D|AFL|AKA|A/K/A|BMG|CBS|CDC|CDT|CEO|CIO|CNMI|D/B/A|DOJ|DVA|EFF|FCC|'
@@ -338,7 +339,7 @@ def clean_string(s):
     # we don't know the order of the various punctuation items to be stripped.
     # We split on the v., and handle fixes at either end of plaintiff or
     # appellant.
-    bad_punctuation = '(-|–|/|;|,|\s)*'
+    bad_punctuation = '(-|–|_|/|;|,|\s)*'
     bad_endings = re.compile(r'%s$' % bad_punctuation)
     bad_beginnings = re.compile(r'^%s' % bad_punctuation)
 
@@ -430,6 +431,11 @@ def trunc(s, length, ellipsis=None):
         if ellipsis:
             s = u'%s%s' % (s, ellipsis)
         return s
+
+
+def convert_date_string(date_string):
+    """Convert date string into standard date object"""
+    return parser.parse(date_string).date()
 
 
 class CaseNameTweaker(object):

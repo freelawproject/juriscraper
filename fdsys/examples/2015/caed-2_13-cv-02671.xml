@@ -1,0 +1,292 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18dd86add">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-11-02</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-10-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02671</identifier>
+<identifier type="local">P0b002ee18dd86add</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-11-02</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-11-02</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_13-cv-02671</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-02671</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-02671</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <cause>42:405 Review of HHS Decision (DIWC)</cause>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Lois" fullName="Lois Martin" lastName="Martin" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(SS) Martin v. Commissioner of Social Security</title>
+ <partNumber>2:13-cv-02671</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02671/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-02671;13-2671</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Commissioner of Social Security</displayForm>
+ <namePart type="family">Commissioner of Social Security</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lois Martin</displayForm>
+ <namePart type="family">Martin</namePart>
+ <namePart type="given">Lois</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-02671</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-02671</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <cause>42:405 Review of HHS Decision (DIWC)</cause>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Lois" fullName="Lois Martin" lastName="Martin" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02671-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02671/USCOURTS-caed-2_13-cv-02671-0/mods.xml">
+ <titleInfo>
+  <title>(SS) Martin v. Commissioner of Social Security</title>
+  <subTitle>ORDER signed by Magistrate Judge Dale A. Drozd on 4/1/14 ORDERING that 3 Motion to Proceed IFP is GRANTED; The Clerk of the Court is directed to issue process and to serve upon plaintiff the undersigneds Scheduling Order and Order re Consent or Request for Reassignment for social security cases. The Clerk of the Court is further directed to serve a copy of this order upon the United States Marshal. (copy served on USM) (Dillon, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02671/pdf/USCOURTS-caed-2_13-cv-02671-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd9f766</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02671/USCOURTS-caed-2_13-cv-02671-0</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02671_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02671/USCOURTS-caed-2_13-cv-02671-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02671/pdf/USCOURTS-caed-2_13-cv-02671-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02671; (SS) Martin v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02671-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-04-02</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Dale A. Drozd on 4/1/14 ORDERING that 3 Motion to Proceed IFP is GRANTED; The Clerk of the Court is directed to issue process and to serve upon plaintiff the undersigneds Scheduling Order and Order re Consent or Request for Reassignment for social security cases. The Clerk of the Court is further directed to serve a copy of this order upon the United States Marshal. (copy served on USM) (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02671-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02671/USCOURTS-caed-2_13-cv-02671-1/mods.xml">
+ <titleInfo>
+  <title>(SS) Martin v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Dale A. Drozd on 1/5/2015 ORDERING that plaintiff&apos;s time to file a motion for summary judgment is EXTENDED to 1/6/2015. (Zignago, K.)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02671/pdf/USCOURTS-caed-2_13-cv-02671-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd9f769</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02671/USCOURTS-caed-2_13-cv-02671-1</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02671_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02671/USCOURTS-caed-2_13-cv-02671-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02671/pdf/USCOURTS-caed-2_13-cv-02671-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02671; (SS) Martin v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02671-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Dale A. Drozd on 1/5/2015 ORDERING that plaintiff&apos;s time to file a motion for summary judgment is EXTENDED to 1/6/2015. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02671-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02671/USCOURTS-caed-2_13-cv-02671-2/mods.xml">
+ <titleInfo>
+  <title>(SS) Martin v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION and ORDER 17 for extension of time signed by Magistrate Judge Dale A. Drozd on 2/3/2015. Defendant&apos;s time to respond to plaintiff&apos;s 15 Motion for Summary Judgment is EXTENDED to 3/6/2015. (Marciel, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02671/pdf/USCOURTS-caed-2_13-cv-02671-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd9f714</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02671/USCOURTS-caed-2_13-cv-02671-2</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02671_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02671/USCOURTS-caed-2_13-cv-02671-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02671/pdf/USCOURTS-caed-2_13-cv-02671-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02671; (SS) Martin v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02671-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-02-04</dateIssued>
+  <docketText>STIPULATION and ORDER 17 for extension of time signed by Magistrate Judge Dale A. Drozd on 2/3/2015. Defendant&apos;s time to respond to plaintiff&apos;s 15 Motion for Summary Judgment is EXTENDED to 3/6/2015. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02671-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02671/USCOURTS-caed-2_13-cv-02671-3/mods.xml">
+ <titleInfo>
+  <title>(SS) Martin v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION AND ORDER signed by Magistrate Judge Dale A. Drozd on 2/27/2015 ORDERING the defendant to respond to the 15 Motion for Summary Judgment by 4/6/2015; MODIFYING the Court&apos;s Scheduling Order accordingly. (Michel, G.)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02671/pdf/USCOURTS-caed-2_13-cv-02671-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd9f76a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02671/USCOURTS-caed-2_13-cv-02671-3</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02671_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02671/USCOURTS-caed-2_13-cv-02671-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02671/pdf/USCOURTS-caed-2_13-cv-02671-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02671; (SS) Martin v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02671-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-02-27</dateIssued>
+  <docketText>STIPULATION AND ORDER signed by Magistrate Judge Dale A. Drozd on 2/27/2015 ORDERING the defendant to respond to the 15 Motion for Summary Judgment by 4/6/2015; MODIFYING the Court&apos;s Scheduling Order accordingly. (Michel, G.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02671-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02671/USCOURTS-caed-2_13-cv-02671-4/mods.xml">
+ <titleInfo>
+  <title>(SS) Martin v. Commissioner of Social Security</title>
+  <subTitle>ORDER signed by Magistrate Judge Dale A. Drozd on 8/28/2015 ORDERING that Plaintiff&apos;s 15 motion for summary judgment is GRANTED. Defendant&apos;s 22 cross-motion for summary judgment is DENIED. The Commissioner&apos;s decision is REVERSED. This matter is REMANDED with instructions to award benefits. CASE CLOSED. (Zignago, K.)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-08-31</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02671/pdf/USCOURTS-caed-2_13-cv-02671-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd9f768</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02671/USCOURTS-caed-2_13-cv-02671-4</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02671_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02671/USCOURTS-caed-2_13-cv-02671-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02671/pdf/USCOURTS-caed-2_13-cv-02671-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02671; (SS) Martin v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02671-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2015-08-31</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Dale A. Drozd on 8/28/2015 ORDERING that Plaintiff&apos;s 15 motion for summary judgment is GRANTED. Defendant&apos;s 22 cross-motion for summary judgment is DENIED. The Commissioner&apos;s decision is REVERSED. This matter is REMANDED with instructions to award benefits. CASE CLOSED. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02671-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02671/USCOURTS-caed-2_13-cv-02671-5/mods.xml">
+ <titleInfo>
+  <title>(SS) Martin v. Commissioner of Social Security</title>
+  <subTitle>ORDER signed by Magistrate Judge Dale A. Drozd on 10/29/2015 DENYING 28 Motion to Alter or Amend the Judgment. (Michel, G.)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-10-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02671/pdf/USCOURTS-caed-2_13-cv-02671-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd9f767</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02671/USCOURTS-caed-2_13-cv-02671-5</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02671_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02671/USCOURTS-caed-2_13-cv-02671-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02671/pdf/USCOURTS-caed-2_13-cv-02671-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02671; (SS) Martin v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02671-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2015-10-30</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Dale A. Drozd on 10/29/2015 DENYING 28 Motion to Alter or Amend the Judgment. (Michel, G.)</docketText>
+</extension>
+</relatedItem>
+</mods>

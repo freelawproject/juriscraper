@@ -1,0 +1,196 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1811356f5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_04-cv-01212</identifier>
+<identifier type="local">P0b002ee1811356f5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-1_04-cv-01212</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_04-cv-01212</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:04-cv-01212</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <party fullName="Pentkowski, Pastore, and Freestone" lastName="Pentkowski, Pastore, and Freestone" role="Defendant"></party>
+ <party firstName="Marjorie" fullName="Marjorie Roberts" lastName="Roberts" role="Defendant"></party>
+ <party firstName="William" fullName="William Roberts III" generation="III" lastName="Roberts" role="Defendant"></party>
+ <party fullName="Verizon Communications, Inc." lastName="Verizon Communications, Inc." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Verizon Communications, Inc. v. Pentkowski, Pastore, and Freestone et al</title>
+ <partNumber>1:04-cv-01212</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_04-cv-01212/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:04-cv-01212;04-1212</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Albany</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Pentkowski, Pastore, and Freestone</displayForm>
+ <namePart type="family">Pentkowski, Pastore, and Freestone</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marjorie Roberts</displayForm>
+ <namePart type="family">Roberts</namePart>
+ <namePart type="given">Marjorie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Roberts III</displayForm>
+ <namePart type="family">Roberts</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress">III</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Verizon Communications, Inc.</displayForm>
+ <namePart type="family">Verizon Communications, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_04-cv-01212</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:04-cv-01212</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <party fullName="Pentkowski, Pastore, and Freestone" lastName="Pentkowski, Pastore, and Freestone" role="Defendant"></party>
+ <party firstName="Marjorie" fullName="Marjorie Roberts" lastName="Roberts" role="Defendant"></party>
+ <party firstName="William" fullName="William Roberts III" generation="III" lastName="Roberts" role="Defendant"></party>
+ <party fullName="Verizon Communications, Inc." lastName="Verizon Communications, Inc." role="Plaintiff"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_04-cv-01212-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_04-cv-01212/USCOURTS-nynd-1_04-cv-01212-0/mods.xml">
+ <titleInfo>
+  <title>Verizon Communications, Inc. v. Pentkowski, Pastore, and Freestone et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS re 1 Complaint filed by Verizon Communications, Inc.. It is recommended that the complaint be Dismissed without prejudice. Objections to R&amp;R due by 12/22/2005 Case Review Deadline 12/28/2005 Signed by Judge David R. Homer on 12/8/05. (ban)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_04-cv-01212-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813eb1ff</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_04-cv-01212/USCOURTS-nynd-1_04-cv-01212-0</identifier>
+ <identifier type="former granule identifier">nynd-1_04-cv-01212_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_04-cv-01212/USCOURTS-nynd-1_04-cv-01212-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_04-cv-01212/pdf/USCOURTS-nynd-1_04-cv-01212-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cv-01212; Verizon Communications, Inc. v. Pentkowski, Pastore, and Freestone et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_04-cv-01212-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-12-08</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS re 1 Complaint filed by Verizon Communications, Inc.. It is recommended that the complaint be Dismissed without prejudice. Objections to R&amp;R due by 12/22/2005 Case Review Deadline 12/28/2005 Signed by Judge David R. Homer on 12/8/05. (ban)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_04-cv-01212-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_04-cv-01212/USCOURTS-nynd-1_04-cv-01212-1/mods.xml">
+ <titleInfo>
+  <title>Verizon Communications, Inc. v. Pentkowski, Pastore, and Freestone et al</title>
+  <subTitle>ORDER, that the 3 Report-Recommendation of Magistrate Judge David R. Homer filed December 8, 2005 is ACCEPTED in its entirety; that the complaint be dismissed without prejudice in accordance with Fed. R. Civ. P. 4(m) and N.D.N.Y.L.R. 4.1(b). Signed by Judge Gary L. Sharpe on 1/6/2006. (jel, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_04-cv-01212-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813eb200</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_04-cv-01212/USCOURTS-nynd-1_04-cv-01212-1</identifier>
+ <identifier type="former granule identifier">nynd-1_04-cv-01212_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_04-cv-01212/USCOURTS-nynd-1_04-cv-01212-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_04-cv-01212/pdf/USCOURTS-nynd-1_04-cv-01212-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cv-01212; Verizon Communications, Inc. v. Pentkowski, Pastore, and Freestone et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_04-cv-01212-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-01-06</dateIssued>
+  <docketText>ORDER, that the 3 Report-Recommendation of Magistrate Judge David R. Homer filed December 8, 2005 is ACCEPTED in its entirety; that the complaint be dismissed without prejudice in accordance with Fed. R. Civ. P. 4(m) and N.D.N.Y.L.R. 4.1(b). Signed by Judge Gary L. Sharpe on 1/6/2006. (jel, )</docketText>
+</extension>
+</relatedItem>
+</mods>

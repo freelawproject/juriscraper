@@ -1,0 +1,374 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18af8bbed">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-02-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-02-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_13-cv-02137</identifier>
+<identifier type="local">P0b002ee18af8bbed</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-02-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-02-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_13-cv-02137</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_13-cv-02137</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:13-cv-02137</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>350</natureSuitCode>
+ <natureSuit>Motor Vehicle Personal Injury</natureSuit>
+ <cause>28:1332 Diversity-Wrongful Death</cause>
+ <party firstName="Veronica" fullName="Veronica Hogle" lastName="Hogle" role="Plaintiff"></party>
+ <party firstName="Melissa" fullName="Melissa Stonebarger" lastName="Stonebarger" role="Plaintiff"></party>
+ <party firstName="K." fullName="K. T." lastName="T." role="Plaintiff"></party>
+ <party firstName="Kiatona" fullName="Kiatona Turner" lastName="Turner" role="Plaintiff"></party>
+ <party firstName="Ruth" fullName="Ruth Turner" lastName="Turner" role="Plaintiff"></party>
+ <party firstName="Therman" fullName="Therman Turner Jr." generation="Jr." lastName="Turner" role="Plaintiff"></party>
+ <party fullName="Union Pacific Corporation" lastName="Union Pacific Corporation" role="Defendant"></party>
+ <party fullName="Union Pacific Railroad Company" lastName="Union Pacific Railroad Company" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Stonebarger et al v. Union Pacific Corporation</title>
+ <partNumber>2:13-cv-02137</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_13-cv-02137/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-02137;13-2137</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Veronica Hogle</displayForm>
+ <namePart type="family">Hogle</namePart>
+ <namePart type="given">Veronica</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Melissa Stonebarger</displayForm>
+ <namePart type="family">Stonebarger</namePart>
+ <namePart type="given">Melissa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>K. T.</displayForm>
+ <namePart type="family">T.</namePart>
+ <namePart type="given">K.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kiatona Turner</displayForm>
+ <namePart type="family">Turner</namePart>
+ <namePart type="given">Kiatona</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ruth Turner</displayForm>
+ <namePart type="family">Turner</namePart>
+ <namePart type="given">Ruth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Therman Turner Jr.</displayForm>
+ <namePart type="family">Turner</namePart>
+ <namePart type="given">Therman</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Union Pacific Corporation</displayForm>
+ <namePart type="family">Union Pacific Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Union Pacific Railroad Company</displayForm>
+ <namePart type="family">Union Pacific Railroad Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_13-cv-02137</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:13-cv-02137</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>350</natureSuitCode>
+ <natureSuit>Motor Vehicle Personal Injury</natureSuit>
+ <cause>28:1332 Diversity-Wrongful Death</cause>
+ <party firstName="Veronica" fullName="Veronica Hogle" lastName="Hogle" role="Plaintiff"></party>
+ <party firstName="Melissa" fullName="Melissa Stonebarger" lastName="Stonebarger" role="Plaintiff"></party>
+ <party firstName="K." fullName="K. T." lastName="T." role="Plaintiff"></party>
+ <party firstName="Kiatona" fullName="Kiatona Turner" lastName="Turner" role="Plaintiff"></party>
+ <party firstName="Ruth" fullName="Ruth Turner" lastName="Turner" role="Plaintiff"></party>
+ <party firstName="Therman" fullName="Therman Turner Jr." generation="Jr." lastName="Turner" role="Plaintiff"></party>
+ <party fullName="Union Pacific Corporation" lastName="Union Pacific Corporation" role="Defendant"></party>
+ <party fullName="Union Pacific Railroad Company" lastName="Union Pacific Railroad Company" role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_13-cv-02137-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-0/mods.xml">
+ <titleInfo>
+  <title>Stonebarger et al v. Union Pacific Corporation</title>
+  <subTitle>MEMORANDUM AND ORDER granting 42 Defendants&apos; Motion to Compel Discovery as modified by the Court. Signed by Magistrate Judge Teresa J. James on 07/02/2014. (ts)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_13-cv-02137/pdf/USCOURTS-ksd-2_13-cv-02137-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18af97a81</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-0</identifier>
+ <identifier type="former granule identifier">ksd-2_13-cv-02137_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_13-cv-02137/pdf/USCOURTS-ksd-2_13-cv-02137-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02137; Stonebarger et al v. Union Pacific Corporation; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_13-cv-02137-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-07-02</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 42 Defendants&apos; Motion to Compel Discovery as modified by the Court. Signed by Magistrate Judge Teresa J. James on 07/02/2014. (ts)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_13-cv-02137-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-1/mods.xml">
+ <titleInfo>
+  <title>Stonebarger et al v. Union Pacific Corporation</title>
+  <subTitle>MEMORANDUM AND ORDER granting 43 Motion to Compel. Union Pacific shall provide to Plaintiffs a privilege log which provides sufficient information to allow Plaintiffs to assess the claimed privileges within fifteen (15) days of the date of this Memorandum and Order. IT IS FURTHER ORDERED THAT Union Pacific shall provide to Plaintiff those documents not claimed as privileged which are responsive to Plaintiffs&apos; First Requests for Production of Documents Numbers 41 (as modified and limited to the five (5) years preceding the date of the accident at issue), 63, 64, and 67 (as modified and limited to all Accident Investigation Guideline manuals in effect from the beginning of Michael Nelson&apos;s tenure as CEO of Union Pacific until the 7/11/20014, New York Times article) and further subject to limitations previously agreed to by the parties, within fifteen (15) days of the date of this Memorandum and Order. Signed by Magistrate Judge Teresa J. James on 7/21/2014. (mh)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_13-cv-02137/pdf/USCOURTS-ksd-2_13-cv-02137-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18af97a7e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-1</identifier>
+ <identifier type="former granule identifier">ksd-2_13-cv-02137_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_13-cv-02137/pdf/USCOURTS-ksd-2_13-cv-02137-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02137; Stonebarger et al v. Union Pacific Corporation; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_13-cv-02137-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-07-21</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 43 Motion to Compel. Union Pacific shall provide to Plaintiffs a privilege log which provides sufficient information to allow Plaintiffs to assess the claimed privileges within fifteen (15) days of the date of this Memorandum and Order. IT IS FURTHER ORDERED THAT Union Pacific shall provide to Plaintiff those documents not claimed as privileged which are responsive to Plaintiffs&apos; First Requests for Production of Documents Numbers 41 (as modified and limited to the five (5) years preceding the date of the accident at issue), 63, 64, and 67 (as modified and limited to all Accident Investigation Guideline manuals in effect from the beginning of Michael Nelson&apos;s tenure as CEO of Union Pacific until the 7/11/20014, New York Times article) and further subject to limitations previously agreed to by the parties, within fifteen (15) days of the date of this Memorandum and Order. Signed by Magistrate Judge Teresa J. James on 7/21/2014. (mh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_13-cv-02137-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-2/mods.xml">
+ <titleInfo>
+  <title>Stonebarger et al v. Union Pacific Corporation</title>
+  <subTitle>MEMORANDUM AND ORDER denying 104 Defendants&apos; Motion for Reconsideration. Signed by Magistrate Judge Teresa J. James on 10/16/2014. (ts)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_13-cv-02137/pdf/USCOURTS-ksd-2_13-cv-02137-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18af97a80</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-2</identifier>
+ <identifier type="former granule identifier">ksd-2_13-cv-02137_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_13-cv-02137/pdf/USCOURTS-ksd-2_13-cv-02137-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02137; Stonebarger et al v. Union Pacific Corporation; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_13-cv-02137-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-10-16</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 104 Defendants&apos; Motion for Reconsideration. Signed by Magistrate Judge Teresa J. James on 10/16/2014. (ts)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_13-cv-02137-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-3/mods.xml">
+ <titleInfo>
+  <title>Stonebarger et al v. Union Pacific Corporation</title>
+  <subTitle>MEMORANDUM AND ORDER denying 115 Plaintiffs&apos; Motion for Leave to Conduct Additional Discovery; denying 131 Defendant&apos;s Motion for Leave to File Sur-reply. Signed by Magistrate Judge Teresa J. James on 11/6/2014. (ts)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_13-cv-02137/pdf/USCOURTS-ksd-2_13-cv-02137-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18af97a82</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-3</identifier>
+ <identifier type="former granule identifier">ksd-2_13-cv-02137_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_13-cv-02137/pdf/USCOURTS-ksd-2_13-cv-02137-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02137; Stonebarger et al v. Union Pacific Corporation; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_13-cv-02137-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-11-06</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 115 Plaintiffs&apos; Motion for Leave to Conduct Additional Discovery; denying 131 Defendant&apos;s Motion for Leave to File Sur-reply. Signed by Magistrate Judge Teresa J. James on 11/6/2014. (ts)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_13-cv-02137-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-4/mods.xml">
+ <titleInfo>
+  <title>Stonebarger et al v. Union Pacific Corporation</title>
+  <subTitle>MEMORANDUM AND ORDER granting in part and denying in part 83 Motion for Summary Judgment; denying 85 Motion for Partial Summary Judgment; granting 87 Motion for Partial Summary Judgment. See Order for details. Signed by District Judge Julie A. Robinson on 1/2/15. (kao)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_13-cv-02137/pdf/USCOURTS-ksd-2_13-cv-02137-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18af97a83</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-4</identifier>
+ <identifier type="former granule identifier">ksd-2_13-cv-02137_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_13-cv-02137/pdf/USCOURTS-ksd-2_13-cv-02137-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02137; Stonebarger et al v. Union Pacific Corporation; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_13-cv-02137-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting in part and denying in part 83 Motion for Summary Judgment; denying 85 Motion for Partial Summary Judgment; granting 87 Motion for Partial Summary Judgment. See Order for details. Signed by District Judge Julie A. Robinson on 1/2/15. (kao)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_13-cv-02137-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-5/mods.xml">
+ <titleInfo>
+  <title>Stonebarger et al v. Union Pacific Corporation</title>
+  <subTitle>MEMORANDUM AND ORDER denying 133 Motion for Review. Defendant shall provide to Plaintiffs a privilege log that provides sufficient information to allow Plaintiffs to assess the claimed privileges with respect to documents responsive to Plaintiffs&apos; Request for Production No. 67, within fourteen (14) days of the date of this Memorandum and Order. IT IS FURTHER ORDERED that Defendant shall provide to Plaintiffs those documents not claimed as privileged that are responsive to Plaintiffs&apos; Request for Production No. 67, within fourteen (14) days of the date of this Memorandum and Order. Signed by District Judge Julie A. Robinson on 1/5/15. (kao)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_13-cv-02137/pdf/USCOURTS-ksd-2_13-cv-02137-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18af97a7d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-5</identifier>
+ <identifier type="former granule identifier">ksd-2_13-cv-02137_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_13-cv-02137/pdf/USCOURTS-ksd-2_13-cv-02137-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02137; Stonebarger et al v. Union Pacific Corporation; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_13-cv-02137-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 133 Motion for Review. Defendant shall provide to Plaintiffs a privilege log that provides sufficient information to allow Plaintiffs to assess the claimed privileges with respect to documents responsive to Plaintiffs&apos; Request for Production No. 67, within fourteen (14) days of the date of this Memorandum and Order. IT IS FURTHER ORDERED that Defendant shall provide to Plaintiffs those documents not claimed as privileged that are responsive to Plaintiffs&apos; Request for Production No. 67, within fourteen (14) days of the date of this Memorandum and Order. Signed by District Judge Julie A. Robinson on 1/5/15. (kao)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_13-cv-02137-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-6/mods.xml">
+ <titleInfo>
+  <title>Stonebarger et al v. Union Pacific Corporation</title>
+  <subTitle>MEMORANDUM AND ORDER granting 132 Motion to Amend Complaint, which the Court construes as a motion for leave to amend Pretrial Order. The Pretrial Order is hereby amended to include Ruth Turner as a plaintiff in her individual capacity to assert a wrongful death claim as the surviving spouse of Therman Turner, Jr. See Order for further details and deadlines. Signed by District Judge Julie A. Robinson on 2/3/15. (kao)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_13-cv-02137/pdf/USCOURTS-ksd-2_13-cv-02137-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18af97a7f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-6</identifier>
+ <identifier type="former granule identifier">ksd-2_13-cv-02137_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_13-cv-02137/USCOURTS-ksd-2_13-cv-02137-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_13-cv-02137/pdf/USCOURTS-ksd-2_13-cv-02137-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02137; Stonebarger et al v. Union Pacific Corporation; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_13-cv-02137-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2015-02-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 132 Motion to Amend Complaint, which the Court construes as a motion for leave to amend Pretrial Order. The Pretrial Order is hereby amended to include Ruth Turner as a plaintiff in her individual capacity to assert a wrongful death claim as the surviving spouse of Therman Turner, Jr. See Order for further details and deadlines. Signed by District Judge Julie A. Robinson on 2/3/15. (kao)</docketText>
+</extension>
+</relatedItem>
+</mods>

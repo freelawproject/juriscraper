@@ -1,0 +1,256 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1814dd266">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_05-cr-10254</identifier>
+<identifier type="local">P0b002ee1814dd266</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_05-cr-10254</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_05-cr-10254</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:05-cr-10254</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="Flaco" lastName="Flaco" role="Defendant"></party>
+ <party firstName="Alejandro" fullName="Alejandro Garcilia" lastName="Garcilia" role="Defendant"></party>
+ <party firstName="Alejandro" fullName="Alejandro Rodriguez" lastName="Rodriguez" role="Defendant"></party>
+ <party firstName="Alejaudro" fullName="Alejaudro Rodriguez" lastName="Rodriguez" role="Defendant"></party>
+ <party firstName="Fernando" fullName="Fernando Salas Sicairos" lastName="Sicairos" middleName="Salas" role="Defendant"></party>
+ <party firstName="Jorge" fullName="Jorge Tirado" lastName="Tirado" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Luis" fullName="Luis Vizcarra" lastName="Vizcarra" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Vizcarra et al</title>
+ <partNumber>1:05-cr-10254</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_05-cr-10254/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:05-cr-10254;05-10254</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Flaco</displayForm>
+ <namePart type="family">Flaco</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alejandro Garcilia</displayForm>
+ <namePart type="family">Garcilia</namePart>
+ <namePart type="given">Alejandro</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alejandro Rodriguez</displayForm>
+ <namePart type="family">Rodriguez</namePart>
+ <namePart type="given">Alejandro</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alejaudro Rodriguez</displayForm>
+ <namePart type="family">Rodriguez</namePart>
+ <namePart type="given">Alejaudro</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Fernando Salas Sicairos</displayForm>
+ <namePart type="family">Sicairos</namePart>
+ <namePart type="given">Fernando</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jorge Tirado</displayForm>
+ <namePart type="family">Tirado</namePart>
+ <namePart type="given">Jorge</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Luis Vizcarra</displayForm>
+ <namePart type="family">Vizcarra</namePart>
+ <namePart type="given">Luis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_05-cr-10254</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:05-cr-10254</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="Flaco" lastName="Flaco" role="Defendant"></party>
+ <party firstName="Alejandro" fullName="Alejandro Garcilia" lastName="Garcilia" role="Defendant"></party>
+ <party firstName="Alejandro" fullName="Alejandro Rodriguez" lastName="Rodriguez" role="Defendant"></party>
+ <party firstName="Alejaudro" fullName="Alejaudro Rodriguez" lastName="Rodriguez" role="Defendant"></party>
+ <party firstName="Fernando" fullName="Fernando Salas Sicairos" lastName="Sicairos" middleName="Salas" role="Defendant"></party>
+ <party firstName="Jorge" fullName="Jorge Tirado" lastName="Tirado" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Luis" fullName="Luis Vizcarra" lastName="Vizcarra" role="Defendant"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_05-cr-10254-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_05-cr-10254/USCOURTS-mad-1_05-cr-10254-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Vizcarra et al</title>
+  <subTitle>Judge Rya W. Zobel : ORDER on Pretrial motions entered denying 37 Motion to Suppress as to Fernando Salas Sicairos (5); denying 39 Motion to Dismiss as to Fernando Salas Sicairos (5); denying 40 Motion to Dismiss as to Fernando Salas Sicairos (5); denying 42 Motion to Sever as to Fernando Salas Sicairos (5) (Urso, Lisa)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_05-cr-10254-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181551141</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_05-cr-10254/USCOURTS-mad-1_05-cr-10254-0</identifier>
+ <identifier type="former granule identifier">mad-1_05-cr-10254_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_05-cr-10254/USCOURTS-mad-1_05-cr-10254-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_05-cr-10254/pdf/USCOURTS-mad-1_05-cr-10254-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cr-10254; USA v. Vizcarra et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_05-cr-10254-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-08-09</dateIssued>
+  <docketText>Judge Rya W. Zobel : ORDER on Pretrial motions entered denying 37 Motion to Suppress as to Fernando Salas Sicairos (5); denying 39 Motion to Dismiss as to Fernando Salas Sicairos (5); denying 40 Motion to Dismiss as to Fernando Salas Sicairos (5); denying 42 Motion to Sever as to Fernando Salas Sicairos (5) (Urso, Lisa)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_05-cr-10254-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_05-cr-10254/USCOURTS-mad-1_05-cr-10254-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Vizcarra et al</title>
+  <subTitle>Judge Rya W. Zobel : ORDER entered. JUDGMENT as to Luis Vizcarra (1), Count(s) 1, The defendant was sentenced to 120 months; 5 years SR; Standard Conditions apply; Drug testing not to exceed 104 drug tests per year; $100.00 SA; rec: FCI Lompoc; (Urso, Lisa)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_05-cr-10254-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181551142</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_05-cr-10254/USCOURTS-mad-1_05-cr-10254-1</identifier>
+ <identifier type="former granule identifier">mad-1_05-cr-10254_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_05-cr-10254/USCOURTS-mad-1_05-cr-10254-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_05-cr-10254/pdf/USCOURTS-mad-1_05-cr-10254-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cr-10254; USA v. Vizcarra et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_05-cr-10254-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-18</dateIssued>
+  <docketText>Judge Rya W. Zobel : ORDER entered. JUDGMENT as to Luis Vizcarra (1), Count(s) 1, The defendant was sentenced to 120 months; 5 years SR; Standard Conditions apply; Drug testing not to exceed 104 drug tests per year; $100.00 SA; rec: FCI Lompoc; (Urso, Lisa)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_05-cr-10254-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_05-cr-10254/USCOURTS-mad-1_05-cr-10254-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Vizcarra et al</title>
+  <subTitle>Judge Rya W. Zobel : ORDER entered. JUDGMENT as to Alejandro Garcilia (2), Count(s) 1, The defendant was sentenced to 42 months BOP; 3 years SR; Standard conditions apply; SC; drug testing and treatment of not more than 104 drug tests per year; if deported, leave the US; $100.00 SA; (Urso, Lisa)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_05-cr-10254-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181551143</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_05-cr-10254/USCOURTS-mad-1_05-cr-10254-2</identifier>
+ <identifier type="former granule identifier">mad-1_05-cr-10254_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_05-cr-10254/USCOURTS-mad-1_05-cr-10254-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_05-cr-10254/pdf/USCOURTS-mad-1_05-cr-10254-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cr-10254; USA v. Vizcarra et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_05-cr-10254-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-01-25</dateIssued>
+  <docketText>Judge Rya W. Zobel : ORDER entered. JUDGMENT as to Alejandro Garcilia (2), Count(s) 1, The defendant was sentenced to 42 months BOP; 3 years SR; Standard conditions apply; SC; drug testing and treatment of not more than 104 drug tests per year; if deported, leave the US; $100.00 SA; (Urso, Lisa)</docketText>
+</extension>
+</relatedItem>
+</mods>

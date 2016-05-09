@@ -1,0 +1,1175 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee184a3f4fd">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-05-09</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-05-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365</identifier>
+<identifier type="local">P0b002ee184a3f4fd</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-05-09</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-05-09</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_10-cv-00365</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_10-cv-00365</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:10-cv-00365</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>840</natureSuitCode>
+ <natureSuit>Trademark</natureSuit>
+ <party firstName="Shepherd" fullName="Shepherd Friedman" lastName="Friedman" role="Defendant"></party>
+ <party fullName="Peter Kiewit Sons&apos;, Inc." lastName="Peter Kiewit Sons&apos;, Inc." role="Plaintiff"></party>
+ <party fullName="U.S. Bankruptcy Court" lastName="U.S. Bankruptcy Court" role="Interested Party"></party>
+ <party fullName="Wall Street Equity Group, Inc." lastName="Wall Street Equity Group, Inc." role="Defendant"></party>
+ <party fullName="Wall Street Group of Companies, Inc." lastName="Wall Street Group of Companies, Inc." role="Defendant"></party>
+ <party fullName="Wall Street Private Equity Group" lastName="Wall Street Private Equity Group" role="Interested Party"></party>
+ <party firstName="Steven" fullName="Steven S. West" lastName="West" middleName="S." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+ <partNumber>8:10-cv-00365</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:10-cv-00365;10-365</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Shepherd Friedman</displayForm>
+ <namePart type="family">Friedman</namePart>
+ <namePart type="given">Shepherd</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Peter Kiewit Sons&apos;, Inc.</displayForm>
+ <namePart type="family">Peter Kiewit Sons&apos;, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Bankruptcy Court</displayForm>
+ <namePart type="family">U.S. Bankruptcy Court</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Wall Street Equity Group, Inc.</displayForm>
+ <namePart type="family">Wall Street Equity Group, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wall Street Group of Companies, Inc.</displayForm>
+ <namePart type="family">Wall Street Group of Companies, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wall Street Private Equity Group</displayForm>
+ <namePart type="family">Wall Street Private Equity Group</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Steven S. West</displayForm>
+ <namePart type="family">West</namePart>
+ <namePart type="given">Steven</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_10-cv-00365</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:10-cv-00365</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>840</natureSuitCode>
+ <natureSuit>Trademark</natureSuit>
+ <party firstName="Shepherd" fullName="Shepherd Friedman" lastName="Friedman" role="Defendant"></party>
+ <party fullName="Peter Kiewit Sons&apos;, Inc." lastName="Peter Kiewit Sons&apos;, Inc." role="Plaintiff"></party>
+ <party fullName="U.S. Bankruptcy Court" lastName="U.S. Bankruptcy Court" role="Interested Party"></party>
+ <party fullName="Wall Street Equity Group, Inc." lastName="Wall Street Equity Group, Inc." role="Defendant"></party>
+ <party fullName="Wall Street Group of Companies, Inc." lastName="Wall Street Group of Companies, Inc." role="Defendant"></party>
+ <party fullName="Wall Street Private Equity Group" lastName="Wall Street Private Equity Group" role="Interested Party"></party>
+ <party firstName="Steven" fullName="Steven S. West" lastName="West" middleName="S." role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-0/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>ORDER FOR TEMPORARY RESTRAINING ORDER AND PRELIMINARY INJUNCTION - The Motion for Temporary Restraining Order and Preliminary Injunction 7 is granted. The Court, being fully advised in the premises, orders as follows: A preliminary injunction is issued effective immediately and continuing until further order of the Court, enjoining Wall Street Equity Group, Inc., Wall Street Group of Companies, Inc., Shepherd Friedman, Steven S. West, their agents, servants, employees and all those in active concert and participation with Defendants from: a. Using the Kiewit Mark or any substantially similar mark in connection with representations to Defendants clients and potential clients and otherwise infringing, diluting and disparaging the Kiewit Mark. b. Making any representations which suggest that Defendants have some association, approval or authorization from Kiewit and/or that Kiewit is an interested buyer in the businesses represented by or associated with Defendants. c. Engaging in unfair competition and/or deceptive trade practices. Bond is set in the amount of $100.00. Ordered by Judge Laurie Smith Camp. (Copy to financial) (KBJ)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b4e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-0</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-10-04</dateIssued>
+  <docketText>ORDER FOR TEMPORARY RESTRAINING ORDER AND PRELIMINARY INJUNCTION - The Motion for Temporary Restraining Order and Preliminary Injunction 7 is granted. The Court, being fully advised in the premises, orders as follows: A preliminary injunction is issued effective immediately and continuing until further order of the Court, enjoining Wall Street Equity Group, Inc., Wall Street Group of Companies, Inc., Shepherd Friedman, Steven S. West, their agents, servants, employees and all those in active concert and participation with Defendants from: a. Using the Kiewit Mark or any substantially similar mark in connection with representations to Defendants clients and potential clients and otherwise infringing, diluting and disparaging the Kiewit Mark. b. Making any representations which suggest that Defendants have some association, approval or authorization from Kiewit and/or that Kiewit is an interested buyer in the businesses represented by or associated with Defendants. c. Engaging in unfair competition and/or deceptive trade practices. Bond is set in the amount of $100.00. Ordered by Judge Laurie Smith Camp. (Copy to financial) (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-1/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER - The telephonic conference remains scheduled to be held on June 15, 2011 at 10:00 a.m. The parties shall be prepared to discuss the topics in paragraph (2) of this order during the conference call, and shall set aside at least thirty minutes for the call. Ordered by Magistrate Judge Cheryl R. Zwart. (JAE)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b62</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-1</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-06-08</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - The telephonic conference remains scheduled to be held on June 15, 2011 at 10:00 a.m. The parties shall be prepared to discuss the topics in paragraph (2) of this order during the conference call, and shall set aside at least thirty minutes for the call. Ordered by Magistrate Judge Cheryl R. Zwart. (JAE)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-2/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>ORDER granting 51 Motion to Extend. Jury Trial set for 3/13/2012 at 08:30 AM in Courtroom 2, Federal Building, 111 South 18th Plaza, Omaha, NE before Judge Laurie Smith Camp. Pretrial Conference set for 1/20/2012 at 10:00 AM before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49aee</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-2</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-06-15</dateIssued>
+  <docketText>ORDER granting 51 Motion to Extend. Jury Trial set for 3/13/2012 at 08:30 AM in Courtroom 2, Federal Building, 111 South 18th Plaza, Omaha, NE before Judge Laurie Smith Camp. Pretrial Conference set for 1/20/2012 at 10:00 AM before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-3/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Plaintiff&apos;s motion to compel (filing no. 104) is granted in part and denied in part as follows: a) Limited to the time period of January 1, 2008 to the present, the motion to compel is granted as to: Interrogatories 8, 9, 16, 17, 18, 19, 20, 21, 22 and 23 to defendants WSG and WSE. Interrogatories 4, 5 and 10 as to defendants West and Friedman. Requests for Production 5, 13, and 17 as to defendants WSG and WSE. b) The motion is denied as to all other requests. Plaintiffs motion for order to issue subpoena is granted, (filing no. 87). The plaintiff is authorized to issue the proposed subpoena to Arthur Bertke. Plaintiff&apos;s requests for costs and attorneys&apos; fees it incurred in filing its motion to compel and motion for order to issue subpoena are denied without prejudice to re-filing if defendants discovery responses are not forthcoming or timely. Defendants&apos; motion to strike affidavit, (filing no. 121), is denied. Ordered by Magistrate Judge Cheryl R. Zwart. (GJG)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49af2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-3</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-10-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Plaintiff&apos;s motion to compel (filing no. 104) is granted in part and denied in part as follows: a) Limited to the time period of January 1, 2008 to the present, the motion to compel is granted as to: Interrogatories 8, 9, 16, 17, 18, 19, 20, 21, 22 and 23 to defendants WSG and WSE. Interrogatories 4, 5 and 10 as to defendants West and Friedman. Requests for Production 5, 13, and 17 as to defendants WSG and WSE. b) The motion is denied as to all other requests. Plaintiffs motion for order to issue subpoena is granted, (filing no. 87). The plaintiff is authorized to issue the proposed subpoena to Arthur Bertke. Plaintiff&apos;s requests for costs and attorneys&apos; fees it incurred in filing its motion to compel and motion for order to issue subpoena are denied without prejudice to re-filing if defendants discovery responses are not forthcoming or timely. Defendants&apos; motion to strike affidavit, (filing no. 121), is denied. Ordered by Magistrate Judge Cheryl R. Zwart. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-4/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>ORDER granting 85 Motion to Extend. Jury Trial set for 6/5/2012 at 08:30 AM in Courtroom 2, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Judge Laurie Smith Camp.Pretrial Conference set for 5/24/2012 at 02:00 PM before Magistrate Judge Cheryl R. Zwart.Status Conference set for 4/3/2012 at 10:00 AM by telephone before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b67</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-4</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2011-10-28</dateIssued>
+  <docketText>ORDER granting 85 Motion to Extend. Jury Trial set for 6/5/2012 at 08:30 AM in Courtroom 2, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Judge Laurie Smith Camp.Pretrial Conference set for 5/24/2012 at 02:00 PM before Magistrate Judge Cheryl R. Zwart.Status Conference set for 4/3/2012 at 10:00 AM by telephone before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-5/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER regarding forensic examination and examiner.Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49ac5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-5</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2011-11-09</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding forensic examination and examiner.Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-6/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying defendants&apos; motions for clarification, 150,151, and 152. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49ac8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-6</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2011-11-10</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying defendants&apos; motions for clarification, 150,151, and 152. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-7/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER on plaintiff&apos;s Emergency Motion to Compel Defendants to Make Offices Available for Imaging of Servers on 11/11/11 154, and defendants&apos; Motion for Protective Order 158. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49a8a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-7</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2011-11-11</dateIssued>
+  <docketText>MEMORANDUM AND ORDER on plaintiff&apos;s Emergency Motion to Compel Defendants to Make Offices Available for Imaging of Servers on 11/11/11 154, and defendants&apos; Motion for Protective Order 158. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-8/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>ORDER granting 183 Motion for Hearing.Hearing set for January 11, 2012 at 9:00 a.m. in the Special Proceedings Courtroom, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, Nebraska.A representative of the defendant(s) and defense counsel shall appear in person at this hearing. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b40</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-8</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2011-12-27</dateIssued>
+  <docketText>ORDER granting 183 Motion for Hearing.Hearing set for January 11, 2012 at 9:00 a.m. in the Special Proceedings Courtroom, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, Nebraska.A representative of the defendant(s) and defense counsel shall appear in person at this hearing. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-9/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>by Magistrate Judge Cheryl R. Zwart. (CRZ)ORDER granting 188 Motion to Continue. A hearing on plaintiff&apos;s motion for sanctions, 135, defendants&apos; motion for protective order, 158, and defendants&apos; motion for leave to file an amended answer to add affirmative defenses, 179, will be held before the undersigned magistrate judge on 1/30/2012 at 9:00 a.m. in the Special Proceedings Courtroom, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, Nebraska before Magistrate Judge Cheryl R. Zwart. Ordered</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b4c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-9</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2012-01-04</dateIssued>
+  <docketText>by Magistrate Judge Cheryl R. Zwart. (CRZ)ORDER granting 188 Motion to Continue. A hearing on plaintiff&apos;s motion for sanctions, 135, defendants&apos; motion for protective order, 158, and defendants&apos; motion for leave to file an amended answer to add affirmative defenses, 179, will be held before the undersigned magistrate judge on 1/30/2012 at 9:00 a.m. in the Special Proceedings Courtroom, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, Nebraska before Magistrate Judge Cheryl R. Zwart. Ordered</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-10/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>ORDER regarding 197 Motion for Clarification. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49a8c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-10</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2012-01-17</dateIssued>
+  <docketText>ORDER regarding 197 Motion for Clarification. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-11/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER regarding defense counsel&apos;s notice of unavailability 225.Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49ac7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-11</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2012-02-01</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding defense counsel&apos;s notice of unavailability 225.Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-12/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>ORDER - The status conference set for April 3, 2012 is cancelled. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b1d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-12</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2012-02-13</dateIssued>
+  <docketText>ORDER - The status conference set for April 3, 2012 is cancelled. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-13/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>ORDER - The motion to withdraw filed by Rebecca A. Zawisky, as attorney of record for Plaintiff, Peter Kiewit Sons&apos;, Inc., (filing no. 260), is granted. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49aeb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-13</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2012-04-17</dateIssued>
+  <docketText>ORDER - The motion to withdraw filed by Rebecca A. Zawisky, as attorney of record for Plaintiff, Peter Kiewit Sons&apos;, Inc., (filing no. 260), is granted. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-14/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER regarding pending motions: 1) Plaintiff&apos;s motion for leave to file a reply brief, (filing no. 255), is granted and the court reviewed and considered the proposed reply brief, (filing no. 255-1), as well as Defendants&apos; responsive brief, (filing no. 256).2) Defendants&apos; motion to amend its answer, (filing no. 179), is denied.3) Defendants&apos; motion for a protective order, (filing no. 158), is granted in part and denied in part as set forth in the body of this Memorandum and Order. A protective order shall be entered separately by this court.4) Plaintiff&apos;s motion for sanctions, (filing no. 135 ), is granted in part and denied in part as stated. The pretrial conference and trial are continued pending further order of the court. A telephonic status conference before the undersigned magistrate judge will be held on September 5, 2012 at 10:00 a.m. (CDT) to discuss further case progression. Counsel for plaintiff shall place or arrange the call. IT IS FURTHER HEREBY RECOMMENDED to the Honorable John M. Gerrard that an adverse jury instruction be given at trial, with the jury instructed as follows: You may, but are not required to, assume that information stored on the discarded server [Server 1] would have been adverse, harmful, or detrimental to the defendants&apos; claims and defenses. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b2f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-14</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2012-05-18</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding pending motions: 1) Plaintiff&apos;s motion for leave to file a reply brief, (filing no. 255), is granted and the court reviewed and considered the proposed reply brief, (filing no. 255-1), as well as Defendants&apos; responsive brief, (filing no. 256).2) Defendants&apos; motion to amend its answer, (filing no. 179), is denied.3) Defendants&apos; motion for a protective order, (filing no. 158), is granted in part and denied in part as set forth in the body of this Memorandum and Order. A protective order shall be entered separately by this court.4) Plaintiff&apos;s motion for sanctions, (filing no. 135 ), is granted in part and denied in part as stated. The pretrial conference and trial are continued pending further order of the court. A telephonic status conference before the undersigned magistrate judge will be held on September 5, 2012 at 10:00 a.m. (CDT) to discuss further case progression. Counsel for plaintiff shall place or arrange the call. IT IS FURTHER HEREBY RECOMMENDED to the Honorable John M. Gerrard that an adverse jury instruction be given at trial, with the jury instructed as follows: You may, but are not required to, assume that information stored on the discarded server [Server 1] would have been adverse, harmful, or detrimental to the defendants&apos; claims and defenses. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-15/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>PROTECTIVE ORDER - Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b46</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-15</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2012-05-18</dateIssued>
+  <docketText>PROTECTIVE ORDER - Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-16/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>ORDER denying 269 Motion for Reconsideration. Ordered by Magistrate Judge Cheryl R. Zwart. (Zwart, Cheryl)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b30</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-16</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2012-06-16</dateIssued>
+  <docketText>ORDER denying 269 Motion for Reconsideration. Ordered by Magistrate Judge Cheryl R. Zwart. (Zwart, Cheryl)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-17/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER setting July 17, 2012 deadline for Plaintiff&apos;s service of redacted billing statements on the Defendants and for filing, under seal, unredacted billing statements for review by the court. Defendants&apos; response due on or before July 27, 2012.Ordered by Magistrate Judge Cheryl R. Zwart. (Zwart, Cheryl)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b48</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-17</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2012-07-05</dateIssued>
+  <docketText>MEMORANDUM AND ORDER setting July 17, 2012 deadline for Plaintiff&apos;s service of redacted billing statements on the Defendants and for filing, under seal, unredacted billing statements for review by the court. Defendants&apos; response due on or before July 27, 2012.Ordered by Magistrate Judge Cheryl R. Zwart. (Zwart, Cheryl)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-18/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>ORDER granting 265 Motion for Attorney Fees. Fees awarded to Plaintiff against Defendants; denying 287 Motion to Strike Reply Brief; granting 288 Motion for Leave to File Reply Brief Instanter. Ordered by Magistrate Judge Cheryl R. Zwart. (BHC)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b50</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-18</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2012-09-21</dateIssued>
+  <docketText>ORDER granting 265 Motion for Attorney Fees. Fees awarded to Plaintiff against Defendants; denying 287 Motion to Strike Reply Brief; granting 288 Motion for Leave to File Reply Brief Instanter. Ordered by Magistrate Judge Cheryl R. Zwart. (BHC)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-19/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>ORDER dismissing Wall Street Private Equity Group, Inc&apos;s 327 Suggestion of Bankruptcy without prejudice. Ordered by Judge John M. Gerrard. (MKR)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-19.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b52</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-19</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2012-10-31</dateIssued>
+  <docketText>ORDER dismissing Wall Street Private Equity Group, Inc&apos;s 327 Suggestion of Bankruptcy without prejudice. Ordered by Judge John M. Gerrard. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-20/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER regarding pending motions.1) Defense counsel&apos;s motion to withdraw as counsel for defendant Steven West, (Filing No. 314), is denied.2) Plaintiff&apos;s motion for reconsideration, (Filing No. 320), is granted. On or before November 26, 2012, the defendants shall pay $82,909.60, that being the sanctions awarded to Kiewit under the court&apos;s prior order, (Filing No. 306). Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-20.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b44</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-20</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2012-11-05</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding pending motions.1) Defense counsel&apos;s motion to withdraw as counsel for defendant Steven West, (Filing No. 314), is denied.2) Plaintiff&apos;s motion for reconsideration, (Filing No. 320), is granted. On or before November 26, 2012, the defendants shall pay $82,909.60, that being the sanctions awarded to Kiewit under the court&apos;s prior order, (Filing No. 306). Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-21/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>ORDER regarding the 330 Suggestion of Bankruptcy. This case is referred to the United States Bankruptcy Court of the District of Nebraska pursuant to NEGenR 1.5(a)(1); The Clerk of the United States District Court for the District of Nebraska shall close this case for statistical purposes; and The Clerk of the United States District Court for the District of Nebraska shall deliver, or send electronically, the Court file to the Clerk of the Bankruptcy Court for the District of Nebraska. Ordered by Judge John M. Gerrard. (MKR)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-21.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b65</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-21</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2012-11-07</dateIssued>
+  <docketText>ORDER regarding the 330 Suggestion of Bankruptcy. This case is referred to the United States Bankruptcy Court of the District of Nebraska pursuant to NEGenR 1.5(a)(1); The Clerk of the United States District Court for the District of Nebraska shall close this case for statistical purposes; and The Clerk of the United States District Court for the District of Nebraska shall deliver, or send electronically, the Court file to the Clerk of the Bankruptcy Court for the District of Nebraska. Ordered by Judge John M. Gerrard. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-22/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>FINDINGS AND RECOMMENDATION that it withdraw the reference of this adversary proceeding to proceed with the litigation against Wall Street Group of Companies, Inc., Shepherd Friedman, and Steven S. West, while staying the case as to the party in bankruptcy until the automatic stay is no longer in effect or until relief from the automatic stay is requested and obtained from the Southern District of Florida bankruptcy court. Further, this courts order (Fil. No. 2) directing the parties to file status reports will be held in abeyance pending the district courts decision on the motion to withdraw the reference. (Attachments: # (1) Transmittal Letter)Ordered by United States Bankruptcy Judge Timothy J. Mahoney. (MKR)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-22.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b4a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-22</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2012-11-19</dateIssued>
+  <docketText>FINDINGS AND RECOMMENDATION that it withdraw the reference of this adversary proceeding to proceed with the litigation against Wall Street Group of Companies, Inc., Shepherd Friedman, and Steven S. West, while staying the case as to the party in bankruptcy until the automatic stay is no longer in effect or until relief from the automatic stay is requested and obtained from the Southern District of Florida bankruptcy court. Further, this courts order (Fil. No. 2) directing the parties to file status reports will be held in abeyance pending the district courts decision on the motion to withdraw the reference. (Attachments: # (1) Transmittal Letter)Ordered by United States Bankruptcy Judge Timothy J. Mahoney. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-23/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER adopting the 332 Findings and Recommendation recommending withdrawal of the reference. Reference of this case to the United States Bankruptcy Court for the District of Nebraska is withdrawn. This case is stayed as to Wall Street Equity Group, Inc., the party in bankruptcy, until the stay is no longer in effect pursuant to 11 U.S.C. § 362, or relief from the automatic stay is requested and obtained from the untied States Bankruptcy Court for the Southern District of Florida. The parties are directed to inform the Court every 60 days of the status of the case. The Clerk of the Court is directed to enter an initial status report deadline of February 12, 2012. Ordered by Judge John M. Gerrard. (copy mailed) (MKR)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-23.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49ac1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-23</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2012-12-12</dateIssued>
+  <docketText>MEMORANDUM AND ORDER adopting the 332 Findings and Recommendation recommending withdrawal of the reference. Reference of this case to the United States Bankruptcy Court for the District of Nebraska is withdrawn. This case is stayed as to Wall Street Equity Group, Inc., the party in bankruptcy, until the stay is no longer in effect pursuant to 11 U.S.C. § 362, or relief from the automatic stay is requested and obtained from the untied States Bankruptcy Court for the Southern District of Florida. The parties are directed to inform the Court every 60 days of the status of the case. The Clerk of the Court is directed to enter an initial status report deadline of February 12, 2012. Ordered by Judge John M. Gerrard. (copy mailed) (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-24/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>AMENDED MEMORANDUM AND ORDER - The 332 Findings and Recommendation recommending withdrawal of the reference is adopted. Reference of this case to the United States Bankruptcy Court for the District of Nebraska is withdrawn. This case is stayed as to Wall Street Equity Group, Inc., the party in bankruptcy, until the stay is no longer in effect pursuant to 11 U.S.C. § 362, or relief from the automatic stay is requested and obtained from the untied States Bankruptcy Court for the Southern District of Florida. The parties are directed to inform the Court every 60 days of the status of the case. The Clerk of the Court is directed to enter an initial status report deadline of February 12, 2013. Ordered by Judge John M. Gerrard. (copy mailed ) (MKR)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-24.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b31</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-24</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2012-12-12</dateIssued>
+  <docketText>AMENDED MEMORANDUM AND ORDER - The 332 Findings and Recommendation recommending withdrawal of the reference is adopted. Reference of this case to the United States Bankruptcy Court for the District of Nebraska is withdrawn. This case is stayed as to Wall Street Equity Group, Inc., the party in bankruptcy, until the stay is no longer in effect pursuant to 11 U.S.C. § 362, or relief from the automatic stay is requested and obtained from the untied States Bankruptcy Court for the Southern District of Florida. The parties are directed to inform the Court every 60 days of the status of the case. The Clerk of the Court is directed to enter an initial status report deadline of February 12, 2013. Ordered by Judge John M. Gerrard. (copy mailed ) (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-25/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER: On or before January 18, 2013, --the plaintiff shall file its brief and evidence in response to the motion for reconsideration, with defendants&apos; reply filed within seven (7) days thereafter;--the plaintiff shall submit its proposed schedule for further progression of this case, with defendants&apos; response filed within seven (7) days thereafter; and --the defendants shall pay $82,909.60 to the plaintiff, such amount being the sanctions awarded to Kiewit under the court&apos;s previously stayed order. Ordered by Magistrate Judge Cheryl R. Zwart. (Zwart, Cheryl)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-25.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49ac3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-25</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>MEMORANDUM AND ORDER: On or before January 18, 2013, --the plaintiff shall file its brief and evidence in response to the motion for reconsideration, with defendants&apos; reply filed within seven (7) days thereafter;--the plaintiff shall submit its proposed schedule for further progression of this case, with defendants&apos; response filed within seven (7) days thereafter; and --the defendants shall pay $82,909.60 to the plaintiff, such amount being the sanctions awarded to Kiewit under the court&apos;s previously stayed order. Ordered by Magistrate Judge Cheryl R. Zwart. (Zwart, Cheryl)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-26/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>FINDINGS AND RECOMMENDATION that the United States District Court for the District of Nebraska withdraw the reference of this adversary proceeding to move forward with proceedings involving all of the parties. Ordered by Judge Timothy J. Mahoney. (Attachments: # (1) BK Transmittal Letter, # (2) BK Motion for Withdrawal of Reference) (MKR)</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-26.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b42</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-26</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>FINDINGS AND RECOMMENDATION that the United States District Court for the District of Nebraska withdraw the reference of this adversary proceeding to move forward with proceedings involving all of the parties. Ordered by Judge Timothy J. Mahoney. (Attachments: # (1) BK Transmittal Letter, # (2) BK Motion for Withdrawal of Reference) (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-27" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-27/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>ORDER adopting the 347 Findings and Recommendation recommending withdrawal of the reference. Reference of this case to the United States Bankruptcy Court for the District of Nebraska is withdrawn in its entirety. The status reports ordered by the Court in its Memorandum and Order of December 12, 2012 335 will no longer be required. The Clerk is directed to terminate the Status Report deadline ordered by this Court in its Memorandum and Order of December 12, 2012 335. Ordered by Judge John M. Gerrard. (MKR)</subTitle>
+  <partNumber>27</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-27.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b69</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-27</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_27.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-27/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-27.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-27</accessId>
+  <sequenceNumber>27</sequenceNumber>
+  <dateIssued>2013-01-07</dateIssued>
+  <docketText>ORDER adopting the 347 Findings and Recommendation recommending withdrawal of the reference. Reference of this case to the United States Bankruptcy Court for the District of Nebraska is withdrawn in its entirety. The status reports ordered by the Court in its Memorandum and Order of December 12, 2012 335 will no longer be required. The Clerk is directed to terminate the Status Report deadline ordered by this Court in its Memorandum and Order of December 12, 2012 335. Ordered by Judge John M. Gerrard. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-28" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-28/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER regarding pending motions:1) The Motion for Reconsideration filed by Ms. Hesford, (Filing No. 338), is denied as moot. Hesford has already been terminated as counsel of record for West.2) To the extent Kiewit&apos;s motion, (Filing No. 351), seeks Hesford&apos;s disqualification as counsel for the non-West defendants, the motion is granted. Attorney Margaret Hesford is disqualified from representing any of the defendants in this case.3) Hesford shall file a notice which advises the court that she has served a copy of this order on Defendants Friedman, Wall Street Equity Group, Inc., and Wall Street Group of Companies, Inc., states the date and method of service used, and provides the addresses, including email addresses, to be used in the future for providing notice of filings on Friedman and the West Corporations. The notice shall be filed on or before February 15, 2013. 4) To the extent Kiewit&apos;s motion, (Filing No. 351), seeks additional sanctions, including the entry of a default, the motion will be held in abeyance. Steven West has until February 27, 2013 to submit a response to Kiewit&apos;s motion for additional sanctions.5) The clerk&apos;s office is instructed to mail Mr. West a copy of this order along with copies of Filing Nos. 351, 352, 353, 355, 357, 358 and 359.6) On or before February 27, 2013, Defendant Shepherd Friedman shall either: (a) obtain the services of substitute counsel and have that attorney file an appearance on his behalf; or (b) file a statement notifying the court of his intent to litigate this case without counsel. Failure to comply with this order may result in an entry of default and/or a default judgment against defendant Friedman without further notice.7) Wall Street Equity Group, Inc. and Wall Street Group of Companies, Inc., cannot litigate this action in this forum without representation by licensed counsel. On or before February 27, 2013, Wall Street Equity Group, Inc. and Wall Street Group of Companies, Inc., shall obtain the services of substitute counsel and have that attorney file an appearance on their behalf, in the absence of which the court will enter a default and/or a judgment of default against them without further notice.8) Attorney Scott R. Austin shall either file his motion to withdraw or reaffirm his intention to remain as counsel of record in this case, on or before February 27, 2013.9) Defendant West&apos;s motion for additional time to locate counsel, (Filing No. 363), is denied. West now appears in this case pro se, but without prejudice to having counsel later enter an appearance on his behalf.Ordered by Magistrate Judge Cheryl R. Zwart. (Copies mailed as directed)(JAB)</subTitle>
+  <partNumber>28</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-28.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b2c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-28</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_28.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-28/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-28.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-28</accessId>
+  <sequenceNumber>28</sequenceNumber>
+  <dateIssued>2013-02-13</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding pending motions:1) The Motion for Reconsideration filed by Ms. Hesford, (Filing No. 338), is denied as moot. Hesford has already been terminated as counsel of record for West.2) To the extent Kiewit&apos;s motion, (Filing No. 351), seeks Hesford&apos;s disqualification as counsel for the non-West defendants, the motion is granted. Attorney Margaret Hesford is disqualified from representing any of the defendants in this case.3) Hesford shall file a notice which advises the court that she has served a copy of this order on Defendants Friedman, Wall Street Equity Group, Inc., and Wall Street Group of Companies, Inc., states the date and method of service used, and provides the addresses, including email addresses, to be used in the future for providing notice of filings on Friedman and the West Corporations. The notice shall be filed on or before February 15, 2013. 4) To the extent Kiewit&apos;s motion, (Filing No. 351), seeks additional sanctions, including the entry of a default, the motion will be held in abeyance. Steven West has until February 27, 2013 to submit a response to Kiewit&apos;s motion for additional sanctions.5) The clerk&apos;s office is instructed to mail Mr. West a copy of this order along with copies of Filing Nos. 351, 352, 353, 355, 357, 358 and 359.6) On or before February 27, 2013, Defendant Shepherd Friedman shall either: (a) obtain the services of substitute counsel and have that attorney file an appearance on his behalf; or (b) file a statement notifying the court of his intent to litigate this case without counsel. Failure to comply with this order may result in an entry of default and/or a default judgment against defendant Friedman without further notice.7) Wall Street Equity Group, Inc. and Wall Street Group of Companies, Inc., cannot litigate this action in this forum without representation by licensed counsel. On or before February 27, 2013, Wall Street Equity Group, Inc. and Wall Street Group of Companies, Inc., shall obtain the services of substitute counsel and have that attorney file an appearance on their behalf, in the absence of which the court will enter a default and/or a judgment of default against them without further notice.8) Attorney Scott R. Austin shall either file his motion to withdraw or reaffirm his intention to remain as counsel of record in this case, on or before February 27, 2013.9) Defendant West&apos;s motion for additional time to locate counsel, (Filing No. 363), is denied. West now appears in this case pro se, but without prejudice to having counsel later enter an appearance on his behalf.Ordered by Magistrate Judge Cheryl R. Zwart. (Copies mailed as directed)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-29" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-29/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting the 366 Motion to Withdraw as Attorney filed by Attorney Scott R. Austin as counsel on behalf of Defendants Shepherd Friedman, Wall Street Equity Group, Inc., Wall Street Group of Companies, Inc., and Steven S. West. The clerk shall mail a copy of this notice to Defendant West at his address of record and to the remaining defendants at the addresses previously provided by Ms. Hesford. The Clerk shall terminate Mr. Austin from receiving any further CM/ECF notices in this case. Ordered by Magistrate Judge Cheryl R. Zwart. (Copies mailed as directed)(MKR)</subTitle>
+  <partNumber>29</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-29.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b60</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-29</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_29.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-29/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-29.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-29</accessId>
+  <sequenceNumber>29</sequenceNumber>
+  <dateIssued>2013-02-21</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting the 366 Motion to Withdraw as Attorney filed by Attorney Scott R. Austin as counsel on behalf of Defendants Shepherd Friedman, Wall Street Equity Group, Inc., Wall Street Group of Companies, Inc., and Steven S. West. The clerk shall mail a copy of this notice to Defendant West at his address of record and to the remaining defendants at the addresses previously provided by Ms. Hesford. The Clerk shall terminate Mr. Austin from receiving any further CM/ECF notices in this case. Ordered by Magistrate Judge Cheryl R. Zwart. (Copies mailed as directed)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-30" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-30/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>FINDINGS AND RECOMMENDATION regarding Memorandum and Order364.- - IT IS RECOMMENDED to the Honorable John M. Gerrard, United States District Judge, pursuant to 28 U.S.C. § 636(b), that a default be entered against Wall Street Equity Group, Inc. and Wall Street Group of Companies, Inc. without further notice. - - IT IS FURTHER RECOMMENDED that if a default is entered against the corporate defendants, the Plaintiff be afforded an opportunity to prove not only the amount of damages at issue, but the degree and extent of Wall Street Equity Group, Inc.&apos;s and Wall Street Group of Companies, Inc.&apos;s culpability in causing those damages.- - The parties are notified that failing to file an objection to this recommendation as provided in the local rules of this court may be held to be a waiver of any right to appeal the court&apos;s adoption of the recommendation.Ordered by Magistrate Judge Cheryl R. Zwart. (Copies mailed and e-mailed as directed)(JAB)</subTitle>
+  <partNumber>30</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-30.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b1f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-30</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_30.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-30/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-30.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-30</accessId>
+  <sequenceNumber>30</sequenceNumber>
+  <dateIssued>2013-02-28</dateIssued>
+  <docketText>FINDINGS AND RECOMMENDATION regarding Memorandum and Order364.- - IT IS RECOMMENDED to the Honorable John M. Gerrard, United States District Judge, pursuant to 28 U.S.C. § 636(b), that a default be entered against Wall Street Equity Group, Inc. and Wall Street Group of Companies, Inc. without further notice. - - IT IS FURTHER RECOMMENDED that if a default is entered against the corporate defendants, the Plaintiff be afforded an opportunity to prove not only the amount of damages at issue, but the degree and extent of Wall Street Equity Group, Inc.&apos;s and Wall Street Group of Companies, Inc.&apos;s culpability in causing those damages.- - The parties are notified that failing to file an objection to this recommendation as provided in the local rules of this court may be held to be a waiver of any right to appeal the court&apos;s adoption of the recommendation.Ordered by Magistrate Judge Cheryl R. Zwart. (Copies mailed and e-mailed as directed)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-31" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-31/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 373 Motion for Reconsideration. Ordered by Magistrate Judge Cheryl R. Zwart. (Copy mailed to pro se party) (AOA)</subTitle>
+  <partNumber>31</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-31.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b5e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-31</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_31.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-31/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-31.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-31</accessId>
+  <sequenceNumber>31</sequenceNumber>
+  <dateIssued>2013-03-15</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 373 Motion for Reconsideration. Ordered by Magistrate Judge Cheryl R. Zwart. (Copy mailed to pro se party) (AOA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-32" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-32/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER adopting 370 Findings and Recommendation. Default is entered against defendants Wall Street Equity Group, Inc. and Wall Street Group of Companies, Inc. The plaintiff shall be afforded an opportunity to prove not only the amount of damages at issue, but the degree and extent of Wall Street Equity Group, Inc.&apos;s and Wall Street Group of Companies, Inc.&apos;s culpability in causing those damages. The clerk&apos;s office is directed to mail and email a copy of this filing to Wall Street Equity Group, Inc. and Wall Street Group of Companies, Inc. at the addresses identified by their former counsel in filing 365. Ordered by Judge John M. Gerrard. (Copies mailed as directed) (MKR)</subTitle>
+  <partNumber>32</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-32.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49aed</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-32</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_32.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-32/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-32.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-32</accessId>
+  <sequenceNumber>32</sequenceNumber>
+  <dateIssued>2013-03-21</dateIssued>
+  <docketText>MEMORANDUM AND ORDER adopting 370 Findings and Recommendation. Default is entered against defendants Wall Street Equity Group, Inc. and Wall Street Group of Companies, Inc. The plaintiff shall be afforded an opportunity to prove not only the amount of damages at issue, but the degree and extent of Wall Street Equity Group, Inc.&apos;s and Wall Street Group of Companies, Inc.&apos;s culpability in causing those damages. The clerk&apos;s office is directed to mail and email a copy of this filing to Wall Street Equity Group, Inc. and Wall Street Group of Companies, Inc. at the addresses identified by their former counsel in filing 365. Ordered by Judge John M. Gerrard. (Copies mailed as directed) (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-33" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-33/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>FINDINGS AND RECOMMENDATION regarding plaintiff&apos;s second motion for sanctions 351: IT IS RECOMMENDED to the Honorable John M. Gerrard, United States District Judge, pursuant to 28 U.S.C. § 636(b), that a default be entered against each of the defendants as a discovery sanction.IT IS FURTHER RECOMMENDED that if a default is entered against the defendants as a discovery sanction, the Plaintiff be afforded an opportunity to prove not only the amount of damages at issue, but the degree and extent of each defendant&apos;s culpability in causing those damages.The parties are notified that failing to file an objection to this recommendation as provided in the local rules of this court may be held to be a waiver of any right to appeal the court&apos;s adoption of the recommendation.Ordered by Magistrate Judge Cheryl R. Zwart. (Copies mailed and e-mailed as directed)(JAB)</subTitle>
+  <partNumber>33</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-33.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b19</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-33</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_33.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-33/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-33.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-33</accessId>
+  <sequenceNumber>33</sequenceNumber>
+  <dateIssued>2013-04-08</dateIssued>
+  <docketText>FINDINGS AND RECOMMENDATION regarding plaintiff&apos;s second motion for sanctions 351: IT IS RECOMMENDED to the Honorable John M. Gerrard, United States District Judge, pursuant to 28 U.S.C. § 636(b), that a default be entered against each of the defendants as a discovery sanction.IT IS FURTHER RECOMMENDED that if a default is entered against the defendants as a discovery sanction, the Plaintiff be afforded an opportunity to prove not only the amount of damages at issue, but the degree and extent of each defendant&apos;s culpability in causing those damages.The parties are notified that failing to file an objection to this recommendation as provided in the local rules of this court may be held to be a waiver of any right to appeal the court&apos;s adoption of the recommendation.Ordered by Magistrate Judge Cheryl R. Zwart. (Copies mailed and e-mailed as directed)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-34" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-34/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying Defendant West&apos;s 378 Motion for Reconsideration for Additional Time to Secure Competent Counsel and to Retry All Matters Because of Ineffective Counsel. Ordered by Magistrate Judge Cheryl R. Zwart. (copies mailed) (MKR)</subTitle>
+  <partNumber>34</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-34.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49b1b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-34</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_34.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-34/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-34.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-34</accessId>
+  <sequenceNumber>34</sequenceNumber>
+  <dateIssued>2013-04-22</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying Defendant West&apos;s 378 Motion for Reconsideration for Additional Time to Secure Competent Counsel and to Retry All Matters Because of Ineffective Counsel. Ordered by Magistrate Judge Cheryl R. Zwart. (copies mailed) (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00365-35" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-35/mods.xml">
+ <titleInfo>
+  <title>Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER - West&apos;s objection to the Magistrate Judge&apos;s findings andrecommendation, styled as a &quot;Motion in Opposition to Findings and Recommendations&quot; (filing 377), is overruled. Friedman&apos;s &quot;Objection to Findings and Recommendation of Default Dated 4/8/13&quot; (filing 379) is overruled. The Magistrate Judge&apos;s Findings and Recommendation (filing 376) are adopted. The defendants&apos; operative answer (filing 133) is stricken. Default is entered against all defendants as a discovery sanction. The Clerk of the Court is directed to enter the defendants&apos; default pursuant to Fed. R. Civ. P. 55(a). A default judgment shall be entered upon the plaintiff&apos;s Second Motion for Sanctions (filing 351) pursuant to Fed. R. Civ. P. 55(b)(2) and NECivR 55.1(c). The plaintiff shall be afforded an opportunity to prove not only the amount of damages at issue, but the degree and extent of each defendant&apos;s culpability in causing those damages. The United States Magistrate Judge is directed to progress this case to a final resolution. The Clerk of the Court is directed to mail and email a copyof this filing to each of the defendants. Ordered by Judge John M. Gerrard. (Copies mailed as directed)(AOA)</subTitle>
+  <partNumber>35</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00365-35.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184a49af1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-35</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00365_35.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00365/USCOURTS-ned-8_10-cv-00365-35/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00365/pdf/USCOURTS-ned-8_10-cv-00365-35.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00365; Peter Kiewit Sons&apos;, Inc. v. Wall Street Equity Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00365-35</accessId>
+  <sequenceNumber>35</sequenceNumber>
+  <dateIssued>2013-05-08</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - West&apos;s objection to the Magistrate Judge&apos;s findings andrecommendation, styled as a &quot;Motion in Opposition to Findings and Recommendations&quot; (filing 377), is overruled. Friedman&apos;s &quot;Objection to Findings and Recommendation of Default Dated 4/8/13&quot; (filing 379) is overruled. The Magistrate Judge&apos;s Findings and Recommendation (filing 376) are adopted. The defendants&apos; operative answer (filing 133) is stricken. Default is entered against all defendants as a discovery sanction. The Clerk of the Court is directed to enter the defendants&apos; default pursuant to Fed. R. Civ. P. 55(a). A default judgment shall be entered upon the plaintiff&apos;s Second Motion for Sanctions (filing 351) pursuant to Fed. R. Civ. P. 55(b)(2) and NECivR 55.1(c). The plaintiff shall be afforded an opportunity to prove not only the amount of damages at issue, but the degree and extent of each defendant&apos;s culpability in causing those damages. The United States Magistrate Judge is directed to progress this case to a final resolution. The Clerk of the Court is directed to mail and email a copyof this filing to each of the defendants. Ordered by Judge John M. Gerrard. (Copies mailed as directed)(AOA)</docketText>
+</extension>
+</relatedItem>
+</mods>

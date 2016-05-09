@@ -1,0 +1,251 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181145b0e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-27</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-3_07-cv-01322</identifier>
+<identifier type="local">P0b002ee181145b0e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-3_07-cv-01322</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-3_07-cv-01322</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>3:07-cv-01322</caseNumber>
+ <caseOffice>Binghamton</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="Binghamton University" lastName="Binghamton University" role="Defendant"></party>
+ <party firstName="Lois" fullName="Lois DeFleur" lastName="DeFleur" role="Defendant"></party>
+ <party firstName="David" fullName="David Doetschman" lastName="Doetschman" role="Defendant"></party>
+ <party firstName="John" fullName="John J. Eisch" lastName="Eisch" middleName="J." role="Defendant"></party>
+ <party firstName="Wayne" fullName="Wayne Jones Jr." generation="Jr." lastName="Jones" role="Defendant"></party>
+ <party firstName="Alistair" fullName="Alistair Lees" lastName="Lees" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles O. Ogindo" lastName="Ogindo" middleName="O." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Ogindo v. Binghamton University et al</title>
+ <partNumber>3:07-cv-01322</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-3_07-cv-01322/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:07-cv-01322;07-1322</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Binghamton</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Binghamton University</displayForm>
+ <namePart type="family">Binghamton University</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lois DeFleur</displayForm>
+ <namePart type="family">DeFleur</namePart>
+ <namePart type="given">Lois</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Doetschman</displayForm>
+ <namePart type="family">Doetschman</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John J. Eisch</displayForm>
+ <namePart type="family">Eisch</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wayne Jones Jr.</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">Wayne</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alistair Lees</displayForm>
+ <namePart type="family">Lees</namePart>
+ <namePart type="given">Alistair</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charles O. Ogindo</displayForm>
+ <namePart type="family">Ogindo</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-3_07-cv-01322</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>3:07-cv-01322</caseNumber>
+ <caseOffice>Binghamton</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="Binghamton University" lastName="Binghamton University" role="Defendant"></party>
+ <party firstName="Lois" fullName="Lois DeFleur" lastName="DeFleur" role="Defendant"></party>
+ <party firstName="David" fullName="David Doetschman" lastName="Doetschman" role="Defendant"></party>
+ <party firstName="John" fullName="John J. Eisch" lastName="Eisch" middleName="J." role="Defendant"></party>
+ <party firstName="Wayne" fullName="Wayne Jones Jr." generation="Jr." lastName="Jones" role="Defendant"></party>
+ <party firstName="Alistair" fullName="Alistair Lees" lastName="Lees" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles O. Ogindo" lastName="Ogindo" middleName="O." role="Plaintiff"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-3_07-cv-01322-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-3_07-cv-01322/USCOURTS-nynd-3_07-cv-01322-0/mods.xml">
+ <titleInfo>
+  <title>Ogindo v. Binghamton University et al</title>
+  <subTitle>DECISION AND ORDER denying Pltf&apos;s 48 Motion for Reconsideration. Signed by Senior Judge Thomas J. McAvoy on 12/1/08. (sfp, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-3_07-cv-01322-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814093a1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-3_07-cv-01322/USCOURTS-nynd-3_07-cv-01322-0</identifier>
+ <identifier type="former granule identifier">nynd-3_07-cv-01322_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-3_07-cv-01322/USCOURTS-nynd-3_07-cv-01322-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-3_07-cv-01322/pdf/USCOURTS-nynd-3_07-cv-01322-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:07-cv-01322; Ogindo v. Binghamton University et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-3_07-cv-01322-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-12-01</dateIssued>
+  <docketText>DECISION AND ORDER denying Pltf&apos;s 48 Motion for Reconsideration. Signed by Senior Judge Thomas J. McAvoy on 12/1/08. (sfp, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-3_07-cv-01322-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-3_07-cv-01322/USCOURTS-nynd-3_07-cv-01322-1/mods.xml">
+ <titleInfo>
+  <title>Ogindo v. Binghamton University et al</title>
+  <subTitle>DECISION AND ORDER denying with leave to renew after Pltf has appeared for deposition and responded to Deft&apos;s outstanding discovery requests as to Pltf&apos;s 71 Motion for Summary Judgment. Dispositive motions to be filed by 3/12/10. Signed by Senior Judge Thomas J. McAvoy on 9/8/09. (sfp, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-3_07-cv-01322-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814093a3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-3_07-cv-01322/USCOURTS-nynd-3_07-cv-01322-1</identifier>
+ <identifier type="former granule identifier">nynd-3_07-cv-01322_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-3_07-cv-01322/USCOURTS-nynd-3_07-cv-01322-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-3_07-cv-01322/pdf/USCOURTS-nynd-3_07-cv-01322-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:07-cv-01322; Ogindo v. Binghamton University et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-3_07-cv-01322-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-09-08</dateIssued>
+  <docketText>DECISION AND ORDER denying with leave to renew after Pltf has appeared for deposition and responded to Deft&apos;s outstanding discovery requests as to Pltf&apos;s 71 Motion for Summary Judgment. Dispositive motions to be filed by 3/12/10. Signed by Senior Judge Thomas J. McAvoy on 9/8/09. (sfp, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-3_07-cv-01322-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-3_07-cv-01322/USCOURTS-nynd-3_07-cv-01322-2/mods.xml">
+ <titleInfo>
+  <title>Ogindo v. Binghamton University et al</title>
+  <subTitle>DECISION AND ORDER denying Pltf&apos;s 84 Motion for Summary Judgment; granting Defts&apos; 91 Motion for Summary Judgment; the amended complaint is dismissed in its entirety. Signed by Senior Judge Thomas J. McAvoy on 1/22/10. (sfp, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-3_07-cv-01322-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814093a2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-3_07-cv-01322/USCOURTS-nynd-3_07-cv-01322-2</identifier>
+ <identifier type="former granule identifier">nynd-3_07-cv-01322_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-3_07-cv-01322/USCOURTS-nynd-3_07-cv-01322-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-3_07-cv-01322/pdf/USCOURTS-nynd-3_07-cv-01322-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:07-cv-01322; Ogindo v. Binghamton University et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-3_07-cv-01322-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-01-27</dateIssued>
+  <docketText>DECISION AND ORDER denying Pltf&apos;s 84 Motion for Summary Judgment; granting Defts&apos; 91 Motion for Summary Judgment; the amended complaint is dismissed in its entirety. Signed by Senior Judge Thomas J. McAvoy on 1/22/10. (sfp, )</docketText>
+</extension>
+</relatedItem>
+</mods>

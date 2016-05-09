@@ -1,0 +1,505 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8ab5fb">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Missouri</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-00696</identifier>
+<identifier type="local">P0b002ee18a8ab5fb</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-moed-4_13-cv-00696</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-moed-4_13-cv-00696</accessId>
+ <courtType>District</courtType>
+ <courtCode>moed</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Missouri</courtState>
+ <courtSortOrder>2281</courtSortOrder>
+ <caseNumber>4:13-cv-00696</caseNumber>
+ <caseOffice>St. Louis</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <cause>29:1132 E.R.I.S.A.-Employee Benefits</cause>
+ <party fullName="AGC - Eastern Missouri Laborers Joint Training Fund" lastName="AGC - Eastern Missouri Laborers Joint Training Fund" role="Plaintiff"></party>
+ <party firstName="Charles" fullName="Charles Bean" lastName="Bean" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph W. Beetz" lastName="Beetz" middleName="W." role="Plaintiff"></party>
+ <party firstName="Larry" fullName="Larry Bloomer" lastName="Bloomer" role="Plaintiff"></party>
+ <party fullName="Construction Laborers Pension Trust of Greater St. Louis" lastName="Construction Laborers Pension Trust of Greater St. Louis" role="Plaintiff"></party>
+ <party firstName="Gary" fullName="Gary Elliott" lastName="Elliott" role="Plaintiff"></party>
+ <party firstName="Brandon" fullName="Brandon Flinn" lastName="Flinn" role="Plaintiff"></party>
+ <party firstName="David" fullName="David A. Gillick" lastName="Gillick" middleName="A." role="Plaintiff"></party>
+ <party firstName="Brad" fullName="Brad Grant" lastName="Grant" role="Plaintiff"></party>
+ <party firstName="Donald" fullName="Donald C. Grant" lastName="Grant" middleName="C." role="Plaintiff"></party>
+ <party fullName="Greater St. Louis Construction Laborers Welfare Fund" lastName="Greater St. Louis Construction Laborers Welfare Fund" role="Plaintiff"></party>
+ <party firstName="Phil" fullName="Phil Hocher" lastName="Hocher" role="Plaintiff"></party>
+ <party firstName="Joe" fullName="Joe Hoette" lastName="Hoette" role="Plaintiff"></party>
+ <party firstName="Adam" fullName="Adam Knoebel" lastName="Knoebel" role="Plaintiff"></party>
+ <party firstName="Cliff" fullName="Cliff Land" lastName="Land" role="Plaintiff"></party>
+ <party firstName="Rich" fullName="Rich Ledbetter" lastName="Ledbetter" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph Leritz" lastName="Leritz" role="Plaintiff"></party>
+ <party firstName="Raymond" fullName="Raymond Linehan" lastName="Linehan" role="Plaintiff"></party>
+ <party fullName="Local Union Nos. 42-53-110, Laborers International Union of North America, AFL-CIO" lastName="Local Union Nos. 42-53-110, Laborers International Union of North America, AFL-CIO" role="Plaintiff"></party>
+ <party firstName="Pasquale" fullName="Pasquale Lopiccolo" lastName="Lopiccolo" role="Plaintiff"></party>
+ <party firstName="William" fullName="William L. Luth" lastName="Luth" middleName="L." role="Plaintiff"></party>
+ <party firstName="Richard" fullName="Richard McGuire" lastName="McGuire" role="Plaintiff"></party>
+ <party firstName="Richard" fullName="Richard McLaughlin" lastName="McLaughlin" role="Plaintiff"></party>
+ <party firstName="Norman" fullName="Norman Merlo" lastName="Merlo" role="Plaintiff"></party>
+ <party firstName="John" fullName="John B. Morgan" lastName="Morgan" middleName="B." role="Plaintiff"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey O&apos;Connell" lastName="O&apos;Connell" role="Plaintiff"></party>
+ <party firstName="Perri" fullName="Perri L. Pryor" lastName="Pryor" middleName="L." role="Plaintiff"></party>
+ <party firstName="Jay" fullName="Jay Schulthenrich" lastName="Schulthenrich" role="Plaintiff"></party>
+ <party firstName="John" fullName="John J. Smith Sr." generation="Sr." lastName="Smith" middleName="J." role="Plaintiff"></party>
+ <party fullName="St. Louis Vacation Fund - Vacation Plan" lastName="St. Louis Vacation Fund - Vacation Plan" role="Plaintiff"></party>
+ <party fullName="Town &amp; Country Masonry and Tuckpointing, LLC" lastName="Town &amp; Country Masonry and Tuckpointing, LLC" role="Defendant"></party>
+ <party firstName="Doug" fullName="Doug Wachsnicht" lastName="Wachsnicht" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert J. Wesolich" lastName="Wesolich" middleName="J." role="Plaintiff"></party>
+ <party firstName="Donald" fullName="Donald Willey" lastName="Willey" role="Plaintiff"></party>
+ <party firstName="Francis" fullName="Francis R. Wojehowski" lastName="Wojehowski" middleName="R." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Greater St. Louis Construction Laborers Welfare Fund et al v. Town &amp; Country Masonry and Tuckpointing, LLC</title>
+ <partNumber>4:13-cv-00696</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-00696/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:13-cv-00696;13-696</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Missouri</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>St. Louis</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>AGC - Eastern Missouri Laborers Joint Training Fund</displayForm>
+ <namePart type="family">AGC - Eastern Missouri Laborers Joint Training Fund</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Charles Bean</displayForm>
+ <namePart type="family">Bean</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph W. Beetz</displayForm>
+ <namePart type="family">Beetz</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Larry Bloomer</displayForm>
+ <namePart type="family">Bloomer</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Construction Laborers Pension Trust of Greater St. Louis</displayForm>
+ <namePart type="family">Construction Laborers Pension Trust of Greater St. Louis</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gary Elliott</displayForm>
+ <namePart type="family">Elliott</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Brandon Flinn</displayForm>
+ <namePart type="family">Flinn</namePart>
+ <namePart type="given">Brandon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>David A. Gillick</displayForm>
+ <namePart type="family">Gillick</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Brad Grant</displayForm>
+ <namePart type="family">Grant</namePart>
+ <namePart type="given">Brad</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Donald C. Grant</displayForm>
+ <namePart type="family">Grant</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Greater St. Louis Construction Laborers Welfare Fund</displayForm>
+ <namePart type="family">Greater St. Louis Construction Laborers Welfare Fund</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Phil Hocher</displayForm>
+ <namePart type="family">Hocher</namePart>
+ <namePart type="given">Phil</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Joe Hoette</displayForm>
+ <namePart type="family">Hoette</namePart>
+ <namePart type="given">Joe</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Adam Knoebel</displayForm>
+ <namePart type="family">Knoebel</namePart>
+ <namePart type="given">Adam</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Cliff Land</displayForm>
+ <namePart type="family">Land</namePart>
+ <namePart type="given">Cliff</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Rich Ledbetter</displayForm>
+ <namePart type="family">Ledbetter</namePart>
+ <namePart type="given">Rich</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Leritz</displayForm>
+ <namePart type="family">Leritz</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Raymond Linehan</displayForm>
+ <namePart type="family">Linehan</namePart>
+ <namePart type="given">Raymond</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Local Union Nos. 42-53-110, Laborers International Union of North America, AFL-CIO</displayForm>
+ <namePart type="family">Local Union Nos. 42-53-110, Laborers International Union of North America, AFL-CIO</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Pasquale Lopiccolo</displayForm>
+ <namePart type="family">Lopiccolo</namePart>
+ <namePart type="given">Pasquale</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>William L. Luth</displayForm>
+ <namePart type="family">Luth</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Richard McGuire</displayForm>
+ <namePart type="family">McGuire</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Richard McLaughlin</displayForm>
+ <namePart type="family">McLaughlin</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Norman Merlo</displayForm>
+ <namePart type="family">Merlo</namePart>
+ <namePart type="given">Norman</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John B. Morgan</displayForm>
+ <namePart type="family">Morgan</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey O&apos;Connell</displayForm>
+ <namePart type="family">O&apos;Connell</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Perri L. Pryor</displayForm>
+ <namePart type="family">Pryor</namePart>
+ <namePart type="given">Perri</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jay Schulthenrich</displayForm>
+ <namePart type="family">Schulthenrich</namePart>
+ <namePart type="given">Jay</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John J. Smith Sr.</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress">Sr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>St. Louis Vacation Fund - Vacation Plan</displayForm>
+ <namePart type="family">St. Louis Vacation Fund - Vacation Plan</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Town &amp; Country Masonry and Tuckpointing, LLC</displayForm>
+ <namePart type="family">Town &amp; Country Masonry and Tuckpointing, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Doug Wachsnicht</displayForm>
+ <namePart type="family">Wachsnicht</namePart>
+ <namePart type="given">Doug</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Robert J. Wesolich</displayForm>
+ <namePart type="family">Wesolich</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Donald Willey</displayForm>
+ <namePart type="family">Willey</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Francis R. Wojehowski</displayForm>
+ <namePart type="family">Wojehowski</namePart>
+ <namePart type="given">Francis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-moed-4_13-cv-00696</accessId>
+ <courtType>District</courtType>
+ <courtCode>moed</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Missouri</courtState>
+ <courtSortOrder>2281</courtSortOrder>
+ <caseNumber>4:13-cv-00696</caseNumber>
+ <caseOffice>St. Louis</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <cause>29:1132 E.R.I.S.A.-Employee Benefits</cause>
+ <party fullName="AGC - Eastern Missouri Laborers Joint Training Fund" lastName="AGC - Eastern Missouri Laborers Joint Training Fund" role="Plaintiff"></party>
+ <party firstName="Charles" fullName="Charles Bean" lastName="Bean" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph W. Beetz" lastName="Beetz" middleName="W." role="Plaintiff"></party>
+ <party firstName="Larry" fullName="Larry Bloomer" lastName="Bloomer" role="Plaintiff"></party>
+ <party fullName="Construction Laborers Pension Trust of Greater St. Louis" lastName="Construction Laborers Pension Trust of Greater St. Louis" role="Plaintiff"></party>
+ <party firstName="Gary" fullName="Gary Elliott" lastName="Elliott" role="Plaintiff"></party>
+ <party firstName="Brandon" fullName="Brandon Flinn" lastName="Flinn" role="Plaintiff"></party>
+ <party firstName="David" fullName="David A. Gillick" lastName="Gillick" middleName="A." role="Plaintiff"></party>
+ <party firstName="Brad" fullName="Brad Grant" lastName="Grant" role="Plaintiff"></party>
+ <party firstName="Donald" fullName="Donald C. Grant" lastName="Grant" middleName="C." role="Plaintiff"></party>
+ <party fullName="Greater St. Louis Construction Laborers Welfare Fund" lastName="Greater St. Louis Construction Laborers Welfare Fund" role="Plaintiff"></party>
+ <party firstName="Phil" fullName="Phil Hocher" lastName="Hocher" role="Plaintiff"></party>
+ <party firstName="Joe" fullName="Joe Hoette" lastName="Hoette" role="Plaintiff"></party>
+ <party firstName="Adam" fullName="Adam Knoebel" lastName="Knoebel" role="Plaintiff"></party>
+ <party firstName="Cliff" fullName="Cliff Land" lastName="Land" role="Plaintiff"></party>
+ <party firstName="Rich" fullName="Rich Ledbetter" lastName="Ledbetter" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph Leritz" lastName="Leritz" role="Plaintiff"></party>
+ <party firstName="Raymond" fullName="Raymond Linehan" lastName="Linehan" role="Plaintiff"></party>
+ <party fullName="Local Union Nos. 42-53-110, Laborers International Union of North America, AFL-CIO" lastName="Local Union Nos. 42-53-110, Laborers International Union of North America, AFL-CIO" role="Plaintiff"></party>
+ <party firstName="Pasquale" fullName="Pasquale Lopiccolo" lastName="Lopiccolo" role="Plaintiff"></party>
+ <party firstName="William" fullName="William L. Luth" lastName="Luth" middleName="L." role="Plaintiff"></party>
+ <party firstName="Richard" fullName="Richard McGuire" lastName="McGuire" role="Plaintiff"></party>
+ <party firstName="Richard" fullName="Richard McLaughlin" lastName="McLaughlin" role="Plaintiff"></party>
+ <party firstName="Norman" fullName="Norman Merlo" lastName="Merlo" role="Plaintiff"></party>
+ <party firstName="John" fullName="John B. Morgan" lastName="Morgan" middleName="B." role="Plaintiff"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey O&apos;Connell" lastName="O&apos;Connell" role="Plaintiff"></party>
+ <party firstName="Perri" fullName="Perri L. Pryor" lastName="Pryor" middleName="L." role="Plaintiff"></party>
+ <party firstName="Jay" fullName="Jay Schulthenrich" lastName="Schulthenrich" role="Plaintiff"></party>
+ <party firstName="John" fullName="John J. Smith Sr." generation="Sr." lastName="Smith" middleName="J." role="Plaintiff"></party>
+ <party fullName="St. Louis Vacation Fund - Vacation Plan" lastName="St. Louis Vacation Fund - Vacation Plan" role="Plaintiff"></party>
+ <party fullName="Town &amp; Country Masonry and Tuckpointing, LLC" lastName="Town &amp; Country Masonry and Tuckpointing, LLC" role="Defendant"></party>
+ <party firstName="Doug" fullName="Doug Wachsnicht" lastName="Wachsnicht" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert J. Wesolich" lastName="Wesolich" middleName="J." role="Plaintiff"></party>
+ <party firstName="Donald" fullName="Donald Willey" lastName="Willey" role="Plaintiff"></party>
+ <party firstName="Francis" fullName="Francis R. Wojehowski" lastName="Wojehowski" middleName="R." role="Plaintiff"></party>
+ <state>Missouri</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_13-cv-00696-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-00696/USCOURTS-moed-4_13-cv-00696-0/mods.xml">
+ <titleInfo>
+  <title>Greater St. Louis Construction Laborers Welfare Fund et al v. Town &amp; Country Masonry and Tuckpointing, LLC</title>
+  <subTitle>MEMORANDUM AND ORDER: IT IS HEREBY ORDERED that Plaintiffs&apos; Motion for Contempt 10 is GRANTED and Defendant Town &amp; Country Masonry and Tuckpointing, LLC, is found in CONTEMPT of this Court. As sanctioned, Defendant is liable for a fine of $200.00 per day for every day after this date that Defendant fails to submit its records for inspection or otherwise comply with this Court&apos;s Orders and Plaintiffs&apos; discovery requests. Plaintiffs&apos; attorney shall contact the Court if and when Defendant produces its records for inspection. IT IS FURTHER ORDERED that Plaintiffs&apos; request for an award of attorneys&apos; fees and costs incurred in bringing their motion for contempt is GRANTED. Counsel for Plaintiffs is granted until Monday, October 7, 2013 to file an affidavit of fees and costs for the Court&apos;s consideration. IT IS FURTHER ORDERED that Plaintiffs&apos; oral motion that the officer of Defendant Town &amp; Country Masonry and Tuckpointing, LLC, be incarcerated is denied without prejudice to refiling in the event of Defendant&apos;s continued non-compliance. IT IS FURTHER ORDERED that Plaintiffs shall effect service of this Order and the Court&apos;s Order of June 4, 2013 (Doc. No. 9) on Defendant by whatever means they believe to be most effective, and shall promptly file a certificate of such service. Failure to show adequate evidence of prompt service may result in the continuation or cancellation of the compliance fine ordered herein.. Signed by District Judge John A. Ross on 9/27/13. (LGK)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-00696/pdf/USCOURTS-moed-4_13-cv-00696-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b756f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-00696/USCOURTS-moed-4_13-cv-00696-0</identifier>
+ <identifier type="former granule identifier">moed-4_13-cv-00696_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-00696/USCOURTS-moed-4_13-cv-00696-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-00696/pdf/USCOURTS-moed-4_13-cv-00696-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cv-00696; Greater St. Louis Construction Laborers Welfare Fund et al v. Town &amp; Country Masonry and Tuckpointing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_13-cv-00696-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-09-27</dateIssued>
+  <docketText>MEMORANDUM AND ORDER: IT IS HEREBY ORDERED that Plaintiffs&apos; Motion for Contempt 10 is GRANTED and Defendant Town &amp; Country Masonry and Tuckpointing, LLC, is found in CONTEMPT of this Court. As sanctioned, Defendant is liable for a fine of $200.00 per day for every day after this date that Defendant fails to submit its records for inspection or otherwise comply with this Court&apos;s Orders and Plaintiffs&apos; discovery requests. Plaintiffs&apos; attorney shall contact the Court if and when Defendant produces its records for inspection. IT IS FURTHER ORDERED that Plaintiffs&apos; request for an award of attorneys&apos; fees and costs incurred in bringing their motion for contempt is GRANTED. Counsel for Plaintiffs is granted until Monday, October 7, 2013 to file an affidavit of fees and costs for the Court&apos;s consideration. IT IS FURTHER ORDERED that Plaintiffs&apos; oral motion that the officer of Defendant Town &amp; Country Masonry and Tuckpointing, LLC, be incarcerated is denied without prejudice to refiling in the event of Defendant&apos;s continued non-compliance. IT IS FURTHER ORDERED that Plaintiffs shall effect service of this Order and the Court&apos;s Order of June 4, 2013 (Doc. No. 9) on Defendant by whatever means they believe to be most effective, and shall promptly file a certificate of such service. Failure to show adequate evidence of prompt service may result in the continuation or cancellation of the compliance fine ordered herein.. Signed by District Judge John A. Ross on 9/27/13. (LGK)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_13-cv-00696-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-00696/USCOURTS-moed-4_13-cv-00696-1/mods.xml">
+ <titleInfo>
+  <title>Greater St. Louis Construction Laborers Welfare Fund et al v. Town &amp; Country Masonry and Tuckpointing, LLC</title>
+  <subTitle>SUPPLEMENTAL MEMORANDUM AND ORDER: IT IS HEREBY ORDERED, ADJUDGED and DECREED that Defendant Town &amp; Country Masonry and Tuckpointing, LLC, shall be held liable for Plaintiffs&apos; attorneys fees and costs in the amounts of $1,824.00 for attorneys fees and $54.90 in costs, for a total award of $1,878.90. IT IS FURTHER ORDERED that Plaintiffs shall effect service of this Supplemental Order and the Court&apos;s Orders of June 4, 2013 (Doc. No. 9) and September 27, 2013 (Doc. No. 15) on Defendant by whatever means they believe to be most effective, and shall promptly file a certificate of such service.. Signed by District Judge John A. Ross on 10/4/13. (LGK)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-00696/pdf/USCOURTS-moed-4_13-cv-00696-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b7570</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-00696/USCOURTS-moed-4_13-cv-00696-1</identifier>
+ <identifier type="former granule identifier">moed-4_13-cv-00696_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-00696/USCOURTS-moed-4_13-cv-00696-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-00696/pdf/USCOURTS-moed-4_13-cv-00696-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cv-00696; Greater St. Louis Construction Laborers Welfare Fund et al v. Town &amp; Country Masonry and Tuckpointing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_13-cv-00696-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-10-04</dateIssued>
+  <docketText>SUPPLEMENTAL MEMORANDUM AND ORDER: IT IS HEREBY ORDERED, ADJUDGED and DECREED that Defendant Town &amp; Country Masonry and Tuckpointing, LLC, shall be held liable for Plaintiffs&apos; attorneys fees and costs in the amounts of $1,824.00 for attorneys fees and $54.90 in costs, for a total award of $1,878.90. IT IS FURTHER ORDERED that Plaintiffs shall effect service of this Supplemental Order and the Court&apos;s Orders of June 4, 2013 (Doc. No. 9) and September 27, 2013 (Doc. No. 15) on Defendant by whatever means they believe to be most effective, and shall promptly file a certificate of such service.. Signed by District Judge John A. Ross on 10/4/13. (LGK)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_13-cv-00696-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-00696/USCOURTS-moed-4_13-cv-00696-2/mods.xml">
+ <titleInfo>
+  <title>Greater St. Louis Construction Laborers Welfare Fund et al v. Town &amp; Country Masonry and Tuckpointing, LLC</title>
+  <subTitle>MEMORANDUM AND ORDER: IT IS HEREBY ORDERED that Plaintiffs&apos; amended motion to compel 29 is GRANTED. IT IS FURTHER ORDERED that the Custodian of Records of Town &amp; Country Masonry and Tuckpointing, LLC, shall appear for a post-judgment deposition and produce the records requested in the notice of deposition dated November 11, 2014, at the offices of Plaintiffs&apos; counsel on Wednesday, January 28, 2015, at 10:30 a.m. IT IS FURTHER ORDERED that Plaintiffs&apos; motion to compel 27 is DENIED as moot. IT IS FURTHER ORDERED that the Clerk of the Court shall mail a copy of this order to defendant Town &amp; Country Masonry and Tuckpointing, LLC, at 2346 Palm Street, St. Louis, Missouri 63107-3535. Signed by District Judge John A. Ross on 1/5/15. (CC: defendant at address on order)(JWD)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-00696/pdf/USCOURTS-moed-4_13-cv-00696-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b7571</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-00696/USCOURTS-moed-4_13-cv-00696-2</identifier>
+ <identifier type="former granule identifier">moed-4_13-cv-00696_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-00696/USCOURTS-moed-4_13-cv-00696-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-00696/pdf/USCOURTS-moed-4_13-cv-00696-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cv-00696; Greater St. Louis Construction Laborers Welfare Fund et al v. Town &amp; Country Masonry and Tuckpointing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_13-cv-00696-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>MEMORANDUM AND ORDER: IT IS HEREBY ORDERED that Plaintiffs&apos; amended motion to compel 29 is GRANTED. IT IS FURTHER ORDERED that the Custodian of Records of Town &amp; Country Masonry and Tuckpointing, LLC, shall appear for a post-judgment deposition and produce the records requested in the notice of deposition dated November 11, 2014, at the offices of Plaintiffs&apos; counsel on Wednesday, January 28, 2015, at 10:30 a.m. IT IS FURTHER ORDERED that Plaintiffs&apos; motion to compel 27 is DENIED as moot. IT IS FURTHER ORDERED that the Clerk of the Court shall mail a copy of this order to defendant Town &amp; Country Masonry and Tuckpointing, LLC, at 2346 Palm Street, St. Louis, Missouri 63107-3535. Signed by District Judge John A. Ross on 1/5/15. (CC: defendant at address on order)(JWD)</docketText>
+</extension>
+</relatedItem>
+</mods>

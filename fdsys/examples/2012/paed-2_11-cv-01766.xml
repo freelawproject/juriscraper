@@ -1,0 +1,187 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817063dd">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cv-01766</identifier>
+<identifier type="local">P0b002ee1817063dd</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_11-cv-01766</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_11-cv-01766</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:11-cv-01766</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party fullName="COMMONWEALTH OF PENNSYLVANIA" lastName="COMMONWEALTH OF PENNSYLVANIA" role="Respondent"></party>
+ <party firstName="SHAWN" fullName="SHAWN MINSON" lastName="MINSON" role="Petitioner"></party>
+ <party firstName="SHAWN" fullName="SHAWN MUNSON" lastName="MUNSON" role="Petitioner"></party>
+</extension>
+<titleInfo>
+ <title>MUNSON v. COMMONWEALTH OF PENNSYLVANIA</title>
+ <partNumber>2:11-cv-01766</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cv-01766/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cv-01766;11-1766</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>COMMONWEALTH OF PENNSYLVANIA</displayForm>
+ <namePart type="family">COMMONWEALTH OF PENNSYLVANIA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>SHAWN MINSON</displayForm>
+ <namePart type="family">MINSON</namePart>
+ <namePart type="given">SHAWN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>SHAWN MUNSON</displayForm>
+ <namePart type="family">MUNSON</namePart>
+ <namePart type="given">SHAWN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_11-cv-01766</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:11-cv-01766</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party fullName="COMMONWEALTH OF PENNSYLVANIA" lastName="COMMONWEALTH OF PENNSYLVANIA" role="Respondent"></party>
+ <party firstName="SHAWN" fullName="SHAWN MINSON" lastName="MINSON" role="Petitioner"></party>
+ <party firstName="SHAWN" fullName="SHAWN MUNSON" lastName="MUNSON" role="Petitioner"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_11-cv-01766-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cv-01766/USCOURTS-paed-2_11-cv-01766-0/mods.xml">
+ <titleInfo>
+  <title>MUNSON v. COMMONWEALTH OF PENNSYLVANIA</title>
+  <subTitle>REPORT AND RECOMMENDATIONS THAT 1. THE PETITION OF SHAWN MUNSON FOR WRIT OF HABEAS CORPUSSHOULD BE CONDITIONALLY GRANTED.2. THE PETITIONER SHOULD BE DISCHARGED FROM ALL CUSTODYRESULTING FROM HIS CONVICTION AND SENTENCE UNDER THEPENNSYLVANIA CORRUPT ORGANIZATIONS ACT IN THE PHILADELPHIACOURT OF COMMON PLEAS IN CRIMINAL NO. CP-51-CR-0509225-1001.3. THE PETITIONER SHOULD BE DISCHARGED FROM ALL CUSTODYRESULTING FROM HIS CONVICTION AND SENTENCE UNDER HIS OTHERCRIMES OF CONVICTION UNLESS, WITHIN 180 DAYS FROM THE DATEOF THE FINAL DETERMINATION OF THIS MATTER, THE COMMONWEALTHOF PENNSYLVANIA RESENTENCES PETITIONER ON THOSE CHARGES.I FURTHER RECOMMEND THAT THERE IS PROBABLE CAUSE TO ISSUE ACERTIFICATE OF APPEALABILITY AS TO ALL ISSUES RAISED IN THEPETITION, ETC. SIGNED BY MAGISTRATE JUDGE ARNOLD C. RAPOPORT ON 12/6/2011. (Attachments: # (1) proposed order, # (2) r&amp;r notice) 12/7/2011 ENTERED AND COPIES E-MAILED.(lbs, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_11-cv-01766-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817079f7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cv-01766/USCOURTS-paed-2_11-cv-01766-0</identifier>
+ <identifier type="former granule identifier">paed-2_11-cv-01766_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cv-01766/USCOURTS-paed-2_11-cv-01766-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cv-01766/pdf/USCOURTS-paed-2_11-cv-01766-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01766; MUNSON v. COMMONWEALTH OF PENNSYLVANIA; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_11-cv-01766-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-12-06</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS THAT 1. THE PETITION OF SHAWN MUNSON FOR WRIT OF HABEAS CORPUSSHOULD BE CONDITIONALLY GRANTED.2. THE PETITIONER SHOULD BE DISCHARGED FROM ALL CUSTODYRESULTING FROM HIS CONVICTION AND SENTENCE UNDER THEPENNSYLVANIA CORRUPT ORGANIZATIONS ACT IN THE PHILADELPHIACOURT OF COMMON PLEAS IN CRIMINAL NO. CP-51-CR-0509225-1001.3. THE PETITIONER SHOULD BE DISCHARGED FROM ALL CUSTODYRESULTING FROM HIS CONVICTION AND SENTENCE UNDER HIS OTHERCRIMES OF CONVICTION UNLESS, WITHIN 180 DAYS FROM THE DATEOF THE FINAL DETERMINATION OF THIS MATTER, THE COMMONWEALTHOF PENNSYLVANIA RESENTENCES PETITIONER ON THOSE CHARGES.I FURTHER RECOMMEND THAT THERE IS PROBABLE CAUSE TO ISSUE ACERTIFICATE OF APPEALABILITY AS TO ALL ISSUES RAISED IN THEPETITION, ETC. SIGNED BY MAGISTRATE JUDGE ARNOLD C. RAPOPORT ON 12/6/2011. (Attachments: # (1) proposed order, # (2) r&amp;r notice) 12/7/2011 ENTERED AND COPIES E-MAILED.(lbs, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_11-cv-01766-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cv-01766/USCOURTS-paed-2_11-cv-01766-1/mods.xml">
+ <titleInfo>
+  <title>MUNSON v. COMMONWEALTH OF PENNSYLVANIA</title>
+  <subTitle>ORDER THAT THE REPORT AND RECOMMENDATION IS APPROVED AND ADOPTED; THE PETITION FOR WRIT OF HABEAS CORPUS IS CONDITIONALLY GRANTED; AND A CERTICATE OF APPEALABILITY IS NOT ISSUED. SIGNED BY HONORABLE HARVEY BARTLE, III ON 1/3/12. 1/3/12 ENTERED AND COPIES E-MAILED TO COUNSEL.(pr, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_11-cv-01766-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817079f6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cv-01766/USCOURTS-paed-2_11-cv-01766-1</identifier>
+ <identifier type="former granule identifier">paed-2_11-cv-01766_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cv-01766/USCOURTS-paed-2_11-cv-01766-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cv-01766/pdf/USCOURTS-paed-2_11-cv-01766-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01766; MUNSON v. COMMONWEALTH OF PENNSYLVANIA; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_11-cv-01766-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-03</dateIssued>
+  <docketText>ORDER THAT THE REPORT AND RECOMMENDATION IS APPROVED AND ADOPTED; THE PETITION FOR WRIT OF HABEAS CORPUS IS CONDITIONALLY GRANTED; AND A CERTICATE OF APPEALABILITY IS NOT ISSUED. SIGNED BY HONORABLE HARVEY BARTLE, III ON 1/3/12. 1/3/12 ENTERED AND COPIES E-MAILED TO COUNSEL.(pr, )</docketText>
+</extension>
+</relatedItem>
+</mods>

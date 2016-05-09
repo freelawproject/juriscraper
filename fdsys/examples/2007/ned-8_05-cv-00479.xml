@@ -1,0 +1,411 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a17e0">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00479</identifier>
+<identifier type="local">P0b002ee1817a17e0</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_05-cv-00479</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cv-00479</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cv-00479</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1345 Foreclosure</cause>
+ <party firstName="Diane" fullName="Diane Schilke" lastName="Schilke" role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry Schilke" lastName="Schilke" role="Defendant"></party>
+ <party firstName="Holly" fullName="Holly D. Schilke" lastName="Schilke" middleName="D." role="Defendant"></party>
+ <party firstName="James" fullName="James D. Schilke" lastName="Schilke" middleName="D." role="Defendant"></party>
+ <party firstName="James" fullName="James Daniel Schilke" lastName="Schilke" middleName="Daniel" role="Defendant"></party>
+ <party firstName="Holly" fullName="Holly Denise Schilke" lastName="Schilke" middleName="Denise" role="Defendant"></party>
+ <party fullName="State of Nebraska" lastName="State of Nebraska" role="Defendant"></party>
+ <party fullName="U.S. Bankruptcy Court" lastName="U.S. Bankruptcy Court" role="Interested Party"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Schilke et al (DO NOT FILE DOCUMENTS IN CASE PER FILING #50)</title>
+ <partNumber>8:05-cv-00479</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00479/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:05-cv-00479;05-479</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Diane Schilke</displayForm>
+ <namePart type="family">Schilke</namePart>
+ <namePart type="given">Diane</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Larry Schilke</displayForm>
+ <namePart type="family">Schilke</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Holly D. Schilke</displayForm>
+ <namePart type="family">Schilke</namePart>
+ <namePart type="given">Holly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James D. Schilke</displayForm>
+ <namePart type="family">Schilke</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Daniel Schilke</displayForm>
+ <namePart type="family">Schilke</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Holly Denise Schilke</displayForm>
+ <namePart type="family">Schilke</namePart>
+ <namePart type="given">Holly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State of Nebraska</displayForm>
+ <namePart type="family">State of Nebraska</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Bankruptcy Court</displayForm>
+ <namePart type="family">U.S. Bankruptcy Court</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cv-00479</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cv-00479</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1345 Foreclosure</cause>
+ <party firstName="Diane" fullName="Diane Schilke" lastName="Schilke" role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry Schilke" lastName="Schilke" role="Defendant"></party>
+ <party firstName="Holly" fullName="Holly D. Schilke" lastName="Schilke" middleName="D." role="Defendant"></party>
+ <party firstName="James" fullName="James D. Schilke" lastName="Schilke" middleName="D." role="Defendant"></party>
+ <party firstName="James" fullName="James Daniel Schilke" lastName="Schilke" middleName="Daniel" role="Defendant"></party>
+ <party firstName="Holly" fullName="Holly Denise Schilke" lastName="Schilke" middleName="Denise" role="Defendant"></party>
+ <party fullName="State of Nebraska" lastName="State of Nebraska" role="Defendant"></party>
+ <party fullName="U.S. Bankruptcy Court" lastName="U.S. Bankruptcy Court" role="Interested Party"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00479-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Schilke et al (DO NOT FILE DOCUMENTS IN CASE PER FILING #50)</title>
+  <subTitle>ORDER regarding Scheduling Packet17. Counsel and unrepresented parties shall meet and confer in accordance with Fed. R. Civ. P. 26(f) and, by January 17, 2006, file their Report of Parties&apos; Planning Conference. Signed by Magistrate Judge David L. Piester on 12/29/2005. (GJG, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00479-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181832c90</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-0</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00479_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00479/pdf/USCOURTS-ned-8_05-cv-00479-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00479; United States of America v. Schilke et al (DO NOT FILE DOCUMENTS IN CASE PER FILING #50); </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00479-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-12-29</dateIssued>
+  <docketText>ORDER regarding Scheduling Packet17. Counsel and unrepresented parties shall meet and confer in accordance with Fed. R. Civ. P. 26(f) and, by January 17, 2006, file their Report of Parties&apos; Planning Conference. Signed by Magistrate Judge David L. Piester on 12/29/2005. (GJG, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00479-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Schilke et al (DO NOT FILE DOCUMENTS IN CASE PER FILING #50)</title>
+  <subTitle>REASSIGNMENT ORDER that, because this case will be tried in North Platte, Nebraska,and Judge Urbom does not conduct North Platte trials, this case is reassigned toDistrict Judge Lyle E. Strom for disposition and remains assigned to Magistrate JudgeDavid L. Piester for judicial supervision and processing of all pretrial matters. Signed by Judge Joseph F. Bataillon on 1/31/2006. (ADB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00479-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181832c92</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-1</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00479_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00479/pdf/USCOURTS-ned-8_05-cv-00479-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00479; United States of America v. Schilke et al (DO NOT FILE DOCUMENTS IN CASE PER FILING #50); </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00479-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-01-31</dateIssued>
+  <docketText>REASSIGNMENT ORDER that, because this case will be tried in North Platte, Nebraska,and Judge Urbom does not conduct North Platte trials, this case is reassigned toDistrict Judge Lyle E. Strom for disposition and remains assigned to Magistrate JudgeDavid L. Piester for judicial supervision and processing of all pretrial matters. Signed by Judge Joseph F. Bataillon on 1/31/2006. (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00479-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-2/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Schilke et al (DO NOT FILE DOCUMENTS IN CASE PER FILING #50)</title>
+  <subTitle>ORDER the motion (FilingNo. 26) of defendant State of Nebraska ex rel. NebraskaDepartment of Health and Human Services, Child SupportEnforcement, to strike its previous voluntary dismissal ofdefendant State of Nebraska (Filing No. 25) is granted. The clerk ofcourt shall strike the voluntary dismissal of defendant State ofNebraska (Filing No. 25). Signed by Judge Lyle E. Strom on 3/24/2006. (DKM, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00479-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181832c2b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-2</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00479_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00479/pdf/USCOURTS-ned-8_05-cv-00479-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00479; United States of America v. Schilke et al (DO NOT FILE DOCUMENTS IN CASE PER FILING #50); </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00479-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-03-24</dateIssued>
+  <docketText>ORDER the motion (FilingNo. 26) of defendant State of Nebraska ex rel. NebraskaDepartment of Health and Human Services, Child SupportEnforcement, to strike its previous voluntary dismissal ofdefendant State of Nebraska (Filing No. 25) is granted. The clerk ofcourt shall strike the voluntary dismissal of defendant State ofNebraska (Filing No. 25). Signed by Judge Lyle E. Strom on 3/24/2006. (DKM, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00479-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-3/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Schilke et al (DO NOT FILE DOCUMENTS IN CASE PER FILING #50)</title>
+  <subTitle>ORDER granting 30 Stipulation; defendant State of Nebraska, ex rel. Nebraska Department of Health and Human Services, Child Support Enforcement is dismissed as a party defendant to this action and its counsel should be removed from the electronic notification list in this case. Signed by Judge Lyle E. Strom on 3/29/2006. (CJP)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00479-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181832c8e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-3</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00479_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00479/pdf/USCOURTS-ned-8_05-cv-00479-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00479; United States of America v. Schilke et al (DO NOT FILE DOCUMENTS IN CASE PER FILING #50); </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00479-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2006-03-29</dateIssued>
+  <docketText>ORDER granting 30 Stipulation; defendant State of Nebraska, ex rel. Nebraska Department of Health and Human Services, Child Support Enforcement is dismissed as a party defendant to this action and its counsel should be removed from the electronic notification list in this case. Signed by Judge Lyle E. Strom on 3/29/2006. (CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00479-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-4/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Schilke et al (DO NOT FILE DOCUMENTS IN CASE PER FILING #50)</title>
+  <subTitle>ORDER - Plaintiff&apos;s unopposed motion for time, filing 39 is granted and the deadline for filing a summary judgment motion is extended to August 21, 2006. Signed by Magistrate Judge David L. Piester on 7/20/2006. (GJG, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-07-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00479-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181832c8f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-4</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00479_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00479/pdf/USCOURTS-ned-8_05-cv-00479-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00479; United States of America v. Schilke et al (DO NOT FILE DOCUMENTS IN CASE PER FILING #50); </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00479-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-07-20</dateIssued>
+  <docketText>ORDER - Plaintiff&apos;s unopposed motion for time, filing 39 is granted and the deadline for filing a summary judgment motion is extended to August 21, 2006. Signed by Magistrate Judge David L. Piester on 7/20/2006. (GJG, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00479-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-5/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Schilke et al (DO NOT FILE DOCUMENTS IN CASE PER FILING #50)</title>
+  <subTitle>ORDER On or before September 18, 2006, the parties shall electronically file a jointstipulation for dismissal (or other dispositive stipulation) and shall submit to Senior DistrictJudge Lyle E. Strom at Strom@ned.uscourts.gov, a draft order which will fully dispose ofthe case; Absent compliance with this order, this case (including all counterclaims and thelike) may be dismissed without further notice; and The final pretrial conference in North Platte, Nebraska set for September 12,2006, is cancelled upon the representation that this case is settled. Ordered by Magistrate Judge F. A. Gossett (DKM, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00479-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181832c93</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-5</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00479_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00479/pdf/USCOURTS-ned-8_05-cv-00479-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00479; United States of America v. Schilke et al (DO NOT FILE DOCUMENTS IN CASE PER FILING #50); </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00479-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2006-08-16</dateIssued>
+  <docketText>ORDER On or before September 18, 2006, the parties shall electronically file a jointstipulation for dismissal (or other dispositive stipulation) and shall submit to Senior DistrictJudge Lyle E. Strom at Strom@ned.uscourts.gov, a draft order which will fully dispose ofthe case; Absent compliance with this order, this case (including all counterclaims and thelike) may be dismissed without further notice; and The final pretrial conference in North Platte, Nebraska set for September 12,2006, is cancelled upon the representation that this case is settled. Ordered by Magistrate Judge F. A. Gossett (DKM, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00479-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-6/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Schilke et al (DO NOT FILE DOCUMENTS IN CASE PER FILING #50)</title>
+  <subTitle>JUDGMENT AND DECREE OF FORECLOSURE AND ORDER OF SALE BY CONSENT in the amount of $133,455.38, plus accrued interest in the amount of $23,579.12, together with interest accruing at the rate of $18.2816 per day from July 21, 2006, until the date of entry of this decree, together with interest at the legal rate thereafter, plus the costs of this action. Interest will accrue on said sums from and after the date of entry of this decree at the legal rate of 5.07 percent computed daily and compounded annually until paid in full; setting priority of liens and directing sale of premises. Ordered by Judge Lyle E. Strom. (CJP) Modified on 8/30/2006 to remove copies mailed (CJP).</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00479-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181832c91</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-6</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00479_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00479/pdf/USCOURTS-ned-8_05-cv-00479-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00479; United States of America v. Schilke et al (DO NOT FILE DOCUMENTS IN CASE PER FILING #50); </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00479-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2006-08-30</dateIssued>
+  <docketText>JUDGMENT AND DECREE OF FORECLOSURE AND ORDER OF SALE BY CONSENT in the amount of $133,455.38, plus accrued interest in the amount of $23,579.12, together with interest accruing at the rate of $18.2816 per day from July 21, 2006, until the date of entry of this decree, together with interest at the legal rate thereafter, plus the costs of this action. Interest will accrue on said sums from and after the date of entry of this decree at the legal rate of 5.07 percent computed daily and compounded annually until paid in full; setting priority of liens and directing sale of premises. Ordered by Judge Lyle E. Strom. (CJP) Modified on 8/30/2006 to remove copies mailed (CJP).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00479-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-7/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Schilke et al (DO NOT FILE DOCUMENTS IN CASE PER FILING #50)</title>
+  <subTitle>ORDER regarding 46 Suggestion of Bankruptcy. Pursuant to NELR 76.1(a) this case is referred to the United States Bankruptcy Court for the District of Nebraska. This case shall be terminated for statistical purposes by the Clerk of this Court. The Clerk of this Court shall notify the Clerk of the Bankruptcy Court for the District of Nebraska of this referral. Ordered by Judge Lyle E. Strom.(JAE, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00479-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181832c2a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-7</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00479_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00479/USCOURTS-ned-8_05-cv-00479-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00479/pdf/USCOURTS-ned-8_05-cv-00479-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00479; United States of America v. Schilke et al (DO NOT FILE DOCUMENTS IN CASE PER FILING #50); </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00479-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2007-01-12</dateIssued>
+  <docketText>ORDER regarding 46 Suggestion of Bankruptcy. Pursuant to NELR 76.1(a) this case is referred to the United States Bankruptcy Court for the District of Nebraska. This case shall be terminated for statistical purposes by the Clerk of this Court. The Clerk of this Court shall notify the Clerk of the Bankruptcy Court for the District of Nebraska of this referral. Ordered by Judge Lyle E. Strom.(JAE, )</docketText>
+</extension>
+</relatedItem>
+</mods>

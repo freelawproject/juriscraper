@@ -1,0 +1,2010 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18de2c0cf">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-11-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-11-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225</identifier>
+<identifier type="local">P0b002ee18de2c0cf</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-11-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-11-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cv-00225</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-00225</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-00225</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Darcelle" fullName="Darcelle Abadia" lastName="Abadia" role="Defendant"></party>
+ <party firstName="Clement" fullName="Clement O. Alade" lastName="Alade" middleName="O." role="Defendant"></party>
+ <party firstName="P." fullName="P. Amobi" lastName="Amobi" role="Defendant"></party>
+ <party fullName="Anderson" lastName="Anderson" role="Defendant"></party>
+ <party fullName="Arbadia" lastName="Arbadia" role="Defendant"></party>
+ <party firstName="Wilbur" fullName="Wilbur Atcherley" lastName="Atcherley" role="Plaintiff"></party>
+ <party firstName="O." fullName="O. Barbolla" lastName="Barbolla" role="Defendant"></party>
+ <party firstName="S." fullName="S. Branson" lastName="Branson" role="Defendant"></party>
+ <party firstName="D." fullName="D. Brown" lastName="Brown" role="Defendant"></party>
+ <party firstName="D." fullName="D. Castanon" lastName="Castanon" role="Defendant"></party>
+ <party firstName="M." fullName="M. Ceballo" lastName="Ceballo" role="Defendant"></party>
+ <party firstName="Edgar" fullName="Edgar Clark" lastName="Clark" role="Defendant"></party>
+ <party firstName="C." fullName="C. Espinoza" lastName="Espinoza" role="Defendant"></party>
+ <party firstName="R." fullName="R. Hernandez" lastName="Hernandez" role="Defendant"></party>
+ <party firstName="A." fullName="A. Holt" lastName="Holt" role="Defendant"></party>
+ <party firstName="A." fullName="A. Jones" lastName="Jones" role="Defendant"></party>
+ <party firstName="P." fullName="P. Kempf" lastName="Kempf" role="Defendant"></party>
+ <party firstName="J." fullName="J. Kim" lastName="Kim" role="Defendant"></party>
+ <party firstName="Teresa" fullName="Teresa Macias" lastName="Macias" role="Defendant"></party>
+ <party firstName="A." fullName="A. Martin" lastName="Martin" role="Defendant"></party>
+ <party firstName="R.N." fullName="R.N. Montebon" lastName="Montebon" role="Defendant"></party>
+ <party firstName="J." fullName="J. Rios" lastName="Rios" role="Defendant"></party>
+ <party fullName="Ross" lastName="Ross" role="Defendant"></party>
+ <party firstName="Glenn" fullName="Glenn Thiel" lastName="Thiel" role="Defendant"></party>
+ <party firstName="J." fullName="J. Torres" lastName="Torres" role="Defendant"></party>
+ <party firstName="L." fullName="L. Valentine" lastName="Valentine" role="Defendant"></party>
+ <party firstName="M." fullName="M. Vannatta" lastName="Vannatta" role="Defendant"></party>
+ <party firstName="H." fullName="H. Walker" lastName="Walker" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC-G) Atcherley v. Clark et al</title>
+ <partNumber>1:12-cv-00225</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-00225;12-225</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Darcelle Abadia</displayForm>
+ <namePart type="family">Abadia</namePart>
+ <namePart type="given">Darcelle</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Clement O. Alade</displayForm>
+ <namePart type="family">Alade</namePart>
+ <namePart type="given">Clement</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>P. Amobi</displayForm>
+ <namePart type="family">Amobi</namePart>
+ <namePart type="given">P.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Anderson</displayForm>
+ <namePart type="family">Anderson</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Arbadia</displayForm>
+ <namePart type="family">Arbadia</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wilbur Atcherley</displayForm>
+ <namePart type="family">Atcherley</namePart>
+ <namePart type="given">Wilbur</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>O. Barbolla</displayForm>
+ <namePart type="family">Barbolla</namePart>
+ <namePart type="given">O.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>S. Branson</displayForm>
+ <namePart type="family">Branson</namePart>
+ <namePart type="given">S.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D. Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D. Castanon</displayForm>
+ <namePart type="family">Castanon</namePart>
+ <namePart type="given">D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>M. Ceballo</displayForm>
+ <namePart type="family">Ceballo</namePart>
+ <namePart type="given">M.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Edgar Clark</displayForm>
+ <namePart type="family">Clark</namePart>
+ <namePart type="given">Edgar</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C. Espinoza</displayForm>
+ <namePart type="family">Espinoza</namePart>
+ <namePart type="given">C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>R. Hernandez</displayForm>
+ <namePart type="family">Hernandez</namePart>
+ <namePart type="given">R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>A. Holt</displayForm>
+ <namePart type="family">Holt</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>A. Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>P. Kempf</displayForm>
+ <namePart type="family">Kempf</namePart>
+ <namePart type="given">P.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Kim</displayForm>
+ <namePart type="family">Kim</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Teresa Macias</displayForm>
+ <namePart type="family">Macias</namePart>
+ <namePart type="given">Teresa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>A. Martin</displayForm>
+ <namePart type="family">Martin</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>R.N. Montebon</displayForm>
+ <namePart type="family">Montebon</namePart>
+ <namePart type="given">R.N.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Rios</displayForm>
+ <namePart type="family">Rios</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ross</displayForm>
+ <namePart type="family">Ross</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Glenn Thiel</displayForm>
+ <namePart type="family">Thiel</namePart>
+ <namePart type="given">Glenn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Torres</displayForm>
+ <namePart type="family">Torres</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>L. Valentine</displayForm>
+ <namePart type="family">Valentine</namePart>
+ <namePart type="given">L.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>M. Vannatta</displayForm>
+ <namePart type="family">Vannatta</namePart>
+ <namePart type="given">M.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>H. Walker</displayForm>
+ <namePart type="family">Walker</namePart>
+ <namePart type="given">H.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-00225</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-00225</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Darcelle" fullName="Darcelle Abadia" lastName="Abadia" role="Defendant"></party>
+ <party firstName="Clement" fullName="Clement O. Alade" lastName="Alade" middleName="O." role="Defendant"></party>
+ <party firstName="P." fullName="P. Amobi" lastName="Amobi" role="Defendant"></party>
+ <party fullName="Anderson" lastName="Anderson" role="Defendant"></party>
+ <party fullName="Arbadia" lastName="Arbadia" role="Defendant"></party>
+ <party firstName="Wilbur" fullName="Wilbur Atcherley" lastName="Atcherley" role="Plaintiff"></party>
+ <party firstName="O." fullName="O. Barbolla" lastName="Barbolla" role="Defendant"></party>
+ <party firstName="S." fullName="S. Branson" lastName="Branson" role="Defendant"></party>
+ <party firstName="D." fullName="D. Brown" lastName="Brown" role="Defendant"></party>
+ <party firstName="D." fullName="D. Castanon" lastName="Castanon" role="Defendant"></party>
+ <party firstName="M." fullName="M. Ceballo" lastName="Ceballo" role="Defendant"></party>
+ <party firstName="Edgar" fullName="Edgar Clark" lastName="Clark" role="Defendant"></party>
+ <party firstName="C." fullName="C. Espinoza" lastName="Espinoza" role="Defendant"></party>
+ <party firstName="R." fullName="R. Hernandez" lastName="Hernandez" role="Defendant"></party>
+ <party firstName="A." fullName="A. Holt" lastName="Holt" role="Defendant"></party>
+ <party firstName="A." fullName="A. Jones" lastName="Jones" role="Defendant"></party>
+ <party firstName="P." fullName="P. Kempf" lastName="Kempf" role="Defendant"></party>
+ <party firstName="J." fullName="J. Kim" lastName="Kim" role="Defendant"></party>
+ <party firstName="Teresa" fullName="Teresa Macias" lastName="Macias" role="Defendant"></party>
+ <party firstName="A." fullName="A. Martin" lastName="Martin" role="Defendant"></party>
+ <party firstName="R.N." fullName="R.N. Montebon" lastName="Montebon" role="Defendant"></party>
+ <party firstName="J." fullName="J. Rios" lastName="Rios" role="Defendant"></party>
+ <party fullName="Ross" lastName="Ross" role="Defendant"></party>
+ <party firstName="Glenn" fullName="Glenn Thiel" lastName="Thiel" role="Defendant"></party>
+ <party firstName="J." fullName="J. Torres" lastName="Torres" role="Defendant"></party>
+ <party firstName="L." fullName="L. Valentine" lastName="Valentine" role="Defendant"></party>
+ <party firstName="M." fullName="M. Vannatta" lastName="Vannatta" role="Defendant"></party>
+ <party firstName="H." fullName="H. Walker" lastName="Walker" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-0/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Requiring Plaintiff to Either File Amended Complaint or Notify Court of Williness to Proceed Only on Cognizable Claims, signed by Magistrate Judge Dennis L. Beck on 02/15/2013. (30)Day Deadline (Attachments: # (1) Amended Complaint Form)(Martin-Gill, S)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f82b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-02-19</dateIssued>
+  <docketText>ORDER Requiring Plaintiff to Either File Amended Complaint or Notify Court of Williness to Proceed Only on Cognizable Claims, signed by Magistrate Judge Dennis L. Beck on 02/15/2013. (30)Day Deadline (Attachments: # (1) Amended Complaint Form)(Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-1/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Denying 11 Motion to Appoint Counsel signed by Magistrate Judge Dennis L. Beck on 06/20/2013. (Flores, E)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f823</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-06-20</dateIssued>
+  <docketText>ORDER Denying 11 Motion to Appoint Counsel signed by Magistrate Judge Dennis L. Beck on 06/20/2013. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-2/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s 13 Request for Blank Subpoenas Duces Tecum, signed by Magistrate Judge Dennis L. Beck on 8/7/2013. (Marrujo, C)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f826</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-08-07</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s 13 Request for Blank Subpoenas Duces Tecum, signed by Magistrate Judge Dennis L. Beck on 8/7/2013. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-3/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER FINDING Certain Claims Cognizable and DISMISSING Certain Claims and Defendants signed by Magistrate Judge Dennis L. Beck on 11/13/2013. Glenn Thiel terminated.(Sant Agata, S)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f83b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-3</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-11-13</dateIssued>
+  <docketText>ORDER FINDING Certain Claims Cognizable and DISMISSING Certain Claims and Defendants signed by Magistrate Judge Dennis L. Beck on 11/13/2013. Glenn Thiel terminated.(Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-4/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Regarding Plaintiff&apos;s 17 Motion for Clarification signed by Magistrate Judge Dennis L. Beck on 11/27/2013. (Flores, E)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f82d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-4</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-12-02</dateIssued>
+  <docketText>ORDER Regarding Plaintiff&apos;s 17 Motion for Clarification signed by Magistrate Judge Dennis L. Beck on 11/27/2013. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-5/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Requiring Plaintiff to SHOW CAUSE why Defendant Arbadia Should not be Dismissed Pursuant to Rule 4(M) signed by Magistrate Judge Dennis L. Beck on 01/17/2014. Show Cause Response due by 2/24/2014. (Flores, E)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f843</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-5</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-01-21</dateIssued>
+  <docketText>ORDER Requiring Plaintiff to SHOW CAUSE why Defendant Arbadia Should not be Dismissed Pursuant to Rule 4(M) signed by Magistrate Judge Dennis L. Beck on 01/17/2014. Show Cause Response due by 2/24/2014. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-6/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Extending Application of Discovery and Scheduling Order to Defendant Clark signed by Magistrate Judge Dennis L. Beck on 03/31/2014. (Flores, E)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-31</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f844</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-6</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-03-31</dateIssued>
+  <docketText>ORDER Extending Application of Discovery and Scheduling Order to Defendant Clark signed by Magistrate Judge Dennis L. Beck on 03/31/2014. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-7/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Regarding 45 Notice by Wilbur Atcherley, signed by Magistrate Judge Dennis L. Beck on 04/8/14. (Martin-Gill, S)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f7e1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-7</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-04-09</dateIssued>
+  <docketText>ORDER Regarding 45 Notice by Wilbur Atcherley, signed by Magistrate Judge Dennis L. Beck on 04/8/14. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-8/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s Motion For Subpoena Duces Tecum (Document43), signed by Magistrate Judge Dennis L. Beck on 4/10/2014. (Fahrney, E)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f82e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-8</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2014-04-10</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s Motion For Subpoena Duces Tecum (Document43), signed by Magistrate Judge Dennis L. Beck on 4/10/2014. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-9/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER EXTENDING Application of Discovery and Scheduling Order to Defendant Anderson, signed by Magistrate Judge Dennis L. Beck on 5/1/2014. (Marrujo, C)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f836</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-9</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2014-05-01</dateIssued>
+  <docketText>ORDER EXTENDING Application of Discovery and Scheduling Order to Defendant Anderson, signed by Magistrate Judge Dennis L. Beck on 5/1/2014. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-10/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Extending Application of Discovery and Scheduling Order to Defendants Anderson and Abadia, signed by Magistrate Judge Dennis L. Beck on 05/14/14.(30)Day Deadline (Martin-Gill, S)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f82f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-10</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2014-05-14</dateIssued>
+  <docketText>ORDER Extending Application of Discovery and Scheduling Order to Defendants Anderson and Abadia, signed by Magistrate Judge Dennis L. Beck on 05/14/14.(30)Day Deadline (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-11/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s Motion For Appointment Of Medical Expert (Document49), signed by Magistrate Judge Dennis L. Beck on 5/19/2014. (Fahrney, E)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f830</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-11</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2014-05-20</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s Motion For Appointment Of Medical Expert (Document49), signed by Magistrate Judge Dennis L. Beck on 5/19/2014. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-12/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Granting Defendant Anderson&apos;s Motion To Strike Answer (Document65), ORDER Striking Defendant Anderson&apos;s Answer (Document 59), signed by Magistrate Judge Dennis L. Beck on 5/22/2014. (Fahrney, E)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f825</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-12</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2014-05-23</dateIssued>
+  <docketText>ORDER Granting Defendant Anderson&apos;s Motion To Strike Answer (Document65), ORDER Striking Defendant Anderson&apos;s Answer (Document 59), signed by Magistrate Judge Dennis L. Beck on 5/22/2014. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-13/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s Motion for Reconsideration, signed by District Judge Lawrence J. O&apos;Neill on 6/16/2014. (Marrujo, C)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f84a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-13</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2014-06-16</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s Motion for Reconsideration, signed by District Judge Lawrence J. O&apos;Neill on 6/16/2014. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-14/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Regarding Plaintiff&apos;s 73 Motion for Court Order Regarding Service, signed by Magistrate Judge Dennis L. Beck on 6/18/2014. (Marrujo, C)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f7e3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-14</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2014-06-18</dateIssued>
+  <docketText>ORDER Regarding Plaintiff&apos;s 73 Motion for Court Order Regarding Service, signed by Magistrate Judge Dennis L. Beck on 6/18/2014. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-15/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Striking Plaintiff&apos;s Lodged Second Amended Complaint 87, signed by Magistrate Judge Dennis L. Beck on 6/27/14. (Verduzco, M)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f84e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-15</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2014-06-27</dateIssued>
+  <docketText>ORDER Striking Plaintiff&apos;s Lodged Second Amended Complaint 87, signed by Magistrate Judge Dennis L. Beck on 6/27/14. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-16/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Granting Plaintiff&apos;s 94 Motion to Modify the Discovery and Scheduling Order signed by Magistrate Judge Dennis L. Beck on 07/09/2014. Deadline to Amend: 8/29/2014; Discovery Cut-off: 9/29/2014; Dispositive Motions filed by 11/26/2014. (Flores, E)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f7df</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-16</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2014-07-10</dateIssued>
+  <docketText>ORDER Granting Plaintiff&apos;s 94 Motion to Modify the Discovery and Scheduling Order signed by Magistrate Judge Dennis L. Beck on 07/09/2014. Deadline to Amend: 8/29/2014; Discovery Cut-off: 9/29/2014; Dispositive Motions filed by 11/26/2014. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-17/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS Regarding Defendant Anderson&apos;s 68 Motion to Dismiss; Twenty-One Day Objection Period signed by Magistrate Judge Dennis L. Beck on 9/10/2014. Referred to Judge Lawrence J. O&apos;Neill. Objections to F&amp;R due by 10/6/2014. (Sant Agata, S)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f83a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-17</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2014-09-10</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS Regarding Defendant Anderson&apos;s 68 Motion to Dismiss; Twenty-One Day Objection Period signed by Magistrate Judge Dennis L. Beck on 9/10/2014. Referred to Judge Lawrence J. O&apos;Neill. Objections to F&amp;R due by 10/6/2014. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-18/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER GRANTING IN PART Plaintiff&apos;s Motion for Leave to File Second Amended Complaint signed by Magistrate Judge Dennis L. Beck on 9/10/2014. (Attachments: # (1) Amended Complaint Form)(Sant Agata, S)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-18.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f84f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-18</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2014-09-10</dateIssued>
+  <docketText>ORDER GRANTING IN PART Plaintiff&apos;s Motion for Leave to File Second Amended Complaint signed by Magistrate Judge Dennis L. Beck on 9/10/2014. (Attachments: # (1) Amended Complaint Form)(Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-19/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER GRANTING IN PART and DENYING IN PART Plaintiff&apos;s 105 Motion to Compel; ORDER DENYING Plaintiff&apos;s 113 Motion to Disregard Opposition signed by Magistrate Judge Dennis L. Beck on 9/17/2014. (Sant Agata, S)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-19.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f81d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-19</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2014-09-17</dateIssued>
+  <docketText>ORDER GRANTING IN PART and DENYING IN PART Plaintiff&apos;s 105 Motion to Compel; ORDER DENYING Plaintiff&apos;s 113 Motion to Disregard Opposition signed by Magistrate Judge Dennis L. Beck on 9/17/2014. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-20/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER and NOTICE AUTHORIZING Issuance of Subpoena Duces Tecum DIRECTING Production of Documents by San Joaquin Community Hospital; ORDER DIRECTING Clerk&apos;s Office to Serve Copy of Subpoena with Order signed by Magistrate Judge Dennis L. Beck on 9/17/2014. (Attachments: # (1) Subpoena)(Sant Agata, S)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-20.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f848</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-20</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2014-09-17</dateIssued>
+  <docketText>ORDER and NOTICE AUTHORIZING Issuance of Subpoena Duces Tecum DIRECTING Production of Documents by San Joaquin Community Hospital; ORDER DIRECTING Clerk&apos;s Office to Serve Copy of Subpoena with Order signed by Magistrate Judge Dennis L. Beck on 9/17/2014. (Attachments: # (1) Subpoena)(Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-21/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER REGARDING Plantiff&apos;s 126 Request to be Served With Defendants&apos; Opposition; ORDER DIRECTING Clerk of Court to Send Plaintiff a Copy of Document 102, signed by Magistrate Judge Dennis L. Beck on 9/26/2014. (Marrujo, C)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-21.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f821</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-21</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2014-09-26</dateIssued>
+  <docketText>ORDER REGARDING Plantiff&apos;s 126 Request to be Served With Defendants&apos; Opposition; ORDER DIRECTING Clerk of Court to Send Plaintiff a Copy of Document 102, signed by Magistrate Judge Dennis L. Beck on 9/26/2014. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-22/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER DIRECTING Personal Service of Subpoena Duces Tecum Within Seven Day by United States Marshal Without Prepayment of Costs, signed by Magistrate Judge Dennis L. Beck on 9/29/2014. (Marrujo, C)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-22.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f846</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-22</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2014-10-01</dateIssued>
+  <docketText>ORDER DIRECTING Personal Service of Subpoena Duces Tecum Within Seven Day by United States Marshal Without Prepayment of Costs, signed by Magistrate Judge Dennis L. Beck on 9/29/2014. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-23/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER ADOPTING 109 FINDINGS AND RECOMMENDATIONS and Denying Defendant Anderson&apos;s Motion to Dismisss signed by District Judge Lawrence J. O&apos;Neill on 10/14/2014. (Flores, E)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-23.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f841</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-23</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2014-10-14</dateIssued>
+  <docketText>ORDER ADOPTING 109 FINDINGS AND RECOMMENDATIONS and Denying Defendant Anderson&apos;s Motion to Dismisss signed by District Judge Lawrence J. O&apos;Neill on 10/14/2014. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-24/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER GRANTING IN PART AND DENYING IN PART 115 Plaintiff&apos;s Motion to Compel Defendant Alade to Provide Further Responses to Interrogatories 5, 6, 8, 9 and 11, signed by Magistrate Judge Dennis L. Beck on 11/11/2014. (Jessen, A)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-24.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f835</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-24</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2014-11-12</dateIssued>
+  <docketText>ORDER GRANTING IN PART AND DENYING IN PART 115 Plaintiff&apos;s Motion to Compel Defendant Alade to Provide Further Responses to Interrogatories 5, 6, 8, 9 and 11, signed by Magistrate Judge Dennis L. Beck on 11/11/2014. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-25/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER GRANTING IN PART AND DENYING IN PART 116 Plaintiff&apos;s Motion to Determine Sufficiency of Defendant Alade&apos;s Responses to Requests for Admissions signed by Magistrate Judge Dennis L. Beck on 11/11/2014. (Jessen, A)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-25.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f7e5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-25</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2014-11-12</dateIssued>
+  <docketText>ORDER GRANTING IN PART AND DENYING IN PART 116 Plaintiff&apos;s Motion to Determine Sufficiency of Defendant Alade&apos;s Responses to Requests for Admissions signed by Magistrate Judge Dennis L. Beck on 11/11/2014. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-26/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER GRANTING IN PART AND DENYING IN PART 123 Plaintiff&apos;s Motion to Compel Defendant Alade to Provide Further Responses to Interrogatories 15-18 and 20-24, signed by Magistrate Judge Dennis L. Beck on 11/11/2014. (Jessen, A)</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-26.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f84d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-26</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2014-11-12</dateIssued>
+  <docketText>ORDER GRANTING IN PART AND DENYING IN PART 123 Plaintiff&apos;s Motion to Compel Defendant Alade to Provide Further Responses to Interrogatories 15-18 and 20-24, signed by Magistrate Judge Dennis L. Beck on 11/11/2014. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-27" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-27/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER GRANTING 121 Plaintiff&apos;s Motion to Compel Defendant Ceballos to Provide Further Responses to Interrogatories 5 and 6, signed by Magistrate Judge Dennis L. Beck on 11/11/2014. (Jessen, A)</subTitle>
+  <partNumber>27</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-27.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f83f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-27</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_27.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-27/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-27.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-27</accessId>
+  <sequenceNumber>27</sequenceNumber>
+  <dateIssued>2014-11-12</dateIssued>
+  <docketText>ORDER GRANTING 121 Plaintiff&apos;s Motion to Compel Defendant Ceballos to Provide Further Responses to Interrogatories 5 and 6, signed by Magistrate Judge Dennis L. Beck on 11/11/2014. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-28" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-28/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER GRANTING 122 Plaintiff&apos;s Motion to Compel Defendant Clark to Provide a Further Response to Interrogatory Number 1, signed by Magistrate Judge Dennis L. Beck on 11/11/2014. (Jessen, A)</subTitle>
+  <partNumber>28</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-28.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f83c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-28</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_28.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-28/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-28.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-28</accessId>
+  <sequenceNumber>28</sequenceNumber>
+  <dateIssued>2014-11-12</dateIssued>
+  <docketText>ORDER GRANTING 122 Plaintiff&apos;s Motion to Compel Defendant Clark to Provide a Further Response to Interrogatory Number 1, signed by Magistrate Judge Dennis L. Beck on 11/11/2014. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-29" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-29/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER DENYING 124 Plaintiff&apos;s Motion to Compel CDCR to Permit Him to Take Photographs of His Knee signed by Magistrate Judge Dennis L. Beck on 11/11/2014. (Jessen, A)</subTitle>
+  <partNumber>29</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-29.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f81e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-29</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_29.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-29/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-29.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-29</accessId>
+  <sequenceNumber>29</sequenceNumber>
+  <dateIssued>2014-11-12</dateIssued>
+  <docketText>ORDER DENYING 124 Plaintiff&apos;s Motion to Compel CDCR to Permit Him to Take Photographs of His Knee signed by Magistrate Judge Dennis L. Beck on 11/11/2014. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-30" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-30/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Regarding 150 Plaintiff&apos;s Request to Take Notice of Current Situation signed by Magistrate Judge Dennis L. Beck on 11/18/2014. (Jessen, A)</subTitle>
+  <partNumber>30</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-30.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f7e4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-30</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_30.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-30/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-30.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-30</accessId>
+  <sequenceNumber>30</sequenceNumber>
+  <dateIssued>2014-11-19</dateIssued>
+  <docketText>ORDER Regarding 150 Plaintiff&apos;s Request to Take Notice of Current Situation signed by Magistrate Judge Dennis L. Beck on 11/18/2014. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-31" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-31/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Regarding Plaintiff&apos;s 144 Motion to Compel Defendant Ceballos to Provide a Further Response to Request for Admissions Number 27 signed by Magistrate Judge Dennis L. Beck on 12/02/2014. (Flores, E)</subTitle>
+  <partNumber>31</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-31.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f81f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-31</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_31.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-31/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-31.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-31</accessId>
+  <sequenceNumber>31</sequenceNumber>
+  <dateIssued>2014-12-02</dateIssued>
+  <docketText>ORDER Regarding Plaintiff&apos;s 144 Motion to Compel Defendant Ceballos to Provide a Further Response to Request for Admissions Number 27 signed by Magistrate Judge Dennis L. Beck on 12/02/2014. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-32" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-32/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Granting in part Plaintiff&apos;s 176] Motion to Strike; ORDER Disregarding Plaintiff&apos;s 142 Motion to Compel Defendant Clark to Provide a Further Response to Request for Admission Number 91 signed by Magistrate Judge Dennis L. Beck on 12/03/2014. (Flores, E)</subTitle>
+  <partNumber>32</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-32.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f822</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-32</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_32.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-32/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-32.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-32</accessId>
+  <sequenceNumber>32</sequenceNumber>
+  <dateIssued>2014-12-03</dateIssued>
+  <docketText>ORDER Granting in part Plaintiff&apos;s 176] Motion to Strike; ORDER Disregarding Plaintiff&apos;s 142 Motion to Compel Defendant Clark to Provide a Further Response to Request for Admission Number 91 signed by Magistrate Judge Dennis L. Beck on 12/03/2014. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-33" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-33/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Dennis L. Beck on 12/8/2014 staying 166, 173 MOTIONS for SUMMARY JUDGMENT. (Lundstrom, T)</subTitle>
+  <partNumber>33</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-33.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f840</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-33</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_33.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-33/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-33.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-33</accessId>
+  <sequenceNumber>33</sequenceNumber>
+  <dateIssued>2014-12-09</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Dennis L. Beck on 12/8/2014 staying 166, 173 MOTIONS for SUMMARY JUDGMENT. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-34" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-34/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s 147 Motion to Strike Defendant Torres&apos; Response to Request for Admission Number 11, signed by Magistrate Judge Dennis L. Beck on 1/5/15. (Marrujo, C)</subTitle>
+  <partNumber>34</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-34.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f833</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-34</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_34.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-34/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-34.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-34</accessId>
+  <sequenceNumber>34</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s 147 Motion to Strike Defendant Torres&apos; Response to Request for Admission Number 11, signed by Magistrate Judge Dennis L. Beck on 1/5/15. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-35" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-35/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER DIRECTING Defendants to Respond to Plaintiff&apos;s Objections to Defendants&apos; November 4, 2014, Answer to Second Amended Complaint, signed by Magistrate Judge Dennis L. Beck on 1/5/2015. Response Due Within Fourteen Days. (Marrujo, C)</subTitle>
+  <partNumber>35</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-35.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f829</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-35</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_35.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-35/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-35.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-35</accessId>
+  <sequenceNumber>35</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER DIRECTING Defendants to Respond to Plaintiff&apos;s Objections to Defendants&apos; November 4, 2014, Answer to Second Amended Complaint, signed by Magistrate Judge Dennis L. Beck on 1/5/2015. Response Due Within Fourteen Days. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-36" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-36/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Granting Plaintiff&apos;s Motion For Leave To File Third Amended Complaint (Document 163), signed by Magistrate Judge Dennis L. Beck on 1/16/2015. Third Amended Complaint due by 2/20/2015. (Attachments: # (1) Amended Complaint Form) (Fahrney, E)</subTitle>
+  <partNumber>36</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-36.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f81c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-36</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_36.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-36/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-36.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-36</accessId>
+  <sequenceNumber>36</sequenceNumber>
+  <dateIssued>2015-01-16</dateIssued>
+  <docketText>ORDER Granting Plaintiff&apos;s Motion For Leave To File Third Amended Complaint (Document 163), signed by Magistrate Judge Dennis L. Beck on 1/16/2015. Third Amended Complaint due by 2/20/2015. (Attachments: # (1) Amended Complaint Form) (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-37" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-37/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Granting Plaintiff&apos;s 148 Motion to Reopen Discovery in Part, signed by Magistrate Judge Dennis L. Beck on 01/21/05. (Gonzalez, R)</subTitle>
+  <partNumber>37</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-37.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f83d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-37</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_37.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-37/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-37.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-37</accessId>
+  <sequenceNumber>37</sequenceNumber>
+  <dateIssued>2015-01-22</dateIssued>
+  <docketText>ORDER Granting Plaintiff&apos;s 148 Motion to Reopen Discovery in Part, signed by Magistrate Judge Dennis L. Beck on 01/21/05. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-38" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-38/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Granting Plaintiff&apos;s 149 Motion to Compel Defendant Clark to Provide a Further Response to Request for Production Number 26, signed by Magistrate Judge Dennis L. Beck on 1/21/15. (Gonzalez, R)</subTitle>
+  <partNumber>38</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-38.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f837</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-38</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_38.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-38/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-38.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-38</accessId>
+  <sequenceNumber>38</sequenceNumber>
+  <dateIssued>2015-01-22</dateIssued>
+  <docketText>ORDER Granting Plaintiff&apos;s 149 Motion to Compel Defendant Clark to Provide a Further Response to Request for Production Number 26, signed by Magistrate Judge Dennis L. Beck on 1/21/15. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-39" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-39/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Striking 146 Answer to Plaintff&apos;s Second Amended Complaint signed by Magistrate Judge Dennis L. Beck on 01/27/2015. (Flores, E)</subTitle>
+  <partNumber>39</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-39.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f842</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-39</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_39.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-39/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-39.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-39</accessId>
+  <sequenceNumber>39</sequenceNumber>
+  <dateIssued>2015-01-27</dateIssued>
+  <docketText>ORDER Striking 146 Answer to Plaintff&apos;s Second Amended Complaint signed by Magistrate Judge Dennis L. Beck on 01/27/2015. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-40" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-40/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s 206 Motion for Leave to File Third Amended Complaint as Moot signed by Magistrate Judge Dennis L. Beck on 01/28/2015. (Flores, E)</subTitle>
+  <partNumber>40</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-40.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f834</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-40</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_40.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-40/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-40.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-40</accessId>
+  <sequenceNumber>40</sequenceNumber>
+  <dateIssued>2015-01-28</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s 206 Motion for Leave to File Third Amended Complaint as Moot signed by Magistrate Judge Dennis L. Beck on 01/28/2015. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-41" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-41/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Regarding Plaintiff&apos;s Request To Take Notice of Pending Surgery (Document213), signed by Magistrate Judge Dennis L. Beck on 2/4/2015. (Fahrney, E)</subTitle>
+  <partNumber>41</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-41.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f7e0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-41</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_41.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-41/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-41.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-41</accessId>
+  <sequenceNumber>41</sequenceNumber>
+  <dateIssued>2015-02-04</dateIssued>
+  <docketText>ORDER Regarding Plaintiff&apos;s Request To Take Notice of Pending Surgery (Document213), signed by Magistrate Judge Dennis L. Beck on 2/4/2015. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-42" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-42/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS Regarding Defenant Alade&apos;s 165 MOTION for SUMMARY JUDGMENT, signed by Magistrate Judge Dennis L. Beck on 3/20/15. Referred to Judge O&apos;Neill; 30-Day Deadline. (Verduzco, M)</subTitle>
+  <partNumber>42</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-42.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f838</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-42</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_42.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-42/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-42.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-42</accessId>
+  <sequenceNumber>42</sequenceNumber>
+  <dateIssued>2015-03-20</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS Regarding Defenant Alade&apos;s 165 MOTION for SUMMARY JUDGMENT, signed by Magistrate Judge Dennis L. Beck on 3/20/15. Referred to Judge O&apos;Neill; 30-Day Deadline. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-43" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-43/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s 220 Motion to Lift Stay as Moot, signed by Magistrate Judge Dennis L. Beck on 3/23/15. (Verduzco, M)</subTitle>
+  <partNumber>43</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-43.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f84c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-43</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_43.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-43/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-43.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-43</accessId>
+  <sequenceNumber>43</sequenceNumber>
+  <dateIssued>2015-03-23</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s 220 Motion to Lift Stay as Moot, signed by Magistrate Judge Dennis L. Beck on 3/23/15. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-44" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-44/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s 229 Motion for Appointment of Medical Expert signed by Magistrate Judge Dennis L. Beck on 5/28/2015. (Sant Agata, S)</subTitle>
+  <partNumber>44</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-44.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f84b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-44</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_44.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-44/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-44.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-44</accessId>
+  <sequenceNumber>44</sequenceNumber>
+  <dateIssued>2015-05-28</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s 229 Motion for Appointment of Medical Expert signed by Magistrate Judge Dennis L. Beck on 5/28/2015. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-45" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-45/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s 232 Motion to Reopen Discovery Without Prejudice signed by Magistrate Judge Dennis L. Beck on 5/28/2015. (Sant Agata, S)</subTitle>
+  <partNumber>45</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-45.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f82c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-45</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_45.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-45/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-45.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-45</accessId>
+  <sequenceNumber>45</sequenceNumber>
+  <dateIssued>2015-05-28</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s 232 Motion to Reopen Discovery Without Prejudice signed by Magistrate Judge Dennis L. Beck on 5/28/2015. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-46" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-46/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>***Discharged, Per Order 289*** ORDER to SHOW CAUSE why Defendant Jones Should not be Dismissed from this Action Pursuant to Rule 4(M) signed by Magistrate Judge Dennis L. Beck on 06/08/2015. Show Cause Response due by 7/13/2015.(Flores, E)</subTitle>
+  <partNumber>46</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-06-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-46.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f820</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-46</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_46.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-46/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-46.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-46</accessId>
+  <sequenceNumber>46</sequenceNumber>
+  <dateIssued>2015-06-08</dateIssued>
+  <docketText>***Discharged, Per Order 289*** ORDER to SHOW CAUSE why Defendant Jones Should not be Dismissed from this Action Pursuant to Rule 4(M) signed by Magistrate Judge Dennis L. Beck on 06/08/2015. Show Cause Response due by 7/13/2015.(Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-47" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-47/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s 265 Motion to File Surreply and Striking Surreply; ORDER Denying Plaintiff&apos;s 271 272 273 Motion to File Surreply and Striking Filings signed by Magistrate Judge Dennis L. Beck on 06/10/2015. (Flores, E)</subTitle>
+  <partNumber>47</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-06-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-47.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f7e2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-47</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_47.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-47/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-47.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-47</accessId>
+  <sequenceNumber>47</sequenceNumber>
+  <dateIssued>2015-06-10</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s 265 Motion to File Surreply and Striking Surreply; ORDER Denying Plaintiff&apos;s 271 272 273 Motion to File Surreply and Striking Filings signed by Magistrate Judge Dennis L. Beck on 06/10/2015. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-48" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-48/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Extending Amended Scheduling Order to Defendant Montebon, re 267, signed by Magistrate Judge Dennis L. Beck on 6/15/15. (Gonzalez, R)</subTitle>
+  <partNumber>48</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-06-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-48.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f839</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-48</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_48.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-48/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-48.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-48</accessId>
+  <sequenceNumber>48</sequenceNumber>
+  <dateIssued>2015-06-15</dateIssued>
+  <docketText>ORDER Extending Amended Scheduling Order to Defendant Montebon, re 267, signed by Magistrate Judge Dennis L. Beck on 6/15/15. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-49" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-49/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Granting [261-3] Defendants&apos; Request to Strike Plaintiff&apos;s Separate Statement of Facts; ORDER Striking Plaintiff&apos;s 246 Separate Statement of Facts signed by Magistrate Judge Dennis L. Beck on 06/16/2015. (Flores, E)</subTitle>
+  <partNumber>49</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-06-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-49.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f82a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-49</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_49.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-49/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-49.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-49</accessId>
+  <sequenceNumber>49</sequenceNumber>
+  <dateIssued>2015-06-16</dateIssued>
+  <docketText>ORDER Granting [261-3] Defendants&apos; Request to Strike Plaintiff&apos;s Separate Statement of Facts; ORDER Striking Plaintiff&apos;s 246 Separate Statement of Facts signed by Magistrate Judge Dennis L. Beck on 06/16/2015. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-50" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-50/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS Regarding Defendant Anderson&apos;s Motion for Summary Judgment 166, signed by Magistrate Judge Dennis L. Beck on 7/1/15. Referred to Judge O&apos;Neill. Thirty-Day Objection Deadline. (Gonzalez, R)</subTitle>
+  <partNumber>50</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-07-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-50.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f83e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-50</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_50.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-50/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-50.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-50</accessId>
+  <sequenceNumber>50</sequenceNumber>
+  <dateIssued>2015-07-01</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS Regarding Defendant Anderson&apos;s Motion for Summary Judgment 166, signed by Magistrate Judge Dennis L. Beck on 7/1/15. Referred to Judge O&apos;Neill. Thirty-Day Objection Deadline. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-51" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-51/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS Regarding Defendants&apos; Motion for Summary Judgment 173, signed by Magistrate Judge Dennis L. Beck on 7/1/15. Referred to Judge O&apos;Neill. Thirty-Day Objection Deadline. (Gonzalez, R)</subTitle>
+  <partNumber>51</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-07-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-51.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f832</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-51</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_51.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-51/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-51.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-51</accessId>
+  <sequenceNumber>51</sequenceNumber>
+  <dateIssued>2015-07-01</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS Regarding Defendants&apos; Motion for Summary Judgment 173, signed by Magistrate Judge Dennis L. Beck on 7/1/15. Referred to Judge O&apos;Neill. Thirty-Day Objection Deadline. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-52" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-52/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Discharging 270 Order to Show Cause, signed by Magistrate Judge Dennis L. Beck on 7/1/15. (Gonzalez, R)</subTitle>
+  <partNumber>52</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-07-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-52.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f849</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-52</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_52.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-52/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-52.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-52</accessId>
+  <sequenceNumber>52</sequenceNumber>
+  <dateIssued>2015-07-01</dateIssued>
+  <docketText>ORDER Discharging 270 Order to Show Cause, signed by Magistrate Judge Dennis L. Beck on 7/1/15. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-53" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-53/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s Motions for Reconsideration re 281, 282, 283, 286, signed by District Judge Lawrence J. O&apos;Neill on 7/1/15. (Gonzalez, R)</subTitle>
+  <partNumber>53</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-07-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-53.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f847</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-53</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_53.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-53/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-53.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-53</accessId>
+  <sequenceNumber>53</sequenceNumber>
+  <dateIssued>2015-07-02</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s Motions for Reconsideration re 281, 282, 283, 286, signed by District Judge Lawrence J. O&apos;Neill on 7/1/15. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-54" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-54/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER GRANTING Parties&apos; Request to Extend Deadlines, signed by Magistrate Judge Dennis L. Beck on 7/27/0215. Deadline: 9/3/2015. (Marrujo, C)</subTitle>
+  <partNumber>54</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-07-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-54.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f824</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-54</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_54.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-54/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-54.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-54</accessId>
+  <sequenceNumber>54</sequenceNumber>
+  <dateIssued>2015-07-27</dateIssued>
+  <docketText>ORDER GRANTING Parties&apos; Request to Extend Deadlines, signed by Magistrate Judge Dennis L. Beck on 7/27/0215. Deadline: 9/3/2015. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-55" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-55/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER ADOPTING 287 FINDINGS AND RECOMMENDATIONS IN FULL and ORDER GRANTING 166 Defendant Anderson&apos;s Motion for Summary Judgment signed by District Judge Lawrence J. O&apos;Neill on 8/17/2015. (Jessen, A)</subTitle>
+  <partNumber>55</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-08-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-55.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f831</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-55</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_55.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-55/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-55.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-55</accessId>
+  <sequenceNumber>55</sequenceNumber>
+  <dateIssued>2015-08-17</dateIssued>
+  <docketText>ORDER ADOPTING 287 FINDINGS AND RECOMMENDATIONS IN FULL and ORDER GRANTING 166 Defendant Anderson&apos;s Motion for Summary Judgment signed by District Judge Lawrence J. O&apos;Neill on 8/17/2015. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-56" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-56/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER GRANTING 304 Plaintiff&apos;s Motion for Copy of Order Adopting Findings and Recommendations Regarding Defendant Alade&apos;s Motion for Summary Judgment signed by Magistrate Judge Dennis L. Beck on 9/4/2015. (Jessen, A)</subTitle>
+  <partNumber>56</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-09-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-56.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f827</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-56</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_56.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-56/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-56.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-56</accessId>
+  <sequenceNumber>56</sequenceNumber>
+  <dateIssued>2015-09-04</dateIssued>
+  <docketText>ORDER GRANTING 304 Plaintiff&apos;s Motion for Copy of Order Adopting Findings and Recommendations Regarding Defendant Alade&apos;s Motion for Summary Judgment signed by Magistrate Judge Dennis L. Beck on 9/4/2015. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-57" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-57/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER GRANTING STIPULATION FOR VOLUNTARY DISMISSAL OF CERTAIN DEFENDANTS re 308; ORDER DENYING MOTIONS AS MOOT re 276, 294 signed by District Judge Lawrence J. O&apos;Neill on 11/2/2015. (Lundstrom, T)</subTitle>
+  <partNumber>57</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-11-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-57.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f845</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-57</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_57.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-57/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-57.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-57</accessId>
+  <sequenceNumber>57</sequenceNumber>
+  <dateIssued>2015-11-03</dateIssued>
+  <docketText>ORDER GRANTING STIPULATION FOR VOLUNTARY DISMISSAL OF CERTAIN DEFENDANTS re 308; ORDER DENYING MOTIONS AS MOOT re 276, 294 signed by District Judge Lawrence J. O&apos;Neill on 11/2/2015. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00225-58" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-58/mods.xml">
+ <titleInfo>
+  <title>(PC-G) Atcherley v. Clark et al</title>
+  <subTitle>ORDER Granting 310 Stipulation for Voluntary Dismissal of Action with Prejudice signed by District Judge Lawrence J. O&apos;Neill on 11/05/2015. CASE CLOSED.(Flores, E)</subTitle>
+  <partNumber>58</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-11-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-58.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18de3f828</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-58</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00225_58.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00225/USCOURTS-caed-1_12-cv-00225-58/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00225/pdf/USCOURTS-caed-1_12-cv-00225-58.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00225; (PC-G) Atcherley v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00225-58</accessId>
+  <sequenceNumber>58</sequenceNumber>
+  <dateIssued>2015-11-05</dateIssued>
+  <docketText>ORDER Granting 310 Stipulation for Voluntary Dismissal of Action with Prejudice signed by District Judge Lawrence J. O&apos;Neill on 11/05/2015. CASE CLOSED.(Flores, E)</docketText>
+</extension>
+</relatedItem>
+</mods>

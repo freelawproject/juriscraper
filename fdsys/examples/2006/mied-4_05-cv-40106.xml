@@ -1,0 +1,206 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18195e308">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-19</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-4_05-cv-40106</identifier>
+<identifier type="local">P0b002ee18195e308</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-19</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-4_05-cv-40106</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-4_05-cv-40106</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>4:05-cv-40106</caseNumber>
+ <caseOffice>Flint</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <party firstName="Patricia" fullName="Patricia Caruso" lastName="Caruso" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Dean" lastName="Dean" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Dean v. Caruso</title>
+ <partNumber>4:05-cv-40106</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-4_05-cv-40106/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:05-cv-40106;05-40106</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Flint</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Patricia Caruso</displayForm>
+ <namePart type="family">Caruso</namePart>
+ <namePart type="given">Patricia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas Dean</displayForm>
+ <namePart type="family">Dean</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-4_05-cv-40106</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>4:05-cv-40106</caseNumber>
+ <caseOffice>Flint</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <party firstName="Patricia" fullName="Patricia Caruso" lastName="Caruso" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Dean" lastName="Dean" role="Plaintiff"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-4_05-cv-40106-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_05-cv-40106/USCOURTS-mied-4_05-cv-40106-0/mods.xml">
+ <titleInfo>
+  <title>Dean v. Caruso</title>
+  <subTitle>ORDER DENYING re 3 Application for Appointment of Counsel filed by Thomas Dean, AND ORDER TO FILE RESPONSE TO 9 MOTION to Dismiss Under Rule 12(b)(6) and 42 U.S.C. 1997 e(a) with Brief in Support and Certificate of Service filed by Patricia Caruso. Signed by Honorable Magistrate Judge Wallace Capel. (PPel, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-4_05-cv-40106-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a7b983</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_05-cv-40106/USCOURTS-mied-4_05-cv-40106-0</identifier>
+ <identifier type="former granule identifier">mied-4_05-cv-40106_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_05-cv-40106/USCOURTS-mied-4_05-cv-40106-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-4_05-cv-40106/pdf/USCOURTS-mied-4_05-cv-40106-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-40106; Dean v. Caruso; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-4_05-cv-40106-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-09-27</dateIssued>
+  <docketText>ORDER DENYING re 3 Application for Appointment of Counsel filed by Thomas Dean, AND ORDER TO FILE RESPONSE TO 9 MOTION to Dismiss Under Rule 12(b)(6) and 42 U.S.C. 1997 e(a) with Brief in Support and Certificate of Service filed by Patricia Caruso. Signed by Honorable Magistrate Judge Wallace Capel. (PPel, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-4_05-cv-40106-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_05-cv-40106/USCOURTS-mied-4_05-cv-40106-1/mods.xml">
+ <titleInfo>
+  <title>Dean v. Caruso</title>
+  <subTitle>REPORT AND RECOMMENDATION re 9 MOTION to Dismiss Under Rule 12(b)(6) and 42 U.S.C. ?1997 e(a) with Brief in Support and Certificate of Service filed by Patricia Caruso, Signed by Honorable Magistrate Judge Wallace Capel. (PPel, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-4_05-cv-40106-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a7b981</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_05-cv-40106/USCOURTS-mied-4_05-cv-40106-1</identifier>
+ <identifier type="former granule identifier">mied-4_05-cv-40106_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_05-cv-40106/USCOURTS-mied-4_05-cv-40106-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-4_05-cv-40106/pdf/USCOURTS-mied-4_05-cv-40106-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-40106; Dean v. Caruso; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-4_05-cv-40106-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-11-01</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION re 9 MOTION to Dismiss Under Rule 12(b)(6) and 42 U.S.C. ?1997 e(a) with Brief in Support and Certificate of Service filed by Patricia Caruso, Signed by Honorable Magistrate Judge Wallace Capel. (PPel, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-4_05-cv-40106-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_05-cv-40106/USCOURTS-mied-4_05-cv-40106-2/mods.xml">
+ <titleInfo>
+  <title>Dean v. Caruso</title>
+  <subTitle>ORDER granting 9 Motion to Dismiss, adopting 17 Report and Recommendation - Signed by Honorable Paul V Gadola. (RCho, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-4_05-cv-40106-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a7b982</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_05-cv-40106/USCOURTS-mied-4_05-cv-40106-2</identifier>
+ <identifier type="former granule identifier">mied-4_05-cv-40106_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_05-cv-40106/USCOURTS-mied-4_05-cv-40106-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-4_05-cv-40106/pdf/USCOURTS-mied-4_05-cv-40106-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-40106; Dean v. Caruso; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-4_05-cv-40106-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-01-31</dateIssued>
+  <docketText>ORDER granting 9 Motion to Dismiss, adopting 17 Report and Recommendation - Signed by Honorable Paul V Gadola. (RCho, )</docketText>
+</extension>
+</relatedItem>
+</mods>

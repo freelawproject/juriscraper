@@ -1,0 +1,253 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a18a25">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00048</identifier>
+<identifier type="local">P0b002ee183a18a25</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_11-cv-00048</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cv-00048</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cv-00048</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>31:3729 False Claims Act</cause>
+ <party firstName="John" fullName="John Does" lastName="Does" role="Defendant"></party>
+ <party fullName="First Express of Nebraska" lastName="First Express of Nebraska" role="Defendant"></party>
+ <party firstName="Keith" fullName="Keith Roberts" lastName="Roberts" role="Plaintiff"></party>
+ <party firstName="John" fullName="John P. Stinner Sr." generation="Sr." lastName="Stinner" middleName="P." role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Relator Plaintiff"></party>
+ <party fullName="Valley Bank and Trust Company" lastName="Valley Bank and Trust Company" role="Defendant"></party>
+ <party fullName="Western States Bank" lastName="Western States Bank" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Roberts v. Valley Bank and Trust Company</title>
+ <partNumber>8:11-cv-00048</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00048/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:11-cv-00048;11-048</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>John Does</displayForm>
+ <namePart type="family">Does</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>First Express of Nebraska</displayForm>
+ <namePart type="family">First Express of Nebraska</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Keith Roberts</displayForm>
+ <namePart type="family">Roberts</namePart>
+ <namePart type="given">Keith</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John P. Stinner Sr.</displayForm>
+ <namePart type="family">Stinner</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress">Sr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Relator Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Valley Bank and Trust Company</displayForm>
+ <namePart type="family">Valley Bank and Trust Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Western States Bank</displayForm>
+ <namePart type="family">Western States Bank</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cv-00048</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cv-00048</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>31:3729 False Claims Act</cause>
+ <party firstName="John" fullName="John Does" lastName="Does" role="Defendant"></party>
+ <party fullName="First Express of Nebraska" lastName="First Express of Nebraska" role="Defendant"></party>
+ <party firstName="Keith" fullName="Keith Roberts" lastName="Roberts" role="Plaintiff"></party>
+ <party firstName="John" fullName="John P. Stinner Sr." generation="Sr." lastName="Stinner" middleName="P." role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Relator Plaintiff"></party>
+ <party fullName="Valley Bank and Trust Company" lastName="Valley Bank and Trust Company" role="Defendant"></party>
+ <party fullName="Western States Bank" lastName="Western States Bank" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00048-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00048/USCOURTS-ned-8_11-cv-00048-0/mods.xml">
+ <titleInfo>
+  <title>Roberts v. Valley Bank and Trust Company</title>
+  <subTitle>istrate Judge Thomas D. Thalken. (ADB)ORDER that the complaint be unsealed and served upon the defendants by the relator; all other contents of the Court&apos;s file in this action remain under seal and not be made public or served upon the defendants, except for this Order and the Government&apos;s Notice of Election to Decline Intervention, which the relator will serve upon the defendants only after service of the complaint; the seal be lifted as to all other matters occurring in this action after the date ofthis Order; the parties shall serve all pleadings and motions filed in this action, including supporting memoranda, upon the United States; the parties shall serve all notices ofappeal upon the United States;all orders of this Court shall be sent to the United States; and that should the relator or any ofthe defendants propose that this action be dismissed, settled, or otherwise discontinued, the Court will solicit the written consent of the United States before ruling or granting its approval. Ordered by Mag</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00048-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1fc4b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00048/USCOURTS-ned-8_11-cv-00048-0</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00048_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00048/USCOURTS-ned-8_11-cv-00048-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00048/pdf/USCOURTS-ned-8_11-cv-00048-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00048; Roberts v. Valley Bank and Trust Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00048-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-02-16</dateIssued>
+  <docketText>istrate Judge Thomas D. Thalken. (ADB)ORDER that the complaint be unsealed and served upon the defendants by the relator; all other contents of the Court&apos;s file in this action remain under seal and not be made public or served upon the defendants, except for this Order and the Government&apos;s Notice of Election to Decline Intervention, which the relator will serve upon the defendants only after service of the complaint; the seal be lifted as to all other matters occurring in this action after the date ofthis Order; the parties shall serve all pleadings and motions filed in this action, including supporting memoranda, upon the United States; the parties shall serve all notices ofappeal upon the United States;all orders of this Court shall be sent to the United States; and that should the relator or any ofthe defendants propose that this action be dismissed, settled, or otherwise discontinued, the Court will solicit the written consent of the United States before ruling or granting its approval. Ordered by Mag</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00048-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00048/USCOURTS-ned-8_11-cv-00048-1/mods.xml">
+ <titleInfo>
+  <title>Roberts v. Valley Bank and Trust Company</title>
+  <subTitle>ORDER upon consideration of the United States&apos; Consent to Dismissal Without Prejudice 22, filed pursuant to the False Claims Act, 31 U.S.C. § 3730(b) (1), Counts I, II, and III of the Complaint are dismissed with prejudice as to the relator and without prejudice as to the United States. Ordered by Magistrate Judge Thomas D. Thalken. (ADB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00048-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1fc4a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00048/USCOURTS-ned-8_11-cv-00048-1</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00048_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00048/USCOURTS-ned-8_11-cv-00048-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00048/pdf/USCOURTS-ned-8_11-cv-00048-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00048; Roberts v. Valley Bank and Trust Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00048-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-08-30</dateIssued>
+  <docketText>ORDER upon consideration of the United States&apos; Consent to Dismissal Without Prejudice 22, filed pursuant to the False Claims Act, 31 U.S.C. § 3730(b) (1), Counts I, II, and III of the Complaint are dismissed with prejudice as to the relator and without prejudice as to the United States. Ordered by Magistrate Judge Thomas D. Thalken. (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00048-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00048/USCOURTS-ned-8_11-cv-00048-2/mods.xml">
+ <titleInfo>
+  <title>Roberts v. Valley Bank and Trust Company</title>
+  <subTitle>PROTECTIVE ORDER. Ordered by Magistrate Judge Thomas D. Thalken. (TRL)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00048-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1fc49</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00048/USCOURTS-ned-8_11-cv-00048-2</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00048_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00048/USCOURTS-ned-8_11-cv-00048-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00048/pdf/USCOURTS-ned-8_11-cv-00048-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00048; Roberts v. Valley Bank and Trust Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00048-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>PROTECTIVE ORDER. Ordered by Magistrate Judge Thomas D. Thalken. (TRL)</docketText>
+</extension>
+</relatedItem>
+</mods>

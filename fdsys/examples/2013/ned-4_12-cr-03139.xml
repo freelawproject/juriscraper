@@ -1,0 +1,286 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1850ada64">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-07-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-07-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03139</identifier>
+<identifier type="local">P0b002ee1850ada64</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-07-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-07-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_12-cr-03139</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_12-cr-03139</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:12-cr-03139</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Marcus" fullName="Marcus Antonio Navejar" lastName="Navejar" middleName="Antonio" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Navejar</title>
+ <partNumber>4:12-cr-03139</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03139/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:12-cr-03139;12-3139</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Marcus Antonio Navejar</displayForm>
+ <namePart type="family">Navejar</namePart>
+ <namePart type="given">Marcus</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_12-cr-03139</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:12-cr-03139</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Marcus" fullName="Marcus Antonio Navejar" lastName="Navejar" middleName="Antonio" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03139-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03139/USCOURTS-ned-4_12-cr-03139-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Navejar</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Marcus Antonio Navejar. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03139-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850bfde4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03139/USCOURTS-ned-4_12-cr-03139-0</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03139_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03139/USCOURTS-ned-4_12-cr-03139-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03139/pdf/USCOURTS-ned-4_12-cr-03139-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03139; USA v. Navejar; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03139-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Marcus Antonio Navejar. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03139-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03139/USCOURTS-ned-4_12-cr-03139-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Navejar</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Marcus Antonio Navejar. Ordered by Magistrate Judge Cheryl R. Zwart. (TCL )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03139-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850bfde3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03139/USCOURTS-ned-4_12-cr-03139-1</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03139_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03139/USCOURTS-ned-4_12-cr-03139-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03139/pdf/USCOURTS-ned-4_12-cr-03139-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03139; USA v. Navejar; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03139-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Marcus Antonio Navejar. Ordered by Magistrate Judge Cheryl R. Zwart. (TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03139-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03139/USCOURTS-ned-4_12-cr-03139-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Navejar</title>
+  <subTitle>ORDER granting 19 Motion to Withdraw as Attorney as to Marcus Antonio Navejar (1). Assistant Federal Public Defender John C. Vanderslice and the Federal Public Defender&apos;s office shall be permitted to withdraw as counsel of record for Mr. Navejar. Ordered by Magistrate Judge Cheryl R. Zwart. (E-mailed to FPD)(JAB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03139-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850bfde1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03139/USCOURTS-ned-4_12-cr-03139-2</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03139_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03139/USCOURTS-ned-4_12-cr-03139-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03139/pdf/USCOURTS-ned-4_12-cr-03139-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03139; USA v. Navejar; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03139-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-11</dateIssued>
+  <docketText>ORDER granting 19 Motion to Withdraw as Attorney as to Marcus Antonio Navejar (1). Assistant Federal Public Defender John C. Vanderslice and the Federal Public Defender&apos;s office shall be permitted to withdraw as counsel of record for Mr. Navejar. Ordered by Magistrate Judge Cheryl R. Zwart. (E-mailed to FPD)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03139-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03139/USCOURTS-ned-4_12-cr-03139-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Navejar</title>
+  <subTitle>ORDER granting 23 Email Motion as to Marcus Antonio Navejar (1). Change of Plea Hearing set for 4/9/2013 03:30 PM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. The time between today&apos;s date and the district court judge&apos;s acceptance or rejection of the anticipated plea of guilty shall be excluded for speedy trial calculation purposes. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS) Modified on 3/26/2013 to add speedy trial text. (JAB)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03139-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850bfddf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03139/USCOURTS-ned-4_12-cr-03139-3</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03139_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03139/USCOURTS-ned-4_12-cr-03139-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03139/pdf/USCOURTS-ned-4_12-cr-03139-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03139; USA v. Navejar; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03139-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-03-25</dateIssued>
+  <docketText>ORDER granting 23 Email Motion as to Marcus Antonio Navejar (1). Change of Plea Hearing set for 4/9/2013 03:30 PM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. The time between today&apos;s date and the district court judge&apos;s acceptance or rejection of the anticipated plea of guilty shall be excluded for speedy trial calculation purposes. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS) Modified on 3/26/2013 to add speedy trial text. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03139-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03139/USCOURTS-ned-4_12-cr-03139-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Navejar</title>
+  <subTitle>MEMORANDUM AND ORDER granting 26 Defendant&apos;s Unopposed Email Motion as to Marcus Antonio Navejar (1). Change of Plea Hearing continued to 4/17/2013 02:30 PM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. The time between today&apos;s date and the district court judge&apos;s acceptance or rejection of the anticipated plea of guilty shall be excluded for speedy trial calculation purposes. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03139-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850bfde2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03139/USCOURTS-ned-4_12-cr-03139-4</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03139_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03139/USCOURTS-ned-4_12-cr-03139-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03139/pdf/USCOURTS-ned-4_12-cr-03139-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03139; USA v. Navejar; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03139-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-04-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 26 Defendant&apos;s Unopposed Email Motion as to Marcus Antonio Navejar (1). Change of Plea Hearing continued to 4/17/2013 02:30 PM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. The time between today&apos;s date and the district court judge&apos;s acceptance or rejection of the anticipated plea of guilty shall be excluded for speedy trial calculation purposes. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03139-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03139/USCOURTS-ned-4_12-cr-03139-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Navejar</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report as to defendant Marcus Antonio Navejar. It is ordered that:... (2)There are no objections or motions that require resolution at sentencing.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Senior Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03139-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850bfde0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03139/USCOURTS-ned-4_12-cr-03139-5</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03139_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03139/USCOURTS-ned-4_12-cr-03139-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03139/pdf/USCOURTS-ned-4_12-cr-03139-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03139; USA v. Navejar; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03139-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-07-02</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report as to defendant Marcus Antonio Navejar. It is ordered that:... (2)There are no objections or motions that require resolution at sentencing.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Senior Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+</mods>

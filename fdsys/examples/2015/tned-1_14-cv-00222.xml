@@ -1,0 +1,198 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8aaa11">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Tennessee</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_14-cv-00222</identifier>
+<identifier type="local">P0b002ee18a8aaa11</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-tned-1_14-cv-00222</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-tned-1_14-cv-00222</accessId>
+ <courtType>District</courtType>
+ <courtCode>tned</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Tennessee</courtState>
+ <courtSortOrder>2471</courtSortOrder>
+ <caseNumber>1:14-cv-00222</caseNumber>
+ <caseOffice>Chattanooga</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1446pl Petition for Removal - Product Liability</cause>
+ <party fullName="Biomet Manufacturing, LLC" lastName="Biomet Manufacturing, LLC" role="Defendant"></party>
+ <party fullName="Biomet, Inc." lastName="Biomet, Inc." role="Defendant"></party>
+ <party firstName="John" fullName="John Edward Price Jr" generation="Jr" lastName="Price" middleName="Edward" role="Plaintiff"></party>
+ <party firstName="Lena" fullName="Lena Lynn Price" lastName="Price" middleName="Lynn" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Price et al v. Biomet Manufacturing, LLC</title>
+ <partNumber>1:14-cv-00222</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_14-cv-00222/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cv-00222;14-222</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Tennessee</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Chattanooga</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Biomet Manufacturing, LLC</displayForm>
+ <namePart type="family">Biomet Manufacturing, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Biomet, Inc.</displayForm>
+ <namePart type="family">Biomet, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Edward Price Jr</displayForm>
+ <namePart type="family">Price</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress">Jr</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lena Lynn Price</displayForm>
+ <namePart type="family">Price</namePart>
+ <namePart type="given">Lena</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-tned-1_14-cv-00222</accessId>
+ <courtType>District</courtType>
+ <courtCode>tned</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Tennessee</courtState>
+ <courtSortOrder>2471</courtSortOrder>
+ <caseNumber>1:14-cv-00222</caseNumber>
+ <caseOffice>Chattanooga</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1446pl Petition for Removal - Product Liability</cause>
+ <party fullName="Biomet Manufacturing, LLC" lastName="Biomet Manufacturing, LLC" role="Defendant"></party>
+ <party fullName="Biomet, Inc." lastName="Biomet, Inc." role="Defendant"></party>
+ <party firstName="John" fullName="John Edward Price Jr" generation="Jr" lastName="Price" middleName="Edward" role="Plaintiff"></party>
+ <party firstName="Lena" fullName="Lena Lynn Price" lastName="Price" middleName="Lynn" role="Plaintiff"></party>
+ <state>Tennessee</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-1_14-cv-00222-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_14-cv-00222/USCOURTS-tned-1_14-cv-00222-0/mods.xml">
+ <titleInfo>
+  <title>Price et al v. Biomet Manufacturing, LLC</title>
+  <subTitle>MEMORANDUM OPINION to be set forth more fully in the following Order.Signed by District Judge Thomas W Phillips on January 5, 2015. (AYB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_14-cv-00222/pdf/USCOURTS-tned-1_14-cv-00222-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8afc80</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_14-cv-00222/USCOURTS-tned-1_14-cv-00222-0</identifier>
+ <identifier type="former granule identifier">tned-1_14-cv-00222_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_14-cv-00222/USCOURTS-tned-1_14-cv-00222-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_14-cv-00222/pdf/USCOURTS-tned-1_14-cv-00222-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00222; Price et al v. Biomet Manufacturing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-1_14-cv-00222-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>MEMORANDUM OPINION to be set forth more fully in the following Order.Signed by District Judge Thomas W Phillips on January 5, 2015. (AYB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-1_14-cv-00222-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_14-cv-00222/USCOURTS-tned-1_14-cv-00222-1/mods.xml">
+ <titleInfo>
+  <title>Price et al v. Biomet Manufacturing, LLC</title>
+  <subTitle>ORDER DISMISSING CASE without prejudice. The Clerk is DIRECTED to CLOSE this case.Signed by District Judge Thomas W Phillips on January 5, 2015. (AYB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_14-cv-00222/pdf/USCOURTS-tned-1_14-cv-00222-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8afc81</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_14-cv-00222/USCOURTS-tned-1_14-cv-00222-1</identifier>
+ <identifier type="former granule identifier">tned-1_14-cv-00222_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_14-cv-00222/USCOURTS-tned-1_14-cv-00222-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_14-cv-00222/pdf/USCOURTS-tned-1_14-cv-00222-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00222; Price et al v. Biomet Manufacturing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-1_14-cv-00222-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER DISMISSING CASE without prejudice. The Clerk is DIRECTED to CLOSE this case.Signed by District Judge Thomas W Phillips on January 5, 2015. (AYB)</docketText>
+</extension>
+</relatedItem>
+</mods>

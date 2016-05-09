@@ -7,11 +7,11 @@ History:
   YYYY-MM-DD: Created by XXX
 """
 
-from datetime import datetime
 
 from lxml import html
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -72,8 +72,7 @@ class Site(OpinionSite):
             here: http://docs.python.org/2/library/datetime.html
         """
         path = '//path/to/text/text()'
-        return [datetime.strptime(date_string, '%m/%d/%Y').date()
-                for date_string in self.html.xpath(path)]
+        return [convert_date_string(date_string) for date_string in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         """ In most cases, this field should be normalized to either

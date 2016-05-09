@@ -1,0 +1,370 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee182f7085e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-07-26</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-07-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03000</identifier>
+<identifier type="local">P0b002ee182f7085e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-07-26</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-07-26</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_11-cr-03000</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_11-cr-03000</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:11-cr-03000</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jay" fullName="Jay R. Gilmore" lastName="Gilmore" middleName="R." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Gilmore</title>
+ <partNumber>4:11-cr-03000</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03000/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:11-cr-03000;11-3000</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jay R. Gilmore</displayForm>
+ <namePart type="family">Gilmore</namePart>
+ <namePart type="given">Jay</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_11-cr-03000</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:11-cr-03000</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jay" fullName="Jay R. Gilmore" lastName="Gilmore" middleName="R." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03000-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Gilmore</title>
+  <subTitle>ORDER granting 12 Motion to Continue as to Jay R. Gilmore (1). Jury Trial set for 6/13/2011 at 09:00 AM in Courtroom 4, Federal Building, 100 Centennial Mall North, Lincoln, NE before Senior Judge Warren K. Urbom. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03000-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182f74553</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-0</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03000_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03000/pdf/USCOURTS-ned-4_11-cr-03000-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03000; USA v. Gilmore; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03000-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-03-29</dateIssued>
+  <docketText>ORDER granting 12 Motion to Continue as to Jay R. Gilmore (1). Jury Trial set for 6/13/2011 at 09:00 AM in Courtroom 4, Federal Building, 100 Centennial Mall North, Lincoln, NE before Senior Judge Warren K. Urbom. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03000-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Gilmore</title>
+  <subTitle>ORDER granting 14 Motion to Continue as to Jay R. Gilmore. Jury Trial set for 8/1/2011 at 09:00 AM in Courtroom 4, Federal Building, 100 Centennial Mall North, Lincoln, NE before Senior Judge Warren K. Urbom. A conference with counsel is set for 8/1/2011 at 08:30 AM in Chambers before Senior Judge Warren K. Urbom. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03000-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182f74554</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-1</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03000_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03000/pdf/USCOURTS-ned-4_11-cr-03000-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03000; USA v. Gilmore; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03000-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-06-03</dateIssued>
+  <docketText>ORDER granting 14 Motion to Continue as to Jay R. Gilmore. Jury Trial set for 8/1/2011 at 09:00 AM in Courtroom 4, Federal Building, 100 Centennial Mall North, Lincoln, NE before Senior Judge Warren K. Urbom. A conference with counsel is set for 8/1/2011 at 08:30 AM in Chambers before Senior Judge Warren K. Urbom. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03000-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Gilmore</title>
+  <subTitle>ORDER granting 16 Motion to Continue as to Jay R. Gilmore. Jury Trial set for 10/11/2011 at 09:00 AM in Courtroom 4, Federal Building, 100 Centennial Mall North, Lincoln, NE before Senior Judge Warren K. Urbom. Conference set for 10/11/2011 at 08:30 AM in chambers before Senior Judge Warren K. Urbom. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03000-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182f74555</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-2</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03000_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03000/pdf/USCOURTS-ned-4_11-cr-03000-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03000; USA v. Gilmore; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03000-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-07-21</dateIssued>
+  <docketText>ORDER granting 16 Motion to Continue as to Jay R. Gilmore. Jury Trial set for 10/11/2011 at 09:00 AM in Courtroom 4, Federal Building, 100 Centennial Mall North, Lincoln, NE before Senior Judge Warren K. Urbom. Conference set for 10/11/2011 at 08:30 AM in chambers before Senior Judge Warren K. Urbom. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03000-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Gilmore</title>
+  <subTitle>ORDER granting 22 Oral Motion as to Jay R. Gilmore (1). Change of Plea Hearing set for 2/15/2012 10:00 AM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03000-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182f74576</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-3</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03000_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03000/pdf/USCOURTS-ned-4_11-cr-03000-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03000; USA v. Gilmore; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03000-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-01-05</dateIssued>
+  <docketText>ORDER granting 22 Oral Motion as to Jay R. Gilmore (1). Change of Plea Hearing set for 2/15/2012 10:00 AM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03000-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Gilmore</title>
+  <subTitle>MEMORANDUM AND ORDER granting 24 Oral Motion as to Jay R. Gilmore (1). Change of Plea Hearing continued to 3/1/2012 02:30 PM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. The time between today&apos;s date and the anticipated plea of guilty, shall be deemed excluded in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03000-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182f74552</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-4</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03000_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03000/pdf/USCOURTS-ned-4_11-cr-03000-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03000; USA v. Gilmore; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03000-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-02-13</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 24 Oral Motion as to Jay R. Gilmore (1). Change of Plea Hearing continued to 3/1/2012 02:30 PM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. The time between today&apos;s date and the anticipated plea of guilty, shall be deemed excluded in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03000-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Gilmore</title>
+  <subTitle>PRELIMINARY ORDER OF FORFEITURE as to Jay R. Gilmore (1). Ordered by Senior Judge Richard G. Kopf. (TEL)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03000-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182f74574</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-5</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03000_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03000/pdf/USCOURTS-ned-4_11-cr-03000-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03000; USA v. Gilmore; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03000-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-04-12</dateIssued>
+  <docketText>PRELIMINARY ORDER OF FORFEITURE as to Jay R. Gilmore (1). Ordered by Senior Judge Richard G. Kopf. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03000-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Gilmore</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to defendant Jay R. Gilmore. It is ordered that:... (2)There were no objections or motions that require resolution at sentencing.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Senior Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03000-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182f74575</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-6</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03000_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03000/pdf/USCOURTS-ned-4_11-cr-03000-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03000; USA v. Gilmore; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03000-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-05-15</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to defendant Jay R. Gilmore. It is ordered that:... (2)There were no objections or motions that require resolution at sentencing.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Senior Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03000-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Gilmore</title>
+  <subTitle>MEMORANDUM AND ORDER regarding Petition for Action on Conditions of Pretrial Release49 as to defendant Jay R. Gilmore.1) The defendant&apos;s opportunity for self-surrender is revoked. 2) If the defendant is released from detention on his pending state criminal charges, he shall be federally detained. 3) The Marshal and defendant&apos;s counsel shall promptly advise the court if the defendant becomes federally detained so that the commencement of defendant&apos;s sentence of federal incarceration can be immediately addressed. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03000-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182f74578</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-7</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03000_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03000/pdf/USCOURTS-ned-4_11-cr-03000-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03000; USA v. Gilmore; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03000-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2012-06-08</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding Petition for Action on Conditions of Pretrial Release49 as to defendant Jay R. Gilmore.1) The defendant&apos;s opportunity for self-surrender is revoked. 2) If the defendant is released from detention on his pending state criminal charges, he shall be federally detained. 3) The Marshal and defendant&apos;s counsel shall promptly advise the court if the defendant becomes federally detained so that the commencement of defendant&apos;s sentence of federal incarceration can be immediately addressed. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03000-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Gilmore</title>
+  <subTitle>FINAL ORDER OF FORFEITURE as to Jay R. Gilmore (1). The Plaintiff&apos;s Motion for Final Order of Forfeiture is hereby sustained. All right, title and interest in and to the following properties, held by any person or entity, are hereby forever barred and foreclosed. The properties described above, be, and the same hereby are, forfeited to the United States of America. The United States is directed to dispose of said properties in accordance with law. Ordered by Senior Judge Richard G. Kopf. (1 Certified copy to USM) (TEL)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03000-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182f74577</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-8</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03000_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03000/USCOURTS-ned-4_11-cr-03000-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03000/pdf/USCOURTS-ned-4_11-cr-03000-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03000; USA v. Gilmore; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03000-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2012-07-25</dateIssued>
+  <docketText>FINAL ORDER OF FORFEITURE as to Jay R. Gilmore (1). The Plaintiff&apos;s Motion for Final Order of Forfeiture is hereby sustained. All right, title and interest in and to the following properties, held by any person or entity, are hereby forever barred and foreclosed. The properties described above, be, and the same hereby are, forfeited to the United States of America. The United States is directed to dispose of said properties in accordance with law. Ordered by Senior Judge Richard G. Kopf. (1 Certified copy to USM) (TEL)</docketText>
+</extension>
+</relatedItem>
+</mods>

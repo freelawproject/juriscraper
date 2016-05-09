@@ -1,0 +1,202 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18155f54b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_05-cr-00702</identifier>
+<identifier type="local">P0b002ee18155f54b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-3_05-cr-00702</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_05-cr-00702</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:05-cr-00702</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Timothy" fullName="Timothy R. Heyman" lastName="Heyman" middleName="R." role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Heyman</title>
+ <partNumber>3:05-cr-00702</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_05-cr-00702/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:05-cr-00702;05-702</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Toledo</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Timothy R. Heyman</displayForm>
+ <namePart type="family">Heyman</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_05-cr-00702</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:05-cr-00702</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Timothy" fullName="Timothy R. Heyman" lastName="Heyman" middleName="R." role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_05-cr-00702-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_05-cr-00702/USCOURTS-ohnd-3_05-cr-00702-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Heyman</title>
+  <subTitle>Report and Recommendation on Plea of Guilty as to Timothy R. Heyman. Objections to R&amp;R due by 4/24/2007. Signed by Magistrate Judge Vernelis K. Armstrong on 4/10/2007. (S,PA)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-04-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_05-cr-00702-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18161b5dc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_05-cr-00702/USCOURTS-ohnd-3_05-cr-00702-0</identifier>
+ <identifier type="former granule identifier">ohnd-3_05-cr-00702_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_05-cr-00702/USCOURTS-ohnd-3_05-cr-00702-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_05-cr-00702/pdf/USCOURTS-ohnd-3_05-cr-00702-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:05-cr-00702; United States of America v. Heyman; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_05-cr-00702-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-04-10</dateIssued>
+  <docketText>Report and Recommendation on Plea of Guilty as to Timothy R. Heyman. Objections to R&amp;R due by 4/24/2007. Signed by Magistrate Judge Vernelis K. Armstrong on 4/10/2007. (S,PA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_05-cr-00702-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_05-cr-00702/USCOURTS-ohnd-3_05-cr-00702-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Heyman</title>
+  <subTitle>Order Adopting Report and Recommendation as to Timothy R. Heyman re 73 Report and Recommendation on Plea of Guilty. The defendant&apos;s plea of guilty is accepted and a finding of guilty shall be entered. Signed by Judge James G. Carr on 4/18/2007. (S,AL)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-04-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_05-cr-00702-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18161b70e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_05-cr-00702/USCOURTS-ohnd-3_05-cr-00702-1</identifier>
+ <identifier type="former granule identifier">ohnd-3_05-cr-00702_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_05-cr-00702/USCOURTS-ohnd-3_05-cr-00702-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_05-cr-00702/pdf/USCOURTS-ohnd-3_05-cr-00702-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:05-cr-00702; United States of America v. Heyman; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_05-cr-00702-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-04-18</dateIssued>
+  <docketText>Order Adopting Report and Recommendation as to Timothy R. Heyman re 73 Report and Recommendation on Plea of Guilty. The defendant&apos;s plea of guilty is accepted and a finding of guilty shall be entered. Signed by Judge James G. Carr on 4/18/2007. (S,AL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_05-cr-00702-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_05-cr-00702/USCOURTS-ohnd-3_05-cr-00702-2/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Heyman</title>
+  <subTitle>Judgment and Commitment as to Timothy R. Heyman as to Counts 1-4, 18-19&amp;7-13: Upon motion of Government, counts dismissed. Counts 14-15, 16-17, 5-6: 80 Months Custody; 3 yrs supervised realease w/ standard and special conditions; Fine waived; Special Assessment $600.00; Restitution of $3,411,428.22.. Judge James G. Carr on 1/30/2009. (S,AL)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_05-cr-00702-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18161b70d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_05-cr-00702/USCOURTS-ohnd-3_05-cr-00702-2</identifier>
+ <identifier type="former granule identifier">ohnd-3_05-cr-00702_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_05-cr-00702/USCOURTS-ohnd-3_05-cr-00702-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_05-cr-00702/pdf/USCOURTS-ohnd-3_05-cr-00702-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:05-cr-00702; United States of America v. Heyman; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_05-cr-00702-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-01-30</dateIssued>
+  <docketText>Judgment and Commitment as to Timothy R. Heyman as to Counts 1-4, 18-19&amp;7-13: Upon motion of Government, counts dismissed. Counts 14-15, 16-17, 5-6: 80 Months Custody; 3 yrs supervised realease w/ standard and special conditions; Fine waived; Special Assessment $600.00; Restitution of $3,411,428.22.. Judge James G. Carr on 1/30/2009. (S,AL)</docketText>
+</extension>
+</relatedItem>
+</mods>

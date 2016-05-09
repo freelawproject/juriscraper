@@ -1,0 +1,197 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c7bd4c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03744</identifier>
+<identifier type="local">P0b002ee186c7bd4c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-txnd-3_12-cv-03744</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_12-cv-03744</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:12-cv-03744</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>28:1332 Diversity-Insurance Contract</cause>
+ <party fullName="ADR Provider" lastName="ADR Provider" role="Mediator"></party>
+ <party fullName="AGCS Marine Insurance Company" lastName="AGCS Marine Insurance Company" role="Defendant"></party>
+ <party fullName="Allianz Global Risks US Insurance Company" lastName="Allianz Global Risks US Insurance Company" role="Defendant"></party>
+ <party fullName="Allianz SE" lastName="Allianz SE" role="Defendant"></party>
+ <party fullName="Allianz of America, Inc." lastName="Allianz of America, Inc." role="Defendant"></party>
+ <party fullName="MM Diamonds&amp;Jewelry" lastName="MM Diamonds&amp;Jewelry" role="Plaintiff"></party>
+ <party fullName="MM United Enterprise Inc" lastName="MM United Enterprise Inc" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>MM United Enterprise, Inc. v. AGCS Marine Insurance Company</title>
+ <partNumber>3:12-cv-03744</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03744/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:12-cv-03744;12-3744</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>Dallas</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>ADR Provider</displayForm>
+ <namePart type="family">ADR Provider</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Mediator</description>
+</name>
+<name type="personal">
+ <displayForm>AGCS Marine Insurance Company</displayForm>
+ <namePart type="family">AGCS Marine Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Allianz Global Risks US Insurance Company</displayForm>
+ <namePart type="family">Allianz Global Risks US Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Allianz SE</displayForm>
+ <namePart type="family">Allianz SE</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Allianz of America, Inc.</displayForm>
+ <namePart type="family">Allianz of America, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MM Diamonds&amp;Jewelry</displayForm>
+ <namePart type="family">MM Diamonds&amp;Jewelry</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>MM United Enterprise Inc</displayForm>
+ <namePart type="family">MM United Enterprise Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_12-cv-03744</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:12-cv-03744</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>28:1332 Diversity-Insurance Contract</cause>
+ <party fullName="ADR Provider" lastName="ADR Provider" role="Mediator"></party>
+ <party fullName="AGCS Marine Insurance Company" lastName="AGCS Marine Insurance Company" role="Defendant"></party>
+ <party fullName="Allianz Global Risks US Insurance Company" lastName="Allianz Global Risks US Insurance Company" role="Defendant"></party>
+ <party fullName="Allianz SE" lastName="Allianz SE" role="Defendant"></party>
+ <party fullName="Allianz of America, Inc." lastName="Allianz of America, Inc." role="Defendant"></party>
+ <party fullName="MM Diamonds&amp;Jewelry" lastName="MM Diamonds&amp;Jewelry" role="Plaintiff"></party>
+ <party fullName="MM United Enterprise Inc" lastName="MM United Enterprise Inc" role="Plaintiff"></party>
+ <state>Texas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cv-03744-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03744/USCOURTS-txnd-3_12-cv-03744-0/mods.xml">
+ <titleInfo>
+  <title>MM United Enterprise, Inc. v. AGCS Marine Insurance Company</title>
+  <subTitle>Memorandum Opinion and Order: The court denies 37 Plaintiffs Motion for Summary Judgment; overrules 42 Plaintiffs objections to Defendants summary judgment evidence; and denies as moot 43 Defendants Motion for Leave to File Separate Response. (Ordered by Judge Sam A Lindsay on 1/7/2014) (cea)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03744/pdf/USCOURTS-txnd-3_12-cv-03744-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186c80838</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03744/USCOURTS-txnd-3_12-cv-03744-0</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cv-03744_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03744/USCOURTS-txnd-3_12-cv-03744-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03744/pdf/USCOURTS-txnd-3_12-cv-03744-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cv-03744; MM United Enterprise, Inc. v. AGCS Marine Insurance Company; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cv-03744-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-07</dateIssued>
+  <docketText>Memorandum Opinion and Order: The court denies 37 Plaintiffs Motion for Summary Judgment; overrules 42 Plaintiffs objections to Defendants summary judgment evidence; and denies as moot 43 Defendants Motion for Leave to File Separate Response. (Ordered by Judge Sam A Lindsay on 1/7/2014) (cea)</docketText>
+</extension>
+</relatedItem>
+</mods>

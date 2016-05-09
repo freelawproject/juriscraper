@@ -1,0 +1,614 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c0c338">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-12-31</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-12-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cr-10195</identifier>
+<identifier type="local">P0b002ee186c0c338</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-12-31</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-12-31</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_11-cr-10195</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_11-cr-10195</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:11-cr-10195</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Nicolas" fullName="Nicolas Anthis" lastName="Anthis" role="Defendant"></party>
+ <party firstName="George" fullName="George Diamond" lastName="Diamond" role="Defendant"></party>
+ <party firstName="Karapet" fullName="Karapet Dzhanikyan" lastName="Dzhanikyan" role="Defendant"></party>
+ <party firstName="Domenico" fullName="Domenico Guzzi" lastName="Guzzi" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew M. Heinecke" lastName="Heinecke" middleName="M." role="Defendant"></party>
+ <party firstName="Antranic" fullName="Antranic Idanjian" lastName="Idanjian" role="Defendant"></party>
+ <party fullName="Jack" lastName="Jack" role="Defendant"></party>
+ <party firstName="Garabet" fullName="Garabet Jartidian" lastName="Jartidian" role="Defendant"></party>
+ <party firstName="Vrej" fullName="Vrej Jartidian" lastName="Jartidian" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Johnson" lastName="Johnson" role="Defendant"></party>
+ <party firstName="Sanusi" fullName="Sanusi Mo Kabba" lastName="Kabba" middleName="Mo" role="Defendant"></party>
+ <party firstName="Ilias" fullName="Ilias Kaperonis" lastName="Kaperonis" role="Defendant"></party>
+ <party firstName="Manuel" fullName="Manuel Khandjian" lastName="Khandjian" role="Defendant"></party>
+ <party fullName="Kuzz Canada" lastName="Kuzz Canada" role="Defendant"></party>
+ <party firstName="Victor" fullName="Victor Loukas" lastName="Loukas" role="Defendant"></party>
+ <party firstName="Safwan" fullName="Safwan Madarati" lastName="Madarati" role="Defendant"></party>
+ <party firstName="Ronald" fullName="Ronald J. Martinez" lastName="Martinez" middleName="J." role="Defendant"></party>
+ <party firstName="Sanusie" fullName="Sanusie Mo Kabba" lastName="Mo Kabba" role="Defendant"></party>
+ <party firstName="Antoine" fullName="Antoine Hage Moussa" lastName="Moussa" middleName="Hage" role="Defendant"></party>
+ <party fullName="Sammy" lastName="Sammy" role="Defendant"></party>
+ <party firstName="Hagop" fullName="Hagop N. Sarkissian" lastName="Sarkissian" middleName="N." role="Defendant"></party>
+ <party firstName="Nicholas" fullName="Nicholas Sotiriou" lastName="Sotiriou" role="Defendant"></party>
+ <party firstName="Vartan" fullName="Vartan A. Soukiasian" lastName="Soukiasian" middleName="A." role="Defendant"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Spinks" lastName="Spinks" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Roberto" fullName="Roberto Velasquez-Johnson" lastName="Velasquez-Johnson" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Madarati et al</title>
+ <partNumber>1:11-cr-10195</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cr-10195/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-cr-10195;11-10195</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Nicolas Anthis</displayForm>
+ <namePart type="family">Anthis</namePart>
+ <namePart type="given">Nicolas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>George Diamond</displayForm>
+ <namePart type="family">Diamond</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Karapet Dzhanikyan</displayForm>
+ <namePart type="family">Dzhanikyan</namePart>
+ <namePart type="given">Karapet</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Domenico Guzzi</displayForm>
+ <namePart type="family">Guzzi</namePart>
+ <namePart type="given">Domenico</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Matthew M. Heinecke</displayForm>
+ <namePart type="family">Heinecke</namePart>
+ <namePart type="given">Matthew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Antranic Idanjian</displayForm>
+ <namePart type="family">Idanjian</namePart>
+ <namePart type="given">Antranic</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jack</displayForm>
+ <namePart type="family">Jack</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Garabet Jartidian</displayForm>
+ <namePart type="family">Jartidian</namePart>
+ <namePart type="given">Garabet</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Vrej Jartidian</displayForm>
+ <namePart type="family">Jartidian</namePart>
+ <namePart type="given">Vrej</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sanusi Mo Kabba</displayForm>
+ <namePart type="family">Kabba</namePart>
+ <namePart type="given">Sanusi</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ilias Kaperonis</displayForm>
+ <namePart type="family">Kaperonis</namePart>
+ <namePart type="given">Ilias</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Manuel Khandjian</displayForm>
+ <namePart type="family">Khandjian</namePart>
+ <namePart type="given">Manuel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kuzz Canada</displayForm>
+ <namePart type="family">Kuzz Canada</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Victor Loukas</displayForm>
+ <namePart type="family">Loukas</namePart>
+ <namePart type="given">Victor</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Safwan Madarati</displayForm>
+ <namePart type="family">Madarati</namePart>
+ <namePart type="given">Safwan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ronald J. Martinez</displayForm>
+ <namePart type="family">Martinez</namePart>
+ <namePart type="given">Ronald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sanusie Mo Kabba</displayForm>
+ <namePart type="family">Mo Kabba</namePart>
+ <namePart type="given">Sanusie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Antoine Hage Moussa</displayForm>
+ <namePart type="family">Moussa</namePart>
+ <namePart type="given">Antoine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sammy</displayForm>
+ <namePart type="family">Sammy</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hagop N. Sarkissian</displayForm>
+ <namePart type="family">Sarkissian</namePart>
+ <namePart type="given">Hagop</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nicholas Sotiriou</displayForm>
+ <namePart type="family">Sotiriou</namePart>
+ <namePart type="given">Nicholas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Vartan A. Soukiasian</displayForm>
+ <namePart type="family">Soukiasian</namePart>
+ <namePart type="given">Vartan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey Spinks</displayForm>
+ <namePart type="family">Spinks</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Roberto Velasquez-Johnson</displayForm>
+ <namePart type="family">Velasquez-Johnson</namePart>
+ <namePart type="given">Roberto</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_11-cr-10195</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:11-cr-10195</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Nicolas" fullName="Nicolas Anthis" lastName="Anthis" role="Defendant"></party>
+ <party firstName="George" fullName="George Diamond" lastName="Diamond" role="Defendant"></party>
+ <party firstName="Karapet" fullName="Karapet Dzhanikyan" lastName="Dzhanikyan" role="Defendant"></party>
+ <party firstName="Domenico" fullName="Domenico Guzzi" lastName="Guzzi" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew M. Heinecke" lastName="Heinecke" middleName="M." role="Defendant"></party>
+ <party firstName="Antranic" fullName="Antranic Idanjian" lastName="Idanjian" role="Defendant"></party>
+ <party fullName="Jack" lastName="Jack" role="Defendant"></party>
+ <party firstName="Garabet" fullName="Garabet Jartidian" lastName="Jartidian" role="Defendant"></party>
+ <party firstName="Vrej" fullName="Vrej Jartidian" lastName="Jartidian" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Johnson" lastName="Johnson" role="Defendant"></party>
+ <party firstName="Sanusi" fullName="Sanusi Mo Kabba" lastName="Kabba" middleName="Mo" role="Defendant"></party>
+ <party firstName="Ilias" fullName="Ilias Kaperonis" lastName="Kaperonis" role="Defendant"></party>
+ <party firstName="Manuel" fullName="Manuel Khandjian" lastName="Khandjian" role="Defendant"></party>
+ <party fullName="Kuzz Canada" lastName="Kuzz Canada" role="Defendant"></party>
+ <party firstName="Victor" fullName="Victor Loukas" lastName="Loukas" role="Defendant"></party>
+ <party firstName="Safwan" fullName="Safwan Madarati" lastName="Madarati" role="Defendant"></party>
+ <party firstName="Ronald" fullName="Ronald J. Martinez" lastName="Martinez" middleName="J." role="Defendant"></party>
+ <party firstName="Sanusie" fullName="Sanusie Mo Kabba" lastName="Mo Kabba" role="Defendant"></party>
+ <party firstName="Antoine" fullName="Antoine Hage Moussa" lastName="Moussa" middleName="Hage" role="Defendant"></party>
+ <party fullName="Sammy" lastName="Sammy" role="Defendant"></party>
+ <party firstName="Hagop" fullName="Hagop N. Sarkissian" lastName="Sarkissian" middleName="N." role="Defendant"></party>
+ <party firstName="Nicholas" fullName="Nicholas Sotiriou" lastName="Sotiriou" role="Defendant"></party>
+ <party firstName="Vartan" fullName="Vartan A. Soukiasian" lastName="Soukiasian" middleName="A." role="Defendant"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Spinks" lastName="Spinks" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Roberto" fullName="Roberto Velasquez-Johnson" lastName="Velasquez-Johnson" role="Defendant"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_11-cr-10195-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Madarati et al</title>
+  <subTitle>Judge Rya W. Zobel: ORDER entered granting 87 Motion for Release from Custody as to Sanusie Mo Kabba (6); Please see order on conditions of release; (Urso, Lisa)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_11-cr-10195-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c1bda6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-0</identifier>
+ <identifier type="former granule identifier">mad-1_11-cr-10195_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cr-10195/pdf/USCOURTS-mad-1_11-cr-10195-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-10195; USA v. Madarati et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_11-cr-10195-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-09-20</dateIssued>
+  <docketText>Judge Rya W. Zobel: ORDER entered granting 87 Motion for Release from Custody as to Sanusie Mo Kabba (6); Please see order on conditions of release; (Urso, Lisa)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_11-cr-10195-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Madarati et al</title>
+  <subTitle>Judge Rya W. Zobel: ORDER entered. as to Sanusie Mo Kabba re 149 MOTION for Reconsideration re Order on Motion to Modify Conditions of Release filed by USA. However, the ruling reducing the amount of the secured bond will stand. (Urso, Lisa) Modified on 2/15/2012 (Johnson, Jay).</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_11-cr-10195-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c1bda4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-1</identifier>
+ <identifier type="former granule identifier">mad-1_11-cr-10195_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cr-10195/pdf/USCOURTS-mad-1_11-cr-10195-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-10195; USA v. Madarati et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_11-cr-10195-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-02-14</dateIssued>
+  <docketText>Judge Rya W. Zobel: ORDER entered. as to Sanusie Mo Kabba re 149 MOTION for Reconsideration re Order on Motion to Modify Conditions of Release filed by USA. However, the ruling reducing the amount of the secured bond will stand. (Urso, Lisa) Modified on 2/15/2012 (Johnson, Jay).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_11-cr-10195-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Madarati et al</title>
+  <subTitle>Magistrate Judge Judith G. Dein: ELECTRONIC ORDER entered denying 160 Motion for Bill of Particulars as to Ronald J. Martinez (9) (Quinn, Thomas)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_11-cr-10195-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c1bda8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-2</identifier>
+ <identifier type="former granule identifier">mad-1_11-cr-10195_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cr-10195/pdf/USCOURTS-mad-1_11-cr-10195-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-10195; USA v. Madarati et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_11-cr-10195-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-03-15</dateIssued>
+  <docketText>Magistrate Judge Judith G. Dein: ELECTRONIC ORDER entered denying 160 Motion for Bill of Particulars as to Ronald J. Martinez (9) (Quinn, Thomas)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_11-cr-10195-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Madarati et al</title>
+  <subTitle>Judge Rya W. Zobel: MEMORANDUM OF DECISION entered denying 235 Motion to Suppress as to Ronald J. Martinez (9) (Johnson, Jay)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_11-cr-10195-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c1bda3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-3</identifier>
+ <identifier type="former granule identifier">mad-1_11-cr-10195_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cr-10195/pdf/USCOURTS-mad-1_11-cr-10195-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-10195; USA v. Madarati et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_11-cr-10195-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-11-16</dateIssued>
+  <docketText>Judge Rya W. Zobel: MEMORANDUM OF DECISION entered denying 235 Motion to Suppress as to Ronald J. Martinez (9) (Johnson, Jay)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_11-cr-10195-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Madarati et al</title>
+  <subTitle>Judge Rya W. Zobel: ORDER entered denying 295 Motion to Dismiss as to Ronald J. Martinez (9); denying 317 Motion to Suppress as to Ronald J. Martinez (9); denying 334 Motion to Sever as to Ronald J. Martinez (9) (Urso, Lisa)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_11-cr-10195-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c1bdfc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-4</identifier>
+ <identifier type="former granule identifier">mad-1_11-cr-10195_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cr-10195/pdf/USCOURTS-mad-1_11-cr-10195-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-10195; USA v. Madarati et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_11-cr-10195-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>Judge Rya W. Zobel: ORDER entered denying 295 Motion to Dismiss as to Ronald J. Martinez (9); denying 317 Motion to Suppress as to Ronald J. Martinez (9); denying 334 Motion to Sever as to Ronald J. Martinez (9) (Urso, Lisa)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_11-cr-10195-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Madarati et al</title>
+  <subTitle>Judge Rya W. Zobel: Memorandum of Decision entered denying 237 Motion to Suppress as to Nicolas Anthis (15) (Urso, Lisa)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_11-cr-10195-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c1bda9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-5</identifier>
+ <identifier type="former granule identifier">mad-1_11-cr-10195_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cr-10195/pdf/USCOURTS-mad-1_11-cr-10195-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-10195; USA v. Madarati et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_11-cr-10195-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>Judge Rya W. Zobel: Memorandum of Decision entered denying 237 Motion to Suppress as to Nicolas Anthis (15) (Urso, Lisa)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_11-cr-10195-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Madarati et al</title>
+  <subTitle>Judge Rya W. Zobel: ORDER entered denying 351 Motion to Suppress as to Matthew M. Heinecke (20) (Urso, Lisa)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_11-cr-10195-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c1bdfd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-6</identifier>
+ <identifier type="former granule identifier">mad-1_11-cr-10195_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cr-10195/pdf/USCOURTS-mad-1_11-cr-10195-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-10195; USA v. Madarati et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_11-cr-10195-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-02-20</dateIssued>
+  <docketText>Judge Rya W. Zobel: ORDER entered denying 351 Motion to Suppress as to Matthew M. Heinecke (20) (Urso, Lisa)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_11-cr-10195-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Madarati et al</title>
+  <subTitle>Judge Rya W. Zobel: Memorandum of Decision entered denying 194 Motion to Suppress as to Sanusie Mo Kabba (6) (Urso, Lisa)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_11-cr-10195-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c1bda7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-7</identifier>
+ <identifier type="former granule identifier">mad-1_11-cr-10195_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cr-10195/pdf/USCOURTS-mad-1_11-cr-10195-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-10195; USA v. Madarati et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_11-cr-10195-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-03-04</dateIssued>
+  <docketText>Judge Rya W. Zobel: Memorandum of Decision entered denying 194 Motion to Suppress as to Sanusie Mo Kabba (6) (Urso, Lisa)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_11-cr-10195-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Madarati et al</title>
+  <subTitle>Judge Rya W. Zobel: MEMORANDUM OF DECISION entered denying 318 Motion to Suppress as to Ronald J. Martinez (9); denying 320 Motion as to Ronald J. Martinez (9) AS MOOT; denying 324 Motion to Suppress as to Ronald J. Martinez (9); denying 459 Motion to Suppress as to Ronald J. Martinez (9) (Urso, Lisa)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_11-cr-10195-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c1bdfb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-8</identifier>
+ <identifier type="former granule identifier">mad-1_11-cr-10195_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cr-10195/pdf/USCOURTS-mad-1_11-cr-10195-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-10195; USA v. Madarati et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_11-cr-10195-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-06-03</dateIssued>
+  <docketText>Judge Rya W. Zobel: MEMORANDUM OF DECISION entered denying 318 Motion to Suppress as to Ronald J. Martinez (9); denying 320 Motion as to Ronald J. Martinez (9) AS MOOT; denying 324 Motion to Suppress as to Ronald J. Martinez (9); denying 459 Motion to Suppress as to Ronald J. Martinez (9) (Urso, Lisa)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_11-cr-10195-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Madarati et al</title>
+  <subTitle>Judge Rya W. Zobel: ELECTRONIC ORDER entered denying 540 Motion for Acquittal as to Ronald J. Martinez (9); denying 542 Motion for New Trial as to Ronald J. Martinez (9) (DiBlasi, Lily)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_11-cr-10195-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c1bda5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-9</identifier>
+ <identifier type="former granule identifier">mad-1_11-cr-10195_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cr-10195/USCOURTS-mad-1_11-cr-10195-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cr-10195/pdf/USCOURTS-mad-1_11-cr-10195-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-10195; USA v. Madarati et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_11-cr-10195-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-12-30</dateIssued>
+  <docketText>Judge Rya W. Zobel: ELECTRONIC ORDER entered denying 540 Motion for Acquittal as to Ronald J. Martinez (9); denying 542 Motion for New Trial as to Ronald J. Martinez (9) (DiBlasi, Lily)</docketText>
+</extension>
+</relatedItem>
+</mods>

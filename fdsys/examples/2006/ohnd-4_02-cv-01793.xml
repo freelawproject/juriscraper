@@ -1,0 +1,442 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815cdc74">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_02-cv-01793</identifier>
+<identifier type="local">P0b002ee1815cdc74</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-4_02-cv-01793</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-4_02-cv-01793</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>4:02-cv-01793</caseNumber>
+ <caseOffice>Youngstown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>470</natureSuitCode>
+ <natureSuit>Civil (Rico)</natureSuit>
+ <cause>18:1964 Racketeering (RICO) Act</cause>
+ <party firstName="Richard" fullName="Richard Campolito" lastName="Campolito" role="Plaintiff"></party>
+ <party firstName="Aquilla" fullName="Aquilla Colvin" lastName="Colvin" role="Plaintiff"></party>
+ <party firstName="Otis" fullName="Otis Colvin" lastName="Colvin" role="Plaintiff"></party>
+ <party firstName="Lydia" fullName="Lydia A. Divins" lastName="Divins" middleName="A." role="Plaintiff"></party>
+ <party firstName="Curtis" fullName="Curtis Hayes" lastName="Hayes" role="Defendant"></party>
+ <party fullName="Hayes Financial Group, Inc." lastName="Hayes Financial Group, Inc." role="Defendant"></party>
+ <party fullName="IAC Securities, Inc." lastName="IAC Securities, Inc." role="Defendant"></party>
+ <party fullName="Inter-State Assurance Company" lastName="Inter-State Assurance Company" role="Defendant"></party>
+ <party firstName="William" fullName="William Lackey" lastName="Lackey" role="Plaintiff"></party>
+ <party firstName="Anthony" fullName="Anthony M. Livoti Jr." generation="Jr." lastName="Livoti" middleName="M." role="Defendant"></party>
+ <party firstName="Peter" fullName="Peter Lombardi" lastName="Lombardi" role="Defendant"></party>
+ <party firstName="Diane" fullName="Diane Matuz" lastName="Matuz" role="Plaintiff"></party>
+ <party firstName="Raymond" fullName="Raymond Matuz" lastName="Matuz" role="Plaintiff"></party>
+ <party firstName="Lynn" fullName="Lynn Mocker" lastName="Mocker" role="Plaintiff"></party>
+ <party firstName="Diane" fullName="Diane O. Mollica" lastName="Mollica" middleName="O." role="Plaintiff"></party>
+ <party fullName="Mutual Benefits Corp." lastName="Mutual Benefits Corp." role="Defendant"></party>
+ <party firstName="Mary" fullName="Mary Partika" lastName="Partika" role="Plaintiff"></party>
+ <party fullName="Pro Insurance Agency, Inc." lastName="Pro Insurance Agency, Inc." role="Defendant"></party>
+ <party firstName="John" fullName="John Prokop" lastName="Prokop" role="Defendant"></party>
+ <party firstName="Lisa" fullName="Lisa Marie Prokop" lastName="Prokop" middleName="Marie" role="Defendant"></party>
+ <party firstName="Gerald" fullName="Gerald J. Scheetz" lastName="Scheetz" middleName="J." role="Plaintiff"></party>
+ <party firstName="Twylah" fullName="Twylah Schmidt" lastName="Schmidt" role="Plaintiff"></party>
+ <party firstName="Andrew" fullName="Andrew C. Schmidt" lastName="Schmidt" middleName="C." role="Plaintiff"></party>
+ <party firstName="Edward" fullName="Edward Sheetz" lastName="Sheetz" role="Plaintiff"></party>
+ <party firstName="John" fullName="John Soroka" lastName="Soroka" role="Plaintiff"></party>
+ <party firstName="Olga" fullName="Olga Soroka" lastName="Soroka" role="Plaintiff"></party>
+ <party firstName="Steve" fullName="Steve Soroka" lastName="Soroka" role="Plaintiff"></party>
+ <party firstName="Lisa" fullName="Lisa Marie Tokarsky" lastName="Tokarsky" middleName="Marie" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Campolito et al v. Pro Insurance Agency, Inc. et al</title>
+ <partNumber>4:02-cv-01793</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_02-cv-01793/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:02-cv-01793;02-1793</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Youngstown</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Richard Campolito</displayForm>
+ <namePart type="family">Campolito</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Aquilla Colvin</displayForm>
+ <namePart type="family">Colvin</namePart>
+ <namePart type="given">Aquilla</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Otis Colvin</displayForm>
+ <namePart type="family">Colvin</namePart>
+ <namePart type="given">Otis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lydia A. Divins</displayForm>
+ <namePart type="family">Divins</namePart>
+ <namePart type="given">Lydia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Curtis Hayes</displayForm>
+ <namePart type="family">Hayes</namePart>
+ <namePart type="given">Curtis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hayes Financial Group, Inc.</displayForm>
+ <namePart type="family">Hayes Financial Group, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>IAC Securities, Inc.</displayForm>
+ <namePart type="family">IAC Securities, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Inter-State Assurance Company</displayForm>
+ <namePart type="family">Inter-State Assurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Lackey</displayForm>
+ <namePart type="family">Lackey</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Anthony M. Livoti Jr.</displayForm>
+ <namePart type="family">Livoti</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Peter Lombardi</displayForm>
+ <namePart type="family">Lombardi</namePart>
+ <namePart type="given">Peter</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Diane Matuz</displayForm>
+ <namePart type="family">Matuz</namePart>
+ <namePart type="given">Diane</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Raymond Matuz</displayForm>
+ <namePart type="family">Matuz</namePart>
+ <namePart type="given">Raymond</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lynn Mocker</displayForm>
+ <namePart type="family">Mocker</namePart>
+ <namePart type="given">Lynn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Diane O. Mollica</displayForm>
+ <namePart type="family">Mollica</namePart>
+ <namePart type="given">Diane</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mutual Benefits Corp.</displayForm>
+ <namePart type="family">Mutual Benefits Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mary Partika</displayForm>
+ <namePart type="family">Partika</namePart>
+ <namePart type="given">Mary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Pro Insurance Agency, Inc.</displayForm>
+ <namePart type="family">Pro Insurance Agency, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Prokop</displayForm>
+ <namePart type="family">Prokop</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lisa Marie Prokop</displayForm>
+ <namePart type="family">Prokop</namePart>
+ <namePart type="given">Lisa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gerald J. Scheetz</displayForm>
+ <namePart type="family">Scheetz</namePart>
+ <namePart type="given">Gerald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Twylah Schmidt</displayForm>
+ <namePart type="family">Schmidt</namePart>
+ <namePart type="given">Twylah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Andrew C. Schmidt</displayForm>
+ <namePart type="family">Schmidt</namePart>
+ <namePart type="given">Andrew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Edward Sheetz</displayForm>
+ <namePart type="family">Sheetz</namePart>
+ <namePart type="given">Edward</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John Soroka</displayForm>
+ <namePart type="family">Soroka</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Olga Soroka</displayForm>
+ <namePart type="family">Soroka</namePart>
+ <namePart type="given">Olga</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Steve Soroka</displayForm>
+ <namePart type="family">Soroka</namePart>
+ <namePart type="given">Steve</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lisa Marie Tokarsky</displayForm>
+ <namePart type="family">Tokarsky</namePart>
+ <namePart type="given">Lisa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-4_02-cv-01793</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>4:02-cv-01793</caseNumber>
+ <caseOffice>Youngstown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>470</natureSuitCode>
+ <natureSuit>Civil (Rico)</natureSuit>
+ <cause>18:1964 Racketeering (RICO) Act</cause>
+ <party firstName="Richard" fullName="Richard Campolito" lastName="Campolito" role="Plaintiff"></party>
+ <party firstName="Aquilla" fullName="Aquilla Colvin" lastName="Colvin" role="Plaintiff"></party>
+ <party firstName="Otis" fullName="Otis Colvin" lastName="Colvin" role="Plaintiff"></party>
+ <party firstName="Lydia" fullName="Lydia A. Divins" lastName="Divins" middleName="A." role="Plaintiff"></party>
+ <party firstName="Curtis" fullName="Curtis Hayes" lastName="Hayes" role="Defendant"></party>
+ <party fullName="Hayes Financial Group, Inc." lastName="Hayes Financial Group, Inc." role="Defendant"></party>
+ <party fullName="IAC Securities, Inc." lastName="IAC Securities, Inc." role="Defendant"></party>
+ <party fullName="Inter-State Assurance Company" lastName="Inter-State Assurance Company" role="Defendant"></party>
+ <party firstName="William" fullName="William Lackey" lastName="Lackey" role="Plaintiff"></party>
+ <party firstName="Anthony" fullName="Anthony M. Livoti Jr." generation="Jr." lastName="Livoti" middleName="M." role="Defendant"></party>
+ <party firstName="Peter" fullName="Peter Lombardi" lastName="Lombardi" role="Defendant"></party>
+ <party firstName="Diane" fullName="Diane Matuz" lastName="Matuz" role="Plaintiff"></party>
+ <party firstName="Raymond" fullName="Raymond Matuz" lastName="Matuz" role="Plaintiff"></party>
+ <party firstName="Lynn" fullName="Lynn Mocker" lastName="Mocker" role="Plaintiff"></party>
+ <party firstName="Diane" fullName="Diane O. Mollica" lastName="Mollica" middleName="O." role="Plaintiff"></party>
+ <party fullName="Mutual Benefits Corp." lastName="Mutual Benefits Corp." role="Defendant"></party>
+ <party firstName="Mary" fullName="Mary Partika" lastName="Partika" role="Plaintiff"></party>
+ <party fullName="Pro Insurance Agency, Inc." lastName="Pro Insurance Agency, Inc." role="Defendant"></party>
+ <party firstName="John" fullName="John Prokop" lastName="Prokop" role="Defendant"></party>
+ <party firstName="Lisa" fullName="Lisa Marie Prokop" lastName="Prokop" middleName="Marie" role="Defendant"></party>
+ <party firstName="Gerald" fullName="Gerald J. Scheetz" lastName="Scheetz" middleName="J." role="Plaintiff"></party>
+ <party firstName="Twylah" fullName="Twylah Schmidt" lastName="Schmidt" role="Plaintiff"></party>
+ <party firstName="Andrew" fullName="Andrew C. Schmidt" lastName="Schmidt" middleName="C." role="Plaintiff"></party>
+ <party firstName="Edward" fullName="Edward Sheetz" lastName="Sheetz" role="Plaintiff"></party>
+ <party firstName="John" fullName="John Soroka" lastName="Soroka" role="Plaintiff"></party>
+ <party firstName="Olga" fullName="Olga Soroka" lastName="Soroka" role="Plaintiff"></party>
+ <party firstName="Steve" fullName="Steve Soroka" lastName="Soroka" role="Plaintiff"></party>
+ <party firstName="Lisa" fullName="Lisa Marie Tokarsky" lastName="Tokarsky" middleName="Marie" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-4_02-cv-01793-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_02-cv-01793/USCOURTS-ohnd-4_02-cv-01793-0/mods.xml">
+ <titleInfo>
+  <title>Campolito et al v. Pro Insurance Agency, Inc. et al</title>
+  <subTitle>Order and Notice of Party Dismissal: All claims against Defendant, IAC Securities, are dismissed with prejudice. Signed by Judge Peter C. Economus on 12/22/05. (B_R, S)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-4_02-cv-01793-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816ba7a0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_02-cv-01793/USCOURTS-ohnd-4_02-cv-01793-0</identifier>
+ <identifier type="former granule identifier">ohnd-4_02-cv-01793_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_02-cv-01793/USCOURTS-ohnd-4_02-cv-01793-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_02-cv-01793/pdf/USCOURTS-ohnd-4_02-cv-01793-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:02-cv-01793; Campolito et al v. Pro Insurance Agency, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-4_02-cv-01793-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-12-22</dateIssued>
+  <docketText>Order and Notice of Party Dismissal: All claims against Defendant, IAC Securities, are dismissed with prejudice. Signed by Judge Peter C. Economus on 12/22/05. (B_R, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-4_02-cv-01793-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_02-cv-01793/USCOURTS-ohnd-4_02-cv-01793-1/mods.xml">
+ <titleInfo>
+  <title>Campolito et al v. Pro Insurance Agency, Inc. et al</title>
+  <subTitle>Report and Recommendation: It is recommended that movants&apos; motion to stay proceedings be granted in part and denied in part; it is further recommended that this matter be stayed until 4/24/06; further, it is recomended that the Court set this case for trial on or about 10/2/06, with the final pretrial to be held on or about 9/22/06, and discovery deadline and dispositive motion deadline on or about 8/31/06 (Related document 103). Signed by Magistrate Judge George J. Limbert on 12/22/05. (S, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-4_02-cv-01793-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816ba621</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_02-cv-01793/USCOURTS-ohnd-4_02-cv-01793-1</identifier>
+ <identifier type="former granule identifier">ohnd-4_02-cv-01793_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_02-cv-01793/USCOURTS-ohnd-4_02-cv-01793-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_02-cv-01793/pdf/USCOURTS-ohnd-4_02-cv-01793-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:02-cv-01793; Campolito et al v. Pro Insurance Agency, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-4_02-cv-01793-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-12-22</dateIssued>
+  <docketText>Report and Recommendation: It is recommended that movants&apos; motion to stay proceedings be granted in part and denied in part; it is further recommended that this matter be stayed until 4/24/06; further, it is recomended that the Court set this case for trial on or about 10/2/06, with the final pretrial to be held on or about 9/22/06, and discovery deadline and dispositive motion deadline on or about 8/31/06 (Related document 103). Signed by Magistrate Judge George J. Limbert on 12/22/05. (S, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-4_02-cv-01793-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_02-cv-01793/USCOURTS-ohnd-4_02-cv-01793-2/mods.xml">
+ <titleInfo>
+  <title>Campolito et al v. Pro Insurance Agency, Inc. et al</title>
+  <subTitle>Order adopting Magistrate Judge George J. Limbert&apos;s Report and Recommendation (Related Document 105). The Court orders that this case is stayed until 4/24/06. Magistrate Judge George J. Limbert&apos;s schedule shall govern this case upon the lifing of the stay. Signed by Judge Peter C. Economus on 1/24/06. (B_R, S)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-4_02-cv-01793-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816ba79f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_02-cv-01793/USCOURTS-ohnd-4_02-cv-01793-2</identifier>
+ <identifier type="former granule identifier">ohnd-4_02-cv-01793_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_02-cv-01793/USCOURTS-ohnd-4_02-cv-01793-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_02-cv-01793/pdf/USCOURTS-ohnd-4_02-cv-01793-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:02-cv-01793; Campolito et al v. Pro Insurance Agency, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-4_02-cv-01793-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-01-24</dateIssued>
+  <docketText>Order adopting Magistrate Judge George J. Limbert&apos;s Report and Recommendation (Related Document 105). The Court orders that this case is stayed until 4/24/06. Magistrate Judge George J. Limbert&apos;s schedule shall govern this case upon the lifing of the stay. Signed by Judge Peter C. Economus on 1/24/06. (B_R, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

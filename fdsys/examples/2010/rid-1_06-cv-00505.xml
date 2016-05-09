@@ -1,0 +1,354 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e8b6ba">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Rhode Island</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00505</identifier>
+<identifier type="local">P0b002ee180e8b6ba</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-rid-1_06-cv-00505</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-rid-1_06-cv-00505</accessId>
+ <courtType>District</courtType>
+ <courtCode>rid</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Rhode Island</courtState>
+ <courtSortOrder>2440</courtSortOrder>
+ <caseNumber>1:06-cv-00505</caseNumber>
+ <caseOffice>Providence</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Jeffrey" fullName="Jeffrey Aceto" lastName="Aceto" role="Defendant"></party>
+ <party fullName="Dr. Edoro" lastName="Dr. Edoro" role="Defendant"></party>
+ <party firstName="David" fullName="David McCauley" lastName="McCauley" role="Defendant"></party>
+ <party fullName="State of Rhode Island" lastName="State of Rhode Island" role="Defendant"></party>
+ <party firstName="Wayman" fullName="Wayman Turner" lastName="Turner" role="Petitioner"></party>
+ <party firstName="A." fullName="A. T. Wall" lastName="Wall" middleName="T." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Turner v. Wall et al</title>
+ <partNumber>1:06-cv-00505</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00505/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:06-cv-00505;06-505</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Rhode Island</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Providence</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey Aceto</displayForm>
+ <namePart type="family">Aceto</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dr. Edoro</displayForm>
+ <namePart type="family">Dr. Edoro</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David McCauley</displayForm>
+ <namePart type="family">McCauley</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State of Rhode Island</displayForm>
+ <namePart type="family">State of Rhode Island</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wayman Turner</displayForm>
+ <namePart type="family">Turner</namePart>
+ <namePart type="given">Wayman</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>A. T. Wall</displayForm>
+ <namePart type="family">Wall</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-rid-1_06-cv-00505</accessId>
+ <courtType>District</courtType>
+ <courtCode>rid</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Rhode Island</courtState>
+ <courtSortOrder>2440</courtSortOrder>
+ <caseNumber>1:06-cv-00505</caseNumber>
+ <caseOffice>Providence</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Jeffrey" fullName="Jeffrey Aceto" lastName="Aceto" role="Defendant"></party>
+ <party fullName="Dr. Edoro" lastName="Dr. Edoro" role="Defendant"></party>
+ <party firstName="David" fullName="David McCauley" lastName="McCauley" role="Defendant"></party>
+ <party fullName="State of Rhode Island" lastName="State of Rhode Island" role="Defendant"></party>
+ <party firstName="Wayman" fullName="Wayman Turner" lastName="Turner" role="Petitioner"></party>
+ <party firstName="A." fullName="A. T. Wall" lastName="Wall" middleName="T." role="Defendant"></party>
+ <state>Rhode Island</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00505-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-0/mods.xml">
+ <titleInfo>
+  <title>Turner v. Wall et al</title>
+  <subTitle>MEMORANDUM AND ORDER It is hereby Ordered that the Plaintiff shall submit, within twenty days (20) of the date of this order: 1.) A Certified Copy of his prison trust account statement for the six month period immediately preceding the filing of the Complaint, or from May 21, 2006 to November 21, 2006.. So Ordered by Magistrate Judge Jacob Hagopian on 11/27/2006. (Baldinelli, Doreen)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00505-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e94135</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-0</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00505_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00505/pdf/USCOURTS-rid-1_06-cv-00505-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00505; Turner v. Wall et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00505-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-11-28</dateIssued>
+  <docketText>MEMORANDUM AND ORDER It is hereby Ordered that the Plaintiff shall submit, within twenty days (20) of the date of this order: 1.) A Certified Copy of his prison trust account statement for the six month period immediately preceding the filing of the Complaint, or from May 21, 2006 to November 21, 2006.. So Ordered by Magistrate Judge Jacob Hagopian on 11/27/2006. (Baldinelli, Doreen)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00505-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-1/mods.xml">
+ <titleInfo>
+  <title>Turner v. Wall et al</title>
+  <subTitle>MEMORANDUM AND ORDER Re: 4 Motion to Appoint Counsel filed by Wayman Turner. Plaintiff&apos;s Motion to Appoint counsel is DENIED. So Ordered by Magistrate Judge Jacob Hagopian on 11/27/2006. (Baldinelli, Doreen)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00505-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e94133</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-1</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00505_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00505/pdf/USCOURTS-rid-1_06-cv-00505-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00505; Turner v. Wall et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00505-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-11-28</dateIssued>
+  <docketText>MEMORANDUM AND ORDER Re: 4 Motion to Appoint Counsel filed by Wayman Turner. Plaintiff&apos;s Motion to Appoint counsel is DENIED. So Ordered by Magistrate Judge Jacob Hagopian on 11/27/2006. (Baldinelli, Doreen)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00505-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-2/mods.xml">
+ <titleInfo>
+  <title>Turner v. Wall et al</title>
+  <subTitle>MEMORANDUM AND ORDER GRANTING 2 Motion for Leave to Proceed in forma pauperis filed by Wayman Turner. So Ordered by Magistrate Judge Jacob Hagopian on 12/12/2006. (Baldinelli, Doreen)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00505-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e94134</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-2</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00505_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00505/pdf/USCOURTS-rid-1_06-cv-00505-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00505; Turner v. Wall et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00505-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-12-14</dateIssued>
+  <docketText>MEMORANDUM AND ORDER GRANTING 2 Motion for Leave to Proceed in forma pauperis filed by Wayman Turner. So Ordered by Magistrate Judge Jacob Hagopian on 12/12/2006. (Baldinelli, Doreen)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00505-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-3/mods.xml">
+ <titleInfo>
+  <title>Turner v. Wall et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 10 Motion for Reconsideration filed by Wayman Turner, and denying 9 Motion to Appoint Counsel filed by Wayman Turner. So Ordered by Magistrate Judge Jacob Hagopian on 1/30/2007. (Baldinelli, Doreen)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00505-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e94136</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-3</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00505_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00505/pdf/USCOURTS-rid-1_06-cv-00505-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00505; Turner v. Wall et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00505-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-01-30</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 10 Motion for Reconsideration filed by Wayman Turner, and denying 9 Motion to Appoint Counsel filed by Wayman Turner. So Ordered by Magistrate Judge Jacob Hagopian on 1/30/2007. (Baldinelli, Doreen)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00505-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-4/mods.xml">
+ <titleInfo>
+  <title>Turner v. Wall et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 38 Motion to Appoint Counsel. So Ordered by Magistrate Judge Jacob Hagopian on 5/27/2008. (Vorias, Doreen)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-05-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00505-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e94137</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-4</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00505_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00505/pdf/USCOURTS-rid-1_06-cv-00505-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00505; Turner v. Wall et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00505-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-05-28</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 38 Motion to Appoint Counsel. So Ordered by Magistrate Judge Jacob Hagopian on 5/27/2008. (Vorias, Doreen)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00505-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-5/mods.xml">
+ <titleInfo>
+  <title>Turner v. Wall et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting in part and denying in part 72 Motion to Strike. So Ordered by Magistrate Judge Jacob Hagopian on 10/20/09. (Jackson, Ryan)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00505-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e94138</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-5</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00505_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00505/pdf/USCOURTS-rid-1_06-cv-00505-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00505; Turner v. Wall et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00505-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-10-20</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting in part and denying in part 72 Motion to Strike. So Ordered by Magistrate Judge Jacob Hagopian on 10/20/09. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00505-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-6/mods.xml">
+ <titleInfo>
+  <title>Turner v. Wall et al</title>
+  <subTitle>ORDER re Text Order on Motion for Extension of Time, 79 MOTION for an Extension of Time Nunc Pro Tunc filed by A. T. Wall, David McCauley, Jeffrey Aceto, 80 Answer to Amended Complaint filed by A. T. Wall, David McCauley, Jeffrey Aceto. So Ordered by Judge William E. Smith on 1/8/10. (Jackson, Ryan)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00505-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e94139</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-6</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00505_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00505/USCOURTS-rid-1_06-cv-00505-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00505/pdf/USCOURTS-rid-1_06-cv-00505-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00505; Turner v. Wall et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00505-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2010-01-08</dateIssued>
+  <docketText>ORDER re Text Order on Motion for Extension of Time, 79 MOTION for an Extension of Time Nunc Pro Tunc filed by A. T. Wall, David McCauley, Jeffrey Aceto, 80 Answer to Amended Complaint filed by A. T. Wall, David McCauley, Jeffrey Aceto. So Ordered by Judge William E. Smith on 1/8/10. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+</mods>

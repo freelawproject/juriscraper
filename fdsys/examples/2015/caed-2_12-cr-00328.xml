@@ -1,0 +1,929 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18dfb2bd2">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-11-23</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-11-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328</identifier>
+<identifier type="local">P0b002ee18dfb2bd2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-11-23</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-11-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cr-00328</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cr-00328</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cr-00328</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Robin" fullName="Robin Dimiceli" lastName="Dimiceli" role="Defendant"></party>
+ <party firstName="Leonid" fullName="Leonid Doubinski" lastName="Doubinski" role="Defendant"></party>
+ <party firstName="Volodymyr" fullName="Volodymyr Dubinsky" lastName="Dubinsky" role="Defendant"></party>
+ <party firstName="Edward" fullName="Edward Khalfin" lastName="Khalfin" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Dubinsky et al</title>
+ <partNumber>2:12-cr-00328</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cr-00328;12-328</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Robin Dimiceli</displayForm>
+ <namePart type="family">Dimiceli</namePart>
+ <namePart type="given">Robin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Leonid Doubinski</displayForm>
+ <namePart type="family">Doubinski</namePart>
+ <namePart type="given">Leonid</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Volodymyr Dubinsky</displayForm>
+ <namePart type="family">Dubinsky</namePart>
+ <namePart type="given">Volodymyr</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Edward Khalfin</displayForm>
+ <namePart type="family">Khalfin</namePart>
+ <namePart type="given">Edward</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cr-00328</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cr-00328</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Robin" fullName="Robin Dimiceli" lastName="Dimiceli" role="Defendant"></party>
+ <party firstName="Leonid" fullName="Leonid Doubinski" lastName="Doubinski" role="Defendant"></party>
+ <party firstName="Volodymyr" fullName="Volodymyr Dubinsky" lastName="Dubinsky" role="Defendant"></party>
+ <party firstName="Edward" fullName="Edward Khalfin" lastName="Khalfin" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>REQUEST AND ORDER to UNSEAL CASE as to Volodymyr Dubinsky, Leonid Doubinski, Edward Khalfin, Robin Dimiceli signed by Magistrate Judge Kendall J. Newman on 09/19/12. (Benson, A.)REQUEST AND ORDER to UNSEAL CASE as to Volodymyr Dubinsky, Leonid Doubinski, Edward Khalfin, Robin Dimiceli signed by Magistrate Judge Kendall J. Newman on 09/19/12. (Benson, A.)REQUEST AND ORDER to UNSEAL CASE as to Volodymyr Dubinsky, Leonid Doubinski, Edward Khalfin, Robin Dimiceli signed by Magistrate Judge Kendall J. Newman on 09/19/12. (Benson, A.)REQUEST AND ORDER to UNSEAL CASE as to Volodymyr Dubinsky, Leonid Doubinski, Edward Khalfin, Robin Dimiceli signed by Magistrate Judge Kendall J. Newman on 09/19/12. (Benson, A.)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc685e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-09-19</dateIssued>
+  <docketText>REQUEST AND ORDER to UNSEAL CASE as to Volodymyr Dubinsky, Leonid Doubinski, Edward Khalfin, Robin Dimiceli signed by Magistrate Judge Kendall J. Newman on 09/19/12. (Benson, A.)REQUEST AND ORDER to UNSEAL CASE as to Volodymyr Dubinsky, Leonid Doubinski, Edward Khalfin, Robin Dimiceli signed by Magistrate Judge Kendall J. Newman on 09/19/12. (Benson, A.)REQUEST AND ORDER to UNSEAL CASE as to Volodymyr Dubinsky, Leonid Doubinski, Edward Khalfin, Robin Dimiceli signed by Magistrate Judge Kendall J. Newman on 09/19/12. (Benson, A.)REQUEST AND ORDER to UNSEAL CASE as to Volodymyr Dubinsky, Leonid Doubinski, Edward Khalfin, Robin Dimiceli signed by Magistrate Judge Kendall J. Newman on 09/19/12. (Benson, A.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>ORDER FOR RELEASE OF PERSON IN CUSTODY as to Edward Khalfin, signed by Magistrate Judge Carolyn K. Delaney on 9/24/12. (Kastilahn, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc6846</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-09-24</dateIssued>
+  <docketText>ORDER FOR RELEASE OF PERSON IN CUSTODY as to Edward Khalfin, signed by Magistrate Judge Carolyn K. Delaney on 9/24/12. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>ORDER FOR RELEASE OF PERSON IN CUSTODY signed by Magistrate Judge Edmund F. Brennan on 09/28/12 as to Robin Dimiceli. (Benson, A.)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc685f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-10-02</dateIssued>
+  <docketText>ORDER FOR RELEASE OF PERSON IN CUSTODY signed by Magistrate Judge Edmund F. Brennan on 09/28/12 as to Robin Dimiceli. (Benson, A.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>STIPULATION and ORDER 28 signed by Judge William B. Shubb on 10/22/12; The Status Conference is reset for 12/17/2012 at 09:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: T4 Start: 10/22/12 Stop: 12/17/12. (Matson, R)STIPULATION and ORDER 28 signed by Judge William B. Shubb on 10/22/12; The Status Conference is reset for 12/17/2012 at 09:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: T4 Start: 10/22/12 Stop: 12/17/12. (Matson, R)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc6865</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-10-23</dateIssued>
+  <docketText>STIPULATION and ORDER 28 signed by Judge William B. Shubb on 10/22/12; The Status Conference is reset for 12/17/2012 at 09:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: T4 Start: 10/22/12 Stop: 12/17/12. (Matson, R)STIPULATION and ORDER 28 signed by Judge William B. Shubb on 10/22/12; The Status Conference is reset for 12/17/2012 at 09:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: T4 Start: 10/22/12 Stop: 12/17/12. (Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 12/17/12 ORDERING the Status Conference reset for 2/25/13 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: T4 Start: 12/17/12 Stop: 2/25/13. (Becknal, R)STIPULATION and ORDER signed by Senior Judge William B. Shubb on 12/17/12 ORDERING the Status Conference reset for 2/25/13 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: T4 Start: 12/17/12 Stop: 2/25/13. (Becknal, R)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc686f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-12-18</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 12/17/12 ORDERING the Status Conference reset for 2/25/13 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: T4 Start: 12/17/12 Stop: 2/25/13. (Becknal, R)STIPULATION and ORDER signed by Senior Judge William B. Shubb on 12/17/12 ORDERING the Status Conference reset for 2/25/13 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: T4 Start: 12/17/12 Stop: 2/25/13. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>STIPULATION and ORDER for continuance 34 signed by Senior Judge William B. Shubb on 2/15/2013 resetting the Status Conference as to defendants Robin DiMiceli and Edward Khalfin for 5/6/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable Time under Local Code T-4 started as to Edward Khalfin, Robin Dimiceli: Local Code T-4 Start: 2/25/2013 Stop: 5/6/2013. (Kirksey Smith, K)STIPULATION and ORDER for continuance 34 signed by Senior Judge William B. Shubb on 2/15/2013 resetting the Status Conference as to defendants Robin DiMiceli and Edward Khalfin for 5/6/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable Time under Local Code T-4 started as to Edward Khalfin, Robin Dimiceli: Local Code T-4 Start: 2/25/2013 Stop: 5/6/2013. (Kirksey Smith, K)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc6860</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-02-15</dateIssued>
+  <docketText>STIPULATION and ORDER for continuance 34 signed by Senior Judge William B. Shubb on 2/15/2013 resetting the Status Conference as to defendants Robin DiMiceli and Edward Khalfin for 5/6/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable Time under Local Code T-4 started as to Edward Khalfin, Robin Dimiceli: Local Code T-4 Start: 2/25/2013 Stop: 5/6/2013. (Kirksey Smith, K)STIPULATION and ORDER for continuance 34 signed by Senior Judge William B. Shubb on 2/15/2013 resetting the Status Conference as to defendants Robin DiMiceli and Edward Khalfin for 5/6/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable Time under Local Code T-4 started as to Edward Khalfin, Robin Dimiceli: Local Code T-4 Start: 2/25/2013 Stop: 5/6/2013. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>STIPULATION and ORDER 33 modifying Pretrial Release for defendant Robin DiMiceli signed by Magistrate Judge Dale A. Drozd on 2/26/2013. The Unsecured Appearance Bond dated 9/28/2013 is EXONERATED. Defendant DiMiceli has until 2/1/2013 to file a new Unsecured Appearance Bond, co-signed by Guy and Johanna Grenny. (Marciel, M)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc6870</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-6</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-02-27</dateIssued>
+  <docketText>STIPULATION and ORDER 33 modifying Pretrial Release for defendant Robin DiMiceli signed by Magistrate Judge Dale A. Drozd on 2/26/2013. The Unsecured Appearance Bond dated 9/28/2013 is EXONERATED. Defendant DiMiceli has until 2/1/2013 to file a new Unsecured Appearance Bond, co-signed by Guy and Johanna Grenny. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 5/2/13: Status Conference reset for 8/5/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: XT4 Start: 5/6/13 Stop: 8/5/13. (Manzer, C)STIPULATION and ORDER signed by Senior Judge William B. Shubb on 5/2/13: Status Conference reset for 8/5/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: XT4 Start: 5/6/13 Stop: 8/5/13. (Manzer, C)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc6866</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-7</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-05-02</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 5/2/13: Status Conference reset for 8/5/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: XT4 Start: 5/6/13 Stop: 8/5/13. (Manzer, C)STIPULATION and ORDER signed by Senior Judge William B. Shubb on 5/2/13: Status Conference reset for 8/5/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: XT4 Start: 5/6/13 Stop: 8/5/13. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 8/1/2013 ORDERING 40 Status Conference Reset for 12/2/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: XT4 Start: 8/5/2013 Stop: 12/2/2013. (Reader, L)STIPULATION and ORDER signed by Senior Judge William B. Shubb on 8/1/2013 ORDERING 40 Status Conference Reset for 12/2/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: XT4 Start: 8/5/2013 Stop: 12/2/2013. (Reader, L)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc685d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-8</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-08-02</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 8/1/2013 ORDERING 40 Status Conference Reset for 12/2/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: XT4 Start: 8/5/2013 Stop: 12/2/2013. (Reader, L)STIPULATION and ORDER signed by Senior Judge William B. Shubb on 8/1/2013 ORDERING 40 Status Conference Reset for 12/2/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: XT4 Start: 8/5/2013 Stop: 12/2/2013. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 11/21/13 ORDERING that the Status Conference hearing as to defendants Edward Khalfin and Robin Dimiceli is CONTINUED from 12/2/13 to 1/27/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Time is EXCLUDED between 12/2/13 and 1/27/14 under Local Code T4. (Mena-Sanchez, L)STIPULATION and ORDER signed by Senior Judge William B. Shubb on 11/21/13 ORDERING that the Status Conference hearing as to defendants Edward Khalfin and Robin Dimiceli is CONTINUED from 12/2/13 to 1/27/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Time is EXCLUDED between 12/2/13 and 1/27/14 under Local Code T4. (Mena-Sanchez, L)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc686b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-9</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-11-22</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 11/21/13 ORDERING that the Status Conference hearing as to defendants Edward Khalfin and Robin Dimiceli is CONTINUED from 12/2/13 to 1/27/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Time is EXCLUDED between 12/2/13 and 1/27/14 under Local Code T4. (Mena-Sanchez, L)STIPULATION and ORDER signed by Senior Judge William B. Shubb on 11/21/13 ORDERING that the Status Conference hearing as to defendants Edward Khalfin and Robin Dimiceli is CONTINUED from 12/2/13 to 1/27/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Time is EXCLUDED between 12/2/13 and 1/27/14 under Local Code T4. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 1/24/14: Status Conference RESET for 4/14/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: T-4 Start: 1/27/14 Stop: 4/14/14. (Kaminski, H)STIPULATION and ORDER signed by Senior Judge William B. Shubb on 1/24/14: Status Conference RESET for 4/14/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: T-4 Start: 1/27/14 Stop: 4/14/14. (Kaminski, H)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc6862</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-10</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2014-01-24</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 1/24/14: Status Conference RESET for 4/14/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: T-4 Start: 1/27/14 Stop: 4/14/14. (Kaminski, H)STIPULATION and ORDER signed by Senior Judge William B. Shubb on 1/24/14: Status Conference RESET for 4/14/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: T-4 Start: 1/27/14 Stop: 4/14/14. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>STIPULATION and ORDER 50 signed by Senior Judge William B. Shubb on 4/10/2014 resetting the Status Conference as to defendants Robin Dimiceli and Edward Khalfin for 5/19/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable Time started as to Edward Khalfin, Robin Dimiceli: Local Code T-4 Start: 4/14/2014 Stop: 5/19/2014. (Kirksey Smith, K)STIPULATION and ORDER 50 signed by Senior Judge William B. Shubb on 4/10/2014 resetting the Status Conference as to defendants Robin Dimiceli and Edward Khalfin for 5/19/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable Time started as to Edward Khalfin, Robin Dimiceli: Local Code T-4 Start: 4/14/2014 Stop: 5/19/2014. (Kirksey Smith, K)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc686d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-11</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2014-04-10</dateIssued>
+  <docketText>STIPULATION and ORDER 50 signed by Senior Judge William B. Shubb on 4/10/2014 resetting the Status Conference as to defendants Robin Dimiceli and Edward Khalfin for 5/19/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable Time started as to Edward Khalfin, Robin Dimiceli: Local Code T-4 Start: 4/14/2014 Stop: 5/19/2014. (Kirksey Smith, K)STIPULATION and ORDER 50 signed by Senior Judge William B. Shubb on 4/10/2014 resetting the Status Conference as to defendants Robin Dimiceli and Edward Khalfin for 5/19/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable Time started as to Edward Khalfin, Robin Dimiceli: Local Code T-4 Start: 4/14/2014 Stop: 5/19/2014. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 5/16/14 ORDERING that the Status Conference Hearing as to Defendants Edward Khalfin, and Robin Dimiceli is CONTINUED from 5/19/14 to 8/4/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Time is EXCLUDED between 5/19/14 and 8/4/14, under Local Code T4. (Mena-Sanchez, L)STIPULATION and ORDER signed by Senior Judge William B. Shubb on 5/16/14 ORDERING that the Status Conference Hearing as to Defendants Edward Khalfin, and Robin Dimiceli is CONTINUED from 5/19/14 to 8/4/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Time is EXCLUDED between 5/19/14 and 8/4/14, under Local Code T4. (Mena-Sanchez, L)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc686c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-12</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2014-05-16</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 5/16/14 ORDERING that the Status Conference Hearing as to Defendants Edward Khalfin, and Robin Dimiceli is CONTINUED from 5/19/14 to 8/4/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Time is EXCLUDED between 5/19/14 and 8/4/14, under Local Code T4. (Mena-Sanchez, L)STIPULATION and ORDER signed by Senior Judge William B. Shubb on 5/16/14 ORDERING that the Status Conference Hearing as to Defendants Edward Khalfin, and Robin Dimiceli is CONTINUED from 5/19/14 to 8/4/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Time is EXCLUDED between 5/19/14 and 8/4/14, under Local Code T4. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>STIPULATION AND ORDER signed by Magistrate Judge Edmund F. Brennan on 6/3/2014 AMENDING the 24 Special Conditions of Release for Robin Dimiceli. (Michel, G)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc6867</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-13</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2014-06-03</dateIssued>
+  <docketText>STIPULATION AND ORDER signed by Magistrate Judge Edmund F. Brennan on 6/3/2014 AMENDING the 24 Special Conditions of Release for Robin Dimiceli. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>STIPULATION and ORDER as to Edward Khalfin, and Robin Dimiceli, signed by Senior Judge William B. Shubb on 7/25/14 ORDERING that the Status Conference is CONTINUED to 10/6/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, and Robin Dimiceli: XT4 Start: 8/4/14, Stop: 10/6/14. (Kastilahn, A)STIPULATION and ORDER as to Edward Khalfin, and Robin Dimiceli, signed by Senior Judge William B. Shubb on 7/25/14 ORDERING that the Status Conference is CONTINUED to 10/6/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, and Robin Dimiceli: XT4 Start: 8/4/14, Stop: 10/6/14. (Kastilahn, A)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc6869</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-14</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2014-07-28</dateIssued>
+  <docketText>STIPULATION and ORDER as to Edward Khalfin, and Robin Dimiceli, signed by Senior Judge William B. Shubb on 7/25/14 ORDERING that the Status Conference is CONTINUED to 10/6/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, and Robin Dimiceli: XT4 Start: 8/4/14, Stop: 10/6/14. (Kastilahn, A)STIPULATION and ORDER as to Edward Khalfin, and Robin Dimiceli, signed by Senior Judge William B. Shubb on 7/25/14 ORDERING that the Status Conference is CONTINUED to 10/6/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, and Robin Dimiceli: XT4 Start: 8/4/14, Stop: 10/6/14. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>STIPULATION and ORDER 58 for continuance signed by Senior Judge William B. Shubb on 10/3/2014. Status Conference, as to Edward Khalfin and Robin Dimiceli, is RE-SET for 12/8/2014 at 9:30 AM in Courtroom 5 (WBS). Excludable Time (T4): Start Date - 10/6/2014 through Stop Date - 12/8/2014 (Marciel, M)STIPULATION and ORDER 58 for continuance signed by Senior Judge William B. Shubb on 10/3/2014. Status Conference, as to Edward Khalfin and Robin Dimiceli, is RE-SET for 12/8/2014 at 9:30 AM in Courtroom 5 (WBS). Excludable Time (T4): Start Date - 10/6/2014 through Stop Date - 12/8/2014 (Marciel, M)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc686a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-15</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2014-10-06</dateIssued>
+  <docketText>STIPULATION and ORDER 58 for continuance signed by Senior Judge William B. Shubb on 10/3/2014. Status Conference, as to Edward Khalfin and Robin Dimiceli, is RE-SET for 12/8/2014 at 9:30 AM in Courtroom 5 (WBS). Excludable Time (T4): Start Date - 10/6/2014 through Stop Date - 12/8/2014 (Marciel, M)STIPULATION and ORDER 58 for continuance signed by Senior Judge William B. Shubb on 10/3/2014. Status Conference, as to Edward Khalfin and Robin Dimiceli, is RE-SET for 12/8/2014 at 9:30 AM in Courtroom 5 (WBS). Excludable Time (T4): Start Date - 10/6/2014 through Stop Date - 12/8/2014 (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>STIPULATION and ORDER 66 signed by Senior Judge William B. Shubb on 1/5/2014 continuing hearing date on Defendant Robin Dimiceli&apos;s Motion to Sever to 4/20/2015 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. (Kirksey Smith, K)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc6872</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-16</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>STIPULATION and ORDER 66 signed by Senior Judge William B. Shubb on 1/5/2014 continuing hearing date on Defendant Robin Dimiceli&apos;s Motion to Sever to 4/20/2015 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-17/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>STIPULATION and ORDER as to Edward Khalfin, Robin Dimiceli signed by Senior Judge William B. Shubb on 1/12/15: Motion Hearing reset for 4/20/2015 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Status Conference reset for 4/20/2015 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: XT4 Start: 1/12/15 Stop: 4/20/15. (Manzer, C)STIPULATION and ORDER as to Edward Khalfin, Robin Dimiceli signed by Senior Judge William B. Shubb on 1/12/15: Motion Hearing reset for 4/20/2015 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Status Conference reset for 4/20/2015 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: XT4 Start: 1/12/15 Stop: 4/20/15. (Manzer, C)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc686e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-17</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2015-01-13</dateIssued>
+  <docketText>STIPULATION and ORDER as to Edward Khalfin, Robin Dimiceli signed by Senior Judge William B. Shubb on 1/12/15: Motion Hearing reset for 4/20/2015 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Status Conference reset for 4/20/2015 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: XT4 Start: 1/12/15 Stop: 4/20/15. (Manzer, C)STIPULATION and ORDER as to Edward Khalfin, Robin Dimiceli signed by Senior Judge William B. Shubb on 1/12/15: Motion Hearing reset for 4/20/2015 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Status Conference reset for 4/20/2015 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Edward Khalfin, Robin Dimiceli: XT4 Start: 1/12/15 Stop: 4/20/15. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-18/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>ORDER RE: SCHEDULING TRIAL AND EXCLUDING TIME UNDER SPEEDY TRIAL ACT as to Edward Khalfin, Robin Dimiceli 72 signed by Senior Judge William B. Shubb on 4/20/2015: The Court excluded time from 4/20/2015, to, and including, 10/27/2015, from computation of time within which the trial of this matter must be commenced, pursuant to Local Code T4. (Kirksey Smith, K)ORDER RE: SCHEDULING TRIAL AND EXCLUDING TIME UNDER SPEEDY TRIAL ACT as to Edward Khalfin, Robin Dimiceli 72 signed by Senior Judge William B. Shubb on 4/20/2015: The Court excluded time from 4/20/2015, to, and including, 10/27/2015, from computation of time within which the trial of this matter must be commenced, pursuant to Local Code T4. (Kirksey Smith, K)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-18.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc6847</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-18</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2015-04-21</dateIssued>
+  <docketText>ORDER RE: SCHEDULING TRIAL AND EXCLUDING TIME UNDER SPEEDY TRIAL ACT as to Edward Khalfin, Robin Dimiceli 72 signed by Senior Judge William B. Shubb on 4/20/2015: The Court excluded time from 4/20/2015, to, and including, 10/27/2015, from computation of time within which the trial of this matter must be commenced, pursuant to Local Code T4. (Kirksey Smith, K)ORDER RE: SCHEDULING TRIAL AND EXCLUDING TIME UNDER SPEEDY TRIAL ACT as to Edward Khalfin, Robin Dimiceli 72 signed by Senior Judge William B. Shubb on 4/20/2015: The Court excluded time from 4/20/2015, to, and including, 10/27/2015, from computation of time within which the trial of this matter must be commenced, pursuant to Local Code T4. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-19/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>STIPULATION and ORDER to Take the Deposition of Howard Wing 88 signed by Senior Judge William B. Shubb on 9/14/2015. (Kirksey Smith, K)STIPULATION and ORDER to Take the Deposition of Howard Wing 88 signed by Senior Judge William B. Shubb on 9/14/2015. (Kirksey Smith, K)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-09-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-19.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc6863</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-19</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2015-09-14</dateIssued>
+  <docketText>STIPULATION and ORDER to Take the Deposition of Howard Wing 88 signed by Senior Judge William B. Shubb on 9/14/2015. (Kirksey Smith, K)STIPULATION and ORDER to Take the Deposition of Howard Wing 88 signed by Senior Judge William B. Shubb on 9/14/2015. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-20/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 9/21/2015 GRANTING 91 USA&apos;s MOTION To Immunize Witness and Compel Testimony of Howard King. (Kirksey Smith, K)ORDER signed by Senior Judge William B. Shubb on 9/21/2015 GRANTING 91 USA&apos;s MOTION To Immunize Witness and Compel Testimony of Howard King. (Kirksey Smith, K)ORDER signed by Senior Judge William B. Shubb on 9/21/2015 GRANTING 91 USA&apos;s MOTION To Immunize Witness and Compel Testimony of Howard King. (Kirksey Smith, K)ORDER signed by Senior Judge William B. Shubb on 9/21/2015 GRANTING 91 USA&apos;s MOTION To Immunize Witness and Compel Testimony of Howard King. (Kirksey Smith, K)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-09-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-20.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc6849</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-20</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2015-09-21</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 9/21/2015 GRANTING 91 USA&apos;s MOTION To Immunize Witness and Compel Testimony of Howard King. (Kirksey Smith, K)ORDER signed by Senior Judge William B. Shubb on 9/21/2015 GRANTING 91 USA&apos;s MOTION To Immunize Witness and Compel Testimony of Howard King. (Kirksey Smith, K)ORDER signed by Senior Judge William B. Shubb on 9/21/2015 GRANTING 91 USA&apos;s MOTION To Immunize Witness and Compel Testimony of Howard King. (Kirksey Smith, K)ORDER signed by Senior Judge William B. Shubb on 9/21/2015 GRANTING 91 USA&apos;s MOTION To Immunize Witness and Compel Testimony of Howard King. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-21/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 10/26/2015 GRANTING 109 USA&apos;s Request to Dismiss Counts 18 and 36 of the Indictment as to Edward Khalfin. (Kirksey Smith, K)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-10-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-21.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc6868</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-21</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2015-10-26</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 10/26/2015 GRANTING 109 USA&apos;s Request to Dismiss Counts 18 and 36 of the Indictment as to Edward Khalfin. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-22/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 10/30/2015 GRANTING government&apos;s 119 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony of Mariko Wing. Not testimony or other information compelled under this Order, or any information directly or indirectly derived from such testimony or other information, shall be used against Mariko Wing in any criminal case. Except that Mariko Wing shall NOT be exempted by this Order from prosecution for perjery, giving a false statement pursuant to this Order, or otherwise failing to comply with Order and that immunity be granted herein. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 10/30/2015 GRANTING government&apos;s 119 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony of Mariko Wing. Not testimony or other information compelled under this Order, or any information directly or indirectly derived from such testimony or other information, shall be used against Mariko Wing in any criminal case. Except that Mariko Wing shall NOT be exempted by this Order from prosecution for perjery, giving a false statement pursuant to this Order, or otherwise failing to comply with Order and that immunity be granted herein. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 10/30/2015 GRANTING government&apos;s 119 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony of Mariko Wing. Not testimony or other information compelled under this Order, or any information directly or indirectly derived from such testimony or other information, shall be used against Mariko Wing in any criminal case. Except that Mariko Wing shall NOT be exempted by this Order from prosecution for perjery, giving a false statement pursuant to this Order, or otherwise failing to comply with Order and that immunity be granted herein. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 10/30/2015 GRANTING government&apos;s 119 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony of Mariko Wing. Not testimony or other information compelled under this Order, or any information directly or indirectly derived from such testimony or other information, shall be used against Mariko Wing in any criminal case. Except that Mariko Wing shall NOT be exempted by this Order from prosecution for perjery, giving a false statement pursuant to this Order, or otherwise failing to comply with Order and that immunity be granted herein. (Marciel, M)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-10-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-22.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc6871</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-22</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2015-10-30</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 10/30/2015 GRANTING government&apos;s 119 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony of Mariko Wing. Not testimony or other information compelled under this Order, or any information directly or indirectly derived from such testimony or other information, shall be used against Mariko Wing in any criminal case. Except that Mariko Wing shall NOT be exempted by this Order from prosecution for perjery, giving a false statement pursuant to this Order, or otherwise failing to comply with Order and that immunity be granted herein. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 10/30/2015 GRANTING government&apos;s 119 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony of Mariko Wing. Not testimony or other information compelled under this Order, or any information directly or indirectly derived from such testimony or other information, shall be used against Mariko Wing in any criminal case. Except that Mariko Wing shall NOT be exempted by this Order from prosecution for perjery, giving a false statement pursuant to this Order, or otherwise failing to comply with Order and that immunity be granted herein. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 10/30/2015 GRANTING government&apos;s 119 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony of Mariko Wing. Not testimony or other information compelled under this Order, or any information directly or indirectly derived from such testimony or other information, shall be used against Mariko Wing in any criminal case. Except that Mariko Wing shall NOT be exempted by this Order from prosecution for perjery, giving a false statement pursuant to this Order, or otherwise failing to comply with Order and that immunity be granted herein. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 10/30/2015 GRANTING government&apos;s 119 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony of Mariko Wing. Not testimony or other information compelled under this Order, or any information directly or indirectly derived from such testimony or other information, shall be used against Mariko Wing in any criminal case. Except that Mariko Wing shall NOT be exempted by this Order from prosecution for perjery, giving a false statement pursuant to this Order, or otherwise failing to comply with Order and that immunity be granted herein. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-23/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 11/3/2015 GRANTING government&apos;s 128 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Ilya Rybchenko. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 11/3/2015 GRANTING government&apos;s 128 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Ilya Rybchenko. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 11/3/2015 GRANTING government&apos;s 128 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Ilya Rybchenko. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 11/3/2015 GRANTING government&apos;s 128 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Ilya Rybchenko. (Marciel, M)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-11-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-23.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc685b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-23</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2015-11-03</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 11/3/2015 GRANTING government&apos;s 128 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Ilya Rybchenko. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 11/3/2015 GRANTING government&apos;s 128 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Ilya Rybchenko. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 11/3/2015 GRANTING government&apos;s 128 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Ilya Rybchenko. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 11/3/2015 GRANTING government&apos;s 128 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Ilya Rybchenko. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-24/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 11/4/2015 GRANTING government&apos;s 131 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Gina McRae. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 11/4/2015 GRANTING government&apos;s 131 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Gina McRae. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 11/4/2015 GRANTING government&apos;s 131 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Gina McRae. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 11/4/2015 GRANTING government&apos;s 131 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Gina McRae. (Marciel, M)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-11-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-24.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc6861</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-24</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2015-11-04</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 11/4/2015 GRANTING government&apos;s 131 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Gina McRae. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 11/4/2015 GRANTING government&apos;s 131 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Gina McRae. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 11/4/2015 GRANTING government&apos;s 131 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Gina McRae. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 11/4/2015 GRANTING government&apos;s 131 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Gina McRae. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-25/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 11/4/2015 GRANTING government&apos;s 133 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Jhonvieve Soria. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 11/4/2015 GRANTING government&apos;s 133 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Jhonvieve Soria. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 11/4/2015 GRANTING government&apos;s 133 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Jhonvieve Soria. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 11/4/2015 GRANTING government&apos;s 133 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Jhonvieve Soria. (Marciel, M)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-11-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-25.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc685c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-25</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2015-11-04</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 11/4/2015 GRANTING government&apos;s 133 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Jhonvieve Soria. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 11/4/2015 GRANTING government&apos;s 133 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Jhonvieve Soria. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 11/4/2015 GRANTING government&apos;s 133 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Jhonvieve Soria. (Marciel, M)ORDER signed by Senior Judge William B. Shubb on 11/4/2015 GRANTING government&apos;s 133 Motion for Order pursuant to 18 USC 6002-6003 granting immunity and requiring testimony - Jhonvieve Soria. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-26/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>STIPULATION AND ORDER signed by Senior Judge William B. Shubb on 11/19/2015 CONTINUING Judgment and Sentencing for Edward Khalfin to 5/23/2016 at 09:00 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. (Michel, G.)</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-11-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-26.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc6848</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-26</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2015-11-20</dateIssued>
+  <docketText>STIPULATION AND ORDER signed by Senior Judge William B. Shubb on 11/19/2015 CONTINUING Judgment and Sentencing for Edward Khalfin to 5/23/2016 at 09:00 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. (Michel, G.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00328-27" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-27/mods.xml">
+ <titleInfo>
+  <title>USA v. Dubinsky et al</title>
+  <subTitle>STIPULATION AND ORDER signed by Senior Judge William B. Shubb on 11/19/2015 CONTINUING Judgment and Sentencing for Robin Dimiceli to 5/23/2016 at 09:00 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. (Michel, G.)</subTitle>
+  <partNumber>27</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-11-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-27.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dfc6864</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-27</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00328_27.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00328/USCOURTS-caed-2_12-cr-00328-27/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00328/pdf/USCOURTS-caed-2_12-cr-00328-27.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00328; USA v. Dubinsky et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00328-27</accessId>
+  <sequenceNumber>27</sequenceNumber>
+  <dateIssued>2015-11-20</dateIssued>
+  <docketText>STIPULATION AND ORDER signed by Senior Judge William B. Shubb on 11/19/2015 CONTINUING Judgment and Sentencing for Robin Dimiceli to 5/23/2016 at 09:00 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. (Michel, G.)</docketText>
+</extension>
+</relatedItem>
+</mods>

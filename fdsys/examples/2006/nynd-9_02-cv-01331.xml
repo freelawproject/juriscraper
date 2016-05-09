@@ -1,0 +1,214 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18118c2ef">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_02-cv-01331</identifier>
+<identifier type="local">P0b002ee18118c2ef</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-9_02-cv-01331</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_02-cv-01331</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:02-cv-01331</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Ishmael" fullName="Ishmael Cruz" lastName="Cruz" role="Defendant"></party>
+ <party firstName="Glenn" fullName="Glenn S. Goord" lastName="Goord" middleName="S." role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel Senkowski" lastName="Senkowski" role="Defendant"></party>
+ <party fullName="State of New York, Executive Department, Division of Parole" lastName="State of New York, Executive Department, Division of Parole" role="Defendant"></party>
+ <party firstName="Joy" fullName="Joy Trembly" lastName="Trembly" role="Defendant"></party>
+ <party firstName="Stanley" fullName="Stanley Whitted" lastName="Whitted" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Whitted v. NYS Div. of Parole, et al</title>
+ <partNumber>9:02-cv-01331</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_02-cv-01331/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">9:02-cv-01331;02-1331</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Prisoner</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ishmael Cruz</displayForm>
+ <namePart type="family">Cruz</namePart>
+ <namePart type="given">Ishmael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Glenn S. Goord</displayForm>
+ <namePart type="family">Goord</namePart>
+ <namePart type="given">Glenn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Senkowski</displayForm>
+ <namePart type="family">Senkowski</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State of New York, Executive Department, Division of Parole</displayForm>
+ <namePart type="family">State of New York, Executive Department, Division of Parole</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joy Trembly</displayForm>
+ <namePart type="family">Trembly</namePart>
+ <namePart type="given">Joy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Stanley Whitted</displayForm>
+ <namePart type="family">Whitted</namePart>
+ <namePart type="given">Stanley</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_02-cv-01331</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:02-cv-01331</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Ishmael" fullName="Ishmael Cruz" lastName="Cruz" role="Defendant"></party>
+ <party firstName="Glenn" fullName="Glenn S. Goord" lastName="Goord" middleName="S." role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel Senkowski" lastName="Senkowski" role="Defendant"></party>
+ <party fullName="State of New York, Executive Department, Division of Parole" lastName="State of New York, Executive Department, Division of Parole" role="Defendant"></party>
+ <party firstName="Joy" fullName="Joy Trembly" lastName="Trembly" role="Defendant"></party>
+ <party firstName="Stanley" fullName="Stanley Whitted" lastName="Whitted" role="Plaintiff"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_02-cv-01331-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_02-cv-01331/USCOURTS-nynd-9_02-cv-01331-0/mods.xml">
+ <titleInfo>
+  <title>Whitted v. NYS Div. of Parole, et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS that the 22 First MOTION for Summary Judgment filed by Daniel Senkowski, Glenn S. Goord, Ishmael Cruz be Granted. Objections to R&amp;R due by 9/9/2005. Signed by Judge George H. Lowe on 8/25/05. (rjb, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_02-cv-01331-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18142a9e2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_02-cv-01331/USCOURTS-nynd-9_02-cv-01331-0</identifier>
+ <identifier type="former granule identifier">nynd-9_02-cv-01331_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_02-cv-01331/USCOURTS-nynd-9_02-cv-01331-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_02-cv-01331/pdf/USCOURTS-nynd-9_02-cv-01331-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:02-cv-01331; Whitted v. NYS Div. of Parole, et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_02-cv-01331-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-08-25</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS that the 22 First MOTION for Summary Judgment filed by Daniel Senkowski, Glenn S. Goord, Ishmael Cruz be Granted. Objections to R&amp;R due by 9/9/2005. Signed by Judge George H. Lowe on 8/25/05. (rjb, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_02-cv-01331-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_02-cv-01331/USCOURTS-nynd-9_02-cv-01331-1/mods.xml">
+ <titleInfo>
+  <title>Whitted v. NYS Div. of Parole, et al</title>
+  <subTitle>ORDER that the Report-Recommendations of Magistrate Judge Lowe is accepted and adopted in whole; granting 22 Motion for Summary Judgment, plaintiff&apos;s claims against defendants Goord, Senkowski and Cruz are DISMISSED WITH PREJUDICE; plaintiff&apos;s claim against defendant Trembly is DISMISSED WITHOUT PREJUDICE. Signed by Judge David N. Hurd on 1/3/06. (nas)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_02-cv-01331-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18142a9e1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_02-cv-01331/USCOURTS-nynd-9_02-cv-01331-1</identifier>
+ <identifier type="former granule identifier">nynd-9_02-cv-01331_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_02-cv-01331/USCOURTS-nynd-9_02-cv-01331-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_02-cv-01331/pdf/USCOURTS-nynd-9_02-cv-01331-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:02-cv-01331; Whitted v. NYS Div. of Parole, et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_02-cv-01331-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-01-03</dateIssued>
+  <docketText>ORDER that the Report-Recommendations of Magistrate Judge Lowe is accepted and adopted in whole; granting 22 Motion for Summary Judgment, plaintiff&apos;s claims against defendants Goord, Senkowski and Cruz are DISMISSED WITH PREJUDICE; plaintiff&apos;s claim against defendant Trembly is DISMISSED WITHOUT PREJUDICE. Signed by Judge David N. Hurd on 1/3/06. (nas)</docketText>
+</extension>
+</relatedItem>
+</mods>

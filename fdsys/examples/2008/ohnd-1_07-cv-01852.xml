@@ -1,0 +1,296 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815cfe8d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-01852</identifier>
+<identifier type="local">P0b002ee1815cfe8d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_07-cv-01852</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_07-cv-01852</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:07-cv-01852</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Roberta" fullName="Roberta Barb" lastName="Barb" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Battiato" lastName="Battiato" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe 1" lastName="Doe 1" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe 2" lastName="Doe 2" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe 3" lastName="Doe 3" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe 4" lastName="Doe 4" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe 5" lastName="Doe 5" role="Defendant"></party>
+ <party firstName="Melissa" fullName="Melissa Flick" lastName="Flick" role="Defendant"></party>
+ <party firstName="Melanie" fullName="Melanie Hale" lastName="Hale" role="Defendant"></party>
+ <party firstName="Emily" fullName="Emily Hazel" lastName="Hazel" role="Defendant"></party>
+ <party firstName="Art" fullName="Art Iacofano" lastName="Iacofano" role="Defendant"></party>
+ <party fullName="Lake County Department of Job and Family Services" lastName="Lake County Department of Job and Family Services" role="Defendant"></party>
+ <party firstName="Jaime" fullName="Jaime Lette" lastName="Lette" role="Defendant"></party>
+ <party firstName="Danielle" fullName="Danielle Moore" lastName="Moore" role="Plaintiff"></party>
+ <party firstName="Jianna" fullName="Jianna Moore" lastName="Moore" role="Plaintiff"></party>
+ <party firstName="Teresa" fullName="Teresa Palm" lastName="Palm" role="Defendant"></party>
+ <party firstName="Frederick" fullName="Frederick Waterwash" lastName="Waterwash" role="Plaintiff"></party>
+ <party firstName="Erin" fullName="Erin Whipple" lastName="Whipple" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Moore et al v. Lake County Department of Job and Family Services et al</title>
+ <partNumber>1:07-cv-01852</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-01852/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:07-cv-01852;07-1852</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Roberta Barb</displayForm>
+ <namePart type="family">Barb</namePart>
+ <namePart type="given">Roberta</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Matthew Battiato</displayForm>
+ <namePart type="family">Battiato</namePart>
+ <namePart type="given">Matthew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe 1</displayForm>
+ <namePart type="family">Doe 1</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe 2</displayForm>
+ <namePart type="family">Doe 2</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe 3</displayForm>
+ <namePart type="family">Doe 3</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe 4</displayForm>
+ <namePart type="family">Doe 4</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe 5</displayForm>
+ <namePart type="family">Doe 5</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Melissa Flick</displayForm>
+ <namePart type="family">Flick</namePart>
+ <namePart type="given">Melissa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Melanie Hale</displayForm>
+ <namePart type="family">Hale</namePart>
+ <namePart type="given">Melanie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Emily Hazel</displayForm>
+ <namePart type="family">Hazel</namePart>
+ <namePart type="given">Emily</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Art Iacofano</displayForm>
+ <namePart type="family">Iacofano</namePart>
+ <namePart type="given">Art</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lake County Department of Job and Family Services</displayForm>
+ <namePart type="family">Lake County Department of Job and Family Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jaime Lette</displayForm>
+ <namePart type="family">Lette</namePart>
+ <namePart type="given">Jaime</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Danielle Moore</displayForm>
+ <namePart type="family">Moore</namePart>
+ <namePart type="given">Danielle</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jianna Moore</displayForm>
+ <namePart type="family">Moore</namePart>
+ <namePart type="given">Jianna</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Teresa Palm</displayForm>
+ <namePart type="family">Palm</namePart>
+ <namePart type="given">Teresa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Frederick Waterwash</displayForm>
+ <namePart type="family">Waterwash</namePart>
+ <namePart type="given">Frederick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Erin Whipple</displayForm>
+ <namePart type="family">Whipple</namePart>
+ <namePart type="given">Erin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_07-cv-01852</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:07-cv-01852</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Roberta" fullName="Roberta Barb" lastName="Barb" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Battiato" lastName="Battiato" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe 1" lastName="Doe 1" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe 2" lastName="Doe 2" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe 3" lastName="Doe 3" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe 4" lastName="Doe 4" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe 5" lastName="Doe 5" role="Defendant"></party>
+ <party firstName="Melissa" fullName="Melissa Flick" lastName="Flick" role="Defendant"></party>
+ <party firstName="Melanie" fullName="Melanie Hale" lastName="Hale" role="Defendant"></party>
+ <party firstName="Emily" fullName="Emily Hazel" lastName="Hazel" role="Defendant"></party>
+ <party firstName="Art" fullName="Art Iacofano" lastName="Iacofano" role="Defendant"></party>
+ <party fullName="Lake County Department of Job and Family Services" lastName="Lake County Department of Job and Family Services" role="Defendant"></party>
+ <party firstName="Jaime" fullName="Jaime Lette" lastName="Lette" role="Defendant"></party>
+ <party firstName="Danielle" fullName="Danielle Moore" lastName="Moore" role="Plaintiff"></party>
+ <party firstName="Jianna" fullName="Jianna Moore" lastName="Moore" role="Plaintiff"></party>
+ <party firstName="Teresa" fullName="Teresa Palm" lastName="Palm" role="Defendant"></party>
+ <party firstName="Frederick" fullName="Frederick Waterwash" lastName="Waterwash" role="Plaintiff"></party>
+ <party firstName="Erin" fullName="Erin Whipple" lastName="Whipple" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_07-cv-01852-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-01852/USCOURTS-ohnd-1_07-cv-01852-0/mods.xml">
+ <titleInfo>
+  <title>Moore et al v. Lake County Department of Job and Family Services et al</title>
+  <subTitle>Memorandum Opinion and Order that: Plaintiffs&apos; motion to compel is granted in part. The Court finds disclosure of all documents in the possession of the Lorain County Department of Job and Family Services referencing Jianna Moore and all documents referencing foster parents Ray and Lisa Knapp to be appropriate. As stated in the Protective Order entered contemporaneously herewith, said documents shall be produced to Plaintiffs&apos; named Counsel for review by Plaintiffs&apos; named Counsel only. Plaintiffs&apos; named Counsel may review the disclosed documents and, in the event additional disclosure is necessary, may request additional access from the Court. (Related Doc # 8). Signed by Judge Donald C. Nugent on 12/24/2007.(B,B)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_07-cv-01852-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816cb83e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-01852/USCOURTS-ohnd-1_07-cv-01852-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_07-cv-01852_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-01852/USCOURTS-ohnd-1_07-cv-01852-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-01852/pdf/USCOURTS-ohnd-1_07-cv-01852-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-01852; Moore et al v. Lake County Department of Job and Family Services et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_07-cv-01852-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-02</dateIssued>
+  <docketText>Memorandum Opinion and Order that: Plaintiffs&apos; motion to compel is granted in part. The Court finds disclosure of all documents in the possession of the Lorain County Department of Job and Family Services referencing Jianna Moore and all documents referencing foster parents Ray and Lisa Knapp to be appropriate. As stated in the Protective Order entered contemporaneously herewith, said documents shall be produced to Plaintiffs&apos; named Counsel for review by Plaintiffs&apos; named Counsel only. Plaintiffs&apos; named Counsel may review the disclosed documents and, in the event additional disclosure is necessary, may request additional access from the Court. (Related Doc # 8). Signed by Judge Donald C. Nugent on 12/24/2007.(B,B)</docketText>
+</extension>
+</relatedItem>
+</mods>

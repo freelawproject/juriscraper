@@ -1,0 +1,909 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18e278c72">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-12-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-12-16</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200</identifier>
+<identifier type="local">P0b002ee18e278c72</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-12-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-12-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_13-cr-10200</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_13-cr-10200</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:13-cr-10200</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="American Broadcasting Companies, Inc." lastName="American Broadcasting Companies, Inc." role="Interested Party"></party>
+ <party fullName="American Civil Liberties Union Foundation of Massachusetts" lastName="American Civil Liberties Union Foundation of Massachusetts" role="Interested Party"></party>
+ <party fullName="Boston Globe Media Partners, LLC" lastName="Boston Globe Media Partners, LLC" role="Interested Party"></party>
+ <party fullName="CBS News" lastName="CBS News" role="Interested Party"></party>
+ <party fullName="Cable News Network, Inc." lastName="Cable News Network, Inc." role="Interested Party"></party>
+ <party fullName="Trustees of Boston University" lastName="Trustees of Boston University" role="Interested Party"></party>
+ <party firstName="Dzhokhar" fullName="Dzhokhar A. Tsarnaev" lastName="Tsarnaev" middleName="A." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party fullName="WBUR-FM" lastName="WBUR-FM" role="Interested Party"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Tsarnaev</title>
+ <partNumber>1:13-cr-10200</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cr-10200;13-10200</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>American Broadcasting Companies, Inc.</displayForm>
+ <namePart type="family">American Broadcasting Companies, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>American Civil Liberties Union Foundation of Massachusetts</displayForm>
+ <namePart type="family">American Civil Liberties Union Foundation of Massachusetts</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Boston Globe Media Partners, LLC</displayForm>
+ <namePart type="family">Boston Globe Media Partners, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>CBS News</displayForm>
+ <namePart type="family">CBS News</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Cable News Network, Inc.</displayForm>
+ <namePart type="family">Cable News Network, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Trustees of Boston University</displayForm>
+ <namePart type="family">Trustees of Boston University</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Dzhokhar A. Tsarnaev</displayForm>
+ <namePart type="family">Tsarnaev</namePart>
+ <namePart type="given">Dzhokhar</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>WBUR-FM</displayForm>
+ <namePart type="family">WBUR-FM</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_13-cr-10200</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:13-cr-10200</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="American Broadcasting Companies, Inc." lastName="American Broadcasting Companies, Inc." role="Interested Party"></party>
+ <party fullName="American Civil Liberties Union Foundation of Massachusetts" lastName="American Civil Liberties Union Foundation of Massachusetts" role="Interested Party"></party>
+ <party fullName="Boston Globe Media Partners, LLC" lastName="Boston Globe Media Partners, LLC" role="Interested Party"></party>
+ <party fullName="CBS News" lastName="CBS News" role="Interested Party"></party>
+ <party fullName="Cable News Network, Inc." lastName="Cable News Network, Inc." role="Interested Party"></party>
+ <party fullName="Trustees of Boston University" lastName="Trustees of Boston University" role="Interested Party"></party>
+ <party firstName="Dzhokhar" fullName="Dzhokhar A. Tsarnaev" lastName="Tsarnaev" middleName="A." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party fullName="WBUR-FM" lastName="WBUR-FM" role="Interested Party"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-0" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Magistrate Judge Marianne B. Bowler: ELECTRONIC ORDER entered as to Dzhokhar Tsarnaev. (Bowler, Marianne)[1:13-mj-02106-MBB]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e28054d</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-0</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-05-08</dateIssued>
+  <docketText>Magistrate Judge Marianne B. Bowler: ELECTRONIC ORDER entered as to Dzhokhar Tsarnaev. (Bowler, Marianne)[1:13-mj-02106-MBB]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-1" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: ORDER REGARDING PREVIOUSLY SEALED MATTERS entered as to Dzhokhar A. Tsarnaev (Danieli, Chris)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2805d0</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-1</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-08-19</dateIssued>
+  <docketText>Judge George A. OToole, Jr: ORDER REGARDING PREVIOUSLY SEALED MATTERS entered as to Dzhokhar A. Tsarnaev (Danieli, Chris)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-2" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: ORDER entered denying 107 MOTION to Postpone Setting of Deadline for Defense Mitigation Submission to U.S. Attorney and Response to Government Notice Regarding Death Penalty Protocol Timing re 98 Notice as to Dzhokhar A. Tsarnaev (1) (Danieli, Chris)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2805d1</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-2</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-10-18</dateIssued>
+  <docketText>Judge George A. OToole, Jr: ORDER entered denying 107 MOTION to Postpone Setting of Deadline for Defense Mitigation Submission to U.S. Attorney and Response to Government Notice Regarding Death Penalty Protocol Timing re 98 Notice as to Dzhokhar A. Tsarnaev (1) (Danieli, Chris)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-3" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: ORDER entered granting in part and denying in part 112 Motion to Compel as to Dzhokhar A. Tsarnaev (1) (Lyness, Paul)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2805d3</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-3</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-11-27</dateIssued>
+  <docketText>Judge George A. OToole, Jr: ORDER entered granting in part and denying in part 112 Motion to Compel as to Dzhokhar A. Tsarnaev (1) (Lyness, Paul)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-4" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: ORDER entered denying 233 Motion to Compel as to Dzhokhar A. Tsarnaev (1); denying 235 Motion to Compel as to Dzhokhar A. Tsarnaev (1) (Danieli, Chris)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2805d4</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-4</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-04-17</dateIssued>
+  <docketText>Judge George A. OToole, Jr: ORDER entered denying 233 Motion to Compel as to Dzhokhar A. Tsarnaev (1); denying 235 Motion to Compel as to Dzhokhar A. Tsarnaev (1) (Danieli, Chris)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-5" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: ORDER entered granting 325 Motion to Seal (Danieli, Chris)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e280549</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-5</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-05-22</dateIssued>
+  <docketText>Judge George A. OToole, Jr: ORDER entered granting 325 Motion to Seal (Danieli, Chris)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-6" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: ORDER entered granting 279 and 370; denying 110, 280, 288, 289, 290, 291; denying without prejudice 294. (Danieli, Chris)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2805cb</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-6</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-06-23</dateIssued>
+  <docketText>Judge George A. OToole, Jr: ORDER entered granting 279 and 370; denying 110, 280, 288, 289, 290, 291; denying without prejudice 294. (Danieli, Chris)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-7" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: SCHEDULING ORDER entered. (Danieli, Chris)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e280547</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-7</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-06-23</dateIssued>
+  <docketText>Judge George A. OToole, Jr: SCHEDULING ORDER entered. (Danieli, Chris)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-8" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: ORDER FOR DISCLOSURE OF JURY RECORDS entered (Danieli, Chris)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2805df</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-8</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2014-06-26</dateIssued>
+  <docketText>Judge George A. OToole, Jr: ORDER FOR DISCLOSURE OF JURY RECORDS entered (Danieli, Chris)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-9" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: ORDER entered granting 388 MOTION to Seal Document Exhibit to Defense Reply to Government Opposition to Motion to Suppress Physical Evidence (Danieli, Chris)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2805dd</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-9</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2014-07-01</dateIssued>
+  <docketText>Judge George A. OToole, Jr: ORDER entered granting 388 MOTION to Seal Document Exhibit to Defense Reply to Government Opposition to Motion to Suppress Physical Evidence (Danieli, Chris)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-10" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: ORDER entered denying 442 Motion for Clarification as to Dzhokhar A. Tsarnaev (1) (Danieli, Chris)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e28054b</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-10</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2014-08-18</dateIssued>
+  <docketText>Judge George A. OToole, Jr: ORDER entered denying 442 Motion for Clarification as to Dzhokhar A. Tsarnaev (1) (Danieli, Chris)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-11" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: ORDER entered granting in part and denying in part 440 Motion to Compel as to Dzhokhar A. Tsarnaev (1) (Danieli, Chris)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e28054e</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-11</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2014-08-18</dateIssued>
+  <docketText>Judge George A. OToole, Jr: ORDER entered granting in part and denying in part 440 Motion to Compel as to Dzhokhar A. Tsarnaev (1) (Danieli, Chris)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-12" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: OPINION AND ORDER entered denying 376 Motion for Change of Venue as to Dzhokhar A. Tsarnaev (1); granting in part and denying in part 518 Motion to Continue as to Dzhokhar A. Tsarnaev (1)( Jury Trial set for 1/5/2015 09:00 AM in Courtroom 9 before Judge George A. OToole Jr.., Final Pretrial Conference set for 12/18/2014 10:00 AM in Courtroom 9 before Judge George A. OToole Jr..); granting in part and denying in part 529 Motion for Order as to Dzhokhar A. Tsarnaev (1); granting in part and denying in part 530 Motion to Compel as to Dzhokhar A. Tsarnaev (1); granting in part and denying in part 245 Motion to Compel as to Dzhokhar A. Tsarnaev (1) (Lyness, Paul)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e280548</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-12</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2014-09-24</dateIssued>
+  <docketText>Judge George A. OToole, Jr: OPINION AND ORDER entered denying 376 Motion for Change of Venue as to Dzhokhar A. Tsarnaev (1); granting in part and denying in part 518 Motion to Continue as to Dzhokhar A. Tsarnaev (1)( Jury Trial set for 1/5/2015 09:00 AM in Courtroom 9 before Judge George A. OToole Jr.., Final Pretrial Conference set for 12/18/2014 10:00 AM in Courtroom 9 before Judge George A. OToole Jr..); granting in part and denying in part 529 Motion for Order as to Dzhokhar A. Tsarnaev (1); granting in part and denying in part 530 Motion to Compel as to Dzhokhar A. Tsarnaev (1); granting in part and denying in part 245 Motion to Compel as to Dzhokhar A. Tsarnaev (1) (Lyness, Paul)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-13" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: OPINION AND ORDER entered denying 297 Motion to Suppress as to Dzhokhar A. Tsarnaev (1); denying 303 Motion to Suppress as to Dzhokhar A. Tsarnaev (1) (Lyness, Paul)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2805e0</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-13</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2014-10-17</dateIssued>
+  <docketText>Judge George A. OToole, Jr: OPINION AND ORDER entered denying 297 Motion to Suppress as to Dzhokhar A. Tsarnaev (1); denying 303 Motion to Suppress as to Dzhokhar A. Tsarnaev (1) (Lyness, Paul)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-14" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: OPINION AND ORDER entered denying 506 Motion to Dismiss as to Dzhokhar A. Tsarnaev (1) (Lyness, Paul)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2805cd</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-14</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2014-10-17</dateIssued>
+  <docketText>Judge George A. OToole, Jr: OPINION AND ORDER entered denying 506 Motion to Dismiss as to Dzhokhar A. Tsarnaev (1) (Lyness, Paul)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-15" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: OPINION AND ORDER entered denying 602 Motion to Compel as to Dzhokhar A. Tsarnaev (1) (Danieli, Chris)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2805d2</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-15</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2014-11-25</dateIssued>
+  <docketText>Judge George A. OToole, Jr: OPINION AND ORDER entered denying 602 Motion to Compel as to Dzhokhar A. Tsarnaev (1) (Danieli, Chris)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-16" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: ORDER entered denying 680 Motion for Reconsideration as to Dzhokhar A. Tsarnaev (1) (Danieli, Chris)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2805de</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-16</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2014-12-22</dateIssued>
+  <docketText>Judge George A. OToole, Jr: ORDER entered denying 680 Motion for Reconsideration as to Dzhokhar A. Tsarnaev (1) (Danieli, Chris)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-17" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-17/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: OPINION AND ORDER entered denying 683 Motion for Extra Peremptory Challenges as to Dzhokhar A. Tsarnaev (1) (Danieli, Chris)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e28054a</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-17</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2014-12-23</dateIssued>
+  <docketText>Judge George A. OToole, Jr: OPINION AND ORDER entered denying 683 Motion for Extra Peremptory Challenges as to Dzhokhar A. Tsarnaev (1) (Danieli, Chris)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-18" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-18/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: ORDER entered denying 880 Motion to stay as to Dzhokhar A. Tsarnaev (1) (Danieli, Chris)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-18.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2805cc</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-18</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2015-01-02</dateIssued>
+  <docketText>Judge George A. OToole, Jr: ORDER entered denying 880 Motion to stay as to Dzhokhar A. Tsarnaev (1) (Danieli, Chris)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-19" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-19/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: OPINION AND ORDER entered denying 684 Second MOTION to Change Venue and granting 760 MOTION to Strike Exhibits to Defendant&apos;s Second Motion For Change of Venue (Danieli, Chris)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-19.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2805ce</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-19</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2015-01-02</dateIssued>
+  <docketText>Judge George A. OToole, Jr: OPINION AND ORDER entered denying 684 Second MOTION to Change Venue and granting 760 MOTION to Strike Exhibits to Defendant&apos;s Second Motion For Change of Venue (Danieli, Chris)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-20" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-20/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: OPINION AND ORDER entered denying 980 Motion for Change of Venue ; denying 984 Motion to Amend ; denying 993 Motion for Leave to File; denying 996 Motion for Leave to File; denying 1003 Motion to Stay Jury Selection and Trial Pending Disposition of Second Mandamus Petition as to Dzhokhar A. Tsarnaev (1) (Danieli, Chris)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-20.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2805cf</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-20</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2015-02-06</dateIssued>
+  <docketText>Judge George A. OToole, Jr: OPINION AND ORDER entered denying 980 Motion for Change of Venue ; denying 984 Motion to Amend ; denying 993 Motion for Leave to File; denying 996 Motion for Leave to File; denying 1003 Motion to Stay Jury Selection and Trial Pending Disposition of Second Mandamus Petition as to Dzhokhar A. Tsarnaev (1) (Danieli, Chris)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-21" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-21/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: OPINION AND ORDER entered denying 976 Motion to Amend as to Dzhokhar A. Tsarnaev (1); denying 1002 Motion for Order as to Dzhokhar A. Tsarnaev (1) (Lyness, Paul)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-21.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2805db</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-21</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2015-02-13</dateIssued>
+  <docketText>Judge George A. OToole, Jr: OPINION AND ORDER entered denying 976 Motion to Amend as to Dzhokhar A. Tsarnaev (1); denying 1002 Motion for Order as to Dzhokhar A. Tsarnaev (1) (Lyness, Paul)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-22" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-22/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: ORDER entered denying 991 Motion for Order and denying in part 1002MOTION for (A) Public Access to Legal Rulings on Challenges for Cause; and (B) to Modify Order concerning Press Presence during Jury Selection as to Dzhokhar A. Tsarnaev (1) (Lyness, Paul) (Docket text updated on 2/18/2015 to conform with written order) (Danieli, Chris).</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-22.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e28054c</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-22</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2015-02-13</dateIssued>
+  <docketText>Judge George A. OToole, Jr: ORDER entered denying 991 Motion for Order and denying in part 1002MOTION for (A) Public Access to Legal Rulings on Challenges for Cause; and (B) to Modify Order concerning Press Presence during Jury Selection as to Dzhokhar A. Tsarnaev (1) (Lyness, Paul) (Docket text updated on 2/18/2015 to conform with written order) (Danieli, Chris).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-23" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-23/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: OPINION AND ORDER entered denying 1080 Second MOTION to Dismiss Indictment and/or Stay Proceedings Pending Reconstituting Jury Wheel to Conform with Statutory and Constitutional Requirements filed by Dzhokhar A. Tsarnaev (Danieli, Chris)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-23.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2805dc</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-23</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2015-03-13</dateIssued>
+  <docketText>Judge George A. OToole, Jr: OPINION AND ORDER entered denying 1080 Second MOTION to Dismiss Indictment and/or Stay Proceedings Pending Reconstituting Jury Wheel to Conform with Statutory and Constitutional Requirements filed by Dzhokhar A. Tsarnaev (Danieli, Chris)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-24" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-24/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: OPINION AND ORDER entered denying without prejudice to renewal 1462 MOTION to Unseal Document and for Public Access to Jury List (Danieli, Chris)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-08-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-24.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e28054f</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-24</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2015-08-24</dateIssued>
+  <docketText>Judge George A. OToole, Jr: OPINION AND ORDER entered denying without prejudice to renewal 1462 MOTION to Unseal Document and for Public Access to Jury List (Danieli, Chris)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_13-cr-10200-25" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-25/mods.xml">
+ <titleInfo>
+  <title>USA v. Tsarnaev</title>
+  <subTitle>Judge George A. OToole, Jr: SCHEDULING ORDER entered. as to Dzhokhar A. Tsarnaev (Lyness, Paul)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-12-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-25.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2805e1</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-25</identifier>
+ <identifier type="former granule identifier">mad-1_13-cr-10200_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_13-cr-10200/USCOURTS-mad-1_13-cr-10200-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_13-cr-10200/pdf/USCOURTS-mad-1_13-cr-10200-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-10200; USA v. Tsarnaev; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_13-cr-10200-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2015-12-16</dateIssued>
+  <docketText>Judge George A. OToole, Jr: SCHEDULING ORDER entered. as to Dzhokhar A. Tsarnaev (Lyness, Paul)</docketText>
+</extension>
+</relatedItem>
+</mods>

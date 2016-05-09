@@ -1,0 +1,174 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18156a2da">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-19</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_02-cr-00260</identifier>
+<identifier type="local">P0b002ee18156a2da</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-4_02-cr-00260</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-4_02-cr-00260</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>4:02-cr-00260</caseNumber>
+ <caseOffice>Youngstown</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Elijah" fullName="Elijah Underwood" lastName="Underwood" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Underwood</title>
+ <partNumber>4:02-cr-00260</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_02-cr-00260/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:02-cr-00260;02-260</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Youngstown</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Elijah Underwood</displayForm>
+ <namePart type="family">Underwood</namePart>
+ <namePart type="given">Elijah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-4_02-cr-00260</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>4:02-cr-00260</caseNumber>
+ <caseOffice>Youngstown</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Elijah" fullName="Elijah Underwood" lastName="Underwood" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-4_02-cr-00260-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_02-cr-00260/USCOURTS-ohnd-4_02-cr-00260-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Underwood</title>
+  <subTitle>Report and Recommendation as to defendant Elijah Underwood: It is recommended that the Court find that defendant has violated the terms of his supervised release. Signed by Magistrate Judge George J. Limbert on 12/23/05. (S, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-4_02-cr-00260-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18166db0a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_02-cr-00260/USCOURTS-ohnd-4_02-cr-00260-0</identifier>
+ <identifier type="former granule identifier">ohnd-4_02-cr-00260_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_02-cr-00260/USCOURTS-ohnd-4_02-cr-00260-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_02-cr-00260/pdf/USCOURTS-ohnd-4_02-cr-00260-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:02-cr-00260; USA v. Underwood; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-4_02-cr-00260-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-12-23</dateIssued>
+  <docketText>Report and Recommendation as to defendant Elijah Underwood: It is recommended that the Court find that defendant has violated the terms of his supervised release. Signed by Magistrate Judge George J. Limbert on 12/23/05. (S, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-4_02-cr-00260-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_02-cr-00260/USCOURTS-ohnd-4_02-cr-00260-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Underwood</title>
+  <subTitle>Order signed by Judge James S. Gwin on 1/19/06 adopting the Report and Recommendation of Magistrate Judge Limbert as to Elijah Underwood (1) and finding that defendant violated the conditions of his supervised release. Defendant shall serve additional time at the Community Correction Association until 3/31/06. Upon completion of said placement, all other terms of his supervised release as previously ordered shall remain in effect. (Related Doc. 28) (M, G)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-4_02-cr-00260-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18166db09</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_02-cr-00260/USCOURTS-ohnd-4_02-cr-00260-1</identifier>
+ <identifier type="former granule identifier">ohnd-4_02-cr-00260_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_02-cr-00260/USCOURTS-ohnd-4_02-cr-00260-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_02-cr-00260/pdf/USCOURTS-ohnd-4_02-cr-00260-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:02-cr-00260; USA v. Underwood; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-4_02-cr-00260-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-01-19</dateIssued>
+  <docketText>Order signed by Judge James S. Gwin on 1/19/06 adopting the Report and Recommendation of Magistrate Judge Limbert as to Elijah Underwood (1) and finding that defendant violated the conditions of his supervised release. Defendant shall serve additional time at the Community Correction Association until 3/31/06. Upon completion of said placement, all other terms of his supervised release as previously ordered shall remain in effect. (Related Doc. 28) (M, G)</docketText>
+</extension>
+</relatedItem>
+</mods>

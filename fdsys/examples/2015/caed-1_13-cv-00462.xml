@@ -1,0 +1,254 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8bde63">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00462</identifier>
+<identifier type="local">P0b002ee18a8bde63</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_13-cv-00462</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-00462</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-00462</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Natalie" fullName="Natalie Clark" lastName="Clark" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott Folks" lastName="Folks" role="Defendant"></party>
+ <party firstName="Connie" fullName="Connie Gipson" lastName="Gipson" role="Defendant"></party>
+ <party firstName="Deandre" fullName="Deandre Shepard" lastName="Shepard" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Shepard v. Clark et al</title>
+ <partNumber>1:13-cv-00462</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00462/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-00462;13-462</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Natalie Clark</displayForm>
+ <namePart type="family">Clark</namePart>
+ <namePart type="given">Natalie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott Folks</displayForm>
+ <namePart type="family">Folks</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Connie Gipson</displayForm>
+ <namePart type="family">Gipson</namePart>
+ <namePart type="given">Connie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Deandre Shepard</displayForm>
+ <namePart type="family">Shepard</namePart>
+ <namePart type="given">Deandre</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-00462</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-00462</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Natalie" fullName="Natalie Clark" lastName="Clark" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott Folks" lastName="Folks" role="Defendant"></party>
+ <party firstName="Connie" fullName="Connie Gipson" lastName="Gipson" role="Defendant"></party>
+ <party firstName="Deandre" fullName="Deandre Shepard" lastName="Shepard" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00462-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00462/USCOURTS-caed-1_13-cv-00462-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Shepard v. Clark et al</title>
+  <subTitle>ORDER DENYING 3 Motion to Appoint Counsel signed by Magistrate Judge Barbara A. McAuliffe on 4/1/2013. (Sant Agata, S)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00462/pdf/USCOURTS-caed-1_13-cv-00462-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c4e9d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00462/USCOURTS-caed-1_13-cv-00462-0</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00462_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00462/USCOURTS-caed-1_13-cv-00462-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00462/pdf/USCOURTS-caed-1_13-cv-00462-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00462; (PC) Shepard v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00462-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-04-01</dateIssued>
+  <docketText>ORDER DENYING 3 Motion to Appoint Counsel signed by Magistrate Judge Barbara A. McAuliffe on 4/1/2013. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00462-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00462/USCOURTS-caed-1_13-cv-00462-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Shepard v. Clark et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s 10 Motion for Reconsideration of Motion for Appointment of Counsel signed by Magistrate Judge Barbara A. McAuliffe on 02/10/2014. (Flores, E)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00462/pdf/USCOURTS-caed-1_13-cv-00462-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c4e9b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00462/USCOURTS-caed-1_13-cv-00462-1</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00462_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00462/USCOURTS-caed-1_13-cv-00462-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00462/pdf/USCOURTS-caed-1_13-cv-00462-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00462; (PC) Shepard v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00462-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-02-10</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s 10 Motion for Reconsideration of Motion for Appointment of Counsel signed by Magistrate Judge Barbara A. McAuliffe on 02/10/2014. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00462-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00462/USCOURTS-caed-1_13-cv-00462-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Shepard v. Clark et al</title>
+  <subTitle>SCREENING ORDER DISMISSING COMPLAINT WITH LEAVE TO AMEND 1, signed by Magistrate Judge Barbara A. McAuliffe on 8/11/14: Thirty-Day Deadline. (Attachments: # (1) Amended Complaint - blank form)(Hellings, J)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00462/pdf/USCOURTS-caed-1_13-cv-00462-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c4e9c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00462/USCOURTS-caed-1_13-cv-00462-2</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00462_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00462/USCOURTS-caed-1_13-cv-00462-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00462/pdf/USCOURTS-caed-1_13-cv-00462-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00462; (PC) Shepard v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00462-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-08-11</dateIssued>
+  <docketText>SCREENING ORDER DISMISSING COMPLAINT WITH LEAVE TO AMEND 1, signed by Magistrate Judge Barbara A. McAuliffe on 8/11/14: Thirty-Day Deadline. (Attachments: # (1) Amended Complaint - blank form)(Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00462-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00462/USCOURTS-caed-1_13-cv-00462-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Shepard v. Clark et al</title>
+  <subTitle>ORDER DISMISSING ACTION for Failure to State a Claim signed by Magistrate Judge Barbara A. McAuliffe on 1/5/2015. CASE CLOSED. (Jessen, A)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00462/pdf/USCOURTS-caed-1_13-cv-00462-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c4e9e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00462/USCOURTS-caed-1_13-cv-00462-3</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00462_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00462/USCOURTS-caed-1_13-cv-00462-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00462/pdf/USCOURTS-caed-1_13-cv-00462-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00462; (PC) Shepard v. Clark et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00462-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER DISMISSING ACTION for Failure to State a Claim signed by Magistrate Judge Barbara A. McAuliffe on 1/5/2015. CASE CLOSED. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+</mods>

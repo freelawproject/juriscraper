@@ -1,0 +1,490 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183b00bb4">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-19</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-18</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cr-00190</identifier>
+<identifier type="local">P0b002ee183b00bb4</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-19</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-txnd-3_12-cr-00190</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_12-cr-00190</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:12-cr-00190</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Sylvia" fullName="Sylvia Cardenas" lastName="Cardenas" role="Defendant"></party>
+ <party firstName="Jorge" fullName="Jorge Cortes" lastName="Cortes" role="Defendant"></party>
+ <party firstName="Leonel" fullName="Leonel Figueroa" lastName="Figueroa" role="Defendant"></party>
+ <party firstName="Juan" fullName="Juan Luis Villa Hernandez" lastName="Hernandez" middleName="Luis Villa" role="Defendant"></party>
+ <party firstName="Mario" fullName="Mario Lopez Jr" generation="Jr" lastName="Lopez" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Lopez et al</title>
+ <partNumber>3:12-cr-00190</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cr-00190/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:12-cr-00190;12-190</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>Dallas</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Sylvia Cardenas</displayForm>
+ <namePart type="family">Cardenas</namePart>
+ <namePart type="given">Sylvia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jorge Cortes</displayForm>
+ <namePart type="family">Cortes</namePart>
+ <namePart type="given">Jorge</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Leonel Figueroa</displayForm>
+ <namePart type="family">Figueroa</namePart>
+ <namePart type="given">Leonel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Juan Luis Villa Hernandez</displayForm>
+ <namePart type="family">Hernandez</namePart>
+ <namePart type="given">Juan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mario Lopez Jr</displayForm>
+ <namePart type="family">Lopez</namePart>
+ <namePart type="given">Mario</namePart>
+ <namePart type="termsOfAddress">Jr</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_12-cr-00190</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:12-cr-00190</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Sylvia" fullName="Sylvia Cardenas" lastName="Cardenas" role="Defendant"></party>
+ <party firstName="Jorge" fullName="Jorge Cortes" lastName="Cortes" role="Defendant"></party>
+ <party firstName="Leonel" fullName="Leonel Figueroa" lastName="Figueroa" role="Defendant"></party>
+ <party firstName="Juan" fullName="Juan Luis Villa Hernandez" lastName="Hernandez" middleName="Luis Villa" role="Defendant"></party>
+ <party firstName="Mario" fullName="Mario Lopez Jr" generation="Jr" lastName="Lopez" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Texas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cr-00190-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez et al</title>
+  <subTitle>FINDINGS AND RECOMMENDATIONS on Plea of Guilty as to Jorge Cortes. (Ordered by Magistrate Judge Renee Harris Toliver on 8/14/2012) (mcrd)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_12-cr-00190-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b02ed8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-0</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cr-00190_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cr-00190/pdf/USCOURTS-txnd-3_12-cr-00190-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cr-00190; USA v. Lopez et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cr-00190-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-08-14</dateIssued>
+  <docketText>FINDINGS AND RECOMMENDATIONS on Plea of Guilty as to Jorge Cortes. (Ordered by Magistrate Judge Renee Harris Toliver on 8/14/2012) (mcrd)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cr-00190-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS Concerning 78 Plea of Guilty as to Mario Lopez, Jr. (Ordered by Magistrate Judge Irma Carrillo Ramirez on 8/16/2012) (skt)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_12-cr-00190-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b02ecc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-1</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cr-00190_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cr-00190/pdf/USCOURTS-txnd-3_12-cr-00190-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cr-00190; USA v. Lopez et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cr-00190-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-08-16</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS Concerning 78 Plea of Guilty as to Mario Lopez, Jr. (Ordered by Magistrate Judge Irma Carrillo Ramirez on 8/16/2012) (skt)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cr-00190-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez et al</title>
+  <subTitle>ORDER ACCEPTING 77 REPORT AND RECOMMENDATION OF THE UNITED STATES MAGISTRATE JUDGE CONCERNING PLEA OF GUILTY as to Jorge Cortes. (Ordered by Judge Sam A Lindsay on 8/29/2012) (tln)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_12-cr-00190-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b02ed9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-2</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cr-00190_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cr-00190/pdf/USCOURTS-txnd-3_12-cr-00190-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cr-00190; USA v. Lopez et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cr-00190-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-08-29</dateIssued>
+  <docketText>ORDER ACCEPTING 77 REPORT AND RECOMMENDATION OF THE UNITED STATES MAGISTRATE JUDGE CONCERNING PLEA OF GUILTY as to Jorge Cortes. (Ordered by Judge Sam A Lindsay on 8/29/2012) (tln)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cr-00190-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez et al</title>
+  <subTitle>REPORT AND RECOMMENDATION Concerning Plea of Guilty as to Sylvia Cardenas. (Ordered by Magistrate Judge Irma Carrillo Ramirez on 8/30/2012) (tln)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_12-cr-00190-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b02ed5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-3</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cr-00190_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cr-00190/pdf/USCOURTS-txnd-3_12-cr-00190-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cr-00190; USA v. Lopez et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cr-00190-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-08-30</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION Concerning Plea of Guilty as to Sylvia Cardenas. (Ordered by Magistrate Judge Irma Carrillo Ramirez on 8/30/2012) (tln)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cr-00190-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez et al</title>
+  <subTitle>Order Adopting 79 Findings and Recommendations on Guilty Plea re: 79 FINDINGS AND RECOMMENDATIONS on Plea of Guilty as to Mario Lopez, Jr. (Ordered by Judge Sam A Lindsay on 8/31/2012) (chmb)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_12-cr-00190-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b02edc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-4</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cr-00190_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cr-00190/pdf/USCOURTS-txnd-3_12-cr-00190-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cr-00190; USA v. Lopez et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cr-00190-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-08-31</dateIssued>
+  <docketText>Order Adopting 79 Findings and Recommendations on Guilty Plea re: 79 FINDINGS AND RECOMMENDATIONS on Plea of Guilty as to Mario Lopez, Jr. (Ordered by Judge Sam A Lindsay on 8/31/2012) (chmb)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cr-00190-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez et al</title>
+  <subTitle>ORDER ACCEPTING 84 REPORT AND RECOMMENDATION OF THE UNITED STATES MAGISTRATE JUDGE CONCERNING PLEA OF GUILTY as to Sylvia Cardenas. (Ordered by Judge Sam A Lindsay on 9/17/2012) (cea)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_12-cr-00190-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b02ed6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-5</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cr-00190_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cr-00190/pdf/USCOURTS-txnd-3_12-cr-00190-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cr-00190; USA v. Lopez et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cr-00190-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-09-17</dateIssued>
+  <docketText>ORDER ACCEPTING 84 REPORT AND RECOMMENDATION OF THE UNITED STATES MAGISTRATE JUDGE CONCERNING PLEA OF GUILTY as to Sylvia Cardenas. (Ordered by Judge Sam A Lindsay on 9/17/2012) (cea)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cr-00190-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez et al</title>
+  <subTitle>Memorandum Opinion and Order as to Juan Luis Villa Hernandez denying 96 Request for the Court to Order the Government to Produce the Inmate Telephone Calls of Alleged Cooperating Conspirators as Jenks [sic] Act Material; granting in part and denying in part 95 Request for the Court to Review In Camera the Presentence Reports, Sentencing Transcripts, and Plea Colloquies of the Government&apos;s Cooperating Witnesses for Brady/Giglio Material. (Ordered by Judge Sam A Lindsay on 11/28/2012) (twd)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_12-cr-00190-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b02ed4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-6</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cr-00190_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cr-00190/pdf/USCOURTS-txnd-3_12-cr-00190-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cr-00190; USA v. Lopez et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cr-00190-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-11-28</dateIssued>
+  <docketText>Memorandum Opinion and Order as to Juan Luis Villa Hernandez denying 96 Request for the Court to Order the Government to Produce the Inmate Telephone Calls of Alleged Cooperating Conspirators as Jenks [sic] Act Material; granting in part and denying in part 95 Request for the Court to Review In Camera the Presentence Reports, Sentencing Transcripts, and Plea Colloquies of the Government&apos;s Cooperating Witnesses for Brady/Giglio Material. (Ordered by Judge Sam A Lindsay on 11/28/2012) (twd)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cr-00190-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez et al</title>
+  <subTitle>Memorandum Opinion and Order as to Juan Luis Villa Hernandez denying 120 Request for Pretrial Production of Inmate Telephone Calls of Cooperating Coconspirators Pursuant to Rule 17(c). (Ordered by Judge Sam A Lindsay on 12/13/2012) (twd)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_12-cr-00190-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b02edd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-7</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cr-00190_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cr-00190/pdf/USCOURTS-txnd-3_12-cr-00190-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cr-00190; USA v. Lopez et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cr-00190-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2012-12-13</dateIssued>
+  <docketText>Memorandum Opinion and Order as to Juan Luis Villa Hernandez denying 120 Request for Pretrial Production of Inmate Telephone Calls of Cooperating Coconspirators Pursuant to Rule 17(c). (Ordered by Judge Sam A Lindsay on 12/13/2012) (twd)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cr-00190-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez et al</title>
+  <subTitle>REPORT AND RECOMMENDATION on Plea of Guilty as to Leonel Figueroa re: 141 Consent Regarding Entry of a Plea of Guilty. (Ordered by Magistrate Judge David L Horan on 12/20/2012) (axm) Modified on 12/26/2012 (axm).</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_12-cr-00190-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b02ede</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-8</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cr-00190_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cr-00190/pdf/USCOURTS-txnd-3_12-cr-00190-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cr-00190; USA v. Lopez et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cr-00190-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2012-12-20</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION on Plea of Guilty as to Leonel Figueroa re: 141 Consent Regarding Entry of a Plea of Guilty. (Ordered by Magistrate Judge David L Horan on 12/20/2012) (axm) Modified on 12/26/2012 (axm).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cr-00190-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez et al</title>
+  <subTitle>REPORT AND RECOMMENDATION on Plea of Guilty as to Juan Luis Villa Hernandez re: 146 Consent Regarding Entry of a Plea of Guilty. (Ordered by Magistrate Judge Irma Carrillo Ramirez on 1/3/2013) (axm)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_12-cr-00190-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b02edb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-9</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cr-00190_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cr-00190/pdf/USCOURTS-txnd-3_12-cr-00190-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cr-00190; USA v. Lopez et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cr-00190-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION on Plea of Guilty as to Juan Luis Villa Hernandez re: 146 Consent Regarding Entry of a Plea of Guilty. (Ordered by Magistrate Judge Irma Carrillo Ramirez on 1/3/2013) (axm)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cr-00190-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez et al</title>
+  <subTitle>ORDER ACCEPTING 142 REPORT AND RECOMMENDATION OF THE UNITED STATES MAGISTRATE JUDGE CONCERNING PLEA OF GUILTY as to Leonel Figueroa. (Ordered by Judge Sam A Lindsay on 1/4/2013) (chmb) Docket text modified on 1/4/2013 (twd).</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_12-cr-00190-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b02eda</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-10</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cr-00190_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cr-00190/pdf/USCOURTS-txnd-3_12-cr-00190-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cr-00190; USA v. Lopez et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cr-00190-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER ACCEPTING 142 REPORT AND RECOMMENDATION OF THE UNITED STATES MAGISTRATE JUDGE CONCERNING PLEA OF GUILTY as to Leonel Figueroa. (Ordered by Judge Sam A Lindsay on 1/4/2013) (chmb) Docket text modified on 1/4/2013 (twd).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cr-00190-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez et al</title>
+  <subTitle>Order Adopting 147 Findings and Recommendations on Guilty Plea re: 147 FINDINGS AND RECOMMENDATIONS on Plea of Guilty as to Juan Luis Villa Hernandez. (Ordered by Judge Sam A Lindsay on 1/18/2013) (chmb)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_12-cr-00190-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b02ed7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-11</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cr-00190_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cr-00190/USCOURTS-txnd-3_12-cr-00190-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cr-00190/pdf/USCOURTS-txnd-3_12-cr-00190-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cr-00190; USA v. Lopez et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cr-00190-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2013-01-18</dateIssued>
+  <docketText>Order Adopting 147 Findings and Recommendations on Guilty Plea re: 147 FINDINGS AND RECOMMENDATIONS on Plea of Guilty as to Juan Luis Villa Hernandez. (Ordered by Judge Sam A Lindsay on 1/18/2013) (chmb)</docketText>
+</extension>
+</relatedItem>
+</mods>

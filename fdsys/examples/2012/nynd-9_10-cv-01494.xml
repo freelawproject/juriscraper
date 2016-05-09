@@ -1,0 +1,187 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181709698">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_10-cv-01494</identifier>
+<identifier type="local">P0b002ee181709698</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-9_10-cv-01494</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_10-cv-01494</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:10-cv-01494</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Dr." fullName="Dr. Chalom" lastName="Chalom" role="Defendant"></party>
+ <party fullName="Ogdensburg Correctional Facility" lastName="Ogdensburg Correctional Facility" role="Defendant"></party>
+ <party firstName="Pernorris" fullName="Pernorris Taylor Sr." generation="Sr." lastName="Taylor" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Taylor v. Ogdensburg Correctional Facility</title>
+ <partNumber>9:10-cv-01494</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_10-cv-01494/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">9:10-cv-01494;10-1494</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Prisoner</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Dr. Chalom</displayForm>
+ <namePart type="family">Chalom</namePart>
+ <namePart type="given">Dr.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ogdensburg Correctional Facility</displayForm>
+ <namePart type="family">Ogdensburg Correctional Facility</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pernorris Taylor Sr.</displayForm>
+ <namePart type="family">Taylor</namePart>
+ <namePart type="given">Pernorris</namePart>
+ <namePart type="termsOfAddress">Sr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_10-cv-01494</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:10-cv-01494</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Dr." fullName="Dr. Chalom" lastName="Chalom" role="Defendant"></party>
+ <party fullName="Ogdensburg Correctional Facility" lastName="Ogdensburg Correctional Facility" role="Defendant"></party>
+ <party firstName="Pernorris" fullName="Pernorris Taylor Sr." generation="Sr." lastName="Taylor" role="Plaintiff"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_10-cv-01494-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_10-cv-01494/USCOURTS-nynd-9_10-cv-01494-0/mods.xml">
+ <titleInfo>
+  <title>Taylor v. Ogdensburg Correctional Facility</title>
+  <subTitle>REPORT AND RECOMMENDATION: RECOMMENDED that 15 MOTION to Dismiss filed by Dr. Chalom be GRANTED and that plaintiff&apos;s complaint be dismissed in all respects, without leave to replead. Objections to R&amp;R due by 12/27/2011 Case Review Deadline 1/3/2012. Signed by Magistrate Judge David E. Peebles on 12/13/11. {r&amp;r served via regular mail on all non-ecf parties}(nas)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_10-cv-01494-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18170b63b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_10-cv-01494/USCOURTS-nynd-9_10-cv-01494-0</identifier>
+ <identifier type="former granule identifier">nynd-9_10-cv-01494_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_10-cv-01494/USCOURTS-nynd-9_10-cv-01494-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_10-cv-01494/pdf/USCOURTS-nynd-9_10-cv-01494-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:10-cv-01494; Taylor v. Ogdensburg Correctional Facility; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_10-cv-01494-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-12-13</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION: RECOMMENDED that 15 MOTION to Dismiss filed by Dr. Chalom be GRANTED and that plaintiff&apos;s complaint be dismissed in all respects, without leave to replead. Objections to R&amp;R due by 12/27/2011 Case Review Deadline 1/3/2012. Signed by Magistrate Judge David E. Peebles on 12/13/11. {r&amp;r served via regular mail on all non-ecf parties}(nas)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_10-cv-01494-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_10-cv-01494/USCOURTS-nynd-9_10-cv-01494-1/mods.xml">
+ <titleInfo>
+  <title>Taylor v. Ogdensburg Correctional Facility</title>
+  <subTitle>ORDER: ORDERED that 22 Report and Recommendation is adopted in its entirety and 15 Motion to Dismiss is granted and plaintiff&apos;s complaint is dismissed in all respects, without leave to replead. Signed by Judge Norman A. Mordue on 1/4/12. {order served via regular mail on all non-ecf parties}(nas)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_10-cv-01494-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18170b63c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_10-cv-01494/USCOURTS-nynd-9_10-cv-01494-1</identifier>
+ <identifier type="former granule identifier">nynd-9_10-cv-01494_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_10-cv-01494/USCOURTS-nynd-9_10-cv-01494-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_10-cv-01494/pdf/USCOURTS-nynd-9_10-cv-01494-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:10-cv-01494; Taylor v. Ogdensburg Correctional Facility; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_10-cv-01494-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-04</dateIssued>
+  <docketText>ORDER: ORDERED that 22 Report and Recommendation is adopted in its entirety and 15 Motion to Dismiss is granted and plaintiff&apos;s complaint is dismissed in all respects, without leave to replead. Signed by Judge Norman A. Mordue on 1/4/12. {order served via regular mail on all non-ecf parties}(nas)</docketText>
+</extension>
+</relatedItem>
+</mods>

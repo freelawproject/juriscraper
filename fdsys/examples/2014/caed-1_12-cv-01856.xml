@@ -1,0 +1,355 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee187703b28">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-02-19</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01856</identifier>
+<identifier type="local">P0b002ee187703b28</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-03-01</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cv-01856</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-01856</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-01856</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Roberto" fullName="Roberto Herrera" lastName="Herrera" role="Plaintiff"></party>
+ <party firstName="Teresa" fullName="Teresa Macias" lastName="Macias" role="Defendant"></party>
+ <party firstName="C." fullName="C. Nareddy" lastName="Nareddy" role="Defendant"></party>
+ <party fullName="Smith" lastName="Smith" role="Defendant"></party>
+ <party fullName="Sosolda" lastName="Sosolda" role="Defendant"></party>
+ <party fullName="Therapist" lastName="Therapist" role="Defendant"></party>
+ <party firstName="L." fullName="L. Vasques" lastName="Vasques" role="Defendant"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey J. Wang" lastName="Wang" middleName="J." role="Defendant"></party>
+ <party firstName="L.D." fullName="L.D. Zamora" lastName="Zamora" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Herrera v. Vasques, et al.</title>
+ <partNumber>1:12-cv-01856</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01856/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-01856;12-1856</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Roberto Herrera</displayForm>
+ <namePart type="family">Herrera</namePart>
+ <namePart type="given">Roberto</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Teresa Macias</displayForm>
+ <namePart type="family">Macias</namePart>
+ <namePart type="given">Teresa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C. Nareddy</displayForm>
+ <namePart type="family">Nareddy</namePart>
+ <namePart type="given">C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sosolda</displayForm>
+ <namePart type="family">Sosolda</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Therapist</displayForm>
+ <namePart type="family">Therapist</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>L. Vasques</displayForm>
+ <namePart type="family">Vasques</namePart>
+ <namePart type="given">L.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey J. Wang</displayForm>
+ <namePart type="family">Wang</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>L.D. Zamora</displayForm>
+ <namePart type="family">Zamora</namePart>
+ <namePart type="given">L.D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-01856</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-01856</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Roberto" fullName="Roberto Herrera" lastName="Herrera" role="Plaintiff"></party>
+ <party firstName="Teresa" fullName="Teresa Macias" lastName="Macias" role="Defendant"></party>
+ <party firstName="C." fullName="C. Nareddy" lastName="Nareddy" role="Defendant"></party>
+ <party fullName="Smith" lastName="Smith" role="Defendant"></party>
+ <party fullName="Sosolda" lastName="Sosolda" role="Defendant"></party>
+ <party fullName="Therapist" lastName="Therapist" role="Defendant"></party>
+ <party firstName="L." fullName="L. Vasques" lastName="Vasques" role="Defendant"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey J. Wang" lastName="Wang" middleName="J." role="Defendant"></party>
+ <party firstName="L.D." fullName="L.D. Zamora" lastName="Zamora" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01856-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01856/USCOURTS-caed-1_12-cv-01856-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Herrera v. Vasques, et al.</title>
+  <subTitle>ORDER to Submit Application to Proceed in Forma Pauperis or Pay Filing Fee within 45 Days, signed by Magistrate Judge Barbara A. McAuliffe on 11/15/12. (Attachments: # (1) IFP Application)(Verduzco, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01856/pdf/USCOURTS-caed-1_12-cv-01856-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1878590c0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01856/USCOURTS-caed-1_12-cv-01856-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01856_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01856/USCOURTS-caed-1_12-cv-01856-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01856/pdf/USCOURTS-caed-1_12-cv-01856-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01856; (PC) Herrera v. Vasques, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01856-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-11-15</dateIssued>
+  <docketText>ORDER to Submit Application to Proceed in Forma Pauperis or Pay Filing Fee within 45 Days, signed by Magistrate Judge Barbara A. McAuliffe on 11/15/12. (Attachments: # (1) IFP Application)(Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01856-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01856/USCOURTS-caed-1_12-cv-01856-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Herrera v. Vasques, et al.</title>
+  <subTitle>SCREENING ORDER Complaint For Failure To State A Claim And Granting LEAVE TO AMEND (ECF No.1), Thirty-Day Deadlined, signed by Magistrate Judge Barbara A. McAuliffe on 11/12/2013. First Amended Complaint due by 12/16/2013. (Attachments: # (1) Amended Complaint Form)(Fahrney, E)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01856/pdf/USCOURTS-caed-1_12-cv-01856-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1878590bf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01856/USCOURTS-caed-1_12-cv-01856-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01856_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01856/USCOURTS-caed-1_12-cv-01856-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01856/pdf/USCOURTS-caed-1_12-cv-01856-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01856; (PC) Herrera v. Vasques, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01856-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-11-12</dateIssued>
+  <docketText>SCREENING ORDER Complaint For Failure To State A Claim And Granting LEAVE TO AMEND (ECF No.1), Thirty-Day Deadlined, signed by Magistrate Judge Barbara A. McAuliffe on 11/12/2013. First Amended Complaint due by 12/16/2013. (Attachments: # (1) Amended Complaint Form)(Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01856-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01856/USCOURTS-caed-1_12-cv-01856-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Herrera v. Vasques, et al.</title>
+  <subTitle>ORDER GRANTING Plaintiff&apos;s 11 Motion for Copy of Original Complaint and DIRECTING Clerk of Court to Mail Plaintiff a Copy of His Complaint Filed on November 13, 2012 (Doc. 1), signed by Magistrate Judge Barbara A. McAuliffe on 11/22/2013. (Marrujo, C)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01856/pdf/USCOURTS-caed-1_12-cv-01856-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18785906d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01856/USCOURTS-caed-1_12-cv-01856-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01856_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01856/USCOURTS-caed-1_12-cv-01856-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01856/pdf/USCOURTS-caed-1_12-cv-01856-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01856; (PC) Herrera v. Vasques, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01856-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-11-22</dateIssued>
+  <docketText>ORDER GRANTING Plaintiff&apos;s 11 Motion for Copy of Original Complaint and DIRECTING Clerk of Court to Mail Plaintiff a Copy of His Complaint Filed on November 13, 2012 (Doc. 1), signed by Magistrate Judge Barbara A. McAuliffe on 11/22/2013. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01856-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01856/USCOURTS-caed-1_12-cv-01856-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Herrera v. Vasques, et al.</title>
+  <subTitle>SCREENING ORDER DISMISSING First Amended Complaint for Failure to State a Claim and Granting LEAVE TO AMEND, signed by Magistrate Judge Barbara A. McAuliffe on 12/19/13. Amended Complaint Due Within Thirty Days. (Attachments: # (1) 1983 Amended Complaint Form)(Marrujo, C)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01856/pdf/USCOURTS-caed-1_12-cv-01856-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1878590be</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01856/USCOURTS-caed-1_12-cv-01856-3</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01856_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01856/USCOURTS-caed-1_12-cv-01856-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01856/pdf/USCOURTS-caed-1_12-cv-01856-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01856; (PC) Herrera v. Vasques, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01856-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-12-19</dateIssued>
+  <docketText>SCREENING ORDER DISMISSING First Amended Complaint for Failure to State a Claim and Granting LEAVE TO AMEND, signed by Magistrate Judge Barbara A. McAuliffe on 12/19/13. Amended Complaint Due Within Thirty Days. (Attachments: # (1) 1983 Amended Complaint Form)(Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01856-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01856/USCOURTS-caed-1_12-cv-01856-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Herrera v. Vasques, et al.</title>
+  <subTitle>ORDER GRANTING Plaintiff&apos;s 15 Motion to Extend Time to File Second Amended Complaint; ORDER DIRECTING Clerk of Court to Send Plaintiff a Copy of First Amended Complaint; 30-Day Deadline signed by Magistrate Judge Barbara A. McAuliffe on 1/3/2014. (Sant Agata, S)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01856/pdf/USCOURTS-caed-1_12-cv-01856-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1878590c1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01856/USCOURTS-caed-1_12-cv-01856-4</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01856_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01856/USCOURTS-caed-1_12-cv-01856-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01856/pdf/USCOURTS-caed-1_12-cv-01856-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01856; (PC) Herrera v. Vasques, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01856-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>ORDER GRANTING Plaintiff&apos;s 15 Motion to Extend Time to File Second Amended Complaint; ORDER DIRECTING Clerk of Court to Send Plaintiff a Copy of First Amended Complaint; 30-Day Deadline signed by Magistrate Judge Barbara A. McAuliffe on 1/3/2014. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01856-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01856/USCOURTS-caed-1_12-cv-01856-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Herrera v. Vasques, et al.</title>
+  <subTitle>ORDER DISMISSING Complaint for Failure to State a Claim, signed by Magistrate Judge Barbara A. McAuliffe on 2/19/14. CASE CLOSED. (Gonzalez, R)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01856/pdf/USCOURTS-caed-1_12-cv-01856-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1878590c2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01856/USCOURTS-caed-1_12-cv-01856-5</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01856_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01856/USCOURTS-caed-1_12-cv-01856-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01856/pdf/USCOURTS-caed-1_12-cv-01856-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01856; (PC) Herrera v. Vasques, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01856-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-02-19</dateIssued>
+  <docketText>ORDER DISMISSING Complaint for Failure to State a Claim, signed by Magistrate Judge Barbara A. McAuliffe on 2/19/14. CASE CLOSED. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,525 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817ab606">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03300</identifier>
+<identifier type="local">P0b002ee1817ab606</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_06-cv-03300</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_06-cv-03300</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:06-cv-03300</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>790</natureSuitCode>
+ <natureSuit>Other Labor Litigation</natureSuit>
+ <cause>29:2601 Family Medical Leave Act</cause>
+ <party firstName="Shelley" fullName="Shelley M. Ferneau" lastName="Ferneau" middleName="M." role="Plaintiff"></party>
+ <party fullName="Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc." lastName="Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc." role="Defendant"></party>
+ <party firstName="Shelley" fullName="Shelley M Pino" lastName="Pino" middleName="M" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.</title>
+ <partNumber>4:06-cv-03300</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03300/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:06-cv-03300;06-3300</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Shelley M. Ferneau</displayForm>
+ <namePart type="family">Ferneau</namePart>
+ <namePart type="given">Shelley</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.</displayForm>
+ <namePart type="family">Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Shelley M Pino</displayForm>
+ <namePart type="family">Pino</namePart>
+ <namePart type="given">Shelley</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_06-cv-03300</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:06-cv-03300</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>790</natureSuitCode>
+ <natureSuit>Other Labor Litigation</natureSuit>
+ <cause>29:2601 Family Medical Leave Act</cause>
+ <party firstName="Shelley" fullName="Shelley M. Ferneau" lastName="Ferneau" middleName="M." role="Plaintiff"></party>
+ <party fullName="Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc." lastName="Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc." role="Defendant"></party>
+ <party firstName="Shelley" fullName="Shelley M Pino" lastName="Pino" middleName="M" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cv-03300-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-0/mods.xml">
+ <titleInfo>
+  <title>Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.</title>
+  <subTitle>ORDER denying as moot 13 Motion to Stay. Upon consideration of Defendant&apos;s Motion to Stay, the motion is unnecessary, as the filing of the motion to dismissautomatically delays the answer date until after ruling on themotion to dismiss. Ordered by Magistrate Judge David L. Piester.(JAR)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-02-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cv-03300-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181894bbf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-0</identifier>
+ <identifier type="former granule identifier">ned-4_06-cv-03300_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03300/pdf/USCOURTS-ned-4_06-cv-03300-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-03300; Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cv-03300-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-02-21</dateIssued>
+  <docketText>ORDER denying as moot 13 Motion to Stay. Upon consideration of Defendant&apos;s Motion to Stay, the motion is unnecessary, as the filing of the motion to dismissautomatically delays the answer date until after ruling on themotion to dismiss. Ordered by Magistrate Judge David L. Piester.(JAR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cv-03300-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-1/mods.xml">
+ <titleInfo>
+  <title>Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.</title>
+  <subTitle>ORDER denying 10 defendant&apos;s motion to dismiss. Ordered by Judge Richard G. Kopf.(KLL, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cv-03300-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181894bbb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-1</identifier>
+ <identifier type="former granule identifier">ned-4_06-cv-03300_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03300/pdf/USCOURTS-ned-4_06-cv-03300-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-03300; Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cv-03300-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-03-23</dateIssued>
+  <docketText>ORDER denying 10 defendant&apos;s motion to dismiss. Ordered by Judge Richard G. Kopf.(KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cv-03300-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-2/mods.xml">
+ <titleInfo>
+  <title>Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.</title>
+  <subTitle>STRICKEN: ORDER granting 29 unopposed oral motion to continue the Rule 16 telephone planning conference and the conference is continued from today to June 27, 2007 at 11:00 a.m. Ordered by Magistrate Judge David L. Piester.(CAR) Modified on 6/12/2007 adding &quot;stricken&quot; (SED).</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cv-03300-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181894c2f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-2</identifier>
+ <identifier type="former granule identifier">ned-4_06-cv-03300_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03300/pdf/USCOURTS-ned-4_06-cv-03300-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-03300; Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cv-03300-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-06-11</dateIssued>
+  <docketText>STRICKEN: ORDER granting 29 unopposed oral motion to continue the Rule 16 telephone planning conference and the conference is continued from today to June 27, 2007 at 11:00 a.m. Ordered by Magistrate Judge David L. Piester.(CAR) Modified on 6/12/2007 adding &quot;stricken&quot; (SED).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cv-03300-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-3/mods.xml">
+ <titleInfo>
+  <title>Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.</title>
+  <subTitle>MEMORANDUM AND ORDER denying 24 Motion to Compel and for sanctions. The parties have now exchanged their mandatory disclosures. Therefore, the only issue remaining on defendants&apos; discovery motion is whether the defendants should be awarded the attorney fees they incurred in filing a motion to compel. IT THEREFORE HEREBY IS ORDERED: Defendants motion to compel and for sanctions, filing 24, is denied. Ordered by Magistrate Judge David L. Piester.(JAR)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cv-03300-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181894bc1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-3</identifier>
+ <identifier type="former granule identifier">ned-4_06-cv-03300_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03300/pdf/USCOURTS-ned-4_06-cv-03300-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-03300; Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cv-03300-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-06-27</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 24 Motion to Compel and for sanctions. The parties have now exchanged their mandatory disclosures. Therefore, the only issue remaining on defendants&apos; discovery motion is whether the defendants should be awarded the attorney fees they incurred in filing a motion to compel. IT THEREFORE HEREBY IS ORDERED: Defendants motion to compel and for sanctions, filing 24, is denied. Ordered by Magistrate Judge David L. Piester.(JAR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cv-03300-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-4/mods.xml">
+ <titleInfo>
+  <title>Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.</title>
+  <subTitle>ORDER granting 40 Motion to Extend Time. IT IS ORDERED that the Motion for Extension of Time is granted and Defendant&apos;s deadline for disclosing experts is extended until October 8, 2007. Ordered by Magistrate Judge David L. Piester.(JAB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cv-03300-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181894bbd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-4</identifier>
+ <identifier type="former granule identifier">ned-4_06-cv-03300_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03300/pdf/USCOURTS-ned-4_06-cv-03300-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-03300; Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cv-03300-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2007-08-28</dateIssued>
+  <docketText>ORDER granting 40 Motion to Extend Time. IT IS ORDERED that the Motion for Extension of Time is granted and Defendant&apos;s deadline for disclosing experts is extended until October 8, 2007. Ordered by Magistrate Judge David L. Piester.(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cv-03300-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-5/mods.xml">
+ <titleInfo>
+  <title>Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.</title>
+  <subTitle>ORDER granting 45 Motion to Withdraw as Attorney. IT IS ORDERED: 1. Counsel&apos;s motion to withdraw, filing 45, is granted, effective upon the filing of a certificate of service or affidavit indicating that the plaintiff has been served with a copy of this order. 2. Plaintiff is given 30 days from the date of this order in which to either: (1) obtain the services of substitute counseland have that attorney file an appearance in her behalf; (2) file a motion in this court for the appointment of counsel, setting forth her present financial status, and the reasons she believes counsel should be appointed; or (3) indicate, by pleading, that she will proceed in this case without counsel. If none of these actions is taken within the next thirty days, this case will besubject to dismissal. 3. This case is stayed for a period of thirty days. Ordered by Magistrate Judge David L. Piester.(JAB)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-09-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cv-03300-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181894bc0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-5</identifier>
+ <identifier type="former granule identifier">ned-4_06-cv-03300_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03300/pdf/USCOURTS-ned-4_06-cv-03300-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-03300; Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cv-03300-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2007-09-18</dateIssued>
+  <docketText>ORDER granting 45 Motion to Withdraw as Attorney. IT IS ORDERED: 1. Counsel&apos;s motion to withdraw, filing 45, is granted, effective upon the filing of a certificate of service or affidavit indicating that the plaintiff has been served with a copy of this order. 2. Plaintiff is given 30 days from the date of this order in which to either: (1) obtain the services of substitute counseland have that attorney file an appearance in her behalf; (2) file a motion in this court for the appointment of counsel, setting forth her present financial status, and the reasons she believes counsel should be appointed; or (3) indicate, by pleading, that she will proceed in this case without counsel. If none of these actions is taken within the next thirty days, this case will besubject to dismissal. 3. This case is stayed for a period of thirty days. Ordered by Magistrate Judge David L. Piester.(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cv-03300-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-6/mods.xml">
+ <titleInfo>
+  <title>Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.</title>
+  <subTitle>ORDER - 1. Defendant&apos;s motion to dismiss (filing 52) is denied. 2. This case is referred to the court&apos;s pro se docket. Ordered by Judge Richard G. Kopf. (Copies mailed to pro se party)(CS, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-11-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cv-03300-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181894bbc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-6</identifier>
+ <identifier type="former granule identifier">ned-4_06-cv-03300_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03300/pdf/USCOURTS-ned-4_06-cv-03300-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-03300; Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cv-03300-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2007-11-05</dateIssued>
+  <docketText>ORDER - 1. Defendant&apos;s motion to dismiss (filing 52) is denied. 2. This case is referred to the court&apos;s pro se docket. Ordered by Judge Richard G. Kopf. (Copies mailed to pro se party)(CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cv-03300-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-7/mods.xml">
+ <titleInfo>
+  <title>Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.</title>
+  <subTitle>MEMORANDUM AND ORDER granting 62 Motion to Extend Time to File Motion to Compel and Motion for Summary Judgment. Motions to compel discovery shall be filed on or before February 26, 2008. All dispositive motions shall be filed on or before May 14, 2008. The Final Pretrial Conference will be held before Magistrate Judge David L. Piester on July 23, 2008 at 2:30 p.m. The trial date will be set by Magistrate Judge Piester at the time of the Final Pretrial Conference. Pro se case management deadline: Pretrial conference before Magistrate Judge Piester to be held on July 23, 2008. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(JAB)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-02-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cv-03300-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181894c31</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-7</identifier>
+ <identifier type="former granule identifier">ned-4_06-cv-03300_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03300/pdf/USCOURTS-ned-4_06-cv-03300-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-03300; Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cv-03300-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2008-02-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 62 Motion to Extend Time to File Motion to Compel and Motion for Summary Judgment. Motions to compel discovery shall be filed on or before February 26, 2008. All dispositive motions shall be filed on or before May 14, 2008. The Final Pretrial Conference will be held before Magistrate Judge David L. Piester on July 23, 2008 at 2:30 p.m. The trial date will be set by Magistrate Judge Piester at the time of the Final Pretrial Conference. Pro se case management deadline: Pretrial conference before Magistrate Judge Piester to be held on July 23, 2008. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cv-03300-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-8/mods.xml">
+ <titleInfo>
+  <title>Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.</title>
+  <subTitle>MEMORANDUM AND ORDER denying 65 Motion to Compel and granting 68 Motion to Withdraw Document. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(LKL)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-04-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cv-03300-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181894c30</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-8</identifier>
+ <identifier type="former granule identifier">ned-4_06-cv-03300_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03300/pdf/USCOURTS-ned-4_06-cv-03300-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-03300; Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cv-03300-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2008-04-16</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 65 Motion to Compel and granting 68 Motion to Withdraw Document. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(LKL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cv-03300-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-9/mods.xml">
+ <titleInfo>
+  <title>Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.</title>
+  <subTitle>ORDER - Plaintiff&apos;s motion for an enlargement of time (filing 78) is granted. Plaintiff shall have until July 18, 2008, to respond to Defendant&apos;s motion for summary judgment (filing 70). Ordered by Judge Richard G. Kopf. (GJG, )</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-06-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cv-03300-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181894c34</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-9</identifier>
+ <identifier type="former granule identifier">ned-4_06-cv-03300_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03300/pdf/USCOURTS-ned-4_06-cv-03300-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-03300; Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cv-03300-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2008-06-30</dateIssued>
+  <docketText>ORDER - Plaintiff&apos;s motion for an enlargement of time (filing 78) is granted. Plaintiff shall have until July 18, 2008, to respond to Defendant&apos;s motion for summary judgment (filing 70). Ordered by Judge Richard G. Kopf. (GJG, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cv-03300-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-10/mods.xml">
+ <titleInfo>
+  <title>Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.</title>
+  <subTitle>MEMORANDUM AND ORDER denying 70 defendant&apos;s Motion for Summary Judgment. Ordered by Judge Richard G. Kopf. (GJG, )</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cv-03300-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181894c33</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-10</identifier>
+ <identifier type="former granule identifier">ned-4_06-cv-03300_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03300/pdf/USCOURTS-ned-4_06-cv-03300-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-03300; Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cv-03300-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2008-08-05</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 70 defendant&apos;s Motion for Summary Judgment. Ordered by Judge Richard G. Kopf. (GJG, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cv-03300-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-11/mods.xml">
+ <titleInfo>
+  <title>Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.</title>
+  <subTitle>MEMORANDUM AND ORDER granting 84 Motion for continuance. An amended final progression order will be entered. In the event the defendants claim that additional discovery expenses have been incurred as a result of the continuance granted by this order which are duplicative of discovery expenses previously incurred, application may be made to the court for an order directing the plaintiff to reimburse defendants for such duplicative expenses. Such application shall be filed on or before the date of the final pretrial conference. Ordered by Magistrate Judge David L. Piester. (GJG, )</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cv-03300-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181894c32</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-11</identifier>
+ <identifier type="former granule identifier">ned-4_06-cv-03300_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03300/pdf/USCOURTS-ned-4_06-cv-03300-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-03300; Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cv-03300-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2008-08-19</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 84 Motion for continuance. An amended final progression order will be entered. In the event the defendants claim that additional discovery expenses have been incurred as a result of the continuance granted by this order which are duplicative of discovery expenses previously incurred, application may be made to the court for an order directing the plaintiff to reimburse defendants for such duplicative expenses. Such application shall be filed on or before the date of the final pretrial conference. Ordered by Magistrate Judge David L. Piester. (GJG, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cv-03300-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-12/mods.xml">
+ <titleInfo>
+  <title>Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.</title>
+  <subTitle>ORDER regarding 92 Motion to Extend. IT IS ORDERED: Defendant&apos;s motion to continue trial and discovery deadline, filing no. 92, is granted, and Jury trial is continued to 9:00 a.m., January 20, 2009 for a duration of four days before the Honorable Richard G. Kopf in Courtroom 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. Trial is subject to the prior disposition or continuance of any criminal matters which may be set for that week as well as Hollins v. Hollister, 4:08cv3013. Jury selection will be held at commencement of trial. The pretrial conference will be held January 6, 2009 at 10:00 a.m. before the undersigned magistrate judge. The deposition deadline is continued to December 31, 2008. Ordered by Magistrate Judge David L. Piester. (LKL, )</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cv-03300-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181894bbe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-12</identifier>
+ <identifier type="former granule identifier">ned-4_06-cv-03300_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03300/pdf/USCOURTS-ned-4_06-cv-03300-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-03300; Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cv-03300-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2008-10-08</dateIssued>
+  <docketText>ORDER regarding 92 Motion to Extend. IT IS ORDERED: Defendant&apos;s motion to continue trial and discovery deadline, filing no. 92, is granted, and Jury trial is continued to 9:00 a.m., January 20, 2009 for a duration of four days before the Honorable Richard G. Kopf in Courtroom 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. Trial is subject to the prior disposition or continuance of any criminal matters which may be set for that week as well as Hollins v. Hollister, 4:08cv3013. Jury selection will be held at commencement of trial. The pretrial conference will be held January 6, 2009 at 10:00 a.m. before the undersigned magistrate judge. The deposition deadline is continued to December 31, 2008. Ordered by Magistrate Judge David L. Piester. (LKL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cv-03300-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-13/mods.xml">
+ <titleInfo>
+  <title>Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.</title>
+  <subTitle>ORDER-Upon consideration of the parties&apos; joint stipulation (filing 98), IT IS ORDERED: This case is removed from the court&apos;s trial list for the week of January 20, 2009. If the parties do not file a stipulation for dismissal with prejudice on or before July 1, 2009, this case shall be subject to dismissal by the court without further notice. Ordered by Judge Richard G. Kopf. (LKH)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cv-03300-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181894bc2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-13</identifier>
+ <identifier type="former granule identifier">ned-4_06-cv-03300_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03300/USCOURTS-ned-4_06-cv-03300-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03300/pdf/USCOURTS-ned-4_06-cv-03300-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-03300; Ferneau v. Pappas Telecasting of Central Nebraska/Pappas Telecasting of Nebraska, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cv-03300-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2009-01-12</dateIssued>
+  <docketText>ORDER-Upon consideration of the parties&apos; joint stipulation (filing 98), IT IS ORDERED: This case is removed from the court&apos;s trial list for the week of January 20, 2009. If the parties do not file a stipulation for dismissal with prejudice on or before July 1, 2009, this case shall be subject to dismissal by the court without further notice. Ordered by Judge Richard G. Kopf. (LKH)</docketText>
+</extension>
+</relatedItem>
+</mods>

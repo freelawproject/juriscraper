@@ -1,0 +1,242 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1812d483d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_10-cv-00273</identifier>
+<identifier type="local">P0b002ee1812d483d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-5_10-cv-00273</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_10-cv-00273</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:10-cv-00273</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <cause>31:3729 False Claims Act</cause>
+ <party fullName="CENTRAL GEORGIA HEALTH SYSTEMS INC" lastName="CENTRAL GEORGIA HEALTH SYSTEMS INC" role="Defendant"></party>
+ <party firstName="Angel" fullName="Angel Cancel" lastName="Cancel" role="Plaintiff"></party>
+ <party firstName="Grace" fullName="Grace Duque Dizon" lastName="Duque Dizon" role="Plaintiff"></party>
+ <party firstName="A" fullName="A Donald Faulk Jr" generation="Jr" lastName="Faulk" middleName="Donald" role="Defendant"></party>
+ <party firstName="Louis" fullName="Louis Goolsby" lastName="Goolsby" role="Defendant"></party>
+ <party firstName="Pravin" fullName="Pravin Jain" lastName="Jain" role="Plaintiff"></party>
+ <party firstName="Miles" fullName="Miles McDonald" lastName="McDonald" role="Defendant"></party>
+ <party firstName="Monajna" fullName="Monajna Sanjeev" lastName="Sanjeev" role="Plaintiff"></party>
+ <party firstName="Alvin" fullName="Alvin Sewell" lastName="Sewell" role="Defendant"></party>
+ <party firstName="Sanjawan" fullName="Sanjawan Tarabadkar" lastName="Tarabadkar" role="Defendant"></party>
+ <party fullName="The Medical Center of Central Georgia Inc" lastName="The Medical Center of Central Georgia Inc" role="Defendant"></party>
+ <party fullName="The NEXus Medical Group LLC" lastName="The NEXus Medical Group LLC" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Cancel et al v. Sewell et al</title>
+ <partNumber>5:10-cv-00273</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_10-cv-00273/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:10-cv-00273;10-273</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Macon</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>CENTRAL GEORGIA HEALTH SYSTEMS INC</displayForm>
+ <namePart type="family">CENTRAL GEORGIA HEALTH SYSTEMS INC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Angel Cancel</displayForm>
+ <namePart type="family">Cancel</namePart>
+ <namePart type="given">Angel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Grace Duque Dizon</displayForm>
+ <namePart type="family">Duque Dizon</namePart>
+ <namePart type="given">Grace</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>A Donald Faulk Jr</displayForm>
+ <namePart type="family">Faulk</namePart>
+ <namePart type="given">A</namePart>
+ <namePart type="termsOfAddress">Jr</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Louis Goolsby</displayForm>
+ <namePart type="family">Goolsby</namePart>
+ <namePart type="given">Louis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pravin Jain</displayForm>
+ <namePart type="family">Jain</namePart>
+ <namePart type="given">Pravin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Miles McDonald</displayForm>
+ <namePart type="family">McDonald</namePart>
+ <namePart type="given">Miles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Monajna Sanjeev</displayForm>
+ <namePart type="family">Sanjeev</namePart>
+ <namePart type="given">Monajna</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Alvin Sewell</displayForm>
+ <namePart type="family">Sewell</namePart>
+ <namePart type="given">Alvin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sanjawan Tarabadkar</displayForm>
+ <namePart type="family">Tarabadkar</namePart>
+ <namePart type="given">Sanjawan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The Medical Center of Central Georgia Inc</displayForm>
+ <namePart type="family">The Medical Center of Central Georgia Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The NEXus Medical Group LLC</displayForm>
+ <namePart type="family">The NEXus Medical Group LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_10-cv-00273</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:10-cv-00273</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <cause>31:3729 False Claims Act</cause>
+ <party fullName="CENTRAL GEORGIA HEALTH SYSTEMS INC" lastName="CENTRAL GEORGIA HEALTH SYSTEMS INC" role="Defendant"></party>
+ <party firstName="Angel" fullName="Angel Cancel" lastName="Cancel" role="Plaintiff"></party>
+ <party firstName="Grace" fullName="Grace Duque Dizon" lastName="Duque Dizon" role="Plaintiff"></party>
+ <party firstName="A" fullName="A Donald Faulk Jr" generation="Jr" lastName="Faulk" middleName="Donald" role="Defendant"></party>
+ <party firstName="Louis" fullName="Louis Goolsby" lastName="Goolsby" role="Defendant"></party>
+ <party firstName="Pravin" fullName="Pravin Jain" lastName="Jain" role="Plaintiff"></party>
+ <party firstName="Miles" fullName="Miles McDonald" lastName="McDonald" role="Defendant"></party>
+ <party firstName="Monajna" fullName="Monajna Sanjeev" lastName="Sanjeev" role="Plaintiff"></party>
+ <party firstName="Alvin" fullName="Alvin Sewell" lastName="Sewell" role="Defendant"></party>
+ <party firstName="Sanjawan" fullName="Sanjawan Tarabadkar" lastName="Tarabadkar" role="Defendant"></party>
+ <party fullName="The Medical Center of Central Georgia Inc" lastName="The Medical Center of Central Georgia Inc" role="Defendant"></party>
+ <party fullName="The NEXus Medical Group LLC" lastName="The NEXus Medical Group LLC" role="Defendant"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_10-cv-00273-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_10-cv-00273/USCOURTS-gamd-5_10-cv-00273-0/mods.xml">
+ <titleInfo>
+  <title>Cancel et al v. Sewell et al</title>
+  <subTitle>ORDER granting 12 Motion to Remand. This case is hereby REMANDED to the Superior Court of Bibb County. Ordered by Judge C. Ashley Royal on 1/24/11 (lap)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_10-cv-00273-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1812f0fc6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_10-cv-00273/USCOURTS-gamd-5_10-cv-00273-0</identifier>
+ <identifier type="former granule identifier">gamd-5_10-cv-00273_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_10-cv-00273/USCOURTS-gamd-5_10-cv-00273-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_10-cv-00273/pdf/USCOURTS-gamd-5_10-cv-00273-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:10-cv-00273; Cancel et al v. Sewell et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_10-cv-00273-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-24</dateIssued>
+  <docketText>ORDER granting 12 Motion to Remand. This case is hereby REMANDED to the Superior Court of Bibb County. Ordered by Judge C. Ashley Royal on 1/24/11 (lap)</docketText>
+</extension>
+</relatedItem>
+</mods>

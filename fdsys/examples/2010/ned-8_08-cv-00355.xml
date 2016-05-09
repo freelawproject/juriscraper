@@ -1,0 +1,329 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18172749c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00355</identifier>
+<identifier type="local">P0b002ee18172749c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_08-cv-00355</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-00355</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-00355</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Timothy" fullName="Timothy Earl Agee" lastName="Agee" middleName="Earl" role="Petitioner"></party>
+ <party firstName="Fred" fullName="Fred Britten" lastName="Britten" role="Respondent"></party>
+ <party fullName="Nebraska Attorney General" lastName="Nebraska Attorney General" role="Interested Party"></party>
+</extension>
+<titleInfo>
+ <title>Agee v. Britten</title>
+ <partNumber>8:08-cv-00355</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00355/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:08-cv-00355;08-355</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Timothy Earl Agee</displayForm>
+ <namePart type="family">Agee</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Fred Britten</displayForm>
+ <namePart type="family">Britten</namePart>
+ <namePart type="given">Fred</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Nebraska Attorney General</displayForm>
+ <namePart type="family">Nebraska Attorney General</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-00355</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-00355</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Timothy" fullName="Timothy Earl Agee" lastName="Agee" middleName="Earl" role="Petitioner"></party>
+ <party firstName="Fred" fullName="Fred Britten" lastName="Britten" role="Respondent"></party>
+ <party fullName="Nebraska Attorney General" lastName="Nebraska Attorney General" role="Interested Party"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00355-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-0/mods.xml">
+ <titleInfo>
+  <title>Agee v. Britten</title>
+  <subTitle>ORDER provisionally granting 2 Motion for Leave to Proceed in forma pauperis, but petitioner shall pay the $5 filing fee by 10/13/08. The clerk is directed to set a pro se case management deadline in this case for 10/13/08: deadline for payment of $5 filing fee. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party) (JSF)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00355-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178bfe3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-0</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00355_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00355/pdf/USCOURTS-ned-8_08-cv-00355-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00355; Agee v. Britten; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00355-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-08-15</dateIssued>
+  <docketText>ORDER provisionally granting 2 Motion for Leave to Proceed in forma pauperis, but petitioner shall pay the $5 filing fee by 10/13/08. The clerk is directed to set a pro se case management deadline in this case for 10/13/08: deadline for payment of $5 filing fee. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party) (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00355-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-1/mods.xml">
+ <titleInfo>
+  <title>Agee v. Britten</title>
+  <subTitle>MEMORANDUM AND ORDER - Upon initial review of the Petition for Writ of Habeas corpus 1 the Court preliminarily determines that all five of petitioner&apos;s claims, as set forth in this Memorandum and order, are potentially cognizable in federal court. Petitioner&apos;s Motion for Appointment of Counsel 1 is denied without prejudice to reassertion. The Clerk of the court is directed to mail copies of this Memorandum and Order and the Petition for Writ of Habeas Corpus 1 to respondent and the Nebraska Attorney General by regular first-class mail. By November 21, 2008, respondent shall file a motion for summary judgment or an answer. The clerk of the court is directed to set a pro se case management deadline in this case using the following text: November 21, 2008: deadline for respondent to file answer or motion for summary judgment. If respondent elects to file a motion for summary judgment, the following procedures shall be set forth within the order. No discovery shall be undertaken without leave of the court. See Rule 6 of the Rules Governing Section 2254 Cases in the United States District Courts. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00355-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178bfdf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-1</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00355_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00355/pdf/USCOURTS-ned-8_08-cv-00355-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00355; Agee v. Britten; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00355-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-10-09</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Upon initial review of the Petition for Writ of Habeas corpus 1 the Court preliminarily determines that all five of petitioner&apos;s claims, as set forth in this Memorandum and order, are potentially cognizable in federal court. Petitioner&apos;s Motion for Appointment of Counsel 1 is denied without prejudice to reassertion. The Clerk of the court is directed to mail copies of this Memorandum and Order and the Petition for Writ of Habeas Corpus 1 to respondent and the Nebraska Attorney General by regular first-class mail. By November 21, 2008, respondent shall file a motion for summary judgment or an answer. The clerk of the court is directed to set a pro se case management deadline in this case using the following text: November 21, 2008: deadline for respondent to file answer or motion for summary judgment. If respondent elects to file a motion for summary judgment, the following procedures shall be set forth within the order. No discovery shall be undertaken without leave of the court. See Rule 6 of the Rules Governing Section 2254 Cases in the United States District Courts. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00355-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-2/mods.xml">
+ <titleInfo>
+  <title>Agee v. Britten</title>
+  <subTitle>ORDER denying 7 and 18 the Petitioner&apos;s Motions for Default Judgment; Petitioner&apos;s motion for additional state court records is denied as moot 13 Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)(MKR)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-02-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00355-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178c049</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-2</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00355_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00355/pdf/USCOURTS-ned-8_08-cv-00355-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00355; Agee v. Britten; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00355-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-02-19</dateIssued>
+  <docketText>ORDER denying 7 and 18 the Petitioner&apos;s Motions for Default Judgment; Petitioner&apos;s motion for additional state court records is denied as moot 13 Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00355-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-3/mods.xml">
+ <titleInfo>
+  <title>Agee v. Britten</title>
+  <subTitle>MEMORANDUM OPINION on Timothy Earl Agee&apos;s Petition for Writ of Habeas Corpus 1. A separate order will be entered in accordance with this memorandum opinion Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)(MKR)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00355-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178bfe0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-3</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00355_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00355/pdf/USCOURTS-ned-8_08-cv-00355-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00355; Agee v. Britten; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00355-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-07-14</dateIssued>
+  <docketText>MEMORANDUM OPINION on Timothy Earl Agee&apos;s Petition for Writ of Habeas Corpus 1. A separate order will be entered in accordance with this memorandum opinion Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00355-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-4/mods.xml">
+ <titleInfo>
+  <title>Agee v. Britten</title>
+  <subTitle>ORDER denying 28 the petitioner&apos;s Motion for Reconsideration. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)(MKR)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00355-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178bfe2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-4</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00355_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00355/pdf/USCOURTS-ned-8_08-cv-00355-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00355; Agee v. Britten; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00355-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-10-09</dateIssued>
+  <docketText>ORDER denying 28 the petitioner&apos;s Motion for Reconsideration. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00355-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-5/mods.xml">
+ <titleInfo>
+  <title>Agee v. Britten</title>
+  <subTitle>ORDER - Petitioner shall have until December 20, 2009, to file a notice of appeal. The clerk of the court is directed to set a pro se case management deadline in this case with the following text: December 20, 2009: check for filing of notice of appeal. In the event that petitioner fails to file a notice of appeal, the Court will deny petitioner&apos;s pending motions without further notice. ( Pro Se Case Management Deadline set for 12/20/2009 - check for filing of notice of appeal.) Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)(JAE)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00355-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178bfe1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-5</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00355_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00355/pdf/USCOURTS-ned-8_08-cv-00355-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00355; Agee v. Britten; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00355-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-12-02</dateIssued>
+  <docketText>ORDER - Petitioner shall have until December 20, 2009, to file a notice of appeal. The clerk of the court is directed to set a pro se case management deadline in this case with the following text: December 20, 2009: check for filing of notice of appeal. In the event that petitioner fails to file a notice of appeal, the Court will deny petitioner&apos;s pending motions without further notice. ( Pro Se Case Management Deadline set for 12/20/2009 - check for filing of notice of appeal.) Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)(JAE)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00355-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-6/mods.xml">
+ <titleInfo>
+  <title>Agee v. Britten</title>
+  <subTitle>MEMORANDUM AND ORDER - Petitioners motion for leave to proceed in forma pauperis (Filing No. 32) is granted. Petitioners motion to appoint counsel (Filing No. 33) is denied without prejudice to reassertion before the Eighth Circuit. Petitioners motion for certificate of appealability (Filing No. 31) is denied without prejudice to reassertion before the Eighth Circuit. The clerk of the court shall provide the Court of Appeals a copy of this memorandum and order. Ordered by Senior Judge Lyle E. Strom. (Copies mailed as directed and to pro se party)(MKR)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00355-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178c048</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-6</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00355_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00355/USCOURTS-ned-8_08-cv-00355-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00355/pdf/USCOURTS-ned-8_08-cv-00355-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00355; Agee v. Britten; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00355-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2010-01-20</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Petitioners motion for leave to proceed in forma pauperis (Filing No. 32) is granted. Petitioners motion to appoint counsel (Filing No. 33) is denied without prejudice to reassertion before the Eighth Circuit. Petitioners motion for certificate of appealability (Filing No. 31) is denied without prejudice to reassertion before the Eighth Circuit. The clerk of the court shall provide the Court of Appeals a copy of this memorandum and order. Ordered by Senior Judge Lyle E. Strom. (Copies mailed as directed and to pro se party)(MKR)</docketText>
+</extension>
+</relatedItem>
+</mods>

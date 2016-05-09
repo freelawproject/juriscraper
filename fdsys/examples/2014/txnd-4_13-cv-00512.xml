@@ -1,0 +1,189 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c68a0a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-4_13-cv-00512</identifier>
+<identifier type="local">P0b002ee186c68a0a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-txnd-4_13-cv-00512</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-4_13-cv-00512</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>4:13-cv-00512</caseNumber>
+ <caseOffice>Fort Worth</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Roger" fullName="Roger Vincent Ford" lastName="Ford" middleName="Vincent" role="Petitioner"></party>
+ <party firstName="William" fullName="William Stephens, Director TDCJ-CID" lastName="Stephens, Director TDCJ-CID" role="Respondent"></party>
+ <party firstName="Rick" fullName="Rick Thaler, Director TDCJ-CID" lastName="Thaler, Director TDCJ-CID" role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Ford v. Stephens, Dir TDC</title>
+ <partNumber>4:13-cv-00512</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-4_13-cv-00512/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:13-cv-00512;13-512</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>Fort Worth</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Roger Vincent Ford</displayForm>
+ <namePart type="family">Ford</namePart>
+ <namePart type="given">Roger</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>William Stephens, Director TDCJ-CID</displayForm>
+ <namePart type="family">Stephens, Director TDCJ-CID</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Rick Thaler, Director TDCJ-CID</displayForm>
+ <namePart type="family">Thaler, Director TDCJ-CID</namePart>
+ <namePart type="given">Rick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-4_13-cv-00512</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>4:13-cv-00512</caseNumber>
+ <caseOffice>Fort Worth</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Roger" fullName="Roger Vincent Ford" lastName="Ford" middleName="Vincent" role="Petitioner"></party>
+ <party firstName="William" fullName="William Stephens, Director TDCJ-CID" lastName="Stephens, Director TDCJ-CID" role="Respondent"></party>
+ <party firstName="Rick" fullName="Rick Thaler, Director TDCJ-CID" lastName="Thaler, Director TDCJ-CID" role="Respondent"></party>
+ <state>Texas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-4_13-cv-00512-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-4_13-cv-00512/USCOURTS-txnd-4_13-cv-00512-0/mods.xml">
+ <titleInfo>
+  <title>Ford v. Stephens, Dir TDC</title>
+  <subTitle>Findings and Recommendations on Case re: 1 Petition for Writ of Habeas Corpus, filed by Roger Vincent Ford. Recommended that the petition for writ of habeas corpus be dismissed with prejudice as time-barred. Magistrate Judge Jeffrey L Cureton no longer assigned to case. Objections to F&amp;R due by 12/17/2013 re: 1 Petition for Writ of Habeas Corpus. (Ordered by Magistrate Judge Jeffrey L Cureton on 11/26/2013) (wrb)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-4_13-cv-00512-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c767b8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-4_13-cv-00512/USCOURTS-txnd-4_13-cv-00512-0</identifier>
+ <identifier type="former granule identifier">txnd-4_13-cv-00512_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-4_13-cv-00512/USCOURTS-txnd-4_13-cv-00512-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-4_13-cv-00512/pdf/USCOURTS-txnd-4_13-cv-00512-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cv-00512; Ford v. Stephens, Dir TDC; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-4_13-cv-00512-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-11-26</dateIssued>
+  <docketText>Findings and Recommendations on Case re: 1 Petition for Writ of Habeas Corpus, filed by Roger Vincent Ford. Recommended that the petition for writ of habeas corpus be dismissed with prejudice as time-barred. Magistrate Judge Jeffrey L Cureton no longer assigned to case. Objections to F&amp;R due by 12/17/2013 re: 1 Petition for Writ of Habeas Corpus. (Ordered by Magistrate Judge Jeffrey L Cureton on 11/26/2013) (wrb)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-4_13-cv-00512-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-4_13-cv-00512/USCOURTS-txnd-4_13-cv-00512-1/mods.xml">
+ <titleInfo>
+  <title>Ford v. Stephens, Dir TDC</title>
+  <subTitle>Order Accepting Findings and Recommendations and Denying Certificate of Appealability re: 15 Findings and Recommendations on Case re: 1 Petition for Writ of Habeas Corpus, filed by Roger Vincent Ford. Petition under 28 USC 2254 is dismissed with prejudice; Magistrate Judge Jeffrey L Cureton no longer assigned to case. (Ordered by Judge Terry R Means on 1/6/2014) (wrb)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-4_13-cv-00512-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c767b9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-4_13-cv-00512/USCOURTS-txnd-4_13-cv-00512-1</identifier>
+ <identifier type="former granule identifier">txnd-4_13-cv-00512_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-4_13-cv-00512/USCOURTS-txnd-4_13-cv-00512-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-4_13-cv-00512/pdf/USCOURTS-txnd-4_13-cv-00512-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cv-00512; Ford v. Stephens, Dir TDC; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-4_13-cv-00512-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>Order Accepting Findings and Recommendations and Denying Certificate of Appealability re: 15 Findings and Recommendations on Case re: 1 Petition for Writ of Habeas Corpus, filed by Roger Vincent Ford. Petition under 28 USC 2254 is dismissed with prejudice; Magistrate Judge Jeffrey L Cureton no longer assigned to case. (Ordered by Judge Terry R Means on 1/6/2014) (wrb)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,700 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a15b9">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00192</identifier>
+<identifier type="local">P0b002ee1817a15b9</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_07-cv-00192</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cv-00192</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cv-00192</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1441 Petition for Removal- Contract Dispute</cause>
+ <party fullName="CNA Financial Corp." lastName="CNA Financial Corp." role="Defendant"></party>
+ <party fullName="CNA Surety Corp." lastName="CNA Surety Corp." role="Defendant"></party>
+ <party fullName="Concrete Industries, Inc." lastName="Concrete Industries, Inc." role="Counter Defendant"></party>
+ <party fullName="Concrete Industries, Inc." lastName="Concrete Industries, Inc." role="Plaintiff"></party>
+ <party fullName="Continental Casualty Company" lastName="Continental Casualty Company" role="Defendant"></party>
+ <party fullName="Dobson Brothers Construction" lastName="Dobson Brothers Construction" role="Counter Claimant"></party>
+ <party fullName="Dobson Brothers Construction" lastName="Dobson Brothers Construction" role="Defendant"></party>
+ <party firstName="David" fullName="David C. Wells" lastName="Wells" middleName="C." role="Mediator"></party>
+ <party fullName="Western Surety" lastName="Western Surety" role="Counter Claimant"></party>
+ <party fullName="Western Surety" lastName="Western Surety" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Concrete Industries, Inc. v. Dobson Brothers Construction et al</title>
+ <partNumber>8:07-cv-00192</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00192/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:07-cv-00192;07-192</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>CNA Financial Corp.</displayForm>
+ <namePart type="family">CNA Financial Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CNA Surety Corp.</displayForm>
+ <namePart type="family">CNA Surety Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Concrete Industries, Inc.</displayForm>
+ <namePart type="family">Concrete Industries, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Concrete Industries, Inc.</displayForm>
+ <namePart type="family">Concrete Industries, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Continental Casualty Company</displayForm>
+ <namePart type="family">Continental Casualty Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dobson Brothers Construction</displayForm>
+ <namePart type="family">Dobson Brothers Construction</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Dobson Brothers Construction</displayForm>
+ <namePart type="family">Dobson Brothers Construction</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David C. Wells</displayForm>
+ <namePart type="family">Wells</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Mediator</description>
+</name>
+<name type="personal">
+ <displayForm>Western Surety</displayForm>
+ <namePart type="family">Western Surety</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Western Surety</displayForm>
+ <namePart type="family">Western Surety</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cv-00192</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cv-00192</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1441 Petition for Removal- Contract Dispute</cause>
+ <party fullName="CNA Financial Corp." lastName="CNA Financial Corp." role="Defendant"></party>
+ <party fullName="CNA Surety Corp." lastName="CNA Surety Corp." role="Defendant"></party>
+ <party fullName="Concrete Industries, Inc." lastName="Concrete Industries, Inc." role="Counter Defendant"></party>
+ <party fullName="Concrete Industries, Inc." lastName="Concrete Industries, Inc." role="Plaintiff"></party>
+ <party fullName="Continental Casualty Company" lastName="Continental Casualty Company" role="Defendant"></party>
+ <party fullName="Dobson Brothers Construction" lastName="Dobson Brothers Construction" role="Counter Claimant"></party>
+ <party fullName="Dobson Brothers Construction" lastName="Dobson Brothers Construction" role="Defendant"></party>
+ <party firstName="David" fullName="David C. Wells" lastName="Wells" middleName="C." role="Mediator"></party>
+ <party fullName="Western Surety" lastName="Western Surety" role="Counter Claimant"></party>
+ <party fullName="Western Surety" lastName="Western Surety" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00192-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-0/mods.xml">
+ <titleInfo>
+  <title>Concrete Industries, Inc. v. Dobson Brothers Construction et al</title>
+  <subTitle>CLERK&apos;S ORDER extending time until November 14, 2006 for defendants Dobson Brothers Construction Company and Western Surety Company to answer or otherwise plead. (Attachments: # (1) Notice of Electronic Filing)Ordered by Deputy Clerk. (ADB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00192-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181831fd6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-0</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00192_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00192/pdf/USCOURTS-ned-8_07-cv-00192-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00192; Concrete Industries, Inc. v. Dobson Brothers Construction et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00192-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-05-21</dateIssued>
+  <docketText>CLERK&apos;S ORDER extending time until November 14, 2006 for defendants Dobson Brothers Construction Company and Western Surety Company to answer or otherwise plead. (Attachments: # (1) Notice of Electronic Filing)Ordered by Deputy Clerk. (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00192-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-1/mods.xml">
+ <titleInfo>
+  <title>Concrete Industries, Inc. v. Dobson Brothers Construction et al</title>
+  <subTitle>ORDER ON INITIAL PLANNING AND SCHEDULING: telephone scheduling conference set for 12/7/06 at 3:00 p.m. before Magistrate Judge Karen M. Humphreys. Report of Patries&apos; Planning Meeting deadline 11/30/06. Signed by Magistrate Judge Karen M. Humphreys on 11/3/06. (Attachments: # (1) Notice of Electronic Filing)(ADB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00192-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818320f9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-1</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00192_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00192/pdf/USCOURTS-ned-8_07-cv-00192-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00192; Concrete Industries, Inc. v. Dobson Brothers Construction et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00192-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-05-21</dateIssued>
+  <docketText>ORDER ON INITIAL PLANNING AND SCHEDULING: telephone scheduling conference set for 12/7/06 at 3:00 p.m. before Magistrate Judge Karen M. Humphreys. Report of Patries&apos; Planning Meeting deadline 11/30/06. Signed by Magistrate Judge Karen M. Humphreys on 11/3/06. (Attachments: # (1) Notice of Electronic Filing)(ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00192-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-2/mods.xml">
+ <titleInfo>
+  <title>Concrete Industries, Inc. v. Dobson Brothers Construction et al</title>
+  <subTitle>ORDER granting 5 Motion for Leave to Appear Pro Hac Vice as to attorney Bruce A. Smith. (Attachments: # (1) Notice of Electronic Filing) Signed by Magistrate Judge Karen M. Humphreys on 11/3/06.(ADB, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00192-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818320f5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-2</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00192_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00192/pdf/USCOURTS-ned-8_07-cv-00192-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00192; Concrete Industries, Inc. v. Dobson Brothers Construction et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00192-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-05-21</dateIssued>
+  <docketText>ORDER granting 5 Motion for Leave to Appear Pro Hac Vice as to attorney Bruce A. Smith. (Attachments: # (1) Notice of Electronic Filing) Signed by Magistrate Judge Karen M. Humphreys on 11/3/06.(ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00192-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-3/mods.xml">
+ <titleInfo>
+  <title>Concrete Industries, Inc. v. Dobson Brothers Construction et al</title>
+  <subTitle>SCHEDULING ORDER: mediation deadline 3/7/07; discovery deadline 7/16/07; dispositive motion deadline 8/17/07; proposed pretrial order due by 7/30/07; final pretrial conference set for 8/3/07 at 11:00 am before Magistrate Judge Karen M. Humphreys. (Attachments: # (1) Notice of Electronic Filing)Signed by Magistrate Judge Karen M. Humphreys on 12/8/06. (ADB, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00192-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818320b1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-3</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00192_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00192/pdf/USCOURTS-ned-8_07-cv-00192-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00192; Concrete Industries, Inc. v. Dobson Brothers Construction et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00192-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-05-21</dateIssued>
+  <docketText>SCHEDULING ORDER: mediation deadline 3/7/07; discovery deadline 7/16/07; dispositive motion deadline 8/17/07; proposed pretrial order due by 7/30/07; final pretrial conference set for 8/3/07 at 11:00 am before Magistrate Judge Karen M. Humphreys. (Attachments: # (1) Notice of Electronic Filing)Signed by Magistrate Judge Karen M. Humphreys on 12/8/06. (ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00192-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-4/mods.xml">
+ <titleInfo>
+  <title>Concrete Industries, Inc. v. Dobson Brothers Construction et al</title>
+  <subTitle>REVISED SCHEDULING ORDER granting 19 Motion to Extend. Mediation deadline 6/1/07; discovery deadline 8/17/07; dispositive motion deadline 9/21/07; proposed pretrial order due by 9/4/07; final pretrial conference set for 9/7/07 ay 11:00 a.m. (Attachments: # (1) Notice of Electronic Filing) Signed by Magistrate Judge Karen M. Humphreys. (ADB, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00192-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818320b9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-4</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00192_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00192/pdf/USCOURTS-ned-8_07-cv-00192-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00192; Concrete Industries, Inc. v. Dobson Brothers Construction et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00192-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2007-05-21</dateIssued>
+  <docketText>REVISED SCHEDULING ORDER granting 19 Motion to Extend. Mediation deadline 6/1/07; discovery deadline 8/17/07; dispositive motion deadline 9/21/07; proposed pretrial order due by 9/4/07; final pretrial conference set for 9/7/07 ay 11:00 a.m. (Attachments: # (1) Notice of Electronic Filing) Signed by Magistrate Judge Karen M. Humphreys. (ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00192-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-5/mods.xml">
+ <titleInfo>
+  <title>Concrete Industries, Inc. v. Dobson Brothers Construction et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 11 Motion to Dismiss. Case to be transferred to U.S. District Court for the District of Nebraska. Signed by Judge Wesley E. Brown on 5/17/07.(ADB, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00192-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818320b8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-5</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00192_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00192/pdf/USCOURTS-ned-8_07-cv-00192-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00192; Concrete Industries, Inc. v. Dobson Brothers Construction et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00192-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2007-05-21</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 11 Motion to Dismiss. Case to be transferred to U.S. District Court for the District of Nebraska. Signed by Judge Wesley E. Brown on 5/17/07.(ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00192-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-6/mods.xml">
+ <titleInfo>
+  <title>Concrete Industries, Inc. v. Dobson Brothers Construction et al</title>
+  <subTitle>ORDER - The defendants&apos; Motion for Extension of Time to Complete Mediation 31 is granted. The deadline to complete mediation is extended until July 16, 2007. Ordered by Magistrate Judge Thomas D. Thalken. (KBJ)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00192-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818320f4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-6</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00192_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00192/pdf/USCOURTS-ned-8_07-cv-00192-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00192; Concrete Industries, Inc. v. Dobson Brothers Construction et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00192-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2007-05-25</dateIssued>
+  <docketText>ORDER - The defendants&apos; Motion for Extension of Time to Complete Mediation 31 is granted. The deadline to complete mediation is extended until July 16, 2007. Ordered by Magistrate Judge Thomas D. Thalken. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00192-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-7/mods.xml">
+ <titleInfo>
+  <title>Concrete Industries, Inc. v. Dobson Brothers Construction et al</title>
+  <subTitle>ORDER - The motion for leave to withdraw of Eric A. Van Beber 34 ascounsel for the defendants is granted. The Clerk of Court shall stop all electronic notices to Eric A. Van Beber regarding this case. Ordered by Magistrate Judge Thomas D. Thalken.(JAE, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00192-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818320f6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-7</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00192_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00192/pdf/USCOURTS-ned-8_07-cv-00192-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00192; Concrete Industries, Inc. v. Dobson Brothers Construction et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00192-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2007-05-30</dateIssued>
+  <docketText>ORDER - The motion for leave to withdraw of Eric A. Van Beber 34 ascounsel for the defendants is granted. The Clerk of Court shall stop all electronic notices to Eric A. Van Beber regarding this case. Ordered by Magistrate Judge Thomas D. Thalken.(JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00192-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-8/mods.xml">
+ <titleInfo>
+  <title>Concrete Industries, Inc. v. Dobson Brothers Construction et al</title>
+  <subTitle>ORDER - The plaintiff shall have to on or before 6/15/07, to file a motion requesting the trial of this matter be in either Omaha or North Platte, Nebraska. Otherwise, the case will be designated for trial in Lincoln, Nebraska as requested as part of the defendants&apos; Answer 33. Ordered by Magistrate Judge Thomas D. Thalken. (KBJ)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00192-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818320b4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-8</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00192_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00192/pdf/USCOURTS-ned-8_07-cv-00192-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00192; Concrete Industries, Inc. v. Dobson Brothers Construction et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00192-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2007-06-01</dateIssued>
+  <docketText>ORDER - The plaintiff shall have to on or before 6/15/07, to file a motion requesting the trial of this matter be in either Omaha or North Platte, Nebraska. Otherwise, the case will be designated for trial in Lincoln, Nebraska as requested as part of the defendants&apos; Answer 33. Ordered by Magistrate Judge Thomas D. Thalken. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00192-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-9/mods.xml">
+ <titleInfo>
+  <title>Concrete Industries, Inc. v. Dobson Brothers Construction et al</title>
+  <subTitle>ORDER granting 38 Motion to Extend. The plaintiff and its counsel shall have to on or before June 18, 2007, to comply with NEGenR 1.7(d) or (f) and register for the electronic filing system. The plaintiff shall have an extension to on or before June 29, 2007, to file a motion requesting the trial of this matter be in either Omaha or North Platte, Nebraska. Otherwise, the case will be designated for trial in Lincoln, Nebraska. Ordered by Magistrate Judge Thomas D. Thalken.(ADB)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00192-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818320b2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-9</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00192_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00192/pdf/USCOURTS-ned-8_07-cv-00192-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00192; Concrete Industries, Inc. v. Dobson Brothers Construction et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00192-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2007-06-11</dateIssued>
+  <docketText>ORDER granting 38 Motion to Extend. The plaintiff and its counsel shall have to on or before June 18, 2007, to comply with NEGenR 1.7(d) or (f) and register for the electronic filing system. The plaintiff shall have an extension to on or before June 29, 2007, to file a motion requesting the trial of this matter be in either Omaha or North Platte, Nebraska. Otherwise, the case will be designated for trial in Lincoln, Nebraska. Ordered by Magistrate Judge Thomas D. Thalken.(ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00192-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-10/mods.xml">
+ <titleInfo>
+  <title>Concrete Industries, Inc. v. Dobson Brothers Construction et al</title>
+  <subTitle>ORDER of Recusal - This matter is before the court on the court&apos;s own motion pursuant to 28 U.S.C. § 455(a), which states: &quot;Any... judge... of the United States shall disqualify himself in any proceeding in which his impartiality might reasonably be questioned.&quot; Upon review of the parties, their counsel, and the record in the above-designated case, the undersigned judge shall, and hereby does, recuse himself from the above-designated case pursuant to 28 U.S.C. § 455(a). Ordered by Magistrate Judge Thomas D. Thalken. (KBJ)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00192-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818320f7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-10</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00192_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00192/pdf/USCOURTS-ned-8_07-cv-00192-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00192; Concrete Industries, Inc. v. Dobson Brothers Construction et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00192-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2007-06-20</dateIssued>
+  <docketText>ORDER of Recusal - This matter is before the court on the court&apos;s own motion pursuant to 28 U.S.C. § 455(a), which states: &quot;Any... judge... of the United States shall disqualify himself in any proceeding in which his impartiality might reasonably be questioned.&quot; Upon review of the parties, their counsel, and the record in the above-designated case, the undersigned judge shall, and hereby does, recuse himself from the above-designated case pursuant to 28 U.S.C. § 455(a). Ordered by Magistrate Judge Thomas D. Thalken. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00192-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-11/mods.xml">
+ <titleInfo>
+  <title>Concrete Industries, Inc. v. Dobson Brothers Construction et al</title>
+  <subTitle>rdered by Magistrate Judge F. A. Gossett. (CLS, )ORDER: All parties are given until and including 7/20/2007 to file all information pursuant to NECivR 40.1(b) relating to their requests for place of trial or regarding the defendants&apos; Objection 47 to plaintiff&apos;s request for jury trial in Omaha. Plaintiff&apos;s Motion to Alter Scheduling Order and Request for Scheduling Conference 45 is granted, in part. A telephone conference with the undersigned magistrate judge will be held on 7/26/2007 at 10:30 AM for the purpose of reviewing the preparation of the case to date and the scheduling of the case to trial. Plaintiff&apos;s counsel shall initiate the call to the court at 402-661-7340. At the request of the parties, the conference may be held in chambers or on the record. O</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-07-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00192-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818320ba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-11</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00192_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00192/pdf/USCOURTS-ned-8_07-cv-00192-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00192; Concrete Industries, Inc. v. Dobson Brothers Construction et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00192-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2007-07-03</dateIssued>
+  <docketText>rdered by Magistrate Judge F. A. Gossett. (CLS, )ORDER: All parties are given until and including 7/20/2007 to file all information pursuant to NECivR 40.1(b) relating to their requests for place of trial or regarding the defendants&apos; Objection 47 to plaintiff&apos;s request for jury trial in Omaha. Plaintiff&apos;s Motion to Alter Scheduling Order and Request for Scheduling Conference 45 is granted, in part. A telephone conference with the undersigned magistrate judge will be held on 7/26/2007 at 10:30 AM for the purpose of reviewing the preparation of the case to date and the scheduling of the case to trial. Plaintiff&apos;s counsel shall initiate the call to the court at 402-661-7340. At the request of the parties, the conference may be held in chambers or on the record. O</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00192-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-12/mods.xml">
+ <titleInfo>
+  <title>Concrete Industries, Inc. v. Dobson Brothers Construction et al</title>
+  <subTitle>AMENDED ORDER. Order 50 is amended to include: All other deadlines now in effect, including the deadline for completing mediation, are suspended and will be re-set at the time of the 7/26/2007 scheduling conference.Ordered by Magistrate Judge F. A. Gossett. (CLS, )</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-07-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00192-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818320b6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-12</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00192_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00192/pdf/USCOURTS-ned-8_07-cv-00192-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00192; Concrete Industries, Inc. v. Dobson Brothers Construction et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00192-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2007-07-03</dateIssued>
+  <docketText>AMENDED ORDER. Order 50 is amended to include: All other deadlines now in effect, including the deadline for completing mediation, are suspended and will be re-set at the time of the 7/26/2007 scheduling conference.Ordered by Magistrate Judge F. A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00192-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-13/mods.xml">
+ <titleInfo>
+  <title>Concrete Industries, Inc. v. Dobson Brothers Construction et al</title>
+  <subTitle>ORDER TO SHOW CAUSE that Attorney Charles E. Owen is to register for admittance to practice and register for the System. Show Cause Deadline set for 7/30/2007. (Copy mailed to Charles E. Owen from chambers on 7/17/2007.) Ordered by Magistrate Judge F. A. Gossett. (CLS, )</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-07-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00192-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818320b3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-13</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00192_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00192/pdf/USCOURTS-ned-8_07-cv-00192-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00192; Concrete Industries, Inc. v. Dobson Brothers Construction et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00192-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2007-07-17</dateIssued>
+  <docketText>ORDER TO SHOW CAUSE that Attorney Charles E. Owen is to register for admittance to practice and register for the System. Show Cause Deadline set for 7/30/2007. (Copy mailed to Charles E. Owen from chambers on 7/17/2007.) Ordered by Magistrate Judge F. A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00192-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-14/mods.xml">
+ <titleInfo>
+  <title>Concrete Industries, Inc. v. Dobson Brothers Construction et al</title>
+  <subTitle>ORDER granting 54 Motion of Dennis V. Lacey for leave to withdraw as plaintiffs&apos; attorney. The court will stop all electronic notices to Dennis V. Lacey regarding this case. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-07-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00192-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818320b5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-14</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00192_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00192/pdf/USCOURTS-ned-8_07-cv-00192-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00192; Concrete Industries, Inc. v. Dobson Brothers Construction et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00192-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2007-07-18</dateIssued>
+  <docketText>ORDER granting 54 Motion of Dennis V. Lacey for leave to withdraw as plaintiffs&apos; attorney. The court will stop all electronic notices to Dennis V. Lacey regarding this case. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00192-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-15/mods.xml">
+ <titleInfo>
+  <title>Concrete Industries, Inc. v. Dobson Brothers Construction et al</title>
+  <subTitle>ORDER. Defendants&apos; OBJECTION TO PLAINTIFF&apos;S REQUEST FOR TRIAL AT OMAHA ANDRENEWED REQUEST FOR TRIAL IN LINCOLN 47 is granted. The trial of this matter will be held in Lincoln, Nebraska. The Clerk shall amend the records of the court to reflect that this case will be tried to a jury in Lincoln, Nebraska. The Clerk shall direct this case to Chief Judge Joseph F. Bataillon for reassignment to a judge and magistrate judge who regularly sit in Lincoln, Nebraska. Plaintiff is given until and including 8/31/2007 to serve rebuttal expert disclosures. A final case progression order incorporating this deadline will be entered separately.Ordered by Magistrate Judge F. A. Gossett. (CLS, )</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-07-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00192-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818320b7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-15</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00192_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00192/pdf/USCOURTS-ned-8_07-cv-00192-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00192; Concrete Industries, Inc. v. Dobson Brothers Construction et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00192-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2007-07-26</dateIssued>
+  <docketText>ORDER. Defendants&apos; OBJECTION TO PLAINTIFF&apos;S REQUEST FOR TRIAL AT OMAHA ANDRENEWED REQUEST FOR TRIAL IN LINCOLN 47 is granted. The trial of this matter will be held in Lincoln, Nebraska. The Clerk shall amend the records of the court to reflect that this case will be tried to a jury in Lincoln, Nebraska. The Clerk shall direct this case to Chief Judge Joseph F. Bataillon for reassignment to a judge and magistrate judge who regularly sit in Lincoln, Nebraska. Plaintiff is given until and including 8/31/2007 to serve rebuttal expert disclosures. A final case progression order incorporating this deadline will be entered separately.Ordered by Magistrate Judge F. A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00192-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-16/mods.xml">
+ <titleInfo>
+  <title>Concrete Industries, Inc. v. Dobson Brothers Construction et al</title>
+  <subTitle>ORDER - The plaintiff&apos;s unopposed motion to extend the deadline for serving a rebuttal expert report, filing 63, is granted. On or before September 9, 2007, the defendants shall provide plaintiff&apos;s rebuttal expert with the chemical analysis data, equipment calibration and access to the concrete remnants tested by defendant&apos;s expert, Paul Okamoto. The plaintiffs rebuttal expert report shall be served on or before September 24, 2007. Ordered by Magistrate Judge David L. Piester.(GJG, )</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00192-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181831fd7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-16</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00192_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00192/pdf/USCOURTS-ned-8_07-cv-00192-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00192; Concrete Industries, Inc. v. Dobson Brothers Construction et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00192-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2007-08-30</dateIssued>
+  <docketText>ORDER - The plaintiff&apos;s unopposed motion to extend the deadline for serving a rebuttal expert report, filing 63, is granted. On or before September 9, 2007, the defendants shall provide plaintiff&apos;s rebuttal expert with the chemical analysis data, equipment calibration and access to the concrete remnants tested by defendant&apos;s expert, Paul Okamoto. The plaintiffs rebuttal expert report shall be served on or before September 24, 2007. Ordered by Magistrate Judge David L. Piester.(GJG, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00192-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-17/mods.xml">
+ <titleInfo>
+  <title>Concrete Industries, Inc. v. Dobson Brothers Construction et al</title>
+  <subTitle>SETTLEMENT ORDER. It is ordered that: (1) Within thirty (30) calendar days of the date of this order, the parties shall file a joint stipulation for dismissal (or other dispositive stipulation) with the clerk of the court (and provide a copy to the magistrate judge and to United States District Judge Richard G. Kopf, the trial judge to whom this case is assigned), together with submitting to the trial judge a draft order which will fully dispose of the case; (2) Absent compliance with this order, this case (including all counterclaims and the like) may be dismissed without further notice; (3) This case is removed from the court&apos;s April 14, 2008 trial docket upon representation by the parties that the case has settled. ***Dismissal documents deadline: 2/7/2008. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00192-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818320f8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-17</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00192_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00192/USCOURTS-ned-8_07-cv-00192-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00192/pdf/USCOURTS-ned-8_07-cv-00192-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00192; Concrete Industries, Inc. v. Dobson Brothers Construction et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00192-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2008-01-07</dateIssued>
+  <docketText>SETTLEMENT ORDER. It is ordered that: (1) Within thirty (30) calendar days of the date of this order, the parties shall file a joint stipulation for dismissal (or other dispositive stipulation) with the clerk of the court (and provide a copy to the magistrate judge and to United States District Judge Richard G. Kopf, the trial judge to whom this case is assigned), together with submitting to the trial judge a draft order which will fully dispose of the case; (2) Absent compliance with this order, this case (including all counterclaims and the like) may be dismissed without further notice; (3) This case is removed from the court&apos;s April 14, 2008 trial docket upon representation by the parties that the case has settled. ***Dismissal documents deadline: 2/7/2008. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+</mods>

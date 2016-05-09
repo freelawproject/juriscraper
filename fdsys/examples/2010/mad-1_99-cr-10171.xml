@@ -1,0 +1,218 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1814dcb28">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_99-cr-10171</identifier>
+<identifier type="local">P0b002ee1814dcb28</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_99-cr-10171</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_99-cr-10171</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:99-cr-10171</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="Black" lastName="Black" role="Defendant"></party>
+ <party fullName="Boston Police" lastName="Boston Police" role="Interested Party"></party>
+ <party firstName="William" fullName="William Brinson" lastName="Brinson" role="Interested Party"></party>
+ <party fullName="Cook" lastName="Cook" role="Defendant"></party>
+ <party fullName="Cookie Head" lastName="Cookie Head" role="Defendant"></party>
+ <party firstName="Cedric" fullName="Cedric A. Phillips" lastName="Phillips" middleName="A." role="Defendant"></party>
+ <party fullName="Pretrial Services" lastName="Pretrial Services" role="Notice"></party>
+ <party firstName="Anthony" fullName="Anthony Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="John" fullName="John Tibbs" lastName="Tibbs" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Phillips et al</title>
+ <partNumber>1:99-cr-10171</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_99-cr-10171/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:99-cr-10171;99-10171</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Black</displayForm>
+ <namePart type="family">Black</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Boston Police</displayForm>
+ <namePart type="family">Boston Police</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>William Brinson</displayForm>
+ <namePart type="family">Brinson</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Cook</displayForm>
+ <namePart type="family">Cook</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cookie Head</displayForm>
+ <namePart type="family">Cookie Head</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cedric A. Phillips</displayForm>
+ <namePart type="family">Phillips</namePart>
+ <namePart type="given">Cedric</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pretrial Services</displayForm>
+ <namePart type="family">Pretrial Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Notice</description>
+</name>
+<name type="personal">
+ <displayForm>Anthony Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Tibbs</displayForm>
+ <namePart type="family">Tibbs</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_99-cr-10171</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:99-cr-10171</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="Black" lastName="Black" role="Defendant"></party>
+ <party fullName="Boston Police" lastName="Boston Police" role="Interested Party"></party>
+ <party firstName="William" fullName="William Brinson" lastName="Brinson" role="Interested Party"></party>
+ <party fullName="Cook" lastName="Cook" role="Defendant"></party>
+ <party fullName="Cookie Head" lastName="Cookie Head" role="Defendant"></party>
+ <party firstName="Cedric" fullName="Cedric A. Phillips" lastName="Phillips" middleName="A." role="Defendant"></party>
+ <party fullName="Pretrial Services" lastName="Pretrial Services" role="Notice"></party>
+ <party firstName="Anthony" fullName="Anthony Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="John" fullName="John Tibbs" lastName="Tibbs" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_99-cr-10171-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_99-cr-10171/USCOURTS-mad-1_99-cr-10171-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Phillips et al</title>
+  <subTitle>Judge Nancy Gertner: ORDER entered denying 174 Motion to Reduce Sentence re Crack Cocaine Offense - 18:3582 as to John Tibbs (2); denying 186 Motion to Reduce Sentence re Crack Cocaine Offense - 18:3582 as to John Tibbs (2) (GAM)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_99-cr-10171-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18154d599</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_99-cr-10171/USCOURTS-mad-1_99-cr-10171-0</identifier>
+ <identifier type="former granule identifier">mad-1_99-cr-10171_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_99-cr-10171/USCOURTS-mad-1_99-cr-10171-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_99-cr-10171/pdf/USCOURTS-mad-1_99-cr-10171-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:99-cr-10171; USA v. Phillips et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_99-cr-10171-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-08</dateIssued>
+  <docketText>Judge Nancy Gertner: ORDER entered denying 174 Motion to Reduce Sentence re Crack Cocaine Offense - 18:3582 as to John Tibbs (2); denying 186 Motion to Reduce Sentence re Crack Cocaine Offense - 18:3582 as to John Tibbs (2) (GAM)</docketText>
+</extension>
+</relatedItem>
+</mods>

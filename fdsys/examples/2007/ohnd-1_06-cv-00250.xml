@@ -1,0 +1,216 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181559b8f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_06-cv-00250</identifier>
+<identifier type="local">P0b002ee181559b8f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_06-cv-00250</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_06-cv-00250</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:06-cv-00250</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1332 Diversity-(Citizenship)</cause>
+ <party firstName="James" fullName="James McKelton" lastName="McKelton" role="Defendant"></party>
+ <party firstName="Serena" fullName="Serena McKelton" lastName="McKelton" role="Defendant"></party>
+ <party fullName="NovaStar Mortgage, Inc." lastName="NovaStar Mortgage, Inc." role="Plaintiff"></party>
+ <party firstName="Thomas" fullName="Thomas J. Scanlon" lastName="Scanlon" middleName="J." role="Master Commissioner"></party>
+ <party fullName="State of Ohio" lastName="State of Ohio" role="Defendant"></party>
+ <party fullName="Unknown Tenants" lastName="Unknown Tenants" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>NovaStar Mortgage, Inc. v. McKelton et al</title>
+ <partNumber>1:06-cv-00250</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_06-cv-00250/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:06-cv-00250;06-250</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>James McKelton</displayForm>
+ <namePart type="family">McKelton</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Serena McKelton</displayForm>
+ <namePart type="family">McKelton</namePart>
+ <namePart type="given">Serena</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>NovaStar Mortgage, Inc.</displayForm>
+ <namePart type="family">NovaStar Mortgage, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas J. Scanlon</displayForm>
+ <namePart type="family">Scanlon</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Master Commissioner</description>
+</name>
+<name type="personal">
+ <displayForm>State of Ohio</displayForm>
+ <namePart type="family">State of Ohio</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Unknown Tenants</displayForm>
+ <namePart type="family">Unknown Tenants</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_06-cv-00250</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:06-cv-00250</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1332 Diversity-(Citizenship)</cause>
+ <party firstName="James" fullName="James McKelton" lastName="McKelton" role="Defendant"></party>
+ <party firstName="Serena" fullName="Serena McKelton" lastName="McKelton" role="Defendant"></party>
+ <party fullName="NovaStar Mortgage, Inc." lastName="NovaStar Mortgage, Inc." role="Plaintiff"></party>
+ <party firstName="Thomas" fullName="Thomas J. Scanlon" lastName="Scanlon" middleName="J." role="Master Commissioner"></party>
+ <party fullName="State of Ohio" lastName="State of Ohio" role="Defendant"></party>
+ <party fullName="Unknown Tenants" lastName="Unknown Tenants" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_06-cv-00250-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_06-cv-00250/USCOURTS-ohnd-1_06-cv-00250-0/mods.xml">
+ <titleInfo>
+  <title>NovaStar Mortgage, Inc. v. McKelton et al</title>
+  <subTitle>Order denying motion for summary judgment (Related Doc # 21) without prejudice for non-compliance with General Order 2006-16. An affidavit verifying the written payment history for the mortgage at issue shall be filed no later than July 14, 2006. Approved by Judge Ann Aldrich. (C,G)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_06-cv-00250-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1815ee59d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_06-cv-00250/USCOURTS-ohnd-1_06-cv-00250-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_06-cv-00250_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_06-cv-00250/USCOURTS-ohnd-1_06-cv-00250-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_06-cv-00250/pdf/USCOURTS-ohnd-1_06-cv-00250-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00250; NovaStar Mortgage, Inc. v. McKelton et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_06-cv-00250-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-06-29</dateIssued>
+  <docketText>Order denying motion for summary judgment (Related Doc # 21) without prejudice for non-compliance with General Order 2006-16. An affidavit verifying the written payment history for the mortgage at issue shall be filed no later than July 14, 2006. Approved by Judge Ann Aldrich. (C,G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_06-cv-00250-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_06-cv-00250/USCOURTS-ohnd-1_06-cv-00250-1/mods.xml">
+ <titleInfo>
+  <title>NovaStar Mortgage, Inc. v. McKelton et al</title>
+  <subTitle>Order granting Motion for summary judgment (Related Doc # 27). Nova Star&apos;s motin is granted thand is entitled to judgment in the amount of $130,427.22, plus interest on the outstanding principal balance at a rate of 8.9 percent per annum from 9-1-05. NovaStar is also awarded costs and expenses. McKelton has 10 business days to satisfy judgment. The court also directs NovaStar to file either a status report indicating whether the State of Ohio is still an active defendant, or a notice of dismissal of the State of Ohio, as a party by 1-12-07. This order is final and appealable. Signed by Judge Ann Aldrich on 1-3-07.(K, V)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_06-cv-00250-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1815ee59e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_06-cv-00250/USCOURTS-ohnd-1_06-cv-00250-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_06-cv-00250_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_06-cv-00250/USCOURTS-ohnd-1_06-cv-00250-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_06-cv-00250/pdf/USCOURTS-ohnd-1_06-cv-00250-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00250; NovaStar Mortgage, Inc. v. McKelton et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_06-cv-00250-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-03</dateIssued>
+  <docketText>Order granting Motion for summary judgment (Related Doc # 27). Nova Star&apos;s motin is granted thand is entitled to judgment in the amount of $130,427.22, plus interest on the outstanding principal balance at a rate of 8.9 percent per annum from 9-1-05. NovaStar is also awarded costs and expenses. McKelton has 10 business days to satisfy judgment. The court also directs NovaStar to file either a status report indicating whether the State of Ohio is still an active defendant, or a notice of dismissal of the State of Ohio, as a party by 1-12-07. This order is final and appealable. Signed by Judge Ann Aldrich on 1-3-07.(K, V)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,152 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8aaba5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Western District of Texas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-txwd-1_14-cv-01137</identifier>
+<identifier type="local">P0b002ee18a8aaba5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-txwd-1_14-cv-01137</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txwd-1_14-cv-01137</accessId>
+ <courtType>District</courtType>
+ <courtCode>txwd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2484</courtSortOrder>
+ <caseNumber>1:14-cv-01137</caseNumber>
+ <caseOffice>Austin</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2241 Petition for Writ of Habeas Corpus (federa</cause>
+ <party firstName="Greg" fullName="Greg Hamilton" lastName="Hamilton" role="Respondent"></party>
+ <party firstName="Rodolfo" fullName="Rodolfo Salinas" lastName="Salinas" role="Petitioner"></party>
+</extension>
+<titleInfo>
+ <title>Salinas v. Hamilton</title>
+ <partNumber>1:14-cv-01137</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-txwd-1_14-cv-01137/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cv-01137;14-1137</identifier>
+<name type="corporate">
+ <namePart>United States District Court Western District of Texas</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>Austin</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Greg Hamilton</displayForm>
+ <namePart type="family">Hamilton</namePart>
+ <namePart type="given">Greg</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Rodolfo Salinas</displayForm>
+ <namePart type="family">Salinas</namePart>
+ <namePart type="given">Rodolfo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txwd-1_14-cv-01137</accessId>
+ <courtType>District</courtType>
+ <courtCode>txwd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2484</courtSortOrder>
+ <caseNumber>1:14-cv-01137</caseNumber>
+ <caseOffice>Austin</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2241 Petition for Writ of Habeas Corpus (federa</cause>
+ <party firstName="Greg" fullName="Greg Hamilton" lastName="Hamilton" role="Respondent"></party>
+ <party firstName="Rodolfo" fullName="Rodolfo Salinas" lastName="Salinas" role="Petitioner"></party>
+ <state>Texas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-txwd-1_14-cv-01137-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txwd-1_14-cv-01137/USCOURTS-txwd-1_14-cv-01137-0/mods.xml">
+ <titleInfo>
+  <title>Salinas v. Hamilton</title>
+  <subTitle>REPORT AND RECOMMENDATIONS that the District Court DISMISS without Prejudice 1 Petition for Writ of Habeas Corpus filed by Rodolfo Salinas. Signed by Judge Andrew W. Austin. (klw)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-txwd-1_14-cv-01137/pdf/USCOURTS-txwd-1_14-cv-01137-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b1286</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txwd-1_14-cv-01137/USCOURTS-txwd-1_14-cv-01137-0</identifier>
+ <identifier type="former granule identifier">txwd-1_14-cv-01137_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txwd-1_14-cv-01137/USCOURTS-txwd-1_14-cv-01137-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txwd-1_14-cv-01137/pdf/USCOURTS-txwd-1_14-cv-01137-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01137; Salinas v. Hamilton; </searchTitle>
+  <courtName>United States District Court Western District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txwd-1_14-cv-01137-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS that the District Court DISMISS without Prejudice 1 Petition for Writ of Habeas Corpus filed by Rodolfo Salinas. Signed by Judge Andrew W. Austin. (klw)</docketText>
+</extension>
+</relatedItem>
+</mods>

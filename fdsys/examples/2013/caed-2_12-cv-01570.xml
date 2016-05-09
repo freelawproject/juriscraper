@@ -1,0 +1,567 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee184f565e5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-06-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-05-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01570</identifier>
+<identifier type="local">P0b002ee184f565e5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-06-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-06-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-01570</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-01570</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-01570</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>28:1335 Interpleader Action</cause>
+ <party firstName="P." fullName="P. B." lastName="B." role="Defendant"></party>
+ <party firstName="Q." fullName="Q. B.1." lastName="B.1." role="Defendant"></party>
+ <party firstName="Q." fullName="Q. B.2." lastName="B.2." role="Defendant"></party>
+ <party firstName="Shandria" fullName="Shandria Bogle" lastName="Bogle" role="Defendant"></party>
+ <party fullName="Carriage Funeral Services of California, Inc." lastName="Carriage Funeral Services of California, Inc." role="Counter Claimant"></party>
+ <party fullName="Carriage Funeral Services of California, Inc." lastName="Carriage Funeral Services of California, Inc." role="Defendant"></party>
+ <party firstName="Annie" fullName="Annie Cassie" lastName="Cassie" role="Defendant"></party>
+ <party firstName="T." fullName="T. M." lastName="M." role="Defendant"></party>
+ <party firstName="David" fullName="David Martin" lastName="Martin" role="Defendant"></party>
+ <party firstName="Ryan" fullName="Ryan Martin" lastName="Martin" role="Defendant"></party>
+ <party fullName="P.L. Fry&amp;Son Chapel Funeral Home" lastName="P.L. Fry&amp;Son Chapel Funeral Home" role="Counter Claimant"></party>
+ <party fullName="P.L. Fry&amp;Son Chapel Funeral Home" lastName="P.L. Fry&amp;Son Chapel Funeral Home" role="Defendant"></party>
+ <party fullName="P.L.Fry&amp;Son Chapel Funeral Home" lastName="P.L.Fry&amp;Son Chapel Funeral Home" role="Counter Claimant"></party>
+ <party fullName="P.L.Fry&amp;Son Chapel Funeral Home" lastName="P.L.Fry&amp;Son Chapel Funeral Home" role="Defendant"></party>
+ <party fullName="Primerica Life Insurance Company" lastName="Primerica Life Insurance Company" role="Counter Defendant"></party>
+ <party fullName="Primerica Life Insurance Company" lastName="Primerica Life Insurance Company" role="Plaintiff"></party>
+ <party firstName="Patrick" fullName="Patrick Williams" lastName="Williams" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Primerica Life Insurance Company v. Cassie et al</title>
+ <partNumber>2:12-cv-01570</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01570/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-01570;12-1570</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>P. B.</displayForm>
+ <namePart type="family">B.</namePart>
+ <namePart type="given">P.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Q. B.1.</displayForm>
+ <namePart type="family">B.1.</namePart>
+ <namePart type="given">Q.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Q. B.2.</displayForm>
+ <namePart type="family">B.2.</namePart>
+ <namePart type="given">Q.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Shandria Bogle</displayForm>
+ <namePart type="family">Bogle</namePart>
+ <namePart type="given">Shandria</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Carriage Funeral Services of California, Inc.</displayForm>
+ <namePart type="family">Carriage Funeral Services of California, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Carriage Funeral Services of California, Inc.</displayForm>
+ <namePart type="family">Carriage Funeral Services of California, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Annie Cassie</displayForm>
+ <namePart type="family">Cassie</namePart>
+ <namePart type="given">Annie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>T. M.</displayForm>
+ <namePart type="family">M.</namePart>
+ <namePart type="given">T.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Martin</displayForm>
+ <namePart type="family">Martin</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ryan Martin</displayForm>
+ <namePart type="family">Martin</namePart>
+ <namePart type="given">Ryan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>P.L. Fry&amp;Son Chapel Funeral Home</displayForm>
+ <namePart type="family">P.L. Fry&amp;Son Chapel Funeral Home</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>P.L. Fry&amp;Son Chapel Funeral Home</displayForm>
+ <namePart type="family">P.L. Fry&amp;Son Chapel Funeral Home</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>P.L.Fry&amp;Son Chapel Funeral Home</displayForm>
+ <namePart type="family">P.L.Fry&amp;Son Chapel Funeral Home</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>P.L.Fry&amp;Son Chapel Funeral Home</displayForm>
+ <namePart type="family">P.L.Fry&amp;Son Chapel Funeral Home</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Primerica Life Insurance Company</displayForm>
+ <namePart type="family">Primerica Life Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Primerica Life Insurance Company</displayForm>
+ <namePart type="family">Primerica Life Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Patrick Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Patrick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-01570</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-01570</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>28:1335 Interpleader Action</cause>
+ <party firstName="P." fullName="P. B." lastName="B." role="Defendant"></party>
+ <party firstName="Q." fullName="Q. B.1." lastName="B.1." role="Defendant"></party>
+ <party firstName="Q." fullName="Q. B.2." lastName="B.2." role="Defendant"></party>
+ <party firstName="Shandria" fullName="Shandria Bogle" lastName="Bogle" role="Defendant"></party>
+ <party fullName="Carriage Funeral Services of California, Inc." lastName="Carriage Funeral Services of California, Inc." role="Counter Claimant"></party>
+ <party fullName="Carriage Funeral Services of California, Inc." lastName="Carriage Funeral Services of California, Inc." role="Defendant"></party>
+ <party firstName="Annie" fullName="Annie Cassie" lastName="Cassie" role="Defendant"></party>
+ <party firstName="T." fullName="T. M." lastName="M." role="Defendant"></party>
+ <party firstName="David" fullName="David Martin" lastName="Martin" role="Defendant"></party>
+ <party firstName="Ryan" fullName="Ryan Martin" lastName="Martin" role="Defendant"></party>
+ <party fullName="P.L. Fry&amp;Son Chapel Funeral Home" lastName="P.L. Fry&amp;Son Chapel Funeral Home" role="Counter Claimant"></party>
+ <party fullName="P.L. Fry&amp;Son Chapel Funeral Home" lastName="P.L. Fry&amp;Son Chapel Funeral Home" role="Defendant"></party>
+ <party fullName="P.L.Fry&amp;Son Chapel Funeral Home" lastName="P.L.Fry&amp;Son Chapel Funeral Home" role="Counter Claimant"></party>
+ <party fullName="P.L.Fry&amp;Son Chapel Funeral Home" lastName="P.L.Fry&amp;Son Chapel Funeral Home" role="Defendant"></party>
+ <party fullName="Primerica Life Insurance Company" lastName="Primerica Life Insurance Company" role="Counter Defendant"></party>
+ <party fullName="Primerica Life Insurance Company" lastName="Primerica Life Insurance Company" role="Plaintiff"></party>
+ <party firstName="Patrick" fullName="Patrick Williams" lastName="Williams" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01570-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-0/mods.xml">
+ <titleInfo>
+  <title>Primerica Life Insurance Company v. Cassie et al</title>
+  <subTitle>ORDER signed by Judge William B. Shubb on 10/3/2012 GRANTING 19 Primerica and Attorney Karen Denvir&apos;s Request for Permission to Telephonically Attend Status Conference on 10/15/2012. (Krueger, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01570-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f5cfa1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01570_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01570/pdf/USCOURTS-caed-2_12-cv-01570-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01570; Primerica Life Insurance Company v. Cassie et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01570-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-10-04</dateIssued>
+  <docketText>ORDER signed by Judge William B. Shubb on 10/3/2012 GRANTING 19 Primerica and Attorney Karen Denvir&apos;s Request for Permission to Telephonically Attend Status Conference on 10/15/2012. (Krueger, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01570-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-1/mods.xml">
+ <titleInfo>
+  <title>Primerica Life Insurance Company v. Cassie et al</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 11/30/2012 DISCHARGING Primerica and its agents, attorneys, and assigns of all liability with respect to life insurance policy number 0430744571; DISMISSING, with prejudice, Primerica and its agents, attorneys and assigns as to all claims relating to said policy; ENJOINING and RESTRAINING all Defendants-in-Interpleader and their agents, attorneys and assigns from instituting any suit at law or equity, or action of any kind against Primerica and its agents, attorneys and assigns, with respect to the policy; AWARDING Primerica $6,556.00 for reasonable attorneys&apos; fees and costs; DISTRIBUTING policy proceeds to Primerica Life Insurance Company for the amount of $6,556.00; to P.L. Fry for the amount of $11,218.62; to Patrick Williams for the amount of $209,197.98. (Michel, G) Modified on 12/3/2012 (Michel, G).</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01570-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f5cfd1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01570_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01570/pdf/USCOURTS-caed-2_12-cv-01570-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01570; Primerica Life Insurance Company v. Cassie et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01570-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-12-03</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 11/30/2012 DISCHARGING Primerica and its agents, attorneys, and assigns of all liability with respect to life insurance policy number 0430744571; DISMISSING, with prejudice, Primerica and its agents, attorneys and assigns as to all claims relating to said policy; ENJOINING and RESTRAINING all Defendants-in-Interpleader and their agents, attorneys and assigns from instituting any suit at law or equity, or action of any kind against Primerica and its agents, attorneys and assigns, with respect to the policy; AWARDING Primerica $6,556.00 for reasonable attorneys&apos; fees and costs; DISTRIBUTING policy proceeds to Primerica Life Insurance Company for the amount of $6,556.00; to P.L. Fry for the amount of $11,218.62; to Patrick Williams for the amount of $209,197.98. (Michel, G) Modified on 12/3/2012 (Michel, G).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01570-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-2/mods.xml">
+ <titleInfo>
+  <title>Primerica Life Insurance Company v. Cassie et al</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 1/2/13 GRANTING 40 Request filed by Primerica Life Insurance Company; Primerica&apos;s counsel, Karen D.M. Denvir, is not required to personally attend the Scheduling Conference scheduled for February 4, 2013 at 2:00 p.m. in the chambers of the Honorable William B. Shubb, located at 501 I Street, #4-200, Courtroom 5, Sacramento, California 95814; Ms. Denvir may telephonically appear at the February 4, 2013 Scheduling Conference; and the courtroom deputy shall email counsel with instructions on how to participate in the telephone conference call. (Matson, R)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01570-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f5cf9f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01570_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01570/pdf/USCOURTS-caed-2_12-cv-01570-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01570; Primerica Life Insurance Company v. Cassie et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01570-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 1/2/13 GRANTING 40 Request filed by Primerica Life Insurance Company; Primerica&apos;s counsel, Karen D.M. Denvir, is not required to personally attend the Scheduling Conference scheduled for February 4, 2013 at 2:00 p.m. in the chambers of the Honorable William B. Shubb, located at 501 I Street, #4-200, Courtroom 5, Sacramento, California 95814; Ms. Denvir may telephonically appear at the February 4, 2013 Scheduling Conference; and the courtroom deputy shall email counsel with instructions on how to participate in the telephone conference call. (Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01570-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-3/mods.xml">
+ <titleInfo>
+  <title>Primerica Life Insurance Company v. Cassie et al</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 1/12/2013 ORDERING 42 Counsel, Brian M. Affrunti, may telephonically appear at the 2/4/2013 Status (Pre-Trial Scheduling) Conference; and the courtroom deputy shall email counsel with instructions. (Reader, L)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01570-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f5cfa0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01570_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01570/pdf/USCOURTS-caed-2_12-cv-01570-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01570; Primerica Life Insurance Company v. Cassie et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01570-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-01-14</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 1/12/2013 ORDERING 42 Counsel, Brian M. Affrunti, may telephonically appear at the 2/4/2013 Status (Pre-Trial Scheduling) Conference; and the courtroom deputy shall email counsel with instructions. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01570-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-4/mods.xml">
+ <titleInfo>
+  <title>Primerica Life Insurance Company v. Cassie et al</title>
+  <subTitle>ORDER granting 44 Request for permission to telephonically attend Status Conference signed by Senior Judge William B. Shubb on 1/17/13. (Kaminski, H)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01570-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f5cfa2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01570_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01570/pdf/USCOURTS-caed-2_12-cv-01570-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01570; Primerica Life Insurance Company v. Cassie et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01570-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-18</dateIssued>
+  <docketText>ORDER granting 44 Request for permission to telephonically attend Status Conference signed by Senior Judge William B. Shubb on 1/17/13. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01570-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-5/mods.xml">
+ <titleInfo>
+  <title>Primerica Life Insurance Company v. Cassie et al</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 2/12/2013 GRANTING 52 Request for permission to make Telephonic Appearance. Primerica&apos;s counsel, Gail E. Cohen, is NOT required to personally attend Status Conference scheduled 3/18/2013. Courtroom Deputy shall e-mail counsel with instructions on how to participate in telephonic conference call. (Marciel, M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01570-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f5cfa3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01570_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01570/pdf/USCOURTS-caed-2_12-cv-01570-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01570; Primerica Life Insurance Company v. Cassie et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01570-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-02-13</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 2/12/2013 GRANTING 52 Request for permission to make Telephonic Appearance. Primerica&apos;s counsel, Gail E. Cohen, is NOT required to personally attend Status Conference scheduled 3/18/2013. Courtroom Deputy shall e-mail counsel with instructions on how to participate in telephonic conference call. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01570-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-6/mods.xml">
+ <titleInfo>
+  <title>Primerica Life Insurance Company v. Cassie et al</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 3/20/13. Before ruling on 54 Petition for Court Approval, the court requires additional documentation regarding the attorney&apos;s fees to be distributed pursuant to the Settlement and Release Agreement to Primerica&apos;s counsel, Felicia Morrison, and Neumiller&amp;Beardslee. Documentation of the kind listed in Eastern District Local Rule 293(c) would be of assistance to the court. Alternatively, should Primerica&apos;s counsel, Felicia Morrison, and Neumiller&amp;Beardslee agree to each reduce their fees by one-third, the court would require no additional information. To allow for a response to the court&apos;s request, the hearing on this matter is hereby CONTINUED until 4/22/13 at 2:00 p.m. Within 14 days of this Order, counsel for Shandria Bogle and Ryan Martin, Felicia Morrison, shall either file the requested information or notify the court that all counsel agree to reduce their fees by one-third. (Meuleman, A) Modified on 4/2/2013 (Kirksey Smith, K).</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01570-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f5cfa4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-6</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01570_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01570/pdf/USCOURTS-caed-2_12-cv-01570-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01570; Primerica Life Insurance Company v. Cassie et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01570-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-03-21</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 3/20/13. Before ruling on 54 Petition for Court Approval, the court requires additional documentation regarding the attorney&apos;s fees to be distributed pursuant to the Settlement and Release Agreement to Primerica&apos;s counsel, Felicia Morrison, and Neumiller&amp;Beardslee. Documentation of the kind listed in Eastern District Local Rule 293(c) would be of assistance to the court. Alternatively, should Primerica&apos;s counsel, Felicia Morrison, and Neumiller&amp;Beardslee agree to each reduce their fees by one-third, the court would require no additional information. To allow for a response to the court&apos;s request, the hearing on this matter is hereby CONTINUED until 4/22/13 at 2:00 p.m. Within 14 days of this Order, counsel for Shandria Bogle and Ryan Martin, Felicia Morrison, shall either file the requested information or notify the court that all counsel agree to reduce their fees by one-third. (Meuleman, A) Modified on 4/2/2013 (Kirksey Smith, K).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01570-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-7/mods.xml">
+ <titleInfo>
+  <title>Primerica Life Insurance Company v. Cassie et al</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 4/17/13 GRANTING Mr. Balestracci&apos;s request to appear telephonically at the 4/29/13 hearing. (cc: IT) (Manzer, C)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01570-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f5cfd2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-7</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01570_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01570/pdf/USCOURTS-caed-2_12-cv-01570-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01570; Primerica Life Insurance Company v. Cassie et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01570-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-04-17</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 4/17/13 GRANTING Mr. Balestracci&apos;s request to appear telephonically at the 4/29/13 hearing. (cc: IT) (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01570-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-8/mods.xml">
+ <titleInfo>
+  <title>Primerica Life Insurance Company v. Cassie et al</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 4/17/13 GRANTING Ms. Bodiford&apos;s request to appear telephonically at the 4/29/13 status conference. (cc: IT) (Manzer, C)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01570-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f5cfa5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-8</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01570_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01570/pdf/USCOURTS-caed-2_12-cv-01570-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01570; Primerica Life Insurance Company v. Cassie et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01570-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-04-17</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 4/17/13 GRANTING Ms. Bodiford&apos;s request to appear telephonically at the 4/29/13 status conference. (cc: IT) (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01570-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-9/mods.xml">
+ <titleInfo>
+  <title>Primerica Life Insurance Company v. Cassie et al</title>
+  <subTitle>ORDER granting in part and denying in part 54 MOTION FOR COURT APPROVAL OF MINORS&apos; COMPROMISES signed by Senior Judge William B. Shubb on 4/18/13. (Kaminski, H)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01570-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f5cfa7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-9</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01570_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01570/pdf/USCOURTS-caed-2_12-cv-01570-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01570; Primerica Life Insurance Company v. Cassie et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01570-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-04-19</dateIssued>
+  <docketText>ORDER granting in part and denying in part 54 MOTION FOR COURT APPROVAL OF MINORS&apos; COMPROMISES signed by Senior Judge William B. Shubb on 4/18/13. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01570-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-10/mods.xml">
+ <titleInfo>
+  <title>Primerica Life Insurance Company v. Cassie et al</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 5/31/2013 GRANTING 71 Amended Stipulation Regarding the Distribution of Funds and Dismissal of Action. (cc: Financial) (Zignago, K.)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01570-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f5cfa6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-10</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01570_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01570/USCOURTS-caed-2_12-cv-01570-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01570/pdf/USCOURTS-caed-2_12-cv-01570-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01570; Primerica Life Insurance Company v. Cassie et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01570-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2013-05-31</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 5/31/2013 GRANTING 71 Amended Stipulation Regarding the Distribution of Funds and Dismissal of Action. (cc: Financial) (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+</mods>

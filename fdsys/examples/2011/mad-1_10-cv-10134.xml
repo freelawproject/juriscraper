@@ -1,0 +1,216 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1814d6199">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cv-10134</identifier>
+<identifier type="local">P0b002ee1814d6199</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_10-cv-10134</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_10-cv-10134</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:10-cv-10134</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1331 Federal Question: Other Civil Rights</cause>
+ <party fullName="Comfort Suites Hotel" lastName="Comfort Suites Hotel" role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph J. Florent" lastName="Florent" middleName="J." role="Defendant"></party>
+ <party firstName="Jason" fullName="Jason Pearl" lastName="Pearl" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Shinners" lastName="Shinners" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Watson" lastName="Watson" role="Defendant"></party>
+ <party firstName="Marie" fullName="Marie Winfield" lastName="Winfield" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Winfield v. Florent et al</title>
+ <partNumber>1:10-cv-10134</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cv-10134/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:10-cv-10134;10-10134</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Comfort Suites Hotel</displayForm>
+ <namePart type="family">Comfort Suites Hotel</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph J. Florent</displayForm>
+ <namePart type="family">Florent</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jason Pearl</displayForm>
+ <namePart type="family">Pearl</namePart>
+ <namePart type="given">Jason</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Shinners</displayForm>
+ <namePart type="family">Shinners</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Watson</displayForm>
+ <namePart type="family">Watson</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marie Winfield</displayForm>
+ <namePart type="family">Winfield</namePart>
+ <namePart type="given">Marie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_10-cv-10134</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:10-cv-10134</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1331 Federal Question: Other Civil Rights</cause>
+ <party fullName="Comfort Suites Hotel" lastName="Comfort Suites Hotel" role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph J. Florent" lastName="Florent" middleName="J." role="Defendant"></party>
+ <party firstName="Jason" fullName="Jason Pearl" lastName="Pearl" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Shinners" lastName="Shinners" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Watson" lastName="Watson" role="Defendant"></party>
+ <party firstName="Marie" fullName="Marie Winfield" lastName="Winfield" role="Plaintiff"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_10-cv-10134-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-10134/USCOURTS-mad-1_10-cv-10134-0/mods.xml">
+ <titleInfo>
+  <title>Winfield v. Florent et al</title>
+  <subTitle>Judge Joseph L. Tauro: ORDER entered ALLOWED 10 Motion to Dismiss by Michael Watson and Comfort Suites Hotel; ALLOWED IN PART and DENIED IN PART 12 Motion to Dismiss is ALLOWED to the extent that it seeks to dismiss Counts I and III through VII. The Motion to Dismiss is DENIED to the extent that it seeks to dismiss Count II; DENIED AS MOOT 17 Motion for Ruling to the extent that the Motion for Ruling requests a &quot; No Harassment Order,&quot; that request is DENIED. IT IS S O ORDERED. (Geraldino-Karasek, Clarilde)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_10-cv-10134-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181532954</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-10134/USCOURTS-mad-1_10-cv-10134-0</identifier>
+ <identifier type="former granule identifier">mad-1_10-cv-10134_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-10134/USCOURTS-mad-1_10-cv-10134-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cv-10134/pdf/USCOURTS-mad-1_10-cv-10134-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-10134; Winfield v. Florent et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_10-cv-10134-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-09-24</dateIssued>
+  <docketText>Judge Joseph L. Tauro: ORDER entered ALLOWED 10 Motion to Dismiss by Michael Watson and Comfort Suites Hotel; ALLOWED IN PART and DENIED IN PART 12 Motion to Dismiss is ALLOWED to the extent that it seeks to dismiss Counts I and III through VII. The Motion to Dismiss is DENIED to the extent that it seeks to dismiss Count II; DENIED AS MOOT 17 Motion for Ruling to the extent that the Motion for Ruling requests a &quot; No Harassment Order,&quot; that request is DENIED. IT IS S O ORDERED. (Geraldino-Karasek, Clarilde)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_10-cv-10134-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-10134/USCOURTS-mad-1_10-cv-10134-1/mods.xml">
+ <titleInfo>
+  <title>Winfield v. Florent et al</title>
+  <subTitle>Judge Joseph L. Tauro:ORDER entered. After reviewing Parties&apos; submissions, this court hereby orders that: Defendants Watson and Comfort Suites Hotel&apos;s Motion for Entry of Separate and Final Judgment 19 is ALLOWED. No additional claims exist against Defendant Watson nor Defendant Comfort Suites Hotel. Defendants Shinners and Pearl&apos;s for Summary Judgment 21 is ALLOWED. Plaintiff was convicted of being a disorderly person and thus has not claim against Defendants for false arrest. This case is CLOSED. IT IS SO ORDERED. (Geraldino-Karasek, Clarilde)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_10-cv-10134-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181532955</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-10134/USCOURTS-mad-1_10-cv-10134-1</identifier>
+ <identifier type="former granule identifier">mad-1_10-cv-10134_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-10134/USCOURTS-mad-1_10-cv-10134-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cv-10134/pdf/USCOURTS-mad-1_10-cv-10134-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-10134; Winfield v. Florent et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_10-cv-10134-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-03</dateIssued>
+  <docketText>Judge Joseph L. Tauro:ORDER entered. After reviewing Parties&apos; submissions, this court hereby orders that: Defendants Watson and Comfort Suites Hotel&apos;s Motion for Entry of Separate and Final Judgment 19 is ALLOWED. No additional claims exist against Defendant Watson nor Defendant Comfort Suites Hotel. Defendants Shinners and Pearl&apos;s for Summary Judgment 21 is ALLOWED. Plaintiff was convicted of being a disorderly person and thus has not claim against Defendants for false arrest. This case is CLOSED. IT IS SO ORDERED. (Geraldino-Karasek, Clarilde)</docketText>
+</extension>
+</relatedItem>
+</mods>

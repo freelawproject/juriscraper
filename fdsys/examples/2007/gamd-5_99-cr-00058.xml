@@ -1,0 +1,182 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1812d725d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-22</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_99-cr-00058</identifier>
+<identifier type="local">P0b002ee1812d725d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-5_99-cr-00058</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_99-cr-00058</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:99-cr-00058</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Michelle" fullName="Michelle Teresa Jenkins" lastName="Jenkins" middleName="Teresa" role="Defendant"></party>
+ <party firstName="Jarrod" fullName="Jarrod Kalebaugh" lastName="Kalebaugh" role="Defendant"></party>
+ <party firstName="Dewayne" fullName="Dewayne Edward Taylor" lastName="Taylor" middleName="Edward" role="Defendant"></party>
+ <party firstName="Chris" fullName="Chris Turk" lastName="Turk" role="Defendant"></party>
+ <party firstName="James" fullName="James Christopher Turk" lastName="Turk" middleName="Christopher" role="Defendant"></party>
+ <party fullName="UNITED STATES OF AMERICA" lastName="UNITED STATES OF AMERICA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Taylor, et al</title>
+ <partNumber>5:99-cr-00058</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_99-cr-00058/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:99-cr-00058;99-058</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Macon</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Michelle Teresa Jenkins</displayForm>
+ <namePart type="family">Jenkins</namePart>
+ <namePart type="given">Michelle</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jarrod Kalebaugh</displayForm>
+ <namePart type="family">Kalebaugh</namePart>
+ <namePart type="given">Jarrod</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dewayne Edward Taylor</displayForm>
+ <namePart type="family">Taylor</namePart>
+ <namePart type="given">Dewayne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chris Turk</displayForm>
+ <namePart type="family">Turk</namePart>
+ <namePart type="given">Chris</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Christopher Turk</displayForm>
+ <namePart type="family">Turk</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>UNITED STATES OF AMERICA</displayForm>
+ <namePart type="family">UNITED STATES OF AMERICA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_99-cr-00058</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:99-cr-00058</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Michelle" fullName="Michelle Teresa Jenkins" lastName="Jenkins" middleName="Teresa" role="Defendant"></party>
+ <party firstName="Jarrod" fullName="Jarrod Kalebaugh" lastName="Kalebaugh" role="Defendant"></party>
+ <party firstName="Dewayne" fullName="Dewayne Edward Taylor" lastName="Taylor" middleName="Edward" role="Defendant"></party>
+ <party firstName="Chris" fullName="Chris Turk" lastName="Turk" role="Defendant"></party>
+ <party firstName="James" fullName="James Christopher Turk" lastName="Turk" middleName="Christopher" role="Defendant"></party>
+ <party fullName="UNITED STATES OF AMERICA" lastName="UNITED STATES OF AMERICA" role="Plaintiff"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_99-cr-00058-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_99-cr-00058/USCOURTS-gamd-5_99-cr-00058-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Taylor, et al</title>
+  <subTitle>ORDER directing Clerk to forward file to Judge Wilbur D. Owens, Jr. for the scheduling of a Final Revoication Hearing as to James Christopher Turk. Supervised releasee to be detained pending Final Revocation Hearing. Ordered by Judge Claude W. Hicks Jr. on 1/22/07. (Hicks, Claude)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_99-cr-00058-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813055b6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_99-cr-00058/USCOURTS-gamd-5_99-cr-00058-0</identifier>
+ <identifier type="former granule identifier">gamd-5_99-cr-00058_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_99-cr-00058/USCOURTS-gamd-5_99-cr-00058-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_99-cr-00058/pdf/USCOURTS-gamd-5_99-cr-00058-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:99-cr-00058; USA v. Taylor, et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_99-cr-00058-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-22</dateIssued>
+  <docketText>ORDER directing Clerk to forward file to Judge Wilbur D. Owens, Jr. for the scheduling of a Final Revoication Hearing as to James Christopher Turk. Supervised releasee to be detained pending Final Revocation Hearing. Ordered by Judge Claude W. Hicks Jr. on 1/22/07. (Hicks, Claude)</docketText>
+</extension>
+</relatedItem>
+</mods>

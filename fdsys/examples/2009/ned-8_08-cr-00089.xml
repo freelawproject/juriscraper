@@ -1,0 +1,630 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b8ab5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00089</identifier>
+<identifier type="local">P0b002ee1817b8ab5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_08-cr-00089</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cr-00089</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cr-00089</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="El Primo" lastName="El Primo" role="Defendant"></party>
+ <party firstName="Remigio" fullName="Remigio Pinto Jr." generation="Jr." lastName="Pinto" role="Defendant"></party>
+ <party firstName="Hugo" fullName="Hugo Ramirez" lastName="Ramirez" role="Defendant"></party>
+ <party firstName="Pedro" fullName="Pedro Sanchez-Zavala" lastName="Sanchez-Zavala" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Luis" fullName="Luis Zalas-Vego" lastName="Zalas-Vego" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Pinto et al</title>
+ <partNumber>8:08-cr-00089</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00089/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:08-cr-00089;08-089</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>El Primo</displayForm>
+ <namePart type="family">El Primo</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Remigio Pinto Jr.</displayForm>
+ <namePart type="family">Pinto</namePart>
+ <namePart type="given">Remigio</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hugo Ramirez</displayForm>
+ <namePart type="family">Ramirez</namePart>
+ <namePart type="given">Hugo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pedro Sanchez-Zavala</displayForm>
+ <namePart type="family">Sanchez-Zavala</namePart>
+ <namePart type="given">Pedro</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Luis Zalas-Vego</displayForm>
+ <namePart type="family">Zalas-Vego</namePart>
+ <namePart type="given">Luis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cr-00089</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cr-00089</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="El Primo" lastName="El Primo" role="Defendant"></party>
+ <party firstName="Remigio" fullName="Remigio Pinto Jr." generation="Jr." lastName="Pinto" role="Defendant"></party>
+ <party firstName="Hugo" fullName="Hugo Ramirez" lastName="Ramirez" role="Defendant"></party>
+ <party firstName="Pedro" fullName="Pedro Sanchez-Zavala" lastName="Sanchez-Zavala" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Luis" fullName="Luis Zalas-Vego" lastName="Zalas-Vego" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00089-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Pinto et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Remigio Pinto, Jr. - Denise E. Frost is appointed as counsel for the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-02-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00089-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e6ceb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-0</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00089_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00089/pdf/USCOURTS-ned-8_08-cr-00089-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00089; USA v. Pinto et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00089-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-02-28</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Remigio Pinto, Jr. - Denise E. Frost is appointed as counsel for the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00089-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Pinto et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Hugo Ramirez - James K. McGough is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-02-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00089-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e6cdf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-1</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00089_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00089/pdf/USCOURTS-ned-8_08-cr-00089-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00089; USA v. Pinto et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00089-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-02-28</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Hugo Ramirez - James K. McGough is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00089-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Pinto et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Pedro Sanchez-Zavala. Ordered by Magistrate Judge Thomas D. Thalken. (1 certified copy to US Marshal)(ADB )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-02-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00089-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e6ce3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-2</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00089_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00089/pdf/USCOURTS-ned-8_08-cr-00089-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00089; USA v. Pinto et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00089-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-02-28</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Pedro Sanchez-Zavala. Ordered by Magistrate Judge Thomas D. Thalken. (1 certified copy to US Marshal)(ADB )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00089-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Pinto et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Hugo Ramirez. Ordered by Magistrate Judge Thomas D. Thalken. (KBJ)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-03-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00089-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e6cea</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-3</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00089_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00089/pdf/USCOURTS-ned-8_08-cr-00089-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00089; USA v. Pinto et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00089-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-03-03</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Hugo Ramirez. Ordered by Magistrate Judge Thomas D. Thalken. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00089-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Pinto et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Luis Zalas-Vego. Ordered by Magistrate Judge Thomas D. Thalken. (KBJ)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-03-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00089-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e6cb4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-4</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00089_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00089/pdf/USCOURTS-ned-8_08-cr-00089-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00089; USA v. Pinto et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00089-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-03-03</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Luis Zalas-Vego. Ordered by Magistrate Judge Thomas D. Thalken. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00089-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Pinto et al</title>
+  <subTitle>ORDER granting 35 the Plaintiff&apos;s Motion to Dismiss Criminal Case as to Pedro Sanchez-Zavala (2). The Indictment is dismissed without prejudice as it relates to Pedro Sanchez-Zavala, a/k/a El Primo, only. Ordered by Senior Judge Lyle E. Strom. (MKR)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-03-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00089-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e6ce2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-5</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00089_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00089/pdf/USCOURTS-ned-8_08-cr-00089-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00089; USA v. Pinto et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00089-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2008-03-21</dateIssued>
+  <docketText>ORDER granting 35 the Plaintiff&apos;s Motion to Dismiss Criminal Case as to Pedro Sanchez-Zavala (2). The Indictment is dismissed without prejudice as it relates to Pedro Sanchez-Zavala, a/k/a El Primo, only. Ordered by Senior Judge Lyle E. Strom. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00089-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Pinto et al</title>
+  <subTitle>ORDER that 38 Motion to Extend as to Luis Zalas-Vego (3) will be held in abeyance pending compliance with Paragraph 9 of the Progression Order. Absent compliance on or before April 3, 2008, the motion will be deemed withdrawn and termed on the docket. Ordered by Magistrate Judge Thomas D. Thalken. ( ADB)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-03-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00089-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e6ce5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-6</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00089_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00089/pdf/USCOURTS-ned-8_08-cr-00089-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00089; USA v. Pinto et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00089-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2008-03-25</dateIssued>
+  <docketText>ORDER that 38 Motion to Extend as to Luis Zalas-Vego (3) will be held in abeyance pending compliance with Paragraph 9 of the Progression Order. Absent compliance on or before April 3, 2008, the motion will be deemed withdrawn and termed on the docket. Ordered by Magistrate Judge Thomas D. Thalken. ( ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00089-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Pinto et al</title>
+  <subTitle>ORDER - Defendant Zalas-Vegos motion for an extension of time 38 is granted. Zalas-Vego is given until on or before April 14, 2008, in which to file pretrial motions pursuant to the progression order. The ends of justice have been served by granting such motion and outweigh the interests of the public and the defendant in a speedy trial. The additional time arising as a result of the granting of the motion, i.e., the time betweenMarch 28, 2008 and April 14, 2008, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act for the reason defendant&apos;s counsel requires additional time to adequately prepare the case, taking into consideration due diligence of counsel, and the novelty and complexity of this case. The failure to grant additional time might result in a miscarriage of justice. 18 U.S.C. § 3161(h)(8)(A)&amp;(B). Pretrial Motion Deadline set for 4/14/2008. Ordered by Magistrate Judge Thomas D. Thalken. ( PCV, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-03-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00089-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e6ce6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-7</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00089_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00089/pdf/USCOURTS-ned-8_08-cr-00089-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00089; USA v. Pinto et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00089-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2008-03-28</dateIssued>
+  <docketText>ORDER - Defendant Zalas-Vegos motion for an extension of time 38 is granted. Zalas-Vego is given until on or before April 14, 2008, in which to file pretrial motions pursuant to the progression order. The ends of justice have been served by granting such motion and outweigh the interests of the public and the defendant in a speedy trial. The additional time arising as a result of the granting of the motion, i.e., the time betweenMarch 28, 2008 and April 14, 2008, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act for the reason defendant&apos;s counsel requires additional time to adequately prepare the case, taking into consideration due diligence of counsel, and the novelty and complexity of this case. The failure to grant additional time might result in a miscarriage of justice. 18 U.S.C. § 3161(h)(8)(A)&amp;(B). Pretrial Motion Deadline set for 4/14/2008. Ordered by Magistrate Judge Thomas D. Thalken. ( PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00089-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Pinto et al</title>
+  <subTitle>ORDER granting 45 Motion for Leave as to Hugo Ramirez (4). Ramirez is given until on or before April 8, 2008, in which to file the pretrial motions set forth in his request. Ordered by Magistrate Judge Thomas D. Thalken. ( ADB)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-03-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00089-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e6ce7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-8</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00089_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00089/pdf/USCOURTS-ned-8_08-cr-00089-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00089; USA v. Pinto et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00089-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2008-03-31</dateIssued>
+  <docketText>ORDER granting 45 Motion for Leave as to Hugo Ramirez (4). Ramirez is given until on or before April 8, 2008, in which to file the pretrial motions set forth in his request. Ordered by Magistrate Judge Thomas D. Thalken. ( ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00089-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Pinto et al</title>
+  <subTitle>ORDER granting in part and denying in part 53 Motion for Bill of Particulars; FURTHER, IT IS ORDERED: 1. The clerk shall cause a transcript of the hearing to be prepared and filed. 2. Pursuant to NECrimR 57.2 any appeal to this Order shall be filed with the Clerk of the Court within ten (10) business days after the transcript is available to counsel for reading in the clerks office. Failure to timely appeal may constitute a waiver of anysuch appeal. The brief in support of any objection shall be filed at the time of filing such appeal. Failure to file a brief in support of any appeal may be deemed an abandonment of the appeal as to Luis Zalas-Vego (3) Ordered by Magistrate Judge Thomas D. Thalken. ( PCV, )</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-05-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00089-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e6ce4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-9</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00089_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00089/pdf/USCOURTS-ned-8_08-cr-00089-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00089; USA v. Pinto et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00089-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2008-05-13</dateIssued>
+  <docketText>ORDER granting in part and denying in part 53 Motion for Bill of Particulars; FURTHER, IT IS ORDERED: 1. The clerk shall cause a transcript of the hearing to be prepared and filed. 2. Pursuant to NECrimR 57.2 any appeal to this Order shall be filed with the Clerk of the Court within ten (10) business days after the transcript is available to counsel for reading in the clerks office. Failure to timely appeal may constitute a waiver of anysuch appeal. The brief in support of any objection shall be filed at the time of filing such appeal. Failure to file a brief in support of any appeal may be deemed an abandonment of the appeal as to Luis Zalas-Vego (3) Ordered by Magistrate Judge Thomas D. Thalken. ( PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00089-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Pinto et al</title>
+  <subTitle>PRELIMINARY ORDER OF FORFEITURE - The United States&apos; Motion for Issuance of Preliminary Order of Forfeiture 85 is hereby sustained; based upon Count X of the Indictment and the defendants&apos; pleas of guilty, the United States is hereby authorized to seize the $106.00, $614.00, $112.00, $1,800.00 and $81.00; defendants&apos; interest in said properties are hereby forfeited to the United States for disposition in accordance with the law, subject to the provisions of 21 U.S.C. § 853(n)(1); the aforementioned forfeited properties are to be held by the United States in its secure custody and control; upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C. § 853(n), in which all interests will be addressed as to Remigio Pinto Jr. (1), Luis Zalas-Vego (3), Hugo Ramirez (4). Ordered by Senior Judge Lyle E. Strom. (1 certified copy to USM)(CJP)PRELIMINARY ORDER OF FORFEITURE - The United States&apos; Motion for Issuance of Preliminary Order of Forfeiture 85 is hereby sustained; based upon Count X of the Indictment and the defendants&apos; pleas of guilty, the United States is hereby authorized to seize the $106.00, $614.00, $112.00, $1,800.00 and $81.00; defendants&apos; interest in said properties are hereby forfeited to the United States for disposition in accordance with the law, subject to the provisions of 21 U.S.C. § 853(n)(1); the aforementioned forfeited properties are to be held by the United States in its secure custody and control; upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C. § 853(n), in which all interests will be addressed as to Remigio Pinto Jr. (1), Luis Zalas-Vego (3), Hugo Ramirez (4). Ordered by Senior Judge Lyle E. Strom. (1 certified copy to USM)(CJP)PRELIMINARY ORDER OF FORFEITURE - The United States&apos; Motion for Issuance of Preliminary Order of Forfeiture 85 is hereby sustained; based upon Count X of the Indictment and the defendants&apos; pleas of guilty, the United States is hereby authorized to seize the $106.00, $614.00, $112.00, $1,800.00 and $81.00; defendants&apos; interest in said properties are hereby forfeited to the United States for disposition in accordance with the law, subject to the provisions of 21 U.S.C. § 853(n)(1); the aforementioned forfeited properties are to be held by the United States in its secure custody and control; upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C. § 853(n), in which all interests will be addressed as to Remigio Pinto Jr. (1), Luis Zalas-Vego (3), Hugo Ramirez (4). Ordered by Senior Judge Lyle E. Strom. (1 certified copy to USM)(CJP)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00089-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e6cb5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-10</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00089_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00089/pdf/USCOURTS-ned-8_08-cr-00089-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00089; USA v. Pinto et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00089-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2008-07-22</dateIssued>
+  <docketText>PRELIMINARY ORDER OF FORFEITURE - The United States&apos; Motion for Issuance of Preliminary Order of Forfeiture 85 is hereby sustained; based upon Count X of the Indictment and the defendants&apos; pleas of guilty, the United States is hereby authorized to seize the $106.00, $614.00, $112.00, $1,800.00 and $81.00; defendants&apos; interest in said properties are hereby forfeited to the United States for disposition in accordance with the law, subject to the provisions of 21 U.S.C. § 853(n)(1); the aforementioned forfeited properties are to be held by the United States in its secure custody and control; upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C. § 853(n), in which all interests will be addressed as to Remigio Pinto Jr. (1), Luis Zalas-Vego (3), Hugo Ramirez (4). Ordered by Senior Judge Lyle E. Strom. (1 certified copy to USM)(CJP)PRELIMINARY ORDER OF FORFEITURE - The United States&apos; Motion for Issuance of Preliminary Order of Forfeiture 85 is hereby sustained; based upon Count X of the Indictment and the defendants&apos; pleas of guilty, the United States is hereby authorized to seize the $106.00, $614.00, $112.00, $1,800.00 and $81.00; defendants&apos; interest in said properties are hereby forfeited to the United States for disposition in accordance with the law, subject to the provisions of 21 U.S.C. § 853(n)(1); the aforementioned forfeited properties are to be held by the United States in its secure custody and control; upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C. § 853(n), in which all interests will be addressed as to Remigio Pinto Jr. (1), Luis Zalas-Vego (3), Hugo Ramirez (4). Ordered by Senior Judge Lyle E. Strom. (1 certified copy to USM)(CJP)PRELIMINARY ORDER OF FORFEITURE - The United States&apos; Motion for Issuance of Preliminary Order of Forfeiture 85 is hereby sustained; based upon Count X of the Indictment and the defendants&apos; pleas of guilty, the United States is hereby authorized to seize the $106.00, $614.00, $112.00, $1,800.00 and $81.00; defendants&apos; interest in said properties are hereby forfeited to the United States for disposition in accordance with the law, subject to the provisions of 21 U.S.C. § 853(n)(1); the aforementioned forfeited properties are to be held by the United States in its secure custody and control; upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C. § 853(n), in which all interests will be addressed as to Remigio Pinto Jr. (1), Luis Zalas-Vego (3), Hugo Ramirez (4). Ordered by Senior Judge Lyle E. Strom. (1 certified copy to USM)(CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00089-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Pinto et al</title>
+  <subTitle>JUDGMENT as to Hugo Ramirez (4), The defendant plead guilty to Counts VII and X of the Indictment and is committed to the Bureau of Prisons for a term of 12 months; 3 years supervised release with special conditions; $100 special assessment; Count I of the Indictment is dismissed on the motion of the United States as to this defendant only; final order of forfeiture as to Count X forthcoming; the defendant shall forfeit the defendant&apos;s interest in the following property to the United States: $81.00 in United States currency as to defendant Hugo Ramirez. Ordered by Senior Judge Lyle E. Strom. (4 certified copies to USM)(CJP)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-09-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00089-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e6ce1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-11</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00089_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00089/pdf/USCOURTS-ned-8_08-cr-00089-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00089; USA v. Pinto et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00089-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2008-09-29</dateIssued>
+  <docketText>JUDGMENT as to Hugo Ramirez (4), The defendant plead guilty to Counts VII and X of the Indictment and is committed to the Bureau of Prisons for a term of 12 months; 3 years supervised release with special conditions; $100 special assessment; Count I of the Indictment is dismissed on the motion of the United States as to this defendant only; final order of forfeiture as to Count X forthcoming; the defendant shall forfeit the defendant&apos;s interest in the following property to the United States: $81.00 in United States currency as to defendant Hugo Ramirez. Ordered by Senior Judge Lyle E. Strom. (4 certified copies to USM)(CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00089-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Pinto et al</title>
+  <subTitle>FINAL ORDER OF FORFEITURE that Plaintiff&apos;s Motion for Final Order of Forfeiture 98 is hereby sustained; all right, title and interest in and to the $106.00, $614.00, $112.00, $1,800.00 and $81.00 in United States currency, held by any person or entity, are hereby forever barred and foreclosed.; the $106.00, $614.00, $112.00, $1,800.00 and $81.00 in United States currency, be, and the same hereby are, forfeited to the United States of America ; the United States Marshal for the District of Nebraska is directed to dispose of said properties in accordance with law as to Remigio Pinto Jr. (1), Luis Zalas-Vego (3), Hugo Ramirez (4). Ordered by Senior Judge Lyle E. Strom. (1 certified copy to USM)(CJP)FINAL ORDER OF FORFEITURE that Plaintiff&apos;s Motion for Final Order of Forfeiture 98 is hereby sustained; all right, title and interest in and to the $106.00, $614.00, $112.00, $1,800.00 and $81.00 in United States currency, held by any person or entity, are hereby forever barred and foreclosed.; the $106.00, $614.00, $112.00, $1,800.00 and $81.00 in United States currency, be, and the same hereby are, forfeited to the United States of America ; the United States Marshal for the District of Nebraska is directed to dispose of said properties in accordance with law as to Remigio Pinto Jr. (1), Luis Zalas-Vego (3), Hugo Ramirez (4). Ordered by Senior Judge Lyle E. Strom. (1 certified copy to USM)(CJP)FINAL ORDER OF FORFEITURE that Plaintiff&apos;s Motion for Final Order of Forfeiture 98 is hereby sustained; all right, title and interest in and to the $106.00, $614.00, $112.00, $1,800.00 and $81.00 in United States currency, held by any person or entity, are hereby forever barred and foreclosed.; the $106.00, $614.00, $112.00, $1,800.00 and $81.00 in United States currency, be, and the same hereby are, forfeited to the United States of America ; the United States Marshal for the District of Nebraska is directed to dispose of said properties in accordance with law as to Remigio Pinto Jr. (1), Luis Zalas-Vego (3), Hugo Ramirez (4). Ordered by Senior Judge Lyle E. Strom. (1 certified copy to USM)(CJP)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00089-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e6cb2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-12</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00089_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00089/pdf/USCOURTS-ned-8_08-cr-00089-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00089; USA v. Pinto et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00089-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2008-10-03</dateIssued>
+  <docketText>FINAL ORDER OF FORFEITURE that Plaintiff&apos;s Motion for Final Order of Forfeiture 98 is hereby sustained; all right, title and interest in and to the $106.00, $614.00, $112.00, $1,800.00 and $81.00 in United States currency, held by any person or entity, are hereby forever barred and foreclosed.; the $106.00, $614.00, $112.00, $1,800.00 and $81.00 in United States currency, be, and the same hereby are, forfeited to the United States of America ; the United States Marshal for the District of Nebraska is directed to dispose of said properties in accordance with law as to Remigio Pinto Jr. (1), Luis Zalas-Vego (3), Hugo Ramirez (4). Ordered by Senior Judge Lyle E. Strom. (1 certified copy to USM)(CJP)FINAL ORDER OF FORFEITURE that Plaintiff&apos;s Motion for Final Order of Forfeiture 98 is hereby sustained; all right, title and interest in and to the $106.00, $614.00, $112.00, $1,800.00 and $81.00 in United States currency, held by any person or entity, are hereby forever barred and foreclosed.; the $106.00, $614.00, $112.00, $1,800.00 and $81.00 in United States currency, be, and the same hereby are, forfeited to the United States of America ; the United States Marshal for the District of Nebraska is directed to dispose of said properties in accordance with law as to Remigio Pinto Jr. (1), Luis Zalas-Vego (3), Hugo Ramirez (4). Ordered by Senior Judge Lyle E. Strom. (1 certified copy to USM)(CJP)FINAL ORDER OF FORFEITURE that Plaintiff&apos;s Motion for Final Order of Forfeiture 98 is hereby sustained; all right, title and interest in and to the $106.00, $614.00, $112.00, $1,800.00 and $81.00 in United States currency, held by any person or entity, are hereby forever barred and foreclosed.; the $106.00, $614.00, $112.00, $1,800.00 and $81.00 in United States currency, be, and the same hereby are, forfeited to the United States of America ; the United States Marshal for the District of Nebraska is directed to dispose of said properties in accordance with law as to Remigio Pinto Jr. (1), Luis Zalas-Vego (3), Hugo Ramirez (4). Ordered by Senior Judge Lyle E. Strom. (1 certified copy to USM)(CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00089-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Pinto et al</title>
+  <subTitle>JUDGMENT as to Remigio Pinto, Jr.. Defendant pleaded guilty to Counts V and X of the Indictment and is committed to the custody of the Bureau of Prisons for a term of 60 months; 4 years supervised release with special conditions; $100.00 special assessment has been paid. Counts I thru IV and IX of the Indictment are dismissed on the motion of the United States as to this defendant only. The Defendant shall surrender to the United States Marshal for this district on November 3, 2008 at 2:00 P.M. Final order of forfeiture filed on 10/03/2008 as to Count X. Ordered by Senior Judge Lyle E. Strom. (4 Certified copies to USM)(JAE, )</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00089-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e6cb3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-13</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00089_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00089/pdf/USCOURTS-ned-8_08-cr-00089-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00089; USA v. Pinto et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00089-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2008-10-09</dateIssued>
+  <docketText>JUDGMENT as to Remigio Pinto, Jr.. Defendant pleaded guilty to Counts V and X of the Indictment and is committed to the custody of the Bureau of Prisons for a term of 60 months; 4 years supervised release with special conditions; $100.00 special assessment has been paid. Counts I thru IV and IX of the Indictment are dismissed on the motion of the United States as to this defendant only. The Defendant shall surrender to the United States Marshal for this district on November 3, 2008 at 2:00 P.M. Final order of forfeiture filed on 10/03/2008 as to Count X. Ordered by Senior Judge Lyle E. Strom. (4 Certified copies to USM)(JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00089-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Pinto et al</title>
+  <subTitle>JUDGMENT as to Luis Zalas-Vego (3), Counts I and III of the Indictment are dismissed on the motion of the United States as to this defendant only; Defendant pled guilty to counts VI and X of the Indictment and is committed to the custody of the Bureau of Prisons for a total term of 37 months; 3 years Supervised Release with special conditions; $100 Special Assessment, Luis Zalas-Vego dismissed as to defendant Luis Zalas-Vego. Final order of forfeiture filed on 10/3/08 as to Count X. Ordered by Senior Judge Lyle E. Strom. (4 Certified copies to USM)(MKR, )</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00089-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e6ce8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-14</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00089_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00089/pdf/USCOURTS-ned-8_08-cr-00089-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00089; USA v. Pinto et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00089-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2008-10-17</dateIssued>
+  <docketText>JUDGMENT as to Luis Zalas-Vego (3), Counts I and III of the Indictment are dismissed on the motion of the United States as to this defendant only; Defendant pled guilty to counts VI and X of the Indictment and is committed to the custody of the Bureau of Prisons for a total term of 37 months; 3 years Supervised Release with special conditions; $100 Special Assessment, Luis Zalas-Vego dismissed as to defendant Luis Zalas-Vego. Final order of forfeiture filed on 10/3/08 as to Count X. Ordered by Senior Judge Lyle E. Strom. (4 Certified copies to USM)(MKR, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00089-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Pinto et al</title>
+  <subTitle>ORDER granting 116 Motion to Extend Self Surrender Date as to Remigio Pinto Jr. The defendant shall self-surrender on November 7, 2008, to the United States Marshal to commence service of his federal sentence. Ordered by Senior Judge Lyle E. Strom. (1 Certified copy to USM)( JAE, )</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00089-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e6ce0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-15</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00089_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00089/pdf/USCOURTS-ned-8_08-cr-00089-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00089; USA v. Pinto et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00089-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2008-10-30</dateIssued>
+  <docketText>ORDER granting 116 Motion to Extend Self Surrender Date as to Remigio Pinto Jr. The defendant shall self-surrender on November 7, 2008, to the United States Marshal to commence service of his federal sentence. Ordered by Senior Judge Lyle E. Strom. (1 Certified copy to USM)( JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00089-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Pinto et al</title>
+  <subTitle>NUNC PRO TUNC JUDGMENT (date offense concluded corrected only) as to Luis Zalas-Vego (3), Counts I and III of the Indictment are dismissed on the motion of the United States as to this defendant only; Defendant pled guilty to counts VI and X of the Indictment and is committed to the custody of the Bureau of Prisons for a total term of 37 months; 3 years Supervised Release with special conditions; $100 Special Assessment. Final order of forfeiture filed on 10/3/08 as to Count X. Ordered by Senior Judge Lyle E. Strom. (4 Certified copies to USM) Ordered by Senior Judge Lyle E. Strom. (4 Certified copies to USM)(CJP)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00089-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e6ce9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-16</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00089_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00089/USCOURTS-ned-8_08-cr-00089-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00089/pdf/USCOURTS-ned-8_08-cr-00089-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00089; USA v. Pinto et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00089-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2009-01-30</dateIssued>
+  <docketText>NUNC PRO TUNC JUDGMENT (date offense concluded corrected only) as to Luis Zalas-Vego (3), Counts I and III of the Indictment are dismissed on the motion of the United States as to this defendant only; Defendant pled guilty to counts VI and X of the Indictment and is committed to the custody of the Bureau of Prisons for a total term of 37 months; 3 years Supervised Release with special conditions; $100 Special Assessment. Final order of forfeiture filed on 10/3/08 as to Count X. Ordered by Senior Judge Lyle E. Strom. (4 Certified copies to USM) Ordered by Senior Judge Lyle E. Strom. (4 Certified copies to USM)(CJP)</docketText>
+</extension>
+</relatedItem>
+</mods>

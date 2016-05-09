@@ -1,0 +1,301 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1866e4ccc">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Southern District of Alabama</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-12-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cv-00263</identifier>
+<identifier type="local">P0b002ee1866e4ccc</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-12-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-12-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-alsd-1_11-cv-00263</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alsd-1_11-cv-00263</accessId>
+ <courtType>District</courtType>
+ <courtCode>alsd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2013</courtSortOrder>
+ <caseNumber>1:11-cv-00263</caseNumber>
+ <caseOffice>Mobile</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1345 Foreclosure</cause>
+ <party fullName="JPMorgan Chase Bank, N.A." lastName="JPMorgan Chase Bank, N.A." role="Plaintiff"></party>
+ <party firstName="Katherine" fullName="Katherine B. Surek" lastName="Surek" middleName="B." role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher L. Surek" lastName="Surek" middleName="L." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>JPMorgan Chase Bank, N.A. v. Surek et al</title>
+ <partNumber>1:11-cv-00263</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cv-00263/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-cv-00263;11-263</identifier>
+<name type="corporate">
+ <namePart>United States District Court Southern District of Alabama</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Mobile</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>JPMorgan Chase Bank, N.A.</displayForm>
+ <namePart type="family">JPMorgan Chase Bank, N.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Katherine B. Surek</displayForm>
+ <namePart type="family">Surek</namePart>
+ <namePart type="given">Katherine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Christopher L. Surek</displayForm>
+ <namePart type="family">Surek</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alsd-1_11-cv-00263</accessId>
+ <courtType>District</courtType>
+ <courtCode>alsd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2013</courtSortOrder>
+ <caseNumber>1:11-cv-00263</caseNumber>
+ <caseOffice>Mobile</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1345 Foreclosure</cause>
+ <party fullName="JPMorgan Chase Bank, N.A." lastName="JPMorgan Chase Bank, N.A." role="Plaintiff"></party>
+ <party firstName="Katherine" fullName="Katherine B. Surek" lastName="Surek" middleName="B." role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher L. Surek" lastName="Surek" middleName="L." role="Defendant"></party>
+ <state>Alabama</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_11-cv-00263-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00263/USCOURTS-alsd-1_11-cv-00263-0/mods.xml">
+ <titleInfo>
+  <title>JPMorgan Chase Bank, N.A. v. Surek et al</title>
+  <subTitle>Order enterd re: 19 Suggestion of Bankruptcy filed by JPMorgan Chase Bank, N.A. It is hereby ORDERED that all proceedings against Defendant Christopher L. Surek are STAYED pending further Order of this Court. This matter remains pending as to Defendant Katherine B. Surek. Signed by Judge Kristi K. DuBose on 9/20/2011. copy mailed to defendants (mca)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alsd-1_11-cv-00263-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1866f860e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00263/USCOURTS-alsd-1_11-cv-00263-0</identifier>
+ <identifier type="former granule identifier">alsd-1_11-cv-00263_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00263/USCOURTS-alsd-1_11-cv-00263-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cv-00263/pdf/USCOURTS-alsd-1_11-cv-00263-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00263; JPMorgan Chase Bank, N.A. v. Surek et al; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_11-cv-00263-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-09-22</dateIssued>
+  <docketText>Order enterd re: 19 Suggestion of Bankruptcy filed by JPMorgan Chase Bank, N.A. It is hereby ORDERED that all proceedings against Defendant Christopher L. Surek are STAYED pending further Order of this Court. This matter remains pending as to Defendant Katherine B. Surek. Signed by Judge Kristi K. DuBose on 9/20/2011. copy mailed to defendants (mca)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_11-cv-00263-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00263/USCOURTS-alsd-1_11-cv-00263-1/mods.xml">
+ <titleInfo>
+  <title>JPMorgan Chase Bank, N.A. v. Surek et al</title>
+  <subTitle>ORDER granting 13 Motion for Default Judgment against Defendant Katherine B. Surek in the amount of $314,912.83 ($295,584.19 for principal, $19,253.64 in accrued interest plus $75.00 in late charges/fees). Plaintiff also alleges it is entitled to attorneys fees and costs. However, in its motion for default judgment, Plaintiff has not provided any support for such request. Plaintiff is ORDERED to file, on or before November 18, 2011, materials it deems necessary to support its claim for costs and fees. The Court will take the matter under submission and a separate Judgment and Decree of Foreclosure, as to Defendant Katherine B. Surek, shall issue in conjunction with this Order after resolution of the request for attorneys fees and costs.. Signed by Judge Kristi K. DuBose on 11/3/2011. (cmj)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alsd-1_11-cv-00263-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1866f8571</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00263/USCOURTS-alsd-1_11-cv-00263-1</identifier>
+ <identifier type="former granule identifier">alsd-1_11-cv-00263_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00263/USCOURTS-alsd-1_11-cv-00263-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cv-00263/pdf/USCOURTS-alsd-1_11-cv-00263-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00263; JPMorgan Chase Bank, N.A. v. Surek et al; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_11-cv-00263-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-11-04</dateIssued>
+  <docketText>ORDER granting 13 Motion for Default Judgment against Defendant Katherine B. Surek in the amount of $314,912.83 ($295,584.19 for principal, $19,253.64 in accrued interest plus $75.00 in late charges/fees). Plaintiff also alleges it is entitled to attorneys fees and costs. However, in its motion for default judgment, Plaintiff has not provided any support for such request. Plaintiff is ORDERED to file, on or before November 18, 2011, materials it deems necessary to support its claim for costs and fees. The Court will take the matter under submission and a separate Judgment and Decree of Foreclosure, as to Defendant Katherine B. Surek, shall issue in conjunction with this Order after resolution of the request for attorneys fees and costs.. Signed by Judge Kristi K. DuBose on 11/3/2011. (cmj)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_11-cv-00263-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00263/USCOURTS-alsd-1_11-cv-00263-2/mods.xml">
+ <titleInfo>
+  <title>JPMorgan Chase Bank, N.A. v. Surek et al</title>
+  <subTitle>Order DENYING 22 request for attorneys&apos; fees and costs filed by JPMorgan Chase Bank, N.A., as set out. Signed by Judge Kristi K. DuBose on 2/3/12. (cmj)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alsd-1_11-cv-00263-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1866f856f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00263/USCOURTS-alsd-1_11-cv-00263-2</identifier>
+ <identifier type="former granule identifier">alsd-1_11-cv-00263_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00263/USCOURTS-alsd-1_11-cv-00263-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cv-00263/pdf/USCOURTS-alsd-1_11-cv-00263-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00263; JPMorgan Chase Bank, N.A. v. Surek et al; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_11-cv-00263-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-02-03</dateIssued>
+  <docketText>Order DENYING 22 request for attorneys&apos; fees and costs filed by JPMorgan Chase Bank, N.A., as set out. Signed by Judge Kristi K. DuBose on 2/3/12. (cmj)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_11-cv-00263-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00263/USCOURTS-alsd-1_11-cv-00263-3/mods.xml">
+ <titleInfo>
+  <title>JPMorgan Chase Bank, N.A. v. Surek et al</title>
+  <subTitle>JUDGMENT AND DECREE OF FORECLOSURE in favor of JPMorgan Chase Bank, N.A. against Katherine B. Surek. (To be advertised 2/15, 2/22, 2/29, 3/7 and the sale 3/15/12). Signed by Judge Kristi K. DuBose on 2/7/2012. (Attachments: # (1) Notice of Sale) (copies to USM) (cmj)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alsd-1_11-cv-00263-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1866f856d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00263/USCOURTS-alsd-1_11-cv-00263-3</identifier>
+ <identifier type="former granule identifier">alsd-1_11-cv-00263_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00263/USCOURTS-alsd-1_11-cv-00263-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cv-00263/pdf/USCOURTS-alsd-1_11-cv-00263-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00263; JPMorgan Chase Bank, N.A. v. Surek et al; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_11-cv-00263-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-02-08</dateIssued>
+  <docketText>JUDGMENT AND DECREE OF FORECLOSURE in favor of JPMorgan Chase Bank, N.A. against Katherine B. Surek. (To be advertised 2/15, 2/22, 2/29, 3/7 and the sale 3/15/12). Signed by Judge Kristi K. DuBose on 2/7/2012. (Attachments: # (1) Notice of Sale) (copies to USM) (cmj)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_11-cv-00263-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00263/USCOURTS-alsd-1_11-cv-00263-4/mods.xml">
+ <titleInfo>
+  <title>JPMorgan Chase Bank, N.A. v. Surek et al</title>
+  <subTitle>Order re: 29 MOTION to Confirm Sale filed by JPMorgan Chase Bank, N.A. The foreclosure sale of property be held in abeyance as set out; denying request for publication costs as set out; the request for post judgment and other interest is denied; the proposed deed is approved, as set out. Plaintiff is ordered to file a response concerning amount due to defendant Surek.( Miscellaneous deadline set for 6/21/2012.). Signed by Judge Kristi K. DuBose on 6/14/2012. (cmj)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alsd-1_11-cv-00263-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1866f8570</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00263/USCOURTS-alsd-1_11-cv-00263-4</identifier>
+ <identifier type="former granule identifier">alsd-1_11-cv-00263_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00263/USCOURTS-alsd-1_11-cv-00263-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cv-00263/pdf/USCOURTS-alsd-1_11-cv-00263-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00263; JPMorgan Chase Bank, N.A. v. Surek et al; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_11-cv-00263-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-06-14</dateIssued>
+  <docketText>Order re: 29 MOTION to Confirm Sale filed by JPMorgan Chase Bank, N.A. The foreclosure sale of property be held in abeyance as set out; denying request for publication costs as set out; the request for post judgment and other interest is denied; the proposed deed is approved, as set out. Plaintiff is ordered to file a response concerning amount due to defendant Surek.( Miscellaneous deadline set for 6/21/2012.). Signed by Judge Kristi K. DuBose on 6/14/2012. (cmj)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_11-cv-00263-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00263/USCOURTS-alsd-1_11-cv-00263-5/mods.xml">
+ <titleInfo>
+  <title>JPMorgan Chase Bank, N.A. v. Surek et al</title>
+  <subTitle>ORDER entered on Plaintiff JP Morgan Chase Bank, N.A.s Response (Doc. 32) to the Courts Order (Doc. 30) regarding its previously filed Motion to Confirm Foreclosure Sale (Doc. 29). The Court construes the Response as a motion to reconsider the prior ruling (Doc. 30) as fully set out. Signed by Judge Kristi K. DuBose on 1/2/2013. copy to USM (hand-delivered) (mca)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alsd-1_11-cv-00263-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1866f856e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00263/USCOURTS-alsd-1_11-cv-00263-5</identifier>
+ <identifier type="former granule identifier">alsd-1_11-cv-00263_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00263/USCOURTS-alsd-1_11-cv-00263-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cv-00263/pdf/USCOURTS-alsd-1_11-cv-00263-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00263; JPMorgan Chase Bank, N.A. v. Surek et al; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_11-cv-00263-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>ORDER entered on Plaintiff JP Morgan Chase Bank, N.A.s Response (Doc. 32) to the Courts Order (Doc. 30) regarding its previously filed Motion to Confirm Foreclosure Sale (Doc. 29). The Court construes the Response as a motion to reconsider the prior ruling (Doc. 30) as fully set out. Signed by Judge Kristi K. DuBose on 1/2/2013. copy to USM (hand-delivered) (mca)</docketText>
+</extension>
+</relatedItem>
+</mods>

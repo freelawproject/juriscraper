@@ -1,0 +1,422 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18dfe9110">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-11-24</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-11-23</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038</identifier>
+<identifier type="local">P0b002ee18dfe9110</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-11-24</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-11-24</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_13-cv-02038</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-02038</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-02038</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="County of Kern State of California" lastName="County of Kern State of California" role="Defendant"></party>
+ <party fullName="Kern County Sheriff&apos;s Department" lastName="Kern County Sheriff&apos;s Department" role="Defendant"></party>
+ <party fullName="Kern Medical Center" lastName="Kern Medical Center" role="Defendant"></party>
+ <party firstName="Cosme" fullName="Cosme Presas" lastName="Presas" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Presas v. Kern Medical Center et al</title>
+ <partNumber>1:13-cv-02038</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-02038;13-2038</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>County of Kern State of California</displayForm>
+ <namePart type="family">County of Kern State of California</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kern County Sheriff&apos;s Department</displayForm>
+ <namePart type="family">Kern County Sheriff&apos;s Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kern Medical Center</displayForm>
+ <namePart type="family">Kern Medical Center</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cosme Presas</displayForm>
+ <namePart type="family">Presas</namePart>
+ <namePart type="given">Cosme</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-02038</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-02038</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="County of Kern State of California" lastName="County of Kern State of California" role="Defendant"></party>
+ <party fullName="Kern County Sheriff&apos;s Department" lastName="Kern County Sheriff&apos;s Department" role="Defendant"></party>
+ <party fullName="Kern Medical Center" lastName="Kern Medical Center" role="Defendant"></party>
+ <party firstName="Cosme" fullName="Cosme Presas" lastName="Presas" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-02038-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Presas v. Kern Medical Center et al</title>
+  <subTitle>ORDER GRANTING 2 Motion to Proceed IFP signed by Magistrate Judge Sheila K. Oberto on 12/18/2013. (Attachments: # (1) IFP Motion) (Sant Agata, S)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/pdf/USCOURTS-caed-1_13-cv-02038-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dff94c8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-0</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-02038_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/pdf/USCOURTS-caed-1_13-cv-02038-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-02038; (PC) Presas v. Kern Medical Center et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-02038-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-12-18</dateIssued>
+  <docketText>ORDER GRANTING 2 Motion to Proceed IFP signed by Magistrate Judge Sheila K. Oberto on 12/18/2013. (Attachments: # (1) IFP Motion) (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-02038-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Presas v. Kern Medical Center et al</title>
+  <subTitle>ORDER DENYING Motion for Appointment of Counsel 7, signed by Magistrate Judge Sheila K. Oberto on 4/21/14: Motion is DENIED without prejudice. (Hellings, J)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/pdf/USCOURTS-caed-1_13-cv-02038-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dff94c2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-1</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-02038_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/pdf/USCOURTS-caed-1_13-cv-02038-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-02038; (PC) Presas v. Kern Medical Center et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-02038-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-04-21</dateIssued>
+  <docketText>ORDER DENYING Motion for Appointment of Counsel 7, signed by Magistrate Judge Sheila K. Oberto on 4/21/14: Motion is DENIED without prejudice. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-02038-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Presas v. Kern Medical Center et al</title>
+  <subTitle>First Screening ORDER DISMISSING COMPLAINT, WITH LEAVE TO AMEND, for Failure to State a Claim, signed by Magistrate Judge Sheila K. Oberto on 5/21/2014. Amended Complaint Due Within Thirty Days. (Attachments: # (1) Amended Complaint Form)(Marrujo, C)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/pdf/USCOURTS-caed-1_13-cv-02038-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dff94c5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-2</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-02038_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/pdf/USCOURTS-caed-1_13-cv-02038-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-02038; (PC) Presas v. Kern Medical Center et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-02038-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-05-21</dateIssued>
+  <docketText>First Screening ORDER DISMISSING COMPLAINT, WITH LEAVE TO AMEND, for Failure to State a Claim, signed by Magistrate Judge Sheila K. Oberto on 5/21/2014. Amended Complaint Due Within Thirty Days. (Attachments: # (1) Amended Complaint Form)(Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-02038-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Presas v. Kern Medical Center et al</title>
+  <subTitle>ORDER Denying 21 Motion to Appoint Counsel, signed by Magistrate Judge Sheila K. Oberto on 12/17/14. (Verduzco, M)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/pdf/USCOURTS-caed-1_13-cv-02038-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dff94c3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-3</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-02038_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/pdf/USCOURTS-caed-1_13-cv-02038-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-02038; (PC) Presas v. Kern Medical Center et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-02038-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-12-17</dateIssued>
+  <docketText>ORDER Denying 21 Motion to Appoint Counsel, signed by Magistrate Judge Sheila K. Oberto on 12/17/14. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-02038-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Presas v. Kern Medical Center et al</title>
+  <subTitle>ORDER DENYING Motion for Appointment of Counsel 24, signed by Magistrate Judge Sheila K. Oberto on 1/5/15: Motion is DENIED without prejudice. (Hellings, J)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/pdf/USCOURTS-caed-1_13-cv-02038-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dff94c1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-4</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-02038_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/pdf/USCOURTS-caed-1_13-cv-02038-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-02038; (PC) Presas v. Kern Medical Center et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-02038-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER DENYING Motion for Appointment of Counsel 24, signed by Magistrate Judge Sheila K. Oberto on 1/5/15: Motion is DENIED without prejudice. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-02038-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Presas v. Kern Medical Center et al</title>
+  <subTitle>ORDER DENYING Motion for Library Access 23, signed by Magistrate Judge Sheila K. Oberto on 1/6/15. (Hellings, J)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/pdf/USCOURTS-caed-1_13-cv-02038-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dff94c4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-5</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-02038_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/pdf/USCOURTS-caed-1_13-cv-02038-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-02038; (PC) Presas v. Kern Medical Center et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-02038-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER DENYING Motion for Library Access 23, signed by Magistrate Judge Sheila K. Oberto on 1/6/15. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-02038-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Presas v. Kern Medical Center et al</title>
+  <subTitle>ORDER (1) DISREGARDING Proposed Supplemental Complaint and (2) GRANTING Motions 20 &amp; 27 for Leave to File Supplemental Complaints, Subject to Filing Second Amended Complaint That is Complete Within Itself Within Thirty Days, signed by Magistrate Judge Sheila K. Oberto on 4/8/2015. (Marrujo, C)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/pdf/USCOURTS-caed-1_13-cv-02038-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dff94c7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-6</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-02038_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/pdf/USCOURTS-caed-1_13-cv-02038-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-02038; (PC) Presas v. Kern Medical Center et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-02038-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2015-04-08</dateIssued>
+  <docketText>ORDER (1) DISREGARDING Proposed Supplemental Complaint and (2) GRANTING Motions 20 &amp; 27 for Leave to File Supplemental Complaints, Subject to Filing Second Amended Complaint That is Complete Within Itself Within Thirty Days, signed by Magistrate Judge Sheila K. Oberto on 4/8/2015. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-02038-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Presas v. Kern Medical Center et al</title>
+  <subTitle>ORDER DENYING Motion for Leave to File Supplemental Pleading, DISREGARDING Proposed Supplemental Complaint, and Directing Plaintiff to Comply With Order Filed April 8, 2015 30 and 31, signed by Magistrate Judge Sheila K. Oberto on 4/27/15. (Hellings, J)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/pdf/USCOURTS-caed-1_13-cv-02038-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dff93c8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-7</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-02038_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/pdf/USCOURTS-caed-1_13-cv-02038-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-02038; (PC) Presas v. Kern Medical Center et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-02038-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2015-04-27</dateIssued>
+  <docketText>ORDER DENYING Motion for Leave to File Supplemental Pleading, DISREGARDING Proposed Supplemental Complaint, and Directing Plaintiff to Comply With Order Filed April 8, 2015 30 and 31, signed by Magistrate Judge Sheila K. Oberto on 4/27/15. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-02038-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Presas v. Kern Medical Center et al</title>
+  <subTitle>ORDER DENYING Motion for Leave to File Supplemental Pleading, DISREGARDING Proposed Supplemental Complaint, and DIRECTING Plaintiff to Comply With Order Filed April 8, 2015 33, signed by Magistrate Judge Sheila K. Oberto on 4/29/15. (Hellings, J)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/pdf/USCOURTS-caed-1_13-cv-02038-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dff94c0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-8</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-02038_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/pdf/USCOURTS-caed-1_13-cv-02038-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-02038; (PC) Presas v. Kern Medical Center et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-02038-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2015-04-30</dateIssued>
+  <docketText>ORDER DENYING Motion for Leave to File Supplemental Pleading, DISREGARDING Proposed Supplemental Complaint, and DIRECTING Plaintiff to Comply With Order Filed April 8, 2015 33, signed by Magistrate Judge Sheila K. Oberto on 4/29/15. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-02038-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Presas v. Kern Medical Center et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS Recommending Claims Against Kern County Sheriff&apos;s Department and Nurse John Doe 1 be Dismissed, and Action Proceed Against Remaining Nine Doe Defendants, signed by Magistrate Judge Sheila K. Oberto on 11/20/15. Referred to Judge O&apos;Neill; 30-Day Deadline. (Verduzco, M)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-11-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/pdf/USCOURTS-caed-1_13-cv-02038-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dff94c6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-9</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-02038_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02038/USCOURTS-caed-1_13-cv-02038-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02038/pdf/USCOURTS-caed-1_13-cv-02038-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-02038; (PC) Presas v. Kern Medical Center et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-02038-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2015-11-23</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS Recommending Claims Against Kern County Sheriff&apos;s Department and Nurse John Doe 1 be Dismissed, and Action Proceed Against Remaining Nine Doe Defendants, signed by Magistrate Judge Sheila K. Oberto on 11/20/15. Referred to Judge O&apos;Neill; 30-Day Deadline. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

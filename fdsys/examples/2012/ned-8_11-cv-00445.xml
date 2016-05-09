@@ -1,0 +1,282 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18390d66f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-12-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-12-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00445</identifier>
+<identifier type="local">P0b002ee18390d66f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-12-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-12-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_11-cv-00445</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cv-00445</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cv-00445</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Fred" fullName="Fred Britten" lastName="Britten" role="Respondent"></party>
+ <party firstName="Robert" fullName="Robert Houston" lastName="Houston" role="Respondent"></party>
+ <party fullName="Nebraska Attorney General" lastName="Nebraska Attorney General" role="Interested Party"></party>
+ <party firstName="Dwight" fullName="Dwight L. Tucker" lastName="Tucker" middleName="L." role="Petitioner"></party>
+</extension>
+<titleInfo>
+ <title>Tucker v. Houston et al</title>
+ <partNumber>8:11-cv-00445</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00445/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:11-cv-00445;11-445</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Fred Britten</displayForm>
+ <namePart type="family">Britten</namePart>
+ <namePart type="given">Fred</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Houston</displayForm>
+ <namePart type="family">Houston</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Nebraska Attorney General</displayForm>
+ <namePart type="family">Nebraska Attorney General</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Dwight L. Tucker</displayForm>
+ <namePart type="family">Tucker</namePart>
+ <namePart type="given">Dwight</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cv-00445</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cv-00445</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Fred" fullName="Fred Britten" lastName="Britten" role="Respondent"></party>
+ <party firstName="Robert" fullName="Robert Houston" lastName="Houston" role="Respondent"></party>
+ <party fullName="Nebraska Attorney General" lastName="Nebraska Attorney General" role="Interested Party"></party>
+ <party firstName="Dwight" fullName="Dwight L. Tucker" lastName="Tucker" middleName="L." role="Petitioner"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00445-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00445/USCOURTS-ned-8_11-cv-00445-0/mods.xml">
+ <titleInfo>
+  <title>Tucker v. Houston et al</title>
+  <subTitle>ORDER provisionally granting 2 Motion for Leave to Proceed in forma pauperis. Ordered by Senior Judge Warren K. Urbom. (Copy mailed/e-mailed to pro se party)(EJL)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00445-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18390f255</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00445/USCOURTS-ned-8_11-cv-00445-0</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00445_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00445/USCOURTS-ned-8_11-cv-00445-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00445/pdf/USCOURTS-ned-8_11-cv-00445-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00445; Tucker v. Houston et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00445-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-10</dateIssued>
+  <docketText>ORDER provisionally granting 2 Motion for Leave to Proceed in forma pauperis. Ordered by Senior Judge Warren K. Urbom. (Copy mailed/e-mailed to pro se party)(EJL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00445-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00445/USCOURTS-ned-8_11-cv-00445-1/mods.xml">
+ <titleInfo>
+  <title>Tucker v. Houston et al</title>
+  <subTitle>MEMORANDUM AND ORDER -Upon initial review of the Petition Under 28 U.S.C. § 2254 for Writ of Habeas Corpus by a Person in State Custody (filing no. 1), I preliminarily determine that Claims One through Three, as set forth in this memorandum and order, are potentially cognizable in federal court. Tuckers Motion to Appoint Counsel for Writ of Habeas Corpus (filing no. 3) is denied without prejudice to reassertion.. The clerk of the court is directed to mail copies of this memorandum and order and the petition to the respondents and the Nebraska Attorney General by regular first-class mail. By March 16, 2012, the respondents shall file a motion for summary judgment or state court records in support of an answer. The clerk of the court is directed to set a pro se case management deadline in this case using the following text: April 16, 2012: check for the respondents to file answer and separate brief. Ordered by Senior Judge Warren K. Urbom. (Copy mailed/e-mailed to pro se party and as directed)(MKR)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00445-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18390f24f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00445/USCOURTS-ned-8_11-cv-00445-1</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00445_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00445/USCOURTS-ned-8_11-cv-00445-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00445/pdf/USCOURTS-ned-8_11-cv-00445-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00445; Tucker v. Houston et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00445-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-02-06</dateIssued>
+  <docketText>MEMORANDUM AND ORDER -Upon initial review of the Petition Under 28 U.S.C. § 2254 for Writ of Habeas Corpus by a Person in State Custody (filing no. 1), I preliminarily determine that Claims One through Three, as set forth in this memorandum and order, are potentially cognizable in federal court. Tuckers Motion to Appoint Counsel for Writ of Habeas Corpus (filing no. 3) is denied without prejudice to reassertion.. The clerk of the court is directed to mail copies of this memorandum and order and the petition to the respondents and the Nebraska Attorney General by regular first-class mail. By March 16, 2012, the respondents shall file a motion for summary judgment or state court records in support of an answer. The clerk of the court is directed to set a pro se case management deadline in this case using the following text: April 16, 2012: check for the respondents to file answer and separate brief. Ordered by Senior Judge Warren K. Urbom. (Copy mailed/e-mailed to pro se party and as directed)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00445-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00445/USCOURTS-ned-8_11-cv-00445-2/mods.xml">
+ <titleInfo>
+  <title>Tucker v. Houston et al</title>
+  <subTitle>MEMORANDUM AND ORDER ON MOTION FOR EXTENSION OF TIME - Tucker&apos;s Motion for Extension of Time (filing no. 19) is granted in part and Tucker shall have until August 3, 2012, to file a brief in opposition to the Brief in Support of Respondents&apos; Answer. Ordered by Senior Judge Warren K. Urbom. (Copy mailed to pro se party)(GJG)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00445-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18390f24a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00445/USCOURTS-ned-8_11-cv-00445-2</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00445_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00445/USCOURTS-ned-8_11-cv-00445-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00445/pdf/USCOURTS-ned-8_11-cv-00445-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00445; Tucker v. Houston et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00445-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-04-04</dateIssued>
+  <docketText>MEMORANDUM AND ORDER ON MOTION FOR EXTENSION OF TIME - Tucker&apos;s Motion for Extension of Time (filing no. 19) is granted in part and Tucker shall have until August 3, 2012, to file a brief in opposition to the Brief in Support of Respondents&apos; Answer. Ordered by Senior Judge Warren K. Urbom. (Copy mailed to pro se party)(GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00445-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00445/USCOURTS-ned-8_11-cv-00445-3/mods.xml">
+ <titleInfo>
+  <title>Tucker v. Houston et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Tucker&apos;s Motion to Stay Pending Exhaustion of State Remedies (filing no. 21) is denied. The respondents&apos; Objection to Stay (filing no. 22) is sustained. Ordered by Senior Judge Warren K. Urbom. (Copy mailed to pro se party)(GJG)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00445-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18390f251</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00445/USCOURTS-ned-8_11-cv-00445-3</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00445_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00445/USCOURTS-ned-8_11-cv-00445-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00445/pdf/USCOURTS-ned-8_11-cv-00445-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00445; Tucker v. Houston et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00445-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-04-30</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Tucker&apos;s Motion to Stay Pending Exhaustion of State Remedies (filing no. 21) is denied. The respondents&apos; Objection to Stay (filing no. 22) is sustained. Ordered by Senior Judge Warren K. Urbom. (Copy mailed to pro se party)(GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00445-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00445/USCOURTS-ned-8_11-cv-00445-4/mods.xml">
+ <titleInfo>
+  <title>Tucker v. Houston et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Tuckers Motion for Leave to Proceed in Forma Pauperis with Affidavit of Poverty (filing no. 31) is granted. Tuckers Application for Certificate of Appealability (filing no. 30), is denied without prejudice to reassertion before the Eighth Circuit. The clerk of the court shall provide the Court of Appeals a copy of this memorandum and order. Ordered by Senior Judge Warren K. Urbom. (Copy mailed to pro se party and as directed to USCA) (MKR)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00445-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18390f253</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00445/USCOURTS-ned-8_11-cv-00445-4</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00445_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00445/USCOURTS-ned-8_11-cv-00445-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00445/pdf/USCOURTS-ned-8_11-cv-00445-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00445; Tucker v. Houston et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00445-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-12-06</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Tuckers Motion for Leave to Proceed in Forma Pauperis with Affidavit of Poverty (filing no. 31) is granted. Tuckers Application for Certificate of Appealability (filing no. 30), is denied without prejudice to reassertion before the Eighth Circuit. The clerk of the court shall provide the Court of Appeals a copy of this memorandum and order. Ordered by Senior Judge Warren K. Urbom. (Copy mailed to pro se party and as directed to USCA) (MKR)</docketText>
+</extension>
+</relatedItem>
+</mods>

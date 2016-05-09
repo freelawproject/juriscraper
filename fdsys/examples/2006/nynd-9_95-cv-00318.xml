@@ -1,0 +1,670 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18118a5bd">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_95-cv-00318</identifier>
+<identifier type="local">P0b002ee18118a5bd</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-9_95-cv-00318</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_95-cv-00318</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:95-cv-00318</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Al-Amin" fullName="Al-Amin Abdush-Shahid" lastName="Abdush-Shahid" role="Plaintiff"></party>
+ <party firstName="Osemeh" fullName="Osemeh Alwahandy" lastName="Alwahandy" role="Consol Defendant"></party>
+ <party firstName="Willis" fullName="Willis Amaker" lastName="Amaker" role="Plaintiff"></party>
+ <party firstName="Dennis" fullName="Dennis Antwon" lastName="Antwon" role="Plaintiff"></party>
+ <party firstName="Floyd" fullName="Floyd Bennett" lastName="Bennett" role="Defendant"></party>
+ <party firstName="Alcimus" fullName="Alcimus Cargill" lastName="Cargill" role="Movant"></party>
+ <party firstName="Anthony" fullName="Anthony Cook" lastName="Cook" role="Plaintiff"></party>
+ <party firstName="Philip" fullName="Philip Coombe Jr." generation="Jr." lastName="Coombe" role="Defendant"></party>
+ <party firstName="Edward" fullName="Edward Donnelly" lastName="Donnelly" role="Defendant"></party>
+ <party firstName="George" fullName="George Duncan" lastName="Duncan" role="Defendant"></party>
+ <party fullName="El-Hassan" lastName="El-Hassan" role="Defendant"></party>
+ <party firstName="Abdulkadir" fullName="Abdulkadir Elmi" lastName="Elmi" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian Fischer" lastName="Fischer" role="Defendant"></party>
+ <party firstName="Commissioner" fullName="Commissioner Goord" lastName="Goord" role="Defendant"></party>
+ <party firstName="Glenn" fullName="Glenn S. Goord" lastName="Goord" middleName="S." role="Defendant"></party>
+ <party firstName="Jose" fullName="Jose Gutierrez" lastName="Gutierrez" role="Movant"></party>
+ <party firstName="Abbas" fullName="Abbas Kalonji" lastName="Kalonji" role="Plaintiff"></party>
+ <party firstName="Sami" fullName="Sami Khalifah" lastName="Khalifah" role="Defendant"></party>
+ <party firstName="Bobby" fullName="Bobby King" lastName="King" role="Movant"></party>
+ <party firstName="Amir" fullName="Amir Ashanti Latif" lastName="Latif" middleName="Ashanti" role="Movant"></party>
+ <party firstName="Mark" fullName="Mark Leonard" lastName="Leonard" role="Defendant"></party>
+ <party firstName="E." fullName="E. McKenzie" lastName="McKenzie" role="Movant"></party>
+ <party firstName="Abu" fullName="Abu Bakr Mujid" lastName="Mujid" middleName="Bakr" role="Plaintiff"></party>
+ <party firstName="Melsun" fullName="Melsun Muslim" lastName="Muslim" role="Plaintiff"></party>
+ <party fullName="New York State Department of Correctional Services" lastName="New York State Department of Correctional Services" role="Defendant"></party>
+ <party firstName="Ayatollah" fullName="Ayatollah Orafan" lastName="Orafan" role="Plaintiff"></party>
+ <party firstName="George" fullName="George Pataki" lastName="Pataki" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles Penson" lastName="Penson" role="Movant"></party>
+ <party firstName="Leonard" fullName="Leonard Portuondo" lastName="Portuondo" role="Defendant"></party>
+ <party firstName="Cyril" fullName="Cyril Rashid" lastName="Rashid" role="Defendant"></party>
+ <party firstName="Hussein" fullName="Hussein Ishmael Razi-Bey" lastName="Razi-Bey" middleName="Ishmael" role="Plaintiff"></party>
+ <party firstName="Anthony" fullName="Anthony Shoffner" lastName="Shoffner" role="Movant"></party>
+ <party firstName="Barry" fullName="Barry Smith" lastName="Smith" role="Plaintiff"></party>
+ <party fullName="The United States of America" lastName="The United States of America" role="Intervenor"></party>
+ <party firstName="Warith" fullName="Warith Deen Umar" lastName="Umar" middleName="Deen" role="Defendant"></party>
+ <party fullName="United States" lastName="United States" role="Intervenor Plaintiff"></party>
+ <party firstName="Abdul" fullName="Abdul Wali" lastName="Wali" role="Plaintiff"></party>
+ <party firstName="Hans" fullName="Hans Walker" lastName="Walker" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Orafan, et al v. Fischer, et al</title>
+ <partNumber>9:95-cv-00318</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_95-cv-00318/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">9:95-cv-00318;95-318</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Prisoner</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Al-Amin Abdush-Shahid</displayForm>
+ <namePart type="family">Abdush-Shahid</namePart>
+ <namePart type="given">Al-Amin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Osemeh Alwahandy</displayForm>
+ <namePart type="family">Alwahandy</namePart>
+ <namePart type="given">Osemeh</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Consol Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Willis Amaker</displayForm>
+ <namePart type="family">Amaker</namePart>
+ <namePart type="given">Willis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dennis Antwon</displayForm>
+ <namePart type="family">Antwon</namePart>
+ <namePart type="given">Dennis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Floyd Bennett</displayForm>
+ <namePart type="family">Bennett</namePart>
+ <namePart type="given">Floyd</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alcimus Cargill</displayForm>
+ <namePart type="family">Cargill</namePart>
+ <namePart type="given">Alcimus</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Anthony Cook</displayForm>
+ <namePart type="family">Cook</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Philip Coombe Jr.</displayForm>
+ <namePart type="family">Coombe</namePart>
+ <namePart type="given">Philip</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Edward Donnelly</displayForm>
+ <namePart type="family">Donnelly</namePart>
+ <namePart type="given">Edward</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>George Duncan</displayForm>
+ <namePart type="family">Duncan</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>El-Hassan</displayForm>
+ <namePart type="family">El-Hassan</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Abdulkadir Elmi</displayForm>
+ <namePart type="family">Elmi</namePart>
+ <namePart type="given">Abdulkadir</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brian Fischer</displayForm>
+ <namePart type="family">Fischer</namePart>
+ <namePart type="given">Brian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Commissioner Goord</displayForm>
+ <namePart type="family">Goord</namePart>
+ <namePart type="given">Commissioner</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Glenn S. Goord</displayForm>
+ <namePart type="family">Goord</namePart>
+ <namePart type="given">Glenn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jose Gutierrez</displayForm>
+ <namePart type="family">Gutierrez</namePart>
+ <namePart type="given">Jose</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Abbas Kalonji</displayForm>
+ <namePart type="family">Kalonji</namePart>
+ <namePart type="given">Abbas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sami Khalifah</displayForm>
+ <namePart type="family">Khalifah</namePart>
+ <namePart type="given">Sami</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bobby King</displayForm>
+ <namePart type="family">King</namePart>
+ <namePart type="given">Bobby</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Amir Ashanti Latif</displayForm>
+ <namePart type="family">Latif</namePart>
+ <namePart type="given">Amir</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Leonard</displayForm>
+ <namePart type="family">Leonard</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>E. McKenzie</displayForm>
+ <namePart type="family">McKenzie</namePart>
+ <namePart type="given">E.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Abu Bakr Mujid</displayForm>
+ <namePart type="family">Mujid</namePart>
+ <namePart type="given">Abu</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Melsun Muslim</displayForm>
+ <namePart type="family">Muslim</namePart>
+ <namePart type="given">Melsun</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>New York State Department of Correctional Services</displayForm>
+ <namePart type="family">New York State Department of Correctional Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ayatollah Orafan</displayForm>
+ <namePart type="family">Orafan</namePart>
+ <namePart type="given">Ayatollah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>George Pataki</displayForm>
+ <namePart type="family">Pataki</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charles Penson</displayForm>
+ <namePart type="family">Penson</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Leonard Portuondo</displayForm>
+ <namePart type="family">Portuondo</namePart>
+ <namePart type="given">Leonard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cyril Rashid</displayForm>
+ <namePart type="family">Rashid</namePart>
+ <namePart type="given">Cyril</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hussein Ishmael Razi-Bey</displayForm>
+ <namePart type="family">Razi-Bey</namePart>
+ <namePart type="given">Hussein</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Anthony Shoffner</displayForm>
+ <namePart type="family">Shoffner</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Barry Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Barry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>The United States of America</displayForm>
+ <namePart type="family">The United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor</description>
+</name>
+<name type="personal">
+ <displayForm>Warith Deen Umar</displayForm>
+ <namePart type="family">Umar</namePart>
+ <namePart type="given">Warith</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States</displayForm>
+ <namePart type="family">United States</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Abdul Wali</displayForm>
+ <namePart type="family">Wali</namePart>
+ <namePart type="given">Abdul</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Hans Walker</displayForm>
+ <namePart type="family">Walker</namePart>
+ <namePart type="given">Hans</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_95-cv-00318</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:95-cv-00318</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Al-Amin" fullName="Al-Amin Abdush-Shahid" lastName="Abdush-Shahid" role="Plaintiff"></party>
+ <party firstName="Osemeh" fullName="Osemeh Alwahandy" lastName="Alwahandy" role="Consol Defendant"></party>
+ <party firstName="Willis" fullName="Willis Amaker" lastName="Amaker" role="Plaintiff"></party>
+ <party firstName="Dennis" fullName="Dennis Antwon" lastName="Antwon" role="Plaintiff"></party>
+ <party firstName="Floyd" fullName="Floyd Bennett" lastName="Bennett" role="Defendant"></party>
+ <party firstName="Alcimus" fullName="Alcimus Cargill" lastName="Cargill" role="Movant"></party>
+ <party firstName="Anthony" fullName="Anthony Cook" lastName="Cook" role="Plaintiff"></party>
+ <party firstName="Philip" fullName="Philip Coombe Jr." generation="Jr." lastName="Coombe" role="Defendant"></party>
+ <party firstName="Edward" fullName="Edward Donnelly" lastName="Donnelly" role="Defendant"></party>
+ <party firstName="George" fullName="George Duncan" lastName="Duncan" role="Defendant"></party>
+ <party fullName="El-Hassan" lastName="El-Hassan" role="Defendant"></party>
+ <party firstName="Abdulkadir" fullName="Abdulkadir Elmi" lastName="Elmi" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian Fischer" lastName="Fischer" role="Defendant"></party>
+ <party firstName="Commissioner" fullName="Commissioner Goord" lastName="Goord" role="Defendant"></party>
+ <party firstName="Glenn" fullName="Glenn S. Goord" lastName="Goord" middleName="S." role="Defendant"></party>
+ <party firstName="Jose" fullName="Jose Gutierrez" lastName="Gutierrez" role="Movant"></party>
+ <party firstName="Abbas" fullName="Abbas Kalonji" lastName="Kalonji" role="Plaintiff"></party>
+ <party firstName="Sami" fullName="Sami Khalifah" lastName="Khalifah" role="Defendant"></party>
+ <party firstName="Bobby" fullName="Bobby King" lastName="King" role="Movant"></party>
+ <party firstName="Amir" fullName="Amir Ashanti Latif" lastName="Latif" middleName="Ashanti" role="Movant"></party>
+ <party firstName="Mark" fullName="Mark Leonard" lastName="Leonard" role="Defendant"></party>
+ <party firstName="E." fullName="E. McKenzie" lastName="McKenzie" role="Movant"></party>
+ <party firstName="Abu" fullName="Abu Bakr Mujid" lastName="Mujid" middleName="Bakr" role="Plaintiff"></party>
+ <party firstName="Melsun" fullName="Melsun Muslim" lastName="Muslim" role="Plaintiff"></party>
+ <party fullName="New York State Department of Correctional Services" lastName="New York State Department of Correctional Services" role="Defendant"></party>
+ <party firstName="Ayatollah" fullName="Ayatollah Orafan" lastName="Orafan" role="Plaintiff"></party>
+ <party firstName="George" fullName="George Pataki" lastName="Pataki" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles Penson" lastName="Penson" role="Movant"></party>
+ <party firstName="Leonard" fullName="Leonard Portuondo" lastName="Portuondo" role="Defendant"></party>
+ <party firstName="Cyril" fullName="Cyril Rashid" lastName="Rashid" role="Defendant"></party>
+ <party firstName="Hussein" fullName="Hussein Ishmael Razi-Bey" lastName="Razi-Bey" middleName="Ishmael" role="Plaintiff"></party>
+ <party firstName="Anthony" fullName="Anthony Shoffner" lastName="Shoffner" role="Movant"></party>
+ <party firstName="Barry" fullName="Barry Smith" lastName="Smith" role="Plaintiff"></party>
+ <party fullName="The United States of America" lastName="The United States of America" role="Intervenor"></party>
+ <party firstName="Warith" fullName="Warith Deen Umar" lastName="Umar" middleName="Deen" role="Defendant"></party>
+ <party fullName="United States" lastName="United States" role="Intervenor Plaintiff"></party>
+ <party firstName="Abdul" fullName="Abdul Wali" lastName="Wali" role="Plaintiff"></party>
+ <party firstName="Hans" fullName="Hans Walker" lastName="Walker" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_95-cv-00318-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-0/mods.xml">
+ <titleInfo>
+  <title>Orafan, et al v. Fischer, et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS that Barry Smith be dismissed from this action; Objections due by 8/3/05. Signed by Judge Gustave J. DiBianco on 7/19/05. (rjb, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-07-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_95-cv-00318-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18143ba43</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-0</identifier>
+ <identifier type="former granule identifier">nynd-9_95-cv-00318_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_95-cv-00318/pdf/USCOURTS-nynd-9_95-cv-00318-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:95-cv-00318; Orafan, et al v. Fischer, et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_95-cv-00318-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-07-19</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS that Barry Smith be dismissed from this action; Objections due by 8/3/05. Signed by Judge Gustave J. DiBianco on 7/19/05. (rjb, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_95-cv-00318-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-1/mods.xml">
+ <titleInfo>
+  <title>Orafan, et al v. Fischer, et al</title>
+  <subTitle>ORDER adopting 269 Report-Recommendations; dismissing Plaintiff Barry Smith. Signed by Judge Paul A. Magnuson on 8/2/05. (rjb, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_95-cv-00318-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18143ba3f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-1</identifier>
+ <identifier type="former granule identifier">nynd-9_95-cv-00318_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_95-cv-00318/pdf/USCOURTS-nynd-9_95-cv-00318-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:95-cv-00318; Orafan, et al v. Fischer, et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_95-cv-00318-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-08-08</dateIssued>
+  <docketText>ORDER adopting 269 Report-Recommendations; dismissing Plaintiff Barry Smith. Signed by Judge Paul A. Magnuson on 8/2/05. (rjb, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_95-cv-00318-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-2/mods.xml">
+ <titleInfo>
+  <title>Orafan, et al v. Fischer, et al</title>
+  <subTitle>ORDER granting in part and denying in part 291 Motion for Summary Judgment, granting in part and denying in part 292 Motion for Summary Judgment. Defendants Rahim, Goord, Leonard and LoConte are Dismissed as Defendants in this action. Plaintiff&apos;s claims for monetary relief from Defendants in their official capacities and for injunctive relief against Defendants Rashid and Al-Wahaidy are Dismissed. Trial set for 2/27/06 at 9:00 a.m. in Albany, NY. Signed by Judge Paul A. Magnuson on 1/17/06. (rjb, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_95-cv-00318-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18143ba41</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-2</identifier>
+ <identifier type="former granule identifier">nynd-9_95-cv-00318_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_95-cv-00318/pdf/USCOURTS-nynd-9_95-cv-00318-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:95-cv-00318; Orafan, et al v. Fischer, et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_95-cv-00318-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-01-17</dateIssued>
+  <docketText>ORDER granting in part and denying in part 291 Motion for Summary Judgment, granting in part and denying in part 292 Motion for Summary Judgment. Defendants Rahim, Goord, Leonard and LoConte are Dismissed as Defendants in this action. Plaintiff&apos;s claims for monetary relief from Defendants in their official capacities and for injunctive relief against Defendants Rashid and Al-Wahaidy are Dismissed. Trial set for 2/27/06 at 9:00 a.m. in Albany, NY. Signed by Judge Paul A. Magnuson on 1/17/06. (rjb, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_95-cv-00318-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-3/mods.xml">
+ <titleInfo>
+  <title>Orafan, et al v. Fischer, et al</title>
+  <subTitle>ORDER that Willis Amaker a/k/a Melsun Muslim #88-A-1406, one of the Plaintiffs, has been directed to appear at 8:30 A.M. on February 27, 2006, at the United States Courthouse at Albany, New York. Ordered that a Writ of Habeas Corpus Ad Testificandum be issued for Superintendent of facility to deliver Plaintiff to Courthouse on said date. Signed by Judge Frederick J. Scullin Jr. on 1/31/06. (alh)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_95-cv-00318-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18143ba3e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-3</identifier>
+ <identifier type="former granule identifier">nynd-9_95-cv-00318_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_95-cv-00318/pdf/USCOURTS-nynd-9_95-cv-00318-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:95-cv-00318; Orafan, et al v. Fischer, et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_95-cv-00318-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2006-01-31</dateIssued>
+  <docketText>ORDER that Willis Amaker a/k/a Melsun Muslim #88-A-1406, one of the Plaintiffs, has been directed to appear at 8:30 A.M. on February 27, 2006, at the United States Courthouse at Albany, New York. Ordered that a Writ of Habeas Corpus Ad Testificandum be issued for Superintendent of facility to deliver Plaintiff to Courthouse on said date. Signed by Judge Frederick J. Scullin Jr. on 1/31/06. (alh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_95-cv-00318-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-4/mods.xml">
+ <titleInfo>
+  <title>Orafan, et al v. Fischer, et al</title>
+  <subTitle>ORDER that Anthony Cook a/k/a Al-Amin Abdush-Shahid #90-T-1693, one of the Plaintiffs, has been directed to appear at 8:30 A.M. on February 27, 2006, at the United States Courthouse at Albany, New York. Ordered that a Writ of Habeas Corpus Ad Testificandum be issued for Superintendent of facility to deliver Plaintiff to Courthouse on said date. Signed by Judge Frederick J. Scullin Jr. on 1/31/06. (alh)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_95-cv-00318-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18143ba45</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-4</identifier>
+ <identifier type="former granule identifier">nynd-9_95-cv-00318_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_95-cv-00318/pdf/USCOURTS-nynd-9_95-cv-00318-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:95-cv-00318; Orafan, et al v. Fischer, et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_95-cv-00318-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-01-31</dateIssued>
+  <docketText>ORDER that Anthony Cook a/k/a Al-Amin Abdush-Shahid #90-T-1693, one of the Plaintiffs, has been directed to appear at 8:30 A.M. on February 27, 2006, at the United States Courthouse at Albany, New York. Ordered that a Writ of Habeas Corpus Ad Testificandum be issued for Superintendent of facility to deliver Plaintiff to Courthouse on said date. Signed by Judge Frederick J. Scullin Jr. on 1/31/06. (alh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_95-cv-00318-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-5/mods.xml">
+ <titleInfo>
+  <title>Orafan, et al v. Fischer, et al</title>
+  <subTitle>ORDER that Dennis Antwon a/k/a Abdul Wali #93-A-1582, one of the Plaintiffs, has been directed to appear at 8:30 A.M. on February 27, 2006, at the United States Courthouse at Albany, New York. Ordered that a Writ of Habeas Corpus Ad Testificandum be issued for Superintendent of facility to deliver Plaintiff to Courthouse on said date. Signed by Judge Frederick J. Scullin Jr. on 1/31/06. (alh)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_95-cv-00318-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18143ba40</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-5</identifier>
+ <identifier type="former granule identifier">nynd-9_95-cv-00318_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_95-cv-00318/pdf/USCOURTS-nynd-9_95-cv-00318-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:95-cv-00318; Orafan, et al v. Fischer, et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_95-cv-00318-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2006-01-31</dateIssued>
+  <docketText>ORDER that Dennis Antwon a/k/a Abdul Wali #93-A-1582, one of the Plaintiffs, has been directed to appear at 8:30 A.M. on February 27, 2006, at the United States Courthouse at Albany, New York. Ordered that a Writ of Habeas Corpus Ad Testificandum be issued for Superintendent of facility to deliver Plaintiff to Courthouse on said date. Signed by Judge Frederick J. Scullin Jr. on 1/31/06. (alh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_95-cv-00318-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-6/mods.xml">
+ <titleInfo>
+  <title>Orafan, et al v. Fischer, et al</title>
+  <subTitle>ORDER that Hussein I. Razi-Bey #86-A-7405, one of the Plaintiffs, has been directed to appear at 8:30 A.M. on February 27, 2006, at the United States Courthouse at Albany, New York. Ordered that a Writ of Habeas Corpus Ad Testificandum be issued for Superintendent of facility to deliver Plaintiff to Courthouse on said date. Signed by Judge Frederick J. Scullin Jr. on 1/31/06. (alh)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_95-cv-00318-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18143ba44</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-6</identifier>
+ <identifier type="former granule identifier">nynd-9_95-cv-00318_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_95-cv-00318/pdf/USCOURTS-nynd-9_95-cv-00318-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:95-cv-00318; Orafan, et al v. Fischer, et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_95-cv-00318-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2006-01-31</dateIssued>
+  <docketText>ORDER that Hussein I. Razi-Bey #86-A-7405, one of the Plaintiffs, has been directed to appear at 8:30 A.M. on February 27, 2006, at the United States Courthouse at Albany, New York. Ordered that a Writ of Habeas Corpus Ad Testificandum be issued for Superintendent of facility to deliver Plaintiff to Courthouse on said date. Signed by Judge Frederick J. Scullin Jr. on 1/31/06. (alh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_95-cv-00318-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-7/mods.xml">
+ <titleInfo>
+  <title>Orafan, et al v. Fischer, et al</title>
+  <subTitle>ORDER that Ayatollah Orafan #85-A-3766, one of the Plaintiffs, has been directed to appear at 8:30 A.M. on February 27, 2006, at the United States Courthouse at Albany, New York. Ordered that a Writ of Habeas Corpus Ad Testificandum be issued for Superintendent of facility to deliver Plaintiff to Courthouse on said date. Signed by Judge Frederick J. Scullin Jr. on 1/31/06. (alh)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_95-cv-00318-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18143ba42</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-7</identifier>
+ <identifier type="former granule identifier">nynd-9_95-cv-00318_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_95-cv-00318/USCOURTS-nynd-9_95-cv-00318-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_95-cv-00318/pdf/USCOURTS-nynd-9_95-cv-00318-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:95-cv-00318; Orafan, et al v. Fischer, et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_95-cv-00318-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2006-01-31</dateIssued>
+  <docketText>ORDER that Ayatollah Orafan #85-A-3766, one of the Plaintiffs, has been directed to appear at 8:30 A.M. on February 27, 2006, at the United States Courthouse at Albany, New York. Ordered that a Writ of Habeas Corpus Ad Testificandum be issued for Superintendent of facility to deliver Plaintiff to Courthouse on said date. Signed by Judge Frederick J. Scullin Jr. on 1/31/06. (alh)</docketText>
+</extension>
+</relatedItem>
+</mods>

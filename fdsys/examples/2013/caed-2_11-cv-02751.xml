@@ -1,0 +1,216 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a21ea6">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02751</identifier>
+<identifier type="local">P0b002ee183a21ea6</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_11-cv-02751</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-02751</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-02751</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>446</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Other</natureSuit>
+ <cause>42:12101 Americans with Disabilities Act</cause>
+ <party fullName="El Puerto Restaurant #3" lastName="El Puerto Restaurant #3" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott N. Johnson" lastName="Johnson" middleName="N." role="Plaintiff"></party>
+ <party firstName="Guillermo" fullName="Guillermo Martin" lastName="Martin" role="Defendant"></party>
+ <party firstName="Refugio" fullName="Refugio Martin" lastName="Martin" role="Defendant"></party>
+ <party firstName="Maria" fullName="Maria E. Martin" lastName="Martin" middleName="E." role="Defendant"></party>
+ <party firstName="Jesus" fullName="Jesus Sanchez" lastName="Sanchez" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Johnson v. Martin et al</title>
+ <partNumber>2:11-cv-02751</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02751/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cv-02751;11-2751</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>El Puerto Restaurant #3</displayForm>
+ <namePart type="family">El Puerto Restaurant #3</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott N. Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Guillermo Martin</displayForm>
+ <namePart type="family">Martin</namePart>
+ <namePart type="given">Guillermo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Refugio Martin</displayForm>
+ <namePart type="family">Martin</namePart>
+ <namePart type="given">Refugio</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Maria E. Martin</displayForm>
+ <namePart type="family">Martin</namePart>
+ <namePart type="given">Maria</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jesus Sanchez</displayForm>
+ <namePart type="family">Sanchez</namePart>
+ <namePart type="given">Jesus</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-02751</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-02751</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>446</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Other</natureSuit>
+ <cause>42:12101 Americans with Disabilities Act</cause>
+ <party fullName="El Puerto Restaurant #3" lastName="El Puerto Restaurant #3" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott N. Johnson" lastName="Johnson" middleName="N." role="Plaintiff"></party>
+ <party firstName="Guillermo" fullName="Guillermo Martin" lastName="Martin" role="Defendant"></party>
+ <party firstName="Refugio" fullName="Refugio Martin" lastName="Martin" role="Defendant"></party>
+ <party firstName="Maria" fullName="Maria E. Martin" lastName="Martin" middleName="E." role="Defendant"></party>
+ <party firstName="Jesus" fullName="Jesus Sanchez" lastName="Sanchez" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02751-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02751/USCOURTS-caed-2_11-cv-02751-0/mods.xml">
+ <titleInfo>
+  <title>Johnson v. Martin et al</title>
+  <subTitle>ORDER CONTINUING TRIAL signed by Chief Judge Morrison C. England, Jr., on 11/7/12: Jury Trial is CONTINUED to 4/7/2014 at 09:00 AM in Courtroom 7 (MCE) before Chief Judge Morrison C. England, Jr., trial briefs are due not later than 1/23/2014; Final Pretrial Conference is CONTINUED to 2/6/2014 at 02:00 PM in Courtroom 7 (MCE) before Chief Judge Morrison C. England, Jr., the joint final pretrial statement is due not later than 1/6/2014; any evidentiary or procedural motions are to be filed by 1/16/2014, oppositions must be filed by 1/23/2014, and any reply must be filed by 1/30/2014. The motions will be heard by the Court at the same time as the Final Pretrial Conference. All other due dates set forth in the Court&apos;s Pretrial Scheduling Order are confirmed. (Kastilahn, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-02751-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a239e3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02751/USCOURTS-caed-2_11-cv-02751-0</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02751_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02751/USCOURTS-caed-2_11-cv-02751-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02751/pdf/USCOURTS-caed-2_11-cv-02751-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02751; Johnson v. Martin et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02751-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-11-08</dateIssued>
+  <docketText>ORDER CONTINUING TRIAL signed by Chief Judge Morrison C. England, Jr., on 11/7/12: Jury Trial is CONTINUED to 4/7/2014 at 09:00 AM in Courtroom 7 (MCE) before Chief Judge Morrison C. England, Jr., trial briefs are due not later than 1/23/2014; Final Pretrial Conference is CONTINUED to 2/6/2014 at 02:00 PM in Courtroom 7 (MCE) before Chief Judge Morrison C. England, Jr., the joint final pretrial statement is due not later than 1/6/2014; any evidentiary or procedural motions are to be filed by 1/16/2014, oppositions must be filed by 1/23/2014, and any reply must be filed by 1/30/2014. The motions will be heard by the Court at the same time as the Final Pretrial Conference. All other due dates set forth in the Court&apos;s Pretrial Scheduling Order are confirmed. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02751-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02751/USCOURTS-caed-2_11-cv-02751-1/mods.xml">
+ <titleInfo>
+  <title>Johnson v. Martin et al</title>
+  <subTitle>ORDER signed by Chief Judge Morrison C. England, Jr on 1/03/13 ORDERING that this Action is DISMISSED with prejudice pursuant to Fed. R. Civ.P. Rule 41(a) (1)(A). The Clerk is directed to close the file. CASE CLOSED. (Mena-Sanchez, L)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-02751-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a239e2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02751/USCOURTS-caed-2_11-cv-02751-1</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02751_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02751/USCOURTS-caed-2_11-cv-02751-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02751/pdf/USCOURTS-caed-2_11-cv-02751-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02751; Johnson v. Martin et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02751-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER signed by Chief Judge Morrison C. England, Jr on 1/03/13 ORDERING that this Action is DISMISSED with prejudice pursuant to Fed. R. Civ.P. Rule 41(a) (1)(A). The Clerk is directed to close the file. CASE CLOSED. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+</mods>

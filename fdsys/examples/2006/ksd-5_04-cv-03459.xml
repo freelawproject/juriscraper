@@ -1,0 +1,215 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180ecf55d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-01</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cv-03459</identifier>
+<identifier type="local">P0b002ee180ecf55d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-01</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-01</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-5_04-cv-03459</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_04-cv-03459</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:04-cv-03459</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <party firstName="Doug" fullName="Doug Alan Crisp" lastName="Crisp" middleName="Alan" role="Defendant"></party>
+ <party firstName="Joshua" fullName="Joshua D. Livingston" lastName="Livingston" middleName="D." role="Plaintiff"></party>
+ <party fullName="Lyon County" lastName="Lyon County" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Livingston v. Crisp</title>
+ <partNumber>5:04-cv-03459</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cv-03459/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:04-cv-03459;04-3459</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Topeka</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Doug Alan Crisp</displayForm>
+ <namePart type="family">Crisp</namePart>
+ <namePart type="given">Doug</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joshua D. Livingston</displayForm>
+ <namePart type="family">Livingston</namePart>
+ <namePart type="given">Joshua</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lyon County</displayForm>
+ <namePart type="family">Lyon County</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_04-cv-03459</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:04-cv-03459</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <party firstName="Doug" fullName="Doug Alan Crisp" lastName="Crisp" middleName="Alan" role="Defendant"></party>
+ <party firstName="Joshua" fullName="Joshua D. Livingston" lastName="Livingston" middleName="D." role="Plaintiff"></party>
+ <party fullName="Lyon County" lastName="Lyon County" role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_04-cv-03459-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cv-03459/USCOURTS-ksd-5_04-cv-03459-0/mods.xml">
+ <titleInfo>
+  <title>Livingston v. Crisp</title>
+  <subTitle>ORDER. Plaintiff&apos;s second motion for appointment of counsel (doc. 19) is denied. Plaintiff&apos;s related motion to stay this case pending the court&apos;s ruling on his request for appointment of counsel (doc. 20) is denied as moot. Defendant&apos;s motion to stay the case (doc. 23) is granted. All pretrial proceedings in this case, including discovery and initial disclosures, are stayed until further order of the court. Signed by Magistrate Judge James P. O&apos;Hara on 7/25/2005. (kg)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-07-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-5_04-cv-03459-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180ed19aa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cv-03459/USCOURTS-ksd-5_04-cv-03459-0</identifier>
+ <identifier type="former granule identifier">ksd-5_04-cv-03459_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cv-03459/USCOURTS-ksd-5_04-cv-03459-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cv-03459/pdf/USCOURTS-ksd-5_04-cv-03459-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cv-03459; Livingston v. Crisp; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_04-cv-03459-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-07-25</dateIssued>
+  <docketText>ORDER. Plaintiff&apos;s second motion for appointment of counsel (doc. 19) is denied. Plaintiff&apos;s related motion to stay this case pending the court&apos;s ruling on his request for appointment of counsel (doc. 20) is denied as moot. Defendant&apos;s motion to stay the case (doc. 23) is granted. All pretrial proceedings in this case, including discovery and initial disclosures, are stayed until further order of the court. Signed by Magistrate Judge James P. O&apos;Hara on 7/25/2005. (kg)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_04-cv-03459-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cv-03459/USCOURTS-ksd-5_04-cv-03459-1/mods.xml">
+ <titleInfo>
+  <title>Livingston v. Crisp</title>
+  <subTitle>ORDER vacating portion of the court&apos;s July 25, 2005 order 25 and reinstating defendant&apos;s motion to stay 23. Report of parties planning meeting due 8/30/05; Scheduling conference reset for 11:00 AM on 9/6/05. See order for details. Signed by Magistrate Judge James P. O&apos;Hara on 7/25/05. (hbw) Modified text on 7/26/2005 (mb).</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-07-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-5_04-cv-03459-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180ed19a9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cv-03459/USCOURTS-ksd-5_04-cv-03459-1</identifier>
+ <identifier type="former granule identifier">ksd-5_04-cv-03459_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cv-03459/USCOURTS-ksd-5_04-cv-03459-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cv-03459/pdf/USCOURTS-ksd-5_04-cv-03459-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cv-03459; Livingston v. Crisp; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_04-cv-03459-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-07-25</dateIssued>
+  <docketText>ORDER vacating portion of the court&apos;s July 25, 2005 order 25 and reinstating defendant&apos;s motion to stay 23. Report of parties planning meeting due 8/30/05; Scheduling conference reset for 11:00 AM on 9/6/05. See order for details. Signed by Magistrate Judge James P. O&apos;Hara on 7/25/05. (hbw) Modified text on 7/26/2005 (mb).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_04-cv-03459-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cv-03459/USCOURTS-ksd-5_04-cv-03459-2/mods.xml">
+ <titleInfo>
+  <title>Livingston v. Crisp</title>
+  <subTitle>MEMORANDUM AND ORDER sustaining in part 21 Motion for Summary Judgment. Plaintiff&apos;s excessive force claim based on the June 22, 2003 incident remains for trial. Signed by Judge Kathryn H. Vratil on 1/10/06. (ls)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-5_04-cv-03459-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180ed19ab</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cv-03459/USCOURTS-ksd-5_04-cv-03459-2</identifier>
+ <identifier type="former granule identifier">ksd-5_04-cv-03459_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cv-03459/USCOURTS-ksd-5_04-cv-03459-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cv-03459/pdf/USCOURTS-ksd-5_04-cv-03459-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cv-03459; Livingston v. Crisp; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_04-cv-03459-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-01-10</dateIssued>
+  <docketText>MEMORANDUM AND ORDER sustaining in part 21 Motion for Summary Judgment. Plaintiff&apos;s excessive force claim based on the June 22, 2003 incident remains for trial. Signed by Judge Kathryn H. Vratil on 1/10/06. (ls)</docketText>
+</extension>
+</relatedItem>
+</mods>

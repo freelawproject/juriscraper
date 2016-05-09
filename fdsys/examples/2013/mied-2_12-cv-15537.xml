@@ -1,0 +1,161 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a025d7">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_12-cv-15537</identifier>
+<identifier type="local">P0b002ee183a025d7</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_12-cv-15537</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_12-cv-15537</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:12-cv-15537</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>367</natureSuitCode>
+ <natureSuit>TORTS - Personal Injury - Health Care/Pharmaceutical Personal Injury/Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Product Liability</cause>
+ <party firstName="David" fullName="David Freeman" lastName="Freeman" role="Plaintiff"></party>
+ <party firstName="Kathryn" fullName="Kathryn Freeman" lastName="Freeman" role="Plaintiff"></party>
+ <party fullName="New England Compounding Pharmacy, Inc." lastName="New England Compounding Pharmacy, Inc." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Freeman et al v. New England Compounding Pharmacy, Inc.</title>
+ <partNumber>2:12-cv-15537</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_12-cv-15537/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-15537;12-15537</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>David Freeman</displayForm>
+ <namePart type="family">Freeman</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kathryn Freeman</displayForm>
+ <namePart type="family">Freeman</namePart>
+ <namePart type="given">Kathryn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>New England Compounding Pharmacy, Inc.</displayForm>
+ <namePart type="family">New England Compounding Pharmacy, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_12-cv-15537</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:12-cv-15537</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>367</natureSuitCode>
+ <natureSuit>TORTS - Personal Injury - Health Care/Pharmaceutical Personal Injury/Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Product Liability</cause>
+ <party firstName="David" fullName="David Freeman" lastName="Freeman" role="Plaintiff"></party>
+ <party firstName="Kathryn" fullName="Kathryn Freeman" lastName="Freeman" role="Plaintiff"></party>
+ <party fullName="New England Compounding Pharmacy, Inc." lastName="New England Compounding Pharmacy, Inc." role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_12-cv-15537-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-15537/USCOURTS-mied-2_12-cv-15537-0/mods.xml">
+ <titleInfo>
+  <title>Freeman et al v. New England Compounding Pharmacy, Inc.</title>
+  <subTitle>ORDER for administrative closing due to bankruptcy stay. Signed by District Judge George Caram Steeh (MBea)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_12-cv-15537-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a063ce</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-15537/USCOURTS-mied-2_12-cv-15537-0</identifier>
+ <identifier type="former granule identifier">mied-2_12-cv-15537_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-15537/USCOURTS-mied-2_12-cv-15537-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_12-cv-15537/pdf/USCOURTS-mied-2_12-cv-15537-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-15537; Freeman et al v. New England Compounding Pharmacy, Inc.; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_12-cv-15537-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>ORDER for administrative closing due to bankruptcy stay. Signed by District Judge George Caram Steeh (MBea)</docketText>
+</extension>
+</relatedItem>
+</mods>

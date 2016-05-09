@@ -1,0 +1,348 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a21361">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01261</identifier>
+<identifier type="local">P0b002ee183a21361</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_11-cv-01261</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-01261</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-01261</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:416 Denial of Social Security Benefits</cause>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Jesse" fullName="Jesse Wade Finkenkeller" lastName="Finkenkeller" middleName="Wade" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(SS) Finkenkeller v. Commissioner of Social Security</title>
+ <partNumber>2:11-cv-01261</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01261/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cv-01261;11-1261</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Commissioner of Social Security</displayForm>
+ <namePart type="family">Commissioner of Social Security</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jesse Wade Finkenkeller</displayForm>
+ <namePart type="family">Finkenkeller</namePart>
+ <namePart type="given">Jesse</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-01261</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-01261</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:416 Denial of Social Security Benefits</cause>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Jesse" fullName="Jesse Wade Finkenkeller" lastName="Finkenkeller" middleName="Wade" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01261-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-0/mods.xml">
+ <titleInfo>
+  <title>(SS) Finkenkeller v. Commissioner of Social Security</title>
+  <subTitle>directed to serve all process without prepayment of costs not later than sixty days from the date of this order. (cc USM)(Duong, D)ases. The Clerk of the Court is further directed to serve a copy of this order on the United States Marshal. Within fifteen days from the date of this order, plaintiff shall submit to the United States Marshal an original and five copies of the completed summons, five copies of the complaint, five copies of the scheduling order and a completed USM-285 form and shall file a statement with the court that said documents have been submitted to the United States Marshal. The United States Marshal is ORDER signed by Magistrate Judge Gregory G. Hollows on 6/6/11 ORDERING that Plaintiff&apos;s 2 request to proceed in forma pauperis is GRANTED. The Clerk of the Court is directed to serve the undersigned&apos;s scheduling order in social security c</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01261-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a25087</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-0</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01261_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01261/pdf/USCOURTS-caed-2_11-cv-01261-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01261; (SS) Finkenkeller v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01261-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-06-06</dateIssued>
+  <docketText>directed to serve all process without prepayment of costs not later than sixty days from the date of this order. (cc USM)(Duong, D)ases. The Clerk of the Court is further directed to serve a copy of this order on the United States Marshal. Within fifteen days from the date of this order, plaintiff shall submit to the United States Marshal an original and five copies of the completed summons, five copies of the complaint, five copies of the scheduling order and a completed USM-285 form and shall file a statement with the court that said documents have been submitted to the United States Marshal. The United States Marshal is ORDER signed by Magistrate Judge Gregory G. Hollows on 6/6/11 ORDERING that Plaintiff&apos;s 2 request to proceed in forma pauperis is GRANTED. The Clerk of the Court is directed to serve the undersigned&apos;s scheduling order in social security c</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01261-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-1/mods.xml">
+ <titleInfo>
+  <title>(SS) Finkenkeller v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Gregory G. Hollows on 11/3/2011 EXTENDING Plaintiff&apos;s time to file a Motion for Summary Judgment until 12/7/2011. (Michel, G)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01261-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a25085</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-1</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01261_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01261/pdf/USCOURTS-caed-2_11-cv-01261-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01261; (SS) Finkenkeller v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01261-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-11-03</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Gregory G. Hollows on 11/3/2011 EXTENDING Plaintiff&apos;s time to file a Motion for Summary Judgment until 12/7/2011. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01261-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-2/mods.xml">
+ <titleInfo>
+  <title>(SS) Finkenkeller v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Gregory G. Hollows on 12/9/11 ORDERING that the time for pltf to file a motion for summary judgment is extended to 1/10/12. (Manzer, C)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01261-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a25086</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-2</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01261_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01261/pdf/USCOURTS-caed-2_11-cv-01261-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01261; (SS) Finkenkeller v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01261-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-12-09</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Gregory G. Hollows on 12/9/11 ORDERING that the time for pltf to file a motion for summary judgment is extended to 1/10/12. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01261-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-3/mods.xml">
+ <titleInfo>
+  <title>(SS) Finkenkeller v. Commissioner of Social Security</title>
+  <subTitle>ORDER to SHOW CAUSE signed by Magistrate Judge Gregory G. Hollows on 1/19/12. Within fourteen days of the filed date of this order, Plaintiff is ordered to show cause in writing why this case should not be dismissed for lack of prosecution, and shall file his Summary Judgment Motion. Failure to timely file the required writings will result in a recommendation that the case be dismissed.(Mena-Sanchez, L)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01261-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a25076</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-3</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01261_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01261/pdf/USCOURTS-caed-2_11-cv-01261-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01261; (SS) Finkenkeller v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01261-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-01-20</dateIssued>
+  <docketText>ORDER to SHOW CAUSE signed by Magistrate Judge Gregory G. Hollows on 1/19/12. Within fourteen days of the filed date of this order, Plaintiff is ordered to show cause in writing why this case should not be dismissed for lack of prosecution, and shall file his Summary Judgment Motion. Failure to timely file the required writings will result in a recommendation that the case be dismissed.(Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01261-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-4/mods.xml">
+ <titleInfo>
+  <title>(SS) Finkenkeller v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Gregory G. Hollows on 3/5/12 ORDERING that the time for responding to Plaintiff&apos;s Motion for Summary Judgment is extended from 3/5/12 to 4/20/12. (Becknal, R)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01261-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a25075</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-4</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01261_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01261/pdf/USCOURTS-caed-2_11-cv-01261-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01261; (SS) Finkenkeller v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01261-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-03-05</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Gregory G. Hollows on 3/5/12 ORDERING that the time for responding to Plaintiff&apos;s Motion for Summary Judgment is extended from 3/5/12 to 4/20/12. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01261-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-5/mods.xml">
+ <titleInfo>
+  <title>(SS) Finkenkeller v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Gregory G. Hollows on 4/19/2012 GRANTING an 30-Day Extension of Time for Defendant to respond to Plaintiff&apos;s 19 Motion for Summary Judgment. Response due by 5/21/2012. (Michel, G)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01261-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a25074</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-5</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01261_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01261/pdf/USCOURTS-caed-2_11-cv-01261-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01261; (SS) Finkenkeller v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01261-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-04-19</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Gregory G. Hollows on 4/19/2012 GRANTING an 30-Day Extension of Time for Defendant to respond to Plaintiff&apos;s 19 Motion for Summary Judgment. Response due by 5/21/2012. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01261-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-6/mods.xml">
+ <titleInfo>
+  <title>(SS) Finkenkeller v. Commissioner of Social Security</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 8/23/12 ORDERING that Plaintiff&apos;s MOTION for Summary Judgment 19 is GRANTED in part pursuant to Sentence Four of 42 U.S.C. § 405(g). The Commissioner&apos;s Cross-MOTION For Summary Judgment 24 is DENIED, and this matter is REMANDED for further findings in accordance with this order. The Clerk is directed to enter Judgment for Plaintiff. Given the satisfactory showing made in the Declaration of Bess M. Brewer 18, the 1/20/12 order to show cause why this case should not be dismissed for lack of prosecution is DISCHARGED. CASE CLOSED. (Mena-Sanchez, L)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01261-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a25073</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-6</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01261_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01261/pdf/USCOURTS-caed-2_11-cv-01261-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01261; (SS) Finkenkeller v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01261-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-08-24</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 8/23/12 ORDERING that Plaintiff&apos;s MOTION for Summary Judgment 19 is GRANTED in part pursuant to Sentence Four of 42 U.S.C. § 405(g). The Commissioner&apos;s Cross-MOTION For Summary Judgment 24 is DENIED, and this matter is REMANDED for further findings in accordance with this order. The Clerk is directed to enter Judgment for Plaintiff. Given the satisfactory showing made in the Declaration of Bess M. Brewer 18, the 1/20/12 order to show cause why this case should not be dismissed for lack of prosecution is DISCHARGED. CASE CLOSED. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01261-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-7/mods.xml">
+ <titleInfo>
+  <title>(SS) Finkenkeller v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Allison Claire on 1/3/2013 ORDERING that Plaintiff shall be awarded attorney fees in the amount of FIVE THOUSAND, FOUR-HUNDRED FIFTY DOLLARS AND ZERO CENTS ($5,450.00), as authorized by 28 U.S.C. § 2412(d), subject to the terms of the above-referenced Stipulation. (Zignago, K.)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01261-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a25077</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-7</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01261_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01261/USCOURTS-caed-2_11-cv-01261-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01261/pdf/USCOURTS-caed-2_11-cv-01261-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01261; (SS) Finkenkeller v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01261-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Allison Claire on 1/3/2013 ORDERING that Plaintiff shall be awarded attorney fees in the amount of FIVE THOUSAND, FOUR-HUNDRED FIFTY DOLLARS AND ZERO CENTS ($5,450.00), as authorized by 28 U.S.C. § 2412(d), subject to the terms of the above-referenced Stipulation. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,458 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18190ab67">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cv-14792</identifier>
+<identifier type="local">P0b002ee18190ab67</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_08-cv-14792</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_08-cv-14792</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:08-cv-14792</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>840</natureSuitCode>
+ <natureSuit>Trademark</natureSuit>
+ <cause>15:1125 Trademark Infringement (Lanham Act)</cause>
+ <party firstName="Jae" fullName="Jae L. Burnham" lastName="Burnham" middleName="L." role="Counter Claimant"></party>
+ <party firstName="Jae" fullName="Jae L. Burnham" lastName="Burnham" middleName="L." role="Defendant"></party>
+ <party fullName="G.E. Thompson Development Corporation" lastName="G.E. Thompson Development Corporation" role="Plaintiff"></party>
+ <party fullName="Quick and Easy Moving" lastName="Quick and Easy Moving" role="Defendant"></party>
+ <party fullName="Quick and Easy Moving, LLC" lastName="Quick and Easy Moving, LLC" role="Counter Claimant"></party>
+ <party fullName="Quick and Easy Moving, LLC" lastName="Quick and Easy Moving, LLC" role="Defendant"></party>
+ <party fullName="TDC International Corporation" lastName="TDC International Corporation" role="Counter Defendant"></party>
+ <party fullName="TDC International Corporation" lastName="TDC International Corporation" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>TDC International Corporation v. Burnham</title>
+ <partNumber>2:08-cv-14792</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cv-14792/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:08-cv-14792;08-14792</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jae L. Burnham</displayForm>
+ <namePart type="family">Burnham</namePart>
+ <namePart type="given">Jae</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Jae L. Burnham</displayForm>
+ <namePart type="family">Burnham</namePart>
+ <namePart type="given">Jae</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>G.E. Thompson Development Corporation</displayForm>
+ <namePart type="family">G.E. Thompson Development Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Quick and Easy Moving</displayForm>
+ <namePart type="family">Quick and Easy Moving</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Quick and Easy Moving, LLC</displayForm>
+ <namePart type="family">Quick and Easy Moving, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Quick and Easy Moving, LLC</displayForm>
+ <namePart type="family">Quick and Easy Moving, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>TDC International Corporation</displayForm>
+ <namePart type="family">TDC International Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>TDC International Corporation</displayForm>
+ <namePart type="family">TDC International Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_08-cv-14792</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:08-cv-14792</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>840</natureSuitCode>
+ <natureSuit>Trademark</natureSuit>
+ <cause>15:1125 Trademark Infringement (Lanham Act)</cause>
+ <party firstName="Jae" fullName="Jae L. Burnham" lastName="Burnham" middleName="L." role="Counter Claimant"></party>
+ <party firstName="Jae" fullName="Jae L. Burnham" lastName="Burnham" middleName="L." role="Defendant"></party>
+ <party fullName="G.E. Thompson Development Corporation" lastName="G.E. Thompson Development Corporation" role="Plaintiff"></party>
+ <party fullName="Quick and Easy Moving" lastName="Quick and Easy Moving" role="Defendant"></party>
+ <party fullName="Quick and Easy Moving, LLC" lastName="Quick and Easy Moving, LLC" role="Counter Claimant"></party>
+ <party fullName="Quick and Easy Moving, LLC" lastName="Quick and Easy Moving, LLC" role="Defendant"></party>
+ <party fullName="TDC International Corporation" lastName="TDC International Corporation" role="Counter Defendant"></party>
+ <party fullName="TDC International Corporation" lastName="TDC International Corporation" role="Plaintiff"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_08-cv-14792-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-0/mods.xml">
+ <titleInfo>
+  <title>TDC International Corporation v. Burnham</title>
+  <subTitle>ORDER signed by District Judge Robert H Cleland denying Plaintiff&apos;s 9 Motion for Default Judgment and granting Defendant&apos;s 11 Motion to Set Aside Entry of Default. (Ware, L.)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-02-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_08-cv-14792-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181993c7f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-0</identifier>
+ <identifier type="former granule identifier">mied-2_08-cv-14792_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cv-14792/pdf/USCOURTS-mied-2_08-cv-14792-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-14792; TDC International Corporation v. Burnham; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_08-cv-14792-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-02-20</dateIssued>
+  <docketText>ORDER signed by District Judge Robert H Cleland denying Plaintiff&apos;s 9 Motion for Default Judgment and granting Defendant&apos;s 11 Motion to Set Aside Entry of Default. (Ware, L.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_08-cv-14792-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-1/mods.xml">
+ <titleInfo>
+  <title>TDC International Corporation v. Burnham</title>
+  <subTitle>ORDER imposing obligations on Attorneys Mark A Cantor and Brian S Tobin. Signed by District Judge Robert H Cleland. (LWag)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_08-cv-14792-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181993b89</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-1</identifier>
+ <identifier type="former granule identifier">mied-2_08-cv-14792_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cv-14792/pdf/USCOURTS-mied-2_08-cv-14792-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-14792; TDC International Corporation v. Burnham; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_08-cv-14792-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-12-11</dateIssued>
+  <docketText>ORDER imposing obligations on Attorneys Mark A Cantor and Brian S Tobin. Signed by District Judge Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_08-cv-14792-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-2/mods.xml">
+ <titleInfo>
+  <title>TDC International Corporation v. Burnham</title>
+  <subTitle>ORDER GRANTING 32 MOTION to Withdraw As Counsel For Jae L. Burnham d/b/a Quick And Easy Moving and Quick And Easy Moving, LLC filed by Jae L. Burnham; DEEMING Defendant to be proceeding pro se, and Set Deadlines as to 31 MOTION to Enforce Judgment and for Order to Show Cause :( Responses due by 12/28/2009) Signed by District Judge Robert H Cleland. (LWag)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_08-cv-14792-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181993c7d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-2</identifier>
+ <identifier type="former granule identifier">mied-2_08-cv-14792_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cv-14792/pdf/USCOURTS-mied-2_08-cv-14792-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-14792; TDC International Corporation v. Burnham; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_08-cv-14792-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-12-11</dateIssued>
+  <docketText>ORDER GRANTING 32 MOTION to Withdraw As Counsel For Jae L. Burnham d/b/a Quick And Easy Moving and Quick And Easy Moving, LLC filed by Jae L. Burnham; DEEMING Defendant to be proceeding pro se, and Set Deadlines as to 31 MOTION to Enforce Judgment and for Order to Show Cause :( Responses due by 12/28/2009) Signed by District Judge Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_08-cv-14792-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-3/mods.xml">
+ <titleInfo>
+  <title>TDC International Corporation v. Burnham</title>
+  <subTitle>ORDER GRANTING 31 Plaintiff&apos;s &quot;Motion to Enforce Judgment,&quot; Ordering Defendant to Show Cause Why He Should Not be Held in Contempt filed by TDC International Corporation (Hearing set for 2/24/2010 @ 2:00 PM before District Judge Robert H Cleland). Signed by District Judge Robert H Cleland. (Goltz, D)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_08-cv-14792-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181993b87</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-3</identifier>
+ <identifier type="former granule identifier">mied-2_08-cv-14792_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cv-14792/pdf/USCOURTS-mied-2_08-cv-14792-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-14792; TDC International Corporation v. Burnham; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_08-cv-14792-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-01-21</dateIssued>
+  <docketText>ORDER GRANTING 31 Plaintiff&apos;s &quot;Motion to Enforce Judgment,&quot; Ordering Defendant to Show Cause Why He Should Not be Held in Contempt filed by TDC International Corporation (Hearing set for 2/24/2010 @ 2:00 PM before District Judge Robert H Cleland). Signed by District Judge Robert H Cleland. (Goltz, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_08-cv-14792-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-4/mods.xml">
+ <titleInfo>
+  <title>TDC International Corporation v. Burnham</title>
+  <subTitle>ORDER HOLDING Defendant in Contempt, Directing Defendant to Pay Penalty and Fees, and Setting Additional Show Cause Hearing for April 6, 2010 at 11:00 a.m. Signed by District Judge Robert H Cleland. (Goltz, D)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_08-cv-14792-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181993b86</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-4</identifier>
+ <identifier type="former granule identifier">mied-2_08-cv-14792_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cv-14792/pdf/USCOURTS-mied-2_08-cv-14792-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-14792; TDC International Corporation v. Burnham; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_08-cv-14792-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-03-03</dateIssued>
+  <docketText>ORDER HOLDING Defendant in Contempt, Directing Defendant to Pay Penalty and Fees, and Setting Additional Show Cause Hearing for April 6, 2010 at 11:00 a.m. Signed by District Judge Robert H Cleland. (Goltz, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_08-cv-14792-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-5/mods.xml">
+ <titleInfo>
+  <title>TDC International Corporation v. Burnham</title>
+  <subTitle>ORDER that defendant shall pay to plaintiff $10,178.00, payable of at least $100.00 per week; that the defendant shall remove and delete all of his internet postings, advertisements, websites, email addresses, online business listings, YouTube accounts, Twitter accounts, Craiglist postings and any other online material associated with him and is directed to file with the court by May 11, 2010 proof sufficient for the court to determine that he has removed his entire presence from the internet. (see order for further details) Signed by District Judge Robert H Cleland. (LWag)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-05-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_08-cv-14792-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181993c80</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-5</identifier>
+ <identifier type="former granule identifier">mied-2_08-cv-14792_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cv-14792/pdf/USCOURTS-mied-2_08-cv-14792-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-14792; TDC International Corporation v. Burnham; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_08-cv-14792-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2010-05-03</dateIssued>
+  <docketText>ORDER that defendant shall pay to plaintiff $10,178.00, payable of at least $100.00 per week; that the defendant shall remove and delete all of his internet postings, advertisements, websites, email addresses, online business listings, YouTube accounts, Twitter accounts, Craiglist postings and any other online material associated with him and is directed to file with the court by May 11, 2010 proof sufficient for the court to determine that he has removed his entire presence from the internet. (see order for further details) Signed by District Judge Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_08-cv-14792-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-6/mods.xml">
+ <titleInfo>
+  <title>TDC International Corporation v. Burnham</title>
+  <subTitle>ORDER Acknowledging receipt of defendant&apos;s submission to the court and allowing plaintiff to file a response no sooner that 5/28/2010 and no later than 6/11/2010. Signed by District Judge Robert H Cleland. (LWag)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-05-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_08-cv-14792-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181993b88</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-6</identifier>
+ <identifier type="former granule identifier">mied-2_08-cv-14792_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cv-14792/pdf/USCOURTS-mied-2_08-cv-14792-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-14792; TDC International Corporation v. Burnham; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_08-cv-14792-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2010-05-18</dateIssued>
+  <docketText>ORDER Acknowledging receipt of defendant&apos;s submission to the court and allowing plaintiff to file a response no sooner that 5/28/2010 and no later than 6/11/2010. Signed by District Judge Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_08-cv-14792-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-7/mods.xml">
+ <titleInfo>
+  <title>TDC International Corporation v. Burnham</title>
+  <subTitle>ORDER GRANTING 55 Renewed MOTION for Order to Show Cause filed by TDC International Corporation., AND ORDER for Jae L. Burnham to Show Cause why defendant should not be held in contempt of court and sanctioned for failing to abide by the Settlement Agreement, Consent Judgment and the Injunction.( Hearing set for 11/10/2010 03:00 PM before District Judge Robert H Cleland) Signed by District Judge Robert H Cleland. (LWag)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_08-cv-14792-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181993c82</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-7</identifier>
+ <identifier type="former granule identifier">mied-2_08-cv-14792_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cv-14792/pdf/USCOURTS-mied-2_08-cv-14792-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-14792; TDC International Corporation v. Burnham; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_08-cv-14792-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2010-11-02</dateIssued>
+  <docketText>ORDER GRANTING 55 Renewed MOTION for Order to Show Cause filed by TDC International Corporation., AND ORDER for Jae L. Burnham to Show Cause why defendant should not be held in contempt of court and sanctioned for failing to abide by the Settlement Agreement, Consent Judgment and the Injunction.( Hearing set for 11/10/2010 03:00 PM before District Judge Robert H Cleland) Signed by District Judge Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_08-cv-14792-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-8/mods.xml">
+ <titleInfo>
+  <title>TDC International Corporation v. Burnham</title>
+  <subTitle>ORDER holding defendant Jae Burnham in Contempt of Court and imposing civil penalites {see order for details) Signed by District Judge Robert H Cleland. (LWag)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_08-cv-14792-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181993c81</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-8</identifier>
+ <identifier type="former granule identifier">mied-2_08-cv-14792_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cv-14792/pdf/USCOURTS-mied-2_08-cv-14792-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-14792; TDC International Corporation v. Burnham; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_08-cv-14792-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2010-11-19</dateIssued>
+  <docketText>ORDER holding defendant Jae Burnham in Contempt of Court and imposing civil penalites {see order for details) Signed by District Judge Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_08-cv-14792-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-9/mods.xml">
+ <titleInfo>
+  <title>TDC International Corporation v. Burnham</title>
+  <subTitle>ORDER STAYING CASE with attached copy of Notice of Bankruptcy Filing of defendant Jae Burnham. Signed by District Judge Robert H Cleland. (LWag)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_08-cv-14792-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181993c7e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-9</identifier>
+ <identifier type="former granule identifier">mied-2_08-cv-14792_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14792/USCOURTS-mied-2_08-cv-14792-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cv-14792/pdf/USCOURTS-mied-2_08-cv-14792-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-14792; TDC International Corporation v. Burnham; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_08-cv-14792-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2011-01-05</dateIssued>
+  <docketText>ORDER STAYING CASE with attached copy of Notice of Bankruptcy Filing of defendant Jae Burnham. Signed by District Judge Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+</mods>

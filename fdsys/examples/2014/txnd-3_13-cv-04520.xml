@@ -1,0 +1,180 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c2e315">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_13-cv-04520</identifier>
+<identifier type="local">P0b002ee186c2e315</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-txnd-3_13-cv-04520</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_13-cv-04520</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:13-cv-04520</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>899</natureSuitCode>
+ <natureSuit>Other Statutes - Administrative Procedure Act/Review or Appeal of Agency Decision</natureSuit>
+ <cause>28:1983 Civil Rights</cause>
+ <party firstName="Jordi" fullName="Jordi Bostock" lastName="Bostock" role="Plaintiff"></party>
+ <party fullName="Texas Work Force Commission" lastName="Texas Work Force Commission" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Bostock v. Texas Work Force Commission</title>
+ <partNumber>3:13-cv-04520</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_13-cv-04520/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:13-cv-04520;13-4520</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>Dallas</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jordi Bostock</displayForm>
+ <namePart type="family">Bostock</namePart>
+ <namePart type="given">Jordi</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Texas Work Force Commission</displayForm>
+ <namePart type="family">Texas Work Force Commission</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_13-cv-04520</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:13-cv-04520</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>899</natureSuitCode>
+ <natureSuit>Other Statutes - Administrative Procedure Act/Review or Appeal of Agency Decision</natureSuit>
+ <cause>28:1983 Civil Rights</cause>
+ <party firstName="Jordi" fullName="Jordi Bostock" lastName="Bostock" role="Plaintiff"></party>
+ <party fullName="Texas Work Force Commission" lastName="Texas Work Force Commission" role="Defendant"></party>
+ <state>Texas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_13-cv-04520-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_13-cv-04520/USCOURTS-txnd-3_13-cv-04520-0/mods.xml">
+ <titleInfo>
+  <title>Bostock v. Texas Work Force Commission</title>
+  <subTitle>Findings and Recommendations on Case. Plaintiff&apos;s 3 Complaint should be summarily dismissed pursuant to 28 USC 1915(e)(2). (See order for specifics) (Ordered by Magistrate Judge David L Horan on 12/4/2013) (mcrd)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_13-cv-04520-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3d6ce</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_13-cv-04520/USCOURTS-txnd-3_13-cv-04520-0</identifier>
+ <identifier type="former granule identifier">txnd-3_13-cv-04520_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_13-cv-04520/USCOURTS-txnd-3_13-cv-04520-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_13-cv-04520/pdf/USCOURTS-txnd-3_13-cv-04520-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:13-cv-04520; Bostock v. Texas Work Force Commission; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_13-cv-04520-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-12-04</dateIssued>
+  <docketText>Findings and Recommendations on Case. Plaintiff&apos;s 3 Complaint should be summarily dismissed pursuant to 28 USC 1915(e)(2). (See order for specifics) (Ordered by Magistrate Judge David L Horan on 12/4/2013) (mcrd)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_13-cv-04520-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_13-cv-04520/USCOURTS-txnd-3_13-cv-04520-1/mods.xml">
+ <titleInfo>
+  <title>Bostock v. Texas Work Force Commission</title>
+  <subTitle>Order Accepting 9 Findings, Conclusions, and Recommendation of the United States Magistrate Judge. (Ordered by Judge Sam A Lindsay on 1/2/2014) (skt)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_13-cv-04520-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3d78f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_13-cv-04520/USCOURTS-txnd-3_13-cv-04520-1</identifier>
+ <identifier type="former granule identifier">txnd-3_13-cv-04520_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_13-cv-04520/USCOURTS-txnd-3_13-cv-04520-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_13-cv-04520/pdf/USCOURTS-txnd-3_13-cv-04520-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:13-cv-04520; Bostock v. Texas Work Force Commission; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_13-cv-04520-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>Order Accepting 9 Findings, Conclusions, and Recommendation of the United States Magistrate Judge. (Ordered by Judge Sam A Lindsay on 1/2/2014) (skt)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 import glob
@@ -825,7 +825,7 @@ class ScraperSpotTest(unittest.TestCase):
             ('2013-0893, Stephen E. Forster d/b/a Forster’s Christmas Tree',
              'Stephen E. Forster d/b/a Forster’s Christmas Tree'),
         )
-        regex = nh.Site().case_name_regex
+        regex = nh.Site().link_text_regex
         for test, result in string_pairs:
             try:
                 case_name = regex.search(test).group(2).strip()

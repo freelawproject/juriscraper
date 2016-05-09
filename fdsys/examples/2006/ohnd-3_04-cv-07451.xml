@@ -1,0 +1,180 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18155a251">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_04-cv-07451</identifier>
+<identifier type="local">P0b002ee18155a251</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-3_04-cv-07451</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_04-cv-07451</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:04-cv-07451</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>47:553 Violation of Illegal Interception of Cable System</cause>
+ <party fullName="Buckeye Cablevision, Inc." lastName="Buckeye Cablevision, Inc." role="Plaintiff"></party>
+ <party firstName="Karl" fullName="Karl Nagy" lastName="Nagy" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Buckeye Cablevision, Inc. v. Nagy</title>
+ <partNumber>3:04-cv-07451</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_04-cv-07451/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:04-cv-07451;04-7451</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Toledo</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Buckeye Cablevision, Inc.</displayForm>
+ <namePart type="family">Buckeye Cablevision, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Karl Nagy</displayForm>
+ <namePart type="family">Nagy</namePart>
+ <namePart type="given">Karl</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_04-cv-07451</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:04-cv-07451</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>47:553 Violation of Illegal Interception of Cable System</cause>
+ <party fullName="Buckeye Cablevision, Inc." lastName="Buckeye Cablevision, Inc." role="Plaintiff"></party>
+ <party firstName="Karl" fullName="Karl Nagy" lastName="Nagy" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_04-cv-07451-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_04-cv-07451/USCOURTS-ohnd-3_04-cv-07451-0/mods.xml">
+ <titleInfo>
+  <title>Buckeye Cablevision, Inc. v. Nagy</title>
+  <subTitle>Memorandum Decision and Order granting Plaintiff&apos;s Motion for summary judgment (Related Doc # 11). Signed by Magistrate Judge Vernelis K. Armstrong on 8/5/2005.(S, P A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_04-cv-07451-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1815f23a8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_04-cv-07451/USCOURTS-ohnd-3_04-cv-07451-0</identifier>
+ <identifier type="former granule identifier">ohnd-3_04-cv-07451_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_04-cv-07451/USCOURTS-ohnd-3_04-cv-07451-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_04-cv-07451/pdf/USCOURTS-ohnd-3_04-cv-07451-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:04-cv-07451; Buckeye Cablevision, Inc. v. Nagy; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_04-cv-07451-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-08-05</dateIssued>
+  <docketText>Memorandum Decision and Order granting Plaintiff&apos;s Motion for summary judgment (Related Doc # 11). Signed by Magistrate Judge Vernelis K. Armstrong on 8/5/2005.(S, P A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_04-cv-07451-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_04-cv-07451/USCOURTS-ohnd-3_04-cv-07451-1/mods.xml">
+ <titleInfo>
+  <title>Buckeye Cablevision, Inc. v. Nagy</title>
+  <subTitle>Memorandum Decision and Order awarding Plaintiff statutory damages of $7,500 and post-judgment interest, $1,900 in attorney fees, $240 in costs and permanent injunctive relief 14 Signed by Judge Vernelis K. Armstrong on 1/24/06. (A, P)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_04-cv-07451-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1815f23a7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_04-cv-07451/USCOURTS-ohnd-3_04-cv-07451-1</identifier>
+ <identifier type="former granule identifier">ohnd-3_04-cv-07451_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_04-cv-07451/USCOURTS-ohnd-3_04-cv-07451-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_04-cv-07451/pdf/USCOURTS-ohnd-3_04-cv-07451-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:04-cv-07451; Buckeye Cablevision, Inc. v. Nagy; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_04-cv-07451-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-01-24</dateIssued>
+  <docketText>Memorandum Decision and Order awarding Plaintiff statutory damages of $7,500 and post-judgment interest, $1,900 in attorney fees, $240 in costs and permanent injunctive relief 14 Signed by Judge Vernelis K. Armstrong on 1/24/06. (A, P)</docketText>
+</extension>
+</relatedItem>
+</mods>

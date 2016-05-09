@@ -1,0 +1,467 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1812db2f8">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_03-cv-00258</identifier>
+<identifier type="local">P0b002ee1812db2f8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-5_03-cv-00258</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_03-cv-00258</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:03-cv-00258</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>710</natureSuitCode>
+ <natureSuit>Fair Labor Standards Act</natureSuit>
+ <cause>29:201 Denial of Overtime Compensation</cause>
+ <party fullName="All plaintiffs" lastName="All plaintiffs" role="Plaintiff"></party>
+ <party firstName="Alicia" fullName="Alicia Allen" lastName="Allen" role="Plaintiff"></party>
+ <party firstName="Barbara" fullName="Barbara Andrews" lastName="Andrews" role="Plaintiff"></party>
+ <party fullName="BIBB COUNTY GEORGIA BOARD OF EDUCATION" lastName="BIBB COUNTY GEORGIA BOARD OF EDUCATION" role="Defendant"></party>
+ <party firstName="Melissa" fullName="Melissa Braxton" lastName="Braxton" role="Plaintiff"></party>
+ <party firstName="Patricia" fullName="Patricia Brown" lastName="Brown" role="Plaintiff"></party>
+ <party firstName="Shirley" fullName="Shirley Brown" lastName="Brown" role="Plaintiff"></party>
+ <party firstName="Timothy" fullName="Timothy Brown" lastName="Brown" role="Plaintiff"></party>
+ <party firstName="Betty" fullName="Betty Davison" lastName="Davison" role="Plaintiff"></party>
+ <party firstName="Melissa" fullName="Melissa Deshazer" lastName="Deshazer" role="Plaintiff"></party>
+ <party firstName="Carolyn" fullName="Carolyn Finney" lastName="Finney" role="Plaintiff"></party>
+ <party firstName="John" fullName="John Finney" lastName="Finney" role="Plaintiff"></party>
+ <party firstName="Norarene" fullName="Norarene Gilbert" lastName="Gilbert" role="Plaintiff"></party>
+ <party firstName="Corine" fullName="Corine Gilmore" lastName="Gilmore" role="Plaintiff"></party>
+ <party firstName="Angela" fullName="Angela D. Porter Glover" lastName="Glover" middleName="D. Porter" role="Plaintiff"></party>
+ <party firstName="Tamika" fullName="Tamika L. Hutchings" lastName="Hutchings" middleName="L." role="Plaintiff"></party>
+ <party firstName="Veronica" fullName="Veronica Jackson" lastName="Jackson" role="Plaintiff"></party>
+ <party firstName="Alice" fullName="Alice Johnson" lastName="Johnson" role="Plaintiff"></party>
+ <party firstName="Wilbert" fullName="Wilbert Jones" lastName="Jones" role="Plaintiff"></party>
+ <party firstName="Katherine" fullName="Katherine Laster" lastName="Laster" role="Plaintiff"></party>
+ <party firstName="Dorothy" fullName="Dorothy Lester" lastName="Lester" role="Plaintiff"></party>
+ <party firstName="Vera" fullName="Vera Long" lastName="Long" role="Plaintiff"></party>
+ <party firstName="Shandrika" fullName="Shandrika Matthews" lastName="Matthews" role="Plaintiff"></party>
+ <party firstName="James" fullName="James Mays" lastName="Mays" role="Plaintiff"></party>
+ <party firstName="Clara" fullName="Clara Jean Patterson" lastName="Patterson" middleName="Jean" role="Plaintiff"></party>
+ <party firstName="Sylvia" fullName="Sylvia Pettigrew" lastName="Pettigrew" role="Plaintiff"></party>
+ <party firstName="Henry" fullName="Henry Poole Jr." generation="Jr." lastName="Poole" role="Plaintiff"></party>
+ <party firstName="Earline" fullName="Earline Scott" lastName="Scott" role="Plaintiff"></party>
+ <party firstName="Larose" fullName="Larose Smith" lastName="Smith" role="Plaintiff"></party>
+ <party firstName="Patricia" fullName="Patricia Stewart" lastName="Stewart" role="Plaintiff"></party>
+ <party firstName="Bobby" fullName="Bobby L. Strange" lastName="Strange" middleName="L." role="Plaintiff"></party>
+ <party firstName="Jacquelyn" fullName="Jacquelyn A. Stubbs" lastName="Stubbs" middleName="A." role="Plaintiff"></party>
+ <party firstName="Loretta" fullName="Loretta Thomas" lastName="Thomas" role="Plaintiff"></party>
+ <party firstName="Sharon" fullName="Sharon Walker" lastName="Walker" role="Plaintiff"></party>
+ <party firstName="Eleanor" fullName="Eleanor Welch" lastName="Welch" role="Plaintiff"></party>
+ <party firstName="Essie" fullName="Essie Williams" lastName="Williams" role="Plaintiff"></party>
+ <party firstName="Dorothy" fullName="Dorothy Woodford" lastName="Woodford" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Allen, et al v. Board of Education</title>
+ <partNumber>5:03-cv-00258</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_03-cv-00258/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:03-cv-00258;03-258</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Macon</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>All plaintiffs</displayForm>
+ <namePart type="family">All plaintiffs</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Alicia Allen</displayForm>
+ <namePart type="family">Allen</namePart>
+ <namePart type="given">Alicia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Barbara Andrews</displayForm>
+ <namePart type="family">Andrews</namePart>
+ <namePart type="given">Barbara</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>BIBB COUNTY GEORGIA BOARD OF EDUCATION</displayForm>
+ <namePart type="family">BIBB COUNTY GEORGIA BOARD OF EDUCATION</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Melissa Braxton</displayForm>
+ <namePart type="family">Braxton</namePart>
+ <namePart type="given">Melissa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Patricia Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">Patricia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Shirley Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">Shirley</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Timothy Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Betty Davison</displayForm>
+ <namePart type="family">Davison</namePart>
+ <namePart type="given">Betty</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Melissa Deshazer</displayForm>
+ <namePart type="family">Deshazer</namePart>
+ <namePart type="given">Melissa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Carolyn Finney</displayForm>
+ <namePart type="family">Finney</namePart>
+ <namePart type="given">Carolyn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John Finney</displayForm>
+ <namePart type="family">Finney</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Norarene Gilbert</displayForm>
+ <namePart type="family">Gilbert</namePart>
+ <namePart type="given">Norarene</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Corine Gilmore</displayForm>
+ <namePart type="family">Gilmore</namePart>
+ <namePart type="given">Corine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Angela D. Porter Glover</displayForm>
+ <namePart type="family">Glover</namePart>
+ <namePart type="given">Angela</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Tamika L. Hutchings</displayForm>
+ <namePart type="family">Hutchings</namePart>
+ <namePart type="given">Tamika</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Veronica Jackson</displayForm>
+ <namePart type="family">Jackson</namePart>
+ <namePart type="given">Veronica</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Alice Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Alice</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Wilbert Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">Wilbert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Katherine Laster</displayForm>
+ <namePart type="family">Laster</namePart>
+ <namePart type="given">Katherine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dorothy Lester</displayForm>
+ <namePart type="family">Lester</namePart>
+ <namePart type="given">Dorothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Vera Long</displayForm>
+ <namePart type="family">Long</namePart>
+ <namePart type="given">Vera</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Shandrika Matthews</displayForm>
+ <namePart type="family">Matthews</namePart>
+ <namePart type="given">Shandrika</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>James Mays</displayForm>
+ <namePart type="family">Mays</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Clara Jean Patterson</displayForm>
+ <namePart type="family">Patterson</namePart>
+ <namePart type="given">Clara</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sylvia Pettigrew</displayForm>
+ <namePart type="family">Pettigrew</namePart>
+ <namePart type="given">Sylvia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Henry Poole Jr.</displayForm>
+ <namePart type="family">Poole</namePart>
+ <namePart type="given">Henry</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Earline Scott</displayForm>
+ <namePart type="family">Scott</namePart>
+ <namePart type="given">Earline</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Larose Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Larose</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Patricia Stewart</displayForm>
+ <namePart type="family">Stewart</namePart>
+ <namePart type="given">Patricia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Bobby L. Strange</displayForm>
+ <namePart type="family">Strange</namePart>
+ <namePart type="given">Bobby</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jacquelyn A. Stubbs</displayForm>
+ <namePart type="family">Stubbs</namePart>
+ <namePart type="given">Jacquelyn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Loretta Thomas</displayForm>
+ <namePart type="family">Thomas</namePart>
+ <namePart type="given">Loretta</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sharon Walker</displayForm>
+ <namePart type="family">Walker</namePart>
+ <namePart type="given">Sharon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Eleanor Welch</displayForm>
+ <namePart type="family">Welch</namePart>
+ <namePart type="given">Eleanor</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Essie Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Essie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dorothy Woodford</displayForm>
+ <namePart type="family">Woodford</namePart>
+ <namePart type="given">Dorothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_03-cv-00258</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:03-cv-00258</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>710</natureSuitCode>
+ <natureSuit>Fair Labor Standards Act</natureSuit>
+ <cause>29:201 Denial of Overtime Compensation</cause>
+ <party fullName="All plaintiffs" lastName="All plaintiffs" role="Plaintiff"></party>
+ <party firstName="Alicia" fullName="Alicia Allen" lastName="Allen" role="Plaintiff"></party>
+ <party firstName="Barbara" fullName="Barbara Andrews" lastName="Andrews" role="Plaintiff"></party>
+ <party fullName="BIBB COUNTY GEORGIA BOARD OF EDUCATION" lastName="BIBB COUNTY GEORGIA BOARD OF EDUCATION" role="Defendant"></party>
+ <party firstName="Melissa" fullName="Melissa Braxton" lastName="Braxton" role="Plaintiff"></party>
+ <party firstName="Patricia" fullName="Patricia Brown" lastName="Brown" role="Plaintiff"></party>
+ <party firstName="Shirley" fullName="Shirley Brown" lastName="Brown" role="Plaintiff"></party>
+ <party firstName="Timothy" fullName="Timothy Brown" lastName="Brown" role="Plaintiff"></party>
+ <party firstName="Betty" fullName="Betty Davison" lastName="Davison" role="Plaintiff"></party>
+ <party firstName="Melissa" fullName="Melissa Deshazer" lastName="Deshazer" role="Plaintiff"></party>
+ <party firstName="Carolyn" fullName="Carolyn Finney" lastName="Finney" role="Plaintiff"></party>
+ <party firstName="John" fullName="John Finney" lastName="Finney" role="Plaintiff"></party>
+ <party firstName="Norarene" fullName="Norarene Gilbert" lastName="Gilbert" role="Plaintiff"></party>
+ <party firstName="Corine" fullName="Corine Gilmore" lastName="Gilmore" role="Plaintiff"></party>
+ <party firstName="Angela" fullName="Angela D. Porter Glover" lastName="Glover" middleName="D. Porter" role="Plaintiff"></party>
+ <party firstName="Tamika" fullName="Tamika L. Hutchings" lastName="Hutchings" middleName="L." role="Plaintiff"></party>
+ <party firstName="Veronica" fullName="Veronica Jackson" lastName="Jackson" role="Plaintiff"></party>
+ <party firstName="Alice" fullName="Alice Johnson" lastName="Johnson" role="Plaintiff"></party>
+ <party firstName="Wilbert" fullName="Wilbert Jones" lastName="Jones" role="Plaintiff"></party>
+ <party firstName="Katherine" fullName="Katherine Laster" lastName="Laster" role="Plaintiff"></party>
+ <party firstName="Dorothy" fullName="Dorothy Lester" lastName="Lester" role="Plaintiff"></party>
+ <party firstName="Vera" fullName="Vera Long" lastName="Long" role="Plaintiff"></party>
+ <party firstName="Shandrika" fullName="Shandrika Matthews" lastName="Matthews" role="Plaintiff"></party>
+ <party firstName="James" fullName="James Mays" lastName="Mays" role="Plaintiff"></party>
+ <party firstName="Clara" fullName="Clara Jean Patterson" lastName="Patterson" middleName="Jean" role="Plaintiff"></party>
+ <party firstName="Sylvia" fullName="Sylvia Pettigrew" lastName="Pettigrew" role="Plaintiff"></party>
+ <party firstName="Henry" fullName="Henry Poole Jr." generation="Jr." lastName="Poole" role="Plaintiff"></party>
+ <party firstName="Earline" fullName="Earline Scott" lastName="Scott" role="Plaintiff"></party>
+ <party firstName="Larose" fullName="Larose Smith" lastName="Smith" role="Plaintiff"></party>
+ <party firstName="Patricia" fullName="Patricia Stewart" lastName="Stewart" role="Plaintiff"></party>
+ <party firstName="Bobby" fullName="Bobby L. Strange" lastName="Strange" middleName="L." role="Plaintiff"></party>
+ <party firstName="Jacquelyn" fullName="Jacquelyn A. Stubbs" lastName="Stubbs" middleName="A." role="Plaintiff"></party>
+ <party firstName="Loretta" fullName="Loretta Thomas" lastName="Thomas" role="Plaintiff"></party>
+ <party firstName="Sharon" fullName="Sharon Walker" lastName="Walker" role="Plaintiff"></party>
+ <party firstName="Eleanor" fullName="Eleanor Welch" lastName="Welch" role="Plaintiff"></party>
+ <party firstName="Essie" fullName="Essie Williams" lastName="Williams" role="Plaintiff"></party>
+ <party firstName="Dorothy" fullName="Dorothy Woodford" lastName="Woodford" role="Plaintiff"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_03-cv-00258-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_03-cv-00258/USCOURTS-gamd-5_03-cv-00258-0/mods.xml">
+ <titleInfo>
+  <title>Allen, et al v. Board of Education</title>
+  <subTitle>ORDER granting 99 Motion for Leave to File 5-page sur-reply. Signed by Judge Wilbur D. Owens Jr. on 1/5/2006. (cf)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_03-cv-00258-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813172ba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_03-cv-00258/USCOURTS-gamd-5_03-cv-00258-0</identifier>
+ <identifier type="former granule identifier">gamd-5_03-cv-00258_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_03-cv-00258/USCOURTS-gamd-5_03-cv-00258-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_03-cv-00258/pdf/USCOURTS-gamd-5_03-cv-00258-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:03-cv-00258; Allen, et al v. Board of Education; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_03-cv-00258-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-05</dateIssued>
+  <docketText>ORDER granting 99 Motion for Leave to File 5-page sur-reply. Signed by Judge Wilbur D. Owens Jr. on 1/5/2006. (cf)</docketText>
+</extension>
+</relatedItem>
+</mods>
