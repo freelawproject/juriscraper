@@ -11,6 +11,7 @@ History:
 from datetime import datetime
 
 from lxml import html
+
 from juriscraper.OralArgumentSite import OralArgumentSite
 from juriscraper.lib.string_utils import titlecase
 

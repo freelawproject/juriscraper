@@ -7,9 +7,10 @@ Reviewer: mlr
 History:
     2014-09-03: Created by Jon Andersen
 """
-from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
+
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):

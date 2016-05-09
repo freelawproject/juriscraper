@@ -8,9 +8,10 @@ History:
     2014-08-29 Cloned from alaska.py by Jon Andersen
 """
 
-from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
+
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):

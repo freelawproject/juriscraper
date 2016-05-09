@@ -9,6 +9,7 @@ import sys
 import datetime
 
 import os
+
 from juriscraper.lib.importer import build_module_list
 from juriscraper.lib.date_utils import parse_dates, quarter, \
     is_first_month_in_quarter

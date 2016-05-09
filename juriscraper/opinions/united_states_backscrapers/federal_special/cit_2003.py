@@ -2,11 +2,13 @@
 # CourtID: cit
 # Court Short Name: Ct. Int'l Trade
 # Neutral Citation Format: Ct. Int'l Trade No. 12-1
-from juriscraper.OpinionSite import OpinionSite
-import re
 import time
 from datetime import date
+
 from lxml import html
+
+from juriscraper.OpinionSite import OpinionSite
+
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):

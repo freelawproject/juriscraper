@@ -8,7 +8,7 @@ Substantially Revised: Brian W. Carver, 2014-03-28
 
 import time
 from datetime import date
-from datetime import datetime
+
 from lxml import html
 import re
 

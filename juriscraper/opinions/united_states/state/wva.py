@@ -1,8 +1,10 @@
-from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import clean_string
 import time
 from datetime import date
+
 from lxml import html
+
+from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import clean_string
 
 
 class Site(OpinionSite):
