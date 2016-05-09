@@ -3,6 +3,7 @@ import os
 import re
 
 from setuptools import setup, find_packages
+from pip.req import parse_requirements
 
 
 ####################################################################
@@ -25,6 +26,9 @@ CLASSIFIERS = [
     "Programming Language :: Python :: Implementation :: CPython",
     "Programming Language :: Python :: Implementation :: PyPy",
     "Topic :: Software Development :: Libraries :: Python Modules",
+]
+INSTALL_REQUIRES = [
+    str(r.req) for r in parse_requirements('requirements.txt', session=False)
 ]
 
 ###################################################################
@@ -63,7 +67,7 @@ if __name__ == "__main__":
         description=find_meta("description"),
         license=find_meta("license"),
         url=find_meta("uri"),
-        download_url='%s/tarball/%s' % (find_meta("uri"), find_meta('version')),
+        # download_url='%s/tarball/%s' % (find_meta("uri"), find_meta('version')),
         version=find_meta("version"),
         author=find_meta("author"),
         author_email=find_meta("email"),
@@ -74,6 +78,7 @@ if __name__ == "__main__":
         packages=PACKAGES,
         zip_safe=False,
         classifiers=CLASSIFIERS,
+        install_requires=INSTALL_REQUIRES,
         include_package_data=True,
         test_suite="juriscraper.tests.tests"
     )
