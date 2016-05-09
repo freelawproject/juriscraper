@@ -26,22 +26,6 @@ CLASSIFIERS = [
     "Programming Language :: Python :: Implementation :: PyPy",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-INSTALL_REQUIRES = [
-    'argparse', # 1.2.1
-    'cchardet',
-    'certifi',
-    'chardet',
-    'geonamescache', #==0.20
-    'lxml', #==3.0.1
-    'pkginfo', #==1.2.1
-    'python-dateutil==1.5', #==1.5
-    'requests', #==2.2.1
-    'selenium', #==2.43.0
-    'twine', #==1.6.1
-    'unicode-nazi', #==1.1
-    'wheel', #==0.26.0
-    'wsgiref' #==0.1.2
-]
 
 ###################################################################
 
@@ -79,6 +63,7 @@ if __name__ == "__main__":
         description=find_meta("description"),
         license=find_meta("license"),
         url=find_meta("uri"),
+        download_url='%s/tarball/%s' % (find_meta("uri"), find_meta('version')),
         version=find_meta("version"),
         author=find_meta("author"),
         author_email=find_meta("email"),
@@ -89,7 +74,6 @@ if __name__ == "__main__":
         packages=PACKAGES,
         zip_safe=False,
         classifiers=CLASSIFIERS,
-        install_requires=INSTALL_REQUIRES,
         include_package_data=True,
         test_suite="juriscraper.tests.tests"
     )
