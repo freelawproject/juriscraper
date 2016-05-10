@@ -1,14 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import os
+import sys
 import glob
 import logging
 import time
 import unittest
-import sys
 import datetime
 
-import os
+sys.path.insert(0, os.path.abspath('..'))
+
 from juriscraper.lib.importer import build_module_list
 from juriscraper.lib.date_utils import parse_dates, quarter, \
     is_first_month_in_quarter
@@ -19,7 +21,6 @@ from juriscraper.lib.string_utils import (
 from juriscraper.opinions.united_states.state import massappct, pa, mass, nh, \
     colo
 from juriscraper.oral_args.united_states.federal_appellate import ca6
-
 
 class SlownessException(Exception):
     def __init__(self, message):
@@ -872,6 +873,7 @@ class ScraperSpotTest(unittest.TestCase):
                 )
             except AttributeError:
                 self.fail("Unable to parse ca6 string: '{s}'".format(s=test))
+
 
 if __name__ == '__main__':
     unittest.main()

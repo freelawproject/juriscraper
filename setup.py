@@ -9,9 +9,8 @@ from pip.req import parse_requirements
 ####################################################################
 
 NAME = "juriscraper"
-# PACKAGES = find_packages(exclude=["tests*"])
-PACKAGES = find_packages()
-META_PATH = os.path.join("__init__.py")
+PACKAGES = find_packages(exclude=('tests',))
+META_PATH = os.path.join('juriscraper/__init__.py')
 KEYWORDS = ["scraping", "legal"]
 CLASSIFIERS = [
     "Development Status :: 5 - Production/Stable",
@@ -61,24 +60,22 @@ def find_meta(meta):
     raise RuntimeError("Unable to find __{meta}__ string.".format(meta=meta))
 
 
-if __name__ == "__main__":
-    setup(
-        name=NAME,
-        description=find_meta("description"),
-        license=find_meta("license"),
-        url=find_meta("uri"),
-        # download_url='%s/tarball/%s' % (find_meta("uri"), find_meta('version')),
-        version=find_meta("version"),
-        author=find_meta("author"),
-        author_email=find_meta("email"),
-        maintainer=find_meta("author"),
-        maintainer_email=find_meta("email"),
-        keywords=KEYWORDS,
-        long_description=read("readme.md"),
-        packages=PACKAGES,
-        zip_safe=False,
-        classifiers=CLASSIFIERS,
-        install_requires=INSTALL_REQUIRES,
-        include_package_data=True,
-        test_suite="juriscraper.tests.tests"
-    )
+setup(
+    name=NAME,
+    description=find_meta("description"),
+    license=find_meta("license"),
+    url=find_meta("uri"),
+    # download_url='%s/tarball/%s' % (find_meta("uri"), find_meta('version')),
+    version=find_meta("version"),
+    author=find_meta("author"),
+    author_email=find_meta("email"),
+    maintainer=find_meta("author"),
+    maintainer_email=find_meta("email"),
+    keywords=KEYWORDS,
+    long_description=read("README.rst"),
+    packages=PACKAGES,
+    classifiers=CLASSIFIERS,
+    install_requires=INSTALL_REQUIRES,
+    include_package_data=True,
+    test_suite='tests',
+)
