@@ -4,7 +4,9 @@
 # File created by Mac OS X
 .DS_Store
 
+# Python setup.py output and PyCharm stuff
 build/
+dist/
 .idea/
 .cache/
 .eggs/
