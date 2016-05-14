@@ -4,89 +4,71 @@
 #Author: Andrei Chelaru
 #Reviewer: mlr
 #Date: 2014-07-03
+#Contact:  Liz Reppe (Liz.Reppe@courts.state.mn.us), Jay Achenbach (jay.achenbach@state.mn.us)
 
 from datetime import date
-import time
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.date_utils import quarter, is_first_month_in_quarter
-from lxml import html
-import re
-from requests.exceptions import HTTPError
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
+    cases = []
+
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        d = date.today()
-        self.url = 'http://mn.gov/lawlib/archive/sct{short_year}q{quarter}.html'.format(
-            short_year=d.strftime("%y"),
-            quarter=quarter(d.month)
+        # Get 500 most recent results for the year.  This number could be reduced after the
+        # initial run of this fixed code.  We need ot start with a big number though to
+        # capture the cases we've missed over the past few weeks.
+        self.url = 'http://mn.gov/law-library-stat/search/opinions/?v:state=root%7Croot-0-500&query=date:{year}'.format(
+            year=date.today().year
         )
-        # self.url = 'http://mn.gov/lawlib/archive/sct14q3.html'
 
     def _download(self, request_dict={}):
-        """Overrides the download function so that we can catch 404 errors
-        silently. This is necessary because these web pages simply do not exist
-        for several days at the beginning of each quarter.
+        html = super(Site, self)._download(request_dict)
+        self._extract_case_data_from_html(html)
+        return html
+
+    def _extract_case_data_from_html(self, html):
+        """Build list of data dictionaries, one dictionary per case.
+
+        Sometimes the XML is malformed, usually because of a missing docket number,
+        which throws the traditional data list matching off.  Its easier and cleaner
+        to extract all the data at once, and simple skip over records that do not
+        present a docket number.
         """
-        try:
-            return super(Site, self)._download()
-        except HTTPError, e:
-            is_first_days_of_the_quarter = (
-                date.today().day <= 15 and
-                is_first_month_in_quarter(date.today().month)
-            )
-            got_404 = (e.response.status_code == 404)
-            if got_404 and is_first_days_of_the_quarter:
-                # Do nothing; abort the crawler
-                self.status = 200
-                # We need the body tag here so that xpath works elsewhere.
-                html_tree = html.fromstring('<html><body></body></html>')
-                return html_tree
-            else:
-                raise e
+        for document in html.xpath('//document'):
+            docket = document.xpath('content[@name="docket"]/text()')
+            if docket:
+                docket = docket[0]
+                name = document.xpath('content[@name="dc.title"]/text()')[0]
+                self.cases.append({
+                    'name': name,
+                    'url': self._file_path_to_url(document.xpath('@url')[0]),
+                    'date': convert_date_string(document.xpath('content[@name="date"]/text()')[0]),
+                    'status': self._parse_status_from_name(name),
+                    'docket': docket,
+                })
 
     def _get_case_names(self):
-        path = '''//ul//li[not(contains(text(), 'ORDER') or
-                               contains(text(), 'NO OPINIONS'))]/text()'''
-
-        return list(self.html.xpath(path))
+        return [case['name'] for case in self.cases]
 
     def _get_download_urls(self):
-        path = '''//ul//li[not(contains(text(), 'ORDER') or
-                               contains(text(), 'NO OPINIONS'))]//@href'''
-        return list(self.html.xpath(path))
+        return [case['url'] for case in self.cases]
+
+    def _file_path_to_url(self, path):
+        return path.replace('file:///web/prod/static/lawlib/live', 'http://mn.gov/law-library-stat')
 
     def _get_case_dates(self):
-        path = '''//ul//h4/text()'''
-        dates = self.html.xpath(path)
-        last_date_index = len(dates) - 1
-        case_dates = []
-        for index, date_element in enumerate(dates):
-            if index < last_date_index:
-                path_2 = ("//h4[{c}]/following-sibling::li/text()[count("
-                          "  .|//h4[{n}]/preceding-sibling::li/text())="
-                          "count("
-                          "    //h4[{n}]/preceding-sibling::li/text()"
-                          ") and not("
-                          "    contains(., 'ORDER') or"
-                          "    contains(., 'NO OPINIONS')"
-                          ")]".format(c=index + 1,
-                                      n=index + 2))
-            else:
-                path_2 = ("//h4[{c}]/following-sibling::li/text()[not("
-                          "  contains(., 'ORDER') or"
-                          "  contains(., 'NO OPINIONS'))]").format(c=index + 1)
-            d = date.fromtimestamp(time.mktime(time.strptime(re.sub(' ', '', str(date_element)), '%B%d,%Y')))
-            case_dates.extend([d] * len(self.html.xpath(path_2)))
-        return case_dates
+        return [case['date'] for case in self.cases]
+
 
     def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_names)
+        return [case['status'] for case in self.cases]
+
+    def _parse_status_from_name(self, name):
+        return 'Unpublished' if 'unpublished' in name.lower() else 'Published'
 
     def _get_docket_numbers(self):
-        path = '''//ul//li[not(contains(text(), 'ORDER') or
-                               contains(text(), 'NO OPINIONS'))]/a/text()'''
-        return list(self.html.xpath(path))
+        return [case['docket'] for case in self.cases]
