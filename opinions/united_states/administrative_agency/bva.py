@@ -6,76 +6,84 @@ Reviewer: mlr
 Type: Nonprecedential
 History:
     2014-09-09: Created by Jon Andersen
+    2016-05-14: Updated by arderyp, moved logic from _get_case_dates() to
+    standard download() override method.  Parsing information text from
+    unlinked text field, due to recent link text typos
 """
 
-import time
-from datetime import datetime
-from datetime import date
-
 import re
+from datetime import datetime
+
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
+    cases = []
+
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         # Cases before 1997 do not have a docket number to parse.
-        self.url = 'http://www.index.va.gov/search/va/bva_search.jsp?RPP=50&RS=1&DB=' + '&DB='.join(
-            [str(n) for n in range(datetime.today().year, 1997-1, -1)])
-        self.my_case_dates = []
-        self.my_case_names = []
-        self.my_docket_numbers = []
-        self.my_neutral_citations = []
+        url_query = '&DB='.join([str(n) for n in range(datetime.today().year, 1997-1, -1)])
+        self.url = 'http://www.index.va.gov/search/va/bva_search.jsp?RPP=50&RS=1&DB=%s' % url_query
         self.pager_stop = False
+        self.back_scrape_iterable = self.pager(50)
 
-        def pager(incr):
-            startat = 1+incr
-            while not self.pager_stop:
-                yield startat
-                startat += incr
-        self.back_scrape_iterable = pager(50)
+    def pager(self, incr):
+        startat = 1 + incr
+        while not self.pager_stop:
+            yield startat
+            startat += incr
+
+    def _download(self, request_dict={}):
+        html = super(Site, self)._download(request_dict)
+        self._extract_case_data_from_html(html)
+        return html
+
+    def _extract_case_data_from_html(self, html):
+        """Build list of data dictionaries, one dictionary per case."""
+        regex = re.compile('^Citation Nr: (.*) Decision Date: (.*) Archive Date: (.*) DOCKET NO. ([-0-9 ]+)')
+
+        for result in html.xpath('//div[@id="results-area"]/div/div'):
+            text = result.xpath('./div[2]/text()')[0].strip()
+            try:
+                (citation, date, docket) = regex.match(text).group(1, 2, 4)
+            except:
+                raise Exception('regex failure in _extract_case_data_from_html method of bva scraper')
+
+            # There is a history to this, but the long story short is that we
+            # are using the docket number in the name field intentionally.
+            self.cases.append({
+                'name': docket,
+                'url': result.xpath('./div/span/a/@href')[0].lstrip('view.jsp?FV='),
+                'date': convert_date_string(date),
+                'status': 'Unpublished',
+                'docket': docket,
+                'citation': citation.split()[0],
+            })
 
     def _get_case_dates(self):
-        path = "//div/a/text()[contains(.,'Citation Nr')]"
-        regex = re.compile('^Citation Nr: (.*) Decision Date: (.*) ' +
-                           'Archive Date: (.*) DOCKET NO. ([-0-9 ]+)')
-        for txt in self.html.xpath(path):
-            (citation_number, decision_date,
-                archive_date, docket_number) = regex.match(txt).group(1, 2, 3, 4)
-            case_name = docket_number  # Huh?
-            self.my_case_names.append(case_name)
-            self.my_docket_numbers.append(docket_number)
-            self.my_neutral_citations.append(citation_number)
-            self.my_case_dates.append(date.fromtimestamp(time.mktime(
-                time.strptime(decision_date, '%m/%d/%y'))))
-        if len(self.my_case_dates) == 0:
-            self.pager_stop = True
-        return self.my_case_dates
+        return [case['date'] for case in self.cases]
 
     def _get_download_urls(self):
-        path = "//div/a[contains(./text(),'Citation Nr')]/@href"
-        return [u for u in self.html.xpath(path)]
+        return [case['url'] for case in self.cases]
 
     def _get_case_names(self):
-        return self.my_case_names
+        return [case['name'] for case in self.cases]
 
     def _get_docket_numbers(self):
-        return self.my_docket_numbers
+        return [case['docket'] for case in self.cases]
 
     def _get_neutral_citations(self):
-        return self.my_neutral_citations
+        return [case['citation'] for case in self.cases]
 
     def _get_precedential_statuses(self):
-        return ["Unpublished"] * len(self.my_case_dates)
-
-    def _get_case_name_shorts(self):
-        # We don't (yet) support short case names for administrative bodies.
-        return None
+        return [case['status'] for case in self.cases]
 
     def _download_backwards(self, startat):
-        burl = 'http://www.index.va.gov/search/va/bva_search.jsp?RPP=50&RS=%d' % (startat,)
-        self.url = burl+'&DB='+'&DB='.join([str(n) for n in
-                                            range(datetime.today().year, 1997-1, -1)])
+        base_url = 'http://www.index.va.gov/search/va/bva_search.jsp?RPP=50&RS=%d' % (startat,)
+        date_range = range(datetime.today().year, 1997-1, -1)
+        self.url = base_url + '&DB='+'&DB='.join([str(n) for n in date_range])
         self.html = self._download()
 
