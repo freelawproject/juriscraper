@@ -4,8 +4,7 @@ that has incomplete meta data. You can see it in the example document.
 """
 
 from juriscraper.OpinionSite import OpinionSite
-import time
-from datetime import date
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -28,7 +27,7 @@ class Site(OpinionSite):
             else:
                 date_string = text_string.split(' ')[1]
                 date_string = date_string.strip().strip(',')
-                dates.append(date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%y'))))
+                dates.append(convert_date_string(date_string))
         return dates
 
     def _get_docket_numbers(self):
