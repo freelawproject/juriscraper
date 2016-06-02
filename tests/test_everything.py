@@ -9,7 +9,7 @@ import time
 import unittest
 import datetime
 
-sys.path.insert(0, os.path.abspath('..'))
+sys.path.insert(0, os.path.dirname(os.path.realpath(__file__)))
 
 from juriscraper.lib.importer import build_module_list
 from juriscraper.lib.date_utils import parse_dates, quarter, \
@@ -21,6 +21,7 @@ from juriscraper.lib.string_utils import (
 from juriscraper.opinions.united_states.state import massappct, pa, mass, nh, \
     colo
 from juriscraper.oral_args.united_states.federal_appellate import ca6
+
 
 class SlownessException(Exception):
     def __init__(self, message):
@@ -519,9 +520,9 @@ class StringUtilTest(unittest.TestCase):
             ['CUSANO',
              u'CUSANO'],
 
-             # Filter out invalid XML characters
-             [u'Special Counsel ex rel. Karla Saunders',
-              u'Special Counsel ex rel. Karla Saunders'],
+            # Filter out invalid XML characters
+            [u'Special Counsel ex rel. Karla Saunders',
+             u'Special Counsel ex rel. Karla Saunders'],
         ]
         for pair in test_pairs:
             self.assertEqual(harmonize(clean_string(pair[0])), pair[1])

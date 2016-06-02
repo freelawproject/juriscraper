@@ -1,4 +1,4 @@
-|Build Status| |Slack Status|
+|Build Status|
 
 What is This?
 =============
@@ -254,5 +254,3 @@ Juriscraper is licensed under the permissive BSD license.
 
 .. |Build Status| image:: https://travis-ci.org/freelawproject/juriscraper.svg?branch=master
    :target: https://travis-ci.org/freelawproject/juriscraper
-.. |Slack Status| image:: https://join-flp-talk.herokuapp.com/badge.svg
-   :target: https://join-flp-talk.herokuapp.com/
