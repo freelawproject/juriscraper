@@ -53,11 +53,6 @@ class DateParserTest(unittest.TestCase):
 
 class ScraperExampleTest(unittest.TestCase):
     def setUp(self):
-        # Change the working directory to that of the script
-        abs_path = os.path.abspath(__file__)
-        dir_name = os.path.dirname(abs_path)
-        os.chdir('%s/../..' % dir_name)
-
         # Disable logging
         logging.disable(logging.CRITICAL)
 
@@ -98,7 +93,7 @@ class ScraperExampleTest(unittest.TestCase):
                 # [-1] - module name
                 module_parts = module_string.split('.')
                 example_path = os.path.join(
-                    "juriscraper", "tests", "examples", module_parts[1],
+                    "tests", "examples", module_parts[1],
                     "united_states", module_parts[-1],
                 )
                 paths = glob.glob('%s_example*' % example_path)
