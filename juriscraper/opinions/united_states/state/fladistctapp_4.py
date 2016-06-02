@@ -3,6 +3,9 @@
 # Court Short Name: flaapp4
 # Author: Andrei Chelaru
 # Reviewer: mlr
+# Errors can be reported to "Laura" or "Brandon", who are the computer people
+#  for the court. The phone number is (561) 242-2000
+
 # History:
 # - 2014-07-22: Created by Andrei Chelaru
 # - 2014-10-17, mlr: Added support for days with "Special Issuances"
