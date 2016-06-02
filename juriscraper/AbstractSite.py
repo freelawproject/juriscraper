@@ -9,7 +9,7 @@ from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
     harmonize, clean_string, trunc, CaseNameTweaker
 )
-from juriscraper.tests import MockRequest
+from juriscraper.lib.test_utils import MockRequest
 from lxml import html
 import re
 import requests

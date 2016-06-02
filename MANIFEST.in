@@ -1,0 +1,2 @@
+include tests README.rst readme.md LICENSE Makefile requirements.txt update.txt
+recursive-include tests/examples *
