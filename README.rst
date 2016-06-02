@@ -55,17 +55,12 @@ First step: Install Python 2.7.x, then:
     sudo mv phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/phantomjs
     rm -r phantomjs-1.9.7*  # Cleanup
 
-    # Finally, install the code
-    sudo mkdir /usr/local/juriscraper  # or somewhere else or `mkvirtualenv juriscraper`
-    cd /usr/local/juriscraper
-    git clone https://github.com/freelawproject/juriscraper.git .
-    sudo pip install -r requirements.txt
-
-    # add Juriscraper to your python path (in Ubuntu/Debian)
-    sudo ln -s `pwd`/juriscraper `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`/juriscraper
+    # Finally, install the code.
+    pip install juriscraper
 
     # create a directory for logs (this can be skipped, and no logs will be created)
     sudo mkdir -p /var/log/juriscraper
+
 
 Joining the Project as a Developer
 ==================================
@@ -73,8 +68,8 @@ Joining the Project as a Developer
 We use a few tools pretty frequently while building these scrapers. The
 first is `a sister project called
 xpath-tester <https://github.com/mlissner/lxml-xpath-tester>`__ that
-helps debug XPath queries. In a good operating system, xpath-tester can
-be installed locally in a few minutes.
+helps debug XPath queries. xpath-tester can be installed locally in a few
+minutes.
 
 We also generally use Eclipse with the PyDev and Aptana tools installed
 or Intellij with PyCharm installed. These are useful because they allow
@@ -84,7 +79,7 @@ interested contributors.
 
 For scrapers to be merged:
 
--  ``python tests/tests.py`` must pass, listing the results for any new
+-  ``python setup.py test`` must pass, listing the results for any new
    scrapers. This will be run automatically by
    `Travis-CI <https://travis-ci.org/freelawproject/juriscraper>`__.
 -  a \*\_example\* file must be included in the ``tests/examples``
@@ -96,24 +91,13 @@ For scrapers to be merged:
    speed warnings during tests on a modern machine.
 
 When you're ready to develop a scraper, get in touch, and we'll find you
-one that makes sense and that nobody else is working on. If you're
-interested, we have `a public slack channel you can
-join <https://join-flp-talk.herokuapp.com/>`__, where we can chat. A
-summary of the day's errors and warnings is also sent to the
-`Juriscraper email
-list <http://lists.freelawproject.org/cgi-bin/mailman/listinfo/juriscraper>`__,
-so by joining that you can help us identify failing scrapers. It also
-has `an
-archive <http://lists.freelawproject.org/pipermail/juriscraper/>`__, if
-you rather not join another mailing list. Finally, we have `a wiki
+a scraper that makes sense and that nobody else is working on. We have `a wiki
 list <https://github.com/freelawproject/juriscraper/wiki/Court-Websites>`__
 of courts that you can browse yourself. There are templates for new
 scrapers `here (for
-opinions) <https://github.com/freelawproject/juriscraper/blob/master/opinions/opinion_template.py>`__
+opinions) <https://github.com/freelawproject/juriscraper/blob/master/juriscraper/opinions/opinion_template.py>`__
 and `here (for oral
-arguments) <https://github.com/freelawproject/juriscraper/blob/master/oral_args/oral_argument_template.py>`__.
-Those are a lot of options, so we won't blame you if you just want to
-get in touch instead of figuring it all out yourself.
+arguments) <https://github.com/freelawproject/juriscraper/blob/master/juriscraper/oral_args/oral_argument_template.py>`__.
 
 When you're done with your scraper, fork this repository, push your
 changes into your fork, and then send a pull request for your changes.
@@ -127,7 +111,23 @@ license is for your protection as a Contributor as well as the
 protection of Free Law Project and our users; it does not change your
 rights to use your own Contributions for any other purpose.
 
-|Slack Status|
+
+Getting Setup as a Developer
+============================
+
+To get set up as a developer of Juriscraper, you'll want to install the code
+from git. To do that, install the dependencies and phantomjs as described above.
+Instead of installing Juriscraper via pip, do the following:
+
+::
+
+    git clone https://github.com/freelawproject/juriscraper.git .
+    pip install -r requirements.txt
+    python setup.py install
+
+    # add Juriscraper to your python path (in Ubuntu/Debian)
+    sudo ln -s `pwd`/juriscraper `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`/juriscraper
+
 
 Usage
 =====
@@ -156,8 +156,8 @@ follows:
         print opinion
 
 That will print out all the current meta data for a site, including
-links to the objects you wish to download (typically opinions). If you
-download those opinions, we also recommend running the
+links to the objects you wish to download (typically opinions or oral
+arguments). If you download those opinions, we also recommend running the
 ``_cleanup_content()`` method against the items that you download (PDFs,
 HTML, etc.). See the ``sample_caller.py`` for an example and see
 ``_cleanup_content()`` for an explanation of what it does.
@@ -190,14 +190,14 @@ if they're not known before starting the scraper. For example:
 
 This can be useful if you wish to create a command line scraper that
 iterates over all courts of a certain jurisdiction that is provided by a
-script or a user. See ``lib/importer.py`` for an example that's used in
+script. See ``lib/importer.py`` for an example that's used in
 the sample caller.
 
 Tests
 =====
 
 We got that! You can (and should) run the tests with
-``python tests/tests.py``. This will iterate over all of the
+``python setup.py test``. This will iterate over all of the
 ``*_example*`` files and run the scrapers against them.
 
 In addition, we use `Travis-CI <https://travis-ci.org/>`__ to
@@ -222,11 +222,12 @@ Version History
    courts.
 -  0.9 - Supports all state courts of last resort (typically the
    "Supreme" court)
+-  1.0 - Support opinions from for all possible federal bankruptcy
+   appellate panels (9th and 10th Cir.)
 
 **Current**
 
--  1.0 - Support opinions from for all possible federal bankruptcy
-   appellate panels (9th and 10th Cir.)
+-  1.1.4 - Major code reorganization and first release on the Python Package Index (PyPi)
 
 **Future Roadmap**
 
@@ -246,6 +247,29 @@ Version History
 **Beyond** - Support video, additional oral argument audio, and
 transcripts everywhere available - Add other countries, starting with
 courts issuing opinions in English.
+
+
+Deployment
+==========
+
+1. Update version info in ``juriscraper/__init__.py``
+
+1. Install the requirements in requirements_dev.txt
+
+1. Set up a config file at ~/.pypirc
+
+1. Generate a distribution
+
+    ::
+
+        python setup.py bdist_wheel
+
+1. Upload the distribution
+
+    ::
+
+        twine upload dist/* -r pypi (or pypitest)
+
 
 License
 =======
