@@ -65,8 +65,6 @@ __all__ = [
     'michctapp_p',
     'michctapp_u',
     'minn',
-    'minnctapp_p',
-    'minnctapp_u',
     'miss_beginningofyear',
     'miss',
     'missctapp_beginningofyear',

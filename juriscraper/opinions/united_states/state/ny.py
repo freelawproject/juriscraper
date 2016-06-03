@@ -5,12 +5,14 @@ Court Short Name: NY
 History:
  2014-07-04: Created by Andrei Chelaru, reviewed by mlr.
  2015-10-23: Parts rewritten by mlr.
+ 2016-05-04: Updated by arderyp to handle typos in docket string format
 """
 
+import re
 from lxml import html
 from lxml.html import html5parser, fromstring, tostring
-import re
 from datetime import date
+
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
 
@@ -70,9 +72,23 @@ class Site(OpinionSite):
         docket_numbers = []
         for cell in self.html.xpath('%s]/td[1]' % self.FOUR_CELLS_SUB_PATH):
             text_node_strings = ', '.join(cell.xpath('.//text()'))
-            if re.search(r'No\.', text_node_strings):
-                docket_numbers.append(text_node_strings)
+            if re.search(r'No\.?\,?', text_node_strings):
+                docket_numbers.append(self._sanitize_docket_string(text_node_strings))
         return docket_numbers
+
+    def _sanitize_docket_string(self, raw_docket_string):
+        """Handle typos and non-standard docket number strings
+
+        Dockets on this page should be in format of "No. #",
+        but sometimes they forget the period, or use a comma
+        instead.  Stanrdize all to use period, then all of the
+        "No. " will be stripped off via the global docket sanitation.
+        Regex in _get_docket_numbers() may have to be adjusted if they
+        come up with new typos.
+        """
+        if 'No.' not in raw_docket_string:
+            return raw_docket_string.replace('No ', 'No.').replace('No,', 'No.')
+        return raw_docket_string
 
     def _row_contains_date(self, row):
         try:

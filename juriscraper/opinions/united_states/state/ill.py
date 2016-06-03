@@ -15,11 +15,11 @@ class Site(OpinionSite):
         self.url = 'http://www.state.il.us/court/Opinions/recent_supreme.asp'
 
     def _get_download_urls(self):
-        path = '%s//a/@href' % self._get_decisions_table_cell_path(5)
+        path = '%s//a[1]/@href' % self._get_decisions_table_cell_path(5)
         return [href for href in self.html.xpath(path)]
 
     def _get_case_names(self):
-        path = '%s//a/text()' % self._get_decisions_table_cell_path(5)
+        path = '%s//a[1]/text()' % self._get_decisions_table_cell_path(5)
         return [text for text in self.html.xpath(path)]
 
     def _get_case_dates(self):

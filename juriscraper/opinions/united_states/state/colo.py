@@ -7,11 +7,9 @@ Reviewer: mlr
 Date created: 2014-07-11
 """
 
-import re
 import certifi
 import requests
 from lxml import html
-from datetime import date
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
@@ -19,168 +17,184 @@ from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
+    cases = []
+    sub_page_opinion_link_path = "//a[@class='Head articletitle']"
+    parent_summary_block_path = 'parent::p/following-sibling::div[@class="Normal"][1]'
+
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
-        self.url = 'http://www.cobar.org/opinions/index.cfm?courtid=2'
-        # For testing
-        #self.url = 'http://www.cobar.org/opinions/opinionlist.cfm?casedate=6/30/2014&courtid=2'
         self.court_id = self.__module__
-        self.title_regex = re.compile(r'(?P<neutral_citations>.*?)\. '
-                                      r'(?P<docket_numbers>(?:Nos?\.)?.*\d{1,2})(\.)? '
-                                      r'(?P<case_names>.*)\.')
-        self.path = "//table//td[1]/ul/li[position() <= 5]/strong/a"
+        self.url = "http://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions"
+        self.base_path = "//div[@id='dnn_ctr2509_ModuleContent']/ul/li/a"
         # dummy sequence to force one call to _download_backwards
         self.back_scrape_iterable = ['dummy']
 
     def _download(self, request_dict={}):
-        if self.method == 'LOCAL':
-            # Note that this is returning a list of HTML tree-date pairs.
-            html_trees = [
-                (
-                    super(Site, self)._download(request_dict=request_dict),
-                    date.today(),
-                ),
-            ]
-        else:
-            html_l = super(Site, self)._download(request_dict)
-            s = requests.session()
-            html_trees = []
-            for ahref in html_l.xpath(self.path):
-                text = ahref.xpath("./text()")[0]
-                url = ahref.xpath("./@href")[0]
-                parsed_date = convert_date_string(text)
-                logger.info("Getting sub-url: %s" % url)
-                r = s.get(
-                    url,
-                    headers={'User-Agent': 'Juriscraper'},
-                    verify=certifi.where(),
-                    **request_dict
-                )
+        html_l = super(Site, self)._download(request_dict)
+        self.session = requests.session()
+        self.request_dict = request_dict
+        html_trees = []
 
-                r.raise_for_status()
+        # Loop over sub-pages
+        for ahref in html_l.xpath(self.base_path):
+            # If testing, quit after first 2 samples
+            # PLEASE NOTE: if adding a unique test case,
+            # you will want to edit the example page's
+            # HTML if need be to make sure that your
+            # specific test subpage date falls within the
+            # first three links on the self.url list page,
+            # otherwise it won't be tested.
+            if self.method == 'LOCAL' and len(html_trees) > 2:
+                break
 
-                # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
-                if r.encoding == 'ISO-8859-1':
-                    r.encoding = 'cp1252'
+            date_string = ahref.xpath("./text()")[0]
+            url = ahref.xpath("./@href")[0]
+            date_obj = convert_date_string(date_string)
+            logger.info("Getting sub-url: %s" % url)
 
-                # Grab the content
-                text = self._clean_text(r.text)
-                html_tree = html.fromstring(text)
-                html_tree.make_links_absolute(self.url)
+            # Fetch sub-page's content
+            request = self._get_resource(url)
+            text = self._clean_text(request.text)
+            html_tree = html.fromstring(text)
+            html_tree.make_links_absolute(self.url)
 
-                remove_anchors = lambda url: url.split('#')[0]
-                html_tree.rewrite_links(remove_anchors)
-                html_trees.append((html_tree, parsed_date))
+            # Process the content
+            remove_anchors = lambda url: url.split('#')[0]
+            html_tree.rewrite_links(remove_anchors)
+            self._extract_cases_from_sub_page(html_tree, date_obj)
+            html_trees.append((html_tree, date_obj))
+
         return html_trees
 
+    def _get_resource(self, resource_url):
+        request = self.session.get(
+            resource_url,
+            headers={'User-Agent': 'Juriscraper'},
+            verify=certifi.where(),
+            **self.request_dict
+        )
+        request.raise_for_status()
+        if request.encoding == 'ISO-8859-1':
+            request.encoding = 'cp1252'
+        return request
+
+    def _extract_cases_from_sub_page(self, html_tree, date_obj):
+        for anchor in html_tree.xpath("//a[@class='Head articletitle']"):
+            text = self._extract_text_from_anchor(anchor)
+            self.cases.append({
+                'date': date_obj,
+                'status': 'Published',
+                'name': self._extract_name_from_anchor(anchor),
+                'url': self._extract_url_from_anchor(anchor),
+                'docket': self._extract_docket_from_text(text),
+                'citation': self._extract_citation_from_text(text),
+                'summary': self._extract_summary_relative_to_anchor(anchor),
+                'nature': self._extract_nature_relative_to_anchor(anchor),
+            })
+
+    def _extract_docket_from_text(self, text):
+        return text.split('No. ')[1].split('.')[0].rstrip('.').replace(' &', ',')
+
+    def _extract_citation_from_text(self, text):
+        return text.split('.')[0].strip()
+
+    def _extract_text_from_anchor(self, anchor):
+        text = anchor.xpath('text()')[0]
+        text = text.replace('Nos.', 'No.')
+        if 'No.' in text and 'No. ' not in text:
+            text = text.replace('No.', 'No. ')
+        return text
+
+    def _extract_url_from_anchor(self, anchor):
+        return anchor.xpath('@href')[0]
+
+    def _extract_name_from_anchor(self, anchor):
+        text = self._extract_text_from_anchor(anchor)
+        try:
+            name = text.split('. ', 3)[3]
+        except:
+            name = self._get_missing_name_from_resource(self._extract_url_from_anchor(anchor))
+        return name.strip().rstrip('.')
+
+    def _extract_summary_relative_to_anchor(self, anchor):
+        parts = anchor.xpath('%s/p' % self.parent_summary_block_path)
+        return ' '.join([part.text_content().strip() for part in parts])
+
+    def _extract_nature_relative_to_anchor(self, anchor):
+        """Extract italicized nature summary that appears directly after download url
+
+        The court uses a lot of different html method of presenting this information.
+        If a "nature" field is showing blank, it could be that they are using a new
+        html path, which should be added to the path_patterns list below.
+        """
+        nature = ''
+
+        # The order of this list matters.  Generally, put
+        # the more complex paths as the top
+        path_patterns = [
+            '%s/p/strong/em/span/text()',
+            '%s/p/em/text()',
+            '%s/p/em/span/text()',
+            '%s/p/i/span/text()',
+            '%s/p/i/text()',
+            '%s/em/text()',
+            '%s/em/span/text()',
+            '%s/p/span/i/text()',
+            '%s/span/em/text()',
+            '%s/p/strong/em/text()',
+            '%s/strong/em/text()',
+            '%s/span/text()',
+            '%s/p/span/em/text()',
+        ]
+        for pattern in path_patterns:
+            try:
+                nature = anchor.xpath(pattern % self.parent_summary_block_path)[0]
+                break
+            except:
+                continue
+        return nature.strip().rstrip('.')
+
+    def _get_missing_name_from_resource(self, resource_url):
+        """Extract case name from case document
+
+        This is a fall back method that should only be called
+        if the clerk made a mistake and forgot to put the case
+        name on the resource/opinion list page. example:
+        http://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions
+        """
+        request = self._get_resource(resource_url)
+        text = self._clean_text(request.text)
+        html_tree = html.fromstring(text)
+        parts = html_tree.xpath('//p/strong[starts-with(text(), "Plaintiff-Appellee:")]/parent::p/text()')
+        return ' '.join(part.strip() for part in parts if part.strip())
+
     def _get_case_names(self):
-        return self._get_data_by_grouping_name('case_names')
+        return [case['name'] for case in self.cases]
 
     def _get_download_urls(self):
-        path = "//div[@id='opinion']/p/a/@href[contains(., 'opinion.cfm')]"
-        urls = []
-        for tree, _ in self.html:
-            urls += list(tree.xpath(path))
-        return urls
+        return [case['url'] for case in self.cases]
 
     def _get_case_dates(self):
-        case_dates = []
-        for tree, parsed_date in self.html:
-            count = len(tree.xpath('//div[@id="opinion"]/p/a/b//text()'))
-            case_dates += [parsed_date] * count
-        return case_dates
+        return [case['date'] for case in self.cases]
 
     def _get_docket_numbers(self):
-        return self._get_data_by_grouping_name('docket_numbers')
+        return [case['docket'] for case in self.cases]
 
     def _get_neutral_citations(self):
-        return self._get_data_by_grouping_name('neutral_citations')
+        return [case['citation'] for case in self.cases]
 
     def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
+        return [case['status'] for case in self.cases]
 
-    # Removed by mlr on 2015-10-16. Unfortunately, this code is complicated and
-    # fails in practice. There's no easy way to identify what's a paragraph,
-    # and so covering every corner case is near impossible. We can bring it back
-    # someday, but make sure it works for 2015-09-14 as well as 2015-6-1.
-    # def _get_summaries(self):
-    #     path_to_all_paras = '//div[@id="opinion"]/p'
-    #     summaries = []
-    #     for tree, _ in self.html:
-    #         summary_parts = ''
-    #         paragraphs = tree.xpath(path_to_all_paras)
-    #         for elem in paragraphs:
-    #             el_summary = ''
-    #             # Check if it has a descendant with font[@size="2"].
-    #             for descendant in ('./font[@size="2"]',
-    #                                './font[@size="1"]',
-    #                                './font[@sizes="2"]'):
-    #                 el = elem.xpath(descendant)
-    #                 if el:
-    #                     # If so, then it's a summary paragraph.
-    #                     el_summary += '<p>%s</p>\n' % clean_string(html.tostring(el[0], method='text', encoding='unicode'))
-    #                     break
-    #             # Check if it's a title paragraph
-    #             if elem.xpath('./a/b//text()'):
-    #                 # If so, append previous values and start a new summary item
-    #                 if summary_parts:
-    #                     summaries.append(summary_parts)
-    #                     summary_parts = ''
-    #                 if el_summary:
-    #                     summaries.append(el_summary)
-    #                     el_summary = ''
-    #             if el_summary:
-    #                 summary_parts += el_summary
-    #
-    #         # Append the tailing summary
-    #         if summary_parts:
-    #             # On days with no content, this winds up blank and shouldn't be
-    #             # appended.
-    #             summaries.append(summary_parts)
-    #     return summaries
+    def _get_summaries(self):
+        return [case['summary'] for case in self.cases]
 
     def _get_nature_of_suit(self):
-        path = '//div[@id="opinion"]//b/i/text()'
-        natures = []
-        for tree, _ in self.html:
-            for nature_str in tree.xpath(path):
-                natures.append(', '.join(nature_str.split(u'—')))
-        return natures
-
-    def _get_data_by_grouping_name(self, group_name):
-        """Returns the requested meta data from the HTML by finding the titles
-        and extracting the requested piece of meta data.
-
-        Titles look like:
-           2014 COA 80. No. 07CA1217. People v. Schupper.
-        """
-        path = '//div[@id="opinion"]/p/a/b//text()'
-        meta_data = []
-        for tree, _ in self.html:
-            for title in tree.xpath(path):
-                title = ' '.join(title.split())
-                value = self.title_regex.search(title).group(group_name)
-                if group_name == 'docket_numbers':
-                    # Dual docket numbers should be comma delimited, not ampersand
-                    value = value.replace(' & ', ', ')
-                    #Clean up typos where clerk forgot space between period and number
-                    if '.' in value and '. ' not in value:
-                        value = value.replace('.', '. ')
-                meta_data.append(value)
-        return meta_data
-
-    @staticmethod
-    def cleanup_content(content):
-        tree = html.fromstring(content)
-        return html.tostring(
-            tree.xpath("//*[@id='opinion']")[0],
-            pretty_print=True,
-            encoding='unicode'
-        )
+        return [case['nature'] for case in self.cases]
 
     def _download_backwards(self, _):
         # dummy backscrape parameter is ignored
         # should be called only once as it parses the whole page
         # and all subpages on every call
-        self.path = "//table//td[1]/ul/li/strong/a"
+        self.base_path = "//table//td[1]/ul/li/strong/a"
         self.html = self._download()
