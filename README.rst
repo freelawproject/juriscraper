@@ -112,7 +112,7 @@ rights to use your own Contributions for any other purpose.
 
 
 Getting Set Up as a Developer
-============================
+=============================
 
 To get set up as a developer of Juriscraper, you'll want to install the code
 from git. To do that, install the dependencies and phantomjs as described above.
