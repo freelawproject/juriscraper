@@ -48,7 +48,6 @@ First step: Install Python 2.7.x, then:
     sudo apt-get install libxml2-dev libxslt-dev  # In Ubuntu prior to 14.04 this is libxslt-devel
 
     # Install PhantomJS
-    sudo pip install selenium
     wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
     tar -x -f phantomjs-1.9.7-linux-x86_64.tar.bz2
     sudo mkdir -p /usr/local/phantomjs
@@ -112,7 +111,7 @@ protection of Free Law Project and our users; it does not change your
 rights to use your own Contributions for any other purpose.
 
 
-Getting Setup as a Developer
+Getting Set Up as a Developer
 ============================
 
 To get set up as a developer of Juriscraper, you'll want to install the code
@@ -122,11 +121,7 @@ Instead of installing Juriscraper via pip, do the following:
 ::
 
     git clone https://github.com/freelawproject/juriscraper.git .
-    pip install -r requirements.txt
     python setup.py install
-
-    # add Juriscraper to your python path (in Ubuntu/Debian)
-    sudo ln -s `pwd`/juriscraper `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`/juriscraper
 
 
 Usage
@@ -227,7 +222,7 @@ Version History
 
 **Current**
 
--  1.1.4 - Major code reorganization and first release on the Python Package Index (PyPi)
+-  1.1.* - Major code reorganization and first release on the Python Package Index (PyPi)
 
 **Future Roadmap**
 
@@ -251,6 +246,10 @@ courts issuing opinions in English.
 
 Deployment
 ==========
+
+Deployment to PyPi should happen automatically by Travis CI whenever a new tag is created in Github on the master branch. It will fail if the version has not been updated or if Travis CI failed.
+
+If you wish to create a new version manually, the process is:
 
 1. Update version info in ``juriscraper/__init__.py``
 
