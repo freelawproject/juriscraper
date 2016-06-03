@@ -1,12 +1,6 @@
 language: python
 python:
 - '2.7'
-install:
-- ln -s `pwd` $(dirname `which python`)/../lib/python2.7/site-packages/juriscraper
-- sudo mkdir -p /var/log/juriscraper
-- sudo touch /var/log/juriscraper/debug.log
-- sudo chmod -R 777 /var/log/juriscraper
-- pip install -r requirements.txt
 script:
 - python setup.py test
 cache: pip
