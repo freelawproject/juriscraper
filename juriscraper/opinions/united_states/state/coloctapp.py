@@ -1,14 +1,9 @@
-# coding=utf-8
 """Scraper for Colorado Appeals Court
 CourtID: coloctapp
 Court Short Name: Colo. Ct. App.
-History:
- - 2014-07-11, author: Asadullah Baig<asadullahbeg@outlook.com>
- - Reviewer: mlr
- - 2015-07-30: Fixed by mlr.
 """
 
-from juriscraper.opinions.united_states.state import colo
+import colo
 
 
 class Site(colo.Site):

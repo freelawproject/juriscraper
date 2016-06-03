@@ -25,7 +25,8 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         # Cases before 1997 do not have a docket number to parse.
-        url_query = '&DB='.join([str(n) for n in range(datetime.today().year, 1997-1, -1)])
+        url_query = '&DB='.join(
+            [str(n) for n in range(datetime.today().year, 1997 - 1, -1)])
         self.url = 'http://www.index.va.gov/search/va/bva_search.jsp?RPP=50&RS=1&DB=%s' % url_query
         self.pager_stop = False
         self.back_scrape_iterable = self.pager(50)
@@ -43,20 +44,23 @@ class Site(OpinionSite):
 
     def _extract_case_data_from_html(self, html):
         """Build list of data dictionaries, one dictionary per case."""
-        regex = re.compile('^Citation Nr: (.*) Decision Date: (.*) Archive Date: (.*) DOCKET NO. ([-0-9 ]+)')
+        regex = re.compile(
+            '^Citation Nr: (.*) Decision Date: (.*) Archive Date: (.*) DOCKET NO. ([-0-9 ]+)')
 
         for result in html.xpath('//div[@id="results-area"]/div/div'):
             text = result.xpath('./div[2]/text()')[0].strip()
             try:
                 (citation, date, docket) = regex.match(text).group(1, 2, 4)
             except:
-                raise Exception('regex failure in _extract_case_data_from_html method of bva scraper')
+                raise Exception(
+                    'regex failure in _extract_case_data_from_html method of bva scraper')
 
             # There is a history to this, but the long story short is that we
             # are using the docket number in the name field intentionally.
             self.cases.append({
                 'name': docket,
-                'url': result.xpath('./div/span/a/@href')[0].lstrip('view.jsp?FV='),
+                'url': result.xpath('./div/span/a/@href')[0].lstrip(
+                    'view.jsp?FV='),
                 'date': convert_date_string(date),
                 'status': 'Unpublished',
                 'docket': docket,
@@ -82,8 +86,9 @@ class Site(OpinionSite):
         return [case['status'] for case in self.cases]
 
     def _download_backwards(self, startat):
-        base_url = 'http://www.index.va.gov/search/va/bva_search.jsp?RPP=50&RS=%d' % (startat,)
-        date_range = range(datetime.today().year, 1997-1, -1)
-        self.url = base_url + '&DB='+'&DB='.join([str(n) for n in date_range])
+        base_url = 'http://www.index.va.gov/search/va/bva_search.jsp?RPP=50&RS=%d' % (
+        startat,)
+        date_range = range(datetime.today().year, 1997 - 1, -1)
+        self.url = base_url + '&DB=' + '&DB='.join([str(n) for n in date_range])
         self.html = self._download()
 

@@ -37,7 +37,8 @@ class Site(OpinionSite):
         return html_tree
 
     def _get_case_names(self):
-        path = '%s and %s]' % (self.FOUR_CELLS_SUB_PATH, self.DOWNLOAD_URL_SUB_PATH)
+        path = '%s and %s]' % (
+            self.FOUR_CELLS_SUB_PATH, self.DOWNLOAD_URL_SUB_PATH)
         case_names = []
         for element in self.html.xpath(path):
             case_name_parts = []
@@ -54,7 +55,10 @@ class Site(OpinionSite):
         return case_names
 
     def _get_download_urls(self):
-        return self.html.xpath('%s]/%s' % (self.FOUR_CELLS_SUB_PATH, self.DOWNLOAD_URL_SUB_PATH))
+        return self.html.xpath('%s]/%s' % (
+            self.FOUR_CELLS_SUB_PATH,
+            self.DOWNLOAD_URL_SUB_PATH
+        ))
 
     def _get_case_dates(self):
         case_dates = []
@@ -73,7 +77,8 @@ class Site(OpinionSite):
         for cell in self.html.xpath('%s]/td[1]' % self.FOUR_CELLS_SUB_PATH):
             text_node_strings = ', '.join(cell.xpath('.//text()'))
             if re.search(r'No\.?\,?', text_node_strings):
-                docket_numbers.append(self._sanitize_docket_string(text_node_strings))
+                docket_numbers.append(
+                    self._sanitize_docket_string(text_node_strings))
         return docket_numbers
 
     def _sanitize_docket_string(self, raw_docket_string):
@@ -98,7 +103,8 @@ class Site(OpinionSite):
         return True
 
     def _row_contains_opinion(self, row):
-        return row.xpath('./td[4]') and row.xpath('./%s' % self.DOWNLOAD_URL_SUB_PATH)
+        return row.xpath('./td[4]') and row.xpath(
+            './%s' % self.DOWNLOAD_URL_SUB_PATH)
 
     def _date_row_data_to_string(self, row):
         return html.tostring(row, method='text', encoding='unicode').strip()

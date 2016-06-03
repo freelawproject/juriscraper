@@ -62,7 +62,7 @@ def scrape_court(site, binaries=False):
             data = site.cleanup_content(data)
 
         # Normally, you'd do your save routines here...
-        v_print(1, 'Adding new item:')
+        v_print(1, '\nAdding new item:')
         for k, v in item.items():
             if type(v) == unicode:
                 value = trunc(v, 200, ellipsis='...')
@@ -71,7 +71,7 @@ def scrape_court(site, binaries=False):
                 # Dates and such...
                 v_print(1, '    %s: %s' % (k, v))
 
-    v_print(3, '%s: Successfully crawled.' % site.court_id)
+    v_print(3, '\n%s: Successfully crawled %d items.' % (site.court_id, len(site)))
 
 
 v_print = None

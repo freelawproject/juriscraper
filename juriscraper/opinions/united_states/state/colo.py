@@ -2,9 +2,9 @@
 """Scraper for Colorado Supreme Court
 CourtID: colo
 Court Short Name: Colo.
-Author: Asadullah Baig <asadullahbeg@outlook.com>
+Author: Philip Ardery
 Reviewer: mlr
-Date created: 2014-07-11
+Date created: 2016-06-03
 """
 
 import certifi
@@ -92,20 +92,24 @@ class Site(OpinionSite):
                 'nature': self._extract_nature_relative_to_anchor(anchor),
             })
 
-    def _extract_docket_from_text(self, text):
+    @staticmethod
+    def _extract_docket_from_text(text):
         return text.split('No. ')[1].split('.')[0].rstrip('.').replace(' &', ',')
 
-    def _extract_citation_from_text(self, text):
+    @staticmethod
+    def _extract_citation_from_text(text):
         return text.split('.')[0].strip()
 
-    def _extract_text_from_anchor(self, anchor):
+    @staticmethod
+    def _extract_text_from_anchor(anchor):
         text = anchor.xpath('text()')[0]
         text = text.replace('Nos.', 'No.')
         if 'No.' in text and 'No. ' not in text:
             text = text.replace('No.', 'No. ')
         return text
 
-    def _extract_url_from_anchor(self, anchor):
+    @staticmethod
+    def _extract_url_from_anchor(anchor):
         return anchor.xpath('@href')[0]
 
     def _extract_name_from_anchor(self, anchor):
@@ -113,7 +117,8 @@ class Site(OpinionSite):
         try:
             name = text.split('. ', 3)[3]
         except:
-            name = self._get_missing_name_from_resource(self._extract_url_from_anchor(anchor))
+            name = self._get_missing_name_from_resource(
+                self._extract_url_from_anchor(anchor))
         return name.strip().rstrip('.')
 
     def _extract_summary_relative_to_anchor(self, anchor):
@@ -148,7 +153,8 @@ class Site(OpinionSite):
         ]
         for pattern in path_patterns:
             try:
-                nature = anchor.xpath(pattern % self.parent_summary_block_path)[0]
+                nature = anchor.xpath(pattern % self.parent_summary_block_path)[
+                    0]
                 break
             except:
                 continue
@@ -165,7 +171,8 @@ class Site(OpinionSite):
         request = self._get_resource(resource_url)
         text = self._clean_text(request.text)
         html_tree = html.fromstring(text)
-        parts = html_tree.xpath('//p/strong[starts-with(text(), "Plaintiff-Appellee:")]/parent::p/text()')
+        parts = html_tree.xpath(
+            '//p/strong[starts-with(text(), "Plaintiff-Appellee:")]/parent::p/text()')
         return ' '.join(part.strip() for part in parts if part.strip())
 
     def _get_case_names(self):
@@ -191,6 +198,16 @@ class Site(OpinionSite):
 
     def _get_nature_of_suit(self):
         return [case['nature'] for case in self.cases]
+
+    @staticmethod
+    def cleanup_content(content):
+        tree = html.fromstring(content)
+        core_element = tree.xpath('//div[@id="dnn_ctr2513_ModuleContent"]')[0]
+        return html.tostring(
+            core_element,
+            pretty_print=True,
+            encoding='unicode'
+        )
 
     def _download_backwards(self, _):
         # dummy backscrape parameter is ignored
