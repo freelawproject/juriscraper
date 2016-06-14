@@ -4,11 +4,13 @@ Court Short Name: R.I.
 Author: Brian W. Carver
 Date created: 2013-08-10
 """
+
+import re
 from datetime import datetime
 
 from juriscraper.AbstractSite import InsanityException
 from juriscraper.OpinionSite import OpinionSite
-import re
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -35,27 +37,30 @@ class Site(OpinionSite):
         # This regex should be fairly clear, but the question mark at the end
         # might be confusing. That is there to make the date match optional,
         # because sometimes they forget it.
-        self.regex = '(.*?)((?:Nos?\.)?\s+(?:\d{2,}[-,]\d+,?\s?)+)(\(.*\)?)?'
+        self.regex = '(.*?)((?:Nos?\.)\s+(?:((\d{2,}[-,])?\d+|\d{3}),?\s?)+)(\(.*\)?)?'
 
     @staticmethod
-    def _normalize_dockets(dockets):
-        #This page lists these about five different ways, normalizing:
-        dockets = re.sub(r'Nos?\.', '', dockets)
+    def _normalize_dockets(dockets_raw_string):
+        """Normalize various different docket formats that court publishes"""
 
         result = []
-        for docket in dockets.split(", "):
+        dockets = re.sub(r'Nos?\.', '', dockets_raw_string).split(",")
+
+        for docket in dockets:
             docket = docket.strip()
-            if re.match(r"^\d+$", docket): # number
+
+            if re.match(r"^\d+$", docket):
+                # format: "number"
                 result.append(docket)
-            elif re.match(r"^\d+\-\d+$", docket): # number-number
+            elif re.match(r"^\d+\-\d+$", docket):
+                # format: "number-number"
                 result.append(docket)
-            elif re.match(r"^\d+\,\d+$", docket): # number,number
-                # fix the docket number
+            elif re.match(r"^\d+\,\d+$", docket):
+                # format: "number,number"
                 docket = docket.replace(",", "-")
                 result.append(docket)
             else:
-                raise InsanityException("Unknown docket number format '%s'"
-                                        % (docket,))
+                raise InsanityException("Unknown docket number format '%s'" % (docket,))
 
         # reassemble the docket numbers into one string
         return ", ".join(result)
@@ -85,16 +90,12 @@ class Site(OpinionSite):
                 if re.match(date_regex, td1) and re.match(self.regex, text[0]):
                     search = re.search(self.regex, text[0], re.MULTILINE)
                     case_name = search.group(1)
-                    dockets = search.group(2)
-                    dockets = self._normalize_dockets(dockets)
-                    date_string = td1.strip()
-                    case_date = datetime.strptime(date_string,
-                                                  '(%B %d, %Y)').date()
-                    results.append({'date' : case_date,
-                                    'url' : href,
-                                    'docket' : dockets,
-                                    'summary' : "\n".join(text[1:]),
-                                    'case_name' : case_name})
+                    dockets = self._normalize_dockets(search.group(2))
+                    results.append({'date': convert_date_string(td1),
+                                    'url': href,
+                                    'docket': dockets,
+                                    'summary': "\n".join(text[1:]),
+                                    'case_name': case_name})
                 else:
                     # Special case 2:
                     # td1 contains a very long case name
@@ -104,33 +105,27 @@ class Site(OpinionSite):
                     # use link text as docket number
                     link_text = self._normalize_dockets(link_text)
                     # use date from previous record
-                    results.append({'date' : results[-1]['date'],
-                                    'url' : href,
-                                    'docket' : link_text,
-                                    'summary' : "\n".join(text),
-                                    'case_name' : case_name})
+                    results.append({'date': results[-1]['date'],
+                                    'url': href,
+                                    'docket': link_text,
+                                    'summary': "\n".join(text),
+                                    'case_name': case_name})
             else:
                 search = re.search(self.regex, td1, re.MULTILINE)
                 case_name = search.group(1)
-                dockets = search.group(2)
-                dockets = self._normalize_dockets(dockets)
-                date_string = search.group(3)
+                dockets = self._normalize_dockets(search.group(2))
+                date_string = search.group(5)
+
                 if date_string:
-                    date_string = date_string.strip()
-                    # remove parentheses
-                    if date_string[0] == '(':
-                        date_string = date_string[1:]
-                    if date_string[-1] == ')':
-                        date_string = date_string[:-1]
-                    case_date = datetime.strptime(date_string, '%B %d, %Y').date()
+                    case_date = convert_date_string(date_string)
                 else:
                     # if no date, use date from previous record
                     case_date = results[-1]['date']
-                results.append({'date' : case_date,
-                                'url' : href,
-                                'docket' : dockets,
-                                'summary' : "\n".join(text),
-                                'case_name' : case_name})
+                results.append({'date': case_date,
+                                'url': href,
+                                'docket': dockets,
+                                'summary': "\n".join(text),
+                                'case_name': case_name})
         return results
 
     def _load(self):
