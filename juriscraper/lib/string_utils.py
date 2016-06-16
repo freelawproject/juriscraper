@@ -434,7 +434,10 @@ def trunc(s, length, ellipsis=None):
 
 
 def convert_date_string(date_string):
-    """Convert date string into standard date object"""
+    """Sanitize date string and convert into standard date object"""
+    date_string = date_string.replace('(', '')
+    date_string = date_string.replace(')', '')
+    date_string = date_string.strip()
     return parser.parse(date_string).date()
 
 

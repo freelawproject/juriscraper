@@ -3,7 +3,7 @@ CourtID: coloctapp
 Court Short Name: Colo. Ct. App.
 """
 
-import colo
+from juriscraper.opinions.united_states.state import colo
 
 
 class Site(colo.Site):

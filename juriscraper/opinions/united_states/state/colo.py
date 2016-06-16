@@ -7,6 +7,7 @@ Reviewer: mlr
 Date created: 2016-06-03
 """
 
+import re
 import certifi
 import requests
 from lxml import html
@@ -14,12 +15,17 @@ from lxml import html
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.AbstractSite import InsanityException
 
 
 class Site(OpinionSite):
     cases = []
     sub_page_opinion_link_path = "//a[@class='Head articletitle']"
     parent_summary_block_path = 'parent::p/following-sibling::div[@class="Normal"][1]'
+
+    # I'm certain this can be done more professionally,
+    # but I (arderyp) am not gifted at the art of regex
+    regex = '(\d+)\s+(\w+)\s+(\d+\.?)\s+((Nos?\.?\s+)?((\w{5,8}\.?)(((\s+\&|\,)\s+\w{5,8})+)?))\.?(\s+)?(.*)'
 
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
@@ -37,14 +43,18 @@ class Site(OpinionSite):
 
         # Loop over sub-pages
         for ahref in html_l.xpath(self.base_path):
-            # If testing, quit after first 2 samples
-            # PLEASE NOTE: if adding a unique test case,
-            # you will want to edit the example page's
-            # HTML if need be to make sure that your
-            # specific test subpage date falls within the
-            # first three links on the self.url list page,
-            # otherwise it won't be tested.
-            if self.method == 'LOCAL' and len(html_trees) > 2:
+            # PLEASE NOTE: because of the design of this
+            # opinion portal, executing thorough/wholesale
+            # testing is very slow, since the dates list
+            # page must be scraped for dates/links (which
+            # we can do easily enough with an example file),
+            # after which each specific date's sub-page must
+            # be requested (over the network) then scraped.
+            # Consequently, we only test the first subpage.
+            # If the scraper fails due to regex, please
+            # add new regex test to
+            # test_everything.ScraperSpotTest.test_colo_coloctapp
+            if self.method == 'LOCAL' and html_trees:
                 break
 
             date_string = ahref.xpath("./text()")[0]
@@ -84,7 +94,7 @@ class Site(OpinionSite):
             self.cases.append({
                 'date': date_obj,
                 'status': 'Published',
-                'name': self._extract_name_from_anchor(anchor),
+                'name': self._extract_name_from_text(text),
                 'url': self._extract_url_from_anchor(anchor),
                 'docket': self._extract_docket_from_text(text),
                 'citation': self._extract_citation_from_text(text),
@@ -92,34 +102,39 @@ class Site(OpinionSite):
                 'nature': self._extract_nature_relative_to_anchor(anchor),
             })
 
-    @staticmethod
-    def _extract_docket_from_text(text):
-        return text.split('No. ')[1].split('.')[0].rstrip('.').replace(' &', ',')
+    @classmethod
+    def _extract_docket_from_text(cls, text):
+        try:
+            match = re.match(cls.regex, text).group(6)
+        except:
+            raise InsanityException('Unable to parse docket from "%s"' % text)
+        dockets_raw = match.rstrip('.').replace('&', ' ').replace(',', ' ')
+        dockets = dockets_raw.split()
+        return ', '.join(dockets)
 
-    @staticmethod
-    def _extract_citation_from_text(text):
+    @classmethod
+    def _extract_name_from_text(cls, text):
+        try:
+            match = re.match(cls.regex, text).group(12)
+        except:
+            raise InsanityException('Unable to parse case name from "%s"' % text)
+        return match.strip().rstrip('.')
+
+    @classmethod
+    def _extract_citation_from_text(cls, text):
         return text.split('.')[0].strip()
 
-    @staticmethod
-    def _extract_text_from_anchor(anchor):
+    @classmethod
+    def _extract_text_from_anchor(cls, anchor):
         text = anchor.xpath('text()')[0]
         text = text.replace('Nos.', 'No.')
         if 'No.' in text and 'No. ' not in text:
             text = text.replace('No.', 'No. ')
         return text
 
-    @staticmethod
-    def _extract_url_from_anchor(anchor):
+    @classmethod
+    def _extract_url_from_anchor(cls, anchor):
         return anchor.xpath('@href')[0]
-
-    def _extract_name_from_anchor(self, anchor):
-        text = self._extract_text_from_anchor(anchor)
-        try:
-            name = text.split('. ', 3)[3]
-        except:
-            name = self._get_missing_name_from_resource(
-                self._extract_url_from_anchor(anchor))
-        return name.strip().rstrip('.')
 
     def _extract_summary_relative_to_anchor(self, anchor):
         parts = anchor.xpath('%s/p' % self.parent_summary_block_path)

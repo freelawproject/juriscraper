@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Scraper for New York Appellate Divisions 3rd Dept.
 # CourtID: nyappdiv_3rd
 # Court Short Name: NY
@@ -31,7 +32,7 @@ class Site(OpinionSite):
         self.LINK_PATH = "//td[2]//a[contains(./@href, 'Decisions')]"
         self.LINK_TEXT_PATH = '%s/text()' % self.LINK_PATH
         self.LINK_HREF_PATH = '%s/@href' % self.LINK_PATH
-        self.LINK_TEXT_PATTERN_MEMORANDUM = (r'(?P<docket_number>^\d+(/\d+)?)(/)?'
+        self.LINK_TEXT_PATTERN_MEMORANDUM = (r'(?P<docket_number>^\d+((/\d+)+)?)(/)?'
                                              r'(?P<case_name>.+)')
         self.LINK_TEXT_PATTERN_ATTORNEY = (r'(?P<docket_number>^\w{1}-\d+-\d+)'
                                           r'(?P<case_name>.+)')
@@ -62,15 +63,26 @@ class Site(OpinionSite):
         return docket_numbers
 
     def _get_docket_and_name_from_text(self, text):
-        text = text.strip()
+        text = self._sanitize_docket_name_text(text)
         if not text:
             return False, False
-
         if text.split()[0].count('-') == 2:
-            data = re.search(self.LINK_TEXT_PATTERN_ATTORNEY, text)
+            regex = self.LINK_TEXT_PATTERN_ATTORNEY
         else:
-            data = re.search(self.LINK_TEXT_PATTERN_MEMORANDUM, text)
-
-        docket = data.group('docket_number')
+            regex = self.LINK_TEXT_PATTERN_MEMORANDUM
+        data = re.search(regex, text)
+        docket_raw = data.group('docket_number')
+        docket = ', '.join(docket_raw.split('/'))
         name = ' '.join(data.group('case_name').split())
+
         return docket, name
+
+    def _sanitize_docket_name_text(self, text):
+        text = text.strip()
+        first_word = text.split()[0]
+
+        # Replace en dash typo with proper hyphen so regex parses properly
+        en_dash = '\xe2\x80\x93'.decode('utf-8')
+        first_word_sanitized = first_word.replace(en_dash, '-')
+
+        return text.replace(first_word, first_word_sanitized)
