@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-import re
 import geonamescache
+import re
+import string
 from dateutil import parser
 
 # For use in titlecase
@@ -473,7 +474,18 @@ class CaseNameTweaker(object):
         self.corp_identifiers = [u'Co.', u'Corp.', u'Inc.', u'Ltd.']
         bad_words = acros + acros_sans_dots + common_names + ags + \
             self.make_geographies_list()
-        self.bad_words = [s.lower() for s in bad_words]
+
+        # Add variations with punctuation
+        punctuation_bad_words = []
+        for word in bad_words:
+            for punctuation in string.punctuation:
+                if not word.endswith(punctuation):
+                    punctuation_bad_words.append('%s%s' % (word, punctuation))
+        bad_words = bad_words + punctuation_bad_words
+
+        bad_words = [s.lower() for s in bad_words]
+        self.bad_words = bad_words
+
 
         super(CaseNameTweaker, self).__init__()
 

@@ -360,6 +360,7 @@ class StringUtilTest(unittest.TestCase):
             ('Matheny v. Porter', 'Matheny'),
             ('Piper v. Hoffman', 'Piper'),
             ('People v. Smith', ''),  # Punted b/c People and Smith are bad.
+            ('Mobuary, Joseph v. State.', ''),  # Punted b/c "State." has punct
         ]
         tweaker = CaseNameTweaker()
         for t in test_pairs:
