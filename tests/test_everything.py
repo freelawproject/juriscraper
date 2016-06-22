@@ -169,7 +169,7 @@ class StringUtilTest(unittest.TestCase):
         test_pairs = [
             # In re and Matter of
             ('In re Lissner', 'In re Lissner'),
-            ('Matter of Lissner', 'In re Lissner'),
+            ('Matter of Lissner', 'Matter of Lissner'),
 
             # Plaintiff is in bad word list
             ('State v. Lissner', 'Lissner'),
@@ -249,8 +249,8 @@ class StringUtilTest(unittest.TestCase):
             ('Starling v. United States', 'Starling'),
             ('United States v. Pablo Colin-Molina', ''),
             ('Kenneth N. Juhl v. The United States', ''),
-            ('Matter of Wilson', 'In re Wilson'),
-            ('In Re Damon H.', 'In Re Damon H.'),
+            ('Matter of Wilson', 'Matter of Wilson'),
+            ('In Re Damon H.', ''),
             ('Centennial Ins. Co. v. Zylberberg', 'Zylberberg'),
             ('United States v. Donald Lee Stotler', ''),
             ('Byndloss v. State', 'Byndloss'),
@@ -324,7 +324,11 @@ class StringUtilTest(unittest.TestCase):
             ('Johnson v. City of Detroit', ''),
             ('Nolan v. United States', 'Nolan'),
             ('Currence v. Denver Tramway Corporation', 'Currence'),
-            ('Matter of Cano', 'In re Cano'),
+            ('Matter of Cano', 'Matter of Cano'),
+            # Two words after "Matter of --> Punt."
+            ('Matter of Alphabet Soup', ''),
+            # Zero words after "Matter of" --> Punt.
+            ("Matter of", "Matter of"),
             ('Simmons v. Stalder', 'Simmons'),
             ('United States v. Donnell Hagood', ''),
             ('Kale v. United States INS', 'Kale'),

@@ -498,14 +498,14 @@ class CaseNameTweaker(object):
         """Creates short case names where obvious ones can easily be made."""
         parts = [part.strip().split() for part in s.split(u' v. ')]
         if len(parts) == 1:
-            # No v.
-            if s.lower().startswith(u'in re'):
-                # Starts with 'in re'
-                # In re Lissner --> In re Lissner
+            # No v. Likely an "In re" or "Matter of" case.
+            if len(parts[0]) <= 3:
+                # Good length for a shortened case name.
                 return s
-            if s.lower().startswith(u'matter of'):
-                # Starts with 'matter of' --> [['matter', 'of', 'lissner']]
-                return u'In re %s' % parts[0][2]
+            else:
+                # Too long; too weird. Punt.
+                return u''
+
         elif len(parts) == 2:
             # X v. Y --> [['X'], ['Y']]
             # X Y Z v. A B --> [['X', 'Y', 'Z'], ['A', 'B']]
