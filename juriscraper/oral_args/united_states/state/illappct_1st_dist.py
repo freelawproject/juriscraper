@@ -18,3 +18,4 @@ class Site(ill.Site):
         self.xpath_root = '(//table[@class="nicetable"])[2]//tr[position() > 1]'
         self.case_name_path = '/td[4]//div/text()'
         self.docket_number_path = "/td[3]"
+        self.back_scrape_iterable = range(2009, 2016)

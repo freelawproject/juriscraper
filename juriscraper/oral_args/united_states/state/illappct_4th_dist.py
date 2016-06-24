@@ -19,3 +19,4 @@ class Site(ill.Site):
         self.download_url_path = '/td[5]//@href'
         self.case_name_path = '/td[3]//div/text()'
         self.docket_number_path = "/td[2]"
+        self.back_scrape_iterable = range(2009, 2016)

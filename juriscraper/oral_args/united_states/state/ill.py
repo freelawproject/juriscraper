@@ -21,6 +21,7 @@ class Site(OralArgumentSite):
         self.download_url_path = "/td[6]//@href"
         self.case_name_path = '/td[3]//text()'
         self.docket_number_path = "/td[2]"
+        self.back_scrape_iterable = range(2008, 2016)
 
     def _get_download_urls(self):
         path = self.xpath_root + self.download_url_path
@@ -54,3 +55,9 @@ class Site(OralArgumentSite):
             docket = docket.text_content()
             dockets.append(docket)
         return dockets
+
+    def _download_backwards(self, date_str):
+        # Backwards urls are just the regular ones with a year munged at the end
+        parts = self.url.rsplit('.', 1)
+        self.url = "%s_%s.%s" % (parts[0], date_str, parts[1])
+        self.html = self._download()
