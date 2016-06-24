@@ -62,7 +62,7 @@ class Site(OralArgumentSite):
         """
         # Set it to the value that seems to work everywhere.
         self.xpath_root = '(//table[@class="nicetable"])[2]//tr[position() > 1]'
-        if getattr(self, 'orig_url'):
+        if getattr(self, 'orig_url', None):
             # Set url back to its original value, if it has been reset already.
             self.url = self.orig_url
         else:
