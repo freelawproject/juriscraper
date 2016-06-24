@@ -57,7 +57,19 @@ class Site(OralArgumentSite):
         return dockets
 
     def _download_backwards(self, date_str):
-        # Backwards urls are just the regular ones with a year munged at the end
+        """Backwards urls are just the regular ones with a year munged at the
+        end.
+        """
+        # Set it to the value that seems to work everywhere.
+        self.xpath_root = '(//table[@class="nicetable"])[2]//tr[position() > 1]'
+        if getattr(self, 'orig_url'):
+            # Set url back to its original value, if it has been reset already.
+            self.url = self.orig_url
+        else:
+            # First iteration. Set aside the original value, so we can use it
+            # in the remaining iterations.
+            self.orig_url = self.url
+
         parts = self.url.rsplit('.', 1)
         self.url = "%s_%s.%s" % (parts[0], date_str, parts[1])
         self.html = self._download()
