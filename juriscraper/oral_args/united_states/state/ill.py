@@ -2,13 +2,12 @@
 CourtID: ill
 Court Short Name: Ill.
 Author: Rebecca Fordon
-Reviewer: 
+Reviewer: Mike Lissner
 History:
 * 2016-06-22: Created by Rebecca Fordon
 '''
 
 from datetime import datetime
-import re
 from juriscraper.OralArgumentSite import OralArgumentSite
 
 
@@ -16,28 +15,27 @@ class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://www.illinoiscourts.gov/Media/On_Demand.asp' 
+        self.url = 'http://www.illinoiscourts.gov/Media/On_Demand.asp'
+        self.xpath_root = '(//table[@id="nicetable"])[2]//tr[position() > 1]'
 
     def _get_download_urls(self):
-        path = "//table[4]//table//tr[position()>1]/td[6]//a/@href"
+        path = self.xpath_root + "/td[6]//@href"
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
         dates = []
-        path = "//table[4]//table//tr[position()>1]/td[1]//div/text()"
+        path = self.xpath_root + "/td[1]//text()"
         for s in self.html.xpath(path):
-            date_format = '%m/%d/%y'
-            try: 
-                d = datetime.strptime(s, date_format).date()
-                dates.append(d)
-            except ValueError: 
-                print(ValueError)
-                print(s)
+            try:
+                d = datetime.strptime(s, '%m/%d/%y').date()
+            except ValueError:
                 continue
+            else:
+                dates.append(d)
         return dates
 
     def _get_case_names(self):
-        path = '//table[4]//table//tr[position()>1]/td[3]//div/text()'
+        path = self.xpath_root + '/td[3]//text()'
         cases = []
         for case in self.html.xpath(path):
             if case.strip():
@@ -45,9 +43,9 @@ class Site(OralArgumentSite):
         return cases
 
     def _get_docket_numbers(self):
-        path = "//table[4]//table//tr[position()>1]/td[2]//div"  # right now this is giving a problem because one of the fields has a new line in the middle of it
+        path = self.xpath_root + "/td[2]"
         dockets = []
-        for docket in self.html.xpath(path): 
-            docket = docket.text_content() 
+        for docket in self.html.xpath(path):
+            docket = docket.text_content()
             dockets.append(docket)
         return dockets
