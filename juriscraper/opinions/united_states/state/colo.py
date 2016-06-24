@@ -82,7 +82,7 @@ class Site(OpinionSite):
                 html_trees.append((html_tree, date_obj))
 
                 # process all subpages
-                if self.next_subpage_path is not None:
+                if self.next_subpage_path is not None and self.method != 'LOCAL':
                     while True:
                         next_subpage_html = self.get_next_page(html_tree, self.next_subpage_path, request_dict, url)
                         if next_subpage_html is None:
