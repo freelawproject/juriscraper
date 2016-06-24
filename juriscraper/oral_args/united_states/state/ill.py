@@ -7,7 +7,8 @@ History:
 * 2016-06-22: Created by Rebecca Fordon
 '''
 
-from datetime import datetime
+
+from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OralArgumentSite import OralArgumentSite
 
 
@@ -17,6 +18,8 @@ class Site(OralArgumentSite):
         self.court_id = self.__module__
         self.url = 'http://www.illinoiscourts.gov/Media/On_Demand.asp'
         self.xpath_root = '(//table[@id="nicetable"])[2]//tr[position() > 1]'
+        self.case_name_path = '/td[3]//text()'
+        self.docket_number_path = "/td[2]"
 
     def _get_download_urls(self):
         path = self.xpath_root + "/td[6]//@href"
@@ -24,10 +27,11 @@ class Site(OralArgumentSite):
 
     def _get_case_dates(self):
         dates = []
-        path = self.xpath_root + "/td[1]//text()"
-        for s in self.html.xpath(path):
+        path = self.xpath_root + "/td[1]"
+        for e in self.html.xpath(path):
+            s = e.text_content()
             try:
-                d = datetime.strptime(s, '%m/%d/%y').date()
+                d = convert_date_string(s, fuzzy=True)
             except ValueError:
                 continue
             else:
@@ -35,7 +39,7 @@ class Site(OralArgumentSite):
         return dates
 
     def _get_case_names(self):
-        path = self.xpath_root + '/td[3]//text()'
+        path = self.xpath_root + self.case_name_path
         cases = []
         for case in self.html.xpath(path):
             if case.strip():
@@ -43,7 +47,7 @@ class Site(OralArgumentSite):
         return cases
 
     def _get_docket_numbers(self):
-        path = self.xpath_root + "/td[2]"
+        path = self.xpath_root + self.docket_number_path
         dockets = []
         for docket in self.html.xpath(path):
             docket = docket.text_content()
