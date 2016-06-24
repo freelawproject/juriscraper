@@ -434,12 +434,12 @@ def trunc(s, length, ellipsis=None):
         return s
 
 
-def convert_date_string(date_string):
+def convert_date_string(date_string, fuzzy=False):
     """Sanitize date string and convert into standard date object"""
     date_string = date_string.replace('(', '')
     date_string = date_string.replace(')', '')
     date_string = date_string.strip()
-    return parser.parse(date_string).date()
+    return parser.parse(date_string, fuzzy=fuzzy).date()
 
 
 class CaseNameTweaker(object):
