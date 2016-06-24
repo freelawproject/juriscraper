@@ -91,9 +91,10 @@ class Site(OpinionSite):
                         html_trees.append((next_subpage_html, date_obj))
                         html_tree = next_subpage_html
 
-            next_page_html = self.get_next_page(html_l, self.next_page_path, request_dict, self.url)
-            if next_page_html is not None:
-                html_list.append(next_page_html)
+            if self.method != 'LOCAL':
+                next_page_html = self.get_next_page(html_l, self.next_page_path, request_dict, self.url)
+                if next_page_html is not None:
+                    html_list.append(next_page_html)
 
         return html_trees
 
