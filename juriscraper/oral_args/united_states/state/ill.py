@@ -18,11 +18,12 @@ class Site(OralArgumentSite):
         self.court_id = self.__module__
         self.url = 'http://www.illinoiscourts.gov/Media/On_Demand.asp'
         self.xpath_root = '(//table[@id="nicetable"])[2]//tr[position() > 1]'
+        self.download_url_path = "/td[6]//@href"
         self.case_name_path = '/td[3]//text()'
         self.docket_number_path = "/td[2]"
 
     def _get_download_urls(self):
-        path = self.xpath_root + "/td[6]//@href"
+        path = self.xpath_root + self.download_url_path
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
