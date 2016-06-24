@@ -7,12 +7,10 @@ History:
   YYYY-MM-DD: Created by XXX
 """
 
-# import re
-from datetime import datetime
-
 from lxml import html
 from juriscraper.OralArgumentSite import OralArgumentSite
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OralArgumentSite):
@@ -22,6 +20,8 @@ class Site(OralArgumentSite):
         self.url = 'http://court-url.gov/some-path.html'
         self.method = 'POST'
         self.uses_selenium = False
+        # Complete this variable if you create a backscraper.
+        self.back_scrape_iterable = None
 
     '''
       Required fields - InsanityExceptions will be thrown if omitted.
@@ -67,8 +67,8 @@ class Site(OralArgumentSite):
             here: http://docs.python.org/2/library/datetime.html
         """
         path = '//path/to/text/text()'
-        return [datetime.strptime(date_string, '%m/%d/%Y').date()
-                for date_string in self.html.xpath(path)]
+        return [convert_date_string(date_string) for date_string in
+                self.html.xpath(path)]
 
     """
       High priority fields
