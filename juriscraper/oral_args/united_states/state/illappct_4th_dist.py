@@ -15,8 +15,6 @@ class Site(ill.Site):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://www.illinoiscourts.gov/Media/Appellate/4th_District.asp'
-        self.xpath_root = '(//table[@class="nicetable"])[2]//tr[position() > 1]'
         self.download_url_path = '/td[5]//@href'
-        self.case_name_path = '/td[3]//div/text()'
+        self.case_name_path = '/td[3]'
         self.docket_number_path = "/td[2]"
-        self.back_scrape_iterable = range(2009, 2016)

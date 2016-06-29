@@ -17,9 +17,9 @@ class Site(OralArgumentSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://www.illinoiscourts.gov/Media/On_Demand.asp'
-        self.xpath_root = '(//table[@id="nicetable"])[2]//tr[position() > 1]'
+        self.xpath_root = '(//table[(.//th)[1][contains(.//text(), "Argument Date")]])[last()]//tr[position() > 1][.//@href]'
         self.download_url_path = "/td[6]//@href"
-        self.case_name_path = '/td[3]//text()'
+        self.case_name_path = '/td[3]'
         self.docket_number_path = "/td[2]"
         self.back_scrape_iterable = range(2008, 2016)
 
@@ -44,7 +44,8 @@ class Site(OralArgumentSite):
         path = self.xpath_root + self.case_name_path
         cases = []
         for case in self.html.xpath(path):
-            if case.strip():
+            case = case.text_content().strip()
+            if case:
                 cases.append(case)
         return cases
 
@@ -61,7 +62,6 @@ class Site(OralArgumentSite):
         end.
         """
         # Set it to the value that seems to work everywhere.
-        self.xpath_root = '(//table[@class="nicetable"])[2]//tr[position() > 1]'
         if getattr(self, 'orig_url', None):
             # Set url back to its original value, if it has been reset already.
             self.url = self.orig_url
