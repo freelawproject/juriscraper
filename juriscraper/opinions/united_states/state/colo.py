@@ -25,56 +25,113 @@ class Site(OpinionSite):
 
     # I'm certain this can be done more professionally,
     # but I (arderyp) am not gifted at the art of regex
-    regex = '(\d+)\s+(\w+)\s+(\d+\.?)\s+((Nos?\.?\s+)?((\w{5,8}\.?)(((\s+\&|\,)\s+\w{5,8})+)?))\.?(\s+)?(.*)'
+    regex = '(\d+)\s+(\w+)\s+(\d+M?\.?)\s*((Nos?\.?\s+)?((\w{5,8}\.?)(((\s+\&|\,)\s+\w{5,8})+)?))\.?(\s+)?(.*)'
 
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions"
         self.base_path = "//div[@id='dnn_ctr2509_ModuleContent']/ul/li/a"
+        self.next_page_path = "//a[@id='dnn_ctr2509_View_MyPageNav_cmdNext']"
+        self.next_subpage_path = None
         # dummy sequence to force one call to _download_backwards
         self.back_scrape_iterable = ['dummy']
 
     def _download(self, request_dict={}):
-        html_l = super(Site, self)._download(request_dict)
+        html_list = []
+        html_list.append(super(Site, self)._download(request_dict))
         self.session = requests.session()
         self.request_dict = request_dict
         html_trees = []
 
-        # Loop over sub-pages
-        for ahref in html_l.xpath(self.base_path):
-            # PLEASE NOTE: because of the design of this
-            # opinion portal, executing thorough/wholesale
-            # testing is very slow, since the dates list
-            # page must be scraped for dates/links (which
-            # we can do easily enough with an example file),
-            # after which each specific date's sub-page must
-            # be requested (over the network) then scraped.
-            # Consequently, we only test the first subpage.
-            # If the scraper fails due to regex, please
-            # add new regex test to
-            # test_everything.ScraperSpotTest.test_colo_coloctapp
-            if self.method == 'LOCAL' and html_trees:
-                break
+        while len(html_list) > 0:
+            html_l = html_list[0]
+            html_list = html_list[1:]
 
-            date_string = ahref.xpath("./text()")[0]
-            url = ahref.xpath("./@href")[0]
-            date_obj = convert_date_string(date_string)
-            logger.info("Getting sub-url: %s" % url)
+            # Loop over sub-pages
+            for ahref in html_l.xpath(self.base_path):
+                # PLEASE NOTE: because of the design of this
+                # opinion portal, executing thorough/wholesale
+                # testing is very slow, since the dates list
+                # page must be scraped for dates/links (which
+                # we can do easily enough with an example file),
+                # after which each specific date's sub-page must
+                # be requested (over the network) then scraped.
+                # Consequently, we only test the first subpage.
+                # If the scraper fails due to regex, please
+                # add new regex test to
+                # test_everything.ScraperSpotTest.test_colo_coloctapp
+                if self.method == 'LOCAL' and html_trees:
+                    break
 
-            # Fetch sub-page's content
-            request = self._get_resource(url)
-            text = self._clean_text(request.text)
-            html_tree = html.fromstring(text)
-            html_tree.make_links_absolute(self.url)
+                date_string = ahref.xpath("./text()")[0]
+                url = ahref.xpath("./@href")[0]
+                date_obj = convert_date_string(date_string)
+                logger.info("Getting sub-url: %s" % url)
 
-            # Process the content
-            remove_anchors = lambda url: url.split('#')[0]
-            html_tree.rewrite_links(remove_anchors)
-            self._extract_cases_from_sub_page(html_tree, date_obj)
-            html_trees.append((html_tree, date_obj))
+                # Fetch sub-page's content
+                request = self._get_resource(url)
+                text = self._clean_text(request.text)
+                html_tree = html.fromstring(text)
+                html_tree.make_links_absolute(self.url)
+
+                # Process the content
+                remove_anchors = lambda url: url.split('#')[0]
+                html_tree.rewrite_links(remove_anchors)
+                self._extract_cases_from_sub_page(html_tree, date_obj)
+                html_trees.append((html_tree, date_obj))
+
+                # process all subpages
+                if self.next_subpage_path is not None and self.method != 'LOCAL':
+                    while True:
+                        next_subpage_html = self.get_next_page(html_tree, self.next_subpage_path, request_dict, url)
+                        if next_subpage_html is None:
+                            break
+                        self._extract_cases_from_sub_page(next_subpage_html, date_obj)
+                        html_trees.append((next_subpage_html, date_obj))
+                        html_tree = next_subpage_html
+
+            if self.method != 'LOCAL':
+                next_page_html = self.get_next_page(html_l, self.next_page_path, request_dict, self.url)
+                if next_page_html is not None:
+                    html_list.append(next_page_html)
 
         return html_trees
+
+    def get_next_page(self, html_l, next_page_xpath, request_dict, url):
+        result = None
+        for nhref in html_l.xpath(next_page_xpath):
+            evtarget = None
+            class_, href = nhref.get('class'), nhref.get('href')
+            exp_start, exp_end = "javascript:__doPostBack('", "','')"
+            if href is not None and href.startswith(exp_start) and href.endswith(exp_end):
+                evtarget = href[len(exp_start):-len(exp_end)]
+            # a disabled 'next page' link will contains this string in the class list
+            if evtarget is not None and 'aspNetDisabled' not in class_.split():
+                form = []
+                form.append(('__EVENTTARGET', ('', evtarget)))
+                form_items_xpath = "//input"
+                for form_el in html_l.xpath(form_items_xpath):
+                    name = form_el.get('name')
+                    if name is not None:
+                        value = form_el.get('value') or ''
+                        # 1st tuple item is empty: don't include filename part
+                        # in the multipart/form-data request
+                        form.append((name, ('', value)))
+                # use 'files' arg to make the request multipart/form-data
+                files_request_dict = dict(request_dict)
+                files_request_dict['files'] = form
+                # temporarily override method and url
+                prev_method, prev_url = self.method, self.url
+                self.method = 'POST'
+                self.url = url
+                # _download() in AbstractSite.py expects this to be not None
+                self.parameters = {}
+                result = super(Site, self)._download(files_request_dict)
+                # restore method and url
+                self.method = prev_method
+                self.url = prev_url
+        return result
 
     def _get_resource(self, resource_url):
         request = self.session.get(
