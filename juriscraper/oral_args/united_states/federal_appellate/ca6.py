@@ -5,11 +5,12 @@ Authors: Brian W. Carver, Michael Lissner
 Reviewer: None
 History:
   2014-11-06: Started by Brian W. Carver and wrapped up by mlr.
+  2016-06-30: Updated by mlr.
 """
 
 import re
 from datetime import datetime
-from urlparse import urlparse, parse_qs
+from urlparse import urlparse, urljoin, parse_qs
 
 from juriscraper.OralArgumentSite import OralArgumentSite
 
@@ -19,6 +20,7 @@ class Site(OralArgumentSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://www.ca6.uscourts.gov/internet/court_audio/aud1.php'
+        self.xpath_root = '//table[@class="views-table cols-3"]'
         self.regex = re.compile('((?:\d{2}[- ]\d{4}\s+)+)(.*)')
 
     def _get_download_urls(self):
@@ -31,12 +33,15 @@ class Site(OralArgumentSite):
         """
         path_to_flash_page = '//tr/td[2]/a/@href[contains(., "?link=")]'
         links_to_flash = list(self.html.xpath(path_to_flash_page))
-
-        return [parse_qs(urlparse(url).query)['link'][0] for url in
-                links_to_flash]
+        urls = []
+        for url in links_to_flash:
+            path = parse_qs(urlparse(url).query)['link'][0]
+            url = url.replace('www', 'www.opn')  # Uses a different subdomain.
+            urls.append(urljoin(url, path))
+        return urls
 
     def _get_case_names(self):
-        path = '//table[@class="table_border"]/tr/td[1]/text()'
+        path = self.xpath_root + '/tr/td[1]/text()'
         case_names = []
         for s in self.html.xpath(path):
             case_names.append(self.regex.search(s).group(2))
@@ -45,12 +50,11 @@ class Site(OralArgumentSite):
     def _get_case_dates(self):
         dates = []
         # Multiple items are listed under a single date.
-        table_path = '//table[@class="table_border"]'
-        date_path = './/td[1]/strong/text()'
+        date_path = './/th[1]'
         # For every table full of OA's...
-        for table in self.html.xpath(table_path):
-            # Find the date str...
-            date_str = table.xpath(date_path)[0]  # 10-10-2014 - Friday
+        for table in self.html.xpath(self.xpath_root):
+            # Find the date str, e.g. "10-10-2014 - Friday"
+            date_str = table.xpath(date_path)[0].text_content()
             d = datetime.strptime(date_str[:10], '%m-%d-%Y').date()
 
             # The count of OAs on a date is the number of rows minus the header
@@ -60,6 +64,6 @@ class Site(OralArgumentSite):
         return dates
 
     def _get_docket_numbers(self):
-        path = '//table[@class="table_border"]/tr/td[1]/text()'
+        path = self.xpath_root + '/tr/td[1]/text()'
         return [self.regex.search(s).group(1).strip().replace(' ', '-') for
                 s in self.html.xpath(path)]
