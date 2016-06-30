@@ -6,15 +6,15 @@
 # Date created: 25 July 2014
 
 
-from datetime import date
-import time
-
-import certifi
 import re
-from lxml import etree, html
+import certifi
 import requests
+from lxml import etree, html
+from datetime import date
+
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -33,12 +33,13 @@ class Site(OpinionSite):
             html_l = OpinionSite._download(self)
             s = requests.session()
             html_trees = []
-            # The latest 5 urls on the page.
             path = "//td[@width='50%'][{court_index}]/h3[contains(., '{year}')]/following::ul[1]//a/@href".format(
                 court_index=self.court_index,
                 year=self.date.year,
             )
-            for url in html_l.xpath(path)[0:4]:
+
+            # The latest 7 urls on the page.
+            for url in html_l.xpath(path)[0:7]:
                 logger.info("Downloading Kansas page at: {url}".format(url=url))
                 r = s.get(
                     url,
@@ -101,12 +102,7 @@ class Site(OpinionSite):
         path = "//*[starts-with(., 'Kansas')][contains(., 'Released')]/text()[2]"
         text = html_tree.xpath(path)[0]
         text = re.sub('Opinions Released', '', text)
-        for date_format in ('%B %d, %Y', '%B %d. %Y'):
-            try:
-                case_date = date.fromtimestamp(
-                    time.mktime(time.strptime(text.strip(), date_format)))
-            except ValueError:
-                continue
+        case_date = convert_date_string(text.strip())
         return [case_date] * int(html_tree.xpath("count(//a[contains(./@href, '.pdf')])"))
 
     def _get_precedential_statuses(self):
