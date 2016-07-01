@@ -19,8 +19,6 @@ from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
-    cases = []
-
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -30,6 +28,7 @@ class Site(OpinionSite):
         self.url = 'http://www.index.va.gov/search/va/bva_search.jsp?RPP=50&RS=1&DB=%s' % url_query
         self.pager_stop = False
         self.back_scrape_iterable = self.pager(50)
+        self.cases = []
 
     def pager(self, incr):
         startat = 1 + incr
