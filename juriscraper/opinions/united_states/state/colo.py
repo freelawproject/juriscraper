@@ -19,7 +19,6 @@ from juriscraper.AbstractSite import InsanityException
 
 
 class Site(OpinionSite):
-    cases = []
     sub_page_opinion_link_path = "//a[@class='Head articletitle']"
     parent_summary_block_path = 'parent::p/following-sibling::div[@class="Normal"][1]'
 
@@ -36,6 +35,7 @@ class Site(OpinionSite):
         self.next_subpage_path = None
         # dummy sequence to force one call to _download_backwards
         self.back_scrape_iterable = ['dummy']
+        self.cases = []
 
     def _download(self, request_dict={}):
         html_list = []
