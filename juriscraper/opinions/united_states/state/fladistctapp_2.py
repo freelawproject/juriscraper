@@ -8,11 +8,11 @@
 # - 2014-08-28: Updated by mlr.
 
 import re
-from datetime import date
-
 import certifi
 import requests
 from lxml import html
+from datetime import date
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
@@ -111,6 +111,10 @@ class Site(OpinionSite):
         dockets = []
         for text in list(html_tree.xpath(path)):
             text = text.strip()
+
+            # Sometimes the clerk enter (typo) spaces before/after dash
+            text = ''.join(text.split())
+
             if re.match('^\w+-\d+$', text):
                 dockets.append(text)
         return dockets
