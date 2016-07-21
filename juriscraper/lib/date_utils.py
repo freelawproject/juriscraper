@@ -154,3 +154,17 @@ def is_first_month_in_quarter(month):
     :return: Whether that month is the first month in a quarter
     """
     return month in [1, 4, 7, 10]
+
+def fix_future_year_typo(future_date):
+    """Fix year typo, convert 2106 to 2016"""
+    year = str(future_date.year)
+    if year[2] == '0':
+        fixed_year = int(year[0] + year[2] + year[1] + year[3])
+        if fixed_year < future_date_threshold():
+            fixed_date = '%d/%d/%s' % (future_date.month, future_date.day, fixed_year)
+            return datetime.datetime.strptime(fixed_date, "%m/%d/%Y").date()
+    return False
+
+def future_date_threshold():
+    """Limit for how far into the future a case date can be."""
+    return datetime.date.today().year + 10
