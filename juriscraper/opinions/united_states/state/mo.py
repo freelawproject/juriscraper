@@ -6,76 +6,81 @@ Date created: 04/27/2014
 """
 
 from datetime import date
-from datetime import datetime
 
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        today = date.today()
-        self.url = 'https://www.courts.mo.gov/page.jsp?id=12086&dist=Opinions Supreme&date=all&year=%s#all' % today.year
+        self.url = self.build_url()
+        self.cases = []
+
+    def build_url(self):
+        format = 'https://www.courts.mo.gov/page.jsp?id=12086&dist=Opinions %s&date=all&year=%s#all'
+        return format % (self.url_slug(), date.today().year)
+
+    def url_slug(self):
+        return 'Supreme'
+
+    def _download(self, request_dict={}):
+        html = super(Site, self)._download(request_dict)
+        self._extract_cases_from_html(html)
+        return html
+
+    def _extract_cases_from_html(self, html):
+        for date_block in html.xpath('//div[@id="main-content"]/div/form/table/tr/td'):
+            date_string = date_block.xpath('input/@value')
+            if date_string:
+                for case_block in date_block.xpath('table/tr/td'):
+                    links = case_block.xpath('a')
+                    first_link_text = links[0].xpath('text()')
+                    if first_link_text and 'Orders Pursuant to Rules' in first_link_text[0]:
+                        continue
+
+                    target_link_index = 1 if len(links) > 1 else 0
+                    bolded_text = case_block.xpath('b')
+                    docket = self.sanitize_docket(bolded_text[0].xpath('text()')[0])
+                    text = case_block.xpath('text()')
+                    judge, disposition = self.parse_judge_disposition_from_text(text)
+
+                    self.cases.append({
+                        'date': convert_date_string(date_string[0]),
+                        'docket': docket,
+                        'judge': judge,
+                        'url': links[target_link_index].xpath('@href')[0],
+                        'name': links[target_link_index].xpath('text()')[0],
+                        'disposition': disposition,
+                    })
+
+    def sanitize_docket(self, docket):
+        for substring in [':', 'and', '_', 'Consolidated', '(', ')', ',']:
+            docket = docket.replace(substring, ' ')
+        return ', '.join(docket.split())
+
+    def parse_judge_disposition_from_text(self, text_raw_list):
+        text_clean_list = [text.strip() for text in text_raw_list if text.strip()]
+        return text_clean_list[0], text_clean_list[1]
 
     def _get_download_urls(self):
-        # the case overview/summary links have 'b' element children; exclude those 'b's to get actual case links
-        path = '//div[@id="info"]/div/form/table/tr/td/table/tr/td/*[not(b)]/@href'
-        return list(self.html.xpath(path))
+        return [case['url'] for case in self.cases]
 
     def _get_case_names(self):
-        return list(self.html.xpath('//div[@id="info"]/div/form/table/tr/td/table/tr/td/a/text()'))
+        return [case['name'] for case in self.cases]
 
     def _get_case_dates(self):
-        cases_grouped_by_date = self.html.xpath('//div/form/table/tr')
-        def case_count_by_date(lst):
-            for c in lst:
-                if len(c.xpath('.//td/child::table')): # only add ones that aren't zero/empty list
-                    yield len(c.xpath('.//td/child::table')), c.xpath('.//td/input/@value')
-
-        case_generator = case_count_by_date(cases_grouped_by_date)
-
-        cases_that_day = []
-        for ct, dt in case_generator:
-            for n in range(0, ct):
-                cases_that_day.extend(dt)
-
-        return [datetime.strptime(date_string, '%m/%d/%Y').date()
-                for date_string in cases_that_day]
+        return [case['date'] for case in self.cases]
 
     def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_names)
+        return ['Published'] * len(self.cases)
 
     def _get_docket_numbers(self):
-        path = ('//div[@id="info"]/div/form/table/tr/td/table/tr/td/*[('
-                    'starts-with(text(), "SD") or '
-                    'starts-with(text(), "WD") or '
-                    'starts-with(text(), "ED") or '
-                    'starts-with(text(), "SC")'
-                ') and contains(text(), ":")]/text()')
-        docket_numbers = []
-        for t in self.html.xpath(path):
-            docket_numbers.append(t.strip(':'))
-        return docket_numbers
+        return [case['docket'] for case in self.cases]
 
     def _get_judges(self):
-        authors = []
-        cases = self.html.xpath('//div[@id="info"]/div/form/table/tr/td/table/*')
-        for case in cases:
-            sub_path = './/*[starts-with(text(), "Author:")]'  # Any sub-node with text() starting with "Author"
-            if case.xpath(sub_path):
-                authors.extend(case.xpath('.//*[starts-with(text(), "Author:")]/following-sibling::text()[1]'))
-            else:
-                authors.extend([' '])
-        return authors
+        return [case['judge'] for case in self.cases]
 
     def _get_dispositions(self):
-        votes = []
-        cases = self.html.xpath('//div[@id="info"]/div/form/table/tr/td/table/*')
-        for case in cases:
-            sub_path = './/*[starts-with(text(), "Vote:")]'  # Any subnode with text() starting with "Vote"
-            if case.xpath(sub_path):
-                votes.extend(case.xpath('.//*[starts-with(text(), "Vote:")]/following-sibling::text()[1]'))
-            else:
-                votes.extend([' '])
-        return votes
+        return [case['disposition'] for case in self.cases]
