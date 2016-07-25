@@ -1,7 +1,6 @@
-from datetime import datetime
-
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -11,31 +10,62 @@ class Site(OpinionSite):
         self.back_scrape_iterable = range(1, 700)
         self.court_id = self.__module__
 
+    def _download(self, request_dict={}):
+        html = super(Site, self)._download(request_dict)
+        self._extract_cases_from_html(html)
+        return html
+
+    def _extract_cases_from_html(self, html):
+        """Build list of data dictionaries, one dictionary per case (table row)."""
+        self.cases = []
+
+        for row in html.xpath('//table/tbody/tr'):
+            date, docket, url, name, status = False, False, False, False, False
+
+            date = convert_date_string(row.xpath('td[1]/span/text()')[0])
+            docket = row.xpath('td[2]/text()')[0].strip()
+
+            url_raw = row.xpath('td[4]/a/@href')
+            if url_raw:
+                url = url_raw[0]
+
+            name_raw = row.xpath('td[4]/a/text()')
+            if name_raw:
+                name = titlecase(name_raw[0].split('[')[0].strip())
+
+            status_raw = row.xpath('td[5]/text()')
+            if status_raw:
+                status_raw = status_raw[0].strip().lower()
+                if 'nonprecedential' in status_raw.lower():
+                    status = 'Unpublished'
+                elif 'precedential' in status_raw.lower():
+                    status = 'Published'
+                else:
+                    status = 'Unknown'
+
+            if date and docket and url and name and status:
+                self.cases.append({
+                    'date': date,
+                    'docket': docket,
+                    'url': url,
+                    'name': name,
+                    'status': status,
+                })
+
     def _get_case_names(self):
-        return [titlecase(s.split('[')[0]) for s in
-                self.html.xpath('//table//tr/td[4]/a/text()')]
+        return [case['name'] for case in self.cases]
 
     def _get_download_urls(self):
         return list(self.html.xpath('//table//tr/td[4]/a/@href'))
 
     def _get_case_dates(self):
-        path = '//table//tr/td[1]/span/text()'
-        return [datetime.strptime(date_string, '%Y-%m-%d').date()
-                for date_string in self.html.xpath(path)]
+        return [case['date'] for case in self.cases]
 
     def _get_docket_numbers(self):
-        return list(self.html.xpath('//table//tr/td[2]/text()'))
+        return [case['docket'] for case in self.cases]
 
     def _get_precedential_statuses(self):
-        statuses = []
-        for status in self.html.xpath('//table//tr/td[5]/text()'):
-            if 'nonprecedential' in status.lower():
-                statuses.append('Unpublished')
-            elif 'precedential' in status.lower():
-                statuses.append('Published')
-            else:
-                statuses.append('Unknown')
-        return statuses
+        return [case['status'] for case in self.cases]
 
     def _download_backwards(self, n):
         self.url = "http://www.cafc.uscourts.gov/opinions-orders?page={}".format(n)

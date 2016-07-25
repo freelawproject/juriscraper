@@ -11,9 +11,9 @@ History:
 """
 
 import re
-import time
-from datetime import date
+
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -22,7 +22,7 @@ class Site(OpinionSite):
         self.url = 'http://www.mass.gov/courts/court-info/sjc/about/reporter-of-decisions/opinions.xml'
         self.court_id = self.__module__
         self.court_identifier = 'SJC'
-        self.grouping_regex = re.compile("(.*)\s+\((SJC[-\s]+\d+(?:, \d+)*)\)\s+\((.+)\)")
+        self.grouping_regex = re.compile("(.*)\s+\((SJC[-\s]+\d+(?:,?;? \d+)*)\)\s+\((.+)\)")
         self.base_path = "//title[not(contains(., 'List of Un')) and contains(., '{id}')]".format(id=self.court_identifier)
 
     def _get_case_names(self):
@@ -39,8 +39,8 @@ class Site(OpinionSite):
         dates = []
         path = self.base_path + "//text()[contains(., '{id}')]".format(id=self.court_identifier)
         for s in self.html.xpath(path):
-            s = self.grouping_regex.search(s).group(3)
-            dates.append(date.fromtimestamp(time.mktime(time.strptime(s, '%B %d, %Y'))))
+            date_string = self.grouping_regex.search(s).group(3)
+            dates.append(convert_date_string(date_string))
         return dates
 
     def _get_docket_numbers(self):

@@ -13,8 +13,6 @@ from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
-    cases = []
-
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -25,6 +23,7 @@ class Site(OpinionSite):
             year=date.today().year
         )
         self.court_filters = ['/supct/']
+        self.cases = []
 
     def _download(self, request_dict={}):
         html = super(Site, self)._download(request_dict)
