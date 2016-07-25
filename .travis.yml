@@ -2,8 +2,8 @@ sudo: false
 language: python
 python:
 - '2.7'
-script:
-- python setup.py test
+script: python setup.py test
+install: pip install -U setuptools ; pip install .
 cache: pip
 notifications:
   slack: flp-talk:iG0Qd1lAUJuXZlkcf2sbUC5P
