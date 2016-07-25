@@ -32,7 +32,7 @@ class Site(OpinionSite):
         self.court_id = self.__module__
 
     def _make_html_tree(self, text):
-        e = html5parser.document_fromstring(text)
+        e = html5parser.document_fromstring(text.encode('utf-8'))
         html_tree = fromstring(tostring(e))
         return html_tree
 

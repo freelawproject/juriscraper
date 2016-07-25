@@ -23,7 +23,7 @@ class Site(ca11_p.Site):
         :param text: The html of the document
         :return: an lxml.HtmlElement object
         """
-        e = html5parser.document_fromstring(text)
+        e = html5parser.document_fromstring(text.encode('utf-8'))
         html_tree = fromstring(tostring(e))
         return html_tree
 
