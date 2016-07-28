@@ -13,9 +13,8 @@ If there are errors with the site, you can contact:
 She's very responsive.
 """
 
-from datetime import datetime
-
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -24,25 +23,34 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.url = 'https://www.vermontjudiciary.org/LC/SupCrtPublish.aspx'
 
+        # Limit number of cases extracted. Number of cases
+        # pulled may not match this number exactly since
+        # funky html table has some rows that we ignore
+        self.max_cases = 100
+
+    def get_cell_base_path(self, index):
+        pattern = "//div[@id='WebPartWPQ2']//tr[position() < %d]/td[%d]"
+        return pattern % (self.max_cases, index)
+
     def _get_download_urls(self):
-        path = "//div[@id='WebPartWPQ2']//a[contains(@href, 'pdf')]/@href"
+        path = "%s/a[contains(@href, 'pdf')]/@href" % self.get_cell_base_path(1)
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
-        path = "//div[@id='WebPartWPQ2']//td[2]//text()"
+        path = "%s//text()" % self.get_cell_base_path(2)
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
-        path = "//div[@id='WebPartWPQ2']//td[5]//text()"
-        return [datetime.strptime(s, '%m/%d/%Y') for s in self.html.xpath(path)]
+        path = "%s//text()" % self.get_cell_base_path(5)
+        return [convert_date_string(s) for s in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        path = "//div[@id='WebPartWPQ2']//td[4]//text()"
+        path = "%s//text()" % self.get_cell_base_path(4)
         return list(self.html.xpath(path))
 
     def _get_neutral_citations(self):
-        path = "//div[@id='WebPartWPQ2']//td[3]//text()"
+        path = "%s//text()" % self.get_cell_base_path(3)
         return list(self.html.xpath(path))
