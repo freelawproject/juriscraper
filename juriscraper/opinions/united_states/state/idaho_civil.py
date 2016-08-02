@@ -23,8 +23,12 @@ class Site(OpinionSite):
 
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
-        self.url = 'http://www.isc.idaho.gov/appeals-court/isc_civil'
+        self.url = 'https://www.isc.idaho.gov/appeals-court/isc_civil'
         self.court_id = self.__module__
+
+    def _download(self, **kwargs):
+        # Idaho uses a certificate with a bad chain, so we can't verify it.
+        return super(Site, self)._download(request_dict={'verify': False})
 
     def _get_case_names(self):
         case_names = []

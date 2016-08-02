@@ -24,6 +24,10 @@ class Site(OpinionSite):
         ]
         self.court_id = self.__module__
 
+    def _download(self, **kwargs):
+        # Idaho uses a certificate with a bad chain, so we can't verify it.
+        return super(Site, self)._download(request_dict={'verify': False})
+
     def _get_precedential_statuses(self):
         return ["Unpublished"] * len(self.case_names)
 
@@ -74,12 +78,12 @@ class Site(OpinionSite):
         for e in self.html.xpath(self.base_path):
             s = html.tostring(e, method='text', encoding='unicode')
             s = re.search('(.*[0-9]{4})', s).group(1)
-            date_formats = ['%B %d, %Y',
-                            '%B %d %Y']
+            date_formats = ['%B %d, %Y', '%B %d %Y', '%b %d %Y', '%b %d, %Y']
             for format in date_formats:
                 try:
                     case_date = date.fromtimestamp(
                         time.mktime(time.strptime(clean_string(s), format)))
+                    break
                 except ValueError:
                     continue
             case_dates.append(case_date)
