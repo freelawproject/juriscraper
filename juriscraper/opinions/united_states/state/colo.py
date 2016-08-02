@@ -175,7 +175,18 @@ class Site(OpinionSite):
             match = re.match(cls.regex, text).group(12)
         except:
             raise InsanityException('Unable to parse case name from "%s"' % text)
-        return match.strip().rstrip('.')
+        name = match.strip().rstrip('.')
+        if not name:
+            # This is definitely not ideal, but the court has a 2016 case that does
+            # not include a name.  We've asked colo many times to fix it, and
+            # they've been non-responsive, and this is holding our scraping up.
+            # If you are editing this scraper in 2017 (when the problematic
+            # case moves out of the scraper's range), please comment this logic
+            # and test to see if the scraper works without it. If there are no Insanity
+            # exceptions thrown regarding a blank name commit the code without this
+            # logic but leave this, and it, commented for future reference.
+            name = 'Unknown Title'
+        return name
 
     @classmethod
     def _extract_citation_from_text(cls, text):
