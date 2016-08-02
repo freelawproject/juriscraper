@@ -17,9 +17,10 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
+        self.base_url = 'http://www.courts.ri.gov/Courts/SupremeCourt/Pages/Opinions/Opinions'
         self.url = self.build_url()
         self.cases = []
-        self.previous_date = False
+        self.previous_date = None
         self.include_summary = True
         self.precedential_status = 'Published'
 
@@ -31,10 +32,7 @@ class Site(OpinionSite):
             year = today.year
         else:
             year = today.year - 1
-        return '%s%d-%d.aspx' % (self.base_url(), year, year + 1)
-
-    def base_url(self):
-        return 'http://www.courts.ri.gov/Courts/SupremeCourt/Pages/Opinions/Opinions'
+        return '%s%d-%d.aspx' % (self.base_url, year, year + 1)
 
     def _download(self, request_dict={}):
         html = super(Site, self)._download(request_dict)
@@ -89,12 +87,18 @@ class Site(OpinionSite):
         if self.previous_date:
             return self.previous_date
 
-        raise InsanityException('Could not parse date from string, and no previous date to fall back on: "%s"' % text)
+        raise InsanityException(
+            'Could not parse date from string, and no previous date to fall '
+            'back on: "%s"' % text_list
+        )
 
-    def parse_name_from_text(self, text_list):
+    @staticmethod
+    def parse_name_from_text(text_list):
         regexes = [
-            '(.*?)(,?\sNos?\.)(.*?)',           # Expected format
-            '(.*?)(,?\s\d+-\d+(,|\s))(.*?)',    # Clerk typo, forgot "No."/"Nos." substring
+            # Expected format
+            '(.*?)(,?\sNos?\.)(.*?)',
+            # Clerk typo, forgot "No."/"Nos." substring
+            '(.*?)(,?\s\d+-\d+(,|\s))(.*?)',
         ]
 
         for regex in regexes:
@@ -103,12 +107,14 @@ class Site(OpinionSite):
                 if name_match:
                     return name_match.group(1)
 
-        # "No."/"Nos." and docket missing, fall back on whatever's before first semi-colon
+        # "No."/"Nos." and docket missing, fall back on whatever's before first
+        # semi-colon
         for text in text_list:
             if ';' in text:
                 return text.split(';')[0]
 
-        raise InsanityException('Could not parse name from string: "%s"' % text)
+        raise InsanityException('Could not parse name from string: "%s"' %
+                                text_list)
 
     def _get_case_names(self):
         return [case['name'] for case in self.cases]
