@@ -119,7 +119,7 @@ class ScraperExampleTest(unittest.TestCase):
                     site.parse()
                 t2 = time.time()
 
-                max_speed = 10
+                max_speed = 15
                 warn_speed = 1
                 speed = t2 - t1
                 msg = ''
