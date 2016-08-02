@@ -17,143 +17,113 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
+        self.url = self.build_url()
+        self.cases = []
+        self.previous_date = False
+        self.include_summary = True
+        self.precedential_status = 'Published'
+
+    def build_url(self):
         # This court hears things from mid-September to end of June. This
         # defines the "term" for that year, which triggers the website updates.
         today = datetime.today()
         if today >= datetime(today.year, 9, 15):
-            self.current_year = today.year
+            year = today.year
         else:
-            self.current_year = today.year - 1
-        self.url = 'http://www.courts.ri.gov/Courts/SupremeCourt/Pages/Opinions/Opinions{current}-{next}.aspx'.format(
-            current=self.current_year,
-            next=self.current_year + 1,
-        )
+            year = today.year - 1
+        return '%s%d-%d.aspx' % (self.base_url(), year, year + 1)
 
-        self.cached_records = None
+    def base_url(self):
+        return 'http://www.courts.ri.gov/Courts/SupremeCourt/Pages/Opinions/Opinions'
 
-        # The list of pages can be found here:
-        # http://www.courts.ri.gov/Courts/SupremeCourt/Pages/Opinions%20and%20Orders%20Issued%20in%20Supreme%20Court%20Cases.aspx
+    def _download(self, request_dict={}):
+        html = super(Site, self)._download(request_dict)
+        self.extract_cases_from_html(html)
+        return html
 
-        # This regex should be fairly clear, but the question mark at the end
-        # might be confusing. That is there to make the date match optional,
-        # because sometimes they forget it.
-        self.regex = '(.*?)((?:Nos?\.)\s+(?:((\d{2,}[-,])?\d+|\d{3}),?\s?)+)(\(.*\)?)?'
-
-    @staticmethod
-    def _normalize_dockets(dockets_raw_string):
-        """Normalize various different docket formats that court publishes"""
-
-        result = []
-        dockets = re.sub(r'Nos?\.', '', dockets_raw_string).split(",")
-
-        for docket in dockets:
-            docket = docket.strip()
-
-            if re.match(r"^\d+$", docket):
-                # format: "number"
-                result.append(docket)
-            elif re.match(r"^\d+\-\d+$", docket):
-                # format: "number-number"
-                result.append(docket)
-            elif re.match(r"^\d+\,\d+$", docket):
-                # format: "number,number"
-                docket = docket.replace(",", "-")
-                result.append(docket)
-            else:
-                raise InsanityException("Unknown docket number format '%s'" % (docket,))
-
-        # reassemble the docket numbers into one string
-        return ", ".join(result)
-
-    def _do_load(self):
-        results = []
-        path = "//table[@id = 'onetidDoclibViewTbl0']/tr[position() > 1]"
-        trs = list(self.html.xpath(path))
-
-        # table structure:
+    def extract_cases_from_html(self, html):
+        # case information spans over 3 rows, so must process 3 at a time:
         #   <tr> - contains case name, docket number, date and pdf link
         #   <tr> - contains case summary
-        #   <tr> - contains a one-pixel gif
+        #   <tr> - contains a one-pixel gif spacer
+        table = "//table[@id = 'onetidDoclibViewTbl0']/tr[position() > 1]"
+        rows = list(html.xpath(table))
+        row_triplets = zip(rows, rows[1:])[::3]
 
-        # take the first two <tr> from each triplet
-        for tr1, tr2 in zip(trs, trs[1:])[::3]:
-            td1 = tr1.xpath("./td[1]/text()")[0]
-            href = tr1.xpath("./td[2]/a/@href")[0]
-            text = tr2.xpath("./td/div/text()")
+        for tr1, tr2 in row_triplets:
+            case = self.extract_case_from_rows(tr1, tr2)
+            self.previous_date = case['date']
+            self.cases.append(case)
 
-            if not re.match(self.regex, td1):
-                # regex to parse date formatted as '(March 30, 2015)'
-                date_regex = r"^\(\w+\s+\d+\,\s+\d+\)$"
-                # Special case 1:
-                #   td1 contains only a date, matching date_regex
-                #   first line of summary contains case name with docket number
-                if re.match(date_regex, td1) and re.match(self.regex, text[0]):
-                    search = re.search(self.regex, text[0], re.MULTILINE)
-                    case_name = search.group(1)
-                    dockets = self._normalize_dockets(search.group(2))
-                    results.append({'date': convert_date_string(td1),
-                                    'url': href,
-                                    'docket': dockets,
-                                    'summary': "\n".join(text[1:]),
-                                    'case_name': case_name})
-                else:
-                    # Special case 2:
-                    # td1 contains a very long case name
-                    #     docket number is missing
-                    #     date is missing
-                    link_text = tr1.xpath("./td[2]/a/text()")[0]
-                    # use link text as docket number
-                    link_text = self._normalize_dockets(link_text)
-                    # use date from previous record
-                    results.append({'date': results[-1]['date'],
-                                    'url': href,
-                                    'docket': link_text,
-                                    'summary': "\n".join(text),
-                                    'case_name': case_name})
-            else:
-                search = re.search(self.regex, td1, re.MULTILINE)
-                case_name = search.group(1)
-                dockets = self._normalize_dockets(search.group(2))
-                date_string = search.group(5)
+    def extract_case_from_rows(self, row1, row2):
+        docket = row1.xpath('./td[2]/a/text()')[0]
+        docket = ', '.join([d.strip() for d in docket.split(',')])
+        url = row1.xpath("./td[2]/a/@href")[0]
+        text = row1.xpath("./td[1]/text()")[0]
+        text_to_parse = [text]
 
-                if date_string:
-                    case_date = convert_date_string(date_string)
-                else:
-                    # if no date, use date from previous record
-                    case_date = results[-1]['date']
-                results.append({'date': case_date,
-                                'url': href,
-                                'docket': dockets,
-                                'summary': "\n".join(text),
-                                'case_name': case_name})
-        return results
+        if self.include_summary:
+            summary_lines = row2.xpath("./td/div/text()")
+            summary = '\n'.join(summary_lines)
+            joined_text = '\n'.join([text, summary_lines[0]])
+            text_to_parse.append(joined_text)
+        else:
+            summary = False
 
-    def _load(self):
-        if self.cached_records is None:
-            self.cached_records = self._do_load()
-        return self.cached_records
+        return {
+            'url': url,
+            'docket': docket,
+            'date': self.parse_date_from_text(text_to_parse),
+            'name': self.parse_name_from_text(text_to_parse),
+            'summary': summary,
+        }
 
-    def _filter(self, key):
-        r = []
-        for d in self._load():
-            if d.get(key) is not None:
-                r.append(d[key])
-        return r
+    def parse_date_from_text(self, text_list):
+        regex = '(.*?)(\((\w+\s+\d+\,\s+\d+)\))(.*?)'
+        for text in text_list:
+            date_match = re.match(regex, text)
+            if date_match:
+                return convert_date_string(date_match.group(3))
 
-    def _get_download_urls(self):
-        return self._filter('url')
+        # Fall back on previous case's date
+        if self.previous_date:
+            return self.previous_date
+
+        raise InsanityException('Could not parse date from string, and no previous date to fall back on: "%s"' % text)
+
+    def parse_name_from_text(self, text_list):
+        regexes = [
+            '(.*?)(,?\sNos?\.)(.*?)',           # Expected format
+            '(.*?)(,?\s\d+-\d+(,|\s))(.*?)',    # Clerk typo, forgot "No."/"Nos." substring
+        ]
+
+        for regex in regexes:
+            for text in text_list:
+                name_match = re.match(regex, text)
+                if name_match:
+                    return name_match.group(1)
+
+        # "No."/"Nos." and docket missing, fall back on whatever's before first semi-colon
+        for text in text_list:
+            if ';' in text:
+                return text.split(';')[0]
+
+        raise InsanityException('Could not parse name from string: "%s"' % text)
 
     def _get_case_names(self):
-        return self._filter('case_name')
+        return [case['name'] for case in self.cases]
 
-    def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_names)
+    def _get_download_urls(self):
+        return [case['url'] for case in self.cases]
 
     def _get_case_dates(self):
-        return self._filter('date')
+        return [case['date'] for case in self.cases]
+
+    def _get_precedential_statuses(self):
+        return [self.precedential_status] * len(self.cases)
 
     def _get_docket_numbers(self):
-        return self._filter('docket')
+        return [case['docket'] for case in self.cases]
 
     def _get_summaries(self):
-        return self._filter('summary')
+        return [case['summary'] for case in self.cases]
