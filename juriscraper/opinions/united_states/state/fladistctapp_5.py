@@ -55,13 +55,14 @@ class Site(OpinionSite):
             html_tree = html.fromstring(text)
             html_tree.make_links_absolute(url)
 
-            # This district has some nasty HTML that occasionally breaks one case name across two anchors.
-            # For example (http://www.5dca.org/Opinions/Opin2014/072114/filings%20072114.html):
+            # This district has some nasty HTML that occasionally breaks one
+            # case name across two anchors. For example (http://www.5dca.org/Opinions/Opin2014/072114/filings%20072114.html):
             #
             #      <a href='...'>5D12-4340, 5D12-4401 and 5D12-4319</a><br>
             #      <a href='...'>N.R. v. Florida Birth-Related</a>
             #
-            # The solution is to look at all the a's, and merge the text when the href's are identical.
+            # The solution is to look at all the a's, and merge the text when
+            # the href's are identical.
             previous_a = None
             for e in html_tree.xpath('//a'):
                 if previous_a is not None and e.attrib['href'] == previous_a.attrib['href']:
