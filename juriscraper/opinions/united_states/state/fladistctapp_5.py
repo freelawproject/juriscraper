@@ -108,9 +108,9 @@ class Site(OpinionSite):
         return case_dates
 
     def _return_dates(self, html_tree):
-        path = "//*[starts-with(., 'Opinions')]/text()"
-        text = html_tree.xpath(path)[0]
-        date_string = re.search('.* Week of (.*)', text).group(1).strip()
+        path = "//*[starts-with(., 'Opinions ')]/text() | //*[starts-with(., 'OPINIONS ')]/text()"
+        text = html_tree.xpath(path)[0].lower()
+        date_string = re.search('.* week of (.*)', text).group(1).strip()
         case_date = convert_date_string(date_string)
         count = int(html_tree.xpath("count({base})".format(base=self.base_path)))
         return [case_date for i in range(count) ]
