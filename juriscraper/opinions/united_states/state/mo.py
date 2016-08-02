@@ -15,15 +15,13 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
+        self.url_slug = "Supreme"
         self.url = self.build_url()
         self.cases = []
 
     def build_url(self):
-        format = 'https://www.courts.mo.gov/page.jsp?id=12086&dist=Opinions %s&date=all&year=%s#all'
-        return format % (self.url_slug(), date.today().year)
-
-    def url_slug(self):
-        return 'Supreme'
+        url_template = 'https://www.courts.mo.gov/page.jsp?id=12086&dist=Opinions %s&date=all&year=%s#all'
+        return url_template % (self.url_slug, date.today().year)
 
     def _download(self, request_dict={}):
         html = super(Site, self)._download(request_dict)
@@ -55,12 +53,14 @@ class Site(OpinionSite):
                         'disposition': disposition,
                     })
 
-    def sanitize_docket(self, docket):
+    @staticmethod
+    def sanitize_docket(docket):
         for substring in [':', 'and', '_', 'Consolidated', '(', ')', ',']:
             docket = docket.replace(substring, ' ')
         return ', '.join(docket.split())
 
-    def parse_judge_disposition_from_text(self, text_raw_list):
+    @staticmethod
+    def parse_judge_disposition_from_text(text_raw_list):
         text_clean_list = [text.strip() for text in text_raw_list if text.strip()]
         return text_clean_list[0], text_clean_list[1]
 
