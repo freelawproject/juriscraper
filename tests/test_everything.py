@@ -12,11 +12,12 @@ import datetime
 sys.path.insert(0, os.path.dirname(os.path.realpath(__file__)))
 
 from juriscraper.lib.importer import build_module_list
-from juriscraper.lib.date_utils import parse_dates, quarter, \
-    is_first_month_in_quarter
+from juriscraper.lib.date_utils import (
+    parse_dates, quarter, is_first_month_in_quarter, fix_future_year_typo
+)
 from juriscraper.lib.string_utils import (
     clean_string, fix_camel_case, force_unicode, harmonize, titlecase,
-    CaseNameTweaker,
+    CaseNameTweaker, convert_date_string
 )
 from juriscraper.opinions.united_states.state import massappct, pa, mass, nh, colo
 from juriscraper.oral_args.united_states.federal_appellate import ca6
@@ -49,6 +50,17 @@ class DateParserTest(unittest.TestCase):
         for pair in test_pairs:
             dates = parse_dates(pair[0])
             self.assertEqual(dates, pair[1])
+
+    def test_fix_future_year_typo(self):
+        expectations = {
+            '12/01/2106': '12/01/2016',  # Here's the fix
+            '12/01/2016': '12/01/2016',  # Should not change
+            '12/01/2806': '12/01/2806',  # Should not change
+            '12/01/2886': '12/01/2886',  # Should not change
+        }
+        for before, after in expectations.iteritems():
+            fixed_date = fix_future_year_typo(convert_date_string(before))
+            self.assertEqual(fixed_date, convert_date_string(after))
 
 
 class ScraperExampleTest(unittest.TestCase):

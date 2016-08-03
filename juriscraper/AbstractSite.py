@@ -1,19 +1,20 @@
-from datetime import date, datetime
-import hashlib
+import re
 import json
-from urlparse import urlsplit, urlunsplit, urljoin
-
 import certifi
-from juriscraper.lib.date_utils import json_date_handler
+import hashlib
+import requests
+
+
+from lxml import html
+from datetime import date, datetime
+from requests.adapters import HTTPAdapter
+from urlparse import urlsplit, urlunsplit, urljoin
+from juriscraper.lib.test_utils import MockRequest
+from juriscraper.lib.date_utils import json_date_handler, fix_future_year_typo
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
     harmonize, clean_string, trunc, CaseNameTweaker
 )
-from juriscraper.lib.test_utils import MockRequest
-from lxml import html
-import re
-import requests
-from requests.adapters import HTTPAdapter
 
 try:
     # Use cchardet for performance to detect the character encoding.
@@ -216,17 +217,26 @@ class AbstractSite(object):
                 prior_case_name = name
                 i += 1
 
-        for d in self.case_dates:
-            if not isinstance(d, date):
+        for index, case_date in enumerate(self.case_dates):
+            if not isinstance(case_date, date):
                 raise InsanityException(
                     '%s: member of case_dates list not a valid date object. '
                     'Instead it is: %s with value: %s' % (
-                        self.court_id, type(d), d)
+                        self.court_id, type(case_date), case_date)
                 )
-            if d.year > 2025:
+            # Sanitize case date, fix typo of current year if present
+            fixed_date = fix_future_year_typo(case_date)
+            if fixed_date != case_date:
+                logger.info(
+                    "Date year typo detected. Converting %s to %s "
+                    "for case '%s' in %s" % (case_date, fixed_date, self.case_names[index], self.court_id)
+                )
+                case_date = fixed_date
+                self.case_dates[index] = fixed_date
+            if case_date.year > 2025:
                 raise InsanityException(
                     '%s: member of case_dates list is from way in the future, '
-                    'with value %s' % (self.court_id, d.year)
+                    'with value %s' % (self.court_id, case_date.year)
                 )
 
         # Is cookies a dict?
