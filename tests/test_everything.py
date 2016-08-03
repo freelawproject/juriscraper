@@ -53,13 +53,14 @@ class DateParserTest(unittest.TestCase):
 
     def test_fix_future_year_typo(self):
         expectations = {
-            '12/01/2106': convert_date_string('12/01/2016'),
-            '12/01/2806': False,
-            '12/01/2886': False,
+            '12/01/2106': '12/01/2016',  # Here's the fix
+            '12/01/2016': '12/01/2016',  # Should not change
+            '12/01/2806': '12/01/2806',  # Should not change
+            '12/01/2886': '12/01/2886',  # Should not change
         }
-        for date_string, result in expectations.iteritems():
-            fixed_date = fix_future_year_typo(convert_date_string(date_string))
-            self.assertEqual(fixed_date, result)
+        for before, after in expectations.iteritems():
+            fixed_date = fix_future_year_typo(convert_date_string(before))
+            self.assertEqual(fixed_date, convert_date_string(after))
 
 
 class ScraperExampleTest(unittest.TestCase):

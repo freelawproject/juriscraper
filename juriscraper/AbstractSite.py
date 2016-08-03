@@ -10,7 +10,7 @@ from lxml import html
 
 from juriscraper.lib.test_utils import MockRequest
 from juriscraper.lib.log_tools import make_default_logger
-from juriscraper.lib.date_utils import json_date_handler, fix_future_year_typo, future_date_threshold
+from juriscraper.lib.date_utils import json_date_handler, fix_future_year_typo
 from juriscraper.lib.string_utils import harmonize, clean_string, trunc, CaseNameTweaker
 
 
@@ -223,18 +223,20 @@ class AbstractSite(object):
                     'Instead it is: %s with value: %s' % (
                         self.court_id, type(case_date), case_date)
                 )
-            if case_date.year > future_date_threshold():
-                fixed_date = fix_future_year_typo(case_date)
-                if fixed_date:
-                    self.case_dates[index] = fixed_date
-                    logger.info(
-                        "Date year typo detected. Converting %s to %s" % (case_date, fixed_date)
-                    )
-                else:
-                    raise InsanityException(
-                        '%s: member of case_dates list is from way in the future, '
-                        'with value %s' % (self.court_id, case_date.year)
-                    )
+            # Sanitize case date, fix typo of current year if present
+            fixed_date = fix_future_year_typo(case_date)
+            if fixed_date != case_date:
+                logger.info(
+                    "Date year typo detected. Converting %s to %s "
+                    "for case '%s' in %s" % (case_date, fixed_date, self.case_names[index], self.court_id)
+                )
+                case_date = fixed_date
+                self.case_dates[index] = fixed_date
+            if case_date.year > 2025:
+                raise InsanityException(
+                    '%s: member of case_dates list is from way in the future, '
+                    'with value %s' % (self.court_id, case_date.year)
+                )
 
         # Is cookies a dict?
         if type(self.cookies) != dict:
