@@ -160,6 +160,6 @@ def fix_future_year_typo(future_date):
     current_year = str(datetime.date.today().year)
     transposed_year = current_year[0] + current_year[2] + current_year[1] + current_year[3]
     if transposed_year == str(future_date.year):
-        fixed_date = '%d/%d/%s' % (future_date.month, future_date.day, current_year)
-        return datetime.datetime.strptime(fixed_date, "%m/%d/%Y").date()
+        return datetime.date(int(current_year), future_date.month,
+                             future_date.day)
     return future_date
