@@ -10,6 +10,7 @@
 #   2016-03-08: Updated by arderyp, Added regex back to handle human typos found
 #               on older pages, and added fallback loose checking to handle
 #               differently formatted disciplinary/admissions docket numbers
+#   2016-08-03: Updated by arderyp to handle junk/repetitive anchor tags
 
 import re
 
@@ -30,7 +31,6 @@ class Site(OpinionSite):
             year=self.crawl_date.year
         )
         self.LINK_PATH = "//td[2]//a[contains(./@href, 'Decisions')]"
-        self.LINK_TEXT_PATH = '%s/text()' % self.LINK_PATH
         self.LINK_HREF_PATH = '%s/@href' % self.LINK_PATH
         self.LINK_TEXT_PATTERN_MEMORANDUM = (r'(?P<docket_number>^\d+((/\d+)+)?)(/)?'
                                              r'(?P<case_name>.+)')
@@ -39,27 +39,35 @@ class Site(OpinionSite):
 
     def _get_case_names(self):
         case_names = []
-        for link_text in self.html.xpath(self.LINK_TEXT_PATH):
-            docket, name = self._get_docket_and_name_from_text(link_text)
-            if name:
-                case_names.append(name)
+        for link in self.html.xpath(self.LINK_PATH):
+            text = link.text_content().strip()
+            if text:
+                docket, name = self._get_docket_and_name_from_text(text)
+                if name:
+                    case_names.append(name)
         return case_names
 
     def _get_download_urls(self):
-        return list(self.html.xpath(self.LINK_HREF_PATH))
+        urls = []
+        for link in self.html.xpath(self.LINK_PATH):
+            if link.text_content().strip():
+                urls.append(link.xpath('@href')[0])
+        return urls
 
     def _get_case_dates(self):
-        return [self.crawl_date] * len(self.html.xpath(self.LINK_HREF_PATH))
+        return [self.crawl_date] * len(self._get_case_names())
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
 
     def _get_docket_numbers(self):
         docket_numbers = []
-        for link_text in self.html.xpath(self.LINK_TEXT_PATH):
-            docket, name = self._get_docket_and_name_from_text(link_text)
-            if docket:
-                docket_numbers.append(docket)
+        for link in self.html.xpath(self.LINK_PATH):
+            text = link.text_content().strip()
+            if text:
+                docket, name = self._get_docket_and_name_from_text(text)
+                if docket:
+                    docket_numbers.append(docket)
         return docket_numbers
 
     def _get_docket_and_name_from_text(self, text):
