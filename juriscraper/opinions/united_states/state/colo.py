@@ -57,10 +57,10 @@ class Site(OpinionSite):
                 # we can do easily enough with an example file),
                 # after which each specific date's sub-page must
                 # be requested (over the network) then scraped.
-                # Consequently, we only test the first subpage.
+                # Consequently, we only test the first sub-page.
                 # If the scraper fails due to regex, please
-                # add new regex test to
-                # test_everything.ScraperSpotTest.test_colo_coloctapp
+                # add new regex test to ScraperSpotTest.test_colo_coloctapp
+                # in test_everything.py
                 if self.method == 'LOCAL' and html_trees:
                     break
 
@@ -81,7 +81,7 @@ class Site(OpinionSite):
                 self._extract_cases_from_sub_page(html_tree, date_obj)
                 html_trees.append((html_tree, date_obj))
 
-                # process all subpages
+                # process all sub-pages
                 if self.next_subpage_path is not None and self.method != 'LOCAL':
                     while True:
                         next_subpage_html = self.get_next_page(html_tree, self.next_subpage_path, request_dict, url)
@@ -108,8 +108,7 @@ class Site(OpinionSite):
                 evtarget = href[len(exp_start):-len(exp_end)]
             # a disabled 'next page' link will contains this string in the class list
             if evtarget is not None and 'aspNetDisabled' not in class_.split():
-                form = []
-                form.append(('__EVENTTARGET', ('', evtarget)))
+                form = [('__EVENTTARGET', ('', evtarget))]
                 form_items_xpath = "//input"
                 for form_el in html_l.xpath(form_items_xpath):
                     name = form_el.get('name')
@@ -148,11 +147,14 @@ class Site(OpinionSite):
     def _extract_cases_from_sub_page(self, html_tree, date_obj):
         for anchor in html_tree.xpath("//a[@class='Head articletitle']"):
             text = self._extract_text_from_anchor(anchor)
+            name = self._extract_name_from_text(text)
+            url = self._extract_url_from_anchor(anchor)
+            direct_url, resource_name = self.extract_pdf_url_and_name_from_resource(url)
             self.cases.append({
                 'date': date_obj,
                 'status': 'Published',
-                'name': self._extract_name_from_text(text),
-                'url': self._extract_url_from_anchor(anchor),
+                'name': name if name else resource_name,
+                'url': direct_url if direct_url else url,
                 'docket': self._extract_docket_from_text(text),
                 'citation': self._extract_citation_from_text(text),
                 'summary': self._extract_summary_relative_to_anchor(anchor),
@@ -175,18 +177,7 @@ class Site(OpinionSite):
             match = re.match(cls.regex, text).group(12)
         except:
             raise InsanityException('Unable to parse case name from "%s"' % text)
-        name = match.strip().rstrip('.')
-        if not name:
-            # This is definitely not ideal, but the court has a 2016 case that does
-            # not include a name.  We've asked colo many times to fix it, and
-            # they've been non-responsive, and this is holding our scraping up.
-            # If you are editing this scraper in 2017 (when the problematic
-            # case moves out of the scraper's range), please comment this logic
-            # and test to see if the scraper works without it. If there are no Insanity
-            # exceptions thrown regarding a blank name commit the code without this
-            # logic but leave this, and it, commented for future reference.
-            name = 'Unknown Title'
-        return name
+        return match.strip().rstrip('.')
 
     @classmethod
     def _extract_citation_from_text(cls, text):
@@ -204,6 +195,28 @@ class Site(OpinionSite):
     def _extract_url_from_anchor(cls, anchor):
         return anchor.xpath('@href')[0]
 
+    def extract_pdf_url_and_name_from_resource(self, url):
+        """Scrape the resource for a direct link to PDF or a backup case name
+
+        A resource can only have one or the other.  If the PDF is embedded,
+        the name is not displayed in plain text format. These return values
+        are used as backups in case the original source data is non-ideal.
+        """
+        request = self._get_resource(url)
+        text = self._clean_text(request.text)
+        html_tree = html.fromstring(text)
+        html_tree.make_links_absolute(self.url)
+        href = html_tree.xpath("//h2/a[contains(@href, '.pdf')]/@href")
+        if href:
+            return href[0], False
+        path1 = '//p/strong[starts-with(text(), "Plaintiff-Appellee:")]/parent::p/text()'
+        path2 = '//p/strong[starts-with(text(), "Petitioner:")]/parent::p/text()'
+        parts = html_tree.xpath('%s | %s' % (path1, path2))
+        if parts:
+            name = ' '.join(part.strip() for part in parts if part.strip())
+            return False, name
+        return False, False
+
     def _extract_summary_relative_to_anchor(self, anchor):
         parts = anchor.xpath('%s/p' % self.parent_summary_block_path)
         return ' '.join([part.text_content().strip() for part in parts])
@@ -212,8 +225,8 @@ class Site(OpinionSite):
         """Extract italicized nature summary that appears directly after download url
 
         The court uses a lot of different html method of presenting this information.
-        If a "nature" field is showing blank, it could be that they are using a new
-        html path, which should be added to the path_patterns list below.
+        If a "nature" field is showing blank in the results, it could be that they are
+        using a new html path, which should be added to the path_patterns list below.
         """
         nature = ''
 
@@ -236,27 +249,11 @@ class Site(OpinionSite):
         ]
         for pattern in path_patterns:
             try:
-                nature = anchor.xpath(pattern % self.parent_summary_block_path)[
-                    0]
+                nature = anchor.xpath(pattern % self.parent_summary_block_path)[0]
                 break
             except:
                 continue
         return nature.strip().rstrip('.')
-
-    def _get_missing_name_from_resource(self, resource_url):
-        """Extract case name from case document
-
-        This is a fall back method that should only be called
-        if the clerk made a mistake and forgot to put the case
-        name on the resource/opinion list page. example:
-        http://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions
-        """
-        request = self._get_resource(resource_url)
-        text = self._clean_text(request.text)
-        html_tree = html.fromstring(text)
-        parts = html_tree.xpath(
-            '//p/strong[starts-with(text(), "Plaintiff-Appellee:")]/parent::p/text()')
-        return ' '.join(part.strip() for part in parts if part.strip())
 
     def _get_case_names(self):
         return [case['name'] for case in self.cases]
@@ -285,16 +282,22 @@ class Site(OpinionSite):
     @staticmethod
     def cleanup_content(content):
         tree = html.fromstring(content)
-        core_element = tree.xpath('//div[@id="dnn_ctr2513_ModuleContent"]')[0]
-        return html.tostring(
-            core_element,
-            pretty_print=True,
-            encoding='unicode'
-        )
+        core_element = tree.xpath('//div[@class="contentmain"]')
+        if core_element:
+            # its an HTML opinion, return only the core element
+            return html.tostring(
+                core_element[0],
+                pretty_print=True,
+                encoding='unicode'
+            )
+        else:
+            # its raw pdf file content, which doesn't need to be manipulated
+            return content
+
 
     def _download_backwards(self, _):
-        # dummy backscrape parameter is ignored
+        # dummy backscraper parameter is ignored
         # should be called only once as it parses the whole page
-        # and all subpages on every call
+        # and all sub-pages on every call
         self.base_path = "//table//td[1]/ul/li/strong/a"
         self.html = self._download()
