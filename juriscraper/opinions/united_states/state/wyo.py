@@ -8,7 +8,7 @@ History:
 """
 
 import re
-from datetime import datetime
+from datetime import datetime, date
 
 from juriscraper.OpinionSite import OpinionSite
 
@@ -17,7 +17,7 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.base_url = 'http://www.courts.state.wy.us'
-        self.url = self.base_url + '/Supreme/OpinionsVM?EndDate=12%2F27%2F2014&StartDate=2%2F27%2F2006'
+        self.url = self.base_url + '/Supreme/OpinionsVM?StartDate=1%2F1%2F' + str(date.today().year)
         self.court_id = self.__module__
 
     def _get_case_names(self):
@@ -40,10 +40,10 @@ class Site(OpinionSite):
         case_dates = []
         date_re = re.compile(r"^/Date\((\d+)\)/$")
         for record in self.html:
-            m = date_re.match(record['date_heard'])
-            if m:
-                t = int(m.group(1)) / 1000
-                case_dates.append(datetime.fromtimestamp(t).date())
+            match = date_re.match(record['date_heard'])
+            if match:
+                timestamp = int(match.group(1)) / 1000
+                case_dates.append(datetime.fromtimestamp(timestamp).date())
         return case_dates
 
     def _get_docket_numbers(self):
