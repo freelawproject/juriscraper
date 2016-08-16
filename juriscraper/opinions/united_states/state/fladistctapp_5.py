@@ -85,12 +85,11 @@ class Site(OpinionSite):
         return case_names
 
     def _return_case_names(self, html_tree):
-        path = "{base}/text()".format(base=self.base_path)
-        # Uncomment for inevitable regex debugging.
-        # for s in html_tree.xpath(path):
-        #     print "s: %s" % s
-        #     re.search(self.case_regex, s).group(2)
-        return [re.search(self.case_regex, s).group(2) for s in html_tree.xpath(path)]
+        names = []
+        for anchor in html_tree.xpath(self.base_path):
+            text = anchor.text_content().strip()
+            names.append(re.search(self.case_regex, text).group(2))
+        return names
 
     def _get_download_urls(self):
         download_urls = []
@@ -114,7 +113,7 @@ class Site(OpinionSite):
         date_string = re.search('.* week of (.*)', text).group(1).strip()
         case_date = convert_date_string(date_string)
         count = int(html_tree.xpath("count({base})".format(base=self.base_path)))
-        return [case_date for i in range(count) ]
+        return [case_date for i in range(count)]
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_dates)
@@ -126,5 +125,10 @@ class Site(OpinionSite):
         return docket_numbers
 
     def _return_docket_numbers(self, html_tree):
-        path = "{base}/text()".format(base=self.base_path)
-        return [re.search(self.case_regex, e).group(1) for e in html_tree.xpath(path)]
+        dockets = []
+        for anchor in html_tree.xpath(self.base_path):
+            text = anchor.text_content().strip()
+            docket_raw = re.search(self.case_regex, text).group(1)
+            docket_clean = docket_raw.replace('&', '').replace(',', '')
+            dockets.append(', '.join(docket_clean.split()))
+        return dockets
