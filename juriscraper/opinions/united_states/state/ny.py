@@ -76,9 +76,8 @@ class Site(OpinionSite):
         docket_numbers = []
         for cell in self.html.xpath('%s]/td[1]' % self.FOUR_CELLS_SUB_PATH):
             text_node_strings = ', '.join(cell.xpath('.//text()'))
-            if re.search(r'No\.?\,?', text_node_strings):
-                docket_numbers.append(
-                    self._sanitize_docket_string(text_node_strings))
+            if re.search(r'N(o|O)\.?\,?', text_node_strings):
+                docket_numbers.append(self._sanitize_docket_string(text_node_strings))
         return docket_numbers
 
     def _sanitize_docket_string(self, raw_docket_string):
@@ -86,14 +85,12 @@ class Site(OpinionSite):
 
         Dockets on this page should be in format of "No. #",
         but sometimes they forget the period, or use a comma
-        instead.  Stanrdize all to use period, then all of the
-        "No. " will be stripped off via the global docket sanitation.
-        Regex in _get_docket_numbers() may have to be adjusted if they
-        come up with new typos.
+        instead.  We want to trip all variations of that out
+        and replace slash delimiters with coma delimiters.
         """
-        if 'No.' not in raw_docket_string:
-            return raw_docket_string.replace('No ', 'No.').replace('No,', 'No.')
-        return raw_docket_string
+        for abbreviation in ['No.', 'No ', 'No, ', 'NO. ']:
+            raw_docket_string = raw_docket_string.replace(abbreviation, '')
+        return ', '.join(raw_docket_string.split(' / '))
 
     def _row_contains_date(self, row):
         try:
