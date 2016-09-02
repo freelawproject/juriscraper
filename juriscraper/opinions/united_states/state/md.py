@@ -4,11 +4,13 @@ CourtID: md
 Court Short Name: MD
 Author: Andrei Chelaru
 Date created: 06/27/2014
+Court Support: webmaster@mdcourts.gov
 """
 
-from datetime import date, datetime
+from datetime import date
 
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -23,26 +25,15 @@ class Site(OpinionSite):
 
     def _get_case_names(self):
         path = '//table//tr/td[5]/font/text()'
-        case_names = []
-        for s in self.html.xpath(path):
-            case_names.append(s.split('(')[0])
-        return case_names
+        return [s.split('(')[0] for s in self.html.xpath(path)]
 
     def _get_judges(self):
         path = '//table//tr/td[4]/font/text()'
-        judge_names = []
-        for s in self.html.xpath(path):
-            judge_names.append(s.split('(')[0])
-        return judge_names
+        return [s.split('(')[0] for s in self.html.xpath(path)]
 
     def _get_case_dates(self):
         path = '//table//tr/td[3]/font/text()'
-        return [
-            datetime.strptime(
-                ''.join(date_string.split()),
-                '%Y-%m-%d'
-            ).date() for date_string in self.html.xpath(path)
-        ]
+        return [convert_date_string(date_string) for date_string in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
