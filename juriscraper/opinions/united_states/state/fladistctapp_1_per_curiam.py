@@ -5,18 +5,22 @@
 # Author: Andrei Chelaru
 # Reviewer: mlr
 # History:
-# - 21 July 2014: Created.
-# - 06 August 2014: Updated by mlr to use Selenium
-# - 11 August 2014: Updated by mlr to pass tests when method is 'LOCAL'
+# - 20140721: Created.
+# - 20140806: Updated by mlr to use Selenium
+# - 20140811: Updated by mlr to pass tests when method is 'LOCAL'
+# - 20160902: Added helpful exception to let us know when fail is
+#   nothing to worry about (current month not available in portal search)
 
 
 import os
-
-from datetime import date, timedelta
-from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSite import OpinionSite
 from lxml import html
 from selenium import webdriver
+from datetime import date, timedelta
+from selenium.common.exceptions import NoSuchElementException
+
+from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSite import OpinionSite
+from juriscraper.AbstractSite import InsanityException
 
 
 class Site(OpinionSite):
@@ -55,7 +59,16 @@ class Site(OpinionSite):
             driver.find_element_by_xpath(path_to_opinion_type).click()
             path_to_date = "//select[@id='ddlMonths']/option[@value='{d}']".format(
                 d=self.release_date)
-            driver.find_element_by_xpath(path_to_date).click()
+
+            try:
+                driver.find_element_by_xpath(path_to_date).click()
+            except NoSuchElementException:
+                # This is not uncommon early in the month (or if there are
+                # no opinions published in the current month), so failures
+                # resulting from this raise can probably be ignored.
+                warning = 'Current month (%s) not yet available in portal--common occurrence early in the month.'
+                raise InsanityException(warning % self.release_date)
+
             path_to_submit = "//input[@id='cmdSearch']"
             driver.find_element_by_xpath(path_to_submit).click()
 
