@@ -4,44 +4,70 @@
 # History:
 #  - 2014-07-25: Created by Andrei Chelaru, reviewed by mlr
 #  - 2015-07-30: MLR: Added more lenient dates.
+#  - 2016-09-02: arderyp: fixed to handle slight site redesign, while accomodating legacy
 
-
+import re
 from datetime import date
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.date_utils import parse_dates
 from juriscraper.lib.string_utils import titlecase
-import re
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        d = date.today()
-        self.base_path = "//p[contains(., 'SUMMARIES')]"
-        self.regex = re.compile("(S\d{2}.*\d{4})\.?(.*)")
-        self.url = 'http://www.gasupreme.us/opinions/{year}-opinions/'.format(year=d.year)
+        self.url = 'http://www.gasupreme.us/opinions/{year}-opinions/'.format(year=date.today().year)
+        self.cases = []
+
+    def _download(self, request_dict={}):
+        html = super(Site, self)._download(request_dict)
+        self.extract_cases_from_html(html)
+        return html
+
+    def extract_cases_from_html(self, html):
+        paths = '//p/strong | //p/b | //p/font/strong | //p/font/b'
+        for date_element in html.xpath(paths):
+            string = date_element.xpath('./text()')
+            try:
+                string = string[0]
+                # handle legacy example (ga_example.html)
+                string = string.split('SUMMARIES')[0]
+                date_string = re.sub(r'\W+', ' ', string)
+                # handle legacy example (ga_example.html)
+                if len(date_string.split()) != 3:
+                    continue
+                case_date = convert_date_string(date_string)
+            except:
+                continue
+            parent = date_element.xpath('./..')[0]
+            # handle legacy example (ga_example.html)
+            while parent.tag != 'p':
+                parent = parent.xpath('./..')[0]
+            for anchor in parent.getnext().xpath('./li/a'):
+                text = anchor.text_content()
+                if text:
+                    split = text.split('.', 1)
+                    self.cases.append({
+                        'date': case_date,
+                        'url': anchor.xpath('./@href')[0],
+                        'docket': split[0].rstrip('.'),
+                        'name': titlecase(split[1]),
+
+                    })
 
     def _get_case_names(self):
-        path = "{base}/following::ul[1]//li//a[1]/text()".format(base=self.base_path)
-        return [titlecase(self.regex.search(s).group(2).lower()) for s in self.html.xpath(path)]
+        return [case['name'] for case in self.cases]
 
     def _get_download_urls(self):
-        path = "{base}/following::ul[1]//li//a[1]/@href".format(base=self.base_path)
-        return list(self.html.xpath(path))
+        return [case['url'] for case in self.cases]
 
     def _get_case_dates(self):
-        case_dates = []
-        for e in self.html.xpath(self.base_path):
-            s = ' '.join(e.xpath(".//text()"))
-            case_date = parse_dates(s)[0]
-            case_dates.extend([case_date] * int(e.xpath("count(./following::ul[1]//li)")))
-        return case_dates
-
-    def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_names)
+        return [case['date'] for case in self.cases]
 
     def _get_docket_numbers(self):
-        path = "{base}/following::ul[1]//li//a[1]/text()".format(base=self.base_path)
-        return [self.regex.search(e).group(1) for e in self.html.xpath(path)]
+        return [case['docket'] for case in self.cases]
+
+    def _get_precedential_statuses(self):
+        return ['Published'] * len(self.cases)
