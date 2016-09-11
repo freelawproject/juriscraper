@@ -1,10 +1,9 @@
 # coding=utf-8
-import time
+
 import re
+
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import clean_string
-from lxml import html
-from datetime import date
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -42,8 +41,7 @@ class Site(OpinionSite):
         for e in self.html.xpath(self.base_path):
             for path in self.sub_paths:
                 try:
-                    sub_e = e.xpath(path)[0]
-                    s = html.tostring(sub_e, method='text', encoding='unicode')
+                    s = e.xpath(path)[0].text_content()
                     break
                 except IndexError:
                     continue
@@ -75,16 +73,8 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         case_dates = []
-        for e in self.html.xpath(self.base_path):
-            s = html.tostring(e, method='text', encoding='unicode')
-            s = re.search('(.*[0-9]{4})', s).group(1)
-            date_formats = ['%B %d, %Y', '%B %d %Y', '%b %d %Y', '%b %d, %Y']
-            for format in date_formats:
-                try:
-                    case_date = date.fromtimestamp(
-                        time.mktime(time.strptime(clean_string(s), format)))
-                    break
-                except ValueError:
-                    continue
-            case_dates.append(case_date)
+        for element in self.html.xpath(self.base_path):
+            text = element.text_content()
+            date_string = text.split('-')[0].strip()
+            case_dates.append(convert_date_string(date_string))
         return case_dates
