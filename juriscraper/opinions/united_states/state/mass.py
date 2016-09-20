@@ -23,14 +23,18 @@ class Site(OpinionSite):
         self.url = 'http://www.mass.gov/courts/court-info/sjc/about/reporter-of-decisions/opinions.xml'
         self.court_id = self.__module__
         self.court_identifier = 'SJC'
-        self.grouping_regex = re.compile("(.*)\s+\((SJC[-\s]+\d+(?:,?;?\s(SJC\s)?\d+)*)\)\s+\((.+)\)")
-        self.base_path = "//title[not(contains(., 'List of Un')) and contains(., '{id}')]".format(id=self.court_identifier)
+        self.regex = "(.*)\s+\((SJC[-\s]+\d+(?:,?;?\s(SJC\s)?\d+)*)\)\s+\((.+)\)"
         self.date_group = 4
+        self.set_local_variables()
+
+    def set_local_variables(self):
+        self.grouping_regex = re.compile(self.regex)
+        self.base_path = "//title[not(contains(., 'List of Un')) and contains(., '%s')]" % self.court_identifier
+        self.court_path = "%s//text()[contains(., '(%s')]" % (self.base_path, self.court_identifier)
 
     def _get_case_names(self):
         names = []
-        path = "%s//text()[contains(., '%s')]" % (self.base_path, self.court_identifier)
-        for s in self.html.xpath(path):
+        for s in self.html.xpath(self.court_path):
             name_raw = self.grouping_regex.search(s).group(1)
             names.append(name_raw.replace(';', ' / '))
         return names
@@ -41,19 +45,16 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         dates = []
-        path = self.base_path + "//text()[contains(., '{id}')]".format(id=self.court_identifier)
-        for s in self.html.xpath(path):
+        for s in self.html.xpath(self.court_path):
             date_string = self.grouping_regex.search(s).group(self.date_group)
             dates.append(convert_date_string(date_string))
         return dates
 
     def _get_docket_numbers(self):
         dockets = []
-        path = self.base_path + "//text()[contains(., '{id}')]".format(id=self.court_identifier)
-        for s in self.html.xpath(path):
+        for s in self.html.xpath(self.court_path):
             docket_raw = self.grouping_regex.search(s).group(2)
-            docket_clean = docket_raw.replace('SJC', '').replace(';', '').replace(',', '')
-            docket = ', '.join(docket_clean.split())
+            docket = docket_raw.replace(';', ',').replace(self.court_identifier + ',', self.court_identifier)
             dockets.append(docket)
         return dockets
 

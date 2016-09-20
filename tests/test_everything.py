@@ -730,6 +730,11 @@ class ScraperSpotTest(unittest.TestCase):
                 'SJC-11861',
                 'October 22, 2015',
             ],
+            'Commonwealth v. Teixeira; Commonwealth v. Meade (SJC 11929; SJC 11944) (September 16, 2016)': [
+                'Commonwealth v. Teixeira; Commonwealth v. Meade',
+                'SJC 11929; SJC 11944',
+                'September 16, 2016'
+            ]
         }
         site = mass.Site()
         for k, v in strings.items():
@@ -743,7 +748,7 @@ class ScraperSpotTest(unittest.TestCase):
                     v[1],
                 )
                 self.assertEqual(
-                    site.grouping_regex.search(k).group(3).strip(),
+                    site.grouping_regex.search(k).group(site.date_group).strip(),
                     v[2],
                 )
             except AttributeError:
