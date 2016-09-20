@@ -25,6 +25,7 @@ class Site(OpinionSite):
         self.court_identifier = 'SJC'
         self.grouping_regex = re.compile("(.*)\s+\((SJC[-\s]+\d+(?:,?;?\s(SJC\s)?\d+)*)\)\s+\((.+)\)")
         self.base_path = "//title[not(contains(., 'List of Un')) and contains(., '{id}')]".format(id=self.court_identifier)
+        self.date_group = 4
 
     def _get_case_names(self):
         names = []
@@ -42,7 +43,7 @@ class Site(OpinionSite):
         dates = []
         path = self.base_path + "//text()[contains(., '{id}')]".format(id=self.court_identifier)
         for s in self.html.xpath(path):
-            date_string = self.grouping_regex.search(s).group(4)
+            date_string = self.grouping_regex.search(s).group(self.date_group)
             dates.append(convert_date_string(date_string))
         return dates
 
