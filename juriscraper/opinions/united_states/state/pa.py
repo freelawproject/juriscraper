@@ -5,22 +5,25 @@
 # Reviewer: mlr
 # Date created: 21 July 2014
 
-
-from datetime import datetime
 import re
 
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.regex = re.compile("(.*)(?:[,-]?\s+Nos?\.)(.*)", re.MULTILINE)
+        self.regex = False
         self.url = 'http://www.pacourts.us/assets/rss/SupremeOpinionsRss.ashx'
+        self.set_regex("(.*)(?:[,-]?\s+Nos?\.)(.*)")
         self.base = "//item[not(contains(title/text(), 'Judgment List'))]" \
-                          "[not(contains(title/text(), 'Reargument Table'))]" \
-                          "[contains(title/text(), 'No.')]"
+                    "[not(contains(title/text(), 'Reargument Table'))]" \
+                    "[contains(title/text(), 'No.')]"
+
+    def set_regex(self, pattern):
+        self.regex = re.compile(pattern)
 
     def _get_case_names(self):
         path = "{base}/title/text()".format(base=self.base)
@@ -36,9 +39,7 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         path = "{base}/pubdate/text()".format(base=self.base)
-        # Isolate '29Jul2014' from a string like 'Tue, 29 Jul 2014 04:00:00 GMT'
-        return [datetime.strptime(''.join(s.split(' ')[1:4]), '%d%b%Y').date()
-                for s in self.html.xpath(path)]
+        return [convert_date_string(s) for s in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
@@ -48,8 +49,7 @@ class Site(OpinionSite):
         return map(self._return_docket_number, self.html.xpath(path))
 
     def _return_docket_number(self, e):
-        match = self.regex.search(e)
-        return match.group(2)
+        return self.regex.search(e).group(2)
 
     def _get_judges(self):
         path = "{base}/creator/text()".format(base=self.base)
