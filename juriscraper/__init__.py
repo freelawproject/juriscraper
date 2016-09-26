@@ -3,7 +3,7 @@ __all__ = [
     'oral_args',
 ]
 
-__version__ = "1.1.15"
+__version__ = "1.1.16"
 
 __title__ = "juriscraper"
 __description__ = "An API to scrape American court websites for metadata."

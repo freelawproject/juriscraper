@@ -45,6 +45,8 @@ class Site(OralArgumentSite):
             if 'www.opn' not in url:
                 # Update the URL if it's not the one we want.
                 url = url.replace('www', 'www.opn')
+            # Remove newlines (\n, %0A) and line returns (\r %0D) from urls.
+            url = url.replace('%0D%0A', '')
             urls.append(urljoin(url, path))
         return urls
 
