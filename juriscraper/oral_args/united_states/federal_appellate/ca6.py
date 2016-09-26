@@ -42,7 +42,9 @@ class Site(OralArgumentSite):
         urls = []
         for url in links_to_flash:
             path = parse_qs(urlparse(url).query)['link'][0]
-            url = url.replace('www', 'www.opn')  # Uses a different subdomain.
+            if 'www.opn' not in url:
+                # Update the URL if it's not the one we want.
+                url = url.replace('www', 'www.opn')
             urls.append(urljoin(url, path))
         return urls
 
