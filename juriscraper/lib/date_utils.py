@@ -155,6 +155,7 @@ def is_first_month_in_quarter(month):
     """
     return month in [1, 4, 7, 10]
 
+
 def fix_future_year_typo(future_date):
     """Fix current year typo, convert 2106 to 2016 in year 2016"""
     current_year = str(datetime.date.today().year)

@@ -891,6 +891,9 @@ class ScraperSpotTest(unittest.TestCase):
             ('09 5517  USA vs Taylor',
              '09 5517',
              'USA vs Taylor'),
+            ('11-2451Spikes v Mackie',
+             '11-2451',
+             'Spikes v Mackie'),
         )
         regex = ca6.Site().regex
         for test, group_1, group_2 in tests:
