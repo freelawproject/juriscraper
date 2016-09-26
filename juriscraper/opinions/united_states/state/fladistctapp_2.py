@@ -110,12 +110,10 @@ class Site(OpinionSite):
         path = "//th//a[contains(., '-')]/*/text() | //th//a[contains(text(),'-')]/text()"
         dockets = []
         for text in list(html_tree.xpath(path)):
-            text = text.strip()
-
-            # Sometimes the clerk enter (typo) spaces before/after dash
-            text = ''.join(text.split())
-
-            if re.match('^\w+-\d+$', text):
-                dockets.append(text)
+            # sanitize text and extract docket
+            text = text.split('/')[0].strip()
+            docket = ''.join(text.split())
+            if re.match('^\w+-\d+$', docket):
+                dockets.append(docket)
         return dockets
 

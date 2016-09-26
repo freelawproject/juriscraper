@@ -14,14 +14,13 @@ She's super responsive.
 """
 
 from juriscraper.opinions.united_states.state import pa
-import re
 
 
 class Site(pa.Site):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.regex = re.compile("(.*)- (\d+.*\d{4})")
         self.url = "http://www.pacourts.us/assets/rss/CommonwealthOpinionsRss.ashx"
+        self.set_regex("(.*)(?:- |et al. )(\d+.*\d{4})")
         self.base = "//item[not(contains(title/text(), 'Judgment List'))]" \
-                          "[not(contains(title/text(), 'Reargument Table'))]"
+                    "[not(contains(title/text(), 'Reargument Table'))]"
