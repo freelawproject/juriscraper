@@ -251,7 +251,7 @@ Deployment to PyPi should happen automatically by Travis CI whenever a new tag i
 
 If you wish to create a new version manually, the process is:
 
-1. Update version info in ``juriscraper/__init__.py``
+1. Update version info in ``setup.py``
 
 1. Install the requirements in requirements_dev.txt
 
