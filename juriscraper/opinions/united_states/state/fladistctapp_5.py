@@ -86,7 +86,7 @@ class Site(OpinionSite):
 
     def _return_case_names(self, html_tree):
         names = []
-        for anchor in html_tree.xpath(self.base_path):
+        for anchor in self._return_anchors_with_text(html_tree):
             text = anchor.text_content().strip()
             names.append(re.search(self.case_regex, text).group(2))
         return names
@@ -98,8 +98,7 @@ class Site(OpinionSite):
         return download_urls
 
     def _return_download_urls(self, html_tree):
-        path = "{base}/@href".format(base=self.base_path)
-        return list(html_tree.xpath(path))
+        return [a.xpath('@href')[0] for a in self._return_anchors_with_text(html_tree)]
 
     def _get_case_dates(self):
         case_dates = []
@@ -112,8 +111,7 @@ class Site(OpinionSite):
         text = html_tree.xpath(path)[0].lower()
         date_string = re.search('.* week of (.*)', text).group(1).strip()
         case_date = convert_date_string(date_string)
-        count = int(html_tree.xpath("count({base})".format(base=self.base_path)))
-        return [case_date for i in range(count)]
+        return [case_date] * len(self._return_anchors_with_text(html_tree))
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_dates)
@@ -126,9 +124,14 @@ class Site(OpinionSite):
 
     def _return_docket_numbers(self, html_tree):
         dockets = []
-        for anchor in html_tree.xpath(self.base_path):
+        for anchor in self._return_anchors_with_text(html_tree):
             text = anchor.text_content().strip()
             docket_raw = re.search(self.case_regex, text).group(1)
             docket_clean = docket_raw.replace('&', '').replace(',', '')
             dockets.append(', '.join(docket_clean.split()))
         return dockets
+
+    # Sometimes the html includes empty anchors,
+    # we should only process href for anchors with text
+    def _return_anchors_with_text(self, html_tree):
+        return [a for a in html_tree.xpath(self.base_path) if a.text_content().strip()]
