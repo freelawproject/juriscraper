@@ -16,7 +16,7 @@ import os
 import requests
 
 from datetime import date, timedelta, datetime
-from dateutil.rrule import rrule, YEARLY
+from dateutil.rrule import WEEKLY, rrule
 from lxml import html
 from selenium import webdriver
 from selenium.webdriver import ActionChains
@@ -47,12 +47,12 @@ class Site(OpinionSite):
                        'capp_13': 14, 'capp_14': 15}
         self.court_name = 'sc'
         self.url = "http://www.search.txcourts.gov/CaseSearch.aspx?coa=cossup&d=1"
-        # self.back_scrape_iterable = [i.date() for i in rrule(
-        #     YEARLY,
-        #     dtstart=date(1981, 1, 1),
-        #     until=date(2010, 1, 1),
-        # )]
-        self.back_scrape_iterable = [date(2015, 12, 31)]  # Do all of 2015
+        self.back_scrape_iterable = [i.date() for i in rrule(
+            WEEKLY,  # YEARLY will result in timeouts
+            dtstart=date(2014, 1, 1),
+            until=date(2015, 1, 1),
+        )]
+
         self.uses_selenium = True
 
     def _download(self, request_dict={}):
@@ -247,7 +247,7 @@ class Site(OpinionSite):
                                    "//tr[contains(., 'Opinion') or contains(., 'Order')])"))
 
     def _download_backwards(self, d):
-        self.backwards_days = 365
+        self.backwards_days = 7
         self.case_date = d
         logger.info("Running backscraper with date range: %s to %s" % (
             self.case_date - timedelta(days=self.backwards_days),
