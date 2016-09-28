@@ -10,23 +10,25 @@
 #  - 2015-08-19: Updated by Andrei Chelaru to add backwards scraping support.
 #  - 2015-08-27: Updated by Andrei Chelaru to add explicit waits
 
-from datetime import date, timedelta, datetime
 
 import certifi
-from dateutil.rrule import rrule, YEARLY
-from juriscraper.AbstractSite import logger
-from juriscraper.DeferringList import DeferringList
-from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.cookie_utils import normalize_cookies
-from juriscraper.lib.string_utils import titlecase
-from lxml import html
 import os
 import requests
+
+from datetime import date, timedelta, datetime
+from dateutil.rrule import rrule, YEARLY
+from lxml import html
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+
+from juriscraper.AbstractSite import logger
+from juriscraper.DeferringList import DeferringList
+from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.cookie_utils import normalize_cookies
+from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OpinionSite):
@@ -45,11 +47,12 @@ class Site(OpinionSite):
                        'capp_13': 14, 'capp_14': 15}
         self.court_name = 'sc'
         self.url = "http://www.search.txcourts.gov/CaseSearch.aspx?coa=cossup&d=1"
-        self.back_scrape_iterable = [i.date() for i in rrule(
-            YEARLY,
-            dtstart=date(1981, 1, 1),
-            until=date(2010, 1, 1),
-        )]
+        # self.back_scrape_iterable = [i.date() for i in rrule(
+        #     YEARLY,
+        #     dtstart=date(1981, 1, 1),
+        #     until=date(2010, 1, 1),
+        # )]
+        self.back_scrape_iterable = [date(2015, 12, 31)]  # Do all of 2015
         self.uses_selenium = True
 
     def _download(self, request_dict={}):
