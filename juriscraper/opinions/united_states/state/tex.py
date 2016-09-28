@@ -49,8 +49,8 @@ class Site(OpinionSite):
         self.url = "http://www.search.txcourts.gov/CaseSearch.aspx?coa=cossup&d=1"
         self.back_scrape_iterable = [i.date() for i in rrule(
             WEEKLY,  # YEARLY will result in timeouts
-            dtstart=date(2014, 1, 1),
-            until=date(2015, 1, 1),
+            dtstart=date(2015, 1, 1),
+            until=date(2015, 12, 31),
         )]
 
         self.uses_selenium = True
