@@ -52,8 +52,12 @@ class Site(OralArgumentSite):
         path = '%s/td[3]' % self.base_xpath
         dates = []
         for e in self.html.xpath(path):
-            s = html.tostring(e, method='text', encoding='unicode')
-            dates.append(convert_date_string(s))
+            date_string = html.tostring(e, method='text', encoding='unicode')
+            # For some reason, some records have mysterious
+            # alpha characters after the date, in the date
+            # column (example: '9-28-16 B'). Strip it here.
+            date_string = date_string.strip().split()[0]
+            dates.append(convert_date_string(date_string))
         return dates
 
     def _get_docket_numbers(self):

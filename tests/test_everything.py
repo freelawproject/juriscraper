@@ -865,6 +865,10 @@ class ScraperSpotTest(unittest.TestCase):
                'docket': '14SC1',
                'name': 'Martinez v. Mintz',
             },
+            'No. 2016 COA 137. 15CA0620. Edwards v. Colorado Department of Revenue, Motor Vehicle Division. ': {
+                'docket': '15CA0620',
+                'name': 'Edwards v. Colorado Department of Revenue, Motor Vehicle Division',
+            }
             #'': {
             #    'docket': '',
             #    'name': '',
