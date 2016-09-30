@@ -144,7 +144,7 @@ class Site(OpinionSite):
                 r = requests.post(
                     url,
                     headers={'User-Agent': 'Juriscraper'},
-                    timeout=5,
+                    timeout=60,
                     verify=certifi.where(),
                     data={
                         'txtyear': year,

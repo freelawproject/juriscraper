@@ -359,6 +359,7 @@ class AbstractSite(object):
                 self.url,
                 headers={'User-Agent': 'Juriscraper'},
                 verify=verify,
+                timeout=60,
                 **request_dict
             )
         elif self.method == 'POST':
@@ -367,6 +368,7 @@ class AbstractSite(object):
                 headers={'User-Agent': 'Juriscraper'},
                 verify=verify,
                 data=self.parameters,
+                timeout=60,
                 **request_dict
             )
         elif self.method == 'LOCAL':

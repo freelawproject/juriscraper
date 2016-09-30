@@ -85,6 +85,7 @@ class Site(OralArgumentSite):
                     allow_redirects=False,
                     headers={'User-Agent': 'Juriscraper'},
                     verify=certifi.where(),
+                    timeout=60,
                 )
                 r.raise_for_status()
                 html_tree = html.fromstring(r.text)

@@ -175,6 +175,7 @@ class Site(OpinionSite):
                     allow_redirects=True,
                     headers={'User-Agent': 'Juriscraper'},
                     verify=certifi.where(),
+                    timeout=60,
                 )
                 r.raise_for_status()
 

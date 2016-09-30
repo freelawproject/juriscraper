@@ -46,6 +46,7 @@ class Site(OpinionSite):
                 case_url,
                 headers={'User-Agent': 'Juriscraper'},
                 verify=certifi.where(),
+                timeout=60,
                 **request_dict
             )
 

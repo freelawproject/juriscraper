@@ -53,6 +53,7 @@ class Site(OpinionSite):
                 url,
                 headers={'User-Agent': 'Juriscraper'},
                 verify=certifi.where(),
+                timeout=60,
                 **request_dict
             )
             r.raise_for_status()

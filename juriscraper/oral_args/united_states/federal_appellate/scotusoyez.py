@@ -48,6 +48,7 @@ class Site(OralArgumentSite):
             url,
             headers={'User-Agent': 'Juriscraper'},
             verify=certifi.where(),
+            timeout=60,
         )
         r.raise_for_status()
 
