@@ -5,71 +5,76 @@
 #Reviewer: mlr
 #Date: 2014-07-04
 
-import time
 from datetime import date
 from dateutil.rrule import rrule, MONTHLY
 
-import re
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.html_utils import get_html5_parsed_text
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
 
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
-
-        self.back_scrape_iterable = [i.date() for i in rrule(
-            MONTHLY,
-            dtstart=date(2003, 11, 1),
-            until=date(2015, 8, 30),
-        )]
-
-        # This is the URL for the current month
-        self.url = 'http://www.courts.state.ny.us/reporter/slipidx/aidxtable_1.shtml'
         self.court_id = self.__module__
+        date_keys = rrule(MONTHLY, dtstart=date(2003, 11, 1), until=date(2015, 8, 30))
+        self.back_scrape_iterable = [i.date() for i in date_keys]
+        self.row_base_path = '//tr[contains(./td[1]/a/@href, "3d")]'
+        self.division = 1
+        self.url = self.build_url()
 
     def _get_case_names(self):
-        path = '//tr[td[4]]//a[contains(./@href, "3d")]/text()'
-        return self.html.xpath(path)
+        path = '%s/td[1]' % self.row_base_path
+        return [cell.text_content() for cell in self.html.xpath(path)]
+
+    def build_url(self, target_date=False):
+        base = 'http://www.courts.state.ny.us/reporter/slipidx/aidxtable_%s' % self.division
+        if target_date:
+            return '%s_%s_%s.shtml' % (base, target_date.year, target_date.strftime("%B"))
+        else:
+            return '%s.shtml' % base
 
     def _get_download_urls(self):
-        path = '//tr[td[4]]//a/@href[contains(., "3d")]'
+        path = '%s/td[1]//a/@href' % self.row_base_path
         return self.html.xpath(path)
 
     def _get_case_dates(self):
-        path = '//caption//text()'
-        dates = self.html.xpath(path)
         case_dates = []
-        for index, case_date in enumerate(dates):
-            path_2 = "count((//table[./caption])[{c}]/tr[.//@href])".format(c=index + 1)
-            d = date.fromtimestamp(time.mktime(time.strptime(re.sub('Cases Decided ', '', case_date), '%B %d, %Y')))
-            case_dates.extend([d] * int(self.html.xpath(path_2)))
+        for element in self.html.xpath('//caption | //center'):
+            date_string = element.text_content().strip().replace('Cases Decided ', '')
+            path_prefix = './parent::' if element.tag == 'caption' else './following-sibling::'
+            path = path_prefix + 'table[1]' + self.row_base_path
+            cases = element.xpath(path)
+            case_dates.extend([convert_date_string(date_string)] * len(cases))
         return case_dates
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        path = '//tr[contains(./td[1]/a/@href, "3d")]/td[3]'
+        path = '%s/td[3]' % self.row_base_path
         return map(self._add_str_to_list_where_empty_element, self.html.xpath(path))
 
     def _get_judges(self):
-        path = '//tr[contains(./td[1]/a/@href, "3d")]/td[2]'
+        path = '%s/td[2]' % self.row_base_path
         return map(self._add_str_to_list_where_empty_element, self.html.xpath(path))
+
+    def _get_neutral_citations(self):
+        path = '%s/td[4]' % self.row_base_path
+        return [cell.text_content().strip() for cell in self.html.xpath(path)]
 
     @staticmethod
     def _add_str_to_list_where_empty_element(element):
         string_list = element.xpath('./text()')
-        if string_list:
-            return string_list[0]
-        else:
-            return ''
+        return string_list[0] if string_list else ''
 
-    def _download_backwards(self, d):
-        self.crawl_date = d
-        logger.info("Running backscraper with date: %s" % d)
-        self.url = 'http://www.courts.state.ny.us/reporter/slipidx/aidxtable_1_{year}_{month}.shtml'.format(
-            year=d.year,
-            month=d.strftime("%B")
-        )
+    def _download_backwards(self, target_date):
+        self.crawl_date = target_date
+        logger.info("Running backscraper with date: %s" % target_date)
+        self.url = self.build_url(target_date=target_date)
+        self.html = self._download()
+
+    def _make_html_tree(self, text):
+        return get_html5_parsed_text(text)
