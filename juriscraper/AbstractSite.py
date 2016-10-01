@@ -5,7 +5,6 @@ import hashlib
 import requests
 
 
-#from lxml import html
 from datetime import date, datetime
 from requests.adapters import HTTPAdapter
 from urlparse import urlsplit, urlunsplit, urljoin
