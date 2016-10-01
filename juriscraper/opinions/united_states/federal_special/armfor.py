@@ -4,9 +4,9 @@ Court Short Name: C.A.A.F."""
 
 import certifi
 import requests
-from lxml.html import html5parser, fromstring, tostring
 
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.html_utils import get_html5_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
 
 
@@ -81,5 +81,7 @@ class Site(OpinionSite):
         if request.encoding == 'ISO-8859-1':
             request.encoding = 'cp1252'
         text = self._clean_text(request.text)
-        parsed = html5parser.document_fromstring(text.encode('utf-8'))
-        return fromstring(tostring(parsed))
+        return self._make_html_tree(text)
+
+    def _make_html_tree(self, text):
+       return get_html5_parsed_text(text)

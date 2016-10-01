@@ -5,11 +5,12 @@ import hashlib
 import requests
 
 
-from lxml import html
+#from lxml import html
 from datetime import date, datetime
 from requests.adapters import HTTPAdapter
 from urlparse import urlsplit, urlunsplit, urljoin
 from juriscraper.lib.test_utils import MockRequest
+from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.lib.date_utils import json_date_handler, fix_future_year_typo
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
@@ -282,11 +283,10 @@ class AbstractSite(object):
 
         By default, the etree.html parser is used, but this allows support for
         other parsers like the html5parser or even BeautifulSoup, if it's called
-        for.
+        for (example: return get_html5_parsed_text(text)). Otherwise, this method
+        can be overwritten to execute custom parsing logic.
         """
-        html_tree = html.fromstring(text)
-
-        return html_tree
+        return get_html_parsed_text(text)
 
     def _set_encoding(self, r):
         """Set the encoding using a few heuristics"""

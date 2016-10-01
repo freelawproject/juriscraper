@@ -10,10 +10,10 @@ History:
 
 import re
 from lxml import html
-from lxml.html import html5parser, fromstring, tostring
 from datetime import date
 
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.html_utils import get_html5_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
 
 
@@ -32,9 +32,7 @@ class Site(OpinionSite):
         self.court_id = self.__module__
 
     def _make_html_tree(self, text):
-        e = html5parser.document_fromstring(text.encode('utf-8'))
-        html_tree = fromstring(tostring(e))
-        return html_tree
+        return get_html5_parsed_text(text)
 
     def _get_case_names(self):
         path = '%s and %s]' % (

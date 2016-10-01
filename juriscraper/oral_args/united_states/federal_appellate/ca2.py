@@ -7,8 +7,9 @@ History:
 """
 
 from lxml import html
-from lxml.html import html5parser, fromstring, tostring
+
 from juriscraper.OralArgumentSite import OralArgumentSite
+from juriscraper.lib.html_utils import get_html5_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
 
 
@@ -28,14 +29,7 @@ class Site(OralArgumentSite):
         self.base_xpath = '//tr[contains(.//a/@href, "mp3")]'
 
     def _make_html_tree(self, text):
-        """ Grab the content using the html5parser and return it as HtmlElement.
-
-        :param text: The html of the document
-        :return: an lxml.HtmlElement object
-        """
-        e = html5parser.document_fromstring(text.encode('utf-8'))
-        html_tree = fromstring(tostring(e))
-        return html_tree
+        return get_html5_parsed_text(text)
 
     def _get_download_urls(self):
         path = '//@href[contains(., "mp3")]'
