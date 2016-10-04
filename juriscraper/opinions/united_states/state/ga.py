@@ -45,13 +45,13 @@ class Site(OpinionSite):
             # handle legacy example (ga_example.html)
             while parent.tag != 'p':
                 parent = parent.xpath('./..')[0]
-            for anchor in parent.getnext().xpath('./li/a'):
-                text = anchor.text_content()
+            for item in parent.getnext().xpath('./li'):
+                text = item.text_content()
                 if text:
                     split = text.split('.', 1)
                     self.cases.append({
                         'date': case_date,
-                        'url': anchor.xpath('./@href')[0],
+                        'url': item.xpath('//a[1]/@href')[0],
                         'docket': split[0].rstrip('.'),
                         'name': titlecase(split[1]),
 
