@@ -42,6 +42,7 @@ class AbstractSite(object):
         self.hash = None
         self.html = None
         self.method = 'GET'
+        self.session = False
         self.use_sessions = False
         self.status = None
         self.back_scrape_iterable = None
@@ -286,6 +287,32 @@ class AbstractSite(object):
         can be overwritten to execute custom parsing logic.
         """
         return get_html_parsed_text(text)
+
+    def _get_html_tree_by_url(self, url, request_dict={}):
+        """Return html tree for provided url.
+        """
+        if request_dict.get('verify') is not None:
+            verify = request_dict['verify']
+            del request_dict['verify']
+        else:
+            verify = certifi.where()
+        if not self.session:
+            self.session = requests.session()
+        request = self.session.get(
+            url,
+            headers={'User-Agent': 'Juriscraper'},
+            verify=verify,
+            timeout=60,
+            **request_dict
+        )
+        request.raise_for_status()
+        if request.encoding == 'ISO-8859-1':
+            request.encoding = 'cp1252'
+        text = self._clean_text(request.text)
+        tree = self._make_html_tree(text)
+        tree.make_links_absolute(url)
+        return tree
+
 
     def _set_encoding(self, r):
         """Set the encoding using a few heuristics"""

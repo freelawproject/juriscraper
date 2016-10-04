@@ -2,9 +2,6 @@
 CourtID: armfor
 Court Short Name: C.A.A.F."""
 
-import certifi
-import requests
-
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.html_utils import get_html5_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
@@ -18,7 +15,6 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.session = requests.session()
         self.back_scrape_iterable = ['']
         self.url = "http://www.armfor.uscourts.gov/newcaaf/opinions.htm"
         self.row_base_path = '//table[@border="1"]//tr[descendant::a]'
@@ -27,7 +23,7 @@ class Site(OpinionSite):
     def _download(self, request_dict={}):
         landing_page_html = super(Site, self)._download(request_dict)
         urls = landing_page_html.xpath(self.path_to_landing_page_links)
-        return [self.html_from_url(url, request_dict) for url in urls]
+        return [self._get_html_tree_by_url(url, request_dict) for url in urls]
 
     def _get_case_names(self):
         names = []
@@ -70,18 +66,5 @@ class Site(OpinionSite):
         self.path_to_landing_page_links = '//blockquote/ul/li/font/a[1][%s]/@href' % limitation
         self.html = self._download()
 
-    def html_from_url(self, url, request_dict={}):
-        request = self.session.get(
-            url,
-            headers={'User-Agent': 'Juriscraper'},
-            verify=certifi.where(),
-            **request_dict
-        )
-        request.raise_for_status()
-        if request.encoding == 'ISO-8859-1':
-            request.encoding = 'cp1252'
-        text = self._clean_text(request.text)
-        return self._make_html_tree(text)
-
     def _make_html_tree(self, text):
-       return get_html5_parsed_text(text)
+        return get_html5_parsed_text(text)
