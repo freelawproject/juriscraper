@@ -86,7 +86,7 @@ class Site(OpinionSite):
         driver.quit()
         html_tree = html.fromstring(text)
 
-        html_tree.rewrite_links(self._link_repl)
+        html_tree.rewrite_links(self._link_fixer_callback)
         self.html = html_tree
         self.status = 200
 

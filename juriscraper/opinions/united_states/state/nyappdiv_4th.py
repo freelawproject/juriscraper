@@ -51,9 +51,9 @@ class Site(OpinionSite):
                 if not date_link.endswith('.html') and not date_link.endswith('/'):
                     date_link += '/'
                 date_page_html = self._get_html_tree_by_url(date_link)
-                case_link = date_page_html.xpath(self.path_to_cases_link)
-                if case_link:
-                    cases_page_html = self._get_html_tree_by_url(case_link[0])
+                cases_link = date_page_html.xpath(self.path_to_cases_link)
+                if cases_link:
+                    cases_page_html = self._get_html_tree_by_url(cases_link[0])
                     self.extract_case_data_from_html(cases_page_html)
                     html_trees.append(cases_page_html)
         return html_trees
