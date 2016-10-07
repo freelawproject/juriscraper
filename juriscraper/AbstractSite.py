@@ -43,10 +43,19 @@ class AbstractSite(object):
         self.html = None
         self.method = 'GET'
         self.use_sessions = False
-        self.status = None
         self.back_scrape_iterable = None
+        self.downloader_executed = False
         self.cookies = {}
         self.cnt = cnt or CaseNameTweaker()
+        self.request = {
+            'verify': certifi.where(),
+            'session': requests.session(),
+            'headers': {'User-Agent': 'Juriscraper'},
+            'parameters': {},
+            'request': None,
+            'status': None,
+            'url': None,
+        }
 
         # Sub-classed metadata
         self.court_id = None
@@ -91,7 +100,7 @@ class AbstractSite(object):
         )
 
     def parse(self):
-        if self.status is None:
+        if not self.downloader_executed:
             # Run the downloader if it hasn't been run already
             self.html = self._download()
 
@@ -112,7 +121,7 @@ class AbstractSite(object):
         self._make_hash()
         return self
 
-    def tweak_request_object(self, r):
+    def tweak_request_object(self):
         """
         Does nothing, but provides a hook that allows inheriting objects to
         tweak the requests object if necessary.
@@ -287,26 +296,28 @@ class AbstractSite(object):
         """
         return get_html_parsed_text(text)
 
-    def _set_encoding(self, r):
+    def _set_encoding(self):
         """Set the encoding using a few heuristics"""
-        # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
-        if r.encoding == 'ISO-8859-1':
-            r.encoding = 'cp1252'
+        if self.request['request']:
+            # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
+            if self.request['request'].encoding == 'ISO-8859-1':
+                self.request['request'].encoding = 'cp1252'
 
-        if r.encoding is None:
-            # Requests detects the encoding when the item is GET'ed using
-            # HTTP headers, and then when r.text is accessed, if the encoding
-            # hasn't been set by that point. By setting the encoding here, we
-            # ensure that it's done by cchardet, if it hasn't been done with
-            # HTTP headers. This way it is done before r.text is accessed
-            # (which would do it with vanilla chardet). This is a big
-            # performance boon, and can be removed once requests is upgraded
-            r.encoding = chardet.detect(r.content)['encoding']
+            if self.request['request'].encoding is None:
+                # Requests detects the encoding when the item is GET'ed using
+                # HTTP headers, and then when r.text is accessed, if the encoding
+                # hasn't been set by that point. By setting the encoding here, we
+                # ensure that it's done by cchardet, if it hasn't been done with
+                # HTTP headers. This way it is done before r.text is accessed
+                # (which would do it with vanilla chardet). This is a big
+                # performance boon, and can be removed once requests is upgraded
+                self.request['request'].encoding = chardet.detect(self.request['request'].content)['encoding']
 
-        return r
-
-    def _link_repl(self, href):
+    def _link_fixer_callback(self, href):
         """Makes links absolute, working around buggy URLs and nuking anchors.
+
+        This function is intended to be called with .rewrite_links()
+        Example: html_tree.rewrite_links(self._link_fixer_callback)
 
         Some URLS, like the following, make no sense:
          - https://www.appeals2.az.gov/../Decisions/CR20130096OPN.pdf.
@@ -323,7 +334,7 @@ class AbstractSite(object):
         of Python's urljoin that will be fixed in Python 3.5 according to a bug
         we filed: http://bugs.python.org/issue22118
         """
-        url_parts = urlsplit(urljoin(self.url, href))
+        url_parts = urlsplit(urljoin(self.request['url'], href))
         url = urlunsplit(
             url_parts[:2] +
             (re.sub('^(/\.\.)+', '', url_parts.path),) +
@@ -332,8 +343,8 @@ class AbstractSite(object):
         return url.split('#')[0]
 
     def _download(self, request_dict={}):
-        """Methods for downloading the latest version of Site
-        """
+        """Download the latest version of Site"""
+        self.downloader_executed = True
         if self.method == 'POST':
             truncated_params = {}
             for k, v in self.parameters.iteritems():
@@ -341,60 +352,75 @@ class AbstractSite(object):
             logger.info("Now downloading case page at: %s (params: %s)" % (self.url, truncated_params))
         else:
             logger.info("Now downloading case page at: %s" % self.url)
-
-        # Set up verify here and remove it from request_dict so you don't send
-        # it to s.get or s.post in two kwargs.
-        if request_dict.get('verify') is not None:
-            verify = request_dict['verify']
-            del request_dict['verify']
-        else:
-            verify = certifi.where()
-
-        # Get the response. Disallow redirects so they throw an error
-        s = requests.session()
-        s.mount('https://', self._get_adapter_instance())
+        self._process_request_parameters(request_dict)
         if self.method == 'GET':
-            r = s.get(
-                self.url,
-                headers={'User-Agent': 'Juriscraper'},
-                verify=verify,
-                timeout=60,
-                **request_dict
-            )
+            self._request_url_get(self.url)
         elif self.method == 'POST':
-            r = s.post(
-                self.url,
-                headers={'User-Agent': 'Juriscraper'},
-                verify=verify,
-                data=self.parameters,
-                timeout=60,
-                **request_dict
-            )
+            self._request_url_post(self.url)
         elif self.method == 'LOCAL':
-            mr = MockRequest(url=self.url)
-            r = mr.get()
+            self._request_url_mock(self.url)
+        self._post_process_request()
+        return self._return_request_text_object()
 
-        # Provides a hook for inheriting objects to tweak the request object.
-        self.tweak_request_object(r)
+    def _process_request_parameters(self, parameters={}):
+        """Hook for processing injected parameter overrides"""
+        if parameters.get('verify') is not None:
+            self.request['verify'] = parameters['verify']
+            del parameters['verify']
+        self.request['parameters'] = parameters
+        self.request['session'].mount('https://', self._get_adapter_instance())
 
-        # Throw an error if a bad status code is returned.
-        r.raise_for_status()
+    def _request_url_get(self, url):
+        """Execute GET request and assign appropriate request dictionary values"""
+        self.request['url'] = url
+        self.request['request'] = self.request['session'].get(
+            url,
+            headers=self.request['headers'],
+            verify=self.request['verify'],
+            timeout=60,
+            **self.request['parameters']
+        )
 
-        # Tweak or set the encoding if needed
-        r = self._set_encoding(r)
+    def _request_url_post(self, url):
+        """Execute POST request and assign appropriate request dictionary values"""
+        self.request['url'] = url
+        self.request['request'] = self.request['session'].post(
+            url,
+            headers=self.request['headers'],
+            verify=self.request['verify'],
+            data=self.parameters,
+            timeout=60,
+            **self.request['parameters']
+        )
 
-        # Provide the response in the Site object
-        self.r = r
-        self.status = r.status_code
+    def _request_url_mock(self, url):
+        """Execute mock request, used for testing"""
+        self.request['url'] = url
+        self.request['request'] = MockRequest(url=self.url).get()
 
-        # Grab the content
-        if 'json' in r.headers.get('content-type', ''):
-            return r.json()
-        else:
-            text = self._clean_text(r.text)
-            html_tree = self._make_html_tree(text)
-            html_tree.rewrite_links(self._link_repl)
-            return html_tree
+    def _post_process_request(self):
+        """Cleanup to request object"""
+        self.tweak_request_object()
+        self.request['request'].raise_for_status()
+        self._set_encoding()
+
+    def _return_request_text_object(self):
+        if self.request['request']:
+            if 'json' in self.request['request'].headers.get('content-type', ''):
+                return self.request['request'].json()
+            else:
+                text = self._clean_text(self.request['request'].text)
+                html_tree = self._make_html_tree(text)
+                html_tree.rewrite_links(self._link_fixer_callback)
+                return html_tree
+
+    def _get_html_tree_by_url(self, url, parameters={}):
+        self._process_request_parameters(parameters)
+        self._request_url_get(url)
+        self._post_process_request()
+        tree = self._return_request_text_object()
+        tree.make_links_absolute(url)
+        return tree
 
     def _download_backwards(self):
         # methods for downloading the entire Site

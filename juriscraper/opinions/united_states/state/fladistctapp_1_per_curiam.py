@@ -77,7 +77,7 @@ class Site(OpinionSite):
 
             text = self._clean_text(driver.page_source)
             html_tree = html.fromstring(text)
-            html_tree.rewrite_links(self._link_repl)
+            html_tree.rewrite_links(self._link_fixer_callback)
         return html_tree
 
     def _get_case_names(self):

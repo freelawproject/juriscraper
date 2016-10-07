@@ -1,335 +1,352 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml"><!-- #BeginTemplate "../../../../Templates/AD4.dwt" --><head>
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- #BeginTemplate "../../../../Templates/AD4.dwt" -->
+
+<head>
 <title>Appellate 4th</title>
-<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-<link href="nyappdiv_4th_example_files/AD4.css" rel="stylesheet" type="text/css">
-<style type="text/css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../../../../css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+<link href="../../../../css/bootstrap-responsive.css" rel="stylesheet">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="../../../../assets/js/html5shiv.js"></script>
+<![endif]-->
 
-.style1 {
-	font-size: small;
-}
-.style3 {
-	font-size: small;
-	color: #800000;
-}
-.style4 {
-	line-height: 150%;
-	margin-left: 10px;
-}
-.style5 {
-	text-align: center;
-	font-family: "Lucida Calligraphy";
-}
-.style6 {
-	font-family: "Times New Roman", Times, serif;
-	font-size: xx-large;
-}
-.style7 {
-	color: #0000FF;
-}
+<link href="../../../../css/AD4.css" rel="stylesheet" type="text/css" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-</style>
-<style class="firebugResetStyles" type="text/css" charset="utf-8">/* See license.txt for terms of usage */
-/** reset styling **/
-.firebugResetStyles {
-    z-index: 2147483646 !important;
-    top: 0 !important;
-    left: 0 !important;
-    display: block !important;
-    border: 0 none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    outline: 0 !important;
-    min-width: 0 !important;
-    max-width: none !important;
-    min-height: 0 !important;
-    max-height: none !important;
-    position: fixed !important;
-    transform: rotate(0deg) !important;
-    transform-origin: 50% 50% !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    background: transparent none !important;
-    pointer-events: none !important;
-    white-space: normal !important;
-}
-style.firebugResetStyles {
-    display: none !important;
-}
+  ga('create', 'UA-43817742-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
 
-.firebugBlockBackgroundColor {
-    background-color: transparent !important;
-}
-
-.firebugResetStyles:before, .firebugResetStyles:after {
-    content: "" !important;
-}
-/**actual styling to be modified by firebug theme**/
-.firebugCanvas {
-    display: none !important;
-}
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-.firebugLayoutBox {
-    width: auto !important;
-    position: static !important;
-}
-
-.firebugLayoutBoxOffset {
-    opacity: 0.8 !important;
-    position: fixed !important;
-}
-
-.firebugLayoutLine {
-    opacity: 0.4 !important;
-    background-color: #000000 !important;
-}
-
-.firebugLayoutLineLeft, .firebugLayoutLineRight {
-    width: 1px !important;
-    height: 100% !important;
-}
-
-.firebugLayoutLineTop, .firebugLayoutLineBottom {
-    width: 100% !important;
-    height: 1px !important;
-}
-
-.firebugLayoutLineTop {
-    margin-top: -1px !important;
-    border-top: 1px solid #999999 !important;
-}
-
-.firebugLayoutLineRight {
-    border-right: 1px solid #999999 !important;
-}
-
-.firebugLayoutLineBottom {
-    border-bottom: 1px solid #999999 !important;
-}
-
-.firebugLayoutLineLeft {
-    margin-left: -1px !important;
-    border-left: 1px solid #999999 !important;
-}
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-.firebugLayoutBoxParent {
-    border-top: 0 none !important;
-    border-right: 1px dashed #E00 !important;
-    border-bottom: 1px dashed #E00 !important;
-    border-left: 0 none !important;
-    position: fixed !important;
-    width: auto !important;
-}
-
-.firebugRuler{
-    position: absolute !important;
-}
-
-.firebugRulerH {
-    top: -15px !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 14px !important;
-    background: url("data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%13%88%00%00%00%0E%08%02%00%00%00L%25a%0A%00%00%00%04gAMA%00%00%D6%D8%D4OX2%00%00%00%19tEXtSoftware%00Adobe%20ImageReadyq%C9e%3C%00%00%04%F8IDATx%DA%EC%DD%D1n%E2%3A%00E%D1%80%F8%FF%EF%E2%AF2%95%D0D4%0E%C1%14%B0%8Fa-%E9%3E%CC%9C%87n%B9%81%A6W0%1C%A6i%9A%E7y%0As8%1CT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AATE9%FE%FCw%3E%9F%AF%2B%2F%BA%97%FDT%1D~K(%5C%9D%D5%EA%1B%5C%86%B5%A9%BDU%B5y%80%ED%AB*%03%FAV9%AB%E1%CEj%E7%82%EF%FB%18%BC%AEJ8%AB%FA'%D2%BEU9%D7U%ECc0%E1%A2r%5DynwVi%CFW%7F%BB%17%7Dy%EACU%CD%0E%F0%FA%3BX%FEbV%FEM%9B%2B%AD%BE%AA%E5%95v%AB%AA%E3E5%DCu%15rV9%07%B5%7F%B5w%FCm%BA%BE%AA%FBY%3D%14%F0%EE%C7%60%0EU%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5JU%88%D3%F5%1F%AE%DF%3B%1B%F2%3E%DAUCNa%F92%D02%AC%7Dm%F9%3A%D4%F2%8B6%AE*%BF%5C%C2Ym~9g5%D0Y%95%17%7C%C8c%B0%7C%18%26%9CU%CD%13i%F7%AA%90%B3Z%7D%95%B4%C7%60%E6E%B5%BC%05%B4%FBY%95U%9E%DB%FD%1C%FC%E0%9F%83%7F%BE%17%7DkjMU%E3%03%AC%7CWj%DF%83%9An%BCG%AE%F1%95%96yQ%0Dq%5Dy%00%3Et%B5'%FC6%5DS%95pV%95%01%81%FF'%07%00%00%00%00%00%00%00%00%00%F8x%C7%F0%BE%9COp%5D%C9%7C%AD%E7%E6%EBV%FB%1E%E0(%07%E5%AC%C6%3A%ABi%9C%8F%C6%0E9%AB%C0'%D2%8E%9F%F99%D0E%B5%99%14%F5%0D%CD%7F%24%C6%DEH%B8%E9rV%DFs%DB%D0%F7%00k%FE%1D%84%84%83J%B8%E3%BA%FB%EF%20%84%1C%D7%AD%B0%8E%D7U%C8Y%05%1E%D4t%EF%AD%95Q%BF8w%BF%E9%0A%BF%EB%03%00%00%00%00%00%00%00%00%00%B8vJ%8E%BB%F5%B1u%8Cx%80%E1o%5E%CA9%AB%CB%CB%8E%03%DF%1D%B7T%25%9C%D5(%EFJM8%AB%CC'%D2%B2*%A4s%E7c6%FB%3E%FA%A2%1E%80~%0E%3E%DA%10x%5D%95Uig%15u%15%ED%7C%14%B6%87%A1%3B%FCo8%A8%D8o%D3%ADO%01%EDx%83%1A~%1B%9FpP%A3%DC%C6'%9C%95gK%00%00%00%00%00%00%00%00%00%20%D9%C9%11%D0%C0%40%AF%3F%EE%EE%92%94%D6%16X%B5%BCMH%15%2F%BF%D4%A7%C87%F1%8E%F2%81%AE%AAvzr%DA2%ABV%17%7C%E63%83%E7I%DC%C6%0Bs%1B%EF6%1E%00%00%00%00%00%00%00%00%00%80cr%9CW%FF%7F%C6%01%0E%F1%CE%A5%84%B3%CA%BC%E0%CB%AA%84%CE%F9%BF)%EC%13%08WU%AE%AB%B1%AE%2BO%EC%8E%CBYe%FE%8CN%ABr%5Dy%60~%CFA%0D%F4%AE%D4%BE%C75%CA%EDVB%EA(%B7%F1%09g%E5%D9%12%00%00%00%00%00%00%00%00%00H%F6%EB%13S%E7y%5E%5E%FB%98%F0%22%D1%B2'%A7%F0%92%B1%BC%24z3%AC%7Dm%60%D5%92%B4%7CEUO%5E%F0%AA*%3BU%B9%AE%3E%A0j%94%07%A0%C7%A0%AB%FD%B5%3F%A0%F7%03T%3Dy%D7%F7%D6%D4%C0%AAU%D2%E6%DFt%3F%A8%CC%AA%F2%86%B9%D7%F5%1F%18%E6%01%F8%CC%D5%9E%F0%F3z%88%AA%90%EF%20%00%00%00%00%00%00%00%00%00%C0%A6%D3%EA%CFi%AFb%2C%7BB%0A%2B%C3%1A%D7%06V%D5%07%A8r%5D%3D%D9%A6%CAu%F5%25%CF%A2%99%97zNX%60%95%AB%5DUZ%D5%FBR%03%AB%1C%D4k%9F%3F%BB%5C%FF%81a%AE%AB'%7F%F3%EA%FE%F3z%94%AA%D8%DF%5B%01%00%00%00%00%00%00%00%00%00%8E%FB%F3%F2%B1%1B%8DWU%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*UiU%C7%BBe%E7%F3%B9%CB%AAJ%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5*%AAj%FD%C6%D4%5Eo%90%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5%86%AF%1B%9F%98%DA%EBm%BBV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%AD%D6%E4%F58%01%00%00%00%00%00%00%00%00%00%00%00%00%00%40%85%7F%02%0C%008%C2%D0H%16j%8FX%00%00%00%00IEND%AEB%60%82") repeat-x !important;
-    border-top: 1px solid #BBBBBB !important;
-    border-right: 1px dashed #BBBBBB !important;
-    border-bottom: 1px solid #000000 !important;
-}
-
-.firebugRulerV {
-    top: 0 !important;
-    left: -15px !important;
-    width: 14px !important;
-    height: 100% !important;
-    background: url("data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00%0E%00%00%13%88%08%02%00%00%00%0E%F5%CB%10%00%00%00%04gAMA%00%00%D6%D8%D4OX2%00%00%00%19tEXtSoftware%00Adobe%20ImageReadyq%C9e%3C%00%00%06~IDATx%DA%EC%DD%D1v%A20%14%40Qt%F1%FF%FF%E4%97%D9%07%3BT%19%92%DC%40(%90%EEy%9A5%CB%B6%E8%F6%9Ac%A4%CC0%84%FF%DC%9E%CF%E7%E3%F1%88%DE4%F8%5D%C7%9F%2F%BA%DD%5E%7FI%7D%F18%DDn%BA%C5%FB%DF%97%BFk%F2%10%FF%FD%B4%F2M%A7%FB%FD%FD%B3%22%07p%8F%3F%AE%E3%F4S%8A%8F%40%EEq%9D%BE8D%F0%0EY%A1Uq%B7%EA%1F%81%88V%E8X%3F%B4%CEy%B7h%D1%A2E%EBohU%FC%D9%AF2fO%8BBeD%BE%F7X%0C%97%A4%D6b7%2Ck%A5%12%E3%9B%60v%B7r%C7%1AI%8C%BD%2B%23r%00c0%B2v%9B%AD%CA%26%0C%1Ek%05A%FD%93%D0%2B%A1u%8B%16-%95q%5Ce%DCSO%8E%E4M%23%8B%F7%C2%FE%40%BB%BD%8C%FC%8A%B5V%EBu%40%F9%3B%A72%FA%AE%8C%D4%01%CC%B5%DA%13%9CB%AB%E2I%18%24%B0n%A9%0CZ*Ce%9C%A22%8E%D8NJ%1E%EB%FF%8F%AE%CAP%19*%C3%BAEKe%AC%D1%AAX%8C*%DEH%8F%C5W%A1e%AD%D4%B7%5C%5B%19%C5%DB%0D%EF%9F%19%1D%7B%5E%86%BD%0C%95%A12%AC%5B*%83%96%CAP%19%F62T%86%CAP%19*%83%96%CA%B8Xe%BC%FE)T%19%A1%17xg%7F%DA%CBP%19*%C3%BA%A52T%86%CAP%19%F62T%86%CA%B0n%A9%0CZ%1DV%C6%3D%F3%FCH%DE%B4%B8~%7F%5CZc%F1%D6%1F%AF%84%F9%0F6%E6%EBVt9%0E~%BEr%AF%23%B0%97%A12T%86%CAP%19%B4T%86%CA%B8Re%D8%CBP%19*%C3%BA%A52huX%19%AE%CA%E5%BC%0C%7B%19*CeX%B7h%A9%0C%95%E1%BC%0C%7B%19*CeX%B7T%06%AD%CB%5E%95%2B%BF.%8F%C5%97%D5%E4%7B%EE%82%D6%FB%CF-%9C%FD%B9%CF%3By%7B%19%F62T%86%CA%B0n%D1R%19*%A3%D3%CA%B0%97%A12T%86uKe%D0%EA%B02*%3F1%99%5DB%2B%A4%B5%F8%3A%7C%BA%2B%8Co%7D%5C%EDe%A8%0C%95a%DDR%19%B4T%C66%82fA%B2%ED%DA%9FC%FC%17GZ%06%C9%E1%B3%E5%2C%1A%9FoiB%EB%96%CA%A0%D5qe4%7B%7D%FD%85%F7%5B%ED_%E0s%07%F0k%951%ECr%0D%B5C%D7-g%D1%A8%0C%EB%96%CA%A0%A52T%C6)*%C3%5E%86%CAP%19%D6-%95A%EB*%95q%F8%BB%E3%F9%AB%F6%E21%ACZ%B7%22%B7%9B%3F%02%85%CB%A2%5B%B7%BA%5E%B7%9C%97%E1%BC%0C%EB%16-%95%A12z%AC%0C%BFc%A22T%86uKe%D0%EA%B02V%DD%AD%8A%2B%8CWhe%5E%AF%CF%F5%3B%26%CE%CBh%5C%19%CE%CB%B0%F3%A4%095%A1%CAP%19*Ce%A8%0C%3BO*Ce%A8%0C%95%A12%3A%AD%8C%0A%82%7B%F0v%1F%2FD%A9%5B%9F%EE%EA%26%AF%03%CA%DF9%7B%19*Ce%A8%0C%95%A12T%86%CA%B8Ze%D8%CBP%19*Ce%A8%0C%95%D1ae%EC%F7%89I%E1%B4%D7M%D7P%8BjU%5C%BB%3E%F2%20%D8%CBP%19*Ce%A8%0C%95%A12T%C6%D5*%C3%5E%86%CAP%19*Ce%B4O%07%7B%F0W%7Bw%1C%7C%1A%8C%B3%3B%D1%EE%AA%5C%D6-%EBV%83%80%5E%D0%CA%10%5CU%2BD%E07YU%86%CAP%19*%E3%9A%95%91%D9%A0%C8%AD%5B%EDv%9E%82%FFKOee%E4%8FUe%A8%0C%95%A12T%C6%1F%A9%8C%C8%3D%5B%A5%15%FD%14%22r%E7B%9F%17l%F8%BF%ED%EAf%2B%7F%CF%ECe%D8%CBP%19*Ce%A8%0C%95%E1%93~%7B%19%F62T%86%CAP%19*Ce%A8%0C%E7%13%DA%CBP%19*Ce%A8%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4h%A9%0C%B3E%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4h%A9%0C%B3E%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4%AE%A4%F5%25%C0%00%DE%BF%5C'%0F%DA%B8q%00%00%00%00IEND%AEB%60%82") repeat-y !important;
-    border-left: 1px solid #BBBBBB !important;
-    border-right: 1px solid #000000 !important;
-    border-bottom: 1px dashed #BBBBBB !important;
-}
-
-.overflowRulerX > .firebugRulerV {
-    left: 0 !important;
-}
-
-.overflowRulerY > .firebugRulerH {
-    top: 0 !important;
-}
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-.fbProxyElement {
-    position: fixed !important;
-    pointer-events: auto !important;
-}
-</style></head>
+</script>
+</head>
 
 <body>
+<div class="navbar navbar-fixed-top visible-phone">
+      <div class="navbar-inner">
+        <div class="container-fluid">    <!-- Brand and toggle get grouped for better mobile display -->
+		      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="brand" href="http://www.nycourts.gov/courts/ad4" style="padding:5px 15px;"><span style="font-size:85%;">Supreme Court of the State of New York</span><br/>Appellate Division, Fourth Department</a>
+	          <div class="nav-collapse collapse">
+	            <p class="navbar-text pull-right">
 
-<div id="logo">
-<!-- #BeginEditable "seal" -->
-	<p style="height: 112px; width: 261px; text-align: center;">
-	<img alt="AD4 Seal" src="nyappdiv_4th_example_files/AD4-BW-Seal-1x1.jpg" height="100" width="100"></p>
-<!-- #EndEditable -->
+	            </p>
+	            <div>
+	              <table class="table table-hover table-condensed" id="navbarMainNav"></table>
+	            </div>
+	          </div><!--/.nav-collapse -->
+	    </div>
+    </div>
 </div>
-<div id="spacer"></div>
-<div id="header" class="style5">
-		Supreme Court of the State of New York<br>
-		<strong><span class="style6">APPELLATE DIVISION</span></strong>
-		<hr style="text-align:center; width:400px" class="style7">
-		Fourth Judicial Department<hr style="text-align:center; width:400px" class="style7">
+<div class="container">
+	<div class="row hidden-phone">
+		<div class="span3">
+			<div id="headerSeal">
+			<!-- #BeginEditable "seal" -->
+
+	<img alt="AD4 Seal" src="../../../../images/AD4-B&W-Seal-1x1.jpg" />
+
+			<!-- #EndEditable -->
+			</div>
+		</div>
+		<div class="span7 offset1">
+			<div id="headerMaster">
+				<div id="headerCourt">Supreme Court of the State of New York</div>
+				<div id="headerDivision">APPELLATE DIVISION</div>
+				<div id="headerDepartment">Fourth Judicial Department</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+
+		<div class="span3 hidden-phone">
+			<table id="mainNav" class="table table-condensed">
+				<tr>
+					<td><a href="../../../welcome.html">Welcome</a></td>
+				</tr>
+				<tr>
+					<td><a href="../../../../index.htm">Home</a></td>
+				</tr>
+				<tr>
+					<td class="navHeading">THE COURT</td>
+				</tr>
+				<tr>
+					<td><a href="../../../../Court/overview.html">Overview of the <span class="no-wrap">Appellate Division</span></a></td>
+				</tr>
+				<tr>
+					<td><a href="../../../../Court/Judges.html">Justices of the Court</a></td>
+				</tr>
+				<tr>
+					<td><a href="../../../../Chouse/chouse-index.html">The Courthouse</a></td>
+				</tr>
+				<tr>
+					<td class="navHeading">DECISIONS</td>
+				</tr>
+				<tr>
+					<td><a href="../../Decisions.html">Latest Decisions</a></td>
+				</tr>
+				<tr>
+					<td><a href="../../decision-release.pdf" target="_blank">Decision Release Dates</a></td>
+				</tr>
+				<tr>
+					<td><a href="../../Search/search.html">Search</a></td>
+				</tr>
+				<tr>
+					<td class="navHeading">CLERKS OFFICE</td>
+				</tr>
+				<tr>
+					<td><a href="../../../Clerks.html">Clerk and Deputy Clerk <span class="no-wrap">of the Court</span></a></td>
+				</tr>
+				<tr>
+					<td><a href="../../../AD4-contact-info.pdf" target="_blank">Contact Information</a></td>
+				</tr>
+				<tr>
+					<td><a href="../../../Calendar/terms.html">Terms of the Court</a></td>
+				</tr>
+				<tr>
+					<td><a href="../../../Calendar/calendar.html">Court Calendars</a></td>
+				</tr>
+				<tr>
+					<td><a href="../../../AD4-RuleBook-web.pdf" target="_blank">Rules of Practice</a></td>
+				</tr>
+				<tr>
+					<td><a href="../../../FAQ.html">Frequently Asked Questions</a></td>
+				</tr>
+				<tr>
+					<td><a href="../../../Forms/forms-PA.html">Forms and <span class="no-wrap">Practice Aids</span></a></td>
+				</tr>
+				<tr>
+					<td><a href="../../../Notice-PR/Notices.html">Latest Court News</a></td>
+				</tr>
+				<tr>
+					<td><a href="../../../Jobs/employment.html">Employment Opportunities</a></td>
+				</tr>
+				<tr>
+					<td class="navHeading">ATTORNEY MATTERS</td>
+				</tr>
+				<tr>
+					<td><a href="../../../AttyMttrs/baradmin.html">Admission to the Bar</a></td>
+				</tr>
+				<tr>
+					<td><a href="../../../AttyMttrs/atty-discip.html">Attorney Discipline</a></td>
+				</tr>
+				<tr>
+					<td>
+					<a href="../../../AttyMttrs/AttyRegDelinquency.pdf" target="_blank">Attorney Registration Delinquency</a></td>
+				</tr>
+				<tr>
+					<td><a href="../../../AttyMttrs/in-house.html">Registration as <span class="no-wrap">In-House Counsel</span></a></td>
+				</tr>
+				<tr>
+					<td>
+					<a href="../../../AttyMttrs/Attorney-Retirement.pdf" target="_blank">Retirement</a></td>
+				</tr>
+				<tr>
+					<td>
+					<a href="../../../AttyMttrs/AD4-VoluntaryResignation.pdf" target="_blank">Voluntary Resignation</a></td>
+				</tr>
+				<tr>
+					<td class="navHeading">PROGRAMS &amp; AUXILIARY AGENCIES</td>
+				</tr>
+				<tr>
+					<td><a href="../../../AssignCoun/assign-counsel.html">Assigned Counsel Program</a></td>
+				</tr>
+				<tr>
+					<td><a href="../../../../AFC/AFC-index.html">Attorneys for Children Program</a></td>
+				</tr>
+				<tr>
+					<td><a href="../../../../AG/AG-index.htm">Attorney Grievance Committees</a></td>
+				</tr>
+				<tr>
+					<td><a href="../../../../Examiners/exam-index.html">Court Examiners</a></td>
+				</tr>
+				<tr>
+					<td><a href="../../../../IJEQC/IJEQC-index.html">Indep. Judicial Election Qual. Comm.</a></td>
+				</tr>
+				<tr>
+					<td><a href="http://nycourts.gov/ad4/lib/index.html" target="_blank">Law Library</a></td>
+				</tr>
+				<tr>
+					<td><a href="../../../../mhls/mhls-index.html">Mental Hygiene <span class="no-wrap">Legal Service</span></a></td>
+				</tr>
+				<tr>
+					<td><a href="../../../probono.html">Pro Bono Policy and Program</a></td>
+				</tr>
+				<tr>
+					<td class="navHeading">RELATED LINKS</td>
+				</tr>
+				<tr>
+					<td><a href="../../../court-sites.html">Court sites</a></td>
+				</tr>
+				<tr>
+					<td><a href="../../../legal-sites.html">Legal</a></td>
+				</tr>
+			</table>
+		</div>
+
+
+		<div id="editBody" class="span9">
+		<!-- #BeginEditable "content" -->
+
+
+		<ul class="breadcrumb">
+		  <li><a href="../../../../">Home</a> <span class="divider">/</span></li>
+		  <li><a href="../../">Browse Decisions</a> <span class="divider">/</span></li>
+		  <li><a href="../">201<span style="background-color: #F5F5F5">6</span></a> <span class="divider">/</span></li>
+		  <li><a href="./"><span style="background-color: #F5F5F5">SEP</span>-<span style="background-color: #F5F5F5">30</span></a> <span class="divider">/</span></li>
+		  <li class="active">by Case Name</li>
+		</ul>
+
+		<div class="page-header" style="margin-bottom:0px;">
+			<h1>Decisions by Case Name<br/><small>September, 30 2016</small></h1>
+			<ul class="nav nav-pills">
+				<li class="active"><a href="alpha.htm">by CASE NAME</a></li>
+				<li><a href="county.htm">by COUNTY</a></li>
+				<li><a target="_blank" href="pdf/Motions_Crawfords.pdf">Motions and Crawfords</a></li>
+			</ul>
+		</div>
+
+<table class='table table-condensed table-hover table-decisions'><tr><td><a target='_blank' href='PDF/0673.pdf'>ABDUL-JALEEL, FAHEEM, PEOPLE v</a></td><td style='white-space:nowrap;'>673</td><td style='white-space:nowrap;'>KA 12-00874</td><td style='white-space:nowrap;'>(I2011-0552)</td></tr>
+<tr><td><a target='_blank' href='PDF/0778.pdf'>ALFRED, JR., GEORGE, PEOPLE v</a></td><td style='white-space:nowrap;'>778</td><td style='white-space:nowrap;'>KA 15-00437</td><td style='white-space:nowrap;'>(I2013-0752-1)</td></tr>
+<tr><td><a target='_blank' href='PDF/0751.pdf'>ALL-STATE SALES &amp; ADMINISTRATIVE SE,  v TOLEDO MOLDING &amp; DIE, INC.,</a></td><td style='white-space:nowrap;'>751</td><td style='white-space:nowrap;'>CA 15-01705</td><td style='white-space:nowrap;'>(2009-2173)</td></tr>
+<tr><td><a target='_blank' href='PDF/0700.pdf'>ALTIC, NANCY v BOARD OF EDUCATION,</a></td><td style='white-space:nowrap;'>700</td><td style='white-space:nowrap;'>CA 15-01923</td><td style='white-space:nowrap;'>(2014-1005)</td></tr>
+<tr><td><a target='_blank' href='PDF/0701.pdf'>AMBROSE, DENISE v BROWN, JR., M.D., JAMES E.</a></td><td style='white-space:nowrap;'>701</td><td style='white-space:nowrap;'>CA 15-00775</td><td style='white-space:nowrap;'>(2010-1373)</td></tr>
+<tr><td><a target='_blank' href='PDF/0770.pdf'>ANDERSON, STEVEN v ANNUCCI, ANTHONY</a></td><td style='white-space:nowrap;'>770</td><td style='white-space:nowrap;'>TP 15-02181</td><td style='white-space:nowrap;'>(CA2014-02717)</td></tr>
+<tr><td><a target='_blank' href='PDF/0748.pdf'>ANDREWS, RICHARD T. v COUNTY OF CAYUGA,</a></td><td style='white-space:nowrap;'>748</td><td style='white-space:nowrap;'>CA 15-01669</td><td style='white-space:nowrap;'>(2009-1448)</td></tr>
+<tr><td><a target='_blank' href='PDF/0775.pdf'>ASHFORD, III, FLEMING W., PEOPLE v</a></td><td style='white-space:nowrap;'>775</td><td style='white-space:nowrap;'>KA 12-00098</td><td style='white-space:nowrap;'>(I2011-0133)</td></tr>
+<tr><td><a target='_blank' href='PDF/0694.pdf'>B., KEVIN A., MTR. OF</a></td><td style='white-space:nowrap;'>694</td><td style='white-space:nowrap;'>CAF 15-00233</td><td style='white-space:nowrap;'>(NN-00816-13)</td></tr>
+<tr><td><a target='_blank' href='PDF/0769.pdf'>BAKER, JOANNA v SAVO, ERIN</a></td><td style='white-space:nowrap;'>769</td><td style='white-space:nowrap;'>CA 15-01980</td><td style='white-space:nowrap;'>(I2010-1747)</td></tr>
+<tr><td><a target='_blank' href='PDF/0664.pdf'>BEARDSLEY, JR., DOUGLAS P., PEOPLE v</a></td><td style='white-space:nowrap;'>664</td><td style='white-space:nowrap;'>KA 13-00913</td><td style='white-space:nowrap;'>(S12-311)</td></tr>
+<tr><td><a target='_blank' href='PDF/0704.pdf'>BOTTOM, ANTHONY v STATE OF NEW YORK,</a></td><td style='white-space:nowrap;'>704</td><td style='white-space:nowrap;'>CA 15-00301</td><td style='white-space:nowrap;'>(121214)</td></tr>
+<tr><td><a target='_blank' href='PDF/0663.pdf'>BRIGGS, ANGELA v NEW YORK STATE OFFICE OF CHILDREN,</a></td><td style='white-space:nowrap;'>663</td><td style='white-space:nowrap;'>TP 16-00052</td><td style='white-space:nowrap;'>(15-8904)</td></tr>
+<tr><td><a target='_blank' href='PDF/0779.pdf'>BROWN, KRYSTIAN, PEOPLE v</a></td><td style='white-space:nowrap;'>779</td><td style='white-space:nowrap;'>KA 14-00977</td><td style='white-space:nowrap;'>(I2013-1549)</td></tr>
+<tr><td><a target='_blank' href='PDF/0783.pdf'>BUFFALO BIODIESEL, INC.,  v TAJ MAHAL, INC.,</a></td><td style='white-space:nowrap;'>783</td><td style='white-space:nowrap;'>CA 15-02057</td><td style='white-space:nowrap;'>(813653/2014)</td></tr>
+<tr><td><a target='_blank' href='PDF/0758.pdf'>CARRASQUILLO, RICARDO, PEOPLE v</a></td><td style='white-space:nowrap;'>758</td><td style='white-space:nowrap;'>KA 13-01913</td><td style='white-space:nowrap;'>(I2012-0372-1)</td></tr>
+<tr><td><a target='_blank' href='PDF/0737.pdf'>CARRASQUILLO-FUENTES, EMILIER, PEOPLE v</a></td><td style='white-space:nowrap;'>737</td><td style='white-space:nowrap;'>KA 13-01688</td><td style='white-space:nowrap;'>(I2010-0944-1)</td></tr>
+<tr><td><a target='_blank' href='PDF/0763.pdf'>CARRIER, MARIA v HORNBY VOLUNTEER FIRE COMPANY, INC.,</a></td><td style='white-space:nowrap;'>763</td><td style='white-space:nowrap;'>CA 15-02103</td><td style='white-space:nowrap;'>(2012-1046CV)</td></tr>
+<tr><td><a target='_blank' href='PDF/0741.pdf'>CARTER, ROBERT, PEOPLE v</a></td><td style='white-space:nowrap;'>741</td><td style='white-space:nowrap;'>KA 13-01825</td><td style='white-space:nowrap;'>(I2012-0487-1)</td></tr>
+<tr><td><a target='_blank' href='PDF/0768.pdf'>CASSARA PROPERTIES, LLC,  v TOWN OF GREECE,</a></td><td style='white-space:nowrap;'>768</td><td style='white-space:nowrap;'>CA 15-02003</td><td style='white-space:nowrap;'>(3346/14)</td></tr>
+<tr><td><a target='_blank' href='PDF/0678.pdf'>CENTRAL CITY ROOFING, INC.,  v ASHLEY MCGRAW ARCHITECTS, D.P.,</a></td><td style='white-space:nowrap;'>678</td><td style='white-space:nowrap;'>CA 15-01924</td><td style='white-space:nowrap;'>(2014-0745)</td></tr>
+<tr><td><a target='_blank' href='PDF/0738.pdf'>CLARK, JASON L., PEOPLE v</a></td><td style='white-space:nowrap;'>738</td><td style='white-space:nowrap;'>KA 10-02421</td><td style='white-space:nowrap;'>(I2010-0419)</td></tr>
+<tr><td><a target='_blank' href='PDF/0730.pdf'>CLUNE, MAURA v MOORE, M.D., MICHAEL C.</a></td><td style='white-space:nowrap;'>730</td><td style='white-space:nowrap;'>CA 15-01162</td><td style='white-space:nowrap;'>(I-2010/8563)</td></tr>
+<tr><td><a target='_blank' href='PDF/0731.pdf'>CLUNE, MAURA v MOORE, M.D., MICHAEL C.</a></td><td style='white-space:nowrap;'>731</td><td style='white-space:nowrap;'>CA 15-01163</td><td style='white-space:nowrap;'>(I-2010/8563)</td></tr>
+<tr><td><a target='_blank' href='PDF/0676.pdf'>COLLETTE, BETTY M., PEOPLE v</a></td><td style='white-space:nowrap;'>676</td><td style='white-space:nowrap;'>KA 14-02142</td><td style='white-space:nowrap;'>(I2009-0995)</td></tr>
+<tr><td><a target='_blank' href='PDF/0809.pdf'>CRANE-HOGAN STRUCTURAL SYSTEMS, INC,  v BELDING, MARY ELLEN</a></td><td style='white-space:nowrap;'>809</td><td style='white-space:nowrap;'>CA 15-02157</td><td style='white-space:nowrap;'>(2015-2832)</td></tr>
+<tr><td><a target='_blank' href='PDF/0725.pdf'>CRUZ, YESENIA v STACHOWSKI, MICHAEL J.</a></td><td style='white-space:nowrap;'>725</td><td style='white-space:nowrap;'>CA 16-00025</td><td style='white-space:nowrap;'>(I2012-3645)</td></tr>
+<tr><td><a target='_blank' href='PDF/0831.pdf'>CUMMINGS, BRYAN W. v SUNG, DOO WHA</a></td><td style='white-space:nowrap;'>831</td><td style='white-space:nowrap;'>CA 15-02110</td><td style='white-space:nowrap;'>(2013-1244)</td></tr>
+<tr><td><a target='_blank' href='PDF/0667.pdf'>CUSHMAN, SARAH J., PEOPLE v</a></td><td style='white-space:nowrap;'>667</td><td style='white-space:nowrap;'>KA 13-00157</td><td style='white-space:nowrap;'>(I2012-0044B)</td></tr>
+<tr><td><a target='_blank' href='PDF/0665.pdf'>CUSHMAN, SARAH J., PEOPLE v</a></td><td style='white-space:nowrap;'>665</td><td style='white-space:nowrap;'>KA 13-00155</td><td style='white-space:nowrap;'>(I2012-0120B)</td></tr>
+<tr><td><a target='_blank' href='PDF/0666.pdf'>CUSHMAN, SARAH J., PEOPLE v</a></td><td style='white-space:nowrap;'>666</td><td style='white-space:nowrap;'>KA 13-00156</td><td style='white-space:nowrap;'>(I2011-1148)</td></tr>
+<tr><td><a target='_blank' href='PDF/0668.pdf'>DALE, DAVID, PEOPLE v</a></td><td style='white-space:nowrap;'>668</td><td style='white-space:nowrap;'>KA 12-02045</td><td style='white-space:nowrap;'>(I2010-2579)</td></tr>
+<tr><td><a target='_blank' href='PDF/0821.pdf'>DAVIS, RICHARD L., PEOPLE v</a></td><td style='white-space:nowrap;'>821</td><td style='white-space:nowrap;'>KA 13-00582</td><td style='white-space:nowrap;'>(I2012-0386)</td></tr>
+<tr><td><a target='_blank' href='PDF/0687.pdf'>DAVOY, SR., LYLE F., PEOPLE v</a></td><td style='white-space:nowrap;'>687</td><td style='white-space:nowrap;'>KA 14-02255</td><td style='white-space:nowrap;'>(I2013-061)</td></tr>
+<tr><td><a target='_blank' href='PDF/0733.pdf'>DIAZ, JULIO, PEOPLE v</a></td><td style='white-space:nowrap;'>733</td><td style='white-space:nowrap;'>KA 14-00310</td><td style='white-space:nowrap;'>(I2013-0079)</td></tr>
+<tr><td><a target='_blank' href='PDF/0680.pdf'>EDDY, WILLIAM M. v ANTANAVIGE, DAVID</a></td><td style='white-space:nowrap;'>680</td><td style='white-space:nowrap;'>CA 15-01974</td><td style='white-space:nowrap;'>(2010-000433)</td></tr>
+<tr><td><a target='_blank' href='PDF/0828.pdf'>ELNISKI, KELIANN M. v JUNKER, ROBERT M.</a></td><td style='white-space:nowrap;'>828</td><td style='white-space:nowrap;'>CAF 15-01161</td><td style='white-space:nowrap;'>(V-01284-13/13B)</td></tr>
+<tr><td><a target='_blank' href='PDF/0670.pdf'>EVANS, CARL, PEOPLE v</a></td><td style='white-space:nowrap;'>670</td><td style='white-space:nowrap;'>KA 15-01140</td><td style='white-space:nowrap;'>(I2013-0395)</td></tr>
+<tr><td><a target='_blank' href='PDF/0675.pdf'>FARRELL, THOMAS P., PEOPLE v</a></td><td style='white-space:nowrap;'>675</td><td style='white-space:nowrap;'>KA 15-00239</td><td style='white-space:nowrap;'>(I00380-2008)</td></tr>
+<tr><td><a target='_blank' href='PDF/0789.pdf'>FAWCETT, JASON v STEARNS, FRANKLYN COLE</a></td><td style='white-space:nowrap;'>789</td><td style='white-space:nowrap;'>CA 15-01752</td><td style='white-space:nowrap;'>(K1 2013-723)</td></tr>
+<tr><td><a target='_blank' href='PDF/0709.pdf'>FIGEUROA, RACHEL v NEW YORK STATE DIVISION OF,  HUMAN RIGHTS</a></td><td style='white-space:nowrap;'>709</td><td style='white-space:nowrap;'>TP 15-01941</td><td style='white-space:nowrap;'>(2015/807766)</td></tr>
+<tr><td><a target='_blank' href='PDF/0750.pdf'>GAITER, DARRYL v CITY OF BUFFALO BOARD OF EDUCATION,</a></td><td style='white-space:nowrap;'>750</td><td style='white-space:nowrap;'>CA 15-02094</td><td style='white-space:nowrap;'>(I2009-10074)</td></tr>
+<tr><td><a target='_blank' href='PDF/0749.pdf'>GAITER, DARRYL v CITY OF BUFFALO BOARD OF EDUCATION,</a></td><td style='white-space:nowrap;'>749</td><td style='white-space:nowrap;'>CA 15-02092</td><td style='white-space:nowrap;'>(I2009-10074)</td></tr>
+<tr><td><a target='_blank' href='PDF/0672.pdf'>HALL, II, JAMES, PEOPLE v</a></td><td style='white-space:nowrap;'>672</td><td style='white-space:nowrap;'>KA 12-01925</td><td style='white-space:nowrap;'>(I2011-035)</td></tr>
+<tr><td><a target='_blank' href='PDF/0690.pdf'>HAMPTON, CRYSTAPHER, PEOPLE v</a></td><td style='white-space:nowrap;'>690</td><td style='white-space:nowrap;'>KA 11-01062</td><td style='white-space:nowrap;'>(I2008-0908)</td></tr>
+<tr><td><a target='_blank' href='PDF/0826.pdf'>HARRIS, CLEOPHIS, PEOPLE v</a></td><td style='white-space:nowrap;'>826</td><td style='white-space:nowrap;'>KA 14-02057</td><td style='white-space:nowrap;'>(I13-405)</td></tr>
+<tr><td><a target='_blank' href='PDF/0736.pdf'>HICKS, RAYLAND L., PEOPLE v</a></td><td style='white-space:nowrap;'>736</td><td style='white-space:nowrap;'>KA 13-00168</td><td style='white-space:nowrap;'>(I2007-0778)</td></tr>
+<tr><td><a target='_blank' href='PDF/0689.pdf'>HIRAM, JOHANNES, PEOPLE v</a></td><td style='white-space:nowrap;'>689</td><td style='white-space:nowrap;'>KA 15-00418</td><td style='white-space:nowrap;'>(I00473X-2014)</td></tr>
+<tr><td><a target='_blank' href='PDF/0843.pdf'>HOUSTON, CORDARISE, PEOPLE v</a></td><td style='white-space:nowrap;'>843</td><td style='white-space:nowrap;'>KA 14-01967</td><td style='white-space:nowrap;'>(I2013-260)</td></tr>
+<tr><td><a target='_blank' href='PDF/0796.pdf'>HUNTER, SHAQUILLE, PEOPLE v</a></td><td style='white-space:nowrap;'>796</td><td style='white-space:nowrap;'>KA 14-01731</td><td style='white-space:nowrap;'>(I2013-1904)</td></tr>
+<tr><td><a target='_blank' href='PDF/0671.pdf'>HUTCHINGS, BRIAN K., PEOPLE v</a></td><td style='white-space:nowrap;'>671</td><td style='white-space:nowrap;'>KA 12-01585</td><td style='white-space:nowrap;'>(I2010-093)</td></tr>
+<tr><td><a target='_blank' href='PDF/0669.pdf'>JAMES, ANTONIO L., PEOPLE v</a></td><td style='white-space:nowrap;'>669</td><td style='white-space:nowrap;'>KA 14-00007</td><td style='white-space:nowrap;'>(I2013-0157A)</td></tr>
+<tr><td><a target='_blank' href='PDF/0798.pdf'>JONES, TIMOTHY A., PEOPLE v</a></td><td style='white-space:nowrap;'>798</td><td style='white-space:nowrap;'>KA 14-00208</td><td style='white-space:nowrap;'>(I12-07-111)</td></tr>
+<tr><td><a target='_blank' href='PDF/0712.pdf'>JONES, JENNIFER L., PEOPLE v</a></td><td style='white-space:nowrap;'>712</td><td style='white-space:nowrap;'>KA 14-01095</td><td style='white-space:nowrap;'>(I2013-173)</td></tr>
+<tr><td><a target='_blank' href='PDF/0693.pdf'>K., HUNTER, MTR. OF</a></td><td style='white-space:nowrap;'>693</td><td style='white-space:nowrap;'>CAF 15-00037</td><td style='white-space:nowrap;'>(NN-339-341-14)</td></tr>
+<tr><td><a target='_blank' href='PDF/0834.pdf'>KOZLOWSKI, SUSAN v UNILAND DEVELOPMENT COMPANY,</a></td><td style='white-space:nowrap;'>834</td><td style='white-space:nowrap;'>CA 15-01566</td><td style='white-space:nowrap;'>(2009-014224)</td></tr>
+<tr><td><a target='_blank' href='PDF/0806.pdf'>LAZAR, MELISSA v LAZAR, BARRY D.</a></td><td style='white-space:nowrap;'>806</td><td style='white-space:nowrap;'>CA 15-02109</td><td style='white-space:nowrap;'>(SF2009-901303)</td></tr>
+<tr><td><a target='_blank' href='PDF/0719.pdf'>MACHADO, DOUGLAS v TANOURY, CHANDRA</a></td><td style='white-space:nowrap;'>719</td><td style='white-space:nowrap;'>CAF 15-01139</td><td style='white-space:nowrap;'>(V-04796-14/15B)</td></tr>
+<tr><td><a target='_blank' href='PDF/0720.pdf'>MACHADO, DOUGLAS C. v TANOURY, CHANDRA V.</a></td><td style='white-space:nowrap;'>720</td><td style='white-space:nowrap;'>CAF 15-01141</td><td style='white-space:nowrap;'>(V-04796-14/15B)</td></tr>
+<tr><td><a target='_blank' href='PDF/0728.pdf'>MARGERUM, EUGENE v CITY OF BUFFALO,</a></td><td style='white-space:nowrap;'>728</td><td style='white-space:nowrap;'>CA 15-02116</td><td style='white-space:nowrap;'>(2007-1462)</td></tr>
+<tr><td><a target='_blank' href='PDF/0755.pdf'>MATTHEWS, JR., BURGESS, PEOPLE v</a></td><td style='white-space:nowrap;'>755</td><td style='white-space:nowrap;'>KA 08-01549</td><td style='white-space:nowrap;'>(I2007-0657)</td></tr>
+<tr><td><a target='_blank' href='PDF/0756.pdf'>MATTHEWS, JR., BURGESS, PEOPLE v</a></td><td style='white-space:nowrap;'>756</td><td style='white-space:nowrap;'>KA 08-01938</td><td style='white-space:nowrap;'>(I2007-0657)</td></tr>
+<tr><td><a target='_blank' href='PDF/0793.pdf'>MCCABE, MARC, PEOPLE v</a></td><td style='white-space:nowrap;'>793</td><td style='white-space:nowrap;'>KA 15-01606</td><td style='white-space:nowrap;'>(8899)</td></tr>
+<tr><td><a target='_blank' href='PDF/0810.pdf'>MCDONALD, ALISSA JOY, MTR. OF</a></td><td style='white-space:nowrap;'>810</td><td style='white-space:nowrap;'>CA 16-00023</td><td style='white-space:nowrap;'>(2014-2297) &amp; (2014-2297/A)</td></tr>
+<tr><td><a target='_blank' href='PDF/0558.pdf'>MCKENZIE, DONYELL, PEOPLE v</a></td><td style='white-space:nowrap;'>558</td><td style='white-space:nowrap;'>KA 12-02309</td><td style='white-space:nowrap;'>(I2007-0016)</td></tr>
+<tr><td><a target='_blank' href='PDF/0766.pdf'>MITCHELL, MARGUERITE v NRG ENERGY, INC.,</a></td><td style='white-space:nowrap;'>766</td><td style='white-space:nowrap;'>CA 15-01978</td><td style='white-space:nowrap;'>(I-2010-8750)</td></tr>
+<tr><td><a target='_blank' href='PDF/0771.pdf'>MOHAWK, MAXWELL B., PEOPLE v</a></td><td style='white-space:nowrap;'>771</td><td style='white-space:nowrap;'>KA 14-00093</td><td style='white-space:nowrap;'>(I12-270)</td></tr>
+<tr><td><a target='_blank' href='PDF/0833.pdf'>NORTHMAN, STEVEN E. v SAM-SON DISTRIBUTION CENTER, INC.,</a></td><td style='white-space:nowrap;'>833</td><td style='white-space:nowrap;'>CA 15-02143</td><td style='white-space:nowrap;'>(807538/2014)</td></tr>
+<tr><td><a target='_blank' href='PDF/0697.pdf'>P., CHRISTINE, MTR. OF</a></td><td style='white-space:nowrap;'>697</td><td style='white-space:nowrap;'>CAF 15-00717</td><td style='white-space:nowrap;'>(NA-2265-13)</td></tr>
+<tr><td><a target='_blank' href='PDF/0797.pdf'>PALMER, EDDIE R., PEOPLE v</a></td><td style='white-space:nowrap;'>797</td><td style='white-space:nowrap;'>KA 11-02369</td><td style='white-space:nowrap;'>(I2011-0326)</td></tr>
+<tr><td><a target='_blank' href='PDF/0703.pdf'>PERKINS, BRITTANY v COLOMBO, SHARON E.</a></td><td style='white-space:nowrap;'>703</td><td style='white-space:nowrap;'>CA 15-02004</td><td style='white-space:nowrap;'>(2010-6179)</td></tr>
+<tr><td><a target='_blank' href='PDF/0739.pdf'>PIERCE, REGINALD O., PEOPLE v</a></td><td style='white-space:nowrap;'>739</td><td style='white-space:nowrap;'>KA 14-01526</td><td style='white-space:nowrap;'>(I2013-01205)</td></tr>
+<tr><td><a target='_blank' href='PDF/0837.pdf'>PINNACLE INVESTMENTS, LLC,  v ESPSCO SYRACUSE, LLC,</a></td><td style='white-space:nowrap;'>837</td><td style='white-space:nowrap;'>CA 15-01489</td><td style='white-space:nowrap;'>(2014EF3469)</td></tr>
+<tr><td><a target='_blank' href='PDF/0815.pdf'>POMALES, JAIMEN, PEOPLE v</a></td><td style='white-space:nowrap;'>815</td><td style='white-space:nowrap;'>KA 14-00729</td><td style='white-space:nowrap;'>(I2013-0201)</td></tr>
+<tr><td><a target='_blank' href='PDF/0767.pdf'>REHWALDT, LOUANN v KOKOLUS, KATHLEEN M.</a></td><td style='white-space:nowrap;'>767</td><td style='white-space:nowrap;'>CA 15-02104</td><td style='white-space:nowrap;'>(2012/2947)</td></tr>
+<tr><td><a target='_blank' href='PDF/0836.pdf'>REYES, EARL v ANNUCCI, ANTHONY</a></td><td style='white-space:nowrap;'>836</td><td style='white-space:nowrap;'>CA 15-01091</td><td style='white-space:nowrap;'>(21517-14)</td></tr>
+<tr><td><a target='_blank' href='PDF/0754.pdf'>RICCELLI ENTERPRISES, INC.,  v STATE OF NEW YORK WORKERS' COMPENSA,</a></td><td style='white-space:nowrap;'>754</td><td style='white-space:nowrap;'>CA 15-02074</td><td style='white-space:nowrap;'>(2010-6901)</td></tr>
+<tr><td><a target='_blank' href='PDF/0713.pdf'>RICHARDSON, THOMAS J., PEOPLE v</a></td><td style='white-space:nowrap;'>713</td><td style='white-space:nowrap;'>KA 13-00941</td><td style='white-space:nowrap;'>(I2012-0164)</td></tr>
+<tr><td><a target='_blank' href='PDF/0688.pdf'>ROBINSON, BRANDON L., PEOPLE v</a></td><td style='white-space:nowrap;'>688</td><td style='white-space:nowrap;'>KA 08-01006</td><td style='white-space:nowrap;'>(I2007-579C)</td></tr>
+<tr><td><a target='_blank' href='PDF/0721.pdf'>ROSEMAN, SARAH v SIERANT, ERNEST</a></td><td style='white-space:nowrap;'>721</td><td style='white-space:nowrap;'>CAF 15-00189</td><td style='white-space:nowrap;'>(V-01815-14)</td></tr>
+<tr><td><a target='_blank' href='PDF/0742.pdf'>S., JOYCE v S., ROBERT W.</a></td><td style='white-space:nowrap;'>742</td><td style='white-space:nowrap;'>CAF 15-00345</td><td style='white-space:nowrap;'>(45084-ID)</td></tr>
+<tr><td><a target='_blank' href='PDF/0823.pdf'>SANTIAGO, ANIBAL, PEOPLE v</a></td><td style='white-space:nowrap;'>823</td><td style='white-space:nowrap;'>KA 13-01651</td><td style='white-space:nowrap;'>(I2012-0925-1)</td></tr>
+<tr><td><a target='_blank' href='PDF/0714.pdf'>SCHWALLIE, ASHLEIGH v NEW YORK STATE DIVISION OF HUMAN,</a></td><td style='white-space:nowrap;'>714</td><td style='white-space:nowrap;'>TP 15-01940</td><td style='white-space:nowrap;'>(2015807780)</td></tr>
+<tr><td><a target='_blank' href='PDF/0814.pdf'>SEIFERT, CHRISTOPHER v ANNUCCI, ANTHONY</a></td><td style='white-space:nowrap;'>814</td><td style='white-space:nowrap;'>CA 15-01361</td><td style='white-space:nowrap;'>(21,535-14)</td></tr>
+<tr><td><a target='_blank' href='PDF/0762.pdf'>SHOPPINGTOWN MALL NY LLC,  v ASSESSOR, TOWN OF DEWITT,</a></td><td style='white-space:nowrap;'>762</td><td style='white-space:nowrap;'>CA 15-00284</td><td style='white-space:nowrap;'>(2014EF2716)</td></tr>
+<tr><td><a target='_blank' href='PDF/0745.pdf'>SMALL, FELICIA v PEARSON, SR., ERIC</a></td><td style='white-space:nowrap;'>745</td><td style='white-space:nowrap;'>CAF 14-01021</td><td style='white-space:nowrap;'>(V-15174-06/13C)</td></tr>
+<tr><td><a target='_blank' href='PDF/0744.pdf'>SMALL, FELICIA v THOMAS, MADELYN</a></td><td style='white-space:nowrap;'>744</td><td style='white-space:nowrap;'>CAF 14-01020</td><td style='white-space:nowrap;'>(V-13423-06/13B)</td></tr>
+<tr><td><a target='_blank' href='PDF/0761.pdf'>SMITH, CHRISTOPHER v NEW YORK STATE DIVISION OF HUMAN RI,</a></td><td style='white-space:nowrap;'>761</td><td style='white-space:nowrap;'>CA 15-01794</td><td style='white-space:nowrap;'>(K1-2015-174)</td></tr>
+<tr><td><a target='_blank' href='PDF/0822.pdf'>SPATES, ANSON, PEOPLE v</a></td><td style='white-space:nowrap;'>822</td><td style='white-space:nowrap;'>KA 14-02103</td><td style='white-space:nowrap;'>(I2013-1427)</td></tr>
+<tr><td><a target='_blank' href='PDF/0785.pdf'>STATE OF NEW YORK,  v BUSHEY, CHRISTOPHER</a></td><td style='white-space:nowrap;'>785</td><td style='white-space:nowrap;'>CA 15-00410</td><td style='white-space:nowrap;'>(CA2013-1149)</td></tr>
+<tr><td><a target='_blank' href='PDF/0727.pdf'>STEBICK, MICHAEL v MCGEE, RITA</a></td><td style='white-space:nowrap;'>727</td><td style='white-space:nowrap;'>CA 16-00043</td><td style='white-space:nowrap;'>(79946)</td></tr>
+<tr><td><a target='_blank' href='PDF/0718.pdf'>STEINIGER, BRENT M., PEOPLE v</a></td><td style='white-space:nowrap;'>718</td><td style='white-space:nowrap;'>KA 15-02030</td><td style='white-space:nowrap;'>(2014-0073CR)</td></tr>
+<tr><td><a target='_blank' href='PDF/0588.pdf'>SUGGS, JOHN v STATE OF NEW YORK,</a></td><td style='white-space:nowrap;'>588</td><td style='white-space:nowrap;'>CA 15-01686</td><td style='white-space:nowrap;'>(CA2012-000980)</td></tr>
+<tr><td><a target='_blank' href='PDF/0743.pdf'>THOMAS, MADELYN v SMALL, FELICIA</a></td><td style='white-space:nowrap;'>743</td><td style='white-space:nowrap;'>CAF 14-01019</td><td style='white-space:nowrap;'>(V-13423-06/13A)</td></tr>
+<tr><td><a target='_blank' href='PDF/0698.pdf'>TIRONE, GASPER A. v BUCZEK, DEBORAH A.</a></td><td style='white-space:nowrap;'>698</td><td style='white-space:nowrap;'>CA 15-01977</td><td style='white-space:nowrap;'>(807348/2014)</td></tr>
+<tr><td><a target='_blank' href='PDF/0696.pdf'>W., CARTER, MTR. OF</a></td><td style='white-space:nowrap;'>696</td><td style='white-space:nowrap;'>CAF 15-00243</td><td style='white-space:nowrap;'>(NN-13001-13, V-04679-14)</td></tr>
+<tr><td><a target='_blank' href='PDF/0695.pdf'>W., CARTER, MTR. OF</a></td><td style='white-space:nowrap;'>695</td><td style='white-space:nowrap;'>CAF 15-00154</td><td style='white-space:nowrap;'>(NN-13001-13)</td></tr>
+<tr><td><a target='_blank' href='PDF/0752.pdf'>WERNER, TAMRA J. v KENNEY, KRAIG H.</a></td><td style='white-space:nowrap;'>752</td><td style='white-space:nowrap;'>CA 15-01359</td><td style='white-space:nowrap;'>(103582)</td></tr>
+<tr><td><a target='_blank' href='PDF/0759.pdf'>WILLIAMS, KEITH L., PEOPLE v</a></td><td style='white-space:nowrap;'>759</td><td style='white-space:nowrap;'>KA 13-00720</td><td style='white-space:nowrap;'>(I2012-0305B)</td></tr>
+<tr><td><a target='_blank' href='PDF/0747.pdf'>WIRTH, AMIE E. v WAYSIDE PUB, INC.,</a></td><td style='white-space:nowrap;'>747</td><td style='white-space:nowrap;'>CA 15-02023</td><td style='white-space:nowrap;'>(1030/11)</td></tr>
+<tr><td><a target='_blank' href='PDF/0757.pdf'>WOODS, WESLEY, PEOPLE v</a></td><td style='white-space:nowrap;'>757</td><td style='white-space:nowrap;'>KA 15-00024</td><td style='white-space:nowrap;'>(I2013-2272)</td></tr>
+<tr><td><a target='_blank' href='PDF/0726.pdf'>ZELASKO CONSTRUCTION, INC.,  v MERCHANTS MUTUAL INSURANCE COMPANY,</a></td><td style='white-space:nowrap;'>726</td><td style='white-space:nowrap;'>CA 15-01754</td><td style='white-space:nowrap;'>(2007-011654)</td></tr>
+<tr><td><a target='_blank' href='PDF/0764.pdf'>ZHU, DAMING v CHENG, YE</a></td><td style='white-space:nowrap;'>764</td><td style='white-space:nowrap;'>CA 15-00559</td><td style='white-space:nowrap;'>(2012-M-0963)</td></tr>
+</table>
+
+<br />
+
+
+		<!-- #EndEditable -->
+		</div>
+
+	</div>
 </div>
-<div id="container">
-	<div id="left_col" style="height:auto; width:235px">
-	<table style="font-size:small; line-height:150%; margin-left:10px; background-color:#DDDDDD" width="231">
-	
-	<tbody><tr><td><a href="http://www.nycourts.gov/courts/ad4/Clerk/welcome.html">Welcome</a></td></tr>
-	<tr><td><a href="http://www.nycourts.gov/courts/ad4/index.htm">Home</a></td></tr>
-	
-	<tr><td style="color:white; font-weight:bold; background-color:#0000FF">THE COURT</td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/Court/overview.html">Overview of the Appellate Division</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/Court/Judges.html">Justices of the Court</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/Chouse/chouse-index.html">The Courthouse</a></td></tr>
-	
-	<tr><td style="color:white; font-weight:bold; background-color:#0000FF">DECISIONS</td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/Decisions.html">Latest Decisions</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; 
-		<a href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/decision-release.pdf" target="_blank">Decision Release Dates</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/Search/search.html">Search</a></td></tr>
-	
-	<tr><td style="color:white; font-weight:bold; background-color:#0000FF">CLERKS OFFICE</td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/Clerk/Clerks.html">Clerk and Deputy Clerk of the Court</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; 
-		<a href="http://www.nycourts.gov/courts/ad4/Clerk/AD4-contact-info.pdf" target="_blank">Contact Information</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/Clerk/Calendar/terms.html">Terms of the Court</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/Clerk/Calendar/calendar.html">Court Calendars</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; 
-		<a href="http://www.nycourts.gov/courts/ad4/Clerk/AD4-RuleBook-web.pdf" target="_blank">Rules of Practice</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/Clerk/FAQ.html">Frequently Asked Questions</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/Clerk/Forms/forms-PA.html">Forms and Practice Aids</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/Clerk/Notice-PR/Notices.html">Latest Court News</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/Clerk/Jobs/employment.html">Employment Opportunities</a></td></tr>
-	
-	<tr><td style="color:white; font-weight:bold; background-color:#0000FF">ATTORNEY MATTERS</td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/Clerk/AttyMttrs/baradmin.html">Admission to the Bar</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/Clerk/AttyMttrs/atty-discip.html">Attorney Discipline</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; 
-		<a href="http://www.nycourts.gov/courts/ad4/Clerk/AttyMttrs/AttyRegDelinquency.pdf" target="_blank">Attorney Registration Delinquency</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/Clerk/AttyMttrs/in-house.html">Registration as In-House Counsel</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; 
-		<a href="http://www.nycourts.gov/courts/ad4/Clerk/AttyMttrs/Attorney-Retirement.pdf" target="_blank">Retirement</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; 
-		<a href="http://www.nycourts.gov/courts/ad4/Clerk/AttyMttrs/AD4-VoluntaryResignation.pdf" target="_blank">Voluntary Resignation</a></td></tr>
-	
-	<tr><td style="color:white; font-weight:bold; background-color:#0000FF">PROGRAMS &amp; AUXILIARY AGENCIES</td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/Clerk/AssignCoun/assign-counsel.html">Assigned Counsel Program</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/AFC/AFC-index.html">Attorneys for Children Program</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/AG/AG-index.htm">Attorney Grievance Committees</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/Examiners/exam-index.html">Court Examiners</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/IJEQC/IJEQC-index.html">Indep. Judicial Election Qual. Comm.</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://nycourts.gov/ad4/lib/index.html" target="_blank">Law Library</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/mhls/mhls-index.html">Mental Hygiene Legal Service</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp; <a href="http://www.nycourts.gov/courts/ad4/Clerk/probono.html">Pro Bono Policy and Program</a></td></tr>
-	
-	<tr><td style="color:white; font-weight:bold; background-color:#0000FF">RELATED LINKS</td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp;<a href="http://www.nycourts.gov/courts/ad4/Clerk/court-sites.html">Court sites</a></td></tr>
-	<tr><td>&nbsp;&nbsp;&nbsp;<a href="http://www.nycourts.gov/courts/ad4/Clerk/legal-sites.html">Legal sites</a></td></tr>
-	</tbody></table>
-	<br><br><br>
-</div>
-<div id="right_col"></div>
-<div id="page_content" style="height:60px">
 
-<!-- #BeginEditable "content" -->
-	
-	
-		<br>
-
-
-
-		<p style="text-align:center; color:navy; font-size:xx-large">Decisions - July&nbsp;3, 2014</p>
-		<table style="border-collapse:collapse; border-color:silver; width:750px" cellpadding="2" cellspacing="1" border="1"><tbody><tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0800.pdf">BARNES, JAKOTA W., PEOPLE v</a></td><td style="width:41px; font-size:small">800</td><td style="width:96px; font-size:small">KA 12-02113</td><td style="width:150px; font-size:small">(I2009-1983)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0568.pdf">BISH, ROBERT v ODELL FARMS PARTNERSHIP,</a></td><td style="width:41px; font-size:small">568</td><td style="width:96px; font-size:small">CA 13-01811</td><td style="width:150px; font-size:small">(K12012-87)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0797.pdf">BOEKHOUT, JR., BARRY, PEOPLE v</a></td><td style="width:41px; font-size:small">797</td><td style="width:96px; font-size:small">KA 13-01684</td><td style="width:150px; font-size:small">(I12-132)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0743.pdf">BOGGS, TEMPLE, PEOPLE v</a></td><td style="width:41px; font-size:small">743</td><td style="width:96px; font-size:small">KA 09-02091</td><td style="width:150px; font-size:small">(I2008-1022)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0651.pdf">BONACCI, JAMES M., PEOPLE v</a></td><td style="width:41px; font-size:small">651</td><td style="width:96px; font-size:small">KA 11-01221</td><td style="width:150px; font-size:small">(I2009-0736)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0804.pdf">BRINSON, DEONTE J., PEOPLE v</a></td><td style="width:41px; font-size:small">804</td><td style="width:96px; font-size:small">KA 13-01549</td><td style="width:150px; font-size:small">(I2012-010A)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0793.pdf">BROCKINGTON, GERALD v FISCHER, BRIAN</a></td><td style="width:41px; font-size:small">793</td><td style="width:96px; font-size:small">CA 13-00403</td><td style="width:150px; font-size:small">(21,272-12)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0795.pdf">BROWN, GEORGE v ANNUCCI, ANTHONY</a></td><td style="width:41px; font-size:small">795</td><td style="width:96px; font-size:small">TP 14-00004</td><td style="width:150px; font-size:small">(21404-13)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0810.pdf">CASTRO, JUAN, PEOPLE v</a></td><td style="width:41px; font-size:small">810</td><td style="width:96px; font-size:small">KA 12-01867</td><td style="width:150px; font-size:small">(I2011-0126)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0767.pdf">DALLAS, RICHARD, PEOPLE v</a></td><td style="width:41px; font-size:small">767</td><td style="width:96px; font-size:small">KA 12-02311</td><td style="width:150px; font-size:small">(I11-149)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0826.pdf">DAVIS, LATEEK, PEOPLE v</a></td><td style="width:41px; font-size:small">826</td><td style="width:96px; font-size:small">KA 13-00651</td><td style="width:150px; font-size:small">(I2012-160)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0827.pdf">DAVIS, LATEEK, PEOPLE v</a></td><td style="width:41px; font-size:small">827</td><td style="width:96px; font-size:small">KA 13-00653</td><td style="width:150px; font-size:small">(I2012-161)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0510.pdf">DIMOND, FREDERICK v TIME WARNER, INC.,</a></td><td style="width:41px; font-size:small">510</td><td style="width:96px; font-size:small">CA 13-01817</td><td style="width:150px; font-size:small">(40559)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0748.pdf">DOMINICCI, LIMARIE v FORD, THOMAS</a></td><td style="width:41px; font-size:small">748</td><td style="width:96px; font-size:small">CA 13-02097</td><td style="width:150px; font-size:small">(2011-3585)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0787.pdf">EAST, JR., RONALD, PEOPLE v</a></td><td style="width:41px; font-size:small">787</td><td style="width:96px; font-size:small">KA 13-01844</td><td style="width:150px; font-size:small">(I2012-00891)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0746.pdf">ERON, CHRISTOPHER H., PEOPLE v</a></td><td style="width:41px; font-size:small">746</td><td style="width:96px; font-size:small">KA 12-01694</td><td style="width:150px; font-size:small">(I02528-2011)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0201.pdf">FARRUGGIA, GAETANO v TOWN OF PENFIELD,</a></td><td style="width:41px; font-size:small">201</td><td style="width:96px; font-size:small">CA 13-01562</td><td style="width:150px; font-size:small">(2011-8731)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0813.pdf">FERRUSI, MELISSA A. v JAMES, SHARIFF K.</a></td><td style="width:41px; font-size:small">813</td><td style="width:96px; font-size:small">CAF 13-01036</td><td style="width:150px; font-size:small">(O-01079-11/12B)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0814.pdf">FERRUSI, MELISSA A. v JAMES, SHARIFF K.</a></td><td style="width:41px; font-size:small">814</td><td style="width:96px; font-size:small">CAF 13-01037</td><td style="width:150px; font-size:small">(O-01079-11/12B)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0309.pdf">FOOTS, JAMES v CONSOLIDATED BUILDING CONTRACTORS,,</a></td><td style="width:41px; font-size:small">309</td><td style="width:96px; font-size:small">CA 13-01437</td><td style="width:150px; font-size:small">(2008-06153)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0815.pdf">GARRETT, JERRY v ANNUCCI, ANTHONY</a></td><td style="width:41px; font-size:small">815</td><td style="width:96px; font-size:small">TP 14-00108</td><td style="width:150px; font-size:small">(21,409-13)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0777.pdf">GREEN, DAVID v BLASKIEWICZ, M.D., DONALD J.</a></td><td style="width:41px; font-size:small">777</td><td style="width:96px; font-size:small">CA 13-01005</td><td style="width:150px; font-size:small">(2010-7307)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0681.pdf">GUARIGLIA, MICHAEL A., PEOPLE v</a></td><td style="width:41px; font-size:small">681</td><td style="width:96px; font-size:small">KA 13-02182</td><td style="width:150px; font-size:small">(2011-262)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0657.pdf">HALL, BRANDON S., PEOPLE v</a></td><td style="width:41px; font-size:small">657</td><td style="width:96px; font-size:small">KA 09-00861</td><td style="width:150px; font-size:small">(I2008-0616D)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0569.pdf">HENSON, ROGER v CITY OF SYRACUSE,</a></td><td style="width:41px; font-size:small">569</td><td style="width:96px; font-size:small">CA 13-01812</td><td style="width:150px; font-size:small">(2012-6455)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0705.pdf">HORNING, THOMAS E. v MORGIA, ANDREA J.</a></td><td style="width:41px; font-size:small">705</td><td style="width:96px; font-size:small">CAF 13-00134</td><td style="width:150px; font-size:small">(V-01336-04/11U)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0828.pdf">HOUGHTON, JR., KENNETH W., PEOPLE v</a></td><td style="width:41px; font-size:small">828</td><td style="width:96px; font-size:small">KA 13-00829</td><td style="width:150px; font-size:small">(S2012-546)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0824.pdf">JACKSON, CONSTANTINE v ANNUCCI, ANTHONY</a></td><td style="width:41px; font-size:small">824</td><td style="width:96px; font-size:small">TP 14-00134</td><td style="width:150px; font-size:small">(21,368-13)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0762.pdf">JACKSON, DEJUAN D., PEOPLE v</a></td><td style="width:41px; font-size:small">762</td><td style="width:96px; font-size:small">KA 12-01703</td><td style="width:150px; font-size:small">(S02106-2011)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0627.pdf">JACKSON, TOMMY R., PEOPLE v</a></td><td style="width:41px; font-size:small">627</td><td style="width:96px; font-size:small">KA 11-01145</td><td style="width:150px; font-size:small">(I2006-0989-1)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0785.pdf">JOHNSON, KEVIN C., PEOPLE v</a></td><td style="width:41px; font-size:small">785</td><td style="width:96px; font-size:small">KA 13-01142</td><td style="width:150px; font-size:small">(I5572)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0788.pdf">KESICK, RICHARD P., PEOPLE v</a></td><td style="width:41px; font-size:small">788</td><td style="width:96px; font-size:small">KA 13-00201</td><td style="width:150px; font-size:small">(I2012-01544)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0640.pdf">KINDRED, DENNIS H. v MONROE COUNTY,</a></td><td style="width:41px; font-size:small">640</td><td style="width:96px; font-size:small">CA 13-01718</td><td style="width:150px; font-size:small">(2013/06517)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0809.pdf">KOLATA, DANIEL J., PEOPLE v</a></td><td style="width:41px; font-size:small">809</td><td style="width:96px; font-size:small">KA 13-01147</td><td style="width:150px; font-size:small">(I12-163)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0792.pdf">KUMAR, RAVI v FISCHER, BRIAN</a></td><td style="width:41px; font-size:small">792</td><td style="width:96px; font-size:small">CA 13-00905</td><td style="width:150px; font-size:small">(21,308-13)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0696.pdf">MALONE, TYRONE L., PEOPLE v</a></td><td style="width:41px; font-size:small">696</td><td style="width:96px; font-size:small">KA 10-01760</td><td style="width:150px; font-size:small">(I2009-0082)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0593.pdf">MARCHIONDA, STEVEN v INDUSTRIAL BD OF APPEALS OF STATE,</a></td><td style="width:41px; font-size:small">593</td><td style="width:96px; font-size:small">TP 13-02121</td><td style="width:150px; font-size:small">(13/10747)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0819.pdf">MARRERO, MARGARET D., PEOPLE v</a></td><td style="width:41px; font-size:small">819</td><td style="width:96px; font-size:small">KA 13-00251</td><td style="width:150px; font-size:small">(I12-04-068B)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0830.pdf">MARTIN, JON C., PEOPLE v</a></td><td style="width:41px; font-size:small">830</td><td style="width:96px; font-size:small">KA 13-00801</td><td style="width:150px; font-size:small">(ITOS-1006)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0802.pdf">MCFADDEN, STEVON v FISCHER, BRIAN</a></td><td style="width:41px; font-size:small">802</td><td style="width:96px; font-size:small">CA 13-00915</td><td style="width:150px; font-size:small">(21,315-13)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0784.pdf">MCKETHAN, WILLIAM v STALLONE, DAVID</a></td><td style="width:41px; font-size:small">784</td><td style="width:96px; font-size:small">TP 14-00101</td><td style="width:150px; font-size:small">(2013-1056)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0704.pdf">MORGIA, ANDREA J. v HORNING, THOMAS E.</a></td><td style="width:41px; font-size:small">704</td><td style="width:96px; font-size:small">CAF 13-00133</td><td style="width:150px; font-size:small">(V-01336-04/10R)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0706.pdf">MORGIA, ANDREA J. v HORNING, THOMAS E.</a></td><td style="width:41px; font-size:small">706</td><td style="width:96px; font-size:small">CAF 13-00135</td><td style="width:150px; font-size:small">(V-01336-04/11T)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0707.pdf">MORGIA, ANDREA J. v HORNING, THOMAS E.</a></td><td style="width:41px; font-size:small">707</td><td style="width:96px; font-size:small">CAF 13-00136</td><td style="width:150px; font-size:small">(V-01336-04/11S)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0799.pdf">NUNEZ, MELISA, PEOPLE v</a></td><td style="width:41px; font-size:small">799</td><td style="width:96px; font-size:small">KA 13-01194</td><td style="width:150px; font-size:small">(I13-01)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0820.pdf">OLIVER, WILLIAM P., PEOPLE v</a></td><td style="width:41px; font-size:small">820</td><td style="width:96px; font-size:small">KA 12-01918</td><td style="width:150px; font-size:small">(I2012-074)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0801.pdf">PAYNE, BERTRAM v STATE OF NEW YORK,</a></td><td style="width:41px; font-size:small">801</td><td style="width:96px; font-size:small">CA 13-01081</td><td style="width:150px; font-size:small">(115204)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0790.pdf">PENABLE, GABRIEL v FISCHER, BRIAN</a></td><td style="width:41px; font-size:small">790</td><td style="width:96px; font-size:small">CA 13-00936</td><td style="width:150px; font-size:small">(21,310-13)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0812.pdf">POLEUN, JAMES R., PEOPLE v</a></td><td style="width:41px; font-size:small">812</td><td style="width:96px; font-size:small">KA 13-01143</td><td style="width:150px; font-size:small">(S2008-328)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0817.pdf">ROBINSON, CHRISTOPHER E., PEOPLE v</a></td><td style="width:41px; font-size:small">817</td><td style="width:96px; font-size:small">KA 13-01181</td><td style="width:150px; font-size:small">(SI-13-496-12)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0547.pdf">RUIZ, CHALINA v COPE, BRENDAN L.</a></td><td style="width:41px; font-size:small">547</td><td style="width:96px; font-size:small">CA 13-00383</td><td style="width:150px; font-size:small">(2007-4561)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0831.pdf">SCOTT, ROBERT D., PEOPLE v</a></td><td style="width:41px; font-size:small">831</td><td style="width:96px; font-size:small">KA 13-01178</td><td style="width:150px; font-size:small">(I4558)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0609.pdf">SIMMONS, SAMUEL CARL, PEOPLE v</a></td><td style="width:41px; font-size:small">609</td><td style="width:96px; font-size:small">KA 12-01628</td><td style="width:150px; font-size:small">(I01562X-2010)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0740.pdf">STATE OF NEW YORK,  v BASS, MICHAEL C.</a></td><td style="width:41px; font-size:small">740</td><td style="width:96px; font-size:small">CA 13-00211</td><td style="width:150px; font-size:small">(MH7303)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0816.pdf">STEELE, WILLIAM v ANNUCCI, ANTHONY</a></td><td style="width:41px; font-size:small">816</td><td style="width:96px; font-size:small">TP 14-00287</td><td style="width:150px; font-size:small">(21,428-13)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0557.pdf">SULLIVAN, DARREN, PEOPLE v</a></td><td style="width:41px; font-size:small">557</td><td style="width:96px; font-size:small">KA 12-01763</td><td style="width:150px; font-size:small">(I11-07-108)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0395.pdf">VAL TECH HOLDINGS, INC.,  v WILSON MANIFOLDS, INC.,</a></td><td style="width:41px; font-size:small">395</td><td style="width:96px; font-size:small">CA 13-00949</td><td style="width:150px; font-size:small">(2009/11206)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0779.pdf">WILLIAMS, APRIL M. v FASSINGER, CHARLES A.</a></td><td style="width:41px; font-size:small">779</td><td style="width:96px; font-size:small">CA 13-01790</td><td style="width:150px; font-size:small">(2010-2439)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0625.pdf">WILLIAMS, CASSONDRA v COUNTY OF ERIE,</a></td><td style="width:41px; font-size:small">625</td><td style="width:96px; font-size:small">CA 13-01671</td><td style="width:150px; font-size:small">(I2010-006636)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0780.pdf">WILLIAMS, APRIL M. v FASSINGER, CHARLES A.</a></td><td style="width:41px; font-size:small">780</td><td style="width:96px; font-size:small">CA 13-01791</td><td style="width:150px; font-size:small">(2010-2439)</td></tr>
-<tr><td style="width:429px; font-size:small"><a target="_blank" href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/PDF/0829.pdf">WRIGHT, STANLEY, PEOPLE v</a></td><td style="width:41px; font-size:small">829</td><td style="width:96px; font-size:small">KA 11-00853</td><td style="width:150px; font-size:small">(I2010-0971-1)</td></tr>
-<tr><td style="width:429px; font-size:small">&nbsp;</td><td style="width:41px; font-size:small">
-	&nbsp;</td><td style="width:96px; font-size:small">&nbsp;</td><td style="width:150px; font-size:small">
-	&nbsp;</td></tr>
-<tr><td style="width:429px; font-size:small">&nbsp;</td><td style="width:41px; font-size:small">
-	&nbsp;</td><td style="width:96px; font-size:small">&nbsp;</td><td style="width:150px; font-size:small">
-	&nbsp;</td></tr>
-<tr><td style="width:429px; font-size:small">
-	<a href="http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/pdf/Motions&amp;Crawfords.070314.pdf">Motions and Crawfords</a></td><td style="width:41px; font-size:small">
-	&nbsp;</td><td style="width:96px; font-size:small">&nbsp;</td><td style="width:150px; font-size:small">
-	&nbsp;</td></tr>
-<tr><td style="width:429px; font-size:small">&nbsp;</td><td style="width:41px; font-size:small">
-	&nbsp;</td><td style="width:96px; font-size:small">&nbsp;</td><td style="width:150px; font-size:small">
-	&nbsp;</td></tr>
-</tbody></table>
-
-
-<br>		
-	
-	
-<!-- #EndEditable -->
-
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../../../../js/jquery-1.11.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../../../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    	function toggleEditBody() {
+    		$("#editBody").toggle();
+    	}
+    	$(function() {
+    		$("#navbarMainNav").html($("#mainNav").html());
+    	});
+    </script>
+</body>
 
 <!-- #EndTemplate -->
-</div></div></body></html>
+
+</html>
