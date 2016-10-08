@@ -1,14 +1,22 @@
-from juriscraper.OpinionSite import OpinionSite
 import re
-import time
-from datetime import date
+
+from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
-        self.url = 'http://www.courtinfo.ca.gov/cgi-bin/opinions-blank.cgi?Courts=S'
         self.court_id = self.__module__
+        self.court_code = 'S'
+
+    def _download(self, request_dict={}):
+        if self.method != 'LOCAL':
+            self.url = self.build_url()
+        return super(Site, self)._download(request_dict)
+
+    def build_url(self):
+        return 'http://www.courts.ca.gov/cms/opinions.htm?Courts=%s' % self.court_code
 
     def _get_case_names(self):
         case_names = []
@@ -24,16 +32,8 @@ class Site(OpinionSite):
         return [t for t in self.html.xpath("//table/tr/td[2]/a/@href[contains(.,'PDF')]")]
 
     def _get_case_dates(self):
-        dates = []
-        for s in self.html.xpath('//table/tr/td[1]/text()'):
-            s = s.strip()
-            date_formats = ['%b %d %Y', '%b %d, %Y']
-            for format in date_formats:
-                try:
-                    dates.append(date.fromtimestamp(time.mktime(time.strptime(s, format))))
-                except ValueError:
-                    pass
-        return dates
+        path = '//table/tr/td[1]/text()'
+        return [convert_date_string(date_string) for date_string in self.html.xpath(path)]
 
     def _get_docket_numbers(self):
         return [t for t in self.html.xpath('//table/tr/td[2]/text()[1]')]
