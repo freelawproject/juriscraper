@@ -8,11 +8,9 @@ History:
  - 2014-11-04: Updated by mlr to account for (1) varied audio file locations,
                (2) Finding the latest 100 items, (3) Handling bad audio URLs.
 """
+
 from datetime import date, datetime
 
-import certifi
-import requests
-from lxml import html
 from juriscraper.AbstractSite import InsanityException
 from juriscraper.DeferringList import DeferringList
 from juriscraper.OralArgumentSite import OralArgumentSite
@@ -79,18 +77,8 @@ class Site(OralArgumentSite):
             if self.method == 'LOCAL':
                 return "No case names fetched during tests."
             else:
-                """Goes to second page, grabs the link and returns it."""
-                r = requests.get(
-                    seed_url,
-                    allow_redirects=False,
-                    headers={'User-Agent': 'Juriscraper'},
-                    verify=certifi.where(),
-                    timeout=60,
-                )
-                r.raise_for_status()
-                html_tree = html.fromstring(r.text)
-                html_tree.make_links_absolute(self.url)
-
+                # Goes to second page, grabs the link and returns it.
+                html_tree = self._get_html_tree_by_url(seed_url)
                 path_to_audio_file = "//*[@class='padboxauto_MediaContent']//a/@href"
                 try:
                     url = html_tree.xpath(path_to_audio_file)[0]

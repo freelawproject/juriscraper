@@ -14,9 +14,6 @@
 # - 2016-05-07, arderyp: adjustment to handle malformed code and parse dates properly
 
 import re
-import certifi
-import requests
-from lxml import html
 from datetime import date
 from lxml.html.clean import Cleaner
 
@@ -42,33 +39,13 @@ class Site(OpinionSite):
         url with it's associated html
         """
         html_l = super(Site, self)._download(request_dict)
-        s = requests.session()
         html_trees = []
         # this path reads the links for the last month in that year
         path = "id('opinions')//h2[string-length()>2][last()]/following::a[string-length()=10]/@href[not(contains(., 'pdf'))]"
         # to get all the dates in that page the following path can be used:
         # path = "id('opinions')//a[string-length()=10]"
         for url in html_l.xpath(path):
-            r = s.get(
-                url,
-                headers={'User-Agent': 'Juriscraper'},
-                verify=certifi.where(),
-                timeout=60,
-                **request_dict
-            )
-            r.raise_for_status()
-
-            # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
-            if r.encoding == 'ISO-8859-1':
-                r.encoding = 'cp1252'
-
-            # Grab the content
-            text = self._clean_text(r.text)
-            html_tree = html.fromstring(text)
-            html_tree.make_links_absolute(self.url)
-
-            remove_anchors = lambda url: url.split('#')[0]
-            html_tree.rewrite_links(remove_anchors)
+            html_tree = self._get_html_tree_by_url(url, request_dict)
             html_trees.append((html_tree, url))
 
         return html_trees

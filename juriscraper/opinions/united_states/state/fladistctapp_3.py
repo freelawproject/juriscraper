@@ -8,15 +8,12 @@ History:
  - 2014-07-24: Reviewed by mlr
  - 2015-07-28: Updated by m4h7
 """
-
-from datetime import date
-import time
-
-import certifi
-from juriscraper.lib.string_utils import titlecase
 import re
-import requests
+import time
 from lxml import html
+from datetime import date
+
+from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSite import OpinionSite
 
 
@@ -30,7 +27,6 @@ class Site(OpinionSite):
 
     def _download(self, request_dict={}):
         html_l = super(Site, self)._download(request_dict)
-        s = requests.session()
         html_trees = []
         # this path reads the row for the last month in that year
         path = "//th[contains(., '{year}')]/following::tr[1]/td[position()>1]/a[contains(., '/')]/@href".format(
@@ -39,26 +35,7 @@ class Site(OpinionSite):
         # to get all the dates in that page the following path can be used:
         # path = "//th/following::tr/td[position()>1]/a[contains(., '/')]/@href"
         for url in html_l.xpath(path):
-            r = s.get(
-                url,
-                headers={'User-Agent': 'Juriscraper'},
-                verify=certifi.where(),
-                timeout=60,
-                **request_dict
-            )
-            r.raise_for_status()
-
-            # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
-            if r.encoding == 'ISO-8859-1':
-                r.encoding = 'cp1252'
-
-            # Grab the content
-            text = self._clean_text(r.text)
-            html_tree = html.fromstring(text)
-            html_tree.make_links_absolute(self.url)
-
-            remove_anchors = lambda url: url.split('#')[0]
-            html_tree.rewrite_links(remove_anchors)
+            html_tree = self._get_html_tree_by_url(url, request_dict)
             html_trees.append(html_tree)
         return html_trees
 

@@ -8,9 +8,6 @@
 # - 2014-08-28: Updated by mlr.
 
 import re
-import certifi
-import requests
-from lxml import html
 from datetime import date
 
 from juriscraper.AbstractSite import logger
@@ -33,30 +30,10 @@ class Site(OpinionSite):
             return super(Site, self)._download(request_dict=request_dict)
         else:
             html_l = super(Site, self)._download(request_dict)
-            s = requests.session()
             html_trees = []
             for url in html_l.xpath("//*[@class='cen']/a/@href"):
                 logger.info("Getting sub-url: {url}".format(url=url))
-                r = s.get(
-                    url,
-                    headers={'User-Agent': 'Juriscraper'},
-                    verify=certifi.where(),
-                    timeout=60,
-                    **request_dict
-                )
-                r.raise_for_status()
-
-                # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
-                if r.encoding == 'ISO-8859-1':
-                    r.encoding = 'cp1252'
-
-                # Grab the content
-                text = self._clean_text(r.text)
-                html_tree = html.fromstring(text)
-                html_tree.make_links_absolute(url)
-
-                remove_anchors = lambda url: url.split('#')[0]
-                html_tree.rewrite_links(remove_anchors)
+                html_tree = self._get_html_tree_by_url(url, request_dict)
                 html_trees.append(html_tree)
             return html_trees
 

@@ -8,9 +8,6 @@ Date created: 20 July 2014
 
 from datetime import datetime, date
 
-import certifi
-from lxml import html
-import requests
 from juriscraper.OralArgumentSite import OralArgumentSite
 
 
@@ -30,9 +27,8 @@ class Site(OralArgumentSite):
     def _get_download_urls(self):
         path = "//td[contains(concat(' ',@class,' '),' views-field-field-argument-value')][contains(., '/')]/preceding-sibling::td[2]/a/@href"
         download_urls = []
-        s = requests.session()
         for index, e in enumerate(self.html.xpath(path)):
-            case_html = self._get_case_page(e, s)
+            case_html = self._get_html_tree_by_url(e)
             path = "//a[contains(concat(' ',@class,' '),' arg-link audio') and contains(., 'Download')]/@href"
             urls = list(case_html.xpath(path))
             if len(urls) == 0:
@@ -42,28 +38,6 @@ class Site(OralArgumentSite):
                 download_urls.extend(urls)
                 self.extender[index] = len(urls)
         return download_urls
-
-    def _get_case_page(self, url, session):
-        r = session.get(
-            url,
-            headers={'User-Agent': 'Juriscraper'},
-            verify=certifi.where(),
-            timeout=60,
-        )
-        r.raise_for_status()
-
-        # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
-        if r.encoding == 'ISO-8859-1':
-            r.encoding = 'cp1252'
-
-        # Grab the content
-        text = self._clean_text(r.text)
-        html_tree = html.fromstring(text)
-        html_tree.make_links_absolute(self.url)
-
-        remove_anchors = lambda url: url.split('#')[0]
-        html_tree.rewrite_links(remove_anchors)
-        return html_tree
 
     def _get_case_names(self):
         path = "//td[contains(concat(' ',@class,' '),' views-field-field-argument-value')][contains(., '/')]/preceding-sibling::td[2]/a/text()"

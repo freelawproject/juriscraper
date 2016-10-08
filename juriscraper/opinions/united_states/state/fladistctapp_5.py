@@ -13,8 +13,6 @@ History:
 """
 
 import re
-import certifi
-import requests
 from lxml import html
 
 from juriscraper.OpinionSite import OpinionSite
@@ -31,30 +29,13 @@ class Site(OpinionSite):
 
     def _download(self, request_dict={}):
         html_l = super(Site, self)._download(request_dict)
-        s = requests.session()
         html_trees = []
         # this path reads the link of the last 2 dates
         path = "(//a[contains(./@href, 'filings')])[position() < 3]/@href"
         # to get all the dates in that page the following path can be used:
         # path = "//a[contains(./@href, 'filings')]"
         for url in html_l.xpath(path):
-            r = s.get(
-                url,
-                headers={'User-Agent': 'Juriscraper'},
-                verify=certifi.where(),
-                timeout=60,
-                **request_dict
-            )
-            r.raise_for_status()
-
-            # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
-            if r.encoding == 'ISO-8859-1':
-                r.encoding = 'cp1252'
-
-            # Grab the content
-            text = self._clean_text(r.text)
-            html_tree = html.fromstring(text)
-            html_tree.make_links_absolute(url)
+            html_tree = self._get_html_tree_by_url(url, request_dict)
 
             # This district has some nasty HTML that occasionally breaks one
             # case name across two anchors. For example (http://www.5dca.org/Opinions/Opin2014/072114/filings%20072114.html):

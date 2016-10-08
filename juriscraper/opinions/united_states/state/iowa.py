@@ -5,14 +5,10 @@
 # Reviewer: mlr
 # Date created: 25 July 2014
 
-
-from datetime import date
-import time
-
-import certifi
-from lxml import html
-import requests
 import re
+import time
+from datetime import date
+
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
 
@@ -30,30 +26,9 @@ class Site(OpinionSite):
             html_trees = [super(Site, self)._download(request_dict=request_dict)]
         else:
             html_l = OpinionSite._download(self)
-            s = requests.session()
             html_trees = []
             for url in html_l.xpath("//td[@width='49%']//tr[contains(., ', {year}')]/td[5]/a/@href".format(year=self.year)):
-                r = s.get(
-                    url,
-                    headers={'User-Agent': 'Juriscraper'},
-                    verify=certifi.where(),
-                    timeout=60,
-                    **request_dict
-                )
-                r.raise_for_status()
-
-                # If the encoding is iso-8859-1, switch it to cp1252 (a
-                # superset)
-                if r.encoding == 'ISO-8859-1':
-                    r.encoding = 'cp1252'
-
-                # Grab the content
-                text = self._clean_text(r.text)
-                html_tree = html.fromstring(text)
-                html_tree.make_links_absolute(self.url)
-
-                remove_anchors = lambda url: url.split('#')[0]
-                html_tree.rewrite_links(remove_anchors)
+                html_tree = self._get_html_tree_by_url(url, request_dict)
                 html_trees.append(html_tree)
         return html_trees
 

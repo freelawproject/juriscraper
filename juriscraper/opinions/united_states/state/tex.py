@@ -11,13 +11,10 @@
 #  - 2015-08-27: Updated by Andrei Chelaru to add explicit waits
 
 
-import certifi
 import os
-import requests
-
+from lxml import html
 from datetime import date, timedelta, datetime
 from dateutil.rrule import WEEKLY, rrule
-from lxml import html
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
@@ -32,7 +29,6 @@ from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OpinionSite):
-
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -56,6 +52,7 @@ class Site(OpinionSite):
         self.uses_selenium = True
 
     def _download(self, request_dict={}):
+        self.request_dict = request_dict
         if self.method == 'LOCAL':
             html_tree_list = [
                 super(Site, self)._download(request_dict=request_dict)]
@@ -170,17 +167,7 @@ class Site(OpinionSite):
             if self.method == 'LOCAL':
                 return "No case names fetched during tests."
             else:
-                r = requests.get(
-                    url,
-                    allow_redirects=True,
-                    headers={'User-Agent': 'Juriscraper'},
-                    verify=certifi.where(),
-                    timeout=60,
-                )
-                r.raise_for_status()
-
-                html_tree = html.fromstring(r.text)
-                html_tree.make_links_absolute(self.url)
+                html_tree = self._get_html_tree_by_url(url, self.request_dict)
                 plaintiff = ''
                 defendant = ''
                 try:

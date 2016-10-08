@@ -8,8 +8,6 @@ Date created: 2016-06-03
 """
 
 import re
-import certifi
-import requests
 from lxml import html
 
 from juriscraper.AbstractSite import logger
@@ -38,10 +36,9 @@ class Site(OpinionSite):
         self.cases = []
 
     def _download(self, request_dict={}):
+        self.request_dict = request_dict
         html_list = []
         html_list.append(super(Site, self)._download(request_dict))
-        self.session = requests.session()
-        self.request_dict = request_dict
         html_trees = []
 
         while len(html_list) > 0:
@@ -70,14 +67,7 @@ class Site(OpinionSite):
                 logger.info("Getting sub-url: %s" % url)
 
                 # Fetch sub-page's content
-                request = self._get_resource(url)
-                text = self._clean_text(request.text)
-                html_tree = html.fromstring(text)
-                html_tree.make_links_absolute(self.url)
-
-                # Process the content
-                remove_anchors = lambda url: url.split('#')[0]
-                html_tree.rewrite_links(remove_anchors)
+                html_tree = self._get_html_tree_by_url(url, self.request_dict)
                 self._extract_cases_from_sub_page(html_tree, date_obj)
                 html_trees.append((html_tree, date_obj))
 
@@ -131,18 +121,6 @@ class Site(OpinionSite):
                 self.method = prev_method
                 self.url = prev_url
         return result
-
-    def _get_resource(self, resource_url):
-        request = self.session.get(
-            resource_url,
-            headers={'User-Agent': 'Juriscraper'},
-            verify=certifi.where(),
-            **self.request_dict
-        )
-        request.raise_for_status()
-        if request.encoding == 'ISO-8859-1':
-            request.encoding = 'cp1252'
-        return request
 
     def _extract_cases_from_sub_page(self, html_tree, date_obj):
         for anchor in html_tree.xpath("//a[@class='Head articletitle']"):
@@ -202,10 +180,7 @@ class Site(OpinionSite):
         the name is not displayed in plain text format. These return values
         are used as backups in case the original source data is non-ideal.
         """
-        request = self._get_resource(url)
-        text = self._clean_text(request.text)
-        html_tree = html.fromstring(text)
-        html_tree.make_links_absolute(self.url)
+        html_tree = self._get_html_tree_by_url(url, self.request_dict)
         href = html_tree.xpath("//h2/a[contains(@href, '.pdf')]/@href")
         if href:
             return href[0], False

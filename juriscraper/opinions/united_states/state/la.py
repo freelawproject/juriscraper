@@ -4,50 +4,28 @@
 # Author: Andrei Chelaru
 # Reviewer: mlr
 # Date: 2014-07-05
+
+import re
 import time
+from lxml import html
 from datetime import date
 
-import certifi
-from lxml import html
-import requests
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSite import OpinionSite
-import re
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        d = date.today()
-        self.url = 'http://www.lasc.org/news_releases/{year}/default.asp'.format(year=d.year)
+        self.url = 'http://www.lasc.org/news_releases/{year}/default.asp'.format(year=date.today().year)
 
     def _download(self, request_dict={}):
         html_l = OpinionSite._download(self)
-        s = requests.session()
         html_trees = []
-        for url in html_l.xpath("//td[contains(./text(),'Opinion') or contains(./text(), 'PER CURIAM')]"
-                                "/preceding-sibling::td[1]//@href")[:2]:
-            r = s.get(
-                url,
-                headers={'User-Agent': 'Juriscraper'},
-                verify=certifi.where(),
-                timeout=60,
-                **request_dict
-            )
-            r.raise_for_status()
-
-            # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
-            if r.encoding == 'ISO-8859-1':
-                r.encoding = 'cp1252'
-
-            # Grab the content
-            text = self._clean_text(r.text)
-            html_tree = html.fromstring(text)
-            html_tree.make_links_absolute(self.url)
-
-            remove_anchors = lambda url: url.split('#')[0]
-            html_tree.rewrite_links(remove_anchors)
+        path = "//td[contains(./text(),'Opinion') or contains(./text(), 'PER CURIAM')]/preceding-sibling::td[1]//@href"
+        for url in html_l.xpath(path)[:2]:
+            html_tree = self._get_html_tree_by_url(url, request_dict)
             html_trees.append(html_tree)
         return html_trees
 
