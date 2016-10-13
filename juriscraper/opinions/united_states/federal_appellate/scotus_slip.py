@@ -51,10 +51,13 @@ class Site(OpinionSite):
         self.url = '%s/%s/%s' % (self.url_base, self.court, self.yy)
 
     def set_table_headers(self, html):
-        path = '%s//th' % self.path_table
-        self.headers = [cell.text_content().strip() for cell in html.xpath(path)]
-        if not set(self.required_headers).issubset(self.headers):
-            raise InsanityException('Required table column missing')
+        # Do nothing if table is missing
+        if html.xpath(self.path_table):
+            path = '%s//th' % self.path_table
+            self.headers = [cell.text_content().strip() for cell in html.xpath(path)]
+            # Ensure that expected/required headers are present
+            if not set(self.required_headers).issubset(self.headers):
+                raise InsanityException('Required table column missing')
 
     def extract_cases_from_html(self, html):
         self.set_table_headers(html)
