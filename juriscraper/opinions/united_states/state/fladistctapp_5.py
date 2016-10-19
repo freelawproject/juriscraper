@@ -29,6 +29,12 @@ class Site(OpinionSite):
 
     def _download(self, request_dict={}):
         html_l = super(Site, self)._download(request_dict)
+
+        # Test/example files should use html from direct resource page
+        # NOTE: fladistctapp_5_example_5.html SHOULD have 0 results
+        if self.method == 'LOCAL':
+            return [html_l]
+
         html_trees = []
         # this path reads the link of the last 2 dates
         path = "(//a[contains(./@href, 'filings')])[position() < 3]/@href"
@@ -85,12 +91,19 @@ class Site(OpinionSite):
     def _get_case_dates(self):
         case_dates = []
         for html_tree in self.html:
-            case_dates.extend(self._return_dates(html_tree))
+            dates = self._return_dates(html_tree)
+            if dates:
+                case_dates.extend(dates)
         return case_dates
 
     def _return_dates(self, html_tree):
         path = "//*[starts-with(., 'Opinions ')]/text() | //*[starts-with(., 'OPINIONS ')]/text()"
-        text = html_tree.xpath(path)[0].lower()
+        date_text = html_tree.xpath(path)
+        # Some pages have only PCAS publications without opinions
+        # example: http://www.5dca.org/Opinions/Opin2016/092616/filings%20092616.html
+        if not date_text:
+            return False
+        text = date_text[0].lower()
         date_string = re.search('.* week of (.*)', text).group(1).strip()
         case_date = convert_date_string(date_string)
         return [case_date] * len(self._return_anchors_with_text(html_tree))
