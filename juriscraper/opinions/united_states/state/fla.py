@@ -5,11 +5,13 @@
 # Reviewer: mlr
 # Date created: 21 July 2014
 
-from datetime import date, datetime
 import re
+from lxml import html
+from datetime import date
 
 from juriscraper.OpinionSite import OpinionSite
-from lxml import html
+from juriscraper.lib.string_utils import convert_date_string
+
 
 
 class Site(OpinionSite):
@@ -58,20 +60,19 @@ class Site(OpinionSite):
     def _get_case_dates(self):
         case_dates = []
         for e in self.html.xpath(self.base_path):
-            text = e.xpath("./text()")[0]
-            text = re.sub('Releases for ', '', text)
-            case_date = datetime.strptime(text.strip(), '%B %d, %Y').date()
+            text = e.text_content()
+            date_string = text.replace('Releases for', '').strip()
+            if 'No opinions released' in date_string:
+                continue
             count = 0
             for a in e.xpath('./following::ul[1]//li//a[not(contains(., "Notice"))][not(contains(., "Rehearing Order"))]'):
                 try:
                     case_name_check = self.regex.search(html.tostring(a, method='text', encoding='unicode')).group(2)
-                    if not case_name_check.strip():
-                        continue
-                    else:
+                    if case_name_check.strip():
                         count += 1
                 except AttributeError:
                     pass
-            case_dates.extend([case_date] * count)
+            case_dates.extend([convert_date_string(date_string)] * count)
         return case_dates
 
     def _get_precedential_statuses(self):
