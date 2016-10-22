@@ -1,5 +1,6 @@
 """Scraper for Second Circuit
 CourtID: ca2
+Contact: Webmaster@ca2.uscourts.gov ('Calendar Team' handles updates, and is responsive)
 Author: MLR
 Reviewer: MLR
 History:
