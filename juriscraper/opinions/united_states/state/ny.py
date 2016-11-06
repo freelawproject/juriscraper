@@ -9,7 +9,6 @@ History:
 """
 
 import re
-from lxml import html
 from datetime import date
 
 from juriscraper.OpinionSite import OpinionSite
@@ -60,11 +59,17 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         case_dates = []
+        case_date = False
+        # Process rows. If it's a date row,
+        # save the date, continue, then add
+        # date for each opinion row below it
         for row in self.html.xpath('//tr[not(.//table)]'):
-            # self.date gets set when below condition fails
-            if not self._row_contains_date(row):
-                if self._row_contains_opinion(row):
-                    case_dates.append(self.date)
+            date_from_row = self.get_date_from_text(row.text_content())
+            if date_from_row:
+                case_date = date_from_row
+                continue
+            elif self._row_contains_opinion(row) and case_date:
+                case_dates.append(case_date)
         return case_dates
 
     def _get_precedential_statuses(self):
@@ -73,9 +78,12 @@ class Site(OpinionSite):
     def _get_docket_numbers(self):
         docket_numbers = []
         for cell in self.html.xpath('%s]/td[1]' % self.FOUR_CELLS_SUB_PATH):
-            text_node_strings = ', '.join(cell.xpath('.//text()'))
-            if re.search(r'N(o|O)\.?\,?', text_node_strings):
-                docket_numbers.append(self._sanitize_docket_string(text_node_strings))
+            text = cell.text_content()
+            date_from_text = self.get_date_from_text(text)
+            if not date_from_text:
+                if re.search(r'N(o|O)\.?\,?', text):
+                    docket = self._sanitize_docket_string(text)
+                    docket_numbers.append(docket)
         return docket_numbers
 
     def _sanitize_docket_string(self, raw_docket_string):
@@ -90,17 +98,14 @@ class Site(OpinionSite):
             raw_docket_string = raw_docket_string.replace(abbreviation, '')
         return ', '.join(raw_docket_string.split(' / '))
 
-    def _row_contains_date(self, row):
+    def _row_contains_opinion(self, row):
+        p1 = './td[4]'
+        p2 = './%s' % self.DOWNLOAD_URL_SUB_PATH
+        return row.xpath(p1) and row.xpath(p2)
+
+    def get_date_from_text(self, text):
         try:
-            self.date = convert_date_string(self._date_row_data_to_string(row))
+            return convert_date_string(text)
         except ValueError:
             return False
-        return True
-
-    def _row_contains_opinion(self, row):
-        return row.xpath('./td[4]') and row.xpath(
-            './%s' % self.DOWNLOAD_URL_SUB_PATH)
-
-    def _date_row_data_to_string(self, row):
-        return html.tostring(row, method='text', encoding='unicode').strip()
 
