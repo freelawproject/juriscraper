@@ -4,7 +4,7 @@ CourtID: md
 Court Short Name: MD
 Author: Andrei Chelaru
 Date created: 06/27/2014
-Court Support: webmaster@mdcourts.gov
+Court Support: webmaster@mdcourts.gov, mdlaw.library@mdcourts.gov
 """
 
 from datetime import date
