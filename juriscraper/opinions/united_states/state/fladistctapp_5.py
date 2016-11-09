@@ -97,7 +97,9 @@ class Site(OpinionSite):
         return case_dates
 
     def _return_dates(self, html_tree):
-        path = "//*[starts-with(., 'Opinions ')]/text() | //*[starts-with(., 'OPINIONS ')]/text()"
+        prefixes = ['Opinions', 'OPINIONS', 'OPINION']
+        paths = ["//*[starts-with(., '%s ')]/text()" % string for string in prefixes]
+        path = ' | '.join(paths)
         date_text = html_tree.xpath(path)
         # Some pages have only PCAS publications without opinions
         # example: http://www.5dca.org/Opinions/Opin2016/092616/filings%20092616.html
