@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
-import os
-import sys
+import datetime
 import glob
 import logging
+import os
+import sys
 import time
 import unittest
-import datetime
+import vcr
 
 sys.path.insert(0, os.path.dirname(os.path.realpath(__file__)))
 
@@ -21,6 +21,8 @@ from juriscraper.lib.string_utils import (
 )
 from juriscraper.opinions.united_states.state import massappct, pa, mass, nh, colo
 from juriscraper.oral_args.united_states.federal_appellate import ca6
+
+vcr = vcr.VCR(cassette_library_dir='tests/fixtures/cassettes')
 
 
 class SlownessException(Exception):
@@ -72,6 +74,7 @@ class ScraperExampleTest(unittest.TestCase):
         # Re-enable logging
         logging.disable(logging.NOTSET)
 
+    @vcr.use_cassette()
     def test_scrape_all_example_files(self):
         """Finds all the $module_example* files and tests them with the sample
         scraper.
