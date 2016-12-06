@@ -45,7 +45,7 @@ First step: Install Python 2.7.x, then:
 ::
 
     # install the dependencies
-    sudo apt-get install libxml2-dev libxslt-dev  # In Ubuntu prior to 14.04 this is libxslt-devel
+    sudo apt-get install libxml2-dev libxslt-dev libyaml-dev
 
     # Install PhantomJS
     wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2

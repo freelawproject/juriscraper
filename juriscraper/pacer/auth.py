@@ -1,9 +1,10 @@
 import re
 
-import certifi
 import requests
 
 from exceptions import BadLoginException
+from juriscraper.pacer.free_documents import logger
+from juriscraper.pacer.utils import verify_court_ssl
 
 
 def make_pacer_cookie_dict(name, value):
@@ -32,10 +33,11 @@ def login(court_id, username, password):
     """Log into a PACER jurisdiction. Return cookies for the user."""
     s = requests.session()
     url = make_login_url(court_id)
+    logger.info("Logging into: %s at %s" % (court_id, url))
     r = s.post(
         url,
         headers={'User-Agent': 'Juriscraper'},
-        verify=certifi.where(),
+        verify=verify_court_ssl(court_id),
         timeout=30,
         files={
             'login': ('', username),
