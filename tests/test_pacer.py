@@ -2,8 +2,12 @@ import json
 import unittest
 from datetime import date
 
+import os
 import requests
+import sys
 import vcr
+
+sys.path.insert(0, os.path.dirname(os.path.realpath(__file__)))
 
 from juriscraper.pacer import private_settings
 from juriscraper.pacer.auth import login
