@@ -31,7 +31,7 @@ setup(
     maintainer_email=EMAIL,
     keywords=["scraping", "legal"],
     long_description=read("README.rst"),
-    packages=find_packages(exclude=('tests',)),
+    packages=find_packages(),
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
