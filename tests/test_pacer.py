@@ -8,9 +8,8 @@ import vcr
 from juriscraper.pacer import private_settings
 from juriscraper.pacer.auth import login
 from juriscraper.pacer.free_documents import get_written_report_token, \
-    query_free_documents_report, make_written_report_url
-from juriscraper.pacer.utils import get_pacer_court_info, get_courts_from_json, \
-    get_court_id_from_url
+    query_free_documents_report
+from juriscraper.pacer.utils import get_courts_from_json, get_court_id_from_url
 
 vcr = vcr.VCR(cassette_library_dir='tests/fixtures/cassettes')
 
