@@ -22,7 +22,7 @@ class Site(OpinionSite):
 
     # I'm certain this can be done more professionally,
     # but I (arderyp) am not gifted at the art of regex
-    regex = '(?:No.\s)?(\d+)\s+(\w+)\s+(\d+M?\.?)\s*((Nos?\.?\s+)?((\w{5,8}\.?)(((\s+\&|\,)\s+\w{5,8})+)?))\.?(\s+)?(.*)'
+    regex = '(?:No.\s)?(\d+)\s+(\w+)(?:\s+)?(\d+M?\.?)\s*((Nos?\.?\s+)?((\w{5,8}\.?)(((\s+\&|\,)\s+\w{5,8})+)?))\.?(\s+)?(.*)'
 
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
@@ -37,9 +37,20 @@ class Site(OpinionSite):
 
     def _download(self, request_dict={}):
         self.request_dict = request_dict
-        html_list = []
-        html_list.append(super(Site, self)._download(request_dict))
+        landing_page_html = super(Site, self)._download(request_dict)
+
+        # Test/example files should use html from direct resource page
+        # PLEASE NOTE: Tests still hit network in _extract_cases_from_sub_page
+        # because awful court site doesn't direct link to PDF resources on date
+        # listing pages
+        if self.method == 'LOCAL':
+            date_string = landing_page_html.xpath('//h3')[0].text_content()
+            date_obj = convert_date_string(date_string)
+            self._extract_cases_from_sub_page(landing_page_html, date_obj)
+            return [landing_page_html]
+
         html_trees = []
+        html_list = [landing_page_html]
 
         while len(html_list) > 0:
             html_l = html_list[0]
@@ -47,20 +58,6 @@ class Site(OpinionSite):
 
             # Loop over sub-pages
             for ahref in html_l.xpath(self.base_path):
-                # PLEASE NOTE: because of the design of this
-                # opinion portal, executing thorough/wholesale
-                # testing is very slow, since the dates list
-                # page must be scraped for dates/links (which
-                # we can do easily enough with an example file),
-                # after which each specific date's sub-page must
-                # be requested (over the network) then scraped.
-                # Consequently, we only test the first sub-page.
-                # If the scraper fails due to regex, please
-                # add new regex test to ScraperSpotTest.test_colo_coloctapp
-                # in test_everything.py
-                if self.method == 'LOCAL' and html_trees:
-                    break
-
                 date_string = ahref.xpath("./text()")[0]
                 url = ahref.xpath("./@href")[0]
                 date_obj = convert_date_string(date_string)
