@@ -1,18 +1,16 @@
 import json
 import unittest
-from datetime import date
 
-import os
 import requests
-import sys
 import vcr
 
-sys.path.insert(0, os.path.dirname(os.path.realpath(__file__)))
-
+from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.pacer import private_settings
 from juriscraper.pacer.auth import login
-from juriscraper.pacer.free_documents import get_written_report_token, \
-    query_free_documents_report
+from juriscraper.pacer.free_documents import (
+    get_written_report_token, query_free_documents_report,
+    parse_written_opinions_report
+)
 from juriscraper.pacer.utils import get_courts_from_json, get_court_id_from_url
 
 vcr = vcr.VCR(cassette_library_dir='tests/fixtures/cassettes')
@@ -35,8 +33,8 @@ class PacerAuthTest(unittest.TestCase):
             login(court_id, self.username, self.password)
 
 
-class PacerParseTest(unittest.TestCase):
-    """A variety of tests relating to parsing."""
+class PacerFreeOpinionsTest(unittest.TestCase):
+    """A variety of tests relating to the Free Written Opinions report"""
     def setUp(self):
         self.username = private_settings.PACER_USERNAME
         self.password = private_settings.PACER_PASSWORD
@@ -57,10 +55,19 @@ class PacerParseTest(unittest.TestCase):
     @vcr.use_cassette(record_mode='new_episodes')
     def test_extract_written_documents_report(self):
         """Do all the written reports work?"""
+        with open('tests/fixtures/valid_free_opinion_dates.json') as j:
+            valid_dates = json.load(j)
         for court in self.courts:
             if court['type'] == "U.S. Courts of Appeals":
                 continue
             court_id = get_court_id_from_url(court['court_link'])
-            random_day = date(2015, 1, 23)
-            query_free_documents_report(court_id, random_day, random_day,
-                                        self.cookie)
+
+            if court_id in valid_dates:
+                some_date = convert_date_string(valid_dates[court_id])
+                responses = query_free_documents_report(court_id, some_date,
+                                                        some_date, self.cookie)
+                if not responses:
+                    break  # Not a supported court.
+                results = parse_written_opinions_report(responses)
+            else:
+                print "No valid date found for %s" % court_id

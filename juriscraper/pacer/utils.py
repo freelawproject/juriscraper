@@ -23,6 +23,24 @@ def get_court_id_from_url(url):
     return parts.subdomain.split('.')[1]
 
 
+def get_pacer_case_id_from_docket_url(url):
+    """Extract the pacer case ID from the docket URL.
+
+    In: https://ecf.almd.uscourts.gov/cgi-bin/DktRpt.pl?56120
+    Out: 56120
+    """
+    return url.split('?')[1]
+
+
+def get_pacer_document_number_from_doc1_url(url):
+    """Extract the pacer document number from the doc1 URL.
+
+    In:  https://ecf.almd.uscourts.gov/doc1/01712427473
+    Out: 01712427473
+    """
+    return url.rsplit('/', 1)[1]
+
+
 def verify_court_ssl(court_id):
     """Returns True for any court where the SSL is known to be bad."""
     bad_courts = [
