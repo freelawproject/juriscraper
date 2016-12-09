@@ -7,22 +7,19 @@ import requests
 
 from datetime import date, datetime
 from requests.adapters import HTTPAdapter
-from urlparse import urlsplit, urlunsplit, urljoin
 from juriscraper.lib.test_utils import MockRequest
-from juriscraper.lib.html_utils import get_html_parsed_text
+from juriscraper.lib.html_utils import (
+    get_html_parsed_text, set_response_encoding, clean_html,
+    fix_links_in_lxml_tree
+)
 from juriscraper.lib.date_utils import json_date_handler, fix_future_year_typo
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
     harmonize, clean_string, trunc, CaseNameTweaker
 )
 
-try:
-    # Use cchardet for performance to detect the character encoding.
-    import cchardet as chardet
-except ImportError:
-    import chardet
-
 logger = make_default_logger()
+
 
 class InsanityException(Exception):
     def __init__(self, message):
@@ -129,33 +126,8 @@ class AbstractSite(object):
         pass
 
     def _clean_text(self, text):
-        """ Cleans up text before we make it into an HTML tree:
-            1. Nukes <![CDATA stuff.
-            2. Nukes XML encoding declarations
-            3. Replaces </br> with <br/>
-            4. Nukes invalid bytes in input
-            5. ?
-        """
-        # Remove <![CDATA because it causes breakage in lxml.
-        text = re.sub(r'<!\[CDATA\[', u'', text)
-        text = re.sub(r'\]\]>', u'', text)
-
-        # Remove <?xml> declaration in Unicode objects, because it causes an error:
-        # "ValueError: Unicode strings with encoding declaration are not supported."
-        # Note that the error only occurs if the <?xml> tag has an "encoding"
-        # attribute, but we remove it in all cases, as there's no downside to
-        # removing it. This moves our encoding detection to chardet, rather than
-        # lxml.
-        if isinstance(text, unicode):
-            text = re.sub(r'^\s*<\?xml\s+.*?\?>', '', text)
-
-        # Fix </br>
-        text = re.sub('</br>', '<br/>', text)
-
-        # Fix invalid bytes (http://stackoverflow.com/questions/8733233/filtering-out-certain-bytes-in-python)
-        text = re.sub(u'[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD\u10000-\u10FFFF]+', '', text)
-
-        return text
+        """A hook for subclasses to override if needed."""
+        return clean_html(text)
 
     def _clean_attributes(self):
         """Iterate over attribute values and clean them"""
@@ -177,7 +149,9 @@ class AbstractSite(object):
                 self.__setattr__(attr, cleaned_item)
 
     def _post_parse(self):
-        """This provides an hook for subclasses to do custom work on the data after the parsing is complete."""
+        """This provides an hook for subclasses to do custom work on the data
+        after the parsing is complete.
+        """
         pass
 
     def _check_sanity(self):
@@ -296,52 +270,6 @@ class AbstractSite(object):
         """
         return get_html_parsed_text(text)
 
-    def _set_encoding(self):
-        """Set the encoding using a few heuristics"""
-        if self.request['request']:
-            # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
-            if self.request['request'].encoding == 'ISO-8859-1':
-                self.request['request'].encoding = 'cp1252'
-
-            if self.request['request'].encoding is None:
-                # Requests detects the encoding when the item is GET'ed using
-                # HTTP headers, and then when r.text is accessed, if the encoding
-                # hasn't been set by that point. By setting the encoding here, we
-                # ensure that it's done by cchardet, if it hasn't been done with
-                # HTTP headers. This way it is done before r.text is accessed
-                # (which would do it with vanilla chardet). This is a big
-                # performance boon, and can be removed once requests is upgraded
-                self.request['request'].encoding = chardet.detect(self.request['request'].content)['encoding']
-
-    def _link_fixer_callback(self, href):
-        """Makes links absolute, working around buggy URLs and nuking anchors.
-
-        This function is intended to be called with .rewrite_links()
-        Example: html_tree.rewrite_links(self._link_fixer_callback)
-
-        Some URLS, like the following, make no sense:
-         - https://www.appeals2.az.gov/../Decisions/CR20130096OPN.pdf.
-                                      ^^^^ -- This makes no sense!
-        The fix is to remove any extra '/..' patterns at the beginning of the
-        path.
-
-        Others have annoying anchors on the end, like:
-         - http://example.com/path/#anchor
-
-        Note that lxml has a method generally for this purpose called
-        make_links_absolute, but we cannot use it because it does not work
-        around invalid relative URLS, nor remove anchors. This is a limitation
-        of Python's urljoin that will be fixed in Python 3.5 according to a bug
-        we filed: http://bugs.python.org/issue22118
-        """
-        url_parts = urlsplit(urljoin(self.request['url'], href))
-        url = urlunsplit(
-            url_parts[:2] +
-            (re.sub('^(/\.\.)+', '', url_parts.path),) +
-            url_parts[3:]
-        )
-        return url.split('#')[0]
-
     def _download(self, request_dict={}):
         """Download the latest version of Site"""
         self.downloader_executed = True
@@ -371,7 +299,9 @@ class AbstractSite(object):
         self.request['session'].mount('https://', self._get_adapter_instance())
 
     def _request_url_get(self, url):
-        """Execute GET request and assign appropriate request dictionary values"""
+        """Execute GET request and assign appropriate request dictionary
+        values
+        """
         self.request['url'] = url
         self.request['request'] = self.request['session'].get(
             url,
@@ -402,7 +332,7 @@ class AbstractSite(object):
         """Cleanup to request object"""
         self.tweak_request_object()
         self.request['request'].raise_for_status()
-        self._set_encoding()
+        set_response_encoding(self.request['request'])
 
     def _return_request_text_object(self):
         if self.request['request']:
@@ -411,7 +341,8 @@ class AbstractSite(object):
             else:
                 text = self._clean_text(self.request['request'].text)
                 html_tree = self._make_html_tree(text)
-                html_tree.rewrite_links(self._link_fixer_callback)
+                html_tree.rewrite_links(fix_links_in_lxml_tree,
+                                        base_href=self.request['url'])
                 return html_tree
 
     def _get_html_tree_by_url(self, url, parameters={}):

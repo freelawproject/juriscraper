@@ -9,6 +9,7 @@ import os
 import re
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 from juriscraper.lib.string_utils import titlecase
 from lxml import html
 from selenium import webdriver
@@ -86,7 +87,8 @@ class Site(OpinionSite):
         driver.quit()
         html_tree = html.fromstring(text)
 
-        html_tree.rewrite_links(self._link_fixer_callback)
+        html_tree.rewrite_links(fix_links_in_lxml_tree,
+                                base_href=self.request['url'])
         self.html = html_tree
         self.status = 200
 
