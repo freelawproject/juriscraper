@@ -1,30 +1,20 @@
-"""
-The design here is intended to be used by Celery tasks, so the goal is to
-make something that can be run in parallel by a huge number of tasks.
-
-There are a few opportunities to split this up. The general process is as
-below:
-
- + Log into the jurisdiction.
- + Query the free documents report (split this by date range).
- + Download each of the results in the report in its own task.
-
-The only item above that can't be made parallel is logging in, but that's fine
-because logging in is a one step thing.
-"""
 import re
 
 import requests
 from dateutil.rrule import rrule, DAILY
 from lxml.html import tostring
 
-from juriscraper.lib.html_utils import set_response_encoding, clean_html, \
-    fix_links_in_lxml_tree, get_html_parsed_text
+from juriscraper.lib.html_utils import (
+    set_response_encoding, clean_html, fix_links_in_lxml_tree,
+    get_html_parsed_text
+)
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.pacer.utils import verify_court_ssl, \
-    get_pacer_case_id_from_docket_url, get_pacer_document_number_from_doc1_url, \
-    get_court_id_from_url
+from juriscraper.pacer.utils import (
+    verify_court_ssl, get_pacer_case_id_from_docket_url, make_doc1_url,
+    get_pacer_document_number_from_doc1_url, get_court_id_from_url,
+    reverse_goDLS_function, is_pdf
+)
 
 logger = make_default_logger()
 
@@ -61,9 +51,10 @@ def get_written_report_token(court_id, session):
 
 
 def query_free_documents_report(court_id, start, end, cookie):
-    if court_id in ['casb', 'innb', 'mieb', 'miwb', 'ohsb']:
+    if court_id in ['casb', 'innb', 'mieb', 'miwb', 'nmib', 'nvb', 'ohsb',
+                    'tnwb', 'vib']:
         logger.error("Cannot get written opinions report from '%s'. It is "
-                     "not provided by the court." % court_id)
+                     "not provided by the court or is in disuse." % court_id)
         return []
     s = requests.session()
     s.cookies.set(**cookie)
@@ -150,15 +141,30 @@ class FreeOpinionRow(object):
         return len(self.element.xpath('./td'))
 
     def get_pacer_case_id(self):
+        # It's tempting to get this value from the URL in the first cell, but
+        # that URL can sometimes differ from the URL used in the goDLS function.
+        # When that's the case, the download fails.
         try:
-            docket_url = self.element.xpath('./td[1]//@href')[0]
+            onclick = self.element.xpath('./td[3]//@onclick')[0]
+        except IndexError:
+            pass
+        else:
+            if 'goDLS' in onclick:
+                # Sometimes the onclick is something else, like in insb's free
+                # opinion report.
+                return reverse_goDLS_function(onclick)['caseid']
+
+        # No onclick, onclick isn't a goDLS link, etc. Try second format.
+        try:
+            # This tends to work in the bankr. courts.
+            href = self.element.xpath('./td[1]//@href')[0]
         except IndexError:
             logger.info("No content provided in first cell of row. Using last "
                         "good row for pacer_case_id, docket_number, and "
                         "case_name.")
             return self.last_good_row['pacer_case_id']
         else:
-            return get_pacer_case_id_from_docket_url(docket_url)
+            return get_pacer_case_id_from_docket_url(href)
 
     def get_docket_number(self):
         try:
@@ -248,5 +254,49 @@ def parse_written_opinions_report(responses):
             else:
                 row = FreeOpinionRow(row, {}, court_id)
             results.append(row.as_dict())
-    logger.info("Parsed %s results from %s" % (len(results), court_id))
+    logger.info("Parsed %s results from written opinions report at %s" %
+                (len(results), court_id))
     return results
+
+
+def download_pdf(court_id, pacer_case_id, pacer_document_number, cookie):
+    """Download a PDF from PACER.
+
+    Note that this doesn't support attachments yet.
+    """
+    s = requests.session()
+    s.cookies.set(**cookie)
+    url = make_doc1_url(court_id, pacer_document_number, True)
+    data = {
+        'caseid': pacer_case_id,
+        'got_receipt': '1',
+    }
+    logger.info("GETting PDF at URL: %s with params: %s" % (url, data))
+    r = s.get(url, params=data, headers={'User-Agent': 'Juriscraper'},
+              verify=verify_court_ssl(court_id), timeout=300)
+    # The request above sometimes generates an HTML page with an iframe
+    # containing the PDF, and other times returns the PDF. Our task is thus to
+    # either get the src of the iframe and download the PDF or just return the
+    # pdf.
+    r.raise_for_status()
+    if is_pdf(r):
+        return r
+    text = clean_html(r.text)
+    tree = get_html_parsed_text(text)
+    tree.rewrite_links(fix_links_in_lxml_tree,
+                       base_href=r.url)
+    try:
+        iframe_src = tree.xpath('//iframe/@src')[0]
+    except IndexError:
+        if 'pdf:Producer' in text:
+            logger.error("Unable to download PDF. PDF content was placed "
+                         "directly in HTML. URL: %s, caseid: %s" %
+                         (url, pacer_case_id))
+            return None
+    r = s.get(
+        iframe_src,
+        headers={'User-Agent': 'Juriscraper'},
+        verify=verify_court_ssl(court_id),
+        timeout=300,
+    )
+    return r
