@@ -50,6 +50,37 @@ We've also seen evidence of these other cookies in the HTML of the Written Repor
     KEY
 
 
+## doc1 URLs
+
+Every document in PACER can be accessed with what we call a doc-one URL. It looks like:
+
+    https://ecf.nysd.uscourts.gov/doc1/12716951218
+    
+This weird little URL has the following parts of interest:
+
+    nysd: the jurisdiction of the item. These *mostly* correspond to the same 
+          IDs we have in CourtListener, but they occassionally differ.
+    
+    127:  The first three digits of the number at the end correspond to the 
+          court, with the earlier numbers going to circuit courts, and then the
+          numbers being assigned alphabetically after that. For example, 127,
+          above, corresponds to nysd. 128 corresponds to nywb.
+    
+    1:    The fourth digit in the URL indicates whether the item has attachments 
+          or not. If it does not have attachments, this number will be a 1, and 
+          you can download the item using the URL. If it does have attachments, 
+          the number will be a zero, and clicking it will take you to the 
+          attachments list. For items that have a zero, you can switch it to a 1 
+          to bypass the attachments list screen and simply get the item you're 
+          after.
+          
+    6951218: The remaining numbers appear to just be a serial number for each 
+          item. So far no patterns detected.
+
+It's my belief (mlr) that the doc1 URLs have this name because of their fourth 
+digit.
+
+
 ## CSRF Tokens
 
 It appears that PACER uses CSRF tokens. These seem to take the form of a random string appended to forms so that they submit to random locations. I assume these expire after some period of time, but I cannot be sure. In any case, if you find that your form is not submitting properly, try looking at the code in `free_documents.get_written_report_token`.
