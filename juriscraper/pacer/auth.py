@@ -38,7 +38,7 @@ def login(court_id, username, password):
         url,
         headers={'User-Agent': 'Juriscraper'},
         verify=verify_court_ssl(court_id),
-        timeout=30,
+        timeout=60,
         files={
             'login': ('', username),
             'key': ('', password)
