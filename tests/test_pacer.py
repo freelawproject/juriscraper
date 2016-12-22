@@ -1,13 +1,13 @@
 import json
+import os
 import unittest
-
-import vcr
 from datetime import timedelta
 
+import vcr
+
 from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.pacer import private_settings
-from juriscraper.pacer.auth import login
 from juriscraper.pacer import FreeOpinionReport
+from juriscraper.pacer.auth import login
 from juriscraper.pacer.utils import (
     get_courts_from_json, get_court_id_from_url,
     get_pacer_case_id_from_docket_url, get_pacer_document_number_from_doc1_url,
@@ -17,6 +17,19 @@ from juriscraper.pacer.utils import (
 vcr = vcr.VCR(cassette_library_dir='tests/fixtures/cassettes')
 
 
+def get_pacer_credentials_or_skip():
+    try:
+        username = os.environ['PACER_USERNAME']
+        password = os.environ['PACER_PASSWORD']
+    except KeyError:
+        msg = ("Unable to run PACER tests. Please set PACER_USERNAME and "
+               "PACER_PASSWORD environment variables to valid PACER "
+               "credentials.")
+        raise unittest.SkipTest(msg)
+    else:
+        return username, password
+
+
 class PacerAuthTest(unittest.TestCase):
     """Test the authentication methods"""
 
@@ -24,8 +37,7 @@ class PacerAuthTest(unittest.TestCase):
         # Get the latest court info from our Heroku app.
         with open('juriscraper/pacer/courts.json') as j:
             self.courts = get_courts_from_json(json.load(j))
-        self.username = private_settings.PACER_USERNAME
-        self.password = private_settings.PACER_PASSWORD
+        self.username, self.password = get_pacer_credentials_or_skip()
 
     @vcr.use_cassette()
     def test_logging_in(self):
@@ -37,8 +49,7 @@ class PacerAuthTest(unittest.TestCase):
 class PacerFreeOpinionsTest(unittest.TestCase):
     """A variety of tests relating to the Free Written Opinions report"""
     def setUp(self):
-        self.username = private_settings.PACER_USERNAME
-        self.password = private_settings.PACER_PASSWORD
+        self.username, self.password = get_pacer_credentials_or_skip()
         # CAND chosen at random
         self.cookie = login('cand', self.username, self.password)
         with open('juriscraper/pacer/courts.json') as j:

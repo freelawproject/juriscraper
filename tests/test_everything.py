@@ -9,8 +9,6 @@ import time
 import unittest
 import vcr
 
-sys.path.insert(0, os.path.dirname(os.path.realpath(__file__)))
-
 from juriscraper.lib.importer import build_module_list
 from juriscraper.lib.date_utils import (
     parse_dates, quarter, is_first_month_in_quarter, fix_future_year_typo
