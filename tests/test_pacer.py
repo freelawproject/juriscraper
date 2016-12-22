@@ -1,17 +1,13 @@
 import json
 import unittest
 
-import requests
 import vcr
 from datetime import timedelta
 
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.pacer import private_settings
 from juriscraper.pacer.auth import login
-from juriscraper.pacer.free_documents import (
-    get_written_report_token, query_free_documents_report, download_pdf,
-    parse_written_opinions_report
-)
+from juriscraper.pacer.free_documents import FreeOpinionReport
 from juriscraper.pacer.utils import (
     get_courts_from_json, get_court_id_from_url,
     get_pacer_case_id_from_docket_url, get_pacer_document_number_from_doc1_url,
@@ -45,10 +41,13 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         self.password = private_settings.PACER_PASSWORD
         # CAND chosen at random
         self.cookie = login('cand', self.username, self.password)
-        self.session = requests.session()
-        self.session.cookies.set(**self.cookie)
         with open('juriscraper/pacer/courts.json') as j:
             self.courts = get_courts_from_json(json.load(j))
+        self.reports = {}
+        for court in self.courts:
+            court_id = get_court_id_from_url(court['court_link'])
+            self.reports[court_id] = FreeOpinionReport(court_id,
+                                                       self.cookie)
 
     @vcr.use_cassette(record_mode='new_episodes')
     def test_get_written_report_token(self):
@@ -58,7 +57,7 @@ class PacerFreeOpinionsTest(unittest.TestCase):
                 # No written opinion reports.
                 continue
             court_id = get_court_id_from_url(court['court_link'])
-            _ = get_written_report_token(court_id, self.session)
+            _ = self.reports[court_id].get_token()
 
     @vcr.use_cassette(record_mode='new_episodes')
     def test_extract_written_documents_report(self):
@@ -72,16 +71,16 @@ class PacerFreeOpinionsTest(unittest.TestCase):
 
             if court_id in valid_dates:
                 results = []
+                report = self.reports[court_id]
                 some_date = convert_date_string(valid_dates[court_id])
                 while not results:
                     # This loop is sometimes needed to find a date with
                     # documents. In general the valid dates json object should
                     # suffice, however.
-                    responses = query_free_documents_report(court_id, some_date,
-                                                            some_date, self.cookie)
+                    responses = report.query(some_date, some_date)
                     if not responses:
                         break  # Not a supported court.
-                    results = parse_written_opinions_report(responses)
+                    results = report.parse(responses)
                     some_date += timedelta(days=1)
 
                 for result in results:
@@ -92,9 +91,8 @@ class PacerFreeOpinionsTest(unittest.TestCase):
                                                     "in court %s" % (k, court_id))
 
                 # Can we download one item from each court?
-                r = download_pdf(court_id, results[0]['pacer_case_id'],
-                                 results[0]['pacer_document_number'],
-                                 self.cookie)
+                r = report.download_pdf(results[0]['pacer_case_id'],
+                                        results[0]['pacer_document_number'])
                 if r is None:
                     # Extremely messed up download.
                     continue
@@ -103,7 +101,8 @@ class PacerFreeOpinionsTest(unittest.TestCase):
     @vcr.use_cassette(record_mode='new_episodes')
     def test_download_a_free_document(self):
         """Can we download a free document?"""
-        r = download_pdf('vib', '1507', '1921141093', self.cookie)
+        report = self.reports['vib']
+        r = report.download_pdf('1507', '1921141093')
         self.assertEqual(r.headers['Content-Type'], 'application/pdf')
 
 

@@ -19,68 +19,153 @@ from juriscraper.pacer.utils import (
 logger = make_default_logger()
 
 
-def make_written_report_url(court_id):
-    if court_id == 'ohnd':
-        return 'https://ecf.ohnd.uscourts.gov/cgi-bin/OHND_WrtOpRpt.pl'
-    else:
-        return 'https://ecf.%s.uscourts.gov/cgi-bin/WrtOpRpt.pl' % court_id
+class FreeOpinionReport(object):
+    """TODO: document here."""
+    EXCLUDED_COURT_IDS = ['casb', 'innb', 'mieb', 'miwb', 'nmib', 'nvb', 'ohsb',
+                          'tnwb', 'vib']
 
+    def __init__(self, court_id, cookie):
+        self.court_id = court_id
+        self.session = requests.session()
+        self.session.cookies.set(**cookie)
+        super(FreeOpinionReport, self).__init__()
 
-def get_written_report_token(court_id, session):
-    """Get the token that's part of the post form.
+    @property
+    def url(self):
+        if self.court_id == 'ohnd':
+            return 'https://ecf.ohnd.uscourts.gov/cgi-bin/OHND_WrtOpRpt.pl'
+        else:
+            return ('https://ecf.%s.uscourts.gov/cgi-bin/WrtOpRpt.pl' %
+                    self.court_id)
 
-    This appears to be a kind of CSRF token. In the HTML of every page, there's
-    a random token that's added to the form, like so:
+    def get_token(self):
+        """Get the token that's part of the post form.
 
-        <form enctype="multipart/form-data" method="POST" action="../cgi-bin/WrtOpRpt.pl?196235599000508-L_1_0-1">
+        This appears to be a kind of CSRF token. In the HTML of every page,
+        there's a random token that's added to the form, like so:
 
-    This function simply loads the written report page, extracts the token and
-    returns it.
-    """
-    url = make_written_report_url(court_id)
-    logger.info("Getting written report CSRF token from %s" % url)
-    r = session.get(
-        url,
-        headers={'User-Agent': 'Juriscraper'},
-        verify=verify_court_ssl(court_id),
-        timeout=450,
-    )
-    m = re.search('../cgi-bin/(?:OHND_)?WrtOpRpt.pl\?(.+)\"', r.text)
-    if m is not None:
-        return m.group(1)
+            <form enctype="multipart/form-data" method="POST" action="../cgi-bin/WrtOpRpt.pl?196235599000508-L_1_0-1">
 
-
-def query_free_documents_report(court_id, start, end, cookie):
-    if court_id in ['casb', 'innb', 'mieb', 'miwb', 'nmib', 'nvb', 'ohsb',
-                    'tnwb', 'vib']:
-        logger.error("Cannot get written opinions report from '%s'. It is "
-                     "not provided by the court or is in disuse." % court_id)
-        return []
-    s = requests.session()
-    s.cookies.set(**cookie)
-    written_report_url = make_written_report_url(court_id)
-    csrf_token = get_written_report_token(court_id, s)
-    dates = [d.strftime('%m/%d/%Y') for d in rrule(DAILY, interval=1,
-                                                   dtstart=start, until=end)]
-    responses = []
-    for d in dates:
-        # Iterate one day at a time. Any more and PACER chokes.
-        logger.info("Querying written opinions report for '%s' between %s and "
-                    "%s" % (court_id, d, d))
-        responses.append(s.post(
-            written_report_url + '?' + csrf_token,
+        This function simply loads the written report page, extracts the token
+        and returns it.
+        """
+        logger.info("Getting written report CSRF token from %s" %
+                    self.url)
+        r = self.session.get(
+            self.url,
             headers={'User-Agent': 'Juriscraper'},
-            verify=verify_court_ssl(court_id),
+            verify=verify_court_ssl(self.court_id),
+            timeout=450,
+        )
+        m = re.search('../cgi-bin/(?:OHND_)?WrtOpRpt.pl\?(.+)\"', r.text)
+        if m is not None:
+            return m.group(1)
+
+    def query(self, start, end):
+        if self.court_id in self.EXCLUDED_COURT_IDS:
+            logger.error("Cannot get written opinions report from '%s'. It is "
+                         "not provided by the court or is in disuse." %
+                         self.court_id)
+            return []
+        csrf_token = self.get_token()
+        dates = [d.strftime('%m/%d/%Y') for d in rrule(
+            DAILY, interval=1, dtstart=start, until=end)]
+        responses = []
+        for d in dates:
+            # Iterate one day at a time. Any more and PACER chokes.
+            logger.info("Querying written opinions report for '%s' between %s "
+                        "and %s" % (self.court_id, d, d))
+            responses.append(self.session.post(
+                self.url + '?' + csrf_token,
+                headers={'User-Agent': 'Juriscraper'},
+                verify=verify_court_ssl(self.court_id),
+                timeout=300,
+                files={
+                    'filed_from': ('', d),
+                    'filed_to': ('', d),
+                    'ShowFull': ('', '1'),
+                    'Key1': ('', 'cs_sort_case_numb'),
+                    'all_case_ids': ('', '0'),
+                }
+            ))
+        return responses
+
+    @staticmethod
+    def parse(responses):
+        """Using a list of responses, parse out useful information and return it as
+        a list of dicts.
+        """
+        results = []
+        court_id = "Court not yet set."
+        for response in responses:
+            response.raise_for_status()
+            court_id = get_court_id_from_url(response.url)
+            set_response_encoding(response)
+            text = clean_html(response.text)
+            tree = get_html_parsed_text(text)
+            tree.rewrite_links(fix_links_in_lxml_tree, base_href=response.url)
+            opinion_count = int(
+                tree.xpath('//b[contains(text(), "Total number of '
+                           'opinions reported")]')[0].tail)
+            if opinion_count == 0:
+                continue
+            rows = tree.xpath('(//table)[1]//tr[position() > 1]')
+            for row in rows:
+                if results:
+                    # If we have results already, pass the previous result to
+                    # the FreeOpinionRow object.
+                    row = FreeOpinionRow(row, results[-1], court_id)
+                else:
+                    row = FreeOpinionRow(row, {}, court_id)
+                results.append(row.as_dict())
+        logger.info("Parsed %s results from written opinions report at %s" %
+                    (len(results), court_id))
+        return results
+
+    def download_pdf(self, pacer_case_id, pacer_document_number):
+        """Download a PDF from PACER.
+
+        Note that this doesn't support attachments yet.
+        """
+        url = make_doc1_url(self.court_id, pacer_document_number, True)
+        data = {
+            'caseid': pacer_case_id,
+            'got_receipt': '1',
+        }
+        logger.info("GETting PDF at URL: %s with params: %s" % (url, data))
+        r = self.session.get(
+            url,
+            params=data,
+            headers={'User-Agent': 'Juriscraper'},
+            verify=verify_court_ssl(self.court_id),
             timeout=300,
-            files={
-                'filed_from': ('', d),
-                'filed_to': ('', d),
-                'ShowFull': ('', '1'),
-                'Key1': ('', 'cs_sort_case_numb'),
-                'all_case_ids': ('', '0'),
-            }
-        ))
-    return responses
+        )
+        # The request above sometimes generates an HTML page with an iframe
+        # containing the PDF, and other times returns the PDF. Our task is thus
+        # to either get the src of the iframe and download the PDF or just
+        # return the pdf.
+        r.raise_for_status()
+        if is_pdf(r):
+            return r
+        text = clean_html(r.text)
+        tree = get_html_parsed_text(text)
+        tree.rewrite_links(fix_links_in_lxml_tree,
+                           base_href=r.url)
+        try:
+            iframe_src = tree.xpath('//iframe/@src')[0]
+        except IndexError:
+            if 'pdf:Producer' in text:
+                logger.error("Unable to download PDF. PDF content was placed "
+                             "directly in HTML. URL: %s, caseid: %s" %
+                             (url, pacer_case_id))
+                return None
+        r = self.session.get(
+            iframe_src,
+            headers={'User-Agent': 'Juriscraper'},
+            verify=verify_court_ssl(self.court_id),
+            timeout=300,
+        )
+        return r
 
 
 class FreeOpinionRow(object):
@@ -225,78 +310,3 @@ class FreeOpinionRow(object):
                                       '"Cause")]')[0].tail.strip()
         except IndexError:
             return None
-
-
-def parse_written_opinions_report(responses):
-    """Using a list of responses, parse out useful information and return it as
-    a list of dicts.
-    """
-    results = []
-    court_id = "Court not yet set."
-    for response in responses:
-        response.raise_for_status()
-        court_id = get_court_id_from_url(response.url)
-        set_response_encoding(response)
-        text = clean_html(response.text)
-        tree = get_html_parsed_text(text)
-        tree.rewrite_links(fix_links_in_lxml_tree,
-                           base_href=response.url)
-        opinion_count = int(tree.xpath('//b[contains(text(), "Total number of '
-                                       'opinions reported")]')[0].tail)
-        if opinion_count == 0:
-            continue
-        rows = tree.xpath('(//table)[1]//tr[position() > 1]')
-        for row in rows:
-            if results:
-                # If we have results already, pass the previous result to the
-                # FreeOpinionRow object.
-                row = FreeOpinionRow(row, results[-1], court_id)
-            else:
-                row = FreeOpinionRow(row, {}, court_id)
-            results.append(row.as_dict())
-    logger.info("Parsed %s results from written opinions report at %s" %
-                (len(results), court_id))
-    return results
-
-
-def download_pdf(court_id, pacer_case_id, pacer_document_number, cookie):
-    """Download a PDF from PACER.
-
-    Note that this doesn't support attachments yet.
-    """
-    s = requests.session()
-    s.cookies.set(**cookie)
-    url = make_doc1_url(court_id, pacer_document_number, True)
-    data = {
-        'caseid': pacer_case_id,
-        'got_receipt': '1',
-    }
-    logger.info("GETting PDF at URL: %s with params: %s" % (url, data))
-    r = s.get(url, params=data, headers={'User-Agent': 'Juriscraper'},
-              verify=verify_court_ssl(court_id), timeout=300)
-    # The request above sometimes generates an HTML page with an iframe
-    # containing the PDF, and other times returns the PDF. Our task is thus to
-    # either get the src of the iframe and download the PDF or just return the
-    # pdf.
-    r.raise_for_status()
-    if is_pdf(r):
-        return r
-    text = clean_html(r.text)
-    tree = get_html_parsed_text(text)
-    tree.rewrite_links(fix_links_in_lxml_tree,
-                       base_href=r.url)
-    try:
-        iframe_src = tree.xpath('//iframe/@src')[0]
-    except IndexError:
-        if 'pdf:Producer' in text:
-            logger.error("Unable to download PDF. PDF content was placed "
-                         "directly in HTML. URL: %s, caseid: %s" %
-                         (url, pacer_case_id))
-            return None
-    r = s.get(
-        iframe_src,
-        headers={'User-Agent': 'Juriscraper'},
-        verify=verify_court_ssl(court_id),
-        timeout=300,
-    )
-    return r

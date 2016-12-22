@@ -114,7 +114,7 @@ def make_doc1_url(court_id, pacer_document_number, skip_attachment_page):
 
 
 def verify_court_ssl(court_id):
-    """Returns True for any court where the SSL is known to be bad."""
+    """Returns False for any court where the SSL is known to be bad."""
     bad_courts = [
         'nhd',   # New Hampshire
         'nmib',  # Northern Mariana Islands Bankruptcy
