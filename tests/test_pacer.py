@@ -19,9 +19,10 @@ vcr = vcr.VCR(cassette_library_dir='tests/fixtures/cassettes')
 
 def get_pacer_credentials_or_skip():
     try:
-        print os.environ
         username = os.environ['PACER_USERNAME']
+        print "Got PACER_USERNAME"
         password = os.environ['PACER_PASSWORD']
+        print "Got PACER_PASSWORD"
     except KeyError:
         msg = ("Unable to run PACER tests. Please set PACER_USERNAME and "
                "PACER_PASSWORD environment variables.")
