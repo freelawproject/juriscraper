@@ -7,7 +7,7 @@ from datetime import timedelta
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.pacer import private_settings
 from juriscraper.pacer.auth import login
-from juriscraper.pacer.free_documents import FreeOpinionReport
+from juriscraper.pacer import FreeOpinionReport
 from juriscraper.pacer.utils import (
     get_courts_from_json, get_court_id_from_url,
     get_pacer_case_id_from_docket_url, get_pacer_document_number_from_doc1_url,
