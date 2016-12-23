@@ -21,8 +21,8 @@ logger = make_default_logger()
 
 class FreeOpinionReport(object):
     """TODO: document here."""
-    EXCLUDED_COURT_IDS = ['casb', 'innb', 'mieb', 'miwb', 'nmib', 'nvb', 'ohsb',
-                          'tnwb', 'vib']
+    EXCLUDED_COURT_IDS = ['casb', 'ganb', 'innb', 'mieb', 'miwb', 'nmib', 'nvb',
+                          'ohsb', 'tnwb', 'vib']
 
     def __init__(self, court_id, cookie):
         self.court_id = court_id
