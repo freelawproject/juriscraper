@@ -4,6 +4,7 @@ import unittest
 from datetime import timedelta, datetime
 
 import vcr
+from requests import ConnectionError
 
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.pacer import FreeOpinionReport
@@ -83,14 +84,26 @@ class PacerFreeOpinionsTest(unittest.TestCase):
                 results = []
                 report = self.reports[court_id]
                 some_date = convert_date_string(valid_dates[court_id])
-                while not results:
+                retry_count = 1
+                max_retries = 5  # We'll try five times total
+                while not results and retry_count <= max_retries:
                     # This loop is sometimes needed to find a date with
                     # documents. In general the valid dates json object should
                     # suffice, however.
                     if some_date > datetime.today():
                         raise ValueError("Runaway date query for %s: %s" %
                                          (court_id, some_date))
-                    responses = report.query(some_date, some_date)
+                    try:
+                        responses = report.query(some_date, some_date)
+                    except ConnectionError as e:
+                        if retry_count <= max_retries:
+                            print ("%s. Trying again (%s of %s)" %
+                                   (e, retry_count, max_retries))
+                            retry_count += 1
+                            continue
+                        else:
+                            print "%s: Repeated errors at this court." % e
+                            raise e
                     if not responses:
                         break  # Not a supported court.
                     results = report.parse(responses)
