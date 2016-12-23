@@ -123,6 +123,10 @@ def verify_court_ssl(court_id):
     ]
     if court_id in bad_courts:
         return False
+    # Using old_where() is not ideal, but it supports versions of OpenSSL prior
+    # to 1.0.2. These older versions are in place in Travis-CI and on our live
+    # server. You can read (much) more about this here:
+    # https://github.com/certifi/python-certifi/issues/26
     return certifi.old_where()
 
 
