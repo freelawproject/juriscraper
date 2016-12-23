@@ -1,7 +1,7 @@
 import json
 import os
 import unittest
-from datetime import timedelta, datetime
+from datetime import timedelta, date
 
 import vcr
 from requests import ConnectionError
@@ -90,7 +90,7 @@ class PacerFreeOpinionsTest(unittest.TestCase):
                     # This loop is sometimes needed to find a date with
                     # documents. In general the valid dates json object should
                     # suffice, however.
-                    if some_date > datetime.today():
+                    if some_date > date.today():
                         raise ValueError("Runaway date query for %s: %s" %
                                          (court_id, some_date))
                     try:
