@@ -109,20 +109,24 @@ class PacerFreeOpinionsTest(unittest.TestCase):
                     results = report.parse(responses)
                     some_date += timedelta(days=1)
 
-                for result in results:
-                    for k, v in result.items():
-                        if k in ['nature_of_suit', 'cause']:
-                            continue
-                        self.assertIsNotNone(v, msg="Value of key %s is None "
-                                                    "in court %s" % (k, court_id))
+                else:
+                    # While loop ended normally (without hitting break)
+                    for result in results:
+                        for k, v in result.items():
+                            if k in ['nature_of_suit', 'cause']:
+                                continue
+                            self.assertIsNotNone(
+                                v, msg="Value of key %s is None in court %s" %
+                                       (k, court_id)
+                            )
 
-                # Can we download one item from each court?
-                r = report.download_pdf(results[0]['pacer_case_id'],
-                                        results[0]['pacer_document_number'])
-                if r is None:
-                    # Extremely messed up download.
-                    continue
-                self.assertEqual(r.headers['Content-Type'], 'application/pdf')
+                    # Can we download one item from each court?
+                    r = report.download_pdf(results[0]['pacer_case_id'],
+                                            results[0]['pacer_document_number'])
+                    if r is None:
+                        # Extremely messed up download.
+                        continue
+                    self.assertEqual(r.headers['Content-Type'], 'application/pdf')
 
     @vcr.use_cassette(record_mode='new_episodes')
     def test_download_a_free_document(self):
