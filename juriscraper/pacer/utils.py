@@ -123,7 +123,7 @@ def verify_court_ssl(court_id):
     ]
     if court_id in bad_courts:
         return False
-    return certifi.where()
+    return certifi.old_where()
 
 
 def is_pdf(response):
