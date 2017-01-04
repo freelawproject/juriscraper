@@ -52,11 +52,13 @@ class DateParserTest(unittest.TestCase):
             self.assertEqual(dates, pair[1])
 
     def test_fix_future_year_typo(self):
+        correct = str(datetime.date.today().year)
+        transposed = correct[0] + correct[2] + correct[1] + correct[3]
         expectations = {
-            '12/01/2106': '12/01/2016',  # Here's the fix
-            '12/01/2016': '12/01/2016',  # Should not change
-            '12/01/2806': '12/01/2806',  # Should not change
-            '12/01/2886': '12/01/2886',  # Should not change
+            '12/01/%s' % transposed: '12/01/%s' % correct,  # Here's the fix
+            '12/01/%s' % correct: '12/01/%s' % correct,     # Should not change
+            '12/01/2806': '12/01/2806',                     # Should not change
+            '12/01/2886': '12/01/2886',                     # Should not change
         }
         for before, after in expectations.iteritems():
             fixed_date = fix_future_year_typo(convert_date_string(before))
@@ -72,7 +74,7 @@ class ScraperExampleTest(unittest.TestCase):
         # Re-enable logging
         logging.disable(logging.NOTSET)
 
-    @vcr.use_cassette()
+    @vcr.use_cassette(record_mode='new_episodes')
     def test_scrape_all_example_files(self):
         """Finds all the $module_example* files and tests them with the sample
         scraper.
