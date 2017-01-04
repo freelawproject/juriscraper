@@ -215,10 +215,11 @@ Version History
    "Supreme" court)
 -  1.0 - Support opinions from for all possible federal bankruptcy
    appellate panels (9th and 10th Cir.)
+-  1.1.* - Major code reorganization and first release on the Python Package Index (PyPi)
 
 **Current**
 
--  1.1.* - Major code reorganization and first release on the Python Package Index (PyPi)
+-  1.2.* - Adds support for scraping PACER.
 
 **Future Roadmap**
 
