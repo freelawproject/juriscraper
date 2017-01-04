@@ -21,6 +21,7 @@ from selenium.common.exceptions import NoSuchElementException
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.AbstractSite import InsanityException
+from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 
 
 class Site(OpinionSite):
@@ -77,7 +78,8 @@ class Site(OpinionSite):
 
             text = self._clean_text(driver.page_source)
             html_tree = html.fromstring(text)
-            html_tree.rewrite_links(self._link_fixer_callback)
+            html_tree.rewrite_links(fix_links_in_lxml_tree,
+                                    base_href=self.request['url'])
         return html_tree
 
     def _get_case_names(self):

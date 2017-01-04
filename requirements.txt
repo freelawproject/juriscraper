@@ -3,9 +3,11 @@ cchardet
 certifi
 chardet
 geonamescache==0.20
+html5lib
 lxml==3.5.0
 python-dateutil==2.5.0
 requests==2.9.1
 selenium==2.53.6
+tldextract
 wsgiref==0.1.2
-html5lib
+vcrpy

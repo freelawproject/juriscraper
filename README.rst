@@ -45,7 +45,7 @@ First step: Install Python 2.7.x, then:
 ::
 
     # install the dependencies
-    sudo apt-get install libxml2-dev libxslt-dev  # In Ubuntu prior to 14.04 this is libxslt-devel
+    sudo apt-get install libxml2-dev libxslt-dev libyaml-dev
 
     # Install PhantomJS
     wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
@@ -70,17 +70,13 @@ xpath-tester <https://github.com/mlissner/lxml-xpath-tester>`__ that
 helps debug XPath queries. xpath-tester can be installed locally in a few
 minutes.
 
-We also generally use Eclipse with the PyDev and Aptana tools installed
-or Intellij with PyCharm installed. These are useful because they allow
-syntax highlighting, code inspection, and PyLint integration. Intellij
-is particularly strong in these areas and a license is available to
-interested contributors.
+We also generally use Intellij with PyCharm installed. These are useful because they allow syntax highlighting, code inspection, and PyLint integration. A license for Intellij is available for interested and proven contributors.
 
 For scrapers to be merged:
 
 -  ``python setup.py test`` must pass, listing the results for any new
    scrapers. This will be run automatically by
-   `Travis-CI <https://travis-ci.org/freelawproject/juriscraper>`__.
+   `Travis-CI <https://travis-ci.org/freelawproject/juriscraper>`__. If changes are being made to the pacer code, the pacer tests must also pass when run. These tests are skipped by default. To run them, set environment variables for PACER_USERNAME and PACER_PASSWORD.
 -  a \*\_example\* file must be included in the ``tests/examples``
    directory (this is needed for the tests to run your code).
 -  your code should be
