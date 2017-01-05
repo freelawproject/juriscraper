@@ -84,3 +84,21 @@ digit.
 ## CSRF Tokens
 
 It appears that PACER uses CSRF tokens. These seem to take the form of a random string appended to forms so that they submit to random locations. I assume these expire after some period of time, but I cannot be sure. In any case, if you find that your form is not submitting properly, try looking at the code in `free_documents.get_written_report_token`.
+
+
+## Hidden APIs
+
+PACER has an API that you can use to look up case numbers and get case names and PACER docket IDs in XML as the result. This API is used by the main PACER query page when you past in a case number and press the button for "Find this Case". This needs further inspection, requests look like:
+
+    GET 'https://ecf.cand.uscourts.gov/cgi-bin/possible_case_numbers.pl?3:12-cv-3879;number=0.1258953044538912'
+    
+Which returns:
+
+    <request number='3:12-cv-3879'>
+        <case number='3:12-cv-3879' 
+              id='257622' 
+              title='3:12-cv-03879-VC Technology Properties Limited LLC et al v. Novatel Wireless, Inc. (closed 07/14/2015)' 
+              sortable='3:2012-cv-03879-VC'/>
+    </request>
+
+Right now I don't know what the `number=0.1258953044538912` part of the request is, but it looks like you can ignore it. Removing or tweaking it doesn't seem to make a difference.
