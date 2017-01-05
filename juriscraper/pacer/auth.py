@@ -4,7 +4,6 @@ import requests
 
 from exceptions import BadLoginException
 from juriscraper.pacer.free_documents import logger
-from juriscraper.pacer.utils import verify_court_ssl
 
 
 def make_pacer_cookie_dict(name, value):

@@ -11,7 +11,7 @@ from juriscraper.lib.html_utils import (
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.pacer.utils import (
-    verify_court_ssl, get_pacer_case_id_from_docket_url, make_doc1_url,
+    get_pacer_case_id_from_docket_url, make_doc1_url,
     get_pacer_document_number_from_doc1_url, get_court_id_from_url,
     reverse_goDLS_function, is_pdf
 )
