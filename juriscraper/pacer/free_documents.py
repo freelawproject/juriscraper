@@ -60,6 +60,8 @@ class FreeOpinionReport(object):
         m = re.search('../cgi-bin/(?:OHND_)?WrtOpRpt.pl\?(.+)\"', r.text)
         if m is not None:
             return m.group(1)
+        else:
+            logger.error("Unable to extract token. Text was:\n %s" % r.text)
 
     def query(self, start, end):
         if self.court_id in self.EXCLUDED_COURT_IDS:
