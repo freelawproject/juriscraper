@@ -49,12 +49,17 @@ class FreeOpinionReport(object):
         This function simply loads the written report page, extracts the token
         and returns it.
         """
+        if self.court_id in self.EXCLUDED_COURT_IDS:
+            logger.error("Cannot get CSRF token from '%s'. It is "
+                         "not provided by the court or is in disuse." %
+                         self.court_id)
+            return None
         logger.info("Getting written report CSRF token from %s" %
                     self.url)
         r = self.session.get(
             self.url,
             headers={'User-Agent': 'Juriscraper'},
-            verify=verify_court_ssl(self.court_id),
+            verify=False,
             timeout=450,
         )
         m = re.search('../cgi-bin/(?:OHND_)?WrtOpRpt.pl\?(.+)\"', r.text)
@@ -80,7 +85,7 @@ class FreeOpinionReport(object):
             responses.append(self.session.post(
                 self.url + '?' + csrf_token,
                 headers={'User-Agent': 'Juriscraper'},
-                verify=verify_court_ssl(self.court_id),
+                verify=False,
                 timeout=300,
                 files={
                     'filed_from': ('', d),
@@ -139,7 +144,7 @@ class FreeOpinionReport(object):
             url,
             params=data,
             headers={'User-Agent': 'Juriscraper'},
-            verify=verify_court_ssl(self.court_id),
+            verify=False,
             timeout=300,
         )
         # The request above sometimes generates an HTML page with an iframe
@@ -164,7 +169,7 @@ class FreeOpinionReport(object):
         r = self.session.get(
             iframe_src,
             headers={'User-Agent': 'Juriscraper'},
-            verify=verify_court_ssl(self.court_id),
+            verify=False,
             timeout=300,
         )
         return r

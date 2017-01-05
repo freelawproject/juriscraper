@@ -37,7 +37,7 @@ def login(court_id, username, password):
     r = s.post(
         url,
         headers={'User-Agent': 'Juriscraper'},
-        verify=verify_court_ssl(court_id),
+        verify=False,
         timeout=60,
         files={
             'login': ('', username),

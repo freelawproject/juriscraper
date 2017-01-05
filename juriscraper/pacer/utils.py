@@ -113,24 +113,6 @@ def make_doc1_url(court_id, pacer_document_number, skip_attachment_page):
                                                     pacer_document_number)
 
 
-def verify_court_ssl(court_id):
-    """Returns False for any court where the SSL is known to be bad."""
-    bad_courts = [
-        'nhd',   # New Hampshire District Court
-        'mtd',   # Montana District Court
-        'nmib',  # Northern Mariana Islands Bankruptcy
-        'ca3',   # Third Circuit
-        'jpml',  # Judicial Panel on Multidistrict Litigation
-    ]
-    if court_id in bad_courts:
-        return False
-    # Using old_where() is not ideal, but it supports versions of OpenSSL prior
-    # to 1.0.2. These older versions are in place in Travis-CI and on our live
-    # server. You can read (much) more about this here:
-    # https://github.com/certifi/python-certifi/issues/26
-    return certifi.old_where()
-
-
 def is_pdf(response):
     """Determines whether the item downloaded is a PDF or something else."""
     if response.headers.get('content-type') == 'application/pdf':
