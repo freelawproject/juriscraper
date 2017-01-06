@@ -25,7 +25,10 @@ def make_pacer_cookie_dict(name, value):
 
 def make_login_url(court_id):
     """Make a login URL for a given court id."""
-    return 'https://ecf.%s.uscourts.gov/cgi-bin/login.pl' % court_id
+    if court_id == 'psc':
+        return 'https://dcecf.psc.uscourts.gov/cgi-bin/login.pl'
+    else:
+        return 'https://ecf.%s.uscourts.gov/cgi-bin/login.pl' % court_id
 
 
 def login(court_id, username, password):
