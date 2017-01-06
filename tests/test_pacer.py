@@ -6,8 +6,9 @@ from datetime import timedelta, date
 import vcr
 from requests import ConnectionError
 
+from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.pacer import FreeOpinionReport
+from juriscraper.pacer import DocketReport, FreeOpinionReport
 from juriscraper.pacer.auth import login
 from juriscraper.pacer.utils import (
     get_courts_from_json, get_court_id_from_url,
@@ -48,6 +49,7 @@ class PacerAuthTest(unittest.TestCase):
 
 class PacerFreeOpinionsTest(unittest.TestCase):
     """A variety of tests relating to the Free Written Opinions report"""
+
     def setUp(self):
         self.username, self.password = get_pacer_credentials_or_skip()
         # CAND chosen at random
@@ -116,7 +118,8 @@ class PacerFreeOpinionsTest(unittest.TestCase):
                     if r is None:
                         # Extremely messed up download.
                         continue
-                    self.assertEqual(r.headers['Content-Type'], 'application/pdf')
+                    self.assertEqual(r.headers['Content-Type'],
+                                     'application/pdf')
 
     @vcr.use_cassette(record_mode='new_episodes')
     def test_download_a_free_document(self):
@@ -124,6 +127,78 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         report = self.reports['vib']
         r = report.download_pdf('1507', '1921141093')
         self.assertEqual(r.headers['Content-Type'], 'application/pdf')
+
+
+class PacerDocketReportTest(unittest.TestCase):
+    """A variety of tests for the docket report"""
+
+    def setUp(self):
+        self.cookie = login('psc', 'tr1234', 'Pass!234')
+        self.report = DocketReport('psc', self.cookie)
+        self.pacer_case_id = '62866'
+
+    def count_rows(self, html):
+        """Count the rows in the docket report.
+
+        :param html: The HTML of the docket report.
+        :return: The count of the number of rows.
+        """
+        tree = get_html_parsed_text(html)
+        return len(tree.xpath('//table[./tr/td[3]]/tr')) - 1  # No header row
+
+    @vcr.use_cassette(record_mode='new_episodes')
+    def test_queries(self):
+        """Do a variety of queries work?"""
+        r = self.report.query(self.pacer_case_id)
+        self.assertIn('Deft previously', r.text,
+                      msg="Super basic query failed")
+
+        r = self.report.query(self.pacer_case_id, date_start=date(2007, 2, 7))
+        row_count = self.count_rows(r.text)
+        self.assertEqual(row_count, 25, msg="Didn't get expected number of "
+                                            "rows when filtering by start "
+                                            "date. Got %s." % row_count)
+
+        r = self.report.query(self.pacer_case_id, date_start=date(2007, 2, 7),
+                              date_end=date(2007, 2, 8))
+        row_count = self.count_rows(r.text)
+        self.assertEqual(row_count, 2, msg="Didn't get expected number of "
+                                           "rows when filtering by start and "
+                                           "end dates. Got %s." % row_count)
+
+        r = self.report.query(self.pacer_case_id, doc_num_start=5,
+                              doc_num_end=5)
+        row_count = self.count_rows(r.text)
+        self.assertEqual(row_count, 1, msg="Didn't get expected number of rows "
+                                           "when filtering by doc number. Got "
+                                           "%s" % row_count)
+
+        r = self.report.query(self.pacer_case_id, date_start=date(2007, 2, 7),
+                              date_end=date(2007, 2, 8), date_range_type="Entered")
+        row_count = self.count_rows(r.text)
+        self.assertEqual(row_count, 2, msg="Didn't get expected number of rows "
+                                           "when filtering by start and end "
+                                           "dates and date_range_type of "
+                                           "Entered. Got %s" % row_count)
+
+        r = self.report.query(self.pacer_case_id, doc_num_start=500,
+                              show_parties_and_counsel=True)
+        self.assertIn('deRosas', r.text, msg="Didn't find party info when it "
+                                             "was explicitly requested.")
+        r = self.report.query(self.pacer_case_id, doc_num_start=500,
+                              show_parties_and_counsel=False)
+        self.assertNotIn('deRosas', r.text, msg="Got party info but it was not "
+                                                "requested.")
+
+        r = self.report.query(self.pacer_case_id, doc_num_start=500,
+                              show_terminated_parties=True,
+                              show_parties_and_counsel=True)
+        self.assertIn('Rosado', r.text, msg="Didn't get terminated party info "
+                                            "when it was requested.")
+        r = self.report.query(self.pacer_case_id, doc_num_start=500,
+                              show_terminated_parties=False)
+        self.assertNotIn('Rosado', r.text, msg="Got terminated party info but "
+                                               "it wasn't requested.")
 
 
 class PacerUtilTest(unittest.TestCase):
