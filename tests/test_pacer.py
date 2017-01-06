@@ -61,16 +61,6 @@ class PacerFreeOpinionsTest(unittest.TestCase):
                                                        self.cookie)
 
     @vcr.use_cassette(record_mode='new_episodes')
-    def test_get_written_report_token(self):
-        """Can we extract the CSRF token from every written report?"""
-        for court in self.courts:
-            if court['type'] == "U.S. Courts of Appeals":
-                # No written opinion reports.
-                continue
-            court_id = get_court_id_from_url(court['court_link'])
-            _ = self.reports[court_id].get_token()
-
-    @vcr.use_cassette(record_mode='new_episodes')
     def test_extract_written_documents_report(self):
         """Do all the written reports work?"""
         with open('tests/fixtures/valid_free_opinion_dates.json') as j:

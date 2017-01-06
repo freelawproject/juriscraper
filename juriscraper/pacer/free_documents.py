@@ -38,43 +38,12 @@ class FreeOpinionReport(object):
             return ('https://ecf.%s.uscourts.gov/cgi-bin/WrtOpRpt.pl' %
                     self.court_id)
 
-    def get_token(self):
-        """Get the token that's part of the post form.
-
-        This appears to be a kind of CSRF token. In the HTML of every page,
-        there's a random token that's added to the form, like so:
-
-            <form enctype="multipart/form-data" method="POST" action="../cgi-bin/WrtOpRpt.pl?196235599000508-L_1_0-1">
-
-        This function simply loads the written report page, extracts the token
-        and returns it.
-        """
-        if self.court_id in self.EXCLUDED_COURT_IDS:
-            logger.error("Cannot get CSRF token from '%s'. It is "
-                         "not provided by the court or is in disuse." %
-                         self.court_id)
-            return None
-        logger.info("Getting written report CSRF token from %s" %
-                    self.url)
-        r = self.session.get(
-            self.url,
-            headers={'User-Agent': 'Juriscraper'},
-            verify=False,
-            timeout=450,
-        )
-        m = re.search('../cgi-bin/(?:OHND_)?WrtOpRpt.pl\?(.+)\"', r.text)
-        if m is not None:
-            return m.group(1)
-        else:
-            logger.error("Unable to extract token. Text was:\n %s" % r.text)
-
     def query(self, start, end):
         if self.court_id in self.EXCLUDED_COURT_IDS:
             logger.error("Cannot get written opinions report from '%s'. It is "
                          "not provided by the court or is in disuse." %
                          self.court_id)
             return []
-        csrf_token = self.get_token()
         dates = [d.strftime('%m/%d/%Y') for d in rrule(
             DAILY, interval=1, dtstart=start, until=end)]
         responses = []
@@ -83,7 +52,7 @@ class FreeOpinionReport(object):
             logger.info("Querying written opinions report for '%s' between %s "
                         "and %s" % (self.court_id, d, d))
             responses.append(self.session.post(
-                self.url + '?' + csrf_token,
+                self.url + '?1-L_1_0-1',
                 headers={'User-Agent': 'Juriscraper'},
                 verify=False,
                 timeout=300,

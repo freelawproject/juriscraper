@@ -81,11 +81,6 @@ It's my belief (mlr) that the doc1 URLs have this name because of their fourth
 digit.
 
 
-## CSRF Tokens
-
-It appears that PACER uses CSRF tokens. These seem to take the form of a random string appended to forms so that they submit to random locations. I assume these expire after some period of time, but I cannot be sure. In any case, if you find that your form is not submitting properly, try looking at the code in `free_documents.get_written_report_token`.
-
-
 ## Hidden APIs
 
 PACER has an API that you can use to look up case numbers and get case names and PACER docket IDs in XML as the result. This API is used by the main PACER query page when you past in a case number and press the button for "Find this Case". This needs further inspection, requests look like:
