@@ -62,6 +62,10 @@ class DocketReport(object):
         else:
             raise ValueError("Invalid value for 'order_by' parameter.")
 
+        if show_terminated_parties and not show_parties_and_counsel:
+            raise ValueError("Cannot show terminated parties if parties and "
+                             "counsel are not also requested.")
+
         files_params = {
             'all_case_ids': ('', pacer_case_id),
             'sort1': ('', order_by),
