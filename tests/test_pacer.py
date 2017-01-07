@@ -1,5 +1,6 @@
 import json
 import os
+import time
 import unittest
 from datetime import timedelta, date
 
@@ -91,6 +92,7 @@ class PacerFreeOpinionsTest(unittest.TestCase):
                         if retry_count <= max_retries:
                             print ("%s. Trying again (%s of %s)" %
                                    (e, retry_count, max_retries))
+                            time.sleep(15)  # Give the server a moment of rest.
                             retry_count += 1
                             continue
                         else:

@@ -97,3 +97,88 @@ Which returns:
     </request>
 
 Right now I don't know what the `number=0.1258953044538912` part of the request is, but it looks like you can ignore it. Removing or tweaking it doesn't seem to make a difference.
+
+
+## JavaScript on PACER
+
+All of the JavaScript in PACER has been compressed making it nearly impossible to understand. I'm putting bits and pieces of the de-obfuscated code here, as I translate it to meaningful variable names and better formatting.
+
+    function goDLS(form_post_url, caseid, de_seq_num, got_receipt, pdf_header,
+                   pdf_toggle_possible, magic_num, hdr) {
+        // Generates a form, appends it to the end of the document, and then
+        // submits it.
+        //
+        // form_post_url: Where the form is posted to. The HTML 'action' attribute.
+        // caseid: The internal PACER ID for the case.
+        // de_seq_num: The internal PACER document number within the case. This
+        //   differs from the number that we see for reasons unknown.
+        // got_receipt: If set to '1', this will bypass the receipt page and
+        //   download the PDF immediately.
+        // pdf_header: ??
+        // pdf_toggle_possible: ??
+        // magic_num: ??
+        // hdr: ??
+        var form_id = "go_dls_url";
+        var f;
+        if (document.getElementById(form_id)) {
+            var d = document.getElementById(form_id);
+            document.body.removeChild(d)
+        }
+        var j = document.createElement("form");
+        j.setAttribute("action", form_post_url);
+        j.setAttribute("enctype", "multipart/form-data");
+        j.setAttribute("method", "post");
+        j.setAttribute("id", form_id);
+        document.body.appendChild(j);
+        if (caseid.length > 0) {
+            f = document.createElement("input");
+            f.setAttribute("type", "hidden");
+            f.setAttribute("name", "caseid");
+            f.setAttribute("value", caseid);
+            j.appendChild(f)
+        }
+        if (de_seq_num.length > 0) {
+            f = document.createElement("input");
+            f.setAttribute("type", "hidden");
+            f.setAttribute("name", "de_seq_num");
+            f.setAttribute("value", de_seq_num);
+            j.appendChild(f)
+        }
+        if (got_receipt.length > 0) {
+            f = document.createElement("input");
+            f.setAttribute("type", "hidden");
+            f.setAttribute("name", "got_receipt");
+            f.setAttribute("value", got_receipt);
+            j.appendChild(f)
+        }
+        if (pdf_header.length > 0) {
+            f = document.createElement("input");
+            f.setAttribute("type", "hidden");
+            f.setAttribute("name", "pdf_header");
+            f.setAttribute("value", pdf_header);
+            j.appendChild(f)
+        }
+        if (pdf_toggle_possible.length > 0) {
+            f = document.createElement("input");
+            f.setAttribute("type", "hidden");
+            f.setAttribute("name", "pdf_toggle_possible");
+            f.setAttribute("value", pdf_toggle_possible);
+            j.appendChild(f)
+        }
+        if (magic_num.length > 0) {
+            f = document.createElement("input");
+            f.setAttribute("type", "hidden");
+            f.setAttribute("name", "magic_num");
+            f.setAttribute("value", magic_num);
+            j.appendChild(f)
+        }
+        if (hdr.length > 0) {
+            f = document.createElement("input");
+            f.setAttribute("type", "hidden");
+            f.setAttribute("name", "hdr");
+            f.setAttribute("value", hdr);
+            j.appendChild(f)
+        }
+        document.getElementById(form_id).submit()
+    }
+
