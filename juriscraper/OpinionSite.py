@@ -22,7 +22,8 @@ class OpinionSite(AbstractSite):
             'case_name_shorts',
         ]
         self._req_attrs = ['case_dates', 'case_names', 'download_urls',
-                           'precedential_statuses', 'blocked_statuses',]
+                           'precedential_statuses', 'blocked_statuses',
+                           'date_filed_is_approximate',]
         # For date sorting to work, case_dates must be first in _all_attrs.
         self._all_attrs = self._req_attrs + self._opt_attrs
 
@@ -90,3 +91,6 @@ class OpinionSite(AbstractSite):
 
     def _get_west_state_citations(self):
         return None
+
+    def _get_date_filed_is_approximate(self):
+        return [False] * len(self.case_names)
