@@ -17,7 +17,8 @@ from juriscraper.lib.string_utils import (
     clean_string, fix_camel_case, force_unicode, harmonize, titlecase,
     CaseNameTweaker, convert_date_string
 )
-from juriscraper.opinions.united_states.state import massappct, pa, mass, nh, colo
+from juriscraper.AbstractSite import InsanityException
+from juriscraper.opinions.united_states.state import alaska, colo, mass, massappct, nh, pa
 from juriscraper.oral_args.united_states.federal_appellate import ca6
 
 vcr = vcr.VCR(cassette_library_dir='tests/fixtures/cassettes')
@@ -670,6 +671,23 @@ class ScraperSpotTest(unittest.TestCase):
     """Adds specific tests to specific courts that are more-easily tested
     without a full integration test.
     """
+
+    def test_alaska(self):
+        test_date = convert_date_string('January 1, 2016')
+        tests = {
+            'January - March 2016': test_date,              # dash
+            'January – March 2016': test_date,              # en-dash
+            'January — March 2016': test_date,              # em-dash
+            'January — March 2100': datetime.date.today(),  # future date
+            'January 6, 2017': False,
+        }
+        site = alaska.Site()
+        for before, after in tests.items():
+            if after:
+                self.assertEqual(after, site.get_estimate_date(before))
+            else:
+                with self.assertRaises(InsanityException):
+                   site.get_estimate_date(before)
 
     def test_mass(self):
         strings = {

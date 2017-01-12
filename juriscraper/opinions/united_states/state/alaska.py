@@ -4,13 +4,18 @@ History:
     2012-05-07: Written by Jordan.
     2012-07-06: Updated by mlr to only get the first ten items.
     2015-07-28: Updated by m4h7 to have improved xpaths.
-Notes: Only queries first ten dates. Beyond that, they get messy.
+        Notes: Only queries first ten dates. Beyond that, they get messy.
+    2017-01-11: Updated by arderyp to not suppress opinions under
+        date range headings.  We'v added not logic to OpinionSite
+        to handle estimated dates, and are now flagging these
+        examples as such
 """
 
-import time
-from datetime import date
+import datetime
 
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.AbstractSite import InsanityException
+from juriscraper.lib.string_utils import convert_date_string, standardize_dashes
 
 
 class Site(OpinionSite):
@@ -18,38 +23,54 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.courtrecords.alaska.gov/webdocs/opinions/sp.htm'
         self.court_id = self.__module__
-        # Test whether the selected node does NOT have the class
-        self.h4_test = "[not(@class = 'h4interiorpagecontentsubtitle')]"
-        # Test for the first h4 prior to the selected node, and make sure it
-        # does not have the class described in self.h4_test. This ensures that
-        # dates like "April - June 2015" don't get selected.
-        self.node_test = "[preceding-sibling::h4[1]%s]" % self.h4_test
+        self.date_string_path = '//h4'
+        self.sub_opinion_path = './following-sibling::ul[1]//a/em'
 
     def _get_case_names(self):
-        return [e for e in self.html.xpath("//ul%s/li[descendant::a/em]//em/text()" % self.node_test)]
+        return [e for e in self.html.xpath("//ul/li[descendant::a/em]//em/text()")]
 
     def _get_download_urls(self):
-        return [h for h in self.html.xpath("//ul%s/li/a[child::em]/@href" % self.node_test)]
+        return [h for h in self.html.xpath("//ul/li/a[child::em]/@href")]
 
     def _get_case_dates(self):
         dates = []
-        for h4_element in self.html.xpath('//h4%s' % self.h4_test):
-            date_string = str(h4_element.xpath('./text()')[0])
+        for element in self.html.xpath(self.date_string_path):
+            date_string = element.text_content().strip()
             try:
-                date_obj = date.fromtimestamp(
-                      time.mktime(time.strptime(date_string, "%B %d, %Y")))
+                date = convert_date_string(date_string)
             except ValueError:
-                date_obj = date.fromtimestamp(
-                      time.mktime(time.strptime(date_string, "%B %Y")))
-
-            # Determine the number of links below the date and add them all to
-            # the date list.
-            count = len(h4_element.xpath('./following-sibling::ul[1]//a/em'))
-            dates.extend([date_obj] * count)
+                date = self.get_estimate_date(date_string)
+            # Determine the number of opinions below the
+            # date and add them all to the date list.
+            count = len(element.xpath(self.sub_opinion_path))
+            dates.extend([date] * count)
         return dates
 
     def _get_docket_numbers(self):
-        return [t for t in self.html.xpath("//ul%s/li[descendant::a/em]/text()[1]" % self.node_test)]
+        return [t for t in self.html.xpath("//ul/li[descendant::a/em]/text()[1]")]
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
+
+    def _get_date_filed_is_approximate(self):
+        approximations = []
+        for element in self.html.xpath(self.date_string_path):
+            count = len(element.xpath(self.sub_opinion_path))
+            date_string = standardize_dashes(element.text_content())
+            approximation = True if '-' in date_string else False
+            approximations.extend([approximation] * count)
+        return approximations
+
+    def get_estimate_date(self, date_string):
+        """Return 1st of first month in range (i.e. January 1st 2016
+        if range string is 'January - March 2016'). If said date is
+        in the past, return today's date instead.
+        """
+        date_string = standardize_dashes(date_string)
+        parts = date_string.split()
+        if '-' in date_string and len(parts) == 4:
+            estimate_string = '%s 1, %s' % (parts[0], parts[3])
+            estimate_date = convert_date_string(estimate_string)
+            return min(datetime.date.today(), estimate_date)
+        else:
+            raise InsanityException('Unrecognized date format: "%s"' % date_string)
