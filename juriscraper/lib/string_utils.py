@@ -442,6 +442,11 @@ def convert_date_string(date_string, fuzzy=False):
     return parser.parse(date_string, fuzzy=fuzzy).date()
 
 
+def standardize_dashes(string):
+    """Replace n-dash and m-dash with proper dash"""
+    return string.decode('utf-8').replace(u'–', '-').replace(u'—', '-')
+
+
 class CaseNameTweaker(object):
     def __init__(self):
         acros = [u'a.g.p.', u'c.d.c.', u'c.i.a.', u'd.o.c.', u'e.e.o.c.',
