@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
-import geonamescache
+
 import re
 import string
+import calendar
+import geonamescache
 from dateutil import parser
+from datetime import timedelta
+
 
 # For use in titlecase
 BIG = ('3D|AFL|AKA|A/K/A|BMG|CBS|CDC|CDT|CEO|CIO|CNMI|D/B/A|DOJ|DVA|EFF|FCC|'
@@ -441,6 +445,20 @@ def convert_date_string(date_string, fuzzy=False):
     date_string = date_string.strip()
     return parser.parse(date_string, fuzzy=fuzzy).date()
 
+def split_date_range_string(date_range_string):
+    """This function requires a string in 'January - March 2016' format"""
+    date_range_string = normalize_dashes(date_range_string)
+    parts = date_range_string.split()
+    if '-' not in date_range_string or len(parts) != 4:
+        raise Exception('Unrecognized date format: "%s"' % date_range_string)
+    month1, month2, year = parts[0], parts[2], parts[3]
+    months = {v: k for k, v in enumerate(calendar.month_name)}
+    last_day = calendar.monthrange(int(year), months[month2])[1]
+    start_date = convert_date_string('%s 1, %s' % (month1, year))
+    end_date = convert_date_string('%s %d, %s' % (month2, last_day, year))
+    delta = end_date - start_date
+    dates_in_range = [start_date + timedelta(d) for d in range(delta.days + 1)]
+    return dates_in_range[len(dates_in_range) / 2]
 
 def normalize_dashes(string):
     """Replace n-dash and m-dash with proper dash"""

@@ -15,9 +15,8 @@ from juriscraper.lib.date_utils import (
 )
 from juriscraper.lib.string_utils import (
     clean_string, fix_camel_case, force_unicode, harmonize, titlecase,
-    CaseNameTweaker, convert_date_string
+    CaseNameTweaker, convert_date_string, normalize_dashes, split_date_range_string
 )
-from juriscraper.AbstractSite import InsanityException
 from juriscraper.opinions.united_states.state import alaska, colo, mass, massappct, nh, pa
 from juriscraper.oral_args.united_states.federal_appellate import ca6
 
@@ -666,28 +665,35 @@ class StringUtilTest(unittest.TestCase):
         for pair in test_pairs:
             self.assertEqual(pair[1], fix_camel_case(pair[0]))
 
+    def test_split_date_range_string(self):
+        tests = {
+            'October - December 2016': convert_date_string('November 16, 2016'),
+            'July - September 2016': convert_date_string('August 16, 2016'),
+            'April - June 2016': convert_date_string('May 16, 2016'),
+            'January March 2016': False,
+        }
+        for before, after in tests.items():
+            if after:
+                self.assertEqual(split_date_range_string(before), after)
+            else:
+                with self.assertRaises(Exception):
+                    split_date_range_string(before)
+
+    def test_normalize_dashes(self):
+        success = 'January - March 2016'
+        tests = {
+            success: success,                 # dash
+            'January – March 2016': success,  # en-dash
+            'January — March 2016': success,  # em-dash
+        }
+        for before, after in tests.items():
+            self.assertEqual(normalize_dashes(before), after)
+
 
 class ScraperSpotTest(unittest.TestCase):
     """Adds specific tests to specific courts that are more-easily tested
     without a full integration test.
     """
-
-    def test_alaska(self):
-        test_date = convert_date_string('January 1, 2016')
-        tests = {
-            'January - March 2016': test_date,              # dash
-            'January – March 2016': test_date,              # en-dash
-            'January — March 2016': test_date,              # em-dash
-            'January — March 2100': datetime.date.today(),  # future date
-            'January 6, 2017': False,
-        }
-        site = alaska.Site()
-        for before, after in tests.items():
-            if after:
-                self.assertEqual(after, site.get_estimate_date(before))
-            else:
-                with self.assertRaises(InsanityException):
-                   site.get_estimate_date(before)
 
     def test_mass(self):
         strings = {

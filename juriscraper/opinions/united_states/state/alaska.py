@@ -12,10 +12,8 @@ History:
 """
 
 import datetime
-
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.AbstractSite import InsanityException
-from juriscraper.lib.string_utils import convert_date_string, normalize_dashes
+from juriscraper.lib.string_utils import convert_date_string, split_date_range_string, normalize_dashes
 
 
 class Site(OpinionSite):
@@ -35,14 +33,20 @@ class Site(OpinionSite):
     def _get_case_dates(self):
         dates = []
         for element in self.html.xpath(self.date_string_path):
-            date_string = element.text_content().strip()
-            try:
-                date = convert_date_string(date_string)
-            except ValueError:
-                date = self.get_estimate_date(date_string)
             # Determine the number of opinions below the
             # date and add them all to the date list.
             count = len(element.xpath(self.sub_opinion_path))
+            # Handle different date formats
+            date_string = element.text_content().strip()
+            try:
+                # Normal date
+                date = convert_date_string(date_string)
+            except ValueError:
+                # It a date range string like 'January - March 2016'
+                # return the middle date, unless its in the future
+                # in which case return todays date
+                middle_date = split_date_range_string(date_string)
+                date = min(datetime.date.today(), middle_date)
             dates.extend([date] * count)
         return dates
 
@@ -60,16 +64,3 @@ class Site(OpinionSite):
             approximation = True if '-' in date_string else False
             approximations.extend([approximation] * count)
         return approximations
-
-    def get_estimate_date(self, date_string):
-        """Return 1st of first month in range (i.e. January 1st 2016
-        if range string is 'January - March 2016'). If said date is
-        in the past, return today's date instead.
-        """
-        date_string = normalize_dashes(date_string)
-        parts = date_string.split()
-        if '-' in date_string and len(parts) == 4:
-            estimate_date = convert_date_string('%s 1, %s' % (parts[0], parts[3]))
-            return min(datetime.date.today(), estimate_date)
-        else:
-            raise InsanityException('Unrecognized date format: "%s"' % date_string)
