@@ -442,7 +442,7 @@ def convert_date_string(date_string, fuzzy=False):
     return parser.parse(date_string, fuzzy=fuzzy).date()
 
 
-def standardize_dashes(string):
+def normalize_dashes(string):
     """Replace n-dash and m-dash with proper dash"""
     return string.decode('utf-8').replace(u'–', '-').replace(u'—', '-')
 

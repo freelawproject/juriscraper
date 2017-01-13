@@ -15,7 +15,7 @@ import datetime
 
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.AbstractSite import InsanityException
-from juriscraper.lib.string_utils import convert_date_string, standardize_dashes
+from juriscraper.lib.string_utils import convert_date_string, normalize_dashes
 
 
 class Site(OpinionSite):
@@ -56,7 +56,7 @@ class Site(OpinionSite):
         approximations = []
         for element in self.html.xpath(self.date_string_path):
             count = len(element.xpath(self.sub_opinion_path))
-            date_string = standardize_dashes(element.text_content())
+            date_string = normalize_dashes(element.text_content())
             approximation = True if '-' in date_string else False
             approximations.extend([approximation] * count)
         return approximations
@@ -66,11 +66,10 @@ class Site(OpinionSite):
         if range string is 'January - March 2016'). If said date is
         in the past, return today's date instead.
         """
-        date_string = standardize_dashes(date_string)
+        date_string = normalize_dashes(date_string)
         parts = date_string.split()
         if '-' in date_string and len(parts) == 4:
-            estimate_string = '%s 1, %s' % (parts[0], parts[3])
-            estimate_date = convert_date_string(estimate_string)
+            estimate_date = convert_date_string('%s 1, %s' % (parts[0], parts[3]))
             return min(datetime.date.today(), estimate_date)
         else:
             raise InsanityException('Unrecognized date format: "%s"' % date_string)
