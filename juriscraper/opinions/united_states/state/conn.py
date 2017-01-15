@@ -10,14 +10,15 @@ History:
  - 2014-09-18, mlr: updated XPath to fix InsanityError on docket_numbers
  - 2015-06-17, mlr: made it more lenient about date formatting
  - 2016-07-21, arderyp: fixed to handle altered site format
+ - 2017-01-10, arderyp: restructured to handle new format use case that includes
+        opinions without dates and flagged for 'future' publication
 """
 
-import re
+from lxml import etree
 from datetime import date
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import clean_string
-from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.string_utils import convert_date_string, normalize_dashes
 
 
 class Site(OpinionSite):
@@ -27,38 +28,53 @@ class Site(OpinionSite):
         self.url = 'http://www.jud.ct.gov/external/supapp/archiveAROsup{year}.htm'.format(
             year=self.crawl_date.strftime("%y"))
         self.court_id = self.__module__
+        self.cases = []
+
+    def _download(self, request_dict={}):
+        html = super(Site, self)._download(request_dict)
+        self._extract_cases_from_html(html)
+        return html
+
+    def _extract_cases_from_html(self, html):
+        """Build list of data dictionaries, one dictionary per case (table row)."""
+        # Strip inconsistently placed <font> and <br>
+        # tags that make stable coverage almost impossible
+        etree.strip_tags(html, 'font', 'br')
+        for ul in html.xpath('//table[@id="AutoNumber1"]/tr[2]/td/table/tr/td//ul'):
+            preceding = ul.xpath('./preceding::*[1]')[0]
+            preceding_text = ' '.join(preceding.text_content().split()).strip(':')
+            if preceding_text and not preceding_text.lower().endswith('future date'):
+                # Below will fail if they change up strings or date formats
+                case_date = convert_date_string(preceding_text.split()[-1])
+                for element in ul.xpath('./li | ./a'):
+                    if element.tag == 'li':
+                        text = normalize_dashes(' '.join(element.text_content().split()))
+                        if not text:
+                            continue
+                        anchor = element.xpath('.//a')[0]
+                    elif element.tag == 'a':
+                        # Malformed html, see connappct_example.html
+                        anchor = element
+                        glued = '%s %s' % (anchor.text_content(), anchor.tail)
+                        text = normalize_dashes(' '.join(glued.split()))
+                    self.cases.append({
+                        'date': case_date,
+                        'url': anchor.xpath('./@href')[0],
+                        'docket': text.split('-')[0].replace('Concurrence', '').replace('Dissent', ''),
+                        'name': text.split('-', 1)[1],
+                    })
 
     def _get_case_names(self):
-        case_names = []
-        path = '//*[@id="AutoNumber1"]/tr[2]/td/table/tr/td//ul//text()'
-        for text in self.html.xpath(path):
-            if re.search(u'[–-]', text):
-                case_names.append(clean_string(text))
-        return case_names
+        return [case['name'] for case in self.cases]
 
     def _get_download_urls(self):
-        return list(self.html.xpath('//@href[contains(., ".pdf")]'))
+        return [case['url'] for case in self.cases]
 
     def _get_case_dates(self):
-        dates = []
-        target_cell = self.html.xpath('//table[@id="AutoNumber1"]/tr[2]/td/table/tr/td')[0]
-        for text in target_cell.xpath('//b//text() | //strong//text()'):
-            text_clean = clean_string(text)
-            if text_clean:
-                last_substring = text_clean.split()[-1]
-                if last_substring.endswith(':') and last_substring.count('/') == 2:
-                    date = convert_date_string(last_substring.rstrip(':'))
-                    count = len(text.getparent().xpath("following::ul[1]//a/@href[contains(., 'pdf')]"))
-                    dates.extend([date] * count)
-        return dates
+        return [case['date'] for case in self.cases]
 
     def _get_docket_numbers(self):
-        dockets = []
-        for text in self.html.xpath("//a[contains(./@href, '.pdf')]//text()"):
-            if re.search(r"(A?S?C\d{3,5})", text):
-                docket = text.strip('Dissent').strip('Concurrence').strip()
-                dockets.append(docket)
-        return dockets
+        return [case['docket'] for case in self.cases]
 
     def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_dates)
+        return ['Published'] * len(self.cases)
