@@ -15,7 +15,7 @@ from juriscraper.lib.date_utils import (
 )
 from juriscraper.lib.string_utils import (
     clean_string, fix_camel_case, force_unicode, harmonize, titlecase,
-    CaseNameTweaker, convert_date_string, normalize_dashes, get_dash_variations, split_date_range_string
+    CaseNameTweaker, convert_date_string, normalize_dashes, split_date_range_string
 )
 from juriscraper.opinions.united_states.state import alaska, colo, mass, massappct, nh, pa
 from juriscraper.oral_args.united_states.federal_appellate import ca6
@@ -680,9 +680,18 @@ class StringUtilTest(unittest.TestCase):
                     split_date_range_string(before)
 
     def test_normalize_dashes(self):
-        normal = u'-'
-        for dash in get_dash_variations():
-            self.assertEqual(normalize_dashes(dash), normal)
+        tests = [
+            # copied from http://www.w3schools.com/charsets/ref_utf_punctuation.asp
+            u' this is    –a test–',  # en dash
+            u' this is    —a test—',  # em dash
+            u' this is    ‐a test‐',  # hyphen
+            u' this is    ‑a test‑',  # non-breaking hyphen
+            u' this is    ‒a test‒',  # figure dash
+            u' this is    ―a test―',  # horizontal bar
+        ]
+        target = ' this is    -a test-'
+        for test in tests:
+            self.assertEqual(normalize_dashes(test), target)
 
 
 class ScraperSpotTest(unittest.TestCase):

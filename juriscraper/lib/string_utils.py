@@ -460,17 +460,11 @@ def split_date_range_string(date_range_string):
     dates_in_range = [start_date + timedelta(d) for d in range(delta.days + 1)]
     return dates_in_range[len(dates_in_range) / 2]
 
-def normalize_dashes(raw_string):
-    """Replace n-dash and m-dash with proper dash"""
-    normal = u'-'
-    clean = clean_string(raw_string)
-    for dash in get_dash_variations():
-        clean = clean.replace(dash, normal)
-    return clean
 
-def get_dash_variations():
-    """copied from http://www.w3schools.com/charsets/ref_utf_punctuation.asp"""
-    return [
+def normalize_dashes(raw_string):
+    """Replace various dash formats with normal dash"""
+    dashes = [
+        #copied from http://www.w3schools.com/charsets/ref_utf_punctuation.asp
         u'–',    # en dash
         u'—',    # em dash
         u'‐',    # hyphen
@@ -478,6 +472,10 @@ def get_dash_variations():
         u'‒',    # figure dash
         u'―',    # horizontal bar
     ]
+    normal = u'-'
+    for dash in dashes:
+        raw_string = raw_string.replace(dash, normal)
+    return raw_string
 
 
 class CaseNameTweaker(object):
