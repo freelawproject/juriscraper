@@ -15,7 +15,7 @@ from juriscraper.lib.date_utils import (
 )
 from juriscraper.lib.string_utils import (
     clean_string, fix_camel_case, force_unicode, harmonize, titlecase,
-    CaseNameTweaker, convert_date_string, normalize_dashes, split_date_range_string
+    CaseNameTweaker, convert_date_string, normalize_dashes, get_dash_variations, split_date_range_string
 )
 from juriscraper.opinions.united_states.state import alaska, colo, mass, massappct, nh, pa
 from juriscraper.oral_args.united_states.federal_appellate import ca6
@@ -680,14 +680,9 @@ class StringUtilTest(unittest.TestCase):
                     split_date_range_string(before)
 
     def test_normalize_dashes(self):
-        success = 'January - March 2016'
-        tests = {
-            success: success,                 # dash
-            'January – March 2016': success,  # en-dash
-            'January — March 2016': success,  # em-dash
-        }
-        for before, after in tests.items():
-            self.assertEqual(normalize_dashes(before), after)
+        normal = u'-'
+        for dash in get_dash_variations():
+            self.assertEqual(normalize_dashes(dash), normal)
 
 
 class ScraperSpotTest(unittest.TestCase):
