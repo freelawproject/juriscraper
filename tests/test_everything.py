@@ -680,14 +680,18 @@ class StringUtilTest(unittest.TestCase):
                     split_date_range_string(before)
 
     def test_normalize_dashes(self):
-        success = 'January - March 2016'
-        tests = {
-            success: success,                 # dash
-            'January – March 2016': success,  # en-dash
-            'January — March 2016': success,  # em-dash
-        }
-        for before, after in tests.items():
-            self.assertEqual(normalize_dashes(before), after)
+        tests = [
+            # copied from http://www.w3schools.com/charsets/ref_utf_punctuation.asp
+            u' this is    –a test–',  # en dash
+            u' this is    —a test—',  # em dash
+            u' this is    ‐a test‐',  # hyphen
+            u' this is    ‑a test‑',  # non-breaking hyphen
+            u' this is    ‒a test‒',  # figure dash
+            u' this is    ―a test―',  # horizontal bar
+        ]
+        target = ' this is    -a test-'
+        for test in tests:
+            self.assertEqual(normalize_dashes(test), target)
 
 
 class ScraperSpotTest(unittest.TestCase):
