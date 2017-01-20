@@ -2,6 +2,7 @@
 Scraper for Florida 5th District Court of Appeal
 CourtID: flaapp5
 Court Short Name: flaapp5
+Court Contact: 5dca@flcourts.org, 386-947-1530
 Author: Andrei Chelaru
 Reviewer: mlr
 History:
@@ -75,7 +76,7 @@ class Site(OpinionSite):
     def _return_case_names(self, html_tree):
         names = []
         for anchor in self._return_anchors_with_text(html_tree):
-            text = anchor.text_content().strip()
+            text = self.fix_court_year_id_typo(anchor.text_content().strip())
             names.append(re.search(self.case_regex, text).group(2))
         return names
 
@@ -122,7 +123,7 @@ class Site(OpinionSite):
     def _return_docket_numbers(self, html_tree):
         dockets = []
         for anchor in self._return_anchors_with_text(html_tree):
-            text = anchor.text_content().strip()
+            text = self.fix_court_year_id_typo(anchor.text_content().strip())
             docket_raw = re.search(self.case_regex, text).group(1)
             docket_clean = docket_raw.replace('&', '').replace(',', '')
             dockets.append(', '.join(docket_clean.split()))
@@ -132,3 +133,13 @@ class Site(OpinionSite):
     # we should only process href for anchors with text
     def _return_anchors_with_text(self, html_tree):
         return [a for a in html_tree.xpath(self.base_path) if a.text_content().strip()]
+
+    def fix_court_year_id_typo(self, text):
+        """Work around court typo
+        String missing leading '5', see fladistctapp_5_example_7.html
+        Will return the same exact string 99.99% of the time
+        """
+        court_year_id = text.split('-')[0]
+        if len(court_year_id) == 3 and court_year_id[0] == 'D':
+            text = '5%s' % text
+        return text
