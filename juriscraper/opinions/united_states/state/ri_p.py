@@ -1,6 +1,8 @@
 """Scraper for the Rhode Island Supreme Court
 CourtID: ri
 Court Short Name: R.I.
+Court Contact: webmaster@courts.ri.gov
+    https://www.courts.ri.gov/PDF/TelephoneDirectory.pdf
 Author: Brian W. Carver
 Date created: 2013-08-10
 """
@@ -99,6 +101,9 @@ class Site(OpinionSite):
             '(.*?)(,?\sNos?\.)(.*?)',
             # Clerk typo, forgot "No."/"Nos." substring
             '(.*?)(,?\s\d+-\d+(,|\s))(.*?)',
+            # Same as above, and there's an unconventional docket number
+            # like 'SU-14-324' instead of '14-324'. See ri_p_example_4.html
+            '(.*?)(,?\s(?:\w+-)?\d+-\d+(,|\s))(.*?)',
         ]
 
         for regex in regexes:
