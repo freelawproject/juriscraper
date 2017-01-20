@@ -21,6 +21,6 @@ class Site(pa.Site):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.pacourts.us/assets/rss/CommonwealthOpinionsRss.ashx"
-        self.set_regex("(.*)(?:- |et al. )(\d+.*\d{4})")
+        self.set_regex("(.*)(?:- |et al.\s+)(\d+.*\d{4})")
         self.base = "//item[not(contains(title/text(), 'Judgment List'))]" \
                     "[not(contains(title/text(), 'Reargument Table'))]"
