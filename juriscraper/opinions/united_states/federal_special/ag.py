@@ -35,6 +35,10 @@ class Site(OpinionSite):
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
 
+    def _get_summaries(self):
+        cells = self.html.xpath(self.cell_path % 3)
+        return [cell.text_content().strip() for cell in cells]
+
     def get_last_page(self):
         html = self._get_html_tree_by_url(self.url)
         path = "//li[contains(@class, 'pager__item--last')]/a[1]/@href"
