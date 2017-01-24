@@ -40,10 +40,14 @@ class Site(OpinionSite):
         return case_names
 
     def _get_download_urls(self):
+        # We'll accept an order document if the opinion document
+        # is missing. But we obviously prefer the opinion doc,
+        # so we put it first in the order below, and we take the
+        # first link that matches in path in each 4th cell.
         path = self.starting_table_row + '/td[4]//' \
                '  a[contains(.//text(), "Opinion") or ' \
                '    contains(.//text(), "Order") or ' \
-               '    contains(.//text(), "ORDER")]/@href'
+               '    contains(.//text(), "ORDER")][1]/@href'
         return [url for url in self.html.xpath(path)]
 
     def _get_case_dates(self):
