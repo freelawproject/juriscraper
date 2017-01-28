@@ -18,6 +18,8 @@ from lxml import html
 
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.string_utils import normalize_dashes
+from juriscraper.lib.string_utils import clean_string
 
 
 class Site(OpinionSite):
@@ -76,7 +78,7 @@ class Site(OpinionSite):
     def _return_case_names(self, html_tree):
         names = []
         for anchor in self._return_anchors_with_text(html_tree):
-            text = self.fix_court_year_id_typo(anchor.text_content().strip())
+            text = self.sanitize_text(anchor.text_content().strip())
             names.append(re.search(self.case_regex, text).group(2))
         return names
 
@@ -123,7 +125,7 @@ class Site(OpinionSite):
     def _return_docket_numbers(self, html_tree):
         dockets = []
         for anchor in self._return_anchors_with_text(html_tree):
-            text = self.fix_court_year_id_typo(anchor.text_content().strip())
+            text = self.sanitize_text(anchor.text_content().strip())
             docket_raw = re.search(self.case_regex, text).group(1)
             docket_clean = docket_raw.replace('&', '').replace(',', '')
             dockets.append(', '.join(docket_clean.split()))
@@ -133,6 +135,10 @@ class Site(OpinionSite):
     # we should only process href for anchors with text
     def _return_anchors_with_text(self, html_tree):
         return [a for a in html_tree.xpath(self.base_path) if a.text_content().strip()]
+
+    def sanitize_text(self, text):
+        """Prevent non-standard characters and typos from breaking regex"""
+        return self.fix_court_year_id_typo(clean_string(normalize_dashes(text)))
 
     def fix_court_year_id_typo(self, text):
         """Work around court typo
