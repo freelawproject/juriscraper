@@ -2,8 +2,8 @@ import re
 
 import requests
 
-from exceptions import BadLoginException
-from juriscraper.pacer.free_documents import logger
+from .exceptions import BadLoginException
+from .free_documents import logger
 
 
 def make_pacer_cookie_dict(name, value):
@@ -41,7 +41,7 @@ def login(court_id, username, password):
         headers={'User-Agent': 'Juriscraper'},
         verify=False,
         timeout=60,
-        files={
+        data={
             'login': ('', username),
             'key': ('', password)
         },

@@ -15,3 +15,5 @@ juriscraper.egg-info/
 # Private PACER stuff and test fixtures
 juriscraper/pacer/private_settings.py
 tests/fixtures/cassettes/
+
+.tox

@@ -4,6 +4,7 @@ import re
 import string
 import calendar
 import geonamescache
+import six
 from dateutil import parser
 from datetime import timedelta
 
@@ -31,6 +32,8 @@ APOS_SECOND = re.compile(r"^[dol]{1}['‘]{1}[a-z]+$", re.I)
 ALL_CAPS = re.compile(r'^[A-Z\s%s%s%s]+$' % (PUNCT, WEIRD_CHARS, NUMS))
 UC_INITIALS = re.compile(r"^(?:[A-Z]{1}\.{1}|[A-Z]{1}\.{1}[A-Z]{1})+,?$")
 MAC_MC = re.compile(r'^([Mm]a?c)(\w+.*)')
+
+
 def titlecase(text, DEBUG=False):
     """Titlecases input text
 
@@ -50,10 +53,10 @@ def titlecase(text, DEBUG=False):
         # if, after removing small words, the entire string is uppercase,
         # we lowercase it
         if DEBUG:
-            print "Entire string is uppercase, thus lowercasing."
+            print("Entire string is uppercase, thus lowercasing.")
         text = text.lower()
     elif not text_sans_small_words.isupper() and DEBUG:
-        print "Entire string not upper case. Not lowercasing: %s" % text
+        print("Entire string not upper case. Not lowercasing: %s" % text)
 
     lines = re.split('[\r\n]+', text)
     processed = []
@@ -63,29 +66,29 @@ def titlecase(text, DEBUG=False):
         tc_line = []
         for word in words:
             if DEBUG:
-                print "Word: " + word
+                print("Word: " + word)
             if all_caps:
                 if UC_INITIALS.match(word):
                     if DEBUG:
-                        print "  UC_INITIALS match for: " + word
+                        print("  UC_INITIALS match for: " + word)
                     tc_line.append(word)
                     continue
                 else:
                     if DEBUG:
-                        print "  Not initials. Lowercasing: " + word
+                        print("  Not initials. Lowercasing: " + word)
                     word = word.lower()
 
             if APOS_SECOND.match(word):
                 # O'Reiley, L'Oreal, D'Angelo
                 if DEBUG:
-                    print "  APOS_SECOND matched. Fixing it: " + word
+                    print("  APOS_SECOND matched. Fixing it: " + word)
                 word = word[0:3].upper() + word[3:]
                 tc_line.append(word)
                 continue
 
             if INLINE_PERIOD.search(word):
                 if DEBUG:
-                    print "  INLINE_PERIOD matched. Uppercasing if == 1 char: " + word
+                    print("  INLINE_PERIOD matched. Uppercasing if == 1 char: " + word)
                 parts = word.split('.')
                 new_parts = []
                 for part in parts:
@@ -102,7 +105,7 @@ def titlecase(text, DEBUG=False):
             if INLINE_SLASH.search(word):
                 # This repeats INLINE_PERIOD. Could be more elegant.
                 if DEBUG:
-                    print "  INLINE_SLASH matched. Uppercasing if == 1 char: " + word
+                    print("  INLINE_SLASH matched. Uppercasing if == 1 char: " + word)
                 parts = word.split('/')
                 new_parts = []
                 for part in parts:
@@ -119,33 +122,33 @@ def titlecase(text, DEBUG=False):
             amp_match = INLINE_AMPERSAND.match(word)
             if amp_match:
                 if DEBUG:
-                    print "  INLINE_AMPERSAND matched. Uppercasing: " + word
+                    print("  INLINE_AMPERSAND matched. Uppercasing: " + word)
                 tc_line.append("%s%s" % (amp_match.group(1).upper(),
                                          amp_match.group(2)))
                 continue
 
             if UC_ELSEWHERE.match(word):
                 if DEBUG:
-                    print "  UC_ELSEWHERE matched. Leaving unchanged: " + word
+                    print("  UC_ELSEWHERE matched. Leaving unchanged: " + word)
                 tc_line.append(word)
                 continue
 
             if SMALL_WORDS.match(word):
                 if DEBUG:
-                    print "  SMALL_WORDS matched. Lowercasing: " + word
+                    print("  SMALL_WORDS matched. Lowercasing: " + word)
                 tc_line.append(word.lower())
                 continue
 
             if BIG_WORDS.match(word):
                 if DEBUG:
-                    print "  BIG_WORDS matched. Uppercasing: " + word
+                    print("  BIG_WORDS matched. Uppercasing: " + word)
                 tc_line.append(word.upper())
                 continue
 
             match = MAC_MC.match(word)
             if match and (word not in ['mack', 'machine']):
                 if DEBUG:
-                    print "  MAC_MAC matched. Capitlizing: " + word
+                    print("  MAC_MAC matched. Capitlizing: " + word)
                 tc_line.append("%s%s" % (match.group(1).capitalize(),
                                          match.group(2).capitalize()))
                 continue
@@ -182,7 +185,7 @@ def fix_camel_case(s):
         s_out = s
     else:
         s_out = s[0]
-        for i in xrange(1, len(s)):
+        for i in six.moves.range(1, len(s)):
             # Iterate over the letters, starting with the second one.
             if s[i - 1].isupper() and s[i].isupper():
                 # A pattern like 'PAPublic' --> PA Public
@@ -363,20 +366,20 @@ def clean_string(s):
 
 
 def force_unicode(s, encoding='utf-8', strings_only=False, errors='strict'):
-    # Borrows heavily from django.utils.encoding.force_unicde.
+    # Borrows heavily from django.utils.encoding.force_unicode.
     # This should be applied to *input* not *output*!
     # Handle the common case first, saves 30-40% in performance when s
     # is an instance of unicode. This function gets called often in that
     # setting.
-    if isinstance(s, unicode):
+    if isinstance(s, six.text_type):
         return s
     try:
-        if not isinstance(s, basestring,):
+        if not isinstance(s, six.string_types):
             if hasattr(s, '__unicode__'):
-                s = unicode(s)
+                s = six.text_type(s)
             else:
                 try:
-                    s = unicode(str(s), encoding, errors)
+                    s = six.text_type(str(s), encoding, errors)
                 except UnicodeEncodeError:
                     if not isinstance(s, Exception):
                         raise
@@ -388,12 +391,12 @@ def force_unicode(s, encoding='utf-8', strings_only=False, errors='strict'):
                     # output should be.
                     s = ' '.join([force_unicode(arg, encoding, strings_only,
                             errors) for arg in s])
-        elif not isinstance(s, unicode):
+        elif not isinstance(s, six.text_type):
             # Note: We use .decode() here, instead of unicode(s, encoding,
             # errors), so that if s is a SafeString, it ends up being a
             # SafeUnicode at the end.
             s = s.decode(encoding, errors)
-    except UnicodeDecodeError, e:
+    except UnicodeDecodeError as e:
         if not isinstance(s, Exception):
             raise
         else:
@@ -458,7 +461,7 @@ def split_date_range_string(date_range_string):
     end_date = convert_date_string('%s %d, %s' % (month2, last_day, year))
     delta = end_date - start_date
     dates_in_range = [start_date + timedelta(d) for d in range(delta.days + 1)]
-    return dates_in_range[len(dates_in_range) / 2]
+    return dates_in_range[int(len(dates_in_range) / 2)]
 
 
 def normalize_dashes(raw_string):

@@ -23,7 +23,7 @@ class Site(OpinionSite):
         self.back_scrape_iterable = [i.date() for i in rrule(
             DAILY,
             interval=self.interval,  # Every interval days
-            dtstart=date(1992, 05, 14),
+            dtstart=date(1992, 5, 14),
             until=date(2015, 1, 1),
         )]
         self.uses_selenium = True

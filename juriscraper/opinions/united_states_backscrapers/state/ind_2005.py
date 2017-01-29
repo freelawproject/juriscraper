@@ -41,7 +41,7 @@ class Site(OpinionSite):
                 dates.append(date.fromtimestamp(
                     time.mktime(time.strptime(date_string, '%m%d%y'))))
             else:
-                print date_string
+                print(date_string)
         return dates
 
     def _get_download_urls(self):

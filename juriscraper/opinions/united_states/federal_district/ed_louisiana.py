@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import datetime
-import urlparse
+from six.moves.urllib import urlparse
 
 import sys
 from dateutil.rrule import rrule, DAILY
@@ -97,4 +97,3 @@ class Site(OpinionSite):
             # Setting status is important because it prevents the download
             # function from being run a second time by the parse method.
             self.status = 200
-

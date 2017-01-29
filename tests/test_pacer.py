@@ -90,13 +90,13 @@ class PacerFreeOpinionsTest(unittest.TestCase):
                         responses = report.query(some_date, some_date)
                     except ConnectionError as e:
                         if retry_count <= max_retries:
-                            print ("%s. Trying again (%s of %s)" %
-                                   (e, retry_count, max_retries))
+                            print("%s. Trying again (%s of %s)" %
+                                (e, retry_count, max_retries))
                             time.sleep(15)  # Give the server a moment of rest.
                             retry_count += 1
                             continue
                         else:
-                            print "%s: Repeated errors at this court." % e
+                            print("%s: Repeated errors at this court." % e)
                             raise e
                     if not responses:
                         break  # Not a supported court.

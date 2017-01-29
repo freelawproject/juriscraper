@@ -67,7 +67,7 @@ class Site(OpinionSite):
 
     def _download_backwards(self, dt):
         self.end_date = dt + timedelta(days=6)
-        self.resource_org_end_date = date(2007, 07, 31)
+        self.resource_org_end_date = date(2007, 7, 31)
         # We only get unpublished docs when we're in a period of time during which we have resource.org docs.
         self.only_get_unpublished = (self.end_date < self.resource_org_end_date)
         self.parameters['FROMDATE'] = dt.strftime('%m-%d-%Y')

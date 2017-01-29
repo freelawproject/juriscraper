@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import six
 from math import ceil
 
 from dateutil.parser import _timelex, parser, parserinfo
@@ -108,11 +109,11 @@ def parse_dates(s, debug=False, sane_start=datetime.datetime(1750, 1, 1),
 
     # Ditch unicode (_timelex() flips out on unicode if the system has
     # cStringIO installed -- the default)
-    if isinstance(s, unicode):
-        s = s.encode('ascii', 'ignore')
+    #if isinstance(s, six.text_type):
+    #    s = s.encode('ascii', 'ignore')
 
     # Fix misspellings
-    for i, j in MISSPELLINGS.iteritems():
+    for i, j in six.iteritems(MISSPELLINGS):
         s = s.replace(i, j)
 
 
@@ -127,7 +128,7 @@ def parse_dates(s, debug=False, sane_start=datetime.datetime(1750, 1, 1),
             hit_default_day_and_month = (d.month == DEFAULT.month and d.day == DEFAULT.day)
             if not any([hit_default_year, hit_default_day_and_month]):
                 if debug:
-                    print "Item %s parsed as: %s" % (item, d)
+                    print("Item %s parsed as: %s" % (item, d))
                 if sane_start < d < sane_end:
                     dates.append(d)
         except OverflowError:

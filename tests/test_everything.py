@@ -8,6 +8,7 @@ import sys
 import time
 import unittest
 import vcr
+import six
 
 from juriscraper.lib.importer import build_module_list
 from juriscraper.lib.date_utils import (
@@ -43,7 +44,7 @@ class DateParserTest(unittest.TestCase):
              [datetime.datetime(1924, 9, 19)]),
             # Using 'Term' as an indicator.
             ('November Term 2004.',
-             [datetime.datetime(2004, 11, 01)]),
+             [datetime.datetime(2004, 11, 1)]),
             (u'April 26, 1961.[†]',
              [datetime.datetime(1961, 4, 26)]),
         )
@@ -60,7 +61,7 @@ class DateParserTest(unittest.TestCase):
             '12/01/2806': '12/01/2806',                     # Should not change
             '12/01/2886': '12/01/2886',                     # Should not change
         }
-        for before, after in expectations.iteritems():
+        for before, after in six.iteritems(expectations):
             fixed_date = fix_future_year_typo(convert_date_string(before))
             self.assertEqual(fixed_date, convert_date_string(after))
 
@@ -83,8 +84,8 @@ class ScraperExampleTest(unittest.TestCase):
         module_strings = build_module_list('juriscraper')
         num_scrapers = len([s for s in module_strings
                             if 'backscraper' not in s])
-        print "Testing {count} scrapers against their example files:".format(
-            count=num_scrapers)
+        msg = "Testing {count} scrapers against their example files:"
+        print(msg.format(count=num_scrapers))
         max_len_mod_string = max(len(mod) for mod in module_strings
                                  if 'backscraper' not in mod) + 2
         num_example_files = 0
@@ -155,19 +156,16 @@ class ScraperExampleTest(unittest.TestCase):
                 else:
                     msg = ''
 
-                print '(%s test(s) in %0.1f seconds%s)' % (
-                    num_tests, speed, msg
-                )
+                print('(%s test(s) in %0.1f seconds%s)' % (num_tests, speed, msg))
 
         print ("\n{num_scrapers} scrapers tested successfully against "
                "{num_example_files} example files, with {num_warnings} "
                "speed warnings.".format(
-            num_scrapers=num_scrapers,
-            num_example_files=num_example_files,
-            num_warnings=num_warnings,
-        ))
+                    num_scrapers=num_scrapers,
+                    num_example_files=num_example_files,
+                    num_warnings=num_warnings,))
         if num_warnings:
-            print ("\nAt least one speed warning was triggered during the "
+            print("\nAt least one speed warning was triggered during the "
                    "tests. If this is due to a slow scraper you wrote, we "
                    "suggest attempting to speed it up, as it will be slow "
                    "both in production and while running tests. This is "
@@ -175,8 +173,8 @@ class ScraperExampleTest(unittest.TestCase):
                    "future as performance requirements are tightened.")
         else:
             # Someday, this line of code will be run. That day is not today.
-            print "\nNo speed warnings detected. That's great, keep up the " \
-                  "good work!"
+            print("\nNo speed warnings detected. That's great, keep up the " \
+                  "good work!")
 
 
 class StringUtilTest(unittest.TestCase):
@@ -387,7 +385,7 @@ class StringUtilTest(unittest.TestCase):
     def test_quarter(self):
         answers = {1: 1, 2: 1, 3: 1, 4: 2, 5: 2, 6: 2, 7: 3, 8: 3, 9: 3, 10: 4,
                    11: 4, 12: 4}
-        for month, q in answers.iteritems():
+        for month, q in six.iteritems(answers):
             self.assertEqual(quarter(month), q)
 
     def test_is_first_month_in_quarter(self):
@@ -400,7 +398,7 @@ class StringUtilTest(unittest.TestCase):
             6: False,
             7: True,
         }
-        for month, is_first in answers.iteritems():
+        for month, is_first in six.iteritems(answers):
             self.assertEqual(is_first_month_in_quarter(month), is_first)
 
     def test_harmonize_and_clean_string_tests(self):
@@ -617,7 +615,7 @@ class StringUtilTest(unittest.TestCase):
             ['CARVER v. US',
              u'Carver v. US']]
         for pair in test_pairs:
-            self.assertEqual(titlecase(force_unicode(pair[0])),
+            self.assertEqual(titlecase(force_unicode(pair[0]), DEBUG=True),
                              pair[1])
 
     def test_fixing_camel_case(self):
@@ -907,7 +905,7 @@ class ScraperSpotTest(unittest.TestCase):
         }
 
         scraper = colo.Site()
-        for raw_string, data in tests.iteritems():
+        for raw_string, data in six.iteritems(tests):
             for field in ['docket', 'name']:
                 attribute = '_extract_%s_from_text' % field
                 result = getattr(scraper, attribute)(raw_string)

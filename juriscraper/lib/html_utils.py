@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
-from urlparse import urlsplit
-from urlparse import urlunsplit
+from six import text_type
+from six.moves.urllib.parse import urlsplit, urlunsplit
 
 import re
 from lxml import html
@@ -78,7 +78,11 @@ def set_response_encoding(request):
             # HTTP headers. This way it is done before r.text is accessed
             # (which would do it with vanilla chardet). This is a big
             # performance boon, and can be removed once requests is upgraded
-            request.encoding = chardet.detect(request.content)['encoding']
+            if isinstance(request.content, text_type):
+                as_bytes = request.content.encode()
+                request.encoding = chardet.detect(as_bytes)['encoding']
+            else:
+                request.encoding = chardet.detect(request.content)['encoding']
 
 
 def clean_html(text):
@@ -100,7 +104,7 @@ def clean_html(text):
     # attribute, but we remove it in all cases, as there's no downside to
     # removing it. This moves our encoding detection to chardet, rather than
     # lxml.
-    if isinstance(text, unicode):
+    if isinstance(text, text_type):
         text = re.sub(r'^\s*<\?xml\s+.*?\?>', '', text)
 
     # Fix </br>
