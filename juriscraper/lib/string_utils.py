@@ -155,7 +155,7 @@ def titlecase(text, DEBUG=False):
 
             hyphenated = []
             for item in word.split('-'):
-                hyphenated.append(CAPFIRST.sub(lambda m: m.group(0).upper(), item))
+                hyphenated.append(_uppercase_word(item))
             tc_line.append("-".join(hyphenated))
 
         result = " ".join(tc_line)
@@ -176,6 +176,26 @@ def titlecase(text, DEBUG=False):
     text = re.sub(re.compile(r'\WV\.\W'), ' v. ', text)
 
     return text
+
+def _uppercase_word(word):
+    """
+    Helper function for uppercasing a word if it doesn't begin with Unicode characters.
+
+    This is needed due to differences between Python 2 and 3.
+    :param word: unicode string to uppercase
+    """
+    if six.PY2:
+        return CAPFIRST.sub(lambda m: m.group(0).upper(), word)
+    else:
+        try:
+            word[0].encode('ascii')
+            # doesn't start with unicode
+            return CAPFIRST.sub(lambda m: m.group(0).upper(), word)
+        except UnicodeEncodeError:
+            # starts with unicode
+            pass
+
+    return word
 
 
 def fix_camel_case(s):
