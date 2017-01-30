@@ -12,7 +12,7 @@ from requests import ConnectionError
 from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.pacer import DocketReport, FreeOpinionReport
-from juriscraper.pacer.http import login, PacerSession
+from juriscraper.pacer.http import login, PacerSession, BadLoginException
 from juriscraper.pacer.utils import (
     get_courts_from_json, get_court_id_from_url,
     get_pacer_case_id_from_docket_url, get_pacer_document_number_from_doc1_url,
@@ -43,13 +43,22 @@ class PacerSessionTest(unittest.TestCase):
         self.session = PacerSession()
 
     def test_data_transformation(self):
+        """
+        Test our data transformation routine for building out PACER-compliant
+        multi-part form data
+        """
         data = {'case_id': 123, 'case_type': 'something'}
         expected = {'case_id': (None, 123), 'case_type': (None, 'something')}
         output = self.session._prepare_multipart_form_data(data)
         self.assertEqual(output, expected)
 
-    @mock.patch('juriscraper.pacer.http.Session.post')
+    @mock.patch('juriscraper.pacer.http.requests.Session.post')
     def test_ignores_non_data_posts(self, mock_post):
+        """
+        Test that POSTs without a data parameter just pass through as normal.
+
+        :param mock_post: mocked Session.post method
+        """
         data = {'name': ('filename', 'junk')}
 
         self.session.post('http://free.law', files=data)
@@ -59,8 +68,14 @@ class PacerSessionTest(unittest.TestCase):
         self.assertEqual(data, mock_post.call_args[1]['files'],
                          'the data should not be changed if using a files call')
 
-    @mock.patch('juriscraper.pacer.http.Session.post')
+    @mock.patch('juriscraper.pacer.http.requests.Session.post')
     def test_transforms_data_on_post(self, mock_post):
+        """
+        Test that POSTs using the data parameter get transformed into PACER's
+        delightfully odd multi-part form data.
+
+        :param mock_post: mocked Session.post method
+        """
         data = {'name': 'dave', 'age': 33}
         expected = {'name': (None, 'dave'), 'age': (None, 33)}
 
@@ -72,6 +87,17 @@ class PacerSessionTest(unittest.TestCase):
                          'we should intercept data arguments')
         self.assertEqual(expected, mock_post.call_args[1]['files'],
                          'we should transform and populate the files argument')
+
+    @mock.patch('juriscraper.pacer.http.requests.Session.post')
+    def test_sets_default_timeout(self, mock_post):
+        self.session.post('http://free.law', data={})
+
+        self.assertTrue(mock_post.called,
+                        'request.Session.post should be called')
+        self.assertIn('timeout', mock_post.call_args[1],
+                      'we should add a default timeout automatically')
+        self.assertEqual(300, mock_post.call_args[1]['timeout'],
+                         'default should be 300')
 
 
 class PacerAuthTest(unittest.TestCase):
@@ -87,7 +113,10 @@ class PacerAuthTest(unittest.TestCase):
     def test_logging_in(self):
         for court in self.courts:
             court_id = get_court_id_from_url(court['court_link'])
-            login(court_id, self.username, self.password)
+            try:
+                login(court_id, self.username, self.password)
+            except BadLoginException:
+                self.fail('Could not log into court %s' % court)
 
 
 class PacerFreeOpinionsTest(unittest.TestCase):
@@ -243,16 +272,6 @@ class PacerDocketReportTest(unittest.TestCase):
         self.assertNotIn('Rosado', r.text, msg="Got terminated party info but "
                                                "it wasn't requested.")
 
-    @staticmethod
-    def _get_text(response):
-        """
-        Python 2/3 Wrapper for getting a string of the response body
-        :param response: requests' response object
-        :return: string representation of the HTTP response body
-        """
-        if six.PY2:
-            return response.text
-        return response.content
 
 class PacerUtilTest(unittest.TestCase):
     """A variety of tests of our simple utilities."""

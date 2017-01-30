@@ -18,6 +18,10 @@ def read(*parts):
     with codecs.open(os.path.join(HERE, *parts), "rb", "utf-8") as f:
         return f.read()
 
+requirements = [
+    str(r.req) for r in
+    parse_requirements('requirements.txt', session=False)
+]
 
 setup(
     name="juriscraper",
@@ -42,14 +46,15 @@ setup(
         "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: Implementation :: CPython",
         "Programming Language :: Python :: Implementation :: PyPy",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-    install_requires=[
-        str(r.req) for r in
-        parse_requirements('requirements.txt', session=False)
-    ],
+    install_requires=requirements,
+    tests_require=['mock', 'vcrpy'],
     include_package_data=True,
     test_suite='tests',
 )
