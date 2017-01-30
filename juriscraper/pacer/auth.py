@@ -1,6 +1,7 @@
 import re
 
 import requests
+from requests.cookies import RequestsCookieJar
 
 from .exceptions import BadLoginException
 from .free_documents import logger
@@ -33,7 +34,7 @@ def make_login_url(court_id):
 
 def login(court_id, username, password):
     """Log into a PACER jurisdiction. Return cookies for the user."""
-    s = requests.session()
+    s = requests.Session()
     url = make_login_url(court_id)
     logger.info("Logging into: %s at %s" % (court_id, url))
     r = s.post(
@@ -42,8 +43,8 @@ def login(court_id, username, password):
         verify=False,
         timeout=60,
         data={
-            'login': ('', username),
-            'key': ('', password)
+            'login': username,
+            'key': password
         },
     )
     if 'Invalid ID or password' in r.text:
@@ -52,4 +53,6 @@ def login(court_id, username, password):
     # The cookie value is in the HTML. Extract it.
     m = re.search('PacerSession=(\w+);', r.text)
     if m is not None:
-        return make_pacer_cookie_dict('PacerSession', m.group(1))
+        jar = RequestsCookieJar()
+        jar.set('PacerSession', m.group(1), domain='.uscourts.gov', path='/')
+        return jar

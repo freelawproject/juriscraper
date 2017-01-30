@@ -1,15 +1,17 @@
 import requests
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.requests_utils import post_to_pacer
 
 logger = make_default_logger()
 
 
 class DocketReport(object):
-    def __init__(self, court_id, cookie):
+    def __init__(self, court_id, cookie_jar):
         self.court_id = court_id
-        self.session = requests.session()
-        if cookie:
-            self.session.cookies.set(**cookie)
+        self.session = requests.Session()
+        self.session.headers.update({'User-Agent': 'Juriscraper'})
+        if cookie_jar:
+            self.session.cookies = cookie_jar
         super(DocketReport, self).__init__()
 
     @property
@@ -104,10 +106,5 @@ class DocketReport(object):
 
         logger.info("Querying docket report for case ID '%s' with params %s" %
                     (pacer_case_id, files_params))
-        return self.session.post(
-            self.url + '?1-L_1_0-1',
-            headers={'User-Agent': 'Juriscraper'},
-            verify=False,
-            timeout=300,
-            files=files_params,
-        )
+
+        return post_to_pacer(self.session, self.url + '?1-L_1_0-1', files_params)

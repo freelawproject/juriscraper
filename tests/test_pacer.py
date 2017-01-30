@@ -55,14 +55,13 @@ class PacerFreeOpinionsTest(unittest.TestCase):
     def setUp(self):
         self.username, self.password = get_pacer_credentials_or_skip()
         # CAND chosen at random
-        self.cookie = login('cand', self.username, self.password)
+        cookie_jar = login('cand', self.username, self.password)
         with open('juriscraper/pacer/courts.json') as j:
             self.courts = get_courts_from_json(json.load(j))
         self.reports = {}
         for court in self.courts:
             court_id = get_court_id_from_url(court['court_link'])
-            self.reports[court_id] = FreeOpinionReport(court_id,
-                                                       self.cookie)
+            self.reports[court_id] = FreeOpinionReport(court_id, cookie_jar)
 
     @vcr.use_cassette(record_mode='new_episodes')
     def test_extract_written_documents_report(self):
@@ -136,8 +135,8 @@ class PacerDocketReportTest(unittest.TestCase):
     """A variety of tests for the docket report"""
 
     def setUp(self):
-        self.cookie = login('psc', 'tr1234', 'Pass!234')
-        self.report = DocketReport('psc', self.cookie)
+        cookie = login('psc', 'tr1234', 'Pass!234')
+        self.report = DocketReport('psc', cookie)
         self.pacer_case_id = '62866'
 
     def count_rows(self, html):

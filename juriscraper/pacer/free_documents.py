@@ -10,6 +10,7 @@ from juriscraper.lib.html_utils import (
 )
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.requests_utils import post_to_pacer
 from juriscraper.pacer.utils import (
     get_pacer_case_id_from_docket_url, make_doc1_url,
     get_pacer_document_number_from_doc1_url, get_court_id_from_url,
@@ -24,11 +25,11 @@ class FreeOpinionReport(object):
     EXCLUDED_COURT_IDS = ['casb', 'ganb', 'innb', 'mieb', 'miwb', 'nmib', 'nvb',
                           'ohsb', 'tnwb', 'vib']
 
-    def __init__(self, court_id, cookie):
+    def __init__(self, court_id, cookie_jar):
         self.court_id = court_id
-        self.session = requests.session()
-        if cookie:
-            self.session.cookies.set(**cookie)
+        self.session = requests.Session()
+        if cookie_jar:
+            self.session.cookies = cookie_jar
         super(FreeOpinionReport, self).__init__()
 
     @property
@@ -52,19 +53,15 @@ class FreeOpinionReport(object):
             # Iterate one day at a time. Any more and PACER chokes.
             logger.info("Querying written opinions report for '%s' between %s "
                         "and %s" % (self.court_id, d, d))
-            responses.append(self.session.post(
-                self.url + '?1-L_1_0-1',
-                headers={'User-Agent': 'Juriscraper'},
-                verify=False,
-                timeout=300,
-                files={
+            data = {
                     'filed_from': ('', d),
                     'filed_to': ('', d),
                     'ShowFull': ('', '1'),
                     'Key1': ('', 'cs_sort_case_numb'),
-                    'all_case_ids': ('', '0'),
-                }
-            ))
+                    'all_case_ids': ('', '0')
+            }
+            response = post_to_pacer(self.session, self.url + '?1-L_1_0-1', data)
+            responses.append(response)
         return responses
 
     @staticmethod
