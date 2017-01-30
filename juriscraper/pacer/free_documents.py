@@ -27,7 +27,8 @@ class FreeOpinionReport(object):
     def __init__(self, court_id, cookie):
         self.court_id = court_id
         self.session = requests.session()
-        self.session.cookies.set(**cookie)
+        if cookie:
+            self.session.cookies.set(**cookie)
         super(FreeOpinionReport, self).__init__()
 
     @property

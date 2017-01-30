@@ -2,6 +2,7 @@ import json
 import os
 import time
 import unittest
+import six
 from datetime import timedelta, date
 
 import vcr
@@ -152,32 +153,32 @@ class PacerDocketReportTest(unittest.TestCase):
     def test_queries(self):
         """Do a variety of queries work?"""
         r = self.report.query(self.pacer_case_id)
-        self.assertIn('Deft previously', r.text,
+        self.assertIn('Deft previously', self._get_text(r),
                       msg="Super basic query failed")
 
         r = self.report.query(self.pacer_case_id, date_start=date(2007, 2, 7))
-        row_count = self.count_rows(r.text)
+        row_count = self.count_rows(self._get_text(r))
         self.assertEqual(row_count, 25, msg="Didn't get expected number of "
                                             "rows when filtering by start "
                                             "date. Got %s." % row_count)
 
         r = self.report.query(self.pacer_case_id, date_start=date(2007, 2, 7),
                               date_end=date(2007, 2, 8))
-        row_count = self.count_rows(r.text)
+        row_count = self.count_rows(self._get_text(r))
         self.assertEqual(row_count, 2, msg="Didn't get expected number of "
                                            "rows when filtering by start and "
                                            "end dates. Got %s." % row_count)
 
         r = self.report.query(self.pacer_case_id, doc_num_start=5,
                               doc_num_end=5)
-        row_count = self.count_rows(r.text)
+        row_count = self.count_rows(self._get_text(r))
         self.assertEqual(row_count, 1, msg="Didn't get expected number of rows "
                                            "when filtering by doc number. Got "
                                            "%s" % row_count)
 
         r = self.report.query(self.pacer_case_id, date_start=date(2007, 2, 7),
                               date_end=date(2007, 2, 8), date_range_type="Entered")
-        row_count = self.count_rows(r.text)
+        row_count = self.count_rows(self._get_text(r))
         self.assertEqual(row_count, 2, msg="Didn't get expected number of rows "
                                            "when filtering by start and end "
                                            "dates and date_range_type of "
@@ -185,23 +186,33 @@ class PacerDocketReportTest(unittest.TestCase):
 
         r = self.report.query(self.pacer_case_id, doc_num_start=500,
                               show_parties_and_counsel=True)
-        self.assertIn('deRosas', r.text, msg="Didn't find party info when it "
-                                             "was explicitly requested.")
+        self.assertIn('deRosas', self._get_text(r), msg="Didn't find party info when it "
+                                                        "was explicitly requested.")
         r = self.report.query(self.pacer_case_id, doc_num_start=500,
                               show_parties_and_counsel=False)
-        self.assertNotIn('deRosas', r.text, msg="Got party info but it was not "
-                                                "requested.")
+        self.assertNotIn('deRosas', self._get_text(r), msg="Got party info but it was not "
+                                                           "requested.")
 
         r = self.report.query(self.pacer_case_id, doc_num_start=500,
                               show_terminated_parties=True,
                               show_parties_and_counsel=True)
-        self.assertIn('Rosado', r.text, msg="Didn't get terminated party info "
-                                            "when it was requested.")
+        self.assertIn('Rosado', self._get_text(r), msg="Didn't get terminated party info "
+                                                       "when it was requested.")
         r = self.report.query(self.pacer_case_id, doc_num_start=500,
                               show_terminated_parties=False)
-        self.assertNotIn('Rosado', r.text, msg="Got terminated party info but "
-                                               "it wasn't requested.")
+        self.assertNotIn('Rosado', self._get_text(r), msg="Got terminated party info but "
+                                                          "it wasn't requested.")
 
+    @staticmethod
+    def _get_text(response):
+        """
+        Python 2/3 Wrapper for getting a string of the response body
+        :param response: requests' response object
+        :return: string representation of the HTTP response body
+        """
+        if six.PY2:
+            return response.text
+        return response.content
 
 class PacerUtilTest(unittest.TestCase):
     """A variety of tests of our simple utilities."""
