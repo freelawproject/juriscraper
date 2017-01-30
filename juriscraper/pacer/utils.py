@@ -1,4 +1,3 @@
-import certifi
 import re
 import requests
 import tldextract

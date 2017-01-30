@@ -1,17 +1,12 @@
-import requests
 from juriscraper.lib.log_tools import make_default_logger
-from juriscraper.lib.requests_utils import post_to_pacer
 
 logger = make_default_logger()
 
 
 class DocketReport(object):
-    def __init__(self, court_id, cookie_jar):
+    def __init__(self, court_id, pacer_session):
         self.court_id = court_id
-        self.session = requests.Session()
-        self.session.headers.update({'User-Agent': 'Juriscraper'})
-        if cookie_jar:
-            self.session.cookies = cookie_jar
+        self.session = pacer_session
         super(DocketReport, self).__init__()
 
     @property
@@ -70,41 +65,43 @@ class DocketReport(object):
                              "counsel are not also requested.")
 
         files_params = {
-            'all_case_ids': ('', pacer_case_id),
-            'sort1': ('', order_by),
-            'date_range_type': ('', date_range_type),
-            'output_format': ('', output_format),
+            'all_case_ids': (None, pacer_case_id),
+            'sort1': (None, order_by),
+            'date_range_type': (None, date_range_type),
+            'output_format': (None, output_format),
 
             # Any value works in this parameter, but it cannot be blank.
             # Normally this would have a value like '3:12-cv-3879', but that's
             # not even necessary.
-            'case_num': ('', ' '),
+            'case_num': (None, ' '),
 
             # These fields seem to be unnecessary/unused.
-            # 'view_comb_doc_text': ('', ''),
-            # 'PreResetField': ('', ''),
-            # 'PreResetFields': ('', ''),
+            # 'view_comb_doc_text': (None, ''),
+            # 'PreResetField': (None, ''),
+            # 'PreResetFields': (None, ''),
         }
         if date_start:
-            files_params['date_from'] = ('', date_start.strftime('%m/%d/%Y'))
+            files_params['date_from'] = (None, date_start.strftime('%m/%d/%Y'))
         if date_end:
-            files_params['date_to'] = ('', date_end.strftime('%m/%d/%Y'))
+            files_params['date_to'] = (None, date_end.strftime('%m/%d/%Y'))
         if doc_num_start:
-            files_params['documents_numbered_from_'] = ('', str(int(doc_num_start)))
+            files_params['documents_numbered_from_'] = (None, str(int(doc_num_start)))
         if doc_num_end:
-            files_params['documents_numbered_to_'] = ('', str(int(doc_num_end)))
+            files_params['documents_numbered_to_'] = (None, str(int(doc_num_end)))
         if show_parties_and_counsel is True:
-            files_params['list_of_parties_and_counsel'] = ('', 'on')
+            files_params['list_of_parties_and_counsel'] = (None, 'on')
         if show_terminated_parties is True:
-            files_params['terminated_parties'] = ('', 'on')
+            files_params['terminated_parties'] = (None, 'on')
         if show_list_of_member_cases is True:
-            files_params['list_of_member_cases'] = ('', 'on')
+            files_params['list_of_member_cases'] = (None, 'on')
         if include_pdf_headers is True:
-            files_params['pdf_header'] = ('', '1')
+            files_params['pdf_header'] = (None, '1')
         if show_multiple_docs is True:
-            files_params['view_multi_docs'] = ('', 'on')
+            files_params['view_multi_docs'] = (None, 'on')
 
         logger.info("Querying docket report for case ID '%s' with params %s" %
                     (pacer_case_id, files_params))
 
-        return post_to_pacer(self.session, self.url + '?1-L_1_0-1', files_params)
+        return self.session.post(self.url + '?1-L_1_0-1',
+                                 files=files_params,
+                                 timeout=300)

@@ -6,12 +6,13 @@ import six
 from datetime import timedelta, date
 
 import vcr
+import mock
 from requests import ConnectionError
 
 from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.pacer import DocketReport, FreeOpinionReport
-from juriscraper.pacer.auth import login
+from juriscraper.pacer.http import login, PacerSession
 from juriscraper.pacer.utils import (
     get_courts_from_json, get_court_id_from_url,
     get_pacer_case_id_from_docket_url, get_pacer_document_number_from_doc1_url,
@@ -31,6 +32,46 @@ def get_pacer_credentials_or_skip():
         raise unittest.SkipTest(msg)
     else:
         return username, password
+
+
+class PacerSessionTest(unittest.TestCase):
+    """
+    Test the PacerSession wrapper class
+    """
+
+    def setUp(self):
+        self.session = PacerSession()
+
+    def test_data_transformation(self):
+        data = {'case_id': 123, 'case_type': 'something'}
+        expected = {'case_id': (None, 123), 'case_type': (None, 'something')}
+        output = self.session._prepare_multipart_form_data(data)
+        self.assertEqual(output, expected)
+
+    @mock.patch('juriscraper.pacer.http.Session.post')
+    def test_ignores_non_data_posts(self, mock_post):
+        data = {'name': ('filename', 'junk')}
+
+        self.session.post('http://free.law', files=data)
+
+        self.assertTrue(mock_post.called,
+                        'request.Session.post should be called')
+        self.assertEqual(data, mock_post.call_args[1]['files'],
+                         'the data should not be changed if using a files call')
+
+    @mock.patch('juriscraper.pacer.http.Session.post')
+    def test_transforms_data_on_post(self, mock_post):
+        data = {'name': 'dave', 'age': 33}
+        expected = {'name': (None, 'dave'), 'age': (None, 33)}
+
+        self.session.post('http://free.law', data=data)
+
+        self.assertTrue(mock_post.called,
+                        'request.Session.post should be called')
+        self.assertNotIn('data', mock_post.call_args[1],
+                         'we should intercept data arguments')
+        self.assertEqual(expected, mock_post.call_args[1]['files'],
+                         'we should transform and populate the files argument')
 
 
 class PacerAuthTest(unittest.TestCase):
