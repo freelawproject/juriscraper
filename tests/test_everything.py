@@ -615,7 +615,7 @@ class StringUtilTest(unittest.TestCase):
             ['CARVER v. US',
              u'Carver v. US']]
         for pair in test_pairs:
-            self.assertEqual(titlecase(force_unicode(pair[0]), DEBUG=True),
+            self.assertEqual(titlecase(force_unicode(pair[0]), DEBUG=False),
                              pair[1])
 
     def test_fixing_camel_case(self):
