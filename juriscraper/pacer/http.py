@@ -15,7 +15,7 @@ class PacerSession(requests.Session):
     for folks to just POST data to PACER endpoints/apis
     """
 
-    def __init__(self, pacer_token=None):
+    def __init__(self, pacer_token=None, cookie_jar=None):
         """
         Instantiate a new PACER HTTP Session with some Juriscraper defaults
         :param pacer_token: a PACER_SESSION token value
@@ -29,6 +29,9 @@ class PacerSession(requests.Session):
                              pacer_token,
                              domain='.uscourts.gov',
                              path='/')
+
+        if cookie_jar:
+            self.cookies = cookie_jar
 
     def post(self, url, data=None, json=None, **kwargs):
         """
@@ -75,21 +78,75 @@ class PacerSession(requests.Session):
 def _make_login_url(court_id):
     """Make a login URL for a given court id."""
     if court_id == 'psc':
+        # training account
         return 'https://dcecf.psc.uscourts.gov/cgi-bin/login.pl'
-    else:
-        return 'https://ecf.%s.uscourts.gov/cgi-bin/login.pl' % court_id
+    # https://pacer.login.uscourts.gov/csologin/login.jsf?pscCourtId=PAMB
+    return 'https://pacer.login.uscourts.gov/csologin/login.jsf?pscCourtId=%s' % court_id
 
 
 def login(court_id, username, password):
     """
-    Log into a PACER jurisdiction
+    Log into a PACER jurisdiction via the main PACER portal which should set our global PacerSession
+
     :param court_id: id of the court to authenticate with
     :param username: PACER username
     :param password: PACER password
     :return: new PacerSession configured with PacerSession token in cookie
     """
+    if username == 'tr1234':
+        return _login_training(court_id, username, password)
+
     url = _make_login_url(court_id)
     logger.info("Logging into: %s at %s" % (court_id, url))
+
+    login_session = requests.Session()
+    login_session.headers['User-Agent'] = 'Juriscraper'
+    login_session.verify=False
+
+    # initial GET to login page to get JSESSIONID
+    r = login_session.get(url, timeout=60)
+    if not r.status_code == 200:
+        msg = 'Could not navigate to PACER central login url: %s' % url
+        logger.error(msg)
+        raise BadLoginException(msg)
+
+    # with our JSESSIONID, try the login
+    login_data = {
+        'login': 'login',
+        'login:loginName': username,
+        'login:password': password,
+        'login:clientCode': '',
+        'login:fbtnLogin': '',
+        'javax.faces.ViewState': 'stateless'
+    }
+    r = login_session.post(url, timeout=60, data=login_data, allow_redirects=False)
+
+    if r.status_code == 302:
+        # we should be redirected on success with cookies!
+        if not login_session.cookies.get('PacerSession', None, '.uscourts.gov', '/'):
+            logger.error('Failed to get a PacerSession token!')
+            raise BadLoginException('Failed to get a PacerSession token!')
+    else:
+        msg = 'Unknown PACER login error: http status %s' % r.status_code
+        if 'Invalid ID or password' in r.text:
+            msg = 'Invalid PACER ID or password.'
+        logger.error(msg)
+        raise BadLoginException(msg)
+
+    logger.info('New PacerSession established.')
+    return PacerSession(cookie_jar=login_session.cookies)
+
+
+def _login_training(court_id, username, password):
+    """
+    Attempt to log into the PACER training site.
+    :param court_id: training court_id
+    :param username: training username
+    :param password: training password
+    :return:
+    """
+    url = _make_login_url(court_id)
+    logger.info('attempting PACER Training Site login')
     r = requests.post(
         url,
         headers={'User-Agent': 'Juriscraper'},
@@ -108,7 +165,7 @@ def login(court_id, username, password):
     if m is not None:
         return PacerSession(pacer_token=m.group(1))
 
-    raise BadLoginException('could not create new PacerSession')
+    raise BadLoginException('could not create new training PacerSession')
 
 
 class BadLoginException(Exception):

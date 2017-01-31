@@ -2,7 +2,6 @@ import json
 import os
 import time
 import unittest
-import six
 from datetime import timedelta, date
 
 import vcr
@@ -103,26 +102,25 @@ class PacerSessionTest(unittest.TestCase):
 class PacerAuthTest(unittest.TestCase):
     """Test the authentication methods"""
 
-    def setUp(self):
-        # Get the latest court info from our Heroku app.
-        with open('juriscraper/pacer/courts.json') as j:
-            self.courts = get_courts_from_json(json.load(j))
-        self.username, self.password = get_pacer_credentials_or_skip()
-
-    @vcr.use_cassette()
     def test_logging_in(self):
-        failure_count = 0
-        for court in self.courts:
-            court_id = get_court_id_from_url(court['court_link'])
-            try:
-                login(court_id, self.username, self.password)
-            except BadLoginException:
-                print('Could not log into court %s' % court.court)
-                failure_count += failure_count
-        self.assertAlmostEqual(len(self.courts),
-                               len(self.courts) - failure_count,
-                               5,
-                               'less than 5 courts should fail login')
+        username, password = get_pacer_credentials_or_skip()
+        court_id = 'ca1'
+        try:
+            pacer_session = login(court_id, username, password)
+            self.assertIsNotNone(pacer_session)
+            self.assertIsNotNone(pacer_session.cookies.get('PacerSession', None, domain='.uscourts.gov', path='/'))
+
+        except BadLoginException:
+            self.fail('Could not log into court %s' % court_id)
+
+    def test_logging_into_test_site(self):
+        try:
+            pacer_session = login('psc', 'tr1234', 'Pass!234')
+            self.assertIsNotNone(pacer_session)
+            self.assertIsNotNone(pacer_session.cookies.get('PacerSession', None, domain='.uscourts.gov', path='/'))
+
+        except BadLoginException:
+            self.fail('Could not log into PACER test site!')
 
 
 class PacerFreeOpinionsTest(unittest.TestCase):
@@ -131,13 +129,13 @@ class PacerFreeOpinionsTest(unittest.TestCase):
     def setUp(self):
         self.username, self.password = get_pacer_credentials_or_skip()
         # CAND chosen at random
-        cookie_jar = login('cand', self.username, self.password)
+        pacer_session = login('cand', self.username, self.password)
         with open('juriscraper/pacer/courts.json') as j:
             self.courts = get_courts_from_json(json.load(j))
         self.reports = {}
         for court in self.courts:
             court_id = get_court_id_from_url(court['court_link'])
-            self.reports[court_id] = FreeOpinionReport(court_id, cookie_jar)
+            self.reports[court_id] = FreeOpinionReport(court_id, pacer_session)
 
     @vcr.use_cassette(record_mode='new_episodes')
     def test_extract_written_documents_report(self):
@@ -211,8 +209,8 @@ class PacerDocketReportTest(unittest.TestCase):
     """A variety of tests for the docket report"""
 
     def setUp(self):
-        cookie = login('psc', 'tr1234', 'Pass!234')
-        self.report = DocketReport('psc', cookie)
+        pacer_session = login('psc', 'tr1234', 'Pass!234')
+        self.report = DocketReport('psc', pacer_session)
         self.pacer_case_id = '62866'
 
     def count_rows(self, html):
