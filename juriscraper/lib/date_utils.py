@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import six
 from math import ceil
 
 from dateutil.parser import _timelex, parser, parserinfo
@@ -113,7 +112,7 @@ def parse_dates(s, debug=False, sane_start=datetime.datetime(1750, 1, 1),
     #    s = s.encode('ascii', 'ignore')
 
     # Fix misspellings
-    for i, j in six.iteritems(MISSPELLINGS):
+    for i, j in MISSPELLINGS.items():
         s = s.replace(i, j)
 
 

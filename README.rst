@@ -44,15 +44,21 @@ First step: Install Python 2.7.x, then:
 
 ::
 
-    # install the dependencies
-    sudo apt-get install libxml2-dev libxslt-dev libyaml-dev
+    # -- Install the dependencies
+    # On Ubuntu/Debian Linux:
+        sudo apt-get install libxml2-dev libxslt-dev libyaml-dev
+    # On macOS with Homebrew <https://brew.sh>:
+        brew install libyaml
 
-    # Install PhantomJS
-    wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
-    tar -x -f phantomjs-1.9.7-linux-x86_64.tar.bz2
-    sudo mkdir -p /usr/local/phantomjs
-    sudo mv phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/phantomjs
-    rm -r phantomjs-1.9.7*  # Cleanup
+    # -- Install PhantomJS
+    # On Ubuntu/Debian Linux
+        wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
+        tar -x -f phantomjs-1.9.7-linux-x86_64.tar.bz2
+        sudo mkdir -p /usr/local/phantomjs
+        sudo mv phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/phantomjs
+        rm -r phantomjs-1.9.7*  # Cleanup
+    # On macOS with Homebrew:
+        brew install phantomjs
 
     # Finally, install the code.
     pip install juriscraper
@@ -74,15 +80,15 @@ We also generally use Intellij with PyCharm installed. These are useful because 
 
 For scrapers to be merged:
 
--  ``python setup.py test`` must pass, listing the results for any new
-   scrapers. This will be run automatically by
+-  Running tests via ``tox`` must pass, listing the results for any new
+   scrapers. The test suite will be run automatically by
    `Travis-CI <https://travis-ci.org/freelawproject/juriscraper>`__. If changes are being made to the pacer code, the pacer tests must also pass when run. These tests are skipped by default. To run them, set environment variables for PACER_USERNAME and PACER_PASSWORD.
--  a \*\_example\* file must be included in the ``tests/examples``
+-  A \*\_example\* file must be included in the ``tests/examples``
    directory (this is needed for the tests to run your code).
--  your code should be
+-  Your code should be
    `PEP8 <http://www.python.org/dev/peps/pep-0008/>`__ compliant with no
    major Pylint problems or Intellij inspection issues.
--  your code should efficiently parse a page, returning no exceptions or
+-  Your code should efficiently parse a page, returning no exceptions or
    speed warnings during tests on a modern machine.
 
 When you're ready to develop a scraper, get in touch, and we'll find you
@@ -117,8 +123,8 @@ Instead of installing Juriscraper via pip, do the following:
 ::
 
     git clone https://github.com/freelawproject/juriscraper.git .
-    python setup.py install
-
+    pip install -r requirements.txt
+    python setup.py test
 
 Usage
 =====
@@ -188,8 +194,8 @@ Tests
 =====
 
 We got that! You can (and should) run the tests with
-``python setup.py test``. This will iterate over all of the
-``*_example*`` files and run the scrapers against them.
+``tox``. This will run ``python setup.py test`` for all supported Python runtimes,
+iterating over all of the ``*_example*`` files and run the scrapers against them.
 
 In addition, we use `Travis-CI <https://travis-ci.org/>`__ to
 automatically run the tests whenever code is committed to the repository

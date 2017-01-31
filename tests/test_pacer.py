@@ -63,7 +63,7 @@ class PacerSessionTest(unittest.TestCase):
         """
         data = {'name': ('filename', 'junk')}
 
-        self.session.post('http://free.law', files=data)
+        self.session.post('https://free.law', files=data)
 
         self.assertTrue(mock_post.called,
                         'request.Session.post should be called')
@@ -81,7 +81,7 @@ class PacerSessionTest(unittest.TestCase):
         data = {'name': 'dave', 'age': 33}
         expected = {'name': (None, 'dave'), 'age': (None, 33)}
 
-        self.session.post('http://free.law', data=data)
+        self.session.post('https://free.law', data=data)
 
         self.assertTrue(mock_post.called,
                         'request.Session.post should be called')
@@ -92,7 +92,7 @@ class PacerSessionTest(unittest.TestCase):
 
     @mock.patch('juriscraper.pacer.http.requests.Session.post')
     def test_sets_default_timeout(self, mock_post):
-        self.session.post('http://free.law', data={})
+        self.session.post('https://free.law', data={})
 
         self.assertTrue(mock_post.called,
                         'request.Session.post should be called')
@@ -111,7 +111,8 @@ class PacerAuthTest(unittest.TestCase):
         try:
             pacer_session = login(court_id, PACER_USERNAME, PACER_PASSWORD)
             self.assertIsNotNone(pacer_session)
-            self.assertIsNotNone(pacer_session.cookies.get('PacerSession', None, domain='.uscourts.gov', path='/'))
+            self.assertIsNotNone(pacer_session.cookies.get(
+                'PacerSession', None, domain='.uscourts.gov', path='/'))
 
         except BadLoginException:
             self.fail('Could not log into court %s' % court_id)
@@ -120,7 +121,8 @@ class PacerAuthTest(unittest.TestCase):
         try:
             pacer_session = login('psc', 'tr1234', 'Pass!234')
             self.assertIsNotNone(pacer_session)
-            self.assertIsNotNone(pacer_session.cookies.get('PacerSession', None, domain='.uscourts.gov', path='/'))
+            self.assertIsNotNone(pacer_session.cookies.get(
+                'PacerSession', None, domain='.uscourts.gov', path='/'))
 
         except BadLoginException:
             self.fail('Could not log into PACER test site!')
@@ -224,9 +226,21 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         self.assertEqual(r.headers['Content-Type'], 'application/pdf')
 
     @SKIP_IF_NO_PACER_LOGIN
-    def test_getting_last_good_row(self):
+    def test_query_can_get_multiple_results(self):
         """
-        Can we run a query that gets multiple rows and still get a good one
+        Can we run a query that gets multiple rows and parse them all?
+        """
+        court_id = 'paeb'
+        report = self.reports[court_id]
+        some_date = convert_date_string(self.valid_dates[court_id])
+        responses = report.query(some_date, some_date)
+        results = report.parse(responses)
+        self.assertEqual(3, len(results), 'should get 3 responses for ksb')
+
+    @SKIP_IF_NO_PACER_LOGIN
+    def test_query_using_last_good_row(self):
+        """
+        Can we run a query that triggers no content in first cell?
         """
         court_id = 'ksb'
         report = self.reports[court_id]
@@ -246,7 +260,7 @@ class PacerFreeOpinionsTest(unittest.TestCase):
 
         results = report.query(some_date, some_date)
         self.assertEqual([], results, 'should have empty result set')
-        self.assertFalse(mock_session.called, 'should not trigger a POST query')
+        self.assertFalse(mock_session.post.called, 'should not trigger a POST query')
 
         report = self.reports['cand']
         report.session = mock_session

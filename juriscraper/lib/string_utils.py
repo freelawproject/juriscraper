@@ -205,7 +205,7 @@ def fix_camel_case(s):
         s_out = s
     else:
         s_out = s[0]
-        for i in six.moves.range(1, len(s)):
+        for i in range(1, len(s)):
             # Iterate over the letters, starting with the second one.
             if s[i - 1].isupper() and s[i].isupper():
                 # A pattern like 'PAPublic' --> PA Public

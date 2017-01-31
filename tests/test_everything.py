@@ -61,7 +61,7 @@ class DateParserTest(unittest.TestCase):
             '12/01/2806': '12/01/2806',                     # Should not change
             '12/01/2886': '12/01/2886',                     # Should not change
         }
-        for before, after in six.iteritems(expectations):
+        for before, after in expectations.items():
             fixed_date = fix_future_year_typo(convert_date_string(before))
             self.assertEqual(fixed_date, convert_date_string(after))
 
@@ -385,7 +385,7 @@ class StringUtilTest(unittest.TestCase):
     def test_quarter(self):
         answers = {1: 1, 2: 1, 3: 1, 4: 2, 5: 2, 6: 2, 7: 3, 8: 3, 9: 3, 10: 4,
                    11: 4, 12: 4}
-        for month, q in six.iteritems(answers):
+        for month, q in answers.items():
             self.assertEqual(quarter(month), q)
 
     def test_is_first_month_in_quarter(self):
@@ -398,7 +398,7 @@ class StringUtilTest(unittest.TestCase):
             6: False,
             7: True,
         }
-        for month, is_first in six.iteritems(answers):
+        for month, is_first in answers.items():
             self.assertEqual(is_first_month_in_quarter(month), is_first)
 
     def test_harmonize_and_clean_string_tests(self):
@@ -905,7 +905,7 @@ class ScraperSpotTest(unittest.TestCase):
         }
 
         scraper = colo.Site()
-        for raw_string, data in six.iteritems(tests):
+        for raw_string, data in tests.items():
             for field in ['docket', 'name']:
                 attribute = '_extract_%s_from_text' % field
                 result = getattr(scraper, attribute)(raw_string)
