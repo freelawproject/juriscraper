@@ -49,11 +49,7 @@ class PacerSession(requests.Session):
         :param kwargs: assorted keyword arguments
         :return: requests.Response
         """
-        if kwargs:
-            if 'timeout' not in kwargs:
-                kwargs['timeout'] = 300
-        else:
-            kwargs = {'timeout': 300}
+        kwargs.setdefault('timeout', 300)
 
         if data:
             pacer_data = self._prepare_multipart_form_data(data)
@@ -80,7 +76,6 @@ def _make_login_url(court_id):
     if court_id == 'psc':
         # training account
         return 'https://dcecf.psc.uscourts.gov/cgi-bin/login.pl'
-    # https://pacer.login.uscourts.gov/csologin/login.jsf?pscCourtId=PAMB
     return 'https://pacer.login.uscourts.gov/csologin/login.jsf?pscCourtId=%s' % court_id
 
 
