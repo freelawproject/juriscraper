@@ -8,8 +8,8 @@ import sys
 import time
 import unittest
 import vcr
-import six
 
+from . import TESTS_ROOT
 from juriscraper.lib.importer import build_module_list
 from juriscraper.lib.date_utils import (
     parse_dates, quarter, is_first_month_in_quarter, fix_future_year_typo
@@ -21,7 +21,7 @@ from juriscraper.lib.string_utils import (
 from juriscraper.opinions.united_states.state import alaska, colo, mass, massappct, nh, pa
 from juriscraper.oral_args.united_states.federal_appellate import ca6
 
-vcr = vcr.VCR(cassette_library_dir='tests/fixtures/cassettes')
+vcr = vcr.VCR(cassette_library_dir=os.path.join(TESTS_ROOT, 'fixtures/cassettes'))
 
 
 class SlownessException(Exception):
@@ -584,9 +584,9 @@ class StringUtilTest(unittest.TestCase):
              u'iTunes Should Be Unmolested'],
             ['Reading between the lines of steve jobs’s ‘thoughts on music’',
              # Tests unicode
-             u'Reading Between the Lines of Steve Jobs’s ‘thoughts on Music’'],
+             u'Reading Between the Lines of Steve Jobs’s ‘Thoughts on Music’'],
             ['seriously, ‘repair permissions’ is voodoo',  # Tests unicode
-             u'Seriously, ‘repair Permissions’ is Voodoo'],
+             u'Seriously, ‘Repair Permissions’ is Voodoo'],
             [
                 'generalissimo francisco franco: still dead; kieren McCarthy: '
                 'still a jackass',
@@ -614,9 +614,10 @@ class StringUtilTest(unittest.TestCase):
                 u'United States 07-693l And'],
             ['CARVER v. US',
              u'Carver v. US']]
+
         for pair in test_pairs:
-            self.assertEqual(titlecase(force_unicode(pair[0]), DEBUG=False),
-                             pair[1])
+            unicode_string = force_unicode(pair[0])
+            self.assertEqual(titlecase(unicode_string, DEBUG=False), pair[1])
 
     def test_fixing_camel_case(self):
         """Can we correctly identify and fix camelCase?"""

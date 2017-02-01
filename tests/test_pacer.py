@@ -4,11 +4,10 @@ import time
 import unittest
 from datetime import timedelta, date
 
-import vcr
 import mock
+import vcr
 from requests import ConnectionError
 
-import juriscraper
 from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.pacer import DocketReport, FreeOpinionReport
@@ -18,12 +17,8 @@ from juriscraper.pacer.utils import (
     get_pacer_case_id_from_docket_url, get_pacer_document_number_from_doc1_url,
     reverse_goDLS_function, make_doc1_url
 )
+from . import JURISCRAPER_ROOT, TESTS_ROOT
 
-JURISCRAPER_ROOT = os.path.realpath(
-    os.path.join(
-        os.path.realpath(juriscraper.__file__),
-        '..'))
-TESTS_ROOT = os.path.realpath(os.path.join(JURISCRAPER_ROOT, '../tests'))
 vcr = vcr.VCR(cassette_library_dir=os.path.join(TESTS_ROOT, 'fixtures/cassettes'))
 
 

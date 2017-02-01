@@ -10,28 +10,32 @@ from datetime import timedelta
 
 
 # For use in titlecase
-BIG = ('3D|AFL|AKA|A/K/A|BMG|CBS|CDC|CDT|CEO|CIO|CNMI|D/B/A|DOJ|DVA|EFF|FCC|'
-       'FTC|HSBC|IBM|II|III|IV|JJ|LLC|LLP|MCI|MJL|MSPB|ND|NLRB|PTO|SD|UPS|RSS|SEC|UMG|US|USA|USC|'
-       'USPS|WTO')
-SMALL = 'a|an|and|as|at|but|by|en|for|if|in|is|of|on|or|the|to|v\.?|via|vs\.?'
-NUMS = '0123456789'
-PUNCT = r"""!"#$¢%&'‘()*+,\-./:;?@[\\\]_—`{|}~"""
-WEIRD_CHARS = r'¼½¾§ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜßàáâãäåæçèéêëìíîïñòóôœõöøùúûüÿ'
-BIG_WORDS = re.compile(r'^(%s)[%s]?$' % (BIG, PUNCT), re.I)
-SMALL_WORDS = re.compile(r'^(%s)$' % SMALL, re.I)
-SMALL_WORD_INLINE = re.compile(r'(^|\s)(%s)(\s|$)' % SMALL, re.I)
-INLINE_PERIOD = re.compile(r'[a-z][.][a-z]', re.I)
-INLINE_SLASH = re.compile(r'[a-z][/][a-z]', re.I)
-INLINE_AMPERSAND = re.compile(r'([a-z][&][a-z])(.*)', re.I)
-UC_ELSEWHERE = re.compile(r'[%s]*?[a-zA-Z]+[A-Z]+?' % PUNCT)
-CAPFIRST = re.compile(r"^[%s]*?([A-Za-z])" % PUNCT)
-SMALL_FIRST = re.compile(r'^([%s]*)(%s)\b' % (PUNCT, SMALL), re.I)
-SMALL_LAST = re.compile(r'\b(%s)[%s]?$' % (SMALL, PUNCT), re.I)
-SUBPHRASE = re.compile(r'([:;?!][ ])(%s)' % SMALL)
-APOS_SECOND = re.compile(r"^[dol]{1}['‘]{1}[a-z]+$", re.I)
-ALL_CAPS = re.compile(r'^[A-Z\s%s%s%s]+$' % (PUNCT, WEIRD_CHARS, NUMS))
-UC_INITIALS = re.compile(r"^(?:[A-Z]{1}\.{1}|[A-Z]{1}\.{1}[A-Z]{1})+,?$")
-MAC_MC = re.compile(r'^([Mm]a?c)(\w+.*)')
+if six.PY2:
+    # Python 3.x doesn't like the old ur'' notation, so we need to hide it.
+    from .string_utils_py2 import *
+else:
+    BIG = ('3D|AFL|AKA|A/K/A|BMG|CBS|CDC|CDT|CEO|CIO|CNMI|D/B/A|DOJ|DVA|EFF|'
+           'FCC|FTC|HSBC|IBM|II|III|IV|JJ|LLC|LLP|MCI|MJL|MSPB|ND|NLRB|PTO|'
+           'SD|UPS|RSS|SEC|UMG|US|USA|USC|USPS|WTO')
+    SMALL = 'a|an|and|as|at|but|by|en|for|if|in|is|of|on|or|the|to|v\.?|via|vs\.?'
+    NUMS = '0123456789'
+    PUNCT = r"""!"#$¢%&'‘()*+,\-./:;?@[\\\]_—`{|}~"""
+    WEIRD_CHARS = r'¼½¾§ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜßàáâãäåæçèéêëìíîïñòóôœõöøùúûüÿ'
+    BIG_WORDS = re.compile(r'^(%s)[%s]?$' % (BIG, PUNCT), re.I | re.U)
+    SMALL_WORDS = re.compile(r'^(%s)$' % SMALL, re.I)
+    SMALL_WORD_INLINE = re.compile(r'(^|\s)(%s)(\s|$)' % SMALL, re.I | re.U)
+    INLINE_PERIOD = re.compile(r'[a-z][.][a-z]', re.I)
+    INLINE_SLASH = re.compile(r'[a-z][/][a-z]', re.I)
+    INLINE_AMPERSAND = re.compile(r'([a-z][&][a-z])(.*)', re.I)
+    UC_ELSEWHERE = re.compile(r'[%s]*?[a-zA-Z]+[A-Z]+?' % PUNCT, re.U)
+    CAPFIRST = re.compile(r"^[%s]*?([A-Za-z])" % PUNCT)
+    SMALL_FIRST = re.compile(r'^([%s]*)(%s)\b' % (PUNCT, SMALL), re.I | re.U)
+    SMALL_LAST = re.compile(r'\b(%s)[%s]?$' % (SMALL, PUNCT), re.I | re.U)
+    SUBPHRASE = re.compile(r'([:;?!][ ])(%s)' % SMALL)
+    APOS_SECOND = re.compile(r"^[dol]{1}['‘]{1}[a-z]+$", re.I)
+    ALL_CAPS = re.compile(r'^[A-Z\s%s%s%s]+$' % (PUNCT, WEIRD_CHARS, NUMS))
+    UC_INITIALS = re.compile(r"^(?:[A-Z]{1}\.{1}|[A-Z]{1}\.{1}[A-Z]{1})+,?$")
+    MAC_MC = re.compile(r'^([Mm]a?c)(\w+.*)')
 
 
 def titlecase(text, DEBUG=False):
@@ -64,7 +68,7 @@ def titlecase(text, DEBUG=False):
         all_caps = ALL_CAPS.match(line)
         words = re.split('[\t ]', line)
         tc_line = []
-        for word in words:
+        for i, word in enumerate(words):
             if DEBUG:
                 print("Word: " + word)
             if all_caps:
@@ -148,7 +152,7 @@ def titlecase(text, DEBUG=False):
             match = MAC_MC.match(word)
             if match and (word not in ['mack', 'machine']):
                 if DEBUG:
-                    print("  MAC_MAC matched. Capitlizing: " + word)
+                    print("  MAC_MAC matched. Capitalizing: " + word)
                 tc_line.append("%s%s" % (match.group(1).capitalize(),
                                          match.group(2).capitalize()))
                 continue
@@ -177,6 +181,7 @@ def titlecase(text, DEBUG=False):
 
     return text
 
+
 def _uppercase_word(word):
     """
     Helper function for uppercasing a word if it doesn't begin with Unicode characters.
@@ -184,18 +189,12 @@ def _uppercase_word(word):
     This is needed due to differences between Python 2 and 3.
     :param word: unicode string to uppercase
     """
-    if six.PY2:
-        return CAPFIRST.sub(lambda m: m.group(0).upper(), word)
-    else:
-        try:
-            word[0].encode('ascii')
-            # doesn't start with unicode
-            return CAPFIRST.sub(lambda m: m.group(0).upper(), word)
-        except UnicodeEncodeError:
-            # starts with unicode
-            pass
+    #if six.PY2:
+    #    if word[0] in (u'\u2019',):
+    #        return CAPFIRST.sub(lambda m: m.group(0).upper(), word[1:])
 
-    return word
+    return CAPFIRST.sub(lambda m: m.group(0).upper(), word)
+
 
 
 def fix_camel_case(s):
@@ -271,6 +270,8 @@ BW = 'appell(ee|ant)s?|claimants?|complainants?|defendants?|defendants?(--?|/)ap
      '|respond(e|a)nts?(--?|/)appell(ee|ant)s?|cross(--?|/)respondents?|crosss?(--?|/)petitioners?' + \
      '|cross(--?|/)appell(ees|ant)s?|deceased'
 BAD_WORDS = re.compile(r'^(%s)(,|\.)?$' % BW, re.I)
+
+
 def harmonize(text):
     """Fixes case names so they are cleaner.
 

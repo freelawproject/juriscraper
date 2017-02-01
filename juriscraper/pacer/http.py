@@ -96,7 +96,7 @@ def login(court_id, username, password):
 
     login_session = requests.Session()
     login_session.headers['User-Agent'] = 'Juriscraper'
-    login_session.verify=False
+    login_session.verify = False
 
     # initial GET to login page to get JSESSIONID
     r = login_session.get(url, timeout=60)

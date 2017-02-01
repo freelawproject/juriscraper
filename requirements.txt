@@ -1,6 +1,6 @@
 six
 argparse
-cchardet==1.1.2
+cchardet>=1.1.2
 certifi
 chardet
 geonamescache==0.20
