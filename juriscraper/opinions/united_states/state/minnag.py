@@ -53,4 +53,4 @@ class Site(OpinionSite):
         return [opinion['summary'] for opinion in self.opinions]
 
     def _get_precedential_statuses(self):
-        return ['Unpublished'] * len(self.opinions)
+        return ['Published'] * len(self.opinions)
