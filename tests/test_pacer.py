@@ -11,7 +11,7 @@ from requests import ConnectionError
 from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.pacer import DocketReport, FreeOpinionReport
-from juriscraper.pacer.http import login, PacerSession, BadLoginException
+from juriscraper.pacer.http import login, PacerSession, PacerLoginException
 from juriscraper.pacer.utils import (
     get_courts_from_json, get_court_id_from_url,
     get_pacer_case_id_from_docket_url, get_pacer_document_number_from_doc1_url,
@@ -109,7 +109,7 @@ class PacerAuthTest(unittest.TestCase):
             self.assertIsNotNone(pacer_session.cookies.get(
                 'PacerSession', None, domain='.uscourts.gov', path='/'))
 
-        except BadLoginException:
+        except PacerLoginException:
             self.fail('Could not log into court %s' % court_id)
 
     def test_logging_into_test_site(self):
@@ -119,7 +119,7 @@ class PacerAuthTest(unittest.TestCase):
             self.assertIsNotNone(pacer_session.cookies.get(
                 'PacerSession', None, domain='.uscourts.gov', path='/'))
 
-        except BadLoginException:
+        except PacerLoginException:
             self.fail('Could not log into PACER test site!')
 
 

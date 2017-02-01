@@ -88,7 +88,7 @@ def login(court_id, username, password):
     :param password: PACER password
     :return: new PacerSession configured with PacerSession token in cookie
     """
-    if username == 'tr1234':
+    if court_id == 'psc':
         return _login_training(court_id, username, password)
 
     url = _make_login_url(court_id)
@@ -103,7 +103,7 @@ def login(court_id, username, password):
     if not r.status_code == 200:
         msg = 'Could not navigate to PACER central login url: %s' % url
         logger.error(msg)
-        raise BadLoginException(msg)
+        raise PacerLoginException(msg)
 
     # with our JSESSIONID, try the login
     login_data = {
@@ -120,13 +120,13 @@ def login(court_id, username, password):
         # we should be redirected on success with cookies!
         if not login_session.cookies.get('PacerSession', None, '.uscourts.gov', '/'):
             logger.error('Failed to get a PacerSession token!')
-            raise BadLoginException('Failed to get a PacerSession token!')
+            raise PacerLoginException('Failed to get a PacerSession token!')
     else:
         msg = 'Unknown PACER login error: http status %s' % r.status_code
         if 'Invalid ID or password' in r.text:
             msg = 'Invalid PACER ID or password.'
         logger.error(msg)
-        raise BadLoginException(msg)
+        raise PacerLoginException(msg)
 
     logger.info('New PacerSession established.')
     return PacerSession(cookie_jar=login_session.cookies)
@@ -153,18 +153,25 @@ def _login_training(court_id, username, password):
         },
     )
     if 'Invalid ID or password' in r.text:
-        raise BadLoginException(r.text)
+        raise BadPacerCredentials(r.text)
 
     # The cookie value is in the HTML. Extract it.
     m = re.search('PacerSession=(\w+);', r.text)
     if m is not None:
         return PacerSession(pacer_token=m.group(1))
 
-    raise BadLoginException('could not create new training PacerSession')
+    raise PacerLoginException('could not create new training PacerSession')
 
 
-class BadLoginException(Exception):
+class PacerLoginException(Exception):
     """Raised when the system cannot authenticate with PACER"""
+
+    def __init__(self, message):
+        Exception.__init__(self, message)
+
+
+class BadPacerCredentials(Exception):
+    """Raised when the credentials failed to authenticate the client to PACER"""
 
     def __init__(self, message):
         Exception.__init__(self, message)
