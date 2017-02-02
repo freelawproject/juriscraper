@@ -1,6 +1,3 @@
-import re
-
-import requests
 from dateutil.rrule import rrule, DAILY
 from lxml.html import tostring
 
@@ -24,10 +21,10 @@ class FreeOpinionReport(object):
     EXCLUDED_COURT_IDS = ['casb', 'ganb', 'innb', 'mieb', 'miwb', 'nmib', 'nvb',
                           'ohsb', 'tnwb', 'vib']
 
-    def __init__(self, court_id, cookie):
+    def __init__(self, court_id, pacer_session):
         self.court_id = court_id
-        self.session = requests.session()
-        self.session.cookies.set(**cookie)
+        self.session = pacer_session
+
         super(FreeOpinionReport, self).__init__()
 
     @property
@@ -44,32 +41,31 @@ class FreeOpinionReport(object):
                          "not provided by the court or is in disuse." %
                          self.court_id)
             return []
+
         dates = [d.strftime('%m/%d/%Y') for d in rrule(
             DAILY, interval=1, dtstart=start, until=end)]
         responses = []
+
         for d in dates:
             # Iterate one day at a time. Any more and PACER chokes.
             logger.info("Querying written opinions report for '%s' between %s "
                         "and %s" % (self.court_id, d, d))
-            responses.append(self.session.post(
-                self.url + '?1-L_1_0-1',
-                headers={'User-Agent': 'Juriscraper'},
-                verify=False,
-                timeout=300,
-                files={
-                    'filed_from': ('', d),
-                    'filed_to': ('', d),
-                    'ShowFull': ('', '1'),
-                    'Key1': ('', 'cs_sort_case_numb'),
-                    'all_case_ids': ('', '0'),
-                }
-            ))
+            data = {
+                'filed_from': d,
+                'filed_to': d,
+                'ShowFull': '1',
+                'Key1': 'cs_sort_case_numb',
+                'all_case_ids': '0'
+            }
+            response = self.session.post(self.url + '?1-L_1_0-1', data=data)
+            responses.append(response)
+
         return responses
 
     @staticmethod
     def parse(responses):
-        """Using a list of responses, parse out useful information and return it as
-        a list of dicts.
+        """Using a list of responses, parse out useful information and return
+        it as a list of dicts.
         """
         results = []
         court_id = "Court not yet set."
@@ -103,26 +99,25 @@ class FreeOpinionReport(object):
 
         Note that this doesn't support attachments yet.
         """
+        timeout = (60, 300)
         url = make_doc1_url(self.court_id, pacer_document_number, True)
         data = {
             'caseid': pacer_case_id,
             'got_receipt': '1',
         }
+
         logger.info("GETting PDF at URL: %s with params: %s" % (url, data))
-        r = self.session.get(
-            url,
-            params=data,
-            headers={'User-Agent': 'Juriscraper'},
-            verify=False,
-            timeout=300,
-        )
+        r = self.session.get(url, params=data, timeout=timeout)
+
         # The request above sometimes generates an HTML page with an iframe
         # containing the PDF, and other times returns the PDF. Our task is thus
         # to either get the src of the iframe and download the PDF or just
         # return the pdf.
         r.raise_for_status()
         if is_pdf(r):
+            logger.info('Got PDF binary data for case %s at: %s' % (url, data))
             return r
+
         text = clean_html(r.text)
         tree = get_html_parsed_text(text)
         tree.rewrite_links(fix_links_in_lxml_tree,
@@ -135,12 +130,12 @@ class FreeOpinionReport(object):
                              "directly in HTML. URL: %s, caseid: %s" %
                              (url, pacer_case_id))
                 return None
-        r = self.session.get(
-            iframe_src,
-            headers={'User-Agent': 'Juriscraper'},
-            verify=False,
-            timeout=300,
-        )
+
+        r = self.session.get(iframe_src, timeout=timeout)
+        if is_pdf(r):
+            msg = 'Got iframed PDF data for case %s at: %s' % (url, iframe_src)
+            logger.info(msg)
+
         return r
 
 

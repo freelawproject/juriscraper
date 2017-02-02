@@ -7,7 +7,7 @@ Reviewer: Mike Lissner
 """
 
 from datetime import datetime
-from urlparse import urlsplit
+from six.moves.urllib import urlsplit
 
 from juriscraper.OpinionSite import OpinionSite
 from lxml import html

@@ -10,7 +10,7 @@ History:
 
 import re
 from datetime import datetime
-from urlparse import urlparse, urljoin, parse_qs
+from six.moves.urllib.parse import urlparse, urljoin, parse_qs
 
 from juriscraper.OralArgumentSite import OralArgumentSite
 from juriscraper.lib.string_utils import convert_date_string

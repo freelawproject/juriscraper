@@ -1,4 +1,4 @@
-from AbstractSite import AbstractSite
+from juriscraper.AbstractSite import AbstractSite
 
 
 class OralArgumentSite(AbstractSite):

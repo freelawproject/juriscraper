@@ -19,11 +19,12 @@ class MockRequest(Request):
     def get(self):
         r = Response()
         try:
-            r._content = open(self.url).read()
-            #: Integer Code of responded HTTP Status.
-            r.status_code = 200
-            if self.url.endswith('json'):
-                r.headers['content-type'] = 'application/json'
+            with open(self.url) as stream:
+                r._content = stream.read()
+                #: Integer Code of responded HTTP Status.
+                r.status_code = 200
+                if self.url.endswith('json'):
+                    r.headers['content-type'] = 'application/json'
         except IOError as e:
             r.status_code = 404
             raise ConnectionError(e)

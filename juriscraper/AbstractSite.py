@@ -1,9 +1,8 @@
-import re
 import json
 import certifi
 import hashlib
 import requests
-
+import six
 
 from datetime import date, datetime
 from requests.adapters import HTTPAdapter
@@ -139,7 +138,7 @@ class AbstractSite(object):
                     if attr == 'download_urls':
                         sub_item = sub_item.strip()
                     else:
-                        if isinstance(sub_item, basestring):
+                        if isinstance(sub_item, six.string_types):
                             sub_item = clean_string(sub_item)
                         elif isinstance(sub_item, datetime):
                             sub_item = sub_item.date()
@@ -178,7 +177,7 @@ class AbstractSite(object):
         for attr in self._all_attrs:
             if self.__getattribute__(attr) is not None:
                 lengths[attr] = len(self.__getattribute__(attr))
-        values = lengths.values()
+        values = list(lengths.values())
         if values.count(values[0]) != len(values):
             # Are all elements equal?
             raise InsanityException("%s: Scraped meta data fields have differing"
@@ -236,10 +235,10 @@ class AbstractSite(object):
             obj_list_attrs = [self.__getattribute__(attr) for attr in
                               self._all_attrs if
                               isinstance(self.__getattribute__(attr), list)]
-            zipped = zip(*obj_list_attrs)
+            zipped = list(zip(*obj_list_attrs))
             zipped.sort(reverse=True)
             i = 0
-            obj_list_attrs = zip(*zipped)
+            obj_list_attrs = list(zip(*zipped))
             for attr in self._all_attrs:
                 if isinstance(self.__getattribute__(attr), list):
                     self.__setattr__(attr, obj_list_attrs[i][:])
@@ -249,7 +248,7 @@ class AbstractSite(object):
         """Make a unique ID. ETag and Last-Modified from courts cannot be
         trusted
         """
-        self.hash = hashlib.sha1(str(self.case_names)).hexdigest()
+        self.hash = hashlib.sha1(str(self.case_names).encode()).hexdigest()
 
     def _get_adapter_instance(self):
         """Hook for returning a custom HTTPAdapter
@@ -339,7 +338,11 @@ class AbstractSite(object):
             if 'json' in self.request['request'].headers.get('content-type', ''):
                 return self.request['request'].json()
             else:
-                text = self._clean_text(self.request['request'].text)
+                payload = self.request['request'].content
+                if six.PY2:
+                    payload = self.request['request'].text
+
+                text = self._clean_text(payload)
                 html_tree = self._make_html_tree(text)
                 html_tree.rewrite_links(fix_links_in_lxml_tree,
                                         base_href=self.request['url'])
