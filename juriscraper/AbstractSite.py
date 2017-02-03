@@ -338,9 +338,10 @@ class AbstractSite(object):
             if 'json' in self.request['request'].headers.get('content-type', ''):
                 return self.request['request'].json()
             else:
-                payload = self.request['request'].content
                 if six.PY2:
                     payload = self.request['request'].text
+                else:
+                    payload = str(self.request['request'].content)
 
                 text = self._clean_text(payload)
                 html_tree = self._make_html_tree(text)
