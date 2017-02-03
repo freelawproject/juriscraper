@@ -44,10 +44,10 @@ class Site(OpinionSite):
     def _extract_case_data_from_html(self, html):
         """Build list of data dictionaries, one dictionary per case."""
         regex = re.compile(
-            '^Citation Nr: (.*) Decision Date: (.*) Archive Date: (.*) DOCKET NO. ([-0-9 ]+)')
+            r'^Citation Nr: (.*) Decision Date: (.*) Archive Date: (.*) DOCKET NO. ([-0-9 ]+)')
 
         for result in html.xpath('//div[@id="results-area"]/div/div'):
-            text = result.xpath('./div[2]/text()')[0].strip()
+            text = result.xpath('./div[2]/text()')[0].strip().replace(r'\t', '').replace(r'\n', '')
             try:
                 (citation, date, docket) = regex.match(text).group(1, 2, 4)
             except:

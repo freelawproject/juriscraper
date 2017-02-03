@@ -1,7 +1,8 @@
-import scotus_slip
+from juriscraper.opinions.united_states.federal_appellate import scotus_slip
 
 
 class Site(scotus_slip.Site):
+
     # Note that scotus_relating inherits from this class.
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)

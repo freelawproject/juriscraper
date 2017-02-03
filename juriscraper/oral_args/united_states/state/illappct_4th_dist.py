@@ -7,7 +7,7 @@ History:
 * 2016-06-23: Created by Rebecca Fordon
 '''
 
-import ill
+from juriscraper.oral_args.united_states.state import ill
 
 
 class Site(ill.Site):

@@ -412,3 +412,32 @@ class AbstractSite(object):
         is not guaranteed.
         """
         return [False] * len(self.case_names)
+
+    def xpath(self, path):
+        """
+        Python 2/3 wrapper to calls to self.html.xpath (the lxml lib)
+        :return:
+        """
+        if six.PY2:
+            return self.html.xpath(path)
+
+        result = self.html.xpath(path)
+
+        if hasattr(result, 'itertext'):
+            return [i.replace(r'\t', '').replace(r'\n', '') for i in result.itertext()]
+        elif isinstance(result, list):
+            return [i.replace(r'\t', '').replace(r'\n', '') for i in result]
+
+        return result.replace(r'\t', '').replace(r'\n', '')
+
+    @staticmethod
+    def _clean_xpath_result(result):
+        """
+        Helper function for dealing with differences in the .xpath() call in
+        Python 2.x vs 3.x
+        :return: str of result
+        """
+        if hasattr(result, 'itertext'):
+            result = ''.join(result.itertext())
+
+        return result.replace(r'\t', '').replace(r'\n', '').strip()

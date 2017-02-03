@@ -1,7 +1,7 @@
 # Author: Michael Lissner
 # Date created: 2013-08-10
 
-import ark
+from juriscraper.opinions.united_states.state import ark
 
 
 class Site(ark.Site):

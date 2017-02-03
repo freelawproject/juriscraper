@@ -76,7 +76,7 @@ class Site(OpinionSite):
             'sort': 'Date'                  # Order by newest first
         }
         self.method = 'POST'
-        self.docket_number_regex = re.compile('(?P<year>\d{4})-(?P<court>[SC]{2})-(?P<number>\d+)')
+        self.docket_number_regex = re.compile(r'(?P<year>\d{4})-(?P<court>[SC]{2})-(?P<number>\d+)')
         self.hrefs_contain = 'Opinions'
 
     def _download(self, request_dict={}):

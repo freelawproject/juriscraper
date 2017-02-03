@@ -3,7 +3,7 @@ Scraper for the Tennessee Court of Appeals
 CourtID: tennctapp
 Court Short Name: Tenn. Ct. App.
 """
-import tenn
+from juriscraper.opinions.united_states.state import tenn
 
 
 class Site(tenn.Site):

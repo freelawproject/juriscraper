@@ -1,7 +1,7 @@
 # Auth: arderyp
 # Date: 2017-01-26
 
-import ohioctcl
+from juriscraper.opinions.united_states.state import ohioctcl
 
 from lxml import html
 from datetime import date

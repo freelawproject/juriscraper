@@ -1,4 +1,4 @@
-import nm_p
+from juriscraper.opinions.united_states.state import nm_p
 
 from datetime import date
 

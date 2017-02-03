@@ -286,6 +286,8 @@ def harmonize(text):
 
     Lots of tests are in tests.py.
     """
+    if not isinstance(text, six.string_types):
+        text = str(text)
 
     result = ''
     # replace vs. with v.

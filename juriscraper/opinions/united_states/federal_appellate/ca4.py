@@ -32,6 +32,7 @@ class Site(OpinionSite):
         path = '//tr/td[4]/text()'
         names = []
         for s in self.html.xpath(path):
+            s = self._clean_xpath_result(s)
             if s.strip():
                 names.append(s)
         logger.info(str(len(names)))
@@ -44,12 +45,12 @@ class Site(OpinionSite):
     def _get_case_dates(self):
         path = '//tr/td[3]/text()'
         return [datetime.strptime(date_string.strip(), '%Y/%m/%d').date()
-                for date_string in self.html.xpath(path)]
+                for date_string in self.xpath(path)]
 
     def _get_docket_numbers(self):
         path = '//tr/td[2]//text()'
         docket_numbers = []
-        for s in self.html.xpath(path):
+        for s in self.xpath(path):
             if s.strip():
                 docket_numbers.append(s)
         return docket_numbers

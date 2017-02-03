@@ -39,4 +39,4 @@ class Site(OpinionSite):
             path += '/a/text()'
         else:
             path += '/text()'
-        return [data.strip() for data in self.html.xpath(path) if data.strip()]
+        return [data.strip() for data in self.xpath(path) if data.strip()]

@@ -2,7 +2,7 @@
 CourtID: uscfc
 Court Short Name: Fed. Cl."""
 
-import uscfc
+from juriscraper.opinions.united_states.federal_special import uscfc
 
 
 class Site(uscfc.Site):

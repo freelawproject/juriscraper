@@ -5,7 +5,7 @@ History:
   2015-01-08: Created by mlr
 """
 
-import acca_p
+from juriscraper.opinions.united_states.federal_special import acca_p
 
 
 class Site(acca_p.Site):

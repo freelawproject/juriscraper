@@ -11,6 +11,7 @@ Notes:
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
 import re
+import six
 import time
 from datetime import date
 from lxml import html
@@ -38,7 +39,9 @@ class Site(OpinionSite):
             t = ' '.join(t.split())  # Normalize whitespace
             if t.strip():
                 # If there is something other than whitespace...
-                t = t.encode('utf8').split(' • ')[1].strip()
+                if not isinstance(t, six.string_types):
+                    t = str(t, encoding='utf-8')
+                t = t.split(u' • ')[1].strip()
                 t = titlecase(t.lower())
                 case_names.append(t)
         return case_names
@@ -55,7 +58,9 @@ class Site(OpinionSite):
         for t in self.html.xpath('//h3[@class="feed-item-title"]//text()'):
             if t.strip():
                 # If there is something other than whitespace...
-                t = t.encode('utf8').split(' • ')[0].strip()
+                if not isinstance(t, six.string_types):
+                    t = str(t, encoding='utf-8')
+                t = t.split(u' • ')[0].strip()
                 docket_numbers.append(t)
         return docket_numbers
 
@@ -94,7 +99,7 @@ class Site(OpinionSite):
             # Often the text looks like: 'Judge Susan G. Braden. (jt1) Copy to parties.' In that case we only
             # want the name, not the rest.
             length_of_match = 2
-            m = re.search('[a-z]{%s}\.' % length_of_match, judge)  # Two lower case letters followed by a period
+            m = re.search(r'[a-z]{%s}\.' % length_of_match, judge)  # Two lower case letters followed by a period
             if m:
                 judge = judge[:m.start() + length_of_match]
             else:
