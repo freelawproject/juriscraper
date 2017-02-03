@@ -123,10 +123,10 @@ def main():
     backscrape = options.backscrape
 
     # Set up the print function
-    print "Verbosity is set to: %s" % options.verbosity
+    print("Verbosity is set to: %s" % options.verbosity)
     def _v_print(*verb_args):
         if verb_args[0] > (3 - options.verbosity):
-            print verb_args[1]
+            print(verb_args[1])
 
     global v_print
     v_print = _v_print

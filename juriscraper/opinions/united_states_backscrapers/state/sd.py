@@ -36,7 +36,7 @@ class Site(OpinionSite):
                 case_name = re.search('(.*)(\d{4} S\.?D\.? \d{1,4})', s, re.MULTILINE).group(1)
                 case_names.append(titlecase(case_name.lower()))
             except AttributeError:
-                print "AttributeError on: %s" % titlecase(s)
+                print("AttributeError on: %s" % titlecase(s))
                 if 'myrl' in s.lower() and self.year == 2000:
                     case_names.append('Lends His Horse v. Myrl & Roy')
                 elif 'springer' in s.lower() and self.year == 2000:

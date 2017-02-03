@@ -198,7 +198,7 @@ def get_court_locations_list():
     # parse all the example files
     for f in glob.glob('./examples/*/*.xml'):
         fm = FDSysModsContent(f)
-        print f, fm.court_id, fm.court_location
+        print(f, fm.court_id, fm.court_location)
         court_locations_list[fm.court_id].add(fm.court_location)
 
     # change set to list
@@ -217,7 +217,7 @@ def get_the_first_5_words():
     word_counter = defaultdict(int)
     for f in glob.glob('./examples/*/*.xml'):
         fm = FDSysModsContent(f)
-        print f, fm.court_id, fm.court_location
+        print(f, fm.court_id, fm.court_location)
         for document in fm.documents:
             try:
                 words_to_use = document['description'].split()[:8]
@@ -257,6 +257,5 @@ if __name__ == '__main__':
     # f.url = "./sitemaps_examples/2006_USCOURTS_sitemap.xml"
     # f.parse()
     # for i in f:
-    #     print i
+    #     print(i)
     # #     pprint(i)0
-

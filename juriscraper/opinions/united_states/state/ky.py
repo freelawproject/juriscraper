@@ -158,13 +158,13 @@ class Site(OpinionSite):
                 # addresses than necessary.
                 r.raise_for_status()
                 break
-            except HTTPError, e:
+            except HTTPError as e:
                 logger.info('404 error connecting to: %s' % ip_address)
                 if e.response.status_code == 404 and not last_ip:
                     continue
                 else:
                     raise e
-            except (ConnectionError, Timeout), e:
+            except (ConnectionError, Timeout) as e:
                 logger.info('Timeout/Connection error connecting to: %s' % ip_address)
                 if not last_ip:
                     continue
