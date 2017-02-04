@@ -8,6 +8,7 @@ __all__ = [
     'ark',
     'arkctapp',
     'cal',
+    'calag',
     'calctapp_1st',
     'calctapp_2nd',
     'calctapp_3rd',
