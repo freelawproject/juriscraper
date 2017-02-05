@@ -135,6 +135,7 @@ __all__ = [
     'tennctapp',
     'tenncrimapp',
     'tex',
+    'texag',
     'texapp_1',
     'texapp_2',
     'texapp_3',
