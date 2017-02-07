@@ -468,8 +468,16 @@ def convert_date_string(date_string, fuzzy=False):
     """Sanitize date string and convert into standard date object"""
     date_string = date_string.replace('(', '')
     date_string = date_string.replace(')', '')
+
+    # python3 and lxml make for odd strings that we need to clean
+    date_string = date_string.replace(r'\n', '')
+    date_string = date_string.replace(r'\t', '')
+
     date_string = date_string.strip()
-    return parser.parse(date_string, fuzzy=fuzzy).date()
+    try:
+        return parser.parse(date_string, fuzzy=fuzzy).date()
+    except ValueError:
+        raise ValueError(msg='invalid date_string: %s' % date_string)
 
 def split_date_range_string(date_range_string):
     """This function requires a string in 'January - March 2016' format"""
