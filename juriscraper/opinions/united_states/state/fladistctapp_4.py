@@ -18,12 +18,12 @@ from datetime import date
 from lxml.html.clean import Cleaner
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.string_utils import convert_date_string, clean_if_py3
 
 
 class Site(OpinionSite):
-    base_anchor_regex = '4D.*\d{2})([- ][A-Z\d].*'
-    base_anchor_path = "//a[starts-with(normalize-space(.), '4D')]"
+    base_anchor_regex = r'4D.*\d{2})([- ][A-Z\d].*'
+    base_anchor_path = "//a[contains(., '4D')]"
 
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
@@ -57,9 +57,14 @@ class Site(OpinionSite):
         return case_names
 
     def _extract_case_names_from_sub_page(self, html_tree):
-        regex = '(?:%s)' % self.base_anchor_regex
+        regex = r'(?:%s)' % self.base_anchor_regex
         path = "{base}//text()".format(base=self.base_anchor_path)
-        return [re.search(regex, s).group(1) for s in html_tree.xpath(path) if s.strip()]
+        case_names = []
+        for el in html_tree.xpath(path):
+            txt = clean_if_py3(el).strip()
+            if txt:
+                case_names.append(re.search(regex, txt).group(1))
+        return case_names
 
     def _get_download_urls(self):
         download_urls = []
@@ -69,7 +74,9 @@ class Site(OpinionSite):
 
     def _extract_download_url_from_sub_page(self, html_tree):
         path = "{base}/@href".format(base=self.base_anchor_path)
-        return list(html_tree.xpath(path))
+        urls = html_tree.xpath(path)
+
+        return list(urls)
 
     def _get_case_dates(self):
         case_dates = []
@@ -128,7 +135,7 @@ class Site(OpinionSite):
 
         # Build and return list of dates based on date:opinion distribution detected above
         dates = []
-        for date, count in dates_dict.iteritems():
+        for date, count in dates_dict.items():
             dates.extend([date] * count)
         return dates
 
@@ -144,4 +151,9 @@ class Site(OpinionSite):
     def _extract_docket_numbers_from_sub_page(self, html_tree):
         regex = '(%s)' % self.base_anchor_regex
         path = "{base}//text()".format(base=self.base_anchor_path)
-        return [re.search(regex, e).group(1) for e in html_tree.xpath(path) if e.strip()]
+        docket_numbers = []
+        for el in html_tree.xpath(path):
+            txt = clean_if_py3(el).strip()
+            if txt:
+                docket_numbers.append(re.search(regex, txt).group(1))
+        return docket_numbers

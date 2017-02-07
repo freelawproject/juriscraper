@@ -17,7 +17,7 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.regex = False
         self.url = 'http://www.pacourts.us/assets/rss/SupremeOpinionsRss.ashx'
-        self.set_regex("(.*)(?:[,-]?\s+Nos?\.)(.*)")
+        self.set_regex(r"(.*)(?:[,-]?\s+Nos?\.)(.*)")
         self.base = "//item[not(contains(title/text(), 'Judgment List'))]" \
                     "[not(contains(title/text(), 'Reargument Table'))]" \
                     "[contains(title/text(), 'No.')]"
@@ -27,10 +27,10 @@ class Site(OpinionSite):
 
     def _get_case_names(self):
         path = "{base}/title/text()".format(base=self.base)
-        return map(self._return_case_name, self.html.xpath(path))
+        return list(map(self._return_case_name, self.html.xpath(path)))
 
     def _return_case_name(self, s):
-        match = self.regex.search(s)
+        match = self.regex.search(s.replace(r'\n', '\n'))
         return match.group(1)
 
     def _get_download_urls(self):
@@ -49,7 +49,7 @@ class Site(OpinionSite):
         return map(self._return_docket_number, self.html.xpath(path))
 
     def _return_docket_number(self, e):
-        return self.regex.search(e).group(2)
+        return self.regex.search(e.replace(r'\n', '\n')).group(2)
 
     def _get_judges(self):
         path = "{base}/creator/text()".format(base=self.base)

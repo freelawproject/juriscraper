@@ -470,14 +470,11 @@ def convert_date_string(date_string, fuzzy=False):
     date_string = date_string.replace(')', '')
 
     # python3 and lxml make for odd strings that we need to clean
-    date_string = date_string.replace(r'\n', '')
-    date_string = date_string.replace(r'\t', '')
+    date_string = clean_if_py3(date_string)
 
     date_string = date_string.strip()
-    try:
-        return parser.parse(date_string, fuzzy=fuzzy).date()
-    except ValueError:
-        raise ValueError(msg='invalid date_string: %s' % date_string)
+    return parser.parse(date_string, fuzzy=fuzzy).date()
+
 
 def split_date_range_string(date_range_string):
     """This function requires a string in 'January - March 2016' format"""
@@ -611,3 +608,19 @@ class CaseNameTweaker(object):
 
         # More than 1 instance of v. or otherwise no matches --> Give up.
         return u''
+
+
+def clean_if_py3(s):
+    """
+    Cleans up text if using Python 3
+
+    :param s: string to strip
+    :return: stripped string
+    """
+    if six.PY3:
+        strip_strings = (r'\n', r'\t', r'\r')
+
+        for pattern in strip_strings:
+            s = s.replace(pattern, '')
+
+    return s

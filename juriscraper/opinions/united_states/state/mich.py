@@ -7,7 +7,7 @@ History:
 """
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import titlecase, clean_if_py3
 import time
 from datetime import date, timedelta
 
@@ -37,7 +37,7 @@ class Site(OpinionSite):
         dates = []
         for txt in self.html.xpath('//li[@class="releaseDate"]/text()'):
             # Release Date: 2/22/2013 --> 2/22/2013
-            txt = txt.strip().split(' ')[2]
+            txt = clean_if_py3(txt).strip().split(' ')[2]
             dates.append(date.fromtimestamp(time.mktime(time.strptime(
                 txt.strip(), '%m/%d/%Y'))))
         return dates
@@ -65,32 +65,32 @@ class Site(OpinionSite):
 
     def _get_lower_courts(self):
         lower_courts = []
-        for el in self.html.xpath('//ul[@class="odd" or @class="even"]'):
+        for el in self.html.xpath("//ul[contains(@class, 'odd') or contains(@class, 'even')]"):
             try:
                 s = el.xpath('//li[@class="casedetailsleft"]'
                              '//li[@class="lowerCourt"]/text()')
-                lower_courts.append(titlecase(s[0].strip().split(' ', 2)[2]))
+                lower_courts.append(titlecase(clean_if_py3(s[0]).strip().split(' ', 2)[2]))
             except IndexError:
                 lower_courts.append('')
         return lower_courts
 
     def _get_dispositions(self):
         disps = []
-        for el in self.html.xpath('//ul[@class="odd" or @class="even"]'):
+        for el in self.html.xpath("//ul[contains(@class, 'odd') or contains(@class, 'even')]"):
             try:
                 s = el.xpath('//li[@class="caseNature"]/text()')
-                disps.append(s[0].strip().split(' ', 2)[2])
+                disps.append(clean_if_py3(s[0]).strip().split(' ', 2)[2])
             except IndexError:
                 disps.append('')
         return disps
 
     def _get_lower_court_numbers(self):
         nums = []
-        for el in self.html.xpath('//ul[@class="odd" or @class="even"]'):
+        for el in self.html.xpath("//ul[contains(@class, 'odd') or contains(@class, 'even')]"):
             try:
                 s = el.xpath('//li[@class = "casedetailsright"]'
                              '//li[@class = "lowerCourt"]/text()')
-                nums.append(s[0].strip().split('No. ')[1])
+                nums.append(clean_if_py3(s[0]).strip().split('No. ')[1])
             except IndexError:
                 nums.append('')
         return nums

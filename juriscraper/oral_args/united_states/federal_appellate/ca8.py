@@ -10,6 +10,7 @@ History:
 from datetime import datetime
 
 from juriscraper.OralArgumentSite import OralArgumentSite
+from juriscraper.lib.string_utils import clean_if_py3
 
 
 class Site(OralArgumentSite):
@@ -37,7 +38,7 @@ class Site(OralArgumentSite):
     def _get_case_names(self):
         case_names = []
         for txt in [item.xpath('./title/text()')[0] for item in self.items]:
-            case_name = txt.split(': ', 1)[1]
+            case_name = clean_if_py3(txt).split(': ', 1)[1]
             case_names.append(case_name)
         return case_names
 
@@ -46,13 +47,13 @@ class Site(OralArgumentSite):
         for txt in [item.xpath('./description/text()')[0] for item in self.items]:
             # I can't see it, but there's apparently whitespace or a newline
             # at the end of these dates that has to be removed or we error out.
-            case_date = txt.split('about ', 1)[1].strip()
+            case_date = clean_if_py3(txt).split('about ', 1)[1].strip()
             case_dates.append(datetime.strptime(case_date, '%m/%d/%Y').date())
         return case_dates
 
     def _get_docket_numbers(self):
         docket_numbers = []
         for txt in [item.xpath('./title/text()')[0] for item in self.items]:
-            docket_number = txt.split(': ', 1)[0]
+            docket_number = clean_if_py3(txt).split(': ', 1)[0]
             docket_numbers.append(docket_number)
         return docket_numbers

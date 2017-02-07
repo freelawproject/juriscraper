@@ -8,6 +8,7 @@ History:
     2014-09-03: Created by Jon Andersen
 """
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import clean_if_py3
 import time
 from datetime import date
 
@@ -38,7 +39,7 @@ class Site(OpinionSite):
     def _get_case_dates(self):
         dates = []
         for date_string in self.html.xpath('//dl/dd/dd/dd/text()'):
-            date_string = date_string.strip()
+            date_string = clean_if_py3(date_string).strip()
             if date_string == '':
                 dates.append('')
             else:
