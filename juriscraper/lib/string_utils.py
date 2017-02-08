@@ -614,8 +614,9 @@ def clean_if_py3(s):
     """
     Cleans up text if using Python 3
 
-    :param s: string to strip
-    :return: stripped string
+    :param s: string to clean
+    :return: string un-modified on Python 2.x, string with raw literals replaced
+             with their string forms on Python 3.x
     """
     if six.PY3:
         replacements = [
