@@ -1,8 +1,11 @@
 # Author: Michael Lissner
 # Date created: 2013-06-06
-# Updated: 2013-07-01 (make it abort on 1st of month before 4pm)
+# History:
+#   2013-07-01, mlr: make it abort on 1st of month before 4pm
+#   2017-02-08, mlr: Add a backscraper
 
 import re
+from dateutil.rrule import rrule, MONTHLY
 from lxml import html
 from datetime import date
 from datetime import datetime
@@ -23,11 +26,17 @@ class Site(OpinionSite):
         now = datetime.now()
         self.url = 'https://www.ndcourts.gov/opinions/month/%s.htm' % (today.strftime("%b%Y"))
         if today.day == 1 and now.hour < 16:
-            # On the first of the month, the page doesn't exist until later in the day, so when that's the case,
-            # we don't do anything until after 16:00. If we try anyway, we get a 503 error. This simply aborts the
-            # crawler.
+            # On the first of the month, the page doesn't exist until later in
+            # the day, so when that's the case, we don't do anything until after
+            # 16:00. If we try anyway, we get a 503 error. This simply aborts
+            # the crawler.
             self.status = 200
             self.html = html.fromstring('<html></html>')
+        self.back_scrape_iterable = [i.date() for i in rrule(
+            MONTHLY,
+            dtstart=date(1998, 10, 1),
+            until=date(2017, 1, 1),
+        )]
 
     def _get_cases_from_page(self):
         cases = []
@@ -62,7 +71,8 @@ class Site(OpinionSite):
                         })
         return cases
 
-    def _is_appellate_citation(self, citation):
+    @staticmethod
+    def _is_appellate_citation(citation):
         return ' App ' in citation
 
     def _should_scrape_case(self, citation):
@@ -85,3 +95,8 @@ class Site(OpinionSite):
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
+
+    def _download_backwards(self, d):
+        """This should provide """
+        self.url = self.url = 'https://www.ndcourts.gov/opinions/month/%s.htm' % (d.strftime("%b%Y"))
+        self.html = self._download()
