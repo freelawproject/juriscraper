@@ -27,15 +27,10 @@ class Site(OpinionSite):
 
     def _get_case_names(self):
         path = "{base}/title/text()".format(base=self.base)
-        return list(map(self._return_case_name, self.html.xpath(path)))
-
-    def _return_case_name(self, s):
-        match = self.regex.search(s.replace(r'\n', '\n'))
-        return match.group(1)
+        return list(map(self.return_case_name, self.html.xpath(path)))
 
     def _get_download_urls(self):
-        path = "{base}//@href".format(base=self.base)
-        return [item for item in self.html.xpath(path)]
+        return [href for href in self.html.xpath('%s//@href' % self.base)]
 
     def _get_case_dates(self):
         path = "{base}/pubdate/text()".format(base=self.base)
@@ -45,12 +40,17 @@ class Site(OpinionSite):
         return ['Published'] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        path = "{base}/title/text()".format(base=self.base)
-        return map(self._return_docket_number, self.html.xpath(path))
-
-    def _return_docket_number(self, e):
-        return self.regex.search(e.replace(r'\n', '\n')).group(2)
+        return self.return_path_text('%s/title' % self.base)
 
     def _get_judges(self):
-        path = "{base}/creator/text()".format(base=self.base)
-        return list(self.html.xpath(path))
+        return self.return_path_text('%s/creator' % self.base)
+
+    def return_case_name(self, s):
+        match = self.regex.search(s.replace(r'\n', '\n'))
+        return match.group(1)
+
+    def return_docket_number(self, e):
+        return self.regex.search(e.replace(r'\n', '\n')).group(2)
+
+    def return_path_text(self, path):
+        return [element.text_content() for element in self.html.xpath(path)]
