@@ -21,7 +21,7 @@ class Site(OpinionSite):
     def _get_case_names(self):
         case_names = []
         for name in self.html.xpath('//table/tr/td[3]/text()'):
-            date_regex = re.compile(r' \d\d?\/\d\d?\/\d\d| filed')
+            date_regex = re.compile(r' \d\d?/\d\d?/\d\d| filed')
             if 'P. v. ' in date_regex.split(name)[0]:
                 case_names.append(date_regex.split(name)[0].replace("P. ", "People "))
             else:

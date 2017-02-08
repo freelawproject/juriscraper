@@ -78,7 +78,7 @@ class Site(OpinionSite):
 
     def _get_docket_document_numbers(self):
         document_numbers = []
-        regex = re.compile('(\?)(\d+)([a-z]+)(\d+)(\-)(.*)')
+        regex = re.compile(r'(\?)(\d+)([a-z]+)(\d+)(-)(.*)')
         for url in self.html.xpath('//table[2]//tr[position()>0]/td[3]/a/@href'):
             # Because we are acting directly on the entire url list, no padding
             # of the docket number field is required.
@@ -111,7 +111,7 @@ class Site(OpinionSite):
             # Because we are acting directly on the entire url list, no padding
             # of the nature of suit field is required.
             regex = '(\?)(\d+)([a-z]+)(\d+)(\-)(.*)'
-            url_str = re.search(r'(\?)(\d+)([a-z]+)(\d+)(\-)(.*)',url)
+            url_str = re.search(r'(\?)(\d+)([a-z]+)(\d+)(-)(.*)',url)
             # In 2012 (and perhaps elsewhere) they have a few weird urls.
             if re.search(regex, url) is not None:
                 nature_code = url_str.group(3)

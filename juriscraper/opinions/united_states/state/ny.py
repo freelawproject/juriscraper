@@ -81,7 +81,7 @@ class Site(OpinionSite):
             text = cell.text_content()
             date_from_text = self.get_date_from_text(text)
             if not date_from_text:
-                if re.search(r'N(o|O)\.?\,?', text):
+                if re.search(r'N(o|O)\.?,?', text):
                     docket = self._sanitize_docket_string(text)
                     docket_numbers.append(docket)
         return docket_numbers

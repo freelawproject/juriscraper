@@ -35,7 +35,7 @@ class Site(OpinionSite):
         path = ('//*[@id="content2col"]/table[%s]/tr[.//a]/td[1]//text()' % self.table)
         for s in self.html.xpath(path):
             s = s.strip()
-            s = re.sub('[\.,]', '', s)
+            s = re.sub(r'[.,]', '', s)
             s = s.replace('Sept', 'Sep')
             date_formats = ['%b %d %Y', '%B %d %Y']
             for format in date_formats:
