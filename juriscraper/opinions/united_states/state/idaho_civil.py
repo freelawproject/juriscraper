@@ -10,11 +10,12 @@ History:
  - 2015-10-23, mlr: Updated to handle annoying situation.
  - 2016-02-25 arderyp: Updated to catch "ORDER" (in addition to "Order") in download url text
 """
+import six
 
 from lxml import html
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.string_utils import convert_date_string, clean_if_py3
 
 
 class Site(OpinionSite):
@@ -34,7 +35,8 @@ class Site(OpinionSite):
         case_names = []
         path = '%s/td[3]' % self.starting_table_row
         for cell in self.html.xpath(path):
-            name_string = html.tostring(cell, method='text', encoding='unicode').strip()
+            name_string = html.tostring(cell, method='text', encoding='unicode')
+            name_string = clean_if_py3(name_string).strip()
             if name_string:
                 case_names.append(name_string)
         return case_names
@@ -54,9 +56,11 @@ class Site(OpinionSite):
         case_dates = []
         path = '%s/td[1]' % self.starting_table_row
         for cell in self.html.xpath(path):
-            date_string = html.tostring(cell, method='text', encoding='unicode').strip()
+            date_string = html.tostring(cell, method='text', encoding='unicode')
+            date_string = clean_if_py3(date_string).strip()
             if date_string:
-                date_string = date_string.encode('ascii', 'ignore')
+                if six.PY2:
+                    date_string = date_string.encode('ascii', 'ignore')
                 date_string = date_string.replace('Sept ', 'Sep ')  # GIGO!  (+1 by arderyp)
                 case_dates.append(convert_date_string(date_string))
         return case_dates

@@ -9,6 +9,7 @@ from datetime import datetime
 import re
 
 from juriscraper.OralArgumentSite import OralArgumentSite
+from juriscraper.lib.string_utils import clean_if_py3
 
 
 class Site(OralArgumentSite):
@@ -39,8 +40,8 @@ class Site(OralArgumentSite):
         dates = []
         for t in self.html.xpath(path):
             # t looks like: [Argued:91-1-2015]
-            t = re.sub('[\[\]\s]', '', t)             # Strip out [ and ].
-            date_string = t.split(':', 1)[1].strip()  # Then get the date part.
+            t = re.sub(r'[\[\]\s]', '', t)             # Strip out [ and ].
+            date_string = clean_if_py3(t).split(':', 1)[1].strip()  # Then get the date part.
             dates.append(datetime.strptime(date_string, '%m-%d-%Y').date())
         return dates
 
@@ -48,6 +49,6 @@ class Site(OralArgumentSite):
         document_numbers = []
         for t in self.html.xpath('//item/title/text()'):
             case_name = t.split(', ', 1)[0]
-            case_name = re.sub('case:\s?', '', case_name, re.I)
+            case_name = re.sub(r'case:\s?', '', case_name, re.I)
             document_numbers.append(case_name)
         return document_numbers

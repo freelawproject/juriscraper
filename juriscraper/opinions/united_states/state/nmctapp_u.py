@@ -1,4 +1,4 @@
-import nm_p
+from juriscraper.opinions.united_states.state import nm_p
 
 from datetime import date
 
@@ -20,7 +20,7 @@ class Site(nm_p.Site):
         return ["Unpublished"] * len(self.case_names)
 
     def _download_backwards(self, year):
-        self.url = 'http://www.nmcompcomm.us/nmcases/NMUnrepYear.aspx?db=cau&y=%s' % (year)
+        self.url = 'http://www.nmcompcomm.us/nmcases/NMUnrepYear.aspx?db=cau&y=%s' % year
         self.html = self._download()
 
 

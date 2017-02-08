@@ -3,7 +3,7 @@ Scraper for the Tennessee Court of Criminal Appeals
 CourtID: tennctcrimapp
 Court Short Name: Tenn. Ct. Crim. App.
 """
-import tenn
+from juriscraper.opinions.united_states.state import tenn
 
 
 class Site(tenn.Site):

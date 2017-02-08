@@ -20,7 +20,7 @@ class Site(OpinionSite):
     def _get_case_names(self):
         case_names = []
         for name in self.html.xpath("/html/body//h2[contains(.,'SUPREME')]/following-sibling::ul[1]/li/a//text()"):
-            case_names.append(re.sub('\(?S\d+[\s\)]\s?', '', name))
+            case_names.append(re.sub(r'\(?S\d+[\s)]\s?', '', name))
         return case_names
 
     def _get_docket_numbers(self):

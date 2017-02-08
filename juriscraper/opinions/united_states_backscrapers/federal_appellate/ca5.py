@@ -114,7 +114,7 @@ class Site(OpinionSite):
                 html_tree.rewrite_links(remove_anchors)
                 html_pages.append(html_tree)
 
-                for i in xrange(nr_of_pages - 1):
+                for i in range(nr_of_pages - 1):
                     logger.info("  Getting page %s" % (i + 2))
                     next_page = driver.find_element_by_class_name('rgPageNext')
                     next_page.click()

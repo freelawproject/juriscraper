@@ -20,6 +20,7 @@ from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.cookie_utils import normalize_cookies
 from juriscraper.lib.network_utils import add_delay
+from juriscraper.lib.string_utils import clean_if_py3
 
 
 class Site(OpinionSite):
@@ -61,7 +62,7 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.method = 'POST'
         self.base_path = '//tr[td[5]//a][td[7][contains(., "Opinion")]]'  # Any element with a link on the 5th column
-        self.download_regex = re.compile("funcNewWindow\('(.*\.htm)'\)")
+        self.download_regex = re.compile(r"funcNewWindow\(\\{0,1}'(.*\.htm)\\{0,1}'\)")
         self.use_sessions = True
         self.uses_selenium = True
 
@@ -95,7 +96,14 @@ class Site(OpinionSite):
     def _get_download_urls(self):
         download_urls = []
         for element in self.html.xpath(self.base_path):
-            download_urls.append(''.join(self.download_regex.findall(x)[0] for x in element.xpath('./td[5]//@href')))
+            url = ''
+            for href in element.xpath('./td[5]//@href'):
+                matches = self.download_regex.findall(clean_if_py3(href))
+                if matches:
+                    url = url + matches[0]
+
+            if url:
+                download_urls.append(url)
         return download_urls
 
     def _get_case_dates(self):

@@ -120,7 +120,7 @@ def parse_dates(s, debug=False, sane_start=datetime.datetime(1750, 1, 1),
     DEFAULT = datetime.datetime(1600, 12, 25)
     dates = []
     for item in timesplit(s):
-        #print "Found:", item
+        #print("Found:", item)
         try:
             d = p.parse(item, default=DEFAULT)
             hit_default_year = (d.year == DEFAULT.year)

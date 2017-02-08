@@ -5,7 +5,7 @@
 #Reviewer: mlr
 #Date: 2014-07-04
 
-import nyappdiv_1st
+from juriscraper.opinions.united_states.state import nyappdiv_1st
 
 
 class Site(nyappdiv_1st.Site):

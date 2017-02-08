@@ -1,7 +1,7 @@
 # Author: Krist Jin
 # Date created: 2013-08-03
 
-import nj
+from juriscraper.opinions.united_states.state import nj
 
 
 class Site(nj.Site):

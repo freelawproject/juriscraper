@@ -9,8 +9,9 @@ Notes:
 """
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import titlecase, clean_if_py3
 import re
+import six
 import time
 from datetime import date
 from lxml import html
@@ -35,10 +36,14 @@ class Site(OpinionSite):
     def _get_case_names(self):
         case_names = []
         for t in self.html.xpath('//h3[@class="feed-item-title"]//text()'):
-            t = ' '.join(t.split())  # Normalize whitespace
+            t = ' '.join(clean_if_py3(t).split())  # Normalize whitespace
             if t.strip():
                 # If there is something other than whitespace...
-                t = t.encode('utf8').split(' • ')[1].strip()
+                if not isinstance(t, six.string_types):
+                    t = str(t, encoding='utf-8')
+
+                if u' • ' in t:
+                    t = t.split(u' • ')[1].strip()
                 t = titlecase(t.lower())
                 case_names.append(t)
         return case_names
@@ -53,9 +58,14 @@ class Site(OpinionSite):
     def _get_docket_numbers(self):
         docket_numbers = []
         for t in self.html.xpath('//h3[@class="feed-item-title"]//text()'):
+            t = clean_if_py3(t)
             if t.strip():
                 # If there is something other than whitespace...
-                t = t.encode('utf8').split(' • ')[0].strip()
+                if not isinstance(t, six.string_types):
+                    t = str(t, encoding='utf-8')
+
+                if u' • ' in t:
+                    t = t.split(u' • ')[0].strip()
                 docket_numbers.append(t)
         return docket_numbers
 
@@ -64,7 +74,7 @@ class Site(OpinionSite):
         path = '//div[@class="feed-item-body"]'
         for e in self.html.xpath(path):
             s = html.tostring(e, method='text', encoding='unicode')
-            s = s.split('Keywords:')[0]
+            s = clean_if_py3(s).split('Keywords:')[0]
             summaries.append(s)
 
         return summaries
@@ -80,7 +90,7 @@ class Site(OpinionSite):
         ]
         for e in self.html.xpath(path):
             t = html.tostring(e, method='text', encoding='unicode')
-            t = t.split('Keywords:')[0]
+            t = clean_if_py3(t).split('Keywords:')[0]
             for splitter in splitters:
                 judge_parts = t.rsplit(splitter)
                 if len(judge_parts) == 1:
@@ -94,7 +104,7 @@ class Site(OpinionSite):
             # Often the text looks like: 'Judge Susan G. Braden. (jt1) Copy to parties.' In that case we only
             # want the name, not the rest.
             length_of_match = 2
-            m = re.search('[a-z]{%s}\.' % length_of_match, judge)  # Two lower case letters followed by a period
+            m = re.search(r'[a-z]{%s}\.' % length_of_match, judge)  # Two lower case letters followed by a period
             if m:
                 judge = judge[:m.start() + length_of_match]
             else:

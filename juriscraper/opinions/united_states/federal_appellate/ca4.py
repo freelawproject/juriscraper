@@ -4,6 +4,7 @@ from datetime import timedelta
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import clean_if_py3
 from dateutil.rrule import rrule, DAILY
 
 
@@ -32,6 +33,7 @@ class Site(OpinionSite):
         path = '//tr/td[4]/text()'
         names = []
         for s in self.html.xpath(path):
+            s = clean_if_py3(s)
             if s.strip():
                 names.append(s)
         logger.info(str(len(names)))
@@ -43,14 +45,19 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         path = '//tr/td[3]/text()'
-        return [datetime.strptime(date_string.strip(), '%Y/%m/%d').date()
-                for date_string in self.html.xpath(path)]
+        case_dates = []
+        for date_string in self.html.xpath(path):
+            date_string = clean_if_py3(date_string).strip()
+            if date_string:
+                case_dates.append(datetime.strptime(date_string, '%Y/%m/%d').date())
+        return case_dates
 
     def _get_docket_numbers(self):
         path = '//tr/td[2]//text()'
         docket_numbers = []
         for s in self.html.xpath(path):
-            if s.strip():
+            s = clean_if_py3(s).strip()
+            if s:
                 docket_numbers.append(s)
         return docket_numbers
 

@@ -2,7 +2,7 @@
 # CourtID: calctapp_3rd
 # Court Short Name: Cal. Ct. App.
 
-import calctapp_1st
+from juriscraper.opinions.united_states.state import calctapp_1st
 
 
 class Site(calctapp_1st.Site):

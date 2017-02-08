@@ -1,7 +1,7 @@
 # Auth: mlr
 # Date: 2013-04-26
 
-import miss
+from juriscraper.opinions.united_states.state import miss
 from datetime import date
 from lxml import html
 

@@ -7,6 +7,7 @@
 from datetime import datetime
 
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import clean_if_py3
 
 
 class Site(OpinionSite):
@@ -49,8 +50,13 @@ class Site(OpinionSite):
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
-        return [datetime.strptime(date_string.strip(), '%b %d, %Y').date()
-                for date_string in self.html.xpath(self.date_path)]
+        case_dates = []
+        for el in self.html.xpath(self.date_path):
+            date_string = clean_if_py3(str(el)).strip()
+            if date_string:
+                case_dates.append(datetime.strptime(date_string, '%b %d, %Y').date())
+
+        return case_dates
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
@@ -62,7 +68,12 @@ class Site(OpinionSite):
                 i=2 + self.xpath_adjustment,
             ),
         )
-        return list(self.html.xpath(path))
+        docket_numbers = []
+        for el in self.html.xpath(path):
+            text = clean_if_py3(str(el)).strip()
+            if text:
+                docket_numbers.append(text)
+        return docket_numbers
 
     def _get_neutral_citations(self):
         neutral_path = '{base}//text()'.format(
@@ -71,11 +82,18 @@ class Site(OpinionSite):
                 i=1 + self.xpath_adjustment,
             ),
         )
+
+        date_strings = []
+        for el in self.html.xpath(self.date_path):
+            date_string = clean_if_py3(str(el)).strip()
+            if date_string:
+                date_strings.append(date_string)
+
         neutral_citations = []
         for neutral_number, \
             date_string in zip(
                 self.html.xpath(neutral_path),
-                self.html.xpath(self.date_path)):
+                date_strings):
             year = datetime.strptime(date_string.strip(), '%b %d, %Y').year
             neutral_citations.append('{year} NV {num}'.format(year=year, num=neutral_number))
         return neutral_citations

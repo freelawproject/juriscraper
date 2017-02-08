@@ -1,4 +1,4 @@
-import mo
+from juriscraper.opinions.united_states.state import mo
 
 
 class Site(mo.Site):

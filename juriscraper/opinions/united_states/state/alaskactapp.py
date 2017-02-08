@@ -34,7 +34,7 @@ class Site(OpinionSite):
         for h2_element in self.html.xpath('//h4[following-sibling::ul//a/em]'):
             date_string = str(h2_element.xpath('./text()')[0])
 
-            if (date_string.find("-") > 0):
+            if date_string.find("-") > 0:
                 # The opinion list eventually gets to older
                 # cases that do not have exact date headers.
                 # Like: January - March 2014

@@ -1,4 +1,4 @@
-import urllib
+from six.moves.urllib.parse import urlencode
 from datetime import date, timedelta, datetime
 
 import re
@@ -12,7 +12,7 @@ class Site(OpinionSite):
         self.base_url = 'http://media.ca1.uscourts.gov/cgi-bin/opinions.pl'
         self.court_id = self.__module__
         today = date.today()
-        params = urllib.urlencode({
+        params = urlencode({
             'FROMDATE': (today - timedelta(7)).strftime('%m/%d/%Y'),
             'TODATE': today.strftime('%m/%d/%Y'),
             'puid': ''
@@ -38,14 +38,14 @@ class Site(OpinionSite):
     def _get_case_dates(self):
         dates = []
         for s in self.html.xpath('//tr[position() > 1]/td[1]//text()'):
-            s = s.strip()
+            s = s.replace(r'\t', '').replace(r'\n', '').strip()
             if s == '1996/05/32':
                 s = '1996/05/30'  # My life is thus lain to waste.
             dates.append(datetime.strptime(s.strip(), '%Y/%m/%d').date())
         return dates
 
     def _get_docket_numbers(self):
-        regex = re.compile("(\d{2}-.*?\W)(.*)$")
+        regex = re.compile(r"(\d{2}-.*?\W)(.*)$")
         docket_numbers = []
         for s in self.html.xpath('//tr[position() > 1]/td[2]/a/text()'):
             s = s.replace('O1-', '01-')  # I grow older, the input grows worse.
@@ -77,7 +77,7 @@ class Site(OpinionSite):
         return lower_courts
 
     def _download_backwards(self, d):
-        params = urllib.urlencode({
+        params = urlencode({
             'FROMDATE': d.strftime('%m/%d/%Y'),
             'TODATE': (d + timedelta(self.interval)).strftime('%m/%d/%Y'),
             'puid': ''

@@ -13,10 +13,13 @@
 #   2016-08-03: Updated by arderyp to handle junk/repetitive anchor tags
 
 import re
+import six
 
 from datetime import date
 from dateutil.relativedelta import relativedelta, TH
+
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import clean_if_py3
 
 
 class Site(OpinionSite):
@@ -86,11 +89,11 @@ class Site(OpinionSite):
         return docket, name
 
     def _sanitize_docket_name_text(self, text):
-        text = text.strip()
+        text = clean_if_py3(text).strip()
         first_word = text.split()[0]
 
         # Replace en dash typo with proper hyphen so regex parses properly
-        en_dash = '\xe2\x80\x93'.decode('utf-8')
+        en_dash = b'\xe2\x80\x93'.decode('utf-8')
         first_word_sanitized = first_word.replace(en_dash, '-')
 
         return text.replace(first_word, first_word_sanitized)

@@ -286,6 +286,8 @@ def harmonize(text):
 
     Lots of tests are in tests.py.
     """
+    if not isinstance(text, six.string_types):
+        text = str(text)
 
     result = ''
     # replace vs. with v.
@@ -466,8 +468,13 @@ def convert_date_string(date_string, fuzzy=False):
     """Sanitize date string and convert into standard date object"""
     date_string = date_string.replace('(', '')
     date_string = date_string.replace(')', '')
+
+    # python3 and lxml make for odd strings that we need to clean
+    date_string = clean_if_py3(date_string)
+
     date_string = date_string.strip()
     return parser.parse(date_string, fuzzy=fuzzy).date()
+
 
 def split_date_range_string(date_range_string):
     """This function requires a string in 'January - March 2016' format"""
@@ -601,3 +608,24 @@ class CaseNameTweaker(object):
 
         # More than 1 instance of v. or otherwise no matches --> Give up.
         return u''
+
+
+def clean_if_py3(s):
+    """
+    Cleans up text if using Python 3
+
+    :param s: string to clean
+    :return: string un-modified on Python 2.x, string with raw literals replaced
+             with their string forms on Python 3.x
+    """
+    if six.PY3:
+        replacements = [
+            (r'\n', '\n'),
+            (r'\t', '\t'),
+            (r'\r', '\r')
+        ]
+
+        for raw, replacement in replacements:
+            s = s.replace(raw, replacement)
+
+    return s

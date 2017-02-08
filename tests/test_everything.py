@@ -158,12 +158,12 @@ class ScraperExampleTest(unittest.TestCase):
 
                 print('(%s test(s) in %0.1f seconds%s)' % (num_tests, speed, msg))
 
-        print ("\n{num_scrapers} scrapers tested successfully against "
-               "{num_example_files} example files, with {num_warnings} "
-               "speed warnings.".format(
-                    num_scrapers=num_scrapers,
-                    num_example_files=num_example_files,
-                    num_warnings=num_warnings,))
+        print("\n{num_scrapers} scrapers tested successfully against "
+              "{num_example_files} example files, with {num_warnings} "
+              "speed warnings.".format(
+                  num_scrapers=num_scrapers,
+                  num_example_files=num_example_files,
+                  num_warnings=num_warnings,))
         if num_warnings:
             print("\nAt least one speed warning was triggered during the "
                    "tests. If this is due to a slow scraper you wrote, we "
