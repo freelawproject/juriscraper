@@ -824,7 +824,7 @@ class ScraperSpotTest(unittest.TestCase):
         site = pa.Site()
         for s, expectation in string_pairs:
             try:
-                site._return_case_name(s)
+                site.return_case_name(s)
                 outcome = True
             except:
                 outcome = False
