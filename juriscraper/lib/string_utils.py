@@ -618,9 +618,13 @@ def clean_if_py3(s):
     :return: stripped string
     """
     if six.PY3:
-        strip_strings = (r'\n', r'\t', r'\r')
+        replacements = [
+            (r'\n', '\n'),
+            (r'\t', '\t'),
+            (r'\r', '\r')
+        ]
 
-        for pattern in strip_strings:
-            s = s.replace(pattern, '')
+        for raw, replacement in replacements:
+            s = s.replace(raw, replacement)
 
     return s
