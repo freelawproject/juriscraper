@@ -1,5 +1,5 @@
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.string_utils import convert_date_string, clean_if_py3
 
 
 class Site(OpinionSite):
@@ -39,4 +39,10 @@ class Site(OpinionSite):
             path += '/a/text()'
         else:
             path += '/text()'
-        return [data.strip() for data in self.xpath(path) if data.strip()]
+
+        results = []
+        for data in self.html.xpath(path):
+            data = clean_if_py3(data).strip()
+            if data:
+                results.append(data)
+        return results

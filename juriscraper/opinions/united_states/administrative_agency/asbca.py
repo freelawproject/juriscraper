@@ -12,7 +12,7 @@ import re
 from datetime import datetime
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.string_utils import convert_date_string, clean_if_py3
 
 
 class Site(OpinionSite):
@@ -38,7 +38,7 @@ class Site(OpinionSite):
         path = "//table/tr[1]/td"
         i = 1
         for column in self.html.xpath(path):
-            colname = self._clean_xpath_result(column)
+            colname = clean_if_py3(''.join(column.itertext())).strip()
             self.columns[colname] = i
             i += 1
         return self.columns
@@ -46,38 +46,38 @@ class Site(OpinionSite):
     def _get_case_dates(self):
         self.parse_column_names()
         path = "//table/tr[td/a]/td[%d]/text()" % (self.columns['Decision Date'])
-        return [self._get_date_object_from_string(self._clean_xpath_result(date_string)) for date_string in self.html.xpath(path)]
+        return [self._get_date_object_from_string(date_string) for date_string in self.html.xpath(path)]
 
     def _get_date_object_from_string(self, date_string):
-        date_string = date_string.strip().replace(' ,', ', ').replace('2104', '2014')
+        date_string = clean_if_py3(date_string).strip().replace(' ,', ', ').replace('2104', '2014')
         return convert_date_string(date_string)
 
     def _get_case_names(self):
         path = "//table/tr/td/a[1]"
-        case_names = [self._clean_xpath_result(txt)
+        case_names = [clean_if_py3("".join(txt.itertext()).strip())
                       for txt in self.html.xpath(path)]
         return case_names
 
     def _get_download_urls(self):
         path = "//table/tr/td/a[1]/@href"
-        return [self._clean_xpath_result(href) for href in self.html.xpath(path)]
+        return [clean_if_py3(href).strip() for href in self.html.xpath(path)]
 
     def _get_judges(self):
         path = "//table/tr[td/a]/td[%d]/text()" % (self.columns['Judge'],)
-        return [self._clean_xpath_result(txt) for txt in self.html.xpath(path)]
+        return [clean_if_py3(txt).strip() for txt in self.html.xpath(path)]
 
     def _get_docket_numbers(self):
         if ("ASBCA Number" not in self.columns):
             return None
         path = "//table/tr[td/a]/td[%d]/text()" % self.columns['ASBCA Number']
-        return [("ASBCA No. " + self._clean_xpath_result(txt)) for txt in self.html.xpath(path)]
+        return [("ASBCA No. " + clean_if_py3(txt).strip()) for txt in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_dates)
 
     def _download_backwards(self, year):
         self.url = 'http://www.asbca.mil/Decisions/decisions%d.html' % year
-        if (year == 2010):
+        if year == 2010:
             self.url = 'http://www.asbca.mil/Decisions/decisions.html'
         self.html = self._download()
 
