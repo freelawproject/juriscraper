@@ -1,5 +1,5 @@
-import ca11_p
 from juriscraper.lib.html_utils import get_html5_parsed_text
+from juriscraper.opinions.united_states.federal_appellate import ca11_p
 
 
 class Site(ca11_p.Site):
@@ -7,7 +7,7 @@ class Site(ca11_p.Site):
         super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://media.ca11.uscourts.gov/opinions/unpub/logname.php'
         self.court_id = self.__module__
-        self.back_scrape_iterable = xrange(20, 22000, 20)
+        self.back_scrape_iterable = range(20, 22000, 20)
 
     def _make_html_tree(self, text):
         return get_html5_parsed_text(text)

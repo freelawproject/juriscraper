@@ -12,7 +12,7 @@ from datetime import date
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.string_utils import convert_date_string, clean_if_py3
 
 
 class Site(OpinionSite):
@@ -46,7 +46,12 @@ class Site(OpinionSite):
     @staticmethod
     def _return_case_names(html_tree):
         path = "//th//a[contains(., '/')]/text()"
-        return [name for name in html_tree.xpath(path) if name.strip()]
+        case_names = []
+        for name in html_tree.xpath(path):
+            name = clean_if_py3(name).strip()
+            if name:
+                case_names.append(name)
+        return case_names
 
     def _get_download_urls(self):
         download_urls = []
@@ -89,9 +94,9 @@ class Site(OpinionSite):
         dockets = []
         for text in list(html_tree.xpath(path)):
             # sanitize text and extract docket
-            text = text.split('/')[0].strip()
+            text = clean_if_py3(text).split('/')[0].strip()
             docket = ''.join(text.split())
-            if re.match('^\w+-\d+$', docket):
+            if re.match(r'^\w+-\d+$', docket):
                 dockets.append(docket)
         return dockets
 

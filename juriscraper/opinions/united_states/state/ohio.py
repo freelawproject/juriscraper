@@ -19,6 +19,7 @@ from lxml.html import tostring
 from selenium import webdriver
 
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
+from juriscraper.lib.string_utils import clean_if_py3
 
 
 class Site(OpinionSite):
@@ -103,7 +104,7 @@ class Site(OpinionSite):
         path = "{base}/following::td[4]//text()".format(base=self.base_path)
         dates = []
         for s in self.html.xpath(path):
-            dates.append(datetime.strptime(s.strip(), '%m/%d/%Y').date())
+            dates.append(datetime.strptime(clean_if_py3(s).strip(), '%m/%d/%Y').date())
         return dates
 
     def _get_neutral_citations(self):

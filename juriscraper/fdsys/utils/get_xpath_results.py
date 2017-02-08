@@ -15,7 +15,7 @@ def print_xpath_results(query):
     for f in glob.glob('../examples/*.xml'):
         total_file_count += 1
         indent = ''
-        print '\n%s%s:' % (indent, f)
+        print('\n%s%s:' % (indent, f))
         indent = '    '
         tree = etree.parse(f)
         results = tree.xpath(
@@ -24,30 +24,30 @@ def print_xpath_results(query):
         )
         count = 0
         if type(results) in [bool, float]:
-            print '%s%s.\t%s' % (indent, count, results)
+            print('%s%s.\t%s' % (indent, count, results))
 
         elif type(results) == list:
             s = set()
             for result in results:
                 if type(result) == _ElementStringResult:
-                    print '%s%s.\t%s' % (indent, count, result)
+                    print('%s%s.\t%s' % (indent, count, result))
                     s.add("".join(result.split()))
                 else:
                     result = etree.tostring(result).strip()
-                    print '%s%s.\t%s' % (indent, count, result)
+                    print('%s%s.\t%s' % (indent, count, result))
                     s.add("".join(result.split()))
                 count += 1
             if len(s) == 1:
-                print "\n%sAll items were equal!" % indent
+                print("\n%sAll items were equal!" % indent)
                 equalities += 1
             else:
-                print "\n%s%s unique items" % (indent, len(s))
+                print("\n%s%s unique items" % (indent, len(s)))
             unique_items = unique_items.union(s)
         total_result_count += count
 
-    print "\nTotal found: %s" % total_result_count
-    print "All items same in %s/%s sample files" % (equalities, total_file_count)
-    print "Unique items: %s/%s" % (len(unique_items), total_result_count)
+    print("\nTotal found: %s" % total_result_count)
+    print("All items same in %s/%s sample files" % (equalities, total_file_count))
+    print("Unique items: %s/%s" % (len(unique_items), total_result_count))
 
 
 def main():

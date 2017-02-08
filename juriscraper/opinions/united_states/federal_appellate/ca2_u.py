@@ -1,4 +1,5 @@
-import ca2_p
+from juriscraper.opinions.united_states.federal_appellate import ca2_p
+
 
 class Site(ca2_p.Site):
     def __init__(self, *args, **kwargs):

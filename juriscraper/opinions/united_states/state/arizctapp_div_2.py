@@ -10,7 +10,7 @@ import re
 from datetime import datetime
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import titlecase, clean_if_py3
 
 
 class Site(OpinionSite):
@@ -35,7 +35,7 @@ class Site(OpinionSite):
 
     @staticmethod
     def _return_case_date(e):
-        e = re.sub('Opinion Filed:', '', e)
+        e = re.sub(r'Opinion Filed:', '', clean_if_py3(e))
         case_date = datetime.strptime(e.strip(), '%m/%d/%Y').date()
         return case_date
 

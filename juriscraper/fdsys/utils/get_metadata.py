@@ -109,7 +109,7 @@ def main():
 def get_fdsys_court_names():
     response = glob.glob('../examples/2015_USCOURTS_sitemap.xml')
     tree = etree.parse(response[0])
-    # print etree.tostring(tree, pretty_print=True)
+    # print(etree.tostring(tree, pretty_print=True))
     data = dict()
 
     for url in tree.xpath("//m:loc/text()", namespaces={

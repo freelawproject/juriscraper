@@ -5,6 +5,7 @@ from datetime import date
 from datetime import datetime
 
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import clean_if_py3
 
 
 class Site(OpinionSite):
@@ -34,7 +35,13 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         path = '//tr[contains(concat(" ", @class, " "), " sc-opinion ")]/td[1]//text()[normalize-space() != ""]'
-        return list(self.html.xpath(path))
+        docket_numbers = []
+        for el in self.html.xpath(path):
+            text = clean_if_py3(str(el)).strip()
+            if text:
+                docket_numbers.append(text)
+
+        return docket_numbers
 
     def _get_west_state_citations(self):
         path = '//tr[contains(concat(" ", @class, " "), " sc-opinion ")]/td[2]//text()[normalize-space() != ""]'

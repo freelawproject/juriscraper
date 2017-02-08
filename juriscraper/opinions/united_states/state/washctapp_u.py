@@ -1,4 +1,4 @@
-import washctapp_p
+from juriscraper.opinions.united_states.state import washctapp_p
 
 
 class Site(washctapp_p.Site):

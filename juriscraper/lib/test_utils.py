@@ -19,7 +19,7 @@ class MockRequest(Request):
     def get(self):
         r = Response()
         try:
-            with open(self.url) as stream:
+            with open(self.url, mode='rb') as stream:
                 r._content = stream.read()
                 #: Integer Code of responded HTTP Status.
                 r.status_code = 200

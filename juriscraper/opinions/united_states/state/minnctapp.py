@@ -5,7 +5,7 @@
 #Date: 2016-06-03
 
 
-import minn
+from juriscraper.opinions.united_states.state import minn
 
 
 class Site(minn.Site):

@@ -33,10 +33,10 @@ class Site(OpinionSite):
         case_names = []
         for s in strings:
             try:
-                case_name = re.search('(.*)(\d{4} S\.?D\.? \d{1,4})', s, re.MULTILINE).group(1)
+                case_name = re.search(r'(.*)(\d{4} S\.?D\.? \d{1,4})', s, re.MULTILINE).group(1)
                 case_names.append(titlecase(case_name.lower()))
             except AttributeError:
-                print "AttributeError on: %s" % titlecase(s)
+                print("AttributeError on: %s" % titlecase(s))
                 if 'myrl' in s.lower() and self.year == 2000:
                     case_names.append('Lends His Horse v. Myrl & Roy')
                 elif 'springer' in s.lower() and self.year == 2000:
@@ -105,7 +105,7 @@ class Site(OpinionSite):
         for url in self.html.xpath(path):
             try:
                 # New style: easy
-                docket_numbers.append(re.search('(\d+).pdf', url).group(1))
+                docket_numbers.append(re.search(r'(\d+).pdf', url).group(1))
             except AttributeError:
                 docket_numbers.append(None)
         return docket_numbers
@@ -122,7 +122,7 @@ class Site(OpinionSite):
         neutral_cites = []
         for s in strings:
             try:
-                neutral_cite = re.search('(.*)(\d{4} S\.?D\.? \d{1,4})', s, re.MULTILINE).group(2)
+                neutral_cite = re.search(r'(.*)(\d{4} S\.?D\.? \d{1,4})', s, re.MULTILINE).group(2)
                 neutral_cites.append(titlecase(neutral_cite))
             except AttributeError:
                 if 'myrl' in s.lower() and self.year == 2000:

@@ -6,7 +6,6 @@ Reviewer:
 """
 
 import re
-from lxml import html
 
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string

@@ -22,9 +22,9 @@ class Site(nd.Site):
         """We use a fetcher and a DeferringList object and a HEAD request
         to test whether the wpd exists for a case"""
         def fetcher(html_link):
-            if (self.method == "LOCAL"):
+            if self.method == "LOCAL":
                 return html_link    # Can't fetch remote during tests
-            case_number = re.search('(\d+)', html_link).group(0)
+            case_number = re.search(r'(\d+)', html_link).group(0)
             wpd_link = 'http://www.ndcourts.gov/wp/%s.wpd' % case_number
             r = requests.head(wpd_link,
                               allow_redirects=False,
@@ -107,16 +107,16 @@ class Site(nd.Site):
         docket_numbers = []
         for html_link in self.html.xpath(path):
             try:
-                docket_numbers.append(re.search('(\d+)', html_link).group(0))
+                docket_numbers.append(re.search(r'(\d+)', html_link).group(0))
             except AttributeError:
                 continue
         return docket_numbers
 
     def _get_neutral_citations(self):
-        if self.crawl_date < date(1997, 02, 01):
+        if self.crawl_date < date(1997, 2, 1):
             # Old format, but no neutral cites, thus short circuit the function.
             return None
-        elif self.crawl_date < date(1998, 10, 01):
+        elif self.crawl_date < date(1998, 10, 1):
             # Old format with: 1997 ND 30 - Civil No. 960157 or 1997 ND 30
             path = '//li/text()'
         elif self.crawl_date >= date(1998, 10, 1):
@@ -125,7 +125,7 @@ class Site(nd.Site):
         neutral_cites = []
         for t in self.html.xpath(path):
             try:
-                neutral_cites.append(re.search('^.{0,5}(\d{4} ND (?:App )?\d{1,4})', t, re.MULTILINE).group(1))
+                neutral_cites.append(re.search(r'^.{0,5}(\d{4} ND (?:App )?\d{1,4})', t, re.MULTILINE).group(1))
             except AttributeError:
                 continue
         return neutral_cites

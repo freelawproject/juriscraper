@@ -48,7 +48,7 @@ class Site(OpinionSite):
         #   <tr> - contains a one-pixel gif spacer
         table = "//table[@id = 'onetidDoclibViewTbl0']/tr[position() > 1]"
         rows = list(html.xpath(table))
-        row_triplets = zip(rows, rows[1:])[::3]
+        row_triplets = list(zip(rows, rows[1:]))[::3]
 
         for tr1, tr2 in row_triplets:
             case = self.extract_case_from_rows(tr1, tr2)

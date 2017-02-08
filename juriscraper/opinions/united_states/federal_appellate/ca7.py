@@ -3,9 +3,8 @@
 # Court Short Name: 7th Cir.
 
 import time
+from six.moves.urllib.parse import urlencode
 from datetime import date, timedelta
-import urllib
-
 from dateutil.rrule import rrule, DAILY
 from lxml import html
 
@@ -80,7 +79,7 @@ class Site(OpinionSite):
 
     def _download_backwards(self, d):
         to_date = d + timedelta(self.interval)
-        params = urllib.urlencode({
+        params = urlencode({
             'Time': 'any',
             'FromMonth': d.month,
             'FromDay': d.day,

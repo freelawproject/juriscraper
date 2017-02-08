@@ -17,7 +17,7 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.regex = False
         self.url = 'http://www.pacourts.us/assets/rss/SupremeOpinionsRss.ashx'
-        self.set_regex("(.*)(?:[,-]?\s+Nos?\.)(.*)")
+        self.set_regex(r"(.*)(?:[,-]?\s+Nos?\.)(.*)")
         self.base = "//item[not(contains(title/text(), 'Judgment List'))]" \
                     "[not(contains(title/text(), 'Reargument Table'))]" \
                     "[contains(title/text(), 'No.')]"
@@ -27,7 +27,7 @@ class Site(OpinionSite):
 
     def _get_case_names(self):
         path = "{base}/title/text()".format(base=self.base)
-        return map(self.return_case_name, self.html.xpath(path))
+        return list(map(self.return_case_name, self.html.xpath(path)))
 
     def _get_download_urls(self):
         return [href for href in self.html.xpath('%s//@href' % self.base)]
@@ -46,11 +46,11 @@ class Site(OpinionSite):
         return self.return_path_text('%s/creator' % self.base)
 
     def return_case_name(self, s):
-        match = self.regex.search(s)
+        match = self.regex.search(s.replace(r'\n', '\n'))
         return match.group(1)
 
     def return_docket_number(self, e):
-        return self.regex.search(e).group(2)
+        return self.regex.search(e.replace(r'\n', '\n')).group(2)
 
     def return_path_text(self, path):
         return [element.text_content() for element in self.html.xpath(path)]

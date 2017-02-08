@@ -5,8 +5,7 @@ from datetime import date
 from datetime import datetime
 
 from juriscraper.OpinionSite import OpinionSite
-from lxml import html
-
+from juriscraper.lib.string_utils import clean_if_py3
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
@@ -43,7 +42,13 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         path = '//tr[contains(@class, "opinion")]/td[1]//text()[normalize-space() != ""]'
-        return list(self.html.xpath(path))
+        docket_numbers = []
+        for el in self.html.xpath(path):
+            text = clean_if_py3(str(el)).strip()
+            if text:
+                docket_numbers.append(text)
+
+        return docket_numbers
 
     def _download_backwards(self, i):
         host = 'http://supremecourt.ne.gov'

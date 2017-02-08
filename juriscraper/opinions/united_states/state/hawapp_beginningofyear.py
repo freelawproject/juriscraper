@@ -1,7 +1,7 @@
 # Auth: mlr
 # Date: 2013-05-28
 
-import hawapp
+from juriscraper.opinions.united_states.state import hawapp
 
 from datetime import date
 from lxml import html

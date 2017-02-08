@@ -10,7 +10,7 @@ import time
 from datetime import date
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import titlecase, clean_if_py3
 
 
 class Site(OpinionSite):
@@ -64,7 +64,7 @@ class Site(OpinionSite):
     def _return_dates(html_tree):
         path = "//*[contains(concat(' ',@id,' '),' wfHeader') and not(contains(., 'Iowa'))]/text()"
         dates = []
-        text = html_tree.xpath(path)[0]
+        text = clean_if_py3(html_tree.xpath(path)[0])
         case_date = date.fromtimestamp(time.mktime(time.strptime(text.strip(), '%B %d, %Y')))
         dates.extend([case_date] * int(html_tree.xpath("count(//*[contains(concat(' ',@id,' '),' wfLabel')])")))
         return dates
@@ -81,4 +81,5 @@ class Site(OpinionSite):
     @staticmethod
     def _return_docket_numbers(html_tree):
         path = "//*[contains(concat(' ',@id,' '),' wfLabel')]/preceding::tr[2]/td[1]/a/text()"
-        return [re.sub('Nos?.', '', e).strip() for e in html_tree.xpath(path)]
+        return [clean_if_py3(re.sub(r'Nos?.', '', e).strip())
+                for e in html_tree.xpath(path)]

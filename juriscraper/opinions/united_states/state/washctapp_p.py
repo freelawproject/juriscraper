@@ -1,4 +1,4 @@
-import wash
+from juriscraper.opinions.united_states.state import wash
 
 
 class Site(wash.Site):

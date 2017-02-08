@@ -30,23 +30,23 @@ class Site(OpinionSite):
 
     def _get_case_names(self):
         # Depends on _get_case_dates being run prior.
-        return map(self._return_desired_group, self.elements, [3] * self.len_elements)
+        return list(map(self._return_desired_group, self.elements, [3] * self.len_elements))
 
     def _get_case_dates(self):
         path = "{gen_path}/text()".format(gen_path=self.general_path)
         self.elements = self.html.xpath(path)
         self.len_elements = len(self.elements)
-        return map(self._return_desired_group, self.elements, [2] * self.len_elements)
+        return list(map(self._return_desired_group, self.elements, [2] * self.len_elements))
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
 
     def _get_neutral_citations(self):
-        return map(self._return_desired_group, self.elements, [1] * self.len_elements)
+        return list(map(self._return_desired_group, self.elements, [1] * self.len_elements))
 
     @staticmethod
     def _return_desired_group(element_text, nr):
-        desired_str = re.search('([^,]+), (\d{2}.\d{2}.\d{4}), (.*)', element_text).group(nr)
+        desired_str = re.search(r'([^,]+), (\d{2}.\d{2}.\d{4}), (.*)', element_text).group(nr)
         if nr == 2:
             return date.fromtimestamp(time.mktime(time.strptime(desired_str, '%m/%d/%Y')))
         else:

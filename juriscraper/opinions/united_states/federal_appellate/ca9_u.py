@@ -9,7 +9,7 @@ from datetime import date
 from dateutil.rrule import DAILY, rrule
 from lxml import html
 
-import ca9_p
+from juriscraper.opinions.united_states.federal_appellate import ca9_p
 
 
 class Site(ca9_p.Site):

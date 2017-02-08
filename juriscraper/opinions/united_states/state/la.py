@@ -68,7 +68,7 @@ class Site(OpinionSite):
         for e in html_tree.xpath("//strong[contains(., 'J.') or contains(., 'CURIAM')]"):
             text = html.tostring(e, method='text', encoding='unicode')
             text = ' '.join(text.split())
-            match = re.search('(\w+\s*\w+,?\s?J?\.?)', text)
+            match = re.search(r'(\w+\s*\w+,?\s?J?\.?)', text)
             if match:
                 judge = match.group(1)
                 judge = re.sub('^BY ', '', judge)
@@ -84,7 +84,7 @@ class Site(OpinionSite):
                                           "contains(., 'IN THE') or contains(., 'vs.')]"))
         nr_of_judges = len(judges)
         if nr_of_judges < nr_of_links:
-            for i in xrange(nr_of_links - nr_of_judges):
+            for i in range(nr_of_links - nr_of_judges):
                 judges.insert(0, '')
         return judges
 
@@ -94,7 +94,7 @@ class Site(OpinionSite):
         text = ' '.join(list(html_tree.xpath("//text()[contains(normalize-space(), 'day of')]")))
         text = ' '.join(text.split())
         if text:
-            match = re.search('\D*((\d{1,2})\w{2} day of (\w+),\s*(\d{4})).*', text)
+            match = re.search(r'\D*((\d{1,2})\w{2} day of (\w+),\s*(\d{4})).*', text)
             date_text = '{day}{month}{year}'.format(day=match.group(2), month=match.group(3), year=match.group(4))
             case_date = date.fromtimestamp(time.mktime(time.strptime(date_text, '%d%B%Y')))
             dates.extend([case_date] * len(html_tree.xpath("//p[contains(., 'v.') or "
@@ -117,15 +117,15 @@ class Site(OpinionSite):
             text = ' '.join(text.split())
             if text:
                 try:
-                    case_name = re.search('(\d+ ?-\w{1,2} ?- ?\d+)(?!.*\d+ ?-\w{1,2} ?- ?\d+)\s*(.*)', text).group(2)
+                    case_name = re.search(r'(\d+ ?-\w{1,2} ?- ?\d+)(?!.*\d+ ?-\w{1,2} ?- ?\d+)\s*(.*)', text).group(2)
                     if case_name:
                         pass
                     else:
                         name_element = element.xpath("./parent::p[1]/text()")
                         text = ' '.join(name_element.split())
-                        case_name = re.search('(\w+.+)+', text).group(1)
+                        case_name = re.search(r'(\w+.+)+', text).group(1)
                 except AttributeError:
-                    case_name = re.search('(\w+.+)+', text).group(1)
+                    case_name = re.search(r'(\w+.+)+', text).group(1)
                 case_names.append(titlecase(case_name))
 
         return case_names
@@ -138,11 +138,11 @@ class Site(OpinionSite):
             text = ' '.join(text.split())
             if text:
                 try:
-                    docket_numbers.append(re.search('(\d+ ?-.*- ?\d+)\s*(.*)', text).group(1))
+                    docket_numbers.append(re.search(r'(\d+ ?-.*- ?\d+)\s*(.*)', text).group(1))
                 except AttributeError:
                     name_element = element.xpath("./parent::p[1]//text()")
                     text2 = ' '.join(list(name_element))
                     text2 = ' '.join(text2.split())
                     if text2:
-                        docket_numbers.append(re.search('(\d+ ?-.*- ?\d+)\s*(.*)', text2).group(1))
+                        docket_numbers.append(re.search(r'(\d+ ?-.*- ?\d+)\s*(.*)', text2).group(1))
         return docket_numbers

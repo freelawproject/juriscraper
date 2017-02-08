@@ -1,4 +1,4 @@
-import idahoctapp_civil
+from juriscraper.opinions.united_states_backscrapers.state import idahoctapp_civil
 
 
 class Site(idahoctapp_civil.Site):
