@@ -44,7 +44,7 @@ def make_default_logger(file_path=LOG_FILENAME):
                     e.strerror,
                     traceback.format_exc()
                 ))
-            print("Juriscraper will continue to run, and all logs will be " \
+            print("Juriscraper will continue to run, and all logs will be "
                   "sent to stdout.")
             handler = logging.StreamHandler(sys.stdout)
         handler.setFormatter(

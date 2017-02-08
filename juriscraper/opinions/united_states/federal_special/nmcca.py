@@ -55,5 +55,5 @@ class Site(OpinionSite):
         return ['Published'] * len(self.case_dates)
 
     def _download_backwards(self, year):
-        self.url = 'http://www.jag.navy.mil/courts/opinion_archive_%d.htm' % (year)
+        self.url = 'http://www.jag.navy.mil/courts/opinion_archive_%d.htm' % year
         self.html = self._download()

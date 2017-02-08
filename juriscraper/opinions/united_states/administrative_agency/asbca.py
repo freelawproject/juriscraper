@@ -67,7 +67,7 @@ class Site(OpinionSite):
         return [clean_if_py3(txt).strip() for txt in self.html.xpath(path)]
 
     def _get_docket_numbers(self):
-        if ("ASBCA Number" not in self.columns):
+        if "ASBCA Number" not in self.columns:
             return None
         path = "//table/tr[td/a]/td[%d]/text()" % self.columns['ASBCA Number']
         return [("ASBCA No. " + clean_if_py3(txt).strip()) for txt in self.html.xpath(path)]
