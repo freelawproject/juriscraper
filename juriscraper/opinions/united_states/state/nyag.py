@@ -30,7 +30,13 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         """All we have are years, so estimate middle most day of year"""
-        return [convert_date_string('July 2, %d' % self.year)] * len(self.html.xpath(self.row_path))
+        today = datetime.date.today()
+        middle_of_year = convert_date_string('July 2, %d' % self.year)
+        if self.year == today.year:
+            # Not a backscraper, assume cases were filed on day scraped.
+            return [today] * len(self.html.xpath(self.row_path))
+        else:
+            return [middle_of_year] * len(self.html.xpath(self.row_path))
 
     def _get_case_names(self):
         """No case names available"""
