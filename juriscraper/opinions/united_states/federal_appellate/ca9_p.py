@@ -19,15 +19,15 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.url = "http://www.ca9.uscourts.gov/opinions/index.php"
-        self.base = ('//table[@id = "c__contentTable"]//tr['
-                     '    not(@id="c_row_") and '
+        self.base = ('//table[@id = "search-data-table"]//tr['
+                     '    not(@id = "c_row_") and '
                      '    not('
                      '        contains(child::td//text(), "NO OPINIONS") or'
                      '        contains(child::td//text(), "No Opinions") or'
                      '        contains(child::td//text(), "NO MEMO") or'
                      '        contains(child::td//text(), "No Memo")'
                      '    )'
-                     ']')
+                     '][position() > 1]')
         self.court_id = self.__module__
         self.back_scrape_iterable = [i.date() for i in rrule(
             DAILY,

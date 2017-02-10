@@ -19,6 +19,15 @@ class Site(ca9_p.Site):
         super(Site, self).__init__(*args, **kwargs)
         self.url = "http://www.ca9.uscourts.gov/memoranda/?o_mode=view&amp;o_sort_field=21&amp;o_sort_type=DESC&o_page_size=100"
         self.court_id = self.__module__
+        self.base = ('//table[@id = "c__contentTable"]//tr['
+                     '    not(@id = "c_row_") and '
+                     '    not('
+                     '        contains(child::td//text(), "NO OPINIONS") or'
+                     '        contains(child::td//text(), "No Opinions") or'
+                     '        contains(child::td//text(), "NO MEMO") or'
+                     '        contains(child::td//text(), "No Memo")'
+                     '    )'
+                     ']')
         self.back_scrape_iterable = [i.date() for i in rrule(
             DAILY,
             dtstart=date(2009, 11, 11),
