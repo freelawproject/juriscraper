@@ -1,0 +1,934 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/MainTemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Current Term Opinion List - Supreme Court of Appeals of West Virginia</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="page description" -->
+<meta name="description" content="All decisions filed in the current term of the Supreme Court of Appeals of West Virginia. The new integrated decision list combines all of the decisions issued during a court term, identified using case type and decision type codes." />
+<!-- InstanceEndEditable -->
+<link href="../css/main.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="../css/print.css" rel="stylesheet" type="text/css" media="print" />
+<!--[if lt IE 9]>
+<link href="../css/mainIE.css" rel="stylesheet" meida="screen" />
+<link href="../../css/mainIE.css" rel="stylesheet" meida="screen" />
+<![endif]-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
+<script type="text/javascript" src="../js/func-lib.js"></script>
+<link rel="apple-touch-icon" href="../images/app-icon.png"/>
+<link rel="shortcut icon" href="../images/favicon.ico"/>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//create the select dropdown for the mobile main nav
+        $("<select class='dropDown' />").appendTo("#main-navigation");
+		$("<option />", {
+        	"selected": "selected",
+         	"value"   : "",
+         	"text"    : "Main Navigation"
+      	}).appendTo("#main-navigation select");
+		
+		$("#main-navigation > ul > li > a, #main-navigation > ul > li > ul > li > a").each(function() {
+       		var el = $(this);
+       			$("<option />", {
+           		"value"   : el.attr("href"),
+           		"text"    : el.text()
+       		}).appendTo("#main-navigation select");
+      	});
+		//set the default selected option
+		$("#main-navigation select").change(function() {
+        	window.location = $(this).find("option:selected").val();
+      	});
+		//create the select dropdown for the mobile tertiary nav
+		$("<select />").appendTo("#tertiary-menu");
+		$("<option />", {
+        	"selected": "selected",
+         	"value"   : "",
+         	"text"    : "Interior Pages"
+      	}).appendTo("#tertiary-menu select");
+		$("#tertiary-menu > ul > li > a").each(function() {
+       		var el = $(this);
+       			$("<option />", {
+           		"value"   : el.attr("href"),
+           		"text"    : el.text()
+       		}).appendTo("#tertiary-menu select");
+      	});
+		//set the default selected option
+		$("#tertiary-menu select").change(function() {
+        	window.location = $(this).find("option:selected").val();
+      	});
+		//add class to mobile main nav when mobile tertiary nav exsits
+		$('#tertiary-menu ul li').each(function(){
+			if($('#tertiary-menu ul > li').hasClass('firstChild')){
+				$('select').addClass('links');
+			}
+			else {
+				$('select').addClass('nolinks');
+			}
+		});
+		//add classes to mobile main nav options for styling purposes
+		$('.dropDown option:eq(1), .dropDown option:eq(11), .dropDown option:eq(18), .dropDown option:eq(24), .dropDown option:eq(31)').addClass('bold');
+	
+	});
+</script>
+<!-- InstanceBeginEditable name="head" -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+<script src="../js/thickbox/thickbox.js"></script>
+<link href="../js/thickbox/thickbox.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="../js/jquery.tools.min.js"></script>
+<script type="text/javascript" src="../js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="../js/FixedHeader.js"></script>
+<script type="text/javascript" src="../js/columnFilter.js"></script>
+<script type="text/javascript" src="../js/chosen/chosen.jquery.js"></script>
+<link href="../js/chosen/chosen.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		$('#opinions').dataTable({
+			"sPaginationType": "full_numbers",
+			"bAutoWidth": true,
+			"aaSorting": [[0,'desc']],
+			"aoColumns": [
+				{"asSorting": ["desc", "asc"] },
+				{"asSorting": [null], "bSearchable": true },
+				null,
+				null,
+				null
+			],
+			"oLanguage": {
+				"sZeroRecords": "There are no current term opinions available",
+				"sSearch": "List Search:",
+				"sInfoFiltered": "(_MAX_ total opinions)",
+				"sInfo": "_START_ to _END_ of _TOTAL_ opinions",
+				"sInfoEmpty": "0 to 0 of 0 opinions"
+			},
+			"iDisplayLength": -1,
+			"aLengthMenu": [[-1, 10, 25, 50, 100], ["All", 10, 25, 50, 100]],
+			"sDom": '<"top"ifl>rt<"bottom"ip>'
+		}).columnFilter({
+			sPlaceHolder: 'head:before',
+			aoColumns: [null, null, null, null, {type: 'select'}]
+		});
+		
+		$(".select_filter").chosen({no_results_text: "No results match"}).before('<div class="narrowText"><p>Are you looking for all cases with a specific decision type?</p></div>');
+		
+		//var oTable = $('#opinions').dataTable();
+		//new FixedHeader(oTable);
+		
+		$('#opinions tbody tr').each(function() {
+        	var sTitle = '';
+            var nTds = $(this).find('td');
+            var sDescription = nTds.eq(3).text();
+                                                                                                
+            switch(sDescription){
+            	case "CR-F":
+					sTitle  = 'Felony (non-Death Penalty)';
+					break;
+                case "CR-M":
+					sTitle = 'Misdemeanor';
+					break;
+                case "CR-O":
+                	sTitle = 'Criminal-Other';
+                    break;
+				case "TCR":
+					sTitle = 'Tort, Contract, and Real Property';
+					break;
+				case "PR":
+					sTitle = 'Probate';
+					break;
+				case "FAM":
+					sTitle = 'Family';
+					break;
+				case "JUV":
+					sTitle = 'Juvenile';
+					break;
+				case "CIV-O":
+					sTitle = 'Civil-Other';
+					break;
+				case "WC":
+					sTitle = 'Workers Compensation';
+					break;
+				case "TAX":
+					sTitle = 'Revenue (Tax)';
+					break;
+				case "ADM":
+					sTitle = 'Administrative Agency-Other';
+					break;
+				case "MISC":
+					sTitle = 'Appeal by Right-Other';
+					break;
+				case "OJ-H":
+					sTitle = 'Habeas Corpus';
+					break;
+				case "OJ-M":
+					sTitle = 'Writ Application-Other';
+					break;
+				case "OJ-P":
+					sTitle = 'Writ Application-Other';
+					break;
+				case "L-ADM":
+					sTitle = 'Bar Admission';
+					break;
+				case "L-DISC":
+					sTitle = 'Bar Discipline/Eligibility'
+					break;
+				case "L-DISC-O":
+					sTitle = 'Bar/Judiciary Proceeding-Other';
+					break;
+				case "J-DISC":
+					sTitle = 'Bar/Judiciary Proceeding-Other';
+					break;
+				case "CERQ":
+					sTitle = 'Certified Question';
+					break;
+				case "OJ-O":
+					sTitle = 'Original Proceeding/Appellate Matter-Other';
+					break;
+				case "POST":
+					sTitle = 'Post-Conviction Appeal';
+					break;
+                default:
+                	sTitle = 'Please review our integrated decision list information.';
+                    break;
+             }
+             nTds.eq(3).attr('title', sTitle ); 
+        });
+		
+		$("#opinions tbody td[title]").tooltip({
+			effect: 'slide',
+			offset: [27, 0]
+		});
+		
+		$('a[href$="pdf"]').click(function() {
+        	_gaq.push(['_trackEvent', 'September 2017 Opinions', 'Download', $(this).attr('href')]);
+    	});
+		
+	});
+</script>
+<style type="text/css">
+#TB_title {
+	background:#f7f7ef url(../images/calendar/dateFieldBGSm.jpg) repeat-x bottom;
+	overflow:hidden;
+	min-height:35px;
+}
+#TB_ajaxWindowTitle {
+	font-size:16px;
+	font-weight:bold;
+	color:#3f4c5b;
+	padding-top:11px;
+}
+#TB_closeAjaxWindow {
+	position:absolute;
+	top:0px;
+	right:0px;
+	text-indent:-9999px;
+	font-size:0px;
+	margin:0px;
+	padding:0px;
+}
+#TB_closeAjaxWindow #TB_closeWindowButton {
+	background:url(../images/clearSearchBtn.png) no-repeat;
+	text-indent:-9999px;
+	height:29px;
+	width:29px;
+	position:relative;
+	float:right;
+	margin:5px 5px 0px 0px;
+	padding:0px;
+}
+.chosen-container {
+	width:150px !important;
+}
+.chzn-drop {
+	width:148px !important;
+}
+.chzn-search input[type="text"] {
+	width:112px !important;
+}
+</style>
+<!-- InstanceEndEditable -->
+<!-- InstanceParam name="TertiaryMenu" type="boolean" value="true" -->
+<!-- InstanceParam name="SubContentContainer" type="boolean" value="false" -->
+<!-- InstanceParam name="BodyClass" type="text" value="supreme-court" -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25329062-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- InstanceParam name="openHeaderArea" type="boolean" value="true" -->
+</head>
+
+<body class="supreme-court">
+
+<div id="printLogo"><img src="../images/printLogo.jpg" alt="West Virginia Supreme Court of Appeals" /></div>
+
+<ul id="accessLinks" class="noPrint">
+  <li><a href="#main-navigation">Skip to main menu</a></li>
+  <li><a href="#main-content">Skip to main content</a></li>
+</ul>
+<!-- InstanceBeginEditable name="openHeaderEditableArea" --> 
+<!-- Opinion Table Help -->
+<link rel="stylesheet" href="../../test/html5Redux/fonts/stylesheet.css">
+<style type="text/css">
+	.caseloadNotice { margin:0px auto; padding:0px; width:200px; height:200px; overflow:hidden; border:1px solid #8e1717; border-bottom:2px solid #8e1717; border-radius:50% 50%; -webkit-border-radius:50% 50%; 
+	background: -moz-linear-gradient(top, #e4effc 0%, #c5d9f1 100%); 
+	background: -webkit-linear-gradient(top, #e4effc 0%,#c5d9f1 100%);
+	background: linear-gradient(to bottom, #e4effc 0%,#c5d9f1 100%);
+	box-shadow:inset 0 0 0 3px #ffffff; -webkit-box-shadow:inset 0 0 0 3px #ffffff; float:right; }
+	.caseloadNotice a { background:none; text-decoration:none; display:block; width:200px; height:200px; }
+	.caseloadNotice a:hover { text-decoration:none; }
+	.caseloadNotice a:hover h1 { color:#4a5f82 }
+	.caseloadNotice h1 { font-size:18px; border-bottom:2px solid #8394a8; border-top:1px solid #8394a8; margin:25px auto 0px auto; padding:10px 0px 10px 0px; text-align:center; color:#263143; display:block; background:#c3c3c3; box-shadow: 0 0 1px 0 #1d2632; -webkit-box-shadow: 0 0 1px 0 #1d2632; text-shadow: 1px 1px 1px #FFFFFF; }
+	.caseloadNotice p { font-size:11px; color:#222a34 !important; margin:5px auto 0px auto; padding:0px; text-align:center; }
+	.caseloadNotice h6 { margin:20px 0px 0px 0px; padding:10px 0px 10px 0px; display:block; border:none; text-align:center; background:#ffffff; }
+</style>
+<div id="tableHelp" class="noPrint">
+  <div id="tableHelpContent">
+    <h6>Opinion List Quick Tip</h6>
+    <img src="../images/opinionTableHelp/exampleImg.png" width="390" height="100" alt="Opinion Table Exmample Photo" />
+    <ul>
+      <li><span class="tableHelpLetter">A</span><span class="tableHelpDesc">Each column of the list can be sorted by clicking the header of that column.</span></li>
+      <li><span class="tableHelpLetter">B</span><span class="tableHelpDesc">The list-wide active text search or "List Search" allows the viewer to quickly search for specific information by typing a single word or multiple words, seperated by a space.</span></li>
+      <li><span class="tableHelpLetter">C</span><span class="tableHelpDesc">A drop down menu allows the user to change the humber of list items currently showing on the page.</span></li>
+    </ul>
+    <p>For more detailed help on the new features of the Opinion List, download the overview by <a href="../siteOverViewTakeHome.pdf" target="_blank">clicking here.</a></p>
+  </div>
+  <div id="tableHelpBtn"><span class="helpClosed">Open Help</span></div>
+</div>
+<!-- InstanceEndEditable -->
+<div id="main-header">
+  <h1 class="noPrint"><a href="../index.html">West Virginia Judiciary</a></h1>
+  <p class="navigation noPrint"><a href="../index.html">Home</a> | <a href="../contact.html">Contact</a> | <a href="../jobs.html">Jobs</a> | <a href="../sitemap.html">Sitemap</a></p>
+  <h2 class="page-title"><!-- InstanceBeginEditable name="PageTitle" -->Opinions and Memo Decisions of the Supreme Court of Appeals<!-- InstanceEndEditable --></h2>
+  <div id="tertiary-menu">
+		
+    <ul class="sub-menu">
+      <!-- InstanceBeginRepeat name="TertiaryMenuItems" --><!-- InstanceBeginRepeatEntry -->
+      <!-- InstanceBeginEditable name="TertiaryMenuItem" -->
+      <li><a href="opinion-information.html">Information & Search</a></li>
+      <li><a href="integrated-decision-list-explained.html">About the Decision List</a></li>
+      <li><a href="docs/fall2016/index.html">September 2016 Term</a></li>
+      <!-- InstanceEndEditable -->      <!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+    </ul>
+      </div>
+</div>
+<div id="main-body">
+  <div id="main-navigation">
+    <div id="searchText" class="noPrint">Search</div>
+    <div id="cse-search-form" class="noPrint">Loading</div>
+	<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+	<script type="text/javascript"> 
+  		google.load('search', '1', {language : 'en'});
+  		google.setOnLoadCallback(function() {
+    		var customSearchControl = new google.search.CustomSearchControl('002442811923801076369:gpk47hv1cg0');
+    		customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+    		var options = new google.search.DrawOptions();
+    		options.enableSearchboxOnly("http://www.courtswv.gov/searchPageResults.html");
+    		customSearchControl.draw('cse-search-form', options);
+  		}, true);
+	</script>
+    <h2 class="noPrint">Main Menu</h2>
+    <ul class="menu noPrint">
+      <li id="public-resources"><a href="../public-resources/index.html">Public Resources</a>
+        <ul>
+          <li><a href="../public-resources/court-information-by-county.html">Court Information by County</a></li>
+          <li><a href="../public-resources/press-page.html">News &amp; Publications</a></li>
+          <li><a href="../public-resources/jury-information.html">Jury Information</a></li>
+          <li><a href="../public-resources/law-library/law-library-home.html">Law Library</a></li>
+          <li><a href="../public-resources/student-resources/index.html">Student Resources</a></li>
+          <li><a href="../public-resources/domestic/domestic-violence.html">Domestic Violence</a></li> 
+          <li><a href="../public-resources/guardians-conservators.html">Guardians &amp; Conservators</a></li>
+          <li><a href="../public-resources/child-abuse-neglect.html">Child Abuse and Neglect</a></li> 
+          <li><a href="../public-resources/accessibility-information.html">Accessibility Information</a></li>
+        </ul>
+      </li>
+      <li id="supreme-court"><a href="index.html">Supreme Court</a>
+        <ul>
+          <li><a href="index.html">Supreme Court of Appeals</a></li>
+          <li><a href="justices-staff.html">Justices &amp; Staff</a></li>
+          <li><a href="clerk/clerks-office.html">Clerk's Office</a></li>
+          <li><a href="office-of-counsel.html">Office of Counsel</a></li>
+          <li><a href="workers-comp.html">Workers' Compensation Counsel</a></li>
+          <li><a href="calendar-docket.html">Calendar &amp; Docket</a></li>
+          <li><a href="opinions.html">Opinions</a></li>
+        </ul>
+      </li>
+      <li id="lower-courts"><a href="../lower-courts/index.html">Lower Courts</a>
+        <ul>
+          <li><a href="../lower-courts/circuit-courts.html">Circuit Courts</a></li>
+          <li><a href="../lower-courts/family-courts.html">Family Courts</a></li>
+          <li><a href="../lower-courts/magistrate-courts.html">Magistrate Courts</a></li>
+          <li><a href="../lower-courts/treatment-courts.html">Treatment Courts</a></li>
+          <li><a href="../lower-courts/mlp/overview.html">Mass Litigation Panel</a></li> 
+          <li><a href="../lower-courts/business-court-division/index.html">Business Court Division</a></li>      
+    	</ul>
+      </li>
+      <li id="legal-community"><a href="../legal-community/index.html">Legal Community</a>
+        <ul>
+    	  <li><a href="../legal-community/court-rules.html">Court Rules</a></li>
+          <li><a href="../legal-community/court-forms.html">Court Forms</a></li>
+          <li><a href="../legal-community/board-of-law-examiners.html">Bar Admissions</a></li>
+          <li><a href="http://www.wvodc.org/" target="_blank">Lawyer Disciplinary Board</a></li>
+          <li><a href="../legal-community/judicial-investigaion.html">Judicial Investigation</a></li>
+          <li><a href="http://www.wvbar.org/" target="_blank">West Virginia State Bar</a></li>
+        </ul>
+      </li>
+      <li id="court-administration"><a href="../court-administration/index.html">Court Administration</a>
+        <ul>
+          <li><a href="../court-administration/administrative-office.html">Administrative Office</a></li>
+          <li><a href="../court-administration/security-closures.html">Court Security and Closures</a></li>
+          <li><a href="../court-administration/court-services.html">Court Services</a></li>
+          <li><a href="../court-administration/probation/probation-services.html">Probation Services</a></li>
+          <li><a href="../court-administration/access-to-justice.html">Access to Justice</a></li>
+          <li><a href="../court-administration/juvenlie-justice-commission/History.html">Juvenile Justice Commission</a></li>
+          <li><a href="../court-administration/for-court-employees.html">For Court Employees</a></li>   
+    	</ul>
+      </li>
+      <li><a href="../viewing-pdf-files.html">Viewing PDF Files</a></li>
+    </ul>
+  </div>
+  <div id="main-content"><!-- InstanceBeginEditable name="MainContent" -->
+    <h3>Current Term Opinion List</h3>
+    
+    <div class="notice caseloadNotice">
+    	<a href="clerk/statistics/15-16QuickFacts.pdf" target="_blank" onclick="_gaq.push(['_trackEvent', 'Report Clerk Link', 'click', '2016 Caseload Report']);">
+        	<h1>2016 Quick<br />Reference Facts</h1>
+        	<p>full report to follow</p>
+            <h6>Click Here</h6>
+        </a>
+    </div>
+    
+    <p>Links to all decisions filed in the current term of court are listed in the table below. <strong>Are you looking for an opinion list from a prior term of court?</strong> If so, please <a href="opinion-information.html">visit the Information & Search page</a>. Opinions from the September 1991 term of court to the present day are available online.</p>
+    <p>The new integrated decision list combines all of the decisions issued during a court term, identifed using case type and decision type codes. To re-sort the list quickly, click any of the column headers (except case number). For more information about using the decision list and for an explanation of the codes, review the page: <a href="integrated-decision-list-explained.html">About the Decision List</a>. </p>
+    <div class="quickTip">
+      <p><strong>QUICK TIP:</strong> For more help on using the opinion table, click the <span class="openHelp"><img class="helpBtnContent" src="../images/opinionTableHelp/blueQuestion.png" width="22" height="22" alt="Open Opinion Table Help" /></span> to the right on the page. When the page loads, the  Date Filed column is sorted descending.</p>
+    </div>
+    <div id="caption">Current Term of Court Opinions and Memorandum Decisions</div>
+    <table border="0" cellpadding="0" cellspacing="0" class="display" id="opinions">
+      <caption>
+      Current Term of Court Opinions and Memorandum Decisions
+      </caption>
+      <thead>
+        <tr class="searchRow OpinionsSelect">
+          <th colspan="5">Decision Type</th>
+        </tr>
+        <tr>
+          <th width="11%">Date Filed</th>
+          <th class="noSort" width="15%">Case No.</th>
+          <th width="53%">Case Name</th>
+          <th width="10%">Case Type</th>
+          <th width="11%">Decision Type</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+      <tr>
+      		<td>02/09/2017</td>
+            <td>16-0670</td>
+            <td><a href="docs/spring2017/16-0670cd-matish.pdf" target="_blank">In the Matter Of: The Hon. Stephen O.  Callaghan, Judge-Elect of the 28<sup>th</sup> Circuit</a> (Concurring, in part, and dissenting, in part, opinion by Matish, Judge)</td>
+            <td>J-DISC</td>
+            <td>SEP</td>
+      </tr>
+      <tr>
+      		<td>02/09/2017</td>
+            <td>16-0670</td>
+            <td><a href="docs/spring2017/16-0670.pdf" target="_blank">In the Matter Of: The Hon. Stephen O. Callaghan, Judge-Elect of the 28<sup>th</sup> Circuit</a></td>
+            <td>J-DISC</td>
+            <td>SO</td>
+      </tr>
+      <tr>
+      		<td>02/09/2017</td>
+            <td>16-0209</td>
+            <td><a href="docs/spring2017/16-0209.pdf" target="_blank">West Virginia CVS Pharmacy, LLC, et al. v. McDowell Pharmacy, Inc., et al.</a></td>
+            <td>TCR</td>
+            <td>SO</td>
+      </tr>
+      <tr>
+      		<td>02/09/2017</td>
+            <td>15-1223</td>
+            <td><a href="docs/spring2017/15-1223d-ketchum.pdf" target="_blank">Tony Coffman, et al. v. Nicholas County Commission, et al.</a> (Dissenting opinion by Ketchum, J.)</td>
+            <td>TCR</td>
+            <td>SEP</td>
+      </tr>
+      <tr>
+      		<td>02/09/2017</td>
+            <td>15-1223</td>
+            <td><a href="docs/spring2017/15-1223c-workman.pdf" target="_blank">Tony Coffman, et al. v. Nicholas County Commission, et al.</a> (Concurring opinion by Workman, J.)</td>
+            <td>TCR</td>
+            <td>SEP</td>
+      </tr>
+      <tr>
+      		<td>02/09/2017</td>
+            <td>15-1223</td>
+            <td><a href="docs/spring2017/15-1223.pdf" target="_blank">Tony Coffman, et al. v. Nicholas County Commission, et al.</a></td>
+            <td>TCR</td>
+            <td>SO</td>
+      </tr>
+      <tr>
+      		<td>02/09/2017</td>
+            <td>15-1148</td>
+            <td><a href="docs/spring2017/15-1148.pdf" target="_blank">Joyce E. Minnich, Executrix v. MedExpress Urgent Care, Inc. - West Virginia</a></td>
+            <td>TCR</td>
+            <td>SO</td>
+      </tr>
+      <tr>
+      		<td>02/08/2017</td>
+            <td>16-0095</td>
+            <td><a href="docs/spring2017/16-0095.pdf" target="_blank">In Re: Involuntary Hospitalization of T.O.</a></td>
+            <td>CIV-O</td>
+            <td>SO</td>
+      </tr>
+      <tr>
+      		<td>02/08/2017</td>
+            <td>16-0931</td>
+            <td><a href="memo-decisions/spring2017/16-0931memo.pdf" target="_blank">State of W.Va. ex rel. J.E.H.G. v. Hon. Todd Kaufman, et al.</a></td>
+            <td>OJ-P</td>
+            <td>MD</td>
+      </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0020</td>
+            <td><a href="memo-decisions/spring2017/16-0020memo.pdf" target="_blank">John Arnold v. Murray American Energy</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0035</td>
+            <td><a href="memo-decisions/spring2017/16-0035memo.pdf" target="_blank">John W. Richmond v. Summers County Board of Education</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0039</td>
+            <td><a href="memo-decisions/spring2017/16-0039memo.pdf" target="_blank">Gary L. Franks v. L & M Fire Protection, LLC</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0040</td>
+            <td><a href="memo-decisions/spring2017/16-0040memo.pdf" target="_blank">Bonnie K. Maynard v. Kroger Limited Partnership I</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0101</td>
+            <td><a href="memo-decisions/spring2017/16-0101memo.pdf" target="_blank">David Mills v. Alpha Natural Resources</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0105</td>
+            <td><a href="memo-decisions/spring2017/16-0105memo.pdf" target="_blank">Candy Workman v. Sundance Services Corp.</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0108</td>
+            <td><a href="memo-decisions/spring2017/16-0108memo.pdf" target="_blank">Charles Morris v. Fayette County Board of Education</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0161</td>
+            <td><a href="memo-decisions/spring2017/16-0161memo.pdf" target="_blank">George F. Butcher v. W. Va. Ofc. of Ins. Comm./A.C. Dellovade, Inc.</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0162</td>
+            <td><a href="memo-decisions/spring2017/16-0162memo.pdf" target="_blank">Charles Shope v. Huntington Alloys Corp.</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0171</td>
+            <td><a href="memo-decisions/spring2017/16-0171memo.pdf" target="_blank">Gene Fowler Jr. v. Brand Services, Inc.</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0177</td>
+            <td><a href="memo-decisions/spring2017/16-0177memo.pdf" target="_blank">John Williams Jr. v. Arcelormittal USA XBM Princeton Division </a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0179</td>
+            <td><a href="memo-decisions/spring2017/16-0179memo.pdf" target="_blank">Frederick G. Stollings v. Apogee Coal Co.</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+       <tr>
+        	<td>02/03/2017</td>
+            <td>16-0180</td>
+            <td><a href="memo-decisions/spring2017/16-0180memo.pdf" target="_blank">Pro Nursing &amp; Health Services v. Aricia L. Blake</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+       <tr>
+        	<td>02/03/2017</td>
+            <td>16-0170</td>
+            <td><a href="memo-decisions/spring2017/16-0170memo.pdf" target="_blank">Theodore B. Stuart v. West Virginia Division of Juvenile Services</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0185</td>
+            <td><a href="memo-decisions/spring2017/16-0185memo.pdf" target="_blank">Scott A. Collins v. Murray American Energy</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0186</td>
+            <td><a href="memo-decisions/spring2017/16-0186memo.pdf" target="_blank">Jennifer Johns v. Thomas Health Systems, Inc.</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0187</td>
+            <td><a href="memo-decisions/spring2017/16-0187memo.pdf" target="_blank">Jennifer Johns v. Thomas Health Systems, Inc.</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0188</td>
+            <td><a href="memo-decisions/spring2017/16-0188memo.pdf" target="_blank">Jamie Burcham v. City of Huntington</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0189</td>
+            <td><a href="memo-decisions/spring2017/16-0189memo.pdf" target="_blank">Jamie Burcham v. City of Huntington</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0190</td>
+            <td><a href="memo-decisions/spring2017/16-0190memo.pdf" target="_blank">William S. Plumley v. Essroc Ready Mix</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0192</td>
+            <td><a href="memo-decisions/spring2017/16-0192memo.pdf" target="_blank">Michael Harmon v. Globe Specialty Metals</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0233</td>
+            <td><a href="memo-decisions/spring2017/16-0233memo.pdf" target="_blank">Donald R. Fearer v. Monongalia County Commission</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>02/03/2017</td>
+            <td>16-0234</td>
+            <td><a href="memo-decisions/spring2017/16-0234memo.pdf" target="_blank">Joyce Wilson, Widow v. Island Creek Coal Co.</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+       <tr>
+        	<td>02/03/2017</td>
+            <td>16-0236</td>
+            <td><a href="memo-decisions/spring2017/16-0236memo.pdf" target="_blank">George Toler v. Argus Energy WV</a></td>
+            <td>WC</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>01/27/2017</td>
+            <td>16-0619</td>
+            <td><a href="memo-decisions/spring2017/16-0619memo.pdf" target="_blank">George Papandreas, et al. v. Willian Kawecki, et al.</a></td>
+            <td>CR-O</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>01/27/2017</td>
+            <td>16-0357</td>
+            <td><a href="memo-decisions/spring2017/16-0357memo.pdf" target="_blank">State of West Virginia v. Wayne Dubuque</a></td>
+            <td>CR-F</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>01/27/2017</td>
+            <td>16-0345</td>
+            <td><a href="memo-decisions/spring2017/16-0345memo.pdf" target="_blank">State of West Virginia v. Billy W.</a></td>
+            <td>CR-F</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>01/27/2017</td>
+            <td>16-0200</td>
+            <td><a href="memo-decisions/spring2017/16-0200memo.pdf" target="_blank">In Re: R.M., An Alleged Protected Person</a></td>
+            <td>FAM</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>01/27/2017</td>
+            <td>16-0090 &amp 16-0092</td>
+            <td><a href="memo-decisions/spring2017/16-0090and16-0092memo.pdf" target="_blank">E.B. v. W. Va. Regional Jail and Correctional Authority, etc.</a></td>
+            <td>TCR</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>01/27/2017</td>
+            <td>16-0088</td>
+            <td><a href="memo-decisions/spring2017/16-0088memo.pdf" target="_blank">State of West Virginia v. Heney W.J.</a></td>
+            <td>CR-F</td>
+            <td>MD</td>
+       </tr>
+       <tr>
+        	<td>01/27/2017</td>
+            <td>16-0071</td>
+            <td><a href="memo-decisions/spring2017/16-0071memo.pdf" target="_blank">State of West Virginia v. Mark Alan Moran</a></td>
+            <td>CR-F</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>01/27/2017</td>
+            <td>15-1196</td>
+            <td><a href="memo-decisions/spring2017/15-1196memo.pdf" target="_blank">State of West Virginia v. Mishell Rose Fidler</a></td>
+            <td>CR-F</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>01/26/2017</td>
+            <td>15-0691</td>
+            <td><a href="docs/spring2017/15-0691.pdf" target="_blank">W. Va. State Police, Corporal R.D. Eshbaugh, et al. v. Victoria Hughes, Administratrix</a></td>
+            <td>TCR</td>
+            <td>SO</td>
+       </tr>
+      <tr>
+        	<td>01/26/2017</td>
+            <td>15-1139</td>
+            <td><a href="docs/spring2017/15-1139.pdf" target="_blank">David Earl Bowyer v. Deborah L. Wyckoff, et al.</a></td>
+            <td>TCR</td>
+            <td>SO</td>
+       </tr>
+      <tr>
+        	<td>01/26/2017</td>
+            <td>15-0972</td>
+            <td><a href="memo-decisions/spring2017/15-0972memo.pdf" target="_blank">Gary D. and Barbara M. Hoke v. Board of Education of the County of Monroe</a></td>
+            <td>ADM</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>01/20/2017</td>
+            <td>16-0201</td>
+            <td><a href="memo-decisions/spring2017/16-0201memo.pdf" target="_blank">Phillip Reese Bush v. David Ballard, Warden</a></td>
+            <td>POST</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>01/20/2017</td>
+            <td>16-0198</td>
+            <td><a href="memo-decisions/spring2017/16-0198memo.pdf" target="_blank">Rossi A. Gray, Jr. v. David Ballard, Warden</a></td>
+            <td>POST</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>01/20/2017</td>
+            <td>15-0851</td>
+            <td><a href="memo-decisions/spring2017/15-0851memo.pdf" target="_blank">Drenda Auvil v. Most Reverend Michael J. Bransfield, Bishop, etc.</a></td>
+            <td>TCR</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>01/20/2017</td>
+            <td>16-0212</td>
+            <td><a href="memo-decisions/spring2017/16-0212memo.pdf" target="_blank">Judith T. v. Andrea D., Steven T., and Defendant Doe</a></td>
+            <td>CIV-O</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>01/20/2017</td>
+            <td>16-0152</td>
+            <td><a href="memo-decisions/spring2017/16-0152memo.pdf" target="_blank">R.L. v. P.H.</a></td>
+            <td>FAM</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>01/19/2017</td>
+            <td>15-0878 &amp; 15-0894</td>
+            <td><a href="docs/spring2017/15-0878and15-0894.pdf" target="_blank">State of West Virginia v. Rashaun R. Boyd and Christopher R. Wyche</a></td>
+            <td>CR-F</td>
+            <td>SO</td>
+       </tr>
+      <tr>
+        	<td>01/19/2017</td>
+            <td>16-0069</td>
+            <td><a href="docs/spring2017/16-0069.pdf" target="_blank">DWG Oil &amp; Gas Acquistions v. Southern Country Farms, et al.</a></td>
+            <td>TCR</td>
+            <td>SO</td>
+       </tr>
+        <tr>
+        	<td>01/19/2017</td>
+            <td>15-1147</td>
+            <td><a href="memo-decisions/spring2017/15-1147memo.pdf" target="_blank">Patricia S. Reed, Comm. Dept. of Motor Vehicles v. Benjamin J. McGrath</a>  </a> Davis, J. <a href="memo-decisions/spring2017/15-1147memo.pdf#page=5" target="_blank">Concurring</a></a> Loughry, C.J. <a href="memo-decisions/spring2017/15-1147memo.pdf#page=7" target="_blank">Dissenting</a></td>
+            <td>ADM</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>01/09/2017</td>
+            <td>16-0810</td>
+            <td><a href="memo-decisions/spring2017/16-0810memo.pdf" target="_blank">In Re: C.D.</a></td>
+            <td>JUV</td>
+            <td>MD</td>
+       </tr>
+      <tr>
+        	<td>01/09/2017</td>
+            <td>16-0650</td>
+            <td><a href="memo-decisions/spring2017/16-0650memo.pdf" target="_blank">In Re: P.B.</a></td>
+            <td>JUV</td>
+            <td>MD</td>
+       </tr> 
+      <tr>
+        	<td>01/09/2017</td>
+            <td>16-0624</td>
+            <td><a href="memo-decisions/spring2017/16-0624memo.pdf" target="_blank">In Re: Z.H. and N.H.</a></td>
+            <td>JUV</td>
+            <td>MD</td>
+       </tr> 
+      <tr>
+        	<td>01/09/2017</td>
+            <td>16-0364 &amp; 16-0654</td>
+            <td><a href="memo-decisions/spring2017/16-0364and16-0654memo.pdf" target="_blank">In Re: J.P.</a></td>
+            <td>JUV</td>
+            <td>MD</td>
+       </tr> 
+      <tr>
+        	<td>01/09/2017</td>
+            <td>16-0278</td>
+            <td><a href="memo-decisions/spring2017/16-0278memo.pdf" target="_blank">State of West Virginia v. Londa Mae Hogue</a></td>
+            <td>CR-F</td>
+            <td>MD</td>
+       </tr> 
+      <tr>
+        	<td>01/09/2017</td>
+            <td>16-0206</td>
+            <td><a href="memo-decisions/spring2017/16-0206memo.pdf" target="_blank">Charles L. Pearcy IV v. Karen Pszczolkowski, Warden</a></td>
+            <td>CIV-O</td>
+            <td>MD</td>
+       </tr> 
+      <tr>
+        	<td>01/09/2017</td>
+            <td>16-0126</td>
+            <td><a href="memo-decisions/spring2017/16-0126memo.pdf" target="_blank">Deborah A. Phipps v. Lori Nohe, Warden</a></td>
+            <td>CIV-O</td>
+            <td>MD</td>
+       </tr> 
+      <tr>
+        	<td>01/09/2017</td>
+            <td>16-0086</td>
+            <td><a href="memo-decisions/spring2017/16-0086memo.pdf" target="_blank">State of West Virginia v. Nathaniel Showalter</a></td>
+            <td>CR-F</td>
+            <td>MD</td>
+       </tr> 
+      <tr>
+        	<td>01/09/2017</td>
+            <td>15-1117</td>
+            <td><a href="memo-decisions/spring2017/15-1117memo.pdf" target="_blank">State of West Virginia v. Joshua McCoy</a></td>
+            <td>CR-F</td>
+            <td>MD</td>
+       </tr> 
+      <tr>
+        	<td>01/09/2017</td>
+            <td>15-0849</td>
+            <td><a href="memo-decisions/spring2017/15-0849memo.pdf" target="_blank">Jack V. v. Ralph Terry, Warden</a></td>
+            <td>CIV-O</td>
+            <td>MD</td>
+       </tr>
+       <tr>
+        	<td>01/09/2017</td>
+            <td>15-0985</td>
+            <td><a href="memo-decisions/spring2017/15-0985memo.pdf" target="_blank">State of West Virginia v. Jackie S.</a></td>
+            <td>CR-F</td>
+            <td>MD</td>
+       </tr>      
+      <tr>
+        	<td>01/06/2017</td>
+            <td>16-0414</td>
+            <td><a href="memo-decisions/spring2017/16-0414memo.pdf" target="_blank">State of West Virginia v. Humane Society of Raleigh County</a></td>
+            <td>TCR</td>
+            <td>MD</td>
+       </tr>
+       <tr>
+        	<td>01/06/2017</td>
+            <td>16-0292 &amp; 16-0400 &amp;<br />
+16-0238</td>
+            <td><a href="memo-decisions/spring2017/16-0292and16-0400and16-0238memo.pdf" target="_blank">Mitchell Brozik and MB Security v. Betty Parmer, etc.</a></td>
+            <td>TCR</td>
+            <td>MD</td>
+       </tr>
+       <tr>
+        	<td>01/06/2017</td>
+            <td>16-0204</td>
+            <td><a href="memo-decisions/spring2017/16-0204memo.pdf" target="_blank">Stephen Upton v. Municipality of the Town of Flatwoods</a></td>
+            <td>CR-O</td>
+            <td>MD</td>
+       </tr>
+       <tr>
+        	<td>01/06/2017</td>
+            <td>16-0007</td>
+            <td><a href="memo-decisions/spring2017/16-0007memo.pdf" target="_blank">State of West Virginia v. Brannon J. Hamilton</a></td>
+            <td>CR-F</td>
+            <td>MD</td>
+       </tr>
+        
+            
+      </tbody>
+    </table>
+    <!-- InstanceEndEditable --></div>
+  </div>
+<div id="main-footer" class="noPrint">
+  <p class="contact-info">&nbsp;<br />&nbsp;<br />&nbsp;</p>
+  
+  <ul id="additionalNav">
+  	<li class="redesign"><a href="about-this-redesign.html">About this Redesign</a></li>
+    <li class="twitter"><a href="http://www.twitter.com/wvcourts" target="_blank">Twitter</a></li>
+  </ul>
+  
+  <ul id="additionalNav2">
+  	<li class="redesign"><a href="http://www.flickr.com/photos/courtswv" target="_blank">Flickr</a></li>
+    <li class="twitter"><a href="../courts-twitter.html">Twitter</a></li>
+  </ul>
+  
+  <ul class="navigation">
+    <li><a href="../contact.html">Contact Information</a></li>
+    <li><a href="../terms-of-use.html">Terms of Use</a></li>
+    <li><a href="http://www.wv.gov/Pages/default.aspx" target="_blank">State of WV Main Page</a></li>
+  </ul>
+  <p class="terms">The West Virginia Judicial System is an Equal Opportunity Employer committed to providing equal access and unbiased, non-discriminatory treatment to all.<br />
+    2011 West Virginia Court System - Supreme Court of Appeals. All Rights Reserved.</p>
+</div>
+</body>
+<!-- InstanceEnd --></html>

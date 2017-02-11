@@ -1,8 +1,5 @@
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import clean_string
-import time
-from datetime import date
-from lxml import html
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -10,87 +7,56 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.courtswv.gov/supreme-court/opinions.html'
         self.court_id = self.__module__
+        self.cell_path = '//table/tbody/tr/td[%d]'
 
     def _get_case_names(self):
-        return [t for t in self.html.xpath('//table/tbody/tr/td[3]/a[1]/text()')]
+        return [anchor.text_content() for anchor in self.html.xpath('%s/a[1]' % (self.cell_path % 3))]
 
     def _get_download_urls(self):
-        return [href for href in
-                self.html.xpath('//table/tbody/tr/td[3]/a[1]/@href')]
+        return [href for href in self.html.xpath('%s/a[1]/@href' % (self.cell_path % 3))]
 
     def _get_case_dates(self):
-        dates = []
-        for date_string in self.html.xpath('//table/tbody/tr/td[1]/text()'):
-            dates.append(date.fromtimestamp(time.mktime(time.strptime(clean_string(date_string), '%m/%d/%Y'))))
-        return dates
+        return [convert_date_string(cell.text_content().strip()) for cell in self.html.xpath(self.cell_path % 1)]
 
     def _get_docket_numbers(self):
-        nums = []
-        for e in self.html.xpath('//table/tbody/tr/td[2]'):
-            nums.append(html.tostring(e, method='text', encoding='unicode').lower().strip())
-        return nums
+        return [cell.text_content().lower().strip() for cell in self.html.xpath(self.cell_path % 2)]
 
     def _get_precedential_statuses(self):
-        statuses = []
-        for status in self.html.xpath('//table/tbody/tr/td[5]/text()'):
-            if status.lower() == 'md':
-                statuses.append('Published')
-            elif status.lower() == 'so':
-                statuses.append('Published')
-            elif status.lower() == 'pc':
-                statuses.append('Published')
-            elif status.lower() == 'sep':
-                statuses.append('Separate')
-            else:
-                statuses.append('Unknown')
-        return statuses
+        codes = {'MD': 'Published',
+                 'SO': 'Published',
+                 'PC': 'Published',
+                 'SEP': 'Separate', }
+        return self.decode_cell_text(self.cell_path % 5, codes)
 
     def _get_nature_of_suit(self):
-        natures = []
-        for t in self.html.xpath('//table/tbody/tr/td[4]/text()'):
-            # List is sourced from JS in scraped HTML
-            if t == "CR-F":
-                natures.append('Felony (non-Death Penalty)')
-            elif t == "CR-M":
-                natures.append('Misdemeanor')
-            elif t == "CR-O":
-                natures.append('Criminal-Other')
-            elif t == "TCR":
-                natures.append('Tort, Contract, and Real Property')
-            elif t == "PR":
-                natures.append('Probate')
-            elif t == "FAM":
-                natures.append('Family')
-            elif t == "JUV":
-                natures.append('Juvenile')
-            elif t == "CIV-O":
-                natures.append('Civil-Other')
-            elif t == "WC":
-                natures.append('Workers Compensation')
-            elif t == "TAX":
-                natures.append('Revenue (Tax)')
-            elif t == "ADM":
-                natures.append('Administrative Agency-Other')
-            elif t == "MISC":
-                natures.append('Appeal by Right-Other')
-            elif t == "OJ-H":
-                natures.append('Habeas Corpus')
-            elif t == "OJ-M":
-                natures.append('Writ Application-Other')
-            elif t == "OJ-P":
-                natures.append('Writ Application-Other')
-            elif t == "L-ADM":
-                natures.append('Bar Admission')
-            elif t == "L-DISC":
-                natures.append('Bar Discipline/Eligibility')
-            elif t == "L-DISC-O":
-                natures.append('Bar/Judiciary Proceeding-Other')
-            elif t == "J-DISC":
-                natures.append('Bar/Judiciary Proceeding-Other')
-            elif t == "CERQ":
-                natures.append('Certified Question')
-            elif t == "OJ-O":
-                natures.append('Original Proceeding/Appellate Matter-Other')
-            else:
-                natures.append('Unknown')
-        return natures
+        # List is sourced from JS in scraped HTML
+        codes = {'CR-F': 'Felony (non-Death Penalty)',
+                 'CR-M': 'Misdemeanor',
+                 'CR-O': 'Criminal-Other',
+                 'TCR': 'Tort, Contract, and Real Property',
+                 'PR': 'Probate',
+                 'FAM': 'Family',
+                 'JUV': 'Juvenile',
+                 'CIV-O': 'Civil-Other',
+                 'WC': 'Workers Compensation',
+                 'TAX': 'Revenue (Tax)',
+                 'ADM': 'Administrative Agency-Other',
+                 'MISC': 'Appeal by Right-Other',
+                 'OJ-H': 'Habeas Corpus',
+                 'OJ-M': 'Writ Application-Other',
+                 'OJ-P': 'Writ Application-Other',
+                 'L-ADM': 'Bar Admis   sion',
+                 'L-DISC': 'Bar Discipline/Eligibility',
+                 'L-DISC-O': 'Bar/Judiciary Proceeding-Other',
+                 'J-DISC': 'Bar/Judiciary Proceeding-Other',
+                 'CERQ': 'Certified Question',
+                 'OJ-O': 'Original Proceeding/Appellate Matter-Other',
+                 'POST': 'Post-Conviction Appeal', }
+        return self.decode_cell_text(self.cell_path % 4, codes)
+
+    def decode_cell_text(self, path, codes):
+        results = []
+        for cell in self.html.xpath(path):
+            code = cell.text_content().strip()
+            results.append(codes[code] if code in codes else 'Unknown')
+        return results
