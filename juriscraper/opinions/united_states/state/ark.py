@@ -2,11 +2,8 @@
 # Reviewer: Michael Lissner
 # Date created: 2013-08-03
 
-from datetime import datetime
-from lxml import html
-
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import titlecase, convert_date_string
 
 
 class Site(OpinionSite):
@@ -14,43 +11,34 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://opinions.aoc.arkansas.gov/weblink8/Browse.aspx?startid=40626'
+        # Excludes rows without docket number in cell 4
+        self.cell_path = '//tr/td[@class="DocumentBrowserCell"][%d][../*[4]//text()]'
 
     def _get_download_urls(self):
-        path = '//*[@class="DocumentBrowserNameLink"][../../*[4]//text()]/@href'
-        return [t for t in self.html.xpath(path)]
+        path = '%s/a/@href' % (self.cell_path % 1)
+        return [href for href in self.html.xpath(path)]
 
     def _get_case_names(self):
-        path = '//*[@class="DocumentBrowserNameLink"][../../*[4]//text()]/nobr/span[1]/text()'
-        return [t for t in self.html.xpath(path)]
+        path = '%s/a/nobr/span[1]' % (self.cell_path % 1)
+        return [cell.text_content() for cell in self.html.xpath(path)]
 
     def _get_case_dates(self):
-        path = '//tr/td[@class="DocumentBrowserCell"][5][../*[4]//text()]//nobr/text()'
-        return [datetime.strptime(date_string, '%m/%d/%Y').date()
-                for date_string in self.html.xpath(path)]
+        return [convert_date_string(cell.text_content()) for cell in self.html.xpath(self.cell_path % 5)]
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        docket_numbers = []
-        for e in self.html.xpath('//tr/td[@class="DocumentBrowserCell"][4][../*[4]//text()]//nobr'):
-            s = html.tostring(e, method='text', encoding='unicode')
-            docket_numbers.append(s)
-        return docket_numbers
+        return self.return_cell_text(4)
 
     def _get_judges(self):
-        path = '//tr/td[@class="DocumentBrowserCell"][2][../*[4]//text()]//nobr/text()'
-        return [titlecase(t.upper()) for t in self.html.xpath(path)]
+        return [titlecase(cell.text_content().upper()) for cell in self.html.xpath(self.cell_path % 2)]
 
     def _get_neutral_citations(self):
-        path = '//tr/td[@class="DocumentBrowserCell"][6][../*[4]//text()]//nobr/text()'
-        return list(self.html.xpath(path))
+        return self.return_cell_text(6)
 
     def _get_dispositions(self):
-        docket_numbers = []
-        for e in self.html.xpath('//tr/td[@class="DocumentBrowserCell"][8][../*[4]//text()]//nobr'):
-            s = html.tostring(e, method='text', encoding='unicode')
-            docket_numbers.append(titlecase(s))
-        return docket_numbers
+        return [titlecase(docket) for docket in self._get_docket_numbers()]
 
-
+    def return_cell_text(self, cell_number):
+        return [cell.text_content() for cell in self.html.xpath(self.cell_path % cell_number)]
