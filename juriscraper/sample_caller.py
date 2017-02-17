@@ -1,7 +1,8 @@
 import signal
+import six
 import sys
 import traceback
-import urllib2
+from six.moves.urllib import parse as urllib2
 from optparse import OptionParser
 
 from juriscraper.lib.importer import build_module_list, site_yielder
@@ -64,7 +65,7 @@ def scrape_court(site, binaries=False):
         # Normally, you'd do your save routines here...
         v_print(1, '\nAdding new item:')
         for k, v in item.items():
-            if type(v) == unicode:
+            if isinstance(v, six.text_type):
                 value = trunc(v, 200, ellipsis='...')
                 v_print(1, '    %s: "%s"' % (k, value.encode('utf-8')))
             else:
