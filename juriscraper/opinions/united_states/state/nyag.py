@@ -62,6 +62,7 @@ class Site(OpinionSite):
     def _download_backwards(self, year):
         self.year = year
         self.set_paths()
+        self.html = self._download()
 
     def set_paths(self):
         self.row_path = '//table[contains(caption, "%d")]/tbody/tr' % self.year
