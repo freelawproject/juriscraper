@@ -1,0 +1,1543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<!--[if IE 7]><html class="ie7 oldie" lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"><![endif]-->
+<!--[if IE 8]><html class="ie8 oldie" lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"><![endif]-->
+<!--[if gt IE 8 | !(IE)]><!-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+<!--<![endif]-->
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<link rel="shortcut icon" href="https://ag.ny.gov/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+  <title>Appeals &amp; Opinions - Numerical Index | New York State Attorney General</title>
+  <link type="text/css" rel="stylesheet" href="https://ag.ny.gov/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://ag.ny.gov/sites/default/files/css/css_GqCqCmGspWzZsDVTgkFoFb2eEt4xaByq4GFNcVi8QG4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://ag.ny.gov/sites/default/files/css/css_KKs4rU-UjexSFiHmOuoVHoLQ3Q2eGZAbHvgO8wiTRQo.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://ag.ny.gov/sites/default/files/css/css_ovp7EawSSR3meyDr-3G9kkvRgNtbyAqlvgWQVeQ7wO8.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://ag.ny.gov/sites/default/files/css/css_vs8ZURD57C3D0ebw81tXc5G128hBhaz0020S5EBbP_U.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://ag.ny.gov/sites/default/files/css/css_AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs.css" media="print" />
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="https://ag.ny.gov/sites/default/files/css/css_XTcLZW4ucja_h9Zx-6uy42j6MWXUwDT5APf581sEq1U.css" media="all" />
+<![endif]-->
+
+<!--[if lte IE 7]>
+<link type="text/css" rel="stylesheet" href="https://ag.ny.gov/sites/default/files/css/css_Nil78geHbES_Oy5CIImFE6pCZDO8QxBckzbAOQpjDEM.css" media="all" />
+<![endif]-->
+  <script type="text/javascript" src="https://ag.ny.gov/sites/default/files/js/js_Xjzh1hVfcgVAixhmmB6Go8TUMPOiprA-2vkC-oWXARQ.js"></script>
+<script type="text/javascript" src="https://ag.ny.gov/sites/default/files/js/js_i9hYB4Zlst8PNyAwgRyuuQTThPqm5gF5jpcV2TA1ZTo.js"></script>
+<script type="text/javascript" src="https://ag.ny.gov/sites/default/files/js/js_vxTPd-mNn8ML7yo1Oa1Ug1EWhJbyqNfxgr3O-JSCh9I.js"></script>
+<script type="text/javascript" src="https://ag.ny.gov/sites/default/files/js/js_ZOGjOy3uf2S39Z-RlyyOZgUWYxhB07BC1Oof7YuFIZo.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://ag.ny.gov/sites/default/files/googleanalytics/analytics.js?oljfg6","ga");ga("create", "UA-33973995-1", {"cookieDomain":".ag.ny.gov"});ga("require", "linkid", "linkid.js");ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery(document).ready(function(){jQuery("#dialog").dialog({ modal: true, autoOpen: false, title:"Google&trade; Translate Disclaimer", width: 625 });jQuery(".openDialog").click(function(){jQuery("#dialog").dialog("open")});jQuery(".closeDialog").click(function(){jQuery("#dialog").dialog("close")});});
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://ag.ny.gov/sites/default/files/js/js_nyWw3HKKCUBZtjF0fGZapcoRQcBmqn5kApnxfUyxCkM.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"openpublic_theme","theme_token":"pOCuIXbbhqn-CotDkPQRZqjgYBuPz5JxJmrABrEzqd4","js":{"sites\/all\/modules\/clientside_validation\/clientside_validation.ie8.js":1,"sites\/all\/modules\/clientside_validation\/clientside_validation_html5\/clientside_validation_html5.js":1,"sites\/all\/modules\/clientside_validation\/clientside_validation.js":1,"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"misc\/ui\/jquery.ui.core.min.js":1,"misc\/ui\/jquery.ui.widget.min.js":1,"misc\/jquery.cookie.js":1,"sites\/all\/modules\/clientside_validation\/jquery.form.js":1,"misc\/ui\/jquery.ui.button.min.js":1,"misc\/ui\/jquery.ui.mouse.min.js":1,"misc\/ui\/jquery.ui.draggable.min.js":1,"misc\/ui\/jquery.ui.position.min.js":1,"misc\/ui\/jquery.ui.resizable.min.js":1,"misc\/ui\/jquery.ui.dialog.min.js":1,"profiles\/openpublic\/modules\/contrib\/views\/js\/jquery.ui.dialog.patch.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/admin_menu\/admin_devel\/admin_devel.js":1,"sites\/all\/modules\/google_cse\/google_cse.js":1,"profiles\/openpublic\/js\/menu.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox.js":1,"profiles\/openpublic\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"profiles\/openpublic\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.js":1,"profiles\/openpublic\/modules\/custom\/combineblocks\/combineblocks.js":1,"sites\/all\/modules\/megamenu\/megamenu.js":1,"sites\/all\/modules\/better_exposed_filters\/better_exposed_filters.js":1,"profiles\/openpublic\/modules\/contrib\/ctools\/js\/auto-submit.js":1,"profiles\/openpublic\/modules\/contrib\/views\/js\/base.js":1,"misc\/progress.js":1,"profiles\/openpublic\/modules\/contrib\/views\/js\/ajax_view.js":1,"sites\/all\/modules\/clientside_validation\/jquery-validate\/jquery.validate.min.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"0":1,"1":1,"profiles\/openpublic\/themes\/openpublic_theme\/js\/theme-support.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.button.css":1,"misc\/ui\/jquery.ui.resizable.css":1,"misc\/ui\/jquery.ui.dialog.css":1,"profiles\/openpublic\/modules\/contrib\/date\/date_api\/date.css":1,"profiles\/openpublic\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/google_cse\/google_cse.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/youtube\/css\/youtube.css":1,"profiles\/openpublic\/modules\/contrib\/views\/css\/views.css":1,"profiles\/openpublic\/css\/menu.css":1,"profiles\/openpublic\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.css":1,"profiles\/openpublic\/modules\/custom\/combineblocks\/combineblocks.css":1,"profiles\/openpublic\/modules\/contrib\/ctools\/css\/ctools.css":1,"profiles\/openpublic\/modules\/contrib\/follow\/follow.css":1,"sites\/all\/modules\/megamenu\/megamenu.css":1,"sites\/all\/modules\/megamenu\/megamenu-skins.css":1,"profiles\/openpublic\/themes\/openpublic_theme\/css\/basics.css":1,"profiles\/openpublic\/themes\/openpublic_theme\/css\/editor.css":1,"profiles\/openpublic\/themes\/openpublic_theme\/css\/openpublic_theme.css":1,"profiles\/openpublic\/themes\/openpublic_theme\/css\/webteam_custom.css":1,"profiles\/openpublic\/themes\/openpublic_theme\/css\/print.css":1,"profiles\/openpublic\/themes\/openpublic_theme\/css\/openpublic_theme_ie8.css":1,"profiles\/openpublic\/themes\/openpublic_theme\/css\/openpublic_theme_ie7.css":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"combineblocks_sets":[["#block-views-most-popular-content-block-1","#block-views-most-popular-content-block-2"]],"googleCSE":{"cx":"014238217302788171644:wsk0-q1o290","language":"","resultsWidth":600,"domain":"www.google.com"},"megamenu":{"timeout":"500","sizewait":"500","hoverwait":"500"},"profile":"openpublic","profile_version":"7.x-1.0-beta1","better_exposed_filters":{"datepicker":false,"slider":false,"settings":[],"autosubmit":false,"views":{"appeals_and_opinions":{"displays":{"page_1":{"filters":{"field_opinion_year_value":{"required":true}}}}}}},"urlIsAjaxTrusted":{"\/appeals-and-opinions\/numerical-index":true},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:468364f77ae08f2587caf5d5ea45f411":{"view_name":"appeals_and_opinions","view_display_id":"page_1","view_args":"","view_path":"appeals-and-opinions\/numerical-index","view_base_path":"appeals-and-opinions\/numerical-index","view_dom_id":"468364f77ae08f2587caf5d5ea45f411","pager_element":0}}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":1,"trackDomainMode":"1"},"clientsideValidation":{"forms":{"views-exposed-form-appeals-and-opinions-page-1":{"includeHidden":true,"errorPlacement":"6","general":{"errorClass":"error","wrapper":"li","validateTabs":1,"scrollTo":1,"scrollSpeed":"1000","disableHtml5Validation":"1","validateOnBlur":"1","validateOnBlurAlways":"1","validateOnKeyUp":"0","validateOnSubmit":"1","showMessages":"0","errorElement":"label"},"rules":{"field_opinion_year_value":{"required":true,"messages":{"required":"\u0022field_opinion_year_value\u0022 field is required.","blacklist":"\u0022field_opinion_year_value\u0022 field is required."},"blacklist":["_none"]}}},"search-block-form":{"includeHidden":true,"errorPlacement":"6","general":{"errorClass":"error","wrapper":"li","validateTabs":1,"scrollTo":1,"scrollSpeed":"1000","disableHtml5Validation":"1","validateOnBlur":"1","validateOnBlurAlways":"1","validateOnKeyUp":"0","validateOnSubmit":"1","showMessages":"0","errorElement":"label"},"rules":{"field_opinion_year_value":{"required":true,"messages":{"required":"\u0022field_opinion_year_value\u0022 field is required.","blacklist":"\u0022field_opinion_year_value\u0022 field is required."},"blacklist":["_none"]},"search_block_form":{"maxlength":128,"messages":{"maxlength":"\u0022Search\u0022 field has to have maximum 128 values."}}}}},"general":{"usexregxp":0},"groups":{"views-exposed-form-appeals-and-opinions-page-1":{},"search-block-form":{}}}});
+//--><!]]>
+</script>
+
+<link href="https://plus.google.com/101606518437769595954" rel="publisher"/>
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-appeals-and-opinions page-appeals-and-opinions-numerical-index" >
+  <div id="outer-wrapper">
+    <div id="skip-link">
+      <a href="#content" tabIndex="-1" class="element-invisible element-focusable">Skip to main content</a>
+    </div>
+        
+<div id="page-wrapper" class="clearfix">
+ 
+  <div id="header"> 
+    <div id="user-menu-wrap" >
+          </div>
+    <div id="header-inner" class="clearfix center-on-page">
+      
+      
+
+      <!--Added by Revathi-->
+     
+
+
+<img src="/sites/default/files/images/drupal_header_new.jpg" alt="OAG Banner"  style="border:0" usemap="#BannerMap"/>
+<map name="BannerMap" id="BannerMap">
+
+<map name="Map" id="Map">
+<div class="gtContents">
+<area shape="rect" coords="826,5,983,17"   class="openDialog" alt="" >
+</div>
+
+
+
+ <!--<div class="gtContents">
+         <p title="Website Translation offered by using Google Translate"
+
+class="openDialog">Translate Website </p>
+      </div>-->
+
+ <ul class="linkBlockList" style="display:none">
+     <li class="openDialog">Google&trade; Translation Disclaimer</li>
+  </ul>
+  <div id="dialog" style="display:none">
+   <p>This Google&trade; translation feature is provided for informational purposes only.</p>
+
+<p>The Office of Attorney General's website is provided in English. However, the "Google Translate" option may assist you in reading it in other languages.</p>
+
+<p>Google Translate cannot translate all types of documents, and it may not give you an exact translation all the time.
+Anyone relying on information obtained from Google Translate does so at his or her own risk.</p>
+
+<p>The Office of Attorney General does not make any promises, assurances, or guarantees as to the accuracy of the translations provided.
+ The State of New York, its officers, employees, and/or agents shall not be liable for damages or losses of any kind arising out of, or in connection with,
+the use or performance of such information, including but not limited to, damages or losses caused by reliance upon the accuracy of any such information,
+or damages incurred from the viewing, distributing, or copying of such materials.</p>
+
+   <p>A copy of this disclaimer can also be found on our <a href="/disclaimer#google" class="closeDialog">Disclaimer</a> page.</p>
+   <h3 style="font-size: 1.1em;">Select a Language Below&nbsp;/&nbsp;<span lang="es">Seleccione el Idioma Abajo</span></h3>
+
+   <div id="google_translate_element"></div>
+  <p class="closeDialog bxClose">Close this box or use the [ X ]</p>
+  </div>
+
+
+</area>
+
+<area shape="rect" coords="1,1,815,112" href="/" alt="" />
+<area shape="rect" coords="840,26,967,105" href="/" alt=""/>
+
+
+</map>
+
+</map>
+
+
+
+
+     	    
+   
+
+
+    </div><!--/#header-inner-->
+  </div> <!-- /.section, /#header -->
+
+
+    
+ <div id="wrap" class="center-on-page clearfix">
+   <div id="wrap-inner" class="center-on-page clearfix">
+
+<div>
+     <div class="region region-main-menu-region">
+    <div id="block-megamenu-0" class="block block-megamenu">
+
+    
+  <div class="content">
+    <ul id="megamenu-main-menu" class="megamenu-menu columnar megamenu-skin-oag"><li id="megamenu-mlid-967" class="megamenu-parent megamenu-parent-0 odd half-1 leaf-0 first menu-967  first"><h2 class="megamenu-parent-title"><a href="/our-office">Our Office</a></h2><ul class="megamenu-bin megamenu-slots-columnar"><li id="megamenu-mlid-1323" class="megamenu-slot megamenu-slot-0 odd half-1 leaf-0 first  first"><h3 class="megamenu-slot-title"><a href="/about-attorney-general">Bio of the Attorney General</a></h3></li>
+<li id="megamenu-mlid-2979" class="megamenu-slot megamenu-slot-1 even half-1 leaf-1 "><h3 class="megamenu-slot-title"><a href="/tour-attorney-generals-office">Executive Offices</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-2876" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first"><a href="/albany-office">Albany</a></li>
+<li id="megamenu-mlid-2882" class="megamenu-item megamenu-item-1 even half-2 leaf-1 last  last"><a href="/new-york-office">New York Office</a></li>
+</ul></li>
+<li id="megamenu-mlid-699" class="megamenu-slot megamenu-slot-2 odd half-2 leaf-2 "><h3 class="megamenu-slot-title"><a href="/tour-attorney-generals-office">Regional Offices</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-2877" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first"><a href="/binghamton-regional-office">Binghamton</a></li>
+<li id="megamenu-mlid-2878" class="megamenu-item megamenu-item-1 even half-1 leaf-1 "><a href="/brooklyn-regional-office">Brooklyn</a></li>
+<li id="megamenu-mlid-2879" class="megamenu-item megamenu-item-2 odd half-1 leaf-2 "><a href="/buffalo-regional-office">Buffalo</a></li>
+<li id="megamenu-mlid-2880" class="megamenu-item megamenu-item-3 even half-1 leaf-3 "><a href="/harlem-regional-office">Harlem</a></li>
+<li id="megamenu-mlid-2881" class="megamenu-item megamenu-item-4 odd half-1 leaf-4 "><a href="/nassau-regional-office">Nassau</a></li>
+<li id="megamenu-mlid-2883" class="megamenu-item megamenu-item-5 even half-1 leaf-5 "><a href="/plattsburgh-regional-office">Plattsburgh</a></li>
+<li id="megamenu-mlid-2884" class="megamenu-item megamenu-item-6 odd half-1 leaf-6 "><a href="/poughkeepsie-regional-office">Poughkeepsie</a></li>
+<li id="megamenu-mlid-2885" class="megamenu-item megamenu-item-7 even half-2 leaf-7 "><a href="/rochester-regional-office">Rochester</a></li>
+<li id="megamenu-mlid-2886" class="megamenu-item megamenu-item-8 odd half-2 leaf-8 "><a href="/suffolk-regional-office">Suffolk</a></li>
+<li id="megamenu-mlid-2887" class="megamenu-item megamenu-item-9 even half-2 leaf-9 "><a href="/syracuse-regional-office">Syracuse</a></li>
+<li id="megamenu-mlid-2888" class="megamenu-item megamenu-item-10 odd half-2 leaf-10 "><a href="/utica-regional-office">Utica</a></li>
+<li id="megamenu-mlid-2889" class="megamenu-item megamenu-item-11 even half-2 leaf-11 "><a href="/watertown-regional-office">Watertown</a></li>
+<li id="megamenu-mlid-2890" class="megamenu-item megamenu-item-12 odd half-2 leaf-12 last  last"><a href="/westchester-regional-office">Westchester</a></li>
+</ul></li>
+<li id="megamenu-mlid-697" class="megamenu-slot megamenu-slot-3 even half-2 leaf-3 last  last"><h3 class="megamenu-slot-title"><a href="/senior-staff">Senior Legal Staff</a></h3></li>
+</ul></li>
+<li id="megamenu-mlid-602" class="megamenu-parent megamenu-parent-1 even half-1 leaf-1 menu-602 "><h2 class="megamenu-parent-title"><a href="/press-releases">Media Center</a></h2><ul class="megamenu-bin megamenu-slots-columnar"><li id="megamenu-mlid-622" class="megamenu-slot megamenu-slot-0 odd half-1 leaf-0 first  first"><h3 class="megamenu-slot-title"><a href="/press-releases">Press Releases</a></h3></li>
+<li id="megamenu-mlid-1015" class="megamenu-slot megamenu-slot-1 even half-1 leaf-1 "><h3 class="megamenu-slot-title"><a href="/media-gallery">Media Gallery</a></h3></li>
+<li id="megamenu-mlid-11378" class="megamenu-slot megamenu-slot-2 odd half-2 leaf-2 last  last"><h3 class="megamenu-slot-title"><a href="/people-state-new-york-v-maurice-r-greenberg-howard-i-smith">NYS v. Greenberg &amp; Smith</a></h3></li>
+</ul></li>
+<li id="megamenu-mlid-694" class="megamenu-parent megamenu-parent-2 odd half-1 leaf-2 menu-694 "><h2 class="megamenu-parent-title"><a href="/bureaus">Divisions</a></h2><ul class="megamenu-bin megamenu-slots-columnar"><li id="megamenu-mlid-3271" class="megamenu-slot megamenu-slot-0 odd half-1 leaf-0 first  first"><h3 class="megamenu-slot-title"><a href="/bureaus">Criminal Justice</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-993" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first"><a href="/bureau/criminal-enforcement-and-financial-crimes-bureau">Criminal Enforcement and Financial Crimes Bureau</a></li>
+<li id="megamenu-mlid-3340" class="megamenu-item megamenu-item-1 even half-1 leaf-1 "><a href="/bureau/conviction-review-bureau">Conviction Review Bureau</a></li>
+<li id="megamenu-mlid-678" class="megamenu-item megamenu-item-2 odd half-1 leaf-2 "><a href="/bureau/medicaid-fraud-control-unit">Medicaid Fraud Control Unit</a></li>
+<li id="megamenu-mlid-903" class="megamenu-item megamenu-item-3 even half-2 leaf-3 "><a href="/bureau/organized-crime-task-force">Organized Crime Task Force</a></li>
+<li id="megamenu-mlid-679" class="megamenu-item megamenu-item-4 odd half-2 leaf-4 "><a href="/bureau/public-integrity-bureau">Public Integrity Bureau</a></li>
+<li id="megamenu-mlid-2055" class="megamenu-item megamenu-item-5 even half-2 leaf-5 last  last"><a href="/bureau/taxpayer-protection-bureau">Taxpayer Protection Bureau</a></li>
+</ul></li>
+<li id="megamenu-mlid-658" class="megamenu-slot megamenu-slot-1 even half-1 leaf-1 "><h3 class="megamenu-slot-title"><a href="/bureaus">Social Justice</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-681" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first"><a href="https://www.charitiesnys.com">Charities Bureau </a></li>
+<li id="megamenu-mlid-3277" class="megamenu-item megamenu-item-1 even half-1 leaf-1 "><a href="/bureau/civil-rights">Civil Rights</a></li>
+<li id="megamenu-mlid-2328" class="megamenu-item megamenu-item-2 odd half-1 leaf-2 "><a href="/bureau/environmental-protection-bureau">Environmental Protection Bureau</a></li>
+<li id="megamenu-mlid-2329" class="megamenu-item megamenu-item-3 even half-2 leaf-3 "><a href="/bureau/health-care-bureau">Health Care Bureau</a></li>
+<li id="megamenu-mlid-685" class="megamenu-item megamenu-item-4 odd half-2 leaf-4 "><a href="/bureau/labor-bureau">Labor Bureau</a></li>
+<li id="megamenu-mlid-686" class="megamenu-item megamenu-item-5 even half-2 leaf-5 last  last"><a href="/bureau/tobacco-compliance-bureau">Tobacco Compliance Bureau</a></li>
+</ul></li>
+<li id="megamenu-mlid-660" class="megamenu-slot megamenu-slot-2 odd half-1 leaf-2 "><h3 class="megamenu-slot-title"><a href="/bureaus">State Counsel</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-688" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first"><a href="/bureau/civil-recoveries-bureau">Civil Recoveries Bureau</a></li>
+<li id="megamenu-mlid-689" class="megamenu-item megamenu-item-1 even half-1 leaf-1 "><a href="/bureau/claims-bureau">Claims Bureau </a></li>
+<li id="megamenu-mlid-690" class="megamenu-item megamenu-item-2 odd half-1 leaf-2 "><a href="/bureau/litigation-bureau">Litigation Bureau</a></li>
+<li id="megamenu-mlid-691" class="megamenu-item megamenu-item-3 even half-2 leaf-3 "><a href="/bureau/real-property-bureau">Real Property Bureau</a></li>
+<li id="megamenu-mlid-692" class="megamenu-item megamenu-item-4 odd half-2 leaf-4 last  last"><a href="/bureau/sex-offender-management-bureau-somb">Sex Offender Management Bureau</a></li>
+</ul></li>
+<li id="megamenu-mlid-656" class="megamenu-slot megamenu-slot-3 even half-1 leaf-3 "><h3 class="megamenu-slot-title"><a href="/bureaus">Economic Justice</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-718" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first"><a href="/bureau/antitrust-bureau">Antitrust Bureau</a></li>
+<li id="megamenu-mlid-1808" class="megamenu-item megamenu-item-1 even half-1 leaf-1 "><a href="/bureau/consumer-frauds-bureau">Bureau of Consumer Frauds &amp; Protection</a></li>
+<li id="megamenu-mlid-672" class="megamenu-item megamenu-item-2 odd half-1 leaf-2 "><a href="/bureau/internet-bureau">Bureau of Internet and Technology (BIT)</a></li>
+<li id="megamenu-mlid-673" class="megamenu-item megamenu-item-3 even half-2 leaf-3 "><a href="/bureau/investor-protection-bureau">Investor Protection Bureau</a></li>
+<li id="megamenu-mlid-2326" class="megamenu-item megamenu-item-4 odd half-2 leaf-4 last  last"><a href="/bureau/real-estate-finance-bureau">Real Estate Finance Bureau</a></li>
+</ul></li>
+<li id="megamenu-mlid-654" class="megamenu-slot megamenu-slot-4 odd half-1 leaf-4 "><h3 class="megamenu-slot-title"><a href="/bureaus">Solicitor General</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-2413" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first last"><a href="/bureau/appeals-opinions-division">Appeals and Opinions Division</a></li>
+</ul></li>
+<li id="megamenu-mlid-657" class="megamenu-slot megamenu-slot-5 even half-2 leaf-5 "><h3 class="megamenu-slot-title"><a href="/bureaus">Investigations</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-897" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first last"><a href="/bureau/investigations-division">Investigations Division</a></li>
+</ul></li>
+<li id="megamenu-mlid-653" class="megamenu-slot megamenu-slot-6 odd half-2 leaf-6 "><h3 class="megamenu-slot-title"><a href="/bureaus">Executive</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-662" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first"><a href="/bureau/foil">FOIL</a></li>
+<li id="megamenu-mlid-1399" class="megamenu-item megamenu-item-1 even half-2 leaf-1 last  last"><a href="/bureau/intergovernmental-affairs-bureau">Intergovernmental Affairs Bureau</a></li>
+</ul></li>
+<li id="megamenu-mlid-2507" class="megamenu-slot megamenu-slot-7 even half-2 leaf-7 "><h3 class="megamenu-slot-title"><a href="/bureaus">Administration</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-2513" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first"><a href="/bureau/budget-and-fiscal-management-bureau">Budget and Fiscal Management Bureau</a></li>
+<li id="megamenu-mlid-668" class="megamenu-item megamenu-item-1 even half-1 leaf-1 "><a href="/bureau/human-resources-management-bureau">Human Resources  Management Bureau</a></li>
+<li id="megamenu-mlid-669" class="megamenu-item megamenu-item-2 odd half-2 leaf-2 last  last"><a href="/bureau/legal-recruitment-bureau">Legal Recruitment</a></li>
+</ul></li>
+<li id="megamenu-mlid-666" class="megamenu-slot megamenu-slot-8 odd half-2 leaf-8 last  last"><h3 class="megamenu-slot-title"><a href="/tour-attorney-generals-office">Regional Affairs</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-687" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first last"><a href="/tour-attorney-generals-office">Regional Offices </a></li>
+</ul></li>
+</ul></li>
+<li id="megamenu-mlid-604" class="megamenu-parent megamenu-parent-3 even half-1 leaf-3 menu-604 "><h2 class="megamenu-parent-title"><a href="/resource-center-0">Resources</a></h2><ul class="megamenu-bin megamenu-slots-columnar"><li id="megamenu-mlid-736" class="megamenu-slot megamenu-slot-0 odd half-1 leaf-0 first  first"><h3 class="megamenu-slot-title"><a href="https://www.charitiesnys.com/registration_reporting_new.jsp">Charities Registry </a></h3></li>
+<li id="megamenu-mlid-976" class="megamenu-slot megamenu-slot-1 even half-1 leaf-1 "><h3 class="megamenu-slot-title"><a href="/complaint-forms">Complaint Forms</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-972" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first"><a href="/redirect">Co-Ops, Condos &amp; Homeowners Association Complaint Form</a></li>
+<li id="megamenu-mlid-969" class="megamenu-item megamenu-item-1 even half-1 leaf-1 "><a href="/redirect">Charities Bureau Complaint Form</a></li>
+<li id="megamenu-mlid-970" class="megamenu-item megamenu-item-2 odd half-1 leaf-2 "><a href="/redirect">Complaint Form For Environmentally Related Matters</a></li>
+<li id="megamenu-mlid-977" class="megamenu-item megamenu-item-3 even half-2 leaf-3 "><a href="/complaints-other-agencies">Complaints for Other Agencies</a></li>
+<li id="megamenu-mlid-971" class="megamenu-item megamenu-item-4 odd half-2 leaf-4 last  last"><a href="/redirect">Franchise-Related Complaint Form</a></li>
+</ul></li>
+<li id="megamenu-mlid-737" class="megamenu-slot megamenu-slot-2 odd half-1 leaf-2 "><h3 class="megamenu-slot-title"><a href="/job-postings">Employment Opportunities</a></h3></li>
+<li id="megamenu-mlid-3189" class="megamenu-slot megamenu-slot-3 even half-1 leaf-3 "><h3 class="megamenu-slot-title"><a href="/faqs">FAQs</a></h3></li>
+<li id="megamenu-mlid-2543" class="megamenu-slot megamenu-slot-4 odd half-1 leaf-4 "><h3 class="megamenu-slot-title"><a href="/find-attorney">Find an Attorney</a></h3></li>
+<li id="megamenu-mlid-3293" class="megamenu-slot megamenu-slot-5 even half-1 leaf-5 "><h3 class="megamenu-slot-title"><a href="/forms">Forms</a></h3></li>
+<li id="megamenu-mlid-941" class="megamenu-slot megamenu-slot-6 odd half-1 leaf-6 "><h3 class="megamenu-slot-title"><a href="/consumer-frauds/help-homeowners">Help for Homeowners</a></h3></li>
+<li id="megamenu-mlid-940" class="megamenu-slot megamenu-slot-7 even half-1 leaf-7 "><h3 class="megamenu-slot-title"><a href="/consumer-frauds-bureau/identity-theft">Identity Theft</a></h3></li>
+<li id="megamenu-mlid-942" class="megamenu-slot megamenu-slot-8 odd half-1 leaf-8 "><h3 class="megamenu-slot-title"><a href="/consumer-frauds/lemon-law">Lemon Law Protections</a></h3></li>
+<li id="megamenu-mlid-10093" class="megamenu-slot megamenu-slot-9 even half-1 leaf-9 "><h3 class="megamenu-slot-title"><a href="//ag.ny.gov/sites/default/files/oagnewsletter.pdf">OAG Weekly Newsletter</a></h3></li>
+<li id="megamenu-mlid-3303" class="megamenu-slot megamenu-slot-10 odd half-2 leaf-10 "><h3 class="megamenu-slot-title"><a href="/real-estate-finance-bureau/database">Offering Plan Data Search</a></h3></li>
+<li id="megamenu-mlid-3249" class="megamenu-slot megamenu-slot-11 even half-2 leaf-11 "><h3 class="megamenu-slot-title"><a href="https://ag.ny.gov/appeals-and-opinions/numerical-index">Opinions</a></h3></li>
+<li id="megamenu-mlid-3202" class="megamenu-slot megamenu-slot-12 odd half-2 leaf-12 "><h3 class="megamenu-slot-title"><a href="/intergov-affairs/publications">Publications</a></h3></li>
+<li id="megamenu-mlid-11154" class="megamenu-slot megamenu-slot-13 even half-2 leaf-13 "><h3 class="megamenu-slot-title"><a href="/quick-links-registration-information">Registrations</a></h3></li>
+<li id="megamenu-mlid-10094" class="megamenu-slot megamenu-slot-14 odd half-2 leaf-14 "><h3 class="megamenu-slot-title"><a href="https://public.govdelivery.com/accounts/NYSOAG/subscriber/new?topic_id=NYSOAG_72">Sign Up For Weekly Newsletter Email</a></h3></li>
+<li id="megamenu-mlid-741" class="megamenu-slot megamenu-slot-15 even half-2 leaf-15 "><h3 class="megamenu-slot-title"><a href="/service-oag">Service of Process</a></h3></li>
+<li id="megamenu-mlid-742" class="megamenu-slot megamenu-slot-16 odd half-2 leaf-16 "><h3 class="megamenu-slot-title"><a href="/consumer-frauds/housing-issues">Tenant’s Rights</a></h3></li>
+<li id="megamenu-mlid-944" class="megamenu-slot megamenu-slot-17 even half-2 leaf-17 "><h3 class="megamenu-slot-title"><a href="/intergov-affairs/victim-rights">Victims Rights</a></h3></li>
+<li id="megamenu-mlid-11379" class="megamenu-slot megamenu-slot-18 odd half-2 leaf-18 "><h3 class="megamenu-slot-title"><a href="/real-estate-finance-bureau/refb-policy-memoranda">REFB Policy Memoranda</a></h3></li>
+<li id="megamenu-mlid-11283" class="megamenu-slot megamenu-slot-19 even half-2 leaf-19 last  last"><h3 class="megamenu-slot-title"><a href="/zika-consumer-advisory">Zika Consumer Advisory</a></h3></li>
+</ul></li>
+<li id="megamenu-mlid-603" class="megamenu-parent megamenu-parent-4 odd half-2 leaf-4 menu-603 "><h2 class="megamenu-parent-title"><a href="/./all-features">Initiatives</a></h2><ul class="megamenu-bin megamenu-slots-columnar"><li id="megamenu-mlid-6296" class="megamenu-slot megamenu-slot-0 odd half-1 leaf-0 first  first"><h3 class="megamenu-slot-title"><a href="/feature/i-stop">I-STOP</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-6297" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first"><a href="/report-doctor-or-pharmacist-over-prescription">Report Doctor or Pharmacist Over Prescription</a></li>
+<li id="megamenu-mlid-6298" class="megamenu-item megamenu-item-1 even half-2 leaf-1 last  last"><a href="//ag.ny.gov/sites/default/files/pdfs/features/ISTOP/I-STOP Radio Announcement (60 seconds).mp3">I-STOP Public Service Announcement</a></li>
+</ul></li>
+<li id="megamenu-mlid-3274" class="megamenu-slot megamenu-slot-1 even half-1 leaf-1 "><h3 class="megamenu-slot-title"><a href="http://www.nysmortgagesettlement.com/">Mortgage Settlement</a></h3></li>
+<li id="megamenu-mlid-3341" class="megamenu-slot megamenu-slot-2 odd half-1 leaf-2 "><h3 class="megamenu-slot-title"><a href="/bureau/conviction-review-bureau">Conviction Review Bureau</a></h3></li>
+<li id="megamenu-mlid-945" class="megamenu-slot megamenu-slot-3 even half-1 leaf-3 "><h3 class="megamenu-slot-title"><a href="/bureau/taxpayer-protection-bureau">Taxpayer Protection</a></h3></li>
+<li id="megamenu-mlid-2893" class="megamenu-slot megamenu-slot-4 odd half-1 leaf-4 "><h3 class="megamenu-slot-title"><a href="/feature/religious-rights">Religious Rights</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-3036" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first"><a href="/religious-rights/know-your-rights">Know Your Rights</a></li>
+<li id="megamenu-mlid-3037" class="megamenu-item megamenu-item-1 even half-1 leaf-1 "><a href="/religious-rights/preventing-discrimination">Preventing Discrimination</a></li>
+<li id="megamenu-mlid-3038" class="megamenu-item megamenu-item-2 odd half-1 leaf-2 "><a href="/religious-rights/resource-center">Resource Center</a></li>
+<li id="megamenu-mlid-3040" class="megamenu-item megamenu-item-3 even half-2 leaf-3 "><a href="/redirect">File a Complaint</a></li>
+<li id="megamenu-mlid-3041" class="megamenu-item megamenu-item-4 odd half-2 leaf-4 "><a href="/religious-rights/contact">Contact</a></li>
+<li id="megamenu-mlid-3043" class="megamenu-item megamenu-item-5 even half-2 leaf-5 last  last"><a href="/redirect">Civil Rights Bureau</a></li>
+</ul></li>
+<li id="megamenu-mlid-746" class="megamenu-slot megamenu-slot-5 even half-1 leaf-5 "><h3 class="megamenu-slot-title"><a href="/feature/immigration-services-fraud">Immigration Services Fraud</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-2891" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first"><a href="/immigration-fraud/dont-be-victim-immigration-fraud">Don’t Be A Victim Of Immigration Fraud</a></li>
+<li id="megamenu-mlid-2892" class="megamenu-item megamenu-item-1 even half-1 leaf-1 "><a href="/immigration-fraud/beware-target-list-names">Beware! Target List Of Names</a></li>
+<li id="megamenu-mlid-2894" class="megamenu-item megamenu-item-2 odd half-1 leaf-2 "><a href="/immigration-fraud/resources">Resources</a></li>
+<li id="megamenu-mlid-2895" class="megamenu-item megamenu-item-3 even half-1 leaf-3 "><a href="/finding-assistance">Finding Assistance</a></li>
+<li id="megamenu-mlid-2896" class="megamenu-item megamenu-item-4 odd half-2 leaf-4 "><a href="/immigration-fraud/-state-local-laws">Federal, State &amp; Local Laws</a></li>
+<li id="megamenu-mlid-2898" class="megamenu-item megamenu-item-5 even half-2 leaf-5 "><a href="/immigration-fraud/contact-us">Contact Us</a></li>
+<li id="megamenu-mlid-2978" class="megamenu-item megamenu-item-6 odd half-2 leaf-6 last  last"><a href="/redirect">Civil Rights Bureau</a></li>
+</ul></li>
+<li id="megamenu-mlid-952" class="megamenu-slot megamenu-slot-6 odd half-1 leaf-6 "><h3 class="megamenu-slot-title"><a href="/feature/debt-settlement-companies">Debt Settlement &amp; Collection</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-3148" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first"><a href="/debt-settlement/tips-debt-settlement-companies">Tips on Debt Settlement Companies</a></li>
+<li id="megamenu-mlid-3150" class="megamenu-item megamenu-item-1 even half-1 leaf-1 "><a href="/debt-settlement/debt-collection-companies">Debt Collection Companies</a></li>
+<li id="megamenu-mlid-3155" class="megamenu-item megamenu-item-2 odd half-1 leaf-2 "><a href="/debt-settlement/attorney-generals-enforcement-actions">The Attorney General&#039;s Enforcement Actions</a></li>
+<li id="megamenu-mlid-3156" class="megamenu-item megamenu-item-3 even half-1 leaf-3 "><a href="/debt-settlement/map-default-judgments-region">Map of Default Judgments by Region</a></li>
+<li id="megamenu-mlid-3157" class="megamenu-item megamenu-item-4 odd half-2 leaf-4 "><a href="/debt-settlement/process-servers">Process Servers: Know Your Rights</a></li>
+<li id="megamenu-mlid-3149" class="megamenu-item megamenu-item-5 even half-2 leaf-5 "><a href="/redirect">Bureau of Consumer Frauds &amp; Protection</a></li>
+<li id="megamenu-mlid-3158" class="megamenu-item megamenu-item-6 odd half-2 leaf-6 last  last"><a href="/redirect">Contact</a></li>
+</ul></li>
+<li id="megamenu-mlid-744" class="megamenu-slot megamenu-slot-7 even half-1 leaf-7 "><h3 class="megamenu-slot-title"><a href="https://www.charitiesnys.com/pfcmap/index.jsp">Pennies for Charity</a></h3></li>
+<li id="megamenu-mlid-951" class="megamenu-slot megamenu-slot-8 odd half-2 leaf-8 "><h3 class="megamenu-slot-title"><a href="https://nyopengovernment.com/NYOG/index.jsp">NY Open Government</a></h3></li>
+<li id="megamenu-mlid-946" class="megamenu-slot megamenu-slot-9 even half-2 leaf-9 "><h3 class="megamenu-slot-title"><a href="/free-educational-programs-0">Free Educational Programs</a></h3></li>
+<li id="megamenu-mlid-6274" class="megamenu-slot megamenu-slot-10 odd half-2 leaf-10 "><h3 class="megamenu-slot-title"><a href="/animals">Animal Protection</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-6283" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first"><a href="/animals">Animal Protection Initiative Home</a></li>
+<li id="megamenu-mlid-6275" class="megamenu-item megamenu-item-1 even half-1 leaf-1 "><a href="/prevention-cruelty-animals-and-%E2%80%9Cgateway-crime%E2%80%9D">Prevention of Cruelty to Animals and “Gateway Crime”</a></li>
+<li id="megamenu-mlid-6276" class="megamenu-item megamenu-item-2 odd half-1 leaf-2 "><a href="/protection-consumers-unscrupulous-pet-sellers">Protection of Consumers from Unscrupulous Pet Sellers</a></li>
+<li id="megamenu-mlid-6277" class="megamenu-item megamenu-item-3 even half-1 leaf-3 "><a href="/reporting-animal-cruelty">Reporting Animal Cruelty</a></li>
+<li id="megamenu-mlid-6278" class="megamenu-item megamenu-item-4 odd half-2 leaf-4 "><a href="/redirect">Bureau of Consumer Frauds &amp; Protection</a></li>
+<li id="megamenu-mlid-6281" class="megamenu-item megamenu-item-5 even half-2 leaf-5 "><a href="/consumer-frauds/pet-lemon-law">Pet Lemon Law</a></li>
+<li id="megamenu-mlid-6800" class="megamenu-item megamenu-item-6 odd half-2 leaf-6 last  last"><a href="//ag.ny.gov/sites/default/files/pdfs/features/animals/API_poster.pdf">Report Tips or File Complaint</a></li>
+</ul></li>
+<li id="megamenu-mlid-6273" class="megamenu-slot megamenu-slot-11 even half-2 leaf-11 "><h3 class="megamenu-slot-title"><a href="http://www.aghomehelp.com/">Help For Homeowners</a></h3></li>
+<li id="megamenu-mlid-6264" class="megamenu-slot megamenu-slot-12 odd half-2 leaf-12 "><h3 class="megamenu-slot-title"><a href="/feature/human-trafficking">Human Trafficking</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-6265" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first"><a href="/ht/faqs">FAQs</a></li>
+<li id="megamenu-mlid-6266" class="megamenu-item megamenu-item-1 even half-1 leaf-1 "><a href="/ht/identifying-human-trafficking">Identifying Human Trafficking</a></li>
+<li id="megamenu-mlid-6267" class="megamenu-item megamenu-item-2 odd half-1 leaf-2 "><a href="/ht/legal-statutes">Legal Statutes</a></li>
+<li id="megamenu-mlid-6268" class="megamenu-item megamenu-item-3 even half-2 leaf-3 "><a href="/ht/fighting-human-trafficking-new-york-state">New York State Task Force</a></li>
+<li id="megamenu-mlid-6269" class="megamenu-item megamenu-item-4 odd half-2 leaf-4 "><a href="/ht/reporting-human-trafficking">Reporting Human Trafficking</a></li>
+<li id="megamenu-mlid-6270" class="megamenu-item megamenu-item-5 even half-2 leaf-5 last  last"><a href="/social-service-providers">Social Service Providers</a></li>
+</ul></li>
+<li id="megamenu-mlid-6286" class="megamenu-slot megamenu-slot-13 even half-2 leaf-13 "><h3 class="megamenu-slot-title"><a href="/feature/secure-our-smartphones-sos">Secure Our Smartphone (S.O.S.)</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-6287" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first"><a href="/sos/secure-our-smartphones-initiative-statement">Secure Our Smartphones Initiative Statement</a></li>
+<li id="megamenu-mlid-6288" class="megamenu-item megamenu-item-1 even half-1 leaf-1 "><a href="/sos/initiative-members">Secure Our Smartphones Initiative Members</a></li>
+<li id="megamenu-mlid-6289" class="megamenu-item megamenu-item-2 odd half-1 leaf-2 "><a href="//ag.ny.gov/sites/default/files/pdfs/features/sos/SOS-Letters.pdf">Letters to the Smartphone Industry</a></li>
+<li id="megamenu-mlid-6290" class="megamenu-item megamenu-item-3 even half-2 leaf-3 "><a href="/sos/rise-apple-picking-nationwide">The Rise of Apple Picking Nationwide</a></li>
+<li id="megamenu-mlid-6291" class="megamenu-item megamenu-item-4 odd half-2 leaf-4 last  last"><a href="/sos/rise-apple-picking-new-york-city-san-francisco">The Rise in Apple Picking in New York City &amp; San Francisco</a></li>
+</ul></li>
+<li id="megamenu-mlid-6294" class="megamenu-slot megamenu-slot-14 odd half-2 leaf-14 "><h3 class="megamenu-slot-title"><a href="/feature/land-bank-community-revitalization-initiative-land-bank-cri">Land Bank Community Revitalization</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-8206" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first"><a href="//ag.ny.gov/sites/default/files/oag_land_bank_report.pdf">Land Bank Report</a></li>
+<li id="megamenu-mlid-8207" class="megamenu-item megamenu-item-1 even half-2 leaf-1 last  last"><a href="/press-release/ag-schneiderman-announces-20-million-new-funding-land-banks-support-communities">Land Bank RFA Press Release</a></li>
+</ul></li>
+<li id="megamenu-mlid-10310" class="megamenu-slot megamenu-slot-15 even half-2 leaf-15 last  last"><h3 class="megamenu-slot-title"><a href="/feature/volkswagen-emissions-investigation">Volkswagen Emissions Investigation</a></h3></li>
+</ul></li>
+<li id="megamenu-mlid-596" class="megamenu-parent megamenu-parent-5 even half-2 leaf-5 menu-596 "><h2 class="megamenu-parent-title"><a href="/contact-attorney-general">Contact Us</a></h2><ul class="megamenu-bin megamenu-slots-columnar"><li id="megamenu-mlid-11152" class="megamenu-slot megamenu-slot-0 odd half-1 leaf-0 first  first"><h3 class="megamenu-slot-title"><a href="/accessibility-policy">Accessibility Policy</a></h3><ul class="megamenu-items "><li id="megamenu-mlid-11153" class="megamenu-item megamenu-item-0 odd half-1 leaf-0 first  first last"><a href="/notice-under-americans-disabilities-act">Notice Under the Americans With Disabilities Act</a></li>
+</ul></li>
+<li id="megamenu-mlid-1404" class="megamenu-slot megamenu-slot-1 even half-1 leaf-1 "><h3 class="megamenu-slot-title"><a href="/disclaimer">Disclaimer</a></h3></li>
+<li id="megamenu-mlid-1415" class="megamenu-slot megamenu-slot-2 odd half-2 leaf-2 last  last"><h3 class="megamenu-slot-title"><a href="/privacy-policy">Privacy Policy</a></h3></li>
+</ul></li>
+<li id="megamenu-mlid-3152" class="megamenu-parent megamenu-parent-6 odd half-2 leaf-6 last menu-3152  last"><h2 class="megamenu-parent-title"><a href="/search-nys-oag">Search</a></h2></li>
+</ul>  </div>
+</div>
+  </div>
+</div>
+        
+     
+ 
+    <div id="navigation"><div class="section">
+
+
+
+
+                </div></div> <!-- /.section, /#navigation -->
+  
+
+
+  
+  
+  <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
+ 
+    <div id="breadcrumb">
+                    <h2 class="element-invisible">You are here</h2><div class="breadcrumb"><a href="/">Home</a> » <a href="/bureaus" title="">Divisions</a> » <a href="/bureaus" title="">Solicitor General</a> » <a href="/bureau/appeals-opinions-division" title="">Appeals and Opinions Division</a> » <a href="/appeals-opinions/legal-documents">Legal Documents</a> » <a href="/appeals-opinions/legal-documents" title="">Opinions</a></div> 
+          </div>
+
+    <div id="content" class="column"><div class="section">
+      <a id="main-content"></a>
+      
+                    <div class="tabs">
+                  </div>
+      
+
+
+            
+           
+        <h1 class="title" id="page-title">
+          Appeals &amp; Opinions - Numerical Index        </h1>
+      
+
+
+                  
+  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div class="view view-appeals-and-opinions view-id-appeals_and_opinions view-display-id-page_1 view-dom-id-468364f77ae08f2587caf5d5ea45f411">
+            <div class="view-header">
+      <!--<div class="alphanavigation">
+<a href="#1995">1995</a> | <a href="#1996">1996</a> | <a href="#1997">1997</a> | <a href="#1998">1998</a> | <a href="#1999">1999</a> | <a href="#2000">2000</a> | <a href="#2001">2001</a> | <a href="#2002">2002</a> | <a href="#2003">2003</a> | <a href="#2004">2004</a> | <a href="#2005">2005</a> | <a href="#2006">2006</a> | <a href="#2007">2007</a> | <a href="#2008">2008</a> | <a href="#2009">2009</a> | <a href="#2010">2010</a>| <a href="#2011">2011</a>| <a href="#2012">2012</a> | <a href="#2013">2013</a>  | <a href="#2014">2014</a>  | <a href="#2015">2015</a> | <a href="#2016">2016</a>
+
+</div>
+-->    </div>
+  
+      <div class="view-filters">
+      <form class="ctools-auto-submit-full-form" action="/appeals-and-opinions/numerical-index" method="get" id="views-exposed-form-appeals-and-opinions-page-1" accept-charset="UTF-8"><div><div class="views-exposed-form">
+  <div class="views-exposed-widgets clearfix">
+          <div id="edit-field-opinion-year-value-wrapper" class="views-exposed-widget views-widget-filter-field_opinion_year_value">
+                  <label for="edit-field-opinion-year-value">
+            Year          </label>
+                        <div class="views-widget">
+          <div class="form-item form-type-select form-item-field-opinion-year-value">
+ <div class="bef-select-as-links"><div class="form-item">
+ <div id="edit-field-opinion-year-value-2016" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-2016">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=2016">2016</a>
+</div>
+<div id="edit-field-opinion-year-value-2015" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-2015">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=2015">2015</a>
+</div>
+<div id="edit-field-opinion-year-value-2014" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-2014">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=2014">2014</a>
+</div>
+<div id="edit-field-opinion-year-value-2013" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-2013">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=2013">2013</a>
+</div>
+<div id="edit-field-opinion-year-value-2012" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-2012">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=2012">2012</a>
+</div>
+<div id="edit-field-opinion-year-value-2011" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-2011">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=2011">2011</a>
+</div>
+<div id="edit-field-opinion-year-value-2010" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-2010">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=2010">2010</a>
+</div>
+<div id="edit-field-opinion-year-value-2009" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-2009">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=2009">2009</a>
+</div>
+<div id="edit-field-opinion-year-value-2008" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-2008">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=2008">2008</a>
+</div>
+<div id="edit-field-opinion-year-value-2007" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-2007">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=2007">2007</a>
+</div>
+<div id="edit-field-opinion-year-value-2006" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-2006">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=2006">2006</a>
+</div>
+<div id="edit-field-opinion-year-value-2005" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-2005">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=2005">2005</a>
+</div>
+<div id="edit-field-opinion-year-value-2004" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-2004">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=2004">2004</a>
+</div>
+<div id="edit-field-opinion-year-value-2003" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-2003">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=2003">2003</a>
+</div>
+<div id="edit-field-opinion-year-value-2002" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-2002">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=2002">2002</a>
+</div>
+<div id="edit-field-opinion-year-value-2001" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-2001">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=2001">2001</a>
+</div>
+<div id="edit-field-opinion-year-value-2000" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-2000">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=2000">2000</a>
+</div>
+<div id="edit-field-opinion-year-value-1999" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-1999">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=1999">1999</a>
+</div>
+<div id="edit-field-opinion-year-value-1998" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-1998">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=1998">1998</a>
+</div>
+<div id="edit-field-opinion-year-value-1997" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-1997">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=1997">1997</a>
+</div>
+<div id="edit-field-opinion-year-value-1996" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-1996">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=1996">1996</a>
+</div>
+<div id="edit-field-opinion-year-value-1995" class="form-item form-type-bef-link form-item-edit-field-opinion-year-value-1995">
+ <a href="https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=1995" class="active">1995</a>
+</div>
+
+</div>
+<select style="display: none;" id="edit-field-opinion-year-value" name="field_opinion_year_value" class="form-select required"><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995" selected="selected">1995</option></select><input type="hidden" class="bef-new-value" name="field_opinion_year_value" value="1995" /></div>
+</div>
+        </div>
+              </div>
+                    <div class="views-exposed-widget views-submit-button">
+      <input class="ctools-use-ajax ctools-auto-submit-click js-hide element-hidden form-submit" type="submit" id="edit-submit-appeals-and-opinions" name="" value="Apply" />    </div>
+      </div>
+</div>
+</div></form>    </div>
+  
+  
+      <div class="view-content">
+      <table class="views-table cols-4" >
+        <caption><a name="1995">1995</a></caption>
+        <thead>
+      <tr>
+                  <th class="views-field views-field-title"  scope="col">
+            <a href="/appeals-and-opinions/numerical-index?field_opinion_year_value=1995&amp;order=title&amp;sort=asc" title="sort by Opinion Summary" class="active">Opinion Summary</a>          </th>
+                  <th class="views-field views-field-field-opinion-abstract"  scope="col">
+            <a href="/appeals-and-opinions/numerical-index?field_opinion_year_value=1995&amp;order=field_opinion_abstract&amp;sort=asc" title="sort by Abstract" class="active">Abstract</a>          </th>
+                  <th class="views-field views-field-field-opinion-related-statutes"  scope="col">
+            <a href="/appeals-and-opinions/numerical-index?field_opinion_year_value=1995&amp;order=field_opinion_related_statutes&amp;sort=asc" title="sort by Related Statues" class="active">Related Statues</a>          </th>
+                  <th class="views-field views-field-field-opinion-file"  scope="col">
+            <a href="/appeals-and-opinions/numerical-index?field_opinion_year_value=1995&amp;order=field_opinion_file&amp;sort=asc" title="sort by " class="active"></a>          </th>
+              </tr>
+    </thead>
+    <tbody>
+          <tr class="odd views-row-first">
+                  <td class="views-field views-field-title" >
+            1995-01          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A county may provide for the reversion of a bridge, which is part of the county road system, to a town in accordance with the procedures set forth in Highway Law §§ 115-b and 115-c.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            HIGHWAY LAW §§ 115, 115-b, 115-c, 130, 234          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-1%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-02          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A member of a local planning board who has stated that he or she has a conflict of interests concerning a particular matter before the board must absent himself from the board during the time that the matter is before it.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+                      </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-2%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-03          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The town highway superintendent is unauthorized to designate a town road as a seasonal limited use highway if, as a factual matter, at least one occupied residence or commercial building depends upon the highway for access.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            HIGHWAY LAW § 205-a          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-3%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-04          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The members of the Town of Mendon&#039;s conservation board need not reside within the town since the board is strictly advisory in nature.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            PUBLIC OFFICERS LAW § 3          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-4%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-05          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A town by local law may establish the State of New York as the residency required for an appointive town officer.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            NY CONST, ART IX, § 2(c)(1); MUNICIPAL HOME RULE LAW §§ 2(5), 10(1)(ii)(a)(1), 22(1); PUBLIC OFFICERS LAW §§ 3(1), 3(24), 30(1)(d)          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-5%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-06          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            Under section 18 of the Public Officers Law and the town code, a town is authorized to provide defense to one of its employees if the complaint alleges behavior within the scope of the employee&#039;s duties or upon a factual determination that this is the case by the town board.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            PUBLIC OFFICERS LAW §§ 17, 18; TOWN LAW § 65          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-6%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-07          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            It is a conflict of interests for an assessor to represent in his or her private capacity a taxpayer in another town where that taxpayer also owns property within the assessor&#039;s jurisdiction.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            GENERAL MUNICIPAL LAW § 806(1)          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-7%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-08          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A proposed amendment to the city charter that transfers powers of a member of the city commission to be chairperson and mayor is subject to a mandatory referendum.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            MUNICIPAL HOME RULE LAW § 23          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-8%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-09          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A person may serve simultaneously as a member of the zoning board of appeals and member of the board of assessment review of a town.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            REAL PROPERTY TAX LAW §§ 523(1), 525; TOWN LAW § 267          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-9%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-10          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A discussion of conflicts of interests under various scenarios involving school staff members&#039; receipt of gratuities in acting as chaperones for student trips.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            GENERAL MUNICIPAL LAW § 805-a          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-10%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-11          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A county board of supervisors in a non-charter county may by local law establish the position of county administrator.  Further, if the local law does not transfer, curtail or abolish the powers of an elective officer, it would not be subject to a mandatory referendum. In that the Municipal Home Rule Law, rather than the Alternative County Government Law, is the source of authority for the enactment, the latter would not require a referendum.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            NY CONSTITUTION, ART IX § 2(h); NY CONSTITUTION, ART III § 26
+(1935); ALTERNATIVE COUNTY GOVERNMENT LAW § 656(2); MUNICIPAL
+HOME RULE LAW §§ 10, 10(1)(ii)(a)(1), 10(1)(ii)(b)(3) AND (4),
+23(2)(f), 33(1) AND (2); L 1952, CH 834; L 1937, CH 862          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-11%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-12          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The positions of member of the city council and city
+firefighter are incompatible.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+                      </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-12%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-13          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The appointment by the mayor of the City of Schenectady of members of the planning commission, subject to confirmation by the city council, is not inconsistent with provisions of State law.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            GENERAL CITY LAW § 27; GENERAL MUNICIPAL LAW § 234; MUNICIPAL HOME RULE LAW § 11(2)(a)          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-13%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-14          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A member of a town planning board may not be compensated or enter into an agreement to be compensated for the preparation of test borings, date from which would be incorporated into subdivision maps and site plans to be presented to the planning board for review. The statutory prohibition does not allow recusal as an appropriate remedy.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            GENERAL MUNICIPAL LAW § 805-A(1)(c)          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-14%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-15          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The county may not &quot;opt out&quot; of code enforcement with respect to IDA property. The county may &quot;opt out&quot; of enforcement with respect to all county property or may make agreements with local governments allocating enforcement responsibility.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            EXECUTIVE LAW § 381; 19 NYCRR §§ 441.2, 441.3          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-15%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-16          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A charter county may not set up a plan for the representation of indigent defendants which is inconsistent with the options provided by section 722(1-4) of the County Law. In order to establish such a plan for Sullivan County, an act of the State Legislature would be required.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            COUNTY LAW, ART 18-B, §§ 2(b), 722; L 1965, CH 878          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-16%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-17          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            Members of a private industry council, except for those serving in a governmental capacity, are not required to file financial disclosure forms under Article 18 of the General Municipal Law.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            GENERAL MUNICIPAL LAW §§ 810, 811; PUBLIC OFFICERS LAW § 18; 29 USC § 1511(a)(1); 29 USC § 1512(a), (c), (d), (e), (g); 29 USC § 1513(a), (b), (d), (e)          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-17%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-18          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The city manager of the City of Watertown, as the chief executive officer of the city, has the authority to make appointments to the city housing authority.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            PUBLIC HOUSING LAW §§ 3(6), 30(2); 9 NYCRR § 1601.1; L 1914, Ch 444, Art V, §§ 90, 91          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-18%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-19          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            Members of Troy Municipal Housing Authority are required to reside in the City of Troy.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            PUBLIC HOUSING LAW § 31; PUBLIC OFFICERS LAW, §§ 3, 30; L 1975, CH 347          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-19%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-20          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A city may provide by local law for a seven-member zoning board of appeals.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            GENERAL CITY LAW §§ 81, 81-e          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-20%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-21          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The positions of village code enforcement officer and village planning board member are compatible.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            VILLAGE LAW § 7-725-a(2)          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-21%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-22          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            There is no incompatibility between serving on the planning board and holding a position of employment providing computer services in the town. While a town might enact a local law prohibiting the simultaneous holding of various positions, a finding should first be made that the enactment is in the public interest.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            MUNICIPAL HOME RULE LAW § 10(1)(i) and (1)(ii)(a)(1); TOWN LAW §§ 267(3), 271(3), 272-a, 274, 274-a, 276          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-22%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-23          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The position of fire marshall may be created by local law.  Upon creation of that office, the fire marshall&#039;s vehicle would be categorized as a fire vehicle under section 115-a of the Vehicle and Traffic Law.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            CRIMINAL PROCEDURE LAW § 2.10; MUNICIPAL HOME RULE LAW §§ 10(1)(ii)(a)(1), 10(1)(ii)(a)(12), 33(3)(b); VEHICLE AND TRAFFIC LAW § 115-a          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-23%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-24          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A commissioner of the Eastchester Fire District does not have a conflict of interests as a result of his private employment as a firefighter where he is a member of the same national union as the paid firefighters with whom he must negotiate contracts on behalf of the fire district.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            TOWN LAW § 174(2), (3)          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-24%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-25          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A sheriff executing a warrant issued in a summary proceeding pursuant to section 749(1) of the Real Property Actions and Proceedings Law must effect the removal of the personal property of the person to
+be evicted or dispossessed unless the successful petitioner relieves the sheriff of the duty to do so.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            REAL PROPERTY ACTIONS AND PROCEEDINGS LAW Article 7, §§ 701, 711, 749(1); CIVIL PRACTICE CODE (1920); CODE OF CIVIL PROCEDURE (1876) § 2251; NEW YORK CITY CIVIL COURT ACT §§ 1609, 1612; 22 NYCRR § 635.9(4)(b)          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-25%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-26          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            It is not necessary that an appointment by the mayor to fill the unexpired term of the superintendent of public works be approved by the board of trustees.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            VILLAGE LAW §§ 3-301(3), 3-312(3)          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-26%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-27          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The posting of the results of disciplinary matters on a department bulletin board located in an area where department personnel have access to them but the public does not are not the sort of disclosure prohibited by Civil Rights Law § 50-a.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            CIVIL RIGHTS LAW § 50-a          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-27%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-28          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            &quot;Emergency ambulance service vehicle&quot;, as defined by section 115-c of the Vehicle and Traffic Law, includes an appropriately equipped privately-owned vehicle operated by an agent of an ambulance service and used in transporting emergency medical personnel and equipment to sick or injured persons.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            PUBLIC HEALTH LAW § 3001(2) and (3); VEHICLE AND TRAFFIC LAW §§ 101, 115-c, 375(26) and (41)(2); L 1981, CH 142          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-28%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-29          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A local government is authorized to enact a local law limiting the number of consecutive terms that an elected officer may serve. Such a local law is not subject to a referendum.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            NY CONST, ART I, § 1; MUNICIPAL HOME RULE LAW §§ 10(1)(i) and (ii)(a)(1), 23(2)(d), (e) and (f), 37          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-29%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-30          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The person elected in November 1995 to fill the vacancy in the office of district attorney of Rockland County will serve for a full four year term.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            NY CONST, ART XIII §§ 3, 13(a); COUNTY LAW § 400(1-a), (7); PUBLIC OFFICERS LAW § 42(1); L 1992 CH 254; L 1976, CH 763; L 1975 CH 149          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-30%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-31          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The width of a town highway by use, established in accordance with Highway Law § 189, is determined by the extent of actual use.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            HIGHWAY LAW § 189; L 1909, CH 30          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-31%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-32          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The receipt of a tuition waiver or stipend by a school district employee in return for assisting a college student in meeting his or her student teaching requirement does not violate section 805-a of the General Municipal Law.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            GENERAL MUNICIPAL LAW § 805-a          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-32%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-33          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The positions of county coroner and village trustee are compatible.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            COUNTY LAW §§ 400, 411, 671, 673(1), 674(1), VILLAGE LAW § 3-301          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-33%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-34          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            One person should not hold simultaneously the positions of village trustee and village building and bingo inspector.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            MUNICIPAL HOME RULE § 10(1)(ii)(e)(3); VILLAGE LAW § 3-300(3)          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-34%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-35          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A person may not serve simultaneously as a member of the
+board of supervisors and as the social welfare examiner of
+Columbia County.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+                      </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-35%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-36          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The mayor may appoint a single member of the board of trustees to be commissioner of the village police department.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            CIVIL SERVICE LAW § 58(1-c); VILLAGE LAW §§ 3-300(3), 3-301(3), 3-308(3), 4-400(e)          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-36%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-37          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            An agreement between an officeholder and a county to establish a term different from the term fixed in the county charter has no legal effect.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            MUNICIPAL HOME RULE LAW, Article 4, § 32(2)          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-37%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-38          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            There is nothing legally objectionable to the sale of advertising space on Kingston&#039;s bus system, as it is a business activity directly related to the legitimate public function of operating Kingston&#039;s transit system.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            NY CONST ART IX § 2(c)(7); GENERAL MUNICIPAL LAW § 199-r(1)(d); MUNICIPAL HOME RULE LAW § 10(1)(ii)(a)(7)          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-38%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-39          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The Town of Putnam Valley may appoint harbor masters to enforce the Navigation Law on Lake Oscawana, provided that the lake meets the definition of navigable waters contained in Navigation Law § 2(4). Town harbor masters, as peace officers, may enforce those provisions of the Environmental Conservation Law which are consistent with their specific duties when authorized or required to do so by their employers.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            CRIMINAL PROCEDURE LAW § 2.10(19); NAVIGATION LAW §§ 2(4), 30, 79-a, 79-b; 9 NYCRR §§ 446.21 - 446.25; L 1965, CH 168          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-39%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-40          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The building inspector of the Village of Depew is a public officer and, therefore, must reside within the village. The board of trustees may, however, enact a resolution to authorize the building inspector to reside anywhere in the county within which the village is wholly or partially located.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            CIVIL SERVICE LAW § 42(1); PUBLIC OFFICERS LAW § 3; VILLAGE LAW §§ 3-300, 3-301          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-40%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-41          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            Membership on the county legislature is incompatible with simultaneous service on the Professional Advisory Committee or the Utilization Review Committee. Also, once elected to the legislature, this individual may not continue to serve as the farm bureau representative on the board of the soil and water conservation district.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            SOIL AND WATER CONSERVATION DISTRICTS LAW § 6(1)          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-41%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-42          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A property owner may utilize section 18-1804 of the Village Law to exclude his property from village boundaries only if he does not receive specified village services and improvements.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            VILLAGE LAW § 18-1804; L 1929 CH 662; L 1921 CH 275; L 1903 CH 606          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-42%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-43          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The Village and Town Laws do not permit an arrangement whereby the Town of Alden would provide law enforcement only to the Village of Alden and not to the area of the town outside the village. Other
+alternatives exist for the provision of law enforcement to the village.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            COUNTY LAW § 650; EXECUTIVE LAW § 226(1); GENERAL MUNICIPAL LAW ART 5-G §§ 119-m, 119-n, 119-o, 121-a; TOWN LAW § 150(1); VILLAGE LAW § 8-800          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-43%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-44          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            State Finance Law § 165 was intended to prohibit the purchase of only those species of tropical hardwoods listed in the statute. We also conclude that the exemption for products from &quot;a sustained, managed forest&quot; is not defined in the statute.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            CONSOLIDATED LAWS OF NEW YORK, BOOK 1, § 98; STATE FINANCE LAW § 165; L 1991 CH 663          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-44%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-45          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The county clerk may accept for filing a certificate that indicates a person is doing business under an assumed name that appears to be the name of a person, when the certificate describes the secondary, historic or geographic meaning or connotation of the assumed name. The clerk may not require that such a certificate be filed in other counties before it is accepted for filing in the clerk&#039;s county.
+
+The exemption set forth in CPLR § 8017 applies only to the county served by the clerk with whom papers are to be filed.
+
+The county clerk may correct an obvious clerical error and remove erroneously recorded documents from the record, taking whatever steps are deemed necessary to avoid confusion as a result of the removal.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            CPLR § 8017; GENERAL BUSINESS LAW § 130          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-45%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-46          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A local law which would prohibit the award of municipal contracts to persons who have made political contributions to town officials or candidates for town office is preempted by State law.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            NY CONST ART IX § 2(c); ELECTION LAW § 14-114; GENERAL MUNICIPAL LAW § 806; MUNICIPAL HOME RULE LAW § 10; 9 NYCRR Part 6200; L 1974, CH 604          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-46%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-47          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The county may enter a mutual aid agreement with a county from another state pursuant to General Municipal Law Article 14-G, which permits interlocal agreements in specified circumstances.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            GENERAL MUNICIPAL LAW §§ 209, 209-a, 461(1), 462(2), 463, 466, 469          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-47%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-48          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A municipality is unauthorized to establish a term for an office in the competitive class of the civil service. This principle applies to a chief of police serving as the executive head of a municipality&#039;s police department, so long as that position is classified competitive.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            CIVIL SERVICE LAW §§ 75, 76(4); UNCONSOLIDATED LAWS § 5711-q          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-48%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-49          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            Each sewage-works corporation must petition for a sewer rate that is directly related to the cost of operating and maintaining its own sewer system for its own users in its approved area of operation.  There is no authority for the municipal approval of a combined sewer rate or increase for two sewageworks corporations, regardless of the revenue needs or circumstances of either corporation.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            COUNTY LAW ART 5-A; GENERAL MUNICIPAL LAW § 450, et seq. ; TOWN LAW ART 12, 12-A; TRANSPORTATION CORPORATIONS LAW, ART 10, §§ 115(1) and (4), 116(1), 117, 118(1)(a), 119(4), 122(1); L 1960 CH 1067          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-49%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-50          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A town board may reduce the term of its supervisor from four to two years by local law subject to mandatory referendum.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            MUNICIPAL HOME RULE LAW §§ 10(1)(ii)(a)(1) and (d)(3), 23(2)(e); TOWN LAW § 24-a          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-50%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-51          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A person may not hold simultaneously the positions of mayor of a village and supervisor of a town.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            HIGHWAY LAW §§ 141, 277; TOWN LAW § 60; VILLAGE LAW § 4-400(1)(a)          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-51%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-52          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The proposed uses of land, acquired under the Park and Recreation Land Acquisition Program of 1960 as a municipal park, are prohibited by Parks, Recreation and Historic Preservation Law § 15.09 in the absence of express authorization by the State Legislature.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            PARKS, RECREATION AND HISTORIC PRESERVATION LAW §§ 15.01, 15.09, 15.11          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-52%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-53          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The provisions of the Criminal Procedure Law, including section 420.10, are applicable to fines imposed under General Municipal Law § 136 and under the New York State Uniform Fire Prevention and Building Code.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            COUNTY LAW § 700(1); CRIMINAL PROCEDURE LAW §§ 1.20(18), 420.10;
+GENERAL MUNICIPAL LAW § 136; VEHICLE AND TRAFFIC LAW § 155          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-53%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-54          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A county may dedicate land as a Korean War Veteran Memorial Park. The park land will be held in public trust and may not be diverted to other uses or conveyed without authorization by the State Legislature.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            MUNICIPAL HOME RULE LAW § 10(1)(i) and (ii)(a)(6)          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-54%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-55          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            Subject to mandatory referendum, the village board of trustees may enact a local law transferring the authority to discipline police officers from the board of trustees to the village manager.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            CIVIL SERVICE LAW § 85(2); MUNICIPAL HOME RULE LAW §§ 10(1)(ii)(a) and (e)(3), 23(2)(f); VILLAGE LAW §§ 3-308, 8-804          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-55%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-56          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            Amendments to section 20 of the Town Law granting to town justices the authority to consent to the appointment and discharge of the court clerk were not intended to limit the town board to the appointment of only one clerk.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            CIVIL SERVICE LAW § 41(1)(d); TOWN LAW § 20; UNIFORM JUSTICE COURT ACT § 109; L 1990 CH 252          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-56%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-57          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            An automobile supplies and parts store may not make a car door opener available to the general public.  Violations should be prosecuted by the district attorney.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            GENERAL BUSINESS LAW § 396-j; L 1968 CH 852          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-57%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-58          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A village which had the office of chief of police as of August 2, 1985, whether or not the position was filled, must retain the office so long as it continues to have a police department.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            VILLAGE LAW § 8-800; L 1985, CH 810, § 2          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/I%2095-58%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-F1          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            Compromise or settlement by the Crime Victims Board of the amount of lien which attaches to a recovery, pursuant to Executive Law § 634(2), may or may not constitute a waiver of lien which attaches to a subsequent recovery or waiver of subrogation rights, set forth in Executive Law § 634(1)(a). The intent of the parties as evidenced by the record of proceedings governs.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            EXECUTIVE LAW §§ 620, 623, 624, 634(1) and (2); WORKERS&#039; COMPENSATION LAW §§ 29; L 1982, CH 513; L 1985 CH 688          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/95-F1%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-F2          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The Board may suspend or revoke the license of a Hudson River pilot for piloting actions he took while he was not acting under the auspices of his Hudson River pilot license.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            NAVIGATION LAW §§ 90, 91, 91-a, 91-b, 92; 21 NYCRR 50.5, 52.3(a),
+52.5, 52.10; 46 USC §§ 8501, 8502, 9302          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/95-F2%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-F3          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The New York State Department of Environmental Conservation may not undertake a promotional sweepstakes to promote subscriptions to &quot;The Conservationist&quot; absent express statutory authority to do so.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            NY CONST, ART I, § 9; ENVIRONMENTAL CONSERVATION LAW §§ 3-0113,  3-0301; GENERAL BUSINESS LAW § 369-e(1); L 1993, CH 57, § 78          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/95-F3%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-F4          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            A person appointed to the position of Chairman of the Employment Relations Board may take an unpaid leave of absence from the law firm of which he is a partner.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            LABOR LAW § 702(4); L 1937, CH 443          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/95-F4%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-F5          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            Workers&#039; Compensation Law § 125 applies to State agencies and law enforcement entities. The statute makes it unlawful for employers to inquire into or consider, for the purposes of assessing fitness for employment, whether a job applicant has filed for or received workers&#039; compensation benefits. It also prohibits discrimination against job applicants based on their claim history.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            WORKERS&#039; COMPENSATION LAW § 125; L 1991, CH 308          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/95-F5%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-F6          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            The Commissioner of Agriculture and Markets is authorized by statute to delegate his responsibilities on the board of directors of the New York State Thoroughbred Breeding and Development Fund Corporation to a deputy commissioner.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            AGRICULTURE AND MARKETS LAW § 17(a) and (c); RACING, PARI-MUTUEL
+WAGERING AND BREEDING LAW § 245.1          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/95-F6%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            1995-F7          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            Prescriptions written by residents and interns in the hospital where they are employed, while they are practicing under the supervision of a licensed physician, may be filled at any licensed pharmacy.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            EDUCATION LAW §§ 6501(4), 6521, 6522, 6801, 6803, 6805, 6810, 6902; 8 NYCRR Parts 60, 63, § 60.8; 10 NYCRR 405.4(f)(2)          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/95-F7%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            1995-F8          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            As amended by L 1995 ch 645, section 307(3)(a)&#039;s indexing requirements are now expanded to include those final determinations that arise out of a statute specifically providing affected parties with an opportunity to be heard.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            STATE ADMINISTRATIVE PROCEDURE ACT, ART 3, § 307; L 1995 CH 645; L 1985 CH 469          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/95-F8%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+          <tr class="odd views-row-last">
+                  <td class="views-field views-field-title" >
+            1995-F9          </td>
+                  <td class="views-field views-field-field-opinion-abstract" >
+            While CUNY has not been designated as a participating agency, and is not required to conduct registration activities beyond the distribution of voter registration forms specifically mandated in the first paragraph of Election Law § 5-211, CUNY is not prohibited from implementing a more comprehensive voter registration program, including providing assistance in completion of forms and collecting and transmitting completed forms to the Board of Elections.          </td>
+                  <td class="views-field views-field-field-opinion-related-statutes" >
+            NY CONST ART II, § 8; ELECTION LAW § 5-211; 42 USC § 1973gg-5          </td>
+                  <td class="views-field views-field-field-opinion-file" >
+            <a href="https://ag.ny.gov/sites/default/files/opinion/95-F9%20pw.pdf" target="_blank">PDF <img src="/sites/default/files/images/pdficon.gif" alt="PDF-ICON"></a>          </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+  </div>
+
+            
+    </div></div> <!-- /.section, /#content -->
+
+  </div><!-- /#main -->
+  
+  
+         <div id="right-rail">
+       <div id="sidebar-second" class="column sidebar"><div class="section">
+          <div id-not-used="right-rail">
+    <div class="region region-sidebar-second">
+      <div id="block-menu-block-1" class="block block-menu-block">
+
+    <h2>Opinions</h2>
+  
+  <div class="content">
+    <div class="menu-block-wrapper menu-block-1 menu-name-main-menu parent-mlid-0 menu-level-4">
+  <ul class="menu"><li class="first leaf active-trail active menu-mlid-2399"><a href="/appeals-and-opinions/numerical-index" title="" class="active-trail active">Numerical Index</a></li>
+<li class="leaf menu-mlid-2401"><a href="/appeals-and-opinions/subject-index" title="">Subject Index</a></li>
+<li class="last leaf menu-mlid-2400"><a href="/appeals-and-opinions/statute-index" title="">Statute Index</a></li>
+</ul></div>
+  </div>
+</div>
+    </div>
+  </div>
+          <div class="region region-sidebar-third">
+    <div id="block-block-21" class="block block-block">
+
+    
+  <div class="content">
+    <div id="cse" style="width: 100%;">Loading</div>
+<script src="//www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+google.load('search', '1', {language: 'en', style: google.loader.themes.V2_DEFAULT});
+google.setOnLoadCallback(function() {
+  var customSearchOptions = {};
+  var orderByOptions = {};
+  orderByOptions['keys'] = [{label: 'Relevance', key: ''} , {label: 'Date', key: 'date'}];
+  customSearchOptions['enableOrderBy'] = true;
+  customSearchOptions['orderByOptions'] = orderByOptions;
+  customSearchOptions['overlayResults'] = true;
+  var customSearchControl =   new google.search.CustomSearchControl('014238217302788171644:wsk0-q1o290', customSearchOptions);
+  customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+  var options = new google.search.DrawOptions();
+  customSearchControl.draw('cse', options);
+}, true);
+
+//--><!]]>
+</script><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+
+  .gsc-control-cse {
+    font-family: Arial, sans-serif;
+    border-color: #444444;
+    background-color: #27466F;
+  }
+  .gsc-control-cse .gsc-table-result {
+    font-family: Arial, sans-serif;
+  }
+  input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
+    border-color: #444444;
+  }
+  input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+    border-color: #FFFFFF;
+    background-color: #555555;
+    background-image: none;
+    filter: none;
+
+  }
+  .gsc-tabHeader.gsc-tabhInactive {
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+  }
+  .gsc-tabHeader.gsc-tabhActive {
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    border-bottom-color: #CCCCCC
+  }
+  .gsc-tabsArea {
+    border-color: #CCCCCC;
+  }
+  .gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
+    border-color: #FFFFFF;
+    background-color: #FFFFFF;
+  }
+  .gsc-webResult.gsc-result:hover, .gsc-imageResult:hover {
+    border-color: #FFFFFF;
+    background-color: #FFFFFF;
+  }
+  .gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:link b, .gs-imageResult a.gs-title:link, .gs-imageResult a.gs-title:link b  {
+    color: #1155CC;
+  }
+  .gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
+    color: #1155CC;
+  }
+  .gs-webResult.gs-result a.gs-title:hover, .gs-webResult.gs-result a.gs-title:hover b, .gs-imageResult a.gs-title:hover, .gs-imageResult a.gs-title:hover b {
+    color: #1155CC;
+  }
+  .gs-webResult.gs-result a.gs-title:active, .gs-webResult.gs-result a.gs-title:active b, .gs-imageResult a.gs-title:active, .gs-imageResult a.gs-title:active b {
+    color: #1155CC;
+  }
+  .gsc-cursor-page {
+    color: #1155CC;
+  }
+  a.gsc-trailing-more-results:link {
+    color: #1155CC;
+  }
+  .gs-webResult .gs-snippet, .gs-imageResult .gs-snippet, .gs-fileFormatType {
+    color: #333333;
+  }
+  .gs-webResult div.gs-visibleUrl, .gs-imageResult div.gs-visibleUrl {
+    color: #009933;
+  }
+  .gs-webResult div.gs-visibleUrl-short {
+    color: #009933;
+  }
+  .gs-webResult div.gs-visibleUrl-short  {
+    display: none;
+  }
+  .gs-webResult div.gs-visibleUrl-long {
+    display: block;
+  }
+  .gs-promotion div.gs-visibleUrl-short {
+    display: none;
+  }
+  .gs-promotion div.gs-visibleUrl-long  {
+    display: block;
+  }
+  .gsc-cursor-box {
+    border-color: #FFFFFF;
+  }
+  .gsc-results .gsc-cursor-box .gsc-cursor-page {
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #1155CC;
+  }
+  .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #1155CC;
+  }
+  .gsc-webResult.gsc-result.gsc-promotion {
+    border-color: #F6F6F6;
+    background-color: #F6F6F6;
+  }
+  .gsc-completion-title {
+    color: #1155CC;
+  }
+  .gsc-completion-snippet {
+    color: #333333;
+  }
+  .gs-promotion a.gs-title:link,.gs-promotion a.gs-title:link *,.gs-promotion .gs-snippet a:link  {
+    color: #1155CC;
+  }
+  .gs-promotion a.gs-title:visited,.gs-promotion a.gs-title:visited *,.gs-promotion .gs-snippet a:visited {
+    color: #1155CC;
+  }
+  .gs-promotion a.gs-title:hover,.gs-promotion a.gs-title:hover *,.gs-promotion .gs-snippet a:hover  {
+    color: #1155CC;
+  }
+  .gs-promotion a.gs-title:active,.gs-promotion a.gs-title:active *,.gs-promotion .gs-snippet a:active {
+    color: #1155CC;
+  }
+  .gs-promotion .gs-snippet, .gs-promotion .gs-title .gs-promotion-title-right, .gs-promotion .gs-title .gs-promotion-title-right * {
+    color: #333333;
+  }
+  .gs-promotion .gs-visibleUrl,.gs-promotion .gs-visibleUrl-short  {
+    color: #009933;
+  }
+  .gsc-input input.gsc-input {
+    background: none repeat scroll 0% 0% white !important;
+  }
+
+/*--><!]]>*/
+</style><br /><br />  </div>
+</div>
+  </div>
+       </div>
+     </div></div> <!-- /.section, /#sidebar-second -->
+      
+  
+  </div> <!-- /#main-wrapper -->
+
+
+<head>
+<style>
+.mylist {float: left;
+    font-family: Arial,sans-serif;
+    font-size: 1.083em;
+   
+    letter-spacing: 0;
+    list-style: none outside none;
+    margin: 0 10px 10px 0;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);color:#ffffff;}
+    
+    .region-footer .address-location {
+        color: #677B87;
+        font-family: Arial,sans-serif;
+        font-size: 0.917em;
+        padding: 15px 0 25px;
+        text-align: center;
+}
+</style>
+</head>
+
+</div><!--/wrap-inner-->
+</div><!--/wrap-->
+
+
+
+
+<!-- <center>
+<img src="/sites/default/files/images/site_map.png" alt="sitemap"  border="0" usemap="#footerMap" />
+<map name="footerMap" id="footerMap">
+
+<area  shape="rect" coords="10,45,133,87" href="/bureau/intergovernmental-affairs-bureau" alt="Intergov" />
+<area  shape="rect" coords="9,90,111,108" href="/bureau/foil" alt="foil" />
+<area  shape="rect" coords="8,112,120,128" href="/press-releases-for-year/2011" alt="PressOffice" />
+<area  shape="rect" coords="9,131,133,150" href="/tour-attorney-generals-office" alt="RegionalOffices" />
+<area  shape="rect" coords="10,151,133,169" href="/bureau/appeals-opinions-division" alt="SolicitorGeneral" />
+<area  shape="rect" coords="8,172,141,200" href="/bureau/appeals-opinions-division" alt="AppealsandOpinions" />
+<area  shape="rect" coords="167,45,323,76"  href="/bureau/criminal-enforcement-and-financial-crimes-bureau" alt="CrimPros" />
+<area  shape="rect" coords="164,78,317,109" href="/bureau/organized-crime-task-force" alt="OCTF" />
+<area  shape="rect" coords="164,115,323,145" href="/bureau/medicaid-fraud-control-unit" alt="MFCU" />
+<area  shape="rect" coords="162,147,323,167" href="/bureau/public-integrity-bureau" alt="PublicIntegrity" /><area shape="rect" coords="165,169,321,188" href="/bureau/investigations-division" alt="Investigations" />
+<area  shape="rect" coords="163,190,320,221" href="/bureau/taxpayer-protection-bureau" alt="TaxpayerProtection" />
+ <area shape="rect" coords="164,224,302,256" href="/bureau/conviction-review-bureau" alt="ConvictionBureau" />
+<area  shape="rect" coords="349,45,482,62" href="/bureau/antitrust-bureau" alt="Antitrust" />
+<area  shape="rect" coords="352,64,486,93"  href="/bureau/consumer-frauds-bureau" alt="ConsumerFrauds" />
+<area  shape="rect" coords="348,97,496,117" href="/bureau/internet-bureau" alt="Internet" />
+<area  shape="rect" coords="352,121,492,147"  href="/bureau/investor-protection-bureau" alt="InvestorProtection" /><area shape="rect" coords="355,155,493,186" href="/bureau/real-estate-finance-bureau" alt="RealEstateFinance" />
+<area  shape="rect" coords="515,44,650,62"  href="http://www.charitiesnys.com/home.jsp" alt="Charities" /><area shape="rect" coords="514,66,655,81" href="/bureau/civil-rights" alt="CivilRights" /><area shape="rect" coords="517,85,658,115"  href="/bureau/environmental-protection-bureau" alt="Environment" /><area shape="rect" coords="514,119,654,138" href="/bureau/health-care-bureau" alt="HealthCare" /><area shape="rect" coords="515,139,654,157" href="/bureau/labor-bureau" alt="Labor" /><area shape="rect" coords="516,159,657,191"  href="/bureau/tobacco-compliance-bureau" alt="Tobacco" /><area shape="rect" coords="674,43,825,62" href="/bureau/civil-recoveries-bureau" alt="CivilRecoveries" /><area shape="rect" coords="677,64,812,81"  href="/bureau/claims-bureau" alt="Claims" />
+<area  shape="rect" coords="674,82,815,101" href="/bureau/litigation-bureau" alt="Litigation" />
+<area  shape="rect" coords="677,105,818,122" href="/bureau/real-property-bureau" alt="RealProperty"/><area shape="rect" coords="675,124,817,157" href="/bureau/sex-offender-management-bureau-somb" alt="SOMB" />
+<area  shape="rect" coords="849,47,985,73"  href="/bureau/budget-and-fiscal-management-bureau" alt="Budget" />
+<area shape="rect" coords="846,78,987,96" href="/bureau/legal-recruitment-bureau" alt="LegalRecruitment"  />
+<area shape="rect" coords="847,99,976,120" href="/bureau/human-resources-management-bureau" alt="Human Resources Bureau"/>
+<area shape="rect" coords="363,272,647,295" href="/"  alt="home"/>
+<area shape="rect" coords="318,297,379,311" href="/" alt="oaghome" />
+<area shape="rect" coords="386,295,465,312"  href="/contact-attorney-general" alt="contact" />
+<area shape="rect" coords="477,296,574,312" href="/privacy-policy" alt="private policy" />
+<area shape="rect" coords="587,296,667,313" href="/disclaimer" alt="disclaimer" />
+
+</map>
+
+
+
+</map>
+</center>-->
+
+
+
+  
+  <!--/footer inner-->
+
+
+
+
+
+
+
+
+
+    
+  </div>
+
+
+
+
+
+
+<!--/#footer-->
+
+
+  <div class="region region-footer">
+    <div id="block-menu-menu-oag-footer" class="block block-menu">
+
+    <h2>OAG Footer</h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="first expanded"><span title="" class="nolink">Executive</span><ul class="menu"><li class="first leaf"><a href="/bureau/intergovernmental-affairs-bureau" title="">Community and Intergovernmental Affairs</a></li>
+<li class="leaf"><a href="/bureau/appeals-opinions-division" title="">Criminal Appeals and Opinions</a></li>
+<li class="leaf"><a href="/bureau/foil" title="">FOIL</a></li>
+<li class="leaf"><a href="/press-releases" title="">Press</a></li>
+<li class="leaf"><a href="/tour-attorney-generals-office" title="">Regional Offices</a></li>
+<li class="last leaf"><a href="/bureau/appeals-opinions-division" title="">Solicitor General</a></li>
+</ul></li>
+<li class="expanded"><span title="" class="nolink">Criminal Justice</span><ul class="menu"><li class="first leaf"><a href="/bureau/conviction-review-bureau" title="">Conviction Review Bureau</a></li>
+<li class="leaf"><a href="/bureau/criminal-enforcement-and-financial-crimes-bureau" title="">Criminal Enforcement and Financial Crimes Bureau</a></li>
+<li class="leaf"><a href="/bureau/investigations-division" title="">Investigations Bureau</a></li>
+<li class="leaf"><a href="/bureau/medicaid-fraud-control-unit" title="">Medicaid Fraud Control Unit</a></li>
+<li class="leaf"><a href="/bureau/organized-crime-task-force" title="">Organized Crime Task Force</a></li>
+<li class="leaf"><a href="/bureau/public-integrity-bureau" title="">Public Integrity Bureau</a></li>
+<li class="last leaf"><a href="/bureau/taxpayer-protection-bureau" title="">Taxpayer Protection Bureau</a></li>
+</ul></li>
+<li class="expanded"><span title="" class="nolink">Economic Justice</span><ul class="menu"><li class="first leaf"><a href="/bureau/antitrust-bureau" title="">Antitrust Bureau</a></li>
+<li class="leaf"><a href="/bureau/consumer-frauds-bureau" title="">Bureau of Consumer Frauds &amp; Protection</a></li>
+<li class="leaf"><a href="/bureau/internet-bureau" title="">Bureau of Internet and Technology (BIT)</a></li>
+<li class="leaf"><a href="/bureau/investor-protection-bureau" title="">Investor Protection Bureau</a></li>
+<li class="last leaf"><a href="/bureau/real-estate-finance-bureau" title="">Real Estate Finance Bureau</a></li>
+</ul></li>
+<li class="expanded"><span title="" class="nolink">Social Justice</span><ul class="menu"><li class="first leaf"><a href="https://www.charitiesnys.com" title="">Charities Bureau</a></li>
+<li class="leaf"><a href="/bureau/civil-rights" title="">Civil Rights</a></li>
+<li class="leaf"><a href="/bureau/environmental-protection-bureau" title="">Environmental Protection Bureau</a></li>
+<li class="leaf"><a href="/bureau/health-care-bureau" title="">Health Care Bureau</a></li>
+<li class="leaf"><a href="/bureau/labor-bureau" title="">Labor Bureau</a></li>
+<li class="last leaf"><a href="/bureau/tobacco-compliance-bureau" title="">Tobacco Compliance Bureau</a></li>
+</ul></li>
+<li class="expanded"><span title="" class="nolink">State Counsel</span><ul class="menu"><li class="first leaf"><a href="/bureau/civil-recoveries-bureau" title="">Civil Recoveries Bureau</a></li>
+<li class="leaf"><a href="/bureau/claims-bureau" title="">Claims Bureau</a></li>
+<li class="leaf"><a href="/bureau/litigation-bureau" title="">Litigation Bureau</a></li>
+<li class="leaf"><a href="/bureau/real-property-bureau" title="">Real Property Bureau</a></li>
+<li class="last leaf"><a href="/bureau/sex-offender-management-bureau-somb" title="">Sex Offender Management Bureau (SOMB)</a></li>
+</ul></li>
+<li class="last expanded"><span title="" class="nolink">Administration</span><ul class="menu"><li class="first leaf"><a href="/bureau/budget-and-fiscal-management-bureau" title="">Budget and Fiscal Management Bureau</a></li>
+<li class="leaf"><a href="/bureau/human-resources-management-bureau" title="">Human Resources Management Bureau</a></li>
+<li class="last leaf"><a href="/bureau/legal-recruitment-bureau" title="">Legal Recruitment Bureau</a></li>
+</ul></li>
+</ul>  </div>
+</div>
+<div id="block-menu-menu-oag-footer2" class="block block-menu">
+
+    <h2>OAG Footer2</h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="first leaf"><a href="/" title="">Home</a></li>
+<li class="leaf"><a href="/contact-attorney-general" title="">Contact Us</a></li>
+<li class="leaf"><a href="/disclaimer" title="">Disclaimer</a></li>
+<li class="leaf"><a href="/privacy-policy" title="">Privacy Policy</a></li>
+<li class="last leaf"><a href="/accessibility-policy" title="">Accessibility Policy</a></li>
+</ul>  </div>
+</div>
+<div id="block-block-52" class="block block-block">
+
+    <h2>OAG Footer3</h2>
+  
+  <div class="content">
+    <p><span style="font-size: 12.996px;">© 2017 NEW YORK STATE ATTORNEY GENERAL. All rights reserved.</span></p>
+  </div>
+</div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+
+    <script type="text/javascript" src="https://ag.ny.gov/sites/default/files/js/js_hzLtENazIfgI7_mAANJwJDl9Fpl4lcEKCEmybmP8ORg.js"></script>
+  </div>
+  <script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    multilanguagePage: true,
+    layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+  }, 'google_translate_element');
+}
+</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"253e3f2344","applicationID":"34479079","transactionName":"blRUNkFXDRBXB0QLDVcedwFHXwwNGRJZBxVKbkYDVFM=","queueTime":0,"applicationTime":2830,"atts":"QhNXQAlNHh4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

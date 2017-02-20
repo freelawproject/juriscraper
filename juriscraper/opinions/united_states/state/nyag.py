@@ -14,7 +14,8 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.year = datetime.date.today().year
-        self.url = "https://ag.ny.gov/appeals-and-opinions/numerical-index"
+        self.base_url = 'https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=%d'
+        self.url = self.base_url % self.year
         self.back_scrape_iterable = range(1995, self.year + 1)
         self.row_path = False
         self.cell_path = False
@@ -61,6 +62,7 @@ class Site(OpinionSite):
 
     def _download_backwards(self, year):
         self.year = year
+        self.url = self.base_url % self.year
         self.set_paths()
         self.html = self._download()
 
