@@ -33,7 +33,7 @@ class Site(OpinionSite):
         self.year = datetime.date.today().year
         self.domain = 'http://www.marylandattorneygeneral.gov'
         self.url = '%s/Pages/Opinions/index.aspx' % self.domain
-        self.back_scrape_iterable = range(self.get_last_year(), self.year + 1)
+        self.back_scrape_iterable = range(1993, self.year + 1)
         self.parent_path_base = '//tbody/tr/td[contains(./text(), "%d")]'
         self.parent_path = self.parent_path_base % self.year
         self.cell_path = '//tbody[@isloaded="true"]/tr/td[%d]'
@@ -94,14 +94,6 @@ class Site(OpinionSite):
         tree.make_links_absolute(self.domain)
         return tree
 
-    def get_last_year(self):
-        """Find last year with cases on page and
-        return year as int, used for backscraper
-        """
-        path = '//tbody/tr/td/text()'
-        initial_html = self._get_html_tree_by_url(self.url)
-        return int(initial_html.xpath(path)[-1].split()[1])
-
     def _get_case_names(self):
         names = []
         path = self.cell_path % 3
@@ -117,9 +109,15 @@ class Site(OpinionSite):
         return urls
 
     def _get_case_dates(self):
-        # All we have is the year, so estimate the middle most day
-        case_date = convert_date_string('July 2, %d' % self.year)
-        return [case_date] * len(self._get_case_names())
+        today = datetime.date.today()
+        count = len(self._get_case_names())
+        middle_of_year = convert_date_string('July 2, %d' % self.year)
+        if self.year == today.year:
+            # Not a backscraper, assume cases were filed on day scraped.
+            return [today] * count
+        else:
+            # All we have is the year, so estimate the middle most day
+            return [middle_of_year] * count
 
     def _get_docket_numbers(self):
         dockets = []
@@ -145,5 +143,6 @@ class Site(OpinionSite):
 
     def _download_backwards(self, year):
         """Iterate over drop down for each year on the page"""
+        self.year = year
         self.parent_path = self.parent_path_base % year
         self.html = self._download()
