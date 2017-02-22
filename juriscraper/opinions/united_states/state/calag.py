@@ -17,7 +17,7 @@ class Site(OpinionSite):
         self.url_base = "https://oag.ca.gov/opinions/yearly-index?conclusion-year[value][year]="
         self.url = self.url_base + str(self.year)
         self.back_scrape_iterable = range(1985, self.year + 1)
-        self.rows_path = '//tbody/tr'
+        self.rows_path = '//tbody/tr[contains(./td[1]//a/@href, ".pdf")]'
         self.cell_path = self.rows_path + '/td[%d]'
 
     def _get_case_names(self):
@@ -29,8 +29,11 @@ class Site(OpinionSite):
         return [href for href in self.html.xpath(path)]
 
     def _get_case_dates(self):
-        cells = self.html.xpath(self.cell_path % 4)
-        return [convert_date_string(cell.text_content().strip()) for cell in cells]
+        dates = []
+        for cell in self.html.xpath(self.cell_path % 4):
+            date_raw = cell.text_content().replace(r'\n', '').strip()
+            dates.append(convert_date_string(date_raw))
+        return dates
 
     def _get_docket_numbers(self):
         return [cell.text_content().strip() for cell in self.html.xpath(self.cell_path % 1)]
@@ -49,4 +52,5 @@ class Site(OpinionSite):
 
     def _download_backwards(self, year):
         self.url = self.url_base + str(year)
+        print(self.url)
         self.html = self._download()
