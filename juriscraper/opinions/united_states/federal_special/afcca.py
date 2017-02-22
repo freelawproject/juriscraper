@@ -6,47 +6,48 @@ History:
     15 Sep 2014: Created by Jon Andersen
 """
 
-from juriscraper.OpinionSite import OpinionSite
-import time
 from datetime import date
+
+from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
-        self.url = 'http://afcca.law.af.mil/content/opinions.php%%3Fyear=%d&sort=pub&tabid=3.html' % (date.today().year,)
         self.court_id = self.__module__
         self.back_scrape_iterable = range(2013, 2002 - 1, -1)
+        self.url_base = 'http://afcca.law.af.mil/content/opinions_date_%d.html'
+        self.url = self.url_base % date.today().year
+        self.table_cell_path = '//table[@width="800"][@align="center"]/tr[position() > 2]/td[%d]%s'
+
+    def cell_path(self, cell, substring=''):
+        return self.table_cell_path % (cell, substring)
 
     def _get_case_dates(self):
-        path = "//table[@width='600']//tr[td[@class='stdRowText']]/td[5]/text()"
-        return [date.fromtimestamp(
-            time.mktime(time.strptime(date_string, '%d %b %y'))) for
-                date_string in self.html.xpath(path)]
+        path = self.cell_path(5)
+        return [convert_date_string(cell.text_content()) for cell in self.html.xpath(path)]
 
     def _get_case_names(self):
-        path = "//table[@width='600']//tr[td[@class='stdRowText']]/td[2]/a/text()"
-        return [text for text in self.html.xpath(path)]
+        path = self.cell_path(2, '/a')
+        return [cell.text_content() for cell in self.html.xpath(path)]
 
     def _get_download_urls(self):
-        path = "//table[@width='600']//tr[td[@class='stdRowText']]/td[2]/a/@href"
-        return [text for text in self.html.xpath(path)]
+        path = self.cell_path(2, '/a/@href')
+        return [href for href in self.html.xpath(path)]
 
     def _get_docket_numbers(self):
-        path = "//table[@width='600']//tr[td[@class='stdRowText']]/td[3]/text()"
-        return [("ACM " + text) for text in self.html.xpath(path)]
+        path = self.cell_path(3)
+        return ['ACM %s' % cell.text_content() for cell in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
-        path = "//table[@width='600']//tr[td[@class='stdRowText']]/td[4]/div/text()"
         statuses = []
-        for s in self.html.xpath(path):
-            if 'Unpublished' in s:
-                statuses.append('Unpublished')
-            else:
-                statuses.append('Published')
+        path = self.cell_path(4)
+        for cell in self.html.xpath(path):
+            text = cell.text_content().lower()
+            statuses.append('Unpublished' if 'unpublished' in text else 'Published')
         return statuses
 
     def _download_backwards(self, year):
-        self.url = 'http://afcca.law.af.mil/content/opinions.php%%3Fyear=%d&sort=pub&tabid=3.html' \
-                   % year
+        self.url = self.url_base % year
         self.html = self._download()
