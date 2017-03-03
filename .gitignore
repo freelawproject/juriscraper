@@ -4,6 +4,9 @@
 # File created by Mac OS X
 .DS_Store
 
+# Swap files
+*.swp
+
 # Python setup.py output and PyCharm stuff
 build/
 dist/

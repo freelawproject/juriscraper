@@ -274,7 +274,7 @@ class AbstractSite(object):
         self.downloader_executed = True
         if self.method == 'POST':
             truncated_params = {}
-            for k, v in self.parameters.iteritems():
+            for k, v in self.parameters.items():
                 truncated_params[k] = trunc(v, 50, ellipsis='...[truncated]')
             logger.info("Now downloading case page at: %s (params: %s)" % (self.url, truncated_params))
         else:
