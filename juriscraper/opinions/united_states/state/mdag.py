@@ -15,17 +15,15 @@ from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
-    """This scraper is strange. The site it tempramental,
-    and the javascript seems to load successfully on some
-    runs, but not on others. The dates are also estimated,
-    and the names are actually semi-long summaries.
-    Furthermore, the site's source is unmanageable, which
-    has prevented us from being able to create legitimate
-    test/example files for coverage. We have a single
-    example file that's an empty document skeleton to
-    prevent the test mechanism from complaining. But it
-    isn't a test providing real coverage. We are doing the
-    best we can with a bad site.
+    """This scraper is strange. The site it temperamental, and the javascript
+    seems to load successfully on some runs, but not on others. The dates are
+    also estimated, and the names are actually semi-long summaries. Furthermore,
+    the site's source is unmanageable, which has prevented us from being able to
+    create legitimate test/example files for coverage. We have a single example
+    file that's an empty document skeleton to prevent the test mechanism from
+    complaining. But it isn't a test providing real coverage.
+
+    We are doing the best we can with a bad site.
     """
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
