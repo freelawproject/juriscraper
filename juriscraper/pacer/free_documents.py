@@ -294,7 +294,11 @@ class FreeOpinionRow(object):
             # See note in docket number
             s = cell.text_content().strip()
             if s:
-                return s.split(' ', 1)[1]
+                try:
+                    return s.split(' ', 1)[1]
+                except IndexError:
+                    # No case name, but a docket number is provided.
+                    return "Case name unknown"
             else:
                 return self.last_good_row['case_name']
         else:
