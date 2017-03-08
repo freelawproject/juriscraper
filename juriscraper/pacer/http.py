@@ -5,8 +5,11 @@ import re
 import requests
 
 from juriscraper.lib.log_tools import make_default_logger
+from requests.packages.urllib3 import exceptions
 
 logger = make_default_logger()
+
+requests.packages.urllib3.disable_warnings(exceptions.InsecureRequestWarning)
 
 
 class PacerSession(requests.Session):
