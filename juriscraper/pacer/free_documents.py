@@ -20,6 +20,7 @@ class FreeOpinionReport(object):
     """TODO: document here."""
     EXCLUDED_COURT_IDS = ['casb', 'ganb', 'innb', 'mieb', 'miwb', 'nmib', 'nvb',
                           'ohsb', 'tnwb', 'vib']
+    VALID_SORT_PARAMS = ('date_filed', 'case_number')
 
     def __init__(self, court_id, pacer_session):
         self.court_id = court_id
@@ -35,7 +36,15 @@ class FreeOpinionReport(object):
             return ('https://ecf.%s.uscourts.gov/cgi-bin/WrtOpRpt.pl' %
                     self.court_id)
 
-    def query(self, start, end):
+    def query(self, start, end, sort='date_filed'):
+        """Query the Free Opinions report one day at a time.
+
+        :param start: a date object representing the date you want to start at.
+        :param end: a date object representing the date you want to end at.
+        :param sort: the order you wish the results to be in, either
+        `date_filed` or `case_number`.
+
+        """
         if self.court_id in self.EXCLUDED_COURT_IDS:
             logger.error("Cannot get written opinions report from '%s'. It is "
                          "not provided by the court or is in disuse." %
@@ -49,12 +58,12 @@ class FreeOpinionReport(object):
         for d in dates:
             # Iterate one day at a time. Any more and PACER chokes.
             logger.info("Querying written opinions report for '%s' between %s "
-                        "and %s" % (self.court_id, d, d))
+                        "and %s, ordered by %s" % (self.court_id, d, d, sort))
             data = {
                 'filed_from': d,
                 'filed_to': d,
                 'ShowFull': '1',
-                'Key1': 'cs_sort_case_numb',
+                'Key1': self._normalize_sort_param(sort),
                 'all_case_ids': '0'
             }
             response = self.session.post(self.url + '?1-L_1_0-1', data=data)
@@ -133,10 +142,18 @@ class FreeOpinionReport(object):
 
         r = self.session.get(iframe_src, timeout=timeout)
         if is_pdf(r):
-            msg = 'Got iframed PDF data for case %s at: %s' % (url, iframe_src)
-            logger.info(msg)
+            logger.info('Got iframed PDF data for case %s at: %s' % (url, iframe_src))
 
         return r
+
+    def _normalize_sort_param(self, sort):
+        if sort == 'date_filed':
+            return 'de_date_filed'
+        elif sort == 'case_number':
+            return 'cs_sort_case_numb'
+        else:
+            raise ValueError("Invalid sort parameter. Value must be one of: %s"
+                             % self.VALID_SORT_PARAMS)
 
 
 class FreeOpinionRow(object):
@@ -148,14 +165,19 @@ class FreeOpinionRow(object):
     (areb & arwb) have five columns, but are designed more like the four column
     variants.
 
-    In general, what we do is detect the column count early on and then work
-    from there.
+    The second complication is that cells in the row change position based on
+    the sort order of the report. If the report is ordered by date, then the
+    first cell is the date. If the report is ordered by case number, then the
+    first cell is the case number and case name.
+
+    In general, what we do is detect the column count, and sort order early on
+    and then work from there.
     """
     def __init__(self, element, last_good_row, court_id):
         """Initialize the object.
 
         last_good_row should be a dict representing the values from the previous
-        row in the table. This is necessary, because the report skips the case
+        row in the table. This is necessary because the report skips the case
         name if it's the same for two cases in a row. For example:
 
         Joe v. Volcano | 12/31/2008 | 128 | The first doc from case | More here
@@ -168,7 +190,8 @@ class FreeOpinionRow(object):
         self.element = element
         self.last_good_row = last_good_row
         self.court_id = court_id
-        self.column_count = self.get_column_count()
+        self._column_count = self._get_column_count()
+        self._sort_order = self._detect_sort_order()
 
         # Parsed data
         self.pacer_case_id = self.get_pacer_case_id()
@@ -189,12 +212,33 @@ class FreeOpinionRow(object):
         """Similar to the __dict__ field, but excludes several fields."""
         attrs = {}
         for k, v in self.__dict__.items():
-            if k not in ['element', 'last_good_row']:
+            if k not in ['element', 'last_good_row'] and not k.startswith('_'):
                 attrs[k] = v
         return attrs
 
-    def get_column_count(self):
+    def _get_column_count(self):
         return len(self.element.xpath('./td'))
+
+    def _detect_sort_order(self):
+        """Detect whether the report is ordered by case number or by date filed.
+
+        If the report is ordered by date filed, you'll have a table row like:
+
+            12/31/2008 | Joe v. Volcano | 128 | The first doc | More here
+
+        If it's ordered by case name, it'll be like:
+
+            Joe v. Volcano | 12/31/2008 | 128 | The first doc | More here
+
+        The case name is always a link, so the simple way to do this is to check
+        if there's a link in the second cell of the row. If so, it's ordered by
+        date_filed. Else, by case_number. Note that the first cell is often
+        blank.
+        """
+        if len(self.element.xpath('./td[2]//@href')) > 0:
+            return 'date_filed'
+        else:
+            return 'case_number'
 
     def get_pacer_case_id(self):
         # It's tempting to get this value from the URL in the first cell, but
@@ -211,34 +255,42 @@ class FreeOpinionRow(object):
                 return reverse_goDLS_function(onclick)['caseid']
 
         # No onclick, onclick isn't a goDLS link, etc. Try second format.
-        try:
-            # This tends to work in the bankr. courts.
-            href = self.element.xpath('./td[1]//@href')[0]
-        except IndexError:
-            logger.info("No content provided in first cell of row. Using last "
-                        "good row for pacer_case_id, docket_number, and "
-                        "case_name.")
-            return self.last_good_row['pacer_case_id']
-        else:
-            return get_pacer_case_id_from_docket_url(href)
+        if self._sort_order == 'case_number':
+            try:
+                # This tends to work in the bankr. courts.
+                href = self.element.xpath('./td[1]//@href')[0]
+            except IndexError:
+                logger.info("No content provided in first cell of row. Using "
+                            "last good row for pacer_case_id, docket_number, "
+                            "and case_name.")
+                return self.last_good_row['pacer_case_id']
+        elif self._sort_order == 'date_filed':
+            href = self.element.xpath('./td[2]//@href')[0]
+        return get_pacer_case_id_from_docket_url(href)
 
     def get_docket_number(self):
-        try:
-            s = self.element.xpath('./td[1]//a/text()')[0]
-        except IndexError:
-            return self.last_good_row['docket_number']
-        else:
-            if self.column_count == 4 or self.court_id in ['areb', 'arwb']:
-                # In this case s will be something like: 14-90018 Stewart v.
-                # Kauanui. split on the first space, left is docket number,
-                # right is case name.
-                return s.split(' ', 1)[0]
+        if self._sort_order == 'case_number':
+            try:
+                s = self.element.xpath('./td[1]//a/text()')[0]
+            except IndexError:
+                return self.last_good_row['docket_number']
             else:
-                return s
+                if self._column_count == 4 or self.court_id in ['areb', 'arwb']:
+                    # In this case s will be something like: 14-90018 Stewart v.
+                    # Kauanui. split on the first space, left is docket number,
+                    # right is case name.
+                    return s.split(' ', 1)[0]
+                else:
+                    return s
+        elif self._sort_order == 'date_filed':
+            return self.element.xpath('./td[2]//a/text()')[0]
 
     def get_case_name(self):
-        cell = self.element.xpath('./td[1]')[0]
-        if self.column_count == 4 or self.court_id in ['areb', 'arwb']:
+        if self._sort_order == 'case_number':
+            cell = self.element.xpath('./td[1]')[0]
+        else:
+            cell = self.element.xpath('./td[2]')[0]
+        if self._column_count == 4 or self.court_id in ['areb', 'arwb']:
             # See note in docket number
             s = cell.text_content().strip()
             if s:
@@ -252,7 +304,16 @@ class FreeOpinionRow(object):
                 return self.last_good_row['case_name']
 
     def get_case_date(self):
-        return convert_date_string(self.element.xpath('./td[2]//text()')[0])
+        if self._sort_order == 'case_number':
+            path = './td[2]//text()'
+        elif self._sort_order == 'date_filed':
+            path = './td[1]//text()'
+        s = self.element.xpath(path)[0]
+        if not s.strip() and self._sort_order == 'date_filed':
+            # Empty cell, return the previous value.
+            return self.last_good_row['case_date']
+        else:
+            return convert_date_string(s)
 
     def get_pacer_document_number(self):
         doc1_url = self.element.xpath('./td[3]//@href')[0]
@@ -265,7 +326,7 @@ class FreeOpinionRow(object):
         return self.element.xpath('./td[4]')[0].text_content()
 
     def get_nos(self):
-        if self.column_count == 4:
+        if self._column_count == 4:
             return None
         try:
             return self.element.xpath('./td[5]/i[contains(./text(), '
@@ -274,7 +335,7 @@ class FreeOpinionRow(object):
             return None
 
     def get_cause(self):
-        if self.column_count == 4:
+        if self._column_count == 4:
             return None
         try:
             return self.element.xpath('./td[5]/i[contains(./text(), '

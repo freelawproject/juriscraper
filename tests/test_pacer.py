@@ -155,55 +155,55 @@ class PacerFreeOpinionsTest(unittest.TestCase):
                 continue
             court_id = get_court_id_from_url(court['court_link'])
 
-            if court_id in self.valid_dates:
-                results = []
-                report = self.reports[court_id]
-                some_date = convert_date_string(self.valid_dates[court_id])
-                retry_count = 1
-                max_retries = 5  # We'll try five times total
-                while not results and retry_count <= max_retries:
-                    # This loop is sometimes needed to find a date with
-                    # documents. In general the valid dates json object should
-                    # suffice, however.
-                    if some_date > date.today():
-                        raise ValueError("Runaway date query for %s: %s" %
-                                         (court_id, some_date))
-                    try:
-                        responses = report.query(some_date, some_date)
-                    except ConnectionError as e:
-                        if retry_count <= max_retries:
-                            print("%s. Trying again (%s of %s)" %
-                                (e, retry_count, max_retries))
-                            time.sleep(15)  # Give the server a moment of rest.
-                            retry_count += 1
-                            continue
-                        else:
-                            print("%s: Repeated errors at this court." % e)
-                            raise e
-                    if not responses:
-                        break  # Not a supported court.
-                    results = report.parse(responses)
-                    some_date += timedelta(days=1)
+            if court_id not in self.valid_dates:
+                continue
 
-                else:
-                    # While loop ended normally (without hitting break)
-                    for result in results:
-                        for k, v in result.items():
-                            if k in ['nature_of_suit', 'cause']:
-                                continue
-                            self.assertIsNotNone(
-                                v, msg="Value of key %s is None in court %s" %
-                                       (k, court_id)
-                            )
-
-                    # Can we download one item from each court?
-                    r = report.download_pdf(results[0]['pacer_case_id'],
-                                            results[0]['pacer_document_number'])
-                    if r is None:
-                        # Extremely messed up download.
+            results = []
+            report = self.reports[court_id]
+            some_date = convert_date_string(self.valid_dates[court_id])
+            retry_count = 1
+            max_retries = 5  # We'll try five times total
+            while not results and retry_count <= max_retries:
+                # This loop is sometimes needed to find a date with documents.
+                # In general the valid dates json object should suffice,
+                # however.
+                if some_date > date.today():
+                    raise ValueError("Runaway date query for %s: %s" %
+                                     (court_id, some_date))
+                try:
+                    responses = report.query(some_date, some_date,
+                                             sort='case_number')
+                except ConnectionError as e:
+                    if retry_count <= max_retries:
+                        print("%s. Trying again (%s of %s)" %
+                              (e, retry_count, max_retries))
+                        time.sleep(10)  # Give the server a moment of rest.
+                        retry_count += 1
                         continue
-                    self.assertEqual(r.headers['Content-Type'],
-                                     'application/pdf')
+                    else:
+                        print("%s: Repeated errors at this court." % e)
+                        raise e
+                if not responses:
+                    break  # Not a supported court.
+                results = report.parse(responses)
+                some_date += timedelta(days=1)
+
+            else:
+                # While loop ended normally (without hitting break)
+                for result in results:
+                    for k, v in result.items():
+                        if k in ['nature_of_suit', 'cause']:
+                            continue
+                        self.assertIsNotNone(v, msg="Value of key %s is None "
+                                                    "in court %s" % (k, court_id))
+
+                # Can we download one item from each court?
+                r = report.download_pdf(results[0]['pacer_case_id'],
+                                        results[0]['pacer_document_number'])
+                if r is None:
+                    # Extremely messed up download.
+                    continue
+                self.assertEqual(r.headers['Content-Type'], 'application/pdf')
 
     @SKIP_IF_NO_PACER_LOGIN
     @vcr.use_cassette(record_mode='new_episodes')
@@ -228,7 +228,7 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         court_id = 'paeb'
         report = self.reports[court_id]
         some_date = convert_date_string(self.valid_dates[court_id])
-        responses = report.query(some_date, some_date)
+        responses = report.query(some_date, some_date, sort='case_number')
         results = report.parse(responses)
         self.assertEqual(3, len(results), 'should get 3 responses for ksb')
 
@@ -240,9 +240,36 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         court_id = 'ksb'
         report = self.reports[court_id]
         some_date = convert_date_string(self.valid_dates[court_id])
-        responses = report.query(some_date, some_date)
+        responses = report.query(some_date, some_date, sort='case_number')
         results = report.parse(responses)
         self.assertEqual(2, len(results), 'should get 2 response for ksb')
+
+    @SKIP_IF_NO_PACER_LOGIN
+    def test_ordering_by_date_filed(self):
+        """Can we change the ordering?"""
+        # First try both orderings in areb (where things have special cases) and
+        # ded (Delaware) where things are more normal.
+        tests = (
+            {'court': 'areb', 'count': 1},
+            {'court': 'ded', 'count': 4}
+        )
+        for test in tests:
+            report = self.reports[test['court']]
+            some_date = convert_date_string(self.valid_dates[test['court']])
+            responses = report.query(some_date, some_date, sort='date_filed')
+            results = report.parse(responses)
+            self.assertEqual(
+                test['count'],
+                len(results),
+                'Should get %s response for %s' % (test['count'], test['court'])
+            )
+            responses = report.query(some_date, some_date, sort='case_number')
+            results = report.parse(responses)
+            self.assertEqual(
+                test['count'],
+                len(results),
+                'should get %s response for %s' % (test['count'], test['court'])
+            )
 
     def test_catch_excluded_court_ids(self):
         """Do we properly catch and prevent a query against disused courts?"""
@@ -253,13 +280,13 @@ class PacerFreeOpinionsTest(unittest.TestCase):
 
         some_date = convert_date_string('1/1/2015')
 
-        results = report.query(some_date, some_date)
+        results = report.query(some_date, some_date, sort='case_number')
         self.assertEqual([], results, 'should have empty result set')
         self.assertFalse(mock_session.post.called, 'should not trigger a POST query')
 
         report = self.reports['cand']
         report.session = mock_session
-        report.query(some_date, some_date)
+        report.query(some_date, some_date, sort='case_number')
         self.assertTrue(mock_session.post.called, 'good court should POST')
 
 
