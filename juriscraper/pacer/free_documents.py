@@ -269,43 +269,43 @@ class FreeOpinionRow(object):
         return get_pacer_case_id_from_docket_url(href)
 
     def get_docket_number(self):
-        if self._sort_order == 'case_number':
-            try:
-                s = self.element.xpath('./td[1]//a/text()')[0]
-            except IndexError:
-                return self.last_good_row['docket_number']
+        try:
+            if self._sort_order == 'case_number':
+                cell = self.element.xpath('./td[1]//a')[0]
             else:
-                if self._column_count == 4 or self.court_id in ['areb', 'arwb']:
-                    # In this case s will be something like: 14-90018 Stewart v.
-                    # Kauanui. split on the first space, left is docket number,
-                    # right is case name.
-                    return s.split(' ', 1)[0]
-                else:
-                    return s
-        elif self._sort_order == 'date_filed':
-            return self.element.xpath('./td[2]//a/text()')[0]
+                cell = self.element.xpath('./td[2]//a')[0]
+        except IndexError:
+            # No content in the cell.
+            return self.last_good_row['docket_number']
+        else:
+            s = cell.text_content().strip()
+
+        if self._column_count == 4 or self.court_id in ['areb', 'arwb']:
+            # In this case s will be something like: 14-90018 Stewart v.
+            # Kauanui. split on the first space, left is docket number, right is
+            # case name.
+            return s.split(' ', 1)[0]
+        else:
+            return s
 
     def get_case_name(self):
         if self._sort_order == 'case_number':
             cell = self.element.xpath('./td[1]')[0]
         else:
             cell = self.element.xpath('./td[2]')[0]
+        s = cell.text_content().strip()
+        if not s:
+            return self.last_good_row['case_name']
+
         if self._column_count == 4 or self.court_id in ['areb', 'arwb']:
             # See note in docket number
-            s = cell.text_content().strip()
-            if s:
-                try:
-                    return s.split(' ', 1)[1]
-                except IndexError:
-                    # No case name, but a docket number is provided.
-                    return "Case name unknown"
-            else:
-                return self.last_good_row['case_name']
-        else:
             try:
-                return cell.xpath('.//b')[0].text_content()
+                return s.split(' ', 1)[1]
             except IndexError:
-                return self.last_good_row['case_name']
+                # No case name, but a docket number is provided.
+                return "Case name unknown"
+        else:
+            return cell.xpath('.//b')[0].text_content()
 
     def get_case_date(self):
         if self._sort_order == 'case_number':
