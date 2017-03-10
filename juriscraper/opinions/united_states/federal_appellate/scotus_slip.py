@@ -27,7 +27,7 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.yy = date.today().strftime('%y')
+        self.yy = self._get_current_term()
         self.back_scrape_iterable = range(6, int(self.yy) + 1)
         self.url_base = 'https://www.supremecourt.gov/opinions'
         self.path_table = "//table[@class='table table-bordered']"
@@ -39,6 +39,20 @@ class Site(OpinionSite):
         self.url = False
         self.headers = []
         self.cases = []
+
+    def _get_current_term(self):
+        """The URLs for SCOTUS correspond to the term, not the calendar.
+
+        The terms kick off on the first Monday of October, so we use October 1st
+        as our cut off date.
+        """
+        today = date.today()
+        term_cutoff = date(today.year, 10, 1)
+        if today < term_cutoff:
+            # Haven't hit the cutoff, return previous year.
+            return int(today.strftime('%y')) - 1  # y3k bug!
+        else:
+            return today.strftime('%y')
 
     def _download(self, request_dict={}):
         if self.method != 'LOCAL' and not self.running_back_scraper:
