@@ -197,7 +197,7 @@ class FreeOpinionRow(object):
         self.pacer_case_id = self.get_pacer_case_id()
         self.docket_number = self.get_docket_number()
         self.case_name = self.get_case_name()
-        self.case_date = self.get_case_date()
+        self.date_filed = self.get_date_filed()
         self.pacer_document_number = self.get_pacer_document_number()
         self.document_number = self.get_document_number()
         self.description = self.get_description()
@@ -307,7 +307,7 @@ class FreeOpinionRow(object):
         else:
             return cell.xpath('.//b')[0].text_content()
 
-    def get_case_date(self):
+    def get_date_filed(self):
         if self._sort_order == 'case_number':
             path = './td[2]//text()'
         elif self._sort_order == 'date_filed':
@@ -315,7 +315,7 @@ class FreeOpinionRow(object):
         s = self.element.xpath(path)[0]
         if not s.strip() and self._sort_order == 'date_filed':
             # Empty cell, return the previous value.
-            return self.last_good_row['case_date']
+            return self.last_good_row['date_filed']
         else:
             return convert_date_string(s)
 
