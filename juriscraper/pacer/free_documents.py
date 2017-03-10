@@ -98,7 +98,7 @@ class FreeOpinionReport(object):
                     row = FreeOpinionRow(row, results[-1], court_id)
                 else:
                     row = FreeOpinionRow(row, {}, court_id)
-                results.append(row.as_dict())
+                results.append(row)
         logger.info("Parsed %s results from written opinions report at %s" %
                     (len(results), court_id))
         return results
@@ -208,14 +208,6 @@ class FreeOpinionRow(object):
         return '<FreeOpinionRow in %s>\n%s' % (self.court_id,
                                                tostring(self.element))
 
-    def as_dict(self):
-        """Similar to the __dict__ field, but excludes several fields."""
-        attrs = {}
-        for k, v in self.__dict__.items():
-            if k not in ['element', 'last_good_row'] and not k.startswith('_'):
-                attrs[k] = v
-        return attrs
-
     def _get_column_count(self):
         return len(self.element.xpath('./td'))
 
@@ -263,7 +255,7 @@ class FreeOpinionRow(object):
                 logger.info("No content provided in first cell of row. Using "
                             "last good row for pacer_case_id, docket_number, "
                             "and case_name.")
-                return self.last_good_row['pacer_case_id']
+                return self.last_good_row.pacer_case_id
         elif self._sort_order == 'date_filed':
             href = self.element.xpath('./td[2]//@href')[0]
         return get_pacer_case_id_from_docket_url(href)
@@ -276,7 +268,7 @@ class FreeOpinionRow(object):
                 cell = self.element.xpath('./td[2]//a')[0]
         except IndexError:
             # No content in the cell.
-            return self.last_good_row['docket_number']
+            return self.last_good_row.docket_number
         else:
             s = cell.text_content().strip()
 
@@ -295,7 +287,7 @@ class FreeOpinionRow(object):
             cell = self.element.xpath('./td[2]')[0]
         s = cell.text_content().strip()
         if not s:
-            return self.last_good_row['case_name']
+            return self.last_good_row.case_name
 
         if self._column_count == 4 or self.court_id in ['areb', 'arwb']:
             # See note in docket number
@@ -315,7 +307,7 @@ class FreeOpinionRow(object):
         s = self.element.xpath(path)[0]
         if not s.strip() and self._sort_order == 'date_filed':
             # Empty cell, return the previous value.
-            return self.last_good_row['date_filed']
+            return self.last_good_row.date_filed
         else:
             return convert_date_string(s)
 
