@@ -14,7 +14,7 @@ from juriscraper.pacer import DocketReport, FreeOpinionReport
 from juriscraper.pacer.http import login, PacerSession, PacerLoginException
 from juriscraper.pacer.utils import (
     get_courts_from_json, get_court_id_from_url,
-    get_pacer_case_id_from_docket_url, get_pacer_document_number_from_doc1_url,
+    get_pacer_case_id_from_docket_url, get_pacer_doc_id_from_doc1_url,
     reverse_goDLS_function, make_doc1_url
 )
 from . import JURISCRAPER_ROOT, TESTS_ROOT
@@ -199,7 +199,7 @@ class PacerFreeOpinionsTest(unittest.TestCase):
 
                 # Can we download one item from each court?
                 r = report.download_pdf(results[0]['pacer_case_id'],
-                                        results[0]['pacer_document_number'])
+                                        results[0]['pacer_doc_id'])
                 if r is None:
                     # Extremely messed up download.
                     continue
@@ -390,7 +390,7 @@ class PacerUtilTest(unittest.TestCase):
             ('/doc1/01712427473', '01712427473'),
         )
         for q, a in qa_pairs:
-            self.assertEqual(get_pacer_document_number_from_doc1_url(q), a)
+            self.assertEqual(get_pacer_doc_id_from_doc1_url(q), a)
 
     def test_reverse_dls_function(self):
         """Can we parse the javascript correctly to get a good dict?"""

@@ -9,7 +9,7 @@ from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.pacer.utils import (
     get_pacer_case_id_from_docket_url, make_doc1_url,
-    get_pacer_document_number_from_doc1_url, get_court_id_from_url,
+    get_pacer_doc_id_from_doc1_url, get_court_id_from_url,
     reverse_goDLS_function, is_pdf
 )
 
@@ -198,7 +198,7 @@ class FreeOpinionRow(object):
         self.docket_number = self.get_docket_number()
         self.case_name = self.get_case_name()
         self.date_filed = self.get_date_filed()
-        self.pacer_document_number = self.get_pacer_document_number()
+        self.pacer_doc_id = self.get_pacer_doc_id()
         self.document_number = self.get_document_number()
         self.description = self.get_description()
         self.nature_of_suit = self.get_nos()
@@ -319,9 +319,9 @@ class FreeOpinionRow(object):
         else:
             return convert_date_string(s)
 
-    def get_pacer_document_number(self):
+    def get_pacer_doc_id(self):
         doc1_url = self.element.xpath('./td[3]//@href')[0]
-        return get_pacer_document_number_from_doc1_url(doc1_url)
+        return get_pacer_doc_id_from_doc1_url(doc1_url)
 
     def get_document_number(self):
         return self.element.xpath('./td[3]//text()')[0]

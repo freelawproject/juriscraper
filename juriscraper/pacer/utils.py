@@ -37,8 +37,8 @@ def get_pacer_case_id_from_docket_url(url):
     return param
 
 
-def get_pacer_document_number_from_doc1_url(url):
-    """Extract the pacer document number from the doc1 URL.
+def get_pacer_doc_id_from_doc1_url(url):
+    """Extract the pacer document ID from the doc1 URL.
 
     In:  https://ecf.almd.uscourts.gov/doc1/01712427473
     Out: 01712427473
