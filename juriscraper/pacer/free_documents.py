@@ -323,18 +323,18 @@ class FreeOpinionRow(object):
 
     def get_nos(self):
         if self._column_count == 4:
-            return None
+            return ''
         try:
             return self.element.xpath('./td[5]/i[contains(./text(), '
                                       '"NOS")]')[0].tail.strip()
         except IndexError:
-            return None
+            return ''
 
     def get_cause(self):
         if self._column_count == 4:
-            return None
+            return ''
         try:
             return self.element.xpath('./td[5]/i[contains(./text(), '
                                       '"Cause")]')[0].tail.strip()
         except IndexError:
-            return None
+            return ''
