@@ -44,22 +44,23 @@ class Site(OpinionSite):
     def _extract_case_data_from_html(self, html):
         """Build list of data dictionaries, one dictionary per case."""
         regex = re.compile(
-            r'^Citation Nr: (.*) Decision Date: (.*) Archive Date: (.*) DOCKET NO. ([-0-9 ]+)')
+            r'^Citation Nr: (.*) Decision Date: (.*) Archive Date: (.*) DOCKET NO. ([-0-9 ]+)'
+        )
 
-        for result in html.xpath('//div[@id="results-area"]/div/div'):
-            text = result.xpath('./div[2]/text()')[0].strip().replace(r'\t', '').replace(r'\n', '')
+        for result in html.xpath('//div[@id="results-area"]/div/a'):
+            text = result.text_content().strip()
             try:
                 (citation, date, docket) = regex.match(text).group(1, 2, 4)
             except:
                 raise Exception(
-                    'regex failure in _extract_case_data_from_html method of bva scraper')
+                    'regex failure in _extract_case_data_from_html method of bva scraper'
+                )
 
             # There is a history to this, but the long story short is that we
             # are using the docket number in the name field intentionally.
             self.cases.append({
                 'name': docket,
-                'url': result.xpath('./div/span/a/@href')[0].lstrip(
-                    'view.jsp?FV='),
+                'url': result.xpath('.//@href')[0],
                 'date': convert_date_string(date),
                 'status': 'Unpublished',
                 'docket': docket,
