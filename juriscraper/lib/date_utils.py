@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-from itertools import izip_longest
 from math import ceil
 
 from datetime import date
 from dateutil.parser import _timelex, parser, parserinfo
 from dateutil.rrule import DAILY, rrule
+from six.moves import zip_longest
 
 # We import the entire datetime library because otherwise we run into
 # conflicts in our isinstance statements.
@@ -197,4 +197,4 @@ def make_date_range_tuples(start, end, gap):
     end_start = start + datetime.timedelta(days=gap - 1)
     end_dates = [d.date() for d in rrule(DAILY, interval=gap, dtstart=end_start,
                                          until=end)]
-    return list(izip_longest(start_dates, end_dates, fillvalue=end))
+    return list(zip_longest(start_dates, end_dates, fillvalue=end))
