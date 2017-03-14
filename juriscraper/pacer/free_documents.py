@@ -1,6 +1,7 @@
 from dateutil.rrule import rrule, DAILY
 from lxml.html import tostring
 
+from juriscraper.lib.date_utils import make_date_range_tuples
 from juriscraper.lib.html_utils import (
     set_response_encoding, clean_html, fix_links_in_lxml_tree,
     get_html_parsed_text
@@ -36,14 +37,15 @@ class FreeOpinionReport(object):
             return ('https://ecf.%s.uscourts.gov/cgi-bin/WrtOpRpt.pl' %
                     self.court_id)
 
-    def query(self, start, end, sort='date_filed'):
+    def query(self, start, end, sort='date_filed', day_span=7):
         """Query the Free Opinions report one day at a time.
 
         :param start: a date object representing the date you want to start at.
         :param end: a date object representing the date you want to end at.
         :param sort: the order you wish the results to be in, either
         `date_filed` or `case_number`.
-
+        :param day_span: The number of days to query at a time. Defaults to one
+        week.
         """
         if self.court_id in self.EXCLUDED_COURT_IDS:
             logger.error("Cannot get written opinions report from '%s'. It is "
@@ -51,17 +53,17 @@ class FreeOpinionReport(object):
                          self.court_id)
             return []
 
-        dates = [d.strftime('%m/%d/%Y') for d in rrule(
-            DAILY, interval=1, dtstart=start, until=end)]
+        dates = make_date_range_tuples(start, end, gap=day_span)
         responses = []
-
-        for d in dates:
+        for start, end in dates:
+            start = start.strftime('%m/%d/%Y')
+            end = end.strftime('%m/%d/%Y')
             # Iterate one day at a time. Any more and PACER chokes.
             logger.info("Querying written opinions report for '%s' between %s "
-                        "and %s, ordered by %s" % (self.court_id, d, d, sort))
+                        "and %s, ordered by %s" % (self.court_id, start, end, sort))
             data = {
-                'filed_from': d,
-                'filed_to': d,
+                'filed_from': start,
+                'filed_to': end,
                 'ShowFull': '1',
                 'Key1': self._normalize_sort_param(sort),
                 'all_case_ids': '0'

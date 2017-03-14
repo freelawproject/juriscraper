@@ -12,8 +12,8 @@ import vcr
 from . import TESTS_ROOT
 from juriscraper.lib.importer import build_module_list
 from juriscraper.lib.date_utils import (
-    parse_dates, quarter, is_first_month_in_quarter, fix_future_year_typo
-)
+    parse_dates, quarter, is_first_month_in_quarter, fix_future_year_typo,
+    make_date_range_tuples)
 from juriscraper.lib.string_utils import (
     clean_string, fix_camel_case, force_unicode, harmonize, titlecase,
     CaseNameTweaker, convert_date_string, normalize_dashes, split_date_range_string
@@ -29,7 +29,7 @@ class SlownessException(Exception):
         Exception.__init__(self, message)
 
 
-class DateParserTest(unittest.TestCase):
+class DateTest(unittest.TestCase):
     def test_various_date_extractions(self):
         test_pairs = (
             # Dates separated by semicolons and JUMP words
@@ -64,6 +64,43 @@ class DateParserTest(unittest.TestCase):
         for before, after in expectations.items():
             fixed_date = fix_future_year_typo(convert_date_string(before))
             self.assertEqual(fixed_date, convert_date_string(after))
+
+    def test_date_range_creation(self):
+        q_a = ({
+            # Six days (though it looks like five)
+            'q': {'start': datetime.date(2017, 1, 1),
+                  'end': datetime.date(2017, 1, 5),
+                  'gap': 7},
+            'a': [(datetime.date(2017, 1, 1), datetime.date(2017, 1, 5))],
+        }, {
+            # Seven days (though it looks like six)
+            'q': {'start': datetime.date(2017, 1, 1),
+                  'end': datetime.date(2017, 1, 6),
+                  'gap': 7},
+            'a': [(datetime.date(2017, 1, 1), datetime.date(2017, 1, 6))],
+        }, {
+            # Eight days (though it looks like seven)
+            'q': {'start': datetime.date(2017, 1, 1),
+                  'end': datetime.date(2017, 1, 8),
+                  'gap': 7},
+            'a': [(datetime.date(2017, 1, 1), datetime.date(2017, 1, 7)),
+                  (datetime.date(2017, 1, 8), datetime.date(2017, 1, 8))],
+        }, {
+            # Gap bigger than range
+            'q': {'start': datetime.date(2017, 1, 1),
+                  'end': datetime.date(2017, 1, 5),
+                  'gap': 1000},
+            'a': [(datetime.date(2017, 1, 1), datetime.date(2017, 1, 5))],
+        }, {
+            # Ends before starts
+            'q': {'start': datetime.date(2017, 1, 5),
+                  'end': datetime.date(2017, 1, 1),
+                  'gap': 7},
+            'a': [],
+        })
+        for test in q_a:
+            result = make_date_range_tuples(**test['q'])
+            self.assertEqual(result, test['a'])
 
 
 class ScraperExampleTest(unittest.TestCase):

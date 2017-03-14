@@ -1,11 +1,15 @@
 # -*- coding: utf-8 -*-
+from itertools import izip_longest
 from math import ceil
 
+from datetime import date
 from dateutil.parser import _timelex, parser, parserinfo
+from dateutil.rrule import DAILY, rrule
 
 # We import the entire datetime library because otherwise we run into
 # conflicts in our isinstance statements.
 import datetime
+
 
 MISSPELLINGS = {
     'Febraury': 'February',
@@ -165,3 +169,32 @@ def fix_future_year_typo(future_date):
         return datetime.date(int(current_year), future_date.month,
                              future_date.day)
     return future_date
+
+
+def make_date_range_tuples(start, end, gap):
+    """Make an iterable of date tuples for use in iterating forms
+
+    For example, a form might allow start and end dates and you want to iterate
+    it one week at a time starting on Jan 1 and ending on Feb 3:
+
+    >>> make_date_range_tuples(date(2017, 1, 1), date(2017, 2, 3), 7)
+    [(Jan 1, Jan 7), (Jan 8, Jan 14), (Jan 15, Jan 21), (Jan 22, Jan 28),
+     (Jan 29, Feb 3)]
+
+    :param start: date when the query should start.
+    :param end: date when the query should end.
+    :param gap: the number of days, inclusive, that a query should span at a
+    time.
+
+    :rtype list(tuple)
+    :returns: list of start, end tuples
+    """
+    # We create a list of start dates and a list of end dates, then zip them
+    # together. If end_dates is shorter than start_dates, fill the last value
+    # with the original end date.
+    start_dates = [d.date() for d in rrule(DAILY, interval=gap, dtstart=start,
+                                           until=end)]
+    end_start = start + datetime.timedelta(days=gap - 1)
+    end_dates = [d.date() for d in rrule(DAILY, interval=gap, dtstart=end_start,
+                                         until=end)]
+    return list(izip_longest(start_dates, end_dates, fillvalue=end))
