@@ -98,18 +98,17 @@ def reverse_goDLS_function(s):
     }
 
 
-def make_doc1_url(court_id, pacer_document_number, skip_attachment_page):
+def make_doc1_url(court_id, pacer_doc_id, skip_attachment_page):
     """Make a doc1 URL.
 
     If skip_attachment_page is True, we replace the fourth digit with a 1
     instead of a zero, which bypasses the attachment page.
     """
-    if skip_attachment_page and pacer_document_number[3] == '0':
+    if skip_attachment_page and pacer_doc_id[3] == '0':
         # If the fourth digit is a 0, replace it with a 1
-        pacer_document_number = pacer_document_number[:3] + '1' + \
-                                pacer_document_number[4:]
+        pacer_doc_id = pacer_doc_id[:3] + '1' + pacer_doc_id[4:]
     return 'https://ecf.%s.uscourts.gov/doc1/%s' % (court_id,
-                                                    pacer_document_number)
+                                                    pacer_doc_id)
 
 
 def is_pdf(response):
