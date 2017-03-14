@@ -34,13 +34,13 @@ class Site(OpinionSite):
         self.path_row = '%s/tr[position() > 1]' % self.path_table
         self.precedential = 'Published'
         self.court = 'slipopinion'
-        self.running_back_scraper = False
         self.headers = False
         self.url = False
         self.headers = []
         self.cases = []
 
-    def _get_current_term(self):
+    @staticmethod
+    def _get_current_term():
         """The URLs for SCOTUS correspond to the term, not the calendar.
 
         The terms kick off on the first Monday of October, so we use October 1st
@@ -55,7 +55,7 @@ class Site(OpinionSite):
             return today.strftime('%y')
 
     def _download(self, request_dict={}):
-        if self.method != 'LOCAL' and not self.running_back_scraper:
+        if self.method != 'LOCAL':
             self.set_url()
         html = super(Site, self)._download(request_dict)
         self.extract_cases_from_html(html)
@@ -125,9 +125,6 @@ class Site(OpinionSite):
         return [self.precedential] * len(self.cases)
 
     def _download_backwards(self, d):
-        yy = str(d if d >= 10 else '0{}'.format(d))
-        logger.info("Running backscraper for year: 20%s" % yy)
-        self.running_back_scraper = True
-        self.set_url()
-        self.url = self.url.replace(self.yy, yy)
+        self.yy = str(d if d >= 10 else '0{}'.format(d))
+        logger.info("Running backscraper for year: 20%s" % self.yy)
         self.html = self._download()
