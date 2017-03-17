@@ -18,12 +18,19 @@ from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
+    """If you discover new examples that failed the
+    regex below, please add them to the test_mass
+    method in test_everything.py
+    """
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.mass.gov/courts/court-info/sjc/about/reporter-of-decisions/opinions.xml'
         self.court_id = self.__module__
         self.court_identifier = 'SJC'
-        self.regex = "(.*)\s+\((SJC[-\s]+\d+(?:,?;?\s(SJC\s)?\d+)*)\)\s+\((.+)\)"
+        # If you discover new examples that failed the
+        # regex below, please add them to the test_mass
+        # method in test_everything.py
+        self.regex = "(.*)\s+\((SJC[-\s]+\d+(?:,?;?\s(SJC\s)?\d+)*)\)"
         self.date_group = 4
         self.set_local_variables()
 
@@ -31,6 +38,7 @@ class Site(OpinionSite):
         self.grouping_regex = re.compile(self.regex)
         self.base_path = "//title[not(contains(., 'List of Un')) and contains(., '%s')]" % self.court_identifier
         self.court_path = "%s//text()[contains(., '(%s')]" % (self.base_path, self.court_identifier)
+        self.date_path = "%s/../../published/text()" % self.court_path
 
     def _get_case_names(self):
         names = []
@@ -44,11 +52,16 @@ class Site(OpinionSite):
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
-        dates = []
-        for s in self.html.xpath(self.court_path):
-            date_string = self.grouping_regex.search(s).group(self.date_group)
-            dates.append(convert_date_string(date_string))
-        return dates
+        """We were previously extracting dates from the link title text
+        but massappct examples started popping up that did not include
+        a date in the title text. We are not sure why the court is even
+        including the date in the title text when their XML also includes
+        a <published> tag. For now we are relying on the date in the
+        <published> tag, as parsing this is easier than using complex
+        regular expressions and relying on the court to repond if/when
+        dates are missing in the titles.
+        """
+        return [convert_date_string(s.strip()) for s in self.html.xpath(self.date_path)]
 
     def _get_docket_numbers(self):
         dockets = []
