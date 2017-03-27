@@ -140,7 +140,11 @@ class FreeOpinionReport(object):
                 logger.error("Unable to download PDF. PDF content was placed "
                              "directly in HTML. URL: %s, caseid: %s" %
                              (url, pacer_case_id))
-                return None
+            else:
+                logger.error("Unable to download PDF. PDF not served as binary "
+                             "data and unable to find iframe src attribute. "
+                             "URL: %s, caseid: %s" % (url, pacer_case_id))
+            return None
 
         r = self.session.get(iframe_src, timeout=timeout)
         if is_pdf(r):
