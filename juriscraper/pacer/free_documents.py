@@ -208,7 +208,7 @@ class FreeOpinionRow(object):
 
     def __str__(self):
         return '<FreeOpinionRow in %s>\n%s' % (self.court_id,
-                                               tostring(self.element))
+                                               self.__dict__)
 
     def _get_column_count(self):
         return len(self.element.xpath('./td'))
