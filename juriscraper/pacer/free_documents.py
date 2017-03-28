@@ -211,8 +211,14 @@ class FreeOpinionRow(object):
         self.cause = self.get_cause()
 
     def __str__(self):
-        return '<FreeOpinionRow in %s>\n%s' % (self.court_id,
-                                               self.__dict__)
+        return '<FreeOpinionRow in %s>\n%s' % (self.court_id, {
+            'pacer_case_id': self.pacer_case_id,
+            'docket_number': self.docket_number,
+            'case_name': self.case_name,
+            'date_filed': self.date_filed,
+            'pacer_doc_id': self.pacer_doc_id,
+            'document_number': self.document_number,
+        })
 
     def _get_column_count(self):
         return len(self.element.xpath('./td'))
