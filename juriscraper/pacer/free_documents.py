@@ -1,6 +1,3 @@
-from dateutil.rrule import rrule, DAILY
-from lxml.html import tostring
-
 from juriscraper.lib.date_utils import make_date_range_tuples
 from juriscraper.lib.html_utils import (
     set_response_encoding, clean_html, fix_links_in_lxml_tree,
@@ -309,7 +306,14 @@ class FreeOpinionRow(object):
                 # No case name, but a docket number is provided.
                 return "Case name unknown"
         else:
-            return cell.xpath('.//b')[0].text_content()
+            try:
+                return cell.xpath('.//b')[0].text_content()
+            except IndexError:
+                logger.warn("Unable to get case name for %s in %s." % (
+                    self.docket_number,
+                    self.court_id,
+                ))
+                return "Case name unknown"
 
     def get_date_filed(self):
         if self._sort_order == 'case_number':
