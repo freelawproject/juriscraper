@@ -72,10 +72,10 @@ class Site(OpinionSite):
 
     @staticmethod
     def _return_dates(html_tree):
-        path = "//h1/text()|//h2/text()"
+        path = "//h1|//h2"
         dates = []
-        text = html_tree.xpath(path)[0]
-        case_date = convert_date_string(text.strip())
+        text = html_tree.xpath(path)[0].text_content().strip()
+        case_date = convert_date_string(text)
         dates.extend([case_date] * int(html_tree.xpath("count(//th//a[contains(., '/')])")))
         return dates
 
