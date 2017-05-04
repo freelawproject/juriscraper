@@ -25,6 +25,7 @@ class PacerSession(requests.Session):
         """
         super(PacerSession, self).__init__()
         self.headers['User-Agent'] = 'Juriscraper'
+        self.headers['Referer'] = 'https://external'  # For CVE-001-FLP.
         self.verify = False
 
         if pacer_token:
