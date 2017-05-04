@@ -3,15 +3,10 @@
 # History:
 #  - 2013-08-03: Created.
 #  - 2014-08-05: Updated by mlr.
-
-import re
-from lxml import html
-
-import time
-from datetime import date
+#  - 2017-05-03: arderyp fixed new bad html use case
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import titlecase, convert_date_string
 
 
 class Site(OpinionSite):
@@ -22,41 +17,33 @@ class Site(OpinionSite):
         self.table = '1'  # Used as part of the paths to differentiate between appellate and supreme
 
     def _get_download_urls(self):
-        # ignore <a> elements with empty text
-        path = '//*[@id="content2col"]/table[%s]/tr/td[3]//a[text()]/@href' % self.table
-        return list(self.html.xpath(path))
+        """Court has bad html in some cases, so we
+        need to iterate over each cell and extract
+        the first href from an anchor with text content
+        """
+        urls = []
+        path = '//*[@id="content2col"]/table[%s]/tr/td[3]' % self.table
+        for cell in self.html.xpath(path):
+            url_list = cell.xpath('.//a[text()]/@href')
+            if url_list:
+                urls.append(url_list[0])
+        return urls
 
     def _get_case_names(self):
-        path = '//*[@id="content2col"]/table[%s]/tr/td[3]//a/text()[1]' % self.table
-        return [titlecase(t.upper()) for t in self.html.xpath(path)]
+        titles = []
+        path = '//*[@id="content2col"]/table[%s]/tr/td[3][.//a]' % self.table
+        for element in self.html.xpath(path):
+            title = ' '.join(element.text_content().upper().split())
+            titles.append(titlecase(title))
+        return titles
 
     def _get_case_dates(self):
-        dates = []
         path = ('//*[@id="content2col"]/table[%s]/tr[.//a]/td[1]//text()' % self.table)
-        for s in self.html.xpath(path):
-            s = s.strip()
-            s = re.sub(r'[.,]', '', s)
-            s = s.replace('Sept', 'Sep')
-            date_formats = ['%b %d %Y', '%B %d %Y']
-            for format in date_formats:
-                try:
-                    dates.append(date.fromtimestamp(time.mktime(time.strptime(s, format))))
-                    # This break is necessary for a funny reason. 11 months out of the year, only one of the
-                    # date_formats will match and things will work smoothly. In May, however, %b == 'May' as
-                    # does %B. When that happens, both date formats match, and you get double metadata. This
-                    # break takes us out of this inner for loop as soon as we have a match, so the next
-                    # format can't be attempted. Yikes, dates always have one more tricky thing.
-                    break
-                except ValueError:
-                    pass
-        return dates
+        return [convert_date_string(d.strip()) for d in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
 
     def _get_docket_numbers(self):
         path = ('//*[@id="content2col"]/table[%s]/tr[.//a]/td[2]' % self.table)
-        docket_numbers = []
-        for cell in self.html.xpath(path):
-            docket_numbers.append(html.tostring(cell, method='text', encoding='unicode'))
-        return docket_numbers
+        return [cell.text_content() for cell in self.html.xpath(path)]
