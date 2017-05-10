@@ -110,7 +110,7 @@ class FreeOpinionReport(object):
         timeout = (60, 300)
         url = make_doc1_url(self.court_id, pacer_document_number, True)
         data = {
-            'caseid': pacer_case_id,
+            'case_id': pacer_case_id,
             'got_receipt': '1',
         }
 
