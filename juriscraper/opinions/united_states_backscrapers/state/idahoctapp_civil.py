@@ -14,7 +14,7 @@ class Site(OpinionSite):
         self.url = 'http://www.isc.idaho.gov/opinions/cacivil.htm'
         self.court_id = self.__module__
 
-    def tweak_request_object(self):
+    def tweak_response_object(self):
         """
         This state uses an HTTP header to indicate an encoding of UTF-8,
         but the encoding is actually ISO-8859-1, as indicated in the HTML
@@ -22,7 +22,7 @@ class Site(OpinionSite):
         many unknown characters are displayed to the user. Setting the
         character encoding manually fixes the issue.
         """
-        self.request['request'].encoding = 'ISO-8859-1'
+        self.request['response'].encoding = 'ISO-8859-1'
 
     def _get_case_names(self):
         case_names = []

@@ -117,7 +117,7 @@ class AbstractSite(object):
         self._make_hash()
         return self
 
-    def tweak_request_object(self):
+    def tweak_response_object(self):
         """
         Does nothing, but provides a hook that allows inheriting objects to
         tweak the requests object if necessary.
@@ -286,8 +286,8 @@ class AbstractSite(object):
             self._request_url_post(self.url)
         elif self.method == 'LOCAL':
             self._request_url_mock(self.url)
-        self._post_process_request()
-        return self._return_request_text_object()
+        self._post_process_response()
+        return self._return_response_text_object()
 
     def _process_request_parameters(self, parameters={}):
         """Hook for processing injected parameter overrides"""
@@ -302,7 +302,7 @@ class AbstractSite(object):
         values
         """
         self.request['url'] = url
-        self.request['request'] = self.request['session'].get(
+        self.request['response'] = self.request['session'].get(
             url,
             headers=self.request['headers'],
             verify=self.request['verify'],
@@ -313,7 +313,7 @@ class AbstractSite(object):
     def _request_url_post(self, url):
         """Execute POST request and assign appropriate request dictionary values"""
         self.request['url'] = url
-        self.request['request'] = self.request['session'].post(
+        self.request['response'] = self.request['session'].post(
             url,
             headers=self.request['headers'],
             verify=self.request['verify'],
@@ -325,23 +325,23 @@ class AbstractSite(object):
     def _request_url_mock(self, url):
         """Execute mock request, used for testing"""
         self.request['url'] = url
-        self.request['request'] = MockRequest(url=self.url).get()
+        self.request['response'] = MockRequest(url=self.url).get()
 
-    def _post_process_request(self):
-        """Cleanup to request object"""
-        self.tweak_request_object()
-        self.request['request'].raise_for_status()
-        set_response_encoding(self.request['request'])
+    def _post_process_response(self):
+        """Cleanup to response object"""
+        self.tweak_response_object()
+        self.request['response'].raise_for_status()
+        set_response_encoding(self.request['response'])
 
-    def _return_request_text_object(self):
-        if self.request['request']:
-            if 'json' in self.request['request'].headers.get('content-type', ''):
-                return self.request['request'].json()
+    def _return_response_text_object(self):
+        if self.request['response']:
+            if 'json' in self.request['response'].headers.get('content-type', ''):
+                return self.request['response'].json()
             else:
                 if six.PY2:
-                    payload = self.request['request'].text
+                    payload = self.request['response'].text
                 else:
-                    payload = str(self.request['request'].content)
+                    payload = str(self.request['response'].content)
 
                 text = self._clean_text(payload)
                 html_tree = self._make_html_tree(text)
@@ -352,8 +352,8 @@ class AbstractSite(object):
     def _get_html_tree_by_url(self, url, parameters={}):
         self._process_request_parameters(parameters)
         self._request_url_get(url)
-        self._post_process_request()
-        tree = self._return_request_text_object()
+        self._post_process_response()
+        tree = self._return_response_text_object()
         tree.make_links_absolute(url)
         return tree
 

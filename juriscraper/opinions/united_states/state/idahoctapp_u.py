@@ -30,11 +30,11 @@ class Site(OpinionSite):
     def _get_precedential_statuses(self):
         return ["Unpublished"] * len(self.case_names)
 
-    def tweak_request_object(self):
+    def tweak_response_object(self):
         """
         Idaho does not set their encoding properly.
         """
-        self.request['request'].encoding = 'UTF-8'
+        self.request['response'].encoding = 'UTF-8'
 
     def _get_case_names(self):
         case_names = []
