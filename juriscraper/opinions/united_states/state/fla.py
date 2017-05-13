@@ -7,22 +7,23 @@
 
 import re
 from lxml import html
-from datetime import date
 
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
-
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.year = date.today().year
         self.regex = re.compile("(S?C\d+-\d+)(.*)")
-        self.base_path = "//h2[contains(., '{y}')]".format(y=self.year)
-        self.back_scrape_iterable = range(1999, 2013)
+        self.regex_date = re.compile(r'(?:.*\s)?(\w+\s\d+,\s\d{4})(?:.*)?')
         self.url = 'http://www.floridasupremecourt.org/decisions/opinions.shtml'
+
+    def _download(self, request_dict={}):
+        html = super(Site, self)._download(request_dict)
+        self.base_path = "//h2[contains(., '%s')]" % self.extract_year_from_h1(html)
+        return html
 
     def _get_case_names(self):
         path = '{base}/text()/following::ul[1]//li' \
@@ -61,9 +62,9 @@ class Site(OpinionSite):
         case_dates = []
         for e in self.html.xpath(self.base_path):
             text = e.text_content()
-            date_string = text.replace('Releases for', '').strip()
-            if 'No opinions released' in date_string:
+            if 'No opinions released' in text:
                 continue
+            date_string = self.regex_date.search(text).group(1)
             count = 0
             for a in e.xpath('./following::ul[1]//li//a[not(contains(., "Notice"))][not(contains(., "Rehearing Order"))]'):
                 try:
@@ -92,3 +93,13 @@ class Site(OpinionSite):
             except AttributeError:
                 pass
         return docket_numbers
+
+    def extract_year_from_h1(self, html):
+        """For testability with example files from previous years,
+        we can't use the current year in the base_path search, and
+        instead need to extract the year from the pages <h1> tag.
+        This is also handy early in the calendar year if/when the
+        court is publishing new opinions for the end of the previous
+        year
+        """
+        return html.xpath('//h1')[0].text_content().split()[3]
