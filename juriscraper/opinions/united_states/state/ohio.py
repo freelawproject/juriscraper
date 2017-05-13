@@ -60,15 +60,17 @@ class Site(OpinionSite):
             ).click()
 
             # Year drop down...
-            driver.find_element_by_xpath(
-                "//select[@id='MainContent_ddlDecidedYear']"
-                "/option[@value='{year}']".format(year=self.year)
-            ).click()
+            yearDropDownId = 'MainContent_ddlDecidedYear'
+            yearDropDownPath = "//select[@id='{id}']/option[@value='%s']" % self.year
+            yearDropdownPaths = [
+                yearDropDownPath.format(id=yearDropDownId),             # Legacy examples
+                yearDropDownPath.format(id=yearDropDownId + 'Min'),     # current (2017)
+            ]
+            driver.find_element_by_xpath(' | '.join(yearDropdownPaths)).click()
 
             # Hit submit
-            driver.find_element_by_xpath(
-                "//input[@id='MainContent_btnSubmit']"
-            ).click()
+            submitPath = "//input[@id='MainContent_btnSubmit']"
+            driver.find_element_by_xpath(submitPath).click()
 
             # Selenium doesn't give us the actual code, we have to hope.
             self.status = 200
