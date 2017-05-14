@@ -7,9 +7,11 @@
 
 import re
 from lxml import html
+from datetime import datetime
 
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.AbstractSite import InsanityException
 
 
 class Site(OpinionSite):
@@ -102,4 +104,13 @@ class Site(OpinionSite):
         court is publishing new opinions for the end of the previous
         year
         """
-        return html.xpath('//h1')[0].text_content().split()[3]
+        year_string = html.xpath('//h1')[0].text_content().split()[3]
+        # Basic validation of year
+        if len(year_string) != 4 or not year_string.startswith('20'):
+            raise InsanityException('Extracted year "%s") appears to be invalid' % year_string)
+        # If running live scrape, year should always be this year or last year
+        if self.method != 'LOCAL':
+            this_year = datetime.today().year
+            if int(year_string) not in [this_year, this_year - 1]:
+                raise InsanityException('Year ("%s") too far in the future or past' % year_string)
+        return year_string
