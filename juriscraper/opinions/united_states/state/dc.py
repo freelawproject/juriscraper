@@ -5,10 +5,8 @@ Author: V. David Zvenyach
 Date created:2014-02-21
 """
 
-import time
-from datetime import date
-
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -16,18 +14,23 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://www.dccourts.gov/internet/opinionlocator.jsf'
+        self.base_path = '//table//tr[not(contains(td[2]/span/text(), "NO OPINIONS"))]'
 
     def _get_download_urls(self):
-        return [t for t in self.html.xpath('//table//tr/td[1]/a/@href')]
+        path = '%s/td[1]/a/@href' % self.base_path
+        return [href for href in self.html.xpath(path)]
 
     def _get_case_names(self):
-        return [t for t in self.html.xpath('//table//tr/td[2]/text()')]
+        path = '%s/td[2]' % self.base_path
+        return [cell.text_content() for cell in self.html.xpath(path)]
 
     def _get_case_dates(self):
-        return [date.fromtimestamp(time.mktime(time.strptime(date_string, '%b %d, %Y'))) for date_string in self.html.xpath('//table//tr/td[3]/text()')]
+        path = '%s/td[3]' % self.base_path
+        return [convert_date_string(cell.text_content()) for cell in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        return [t for t in self.html.xpath('//table//tr/td[1]/a/text()')]
+        path = '%s/td[1]/a' % self.base_path
+        return [cell.text_content() for cell in self.html.xpath(path)]
