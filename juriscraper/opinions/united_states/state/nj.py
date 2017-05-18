@@ -1,49 +1,90 @@
-# Author: Krist Jin
-# Reviewer: mlr
-# History:
-#  - 2013-08-03: Created.
-#  - 2014-08-05: Updated by mlr.
-#  - 2017-05-03: arderyp fixed new bad html use case
-
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import titlecase, convert_date_string
+from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.AbstractSite import InsanityException
 
 
 class Site(OpinionSite):
+    """This court provides a json endpoint!
+    How fun. Their single json endpoint dumps
+    all of the cases into the following groupings:
+        - Supreme
+        - Published_Appellate
+        - Unpublished_Appellate
+        - Published_tax
+        - Unpublished_Tax
+        - Unpublished_Trial
+        
+    Human web interface: http://www.judiciary.state.nj.us/attorneys/opinions.html#Supreme
+    """
+
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://www.judiciary.state.nj.us/opinions/index.htm'
-        self.table = '1'  # Used as part of the paths to differentiate between appellate and supreme
+        self.base_url = 'http://www.judiciary.state.nj.us/attorneys/assets'
+        self.url = '%s/js/objects/opinions/op2017.json' % self.base_url
+        self.case_types = ['Supreme']
+
+    def tweak_response_object(self):
+        """Court is irresponsibly not returning valid json content
+        type header, so we force it here. As a result, the self.html
+        object will be a dict of the parsed json data.
+        """
+        self.request['response'].headers['content-type'] = 'application/json'
 
     def _get_download_urls(self):
-        """Court has bad html in some cases, so we
-        need to iterate over each cell and extract
-        the first href from an anchor with text content
-        """
         urls = []
-        path = '//*[@id="content2col"]/table[%s]/tr/td[3]' % self.table
-        for cell in self.html.xpath(path):
-            url_list = cell.xpath('.//a[text()]/@href')
-            if url_list:
-                urls.append(url_list[0])
+        for type in self.case_types:
+            for opinion in self.html[type]:
+                # They don't have uniform keys across all data, which is... odd
+                path = opinion['DocumentURL'] if 'DocumentURL' in opinion else opinion['Document']
+                urls.append(self.get_absolute_opinion_path(path, type))
         return urls
 
     def _get_case_names(self):
-        titles = []
-        path = '//*[@id="content2col"]/table[%s]/tr/td[3][.//a]' % self.table
-        for element in self.html.xpath(path):
-            title = ' '.join(element.text_content().upper().split())
-            titles.append(titlecase(title))
-        return titles
+        names = []
+        for type in self.case_types:
+            names.extend([case['Title'] for case in self.html[type]])
+        return names
 
     def _get_case_dates(self):
-        path = ('//*[@id="content2col"]/table[%s]/tr[.//a]/td[1]//text()' % self.table)
-        return [convert_date_string(d.strip()) for d in self.html.xpath(path)]
+        dates = []
+        for type in self.case_types:
+            dates.extend([convert_date_string(case['PublishDate']) for case in self.html[type]])
+        return dates
 
     def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
+        statuses = []
+        for type in self.case_types:
+            status = 'Unpublished' if type.startswith('Unpublished') else 'Published'
+            statuses.extend([status] * len(self.html[type]))
+        return statuses
 
     def _get_docket_numbers(self):
-        path = ('//*[@id="content2col"]/table[%s]/tr[.//a]/td[2]' % self.table)
-        return [cell.text_content() for cell in self.html.xpath(path)]
+        dockets = []
+        for type in self.case_types:
+            dockets.extend([case['OpinionID'] for case in self.html[type]])
+        return dockets
+
+    def get_absolute_opinion_path(self, suffix, type):
+        """Determine the absolute path given the file suffix in the
+        json object and the opinion type.  This is necessary because
+        the course does not return standardized data objects.
+        """
+        type_parts = type.lower().split('_')
+        type_parts_length = len(type_parts)
+        if type_parts_length == 1:
+            status = False
+            type = type_parts[0].lower()
+        elif type_parts_length == 2:
+            status = type_parts[0].lower()
+            type = type_parts[1].lower()
+        else:
+            raise InsanityException(
+                'Unrecognized type "%s", this should never happen' % type
+            )
+        if not suffix.startswith(type):
+            if status:
+                suffix = '%s/%s/%s' % (type, status, suffix)
+            else:
+                suffix = '%s/%s' % (type, suffix)
+        return '%s/opinions/%s' % (self.base_url, suffix)
