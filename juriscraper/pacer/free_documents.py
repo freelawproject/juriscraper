@@ -1,11 +1,13 @@
-from juriscraper.lib.date_utils import make_date_range_tuples
-from juriscraper.lib.html_utils import (
+from __future__ import absolute_import
+
+from ..lib.date_utils import make_date_range_tuples
+from ..lib.html_utils import (
     set_response_encoding, clean_html, fix_links_in_lxml_tree,
     get_html_parsed_text
 )
-from juriscraper.lib.log_tools import make_default_logger
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.pacer.utils import (
+from ..lib.log_tools import make_default_logger
+from ..lib.string_utils import convert_date_string
+from ..pacer.utils import (
     get_pacer_case_id_from_docket_url, make_doc1_url,
     get_pacer_doc_id_from_doc1_url, get_court_id_from_url,
     reverse_goDLS_function, is_pdf

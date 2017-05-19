@@ -1,4 +1,4 @@
-from juriscraper.lib.log_tools import make_default_logger
+from ..lib.log_tools import make_default_logger
 
 logger = make_default_logger()
 

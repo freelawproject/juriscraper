@@ -1,11 +1,8 @@
-"""
-Functions for Authenticating with PACER
-"""
 import re
 import requests
-
-from juriscraper.lib.log_tools import make_default_logger
 from requests.packages.urllib3 import exceptions
+
+from ..lib.log_tools import make_default_logger
 
 logger = make_default_logger()
 
