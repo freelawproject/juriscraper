@@ -4,7 +4,7 @@ Court Short Name: Texas Attorney General
 """
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.AbstractSite import InsanityException
+from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import convert_date_string
 
 

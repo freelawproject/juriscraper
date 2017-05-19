@@ -10,6 +10,7 @@ import unittest
 import vcr
 
 from . import TESTS_ROOT
+from juriscraper.lib.exceptions import SlownessException
 from juriscraper.lib.importer import build_module_list
 from juriscraper.lib.date_utils import (
     parse_dates, quarter, is_first_month_in_quarter, fix_future_year_typo,
@@ -18,15 +19,11 @@ from juriscraper.lib.string_utils import (
     clean_string, fix_camel_case, force_unicode, harmonize, titlecase,
     CaseNameTweaker, convert_date_string, normalize_dashes, split_date_range_string
 )
-from juriscraper.opinions.united_states.state import alaska, colo, mass, massappct, nh, pa
+from juriscraper.opinions.united_states.state import colo, mass, massappct, \
+    nh, pa
 from juriscraper.oral_args.united_states.federal_appellate import ca6
 
 vcr = vcr.VCR(cassette_library_dir=os.path.join(TESTS_ROOT, 'fixtures/cassettes'))
-
-
-class SlownessException(Exception):
-    def __init__(self, message):
-        Exception.__init__(self, message)
 
 
 class DateTest(unittest.TestCase):

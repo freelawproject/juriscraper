@@ -10,8 +10,8 @@ Date created: 2013-08-10
 import re
 from datetime import datetime
 
-from juriscraper.AbstractSite import InsanityException
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import convert_date_string
 
 
@@ -92,10 +92,9 @@ class Site(OpinionSite):
         if self.previous_date:
             return self.previous_date
 
-        raise InsanityException(
-            'Could not parse date from string, and no previous date to fall '
-            'back on: "%s"' % text_list
-        )
+        raise InsanityException('Could not parse date from string, and no '
+                                'previous date to fall back on: "%s"' %
+                                text_list)
 
     @staticmethod
     def parse_name_from_text(text_list):

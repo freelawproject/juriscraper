@@ -12,8 +12,8 @@ from lxml import html
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.AbstractSite import InsanityException
 
 
 class Site(OpinionSite):

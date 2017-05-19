@@ -2,6 +2,7 @@ import re
 import requests
 from requests.packages.urllib3 import exceptions
 
+from juriscraper.lib.exceptions import PacerLoginException
 from ..lib.log_tools import make_default_logger
 
 logger = make_default_logger()
@@ -162,17 +163,3 @@ def _login_training(court_id, username, password):
         return PacerSession(pacer_token=m.group(1))
 
     raise PacerLoginException('could not create new training PacerSession')
-
-
-class PacerLoginException(Exception):
-    """Raised when the system cannot authenticate with PACER"""
-
-    def __init__(self, message):
-        Exception.__init__(self, message)
-
-
-class BadPacerCredentials(Exception):
-    """Raised when the credentials failed to authenticate the client to PACER"""
-
-    def __init__(self, message):
-        Exception.__init__(self, message)

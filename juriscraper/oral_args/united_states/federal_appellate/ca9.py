@@ -11,9 +11,9 @@ History:
 
 from datetime import date, datetime
 
-from juriscraper.AbstractSite import InsanityException
 from juriscraper.DeferringList import DeferringList
 from juriscraper.OralArgumentSite import OralArgumentSite
+from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import titlecase
 
 

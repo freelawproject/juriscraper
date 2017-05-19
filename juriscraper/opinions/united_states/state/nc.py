@@ -12,9 +12,10 @@ from datetime import date
 from datetime import datetime
 import traceback
 
-from juriscraper.AbstractSite import InsanityException
 from juriscraper.OpinionSite import OpinionSite
 from lxml import html
+
+from juriscraper.lib.exceptions import InsanityException
 
 
 class Site(OpinionSite):

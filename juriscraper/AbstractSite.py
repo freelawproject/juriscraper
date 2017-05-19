@@ -6,6 +6,8 @@ import six
 
 from datetime import date, datetime
 from requests.adapters import HTTPAdapter
+
+from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.test_utils import MockRequest
 from juriscraper.lib.html_utils import (
     get_html_parsed_text, set_response_encoding, clean_html,
@@ -18,11 +20,6 @@ from juriscraper.lib.string_utils import (
 )
 
 logger = make_default_logger()
-
-
-class InsanityException(Exception):
-    def __init__(self, message):
-        Exception.__init__(self, message)
 
 
 class AbstractSite(object):

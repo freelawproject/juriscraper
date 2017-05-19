@@ -20,7 +20,7 @@ from selenium.common.exceptions import NoSuchElementException
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.AbstractSite import InsanityException
+from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 
 

@@ -1,7 +1,8 @@
 from datetime import date
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.AbstractSite import logger, InsanityException
+from juriscraper.AbstractSite import logger
+from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import convert_date_string
 
 

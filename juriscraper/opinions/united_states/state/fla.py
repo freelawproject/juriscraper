@@ -10,8 +10,8 @@ from lxml import html
 from datetime import datetime
 
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.AbstractSite import InsanityException
 
 
 class Site(OpinionSite):

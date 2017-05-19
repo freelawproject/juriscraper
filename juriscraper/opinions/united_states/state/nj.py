@@ -1,6 +1,6 @@
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.AbstractSite import InsanityException
 
 
 class Site(OpinionSite):
@@ -79,9 +79,8 @@ class Site(OpinionSite):
             status = type_parts[0].lower()
             type = type_parts[1].lower()
         else:
-            raise InsanityException(
-                'Unrecognized type "%s", this should never happen' % type
-            )
+            raise InsanityException('Unrecognized type "%s", this should never '
+                                    'happen' % type)
         if not suffix.startswith(type):
             if status:
                 suffix = '%s/%s/%s' % (type, status, suffix)
