@@ -30,14 +30,16 @@ class Site(OpinionSite):
         # If you discover new examples that failed the
         # regex below, please add them to the test_mass
         # method in test_everything.py
-        self.regex = "(.*)\s+\((SJC[-\s]+\d+(?:,?;?\s(SJC\s)?\d+)*)\)"
+        self.regex = "(.*)\s+\((%s[-\s]+\d+(?:,?;?\s(%s\s)?\d+)*)\)" % (self.court_identifier, self.court_identifier)
         self.date_group = 4
         self.set_local_variables()
 
     def set_local_variables(self):
         self.grouping_regex = re.compile(self.regex)
-        self.base_path = "//title[not(contains(., 'List of Un')) and contains(., '%s')]" % self.court_identifier
-        self.court_path = "%s//text()[contains(., '(%s')]" % (self.base_path, self.court_identifier)
+        pattern_base_path = "//title[not(contains(., 'List of Un')) and contains(., '%s ') or contains(., '%s-')]"
+        pattern_court_path = "%s//text()[contains(., '(%s ') or contains(., '(%s-')]"
+        self.base_path = pattern_base_path % (self.court_identifier, self.court_identifier)
+        self.court_path = pattern_court_path % (self.base_path, self.court_identifier, self.court_identifier)
         self.date_path = "%s/../../published/text()" % self.court_path
 
     def _get_case_names(self):
