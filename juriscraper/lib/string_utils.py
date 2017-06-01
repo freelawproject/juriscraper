@@ -196,7 +196,6 @@ def _uppercase_word(word):
     return CAPFIRST.sub(lambda m: m.group(0).upper(), word)
 
 
-
 def fix_camel_case(s):
     """Sometimes courts provide nasty camel-cased content instead of real
     words. This code attempts to fix that."""
@@ -465,7 +464,13 @@ def trunc(s, length, ellipsis=None):
 
 
 def convert_date_string(date_string, fuzzy=False):
-    """Sanitize date string and convert into standard date object"""
+    """Sanitize date string and convert into standard date object
+    
+    :param date_string: A string to convert to a datetime object. 
+    :param fuzzy: whether fuzzy string matching should be used, as defined by
+    dateutil.
+    :return: datetime object
+    """
     date_string = date_string.replace('(', '')
     date_string = date_string.replace(')', '')
 
