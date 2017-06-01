@@ -15,6 +15,8 @@ from juriscraper.lib.importer import build_module_list
 from juriscraper.lib.date_utils import (
     parse_dates, quarter, is_first_month_in_quarter, fix_future_year_typo,
     make_date_range_tuples)
+from juriscraper.lib.judge_parsers import split_name_title, \
+    normalize_judge_names
 from juriscraper.lib.string_utils import (
     clean_string, fix_camel_case, force_unicode, harmonize, titlecase,
     CaseNameTweaker, convert_date_string, normalize_dashes, split_date_range_string
@@ -209,6 +211,46 @@ class ScraperExampleTest(unittest.TestCase):
             # Someday, this line of code will be run. That day is not today.
             print("\nNo speed warnings detected. That's great, keep up the " \
                   "good work!")
+
+
+class JudgeParsingTest(unittest.TestCase):
+    def test_title_name_splitter(self):
+        pairs = [{
+            'q': 'Magistrate Judge George T. Swartz',
+            'a': ('George T. Swartz', 'mag'),
+        },
+            {
+                'q': 'J. Frederick Motz',
+                'a': ('Frederick Motz', 'jud'),
+            },
+            {
+                'q': 'Honorable Susan W. Wright',
+                'a': ('Susan W. Wright', 'jud'),
+            },
+        ]
+
+        for pair in pairs:
+            self.assertEqual(pair['a'], split_name_title(pair['q']))
+
+    def test_name_normalization(self):
+        pairs = [{
+            'q': 'Michael J Lissner',
+            'a': 'Michael J. Lissner',
+        }, {
+            'q': 'Michael Lissner Jr',
+            'a': 'Michael Lissner Jr.',
+        }, {
+            'q': 'J Michael Lissner',
+            'a': 'Michael Lissner',
+        }, {
+            'q': 'J. Michael J Lissner Jr',
+            'a': 'Michael J. Lissner Jr.',
+        }, {
+            'q': 'J. J. Lissner',
+            'a': 'J. J. Lissner',
+        }]
+        for pair in pairs:
+            self.assertEqual(pair['a'], normalize_judge_names(pair['q']))
 
 
 class StringUtilTest(unittest.TestCase):
