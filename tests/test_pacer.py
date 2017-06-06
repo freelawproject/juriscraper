@@ -1,17 +1,21 @@
-import json
+import jsondate as json
+import mock
 import os
 import time
 import unittest
-from datetime import timedelta, date
 
-import mock
+import requests
+import requests_mock
 import vcr
+from datetime import timedelta, date
+from glob import glob
 from requests import ConnectionError
 
+from juriscraper.lib.exceptions import PacerLoginException
 from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.pacer import DocketReport, FreeOpinionReport
-from juriscraper.pacer.http import login, PacerSession, PacerLoginException
+from juriscraper.pacer.http import login, PacerSession
 from juriscraper.pacer.utils import (
     get_courts_from_json, get_court_id_from_url,
     get_pacer_case_id_from_docket_url, get_pacer_doc_id_from_doc1_url,
@@ -362,6 +366,35 @@ class PacerDocketReportTest(unittest.TestCase):
                               show_terminated_parties=False)
         self.assertNotIn('Rosado', r.text, msg="Got terminated party info but "
                                                "it wasn't requested.")
+
+
+class DocketParseTest(unittest.TestCase):
+    """Lots of docket parsing tests."""
+
+    def setUp(self):
+        self.test_path = os.path.join("tests", "examples", "pacer", "dockets")
+        self.docket_paths = glob(os.path.join(self.test_path, "*.html"))
+        self.session = mock.MagicMock()
+
+    @staticmethod
+    def get_text_from_file(path):
+        with open(path, 'r') as f:
+            return f.read()
+
+    @requests_mock.Mocker()
+    def test_parsers(self, request_mock):
+        """Test all the parsers, faking the network query."""
+        for path in self.docket_paths:
+            court = os.path.basename(path).split('.')[0]
+            report = DocketReport(court, self.session)
+            request_mock.register_uri(requests_mock.ANY, report.url,
+                                      content=self.get_text_from_file(path))
+
+            response = requests.get(report.url)
+            report.parse(response)
+            with open(os.path.join(self.test_path, '%s.json' % court)) as f:
+                j = json.load(f)
+                self.assertEqual(report.data, j)
 
 
 class PacerUtilTest(unittest.TestCase):
