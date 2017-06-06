@@ -138,13 +138,6 @@ class DocketReport(object):
         if self._parties:
             return self._parties
 
-        # party_identifiers = ['Defendant', 'Plaintiff', 'Petitioner',
-        #                      'Respondent', 'Debtor', 'Trustee', 'Mediator',
-        #                      'Creditor Committee', 'Intervenor', 'Claimant']
-        # or_condition = ' or '.join(["contains(.//text(), '%s')" % s for s in
-        #                            party_identifiers])
-        # path = '//td[%s]' % or_condition
-
         # All sibling rows to the rows that identify this as a party table.
         path = ('//tr['
                 '    .//i/b/text() or '  # Bankruptcy
@@ -164,19 +157,28 @@ class DocketReport(object):
                 # Empty or nearly empty row. Press on.
                 continue
 
-            if len(cells) == 1 and cells[0].xpath('.//b'):
-                # It's a party type value.
+            if len(cells) == 1 and cells[0].xpath('.//b[./u]'):
+                # Regular docket - party type value.
                 party = {'type': cells[0].text_content().strip()}
                 continue
+            elif len(cells) == 3 and cells[0].xpath('.//i/b'):
+                # Bankruptcy - party type value.
+                party = {'type': cells[0].xpath('.//i')[0].text_content().strip()}
+
+            name_path = './/b[not(./parent::i)][not(./u)]'
+            is_party_name_cell = (len(cells[0].xpath(name_path)) > 0)
+            if is_party_name_cell:
+                party['name'] = cells[0].xpath(name_path)[0].text_content().strip()
+                party['extra_info'] = '\n'.join(
+                    s.strip() for s in
+                    cells[0].xpath('.//text()[not(./parent::b)]') if
+                    s.strip()
+                )
 
             if len(cells) == 3:
-                party['name'] = cells[0].xpath('.//b')[0].text_content().strip()
-                party['extra_info'] = ''.join(
-                    s.strip() for s in
-                    cells[0].xpath('.//text()[not(./parent::b)]')
-                )
                 party['attorneys'] = self.get_attorneys(cells[2])
-                parties.append(party)
+
+            parties.append(party)
 
         self._parties = parties
         return parties

@@ -1,3 +1,5 @@
+# coding=utf-8
+from __future__ import print_function
 import jsondate as json
 import mock
 import os
@@ -375,6 +377,7 @@ class DocketParseTest(unittest.TestCase):
         self.test_path = os.path.join("tests", "examples", "pacer", "dockets")
         self.docket_paths = glob(os.path.join(self.test_path, "*.html"))
         self.session = mock.MagicMock()
+        self.maxDiff = 7000
 
     @staticmethod
     def get_text_from_file(path):
@@ -385,6 +388,7 @@ class DocketParseTest(unittest.TestCase):
     def test_parsers(self, request_mock):
         """Test all the parsers, faking the network query."""
         for path in self.docket_paths:
+            print("Doing %s..." % path, end='')
             court = os.path.basename(path).split('.')[0]
             report = DocketReport(court, self.session)
             request_mock.register_uri(requests_mock.ANY, report.url,
@@ -394,7 +398,12 @@ class DocketParseTest(unittest.TestCase):
             report.parse(response)
             with open(os.path.join(self.test_path, '%s.json' % court)) as f:
                 j = json.load(f)
-                self.assertEqual(report.data, j)
+                data = report.data
+                # Compare parties first, for easier debugging, then compare
+                # whole objects.
+                self.assertEqual(data['parties'], j['parties'])
+                self.assertEqual(data, j)
+            print("✓")
 
 
 class PacerUtilTest(unittest.TestCase):
