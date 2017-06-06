@@ -15,7 +15,7 @@ from juriscraper.lib.importer import build_module_list
 from juriscraper.lib.date_utils import (
     parse_dates, quarter, is_first_month_in_quarter, fix_future_year_typo,
     make_date_range_tuples)
-from juriscraper.lib.judge_parsers import split_name_title, \
+from juriscraper.lib.judge_parsers import normalize_judge_string, \
     normalize_judge_names
 from juriscraper.lib.string_utils import (
     clean_string, fix_camel_case, force_unicode, harmonize, titlecase,
@@ -230,7 +230,7 @@ class JudgeParsingTest(unittest.TestCase):
         ]
 
         for pair in pairs:
-            self.assertEqual(pair['a'], split_name_title(pair['q']))
+            self.assertEqual(pair['a'], normalize_judge_string(pair['q']))
 
     def test_name_normalization(self):
         pairs = [{

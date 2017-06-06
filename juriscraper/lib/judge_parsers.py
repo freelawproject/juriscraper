@@ -96,8 +96,18 @@ def normalize_judge_names(name):
     return ' '.join(out)
 
 
-def split_name_title(judge):
-    """Split a value from PACER and return the title and name"""
+def normalize_judge_string(judge):
+    """Split a string representing a judge returning their name and title.
+    
+    This code was generated and tested against all judge strings in the RECAP 
+    Archive.
+    
+    :param judge: A string representing a judge, e.g. 
+    :return: A tuple of the judge's name and their normalized position.
+    
+    >>> normalize_judge_string('Honorable Sue W. Wright')
+    ('Sue W. Wright', 'jud')
+    """
     judge = judge.replace(',', '')
     words = judge.lower().split()
 
