@@ -1,14 +1,15 @@
 import re
 from lxml.etree import _ElementStringResult
 
-from juriscraper.lib.judge_parsers import normalize_judge_string
-from juriscraper.lib.string_utils import convert_date_string
 from lxml.html import tostring, fromstring, HtmlElement
 
+from .docket_utils import normalize_party_types
 from ..lib.exceptions import ParsingException
 from ..lib.html_utils import set_response_encoding, clean_html, \
     get_html5_parsed_text, fix_links_in_lxml_tree
+from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
+from ..lib.string_utils import convert_date_string
 from ..lib.utils import previous_and_next
 
 logger = make_default_logger()
@@ -16,7 +17,7 @@ logger = make_default_logger()
 
 class DocketReport(object):
 
-    case_name_regex = re.compile(r"(.*\bv\.\s.*)")
+    case_name_regex = re.compile(r"(?:Case\s+title:\s+)?(.*\bv\.\s.*)")
     in_re_regex = re.compile(r"\bIN\s+RE:\s+.*", flags=re.IGNORECASE)
     date_filed_regex = re.compile(r'Date [fF]iled:\s+(.*)')
     date_terminated_regex = re.compile(r'Date [tT]erminated:\s+(.*)')
@@ -28,6 +29,10 @@ class DocketReport(object):
     jury_demand_regex = re.compile(r'Jury Demand:\s+(.*)')
     jurisdiction_regex = re.compile(r'Jurisdiction:\s+(.*)')
     demand_regex = re.compile(r'^Demand:\s+(.*)')
+    # good_party_types_in_ca = re.compile('|'.join([
+    #     r"Administrator", r"Amicus", r"Appellant", r"Appellee", r"Applicant", r"Arbitrator", r"Attorney", r"Claimant", r"Claims.*Agent", r"Creditor Committee", r"Commissioner", r"Complainant", r"Conservator", r"Consol", r"Consolidated", r"Counter", r"Debtor", r"Defendant", r"Intervenor", r"Mediator", r'Movant', r"Ombudsman", r"Parties", r"Petitioner", r"Plaintiff", r"Respondent", r"Trustee",
+    #
+    # ]), flags=re.IGNORECASE)
 
     def __init__(self, court_id, pacer_session):
         self.court_id = court_id
@@ -139,15 +144,17 @@ class DocketReport(object):
             return self._parties
 
         # All sibling rows to the rows that identify this as a party table.
-        path = ('//tr['
-                '    .//i/b/text() or '  # Bankruptcy
-                '    .//b/u/text() or '  # Regular district
-                '    .//b/text()[contains(., "-----")]'  # Adversary proceedings
-                ']/../tr')
+        path = (
+            '//tr['
+            '    .//i/b/text() or '  # Bankruptcy
+            '    .//b/u/text() or '  # Regular district
+            '    .//b/text()[contains(., "-----")]'  # Adversary proceedings
+            ']/../tr'
+        )
         party_rows = self.html_tree.xpath(path)
 
         parties = []
-        for row in party_rows:
+        for prev, row, nxt in previous_and_next(party_rows):
             cells = row.xpath('.//td')
             if len(cells) == 0:
                 # Empty row. Press on.
@@ -157,13 +164,28 @@ class DocketReport(object):
                 # Empty or nearly empty row. Press on.
                 continue
 
-            if len(cells) == 1 and cells[0].xpath('.//b[./u]'):
+            # Handling for CA cases that put non-party info in the party html
+            # table (see cand, 3:09-cr-00418).
+            if cells[0].xpath('.//b/u'):
+                # If a header is followed by a cell that lacks bold text, punt
+                # the header row.
+                if nxt is None or not nxt.xpath('.//b'):
+                    continue
+            elif not row.xpath('.//b'):
+                # If a row has no bold text, we can punt it. The bold normally
+                # signifies the party's name, or the party type. This ignores
+                # the metadata under these sections.
+                continue
+
+            if len(cells) == 1 and cells[0].xpath('.//b/u'):
                 # Regular docket - party type value.
-                party = {'type': cells[0].text_content().strip()}
+                party_str = cells[0].text_content().strip()
+                party = {'type': normalize_party_types(party_str)}
                 continue
             elif len(cells) == 3 and cells[0].xpath('.//i/b'):
                 # Bankruptcy - party type value.
-                party = {'type': cells[0].xpath('.//i')[0].text_content().strip()}
+                party_str = cells[0].xpath('.//i')[0].text_content().strip()
+                party = {'type': normalize_party_types(party_str)}
 
             name_path = './/b[not(./parent::i)][not(./u)]'
             is_party_name_cell = (len(cells[0].xpath(name_path)) > 0)
@@ -244,8 +266,10 @@ class DocketReport(object):
                         attorney['contact'] += clean_atty
                 else:
                     if node.tag == 'i':
-                        # It's a role.
-                        attorney['roles'].append(node.text_content().strip())
+                        role = node.text_content().strip()
+                        if not any([role.lower().startswith(u'bar status'),
+                                    role.lower().startswith(u'designation')]):
+                            attorney['roles'].append(role)
 
                 nxt_is_b_tag = isinstance(nxt, HtmlElement) and nxt.tag == 'b'
                 if nxt is None or nxt_is_b_tag:
