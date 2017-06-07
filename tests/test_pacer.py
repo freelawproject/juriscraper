@@ -375,7 +375,7 @@ class DocketParseTest(unittest.TestCase):
 
     def setUp(self):
         self.test_path = os.path.join("tests", "examples", "pacer", "dockets")
-        self.docket_paths = glob(os.path.join(self.test_path, "*.html"))
+        self.docket_paths = sorted(glob(os.path.join(self.test_path, "*.html")))
         self.session = mock.MagicMock()
         self.maxDiff = 7000
 
@@ -389,14 +389,15 @@ class DocketParseTest(unittest.TestCase):
         """Test all the parsers, faking the network query."""
         for path in self.docket_paths:
             print("Doing %s..." % path, end='')
-            court = os.path.basename(path).split('.')[0]
+            filename = os.path.basename(path).split('.')[0]
+            court = filename.split('_')[0]
             report = DocketReport(court, self.session)
             request_mock.register_uri(requests_mock.ANY, report.url,
                                       content=self.get_text_from_file(path))
 
             response = requests.get(report.url)
             report.parse(response)
-            with open(os.path.join(self.test_path, '%s.json' % court)) as f:
+            with open(os.path.join(self.test_path, '%s.json' % filename)) as f:
                 j = json.load(f)
                 data = report.data
                 # Compare parties first, for easier debugging, then compare
