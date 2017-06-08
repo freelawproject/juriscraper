@@ -154,6 +154,8 @@ class DocketReport(object):
         party_rows = self.html_tree.xpath(path)
 
         parties = []
+        party = {}
+        adversary_proceeding = False
         for prev, row, nxt in previous_and_next(party_rows):
             cells = row.xpath('.//td')
             if len(cells) == 0:
@@ -186,6 +188,13 @@ class DocketReport(object):
                 # Bankruptcy - party type value.
                 party_str = cells[0].xpath('.//i')[0].text_content().strip()
                 party = {'type': normalize_party_types(party_str)}
+            elif len(cells) == 1 and row_text.endswith('------'):
+                # Adversary proceeding - party type value.
+                adversary_proceeding = True
+                party_str = cells[0].text_content().strip()
+                party_str = re.sub('----*', '', party_str).strip()
+                party = {'type': normalize_party_types(party_str)}
+                continue
 
             name_path = './/b[not(./parent::i)][not(./u)]'
             is_party_name_cell = (len(cells[0].xpath(name_path)) > 0)
@@ -200,7 +209,17 @@ class DocketReport(object):
             if len(cells) == 3:
                 party['attorneys'] = self.get_attorneys(cells[2])
 
-            parties.append(party)
+            if party not in parties:
+                # Sometimes there are dups in the docket. Avoid them.
+                parties.append(party)
+
+            if adversary_proceeding:
+                # In adversary proceedings, there are multiple rows under one
+                # party type header. Nuke the bulk of the party dict, except for
+                # the type so that it's ready for the next iteration.
+                party = {'type': party['type']}
+            else:
+                party = {}
 
         self._parties = parties
         return parties
@@ -393,10 +412,10 @@ class DocketReport(object):
 
     def _get_metadata_table_cell_values(self):
         table = self.html_tree.xpath(
-            '//td[contains('
-            '    translate(.//text(), "f", "F"),'  # Match on Date [fF]iled
+            '//td[.//text()[contains('
+            '    translate(., "f", "F"),'  # Match on Date [fF]iled
             '    "Date Filed:"'
-            ')]/ancestor::table[1]'
+            ')]]/ancestor::table[1]'
         )[0]
         cells = table.xpath('.//td')
         strs = []
@@ -414,16 +433,19 @@ class DocketReport(object):
 
     def _get_case_name(self, values):
         if self.is_bankruptcy:
+            # XXX fix this
             pass
         else:
             matches = []
             for v in values:
-                if self.case_name_regex.search(v):
-                    matches.append(v)
-                if self.in_re_regex.search(v):
-                    matches.append(v)
+                m = self.case_name_regex.search(v)
+                if m:
+                    matches.append(m)
+                in_re_m = self.in_re_regex.search(v)
+                if in_re_m:
+                    matches.append(in_re_m)
             if len(matches) == 1:
-                return matches[0]
+                return matches[0].group(1)
             else:
                 raise ParsingException("Unable to get case name.")
 

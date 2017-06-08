@@ -1,0 +1,264 @@
+<html><head><title>Internal CM/ECF Live Database</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script></head><body BGCOLOR=FFFFF0 TEXT=000000 onLoad='SetFocus()'><div class="noprint"><img id="cmecfLogo" class="cmecfLogo" src="/graphics/cmecf-logo.gif" alt="CM/ECF" title=""  /><img src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage" id="helpImage" onClick="CMECF.MainMenu.showHelpPage(''); return false" onMouseOver="CMECF.MainMenu.helpImageOn()" onMouseOut="CMECF.MainMenu.helpImageOff()" /><div id="topmenu" class="yuimenubar"><div class="bd"><ul class="first-of-type"><li class="yuimenubaritem" style="width:9%"><a href='/cgi-bin/iquery.pl'>Q</u>uery</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Reports'>R</u>eports</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Utilities'>U</u>tilities</a></li><li class="yuimenubaritem" style="width:10%"><a href='/cgi-bin/login.pl?logout'>Logout</a></li></ul></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.renderSimpleMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.renderSimpleMenu);}</script><div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript"> 
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;				
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+<TABLE width="100%" align=right BORDER=0 CELLSPACING=5><TR><TD ALIGN=right><h2> <FONT SIZE="3">Sealed Doc(s), LEAD, MEGA, CLAIMS, CONVERTED, Exhibits</FONT></h2></TD></TR></TABLE><BR><BR><BR><CENTER><B><FONT SIZE="+1">U.S. Bankruptcy Court<BR>District of Delaware (Delaware)<BR>Bankruptcy Petition #: 05-10203-MFW</FONT></B></CENTER><TABLE width="100%" BORDER=0 CELLSPACING=1><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><BR><I>Assigned to:</I>       Mary F. Walrath<BR>Chapter          7<BR>Previous chapter 11<BR>Voluntary<BR>Asset <A HREF=/cgi-bin/DktRpt.pl?-</A> <br><div class="noprint"><A HREF='/cgi-bin/qryAscCases.pl?92352'>Show Associated Cases</A></div> <BR><BR>	</FONT></TD>
+	<TD VALIGN=top WIDTH="50%" ALIGN=right><FONT SIZE="+0"><TABLE border=0 cellspacing=0 cellpadding=0 align=center><TR><td align="right" valign="top"><I>Date filed:</I></td><td align="left" valign="top">&nbsp;&nbsp;01/21/2005</td></TR><TR><td align="right" valign="top"><I>Date converted:</I></td><td align="left" valign="top">&nbsp;&nbsp;05/17/2005</td></TR></TABLE>	</FONT></TD>
+</TR>
+</TABLE><BR><FONT SIZE="5"><B></B>
+		</FONT><TABLE width="100%" BORDER=0 CELLSPACING=1><TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>American Business Financial Services, Inc., a Delaware Corporation</B>
+<BR>The Wanamaker Building
+<BR>100 Penn Square East
+<BR>Philadelphia, PA 19107
+<BR>Tax ID / EIN: 87-0418807<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Bonnie Glantz Fatell</B>
+<BR>Blank Rome LLP
+<BR>1201 Market Street, Suite 800
+<BR>Wilmington, DE 19801
+<BR>(302) 425-6423
+<BR>Fax  : (302) 425-6464
+<BR>Email: fatell@blankrome.com
+<BR><I>TERMINATED: 04/11/2006</I><BR><BR><B>Elio Battista, Jr.</B>
+<BR>Blank Rome LLP
+<BR>1201 Market Street
+<BR>Suite 800
+<BR>Wilmington, DE 19801
+<BR>(302) 425-6400
+<BR>Fax  : (302) 425-6464<BR><BR><B>Elizabeth A. Wilburn</B>
+<BR>Blank Rome LLP
+<BR>1201 Market Street
+<BR>Suite 800
+<BR>Wilmington, DE 19801
+<BR>(302) 425-6487
+<BR>Fax  : (302) 425-6464
+<BR>Email: wilburn@blankrome.com<BR><BR><B>Jason W. Staib</B>
+<BR>Blank Rome LLP
+<BR>1201 Market Street
+<BR>Suite 800
+<BR>Wilmington, DE 19801
+<BR>(302) 425-6400
+<BR>Fax  : (302) 425-6464
+<BR>Email: staib@blankrome.com<BR><BR><B>Kathleen Campbell Davis</B>
+<BR>Campbell & Levine LLC
+<BR>800 N. King Street
+<BR>Suite 300
+<BR>Wilmington, DE 19801
+<BR>302-426-1900
+<BR>Fax  : 302-426-9947
+<BR>Email: kdavis@camlev.com<BR><BR><B>Mark J. Packel</B>
+<BR>Blank Rome LLP (account disabled 8/1/07)
+<BR>1201 Market Street
+<BR>Suite 800
+<BR>Wilmington, DE 19801<BR>usa
+<BR>(302) 425-6429
+<BR>Fax  : (302) 425-6464
+<BR><I>TERMINATED: 12/19/2005</I><BR><BR><B>Marla Rosoff Eskin</B>
+<BR>Campbell & Levine, LLC
+<BR>800 King Street
+<BR>Suite 300
+<BR>Wilmington, DE 19801
+<BR>302-426-1900
+<BR>Fax  : 302-426-9947
+<BR><I>TERMINATED: 01/17/2006</I><BR><BR><B>Robert K. Beste, Jr.</B>
+<BR><I>TERMINATED: 01/03/2006</I><BR><BR><B>William E. Chipman, Jr.</B>
+<BR>Landis Rath & Cobb LLC
+<BR>919 North Market Street
+<BR>Suite 1800
+<BR>Wilmington, DE 19801
+<BR>302-467-4437
+<BR>Fax  : 302-467-4450
+<BR>Email: chipman@lrclaw.com
+<BR><I>TERMINATED: 04/25/2007</I><BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Trustee</B></I><BR><B>George L. Miller</B>
+<BR>1628 John F. Kennedy Blvd.
+<BR>Suite 950
+<BR>Philadelphia, PA 19103-2110
+<BR>215-561-0950<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>John T. Carroll, III</B>
+<BR>Cozen O&#039;Connor
+<BR>1201 North Market Street
+<BR>Suite 1400
+<BR>Wilmington, DE 19801
+<BR>302-295-2028
+<BR>Fax  : 215-701-2140
+<BR>Email: jcarroll@cozen.com<BR><BR><B>Charles A. McCauley III</B>
+<BR>Obermayer Rebmann Maxwell & Hippel LLP
+<BR>1000 N. West Street
+<BR>Suite 1200
+<BR>Wilmington, DE 19801
+<BR>302-655-9094
+<BR>Fax  : 302-465-0878
+<BR>Email: charles.mccauley@obermayer.com<BR><BR><B>David Dormont</B>
+<BR>Kaufman, Coren & Ress, P.C.
+<BR>1717 Arch Street,
+<BR>Suite 3710
+<BR>Philadelphia, PA 19103
+<BR>215-735-8700
+<BR>Fax  : 215-735-5170
+<BR>Email: ddormont@kcr-law.com<BR><BR><B>Deirdre M Richards</B>
+<BR>Lamm Rubenstone LLC
+<BR>3600 Horizon Boulevard
+<BR>Suite 200
+<BR>Trevose, PA 19053
+<BR>215-638-9330
+<BR>Fax  : 215-638-2867
+<BR>Email: drichards@lammrubenstone.com
+<BR><I>TERMINATED: 04/06/2009</I><BR><BR><B>Dennis J. Quinn</B>
+<BR><I>TERMINATED: 06/25/2008</I><BR><BR><B>Karen C Bifferato</B>
+<BR>Connolly, Bove, Lodge & Hutz
+<BR>The Nemours Building
+<BR>1007 North Orange Street
+<BR>P.O. Box 2207
+<BR>Wilmington, DE 19899<BR>usa
+<BR>302-888-6221
+<BR>Fax  : 302-658-0380
+<BR>Email: kbifferato@cblh.com<BR><BR><B>Marc J. Phillips</B>
+<BR>Connolly Bove Lodge & Hutz LLP
+<BR>The Nemours Building
+<BR>1007 North Orange Street
+<BR>Wilmington, DE 19801
+<BR>302-658-9141
+<BR>Fax  : 302-658-0380
+<BR>Email: mphillips@cblh.com<BR><BR><B>Rosalie L. Spelman</B>
+<BR>Ciardi & Ciardi P.C.
+<BR>901Market Street
+<BR>Suite 700
+<BR>Wilmington, DE 19801
+<BR>302-472-9039
+<BR>Fax  : 302-397-2828
+<BR>Email: rspelman@ciardilaw.com
+<BR><I>TERMINATED: 04/30/2006</I><BR><BR><B>Shannon D. Leight</B>
+<BR>Ciardi Ciardi & Astin
+<BR>One Commerce Square
+<BR>Suite 1930
+<BR>2005 Market Street
+<BR>Philadelphia, PA 19103
+<BR>215-557-3550
+<BR>Fax  : 215-557-3551
+<BR>Email: sleight@ciardilaw.com<BR><BR><B>Steven M. Coren</B>
+<BR>Kaufman, Coren & Ress, P.C.
+<BR>1717 Arch Street
+<BR>Suite 3710
+<BR>Philadelphia, PA 19103
+<BR>215-735-8700
+<BR>Fax  : 215-735-5170
+<BR>Email: scoren@kcr-law.com<BR><BR><B>Teresa Janine Tabah</B>
+<BR>1617 JFK Blvd, 19th Floor
+<BR>Philadelphia, pa 19103-1895
+<BR>215-665-3101
+<BR>Email: ttabah@comcast.net<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>U.S. Trustee</B></I><BR><B>United States Trustee</B>
+<BR>844 King Street, Room 2207
+<BR>Lockbox &#035;35
+<BR>Wilmington, DE 19899-0035
+<BR>302-573-6491<BR><BR>	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+<TD valign="top" WIDTH="40%" NOWRAP>
+  	                    <font size="+0">&nbsp;</font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Mediator</B></I><BR><B>Ian Connor Bifferato</B>
+<BR>Bifferato Gentilotto LLC
+<BR>800 N. King Street
+<BR>Plaza Level<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Ian Connor Bifferato</B>
+<BR>Bifferato LLC
+<BR>800 N. King Street
+<BR>First Floor
+<BR>Wilmington, DE 19801<BR>usa
+<BR>302 225 7600
+<BR>Fax  : 302 254 5383
+<BR>Email: cbifferato@bifferato.com<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Creditor Committee</B></I><BR><B>Proposed Counsel to the Official Committee of Unsecured Creditors, Inc.</B><BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Dennis A. Meloro</B>
+<BR>Greenberg Traurig
+<BR>The Nemours Building
+<BR>1007 North Orange Street
+<BR>Suite 1200
+<BR>Wilmington, DE 19801
+<BR>302-661-7000
+<BR>Fax  : 302-661-7360
+<BR>Email: bankruptcydel@gtlaw.com<BR><BR><B>Paul D. Brown</B>
+<BR>Greenberg Traurig, LLP
+<BR>The Nemours Building
+<BR>1007 North Orange Street
+<BR>Suite 1200
+<BR>Wilmington, DE 19801
+<BR>302-661-7000
+<BR>Fax  : 302-661-7360<BR><BR><B>Scott D. Cousins</B>
+<BR>Greenberg Traurig LLP
+<BR>The Nemours Building
+<BR>1007 North Orange Street
+<BR>Suite 1200
+<BR>Wilmington, DE 19801<BR>usa
+<BR>302 661-7000
+<BR>Fax  : 302-661-7360
+<BR>Email: bankruptcydel@gtlaw.com<BR><BR><B>Victoria Watson Counihan</B>
+<BR>Greenberg Traurig, LLP
+<BR>The Nemours Building
+<BR>1007 North Orange Street
+<BR>Suite 1200
+<BR>Wilmington, DE 19801<BR>usa
+<BR>302 661-7000
+<BR>Fax  : 302-661-7360
+<BR>Email: bankruptcydel@gtlaw.com<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Creditor Committee</B></I><BR><B>Proposed Special Litigation Counsel to the Official Committee of Unsecured Creditors</B><BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Victoria Watson Counihan</B>
+<BR>(See above for address)<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Creditor Committee</B></I><BR><B>Proposed Counsel to the Official Committee of Unsecured Creditors [Greenberg Traurig, LLP]</B><BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Victoria Watson Counihan</B>
+<BR>(See above for address)<BR><BR><B>William E. Chipman, Jr.</B>
+<BR>(See above for address)
+<BR><I>TERMINATED: 04/25/2007</I><BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Creditor Committee</B></I><BR><B>OFFICIAL COMMITTEE OF UNSECURED CREDITORS</B><BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Monica Loftin Townsend</B>
+<BR>Greenberg Traurig, LLP
+<BR>The Nemours Building
+<BR>1007 North Orange Street
+<BR>Suite 1200
+<BR>Wilmington, DE 19801
+<BR>302-661-7000
+<BR>Fax  : 302-661-7360
+<BR>Email: loftinm@gtlaw.com<BR><BR><B>Paul D. Brown</B>
+<BR>(See above for address)<BR><BR><B>Scott D. Cousins</B>
+<BR>(See above for address)<BR><BR><B>Victoria Watson Counihan</B>
+<BR>(See above for address)<BR><BR><B>William E. Chipman, Jr.</B>
+<BR>(See above for address)
+<BR><I>TERMINATED: 04/25/2007</I><BR><BR></font></TD></TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Creditor Committee</B></I><BR><B>Select Portfolio Servicing, Inc.</B>
+<BR>3815 South West Temple
+<BR>Salt Lake City, UT 84115	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+	<TD VALIGN=top WIDTH="40%"><FONT SIZE="+0">&nbsp;	</FONT></TD>
+</TR></TABLE><BR></TABLE><h2 align=center><BR><b>There are proceedings for case 05-10203-MFW but none satisfy the selection criteria.</b><BR><BR></h2><center><HR><CENTER><TABLE BORDER=1 BGCOLOR=white width="400"><TR><TH COLSPAN=4><FONT SIZE=+1 COLOR=DARKRED>PACER Service Center </FONT></TH></TR><TR><TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH></TR><TR></TR><TR></TR><TR><TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1 COLOR=DARKBLUE>12/16/2009 15:12:08</FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> pc3572 </FONT></TH></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE>                                  </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Docket Report </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search Criteria: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 05-10203-MFW Fil or Ent: filed From: 10/16/2009 To: 12/16/2009 Doc From: 1 Doc To: 10 Term: included    Format: html </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Billable Pages: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 3 </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.24 </FONT></TD></TR><TR></TR><TR></TR></TABLE></CENTER></HR></div></body></html>
