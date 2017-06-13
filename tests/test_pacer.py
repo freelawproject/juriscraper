@@ -1,16 +1,17 @@
 # coding=utf-8
 from __future__ import print_function
+
+import time
+import unittest
+from datetime import timedelta, date
+from glob import glob
+
 import jsondate as json
 import mock
 import os
-import time
-import unittest
-
 import requests
 import requests_mock
 import vcr
-from datetime import timedelta, date
-from glob import glob
 from requests import ConnectionError
 
 from juriscraper.lib.exceptions import PacerLoginException
@@ -21,7 +22,8 @@ from juriscraper.pacer.http import login, PacerSession
 from juriscraper.pacer.utils import (
     get_courts_from_json, get_court_id_from_url,
     get_pacer_case_id_from_docket_url, get_pacer_doc_id_from_doc1_url,
-    reverse_goDLS_function, make_doc1_url
+    reverse_goDLS_function, make_doc1_url,
+    clean_pacer_object
 )
 from . import JURISCRAPER_ROOT, TESTS_ROOT
 
@@ -400,8 +402,9 @@ class DocketParseTest(unittest.TestCase):
             with open(os.path.join(self.test_path, '%s.json' % filename)) as f:
                 j = json.load(f)
                 data = report.data
-                # Compare parties first, for easier debugging, then compare
-                # whole objects.
+                # Compare docket entries and parties first, for easier
+                # debugging, then compare whole objects to be sure.
+                self.assertEqual(data['docket_entries'], j['docket_entries'])
                 self.assertEqual(data['parties'], j['parties'])
                 self.assertEqual(data, j)
             print("✓")
@@ -460,3 +463,37 @@ class PacerUtilTest(unittest.TestCase):
         )
         for q, a in qa_pairs:
             self.assertEqual(make_doc1_url(*q), a)
+
+    def test_clean_pacer_objects(self):
+        """Can we properly clean various types of data?"""
+        tests = ({
+            # Basic string
+            'q': 'asdf , asdf',
+            'a': 'asdf, asdf'
+        }, {
+            # Basic list
+            'q': ['asdf , asdf', 'sdfg , sdfg'],
+            'a': ['asdf, asdf', 'sdfg, sdfg'],
+        }, {
+            # Basic dict
+            'q': {'a': 'asdf , asdf'},
+            'a': {'a': 'asdf, asdf'},
+        }, {
+            # Nested dict in a list with a string
+            'q': [{'a': 'asdf , asdf'}, 'asdf , asdf'],
+            'a': [{'a': 'asdf, asdf'}, 'asdf, asdf'],
+        }, {
+            # Multi-deep nest
+            'q': {'a': ['asdf, asdf', 'asdf', {'a': 'asdf  , asdf'}]},
+            'a': {'a': ['asdf, asdf', 'asdf', {'a': 'asdf, asdf'}]},
+        }, {
+            # Date object
+            'q': [date(2017, 5, 5), 'asdf , asdf'],
+            'a': [date(2017, 5, 5), 'asdf, asdf'],
+        }, {
+            # Stripping and normalizing whitespace junk
+            'q': [' asdf , asdf\n  asdf'],
+            'a': ['asdf, asdf asdf'],
+        })
+        for test in tests:
+            self.assertEqual(clean_pacer_object(test['q']), test['a'])
