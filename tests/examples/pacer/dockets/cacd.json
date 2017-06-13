@@ -1,8 +1,262 @@
 {
   "date_last_filing": null, 
+  "demand": null, 
   "date_terminated": "2006-08-25", 
-  "docket_entries": {}, 
-  "nature_of_suit": "820 Copyright", 
+  "docket_entries": [
+    {
+      "date_filed": "2006-01-19", 
+      "document_number": "1", 
+      "description": "COMPLAINT against defendants Daffy's Inc, Mervyn's LLC, TJX Companies Inc, TJ Maxx of California LLC, Bang Bang Boutiques LLC, Miki Manufacturing of California, Does.(Filing fee $ 250 paid) Jury Demanded., filed by plaintiff LA Printex Industries Inc.(pj, ) (Entered: 01/25/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-01-19", 
+      "document_number": "2", 
+      "description": "CERTIFICATION AND NOTICE of Interested Parties filed by Plaintiff LA Printex Industries Inc. (pj, ) (Entered: 01/25/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-01-19", 
+      "document_number": "3", 
+      "description": "NOTICE TO PARTIES OF ADR PILOT PROGRAM filed.(pj, ) (Entered: 01/25/2006)", 
+      "pacer_doc_id": "03105425713"
+    }, 
+    {
+      "date_filed": "2006-01-20", 
+      "document_number": "4", 
+      "description": "INITIAL STANDING ORDER for cases assigned to Judge S. James Otero,(bp, ) (Entered: 01/26/2006)", 
+      "pacer_doc_id": "03102335436"
+    }, 
+    {
+      "date_filed": "2006-02-27", 
+      "document_number": "5", 
+      "description": "FIRST AMENDED COMPLAINT against defendants' Castle Hill Apparel, Inc., Daffy's Inc, Mervyn's LLC, TJX Companies Inc, TJ Maxx of California LLC, Bang Bang Boutiques LLC, Miki Manufacturing of California, Does amending Complaint - (Discovery), Complaint - (Discovery) 1,filed by plaintiff LA Printex Industries Inc (bp, ) (Entered: 02/28/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-02-27", 
+      "document_number": "6", 
+      "description": "CERTIFICATION of Interested Parties filed by Plaintiff LA Printex Industries Inc. (bp, ) (Entered: 02/28/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-03-03", 
+      "document_number": "7", 
+      "description": "PROOF OF SERVICE Executed by plaintiff LA Printex Industries Inc, upon Mervyn's LLC served on 2/9/2006, answer due 3/1/2006. The Summons and Complaint were served by personal service, by state statute, upon Gerome Jones, authorized agent. Due Dilligence declaration not attached. Original Summons not returned. (bp, ) (Entered: 03/06/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-03-03", 
+      "document_number": "8", 
+      "description": "CERTIFICATION of Interested Parties filed by Defendant Bang Bang Boutiques LLC. (bp, ) (Entered: 03/06/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-03-08", 
+      "document_number": "9", 
+      "description": "ORDER SETTING SCHEDULING CONFERENCE: Counsel are hereby notified that a Scheduling Conference has been set for Monday, April 10, 2006 at 8:30 a.m. before District Judge S. James Otero in Courtroom 1600, 312 North Spring Street, Los Angeles, California 90012. Counsel are directed to comply with Rule 26(f) of the Federal Rules of Civil Procedure in a timely fashion and to file a Joint Rule 26(f) report on or before March 27, 2006. (vcr, ) (Entered: 03/08/2006)", 
+      "pacer_doc_id": "03102438160"
+    }, 
+    {
+      "date_filed": "2006-03-08", 
+      "document_number": "10", 
+      "description": "ANSWER to Firs Amended Complaint, 5 filed by defendants Bang Bang Boutiques LLC.(bp, ) (Entered: 03/09/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-03-24", 
+      "document_number": "11", 
+      "description": "JOINT REPORT Rule 26(f) Discovery Plan filed; estimated length of trial 5-7 days. (bp, ) (Entered: 03/27/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-04-10", 
+      "document_number": "16", 
+      "description": "PROOF OF SERVICE Executed by plaintiff LA Printex Industries Inc, upon Daffy's Inc served on 2/2/2006, answer due 2/22/2006. The Summons and Complaint were served by certified mail service, by federal statute, upon L Linko. Due Dilligence declaration not attached. Original Summons not returned.(original, returned, signed receipt of certified mail attached)(bp, ) (Entered: 04/17/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-04-10", 
+      "document_number": "17", 
+      "description": "MINUTES: Scheduling Conference held before Judge S. James Otero. Last day to amend or add parties 5/10/2006. Discovery cut-off 10/16/2006. Motion hearing cutoff date 11/6/2006. Jury Trial set for 1/16/2007 09:00 AM before Judge S. James Otero. Pretrial Conference set for 1/8/2007 09:00 AM before Judge S. James Otero. Show Cause Hearing set for 5/10/2006 08:30 AM before Judge S. James Otero.Court Reporter: Patricia Cuneo. (bp, ) (Entered: 04/21/2006)", 
+      "pacer_doc_id": "03104582215"
+    }, 
+    {
+      "date_filed": "2006-04-12", 
+      "document_number": "12", 
+      "description": "NOTICE AND ACKNOWLEDGEMENT OF SERVICE of Summons an Complaint returned Executed filed by plaintiff LA Printex Industries Inc. upon TJX Companies Inc acknowledgment sent by Plaintiff on 3/10/2006, answer due 5/9/2006. Acknowledgment of Service signed by Andrew Jablon, attorney, defendant. (bp, ) (Entered: 04/13/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-04-12", 
+      "document_number": "13", 
+      "description": "NOTICE AND ACKNOWLEDGEMENT OF SERVICE of Summons an Complaint returned Executed filed by plaintiff LA Printex Industries Inc. upon Daffy's Inc acknowledgment sent by Plaintiff on 4/11/2006, answer due 6/10/2006. Acknowledgment of Service signed by Andrew Jablon, defendant. (bp, ) (Entered: 04/13/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-04-12", 
+      "document_number": "14", 
+      "description": "NOTICE AND ACKNOWLEDGEMENT OF SERVICE of Summons an Complaint returned Executed filed by plaintiff LA Printex Industries Inc. upon TJ Maxx of California LLC acknowledgment sent by Plaintiff on 3/10/2006, answer due 5/9/2006. Acknowledgment of Service signed by Andrew Jablon, attorney. (bp, ) (Entered: 04/13/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-04-12", 
+      "document_number": "15", 
+      "description": "NOTICE AND ACKNOWLEDGEMENT OF SERVICE of Summons an Complaint returned Executed filed by plaintiff LA Printex Industries Inc. upon Castle Hill Apparel, Inc. acknowledgment sent by Plaintiff on 3/10/2006, answer due 5/9/2006. Acknowledgment of Service signed by Andrew Jablon, attorney. (bp, ) (Entered: 04/13/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-05-05", 
+      "document_number": "21", 
+      "description": "EX PARTE APPLICATION for Further Time to File responsive pleading to 5/26/2006 filed by defendants' Castle Hill Apparel, Inc., Daffy's Inc, Mervyn's LLC, TJ Maxx of California LLC. Lodged proposed order. (bp, ) (Entered: 05/12/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-05-09", 
+      "document_number": "18", 
+      "description": "MINUTES: Plaintiff having complied with the court's order re filing of proof of service, the court vacates the order to show cause hearing set on 5/10/06. Judge S. James Otero :Court Reporter: Not present. (bp, ) (Entered: 05/10/2006)", 
+      "pacer_doc_id": "03105706118"
+    }, 
+    {
+      "date_filed": "2006-05-09", 
+      "document_number": "19", 
+      "description": "ANSWER to First Amended Complaint, 5 JURY DEMAND. filed by defendants' Castle Hill Apparel, Inc., Daffy's Inc, Mervyn's LLC, TJX Companies Inc, TJ Maxx of California LLC.(bp, ) (Entered: 05/10/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-05-09", 
+      "document_number": "20", 
+      "description": "CERTIFICATION of Interested Parties filed by Defendants Castle Hill Apparel, Inc., Daffy's Inc, Mervyn's LLC, TJX Companies Inc, TJ Maxx of California LLC. (bp, ) (Entered: 05/10/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-05-09", 
+      "document_number": "23", 
+      "description": "RESPONSE filed by Plaintiff L.A. Printex Industries, Inc. to Order to Show Cause 17 . (gk, ) (Entered: 05/18/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-05-15", 
+      "document_number": "22", 
+      "description": "ORDER by Judge S. James Otero, re GRANTING DEFENDANT'S DAFFY'S INC., THE TJX COMPANIES, INC. AND CASTLE HILL APPAREL, INC'S EX PARTE APPLICATION for FOR FURTHER TIME TO FILE RESPONSIVE PLEADING 21 . IT IS HEREBY ORDERED Defendants Daffy's Inc, The TJX Xompanies, Inc and Castle Hill Apparel, INc shall have through and including May 26, 2006 to file a responsive pleading to the complaint in this action. IT IS SO ORDERED. (shb, ) (Entered: 05/17/2006)", 
+      "pacer_doc_id": "03102540975"
+    }, 
+    {
+      "date_filed": "2006-05-19", 
+      "document_number": "24", 
+      "description": "NOTICE OF MOTION AND MOTION for Leave to to amend complaint filed by plaintiff LA Printex Industries Inc. Motion set for hearing on 6/12/2006 at 10:00 AM before Judge S. James Otero. Lodged proposed order and 2nd A/C. (bp, ) (Entered: 05/23/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-05-26", 
+      "document_number": "25", 
+      "description": "ANSWER to First Amended Complaint, 5 filed by defendant Castle Hill Apparel, Inc..(bp, ) (Entered: 05/30/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-05-26", 
+      "document_number": "26", 
+      "description": "CERTIFICATION of Interested Parties filed by Defendant Castle Hill Apparel, Inc.. (bp, ) (Entered: 05/30/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-05-26", 
+      "document_number": "27", 
+      "description": "ANSWER to First Amended Complaint, 5 filed by defendant TJX Companies Inc.(bp, ) (Entered: 05/30/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-05-26", 
+      "document_number": "28", 
+      "description": "CERTIFICATION of Interested Parties filed by Defendant TJX Companies Inc. (bp, ) (Entered: 05/30/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-05-26", 
+      "document_number": "29", 
+      "description": "CERTIFICATION of Interested Parties filed by Defendant TJX Companies Inc. (bp, ) (Entered: 05/30/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-05-26", 
+      "document_number": "30", 
+      "description": "NOTICE OF MOTION AND MOTION to Dismiss for lack of personal jurisdiction filed by defendants' Daffy's Inc. Motion set for hearing on 6/26/2006 at 10:00 AM before Judge S. James Otero. (bp, ) (Entered: 05/30/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-05-26", 
+      "document_number": "31", 
+      "description": "OPPOSITION to MOTION for Leave to to amend complaint 24 filed by defendants' Daffy's Inc. (bp, ) (Entered: 05/30/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-06-01", 
+      "document_number": "32", 
+      "description": "MINUTES: The parties are advised that plaintiff's motion for leave to amend complaint, scheduled for hearing on 6/12/06, is taken under submission. Accordingly, the hearing date is vacated. Order will issue. Judge S. James Otero :Court Reporter: Not present. (bp, ) (Entered: 06/02/2006)", 
+      "pacer_doc_id": "03101038228"
+    }, 
+    {
+      "date_filed": "2006-06-05", 
+      "document_number": "33", 
+      "description": "REPLY to opposition to MOTION for Leave to to amend complaint 24 filed by plaintiff LA Printex Industries Inc. (bp, ) (Entered: 06/06/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-06-12", 
+      "document_number": "35", 
+      "description": "OPPOSITION to MOTION to Dismiss Case 30 filed by plaintiff LA Printex Industries Inc. (bp, ) (Entered: 06/15/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-06-15", 
+      "document_number": "34", 
+      "description": "ORDER: Plaintiff's motion for leave to file second amended complaint is GRANTED. Judge S. James Otero, 24 (bp, ) (Entered: 06/15/2006)", 
+      "pacer_doc_id": "03102338432"
+    }, 
+    {
+      "date_filed": "2006-06-15", 
+      "document_number": "36", 
+      "description": "SECOND AMENDED COMPLAINT against defendants' Burlington Coat Factory Warehouse Corporation, Express Male, Inc, Federated Department Stores Inc, Harwell Enterprises Ltd, Macys Northwest Inc, Marine Corp. Exchange, Portland MDSE, Inc., The Junkman's Daughter, Inc., Worldwide Distribution, Castle Hill Apparel, Inc., Daffy's Inc, Mervyn's LLC, TJX Companies Inc, TJ Maxx of California LLC, Bang Bang Boutiques LLC, Miki Manufacturing of California, Does amending Amended Complaint, 5,filed by plaintiff LA Printex Industries Inc (bp, ) (Entered: 06/19/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-06-19", 
+      "document_number": "37", 
+      "description": "REPLY IN SUPPORT OF MOTION to Dismiss Case 30 filed by Reply in support of Daffy's Inc. (bp, ) (Entered: 06/23/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-07-20", 
+      "document_number": "38", 
+      "description": "NOTICE OF MOTION AND MOTION to Withdraw filed by defendants' Bang Bang Boutiques LLC. Motion set for hearing on 8/28/2006 at 10:00 AM before Judge S. James Otero. Lodged proposed order. (bp, ) (Entered: 07/24/2006)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2006-08-08", 
+      "document_number": "39", 
+      "description": "MINUTES: The court is in receipt of the lodged \"Stipulation and Proposed Order for Dismissal as to the Entire Action Pursuant to FRCP 41(a)(1). The court DENIES the lodged stipulation without prejudice to refile a second stipulation consistent with this order. Judge S. James Otero :Court Reporter: Not present. (bp, ) (Entered: 08/14/2006)", 
+      "pacer_doc_id": "03101757843"
+    }, 
+    {
+      "date_filed": "2006-08-25", 
+      "document_number": "40", 
+      "description": "STIPULATION AND ORDER that this action is to be dismissed with prejudice as to defendant Castle Hill Apparel, Inc., This action is to be dismissed without prejudice as to Daffy's, Inc., Mervyn's LLC., The TJX Companies, Inc., T.J. Maxx of California, LLC, Bang Bang Boutiques, LLC, Miki Manufacturing of California, Federated Department Stores, Inc., Macy's Northwest, individually, and doing business as Bon Marche, Burlington Coat Factory Warehouse Corp., individually, and doing business as Cohoe's, Express Male, Inc., Harwell Enterprises, Ltd, The Junkman's Daughter, Inc., Marine Corp. Exchange, Portland MDSE, Inc., Worldwide Distribution and all Doe defendants. Each party is to bear its own costs and fees by Judge S. James Otero :, (Made JS-6. Case Terminated.)(bp, ) (Entered: 08/29/2006)", 
+      "pacer_doc_id": "03104000476"
+    }, 
+    {
+      "date_filed": "2006-08-25", 
+      "document_number": "42", 
+      "description": "REPORT ON THE DETERMINATION OF AN ACTION Regarding a Copyright. (Closing) (vh) (Entered: 01/23/2008)", 
+      "pacer_doc_id": "03105727046"
+    }, 
+    {
+      "date_filed": "2006-08-28", 
+      "document_number": "41", 
+      "description": "STIPULATION AND ORDER for voluntary dismissal of the entire action pursuant to FRCP 41(a)(1) by Judge S. James Otero :(bp, ) (Entered: 08/30/2006)", 
+      "pacer_doc_id": "03104010363"
+    }
+  ], 
+  "docket_number": "2:06-cv-00350", 
   "date_filed": "2006-01-19", 
   "jurisdiction": "Federal Question", 
   "case_name": "LA Printex Industries Inc v. Daffy's Inc et al", 
@@ -176,11 +430,10 @@
       "extra_info": "a business entity of form unknown"
     }
   ], 
-  "court_id": "cacd", 
-  "demand": null, 
+  "nature_of_suit": "820 Copyright", 
   "jury_demand": "Both", 
   "assigned_to_str": "S. James Otero", 
-  "docket_number": "2:06-cv-00350", 
+  "court_id": "cacd", 
   "cause": "28:1338 Copyright Infringement", 
   "referred_to_str": "Jeffrey W. Johnson"
 }

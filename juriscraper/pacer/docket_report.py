@@ -1,9 +1,9 @@
 import re
-from lxml.etree import _ElementStringResult
-
+from lxml import etree
 from lxml.html import tostring, fromstring, HtmlElement
 
 from .docket_utils import normalize_party_types
+from .utils import get_pacer_doc_id_from_doc1_url, clean_pacer_object
 from ..lib.exceptions import ParsingException
 from ..lib.html_utils import set_response_encoding, clean_html, \
     get_html5_parsed_text, fix_links_in_lxml_tree
@@ -29,10 +29,6 @@ class DocketReport(object):
     jury_demand_regex = re.compile(r'Jury Demand:\s+(.*)')
     jurisdiction_regex = re.compile(r'Jurisdiction:\s+(.*)')
     demand_regex = re.compile(r'^Demand:\s+(.*)')
-    # good_party_types_in_ca = re.compile('|'.join([
-    #     r"Administrator", r"Amicus", r"Appellant", r"Appellee", r"Applicant", r"Arbitrator", r"Attorney", r"Claimant", r"Claims.*Agent", r"Creditor Committee", r"Commissioner", r"Complainant", r"Conservator", r"Consol", r"Consolidated", r"Counter", r"Debtor", r"Defendant", r"Intervenor", r"Mediator", r'Movant', r"Ombudsman", r"Parties", r"Petitioner", r"Plaintiff", r"Respondent", r"Trustee",
-    #
-    # ]), flags=re.IGNORECASE)
 
     def __init__(self, court_id, pacer_session):
         self.court_id = court_id
@@ -107,6 +103,7 @@ class DocketReport(object):
                 self.jurisdiction_regex,
             ),
         }
+        data = clean_pacer_object(data)
         self._metadata = data
         return data
 
@@ -224,7 +221,8 @@ class DocketReport(object):
         self._parties = parties
         return parties
 
-    def get_attorneys(self, cell):
+    @staticmethod
+    def get_attorneys(cell):
         """Get the attorney information from an HTML tr node.
         
         Input will look like:
@@ -279,7 +277,8 @@ class DocketReport(object):
             }
             path = './following-sibling::* | ./following-sibling::text()'
             for prev, node, nxt in previous_and_next(atty_node.xpath(path)):
-                if isinstance(node, _ElementStringResult):
+                if isinstance(node, (etree._ElementStringResult,
+                                     etree._ElementUnicodeResult)):
                     clean_atty = '%s\n' % ' '.join(n.strip() for n in node.split())
                     if clean_atty.strip():
                         attorney['contact'] += clean_atty
@@ -302,7 +301,33 @@ class DocketReport(object):
     def docket_entries(self):
         if self._docket_entries:
             return self._docket_entries
-        docket_entries = {}
+        # tr nodes after the first one in the docket entry table.
+        path = ('//tr['
+                '  .//text()[contains(., "Docket Text")'
+                ']]/following-sibling::tr')
+        docket_entry_rows = self.html_tree.xpath(path)
+
+        docket_entries = []
+        for row in docket_entry_rows:
+            de = {}
+            cells = row.xpath('./td')
+            if len(cells) == 4:
+                # In some instances, the document entry table has an extra
+                # column. See almb, 92-04963
+                del cells[1]
+
+            if not cells[1].text_content().strip():
+                # Minute order. Skip for now.
+                continue
+
+            date_filed_str = cells[0].text_content()
+            de['date_filed'] = convert_date_string(date_filed_str)
+            de['document_number'] = self._get_document_number(cells[1])
+            de['pacer_doc_id'] = self._get_pacer_doc_id(cells[1])
+            de['description'] = cells[2].text_content()
+            docket_entries.append(de)
+
+        docket_entries = clean_pacer_object(docket_entries)
         self._docket_entries = docket_entries
         return docket_entries
 
@@ -407,6 +432,7 @@ class DocketReport(object):
         set_response_encoding(response)
         text = clean_html(response.text)
         tree = get_html5_parsed_text(text)
+        etree.strip_elements(tree, 'script')
         tree.rewrite_links(fix_links_in_lxml_tree, base_href=response.url)
         self.html_tree = tree
 
@@ -430,6 +456,29 @@ class DocketReport(object):
             strs.extend([s.strip() for s in
                          element.text_content().split(sep) if s])
         return strs
+
+    @staticmethod
+    def _get_pacer_doc_id(cell):
+        try:
+            doc1_url = cell.xpath('.//@href')[0]
+        except IndexError:
+            # Docket entry exists, but cannot download document (it's sealed or
+            # otherwise unavailable in PACER.
+            return None
+        else:
+            return get_pacer_doc_id_from_doc1_url(doc1_url)
+
+    @staticmethod
+    def _get_document_number(cell):
+        """Get the document number.
+        
+        Some jurisdictions have the number as, "13 (5 pgs)" so some processing
+        is needed. See (flsb, 09-02199_
+        """
+        words = cell.text_content().split()
+        if words:
+            return words[0].strip()
+        return ''
 
     def _get_case_name(self, values):
         if self.is_bankruptcy:

@@ -1,8 +1,70 @@
 {
   "date_last_filing": null, 
+  "demand": null, 
   "date_terminated": null, 
-  "docket_entries": {}, 
-  "nature_of_suit": null, 
+  "docket_entries": [
+    {
+      "date_filed": "1992-12-22", 
+      "document_number": "1", 
+      "description": "VOLUNTARY petition under chapter 13, [DS], ORIGINAL NIBS DOCKET ENTRY #1 (Entered: 12/23/1992)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "1992-12-22", 
+      "document_number": "2", 
+      "description": "SCHEDULES and Statement of Affairs, [DS], ORIGINAL NIBS DOCKET ENTRY #2 (Entered: 12/23/1992)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "1992-12-22", 
+      "document_number": "3", 
+      "description": "ATTORNEY Statement of Compensation, [DS], ORIGINAL NIBS DOCKET ENTRY #3 (Entered: 12/23/1992)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "1992-12-22", 
+      "document_number": "4", 
+      "description": "NOTICE of 341 meeting on 01/28/93 at 10:30 a.m. at U.S. Bankruptcy Court, 128 Lee Street, One Court Square Annex,Montgomery, AL, [DS], ORIGINAL NIBS DOCKET ENTRY #4 (Entered: 12/23/1992)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "1992-12-22", 
+      "document_number": "5", 
+      "description": "CLAIMS Bar Date due on 04/28/93, [DS], ORIGINAL NIBS DOCKET ENTRY #5 (Entered: 12/23/1992)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "1992-12-22", 
+      "document_number": "6", 
+      "description": "NOTICE of Confirmation Hearing on 02/08/93 at 9:00 a.m. at Courtroom 1, U.S. Bankruptcy Court, One Court Square, Montgomery, AL, [DS], ORIGINAL NIBS DOCKET ENTRY #6 (Entered: 12/23/1992)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "1993-02-17", 
+      "document_number": "7", 
+      "description": "ORDER to Debtor's Employer [Wage Order], [JF], ORIGINAL NIBS DOCKET ENTRY #7 (Entered: 02/17/1993)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "1993-02-17", 
+      "document_number": "8", 
+      "description": "ORDER Confirming Plan, [RM], ORIGINAL NIBS DOCKET ENTRY #8 (Entered: 02/17/1993)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "1993-03-23", 
+      "document_number": "9", 
+      "description": "JOINT Motion To Set Value of Collateral, [JF], ORIGINAL NIBS DOCKET ENTRY #9 (Entered: 03/24/1993)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "1993-03-25", 
+      "document_number": "10", 
+      "description": "ORDER On Joint Stipulation [Perry Hill Automobile Co.], [JF], ORIGINAL NIBS DOCKET ENTRY #10 (Entered: 03/25/1993)", 
+      "pacer_doc_id": null
+    }
+  ], 
+  "docket_number": "92-04963", 
   "date_filed": null, 
   "jurisdiction": null, 
   "case_name": null, 
@@ -26,11 +88,10 @@
       "extra_info": "P. O. Box l73\nMontgomery, AL 36l0l\n334 262-837l"
     }
   ], 
-  "court_id": "almb", 
-  "demand": null, 
+  "nature_of_suit": null, 
   "jury_demand": null, 
   "assigned_to_str": "Rodney R. Xsteele", 
-  "docket_number": "92-04963", 
+  "court_id": "almb", 
   "cause": null, 
   "referred_to_str": null
 }

@@ -1,8 +1,28 @@
 {
   "date_last_filing": null, 
-  "date_terminated": null, 
-  "docket_entries": {}, 
-  "nature_of_suit": null, 
+  "demand": null, 
+  "date_terminated": "2010-05-17", 
+  "docket_entries": [
+    {
+      "date_filed": "2009-12-11", 
+      "document_number": "13", 
+      "description": "Initial Disclosure per FRCP 26 Required by the Order Setting Filing and Disclosure Requirements Filed by Plaintiffs Bridge Publications, Inc., Church of Scientology International . **This Replaces DE#12** (Shafron, Judy) (Entered: 12/14/2009)", 
+      "pacer_doc_id": "050010759404"
+    }, 
+    {
+      "date_filed": "2009-12-14", 
+      "document_number": "14", 
+      "description": "Notice to Filer of Apparent Filing Deficiency: Incorrect Event Used. THE COURT HAS CORRECTED THIS ENTRY - NO FURTHER ACTION IS REQUIRED. In the Future, Use: Initial Disclosure (Rule 26) (Re: 12 Disclosure Statement Filed by Plaintiffs Bridge Publications, Inc., Church of Scientology International) (Shafron, Judy) (Entered: 12/14/2009)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2010-01-13", 
+      "document_number": "15", 
+      "description": "Affidavit of Virginia Dueppe Filed by Plaintiffs Bridge Publications, Inc., Church of Scientology International (Re: 4 Summons Service Executed filed by Plaintiff Bridge Publications, Inc., Plaintiff Church of Scientology International). (Perlman, Alan) (Entered: 01/13/2010)", 
+      "pacer_doc_id": "050011076299"
+    }
+  ], 
+  "docket_number": "09-02199", 
   "date_filed": "2009-10-22", 
   "jurisdiction": null, 
   "case_name": null, 
@@ -10,15 +30,15 @@
     {
       "attorneys": [
         {
-          "contact": "350 E Las Olas Blvd Suite 1700\nFort Lauderdale, FL 33301\n954-766-7822\nFax : 954-766-7800\nEmail: aperlman@adorno.com\n", 
+          "contact": "350 E Las Olas Blvd Suite 1700\nFort Lauderdale, FL 33301\n954-766-7822\nFax : 954-766-7800\n", 
           "name": "Alan J. Perlman, Esq.", 
           "roles": [
             "LEAD ATTORNEY"
           ]
         }
       ], 
-      "type": "Plaintiff", 
-      "name": "Church of Scientology International", 
+      "type": "Plaintiff-----------------------", 
+      "name": "Plaintiff-----------------------", 
       "extra_info": "c/o Alan J Perlman\n350 E. Las Olas Blvd., Suite 1700\nFt. Lauderdale, FL 33301\n(954) 763-1200"
     }, 
     {
@@ -31,28 +51,34 @@
           ]
         }
       ], 
-      "type": "Plaintiff", 
-      "name": "Bridge Publications, Inc.", 
+      "type": "Plaintiff-----------------------", 
+      "name": "Plaintiff-----------------------", 
       "extra_info": "c/o Alan J Perlman\n350 E. Las Olas Blvd., Suite 1700\nFt. Lauderdale, FL 33301\n(954) 763-1200"
     }, 
     {
       "attorneys": [
         {
-          "contact": "33 NE 2 St #101\nFort Lauderdale, FL 33301\n954-524-4141\nFax : 954-763-5117\nEmail: bklaw99@aol.com\n", 
-          "name": "Sherri B. Simpson, Esq.", 
+          "contact": "PRO SE\n", 
+          "name": "Peter D Letterese", 
           "roles": []
+        }, 
+        {
+          "contact": "33 NE 2 St #101\nFort Lauderdale, FL 33301\n954-524-4141\n", 
+          "name": "Sherri B. Simpson, Esq.", 
+          "roles": [
+            "TERMINATED: 03/25/2010"
+          ]
         }
       ], 
-      "type": "Defendant", 
-      "name": "Peter D Letterese", 
+      "type": "Defendant-----------------------", 
+      "name": "Defendant-----------------------", 
       "extra_info": "14581 Old Sheridan Street\nSouthwest  Ranches, Fl 33331\nSSN / ITIN: xxx-xx-5957"
     }
   ], 
-  "court_id": "flsb", 
-  "demand": null, 
+  "nature_of_suit": null, 
   "jury_demand": null, 
   "assigned_to_str": "John K. Olson", 
-  "docket_number": "09-02199", 
+  "court_id": "flsb", 
   "cause": null, 
   "referred_to_str": null
 }

@@ -1,303 +1,2281 @@
 {
-  "date_last_filing": null,
-  "date_terminated": "2010-02-01",
-  "docket_entries": {},
-  "nature_of_suit": "830 Patent",
-  "date_filed": "2007-07-26",
-  "jurisdiction": "Federal Question",
-  "case_name": "CREATIVE INTERNET ADVERTISING CORPORATION v. Yahoo! Inc et al",
+  "date_last_filing": null, 
+  "demand": null, 
+  "date_terminated": "2010-02-01", 
+  "docket_entries": [
+    {
+      "date_filed": "2007-07-26", 
+      "document_number": "1", 
+      "description": "COMPLAINT against Yahoo! Inc, Time Warner Inc ( Filing fee $ 350 receipt number 1206441.), filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit A# 2 Civil Cover Sheet)(Albritton, Eric) Additional attachment(s) added on 7/26/2007 (mjc, ). (Entered: 07/26/2007)", 
+      "pacer_doc_id": "17501235255"
+    }, 
+    {
+      "date_filed": "2007-07-26", 
+      "document_number": "2", 
+      "description": "NOTICE of filing of A0120 Form, Report or Determination of an Action Regarding a Copyright by CREATIVE INTERNET ADVERTISING CORPORATION (Albritton, Eric) Modified on 7/27/2007 (rvw, ) (Entered: 07/26/2007)", 
+      "pacer_doc_id": "1750364006"
+    }, 
+    {
+      "date_filed": "2007-07-26", 
+      "document_number": "3", 
+      "description": "E-GOV SEALED SUMMONS Issued as to Time Warner Inc. (fnt, ) (Entered: 07/27/2007)", 
+      "pacer_doc_id": "1750784404"
+    }, 
+    {
+      "date_filed": "2007-07-26", 
+      "document_number": "4", 
+      "description": "E-GOV SEALED SUMMONS Issued as to Yahoo! Inc. (fnt, ) (Entered: 07/27/2007)", 
+      "pacer_doc_id": "1750363941"
+    }, 
+    {
+      "date_filed": "2007-07-27", 
+      "document_number": "5", 
+      "description": "NOTICE of Attorney Appearance by Thomas John Ward, Jr on behalf of CREATIVE INTERNET ADVERTISING CORPORATION (Ward, Thomas) (Entered: 07/27/2007)", 
+      "pacer_doc_id": "17501658242"
+    }, 
+    {
+      "date_filed": "2007-07-27", 
+      "document_number": "6", 
+      "description": "NOTICE of Attorney Appearance by Anthony G Simon on behalf of CREATIVE INTERNET ADVERTISING CORPORATION (Simon, Anthony) (Entered: 07/27/2007)", 
+      "pacer_doc_id": "17501658210"
+    }, 
+    {
+      "date_filed": "2007-07-30", 
+      "document_number": "7", 
+      "description": "NOTICE by CREATIVE INTERNET ADVERTISING CORPORATION of Change of Lead Counsel for Plaintiff (Albritton, Eric) (Entered: 07/30/2007)", 
+      "pacer_doc_id": "17502108420"
+    }, 
+    {
+      "date_filed": "2007-08-07", 
+      "document_number": "8", 
+      "description": "Return of Service Executed as to Time Warner Inc on 7/31/2007, answer due: 8/20/2007. (mjc ) (Entered: 08/09/2007)", 
+      "pacer_doc_id": "17502535400"
+    }, 
+    {
+      "date_filed": "2007-08-07", 
+      "document_number": "9", 
+      "description": "Return of Service Executed as to Yahoo! Inc on 7/31/2007, answer due: 8/20/2007. (mjc ) (Entered: 08/09/2007)", 
+      "pacer_doc_id": "17502112394"
+    }, 
+    {
+      "date_filed": "2007-08-15", 
+      "document_number": "10", 
+      "description": "MOTION for Extension of Time to File Answer by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Text of Proposed Order)(Albritton, Eric) (Entered: 08/15/2007)", 
+      "pacer_doc_id": "17501242830"
+    }, 
+    {
+      "date_filed": "2007-08-16", 
+      "document_number": "11", 
+      "description": "ORDER granting 10 Motion for Extension of Time to Answer re 10 MOTION for Extension of Time to File Answer. AOL's answer is due 9/10/07 . Signed by Judge Leonard Davis on 8/16/07. (mjc) (Entered: 08/16/2007)", 
+      "pacer_doc_id": "1750371986"
+    }, 
+    {
+      "date_filed": "2007-08-20", 
+      "document_number": "12", 
+      "description": "MOTION for Extension of Time to File Answer re 1 Complaint, [Unopposed] by Yahoo! Inc. (Attachments: # 1 Text of Proposed Order)(Jones, Michael) (Entered: 08/20/2007)", 
+      "pacer_doc_id": "1750812241"
+    }, 
+    {
+      "date_filed": "2007-08-22", 
+      "document_number": "13", 
+      "description": "ORDER granting 12 Motion for Extension of Time to Answer re 12 MOTION for Extension of Time to File Answer re 1 Complaint, [Unopposed]. Yahoo! Inc.'s answer is due 9/19/07 . Signed by Judge Leonard Davis on 8/22/07. (mjc ) (Entered: 08/22/2007)", 
+      "pacer_doc_id": "1750813364"
+    }, 
+    {
+      "date_filed": "2007-08-29", 
+      "document_number": "14", 
+      "description": "APPLICATION to Appear Pro Hac Vice by Attorney Stephanie J Felicetty for Yahoo! Inc. Fee pd., 6-1-10829. Approved 8/30/07. (mjc ) (Entered: 08/30/2007)", 
+      "pacer_doc_id": "17501250110"
+    }, 
+    {
+      "date_filed": "2007-08-29", 
+      "document_number": "15", 
+      "description": "APPLICATION to Appear Pro Hac Vice by Attorney Laura Beth Miller for Yahoo! Inc. Fee pd., 6-1-10829. Approved 8/30/07. (mjc) (Entered: 08/30/2007)", 
+      "pacer_doc_id": "1750378917"
+    }, 
+    {
+      "date_filed": "2007-08-29", 
+      "document_number": "16", 
+      "description": "APPLICATION to Appear Pro Hac Vice by Attorney Jason C White for Yahoo! Inc. Fee pd., 6-1-10829. Approved 8/30/07. (mjc ) (Entered: 08/30/2007)", 
+      "pacer_doc_id": "1750378943"
+    }, 
+    {
+      "date_filed": "2007-08-29", 
+      "document_number": "17", 
+      "description": "APPLICATION to Appear Pro Hac Vice by Attorney Uma Bansal for Yahoo! Inc. Fee pd., 6-1-10829. Approved 8/30/07. (mjc ) (Entered: 08/30/2007)", 
+      "pacer_doc_id": "17502121242"
+    }, 
+    {
+      "date_filed": "2007-08-30", 
+      "document_number": "18", 
+      "description": "ORDER REFERRING CASE to Magistrate Judge John D. Love to conduct pretrial proceedings. Signed by Judge Leonard Davis on 8/30/07. (mjc ) (Entered: 08/30/2007)", 
+      "pacer_doc_id": "1750378935"
+    }, 
+    {
+      "date_filed": "2007-09-10", 
+      "document_number": "19", 
+      "description": "Consent MOTION for Extension of Time to File Answer by Time Warner Inc. (Attachments: # 1 Text of Proposed Order)(Crotty, Jason) (Entered: 09/10/2007)", 
+      "pacer_doc_id": "1750725304"
+    }, 
+    {
+      "date_filed": "2007-09-11", 
+      "document_number": "20", 
+      "description": "ORDER granting 19 Motion for Extension of Time to Answer re 19 Consent MOTION for Extension of Time to File Answer. AOL's answer is due 10/1/07 . Signed by Judge John D. Love on 9/11/07. (mjc) (Entered: 09/11/2007)", 
+      "pacer_doc_id": "17502468440"
+    }, 
+    {
+      "date_filed": "2007-09-13", 
+      "document_number": "21", 
+      "description": "APPLICATION to Appear Pro Hac Vice by Attorney Jason A Crotty for Time Warner Inc. Fee pd., 6-1-11022. Approved 9/14/07. (mjc ) (Entered: 09/14/2007)", 
+      "pacer_doc_id": "1750740314"
+    }, 
+    {
+      "date_filed": "2007-09-13", 
+      "document_number": "22", 
+      "description": "APPLICATION to Appear Pro Hac Vice by Attorney Rachel Krevans for Time Warner Inc. Fee pd., 6-1-11022. Approved 9/14/07. (mjc ) (Entered: 09/14/2007)", 
+      "pacer_doc_id": "17502481940"
+    }, 
+    {
+      "date_filed": "2007-09-19", 
+      "document_number": "23", 
+      "description": "Yahoo's ANSWER to Complaint with Jury Demand and Affirmative Defenses, COUNTERCLAIM against CREATIVE INTERNET ADVERTISING CORPORATION by Yahoo! Inc.(Felicetty, Stephanie) (Entered: 09/19/2007)", 
+      "pacer_doc_id": "17502116420"
+    }, 
+    {
+      "date_filed": "2007-09-19", 
+      "document_number": "24", 
+      "description": "CORPORATE DISCLOSURE STATEMENT filed by Yahoo! Inc, Yahoo! Inc identifying N/A as Corporate Parent. (Felicetty, Stephanie) (Entered: 09/19/2007)", 
+      "pacer_doc_id": "1750792663"
+    }, 
+    {
+      "date_filed": "2007-10-01", 
+      "document_number": "25", 
+      "description": "APPLICATION to Appear Pro Hac Vice by Attorney David M Hymas for Time Warner Inc. Fee pd., 6-1-11186. Approved 10/2/07 (mjc) (Entered: 10/02/2007)", 
+      "pacer_doc_id": "1750304734"
+    }, 
+    {
+      "date_filed": "2007-10-01", 
+      "document_number": "26", 
+      "description": "APPLICATION to Appear Pro Hac Vice by Attorney John P Corrado for Time Warner Inc. Fee pd., 6-1-11186. Approved 10/2/07 (mjc ) (Entered: 10/02/2007)", 
+      "pacer_doc_id": "1750795658"
+    }, 
+    {
+      "date_filed": "2007-10-05", 
+      "document_number": "27", 
+      "description": "MOTION to Dismiss Time Warner Inc., f/k/a AOL Time Warner Inc., d/b/a AOL by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Text of Proposed Order)(Ward, Thomas) (Entered: 10/05/2007)", 
+      "pacer_doc_id": "17502544914"
+    }, 
+    {
+      "date_filed": "2007-10-05", 
+      "document_number": "28", 
+      "description": "MOTION for Leave to File First Amended Complaint by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1# 2 Exhibit A to Exhibit 1)(Ward, Thomas) (Entered: 10/05/2007)", 
+      "pacer_doc_id": "1750312850"
+    }, 
+    {
+      "date_filed": "2007-10-09", 
+      "document_number": "29", 
+      "description": "ORDER granting 27 Motion to Dismiss Without Prejudice Defendant Time Warner Inc., fka AOL Time Warner Inc., dba AOL . Signed by Judge Leonard Davis on 10/9/07. (mjc ) (Entered: 10/09/2007)", 
+      "pacer_doc_id": "17502571396"
+    }, 
+    {
+      "date_filed": "2007-10-10", 
+      "document_number": "30", 
+      "description": "ORDER Scheduling Conference set for 11/16/2007 03:00 PM before Magistrate Judge John D. Love in Tyler. Proposed Discovery Order is Appendix A; Judge Davis' Proposed Docket Control Order is Appendix B; Judge Love's Proposed Docket Control Order is Appendix C . Signed by Judge John D. Love on 10/10/07. (mjc ) (Entered: 10/10/2007)", 
+      "pacer_doc_id": "1750339646"
+    }, 
+    {
+      "date_filed": "2007-10-15", 
+      "document_number": "31", 
+      "description": "ORDER granting 28 Motion for Leave to File First Amended Complaint . Signed by Judge John D. Love on 10/15/07. (mjc) (Entered: 10/15/2007)", 
+      "pacer_doc_id": "1750785299"
+    }, 
+    {
+      "date_filed": "2007-10-16", 
+      "document_number": "32", 
+      "description": "AMENDED COMPLAINT against AOL LLC, Yahoo! Inc, filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit A)(Ward, Thomas) (Entered: 10/16/2007)", 
+      "pacer_doc_id": "1750319769"
+    }, 
+    {
+      "date_filed": "2007-10-26", 
+      "document_number": "33", 
+      "description": "NOTICE of Attorney Appearance by Lance Lee on behalf of Time Warner Inc (Lee, Lance) (Entered: 10/26/2007)", 
+      "pacer_doc_id": "1750805147"
+    }, 
+    {
+      "date_filed": "2007-10-26", 
+      "document_number": "34", 
+      "description": "ANSWER to Complaint with Jury Demand, COUNTERCLAIM against CREATIVE INTERNET ADVERTISING CORPORATION by Time Warner Inc.(Lee, Lance) (Entered: 10/26/2007)", 
+      "pacer_doc_id": "17501677581"
+    }, 
+    {
+      "date_filed": "2007-10-26", 
+      "document_number": "35", 
+      "description": "CORPORATE DISCLOSURE STATEMENT filed by Time Warner Inc identifying Time Warner Inc. as Corporate Parent. (Lee, Lance) (Entered: 10/26/2007)", 
+      "pacer_doc_id": "1750805327"
+    }, 
+    {
+      "date_filed": "2007-10-30", 
+      "document_number": "36", 
+      "description": "ANSWER to Amended Complaint, COUNTERCLAIM against CREATIVE INTERNET ADVERTISING CORPORATION by Yahoo! Inc.(Felicetty, Stephanie) (Entered: 10/30/2007)", 
+      "pacer_doc_id": "17501678325"
+    }, 
+    {
+      "date_filed": "2007-11-13", 
+      "document_number": "37", 
+      "description": "NOTICE by CREATIVE INTERNET ADVERTISING CORPORATION OF SUBMISSION OF AMENDED AGREED PROPOSED DOCKET CONTROL ORDER (Simon, Anthony) (Entered: 11/13/2007)", 
+      "pacer_doc_id": "17502537451"
+    }, 
+    {
+      "date_filed": "2007-11-16", 
+      "document_number": "38", 
+      "description": "Minute Entry for proceedings held before Judge John D. Love : Scheduling Conference held on 11/16/2007. (Court Reporter Mechele Morris.) (mjm, ) (Entered: 11/16/2007)", 
+      "pacer_doc_id": "1750803563"
+    }, 
+    {
+      "date_filed": "2007-11-16", 
+      "document_number": "39", 
+      "description": "CONSENT to Proceed Before US Magistrate Judge by CREATIVE INTERNET ADVERTISING CORPORATION, Yahoo! Inc, Time Warner Inc. (mll, ) (Entered: 11/16/2007)", 
+      "pacer_doc_id": "1750803303"
+    }, 
+    {
+      "date_filed": "2007-11-16", 
+      "document_number": "40", 
+      "description": "APPLICATION to Appear Pro Hac Vice by Attorney Timothy E Grochocinski for CREATIVE INTERNET ADVERTISING CORPORATION. Fee pd., 6-1-11790. Approved 11/16/07. (mjc) (Entered: 11/16/2007)", 
+      "pacer_doc_id": "1750803119"
+    }, 
+    {
+      "date_filed": "2007-11-19", 
+      "document_number": "41", 
+      "description": "ORDER REFERRING CASE to Mediator. James W. Knowles rep by James W Knowles added as Mediator. Mediation deadline for the first round is 4/11/2008; for the second round it is 2/13/2009. Signed by Judge John D. Love on 11/16/07. (mjc ) (Entered: 11/19/2007)", 
+      "pacer_doc_id": "17501692653"
+    }, 
+    {
+      "date_filed": "2007-11-19", 
+      "document_number": "42", 
+      "description": "RESPONSE to 36 Answer to Amended Complaint, Counterclaim by CREATIVE INTERNET ADVERTISING CORPORATION. (Simon, Anthony) (Entered: 11/19/2007)", 
+      "pacer_doc_id": "17501098532"
+    }, 
+    {
+      "date_filed": "2007-11-19", 
+      "document_number": "43", 
+      "description": "RESPONSE to 34 Answer to Complaint, Counterclaim of AOL LLC by CREATIVE INTERNET ADVERTISING CORPORATION. (Simon, Anthony) (Entered: 11/19/2007)", 
+      "pacer_doc_id": "17501692267"
+    }, 
+    {
+      "date_filed": "2007-11-20", 
+      "document_number": "44", 
+      "description": "ORDER assigning case to Judge Love by consent of the parties for all further proceedings and entry of judgment. Signed by Judge Leonard Davis on 11/20/07. (mjc ) (Entered: 11/20/2007)", 
+      "pacer_doc_id": "1750820705"
+    }, 
+    {
+      "date_filed": "2007-11-27", 
+      "document_number": "45", 
+      "description": "SCHEDULING ORDER: Final Pretrial Conference set for 4/16/2009 09:00 AM before Magistrate Judge John D. Love. Amended Pleadings due by 8/6/2008. Discovery due by 9/3/2008. Expert Witness List due by 12/5/2008. Identify trial witnesses by 2/9/2009. Jury instructions due by 2/20/2009. Jury Selection set for 5/4/2009 09:00AM before Magistrate Judge John D. Love. Mediation Completion due by 4/11/2008. Proposed Pretrial Order due by 2/20/2009. Jury Trial set for 5/11/2009 09:00 AM before Magistrate Judge John D. Love. Markman Hearing set for 10/22/2008 09:00 AM before Magistrate Judge John D. Love. Signed by Judge John D. Love on 11/26/07. (mjc ) (Entered: 11/27/2007)", 
+      "pacer_doc_id": "17502566558"
+    }, 
+    {
+      "date_filed": "2007-11-27", 
+      "document_number": "46", 
+      "description": "DISCOVERY ORDER entered in furtherance of the management of the Court's docket under FRCP 16 and the Local Rules. Signed by Judge John D. Love on 11/26/07. (mjc ) (Entered: 11/27/2007)", 
+      "pacer_doc_id": "17501696332"
+    }, 
+    {
+      "date_filed": "2007-12-06", 
+      "document_number": "47", 
+      "description": "MOTION for Extension of Time to File Documents Pursuant to Patent Rule 3-2 by CREATIVE INTERNET ADVERTISING CORPORATION. (Grochocinski, Timothy) (Entered: 12/06/2007)", 
+      "pacer_doc_id": "17502139657"
+    }, 
+    {
+      "date_filed": "2007-12-07", 
+      "document_number": "48", 
+      "description": "NOTICE of Disclosure by CREATIVE INTERNET ADVERTISING CORPORATION of Plaintiff's Disclosures Pursuant to Patent Rule 3-1 (Grochocinski, Timothy) (Entered: 12/07/2007)", 
+      "pacer_doc_id": "17502573802"
+    }, 
+    {
+      "date_filed": "2007-12-12", 
+      "document_number": "49", 
+      "description": "ORDER granting 47 Motion for Extension of Time to File. It is therefore, ORDERED that the Motion (Doc. 47) should be granted and plaintiff's deadline for production of documents is December 14, 2007.. Signed by Judge John D. Love on 12/12/07. (fnt, ) (Entered: 12/12/2007)", 
+      "pacer_doc_id": "1750400038"
+    }, 
+    {
+      "date_filed": "2007-12-14", 
+      "document_number": "50", 
+      "description": "NOTICE of Disclosure by CREATIVE INTERNET ADVERTISING CORPORATION (Simon, Anthony) (Entered: 12/14/2007)", 
+      "pacer_doc_id": "1750835573"
+    }, 
+    {
+      "date_filed": "2007-12-20", 
+      "document_number": "51", 
+      "description": "Consent MOTION to Amend/Correct Docket Control Order by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Text of Proposed Order for Agreed Motion to Amend Docket Control Order)(Grochocinski, Timothy) (Entered: 12/20/2007)", 
+      "pacer_doc_id": "17501709127"
+    }, 
+    {
+      "date_filed": "2007-12-21", 
+      "document_number": "52", 
+      "description": "MOTION to Withdraw as Attorney (Unopposed) by Yahoo! Inc. (Attachments: # 1 Order)(Felicetty, Stephanie) (Entered: 12/21/2007)", 
+      "pacer_doc_id": "1750404483"
+    }, 
+    {
+      "date_filed": "2007-12-27", 
+      "document_number": "53", 
+      "description": "ORDER granting 52 Motion to Withdraw as Attorney. Attorney Uma Bansal terminated. Signed by Judge John D. Love on 12/27/07. cc:attys 12-28-07 (mll, ) (Entered: 12/28/2007)", 
+      "pacer_doc_id": "17502580839"
+    }, 
+    {
+      "date_filed": "2007-12-28", 
+      "document_number": "54", 
+      "description": "ORDER granting 51 Motion to Amend/Correct Docket Control Order. Signed by Judge John D. Love on 12/27/07. (mjc ) (Entered: 12/28/2007)", 
+      "pacer_doc_id": "17502147348"
+    }, 
+    {
+      "date_filed": "2008-01-29", 
+      "document_number": "55", 
+      "description": "MOTION for Extension of Time to File Disclosures and Documents Pursuant to the Court's Docket Control Order by Time Warner Inc. (Attachments: # 1 Text of Proposed Order)(Hymas, David) (Entered: 01/29/2008)", 
+      "pacer_doc_id": "1750413992"
+    }, 
+    {
+      "date_filed": "2008-01-30", 
+      "document_number": "56", 
+      "description": "ORDER granting 55 Motion for Extension of Time. Parties shall have through 2-7-08 to produce documents and disclosures pursuant to the Court's Discovery Order. Signed by Judge John D. Love on 01/30/08. cc:attys 1-30-08 (mll, ) (Entered: 01/30/2008)", 
+      "pacer_doc_id": "17501285358"
+    }, 
+    {
+      "date_filed": "2008-02-07", 
+      "document_number": "57", 
+      "description": "NOTICE of Disclosure by Yahoo! Inc (Felicetty, Stephanie) (Entered: 02/07/2008)", 
+      "pacer_doc_id": "1750423692"
+    }, 
+    {
+      "date_filed": "2008-02-07", 
+      "document_number": "58", 
+      "description": "NOTICE of Disclosure by Time Warner Inc (Hymas, David) (Entered: 02/07/2008)", 
+      "pacer_doc_id": "17502598622"
+    }, 
+    {
+      "date_filed": "2008-02-07", 
+      "document_number": "59", 
+      "description": "NOTICE of Disclosure by CREATIVE INTERNET ADVERTISING CORPORATION (Grochocinski, Timothy) (Entered: 02/07/2008)", 
+      "pacer_doc_id": "17502598976"
+    }, 
+    {
+      "date_filed": "2008-02-19", 
+      "document_number": "60", 
+      "description": "APPLICATION to Appear Pro Hac Vice by Attorney Christopher T Sukhaphadhana for Yahoo! Inc. Fee pd., 6-1-12817. Approved 2/20/08. (mjc ) (Entered: 02/20/2008)", 
+      "pacer_doc_id": "1750428314"
+    }, 
+    {
+      "date_filed": "2008-02-22", 
+      "document_number": "61", 
+      "description": "NOTICE of Disclosure by Yahoo! Inc (Felicetty, Stephanie) (Entered: 02/22/2008)", 
+      "pacer_doc_id": "1750963665"
+    }, 
+    {
+      "date_filed": "2008-02-22", 
+      "document_number": "62", 
+      "description": "NOTICE of Disclosure by Time Warner Inc (Hymas, David) (Entered: 02/22/2008)", 
+      "pacer_doc_id": "17501389607"
+    }, 
+    {
+      "date_filed": "2008-03-07", 
+      "document_number": "63", 
+      "description": "First MOTION for Extension of Time to File Patent Rule 4-1 Disclosures by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Text of Proposed Order for Agreed Motion to Extend Patent Rule 4-1 Deadline)(Grochocinski, Timothy) (Entered: 03/07/2008)", 
+      "pacer_doc_id": "17502592212"
+    }, 
+    {
+      "date_filed": "2008-03-12", 
+      "document_number": "64", 
+      "description": "ORDER granting 63 Motion for Extension of Time. Signed by Judge John D. Love on 03/12/08. cc:attys 3-12-08 (mll, ) (Entered: 03/12/2008)", 
+      "pacer_doc_id": "17502593752"
+    }, 
+    {
+      "date_filed": "2008-03-14", 
+      "document_number": "65", 
+      "description": "NOTICE by Yahoo! Inc (Sukhaphadhana, Christopher) (Entered: 03/14/2008)", 
+      "pacer_doc_id": "17502594764"
+    }, 
+    {
+      "date_filed": "2008-03-14", 
+      "document_number": "66", 
+      "description": "NOTICE of Disclosure by CREATIVE INTERNET ADVERTISING CORPORATION of Plaintiff's 4-1(a) Disclosures (Grochocinski, Timothy) (Entered: 03/14/2008)", 
+      "pacer_doc_id": "1750420455"
+    }, 
+    {
+      "date_filed": "2008-03-14", 
+      "document_number": "67", 
+      "description": "NOTICE of Disclosure by Time Warner Inc (Hymas, David) (Entered: 03/14/2008)", 
+      "pacer_doc_id": "17501724554"
+    }, 
+    {
+      "date_filed": "2008-03-25", 
+      "document_number": "68", 
+      "description": "STIPULATION of Dismissal With Prejudice by CREATIVE INTERNET ADVERTISING CORPORATION. (Simon, Anthony) Additional attachment(s) added on 3/25/2008 (rvw, ). (Entered: 03/25/2008)", 
+      "pacer_doc_id": "17501301349"
+    }, 
+    {
+      "date_filed": "2008-03-25", 
+      "document_number": "69", 
+      "description": "Additional Attachments to Main Document: 68 Stipulation of Dismissal.. (Simon, Anthony) (Entered: 03/25/2008)", 
+      "pacer_doc_id": "17501301379"
+    }, 
+    {
+      "date_filed": "2008-03-26", 
+      "document_number": "70", 
+      "description": "ORDER granting 68 Stipulation of Dismissal filed by CREATIVE INTERNET ADVERTISING CORPORATION. Signed by Judge John D. Love on 03/26/08. cc:attys 3-26-08(mll, ) (Entered: 03/26/2008)", 
+      "pacer_doc_id": "17501735739"
+    }, 
+    {
+      "date_filed": "2008-04-25", 
+      "document_number": "71", 
+      "description": "REPORT of Mediation by James W. Knowles. Mediation result: SUSPENDED(Knowles, James) (Entered: 04/25/2008)", 
+      "pacer_doc_id": "17501304544"
+    }, 
+    {
+      "date_filed": "2008-04-29", 
+      "document_number": "72", 
+      "description": "AMENDED COMPLAINT (Second) against Yahoo! Inc, filed by CREATIVE INTERNET ADVERTISING CORPORATION.(Simon, Anthony) (Entered: 04/29/2008)", 
+      "pacer_doc_id": "1750991432"
+    }, 
+    {
+      "date_filed": "2008-05-16", 
+      "document_number": "73", 
+      "description": "ANSWER to Complaint (Second Amended), COUNTERCLAIM against CREATIVE INTERNET ADVERTISING CORPORATION by Yahoo! Inc.(Sukhaphadhana, Christopher) (Entered: 05/16/2008)", 
+      "pacer_doc_id": "17501854688"
+    }, 
+    {
+      "date_filed": "2008-06-05", 
+      "document_number": "74", 
+      "description": "NOTICE of Attorney Appearance by John Frederick Bufe on behalf of Yahoo! Inc (Bufe, John) (Entered: 06/05/2008)", 
+      "pacer_doc_id": "17502647409"
+    }, 
+    {
+      "date_filed": "2008-06-05", 
+      "document_number": "75", 
+      "description": "Plaintiff Creative Internet Advertising Corporation's ANSWER to 73 Answer to Complaint, Counterclaim to Plaintiff's Second Amended Complaint by CREATIVE INTERNET ADVERTISING CORPORATION.(Grochocinski, Timothy) (Entered: 06/05/2008)", 
+      "pacer_doc_id": "17502648076"
+    }, 
+    {
+      "date_filed": "2008-06-23", 
+      "document_number": "76", 
+      "description": "NOTICE of Change of Address by Michael Edwin Jones (Jones, Michael) (Entered: 06/23/2008)", 
+      "pacer_doc_id": "17502677319"
+    }, 
+    {
+      "date_filed": "2008-06-23", 
+      "document_number": "77", 
+      "description": "Consent MOTION for Extension of Time to File and Exchange Preliminary Claim Constructions by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Text of Proposed Order)(Grochocinski, Timothy) (Entered: 06/23/2008)", 
+      "pacer_doc_id": "17502679213"
+    }, 
+    {
+      "date_filed": "2008-06-23", 
+      "document_number": "78", 
+      "description": "Consent MOTION for Protective Order by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit A - Stipulated Protective Order, # 2 Text of Proposed Order)(Grochocinski, Timothy) (Entered: 06/23/2008)", 
+      "pacer_doc_id": "17502679217"
+    }, 
+    {
+      "date_filed": "2008-06-24", 
+      "document_number": "79", 
+      "description": "ORDER granting 77 Motion for Extension of Time to Exchange Preliminary Claim Constructions. Signed by Magistrate Judge John D. Love on 06/24/08. cc:attys 6-24-08(mll, ) (Entered: 06/24/2008)", 
+      "pacer_doc_id": "17502680609"
+    }, 
+    {
+      "date_filed": "2008-06-24", 
+      "document_number": "80", 
+      "description": "ORDER granting 78 Motion for Protective Order. Signed by Magistrate Judge John D. Love on 06/24/08. cc:attys 6-24-08 (mll, ) (Entered: 06/24/2008)", 
+      "pacer_doc_id": "17502680618"
+    }, 
+    {
+      "date_filed": "2008-06-24", 
+      "document_number": "81", 
+      "description": "PROTECTIVE ORDER. Signed by Magistrate Judge John D. Love on 06/24/08. cc:attys 6-24-08(mll, ) (Entered: 06/24/2008)", 
+      "pacer_doc_id": "17502680627"
+    }, 
+    {
+      "date_filed": "2008-06-26", 
+      "document_number": "82", 
+      "description": "Consent MOTION to Withdraw as Attorney C. Sukhaphadhana, S. Felicetty, and L. Miller by Yahoo! Inc. (Attachments: # 1 Text of Proposed Order)(Jones, Michael) (Entered: 06/26/2008)", 
+      "pacer_doc_id": "17502685803"
+    }, 
+    {
+      "date_filed": "2008-06-27", 
+      "document_number": "83", 
+      "description": "ORDER granting 82 Motion to Withdraw as Attorney. Attorney Christopher T Sukhaphadhana; Stephanie J Felicetty and Laura Beth Miller terminated as counsel for Yahoo! Inc. Signed by Magistrate Judge John D. Love on 06/27/08. cc:attys 6-27-08 (mll, ) (Entered: 06/27/2008)", 
+      "pacer_doc_id": "17502687454"
+    }, 
+    {
+      "date_filed": "2008-06-27", 
+      "document_number": "84", 
+      "description": "Joint MOTION for Extension of Time to Complete Discovery with regard to Exchange of Privilege Logs by CREATIVE INTERNET ADVERTISING CORPORATION, Yahoo! Inc. (Attachments: # 1 Text of Proposed Order)(Jones, Michael) (Entered: 06/27/2008)", 
+      "pacer_doc_id": "17502688924"
+    }, 
+    {
+      "date_filed": "2008-06-30", 
+      "document_number": "85", 
+      "description": "ORDER granting 84 Motion for Extension of Time to Exchange Privilege Logs to 7/11/08. Signed by Magistrate Judge John D. Love on 6/30/08. (mjc) (Entered: 06/30/2008)", 
+      "pacer_doc_id": "17502690978"
+    }, 
+    {
+      "date_filed": "2008-07-11", 
+      "document_number": "86", 
+      "description": "Consent MOTION for Extension of Time to File Preliminary Claim Constructions and Privilege Logs by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Text of Proposed Order)(Grochocinski, Timothy) (Entered: 07/11/2008)", 
+      "pacer_doc_id": "17502714776"
+    }, 
+    {
+      "date_filed": "2008-07-14", 
+      "document_number": "87", 
+      "description": "ORDER granting 86 Motion for Extension of Deadline to Exchange Preliminary Claims Constructions and Privilege Logs. Deadline extended until July 15, 2008. Signed by Magistrate Judge John D. Love on 7/14/2008. (kls, ) (Entered: 07/14/2008)", 
+      "pacer_doc_id": "17502717798"
+    }, 
+    {
+      "date_filed": "2008-07-15", 
+      "document_number": "88", 
+      "description": "NOTICE of Disclosure by CREATIVE INTERNET ADVERTISING CORPORATION of Plaintiff's Preliminary Claim Constructions and Privilege Log (Grochocinski, Timothy) (Entered: 07/15/2008)", 
+      "pacer_doc_id": "17502720832"
+    }, 
+    {
+      "date_filed": "2008-07-15", 
+      "document_number": "89", 
+      "description": "NOTICE of Disclosure by Yahoo! Inc of Yahoo's P.R. 4-2 Disclosures and Privilege Log (White, Jason) (Entered: 07/15/2008)", 
+      "pacer_doc_id": "17502720886"
+    }, 
+    {
+      "date_filed": "2008-07-31", 
+      "document_number": "90", 
+      "description": "Consent MOTION for Extension of Time to File Patent Rule 4-3 - Joint Claim Construction and Prehearing Statement by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Text of Proposed Order)(Grochocinski, Timothy) (Entered: 07/31/2008)", 
+      "pacer_doc_id": "17502751208"
+    }, 
+    {
+      "date_filed": "2008-08-04", 
+      "document_number": "91", 
+      "description": "ORDER granting 90 Motion for Extension of Time to File. Signed by Magistrate Judge John D. Love on 8/4/2008. (gsg) (Entered: 08/04/2008)", 
+      "pacer_doc_id": "17502755609"
+    }, 
+    {
+      "date_filed": "2008-08-07", 
+      "document_number": "92", 
+      "description": "JOINT CLAIM CONSTRUCTION AND PREHEARING STATEMENT PURSUANT TO PATENT RULE 4-3 filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit A)(Grochocinski, Timothy) (Entered: 08/07/2008)", 
+      "pacer_doc_id": "17502763368"
+    }, 
+    {
+      "date_filed": "2008-08-07", 
+      "document_number": "93", 
+      "description": "Consent MOTION for Extension of Time to File Notification of Technical Advisors by Yahoo! Inc. (Attachments: # 1 Text of Proposed Order)(White, Jason) (Entered: 08/07/2008)", 
+      "pacer_doc_id": "17502763372"
+    }, 
+    {
+      "date_filed": "2008-08-11", 
+      "document_number": "94", 
+      "description": "ORDER granting 93 Motion for Extension of Time to File. Signed by Magistrate Judge John D. Love on 8/11/2008. (gsg) (Entered: 08/11/2008)", 
+      "pacer_doc_id": "17502767167"
+    }, 
+    {
+      "date_filed": "2008-08-22", 
+      "document_number": "95", 
+      "description": "NOTICE by CREATIVE INTERNET ADVERTISING CORPORATION of Agreed Technical Advisor (Attachments: # 1 Exhibit McLemore - CV)(Grochocinski, Timothy) (Entered: 08/22/2008)", 
+      "pacer_doc_id": "17502792178"
+    }, 
+    {
+      "date_filed": "2008-08-25", 
+      "document_number": "96", 
+      "description": "ORDER appointing Michael T McLemore as technical advisor with costs assessed equally between Plaintiff and Defendants. Signed by Magistrate Judge John D. Love on 8/25/2008. (gsg) (Entered: 08/25/2008)", 
+      "pacer_doc_id": "17502793577"
+    }, 
+    {
+      "date_filed": "2008-09-08", 
+      "document_number": "97", 
+      "description": "Joint MOTION for Extension of Time to File by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Text of Proposed Order)(Grochocinski, Timothy) (Entered: 09/08/2008)", 
+      "pacer_doc_id": "17502817228"
+    }, 
+    {
+      "date_filed": "2008-09-09", 
+      "document_number": "98", 
+      "description": "ORDER granting 97 Motion for Extension of Time. Signed by Magistrate Judge John D. Love on 09/09/08. cc:attys 9-10-08 (mll, ) (Entered: 09/10/2008)", 
+      "pacer_doc_id": "17502822533"
+    }, 
+    {
+      "date_filed": "2008-09-24", 
+      "document_number": "99", 
+      "description": "NOTICE by Yahoo! Inc Notice of Compliance Regarding Technology Tutorial (Jones, Michael) (Entered: 09/24/2008)", 
+      "pacer_doc_id": "17502846329"
+    }, 
+    {
+      "date_filed": "2008-09-24", 
+      "document_number": "100", 
+      "description": "NOTICE of Disclosure by CREATIVE INTERNET ADVERTISING CORPORATION (Grochocinski, Timothy) (Entered: 09/24/2008)", 
+      "pacer_doc_id": "17502846714"
+    }, 
+    {
+      "date_filed": "2008-09-26", 
+      "document_number": "101", 
+      "description": "OPENING CLAIM CONSTRUCTION BRIEF filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1 - U.S. Patent No. 6,205,432, # 2 Exhibit 2 - Joint Claim Construction and Prehearing Statement, # 3 Exhibit 3 - (Part 1) - Patent File History, # 4 Exhibit 3 - (Part 2) - Patent File History, # 5 Exhibit 3 - (Part 3) - Patent File History)(Grochocinski, Timothy) (Entered: 09/26/2008)", 
+      "pacer_doc_id": "17502851137"
+    }, 
+    {
+      "date_filed": "2008-10-10", 
+      "document_number": "102", 
+      "description": "DEFENDANT YAHOO! INC.'S RESPONSE TO PLAINTIFF CREATIVE INTERNET ADVERTISING CORPORATION'S OPENING CLAIM CONSTRUCTION BRIEF re 101 Claim Construction Brief,. (Attachments: # 1 Exhibit Exhibit 1-Patent 6205432, # 2 Exhibit Exhibit 2-PR 4-1 Letter, # 3 Exhibit Exhibit 3-Joint Claim Construction Statement, # 4 Exhibit Exhibit 4-Joint Claim Construction Chart, # 5 Exhibit Exhibit 5-Patent 6633850 Office Action)(White, Jason) (Entered: 10/10/2008)", 
+      "pacer_doc_id": "17502876869"
+    }, 
+    {
+      "date_filed": "2008-10-14", 
+      "document_number": "103", 
+      "description": "NOTICE of Disclosure by CREATIVE INTERNET ADVERTISING CORPORATION of Patent Rule 4-5(d) Claim Chart (Grochocinski, Timothy) (Entered: 10/14/2008)", 
+      "pacer_doc_id": "17502880178"
+    }, 
+    {
+      "date_filed": "2008-10-15", 
+      "document_number": "104", 
+      "description": "REPLY CLAIM CONSTRUCTION BRIEF filed by CREATIVE INTERNET ADVERTISING CORPORATION re 102 Claim Construction Brief,. (Attachments: # 1 Exhibit 1 - '432 Patent)(Grochocinski, Timothy) (Entered: 10/15/2008)", 
+      "pacer_doc_id": "17502883371"
+    }, 
+    {
+      "date_filed": "2008-10-15", 
+      "document_number": "105", 
+      "description": "NOTICE by CREATIVE INTERNET ADVERTISING CORPORATION of Estimated Time for Markman Hearing (Grochocinski, Timothy) (Entered: 10/15/2008)", 
+      "pacer_doc_id": "17502883375"
+    }, 
+    {
+      "date_filed": "2008-10-22", 
+      "document_number": "106", 
+      "description": "NOTICE of Attorney Appearance by Charles Craig Tadlock on behalf of CREATIVE INTERNET ADVERTISING CORPORATION (Tadlock, Charles) (Entered: 10/22/2008)", 
+      "pacer_doc_id": "17502894751"
+    }, 
+    {
+      "date_filed": "2008-10-22", 
+      "document_number": "107", 
+      "description": "Minute Entry for proceedings held before Magistrate Judge John D. Love: Markman Hearing held on 10/22/2008. (Court Reporter Kimberly Julian.) (mjm, ) (Entered: 10/23/2008)", 
+      "pacer_doc_id": "17502897815"
+    }, 
+    {
+      "date_filed": "2008-10-24", 
+      "document_number": "108", 
+      "description": "ORDER for Technical Advisor Michael T McLemore to be paid $12,500 by Plaintiff and $12,500 by Defendant. Payment should be made by 11/7/2008. Signed by Magistrate Judge John D. Love on 10/24/2008. (gsg) (Entered: 10/24/2008)", 
+      "pacer_doc_id": "17502901712"
+    }, 
+    {
+      "date_filed": "2008-10-31", 
+      "document_number": "109", 
+      "description": "NOTICE by Yahoo! Inc DEFENDANT YAHOO!, INC.'S NOTICE OF CASE AUTHORITIES (Attachments: # 1 Exhibit A)(Bufe, John) (Entered: 10/31/2008)", 
+      "pacer_doc_id": "17502914902"
+    }, 
+    {
+      "date_filed": "2008-11-11", 
+      "document_number": "110", 
+      "description": "Joint MOTION for Extension of Time to Complete Discovery by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Text of Proposed Order)(Grochocinski, Timothy) (Entered: 11/11/2008)", 
+      "pacer_doc_id": "17502931531"
+    }, 
+    {
+      "date_filed": "2008-11-12", 
+      "document_number": "111", 
+      "description": "ORDER granting 110 Motion for Extension of Time to Complete Discovery. Signed by Magistrate Judge John D. Love on 11/12/2008. (gsg) (Entered: 11/12/2008)", 
+      "pacer_doc_id": "17502932364"
+    }, 
+    {
+      "date_filed": "2008-11-24", 
+      "document_number": "112", 
+      "description": "MEMORANDUM OPINION and ORDER. Signed by Magistrate Judge John D. Love on 11/24/2008. (gsg) (Entered: 11/24/2008)", 
+      "pacer_doc_id": "17502952934"
+    }, 
+    {
+      "date_filed": "2008-12-24", 
+      "document_number": "113", 
+      "description": "NOTICE of Disclosure by CREATIVE INTERNET ADVERTISING CORPORATION of Amended Infringement Contentions Pursuant to Patent Rule 3-6(a) (Grochocinski, Timothy) (Entered: 12/24/2008)", 
+      "pacer_doc_id": "17503009484"
+    }, 
+    {
+      "date_filed": "2009-01-19", 
+      "document_number": "114", 
+      "description": "NOTICE of Attorney Appearance by Otis W Carroll, Jr on behalf of Yahoo! Inc (Carroll, Otis) (Entered: 01/19/2009)", 
+      "pacer_doc_id": "17503044621"
+    }, 
+    {
+      "date_filed": "2009-01-19", 
+      "document_number": "115", 
+      "description": "NOTICE of Attorney Appearance by Deborah J Race on behalf of Yahoo! Inc (Race, Deborah) (Entered: 01/19/2009)", 
+      "pacer_doc_id": "17503044624"
+    }, 
+    {
+      "date_filed": "2009-01-21", 
+      "document_number": "116", 
+      "description": "NOTICE of Disclosure by CREATIVE INTERNET ADVERTISING CORPORATION of Opening Expert Reports (Grochocinski, Timothy) (Entered: 01/21/2009)", 
+      "pacer_doc_id": "17503050854"
+    }, 
+    {
+      "date_filed": "2009-02-09", 
+      "document_number": "117", 
+      "description": "Trial Witness List by CREATIVE INTERNET ADVERTISING CORPORATION. (Simon, Anthony) (Entered: 02/09/2009)", 
+      "pacer_doc_id": "17503087194"
+    }, 
+    {
+      "date_filed": "2009-02-09", 
+      "document_number": "118", 
+      "description": "NOTICE of Disclosure by Yahoo! Inc of Yahoo's Witness List (White, Jason) (Entered: 02/09/2009)", 
+      "pacer_doc_id": "17503087426"
+    }, 
+    {
+      "date_filed": "2009-02-23", 
+      "document_number": "119", 
+      "description": "SEALED MOTION w/Oral Hearing Requested by Yahoo! Inc. (Attachments: # 1 Affidavit White, # 2 Exhibit 1, # 3 Exhibit 2, # 4 Exhibit 3, # 5 Exhibit 4, # 6 Exhibit 5, # 7 Exhibit 6, # 8 Exhibit 7, # 9 Exhibit 8, # 10 Exhibit 9, # 11 Exhibit 10, # 12 Exhibit 11, # 13 Exhibit 12, # 14 Exhibit 13, # 15 Exhibit 14, # 16 Exhibit 15, # 17 Exhibit 16, # 18 Affidavit Goldberg, # 19 Exhibit A and B)(White, Jason) (Additional attachment(s) added on 2/24/2009: # 20 Text of Proposed Order) (mjc, ). (Entered: 02/23/2009)", 
+      "pacer_doc_id": "17503115831"
+    }, 
+    {
+      "date_filed": "2009-02-23", 
+      "document_number": "120", 
+      "description": "***FILED IN ERROR. PLEASE DISREGARD. PROPOSED ORDER ATTACHED TO 119 .*** SEALED MOTION by Yahoo! Inc. (White, Jason) Modified on 2/24/2009 (mjc, ). (Entered: 02/23/2009)", 
+      "pacer_doc_id": "17503115853"
+    }, 
+    {
+      "date_filed": "2009-02-23", 
+      "document_number": "121", 
+      "description": "SEALED MOTION w/ Oral Hearing Requested by Yahoo! Inc. (Attachments: # 1 Affidavit White, # 2 Exhibit 1, # 3 Exhibit 2, # 4 Exhibit 3, # 5 Exhibit 4, # 6 Exhibit 5, # 7 Exhibit 6, # 8 Exhibit 7, # 9 Exhibit 8, # 10 Exhibit 9, # 11 Exhibit 10, # 12 Exhibit 77, # 13 Exhibit 12, # 14 Exhibit 13)(White, Jason) (Additional attachment(s) added on 2/24/2009: # 15 Text of Proposed Order) (mjc, ). (Entered: 02/23/2009)", 
+      "pacer_doc_id": "17503115856"
+    }, 
+    {
+      "date_filed": "2009-02-23", 
+      "document_number": "122", 
+      "description": "***DOCUMENT FILED IN ERROR. PLEASE DISREGARD.*** SEALED MOTION by Yahoo! Inc. (White, Jason) Modified on 2/24/2009 (mjc, ). (Entered: 02/23/2009)", 
+      "pacer_doc_id": "17503115873"
+    }, 
+    {
+      "date_filed": "2009-02-23", 
+      "document_number": "123", 
+      "description": "MOTION for Summary Judgment w/ Oral Hearing Requested by Yahoo! Inc. (Attachments: # 1 Affidavit White, # 2 Exhibit 1, # 3 Exhibit 2, # 4 Exhibit 3, # 5 Exhibit 4, # 6 Affidavit Goldberg, # 7 Exhibit A-E)(White, Jason) (Additional attachment(s) added on 2/24/2009: # 8 Text of Proposed Order) (mjc, ). (Entered: 02/23/2009)", 
+      "pacer_doc_id": "17503115879"
+    }, 
+    {
+      "date_filed": "2009-02-23", 
+      "document_number": "124", 
+      "description": "***DOCUMENT FILED IN ERROR. PLEASE DISREGARD.***Proposed MOTION for Summary Judgment (Proposed Order) by Yahoo! Inc. (White, Jason) Modified on 2/24/2009 (mjc, ). (Entered: 02/23/2009)", 
+      "pacer_doc_id": "17503115889"
+    }, 
+    {
+      "date_filed": "2009-02-24", 
+      "document_number": "125", 
+      "description": "NOTICE of Attorney Appearance by Henry Charles Bunsow on behalf of Yahoo! Inc (Bunsow, Henry) (Entered: 02/24/2009)", 
+      "pacer_doc_id": "17503117749"
+    }, 
+    {
+      "date_filed": "2009-02-24", 
+      "document_number": "126", 
+      "description": "NOTICE of Attorney Appearance by Brian A E Smith on behalf of Yahoo! Inc (Smith, Brian) (Entered: 02/24/2009)", 
+      "pacer_doc_id": "17503117777"
+    }, 
+    {
+      "date_filed": "2009-03-06", 
+      "document_number": "127", 
+      "description": "Proposed Pretrial Order (Joint) by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1 - CIAC Proposed Jury Instructions, # 2 Exhibit 2 - Yahoo Proposed Jury Instructions)(Grochocinski, Timothy) (Entered: 03/06/2009)", 
+      "pacer_doc_id": "17503141337"
+    }, 
+    {
+      "date_filed": "2009-03-10", 
+      "document_number": "128", 
+      "description": "***FILED IN ERROR; PLEASE IGNORE***Consent MOTION for Extension of Time to File Response/Reply as to 121 SEALED MOTION w/ Oral Hearing Requested, 119 SEALED MOTION w/Oral Hearing Requested, 123 MOTION for Summary Judgment w/ Oral Hearing Requested by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Text of Proposed Order)(Simon, Anthony) Modified on 3/11/2009 (mpv, ). (Entered: 03/10/2009)", 
+      "pacer_doc_id": "17503147403"
+    }, 
+    {
+      "date_filed": "2009-03-11", 
+      "document_number": "129", 
+      "description": "REPLACES #128Consent MOTION for Extension of Time to File Response/Reply as to 121 SEALED MOTION w/ Oral Hearing Requested, 119 SEALED MOTION w/Oral Hearing Requested, 123 MOTION for Summary Judgment w/ Oral Hearing Requested by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Text of Proposed Order Proposed Order)(Simon, Anthony) Modified on 3/11/2009 (mpv, ). (Entered: 03/11/2009)", 
+      "pacer_doc_id": "17503147494"
+    }, 
+    {
+      "date_filed": "2009-03-11", 
+      "document_number": "130", 
+      "description": "ORDER granting 129 Motion for Extension of Time to File Response/Reply re 129 Consent MOTION for Extension of Time to File Response/Reply as to 121 SEALED MOTION w/ Oral Hearing Requested, 119 SEALED MOTION w/Oral Hearing Requested, 123 MOTION for Summary Judgment w/ Oral Hearing RequestedConsent MOTION for Extension of Time to File Response/Reply as to 121 SEALED MOTION w/ Oral Hearing Requested, 119 SEALED MOTION w/Oral Hearing Requested, 123 MOTION for Summary Judgment w/ Oral Hearing Requested. Responses due by 3/13/2009. Signed by Magistrate Judge John D. Love on 3/11/2009. (gsg) (Entered: 03/11/2009)", 
+      "pacer_doc_id": "17503149192"
+    }, 
+    {
+      "date_filed": "2009-03-12", 
+      "document_number": "131", 
+      "description": "Exhibit List and Initial Deposition Designations by Yahoo! Inc.. (White, Jason) (Entered: 03/12/2009)", 
+      "pacer_doc_id": "17503152556"
+    }, 
+    {
+      "date_filed": "2009-03-13", 
+      "document_number": "132", 
+      "description": "Consent MOTION for Extension of Time to File and Exchange Pretrial Disclosures by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Text of Proposed Order)(Simon, Anthony) (Entered: 03/13/2009)", 
+      "pacer_doc_id": "17503153311"
+    }, 
+    {
+      "date_filed": "2009-03-13", 
+      "document_number": "133", 
+      "description": "SEALED RESPONSE to Motion re 121 SEALED MOTION w/ Oral Hearing Requested filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit Exhibit 1, # 2 Exhibit Exhibit 2, # 3 Exhibit Exhibit 3, # 4 Exhibit Exhibit 4, # 5 Exhibit Exhibit 5, # 6 Exhibit Exhibit 6, # 7 Exhibit Exhibit 7, # 8 Exhibit Exhibit 8, # 9 Exhibit Exhibit 9, # 10 Exhibit Exhibit 10, # 11 Exhibit Exhibit 11, # 12 Exhibit Exhibit 12, # 13 Exhibit Exhibit 13, # 14 Exhibit Exhibit 14, # 15 Exhibit Exhibit 15, # 16 Exhibit Exhibit 16, # 17 Exhibit Exhibit 17, # 18 Exhibit Exhibit 18, # 19 Exhibit Exhibit 19, # 20 Exhibit Exhibit 20, # 21 Exhibit Exhibit 21, # 22 Exhibit Exhibit 22)(Simon, Anthony) (Entered: 03/13/2009)", 
+      "pacer_doc_id": "17503154733"
+    }, 
+    {
+      "date_filed": "2009-03-13", 
+      "document_number": "134", 
+      "description": "SEALED RESPONSE to Motion re 119 SEALED MOTION w/Oral Hearing Requested filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3, # 4 Exhibit 4, # 5 Exhibit 5, # 6 Exhibit 6, # 7 Exhibit 7, # 8 Exhibit 8, # 9 Exhibit 9, # 10 Exhibit 10, # 11 Exhibit 11, # 12 Exhibit 12, # 13 Exhibit 13, # 14 Exhibit 14, # 15 Exhibit 15, # 16 Exhibit 16, # 17 Errata 17, # 18 Exhibit 18, # 19 Exhibit 19, # 20 Exhibit 20 - Part 1, # 21 Exhibit 20 - Part 2, # 22 Exhibit 20 - Part 3, # 23 Exhibit 21, # 24 Errata 22, # 25 Exhibit 23, # 26 Exhibit 24, # 27 Exhibit 25, # 28 Exhibit 26, # 29 Exhibit 26, # 30 Exhibit 28, # 31 Exhibit 29)(Simon, Anthony) (Entered: 03/13/2009)", 
+      "pacer_doc_id": "17503155259"
+    }, 
+    {
+      "date_filed": "2009-03-13", 
+      "document_number": "135", 
+      "description": "Exhibit List by CREATIVE INTERNET ADVERTISING CORPORATION.. (Simon, Anthony) (Entered: 03/13/2009)", 
+      "pacer_doc_id": "17503155306"
+    }, 
+    {
+      "date_filed": "2009-03-13", 
+      "document_number": "136", 
+      "description": "Exhibit List Deposition Designations by CREATIVE INTERNET ADVERTISING CORPORATION.. (Simon, Anthony) (Entered: 03/13/2009)", 
+      "pacer_doc_id": "17503155361"
+    }, 
+    {
+      "date_filed": "2009-03-14", 
+      "document_number": "137", 
+      "description": "SEALED RESPONSE to Motion re 123 MOTION for Summary Judgment w/ Oral Hearing Requested filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit, # 2 Exhibit, # 3 Exhibit, # 4 Exhibit, # 5 Exhibit, # 6 Exhibit, # 7 Exhibit, # 8 Exhibit, # 9 Exhibit, # 10 Exhibit, # 11 Exhibit, # 12 Exhibit, # 13 Exhibit, # 14 Exhibit, # 15 Exhibit, # 16 Exhibit, # 17 Exhibit, # 18 Exhibit, # 19 Exhibit, # 20 Exhibit)(Grochocinski, Timothy) (Entered: 03/14/2009)", 
+      "pacer_doc_id": "17503155364"
+    }, 
+    {
+      "date_filed": "2009-03-16", 
+      "document_number": "138", 
+      "description": "ORDER granting 132 Motion for Extension of Time. Pltf has until 3-13-09 to exchange and file its pre-trial disclosures. Signed by Magistrate Judge John D. Love on 03/16/09. cc:attys 3-16-09 (mll, ) (Entered: 03/16/2009)", 
+      "pacer_doc_id": "17503156528"
+    }, 
+    {
+      "date_filed": "2009-03-18", 
+      "document_number": "139", 
+      "description": "Consent MOTION for Extension of Time to File Response/Reply as to 137 Sealed Response to Motion, 134 Sealed Response to Motion,,, 133 Sealed Response to Motion,, by Yahoo! Inc. (Attachments: # 1 Text of Proposed Order)(White, Jason) (Entered: 03/18/2009)", 
+      "pacer_doc_id": "17503163650"
+    }, 
+    {
+      "date_filed": "2009-03-19", 
+      "document_number": "140", 
+      "description": "ORDER granting 139 Motion for Extension of Time to File Response/Reply re 139 Consent MOTION for Extension of Time to File Response/Reply as to 137 Sealed Response to Motion, 134 Sealed Response to Motion, 133 Sealed Response to Motion. Responses due by 3/23/2009. Signed by Magistrate Judge John D. Love on 3/19/2009. (gsg) (Entered: 03/19/2009)", 
+      "pacer_doc_id": "17503165086"
+    }, 
+    {
+      "date_filed": "2009-03-19", 
+      "document_number": "141", 
+      "description": "Unopposed MOTION to Withdraw as Attorney by Yahoo! Inc. (Attachments: # 1 Text of Proposed Order)(Jones, Michael) (Entered: 03/19/2009)", 
+      "pacer_doc_id": "17503165402"
+    }, 
+    {
+      "date_filed": "2009-03-20", 
+      "document_number": "142", 
+      "description": "ORDER granting 141 Motion to Withdraw as Attorney. Attorney John Frederick Bufe and Michael Edwin Jones terminated as attorneys of record for Yahoo!. Signed by Magistrate Judge John D. Love on 03/20/09. cc:attys 3-20-09(mll, ) (Entered: 03/20/2009)", 
+      "pacer_doc_id": "17503166889"
+    }, 
+    {
+      "date_filed": "2009-03-23", 
+      "document_number": "143", 
+      "description": "Exhibit List Rebuttal Designations and Objections by Yahoo! Inc.. (White, Jason) (Entered: 03/23/2009)", 
+      "pacer_doc_id": "17503171462"
+    }, 
+    {
+      "date_filed": "2009-03-23", 
+      "document_number": "144", 
+      "description": "SEALED PATENT REPLY to Response to PATENT Motion re 121 SEALED MOTION w/ Oral Hearing Requested filed by Yahoo! Inc. (Attachments: # 1 Affidavit White Decl., # 2 Exhibit 1, # 3 Exhibit 2, # 4 Exhibit 3, # 5 Exhibit 4)(White, Jason) (Entered: 03/23/2009)", 
+      "pacer_doc_id": "17503171487"
+    }, 
+    {
+      "date_filed": "2009-03-23", 
+      "document_number": "145", 
+      "description": "SEALED PATENT REPLY to Response to PATENT Motion re 119 SEALED MOTION w/Oral Hearing Requested filed by Yahoo! Inc. (Attachments: # 1 Affidavit White Decl., # 2 Exhibit 1)(White, Jason) (Entered: 03/23/2009)", 
+      "pacer_doc_id": "17503171495"
+    }, 
+    {
+      "date_filed": "2009-03-23", 
+      "document_number": "146", 
+      "description": "REPLY to Response to Motion re 123 MOTION for Summary Judgment w/ Oral Hearing Requested filed by Yahoo! Inc. (White, Jason) (Entered: 03/23/2009)", 
+      "pacer_doc_id": "17503171500"
+    }, 
+    {
+      "date_filed": "2009-03-23", 
+      "document_number": "147", 
+      "description": "Exhibit List Counter Deposition Designations and Objections to Yahoo! Inc's Deposition Designations by CREATIVE INTERNET ADVERTISING CORPORATION.. (Grochocinski, Timothy) (Entered: 03/23/2009)", 
+      "pacer_doc_id": "17503171503"
+    }, 
+    {
+      "date_filed": "2009-03-24", 
+      "document_number": "148", 
+      "description": "ORDER for parties to meet and confer regarding the amount of time the two matters will require re 121 SEALED MOTION w/ Oral Hearing Requested filed by Yahoo! Inc, 119 SEALED MOTION w/Oral Hearing Requested filed by Yahoo! Inc, 123 MOTION for Summary Judgment w/ Oral Hearing Requested filed by Yahoo! Inc and pretrial conference. Notice to the Court due by Tuesday, March 31, 2009. Signed by Magistrate Judge John D. Love on 3/24/2009. (gsg) (Entered: 03/24/2009)", 
+      "pacer_doc_id": "17503173400"
+    }, 
+    {
+      "date_filed": "2009-03-24", 
+      "document_number": "149", 
+      "description": "Unopposed MOTION to Move Hearing Date and Pretrial Conference by Yahoo! Inc. (Attachments: # 1 Text of Proposed Order)(Race, Deborah) (Entered: 03/24/2009)", 
+      "pacer_doc_id": "17503174182"
+    }, 
+    {
+      "date_filed": "2009-03-25", 
+      "document_number": "150", 
+      "description": "ORDER granting 149 Motion to Move Hearing Date and Pretrial Conference. Signed by Magistrate Judge John D. Love on 3/25/2009. (gsg) (Entered: 03/25/2009)", 
+      "pacer_doc_id": "17503175525"
+    }, 
+    {
+      "date_filed": "2009-03-27", 
+      "document_number": "151", 
+      "description": "***FILED IN ERROR, WRONG EVENT, PLEASE IGNORE.***Exhibit List Plaintiff's Objections to Defendant's Rebuttal Deposition Designations by CREATIVE INTERNET ADVERTISING CORPORATION.. (Grochocinski, Timothy) Modified on 3/30/2009 (sm, ). (Entered: 03/27/2009)", 
+      "pacer_doc_id": "17503181189"
+    }, 
+    {
+      "date_filed": "2009-03-27", 
+      "document_number": "152", 
+      "description": "***FILED IN ERROR, PLEASE IGNORE.***Exhibit List Defendant's Objections to Plaintiff's Rebuttal Deposition Designations by Yahoo! Inc.. (White, Jason) Modified on 3/30/2009 (sm, ). (Entered: 03/27/2009)", 
+      "pacer_doc_id": "17503181210"
+    }, 
+    {
+      "date_filed": "2009-03-30", 
+      "document_number": "153", 
+      "description": "RESPONSE to 143 Exhibit List Rebuttal Designations of Yahoo! Inc. by CREATIVE INTERNET ADVERTISING CORPORATION. (Grochocinski, Timothy) (Entered: 03/30/2009)", 
+      "pacer_doc_id": "17503182597"
+    }, 
+    {
+      "date_filed": "2009-03-30", 
+      "document_number": "154", 
+      "description": "RESPONSE to 147 Exhibit List Defendant's Objections to Plaintiff's Rebuttal Deposition Designations by Yahoo! Inc. (White, Jason) (Entered: 03/30/2009)", 
+      "pacer_doc_id": "17503183063"
+    }, 
+    {
+      "date_filed": "2009-03-31", 
+      "document_number": "155", 
+      "description": "NOTICE by Yahoo! Inc and Creative Internet Advertising Corporation of Estimated Time Required for Pretrial Hearing and Hearing on Motions for Summary Judgment (Race, Deborah) (Entered: 03/31/2009)", 
+      "pacer_doc_id": "17503184816"
+    }, 
+    {
+      "date_filed": "2009-04-06", 
+      "document_number": "156", 
+      "description": "***DOCUMENT FILED IN ERROR. PLEASE DISREGARD.***Additional Attachments to Main Document: 137 Sealed Response to Motion,.. (Grochocinski, Timothy) Modified on 4/7/2009 (mjc, ). (Entered: 04/06/2009)", 
+      "pacer_doc_id": "17503197552"
+    }, 
+    {
+      "date_filed": "2009-04-07", 
+      "document_number": "157", 
+      "description": "NOTICE by CREATIVE INTERNET ADVERTISING CORPORATION re 137 Sealed Response to Motion, 134 Sealed Response to Motion,,, Notice of Filing the Declaration of David Klausner (Grochocinski, Timothy) (Entered: 04/07/2009)", 
+      "pacer_doc_id": "17503199298"
+    }, 
+    {
+      "date_filed": "2009-04-08", 
+      "document_number": "158", 
+      "description": "NOTICE of Attorney Appearance by Jack Wesley Hill on behalf of Yahoo! Inc (Hill, Jack) (Entered: 04/08/2009)", 
+      "pacer_doc_id": "17503201561"
+    }, 
+    {
+      "date_filed": "2009-04-09", 
+      "document_number": "159", 
+      "description": "NOTICE by Yahoo! Inc re 131 Exhibit List ; Supplemental Exhibit List (White, Jason) (Entered: 04/09/2009)", 
+      "pacer_doc_id": "17503206911"
+    }, 
+    {
+      "date_filed": "2009-04-13", 
+      "document_number": "160", 
+      "description": "MOTION in Limine re Induced/Contributory Infringement by Yahoo! Inc. (Attachments: # 1 Affidavit White Decl., # 2 Exhibit 1, # 3 Exhibit 2, # 4 Text of Proposed Order)(White, Jason) (Entered: 04/13/2009)", 
+      "pacer_doc_id": "17503210618"
+    }, 
+    {
+      "date_filed": "2009-04-13", 
+      "document_number": "161", 
+      "description": "MOTION in Limine re Expert Reports by Yahoo! Inc. (Attachments: # 1 Text of Proposed Order)(White, Jason) (Entered: 04/13/2009)", 
+      "pacer_doc_id": "17503210625"
+    }, 
+    {
+      "date_filed": "2009-04-13", 
+      "document_number": "162", 
+      "description": "***DISREGARD ENTRY - FILED UNDER WRONG EVENT - ATTORNEY TO REFILE*** Exhibit List Objections to Defendant's Exhibit Lists by CREATIVE INTERNET ADVERTISING CORPORATION.. (Attachments: # 1 Exhibit Exhibit A, # 2 Exhibit Exhibit B)(Simon, Anthony) Modified on 4/14/2009 (kls, ). (Entered: 04/13/2009)", 
+      "pacer_doc_id": "17503210629"
+    }, 
+    {
+      "date_filed": "2009-04-13", 
+      "document_number": "163", 
+      "description": "MOTION in Limine re Priority Date by Yahoo! Inc. (Attachments: # 1 Affidavit White Decl., # 2 Exhibit 1, # 3 Exhibit 2, # 4 Exhibit 3, # 5 Exhibit 4, # 6 Exhibit 5, # 7 Text of Proposed Order)(White, Jason) (Entered: 04/13/2009)", 
+      "pacer_doc_id": "17503210634"
+    }, 
+    {
+      "date_filed": "2009-04-13", 
+      "document_number": "164", 
+      "description": "MOTION in Limine re Source Code by Yahoo! Inc. (Attachments: # 1 Affidavit White Decl., # 2 Exhibit 1, # 3 Text of Proposed Order)(White, Jason) (Entered: 04/13/2009)", 
+      "pacer_doc_id": "17503210644"
+    }, 
+    {
+      "date_filed": "2009-04-13", 
+      "document_number": "165", 
+      "description": "MOTION in Limine re Willfulness by Yahoo! Inc. (Attachments: # 1 Affidavit White Decl., # 2 Exhibit 1, # 3 Exhibit 2, # 4 Text of Proposed Order)(White, Jason) (Entered: 04/13/2009)", 
+      "pacer_doc_id": "17503210650"
+    }, 
+    {
+      "date_filed": "2009-04-13", 
+      "document_number": "166", 
+      "description": "First MOTION in Limine by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Text of Proposed Order)(Grochocinski, Timothy) (Entered: 04/13/2009)", 
+      "pacer_doc_id": "17503210718"
+    }, 
+    {
+      "date_filed": "2009-04-13", 
+      "document_number": "167", 
+      "description": "Second MOTION in Limine by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Text of Proposed Order)(Grochocinski, Timothy) (Entered: 04/13/2009)", 
+      "pacer_doc_id": "17503210722"
+    }, 
+    {
+      "date_filed": "2009-04-14", 
+      "document_number": "168", 
+      "description": "RESPONSE to 159 Notice (Other), 131 Exhibit List Plaintiff's Objections to Defendant's Exhibit Lists by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit A - Plaintiff's Objections to Defendant's Exhibit List, # 2 Exhibit B - Plaintiff's Objections to Defendant's Supplemental Exhibit List)(Simon, Anthony) (Corrects Docket Entry #162) Modified on 4/14/2009 (kls, ). (Entered: 04/14/2009)", 
+      "pacer_doc_id": "17503210851"
+    }, 
+    {
+      "date_filed": "2009-04-14", 
+      "document_number": "169", 
+      "description": "NOTICE by CREATIVE INTERNET ADVERTISING CORPORATION of Plaintiff's Estimates of the Amount of Time Requested at Trial (Simon, Anthony) (Entered: 04/14/2009)", 
+      "pacer_doc_id": "17503212163"
+    }, 
+    {
+      "date_filed": "2009-04-14", 
+      "document_number": "170", 
+      "description": "NOTICE by Yahoo! Inc of Defendent's Estimates of the Amount of Time Requested at Trial (White, Jason) (Entered: 04/14/2009)", 
+      "pacer_doc_id": "17503213796"
+    }, 
+    {
+      "date_filed": "2009-04-16", 
+      "document_number": "171", 
+      "description": "Supplemental MOTION in Limine Regarding Settlement Agreement Between Creative Internet Advertising Corporation and AOL, a former party to this lawsuit by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1, # 2 Text of Proposed Order)(Tadlock, Charles) (Entered: 04/16/2009)", 
+      "pacer_doc_id": "17503218817"
+    }, 
+    {
+      "date_filed": "2009-04-17", 
+      "document_number": "172", 
+      "description": "Minute Entry for proceedings held before Magistrate Judge John D. Love: Final Pretrial Conference held on 4/17/2009; Motion Hearing held on 4/17/2009 re 121 SEALED MOTION w/ Oral Hearing Requested filed by Yahoo! Inc, 165 MOTION in Limine re Willfulness filed by Yahoo! Inc, 171 Supplemental MOTION in Limine Regarding Settlement Agreement Between Creative Internet Advertising Corporation and AOL, a former party to this lawsuit filed by CREATIVE INTERNET ADVERTISING CORPORATION, 160 MOTION in Limine re Induced/Contributory Infringement filed by Yahoo! Inc, 167 Second MOTION in Limine filed by CREATIVE INTERNET ADVERTISING CORPORATION, 119 SEALED MOTION w/Oral Hearing Requested filed by Yahoo! Inc, 123 MOTION for Summary Judgment w/ Oral Hearing Requested filed by Yahoo! Inc, 166 First MOTION in Limine filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Court Reporter Shea Sloan.) (mjm, ) (Entered: 04/17/2009)", 
+      "pacer_doc_id": "17503221097"
+    }, 
+    {
+      "date_filed": "2009-04-20", 
+      "document_number": "173", 
+      "description": "ORDER re 172 Pretrial Conference - Final, Motion Hearing. (Final Pretrial Conference set for 4/29/2009 at 09:00 AM before Magistrate Judge John D. Love. Jury Selection set for 5/11/2009 at 09:00 AM before Magistrate Judge John D. Love. Jury Trial set for 5/11/2009 at 09:00 AM before Magistrate Judge John D. Love.)Signed by Magistrate Judge John D. Love on 4/20/2009. (gsg) (Entered: 04/20/2009)", 
+      "pacer_doc_id": "17503224049"
+    }, 
+    {
+      "date_filed": "2009-04-21", 
+      "document_number": "174", 
+      "description": "ORDER granting as agreed 160 Motion in Limine; granting as agreed 161 Motion in Limine; granting as agreed 163 Motion in Limine; granting as agreed 164 Motion in Limine; denying 165 Motion in Limine; granting in part and denying in part and deferring 166 Motion in Limine; granting and deferring 167 Motion in Limine; deferring ruling on 171 Motion in Limine. Signed by Magistrate Judge John D. Love on 4/21/2009. (gsg) (Entered: 04/22/2009)", 
+      "pacer_doc_id": "17503226711"
+    }, 
+    {
+      "date_filed": "2009-04-21", 
+      "document_number": "175", 
+      "description": "ORDER re 166 First MOTION in Limine filed by CREATIVE INTERNET ADVERTISING CORPORATION. Defendant is hereby ORDERED to file a notice with the Court, attaching all excerpts from deposition testimony, expert reports, and/or any other evidence relevant to Plaintiff's First Motion in Limine #9, with the pertinent portions highlighted for the Court's consideration by Friday, April 24, 2009. Signed by Magistrate Judge John D. Love on 4/21/2009. (gsg) (Entered: 04/22/2009)", 
+      "pacer_doc_id": "17503226753"
+    }, 
+    {
+      "date_filed": "2009-04-21", 
+      "document_number": "176", 
+      "description": "ORDER re 170 Notice (Other) filed by Yahoo! Inc, 169 Notice (Other) filed by CREATIVE INTERNET ADVERTISING CORPORATION. Each party shall have 40 minutes for voir dire, 30 minutes for opening statements, 11 hours for direct and cross examination, and 30 minutes for closing arguments. Signed by Magistrate Judge John D. Love on 4/21/2009. (gsg) (Entered: 04/22/2009)", 
+      "pacer_doc_id": "17503226758"
+    }, 
+    {
+      "date_filed": "2009-04-22", 
+      "document_number": "177", 
+      "description": "Sealed Document. Correspondence to the Honorable John D. Love (Attachments: # 1 Exhibit Exhibit A, # 2 Exhibit B, # 3 Exhibit Exhibit C)(Tadlock, Charles) (Entered: 04/22/2009)", 
+      "pacer_doc_id": "17503228456"
+    }, 
+    {
+      "date_filed": "2009-04-24", 
+      "document_number": "178", 
+      "description": "ORDER denying 119 Sealed Motion; denying 121 Sealed Motion; denying 123 Motion for Summary Judgment. Signed by Magistrate Judge John D. Love on 4/24/2009. (gsg) (Entered: 04/24/2009)", 
+      "pacer_doc_id": "17503233330"
+    }, 
+    {
+      "date_filed": "2009-04-24", 
+      "document_number": "179", 
+      "description": "NOTICE by CREATIVE INTERNET ADVERTISING CORPORATION regarding Plaintiff's Second Motion in Limine #1 With Respect to Yahoo's Use of Deposition Testimony From Its Own 30(B)(6) Witnesses (Simon, Anthony) (Entered: 04/24/2009)", 
+      "pacer_doc_id": "17503233547"
+    }, 
+    {
+      "date_filed": "2009-04-24", 
+      "document_number": "180", 
+      "description": "***DOCUMENT FILED IN ERROR. PLEASE DISREGARD.***Sealed Document. Correspondence to the Honorable John D. Love. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3)(Hill, Jack) Modified on 4/27/2009 (mjc, ). (Entered: 04/24/2009)", 
+      "pacer_doc_id": "17503233921"
+    }, 
+    {
+      "date_filed": "2009-04-24", 
+      "document_number": "181", 
+      "description": "Sealed Document. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2)(Grochocinski, Timothy) (Entered: 04/24/2009)", 
+      "pacer_doc_id": "17503234056"
+    }, 
+    {
+      "date_filed": "2009-04-24", 
+      "document_number": "182", 
+      "description": "Sealed Document. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3, # 4 Exhibit 4, # 5 Exhibit 5)(White, Jason) (Entered: 04/24/2009)", 
+      "pacer_doc_id": "17503234095"
+    }, 
+    {
+      "date_filed": "2009-04-27", 
+      "document_number": "183", 
+      "description": "First Amended Witness List by CREATIVE INTERNET ADVERTISING CORPORATION. (Simon, Anthony) (Entered: 04/27/2009)", 
+      "pacer_doc_id": "17503236362"
+    }, 
+    {
+      "date_filed": "2009-04-27", 
+      "document_number": "184", 
+      "description": "Consent MOTION for Extension of Time to File Notice of Proposed Questions For The Court To Ask At Voir Dire, Amended Exhibit Lists, Amended Witness Lists, Amended Deposition Designations, Amended Objections to Pretrial Disclosures and To Submit Proposed Jury Instructions by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Text of Proposed Order)(Simon, Anthony) (Entered: 04/27/2009)", 
+      "pacer_doc_id": "17503236661"
+    }, 
+    {
+      "date_filed": "2009-04-27", 
+      "document_number": "185", 
+      "description": "Agreed MOTION to Continue Agreed Motion for Continuance of Second Pre-Trial Conference by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Text of Proposed Order)(Tadlock, Charles) (Entered: 04/27/2009)", 
+      "pacer_doc_id": "17503236934"
+    }, 
+    {
+      "date_filed": "2009-04-27", 
+      "document_number": "186", 
+      "description": "ORDER GRANTING re 166 First MOTION in Limine #9 regarding Acacia filed by CREATIVE INTERNET ADVERTISING CORPORATION. Signed by Magistrate Judge John D. Love on 4/27/2009. (gsg) (Entered: 04/28/2009)", 
+      "pacer_doc_id": "17503237120"
+    }, 
+    {
+      "date_filed": "2009-04-28", 
+      "document_number": "187", 
+      "description": "ORDER granting 184 Motion for Extension of Time to File Notice of Proposed Question for the Court ot Ask at Voir Dire. Signed by Magistrate Judge John D. Love on 4/28/2009. (gsg) (Entered: 04/28/2009)", 
+      "pacer_doc_id": "17503237621"
+    }, 
+    {
+      "date_filed": "2009-04-28", 
+      "document_number": "188", 
+      "description": "ORDER granting 185 Agreed Motion to Reschedule the Second Pre-Trial conference to April 29, 2009 at 1:30 pm. Signed by Magistrate Judge John D. Love on 4/28/2009. (gsg) (Entered: 04/28/2009)", 
+      "pacer_doc_id": "17503237627"
+    }, 
+    {
+      "date_filed": "2009-04-28", 
+      "document_number": "189", 
+      "description": "Sealed Document. Sealed Correspondence to Judge Love (revised). (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3)(Hill, Jack) (Entered: 04/28/2009)", 
+      "pacer_doc_id": "17503238579"
+    }, 
+    {
+      "date_filed": "2009-04-28", 
+      "document_number": "190", 
+      "description": "ORDER re laches at trial. Signed by Magistrate Judge John D. Love on 4/28/2009. (gsg) (Entered: 04/28/2009)", 
+      "pacer_doc_id": "17503238731"
+    }, 
+    {
+      "date_filed": "2009-04-28", 
+      "document_number": "191", 
+      "description": "NOTICE by CREATIVE INTERNET ADVERTISING CORPORATION re 135 Exhibit List Plaintiff's First Amended Exhibit List (Simon, Anthony) (Entered: 04/28/2009)", 
+      "pacer_doc_id": "17503239234"
+    }, 
+    {
+      "date_filed": "2009-04-28", 
+      "document_number": "192", 
+      "description": "NOTICE by CREATIVE INTERNET ADVERTISING CORPORATION re 136 Exhibit List, 147 Exhibit List Plaintiff's Second Amended Deposition Designations (Simon, Anthony) (Entered: 04/28/2009)", 
+      "pacer_doc_id": "17503239237"
+    }, 
+    {
+      "date_filed": "2009-04-28", 
+      "document_number": "193", 
+      "description": "Proposed Voir Dire by Yahoo! Inc. (White, Jason) (Entered: 04/28/2009)", 
+      "pacer_doc_id": "17503239253"
+    }, 
+    {
+      "date_filed": "2009-04-28", 
+      "document_number": "194", 
+      "description": "Witness List by Yahoo! Inc. (White, Jason) (Entered: 04/28/2009)", 
+      "pacer_doc_id": "17503239256"
+    }, 
+    {
+      "date_filed": "2009-04-28", 
+      "document_number": "195", 
+      "description": "Exhibit List, First Amended, by Yahoo! Inc.. (White, Jason) (Entered: 04/28/2009)", 
+      "pacer_doc_id": "17503239259"
+    }, 
+    {
+      "date_filed": "2009-04-28", 
+      "document_number": "196", 
+      "description": "NOTICE by Yahoo! Inc of Revised Deposition Designations and Counter Desposition Designations (White, Jason) (Entered: 04/28/2009)", 
+      "pacer_doc_id": "17503239262"
+    }, 
+    {
+      "date_filed": "2009-04-28", 
+      "document_number": "197", 
+      "description": "NOTICE by Yahoo! Inc of Yahoo's Objections to Plaintiff's Deposition Designations (White, Jason) (Entered: 04/28/2009)", 
+      "pacer_doc_id": "17503239265"
+    }, 
+    {
+      "date_filed": "2009-04-28", 
+      "document_number": "198", 
+      "description": "NOTICE by Yahoo! Inc of Yahoo's objections to Plaintiff's First Amended Trial Exhibit List (Attachments: # 1 Exhibit No. 22 offered by Plaintiff, # 2 Exhibit No. 113 offered by Plainitff, # 3 Exhibit No;. 140 offered by Yahoo, # 4 Exhibit No. 142 offered by Yahoo, # 5 Exhibit No. 143 offered by Yahoo, # 6 Exhibit No. 144 offered by Yahoo, # 7 Exhibit No. 145 offered by Yahoo)(White, Jason) (Entered: 04/28/2009)", 
+      "pacer_doc_id": "17503239285"
+    }, 
+    {
+      "date_filed": "2009-04-28", 
+      "document_number": "199", 
+      "description": "Sealed Document. Plaintiff's Objections to Yahoo's Exhibits and Deposition Designations (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3, # 4 Exhibit 4, # 5 Exhibit 5, # 6 Exhibit 6, # 7 Exhibit 7, # 8 Exhibit 8, # 9 Exhibit 9, # 10 Exhibit 10, # 11 Exhibit 11, # 12 Exhibit 12, # 13 Exhibit 13, # 14 Exhibit 14, # 15 Exhibit 15, # 16 Exhibit 16, # 17 Exhibit 17, # 18 Exhibit 18, # 19 Exhibit 19, # 20 Exhibit 20, # 21 Exhibit 21, # 22 Exhibit 22, # 23 Exhibit 23, # 24 Exhibit 24, # 25 Exhibit 25, # 26 Exhibit 26, # 27 Exhibit 27, # 28 Exhibit 28, # 29 Exhibit 29)(Grochocinski, Timothy) (Additional attachment(s) added on 4/30/2009: # 31 Certificate of Authorization to File Under Seal) (mjc, ). (Entered: 04/28/2009)", 
+      "pacer_doc_id": "17503239295"
+    }, 
+    {
+      "date_filed": "2009-04-29", 
+      "document_number": "200", 
+      "description": "Sealed Document. Plaintiff's Objections to Yahoo's Counter Deposition Designations (Attachments: # 1 Exhibit 1 - Deposition Testimony of Lisa McFall, # 2 Exhibit 2 - Deposition Testimony of Chuck Gabbard, # 3 Exhibit 3 - Deposition Testimony of Christopher Szeto)(Grochocinski, Timothy) (Additional attachment(s) added on 4/30/2009: # 4 Certificate of Authorization to File Under Seal) (mjc, ). (Entered: 04/29/2009)", 
+      "pacer_doc_id": "17503239929"
+    }, 
+    {
+      "date_filed": "2009-04-29", 
+      "document_number": "201", 
+      "description": "NOTICE by CREATIVE INTERNET ADVERTISING CORPORATION re 199 Sealed Document,, Supplemental Memorandum Regarding Plaintiff's Objection # 7 Regarding Alleged Prior Art References Identified by Yahoo that Yahoo has Failed to Establish are Prior Art (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Errata 3, # 4 Exhibit 4, # 5 Exhibit 5, # 6 Exhibit 6, # 7 Exhibit 7, # 8 Exhibit 8, # 9 Exhibit 9, # 10 Exhibit 10, # 11 Exhibit 11, # 12 Exhibit 12, # 13 Exhibit 13, # 14 Errata 14, # 15 Exhibit 15, # 16 Exhibit 16, # 17 Exhibit 17, # 18 Exhibit 18, # 19 Exhibit 19, # 20 Exhibit 20)(Grochocinski, Timothy) (Entered: 04/29/2009)", 
+      "pacer_doc_id": "17503240224"
+    }, 
+    {
+      "date_filed": "2009-04-29", 
+      "document_number": "203", 
+      "description": "Minute Entry for proceedings held before Magistrate Judge John D. Love: Final Pretrial Conference held on 4/29/2009. (Court Reporter Kimberly Julian.) (mjm, ) (Entered: 05/01/2009)", 
+      "pacer_doc_id": "17503245856"
+    }, 
+    {
+      "date_filed": "2009-04-30", 
+      "document_number": "202", 
+      "description": "ORDER for Clerk of Court to release the jury list to the parties on Monday, May 11, 2009 re 173 Pretrial Deadlines. Signed by Magistrate Judge John D. Love on 4/30/2009. (gsg) (Entered: 04/30/2009)", 
+      "pacer_doc_id": "17503244136"
+    }, 
+    {
+      "date_filed": "2009-05-06", 
+      "document_number": "204", 
+      "description": "MOTION to Amend/Correct 195 Exhibit List, 173 Order,, Set Deadlines/Hearings, by Yahoo! Inc. (Attachments: # 1 Affidavit White Decl., # 2 Appendix Exhibit A, # 3 Text of Proposed Order)(White, Jason) (Entered: 05/06/2009)", 
+      "pacer_doc_id": "17503251641"
+    }, 
+    {
+      "date_filed": "2009-05-06", 
+      "document_number": "205", 
+      "description": "NOTICE by CREATIVE INTERNET ADVERTISING CORPORATION, Yahoo! Inc of Request for Daily Transcript or Real Time Reporting of Court Proceedings (Race, Deborah) (Entered: 05/06/2009)", 
+      "pacer_doc_id": "17503252664"
+    }, 
+    {
+      "date_filed": "2009-05-06", 
+      "document_number": "206", 
+      "description": "Joint MOTION for Leave to File Late Notice of Request for Daily Transcript or Real Time Reporting of Court Proceedings by CREATIVE INTERNET ADVERTISING CORPORATION, Yahoo! Inc. (Attachments: # 1 Text of Proposed Order)(Race, Deborah) (Entered: 05/06/2009)", 
+      "pacer_doc_id": "17503252699"
+    }, 
+    {
+      "date_filed": "2009-05-07", 
+      "document_number": "207", 
+      "description": "ORDER granting 206 Motion for Leave to Serve Late Notice of Request ofr Daily Transcript. Signed by Magistrate Judge John D. Love on 5/7/2009. (gsg) (Entered: 05/07/2009)", 
+      "pacer_doc_id": "17503253959"
+    }, 
+    {
+      "date_filed": "2009-05-07", 
+      "document_number": "208", 
+      "description": "RESPONSE to Motion re 204 MOTION to Amend/Correct 195 Exhibit List, 173 Order,, Set Deadlines/Hearings, filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3, # 4 Exhibit 4)(Grochocinski, Timothy) (Entered: 05/07/2009)", 
+      "pacer_doc_id": "17503255404"
+    }, 
+    {
+      "date_filed": "2009-05-07", 
+      "document_number": "209", 
+      "description": "ORDER granting 171 Motion in Limine. The parties are ORDERED to refrain from mentioning, referring to, or bringing before the jury, directly or indirectly, upon voir dire examination, reading of the pleadings, statement of the case, interrogation of the witnesses, argument, objections before the jury, or in any other manner the settlement agreement between Plaintiff and AOL. Signed by Magistrate Judge John D. Love on 5/7/2009. (gsg) (Entered: 05/08/2009)", 
+      "pacer_doc_id": "17503255515"
+    }, 
+    {
+      "date_filed": "2009-05-08", 
+      "document_number": "210", 
+      "description": "ORDER REGARDING EXHIBITS. Signed by Magistrate Judge John D. Love on 05/08/09. cc:attys 5-8-09(mll, ) (Entered: 05/08/2009)", 
+      "pacer_doc_id": "17503258145"
+    }, 
+    {
+      "date_filed": "2009-05-11", 
+      "document_number": "218", 
+      "description": "Minute Entry for proceedings held before Magistrate Judge John D. Love: Jury Selection held on 5/11/2009, Day 1 of Jury Trial held on 5/11/2009. (Court Reporter Kimberly Julian, Keith Johnson.) (mjm, ) (Entered: 05/14/2009)", 
+      "pacer_doc_id": "17503266044"
+    }, 
+    {
+      "date_filed": "2009-05-12", 
+      "document_number": "211", 
+      "description": "NOTICE of Attorney Appearance by Adam A Biggs on behalf of CREATIVE INTERNET ADVERTISING CORPORATION (Biggs, Adam) (Entered: 05/12/2009)", 
+      "pacer_doc_id": "17503262718"
+    }, 
+    {
+      "date_filed": "2009-05-12", 
+      "document_number": "212", 
+      "description": "TRIAL BRIEF Regarding Willful Infringement by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1)(Simon, Anthony) (Entered: 05/12/2009)", 
+      "pacer_doc_id": "17503263515"
+    }, 
+    {
+      "date_filed": "2009-05-12", 
+      "document_number": "219", 
+      "description": "Minute Entry for proceedings held before Magistrate Judge John D. Love: Day 2 of Jury Trial held on 5/12/2009. (Court Reporter Kimberly Julian, Keith Johnson.) (mjm, ) (Entered: 05/14/2009)", 
+      "pacer_doc_id": "17503266053"
+    }, 
+    {
+      "date_filed": "2009-05-13", 
+      "document_number": "213", 
+      "description": "MOTION for Judgment as a Matter of Law of Non-Infringment Under Rule 50 by Yahoo! Inc. (Attachments: # 1 Text of Proposed Order)(Carroll, Otis) (Entered: 05/13/2009)", 
+      "pacer_doc_id": "17503264009"
+    }, 
+    {
+      "date_filed": "2009-05-13", 
+      "document_number": "214", 
+      "description": "MOTION for Judgment as a Matter of Law of No Willful Infringement Under Rule 50 by Yahoo! Inc. (Attachments: # 1 Text of Proposed Order)(Carroll, Otis) (Entered: 05/13/2009)", 
+      "pacer_doc_id": "17503264035"
+    }, 
+    {
+      "date_filed": "2009-05-13", 
+      "document_number": "215", 
+      "description": "MOTION for Judgment as a Matter of Law of No Earlier Invention Date Under Rule 50 by Yahoo! Inc. (Attachments: # 1 Text of Proposed Order)(Carroll, Otis) (Entered: 05/13/2009)", 
+      "pacer_doc_id": "17503264177"
+    }, 
+    {
+      "date_filed": "2009-05-13", 
+      "document_number": "216", 
+      "description": "MOTION for Reconsideration of Court's Ruling on Yahoo Patents by Yahoo! Inc. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3)(White, Jason) (Additional attachment(s) added on 5/15/2009: # 4 Text of Proposed Order) (mjc, ). (Entered: 05/14/2009)", 
+      "pacer_doc_id": "17503265824"
+    }, 
+    {
+      "date_filed": "2009-05-13", 
+      "document_number": "220", 
+      "description": "Minute Entry for proceedings held before Magistrate Judge John D. Love: Day 3 of Jury Trial held on 5/13/2009. (Court Reporter Kimberly Julian, Keith Johnson.) (mjm, ) (Entered: 05/14/2009)", 
+      "pacer_doc_id": "17503266079"
+    }, 
+    {
+      "date_filed": "2009-05-14", 
+      "document_number": "217", 
+      "description": "***DOCUMENT FILED IN ERROR. PLEASE DISREGARD.***Proposed Jury Instructions by Yahoo! Inc. (Carroll, Otis) Modified on 5/14/2009 (mjc, ). (Entered: 05/14/2009)", 
+      "pacer_doc_id": "17503265934"
+    }, 
+    {
+      "date_filed": "2009-05-14", 
+      "document_number": "221", 
+      "description": "Proposed Jury Instructions by Yahoo! Inc. (Carroll, Otis) (Entered: 05/14/2009)", 
+      "pacer_doc_id": "17503267334"
+    }, 
+    {
+      "date_filed": "2009-05-14", 
+      "document_number": "222", 
+      "description": "MOTION for Judgment as a Matter of Law by Yahoo! Inc. Responses due by 5/18/2009 (Attachments: # 1 Text of Proposed Order, # 2 Exhibit)(White, Jason) (Entered: 05/15/2009)", 
+      "pacer_doc_id": "17503267993"
+    }, 
+    {
+      "date_filed": "2009-05-14", 
+      "document_number": "223", 
+      "description": "Day 4 of Minute Entry for proceedings held before Magistrate Judge John D. Love: Jury Trial held on 5/14/2009. (Court Reporter Kimberly Julian, Keith Johnson.) (mjm, ) (Entered: 05/15/2009)", 
+      "pacer_doc_id": "17503268110"
+    }, 
+    {
+      "date_filed": "2009-05-15", 
+      "document_number": "224", 
+      "description": "Jury Instructions. (gsg) (Entered: 05/18/2009)", 
+      "pacer_doc_id": "17503271686"
+    }, 
+    {
+      "date_filed": "2009-05-15", 
+      "document_number": "225", 
+      "description": "SEALED Jury Note. (mjm, ) (Entered: 05/19/2009)", 
+      "pacer_doc_id": "17503274115"
+    }, 
+    {
+      "date_filed": "2009-05-15", 
+      "document_number": "226", 
+      "description": "SEALED Court's Response to Jury Note. (mjm, ) (Entered: 05/19/2009)", 
+      "pacer_doc_id": "17503274121"
+    }, 
+    {
+      "date_filed": "2009-05-15", 
+      "document_number": "227", 
+      "description": "JURY VERDICT. (mjm, ) (Entered: 05/19/2009)", 
+      "pacer_doc_id": "17503274131"
+    }, 
+    {
+      "date_filed": "2009-05-15", 
+      "document_number": "228", 
+      "description": "Exhibit List of exhibits admitted during trial by CREATIVE INTERNET ADVERTISING CORPORATION. (mjm, ) (Entered: 05/19/2009)", 
+      "pacer_doc_id": "17503274241"
+    }, 
+    {
+      "date_filed": "2009-05-15", 
+      "document_number": "229", 
+      "description": "Exhibit List of exhibits admitted during trial by Yahoo! Inc. (mjm, ) (Additional attachment(s) added on 5/28/2009: # 1 Exhibit list) (Entered: 05/19/2009)", 
+      "pacer_doc_id": "17503290819"
+    }, 
+    {
+      "date_filed": "2009-05-15", 
+      "document_number": "234", 
+      "description": "Minute Entry for proceedings held before Magistrate Judge John D. Love: Day 5 of Jury Trial held on 5/15/2009. Verdict reached. (Court Reporter Kimberly Julian, Keith Johnson.) (mjm, ) (Entered: 05/19/2009)", 
+      "pacer_doc_id": "17503275376"
+    }, 
+    {
+      "date_filed": "2009-05-19", 
+      "document_number": "230", 
+      "description": "DISREGARD. FILED IN ERROR. Exhibit List Final Exhibit List of Exhibits Admitted at Trial by Yahoo! Inc.. (White, Jason) Modified on 5/19/2009 (gsg). (Entered: 05/19/2009)", 
+      "pacer_doc_id": "17503274567"
+    }, 
+    {
+      "date_filed": "2009-05-19", 
+      "document_number": "231", 
+      "description": "ORDER re 227 Jury Verdict. Parties are ORDERED to file any post-verdict motions by Friday, May 29, 2009. Signed by Magistrate Judge John D. Love on 5/19/2009. (gsg) (Entered: 05/19/2009)", 
+      "pacer_doc_id": "17503274809"
+    }, 
+    {
+      "date_filed": "2009-05-19", 
+      "document_number": "232", 
+      "description": "ORDER granting 204 Motion to Amend/Correct; denying 213 Motion for Judgment as a Matter of Law; denying 214 Motion for Judgment as a Matter of Law; granting 215 Motion for Judgment as a Matter of Law; denying 216 Motion for Reconsideration re 222 MOTION for Judgment as a Matter of Law filed by Yahoo! Inc, 213 MOTION for Judgment as a Matter of Law of Non-Infringment Under Rule 50 filed by Yahoo! Inc, 215 MOTION for Judgment as a Matter of Law of No Earlier Invention Date Under Rule 50 filed by Yahoo! Inc, 204 MOTION to Amend/Correct 195 Exhibit List, 173 Order,, Set Deadlines/Hearings, filed by Yahoo! Inc, 216 MOTION for Reconsideration of Court's Ruling on Yahoo Patents filed by Yahoo! Inc, 214 MOTION for Judgment as a Matter of Law of No Willful Infringement Under Rule 50 filed by Yahoo! Inc; denying 222 Motion for Judgment as a Matter of Law. Signed by Magistrate Judge John D. Love on 5/19/2009. (gsg) (Entered: 05/19/2009)", 
+      "pacer_doc_id": "17503274820"
+    }, 
+    {
+      "date_filed": "2009-05-19", 
+      "document_number": "233", 
+      "description": "Agreed MOTION for Extension of Time to File Agreed Motion to Extend Deadline of Paragraph 3 of the Court's Order Regarding Exhibits by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Text of Proposed Order)(Tadlock, Charles) (Entered: 05/19/2009)", 
+      "pacer_doc_id": "17503275080"
+    }, 
+    {
+      "date_filed": "2009-05-19", 
+      "document_number": "235", 
+      "description": "ORDER granting 233 Motion for Extension of Time to File. The Agreed Motion to Extend the Deadline in Paragraph 3 of the Order Regarding Exhibits (Docket 210 shall be, and is hereby GRANTED. Signed by Magistrate Judge John D. Love on 5/19/2009. (gsg) (Entered: 05/20/2009)", 
+      "pacer_doc_id": "17503276517"
+    }, 
+    {
+      "date_filed": "2009-05-22", 
+      "document_number": "236", 
+      "description": "NOTICE by CREATIVE INTERNET ADVERTISING CORPORATION Regarding Exhibits (Simon, Anthony) (Entered: 05/22/2009)", 
+      "pacer_doc_id": "17503284007"
+    }, 
+    {
+      "date_filed": "2009-05-27", 
+      "document_number": "237", 
+      "description": "NOTICE by Yahoo! Inc Notice Regarding Exhibits (Race, Deborah) (Entered: 05/27/2009)", 
+      "pacer_doc_id": "17503289542"
+    }, 
+    {
+      "date_filed": "2009-05-27", 
+      "document_number": "238", 
+      "description": "MOTION to Seal Trial Exhibit 23 by Yahoo! Inc. (Attachments: # 1 Text of Proposed Order)(Race, Deborah) (Entered: 05/27/2009)", 
+      "pacer_doc_id": "17503290141"
+    }, 
+    {
+      "date_filed": "2009-05-29", 
+      "document_number": "239", 
+      "description": "MOTION for Judgment as a Matter of Law and to Strike the Testimony of Plaintiff's Expert by Yahoo! Inc. Responses due by 6/10/2009 (Attachments: # 1 Affidavit, # 2 Exhibit, # 3 Exhibit, # 4 Text of Proposed Order)(White, Jason) (Entered: 05/29/2009)", 
+      "pacer_doc_id": "17503296801"
+    }, 
+    {
+      "date_filed": "2009-05-29", 
+      "document_number": "240", 
+      "description": "***FILED IN ERROR. PLEASE DISREGARD. DOCUMENT IS NOT A MOTION.*** MOTION for Judgment as a Matter of Law by Yahoo! Inc. Responses due by 6/10/2009 (Attachments: # 1 Affidavit, # 2 Exhibit, # 3 Exhibit, # 4 Exhibit, # 5 Text of Proposed Order)(White, Jason) Modified on 6/1/2009 (mjc, ). (Entered: 05/29/2009)", 
+      "pacer_doc_id": "17503296813"
+    }, 
+    {
+      "date_filed": "2009-05-29", 
+      "document_number": "241", 
+      "description": "MOTION for New Trial by Yahoo! Inc. (Attachments: # 1 Exhibit, # 2 Text of Proposed Order)(White, Jason) (Entered: 05/29/2009)", 
+      "pacer_doc_id": "17503296836"
+    }, 
+    {
+      "date_filed": "2009-05-29", 
+      "document_number": "242", 
+      "description": "MOTION for Judgment as a Matter of Law of Non-Infringement by Yahoo! Inc. Responses due by 6/10/2009 (Attachments: # 1 Text of Proposed Order)(White, Jason) (Entered: 05/29/2009)", 
+      "pacer_doc_id": "17503296844"
+    }, 
+    {
+      "date_filed": "2009-05-29", 
+      "document_number": "243", 
+      "description": "MOTION for Judgment as a Matter of Law of No Willful Infringement by Yahoo! Inc. Responses due by 6/10/2009 (Attachments: # 1 Text of Proposed Order)(White, Jason) (Entered: 05/29/2009)", 
+      "pacer_doc_id": "17503296848"
+    }, 
+    {
+      "date_filed": "2009-05-29", 
+      "document_number": "244", 
+      "description": "MOTION for Judgment as a Matter of Law of Invalidity by Yahoo! Inc. Responses due by 6/10/2009 (Attachments: # 1 Affidavit, # 2 Exhibit, # 3 Exhibit, # 4 Exhibit, # 5 Text of Proposed Order)(White, Jason) (Entered: 05/29/2009)", 
+      "pacer_doc_id": "17503297084"
+    }, 
+    {
+      "date_filed": "2009-05-29", 
+      "document_number": "245", 
+      "description": "SEALED MOTION for Entry of Judgment on the Verdict by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3, # 4 Exhibit 4, # 5 Exhibit 5, # 6 Exhibit 6, # 7 Exhibit 7, # 8 Exhibit 8, # 9 Exhibit 9, # 10 Exhibit 10, # 11 Exhibit 11, # 12 Exhibit 12, # 13 Exhibit 13, # 14 Exhibit 14, # 15 Exhibit 15, # 16 Text of Proposed Order)(Grochocinski, Timothy) (Additional attachment(s) added on 6/3/2009: # 17 Certificate of Authorization to File Under Seal) (mjc, ). (Entered: 05/29/2009)", 
+      "pacer_doc_id": "17503297194"
+    }, 
+    {
+      "date_filed": "2009-06-01", 
+      "document_number": "246", 
+      "description": "SEALED ADDITIONAL ATTACHMENTS to Main Document: 244 MOTION for Judgment as a Matter of Law of Invalidity. (White, Jason) (Additional attachment(s) added on 6/3/2009: # 1 Certificate of Authorization to File Under Seal) (mjc, ). (Entered: 06/01/2009)", 
+      "pacer_doc_id": "17503298287"
+    }, 
+    {
+      "date_filed": "2009-06-01", 
+      "document_number": "247", 
+      "description": "ORDER granting 238 Motion to Seal Trial Exhibit 23 filed by Yahoo!, Inc. Signed by Magistrate Judge John D. Love on 6/1/2009. (gsg) (Entered: 06/01/2009)", 
+      "pacer_doc_id": "17503298293"
+    }, 
+    {
+      "date_filed": "2009-06-01", 
+      "document_number": "248", 
+      "description": "BRIEF filed on Laches by Yahoo! Inc. (Attachments: # 1 Affidavit, # 2 Exhibit, # 3 Exhibit, # 4 Exhibit, # 5 Text of Proposed Order)(White, Jason) (Entered: 06/01/2009)", 
+      "pacer_doc_id": "17503298751"
+    }, 
+    {
+      "date_filed": "2009-06-10", 
+      "document_number": "249", 
+      "description": "***DOCUMENT FILED IN ERROR. PLEASE DISREGARD.***RESPONSE in Opposition re 242 MOTION for Judgment as a Matter of Law of Non-Infringement filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3)(Grochocinski, Timothy) Modified on 6/11/2009 (mjc, ). (Entered: 06/10/2009)", 
+      "pacer_doc_id": "17503318103"
+    }, 
+    {
+      "date_filed": "2009-06-10", 
+      "document_number": "250", 
+      "description": "RESPONSE in Opposition re 239 MOTION for Judgment as a Matter of Law and to Strike the Testimony of Plaintiff's Expert filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2)(Grochocinski, Timothy) (Entered: 06/10/2009)", 
+      "pacer_doc_id": "17503318109"
+    }, 
+    {
+      "date_filed": "2009-06-10", 
+      "document_number": "251", 
+      "description": "RESPONSE in Opposition re 244 MOTION for Judgment as a Matter of Law of Invalidity filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3, # 4 Exhibit 4, # 5 Exhibit 5, # 6 Exhibit 6, # 7 Exhibit 7, # 8 Exhibit 8, # 9 Exhibit 9, # 10 Exhibit 10, # 11 Exhibit 11, # 12 Text of Proposed Order)(Grochocinski, Timothy) (Entered: 06/10/2009)", 
+      "pacer_doc_id": "17503318123"
+    }, 
+    {
+      "date_filed": "2009-06-10", 
+      "document_number": "252", 
+      "description": "SEALED RESPONSE to Motion re 245 SEALED MOTION for Entry of Judgment on the Verdict filed by Yahoo! Inc. (Attachments: # 1 Text of Proposed Order)(White, Jason) (Entered: 06/10/2009)", 
+      "pacer_doc_id": "17503318143"
+    }, 
+    {
+      "date_filed": "2009-06-10", 
+      "document_number": "253", 
+      "description": "RESPONSE in Opposition re 241 MOTION for New Trial filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3)(Simon, Anthony) (Entered: 06/10/2009)", 
+      "pacer_doc_id": "17503318227"
+    }, 
+    {
+      "date_filed": "2009-06-10", 
+      "document_number": "254", 
+      "description": "SEALED REPLY to Response to Motion re 243 MOTION for Judgment as a Matter of Law of No Willful Infringement filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3, # 4 Exhibit 4, # 5 Exhibit 5, # 6 Exhibit 6, # 7 Exhibit 7, # 8 Exhibit 8, # 9 Exhibit 9, # 10 Exhibit 10, # 11 Exhibit 11, # 12 Exhibit 12, # 13 Exhibit 13, # 14 Exhibit 14, # 15 Exhibit 15, # 16 Exhibit 16, # 17 Exhibit 17)(Simon, Anthony) (Entered: 06/10/2009)", 
+      "pacer_doc_id": "17503318240"
+    }, 
+    {
+      "date_filed": "2009-06-10", 
+      "document_number": "255", 
+      "description": "***DOCUMENT FILED IN ERROR. PLEASE DISREGARD.***RESPONSE to 248 Brief Plaintiff's Response in Opposition to Yahoo! Inc.'s Opening Brief on Laches by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3, # 4 Exhibit 4, # 5 Exhibit 5, # 6 Exhibit 6)(Simon, Anthony) Modified on 6/11/2009 (mjc, ). (Entered: 06/10/2009)", 
+      "pacer_doc_id": "17503318268"
+    }, 
+    {
+      "date_filed": "2009-06-11", 
+      "document_number": "256", 
+      "description": "RESPONSE in Opposition re 242 MOTION for Judgment as a Matter of Law of Non-Infringement filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3)(Grochocinski, Timothy) ***Corrects Docket Entry #249*** Modified on 6/11/2009 (kls, ). (Entered: 06/11/2009)", 
+      "pacer_doc_id": "17503318467"
+    }, 
+    {
+      "date_filed": "2009-06-11", 
+      "document_number": "257", 
+      "description": "SEALED RESPONSE by CREATIVE INTERNET ADVERTISING CORPORATION to 248 Brief filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Errata 1, # 2 Exhibit 2, # 3 Exhibit 3, # 4 Exhibit 4, # 5 Exhibit 5, # 6 Exhibit 6, # 7 Exhibit 7, # 8 Exhibit 8, # 9 Exhibit 9, # 10 Exhibit 10)(Simon, Anthony) (Entered: 06/11/2009)", 
+      "pacer_doc_id": "17503319741"
+    }, 
+    {
+      "date_filed": "2009-06-15", 
+      "document_number": "258", 
+      "description": "REPLY to Response to Motion re 245 SEALED MOTION for Entry of Judgment on the Verdict filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3, # 4 Exhibit A to Exhibit 3)(Grochocinski, Timothy) (Entered: 06/15/2009)", 
+      "pacer_doc_id": "17503325798"
+    }, 
+    {
+      "date_filed": "2009-06-15", 
+      "document_number": "259", 
+      "description": "REPLY to Response to Motion re 239 MOTION for Judgment as a Matter of Law and to Strike the Testimony of Plaintiff's Expert filed by Yahoo! Inc. (White, Jason) (Entered: 06/15/2009)", 
+      "pacer_doc_id": "17503325845"
+    }, 
+    {
+      "date_filed": "2009-06-15", 
+      "document_number": "260", 
+      "description": "REPLY to Response to Motion re 244 MOTION for Judgment as a Matter of Law of Invalidity filed by Yahoo! Inc. (White, Jason) (Entered: 06/15/2009)", 
+      "pacer_doc_id": "17503325848"
+    }, 
+    {
+      "date_filed": "2009-06-15", 
+      "document_number": "261", 
+      "description": "REPLY to Response to Motion re 241 MOTION for New Trial filed by Yahoo! Inc. (White, Jason) (Entered: 06/15/2009)", 
+      "pacer_doc_id": "17503325864"
+    }, 
+    {
+      "date_filed": "2009-06-15", 
+      "document_number": "262", 
+      "description": "REPLY to Response to Motion re 242 MOTION for Judgment as a Matter of Law of Non-Infringement filed by Yahoo! Inc. (White, Jason) (Entered: 06/15/2009)", 
+      "pacer_doc_id": "17503325903"
+    }, 
+    {
+      "date_filed": "2009-06-15", 
+      "document_number": "263", 
+      "description": "REPLY to Response to Motion re 243 MOTION for Judgment as a Matter of Law of No Willful Infringement filed by Yahoo! Inc. (White, Jason) (Entered: 06/15/2009)", 
+      "pacer_doc_id": "17503325906"
+    }, 
+    {
+      "date_filed": "2009-06-15", 
+      "document_number": "264", 
+      "description": "SEALED RESPONSE by Yahoo! Inc to 257 Response to Non-Motion, 248 Brief filed by Yahoo! Inc. (Attachments: # 1 Affidavit, # 2 Exhibit)(White, Jason) (Entered: 06/15/2009)", 
+      "pacer_doc_id": "17503325916"
+    }, 
+    {
+      "date_filed": "2009-06-16", 
+      "document_number": "265", 
+      "description": "SEALED ADDITIONAL ATTACHMENTS to Main Document: (authorization to file under seal) 264 Response to Non-Motion. (White, Jason) (Entered: 06/16/2009)", 
+      "pacer_doc_id": "17503325957"
+    }, 
+    {
+      "date_filed": "2009-06-22", 
+      "document_number": "266", 
+      "description": "NOTICE of Change of Address by Charles Craig Tadlock (Tadlock, Charles) (Entered: 06/22/2009)", 
+      "pacer_doc_id": "17503337578"
+    }, 
+    {
+      "date_filed": "2009-06-24", 
+      "document_number": "267", 
+      "description": "ORDER Setting Hearing on Motions 242 MOTION for Judgment as a Matter of Law of Non-Infringement, 239 MOTION for Judgment as a Matter of Law and to Strike the Testimony of Plaintiff's Expert, 241 MOTION for New Trial, 244 MOTION for Judgment as a Matter of Law of Invalidity, 243 MOTION for Judgment as a Matter of Law of No Willful Infringement, 245 SEALED MOTION for Entry of Judgment on the Verdict 248 Defendant's Opening Brief on Laches : The Court hereby ORDERS the parties to appear for a hearing on these Motions on Wednesday, July 29, 2009 at 9:00 a.m. CST. The Court is setting all pending post-trial motions for hearing in order to have a date set, should the hearing be necessary. However, the Court may issue rulings prior to the hearing. Motion Hearing set for 7/29/2009 at 9:00 a.m. in Ctrm 207 (Tyler) before Magistrate Judge John D. Love. Signed by Magistrate Judge John D. Love on 6/24/2009. (kls, ) (Entered: 06/25/2009)", 
+      "pacer_doc_id": "17503344594"
+    }, 
+    {
+      "date_filed": "2009-07-06", 
+      "document_number": "268", 
+      "description": "Unopposed MOTION Motion to Move Hearing Date by Yahoo! Inc. (Attachments: # 1 Text of Proposed Order)(Race, Deborah) (Entered: 07/06/2009)", 
+      "pacer_doc_id": "17503361584"
+    }, 
+    {
+      "date_filed": "2009-07-07", 
+      "document_number": "269", 
+      "description": "ORDER granting 268 Motion to Move Hearing Date. The hearing previously scheduled for July 29, 2009 is now reset for Monday, August 3, 2009 at 9:00 a.m. Signed by Magistrate Judge John D. Love on 7/7/2009. (gsg) (Entered: 07/07/2009)", 
+      "pacer_doc_id": "17503364650"
+    }, 
+    {
+      "date_filed": "2009-07-07", 
+      "document_number": "270", 
+      "description": "ORDERED for both parties fo file Proposed Findings of Fact and Conclusions of Law regarding Defendant's Motion in searchable and editable PDF format by Wednesday, July 15, 2009. Signed by Magistrate Judge John D. Love on 7/7/2009. (gsg) (Entered: 07/07/2009)", 
+      "pacer_doc_id": "17503364663"
+    }, 
+    {
+      "date_filed": "2009-07-10", 
+      "document_number": "271", 
+      "description": "ORDER for Defendant to re-file its Laches Motion by Wednesday, july 15, 2009 with proper citations to the transcript fromo trial in support of any and all factual assertions relied upon as a basis for Defendant's proposed findings of fact. Signed by Magistrate Judge John D. Love on 7/9/2009. (gsg) (Entered: 07/10/2009)", 
+      "pacer_doc_id": "17503370746"
+    }, 
+    {
+      "date_filed": "2009-07-14", 
+      "document_number": "272", 
+      "description": "ORDER re 245 SEALED MOTION for Entry of Judgment on the Verdict filed by CREATIVE INTERNET ADVERTISING CORPORATION. The Court ORDERS the parties to meet and confer to negotiate an appropriate ongoing royalty rate. The Court further ORDERS the partiesto submit a joint notice of the results of this negotiation by July 31, 2009. Signed by Magistrate Judge John D. Love on 7/14/2009. (gsg) (Entered: 07/14/2009)", 
+      "pacer_doc_id": "17503376694"
+    }, 
+    {
+      "date_filed": "2009-07-14", 
+      "document_number": "273", 
+      "description": "ORDER re 245 SEALED MOTION for Entry of Judgment on the Verdict filed by CREATIVE INTERNET ADVERTISING CORPORATION. The Court ORDERS Yahoo to produce revenue information to the extent that it has not already done so to allow CIAC to calculate supplemental damages by July 21, 2009. Signed by Magistrate Judge John D. Love on 7/14/2009. (gsg) (Entered: 07/14/2009)", 
+      "pacer_doc_id": "17503376697"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "274", 
+      "description": "MOTION for Judgment as a Matter of Law and to Strike the Testimony of Plaintiff's Expert by Yahoo! Inc. Responses due by 7/15/2009 (Attachments: # 1 Affidavit, # 2 Exhibit, # 3 Exhibit, # 4 Exhibit, # 5 Text of Proposed Order)(White, Jason) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503379957"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "275", 
+      "description": "MOTION for Judgment as a Matter of Law of Invalidity by Yahoo! Inc. Responses due by 7/15/2009 (Attachments: # 1 Affidavit, # 2 Exhibit, # 3 Exhibit, # 4 Exhibit, # 5 Exhibit, # 6 Exhibit, # 7 Exhibit, # 8 Exhibit, # 9 Exhibit, # 10 Exhibit, # 11 Exhibit, # 12 Exhibit, # 13 Exhibit, # 14 Exhibit, # 15 Exhibit, # 16 Text of Proposed Order)(White, Jason) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503379968"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "276", 
+      "description": "SEALED ADDITIONAL ATTACHMENTS to Main Document: 275 MOTION for Judgment as a Matter of Law of Invalidity. (Attachments: # 1 Errata)(White, Jason) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503379998"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "277", 
+      "description": "MOTION for New Trial by Yahoo! Inc. (Attachments: # 1 Affidavit, # 2 Exhibit, # 3 Exhibit, # 4 Exhibit, # 5 Text of Proposed Order)(White, Jason) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503380008"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "278", 
+      "description": "MOTION for Judgment as a Matter of Law of Non-Infringement by Yahoo! Inc. Responses due by 7/15/2009 (Attachments: # 1 Affidavit, # 2 Exhibit, # 3 Exhibit, # 4 Text of Proposed Order)(White, Jason) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503380016"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "279", 
+      "description": "MOTION for Judgment as a Matter of Law of No Willful Infringement by Yahoo! Inc. Responses due by 7/15/2009 (Attachments: # 1 Affidavit, # 2 Exhibit, # 3 Exhibit, # 4 Exhibit, # 5 Text of Proposed Order)(White, Jason) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503380023"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "280", 
+      "description": "REPLY to Response to Motion re 274 MOTION for Judgment as a Matter of Law and to Strike the Testimony of Plaintiff's Expert filed by Yahoo! Inc. (Attachments: # 1 Affidavit, # 2 Exhibit)(White, Jason) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503380031"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "281", 
+      "description": "REPLY to Response to Motion re 275 MOTION for Judgment as a Matter of Law of Invalidity filed by Yahoo! Inc. (Attachments: # 1 Affidavit, # 2 Exhibit, # 3 Exhibit, # 4 Exhibit)(White, Jason) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503380036"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "282", 
+      "description": "REPLY to Response to Motion re 277 MOTION for New Trial filed by Yahoo! Inc. (Attachments: # 1 Affidavit, # 2 Exhibit)(White, Jason) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503380043"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "283", 
+      "description": "REPLY to Response to Motion re 278 MOTION for Judgment as a Matter of Law of Non-Infringement filed by Yahoo! Inc. (Attachments: # 1 Affidavit, # 2 Exhibit)(White, Jason) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503380048"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "284", 
+      "description": "REPLY to Response to Motion re 279 MOTION for Judgment as a Matter of Law of No Willful Infringement filed by Yahoo! Inc. (Attachments: # 1 Affidavit, # 2 Exhibit)(White, Jason) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503380053"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "285", 
+      "description": "REPLY to Response to Motion re 245 SEALED MOTION for Entry of Judgment on the Verdict filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3, # 4 Exhibit 3-A, # 5 Exhibit 4)(Grochocinski, Timothy) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503380085"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "286", 
+      "description": "SEALED MOTION for Entry of Judgment on the Verdict by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Certificate of Authorization to File Under Seal, # 2 Exhibit 1, # 3 Exhibit 2, # 4 Exhibit 3, # 5 Exhibit 4, # 6 Exhibit 5, # 7 Exhibit 6, # 8 Exhibit 7, # 9 Exhibit 8, # 10 Exhibit 9, # 11 Exhibit 10, # 12 Exhibit 11, # 13 Exhibit 12, # 14 Exhibit 13, # 15 Exhibit 14, # 16 Exhibit 15, # 17 Exhibit 16, # 18 Exhibit 17, # 19 Exhibit 18, # 20 Exhibit 19, # 21 Exhibit 20, # 22 Exhibit 21, # 23 Exhibit 22, # 24 Exhibit 23, # 25 Exhibit 24, # 26 Exhibit 25, # 27 Exhibit 26, # 28 Exhibit 27, # 29 Exhibit 28, # 30 Exhibit 29, # 31 Exhibit 30, # 32 Exhibit 31, # 33 Exhibit 32, # 34 Exhibit 33, # 35 Exhibit 34, # 36 Exhibit 35, # 37 Exhibit 36, # 38 Exhibit 37, # 39 Exhibit 38)(Grochocinski, Timothy) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503380097"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "287", 
+      "description": "SEALED RESPONSE by CREATIVE INTERNET ADVERTISING CORPORATION to 248 Brief filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3, # 4 Exhibit 4, # 5 Exhibit 5, # 6 Exhibit 6, # 7 Exhibit 7, # 8 Exhibit 8, # 9 Exhibit 9, # 10 Exhibit 10)(Simon, Anthony) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503380152"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "288", 
+      "description": "RESPONSE in Opposition re 241 MOTION for New Trial filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3, # 4 Exhibit 4, # 5 Exhibit 5, # 6 Exhibit 6, # 7 Exhibit 7)(Simon, Anthony) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503380186"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "289", 
+      "description": "RESPONSE in Opposition re 242 MOTION for Judgment as a Matter of Law of Non-Infringement filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3)(Grochocinski, Timothy) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503380196"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "290", 
+      "description": "MOTION for Judgment as a Matter of Law and Proposed Findings of Fact and Conclusions of Law by Yahoo! Inc. Responses due by 7/15/2009 (Attachments: # 1 Affidavit, # 2 Exhibit, # 3 Exhibit, # 4 Exhibit, # 5 Exhibit, # 6 Exhibit, # 7 Exhibit, # 8 Exhibit, # 9 Exhibit, # 10 Exhibit, # 11 Exhibit, # 12 Exhibit, # 13 Text of Proposed Order, # 14 Supplement)(White, Jason) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503380202"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "291", 
+      "description": "REPLY to Response to Motion re 290 MOTION for Judgment as a Matter of Law and Proposed Findings of Fact and Conclusions of Law filed by Yahoo! Inc. (Attachments: # 1 Affidavit, # 2 Exhibit, # 3 Exhibit)(White, Jason) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503380219"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "292", 
+      "description": "RESPONSE in Opposition re 286 SEALED MOTION for Entry of Judgment on the Verdict filed by Yahoo! Inc. (Attachments: # 1 Affidavit, # 2 Exhibit, # 3 Exhibit, # 4 Exhibit, # 5 Exhibit, # 6 Exhibit, # 7 Exhibit, # 8 Text of Proposed Order)(White, Jason) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503380225"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "293", 
+      "description": "RESPONSE in Opposition re 239 MOTION for Judgment as a Matter of Law and to Strike the Testimony of Plaintiff's Expert filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3, # 4 Exhibit 4, # 5 Exhibit 5)(Grochocinski, Timothy) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503380236"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "294", 
+      "description": "RESPONSE in Opposition re 244 MOTION for Judgment as a Matter of Law of Invalidity filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3, # 4 Exhibit 4, # 5 Exhibit 5, # 6 Exhibit 6, # 7 Exhibit 7, # 8 Exhibit 8, # 9 Errata 9, # 10 Exhibit 10, # 11 Exhibit 11, # 12 Text of Proposed Order)(Grochocinski, Timothy) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503380244"
+    }, 
+    {
+      "date_filed": "2009-07-15", 
+      "document_number": "295", 
+      "description": "NOTICE by CREATIVE INTERNET ADVERTISING CORPORATION of CIAC's Supplemental Transcript in Opposition to Yahoo's Laches Defense (Simon, Anthony) (Entered: 07/15/2009)", 
+      "pacer_doc_id": "17503380259"
+    }, 
+    {
+      "date_filed": "2009-07-16", 
+      "document_number": "296", 
+      "description": "Proposed Findings of Fact by CREATIVE INTERNET ADVERTISING CORPORATION. (Simon, Anthony) (Entered: 07/16/2009)", 
+      "pacer_doc_id": "17503380262"
+    }, 
+    {
+      "date_filed": "2009-07-16", 
+      "document_number": "297", 
+      "description": "SEALED RESPONSE to Motion re 243 MOTION for Judgment as a Matter of Law of No Willful Infringement filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3, # 4 Exhibit 4, # 5 Exhibit 5, # 6 Exhibit 6, # 7 Exhibit 7, # 8 Exhibit 8, # 9 Exhibit 9, # 10 Exhibit 10, # 11 Exhibit 11, # 12 Exhibit 12, # 13 Exhibit 13, # 14 Exhibit 14, # 15 Exhibit 15, # 16 Exhibit 16, # 17 Errata 17, # 18 Exhibit 18, # 19 Exhibit 19, # 20 Exhibit 20, # 21 Exhibit 21)(Grochocinski, Timothy) (Entered: 07/16/2009)", 
+      "pacer_doc_id": "17503380265"
+    }, 
+    {
+      "date_filed": "2009-07-27", 
+      "document_number": "298", 
+      "description": "Sealed Document. Plaintiff Creative Internet Advertising Corporation's Brief on Supplemental Damage Amount Pursuant to the Court's July 14, 2009 Order (Attachments: # 1 Exhibit A - E-Mail (July 21, 2009), # 2 Exhibit B - Def. Tr. Ex. 166)(Grochocinski, Timothy) (Entered: 07/27/2009)", 
+      "pacer_doc_id": "17503400497"
+    }, 
+    {
+      "date_filed": "2009-07-30", 
+      "document_number": "299", 
+      "description": "STIPULATION re 272 Order, Joint Notice of Results of Negotiations Regarding Ongoing Royalty Rate by CREATIVE INTERNET ADVERTISING CORPORATION. (Grochocinski, Timothy) (Entered: 07/30/2009)", 
+      "pacer_doc_id": "17503406766"
+    }, 
+    {
+      "date_filed": "2009-07-30", 
+      "document_number": "300", 
+      "description": "MEMORANDUM AND OPINION. Defendant's request for relief based on laches is DENIED. Signed by Magistrate Judge John D. Love on 7/29/2009. (gsg) (Entered: 07/30/2009)", 
+      "pacer_doc_id": "17503407496"
+    }, 
+    {
+      "date_filed": "2009-07-30", 
+      "document_number": "301", 
+      "description": "MEMORANDUM AND OPINION AND ORDER denying re 275 MOTION for Judgment as a Matter of Law of Invalidity filed by Yahoo! Inc. Signed by Magistrate Judge John D. Love on 7/29/2009. (gsg) (Entered: 07/30/2009)", 
+      "pacer_doc_id": "17503407501"
+    }, 
+    {
+      "date_filed": "2009-07-30", 
+      "document_number": "302", 
+      "description": "MEMORANDUM AND OPINION and ORDER DENYING re 278 MOTION for Judgment as a Matter of Law of Non-Infringement filed by Yahoo! Inc. Signed by Magistrate Judge John D. Love on 7/30/2009. (gsg) (Entered: 07/30/2009)", 
+      "pacer_doc_id": "17503407510"
+    }, 
+    {
+      "date_filed": "2009-07-30", 
+      "document_number": "303", 
+      "description": "MEMORANDUM AND OPINION AND ORDER denying re 274 MOTION for Judgment as a Matter of Law and to Strike the Testimony of Plaintiff's Expert filed by Yahoo! Inc, and denying 277 MOTION for New Trial filed by Yahoo! Inc. Signed by Magistrate Judge John D. Love on 7/29/2009. (gsg) (Entered: 07/30/2009)", 
+      "pacer_doc_id": "17503407520"
+    }, 
+    {
+      "date_filed": "2009-07-30", 
+      "document_number": "304", 
+      "description": "MEMORANDUM AND OPINION and ORDER denying re 279 MOTION for Judgment as a Matter of Law of No Willful Infringement filed by Yahoo! Inc. Signed by Magistrate Judge John D. Love on 7/30/2009. (gsg) (Entered: 07/30/2009)", 
+      "pacer_doc_id": "17503407530"
+    }, 
+    {
+      "date_filed": "2009-07-30", 
+      "document_number": "305", 
+      "description": "ORDER to CANCEL hearing set for Monday, August 3, 2009 at 9:00 a.m. Signed by Magistrate Judge John D. Love on 7/30/2009. (gsg) (Entered: 07/30/2009)", 
+      "pacer_doc_id": "17503407556"
+    }, 
+    {
+      "date_filed": "2009-07-31", 
+      "document_number": "306", 
+      "description": "SEALED RESPONSE by Yahoo! Inc to 298 Yahoo! Inc.'s Response to Plaintiff Creative Internet Advertising Corporation's Brief on Supplemental Damage Amount Pursuant to the Court's July 14, 2009 Order; Sealed Document, filed by Yahoo! Inc. (White, Jason) (Entered: 07/31/2009)", 
+      "pacer_doc_id": "17503411804"
+    }, 
+    {
+      "date_filed": "2009-08-17", 
+      "document_number": "307", 
+      "description": "Joint MOTION for Extension of Time to Complete Discovery re Dkt. No. 272 by Yahoo! Inc. (Attachments: # 1 Text of Proposed Order)(White, Jason) (Entered: 08/17/2009)", 
+      "pacer_doc_id": "17503440149"
+    }, 
+    {
+      "date_filed": "2009-08-18", 
+      "document_number": "308", 
+      "description": "ORDER granting 307 Motion for Extension of Time to Complete Discovery. Parties have until Thursday, August 20, 2009 to produce documents relevant to an appropriate royalty. Signed by Magistrate Judge John D. Love on 8/18/2009. (gsg) (Entered: 08/18/2009)", 
+      "pacer_doc_id": "17503442204"
+    }, 
+    {
+      "date_filed": "2009-08-28", 
+      "document_number": "309", 
+      "description": "NOTICE OF APPEAL - PATENT CASE by Yahoo! Inc. Filing fee $ 455, receipt number 05400000000002135155. (White, Jason) (Entered: 08/28/2009)", 
+      "pacer_doc_id": "17503466022"
+    }, 
+    {
+      "date_filed": "2009-08-28", 
+      "document_number": "310", 
+      "description": "Forwarded to U S Court of Appeals for the Federal Circuit certified copies of the docket sheet, 309 notice of appeal, 112 memorandum opinion and order and 304 memorandum opinion and order. (djh, ) (Entered: 08/28/2009)", 
+      "pacer_doc_id": "17503466215"
+    }, 
+    {
+      "date_filed": "2009-09-15", 
+      "document_number": "311", 
+      "description": "NOTICE of Docketing Record on Appeal from USCAFC re 309 Notice of Appeal - PATENT CASE filed by Yahoo! Inc. USCAFC Case Number 2009-1559. (djh, ) (Entered: 09/15/2009)", 
+      "pacer_doc_id": "17503495721"
+    }, 
+    {
+      "date_filed": "2009-09-21", 
+      "document_number": "312", 
+      "description": "SEALED PATENT DOCUMENT.Brief re [Dkt. 272] (Attachments: # 1 Affidavit, # 2 Exhibit, # 3 Exhibit, # 4 Exhibit, # 5 Exhibit)(White, Jason) (Entered: 09/21/2009)", 
+      "pacer_doc_id": "17503509986"
+    }, 
+    {
+      "date_filed": "2009-09-21", 
+      "document_number": "313", 
+      "description": "Sealed Patent Document. (Attachments: # 1 Exhibit 1 - Dunning Testimony, # 2 Exhibit 2 - User Statistics, # 3 Exhibit 3 - Messenger Screenshots, # 4 Exhibit 4 - Help File 1, # 5 Exhibit 5 - Help File 2, # 6 Exhibit 6 - IMV Menu, # 7 Exhibit 7 - Day Testimony, # 8 Exhibit 8 - IMV Revenue Summary, # 9 Exhibit 9 - Riley Supplemental Report)(Grochocinski, Timothy) (Entered: 09/21/2009)", 
+      "pacer_doc_id": "17503510052"
+    }, 
+    {
+      "date_filed": "2009-09-23", 
+      "document_number": "314", 
+      "description": "ORDER for counsel for CIAC and Yahoo to participate in a telephonic conference on Thursday, September 24, 2009 at 3:00pm CST. Signed by Magistrate Judge John D. Love on 9/23/2009. (gsg) (Entered: 09/23/2009)", 
+      "pacer_doc_id": "17503513483"
+    }, 
+    {
+      "date_filed": "2009-09-28", 
+      "document_number": "315", 
+      "description": "RESPONSE in Support re 286 SEALED MOTION for Entry of Judgment on the Verdict Related to Ongoing Royalty filed by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1 - Messenger Screenshots, # 2 Exhibit 2 - Yahoo Discussion Boards, # 3 Exhibit 3 - Yahoo Discussion Board, # 4 Exhibit 4 - Yahoo Discussion Board, # 5 Exhibit 5 - Yahoo Blog)(Grochocinski, Timothy) (Entered: 09/28/2009)", 
+      "pacer_doc_id": "17503522796"
+    }, 
+    {
+      "date_filed": "2009-09-28", 
+      "document_number": "316", 
+      "description": "SEALED PATENT RESPONSE by Yahoo! Inc to 313 Sealed Document, filed by Yahoo! Inc. (Attachments: # 1 Affidavit White, # 2 Exhibit Exhibit 1)(White, Jason) (Entered: 09/28/2009)", 
+      "pacer_doc_id": "17503522819"
+    }, 
+    {
+      "date_filed": "2009-09-30", 
+      "document_number": "317", 
+      "description": "Minute Entry for proceedings held before Magistrate Judge John D. Love: Evidentiary Hearing held on 9/30/2009. (Court Reporter Shea Sloan.) (mjm, ) (Entered: 09/30/2009)", 
+      "pacer_doc_id": "17503525846"
+    }, 
+    {
+      "date_filed": "2009-10-07", 
+      "document_number": "318", 
+      "description": "Unopposed MOTION to Withdraw as Attorney by Yahoo! Inc. (Attachments: # 1 Text of Proposed Order)(Hill, Jack) (Entered: 10/07/2009)", 
+      "pacer_doc_id": "17503540727"
+    }, 
+    {
+      "date_filed": "2009-10-09", 
+      "document_number": "319", 
+      "description": "ORDER GRANTING 318 Unopposed MOTION to Withdraw as Attorney filed by Yahoo! Inc. Attorney Jack Wesley Hill terminated. Signed by Magistrate Judge John D. Love on 10/9/2009. (gsg) (Entered: 10/09/2009)", 
+      "pacer_doc_id": "17503544356"
+    }, 
+    {
+      "date_filed": "2009-10-09", 
+      "document_number": "320", 
+      "description": "Unopposed MOTION to Withdraw as Attorney and Request for Termination of Electronic Notices by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Text of Proposed Order)(Ward, Thomas) (Entered: 10/09/2009)", 
+      "pacer_doc_id": "17503545269"
+    }, 
+    {
+      "date_filed": "2009-10-13", 
+      "document_number": "321", 
+      "description": "ORDER granting 320 Motion to Withdraw as Attorney. Attorney Thomas John Ward, Jr terminated. Signed by Magistrate Judge John D. Love on 10/13/2009. (gsg) (Entered: 10/13/2009)", 
+      "pacer_doc_id": "17503549526"
+    }, 
+    {
+      "date_filed": "2009-11-06", 
+      "document_number": "322", 
+      "description": "NOTICE OF FILING OF OFFICIAL TRANSCRIPT of Evidentiary Hearing Proceedings held on 9/30/09 before Judge John D. Love. Court Reporter Shea Sloan, shea_sloan@txed.uscourts.gov. 54 pages. NOTICE RE REDACTION OF TRANSCRIPTS: The parties have seven (7) business days to file with the Court a Notice of Intent to Request Redaction of this transcript. If no such Notice is filed, the transcript will be made remotely electronically available to the public without redaction after 90 calendar days. The policy is located on our website at www.txed.uscourts.gov Transcript may be viewed at the court public terminal or purchased through the Court Reporter before the deadline for Release of Transcript Restriction. After that date it may be obtained through PACER.. Redaction Request due 11/27/2009. Redacted Transcript Deadline set for 12/7/2009. Release of Transcript Restriction set for 2/4/2010. (sms, ) (Entered: 11/06/2009)", 
+      "pacer_doc_id": "17503600505"
+    }, 
+    {
+      "date_filed": "2009-12-03", 
+      "document_number": "323", 
+      "description": "NOTICE of Change of Address by Charles Craig Tadlock (Tadlock, Charles) (Entered: 12/03/2009)", 
+      "pacer_doc_id": "17503645026"
+    }, 
+    {
+      "date_filed": "2009-12-09", 
+      "document_number": "324", 
+      "description": "MEMORANDUM AND OPINION and ORDER Granting in Part 286 SEALED MOTION for Entry of Judgment on the Verdict filed by CREATIVE INTERNET ADVERTISING CORPORATION. Signed by Magistrate Judge John D. Love on 12/9/2009. (gsg) (Entered: 12/09/2009)", 
+      "pacer_doc_id": "17503656085"
+    }, 
+    {
+      "date_filed": "2010-02-01", 
+      "document_number": "325", 
+      "description": "MEMORANDUM AND OPINION and ORDER re 286 SEALED MOTION for Entry of Judgment on the Verdict filed by CREATIVE INTERNET ADVERTISING CORPORATION. Plaintiffs request for prejudgment and post-judgment interest is GRANTED. Signed by Magistrate Judge John D. Love on 2/1/2010. (gsg) (Entered: 02/02/2010)", 
+      "pacer_doc_id": "17503746647"
+    }, 
+    {
+      "date_filed": "2010-02-01", 
+      "document_number": "326", 
+      "description": "FINAL JUDGMENT. Defendant Yahoo, Inc. is found to have unlawfully infringed U.S. Patent No. 6,205,432 (the 432 patent). All relief not specifically granted herein is DENIED. Signed by Magistrate Judge John D. Love on 2/1/2010. (gsg) (Entered: 02/02/2010)", 
+      "pacer_doc_id": "17503746672"
+    }, 
+    {
+      "date_filed": "2010-02-17", 
+      "document_number": "327", 
+      "description": "NOTICE OF APPEAL - PATENT CASE as to 326 Judgment by Yahoo! Inc. Filing fee $ 455, receipt number 05400000000002360674. (Smith, Kevin) (Entered: 02/17/2010)", 
+      "pacer_doc_id": "17503776026"
+    }, 
+    {
+      "date_filed": "2010-02-18", 
+      "document_number": "328", 
+      "description": "Consent MOTION for Extension of Time to File Bill of Costs by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Text of Proposed Order)(Simon, Anthony) (Entered: 02/18/2010)", 
+      "pacer_doc_id": "17503778693"
+    }, 
+    {
+      "date_filed": "2010-02-19", 
+      "document_number": "329", 
+      "description": "ORDER granting 328 Motion for Extension of Time to File Bill of Costs. Plaintiff has until and through February 26, 2010 to file its Bill of Costs. Signed by Magistrate Judge John D. Love on 2/19/2010. (gsg) (Entered: 02/22/2010)", 
+      "pacer_doc_id": "17503784120"
+    }, 
+    {
+      "date_filed": "2010-02-26", 
+      "document_number": "330", 
+      "description": "***DOCUMENT FILED IN ERROR. PLEASE DISREGARD.*** Consent Bill of Costs by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit 1, # 2 Exhibit 2, # 3 Exhibit 3, # 4 Exhibit 4, # 5 Exhibit 5)(Simon, Anthony) Modified on 3/2/2010 (mjc, ) (Edited out the word \"motion.\" Doc is not a motion.) Modified on 3/4/2010 (mjc, ). (Entered: 02/26/2010)", 
+      "pacer_doc_id": "17503798381"
+    }, 
+    {
+      "date_filed": "2010-03-01", 
+      "document_number": "331", 
+      "description": "NOTICE of Docketing Record on Appeal from USCA for the Federal Circuit re 327 Notice of Appeal - PATENT CASE filed by Yahoo! Inc. (gsg) (Entered: 03/03/2010)", 
+      "pacer_doc_id": "17503808123"
+    }, 
+    {
+      "date_filed": "2010-03-03", 
+      "document_number": "332", 
+      "description": "Consent MOTION for Bill of Costs by CREATIVE INTERNET ADVERTISING CORPORATION. (Attachments: # 1 Exhibit A, # 2 Exhibit 1, # 3 Exhibit 2, # 4 Exhibit 3, # 5 Exhibit 4, # 6 Exhibit 5, # 7 Text of Proposed Order)(Simon, Anthony) (Entered: 03/03/2010)", 
+      "pacer_doc_id": "17503808717"
+    }
+  ], 
+  "docket_number": "6:07-cv-00354", 
+  "date_filed": "2007-07-26", 
+  "jurisdiction": "Federal Question", 
+  "case_name": "CREATIVE INTERNET ADVERTISING CORPORATION v. Yahoo! Inc et al", 
   "parties": [
     {
-      "name": "AOL LLC",
+      "name": "AOL LLC", 
       "extra_info": "TERMINATED: 03/26/2008"
-    },
+    }, 
     {
       "attorneys": [
         {
-          "contact": "Knowles Mediations\n909 East South East Loop 323\nSte 410\nTyler , TX 75701\n903/534-3800\nFax: 903/534-3806\nEmail: jimk@knowlesmed.com\n",
-          "name": "James W Knowles",
+          "contact": "Knowles Mediations\n909 East South East Loop 323\nSte 410\nTyler , TX 75701\n903/534-3800\nFax: 903/534-3806\nEmail: jimk@knowlesmed.com\n", 
+          "name": "James W Knowles", 
           "roles": []
         }
-      ],
-      "type": "Mediator",
-      "name": "James W. Knowles",
+      ], 
+      "type": "Mediator", 
+      "name": "James W. Knowles", 
       "extra_info": ""
-    },
+    }, 
     {
       "attorneys": [
         {
-          "contact": "The Simon Law Firm PC\n701 Market Street\nSuite 1450\nSt Louis , MO 63101\n314/241-2929\nFax: 314/241-2029\nEmail: asimon@simonlawpc.com\n",
-          "name": "Anthony G Simon",
+          "contact": "The Simon Law Firm PC\n701 Market Street\nSuite 1450\nSt Louis , MO 63101\n314/241-2929\nFax: 314/241-2029\nEmail: asimon@simonlawpc.com\n", 
+          "name": "Anthony G Simon", 
           "roles": [
-            "LEAD ATTORNEY",
+            "LEAD ATTORNEY", 
             "ATTORNEY TO BE NOTICED"
           ]
-        },
+        }, 
         {
-          "contact": "Albritton Law Firm\nP O Box 2649\nLongview , TX 75606\n903-757-8449\nFax: 903-758-7397\nEmail: aab@emafirm.com\n",
-          "name": "Adam A Biggs",
-          "roles": [
-            "ATTORNEY TO BE NOTICED"
-          ]
-        },
-        {
-          "contact": "Tadlock Law Firm\n400 E Royal Lane\nSuite 290\nIrving , TX 75039\n214/785-6014\nEmail: craig@tadlocklawfirm.com\n",
-          "name": "Charles Craig Tadlock",
+          "contact": "Albritton Law Firm\nP O Box 2649\nLongview , TX 75606\n903-757-8449\nFax: 903-758-7397\nEmail: aab@emafirm.com\n", 
+          "name": "Adam A Biggs", 
           "roles": [
             "ATTORNEY TO BE NOTICED"
           ]
-        },
+        }, 
         {
-          "contact": "Albritton Law Firm\nPO Box 2649\nLongview , TX 75606\n903-757-8449\nFax: 903-758-7397\nEmail: ema@emafirm.com\n",
-          "name": "Eric M. Albritton",
+          "contact": "Tadlock Law Firm\n400 E Royal Lane\nSuite 290\nIrving , TX 75039\n214/785-6014\nEmail: craig@tadlocklawfirm.com\n", 
+          "name": "Charles Craig Tadlock", 
           "roles": [
             "ATTORNEY TO BE NOTICED"
           ]
-        },
+        }, 
         {
-          "contact": "Ward & Smith Law Firm\nP O Box 1231\nLongview , TX 75606-1231\n903/757-6400\nFax: 903/757-2323\nEmail: jw@jwfirm.com\n",
-          "name": "Thomas John Ward , Jr",
+          "contact": "Albritton Law Firm\nPO Box 2649\nLongview , TX 75606\n903-757-8449\nFax: 903-758-7397\nEmail: ema@emafirm.com\n", 
+          "name": "Eric M. Albritton", 
+          "roles": [
+            "ATTORNEY TO BE NOTICED"
+          ]
+        }, 
+        {
+          "contact": "Ward & Smith Law Firm\nP O Box 1231\nLongview , TX 75606-1231\n903/757-6400\nFax: 903/757-2323\nEmail: jw@jwfirm.com\n", 
+          "name": "Thomas John Ward , Jr", 
           "roles": [
             "TERMINATED: 10/13/2009"
           ]
-        },
+        }, 
         {
-          "contact": "The Simon Law Firm PC\n701 Market Street\nSuite 1450\nSt Louis , MO 63101\n314/241-2929\nFax: 314/241-2029\nEmail: teg@simonlawpc.com\n",
-          "name": "Timothy E Grochocinski",
+          "contact": "The Simon Law Firm PC\n701 Market Street\nSuite 1450\nSt Louis , MO 63101\n314/241-2929\nFax: 314/241-2029\nEmail: teg@simonlawpc.com\n", 
+          "name": "Timothy E Grochocinski", 
           "roles": [
             "ATTORNEY TO BE NOTICED"
           ]
         }
-      ],
-      "type": "Plaintiff",
-      "name": "CREATIVE INTERNET ADVERTISING CORPORATION",
+      ], 
+      "type": "Plaintiff", 
+      "name": "CREATIVE INTERNET ADVERTISING CORPORATION", 
       "extra_info": ""
-    },
+    }, 
     {
       "attorneys": [
         {
-          "contact": "Howrey Simon Arnold & White\n525 Market Street\nSuite 3600\nSan Francisco , CA 94105-2708\n415/848-4900\nFax: 14158484999\nEmail: smithbrian@howrey.com\n",
-          "name": "Brian A E Smith",
+          "contact": "Howrey Simon Arnold & White\n525 Market Street\nSuite 3600\nSan Francisco , CA 94105-2708\n415/848-4900\nFax: 14158484999\nEmail: smithbrian@howrey.com\n", 
+          "name": "Brian A E Smith", 
           "roles": [
             "ATTORNEY TO BE NOTICED"
           ]
-        },
+        }, 
         {
-          "contact": "Brinks Hofer Gilson & Lione - Chicago\n455 N Cityfront Plaza\nSte 3600 NBC Tower\nChicago , IL 60611-5599\n312/840-3273\nFax: 312/321-4299\nEmail: csukhaphadhana@usebrinks.com\n",
-          "name": "Christopher T Sukhaphadhana",
+          "contact": "Brinks Hofer Gilson & Lione - Chicago\n455 N Cityfront Plaza\nSte 3600 NBC Tower\nChicago , IL 60611-5599\n312/840-3273\nFax: 312/321-4299\nEmail: csukhaphadhana@usebrinks.com\n", 
+          "name": "Christopher T Sukhaphadhana", 
           "roles": [
             "TERMINATED: 06/27/2008"
           ]
-        },
+        }, 
         {
-          "contact": "Ireland Carroll & Kelley\n6101 S Broadway\nSuite 500\nTyler , TX 75703\n903/561-1600\nEmail: drace@icklaw.com\n",
-          "name": "Deborah J Race",
+          "contact": "Ireland Carroll & Kelley\n6101 S Broadway\nSuite 500\nTyler , TX 75703\n903/561-1600\nEmail: drace@icklaw.com\n", 
+          "name": "Deborah J Race", 
           "roles": [
             "ATTORNEY TO BE NOTICED"
           ]
-        },
+        }, 
         {
-          "contact": "Howrey Simon Arnold & White\n525 Market Street\nSuite 3600\nSan Francisco , CA 94105-2708\n415/848-4946\nFax: 14158484999\nEmail: bunsowh@howrey.com\n",
-          "name": "Henry Charles Bunsow",
+          "contact": "Howrey Simon Arnold & White\n525 Market Street\nSuite 3600\nSan Francisco , CA 94105-2708\n415/848-4946\nFax: 14158484999\nEmail: bunsowh@howrey.com\n", 
+          "name": "Henry Charles Bunsow", 
           "roles": [
             "ATTORNEY TO BE NOTICED"
           ]
-        },
+        }, 
         {
-          "contact": "Ward & Smith Law Firm\n111 W. Tyler Street\nLongview , TX 75601\n903-757-6400\nFax: 903-757-2323\nEmail: wh@jwfirm.com\n",
-          "name": "Jack Wesley Hill",
+          "contact": "Ward & Smith Law Firm\n111 W. Tyler Street\nLongview , TX 75601\n903-757-6400\nFax: 903-757-2323\nEmail: wh@jwfirm.com\n", 
+          "name": "Jack Wesley Hill", 
           "roles": [
-            "TERMINATED: 10/09/2009",
+            "TERMINATED: 10/09/2009", 
             "ATTORNEY TO BE NOTICED"
           ]
-        },
+        }, 
         {
-          "contact": "Howrey LLP - Chicago\n321 North Clark Street\nSuite 3400\nChicago , IL 60610\n312/595-1239\nFax: 312/595-2250\nEmail: whitej@howrey.com\n",
-          "name": "Jason C White",
+          "contact": "Howrey LLP - Chicago\n321 North Clark Street\nSuite 3400\nChicago , IL 60610\n312/595-1239\nFax: 312/595-2250\nEmail: whitej@howrey.com\n", 
+          "name": "Jason C White", 
           "roles": [
             "ATTORNEY TO BE NOTICED"
           ]
-        },
+        }, 
         {
-          "contact": "Potter Minton\nP. O. Box 359\nTyler , TX 75710\n903/597/8311\nFax: 9035930846\nEmail: johnbufe@potterminton.com\n",
-          "name": "John Frederick Bufe",
+          "contact": "Potter Minton\nP. O. Box 359\nTyler , TX 75710\n903/597/8311\nFax: 9035930846\nEmail: johnbufe@potterminton.com\n", 
+          "name": "John Frederick Bufe", 
           "roles": [
             "TERMINATED: 03/20/2009"
           ]
-        },
+        }, 
         {
-          "contact": "Brinks Hofer Gilson & Lione\n455 N Cityfront Plaza\nSte 3600 NBC Tower\nChicago , IL 60611-5599\n312/321-4715\nFax: 13123214299\nEmail: lmiller@brinkshofer.com\n",
-          "name": "Laura Beth Miller",
+          "contact": "Brinks Hofer Gilson & Lione\n455 N Cityfront Plaza\nSte 3600 NBC Tower\nChicago , IL 60611-5599\n312/321-4715\nFax: 13123214299\nEmail: lmiller@brinkshofer.com\n", 
+          "name": "Laura Beth Miller", 
           "roles": [
             "TERMINATED: 06/27/2008"
           ]
-        },
+        }, 
         {
-          "contact": "Potter Minton PC\n110 N College\nSuite 500\nPO Box 359\nTyler , TX 75710-0359\n930-597-8311\nFax: 903-593-0846\nEmail: mikejones@potterminton.com\n",
-          "name": "Michael E Jones",
+          "contact": "Potter Minton PC\n110 N College\nSuite 500\nPO Box 359\nTyler , TX 75710-0359\n930-597-8311\nFax: 903-593-0846\nEmail: mikejones@potterminton.com\n", 
+          "name": "Michael E Jones", 
           "roles": [
             "TERMINATED: 03/20/2009"
           ]
-        },
+        }, 
         {
-          "contact": "Ireland Carroll & Kelley\n6101 S Broadway\nSuite 500\nTyler , TX 75703\n903/561-1600\nFax: 9035811071\nEmail: Fedserv@icklaw.com\n",
-          "name": "Otis W Carroll , Jr",
+          "contact": "Ireland Carroll & Kelley\n6101 S Broadway\nSuite 500\nTyler , TX 75703\n903/561-1600\nFax: 9035811071\nEmail: Fedserv@icklaw.com\n", 
+          "name": "Otis W Carroll , Jr", 
           "roles": [
             "ATTORNEY TO BE NOTICED"
           ]
-        },
+        }, 
         {
-          "contact": "Brinks Hofer Gilson & Lione - Chicago\n455 N Cityfront Plaza\nSte 3600 NBC Tower\nChicago , IL 60611-5599\n312/222-8105\nFax: 312/321-4299\nEmail: sfelicetty@usebrinks.com\n",
-          "name": "Stephanie J Felicetty",
+          "contact": "Brinks Hofer Gilson & Lione - Chicago\n455 N Cityfront Plaza\nSte 3600 NBC Tower\nChicago , IL 60611-5599\n312/222-8105\nFax: 312/321-4299\nEmail: sfelicetty@usebrinks.com\n", 
+          "name": "Stephanie J Felicetty", 
           "roles": [
             "TERMINATED: 06/27/2008"
           ]
-        },
+        }, 
         {
-          "contact": "Brinks Hofer Gilson & Lione - Chicago\n455 N Cityfront Plaza\nSte 3600 NBC Tower\nChicago , IL 60611-5599\n312/840-3280\nFax: 312/321-4299\nEmail: ubansal@brinkshofer.com\n",
-          "name": "Uma Bansal",
+          "contact": "Brinks Hofer Gilson & Lione - Chicago\n455 N Cityfront Plaza\nSte 3600 NBC Tower\nChicago , IL 60611-5599\n312/840-3280\nFax: 312/321-4299\nEmail: ubansal@brinkshofer.com\n", 
+          "name": "Uma Bansal", 
           "roles": [
             "TERMINATED: 12/27/2007"
           ]
         }
-      ],
-      "type": "Defendant",
-      "name": "Yahoo! Inc",
+      ], 
+      "type": "Defendant", 
+      "name": "Yahoo! Inc", 
       "extra_info": ""
-    },
+    }, 
     {
       "attorneys": [
         {
-          "contact": "Morrison & Foerster LLP San Francisco\n425 Market St\n32nd Floor\nSan Francisco , CA 94105-2482\n415/268-7000\nFax: 415/268-7522\nEmail: dhymas@mofo.com\n",
-          "name": "David M Hymas",
+          "contact": "Morrison & Foerster LLP San Francisco\n425 Market St\n32nd Floor\nSan Francisco , CA 94105-2482\n415/268-7000\nFax: 415/268-7522\nEmail: dhymas@mofo.com\n", 
+          "name": "David M Hymas", 
           "roles": []
-        },
+        }, 
         {
-          "contact": "Morrison & Foerster LLP San Francisco\n425 Market St\n32nd Floor\nSan Francisco , CA 94105-2482\n415-268-7000\nFax: 415-268-7522\nEmail: jcrotty@mofo.com\n",
-          "name": "Jason A Crotty",
+          "contact": "Morrison & Foerster LLP San Francisco\n425 Market St\n32nd Floor\nSan Francisco , CA 94105-2482\n415-268-7000\nFax: 415-268-7522\nEmail: jcrotty@mofo.com\n", 
+          "name": "Jason A Crotty", 
           "roles": []
-        },
+        }, 
         {
-          "contact": "Morrison & Foerster LLP - Washington\n2000 Pennsylvania Avenue NW\nSuite 6000\nWashington , DC 20006\n202/887-1500\nFax: 202/887-0763\nEmail: jcorrado@mofo.com\n",
-          "name": "John P Corrado",
+          "contact": "Morrison & Foerster LLP - Washington\n2000 Pennsylvania Avenue NW\nSuite 6000\nWashington , DC 20006\n202/887-1500\nFax: 202/887-0763\nEmail: jcorrado@mofo.com\n", 
+          "name": "John P Corrado", 
           "roles": []
-        },
+        }, 
         {
-          "contact": "Young Pickett & Lee\n4122 Texas Blvd\nPO Box 1897\nTexarkana , TX 75504-1897\n903/794-1303\nFax: 19037945098\nEmail: wlancelee@aol.com\n",
-          "name": "Lance Lee",
+          "contact": "Young Pickett & Lee\n4122 Texas Blvd\nPO Box 1897\nTexarkana , TX 75504-1897\n903/794-1303\nFax: 19037945098\nEmail: wlancelee@aol.com\n", 
+          "name": "Lance Lee", 
           "roles": [
             "ATTORNEY TO BE NOTICED"
           ]
-        },
+        }, 
         {
-          "contact": "Morrison & Foerster LLP San Francisco\n425 Market St\n32nd Floor\nSan Francisco , CA 94105-2482\n415/268-7178\nFax: 14152687522\nEmail: rkrevans@mofo.com\n",
-          "name": "Rachel Krevans",
+          "contact": "Morrison & Foerster LLP San Francisco\n425 Market St\n32nd Floor\nSan Francisco , CA 94105-2482\n415/268-7178\nFax: 14152687522\nEmail: rkrevans@mofo.com\n", 
+          "name": "Rachel Krevans", 
           "roles": []
         }
-      ],
-      "type": "Defendant",
-      "name": "Time Warner Inc",
+      ], 
+      "type": "Defendant", 
+      "name": "Time Warner Inc", 
       "extra_info": "TERMINATED: 03/26/2008\ndoing business as\nAOL LLC\nTERMINATED: 03/26/2008\nformerly known as\nAOL Time Warner Inc\nTERMINATED: 03/26/2008"
-    },
+    }, 
     {
-      "type": "Counter Claimant",
-      "name": "Yahoo! Inc",
+      "type": "Counter Claimant", 
+      "name": "Yahoo! Inc", 
       "extra_info": ""
-    },
+    }, 
     {
       "attorneys": [
         {
-          "contact": "(See above for address)\n",
-          "name": "Timothy E Grochocinski",
+          "contact": "(See above for address)\n", 
+          "name": "Timothy E Grochocinski", 
           "roles": [
             "ATTORNEY TO BE NOTICED"
           ]
         }
-      ],
-      "type": "Counter Defendant",
-      "name": "CREATIVE INTERNET ADVERTISING CORPORATION",
+      ], 
+      "type": "Counter Defendant", 
+      "name": "CREATIVE INTERNET ADVERTISING CORPORATION", 
       "extra_info": ""
-    },
+    }, 
     {
-      "type": "Counter Claimant",
-      "name": "Time Warner Inc",
+      "type": "Counter Claimant", 
+      "name": "Time Warner Inc", 
       "extra_info": "TERMINATED: 03/26/2008"
-    },
+    }, 
     {
-      "type": "Counter Defendant",
-      "name": "CREATIVE INTERNET ADVERTISING CORPORATION",
+      "type": "Counter Defendant", 
+      "name": "CREATIVE INTERNET ADVERTISING CORPORATION", 
       "extra_info": ""
-    },
-    {
-      "type": "Counter Claimant",
-      "name": "Yahoo! Inc",
-      "extra_info": ""
-    },
-    {
-      "type": "Counter Defendant",
-      "name": "CREATIVE INTERNET ADVERTISING CORPORATION",
-      "extra_info": ""
-    },
+    }, 
     {
       "attorneys": [
         {
-          "contact": "(See above for address)\n",
-          "name": "Christopher T Sukhaphadhana",
+          "contact": "(See above for address)\n", 
+          "name": "Christopher T Sukhaphadhana", 
           "roles": [
             "TERMINATED: 06/27/2008"
           ]
-        },
+        }, 
         {
-          "contact": "(See above for address)\n",
-          "name": "Jason C White",
+          "contact": "(See above for address)\n", 
+          "name": "Jason C White", 
           "roles": [
             "ATTORNEY TO BE NOTICED"
           ]
-        },
+        }, 
         {
-          "contact": "(See above for address)\n",
-          "name": "Laura Beth Miller",
+          "contact": "(See above for address)\n", 
+          "name": "Laura Beth Miller", 
           "roles": [
             "TERMINATED: 06/27/2008"
           ]
-        },
+        }, 
         {
-          "contact": "(See above for address)\n",
-          "name": "Michael E Jones",
+          "contact": "(See above for address)\n", 
+          "name": "Michael E Jones", 
           "roles": [
             "TERMINATED: 03/20/2009"
           ]
-        },
+        }, 
         {
-          "contact": "(See above for address)\n",
-          "name": "Stephanie J Felicetty",
+          "contact": "(See above for address)\n", 
+          "name": "Stephanie J Felicetty", 
           "roles": [
             "TERMINATED: 06/27/2008"
           ]
-        },
+        }, 
         {
-          "contact": "(See above for address)\n",
-          "name": "Uma Bansal",
+          "contact": "(See above for address)\n", 
+          "name": "Uma Bansal", 
           "roles": [
             "TERMINATED: 12/27/2007"
           ]
         }
-      ],
-      "type": "Counter Claimant",
-      "name": "Yahoo! Inc",
-      "extra_info": ""
-    },
-    {
-      "type": "Counter Defendant",
-      "name": "CREATIVE INTERNET ADVERTISING CORPORATION",
+      ], 
+      "type": "Counter Claimant", 
+      "name": "Yahoo! Inc", 
       "extra_info": ""
     }
-  ],
-  "court_id": "txed",
-  "demand": null,
-  "jury_demand": "Both",
-  "assigned_to_str": "John D. Love",
-  "docket_number": "6:07-cv-00354",
-  "cause": "35:271 Patent Infringement",
+  ], 
+  "nature_of_suit": "830 Patent", 
+  "jury_demand": "Both", 
+  "assigned_to_str": "John D. Love", 
+  "court_id": "txed", 
+  "cause": "35:271 Patent Infringement", 
   "referred_to_str": null
 }
