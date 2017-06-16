@@ -18,6 +18,7 @@ class Site(OpinionSite):
         'G': 'Ruth Bader Ginsburg',
         'JS': 'John Paul Stephens',
         'K': 'Anthony Kennedy',
+        'NG': 'Neil Gorsuch',
         'PC': 'Per Curiam',
         'R': 'John G. Roberts',
         'SS': 'Sonia Sotomayor',
