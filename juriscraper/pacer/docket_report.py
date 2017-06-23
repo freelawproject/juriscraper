@@ -482,8 +482,26 @@ class DocketReport(object):
 
     def _get_case_name(self, values):
         if self.is_bankruptcy:
-            # XXX fix this
-            pass
+            # Check if there is somebody described as a debtor
+            try:
+                return [p for p in self.parties if
+                        p['type'] == 'Debtor' or
+                        p['type'] == 'Debtor In Possession'][0]['name']
+            except IndexError:
+                pass
+
+            # This is probably a sub docket to a larger case. Use that title.
+            try:
+                path = '//i[contains(., "Lead BK Title")]/following::text()'
+                case_name = self.html_tree.xpath(path)[0].strip()
+            except IndexError:
+                case_name = "Unknown Case Title"
+
+            # Add Adversary Proceeding to the title if it is one
+            path = '//*[text()[contains(., "Adversary Proceeding")]]'
+            if self.html_tree.xpath(path):
+                case_name += ' - Adversary Proceeding'
+            return case_name
         else:
             matches = []
             for v in values:

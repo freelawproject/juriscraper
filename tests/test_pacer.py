@@ -379,7 +379,7 @@ class DocketParseTest(unittest.TestCase):
         self.test_path = os.path.join("tests", "examples", "pacer", "dockets")
         self.docket_paths = sorted(glob(os.path.join(self.test_path, "*.html")))
         self.session = mock.MagicMock()
-        self.maxDiff = 7000
+        self.maxDiff = 200000
 
     @staticmethod
     def get_text_from_file(path):
