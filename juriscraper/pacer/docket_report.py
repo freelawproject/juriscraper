@@ -4,7 +4,6 @@ from lxml.html import tostring, fromstring, HtmlElement
 
 from .docket_utils import normalize_party_types
 from .utils import get_pacer_doc_id_from_doc1_url, clean_pacer_object
-from ..lib.exceptions import ParsingException
 from ..lib.html_utils import set_response_encoding, clean_html, \
     get_html5_parsed_text, fix_links_in_lxml_tree
 from ..lib.judge_parsers import normalize_judge_string
@@ -25,7 +24,7 @@ class DocketReport(object):
     assigned_to_regex = re.compile(r'Assigned to:\s+(.*)')
     referred_to_regex = re.compile(r'Referred to:\s+(.*)')
     cause_regex = re.compile(r'Cause:\s+(.*)')
-    nature_of_suit_regex = re.compile(r'Nature of Suit:\s+(.*)')
+    nos_regex = re.compile(r'Nature of Suit:\s+(.*)')
     jury_demand_regex = re.compile(r'Jury Demand:\s+(.*)')
     jurisdiction_regex = re.compile(r'Jurisdiction:\s+(.*)')
     demand_regex = re.compile(r'^Demand:\s+(.*)')
@@ -71,37 +70,24 @@ class DocketReport(object):
         if self._metadata:
             return self._metadata
 
-        # The first ancestor table of the table cell containing "date filed"
-        metadata_values = self._get_metadata_table_cell_values()
+        self._set_metadata_values()
         data = {
             'court_id': self.court_id,
             'docket_number': self._get_docket_number(),
-            'case_name': self._get_case_name(metadata_values),
-            'date_filed': self._get_date_filed(metadata_values),
-            'date_terminated': self._get_date_terminated(metadata_values),
-            'date_last_filing': self._get_date_last_filing(metadata_values),
-            'assigned_to_str': self._get_assigned_to(metadata_values),
-            'referred_to_str': self._get_referred_to(metadata_values),
-            'cause': self.__get_matching_value(
-                metadata_values,
-                self.cause_regex,
-            ),
-            'nature_of_suit': self.__get_matching_value(
-                metadata_values,
-                self.nature_of_suit_regex,
-            ),
-            'jury_demand': self.__get_matching_value(
-                metadata_values,
-                self.jury_demand_regex,
-            ),
-            'demand': self.__get_matching_value(
-                metadata_values,
-                self.demand_regex,
-            ),
-            'jurisdiction': self.__get_matching_value(
-                metadata_values,
-                self.jurisdiction_regex,
-            ),
+            'case_name': self._get_case_name(),
+            'date_filed': self._get_value(self.date_filed_regex,
+                                          cast_to_date=True),
+            'date_terminated': self._get_value(self.date_terminated_regex,
+                                               cast_to_date=True),
+            'date_last_filing': self._get_value(self.date_last_filing_regex,
+                                                cast_to_date=True),
+            'assigned_to_str': self._get_judge(self.assigned_to_regex),
+            'referred_to_str': self._get_judge(self.referred_to_regex),
+            'cause': self._get_value(self.cause_regex),
+            'nature_of_suit': self._get_value(self.nos_regex),
+            'jury_demand': self._get_value(self.jury_demand_regex),
+            'demand': self._get_value(self.demand_regex),
+            'jurisdiction': self._get_value(self.jurisdiction_regex),
         }
         data = clean_pacer_object(data)
         self._metadata = data
@@ -277,6 +263,7 @@ class DocketReport(object):
             }
             path = './following-sibling::* | ./following-sibling::text()'
             for prev, node, nxt in previous_and_next(atty_node.xpath(path)):
+                # noinspection PyProtectedMember
                 if isinstance(node, (etree._ElementStringResult,
                                      etree._ElementUnicodeResult)):
                     clean_atty = '%s\n' % ' '.join(n.strip() for n in node.split())
@@ -436,7 +423,8 @@ class DocketReport(object):
         tree.rewrite_links(fix_links_in_lxml_tree, base_href=response.url)
         self.html_tree = tree
 
-    def _get_metadata_table_cell_values(self):
+    def _set_metadata_values(self):
+        # The first ancestor table of the table cell containing "date filed"
         table = self.html_tree.xpath(
             '//td[.//text()[contains('
             '    translate(., "f", "F"),'  # Match on Date [fF]iled
@@ -444,7 +432,7 @@ class DocketReport(object):
             ')]]/ancestor::table[1]'
         )[0]
         cells = table.xpath('.//td')
-        strs = []
+        self.metadata_values = []
         # Convert the <br> separated content into text strings, treating as much
         # as possible as HTML.
         sep = 'FLP_SEPARATOR'
@@ -453,9 +441,9 @@ class DocketReport(object):
             s = tostring(cell, encoding='unicode')
             s = re.sub(r'<br/?>', sep, s, flags=re.I)
             element = fromstring(s)
-            strs.extend([s.strip() for s in
-                         element.text_content().split(sep) if s])
-        return strs
+            clean_strs = [s.strip() for s in element.text_content().split(sep)
+                          if s]
+            self.metadata_values.extend(clean_strs)
 
     @staticmethod
     def _get_pacer_doc_id(cell):
@@ -463,7 +451,7 @@ class DocketReport(object):
             doc1_url = cell.xpath('.//@href')[0]
         except IndexError:
             # Docket entry exists, but cannot download document (it's sealed or
-            # otherwise unavailable in PACER.
+            # otherwise unavailable in PACER).
             return None
         else:
             return get_pacer_doc_id_from_doc1_url(doc1_url)
@@ -473,14 +461,14 @@ class DocketReport(object):
         """Get the document number.
         
         Some jurisdictions have the number as, "13 (5 pgs)" so some processing
-        is needed. See (flsb, 09-02199_
+        is needed. See flsb, 09-02199-JKO.
         """
         words = cell.text_content().split()
         if words:
             return words[0].strip()
         return ''
 
-    def _get_case_name(self, values):
+    def _get_case_name(self):
         if self.is_bankruptcy:
             # Check if there is somebody described as a debtor
             try:
@@ -504,7 +492,7 @@ class DocketReport(object):
             return case_name
         else:
             matches = []
-            for v in values:
+            for v in self.metadata_values:
                 m = self.case_name_regex.search(v)
                 if m:
                     matches.append(m)
@@ -514,7 +502,7 @@ class DocketReport(object):
             if len(matches) == 1:
                 return matches[0].group(1)
             else:
-                raise ParsingException("Unable to get case name.")
+                return "Unknown Case Title"
 
     def _get_docket_number(self):
         nodes = self.html_tree.xpath(self.docket_number_path)
@@ -524,49 +512,23 @@ class DocketReport(object):
             if match:
                 return match.group(1)
 
-    def _get_date_filed(self, values):
-        date_filed_str = self.__get_matching_value(
-            values,
-            self.date_filed_regex,
-        )
-        if date_filed_str is not None:
-            return convert_date_string(date_filed_str)
-
-    def _get_date_terminated(self, values):
-        date_terminated_str = self.__get_matching_value(
-            values,
-            self.date_terminated_regex,
-        )
-        if date_terminated_str is not None:
-            return convert_date_string(date_terminated_str)
-
-    def _get_date_last_filing(self, values):
-        date_last_filing_str = self.__get_matching_value(
-            values,
-            self.date_last_filing_regex,
-        )
-        if date_last_filing_str is not None:
-            return convert_date_string(date_last_filing_str)
-
-    def _get_assigned_to(self, values):
-        judge_str = self.__get_matching_value(values, self.assigned_to_regex)
+    def _get_judge(self, regex):
+        judge_str = self._get_value(regex)
         if judge_str is not None:
             return normalize_judge_string(judge_str)[0]
 
-    def _get_referred_to(self, values):
-        judge_str = self.__get_matching_value(values, self.referred_to_regex)
-        if judge_str is not None:
-            return normalize_judge_string(judge_str)[0]
-
-    @staticmethod
-    def __get_matching_value(values, regex):
+    def _get_value(self, regex, cast_to_date=False):
         """Find the matching value for a regex.
         
         Iterate over a list of values and return group(1) for the first that 
         matches regex. If none matches, return None.
+        
+        If cast_to_date is True, convert the string to a date object.
         """
-        for v in values:
+        for v in self.metadata_values:
             m = regex.search(v)
             if m:
+                if cast_to_date:
+                    return convert_date_string(m.group(1))
                 return m.group(1)
         return None
