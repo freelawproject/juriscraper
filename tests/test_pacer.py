@@ -1,10 +1,10 @@
 # coding=utf-8
 from __future__ import print_function
 
+import fnmatch
 import time
 import unittest
 from datetime import timedelta, date
-from glob import glob
 
 import jsondate as json
 import mock
@@ -377,7 +377,11 @@ class DocketParseTest(unittest.TestCase):
 
     def setUp(self):
         self.test_path = os.path.join("tests", "examples", "pacer", "dockets")
-        self.docket_paths = sorted(glob(os.path.join(self.test_path, "*.html")))
+        self.docket_paths = []
+        for root, dirnames, filenames in os.walk(self.test_path):
+            for filename in fnmatch.filter(filenames, '*.html'):
+                self.docket_paths.append(os.path.join(root, filename))
+        self.docket_paths.sort()
         self.session = mock.MagicMock()
         self.maxDiff = 200000
 
@@ -391,15 +395,18 @@ class DocketParseTest(unittest.TestCase):
         """Test all the parsers, faking the network query."""
         for path in self.docket_paths:
             print("Doing %s..." % path, end='')
-            filename = os.path.basename(path).split('.')[0]
-            court = filename.split('_')[0]
+            dirname, filename = os.path.split(path)
+            filename_sans_ext = filename.split('.')[0]
+            json_path = os.path.join(dirname, '%s.json' % filename_sans_ext)
+            court = filename_sans_ext.split('_')[0]
+
             report = DocketReport(court, self.session)
             request_mock.register_uri(requests_mock.ANY, report.url,
                                       content=self.get_text_from_file(path))
 
             response = requests.get(report.url)
             report.parse(response)
-            with open(os.path.join(self.test_path, '%s.json' % filename)) as f:
+            with open(json_path) as f:
                 j = json.load(f)
                 data = report.data
                 # Compare docket entries and parties first, for easier
