@@ -1,0 +1,611 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><title>
+	Opinions
+</title>
+
+    <style type="text/css">
+          .divStandard {text-align:left;
+                      width: 100%;
+                      border-style: solid;
+                      border-color: Silver;
+                      border-width :2px;
+                      background-color: #EBEAE3;
+                      font-family:Cambria Serif;
+                      font-size: 12pt;
+                      font-weight: normal;
+                      margin-left: auto;
+                      margin-right:auto;}
+
+        .TableStandard {text-align:left;
+                        width: 100%;
+                        font-family: Cambria Serif;
+                        font-size: 12pt;
+                        font-weight: normal;
+                        background-color: #EBEAE3;
+                        border-spacing:2;
+                        padding:2;}
+
+        .gridcaption {font-size: 12pt;
+                      font-weight: bold;}
+
+        .gridview {font-family:"Cambria Serif";
+                   width: 100%;
+                   font-size: 12pt;
+                   font-weight: normal;
+                   text-align:center;
+                   border-style: solid;
+                   border-color: Gray;
+                   border-width: 1px; }
+
+        .gridview .textcenter {text-align:center; }
+
+        .gridview th {text-align:left;
+                      background: LightSteelBlue;
+                      padding: 5px;}
+
+        .gridview th a{color: #003300;
+                       text-decoration: none;}
+
+        .gridview th a:hover{color: #003300;
+                            text-decoration: underline;}
+
+        .gridview td  {text-align:left;
+                       background: White;
+                       color: #333333;
+                       font: small "Cambria Serif";
+                       padding: 4px;}
+
+        .gridview tr.even td {background: #E8EEFA; }
+
+        .gridview td a{color: #003300;
+                        font: bold small "Cambria Serif";
+                        padding: 2px;
+                        text-decoration: none;}
+
+        .gridview td a:hover {color: red;
+                                font-weight: bold;
+                                text-decoration:underline;}
+
+        .selectedRowStyle td {background-color:#FFFFE0;}
+
+        .footerRowStyle td {background-color:Silver;}
+
+    </style>
+</head>
+
+<body style="background-color:#EBEAE3;">
+    <form name="form1" method="post" action="./opinions.aspx?type=p" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D537E8AD" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+</div>
+        <div id="div1" class="divStandard">
+
+            <br />
+            <table id="Table2" class="TableStandard" style="background-color:#B0C4DE; border-color:Silver; border-width:1px;">
+	<tr>
+		<td id="tdHeaderRow" align="center">
+                        <span id="lblHeader" class="textcenter" style="font-size:12pt;font-weight:bold;"> Most Recent Per Curiam Opinions</span>
+                        &nbsp;
+                        <a id="hlOpinion" title="right click and copy this URL for a permanent link to these search results" href="https:\\edca.4dca.org\Opinions.aspx?Type=p"><img title="right click and copy this URL for a permanent link to these search results" src="Images/OpinionLink.png" alt="" style="border-width:0px;" /></a>
+                    </td>
+	</tr>
+</table>
+
+            <table id="Table3" class="TableStandard">
+	<tr>
+		<td colspan="3">
+                        <div>
+			<table class="gridview" cellspacing="0" rules="all" border="1" id="grdOpinions" style="border-collapse:collapse;">
+				<tr>
+					<th class="textcenter" scope="col">Case No.</th><th class="textcenter" scope="col">View</th><th scope="col">Case Style</th><th scope="col">Note</th><th class="textcenter" scope="col">Disposition</th><th class="textcenter" scope="col">Disposition Date</th>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl02_lblCaseNo">15-2555</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl02_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2015/2555/152555_DC05_06222017_084912_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl02_lblDocument">NAKIA RENALDO TITIO GORDON vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl02_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl02_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl02_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl03_lblCaseNo">15-2923</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl03_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2015/2923/152923_DC05_06222017_085021_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl03_lblDocument">ALAN LIFT  vs THE LAW OFFICE OF JAMES R. RICH, P.A., AND LES C. SHIELDS, ETC.</span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl03_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl03_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl03_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl04_lblCaseNo">15-4390</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl04_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2015/4390/154390_DC05_06222017_085741_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl04_lblDocument">TYSON L. CHAFFIN  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl04_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl04_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl04_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl05_lblCaseNo">16-0050</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl05_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/0050/160050_DC05_06222017_085844_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl05_lblDocument">GRADY LEWIS  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl05_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl05_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl05_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl06_lblCaseNo">16-0537</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl06_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/0537/160537_DC05_06222017_090013_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl06_lblDocument">TERRELL REID  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl06_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl06_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl06_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl07_lblCaseNo">16-0706</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl07_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/0706/160706_DC05_06222017_090120_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl07_lblDocument">SOUTHERN OWNERS INSURANCE CO  vs SCI TOWERS OF FLORIDA, INC. </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl07_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl07_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl07_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl08_lblCaseNo">16-1399</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl08_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/1399/161399_DC05_06222017_090338_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl08_lblDocument">MICHAEL JONES  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl08_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl08_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl08_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl09_lblCaseNo">16-1531</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl09_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/1531/161531_DC05_06222017_090508_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl09_lblDocument">CARL WRIGHT THAMES  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl09_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl09_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl09_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl10_lblCaseNo">16-1603</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl10_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/1603/161603_DC05_06222017_092146_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl10_lblDocument">CYNTHIA SCHWARTZ  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl10_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl10_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl10_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl11_lblCaseNo">16-2161</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl11_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/2161/162161_DC05_06222017_092237_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl11_lblDocument">JAMES A. MAYFIELD  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl11_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl11_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl11_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl12_lblCaseNo">16-2578</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl12_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/2578/162578_DC05_06222017_092354_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl12_lblDocument">FRANK MAZZUCCA  vs ESTATE OF MARY C. MAZZUCCA, RITA A. PATRICK, as Personal Representative, FRED CATFISH ABBOTT, ABBOTT LAW GROUP and ROGER N. MESSER</span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl12_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl12_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl12_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl13_lblCaseNo">16-2636</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl13_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/2636/162636_DC05_06222017_092451_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl13_lblDocument">ANNIE MARIE DELGADO  vs CARL DOMINO and  FRIENDS OF CARL DOMINO</span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl13_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl13_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl13_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl14_lblCaseNo">16-3000</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl14_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/3000/163000_DC05_06222017_092541_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl14_lblDocument">MAITLAND STEWART  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl14_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl14_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl14_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl15_lblCaseNo">16-3109</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl15_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/3109/163109_DC05_06222017_092640_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl15_lblDocument">ROYCE GOLDSMITH  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl15_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl15_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl15_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl16_lblCaseNo">16-3555</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl16_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/3555/163555_DC05_06222017_092758_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl16_lblDocument">CHRISTOPHER SCHOFIELD  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl16_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl16_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl16_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl17_lblCaseNo">16-3633</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl17_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/3633/163633_DC05_06222017_092930_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl17_lblDocument">CHARLOTTE G. DURANTE  vs DEPT. OF BUSINESS & PROFESSIONAL REG. </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl17_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl17_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl17_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl18_lblCaseNo">16-3761</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl18_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/3761/163761_DC05_06222017_093027_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl18_lblDocument">MARK ALLEN WILKIE  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl18_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl18_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl18_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl19_lblCaseNo">16-3913</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl19_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/3913/163913_DC05_06222017_093118_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl19_lblDocument">THEODORE PULLIAM  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl19_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl19_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl19_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl20_lblCaseNo">16-4034</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl20_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/4034/164034_DC05_06222017_093228_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl20_lblDocument">ANNA RITA TALERICO  vs SAMANTHA GAMERO and ON THE OCEAN, INC.</span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl20_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl20_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl20_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl21_lblCaseNo">16-4255</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl21_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/4255/164255_DC05_06222017_093309_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl21_lblDocument">ROBERT EASLEY *W*  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl21_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl21_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl21_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl22_lblCaseNo">17-0038</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl22_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2017/0038/170038_DC05_06222017_093404_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl22_lblDocument">C.M.G., THE MOTHER  vs DEPT. OF CHILDREN & FAMILIES , ET AL.</span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl22_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl22_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl22_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl23_lblCaseNo">17-0184</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl23_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2017/0184/170184_DC05_06222017_093448_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl23_lblDocument">JOHN CARROLL o/b/o C.C. AND C.C.  vs VANETTA LACHHMAN A/K/A VANNETA LACHHMAN </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl23_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl23_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl23_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl24_lblCaseNo">17-0218</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl24_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2017/0218/170218_DC05_06222017_093539_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl24_lblDocument">MARCO MOLANO and MARCIA MOLANO vs CITIMORTGAGE, INC., </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl24_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl24_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl24_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl25_lblCaseNo">17-0271</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl25_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2017/0271/170271_DC05_06222017_093629_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl25_lblDocument">DONELL JACKSON  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl25_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl25_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl25_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl26_lblCaseNo">17-0702</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl26_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2017/0702/170702_DC05_06222017_094156_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl26_lblDocument">JOSEPH GAMMARO  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl26_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl26_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl26_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl27_lblCaseNo">17-0719</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl27_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2017/0719/170719_DC05_06222017_094242_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl27_lblDocument">V.C.P., THE FATHER  vs DEPT. OF CHILDREN & FAMILIES* </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl27_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl27_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl27_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl28_lblCaseNo">17-0795</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl28_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2017/0795/170795_DC05_06222017_094328_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl28_lblDocument">EDGAR LOWERY, JR.  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl28_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl28_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl28_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl29_lblCaseNo">17-0960</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl29_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2017/0960/170960_DC05_06222017_094439_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl29_lblDocument">SLOBODAN DRAGIC  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl29_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl29_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl29_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl30_lblCaseNo">17-1036</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl30_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2017/1036/171036_DC05_06222017_094521_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl30_lblDocument">STEVEN R. POWELL  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl30_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl30_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl30_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl31_lblCaseNo">17-1095</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl31_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2017/1095/171095_DC05_06222017_094611_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl31_lblDocument">TELLY KAVANTZAS  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl31_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl31_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl31_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl32_lblCaseNo">17-1157</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl32_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2017/1157/171157_DC05_06222017_094722_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl32_lblDocument">WILLIE FRANK BEAN, JR.  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl32_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl32_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl32_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl33_lblCaseNo">17-1170</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl33_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2017/1170/171170_DC05_06222017_094808_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl33_lblDocument">TIMOTHY MATTIER  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl33_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl33_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl33_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl34_lblCaseNo">17-1333</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl34_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2017/1333/171333_DC05_06222017_094908_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl34_lblDocument">GEORGE D. KIMBRELL  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl34_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl34_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl34_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl35_lblCaseNo">17-1493</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl35_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2017/1493/171493_DC05_06222017_095007_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl35_lblDocument">MANUEL TALAVERA  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl35_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl35_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl35_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl36_lblCaseNo">17-1682</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl36_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2017/1682/171682_DC05_06222017_095121_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl36_lblDocument">BRIAN KABLITZ  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl36_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl36_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl36_lblDispDate">06/22/2017</span>
+	                                </td>
+				</tr>
+			</table>
+		</div>
+	                </td>
+	</tr>
+</table>
+
+        </div>
+    </form>
+</body>
+</html>
