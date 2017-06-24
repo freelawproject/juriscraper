@@ -5,6 +5,8 @@ Court Short Name: Colo.
 Author: Philip Ardery
 Reviewer: mlr
 Date created: 2016-06-03
+Contact: Email "Internet and Technology" staff listed at http://www.cobar.org/staff
+         they usually fix issues without resonding to the emails directly
 """
 
 import re
