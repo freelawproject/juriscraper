@@ -1,0 +1,219 @@
+<html><head><title>CM/ECF - LIVE DATABASE</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script></head><body BGCOLOR=FFFFFF TEXT=000000 onLoad='SetFocus()'><div class="noprint"><img id="cmecfLogo" class="cmecfLogo" src="/graphics/cmecf-logo.gif" alt="CM/ECF" title="" onClick="CMECF.MainMenu.showCourtInformation(); return false" /><img src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage" id="helpImage" onClick="CMECF.MainMenu.showHelpPage(''); return false" onMouseOver="CMECF.MainMenu.helpImageOn()" onMouseOut="CMECF.MainMenu.helpImageOff()" /><div id="topmenu" class="yuimenubar"><div class="bd"><ul class="first-of-type"><li class="yuimenubaritem" style="width:9%"><a href='/cgi-bin/iquery.pl'><u>Q</u>uery</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Reports'><u>R</u>eports</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Utilities'><u>U</u>tilities</a></li><li class="yuimenubaritem" style="width:10%"><a href='/cgi-bin/login.pl?logout'>Logout</a></li></ul></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.createMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);}</script><div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript"> 
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;				
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+<TABLE width="100%" align=right BORDER=0 CELLSPACING=5><TR><TD ALIGN=right><h2> <FONT SIZE="3">TranscriptREQ, JNTADMN, PlnDue, LEAD</FONT></h2></TD></TR></TABLE><BR><BR><BR><CENTER><B><FONT SIZE="+1">U.S. Bankruptcy Court<BR>Eastern District of Michigan (Detroit)<BR>Bankruptcy Petition #: 08-42417-pjs</FONT></B></CENTER><TABLE width="100%" BORDER=0 CELLSPACING=1><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><BR><I>Assigned to:</I>      Judge Phillip J Shefferly<BR>Chapter          11<BR>Voluntary<BR>Asset <A HREF=/cgi-bin/DktRpt.pl?-</A> <br><div class="noprint"><A HREF='/cgi-bin/qryAscCases.pl?506977'>Show Associated Cases</A></div> <BR><BR>	</FONT></TD>
+	<TD VALIGN=top WIDTH="50%" ALIGN=right><FONT SIZE="+0"><TABLE border=0 cellspacing=0 cellpadding=0 align=center><TR><td align="right" valign="top"><I>Date filed:</I></td><td align="left" valign="top">&nbsp;&nbsp;02/01/2008</td></TR></TABLE>	</FONT></TD>
+</TR>
+</TABLE><BR><FONT SIZE="5"><B></B>
+		</FONT><TABLE width="100%" BORDER=0 CELLSPACING=1><TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor In Possession</B></I><BR><B>Plastech Engineered Products, Inc.</B>
+<BR>835 Mason Avenue
+<BR>Dearborn, MI 48124
+<BR>Tax ID / EIN: 38-2866329<BR><I><B>aka</B></I><BR><B>Plastech Manufacturing Corp</B><BR><I><B>aka</B></I><BR><B>Plas-tech(Engineered) Products, Inc.</B><BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Angela Pappas</B>
+<BR>One Rodney Square
+<BR>P.O. Box 636
+<BR>Wilmington, DE 19899
+<BR>(302) 651-3166
+<BR><I>TERMINATED: 02/19/2009</I><BR><BR><B>Deborah L. Fish</B>
+<BR>2600 Buhl Bldg.
+<BR>535 Griswold
+<BR>Detroit, MI 48226-3687
+<BR>(313) 961-6141
+<BR>Email: dfish@allardfishpc.com<BR><BR><B>Gregg Galardi</B>
+<BR>One Rodney Square
+<BR>7th Floor
+<BR>Wilmington, DE 19801
+<BR>(302) 651-3150
+<BR>Email: gregg.galardi@skadden.com<BR><BR><B>Jayson M. Macyda</B>
+<BR>400 Renaissance Center
+<BR>Suite 3400
+<BR>Detroit, MI 48243
+<BR>313-259-8300
+<BR>Fax  : 313-259-1451
+<BR>Email: jmacyda@kotzsangster.com
+<BR><I>TERMINATED: 03/30/2009</I><BR><BR><B>Jessica Lepine</B>
+<BR>P.O. Box 30736
+<BR>Lansing, MI 48090
+<BR>(517) 373-1176
+<BR>Email: lepinej@michigan.gov
+<BR><I>TERMINATED: 12/04/2008</I><BR><BR><B>Kristhy Peguero</B>
+<BR>One Rodney Square
+<BR>P.O. Box 636
+<BR>Wilmington, DE 19899
+<BR>(302) 651-3128
+<BR>Email: kristhy.peguero@skadden.com<BR><BR><B>Leonora K. Baughman</B>
+<BR>Kilpatrick & Associates
+<BR>903 North Opdyke Road, Suite C
+<BR>Auburn Hills, MI 48326
+<BR>248-377-0700
+<BR>Email: ecf@kaalaw.com<BR><BR><B>Mark L. Desgrosseilliers</B>
+<BR>One Rodney Square
+<BR>P.O. Box 636
+<BR>Wilmington, DE 19899-0636
+<BR>(302) 651-3139
+<BR>Email: mark.desgrosseilliers@skadden.com<BR><BR><B>Matthew Ward</B>
+<BR>222 Delaware Avenue, Suite 1501
+<BR>Wilmington, DE 19801
+<BR>(302) 252-4338
+<BR>Email: ma_ward@wcsr.com
+<BR><I>TERMINATED: 10/08/2008</I><BR><BR><B>Ralph R. McKee</B>
+<BR>2600 Buhl Building
+<BR>535 Griswold Avenue
+<BR>Detroit, MI 48226
+<BR>(313) 961-6141
+<BR>Email: rmckee@allardfishpc.com
+<BR><I>TERMINATED: 04/10/2008</I><BR><BR><B>Ryan Moran</B>
+<BR>25600 Woodward Ave.
+<BR>Suite 201
+<BR>Royal Oak, MI 48067
+<BR>(248) 246-6536
+<BR>Fax  : (248) 246-7249
+<BR>Email: ryanbmoran@gmail.com
+<BR><I>TERMINATED: 08/19/2008</I><BR><BR><B>Sarah E. Pierce</B>
+<BR>One Rodney Square
+<BR>10th & King Streets
+<BR>Wilmington, DE 19801
+<BR>(302) 651-3127
+<BR>Email: Sarah.Pierce@skadden.com<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Petitioning Creditor</B></I><BR><B>Reliant Energy Retail Services, LLC</B>
+<BR>C/o Kotz Sangster, Wysocki And Berg, P.c
+<BR>400 Renaissance Center, Ste. 3400
+<BR>Detroit, MI 48243-1618<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Jayson M. Macyda</B>
+<BR>(See above for address)<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Liquidating Trustee</B></I><BR><B>Carroll Services LLC</B><BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Daniel M. Katlein</B>
+<BR>2600 Buhl Bldg.
+<BR>535 Griswold
+<BR>Detroit, MI 48226-3687
+<BR>(313) 961-6141
+<BR>Email: dkatlein@allardfishpc.com<BR><BR><B>Deborah L. Fish</B>
+<BR>(See above for address)<BR><BR><B>Gregg Galardi</B>
+<BR>(See above for address)<BR><BR><B>Joel D. Applebaum</B>
+<BR>500 Woodward Avenue
+<BR> Suite 3500
+<BR>Detroit, MI 48226-3435
+<BR>(313) 965-8300
+<BR>Email: japplebaum@clarkhill.com<BR><BR><B>John Stevenson</B>
+<BR>500 Woodward
+<BR>35th Floor
+<BR>Detroit, MI 48226
+<BR>313-965-8300
+<BR>Email: jstevenson@clarkhill.com<BR><BR><B>Kristhy Peguero</B>
+<BR>(See above for address)<BR><BR><B>Peter A. Jackson</B>
+<BR>500 Woodward Ave.
+<BR>Suite 3500
+<BR>Detroit, MI 48226-3435
+<BR>(313) 965-8306
+<BR>Email: pjackson@clarkhill.com<BR><BR><B>Sarah E. Pierce</B>
+<BR>(See above for address)<BR><BR><B>Shannon L. Deeby</B>
+<BR>Clark Hill PLC
+<BR>500 Woodward
+<BR>Suite 3500
+<BR>Detroit, MI 48226
+<BR>313-965-8809
+<BR>Fax  : 313-965-8252
+<BR>Email: sdeeby@clarkhill.com<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>U.S. Trustee</B></I><BR><B>Habbo G. Fokkena</B>
+<BR><I>TERMINATED: 07/11/2008</I><BR><BR>	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+<TD valign="top" WIDTH="40%" NOWRAP>
+  	                    <font size="+0">&nbsp;</font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>U.S. Trustee</B></I><BR><B>Daniel M. McDermott</B><BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Stephen Edward Spence</B>
+<BR>United States Trustee
+<BR>211 West Fort Street
+<BR>Suite 700
+<BR>Detroit, MI 48226
+<BR>313-226-7911
+<BR>Email: steve.e.spence@usdoj.gov<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Interim Trustee</B></I><BR><B>Michael A. Stevenson</B>
+<BR><I>TERMINATED: 06/13/2008</I><BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Howard S. Sher</B>
+<BR>2301 W. Big Beaver
+<BR>Suite 777
+<BR>Troy, MI 48084
+<BR>(248) 649-1900
+<BR>Email: howard@jacobweingarten.com
+<BR><I>TERMINATED: 09/08/2009</I><BR><BR><B>Michele Lynn Walton</B>
+<BR>2301 W. Big Beaver
+<BR>Troy, MI 48084
+<BR>(248) 649-1900
+<BR>Email: michele@jacobweingarten.com
+<BR><I>TERMINATED: 09/08/2009</I><BR><BR></font></TD></TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Creditor Committee</B></I><BR><B>Unsecured Creditors Committee</B>	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+	<TD VALIGN=top WIDTH="40%"><FONT SIZE="+0"><B>Joel D. Applebaum</B>
+<BR>(See above for address)<BR><BR><B>Robert D. Gordon</B>
+<BR>151 South Old Woodward Ave.
+<BR>Suite 200
+<BR>Birmingham, MI 48009
+<BR>(248) 988-5882
+<BR>Fax  : (248) 988-2502
+<BR>Email: rgordon@clarkhill.com	</FONT></TD>
+</TR></TABLE><BR><TABLE BORDER=1 CELLPADDING=10 CELLSPACING=0><TR><TH width="94" nowrap>Filing Date</TH>
+<TH colspan=2 align='center'>#</TH><TH align=center>Docket Text</TH></TR>
+<TR><TD width="94" nowrap valign=bottom>02/04/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mieb.uscourts.gov/doc1/096022076229' id='documentKcaseidV506977Kde_seq_numV18750Kdm_idV21826431Kdoc_numV5813Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>5813</a><SCRIPT>DocLink('documentKcaseidV506977Kde_seq_numV18750Kdm_idV21826431Kdoc_numV5813Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>  Amended Certificate of Service <i></i> Filed by Interested Party Julie N. Brown (RE: related document(s) <script src='/lib/dls_url.js' language='javascript'></script><a href='https://ecf.mieb.uscourts.gov/doc1/096021839714' onClick="goDLS('/doc1/096021839714', '506977', '18499', '', '0', '', '', '', '',''); this.style.color = document.vlinkColor; return false">5733</a>  Motion to Compel Enforcement of Provisions of the Fifth Amended Joint Plan of Liquidation by (1) Compelling the Liquidating Trustee&#039;s  Filing and Payment of the Debtor&#039;s Taxes, and (2) Enjoining The Michigan Department of Treasury From the Pu).  (Bewersdorf, Ryan) (Entered: 02/04/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/04/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mieb.uscourts.gov/doc1/096022076360' id='documentKcaseidV506977Kde_seq_numV18753Kdm_idV21826568Kdoc_numV5814Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>5814</a><SCRIPT>DocLink('documentKcaseidV506977Kde_seq_numV18753Kdm_idV21826568Kdoc_numV5814Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>    Certificate of Service <i></i> Filed by Interested Party Julie N. Brown (RE: related document(s) <a href='https://ecf.mieb.uscourts.gov/doc1/096022052786' onClick="goDLS('/doc1/096022052786', '506977', '18716', '', '0', '', '', '', '',''); this.style.color = document.vlinkColor; return false">5806</a>  Notice of Omnibus Hearing).  (Bewersdorf, Ryan) (Entered: 02/04/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/04/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Adversary Case 2:09-ap-6344 Closed.     (Mum, J) (Entered: 02/04/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/04/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mieb.uscourts.gov/doc1/096022085659' id='documentKcaseidV506977Kde_seq_numV18760Kdm_idV21835639Kdoc_numV5815Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>5815</a><SCRIPT>DocLink('documentKcaseidV506977Kde_seq_numV18760Kdm_idV21835639Kdoc_numV5815Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>  Withdrawal of Amended Priority Claim(s):   Filed February 12, 2009 by   Creditor   State of Michigan, Department of Treasury in the amount of &#036;800,000.00. W/Service   (BCook) (Entered: 02/04/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/04/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Disposition of Adversary 2:09-ap-6512 : Dismissed by Stipulation.     (Mum, J) (Entered: 02/05/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/05/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Adversary Case 2:09-ap-6512 Closed.     (Mum, J) (Entered: 02/05/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/08/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mieb.uscourts.gov/doc1/096022129259' id='documentKcaseidV506977Kde_seq_numV18766Kdm_idV21877887Kdoc_numV5816Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>5816</a><SCRIPT>DocLink('documentKcaseidV506977Kde_seq_numV18766Kdm_idV21877887Kdoc_numV5816Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>    Notice of Withdrawal <i>Of K&Y&#039;s Response to Objection to Late Filed Claims</i> Creditor K&Y Mfg., Inc.  (RE: related document(s) <a href='https://ecf.mieb.uscourts.gov/doc1/096020253390' onClick="goDLS('/doc1/096020253390', '506977', '17004', '', '0', '', '', '', '',''); this.style.color = document.vlinkColor; return false">5229</a>  Response).  (Hertzberg, John) (Entered: 02/08/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/08/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mieb.uscourts.gov/doc1/096022129456' id='documentKcaseidV506977Kde_seq_numV18769Kdm_idV21878077Kdoc_numV5817Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>5817</a><SCRIPT>DocLink('documentKcaseidV506977Kde_seq_numV18769Kdm_idV21878077Kdoc_numV5817Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>  Corrected Response to (related document(s):  <a href='https://ecf.mieb.uscourts.gov/doc1/096019910630' onClick="goDLS('/doc1/096019910630', '506977', '16708', '', '0', '', '', '', '',''); this.style.color = document.vlinkColor; return false">5116</a>  Objection to Claim Number by Claimant See Exhibit B. <i>Liquidating Trustee&#039;s Second Omnibus Objection to Administrative Claims Seeking to Disallow Late-Filed Administrative Claims</i>) <i></i>  Filed by Creditor K&Y Mfg., Inc.  (Hertzberg, John) (Entered: 02/08/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/08/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mieb.uscourts.gov/doc1/096022129518' id='documentKcaseidV506977Kde_seq_numV18772Kdm_idV21878140Kdoc_numV5818Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>5818</a><SCRIPT>DocLink('documentKcaseidV506977Kde_seq_numV18772Kdm_idV21878140Kdoc_numV5818Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>    Certificate of Service <i></i> Filed by Creditor K&Y Mfg., Inc.  (RE: related document(s) <a href='https://ecf.mieb.uscourts.gov/doc1/096022129259' onClick="goDLS('/doc1/096022129259', '506977', '18766', '', '0', '', '', '', '',''); this.style.color = document.vlinkColor; return false">5816</a>  Notice of Withdrawal,  <a href='https://ecf.mieb.uscourts.gov/doc1/096022129456' onClick="goDLS('/doc1/096022129456', '506977', '18769', '', '0', '', '', '', '',''); this.style.color = document.vlinkColor; return false">5817</a>  Response).  (Hertzberg, John) (Entered: 02/08/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/08/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Disposition of Adversary 2:09-ap-6395 : Dismissed by Stipulation.     (Mum, J) (Entered: 02/09/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/09/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Adversary Case 2:09-ap-6395 Closed.     (Mum, J) (Entered: 02/09/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/09/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mieb.uscourts.gov/doc1/096022143450' id='documentKcaseidV506977Kde_seq_numV18780Kdm_idV21891440Kdoc_numV5819Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>5819</a><SCRIPT>DocLink('documentKcaseidV506977Kde_seq_numV18780Kdm_idV21891440Kdoc_numV5819Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>  Request to be Removed from Receiving Notices of Electronic Filings in a Adversary Case for Complete Prototype Services, Inc. Creditor Complete Prototype Services, Inc..  (Reynolds, Richard) (Entered: 02/09/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/10/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Disposition of Adversary 2:09-ap-6508 : Dismissed.     (Trimm-Averytte, G.) (Entered: 02/10/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/10/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Adversary Case 2:09-ap-6508: Case Closed.     (Trimm-Averytte, G.) (Entered: 02/10/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/10/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Disposition of Adversary 2:09-ap-6269 : Dismissed by Stipulation.     (Mum, J) (Entered: 02/11/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/11/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Adversary Case 2:09-ap-6269 Closed.     (Mum, J) (Entered: 02/11/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/11/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mieb.uscourts.gov/doc1/096022183538' id='documentKcaseidV506977Kde_seq_numV18790Kdm_idV21930548Kdoc_numV5820Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>5820</a><SCRIPT>DocLink('documentKcaseidV506977Kde_seq_numV18790Kdm_idV21930548Kdoc_numV5820Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>  Request to be Removed from Receiving Notices of Electronic Filings in a Case for Creditor Williams Acosta, PLLC.  (Smith, Adam) (Entered: 02/11/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/11/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mieb.uscourts.gov/doc1/096022190860' id='documentKcaseidV506977Kde_seq_numV18793Kdm_idV21937557Kdoc_numV5821Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>5821</a><SCRIPT>DocLink('documentKcaseidV506977Kde_seq_numV18793Kdm_idV21937557Kdoc_numV5821Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>    Response to (related document(s):  <a href='https://ecf.mieb.uscourts.gov/doc1/096021839714' onClick="goDLS('/doc1/096021839714', '506977', '18499', '', '0', '', '', '', '',''); this.style.color = document.vlinkColor; return false">5733</a>  Motion to Compel Enforcement of Provisions of the Fifth Amended Joint Plan of Liquidation by (1) Compelling the Liquidating Trustee&#039;s Filing and Payment of the Debtor&#039;s Taxes, and (2) Enjoining The Michigan Department of Treasury From the Pu) <i></i> Filed by Creditor State of Michigan, Department of Treasury (Waldmeir, Deborah) (Entered: 02/11/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/11/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mieb.uscourts.gov/doc1/096022190929' id='documentKcaseidV506977Kde_seq_numV18796Kdm_idV21937625Kdoc_numV5822Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>5822</a><SCRIPT>DocLink('documentKcaseidV506977Kde_seq_numV18796Kdm_idV21937625Kdoc_numV5822Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>    Certificate of Service <i>to Response in Opposition to Motion of Julie N. Brown to Enforce Provisions of the Fifth Amended Joint Plan of Liquidation by Compelling the Liquidating Trustee&#039;s Filing and Payment of the Debtor&#039;s Taxes, and (2) Enjoining the Michigan Department of Treasury from the Pursuit of Mrs. Julie Brown for Such Taxes</i> Filed by Creditor State of Michigan, Department of Treasury.  (Waldmeir, Deborah) (Entered: 02/11/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/11/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Disposition of Adversary 2:09-ap-6427 : Dismissed by Stipulation.     (Mum, J) (Entered: 02/12/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/11/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Disposition of Adversary 2:09-ap-6482 : Dismissed by Stipulation.     (Mum, J) (Entered: 02/12/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/12/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Adversary Case 2:09-ap-6427 Closed.     (Mum, J) (Entered: 02/12/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/12/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Adversary Case 2:09-ap-6482 Closed.     (Mum, J) (Entered: 02/12/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/12/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mieb.uscourts.gov/doc1/096022210193' id='documentKcaseidV506977Kde_seq_numV18806Kdm_idV21956453Kdoc_numV5823Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>5823</a><SCRIPT>DocLink('documentKcaseidV506977Kde_seq_numV18806Kdm_idV21956453Kdoc_numV5823Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>  Notice of Omnibus Hearing. Filed by Interested Party Julie N. Brown (RE: related document(s) <a href='https://ecf.mieb.uscourts.gov/doc1/096021839714' onClick="goDLS('/doc1/096021839714', '506977', '18499', '', '0', '', '', '', '',''); this.style.color = document.vlinkColor; return false">5733</a>  Motion to Compel,  <a href='https://ecf.mieb.uscourts.gov/doc1/096022052786' onClick="goDLS('/doc1/096022052786', '506977', '18716', '', '0', '', '', '', '',''); this.style.color = document.vlinkColor; return false">5806</a>  Notice of Omnibus Hearing).  (Attachments: # <a href='https://ecf.mieb.uscourts.gov/doc1/096122210194' onClick="goDLS('/doc1/096122210194', '506977', '18806', '', '0', '', '', '', '',''); this.style.color = document.vlinkColor; return false">1</a> Proof of Service) (Bewersdorf, Ryan) (Entered: 02/12/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/12/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Disposition of Adversary 2:09-ap-6324 : Dismissed by Stipulation.     (Mum, J) (Entered: 02/16/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/15/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mieb.uscourts.gov/doc1/096022236996' id='documentKcaseidV506977Kde_seq_numV18810Kdm_idV21982148Kdoc_numV5824Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>5824</a><SCRIPT>DocLink('documentKcaseidV506977Kde_seq_numV18810Kdm_idV21982148Kdoc_numV5824Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>  Stipulation By and Between The Liquidating Trustee and Filter and Coating Technology, Inc. Re: Claim No. 70003 <i></i>. Filed by Liquidating Trustee Carroll Services LLC.  (Peguero, Kristhy) (Entered: 02/15/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/15/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mieb.uscourts.gov/doc1/096022237079' id='documentKcaseidV506977Kde_seq_numV18812Kdm_idV21982222Kdoc_numV5825Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>5825</a><SCRIPT>DocLink('documentKcaseidV506977Kde_seq_numV18812Kdm_idV21982222Kdoc_numV5825Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>    Certificate of Service <i>regarding Amended First Order Sustaining Liquidating Trustee&#039;s Fifth Omnibus Objection to Employee Administrative Expenses Requests</i> Filed by Liquidating Trustee Carroll Services LLC (RE: related document(s) <a href='https://ecf.mieb.uscourts.gov/doc1/096022054420' onClick="goDLS('/doc1/096022054420', '506977', '18722', '', '0', '', '', '', '',''); this.style.color = document.vlinkColor; return false">5808</a>   Order Concerning Claims).  (Peguero, Kristhy) (Entered: 02/15/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/15/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mieb.uscourts.gov/doc1/096022237108' id='documentKcaseidV506977Kde_seq_numV18815Kdm_idV21982251Kdoc_numV5826Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>5826</a><SCRIPT>DocLink('documentKcaseidV506977Kde_seq_numV18815Kdm_idV21982251Kdoc_numV5826Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>    Certificate of Service <i>regarding Amended First Order Sustaining Liquidating Trustee&#039;s Third Omnibus Objection to Satisfied Administrative Expense Requests</i> Filed by Liquidating Trustee Carroll Services LLC (RE: related document(s) <a href='https://ecf.mieb.uscourts.gov/doc1/096022054456' onClick="goDLS('/doc1/096022054456', '506977', '18727', '', '0', '', '', '', '',''); this.style.color = document.vlinkColor; return false">5809</a>   Order Concerning Claims).  (Peguero, Kristhy) (Entered: 02/15/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/15/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mieb.uscourts.gov/doc1/096022237160' id='documentKcaseidV506977Kde_seq_numV18818Kdm_idV21982299Kdoc_numV5827Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>5827</a><SCRIPT>DocLink('documentKcaseidV506977Kde_seq_numV18818Kdm_idV21982299Kdoc_numV5827Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>    Certificate of Service <i>regarding Second Order Sustaining Trustee&#039;s Fifth Omnibus Objection to Employee Administrative Expense Requests</i> Filed by Liquidating Trustee Carroll Services LLC (RE: related document(s) <a href='https://ecf.mieb.uscourts.gov/doc1/096022054365' onClick="goDLS('/doc1/096022054365', '506977', '18719', '', '0', '', '', '', '',''); this.style.color = document.vlinkColor; return false">5807</a>  Order Concerning Claims).  (Peguero, Kristhy) (Entered: 02/15/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/16/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Adversary Case 2:09-ap-6324 Closed.     (Mum, J) (Entered: 02/16/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/16/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mieb.uscourts.gov/doc1/096022261337' id='documentKcaseidV506977Kde_seq_numV18825Kdm_idV22006150Kdoc_numV5828Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>5828</a><SCRIPT>DocLink('documentKcaseidV506977Kde_seq_numV18825Kdm_idV22006150Kdoc_numV5828Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>  Order Approving Stipulation Between The Liquidating Trustee and Filter And Coating Technology, Inc. With Respect To Claim, No. 70003 . (RE: related document(s) <a href='https://ecf.mieb.uscourts.gov/doc1/096022236996' onClick="goDLS('/doc1/096022236996', '506977', '18810', '', '0', '', '', '', '',''); this.style.color = document.vlinkColor; return false">5824</a>  Stipulation filed by Liquidating Trustee   Carroll Services LLC).  (BCook) (Entered: 02/17/2010)</TD></TR>
+</TABLE><BR><BR><BR><BR><HR><CENTER><TABLE BORDER=1 BGCOLOR=white width="400"><TR><TH COLSPAN=4><FONT SIZE=+1 COLOR=DARKRED>PACER Service Center </FONT></TH></TR><TR><TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH></TR><TR></TR><TR></TR><TR><TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1 COLOR=DARKBLUE>02/17/2010 11:20:17</FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> [LOGIN REMOVED] </FONT></TH></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE>                                  </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Docket Report </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search Criteria: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 08-42417-pjs Fil or Ent: filed From: 2/4/2010 To: 2/17/2010 Doc From: 0 Doc To: 99999999 Term: included    Format: html </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Billable Pages: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 4 </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.32 </FONT></TD></TR><TR></TR><TR></TR></TABLE></CENTER></HR></div></body></html>

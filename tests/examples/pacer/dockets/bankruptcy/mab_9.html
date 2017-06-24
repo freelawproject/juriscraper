@@ -1,0 +1,92 @@
+<html><head><title>LIVE database</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script></head><body  onLoad='SetFocus()'><div class="noprint"><img id="cmecfLogo" class="cmecfLogo" src="/graphics/cmecf-logo.gif" alt="CM/ECF" title=""  /><img src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage" id="helpImage" onClick="CMECF.MainMenu.showHelpPage(''); return false" onMouseOver="CMECF.MainMenu.helpImageOn()" onMouseOut="CMECF.MainMenu.helpImageOff()" /><div id="topmenu" class="yuimenubar"><div class="bd"><ul class="first-of-type"><li class="yuimenubaritem" style="width:9%"><a href='/cgi-bin/iquery.pl'>Q</u>uery</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Reports'>R</u>eports</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Utilities'>U</u>tilities</a></li><li class="yuimenubaritem" style="width:10%"><a href='/cgi-bin/login.pl?logout'>Logout</a></li></ul></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.renderSimpleMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.renderSimpleMenu);}</script><div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript"> 
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;				
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+<TABLE width="100%" align=right BORDER=0 CELLSPACING=5><TR><TD ALIGN=right><h2> <FONT SIZE="3">CounDue, DebtEd</FONT></h2></TD></TR></TABLE><BR><BR><BR><CENTER><B><FONT SIZE="+1">United States Bankruptcy Court<BR>District of Massachusetts (Boston)<BR>Bankruptcy Petition #: 10-11360</FONT></B></CENTER><TABLE width="100%" BORDER=0 CELLSPACING=1><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><BR><I>Assigned to:</I>      Judge Frank J. Bailey<BR>Chapter          7<BR>Voluntary<BR>Asset <A HREF=/cgi-bin/DktRpt.pl?-</A> <br><div class="noprint"><A HREF='/cgi-bin/qryAscCases.pl?372631'>Show Associated Cases</A></div> <BR><BR>	</FONT></TD>
+	<TD VALIGN=top WIDTH="50%" ALIGN=right><FONT SIZE="+0"><TABLE border=0 cellspacing=0 cellpadding=0 align=center><TR><td align="right" valign="top"><I>Date filed:</I></td><td align="left" valign="top">&nbsp;&nbsp;02/11/2010</td></TR></TABLE>	</FONT></TD>
+</TR>
+</TABLE><BR><FONT SIZE="5"><B></B>
+		</FONT><TABLE width="100%" BORDER=0 CELLSPACING=1><TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>Bema Builders, LLC</B>
+<BR>480 Neponset Street
+<BR>11A
+<BR>Canton, MA 02021
+<BR>Tax ID / EIN: 20-4420745<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Samuel P. Reef</B>
+<BR>Law Office of Samuel P. Reef
+<BR>4 Main St.
+<BR>Brockton, MA 02301
+<BR>(508) 559-0300
+<BR>Fax  : 508-587-7305
+<BR>Email: sam@reeflaw.com<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Assistant U.S. Trustee</B></I><BR><B>John Fitzgerald</B>
+<BR>Office of the US Trustee
+<BR>J.W. McCormack Post Office & Courthouse
+<BR>5 Post Office Sq., 10th Fl, Suite 1000
+<BR>Boston, MA 02109<BR><BR>	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+<TD valign="top" WIDTH="40%" NOWRAP>
+  	                    <font size="+0">&nbsp;</font></TD></TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Trustee</B></I><BR><B>Kathleen P. Dwyer</B>
+<BR>MacLean Holloway Doherty
+<BR>Ardiff & Morse, P.C.
+<BR>8 Essex Center Drive
+<BR>Peabody, MA 01960
+<BR>978-774-7123	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+	<TD VALIGN=top WIDTH="40%"><FONT SIZE="+0">&nbsp;	</FONT></TD>
+</TR></TABLE><BR><TABLE BORDER=1 CELLPADDING=10 CELLSPACING=0><TR><TH width="94" nowrap>Filing Date</TH>
+<TH colspan=2 align='center'>#</TH><TH align=center>Docket Text</TH></TR>
+<TR><TD width="94" nowrap valign=bottom>02/15/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mab.uscourts.gov/doc1/094012905930?caseid=372631&de_seq_num=40&dm_id=12427228&doc_num=12&pdf_header=0' id='documentKcaseidV372631Kde_seq_numV40Kdm_idV12427228Kdoc_numV12Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>12</a>
+<SCRIPT>DocLink('documentKcaseidV372631Kde_seq_numV40Kdm_idV12427228Kdoc_numV12Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>  Court&#039;s Notice of 341 sent. (ADI) (Entered: 02/15/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/12/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mab.uscourts.gov/doc1/094012893456?caseid=372631&de_seq_num=37&dm_id=12415000&doc_num=11&pdf_header=0' id='documentKcaseidV372631Kde_seq_numV37Kdm_idV12415000Kdoc_numV11Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>11</a>
+<SCRIPT>DocLink('documentKcaseidV372631Kde_seq_numV37Kdm_idV12415000Kdoc_numV11Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>  Court Certificate of Mailing.  RE:  <a href='https://ecf.mab.uscourts.gov/doc1/094012893440' onClick="goDLS('/doc1/094012893440', '372631', '34', '', '0', '', '', '', '',''); this.style.color = document.vlinkColor; return false">10</a>  Order to Update    (vj, USBC) (Entered: 02/12/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/12/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mab.uscourts.gov/doc1/094012893440?caseid=372631&de_seq_num=34&dm_id=12414987&doc_num=10&pdf_header=0' id='documentKcaseidV372631Kde_seq_numV34Kdm_idV12414987Kdoc_numV10Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>10</a>
+<SCRIPT>DocLink('documentKcaseidV372631Kde_seq_numV34Kdm_idV12414987Kdoc_numV10Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>  Order to Update   (Re: <a href='https://ecf.mab.uscourts.gov/doc1/094012889257' onClick="goDLS('/doc1/094012889257', '372631', '2', '', '0', '', '', '', '',''); this.style.color = document.vlinkColor; return false">1</a> Chapter 7 Voluntary Petition)  Corporate Vote due by 2/19/2010.  (vj, USBC) (Entered: 02/12/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/12/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mab.uscourts.gov/doc1/094012891803?caseid=372631&de_seq_num=30&dm_id=12413446&doc_num=9&pdf_header=0' id='documentKcaseidV372631Kde_seq_numV30Kdm_idV12413446Kdoc_numV9Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>9</a>
+<SCRIPT>DocLink('documentKcaseidV372631Kde_seq_numV30Kdm_idV12413446Kdoc_numV9Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>  Certificate of Appointment and Acceptance of Trustee and Fixing of Bond. (ADI) (Entered: 02/12/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/11/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Meeting of Creditors is scheduled on 03/16/2010 at 11:30 AM at Room 325, U.S. Trustee Office, J.W. McCormack Post Office & Court House.   (admin, ) (Entered: 02/11/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/11/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mab.uscourts.gov/doc1/094012889301?caseid=372631&de_seq_num=24&dm_id=12410985&doc_num=8&pdf_header=0' id='documentKcaseidV372631Kde_seq_numV24Kdm_idV12410985Kdoc_numV8Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>8</a>
+<SCRIPT>DocLink('documentKcaseidV372631Kde_seq_numV24Kdm_idV12410985Kdoc_numV8Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>  Disclosure of Compensation of Attorney Samuel P. Reef in the amount of &#036;3,000.00<i></i> filed by Debtor Bema Builders, LLC (Reef, Samuel) (Entered: 02/11/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/11/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mab.uscourts.gov/doc1/094012889298?caseid=372631&de_seq_num=22&dm_id=12410982&doc_num=7&pdf_header=0' id='documentKcaseidV372631Kde_seq_numV22Kdm_idV12410982Kdoc_numV7Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>7</a>
+<SCRIPT>DocLink('documentKcaseidV372631Kde_seq_numV22Kdm_idV12410982Kdoc_numV7Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>  Matrix filed by Debtor Bema Builders, LLC (Reef, Samuel) (Entered: 02/11/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/11/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mab.uscourts.gov/doc1/094012889292?caseid=372631&de_seq_num=20&dm_id=12410976&doc_num=6&pdf_header=0' id='documentKcaseidV372631Kde_seq_numV20Kdm_idV12410976Kdoc_numV6Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>6</a>
+<SCRIPT>DocLink('documentKcaseidV372631Kde_seq_numV20Kdm_idV12410976Kdoc_numV6Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>  Statement of Financial Affairs <i></i> filed by Debtor Bema Builders, LLC (Reef, Samuel) (Entered: 02/11/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/11/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mab.uscourts.gov/doc1/094012889286?caseid=372631&de_seq_num=17&dm_id=12410970&doc_num=5&pdf_header=0' id='documentKcaseidV372631Kde_seq_numV17Kdm_idV12410970Kdoc_numV5Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>5</a>
+<SCRIPT>DocLink('documentKcaseidV372631Kde_seq_numV17Kdm_idV12410970Kdoc_numV5Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>  Verified Declaration <i></i> (Re:  <a href='https://ecf.mab.uscourts.gov/doc1/094012889280' onClick="goDLS('/doc1/094012889280', '372631', '15', '', '0', '', '', '', '',''); this.style.color = document.vlinkColor; return false">4</a>  Schedules A-J) filed by Debtor Bema Builders, LLC (Reef, Samuel) (Entered: 02/11/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/11/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mab.uscourts.gov/doc1/094012889280?caseid=372631&de_seq_num=15&dm_id=12410964&doc_num=4&pdf_header=0' id='documentKcaseidV372631Kde_seq_numV15Kdm_idV12410964Kdoc_numV4Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>4</a>
+<SCRIPT>DocLink('documentKcaseidV372631Kde_seq_numV15Kdm_idV12410964Kdoc_numV4Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>  Schedules A-H.  <i></i> filed by Debtor Bema Builders, LLC (Reef, Samuel) (Entered: 02/11/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/11/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mab.uscourts.gov/doc1/094012889266?caseid=372631&de_seq_num=13&dm_id=12410955&doc_num=3&pdf_header=0' id='documentKcaseidV372631Kde_seq_numV13Kdm_idV12410955Kdoc_numV3Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>3</a>
+<SCRIPT>DocLink('documentKcaseidV372631Kde_seq_numV13Kdm_idV12410955Kdoc_numV3Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>  Summary of Schedules <i></i> filed by Debtor Bema Builders, LLC (Reef, Samuel) (Entered: 02/11/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/11/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mab.uscourts.gov/doc1/094012889263?caseid=372631&de_seq_num=10&dm_id=12410952&doc_num=2&pdf_header=0' id='documentKcaseidV372631Kde_seq_numV10Kdm_idV12410952Kdoc_numV2Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>2</a>
+<SCRIPT>DocLink('documentKcaseidV372631Kde_seq_numV10Kdm_idV12410952Kdoc_numV2Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>  Declaration Re: Electronic Filing <i></i> (Re:  <a href='https://ecf.mab.uscourts.gov/doc1/094012889257' onClick="goDLS('/doc1/094012889257', '372631', '2', '', '0', '', '', '', '',''); this.style.color = document.vlinkColor; return false">1</a>  Voluntary Petition (Chapter 7)) filed by Debtor Bema Builders, LLC (Reef, Samuel) (Entered: 02/11/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/11/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Receipt of filing fee for Voluntary Petition (Chapter 7)(10-11360) [misc,volp7] ( 299.00). Receipt Number 8213817, amount &#036; 299.00. (U.S. Treasury) (Entered: 02/11/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/11/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.mab.uscourts.gov/doc1/094012889257?caseid=372631&de_seq_num=2&dm_id=12410946&doc_num=1&pdf_header=0' id='documentKcaseidV372631Kde_seq_numV2Kdm_idV12410946Kdoc_numV1Kpdf_headerV0' onclick='this.style.color = document.vlinkColor'>1</a>
+<SCRIPT>DocLink('documentKcaseidV372631Kde_seq_numV2Kdm_idV12410946Kdoc_numV1Kpdf_headerV0');</SCRIPT></TD><TD valign=bottom>  Chapter 7 Voluntary Petition All Schedules and Statements, Matrix and Disclosure of Attorney Compensation in the Amount of &#036;&#036;3,000.00 <i></i> Filing Fee in the Amount of &#036;299 Filed by Bema Builders, LLC.  (Reef, Samuel) (Entered: 02/11/2010)</TD></TR>
+</TABLE><BR><BR><BR><BR><HR><CENTER><TABLE BORDER=1 BGCOLOR=white width="400"><TR><TH COLSPAN=4><FONT SIZE=+1 COLOR=DARKRED>PACER Service Center </FONT></TH></TR><TR><TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH></TR><TR></TR><TR></TR><TR><TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1 COLOR=DARKBLUE>02/16/2010 14:43:25</FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> [LOGIN REMOVED] </FONT></TH></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> schoeck                          </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Docket Report </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search Criteria: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 10-11360 Fil or Ent: filed   Doc From: 0 Doc To: 99999999     Format: html </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Billable Pages: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 1 </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.08 </FONT></TD></TR><TR></TR><TR></TR></TABLE></CENTER></HR></div></body></html>

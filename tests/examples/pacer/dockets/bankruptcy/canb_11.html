@@ -1,0 +1,144 @@
+<html><head><title>CANB Live Database</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script></head><body BGCOLOR=FFFFCC TEXT=000000 onLoad='SetFocus()'><div class="noprint"><img id="cmecfLogo" class="cmecfLogo" src="/graphics/cmecf-logo.gif" alt="CM/ECF" title=""  /><img src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage" id="helpImage" onClick="CMECF.MainMenu.showHelpPage(''); return false" onMouseOver="CMECF.MainMenu.helpImageOn()" onMouseOut="CMECF.MainMenu.helpImageOff()" /><div id="topmenu" class="yuimenubar"><div class="bd"><ul class="first-of-type"><li class="yuimenubaritem" style="width:9%"><a href='/cgi-bin/iquery.pl'>Q</u>uery</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Reports'>R</u>eports</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Utilities'>U</u>tilities</a></li><li class="yuimenubaritem" style="width:10%"><a href='/cgi-bin/login.pl?logout'>Logout</a></li></ul></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.renderSimpleMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.renderSimpleMenu);}</script><div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript"> 
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;				
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+<SCRIPT language="JavaScript">function Set_Cookie( name, value, expires, path, domain, secure ) {
+                var today = new Date();
+                today.setTime( today.getTime() );
+                if ( expires )
+                {
+                        expires = expires * 1000 * 60 * 60 * 24;
+                }
+                var expires_date = new Date( today.getTime() + (expires) );
+
+                document.cookie = name + "=" +escape( value ) +
+                ( ( expires ) ? ";expires=" + expires_date.toGMTString() : "" ) +
+                ( ( path ) ? ";path=" + path : "" ) +
+                ( ( domain ) ? ";domain=" + domain : "" ) +
+                ( ( secure ) ? ";secure" : "" );
+                }
+                function Get_Cookie( name ) {
+                var start = document.cookie.indexOf( name + "=" );
+                var len = start + name.length + 1;
+                if ( ( !start ) &&
+                ( name != document.cookie.substring( 0, name.length ) ) )
+                {
+                return null;
+                }
+                if ( start == -1 ) return null;
+                var end = document.cookie.indexOf( ";", len );
+                if ( end == -1 ) end = document.cookie.length;
+                return unescape( document.cookie.substring( len, end ) );
+                }
+                function Delete_Cookie( name, path, domain ) {
+                if ( Get_Cookie( name ) ) document.cookie = name + "=" +
+                ( ( path ) ? ";path=" + path : "") +
+                ( ( domain ) ? ";domain=" + domain : "" ) +
+                ";expires=Thu, 01-Jan-1970 00:00:01 GMT";
+                }
+                </SCRIPT><CENTER><B><FONT SIZE="+1">U.S. Bankruptcy Court<BR>Northern District of California (San Francisco)<BR>Adversary Proceeding #: 09-03228</FONT></B></CENTER>
+<TABLE width="100%" BORDER=0 CELLSPACING=10><TR>	<TD VALIGN=top WIDTH="60%"><FONT SIZE="+0">
+<BR><I>Assigned to:</I>      Judge Thomas E. Carlson<BR><I>Lead BK Case:</I> <a href="/cgi-bin/DktRpt.pl?390185
+">
+								09-33701</a><BR><I>Lead BK Title:</I> UCBH Holdings, Inc.<BR><I>Lead BK Chapter:</I> 7<div class="noprint"><a href="/cgi-bin/qryAscCases.pl?393115">Show Associated Cases</A></div><BR><I>Demand:</I>           	</FONT></TD>
+	<TD VALIGN=top WIDTH="40%"><FONT SIZE="+0">
+<BR><I>Date Filed:</I>       12/23/09	</FONT></TD>
+</TR>
+</TABLE>
+<table cellpadding=0 cellspacing=0>
+<tr><td width=12></td><td valign=top nowrap><I>Nature[s] of Suit:</I> &nbsp; </td><td valign=top align=left width=7>11</td><td>&nbsp;</td><td valign=top>Recovery of money/property - 542 turnover of property</td></tr>
+</table>
+<BR><FONT SIZE="5"><B></B>
+		</FONT><TABLE width="100%" BORDER=0 CELLSPACING=1><TR>
+	<TD VALIGN=top><FONT SIZE="+0">
+<BR><B>Plaintiff<BR>-----------------------</B>	</FONT></TD>
+</TR><TR>
+	<TD VALIGN=top WIDTH="40%"><FONT SIZE="+0"><B>E. Lynn Schoenmann</B>
+<BR>800 Powell St.
+<BR>San Francisco, CA 94108
+<BR>(415) 362-0415	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+	<TD WIDTH="40%"><FONT SIZE="+0"><B>Thomas F. Koegel</B>
+<BR>Folger, Levin and Kahn
+<BR>275 Battery St. 23rd Fl.
+<BR>San Francisco, CA 94111
+<BR>(415)986-2800
+<BR>Email: tkoegel@crowell.com<BR><I>LEAD ATTORNEY</I></FONT></TD></TR><TR>
+	<TD VALIGN=top><FONT SIZE="+0"><BR>V.<BR>	</FONT></TD>
+</TR>
+<TR>
+	<TD VALIGN=top><FONT SIZE="+0">
+<BR><B>Defendant<BR>-----------------------</B>	</FONT></TD>
+</TR><TR>
+	<TD VALIGN=top WIDTH="40%"><FONT SIZE="+0"><B>East West Bank</B>
+<BR>135 N. Los Robles Avenue, 7th Floor
+<BR>Pasadena, CA 91101
+<BR>626-768-6896	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+	<TD WIDTH="40%"><FONT SIZE="+0"><B>East West Bank</B>
+<BR>PRO SE<BR>
+<BR><B></B></FONT></TD></TR><TR>
+</TR><TR>
+	<TD VALIGN=top WIDTH="40%"><FONT SIZE="+0"><B>East West Bancorp, Inc.</B>
+<BR>135 N. Los Robles Avenue, 7th Floor
+<BR>Pasadena, CA 91101
+<BR>626-768-6896	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+	<TD WIDTH="40%"><FONT SIZE="+0"><B>East West Bancorp, Inc.</B>
+<BR>PRO SE<BR>
+<BR><B></B></FONT></TD></TR><TR>
+<TR>
+	<TD VALIGN=top><FONT SIZE="+0">
+<BR><B>Intervenor-Defendant<BR>-----------------------</B>	</FONT></TD>
+</TR><TR>
+	<TD VALIGN=top WIDTH="40%"><FONT SIZE="+0"><B>FDIC</B>	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+	<TD WIDTH="40%"><FONT SIZE="+0"><B>Matthew S. Covington</B>
+<BR>DLA Piper Rudnick Gray Cary US LLP
+<BR>153 Townsend St. &#035;800
+<BR>San Francisco, CA 94107-1957
+<BR>(415) 836-2500
+<BR>Email: Matt.Covington@dlapiper.com</FONT></TD></TR><TR>
+</TABLE><BR><TABLE BORDER=1 CELLPADDING=10 CELLSPACING=0><TR><TH width="94" nowrap>Filing Date</TH>
+<TH colspan=2 align='center'>#</TH><TH align=center>Docket Text</TH></TR>
+<TR><TD width="94" nowrap valign=bottom>12/23/2009</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034012870944' id='documentKcaseidV393115Kde_seq_numV3Kdm_idV12714653Kdoc_numV1Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>1</a><SCRIPT>DocLink('documentKcaseidV393115Kde_seq_numV3Kdm_idV12714653Kdoc_numV1Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  Adversary case <A HREF = /cgi-bin/DktRpt.pl?393115>09-03228</A>. 11 (Recovery of money/property - 542 turnover of property) Complaint by E. Lynn Schoenmann against East West Bank, East West Bancorp, Inc..  Fee Amount &#036;250.  (Attachments: # <script src='/lib/dls_url.js' language='javascript'></script><a href='https://ecf.canb.uscourts.gov/doc1/034112870945' onClick="goDLS('/doc1/034112870945', '393115', '3', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">1</a>  AP Cover Sheet # <a href='https://ecf.canb.uscourts.gov/doc1/034112870946' onClick="goDLS('/doc1/034112870946', '393115', '3', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">2</a> Summons to be Issued) (Koegel, Thomas) (Entered: 12/23/2009)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>12/23/2009</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Receipt of filing fee for Complaint(09-03228) [cmp,cmp] ( 250.00). Receipt number 9856457, amount &#36; 250.00 (U.S. Treasury) (Entered: 12/23/2009)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>12/28/2009</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034012897163' id='documentKcaseidV393115Kde_seq_numV14Kdm_idV12738559Kdoc_numV2Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>2</a><SCRIPT>DocLink('documentKcaseidV393115Kde_seq_numV14Kdm_idV12738559Kdoc_numV2Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  Summons Issued on    East West Bancorp, Inc.  Answer Due 1/27/2010;   East West Bank  Answer Due 1/27/2010. <b>Status Conference scheduled for 3/18/2010 at 10:00 AM at San Francisco Courtroom 23 - Carlson.</b>   (ia) (Entered: 12/28/2009)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>12/28/2009</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034012897170' id='documentKcaseidV393115Kde_seq_numV16Kdm_idV12738565Kdoc_numV3Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>3</a><SCRIPT>DocLink('documentKcaseidV393115Kde_seq_numV16Kdm_idV12738565Kdoc_numV3Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  Order Regarding Initial Disclosures and Discovery Conference .   (ia) (Entered: 12/28/2009)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>12/29/2009</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  <b>**CORRECTIVE ENTRY**</b> Court corrected Summons and Notice Form. (RE: related document(s) <a href='https://ecf.canb.uscourts.gov/doc1/034012870944' onClick="goDLS('/doc1/034012870944', '393115', '3', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">1</a>  Complaint filed by Plaintiff E. Lynn Schoenmann).    (ia) (Entered: 12/29/2009)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>12/30/2009</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034012925883' id='documentKcaseidV393115Kde_seq_numV21Kdm_idV12763905Kdoc_numV4Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>4</a><SCRIPT>DocLink('documentKcaseidV393115Kde_seq_numV21Kdm_idV12763905Kdoc_numV4Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  BNC Certificate of Mailing - Electronic Order (RE: related document(s) <a href='https://ecf.canb.uscourts.gov/doc1/034012897170' onClick="goDLS('/doc1/034012897170', '393115', '16', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">3</a>  Discovery Order).     Service Date 12/30/2009.  (Admin.) (Entered: 12/30/2009)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/05/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013342661' id='documentKcaseidV393115Kde_seq_numV24Kdm_idV13136876Kdoc_numV5Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>5</a><SCRIPT>DocLink('documentKcaseidV393115Kde_seq_numV24Kdm_idV13136876Kdoc_numV5Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>    Summons Service Executed on East West Bancorp, Inc.  1/7/2010; East West Bank 1/7/2010 <i></i>.  (Koegel, Thomas) (Entered: 02/05/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/09/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013378835' id='documentKcaseidV393115Kde_seq_numV26Kdm_idV13168593Kdoc_numV6Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>6</a><SCRIPT>DocLink('documentKcaseidV393115Kde_seq_numV26Kdm_idV13168593Kdoc_numV6Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>   Notice of Hearing <i>Regarding Motion Of The Federal Deposit Insurance Corporation, As Receiver For United Commercial Bank, To Intervene As Defendant In Adversary Proceeding</i> <b>Hearing scheduled for 3/12/2010 at 09:30 AM at San Francisco Courtroom 23 - Carlson.</b> Filed by Intervenor-Defendant FDIC (Covington, Matthew) (Entered: 02/09/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/09/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013378857' id='documentKcaseidV393115Kde_seq_numV30Kdm_idV13168614Kdoc_numV7Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>7</a><SCRIPT>DocLink('documentKcaseidV393115Kde_seq_numV30Kdm_idV13168614Kdoc_numV7Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>    Motion <i>Of The Federal Deposit Insurance Corporation, As Receiver For United Commercial Bank, To Intervene As Defendant In Adversary Proceeding</i> Filed by Intervenor-Defendant FDIC (Covington, Matthew) (Entered: 02/09/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/09/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013378900' id='documentKcaseidV393115Kde_seq_numV32Kdm_idV13168653Kdoc_numV8Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>8</a><SCRIPT>DocLink('documentKcaseidV393115Kde_seq_numV32Kdm_idV13168653Kdoc_numV8Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>    Exhibit <i>A To Motion Of The Federal Deposit Insurance Corporation, As Receiver For United Commercial Bank, To Intervene As Defendant In Adversary Proceeding</i> (RE: related document(s) <a href='https://ecf.canb.uscourts.gov/doc1/034013378857' onClick="goDLS('/doc1/034013378857', '393115', '30', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">7</a>  Motion Miscellaneous Relief). Filed by Intervenor-Defendant FDIC (Covington, Matthew) (Entered: 02/09/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/09/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013378934' id='documentKcaseidV393115Kde_seq_numV35Kdm_idV13168686Kdoc_numV9Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>9</a><SCRIPT>DocLink('documentKcaseidV393115Kde_seq_numV35Kdm_idV13168686Kdoc_numV9Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>    Memorandum of Points and Authorities in Support of <i>Motion Of The Federal Deposit Insurance Corporation, As Receiver For United Commercial Bank, To Intervene As Defendant</i> (RE: related document(s) <a href='https://ecf.canb.uscourts.gov/doc1/034013378857' onClick="goDLS('/doc1/034013378857', '393115', '30', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">7</a>  Motion Miscellaneous Relief). Filed by Intervenor-Defendant FDIC (Covington, Matthew) (Entered: 02/09/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/09/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013379039' id='documentKcaseidV393115Kde_seq_numV38Kdm_idV13168791Kdoc_numV10Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>10</a><SCRIPT>DocLink('documentKcaseidV393115Kde_seq_numV38Kdm_idV13168791Kdoc_numV10Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>    Declaration of John J. Clarke, Jr.  in support of <i>Motion Of The Federal Deposit Insurance Corporation, As Receiver For United Commercial Bank, To Intervene As Defendant In Adversary Proceeding</i> (RE: related document(s) <a href='https://ecf.canb.uscourts.gov/doc1/034013378857' onClick="goDLS('/doc1/034013378857', '393115', '30', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">7</a>  Motion Miscellaneous Relief). Filed by Intervenor-Defendant FDIC (Attachments: # <a href='https://ecf.canb.uscourts.gov/doc1/034113379040' onClick="goDLS('/doc1/034113379040', '393115', '38', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">1</a> Exhibit A# <a href='https://ecf.canb.uscourts.gov/doc1/034113379041' onClick="goDLS('/doc1/034113379041', '393115', '38', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">2</a> Exhibit B-1# <a href='https://ecf.canb.uscourts.gov/doc1/034113379042' onClick="goDLS('/doc1/034113379042', '393115', '38', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">3</a> Exhibit B-2# <a href='https://ecf.canb.uscourts.gov/doc1/034113379043' onClick="goDLS('/doc1/034113379043', '393115', '38', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">4</a> Exhibit B-3# <a href='https://ecf.canb.uscourts.gov/doc1/034113379044' onClick="goDLS('/doc1/034113379044', '393115', '38', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">5</a> Exhibit B-4# <a href='https://ecf.canb.uscourts.gov/doc1/034113379045' onClick="goDLS('/doc1/034113379045', '393115', '38', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">6</a> Exhibit C# <a href='https://ecf.canb.uscourts.gov/doc1/034113379046' onClick="goDLS('/doc1/034113379046', '393115', '38', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">7</a> Exhibit D# <a href='https://ecf.canb.uscourts.gov/doc1/034113379047' onClick="goDLS('/doc1/034113379047', '393115', '38', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">8</a> Exhibit E# <a href='https://ecf.canb.uscourts.gov/doc1/034113379048' onClick="goDLS('/doc1/034113379048', '393115', '38', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">9</a> Exhibit F) (Covington, Matthew) (Entered: 02/09/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/09/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013379061' id='documentKcaseidV393115Kde_seq_numV41Kdm_idV13168803Kdoc_numV11Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>11</a><SCRIPT>DocLink('documentKcaseidV393115Kde_seq_numV41Kdm_idV13168803Kdoc_numV11Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>    Certificate of Service <i></i> (RE: related document(s) <a href='https://ecf.canb.uscourts.gov/doc1/034013378857' onClick="goDLS('/doc1/034013378857', '393115', '30', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">7</a>  Motion Miscellaneous Relief). Filed by Intervenor-Defendant FDIC (Covington, Matthew) (Entered: 02/09/2010)</TD></TR>
+</TABLE><BR><BR><BR><BR><HR><CENTER><TABLE BORDER=1 BGCOLOR=white width="400"><TR><TH COLSPAN=4><FONT SIZE=+1 COLOR=DARKRED>PACER Service Center </FONT></TH></TR><TR><TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH></TR><TR></TR><TR></TR><TR><TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1 COLOR=DARKBLUE>02/16/2010 13:41:50</FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> [LOGIN REMOVED] </FONT></TH></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 20386.001                        </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Docket Report </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search Criteria: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 09-03228 Fil or Ent: filed From: 12/18/2009 To: 2/16/2010 Doc From: 0 Doc To: 99999999 Term: included  Headers: included  Format: html </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Billable Pages: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 2 </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.16 </FONT></TD></TR><TR></TR><TR></TR></TABLE></CENTER></HR></div></body></html>

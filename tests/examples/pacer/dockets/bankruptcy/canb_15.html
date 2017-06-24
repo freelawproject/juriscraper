@@ -1,0 +1,96 @@
+<html><head><title>CANB Live Database</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script></head><body BGCOLOR=FFFFCC TEXT=000000 onLoad='SetFocus()'><div class="noprint"><img id="cmecfLogo" class="cmecfLogo" src="/graphics/cmecf-logo.gif" alt="CM/ECF" title=""  /><img src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage" id="helpImage" onClick="CMECF.MainMenu.showHelpPage(''); return false" onMouseOver="CMECF.MainMenu.helpImageOn()" onMouseOut="CMECF.MainMenu.helpImageOff()" /><div id="topmenu" class="yuimenubar"><div class="bd"><ul class="first-of-type"><li class="yuimenubaritem" style="width:9%"><a href='/cgi-bin/iquery.pl'>Q</u>uery</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Reports'>R</u>eports</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Utilities'>U</u>tilities</a></li><li class="yuimenubaritem" style="width:10%"><a href='/cgi-bin/login.pl?logout'>Logout</a></li></ul></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.renderSimpleMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.renderSimpleMenu);}</script><div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript"> 
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;				
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+<SCRIPT language="JavaScript">function Set_Cookie( name, value, expires, path, domain, secure ) {
+                var today = new Date();
+                today.setTime( today.getTime() );
+                if ( expires )
+                {
+                        expires = expires * 1000 * 60 * 60 * 24;
+                }
+                var expires_date = new Date( today.getTime() + (expires) );
+
+                document.cookie = name + "=" +escape( value ) +
+                ( ( expires ) ? ";expires=" + expires_date.toGMTString() : "" ) +
+                ( ( path ) ? ";path=" + path : "" ) +
+                ( ( domain ) ? ";domain=" + domain : "" ) +
+                ( ( secure ) ? ";secure" : "" );
+                }
+                function Get_Cookie( name ) {
+                var start = document.cookie.indexOf( name + "=" );
+                var len = start + name.length + 1;
+                if ( ( !start ) &&
+                ( name != document.cookie.substring( 0, name.length ) ) )
+                {
+                return null;
+                }
+                if ( start == -1 ) return null;
+                var end = document.cookie.indexOf( ";", len );
+                if ( end == -1 ) end = document.cookie.length;
+                return unescape( document.cookie.substring( len, end ) );
+                }
+                function Delete_Cookie( name, path, domain ) {
+                if ( Get_Cookie( name ) ) document.cookie = name + "=" +
+                ( ( path ) ? ";path=" + path : "") +
+                ( ( domain ) ? ";domain=" + domain : "" ) +
+                ";expires=Thu, 01-Jan-1970 00:00:01 GMT";
+                }
+                </SCRIPT><TABLE width="100%" align=right BORDER=0 CELLSPACING=5><TR><TD ALIGN=right><h2> <FONT SIZE="3">PlnDue, DsclsDue</FONT></h2></TD></TR></TABLE><BR><BR><BR><CENTER><B><FONT SIZE="+1">U.S. Bankruptcy Court<BR>Northern District of California (San Jose)<BR>Bankruptcy Petition #: 10-51435</FONT></B></CENTER><TABLE width="100%" BORDER=0 CELLSPACING=1><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><BR><I>Assigned to:</I>      Judge Arthur S. Weissbrodt<BR>Chapter          11<BR>Voluntary<BR>Asset <A HREF=/cgi-bin/DktRpt.pl?-</A> <br><div class="noprint"><A HREF='/cgi-bin/qryAscCases.pl?397931'>Show Associated Cases</A></div> <BR><BR>	</FONT></TD>
+	<TD VALIGN=top WIDTH="50%" ALIGN=right><FONT SIZE="+0"><TABLE border=0 cellspacing=0 cellpadding=0 align=center><TR><td align="right" valign="top"><I>Date filed:</I></td><td align="left" valign="top">&nbsp;&nbsp;02/15/2010</td></TR></TABLE>	</FONT></TD>
+</TR>
+</TABLE><BR><FONT SIZE="5"><B></B>
+		</FONT><TABLE width="100%" BORDER=0 CELLSPACING=1><TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>MH Sterling Group, LLC</B>
+<BR>15700 Winchester Blvd.
+<BR>Los Gatos, CA 95030
+<BR>Tax ID / EIN: 77-0518909<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Charles B. Greene</B>
+<BR>Law Offices of Charles B. Greene
+<BR>84 W Santa Clara St. &#035;770
+<BR>San Jose, CA 95113
+<BR>(408) 279-3518
+<BR>Email: cbgattyecf@aol.com<BR><BR></font></TD></TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>U.S. Trustee</B></I><BR><B>Office of the U.S. Trustee / SJ</B>
+<BR>U.S. Federal Bldg.
+<BR>280 S 1st St. &#035;268
+<BR>San Jose, CA 95113-3004
+<BR>(   )	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+	<TD VALIGN=top WIDTH="40%"><FONT SIZE="+0">&nbsp;	</FONT></TD>
+ <script src="/lib/CommonLib.js" language="Javascript"></script><SCRIPT LANGUAGE="JavaScript">Set_Cookie( 'pdf_header', 1, '', '/', '', '' );</SCRIPT>
+</TR></TABLE><BR><TABLE BORDER=1 CELLPADDING=10 CELLSPACING=0><TR><TH width="94" nowrap>Filing Date</TH>
+<TH colspan=2 align='center'>#</TH><TH align=center>Docket Text</TH></TR>
+<TR><TD width="94" nowrap valign=bottom>02/15/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013438973' id='documentKcaseidV397931Kde_seq_numV2Kdm_idV13222032Kdoc_numV1Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>1</a><SCRIPT>DocLink('documentKcaseidV397931Kde_seq_numV2Kdm_idV13222032Kdoc_numV1Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  Chapter 11 Voluntary Petition, Fee Amount &#036;1039, Filed by MH Sterling Group, LLC.  Order Meeting of Creditors due by 02/22/2010.Incomplete Filings due by 03/1/2010. Section 521 Filings due by 04/1/2010.  (Greene, Charles) (Entered: 02/15/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/15/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Receipt of filing fee for Voluntary Petition (Chapter 11)(10-51435) [misc,volp11] (1039.00). Receipt number 10172163, amount &#36;1039.00 (U.S. Treasury) (Entered: 02/15/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/15/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  First Meeting of Creditors with 341(a) meeting to be held on 03/17/2010 at 11:30 AM at San Jose Room 130.  Proof of Claim due by 06/15/2010.   (Greene, Charles) (Entered: 02/15/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/16/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013441827' id='documentKcaseidV397931Kde_seq_numV13Kdm_idV13224645Kdoc_numV2Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>2</a><SCRIPT>DocLink('documentKcaseidV397931Kde_seq_numV13Kdm_idV13224645Kdoc_numV2Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>    Application to Employ Charles B. Greene as Attorney for Debtor <i></i> Filed by Debtor MH Sterling Group, LLC (Attachments: # <a href='https://ecf.canb.uscourts.gov/doc1/034113441828' onClick="goDLS('/doc1/034113441828', '397931', '13', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">1</a> Declaration # <a href='https://ecf.canb.uscourts.gov/doc1/034113441829' onClick="goDLS('/doc1/034113441829', '397931', '13', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">2</a> Certificate of Service) (Greene, Charles) (Entered: 02/16/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/16/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013441839' id='documentKcaseidV397931Kde_seq_numV15Kdm_idV13224655Kdoc_numV3Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>3</a><SCRIPT>DocLink('documentKcaseidV397931Kde_seq_numV15Kdm_idV13224655Kdoc_numV3Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>    Application to Designate Dan Shaw as Responsible Individual <i></i> Filed by Debtor MH Sterling Group, LLC (Attachments: # <a href='https://ecf.canb.uscourts.gov/doc1/034113441840' onClick="goDLS('/doc1/034113441840', '397931', '15', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">1</a> Declaration # <a href='https://ecf.canb.uscourts.gov/doc1/034113441841' onClick="goDLS('/doc1/034113441841', '397931', '15', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">2</a> Certificate of Service) (Greene, Charles) (Entered: 02/16/2010)</TD></TR>
+</TABLE><BR><BR><BR><BR><HR><CENTER><TABLE BORDER=1 BGCOLOR=white width="400"><TR><TH COLSPAN=4><FONT SIZE=+1 COLOR=DARKRED>PACER Service Center </FONT></TH></TR><TR><TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH></TR><TR></TR><TR></TR><TR><TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1 COLOR=DARKBLUE>02/16/2010 07:00:58</FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> [LOGIN REMOVED] </FONT></TH></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> schoeck                          </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Docket Report </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search Criteria: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 10-51435 Fil or Ent: filed From: 12/18/2009 To: 2/16/2010 Doc From: 0 Doc To: 99999999 Term: included  Headers: included  Format: html </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Billable Pages: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 1 </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.08 </FONT></TD></TR><TR></TR><TR></TR></TABLE></CENTER></HR></div></body></html>

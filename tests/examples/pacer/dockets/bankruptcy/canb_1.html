@@ -1,0 +1,147 @@
+<html><head><title>CANB Live Database</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script></head><body BGCOLOR=FFFFCC TEXT=000000 onLoad='SetFocus()'><div class="noprint"><img id="cmecfLogo" class="cmecfLogo" src="/graphics/cmecf-logo.gif" alt="CM/ECF" title=""  /><img src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage" id="helpImage" onClick="CMECF.MainMenu.showHelpPage(''); return false" onMouseOver="CMECF.MainMenu.helpImageOn()" onMouseOut="CMECF.MainMenu.helpImageOff()" /><div id="topmenu" class="yuimenubar"><div class="bd"><ul class="first-of-type"><li class="yuimenubaritem" style="width:9%"><a href='/cgi-bin/iquery.pl'>Q</u>uery</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Reports'>R</u>eports</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Utilities'>U</u>tilities</a></li><li class="yuimenubaritem" style="width:10%"><a href='/cgi-bin/login.pl?logout'>Logout</a></li></ul></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.renderSimpleMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.renderSimpleMenu);}</script><div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript"> 
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;				
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+<SCRIPT language="JavaScript">function Set_Cookie( name, value, expires, path, domain, secure ) {
+                var today = new Date();
+                today.setTime( today.getTime() );
+                if ( expires )
+                {
+                        expires = expires * 1000 * 60 * 60 * 24;
+                }
+                var expires_date = new Date( today.getTime() + (expires) );
+
+                document.cookie = name + "=" +escape( value ) +
+                ( ( expires ) ? ";expires=" + expires_date.toGMTString() : "" ) +
+                ( ( path ) ? ";path=" + path : "" ) +
+                ( ( domain ) ? ";domain=" + domain : "" ) +
+                ( ( secure ) ? ";secure" : "" );
+                }
+                function Get_Cookie( name ) {
+                var start = document.cookie.indexOf( name + "=" );
+                var len = start + name.length + 1;
+                if ( ( !start ) &&
+                ( name != document.cookie.substring( 0, name.length ) ) )
+                {
+                return null;
+                }
+                if ( start == -1 ) return null;
+                var end = document.cookie.indexOf( ";", len );
+                if ( end == -1 ) end = document.cookie.length;
+                return unescape( document.cookie.substring( len, end ) );
+                }
+                function Delete_Cookie( name, path, domain ) {
+                if ( Get_Cookie( name ) ) document.cookie = name + "=" +
+                ( ( path ) ? ";path=" + path : "") +
+                ( ( domain ) ? ";domain=" + domain : "" ) +
+                ";expires=Thu, 01-Jan-1970 00:00:01 GMT";
+                }
+                </SCRIPT><TABLE width="100%" align=right BORDER=0 CELLSPACING=5><TR><TD ALIGN=right><h2> <FONT SIZE="3">PreAct, REOPENED, CLOSED</FONT></h2></TD></TR></TABLE><BR><BR><BR><CENTER><B><FONT SIZE="+1">U.S. Bankruptcy Court<BR>Northern District of California (Santa Rosa)<BR>Bankruptcy Petition #: 96-13030</FONT></B></CENTER><TABLE width="100%" BORDER=0 CELLSPACING=1><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><BR><I>Assigned to:</I>      Judge Alan Jaroslovsky<BR>Chapter          7<BR>Voluntary<BR>Asset <A HREF=/cgi-bin/DktRpt.pl?-</A> <br><div class="noprint"><A HREF='/cgi-bin/qryAscCases.pl?186345'>Show Associated Cases</A></div> <BR><BR><BR><I>Debtor disposition:</I>&nbsp;&nbsp;Discharge Not Applicable<BR><I>Joint debtor disposition:</I> Discharge Not Applicable	</FONT></TD>
+	<TD VALIGN=top WIDTH="50%" ALIGN=right><FONT SIZE="+0"><TABLE border=0 cellspacing=0 cellpadding=0 align=center><TR><td align="right" valign="top"><I>Date filed:</I></td><td align="left" valign="top">&nbsp;&nbsp;09/06/1996</td></TR><TR><td align="right" valign="top"><I>Date reopened:</I></td><td align="left" valign="top">&nbsp;&nbsp;10/02/2007</td></TR><TR><td align="right" valign="top"><I>Date terminated:</I></td><td align="left" valign="top">&nbsp;&nbsp;02/09/2010</td></TR><TR><td align="right" valign="top"><I>Debtor discharged:</I></td><td align="left" valign="top">&nbsp;&nbsp;10/30/1997</td></TR><TR><td align="right" valign="top"><I>Joint debtor discharged:</I></td><td align="left" valign="top">&nbsp;&nbsp;10/30/1997</td></TR></TABLE>	</FONT></TD>
+</TR>
+</TABLE><BR><FONT SIZE="5"><B></B>
+		</FONT><TABLE width="100%" BORDER=0 CELLSPACING=1><TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>Aleta M. Rosen</B>
+<BR>4429 Fairway Dr.
+<BR>Rohnert Park, CA 94928
+<BR>SSN / ITIN: xxx-xx-2200<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Michael C. Fallon</B>
+<BR>Law Offices of Michael C. Fallon
+<BR>100 E St. &#035;219
+<BR>Santa Rosa, CA 95404
+<BR>(707) 546-6770
+<BR>Email: mcfallon@fallonlaw.net<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>Michael P. Rosen</B>
+<BR>4429 Fairway Dr.
+<BR>Rohnert Park, CA 94928
+<BR>SSN / ITIN: xxx-xx-2876<BR><I><B>aka</B></I><BR><B>M.P. Rosen, Inc.</B><BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Michael C. Fallon</B>
+<BR>(See above for address)<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Trustee</B></I><BR><B>Jeffry Locke</B>
+<BR>530 Alameda Del Prado &#035;396
+<BR>Novato, CA 94949
+<BR>(415) 413-4401
+<BR><I>TERMINATED: 10/21/1996</I><BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Reidun Stromsheim</B>
+<BR>Law Offices of Stromsheim and Assoc.
+<BR>201 California St. &#035;350
+<BR>San Francisco, CA 94111
+<BR>(415) 989-4100
+<BR>Email: rstromsheim@stromsheim.com
+<BR><I>TERMINATED: 10/21/1996</I><BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Trustee</B></I><BR><B>Phil Lurie</B>
+<BR>Chapter 7 Bankruptcy Trustee
+<BR>6545 Stone Bridge Rd.
+<BR>Santa Rosa, CA 95409
+<BR>(707) 538-8822<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Craig K. Welch</B>
+<BR>Welch and Olrich
+<BR>809 Petaluma Blvd. N
+<BR>Petaluma, CA 94952
+<BR>(707) 782-1790
+<BR>Email: welch@welcholrich.com<BR><BR><B>Philip J. Nicholsen</B>
+<BR>Law Offices of Philip J. Nicholsen
+<BR>601 Montgomery St. &#035;777
+<BR>San Francisco, CA 94111
+<BR>(415) 364-4000
+<BR>Email: nicholsenlaw@yahoo.com
+<BR><I>TERMINATED: 03/27/1997</I><BR><BR></font></TD></TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>U.S. Trustee</B></I><BR><B>Office of the U.S. Trustee / SR</B>
+<BR>235 Pine Street
+<BR>Suite 700
+<BR>San Francisco, CA 94104	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+	<TD VALIGN=top WIDTH="40%"><FONT SIZE="+0"><B>Donna S. Tamanaha</B>
+<BR>Office of the U.S. Trustee
+<BR>235 Pine St. 7th Fl.
+<BR>San Francisco, CA 94104
+<BR>(415) 705-3333
+<BR>Email: Donna.S.Tamanaha@usdoj.gov<BR><BR><B>Edward G. Myrtle</B>
+<BR>David Burchard, Chapter 13 Trustee
+<BR>393 Vintage Park Dr. &#035;150
+<BR>Foster City, CA 94404
+<BR>(650)345-7801
+<BR>Email: administrator@burchardtrustee.com
+<BR><I>TERMINATED: 02/24/2009</I>	</FONT></TD>
+ <script src="/lib/CommonLib.js" language="Javascript"></script><SCRIPT LANGUAGE="JavaScript">Set_Cookie( 'pdf_header', 1, '', '/', '', '' );</SCRIPT>
+</TR></TABLE><BR><TABLE BORDER=1 CELLPADDING=10 CELLSPACING=0><TR><TH width="94" nowrap>Filing Date</TH>
+<TH colspan=2 align='center'>#</TH><TH align=center>Docket Text</TH></TR>
+<TR><TD width="94" nowrap valign=bottom>01/19/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013129870' id='documentKcaseidV186345Kde_seq_numV4004620Kdm_idV12946853Kdoc_numV274Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>274</a><SCRIPT>DocLink('documentKcaseidV186345Kde_seq_numV4004620Kdm_idV12946853Kdoc_numV274Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  Application to Remit Unclaimed Dividends Payable to Creditors to be Submitted to the Clerk of Court   Filed by Trustee Phil  Lurie    (ds) (Entered: 01/20/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>01/19/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013129906' id='documentKcaseidV186345Kde_seq_numV4004622Kdm_idV12946886Kdoc_numV275Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>275</a><SCRIPT>DocLink('documentKcaseidV186345Kde_seq_numV4004622Kdm_idV12946886Kdoc_numV275Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  Order Approving Application to Remit Unclaimed Dividends Payable to Creditors to be Submitted to the Clerk of Court (Related Doc #  <a href='https://ecf.canb.uscourts.gov/doc1/034013129870' onClick="goDLS('/doc1/034013129870', '186345', '4004620', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">274</a> )     (ds) (Entered: 01/20/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>01/27/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013217866' id='documentKcaseidV186345Kde_seq_numV4004624Kdm_idV13024764Kdoc_numV276Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>276</a><SCRIPT>DocLink('documentKcaseidV186345Kde_seq_numV4004624Kdm_idV13024764Kdoc_numV276Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>   Application to Pay Unclaimed Dividend in the Amount of &#036;2698.41 . Filed by Creditor James Alan Simonds  . (RE: related document(s) <a href='https://ecf.canb.uscourts.gov/doc1/034012988735' onClick="goDLS('/doc1/034012988735', '186345', '4004618', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">273</a>  Unclaimed Dividend).    (tt) (Entered: 01/27/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>01/27/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013217901' id='documentKcaseidV186345Kde_seq_numV4004628Kdm_idV13024799Kdoc_numV277Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>277</a><SCRIPT>DocLink('documentKcaseidV186345Kde_seq_numV4004628Kdm_idV13024799Kdoc_numV277Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  Supporting Documents for Unclaimed Dividends Application  (RE: related document(s) <a href='https://ecf.canb.uscourts.gov/doc1/034013217866' onClick="goDLS('/doc1/034013217866', '186345', '4004624', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">276</a>   Application to Pay Unclaimed Dividend in the Amount of &#036;2698.41 . Filed by Creditor James Alan Simonds .).    (tt) (Entered: 01/27/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/01/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013275355' id='documentKcaseidV186345Kde_seq_numV4004631Kdm_idV13078625Kdoc_numV278Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>278</a><SCRIPT>DocLink('documentKcaseidV186345Kde_seq_numV4004631Kdm_idV13078625Kdoc_numV278Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>   Chapter 7 Trustee's Final Account, Certification that the Estate has been Fully Administered and Application of Trustee to be Discharged filed on behalf of Trustee, Phil Lurie. The United States Trustee has reviewed the Final Account, Certification  that the Estate has been Fully Administered and Application of Trustee to be Discharged.  The United States Trustee does not object to the relief requested.  <i></i> Filed by Trustee Phil Lurie. (U.S. Trustee (dj)) (Entered: 02/01/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/02/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013322944' id='documentKcaseidV186345Kde_seq_numV4004634Kdm_idV13119400Kdoc_numV279Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>279</a><SCRIPT>DocLink('documentKcaseidV186345Kde_seq_numV4004634Kdm_idV13119400Kdoc_numV279Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  Order Granting Application to Pay Unclaimed Dividend to James A. Simonds   (Related Doc #  <a href='https://ecf.canb.uscourts.gov/doc1/034013217866' onClick="goDLS('/doc1/034013217866', '186345', '4004624', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">276</a> )     (ds) (Entered: 02/04/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/09/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013369438' id='documentKcaseidV186345Kde_seq_numV4004636Kdm_idV13160522Kdoc_numV280Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>280</a><SCRIPT>DocLink('documentKcaseidV186345Kde_seq_numV4004636Kdm_idV13160522Kdoc_numV280Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  Final Decree .   (ds) (Entered: 02/09/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/09/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Bankruptcy Case Closed.     (ds) (Entered: 02/09/2010)</TD></TR>
+</TABLE><BR><BR><BR><BR><HR><CENTER><TABLE BORDER=1 BGCOLOR=white width="400"><TR><TH COLSPAN=4><FONT SIZE=+1 COLOR=DARKRED>PACER Service Center </FONT></TH></TR><TR><TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH></TR><TR></TR><TR></TR><TR><TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1 COLOR=DARKBLUE>02/16/2010 06:41:38</FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> [LOGIN REMOVED] </FONT></TH></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE>                                  </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Docket Report </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search Criteria: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 96-13030 Fil or Ent: filed From: 12/18/2009 To: 2/16/2010 Doc From: 0 Doc To: 99999999 Term: included  Headers: included  Format: html </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Billable Pages: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 2 </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.16 </FONT></TD></TR><TR></TR><TR></TR></TABLE></CENTER></HR></div></body></html>

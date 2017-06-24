@@ -1,0 +1,102 @@
+<html><head><title>CMECF-DktRpt.pl</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script></head><body BGCOLOR=CCFFFF TEXT=000000 onLoad='SetFocus()'><div class="noprint"><img id="cmecfLogo" name="cmecfLogo" src="/graphics/cmecf-logo.gif" alt="CM/ECF" title=""  /><img src="/graphics/menubar-help.gif" alt="?" title="" name="helpImageHover" id="helpImage" onClick="CMECF.MainMenu.showHelpPage(''); return false" onMouseOver="CMECF.MainMenu.helpImageOn()" onMouseOut="CMECF.MainMenu.helpImageOff()" /><div id="topmenu" class="yuimenubar"><div class="bd"><ul class="first-of-type"><li class="yuimenubaritem" style="width:9%"><a href='/cgi-bin/iquery.pl'>Q</u>uery</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Reports'>R</u>eports</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Utilities'>U</u>tilities</a></li><li class="yuimenubaritem" style="width:10%"> <a href='http://www.mdb.uscourts.gov/EF_help.aspx' target=_blank >Help</a></li><li class="yuimenubaritem" style="margin-left:1.7%"><a href='/cgi-bin/login.pl?logout'>Logout</a></li></ul>&nbsp;&nbsp;&nbsp;&nbsp; <a href='http://207.41.17.84/EF_emergency.aspx' target=blank>  <IMG SRC='../graphics/emergency.jpg' HEIGHT='32' WIDTH='36' BORDER=0></img></a></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.renderSimpleMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.renderSimpleMenu);}</script><div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript"> 
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;				
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+<CENTER><B><FONT SIZE="+1">U.S. Bankruptcy Court<BR>District of Maryland (Baltimore)<BR>Bankruptcy Petition #: 98-59143</FONT></B></CENTER><TABLE width="100%" BORDER=0 CELLSPACING=1><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><BR><I>Assigned to:</I>       E. Stephen Derby<BR>Chapter          7 <BR>Previous chapter 13<BR>Voluntary<BR>No asset	</FONT></TD>
+	<TD VALIGN=top WIDTH="50%" ALIGN=right><FONT SIZE="+0"><TABLE border=0 cellspacing=0 cellpadding=0 align=center><TR><td align="right" valign="top"><I>Date filed:</I></td><td align="left" valign="top">&nbsp;&nbsp;06/26/1998</td></TR><TR><td align="right" valign="top"><I>Date converted:</I></td><td align="left" valign="top">&nbsp;&nbsp;07/31/1998</td></TR><TR><td align="right" valign="top"><I>Date reopened:</I></td><td align="left" valign="top">&nbsp;&nbsp;03/30/2000</td></TR><TR><td align="right" valign="top"><I>Date terminated:</I></td><td align="left" valign="top">&nbsp;&nbsp;05/03/2002</td></TR><TR><td align="right" valign="top"><I>Date discharged:</I></td><td align="left" valign="top">&nbsp;&nbsp;06/22/1999</td></TR></TABLE>	</FONT></TD>
+</TR>
+</TABLE><BR><FONT SIZE="5"><B></B>
+		</FONT><TABLE width="100%" BORDER=0 CELLSPACING=1><TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>Craig Allen Wynne</B>
+<BR>7916 Leeds Drive
+<BR>Pasadena, MD 21122
+<BR>SSN / ITIN: xxx-xx-2462<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Raymond E. DiBiagio, Jr.</B>
+<BR>45 Old Solomons Island Road
+<BR>Suite 203
+<BR>Annapolis, MD 21401
+<BR>(410) 974-6903<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>Janet Louise Wynne</B>
+<BR>7916 Leeds Drive
+<BR>Pasadena, MD 21122
+<BR>SSN / ITIN: xxx-xx-2109<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Raymond E. DiBiagio, Jr.</B>
+<BR>(See above for address)<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Trustee</B></I><BR><B>Ellen W. Cosby</B>
+<BR>P. O. Box 20016
+<BR>Baltimore, MD 21284-0016
+<BR>(410) 825-5923
+<BR>Fax  : (410) 825-5904
+<BR>Email: <a href='mailto:ECF@ch13balt.com'>ECF@ch13balt.com</a>
+<BR><I>TERMINATED: 07/31/1998</I><BR><BR>	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+<TD valign="top" WIDTH="40%" NOWRAP>
+  	                    <font size="+0">&nbsp;</font></TD></TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Trustee</B></I><BR><B>Charles R. Goldstein</B>
+<BR>Protiviti Inc.
+<BR>1 East Pratt Street
+<BR>Suite 800
+<BR>Baltimore, MD 21202
+<BR>(410) 454-6830
+<BR>Fax  : (410) 454-6801
+<BR>Email: <a href='mailto:md-bank@protiviti.com'>md-bank@protiviti.com</a>	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+	<TD VALIGN=top WIDTH="40%"><FONT SIZE="+0">&nbsp;	</FONT></TD>
+</TR></TABLE><BR><TABLE BORDER=1 CELLPADDING=10 CELLSPACING=0><TR><TH width="94" nowrap>Filing Date</TH>
+<TH colspan=2 align='center'>#</TH><TH align=center>Docket Text</TH></TR>
+<TR><TD width="94" nowrap valign=bottom>05/03/2002</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Case Closed. (bdillow) (Entered: 05/03/2002)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>08/24/2001</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>24</TD><TD valign=bottom>  Trustee&#039;s Report of No Assets. (kkirby) (Entered: 08/27/2001)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>03/30/2000</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>23</TD><TD valign=bottom>  Order Granting [22-1] Motion To Reopen Case to Administer Additional Assets of the Esatate by Charles R. Goldstein . (jjohnson) (Entered: 03/30/2000)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>11/03/1999</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>22</TD><TD valign=bottom>  Motion By Trustee Charles R. Goldstein  To Reopen Case  . (jjohnson) (Entered: 11/04/1999)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>08/28/1999</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>21</TD><TD valign=bottom>  Courts BNC Certificate of Service Re: [20-1] Final Decree and Case Closed .  &#035; of Notices: 5 were sent out. (adkt) (Entered: 08/31/1999)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>08/26/1999</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>20</TD><TD valign=bottom>  Final Decree and Case Closed. (formeremployee) (Entered: 08/26/1999)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>06/24/1999</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>19</TD><TD valign=bottom>  Courts BNC Certificate of Service Re: [18-1] Discharge Order  by Craig Allen Wynne, Janet Louise Wynne .  &#035; of Notices: 41 were sent out. (adkt) (Entered: 06/25/1999)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>06/22/1999</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>18</TD><TD valign=bottom>  Order Discharging Debtor Janet Louise Wynne, Debtor Craig Allen Wynne (ckearney) (Entered: 06/22/1999)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>05/03/1999</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>17</TD><TD valign=bottom>  First Meeting Held and Trustee&#039;s Report of No Assets Filed. (ckearney) (Entered: 05/04/1999)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>01/15/1999</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>16</TD><TD valign=bottom>  Reaffirmation Agreement Between Debtors And Travelers Home Mortgage with Declaration of Counsel. (jjohnson) (Entered: 01/21/1999)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>11/16/1998</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>15</TD><TD valign=bottom>  Notice of Appearance And Request For Service Of Notice By Eric S. Wellens for Creditor Anne Arundel County, Maryland. (ckearney) (Entered: 11/18/1998)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>10/16/1998</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Update Deadline; Last Day for Objections to Discharge on 1/8/99 (ckearney) (Entered: 10/16/1998)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>10/16/1998</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>13</TD><TD valign=bottom>  Order Granting [12-1] Consent Motion To Extend Deadline To File Complaints Objecting To Discharge by Craig Allen Wynne, Janet Louise Wynne. Time Extended Through And Including 1/8/99. (ckearney) (Entered: 10/16/1998)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>10/15/1998</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>14</TD><TD valign=bottom>  Trustee&#039;s Final Report and Account. (ckearney) (Entered: 10/16/1998)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>10/15/1998</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>12</TD><TD valign=bottom>  Consent Motion By Debtor Janet Louise Wynne, Debtor Craig Allen Wynne With Agreement of Trustee To Extend Deadline To File Complaints Objecting To Discharge  . (ckearney) (Entered: 10/16/1998)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>10/09/1998</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>11</TD><TD valign=bottom>  First Meeting of Creditors Rescheduled, Filed by Raymond E. Dibiagio for Debtor Janet Louise Wynne, Debtor Craig Allen Wynne; First Meeting Reset to 8:50 10/29/98 at Crtrm 9-C, Baltimore (ckearney) (Entered: 10/15/1998)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>10/05/1998</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>10</TD><TD valign=bottom>  Certificate Of Service By Raymond E. Dibiagio for Debtor Janet Louise Wynne, Debtor Craig Allen Wynne  Re: [9-1] Schedules, [8-1] Financial Affairs Statement . (ckearney) (Entered: 10/06/1998)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>10/05/1998</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>9</TD><TD valign=bottom>  Schedules A Through J, Summary of Schedules and Statement of Intention. (ckearney) (Entered: 10/06/1998)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>10/05/1998</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>8</TD><TD valign=bottom>  Statement of Financial Affairs. (ckearney) (Entered: 10/06/1998)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>08/13/1998</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>7</TD><TD valign=bottom>  Courts BNC Certificate of Service Re: [0-0] First Meeting . &#035; of Notices: 37 were sent out. (adkt) (Entered: 08/14/1998)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>08/11/1998</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  First Meeting of Creditors Scheduled For 11:10 9/9/98 At 300 W Pratt, &#035;375 Baltimore MD Last Day To Oppose Discharge: 11/8/98 (formeremployee) (Entered: 08/11/1998)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>07/31/1998</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>6</TD><TD valign=bottom>  Order Converted Chapater 13 Case To Chapter 7 Case On Debtor(s) Request Granting [4-1] Motion To Convert Case From Chapter 13 to Chapter 7 by Craig Allen Wynne, Janet Louise Wynne Trustee Ellen W. Cosby terminated. (ckearney) (Entered: 07/31/1998)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>07/24/1998</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>5</TD><TD valign=bottom>  Certificate Of Service By  Trustee Ellen W. Cosby Re: [3-1] First Meeting . (formeremployee) (Entered: 07/29/1998)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>07/22/1998</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Conversion Filing Fee Paid [ Amount &#036; 15.00,  Receipt &#035; 339252] re: [4-1] Motion To Convert Case From Chapter 13 to Chapter 7 by Craig Allen Wynne, Janet Louise Wynne (jjohnson) (Entered: 07/24/1998)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>07/22/1998</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>4</TD><TD valign=bottom>  Motion by Debtor Janet Louise Wynne, Debtor Craig Allen Wynne  To Convert Case From Chapter 13 to Chapter 7 (jjohnson) (Entered: 07/24/1998)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>07/17/1998</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>3</TD><TD valign=bottom>  First Meeting of Creditors Scheduled For 10:30 8/5/98 At 300 W Pratt, &#035;375 Baltimore MD Confirmation Hearing Set For 2:15 10/15/98 At Crtrm 9-C, Baltimore ;Last Day to File Proofs Of Claim: 11/3/98 (formeremployee) (Entered: 07/21/1998)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>06/26/1998</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>2</TD><TD valign=bottom>  Disclosure of Compensation By Attorney For Debtor (formeremployee) (Entered: 06/29/1998)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>06/26/1998</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>1</TD><TD valign=bottom>  Voluntary Petition missing documents: Statement of Financial Affairs Schedules A - J Chapter 13 Plan Due on 7/11/98 ;  ( Filing Fee &#036; 160.00 Receipt &#035; 337749) (formeremployee) (Entered: 06/29/1998)</TD></TR>
+</TABLE><BR><BR><BR><BR><HR><CENTER><TABLE BORDER=1 BGCOLOR=white width="400"><TR><TH COLSPAN=4><FONT SIZE=+1 COLOR=DARKRED>PACER Service Center </FONT></TH></TR><TR><TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH></TR><TR></TR><TR></TR><TR><TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1 COLOR=DARKBLUE>02/17/2010 11:27:04</FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> [LOGIN REMOVED] </FONT></TH></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE>                                  </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Docket Report </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search Criteria: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 98-59143 Fil or Ent: filed From: 1/1/1990 To: 2/17/2010 Doc From: 0 Doc To: 99999999 Term: included    Format: html </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Billable Pages: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 2 </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.16 </FONT></TD></TR><TR></TR><TR></TR></TABLE></CENTER></HR></div></body></html>

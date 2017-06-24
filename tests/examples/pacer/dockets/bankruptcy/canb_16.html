@@ -1,0 +1,99 @@
+<html><head><title>CANB Live Database</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script></head><body BGCOLOR=FFFFCC TEXT=000000 onLoad='SetFocus()'><div class="noprint"><img id="cmecfLogo" class="cmecfLogo" src="/graphics/cmecf-logo.gif" alt="CM/ECF" title=""  /><img src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage" id="helpImage" onClick="CMECF.MainMenu.showHelpPage(''); return false" onMouseOver="CMECF.MainMenu.helpImageOn()" onMouseOut="CMECF.MainMenu.helpImageOff()" /><div id="topmenu" class="yuimenubar"><div class="bd"><ul class="first-of-type"><li class="yuimenubaritem" style="width:9%"><a href='/cgi-bin/iquery.pl'>Q</u>uery</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Reports'>R</u>eports</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Utilities'>U</u>tilities</a></li><li class="yuimenubaritem" style="width:10%"><a href='/cgi-bin/login.pl?logout'>Logout</a></li></ul></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.renderSimpleMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.renderSimpleMenu);}</script><div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript"> 
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;				
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+<SCRIPT language="JavaScript">function Set_Cookie( name, value, expires, path, domain, secure ) {
+                var today = new Date();
+                today.setTime( today.getTime() );
+                if ( expires )
+                {
+                        expires = expires * 1000 * 60 * 60 * 24;
+                }
+                var expires_date = new Date( today.getTime() + (expires) );
+
+                document.cookie = name + "=" +escape( value ) +
+                ( ( expires ) ? ";expires=" + expires_date.toGMTString() : "" ) +
+                ( ( path ) ? ";path=" + path : "" ) +
+                ( ( domain ) ? ";domain=" + domain : "" ) +
+                ( ( secure ) ? ";secure" : "" );
+                }
+                function Get_Cookie( name ) {
+                var start = document.cookie.indexOf( name + "=" );
+                var len = start + name.length + 1;
+                if ( ( !start ) &&
+                ( name != document.cookie.substring( 0, name.length ) ) )
+                {
+                return null;
+                }
+                if ( start == -1 ) return null;
+                var end = document.cookie.indexOf( ";", len );
+                if ( end == -1 ) end = document.cookie.length;
+                return unescape( document.cookie.substring( len, end ) );
+                }
+                function Delete_Cookie( name, path, domain ) {
+                if ( Get_Cookie( name ) ) document.cookie = name + "=" +
+                ( ( path ) ? ";path=" + path : "") +
+                ( ( domain ) ? ";domain=" + domain : "" ) +
+                ";expires=Thu, 01-Jan-1970 00:00:01 GMT";
+                }
+                </SCRIPT><TABLE width="100%" align=right BORDER=0 CELLSPACING=5><TR><TD ALIGN=right><h2> <FONT SIZE="3">DebtEd, MEANSU</FONT></h2></TD></TR></TABLE><BR><BR><BR><CENTER><B><FONT SIZE="+1">U.S. Bankruptcy Court<BR>Northern District of California (San Francisco)<BR>Bankruptcy Petition #: 10-30514</FONT></B></CENTER><TABLE width="100%" BORDER=0 CELLSPACING=1><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><BR><I>Assigned to:</I>      Judge Dennis Montali<BR>Chapter          7<BR>Voluntary<BR>No asset <A HREF=/cgi-bin/DktRpt.pl?-</A> <br><div class="noprint"><A HREF='/cgi-bin/qryAscCases.pl?398011'>Show Associated Cases</A></div> <BR><BR>	</FONT></TD>
+	<TD VALIGN=top WIDTH="50%" ALIGN=right><FONT SIZE="+0"><TABLE border=0 cellspacing=0 cellpadding=0 align=center><TR><td align="right" valign="top"><I>Date filed:</I></td><td align="left" valign="top">&nbsp;&nbsp;02/16/2010</td></TR></TABLE>	</FONT></TD>
+</TR>
+</TABLE><BR><FONT SIZE="5"><B></B>
+		</FONT><TABLE width="100%" BORDER=0 CELLSPACING=1><TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>Ana C. Reyes</B>
+<BR>529 Second Lane
+<BR>South San Francisco, CA 94080
+<BR>(650) 594-2364
+<BR>SSN / ITIN: xxx-xx-7993<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Ana C. Reyes</B>
+<BR>PRO SE<BR>
+<BR><B></B><BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Trustee</B></I><BR><B>E. Lynn Schoenmann</B>
+<BR>800 Powell Street
+<BR>San Francisco, CA 94108
+<BR>415-362-0415<BR><BR>	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+<TD valign="top" WIDTH="40%" NOWRAP>
+  	                    <font size="+0">&nbsp;</font></TD></TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>U.S. Trustee</B></I><BR><B>Office of the U.S. Trustee / SF</B>
+<BR>Office of the U.S. Trustee
+<BR>235 Pine St
+<BR>Suite 700
+<BR>San Francisco, CA 94104
+<BR>(415) 705-3333	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+	<TD VALIGN=top WIDTH="40%"><FONT SIZE="+0">&nbsp;	</FONT></TD>
+ <script src="/lib/CommonLib.js" language="Javascript"></script><SCRIPT LANGUAGE="JavaScript">Set_Cookie( 'pdf_header', 1, '', '/', '', '' );</SCRIPT>
+</TR></TABLE><BR><TABLE BORDER=1 CELLPADDING=10 CELLSPACING=0><TR><TH width="94" nowrap>Filing Date</TH>
+<TH colspan=2 align='center'>#</TH><TH align=center>Docket Text</TH></TR>
+<TR><TD width="94" nowrap valign=bottom>02/16/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013448078' id='documentKcaseidV398011Kde_seq_numV2Kdm_idV13229819Kdoc_numV1Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>1</a><SCRIPT>DocLink('documentKcaseidV398011Kde_seq_numV2Kdm_idV13229819Kdoc_numV1Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  Chapter 7 Voluntary Petition.  Fee Amount &#036;299.  Financial Management Certificate Due Prior to Discharge.  Filed by  Ana C. Reyes . Incomplete Filings due by 3/2/2010. Section 521 Filings due by 4/2/2010. Order Meeting of Creditors due by 3/2/2010.   (ia) (Entered: 02/16/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/16/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  First Meeting of Creditors with 341(a) meeting to be held on 03/24/2010 at 01:30 PM at San Francisco U.S. Trustee Office.  Objections for Discharge due by 05/24/2010.      (ia) (Entered: 02/16/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/16/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/cgi-bin/show_doc.pl?caseid=398011&de_seq_num=11&dm_id=13229946&doc_num=2&pdf_header=1' id='documentKcaseidV398011Kde_seq_numV11Kdm_idV13229946Kdoc_numV2Kpdf_headerV1'>2</a><script>DocLink('documentKcaseidV398011Kde_seq_numV11Kdm_idV13229946Kdoc_numV2Kpdf_headerV1');</script></TD><TD valign=bottom>  Statement of Social Security Number.  Filed by Debtor Ana C. Reyes    (ia) (Entered: 02/16/2010)</TD></TR>
+</TABLE><BR><BR><BR><BR><HR><CENTER><TABLE BORDER=1 BGCOLOR=white width="400"><TR><TH COLSPAN=4><FONT SIZE=+1 COLOR=DARKRED>PACER Service Center </FONT></TH></TR><TR><TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH></TR><TR></TR><TR></TR><TR><TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1 COLOR=DARKBLUE>02/16/2010 12:43:29</FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> [LOGIN REMOVED] </FONT></TH></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE>                                  </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Docket Report </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search Criteria: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 10-30514 Fil or Ent: filed   Doc From: 0 Doc To: 99999999 Term: included  Headers: included  Format: html </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Billable Pages: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 1 </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.08 </FONT></TD></TR><TR></TR><TR></TR></TABLE></CENTER></HR></div></body></html>

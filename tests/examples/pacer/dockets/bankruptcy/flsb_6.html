@@ -1,0 +1,120 @@
+<html><head><title>CM/ECF LIVE - U.S. Bankruptcy Court:flsb</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script></head><body BGCOLOR=FFFFFF TEXT=000000 onLoad='SetFocus()'><div class="noprint"><img id="cmecfLogo" class="cmecfLogo" src="/graphics/cmecf-logo.gif" alt="CM/ECF" title=""  /><img src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage" id="helpImage" onClick="CMECF.MainMenu.showHelpPage(''); return false" onMouseOver="CMECF.MainMenu.helpImageOn()" onMouseOut="CMECF.MainMenu.helpImageOff()" /><div id="topmenu" class="yuimenubar"><div class="bd"><ul class="first-of-type"><li class="yuimenubaritem" style="width:9%"><a class="yuimenubaritemlabel" href='/cgi-bin/iquery.pl'>Q</u>uery</a></li><li class="yuimenubaritem" style="width:11%"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Reports&id=-1'>R</u>eports</a></li><li class="yuimenubaritem" style="width:11%"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Utilities&id=-1'>U</u>tilities</a></li><li class="yuimenubaritem" style="width:10%"><a class="yuimenubaritemlabel" href='/cgi-bin/login.pl?logout'>Logout</a></li></ul></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(function(){ CMECF.MainMenu.renderSimpleMenu(); }, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.renderSimpleMenu);}</script><div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript"> 
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;				
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+<script type='text/JavaScript'>
+document.cookie="PDFNoHeaderReferer=660312008608024; path=/";
+</script>
+		<script type="text/javascript" src="/lib/widgits.js"></script>
+		<script>
+		var debtorPanel = null;
+
+		function create_panel(clid, message) {
+		    if (!debtorPanel) {
+		        debtorPanel = new CMECF.widget.Panel('debtorPanel', {
+				close:true,
+				draggable:false,
+				context:[clid, 'tl', 'br'],
+				width: "250" + "px",
+				height: "110" + "px",
+				constraintoviewport:true
+			});
+			debtorPanel.setHeader("Barred Debtor Information");
+			debtorPanel.setBody(message);
+			debtorPanel.body.style.height = "8em";
+			debtorPanel.render(document.body);
+		    } else {
+		        debtorPanel.show();
+		    }
+		}
+
+		function close_panel() {
+		    if (debtorPanel) {
+		        debtorPanel.destroy();
+		        debtorPanel = null;
+		    }
+		}
+		</script>
+		<TABLE width="100%" align=right BORDER=0 CELLSPACING=5><TR><TD ALIGN=right><h2> <FONT SIZE="3">CLOSED</FONT></h2></TD></TR></TABLE><BR><BR><BR><CENTER><B><FONT SIZE="+1">U.S. Bankruptcy Court<BR>Southern District of Florida (Fort Lauderdale)<BR>Bankruptcy Petition #: 11-45634-RBR</FONT></B></CENTER><TABLE width="100%" BORDER=0 CELLSPACING=1><TR>	<TD VALIGN=top nowrap="true"  WIDTH="50%"><FONT SIZE="+0"><BR><I>Assigned to:</I>       Raymond B Ray<BR>Chapter          7<BR>Voluntary<BR>No asset<BR><BR><BR><I>Debtor disposition:</I>&nbsp;&nbsp;Standard Discharge	</FONT></TD>
+	<TD VALIGN=top nowrap="true"  WIDTH="50%" ALIGN=right><FONT SIZE="+0"><TABLE border=0 cellspacing=0 cellpadding=0 align=center><TR><td align="right" valign="top"><I>Date filed:</I></td><td align="left" valign="top">&nbsp;&nbsp;12/30/2011</td></TR><TR><td align="right" valign="top"><I>Date terminated:</I></td><td align="left" valign="top">&nbsp;&nbsp;04/12/2012</td></TR><TR><td align="right" valign="top"><I>Debtor discharged:</I></td><td align="left" valign="top">&nbsp;&nbsp;04/09/2012</td></TR></TABLE>	</FONT></TD>
+</TR>
+</TABLE><BR><FONT SIZE="5"><B></B>
+		</FONT><TABLE width="100%" BORDER=0 CELLSPACING=1><TR><TR>	<TD VALIGN=top nowrap="true"  WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>Lucile Andersen</B>
+<BR>8060 NW 15 Mnr
+<BR>Plantation, FL 33322
+<BR>BROWARD-FL
+<BR>SSN / ITIN: xxx-xx-1069<BR><I><B>aka </B></I><B>Lucile Hofheins Andersen</B><BR><I><B>aka </B></I><B>Lucille Andersen</B><BR><BR>	</FONT></TD>
+	<TD VALIGN=top nowrap="true"  ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>John D. Segaul</B>
+<BR>8751 West Broward Blvd &#035;404
+<BR>Plantation, FL 33324
+<BR>954-424-3600
+<BR>Email:&nbsp;<a href='mailto:jsegaul@segaulstoll.com'>jsegaul@segaulstoll.com</a><BR><BR></font></TD><TR>	<TD VALIGN=top nowrap="true"  WIDTH="50%"><FONT SIZE="+0"><I><B>Trustee</B></I><BR><B>Sonya Salkin</B>
+<BR>1776 N Pine Island Rd &#035; 218
+<BR>Plantation, FL 33322
+<BR>954-423-4469<BR><BR>	</FONT></TD>
+	<TD VALIGN=top nowrap="true"  WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+<TD valign="top" WIDTH="40%" NOWRAP>
+  	                    <font size="+0">&nbsp;</font></TD></TR><TR>	<TD VALIGN=top nowrap="true"  WIDTH="50%"><FONT SIZE="+0"><I><B>U.S. Trustee</B></I><BR><B>Office of the US Trustee</B>
+<BR>51 S.W. 1st Ave.
+<BR>Suite 1204
+<BR>Miami, FL 33130
+<BR>(305) 536-7285	</FONT></TD>
+	<TD VALIGN=top nowrap="true"  WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+	<TD VALIGN=top nowrap="true"  WIDTH="40%"><FONT SIZE="+0">&nbsp;	</FONT></TD>
+</TR></TABLE><BR><TABLE BORDER=1 CELLPADDING=10 CELLSPACING=0><TR><TH width='94' nowrap>Filing Date</TH>
+<TH colspan=2 align='center'>#</TH><TH align=center>Docket Text</TH></TR>
+<TR><TD width="94" nowrap valign=bottom>12/30/2011</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,2"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/doc1/050020328570' onContextMenu='this.href="https://ecf.flsb.uscourts.gov/doc1/050020328570"'>1</a></nobr></TD><TD valign=bottom>  Chapter 7 Voluntary Petition <i></i>. [Fee Amount &#036;306] (Segaul, John) (Entered: 12/30/2011)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>12/30/2011</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,10"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</nobr></TD><TD valign=bottom>  Receipt of Voluntary Petition (Chapter 7)(11-45634) [misc,volp7a] ( 306.00) Filing Fee. Receipt number 12549155. Fee amount 306.00. (U.S. Treasury) (Entered: 12/30/2011)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>12/30/2011</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,14"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/doc1/050020347576' onContextMenu='this.href="https://ecf.flsb.uscourts.gov/doc1/050020347576"'>2</a></nobr></TD><TD valign=bottom>  Meeting of Creditors to be held on 02/06/2012 at 10:00 AM at 299 E Broward Blvd Room 411, Fort Lauderdale. Objections to Discharge/Dischargeability due by 04/06/2012. (Segaul, John) (Entered: 12/30/2011)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>12/30/2011</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,16"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/doc1/050020328599' onContextMenu='this.href="https://ecf.flsb.uscourts.gov/doc1/050020328599"'>3</a></nobr></TD><TD valign=bottom>  Certification of Budget and Credit Counseling Course by Debtor <i></i> Filed by Debtor Lucile Andersen. (Segaul, John) (Entered: 12/30/2011)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>12/30/2011</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,18"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/doc1/050020328648' onContextMenu='this.href="https://ecf.flsb.uscourts.gov/doc1/050020328648"'>4</a></nobr></TD><TD valign=bottom>  Payment Advices by Debtor <i></i> Filed by Debtor Lucile Andersen. (^Segaul1, John) (Entered: 12/30/2011)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>12/30/2011</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,20"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/doc1/050020328657' onContextMenu='this.href="https://ecf.flsb.uscourts.gov/doc1/050020328657"'>5</a></nobr></TD><TD valign=bottom>  Statement of Debtor(s) Social Security Number(s) <font color=red>[<I>Document Image Available ONLY to Court Users</I>]</font> Filed by Debtor Lucile Andersen. (^Segaul1, John) (Entered: 12/30/2011)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>12/30/2011</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,22"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/doc1/050020328669' onContextMenu='this.href="https://ecf.flsb.uscourts.gov/doc1/050020328669"'>6</a></nobr></TD><TD valign=bottom>  Statement of Current Monthly Income and Means Test Calculation <i></i> Filed by Debtor Lucile Andersen. (^Segaul1, John) (Entered: 12/30/2011)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>12/30/2011</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,24"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/doc1/050020328682' onContextMenu='this.href="https://ecf.flsb.uscourts.gov/doc1/050020328682"'>7</a></nobr></TD><TD valign=bottom>  <i></i> Disclosure of Compensation <i></i> by Attorney. (^Segaul1, John) (Entered: 12/30/2011)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>12/30/2011</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,26"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/doc1/050020328703' onContextMenu='this.href="https://ecf.flsb.uscourts.gov/doc1/050020328703"'>8</a></nobr></TD><TD valign=bottom>  Declaration Under Penalty of Perjury to Accompany Petitions, Schedules and Statements Filed Electronically by Attorney (Re: <a href='https://ecf.flsb.uscourts.gov/doc1/050020328570'>1</a> Voluntary Petition (Chapter 7) filed by Debtor Lucile Andersen, <a href='https://ecf.flsb.uscourts.gov/doc1/050020328657'>5</a> Statement of Debtor(s) Social Security Number(s) filed by Debtor Lucile Andersen, <a href='https://ecf.flsb.uscourts.gov/doc1/050020328669'>6</a> Statement of Current Monthly Income and Means Test Calculation filed by Debtor Lucile Andersen). (^Segaul1, John) (Entered: 12/30/2011)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>01/04/2012</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,33"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/doc1/050020360593' onContextMenu='this.href="https://ecf.flsb.uscourts.gov/doc1/050020360593"'>9</a></nobr></TD><TD valign=bottom>  Payment Advices by Debtor <i>Amended</i> Filed by Debtor Lucile Andersen. (^Segaul1, John) (Entered: 01/04/2012)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>01/05/2012</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,35"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/doc1/050020385628' onContextMenu='this.href="https://ecf.flsb.uscourts.gov/doc1/050020385628"'>10</a></nobr></TD><TD valign=bottom>  BNC Certificate of Mailing (Re: <a href='https://ecf.flsb.uscourts.gov/doc1/050020347576'>2</a> Meeting of Creditors to be held on 02/06/2012 at 10:00 AM at 299 E Broward Blvd Room 411, Fort Lauderdale. Objections to Discharge/Dischargeability due by 04/06/2012.) Notice Date 01/05/2012. (Admin.) (Entered: 01/06/2012)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>01/11/2012</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,38"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/doc1/050020450373' onContextMenu='this.href="https://ecf.flsb.uscourts.gov/doc1/050020450373"'>11</a></nobr></TD><TD valign=bottom>  Amended Summary of Schedules,Schedule B, <i></i> Filed by Debtor Lucile Andersen. (Attachments: # <a href='https://ecf.flsb.uscourts.gov/doc1/050120450374' onClick="goDLS('/doc1/050120450374','575106','38','','0','','','','','');return(false)">1</a> Local Form 4) (^Segaul1, John) (Entered: 01/11/2012)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>01/11/2012</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,40"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/doc1/050020450387' onContextMenu='this.href="https://ecf.flsb.uscourts.gov/doc1/050020450387"'>12</a></nobr></TD><TD valign=bottom>  Declaration Under Penalty of Perjury to Accompany Petitions, Schedules and Statements Filed Electronically by Attorney (Re: <a href='https://ecf.flsb.uscourts.gov/doc1/050020450373'>11</a> Amended Schedules filed by Debtor Lucile Andersen). (^Segaul1, John) (Entered: 01/11/2012)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/06/2012</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,43"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/doc1/050020756052' onContextMenu='this.href="https://ecf.flsb.uscourts.gov/doc1/050020756052"'>13</a></nobr></TD><TD valign=bottom>  Certification of Completion of Instructional Course Concerning Personal Financial Management by Debtor ONLY <i></i> Filed by Debtor Lucile Andersen. (^Segaul1, John) (Entered: 02/06/2012)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/07/2012</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,45"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>14</nobr></TD><TD valign=bottom>  The information required by 11 U.S.C. Sec. 521(a)(1) as provided by the debtor(s) in this case is complete to the satisfaction of the trustee. No creditor or other party in interest has filed a request for an order of dismissal pursuant to 11 U.S.C. Sec. 521(i)(2) and the trustee does not believe that this case is subject to automatic dismissal pursuant to 11 U.S.C. Sec. 521(i). (Salkin, Sonya) (Entered: 02/07/2012)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/08/2012</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,47"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/doc1/050020780510' onContextMenu='this.href="https://ecf.flsb.uscourts.gov/doc1/050020780510"'>15</a></nobr></TD><TD valign=bottom>  Order Determining Debtor&#039;s Compliance with Filing Requirements of Section 521(a)(1). Deadline for any creditor or other party in interest to contest the court&#039;s finding shall file an objection not later than 21 days from the date of entry of this order . (Graster-Thomas, Tanesha) (Entered: 02/08/2012)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/08/2012</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,49"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>16</nobr></TD><TD valign=bottom>  Meeting of Creditors Held and Concluded. Chapter 7 Trustee's Report of No Distribution: I, Sonya Salkin, having been appointed trustee of the estate of the above-named debtor(s), report that I have neither received any property nor paid any money on account of this estate; that I have made diligent inquiry into the financial affairs of the debtor(s) and the location of the property belonging to the estate; and that there is no property available for distribution from the estate over and above that exempted by law. Pursuant to Fed R Bank P 5009, I hereby certify that the estate of the above named debtor(s) has been fully administered. I request that I be discharged from any further duties as trustee. Key information about this case as reported in schedules filed by the debtor(s) or otherwise found in the case record: This case was pending for 1 months. Assets Abandoned (without deducting any secured claims): &#036;1625.00, Assets Exempt: &#036;35417.70, Claims Scheduled: &#036;324844.34, Claims Asserted: Not Applicable, Claims scheduled to be discharged without payment (without deducting the value of collateral or debts excepted from discharge): &#036;324844.34. (Salkin, Sonya) (Entered: 02/08/2012)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/10/2012</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,51"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/doc1/050020827837' onContextMenu='this.href="https://ecf.flsb.uscourts.gov/doc1/050020827837"'>17</a></nobr></TD><TD valign=bottom>  BNC Certificate of Mailing (Re: <a href='https://ecf.flsb.uscourts.gov/doc1/050020780510'>15</a> Order Determining Debtor&#039;s Compliance with Filing Requirements of Section 521) Notice Date 02/10/2012. (Admin.) (Entered: 02/11/2012)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>04/09/2012</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,54"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/doc1/050021507319' onContextMenu='this.href="https://ecf.flsb.uscourts.gov/doc1/050021507319"'>18</a></nobr></TD><TD valign=bottom>  Order Discharging Debtor(s)  (Admin.) (Entered: 04/09/2012)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>04/11/2012</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,58"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/doc1/050021545681' onContextMenu='this.href="https://ecf.flsb.uscourts.gov/doc1/050021545681"'>19</a></nobr></TD><TD valign=bottom>  BNC Certificate of Mailing - Order of Discharge (Re: <a href='https://ecf.flsb.uscourts.gov/doc1/050021507319'>18</a> Order Discharging Debtor) Notice Date 04/11/2012. (Admin.) (Entered: 04/12/2012)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>04/12/2012</TD><TD width=74 valign=bottom align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>   <a href="/cgi-bin/DisplayReceipt.pl?575106,61"><img src="/graphics/silverball.gif" width=14 height=14 border=0></a> </TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/doc1/050021547711' onContextMenu='this.href="https://ecf.flsb.uscourts.gov/doc1/050021547711"'>20</a></nobr></TD><TD valign=bottom>  Final Decree and Discharge of Trustee. Bankruptcy Case Closed.  (Admin.) (Entered: 04/12/2012)</TD></TR>
+</TABLE><BR><BR><BR><BR>
+			<script type='text/javascript'>
+				document.cookie = 'RECENT_CASES=' + "575106;";
+			</script>
+		<HR><CENTER><TABLE BORDER=1 BGCOLOR=white width="400"><TR><TH COLSPAN=4><FONT SIZE=+1 COLOR=DARKRED>PACER Service Center </FONT></TH></TR><TR><TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH></TR><TR></TR><TR></TR><TR><TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1 COLOR=DARKBLUE>04/04/2013 07:32:34</FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> ja3535 </FONT></TH></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE>  </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Docket Report </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search Criteria: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 11-45634-RBR Fil or Ent: filed   Doc From: 0 Doc To: 99999999 Term: included    Format: html </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Billable Pages: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 2 </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.20 </FONT></TD></TR><TR></TR><TR></TR></TABLE></CENTER></HR></div></body></html>

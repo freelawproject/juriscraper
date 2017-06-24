@@ -1,0 +1,106 @@
+<html><head><title>CANB Live Database</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script></head><body BGCOLOR=FFFFCC TEXT=000000 onLoad='SetFocus()'><div class="noprint"><img id="cmecfLogo" class="cmecfLogo" src="/graphics/cmecf-logo.gif" alt="CM/ECF" title=""  /><img src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage" id="helpImage" onClick="CMECF.MainMenu.showHelpPage(''); return false" onMouseOver="CMECF.MainMenu.helpImageOn()" onMouseOut="CMECF.MainMenu.helpImageOff()" /><div id="topmenu" class="yuimenubar"><div class="bd"><ul class="first-of-type"><li class="yuimenubaritem" style="width:9%"><a href='/cgi-bin/iquery.pl'>Q</u>uery</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Reports'>R</u>eports</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Utilities'>U</u>tilities</a></li><li class="yuimenubaritem" style="width:10%"><a href='/cgi-bin/login.pl?logout'>Logout</a></li></ul></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.renderSimpleMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.renderSimpleMenu);}</script><div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript"> 
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;				
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+<SCRIPT language="JavaScript">function Set_Cookie( name, value, expires, path, domain, secure ) {
+                var today = new Date();
+                today.setTime( today.getTime() );
+                if ( expires )
+                {
+                        expires = expires * 1000 * 60 * 60 * 24;
+                }
+                var expires_date = new Date( today.getTime() + (expires) );
+
+                document.cookie = name + "=" +escape( value ) +
+                ( ( expires ) ? ";expires=" + expires_date.toGMTString() : "" ) +
+                ( ( path ) ? ";path=" + path : "" ) +
+                ( ( domain ) ? ";domain=" + domain : "" ) +
+                ( ( secure ) ? ";secure" : "" );
+                }
+                function Get_Cookie( name ) {
+                var start = document.cookie.indexOf( name + "=" );
+                var len = start + name.length + 1;
+                if ( ( !start ) &&
+                ( name != document.cookie.substring( 0, name.length ) ) )
+                {
+                return null;
+                }
+                if ( start == -1 ) return null;
+                var end = document.cookie.indexOf( ";", len );
+                if ( end == -1 ) end = document.cookie.length;
+                return unescape( document.cookie.substring( len, end ) );
+                }
+                function Delete_Cookie( name, path, domain ) {
+                if ( Get_Cookie( name ) ) document.cookie = name + "=" +
+                ( ( path ) ? ";path=" + path : "") +
+                ( ( domain ) ? ";domain=" + domain : "" ) +
+                ";expires=Thu, 01-Jan-1970 00:00:01 GMT";
+                }
+                </SCRIPT><TABLE width="100%" align=right BORDER=0 CELLSPACING=5><TR><TD ALIGN=right><h2> <FONT SIZE="3">PlnDue, DebtEd, DISMISSED</FONT></h2></TD></TR></TABLE><BR><BR><BR><CENTER><B><FONT SIZE="+1">U.S. Bankruptcy Court<BR>Northern District of California (San Jose)<BR>Bankruptcy Petition #: 10-50303</FONT></B></CENTER><TABLE width="100%" BORDER=0 CELLSPACING=1><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><BR><I>Assigned to:</I>      Judge Arthur S. Weissbrodt<BR>Chapter          13<BR>Voluntary<BR>Asset <A HREF=/cgi-bin/DktRpt.pl?-</A> <br><div class="noprint"><A HREF='/cgi-bin/qryAscCases.pl?394704'>Show Associated Cases</A></div> <BR><BR>	</FONT></TD>
+	<TD VALIGN=top WIDTH="50%" ALIGN=right><FONT SIZE="+0"><TABLE border=0 cellspacing=0 cellpadding=0 align=center><TR><td align="right" valign="top"><I>Date filed:</I></td><td align="left" valign="top">&nbsp;&nbsp;01/14/2010</td></TR><TR><td align="right" valign="top"><I>Debtor dismissed:</I></td><td align="left" valign="top">&nbsp;&nbsp;02/01/2010</td></TR></TABLE>	</FONT></TD>
+</TR>
+</TABLE><BR><FONT SIZE="5"><B></B>
+		</FONT><TABLE width="100%" BORDER=0 CELLSPACING=1><TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>Deissy Gonzalez</B>
+<BR>2786 Wilkey Ct.
+<BR>San Jose, CA 95127
+<BR>SSN / ITIN: xxx-xx-0332<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Deissy Gonzalez</B>
+<BR>PRO SE<BR>
+<BR><B></B><BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Trustee</B></I><BR><B>Devin Derham-Burk</B>
+<BR>P.O. Box 50013
+<BR>San Jose, CA 95150-0013
+<BR>(408) 354-8151<BR><BR>	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+<TD valign="top" WIDTH="40%" NOWRAP>
+  	                    <font size="+0">&nbsp;</font></TD></TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>U.S. Trustee</B></I><BR><B>Office of the U.S. Trustee / SJ</B>
+<BR>U.S. Federal Bldg.
+<BR>280 S 1st St. &#035;268
+<BR>San Jose, CA 95113-3004
+<BR>(   )	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+	<TD VALIGN=top WIDTH="40%"><FONT SIZE="+0">&nbsp;	</FONT></TD>
+ <script src="/lib/CommonLib.js" language="Javascript"></script><SCRIPT LANGUAGE="JavaScript">Set_Cookie( 'pdf_header', 1, '', '/', '', '' );</SCRIPT>
+</TR></TABLE><BR><TABLE BORDER=1 CELLPADDING=10 CELLSPACING=0><TR><TH width="94" nowrap>Filing Date</TH>
+<TH colspan=2 align='center'>#</TH><TH align=center>Docket Text</TH></TR>
+<TR><TD width="94" nowrap valign=bottom>01/14/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013073066' id='documentKcaseidV394704Kde_seq_numV2Kdm_idV12895739Kdoc_numV1Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>1</a><SCRIPT>DocLink('documentKcaseidV394704Kde_seq_numV2Kdm_idV12895739Kdoc_numV1Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  Chapter 13 Voluntary Petition, Fee Amount &#036;274.   Filed by  Deissy  Gonzalez .  Section 521 Filings due by 3/1/2010. Order Meeting of Creditors due by 2/16/2010. Chapter 13 Plan due by 1/28/2010.   (tp)Corrective entry: Corrected spelling of debtor&#039;s name in text. Modified on 1/14/2010 (tp). (Entered: 01/14/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>01/14/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/cgi-bin/show_doc.pl?caseid=394704&de_seq_num=9&dm_id=12896050&doc_num=2&pdf_header=1' id='documentKcaseidV394704Kde_seq_numV9Kdm_idV12896050Kdoc_numV2Kpdf_headerV1'>2</a><script>DocLink('documentKcaseidV394704Kde_seq_numV9Kdm_idV12896050Kdoc_numV2Kpdf_headerV1');</script></TD><TD valign=bottom>  Statement of Social Security Number.  Filed by Debtor Deissy  Gonzalez    (tp) (Entered: 01/14/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>01/14/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Receipt of Filing Fee for Chapter 13 Voluntary Petition. Amount 274.00 from Deissy Gonzalez. Receipt Number 50072797. (admin) (Entered: 01/14/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>01/15/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013086440' id='documentKcaseidV394704Kde_seq_numV13Kdm_idV12907968Kdoc_numV3Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>3</a><SCRIPT>DocLink('documentKcaseidV394704Kde_seq_numV13Kdm_idV12907968Kdoc_numV3Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  Order Providing for Dismissal for Failure to File Chapter 13 Plan .   (kn) (Entered: 01/15/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>01/15/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013086447' id='documentKcaseidV394704Kde_seq_numV15Kdm_idV12907974Kdoc_numV4Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>4</a><SCRIPT>DocLink('documentKcaseidV394704Kde_seq_numV15Kdm_idV12907974Kdoc_numV4Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  Order To File Required Documents and Notice Regarding Dismissal .   (kn) (Entered: 01/15/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>01/17/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013104746' id='documentKcaseidV394704Kde_seq_numV17Kdm_idV12924982Kdoc_numV5Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>5</a><SCRIPT>DocLink('documentKcaseidV394704Kde_seq_numV17Kdm_idV12924982Kdoc_numV5Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  BNC Certificate of Mailing (RE: related document(s) <a href='https://ecf.canb.uscourts.gov/doc1/034013086447' onClick="goDLS('/doc1/034013086447', '394704', '15', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">4</a>  Order to File Missing Documents).     Service Date 01/17/2010.  (Admin.) (Entered: 01/17/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>01/17/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013104747' id='documentKcaseidV394704Kde_seq_numV20Kdm_idV12924983Kdoc_numV6Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>6</a><SCRIPT>DocLink('documentKcaseidV394704Kde_seq_numV20Kdm_idV12924983Kdoc_numV6Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  BNC Certificate of Mailing (RE: related document(s) <a href='https://ecf.canb.uscourts.gov/doc1/034013086440' onClick="goDLS('/doc1/034013086440', '394704', '13', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">3</a>  Order Providing for Dismissal).     Service Date 01/17/2010.  (Admin.) (Entered: 01/17/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>01/27/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013221110' id='documentKcaseidV394704Kde_seq_numV23Kdm_idV13027889Kdoc_numV7Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>7</a><SCRIPT>DocLink('documentKcaseidV394704Kde_seq_numV23Kdm_idV13027889Kdoc_numV7Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  Meeting of Creditors with Certificate of Service.  341(a) meeting to be held on 3/4/2010 at 02:30 PM San Jose Room 130 Objection to Dischargeability due by 5/3/2010 Proofs of Claims due by 6/2/2010 Last day to object to confirmation is 3/4/2010<b>Confirmation Hearing to be held on 3/17/2010 at 02:30 PM San Jose Courtroom 3020 - Weissbrodt</b> (Derham-Burk, Devin (gc)) (Entered: 01/27/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>01/29/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013262102' id='documentKcaseidV394704Kde_seq_numV25Kdm_idV13065680Kdoc_numV8Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>8</a><SCRIPT>DocLink('documentKcaseidV394704Kde_seq_numV25Kdm_idV13065680Kdoc_numV8Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  BNC Certificate of Mailing - Meeting of Creditors. (RE: related document(s) <a href='https://ecf.canb.uscourts.gov/doc1/034013221110' onClick="goDLS('/doc1/034013221110', '394704', '23', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">7</a>  Meeting of Creditors Chapter 13).     Service Date 01/29/2010.  (Admin.) (Entered: 01/29/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>01/29/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013262103' id='documentKcaseidV394704Kde_seq_numV29Kdm_idV13065681Kdoc_numV9Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>9</a><SCRIPT>DocLink('documentKcaseidV394704Kde_seq_numV29Kdm_idV13065681Kdoc_numV9Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  BNC Certificate of Mailing - Chapter 13 Plan. (RE: related document(s) <a href='https://ecf.canb.uscourts.gov/doc1/034013221110' onClick="goDLS('/doc1/034013221110', '394704', '23', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">7</a>  Meeting of Creditors Chapter 13).     Service Date 01/29/2010.  (Admin.) (Entered: 01/29/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/01/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013280539' id='documentKcaseidV394704Kde_seq_numV32Kdm_idV13082599Kdoc_numV10Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>10</a><SCRIPT>DocLink('documentKcaseidV394704Kde_seq_numV32Kdm_idV13082599Kdoc_numV10Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  Order and Notice of Dismissal for Failure to Comply  (RE: related document(s) <a href='https://ecf.canb.uscourts.gov/doc1/034013086440' onClick="goDLS('/doc1/034013086440', '394704', '13', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">3</a>  Order Providing for Dismissal).   (clc) (Entered: 02/01/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/03/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/034013315856' id='documentKcaseidV394704Kde_seq_numV38Kdm_idV13112977Kdoc_numV11Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>11</a><SCRIPT>DocLink('documentKcaseidV394704Kde_seq_numV38Kdm_idV13112977Kdoc_numV11Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  BNC Certificate of Mailing - Order and Notice of Dismissal for Failure to Comply. (RE: related document(s) <a href='https://ecf.canb.uscourts.gov/doc1/034013280539' onClick="goDLS('/doc1/034013280539', '394704', '32', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">10</a>  Order and Notice of Dismissal for Failure to Comply).     Service Date 02/03/2010.  (Admin.) (Entered: 02/03/2010)</TD></TR>
+</TABLE><BR><BR><BR><BR><HR><CENTER><TABLE BORDER=1 BGCOLOR=white width="400"><TR><TH COLSPAN=4><FONT SIZE=+1 COLOR=DARKRED>PACER Service Center </FONT></TH></TR><TR><TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH></TR><TR></TR><TR></TR><TR><TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1 COLOR=DARKBLUE>02/16/2010 07:46:25</FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> [LOGIN REMOVED] </FONT></TH></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE>                                  </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Docket Report </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search Criteria: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 10-50303 Fil or Ent: filed   Doc From: 0 Doc To: 99999999 Term: included  Headers: included  Format: html </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Billable Pages: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 1 </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.08 </FONT></TD></TR><TR></TR><TR></TR></TABLE></CENTER></HR></div></body></html>

@@ -1,0 +1,77 @@
+<html><head><title>CM/ECF Live Database</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script></head><body BGCOLOR=FFFFFF TEXT=000000 onLoad='SetFocus()'><div class="noprint"><img id="cmecfLogo" class="cmecfLogo" src="/graphics/cmecf-logo.gif" alt="CM/ECF" title="" onClick="CMECF.MainMenu.showCourtInformation(); return false" /><img src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage" id="helpImage" onClick="CMECF.MainMenu.showHelpPage(''); return false" onMouseOver="CMECF.MainMenu.helpImageOn()" onMouseOut="CMECF.MainMenu.helpImageOff()" /><div id="topmenu" class="yuimenubar"><div class="bd"><ul class="first-of-type"><li class="yuimenubaritem" style="width:9%"><a href='/cgi-bin/iquery.pl'><u>Q</u>uery</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Reports'><u>R</u>eports</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Utilities'><u>U</u>tilities</a></li><li class="yuimenubaritem" style="width:10%"><a href='/cgi-bin/login.pl?logout'>Logout</a></li></ul></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.createMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);}</script><div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript"> 
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;				
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+<TABLE width="100%" align=right BORDER=0 CELLSPACING=5><TR><TD ALIGN=right><h2> <FONT SIZE="3">PlnDue, DsclsDue</FONT></h2></TD></TR></TABLE><BR><BR><BR><CENTER><B><FONT SIZE="+1">U.S. Bankruptcy Court<BR>Eastern District of Missouri (St. Louis)<BR>Bankruptcy Petition #: 10-40876</FONT></B></CENTER><TABLE width="100%" BORDER=0 CELLSPACING=1><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><BR><I>Assigned to:</I>      Judge Kathy A. Surratt-States<BR>Chapter          11<BR>Voluntary<BR>Asset<BR><BR>	</FONT></TD>
+	<TD VALIGN=top WIDTH="50%" ALIGN=right><FONT SIZE="+0"><TABLE border=0 cellspacing=0 cellpadding=1 align=center><TR><td align="right" valign="top"><I>Date filed:</I></td><td align="left" valign="top">&nbsp;&nbsp;02/02/2010</td></TR></TABLE>	</FONT></TD>
+</TR>
+</TABLE><BR><FONT SIZE="5"><B></B>
+		</FONT><TABLE width="100%" BORDER=0 CELLSPACING=1><TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>RJ York SSG, LLC</B>
+<BR>8229 Maryland Ave
+<BR>St Louis, MO 63105
+<BR>Tax ID / EIN: 26-0190180<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>David L. Going</B>
+<BR>Armstrong, Teasdale et al.
+<BR>One Metropolitan Sq.
+<BR>211 N. Broadway, Ste. 2600
+<BR>St. Louis, MO 63102-2740
+<BR>(314) 621-5070
+<BR>Email: dgoing@armstrongteasdale.com<BR><BR><B>Susan K. Ehlers</B>
+<BR>Armstrong Teasdale
+<BR>One Metropolitan Sq., Ste. 2600
+<BR>St. Louis, MO 63102
+<BR>(314) 621-5070
+<BR>Email: sehlers@armstrongteasdale.com<BR><BR></font></TD></TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>U.S. Trustee</B></I><BR><B>Office of U.S. Trustee</B>
+<BR>111 South Tenth Street
+<BR>Suite 6353
+<BR>St. Louis, MO 63102
+<BR>(314) 539-2976	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+	<TD VALIGN=top WIDTH="40%"><FONT SIZE="+0"><B>Martha M. Dahm</B>
+<BR>Office of U.S. Trustee
+<BR>111 S. 10th St., Ste. 6353
+<BR>St. Louis, MO 63102
+<BR>(314)539-2982
+<BR>Email: martha.m.dahm@usdoj.gov	</FONT></TD>
+</TR></TABLE><BR><TABLE BORDER=1 CELLPADDING=10 CELLSPACING=0><TR><TH width="94" nowrap>Filing Date</TH>
+<TH colspan=2 align='center'>#</TH><TH align=center>Docket Text</TH></TR>
+<TR><TD width="94" nowrap valign=bottom>02/02/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/cgi-bin/show_doc.pl?caseid=308542&de_seq_num=2&dm_id=10422305&doc_num=1&pdf_header=0' id='documentKcaseidV308542Kde_seq_numV2Kdm_idV10422305Kdoc_numV1Kpdf_headerV0'>1</a><script>DocLink('documentKcaseidV308542Kde_seq_numV2Kdm_idV10422305Kdoc_numV1Kpdf_headerV0');</script></TD><TD valign=bottom>  Chapter 11 Voluntary Petition, Schedules and Statements. Fee Amount &#036;1039 Filed by RJ York SSG, LLC Government Proof of Claim due by 08/2/2010. Summary of schedules due 2/16/2010. Schedule A due 2/16/2010. Schedule B due 2/16/2010. Schedule C due 2/16/2010. Schedule D due 2/16/2010. Schedule E due 2/16/2010. Schedule F due 2/16/2010. Schedule G due 2/16/2010. Schedule H due 2/16/2010. Schedule I due 2/16/2010. Schedule J due 2/16/2010. Declaration Concerning Debtors Schedules due 2/16/2010. Statement of Financial Affairs due 2/16/2010. Statement of Corporate Ownership due 2/16/2010. Chapter 11 Statement of Current Monthly Income due 2/16/2010. Statistical Summary of Certain Liabilities due 2/16/2010. Credit Counseling Date: 2/16/2010.  Chapter 11 Plan due by 06/2/2010. Disclosure Statement due by 06/2/2010. (Going, David) (Entered: 02/02/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/02/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>2</TD><TD valign=bottom>  Receipt of filing fee for Voluntary Petition (Chapter 11)(10-40876) [misc,volp11a] (1039.00). Receipt number 5776118, amount &#036;1039.00. (U.S. Treasury) (Entered: 02/02/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/02/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/cgi-bin/show_doc.pl?caseid=308542&de_seq_num=11&dm_id=10423044&doc_num=3&pdf_header=0' id='documentKcaseidV308542Kde_seq_numV11Kdm_idV10423044Kdoc_numV3Kpdf_headerV0'>3</a><script>DocLink('documentKcaseidV308542Kde_seq_numV11Kdm_idV10423044Kdoc_numV3Kpdf_headerV0');</script></TD><TD valign=bottom>  Support/Supplement Re: <i>Corporate Resolution Authorizing Chapter 11 Filing</i> Filed by Debtor RJ York SSG, LLC.  (Ehlers, Susan) (Entered: 02/02/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/02/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/cgi-bin/show_doc.pl?caseid=308542&de_seq_num=14&dm_id=10423962&doc_num=4&pdf_header=0' id='documentKcaseidV308542Kde_seq_numV14Kdm_idV10423962Kdoc_numV4Kpdf_headerV0'>4</a><script>DocLink('documentKcaseidV308542Kde_seq_numV14Kdm_idV10423962Kdoc_numV4Kpdf_headerV0');</script></TD><TD valign=bottom>  Notice of Appearance and Request for Notice <i>by Stephen L. Kling, Jr. and</i> by Kenneth L. Coyne Filed by Creditor SSG Realty Ventures, LLC.  (Coyne, Kenneth) (Entered: 02/02/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/02/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/cgi-bin/show_doc.pl?caseid=308542&de_seq_num=18&dm_id=10427761&doc_num=5&pdf_header=0' id='documentKcaseidV308542Kde_seq_numV18Kdm_idV10427761Kdoc_numV5Kpdf_headerV0'>5</a><script>DocLink('documentKcaseidV308542Kde_seq_numV18Kdm_idV10427761Kdoc_numV5Kpdf_headerV0');</script></TD><TD valign=bottom>  Order and Notice of Missing Documents     Summary of schedules due 2/16/2010. Schedule A due 2/16/2010. Schedule B due 2/16/2010. Schedule D due 2/16/2010. Schedule E due 2/16/2010. Schedule F due 2/16/2010. Schedule G due 2/16/2010. Schedule H due 2/16/2010. Declaration Concerning Debtors Schedules due 2/16/2010. Statement of Financial Affairs due 2/16/2010. Statistical Summary of Certain Liabilities due 2/16/2010.   (jerj) (Entered: 02/03/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/04/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/cgi-bin/show_doc.pl?caseid=308542&de_seq_num=22&dm_id=10435116&doc_num=6&pdf_header=0' id='documentKcaseidV308542Kde_seq_numV22Kdm_idV10435116Kdoc_numV6Kpdf_headerV0'>6</a><script>DocLink('documentKcaseidV308542Kde_seq_numV22Kdm_idV10435116Kdoc_numV6Kpdf_headerV0');</script></TD><TD valign=bottom>  Correspondence Filed by U.S. Trustee Office of U.S. Trustee.  (Dahm, Martha) (Entered: 02/04/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/05/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/cgi-bin/show_doc.pl?caseid=308542&de_seq_num=25&dm_id=10439702&doc_num=7&pdf_header=0' id='documentKcaseidV308542Kde_seq_numV25Kdm_idV10439702Kdoc_numV7Kpdf_headerV0'>7</a><script>DocLink('documentKcaseidV308542Kde_seq_numV25Kdm_idV10439702Kdoc_numV7Kpdf_headerV0');</script></TD><TD valign=bottom>  Meeting of Creditors 341(a) meeting to be held on 3/2/2010 at 01:30 PM at Conference Room US Trustee, Ste 6.353.  (vanj) (Entered: 02/05/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/05/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/cgi-bin/show_doc.pl?caseid=308542&de_seq_num=27&dm_id=10442645&doc_num=8&pdf_header=0' id='documentKcaseidV308542Kde_seq_numV27Kdm_idV10442645Kdoc_numV8Kpdf_headerV0'>8</a><script>DocLink('documentKcaseidV308542Kde_seq_numV27Kdm_idV10442645Kdoc_numV8Kpdf_headerV0');</script></TD><TD valign=bottom>  BNC Certificate of Mailing Service Date 02/05/2010. (Related Doc #  <script src='/lib/dls_url.js' language='javascript'></script><a href='https://ecf.moeb.uscourts.gov/doc1/10609868434' onClick="goDLS('/doc1/10609868434','308542','18','','0','','','','','');return(false)">5</a> )  (Admin.) (Entered: 02/06/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/07/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/cgi-bin/show_doc.pl?caseid=308542&de_seq_num=30&dm_id=10445588&doc_num=9&pdf_header=0' id='documentKcaseidV308542Kde_seq_numV30Kdm_idV10445588Kdoc_numV9Kpdf_headerV0'>9</a><script>DocLink('documentKcaseidV308542Kde_seq_numV30Kdm_idV10445588Kdoc_numV9Kpdf_headerV0');</script></TD><TD valign=bottom>  BNC Certificate of Mailing - Meeting of Creditors Service Date 02/07/2010. (Related Doc #  <a href='https://ecf.moeb.uscourts.gov/doc1/10609879843' onClick="goDLS('/doc1/10609879843','308542','25','','0','','','','','');return(false)">7</a> )  (Admin.) (Entered: 02/07/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/09/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/cgi-bin/show_doc.pl?caseid=308542&de_seq_num=33&dm_id=10454983&doc_num=10&pdf_header=0' id='documentKcaseidV308542Kde_seq_numV33Kdm_idV10454983Kdoc_numV10Kpdf_headerV0'>10</a><script>DocLink('documentKcaseidV308542Kde_seq_numV33Kdm_idV10454983Kdoc_numV10Kpdf_headerV0');</script></TD><TD valign=bottom>  Disclosure of Compensation of Attorney for Debtor <i></i> Filed by Debtor RJ York SSG, LLC.  (Going, David) (Entered: 02/09/2010)</TD></TR>
+</TABLE><BR><BR><BR><BR><HR><CENTER><TABLE BORDER=1 BGCOLOR=white width="400"><TR><TH COLSPAN=4><FONT SIZE=+1 COLOR=DARKRED>PACER Service Center </FONT></TH></TR><TR><TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH></TR><TR></TR><TR></TR><TR><TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1 COLOR=DARKBLUE>02/16/2010 15:44:11</FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> [LOGIN REMOVED] </FONT></TH></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Elman                            </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Docket Report </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search Criteria: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 10-40876 Fil or Ent: filed   Doc From: 0 Doc To: 99999999 Term: included    Format: html </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Billable Pages: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 1 </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.08 </FONT></TD></TR><TR></TR><TR></TR></TABLE></CENTER></HR></div></body></html>

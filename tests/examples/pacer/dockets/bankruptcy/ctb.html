@@ -1,0 +1,192 @@
+<html><head><title>LIVE Database Area</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script></head><body BGCOLOR=FFFFFF TEXT=000000 LINK=000000 ALINK=FFFF00 VLINK=9900FF onLoad='SetFocus()'><div class="noprint"><img id="cmecfLogo" class="cmecfLogo" src="/graphics/cmecf-logo.gif" alt="CM/ECF" title="" onClick="CMECF.MainMenu.showCourtInformation(); return false" /><img src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage" id="helpImage" onClick="CMECF.MainMenu.showHelpPage(''); return false" onMouseOver="CMECF.MainMenu.helpImageOn()" onMouseOut="CMECF.MainMenu.helpImageOff()" /><div id="topmenu" class="yuimenubar"><div class="bd"><ul class="first-of-type"><li class="yuimenubaritem" style="width:9%"><a href='/cgi-bin/iquery.pl'><u>Q</u>uery</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Reports'><u>R</u>eports</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Utilities'><u>U</u>tilities</a></li><li class="yuimenubaritem" style="width:10%"><a href='/cgi-bin/login.pl?logout'>Logout</a></li></ul></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.createMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);}</script><div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript"> 
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;				
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+<TABLE width="100%" align=right BORDER=0 CELLSPACING=5><TR><TD ALIGN=right><h2> <FONT SIZE="3">JNTADMN</FONT></h2></TD></TR></TABLE><BR><BR><BR><CENTER><B><FONT SIZE="+1">U.S. Bankruptcy Court<BR>District of Connecticut (Bridgeport)<BR>Bankruptcy Petition #: 08-50754</FONT></B></CENTER><TABLE width="100%" BORDER=0 CELLSPACING=1><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><BR><I>Assigned to:</I>       Alan H.W. Shiff<BR>Chapter          11<BR>Voluntary<BR>Asset <A HREF=/cgi-bin/DktRpt.pl?-</A> <br><div class="noprint"><A HREF='/cgi-bin/qryAscCases.pl?210861'>Show Associated Cases</A></div> <BR><BR>	</FONT></TD>
+	<TD VALIGN=top WIDTH="50%" ALIGN=right><FONT SIZE="+0"><TABLE border=0 cellspacing=0 cellpadding=0 align=center><TR><td align="right" valign="top"><I>Date filed:</I></td><td align="left" valign="top">&nbsp;&nbsp;08/17/2008</td></TR></TABLE>	</FONT></TD>
+</TR>
+</TABLE><BR><FONT SIZE="5"><B></B>
+		</FONT><TABLE width="100%" BORDER=0 CELLSPACING=1><TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>SageCrest II LLC</B>
+<BR>Three Pickwick Plaza
+<BR>Suite 400
+<BR>Greenwich, CT 06830
+<BR>Tax ID / EIN: 01-0683535<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Craig A Wolfe</B>
+<BR>Kelley, Drye & Warren, LLP
+<BR>101 Park Avenue
+<BR>New York, NY 10178
+<BR> 212-808-5073
+<BR>Fax  : 212 808-7897
+<BR>Email: KDWBankruptcyDepartment@KelleyDrye.com<BR><BR><B>Douglas J Buncher</B>
+<BR>Neligan Foley LLP
+<BR>325 N. St. Paul
+<BR>Suite 3600
+<BR>Dallas, TX 75201
+<BR>(214) 840-5300
+<BR>Fax  : (214) 840-5301
+<BR>Email: dbuncher@neliganlaw.com<BR><BR><B>Douglas S. Skalka</B>
+<BR>Neubert Pepe and Monteith
+<BR>195 Church Street  13th Floor
+<BR>New Haven, CT 06510
+<BR>(203) 821-2000
+<BR>Fax  : 203-821-2009
+<BR>Email: dskalka@npmlaw.com<BR><BR><B>Eric R Wilson</B>
+<BR>Kelley Drye & Warren LLP
+<BR>101 Park Avenue
+<BR>New York, NY 10178
+<BR>(212) 808-5087
+<BR>Fax  : (212) 808-7897
+<BR>Email: ewilson@kelleydrye.com<BR><BR><B>James Berman</B>
+<BR>Zeisler and Zeisler
+<BR>558 Clinton Avenue
+<BR>P.O. Box 3186
+<BR>Bridgeport, CT 06605
+<BR>(203) 368-4234
+<BR>Email: jberman@zeislaw.com<BR><BR><B>James P. Muenker</B>
+<BR>Neligan Foley LLP
+<BR>325 N. St. Paul, Suite 3600
+<BR>Dallas, TX 75201
+<BR>214-840-5300
+<BR>Fax  : 214-840-5301
+<BR>Email: jmuenker@neliganlaw.com<BR><BR><B>James E. Nealon</B>
+<BR>Kelley Drye & Warren
+<BR>400 Atlantic Street
+<BR>Stamford, CT 06901
+<BR>(203) 324-1400
+<BR>Fax  : (203) 327-2669
+<BR>Email: jnealon@kelleydrye.com<BR><BR><B>Keith Costa</B>
+<BR>Pullman & Comley LLC
+<BR>850 Main Street
+<BR>Bridgeport, CT 06604
+<BR>203-330-2000<BR><BR><B>Patrick J Neligan</B>
+<BR>Neligan Foley LLP
+<BR>325 N. St. Paul
+<BR>Suite 3600
+<BR>Dallas, TX 75201
+<BR>(214) 840-5300
+<BR>Fax  : (214) 840-5301
+<BR>Email: pneligan@neliganlaw.com<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>SageCrest Finance LLC</B>
+<BR>Three Pickwick Plaza
+<BR>Suite 400
+<BR>Greenwich, CT 06830
+<BR>Tax ID / EIN: 20-8689080<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Douglas J Buncher</B>
+<BR>(See above for address)<BR><BR><B>Douglas S. Skalka</B>
+<BR>(See above for address)<BR><BR><B>James Berman</B>
+<BR>(See above for address)<BR><BR><B>James P. Muenker</B>
+<BR>(See above for address)<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>SageCrest Ltd.</B>
+<BR>Canon&#039;s Court
+<BR>22 Victoria Street
+<BR>Hamilton HM 12<BR>Bermuda<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Douglas J Buncher</B>
+<BR>(See above for address)<BR><BR><B>Douglas S. Skalka</B>
+<BR>(See above for address)<BR><BR><B>James Berman</B>
+<BR>(See above for address)<BR><BR><B>Laurence May</B>
+<BR>Cole, Schotz, Meisel, Forman & Leonard
+<BR>900 Third Avenue, 16th Floor
+<BR>New York, NY 10022
+<BR>212-752-8000
+<BR>Email: lmay@coleschotz.com<BR><BR><B>Neil Y. Siegel</B>
+<BR>Cole Schotz Meisel Forman & Leonard PA
+<BR>900 Third Avenue
+<BR>16th Floor
+<BR>New York, NY 10022
+<BR>212-752-8000
+<BR>Fax  : 646-521-2029
+<BR>Email: nsiegel@coleschotz.com<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>SageCrest Dixon Inc.</B>
+<BR>Three Pickwick Plaza
+<BR>Suite 400
+<BR>Greenwich, CT 06830
+<BR>Tax ID / EIN: 26-0266398<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Douglas J Buncher</B>
+<BR>(See above for address)<BR><BR><B>Douglas S. Skalka</B>
+<BR>(See above for address)<BR><BR><B>James P. Muenker</B>
+<BR>(See above for address)<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>SAGECREST HOLDINGS LIMITED</B><BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Douglas S. Skalka</B>
+<BR>Neubert, Pepe, and Monteith
+<BR>195 Church Street, 13th Floor
+<BR>New Haven, CT 06510
+<BR>(203) 821-2000
+<BR>Fax  : 203-821-2009
+<BR>Email: dskalka@npmlaw.com<BR><BR><B>Neil Y. Siegel</B>
+<BR>Cole Schotz Meisel Forman & Leonard PA
+<BR>900 Third Avenue
+<BR>16th Floor
+<BR>New York, NY 10022
+<BR>646-563-8929
+<BR>Fax  : 646-521-2029
+<BR>Email: nsiegel@coleschotz.com<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>U.S. Trustee</B></I><BR><B>U. S. Trustee</B>
+<BR>Office of the U.S. Trustee
+<BR>Giaimo Federal Building
+<BR>150 Court Street, Room 302
+<BR>New Haven, CT 06510
+<BR>(203)773-2210<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Alicia M. Leonhard</B>
+<BR>Office of the U.S. Trustee
+<BR>150 Court Street
+<BR>Suite 302
+<BR>New Haven, CT 06510
+<BR>203-773-2210
+<BR>Fax  : 203-773-2217
+<BR>Email: alicia.m.leonhard@usdoj.gov<BR><BR><B>Steven E. Mackey</B>
+<BR>Office of the U.S. Trustee
+<BR>The Giaimo Federal Building
+<BR>150 Court Street, Room 302
+<BR>New Haven, CT 06510
+<BR>(203) 773-2210<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Creditor Committee</B></I><BR><B>AllFinancial Group, LLC</B>
+<BR>Attn: Daniel Goldman, Gen&#039;l Counsel
+<BR>60 Long Ridge Road
+<BR>Stamford, CT 06902
+<BR>203-964-1200, Ext 14<BR><BR>	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+<TD valign="top" WIDTH="40%" NOWRAP>
+  	                    <font size="+0">&nbsp;</font></TD></TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Creditor Committee</B></I><BR><B>Equal Overseas Consulting, Ltd.</B>
+<BR>c-o Jean-Daniel Cohen, Officer
+<BR>P.O. Box 3152, Road Tower
+<BR>Tortola<BR>British Virgin Islands
+<BR>212-344-2929	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+	<TD VALIGN=top WIDTH="40%"><FONT SIZE="+0">&nbsp;	</FONT></TD>
+</TR></TABLE><BR><TABLE BORDER=1 CELLPADDING=10 CELLSPACING=0><TR><TH width="94" nowrap>Docket Date</TH>
+<TH colspan=2 align='center'>#</TH><TH align=center>Docket Text</TH></TR>
+<TR><TD width="94" nowrap valign=bottom>02/16/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Hearing Held <font color=blue> (RE:  <script src='/lib/dls_url.js' language='javascript'></script><a href='https://ecf.ctb.uscourts.gov/doc1/04006161997' onClick="goDLS('/doc1/04006161997','210861','4177','','0','','','','','');return(false)">935</a>  Motion for Substitution of Counsel filed by Creditor Eden Rock Finance Fund LP.) </font> Granted; the movant must file a certificate of service and service list in regard to service of the notice of hearing.   A proposed order has not been e-mailed to the court. (Senteio, Renee) (Entered: 02/16/2010)</TD></TR>
+</TABLE><BR><BR><BR><BR><HR><CENTER><TABLE BORDER=1 BGCOLOR=white width="400"><TR><TH COLSPAN=4><FONT SIZE=+1 COLOR=DARKRED>PACER Service Center </FONT></TH></TR><TR><TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH></TR><TR></TR><TR></TR><TR><TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1 COLOR=DARKBLUE>02/17/2010 02:23:53</FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> [LOGIN REMOVED] </FONT></TH></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 9sprice9                         </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Docket Report </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search Criteria: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 08-50754 Fil or Ent: entered From: 2/16/2010 To: 2/17/2010 Doc From: 0 Doc To: 99999999     Format: html </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Billable Pages: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 2 </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.16 </FONT></TD></TR><TR></TR><TR></TR></TABLE></CENTER></HR></div></body></html>

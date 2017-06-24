@@ -1,0 +1,112 @@
+<html><head><title>CANB Live Database</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script></head><body BGCOLOR=FFFFCC TEXT=000000 onLoad='SetFocus()'><div class="noprint"><img id="cmecfLogo" class="cmecfLogo" src="/graphics/cmecf-logo.gif" alt="CM/ECF" title=""  /><img src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage" id="helpImage" onClick="CMECF.MainMenu.showHelpPage(''); return false" onMouseOver="CMECF.MainMenu.helpImageOn()" onMouseOut="CMECF.MainMenu.helpImageOff()" /><div id="topmenu" class="yuimenubar"><div class="bd"><ul class="first-of-type"><li class="yuimenubaritem" style="width:9%"><a href='/cgi-bin/iquery.pl'>Q</u>uery</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Reports'>R</u>eports</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Utilities'>U</u>tilities</a></li><li class="yuimenubaritem" style="width:10%"><a href='/cgi-bin/login.pl?logout'>Logout</a></li></ul></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.renderSimpleMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.renderSimpleMenu);}</script><div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript"> 
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;				
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+<SCRIPT language="JavaScript">function Set_Cookie( name, value, expires, path, domain, secure ) {
+                var today = new Date();
+                today.setTime( today.getTime() );
+                if ( expires )
+                {
+                        expires = expires * 1000 * 60 * 60 * 24;
+                }
+                var expires_date = new Date( today.getTime() + (expires) );
+
+                document.cookie = name + "=" +escape( value ) +
+                ( ( expires ) ? ";expires=" + expires_date.toGMTString() : "" ) +
+                ( ( path ) ? ";path=" + path : "" ) +
+                ( ( domain ) ? ";domain=" + domain : "" ) +
+                ( ( secure ) ? ";secure" : "" );
+                }
+                function Get_Cookie( name ) {
+                var start = document.cookie.indexOf( name + "=" );
+                var len = start + name.length + 1;
+                if ( ( !start ) &&
+                ( name != document.cookie.substring( 0, name.length ) ) )
+                {
+                return null;
+                }
+                if ( start == -1 ) return null;
+                var end = document.cookie.indexOf( ";", len );
+                if ( end == -1 ) end = document.cookie.length;
+                return unescape( document.cookie.substring( len, end ) );
+                }
+                function Delete_Cookie( name, path, domain ) {
+                if ( Get_Cookie( name ) ) document.cookie = name + "=" +
+                ( ( path ) ? ";path=" + path : "") +
+                ( ( domain ) ? ";domain=" + domain : "" ) +
+                ";expires=Thu, 01-Jan-1970 00:00:01 GMT";
+                }
+                </SCRIPT><TABLE width="100%" align=right BORDER=0 CELLSPACING=5><TR><TD ALIGN=right><h2> <FONT SIZE="3">CLOSED, MEANSNO</FONT></h2></TD></TR></TABLE><BR><BR><BR><CENTER><B><FONT SIZE="+1">U.S. Bankruptcy Court<BR>Northern District of California (San Jose)<BR>Bankruptcy Petition #: 06-52608</FONT></B></CENTER><TABLE width="100%" BORDER=0 CELLSPACING=1><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><BR><I>Assigned to:</I>      Judge Roger L. Efremsky<BR>Chapter          7<BR>Voluntary<BR>No asset <A HREF=/cgi-bin/DktRpt.pl?-</A> <br><div class="noprint"><A HREF='/cgi-bin/qryAscCases.pl?323970'>Show Associated Cases</A></div> 	</FONT></TD>
+	<TD VALIGN=top WIDTH="50%" ALIGN=right><FONT SIZE="+0"><TABLE border=0 cellspacing=0 cellpadding=0 align=center><TR><td align="right" valign="top"><I>Date filed:</I></td><td align="left" valign="top">&nbsp;&nbsp;12/14/2006</td></TR><TR><td align="right" valign="top"><I>Date terminated:</I></td><td align="left" valign="top">&nbsp;&nbsp;03/19/2007</td></TR><TR><td align="right" valign="top"><I>Date discharged:</I></td><td align="left" valign="top">&nbsp;&nbsp;03/19/2007</td></TR></TABLE>	</FONT></TD>
+</TR>
+</TABLE><BR><FONT SIZE="5"><B></B>
+		</FONT><TABLE width="100%" BORDER=0 CELLSPACING=1><TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>Gregory James VanderZanden</B>
+<BR>1878 Pandora Dr
+<BR>San Jose, CA 95124-1647
+<BR>SSN / ITIN: xxx-xx-4565<BR><I><B>aka</B></I><BR><B>Gregory James Hill</B><BR><I><B>aka</B></I><BR><B>Gregory James VanderZander, Jr</B><BR><I><B>aka</B></I><BR><B>Gregory V Zander</B><BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>David A. Boone</B>
+<BR>Law Offices of David A. Boone
+<BR>1611 The Alameda
+<BR>San Jose, CA 95126
+<BR>(408)291-6000
+<BR>Email: ecfdavidboone@aol.com<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Trustee</B></I><BR><B>Carol Wu</B>
+<BR>25A Crescent Dr. &#035;413
+<BR>Pleasant Hill, CA 94523
+<BR>408-404-7039<BR><BR>	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+<TD valign="top" WIDTH="40%" NOWRAP>
+  	                    <font size="+0">&nbsp;</font></TD></TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>U.S. Trustee</B></I><BR><B>Office of the U.S. Trustee / SJ</B>
+<BR>U.S. Federal Bldg.
+<BR>280 S 1st St. &#035;268
+<BR>San Jose, CA 95113-3004
+<BR>(   )	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+	<TD VALIGN=top WIDTH="40%"><FONT SIZE="+0">&nbsp;	</FONT></TD>
+ <script src="/lib/CommonLib.js" language="Javascript"></script><SCRIPT LANGUAGE="JavaScript">Set_Cookie( 'pdf_header', 1, '', '/', '', '' );</SCRIPT>
+</TR></TABLE><BR><TABLE BORDER=1 CELLPADDING=10 CELLSPACING=0><TR><TH width="94" nowrap>Filing Date</TH>
+<TH colspan=2 align='center'>#</TH><TH align=center>Docket Text</TH></TR>
+<TR><TD width="94" nowrap valign=bottom>12/14/2006</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/03401705234' id='documentKcaseidV323970Kde_seq_numV2Kdm_idV5572468Kdoc_numV1Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>1</a><SCRIPT>DocLink('documentKcaseidV323970Kde_seq_numV2Kdm_idV5572468Kdoc_numV1Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  Chapter 7 Voluntary Petition.  Fee Amount &#036;299.  Financial Management Certificate Due Prior to Discharge.  Filed by Gregory James VanderZanden.  Order Meeting of Creditors due by 12/29/2006.  (Boone, David) ERROR: INCLUDED IN VOLUNTARY PETITION; CERTIFICATION OF CREDIT COUNSELING.  Modified on 12/15/2006 (jc, ). (Entered: 12/14/2006)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>12/14/2006</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/03406452354' id='documentKcaseidV323970Kde_seq_numV11Kdm_idV5572471Kdoc_numV2Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>2</a><SCRIPT>DocLink('documentKcaseidV323970Kde_seq_numV11Kdm_idV5572471Kdoc_numV2Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>   Statement of Social Security Number.  Filed by Debtor Gregory James VanderZanden (Boone, David) (Entered: 12/14/2006)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>12/14/2006</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/03401704263' id='documentKcaseidV323970Kde_seq_numV13Kdm_idV5572474Kdoc_numV3Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>3</a><SCRIPT>DocLink('documentKcaseidV323970Kde_seq_numV13Kdm_idV5572474Kdoc_numV3Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>    Chapter 7 Statement of Current Monthly Income and Means Test Calculation - Form 22A <i></i>.  Filed by Debtor Gregory James VanderZanden (Boone, David) (Entered: 12/14/2006)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>12/14/2006</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  First Meeting of Creditors with 341(a) meeting to be held on 01/16/2007 at 11:30 AM at San Jose Room 130.  Objections for Discharge due by 03/19/2007.      (Boone, David) (Entered: 12/14/2006)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>12/15/2006</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/03401715909' id='documentKcaseidV323970Kde_seq_numV19Kdm_idV5574324Kdoc_numV4Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>4</a><SCRIPT>DocLink('documentKcaseidV323970Kde_seq_numV19Kdm_idV5574324Kdoc_numV4Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  Notice of Chapter 7 Bankruptcy Case, Meeting of Creditors, and Deadlines (Generated) .    (jc, ) (Entered: 12/15/2006)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>12/15/2006</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Receipt of filing fee for Voluntary Petition (Chapter 7)(06-52608) [misc,volp7] ( 299.00). Receipt number 3844557, amount &#36; 299.00 (U.S. Treasury) (Entered: 12/15/2006)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>12/17/2006</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/03401885055' id='documentKcaseidV323970Kde_seq_numV23Kdm_idV5580424Kdoc_numV5Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>5</a><SCRIPT>DocLink('documentKcaseidV323970Kde_seq_numV23Kdm_idV5580424Kdoc_numV5Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  BNC Certificate of Mailing - Meeting of Creditors.  (RE: related document(s) <a href='https://ecf.canb.uscourts.gov/doc1/03401715909' onClick="goDLS('/doc1/03401715909', '323970', '19', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">4</a>   Generate 341 Notices).     Service Date 12/17/2006.  (Admin.) (Entered: 12/17/2006)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>01/17/2007</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Debtor (s) DID NOT Appear.  Next Meeting of Creditors to be Held on 1/30/2007 at 11:00 AM at San Jose Room 130.  Section 341 Meeting of Creditors held on 1/16/2007.  Tape Number: 17.  Notes: Atty. D. Boone appeared.  Debtor had ID stolen and was not  allowed into the building   (Wu, Carol) (Entered: 01/17/2007)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/02/2007</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/03402470214' id='documentKcaseidV323970Kde_seq_numV29Kdm_idV5739220Kdoc_numV6Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>6</a><SCRIPT>DocLink('documentKcaseidV323970Kde_seq_numV29Kdm_idV5739220Kdoc_numV6Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  Notice of Deficiency of Financial Management Course Certificate Due Before Discharge.  (RE: related document(s) <a href='https://ecf.canb.uscourts.gov/doc1/03401705234' onClick="goDLS('/doc1/03401705234', '323970', '2', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">1</a>   Voluntary Petition (Chapter 7), Voluntary Petition (Chapter 7)).    (er, ) (Entered: 02/02/2007)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/04/2007</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/03407369371' id='documentKcaseidV323970Kde_seq_numV32Kdm_idV5744931Kdoc_numV7Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>7</a><SCRIPT>DocLink('documentKcaseidV323970Kde_seq_numV32Kdm_idV5744931Kdoc_numV7Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  BNC Certificate of Mailing  (RE: related document(s) <a href='https://ecf.canb.uscourts.gov/doc1/03402470214' onClick="goDLS('/doc1/03402470214', '323970', '29', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">6</a>   Notice of Deficiency Financial Management Course).     Service Date 02/04/2007.  (Admin.) (Entered: 02/04/2007)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/14/2007</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Trustee's Report of No Distribution: Trustee of this estate reports and declares under penalty of perjury that the section 341a Meeting of Creditors has been held and certifies that the trustee has performed the duties required of a trustee under 11  U.S.C. 704 and has concluded that there are no assets to administer for the benefit of creditors of this estate. I have received no funds or property of the estate, and paid no monies on account of the estate.  Wherefore, the trustee prays that this  report be approved and the trustee be discharged from office..  (Wu, Carol) (Entered: 02/14/2007)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/16/2007</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/03407500687' id='documentKcaseidV323970Kde_seq_numV38Kdm_idV5792551Kdoc_numV8Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>8</a><SCRIPT>DocLink('documentKcaseidV323970Kde_seq_numV38Kdm_idV5792551Kdoc_numV8Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  Financial Management Course Certificate. <i></i> Filed by Debtor Gregory James VanderZanden (Menon, Leela) (Entered: 02/16/2007)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>03/19/2007</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/03401338148' id='documentKcaseidV323970Kde_seq_numV40Kdm_idV5912962Kdoc_numV9Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>9</a><SCRIPT>DocLink('documentKcaseidV323970Kde_seq_numV40Kdm_idV5912962Kdoc_numV9Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  Order Discharging Debtor and Final Decree  (RE: related document(s) Meeting (Chapter 7)).   (lub, ) (Entered: 03/19/2007)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>03/19/2007</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  Bankruptcy Case Closed .    (lub, ) (Entered: 03/19/2007)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>03/21/2007</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='https://ecf.canb.uscourts.gov/doc1/03401850354' id='documentKcaseidV323970Kde_seq_numV47Kdm_idV5928026Kdoc_numV10Kpdf_headerV1' onclick='this.style.color = document.vlinkColor'>10</a><SCRIPT>DocLink('documentKcaseidV323970Kde_seq_numV47Kdm_idV5928026Kdoc_numV10Kpdf_headerV1');</SCRIPT></TD><TD valign=bottom>  BNC Certificate of Mailing - Order of Discharge and Final Decree  (RE: related document(s) <a href='https://ecf.canb.uscourts.gov/doc1/03401338148' onClick="goDLS('/doc1/03401338148', '323970', '40', '', '1', '', '', '', '','');this.style.color = document.vlinkColor; return false">9</a>   Order Discharging Debtor and Final Decree).     Service Date 03/21/2007.  (Admin.) (Entered: 03/21/2007)</TD></TR>
+</TABLE><BR><BR><BR><BR><HR><CENTER><TABLE BORDER=1 BGCOLOR=white width="400"><TR><TH COLSPAN=4><FONT SIZE=+1 COLOR=DARKRED>PACER Service Center </FONT></TH></TR><TR><TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH></TR><TR></TR><TR></TR><TR><TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1 COLOR=DARKBLUE>02/16/2010 13:49:09</FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> [LOGIN REMOVED] </FONT></TH></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Doss                             </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Docket Report </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search Criteria: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 06-52608 Fil or Ent: filed  To: 2/16/2010 Doc From: 0 Doc To: 99999999 Term: included  Headers: included  Format: html </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Billable Pages: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 2 </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.16 </FONT></TD></TR><TR></TR><TR></TR></TABLE></CENTER></HR></div></body></html>

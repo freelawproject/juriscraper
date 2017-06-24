@@ -1,0 +1,76 @@
+<html><head><title>LIVE Database Area</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script></head><body BGCOLOR=FFFFF0 TEXT=000000 onLoad='SetFocus()'><div class="noprint"><img id="cmecfLogo" class="cmecfLogo" src="/graphics/cmecf-logo.gif" alt="CM/ECF" title="" onClick="CMECF.MainMenu.showCourtInformation(); return false" /><img src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage" id="helpImage" onClick="CMECF.MainMenu.showHelpPage(''); return false" onMouseOver="CMECF.MainMenu.helpImageOn()" onMouseOut="CMECF.MainMenu.helpImageOff()" /><div id="topmenu" class="yuimenubar"><div class="bd"><ul class="first-of-type"><li class="yuimenubaritem" style="width:9%"><a href='/cgi-bin/iquery.pl'><u>Q</u>uery</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Reports'><u>R</u>eports</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Utilities'><u>U</u>tilities</a></li><li class="yuimenubaritem" style="width:10%"><a href='/cgi-bin/login.pl?logout'>Logout</a></li></ul></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.createMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);}</script><div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript"> 
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;				
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+<TABLE width="100%" align=right BORDER=0 CELLSPACING=5><TR><TD ALIGN=right><h2> <FONT SIZE="3">FUNDS</FONT></h2></TD></TR></TABLE><BR><BR><BR><CENTER><B><FONT SIZE="+1">U.S. Bankruptcy Court<BR>Middle District of Louisiana (Baton Rouge)<BR>Bankruptcy Petition #: 04-11957</FONT></B></CENTER><TABLE width="100%" BORDER=0 CELLSPACING=1><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><BR><I>Assigned to:</I>       Douglas D. Dodd<BR>Chapter          13<BR>Voluntary<BR>Asset <A HREF=/cgi-bin/DktRpt.pl?-</A> <br><div class="noprint"><A HREF='/cgi-bin/qryAscCases.pl?35124'>Show Associated Cases</A></div> 	</FONT></TD>
+	<TD VALIGN=top WIDTH="50%" ALIGN=right><FONT SIZE="+0"><TABLE border=0 cellspacing=0 cellpadding=0 align=center><TR><td align="right" valign="top"><I>Date filed:</I></td><td align="left" valign="top">&nbsp;&nbsp;06/15/2004</td></TR><TR><td align="right" valign="top"><I>Date terminated:</I></td><td align="left" valign="top">&nbsp;&nbsp;01/26/2005</td></TR><TR><td align="right" valign="top"><I>Date dismissed:</I></td><td align="left" valign="top">&nbsp;&nbsp;10/26/2004</td></TR></TABLE>	</FONT></TD>
+</TR>
+</TABLE><BR><FONT SIZE="5"><B></B>
+		</FONT><TABLE width="100%" BORDER=0 CELLSPACING=1><TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>Malcolm Troy Averett, Jr.</B>
+<BR>27165 Leighton Lane
+<BR>Denham Springs, LA 70726
+<BR>SSN / ITIN: xxx-xx-9478<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Trenton A. Grand</B>
+<BR>10537 Kentshire Court
+<BR>Suite A
+<BR>Baton Rouge, LA 70810
+<BR>225-769-1414
+<BR>Fax  : 225-769-2300
+<BR>Email: bankruptcy@grandtitle.com<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>Sherri Romig Averett</B>
+<BR>13484 Prairie Lane
+<BR>Walker, LA 70785
+<BR>SSN / ITIN: xxx-xx-9717<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Trenton A. Grand</B>
+<BR>(See above for address)<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Trustee</B></I><BR><B>Annette C. Crawford</B>
+<BR>P.O. Box 64868
+<BR>Baton Rouge, LA 70806
+<BR>225-928-2531<BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Annette C. Crawford</B>
+<BR>P.O. Box 64868
+<BR>Baton Rouge, LA 70806
+<BR>(225) 928-2531
+<BR>Email: crawfordtrustee@annettecrawford.com<BR><BR></font></TD></TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>U.S. Trustee</B></I><BR><B>U.S. Trustee</B>
+<BR>400 Poydras Street
+<BR>Suite 2110
+<BR>New Orleans, LA 70130	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+	<TD VALIGN=top WIDTH="40%"><FONT SIZE="+0">&nbsp;	</FONT></TD>
+</TR></TABLE><BR><TABLE BORDER=1 CELLPADDING=10 CELLSPACING=0><TR><TH width="94" nowrap>Filing Date</TH>
+<TH colspan=2 align='center'>#</TH><TH align=center>Docket Text</TH></TR>
+<TR><TD width="94" nowrap valign=bottom>11/19/2009</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/cgi-bin/show_doc.pl?caseid=35124&de_seq_num=151&dm_id=3366790&doc_num=42&pdf_header=0' id='documentKcaseidV35124Kde_seq_numV151Kdm_idV3366790Kdoc_numV42Kpdf_headerV0'>42</a><script>DocLink('documentKcaseidV35124Kde_seq_numV151Kdm_idV3366790Kdoc_numV42Kpdf_headerV0');</script></TD><TD valign=bottom>   Motion to Withdraw Unclaimed Funds  Filed by  Malcolm Troy Averett Jr..   (Public Terminal 2) Additional attachment(s) added on 11/19/2009 (vaul). (Entered: 11/19/2009)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>11/20/2009</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'>&nbsp;</TD><TD valign=bottom>  <B>NOTICE OF DEFICIENCY</B>: Failure to comply with Local Rule 9013-4, Certificate of Service.  Please refer to Local Rule 9013-4 and correct the error.  Failure to correct this error within 5 days will result in the court&#039;s striking the document. RE: related document(s) <script src='/lib/dls_url.js' language='javascript'></script><a href='https://ecf.lamb.uscourts.gov/doc1/08603146147' onClick="goDLS('/doc1/08603146147','35124','151','','0','','','','','');return(false)">42</a>  Application to Withdraw Unclaimed Funds filed by Debtor Malcolm Troy Averett. Deficiency Due by 11/25/2009.   (rcal) (Entered: 11/20/2009)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>12/01/2009</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/cgi-bin/show_doc.pl?caseid=35124&de_seq_num=156&dm_id=3377660&doc_num=43&pdf_header=0' id='documentKcaseidV35124Kde_seq_numV156Kdm_idV3377660Kdoc_numV43Kpdf_headerV0'>43</a><script>DocLink('documentKcaseidV35124Kde_seq_numV156Kdm_idV3377660Kdoc_numV43Kpdf_headerV0');</script></TD><TD valign=bottom>  Certificate of Service  Filed by  Malcolm Troy Averett Jr. RE: related document(s) <a href='https://ecf.lamb.uscourts.gov/doc1/08603146147' onClick="goDLS('/doc1/08603146147','35124','151','','0','','','','','');return(false)">42</a>  Application to Withdraw Unclaimed Funds filed by Debtor Malcolm Troy Averett.   (Public Terminal 1) (Entered: 12/01/2009)</TD></TR>
+</TABLE><BR><BR><BR><BR><HR><CENTER><TABLE BORDER=1 BGCOLOR=white width="400"><TR><TH COLSPAN=4><FONT SIZE=+1 COLOR=DARKRED>PACER Service Center </FONT></TH></TR><TR><TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH></TR><TR></TR><TR></TR><TR><TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1 COLOR=DARKBLUE>02/16/2010 14:26:58</FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> [LOGIN REMOVED] </FONT></TH></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE>                                  </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Docket Report </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search Criteria: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 04-11957 Fil or Ent: filed From: 11/1/2009  Doc From: 0 Doc To: 99999999 Term: included    Format: html </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Billable Pages: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 1 </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.08 </FONT></TD></TR><TR></TR><TR></TR></TABLE></CENTER></HR></div></body></html>

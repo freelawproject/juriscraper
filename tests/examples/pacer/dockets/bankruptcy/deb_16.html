@@ -1,0 +1,105 @@
+<html><head><title>Internal CM/ECF Live Database</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script></head><body BGCOLOR=FFFFF0 TEXT=000000 onLoad='SetFocus()'><div class="noprint"><img id="cmecfLogo" class="cmecfLogo" src="/graphics/cmecf-logo.gif" alt="CM/ECF" title=""  /><img src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage" id="helpImage" onClick="CMECF.MainMenu.showHelpPage(''); return false" onMouseOver="CMECF.MainMenu.helpImageOn()" onMouseOut="CMECF.MainMenu.helpImageOff()" /><div id="topmenu" class="yuimenubar"><div class="bd"><ul class="first-of-type"><li class="yuimenubaritem" style="width:9%"><a href='/cgi-bin/iquery.pl'>Q</u>uery</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Reports'>R</u>eports</a></li><li class="yuimenubaritem" style="width:11%"><a href='/cgi-bin/DisplayMenu.pl?Utilities'>U</u>tilities</a></li><li class="yuimenubaritem" style="width:10%"><a href='/cgi-bin/login.pl?logout'>Logout</a></li></ul></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.renderSimpleMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.renderSimpleMenu);}</script><div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript"> 
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;				
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+<TABLE width="100%" align=right BORDER=0 CELLSPACING=5><TR><TD ALIGN=right><h2> <FONT SIZE="3">PlnDue, DsclsDue, LEAD, CLMSAGNT, MEGA</FONT></h2></TD></TR></TABLE><BR><BR><BR><CENTER><B><FONT SIZE="+1">U.S. Bankruptcy Court<BR>District of Delaware (Delaware)<BR>Bankruptcy Petition #: 09-13684-CSS</FONT></B></CENTER><TABLE width="100%" BORDER=0 CELLSPACING=1><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><BR><I>Assigned to:</I>       Christopher S. Sontchi<BR>Chapter          11<BR>Voluntary<BR>Asset <A HREF=/cgi-bin/DktRpt.pl?-</A> <br><div class="noprint"><A HREF='/cgi-bin/qryAscCases.pl?121533'>Show Associated Cases</A></div> <BR><BR>	</FONT></TD>
+	<TD VALIGN=top WIDTH="50%" ALIGN=right><FONT SIZE="+0"><TABLE border=0 cellspacing=0 cellpadding=0 align=center><TR><td align="right" valign="top"><I>Date filed:</I></td><td align="left" valign="top">&nbsp;&nbsp;10/25/2009</td></TR></TABLE>	</FONT></TD>
+</TR>
+</TABLE><BR><FONT SIZE="5"><B></B>
+		</FONT><TABLE width="100%" BORDER=0 CELLSPACING=1><TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>Capmark Financial Group Inc.</B>
+<BR>116 Welsh Road
+<BR>Horsham, PA 19044
+<BR>Tax ID / EIN: 91-1902188<BR><I><B>aka</B></I><BR><B>GMAC Commercial Holding Corp.</B><BR><I><B>aka</B></I><BR><B>GMAC Commercial Holding Corp.</B><BR><BR>	</FONT></TD>
+	<TD VALIGN=top ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Jason M. Madron</B>
+<BR>Richards, Layton  & Finger, P.A.
+<BR>One Rodney Square
+<BR>P.O. Box 551
+<BR>Wilmington, DE 19899
+<BR>302-651-7595
+<BR>Fax  : 302-651-7701
+<BR>Email: madron@rlf.com<BR><BR><B>Jason M. Madron</B>
+<BR>Richards, Layton & Finger, P.A.
+<BR>One Rodney Square
+<BR>P.O. Box 551
+<BR>Wilmington, DE 19899
+<BR>302-651-7595
+<BR>Fax  : 302-651-7701
+<BR>Email: madron@rlf.com<BR><BR><B>Lee E. Kaufman</B>
+<BR>Richards, Layton & Finger, P.A.
+<BR>920 North King Street
+<BR>One Rodney Square
+<BR>Wilmington, DE 19801
+<BR>302-651-7582
+<BR>Fax  : 302-651-7701
+<BR>Email: kaufman@rlf.com<BR><BR><B>Mark D. Collins</B>
+<BR>Richards Layton & Finger
+<BR>One Rodney Square
+<BR>PO Box 551
+<BR>Wilmington, DE 19899
+<BR>302 651-7700
+<BR>Fax  : 302-651-7701
+<BR>Email: collins@RLF.com<BR><BR><B>Mark D. Collins</B>
+<BR>Richards Layton & Finger
+<BR>One Rodney Square
+<BR>PO Box 551
+<BR>Wilmington, DE 19899
+<BR>302-651-7531
+<BR>Fax  : 302-651-7701
+<BR>Email: collins@rlf.com<BR><BR></font></TD><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>U.S. Trustee</B></I><BR><B>United States Trustee</B>
+<BR>844 King Street, Room 2207
+<BR>Lockbox &#035;35
+<BR>Wilmington, DE 19899-0035
+<BR>302-573-6491<BR><BR>	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+<TD valign="top" WIDTH="40%" NOWRAP>
+  	                    <font size="+0">&nbsp;</font></TD></TR><TR>	<TD VALIGN=top WIDTH="50%"><FONT SIZE="+0"><I><B>Creditor Committee</B></I><BR><B>The Official Committee of Unsecured Creditors</B>	</FONT></TD>
+	<TD VALIGN=top WIDTH="20%" ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+	<TD VALIGN=top WIDTH="40%"><FONT SIZE="+0"><B>Jamie Lynne Edmonson</B>
+<BR>Bayard PA
+<BR>222 Delaware Avenue
+<BR>Wilmington, DE 19801
+<BR>302-429-4234
+<BR>Fax  : 302-658-6395
+<BR>Email: jedmonson@bayardlaw.com<BR><BR><B>Joshua K. Brody</B>
+<BR>Kramer Levin Naftalis & Frankel LLP
+<BR>1177 Avenue of the Americas
+<BR>New York, NY 10036
+<BR>212-715-9314
+<BR>Fax  : 212-715-8000
+<BR>Email: jbrody@kramerlevin.com	</FONT></TD>
+</TR></TABLE><BR><TABLE BORDER=1 CELLPADDING=10 CELLSPACING=0><TR><TH width="94" nowrap>Docket Date</TH>
+<TH colspan=2 align='center'>#</TH><TH align=center>Docket Text</TH></TR>
+<TR><TD width="94" nowrap valign=bottom>02/16/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/cgi-bin/show_doc.pl?caseid=121533&de_seq_num=2656&dm_id=8144741&doc_num=819&pdf_header=0' id='documentKcaseidV121533Kde_seq_numV2656Kdm_idV8144741Kdoc_numV819Kpdf_headerV0'>819</a><script>DocLink('documentKcaseidV121533Kde_seq_numV2656Kdm_idV8144741Kdoc_numV819Kpdf_headerV0');</script></TD><TD valign=bottom>    Certificate of No Objection <i>for Application of Debtors Pursuant to Bankruptcy Code Sections 327(e) and 328(a), Bankruptcy Rules 2014(a) and 2016(b), and Bankruptcy Local Rules 2014-1 and 2016-1, for an Order Authorizing the Debtors to Employ and to Retain Messana Rosner & Stern LLP as Special Counsel for the Debtor Nunc Pro Tunc to December 30, 2009</i> (related document(s) <script src='/lib/dls_url.js' language='javascript'></script><a href='https://ecf.deb.uscourts.gov/doc1/04209420652' onClick="goDLS('/doc1/04209420652','121533','2484','','0','','','','','');return(false)">761</a> ) Filed by Special Delaware Counsel to the Debtors.  (Arban, Brian) (Entered: 02/16/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/16/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/cgi-bin/show_doc.pl?caseid=121533&de_seq_num=2654&dm_id=8143511&doc_num=818&pdf_header=0' id='documentKcaseidV121533Kde_seq_numV2654Kdm_idV8143511Kdoc_numV818Kpdf_headerV0'>818</a><script>DocLink('documentKcaseidV121533Kde_seq_numV2654Kdm_idV8143511Kdoc_numV818Kpdf_headerV0');</script></TD><TD valign=bottom>    Motion to Appear pro hac vice <i>of Julie D&#039;Ambruoso</i>. Receipt Number 3155, Filed by Odisea Asset Management, LLC, Promecap S.A. de C.V., TESEFA, S.A. de C.V., Zendere Holdings S.A.P.I. de C.V..  (DiTomo, John) (Entered: 02/16/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/16/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/cgi-bin/show_doc.pl?caseid=121533&de_seq_num=2652&dm_id=8143462&doc_num=817&pdf_header=0' id='documentKcaseidV121533Kde_seq_numV2652Kdm_idV8143462Kdoc_numV817Kpdf_headerV0'>817</a><script>DocLink('documentKcaseidV121533Kde_seq_numV2652Kdm_idV8143462Kdoc_numV817Kpdf_headerV0');</script></TD><TD valign=bottom>    Motion to Appear pro hac vice <i>of Brian S. Hermann</i>. Receipt Number 3155, Filed by Odisea Asset Management, LLC, Promecap S.A. de C.V., TESEFA, S.A. de C.V., Zendere Holdings S.A.P.I. de C.V..  (DiTomo, John) (Entered: 02/16/2010)</TD></TR>
+<TR><TD width="94" nowrap valign=bottom>02/16/2010</TD><TD width=54 valign=bottom align=right style='border-right:0;padding-right:1px'>&nbsp;</TD><TD width=30 valign=bottom align=left style='border-left:0;padding-left:1px'><a href='/cgi-bin/show_doc.pl?caseid=121533&de_seq_num=2650&dm_id=8143450&doc_num=816&pdf_header=0' id='documentKcaseidV121533Kde_seq_numV2650Kdm_idV8143450Kdoc_numV816Kpdf_headerV0'>816</a><script>DocLink('documentKcaseidV121533Kde_seq_numV2650Kdm_idV8143450Kdoc_numV816Kpdf_headerV0');</script></TD><TD valign=bottom>    Motion to Appear pro hac vice <i>of Samuel E. Lovett</i>. Receipt Number 3155, Filed by Odisea Asset Management, LLC, Promecap S.A. de C.V., TESEFA, S.A. de C.V., Zendere Holdings S.A.P.I. de C.V..  (DiTomo, John) (Entered: 02/16/2010)</TD></TR>
+</TABLE><BR><BR><BR><BR><HR><CENTER><TABLE BORDER=1 BGCOLOR=white width="400"><TR><TH COLSPAN=4><FONT SIZE=+1 COLOR=DARKRED>PACER Service Center </FONT></TH></TR><TR><TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH></TR><TR></TR><TR></TR><TR><TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1 COLOR=DARKBLUE>02/17/2010 02:26:27</FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> [LOGIN REMOVED] </FONT></TH></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 9sprice9                         </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Docket Report </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search Criteria: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 09-13684-CSS Fil or Ent: entered From: 2/16/2010 To: 2/17/2010 Doc From: 0 Doc To: 99999999     Format: html </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Billable Pages: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 1 </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.08 </FONT></TD></TR><TR></TR><TR></TR></TABLE></CENTER></HR></div></body></html>
