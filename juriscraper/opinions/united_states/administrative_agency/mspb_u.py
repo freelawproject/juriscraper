@@ -7,7 +7,6 @@ Date created: 1 Sep 2014
 Type: Non-precedential
 """
 
-import random
 from juriscraper.opinions.united_states.administrative_agency import mspb_p
 
 
@@ -15,8 +14,10 @@ class Site(mspb_p.Site):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://www.mspb.gov/netsearch/decisiondisplay_2011.aspx?timelapse=3&displaytype=60414&description=Nonprecedential%20Decisions&cachename=a' + str(random.randrange(1, 100000000))
+        self.type = 'Nonprecedential'
+        self.display = 60414
         self.column_diff = -1
+        self.set_url()
 
     def _get_precedential_statuses(self):
         return ["Unpublished"] * len(self.case_dates)
