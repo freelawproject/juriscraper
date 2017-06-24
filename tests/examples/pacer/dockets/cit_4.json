@@ -1,78 +1,77 @@
 {
-  "date_last_filing": null, 
-  "demand": null, 
-  "date_terminated": "2010-07-02", 
+  "demand": null,
+  "date_terminated": "2010-07-02",
   "docket_entries": [
     {
-      "date_filed": "2009-12-10", 
-      "document_number": "1", 
-      "description": "Summons. Filed by Curtis Walter Knauss of Sandler, Travis & Rosenberg, PA on behalf of Franco Manufacturing Co., Inc.. (Goell, Geoffrey) (Entered: 12/10/2009)", 
+      "date_filed": "2009-12-10",
+      "document_number": "1",
+      "description": "Summons. Filed by Curtis Walter Knauss of Sandler, Travis & Rosenberg, PA on behalf of Franco Manufacturing Co., Inc.. (Goell, Geoffrey) (Entered: 12/10/2009)",
       "pacer_doc_id": "0141408484"
-    }, 
+    },
     {
-      "date_filed": "2009-12-10", 
-      "document_number": "2", 
-      "description": "Form 5 Information Statement. Filed by Curtis Walter Knauss of Sandler, Travis & Rosenberg, PA on behalf of Franco Manufacturing Co., Inc.. (Goell, Geoffrey) (Entered: 12/10/2009)", 
+      "date_filed": "2009-12-10",
+      "document_number": "2",
+      "description": "Form 5 Information Statement. Filed by Curtis Walter Knauss of Sandler, Travis & Rosenberg, PA on behalf of Franco Manufacturing Co., Inc.. (Goell, Geoffrey) (Entered: 12/10/2009)",
       "pacer_doc_id": "0141408487"
-    }, 
+    },
     {
-      "date_filed": "2009-12-10", 
-      "document_number": "3", 
-      "description": "Form 13 Corporate Disclosure Statement. Filed by Curtis Walter Knauss of Sandler, Travis & Rosenberg, PA on behalf of Franco Manufacturing Co., Inc.. (Goell, Geoffrey) (Entered: 12/10/2009)", 
+      "date_filed": "2009-12-10",
+      "document_number": "3",
+      "description": "Form 13 Corporate Disclosure Statement. Filed by Curtis Walter Knauss of Sandler, Travis & Rosenberg, PA on behalf of Franco Manufacturing Co., Inc.. (Goell, Geoffrey) (Entered: 12/10/2009)",
       "pacer_doc_id": "0141408490"
-    }, 
+    },
     {
-      "date_filed": "2009-12-10", 
-      "document_number": "4", 
-      "description": "Summons served by Clerk's Office upon: Plaintiff, Defendant and Bureau of Customs and Border Protection. (Goell, Geoffrey) (Entered: 12/10/2009)", 
+      "date_filed": "2009-12-10",
+      "document_number": "4",
+      "description": "Summons served by Clerk's Office upon: Plaintiff, Defendant and Bureau of Customs and Border Protection. (Goell, Geoffrey) (Entered: 12/10/2009)",
       "pacer_doc_id": "0141408493"
     }
-  ], 
-  "docket_number": "1:09-cv-00523", 
-  "date_filed": "2009-12-10", 
-  "jurisdiction": null, 
-  "case_name": "Franco Manufacturing Co., Inc. v. United States", 
+  ],
+  "docket_number": "1:09-cv-00523",
+  "date_filed": "2009-12-10",
+  "jurisdiction": null,
+  "case_name": "Franco Manufacturing Co., Inc. v. United States",
   "parties": [
     {
       "attorneys": [
         {
-          "contact": "Sandler, Travis & Rosenberg, PA\n551 Fifth Avenue\nSuite 1100\nNew York, NY 10176-0614\n(212) 883-1300\nFax: (212) 883-0068\nEmail: apurcell@strtrade.com\n", 
-          "name": "Arthur K. Purcell", 
+          "contact": "Sandler, Travis & Rosenberg, PA\n551 Fifth Avenue\nSuite 1100\nNew York, NY 10176-0614\n(212) 883-1300\nFax: (212) 883-0068\nEmail: apurcell@strtrade.com\n",
+          "name": "Arthur K. Purcell",
           "roles": [
-            "LEAD ATTORNEY", 
+            "LEAD ATTORNEY",
             "ATTORNEY TO BE NOTICED"
           ]
-        }, 
+        },
         {
-          "contact": "Sandler, Travis & Rosenberg, PA\n551 Fifth Avenue\nSuite 1100\nNew York, NY 10176-0614\n(212) 883-1300\nFax: (212) 883-0068\n", 
-          "name": "Curtis Walter Knauss", 
+          "contact": "Sandler, Travis & Rosenberg, PA\n551 Fifth Avenue\nSuite 1100\nNew York, NY 10176-0614\n(212) 883-1300\nFax: (212) 883-0068\n",
+          "name": "Curtis Walter Knauss",
           "roles": []
         }
-      ], 
-      "type": "Plaintiff", 
-      "name": "Franco Manufacturing Co., Inc.", 
+      ],
+      "type": "Plaintiff",
+      "name": "Franco Manufacturing Co., Inc.",
       "extra_info": ""
-    }, 
+    },
     {
       "attorneys": [
         {
-          "contact": "U.S. Department of Justice\nInternational Trade Field Office\n26 Federal Plaza - Room 346\nCivil Division\nNew York, NY 10278\n(212) 264-9230\nEmail: civil.itfoecf@usdoj.gov\n", 
-          "name": "Attorney-in-Charge", 
+          "contact": "U.S. Department of Justice\nInternational Trade Field Office\n26 Federal Plaza - Room 346\nCivil Division\nNew York, NY 10278\n(212) 264-9230\nEmail: civil.itfoecf@usdoj.gov\n",
+          "name": "Attorney-in-Charge",
           "roles": [
-            "LEAD ATTORNEY", 
+            "LEAD ATTORNEY",
             "ATTORNEY TO BE NOTICED"
           ]
         }
-      ], 
-      "type": "Defendant", 
-      "name": "United States", 
+      ],
+      "type": "Defendant",
+      "name": "United States",
       "extra_info": ""
     }
-  ], 
-  "nature_of_suit": null, 
-  "jury_demand": "No", 
-  "assigned_to_str": "", 
-  "court_id": "cit", 
-  "cause": null, 
+  ],
+  "nature_of_suit": null,
+  "jury_demand": "No",
+  "assigned_to_str": "",
+  "court_id": "cit",
+  "cause": null,
   "referred_to_str": null
 }

@@ -20,7 +20,6 @@ class DocketReport(object):
     in_re_regex = re.compile(r"\bIN\s+RE:\s+.*", flags=re.IGNORECASE)
     date_filed_regex = re.compile(r'Date [fF]iled:\s+(.*)')
     date_terminated_regex = re.compile(r'Date [tT]erminated:\s+(.*)')
-    date_last_filing_regex = re.compile(r"Date of last filing:\s+(.*)")
     assigned_to_regex = re.compile(r'Assigned to:\s+(.*)')
     referred_to_regex = re.compile(r'Referred to:\s+(.*)')
     cause_regex = re.compile(r'Cause:\s+(.*)')
@@ -79,8 +78,6 @@ class DocketReport(object):
                                           cast_to_date=True),
             'date_terminated': self._get_value(self.date_terminated_regex,
                                                cast_to_date=True),
-            'date_last_filing': self._get_value(self.date_last_filing_regex,
-                                                cast_to_date=True),
             'assigned_to_str': self._get_judge(self.assigned_to_regex),
             'referred_to_str': self._get_judge(self.referred_to_regex),
             'cause': self._get_value(self.cause_regex),
