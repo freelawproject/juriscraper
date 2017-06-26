@@ -1,0 +1,499 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><title>
+	Opinions
+</title>
+
+    <style type="text/css">
+          .divStandard {text-align:left;
+                      width: 100%;
+                      border-style: solid;
+                      border-color: Silver;
+                      border-width :2px;
+                      background-color: #EBEAE3;
+                      font-family:Cambria Serif;
+                      font-size: 12pt;
+                      font-weight: normal;
+                      margin-left: auto;
+                      margin-right:auto;}
+
+        .TableStandard {text-align:left;
+                        width: 100%;
+                        font-family: Cambria Serif;
+                        font-size: 12pt;
+                        font-weight: normal;
+                        background-color: #EBEAE3;
+                        border-spacing:2;
+                        padding:2;}
+
+        .gridcaption {font-size: 12pt;
+                      font-weight: bold;}
+
+        .gridview {font-family:"Cambria Serif";
+                   width: 100%;
+                   font-size: 12pt;
+                   font-weight: normal;
+                   text-align:center;
+                   border-style: solid;
+                   border-color: Gray;
+                   border-width: 1px; }
+
+        .gridview .textcenter {text-align:center; }
+
+        .gridview th {text-align:left;
+                      background: LightSteelBlue;
+                      padding: 5px;}
+
+        .gridview th a{color: #003300;
+                       text-decoration: none;}
+
+        .gridview th a:hover{color: #003300;
+                            text-decoration: underline;}
+
+        .gridview td  {text-align:left;
+                       background: White;
+                       color: #333333;
+                       font: small "Cambria Serif";
+                       padding: 4px;}
+
+        .gridview tr.even td {background: #E8EEFA; }
+
+        .gridview td a{color: #003300;
+                        font: bold small "Cambria Serif";
+                        padding: 2px;
+                        text-decoration: none;}
+
+        .gridview td a:hover {color: red;
+                                font-weight: bold;
+                                text-decoration:underline;}
+
+        .selectedRowStyle td {background-color:#FFFFE0;}
+
+        .footerRowStyle td {background-color:Silver;}
+
+    </style>
+</head>
+
+<body style="background-color:#EBEAE3;">
+    <form name="form1" method="post" action="./opinions.aspx?type=o" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D537E8AD" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+</div>
+        <div id="div1" class="divStandard">
+
+            <br />
+            <table id="Table2" class="TableStandard" style="background-color:#B0C4DE; border-color:Silver; border-width:1px;">
+	<tr>
+		<td id="tdHeaderRow" align="center">
+                        <span id="lblHeader" class="textcenter" style="font-size:12pt;font-weight:bold;"> Most Recent Written Opinions</span>
+                        &nbsp;
+                        <a id="hlOpinion" title="right click and copy this URL for a permanent link to these search results" href="https:\\edca.4dca.org\Opinions.aspx?Type=o"><img title="right click and copy this URL for a permanent link to these search results" src="Images/OpinionLink.png" alt="" style="border-width:0px;" /></a>
+                    </td>
+	</tr>
+</table>
+
+            <table id="Table3" class="TableStandard">
+	<tr>
+		<td colspan="3">
+                        <div>
+			<table class="gridview" cellspacing="0" rules="all" border="1" id="grdOpinions" style="border-collapse:collapse;">
+				<tr>
+					<th class="textcenter" scope="col">Case No.</th><th class="textcenter" scope="col">View</th><th scope="col">Case Style</th><th scope="col">Note</th><th class="textcenter" scope="col">Disposition</th><th class="textcenter" scope="col">Disposition Date</th>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl02_lblCaseNo">12-2303</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl02_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2012/2303/122303_DC13_06212017_084116_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl02_lblDocument">LEON REID  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl02_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl02_lblDisposition">Reversed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl02_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl03_lblCaseNo">14-1766</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl03_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2014/1766/141766_DC13_06212017_084840_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl03_lblDocument">GROSSMAN, ROTH, P.A.  vs KRISTI MELLEN, etc.,  et al.</span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl03_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl03_lblDisposition">Reversed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl03_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl04_lblCaseNo">14-3130</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl04_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2014/3130/143130_DC13_06212017_085043_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl04_lblDocument">WYLIE BILLUPS  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl04_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl04_lblDisposition">Reversed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl04_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl05_lblCaseNo">14-4549</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl05_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2014/4549/144549_DC08_06212017_105122_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl05_lblDocument">GWEN E. RICHBELL, ALAN RICHBELL, ET AL. vs ERNST TOUSSAINT, WHOLFNEY K. JEAN FRANCOIS, ET AL.</span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl05_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl05_lblDisposition">Affirmed in Part/Reversed in Part</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl05_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl06_lblCaseNo">14-4918</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl06_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2014/4918/144918_DC13_06212017_090504_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl06_lblDocument">MICKAEL JACKSON  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl06_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl06_lblDisposition">Reversed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl06_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl07_lblCaseNo">15-1553</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl07_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2015/1553/151553_DC13_06212017_090731_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl07_lblDocument">D.B., A CHILD  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl07_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl07_lblDisposition">Reversed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl07_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl08_lblCaseNo">15-2886</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl08_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2015/2886/152886_DC08_06212017_091402_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl08_lblDocument">ORLANDO MCCORMACK  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl08_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl08_lblDisposition">Affirmed in Part/Reversed in Part</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl08_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl09_lblCaseNo">15-3132</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl09_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2015/3132/153132_NOND_06212017_115039_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl09_lblDocument">DAVID WAYNE CARTER  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl09_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl09_lblDisposition">Non-dispositive</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl09_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl10_lblCaseNo">15-4451</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl10_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2015/4451/154451_DC05_06212017_091815_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl10_lblDocument">ROCCO GIORDANO  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl10_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl10_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl10_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl11_lblCaseNo">15-4526</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl11_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2015/4526/154526_DC13_06212017_092644_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl11_lblDocument">CITIBANK, N.A., AS TRUSTEE, etc.  vs TANGERINE J. MANNING, et al. </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl11_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl11_lblDisposition">Reversed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl11_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl12_lblCaseNo">15-4561</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl12_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2015/4561/154561_NOND_06212017_093110_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl12_lblDocument">NATIONSTAR MORTGAGE LLC, etc.  vs MARIE ANN GLASS, et al. </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl12_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl12_lblDisposition">Non-dispositive</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl12_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl13_lblCaseNo">15-4708</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl13_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2015/4708/154708_DC05_06212017_093300_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl13_lblDocument">JAMES SAINT-FORT  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl13_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl13_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl13_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl14_lblCaseNo">16-0067</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl14_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/0067/160067_DC05_06212017_093946_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl14_lblDocument">DONNA FANALI, etc.  vs R.J. REYNOLDS TOBACCO COMPANY</span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl14_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl14_lblDisposition">Affirmed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl14_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl15_lblCaseNo">16-0423</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl15_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/0423/160423_DC08_06212017_094132_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl15_lblDocument">TAMARICK CRUZ  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl15_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl15_lblDisposition">Affirmed in Part/Reversed in Part</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl15_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl16_lblCaseNo">16-0927</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl16_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/0927/160927_DC13_06212017_094339_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl16_lblDocument">CORPORATE CREATIONS ENT. LLC, f/d/b/a CORP. CREATIONS ENT. INC. vs BRIAN R. FONS ATTORNEY AT LAW P.C. and BRIAN R. FONS</span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl16_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl16_lblDisposition">Reversed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl16_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl17_lblCaseNo">16-1153</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl17_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/1153/161153_DC08_06212017_094536_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl17_lblDocument">CHRISTOPHER ROUNDTREE  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl17_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl17_lblDisposition">Affirmed in Part/Reversed in Part</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl17_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl18_lblCaseNo">16-1255</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl18_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/1255/161255_DC08_06212017_094653_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl18_lblDocument">CYNTHIA RUSSOMANO f/k/a CYNTHIA C. SPALL vs JOSEPH MARESCA, and JEM PALM BEACH, LLC, etc.</span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl18_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl18_lblDisposition">Affirmed in Part/Reversed in Part</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl18_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl19_lblCaseNo">16-2290</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl19_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/2290/162290_DC13_06212017_094807_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl19_lblDocument">JEROME LORD  vs LOUISE LORD </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl19_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl19_lblDisposition">Reversed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl19_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl20_lblCaseNo">16-2594</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl20_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/2594/162594_DC13_06212017_095315_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl20_lblDocument">WELLS FARGO EQUIPMENT FINANCE  vs BACJET, LLC, ET AL. </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl20_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl20_lblDisposition">Reversed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl20_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl21_lblCaseNo">16-2676</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl21_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/2676/162676_DC13_06212017_095635_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl21_lblDocument">D.D.S., A CHILD  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl21_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl21_lblDisposition">Reversed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl21_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl22_lblCaseNo">16-2793</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl22_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/2793/162793_DC13_06212017_095753_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl22_lblDocument">STANLEY SHERMAN  vs PAUL SAVASTANO </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl22_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl22_lblDisposition">Reversed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl22_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl23_lblCaseNo">16-3250</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl23_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/3250/163250_DC13_06212017_095941_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl23_lblDocument">CO. OF CUMBERLAND, NEW JERSEY  vs ANDREW K. KWAP </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl23_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl23_lblDisposition">Reversed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl23_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl24_lblCaseNo">16-3687</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl24_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/3687/163687_DC13_06212017_100113_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl24_lblDocument">G.R.N., A CHILD  vs STATE OF FLORIDA </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl24_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl24_lblDisposition">Reversed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl24_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl25_lblCaseNo">16-4015</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl25_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/4015/164015_DC13_06212017_100258_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl25_lblDocument">BRUCE S. ROSENWATER  vs DEUTSCHE BANK NATIONAL TRUST, etc., et al.</span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl25_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl25_lblDisposition">Reversed</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl25_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl26_lblCaseNo">16-4264</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl26_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/4264/164264_DC08_06212017_100550_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl26_lblDocument">JAIME DUM LERNER  vs VICKY LEVY DUM </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl26_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl26_lblDisposition">Affirmed in Part/Reversed in Part</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl26_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr class="even">
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl27_lblCaseNo">16-4319</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl27_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2016/4319/164319_DC03_06212017_101016_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl27_lblDocument">CHILDREN'S MEDICAL CENTER, P.A, et al. vs JAKYUNG KIM, et al.</span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl27_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl27_lblDisposition">Granted</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl27_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr><tr>
+					<td class="textcenter" style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl28_lblCaseNo">17-0175</span>
+	                                </td><td class="textcenter">
+                                        <a id="grdOpinions_ctl28_cmdView" title="View" href="https://edca.4dca.org/DCADocs/2017/0175/170175_DC03_06212017_101253_i.pdf" target="_blank"><img title="View" src="Images/PDF3.ico" alt="" style="border-width:0px;" /></a>
+                                    </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl28_lblDocument">OIL, LLC AND MAXIMILIANO RUSSO vs STAMAX CORP. </span>
+		                            </td><td style="white-space:nowrap;">
+                                        <span id="grdOpinions_ctl28_lblNote"></span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl28_lblDisposition">Granted</span>
+		                            </td><td class="textcenter">
+                                        <span id="grdOpinions_ctl28_lblDispDate">06/21/2017</span>
+	                                </td>
+				</tr>
+			</table>
+		</div>
+	                </td>
+	</tr>
+</table>
+
+        </div>
+    </form>
+</body>
+</html>

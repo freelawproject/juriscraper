@@ -56,8 +56,9 @@ class Site(OpinionSite):
         path = 'id("content")/div//strong'
         sub_path = './following-sibling::ul[1]//li|../following-sibling::ul[1]//li'
         for element in self.html.xpath(path):
+            text = element.text_content().strip(':')
             try:
-                case_date = convert_date_string(element.text_content())
+                case_date = convert_date_string(text)
             except ValueError:
                 # Sometimes the court includes "To be released..."
                 # sections, without links, which we skip here

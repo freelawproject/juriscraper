@@ -16,6 +16,6 @@ class Site(mass.Site):
         # If you discover new examples that failed the
         # regex below, please add them to the test_massappct
         # method in test_everything.py
-        self.regex = "(.*) \((AC.*?)\)"
+        self.regex = "(.*) \((%s.*?)\)" % self.court_identifier
         self.date_group = 3
         self.set_local_variables()
