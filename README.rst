@@ -223,7 +223,7 @@ Version History
    appellate panels (9th and 10th Cir.)
 -  1.1.* - Major code reorganization and first release on the Python Package Index (PyPi)
 -  1.2.* - Continued improvements.
--  1.3.* - Adds support for scraping PACER.
+-  1.3.* - Adds support for scraping some parts of PACER.
 
 **Current**
 
