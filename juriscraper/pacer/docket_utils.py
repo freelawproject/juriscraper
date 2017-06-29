@@ -1,10 +1,11 @@
 import re
+
 from ..lib.string_utils import titlecase
 
 
 def normalize_party_types(t):
     """Normalize various party types to as few as possible."""
-    t = t.lower()
+    t = t.lower().strip()
 
     # Numerical types
     t = re.sub(r'defendant\s+\(\d+\)', r'defendant', t)

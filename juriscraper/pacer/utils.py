@@ -3,6 +3,8 @@ import requests
 import tldextract
 from six import string_types
 
+from ..lib.string_utils import force_unicode
+
 
 def get_pacer_court_info():
     r = requests.get("https://court-version-scraper.herokuapp.com/courts.json")
@@ -45,8 +47,10 @@ def get_pacer_doc_id_from_doc1_url(url):
     Out: 01712427473
     In:  /doc1/01712427473
     Out: 01712427473
+    
+    See tests for more examples.
     """
-    return url.rsplit('/', 1)[1]
+    return url.rsplit('/', 1)[1].split('?')[0]
 
 
 def reverse_goDLS_function(s):
@@ -131,6 +135,7 @@ def clean_pacer_object(obj):
     1. Removing spaces before commas.
     1. Stripping whitespace from the ends.
     1. Normalizing white space.
+    1. Forcing unicode.
     
     :param obj: A dict or list containing string objects.
     :return: A dict or list with the string values cleaned.
@@ -147,6 +152,7 @@ def clean_pacer_object(obj):
         return d
     elif isinstance(obj, string_types):
         s = ' '.join(obj.strip().split())
+        s = force_unicode(s)
         return re.sub('\s+,', ',', s)
     else:
         return obj
