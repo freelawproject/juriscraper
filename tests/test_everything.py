@@ -1,29 +1,34 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+from __future__ import print_function
+
 import datetime
 import glob
 import logging
-import os
 import sys
 import time
 import unittest
+
+import os
 import vcr
 
-from . import TESTS_ROOT
-from juriscraper.lib.exceptions import SlownessException
-from juriscraper.lib.importer import build_module_list
 from juriscraper.lib.date_utils import (
     parse_dates, quarter, is_first_month_in_quarter, fix_future_year_typo,
     make_date_range_tuples)
+from juriscraper.lib.exceptions import SlownessException
+from juriscraper.lib.importer import build_module_list
 from juriscraper.lib.judge_parsers import normalize_judge_string, \
     normalize_judge_names
 from juriscraper.lib.string_utils import (
     clean_string, fix_camel_case, force_unicode, harmonize, titlecase,
-    CaseNameTweaker, convert_date_string, normalize_dashes, split_date_range_string
+    CaseNameTweaker, convert_date_string, normalize_dashes,
+    split_date_range_string
 )
 from juriscraper.opinions.united_states.state import colo, mass, massappct, \
     nh, pa
 from juriscraper.oral_args.united_states.federal_appellate import ca6
+from juriscraper.pacer.docket_utils import normalize_party_types
+from . import TESTS_ROOT
 
 vcr = vcr.VCR(cassette_library_dir=os.path.join(TESTS_ROOT, 'fixtures/cassettes'))
 
@@ -251,6 +256,60 @@ class JudgeParsingTest(unittest.TestCase):
         }]
         for pair in pairs:
             self.assertEqual(pair['a'], normalize_judge_names(pair['q']))
+
+    def test_party_type_normalization(self):
+        pairs = [{
+            'q': 'Defendant                                 (1)',
+            'a': 'Defendant'
+        }, {
+            'q': 'Debtor 2',
+            'a': 'Debtor',
+        }, {
+            'q': 'ThirdParty Defendant',
+            'a': 'Third Party Defendant',
+        }, {
+            'q': 'ThirdParty Plaintiff',
+            'a': 'Third Party Plaintiff',
+        }, {
+            'q': '3rd Pty Defendant',
+            'a': 'Third Party Defendant',
+        }, {
+            'q': '3rd party defendant',
+            'a': 'Third Party Defendant',
+        }, {
+            'q': 'Counter-defendant',
+            'a': 'Counter Defendant',
+        }, {
+            'q': 'Counter-Claimaint',
+            'a': 'Counter Claimaint',
+        }, {
+            'q': 'US Trustee',
+            'a': 'U.S. Trustee',
+        }, {
+            'q': 'United States Trustee',
+            'a': 'U.S. Trustee',
+        }, {
+            'q': 'U. S. Trustee',
+            'a': 'U.S. Trustee',
+        }, {
+            'q': 'BUS BOY',
+            'a': 'Bus Boy',
+        }, {
+            'q': 'JointAdmin Debtor',
+            'a': 'Jointly Administered Debtor',
+        }, {
+            'q': 'Intervenor-Plaintiff',
+            'a': 'Intervenor Plaintiff',
+        }, {
+            'q': 'Intervenor Dft',
+            'a': 'Intervenor Defendant',
+        }]
+        for pair in pairs:
+            print("Normalizing PACER type of '%s' to '%s'..." %
+                  (pair['q'], pair['a']), end='')
+            result = normalize_party_types(pair['q'])
+            self.assertEqual(result, pair['a'])
+            print('✓')
 
 
 class StringUtilTest(unittest.TestCase):
