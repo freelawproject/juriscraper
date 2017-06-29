@@ -1,13 +1,12 @@
 #!/usr/bin/env python
 # encoding: utf-8
-from six import text_type
-from six.moves.urllib.parse import urlsplit, urlunsplit
-
 import re
 from lxml import html
-from lxml.html.clean import Cleaner
 from lxml.etree import XMLSyntaxError
 from lxml.html import html5parser, fromstring, tostring
+from lxml.html.clean import Cleaner
+from six import text_type
+from six.moves.urllib.parse import urlsplit, urlunsplit
 
 try:
     # Use cchardet for performance to detect the character encoding.
@@ -34,7 +33,7 @@ def get_html5_parsed_text(text):
     :return: an lxml.HtmlElement object
     """
     parsed = html5parser.document_fromstring(text.encode('utf-8'))
-    return fromstring(tostring(parsed))
+    return fromstring(tostring(parsed, encoding='unicode'))
 
 
 def get_clean_body_content(content, remove_extra_tags=[]):
