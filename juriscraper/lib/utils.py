@@ -1,4 +1,9 @@
-from itertools import chain, islice, tee, izip
+from itertools import chain, tee, islice
+
+try:
+    from itertools import izip as zip
+except ImportError:
+    pass
 
 
 def previous_and_next(some_iterable):
@@ -12,4 +17,4 @@ def previous_and_next(some_iterable):
     prevs, items, nexts = tee(some_iterable, 3)
     prevs = chain([None], prevs)
     nexts = chain(islice(nexts, 1, None), [None])
-    return izip(prevs, items, nexts)
+    return zip(prevs, items, nexts)
