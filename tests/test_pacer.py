@@ -15,7 +15,7 @@ import requests_mock
 import vcr
 from requests import ConnectionError
 
-from juriscraper.lib.exceptions import PacerLoginException
+from juriscraper.lib.exceptions import PacerLoginException, SlownessException
 from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.pacer import DocketReport, FreeOpinionReport
@@ -451,12 +451,38 @@ class DocketParseTest(unittest.TestCase):
                 self.assertEqual(j['parties'], data['parties'])
                 self.assertEqual(j, data)
             t2 = time.time()
+
+            max_duration = 1
+            duration = t2 - t1
+            if duration > max_duration:
+                if sys.gettrace() is None:
+                    # Don't do this if we're debugging.
+                    raise SlownessException(
+                        "This scraper took {duration}s to test, which is more "
+                        "than the maximum allowed duration of "
+                        "{max_duration}s.".format(
+                            duration=duration,
+                            max_duration=max_duration,
+                        )
+                    )
             sys.stdout.write("✓ - %0.1fs\n" % (t2-t1))
 
     @requests_mock.Mocker()
-    def test_bankruptcy_dockets(self, request_mock):
+    def test_bankruptcy_court_dockets(self, request_mock):
         path_root = os.path.join("tests", "examples", "pacer", "dockets",
                                  "bankruptcy")
+        self.run_parsers_on_path(path_root, request_mock)
+
+    @requests_mock.Mocker()
+    def test_district_court_dockets(self, request_mock):
+        path_root = os.path.join('tests', 'examples', 'pacer', 'dockets',
+                                 'district')
+        self.run_parsers_on_path(path_root, request_mock)
+
+    @requests_mock.Mocker()
+    def test_specialty_court_dockets(self, request_mock):
+        path_root = os.path.join('tests', 'examples', 'pacer', 'dockets',
+                                 'special')
         self.run_parsers_on_path(path_root, request_mock)
 
 

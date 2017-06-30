@@ -1,11 +1,11 @@
 {
   "demand": null, 
-  "date_terminated": null, 
+  "date_terminated": "2010-10-14", 
   "docket_entries": [
     {
       "date_filed": "2010-02-16", 
       "document_number": "1", 
-      "description": "Voluntary Petition under Chapter 11. Schedules and Statements Incomplete, Statement of Financial Affairs Not Filed or Incomplete, Disclosure of Compensation of Attorney Not Filed or Not Required, Filed by Robert N Reynolds on behalf of Colonial Guy Florida Inc. (Reynolds, Robert) (Entered: 02/16/2010)", 
+      "description": "Voluntary Petition under Chapter 11. (Paid Fee) ***Related Cases 6:09-bk-14507-6J1, Dismissed 10/28/2009 and 6:09-bk-16387-6J3, Dismissed 11/23/2009***. Schedules and Statements Incomplete, Statement of Financial Affairs Not Filed or Incomplete, Disclosure of Compensation of Attorney Not Filed or Not Required, Filed by Robert N Reynolds on behalf of Colonial Guy Florida Inc. (Reynolds, Robert) Modified on 2/17/2010 (Pat). Modified on 2/18/2010 (Aimee). Modified on 6/15/2010 (Rutha). (Entered: 02/16/2010)", 
       "pacer_doc_id": "046032433911"
     }
   ], 
@@ -18,26 +18,32 @@
     {
       "attorneys": [
         {
-          "contact": "Robert N Reynolds PA\n501 North Orlando Avenue\nSuite 313-240\nWinter Park, FL 32789\n(407) 647-4262\nFax : (407) 650-2740\nEmail:\n", 
+          "contact": "Robert N Reynolds PA\n501 North Orlando Avenue\nSuite 313-240\nWinter Park, FL 32789\n(407) 647-4262\nFax : (407) 641-9300\nEmail:\n", 
           "name": "Robert N Reynolds", 
           "roles": []
         }
       ], 
       "type": "Debtor", 
       "name": "Colonial Guy Florida Inc", 
-      "extra_info": "1600 East Colonial Drive\nOrlando, FL 32803\n(407) 647-4262\nTax ID / EIN: 20-0985253"
+      "extra_info": "1600 East Colonial Drive\nOrlando, FL 32803\nORANGE-FL\nTax ID / EIN: 20-0985253"
     }, 
     {
-      "attorneys": [], 
+      "attorneys": [
+        {
+          "contact": "Office of the United States Trustee\n400 W. Washington Street\nSuite 1100\nOrlando, FL 32801\n(407) 648-6301 Ext. 127\nFax : (407) 648-6323\nEmail:\n", 
+          "name": "Elena L Escamilla", 
+          "roles": []
+        }
+      ], 
       "type": "U.S. Trustee", 
-      "name": "United States Trustee - ORL", 
-      "extra_info": "135 W. Central Blvd., Suite 620\nOrlando, FL 32801\n407-648-6301"
+      "name": "United States Trustee - ORL, 11", 
+      "extra_info": "Office of the United States Trustee\nGeorge C Young Federal Building\n400 West Washington Street, Suite 1100\nOrlando, FL 32801\n407-648-6301"
     }
   ], 
   "date_filed": "2010-02-16", 
   "nature_of_suit": null, 
   "jury_demand": null, 
-  "assigned_to_str": "Chapter 11 Voluntary Asset Show Associated Cases Date Filed: 02/16/2010", 
+  "assigned_to_str": "Karen S. Jennemann", 
   "court_id": "flmb", 
   "cause": null, 
   "referred_to_str": null
