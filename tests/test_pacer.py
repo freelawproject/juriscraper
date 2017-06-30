@@ -469,19 +469,19 @@ class DocketParseTest(unittest.TestCase):
 
     @requests_mock.Mocker()
     def test_bankruptcy_court_dockets(self, request_mock):
-        path_root = os.path.join("tests", "examples", "pacer", "dockets",
+        path_root = os.path.join(TESTS_ROOT, "examples", "pacer", "dockets",
                                  "bankruptcy")
         self.run_parsers_on_path(path_root, request_mock)
 
     @requests_mock.Mocker()
     def test_district_court_dockets(self, request_mock):
-        path_root = os.path.join('tests', 'examples', 'pacer', 'dockets',
+        path_root = os.path.join(TESTS_ROOT, 'examples', 'pacer', 'dockets',
                                  'district')
         self.run_parsers_on_path(path_root, request_mock)
 
     @requests_mock.Mocker()
     def test_specialty_court_dockets(self, request_mock):
-        path_root = os.path.join('tests', 'examples', 'pacer', 'dockets',
+        path_root = os.path.join(TESTS_ROOT, 'examples', 'pacer', 'dockets',
                                  'special')
         self.run_parsers_on_path(path_root, request_mock)
 

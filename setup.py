@@ -3,7 +3,7 @@ import os
 from pip.req import parse_requirements
 from setuptools import setup, find_packages
 
-VERSION = "1.5.2"
+VERSION = "1.5.3"
 AUTHOR = "Mike Lissner"
 EMAIL = "info@free.law"
 HERE = os.path.abspath(os.path.dirname(__file__))
@@ -32,7 +32,7 @@ setup(
     author_email=EMAIL,
     maintainer=AUTHOR,
     maintainer_email=EMAIL,
-    keywords=["scraping", "legal"],
+    keywords=["scraping", "legal", "pacer"],
     long_description=read("README.rst"),
     packages=find_packages(),
     classifiers=[
@@ -53,7 +53,7 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     install_requires=requirements,
-    tests_require=['mock', 'vcrpy'],
+    tests_require=['jsondate', 'mock', 'vcrpy', 'requests-mock'],
     include_package_data=True,
     test_suite='tests',
 )
