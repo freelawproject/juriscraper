@@ -31,6 +31,7 @@ from juriscraper.pacer.docket_utils import normalize_party_types
 from . import TESTS_ROOT
 
 vcr = vcr.VCR(cassette_library_dir=os.path.join(TESTS_ROOT, 'fixtures/cassettes'))
+IS_TRAVIS = 'TRAVIS' in os.environ
 
 
 class DateTest(unittest.TestCase):
@@ -181,7 +182,7 @@ class ScraperExampleTest(unittest.TestCase):
                 speed = t2 - t1
                 msg = ''
                 if speed > max_speed:
-                    if sys.gettrace() is None:
+                    if sys.gettrace() is None and not IS_TRAVIS:
                         # Only do this if we're not debugging. Debuggers make
                         # things slower and breakpoints make things stop.
                         raise SlownessException(

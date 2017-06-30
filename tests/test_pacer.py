@@ -30,7 +30,7 @@ from . import JURISCRAPER_ROOT, TESTS_ROOT
 
 vcr = vcr.VCR(cassette_library_dir=os.path.join(TESTS_ROOT, 'fixtures/cassettes'))
 
-
+IS_TRAVIS = 'TRAVIS' in os.environ
 PACER_USERNAME = os.environ.get('PACER_USERNAME', None)
 PACER_PASSWORD = os.environ.get('PACER_PASSWORD', None)
 PACER_SETTINGS_MSG = "Skipping test. Please set PACER_USERNAME and " \
@@ -454,7 +454,7 @@ class DocketParseTest(unittest.TestCase):
             max_duration = 1
             duration = t2 - t1
             if duration > max_duration:
-                if sys.gettrace() is None:
+                if sys.gettrace() is None and not IS_TRAVIS:
                     # Don't do this if we're debugging.
                     raise SlownessException(
                         "The parser for '{fn}' took {duration}s to test, "
