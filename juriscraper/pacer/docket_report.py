@@ -455,7 +455,7 @@ class DocketReport(object):
             # And find its highest ancestor table that lacks a center tag.
             u'/ancestor::table[not(.//center)][last()]'
         )[0]
-        cells = table.xpath(u'.//td[not(.//table)]')
+        cells = table.xpath(u'.//td')
         self.metadata_values = []
         # Convert the <br> separated content into text strings, treating as much
         # as possible as HTML.
@@ -558,7 +558,9 @@ class DocketReport(object):
             return case_name
         else:
             matches = []
-            for v in self.metadata_values:
+            # Skip the last value, it's a concat of all previous values and
+            # isn't needed for case name matching.
+            for v in self.metadata_values[:-1]:
                 m = self.case_name_regex.search(v)
                 if m:
                     matches.append(m)
@@ -622,7 +624,11 @@ class DocketReport(object):
             if m:
                 if cast_to_date:
                     return convert_date_string(m.group(1))
-                return m.group(1)
+                hit = m.group(1)
+                if "date filed" not in hit.lower():
+                    # Safety check. Sometimes a match is made against the merged
+                    # text string, including its headers. This is wrong.
+                    return hit
         return None
 
     @staticmethod

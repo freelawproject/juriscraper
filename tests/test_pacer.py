@@ -411,8 +411,7 @@ class DocketParseTest(unittest.TestCase):
             data = report.data
 
             # Make sure some required fields are populated.
-            fields = ['date_filed', 'case_name', 'docket_number',
-                      'assigned_to_str']
+            fields = ['date_filed', 'case_name', 'docket_number']
             for field in fields:
                 self.assertTrue(
                     data[field],
