@@ -1,0 +1,56 @@
+{
+  "demand": null, 
+  "date_terminated": null, 
+  "docket_entries": [
+    {
+      "date_filed": "2010-02-12", 
+      "document_number": "1", 
+      "description": "Voluntary Petition (Chapter 11). Order for Relief Entered. Chapter 11 Plan due by 6/14/2010, Disclosure Statement due by 6/14/2010, Initial Case Conference due by 3/15/2010, Filed by Mark A. Frankel of Backenroth Frankel & Krinsky, LLP on behalf of 1280 M & F Management LLC. (Frankel, Mark) (Entered: 02/12/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-02-12", 
+      "document_number": "2", 
+      "description": "Affidavit Pursuant to Local Rule re: Chapter 11 Filing filed by Mark A. Frankel on behalf of 1280 M & F Management LLC. (Frankel, Mark) (Entered: 02/12/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-02-12", 
+      "document_number": "3", 
+      "description": "Application to Employ Backenroth Frankel & Krinsky, LLP as Debtor's Attorneys filed by Mark A. Frankel on behalf of 1280 M & F Management LLC. (Frankel, Mark) (Entered: 02/12/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }
+  ], 
+  "docket_number": "10-22259", 
+  "date_discharged": null, 
+  "date_converted": null, 
+  "jurisdiction": null, 
+  "case_name": "1280 M & F Management LLC", 
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "contact": "Backenroth Frankel & Krinsky, LLP\n489 Fifth Avenue\nNew York, NY 10017\n(212) 593-1100\nFax : (212) 644-0544\nEmail: mfrankel@bfklaw.com\n", 
+          "name": "Mark A. Frankel", 
+          "roles": []
+        }
+      ], 
+      "type": "Debtor", 
+      "name": "1280 M & F Management LLC", 
+      "extra_info": "134 Illington Rd\nOssining, NY 10562\nTax ID / EIN: 20-4939127"
+    }, 
+    {
+      "attorneys": [], 
+      "type": "U.S. Trustee", 
+      "name": "United States Trustee", 
+      "extra_info": "33 Whitehall Street\n21st Floor\nNew York, NY 10004\n(212) 510-0500"
+    }
+  ], 
+  "date_filed": "2010-02-12", 
+  "nature_of_suit": null, 
+  "jury_demand": null, 
+  "assigned_to_str": "Robert D. Drain", 
+  "court_id": "nysb", 
+  "cause": null, 
+  "referred_to_str": null
+}

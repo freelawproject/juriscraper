@@ -1,0 +1,74 @@
+{
+  "demand": null, 
+  "date_terminated": "2005-01-26", 
+  "docket_entries": [
+    {
+      "date_filed": "2009-11-19", 
+      "document_number": "42", 
+      "description": "Motion to Withdraw Unclaimed Funds Filed by Malcolm Troy Averett Jr.. (Public Terminal 2) Additional attachment(s) added on 11/19/2009 (vaul). (Entered: 11/19/2009)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2009-12-01", 
+      "document_number": "43", 
+      "description": "Certificate of Service Filed by Malcolm Troy Averett Jr. RE: related document(s) 42 Application to Withdraw Unclaimed Funds filed by Debtor Malcolm Troy Averett. (Public Terminal 1) (Entered: 12/01/2009)", 
+      "pacer_doc_id": "show_doc.pl"
+    }
+  ], 
+  "docket_number": "04-11957", 
+  "date_discharged": null, 
+  "date_converted": null, 
+  "jurisdiction": null, 
+  "case_name": "Malcolm Troy Averett, Jr.", 
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "contact": "10537 Kentshire Court\nSuite A\nBaton Rouge, LA 70810\n225-769-1414\nFax : 225-769-2300\nEmail: bankruptcy@grandtitle.com\n", 
+          "name": "Trenton A. Grand", 
+          "roles": []
+        }
+      ], 
+      "type": "Debtor", 
+      "name": "Malcolm Troy Averett, Jr.", 
+      "extra_info": "27165 Leighton Lane\nDenham Springs, LA 70726\nSSN / ITIN: xxx-xx-9478"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "(See above for address)\n", 
+          "name": "Trenton A. Grand", 
+          "roles": []
+        }
+      ], 
+      "type": "Debtor", 
+      "name": "Sherri Romig Averett", 
+      "extra_info": "13484 Prairie Lane\nWalker, LA 70785\nSSN / ITIN: xxx-xx-9717"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "P.O. Box 64868\nBaton Rouge, LA 70806\n(225) 928-2531\nEmail: crawfordtrustee@annettecrawford.com\n", 
+          "name": "Annette C. Crawford", 
+          "roles": []
+        }
+      ], 
+      "type": "Trustee", 
+      "name": "Annette C. Crawford", 
+      "extra_info": "P.O. Box 64868\nBaton Rouge, LA 70806\n225-928-2531"
+    }, 
+    {
+      "attorneys": [], 
+      "type": "U.S. Trustee", 
+      "name": "U.S. Trustee", 
+      "extra_info": "400 Poydras Street\nSuite 2110\nNew Orleans, LA 70130"
+    }
+  ], 
+  "date_filed": "2004-06-15", 
+  "nature_of_suit": null, 
+  "jury_demand": null, 
+  "assigned_to_str": "Douglas D. Dodd", 
+  "court_id": "lamb", 
+  "cause": null, 
+  "referred_to_str": null
+}

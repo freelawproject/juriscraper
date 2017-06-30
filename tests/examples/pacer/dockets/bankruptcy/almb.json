@@ -1,6 +1,6 @@
 {
   "demand": null,
-  "date_terminated": null,
+  "date_terminated": "1997-10-20",
   "docket_entries": [
     {
       "date_filed": "1992-12-22",
@@ -64,7 +64,7 @@
     }
   ],
   "docket_number": "92-04963",
-  "date_filed": null,
+  "date_filed": "1992-12-22",
   "jurisdiction": null,
   "case_name": "Ruthie Harris",
   "parties": [
@@ -91,6 +91,8 @@
   "jury_demand": null,
   "assigned_to_str": "Rodney R. Xsteele",
   "court_id": "almb",
+  "date_converted": null,
+  "date_discharged": null,
   "cause": null,
   "referred_to_str": null
 }

@@ -1,0 +1,491 @@
+{
+  "demand": "0", 
+  "date_terminated": null, 
+  "docket_entries": [
+    {
+      "date_filed": "2010-02-12", 
+      "document_number": "49", 
+      "description": "Statement Notice of Trustee's Intent to Pay Trustee Fees, Costs, Expenses and Attorneys' Fees filed by Joseph Froehlich on behalf of Wells Fargo Bank, N.A., Trustee. (Froehlich, Joseph) (Entered: 02/12/2010)", 
+      "pacer_doc_id": "12609025124"
+    }
+  ], 
+  "docket_number": "09-01032", 
+  "date_discharged": null, 
+  "date_converted": null, 
+  "jurisdiction": null, 
+  "case_name": "Lehman Brothers Holdings Inc.", 
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "contact": "Weil, Gotshal & Manges, LLP\n767 Fifth Avenue\nNew York, NY 10163\n(212) 310-8000\nFax : (212) 310-8888\nEmail:\n", 
+          "name": "Richard W. Slack", 
+          "roles": []
+        }
+      ], 
+      "type": "Debtor", 
+      "name": "Lehman Brothers Holdings Inc.", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "Wollmuth Maher & Deutsch LLP\n500 Fifth Avenue\nNew York, NY 10110\n(212) 382-3300\nFax : (212) 382-0050\nEmail:\n", 
+          "name": "Adam M. Bialek", 
+          "roles": []
+        }, 
+        {
+          "contact": "Wollmuth Maher & Deutsch LLP\n500 Fifth Avenue\nSuite 1200\nNew York, NY 10110\n(212) 382-3300\nFax : (212) 382-0050\nEmail:\n", 
+          "name": "William F. Dahill", 
+          "roles": []
+        }, 
+        {
+          "contact": "Wollmuth Maher & Deutsch LLP\n500 Fifth Avenue\n12th Floor\nNew York, NY 10110\n(212) 382-3300\nFax : (212) 382-0050\nEmail:\n", 
+          "name": "Paul R. DeFilippo", 
+          "roles": []
+        }, 
+        {
+          "contact": "Weil, Gotshal & Manges, LLP\n767 Fifth Avenue\nNew York, NY 10153\nEmail:\n", 
+          "name": "Ralph I. Miller", 
+          "roles": [
+            "LEAD ATTORNEY"
+          ]
+        }, 
+        {
+          "contact": "(See above for address)\n", 
+          "name": "Richard W. Slack", 
+          "roles": []
+        }
+      ], 
+      "type": "Plaintiff", 
+      "name": "Lehman Brothers Special Financing Inc.", 
+      "extra_info": "745 Seventh Avenue\nNew York, NY 10019\nTax ID / EIN: 11-2751029"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "Orrick, Herrington & Sutcliffe, LLP\n51 West 52nd Street\nNew York, NY 10019\n(212) 506-5000\nFax : (212) 506-5151\nEmail:\n", 
+          "name": "Robert L. Sills", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Ballyrock ABS CDO 2007-1 Limited", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "Locke Lord Bissell & Liddell LLP\n3 World Financial Center\n20th Floor\nNew York, NY 10281\n(212) 812-8342\nFax : (212) 812-8372\nEmail:\n", 
+          "name": "Casey B. Howard", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Wells Fargo Bank, N.A., Trustee", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "Ropes & Gray\nPrudential Tower\n800 Boylston Street\nBoston, MA 02199-3600\n617-951-7000\nFax : 617-951-7050\nEmail:\n", 
+          "name": "D. Ross Martin", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "President and Fellows of Harvard College", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "Reed Smith LLP\nReed Smith Centre\n225 Fifth Avenue\nPittsburgh, PA 15222\n412-288-3131\nFax : 412-288-3063\nEmail:\n", 
+          "name": "Eric A Schaffer", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "The Bank of New York Mellon Corporation", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "K&L Gates LLP\n599 Lexington Avenue\nNew York, NY 10022\n(212) 536-3900\nFax : (212) 536-3901\nEmail:\n", 
+          "name": "Robert Honeywell", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Revelstoke CDO I Limited Canadian Securitization Group", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "PRO SE\n", 
+          "name": "Axon Financial Funding Ltd.,", 
+          "roles": []
+        }, 
+        {
+          "contact": "", 
+          "name": "", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Axon Financial Funding Ltd.,", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "PRO SE\n", 
+          "name": "Brigantine High Grade Funding CDO Ltd.", 
+          "roles": []
+        }, 
+        {
+          "contact": "", 
+          "name": "", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Brigantine High Grade Funding CDO Ltd.", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "PRO SE\n", 
+          "name": "Avebury Finance CDO p.l.c.", 
+          "roles": []
+        }, 
+        {
+          "contact": "", 
+          "name": "", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Avebury Finance CDO p.l.c.", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "PRO SE\n", 
+          "name": "Lloyds Dollar Trust Funds", 
+          "roles": []
+        }, 
+        {
+          "contact": "", 
+          "name": "", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Lloyds Dollar Trust Funds", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "PRO SE\n", 
+          "name": "Lloyds MFD", 
+          "roles": []
+        }, 
+        {
+          "contact": "", 
+          "name": "", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Lloyds MFD", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "Cleary Gottlieb Steen & Hamilton, LLP\nOne Liberty Plaza\nNew York, NY 10006\n(212) 225-2416\nFax : (212) 225-3999\nEmail:\n", 
+          "name": "Sean A. O'Neal", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Magnetar Constellation Master Fund Limited", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "(See above for address)\n", 
+          "name": "Sean A. O'Neal", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Magnetar Constellation Master Fund II Limited", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "(See above for address)\n", 
+          "name": "Sean A. O'Neal", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Magnetar Constellation Master Fund III Limited", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "PRO SE\n", 
+          "name": "Metropolitan Life Insurance Company", 
+          "roles": []
+        }, 
+        {
+          "contact": "", 
+          "name": "", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Metropolitan Life Insurance Company", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "PRO SE\n", 
+          "name": "Longshore CDO Funding 2006-1, Ltd", 
+          "roles": []
+        }, 
+        {
+          "contact": "", 
+          "name": "", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Longshore CDO Funding 2006-1, Ltd", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "PRO SE\n", 
+          "name": "Longshore CDO Funding 2007-3, Ltd", 
+          "roles": []
+        }, 
+        {
+          "contact": "", 
+          "name": "", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Longshore CDO Funding 2007-3, Ltd", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "PRO SE\n", 
+          "name": "Sagittarius CDO I, Deutsche Bank Securities, Inc.", 
+          "roles": []
+        }, 
+        {
+          "contact": "", 
+          "name": "", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Sagittarius CDO I, Deutsche Bank Securities, Inc.", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "PRO SE\n", 
+          "name": "Class S Noteholder recipient of proceeds of Class S Notes CUSIP 05874KAB3 in the approximate amount of $102,576.57", 
+          "roles": []
+        }, 
+        {
+          "contact": "", 
+          "name": "", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Class S Noteholder recipient of proceeds of Class S Notes CUSIP 05874KAB3 in the approximate amount of $102,576.57", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "PRO SE\n", 
+          "name": "Class A-1b Noteholder recipient of proceeds of Class A-1b Notes CUSIP 05874KAG2 in the approximate amount of $31,736.05", 
+          "roles": []
+        }, 
+        {
+          "contact": "", 
+          "name": "", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Class A-1b Noteholder recipient of proceeds of Class A-1b Notes CUSIP 05874KAG2 in the approximate amount of $31,736.05", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "PRO SE\n", 
+          "name": "Class S Noteholder recipient of proceeds of Class S Notes CUSIP 05874KAB3 in the approximate amount of $7,778,171.09", 
+          "roles": []
+        }, 
+        {
+          "contact": "", 
+          "name": "", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Class S Noteholder recipient of proceeds of Class S Notes CUSIP 05874KAB3 in the approximate amount of $7,778,171.09", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "PRO SE\n", 
+          "name": "Class B Noteholder recipient of proceeds of Class B Notes CUSIP 05874KAD9 in the approximate amount of $108,317.33", 
+          "roles": []
+        }, 
+        {
+          "contact": "", 
+          "name": "", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Class B Noteholder recipient of proceeds of Class B Notes CUSIP 05874KAD9 in the approximate amount of $108,317.33", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "PRO SE\n", 
+          "name": "Class A-1b Noteholder recipient of proceeds of Class A-1B Notes CUSIP 05874KAG2 in the approximate amount of $3,500,000.00", 
+          "roles": []
+        }, 
+        {
+          "contact": "", 
+          "name": "", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Class A-1b Noteholder recipient of proceeds of Class A-1B Notes CUSIP 05874KAG2 in the approximate amount of $3,500,000.00", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "Sidley Austin LLP\n787 Seventh Avenue\nNew York, NY 10019\n(212) 839-5839\nFax : (212) 839-5599\nEmail:\n", 
+          "name": "Alex J. Kaplan", 
+          "roles": []
+        }, 
+        {
+          "contact": "Sullivan & Cromwell LLP\n125 Broad Street\nNew York, NY 10004-2498\n(212) 558-4000\nFax : (212) 558-3588\nEmail:\n", 
+          "name": "Robinson B. Lacy", 
+          "roles": []
+        }, 
+        {
+          "contact": "Sidley Austin LLP\n787 7th Avenue\nNew York, NY 10019\n212.839.5726\nFax : 212.839.5599\nEmail:\n", 
+          "name": "Erica S. Malin", 
+          "roles": []
+        }, 
+        {
+          "contact": "Sidley Austin LLP\n787 Seventh Avenue\nNew York, NY 10019\n(212) 839-5300\nFax : (212) 839-5599\nEmail:\n", 
+          "name": "Alex R. Rovira", 
+          "roles": []
+        }
+      ], 
+      "type": "Counter-Defendant", 
+      "name": "Blackrock Mortgage Investors Master Fund, L.P.", 
+      "extra_info": "c/o Sidley Austin LLP\n787 Seventh Avenue\nNew York, NY 10019\n212 839-5300"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "(See above for address)\n", 
+          "name": "Robinson B. Lacy", 
+          "roles": []
+        }, 
+        {
+          "contact": "(See above for address)\n", 
+          "name": "Alex R. Rovira", 
+          "roles": []
+        }
+      ], 
+      "type": "Counter-Defendant", 
+      "name": "Long Hill 2006-1, Ltd.", 
+      "extra_info": "c/o Sidley Austin LLP\n787 Seventh Avenue\nNew York, NY 10019\n212 839-5300"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "Locke Lord LLP\n3 World Financial Center\nNew York, NY 10281\n(212) 415-8600\nFax : (212) 303-2754\nEmail:\n", 
+          "name": "Joseph Froehlich", 
+          "roles": []
+        }, 
+        {
+          "contact": "(See above for address)\n", 
+          "name": "Casey B. Howard", 
+          "roles": []
+        }
+      ], 
+      "type": "Counter-Claimant", 
+      "name": "Wells Fargo Bank, N.A., Trustee", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [], 
+      "type": "Counter-Defendant", 
+      "name": "John Does 1 through 100, as owners of beneficial interests in the Senior Notes", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [], 
+      "type": "Counter-Defendant", 
+      "name": "Cede & Co.", 
+      "extra_info": "55 Water Street\nNew York, NY 10042"
+    }, 
+    {
+      "attorneys": [], 
+      "type": "Counter-Defendant", 
+      "name": "Ballyrock ABS CDO 2007-1 Limited", 
+      "extra_info": "55 Water Street\nNew York, NY 10042"
+    }, 
+    {
+      "attorneys": [], 
+      "type": "Counter-Defendant", 
+      "name": "Lehman Brothers Special Financing Inc.", 
+      "extra_info": "55 Water Street\nNew York, NY 10042\nTax ID / EIN: 11-2751029"
+    }
+  ], 
+  "date_filed": "2009-02-03", 
+  "nature_of_suit": "72 Injunctive relief - other; 91 Declaratory judgment", 
+  "jury_demand": null, 
+  "assigned_to_str": "Shelley C. Chapman", 
+  "court_id": "nysb", 
+  "cause": null, 
+  "referred_to_str": null
+}

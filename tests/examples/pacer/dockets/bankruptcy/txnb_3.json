@@ -1,0 +1,37 @@
+{
+  "demand": null, 
+  "date_terminated": null, 
+  "docket_entries": [], 
+  "docket_number": "08-42065", 
+  "date_discharged": null, 
+  "date_converted": null, 
+  "jurisdiction": null, 
+  "case_name": "Vernon Apartments, Ltd.", 
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "contact": "Forshey & Prostok, LLP\n777 Main St., Suite 1290\nFt. Worth, TX 76102\n817-877-8855\nEmail: jjohn@forsheyprostok.com\n", 
+          "name": "Julie C. John", 
+          "roles": []
+        }
+      ], 
+      "type": "Debtor", 
+      "name": "Vernon Apartments, Ltd.", 
+      "extra_info": "Attn: Malcolm Fleet\n4436 Cumberland Road NOrth\nFort Worth, TX 76116\nTax ID / EIN: 75-1799543"
+    }, 
+    {
+      "attorneys": [], 
+      "type": "U.S. Trustee", 
+      "name": "UST U.S. Trustee", 
+      "extra_info": "1100 Commerce Street\nRoom 976\nDallas, TX 75242-1496\n(214) 767-8967"
+    }
+  ], 
+  "date_filed": "2008-05-05", 
+  "nature_of_suit": null, 
+  "jury_demand": null, 
+  "assigned_to_str": "Russell F. Nelms", 
+  "court_id": "txnb", 
+  "cause": null, 
+  "referred_to_str": null
+}

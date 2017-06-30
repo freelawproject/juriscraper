@@ -1,0 +1,86 @@
+{
+  "demand": null, 
+  "date_terminated": null, 
+  "docket_entries": [
+    {
+      "date_filed": "2010-02-15", 
+      "document_number": "6", 
+      "description": "Receipt of filing fee for Chapter 7 Voluntary Petition - case upload(10-12879) [caseupld,1027u] ( 299.00). Receipt number 12968813, (U.S. Treasury) (Entered: 02/15/2010)", 
+      "pacer_doc_id": null
+    }, 
+    {
+      "date_filed": "2010-02-15", 
+      "document_number": "5", 
+      "description": "No Presumption of Abuse. Chapter 7 Statement of Current Monthly Income and Means Test Calculation - Form 22A on Behalf of Karen S. Cunningham, Rodney K. Cunningham Filed by Sopo Ngwa. (Ngwa, Sopo) (Entered: 02/15/2010)", 
+      "pacer_doc_id": "092017807709"
+    }, 
+    {
+      "date_filed": "2010-02-15", 
+      "document_number": "4", 
+      "description": "Disclosure of Compensation of Attorney for Debtor Filed by Sopo Ngwa. (Ngwa, Sopo) (Entered: 02/15/2010)", 
+      "pacer_doc_id": "092017807703"
+    }, 
+    {
+      "date_filed": "2010-02-15", 
+      "document_number": "3", 
+      "description": "Statement of Intent on behalf of Karen S. Cunningham, Rodney K. Cunningham Filed by Sopo Ngwa. (Ngwa, Sopo) (Entered: 02/15/2010)", 
+      "pacer_doc_id": "092017807700"
+    }, 
+    {
+      "date_filed": "2010-02-15", 
+      "document_number": "2", 
+      "description": "Social Security Number Verification Page on behalf of Karen S. Cunningham, Rodney K. Cunningham Filed by Sopo Ngwa. (Ngwa, Sopo) (Entered: 02/15/2010)", 
+      "pacer_doc_id": "092017807697"
+    }, 
+    {
+      "date_filed": "2010-02-15", 
+      "document_number": "1", 
+      "description": "Chapter 7 Voluntary Petition, Schedules A-J & Statement of Financial Affairs Fee Amount $ 299 filed by Sopo Ngwa of Bankruptcy & Immigration Center, LLC on behalf of Rodney K. Cunningham, Karen S. Cunningham. Section 521(i)(1) Incomplete Filing date: 4/1/2010. (Ngwa, Sopo) (Entered: 02/15/2010)", 
+      "pacer_doc_id": "092017807694"
+    }
+  ], 
+  "docket_number": "10-12879", 
+  "date_discharged": null, 
+  "date_converted": null, 
+  "jurisdiction": null, 
+  "case_name": "Rodney K. Cunningham", 
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "contact": "Bankruptcy & Immigration Center, LLC\n11249 B Lockwood Drive\nSilver Spring, MD 20904\n240-418-8610\nEmail:\n", 
+          "name": "Sopo Ngwa", 
+          "roles": []
+        }
+      ], 
+      "type": "Debtor", 
+      "name": "Rodney K. Cunningham", 
+      "extra_info": "3103 Thornfield Rd.\nGwynn Oak, MD 21207\nSSN / ITIN: xxx-xx-5825"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "(See above for address)\n", 
+          "name": "Sopo Ngwa", 
+          "roles": []
+        }
+      ], 
+      "type": "Debtor", 
+      "name": "Karen S. Cunningham", 
+      "extra_info": "3103 Thornfield Rd.\nGwynn Oak, MD 21207\nSSN / ITIN: xxx-xx-1455"
+    }, 
+    {
+      "attorneys": [], 
+      "type": "Trustee", 
+      "name": "Sean C Logan", 
+      "extra_info": "Law Offices of Sean C. Logan, Esq.\n2530 Riva Road,  Suite 400\nAnnapolis, MD 21401\n443-569-5968\nEmail:\ndvs@loganyumkas.com"
+    }
+  ], 
+  "date_filed": "2010-02-15", 
+  "nature_of_suit": null, 
+  "jury_demand": null, 
+  "assigned_to_str": "Robert A. Gordon", 
+  "court_id": "mdb", 
+  "cause": null, 
+  "referred_to_str": null
+}

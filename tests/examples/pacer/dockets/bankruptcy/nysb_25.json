@@ -1,0 +1,208 @@
+{
+  "demand": null, 
+  "date_terminated": null, 
+  "docket_entries": [], 
+  "docket_number": "09-08292", 
+  "date_discharged": null, 
+  "date_converted": null, 
+  "jurisdiction": null, 
+  "case_name": "Patrick Fagan and Christine Fagan - Adversary Proceeding", 
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "contact": "Bleichman & Klein\n268 Route 59\nSpring Valley, NY 10977\n(845) 425-2510\nFax : (845) 425-7362\nEmail: bleichmanklein@yahoo.com\n", 
+          "name": "Joshua N. Bleichman", 
+          "roles": [
+            "LEAD ATTORNEY"
+          ]
+        }
+      ], 
+      "type": "Plaintiff", 
+      "name": "Patrick Fagan", 
+      "extra_info": "105 West Clarkstown Road\nNew City, NY 10956\nSSN / ITIN: xxx-xx-2120"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "(See above for address)\n", 
+          "name": "Joshua N. Bleichman", 
+          "roles": [
+            "LEAD ATTORNEY"
+          ]
+        }
+      ], 
+      "type": "Plaintiff", 
+      "name": "Christine Fagan", 
+      "extra_info": "105 West Clarkstown Road\nNew City, NY 10956\nSSN / ITIN: xxx-xx-3251"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "PRO SE\n", 
+          "name": "CJP Abstract LLC", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "CJP Abstract LLC", 
+      "extra_info": "152 McClean Ave\nStaten Island, NY 10305"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "Cuddy & Feder, LLP\n445 Hamilton Avenue\n14th Floor\nWhite Plains, NY 10601\n(914) 761-1300\nFax : (914) 760-5372\nEmail: jkimerling@cuddyfeder.com\n", 
+          "name": "Joshua E. Kimerling", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Commonwealth Land Title Insurance", 
+      "extra_info": "5600 Cox Road\nGlen Allen, VA 23060"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "PRO SE\n", 
+          "name": "HomeQ Servicing Corp.", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "HomeQ Servicing Corp.", 
+      "extra_info": "4837 Watt Ave\nNorth Highlands, CA 95660-5108"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "PRO SE\n", 
+          "name": "Wachovia Bank", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Wachovia Bank", 
+      "extra_info": "1 Wachovia Center\nCharlotte, NC 28288-0013"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "Knuckles, Komosinski & Elliott, LLP\n565 Taxter Road, Suite 590\nElmsford, NY 10523\n(914) 345-3020\nFax : (914) 366-0080\nEmail: mrk@klawpc.com\n", 
+          "name": "Mark R. Knuckles", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Argent Mortgage Company", 
+      "extra_info": "333 Westchester Ave\nWhite Plains, NY 10604"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "(See above for address)\n", 
+          "name": "Mark R. Knuckles", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "AMC Mortgage Services Inc.", 
+      "extra_info": "505 City Parkway West\nSuite 100\nOrange, CA 92868"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "51 East Bethpage Road\nPlainview, NY 11803\n(516) 741-2585\nFax : (516) 873-7243\n", 
+          "name": "Rosicki, Rosicki & Associates, P.C.", 
+          "roles": [
+            "LEAD ATTORNEY"
+          ]
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Wells Fargo Bank", 
+      "extra_info": "420 Montgomery Street\nSan Francisco, CA 94163"
+    }, 
+    {
+      "type": "Defendant", 
+      "name": "John Doe, Jane Doe, XYZ Corp.,  fictitious names for substation of parties when discovered.", 
+      "extra_info": "fictitious names for substation of parties when discovered."
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "Rosicki Rosicki & Associates, P.C.\n51 East Bethpage Road\nPlainview, NY 11803\n(516) 741-2585\nFax : (516) 873-7243\nEmail: bdunleavy@rosicki.com\n", 
+          "name": "Barbara Dunleavy", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "BARCLAYS CAPITAL REAL ESTATE DBA HOMEQ SERVICING S/H/A HOMEQ SERVICING CORP. AND WELLS FARGO BANK, N.A. AS TRUSTEE UNDER POOLING AND SERVICING AGREEMENT DATED AS OF AUGUST 1, 2005 ASSET-BACKED PASS-TH", 
+      "extra_info": "c/o Rosicki, Rosicki & Associates, P.C.\n51 E. Bethpage Rd.\nPlainview, NY 11803"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "(See above for address)\n", 
+          "name": "Mark R. Knuckles", 
+          "roles": []
+        }
+      ], 
+      "type": "Cross-Claimant", 
+      "name": "AMC Mortgage Services Inc.", 
+      "extra_info": "505 City Parkway West\nSuite 100\nOrange, CA 92868"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "(See above for address)\n", 
+          "name": "Mark R. Knuckles", 
+          "roles": []
+        }
+      ], 
+      "type": "Cross-Claimant", 
+      "name": "Argent Mortgage Company", 
+      "extra_info": "333 Westchester Ave\nWhite Plains, NY 10604"
+    }, 
+    {
+      "type": "Cross Defendant", 
+      "name": "Wells Fargo Bank", 
+      "extra_info": "420 Montgomery Street\nSan Francisco, CA 94163"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "(See above for address)\n", 
+          "name": "Joshua E. Kimerling", 
+          "roles": []
+        }
+      ], 
+      "type": "Cross-Claimant", 
+      "name": "Commonwealth Land Title Insurance", 
+      "extra_info": "5600 Cox Road\nGlen Allen, VA 23060"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "PRO SE\n", 
+          "name": "CJP Abstract LLC", 
+          "roles": []
+        }, 
+        {
+          "contact": "(See above for address)\n", 
+          "name": "", 
+          "roles": []
+        }
+      ], 
+      "type": "Cross Defendant", 
+      "name": "CJP Abstract LLC", 
+      "extra_info": "152 McClean Ave\nStaten Island, NY 10305"
+    }
+  ], 
+  "date_filed": "2009-09-03", 
+  "nature_of_suit": "14 Recovery of money/property - other", 
+  "jury_demand": null, 
+  "assigned_to_str": "Robert D. Drain", 
+  "court_id": "nysb", 
+  "cause": null, 
+  "referred_to_str": null
+}

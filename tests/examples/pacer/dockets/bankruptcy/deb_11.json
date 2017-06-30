@@ -1,0 +1,136 @@
+{
+  "demand": null, 
+  "date_terminated": "2016-08-31", 
+  "docket_entries": [], 
+  "docket_number": "09-50934", 
+  "date_discharged": null, 
+  "date_converted": null, 
+  "jurisdiction": null, 
+  "case_name": "Washington Mutual, Inc. and Joshua R. Hochberg, the Examiner - Adversary Proceeding", 
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "contact": "Richards, Layton & Finger, P.A.\n920 North King Street\nP.O. Box 551\nWilmington, DE 19899\n302-651-7700\nFax : 302-651-7701\nEmail:\n", 
+          "name": "Chun I. Jang", 
+          "roles": []
+        }, 
+        {
+          "contact": "Elliott Greenleaf\n1105 North Market Street\n17th Floor\nWilmington, DE 19801\n302-384-9400\nFax : 302-384-9399\nEmail:\n", 
+          "name": "Shelley A. Kinsella", 
+          "roles": []
+        }, 
+        {
+          "contact": "Gordon Fournaris & Mammarella\n1925 Lovering Avenue\nWilmington, DE 19806\nU.S.A.\n(302) 652-2900\nFax : (302) 652-2348\nEmail:\n", 
+          "name": "Neil Raymond Lapinski", 
+          "roles": [
+            "LEAD ATTORNEY"
+          ]
+        }, 
+        {
+          "contact": "Elliott Greenleaf\n1105 North Market Street\nSuite 1700\nP.O. Box 2327\nWilmington, DE 19801\n302-384-9400\nFax : 302-384-9399\nEmail:\n", 
+          "name": "Rafael Xavier Zahralddin-Aravena", 
+          "roles": []
+        }
+      ], 
+      "type": "Plaintiff", 
+      "name": "Washington Mutual, Inc.", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "(See above for address)\n", 
+          "name": "Shelley A. Kinsella", 
+          "roles": []
+        }, 
+        {
+          "contact": "(See above for address)\n", 
+          "name": "Neil Raymond Lapinski", 
+          "roles": [
+            "LEAD ATTORNEY"
+          ]
+        }, 
+        {
+          "contact": "(See above for address)\n", 
+          "name": "Rafael Xavier Zahralddin-Aravena", 
+          "roles": []
+        }
+      ], 
+      "type": "Plaintiff", 
+      "name": "WMI Investment Corp.", 
+      "extra_info": "1301 Second Avenue\nSeattle, WA 98101\nTax ID / EIN: 20-5885395"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "Landis Rath & Cobb LLP\n919 Market Street\nSuite 1800\nWilmington, DE 19801\nusa\n302-467-4400\nFax : 302-467-4450\nEmail:\n", 
+          "name": "Adam G. Landis", 
+          "roles": []
+        }, 
+        {
+          "contact": "Landis Rath & Cobb LLP\nP.O. Box 2087\n919 Market Street, Suite 1800\nWilmington, DE 19899\n302-467-4400\nFax : 302-467-4450\nEmail:\n", 
+          "name": "Matthew B. McGuire", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "JPMorgan Chase Bank, N.A.", 
+      "extra_info": "TERMINATED: 03/20/2012"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "Pepper Hamilton LLP\nHercules Plaza\nSuite 5100, 1313 N. Market Street\nWilmington, DE 19899\n302-777-6500\nFax : 302-421-8390\nEmail:\n", 
+          "name": "Evelyn J. Meltzer", 
+          "roles": []
+        }, 
+        {
+          "contact": "Pepper Hamilton LLP\nHercules Plaza, Suite 5100\n1313 Market Street\nPO Box 1709\nWilmington, DE 19899-1709\n302-777-6502\nFax : 302-421-8390\nEmail:\n", 
+          "name": "John Henry Schanne, II", 
+          "roles": []
+        }
+      ], 
+      "type": "Intervenor-Plaintiff", 
+      "name": "Official Committee of Unsecured Creditors of Washington Mutual, Inc., and WMI Investment Corp.", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [], 
+      "type": "Counter-Defendant", 
+      "name": "WMI Investment Corp.", 
+      "extra_info": "1301 Second Avenue\nSeattle, WA 98101\nTax ID / EIN: 20-5885395"
+    }, 
+    {
+      "attorneys": [], 
+      "type": "Counter-Defendant", 
+      "name": "Washington Mutual, Inc.", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [], 
+      "type": "Cross-Claimant", 
+      "name": "JPMorgan Chase Bank, N.A.", 
+      "extra_info": ""
+    }, 
+    {
+      "attorneys": [], 
+      "type": "Cross Defendant", 
+      "name": "Federal Deposit Insurance Corporation", 
+      "extra_info": "TERMINATED: 03/20/2012"
+    }, 
+    {
+      "attorneys": [], 
+      "type": "Cross Defendant", 
+      "name": "Federal Deposit Insurance Corporation", 
+      "extra_info": ""
+    }
+  ], 
+  "date_filed": "2009-04-27", 
+  "nature_of_suit": "11 Recovery of money/property - 542 turnover of property", 
+  "jury_demand": null, 
+  "assigned_to_str": "Mary F. Walrath", 
+  "court_id": "deb", 
+  "cause": null, 
+  "referred_to_str": null
+}

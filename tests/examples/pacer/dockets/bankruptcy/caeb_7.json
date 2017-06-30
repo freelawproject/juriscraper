@@ -1,0 +1,104 @@
+{
+  "demand": null, 
+  "date_terminated": null, 
+  "docket_entries": [
+    {
+      "date_filed": "2010-01-29", 
+      "document_number": "1", 
+      "description": "Chapter 7 Voluntary Petition. All Schedules and Statements filed. (ares) (Entered: 01/29/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-01-29", 
+      "document_number": "2", 
+      "description": "Notice of Appointment of Interim Trustee Gary Farrar (auto) (Entered: 01/29/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-01-29", 
+      "document_number": "3", 
+      "description": "Master Address List (auto) (Entered: 01/29/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-01-29", 
+      "document_number": "4", 
+      "description": "Statement of Social Security Number(s) (ares) (Entered: 01/29/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-02-02", 
+      "document_number": "5", 
+      "description": "Notice of Meeting of Creditors as Transmitted to BNC. (admin) (Entered: 02/02/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-02-02", 
+      "document_number": "6", 
+      "description": "Notice of Requirement to Complete Course in Financial Management as Transmitted to BNC for Service. (admin) (Entered: 02/02/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-02-02", 
+      "document_number": "7", 
+      "description": "Certificate of Mailing of Notice of Requirement to File a Statement of Completion of Course in Personal Financial Management as provided by the Bankruptcy Noticing Center (Admin.) (Entered: 02/04/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-02-02", 
+      "document_number": "8", 
+      "description": "Certificate of Mailing of Notice of Meeting of Creditors as provided by the Bankruptcy Noticing Center (Admin.) (Entered: 02/04/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }
+  ], 
+  "docket_number": "10-22146", 
+  "date_discharged": null, 
+  "date_converted": null, 
+  "jurisdiction": null, 
+  "case_name": "Juan M. Searcy, Sr.", 
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "contact": "4568 Feather River Dr #A\nStockton, CA 95219\n(209) 476-1010\n", 
+          "name": "Charles L. Hastings", 
+          "roles": []
+        }
+      ], 
+      "type": "Debtor", 
+      "name": "Juan M. Searcy, Sr.", 
+      "extra_info": "333 Franciscan Ave\nStockton, CA 95210\nSSN / ITIN: xxx-xx-3940"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "(See above for address)\n", 
+          "name": "Charles L. Hastings", 
+          "roles": []
+        }
+      ], 
+      "type": "Joint Debtor", 
+      "name": "Beatriz Sanchez Searcy", 
+      "extra_info": "333 Franciscan Ave\nStockton, CA 95210\nSSN / ITIN: xxx-xx-5271"
+    }, 
+    {
+      "attorneys": [], 
+      "type": "Trustee", 
+      "name": "Gary Farrar", 
+      "extra_info": "PO Box 576097\nModesto, CA 95357\n209-551-1962"
+    }, 
+    {
+      "attorneys": [], 
+      "type": "U.S. Trustee", 
+      "name": "Office of the U.S. Trustee", 
+      "extra_info": "Robert T Matsui United States Courthouse\n501 I Street, Room 7-500\nSacramento, CA 95814"
+    }
+  ], 
+  "date_filed": "2010-01-29", 
+  "nature_of_suit": null, 
+  "jury_demand": null, 
+  "assigned_to_str": "Christopher M. Klein", 
+  "court_id": "caeb", 
+  "cause": null, 
+  "referred_to_str": null
+}

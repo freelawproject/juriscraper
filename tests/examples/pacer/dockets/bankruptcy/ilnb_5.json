@@ -1,0 +1,80 @@
+{
+  "demand": null, 
+  "date_terminated": "2001-07-11", 
+  "docket_entries": [
+    {
+      "date_filed": "2001-04-09", 
+      "document_number": "60", 
+      "description": "REPORT of TrusteeREPORT of Trustee of Deposit of Unclaimed Property and Notice of Filing RE: Comed Co [MW] Original NIBS Entry Number: 46 (Entered: 04/10/2001)", 
+      "pacer_doc_id": "06601179511"
+    }, 
+    {
+      "date_filed": "2001-04-09", 
+      "document_number": "61", 
+      "description": "REPORT of TrusteeREPORT of Trustee of Deposit of Unclaimed Property and Notice of Filing RE: Commercial Collection [MW] Original NIBS Entry Number: 47 (Entered: 04/10/2001)", 
+      "pacer_doc_id": "066010899137"
+    }, 
+    {
+      "date_filed": "2001-04-09", 
+      "document_number": "62", 
+      "description": "REPORT of TrusteeREPORT of Trustee of Deposit of Unclaimed Property and Notice of Filing RE: Comed Co [MW] Original NIBS Entry Number: 48 (Entered: 04/10/2001)", 
+      "pacer_doc_id": "06601179512"
+    }, 
+    {
+      "date_filed": "2001-05-25", 
+      "document_number": "63", 
+      "description": "TRUSTEE'S final report and account [Chapter 13] with certificate of mailing [MW] Original NIBS Entry Number: 49 (Entered: 05/25/2001)", 
+      "pacer_doc_id": "066010899138"
+    }, 
+    {
+      "date_filed": "2001-07-11", 
+      "document_number": "64", 
+      "description": "ORDER CLOSING CASE [MW] Original NIBS Entry Number: 50 (Entered: 07/11/2001)", 
+      "pacer_doc_id": null
+    }
+  ], 
+  "docket_number": "97-50502", 
+  "date_discharged": null, 
+  "date_converted": null, 
+  "jurisdiction": null, 
+  "case_name": "Mark P Dal Santo", 
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "contact": "One Court Place\nSuite 301\nRockford, IL 61101\n815 964-4601\nFax : 815 964-3292\nEmail: brian@blarkinlaw.com\n", 
+          "name": "Brian K. Larkin", 
+          "roles": []
+        }
+      ], 
+      "type": "Debtor", 
+      "name": "Mark P Dal Santo", 
+      "extra_info": "1213 Simpson Road\nRockford, IL 61102\nSSN / ITIN: xxx-xx-6103"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "(See above for address)\n", 
+          "name": "Brian K. Larkin", 
+          "roles": []
+        }
+      ], 
+      "type": "Joint Debtor", 
+      "name": "Carla A Dal Santo", 
+      "extra_info": "1213 Simpson Road\nRockford, IL 61102\nSSN / ITIN: xxx-xx-4113"
+    }, 
+    {
+      "attorneys": [], 
+      "type": "Trustee", 
+      "name": "Lydia Meyer", 
+      "extra_info": "Lydia Meyer - 13 Trustee\nP.o. Box 14127\nRockford, IL 61105-4127\n815-968-5354"
+    }
+  ], 
+  "date_filed": "1997-02-21", 
+  "nature_of_suit": null, 
+  "jury_demand": null, 
+  "assigned_to_str": "Manuel Barbosa", 
+  "court_id": "ilnb", 
+  "cause": null, 
+  "referred_to_str": null
+}

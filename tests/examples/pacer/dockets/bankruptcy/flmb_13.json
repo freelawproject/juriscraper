@@ -1,0 +1,68 @@
+{
+  "demand": null, 
+  "date_terminated": null, 
+  "docket_entries": [
+    {
+      "date_filed": "2010-02-15", 
+      "document_number": "4", 
+      "description": "Declaration Under Penalty of Perjury for Electronic Filing Regarding Bankruptcy Petition, Schedules & Statement of Financial Affairs Filed by Kevin E Mangum on behalf of Debtor SJP Orlando, Inc.. (Mangum, Kevin) (Entered: 02/15/2010)", 
+      "pacer_doc_id": "046032424951"
+    }, 
+    {
+      "date_filed": "2010-02-15", 
+      "document_number": "3", 
+      "description": "Statement/Disclosure of Compensation of Attorney Filed by Kevin E Mangum on behalf of Debtor SJP Orlando, Inc.. (Mangum, Kevin) (Entered: 02/15/2010)", 
+      "pacer_doc_id": "046032424933"
+    }, 
+    {
+      "date_filed": "2010-02-15", 
+      "document_number": "2", 
+      "description": "Statement of Corporate Ownership Filed by Kevin E Mangum on behalf of Debtor SJP Orlando, Inc.. (Mangum, Kevin) (Entered: 02/15/2010)", 
+      "pacer_doc_id": "046032424924"
+    }, 
+    {
+      "date_filed": "2010-02-15", 
+      "document_number": "1", 
+      "description": "Voluntary Petition under Chapter 7. (Fee Paid.). ***Related Cases 6:10-bk-2188-6J7; 3:00-bk-6546-3P7, Discharged 12/15/2000*** . Schedules A-J and Summary of Schedules. Statement of Financial Affairs. Disclosure of Compensation Not Filed or Not Required. Filed by Kevin E Mangum on behalf of SJP Orlando, Inc.. (Mangum, Kevin) Modified on 2/16/2010 (Hatcher, Pat). (Entered: 02/15/2010)", 
+      "pacer_doc_id": "046032424864"
+    }
+  ], 
+  "docket_number": "6:10-bk-02187", 
+  "date_discharged": null, 
+  "date_converted": null, 
+  "jurisdiction": null, 
+  "case_name": "SJP Orlando, Inc.", 
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "contact": "Mangum & Associates PA\n5100 Highway 17-92\nSuite 200\nCasselberry, FL 32707\n(407) 478-1555\nFax : (407) 478-1552\nEmail:\n", 
+          "name": "Kevin E Mangum", 
+          "roles": []
+        }
+      ], 
+      "type": "Debtor", 
+      "name": "SJP Orlando, Inc.", 
+      "extra_info": "4304 Metric Drive #3\nWinter Park, FL 32792\nTax ID / EIN: 41-2044101"
+    }, 
+    {
+      "attorneys": [], 
+      "type": "Trustee", 
+      "name": "Leigh R Meininger", 
+      "extra_info": "Post Office Box 1946\nOrlando, FL 32802-1946\n407-246-1585"
+    }, 
+    {
+      "attorneys": [], 
+      "type": "U.S. Trustee", 
+      "name": "United States Trustee - ORL7", 
+      "extra_info": "135 W Central Blvd., Suite 620\nOrlando, FL 32801\n407-648-6301"
+    }
+  ], 
+  "date_filed": "2010-02-15", 
+  "nature_of_suit": null, 
+  "jury_demand": null, 
+  "assigned_to_str": "Karen S. Jennemann", 
+  "court_id": "flmb", 
+  "cause": null, 
+  "referred_to_str": null
+}

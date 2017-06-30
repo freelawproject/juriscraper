@@ -1,0 +1,74 @@
+{
+  "demand": null, 
+  "date_terminated": null, 
+  "docket_entries": [
+    {
+      "date_filed": "2010-02-15", 
+      "document_number": "1", 
+      "description": "Chapter 7 Voluntary Petition . Fee Amount $299 Filed by Erin Elizabeth Murphy-Strafeldas (Doan, Gregory) (Entered: 02/15/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-02-15", 
+      "document_number": "2", 
+      "description": "Declaration Re: Electronic Filing Filed by Debtor Erin Elizabeth Murphy-Strafeldas. (Doan, Gregory) (Entered: 02/15/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-02-15", 
+      "document_number": "3", 
+      "description": "Certificate of Credit Counseling Filed by Debtor Erin Elizabeth Murphy-Strafeldas. (Doan, Gregory) (Entered: 02/15/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-02-15", 
+      "document_number": "4", 
+      "description": "Debtor's Certification of Employment Income Filed by Debtor Erin Elizabeth Murphy-Strafeldas. (Doan, Gregory) (Entered: 02/15/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-02-15", 
+      "document_number": "5", 
+      "description": "Statement of Social Security Number(s) Form B21 Filed by Debtor Erin Elizabeth Murphy-Strafeldas. (Doan, Gregory) (Entered: 02/15/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }
+  ], 
+  "docket_number": "8:10-bk-11791", 
+  "date_discharged": null, 
+  "date_converted": null, 
+  "jurisdiction": null, 
+  "case_name": "Erin Elizabeth Murphy-Strafeldas", 
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "contact": "25401 Cabot Rd Ste 119\nLaguna Hills, CA 92653\n949-472-0593\nFax : 949-472-5441\nEmail: ecf@doanlaw.com\n", 
+          "name": "Gregory J Doan", 
+          "roles": []
+        }
+      ], 
+      "type": "Debtor", 
+      "name": "Erin Elizabeth Murphy-Strafeldas", 
+      "extra_info": "5 Blue Pt\nAliso Viejo, CA 92656\nSSN / ITIN: xxx-xx-1865"
+    }, 
+    {
+      "attorneys": [], 
+      "type": "Trustee", 
+      "name": "John M Wolfe", 
+      "extra_info": "5450 Trabuco Road\nIrvine, CA 92620-5704\n(800) 436-4646"
+    }, 
+    {
+      "attorneys": [], 
+      "type": "U.S. Trustee", 
+      "name": "United States Trustee (SA)", 
+      "extra_info": "411 W Fourth St., Suite 9041\nSanta Ana, CA 92701-4593"
+    }
+  ], 
+  "date_filed": "2010-02-15", 
+  "nature_of_suit": null, 
+  "jury_demand": null, 
+  "assigned_to_str": "Theodor Albert", 
+  "court_id": "cacb", 
+  "cause": null, 
+  "referred_to_str": null
+}

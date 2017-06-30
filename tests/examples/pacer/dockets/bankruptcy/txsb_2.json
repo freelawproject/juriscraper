@@ -1,0 +1,86 @@
+{
+  "demand": null, 
+  "date_terminated": null, 
+  "docket_entries": [
+    {
+      "date_filed": "2010-02-02", 
+      "document_number": "1", 
+      "description": "Chapter 11 Voluntary Petition. Fee Amount $1039. Filed by Grand Parkway Equities, Ltd.. (Fuqua, Richard) (Entered: 02/02/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-02-02", 
+      "document_number": "2", 
+      "description": "20 Largest Unsecured Creditors (Filed By Grand Parkway Equities, Ltd. ). (Fuqua, Richard) (Entered: 02/02/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-02-02", 
+      "document_number": "3", 
+      "description": "Creditor Mailing List Loaded. (Filed By Grand Parkway Equities, Ltd. ). (Fuqua, Richard) (Entered: 02/02/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-02-05", 
+      "document_number": "4", 
+      "description": "Notice of Appearance and Request for Notice Filed by Mark Allan Worden Filed by on behalf of East West Bank (Worden, Mark) (Entered: 02/05/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-02-08", 
+      "document_number": "5", 
+      "description": "Order Setting Status Conference. Signed on 2/8/2010 (Related document(s): 1 Voluntary Petition (Chapter 11)) Status conference to be held on 3/1/2010 at 03:30 PM at Houston, Courtroom 600 (JB). (rste) (Entered: 02/08/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-02-09", 
+      "document_number": "6", 
+      "description": "Notice of Status Conference. Filed by Grand Parkway Equities, Ltd. (Attachments: # 1 Service List) (Fuqua, Richard) (Entered: 02/09/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-02-10", 
+      "document_number": "7", 
+      "description": "BNC Certificate of Mailing. (Related document(s): 5 Order Setting Hearing) No. of Notices: 1. Service Date 02/10/2010. (Admin.) (Entered: 02/11/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }
+  ], 
+  "docket_number": "10-31013", 
+  "date_discharged": null, 
+  "date_converted": null, 
+  "jurisdiction": null, 
+  "case_name": "Grand Parkway Equities, Ltd.", 
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "contact": "Fuqua & Keim\n2777 Allen Parkway\nSte 480\nHouston, TX 77019\n713-960-0277\nEmail: fuqua@fuquakeim.com\n", 
+          "name": "Richard L Fuqua, II", 
+          "roles": []
+        }
+      ], 
+      "type": "Debtor", 
+      "name": "Grand Parkway Equities, Ltd.", 
+      "extra_info": "21711 FM 1093 Rd.\nRichmond, TX 77407\nTax ID / EIN: 37-1513434"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "Office of US Trustee\n515 Rusk\nSte 3516\nHouston, TX 77002\n713-718-4650 x252\nFax : 713-718-4680\nEmail: stephen.statham@usdoj.gov\n", 
+          "name": "Stephen Douglas Statham", 
+          "roles": []
+        }
+      ], 
+      "type": "U.S. Trustee", 
+      "name": "US Trustee", 
+      "extra_info": "Office of the US Trustee\n515 Rusk Ave\nSte 3516\nHouston, TX 77002\n713-718-4650"
+    }
+  ], 
+  "date_filed": "2010-02-02", 
+  "nature_of_suit": null, 
+  "jury_demand": null, 
+  "assigned_to_str": "Jeff Bohm", 
+  "court_id": "txsb", 
+  "cause": null, 
+  "referred_to_str": null
+}

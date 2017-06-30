@@ -1,0 +1,50 @@
+{
+  "demand": null, 
+  "date_terminated": null, 
+  "docket_entries": [
+    {
+      "date_filed": "2010-02-12", 
+      "document_number": "2", 
+      "description": "Declaration Under Penalty of Perjury for Electronic Filing Regarding Voluntary Petition and Verification of Mailing Matrix Filed by Ronald Cutler on behalf of Debtor Aztec mechanical Services, LLC. (Cutler, Ronald) (Entered: 02/12/2010)", 
+      "pacer_doc_id": "046032392741"
+    }, 
+    {
+      "date_filed": "2010-02-12", 
+      "document_number": "1", 
+      "description": "Voluntary Petition under Chapter 11. (Verify Fee) Schedules and Statements Incomplete, Statement of Financial Affairs Not Filed or Incomplete, Disclosure of Compensation of Attorney Not Filed or Not Required, Filed by Ronald Cutler on behalf of Aztec mechanical Services, LLC. (Cutler, Ronald) (Entered: 02/12/2010)", 
+      "pacer_doc_id": "046032392441"
+    }
+  ], 
+  "docket_number": "3:10-bk-00995", 
+  "date_discharged": null, 
+  "date_converted": null, 
+  "jurisdiction": null, 
+  "case_name": "Aztec mechanical Services, LLC", 
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "contact": "Ronald Cutler PA\n1172 Pelican Bay Drive\nDaytona Beach, FL 32119\n(386) 788-4480\nFax : (386) 788-6040\nEmail:\n", 
+          "name": "Ronald Cutler", 
+          "roles": []
+        }
+      ], 
+      "type": "Debtor", 
+      "name": "Aztec mechanical Services, LLC", 
+      "extra_info": "P.O. Box 16007\nJacksonville, FL 32245\nTax ID / EIN: 01-0672489"
+    }, 
+    {
+      "attorneys": [], 
+      "type": "U.S. Trustee", 
+      "name": "United States Trustee - JAX", 
+      "extra_info": "135 W Central Blvd, Suite 620\nOrlando, FL 32801\n407-648-6301"
+    }
+  ], 
+  "date_filed": "2010-02-12", 
+  "nature_of_suit": null, 
+  "jury_demand": null, 
+  "assigned_to_str": "Jerry A. Funk", 
+  "court_id": "flmb", 
+  "cause": null, 
+  "referred_to_str": null
+}

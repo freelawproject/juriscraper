@@ -1,0 +1,307 @@
+<html><head><title>New York Southern Live System</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script></head><body BGCOLOR=FFFFF0 TEXT=000000 onLoad='SetFocus()'><div class="noprint"><img id="cmecfLogo" class="cmecfLogo" src="/graphics/cmecf-logo.gif" alt="CM/ECF" title=""  /><img src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage" id="helpImage" onClick="CMECF.MainMenu.showHelpPage(''); return false" onMouseOver="CMECF.MainMenu.helpImageOn()" onMouseOut="CMECF.MainMenu.helpImageOff()" /><div id="topmenu" class="yuimenubar"><div class="bd"><ul class="first-of-type"><li class="yuimenubaritem" style="width:9%"><a class="yuimenubaritemlabel" href='/cgi-bin/iquery.pl'>Q</u>uery</a></li><li class="yuimenubaritem" style="width:11%"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Reports&id=-1'>R</u>eports</a></li><li class="yuimenubaritem" style="width:11%"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Utilities&id=-1'>U</u>tilities</a></li><li class="yuimenubaritem" style="width:10%"><a class="yuimenubaritemlabel" href='/cgi-bin/login.pl?logout'>Logout</a></li></ul></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout( function(){ CMECF.MainMenu.renderSimpleMenu(); }, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.renderSimpleMenu);}</script><div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript"> 
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;				
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+<script type='text/JavaScript'>
+document.cookie="PDFHeaderReferer=449217392638455; path=/";
+</script>
+		<script type="text/javascript" src="/lib/widgits.js"></script>
+		<script>
+		var debtorPanel = null;
+
+		function create_panel(clid, message) {
+		    if (!debtorPanel) {
+		        debtorPanel = new CMECF.widget.Panel('debtorPanel', {
+				close:true,
+				draggable:false,
+				context:[clid, 'tl', 'br'],
+				width: "250" + "px",
+				height: "110" + "px",
+				constraintoviewport:true
+			});
+			debtorPanel.setHeader("Barred Debtor Information");
+			debtorPanel.setBody(message);
+			debtorPanel.body.style.height = "8em";
+			debtorPanel.render(document.body);
+		    } else {
+		        debtorPanel.show();
+		    }
+		}
+
+		function close_panel() {
+		    if (debtorPanel) {
+		        debtorPanel.destroy();
+		        debtorPanel = null;
+		    }
+		}
+		</script>
+		<TABLE width="100%" align=right BORDER=0 CELLSPACING=5><TR><TD ALIGN=right><h2> <FONT SIZE="3">Lead, MEGA, PENAP, SchedF, FeeDueAP, APPEAL, LV2APPEAL, WDREF, MDisCs</FONT></h2></TD></TR></TABLE><BR><BR><BR><CENTER><B><FONT SIZE="+1">U.S. Bankruptcy Court<BR>Southern District of New York (Manhattan)<BR>Bankruptcy Petition #: 09-50026-mg</FONT></B></CENTER><TABLE width="100%" BORDER=0 CELLSPACING=1><TR>	<TD VALIGN=top  WIDTH="50%"><FONT SIZE="+0"><BR><I>Assigned to:</I>      Judge Martin Glenn<BR>Chapter          11<BR>Voluntary<BR>Asset <br><div class="noprint"><A HREF='/cgi-bin/qryAscCases.pl?233396'>Show Associated Cases</A></div> <div class="noprint"><a href='/cgi-bin/SearchClaims.pl?caseid=233396;sc'>Claims Register</a></div><BR><BR>	</FONT></TD>
+	<TD VALIGN=top  WIDTH="50%" ALIGN=right><FONT SIZE="+0"><TABLE border=0 cellspacing=0 cellpadding=0 align=center><TR><td align="right" valign="top"><I>Date filed:</I></td><td align="left" valign="top">&nbsp;&nbsp;06/01/2009</td></TR></TABLE>	</FONT></TD>
+</TR>
+</TABLE><BR><FONT SIZE="5"><B></B>
+		</FONT><TABLE width="100%" BORDER=0 CELLSPACING=1><TR><TR>	<TD VALIGN=top  WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>Motors Liquidation Company</B>
+<BR>300 Renaissance Center
+<BR>Detroit, MI 48265-3000
+<BR>OUTSIDE HOME STATE
+<BR>Tax ID / EIN: 38-0572515     <BR><I><B>aka </B></I><B>GMC Truck Division</B><BR><I><B>aka </B></I><B>Automotive Market Research</B><BR><I><B>aka </B></I><B>NAO Fleet Operations</B><BR><I><B>aka </B></I><B>National Car Rental</B><BR><I><B>aka </B></I><B>GM Corporation</B><BR><I><B>aka </B></I><B>National Car Sales</B><BR><I><B>aka </B></I><B>GM Corporation-GM Auction Department</B><BR><I><B>fka </B></I><B>General Motors Corporation</B><BR><BR>	</FONT></TD>
+	<TD VALIGN=top  ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Donald F. Baty, Jr.</B>
+<BR>Honigman Miller Schwartz and Cohn, LLP
+<BR>2290 First National Bldg.
+<BR>660 Woodward Avenue
+<BR>Detroit, MI 48226
+<BR>(313) 465-7314
+<BR>Fax  : (313) 465-7315
+<BR>Email:&nbsp;<a href='mailto:dbaty@honigman.com'>dbaty@honigman.com</a><BR><BR><B>David R. Berz</B>
+<BR>Weil Gotshal & Manges, LLP
+<BR>1300 Eye Street, NW
+<BR>Suite 900
+<BR>Washington, DC 20005
+<BR>(202) 682-7190
+<BR>Fax  : (202) 682-7212
+<BR>Email:&nbsp;<a href='mailto:gregory.bailey@weil.com'>gregory.bailey@weil.com</a><BR><BR><B>Judy B. Calton</B>
+<BR>Honigman Miller Schwartz & Cohn, LLP
+<BR>2290 First National Bldg.
+<BR>660 Woodward Avenue
+<BR>Detroit, MI 48226
+<BR>(313) 465-7344
+<BR>Fax  : (313) 465-7345
+<BR>Email:&nbsp;<a href='mailto:jcalton@honigman.com'>jcalton@honigman.com</a><BR><BR><B>Stephen Karotkin</B>
+<BR>Weil, Gotshal & Manges LLP
+<BR>767 Fifth Avenue
+<BR>New York, NY 10153
+<BR>(212) 310-8350
+<BR>Fax  : (212) 310-8007
+<BR>Email:&nbsp;<a href='mailto:stephen.karotkin@weil.com'>stephen.karotkin@weil.com</a><BR><BR><B>Deborah Kovsky-Apap</B>
+<BR>Pepper Hamilton LLP
+<BR>100 Renaissance Center
+<BR>Suite 3600
+<BR>Detroit, MI 48243-1157
+<BR>(313) 393-7331
+<BR>Fax  : (313) 731-1572
+<BR>Email:&nbsp;<a href='mailto:kovskyd@pepperlaw.com'>kovskyd@pepperlaw.com</a><BR><BR><B>Robert J. Lemons</B>
+<BR>Weil Gotshal & Manges, LLP
+<BR>767 Fifth Avenue
+<BR>New York, NY 10153
+<BR>(212) 310-8924
+<BR>Fax  : (212) 310-8007
+<BR>Email:&nbsp;<a href='mailto:robert.lemons@weil.com'>robert.lemons@weil.com</a><BR><BR><B>Harvey R. Miller</B>
+<BR>Weil, Gotshal & Manges, LLP
+<BR>767 Fifth Avenue
+<BR>New York, NY 10153
+<BR>(212) 310-8000
+<BR>Fax  : (212) 310-8007
+<BR>Email:&nbsp;<a href='mailto:harvey.miller@weil.com'>harvey.miller@weil.com</a><BR><BR><B>Daniel R. Murray</B>
+<BR>Jenner & Block, LLP
+<BR>330 N. Wabash Avenue
+<BR>Chicago, IL 606011
+<BR>(312) 923-2953
+<BR>Fax  : (312) 527-0584
+<BR>Email:&nbsp;<a href='mailto:dmurray@jenner.com'>dmurray@jenner.com</a><BR><BR><B>Joseph R. Sgroi</B>
+<BR>Honigman Miller Schwartz and Cohn LLP
+<BR>2290 First National Building
+<BR>660 Woodward Avenue
+<BR>Detroit, MI 48226
+<BR>(313) 465-7570
+<BR>Fax  : (313) 465-7571
+<BR>Email:&nbsp;<a href='mailto:jsgroi@honigman.com'>jsgroi@honigman.com</a><BR><BR><B>Tricia A. Sherick</B>
+<BR>Honigman Miller Schwartz and Cohn, LLP
+<BR>660 Woodward Avenue
+<BR>Suite 2290
+<BR>Detroit, MI 48226
+<BR>(313) 465-7662
+<BR>Fax  : (313) 465-7663
+<BR>Email:&nbsp;<a href='mailto:tsherick@honigman.com'>tsherick@honigman.com</a><BR><BR><B>Joseph H. Smolinsky</B>
+<BR>Weil, Gotshal & Manges LLP
+<BR>767 Fifth Avenue
+<BR>New York, NY 10153
+<BR>(212) 310-8767
+<BR>Fax  : (212) 310-8007
+<BR>Email:&nbsp;<a href='mailto:Joseph.Smolinsky@weil.com'>Joseph.Smolinsky@weil.com</a><BR><BR><B>Patrick J. Trostle</B>
+<BR>Jenner & Block LLP
+<BR>919 Third Avenue
+<BR>37th Floor
+<BR>New York, NY 10022
+<BR>(212) 891-1665
+<BR>Fax  : (212) 891-1699
+<BR>Email:&nbsp;<a href='mailto:ptrostle@jenner.com'>ptrostle@jenner.com</a><BR><BR><B>Robert B. Weiss</B>
+<BR>Honigman Miller Schwartz & Cohn, LLP
+<BR>2290 First National Building
+<BR>Detroit, MI 48226
+<BR>(313) 465-7596
+<BR>Fax  : (313) 465-7597
+<BR>Email:&nbsp;<a href='mailto:rweiss@honigman.com'>rweiss@honigman.com</a><BR><BR></font></TD><TR>	<TD VALIGN=top  WIDTH="50%"><FONT SIZE="+0"><I><B>Trustee</B></I><BR><B>Wilmington Trust Company</B><BR><BR>	</FONT></TD>
+	<TD VALIGN=top  ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Mitchell A. Karlan</B>
+<BR>GIBSON DUNN & CRUTCHER LLP
+<BR>200 PARK AVE
+<BR>FL 47TH
+<BR>New York, NY 10166
+<BR>212-351-3827
+<BR>Email:&nbsp;<a href='mailto:mkarlan@gibsondunn.com'>mkarlan@gibsondunn.com</a><BR><BR><B>Lisa H. Rubin</B>
+<BR>Gibson Dunn & Crutcher LLP
+<BR>200 Park Avenue
+<BR>New York, NY 10166
+<BR>212-351-2390
+<BR>Fax  : 212-716-0790
+<BR>Email:&nbsp;<a href='mailto:lrubin@gibsondunn.com'>lrubin@gibsondunn.com</a><BR><BR><B>Aric Wu</B>
+<BR>Gibson, Dunn & Crutcher LLP
+<BR>200 Park Avenue
+<BR>New York, NY 10166
+<BR>212-351-3820
+<BR>Email:&nbsp;<a href='mailto:awu@gibsondunn.com'>awu@gibsondunn.com</a><BR><BR></font></TD><TR>	<TD VALIGN=top  WIDTH="50%"><FONT SIZE="+0"><I><B>Trustee</B></I><BR><B>GUC Trust</B><BR><BR>	</FONT></TD>
+	<TD VALIGN=top  WIDTH="20%" ALIGN=right><FONT SIZE="+0">&nbsp;	</FONT></TD>
+<TD valign="top" WIDTH="40%" NOWRAP>
+  	                    <font size="+0">&nbsp;</font></TD><TR>	<TD VALIGN=top  WIDTH="50%"><FONT SIZE="+0"><I><B>U.S. Trustee</B></I><BR><B>United States Trustee</B>
+<BR>Office of the United States Trustee
+<BR>U.S. Federal Office Building
+<BR>201 Varick Street, Room 1006
+<BR>New York, NY 10014
+<BR>(212) 510-0500<BR><BR>	</FONT></TD>
+	<TD VALIGN=top  ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Brian Shoichi Masumoto</B>
+<BR>Office of the United States Trustee
+<BR>33 Whitehall Street
+<BR>21st Floor
+<BR>New York, NY 10004
+<BR>(212) 510-0500
+<BR>Fax  : (212) 668-2255<BR><BR><B>Andrea B. Schwartz</B>
+<BR>Dept. of Justice - Office of the U.S. Trustee
+<BR>33 Whitehall Street
+<BR>21st Floor
+<BR>New York, NY 10004
+<BR>(212) 510-0500
+<BR>Fax  : (212) 668-2255
+<BR>Email:&nbsp;<a href='mailto:andrea.b.schwartz@usdoj.gov'>andrea.b.schwartz@usdoj.gov</a><BR><BR><B>Andrew D. Velez-Rivera</B>
+<BR>Office of the U.S. Trustee
+<BR>33 Whitehall Street
+<BR>21st. Floor
+<BR>New  York, NY 10004
+<BR>(212) 510-0500
+<BR>Fax  : (212) 668-2255<BR><BR></font></TD><TR>	<TD VALIGN=top  WIDTH="50%"><FONT SIZE="+0"><I><B>Claims and Noticing Agent</B></I><BR><B>GCG, Inc. Claims Agent</B>
+<BR>a/k/a The Garden City Group, Inc.
+<BR>1985 Marcus Ave
+<BR>Lake Success, NY 11042
+<BR>www.gcginc.com
+<BR>631-470-5000<BR><BR>	</FONT></TD>
+	<TD VALIGN=top  ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Angela Ferrante</B>
+<BR>Garden City Group, LLC
+<BR>1985 Marcus Avenue, Suite 200
+<BR>Lake Success, NY 11042
+<BR>631-470-5000
+<BR>Fax  : 631-940-6544
+<BR>Email:&nbsp;<a href='mailto:PACERTeam@gardencitygroup.com'>PACERTeam@gardencitygroup.com</a><BR><BR><B>Jeffrey S. Stein</B>
+<BR>The Garden City Group, Inc.
+<BR>105 Maxess Road
+<BR>Melville, NY 11747
+<BR>(631) 470-6834
+<BR>Email:&nbsp;<a href='mailto:PACERTeam@gardencitygroup.com'>PACERTeam@gardencitygroup.com</a><BR><BR></font></TD><TR>	<TD VALIGN=top  WIDTH="50%"><FONT SIZE="+0"><I><B>Creditor Committee</B></I><BR><B>Official Committee of Unsecured Creditors of General Motors Corporation</B><BR><BR>	</FONT></TD>
+	<TD VALIGN=top  ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Philip Bentley</B>
+<BR>Kramer, Levin, Naftalis & Frankel, LLP
+<BR>1177 Avenue of the Americas
+<BR>New York, NY 10036
+<BR>(212) 715-9100
+<BR>Fax  : (212) 715-8000
+<BR>Email:&nbsp;<a href='mailto:pbentley@kramerlevin.com'>pbentley@kramerlevin.com</a><BR><BR><B>David E. Blabey</B>
+<BR>Kramer Levin Naftalis & Frankel LLP
+<BR>1177 Avenue of the Americas
+<BR>New York, NY 10036
+<BR>(212) 715-9100
+<BR>Fax  : (212) 715-8000
+<BR>Email:&nbsp;<a href='mailto:dblabey@kramerlevin.com'>dblabey@kramerlevin.com</a><BR><BR><B>Amy Caton</B>
+<BR>Kramer Levin Naftalis & Frankel, LLP
+<BR>1177 Avenue of the Americas
+<BR>New York, NY 10036
+<BR>(212) 715-9100
+<BR>Email:&nbsp;<a href='mailto:acaton@kramerlevin.com'>acaton@kramerlevin.com</a><BR><BR><B>Eric Fisher</B>
+<BR>Dickstein Shapiro LLP
+<BR>1630 Broadway
+<BR>32nd Floor
+<BR>New York, NY 10017
+<BR>(212) 277-6500
+<BR>Fax  : (212) 277-6501
+<BR>Email:&nbsp;<a href='mailto:fishere@dicksteinshapiro.com'>fishere@dicksteinshapiro.com</a><BR><BR><B>Eric Fisher</B>
+<BR>Binder & Schwartz LLP
+<BR>366 Madison Avenue, 6th Floor
+<BR>New York, NY 10017
+<BR>212-510-7008
+<BR>Fax  : (212) 510-7299
+<BR>Email:&nbsp;<a href='mailto:efisher@binderschwartz.com'>efisher@binderschwartz.com</a><BR><BR><B>Lauren Macksoud</B>
+<BR>Kramer Levin LLP
+<BR>1177 Avenue of the Americas
+<BR>New York, NY 10036
+<BR>(212) 715-9145
+<BR>Fax  : (212) 715-8000
+<BR>Email:&nbsp;<a href='mailto:lmacksoud@kramerlevin.com'>lmacksoud@kramerlevin.com</a><BR><BR><B>Thomas Moers Mayer</B>
+<BR>Kramer Levin Naftalis & Frankel, LLP
+<BR>1177 Avenue of the Americas
+<BR>New York, NY 10036<BR><BR><B>Gordon Z. Novod</B>
+<BR>Kramer Levin Naftalis & Frankel LLP
+<BR>1177 AVENUE OF THE AMERICAS
+<BR>New York, NY 10036
+<BR>(212) 715-3275<BR><BR><B>Gregory G. Plotko</B>
+<BR>Kramer Levin Naftalis & Frankel LLP
+<BR>1177 Avenue of the Americas
+<BR>New York, NY 10036
+<BR>(212) 715-9149
+<BR>Fax  : (212) 715-8000
+<BR>Email:&nbsp;<a href='mailto:gplotko@kramerlevin.com'>gplotko@kramerlevin.com</a><BR><BR><B>Adam C. Rogoff</B>
+<BR>Kramer Levin Naftalis & Frankel LLP
+<BR>1177 Avenue of the Americas
+<BR>New York, NY 10036-2714
+<BR>(212) 715-9285
+<BR>Fax  : (212) 715-8000
+<BR>Email:&nbsp;<a href='mailto:arogoff@kramerlevin.com'>arogoff@kramerlevin.com</a><BR><BR><B>Robert T. Schmidt</B>
+<BR>Kramer, Levin, Naftalis & Frankel, LLP
+<BR>1177 Avenue of the Americas
+<BR>New York, NY 10036
+<BR>(212) 715-9100
+<BR>Email:&nbsp;<a href='mailto:rschmidt@kramerlevin.com'>rschmidt@kramerlevin.com</a><BR><BR><B>Jennifer Sharret</B>
+<BR>Kramer Levin Naftalis & Frankel LLP
+<BR>1177 Avenue  of the Americas
+<BR>New York, NY 10036
+<BR>(212) 715-9526
+<BR>Fax  : (212) 715-8000
+<BR>Email:&nbsp;<a href='mailto:jsharret@kramerlevin.com'>jsharret@kramerlevin.com</a><BR><BR></font></TD></TR><TR>	<TD VALIGN=top  WIDTH="50%"><FONT SIZE="+0"><I><B>Creditor Committee</B></I><BR><B>Official Committee of Unsecured Creditors Holding Asbestos-Related Claims</B>	</FONT></TD>
+	<TD VALIGN=top  WIDTH="20%" ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+	<TD VALIGN=top  WIDTH="40%"><FONT SIZE="+0"><B>Lauren Macksoud</B>
+<BR>(See above for address)	</FONT></TD>
+</TR></TABLE><BR></TABLE><h2 align=center><BR><b>There are proceedings for case 09-50026-mg but none satisfy the selection criteria.</b><BR><BR></h2><center>
+			<script type='text/javascript'>
+				document.cookie = 'RECENT_CASES=' + "233396;";
+			</script>
+		<HR><CENTER><TABLE BORDER=1 BGCOLOR=white width="400"><TR><TH COLSPAN=4><FONT SIZE=+1 COLOR=DARKRED>PACER Service Center </FONT></TH></TR><TR><TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH></TR><TR></TR><TR></TR><TR><TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1 COLOR=DARKBLUE>06/29/2017 14:00:27</FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> mlissner.flp:4512899:0 </FONT></TH></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE>  </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Docket Report </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search Criteria: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 09-50026-mg Fil or Ent: filed From: 6/15/2017 To: 6/29/2017 Doc From: 4929 Doc To: 5002   Headers: included  Format: html Page counts for documents: included </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Billable Pages: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 3 </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.30 </FONT></TD></TR><TR></TR><TR></TR></TABLE></CENTER></HR><BR></BR></div></body></html>

@@ -320,8 +320,9 @@ class DocketReport(object):
             date_filed_str = force_unicode(cells[0].text_content())
             de[u'date_filed'] = convert_date_string(date_filed_str)
             de[u'document_number'] = self._get_document_number(cells[1])
-            de[u'pacer_doc_id'] = self._get_pacer_doc_id(cells[1])
-            de[u'description'] = force_unicode(cells[2].text_content())
+            de[u'pacer_doc_id'] = self._get_pacer_doc_id(cells[1],
+                                                         de[u'document_number'])
+            de[u'description'] = self._get_description(cells)
             docket_entries.append(de)
 
         docket_entries = clean_pacer_object(docket_entries)
@@ -458,41 +459,82 @@ class DocketReport(object):
         self.metadata_values = []
         # Convert the <br> separated content into text strings, treating as much
         # as possible as HTML.
-        sep = u'FLP_SEPARATOR'
         values = []
         for cell in cells:
-            # Split on BR
-            all_text = tostring(cell, encoding='unicode')
-            all_text = re.sub(r'<br/?>', sep, all_text, flags=re.I)
-            element = fromstring(all_text)
-            all_text = force_unicode(element.text_content())
-            clean_texts = [s.strip() for s in all_text.split(sep) if s]
+            clean_texts = self._br_split(cell)
             values.extend(clean_texts)
         values.append(' '.join(values))
         self.metadata_values = values
 
     @staticmethod
-    def _get_pacer_doc_id(cell):
-        try:
-            doc1_url = cell.xpath(u'.//@href')[0]
-        except IndexError:
-            # Docket entry exists, but cannot download document (it's sealed or
-            # otherwise unavailable in PACER).
+    def _get_pacer_doc_id(cell, document_number):
+        if not document_number:
             return None
         else:
-            return get_pacer_doc_id_from_doc1_url(doc1_url)
+            # We find the first link having the document number as text.
+            # This is needed because txnb combines the second and third
+            # column in their docket report.
+            path = u'.//a'
+            urls = cell.xpath(path)
+            if len(urls) == 0:
+                # Docket entry exists, but cannot download document (it's sealed
+                # or otherwise unavailable in PACER).
+                return None
+            for url in urls:
+                if url.text_content().strip() == document_number:
+                    doc1_url = url.xpath('./@href')[0]
+                    return get_pacer_doc_id_from_doc1_url(doc1_url)
 
-    @staticmethod
-    def _get_document_number(cell):
+    def _get_document_number(self, cell):
         """Get the document number.
         
         Some jurisdictions have the number as, "13 (5 pgs)" so some processing
         is needed. See flsb, 09-02199-JKO.
         """
-        words = force_unicode(cell.text_content()).split()
+        words = [word for phrase in self._br_split(cell) for word in
+                 phrase.split()]
         if words:
-            return words[0].strip()
+            first_word = re.sub(u'[\s\u00A0]', '', words[0])
+            if self.court_id == u'txnb':
+                # txnb merges the second and third columns, so if the first word
+                # is a number, return it. Otherwise, assume doc number isn't
+                # listed for the item.
+                if first_word.isdigit():
+                    return first_word
+            else:
+                return first_word
         return u''
+
+    def _get_description(self, cells):
+        if self.court_id != u'txnb':
+            return force_unicode(cells[2].text_content())
+
+        s = force_unicode(cells[1].text_content())
+        # In txnb the second and third columns of the docket entries are
+        # combined. The field can have one of four formats. Attempt the most
+        # detailed first, then work our way down to just giving up and capturing
+        # it all.
+        ws = u'[\s\u00A0]'  # Whitespace including nbsp
+        regexes = [
+            # 2 (23 pgs; 4 docs) Blab blah (happens when attachments exist and
+            # page numbers are on)
+            u'^{ws}*\d+{ws}+\(\d+{ws}+pgs;{ws}\d+{ws}docs\){ws}+(.*)',
+            # 2 (23 pgs) Blab blah (happens when pg nums are on)
+            u'^{ws}*\d+{ws}+\(\d+{ws}+pgs\){ws}+(.*)',
+            # 2 Blab blah (happens when page nums are off)
+            u'^{ws}*\d+{ws}+(.*)',
+            # Blab blah (happens when a doc is sealed; can't be downloaded)
+            u'^{ws}*(.*)',
+        ]
+        for regex in regexes:
+            try:
+                desc = re.search(regex.format(ws=ws), s).group(1)
+                break
+            except AttributeError:
+                continue
+        # OK to ignore error below b/c last regex will always match.
+        # noinspection PyUnboundLocalVariable
+        return desc
 
     def _get_case_name(self):
         if self.is_bankruptcy:
@@ -582,3 +624,17 @@ class DocketReport(object):
                     return convert_date_string(m.group(1))
                 return m.group(1)
         return None
+
+    @staticmethod
+    def _br_split(element):
+        """Split the text of an element on the BRs.
+        
+        :param element: Any HTML element
+        :return: A list of text nodes from that element split on BRs.
+        """
+        sep = u'FLP_SEPARATOR'
+        html_text = tostring(element, encoding='unicode')
+        html_text = re.sub(r'<br/?>', sep, html_text, flags=re.I)
+        element = fromstring(html_text)
+        text = force_unicode(element.text_content())
+        return [s.strip() for s in text.split(sep) if s]

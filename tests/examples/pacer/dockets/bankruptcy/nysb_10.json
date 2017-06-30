@@ -1,0 +1,57 @@
+{
+  "demand": "$46184000000", 
+  "date_terminated": null, 
+  "docket_entries": [], 
+  "docket_number": "09-01165", 
+  "date_discharged": null, 
+  "date_converted": null, 
+  "jurisdiction": null, 
+  "case_name": "Lehman Brothers Holdings Inc. - Adversary Proceeding", 
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "contact": "Weil Gotshal & Manges, LLP\n767 Fifth Avenue\nNew York, NY 10153\n(212) 310-8924\nFax : (212) 310-8007\nEmail: robert.lemons@weil.com\n", 
+          "name": "Robert J. Lemons", 
+          "roles": [
+            "LEAD ATTORNEY"
+          ]
+        }
+      ], 
+      "type": "Plaintiff", 
+      "name": "Lehman Brothers Special Financing Inc.", 
+      "extra_info": "1271 Sixth Avenue\nNew York, NY 10020"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "Klestadt & Winters, LLP\n292 Madison Avenue\n17th Floor\nNew York, NY 10017\n(212) 972-3000\nFax : (212) 972-2245\nEmail: jjureller@klestadt.com\n", 
+          "name": "John E. Jureller, Jr.", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Metropolitan West Asset Management, LLC", 
+      "extra_info": "11766 Wilshire Boulevard\nSuite 1580\nLos Angeles, CA 90025"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "(See above for address)\n", 
+          "name": "John E. Jureller, Jr.", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Metropolitan West Total Return Bond Fund", 
+      "extra_info": "11766 Wilshire Boulevard\nSuite 1580\nLos Angeles, CA 90025"
+    }
+  ], 
+  "date_filed": "2009-04-24", 
+  "nature_of_suit": "14 Recovery of money/property - other; 91 Declaratory judgment", 
+  "jury_demand": null, 
+  "assigned_to_str": "James M. Peck", 
+  "court_id": "nysb", 
+  "cause": null, 
+  "referred_to_str": null
+}

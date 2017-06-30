@@ -1,0 +1,47 @@
+{
+  "demand": null,
+  "date_terminated": null,
+  "docket_entries": [],
+  "docket_number": "09-32303",
+  "date_filed": "2009-08-25",
+  "jurisdiction": null,
+  "case_name": "The Colonial BancGroup, Inc.",
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "contact": "Parker, Hudson, Rainer & Dobbs, LLP\n1500 Marquis Two Tower\n285 Peachtree Center Avenue, N.E.\nAtlanta, GA 30303\n404-523-5300\nFax : 404-522-8409\nEmail: edobbs@phrd.com\n",
+          "name": "C. Edward Dobbs",
+          "roles": []
+        },
+        {
+          "contact": "Parker, Hudson, Rainer & Dobbs LLP\n1500 Marquis Tower II\n285 Peachtree Center Ave. NE\nAtlanta, GA 30303\n404-420-5550\nFax : 404-522-8409\nEmail: rdorsey@phrd.com\n",
+          "name": "Rufus T. Dorsey, IV",
+          "roles": []
+        },
+        {
+          "contact": "Balch & Bingham LLP\n1901 Sixth Avenue North\nSuite 1500\nBirmingham, AL 35203\n205-251-8100\nFax : 205-226-8799\nEmail: cwatson@balch.com\n",
+          "name": "W. Clark Watson",
+          "roles": []
+        }
+      ],
+      "type": "Debtor",
+      "name": "The Colonial BancGroup, Inc.",
+      "extra_info": "100 Colonial Bank Boulevard\nMontgomery, AL 36117\nTax ID / EIN: 00-0001573"
+    },
+    {
+      "attorneys": [],
+      "type": "Bankruptcy Admin.",
+      "name": "Bankruptcy Administrator",
+      "extra_info": "U. S. Bankruptcy Administrator\nOne Church Street\nMontgomery, AL 36104"
+    }
+  ],
+  "nature_of_suit": null,
+  "jury_demand": null,
+  "assigned_to_str": "Dwight H. Williams Jr.",
+  "court_id": "almb",
+  "date_converted": null,
+  "date_discharged": null,
+  "cause": null,
+  "referred_to_str": null
+}

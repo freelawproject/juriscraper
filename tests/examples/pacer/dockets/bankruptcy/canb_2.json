@@ -1,0 +1,37 @@
+{
+  "demand": null, 
+  "date_terminated": "1999-10-18", 
+  "docket_entries": [], 
+  "docket_number": "99-12036", 
+  "date_discharged": "1999-10-13", 
+  "date_converted": null, 
+  "jurisdiction": null, 
+  "case_name": "Laurie Ann Hill", 
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "contact": "Law Offices of Thomas E. Croak Jr.\n136 Oak St.\nFort Bragg, CA 95437\n(707) 964-7066\n", 
+          "name": "Thomas E. Croak, Jr.", 
+          "roles": []
+        }
+      ], 
+      "type": "Debtor", 
+      "name": "Laurie Ann Hill", 
+      "extra_info": "P.O. Box 309\nLittleriver, CA 95456\n(   )\nSSN / ITIN: xxx-xx-1327"
+    }, 
+    {
+      "attorneys": [], 
+      "type": "Trustee", 
+      "name": "Charles E. Sims", 
+      "extra_info": "4225 Solano Ave.  Box 738\nNapa, CA 94558\n(707) 254-7832"
+    }
+  ], 
+  "date_filed": "1999-06-25", 
+  "nature_of_suit": null, 
+  "jury_demand": null, 
+  "assigned_to_str": "Alan Jaroslovsky", 
+  "court_id": "canb", 
+  "cause": null, 
+  "referred_to_str": null
+}

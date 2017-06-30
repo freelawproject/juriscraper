@@ -1,0 +1,43 @@
+{
+  "demand": null, 
+  "date_terminated": null, 
+  "docket_entries": [], 
+  "docket_number": "09-01535", 
+  "date_discharged": null, 
+  "date_converted": null, 
+  "jurisdiction": null, 
+  "case_name": "Lehman Brothers Holdings Inc. - Adversary Proceeding", 
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "contact": "Latham & Watkins, LLP\n885 Third Avenue\nNew York, NY 10022\n(212) 906-1200\nFax : (212) 751-4864\nEmail: Christopher.harris@lw.com\n", 
+          "name": "Christopher Harris", 
+          "roles": []
+        }
+      ], 
+      "type": "Plaintiff", 
+      "name": "Veyance Technologies, Inc.", 
+      "extra_info": "703 S. Cleveland Massillon Road\nFairlawn, OH"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "PRO SE\n", 
+          "name": "Lehman Brothers Special Financing, Inc.", 
+          "roles": []
+        }
+      ], 
+      "type": "Defendant", 
+      "name": "Lehman Brothers Special Financing, Inc.", 
+      "extra_info": ""
+    }
+  ], 
+  "date_filed": "2009-10-16", 
+  "nature_of_suit": "91 Declaratory judgment; 72 Injunctive relief - other", 
+  "jury_demand": null, 
+  "assigned_to_str": "James M. Peck", 
+  "court_id": "nysb", 
+  "cause": null, 
+  "referred_to_str": null
+}

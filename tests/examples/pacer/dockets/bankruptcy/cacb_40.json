@@ -1,0 +1,80 @@
+{
+  "demand": null, 
+  "date_terminated": "2005-02-15", 
+  "docket_entries": [
+    {
+      "date_filed": "2004-10-01", 
+      "document_number": "53", 
+      "description": "Notice of unclaimed dividend[s] [under FRBP 3011] filed by Amrane Cohen, Chapter 13 Trustee; Check no. 200923 in the amount of $380.09 [STE] Original NIBS Entry Number: 52 (Entered: 10/01/2004)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2004-10-07", 
+      "document_number": "54", 
+      "description": "Notice of Intent to File Trustee's Final Report and Account, Obtain Discharge of Trustee, and Close Case; filed by Chapter 13 Trustee [DAN] Original NIBS Entry Number: 53 (Entered: 10/07/2004)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2004-11-23", 
+      "document_number": "55", 
+      "description": "Declaration of Chapter 13 Trustee Re Non-receipt of objections to Trustee's Final Report & Account RE: Item# 54 [MAX] Original NIBS Entry Number: 54 (Entered: 11/24/2004)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2005-01-06", 
+      "document_number": "56", 
+      "description": "Change of address filed by Amrane Cohen, Chapter 13 Trustee: 770 The City Drive South, Suite 3300, Orange, CA 92868 [TAU] Original NIBS Entry Number: 55 (Entered: 01/06/2005)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2005-01-27", 
+      "document_number": "57", 
+      "description": "Final report of trustee in asset case [Chapter 13] - CASE DISMISSED [STE] Original NIBS Entry Number: 56 (Entered: 01/28/2005)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2005-01-27", 
+      "document_number": "58", 
+      "description": "ORDER discharging chapter 13 panel trustee and exonerate bond liability [STE] Original NIBS Entry Number: 57 (Entered: 01/28/2005)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2005-02-15", 
+      "document_number": "59", 
+      "description": "ORDER closing case [DAN] Original NIBS Entry Number: 58 (Entered: 02/15/2005)", 
+      "pacer_doc_id": "show_doc.pl"
+    }
+  ], 
+  "docket_number": "8:03-bk-10133", 
+  "date_discharged": null, 
+  "date_converted": null, 
+  "jurisdiction": null, 
+  "case_name": "Fannie Hill", 
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "contact": "2107 N Broadway Ste 306\nSanta Ana, CA 92706\n714-480-1600\nFax : 714-480-1610\nEmail: sunitansood@hotmail.com\n", 
+          "name": "Sunita N Sood", 
+          "roles": []
+        }
+      ], 
+      "type": "Debtor", 
+      "name": "Fannie Hill", 
+      "extra_info": "7642 Crescent #10\nBuena Park, CA 90620\nSSN / ITIN: xxx-xx-6110"
+    }, 
+    {
+      "attorneys": [], 
+      "type": "Trustee", 
+      "name": "Amrane Cohen", 
+      "extra_info": "770 The City Dr So Ste #3300\nOrange, CA 92868\n714-621-0200"
+    }
+  ], 
+  "date_filed": "2003-01-06", 
+  "nature_of_suit": null, 
+  "jury_demand": null, 
+  "assigned_to_str": "John E. Ryan", 
+  "court_id": "cacb", 
+  "cause": null, 
+  "referred_to_str": null
+}

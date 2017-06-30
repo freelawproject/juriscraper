@@ -1,0 +1,122 @@
+{
+  "demand": null, 
+  "date_terminated": null, 
+  "docket_entries": [
+    {
+      "date_filed": "2010-01-08", 
+      "document_number": "1", 
+      "description": "Chapter 7 Voluntary Petition. All Schedules and Statements filed. (ares) (Entered: 01/11/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-01-08", 
+      "document_number": "3", 
+      "description": "Master Address List (auto) (Entered: 01/11/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-01-08", 
+      "document_number": "4", 
+      "description": "Statement of Social Security Number(s) (ares) (Entered: 01/11/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-01-11", 
+      "document_number": "2", 
+      "description": "Notice of Appointment of Interim Trustee Hank Spacone (auto) (Entered: 01/11/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-01-12", 
+      "document_number": "6", 
+      "description": "BNC 341 Notice Requested (CMX) (auto) (Entered: 01/12/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-01-12", 
+      "document_number": "5", 
+      "description": "Notice of Requirement to Complete Course in Financial Management Course Certificate as Transmitted to BNC for Service. (Admin) (auto) (Entered: 01/12/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-01-12", 
+      "document_number": "7", 
+      "description": "Certificate of Mailing of Notice of Requirement to File a Statement of Completion of Course in Personal Financial Management as provided by the Bankruptcy Noticing Center (Admin.) (Entered: 01/14/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-01-12", 
+      "document_number": "8", 
+      "description": "Certificate of Mailing of Notice of Meeting of Creditors as provided by the Bankruptcy Noticing Center (Admin.) (Entered: 01/14/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-01-29", 
+      "document_number": "9", 
+      "description": "Request for Special Notice Filed by Creditor HSBC Bank Nevada, N.A. (wlos) (Entered: 01/29/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-02-04", 
+      "document_number": "10", 
+      "description": "Financial Management Course Certificate as to Debtor (dpas) (Entered: 02/05/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }, 
+    {
+      "date_filed": "2010-02-04", 
+      "document_number": "11", 
+      "description": "Financial Management Course Certificate as to Joint Debtor (dpas) (Entered: 02/05/2010)", 
+      "pacer_doc_id": "show_doc.pl"
+    }
+  ], 
+  "docket_number": "10-20466", 
+  "date_discharged": null, 
+  "date_converted": null, 
+  "jurisdiction": null, 
+  "case_name": "Bradley A. Morse", 
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "contact": "2817 I St #3\nSacramento, CA 95816\n(916) 442-0376\n", 
+          "name": "Steele Lanphier", 
+          "roles": []
+        }
+      ], 
+      "type": "Debtor", 
+      "name": "Bradley A. Morse", 
+      "extra_info": "3141 Huntsman Dr\nSacramento, CA 95826\nSSN / ITIN: xxx-xx-2446"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "(See above for address)\n", 
+          "name": "Steele Lanphier", 
+          "roles": []
+        }
+      ], 
+      "type": "Joint Debtor", 
+      "name": "Beth A. Morse", 
+      "extra_info": "3141 Huntsman Dr\nSacramento, CA 95826\nSSN / ITIN: xxx-xx-5095"
+    }, 
+    {
+      "attorneys": [], 
+      "type": "Trustee", 
+      "name": "Hank Spacone", 
+      "extra_info": "PO Box 255808\nSacramento, CA 95865\n916-485-5530"
+    }, 
+    {
+      "attorneys": [], 
+      "type": "U.S. Trustee", 
+      "name": "Office of the U.S. Trustee", 
+      "extra_info": "Robert T Matsui United States Courthouse\n501 I Street, Room 7-500\nSacramento, CA 95814"
+    }
+  ], 
+  "date_filed": "2010-01-08", 
+  "nature_of_suit": null, 
+  "jury_demand": null, 
+  "assigned_to_str": "Michael S. McManus", 
+  "court_id": "caeb", 
+  "cause": null, 
+  "referred_to_str": null
+}
