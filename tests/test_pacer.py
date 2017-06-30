@@ -457,9 +457,10 @@ class DocketParseTest(unittest.TestCase):
                 if sys.gettrace() is None:
                     # Don't do this if we're debugging.
                     raise SlownessException(
-                        "This scraper took {duration}s to test, which is more "
-                        "than the maximum allowed duration of "
+                        "The parser for '{fn}' took {duration}s to test, "
+                        "which is more than the maximum allowed duration of "
                         "{max_duration}s.".format(
+                            fn=filename,
                             duration=duration,
                             max_duration=max_duration,
                         )
