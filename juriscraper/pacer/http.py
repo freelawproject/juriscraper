@@ -2,7 +2,7 @@ import re
 import requests
 from requests.packages.urllib3 import exceptions
 
-from juriscraper.lib.exceptions import PacerLoginException
+from ..lib.exceptions import PacerLoginException
 from ..lib.log_tools import make_default_logger
 
 logger = make_default_logger()
@@ -155,7 +155,7 @@ def _login_training(court_id, username, password):
         },
     )
     if 'Invalid ID or password' in r.text:
-        raise BadPacerCredentials(r.text)
+        raise PacerLoginException(r.text)
 
     # The cookie value is in the HTML. Extract it.
     m = re.search('PacerSession=(\w+);', r.text)
