@@ -1,6 +1,7 @@
 # coding=utf-8
 from __future__ import print_function
 
+import sys
 import time
 import unittest
 from datetime import timedelta, date
@@ -376,12 +377,6 @@ class DocketParseTest(unittest.TestCase):
     """Lots of docket parsing tests."""
 
     def setUp(self):
-        self.test_path = os.path.join("tests", "examples", "pacer", "dockets")
-        self.docket_paths = []
-        for root, dirnames, filenames in os.walk(self.test_path):
-            for filename in fnmatch.filter(filenames, '*.html'):
-                self.docket_paths.append(os.path.join(root, filename))
-        self.docket_paths.sort()
         self.session = mock.MagicMock()
         self.maxDiff = 200000
 
@@ -390,11 +385,17 @@ class DocketParseTest(unittest.TestCase):
         with open(path, 'r') as f:
             return f.read()
 
-    @requests_mock.Mocker()
-    def test_parsers(self, request_mock):
+    def run_parsers_on_path(self, path_root, request_mock):
         """Test all the parsers, faking the network query."""
-        for i, path in enumerate(self.docket_paths):
-            print("%s. Doing %s..." % (i, path), end='')
+        paths = []
+        for root, dirnames, filenames in os.walk(path_root):
+            for filename in fnmatch.filter(filenames, '*.html'):
+                paths.append(os.path.join(root, filename))
+        paths.sort()
+        path_max_len = max(len(path) for path in paths) + 2
+        for i, path in enumerate(paths):
+            sys.stdout.write("%s. Doing %s" % (i, path.ljust(path_max_len)))
+            t1 = time.time()
             dirname, filename = os.path.split(path)
             filename_sans_ext = filename.split('.')[0]
             json_path = os.path.join(dirname, '%s.json' % filename_sans_ext)
@@ -449,7 +450,14 @@ class DocketParseTest(unittest.TestCase):
                 self.assertEqual(j['docket_entries'], data['docket_entries'])
                 self.assertEqual(j['parties'], data['parties'])
                 self.assertEqual(j, data)
-            print("✓")
+            t2 = time.time()
+            sys.stdout.write("✓ - %0.1fs\n" % (t2-t1))
+
+    @requests_mock.Mocker()
+    def test_bankruptcy_dockets(self, request_mock):
+        path_root = os.path.join("tests", "examples", "pacer", "dockets",
+                                 "bankruptcy")
+        self.run_parsers_on_path(path_root, request_mock)
 
 
 class PacerUtilTest(unittest.TestCase):
