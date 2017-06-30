@@ -1,5 +1,3 @@
-from __future__ import absolute_import
-
 from ..lib.date_utils import make_date_range_tuples
 from ..lib.html_utils import (
     set_response_encoding, clean_html, fix_links_in_lxml_tree,

@@ -3,13 +3,11 @@
 What is This?
 =============
 
-Juriscraper is a scraper library started several years ago that gathers
-judicial opinions and oral arguments in the American court system. It is
-currently able to scrape:
+Juriscraper is a scraper library started several years ago that gathers judicial opinions, oral arguments, and PACER data in the American court system. It is currently able to scrape:
 
+-  a variety of pages and reports within the PACER system
 -  opinions from all major appellate Federal courts
--  opinions from all state courts of last resort except for Georgia
-   (typically their "Supreme Court")
+-  opinions from all state courts of last resort except for Georgia (typically their "Supreme Court")
 -  oral arguments from all appellate federal courts that offer them
 
 Juriscraper is part of a two-part system. The second part is your code,
@@ -40,7 +38,7 @@ Some of the design goals for this project are:
 Installation & Dependencies
 ===========================
 
-First step: Install Python 2.7.x, then:
+First step: Install Python 2.7.x or 3.x, then:
 
 ::
 
@@ -74,9 +72,11 @@ We use a few tools pretty frequently while building these scrapers. The
 first is `a sister project called
 xpath-tester <https://github.com/mlissner/lxml-xpath-tester>`__ that
 helps debug XPath queries. xpath-tester can be installed locally in a few
-minutes.
+minutes. This tool is useful as a way of testing XPath queries using the same
+dependencies and parsers as in Juriscraper, without any concern that different
+implementations might provide different results.
 
-We also generally use Intellij with PyCharm installed. These are useful because they allow syntax highlighting, code inspection, and PyLint integration. A license for Intellij is available for interested and proven contributors.
+We also generally use Intellij with PyCharm installed. These are useful because they allow syntax highlighting, code inspection, and PyLint integration. Not using these tools typically results in worse code, so we strongly recommend them.
 
 For scrapers to be merged:
 
@@ -224,16 +224,17 @@ Version History
 -  1.1.* - Major code reorganization and first release on the Python Package Index (PyPi)
 -  1.2.* - Continued improvements.
 -  1.3.* - Adds support for scraping some parts of PACER.
+-  1.4.* - Python 3 compatibility.
 
 **Current**
 
--  1.4.* - Python 3 compatibility.
+-  1.5.* - Adds support for querying and parsing PACER dockets.
 
 **Future Roadmap**
 
--  1.5 - Support opinions from for all intermediate appellate state
+-  1.6 - Support opinions from for all intermediate appellate state
    courts
--  1.6 - Support opinions from for all courts of U.S. territories (Guam,
+-  1.7 - Support opinions from for all courts of U.S. territories (Guam,
    American Samoa, etc.)
 -  2.0 - Support opinions from for all federal district courts with
    non-PACER opinion listings
