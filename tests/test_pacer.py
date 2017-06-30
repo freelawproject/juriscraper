@@ -1,11 +1,11 @@
 # coding=utf-8
 from __future__ import print_function
 
-import fnmatch
 import time
 import unittest
 from datetime import timedelta, date
 
+import fnmatch
 import jsondate as json
 import mock
 import os
@@ -386,15 +386,15 @@ class DocketParseTest(unittest.TestCase):
         self.maxDiff = 200000
 
     @staticmethod
-    def get_text_from_file(path):
+    def get_str_from_file(path):
         with open(path, 'r') as f:
             return f.read()
 
     @requests_mock.Mocker()
     def test_parsers(self, request_mock):
         """Test all the parsers, faking the network query."""
-        for path in self.docket_paths:
-            print("Doing %s..." % path, end='')
+        for i, path in enumerate(self.docket_paths):
+            print("%s. Doing %s..." % (i, path), end='')
             dirname, filename = os.path.split(path)
             filename_sans_ext = filename.split('.')[0]
             json_path = os.path.join(dirname, '%s.json' % filename_sans_ext)
@@ -402,18 +402,53 @@ class DocketParseTest(unittest.TestCase):
 
             report = DocketReport(court, self.session)
             request_mock.register_uri(requests_mock.ANY, report.url,
-                                      content=self.get_text_from_file(path))
+                                      content=self.get_str_from_file(path))
 
             response = requests.get(report.url)
+            response.encoding = 'utf-8'
             report.parse(response)
+            data = report.data
+
+            # Make sure some required fields are populated.
+            fields = ['date_filed', 'case_name', 'docket_number',
+                      'assigned_to_str']
+            for field in fields:
+                self.assertTrue(
+                    data[field],
+                    msg="Unable to find truthy value for field %s" % field,
+                )
+
+            self.assertEqual(data['court_id'], court)
+
+            # Party-specific tests...
+            for party in data['parties']:
+                self.assertTrue(
+                    party.get('name', False),
+                    msg="Every party must have a name attribute. Did not get a "
+                        "value for:\n\n%s" % party
+                )
+                # Protect against effed up adversary proceedings cases that
+                # don't parse properly. See: cacb, 2:08-ap-01570-BB
+                self.assertNotIn('----', party['name'])
+
+            if not os.path.isfile(json_path):
+                bar = "*" * 50
+                print("\n\n%s\nJSON FILE DID NOT EXIST. CREATING IT AT:"
+                      "\n\n  %s\n\n"
+                      "Please test the data in this file before assuming "
+                      "everything worked.\n%s\n" % (bar, json_path, bar))
+                with open(json_path, 'w') as f:
+                    json.dump(data, f, indent=2)
+                    #self.assertFalse(True)
+                    continue
+
             with open(json_path) as f:
                 j = json.load(f)
-                data = report.data
                 # Compare docket entries and parties first, for easier
                 # debugging, then compare whole objects to be sure.
-                self.assertEqual(data['docket_entries'], j['docket_entries'])
-                self.assertEqual(data['parties'], j['parties'])
-                self.assertEqual(data, j)
+                self.assertEqual(j['docket_entries'], data['docket_entries'])
+                self.assertEqual(j['parties'], data['parties'])
+                self.assertEqual(j, data)
             print("✓")
 
 
@@ -441,6 +476,7 @@ class PacerUtilTest(unittest.TestCase):
         qa_pairs = (
             ('https://ecf.almd.uscourts.gov/doc1/01712427473', '01712427473'),
             ('/doc1/01712427473', '01712427473'),
+            ('https://ecf.akb.uscourts.gov/doc1/02201247000?caseid=7738&de_seq_num=723284&dm_id=1204742&doc_num=8805&pdf_header=0', '02201247000'),
         )
         for q, a in qa_pairs:
             self.assertEqual(get_pacer_doc_id_from_doc1_url(q), a)
