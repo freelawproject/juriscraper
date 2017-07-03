@@ -438,6 +438,7 @@ class DocketReport(object):
         :return: None
         """
         assert isinstance(text, unicode), "Input must be unicode, not %s" % type(text)
+        text = clean_html(text)
         tree = get_html5_parsed_text(text)
         etree.strip_elements(tree, u'script')
         tree.rewrite_links(fix_links_in_lxml_tree, base_href=self.url)
@@ -452,8 +453,7 @@ class DocketReport(object):
         """
         response.raise_for_status()
         set_response_encoding(response)
-        text = clean_html(response.text)
-        self.parse_text(text)
+        self.parse_text(response.text)
 
     def _set_metadata_values(self):
         # The first ancestor table of the table cell containing "date filed"
