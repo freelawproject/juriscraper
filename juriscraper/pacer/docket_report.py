@@ -35,7 +35,7 @@ class DocketReport(object):
     docket_number_dist_regex = re.compile(r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
     docket_number_bankr_regex = re.compile(r"#:\s+((\d-)?\d\d-\d*)")
 
-    def __init__(self, court_id, pacer_session):
+    def __init__(self, court_id, pacer_session=None):
         self.court_id = court_id
         self.session = pacer_session
         self.html_tree = None
@@ -373,6 +373,9 @@ class DocketReport(object):
         :return: request response object
         """
         # Set up and sanity tests
+        assert self.session is not None, \
+            "session attribute of DocketReport cannot be None."
+
         if date_range_type not in [u'Filed', u'Entered']:
             raise ValueError(u"Invalid value for 'date_range_type' parameter.")
         if output_format not in [u'html', u'pdf']:

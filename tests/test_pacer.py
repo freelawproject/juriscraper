@@ -375,7 +375,6 @@ class DocketParseTest(unittest.TestCase):
     """Lots of docket parsing tests."""
 
     def setUp(self):
-        self.session = mock.MagicMock()
         self.maxDiff = 200000
 
     def run_parsers_on_path(self, path_root):
@@ -394,7 +393,7 @@ class DocketParseTest(unittest.TestCase):
             json_path = os.path.join(dirname, '%s.json' % filename_sans_ext)
             court = filename_sans_ext.split('_')[0]
 
-            report = DocketReport(court, self.session)
+            report = DocketReport(court)
             with open(path, 'r') as f:
                 report.parse_text(f.read().decode('utf-8'))
             data = report.data
