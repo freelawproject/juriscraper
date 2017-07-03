@@ -10,8 +10,6 @@ import fnmatch
 import jsondate as json
 import mock
 import os
-import requests
-import requests_mock
 import vcr
 from requests import ConnectionError
 
@@ -380,12 +378,7 @@ class DocketParseTest(unittest.TestCase):
         self.session = mock.MagicMock()
         self.maxDiff = 200000
 
-    @staticmethod
-    def get_str_from_file(path):
-        with open(path, 'r') as f:
-            return f.read()
-
-    def run_parsers_on_path(self, path_root, request_mock):
+    def run_parsers_on_path(self, path_root):
         """Test all the parsers, faking the network query."""
         paths = []
         for root, dirnames, filenames in os.walk(path_root):
@@ -402,12 +395,8 @@ class DocketParseTest(unittest.TestCase):
             court = filename_sans_ext.split('_')[0]
 
             report = DocketReport(court, self.session)
-            request_mock.register_uri(requests_mock.ANY, report.url,
-                                      content=self.get_str_from_file(path))
-
-            response = requests.get(report.url)
-            response.encoding = 'utf-8'
-            report.parse(response)
+            with open(path, 'r') as f:
+                report.parse_text(f.read().decode('utf-8'))
             data = report.data
 
             # Make sure some required fields are populated.
@@ -467,23 +456,20 @@ class DocketParseTest(unittest.TestCase):
                     )
             sys.stdout.write("✓ - %0.1fs\n" % (t2-t1))
 
-    @requests_mock.Mocker()
-    def test_bankruptcy_court_dockets(self, request_mock):
+    def test_bankruptcy_court_dockets(self):
         path_root = os.path.join(TESTS_ROOT, "examples", "pacer", "dockets",
                                  "bankruptcy")
-        self.run_parsers_on_path(path_root, request_mock)
+        self.run_parsers_on_path(path_root)
 
-    @requests_mock.Mocker()
-    def test_district_court_dockets(self, request_mock):
+    def test_district_court_dockets(self):
         path_root = os.path.join(TESTS_ROOT, 'examples', 'pacer', 'dockets',
                                  'district')
-        self.run_parsers_on_path(path_root, request_mock)
+        self.run_parsers_on_path(path_root)
 
-    @requests_mock.Mocker()
-    def test_specialty_court_dockets(self, request_mock):
+    def test_specialty_court_dockets(self):
         path_root = os.path.join(TESTS_ROOT, 'examples', 'pacer', 'dockets',
                                  'special')
-        self.run_parsers_on_path(path_root, request_mock)
+        self.run_parsers_on_path(path_root)
 
 
 class PacerUtilTest(unittest.TestCase):

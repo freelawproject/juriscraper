@@ -3,7 +3,7 @@ import os
 from pip.req import parse_requirements
 from setuptools import setup, find_packages
 
-VERSION = "1.5.6"
+VERSION = "1.5.8"
 AUTHOR = "Mike Lissner"
 EMAIL = "info@free.law"
 HERE = os.path.abspath(os.path.dirname(__file__))
@@ -53,7 +53,7 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     install_requires=requirements,
-    tests_require=['jsondate', 'mock', 'vcrpy', 'requests-mock'],
+    tests_require=['jsondate', 'mock', 'vcrpy'],
     include_package_data=True,
     test_suite='tests',
 )

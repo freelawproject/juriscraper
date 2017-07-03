@@ -431,21 +431,29 @@ class DocketReport(object):
         return self.session.post(self.url + '?1-L_1_0-1', data=query_params,
                                  timeout=300)
 
-    def parse(self, response):
-        """Parse an HTML docket page.
+    def parse_text(self, text):
+        """Parse an HTML docket as unicode text and set self.html_tree
         
-        This will attempt to cover all of the corner cases across jurisdictions.
-        
+        :param text: A unicode object
+        :return: None
+        """
+        assert isinstance(text, unicode), "Input must be unicode, not %s" % type(text)
+        tree = get_html5_parsed_text(text)
+        etree.strip_elements(tree, u'script')
+        tree.rewrite_links(fix_links_in_lxml_tree, base_href=self.url)
+        self.html_tree = tree
+
+    def parse_response(self, response):
+        """Parse an HTML docket page provided in a requests.response object and
+        set self.html_tree
+                
         :param response: a python request response object 
-        :return: a dict containing all the data from a docket.
+        :return: None
         """
         response.raise_for_status()
         set_response_encoding(response)
         text = clean_html(response.text)
-        tree = get_html5_parsed_text(text)
-        etree.strip_elements(tree, u'script')
-        tree.rewrite_links(fix_links_in_lxml_tree, base_href=response.url)
-        self.html_tree = tree
+        self.parse_text(text)
 
     def _set_metadata_values(self):
         # The first ancestor table of the table cell containing "date filed"
