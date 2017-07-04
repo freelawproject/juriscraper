@@ -199,7 +199,7 @@ class DocketReport(object):
                 )
 
             if len(cells) == 3:
-                party[u'attorneys'] = self.get_attorneys(cells[2])
+                party[u'attorneys'] = self._get_attorneys(cells[2])
 
             if party not in parties:
                 # Sometimes there are dups in the docket. Avoid them.
@@ -213,11 +213,12 @@ class DocketReport(object):
             else:
                 party = {}
 
+        parties = self._normalize_see_above_attorneys(parties)
         self._parties = parties
         return parties
 
     @staticmethod
-    def get_attorneys(cell):
+    def _get_attorneys(cell):
         """Get the attorney information from an HTML tr node.
         
         Input will look like:
@@ -293,6 +294,32 @@ class DocketReport(object):
                     break
 
         return attorneys
+
+    @staticmethod
+    def _normalize_see_above_attorneys(parties):
+        """PACER frequently has "See above" for the contact info of an attorney.
+        Normalize these values.
+        """
+        atty_cache = {}
+        for party in parties:
+            for atty in party.get(u'attorneys', []):
+                if not atty[u'contact']:
+                    continue
+
+                if re.search(r'see\s+above', atty[u'contact'], re.I):
+                    try:
+                        atty_info = atty_cache[atty[u'name']]
+                    except KeyError:
+                        # Unable to find the atty in the cache, therefore, we
+                        # don't know their contact info.
+                        atty[u'contact'] = u''
+                    else:
+                        # Found the atty in the cache. Use the info.
+                        atty[u'contact'] = atty_info
+                else:
+                    # We have atty info. Save it.
+                    atty_cache[atty[u'name']] = atty[u'contact']
+        return parties
 
     @property
     def docket_entries(self):
