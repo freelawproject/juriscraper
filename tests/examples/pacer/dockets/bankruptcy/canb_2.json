@@ -1,12 +1,18 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Alan Jaroslovsky", 
+  "case_name": "Laurie Ann Hill", 
+  "cause": null, 
+  "court_id": "canb", 
+  "date_converted": null, 
+  "date_discharged": "1999-10-13", 
+  "date_filed": "1999-06-25", 
   "date_terminated": "1999-10-18", 
+  "demand": null, 
   "docket_entries": [], 
   "docket_number": "99-12036", 
-  "date_discharged": "1999-10-13", 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Laurie Ann Hill", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -16,22 +22,16 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "P.O. Box 309\nLittleriver, CA 95456\n(   )\nSSN / ITIN: xxx-xx-1327", 
       "name": "Laurie Ann Hill", 
-      "extra_info": "P.O. Box 309\nLittleriver, CA 95456\n(   )\nSSN / ITIN: xxx-xx-1327"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "4225 Solano Ave.  Box 738\nNapa, CA 94558\n(707) 254-7832", 
       "name": "Charles E. Sims", 
-      "extra_info": "4225 Solano Ave.  Box 738\nNapa, CA 94558\n(707) 254-7832"
+      "type": "Trustee"
     }
   ], 
-  "date_filed": "1999-06-25", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Alan Jaroslovsky", 
-  "court_id": "canb", 
-  "cause": null, 
   "referred_to_str": null
 }

@@ -1,31 +1,37 @@
 {
-  "demand": "$375000", 
+  "assigned_to_str": "Robert J. Kressel", 
+  "case_name": "Dennis E. Hecker - Adversary Proceeding", 
+  "cause": null, 
+  "court_id": "mnb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-01-15", 
   "date_terminated": null, 
+  "demand": "$375000", 
   "docket_entries": [
     {
       "date_filed": "2010-01-15", 
-      "document_number": "3", 
       "description": "Certificate of service (re: 1 Complaint, 2 Summons for adversary proceeding) filed by Randall L. Seaver - Trustee.(Burton, Matthew) (Entered: 01/15/2010)", 
+      "document_number": "3", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-01-15", 
-      "document_number": "2", 
       "description": "Summons issued on CHRISTI M. ROWAN Date Issued 1/15/2010, Answer Due 2/16/2010 (AnitaM MNBD) (Entered: 01/15/2010)", 
+      "document_number": "2", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-01-15", 
-      "document_number": "1", 
       "description": "Adversary case 10-05004. (11 (Recovery of money/property - 542 turnover of property)), (13 (Recovery of money/property - 548 fraudulent transfer)), Complaint by Randall L. Seaver - Trustee against CHRISTI M. ROWAN. Fee Amount $250 (Attachments: # 1 Exhibit(s) A-E# 2 Exhibit(s) F - Part A# 3 Exhibit(s) Exhibit F-Part B# 4 Exhibit(s) Exhibit F-Part C# 5 Exhibit(s) Exhibit F-Part D# 6 Exhibit(s) Exhibit F-Part E# 7 Exhibit(s) Exhibit F-Part F# 8 Exhibit(s) Exhibit F - Part G# (9) Exhibit(s) Exhibit F - Part H# 10 Exhibit(s) Exhibit F-Part I# 11 Exhibit(s) Exhibit F - Part J# 12 Exhibit(s) Exhibit F - Part K# 13 Exhibit(s) Exhibit F - Part L# 14 Exhibit(s) Exhibit F - Part M# 15 Exhibit(s) Exhibit F - Part N# 16 Exhibit(s) Exhibits G-H) (Burton, Matthew) (Entered: 01/15/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "10-05004", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Dennis E. Hecker - Adversary Proceeding", 
+  "jury_demand": null, 
+  "nature_of_suit": "11 Recovery of money/property - 542 turnover of property; 13 Recovery of money/property - 548 fraudulent transfer", 
   "parties": [
     {
       "attorneys": [
@@ -37,21 +43,15 @@
           ]
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "12400 Portland Avenue South\nSuite 132\nBurnsville, MN 55337", 
       "name": "Randall L. Seaver - Trustee", 
-      "extra_info": "12400 Portland Avenue South\nSuite 132\nBurnsville, MN 55337"
+      "type": "Plaintiff"
     }, 
     {
-      "type": "Defendant", 
+      "extra_info": "1615 NORTHRIDGE DRIVE\nMEDINA, MN 55391", 
       "name": "CHRISTI M. ROWAN", 
-      "extra_info": "1615 NORTHRIDGE DRIVE\nMEDINA, MN 55391"
+      "type": "Defendant"
     }
   ], 
-  "date_filed": "2010-01-15", 
-  "nature_of_suit": "11 Recovery of money/property - 542 turnover of property; 13 Recovery of money/property - 548 fraudulent transfer", 
-  "jury_demand": null, 
-  "assigned_to_str": "Robert J. Kressel", 
-  "court_id": "mnb", 
-  "cause": null, 
   "referred_to_str": null
 }

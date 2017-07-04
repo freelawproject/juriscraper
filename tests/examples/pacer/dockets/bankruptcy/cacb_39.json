@@ -1,12 +1,18 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Mitchel R. Goldberg", 
+  "case_name": "Laurie Hill", 
+  "cause": null, 
+  "court_id": "cacb", 
+  "date_converted": null, 
+  "date_discharged": "2005-04-12", 
+  "date_filed": "2004-12-28", 
   "date_terminated": "2005-04-27", 
+  "demand": null, 
   "docket_entries": [], 
   "docket_number": "6:04-bk-23757", 
-  "date_discharged": "2005-04-12", 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Laurie Hill", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -21,22 +27,16 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "4359 Highland Place\nRiverside, CA 92506\nSSN / ITIN: xxx-xx-8411", 
       "name": "Laurie Hill", 
-      "extra_info": "4359 Highland Place\nRiverside, CA 92506\nSSN / ITIN: xxx-xx-8411"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "22365 Barton Rd. Suite 220\nGrand Terrace, CA 92313\n(909) 423-0700", 
       "name": "Robert L Goodrich", 
-      "extra_info": "22365 Barton Rd. Suite 220\nGrand Terrace, CA 92313\n(909) 423-0700"
+      "type": "Trustee"
     }
   ], 
-  "date_filed": "2004-12-28", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Mitchel R. Goldberg", 
-  "court_id": "cacb", 
-  "cause": null, 
   "referred_to_str": null
 }

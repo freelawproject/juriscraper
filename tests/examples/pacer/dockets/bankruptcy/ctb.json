@@ -1,12 +1,18 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Alan Shiff", 
+  "case_name": "SageCrest II LLC", 
+  "cause": null, 
+  "court_id": "ctb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2008-08-17", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [], 
   "docket_number": "08-50754", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "SageCrest II LLC", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -56,9 +62,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "Three Pickwick Plaza\nSuite 400\nGreenwich, CT 06830\nTax ID / EIN: 01-0683535", 
       "name": "SageCrest II LLC", 
-      "extra_info": "Three Pickwick Plaza\nSuite 400\nGreenwich, CT 06830\nTax ID / EIN: 01-0683535"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -83,9 +89,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "Three Pickwick Plaza\nSuite 400\nGreenwich, CT 06830\nTax ID / EIN: 20-8689080", 
       "name": "SageCrest Finance LLC", 
-      "extra_info": "Three Pickwick Plaza\nSuite 400\nGreenwich, CT 06830\nTax ID / EIN: 20-8689080"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -115,9 +121,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "Canon's Court\n22 Victoria Street\nHamilton HM 12\nBermuda", 
       "name": "SageCrest Ltd.", 
-      "extra_info": "Canon's Court\n22 Victoria Street\nHamilton HM 12\nBermuda"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -137,9 +143,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "Three Pickwick Plaza\nSuite 400\nGreenwich, CT 06830\nTax ID / EIN: 26-0266398", 
       "name": "SageCrest Dixon Inc.", 
-      "extra_info": "Three Pickwick Plaza\nSuite 400\nGreenwich, CT 06830\nTax ID / EIN: 26-0266398"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -154,9 +160,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "", 
       "name": "SAGECREST HOLDINGS LIMITED", 
-      "extra_info": ""
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -171,28 +177,22 @@
           "roles": []
         }
       ], 
-      "type": "U.S. Trustee", 
+      "extra_info": "Office of the U.S. Trustee\nGiaimo Federal Building\n150 Court Street, Room 302\nNew Haven, CT 06510\n(203)773-2210", 
       "name": "U. S. Trustee", 
-      "extra_info": "Office of the U.S. Trustee\nGiaimo Federal Building\n150 Court Street, Room 302\nNew Haven, CT 06510\n(203)773-2210"
+      "type": "U.S. Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "Creditor Committee", 
+      "extra_info": "Attn: Daniel Goldman, Gen'l Counsel\n60 Long Ridge Road\nStamford, CT 06902\n203-964-1200, Ext 14", 
       "name": "AllFinancial Group, LLC", 
-      "extra_info": "Attn: Daniel Goldman, Gen'l Counsel\n60 Long Ridge Road\nStamford, CT 06902\n203-964-1200, Ext 14"
+      "type": "Creditor Committee"
     }, 
     {
       "attorneys": [], 
-      "type": "Creditor Committee", 
+      "extra_info": "c-o Jean-Daniel Cohen, Officer\nP.O. Box 3152, Road Tower\nTortola\nBritish Virgin Islands\n212-344-2929", 
       "name": "Equal Overseas Consulting, Ltd.", 
-      "extra_info": "c-o Jean-Daniel Cohen, Officer\nP.O. Box 3152, Road Tower\nTortola\nBritish Virgin Islands\n212-344-2929"
+      "type": "Creditor Committee"
     }
   ], 
-  "date_filed": "2008-08-17", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Alan Shiff", 
-  "court_id": "ctb", 
-  "cause": null, 
   "referred_to_str": null
 }

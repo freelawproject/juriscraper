@@ -1,88 +1,88 @@
 {
-  "date_terminated": "2009-02-20",
-  "date_converted": null,
-  "date_discharged": null,
+  "assigned_to_str": "William Keith Watkins", 
+  "case_name": "Efurd v. AAA Cooper Transporation", 
+  "cause": "29:2601 Family and Medical Leave Act", 
+  "court_id": "almd", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2008-11-10", 
+  "date_terminated": "2009-02-20", 
+  "demand": null, 
   "docket_entries": [
     {
-      "date_filed": "2008-11-10",
-      "document_number": "1",
-      "description": "COMPLAINT against AAA Cooper Transporation (Filing fee $350.00 receipt number 4602007136), filed by Joyce Efurd. (Attachments: #(1) Filing Fee Receipt)(dmn) (Entered: 11/13/2008)",
+      "date_filed": "2008-11-10", 
+      "description": "COMPLAINT against AAA Cooper Transporation (Filing fee $350.00 receipt number 4602007136), filed by Joyce Efurd. (Attachments: #(1) Filing Fee Receipt)(dmn) (Entered: 11/13/2008)", 
+      "document_number": "1", 
       "pacer_doc_id": "01701111613"
     }
-  ],
-  "nature_of_suit": "442 Civil Rights: Jobs",
-  "date_filed": "2008-11-10",
-  "jurisdiction": "Federal Question",
-  "case_name": "Efurd v. AAA Cooper Transporation",
+  ], 
+  "docket_number": "1:08-cv-00901", 
+  "jurisdiction": "Federal Question", 
+  "jury_demand": "Plaintiff", 
+  "nature_of_suit": "442 Civil Rights: Jobs", 
   "parties": [
     {
       "attorneys": [
         {
-          "contact": "Fonteneau & Arnold, LLC\n2151 Highland Avenue South, Ste. 110\nBirmingham, AL 35205\n205-252-1550\nFax: 205-502-4476\nEmail: allen@fonteneauarnold.com\n",
-          "name": "Allen Durham Arnold",
+          "contact": "Fonteneau & Arnold, LLC\n2151 Highland Avenue South, Ste. 110\nBirmingham, AL 35205\n205-252-1550\nFax: 205-502-4476\nEmail: allen@fonteneauarnold.com\n", 
+          "name": "Allen Durham Arnold", 
           "roles": [
-            "LEAD ATTORNEY",
+            "LEAD ATTORNEY", 
             "ATTORNEY TO BE NOTICED"
           ]
-        },
+        }, 
         {
-          "contact": "Arendall & Arnold\n2018 Morris Avenue, Third Floor\nBirmingham, AL 35203\n205-252-1550\nFax: 205-252-1556\nEmail: dra@arendalllaw.com\n",
-          "name": "David Randall Arendall",
+          "contact": "Arendall & Arnold\n2018 Morris Avenue, Third Floor\nBirmingham, AL 35203\n205-252-1550\nFax: 205-252-1556\nEmail: dra@arendalllaw.com\n", 
+          "name": "David Randall Arendall", 
           "roles": [
-            "LEAD ATTORNEY",
+            "LEAD ATTORNEY", 
             "ATTORNEY TO BE NOTICED"
           ]
-        },
+        }, 
         {
-          "contact": "Hardwick Hause Segrest & Walding\nPO Box 1469\nDothan, AL 36302\n334-794-4144\nFax: 334-671-9330\nEmail: kwalding2003@yahoo.com\n",
-          "name": "James Kevin Walding",
+          "contact": "Hardwick Hause Segrest & Walding\nPO Box 1469\nDothan, AL 36302\n334-794-4144\nFax: 334-671-9330\nEmail: kwalding2003@yahoo.com\n", 
+          "name": "James Kevin Walding", 
           "roles": [
-            "LEAD ATTORNEY",
+            "LEAD ATTORNEY", 
             "ATTORNEY TO BE NOTICED"
           ]
         }
-      ],
-      "type": "Plaintiff",
-      "name": "Joyce Efurd",
-      "extra_info": ""
-    },
+      ], 
+      "extra_info": "", 
+      "name": "Joyce Efurd", 
+      "type": "Plaintiff"
+    }, 
     {
       "attorneys": [
         {
-          "contact": "Melton Espy & Williams, PC\nPO Drawer 5130\nMontgomery, AL 36103-5130\n334-263-6621\nFax: 334-269-9515\nEmail: mbain@mewlegal.com\n",
-          "name": "Charles Mark Bain",
+          "contact": "Melton Espy & Williams, PC\nPO Drawer 5130\nMontgomery, AL 36103-5130\n334-263-6621\nFax: 334-269-9515\nEmail: mbain@mewlegal.com\n", 
+          "name": "Charles Mark Bain", 
           "roles": [
-            "LEAD ATTORNEY",
+            "LEAD ATTORNEY", 
             "ATTORNEY TO BE NOTICED"
           ]
-        },
+        }, 
         {
-          "contact": "Littler Mendelson PC\n3344 Peachtree Road, NE\nSuite 1500\nAtlanta, GA 30326-4083\n404-443-3547\nFax: 404-393-9099\nEmail: tduffie@littler.com\n",
-          "name": "L. Traywick Duffie",
+          "contact": "Littler Mendelson PC\n3344 Peachtree Road, NE\nSuite 1500\nAtlanta, GA 30326-4083\n404-443-3547\nFax: 404-393-9099\nEmail: tduffie@littler.com\n", 
+          "name": "L. Traywick Duffie", 
           "roles": [
-            "LEAD ATTORNEY",
+            "LEAD ATTORNEY", 
             "ATTORNEY TO BE NOTICED"
           ]
-        },
+        }, 
         {
-          "contact": "Kabat Chapman & Ozmer LLP\n171 17th Street\nSuite 1550\nAtlanta, GA 30363\n470-447-0600\nEmail: psherman@kcozlaw.com\n",
-          "name": "Paul G. Sherman",
+          "contact": "Kabat Chapman & Ozmer LLP\n171 17th Street\nSuite 1550\nAtlanta, GA 30363\n470-447-0600\nEmail: psherman@kcozlaw.com\n", 
+          "name": "Paul G. Sherman", 
           "roles": [
-            "LEAD ATTORNEY",
+            "LEAD ATTORNEY", 
             "ATTORNEY TO BE NOTICED"
           ]
         }
-      ],
-      "type": "Defendant",
-      "name": "AAA Cooper Transporation",
-      "extra_info": ""
+      ], 
+      "extra_info": "", 
+      "name": "AAA Cooper Transporation", 
+      "type": "Defendant"
     }
-  ],
-  "court_id": "almd",
-  "demand": null,
-  "jury_demand": "Plaintiff",
-  "assigned_to_str": "William Keith Watkins",
-  "docket_number": "1:08-cv-00901",
-  "cause": "29:2601 Family and Medical Leave Act",
+  ], 
   "referred_to_str": "Susan Russ Walker"
 }

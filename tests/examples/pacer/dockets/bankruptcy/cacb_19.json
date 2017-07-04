@@ -1,74 +1,74 @@
 {
-  "demand": "$41000",
-  "date_terminated": null,
+  "assigned_to_str": "Sheri Bluebond", 
+  "case_name": "Axium International, Inc - Adversary Proceeding", 
+  "cause": null, 
+  "court_id": "cacb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-12-13", 
+  "date_terminated": null, 
+  "demand": "$41000", 
   "docket_entries": [
     {
-      "date_filed": "2009-12-13",
-      "document_number": "1",
-      "description": "Adversary case 2:09-ap-03295. Complaint by HOWARD M EHRENBERG against Softmaster, Inc.. (Charge To Estate). COMPLAINT FOR (1) AVOIDANCE AND RECOVERY OF PREFERENTIAL TRANSFERS, (2) PRESERVATION OF PREFERENTIAL TRANSFERS, AND (3) DISALLOWANCE OF CLAIMS Nature of Suit: (12 (Recovery of money/property - 547 preference)) (Lev, Daniel) (Entered: 12/13/2009)",
+      "date_filed": "2009-12-13", 
+      "description": "Adversary case 2:09-ap-03295. Complaint by HOWARD M EHRENBERG against Softmaster, Inc.. (Charge To Estate). COMPLAINT FOR (1) AVOIDANCE AND RECOVERY OF PREFERENTIAL TRANSFERS, (2) PRESERVATION OF PREFERENTIAL TRANSFERS, AND (3) DISALLOWANCE OF CLAIMS Nature of Suit: (12 (Recovery of money/property - 547 preference)) (Lev, Daniel) (Entered: 12/13/2009)", 
+      "document_number": "1", 
       "pacer_doc_id": "show_doc.pl"
-    },
+    }, 
     {
-      "date_filed": "2010-01-07",
-      "document_number": "2",
-      "description": "Summons Issued on Softmaster, Inc. Date Issued 1/7/2010, Answer Due 2/18/2010 (Mai, Philip) (Entered: 01/07/2010)",
+      "date_filed": "2010-01-07", 
+      "description": "Summons Issued on Softmaster, Inc. Date Issued 1/7/2010, Answer Due 2/18/2010 (Mai, Philip) (Entered: 01/07/2010)", 
+      "document_number": "2", 
       "pacer_doc_id": "show_doc.pl"
-    },
+    }, 
     {
-      "date_filed": "2010-02-05",
-      "document_number": "3",
-      "description": "Summons Service Executed on Softmaster, Inc. 1/15/2010 (Werth, Steven) (Entered: 02/05/2010)",
+      "date_filed": "2010-02-05", 
+      "description": "Summons Service Executed on Softmaster, Inc. 1/15/2010 (Werth, Steven) (Entered: 02/05/2010)", 
+      "document_number": "3", 
       "pacer_doc_id": "show_doc.pl"
     }
-  ],
-  "docket_number": "2:09-ap-03295",
-  "date_discharged": null,
-  "date_converted": null,
-  "jurisdiction": null,
-  "case_name": "Axium International, Inc - Adversary Proceeding",
+  ], 
+  "docket_number": "2:09-ap-03295", 
+  "jurisdiction": null, 
+  "jury_demand": null, 
+  "nature_of_suit": "12 Recovery of money/property - 547 preference", 
   "parties": [
     {
       "attorneys": [
         {
-          "contact": "333 S Hope St 35th Fl\nLos Angeles, CA 90071\n213-626-2311\nFax : 213-629-4520\nEmail: dlev@sulmeyerlaw.com\n",
-          "name": "Daniel A Lev",
+          "contact": "333 S Hope St 35th Fl\nLos Angeles, CA 90071\n213-626-2311\nFax : 213-629-4520\nEmail: dlev@sulmeyerlaw.com\n", 
+          "name": "Daniel A Lev", 
           "roles": [
             "LEAD ATTORNEY"
           ]
         }
-      ],
-      "type": "Plaintiff",
-      "name": "HOWARD M EHRENBERG",
-      "extra_info": "SulmeyerKupetz\n333 S. Hope Street, 35th Floor\nLos Angeles, CA 90071"
-    },
+      ], 
+      "extra_info": "SulmeyerKupetz\n333 S. Hope Street, 35th Floor\nLos Angeles, CA 90071", 
+      "name": "HOWARD M EHRENBERG", 
+      "type": "Plaintiff"
+    }, 
     {
       "attorneys": [
         {
-          "contact": "PRO SE\n",
-          "name": "Softmaster, Inc.",
+          "contact": "PRO SE\n", 
+          "name": "Softmaster, Inc.", 
           "roles": []
         }
-      ],
-      "type": "Defendant",
-      "name": "Softmaster, Inc.",
-      "extra_info": ""
-    },
+      ], 
+      "extra_info": "", 
+      "name": "Softmaster, Inc.", 
+      "type": "Defendant"
+    }, 
     {
-      "type": "Trustee",
-      "name": "Howard M Ehrenberg",
-      "extra_info": "SulmeyerKupetz\n333 South Hope Street, 35th Floor\nLos Angeles, CA 90071\n(213)626-2311"
-    },
+      "extra_info": "SulmeyerKupetz\n333 South Hope Street, 35th Floor\nLos Angeles, CA 90071\n(213)626-2311", 
+      "name": "Howard M Ehrenberg", 
+      "type": "Trustee"
+    }, 
     {
-      "type": "U.S. Trustee",
-      "name": "United States Trustee (LA)",
-      "extra_info": "725 S Figueroa St., 26th Floor\nLos Angeles, CA 90017"
+      "extra_info": "725 S Figueroa St., 26th Floor\nLos Angeles, CA 90017", 
+      "name": "United States Trustee (LA)", 
+      "type": "U.S. Trustee"
     }
-  ],
-  "date_filed": "2009-12-13",
-  "nature_of_suit": "12 Recovery of money/property - 547 preference",
-  "jury_demand": null,
-  "assigned_to_str": "Sheri Bluebond",
-  "court_id": "cacb",
-  "cause": null,
+  ], 
   "referred_to_str": null
 }

@@ -1,12 +1,18 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Martin Glenn", 
+  "case_name": "Motors Liquidation Company", 
+  "cause": null, 
+  "court_id": "nysb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-06-01", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [], 
   "docket_number": "09-50026", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Motors Liquidation Company", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -76,9 +82,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "300 Renaissance Center\nDetroit, MI 48265-3000\nOUTSIDE HOME STATE\nTax ID / EIN: 38-0572515", 
       "name": "Motors Liquidation Company", 
-      "extra_info": "300 Renaissance Center\nDetroit, MI 48265-3000\nOUTSIDE HOME STATE\nTax ID / EIN: 38-0572515"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -98,15 +104,15 @@
           "roles": []
         }
       ], 
-      "type": "Trustee", 
+      "extra_info": "", 
       "name": "Wilmington Trust Company", 
-      "extra_info": ""
+      "type": "Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "", 
       "name": "GUC Trust", 
-      "extra_info": ""
+      "type": "Trustee"
     }, 
     {
       "attorneys": [
@@ -126,9 +132,9 @@
           "roles": []
         }
       ], 
-      "type": "U.S. Trustee", 
+      "extra_info": "Office of the United States Trustee\nU.S. Federal Office Building\n201 Varick Street, Room 1006\nNew York, NY 10014\n(212) 510-0500", 
       "name": "United States Trustee", 
-      "extra_info": "Office of the United States Trustee\nU.S. Federal Office Building\n201 Varick Street, Room 1006\nNew York, NY 10014\n(212) 510-0500"
+      "type": "U.S. Trustee"
     }, 
     {
       "attorneys": [
@@ -143,9 +149,9 @@
           "roles": []
         }
       ], 
-      "type": "Claims and Noticing Agent", 
+      "extra_info": "a/k/a The Garden City Group, Inc.\n1985 Marcus Ave\nLake Success, NY 11042\nwww.gcginc.com\n631-470-5000", 
       "name": "GCG, Inc. Claims Agent", 
-      "extra_info": "a/k/a The Garden City Group, Inc.\n1985 Marcus Ave\nLake Success, NY 11042\nwww.gcginc.com\n631-470-5000"
+      "type": "Claims and Noticing Agent"
     }, 
     {
       "attorneys": [
@@ -210,9 +216,9 @@
           "roles": []
         }
       ], 
-      "type": "Creditor Committee", 
+      "extra_info": "", 
       "name": "Official Committee of Unsecured Creditors of General Motors Corporation", 
-      "extra_info": ""
+      "type": "Creditor Committee"
     }, 
     {
       "attorneys": [
@@ -222,16 +228,10 @@
           "roles": []
         }
       ], 
-      "type": "Creditor Committee", 
+      "extra_info": "", 
       "name": "Official Committee of Unsecured Creditors Holding Asbestos-Related Claims", 
-      "extra_info": ""
+      "type": "Creditor Committee"
     }
   ], 
-  "date_filed": "2009-06-01", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Martin Glenn", 
-  "court_id": "nysb", 
-  "cause": null, 
   "referred_to_str": null
 }

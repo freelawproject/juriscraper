@@ -1,67 +1,73 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Caryl E. Delano", 
+  "case_name": "Warrelmann, Inc.", 
+  "cause": null, 
+  "court_id": "flmb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-02-12", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-12", 
-      "document_number": "1", 
       "description": "Voluntary Petition under Chapter 11. (Filing Fee Paid) List of 20 Largest Unsecured Creditors. Schedules A-J and Summary of Schedules, Statement of Financial Affairs Disclosure of Compensation, Statement of Corporate Ownership. Filed by R. John Cole II on behalf of Warrelmann, Inc.. (Cole, R.) Modified on 2/16/2010 (Howsmon, Patricia). (Entered: 02/12/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "046032390572"
     }, 
     {
       "date_filed": "2010-02-12", 
-      "document_number": "2", 
       "description": "Declaration Under Penalty of Perjury for Electronic Filing Regarding Petition, Schedules, and Statement of Affairs Filed by R. John Cole II on behalf of Debtor Warrelmann, Inc.. (Cole, R.) (Entered: 02/12/2010)", 
+      "document_number": "2", 
       "pacer_doc_id": "046032390586"
     }, 
     {
       "date_filed": "2010-02-12", 
-      "document_number": "3", 
       "description": "Exhibit A to Debtor's Schedule B Filed by R. John Cole II on behalf of Debtor Warrelmann, Inc.. (Cole, R.) (Entered: 02/12/2010)", 
+      "document_number": "3", 
       "pacer_doc_id": "046032390742"
     }, 
     {
       "date_filed": "2010-02-12", 
-      "document_number": "4", 
       "description": "Exhibit B to Debtor's Schedule B Filed by R. John Cole II on behalf of Debtor Warrelmann, Inc.. (Cole, R.) (Entered: 02/12/2010)", 
+      "document_number": "4", 
       "pacer_doc_id": "046032390845"
     }, 
     {
       "date_filed": "2010-02-12", 
-      "document_number": "5", 
       "description": "Exhibit C to Debtor's Schedule B Filed by R. John Cole II on behalf of Debtor Warrelmann, Inc.. (Cole, R.) (Entered: 02/12/2010)", 
+      "document_number": "5", 
       "pacer_doc_id": "046032390892"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "6", 
       "description": "Notice of Commencement of Case, Section 341 Meeting of Creditors, and Fixing Deadlines . Section 341(a) meeting to be held on 3/11/2010 at 02:30 PM at Tampa, FL (861) - Room 100-B, Timberlake Annex, 501 E. Polk Street. Last day to oppose discharge or dischargeability is 5/10/2010. Proofs of Claims due by 4/28/2010. (Howsmon, Patricia) (Entered: 02/16/2010)", 
+      "document_number": "6", 
       "pacer_doc_id": "046032433167"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "7", 
       "description": "Notice of Deficient Filing. Chapter 11 Case Management Summary, Small Business Chapter 11 balance sheet, operations and cash flow statement and income tax returns or statement under penalty of perjury that no balance sheet, statement of operations or cash-flow statement has been prepared and no federal tax return has been filed (related document(s) 1 ). Compliance required no later than 2/26/2010. (Howsmon, Patricia) (Entered: 02/16/2010)", 
+      "document_number": "7", 
       "pacer_doc_id": "046032433283"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "8", 
       "description": "Order Scheduling Status Conference (related document(s) 1 ). Hearing scheduled for 3/8/2010 at 01:30 PM at Tampa, FL - Courtroom 10B, Sam M. Gibbons United States Courthouse, 801 N. Florida Avenue. Signed on 2/16/2010 (Howsmon, Patricia) (Entered: 02/16/2010)", 
+      "document_number": "8", 
       "pacer_doc_id": "046032434075"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "9", 
       "description": "Order to File All State and Federal Tax Returns and Pay Taxes When Due . Signed on 2/16/2010 (Howsmon, Patricia) (Entered: 02/16/2010)", 
+      "document_number": "9", 
       "pacer_doc_id": "046032434114"
     }
   ], 
   "docket_number": "8:10-bk-03067", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Warrelmann, Inc.", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -71,22 +77,16 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "PO Box 50401\nSarasota, FL 34232\nTax ID / EIN: 65-0564359", 
       "name": "Warrelmann, Inc.", 
-      "extra_info": "PO Box 50401\nSarasota, FL 34232\nTax ID / EIN: 65-0564359"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "Timberlake Annex, Suite 1200\n501 E Polk Street\nTampa, FL 33602\n813-228-2000", 
       "name": "United States Trustee - TPA", 
-      "extra_info": "Timberlake Annex, Suite 1200\n501 E Polk Street\nTampa, FL 33602\n813-228-2000"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2010-02-12", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Caryl E. Delano", 
-  "court_id": "flmb", 
-  "cause": null, 
   "referred_to_str": null
 }

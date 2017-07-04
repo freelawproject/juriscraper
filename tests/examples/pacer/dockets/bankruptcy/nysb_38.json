@@ -1,37 +1,43 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Allan L. Gropper", 
+  "case_name": "Enron Creditors Recovery Corp., et al - Adversary Proceeding", 
+  "cause": null, 
+  "court_id": "nysb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2003-09-24", 
   "date_terminated": "2014-04-22", 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2003-09-24", 
-      "document_number": "1", 
       "description": "Complaint against Citigroup Inc. et al. Filed by Togut, Segal & Segal LLP, Scott Eric Ratner, Susman Godfrey L.L.P., Enron Corp. and Enron North America Corp., on behalf of Enron Corp. and Enron North America Corp.,. (Ratner, Scott) (Entered: 09/24/2003)", 
+      "document_number": "1", 
       "pacer_doc_id": "12606962401"
     }, 
     {
       "date_filed": "2003-09-26", 
-      "document_number": "2", 
       "description": "Summons and Notice of Pre-Trial Conference against Citigroup Inc. et al. Answer Due: 10/27/2003. Filed by Clerk's Office of the U.S. Bankruptcy Court. (Rodriguez, Maria) (Entered: 09/26/2003)", 
+      "document_number": "2", 
       "pacer_doc_id": "12602935851"
     }, 
     {
       "date_filed": "2003-09-26", 
-      "document_number": "3", 
       "description": "Summons and Notice of Pre-Trial Conference against Citigroup Inc. et al. Answer Due: 10/27/2003. Filed by Clerk's Office of the U.S. Bankruptcy Court. with Pre-Trial Conference set for 12/4/2003 at 10:00 AM at Courtroom 523 (AJG), (Rodriguez, Maria) (Entered: 09/26/2003)", 
+      "document_number": "3", 
       "pacer_doc_id": "12606965212"
     }, 
     {
       "date_filed": "2003-10-08", 
-      "document_number": "4", 
       "description": "Affidavit of Service of Summons and Notice of Pretrial Conference and Debtors' Complaint (related document(s)1, 2, 3) filed by Scott Eric Ratner on behalf of Enron Corp. and Enron North America Corp.,. (Attachments: 1 Service List)(Ratner, Scott) (Entered: 10/08/2003)", 
+      "document_number": "4", 
       "pacer_doc_id": "12602984648"
     }
   ], 
   "docket_number": "03-09266", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Enron Creditors Recovery Corp., et al - Adversary Proceeding", 
+  "jury_demand": null, 
+  "nature_of_suit": "454 Recover Money/Property", 
   "parties": [
     {
       "attorneys": [
@@ -50,9 +56,9 @@
           ]
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "", 
       "name": "Enron Development Funding, Ltd.", 
-      "extra_info": ""
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -71,9 +77,9 @@
           ]
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "", 
       "name": "Enron Energy Services, Inc.", 
-      "extra_info": ""
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -92,9 +98,9 @@
           ]
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "", 
       "name": "Enron Broadband Services, Inc.", 
-      "extra_info": ""
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -113,9 +119,9 @@
           ]
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "", 
       "name": "Enron Natural Gas Marketing Corp.", 
-      "extra_info": ""
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -134,9 +140,9 @@
           ]
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "", 
       "name": "Enron North America Corp.", 
-      "extra_info": ""
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -151,15 +157,15 @@
           "roles": []
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "", 
       "name": "Bank of New York, as Indenture Trustee and Collateral Agent, Yosemite Securities Trust I, Yosemite Securities Company, Ltd., Enron Credit Linked Notes Trust, Enron Credit Linked Notes Trust II", 
-      "extra_info": ""
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [], 
-      "type": "Plaintiff", 
+      "extra_info": "", 
       "name": "Enron Sterling Credit Linked Notes Trust and Enron Euro Credit Linked Notes Trust", 
-      "extra_info": ""
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -184,9 +190,9 @@
           "roles": []
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "", 
       "name": "Enron Creditors Recovery Corp., et al", 
-      "extra_info": ""
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -211,9 +217,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Citigroup Inc. et al.", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -228,9 +234,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Royal Bank of Scotland plc", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -252,9 +258,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Long Lane Master Trust IV", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -276,9 +282,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Fleet National Bank", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -305,9 +311,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "FleetBoston Financial Corp.", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -317,9 +323,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Canadian Imperial Bank of Commerce", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -329,15 +335,15 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "J.P. Morgan Chase & Co., JPMorgan Chase Bank and J.P. Morgan Securities Inc.", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Mahonia Limited, Mahonia Natural Gas Limited and Stoneville Aegean Limited", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -352,9 +358,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Barclays Capital Inc.", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -369,9 +375,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Barclays Bank PLC", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -386,9 +392,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Barclays PLC", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -398,9 +404,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "PO Box 1040 Harbour Center\n2nd Floor\nN. Church Street\nGeorge Town, Cayman Isl.\nWest Indie", 
       "name": "Delta Energy Corporation", 
-      "extra_info": "PO Box 1040 Harbour Center\n2nd Floor\nN. Church Street\nGeorge Town, Cayman Isl.\nWest Indie"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -410,9 +416,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Credit Suisse First Boston International (USA), Inc.", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -422,9 +428,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Credit Suisse First Boston, Inc.", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -434,9 +440,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Pershing LLC", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -446,9 +452,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "ERNB Ltd.", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -458,9 +464,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Credit Suisse First Boston International", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -470,9 +476,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "DLJ Capital Funding, Inc.", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -482,9 +488,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Credit Suisse First Boston LLC", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -494,9 +500,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Merchant Capital, Inc.", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -506,9 +512,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Credit Suisse First Boston (USA), Inc.", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -528,9 +534,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "c/o Gibson, Dunn & Crutcher LLP\n200 Park Avenue\nNew York, NY 10166", 
       "name": "Merrill Lynch Capital Services, Inc.", 
-      "extra_info": "c/o Gibson, Dunn & Crutcher LLP\n200 Park Avenue\nNew York, NY 10166"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -550,9 +556,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "c/o Gibson Dunn & Crutcher, LLP\n200 Park Avenue\nNew York, NY 10166\n(212) 351-4000", 
       "name": "Merrill Lynch & Co., Inc.", 
-      "extra_info": "c/o Gibson Dunn & Crutcher, LLP\n200 Park Avenue\nNew York, NY 10166\n(212) 351-4000"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -562,9 +568,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "c/o Seward & Kissel LLP\nOne Battery Park Plaza\nNew York, NY 10004\n(212) 574-1200", 
       "name": "RBC Dominion Securities Corporation", 
-      "extra_info": "c/o Seward & Kissel LLP\nOne Battery Park Plaza\nNew York, NY 10004\n(212) 574-1200"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -574,9 +580,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "c/o Seward & Kissel LLP\nOne Battery Park Plaza\nNew York, NY 10004\n(212) 574-1200", 
       "name": "RBC Holdings (USA) Inc.", 
-      "extra_info": "c/o Seward & Kissel LLP\nOne Battery Park Plaza\nNew York, NY 10004\n(212) 574-1200"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -586,9 +592,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "c/o Seward & Kissel LLP\nOne Battery Park Plaza\nNew York, NY 10004\n(212) 574-1200", 
       "name": "RBC Dominion Securities Limited", 
-      "extra_info": "c/o Seward & Kissel LLP\nOne Battery Park Plaza\nNew York, NY 10004\n(212) 574-1200"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -598,9 +604,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "c/o Seward & Kissel LLP\nOne Battery Park Plaza\nNew York, NY 10004\n(212) 574-1200", 
       "name": "RBC Dominion Securities Inc.", 
-      "extra_info": "c/o Seward & Kissel LLP\nOne Battery Park Plaza\nNew York, NY 10004\n(212) 574-1200"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -610,9 +616,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "c/o Seward & Kissel LLP\nOne Battery Park Plaza\nNew York, NY 10004\n(212) 574-1200", 
       "name": "Royal Bank Holding Inc.", 
-      "extra_info": "c/o Seward & Kissel LLP\nOne Battery Park Plaza\nNew York, NY 10004\n(212) 574-1200"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -622,9 +628,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "c/o Seward & Kissel LLP\nOne Battery Park Plaza\nNew York, NY 10004\n(212) 574-1200", 
       "name": "Royal Bank of Canada", 
-      "extra_info": "c/o Seward & Kissel LLP\nOne Battery Park Plaza\nNew York, NY 10004\n(212) 574-1200"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -634,9 +640,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Hawaii II 125-0 Trust", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -646,9 +652,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Hawaii I 125-0 Trust", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -658,9 +664,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Credit Suisse First Boston, Cayman Island Branch", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -670,9 +676,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "DLJ Fund Investment Partners III, L.P.", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -682,9 +688,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Credit Suisse First Boston", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -694,21 +700,21 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Colonnade Limited", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "", 
       "name": "The Bank of New York, as Indenture Trustee and Collateral Agent, Yosemite Securities Trust I, Yosemite Securities Company, Ltd., Enron Credit Linked Notes Trust, Enron Credit Linked Notes Trust II", 
-      "extra_info": ""
+      "type": "Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "Counter-Defendant", 
+      "extra_info": "", 
       "name": "Enron Creditors Recovery Corp., et al", 
-      "extra_info": ""
+      "type": "Counter-Defendant"
     }, 
     {
       "attorneys": [
@@ -718,9 +724,9 @@
           "roles": []
         }
       ], 
-      "type": "Counter-Claimant", 
+      "extra_info": "c/o Seward & Kissel", 
       "name": "Enron Euro Credit Linked Notes Trust", 
-      "extra_info": "c/o Seward & Kissel"
+      "type": "Counter-Claimant"
     }, 
     {
       "attorneys": [
@@ -730,9 +736,9 @@
           "roles": []
         }
       ], 
-      "type": "Counter-Claimant", 
+      "extra_info": "c/o Seward & Kissel", 
       "name": "Enron Sterling Credit Linked Notes Trust", 
-      "extra_info": "c/o Seward & Kissel"
+      "type": "Counter-Claimant"
     }, 
     {
       "attorneys": [
@@ -742,9 +748,9 @@
           "roles": []
         }
       ], 
-      "type": "Counter-Claimant", 
+      "extra_info": "c/o Seward & Kissel", 
       "name": "Enron Credit Linked Notes Trust II", 
-      "extra_info": "c/o Seward & Kissel"
+      "type": "Counter-Claimant"
     }, 
     {
       "attorneys": [
@@ -754,9 +760,9 @@
           "roles": []
         }
       ], 
-      "type": "Counter-Claimant", 
+      "extra_info": "c/o Seward & Kissel", 
       "name": "Enron Credit Linked Notes Trust", 
-      "extra_info": "c/o Seward & Kissel"
+      "type": "Counter-Claimant"
     }, 
     {
       "attorneys": [
@@ -766,9 +772,9 @@
           "roles": []
         }
       ], 
-      "type": "Counter-Claimant", 
+      "extra_info": "c/o Seward & Kissel", 
       "name": "Yosemite Securities Company, Ltd.", 
-      "extra_info": "c/o Seward & Kissel"
+      "type": "Counter-Claimant"
     }, 
     {
       "attorneys": [
@@ -783,9 +789,9 @@
           "roles": []
         }
       ], 
-      "type": "Counter-Claimant", 
+      "extra_info": "c/o Seward & Kissel\nOne Battery Park Plaza\nNY, NY 10004\n(212) 574-1200", 
       "name": "Yosemite Securities Trust I", 
-      "extra_info": "c/o Seward & Kissel\nOne Battery Park Plaza\nNY, NY 10004\n(212) 574-1200"
+      "type": "Counter-Claimant"
     }, 
     {
       "attorneys": [
@@ -795,51 +801,51 @@
           "roles": []
         }
       ], 
-      "type": "Counter-Claimant", 
+      "extra_info": "as Indenture Trustee and Collateral Agent\nc/o Seward & Kissel\nOne Battery Park Plaza\nNew York, NY 10004\n(212) 574-1200", 
       "name": "The Bank of New York,  as Indenture Trustee and Collateral Agent", 
-      "extra_info": "as Indenture Trustee and Collateral Agent\nc/o Seward & Kissel\nOne Battery Park Plaza\nNew York, NY 10004\n(212) 574-1200"
+      "type": "Counter-Claimant"
     }, 
     {
       "attorneys": [], 
-      "type": "Counter-Claimant", 
+      "extra_info": "c/o Seward & Kissel", 
       "name": "Enron Credit Linked Notes Trust", 
-      "extra_info": "c/o Seward & Kissel"
+      "type": "Counter-Claimant"
     }, 
     {
       "attorneys": [], 
-      "type": "Counter-Claimant", 
+      "extra_info": "c/o Seward & Kissel", 
       "name": "Enron Credit Linked Notes Trust II", 
-      "extra_info": "c/o Seward & Kissel"
+      "type": "Counter-Claimant"
     }, 
     {
       "attorneys": [], 
-      "type": "Counter-Claimant", 
+      "extra_info": "c/o Seward & Kissel", 
       "name": "Enron Euro Credit Linked Notes Trust", 
-      "extra_info": "c/o Seward & Kissel"
+      "type": "Counter-Claimant"
     }, 
     {
       "attorneys": [], 
-      "type": "Counter-Claimant", 
+      "extra_info": "c/o Seward & Kissel", 
       "name": "Enron Sterling Credit Linked Notes Trust", 
-      "extra_info": "c/o Seward & Kissel"
+      "type": "Counter-Claimant"
     }, 
     {
       "attorneys": [], 
-      "type": "Counter-Claimant", 
+      "extra_info": "as Indenture Trustee and Collateral Agent\nc/o Seward & Kissel\nOne Battery Park Plaza\nNew York, NY 10004\n(212) 574-1200", 
       "name": "The Bank of New York,  as Indenture Trustee and Collateral Agent", 
-      "extra_info": "as Indenture Trustee and Collateral Agent\nc/o Seward & Kissel\nOne Battery Park Plaza\nNew York, NY 10004\n(212) 574-1200"
+      "type": "Counter-Claimant"
     }, 
     {
       "attorneys": [], 
-      "type": "Counter-Claimant", 
+      "extra_info": "c/o Seward & Kissel", 
       "name": "Yosemite Securities Company, Ltd.", 
-      "extra_info": "c/o Seward & Kissel"
+      "type": "Counter-Claimant"
     }, 
     {
       "attorneys": [], 
-      "type": "Counter-Claimant", 
+      "extra_info": "c/o Seward & Kissel\nOne Battery Park Plaza\nNY, NY 10004\n(212) 574-1200", 
       "name": "Yosemite Securities Trust I", 
-      "extra_info": "c/o Seward & Kissel\nOne Battery Park Plaza\nNY, NY 10004\n(212) 574-1200"
+      "type": "Counter-Claimant"
     }, 
     {
       "attorneys": [
@@ -849,9 +855,9 @@
           "roles": []
         }
       ], 
-      "type": "3rd Party Plaintiff", 
+      "extra_info": "54 Lombard Street\nLondon EC 3P 3AH\nEngland", 
       "name": "Barclays Metals Limited", 
-      "extra_info": "54 Lombard Street\nLondon EC 3P 3AH\nEngland"
+      "type": "3rd Party Plaintiff"
     }, 
     {
       "attorneys": [
@@ -861,9 +867,9 @@
           "roles": []
         }
       ], 
-      "type": "3rd Party Plaintiff", 
+      "extra_info": "f/k/a Barclays (Metals) Holdings Limited\n54 Lombard Street\nLondon EC 3P 3AH\nEngland", 
       "name": "Barclays Physical Trading Limited,  f/k/a Barclays (Metals) Holdings Limited", 
-      "extra_info": "f/k/a Barclays (Metals) Holdings Limited\n54 Lombard Street\nLondon EC 3P 3AH\nEngland"
+      "type": "3rd Party Plaintiff"
     }, 
     {
       "attorneys": [
@@ -873,9 +879,9 @@
           "roles": []
         }
       ], 
-      "type": "3rd Party Plaintiff", 
+      "extra_info": "54 Lombard Street\nLondon EC 3P 3AH\nEngland", 
       "name": "Barclays Capital Securities Limited", 
-      "extra_info": "54 Lombard Street\nLondon EC 3P 3AH\nEngland"
+      "type": "3rd Party Plaintiff"
     }, 
     {
       "attorneys": [
@@ -885,9 +891,9 @@
           "roles": []
         }
       ], 
-      "type": "3rd Party Plaintiff", 
+      "extra_info": "54 Lombard Street\nLondon EC 3P 3AH\nEngland", 
       "name": "Barclays Bank PLC", 
-      "extra_info": "54 Lombard Street\nLondon EC 3P 3AH\nEngland"
+      "type": "3rd Party Plaintiff"
     }, 
     {
       "attorneys": [
@@ -897,9 +903,9 @@
           "roles": []
         }
       ], 
-      "type": "3rd Pty Defendant", 
+      "extra_info": "33 W. Monroe\nChicago, Il 60603", 
       "name": "Arthur Andersen LLP", 
-      "extra_info": "33 W. Monroe\nChicago, Il 60603"
+      "type": "3rd Pty Defendant"
     }, 
     {
       "attorneys": [
@@ -909,9 +915,9 @@
           "roles": []
         }
       ], 
-      "type": "3rd Party Plaintiff", 
+      "extra_info": "c/o Gibson, Dunn & Crutcher LLP\n200 Park Avenue\nNew York, NY 10166", 
       "name": "Merrill Lynch, Pierce, Fenner & Smith, Inc.", 
-      "extra_info": "c/o Gibson, Dunn & Crutcher LLP\n200 Park Avenue\nNew York, NY 10166"
+      "type": "3rd Party Plaintiff"
     }, 
     {
       "attorneys": [
@@ -926,16 +932,10 @@
           "roles": []
         }
       ], 
-      "type": "3rd Pty Defendant", 
+      "extra_info": "33 W. Monroe\nChicago, Il 60603", 
       "name": "Arthur Andersen LLP", 
-      "extra_info": "33 W. Monroe\nChicago, Il 60603"
+      "type": "3rd Pty Defendant"
     }
   ], 
-  "date_filed": "2003-09-24", 
-  "nature_of_suit": "454 Recover Money/Property", 
-  "jury_demand": null, 
-  "assigned_to_str": "Allan L. Gropper", 
-  "court_id": "nysb", 
-  "cause": null, 
   "referred_to_str": null
 }

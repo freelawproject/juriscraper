@@ -426,7 +426,7 @@ class DocketParseTest(unittest.TestCase):
                       "Please test the data in this file before assuming "
                       "everything worked.\n%s\n" % (bar, json_path, bar))
                 with open(json_path, 'w') as f:
-                    json.dump(data, f, indent=2)
+                    json.dump(data, f, indent=2, sort_keys=True)
                     #self.assertFalse(True)
                     continue
 

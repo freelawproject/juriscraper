@@ -1,12 +1,18 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Mary F. Walrath", 
+  "case_name": "Washington Mutual, Inc. and Joshua R. Hochberg, the Examiner - Adversary Proceeding", 
+  "cause": null, 
+  "court_id": "deb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-03-24", 
   "date_terminated": "2012-12-20", 
+  "demand": null, 
   "docket_entries": [], 
   "docket_number": "09-50551", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Washington Mutual, Inc. and Joshua R. Hochberg, the Examiner - Adversary Proceeding", 
+  "jury_demand": null, 
+  "nature_of_suit": "91 Declaratory judgment", 
   "parties": [
     {
       "attorneys": [
@@ -28,9 +34,9 @@
           "roles": []
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "Landis Rath & Cobb LLP\n919 Market Street\nSuite 1800\nWilmington, DE 19801", 
       "name": "JPMorgan Chase Bank, National Association", 
-      "extra_info": "Landis Rath & Cobb LLP\n919 Market Street\nSuite 1800\nWilmington, DE 19801"
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -45,9 +51,9 @@
           "roles": []
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "P.O. Box 10451\nNewport Beach, CA 92658", 
       "name": "Peter Szanto", 
-      "extra_info": "P.O. Box 10451\nNewport Beach, CA 92658"
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -77,9 +83,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "TERMINATED: 03/20/2012", 
       "name": "Washington Mutual, Inc.", 
-      "extra_info": "TERMINATED: 03/20/2012"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -94,9 +100,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "1301 Second Avenue\nSeattle, WA 98101\nTax ID / EIN: 20-5885395\nTERMINATED: 03/20/2012", 
       "name": "WMI Investment Corp.", 
-      "extra_info": "1301 Second Avenue\nSeattle, WA 98101\nTax ID / EIN: 20-5885395\nTERMINATED: 03/20/2012"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -124,9 +130,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "TERMINATED: 07/23/2009", 
       "name": "Federal Deposit Insurance Corporation", 
-      "extra_info": "TERMINATED: 07/23/2009"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -146,34 +152,28 @@
           "roles": []
         }
       ], 
-      "type": "Creditor Committee", 
+      "extra_info": "TERMINATED: 03/20/2012", 
       "name": "Official Committee of Unsecured Creditors", 
-      "extra_info": "TERMINATED: 03/20/2012"
+      "type": "Creditor Committee"
     }, 
     {
       "attorneys": [], 
-      "type": "Counter-Claimant", 
+      "extra_info": "1301 Second Avenue\nSeattle, WA 98101\nTax ID / EIN: 20-5885395", 
       "name": "WMI Investment Corp.", 
-      "extra_info": "1301 Second Avenue\nSeattle, WA 98101\nTax ID / EIN: 20-5885395"
+      "type": "Counter-Claimant"
     }, 
     {
       "attorneys": [], 
-      "type": "Counter-Claimant", 
+      "extra_info": "", 
       "name": "Washington Mutual, Inc.", 
-      "extra_info": ""
+      "type": "Counter-Claimant"
     }, 
     {
       "attorneys": [], 
-      "type": "Counter-Defendant", 
+      "extra_info": "Landis Rath & Cobb LLP\n919 Market Street\nSuite 1800\nWilmington, DE 19801", 
       "name": "JPMorgan Chase Bank, National Association", 
-      "extra_info": "Landis Rath & Cobb LLP\n919 Market Street\nSuite 1800\nWilmington, DE 19801"
+      "type": "Counter-Defendant"
     }
   ], 
-  "date_filed": "2009-03-24", 
-  "nature_of_suit": "91 Declaratory judgment", 
-  "jury_demand": null, 
-  "assigned_to_str": "Mary F. Walrath", 
-  "court_id": "deb", 
-  "cause": null, 
   "referred_to_str": null
 }

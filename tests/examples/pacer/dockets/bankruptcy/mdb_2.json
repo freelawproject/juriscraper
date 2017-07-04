@@ -1,12 +1,18 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Duncan W. Keir", 
+  "case_name": "Luminent Mortgage Capital, Inc.", 
+  "cause": null, 
+  "court_id": "mdb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2008-09-05", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [], 
   "docket_number": "08-21389", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Luminent Mortgage Capital, Inc.", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -26,9 +32,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "One Liberty Place\n1650 Market Street, 39th Floor\nPhiladelphia, PA 19103\nTax ID / EIN: 06-1694835", 
       "name": "Luminent Mortgage Capital, Inc.", 
-      "extra_info": "One Liberty Place\n1650 Market Street, 39th Floor\nPhiladelphia, PA 19103\nTax ID / EIN: 06-1694835"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -43,9 +49,9 @@
           "roles": []
         }
       ], 
-      "type": "U.S. Trustee", 
+      "extra_info": "Garmatz Federal Courthouse\n101 West Lombard Street\nSuite 2625\nBaltimore, MD 21201\n(410) 962-4300\nFax  : (410) 962-3537\nEmail:\nUSTPRegion04.BA.ECF@USDOJ.GOV", 
       "name": "US Trustee - Baltimore", 
-      "extra_info": "Garmatz Federal Courthouse\n101 West Lombard Street\nSuite 2625\nBaltimore, MD 21201\n(410) 962-4300\nFax  : (410) 962-3537\nEmail:\nUSTPRegion04.BA.ECF@USDOJ.GOV"
+      "type": "U.S. Trustee"
     }, 
     {
       "attorneys": [
@@ -60,9 +66,9 @@
           "roles": []
         }
       ], 
-      "type": "Successor Trustee", 
+      "extra_info": "c/o Kenneth F. Davies, Esq.\nWright, Constable & Skeen, LLP\n100 N. Charles St., 16th Floor\nBaltimore, MD 21201-3812\n(410) 659-1303\nEmail:\nkdavies@wcslaw.com", 
       "name": "The Bank of New York Mellon Trust Company", 
-      "extra_info": "c/o Kenneth F. Davies, Esq.\nWright, Constable & Skeen, LLP\n100 N. Charles St., 16th Floor\nBaltimore, MD 21201-3812\n(410) 659-1303\nEmail:\nkdavies@wcslaw.com"
+      "type": "Successor Trustee"
     }, 
     {
       "attorneys": [
@@ -72,16 +78,10 @@
           "roles": []
         }
       ], 
-      "type": "Creditor Committee", 
+      "extra_info": "", 
       "name": "Official Committee of Unsecured Creditors", 
-      "extra_info": ""
+      "type": "Creditor Committee"
     }
   ], 
-  "date_filed": "2008-09-05", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Duncan W. Keir", 
-  "court_id": "mdb", 
-  "cause": null, 
   "referred_to_str": null
 }

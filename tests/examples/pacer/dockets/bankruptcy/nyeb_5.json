@@ -1,25 +1,31 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Jerome Feller", 
+  "case_name": "Cofire Paving Corp.", 
+  "cause": null, 
+  "court_id": "nyeb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-02-16", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-16", 
-      "document_number": "1", 
       "description": "Chapter 11 Voluntary Petition Fee Amount $1039 Filed by Jonathan S Pasternak on behalf of Cofire Paving Corp. Chapter 11 Plan - Small Business - due by 08/16/2010. Chapter 11 Small Business Disclosure Statement due by 08/16/2010. (Pasternak, Jonathan) (Entered: 02/16/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "2", 
       "description": "Affidavit Re: of Ross J.Holland, President Pursuant to Local Bankruptcy Rule 1007-4 Filed by Jonathan S Pasternak on behalf of Cofire Paving Corp. (Pasternak, Jonathan) (Entered: 02/16/2010)", 
+      "document_number": "2", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "1-10-41193", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Cofire Paving Corp.", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -29,22 +35,16 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "P.O. Box 604384\nBayside, NY 11360\nTax ID / EIN: 11-1541768", 
       "name": "Cofire Paving Corp.", 
-      "extra_info": "P.O. Box 604384\nBayside, NY 11360\nTax ID / EIN: 11-1541768"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "Office of the United States Trustee\n271 Cadman Plaza East\nSuite 4529\nBrooklyn, NY 11201\n(718) 422-4960", 
       "name": "Diana G. Adams", 
-      "extra_info": "Office of the United States Trustee\n271 Cadman Plaza East\nSuite 4529\nBrooklyn, NY 11201\n(718) 422-4960"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2010-02-16", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Jerome Feller", 
-  "court_id": "nyeb", 
-  "cause": null, 
   "referred_to_str": null
 }

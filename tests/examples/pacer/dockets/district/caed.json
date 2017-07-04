@@ -1,63 +1,63 @@
 {
-  "date_terminated": null,
-  "date_converted": null,
-  "date_discharged": null,
+  "assigned_to_str": "Sandra M. Snyder", 
+  "case_name": "(PC) Mitchell v. Rennick et al", 
+  "cause": "42:1983 Prisoner Civil Rights", 
+  "court_id": "caed", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-03-20", 
+  "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
-      "date_filed": "2009-03-19",
-      "document_number": "1",
-      "description": "PRISONER CIVIL RIGHTS COMPLAINT against Rennick, Bott, Palmer, W Williams, Demery by Corey Mitchell.(Figueroa, O) (Entered: 03/20/2009)",
+      "date_filed": "2009-03-19", 
+      "description": "PRISONER CIVIL RIGHTS COMPLAINT against Rennick, Bott, Palmer, W Williams, Demery by Corey Mitchell.(Figueroa, O) (Entered: 03/20/2009)", 
+      "document_number": "1", 
       "pacer_doc_id": "03303140067"
     }
-  ],
-  "nature_of_suit": "550 Prisoner: Civil Rights",
-  "date_filed": "2009-03-20",
-  "jurisdiction": "Federal Question",
-  "case_name": "(PC) Mitchell v. Rennick et al",
+  ], 
+  "docket_number": "1:09-cv-00515", 
+  "jurisdiction": "Federal Question", 
+  "jury_demand": "None", 
+  "nature_of_suit": "550 Prisoner: Civil Rights", 
   "parties": [
     {
       "attorneys": [
         {
-          "contact": "F-23331\nSALINAS VALLEY STATE PRISON (1050)\nPO BOX 1050\nSOLEDAD, CA 93960-1050\nPRO SE\n",
-          "name": "Corey Mitchell",
+          "contact": "F-23331\nSALINAS VALLEY STATE PRISON (1050)\nPO BOX 1050\nSOLEDAD, CA 93960-1050\nPRO SE\n", 
+          "name": "Corey Mitchell", 
           "roles": []
         }
-      ],
-      "type": "Plaintiff",
-      "name": "Corey Mitchell",
-      "extra_info": ""
-    },
+      ], 
+      "extra_info": "", 
+      "name": "Corey Mitchell", 
+      "type": "Plaintiff"
+    }, 
     {
-      "type": "Defendant",
-      "name": "Rennick",
-      "extra_info": "Correctional Officer"
-    },
+      "extra_info": "Correctional Officer", 
+      "name": "Rennick", 
+      "type": "Defendant"
+    }, 
     {
-      "type": "Defendant",
-      "name": "Bott",
-      "extra_info": "Correctional Officer"
-    },
+      "extra_info": "Correctional Officer", 
+      "name": "Bott", 
+      "type": "Defendant"
+    }, 
     {
-      "type": "Defendant",
-      "name": "- Palmer",
-      "extra_info": "Correctional Officer"
-    },
+      "extra_info": "Correctional Officer", 
+      "name": "- Palmer", 
+      "type": "Defendant"
+    }, 
     {
-      "type": "Defendant",
-      "name": "W Williams",
-      "extra_info": "Correctional Officer"
-    },
+      "extra_info": "Correctional Officer", 
+      "name": "W Williams", 
+      "type": "Defendant"
+    }, 
     {
-      "type": "Defendant",
-      "name": "Demery",
-      "extra_info": "State Agent-Actor"
+      "extra_info": "State Agent-Actor", 
+      "name": "Demery", 
+      "type": "Defendant"
     }
-  ],
-  "court_id": "caed",
-  "demand": null,
-  "jury_demand": "None",
-  "assigned_to_str": "Sandra M. Snyder",
-  "docket_number": "1:09-cv-00515",
-  "cause": "42:1983 Prisoner Civil Rights",
+  ], 
   "referred_to_str": null
 }

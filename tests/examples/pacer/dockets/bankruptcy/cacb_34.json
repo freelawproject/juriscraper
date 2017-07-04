@@ -1,31 +1,37 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Victoria S. Kaufman", 
+  "case_name": "Benito Javier Lopez", 
+  "cause": null, 
+  "court_id": "cacb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-02-15", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-15", 
-      "document_number": "1", 
       "description": "Chapter 13 Voluntary Petition . Fee Amount $274 Filed by Benito Javier Lopez Schedule A due 03/1/2010. Schedule B due 03/1/2010. Schedule C due 03/1/2010. Schedule D due 03/1/2010. Schedule E due 03/1/2010. Schedule F due 03/1/2010. Schedule G due 03/1/2010. Schedule H due 03/1/2010. Schedule I due 03/1/2010. Schedule J due 03/1/2010. Statement of Financial Affairs due 03/1/2010. Chapter 13 Plan due by 03/1/2010. Statement - Form 22C Due: 03/1/2010.Statement of Related Case due 03/1/2010. Notice of available chapters due 03/1/2010. Summary of schedules due 03/1/2010. Declaration concerning debtors schedules due 03/1/2010. Disclosure of Compensation of Attorney for Debtor due 03/1/2010. Statistical Summary due 03/1/2010. Incomplete Filings due by 03/1/2010. (Nunez, Wilo) (Entered: 02/15/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-15", 
-      "document_number": "2", 
       "description": "Statement of Social Security Number(s) Form B21 Filed by Debtor Benito Javier Lopez. (Nunez, Wilo) (Entered: 02/15/2010)", 
+      "document_number": "2", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-15", 
-      "document_number": "3", 
       "description": "Certificate of Credit Counseling Filed by Debtor Benito Javier Lopez. (Nunez, Wilo) (Entered: 02/15/2010)", 
+      "document_number": "3", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "2:10-bk-15309", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Benito Javier Lopez", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -35,28 +41,22 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "6317 Palm Ave\nBell, CA 90201\nSSN / ITIN: xxx-xx-7703", 
       "name": "Benito Javier Lopez", 
-      "extra_info": "6317 Palm Ave\nBell, CA 90201\nSSN / ITIN: xxx-xx-7703"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "606 South Olive Street, Suite 950\nLos Angeles, CA 90014\n213-689-3014", 
       "name": "Nancy K Curry", 
-      "extra_info": "606 South Olive Street, Suite 950\nLos Angeles, CA 90014\n213-689-3014"
+      "type": "Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "725 S Figueroa St., 26th Floor\nLos Angeles, CA 90017", 
       "name": "United States Trustee (LA)", 
-      "extra_info": "725 S Figueroa St., 26th Floor\nLos Angeles, CA 90017"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2010-02-15", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Victoria S. Kaufman", 
-  "court_id": "cacb", 
-  "cause": null, 
   "referred_to_str": null
 }

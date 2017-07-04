@@ -1,67 +1,73 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Theodor Albert", 
+  "case_name": "M & Z Valley Associates, LLC a California limited liability company", 
+  "cause": null, 
+  "court_id": "cacb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-01-28", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-01-28", 
-      "document_number": "1", 
       "description": "Chapter 11 Voluntary Petition. Fee Amount $1039 Filed by M & Z Valley Associates, LLC a California limited liability company (Marshack, Richard) (Entered: 01/28/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-01-28", 
-      "document_number": "2", 
       "description": "Corporate resolution authorizing filing of petitions,, Exhibit A to Voluntary Petition,, Statement of Corporate Ownership filed., List of creditors holding 20 largest unsecured claims, List of Equity Security Holders, Venue disclosure form (for Corporations and Partnerships filing a chapter 11), Statement of related cases, Summary of Schedules, Statistical Summary of Certain Liabilities, Schedule A, Schedule B, Schedule D, Schedule E, Schedule F, Schedule G, Schedule H, Declaration concerning debtor's schedules Filed by Debtor M & Z Valley Associates, LLC a California limited liability company. (Marshack, Richard) (Entered: 01/28/2010)", 
+      "document_number": "2", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-01-28", 
-      "document_number": "3", 
       "description": "Statement of Financial Affairs, Disclosure of Compensation of Attorney for Debtor, Verification of creditor matrix, Matrix (Mailing List) Filed by Debtor M & Z Valley Associates, LLC a California limited liability company. (Marshack, Richard) (Entered: 01/28/2010)", 
+      "document_number": "3", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-01-29", 
-      "document_number": "4", 
       "description": "Statement of Corporate Ownership filed. Corporate parents added to case: Parks Diversified LP.Corporate Affiliates added to case:, Centrium Associates LLC Filed by Debtor M & Z Valley Associates, LLC a California limited liability company . (Roque, Jewell) (Entered: 01/29/2010)", 
+      "document_number": "4", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-01-29", 
-      "document_number": "5", 
       "description": "Notice of Appearance and Request for Notice by Clifford P Jung Filed by Creditor United Commercial Bank. (Jung, Clifford) (Entered: 01/29/2010)", 
+      "document_number": "5", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-02", 
-      "document_number": "6", 
       "description": "Meeting of Creditors 341(a) meeting to be held on 3/3/2010 at 09:00 AM at RM 1-159, 411 W Fourth St., Santa Ana, CA 92701. (Corona, Heidi) (Entered: 02/02/2010)", 
+      "document_number": "6", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-04", 
-      "document_number": "7", 
       "description": "BNC Certificate of Notice (RE: related document(s) 6 Meeting of Creditors Chapter 11 & 12) No. of Notices: 22. Service Date 02/04/2010. (Admin.) (Entered: 02/04/2010)", 
+      "document_number": "7", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-08", 
-      "document_number": "8", 
       "description": "Order Re: Setting Scheduling and Case Management Conference with Certificate of Mailing attached; Status Conference hearing is set for 4/7/2010 at 10:00 A.M. courtroom 5B. Signed on 2/8/2010 (RE: related document(s) 1 Voluntary Petition (Chapter 11) filed by Debtor M & Z Valley Associates, LLC a California limited liability company). (Wright, Jennifer) Additional attachment(s) added on 2/8/2010 (Wright, Jennifer). (Entered: 02/08/2010)", 
+      "document_number": "8", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-11", 
-      "document_number": "9", 
       "description": "Request for courtesy Notice of Electronic Filing (NEF) Filed by Elmer D Martin III on behalf of Courtesy NEF. (Martin, Elmer) (Entered: 02/11/2010)", 
+      "document_number": "9", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "8:10-bk-11079", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "M & Z Valley Associates, LLC a California limited liability company", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -71,9 +77,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "24532 Del Prado\nCapistrano Beach, CA 92624\nTax ID / EIN: 10-128409", 
       "name": "M & Z Valley Associates, LLC a California limited liability company", 
-      "extra_info": "24532 Del Prado\nCapistrano Beach, CA 92624\nTax ID / EIN: 10-128409"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -83,16 +89,10 @@
           "roles": []
         }
       ], 
-      "type": "U.S. Trustee", 
+      "extra_info": "411 W Fourth St., Suite 9041\nSanta Ana, CA 92701-4593", 
       "name": "United States Trustee (SA)", 
-      "extra_info": "411 W Fourth St., Suite 9041\nSanta Ana, CA 92701-4593"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2010-01-28", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Theodor Albert", 
-  "court_id": "cacb", 
-  "cause": null, 
   "referred_to_str": null
 }

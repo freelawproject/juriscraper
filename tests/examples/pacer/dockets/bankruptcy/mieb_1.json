@@ -1,25 +1,31 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Thomas J. Tucker", 
+  "case_name": "Edmond Paul Gaines", 
+  "cause": null, 
+  "court_id": "mieb", 
+  "date_converted": "2005-05-23", 
+  "date_discharged": null, 
+  "date_filed": "2004-10-14", 
   "date_terminated": "2005-09-20", 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2008-09-09", 
-      "document_number": "43", 
       "description": "Notice of Unclaimed Dividends ocb Filed by Trustee Tammy L. Terry. (Terry, Tammy) (Entered: 09/09/2008)", 
+      "document_number": "43", 
       "pacer_doc_id": "096013872833"
     }, 
     {
       "date_filed": "2008-10-30", 
-      "document_number": "44", 
       "description": "Chapter 13 Trustee's Final Report and Account - Converted. (^Terry, Tammy (LH)) (Entered: 10/30/2008)", 
+      "document_number": "44", 
       "pacer_doc_id": "096015092349"
     }
   ], 
   "docket_number": "04-69141", 
-  "date_discharged": null, 
-  "date_converted": "2005-05-23", 
   "jurisdiction": null, 
-  "case_name": "Edmond Paul Gaines", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -29,28 +35,22 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "4505 Marcy Lane\nIndianapolis, IN 46205\nSSN / ITIN: xxx-xx-0165", 
       "name": "Edmond Paul Gaines", 
-      "extra_info": "4505 Marcy Lane\nIndianapolis, IN 46205\nSSN / ITIN: xxx-xx-0165"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "Buhl Building\n535 Griswold\nSuite 2100\nDetroit, MI 48226\n313-967-9857\nTERMINATED: 05/23/2005", 
       "name": "Tammy L. Terry", 
-      "extra_info": "Buhl Building\n535 Griswold\nSuite 2100\nDetroit, MI 48226\n313-967-9857\nTERMINATED: 05/23/2005"
+      "type": "Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "21 Kercheval Avenue\nSuite 285\nGrosse Pointe Farms, MI 48236\n313-886-9765", 
       "name": "Gene R. Kohut", 
-      "extra_info": "21 Kercheval Avenue\nSuite 285\nGrosse Pointe Farms, MI 48236\n313-886-9765"
+      "type": "Trustee"
     }
   ], 
-  "date_filed": "2004-10-14", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Thomas J. Tucker", 
-  "court_id": "mieb", 
-  "cause": null, 
   "referred_to_str": null
 }

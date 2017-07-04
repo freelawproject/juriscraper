@@ -1,25 +1,31 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Jeff Bohm", 
+  "case_name": "TA-LEE-HO ENERGY CORP., Debtor", 
+  "cause": null, 
+  "court_id": "txsb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-02-15", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-15", 
-      "document_number": "1", 
       "description": "Chapter 7 Voluntary Petition. Fee Amount $299. Filed by TA-LEE-HO ENERGY CORP.. (Fuqua, Richard) (Entered: 02/15/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-15", 
-      "document_number": "2", 
       "description": "Creditor Mailing List Loaded. (Filed By TA-LEE-HO ENERGY CORP. ). (Fuqua, Richard) (Entered: 02/15/2010)", 
+      "document_number": "2", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "10-31246", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "TA-LEE-HO ENERGY CORP., Debtor", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -29,28 +35,22 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "Debtor\nPO Box 400\nNormangee, TX 77871\nTax ID / EIN: 74-2134970", 
       "name": "TA-LEE-HO ENERGY CORP.,  Debtor", 
-      "extra_info": "Debtor\nPO Box 400\nNormangee, TX 77871\nTax ID / EIN: 74-2134970"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "Hughes Watters and Askanase\n333 Clay\n29th Floor\nHouston, TX 77002\n713-759-0818", 
       "name": "Janet S Casciato-Northrup", 
-      "extra_info": "Hughes Watters and Askanase\n333 Clay\n29th Floor\nHouston, TX 77002\n713-759-0818"
+      "type": "Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "Office of the US Trustee\n515 Rusk Ave\nSte 3516\nHouston, TX 77002\n713-718-4650", 
       "name": "US Trustee", 
-      "extra_info": "Office of the US Trustee\n515 Rusk Ave\nSte 3516\nHouston, TX 77002\n713-718-4650"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2010-02-15", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Jeff Bohm", 
-  "court_id": "txsb", 
-  "cause": null, 
   "referred_to_str": null
 }

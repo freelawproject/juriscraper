@@ -1,19 +1,25 @@
 {
-  "demand": "$1152598000", 
+  "assigned_to_str": "Stuart M. Bernstein", 
+  "case_name": "Administrative Case Re: 08-01789 (Securities Invest - Adversary Proceeding", 
+  "cause": null, 
+  "court_id": "nysb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-05-01", 
   "date_terminated": null, 
+  "demand": "$1152598000", 
   "docket_entries": [
     {
       "date_filed": "2010-02-09", 
-      "document_number": "70", 
       "description": "Notice of Adjournment of Hearing on Defendants' Motions to Dismiss (related document(s)36, 40, 11) filed by Marc E. Hirschfield on behalf of Irving H. Picard. with hearing to be held on 5/5/2010 at 11:00 AM at Courtroom 623 (BRL) (Attachments: 1 Exhibit 12 Appendix Certificate of Service)(Hirschfield, Marc) (Entered: 02/09/2010)", 
+      "document_number": "70", 
       "pacer_doc_id": "12609012362"
     }
   ], 
   "docket_number": "09-01172", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Administrative Case Re: 08-01789 (Securities Invest - Adversary Proceeding", 
+  "jury_demand": null, 
+  "nature_of_suit": "11 Recovery of money/property - 542 turnover of property; 12 Recovery of money/property - 547 preference; 13 Recovery of money/property - 548 fraudulent transfer", 
   "parties": [
     {
       "attorneys": [
@@ -30,9 +36,9 @@
           ]
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "Trustee for SIPA Liquidation\nBaker & Hostetler LLP\n45 Rockefeller Plaza\nNew York, NY 10111\n212 589 4200", 
       "name": "Irving H. Picard", 
-      "extra_info": "Trustee for SIPA Liquidation\nBaker & Hostetler LLP\n45 Rockefeller Plaza\nNew York, NY 10111\n212 589 4200"
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -42,9 +48,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "The Brighton Company", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -54,9 +60,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "The Lambeth Company", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -66,16 +72,10 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "The Popham Company", 
-      "extra_info": ""
+      "type": "Defendant"
     }
   ], 
-  "date_filed": "2009-05-01", 
-  "nature_of_suit": "11 Recovery of money/property - 542 turnover of property; 12 Recovery of money/property - 547 preference; 13 Recovery of money/property - 548 fraudulent transfer", 
-  "jury_demand": null, 
-  "assigned_to_str": "Stuart M. Bernstein", 
-  "court_id": "nysb", 
-  "cause": null, 
   "referred_to_str": null
 }

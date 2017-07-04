@@ -1,12 +1,18 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Brendan Linehan Shannon", 
+  "case_name": "Smurfit-Stone Container Corporation - Adversary Proceeding", 
+  "cause": null, 
+  "court_id": "deb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-06-18", 
   "date_terminated": "2010-08-13", 
+  "demand": null, 
   "docket_entries": [], 
   "docket_number": "09-51067", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Smurfit-Stone Container Corporation - Adversary Proceeding", 
+  "jury_demand": null, 
+  "nature_of_suit": "72 Injunctive relief - other", 
   "parties": [
     {
       "attorneys": [
@@ -23,9 +29,9 @@
           "roles": []
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "", 
       "name": "Smurfit-Stone Container Corporation, et al.", 
-      "extra_info": ""
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -50,9 +56,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Mark W. Mayer", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -77,9 +83,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Larry C. Welsh", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -104,16 +110,10 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "Individually, on behalf of the Smurfit-Stone Container Corporation Savings Plan, the Jefferson Smurfit Corporation Hourly Savings Plan, the Smurfit-Stone Container Corporation Hourly Savings Plan, and the St. Laurent Paperboard Hourly Savings Plan, and on", 
       "name": "Brandi Young,  Individually, on behalf of the Smurfit-Stone Container Corporation Savings Plan, the Jefferson Smurfit Corporation Hourly Savings Plan, the Smurfit-Stone Container Corporation Hourly Savings Plan, and the St. Laurent Paperboard Hourly Savings Plan, and on", 
-      "extra_info": "Individually, on behalf of the Smurfit-Stone Container Corporation Savings Plan, the Jefferson Smurfit Corporation Hourly Savings Plan, the Smurfit-Stone Container Corporation Hourly Savings Plan, and the St. Laurent Paperboard Hourly Savings Plan, and on"
+      "type": "Defendant"
     }
   ], 
-  "date_filed": "2009-06-18", 
-  "nature_of_suit": "72 Injunctive relief - other", 
-  "jury_demand": null, 
-  "assigned_to_str": "Brendan Linehan Shannon", 
-  "court_id": "deb", 
-  "cause": null, 
   "referred_to_str": null
 }

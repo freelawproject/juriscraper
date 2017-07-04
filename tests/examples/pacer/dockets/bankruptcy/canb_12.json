@@ -1,79 +1,85 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Arthur S. Weissbrodt", 
+  "case_name": "Deissy Gonzalez", 
+  "cause": null, 
+  "court_id": "canb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-01-14", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-01-14", 
-      "document_number": "1", 
       "description": "Chapter 13 Voluntary Petition, Fee Amount $274. Filed by Deissy Gonzalez . Section 521 Filings due by 3/1/2010. Order Meeting of Creditors due by 2/16/2010. Chapter 13 Plan due by 1/28/2010. (tp)Corrective entry: Corrected spelling of debtor's name in text. Modified on 1/14/2010 (tp). (Entered: 01/14/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "034013073066"
     }, 
     {
       "date_filed": "2010-01-14", 
-      "document_number": "2", 
       "description": "Statement of Social Security Number. Filed by Debtor Deissy Gonzalez (tp) (Entered: 01/14/2010)", 
+      "document_number": "2", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-01-15", 
-      "document_number": "3", 
       "description": "Order Providing for Dismissal for Failure to File Chapter 13 Plan . (kn) (Entered: 01/15/2010)", 
+      "document_number": "3", 
       "pacer_doc_id": "034013086440"
     }, 
     {
       "date_filed": "2010-01-15", 
-      "document_number": "4", 
       "description": "Order To File Required Documents and Notice Regarding Dismissal . (kn) (Entered: 01/15/2010)", 
+      "document_number": "4", 
       "pacer_doc_id": "034013086447"
     }, 
     {
       "date_filed": "2010-01-17", 
-      "document_number": "5", 
       "description": "BNC Certificate of Mailing (RE: related document(s) 4 Order to File Missing Documents). Service Date 01/17/2010. (Admin.) (Entered: 01/17/2010)", 
+      "document_number": "5", 
       "pacer_doc_id": "034013104746"
     }, 
     {
       "date_filed": "2010-01-17", 
-      "document_number": "6", 
       "description": "BNC Certificate of Mailing (RE: related document(s) 3 Order Providing for Dismissal). Service Date 01/17/2010. (Admin.) (Entered: 01/17/2010)", 
+      "document_number": "6", 
       "pacer_doc_id": "034013104747"
     }, 
     {
       "date_filed": "2010-01-27", 
-      "document_number": "7", 
       "description": "Meeting of Creditors with Certificate of Service. 341(a) meeting to be held on 3/4/2010 at 02:30 PM San Jose Room 130 Objection to Dischargeability due by 5/3/2010 Proofs of Claims due by 6/2/2010 Last day to object to confirmation is 3/4/2010Confirmation Hearing to be held on 3/17/2010 at 02:30 PM San Jose Courtroom 3020 - Weissbrodt (Derham-Burk, Devin (gc)) (Entered: 01/27/2010)", 
+      "document_number": "7", 
       "pacer_doc_id": "034013221110"
     }, 
     {
       "date_filed": "2010-01-29", 
-      "document_number": "8", 
       "description": "BNC Certificate of Mailing - Meeting of Creditors. (RE: related document(s) 7 Meeting of Creditors Chapter 13). Service Date 01/29/2010. (Admin.) (Entered: 01/29/2010)", 
+      "document_number": "8", 
       "pacer_doc_id": "034013262102"
     }, 
     {
       "date_filed": "2010-01-29", 
-      "document_number": "9", 
       "description": "BNC Certificate of Mailing - Chapter 13 Plan. (RE: related document(s) 7 Meeting of Creditors Chapter 13). Service Date 01/29/2010. (Admin.) (Entered: 01/29/2010)", 
+      "document_number": "9", 
       "pacer_doc_id": "034013262103"
     }, 
     {
       "date_filed": "2010-02-01", 
-      "document_number": "10", 
       "description": "Order and Notice of Dismissal for Failure to Comply (RE: related document(s) 3 Order Providing for Dismissal). (clc) (Entered: 02/01/2010)", 
+      "document_number": "10", 
       "pacer_doc_id": "034013280539"
     }, 
     {
       "date_filed": "2010-02-03", 
-      "document_number": "11", 
       "description": "BNC Certificate of Mailing - Order and Notice of Dismissal for Failure to Comply. (RE: related document(s) 10 Order and Notice of Dismissal for Failure to Comply). Service Date 02/03/2010. (Admin.) (Entered: 02/03/2010)", 
+      "document_number": "11", 
       "pacer_doc_id": "034013315856"
     }
   ], 
   "docket_number": "10-50303", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Deissy Gonzalez", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -88,28 +94,22 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "2786 Wilkey Ct.\nSan Jose, CA 95127\nSSN / ITIN: xxx-xx-0332", 
       "name": "Deissy Gonzalez", 
-      "extra_info": "2786 Wilkey Ct.\nSan Jose, CA 95127\nSSN / ITIN: xxx-xx-0332"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "P.O. Box 50013\nSan Jose, CA 95150-0013\n(408) 354-8151", 
       "name": "Devin Derham-Burk", 
-      "extra_info": "P.O. Box 50013\nSan Jose, CA 95150-0013\n(408) 354-8151"
+      "type": "Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "U.S. Federal Bldg.\n280 S 1st St. #268\nSan Jose, CA 95113-3004\n(   )", 
       "name": "Office of the U.S. Trustee / SJ", 
-      "extra_info": "U.S. Federal Bldg.\n280 S 1st St. #268\nSan Jose, CA 95113-3004\n(   )"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2010-01-14", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Arthur S. Weissbrodt", 
-  "court_id": "canb", 
-  "cause": null, 
   "referred_to_str": null
 }

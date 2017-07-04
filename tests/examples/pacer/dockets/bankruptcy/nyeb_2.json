@@ -1,19 +1,25 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Dorothy Eisenberg", 
+  "case_name": "All 4 Sports & Fitness Inc", 
+  "cause": null, 
+  "court_id": "nyeb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-02-12", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-12", 
-      "document_number": "1", 
       "description": "Chapter 11 Voluntary Petition. Fee Amount $ 1039 Filed by All 4 Sports & Fitness Inc Chapter 11 Plan - Small Business - due by 8/11/2010. Chapter 11 Small Business Disclosure Statement due by 8/11/2010. (amh) Additional attachment(s) added on 2/12/2010 (amh). (Entered: 02/12/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "8-10-70959", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "All 4 Sports & Fitness Inc", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -28,22 +34,16 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "175 Sunrise Highway\nWest Islip, NY 11795\nTax ID / EIN: 11-3623797", 
       "name": "All 4 Sports & Fitness Inc", 
-      "extra_info": "175 Sunrise Highway\nWest Islip, NY 11795\nTax ID / EIN: 11-3623797"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "Office of the United States Trustee\nLong Island Federal Courthouse\n560 Federal Plaza - Room 560\nCentral Islip, NY 11722-4437\n(631) 715-7800", 
       "name": "Diana G. Adams", 
-      "extra_info": "Office of the United States Trustee\nLong Island Federal Courthouse\n560 Federal Plaza - Room 560\nCentral Islip, NY 11722-4437\n(631) 715-7800"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2010-02-12", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Dorothy Eisenberg", 
-  "court_id": "nyeb", 
-  "cause": null, 
   "referred_to_str": null
 }

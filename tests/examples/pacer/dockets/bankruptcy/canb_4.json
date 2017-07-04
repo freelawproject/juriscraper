@@ -1,12 +1,18 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Dennis Montali", 
+  "case_name": "Brobeck, Phleger and Harrison - Adversary Proceeding", 
+  "cause": null, 
+  "court_id": "canb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2008-03-28", 
   "date_terminated": "2011-07-18", 
+  "demand": null, 
   "docket_entries": [], 
   "docket_number": "08-03027", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Brobeck, Phleger and Harrison - Adversary Proceeding", 
+  "jury_demand": null, 
+  "nature_of_suit": "91 Declaratory judgment; 11 Recovery of money/property - 542 turnover of property; 13 Recovery of money/property - 548 fraudulent transfer; 14 Recovery of money/property - other", 
   "parties": [
     {
       "attorneys": [
@@ -24,9 +30,9 @@
           ]
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "Chapter 7 Trustee for Brobeck, Phleger & Harrison LLP\nc/o Law Office of David Gould\n23975 Park Sorrento #200\nCalabasas, CA 91302", 
       "name": "Ronald F. Greenspan,  Chapter 7 Trustee for Brobeck, Phleger & Harrison LLP", 
-      "extra_info": "Chapter 7 Trustee for Brobeck, Phleger & Harrison LLP\nc/o Law Office of David Gould\n23975 Park Sorrento #200\nCalabasas, CA 91302"
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -38,9 +44,9 @@
           ]
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "Attn: Suzanne Van Dyk\n50 South Sixth Street\nMinneapolis, MN 55402", 
       "name": "Dorsey & Whitney LLP", 
-      "extra_info": "Attn: Suzanne Van Dyk\n50 South Sixth Street\nMinneapolis, MN 55402"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -52,9 +58,9 @@
           ]
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "Dorsey & Whitney LLP\n38 Technology Drive\nSuite 100\nIrvine, CA 92618", 
       "name": "Patrick Arrington", 
-      "extra_info": "Dorsey & Whitney LLP\n38 Technology Drive\nSuite 100\nIrvine, CA 92618"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -66,9 +72,9 @@
           ]
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "Dorsey & Whitney LLP\n38 Technology Drive\nSuite 100\nIrvine, CA 92618", 
       "name": "John S. Baker", 
-      "extra_info": "Dorsey & Whitney LLP\n38 Technology Drive\nSuite 100\nIrvine, CA 92618"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -80,9 +86,9 @@
           ]
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "Dorsey & Whitney LLP\n38 Technology Drive\nSuite 100\nIrvine, CA 92618", 
       "name": "Ellen S. Bancroft", 
-      "extra_info": "Dorsey & Whitney LLP\n38 Technology Drive\nSuite 100\nIrvine, CA 92618"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -94,9 +100,9 @@
           ]
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "Dorsey & Whitney LLP\n38 Technology Drive\nSuite 100\nIrvine, CA 92618", 
       "name": "David L. Hayes", 
-      "extra_info": "Dorsey & Whitney LLP\n38 Technology Drive\nSuite 100\nIrvine, CA 92618"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -108,9 +114,9 @@
           ]
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "4 Main Street\nLadera Ranch, CA 92694", 
       "name": "Scott R. Santagata", 
-      "extra_info": "4 Main Street\nLadera Ranch, CA 92694"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -122,9 +128,9 @@
           ]
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "Dorsey & Whitney LLP\n38 Technology Drive\nSuite 100\nIrvine, CA 92618", 
       "name": "Gabrielle M. Wirth", 
-      "extra_info": "Dorsey & Whitney LLP\n38 Technology Drive\nSuite 100\nIrvine, CA 92618"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -134,16 +140,10 @@
           "roles": []
         }
       ], 
-      "type": "Trustee Attorney", 
+      "extra_info": "", 
       "name": "David Gould", 
-      "extra_info": ""
+      "type": "Trustee Attorney"
     }
   ], 
-  "date_filed": "2008-03-28", 
-  "nature_of_suit": "91 Declaratory judgment; 11 Recovery of money/property - 542 turnover of property; 13 Recovery of money/property - 548 fraudulent transfer; 14 Recovery of money/property - other", 
-  "jury_demand": null, 
-  "assigned_to_str": "Dennis Montali", 
-  "court_id": "canb", 
-  "cause": null, 
   "referred_to_str": null
 }

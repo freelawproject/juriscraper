@@ -1,61 +1,67 @@
 {
-  "demand": null, 
+  "assigned_to_str": "John H. Squires", 
+  "case_name": "Gintaras Jurkonis", 
+  "cause": null, 
+  "court_id": "ilnb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-02-12", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-12", 
-      "document_number": "1", 
       "description": "Chapter 7 Voluntary Petition Fee Amount $299, Filed by Alexey Y Kaplan on behalf of Gintaras Jurkonis (Kaplan, Alexey) (Entered: 02/12/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "066025676886"
     }, 
     {
       "date_filed": "2010-02-12", 
-      "document_number": "2", 
       "description": "Declaration Re: Electronic Filing Filed by Alexey Y Kaplan on behalf of Gintaras Jurkonis. (Kaplan, Alexey) (Entered: 02/12/2010)", 
+      "document_number": "2", 
       "pacer_doc_id": "066025676897"
     }, 
     {
       "date_filed": "2010-02-12", 
-      "document_number": "3", 
       "description": "Chapter 7 Statement of Current Monthly Income and Means Test Calculation - Form 22A. Filed by Alexey Y Kaplan on behalf of Gintaras Jurkonis. (Kaplan, Alexey) (Entered: 02/12/2010)", 
+      "document_number": "3", 
       "pacer_doc_id": "066025676907"
     }, 
     {
       "date_filed": "2010-02-12", 
-      "document_number": "4", 
       "description": "Statement of Social Security Number(s) Filed by Alexey Y Kaplan on behalf of Gintaras Jurkonis. (Kaplan, Alexey) (Entered: 02/12/2010)", 
+      "document_number": "4", 
       "pacer_doc_id": "066025676912"
     }, 
     {
       "date_filed": "2010-02-12", 
-      "document_number": "5", 
       "description": "Certificate of Credit Counseling Filed by Alexey Y Kaplan on behalf of Gintaras Jurkonis. (Kaplan, Alexey) (Entered: 02/12/2010)", 
+      "document_number": "5", 
       "pacer_doc_id": "066025676923"
     }, 
     {
       "date_filed": "2010-02-12", 
-      "document_number": "6", 
       "description": "Receipt of Voluntary Petition (Chapter 7)(10-05360) [misc,volp7a] ( 299.00) Filing Fee. Receipt number 13341353. Fee Amount $ 299.00 (U.S. Treasury) (Entered: 02/12/2010)", 
+      "document_number": "6", 
       "pacer_doc_id": null
     }, 
     {
       "date_filed": "2010-02-13", 
-      "document_number": "7", 
       "description": "Meeting of Creditors with 341(a) meeting to be held on 04/06/2010 at 01:30 PM at DuPage Courthouse, 505 N Cty Farm Road, Rm 2017, Wheaton, Illinois 60187. Objections for Discharge due by 06/07/2010. (admin, ) (Entered: 02/13/2010)", 
+      "document_number": "7", 
       "pacer_doc_id": null
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "8", 
       "description": "Request for Chapter 7 341 Meeting of Creditors . (Daniel, Sabrina) (Entered: 02/16/2010)", 
+      "document_number": "8", 
       "pacer_doc_id": "066025716644"
     }
   ], 
   "docket_number": "10-05360", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Gintaras Jurkonis", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -65,28 +71,22 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "10 S. 020 Lorraine Drive\nWillowbrook, IL 60527\nSSN / ITIN: xxx-xx-7869", 
       "name": "Gintaras Jurkonis", 
-      "extra_info": "10 S. 020 Lorraine Drive\nWillowbrook, IL 60527\nSSN / ITIN: xxx-xx-7869"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "Springer Brown Covey Gaertner & Davis\n400 South County Farm Road\nSuite 330\nWheaton, IL 60187\n630 510-0000", 
       "name": "David R Brown, ESQ", 
-      "extra_info": "Springer Brown Covey Gaertner & Davis\n400 South County Farm Road\nSuite 330\nWheaton, IL 60187\n630 510-0000"
+      "type": "Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "Office of the U.S. Trustee, Region 11\n219 S Dearborn St\nRoom 873\nChicago, IL 60604\n312-886-5785", 
       "name": "William T Neary", 
-      "extra_info": "Office of the U.S. Trustee, Region 11\n219 S Dearborn St\nRoom 873\nChicago, IL 60604\n312-886-5785"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2010-02-12", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "John H. Squires", 
-  "court_id": "ilnb", 
-  "cause": null, 
   "referred_to_str": null
 }

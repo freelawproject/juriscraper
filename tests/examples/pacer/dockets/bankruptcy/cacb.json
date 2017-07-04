@@ -1,12 +1,18 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Sheri Bluebond", 
+  "case_name": "Axium International, Inc - Adversary Proceeding", 
+  "cause": null, 
+  "court_id": "cacb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2008-07-01", 
   "date_terminated": "2009-09-27", 
+  "demand": null, 
   "docket_entries": [], 
   "docket_number": "2:08-ap-01570", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Axium International, Inc - Adversary Proceeding", 
+  "jury_demand": null, 
+  "nature_of_suit": "91 Declaratory judgment", 
   "parties": [
     {
       "attorneys": [
@@ -23,9 +29,9 @@
           "roles": []
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "333 South Hope Street, 35th Floor\nLos Angeles, CA 90071", 
       "name": "HOWARD M. EHRENBERG, CHAPTER 7 TRUSTEE", 
-      "extra_info": "333 South Hope Street, 35th Floor\nLos Angeles, CA 90071"
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -35,22 +41,16 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "AX ACQUISITION, INC.", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "915 Wilshire Blvd, Suite 1850\nLos Angeles, CA 90017\n(213) 894-6811", 
       "name": "United States Trustee (LA)", 
-      "extra_info": "915 Wilshire Blvd, Suite 1850\nLos Angeles, CA 90017\n(213) 894-6811"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2008-07-01", 
-  "nature_of_suit": "91 Declaratory judgment", 
-  "jury_demand": null, 
-  "assigned_to_str": "Sheri Bluebond", 
-  "court_id": "cacb", 
-  "cause": null, 
   "referred_to_str": null
 }

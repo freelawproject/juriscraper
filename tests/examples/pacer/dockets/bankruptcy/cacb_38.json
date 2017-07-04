@@ -1,12 +1,18 @@
 {
-  "demand": null, 
+  "assigned_to_str": "John E. Ryan", 
+  "case_name": "Laurie A Hill", 
+  "cause": null, 
+  "court_id": "cacb", 
+  "date_converted": null, 
+  "date_discharged": "1999-10-04", 
+  "date_filed": "1999-06-22", 
   "date_terminated": "1999-10-14", 
+  "demand": null, 
   "docket_entries": [], 
   "docket_number": "8:99-bk-16358", 
-  "date_discharged": "1999-10-04", 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Laurie A Hill", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -21,22 +27,16 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "2515 Orange Ave  Apt B\nCosta Mesa, CA 92627\nSSN / ITIN: xxx-xx-3152", 
       "name": "Laurie A Hill", 
-      "extra_info": "2515 Orange Ave  Apt B\nCosta Mesa, CA 92627\nSSN / ITIN: xxx-xx-3152"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "P.o. Box 1860\nCosta Mesa, CA 92626-1860\n714-445-1021", 
       "name": "Theodor C. Albert", 
-      "extra_info": "P.o. Box 1860\nCosta Mesa, CA 92626-1860\n714-445-1021"
+      "type": "Trustee"
     }
   ], 
-  "date_filed": "1999-06-22", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "John E. Ryan", 
-  "court_id": "cacb", 
-  "cause": null, 
   "referred_to_str": null
 }

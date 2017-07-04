@@ -1,103 +1,109 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Phillip J. Shefferly", 
+  "case_name": "Michele L Kane", 
+  "cause": null, 
+  "court_id": "mieb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-11-25", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2009-11-25", 
-      "document_number": "1", 
       "description": "Chapter 7 Voluntary Petition : Fee Amount $75. Filed by Michele L Kane (Keyes, John) (Entered: 11/25/2009)", 
+      "document_number": "1", 
       "pacer_doc_id": "096021062372"
     }, 
     {
       "date_filed": "2009-11-25", 
-      "document_number": "2", 
       "description": "Statement of Social Security Number Filed by Debtor Michele L Kane. (Keyes, John) (Entered: 11/25/2009)", 
+      "document_number": "2", 
       "pacer_doc_id": "096021062385"
     }, 
     {
       "date_filed": "2009-11-25", 
-      "document_number": "3", 
       "description": "Exhibit D: Debtor has filed a Certificate of Budget and Credit Counseling Attached. Filed by Debtor Michele L Kane. (Keyes, John) (Entered: 11/25/2009)", 
+      "document_number": "3", 
       "pacer_doc_id": "096021062390"
     }, 
     {
       "date_filed": "2009-11-25", 
-      "document_number": "4", 
       "description": "Certificate of Budget and Credit Counseling Course Filed by Debtor Michele L Kane. (Keyes, John) (Entered: 11/25/2009)", 
+      "document_number": "4", 
       "pacer_doc_id": "096021062395"
     }, 
     {
       "date_filed": "2009-11-25", 
-      "document_number": "5", 
       "description": "Bankruptcy Petition Cover Sheet Filed by Debtor Michele L Kane. (Keyes, John) (Entered: 11/25/2009)", 
+      "document_number": "5", 
       "pacer_doc_id": "096021062400"
     }, 
     {
       "date_filed": "2009-11-25", 
-      "document_number": "6", 
       "description": "Statement of Intent. Filed by Debtor Michele L Kane. (Keyes, John) (Entered: 11/25/2009)", 
+      "document_number": "6", 
       "pacer_doc_id": "096021062411"
     }, 
     {
       "date_filed": "2009-11-25", 
-      "document_number": "7", 
       "description": "Application to Pay Filing Fee in Installments Filed by Debtor Michele L Kane (Keyes, John) (Entered: 11/25/2009)", 
+      "document_number": "7", 
       "pacer_doc_id": "096021062420"
     }, 
     {
       "date_filed": "2009-11-25", 
-      "document_number": "8", 
       "description": "Chapter 7 Statement of Current Monthly Income and Means Test Calculation - Form 22A . Filed by Debtor Michele L Kane. (Keyes, John) (Entered: 11/25/2009)", 
+      "document_number": "8", 
       "pacer_doc_id": "096021062437"
     }, 
     {
       "date_filed": "2009-11-25", 
-      "document_number": "9", 
       "description": "Meeting of Creditors with 341(a) meeting to be held on 01/07/2010 at 10:30 AM at Room 315, 211 W. Fort St. Bldg., Detroit 341. Objections for Discharge due by 03/08/2010. (admin, ) (Entered: 11/25/2009)", 
+      "document_number": "9", 
       "pacer_doc_id": "096021065889"
     }, 
     {
       "date_filed": "2009-11-29", 
-      "document_number": "10", 
       "description": "BNC Certificate of Mailing - Meeting of Creditors. (RE: related document(s) 9 Meeting (Chapter 7)) No. of Notices: 6. Service Date 11/29/2009. (Admin.) (Entered: 11/30/2009)", 
+      "document_number": "10", 
       "pacer_doc_id": "096021082630"
     }, 
     {
       "date_filed": "2009-12-02", 
-      "document_number": "11", 
       "description": "BNC Certificate of Mailing - Meeting of Creditors. (RE: related document(s) 9 Meeting (Chapter 7)) No. of Notices: 6. Service Date 12/02/2009. (Admin.) (Entered: 12/03/2009)", 
+      "document_number": "11", 
       "pacer_doc_id": "096021147324"
     }, 
     {
       "date_filed": "2009-12-15", 
-      "document_number": "12", 
       "description": "Request for Notice by HSBC Bank Nevada, N.A.. (Bass, Patti) (Entered: 12/15/2009)", 
+      "document_number": "12", 
       "pacer_doc_id": "096021335878"
     }, 
     {
       "date_filed": "2010-01-05", 
-      "document_number": "13", 
       "description": "Certification of Completion of Financial Management Course Filed by Debtor Michele L Kane. (Keyes, John) (Entered: 01/05/2010)", 
+      "document_number": "13", 
       "pacer_doc_id": "096021617117"
     }, 
     {
       "date_filed": "2010-01-11", 
-      "document_number": "14", 
       "description": "Trustee's Report of Undisclosed Assets Filed by Trustee K. Jin Lim. (Lim, K. Jin) (Entered: 01/11/2010)", 
+      "document_number": "14", 
       "pacer_doc_id": "096021695765"
     }, 
     {
       "date_filed": "2010-01-11", 
-      "document_number": "15", 
       "description": "Cover Sheet for Amendments to Schedules and or Statements filed Re: Schedule B, Schedule C, Schedule D, Creditor Matrix, Fee Amount $26 Filed by Debtor Michele L Kane. (Keyes, John) (Entered: 01/11/2010)", 
+      "document_number": "15", 
       "pacer_doc_id": "096021696670"
     }
   ], 
   "docket_number": "09-76323", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Michele L Kane", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -107,22 +113,16 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "2951 Mountain View #306\nLake Orion, MI 48360\nSSN / ITIN: xxx-xx-0925", 
       "name": "Michele L Kane", 
-      "extra_info": "2951 Mountain View #306\nLake Orion, MI 48360\nSSN / ITIN: xxx-xx-0925"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "176 S. Harvey\nSuite 1\nPlymouth, MI 48170\n(734) 416-9420", 
       "name": "K. Jin Lim", 
-      "extra_info": "176 S. Harvey\nSuite 1\nPlymouth, MI 48170\n(734) 416-9420"
+      "type": "Trustee"
     }
   ], 
-  "date_filed": "2009-11-25", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Phillip J. Shefferly", 
-  "court_id": "mieb", 
-  "cause": null, 
   "referred_to_str": null
 }

@@ -1,31 +1,37 @@
 {
-  "demand": null, 
+  "assigned_to_str": "James M. Peck", 
+  "case_name": "Quebecor World (USA) Inc.", 
+  "cause": null, 
+  "court_id": "nysb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2008-01-21", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-10", 
-      "document_number": "3871", 
       "description": "Notice of Appearance filed by John M. Gassert on behalf of Savanna Pallets, Inc.. (Gassert, John) (Entered: 02/10/2010)", 
+      "document_number": "3871", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-11", 
-      "document_number": "3872", 
       "description": "Withdrawal of Claim(s): #3943 ($10,180.00) Pro Mark International Inc. submitted by Paulette Keevers filed by Donlin & Recano Claims Agent.(Jordan, Lillian) (Entered: 02/11/2010)", 
+      "document_number": "3872", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-15", 
-      "document_number": "3873", 
       "description": "Application for Pro Hac Vice Admission filed by Kate M. Bradley on behalf of Applied Industrial Technologies, Inc.. (Attachments: # 1 Exhibit Proposed Order) (Bradley, Kate) (Entered: 02/15/2010)", 
+      "document_number": "3873", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "08-10152", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Quebecor World (USA) Inc.", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -65,9 +71,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "150 42nd Street\nNew York, NY 10034\nTax ID / EIN: 37-1167902", 
       "name": "Quebecor World (USA) Inc.", 
-      "extra_info": "150 42nd Street\nNew York, NY 10034\nTax ID / EIN: 37-1167902"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -77,15 +83,15 @@
           "roles": []
         }
       ], 
-      "type": "U.S. Trustee", 
+      "extra_info": "33 Whitehall Street\n21st Floor\nNew York, NY 10004\n(212) 510-0500", 
       "name": "United States Trustee", 
-      "extra_info": "33 Whitehall Street\n21st Floor\nNew York, NY 10004\n(212) 510-0500"
+      "type": "U.S. Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "Claims and Noticing Agent", 
+      "extra_info": "419 Park Avenue South\nSuite 1206\nwww.donlinrecano.com\nNew York, NY 10016\n(212) 481-1411", 
       "name": "Donlin & Recano Claims Agent", 
-      "extra_info": "419 Park Avenue South\nSuite 1206\nwww.donlinrecano.com\nNew York, NY 10016\n(212) 481-1411"
+      "type": "Claims and Noticing Agent"
     }, 
     {
       "attorneys": [
@@ -100,16 +106,10 @@
           "roles": []
         }
       ], 
-      "type": "Creditor Committee", 
+      "extra_info": "Akin Gump Strauss Hauer & Feld LLP\n590 Madison Avenue\nNew York, NY 10022\n(212) 872-1000", 
       "name": "Official Committee Of Unsecured Creditors", 
-      "extra_info": "Akin Gump Strauss Hauer & Feld LLP\n590 Madison Avenue\nNew York, NY 10022\n(212) 872-1000"
+      "type": "Creditor Committee"
     }
   ], 
-  "date_filed": "2008-01-21", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "James M. Peck", 
-  "court_id": "nysb", 
-  "cause": null, 
   "referred_to_str": null
 }

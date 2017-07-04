@@ -1,25 +1,31 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Gregg W. Zive", 
+  "case_name": "STATION CASINOS, INC.", 
+  "cause": null, 
+  "court_id": "nvb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-07-28", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-16", 
-      "document_number": "1007", 
       "description": "Greenberg Traurig, LLP's Monthly Fee Statement for the Period From January 1, 2010 Through January 31, 2010 Filed by ANNE M. LORADITCH on behalf of OFFICIAL COMMITTEE OF UNSECURED CREDITORS (LORADITCH, ANNE) (Entered: 02/16/2010)", 
+      "document_number": "1007", 
       "pacer_doc_id": "114014355421"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "1006", 
       "description": "Moelis & Company, LLC's Monthly Fee Statement for the Period From January 1, 2010 through January 31, 2010 Filed by ANNE M. LORADITCH on behalf of OFFICIAL COMMITTEE OF UNSECURED CREDITORS (LORADITCH, ANNE) (Entered: 02/16/2010)", 
+      "document_number": "1006", 
       "pacer_doc_id": "114014349239"
     }
   ], 
   "docket_number": "09-52477", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "STATION CASINOS, INC.", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -79,9 +85,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "1505 SOUTH PAVILION CENTER DR.\nLAS VEGAS, NV 89135\nTax ID / EIN: 88-0136443", 
       "name": "STATION CASINOS, INC.", 
-      "extra_info": "1505 SOUTH PAVILION CENTER DR.\nLAS VEGAS, NV 89135\nTax ID / EIN: 88-0136443"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -136,9 +142,9 @@
           "roles": []
         }
       ], 
-      "type": "Jnt Admin Debtor", 
+      "extra_info": "4101 S. VIRGINIA ST.\nRENO, NV 89502\nTax ID / EIN: 20-4777734", 
       "name": "NORTHERN NV ACQUISITIONS, LLC", 
-      "extra_info": "4101 S. VIRGINIA ST.\nRENO, NV 89502\nTax ID / EIN: 20-4777734"
+      "type": "Jnt Admin Debtor"
     }, 
     {
       "attorneys": [
@@ -193,9 +199,9 @@
           "roles": []
         }
       ], 
-      "type": "Jnt Admin Debtor", 
+      "extra_info": "4809 KIETZKE LANE\nRENO, NV 89509\nTax ID / EIN: 20-2422430", 
       "name": "RENO LAND HOLDINGS, LLC", 
-      "extra_info": "4809 KIETZKE LANE\nRENO, NV 89509\nTax ID / EIN: 20-2422430"
+      "type": "Jnt Admin Debtor"
     }, 
     {
       "attorneys": [
@@ -250,9 +256,9 @@
           "roles": []
         }
       ], 
-      "type": "Jnt Admin Debtor", 
+      "extra_info": "280 N. CENTER STREET\nRENO, NV 89501\nTax ID / EIN: 35-2208803", 
       "name": "RIVER CENTRAL, LLC", 
-      "extra_info": "280 N. CENTER STREET\nRENO, NV 89501\nTax ID / EIN: 35-2208803"
+      "type": "Jnt Admin Debtor"
     }, 
     {
       "attorneys": [
@@ -297,9 +303,9 @@
           "roles": []
         }
       ], 
-      "type": "Jnt Admin Debtor", 
+      "extra_info": "600 GEIGER GRADE ROAD\nRENO, NV 89521\nTax ID / EIN: 26-4559608", 
       "name": "TROPICANA STATION, LLC", 
-      "extra_info": "600 GEIGER GRADE ROAD\nRENO, NV 89521\nTax ID / EIN: 26-4559608"
+      "type": "Jnt Admin Debtor"
     }, 
     {
       "attorneys": [
@@ -349,9 +355,9 @@
           "roles": []
         }
       ], 
-      "type": "Jnt Admin Debtor", 
+      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-0317902", 
       "name": "FCP HOLDING, INC.", 
-      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-0317902"
+      "type": "Jnt Admin Debtor"
     }, 
     {
       "attorneys": [
@@ -406,9 +412,9 @@
           "roles": []
         }
       ], 
-      "type": "Jnt Admin Debtor", 
+      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-0443751", 
       "name": "FCP VOTECO LLC", 
-      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-0443751"
+      "type": "Jnt Admin Debtor"
     }, 
     {
       "attorneys": [
@@ -463,9 +469,9 @@
           "roles": []
         }
       ], 
-      "type": "Jnt Admin Debtor", 
+      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-0443732", 
       "name": "FERTITTA PARTNERS LLC", 
-      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-0443732"
+      "type": "Jnt Admin Debtor"
     }, 
     {
       "attorneys": [
@@ -520,9 +526,9 @@
           "roles": []
         }
       ], 
-      "type": "Jnt Admin Debtor", 
+      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-1340291", 
       "name": "FCP MEZZCO PARENT LLC", 
-      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-1340291"
+      "type": "Jnt Admin Debtor"
     }, 
     {
       "attorneys": [
@@ -577,9 +583,9 @@
           "roles": []
         }
       ], 
-      "type": "Jnt Admin Debtor", 
+      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-1259060", 
       "name": "FCP MEZZCO PARENT SUB, LLC", 
-      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-1259060"
+      "type": "Jnt Admin Debtor"
     }, 
     {
       "attorneys": [
@@ -634,9 +640,9 @@
           "roles": []
         }
       ], 
-      "type": "Jnt Admin Debtor", 
+      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-1259101", 
       "name": "FCP MEZZCO BORROWER VII, LLC", 
-      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-1259101"
+      "type": "Jnt Admin Debtor"
     }, 
     {
       "attorneys": [
@@ -691,9 +697,9 @@
           "roles": []
         }
       ], 
-      "type": "Jnt Admin Debtor", 
+      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-1259143", 
       "name": "FCP MEZZCO BORROWER VI, LLC", 
-      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-1259143"
+      "type": "Jnt Admin Debtor"
     }, 
     {
       "attorneys": [
@@ -748,9 +754,9 @@
           "roles": []
         }
       ], 
-      "type": "Jnt Admin Debtor", 
+      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-1259172", 
       "name": "FCP MEZZCO BORROWER V, LLC", 
-      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-1259172"
+      "type": "Jnt Admin Debtor"
     }, 
     {
       "attorneys": [
@@ -805,9 +811,9 @@
           "roles": []
         }
       ], 
-      "type": "Jnt Admin Debtor", 
+      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-1259221", 
       "name": "FCP MEZZCO BORROWER IV, LLC", 
-      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-1259221"
+      "type": "Jnt Admin Debtor"
     }, 
     {
       "attorneys": [
@@ -862,9 +868,9 @@
           "roles": []
         }
       ], 
-      "type": "Jnt Admin Debtor", 
+      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-1259255", 
       "name": "FCP MEZZCO BORROWER III, LLC", 
-      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-1259255"
+      "type": "Jnt Admin Debtor"
     }, 
     {
       "attorneys": [
@@ -919,9 +925,9 @@
           "roles": []
         }
       ], 
-      "type": "Jnt Admin Debtor", 
+      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-1259293", 
       "name": "FCP MEZZCO BORROWER II, LLC", 
-      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-1259293"
+      "type": "Jnt Admin Debtor"
     }, 
     {
       "attorneys": [
@@ -976,9 +982,9 @@
           "roles": []
         }
       ], 
-      "type": "Jnt Admin Debtor", 
+      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-1259332", 
       "name": "FCP MEZZCO BORROWER I, LLC", 
-      "extra_info": "1505 SOUTH PAVILION CENTER\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-1259332"
+      "type": "Jnt Admin Debtor"
     }, 
     {
       "attorneys": [
@@ -1033,21 +1039,21 @@
           "roles": []
         }
       ], 
-      "type": "Jnt Admin Debtor", 
+      "extra_info": "1505 PAVILION CENTER DRIVE\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-1259366", 
       "name": "FCP PROPCO. LLC", 
-      "extra_info": "1505 PAVILION CENTER DRIVE\nLAS VEGAS, NV 89135\nTax ID / EIN: 26-1259366"
+      "type": "Jnt Admin Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Claims Agent", 
+      "extra_info": "2335 ALASKA AVENUE\nEL SEGUNDO, CA 90245\n(310) 751 1507", 
       "name": "KURTZMAN CARSON CONSULTANTS LLC", 
-      "extra_info": "2335 ALASKA AVENUE\nEL SEGUNDO, CA 90245\n(310) 751 1507"
+      "type": "Claims Agent"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "300 BOOTH STREET\nSUITE 2129\nRENO, NV 89509", 
       "name": "U.S. TRUSTEE - RN - 11", 
-      "extra_info": "300 BOOTH STREET\nSUITE 2129\nRENO, NV 89509"
+      "type": "U.S. Trustee"
     }, 
     {
       "attorneys": [
@@ -1087,16 +1093,10 @@
           "roles": []
         }
       ], 
-      "type": "Creditor Committee", 
+      "extra_info": "c/o Brett Axelrod, Esq.\nAnne Loraditch, Esq.\nGreenberg Traurig, LLP\n3773 Howard Hughes Pkwy. Suite 400 North\nLas Vegas, NV 89169\n702-792-3773", 
       "name": "OFFICIAL COMMITTEE OF UNSECURED CREDITORS", 
-      "extra_info": "c/o Brett Axelrod, Esq.\nAnne Loraditch, Esq.\nGreenberg Traurig, LLP\n3773 Howard Hughes Pkwy. Suite 400 North\nLas Vegas, NV 89169\n702-792-3773"
+      "type": "Creditor Committee"
     }
   ], 
-  "date_filed": "2009-07-28", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Gregg W. Zive", 
-  "court_id": "nvb", 
-  "cause": null, 
   "referred_to_str": null
 }

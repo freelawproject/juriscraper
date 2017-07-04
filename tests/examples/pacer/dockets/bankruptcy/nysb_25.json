@@ -1,12 +1,18 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Robert D. Drain", 
+  "case_name": "Patrick Fagan and Christine Fagan - Adversary Proceeding", 
+  "cause": null, 
+  "court_id": "nysb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-09-03", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [], 
   "docket_number": "09-08292", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Patrick Fagan and Christine Fagan - Adversary Proceeding", 
+  "jury_demand": null, 
+  "nature_of_suit": "14 Recovery of money/property - other", 
   "parties": [
     {
       "attorneys": [
@@ -18,9 +24,9 @@
           ]
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "105 West Clarkstown Road\nNew City, NY 10956\nSSN / ITIN: xxx-xx-2120", 
       "name": "Patrick Fagan", 
-      "extra_info": "105 West Clarkstown Road\nNew City, NY 10956\nSSN / ITIN: xxx-xx-2120"
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -32,9 +38,9 @@
           ]
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "105 West Clarkstown Road\nNew City, NY 10956\nSSN / ITIN: xxx-xx-3251", 
       "name": "Christine Fagan", 
-      "extra_info": "105 West Clarkstown Road\nNew City, NY 10956\nSSN / ITIN: xxx-xx-3251"
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -44,9 +50,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "152 McClean Ave\nStaten Island, NY 10305", 
       "name": "CJP Abstract LLC", 
-      "extra_info": "152 McClean Ave\nStaten Island, NY 10305"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -56,9 +62,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "5600 Cox Road\nGlen Allen, VA 23060", 
       "name": "Commonwealth Land Title Insurance", 
-      "extra_info": "5600 Cox Road\nGlen Allen, VA 23060"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -68,9 +74,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "4837 Watt Ave\nNorth Highlands, CA 95660-5108", 
       "name": "HomeQ Servicing Corp.", 
-      "extra_info": "4837 Watt Ave\nNorth Highlands, CA 95660-5108"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -80,9 +86,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "1 Wachovia Center\nCharlotte, NC 28288-0013", 
       "name": "Wachovia Bank", 
-      "extra_info": "1 Wachovia Center\nCharlotte, NC 28288-0013"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -92,9 +98,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "333 Westchester Ave\nWhite Plains, NY 10604", 
       "name": "Argent Mortgage Company", 
-      "extra_info": "333 Westchester Ave\nWhite Plains, NY 10604"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -104,9 +110,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "505 City Parkway West\nSuite 100\nOrange, CA 92868", 
       "name": "AMC Mortgage Services Inc.", 
-      "extra_info": "505 City Parkway West\nSuite 100\nOrange, CA 92868"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -118,14 +124,14 @@
           ]
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "420 Montgomery Street\nSan Francisco, CA 94163", 
       "name": "Wells Fargo Bank", 
-      "extra_info": "420 Montgomery Street\nSan Francisco, CA 94163"
+      "type": "Defendant"
     }, 
     {
-      "type": "Defendant", 
+      "extra_info": "fictitious names for substation of parties when discovered.", 
       "name": "John Doe, Jane Doe, XYZ Corp.,  fictitious names for substation of parties when discovered.", 
-      "extra_info": "fictitious names for substation of parties when discovered."
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -135,9 +141,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "c/o Rosicki, Rosicki & Associates, P.C.\n51 E. Bethpage Rd.\nPlainview, NY 11803", 
       "name": "BARCLAYS CAPITAL REAL ESTATE DBA HOMEQ SERVICING S/H/A HOMEQ SERVICING CORP. AND WELLS FARGO BANK, N.A. AS TRUSTEE UNDER POOLING AND SERVICING AGREEMENT DATED AS OF AUGUST 1, 2005 ASSET-BACKED PASS-TH", 
-      "extra_info": "c/o Rosicki, Rosicki & Associates, P.C.\n51 E. Bethpage Rd.\nPlainview, NY 11803"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -147,9 +153,9 @@
           "roles": []
         }
       ], 
-      "type": "Cross-Claimant", 
+      "extra_info": "505 City Parkway West\nSuite 100\nOrange, CA 92868", 
       "name": "AMC Mortgage Services Inc.", 
-      "extra_info": "505 City Parkway West\nSuite 100\nOrange, CA 92868"
+      "type": "Cross-Claimant"
     }, 
     {
       "attorneys": [
@@ -159,14 +165,14 @@
           "roles": []
         }
       ], 
-      "type": "Cross-Claimant", 
+      "extra_info": "333 Westchester Ave\nWhite Plains, NY 10604", 
       "name": "Argent Mortgage Company", 
-      "extra_info": "333 Westchester Ave\nWhite Plains, NY 10604"
+      "type": "Cross-Claimant"
     }, 
     {
-      "type": "Cross Defendant", 
+      "extra_info": "420 Montgomery Street\nSan Francisco, CA 94163", 
       "name": "Wells Fargo Bank", 
-      "extra_info": "420 Montgomery Street\nSan Francisco, CA 94163"
+      "type": "Cross Defendant"
     }, 
     {
       "attorneys": [
@@ -176,9 +182,9 @@
           "roles": []
         }
       ], 
-      "type": "Cross-Claimant", 
+      "extra_info": "5600 Cox Road\nGlen Allen, VA 23060", 
       "name": "Commonwealth Land Title Insurance", 
-      "extra_info": "5600 Cox Road\nGlen Allen, VA 23060"
+      "type": "Cross-Claimant"
     }, 
     {
       "attorneys": [
@@ -193,16 +199,10 @@
           "roles": []
         }
       ], 
-      "type": "Cross Defendant", 
+      "extra_info": "152 McClean Ave\nStaten Island, NY 10305", 
       "name": "CJP Abstract LLC", 
-      "extra_info": "152 McClean Ave\nStaten Island, NY 10305"
+      "type": "Cross Defendant"
     }
   ], 
-  "date_filed": "2009-09-03", 
-  "nature_of_suit": "14 Recovery of money/property - other", 
-  "jury_demand": null, 
-  "assigned_to_str": "Robert D. Drain", 
-  "court_id": "nysb", 
-  "cause": null, 
   "referred_to_str": null
 }

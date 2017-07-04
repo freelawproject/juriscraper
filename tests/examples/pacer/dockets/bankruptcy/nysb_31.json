@@ -1,19 +1,25 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Stuart M. Bernstein", 
+  "case_name": "Neviot Realty Holdings, LLC", 
+  "cause": null, 
+  "court_id": "nysb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-02-11", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-11", 
-      "document_number": "1", 
       "description": "Voluntary Petition (Chapter 11). Order for Relief Entered.Neviot Realty Holdings, LLC Chapter 11 Current Monthly Income Form 22B Due 2/25/2010. Schedule A due 2/25/2010. Schedule B due 2/25/2010. Schedule C due 2/25/2010. Schedule D due 2/25/2010. Schedule E due 2/25/2010. Schedule F due 2/25/2010. Schedule G due 2/25/2010. Schedule H due 2/25/2010. Schedule I due 2/25/2010. Schedule J due 2/25/2010. Summary of schedules - Page 1 due 2/25/2010. Summary of schedules - Page 2 (Statistical Summary) due 2/25/2010. Statement of Financial Affairs due 2/25/2010. Statement of Operations Due: 2/25/2010. 20 Largest Unsecured Creditors due 2/25/2010. Balance Sheet Due Date:2/25/2010. Cash Flow Statement Due:2/25/2010. Exhibit D due: 2/25/2010. List of all creditors due 2/25/2010. Corporate Ownership Statement due by: 2/25/2010. Incomplete Filings due by 2/25/2010, Chapter 11 Plan due by 6/11/2010, Disclosure Statement due by 6/11/2010, Initial Case Conference due by 3/15/2010, Filed by Kevin J. Nash of Goldberg Weprin Finkel Goldstein LLP on behalf of Neviot Realty Holdings, LLC. (Nash, Kevin) (Entered: 02/11/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "10-10705", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Neviot Realty Holdings, LLC", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -23,22 +29,16 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "1501 Broadway\nNew York, NY 10036\nTax ID / EIN: 20-3754784", 
       "name": "Neviot Realty Holdings, LLC", 
-      "extra_info": "1501 Broadway\nNew York, NY 10036\nTax ID / EIN: 20-3754784"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "33 Whitehall Street\n21st Floor\nNew York, NY 10004\n(212) 510-0500", 
       "name": "United States Trustee", 
-      "extra_info": "33 Whitehall Street\n21st Floor\nNew York, NY 10004\n(212) 510-0500"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2010-02-11", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Stuart M. Bernstein", 
-  "court_id": "nysb", 
-  "cause": null, 
   "referred_to_str": null
 }

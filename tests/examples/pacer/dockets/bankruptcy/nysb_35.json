@@ -1,25 +1,31 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Cecelia G. Morris", 
+  "case_name": "A Copy A Second, Inc.", 
+  "cause": null, 
+  "court_id": "nysb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-02-17", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-17", 
-      "document_number": "1", 
       "description": "Voluntary Petition (Chapter 11). Order for Relief Entered. Small Business Chapter 11 Plan due by 12/14/2010, Filed by Thomas Genova of Genova & Malin, Attorneys on behalf of A Copy A Second, Inc.. (Attachments: # 1 2016(b) Statement# 2 Rule 1007# 3 Resolution) (Genova, Thomas) (Entered: 02/17/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-17", 
-      "document_number": "2", 
       "description": "Motion to Authorize Employment of Attorney filed by Thomas Genova on behalf of A Copy A Second, Inc.. (Attachments: # 1 Affidavit of Proposed Attorney# 2 Proposed Order) (Genova, Thomas) (Entered: 02/17/2010)", 
+      "document_number": "2", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "10-35413", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "A Copy A Second, Inc.", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -29,22 +35,16 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "855 Route 82\nPO Box 571\nHopewell Junction, NY 12533\nTax ID / EIN: 14-1539236", 
       "name": "A Copy A Second, Inc.", 
-      "extra_info": "855 Route 82\nPO Box 571\nHopewell Junction, NY 12533\nTax ID / EIN: 14-1539236"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "74 Chapel Street\nAlbany, NY 12207\n(518) 434-4553", 
       "name": "United States Trustee", 
-      "extra_info": "74 Chapel Street\nAlbany, NY 12207\n(518) 434-4553"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2010-02-17", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Cecelia G. Morris", 
-  "court_id": "nysb", 
-  "cause": null, 
   "referred_to_str": null
 }

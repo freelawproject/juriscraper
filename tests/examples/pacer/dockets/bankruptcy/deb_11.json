@@ -1,12 +1,18 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Mary F. Walrath", 
+  "case_name": "Washington Mutual, Inc. and Joshua R. Hochberg, the Examiner - Adversary Proceeding", 
+  "cause": null, 
+  "court_id": "deb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-04-27", 
   "date_terminated": "2016-08-31", 
+  "demand": null, 
   "docket_entries": [], 
   "docket_number": "09-50934", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Washington Mutual, Inc. and Joshua R. Hochberg, the Examiner - Adversary Proceeding", 
+  "jury_demand": null, 
+  "nature_of_suit": "11 Recovery of money/property - 542 turnover of property", 
   "parties": [
     {
       "attorneys": [
@@ -33,9 +39,9 @@
           "roles": []
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "", 
       "name": "Washington Mutual, Inc.", 
-      "extra_info": ""
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -57,9 +63,9 @@
           "roles": []
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "1301 Second Avenue\nSeattle, WA 98101\nTax ID / EIN: 20-5885395", 
       "name": "WMI Investment Corp.", 
-      "extra_info": "1301 Second Avenue\nSeattle, WA 98101\nTax ID / EIN: 20-5885395"
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -74,9 +80,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "TERMINATED: 03/20/2012", 
       "name": "JPMorgan Chase Bank, N.A.", 
-      "extra_info": "TERMINATED: 03/20/2012"
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -91,46 +97,40 @@
           "roles": []
         }
       ], 
-      "type": "Intervenor-Plaintiff", 
+      "extra_info": "", 
       "name": "Official Committee of Unsecured Creditors of Washington Mutual, Inc., and WMI Investment Corp.", 
-      "extra_info": ""
+      "type": "Intervenor-Plaintiff"
     }, 
     {
       "attorneys": [], 
-      "type": "Counter-Defendant", 
+      "extra_info": "1301 Second Avenue\nSeattle, WA 98101\nTax ID / EIN: 20-5885395", 
       "name": "WMI Investment Corp.", 
-      "extra_info": "1301 Second Avenue\nSeattle, WA 98101\nTax ID / EIN: 20-5885395"
+      "type": "Counter-Defendant"
     }, 
     {
       "attorneys": [], 
-      "type": "Counter-Defendant", 
+      "extra_info": "", 
       "name": "Washington Mutual, Inc.", 
-      "extra_info": ""
+      "type": "Counter-Defendant"
     }, 
     {
       "attorneys": [], 
-      "type": "Cross-Claimant", 
+      "extra_info": "", 
       "name": "JPMorgan Chase Bank, N.A.", 
-      "extra_info": ""
+      "type": "Cross-Claimant"
     }, 
     {
       "attorneys": [], 
-      "type": "Cross Defendant", 
+      "extra_info": "TERMINATED: 03/20/2012", 
       "name": "Federal Deposit Insurance Corporation", 
-      "extra_info": "TERMINATED: 03/20/2012"
+      "type": "Cross Defendant"
     }, 
     {
       "attorneys": [], 
-      "type": "Cross Defendant", 
+      "extra_info": "", 
       "name": "Federal Deposit Insurance Corporation", 
-      "extra_info": ""
+      "type": "Cross Defendant"
     }
   ], 
-  "date_filed": "2009-04-27", 
-  "nature_of_suit": "11 Recovery of money/property - 542 turnover of property", 
-  "jury_demand": null, 
-  "assigned_to_str": "Mary F. Walrath", 
-  "court_id": "deb", 
-  "cause": null, 
   "referred_to_str": null
 }

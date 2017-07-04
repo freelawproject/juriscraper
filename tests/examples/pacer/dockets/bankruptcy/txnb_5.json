@@ -1,25 +1,31 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Barbara J. Houser", 
+  "case_name": "Bon Secour Partners, LLC", 
+  "cause": null, 
+  "court_id": "txnb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-11-03", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-05", 
-      "document_number": "471", 
       "description": "Exhibit A)(Pronske, Gerrit)", 
+      "document_number": "471", 
       "pacer_doc_id": null
     }, 
     {
       "date_filed": "2010-02-05", 
-      "document_number": "481", 
       "description": "Exhibit A# 2 Exhibit B# 3 Exhibit C# 4 Exhibit D# 5 Exhibit E)(Pronske, Gerrit)", 
+      "document_number": "481", 
       "pacer_doc_id": null
     }
   ], 
   "docket_number": "09-37580", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Bon Secour Partners, LLC", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -34,22 +40,16 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "3535 Gillespie, No. 305\nDallas, TX 75219\nTax ID / EIN: 20-1717020", 
       "name": "Bon Secour Partners, LLC", 
-      "extra_info": "3535 Gillespie, No. 305\nDallas, TX 75219\nTax ID / EIN: 20-1717020"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "1100 Commerce Street\nRoom 976\nDallas, TX 75242-1496\n214-767-8967", 
       "name": "UST U.S. Trustee", 
-      "extra_info": "1100 Commerce Street\nRoom 976\nDallas, TX 75242-1496\n214-767-8967"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2009-11-03", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Barbara J. Houser", 
-  "court_id": "txnb", 
-  "cause": null, 
   "referred_to_str": null
 }

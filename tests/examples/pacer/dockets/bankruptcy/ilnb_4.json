@@ -1,12 +1,18 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Jack B. Schmetterer", 
+  "case_name": "Harry B Madsen", 
+  "cause": null, 
+  "court_id": "ilnb", 
+  "date_converted": "1989-02-17", 
+  "date_discharged": null, 
+  "date_filed": "1989-01-18", 
   "date_terminated": "1998-05-29", 
+  "demand": null, 
   "docket_entries": [], 
   "docket_number": "89-00921", 
-  "date_discharged": null, 
-  "date_converted": "1989-02-17", 
   "jurisdiction": null, 
-  "case_name": "Harry B Madsen", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -21,22 +27,16 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "1 N Nw Hwy\nPark Ridge, IL 60068-3339\nSSN / ITIN: xxx-xx-1951", 
       "name": "Harry B Madsen", 
-      "extra_info": "1 N Nw Hwy\nPark Ridge, IL 60068-3339\nSSN / ITIN: xxx-xx-1951"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "Joseph Baldi & Associates\n19 S Lasalle Street Suite 1500\nChicago, IL 60603\n312-726-8150", 
       "name": "Joseph A Baldi, Tr", 
-      "extra_info": "Joseph Baldi & Associates\n19 S Lasalle Street Suite 1500\nChicago, IL 60603\n312-726-8150"
+      "type": "Trustee"
     }
   ], 
-  "date_filed": "1989-01-18", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Jack B. Schmetterer", 
-  "court_id": "ilnb", 
-  "cause": null, 
   "referred_to_str": null
 }

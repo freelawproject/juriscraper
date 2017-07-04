@@ -1,31 +1,37 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Robert D. Drain", 
+  "case_name": "1280 M & F Management LLC", 
+  "cause": null, 
+  "court_id": "nysb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-02-12", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-12", 
-      "document_number": "1", 
       "description": "Voluntary Petition (Chapter 11). Order for Relief Entered. Chapter 11 Plan due by 6/14/2010, Disclosure Statement due by 6/14/2010, Initial Case Conference due by 3/15/2010, Filed by Mark A. Frankel of Backenroth Frankel & Krinsky, LLP on behalf of 1280 M & F Management LLC. (Frankel, Mark) (Entered: 02/12/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-12", 
-      "document_number": "2", 
       "description": "Affidavit Pursuant to Local Rule re: Chapter 11 Filing filed by Mark A. Frankel on behalf of 1280 M & F Management LLC. (Frankel, Mark) (Entered: 02/12/2010)", 
+      "document_number": "2", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-12", 
-      "document_number": "3", 
       "description": "Application to Employ Backenroth Frankel & Krinsky, LLP as Debtor's Attorneys filed by Mark A. Frankel on behalf of 1280 M & F Management LLC. (Frankel, Mark) (Entered: 02/12/2010)", 
+      "document_number": "3", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "10-22259", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "1280 M & F Management LLC", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -35,22 +41,16 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "134 Illington Rd\nOssining, NY 10562\nTax ID / EIN: 20-4939127", 
       "name": "1280 M & F Management LLC", 
-      "extra_info": "134 Illington Rd\nOssining, NY 10562\nTax ID / EIN: 20-4939127"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "33 Whitehall Street\n21st Floor\nNew York, NY 10004\n(212) 510-0500", 
       "name": "United States Trustee", 
-      "extra_info": "33 Whitehall Street\n21st Floor\nNew York, NY 10004\n(212) 510-0500"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2010-02-12", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Robert D. Drain", 
-  "court_id": "nysb", 
-  "cause": null, 
   "referred_to_str": null
 }

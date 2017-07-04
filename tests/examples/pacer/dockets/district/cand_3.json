@@ -1,56 +1,56 @@
 {
-  "demand": null,
-  "date_terminated": "2009-07-02",
-  "date_converted": null,
-  "date_discharged": null,
+  "assigned_to_str": null, 
+  "case_name": "USA v. Alfaro-Medina", 
+  "cause": null, 
+  "court_id": "cand", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-04-21", 
+  "date_terminated": "2009-07-02", 
+  "demand": null, 
   "docket_entries": [
     {
-      "date_filed": "2009-04-08",
-      "document_number": "1",
-      "description": "COMPLAINT as to Gustavo Alfaro-Medina (1). (vlk, COURT STAFF) (Filed on 4/8/2009) [3:09-mj-70329-MAG] (Entered: 04/09/2009)",
+      "date_filed": "2009-04-08", 
+      "description": "COMPLAINT as to Gustavo Alfaro-Medina (1). (vlk, COURT STAFF) (Filed on 4/8/2009) [3:09-mj-70329-MAG] (Entered: 04/09/2009)", 
+      "document_number": "1", 
       "pacer_doc_id": "03515568332"
     }
-  ],
-  "docket_number": "3:09-cr-00418",
-  "date_filed": "2009-04-21",
-  "jurisdiction": null,
-  "case_name": "USA v. Alfaro-Medina",
+  ], 
+  "docket_number": "3:09-cr-00418", 
+  "jurisdiction": null, 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
         {
-          "contact": "Federal Public Defender's Office\n450 Golden Gate Avenue\n19th Floor\nSan Francisco, CA 94102\n415-436-7700\nFax: 415-436-7706\nEmail: loren_stewart@fd.org\n",
-          "name": "Loren Dougherty Stewart",
+          "contact": "Federal Public Defender's Office\n450 Golden Gate Avenue\n19th Floor\nSan Francisco, CA 94102\n415-436-7700\nFax: 415-436-7706\nEmail: loren_stewart@fd.org\n", 
+          "name": "Loren Dougherty Stewart", 
           "roles": [
-            "LEAD ATTORNEY",
+            "LEAD ATTORNEY", 
             "ATTORNEY TO BE NOTICED"
           ]
         }
-      ],
-      "type": "Defendant",
-      "name": "Gustavo Alfaro-Medina",
-      "extra_info": "TERMINATED: 07/02/2009\nalso known as\nGustavo Medina\nTERMINATED: 07/02/2009"
-    },
+      ], 
+      "extra_info": "TERMINATED: 07/02/2009\nalso known as\nGustavo Medina\nTERMINATED: 07/02/2009", 
+      "name": "Gustavo Alfaro-Medina", 
+      "type": "Defendant"
+    }, 
     {
       "attorneys": [
         {
-          "contact": "United States Attorney's Office\n450 Golden Gate Ave., 11th Floor\nBox 36055\nSan Francisco, CA 94102\n415-436-6840\nFax: 415-436-7234\nEmail: Kevin.Barry@usdoj.gov\n",
-          "name": "Kevin James Barry",
+          "contact": "United States Attorney's Office\n450 Golden Gate Ave., 11th Floor\nBox 36055\nSan Francisco, CA 94102\n415-436-6840\nFax: 415-436-7234\nEmail: Kevin.Barry@usdoj.gov\n", 
+          "name": "Kevin James Barry", 
           "roles": [
-            "LEAD ATTORNEY",
+            "LEAD ATTORNEY", 
             "ATTORNEY TO BE NOTICED"
           ]
         }
-      ],
-      "type": "Plaintiff",
-      "name": "USA",
-      "extra_info": ""
+      ], 
+      "extra_info": "", 
+      "name": "USA", 
+      "type": "Plaintiff"
     }
-  ],
-  "nature_of_suit": null,
-  "jury_demand": null,
-  "assigned_to_str": null,
-  "court_id": "cand",
-  "cause": null,
+  ], 
   "referred_to_str": null
 }

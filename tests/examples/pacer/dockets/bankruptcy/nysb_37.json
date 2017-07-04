@@ -1,25 +1,31 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Allan L. Gropper", 
+  "case_name": "Actrade Financial Technologies Ltd.", 
+  "cause": null, 
+  "court_id": "nysb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2002-12-12", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-16", 
-      "document_number": "576", 
       "description": "Motion to Approve Declaration of Jonah Meer, Trustee of the Actrade Liquidation Trust, In Support of Motion re Composition of the Actrade Liquidation Trust Committee (related document(s) 575 ) filed by Patrick P. Salisbury on behalf of Actrade Liquidation Trust. with hearing to be held on 3/2/2010 at 10:00 AM at Courtroom 617 (ALG) Responses due by 2/25/2010, (Attachments: # 1 Exhibit 1# 2 Exhibit 2# 3 Exhibit 3# 4 Exhibit 4# 5 Exhibit 5) (Salisbury, Patrick) (Entered: 02/16/2010)", 
+      "document_number": "576", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "575", 
       "description": "Motion to Approve the Composition of the Actrade Liquidation Trust Committee and Number of Members Required Thereon filed by Patrick P. Salisbury on behalf of Actrade Liquidation Trust. with hearing to be held on 3/2/2010 at 10:00 AM at Courtroom 617 (ALG) Responses due by 2/25/2010, (Attachments: # 1 Exhibit Proposed Order) (Salisbury, Patrick) (Entered: 02/16/2010)", 
+      "document_number": "575", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "02-16212", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Actrade Financial Technologies Ltd.", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -49,9 +55,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "7 Penn Plaza\nNew York, NY 10001\nTax ID / EIN: 13-3437739", 
       "name": "Actrade Financial Technologies Ltd.", 
-      "extra_info": "7 Penn Plaza\nNew York, NY 10001\nTax ID / EIN: 13-3437739"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -61,16 +67,10 @@
           "roles": []
         }
       ], 
-      "type": "U.S. Trustee", 
+      "extra_info": "33 Whitehall Street\n21st Floor\nNew York, NY 10004\n(212) 510-0500", 
       "name": "United States Trustee", 
-      "extra_info": "33 Whitehall Street\n21st Floor\nNew York, NY 10004\n(212) 510-0500"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2002-12-12", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Allan L. Gropper", 
-  "court_id": "nysb", 
-  "cause": null, 
   "referred_to_str": null
 }

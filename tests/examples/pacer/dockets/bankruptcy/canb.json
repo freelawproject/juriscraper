@@ -1,25 +1,31 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Thomas E. Carlson", 
+  "case_name": "Plant Insulation Company", 
+  "cause": null, 
+  "court_id": "canb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-05-20", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-05", 
-      "document_number": "465", 
       "description": "Application for Compensation and Reimbursement of Expenses for the Period From January 1-31, 2010 for Gary S. Fergus, Attorney, Fee: $21,087, Expenses: $225.31. Filed by Attorney Gary S. Fergus (Attachments: # 1 Exhibit A - List of Professionals# 2 Exhibit B - Fees & Expenses) (Fergus, Gary) (Entered: 02/05/2010)", 
+      "document_number": "465", 
       "pacer_doc_id": "034013338291"
     }, 
     {
       "date_filed": "2010-02-05", 
-      "document_number": "466", 
       "description": "Notice Regarding Gary S. Fergus' Application for Compensation and Reimbursement of Expenses for the Period From January 1-31, 2010 (RE: related document(s) 465 Application for Compensation and Reimbursement of Expenses for the Period From January 1-31, 2010 for Gary S. Fergus, Attorney, Fee: $21,087, Expenses: $225.31. Filed by Attorney Gary S. Fergus). Filed by Attorney Gary S. Fergus (Fergus, Gary) (Entered: 02/05/2010)", 
+      "document_number": "466", 
       "pacer_doc_id": "034013338338"
     }
   ], 
   "docket_number": "09-31347", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Plant Insulation Company", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -39,15 +45,15 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "c/o Law Offices of Travis & Pon\n2271 California Street\nSan Francisco, CA 94115\n415.923.1200\nTax ID / EIN: 94-0292481", 
       "name": "Plant Insulation Company", 
-      "extra_info": "c/o Law Offices of Travis & Pon\n2271 California Street\nSan Francisco, CA 94115\n415.923.1200\nTax ID / EIN: 94-0292481"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Responsible Ind", 
+      "extra_info": "", 
       "name": "David J. Gordon", 
-      "extra_info": ""
+      "type": "Responsible Ind"
     }, 
     {
       "attorneys": [
@@ -57,9 +63,9 @@
           "roles": []
         }
       ], 
-      "type": "U.S. Trustee", 
+      "extra_info": "Office of the U.S. Trustee\n235 Pine St\nSuite 700\nSan Francisco, CA 94104\n(415) 705-3333", 
       "name": "Office of the U.S. Trustee / SF", 
-      "extra_info": "Office of the U.S. Trustee\n235 Pine St\nSuite 700\nSan Francisco, CA 94104\n(415) 705-3333"
+      "type": "U.S. Trustee"
     }, 
     {
       "attorneys": [
@@ -89,16 +95,10 @@
           "roles": []
         }
       ], 
-      "type": "Creditor Committee", 
+      "extra_info": "c/o Sheppard Mullin Richter & Hampton LL\nFour Embarcadero Center, 17th Floor\nSan Francisco, CA 94111\n(415) 434-9100", 
       "name": "Official Committee Of Unsecured Creditors", 
-      "extra_info": "c/o Sheppard Mullin Richter & Hampton LL\nFour Embarcadero Center, 17th Floor\nSan Francisco, CA 94111\n(415) 434-9100"
+      "type": "Creditor Committee"
     }
   ], 
-  "date_filed": "2009-05-20", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Thomas E. Carlson", 
-  "court_id": "canb", 
-  "cause": null, 
   "referred_to_str": null
 }

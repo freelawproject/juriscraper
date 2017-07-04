@@ -1,31 +1,37 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Christopher S. Sontchi", 
+  "case_name": "Downey Financial Corp.", 
+  "cause": null, 
+  "court_id": "deb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2008-11-25", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-01", 
-      "document_number": "327", 
       "description": "Limited Objection to the Fifth Motion of the Chapter 7 Trustee for Entry of an Order Further Extending the Time by Which the Trustee Must Assume or Reject Executory Contracts and Unexpired Leases Pursuant to 11 U.S.C. Section 365(a) and (d) and Fed. R. Bankr. P. 9006(b) (related document(s) 300 ) Filed by Federal Deposit Insurance Corporation in its capacity as receiver for Downey Savings and Loan, F.A. (Attachments: # 1 Certificate of Service) (O'Brien, Daniel) (Entered: 02/01/2010)", 
+      "document_number": "327", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-02", 
-      "document_number": "328", 
       "description": "Notice of Hearing Notice of Rescheduled Hearing Time Only (related document(s) 278, 300 ) Filed by Montague S. Claybrook. Hearing scheduled for 2/18/2010 at 03:00 PM at US Bankruptcy Court, 824 Market St., 5th Fl., Courtroom #6, Wilmington, Delaware. (Attachments: # 1 Certificate of Service # 2 Service List) (Rennie, Sheldon) (Entered: 02/02/2010)", 
+      "document_number": "328", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "329", 
       "description": "Notice of Agenda of Matters Scheduled for Hearing Filed by Montague S. Claybrook. Hearing scheduled for 2/18/2010 at 03:00 PM at US Bankruptcy Court, 824 Market St., 5th Fl., Courtroom #6, Wilmington, Delaware. (Attachments: # 1 Certificate of Service) (Rennie, Sheldon) (Entered: 02/16/2010)", 
+      "document_number": "329", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "08-13041", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Downey Financial Corp.", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -35,9 +41,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "3501 Jamboree Road\nNewport Beach, CA 92660\nTax ID / EIN: 33-0633413", 
       "name": "Downey Financial Corp.", 
-      "extra_info": "3501 Jamboree Road\nNewport Beach, CA 92660\nTax ID / EIN: 33-0633413"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -72,22 +78,16 @@
           "roles": []
         }
       ], 
-      "type": "Trustee", 
+      "extra_info": "913 N. Market Street\nSuite 900\nWilmington, DE 19801\n302-661-1804", 
       "name": "Montague S. Claybrook", 
-      "extra_info": "913 N. Market Street\nSuite 900\nWilmington, DE 19801\n302-661-1804"
+      "type": "Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "844 King Street, Room 2207\nLockbox #35\nWilmington, DE 19899-0035\n302-573-6491", 
       "name": "United States Trustee", 
-      "extra_info": "844 King Street, Room 2207\nLockbox #35\nWilmington, DE 19899-0035\n302-573-6491"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2008-11-25", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Christopher S. Sontchi", 
-  "court_id": "deb", 
-  "cause": null, 
   "referred_to_str": null
 }

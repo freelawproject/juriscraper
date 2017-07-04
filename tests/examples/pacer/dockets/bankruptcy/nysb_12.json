@@ -1,12 +1,18 @@
 {
-  "demand": null, 
+  "assigned_to_str": "James M. Peck", 
+  "case_name": "Lehman Brothers Holdings Inc. - Adversary Proceeding", 
+  "cause": null, 
+  "court_id": "nysb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-05-05", 
   "date_terminated": "2013-08-08", 
+  "demand": null, 
   "docket_entries": [], 
   "docket_number": "09-01177", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Lehman Brothers Holdings Inc. - Adversary Proceeding", 
+  "jury_demand": null, 
+  "nature_of_suit": "91 Declaratory judgment; 72 Injunctive relief - other", 
   "parties": [
     {
       "attorneys": [
@@ -18,9 +24,9 @@
           ]
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "", 
       "name": "Lehman Brothers Holdings Inc.", 
-      "extra_info": ""
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -30,9 +36,9 @@
           "roles": []
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "", 
       "name": "Lehman Brothers Special Financing Inc.", 
-      "extra_info": ""
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -62,9 +68,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Libra CDO Limited", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -94,9 +100,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Bank Of America, N.A.", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -126,9 +132,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "LaSalle Bank National Association", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -148,16 +154,10 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Societe Generale, New York Branch", 
-      "extra_info": ""
+      "type": "Defendant"
     }
   ], 
-  "date_filed": "2009-05-05", 
-  "nature_of_suit": "91 Declaratory judgment; 72 Injunctive relief - other", 
-  "jury_demand": null, 
-  "assigned_to_str": "James M. Peck", 
-  "court_id": "nysb", 
-  "cause": null, 
   "referred_to_str": null
 }

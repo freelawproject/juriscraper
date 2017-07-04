@@ -1,31 +1,37 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Robin Riblet", 
+  "case_name": "East Airport Development, LLC", 
+  "cause": null, 
+  "court_id": "cacb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-02-10", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-10", 
-      "document_number": "1", 
       "description": "Chapter 11 Voluntary Petition. Fee Amount $1039 Filed by East Airport Development, LLC (Beall, William) (Entered: 02/10/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-12", 
-      "document_number": "2", 
       "description": "Motion by Pacific Capital Bank to Deem Debtor a Single Asset Real Estate Entity in Accordance with Section 101(51B) Filed by Creditor Pacific Capital Bank, N.A. (Attachments: # 1 Declaration# 2 Certificate of Service) (August, Marshall) (Entered: 02/12/2010)", 
+      "document_number": "2", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-12", 
-      "document_number": "3", 
       "description": "Notice of Hearing of Motion by Pacific Capital Bank, N.A. to Deem Debtor a Single Asset Real Estate Entity in Accordance with Section 101(51B) Filed by Creditor Pacific Capital Bank, N.A. (RE: related document(s) 2 Motion by Pacific Capital Bank to Deem Debtor a Single Asset Real Estate Entity in Accordance with Section 101). (August, Marshall) (Entered: 02/12/2010)", 
+      "document_number": "3", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "9:10-bk-10634", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "East Airport Development, LLC", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -35,9 +41,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "PO Box 1446\nSan Luis Obispo, CA 93406\nTax ID / EIN: 52-2447798", 
       "name": "East Airport Development, LLC", 
-      "extra_info": "PO Box 1446\nSan Luis Obispo, CA 93406\nTax ID / EIN: 52-2447798"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -47,16 +53,10 @@
           "roles": []
         }
       ], 
-      "type": "U.S. Trustee", 
+      "extra_info": "21051 Warner Center Lane, Suite 115\nWoodland Hills, CA 91367", 
       "name": "United States Trustee (ND)", 
-      "extra_info": "21051 Warner Center Lane, Suite 115\nWoodland Hills, CA 91367"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2010-02-10", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Robin Riblet", 
-  "court_id": "cacb", 
-  "cause": null, 
   "referred_to_str": null
 }

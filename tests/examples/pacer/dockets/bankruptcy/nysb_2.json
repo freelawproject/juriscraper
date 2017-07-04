@@ -1,67 +1,73 @@
 {
-  "demand": null, 
+  "assigned_to_str": "James M. Peck", 
+  "case_name": "Lehman Brothers Holdings Inc.", 
+  "cause": null, 
+  "court_id": "nysb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2008-09-15", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-16", 
-      "document_number": "7129", 
       "description": "Statement / Notice of Proposed Sale of De Minimis Assets Pursuant to De Minimis Asset Sale Procedures (related document(s) 4021 ) filed by Shai Waisman on behalf of Lehman Brothers Holdings Inc.. (Waisman, Shai) (Entered: 02/16/2010)", 
+      "document_number": "7129", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "7130", 
       "description": "Transfer Agreement FRBP Transfer Agreement 3001 (e) 2 Transferors:Nexen Energy Markeing London Limited(Claim No.18830, Amount 20,589,383.00); Nexen Energy Markeing London Limited(Claim No.17154, Amount 20,589,383.00). To Nexen Energy Marketing Eurpoe Limited. filed by Peter D'Apice on behalf of Nexen Energy Marketing Europe Limited.(D'Apice, Peter) (Entered: 02/16/2010)", 
+      "document_number": "7130", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "7131", 
       "description": "Withdrawal of Claim(s): filed on behalf of NY State Department of Labor regarding proof of claim no. 3657 filed by Epiq Bankruptcy Solutions, LLC Claims Agent.(Baer, Herbert) (Entered: 02/16/2010)", 
+      "document_number": "7131", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "7132", 
       "description": "Withdrawal of Claim(s): Nos. 28641 and 28643 filed by Eric E. Johnson on behalf of National CineMedia.(Johnson, Eric) (Entered: 02/16/2010)", 
+      "document_number": "7132", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "7133", 
       "description": "Transfer Agreement FRBP Transfer Agreement 3001 (e) 1 Transferors:Innovatis Investment fund Limited (SAC)(Claim No.58690, Amount 7,000,000). To CAT Brokerage AG. filed by Douglas P. Bartner on behalf of CAT Brokerage AG.(Bartner, Douglas) (Entered: 02/16/2010)", 
+      "document_number": "7133", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "7134", 
       "description": "Transfer Agreement FRBP Transfer Agreement 3001 (e) 2 Transferors:Stone Lion Portfolio L.P.(Claim No.50323, Amount 19194992.79). To Goldman Sachs & Co.. filed by Michael Friedman on behalf of Goldman, Sachs & Co..(Friedman, Michael) (Entered: 02/16/2010)", 
+      "document_number": "7134", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "7135", 
       "description": "Application to Employ Deloitte Tax LLP as Tax Services Providers / Debtors' Application Pursuant to Section 327(a) of the Bankruptcy Code for an Order Authorizing the Retention and Employment of Deloitte Tax LLP as Tax Services Providers Nunc Pro Tunc to November 1, 2008 (with hearing to be held on 3/17/2010 at 10:00 AM at Courtroom 601 (JMP)) filed by Richard P. Krasnow on behalf of Lehman Brothers Holdings Inc.. Responses due by 3/12/2010, (Krasnow, Richard) (Entered: 02/16/2010)", 
+      "document_number": "7135", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "7136", 
       "description": "Affidavit of Service of Eleni Kossivas of Epiq Bankruptcy Solutions, LLC (related document(s) 7092, 7087 ) filed by Shai Waisman on behalf of Lehman Brothers Holdings Inc.. (Waisman, Shai) (Entered: 02/16/2010)", 
+      "document_number": "7136", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "7137", 
       "description": "Affidavit of Service of Panagiota Manatakis of Epiq Bankruptcy Solutions, LLC (related document(s) 7101 ) filed by Shai Waisman on behalf of Lehman Brothers Holdings Inc.. (Waisman, Shai) (Entered: 02/16/2010)", 
+      "document_number": "7137", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "08-13555", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Lehman Brothers Holdings Inc.", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -141,9 +147,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "745 Seventh Avenue\nNew York, NY 10019\nTax ID / EIN: 13-3216325", 
       "name": "Lehman Brothers Holdings Inc.", 
-      "extra_info": "745 Seventh Avenue\nNew York, NY 10019\nTax ID / EIN: 13-3216325"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -153,9 +159,9 @@
           "roles": []
         }
       ], 
-      "type": "Petitioning Creditor", 
+      "extra_info": "", 
       "name": "A/P Hotel, LLC", 
-      "extra_info": ""
+      "type": "Petitioning Creditor"
     }, 
     {
       "attorneys": [
@@ -185,9 +191,9 @@
           "roles": []
         }
       ], 
-      "type": "Trustee", 
+      "extra_info": "", 
       "name": "James W. Giddens, as Trustee for the SIPA Liquidation of Lehman Brothers Inc.", 
-      "extra_info": ""
+      "type": "Trustee"
     }, 
     {
       "attorneys": [
@@ -197,9 +203,9 @@
           "roles": []
         }
       ], 
-      "type": "Trustee", 
+      "extra_info": "Bernstein Shur Sawyer & Nelson\n100 Middle Street\nP.O. Box 9729\nPortland, ME 04104-5029\n207-774-1200", 
       "name": "Citibank, N.A., In Its Capacity As Trustee", 
-      "extra_info": "Bernstein Shur Sawyer & Nelson\n100 Middle Street\nP.O. Box 9729\nPortland, ME 04104-5029\n207-774-1200"
+      "type": "Trustee"
     }, 
     {
       "attorneys": [
@@ -209,9 +215,9 @@
           "roles": []
         }
       ], 
-      "type": "Trustee", 
+      "extra_info": "c/o Duane Morris LLP, Suite 2000\n1540 Broadway\nNew York, NY 10036\n212-692-1000", 
       "name": "Aron Oliner as Chapter 11 Trustee of The Kontrabecki Group", 
-      "extra_info": "c/o Duane Morris LLP, Suite 2000\n1540 Broadway\nNew York, NY 10036\n212-692-1000"
+      "type": "Trustee"
     }, 
     {
       "attorneys": [
@@ -221,15 +227,15 @@
           "roles": []
         }
       ], 
-      "type": "U.S. Trustee", 
+      "extra_info": "33 Whitehall Street\n21st Floor\nNew York, NY 10004\n(212) 510-0500", 
       "name": "United States Trustee", 
-      "extra_info": "33 Whitehall Street\n21st Floor\nNew York, NY 10004\n(212) 510-0500"
+      "type": "U.S. Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "Claims and Noticing Agent", 
+      "extra_info": "(f/k/a Bankruptcy Services LLC)\n757 Third Avenue, 3rd Floor\nNew York, NY 10017\nwww.bsillc.com\n646-282-2500", 
       "name": "Epiq Bankruptcy Solutions, LLC Claims Agent", 
-      "extra_info": "(f/k/a Bankruptcy Services LLC)\n757 Third Avenue, 3rd Floor\nNew York, NY 10017\nwww.bsillc.com\n646-282-2500"
+      "type": "Claims and Noticing Agent"
     }, 
     {
       "attorneys": [
@@ -244,16 +250,10 @@
           "roles": []
         }
       ], 
-      "type": "Creditor Committee", 
+      "extra_info": "", 
       "name": "Official Committee of Unsecured Creditors", 
-      "extra_info": ""
+      "type": "Creditor Committee"
     }
   ], 
-  "date_filed": "2008-09-15", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "James M. Peck", 
-  "court_id": "nysb", 
-  "cause": null, 
   "referred_to_str": null
 }

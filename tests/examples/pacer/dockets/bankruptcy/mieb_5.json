@@ -1,19 +1,25 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Daniel S.", 
+  "case_name": "Michael Patrick Steele", 
+  "cause": null, 
+  "court_id": "mieb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-12-11", 
   "date_terminated": "2010-03-19", 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2009-12-11", 
-      "document_number": "1", 
       "description": "Chapter 7 Voluntary Petition : Fee Amount $299. Filed by Michael Patrick Steele, Kristie Kay Steele (Biddinger, Michelle) (Entered: 12/11/2009)", 
+      "document_number": "1", 
       "pacer_doc_id": "096021301318"
     }
   ], 
   "docket_number": "09-24465", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Michael Patrick Steele", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -23,9 +29,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "1712 Pobanz Road\nPigeon, MI 48755\nSSN / ITIN: xxx-xx-8785", 
       "name": "Michael Patrick Steele", 
-      "extra_info": "1712 Pobanz Road\nPigeon, MI 48755\nSSN / ITIN: xxx-xx-8785"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -35,22 +41,16 @@
           "roles": []
         }
       ], 
-      "type": "Joint Debtor", 
+      "extra_info": "1712 Pobanz Road\nPigeon, MI 48755\nSSN / ITIN: xxx-xx-2427", 
       "name": "Kristie Kay Steele", 
-      "extra_info": "1712 Pobanz Road\nPigeon, MI 48755\nSSN / ITIN: xxx-xx-2427"
+      "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "Law Firm of Randall Frank\nP.O. Box 2220\nBay City, MI 48707\n989-893-2238", 
       "name": "Randall L Frank", 
-      "extra_info": "Law Firm of Randall Frank\nP.O. Box 2220\nBay City, MI 48707\n989-893-2238"
+      "type": "Trustee"
     }
   ], 
-  "date_filed": "2009-12-11", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Daniel S.", 
-  "court_id": "mieb", 
-  "cause": null, 
   "referred_to_str": null
 }

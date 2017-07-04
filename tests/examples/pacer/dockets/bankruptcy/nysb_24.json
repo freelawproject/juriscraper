@@ -1,25 +1,31 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Robert D. Drain", 
+  "case_name": "The Reader's Digest Association, Inc.", 
+  "cause": null, 
+  "court_id": "nysb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-08-24", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-16", 
-      "document_number": "650", 
       "description": "Affidavit of Service re: Notice of Filing of the Schedule of Executory Contracts and Unexpired Leases Proposed to Be Rejected Pursuant to the Third Amended Proposed Joint Chapter 11 Plan of Reorganization of The Reader's Digest Association, Inc. and Its Debtor Affiliates [Docket No. 367] (related document(s) 367 ) filed by Kurtzman Carson Consultants LLC.(Schepper, Christopher) (Entered: 02/16/2010)", 
+      "document_number": "650", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "649", 
       "description": "Affidavit of Service (Supplemental) re: 1) Notice of Deadline Requiring Filing of Proofs of Claim on or Before November 16, 2009, and Related Procedures for Filing Proofs of Claim in the Above-Captioned Chapter 11 Cases; and 2) Proof of Claim Form filed by Kurtzman Carson Consultants LLC.(Schepper, Christopher) (Entered: 02/16/2010)", 
+      "document_number": "649", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "09-23529", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "The Reader's Digest Association, Inc.", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -39,9 +45,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "1 Reader's Digest Road\nPleasantville, NY 10570\nTax ID / EIN: 13-1726769", 
       "name": "The Reader's Digest Association, Inc.", 
-      "extra_info": "1 Reader's Digest Road\nPleasantville, NY 10570\nTax ID / EIN: 13-1726769"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -56,22 +62,16 @@
           "roles": []
         }
       ], 
-      "type": "U.S. Trustee", 
+      "extra_info": "33 Whitehall Street\n21st Floor\nNew York, NY 10004\n(212) 510-0500", 
       "name": "United States Trustee", 
-      "extra_info": "33 Whitehall Street\n21st Floor\nNew York, NY 10004\n(212) 510-0500"
+      "type": "U.S. Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "Claims and Noticing Agent", 
+      "extra_info": "2335 Alaska Avenue\nEl Segundo, CA 90245\n310-823-9000", 
       "name": "Kurtzman Carson Consultants LLC", 
-      "extra_info": "2335 Alaska Avenue\nEl Segundo, CA 90245\n310-823-9000"
+      "type": "Claims and Noticing Agent"
     }
   ], 
-  "date_filed": "2009-08-24", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Robert D. Drain", 
-  "court_id": "nysb", 
-  "cause": null, 
   "referred_to_str": null
 }

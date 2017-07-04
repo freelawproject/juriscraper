@@ -1,25 +1,31 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Dennis Montali", 
+  "case_name": "Ana C. Reyes", 
+  "cause": null, 
+  "court_id": "canb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-02-16", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-16", 
-      "document_number": "1", 
       "description": "Chapter 7 Voluntary Petition. Fee Amount $299. Financial Management Certificate Due Prior to Discharge. Filed by Ana C. Reyes . Incomplete Filings due by 3/2/2010. Section 521 Filings due by 4/2/2010. Order Meeting of Creditors due by 3/2/2010. (ia) (Entered: 02/16/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "034013448078"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "2", 
       "description": "Statement of Social Security Number. Filed by Debtor Ana C. Reyes (ia) (Entered: 02/16/2010)", 
+      "document_number": "2", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "10-30514", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Ana C. Reyes", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -34,28 +40,22 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "529 Second Lane\nSouth San Francisco, CA 94080\n(650) 594-2364\nSSN / ITIN: xxx-xx-7993", 
       "name": "Ana C. Reyes", 
-      "extra_info": "529 Second Lane\nSouth San Francisco, CA 94080\n(650) 594-2364\nSSN / ITIN: xxx-xx-7993"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "800 Powell Street\nSan Francisco, CA 94108\n415-362-0415", 
       "name": "E. Lynn Schoenmann", 
-      "extra_info": "800 Powell Street\nSan Francisco, CA 94108\n415-362-0415"
+      "type": "Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "Office of the U.S. Trustee\n235 Pine St\nSuite 700\nSan Francisco, CA 94104\n(415) 705-3333", 
       "name": "Office of the U.S. Trustee / SF", 
-      "extra_info": "Office of the U.S. Trustee\n235 Pine St\nSuite 700\nSan Francisco, CA 94104\n(415) 705-3333"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2010-02-16", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Dennis Montali", 
-  "court_id": "canb", 
-  "cause": null, 
   "referred_to_str": null
 }

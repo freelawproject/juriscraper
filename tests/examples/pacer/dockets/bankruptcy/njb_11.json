@@ -1,85 +1,91 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Michael B. Kaplan", 
+  "case_name": "James H Gray, Jr", 
+  "cause": null, 
+  "court_id": "njb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-12-02", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2009-12-02", 
-      "document_number": "1", 
       "description": "Chapter 13 Voluntary Petition Filed by Stephanie Shreter on behalf of James H Gray jr, Tammy L Gray. (Shreter, Stephanie) (Entered: 12/02/2009)", 
+      "document_number": "1", 
       "pacer_doc_id": "118024559650"
     }, 
     {
       "date_filed": "2009-12-02", 
-      "document_number": "2", 
       "description": "Chapter 13 Plan, Motions Included: None. Filed by Stephanie Shreter on behalf of James H Gray jr, Tammy L Gray. (Shreter, Stephanie) (Entered: 12/02/2009)", 
+      "document_number": "2", 
       "pacer_doc_id": "118024559658"
     }, 
     {
       "date_filed": "2009-12-02", 
-      "document_number": "4", 
       "description": "Notice of Missing Documents. (related document: 1 Voluntary Petition (Chapter 13) filed by Debtor James H Gray, Joint Debtor Tammy L Gray). Missing Documents: Credit Counseling Certificates for Debtor and Joint Debtor. Incomplete Filings due by 12/16/2009. (pbf) (Entered: 12/03/2009)", 
+      "document_number": "4", 
       "pacer_doc_id": "118024577019"
     }, 
     {
       "date_filed": "2009-12-03", 
-      "document_number": "3", 
       "description": "Meeting of Creditors and Notice of Appointment of Trustee Albert Russo with 341(a) meeting to be held on 01/14/2010 at 09:00 AM at Trenton - Robbinsville.Complaint to determine dischargeability of certain debts deadline: 03/15/2010. Proof of claim due by 04/14/2010. (Entered: 12/03/2009)", 
+      "document_number": "3", 
       "pacer_doc_id": "118024572023"
     }, 
     {
       "date_filed": "2009-12-03", 
-      "document_number": "5", 
       "description": "Certificate of Credit Counseling filed by Stephanie Shreter on behalf of James H Gray Jr, Tammy L Gray. (Shreter, Stephanie) (Entered: 12/03/2009)", 
+      "document_number": "5", 
       "pacer_doc_id": "118024579033"
     }, 
     {
       "date_filed": "2009-12-03", 
-      "document_number": "6", 
       "description": "Confirmation Hearing Scheduled (related document: 2 Chapter 13 Plan, Motions Included: None. Filed by Stephanie Shreter on behalf of James H Gray jr, Tammy L Gray.). Confirmation hearing to be held on 2/9/2010 at 09:30 AM at MBK - Courtroom 3, Trenton. Last day to Object to Confirmation 2/2/2010. (vpm) (Entered: 12/03/2009)", 
+      "document_number": "6", 
       "pacer_doc_id": "118024580265"
     }, 
     {
       "date_filed": "2009-12-05", 
-      "document_number": "7", 
       "description": "BNC Certificate of Mailing - Chapter 13 Confirmation Hearing No. of Notices: 32. Service Date 12/05/2009. (Admin.) (Entered: 12/06/2009)", 
+      "document_number": "7", 
       "pacer_doc_id": "118024606361"
     }, 
     {
       "date_filed": "2009-12-05", 
-      "document_number": "8", 
       "description": "BNC Certificate of Mailing. No. of Notices: 3. Service Date 12/05/2009. (Admin.) (Entered: 12/06/2009)", 
+      "document_number": "8", 
       "pacer_doc_id": "118024606362"
     }, 
     {
       "date_filed": "2009-12-05", 
-      "document_number": "9", 
       "description": "Notice and Order to Pay Trustee No. of Notices: 1. Service Date 12/05/2009. (Admin.) (Entered: 12/06/2009)", 
+      "document_number": "9", 
       "pacer_doc_id": "118024606363"
     }, 
     {
       "date_filed": "2009-12-05", 
-      "document_number": "10", 
       "description": "BNC Certificate of Mailing - Meeting of Creditors. No. of Notices: 24. Service Date 12/05/2009. (Admin.) (Entered: 12/06/2009)", 
+      "document_number": "10", 
       "pacer_doc_id": "118024606364"
     }, 
     {
       "date_filed": "2009-12-05", 
-      "document_number": "11", 
       "description": "BNC Certificate of Mailing - Chapter 13 Plan No. of Notices: 32. Service Date 12/05/2009. (Admin.) (Entered: 12/06/2009)", 
+      "document_number": "11", 
       "pacer_doc_id": "118024606365"
     }, 
     {
       "date_filed": "2010-01-04", 
-      "document_number": "12", 
       "description": "Notice of Appearance and Request for Service of Notice filed by Robert P. Saltzman on behalf of New Jersey Housing and Mortgage Finance Agency. (Saltzman, Robert) (Entered: 01/04/2010)", 
+      "document_number": "12", 
       "pacer_doc_id": "118024874415"
     }
   ], 
   "docket_number": "09-42482", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "James H Gray, Jr", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -89,9 +95,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "151 Bobolink Blvd\nBrowns Mills, NJ 08015\nSSN / ITIN: xxx-xx-2474", 
       "name": "James H Gray, Jr", 
-      "extra_info": "151 Bobolink Blvd\nBrowns Mills, NJ 08015\nSSN / ITIN: xxx-xx-2474"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -101,22 +107,16 @@
           "roles": []
         }
       ], 
-      "type": "Joint Debtor", 
+      "extra_info": "151 Bobolink Blvd\nBrowns Mills, NJ 08015\nSSN / ITIN: xxx-xx-1965", 
       "name": "Tammy L Gray", 
-      "extra_info": "151 Bobolink Blvd\nBrowns Mills, NJ 08015\nSSN / ITIN: xxx-xx-1965"
+      "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "Standing Chapter 13 Trustee\nCN 4853\nTrenton, NJ 08650-4853\n(609) 587-6888", 
       "name": "Albert Russo", 
-      "extra_info": "Standing Chapter 13 Trustee\nCN 4853\nTrenton, NJ 08650-4853\n(609) 587-6888"
+      "type": "Trustee"
     }
   ], 
-  "date_filed": "2009-12-02", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Michael B. Kaplan", 
-  "court_id": "njb", 
-  "cause": null, 
   "referred_to_str": null
 }

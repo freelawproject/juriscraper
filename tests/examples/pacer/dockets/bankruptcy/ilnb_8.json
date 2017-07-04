@@ -1,73 +1,79 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Pamela S. Hollis", 
+  "case_name": "Charles Nathan Byrd, III", 
+  "cause": null, 
+  "court_id": "ilnb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2007-01-16", 
   "date_terminated": "2010-01-29", 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2009-06-25", 
-      "document_number": "26", 
       "description": "Notice of Motion and Motion to Dismiss for Failure to Make Plan Payments for Debtor. Filed by Marilyn O Marshall Hearing scheduled for 7/13/2009 at 09:00 AM at 219 South Dearborn, Courtroom 644, Chicago, Illinois 60604. (Attachments: # 1 Proposed Order) (Marshall, Marilyn) (Entered: 06/25/2009)", 
+      "document_number": "26", 
       "pacer_doc_id": "066022546766"
     }, 
     {
       "date_filed": "2009-07-13", 
-      "document_number": "27", 
       "description": "Hearing Continued (RE: 26 ). Hearing scheduled for 08/10/2009 at 10:00 AM at Courtroom 644 219 South Dearborn, Chicago, IL, 60604.. Signed on 07/13/2009. (Austin, Lynda) (Entered: 07/13/2009)", 
+      "document_number": "27", 
       "pacer_doc_id": null
     }, 
     {
       "date_filed": "2009-08-10", 
-      "document_number": "28", 
       "description": "Hearing Continued (RE: 26 ). hearing scheduled for 09/14/2009 at 10:00 AM at Courtroom 644 219 South Dearborn, Chicago, IL, 60604.. Signed on 08/10/2009. (Nelson, Freddie) (Entered: 08/10/2009)", 
+      "document_number": "28", 
       "pacer_doc_id": null
     }, 
     {
       "date_filed": "2009-08-11", 
-      "document_number": "29", 
       "description": "Notice of Motion and Motion to Modify Plan Filed by Nathan J Reusch on behalf of Charles Nathan Byrd III. Hearing scheduled for 9/14/2009 at 09:30 AM at 219 South Dearborn, Courtroom 644, Chicago, Illinois 60604. (Attachments: # 1 Proposed Order) (Reusch, Nathan) (Entered: 08/11/2009)", 
+      "document_number": "29", 
       "pacer_doc_id": "066023154240"
     }, 
     {
       "date_filed": "2009-09-14", 
-      "document_number": "30", 
       "description": "(E)Order Withdrawing Motion To Modify Plan (Related Doc # 29 ). Signed on 09/14/2009. (Green, Josephine) (Entered: 09/14/2009)", 
+      "document_number": "30", 
       "pacer_doc_id": null
     }, 
     {
       "date_filed": "2009-09-14", 
-      "document_number": "31", 
       "description": "(E)Order Granting Motion to Dismiss for Failure to Make Plan Payments for Debtor. (Related Doc # 26 ). Signed on 09/14/2009. (Green, Josephine) (Entered: 09/14/2009)", 
+      "document_number": "31", 
       "pacer_doc_id": "066023600744"
     }, 
     {
       "date_filed": "2009-09-15", 
-      "document_number": "32", 
       "description": "BNC Certificate of Service - Notice of Dismissal (RE: 31 Order on Motion Dismiss for Failure to Make Plan Payments). No. of Notices: 10. Service Date 09/17/2009. (Admin.) (Entered: 09/17/2009)", 
+      "document_number": "32", 
       "pacer_doc_id": "066023656117"
     }, 
     {
       "date_filed": "2010-01-12", 
-      "document_number": "33", 
       "description": "Trustee's Report of Deposit of Unclaimed Funds (Marshall, Marilyn) (Entered: 01/12/2010)", 
+      "document_number": "33", 
       "pacer_doc_id": "066025216574"
     }, 
     {
       "date_filed": "2010-01-28", 
-      "document_number": "34", 
       "description": "Chapter 13 Final Report and Account (Marshall, Marilyn) (Entered: 01/28/2010)", 
+      "document_number": "34", 
       "pacer_doc_id": "066025458607"
     }, 
     {
       "date_filed": "2010-01-29", 
-      "document_number": "35", 
       "description": "Bankruptcy Case Closed and Trustee Discharged . (Pruitt, Debra) (Entered: 01/29/2010)", 
+      "document_number": "35", 
       "pacer_doc_id": null
     }
   ], 
   "docket_number": "07-00744", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Charles Nathan Byrd, III", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -92,28 +98,22 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "9215 S. Troy Ave.\nEvergreen Park, IL 60805\nSSN / ITIN: xxx-xx-8684", 
       "name": "Charles Nathan Byrd, III", 
-      "extra_info": "9215 S. Troy Ave.\nEvergreen Park, IL 60805\nSSN / ITIN: xxx-xx-8684"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "224 South Michigan Ste 800\nChicago, IL 60604\n312-431-1300", 
       "name": "Marilyn O Marshall", 
-      "extra_info": "224 South Michigan Ste 800\nChicago, IL 60604\n312-431-1300"
+      "type": "Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "Office of the U.S. Trustee, Region 11\n219 S Dearborn St\nRoom 873\nChicago, IL 60604\n312-886-5785", 
       "name": "William T Neary", 
-      "extra_info": "Office of the U.S. Trustee, Region 11\n219 S Dearborn St\nRoom 873\nChicago, IL 60604\n312-886-5785"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2007-01-16", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Pamela S. Hollis", 
-  "court_id": "ilnb", 
-  "cause": null, 
   "referred_to_str": null
 }

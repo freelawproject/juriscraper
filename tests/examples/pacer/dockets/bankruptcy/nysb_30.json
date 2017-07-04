@@ -1,31 +1,37 @@
 {
-  "demand": null, 
+  "assigned_to_str": "James M. Peck", 
+  "case_name": "Unknown Case Title", 
+  "cause": null, 
+  "court_id": "nysb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-02-04", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-05", 
-      "document_number": "5", 
       "description": "Motion to Approve / Application for Order Scheduling Hearing and Specifying the Form and Manner of Service of Notice filed by Evan C. Hollander on behalf of JSC BTA Bank. (Attachments: # 1 Exhibit A - Text of Proposed Order# 2 Exhibit B) (Hollander, Evan) (Entered: 02/05/2010)", 
+      "document_number": "5", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-05", 
-      "document_number": "6", 
       "description": "Order Signed on 2/5/2010 Scheduling Hearing and Specifying the Form and Manner of Service of Notice. The Recognition Hearing Will Be Held On 3/1/2010 at 2:00 PM in Courtroom 601. (Nulty, Lynda) (Entered: 02/05/2010)", 
+      "document_number": "6", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-08", 
-      "document_number": "7", 
       "description": "Affidavit of Service of Lyudmyla Polyova (related document(s) 6, 5 ) filed by Evan C. Hollander on behalf of JSC BTA Bank. (Hollander, Evan) (Entered: 02/08/2010)", 
+      "document_number": "7", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "10-10638", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Unknown Case Title", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -35,22 +41,16 @@
           "roles": []
         }
       ], 
-      "type": "Foreign Representative", 
+      "extra_info": "97 Zholdasbekov Street\n\"Samal 2\" microdistrict\nAlmaty 050051\nRepublic of Kazakhstan", 
       "name": "JSC BTA Bank", 
-      "extra_info": "97 Zholdasbekov Street\n\"Samal 2\" microdistrict\nAlmaty 050051\nRepublic of Kazakhstan"
+      "type": "Foreign Representative"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "33 Whitehall Street\n21st Floor\nNew York, NY 10004\n(212) 510-0500", 
       "name": "United States Trustee", 
-      "extra_info": "33 Whitehall Street\n21st Floor\nNew York, NY 10004\n(212) 510-0500"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2010-02-04", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "James M. Peck", 
-  "court_id": "nysb", 
-  "cause": null, 
   "referred_to_str": null
 }

@@ -1,19 +1,25 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Elizabeth S. Stong", 
+  "case_name": "Astoria Surgical Supplies Corp.", 
+  "cause": null, 
+  "court_id": "nyeb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-02-16", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-16", 
-      "document_number": "1", 
       "description": "Chapter 7 Voluntary Petition. Fee Amount $299 Filed by Tracy L Klestadt on behalf of Astoria Surgical Supplies Corp. (Attachments: # 1 Resolutions) (Klestadt, Tracy) (Entered: 02/16/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "1-10-41177", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Astoria Surgical Supplies Corp.", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -23,28 +29,22 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "31-04 60th Street\nWoodside, NY 11377\nTax ID / EIN: 11-3307950", 
       "name": "Astoria Surgical Supplies Corp.", 
-      "extra_info": "31-04 60th Street\nWoodside, NY 11377\nTax ID / EIN: 11-3307950"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "26 Court Street\nSuite 2211\nBrooklyn, NY 11242\n(718) 855-6840", 
       "name": "Robert J Musso", 
-      "extra_info": "26 Court Street\nSuite 2211\nBrooklyn, NY 11242\n(718) 855-6840"
+      "type": "Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "Office of the United States Trustee\n271 Cadman Plaza East\nSuite 4529\nBrooklyn, NY 11201\n(718) 422-4960", 
       "name": "Diana G. Adams", 
-      "extra_info": "Office of the United States Trustee\n271 Cadman Plaza East\nSuite 4529\nBrooklyn, NY 11201\n(718) 422-4960"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2010-02-16", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Elizabeth S. Stong", 
-  "court_id": "nyeb", 
-  "cause": null, 
   "referred_to_str": null
 }

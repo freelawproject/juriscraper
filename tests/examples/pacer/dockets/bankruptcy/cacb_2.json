@@ -1,12 +1,18 @@
 {
-  "demand": "$5554000", 
+  "assigned_to_str": "Sheri Bluebond", 
+  "case_name": "Axium International, Inc - Adversary Proceeding", 
+  "cause": null, 
+  "court_id": "cacb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-02-23", 
   "date_terminated": "2009-09-24", 
+  "demand": "$5554000", 
   "docket_entries": [], 
   "docket_number": "2:09-ap-01176", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Axium International, Inc - Adversary Proceeding", 
+  "jury_demand": null, 
+  "nature_of_suit": "14 Recovery of money/property - other", 
   "parties": [
     {
       "attorneys": [
@@ -28,9 +34,9 @@
           "roles": []
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "333 S. Hope Street, 35th Floor\nLos Angeles, CA 90071", 
       "name": "HOWARD M EHRENBERG", 
-      "extra_info": "333 S. Hope Street, 35th Floor\nLos Angeles, CA 90071"
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -45,22 +51,16 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Studio Dante", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "915 Wilshire Blvd, Suite 1850\nLos Angeles, CA 90017\n(213) 894-6811", 
       "name": "United States Trustee (LA)", 
-      "extra_info": "915 Wilshire Blvd, Suite 1850\nLos Angeles, CA 90017\n(213) 894-6811"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2009-02-23", 
-  "nature_of_suit": "14 Recovery of money/property - other", 
-  "jury_demand": null, 
-  "assigned_to_str": "Sheri Bluebond", 
-  "court_id": "cacb", 
-  "cause": null, 
   "referred_to_str": null
 }

@@ -1,12 +1,18 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Cecelia G. Morris", 
+  "case_name": "FairPoint Communications, Inc.", 
+  "cause": null, 
+  "court_id": "nysb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-10-26", 
   "date_terminated": "2014-01-24", 
+  "demand": null, 
   "docket_entries": [], 
   "docket_number": "09-16335", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "FairPoint Communications, Inc.", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -53,9 +59,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "521 East Morehead Street\nSuite 500\nCharlotte, NC 28202\nNEW YORK-NY\nTax ID / EIN: 13-3725229", 
       "name": "FairPoint Communications, Inc.", 
-      "extra_info": "521 East Morehead Street\nSuite 500\nCharlotte, NC 28202\nNEW YORK-NY\nTax ID / EIN: 13-3725229"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -65,15 +71,15 @@
           "roles": []
         }
       ], 
-      "type": "U.S. Trustee", 
+      "extra_info": "Office of the United States Trustee\nU.S. Federal Office Building\n201 Varick Street, Room 1006\nNew York, NY 10014\n(212) 510-0500", 
       "name": "United States Trustee", 
-      "extra_info": "Office of the United States Trustee\nU.S. Federal Office Building\n201 Varick Street, Room 1006\nNew York, NY 10014\n(212) 510-0500"
+      "type": "U.S. Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "Claims and Noticing Agent", 
+      "extra_info": "3732 West 120th Street\nwww.bmcgroup.com\nHawthorne, CA 90250\n(206) 499-2169", 
       "name": "BMC Group, Inc. Claims Agent", 
-      "extra_info": "3732 West 120th Street\nwww.bmcgroup.com\nHawthorne, CA 90250\n(206) 499-2169"
+      "type": "Claims and Noticing Agent"
     }, 
     {
       "attorneys": [
@@ -98,16 +104,10 @@
           "roles": []
         }
       ], 
-      "type": "Creditor Committee", 
+      "extra_info": "", 
       "name": "Official Committee of Unsecured Creditors of FairPoint Communications, Inc., et al.", 
-      "extra_info": ""
+      "type": "Creditor Committee"
     }
   ], 
-  "date_filed": "2009-10-26", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Cecelia G. Morris", 
-  "court_id": "nysb", 
-  "cause": null, 
   "referred_to_str": null
 }

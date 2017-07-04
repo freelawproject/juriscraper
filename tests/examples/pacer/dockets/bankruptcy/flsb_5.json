@@ -1,37 +1,43 @@
 {
-  "demand": null, 
+  "assigned_to_str": "John K. Olson", 
+  "case_name": "ABC Cutting Contractors, Inc.", 
+  "cause": null, 
+  "court_id": "flsb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-02-12", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-12", 
-      "document_number": "4", 
       "description": "Notice of Deficiency Summary of Schedules due 2/26/2010. Schedule A due 2/26/2010. Schedule B due 2/26/2010. Schedule D due 2/26/2010. Schedule E due 2/26/2010. Schedule F due 2/26/2010. Schedule G due 2/26/2010. Schedule H due 2/26/2010.Statement of Financial Affairs Due 2/26/2010.Declaration Concerning Debtors Schedules Due: 2/26/2010. [Incomplete Filings due by 2/26/2010]. (Rodriguez, Lorenzo) (Entered: 02/16/2010)", 
+      "document_number": "4", 
       "pacer_doc_id": "050011483308"
     }, 
     {
       "date_filed": "2010-02-12", 
-      "document_number": "3", 
       "description": "Declaration Under Penalty of Perjury to Accompany Petitions, Schedules and Statements Filed Electronically by Attorney Craig A. Pugatch Esq (Re: 1 Voluntary Petition (Chapter 11) filed by Debtor ABC Cutting Contractors, Inc.). (Pugatch, Craig) (Entered: 02/12/2010)", 
+      "document_number": "3", 
       "pacer_doc_id": "050011462025"
     }, 
     {
       "date_filed": "2010-02-12", 
-      "document_number": "2", 
       "description": "Corporate Ownership Statement Filed by Debtor ABC Cutting Contractors, Inc.. (Pugatch, Craig) (Entered: 02/12/2010)", 
+      "document_number": "2", 
       "pacer_doc_id": "050011461836"
     }, 
     {
       "date_filed": "2010-02-12", 
-      "document_number": "1", 
       "description": "Chapter 11 Voluntary Petition . [Fee Amount $1039] (Pugatch, Craig) (Entered: 02/12/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "050011461829"
     }
   ], 
   "docket_number": "10-13484", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "ABC Cutting Contractors, Inc.", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -41,22 +47,16 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "2001 N. Andrews Avenue\nPompano Beach, FL 33069-1420\nTax ID / EIN: 59-1521513", 
       "name": "ABC Cutting Contractors, Inc.", 
-      "extra_info": "2001 N. Andrews Avenue\nPompano Beach, FL 33069-1420\nTax ID / EIN: 59-1521513"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "51 S.W. 1st Ave.\nSuite 1204\nMiami, FL 33130\n(305) 536-7285", 
       "name": "Office of the US Trustee", 
-      "extra_info": "51 S.W. 1st Ave.\nSuite 1204\nMiami, FL 33130\n(305) 536-7285"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2010-02-12", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "John K. Olson", 
-  "court_id": "flsb", 
-  "cause": null, 
   "referred_to_str": null
 }

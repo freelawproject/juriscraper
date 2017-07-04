@@ -1,79 +1,85 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Whitney Rimel", 
+  "case_name": "Jerry Lee Arney", 
+  "cause": null, 
+  "court_id": "caeb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-01-14", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-01-14", 
-      "document_number": "1", 
       "description": "Chapter 13 Voluntary Petition Missing Document(s): Chapter 13 Plan; Document(s) due by 1/28/2010. (kesf) (Entered: 01/14/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-01-14", 
-      "document_number": "2", 
       "description": "Designation of Trustee (auto) (Entered: 01/14/2010)", 
+      "document_number": "2", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-01-14", 
-      "document_number": "3", 
       "description": "Notice of Incomplete Filing (kesf) (Entered: 01/14/2010)", 
+      "document_number": "3", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-01-14", 
-      "document_number": "4", 
       "description": "Master Address List (auto) (Entered: 01/14/2010)", 
+      "document_number": "4", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-01-14", 
-      "document_number": "5", 
       "description": "Statement of Social Security Number(s) (kesf) (Entered: 01/14/2010)", 
+      "document_number": "5", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-01-15", 
-      "document_number": "6", 
       "description": "Order Re: Chapter 13 Plan Payments, Adequate Protection Payments, and Employer Payment Advices (kesf) (Entered: 01/15/2010)", 
+      "document_number": "6", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-01-28", 
-      "document_number": "7", 
       "description": "Chapter 13 Plan (ltrf) (Entered: 01/28/2010)", 
+      "document_number": "7", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-01-29", 
-      "document_number": "8", 
       "description": "Copy of Chapter 13 Plan as transmitted to BNC for service. (Vinson, Cindy) (Entered: 01/29/2010)", 
+      "document_number": "8", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-01-29", 
-      "document_number": "9", 
       "description": "Notice of Commencement of Case Under Chapter 13, Meeting of Creditors and Deadlines as transmitted to BNC for service. Meeting of Creditors to be held on 2/25/2010 at 02:30 PM at Bakersfield Meeting Room. Proofs of Claim due by 5/26/2010. (Vinson, Cindy) (Entered: 01/29/2010)", 
+      "document_number": "9", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-01", 
-      "document_number": "10", 
       "description": "Certificate of Mailing of Chapter 13 Meeting Notice as provided by the Bankruptcy Noticing Center (Admin.) (Entered: 02/03/2010)", 
+      "document_number": "10", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-01", 
-      "document_number": "11", 
       "description": "Certificate of Mailing of Copy of Chapter 13 Plan as provided by the Bankruptcy Noticing Center (Admin.) (Entered: 02/03/2010)", 
+      "document_number": "11", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "10-10309", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Jerry Lee Arney", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -88,9 +94,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "225 Lowell Dr\nBakersfield, CA 93308\n661-399-2482\nSSN / ITIN: xxx-xx-9131", 
       "name": "Jerry Lee Arney", 
-      "extra_info": "225 Lowell Dr\nBakersfield, CA 93308\n661-399-2482\nSSN / ITIN: xxx-xx-9131"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -105,28 +111,22 @@
           "roles": []
         }
       ], 
-      "type": "Joint Debtor", 
+      "extra_info": "225 Lowell Dr\nBakersfield, CA 93308\n661-399-2482\nSSN / ITIN: xxx-xx-3277", 
       "name": "Susan Elaine Arney", 
-      "extra_info": "225 Lowell Dr\nBakersfield, CA 93308\n661-399-2482\nSSN / ITIN: xxx-xx-3277"
+      "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "PO Box 28950\nFresno, CA 93729-8950\n(559) 275-9512", 
       "name": "Michael H. Meyer", 
-      "extra_info": "PO Box 28950\nFresno, CA 93729-8950\n(559) 275-9512"
+      "type": "Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "United States Courthouse\n2500 Tulare Street, Room 1401\nFresno, CA 93721", 
       "name": "Office of the U.S. Trustee", 
-      "extra_info": "United States Courthouse\n2500 Tulare Street, Room 1401\nFresno, CA 93721"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2010-01-14", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Whitney Rimel", 
-  "court_id": "caeb", 
-  "cause": null, 
   "referred_to_str": null
 }

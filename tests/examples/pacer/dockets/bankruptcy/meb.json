@@ -1,37 +1,43 @@
 {
-  "demand": null, 
+  "assigned_to_str": "James B. Haines Jr.", 
+  "case_name": "CORNERSTONE HOME IMPROVEMENTS, INC.", 
+  "cause": null, 
+  "court_id": "meb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-02-10", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-13", 
-      "document_number": "4", 
       "description": "BNC Certificate of Mailing - Meeting of Creditors (related document(s): 3 Auto Assignment Meeting of Creditors Chapter 07 No Asset Business). Service Date 02/13/2010. (Admin.) (Entered: 02/14/2010)", 
+      "document_number": "4", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-11", 
-      "document_number": "3", 
       "description": "Meeting of Creditors and Notice of Appointment of Interim Trustee John C. Turnerwith 341(a)meeting to be held on 03/19/2010 at 10:00 AM at U.S. Trustee's Room 302, Portland. (Entered: 02/11/2010)", 
+      "document_number": "3", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-10", 
-      "document_number": "2", 
       "description": "Supplemental document Corporate Authorization Filed by CORNERSTONE HOME IMPROVEMENTS, INC. (related document(s): 1 Voluntary Petition (Chapter 7) filed by Debtor CORNERSTONE HOME IMPROVEMENTS, INC.). (Molleur, James) (Entered: 02/10/2010)", 
+      "document_number": "2", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-10", 
-      "document_number": "1", 
       "description": "Chapter 7 Voluntary Petition, Schedules A-J & Statement of Financial Affairs filed by James F. Molleur Esq. of Molleur Law Office on behalf of CORNERSTONE HOME IMPROVEMENTS, INC.. (Molleur, James) (Entered: 02/10/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "10-20171", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "CORNERSTONE HOME IMPROVEMENTS, INC.", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -41,28 +47,22 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "P.O. Box 31\nEast Baldwin, ME 04024\nTax ID / EIN: 64-0958794", 
       "name": "CORNERSTONE HOME IMPROVEMENTS, INC.", 
-      "extra_info": "P.O. Box 31\nEast Baldwin, ME 04024\nTax ID / EIN: 64-0958794"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "J.C. Turner & Associates\nP.O. Box 1897\nAuburn, ME 04211-1897\n(207)514-7371", 
       "name": "John C. Turner", 
-      "extra_info": "J.C. Turner & Associates\nP.O. Box 1897\nAuburn, ME 04211-1897\n(207)514-7371"
+      "type": "Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "537 Congress Street, Room 302\nPortland, ME 04101", 
       "name": "Office of U.S. Trustee", 
-      "extra_info": "537 Congress Street, Room 302\nPortland, ME 04101"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2010-02-10", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "James B. Haines Jr.", 
-  "court_id": "meb", 
-  "cause": null, 
   "referred_to_str": null
 }

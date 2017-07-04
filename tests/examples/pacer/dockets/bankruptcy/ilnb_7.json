@@ -1,37 +1,43 @@
 {
-  "demand": null, 
+  "assigned_to_str": "John H. Squires", 
+  "case_name": "Ronald S Mangayao", 
+  "cause": null, 
+  "court_id": "ilnb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2003-07-24", 
   "date_terminated": "2009-04-30", 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2009-03-03", 
-      "document_number": "52", 
       "description": "Trustee's Report of Deposit of Unclaimed Funds Filed by Trustee David E Grochocinski. (Grochocinski, David) (Entered: 03/03/2009)", 
+      "document_number": "52", 
       "pacer_doc_id": "066021066085"
     }, 
     {
       "date_filed": "2009-04-20", 
-      "document_number": "53", 
       "description": "Final Account and Application to Close Case and Discharge Trustee Filed by Trustee David E Grochocinski. (Attachments: # 1 Exhibit # 2 Exhibit # 3 Exhibit)(Grochocinski, David) (Entered: 04/20/2009)", 
+      "document_number": "53", 
       "pacer_doc_id": "066021691238"
     }, 
     {
       "date_filed": "2009-04-20", 
-      "document_number": "54", 
       "description": "The United States Trustee has reviewed the Chapter 7 Trustee's Final Account, Certification that the Estate has been Fully Administered and Application of Trustee to be Discharged. The United States Trustee does not object to the relief requested. Filed by U.S. Trustee William Neary. (Wolfe, Stephen) (Entered: 04/20/2009)", 
+      "document_number": "54", 
       "pacer_doc_id": null
     }, 
     {
       "date_filed": "2009-04-30", 
-      "document_number": "55", 
       "description": "Bankruptcy Case Closed and Trustee Discharged . (Rowe, Victoria) (Entered: 04/30/2009)", 
+      "document_number": "55", 
       "pacer_doc_id": null
     }
   ], 
   "docket_number": "03-30811", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Ronald S Mangayao", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -58,15 +64,15 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "138 Green Meadow\nGlendale, IL 60139\nSSN / ITIN: xxx-xx-8665", 
       "name": "Ronald S Mangayao", 
-      "extra_info": "138 Green Meadow\nGlendale, IL 60139\nSSN / ITIN: xxx-xx-8665"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "Cohen & Krol\n105 West Madison St Ste 1100\nChicago, IL 60602\n312-368-0300\nTERMINATED: 08/20/2003", 
       "name": "Gina B Krol, ESQ", 
-      "extra_info": "Cohen & Krol\n105 West Madison St Ste 1100\nChicago, IL 60602\n312-368-0300\nTERMINATED: 08/20/2003"
+      "type": "Trustee"
     }, 
     {
       "attorneys": [
@@ -81,22 +87,16 @@
           "roles": []
         }
       ], 
-      "type": "Trustee", 
+      "extra_info": "Grochocinski, Grochocinski & Lloyd, Ltd.\n1900 Ravinia Place\nOrland Park, IL 60462\n708-226-2700", 
       "name": "David E Grochocinski", 
-      "extra_info": "Grochocinski, Grochocinski & Lloyd, Ltd.\n1900 Ravinia Place\nOrland Park, IL 60462\n708-226-2700"
+      "type": "Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "", 
       "name": "William Neary", 
-      "extra_info": ""
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2003-07-24", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "John H. Squires", 
-  "court_id": "ilnb", 
-  "cause": null, 
   "referred_to_str": null
 }

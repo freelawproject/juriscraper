@@ -1,67 +1,73 @@
 {
-  "demand": null, 
+  "assigned_to_str": "Anita L. Shodeen", 
+  "case_name": "Shawn Patrick Corkrean", 
+  "cause": null, 
+  "court_id": "iasb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-02-05", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-05", 
-      "document_number": "1", 
       "description": "Chapter 7 Voluntary Petition - Case Upload filed by John M Miller on behalf of Shawn Patrick Corkrean, Shannon Gay Corkrean. (Miller, John) (Entered: 02/05/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-05", 
-      "document_number": "2", 
       "description": "Debtor Certificate of Budget and Credit Counseling Course filed by John M Miller on behalf of Shawn Patrick Corkrean, Shannon Gay Corkrean. (Miller, John) (Entered: 02/05/2010)", 
+      "document_number": "2", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-05", 
-      "document_number": "3", 
       "description": "Joint Debtor Certificate of Budget and Credit Counseling Course filed by John M Miller on behalf of Shawn Patrick Corkrean, Shannon Gay Corkrean. (Miller, John) (Entered: 02/05/2010)", 
+      "document_number": "3", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-05", 
-      "document_number": "4", 
       "description": "Chapter 7 Statement of Current Monthly Income and Means Test Calculation filed by John M Miller on behalf of Shawn Patrick Corkrean, Shannon Gay Corkrean. (Miller, John) (Entered: 02/05/2010)", 
+      "document_number": "4", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-05", 
-      "document_number": "5", 
       "description": "Declaration Re: No Employee Income Record Filed by Debtor Shawn Patrick Corkrean. (Miller, John) (Entered: 02/05/2010)", 
+      "document_number": "5", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-05", 
-      "document_number": "6", 
       "description": "Employee Income Record Filed by Joint Debtor Shannon Gay Corkrean. (Miller, John) (Entered: 02/05/2010)", 
+      "document_number": "6", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-05", 
-      "document_number": "7", 
       "description": "Meeting of Creditors - Chapter 7 Individual 341(a) meeting to be held on 03/04/2010 at 10:00 AM at Des Moines Room 783 Federal Building. Last day to oppose discharge or dischargeability is 05/03/2010. (asrs) (Entered: 02/05/2010)", 
+      "document_number": "7", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-07", 
-      "document_number": "8", 
       "description": "BNC Certificate of Mailing - Meeting of Creditors No. of Notices: 33. Service Date 02/07/2010. (Related Doc # 7 ) (Admin.) (Entered: 02/07/2010)", 
+      "document_number": "8", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-08", 
-      "document_number": "9", 
       "description": "Amended Schedules F Requiring Filing Fee; Fee Amount $ 26 Filed by Joint Debtor Shannon Gay Corkrean, Debtor Shawn Patrick Corkrean. (Miller, John) (Entered: 02/08/2010)", 
+      "document_number": "9", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "10-00400", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Shawn Patrick Corkrean", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -71,9 +77,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "719 N. 8th Ave\nWinterset, IA 50273\nSSN / ITIN: xxx-xx-5248", 
       "name": "Shawn Patrick Corkrean", 
-      "extra_info": "719 N. 8th Ave\nWinterset, IA 50273\nSSN / ITIN: xxx-xx-5248"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -83,28 +89,22 @@
           "roles": []
         }
       ], 
-      "type": "Joint Debtor", 
+      "extra_info": "719 N 9th Ave.\nWinterset, IA 50273\nSSN / ITIN: xxx-xx-7786", 
       "name": "Shannon Gay Corkrean", 
-      "extra_info": "719 N 9th Ave.\nWinterset, IA 50273\nSSN / ITIN: xxx-xx-7786"
+      "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "701 East Court Ave\nSuite A\nDes Moines, IA 50309-4941\n(515) 274-9161", 
       "name": "Dallas J Janssen", 
-      "extra_info": "701 East Court Ave\nSuite A\nDes Moines, IA 50309-4941\n(515) 274-9161"
+      "type": "Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "Federal Bldg, Room 793\n210 Walnut Street\nDes Moines, IA 50309\n(515) 284-4982", 
       "name": "United States Trustee", 
-      "extra_info": "Federal Bldg, Room 793\n210 Walnut Street\nDes Moines, IA 50309\n(515) 284-4982"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2010-02-05", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "Anita L. Shodeen", 
-  "court_id": "iasb", 
-  "cause": null, 
   "referred_to_str": null
 }

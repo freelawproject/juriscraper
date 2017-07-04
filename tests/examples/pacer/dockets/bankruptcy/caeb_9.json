@@ -1,61 +1,67 @@
 {
-  "demand": null, 
+  "assigned_to_str": "W. Richard Lee", 
+  "case_name": "Jose Reyes", 
+  "cause": null, 
+  "court_id": "caeb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-02-16", 
   "date_terminated": null, 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2010-02-16", 
-      "document_number": "1", 
       "description": "Chapter 13 Voluntary Petition Missing Document(s): Exhibit D w/Certificate for Debtor; Statement of Financial Affairs; Summary of schedules; Statistical Summary; Chapter 13 Plan;Schedule A - Real Property; Schedule B - Personal Property; Schedule C - Exempt Property; Schedule D - Secured Creditors; Schedule E - Unsecured Priority Creditor; Schedule F - Unsecured Nonpriority Creditors; Schedule G - Exec. Contracts & Unexpired Leases; Schedule H - Codebtors; Schedule I - Current Income of Individual; Schedule J - Current Expenditures; Means Test - Form 22C; Document(s) due by 3/2/2010. (kcnf) (Entered: 02/16/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "2", 
       "description": "Designation of Trustee (auto) (Entered: 02/16/2010)", 
+      "document_number": "2", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "3", 
       "description": "Notice of Incomplete Filing and Notice of Intent to Dismiss Case If Documents Are Not Timely Filed (kcnf) (Entered: 02/16/2010)", 
+      "document_number": "3", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "4", 
       "description": "Master Address List (auto) (Entered: 02/16/2010)", 
+      "document_number": "4", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "5", 
       "description": "Statement of Social Security Number(s) (kcnf) (Entered: 02/16/2010)", 
+      "document_number": "5", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "6", 
       "description": "Motion/Application to Pay Filing Fee in Installments (auto) (Entered: 02/16/2010)", 
+      "document_number": "6", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "7", 
       "description": "Order granting 6 Motion/Application to Pay Filing Fees in Installments Next Installment Payment due by 3/16/2010. Second Installment Payment due by 4/16/2010. Third Installment Payment due by 5/17/2010. Final Installment Payment due by 6/16/2010. (kcnf) (Entered: 02/16/2010)", 
+      "document_number": "7", 
       "pacer_doc_id": "show_doc.pl"
     }, 
     {
       "date_filed": "2010-02-16", 
-      "document_number": "8", 
       "description": "Order Re: Chapter 13 Plan Payments, Adequate Protection Payments, and Employer Payment Advices (kcnf) (Entered: 02/16/2010)", 
+      "document_number": "8", 
       "pacer_doc_id": "show_doc.pl"
     }
   ], 
   "docket_number": "10-11467", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Jose Reyes", 
+  "jury_demand": null, 
+  "nature_of_suit": null, 
   "parties": [
     {
       "attorneys": [
@@ -70,28 +76,22 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "20688 Road 31\nMadera, CA 93638\n559-474-2510\nSSN / ITIN: xxx-xx-3067", 
       "name": "Jose Reyes", 
-      "extra_info": "20688 Road 31\nMadera, CA 93638\n559-474-2510\nSSN / ITIN: xxx-xx-3067"
+      "type": "Debtor"
     }, 
     {
       "attorneys": [], 
-      "type": "Trustee", 
+      "extra_info": "PO Box 28950\nFresno, CA 93729-8950\n(559) 275-9512", 
       "name": "Michael H. Meyer", 
-      "extra_info": "PO Box 28950\nFresno, CA 93729-8950\n(559) 275-9512"
+      "type": "Trustee"
     }, 
     {
       "attorneys": [], 
-      "type": "U.S. Trustee", 
+      "extra_info": "United States Courthouse\n2500 Tulare Street, Room 1401\nFresno, CA 93721", 
       "name": "Office of the U.S. Trustee", 
-      "extra_info": "United States Courthouse\n2500 Tulare Street, Room 1401\nFresno, CA 93721"
+      "type": "U.S. Trustee"
     }
   ], 
-  "date_filed": "2010-02-16", 
-  "nature_of_suit": null, 
-  "jury_demand": null, 
-  "assigned_to_str": "W. Richard Lee", 
-  "court_id": "caeb", 
-  "cause": null, 
   "referred_to_str": null
 }

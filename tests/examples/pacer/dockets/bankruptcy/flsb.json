@@ -1,31 +1,37 @@
 {
-  "demand": null, 
+  "assigned_to_str": "John K. Olson", 
+  "case_name": "Peter D Letterese - Adversary Proceeding", 
+  "cause": null, 
+  "court_id": "flsb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-10-22", 
   "date_terminated": "2010-05-17", 
+  "demand": null, 
   "docket_entries": [
     {
       "date_filed": "2009-12-11", 
-      "document_number": "13", 
       "description": "Initial Disclosure per FRCP 26 Required by the Order Setting Filing and Disclosure Requirements Filed by Plaintiffs Bridge Publications, Inc., Church of Scientology International . **This Replaces DE#12** (Shafron, Judy) (Entered: 12/14/2009)", 
+      "document_number": "13", 
       "pacer_doc_id": "050010759404"
     }, 
     {
       "date_filed": "2009-12-14", 
-      "document_number": "14", 
       "description": "Notice to Filer of Apparent Filing Deficiency: Incorrect Event Used. THE COURT HAS CORRECTED THIS ENTRY - NO FURTHER ACTION IS REQUIRED. In the Future, Use: Initial Disclosure (Rule 26) (Re: 12 Disclosure Statement Filed by Plaintiffs Bridge Publications, Inc., Church of Scientology International) (Shafron, Judy) (Entered: 12/14/2009)", 
+      "document_number": "14", 
       "pacer_doc_id": null
     }, 
     {
       "date_filed": "2010-01-13", 
-      "document_number": "15", 
       "description": "Affidavit of Virginia Dueppe Filed by Plaintiffs Bridge Publications, Inc., Church of Scientology International (Re: 4 Summons Service Executed filed by Plaintiff Bridge Publications, Inc., Plaintiff Church of Scientology International). (Perlman, Alan) (Entered: 01/13/2010)", 
+      "document_number": "15", 
       "pacer_doc_id": "050011076299"
     }
   ], 
   "docket_number": "09-02199", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Peter D Letterese - Adversary Proceeding", 
+  "jury_demand": null, 
+  "nature_of_suit": "41 Objection / revocation of discharge - 727(c),(d),(e); 68 Dischargeability - 523(a)(6), willful and malicious injury", 
   "parties": [
     {
       "attorneys": [
@@ -37,9 +43,9 @@
           ]
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "c/o Alan J Perlman\n350 E. Las Olas Blvd., Suite 1700\nFt. Lauderdale, FL 33301\n(954) 763-1200", 
       "name": "Church of Scientology International", 
-      "extra_info": "c/o Alan J Perlman\n350 E. Las Olas Blvd., Suite 1700\nFt. Lauderdale, FL 33301\n(954) 763-1200"
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -51,9 +57,9 @@
           ]
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "c/o Alan J Perlman\n350 E. Las Olas Blvd., Suite 1700\nFt. Lauderdale, FL 33301\n(954) 763-1200", 
       "name": "Bridge Publications, Inc.", 
-      "extra_info": "c/o Alan J Perlman\n350 E. Las Olas Blvd., Suite 1700\nFt. Lauderdale, FL 33301\n(954) 763-1200"
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -70,16 +76,10 @@
           ]
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "14581 Old Sheridan Street\nSouthwest  Ranches, Fl 33331\nSSN / ITIN: xxx-xx-5957", 
       "name": "Peter D Letterese", 
-      "extra_info": "14581 Old Sheridan Street\nSouthwest  Ranches, Fl 33331\nSSN / ITIN: xxx-xx-5957"
+      "type": "Defendant"
     }
   ], 
-  "date_filed": "2009-10-22", 
-  "nature_of_suit": "41 Objection / revocation of discharge - 727(c),(d),(e); 68 Dischargeability - 523(a)(6), willful and malicious injury", 
-  "jury_demand": null, 
-  "assigned_to_str": "John K. Olson", 
-  "court_id": "flsb", 
-  "cause": null, 
   "referred_to_str": null
 }

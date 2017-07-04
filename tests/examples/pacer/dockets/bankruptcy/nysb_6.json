@@ -1,19 +1,25 @@
 {
-  "demand": "0", 
+  "assigned_to_str": "Shelley C. Chapman", 
+  "case_name": "Lehman Brothers Holdings Inc.", 
+  "cause": null, 
+  "court_id": "nysb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2009-02-03", 
   "date_terminated": null, 
+  "demand": "0", 
   "docket_entries": [
     {
       "date_filed": "2010-02-12", 
-      "document_number": "49", 
       "description": "Statement Notice of Trustee's Intent to Pay Trustee Fees, Costs, Expenses and Attorneys' Fees filed by Joseph Froehlich on behalf of Wells Fargo Bank, N.A., Trustee. (Froehlich, Joseph) (Entered: 02/12/2010)", 
+      "document_number": "49", 
       "pacer_doc_id": "12609025124"
     }
   ], 
   "docket_number": "09-01032", 
-  "date_discharged": null, 
-  "date_converted": null, 
   "jurisdiction": null, 
-  "case_name": "Lehman Brothers Holdings Inc.", 
+  "jury_demand": null, 
+  "nature_of_suit": "72 Injunctive relief - other; 91 Declaratory judgment", 
   "parties": [
     {
       "attorneys": [
@@ -23,9 +29,9 @@
           "roles": []
         }
       ], 
-      "type": "Debtor", 
+      "extra_info": "", 
       "name": "Lehman Brothers Holdings Inc.", 
-      "extra_info": ""
+      "type": "Debtor"
     }, 
     {
       "attorneys": [
@@ -57,9 +63,9 @@
           "roles": []
         }
       ], 
-      "type": "Plaintiff", 
+      "extra_info": "745 Seventh Avenue\nNew York, NY 10019\nTax ID / EIN: 11-2751029", 
       "name": "Lehman Brothers Special Financing Inc.", 
-      "extra_info": "745 Seventh Avenue\nNew York, NY 10019\nTax ID / EIN: 11-2751029"
+      "type": "Plaintiff"
     }, 
     {
       "attorneys": [
@@ -69,9 +75,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Ballyrock ABS CDO 2007-1 Limited", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -81,9 +87,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Wells Fargo Bank, N.A., Trustee", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -93,9 +99,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "President and Fellows of Harvard College", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -105,9 +111,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "The Bank of New York Mellon Corporation", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -117,9 +123,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Revelstoke CDO I Limited Canadian Securitization Group", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -134,9 +140,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Axon Financial Funding Ltd.,", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -151,9 +157,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Brigantine High Grade Funding CDO Ltd.", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -168,9 +174,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Avebury Finance CDO p.l.c.", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -185,9 +191,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Lloyds Dollar Trust Funds", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -202,9 +208,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Lloyds MFD", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -214,9 +220,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Magnetar Constellation Master Fund Limited", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -226,9 +232,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Magnetar Constellation Master Fund II Limited", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -238,9 +244,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Magnetar Constellation Master Fund III Limited", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -255,9 +261,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Metropolitan Life Insurance Company", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -272,9 +278,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Longshore CDO Funding 2006-1, Ltd", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -289,9 +295,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Longshore CDO Funding 2007-3, Ltd", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -306,9 +312,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Sagittarius CDO I, Deutsche Bank Securities, Inc.", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -323,9 +329,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Class S Noteholder recipient of proceeds of Class S Notes CUSIP 05874KAB3 in the approximate amount of $102,576.57", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -340,9 +346,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Class A-1b Noteholder recipient of proceeds of Class A-1b Notes CUSIP 05874KAG2 in the approximate amount of $31,736.05", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -357,9 +363,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Class S Noteholder recipient of proceeds of Class S Notes CUSIP 05874KAB3 in the approximate amount of $7,778,171.09", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -374,9 +380,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Class B Noteholder recipient of proceeds of Class B Notes CUSIP 05874KAD9 in the approximate amount of $108,317.33", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -391,9 +397,9 @@
           "roles": []
         }
       ], 
-      "type": "Defendant", 
+      "extra_info": "", 
       "name": "Class A-1b Noteholder recipient of proceeds of Class A-1B Notes CUSIP 05874KAG2 in the approximate amount of $3,500,000.00", 
-      "extra_info": ""
+      "type": "Defendant"
     }, 
     {
       "attorneys": [
@@ -418,9 +424,9 @@
           "roles": []
         }
       ], 
-      "type": "Counter-Defendant", 
+      "extra_info": "c/o Sidley Austin LLP\n787 Seventh Avenue\nNew York, NY 10019\n212 839-5300", 
       "name": "Blackrock Mortgage Investors Master Fund, L.P.", 
-      "extra_info": "c/o Sidley Austin LLP\n787 Seventh Avenue\nNew York, NY 10019\n212 839-5300"
+      "type": "Counter-Defendant"
     }, 
     {
       "attorneys": [
@@ -435,9 +441,9 @@
           "roles": []
         }
       ], 
-      "type": "Counter-Defendant", 
+      "extra_info": "c/o Sidley Austin LLP\n787 Seventh Avenue\nNew York, NY 10019\n212 839-5300", 
       "name": "Long Hill 2006-1, Ltd.", 
-      "extra_info": "c/o Sidley Austin LLP\n787 Seventh Avenue\nNew York, NY 10019\n212 839-5300"
+      "type": "Counter-Defendant"
     }, 
     {
       "attorneys": [
@@ -452,40 +458,34 @@
           "roles": []
         }
       ], 
-      "type": "Counter-Claimant", 
+      "extra_info": "", 
       "name": "Wells Fargo Bank, N.A., Trustee", 
-      "extra_info": ""
+      "type": "Counter-Claimant"
     }, 
     {
       "attorneys": [], 
-      "type": "Counter-Defendant", 
+      "extra_info": "", 
       "name": "John Does 1 through 100, as owners of beneficial interests in the Senior Notes", 
-      "extra_info": ""
+      "type": "Counter-Defendant"
     }, 
     {
       "attorneys": [], 
-      "type": "Counter-Defendant", 
+      "extra_info": "55 Water Street\nNew York, NY 10042", 
       "name": "Cede & Co.", 
-      "extra_info": "55 Water Street\nNew York, NY 10042"
+      "type": "Counter-Defendant"
     }, 
     {
       "attorneys": [], 
-      "type": "Counter-Defendant", 
+      "extra_info": "55 Water Street\nNew York, NY 10042", 
       "name": "Ballyrock ABS CDO 2007-1 Limited", 
-      "extra_info": "55 Water Street\nNew York, NY 10042"
+      "type": "Counter-Defendant"
     }, 
     {
       "attorneys": [], 
-      "type": "Counter-Defendant", 
+      "extra_info": "55 Water Street\nNew York, NY 10042\nTax ID / EIN: 11-2751029", 
       "name": "Lehman Brothers Special Financing Inc.", 
-      "extra_info": "55 Water Street\nNew York, NY 10042\nTax ID / EIN: 11-2751029"
+      "type": "Counter-Defendant"
     }
   ], 
-  "date_filed": "2009-02-03", 
-  "nature_of_suit": "72 Injunctive relief - other; 91 Declaratory judgment", 
-  "jury_demand": null, 
-  "assigned_to_str": "Shelley C. Chapman", 
-  "court_id": "nysb", 
-  "cause": null, 
   "referred_to_str": null
 }
