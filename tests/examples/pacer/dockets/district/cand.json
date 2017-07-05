@@ -1,60 +1,60 @@
 {
-  "assigned_to_str": "William Alsup", 
-  "case_name": "Balbo v. Tilton et al", 
-  "cause": "28:2254 Petition for Writ of Habeas Corpus (State)", 
-  "court_id": "cand", 
-  "date_converted": null, 
-  "date_discharged": null, 
-  "date_filed": "2008-01-11", 
-  "date_terminated": "2008-01-18", 
-  "demand": null, 
+  "assigned_to_str": "William Alsup",
+  "case_name": "Balbo v. Tilton",
+  "cause": "28:2254 Petition for Writ of Habeas Corpus (State)",
+  "court_id": "cand",
+  "date_converted": null,
+  "date_discharged": null,
+  "date_filed": "2008-01-11",
+  "date_terminated": "2008-01-18",
+  "demand": null,
   "docket_entries": [
     {
-      "date_filed": "2008-01-11", 
-      "description": "PETITION for Writ of Habeas Corpus (ifpp). Filed byJohn Michael Balbo. (sis, COURT STAFF) (Filed on 1/11/2008) (Entered: 01/14/2008)", 
-      "document_number": "1", 
+      "date_filed": "2008-01-11",
+      "description": "PETITION for Writ of Habeas Corpus (ifpp). Filed byJohn Michael Balbo. (sis, COURT STAFF) (Filed on 1/11/2008) (Entered: 01/14/2008)",
+      "document_number": "1",
       "pacer_doc_id": null
-    }, 
+    },
     {
-      "date_filed": "2008-01-11", 
-      "description": "CLERK'S NOTICE re completion of In Forma Pauperis affidavit or payment of filing fee due within 30 days. (sis, COURT STAFF) (Filed on 1/11/2008) (Entered: 01/14/2008)", 
-      "document_number": "2", 
+      "date_filed": "2008-01-11",
+      "description": "CLERK'S NOTICE re completion of In Forma Pauperis affidavit or payment of filing fee due within 30 days. (sis, COURT STAFF) (Filed on 1/11/2008) (Entered: 01/14/2008)",
+      "document_number": "2",
       "pacer_doc_id": null
-    }, 
+    },
     {
-      "date_filed": "2008-01-18", 
-      "description": "ORDER OF TRANSFER. Signed by Judge William Alsup on 1/17/08. (Attachments: # 1 Certificate of Service)(dt, COURT STAFF) (Filed on 1/18/2008) (Entered: 01/18/2008)", 
-      "document_number": "3", 
+      "date_filed": "2008-01-18",
+      "description": "ORDER OF TRANSFER. Signed by Judge William Alsup on 1/17/08. (Attachments: # 1 Certificate of Service)(dt, COURT STAFF) (Filed on 1/18/2008) (Entered: 01/18/2008)",
+      "document_number": "3",
       "pacer_doc_id": "03504231050"
     }
-  ], 
-  "docket_number": "3:08-cv-00159", 
-  "jurisdiction": "Federal Question", 
-  "jury_demand": "None", 
-  "nature_of_suit": "530 Habeas Corpus (General)", 
+  ],
+  "docket_number": "3:08-cv-00159",
+  "jurisdiction": "Federal Question",
+  "jury_demand": "None",
+  "nature_of_suit": "530 Habeas Corpus (General)",
   "parties": [
     {
       "attorneys": [
         {
-          "contact": "#P-65407/ E-1-143-Low\nCalifornia Substance Abuse & Treatment Facility State Prison\nPO Box 5242\nCorcoran, CA 93212-5242\nPRO SE\n", 
-          "name": "John Michael Balbo", 
+          "contact": "#P-65407/ E-1-143-Low\nCalifornia Substance Abuse & Treatment Facility State Prison\nPO Box 5242\nCorcoran, CA 93212-5242\nPRO SE\n",
+          "name": "John Michael Balbo",
           "roles": []
         }
-      ], 
-      "extra_info": "", 
-      "name": "John Michael Balbo", 
+      ],
+      "extra_info": "",
+      "name": "John Michael Balbo",
       "type": "Petitioner"
-    }, 
+    },
     {
-      "extra_info": "Secretary CDCR", 
-      "name": "James E. Tilton", 
+      "extra_info": "Secretary CDCR",
+      "name": "James E. Tilton",
       "type": "Defendant"
-    }, 
+    },
     {
-      "extra_info": "", 
-      "name": "Warden  Ken Clark", 
+      "extra_info": "",
+      "name": "Warden  Ken Clark",
       "type": "Defendant"
     }
-  ], 
+  ],
   "referred_to_str": null
 }

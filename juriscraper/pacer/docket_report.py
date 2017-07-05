@@ -9,7 +9,7 @@ from ..lib.html_utils import set_response_encoding, clean_html, \
     get_html5_parsed_text, fix_links_in_lxml_tree
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import convert_date_string, force_unicode
+from ..lib.string_utils import convert_date_string, force_unicode, harmonize
 from ..lib.utils import previous_and_next
 
 logger = make_default_logger()
@@ -593,7 +593,6 @@ class DocketReport(object):
 
             if self.is_adversary_proceeding:
                 case_name += u' - Adversary Proceeding'
-            return case_name
         else:
             matches = []
             # Skip the last value, it's a concat of all previous values and
@@ -606,9 +605,11 @@ class DocketReport(object):
                 if in_re_m:
                     matches.append(in_re_m)
             if len(matches) == 1:
-                return matches[0].group(1)
+                case_name = matches[0].group(1)
             else:
-                return u"Unknown Case Title"
+                case_name = u"Unknown Case Title"
+
+        return harmonize(case_name)
 
     def _get_docket_number(self):
         if self.is_bankruptcy:
