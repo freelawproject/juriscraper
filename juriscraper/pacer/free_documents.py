@@ -1,3 +1,7 @@
+# coding=utf-8
+import re
+from six.moves.urllib.parse import urljoin
+
 from ..lib.date_utils import make_date_range_tuples
 from ..lib.html_utils import (
     set_response_encoding, clean_html, fix_links_in_lxml_tree,
@@ -19,6 +23,8 @@ class FreeOpinionReport(object):
     EXCLUDED_COURT_IDS = ['casb', 'ganb', 'innb', 'mieb', 'miwb', 'nmib', 'nvb',
                           'ohsb', 'tnwb', 'vib']
     VALID_SORT_PARAMS = ('date_filed', 'case_number')
+
+    redirect_regex = re.compile('window\.\s*?location\s*=\s*"(.*)"\s*;')
 
     def __init__(self, court_id, pacer_session):
         self.court_id = court_id
@@ -117,10 +123,22 @@ class FreeOpinionReport(object):
         logger.info("GETting PDF at URL: %s with params: %s" % (url, data))
         r = self.session.get(url, params=data, timeout=timeout)
 
+        if u'This document is not available' in r.text:
+            logger.error("Document not available in case: %s at %s" %
+                         (url, pacer_case_id))
+            return None
+
+        # Some pacer sites use window.location in their JS, so we have to look
+        # for that. See: oknd, 13-cv-00357-JED-FHM, doc #24. But, be warned, you
+        # can only catch the redirection with JS off.
+        m = self.redirect_regex.search(r.text)
+        if m is not None:
+            r = self.session.get(urljoin(url, m.group(1)))
+            r.raise_for_status()
+
         # The request above sometimes generates an HTML page with an iframe
-        # containing the PDF, and other times returns the PDF. Our task is thus
-        # to either get the src of the iframe and download the PDF or just
-        # return the pdf.
+        # containing the PDF, and other times returns the PDF directly. ∴ either
+        # get the src of the iframe and download the PDF or just return the pdf.
         r.raise_for_status()
         if is_pdf(r):
             logger.info('Got PDF binary data for case %s at: %s' % (url, data))

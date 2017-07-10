@@ -3,7 +3,7 @@ import os
 from pip.req import parse_requirements
 from setuptools import setup, find_packages
 
-VERSION = "1.5.11"
+VERSION = "1.5.12"
 AUTHOR = "Mike Lissner"
 EMAIL = "info@free.law"
 HERE = os.path.abspath(os.path.dirname(__file__))
