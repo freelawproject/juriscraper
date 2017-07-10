@@ -15,7 +15,7 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.isc.idaho.gov/appeals-court/coaunpublished'
-        self.base_path = '//div[@id = "block-system-main"]//div[contains(concat(" ", @class, " "), " field-items ")]//li'
+        self.base_path = '//div[@id = "block-system-main"]//div[contains(concat(" ", @class, " "), " field-items ")]//li[contains(./a/@href, ".pdf")]'
         self.sub_paths = [
             'a[./text()][1]',
             'span/a[./text()][1]',
