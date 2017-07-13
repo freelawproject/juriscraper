@@ -3,7 +3,7 @@ import os
 from pip.req import parse_requirements
 from setuptools import setup, find_packages
 
-VERSION = "1.6"
+VERSION = "1.6.1"
 AUTHOR = "Mike Lissner"
 EMAIL = "info@free.law"
 HERE = os.path.abspath(os.path.dirname(__file__))
@@ -34,7 +34,7 @@ setup(
     maintainer_email=EMAIL,
     keywords=["scraping", "legal", "pacer"],
     long_description=read("README.rst"),
-    packages=find_packages(),
+    packages=find_packages(exclude=['tests*']),
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
