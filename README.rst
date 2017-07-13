@@ -225,29 +225,19 @@ Version History
 -  1.2.* - Continued improvements.
 -  1.3.* - Adds support for scraping some parts of PACER.
 -  1.4.* - Python 3 compatibility.
+-  1.5.* - Adds support for querying and parsing PACER dockets.
 
 **Current**
 
--  1.5.* - Adds support for querying and parsing PACER dockets.
+-  1.6.* - Adds automatic relogin code to PACER sessions, with reorganization of old login APIs.
 
-**Future Roadmap**
+**Immediate Future Goals**
 
--  1.6 - Support opinions from for all intermediate appellate state
-   courts
--  1.7 - Support opinions from for all courts of U.S. territories (Guam,
-   American Samoa, etc.)
--  2.0 - Support opinions from for all federal district courts with
-   non-PACER opinion listings
--  2.5 - Support opinions from for all federal district courts with
-   PACER written opinion reports (+JPML)
--  2.6 - Support opinions from for all federal district bankruptcy
-   courts
--  3.0 - For every court above where a backscraper is possible, it is
-   implemented.
-
-**Beyond** - Support video, additional oral argument audio, and
-transcripts everywhere available - Add other countries, starting with
-courts issuing opinions in English.
+-  Support opinions from for all intermediate appellate state courts
+-  Support opinions from for all courts of U.S. territories (Guam, American Samoa, etc.)
+-  Support opinions from for all federal district courts with non-PACER opinion listings
+-  For every court above where a backscraper is possible, it is implemented.
+-  Support video, additional oral argument audio, and transcripts everywhere available
 
 
 Deployment
