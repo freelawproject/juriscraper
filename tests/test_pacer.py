@@ -17,7 +17,7 @@ from juriscraper.lib.exceptions import PacerLoginException, SlownessException
 from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.pacer import DocketReport, FreeOpinionReport
-from juriscraper.pacer.http import login, PacerSession
+from juriscraper.pacer.http import PacerSession
 from juriscraper.pacer.utils import (
     get_courts_from_json, get_court_id_from_url,
     get_pacer_case_id_from_docket_url, get_pacer_doc_id_from_doc1_url,
@@ -44,7 +44,8 @@ class PacerSessionTest(unittest.TestCase):
     """
 
     def setUp(self):
-        self.session = PacerSession()
+        self.session = PacerSession(username=PACER_USERNAME,
+                                    password=PACER_PASSWORD)
 
     def test_data_transformation(self):
         """
@@ -65,7 +66,7 @@ class PacerSessionTest(unittest.TestCase):
         """
         data = {'name': ('filename', 'junk')}
 
-        self.session.post('https://free.law', files=data)
+        self.session.post('https://free.law', files=data, auto_login=False)
 
         self.assertTrue(mock_post.called,
                         'request.Session.post should be called')
@@ -83,7 +84,7 @@ class PacerSessionTest(unittest.TestCase):
         data = {'name': 'dave', 'age': 33}
         expected = {'name': (None, 'dave'), 'age': (None, 33)}
 
-        self.session.post('https://free.law', data=data)
+        self.session.post('https://free.law', data=data, auto_login=False)
 
         self.assertTrue(mock_post.called,
                         'request.Session.post should be called')
@@ -94,7 +95,7 @@ class PacerSessionTest(unittest.TestCase):
 
     @mock.patch('juriscraper.pacer.http.requests.Session.post')
     def test_sets_default_timeout(self, mock_post):
-        self.session.post('https://free.law', data={})
+        self.session.post('https://free.law', data={}, auto_login=False)
 
         self.assertTrue(mock_post.called,
                         'request.Session.post should be called')
@@ -102,6 +103,23 @@ class PacerSessionTest(unittest.TestCase):
                       'we should add a default timeout automatically')
         self.assertEqual(300, mock_post.call_args[1]['timeout'],
                          'default should be 300')
+
+    @mock.patch('juriscraper.pacer.http.PacerSession.login')
+    def test_auto_login(self, mock_login):
+        """Do we automatically log in if needed?"""
+        court_id = 'ksd'
+        pacer_doc_id = '07902639735'
+        url = make_doc1_url(court_id, pacer_doc_id, True)
+        pacer_case_id = '81531'
+        # This triggers and auto-login because we aren't logged in yet.
+        self.session.username = PACER_USERNAME
+        self.session.password = PACER_PASSWORD
+        r = self.session.get(url, params={
+            'case_id': pacer_case_id,
+            'got_receipt': '1',
+        }, allow_redirects=True)
+        self.assertTrue(mock_login.called,
+                        'PacerSession.login() should be called.')
 
 
 class PacerAuthTest(unittest.TestCase):
@@ -111,9 +129,11 @@ class PacerAuthTest(unittest.TestCase):
     def test_logging_into_pacer(self):
         court_id = 'ca1'
         try:
-            pacer_session = login(court_id, PACER_USERNAME, PACER_PASSWORD)
-            self.assertIsNotNone(pacer_session)
-            self.assertIsNotNone(pacer_session.cookies.get(
+            session = PacerSession(username=PACER_USERNAME,
+                                   password=PACER_PASSWORD)
+            session.login()
+            self.assertIsNotNone(session)
+            self.assertIsNotNone(session.cookies.get(
                 'PacerSession', None, domain='.uscourts.gov', path='/'))
 
         except PacerLoginException:
@@ -121,7 +141,9 @@ class PacerAuthTest(unittest.TestCase):
 
     def test_logging_into_test_site(self):
         try:
-            pacer_session = login('psc', 'tr1234', 'Pass!234')
+            pacer_session = PacerSession(username='tr1234',
+                                         password='Pass!234')
+            pacer_session.login_training()
             self.assertIsNotNone(pacer_session)
             self.assertIsNotNone(pacer_session.cookies.get(
                 'PacerSession', None, domain='.uscourts.gov', path='/'))
@@ -139,12 +161,14 @@ class PacerFreeOpinionsTest(unittest.TestCase):
 
         if PACER_USERNAME and PACER_PASSWORD:
             # CAND chosen at random
-            pacer_session = login('cand', PACER_USERNAME, PACER_PASSWORD)
+            pacer_session = PacerSession(username=PACER_USERNAME,
+                                         password=PACER_PASSWORD)
 
         with open(os.path.join(JURISCRAPER_ROOT, 'pacer/courts.json')) as j:
             cls.courts = get_courts_from_json(json.load(j))
 
-        with open(os.path.join(TESTS_ROOT, 'fixtures/valid_free_opinion_dates.json')) as j:
+        path = os.path.join(TESTS_ROOT, 'fixtures/valid_free_opinion_dates.json')
+        with open(path) as j:
             cls.valid_dates = json.load(j)
 
         cls.reports = {}
@@ -302,9 +326,10 @@ class PacerDocketReportTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        pacer_session = login('psc', 'tr1234', 'Pass!234')
+        pacer_session = PacerSession(username='tr1234',
+                                     password='Pass!234')
         cls.report = DocketReport('psc', pacer_session)
-        cls.pacer_case_id = '62866'
+        cls.pacer_case_id = '62866'  # 1:07-cr-00001-RJA-HKS USA v. Green
 
     @staticmethod
     def _count_rows(html):
