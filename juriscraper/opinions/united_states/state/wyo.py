@@ -17,7 +17,7 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.base_url = 'http://www.courts.state.wy.us'
-        self.url = self.base_url + '/Supreme/OpinionsVM?StartDate=1%2F1%2F' + str(date.today().year)
+        self.url = 'http://services.courts.state.wy.us/Supreme/OpinionsVM?StartDate=1%2F1%2F' + str(date.today().year)
         self.court_id = self.__module__
 
     def _get_case_names(self):
@@ -42,8 +42,8 @@ class Site(OpinionSite):
         for record in self.html:
             match = date_re.match(record['date_heard'])
             if match:
-                timestamp = int(match.group(1)) / 1000
-                case_dates.append(datetime.fromtimestamp(timestamp).date())
+               timestamp = int(match.group(1)) / 1000
+               case_dates.append(datetime.fromtimestamp(timestamp).date())
         return case_dates
 
     def _get_docket_numbers(self):
