@@ -111,7 +111,9 @@ class FreeOpinionReport(object):
     def download_pdf(self, pacer_case_id, pacer_document_number):
         """Download a PDF from PACER.
 
-        Note that this doesn't support attachments yet.
+        Note that this doesn't support attachments yet. If a document is 
+        unavailable (sealed, gone, etc.), returns None. Else, returns 
+        requests.Response object containing item.
         """
         timeout = (60, 300)
         url = make_doc1_url(self.court_id, pacer_document_number, True)

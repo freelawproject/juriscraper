@@ -238,18 +238,28 @@ class PacerFreeOpinionsTest(unittest.TestCase):
 
     @SKIP_IF_NO_PACER_LOGIN
     @vcr.use_cassette(record_mode='new_episodes')
-    def test_download_iframed_report(self):
+    def test_download_simple_pdf(self):
+        """Can we download a PDF document returned directly?"""
+        report = self.reports['alnb']
+        r = report.download_pdf('602431', '018129511556')
+        self.assertEqual(r.headers['Content-Type'], 'application/pdf')
+
+    @SKIP_IF_NO_PACER_LOGIN
+    @vcr.use_cassette(record_mode='new_episodes')
+    def test_download_iframed_pdf(self):
         """Can we download a PDF document returned in IFrame?"""
         report = self.reports['vib']
         r = report.download_pdf('1507', '1921141093')
         self.assertEqual(r.headers['Content-Type'], 'application/pdf')
 
     @SKIP_IF_NO_PACER_LOGIN
-    def test_download_direct_report(self):
-        """Can we download a PDF document returned directly?"""
-        report = self.reports['alnb']
-        r = report.download_pdf('602431', '018129511556')
-        self.assertEqual(r.headers['Content-Type'], 'application/pdf')
+    @vcr.use_cassette(record_mode='new_episodes')
+    def test_download_unavailable_pdf(self):
+        """Do we throw an error if the item is unavailable?"""
+        # 5:11-cr-40057-JAR, document 3
+        report = self.reports['ksd']
+        r = report.download_pdf('81531', '07902639735')
+        self.assertIsNone(r)
 
     @SKIP_IF_NO_PACER_LOGIN
     def test_query_can_get_multiple_results(self):
