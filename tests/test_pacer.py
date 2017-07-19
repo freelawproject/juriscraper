@@ -528,8 +528,8 @@ class PacerUtilTest(unittest.TestCase):
 
     def test_get_pacer_document_number_from_doc1_url(self):
         qa_pairs = (
-            ('https://ecf.almd.uscourts.gov/doc1/01712427473', '01712427473'),
-            ('/doc1/01712427473', '01712427473'),
+            ('https://ecf.almd.uscourts.gov/doc1/01712427473', '01702427473'),
+            ('/doc1/01712427473', '01702427473'),
             ('https://ecf.akb.uscourts.gov/doc1/02201247000?caseid=7738&de_seq_num=723284&dm_id=1204742&doc_num=8805&pdf_header=0', '02201247000'),
         )
         for q, a in qa_pairs:

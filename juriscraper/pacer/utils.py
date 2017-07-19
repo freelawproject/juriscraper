@@ -41,16 +41,19 @@ def get_pacer_case_id_from_docket_url(url):
 
 
 def get_pacer_doc_id_from_doc1_url(url):
-    """Extract the pacer document ID from the doc1 URL.
+    """Extract the pacer document ID from the doc1 URL. Coerce the fourth digit 
+    to zero.
 
     In:  https://ecf.almd.uscourts.gov/doc1/01712427473
-    Out: 01712427473
+    Out: 01702427473
     In:  /doc1/01712427473
-    Out: 01712427473
+    Out: 01702427473
     
     See tests for more examples.
     """
-    return url.rsplit('/', 1)[1].split('?')[0]
+    url = url.rsplit('/', 1)[1].split('?')[0]
+    url = url[:3] + "0" + url[4:]
+    return url
 
 
 def reverse_goDLS_function(s):

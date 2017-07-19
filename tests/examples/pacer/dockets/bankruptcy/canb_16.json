@@ -1,61 +1,61 @@
 {
-  "assigned_to_str": "Dennis Montali", 
-  "case_name": "Ana C. Reyes", 
-  "cause": null, 
-  "court_id": "canb", 
-  "date_converted": null, 
-  "date_discharged": null, 
-  "date_filed": "2010-02-16", 
-  "date_terminated": null, 
-  "demand": null, 
+  "assigned_to_str": "Dennis Montali",
+  "case_name": "Ana C. Reyes",
+  "cause": null,
+  "court_id": "canb",
+  "date_converted": null,
+  "date_discharged": null,
+  "date_filed": "2010-02-16",
+  "date_terminated": null,
+  "demand": null,
   "docket_entries": [
     {
-      "date_filed": "2010-02-16", 
-      "description": "Chapter 7 Voluntary Petition. Fee Amount $299. Financial Management Certificate Due Prior to Discharge. Filed by Ana C. Reyes . Incomplete Filings due by 3/2/2010. Section 521 Filings due by 4/2/2010. Order Meeting of Creditors due by 3/2/2010. (ia) (Entered: 02/16/2010)", 
-      "document_number": "1", 
+      "date_filed": "2010-02-16",
+      "description": "Chapter 7 Voluntary Petition. Fee Amount $299. Financial Management Certificate Due Prior to Discharge. Filed by Ana C. Reyes . Incomplete Filings due by 3/2/2010. Section 521 Filings due by 4/2/2010. Order Meeting of Creditors due by 3/2/2010. (ia) (Entered: 02/16/2010)",
+      "document_number": "1",
       "pacer_doc_id": "034013448078"
-    }, 
+    },
     {
-      "date_filed": "2010-02-16", 
-      "description": "Statement of Social Security Number. Filed by Debtor Ana C. Reyes (ia) (Entered: 02/16/2010)", 
-      "document_number": "2", 
-      "pacer_doc_id": "show_doc.pl"
+      "date_filed": "2010-02-16",
+      "description": "Statement of Social Security Number. Filed by Debtor Ana C. Reyes (ia) (Entered: 02/16/2010)",
+      "document_number": "2",
+      "pacer_doc_id": "sho0_doc.pl"
     }
-  ], 
-  "docket_number": "10-30514", 
-  "jurisdiction": null, 
-  "jury_demand": null, 
-  "nature_of_suit": null, 
+  ],
+  "docket_number": "10-30514",
+  "jurisdiction": null,
+  "jury_demand": null,
+  "nature_of_suit": null,
   "parties": [
     {
       "attorneys": [
         {
-          "contact": "PRO SE\n", 
-          "name": "Ana C. Reyes", 
+          "contact": "PRO SE\n",
+          "name": "Ana C. Reyes",
           "roles": []
-        }, 
+        },
         {
-          "contact": "", 
-          "name": "", 
+          "contact": "",
+          "name": "",
           "roles": []
         }
-      ], 
-      "extra_info": "529 Second Lane\nSouth San Francisco, CA 94080\n(650) 594-2364\nSSN / ITIN: xxx-xx-7993", 
-      "name": "Ana C. Reyes", 
+      ],
+      "extra_info": "529 Second Lane\nSouth San Francisco, CA 94080\n(650) 594-2364\nSSN / ITIN: xxx-xx-7993",
+      "name": "Ana C. Reyes",
       "type": "Debtor"
-    }, 
+    },
     {
-      "attorneys": [], 
-      "extra_info": "800 Powell Street\nSan Francisco, CA 94108\n415-362-0415", 
-      "name": "E. Lynn Schoenmann", 
+      "attorneys": [],
+      "extra_info": "800 Powell Street\nSan Francisco, CA 94108\n415-362-0415",
+      "name": "E. Lynn Schoenmann",
       "type": "Trustee"
-    }, 
+    },
     {
-      "attorneys": [], 
-      "extra_info": "Office of the U.S. Trustee\n235 Pine St\nSuite 700\nSan Francisco, CA 94104\n(415) 705-3333", 
-      "name": "Office of the U.S. Trustee / SF", 
+      "attorneys": [],
+      "extra_info": "Office of the U.S. Trustee\n235 Pine St\nSuite 700\nSan Francisco, CA 94104\n(415) 705-3333",
+      "name": "Office of the U.S. Trustee / SF",
       "type": "U.S. Trustee"
     }
-  ], 
+  ],
   "referred_to_str": null
 }
