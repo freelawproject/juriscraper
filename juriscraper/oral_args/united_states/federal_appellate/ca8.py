@@ -33,7 +33,7 @@ class Site(OralArgumentSite):
         return None
 
     def _get_download_urls(self):
-        return [item.xpath('//enclosure/@url')[0] for item in self.items]
+        return [item.xpath('./enclosure/@url')[0] for item in self.items]
 
     def _get_case_names(self):
         case_names = []
