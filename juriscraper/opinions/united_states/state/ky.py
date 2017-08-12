@@ -64,16 +64,31 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://162.114.92.72/dtsearch.asp'
+        # Sometimes they change the ip/endpoint below, in which
+        # case the scraper will throw a 404 error. just go to
+        # http://apps.courts.ky.gov/supreme/sc_opinions.shtm
+        # and inspect the form html and grab the new "action" url
+        self.url = 'http://162.114.92.72/dtSearch/dtisapi6.dll'
+        # Sometimes they also change up the key/value pairs below.
+        # What you want to do is go to the url in the comment above,
+        # open your browser inspector's network tab, then search on
+        # the page's form for "xfirstword", 100 results, sorted by
+        # date, click search, and then inspect the Params for the
+        # POST request that was just triggered. This site sucks.
         self.parameters = {
-            'SearchForm': '%%SearchForm%%',
-            'autoStopLimit': '0',
-            'cmd': 'search',
-            'fuzziness': '0',
-            'index': 'D:\\Inetpub\\wwwroot\\indices\\SupremeCourt_Index',
-            'maxFiles': '100',              # Fetch 100 results
-            'request': 'xfirstword',        # dtSearch trick to return all results
-            'sort': 'Date'                  # Order by newest first
+            'index': "*{aa61be39717dafae0e114c24b74f68db}+Supreme+Court+Opinions+(1996+)",
+            'request': "xfirstword",
+            'fuzziness': "0",
+            'MaxFiles': "100",
+            'autoStopLimit': "0",
+            'sort': "Date",
+            'cmd': "search",
+            'SearchForm': "%%SearchForm%%",
+            'dtsPdfWh': "*",
+            'OrigSearchForm': "/dtsearch_form.html",
+            'pageSize': "1000",
+            'fileConditions': "",
+            'booleanConditions': "",
         }
         self.method = 'POST'
         self.docket_number_regex = re.compile(r'(?P<year>\d{4})-(?P<court>[SC]{2})-(?P<number>\d+)')
