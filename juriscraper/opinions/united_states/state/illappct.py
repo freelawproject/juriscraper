@@ -2,10 +2,10 @@
 # 2013-08-18: Created.
 # 2014-07-17: Updated by mlr to remedy InsanityException.
 
-from datetime import datetime
 from lxml import html
 
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -28,8 +28,7 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         path = self.base_path + '/td[1]/div/text()'
-        return [datetime.strptime(date_string, '%m/%d/%y').date()
-                for date_string in self.html.xpath(path)]
+        return [convert_date_string(date_string) for date_string in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         statuses = []
