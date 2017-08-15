@@ -118,6 +118,14 @@ class ScraperExampleTest(unittest.TestCase):
         # Re-enable logging
         logging.disable(logging.NOTSET)
 
+    def ordered_object(self, obj):
+        if isinstance(obj, dict):
+            return sorted((k, self.ordered_object(v)) for k, v in obj.items())
+        if isinstance(obj, list):
+            return sorted(self.ordered_object(x) for x in obj)
+        else:
+            return obj
+
     @vcr.use_cassette(record_mode='new_episodes')
     def test_scrape_all_example_files(self):
         """Finds all the $module_example* files and tests them with the sample
@@ -198,7 +206,11 @@ class ScraperExampleTest(unittest.TestCase):
                                      ', expected ' + str(len(expected_result)) +
                                      '. If these numbers match up, then the ' +
                                      'actual parsed data differs.')
-                            self.assertEqual(expected_result, parsed_result, error)
+                            self.assertEqual(
+                                self.ordered_object(expected_result),
+                                self.ordered_object(parsed_result),
+                                error
+                            )
                     else:
                         # Generate corresponding json file if it doesn't
                         # already exist. This should only happen once
