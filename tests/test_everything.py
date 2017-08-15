@@ -133,6 +133,7 @@ class ScraperExampleTest(unittest.TestCase):
         num_example_files = 0
         num_warnings = 0
         cnt = CaseNameTweaker()
+        json_compare_extension = '.compare.json'
         for module_string in module_strings:
             package, module = module_string.rsplit('.', 1)
             mod = __import__("%s.%s" % (package, module),
@@ -154,7 +155,8 @@ class ScraperExampleTest(unittest.TestCase):
                     "tests", "examples", module_parts[1],
                     "united_states", module_parts[-1],
                 )
-                paths = glob.glob('%s_example*' % example_path)
+                paths = [path for path in glob.glob('%s_example*' % example_path)
+                         if not path.endswith(json_compare_extension)]
                 self.assertTrue(
                     paths,
                     "No example file found for: %s! \n\nThe test looked in: "
@@ -175,6 +177,26 @@ class ScraperExampleTest(unittest.TestCase):
                     # Forces a local GET
                     site.method = 'LOCAL'
                     site.parse()
+                    # Now validate that the parsed result is as we expect
+                    json_path = '%s%s' % (path.rsplit('.', 1)[0], json_compare_extension)
+                    if os.path.isfile(json_path):
+                        # Compare result with corresponding json file
+                        example_file = path.rsplit('/', 1)[1]
+                        compare_file = json_path.rsplit('/', 1)[1]
+                        error = ('The result of parsing ' + example_file +
+                                 ' does not match the expected data in ' +
+                                 compare_file + '. Either the later has ' +
+                                 'bad data or recent changes to this scraper ' +
+                                 'are incompatible with the ' + example_file +
+                                 ' use case.')
+                        with open(json_path, 'r') as input_file:
+                            self.assertEqual(input_file.read(), site.to_json(), error)
+                    else:
+                        # Generate corresponding json file if it doesn't
+                        # already exist. This should only happen once
+                        # when adding a new example html file.
+                        with open(json_path, 'w') as json_example:
+                            json_example.write(site.to_json())
                 t2 = time.time()
 
                 max_speed = 15
