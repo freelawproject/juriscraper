@@ -194,6 +194,10 @@ class ScraperExampleTest(unittest.TestCase):
                         with open(json_path, 'r') as input_file:
                             expected_result = json.loads(input_file.read().decode('utf8'))
                             parsed_result = json.loads(json_data)
+                            error = (error + ' Found ' + str(len(parsed_result)) +
+                                     ', expected ' + str(len(expected_result)) +
+                                     '. If these numbers match up, then the ' +
+                                     'actual parsed data differs.')
                             self.assertEqual(expected_result, parsed_result, error)
                     else:
                         # Generate corresponding json file if it doesn't
