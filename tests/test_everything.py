@@ -4,6 +4,7 @@ from __future__ import print_function
 
 import datetime
 import glob
+import json
 import logging
 import sys
 import time
@@ -190,7 +191,9 @@ class ScraperExampleTest(unittest.TestCase):
                                  'are incompatible with the ' + example_file +
                                  ' use case.')
                         with open(json_path, 'r') as input_file:
-                            self.assertEqual(input_file.read(), site.to_json(), error)
+                            expected_result = json.loads(input_file.read())
+                            parsed_result = json.loads(site.to_json())
+                            self.assertEqual(expected_result, parsed_result, error)
                     else:
                         # Generate corresponding json file if it doesn't
                         # already exist. This should only happen once
