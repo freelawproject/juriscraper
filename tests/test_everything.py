@@ -180,6 +180,7 @@ class ScraperExampleTest(unittest.TestCase):
                     site.parse()
                     # Now validate that the parsed result is as we expect
                     json_path = '%s%s' % (path.rsplit('.', 1)[0], json_compare_extension)
+                    json_data = site.to_json().encode('utf8')
                     if os.path.isfile(json_path):
                         # Compare result with corresponding json file
                         example_file = path.rsplit('/', 1)[1]
@@ -191,15 +192,15 @@ class ScraperExampleTest(unittest.TestCase):
                                  'are incompatible with the ' + example_file +
                                  ' use case.')
                         with open(json_path, 'r') as input_file:
-                            expected_result = json.loads(input_file.read())
-                            parsed_result = json.loads(site.to_json())
+                            expected_result = json.loads(input_file.read().decode('utf8'))
+                            parsed_result = json.loads(json_data)
                             self.assertEqual(expected_result, parsed_result, error)
                     else:
                         # Generate corresponding json file if it doesn't
                         # already exist. This should only happen once
                         # when adding a new example html file.
                         with open(json_path, 'w') as json_example:
-                            json_example.write(site.to_json())
+                            json_example.write(json_data)
                 t2 = time.time()
 
                 max_speed = 15
