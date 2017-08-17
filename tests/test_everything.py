@@ -191,7 +191,7 @@ class ScraperExampleTest(unittest.TestCase):
                                  'bad data or recent changes to this scraper ' +
                                  'are incompatible with the ' + example_file +
                                  ' use case. PARSED JSON: ' + json_data +
-                                 ' (|%s|)' & os.environ['LANG'])
+                                 ' (|%s|)' % os.environ['LANG'])
                         with open(json_path, 'r') as input_file:
                             error += '  (%s|%s)' % (type(json_data), type(input_file.read()))
                             self.assertEqual(input_file.read(), json_data, error)
