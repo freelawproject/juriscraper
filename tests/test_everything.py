@@ -178,7 +178,6 @@ class ScraperExampleTest(unittest.TestCase):
                     site.method = 'LOCAL'
                     site.parse()
                     # Now validate that the parsed result is as we expect
-                    #os.environ['LANG'] = 'en_US.UTF-8'
                     json_path = '%s%s' % (path.rsplit('.', 1)[0], json_compare_extension)
                     json_data = site.to_json()
                     if os.path.isfile(json_path):
@@ -193,7 +192,7 @@ class ScraperExampleTest(unittest.TestCase):
                                  ' use case. PARSED JSON: ' + json_data +
                                  ' (|%s|)' % os.environ['LANG'])
                         with open(json_path, 'r') as input_file:
-                            error += '  (%s|%s)' % (type(json_data), type(input_file.read()))
+                            #error += '  (%s|%s)' % (type(json_data), type(input_file.read()))
                             self.assertEqual(input_file.read(), json_data, error)
                     else:
                         # Generate corresponding json file if it doesn't
