@@ -118,14 +118,6 @@ class ScraperExampleTest(unittest.TestCase):
         # Re-enable logging
         logging.disable(logging.NOTSET)
 
-    def ordered_object(self, obj):
-        if isinstance(obj, dict):
-            return sorted((k, self.ordered_object(v)) for k, v in obj.items())
-        if isinstance(obj, list):
-            return sorted(self.ordered_object(x) for x in obj)
-        else:
-            return obj
-
     @vcr.use_cassette(record_mode='new_episodes')
     def test_scrape_all_example_files(self):
         """Finds all the $module_example* files and tests them with the sample
@@ -188,7 +180,7 @@ class ScraperExampleTest(unittest.TestCase):
                     site.parse()
                     # Now validate that the parsed result is as we expect
                     json_path = '%s%s' % (path.rsplit('.', 1)[0], json_compare_extension)
-                    json_data = site.to_json().encode('utf8')
+                    json_data = site.to_json()
                     if os.path.isfile(json_path):
                         # Compare result with corresponding json file
                         example_file = path.rsplit('/', 1)[1]
@@ -198,19 +190,9 @@ class ScraperExampleTest(unittest.TestCase):
                                  compare_file + '. Either the later has ' +
                                  'bad data or recent changes to this scraper ' +
                                  'are incompatible with the ' + example_file +
-                                 ' use case.')
+                                 ' use case. PARSED JSON: ' + json_data)
                         with open(json_path, 'r') as input_file:
-                            expected_result = json.loads(input_file.read().decode('utf8'))
-                            parsed_result = json.loads(json_data)
-                            error = (error + ' Found ' + str(len(parsed_result)) +
-                                     ', expected ' + str(len(expected_result)) +
-                                     '. If these numbers match up, then the ' +
-                                     'actual parsed data differs.')
-                            self.assertEqual(
-                                self.ordered_object(expected_result),
-                                self.ordered_object(parsed_result),
-                                error
-                            )
+                            self.assertEqual(input_file.read(), json_data, error)
                     else:
                         # Generate corresponding json file if it doesn't
                         # already exist. This should only happen once
