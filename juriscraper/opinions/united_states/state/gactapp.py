@@ -9,6 +9,7 @@
 from datetime import date, timedelta
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -28,6 +29,13 @@ class Site(OpinionSite):
             day=self.case_date.day,
             year=self.case_date.year,
         )
+
+    def _download(self, request_dict={}):
+        if self.method == 'LOCAL':
+            # This is an arbitrary date that we need to set
+            # for our compar.json test to pass
+            self.case_date = convert_date_string('2017-08-14')
+        return super(Site, self)._download(request_dict=request_dict)
 
     def _get_case_names(self):
         path = "{base}/td[2]/text()".format(base=self.base_path)

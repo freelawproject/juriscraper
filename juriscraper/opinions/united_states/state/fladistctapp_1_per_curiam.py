@@ -22,6 +22,7 @@ from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -40,6 +41,9 @@ class Site(OpinionSite):
           scrape without using Selenium.
         """
         if self.method == 'LOCAL':
+            # This is an arbitrary date that we need to set
+            # for our compar.json test to pass
+            self.case_date = convert_date_string('2017-08-13')
             return super(Site, self)._download(request_dict=request_dict)
         else:
             driver = webdriver.PhantomJS(
