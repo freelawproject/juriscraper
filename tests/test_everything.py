@@ -4,7 +4,6 @@ from __future__ import print_function
 
 import datetime
 import glob
-import json
 import logging
 import sys
 import time
@@ -190,7 +189,8 @@ class ScraperExampleTest(unittest.TestCase):
                                  compare_file + '. Either the later has ' +
                                  'bad data or recent changes to this scraper ' +
                                  'are incompatible with the ' + example_file +
-                                 ' use case. PARSED JSON: ' + json_data)
+                                 ' use case. PARSED JSON: ' + json_data +
+                                 '(%s|%s)' % (type(json_data), type(compare_file.read())))
                         with open(json_path, 'r') as input_file:
                             self.assertEqual(input_file.read(), json_data, error)
                     else:
