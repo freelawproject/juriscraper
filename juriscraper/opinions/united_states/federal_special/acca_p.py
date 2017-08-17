@@ -6,11 +6,12 @@ History:
   2016-03-17: Website appears to be dead. Scraper disabled in __init__.py.
 """
 
-from datetime import datetime
+
 import re
+from lxml import html
 
 from juriscraper.OpinionSite import OpinionSite
-from lxml import html
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -20,7 +21,9 @@ class Site(OpinionSite):
         self.url = 'https://www.jagcnet.army.mil/85257546006DF36B/ODD?OpenView&Count=-1'
         self.docket_case_name_splitter = re.compile('(.*[\dX]{5,8})(.*)')
 
-    def _download(self, **kwargs):
+    def _download(self, request_dict={}):
+        if self.method == 'LOCAL':
+            return super(Site, self)._download(request_dict=request_dict)
         # DoD uses an annoying certificate that isn't installed. Thus, we
         # disable certificate verification in requests.
         return super(Site, self)._download(request_dict={'verify': False})
@@ -40,8 +43,7 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         path = '//table//table//tr[position() > 2]/td[4]//text()'
-        return [datetime.strptime(date_string, '%m/%d/%Y').date()
-                for date_string in self.html.xpath(path)]
+        return [convert_date_string(date_string) for date_string in  self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
