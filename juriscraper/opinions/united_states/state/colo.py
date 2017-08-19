@@ -122,21 +122,24 @@ class Site(OpinionSite):
         return result
 
     def _extract_cases_from_sub_page(self, html_tree, date_obj):
-        for anchor in html_tree.xpath("//a[@class='Head articletitle']"):
+        anchors = html_tree.xpath("//a[@class='Head articletitle']")
+        anchor_count = len(anchors)
+        for anchor in anchors:
             text = self._extract_text_from_anchor(anchor)
-            name = self._extract_name_from_text(text)
-            url = self._extract_url_from_anchor(anchor)
-            direct_url, resource_name = self.extract_pdf_url_and_name_from_resource(url)
-            self.cases.append({
-                'date': date_obj,
-                'status': 'Published',
-                'name': name if name else resource_name,
-                'url': direct_url if direct_url else url,
-                'docket': self._extract_docket_from_text(text),
-                'citation': self._extract_citation_from_text(text),
-                'summary': self._extract_summary_relative_to_anchor(anchor),
-                'nature': self._extract_nature_relative_to_anchor(anchor),
-            })
+            if not self.is_this_a_blank_page(text, anchor_count, date_obj):
+                name = self._extract_name_from_text(text)
+                url = self._extract_url_from_anchor(anchor)
+                direct_url, resource_name = self.extract_pdf_url_and_name_from_resource(url)
+                self.cases.append({
+                    'date': date_obj,
+                    'status': 'Published',
+                    'name': name if name else resource_name,
+                    'url': direct_url if direct_url else url,
+                    'docket': self._extract_docket_from_text(text),
+                    'citation': self._extract_citation_from_text(text),
+                    'summary': self._extract_summary_relative_to_anchor(anchor),
+                    'nature': self._extract_nature_relative_to_anchor(anchor),
+                })
 
     @classmethod
     def _extract_docket_from_text(cls, text):
@@ -229,6 +232,40 @@ class Site(OpinionSite):
                 continue
         return nature.strip().rstrip('.')
 
+    @staticmethod
+    def cleanup_content(content):
+        tree = html.fromstring(content)
+        core_element = tree.xpath('//div[@class="contentmain"]')
+        if core_element:
+            # its an HTML opinion, return only the core element
+            return html.tostring(
+                core_element[0],
+                pretty_print=True,
+                encoding='unicode'
+            )
+        else:
+            # its raw pdf file content, which doesn't need to be manipulated
+            return content
+
+    def is_this_a_blank_page(self, text, anchor_count, date_obj):
+        """Man, colo sucks so incredibly hard.
+        This is a shitty workaround to a recurring problem
+        where the court publishes blank paged, which they dont
+        populate with data until days/weeks later. Return True
+        if there are no anchors, or there is only one anchor
+        whose text is just the date string, a thing they do
+        often for whatever reason.
+        """
+        if not anchor_count:
+            return True
+        if anchor_count == 1:
+            try:
+                string_to_date = convert_date_string(text)
+                if string_to_date == date_obj:
+                    return True
+            except:
+                pass
+
     def _get_case_names(self):
         return [case['name'] for case in self.cases]
 
@@ -252,22 +289,6 @@ class Site(OpinionSite):
 
     def _get_nature_of_suit(self):
         return [case['nature'] for case in self.cases]
-
-    @staticmethod
-    def cleanup_content(content):
-        tree = html.fromstring(content)
-        core_element = tree.xpath('//div[@class="contentmain"]')
-        if core_element:
-            # its an HTML opinion, return only the core element
-            return html.tostring(
-                core_element[0],
-                pretty_print=True,
-                encoding='unicode'
-            )
-        else:
-            # its raw pdf file content, which doesn't need to be manipulated
-            return content
-
 
     def _download_backwards(self, _):
         # dummy backscraper parameter is ignored
