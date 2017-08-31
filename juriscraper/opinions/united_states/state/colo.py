@@ -123,23 +123,29 @@ class Site(OpinionSite):
 
     def _extract_cases_from_sub_page(self, html_tree, date_obj):
         anchors = html_tree.xpath("//a[@class='Head articletitle']")
-        anchor_count = len(anchors)
+        if self.is_this_a_blank_page(anchors, date_obj):
+            return []
         for anchor in anchors:
             text = self._extract_text_from_anchor(anchor)
-            if not self.is_this_a_blank_page(text, anchor_count, date_obj):
-                name = self._extract_name_from_text(text)
-                url = self._extract_url_from_anchor(anchor)
-                direct_url, resource_name = self.extract_pdf_url_and_name_from_resource(url)
-                self.cases.append({
-                    'date': date_obj,
-                    'status': 'Published',
-                    'name': name if name else resource_name,
-                    'url': direct_url if direct_url else url,
-                    'docket': self._extract_docket_from_text(text),
-                    'citation': self._extract_citation_from_text(text),
-                    'summary': self._extract_summary_relative_to_anchor(anchor),
-                    'nature': self._extract_nature_relative_to_anchor(anchor),
-                })
+            if self.is_this_skippable_date_anchor(text, date_obj):
+                # Sometimes COBAR includes link to worthless Opinion
+                # Announcement PDF provided by colo court site. These
+                # links usually have text that is a simple date string.
+                # Skip them.
+                continue
+            name = self._extract_name_from_text(text)
+            url = self._extract_url_from_anchor(anchor)
+            direct_url, resource_name = self.extract_pdf_url_and_name_from_resource(url)
+            self.cases.append({
+                'date': date_obj,
+                'status': 'Published',
+                'name': name if name else resource_name,
+                'url': direct_url if direct_url else url,
+                'docket': self._extract_docket_from_text(text),
+                'citation': self._extract_citation_from_text(text),
+                'summary': self._extract_summary_relative_to_anchor(anchor),
+                'nature': self._extract_nature_relative_to_anchor(anchor),
+            })
 
     @classmethod
     def _extract_docket_from_text(cls, text):
@@ -247,24 +253,31 @@ class Site(OpinionSite):
             # its raw pdf file content, which doesn't need to be manipulated
             return content
 
-    def is_this_a_blank_page(self, text, anchor_count, date_obj):
-        """Man, colo sucks so incredibly hard.
-        This is a shitty workaround to a recurring problem
-        where the court publishes blank paged, which they dont
+    def is_this_a_blank_page(self, anchors, date_obj):
+        """Man, colo/COBAR are not mkaing things easy for us.
+        This is an unfortunate workaround for a recurring problem
+        where the court publishes blank pages, which they don't
         populate with data until days/weeks later. Return True
         if there are no anchors, or there is only one anchor
         whose text is just the date string, a thing they do
         often for whatever reason.
         """
+        anchor_count = len(anchors)
         if not anchor_count:
             return True
         if anchor_count == 1:
-            try:
-                string_to_date = convert_date_string(text)
-                if string_to_date == date_obj:
-                    return True
-            except:
-                pass
+            text = self._extract_text_from_anchor(anchors[0])
+            return self.is_this_skippable_date_anchor(text, date_obj)
+
+    def is_this_skippable_date_anchor(self, text, date_obj):
+        """Return true is link text is parsible date"""
+        try:
+            string_to_date = convert_date_string(text)
+            if string_to_date == date_obj:
+                return True
+        except:
+            pass
+        return False
 
     def _get_case_names(self):
         return [case['name'] for case in self.cases]
