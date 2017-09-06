@@ -32,6 +32,9 @@ class Site(OpinionSite):
             string = date_element.xpath('./text()')
             try:
                 string = string[0]
+                # handle examples where time but no date (ga_example_3.html)
+                if ':' in string and ('AM' in string or 'PM' in string):
+                    continue
                 # handle legacy example (ga_example.html)
                 string = string.split('SUMMARIES')[0]
                 date_string = re.sub(r'\W+', ' ', string)
@@ -54,7 +57,6 @@ class Site(OpinionSite):
                         'url': item.xpath('//a[1]/@href')[0],
                         'docket': split[0].rstrip('.'),
                         'name': titlecase(split[1]),
-
                     })
 
     def _get_case_names(self):
