@@ -14,11 +14,11 @@ Juriscraper is part of a two-part system. The second part is your code,
 which calls Juriscraper. Your code is responsible for calling a scraper,
 downloading and saving its results. A reference implementation of the
 caller has been developed and is in use at
-`CourtListener.com <http://courtlistener.com>`__. The code for that
+`CourtListener.com <https://www.courtlistener.com>`__. The code for that
 caller can be `found
-here <https://github.com/freelawproject/courtlistener/blob/master/alert/scrapers/management/commands/cl_scrape_and_extract.py>`__.
+here <https://github.com/freelawproject/courtlistener/tree/master/cl/scrapers/management/commands>`__.
 There is also a basic sample caller `included in
-Juriscraper <https://github.com/freelawproject/juriscraper/blob/master/sample_caller.py>`__
+Juriscraper <https://github.com/freelawproject/juriscraper/blob/master/juriscraper/sample_caller.py>`__
 that can be used for testing or as a starting point when developing your
 own.
 
@@ -67,16 +67,6 @@ First step: Install Python 2.7.x, then:
 
 Joining the Project as a Developer
 ==================================
-
-We use a few tools pretty frequently while building these scrapers. The
-first is `a sister project called
-xpath-tester <https://github.com/mlissner/lxml-xpath-tester>`__ that
-helps debug XPath queries. xpath-tester can be installed locally in a few
-minutes. This tool is useful as a way of testing XPath queries using the same
-dependencies and parsers as in Juriscraper, without any concern that different
-implementations might provide different results.
-
-We also generally use Intellij with PyCharm installed. These are useful because they allow syntax highlighting, code inspection, and PyLint integration. Not using these tools typically results in worse code, so we strongly recommend them.
 
 For scrapers to be merged:
 
