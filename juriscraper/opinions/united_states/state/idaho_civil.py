@@ -21,6 +21,15 @@ from juriscraper.lib.string_utils import convert_date_string, clean_if_py3
 class Site(OpinionSite):
     # Skip first row of table, it's a header
     starting_table_row = '//table//tr[position() > 1]'
+    # Skip rows that don't have  link in 4th cell with
+    # either 'Opinion', 'Order', 'ORDER', or 'Amend' in
+    # the link text
+    row_path_conditional = '/td[4]//a[' \
+        'contains(.//text(), "Opinion") or ' \
+        'contains(.//text(), "Order") or ' \
+        'contains(.//text(), "ORDER") or ' \
+        'contains(.//text(), "Amended")]'
+    base_path = '%s[./%s]' % (starting_table_row, row_path_conditional)
 
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
@@ -33,7 +42,7 @@ class Site(OpinionSite):
 
     def _get_case_names(self):
         case_names = []
-        path = '%s/td[3]' % self.starting_table_row
+        path = '%s/td[3]' % self.base_path
         for cell in self.html.xpath(path):
             name_string = html.tostring(cell, method='text', encoding='unicode')
             name_string = clean_if_py3(name_string).strip()
@@ -46,15 +55,12 @@ class Site(OpinionSite):
         # is missing. But we obviously prefer the opinion doc,
         # so we put it first in the order below, and we take the
         # first link that matches in path in each 4th cell.
-        path = self.starting_table_row + '/td[4]//' \
-               '  a[contains(.//text(), "Opinion") or ' \
-               '    contains(.//text(), "Order") or ' \
-               '    contains(.//text(), "ORDER")][1]/@href'
+        path = '%s%s[1]/@href' % (self.starting_table_row, self.row_path_conditional)
         return [url for url in self.html.xpath(path)]
 
     def _get_case_dates(self):
         case_dates = []
-        path = '%s/td[1]' % self.starting_table_row
+        path = '%s/td[1]' % self.base_path
         for cell in self.html.xpath(path):
             date_string = html.tostring(cell, method='text', encoding='unicode')
             date_string = clean_if_py3(date_string).strip()
@@ -66,7 +72,7 @@ class Site(OpinionSite):
         return case_dates
 
     def _get_docket_numbers(self):
-        path = '%s/td[2]//text()' % self.starting_table_row
+        path = '%s/td[2]//text()' % self.base_path
         return [text.strip() for text in self.html.xpath(path) if text.strip()]
 
     def _get_precedential_statuses(self):
