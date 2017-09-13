@@ -1,4 +1,4 @@
-# Scraper and Back Scraper for New York Appellate Term 1st Dept.
+### BROKEN: Timeout #### Scraper and Back Scraper for New York Appellate Term 1st Dept.
 # CourtID: nyappterm_1st
 # Court Short Name: NY
 # Author: Andrei Chelaru
@@ -62,7 +62,8 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.method = 'POST'
         self.base_path = '//tr[td[5]//a][td[7][contains(., "Opinion")]]'  # Any element with a link on the 5th column
-        self.download_regex = re.compile(r"funcNewWindow\(\\{0,1}'(.*\.htm)\\{0,1}'\)")
+        self.href_js = re.compile(r"funcNewWindow\(\\{0,1}'(.*\.htm)\\{0,1}'\)")
+        self.href_standard = re.compile(r"http(s)?://www.nycourts.gov/(.*).htm")
         self.use_sessions = True
         self.uses_selenium = True
 
@@ -98,10 +99,16 @@ class Site(OpinionSite):
         for element in self.html.xpath(self.base_path):
             url = ''
             for href in element.xpath('./td[5]//@href'):
-                matches = self.download_regex.findall(clean_if_py3(href))
+                href = clean_if_py3(href)
+                # Check for newer standard href
+                match = self.href_standard.match(href)
+                if match:
+                    url = match.group(0)
+                    break
+                # Check for presence of legacy JavaScript href
+                matches = self.href_js.findall(href)
                 if matches:
                     url = url + matches[0]
-
             if url:
                 download_urls.append(url)
         return download_urls
