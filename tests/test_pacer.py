@@ -16,7 +16,8 @@ from requests import ConnectionError
 from juriscraper.lib.exceptions import PacerLoginException, SlownessException
 from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.pacer import DocketReport, FreeOpinionReport
+from juriscraper.pacer import DocketReport, FreeOpinionReport, \
+    PossibleCaseNumberApi
 from juriscraper.pacer.http import PacerSession
 from juriscraper.pacer.utils import (
     get_courts_from_json, get_court_id_from_url,
@@ -329,6 +330,46 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         report.session = mock_session
         report.query(some_date, some_date, sort='case_number')
         self.assertTrue(mock_session.post.called, 'good court should POST')
+
+
+class PacerPossibleCaseNumbersTest(unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        pacer_session = PacerSession()
+
+        if PACER_USERNAME and PACER_PASSWORD:
+            # CAND chosen at random
+            pacer_session = PacerSession(username=PACER_USERNAME,
+                                         password=PACER_PASSWORD)
+
+        cls.pcn = PossibleCaseNumberApi(pacer_session)
+
+    def test_parsing_results(self):
+        """Can we do a simple query and parse?"""
+        paths = []
+        path_root = os.path.join(TESTS_ROOT, "examples", "pacer",
+                                 "possible_case_numbers")
+        for root, dirnames, filenames in os.walk(path_root):
+            for filename in fnmatch.filter(filenames, '*.xml'):
+                paths.append(os.path.join(root, filename))
+        paths.sort()
+        path_max_len = max(len(path) for path in paths) + 2
+        for i, path in enumerate(paths):
+            sys.stdout.write("%s. Doing %s" % (i, path.ljust(path_max_len)))
+            dirname, filename = os.path.split(path)
+            filename_sans_ext = filename.split('.')[0]
+            json_path = os.path.join(dirname, '%s.json' % filename_sans_ext)
+
+            report = PossibleCaseNumberApi()
+            with open(path, 'r') as f:
+                report.parse_text(f.read().decode('utf-8'))
+            data = report.data
+            with open(json_path) as f:
+                j = json.load(f)
+                self.assertEqual(j, data)
+
+            sys.stdout.write("✓\n")
 
 
 class PacerDocketReportTest(unittest.TestCase):

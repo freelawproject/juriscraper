@@ -62,6 +62,7 @@ class DocketReport(object):
 
     @property
     def data(self):
+        """Get all the data back from this endpoint."""
         data = self.metadata.copy()
         data[u'parties'] = self.parties
         data[u'docket_entries'] = self.docket_entries
@@ -100,9 +101,9 @@ class DocketReport(object):
     @property
     def parties(self):
         """Get the party info from the HTML or return it if it's cached.
-        
+
         The data here will look like this:
-        
+
             parties = [{
                 'name': 'NATIONAL VETERANS LEGAL SERVICES PROGRAM',
                 'type': 'Plaintiff',
@@ -117,8 +118,8 @@ class DocketReport(object):
                                 "860-882-1676\n",
                                 "Fax: 860-882-1682\n",
                                 "Email: bnarwold@motleyrice.com"),
-                    'roles': ['LEAD ATTORNEY', 
-                              'PRO HAC VICE', 
+                    'roles': ['LEAD ATTORNEY',
+                              'PRO HAC VICE',
                               'ATTORNEY TO BE NOTICED'],
                 }, {
                     ...more attorneys here...
@@ -220,22 +221,22 @@ class DocketReport(object):
     @staticmethod
     def _get_attorneys(cell):
         """Get the attorney information from an HTML tr node.
-        
+
         Input will look like:
-        
+
             <td width="40%" valign="top">
-                <b>Allen                Durham          Arnold         </b> 
-                <br>Arendall &amp; Associates                                       
-                <br>2018 Morris Avenue                                          
-                <br>Suite 300                                                   
-                <br>Birmingham              , AL 35203          
-                <br>205-252-1550             
-                <br>Fax: 205-252-1556        
+                <b>Allen                Durham          Arnold         </b>
+                <br>Arendall &amp; Associates
+                <br>2018 Morris Avenue
+                <br>Suite 300
+                <br>Birmingham              , AL 35203
+                <br>205-252-1550
+                <br>Fax: 205-252-1556
                 <br>Email: ada@arendalllaw.com
                 <br><i>LEAD ATTORNEY</i>
                 <br><i>ATTORNEY TO BE NOTICED</i><br><br>
-                
-                <b>David                Randall         Arendall        </b> 
+
+                <b>David                Randall         Arendall        </b>
                 <br>Arendall &amp; Associates
                 <br>2018 Morris Avenue, Third Floor
                 <br>Birmingham              , AL 35203
@@ -245,9 +246,9 @@ class DocketReport(object):
                 <br><i>LEAD ATTORNEY</i>
                 <br><i>ATTORNEY TO BE NOTICED</i><br><br>
             </td>
-            
+
         Output:
-        
+
             [{
                 'name': 'William H. Narwold',
                 'contact': ("1 Corporate Center\n",
@@ -257,8 +258,8 @@ class DocketReport(object):
                             "860-882-1676\n",
                             "Fax: 860-882-1682\n",
                             "Email: bnarwold@motleyrice.com"),
-                'roles': ['LEAD ATTORNEY', 
-                          'PRO HAC VICE', 
+                'roles': ['LEAD ATTORNEY',
+                          'PRO HAC VICE',
                           'ATTORNEY TO BE NOTICED'],
             }, {
                 ...more attorneys here...
@@ -463,7 +464,7 @@ class DocketReport(object):
 
     def parse_text(self, text):
         """Parse an HTML docket as unicode text and set self.html_tree
-        
+
         :param text: A unicode object
         :return: None
         """
@@ -477,8 +478,8 @@ class DocketReport(object):
     def parse_response(self, response):
         """Parse an HTML docket page provided in a requests.response object and
         set self.html_tree
-                
-        :param response: a python request response object 
+
+        :param response: a python request response object
         :return: None
         """
         response.raise_for_status()
@@ -525,7 +526,7 @@ class DocketReport(object):
 
     def _get_document_number(self, cell):
         """Get the document number.
-        
+
         Some jurisdictions have the number as, "13 (5 pgs)" so some processing
         is needed. See flsb, 09-02199-JKO.
         """
@@ -652,10 +653,10 @@ class DocketReport(object):
 
     def _get_value(self, regex, cast_to_date=False):
         """Find the matching value for a regex.
-        
-        Iterate over a list of values and return group(1) for the first that 
+
+        Iterate over a list of values and return group(1) for the first that
         matches regex. If none matches, return None.
-        
+
         If cast_to_date is True, convert the string to a date object.
         """
         for v in self.metadata_values:
@@ -673,7 +674,7 @@ class DocketReport(object):
     @staticmethod
     def _br_split(element):
         """Split the text of an element on the BRs.
-        
+
         :param element: Any HTML element
         :return: A list of text nodes from that element split on BRs.
         """

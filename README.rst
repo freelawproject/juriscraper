@@ -216,10 +216,11 @@ Version History
 -  1.3.* - Adds support for scraping some parts of PACER.
 -  1.4.* - Python 3 compatibility.
 -  1.5.* - Adds support for querying and parsing PACER dockets.
+-  1.6.* - Adds automatic relogin code to PACER sessions, with reorganization of old login APIs.
 
 **Current**
 
--  1.6.* - Adds automatic relogin code to PACER sessions, with reorganization of old login APIs.
+- 1.7.* - Adds support for hidden PACER APIs.
 
 **Immediate Future Goals**
 
