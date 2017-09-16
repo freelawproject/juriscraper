@@ -174,11 +174,15 @@ class PacerSession(requests.Session):
         if is_pdf(r):
             return False
 
-        if '<case number=' in r.text:
-            # A successful PossibleCaseNumberApi XML result.
+        valid_case_number_query = '<case number=' in r.text
+        no_results_case_number_query = re.search('<message.*Cannot find',
+                                                 r.text)
+        if valid_case_number_query or no_results_case_number_query:
+            # Am authenticated PossibleCaseNumberApi XML result.
             return False
 
         if '/cgi-bin/login.pl?logout' in r.text:
+            # A normal HTML page we're logged into.
             return False
 
         if self.username and self.password:

@@ -70,6 +70,7 @@ class PossibleCaseNumberApi(object):
         except IndexError:
             msg = self.xml_tree.xpath('//message/@text')[0]
             if "Cannot find case" in msg:
+                logger.info("Cannot find case.")
                 return None
             else:
                 raise Exception("Unknown XML content in PossibleCaseNumberApi "
