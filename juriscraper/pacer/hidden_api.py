@@ -53,18 +53,26 @@ class PossibleCaseNumberApi(object):
     @property
     def data(self):
         """Get all the data back from this query"""
-        return {
-            u'docket_number': force_unicode(
-                self.xml_tree.xpath('//case/@number')[0]
-            ),
-            u'pacer_case_id': force_unicode(
-                self.xml_tree.xpath('//case/@id')[0]
-            ),
-            # This could be further post processed to pull out the date closed
-            # and a cleaner title.
-            u'title': force_unicode(
-                self.xml_tree.xpath('//case/@title')[0]
-            ),
-        }
+        try:
+            return {
+                u'docket_number': force_unicode(
+                    self.xml_tree.xpath('//case/@number')[0]
+                ),
+                u'pacer_case_id': force_unicode(
+                    self.xml_tree.xpath('//case/@id')[0]
+                ),
+                # This could be further post processed to pull out the date closed
+                # and a cleaner title.
+                u'title': force_unicode(
+                    self.xml_tree.xpath('//case/@title')[0]
+                ),
+            }
+        except IndexError:
+            msg = self.xml_tree.xpath('//message/@text')[0]
+            if "Cannot find case" in msg:
+                return None
+            else:
+                raise Exception("Unknown XML content in PossibleCaseNumberApi "
+                                "result.")
 
 
