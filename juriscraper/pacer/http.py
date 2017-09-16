@@ -15,8 +15,8 @@ class PacerSession(requests.Session):
     """
     Extension of requests.Session to handle PACER oddities making it easier
     for folks to just POST data to PACER endpoints/apis.
-    
-    Also includes utilities for logging into PACER and re-logging in when 
+
+    Also includes utilities for logging into PACER and re-logging in when
     sessions expire.
     """
     def __init__(self, cookies=None, username=None, password=None):
@@ -37,7 +37,7 @@ class PacerSession(requests.Session):
 
     def get(self, url, auto_login=True, **kwargs):
         """Overrides request.Session.get with session retry logic.
-        
+
         :param url: url string to GET
         :param auto_login: Whether the auto-login procedure should happen.
         :return: requests.Response
@@ -63,7 +63,7 @@ class PacerSession(requests.Session):
         :param url: url string to post to
         :param data: post data
         :param json: json object to post
-        :param auto_login: Whether the auto-login procedure should happen. 
+        :param auto_login: Whether the auto-login procedure should happen.
         :param kwargs: assorted keyword arguments
         :return: requests.Response
         """
@@ -163,15 +163,19 @@ class PacerSession(requests.Session):
         logger.info(u'New PacerSession established.')
 
     def _login_again(self, r):
-        """Log into PACER if the session has credentials and the session has 
+        """Log into PACER if the session has credentials and the session has
         expired.
-        
+
         :param r: A response object to inspect for login errors.
-        :returns: A boolean indicating whether a new session needed to be 
+        :returns: A boolean indicating whether a new session needed to be
         created.
-        :raises: PacerLoginException, if unable to create a new session. 
+        :raises: PacerLoginException, if unable to create a new session.
         """
         if is_pdf(r):
+            return False
+
+        if '<case number=' in r.text:
+            # A successful PossibleCaseNumberApi XML result.
             return False
 
         if '/cgi-bin/login.pl?logout' in r.text:
