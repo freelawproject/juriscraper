@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Thomas P. Agresti",
   "case_name": "David E. Yarnell",
-  "cause": null,
+  "cause": "",
   "court_id": "pawb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2008-02-15",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2008-02-15",
@@ -275,9 +275,9 @@
     }
   ],
   "docket_number": "08-10287",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -316,5 +316,5 @@
       "type": "U.S. Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

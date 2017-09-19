@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Christopher S. Sontchi",
   "case_name": "Downey Financial Corp.",
-  "cause": null,
+  "cause": "",
   "court_id": "deb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2008-11-25",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2010-02-01",
@@ -29,9 +29,9 @@
     }
   ],
   "docket_number": "08-13041",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -89,5 +89,5 @@
       "type": "U.S. Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

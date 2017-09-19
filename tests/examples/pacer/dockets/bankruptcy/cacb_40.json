@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "John E. Ryan",
   "case_name": "Fannie Hill",
-  "cause": null,
+  "cause": "",
   "court_id": "cacb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2003-01-06",
   "date_terminated": "2005-02-15",
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2004-10-01",
@@ -53,9 +53,9 @@
     }
   ],
   "docket_number": "8:03-bk-10133",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -76,5 +76,5 @@
       "type": "Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

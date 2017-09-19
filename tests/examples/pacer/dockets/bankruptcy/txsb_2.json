@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Jeff Bohm",
   "case_name": "Grand Parkway Equities, Ltd.",
-  "cause": null,
+  "cause": "",
   "court_id": "txsb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2010-02-02",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2010-02-02",
@@ -53,9 +53,9 @@
     }
   ],
   "docket_number": "10-31013",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -82,5 +82,5 @@
       "type": "U.S. Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

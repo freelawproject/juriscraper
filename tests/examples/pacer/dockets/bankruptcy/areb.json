@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Audrey R. Evans",
   "case_name": "Robert G. Drace, Jr.",
-  "cause": null,
+  "cause": "",
   "court_id": "areb",
   "date_converted": "2005-12-06",
   "date_discharged": "2006-03-22",
   "date_filed": "2005-01-01",
   "date_terminated": "2006-04-03",
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2005-01-01",
@@ -479,9 +479,9 @@
     }
   ],
   "docket_number": "3:05-bk-10003",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -532,5 +532,5 @@
       "type": "U.S. Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

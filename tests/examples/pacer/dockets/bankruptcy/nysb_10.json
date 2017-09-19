@@ -1,57 +1,57 @@
 {
-  "assigned_to_str": "James M. Peck", 
-  "case_name": "Lehman Brothers Holdings Inc. - Adversary Proceeding", 
-  "cause": null, 
-  "court_id": "nysb", 
-  "date_converted": null, 
-  "date_discharged": null, 
-  "date_filed": "2009-04-24", 
-  "date_terminated": null, 
-  "demand": "$46184000000", 
-  "docket_entries": [], 
-  "docket_number": "09-01165", 
-  "jurisdiction": null, 
-  "jury_demand": null, 
-  "nature_of_suit": "14 Recovery of money/property - other; 91 Declaratory judgment", 
+  "assigned_to_str": "James M. Peck",
+  "case_name": "Lehman Brothers Holdings Inc. - Adversary Proceeding",
+  "cause": "",
+  "court_id": "nysb",
+  "date_converted": null,
+  "date_discharged": null,
+  "date_filed": "2009-04-24",
+  "date_terminated": null,
+  "demand": "$46184000000",
+  "docket_entries": [],
+  "docket_number": "09-01165",
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "14 Recovery of money/property - other; 91 Declaratory judgment",
   "parties": [
     {
       "attorneys": [
         {
-          "contact": "Weil Gotshal & Manges, LLP\n767 Fifth Avenue\nNew York, NY 10153\n(212) 310-8924\nFax : (212) 310-8007\nEmail: robert.lemons@weil.com\n", 
-          "name": "Robert J. Lemons", 
+          "contact": "Weil Gotshal & Manges, LLP\n767 Fifth Avenue\nNew York, NY 10153\n(212) 310-8924\nFax : (212) 310-8007\nEmail: robert.lemons@weil.com\n",
+          "name": "Robert J. Lemons",
           "roles": [
             "LEAD ATTORNEY"
           ]
         }
-      ], 
-      "extra_info": "1271 Sixth Avenue\nNew York, NY 10020", 
-      "name": "Lehman Brothers Special Financing Inc.", 
+      ],
+      "extra_info": "1271 Sixth Avenue\nNew York, NY 10020",
+      "name": "Lehman Brothers Special Financing Inc.",
       "type": "Plaintiff"
-    }, 
+    },
     {
       "attorneys": [
         {
-          "contact": "Klestadt & Winters, LLP\n292 Madison Avenue\n17th Floor\nNew York, NY 10017\n(212) 972-3000\nFax : (212) 972-2245\nEmail: jjureller@klestadt.com\n", 
-          "name": "John E. Jureller, Jr.", 
+          "contact": "Klestadt & Winters, LLP\n292 Madison Avenue\n17th Floor\nNew York, NY 10017\n(212) 972-3000\nFax : (212) 972-2245\nEmail: jjureller@klestadt.com\n",
+          "name": "John E. Jureller, Jr.",
           "roles": []
         }
-      ], 
-      "extra_info": "11766 Wilshire Boulevard\nSuite 1580\nLos Angeles, CA 90025", 
-      "name": "Metropolitan West Asset Management, LLC", 
+      ],
+      "extra_info": "11766 Wilshire Boulevard\nSuite 1580\nLos Angeles, CA 90025",
+      "name": "Metropolitan West Asset Management, LLC",
       "type": "Defendant"
-    }, 
+    },
     {
       "attorneys": [
         {
-          "contact": "Klestadt & Winters, LLP\n292 Madison Avenue\n17th Floor\nNew York, NY 10017\n(212) 972-3000\nFax : (212) 972-2245\nEmail: jjureller@klestadt.com\n", 
-          "name": "John E. Jureller, Jr.", 
+          "contact": "Klestadt & Winters, LLP\n292 Madison Avenue\n17th Floor\nNew York, NY 10017\n(212) 972-3000\nFax : (212) 972-2245\nEmail: jjureller@klestadt.com\n",
+          "name": "John E. Jureller, Jr.",
           "roles": []
         }
-      ], 
-      "extra_info": "11766 Wilshire Boulevard\nSuite 1580\nLos Angeles, CA 90025", 
-      "name": "Metropolitan West Total Return Bond Fund", 
+      ],
+      "extra_info": "11766 Wilshire Boulevard\nSuite 1580\nLos Angeles, CA 90025",
+      "name": "Metropolitan West Total Return Bond Fund",
       "type": "Defendant"
     }
-  ], 
-  "referred_to_str": null
+  ],
+  "referred_to_str": ""
 }

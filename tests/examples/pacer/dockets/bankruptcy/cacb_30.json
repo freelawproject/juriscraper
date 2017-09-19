@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Victoria S. Kaufman",
   "case_name": "Stepan Pogosyan",
-  "cause": null,
+  "cause": "",
   "court_id": "cacb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2010-02-12",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2010-02-12",
@@ -53,9 +53,9 @@
     }
   ],
   "docket_number": "2:10-bk-15096",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -94,5 +94,5 @@
       "type": "U.S. Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Howard R. Tallman",
   "case_name": "Michelle H Ramos",
-  "cause": null,
+  "cause": "",
   "court_id": "cob",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2009-10-30",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2010-01-22",
@@ -77,9 +77,9 @@
     }
   ],
   "docket_number": "09-33251",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -106,5 +106,5 @@
       "type": "U.S. Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

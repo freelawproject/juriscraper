@@ -1,44 +1,44 @@
 {
-  "assigned_to_str": "Randy D. Doub", 
-  "case_name": "Raymond Edward Griffin", 
-  "cause": null, 
-  "court_id": "nceb", 
-  "date_converted": null, 
-  "date_discharged": "2008-11-17", 
-  "date_filed": "2007-06-01", 
-  "date_terminated": "2008-11-20", 
-  "demand": null, 
+  "assigned_to_str": "Randy D. Doub",
+  "case_name": "Raymond Edward Griffin",
+  "cause": "",
+  "court_id": "nceb",
+  "date_converted": null,
+  "date_discharged": "2008-11-17",
+  "date_filed": "2007-06-01",
+  "date_terminated": "2008-11-20",
+  "demand": "",
   "docket_entries": [
     {
-      "date_filed": "2009-08-03", 
-      "description": "Report On Unclaimed And/Or Small Dividends. (Stubbs, Trawick) (Entered: 08/03/2009)", 
-      "document_number": "34", 
+      "date_filed": "2009-08-03",
+      "description": "Report On Unclaimed And/Or Small Dividends. (Stubbs, Trawick) (Entered: 08/03/2009)",
+      "document_number": "34",
       "pacer_doc_id": "13008216739"
     }
-  ], 
-  "docket_number": "07-02023", 
-  "jurisdiction": null, 
-  "jury_demand": null, 
-  "nature_of_suit": null, 
+  ],
+  "docket_number": "07-02023",
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
         {
-          "contact": "PO Box 874\nClinton, NC 28329\n910 592-1583\nFax : 910 590-3669\nEmail: griffinlaw@earthlink.net\n", 
-          "name": "Gregory T. Griffin", 
+          "contact": "PO Box 874\nClinton, NC 28329\n910 592-1583\nFax : 910 590-3669\nEmail: griffinlaw@earthlink.net\n",
+          "name": "Gregory T. Griffin",
           "roles": []
         }
-      ], 
-      "extra_info": "206 Broad Street\nRoseboro, NC 28382\nSSN / ITIN: xxx-xx-2175", 
-      "name": "Raymond Edward Griffin", 
+      ],
+      "extra_info": "206 Broad Street\nRoseboro, NC 28382\nSSN / ITIN: xxx-xx-2175",
+      "name": "Raymond Edward Griffin",
       "type": "Debtor"
-    }, 
+    },
     {
-      "attorneys": [], 
-      "extra_info": "Office Of The Ch. 13 Trustee\nP.O. Box 1618\nNew Bern, NC 28563\n252 633-0103", 
-      "name": "Trawick H. Stubbs, Jr.", 
+      "attorneys": [],
+      "extra_info": "Office Of The Ch. 13 Trustee\nP.O. Box 1618\nNew Bern, NC 28563\n252 633-0103",
+      "name": "Trawick H. Stubbs, Jr.",
       "type": "Trustee"
     }
-  ], 
-  "referred_to_str": null
+  ],
+  "referred_to_str": ""
 }

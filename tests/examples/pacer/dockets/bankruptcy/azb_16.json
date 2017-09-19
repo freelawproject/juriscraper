@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "George B. Nielsen Jr.",
   "case_name": "DAWN J CORBIN",
-  "cause": null,
+  "cause": "",
   "court_id": "azb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2009-05-18",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2009-05-18",
@@ -185,9 +185,9 @@
     }
   ],
   "docket_number": "2:09-bk-10692",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -225,5 +225,5 @@
       "type": "U.S. Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Kathleen Thompson",
   "case_name": "Amelia Chavez",
-  "cause": null,
+  "cause": "",
   "court_id": "cacb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2010-02-09",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2010-02-09",
@@ -47,9 +47,9 @@
     }
   ],
   "docket_number": "1:10-bk-11409",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -81,5 +81,5 @@
       "type": "U.S. Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

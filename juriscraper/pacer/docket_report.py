@@ -642,7 +642,7 @@ class DocketReport(object):
                               s.strip()]
                 if len(cell_texts) > 1:
                     nos.append(' '.join(cell_texts))
-            return '; '.join(nos) or None
+            return '; '.join(nos) or ''
         else:
             return self._get_value(self.nos_regex)
 
@@ -655,7 +655,7 @@ class DocketReport(object):
         """Find the matching value for a regex.
 
         Iterate over a list of values and return group(1) for the first that
-        matches regex. If none matches, return None.
+        matches regex. If none matches, return the empty string.
 
         If cast_to_date is True, convert the string to a date object.
         """
@@ -669,7 +669,11 @@ class DocketReport(object):
                     # Safety check. Sometimes a match is made against the merged
                     # text string, including its headers. This is wrong.
                     return hit
-        return None
+
+        if cast_to_date:
+            return None
+        else:
+            return ''
 
     @staticmethod
     def _br_split(element):

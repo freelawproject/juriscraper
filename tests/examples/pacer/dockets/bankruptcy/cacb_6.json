@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Theodor Albert",
   "case_name": "Houshang Eshghi Esfahani",
-  "cause": null,
+  "cause": "",
   "court_id": "cacb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2009-08-11",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2009-08-11",
@@ -329,9 +329,9 @@
     }
   ],
   "docket_number": "8:09-bk-18306",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -376,5 +376,5 @@
       "type": "U.S. Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

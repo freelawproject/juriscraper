@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "George B. Nielsen Jr.",
   "case_name": "SARAH NGO",
-  "cause": null,
+  "cause": "",
   "court_id": "azb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2009-06-09",
   "date_terminated": "2009-09-16",
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2009-06-09",
@@ -143,9 +143,9 @@
     }
   ],
   "docket_number": "2:09-bk-12715",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -177,5 +177,5 @@
       "type": "U.S. Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

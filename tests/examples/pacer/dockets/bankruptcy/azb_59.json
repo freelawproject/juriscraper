@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "James M. Marlar",
   "case_name": "ROBERT KAPLAN",
-  "cause": null,
+  "cause": "",
   "court_id": "azb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2008-12-11",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2008-12-11",
@@ -209,9 +209,9 @@
     }
   ],
   "docket_number": "4:08-bk-17962",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -250,5 +250,5 @@
       "type": "U.S. Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

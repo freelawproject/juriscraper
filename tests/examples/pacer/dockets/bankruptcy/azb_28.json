@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Randolph J. Haines",
   "case_name": "WILLIAM C BAKEMEIER",
-  "cause": null,
+  "cause": "",
   "court_id": "azb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2009-07-07",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2009-07-07",
@@ -245,9 +245,9 @@
     }
   ],
   "docket_number": "2:09-bk-15586",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -286,5 +286,5 @@
       "type": "U.S. Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

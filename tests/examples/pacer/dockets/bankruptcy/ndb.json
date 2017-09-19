@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "William A. Hill",
   "case_name": "Kristi L. Howes",
-  "cause": null,
+  "cause": "",
   "court_id": "ndb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2009-11-18",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2009-11-18",
@@ -95,9 +95,9 @@
     }
   ],
   "docket_number": "09-31357",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -124,5 +124,5 @@
       "type": "U.S. Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

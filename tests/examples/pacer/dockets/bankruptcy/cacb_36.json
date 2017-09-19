@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Kathleen Thompson",
   "case_name": "Meruelo Maddux Properties, Inc., a DE Corp",
-  "cause": null,
+  "cause": "",
   "court_id": "cacb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2009-03-27",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2010-02-05",
@@ -143,9 +143,9 @@
     }
   ],
   "docket_number": "1:09-bk-13356",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -244,5 +244,5 @@
       "type": "Creditor Committee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

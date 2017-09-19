@@ -1,55 +1,55 @@
 {
-  "assigned_to_str": "Barbara J. Houser", 
-  "case_name": "Bon Secour Partners, LLC", 
-  "cause": null, 
-  "court_id": "txnb", 
-  "date_converted": null, 
-  "date_discharged": null, 
-  "date_filed": "2009-11-03", 
-  "date_terminated": null, 
-  "demand": null, 
+  "assigned_to_str": "Barbara J. Houser",
+  "case_name": "Bon Secour Partners, LLC",
+  "cause": "",
+  "court_id": "txnb",
+  "date_converted": null,
+  "date_discharged": null,
+  "date_filed": "2009-11-03",
+  "date_terminated": null,
+  "demand": "",
   "docket_entries": [
     {
-      "date_filed": "2010-02-05", 
-      "description": "Exhibit A)(Pronske, Gerrit)", 
-      "document_number": "471", 
+      "date_filed": "2010-02-05",
+      "description": "Exhibit A)(Pronske, Gerrit)",
+      "document_number": "471",
       "pacer_doc_id": null
-    }, 
+    },
     {
-      "date_filed": "2010-02-05", 
-      "description": "Exhibit A# 2 Exhibit B# 3 Exhibit C# 4 Exhibit D# 5 Exhibit E)(Pronske, Gerrit)", 
-      "document_number": "481", 
+      "date_filed": "2010-02-05",
+      "description": "Exhibit A# 2 Exhibit B# 3 Exhibit C# 4 Exhibit D# 5 Exhibit E)(Pronske, Gerrit)",
+      "document_number": "481",
       "pacer_doc_id": null
     }
-  ], 
-  "docket_number": "09-37580", 
-  "jurisdiction": null, 
-  "jury_demand": null, 
-  "nature_of_suit": null, 
+  ],
+  "docket_number": "09-37580",
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
         {
-          "contact": "Pronske & Patel, P.C.\n2200 Ross Avenue, Suite 5350\nDallas, TX 75201\n(214) 658-6506\nFax : (214) 658-6509\nEmail: cstephenson@pronskepatel.com\n", 
-          "name": "Christina Walton Stephenson", 
+          "contact": "Pronske & Patel, P.C.\n2200 Ross Avenue, Suite 5350\nDallas, TX 75201\n(214) 658-6506\nFax : (214) 658-6509\nEmail: cstephenson@pronskepatel.com\n",
+          "name": "Christina Walton Stephenson",
           "roles": []
-        }, 
+        },
         {
-          "contact": "Pronske & Patel, P.C.\n2200 Ross Avenue\nSuite 5350\nDallas, TX 75201\n(214) 658-6500\nFax : 214-658-6509\nEmail: gpronske@pronskepatel.com\n", 
-          "name": "Gerrit M. Pronske", 
+          "contact": "Pronske & Patel, P.C.\n2200 Ross Avenue\nSuite 5350\nDallas, TX 75201\n(214) 658-6500\nFax : 214-658-6509\nEmail: gpronske@pronskepatel.com\n",
+          "name": "Gerrit M. Pronske",
           "roles": []
         }
-      ], 
-      "extra_info": "3535 Gillespie, No. 305\nDallas, TX 75219\nTax ID / EIN: 20-1717020", 
-      "name": "Bon Secour Partners, LLC", 
+      ],
+      "extra_info": "3535 Gillespie, No. 305\nDallas, TX 75219\nTax ID / EIN: 20-1717020",
+      "name": "Bon Secour Partners, LLC",
       "type": "Debtor"
-    }, 
+    },
     {
-      "attorneys": [], 
-      "extra_info": "1100 Commerce Street\nRoom 976\nDallas, TX 75242-1496\n214-767-8967", 
-      "name": "UST U.S. Trustee", 
+      "attorneys": [],
+      "extra_info": "1100 Commerce Street\nRoom 976\nDallas, TX 75242-1496\n214-767-8967",
+      "name": "UST U.S. Trustee",
       "type": "U.S. Trustee"
     }
-  ], 
-  "referred_to_str": null
+  ],
+  "referred_to_str": ""
 }

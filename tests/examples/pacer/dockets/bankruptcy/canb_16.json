@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Dennis Montali",
   "case_name": "Ana C. Reyes",
-  "cause": null,
+  "cause": "",
   "court_id": "canb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2010-02-16",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2010-02-16",
@@ -23,9 +23,9 @@
     }
   ],
   "docket_number": "10-30514",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -57,5 +57,5 @@
       "type": "U.S. Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

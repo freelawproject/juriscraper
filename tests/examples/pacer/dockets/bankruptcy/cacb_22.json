@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Vincent P. Zurzolo",
   "case_name": "Central Metal, Inc.",
-  "cause": null,
+  "cause": "",
   "court_id": "cacb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2010-01-08",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2010-02-16",
@@ -533,9 +533,9 @@
     }
   ],
   "docket_number": "2:10-bk-10642",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -579,5 +579,5 @@
       "type": "Creditor Committee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

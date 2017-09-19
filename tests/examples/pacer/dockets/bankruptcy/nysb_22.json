@@ -1,7 +1,7 @@
 {
   "assigned_to_str": "Burton R. Liflandshow Associated Cases",
   "case_name": "Unknown Case Title - Adversary Proceeding",
-  "cause": null,
+  "cause": "",
   "court_id": "nysb",
   "date_converted": null,
   "date_discharged": null,
@@ -77,8 +77,8 @@
     }
   ],
   "docket_number": "09-01365",
-  "jurisdiction": null,
-  "jury_demand": null,
+  "jurisdiction": "",
+  "jury_demand": "",
   "nature_of_suit": "11 Recovery of money/property - 542 turnover of property; 12 Recovery of money/property - 547 preference; 13 Recovery of money/property - 548 fraudulent transfer; 14 Recovery of money/property - other",
   "parties": [
     {
@@ -144,5 +144,5 @@
       "type": "Defendant"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

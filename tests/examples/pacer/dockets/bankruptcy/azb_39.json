@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "James M. Marlar",
   "case_name": "MARSHALL S WHITE",
-  "cause": null,
+  "cause": "",
   "court_id": "azb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2009-09-23",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2009-09-23",
@@ -95,9 +95,9 @@
     }
   ],
   "docket_number": "4:09-bk-23715",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -136,5 +136,5 @@
       "type": "U.S. Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

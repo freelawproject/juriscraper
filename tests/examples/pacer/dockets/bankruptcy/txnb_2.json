@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Russell F. Nelms",
   "case_name": "Mark A. Downs",
-  "cause": null,
+  "cause": "",
   "court_id": "txnb",
   "date_converted": "2008-07-02",
   "date_discharged": "2008-10-20",
   "date_filed": "2008-02-25",
   "date_terminated": "2008-10-21",
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2008-02-25",
@@ -395,9 +395,9 @@
     }
   ],
   "docket_number": "08-40814",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -442,5 +442,5 @@
       "type": "U.S. Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

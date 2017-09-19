@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Dwight H. Williams Jr.",
   "case_name": "The Colonial BancGroup, Inc.",
-  "cause": null,
+  "cause": "",
   "court_id": "almb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2009-08-25",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2010-02-05",
@@ -77,9 +77,9 @@
     }
   ],
   "docket_number": "09-32303",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -110,5 +110,5 @@
       "type": "Bankruptcy Admin."
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

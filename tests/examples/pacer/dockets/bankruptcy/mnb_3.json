@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Robert J. Kressel",
   "case_name": "Dennis E. Hecker - Adversary Proceeding",
-  "cause": null,
+  "cause": "",
   "court_id": "mnb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2010-01-13",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2010-02-14",
@@ -47,8 +47,8 @@
     }
   ],
   "docket_number": "10-05003",
-  "jurisdiction": null,
-  "jury_demand": null,
+  "jurisdiction": "",
+  "jury_demand": "",
   "nature_of_suit": "41 Objection / revocation of discharge - 727(c),(d),(e)",
   "parties": [
     {
@@ -76,5 +76,5 @@
       "type": "Defendant"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Robert D. Drain",
   "case_name": "Spiro Milliaressis",
-  "cause": null,
+  "cause": "",
   "court_id": "nysb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2008-04-15",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2008-04-15",
@@ -203,9 +203,9 @@
     }
   ],
   "docket_number": "08-22504",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -244,5 +244,5 @@
       "type": "U.S. Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

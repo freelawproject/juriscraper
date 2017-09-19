@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Arthur J. Gonzalez",
   "case_name": "Old Carco LLC, (f/k/a Chrysler LLC)",
-  "cause": null,
+  "cause": "",
   "court_id": "nysb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2009-04-30",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2010-02-16",
@@ -473,9 +473,9 @@
     }
   ],
   "docket_number": "09-50002",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -616,5 +616,5 @@
       "type": "Creditor Committee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

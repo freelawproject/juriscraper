@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Eileen W. Hollowell",
   "case_name": "JOHN W. McMANUS",
-  "cause": null,
+  "cause": "",
   "court_id": "azb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2009-09-30",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2009-09-30",
@@ -137,9 +137,9 @@
     }
   ],
   "docket_number": "4:09-bk-24564",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -184,5 +184,5 @@
       "type": "U.S. Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

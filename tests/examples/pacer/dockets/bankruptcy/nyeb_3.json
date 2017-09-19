@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Carla E. Craig",
   "case_name": "Austin Shoe Corp",
-  "cause": null,
+  "cause": "",
   "court_id": "nyeb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2010-02-16",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2010-02-16",
@@ -17,9 +17,9 @@
     }
   ],
   "docket_number": "1-10-41176",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -46,5 +46,5 @@
       "type": "U.S. Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

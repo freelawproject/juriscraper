@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Charles G. Case II",
   "case_name": "RAMOS R. MEDINA",
-  "cause": null,
+  "cause": "",
   "court_id": "azb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2007-03-30",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2007-03-30",
@@ -305,9 +305,9 @@
     }
   ],
   "docket_number": "2:07-bk-01404",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -357,5 +357,5 @@
       "type": "U.S. Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

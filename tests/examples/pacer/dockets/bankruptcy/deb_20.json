@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Kevin Gross",
   "case_name": "TLC Vision (USA) Corporation, et al.",
-  "cause": null,
+  "cause": "",
   "court_id": "deb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2009-12-21",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2010-02-16",
@@ -611,9 +611,9 @@
     }
   ],
   "docket_number": "09-14473",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -718,5 +718,5 @@
       "type": "Creditor Committee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

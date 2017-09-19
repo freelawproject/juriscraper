@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Alan S. Trust",
   "case_name": "Global Container Lines Limited",
-  "cause": null,
+  "cause": "",
   "court_id": "nyeb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2009-11-10",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2009-11-10",
@@ -521,9 +521,9 @@
     }
   ],
   "docket_number": "8-09-78585",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [],
@@ -603,5 +603,5 @@
       "type": "Creditor Committee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

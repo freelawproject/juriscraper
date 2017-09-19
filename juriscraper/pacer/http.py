@@ -178,7 +178,7 @@ class PacerSession(requests.Session):
         no_results_case_number_query = re.search('<message.*Cannot find',
                                                  r.text)
         if valid_case_number_query or no_results_case_number_query:
-            # Am authenticated PossibleCaseNumberApi XML result.
+            # An authenticated PossibleCaseNumberApi XML result.
             return False
 
         if '/cgi-bin/login.pl?logout' in r.text:

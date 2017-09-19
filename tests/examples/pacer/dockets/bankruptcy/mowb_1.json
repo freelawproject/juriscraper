@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Jerry W. Venters",
   "case_name": "Jeremy Michael Jobson",
-  "cause": null,
+  "cause": "",
   "court_id": "mowb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2009-11-25",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2009-11-25",
@@ -137,9 +137,9 @@
     }
   ],
   "docket_number": "09-51155",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -172,5 +172,5 @@
       "type": "Trustee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Arthur J. Gonzalez",
   "case_name": "Cabrini Medical Center",
-  "cause": null,
+  "cause": "",
   "court_id": "nysb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2009-07-09",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2010-01-04",
@@ -419,9 +419,9 @@
     }
   ],
   "docket_number": "09-14398",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -491,5 +491,5 @@
       "type": "Creditor Committee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

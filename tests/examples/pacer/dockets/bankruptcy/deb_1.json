@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Christopher S. Sontchi",
   "case_name": "American Home Mortgage Holdings, Inc.",
-  "cause": null,
+  "cause": "",
   "court_id": "deb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2007-08-06",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2010-02-16",
@@ -497,9 +497,9 @@
     }
   ],
   "docket_number": "07-11047",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -642,5 +642,5 @@
       "type": "Creditor Committee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }

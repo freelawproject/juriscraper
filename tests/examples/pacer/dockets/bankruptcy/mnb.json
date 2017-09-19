@@ -1,13 +1,13 @@
 {
   "assigned_to_str": "Dennis D. O'Brien",
   "case_name": "Genmar Holdings, Inc.",
-  "cause": null,
+  "cause": "",
   "court_id": "mnb",
   "date_converted": null,
   "date_discharged": null,
   "date_filed": "2009-06-01",
   "date_terminated": null,
-  "demand": null,
+  "demand": "",
   "docket_entries": [
     {
       "date_filed": "2010-02-04",
@@ -53,9 +53,9 @@
     }
   ],
   "docket_number": "09-43537",
-  "jurisdiction": null,
-  "jury_demand": null,
-  "nature_of_suit": null,
+  "jurisdiction": "",
+  "jury_demand": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
@@ -212,5 +212,5 @@
       "type": "Creditor Committee"
     }
   ],
-  "referred_to_str": null
+  "referred_to_str": ""
 }
