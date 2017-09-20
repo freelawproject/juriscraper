@@ -364,10 +364,19 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
             report = PossibleCaseNumberApi()
             with open(path, 'r') as f:
                 report.parse_text(f.read().decode('utf-8'))
-            data = report.data
-            with open(json_path) as f:
-                j = json.load(f)
-                self.assertEqual(j, data)
+            data = report.data(case_name=filename_sans_ext)
+            if os.path.exists(json_path):
+                with open(json_path) as f:
+                    j = json.load(f)
+                    self.assertEqual(j, data)
+            else:
+                # If no json file, data should be None.
+                self.assertIsNone(
+                    data,
+                    msg="No json file detected and response is not None. "
+                        "Either create a json file for this test or make sure "
+                        "you get back valid results."
+                )
 
             sys.stdout.write("✓\n")
 

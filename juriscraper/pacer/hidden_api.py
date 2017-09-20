@@ -1,5 +1,6 @@
 from lxml import etree
 
+from ..lib.diff_tools import get_closest_match_index
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import force_unicode
 
@@ -50,30 +51,51 @@ class PossibleCaseNumberApi(object):
         response.raise_for_status()
         self.parse_text(response.text)
 
-    @property
-    def data(self):
-        """Get all the data back from this query"""
-        try:
-            return {
-                u'docket_number': force_unicode(
-                    self.xml_tree.xpath('//case/@number')[0]
-                ),
-                u'pacer_case_id': force_unicode(
-                    self.xml_tree.xpath('//case/@id')[0]
-                ),
-                # This could be further post processed to pull out the date closed
-                # and a cleaner title.
-                u'title': force_unicode(
-                    self.xml_tree.xpath('//case/@title')[0]
-                ),
-            }
-        except IndexError:
-            msg = self.xml_tree.xpath('//message/@text')[0]
-            if "Cannot find case" in msg:
-                logger.info("Cannot find case.")
-                return None
+    def data(self, case_name=None):
+        """Get data back from this query for the matching case.
+
+        :param case_name: This endpoint can return multiple cases for a given
+        query. If a case name is provided, and more than one case is returned,
+        we will try to identify the most similar case.
+        """
+        case_count = self.xml_tree.xpath('count(//case)')
+        if case_count == 0:
+            try:
+                msg = self.xml_tree.xpath('//message/@text')[0]
+            except IndexError:
+                pass
             else:
-                raise Exception("Unknown XML content in PossibleCaseNumberApi "
-                                "result.")
+                if "Cannot find case" in msg:
+                    logger.info("Cannot find case.")
+                    return None
+            raise Exception("Unknown XML content in PossibleCaseNumberApi "
+                            "result.")
+        elif case_count == 1:
+            case_index = 0
+        elif case_count > 1:
+            if case_name is not None:
+                # Disambiguate the possible case nodes to find the best one.
+                # Initial strings take the form:
+                #    2:16-cr-01152-JZB USA v. Abuarar (closed 01/26/2017)
+                # Attempt to pull out just the case name.
+                strs = [x.split(' ', 1)[1].split('(closed', 1)[0] for x in
+                        self.xml_tree.xpath('//case/@title')]
+                case_index = get_closest_match_index(case_name, strs)
+            else:
+                raise Exception("Multiple results returned but no way to "
+                                "choose the right match. Try the case_name "
+                                "parameter?")
 
-
+        return {
+            u'docket_number': force_unicode(
+                self.xml_tree.xpath('//case/@number')[case_index]
+            ),
+            u'pacer_case_id': force_unicode(
+                self.xml_tree.xpath('//case/@id')[case_index]
+            ),
+            # This could be further post processed to pull out the date closed
+            # and a cleaner title.
+            u'title': force_unicode(
+                self.xml_tree.xpath('//case/@title')[case_index]
+            ),
+        }
