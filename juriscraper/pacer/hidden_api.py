@@ -81,6 +81,10 @@ class PossibleCaseNumberApi(object):
                 strs = [x.split(' ', 1)[1].split('(closed', 1)[0] for x in
                         self.xml_tree.xpath('//case/@title')]
                 case_index = get_closest_match_index(case_name, strs)
+                if case_index is None:
+                    logger.warn("Got %s candidates, but unable to find good "
+                                "match to '%s'" % (case_count, case_name))
+                    return None
             else:
                 raise Exception("Multiple results returned but no way to "
                                 "choose the right match. Try the case_name "

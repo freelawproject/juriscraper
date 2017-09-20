@@ -43,9 +43,15 @@ def get_closest_match_index(word, possibilities):
 
     :param word: The string to match to.
     :param possibilities: A list of possible matches.
-    :return: The index of the closest matching possibility.
+    :return: The index of the closest matching possibility, if any. Else, return
+    None.
     """
     word = normalize_phrase(word)
     possibilities = [normalize_phrase(x) for x in possibilities]
-    match = difflib.get_close_matches(word, possibilities, n=1, cutoff=0.1)[0]
+    try:
+        match = difflib.get_close_matches(word, possibilities, n=1,
+                                          cutoff=0.1)[0]
+    except IndexError:
+        # No good matches.
+        return None
     return possibilities.index(match)
