@@ -7,7 +7,7 @@ from .string_utils import harmonize
 
 STOP_WORDS = (
     'a|an|and|as|at|but|by|en|etc|for|if|in|is|of|on|or|the|to|v\.?|via|'
-    'vs\.?|united|states?|et|al|appellants?|defendants?|administrator|'
+    'vs\.?|et|al|appellants?|defendants?|administrator|'
     'plaintiffs?|error|others|against|ex|parte|complainants?|original|'
     'claimants?|devisee|executrix|executor'
 )
