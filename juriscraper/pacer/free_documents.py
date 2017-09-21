@@ -19,7 +19,8 @@ logger = make_default_logger()
 
 
 class FreeOpinionReport(object):
-    """TODO: document here."""
+    """An object for querying and parsing the free opinion report."""
+
     EXCLUDED_COURT_IDS = ['casb', 'ganb', 'innb', 'mieb', 'miwb', 'nmib', 'nvb',
                           'ohsb', 'tnwb', 'vib']
     VALID_SORT_PARAMS = ('date_filed', 'case_number')
@@ -111,8 +112,8 @@ class FreeOpinionReport(object):
     def download_pdf(self, pacer_case_id, pacer_document_number):
         """Download a PDF from PACER.
 
-        Note that this doesn't support attachments yet. If a document is 
-        unavailable (sealed, gone, etc.), returns None. Else, returns 
+        Note that this doesn't support attachments yet. If a document is
+        unavailable (sealed, gone, etc.), returns None. Else, returns
         requests.Response object containing item.
         """
         timeout = (60, 300)

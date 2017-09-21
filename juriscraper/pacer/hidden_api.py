@@ -33,7 +33,7 @@ class PossibleCaseNumberApi(object):
         """Query the "possible case numbers" endpoint and return the results.
 
         :param docket_number: A string representing a docket number
-        :param court_id: A string representing the court_id of the case
+        :param court_id: A string representing the pacer court_id of the case
         :return: a request response object
         """
         assert self.session is not None, \
@@ -44,7 +44,8 @@ class PossibleCaseNumberApi(object):
         return self.session.get(url, timeout=300)
 
     def parse_text(self, text):
-        """Parse the response object and return it as data."""
+        """Parse the text of the response object and put it in the xml_tree attribute.
+        """
         self.xml_tree = etree.fromstring(text)
 
     def parse_response(self, response):
