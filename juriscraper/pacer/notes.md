@@ -74,6 +74,9 @@ This weird little URL has the following parts of interest:
           to bypass the attachments list screen and simply get the item you're 
           after.
           
+          We always coerce this value to zero to avoid duplicates in our
+          database.
+          
     6951218: The remaining numbers appear to just be a serial number for each 
           item. So far no patterns detected.
 
