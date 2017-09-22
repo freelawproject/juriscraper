@@ -1,32 +1,17 @@
-from lxml import etree
-
-from ..lib.html_utils import (
-    set_response_encoding, clean_html, fix_links_in_lxml_tree,
-    get_html5_parsed_text
-)
+from .reports import BaseReport
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import force_unicode
 
 logger = make_default_logger()
 
 
-class AttachmentPage(object):
+class AttachmentPage(BaseReport):
     """An object for querying and parsing the attachment page report. """
-    def __init__(self, court_id, pacer_session=None):
-        self.court_id = court_id
-        self.session = pacer_session
-        self.html_tree = None
-        super(AttachmentPage, self).__init__()
 
-    @property
-    def url(self):
-        if self.court_id == 'psc':
-            return "https://dcecf.psc.uscourts.gov/doc1/"
-        else:
-            return "https://ecf.%s.uscourts.gov/doc1/" % self.court_id
+    PATH = 'doc1/'
 
     def query(self, document_number):
-        """Query the "attachment page" endpoint and return results.
+        """Query the "attachment page" endpoint and set the results to self.response.
 
         :param document_number: The internal PACER document ID for the item.
         :return: a request response object
@@ -35,32 +20,8 @@ class AttachmentPage(object):
             "session attribute of DocketReport cannot be None."
         url = self.url + document_number
         logger.info(u'Querying the attachment page endpoint at URL: %s' % url)
-        return self.session.get(url, timeout=300)
-
-    def parse_text(self, text):
-        """Parse the HTML as unicode text and set self.html_tree
-
-        :param text: A unicode object
-        :return: None
-        """
-        assert isinstance(text, unicode), \
-            "Input must be unicode, not %s" % type(text)
-        text = clean_html(text)
-        tree = get_html5_parsed_text(text)
-        etree.strip_elements(tree, u'script')
-        tree.rewrite_links(fix_links_in_lxml_tree, base_href=self.url)
-        self.html_tree = tree
-
-    def parse_response(self, response):
-        """Parse HTML provided in a requests.response object and set
-        self.html_tree
-
-        :param response: a python request response object
-        :return: None
-        """
-        response.raise_for_status()
-        set_response_encoding(response)
-        self.parse_text(response.text)
+        self.response = self.session.get(url)
+        self.parse()
 
     @property
     def data(self):
@@ -76,7 +37,7 @@ class AttachmentPage(object):
 
         See the JSON objects in the tests for more examples.
         """
-        rows = self.html_tree.xpath('//tr[.//a]')
+        rows = self.tree.xpath('//tr[.//a]')
         if not rows:
             logger.info("No documents found on attachment page.")
             return {}

@@ -1,7 +1,5 @@
 # coding=utf-8
-import re
-from six.moves.urllib.parse import urljoin
-
+from .reports import BaseReport
 from ..lib.date_utils import make_date_range_tuples
 from ..lib.html_utils import (
     set_response_encoding, clean_html, fix_links_in_lxml_tree,
@@ -10,28 +8,24 @@ from ..lib.html_utils import (
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import convert_date_string
 from ..pacer.utils import (
-    get_pacer_case_id_from_docket_url, make_doc1_url,
-    get_pacer_doc_id_from_doc1_url, get_court_id_from_url,
-    reverse_goDLS_function, is_pdf
+    get_pacer_case_id_from_docket_url, get_pacer_doc_id_from_doc1_url,
+    reverse_goDLS_function,
 )
 
 logger = make_default_logger()
 
 
-class FreeOpinionReport(object):
+class FreeOpinionReport(BaseReport):
     """An object for querying and parsing the free opinion report."""
 
     EXCLUDED_COURT_IDS = ['casb', 'ganb', 'innb', 'mieb', 'miwb', 'nmib', 'nvb',
                           'ohsb', 'tnwb', 'vib']
     VALID_SORT_PARAMS = ('date_filed', 'case_number')
 
-    redirect_regex = re.compile('window\.\s*?location\s*=\s*"(.*)"\s*;')
-
     def __init__(self, court_id, pacer_session):
-        self.court_id = court_id
-        self.session = pacer_session
-
-        super(FreeOpinionReport, self).__init__()
+        self.responses = None
+        self.trees = []
+        super(FreeOpinionReport, self).__init__(court_id, pacer_session)
 
     @property
     def url(self):
@@ -75,22 +69,28 @@ class FreeOpinionReport(object):
             response = self.session.post(self.url + '?1-L_1_0-1', data=data)
             responses.append(response)
 
-        return responses
+        self.responses = responses
+        self.parse()
 
-    @staticmethod
-    def parse(responses):
+    def parse(self):
         """Using a list of responses, parse out useful information and return
         it as a list of dicts.
         """
-        results = []
-        court_id = "Court not yet set."
-        for response in responses:
+        # Reset self.trees before each run or successive runs will add more and
+        # more rows.
+        self.trees = []
+        for response in self.responses:
             response.raise_for_status()
-            court_id = get_court_id_from_url(response.url)
             set_response_encoding(response)
             text = clean_html(response.text)
             tree = get_html_parsed_text(text)
             tree.rewrite_links(fix_links_in_lxml_tree, base_href=response.url)
+            self.trees.append(tree)
+
+    @property
+    def data(self):
+        results = []
+        for tree in self.trees:
             opinion_count = int(
                 tree.xpath('//b[contains(text(), "Total number of '
                            'opinions reported")]')[0].tail)
@@ -101,74 +101,13 @@ class FreeOpinionReport(object):
                 if results:
                     # If we have results already, pass the previous result to
                     # the FreeOpinionRow object.
-                    row = FreeOpinionRow(row, results[-1], court_id)
+                    row = FreeOpinionRow(row, results[-1], self.court_id)
                 else:
-                    row = FreeOpinionRow(row, {}, court_id)
+                    row = FreeOpinionRow(row, {}, self.court_id)
                 results.append(row)
         logger.info("Parsed %s results from written opinions report at %s" %
-                    (len(results), court_id))
+                    (len(results), self.court_id))
         return results
-
-    def download_pdf(self, pacer_case_id, pacer_document_number):
-        """Download a PDF from PACER.
-
-        Note that this doesn't support attachments yet. If a document is
-        unavailable (sealed, gone, etc.), returns None. Else, returns
-        requests.Response object containing item.
-        """
-        timeout = (60, 300)
-        url = make_doc1_url(self.court_id, pacer_document_number, True)
-        data = {
-            'case_id': pacer_case_id,
-            'got_receipt': '1',
-        }
-
-        logger.info("GETting PDF at URL: %s with params: %s" % (url, data))
-        r = self.session.get(url, params=data, timeout=timeout)
-
-        if u'This document is not available' in r.text:
-            logger.error("Document not available in case: %s at %s" %
-                         (url, pacer_case_id))
-            return None
-
-        # Some pacer sites use window.location in their JS, so we have to look
-        # for that. See: oknd, 13-cv-00357-JED-FHM, doc #24. But, be warned, you
-        # can only catch the redirection with JS off.
-        m = self.redirect_regex.search(r.text)
-        if m is not None:
-            r = self.session.get(urljoin(url, m.group(1)))
-            r.raise_for_status()
-
-        # The request above sometimes generates an HTML page with an iframe
-        # containing the PDF, and other times returns the PDF directly. ∴ either
-        # get the src of the iframe and download the PDF or just return the pdf.
-        r.raise_for_status()
-        if is_pdf(r):
-            logger.info('Got PDF binary data for case %s at: %s' % (url, data))
-            return r
-
-        text = clean_html(r.text)
-        tree = get_html_parsed_text(text)
-        tree.rewrite_links(fix_links_in_lxml_tree,
-                           base_href=r.url)
-        try:
-            iframe_src = tree.xpath('//iframe/@src')[0]
-        except IndexError:
-            if 'pdf:Producer' in text:
-                logger.error("Unable to download PDF. PDF content was placed "
-                             "directly in HTML. URL: %s, caseid: %s" %
-                             (url, pacer_case_id))
-            else:
-                logger.error("Unable to download PDF. PDF not served as binary "
-                             "data and unable to find iframe src attribute. "
-                             "URL: %s, caseid: %s" % (url, pacer_case_id))
-            return None
-
-        r = self.session.get(iframe_src, timeout=timeout)
-        if is_pdf(r):
-            logger.info('Got iframed PDF data for case %s at: %s' % (url, iframe_src))
-
-        return r
 
     def _normalize_sort_param(self, sort):
         if sort == 'date_filed':
@@ -177,7 +116,7 @@ class FreeOpinionReport(object):
             return 'cs_sort_case_numb'
         else:
             raise ValueError("Invalid sort parameter. Value must be one of: %s"
-                             % self.VALID_SORT_PARAMS)
+                             % ', '.join(self.VALID_SORT_PARAMS))
 
 
 class FreeOpinionRow(object):

@@ -115,7 +115,7 @@ class PacerSessionTest(unittest.TestCase):
         # This triggers and auto-login because we aren't logged in yet.
         self.session.username = PACER_USERNAME
         self.session.password = PACER_PASSWORD
-        r = self.session.get(url, params={
+        _ = self.session.get(url, params={
             'case_id': pacer_case_id,
             'got_receipt': '1',
         }, allow_redirects=True)
@@ -203,8 +203,7 @@ class PacerFreeOpinionsTest(unittest.TestCase):
                     raise ValueError("Runaway date query for %s: %s" %
                                      (court_id, some_date))
                 try:
-                    responses = report.query(some_date, some_date,
-                                             sort='case_number')
+                    report.query(some_date, some_date, sort='case_number')
                 except ConnectionError as e:
                     if retry_count <= max_retries:
                         print("%s. Trying again (%s of %s)" %
@@ -215,9 +214,8 @@ class PacerFreeOpinionsTest(unittest.TestCase):
                     else:
                         print("%s: Repeated errors at this court." % e)
                         raise e
-                if not responses:
+                if not report.responses:
                     break  # Not a supported court.
-                results = report.parse(responses)
                 some_date += timedelta(days=1)
 
             else:
@@ -226,8 +224,11 @@ class PacerFreeOpinionsTest(unittest.TestCase):
                     for k, v in result.items():
                         if k in ['nature_of_suit', 'cause']:
                             continue
-                        self.assertIsNotNone(v, msg="Value of key %s is None "
-                                                    "in court %s" % (k, court_id))
+                        self.assertIsNotNone(
+                            v,
+                            msg="Value of key %s is None in court %s" %
+                                (k, court_id)
+                        )
 
                 # Can we download one item from each court?
                 r = report.download_pdf(results[0]['pacer_case_id'],
@@ -270,9 +271,8 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         court_id = 'paeb'
         report = self.reports[court_id]
         some_date = convert_date_string(self.valid_dates[court_id])
-        responses = report.query(some_date, some_date, sort='case_number')
-        results = report.parse(responses)
-        self.assertEqual(3, len(results), 'should get 3 responses for ksb')
+        report.query(some_date, some_date, sort='case_number')
+        self.assertEqual(3, len(report.data), 'should get 3 responses for ksb')
 
     @SKIP_IF_NO_PACER_LOGIN
     def test_query_using_last_good_row(self):
@@ -282,9 +282,8 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         court_id = 'ksb'
         report = self.reports[court_id]
         some_date = convert_date_string(self.valid_dates[court_id])
-        responses = report.query(some_date, some_date, sort='case_number')
-        results = report.parse(responses)
-        self.assertEqual(2, len(results), 'should get 2 response for ksb')
+        report.query(some_date, some_date, sort='case_number')
+        self.assertEqual(2, len(report.data), 'should get 2 response for ksb')
 
     @SKIP_IF_NO_PACER_LOGIN
     def test_ordering_by_date_filed(self):
@@ -298,18 +297,16 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         for test in tests:
             report = self.reports[test['court']]
             some_date = convert_date_string(self.valid_dates[test['court']])
-            responses = report.query(some_date, some_date, sort='date_filed')
-            results = report.parse(responses)
+            report.query(some_date, some_date, sort='date_filed')
             self.assertEqual(
                 test['count'],
-                len(results),
+                len(report.data),
                 'Should get %s response for %s' % (test['count'], test['court'])
             )
-            responses = report.query(some_date, some_date, sort='case_number')
-            results = report.parse(responses)
+            report.query(some_date, some_date, sort='case_number')
             self.assertEqual(
                 test['count'],
-                len(results),
+                len(report.data),
                 'should get %s response for %s' % (test['count'], test['court'])
             )
 
@@ -324,13 +321,8 @@ class PacerFreeOpinionsTest(unittest.TestCase):
 
         results = report.query(some_date, some_date, sort='case_number')
         self.assertEqual([], results, 'should have empty result set')
-        self.assertFalse(mock_session.post.called, 'should not trigger a POST query')
-
-        report = self.reports['cand']
-        report.session = mock_session
-        report.query(some_date, some_date, sort='case_number')
-        self.assertTrue(mock_session.post.called, 'good court should POST')
-
+        self.assertFalse(mock_session.post.called,
+                         msg='should not trigger a POST query')
 
 class PacerPossibleCaseNumbersTest(unittest.TestCase):
     def test_parsing_results(self):
@@ -349,9 +341,9 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
             filename_sans_ext = filename.split('.')[0]
             json_path = os.path.join(dirname, '%s.json' % filename_sans_ext)
 
-            report = PossibleCaseNumberApi()
+            report = PossibleCaseNumberApi('anything')
             with open(path, 'r') as f:
-                report.parse_text(f.read().decode('utf-8'))
+                report._parse_text(f.read().decode('utf-8'))
             data = report.data(case_name=filename_sans_ext)
             if os.path.exists(json_path):
                 with open(json_path) as f:
@@ -392,7 +384,7 @@ class PacerAttachmentPageTest(unittest.TestCase):
 
             report = AttachmentPage(court)
             with open(path, 'r') as f:
-                report.parse_text(f.read().decode('utf-8'))
+                report._parse_text(f.read().decode('utf-8'))
             data = report.data
             with open(json_path) as f:
                 j = json.load(f)
@@ -424,56 +416,59 @@ class PacerDocketReportTest(unittest.TestCase):
     @vcr.use_cassette(record_mode='new_episodes')
     def test_queries(self):
         """Do a variety of queries work?"""
-        r = self.report.query(self.pacer_case_id)
-        self.assertIn('Deft previously', r.text,
+        self.report.query(self.pacer_case_id)
+        self.assertIn('Deft previously', self.report.response.text,
                       msg="Super basic query failed")
 
-        r = self.report.query(self.pacer_case_id, date_start=date(2007, 2, 7))
-        row_count = self._count_rows(r.text)
+        self.report.query(self.pacer_case_id, date_start=date(2007, 2, 7))
+        row_count = self._count_rows(self.report.response.text)
         self.assertEqual(row_count, 25, msg="Didn't get expected number of "
                                             "rows when filtering by start "
                                             "date. Got %s." % row_count)
 
-        r = self.report.query(self.pacer_case_id, date_start=date(2007, 2, 7),
-                              date_end=date(2007, 2, 8))
-        row_count = self._count_rows(r.text)
+        self.report.query(self.pacer_case_id, date_start=date(2007, 2, 7),
+                          date_end=date(2007, 2, 8))
+        row_count = self._count_rows(self.report.response.text)
         self.assertEqual(row_count, 2, msg="Didn't get expected number of "
                                            "rows when filtering by start and "
                                            "end dates. Got %s." % row_count)
 
-        r = self.report.query(self.pacer_case_id, doc_num_start=5,
-                              doc_num_end=5)
-        row_count = self._count_rows(r.text)
+        self.report.query(self.pacer_case_id, doc_num_start=5,
+                          doc_num_end=5)
+        row_count = self._count_rows(self.report.response.text)
         self.assertEqual(row_count, 1, msg="Didn't get expected number of rows "
                                            "when filtering by doc number. Got "
                                            "%s" % row_count)
 
-        r = self.report.query(self.pacer_case_id, date_start=date(2007, 2, 7),
-                              date_end=date(2007, 2, 8), date_range_type="Entered")
-        row_count = self._count_rows(r.text)
+        self.report.query(self.pacer_case_id, date_start=date(2007, 2, 7),
+                          date_end=date(2007, 2, 8), date_range_type="Entered")
+        row_count = self._count_rows(self.report.response.text)
         self.assertEqual(row_count, 2, msg="Didn't get expected number of rows "
                                            "when filtering by start and end "
                                            "dates and date_range_type of "
                                            "Entered. Got %s" % row_count)
 
-        r = self.report.query(self.pacer_case_id, doc_num_start=500,
-                              show_parties_and_counsel=True)
-        self.assertIn('deRosas', r.text, msg="Didn't find party info when it "
-                                             "was explicitly requested.")
-        r = self.report.query(self.pacer_case_id, doc_num_start=500,
-                              show_parties_and_counsel=False)
-        self.assertNotIn('deRosas', r.text, msg="Got party info but it was not "
-                                                "requested.")
+        self.report.query(self.pacer_case_id, doc_num_start=500,
+                          show_parties_and_counsel=True)
+        self.assertIn('deRosas', self.report.response.text,
+                      msg="Didn't find party info when it was explicitly "
+                          "requested.")
+        self.report.query(self.pacer_case_id, doc_num_start=500,
+                          show_parties_and_counsel=False)
+        self.assertNotIn('deRosas', self.report.response.text,
+                         msg="Got party info but it was not requested.")
 
-        r = self.report.query(self.pacer_case_id, doc_num_start=500,
-                              show_terminated_parties=True,
-                              show_parties_and_counsel=True)
-        self.assertIn('Rosado', r.text, msg="Didn't get terminated party info "
-                                            "when it was requested.")
-        r = self.report.query(self.pacer_case_id, doc_num_start=500,
-                              show_terminated_parties=False)
-        self.assertNotIn('Rosado', r.text, msg="Got terminated party info but "
-                                               "it wasn't requested.")
+        self.report.query(self.pacer_case_id, doc_num_start=500,
+                          show_terminated_parties=True,
+                          show_parties_and_counsel=True)
+        self.assertIn('Rosado', self.report.response.text,
+                      msg="Didn't get terminated party info when it was "
+                          "requested.")
+        self.report.query(self.pacer_case_id, doc_num_start=500,
+                          show_terminated_parties=False)
+        self.assertNotIn('Rosado', self.report.response.text,
+                         msg="Got terminated party info but it wasn't "
+                             "requested.")
 
 
 class DocketParseTest(unittest.TestCase):
@@ -500,7 +495,7 @@ class DocketParseTest(unittest.TestCase):
 
             report = DocketReport(court)
             with open(path, 'r') as f:
-                report.parse_text(f.read().decode('utf-8'))
+                report._parse_text(f.read().decode('utf-8'))
             data = report.data
 
             # Make sure some required fields are populated.

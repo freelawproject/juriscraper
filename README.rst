@@ -217,10 +217,12 @@ Version History
 -  1.4.* - Python 3 compatibility.
 -  1.5.* - Adds support for querying and parsing PACER dockets.
 -  1.6.* - Adds automatic relogin code to PACER sessions, with reorganization of old login APIs.
+- 1.7.* - Adds support for hidden PACER APIs.
+- 1.8.* - Standardization of string fields in PACER objects so they return the empty string when they have no value instead of returning None sometimes and the empty string others. (This follows Django conventions.)
 
 **Current**
 
-- 1.7.* - Adds support for hidden PACER APIs.
+- 1.9.* - Re-organization, simplification, and standardization of PACER classes.
 
 **Immediate Future Goals**
 

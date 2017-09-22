@@ -4,9 +4,8 @@ from lxml import etree
 from lxml.html import tostring, fromstring, HtmlElement
 
 from .docket_utils import normalize_party_types
+from .reports import BaseReport
 from .utils import get_pacer_doc_id_from_doc1_url, clean_pacer_object
-from ..lib.html_utils import set_response_encoding, clean_html, \
-    get_html5_parsed_text, fix_links_in_lxml_tree
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import convert_date_string, force_unicode, harmonize
@@ -17,7 +16,7 @@ logger = make_default_logger()
 date_regex = r'[—\d\-–/]*'
 
 
-class DocketReport(object):
+class DocketReport(BaseReport):
 
     case_name_regex = re.compile(r"(?:Case\s+title:\s+)?(.*\bv\.\s.*)")
     in_re_regex = re.compile(r"\bIN\s+RE:\s+.*", flags=re.IGNORECASE)
@@ -35,12 +34,11 @@ class DocketReport(object):
     docket_number_dist_regex = re.compile(r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
     docket_number_bankr_regex = re.compile(r"#:\s+((\d-)?\d\d-\d*)")
 
-    def __init__(self, court_id, pacer_session=None):
-        self.court_id = court_id
-        self.session = pacer_session
-        self.html_tree = None
+    PATH = 'cgi-bin/DktRpt.pl'
 
+    def __init__(self, court_id, pacer_session=None):
         # Cache-properties
+        super(DocketReport, self).__init__(court_id, pacer_session)
         self._metadata = None
         self._parties = None
         self._docket_entries = None
@@ -50,15 +48,6 @@ class DocketReport(object):
             self.is_bankruptcy = True
         else:
             self.is_bankruptcy = False
-
-        super(DocketReport, self).__init__()
-
-    @property
-    def url(self):
-        if self.court_id == 'psc':
-            return 'https://dcecf.psc.uscourts.gov/cgi-bin/DktRpt.pl'
-        else:
-            return 'https://ecf.%s.uscourts.gov/cgi-bin/DktRpt.pl' % self.court_id
 
     @property
     def data(self):
@@ -141,7 +130,7 @@ class DocketReport(object):
             '    ./td[1]//b/text()[contains(., "-----")]'  # Adversary proceedings
             ']/../tr'
         )
-        party_rows = self.html_tree.xpath(path)
+        party_rows = self.tree.xpath(path)
 
         parties = []
         party = {}
@@ -330,7 +319,7 @@ class DocketReport(object):
         path = (u'//tr['
                 u'  .//text()[contains(., "Docket Text")'
                 u']]/following-sibling::tr')
-        docket_entry_rows = self.html_tree.xpath(path)
+        docket_entry_rows = self.tree.xpath(path)
 
         docket_entries = []
         for row in docket_entry_rows:
@@ -364,7 +353,7 @@ class DocketReport(object):
 
         adversary_proceeding = False
         path = u'//*[text()[contains(., "Adversary Proceeding")]]'
-        if self.html_tree.xpath(path):
+        if self.tree.xpath(path):
             adversary_proceeding = True
 
         self._is_adversary_proceeding = adversary_proceeding
@@ -459,36 +448,13 @@ class DocketReport(object):
         logger.info(u"Querying docket report for case ID '%s' with params %s" %
                     (pacer_case_id, query_params))
 
-        return self.session.post(self.url + '?1-L_1_0-1', data=query_params,
-                                 timeout=300)
-
-    def parse_text(self, text):
-        """Parse an HTML docket as unicode text and set self.html_tree
-
-        :param text: A unicode object
-        :return: None
-        """
-        assert isinstance(text, unicode), "Input must be unicode, not %s" % type(text)
-        text = clean_html(text)
-        tree = get_html5_parsed_text(text)
-        etree.strip_elements(tree, u'script')
-        tree.rewrite_links(fix_links_in_lxml_tree, base_href=self.url)
-        self.html_tree = tree
-
-    def parse_response(self, response):
-        """Parse an HTML docket page provided in a requests.response object and
-        set self.html_tree
-
-        :param response: a python request response object
-        :return: None
-        """
-        response.raise_for_status()
-        set_response_encoding(response)
-        self.parse_text(response.text)
+        self.response = self.session.post(self.url + '?1-L_1_0-1',
+                                          data=query_params)
+        self.parse()
 
     def _set_metadata_values(self):
         # The first ancestor table of the table cell containing "date filed"
-        table = self.html_tree.xpath(
+        table = self.tree.xpath(
             # Match any td containing Date [fF]iled
             u'//td[.//text()[contains(translate(., "f", "F"), "Date Filed:")]]'
             # And find its highest ancestor table that lacks a center tag.
@@ -588,7 +554,7 @@ class DocketReport(object):
             # This is probably a sub docket to a larger case. Use that title.
             try:
                 path = u'//i[contains(., "Lead BK Title")]/following::text()'
-                case_name = self.html_tree.xpath(path)[0].strip()
+                case_name = self.tree.xpath(path)[0].strip()
             except IndexError:
                 case_name = u"Unknown Case Title"
 
@@ -622,7 +588,7 @@ class DocketReport(object):
         else:
             docket_number_path = '//h3'
             regexes = [self.docket_number_dist_regex]
-        nodes = self.html_tree.xpath(docket_number_path)
+        nodes = self.tree.xpath(docket_number_path)
         string_nodes = [s.text_content() for s in nodes]
         for regex in regexes:
             for s in string_nodes:
@@ -634,7 +600,7 @@ class DocketReport(object):
         if self.is_adversary_proceeding:
             # Add the next table too, if it contains the nature of suit.
             path = u'//table[contains(., "Nature[s] of")]//tr'
-            rows = self.html_tree.xpath(path)
+            rows = self.tree.xpath(path)
             nos = []
             for row in rows:
                 cell_texts = [force_unicode(s.strip()) for s in
