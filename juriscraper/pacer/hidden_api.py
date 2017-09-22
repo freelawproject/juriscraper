@@ -20,16 +20,15 @@ class PossibleCaseNumberApi(BaseReport):
     """
     PATH = 'cgi-bin/possible_case_numbers.pl'
 
-    def query(self, docket_number, court_id):
+    def query(self, docket_number):
         """Query the "possible case numbers" endpoint and return the results.
 
         :param docket_number: A string representing a docket number
-        :param court_id: A string representing the pacer court_id of the case
         :return: a request response object
         """
         assert self.session is not None, \
             "session attribute of DocketReport cannot be None."
-        url = "%s?%s" % (self.url(court_id), docket_number)
+        url = "%s?%s" % (self.url, docket_number)
         logger.info(u'Querying the possible case number endpoint at URL: %s' %
                     url)
         self.response = self.session.get(url)
