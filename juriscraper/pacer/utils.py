@@ -41,14 +41,17 @@ def get_pacer_case_id_from_docket_url(url):
 
 
 def get_pacer_doc_id_from_doc1_url(url):
-    """Extract the pacer document ID from the doc1 URL. Coerce the fourth digit 
+    """Extract the pacer document ID from the doc1 URL. Coerce the fourth digit
     to zero.
 
     In:  https://ecf.almd.uscourts.gov/doc1/01712427473
     Out: 01702427473
     In:  /doc1/01712427473
     Out: 01702427473
-    
+
+    Note that results are strings, not ints, because many of the strings start
+    with zero.
+
     See tests for more examples.
     """
     url = url.rsplit('/', 1)[1].split('?')[0]
@@ -128,18 +131,18 @@ def is_pdf(response):
 
 def clean_pacer_object(obj):
     """Clean a list or dict that is part of a scraping response.
-    
+
     PACER data is notoriously horrible, so this function attempts to clean up
     common problems that it may have. You can pass in either a dict or a list,
     and it will be cleaned recursively.
-    
+
     Supported cleanup includes:
-    
+
     1. Removing spaces before commas.
     1. Stripping whitespace from the ends.
     1. Normalizing white space.
     1. Forcing unicode.
-    
+
     :param obj: A dict or list containing string objects.
     :return: A dict or list with the string values cleaned.
     """

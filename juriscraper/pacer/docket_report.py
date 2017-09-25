@@ -479,8 +479,7 @@ class DocketReport(BaseReport):
             # We find the first link having the document number as text.
             # This is needed because txnb combines the second and third
             # column in their docket report.
-            path = u'.//a'
-            urls = cell.xpath(path)
+            urls = cell.xpath(u'.//a')
             if len(urls) == 0:
                 # Docket entry exists, but cannot download document (it's sealed
                 # or otherwise unavailable in PACER).

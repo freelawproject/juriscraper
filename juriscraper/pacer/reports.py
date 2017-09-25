@@ -54,7 +54,9 @@ class BaseReport(object):
         """Parse the HTML as unicode text and set self.tree
 
         This is a particularly critical method when running tests, which pull
-        from local disk instead of from a query response.
+        from local disk instead of from a query response. This is also used
+        when data comes from a source other than self.query() (such as a user
+        upload). This method should probably be made public as .parse_text().
 
         :param text: A unicode object
         :return: None
