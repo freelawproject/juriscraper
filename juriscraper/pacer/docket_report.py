@@ -36,18 +36,32 @@ class DocketReport(BaseReport):
 
     PATH = 'cgi-bin/DktRpt.pl'
 
+    CACHE_ATTRS = ['metadata', 'parties', 'docket_entries',
+                   'is_adversary_proceeding']
+
     def __init__(self, court_id, pacer_session=None):
-        # Cache-properties
         super(DocketReport, self).__init__(court_id, pacer_session)
-        self._metadata = None
-        self._parties = None
-        self._docket_entries = None
-        self._is_adversary_proceeding = None
+        # Initialize the empty cache properties.
+        self._clear_caches()
 
         if self.court_id.endswith('b'):
             self.is_bankruptcy = True
         else:
             self.is_bankruptcy = False
+
+    def _clear_caches(self):
+        """Clear any caches that are on the object."""
+        for attr in self.CACHE_ATTRS:
+            setattr(self, '_%s' % attr, None)
+
+    def parse(self):
+        """Parse the item, but be sure to clear the cache before you do so.
+
+        This ensures that if the DocketReport is used to parse multiple items,
+        the cache is cleared in between.
+        """
+        self._clear_caches()
+        super(DocketReport, self).parse()
 
     @property
     def data(self):

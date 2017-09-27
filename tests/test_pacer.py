@@ -470,6 +470,27 @@ class PacerDocketReportTest(unittest.TestCase):
                          msg="Got terminated party info but it wasn't "
                              "requested.")
 
+    @vcr.use_cassette(record_mode='new_episodes')
+    def test_using_same_report_twice(self):
+        """Do the caches get properly nuked between runs?
+
+        See issue #187.
+        """
+        # Query the first one...
+        self.report.query(self.pacer_case_id)
+        d = self.report.data.copy()
+
+        # Then the second one...
+        second_pacer_case_id = '63111'  # 1:07-cv-00035-RJA-HKS Anson v. USA
+        self.report.query(second_pacer_case_id)
+        d2 = self.report.data.copy()
+        self.assertNotEqual(
+            d,
+            d2,
+            msg="Got same values for docket data of two different queries. "
+                "Is there a problem with the caches on the DocketReport?"
+        )
+
 
 class DocketParseTest(unittest.TestCase):
     """Lots of docket parsing tests."""
