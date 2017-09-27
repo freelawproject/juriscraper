@@ -20,6 +20,9 @@ class AttachmentPage(BaseReport):
         """
         assert self.session is not None, \
             "session attribute of DocketReport cannot be None."
+        # coerce the fourth digit of the document number to 1 to ensure we get
+        # the attachment page.
+        document_number = document_number[:3] + "0" + document_number[4:]
         url = self.url + document_number
         logger.info(u'Querying the attachment page endpoint at URL: %s' % url)
         self.response = self.session.get(url)
