@@ -20,7 +20,7 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         today = date.today()
-        self.url = 'http://www.judicial.state.sc.us/opinions/indexSCPub.cfm?year=%s&month=%s' % (today.year, today.month)
+        self.url = 'http://www.sccourts.org/opinions/indexSCPub.cfm?year=%d&month=%d' % (today.year, today.month)
 
     def _get_download_urls(self):
         path = '//div[@id="pageContentOpinionList"]//a[contains(@href, "HTMLFiles") or contains(@href, "courtOrders")]/@href'
