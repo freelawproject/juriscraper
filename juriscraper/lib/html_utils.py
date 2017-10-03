@@ -110,8 +110,8 @@ def clean_html(text):
     text = re.sub('</br>', '<br/>', text)
 
     # Fix invalid bytes (http://stackoverflow.com/questions/8733233/)
-    text = re.sub(u'[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD'
-                  u'\U00010000-\U0010FFFF]+', u'', text)
+    text = re.sub('[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD'
+                  '\U00010000-\U0010FFFF]+', u'', text)
 
     return text
 
