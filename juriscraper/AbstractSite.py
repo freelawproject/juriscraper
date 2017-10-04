@@ -1,23 +1,23 @@
-import json
-import certifi
 import hashlib
+import json
+from datetime import date, datetime
+
+import certifi
 import requests
 import six
-
-from datetime import date, datetime
 from requests.adapters import HTTPAdapter
 
+from juriscraper.lib.date_utils import json_date_handler, fix_future_year_typo
 from juriscraper.lib.exceptions import InsanityException
-from juriscraper.lib.test_utils import MockRequest
 from juriscraper.lib.html_utils import (
     get_html_parsed_text, set_response_encoding, clean_html,
     fix_links_in_lxml_tree
 )
-from juriscraper.lib.date_utils import json_date_handler, fix_future_year_typo
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
     harmonize, clean_string, trunc, CaseNameTweaker
 )
+from juriscraper.lib.test_utils import MockRequest
 
 logger = make_default_logger()
 
@@ -161,11 +161,11 @@ class AbstractSite(object):
             1. Has the `cookies` attribute been normalized to a dict?
             1. ?
 
-        The signature of this method is subject to change as additional checks become
-        convenient.
+        The signature of this method is subject to change as additional checks
+        become convenient.
 
-        Inheriting classes should override this method calling super to give it the
-        necessary parameters.
+        Inheriting classes should override this method calling super to give it
+        the necessary parameters.
 
         If sanity is OK, no return value. If not, throw InsanityException or
         warnings, as appropriate.

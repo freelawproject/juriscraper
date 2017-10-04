@@ -6,11 +6,19 @@ History:
  - 04-18-2014: Created.
  - 09-18-2014: Updated by mlr.
  - 10-17-2014: Updated by mlr to fix InsanityError
+ - 2017-10-04: Updated by mlr to deal with their anti-bot system. Crux of change
+               is to ensure that we get a cookie in our session by visiting the
+               homepage before we go and scrape. Dumb.
+
+Contact information:
+ - Help desk: (803) 734-1193, Travis
+ - Security desk: 803-734-5906, Joe Hilke
 """
 
-import re
 from datetime import date
 from datetime import datetime
+
+import re
 
 from juriscraper.OpinionSite import OpinionSite
 
@@ -21,6 +29,22 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         today = date.today()
         self.url = 'http://www.sccourts.org/opinions/indexSCPub.cfm?year=%d&month=%d' % (today.year, today.month)
+        self.sc_homepage = 'http://www.sccourts.org'
+
+    def _request_url_get(self, url):
+        """SC has an annoying system that requires cookies to scrape.
+
+        Therefore, before we scrape, we go and get some cookies.
+        """
+        self.request['session'].get(self.sc_homepage)
+        self.request['url'] = url
+        self.request['response'] = self.request['session'].get(
+            url,
+            headers=self.request['headers'],
+            verify=self.request['verify'],
+            timeout=60,
+            **self.request['parameters']
+        )
 
     def _get_download_urls(self):
         path = '//div[@id="pageContentOpinionList"]//a[contains(@href, "HTMLFiles") or contains(@href, "courtOrders")]/@href'

@@ -116,6 +116,12 @@ Instead of installing Juriscraper via pip, do the following:
     pip install -r requirements.txt
     python setup.py test
 
+You may need to also install Juriscraper locally with:
+
+::
+
+   pip install .
+
 Usage
 =====
 
