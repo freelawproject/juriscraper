@@ -44,6 +44,8 @@ class AbstractSite(object):
             'verify': certifi.where(),
             'session': requests.session(),
             'headers': {'User-Agent': 'Juriscraper'},
+            # Disable CDN caching on sites like SCOTUS (ahem)
+            'cache-control': 'no-cache, no-store, max-age=1',
             'parameters': {},
             'request': None,
             'status': None,
