@@ -4,6 +4,7 @@ from __future__ import print_function
 
 import datetime
 import glob
+import json
 import logging
 import sys
 import time
@@ -110,6 +111,7 @@ class DateTest(unittest.TestCase):
 
 class ScraperExampleTest(unittest.TestCase):
     def setUp(self):
+        self.maxDiff = 1000
         # Disable logging
         logging.disable(logging.CRITICAL)
 
@@ -179,25 +181,32 @@ class ScraperExampleTest(unittest.TestCase):
                     site.parse()
                     # Now validate that the parsed result is as we expect
                     json_path = '%s%s' % (path.rsplit('.', 1)[0], json_compare_extension)
-                    json_data = site.to_json()
+                    json_data = json.loads(site.to_json(), encoding='utf-8')
                     if os.path.isfile(json_path):
                         # Compare result with corresponding json file
                         example_file = path.rsplit('/', 1)[1]
                         compare_file = json_path.rsplit('/', 1)[1]
-                        error = ('The result of parsing ' + example_file +
-                                 ' does not match the expected data in ' +
-                                 compare_file + '. Either the later has ' +
-                                 'bad data or recent changes to this scraper ' +
-                                 'are incompatible with the ' + example_file +
-                                 ' use case. PARSED JSON: ' + json_data)
                         with open(json_path, 'r') as input_file:
-                            self.assertEqual(input_file.read(), json_data, error)
+                            fixture_json = json.load(input_file)
+                            self.assertEqual(
+                                len(fixture_json),
+                                len(json_data),
+                                msg="Fixture and scraped data have different "
+                                    "lengths: %s and %s" % (len(fixture_json),
+                                                            len(json_data))
+                            )
+                            for i, item in enumerate(fixture_json):
+                                self.assertEqual(
+                                    fixture_json[i],
+                                    json_data[i],
+                                )
+
                     else:
                         # Generate corresponding json file if it doesn't
                         # already exist. This should only happen once
                         # when adding a new example html file.
                         with open(json_path, 'w') as json_example:
-                            json_example.write(json_data)
+                            json.dump(json_data, json_example, indent=2)
                 t2 = time.time()
 
                 max_speed = 15
