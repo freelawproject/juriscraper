@@ -75,7 +75,7 @@ class Site(OralArgumentSite):
         """
         def fetcher(seed_url):
             if self.method == 'LOCAL':
-                return "No case names fetched during tests."
+                return "No links fetched during tests."
             else:
                 # Goes to second page, grabs the link and returns it.
                 html_tree = self._get_html_tree_by_url(seed_url)

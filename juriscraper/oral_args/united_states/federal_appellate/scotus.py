@@ -1,9 +1,9 @@
 """Scraper for Supreme Court of U.S.
 CourtID: scotus
 Court Short Name: scotus
-Author: Andrei Chelaru
-Reviewer: mlr
-Date created: 20 July 2014
+History:
+ - 2014-07-20 - Created by Andrei Chelaru, reviewed by MLR
+ - 2017-10-09 - Updated by MLR.
 """
 
 from datetime import datetime
@@ -19,7 +19,7 @@ class Site(OralArgumentSite):
         self.back_scrape_iterable = range(2010, 2015)
 
     def _get_download_urls(self):
-        path = "id('mainbody')//tr//a/text()"
+        path = "id('list')//tr//a/text()"
         return map(self._return_download_url, self.html.xpath(path))
 
     @staticmethod
@@ -32,16 +32,16 @@ class Site(OralArgumentSite):
         return download_url
 
     def _get_case_names(self):
-        path = "id('mainbody')//tr/td/span/text()"
+        path = "id('list')//tr/td/span/text()"
         return [s.lstrip('. ') for s in self.html.xpath(path)]
 
     def _get_case_dates(self):
-        path = "id('mainbody')//tr/td[2]//text()"
+        path = "id('list')//tr/td[2]//text()"
         return [datetime.strptime(s, '%m/%d/%y').date() for s in
                 self.html.xpath(path) if not 'Date' in s]
 
     def _get_docket_numbers(self):
-        path = "id('mainbody')//tr//a/text()"
+        path = "id('list')//tr//a/text()"
         return list(self.html.xpath(path))
 
     def _download_backwards(self, year):
