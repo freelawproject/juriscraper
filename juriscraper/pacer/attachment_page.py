@@ -36,6 +36,7 @@ class AttachmentPage(BaseReport):
         following fields:
             - document_number: The document number we're working with.
             - page_count: The number of pages of the item
+            - pacer_doc_id: The doc ID for the main document.
             - attachments: A list of attached items with the following fields:
                 - attachment_number: The attachment number.
                 - description: A description of the item.
@@ -53,6 +54,7 @@ class AttachmentPage(BaseReport):
         result = {
             'document_number': int(first_row.xpath('.//a/text()')[0].strip()),
             'page_count': self._get_page_count_from_tr(first_row, 2),
+            'pacer_doc_id': self._get_pacer_doc_id(first_row),
             'attachments': []
         }
         for row in rows:
