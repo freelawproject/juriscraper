@@ -44,8 +44,8 @@ class Site(OpinionSite):
         statuses = []
         path = self.cell_path(4)
         for cell in self.html.xpath(path):
-            text = cell.text_content().lower()
-            statuses.append('Unpublished' if 'unpublished' in text else 'Published')
+            text = cell.text_content()
+            statuses.append('Published' if 'Published' in text else 'Unpublished')
         return statuses
 
     def _download_backwards(self, year):
