@@ -43,7 +43,7 @@ class PacerSession(requests.Session):
         :return: requests.Response
         """
         kwargs.setdefault('timeout', 300)
-        
+
         r = super(PacerSession, self).get(url, **kwargs)
         if auto_login:
             updated = self._login_again(r)
@@ -100,7 +100,7 @@ class PacerSession(requests.Session):
 
     def login(self):
         url = self._make_login_url()
-        logger.info(u"Logging into: %s" % url)
+        logger.info(u"Logging in as '%s' to: %s" % (self.username, url))
 
         # initial GET to login page to get JSESSIONID
         r = super(PacerSession, self).get(url, timeout=60)
