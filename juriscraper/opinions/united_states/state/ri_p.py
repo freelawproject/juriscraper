@@ -59,9 +59,9 @@ class Site(OpinionSite):
             self.cases.append(case)
 
     def extract_case_from_rows(self, row1, row2):
-        docket = row1.xpath('./td[2]/a/text()')[0]
+        docket = row1.xpath('./td/a/text()')[0]
         docket = ', '.join([d.strip() for d in docket.split(',')])
-        url = row1.xpath("./td[2]/a/@href")[0]
+        url = row1.xpath("./td/a/@href")[0]
         text = row1.xpath("./td[1]/text()")[0]
         text_to_parse = [text]
 
