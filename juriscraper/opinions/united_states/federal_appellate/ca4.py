@@ -11,7 +11,7 @@ from dateutil.rrule import rrule, DAILY
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
-        self.url = 'http://pacer.ca4.uscourts.gov/cgi-bin/opinions.pl'
+        self.url = 'http://www.ca4.uscourts.gov/DataOpinions.aspx'
         self.court_id = self.__module__
         td = date.today()
         self.parameters = {
@@ -49,7 +49,7 @@ class Site(OpinionSite):
         for date_string in self.html.xpath(path):
             date_string = clean_if_py3(date_string).strip()
             if date_string:
-                case_dates.append(datetime.strptime(date_string, '%Y/%m/%d').date())
+                case_dates.append(datetime.strptime(date_string, '%m/%d/%Y').date())
         return case_dates
 
     def _get_docket_numbers(self):

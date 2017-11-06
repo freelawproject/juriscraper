@@ -104,84 +104,105 @@ Right now I don't know what the `number=0.1258953044538912` part of the request 
 
 ## JavaScript on PACER
 
-All of the JavaScript in PACER has been compressed making it nearly impossible to understand. I'm putting bits and pieces of the de-obfuscated code here, as I translate it to meaningful variable names and better formatting.
+All of the JavaScript in PACER has been compressed making it difficult to understand. However, you can often find a comment before the compressed file saying where the uncompressed version lives. In case that changes, here's the goDLS function, as available here: https://ecf.mad.uscourts.gov/lib/dls_url.js:
 
-    function goDLS(form_post_url, caseid, de_seq_num, got_receipt, pdf_header,
-                   pdf_toggle_possible, magic_num, hdr) {
-        // Generates a form, appends it to the end of the document, and then
-        // submits it.
-        //
-        // form_post_url: Where the form is posted to. The HTML 'action' attribute.
-        // caseid: The internal PACER ID for the case.
-        // de_seq_num: The internal PACER document number within the case. This
-        //   differs from the number that we see for reasons unknown.
-        // got_receipt: If set to '1', this will bypass the receipt page and
-        //   download the PDF immediately.
-        // pdf_header: ??
-        // pdf_toggle_possible: ??
-        // magic_num: ??
-        // hdr: ??
-        var form_id = "go_dls_url";
-        var f;
+    ////////////////////////////////////////
+    // My understanding of the parameters //
+    ////////////////////////////////////////
+    // Generates a form, appends it to the end of the document, and then
+    // submits it.
+    //
+    // hyperlink: Where the form is posted to. The HTML 'action' attribute.
+    // de_caseid: The internal PACER ID for the case.
+    // de_seqno: The internal PACER document number within the case. This
+    //   differs from the number that we see for reasons unknown.
+    // got_receipt: If set to '1', this will bypass the receipt page and
+    //   download the PDF immediately.
+    // pdf_header: ??
+    // pdf_toggle_possible: ??
+    // magic_num: ??
+    // hdr: ??
+    
+    function goDLS(hyperlink, de_caseid, de_seqno, got_receipt, pdf_header, pdf_toggle_possible, magic_num, hdr) {
+        var form_id  = 'go_dls_url';
+        var form_element;
+    
         if (document.getElementById(form_id)) {
-            var d = document.getElementById(form_id);
-            document.body.removeChild(d)
+            var old_form = document.getElementById(form_id);
+            document.body.removeChild(old_form);
         }
-        var j = document.createElement("form");
-        j.setAttribute("action", form_post_url);
-        j.setAttribute("enctype", "multipart/form-data");
-        j.setAttribute("method", "post");
-        j.setAttribute("id", form_id);
-        document.body.appendChild(j);
-        if (caseid.length > 0) {
-            f = document.createElement("input");
-            f.setAttribute("type", "hidden");
-            f.setAttribute("name", "caseid");
-            f.setAttribute("value", caseid);
-            j.appendChild(f)
+    
+        var url_form = document.createElement('form');
+        url_form.setAttribute('action', hyperlink);
+        url_form.setAttribute('enctype', 'multipart/form-data');
+        url_form.setAttribute('method', 'post');
+        url_form.setAttribute('id'	, form_id);
+        document.body.appendChild(url_form);
+    
+        // optional additional parameters
+    
+        if (de_caseid.length > 0) {
+            // always supplied when following links from application
+            form_element = document.createElement('input');
+            form_element.setAttribute('type', 'hidden');
+            form_element.setAttribute('name', 'caseid');
+            form_element.setAttribute('value', de_caseid);
+            url_form.appendChild(form_element);
         }
-        if (de_seq_num.length > 0) {
-            f = document.createElement("input");
-            f.setAttribute("type", "hidden");
-            f.setAttribute("name", "de_seq_num");
-            f.setAttribute("value", de_seq_num);
-            j.appendChild(f)
+    
+        if (de_seqno.length > 0) {
+            // always supplied when following links from application
+            form_element = document.createElement('input');
+            form_element.setAttribute('type', 'hidden');
+            form_element.setAttribute('name', 'de_seq_num');
+            form_element.setAttribute('value', de_seqno);
+            url_form.appendChild(form_element);
         }
+    
         if (got_receipt.length > 0) {
-            f = document.createElement("input");
-            f.setAttribute("type", "hidden");
-            f.setAttribute("name", "got_receipt");
-            f.setAttribute("value", got_receipt);
-            j.appendChild(f)
+            // supplied from receipt page displayed before document viewing
+            form_element = document.createElement('input');
+            form_element.setAttribute('type', 'hidden');
+            form_element.setAttribute('name', 'got_receipt');
+            form_element.setAttribute('value', got_receipt);
+            url_form.appendChild(form_element);
         }
+    
         if (pdf_header.length > 0) {
-            f = document.createElement("input");
-            f.setAttribute("type", "hidden");
-            f.setAttribute("name", "pdf_header");
-            f.setAttribute("value", pdf_header);
-            j.appendChild(f)
+            // optional user preference (overrideable by application defaults)
+            form_element = document.createElement('input');
+            form_element.setAttribute('type', 'hidden');
+            form_element.setAttribute('name', 'pdf_header');
+            form_element.setAttribute('value', pdf_header);
+            url_form.appendChild(form_element);
         }
+    
         if (pdf_toggle_possible.length > 0) {
-            f = document.createElement("input");
-            f.setAttribute("type", "hidden");
-            f.setAttribute("name", "pdf_toggle_possible");
-            f.setAttribute("value", pdf_toggle_possible);
-            j.appendChild(f)
+            // optional user preference (overrideable by application defaults)
+            form_element = document.createElement('input');
+            form_element.setAttribute('type', 'hidden');
+            form_element.setAttribute('name', 'pdf_toggle_possible');
+            form_element.setAttribute('value', pdf_toggle_possible);
+            url_form.appendChild(form_element);
         }
+    
         if (magic_num.length > 0) {
-            f = document.createElement("input");
-            f.setAttribute("type", "hidden");
-            f.setAttribute("name", "magic_num");
-            f.setAttribute("value", magic_num);
-            j.appendChild(f)
+            // only provided from application when NEF hyperlink clicked on multi-document filing
+            form_element = document.createElement('input');
+            form_element.setAttribute('type', 'hidden');
+            form_element.setAttribute('name', 'magic_num');
+            form_element.setAttribute('value', magic_num);
+            url_form.appendChild(form_element);
         }
+    
         if (hdr.length > 0) {
-            f = document.createElement("input");
-            f.setAttribute("type", "hidden");
-            f.setAttribute("name", "hdr");
-            f.setAttribute("value", hdr);
-            j.appendChild(f)
+            // only provided from application when NEF hyperlink clicked on ROA/Appendix
+            form_element = document.createElement('input');
+            form_element.setAttribute('type', 'hidden');
+            form_element.setAttribute('name', 'hdr');
+            form_element.setAttribute('value', hdr);
+            url_form.appendChild(form_element);
         }
-        document.getElementById(form_id).submit()
+    
+        document.getElementById(form_id).submit();
     }
-
