@@ -13,6 +13,7 @@ History:
 Contact information:
  - Help desk: (803) 734-1193, Travis
  - Security desk: 803-734-5906, Joe Hilke
+ - Web Developer (who can help with firewall issues): 803-734-0373, Winkie Clark
 """
 
 from datetime import date
