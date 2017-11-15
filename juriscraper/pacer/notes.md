@@ -117,7 +117,9 @@ All of the JavaScript in PACER has been compressed making it difficult to unders
     // de_seqno: The internal PACER document number within the case. This
     //   differs from the number that we see for reasons unknown.
     // got_receipt: If set to '1', this will bypass the receipt page and
-    //   download the PDF immediately.
+    //   download the PDF immediately. This is set to 1 *after* the user has
+    //   seen the receipt. If receipts are disabled, I believe this will always
+    //   be the empty string.
     // pdf_header: ??
     // pdf_toggle_possible: ??
     // magic_num: ??
