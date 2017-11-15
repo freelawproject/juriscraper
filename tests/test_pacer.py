@@ -386,6 +386,11 @@ class PacerAttachmentPageTest(unittest.TestCase):
             with open(path, 'r') as f:
                 report._parse_text(f.read().decode('utf-8'))
             data = report.data
+            if not os.path.exists(json_path):
+                with open(json_path, 'w') as f:
+                    print("Creating new file at %s" % json_path)
+                    json.dump(data, f, indent=2, sort_keys=True)
+                    continue
             with open(json_path) as f:
                 j = json.load(f)
                 self.assertEqual(j, data)

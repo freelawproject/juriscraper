@@ -12,6 +12,15 @@ class AttachmentPage(BaseReport):
 
     PATH = 'doc1/'
 
+    def __init__(self, court_id, pacer_session=None):
+        super(AttachmentPage, self).__init__(court_id, pacer_session)
+        if self.court_id.endswith('b'):
+            # Note that parsing bankruptcy attachment pages does not reveal the
+            # document number, only the attachment numbers.
+            self.is_bankruptcy = True
+        else:
+            self.is_bankruptcy = False
+
     def query(self, document_number):
         """Query the "attachment page" endpoint and set the results to self.response.
 
@@ -52,29 +61,60 @@ class AttachmentPage(BaseReport):
 
         first_row = rows.pop(0)
         result = {
-            'document_number': int(first_row.xpath('.//a/text()')[0].strip()),
-            'page_count': self._get_page_count_from_tr(first_row, 2),
+            'document_number': self._get_document_number(first_row),
+            'page_count': self._get_page_count_from_tr(first_row),
             'pacer_doc_id': self._get_pacer_doc_id(first_row),
             'attachments': []
         }
         for row in rows:
             result['attachments'].append({
-                'attachment_number': int(row.xpath('.//a/text()')[0].strip()),
-                'description': force_unicode(
-                    row.xpath('./td[2]//text()')[0].strip()
-                ),
-                'page_count': self._get_page_count_from_tr(row, 3),
+                'attachment_number': self._get_attachment_number(row),
+                'description': self._get_description_from_tr(row),
+                'page_count': self._get_page_count_from_tr(row),
                 'pacer_doc_id': self._get_pacer_doc_id(row)
             })
 
         return result
 
+    def _get_document_number(self, row):
+        """Return the document number for an item.
+
+        In district court attachment pages, this is easy to extract with an
+        XPath. In bankruptcy cases, it's simply not there.
+        """
+        if self.is_bankruptcy:
+            return None
+        else:
+            return int(row.xpath('.//a/text()')[0].strip())
+
+    def _get_attachment_number(self, row):
+        """Return the attachment number for an item.
+
+        In district courts, this can be easily extracted. In bankruptcy courts,
+        you must extract it, then subtract 1 from the value since these are
+        tallied and include the main document.
+        """
+        number = int(row.xpath('.//a/text()')[0].strip())
+        if self.is_bankruptcy:
+            return number - 1
+        else:
+            return number
+
+    def _get_description_from_tr(self, row):
+        """Get the description from the row"""
+        if not self.is_bankruptcy:
+            index = 2
+        else:
+            index = 3
+        description = row.xpath('./td[%s]//text()' % index)[0].strip()
+        return force_unicode(description)
+
     @staticmethod
-    def _get_page_count_from_tr(tr, index):
+    def _get_page_count_from_tr(tr):
         """Take a row from the attachment table and return the page count as an
         int extracted from the cell specified by index.
         """
-        pg_cnt_str = tr.xpath('./td[%s]/text()' % index)[0].strip()
+        pg_cnt_str = tr.xpath('./td[contains(., "page")]/text()')[0].strip()
         return int(pg_cnt_str.split()[0])
 
     @staticmethod
