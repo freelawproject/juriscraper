@@ -124,8 +124,14 @@ class AttachmentPage(BaseReport):
             # It's a restricted document without page count information.
             return None
         else:
-            pg_cnt_str = pg_cnt_str_nodes[0].strip()
-            return int(pg_cnt_str.split()[0])
+            for pg_cnt_str_node in pg_cnt_str_nodes:
+                try:
+                    pg_cnt_str = pg_cnt_str_node.strip()
+                    return int(pg_cnt_str.split()[0])
+                except ValueError:
+                    # Happens when the description field contains the word "page"
+                    # and gets caught by the xpath. Just press on.
+                    continue
 
     @staticmethod
     def _get_pacer_doc_id(row):
