@@ -119,8 +119,13 @@ class AttachmentPage(BaseReport):
         """Take a row from the attachment table and return the page count as an
         int extracted from the cell specified by index.
         """
-        pg_cnt_str = tr.xpath('./td[contains(., "page")]/text()')[0].strip()
-        return int(pg_cnt_str.split()[0])
+        pg_cnt_str_nodes = tr.xpath('./td[contains(., "page")]/text()')
+        if len(pg_cnt_str_nodes) == 0:
+            # It's a restricted document without page count information.
+            return None
+        else:
+            pg_cnt_str = pg_cnt_str_nodes[0].strip()
+            return int(pg_cnt_str.split()[0])
 
     @staticmethod
     def _get_pacer_doc_id(row):

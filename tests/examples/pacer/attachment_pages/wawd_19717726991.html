@@ -1,0 +1,131 @@
+<head><title>WAWD CM/ECF Version 6.1</title>
+    <script type="text/javascript">if (top != self) {
+      top.location.replace(location.href);
+    }</script>
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+    <script type="text/javascript" src="/lib/core.js"></script>
+    <style></style>
+    <link rel="stylesheet" type="text/css" href="/css/print.css" media="print">
+    <script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script>
+</head>
+<body bgcolor="F4E8BB" text="000000" onload="SetFocus()"
+      data-gr-c-s-loaded="true">
+<div class="noprint">
+    <div id="topmenu" class="yuimenubar">
+        <div class="bd"><img src="/graphics/cmecf-logo.gif" class="cmecfLogo"
+                             id="cmecfLogo" alt="CM/ECF" title=""><img
+                src="/graphics/menubar-help.gif" class="helpImage"
+                id="helpImage" alt="?" title=""
+                onmouseover="CMECF.MainMenu.helpImageOn()"
+                onmouseout="CMECF.MainMenu.helpImageOff()">
+            <ul class="first-of-type">
+                <li class="yuimenubaritem" style="width:11%"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/iquery.pl"><u>Q</u>uery</a></li>
+                <li class="yuimenubaritem" style="width:11%"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/DisplayMenu.pl?Reports"><u>R</u>eports</a>
+                </li>
+                <li class="yuimenubaritem" style="width:11%"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/DisplayMenu.pl?Utilities"><u>U</u>tilities</a>
+                </li>
+                <li class="yuimenubaritem" style="width:11%"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/login.pl?logout"><u>L</u>ogout</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">if (navigator.appVersion.indexOf("MSIE") == -1) {
+  window.setTimeout(CMECF.MainMenu.createMenu, 0);
+} else {
+  CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);
+}</script>
+<div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll"
+                                  value="0">
+    <script language="JavaScript">
+      var IsForm = false;
+      var FirstField;
+
+      function SetFocus() {
+        if (IsForm) {
+          if (FirstField) {
+            var ind = FirstField.indexOf('document.', 0);
+            if (ind == 0) {
+              eval(FirstField);
+            }
+            else {
+              var Code = "document.forms[0]." + FirstField + ".focus();";
+              eval(Code);
+            }
+          } else {
+            var Cnt = 0;
+            while (document.forms[0].elements[Cnt] != null) {
+              try {
+                if (document.forms[0].elements[Cnt].type != "hidden" &&
+                  !document.forms[0].elements[Cnt].disabled &&
+                  !document.forms[0].elements[Cnt].readOnly) {
+                  document.forms[0].elements[Cnt].focus();
+                  break;
+                }
+              }
+              catch (e) {
+              }
+              Cnt += 1;
+            }
+          }
+        }
+        return (true);
+      }
+    </script>
+
+    <p>&nbsp;&nbsp;<b>Document Selection Menu</b></p>
+
+    <p>&nbsp;&nbsp;Select the document you wish to view.</p>
+    <script type="text/javascript">CMECF.MainMenu.alternateHelp = "////show_multidocs.htm"</script>
+    <table width="600" cellpadding="4" cellspacing="3">
+        <tbody>
+        <tr>
+            <td colspan="2"><b>Document Number:</b> <a
+                    href="https://ecf.wawd.uscourts.gov/doc1/19717726991"
+                    onclick="goDLS('/doc1/19717726991','247709','107','','','1','','');return(false);">32</a>
+            </td>
+            <td width="400">2 pages</td>
+            <td width="600">53 kb</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td width="100"><b>Attachment</b></td>
+            <td width="240"><b>Description</b></td>
+        </tr>
+        <tr>
+            <td width="100" valign="top"><a
+                    href="https://ecf.wawd.uscourts.gov/doc1/19717730529"
+                    onclick="goDLS('/doc1/19717730529','247709','107','','','1','','');return(false);">1</a>
+            </td>
+            <td width="240">*Restricted*</td>
+            <td width="400"></td>
+            <td width="600">0 kb</td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="button"
+                                   onclick="parent.location='/cgi-bin/show_multidocs.pl?caseid=247709&amp;arr_de_seq_nums=107&amp;magic_num=&amp;pdf_header=&amp;hdr=&amp;pdf_toggle_possible='"
+                                   value="View All">&nbsp;&nbsp;or&nbsp;&nbsp;<input
+                    type="button"
+                    onclick="parent.location='/cgi-bin/show_multidocs.pl?caseid=247709&amp;arr_de_seq_nums=107&amp;magic_num=&amp;pdf_header=&amp;hdr=&amp;pdf_toggle_possible=&amp;zipit=1'"
+                    value="Download All"></td>
+            <td>2 pages</td>
+            <td>53 kb</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
