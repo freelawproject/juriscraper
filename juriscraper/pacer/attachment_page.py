@@ -106,8 +106,13 @@ class AttachmentPage(BaseReport):
             index = 2
         else:
             index = 3
-        description = row.xpath('./td[%s]//text()' % index)[0].strip()
-        return force_unicode(description)
+        description_text_nodes = row.xpath('./td[%s]//text()' % index)
+        if len(description_text_nodes) == 0:
+            # No text in the cell.
+            return u''
+        else:
+            description = description_text_nodes[0].strip()
+            return force_unicode(description)
 
     @staticmethod
     def _get_page_count_from_tr(tr):

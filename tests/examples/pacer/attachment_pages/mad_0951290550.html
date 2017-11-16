@@ -1,0 +1,137 @@
+<head><title>CM/ECF - USDC Massachusetts - Version 6.1.1.2 as of
+    7/29/2017</title>
+    <script type="text/javascript">if (top != self) {
+      top.location.replace(location.href);
+    }</script>
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+    <script type="text/javascript" src="/lib/core.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/print.css" media="print">
+    <script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script>
+</head>
+<body onload="SetFocus()" bgcolor="F5F5F5" text="01359B">
+<iframe id="_yuiResizeMonitor"
+        style="position: absolute; visibility: visible; width: 10em; height: 10em; top: -160px; left: -160px; border-width: 0px;"></iframe>
+<div class="noprint">
+    <div id="topmenu" class="yuimenubar yui-module yui-overlay visible"
+         style="position: static; display: block; z-index: 30; visibility: visible;">
+        <div class="bd"><img src="/graphics/cmecf-logo.gif" class="cmecfLogo"
+                             id="cmecfLogo" alt="CM/ECF" title=""><img
+                src="/graphics/menubar-help.gif" class="helpImage"
+                id="helpImage" alt="?" title=""
+                onmouseover="CMECF.MainMenu.helpImageOn()"
+                onmouseout="CMECF.MainMenu.helpImageOff()">
+            <ul class="first-of-type">
+                <li class="yuimenubaritem first-of-type" style="width:11%"
+                    id="yui-gen0" groupindex="0" index="0"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/iquery.pl"><u>Q</u>uery</a></li>
+                <li class="yuimenubaritem yuimenubaritem-hassubmenu"
+                    style="width:11%" id="yui-gen1" groupindex="0" index="1"><a
+                        class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu"
+                        href="/cgi-bin/DisplayMenu.pl?Reports"><u>R</u>eports</a>
+                </li>
+                <li class="yuimenubaritem yuimenubaritem-hassubmenu"
+                    style="width:11%" id="yui-gen2" groupindex="0" index="2"><a
+                        class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu"
+                        href="/cgi-bin/DisplayMenu.pl?Utilities"><u>U</u>tilities</a>
+                </li>
+                <li class="yuimenubaritem" style="width:11%" id="yui-gen3"
+                    groupindex="0" index="3"><a class="yuimenubaritemlabel"
+                                                href="/cgi-bin/login.pl?logout"><u>L</u>ogout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">if (navigator.appVersion.indexOf("MSIE") == -1) {
+  window.setTimeout(CMECF.MainMenu.createMenu, 0);
+} else {
+  CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);
+}</script>
+<div id="cmecfMainContent" style="height: 934px;"><input
+        id="cmecfMainContentScroll" value="0" type="hidden">
+    <script language="JavaScript">
+      var IsForm = false;
+      var FirstField;
+
+      function SetFocus() {
+        if (IsForm) {
+          if (FirstField) {
+            var ind = FirstField.indexOf('document.', 0);
+            if (ind == 0) {
+              eval(FirstField);
+            }
+            else {
+              var Code = "document.forms[0]." + FirstField + ".focus();";
+              eval(Code);
+            }
+          } else {
+            var Cnt = 0;
+            while (document.forms[0].elements[Cnt] != null) {
+              try {
+                if (document.forms[0].elements[Cnt].type != "hidden" &&
+                  !document.forms[0].elements[Cnt].disabled &&
+                  !document.forms[0].elements[Cnt].readOnly) {
+                  document.forms[0].elements[Cnt].focus();
+                  break;
+                }
+              }
+              catch (e) {
+              }
+              Cnt += 1;
+            }
+          }
+        }
+        return (true);
+      }
+    </script>
+
+    <p>&nbsp;&nbsp;<b>Document Selection Menu</b></p>
+
+    <p>&nbsp;&nbsp;Select the document you wish to view.</p>
+    <script type="text/javascript">CMECF.MainMenu.alternateHelp = "////show_multidocs.htm"</script>
+    <table cellspacing="3" cellpadding="4" width="600">
+        <tbody>
+        <tr>
+            <td colspan="2"><b>Document Number:</b> <a
+                    href="https://ecf.mad.uscourts.gov/doc1/0951290550"
+                    onclick="goDLS('/doc1/0951290550','96751','61','','1','1','','');return(false);">1</a>
+            </td>
+            <td width="400">21 pages</td>
+            <td width="600">364 kb</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td width="100"><b>Attachment</b></td>
+            <td width="240"><b>Description</b></td>
+        </tr>
+        <tr>
+            <td width="100" valign="top"><a
+                    href="https://ecf.mad.uscourts.gov/doc1/0951290554"
+                    onclick="goDLS('/doc1/0951290554','96751','61','','1','1','','');return(false);">2</a>
+            </td>
+            <td width="240"></td>
+            <td width="400">14 pages</td>
+            <td width="600">250 kb</td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><input
+                    onclick="parent.location='/cgi-bin/show_multidocs.pl?caseid=96751&amp;arr_de_seq_nums=61&amp;magic_num=&amp;pdf_header=1&amp;hdr=&amp;pdf_toggle_possible=1'"
+                    value="View All"
+                    type="button">&nbsp;&nbsp;or&nbsp;&nbsp;<input
+                    onclick="parent.location='/cgi-bin/show_multidocs.pl?caseid=96751&amp;arr_de_seq_nums=61&amp;magic_num=&amp;pdf_header=1&amp;hdr=&amp;pdf_toggle_possible=1&amp;zipit=1'"
+                    value="Download All" type="button"></td>
+            <td>35 pages</td>
+            <td> 0.6 mb</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
