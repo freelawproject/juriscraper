@@ -101,7 +101,7 @@ Which returns:
               sortable='3:2012-cv-03879-VC'/>
     </request>
 
-The `number=0.1258953044538912` parameter is used to defeat broswer caching (cf. https://ecf.cand.uscourts.gov/lib/validate_case_number.js l.1499: "This random number causes the browser to never cache case number results."), so you can ignore it. Removing or tweaking it doesn't seem to make a difference.
+The `number=0.1258953044538912` parameter is used to defeat browser caching (cf. https://ecf.cand.uscourts.gov/lib/validate_case_number.js l.1499: "This random number causes the browser to never cache case number results."), so you can ignore it. Removing or tweaking it doesn't seem to make a difference.
 
 ### mobile_query.pl
 
