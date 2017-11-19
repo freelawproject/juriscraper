@@ -84,7 +84,9 @@ It's my belief (mlr) that the doc1 URLs have this name because of their fourth
 digit.
 
 
-## Hidden APIs
+## APIs
+
+### possible_case_numbers.pl
 
 PACER has an API that you can use to look up case numbers and get case names and PACER docket IDs in XML as the result. This API is used by the main PACER query page when you past in a case number and press the button for "Find this Case". This needs further inspection, requests look like:
 
@@ -99,8 +101,20 @@ Which returns:
               sortable='3:2012-cv-03879-VC'/>
     </request>
 
-Right now I don't know what the `number=0.1258953044538912` part of the request is, but it looks like you can ignore it. Removing or tweaking it doesn't seem to make a difference.
+The `number=0.1258953044538912` parameter is used to defeat browser caching (cf. https://ecf.cand.uscourts.gov/lib/validate_case_number.js l.1499: "This random number causes the browser to never cache case number results."), so you can ignore it. Removing or tweaking it doesn't seem to make a difference.
 
+### mobile_query.pl
+
+The mobile query page, e.g. https://ecf.mad.uscourts.gov/cgi-bin/mobile_query.pl, returns the number of docket entries in a case without charging a fee, as:
+
+```
+<a id="entriesLink" href="/cgi-bin/mobile_query.pl?search=dktEntry&amp;caseid=191474&amp;caseNum=1:17-cv-11577-PBS" data-transition="slide" class="ui-link-inherit">
+                            Docket Entries
+                            <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">
+                                52
+                            </span>
+                        </a>
+```
 
 ## JavaScript on PACER
 
