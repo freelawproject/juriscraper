@@ -116,6 +116,17 @@ The mobile query page, e.g. https://ecf.mad.uscourts.gov/cgi-bin/mobile_query.pl
                         </a>
 ```
 
+### DocVerify.pl
+
+This page is only available on CM/ECF, but provides several pieces of interesting information. This page is supposed to do some sort of document verification. As described in [this handy PDF][pdf], you can input a case number and a document number from that case, and it will give you some hashes about that document. This sounds very useful as a form of verification, but it's entirely unclear what the hashes represent. 
+
+The only use that the page seems to have is that it allows you to see if the current hashes (as computed by PACER) match the original hashes (as computed by PACER). I guess this helps you to understand whether the item has changed, but a simple "has this item changed" button seems more obvious.
+
+Anyway, the page also provides the docket entry text and file size, which is potentially quite useful. 
+
+[pdf]: http://www.ilnd.uscourts.gov/_assets/_documents/_forms/_cmecf/pdfs/v60/v6_verify_document.pdf
+  
+
 ## JavaScript on PACER
 
 All of the JavaScript in PACER has been compressed making it difficult to understand. However, you can often find a comment before the compressed file saying where the uncompressed version lives. In case that changes, here's the goDLS function, as available here: https://ecf.mad.uscourts.gov/lib/dls_url.js:
