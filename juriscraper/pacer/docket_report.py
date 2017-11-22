@@ -329,11 +329,18 @@ class DocketReport(BaseReport):
     def docket_entries(self):
         if self._docket_entries is not None:
             return self._docket_entries
-        # tr nodes after the first one in the docket entry table.
-        path = (u'//tr['
-                u'  .//text()[contains(., "Docket Text")'
-                u']]/following-sibling::tr')
-        docket_entry_rows = self.tree.xpath(path)
+
+        # There can be multiple docket entry tables on a single docket page. See
+        # https://github.com/freelawproject/courtlistener/issues/762. ∴ we need
+        # to identify the first table, and all following tables. The following
+        # tables lack column headers, so we have to use the preceding-sibling
+        # tables to make sure it's right.
+        docket_header = './/text()[contains(., "Docket Text")]'
+        docket_entry_rows = self.tree.xpath(
+            '//table['
+            '  preceding-sibling::table[%s] or %s'
+            ']//tr' % (docket_header, docket_header)
+        )[1:]  # Skip the first row.
 
         docket_entries = []
         for row in docket_entry_rows:
