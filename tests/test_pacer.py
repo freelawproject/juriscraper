@@ -524,26 +524,28 @@ class DocketParseTest(unittest.TestCase):
                 report._parse_text(f.read().decode('utf-8'))
             data = report.data
 
-            # Make sure some required fields are populated.
-            fields = ['date_filed', 'case_name', 'docket_number']
-            for field in fields:
-                self.assertTrue(
-                    data[field],
-                    msg="Unable to find truthy value for field %s" % field,
-                )
+            if data != {}:
+                # If the docket is a valid docket, make sure some required
+                # fields are populated.
+                fields = ['date_filed', 'case_name', 'docket_number']
+                for field in fields:
+                    self.assertTrue(
+                        data[field],
+                        msg="Unable to find truthy value for field %s" % field,
+                    )
 
-            self.assertEqual(data['court_id'], court)
+                self.assertEqual(data['court_id'], court)
 
-            # Party-specific tests...
-            for party in data['parties']:
-                self.assertTrue(
-                    party.get('name', False),
-                    msg="Every party must have a name attribute. Did not get a "
-                        "value for:\n\n%s" % party
-                )
-                # Protect against effed up adversary proceedings cases that
-                # don't parse properly. See: cacb, 2:08-ap-01570-BB
-                self.assertNotIn('----', party['name'])
+                # Party-specific tests...
+                for party in data['parties']:
+                    self.assertTrue(
+                        party.get('name', False),
+                        msg="Every party must have a name attribute. Did not "
+                            "get a value for:\n\n%s" % party
+                    )
+                    # Protect against effed up adversary proceedings cases that
+                    # don't parse properly. See: cacb, 2:08-ap-01570-BB
+                    self.assertNotIn('----', party['name'])
 
             if not os.path.isfile(json_path):
                 bar = "*" * 50
@@ -558,10 +560,11 @@ class DocketParseTest(unittest.TestCase):
 
             with open(json_path) as f:
                 j = json.load(f)
-                # Compare docket entries and parties first, for easier
-                # debugging, then compare whole objects to be sure.
-                self.assertEqual(j['docket_entries'], data['docket_entries'])
-                self.assertEqual(j['parties'], data['parties'])
+                if j != {}:
+                    # Compare docket entries and parties first, for easier
+                    # debugging, then compare whole objects to be sure.
+                    self.assertEqual(j['docket_entries'], data['docket_entries'])
+                    self.assertEqual(j['parties'], data['parties'])
                 self.assertEqual(j, data)
             t2 = time.time()
 
@@ -594,6 +597,11 @@ class DocketParseTest(unittest.TestCase):
     def test_specialty_court_dockets(self):
         path_root = os.path.join(TESTS_ROOT, 'examples', 'pacer', 'dockets',
                                  'special')
+        self.run_parsers_on_path(path_root)
+
+    def test_not_docket_dockets(self):
+        path_root = os.path.join(TESTS_ROOT, 'examples', 'pacer', 'dockets',
+                                 'not_dockets')
         self.run_parsers_on_path(path_root)
 
 

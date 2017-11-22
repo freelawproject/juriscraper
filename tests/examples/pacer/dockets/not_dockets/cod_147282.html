@@ -1,0 +1,168 @@
+<head><title>CM/ECF - U.S. District Court:cod-Docket Report</title>
+    <script type="text/javascript">if (top != self) {
+      top.location.replace(location.href);
+    }</script>
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+    <script type="text/javascript" src="/lib/core.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/print.css" media="print">
+    <script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script>
+</head>
+<body bgcolor="F9F9F9" text="000000" onload="SetFocus()">
+<iframe id="_yuiResizeMonitor"
+        style="position: absolute; visibility: visible; width: 10em; height: 10em; top: -164px; left: -164px; border-width: 0px;"></iframe>
+<div class="noprint">
+    <div id="topmenu" class="yuimenubar yui-module yui-overlay visible"
+         style="position: static; display: block; z-index: 30; visibility: visible;">
+        <div class="bd"><img src="/graphics/cmecf-logo.gif" class="cmecfLogo"
+                             id="cmecfLogo" alt="CM/ECF" title=""><img
+                src="/graphics/menubar-help.gif" class="helpImage"
+                id="helpImage" alt="?" title=""
+                onmouseover="CMECF.MainMenu.helpImageOn()"
+                onmouseout="CMECF.MainMenu.helpImageOff()">
+            <ul class="first-of-type">
+                <li class="yuimenubaritem first-of-type" style="width:11%"
+                    id="yui-gen0" groupindex="0" index="0"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/iquery.pl"><u>Q</u>uery</a></li>
+                <li class="yuimenubaritem yuimenubaritem-hassubmenu"
+                    style="width:11%" id="yui-gen1" groupindex="0" index="1"><a
+                        class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu"
+                        href="/cgi-bin/DisplayMenu.pl?Reports"><u>R</u>eports</a>
+                </li>
+                <li class="yuimenubaritem yuimenubaritem-hassubmenu"
+                    style="width:11%" id="yui-gen2" groupindex="0" index="2"><a
+                        class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu"
+                        href="/cgi-bin/DisplayMenu.pl?Utilities"><u>U</u>tilities</a>
+                </li>
+                <li class="yuimenubaritem" style="width:11%" id="yui-gen3"
+                    groupindex="0" index="3"><a class="yuimenubaritemlabel"
+                                                href="/cgi-bin/login.pl?logout"><u>L</u>ogout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">if (navigator.appVersion.indexOf("MSIE") == -1) {
+  window.setTimeout(CMECF.MainMenu.createMenu, 0);
+} else {
+  CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);
+}</script>
+<div id="cmecfMainContent" style="height: 649px;"><input type="hidden"
+                                                         id="cmecfMainContentScroll"
+                                                         value="0">
+    <script language="JavaScript">
+      var IsForm = false;
+      var FirstField;
+
+      function SetFocus() {
+        if (IsForm) {
+          if (FirstField) {
+            var ind = FirstField.indexOf('document.', 0);
+            if (ind == 0) {
+              eval(FirstField);
+            }
+            else {
+              var Code = "document.forms[0]." + FirstField + ".focus();";
+              eval(Code);
+            }
+          } else {
+            var Cnt = 0;
+            while (document.forms[0].elements[Cnt] != null) {
+              try {
+                if (document.forms[0].elements[Cnt].type != "hidden" &&
+                  !document.forms[0].elements[Cnt].disabled &&
+                  !document.forms[0].elements[Cnt].readOnly) {
+                  document.forms[0].elements[Cnt].focus();
+                  break;
+                }
+              }
+              catch (e) {
+              }
+              Cnt += 1;
+            }
+          }
+        }
+        return (true);
+      }
+    </script>
+    <form enctype="multipart/form-data" method="POST"
+          action="../cgi-bin/DktRpt.pl?115989061225824-L_1_1-1">
+
+        <font face="arial,helvetica" color="#0000cc" size="4"><b>Docket
+            Sheet</b></font>
+
+        <p>The report may take a long time to run because this case has many
+            docket entries. You can go back and modify the selection criteria or
+            select one of the following options.</p>
+        <p>Include docket entries:<br>
+
+            <input name="date_from" type="radio" value="11/14/2017" checked="">
+            for the past week<br>
+
+            <input name="date_from" type="radio" value="08/23/2017"> for the
+            past 90 days<br>
+
+            <input name="date_from" type="radio" value="11/21/2016"> for the
+            past year<br>
+
+            <input name="date_from" type="radio" value=""> as initially
+            requested<br>
+        </p>
+        <script language="JavaScript">
+          var timerId;
+          var BeenHere = 0;
+          IsForm = true;
+
+          function empty(s) {
+            var whitespace = " \t\n\r";
+            if (s == null || s.length == 0) {
+              return (true);
+            }
+            // Is s only whitespace characters?
+            for (var i = 0; i < s.length; i++) {
+              var c = s.charAt(i);
+              if (whitespace.indexOf(c) == -1) return false;
+            }
+            return (true);
+          }
+
+          function ClearTimer() {
+            BeenHere = 0;
+            clearTimeout(timerId);
+            return (true);
+          }
+
+          var FormId = 0;
+
+          function ProcessForm() {
+            if (BeenHere == 1) {
+              alert("Submission already made, please wait for response from server");
+              return (false);
+            }
+            BeenHere = 1;
+            timerId = setTimeout("ClearTimer()", 5000);
+            document.forms[FormId].submit();
+            return true
+          }
+
+          function RunAfterClear() {
+
+          }
+        </script>
+        <table>
+            <tbody>
+            <tr>
+                <td><input name="button1" value="Run Report" type="button"
+                           onclick="ProcessForm()">
+                </td>
+                <td></td>
+                <td></td>
+                <td><input name="reset" type="RESET" value="Clear"
+                           onclick="setTimeout('RunAfterClear()',100)"></td>
+            </tr>
+            <tr></tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+</body>

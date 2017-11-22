@@ -66,10 +66,29 @@ class DocketReport(BaseReport):
     @property
     def data(self):
         """Get all the data back from this endpoint."""
-        data = self.metadata.copy()
-        data[u'parties'] = self.parties
-        data[u'docket_entries'] = self.docket_entries
-        return data
+        if self._is_valid_docket():
+            data = self.metadata.copy()
+            data[u'parties'] = self.parties
+            data[u'docket_entries'] = self.docket_entries
+            return data
+        else:
+            return {}
+
+    def _is_valid_docket(self):
+        """PACER has a variety of things it returns instead of returning actual
+        valid docket reports. Error pages, for example. This function tests for
+        the ones we know about, and returns False if any known patterns are
+        found.
+        """
+        docket_text = self.tree.text_content()
+        # Some dockets are so long PACER suggests we filter them before they
+        # are shown.
+        long_docket = "The report may take a long time to run because this " \
+                      "case has many docket entries"
+        long_docket_re = re.compile('\s+'.join(long_docket.split()), flags=re.I)
+        if long_docket_re.search(docket_text):
+            return False
+        return True
 
     @property
     def metadata(self):
