@@ -81,18 +81,17 @@ class DocketReport(BaseReport):
         found.
         """
         docket_text = self.tree.text_content()
-        # Some dockets are so long PACER suggests we filter them before they
-        # are shown.
-        long_docket = "The report may take a long time to run because this " \
-                      "case has many docket entries"
-        long_docket_re = re.compile('\s+'.join(long_docket.split()), flags=re.I)
-        if long_docket_re.search(docket_text):
-            return False
-        no_page_id = "The page ID does not exist. Please enter a valid page ID " \
-                     "number. "
-        no_page_id_re = re.compile('\s+'.join(no_page_id.split()), flags=re.I)
-        if no_page_id_re.search(docket_text):
-            return False
+        error_strings = [
+            "The report may take a long time to run because this case has many "
+            "docket entries",
+            "The page ID does not exist. Please enter a valid page ID number. ",
+            "There are no documents in this case.",
+        ]
+        for error_string in error_strings:
+            error_string_re = re.compile('\s+'.join(error_string.split()),
+                                         flags=re.I)
+            if error_string_re.search(docket_text):
+                return False
         return True
 
     @property
