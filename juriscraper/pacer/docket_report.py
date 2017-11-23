@@ -88,6 +88,11 @@ class DocketReport(BaseReport):
         long_docket_re = re.compile('\s+'.join(long_docket.split()), flags=re.I)
         if long_docket_re.search(docket_text):
             return False
+        no_page_id = "The page ID does not exist. Please enter a valid page ID " \
+                     "number. "
+        no_page_id_re = re.compile('\s+'.join(no_page_id.split()), flags=re.I)
+        if no_page_id_re.search(docket_text):
+            return False
         return True
 
     @property
