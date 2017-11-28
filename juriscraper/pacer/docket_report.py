@@ -86,6 +86,8 @@ class DocketReport(BaseReport):
             "docket entries",
             "The page ID does not exist. Please enter a valid page ID number. ",
             "There are no documents in this case.",
+            "Incomplete request. Please try your query again by choosing the "
+            "Query or Reports option",
         ]
         for error_string in error_strings:
             error_string_re = re.compile('\s+'.join(error_string.split()),
