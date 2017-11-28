@@ -89,6 +89,7 @@ class DocketReport(BaseReport):
             "Incomplete request. Please try your query again by choosing the "
             "Query or Reports option",
             "To accept charges shown below, click on the 'View Report' button",
+            "Unable to create PDF file.",
         ]
         for error_string in error_strings:
             error_string_re = re.compile('\s+'.join(error_string.split()),
