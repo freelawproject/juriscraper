@@ -19,7 +19,7 @@ date_regex = r'[—\d\-–/]*'
 class DocketReport(BaseReport):
 
     case_name_regex = re.compile(r"(?:Case\s+title:\s+)?(.*\bv\.\s.*)")
-    in_re_regex = re.compile(r"\bIN\s+RE:\s+.*", flags=re.IGNORECASE)
+    in_re_regex = re.compile(r"(\bIN\s+RE:\s+.*)", flags=re.IGNORECASE)
     date_filed_regex = re.compile(r'Date [fF]iled:\s+(%s)' % date_regex)
     date_terminated_regex = re.compile(r'Date [tT]erminated:\s+(%s)' % date_regex)
     date_converted_regex = re.compile(r'Date [Cc]onverted:\s+(%s)' % date_regex)
