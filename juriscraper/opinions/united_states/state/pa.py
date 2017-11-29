@@ -11,6 +11,7 @@ import re
 
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.string_utils import clean_string
 
 
 class Site(OpinionSite):
@@ -53,10 +54,13 @@ class Site(OpinionSite):
         return [self.sanitize_text(element.text_content()) for element in self.html.xpath(path)]
 
     def return_case_name(self, text):
+        text = clean_string(text)
         return self.regex.search(text).group(1)
 
     def return_docket_number(self, text):
+        text = clean_string(text)
         return self.regex.search(text).group(2)
 
     def sanitize_text(self, text):
+        text = clean_string(text)
         return text.replace(r'\n', '\n').replace(u'–', '-')

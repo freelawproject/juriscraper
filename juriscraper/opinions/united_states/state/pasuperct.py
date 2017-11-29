@@ -13,7 +13,6 @@ class Site(pa.Site):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.regex = re.compile("(.*)\n(.*)", re.M)
         self.url = "http://www.pacourts.us/assets/rss/SuperiorOpinionsRss.ashx"
 
     def _get_judges(self):
