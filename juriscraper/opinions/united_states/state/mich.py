@@ -1,6 +1,7 @@
 """Scraper for the Supreme Court of Michigan
 CourtID: mich
 Court Short Name: Mich.
+Contact: sitefeedback@courts.mi.gov
 History:
  - 2014-09-21: Updated by Jon Andersen to handle some fields being missing
  - 2014-08-05: Updated to have a dynamic URL, an oversight during check in.
