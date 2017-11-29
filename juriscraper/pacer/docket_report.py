@@ -1,5 +1,6 @@
 # coding=utf-8
 import re
+
 from lxml import etree
 from lxml.html import tostring, fromstring, HtmlElement
 
@@ -90,6 +91,7 @@ class DocketReport(BaseReport):
             "Query or Reports option",
             "To accept charges shown below, click on the 'View Report' button",
             "Unable to create PDF file.",
+            "This case was administratively closed",
         ]
         for error_string in error_strings:
             error_string_re = re.compile('\s+'.join(error_string.split()),
