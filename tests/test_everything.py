@@ -973,18 +973,18 @@ class ScraperSpotTest(unittest.TestCase):
                 'Lowell v. Talcott',
                 'AC 13-P-1053',
             ],
-            'Copley Place Associates, LLC v. Tellez-Bortoni (AC 16-P-165)': [
+            'Copley Place Associates, LLC v. Tellez-Bortoni (AC 16-P-165) (January 01, 2017)': [
                 'Copley Place Associates, LLC v. Tellez-Bortoni',
                 'AC 16-P-165',
             ],
         }
         self.validate_mass_string_parse(strings, 'massappct')
 
-    def validate_mass_string_parse(self, strings, site):
+    def validate_mass_string_parse(self, strings, site_id):
         """Non-test method"""
-        if site not in ['mass', 'massappct']:
-            self.fail("You provided an invalid site string to validate_mass_string_parse")
-        site = mass.Site() if site == 'mass' else massappct.Site()
+        if site_id not in ['mass', 'massappct']:
+            self.fail("You provided an invalid site string to validate_mass_string_parse: %s" % site_id)
+        site = mass.Site() if site_id == 'mass' else massappct.Site()
         for raw_string, parsed in strings.items():
             try:
                 # make sure name is parsed
@@ -998,7 +998,7 @@ class ScraperSpotTest(unittest.TestCase):
                     parsed[1],
                 )
             except AttributeError:
-                self.fail("Unable to parse %s string: '%s'" % (site, raw_string))
+                self.fail("Unable to parse %s string: '%s'" % (site_id, raw_string))
 
     def test_pa(self):
         """Ensures our regex parses what we think it can, and fails otherwise.
