@@ -28,7 +28,7 @@ class Site(OpinionSite):
         for row in html.xpath(path_rows):
             court = row.xpath(path_target)
             if court and court[0].strip() == self.target_id:
-                case_text = row.xpath('./td[4]/p/text()')[0]
+                case_text = row.xpath('./td[4]/p/text() | ./td[4]/p/span/text()')[0]
                 court_text = row.xpath('./td[5]/text()')
                 self.cases.append({
                     'url': row.xpath('./td[3]/a/@href')[0],
