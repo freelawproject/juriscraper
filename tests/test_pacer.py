@@ -1,15 +1,15 @@
 # coding=utf-8
 from __future__ import print_function
 
+import fnmatch
+import os
 import sys
 import time
 import unittest
 from datetime import timedelta, date
 
-import fnmatch
 import jsondate as json
 import mock
-import os
 import vcr
 from requests import ConnectionError
 
@@ -17,7 +17,7 @@ from juriscraper.lib.exceptions import PacerLoginException, SlownessException
 from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.pacer import DocketReport, FreeOpinionReport, \
-    PossibleCaseNumberApi, AttachmentPage
+    PossibleCaseNumberApi, AttachmentPage, ShowCaseDocApi
 from juriscraper.pacer.http import PacerSession
 from juriscraper.pacer.utils import (
     get_courts_from_json, get_court_id_from_url,
@@ -324,6 +324,7 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         self.assertFalse(mock_session.post.called,
                          msg='should not trigger a POST query')
 
+
 class PacerPossibleCaseNumbersTest(unittest.TestCase):
     def test_parsing_results(self):
         """Can we do a simple query and parse?"""
@@ -359,6 +360,40 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
                 )
 
             sys.stdout.write("✓\n")
+
+
+class PacerShowCaseDocApiTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        if PACER_USERNAME and PACER_PASSWORD:
+            pacer_session = PacerSession(username=PACER_USERNAME,
+                                         password=PACER_PASSWORD)
+            cls.report = ShowCaseDocApi('dcd', pacer_session)
+
+    @SKIP_IF_NO_PACER_LOGIN
+    def test_queries(self):
+        """Can we do basic queries?"""
+        tests = (
+            # A regular document
+            ({
+                'pacer_case_id': '191424',  # English v. Trump
+                'document_number': '25',
+                'attachment_number': '',
+            }, '04506336643'),
+            # An attachment
+            ({
+                'pacer_case_id': '191424',
+                'document_number': '24',
+                'attachment_number': '1',
+            }, '04506336563'),
+        )
+        for test, expected in tests:
+            self.report.query(**test)
+            got = self.report.data
+            self.assertEqual(
+                got,
+                expected,
+            )
 
 
 class PacerAttachmentPageTest(unittest.TestCase):

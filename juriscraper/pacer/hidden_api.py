@@ -1,7 +1,9 @@
 from lxml import etree
 
 from .reports import BaseReport
+from .utils import get_pacer_doc_id_from_doc1_url
 from ..lib.diff_tools import get_closest_match_index
+from ..lib.exceptions import ParsingException
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import force_unicode
 
@@ -27,7 +29,7 @@ class PossibleCaseNumberApi(BaseReport):
         :return: a request response object
         """
         assert self.session is not None, \
-            "session attribute of DocketReport cannot be None."
+            "session attribute of PossibleCaseNUmberApi cannot be None."
         url = "%s?%s" % (self.url, docket_number)
         logger.info(u'Querying the possible case number endpoint at URL: %s' %
                     url)
@@ -93,3 +95,56 @@ class PossibleCaseNumberApi(BaseReport):
                 self.tree.xpath('//case/@title')[case_index]
             ),
         }
+
+
+class ShowCaseDocApi(BaseReport):
+    """Lookup a pacer_doc_id using the pacer_case_id and document_number
+
+    There is a URL that's available at:
+
+        https://ecf.nyed.uscourts.gov/cgi-bin/show_case_doc?90,406590,,
+
+    That takes a document number and case number, and performs a redirect to a
+    doc1 URL. Thus, using this API you can get the pacer_doc_id value for an
+    item using only the document_number, pacer_case_id, and (optionally) the
+    attachment_number.
+    """
+    PATH = 'cgi-bin/show_case_doc'
+
+    def query(self, pacer_case_id, document_number, attachment_number=''):
+        """Query the show_case_doc endpoint and return the normalized doc1
+        number.
+
+        :param pacer_case_id: The internal PACER case ID for the case.
+        :param document_number: The document number on the docket for the item.
+        :param attachment_number: The attachment number of the item on the
+        attachment page.
+        """
+        assert self.session is not None, \
+            "session attribute of ShowCaseDocApi cannot be None."
+        url = ('{url}?'
+               '{document_number},'
+               '{pacer_case_id},'
+               '{attachment_number},,'.format(
+                    url=self.url,
+                    document_number=document_number,
+                    pacer_case_id=pacer_case_id,
+                    attachment_number=attachment_number,
+               ))
+        logger.info(u'Querying the show_doc_url endpoint with URL: %s' % url)
+        # Only do a head request, else we get text content we don't need.
+        self.response = self.session.head(url, allow_redirects=True)
+        self.parse()
+
+    def _parse_text(self, text):
+        """Just a stub. No parsing needed here."""
+        pass
+
+    @property
+    def data(self):
+        """Get the URL out of the response object."""
+        url = self.response.url
+        if 'doc1' in url:
+            return get_pacer_doc_id_from_doc1_url(url)
+        else:
+            raise ParsingException("Unable to get doc1-style URL. Instead got %s" % url)
