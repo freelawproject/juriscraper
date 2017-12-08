@@ -111,6 +111,11 @@ class ShowCaseDocApi(BaseReport):
     """
     PATH = 'cgi-bin/show_case_doc'
 
+    def __init__(self, court_id, pacer_session=None):
+        assert not court_id.endswith('b'), \
+            "This API is not available at bankruptcy courts."
+        super(ShowCaseDocApi, self).__init__(court_id, pacer_session)
+
     def query(self, pacer_case_id, document_number, attachment_number=''):
         """Query the show_case_doc endpoint and return the normalized doc1
         number.
