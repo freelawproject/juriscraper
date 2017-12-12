@@ -1,4 +1,5 @@
 import re
+
 import requests
 from requests.packages.urllib3 import exceptions
 
@@ -84,6 +85,17 @@ class PacerSession(requests.Session):
                 # Re-do the request with the new session.
                 return super(PacerSession, self).post(url, **kwargs)
         return r
+
+    def head(self, url, **kwargs):
+        """
+        Overrides request.Session.head with a default timeout parameter.
+
+        :param url: url string upon which to do a HEAD request
+        :param kwargs: assorted keyword arguments
+        :return: requests.Response
+        """
+        kwargs.setdefault('timeout', 300)
+        return super(PacerSession, self).head(url, **kwargs)
 
     @staticmethod
     def _prepare_multipart_form_data(data):
