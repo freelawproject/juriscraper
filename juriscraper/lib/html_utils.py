@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # encoding: utf-8
 import re
+import sys
+
 from lxml import html
 from lxml.etree import XMLSyntaxError
 from lxml.html import html5parser, fromstring, tostring
@@ -13,6 +15,12 @@ try:
     import cchardet as chardet
 except ImportError:
     import chardet
+
+if sys.maxunicode == 65535:
+    from .log_tools import make_default_logger
+    logger = make_default_logger()
+    logger.warn("You are using a narrow build of Python, which is not "
+                "completely supported. See issue #188 for details.")
 
 
 def get_html_parsed_text(text):
@@ -109,9 +117,16 @@ def clean_html(text):
     # Fix </br>
     text = re.sub('</br>', '<br/>', text)
 
-    # Fix invalid bytes (http://stackoverflow.com/questions/8733233/)
-    text = re.sub(u'[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD'
-                  u'\U00010000-\U0010FFFF]+', u'', text)
+    # Fix invalid bytes in XML (http://stackoverflow.com/questions/8733233/)
+    # Note that this won't work completely on narrow builds of Python, which
+    # existed prior to Py3. Thus, we check if it's a narrow build, and adjust
+    # accordingly.
+    if sys.maxunicode == 65535:
+        text = re.sub(u'[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD]+',
+                      u'', text)
+    else:
+        text = re.sub(u'[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD'
+                      u'\U00010000-\U0010FFFF]+', u'', text)
 
     return text
 
