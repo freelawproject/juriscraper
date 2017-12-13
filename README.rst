@@ -122,6 +122,13 @@ You may need to also install Juriscraper locally with:
 
    pip install .
 
+If you've not installed juriscraper, you can run `sample_caller.py` as:
+
+::
+
+   PYTHONPATH=`pwd` python  juriscraper/sample_caller.py
+
+
 Usage
 =====
 
@@ -192,6 +199,14 @@ Tests
 We got that! You can (and should) run the tests with
 ``tox``. This will run ``python setup.py test`` for all supported Python runtimes,
 iterating over all of the ``*_example*`` files and run the scrapers against them.
+
+Individual tests can be run with:
+
+   python -m unittest tests.test_pacer.DocketParseTest.test_district_court_dockets
+
+Or, to run and drop to the Python debugger if it fails:
+
+  nosetests -v --pdb tests/test_pacer.py:DocketParseTest.test_district_court_dockets
 
 In addition, we use `Travis-CI <https://travis-ci.org/>`__ to
 automatically run the tests whenever code is committed to the repository
