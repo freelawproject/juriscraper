@@ -1,6 +1,7 @@
-from juriscraper.pacer.utils import get_pacer_doc_id_from_doc1_url
+import re
 
 from .reports import BaseReport
+from .utils import get_pacer_doc_id_from_doc1_url, reverse_goDLS_function
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import force_unicode
 
@@ -64,6 +65,7 @@ class AttachmentPage(BaseReport):
             'document_number': self._get_document_number(first_row),
             'page_count': self._get_page_count_from_tr(first_row),
             'pacer_doc_id': self._get_pacer_doc_id(first_row),
+            'pacer_case_id': self._get_pacer_case_id(),
             'attachments': []
         }
         for row in rows:
@@ -149,4 +151,32 @@ class AttachmentPage(BaseReport):
         else:
             doc1_url = url.xpath('./@href')[0]
             return get_pacer_doc_id_from_doc1_url(doc1_url)
+
+    def _get_pacer_case_id(self):
+        """Get the pacer_case_id value by inspecting the HTML
+
+        :returns str: The pacer_case_id value
+        """
+        # Start by inspecting all the links
+        urls = self.tree.xpath('//a')
+        for url in urls:
+            try:
+                onclick = url.xpath('./@onclick')[0]
+            except IndexError:
+                continue
+            else:
+                go_dls_parts = reverse_goDLS_function(onclick)
+                return go_dls_parts['caseid']
+
+        # If that fails, try inspecting the input elements
+        input_els = self.tree.xpath('//input')
+        for input_el in input_els:
+            try:
+                onclick = input_el.xpath('./@onclick')[0]
+            except IndexError:
+                continue
+            else:
+                m = re.search(r'[?&]caseid=(\d+)', onclick, flags=re.I)
+                if m:
+                    return m.group(1)
 
