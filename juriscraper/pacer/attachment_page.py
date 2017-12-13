@@ -165,6 +165,9 @@ class AttachmentPage(BaseReport):
             except IndexError:
                 continue
             else:
+                if 'goDLS' not in onclick:
+                    # Some other onclick we don't care about.
+                    continue
                 go_dls_parts = reverse_goDLS_function(onclick)
                 return go_dls_parts['caseid']
 
