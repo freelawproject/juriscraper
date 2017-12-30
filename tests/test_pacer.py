@@ -543,7 +543,8 @@ class DocketParseTest(unittest.TestCase):
     def setUp(self):
         self.maxDiff = 200000
 
-    def run_parsers_on_path(self, path_root):
+    def run_parsers_on_path(self, path_root,
+    requiredFields = ['date_filed', 'case_name', 'docket_number']):
         """Test all the parsers, faking the network query."""
         paths = []
         for root, dirnames, filenames in os.walk(path_root):
@@ -567,8 +568,7 @@ class DocketParseTest(unittest.TestCase):
             if data != {}:
                 # If the docket is a valid docket, make sure some required
                 # fields are populated.
-                fields = ['date_filed', 'case_name', 'docket_number']
-                for field in fields:
+                for field in requiredFields:
                     self.assertTrue(
                         data[field],
                         msg="Unable to find truthy value for field %s" % field,
