@@ -635,7 +635,7 @@ class DocketParseTest(unittest.TestCase):
                                  'district')
         self.run_parsers_on_path(path_root)
 
-    def test_district_court_dockets(self):
+    def test_fakerss_court_dockets(self):
         path_root = os.path.join(TESTS_ROOT, 'examples', 'pacer', 'dockets',
                                  'fake-rss')
         self.run_parsers_on_path(path_root,
