@@ -193,6 +193,18 @@ iterates over all courts of a certain jurisdiction that is provided by a
 script. See ``lib/importer.py`` for an example that's used in
 the sample caller.
 
+District Court Parser
+=====================
+A sample driver to run the PACER District Court parser on an html file is included.
+It takes HTML file(s) as arguments and outputs JSON to stdout.
+
+Example usage:
+
+::
+
+   PYTHONPATH=`pwd` juriscraper/pacerdocket.py tests/examples/pacer/dockets/district/nysd.html
+
+
 Tests
 =====
 
