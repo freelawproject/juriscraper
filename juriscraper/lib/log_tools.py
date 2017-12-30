@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 import getpass
 import logging.handlers
 import traceback
@@ -6,6 +8,8 @@ import sys
 
 LOG_FILENAME = '/var/log/juriscraper/debug.log'
 
+def errprint(*args, **kwargs):
+    print(*args, file=sys.stderr, **kwargs)
 
 def make_default_logger(file_path=LOG_FILENAME):
     """Boilerplate and testing code to create a logger. If we run into an
@@ -26,27 +30,27 @@ def make_default_logger(file_path=LOG_FILENAME):
             )
         except IOError as e:
             if e.errno == 2:
-                print("\nWarning: %s: %s. " \
+                errprint("\nWarning: %s: %s. " \
                       "Have you created the directory for the log?" % (
                           e.strerror,
                           file_path,
                       ))
             elif e.errno == 13:
-                print("\nWarning: %s: %s. " \
+                errprint("\nWarning: %s: %s. " \
                       "Cannot access file as user: %s" % (
                           e.strerror,
                           file_path,
                           getpass.getuser(),
                       ))
             else:
-                print("\nIOError [%s]: %s\n%s" % (
+                errprint("\nIOError [%s]: %s\n%s" % (
                     e.errno,
                     e.strerror,
                     traceback.format_exc()
                 ))
-            print("Juriscraper will continue to run, and all logs will be "
-                  "sent to stdout.")
-            handler = logging.StreamHandler(sys.stdout)
+            errprint("Juriscraper will continue to run, and all logs will be "
+                  "sent to stderr.")
+            handler = logging.StreamHandler(sys.stderr)
         handler.setFormatter(
             logging.Formatter('%(asctime)s - %(levelname)s: %(message)s')
         )
