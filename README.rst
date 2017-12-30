@@ -216,7 +216,7 @@ Individual tests can be run with:
 
    python -m unittest tests.test_pacer.DocketParseTest.test_district_court_dockets
 
-Or, to run and drop to the Python debugger if it fails:
+Or, to run and drop to the Python debugger if it fails, but you must install `nost` to have `nosetests`:
 
   nosetests -v --pdb tests/test_pacer.py:DocketParseTest.test_district_court_dockets
 
