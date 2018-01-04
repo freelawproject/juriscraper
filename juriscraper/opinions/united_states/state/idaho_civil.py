@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
+Contact: Sara Velasquez, svelasquez@idcourts.net, 208-947-7501
 History:
  - 2014-08-05, mlr: Updated.
  - 2015-06-19, mlr: Updated to simply the XPath expressions and to fix an OB1
@@ -11,7 +12,6 @@ History:
  - 2016-02-25 arderyp: Updated to catch "ORDER" (in addition to "Order") in download url text
 """
 import six
-
 from lxml import html
 
 from juriscraper.OpinionSite import OpinionSite
