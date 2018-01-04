@@ -36,7 +36,21 @@ class Site(OpinionSite):
         # regex below, please add them to the test_mass
         # method in test_everything.py
         self.regex = '(.*)\s+\((.*)\)\s+\((.*)\)'
+        self.year = datetime.datetime.now().year
+
+    def _download(self, request_dict={}):
+        """For tests, we must extract the year from the
+        HTML instead of using the current year, otherwise
+        test comparisons for example files created in
+        past years will fail
+        """
+        html = super(Site, self)._download(request_dict)
+        if self.method == 'LOCAL':
+            path = '//h2[contains(./text(), "Today\'s Published Opinions")]'
+            header_text = html.xpath(path)[0].text_content()
+            self.year = int(header_text.split(' ')[-1])
         self.set_local_variables()
+        return html
 
     def set_local_variables(self):
         """The base xpath below requires '<current year>)' in
@@ -49,9 +63,8 @@ class Site(OpinionSite):
         Consequently, this approach is less than ideal, but
         it works for the time being.
         """
-        year = datetime.datetime.now().year
         exclude_list = "not(contains(., 'List of Un'))"
-        include_date = "contains(., '%d)')" % year
+        include_date = "contains(., '%d)')" % self.year
         include_court = "contains(., '%s ') or contains(., '%s-')" % (
             self.court_identifier,
             self.court_identifier,

@@ -192,8 +192,11 @@ class ScraperExampleTest(unittest.TestCase):
                                 len(fixture_json),
                                 len(json_data),
                                 msg="Fixture and scraped data have different "
-                                    "lengths: %s and %s" % (len(fixture_json),
-                                                            len(json_data))
+                                    "lengths: expected %s and scraped %s (%s)" % (
+                                    len(fixture_json),
+                                    len(json_data),
+                                    module_string
+                                )
                             )
                             for i, item in enumerate(fixture_json):
                                 self.assertEqual(
@@ -986,6 +989,9 @@ class ScraperSpotTest(unittest.TestCase):
             self.fail("You provided an invalid site string to validate_mass_string_parse: %s" % site_id)
         site = mass.Site() if site_id == 'mass' else massappct.Site()
         for raw_string, parsed in strings.items():
+            # Set year on site scraper
+            site.year = int(raw_string.split(' ')[-1].rstrip(')'))
+            site.set_local_variables()
             try:
                 # make sure name is parsed
                 self.assertEqual(
