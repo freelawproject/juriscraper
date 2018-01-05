@@ -128,7 +128,6 @@ class PacerAuthTest(unittest.TestCase):
 
     @SKIP_IF_NO_PACER_LOGIN
     def test_logging_into_pacer(self):
-        court_id = 'ca1'
         try:
             session = PacerSession(username=PACER_USERNAME,
                                    password=PACER_PASSWORD)
@@ -138,7 +137,12 @@ class PacerAuthTest(unittest.TestCase):
                 'PacerSession', None, domain='.uscourts.gov', path='/'))
 
         except PacerLoginException:
-            self.fail('Could not log into court %s' % court_id)
+            self.fail('Could not log into PACER')
+
+    def test_logging_in_bad_credentials(self):
+        session = PacerSession(username='foo', password='bar')
+        with self.assertRaises(PacerLoginException):
+            session.login()
 
     def test_logging_into_test_site(self):
         try:
