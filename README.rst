@@ -247,18 +247,23 @@ Version History
 -  1.1.* - Major code reorganization and first release on the Python Package Index (PyPi)
 -  1.2.* - Continued improvements.
 -  1.3.* - Adds support for scraping some parts of PACER.
--  1.4.* - Python 3 compatibility.
+-  1.4.* - Python 3 compatibility (this was later dropped due to dependencies).
 -  1.5.* - Adds support for querying and parsing PACER dockets.
 -  1.6.* - Adds automatic relogin code to PACER sessions, with reorganization of old login APIs.
 - 1.7.* - Adds support for hidden PACER APIs.
 - 1.8.* - Standardization of string fields in PACER objects so they return the empty string when they have no value instead of returning None sometimes and the empty string others. (This follows Django conventions.)
+- 1.9.* - Re-organization, simplification, and standardization of PACER classes.
+- 1.10.* - Better parsing for PACER attachment pages.
+- 1.11.* - Adds system for identifying invalid dockets in PACER.
+- 1.12.* - Adds new parsers for PACER's show_case_doc URLs
 
 **Current**
 
-- 1.9.* - Re-organization, simplification, and standardization of PACER classes.
+- 1.13.* - Fixes issues with Python build compatibility
 
 **Immediate Future Goals**
 
+-  Support for additional PACER pages and utilities
 -  Support opinions from for all intermediate appellate state courts
 -  Support opinions from for all courts of U.S. territories (Guam, American Samoa, etc.)
 -  Support opinions from for all federal district courts with non-PACER opinion listings
