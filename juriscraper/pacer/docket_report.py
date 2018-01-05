@@ -92,6 +92,7 @@ class DocketReport(BaseReport):
             "To accept charges shown below, click on the 'View Report' button",
             "Unable to create PDF file.",
             "This case was administratively closed",
+            "The start date must be less than or equal to the end date",
         ]
         for error_string in error_strings:
             error_string_re = re.compile('\s+'.join(error_string.split()),
