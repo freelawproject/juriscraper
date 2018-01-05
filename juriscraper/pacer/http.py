@@ -110,48 +110,11 @@ class PacerSession(requests.Session):
             output[key] = (None, data[key])
         return output
 
-    def login(self):
-        url = self._make_login_url()
-        logger.info(u"Logging in as '%s' to: %s" % (self.username, url))
-
-        # initial GET to login page to get JSESSIONID
-        r = super(PacerSession, self).get(url, timeout=60)
-        if not r.status_code == 200:
-            msg = u'Could not navigate to PACER central login url: %s' % url
-            logger.error(msg)
-            raise PacerLoginException(msg)
-
-        # with our JSESSIONID, try the login
-        login_data = {
-            'login': 'login',
-            'login:loginName': self.username,
-            'login:password': self.password,
-            'login:clientCode': '',
-            'login:fbtnLogin': '',
-            'javax.faces.ViewState': 'stateless'
-        }
-        r = super(PacerSession, self).post(url, timeout=60, data=login_data,
-                                           allow_redirects=False)
-
-        if r.status_code == 302:
-            # we should be redirected on success with cookies!
-            if not self.cookies.get('PacerSession', None, '.uscourts.gov', '/'):
-                msg = u'Failed to get a PacerSession token!'
-                logger.error(msg)
-                raise PacerLoginException(msg)
-        else:
-            msg = u'Unknown PACER login error: http status %s' % r.status_code
-            if u'Invalid ID or password' in r.text:
-                msg = u'Invalid PACER ID or password.'
-            logger.error(msg)
-            raise PacerLoginException(msg)
-
-        logger.info(u'New PacerSession established.')
-
-    def login_training(self):
-        """Attempt to log into the PACER training site."""
-        url = self._make_login_url('psc')
-        logger.info(u'Attempting PACER Training Site login')
+    def login(self, url=None):
+        """Attempt to log into the PACER site."""
+        if url is None:
+            url = self._make_login_url()
+        logger.info(u'Attempting PACER site login')
         r = self.post(
             url,
             headers={'User-Agent': 'Juriscraper'},
@@ -164,17 +127,22 @@ class PacerSession(requests.Session):
             },
         )
         if u'Invalid ID or password' in r.text:
-            raise PacerLoginException(r.text)
+            raise PacerLoginException("Invalid username/password")
+        if u'timeout error' in r.text:
+            raise PacerLoginException("Timeout")
         # The cookie value is in the HTML. Extract it.
         m = re.search('PacerSession=(\w+);', r.text)
         if m is not None:
             self.cookies.set('PacerSession', m.group(1), domain='.uscourts.gov',
                              path='/')
         else:
-            raise PacerLoginException('Could not create new training '
-                                      'PacerSession')
+            raise PacerLoginException('Could not log into PACER')
 
-        logger.info(u'New PacerSession established.')
+        logger.info(u'New PACER session established.')
+
+    def login_training(self):
+        url = self._make_login_url('psc')
+        self.login(url=url)
 
     def _login_again(self, r):
         """Log into PACER if the session has credentials and the session has
@@ -220,8 +188,4 @@ class PacerSession(requests.Session):
         if court_id == 'psc':
             # training website
             return 'https://dcecf.psc.uscourts.gov/cgi-bin/login.pl'
-
-        url = 'https://pacer.login.uscourts.gov/csologin/login.jsf'
-        if court_id is None:
-            return url
-        return url + '?pscCourtId=%s' % court_id
+        return 'https://ecf.cand.uscourts.gov/cgi-bin/login.pl'
