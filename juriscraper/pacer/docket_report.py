@@ -83,16 +83,15 @@ class DocketReport(BaseReport):
         """
         docket_text = self.tree.text_content()
         error_strings = [
-            "The report may take a long time to run because this case has many "
-            "docket entries",
+            "The report may take a long time to run because this case has many docket entries",
             "The page ID does not exist. Please enter a valid page ID number. ",
             "There are no documents in this case.",
-            "Incomplete request. Please try your query again by choosing the "
-            "Query or Reports option",
+            "Incomplete request. Please try your query again by choosing the Query or Reports option",
             "To accept charges shown below, click on the 'View Report' button",
             "Unable to create PDF file.",
             "This case was administratively closed",
             "The start date must be less than or equal to the end date",
+            "The starting document number must be less than or equal to the ending document number",
         ]
         for error_string in error_strings:
             error_string_re = re.compile('\s+'.join(error_string.split()),
