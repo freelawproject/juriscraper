@@ -2,6 +2,7 @@
 Scraper for Florida 3rd District Court of Appeal
 CourtID: flaapp3
 Court Short Name: flaapp3
+Contact: 3dca@flcourts.org, Angel Falero <faleroa@flcourts.org> (305-229-6743)
 
 History:
  - 2014-07-21: Written by Andrei Chelaru
