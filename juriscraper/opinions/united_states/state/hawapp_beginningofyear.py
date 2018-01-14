@@ -16,8 +16,9 @@ class Site(hawapp.Site):
         # missing any late-coming cases from the previous year.
         today = date.today()
         if today.day < 15 and today.month == 1:
-            year = today.year - 1
-            self.url = 'http://www.courts.state.hi.us/opinions_and_orders/opinions/%s/index.html' % year
+            this_year = today.year
+            last_year = this_year - 1
+            self.url = self.url.replace(str(this_year), str(last_year))
         else:
             # This simply aborts the crawler.
             self.status = 200
