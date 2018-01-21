@@ -126,10 +126,52 @@ Anyway, the page also provides the docket entry text and file size, which is pot
 
 [pdf]: http://www.ilnd.uscourts.gov/_assets/_documents/_forms/_cmecf/pdfs/v60/v6_verify_document.pdf
   
+### document_link.pl
+
+Now (apparently) deprecated from District CMECF, but possibly still current in Bankruptcy CMECF, an `href` link to a document in a Docket Report or Claims Register may come with an `id` property that encodes various link parameters, with `K` delimiting parameters (`&` function) and `V` delimiting assignments (`=` function). The `CMECF.widget.DocLink()` function (in `dls_url.js`, see below) calls document_link.pl` to rewrite these into `/doc1` URLs which are then bare of such metadata.
+
+For instance:
+
+```
+  <a
+    href="/cgi-bin/show_doc.pl?caseid=605035&amp;claim_id=43976411&amp;claim_num=70-1&amp;magic_num=MAGIC"
+    id="documentKcaseidV605035Kclaim_idV43976411Kclaim_numV70-1Kmagic_numVMAGIC">
+    70-1
+  </a>
+  <script>
+    CMECF.widget.DocLink('documentKcaseidV605035Kclaim_idV43976411Kclaim_numV70-1Kmagic_numVMAGIC');
+  </script>
+```
+
+whereupon
+
+```
+  https://ecf.caeb.uscourts.gov/cgi-bin/document_link.pl?documentKcaseidV605035Kclaim_idV43976411Kclaim_numV70-1Kmagic_numVMAGIC
+```
+
+returns
+
+```
+  https://ecf.caeb.uscourts.gov/doc1/032026913922
+```
+
+### show_case_doc
+
+Discovered in the EDNY RSS feed, the `show_case_doc` script (no terminal `.pl`) allows looking up a `doc1` URL (DLS) in District CMECF (no BK support) given the case ID and document number. E.g.:
+
+```
+  https://ecf.nyed.uscourts.gov/cgi-bin/show_case_doc?90,406590,,,
+```
+
+returns a `302` redirect to
+
+```
+   https://ecf.nyed.uscourts.gov/doc1/123013711961?caseid=406590&pdf_header=2
+```
 
 ## JavaScript on PACER
 
-All of the JavaScript in PACER has been compressed making it difficult to understand. However, you can often find a comment before the compressed file saying where the uncompressed version lives. In case that changes, here's the goDLS function, as available here: https://ecf.mad.uscourts.gov/lib/dls_url.js:
+All of the JavaScript in PACER has been compressed making it difficult to understand. However, you can often find a comment before the compressed file saying where the uncompressed version lives. In case that changes, here's the District goDLS function, as available here: https://ecf.mad.uscourts.gov/lib/dls_url.js:
 
     ////////////////////////////////////////
     // My understanding of the parameters //
@@ -233,3 +275,7 @@ All of the JavaScript in PACER has been compressed making it difficult to unders
     
         document.getElementById(form_id).submit();
     }
+
+In Bankruptcy CMECF, the function signature is different, replacing the `hdr` parameter with various bankruptcy-specific parameters for claim documents. https://ecf.caeb.uscourts.gov/lib/dls_url.js:
+
+  function goDLS(hyperlink, de_caseid, de_seqno, got_receipt, pdf_header, pdf_toggle_possible, magic_num, claim_id, claim_num, claim_doc_seq) {
