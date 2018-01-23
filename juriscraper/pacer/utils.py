@@ -1,6 +1,8 @@
 import re
+
 import requests
 import tldextract
+from lxml import html
 from six import string_types
 
 from ..lib.string_utils import force_unicode
@@ -127,6 +129,26 @@ def is_pdf(response):
     if response.headers.get('content-type') == 'application/pdf':
         return True
     return False
+
+
+def get_nonce_from_form(r):
+    """Get a nonce value from a HTML response. Returns the first nonce that is
+    found.
+
+    :param r: The response object you wish to parse.
+    :returns A nonce object that can be used to query PACER or None, if no nonce
+    can be found.
+    """
+    tree = html.fromstring(r.text)
+    form_attrs = tree.xpath('//form//@action')
+    for attr in form_attrs:
+        # The action attr will be a value like:
+        # ../cgi-bin/HistDocQry.pl?112801540788508-L_1_0-1
+        # Split on the '?', and return the nonce.
+        path, nonce = attr.split('?')
+        if '-L_' in nonce:
+            return nonce
+    return None
 
 
 def clean_pacer_object(obj):
