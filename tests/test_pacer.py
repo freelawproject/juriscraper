@@ -13,9 +13,10 @@ import mock
 import vcr
 from requests import ConnectionError
 
-from juriscraper.lib.exceptions import PacerLoginException, SlownessException
+from juriscraper.lib.exceptions import PacerLoginException
 from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.test_utils import warn_or_crash_slow_parser
 from juriscraper.pacer import DocketReport, FreeOpinionReport, \
     PossibleCaseNumberApi, AttachmentPage, ShowCaseDocApi
 from juriscraper.pacer.http import PacerSession
@@ -29,7 +30,6 @@ from . import JURISCRAPER_ROOT, TESTS_ROOT
 
 vcr = vcr.VCR(cassette_library_dir=os.path.join(TESTS_ROOT, 'fixtures/cassettes'))
 
-IS_TRAVIS = 'TRAVIS' in os.environ
 PACER_USERNAME = os.environ.get('PACER_USERNAME', None)
 PACER_PASSWORD = os.environ.get('PACER_PASSWORD', None)
 PACER_SETTINGS_MSG = "Skipping test. Please set PACER_USERNAME and " \
@@ -613,20 +613,8 @@ class DocketParseTest(unittest.TestCase):
                 self.assertEqual(j, data)
             t2 = time.time()
 
-            max_duration = 1
             duration = t2 - t1
-            if duration > max_duration:
-                if sys.gettrace() is None and not IS_TRAVIS:
-                    # Don't do this if we're debugging.
-                    raise SlownessException(
-                        "The parser for '{fn}' took {duration}s to test, "
-                        "which is more than the maximum allowed duration of "
-                        "{max_duration}s.".format(
-                            fn=filename,
-                            duration=duration,
-                            max_duration=max_duration,
-                        )
-                    )
+            warn_or_crash_slow_parser(duration, max_duration=1)
             sys.stdout.write("✓ - %0.1fs\n" % (t2-t1))
 
     def test_bankruptcy_court_dockets(self):

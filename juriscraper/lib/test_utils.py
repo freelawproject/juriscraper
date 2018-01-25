@@ -1,6 +1,13 @@
 # -*- coding: utf-8 -*-
-from requests.models import Request, Response
+import os
+import sys
+
 from requests.exceptions import ConnectionError
+from requests.models import Request, Response
+
+from .exceptions import SlownessException
+
+IS_TRAVIS = 'TRAVIS' in os.environ
 
 
 class MockRequest(Request):
@@ -36,3 +43,22 @@ class MockRequest(Request):
 
         # Return the response.
         return r
+
+
+def warn_or_crash_slow_parser(duration, warn_duration=1, max_duration=15):
+    msg = ''
+    if duration > max_duration:
+        if sys.gettrace() is None and not IS_TRAVIS:
+            # Only do this if we're not debugging. Debuggers make things slower
+            # and breakpoints make things stop.
+            raise SlownessException(
+                "This scraper took {duration}s to test, which is more than the "
+                "allowed speed of {max_duration}s. Please speed it up for "
+                "tests to pass.".format(duration=duration,
+                                        max_duration=max_duration)
+            )
+    elif duration > warn_duration:
+        msg = ' - WARNING: SLOW SCRAPER'
+    else:
+        msg = ''
+    return msg

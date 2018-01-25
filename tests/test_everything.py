@@ -6,17 +6,16 @@ import datetime
 import glob
 import json
 import logging
+import os
 import sys
 import time
 import unittest
 
-import os
 import vcr
 
 from juriscraper.lib.date_utils import (
     parse_dates, quarter, is_first_month_in_quarter, fix_future_year_typo,
     make_date_range_tuples)
-from juriscraper.lib.exceptions import SlownessException
 from juriscraper.lib.importer import build_module_list
 from juriscraper.lib.judge_parsers import normalize_judge_string, \
     normalize_judge_names
@@ -25,6 +24,7 @@ from juriscraper.lib.string_utils import (
     CaseNameTweaker, convert_date_string, normalize_dashes,
     split_date_range_string
 )
+from juriscraper.lib.test_utils import warn_or_crash_slow_parser
 from juriscraper.opinions.united_states.state import colo, mass, massappct, \
     nh, pa
 from juriscraper.oral_args.united_states.federal_appellate import ca6
@@ -32,7 +32,6 @@ from juriscraper.pacer.docket_utils import normalize_party_types
 from . import TESTS_ROOT
 
 vcr = vcr.VCR(cassette_library_dir=os.path.join(TESTS_ROOT, 'fixtures/cassettes'))
-IS_TRAVIS = 'TRAVIS' in os.environ
 
 
 class DateTest(unittest.TestCase):
@@ -211,29 +210,13 @@ class ScraperExampleTest(unittest.TestCase):
                         with open(json_path, 'w') as json_example:
                             json.dump(json_data, json_example, indent=2)
                 t2 = time.time()
-
-                max_speed = 15
-                warn_speed = 1
-                speed = t2 - t1
-                msg = ''
-                if speed > max_speed:
-                    if sys.gettrace() is None and not IS_TRAVIS:
-                        # Only do this if we're not debugging. Debuggers make
-                        # things slower and breakpoints make things stop.
-                        raise SlownessException(
-                            "This scraper took {speed}s to test, which is more "
-                            "than the allowed speed of {max_speed}s. "
-                            "Please speed it up for tests to pass.".format(
-                                speed=speed,
-                                max_speed=max_speed,
-                            ))
-                elif speed > warn_speed:
-                    msg = ' - WARNING: SLOW SCRAPER'
+                duration = t2 - t1
+                warning_msg = warn_or_crash_slow_parser(t2 - t1)
+                if warning_msg:
                     num_warnings += 1
-                else:
-                    msg = ''
 
-                print('(%s test(s) in %0.1f seconds%s)' % (num_tests, speed, msg))
+                print('(%s test(s) in %0.1f seconds%s)' %
+                      (num_tests, duration, msg))
 
         print("\n{num_scrapers} scrapers tested successfully against "
               "{num_example_files} example files, with {num_warnings} "
