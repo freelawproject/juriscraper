@@ -116,6 +116,8 @@ The mobile query page, e.g. https://ecf.mad.uscourts.gov/cgi-bin/mobile_query.pl
                         </a>
 ```
 
+However, this count includes unnumbered minute entries. So the number may well be higher than the highest numbered docket entry in a case.
+
 ### DocVerify.pl
 
 This page is only available on CM/ECF, but provides several pieces of interesting information. This page is supposed to do some sort of document verification. As described in [this handy PDF][pdf], you can input a case number and a document number from that case, and it will give you some hashes about that document. This sounds very useful as a form of verification, but it's entirely unclear what the hashes represent. 
