@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
+import calendar
 import re
 import string
-import calendar
+from datetime import timedelta
+
 import geonamescache
 import six
 from dateutil import parser
-from datetime import timedelta
-
 
 # For use in titlecase
 if six.PY2:
@@ -384,6 +384,9 @@ def clean_string(s):
     # get rid of '\t\n\x0b\x0c\r ', and replace them with a single space.
     s = u' '.join(s.split())
 
+    # Convert non-breaking spaces to regular spaces
+    s = s.replace(u'\u00A0', ' ')
+
     return s
 
 
@@ -465,8 +468,8 @@ def trunc(s, length, ellipsis=None):
 
 def convert_date_string(date_string, fuzzy=False):
     """Sanitize date string and convert into standard date object
-    
-    :param date_string: A string to convert to a datetime object. 
+
+    :param date_string: A string to convert to a datetime object.
     :param fuzzy: whether fuzzy string matching should be used, as defined by
     dateutil.
     :return: datetime object
