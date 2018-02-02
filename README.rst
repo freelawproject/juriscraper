@@ -256,10 +256,11 @@ Version History
 - 1.10.* - Better parsing for PACER attachment pages.
 - 1.11.* - Adds system for identifying invalid dockets in PACER.
 - 1.12.* - Adds new parsers for PACER's show_case_doc URLs
+- 1.13.* - Fixes issues with Python build compatibility
 
 **Current**
 
-- 1.13.* - Fixes issues with Python build compatibility
+- 1.14.* - Adds new parser for PACER's docket history report
 
 **Immediate Future Goals**
 
