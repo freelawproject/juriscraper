@@ -18,7 +18,7 @@ from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.lib.test_utils import warn_or_crash_slow_parser
 from juriscraper.pacer import DocketReport, FreeOpinionReport, \
-    PossibleCaseNumberApi, AttachmentPage, ShowCaseDocApi
+    PossibleCaseNumberApi, AttachmentPage, ShowCaseDocApi, DocketHistoryReport
 from juriscraper.pacer.http import PacerSession
 from juriscraper.pacer.utils import (
     get_courts_from_json, get_court_id_from_url,
@@ -438,6 +438,49 @@ class PacerAttachmentPageTest(unittest.TestCase):
             with open(json_path) as f:
                 j = json.load(f)
                 self.assertEqual(j, data)
+
+            sys.stdout.write("✓\n")
+
+
+class PacerDocketHistoryReportTest(unittest.TestCase):
+    """Tests for the docket history report."""
+
+    def setUp(self):
+        self.maxDiff = 200000
+
+    def test_parsing_results(self):
+        """Can we do a simple query and parse?"""
+        paths = []
+        path_root = os.path.join(TESTS_ROOT, 'examples', 'pacer',
+                                 'docket_history_reports')
+        for root, dirnames, filenames in os.walk(path_root):
+            for filename in fnmatch.filter(filenames, '*.html'):
+                paths.append(os.path.join(root, filename))
+        paths.sort()
+        path_max_len = max(len(path) for path in paths) + 2
+        for i, path in enumerate(paths):
+            t1 = time.time()
+            sys.stdout.write("%s. Doing %s" % (i, path.ljust(path_max_len)))
+            dirname, filename = os.path.split(path)
+            filename_sans_ext = filename.split('.')[0]
+            json_path = os.path.join(dirname, '%s.json' % filename_sans_ext)
+            court = filename_sans_ext.split('_')[0]
+
+            report = DocketHistoryReport(court)
+            with open(path, 'r') as f:
+                report._parse_text(f.read().decode('utf-8'))
+            data = report.data
+            if not os.path.exists(json_path):
+                with open(json_path, 'w') as f:
+                    print("Creating new file at %s" % json_path)
+                    json.dump(data, f, indent=2, sort_keys=True)
+                continue
+            with open(json_path) as f:
+                j = json.load(f)
+                self.assertEqual(j, data)
+            t2 = time.time()
+            duration = t2 - t1
+            warn_or_crash_slow_parser(duration, max_duration=2)
 
             sys.stdout.write("✓\n")
 
