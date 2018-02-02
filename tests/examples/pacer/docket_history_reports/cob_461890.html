@@ -1,0 +1,328 @@
+<head><title>CM/ECF Live Database</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script><script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script><style type="text/css">.backpack.dropzone {
+  font-family: 'SF UI Display', 'Segoe UI';
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 150px;
+  font-weight: lighter;
+  color: white;
+  will-change: right;
+  z-index: 2147483647;
+  bottom: 20%;
+  background: #333;
+  position: fixed;
+  user-select: none;
+  transition: left .5s, right .5s;
+  right: 0px; }
+  .backpack.dropzone .animation {
+    height: 80px;
+    width: 250px;
+    background: url("https://sxt.cdn.skype.com/assets/dropzone/hoverstate.png") left center; }
+  .backpack.dropzone .title::before {
+    content: 'Save to'; }
+  .backpack.dropzone.closed {
+    right: -250px; }
+  .backpack.dropzone.hover .animation {
+    animation: sxt-play-anim-hover 0.91s steps(21);
+    animation-fill-mode: forwards;
+    background: url("https://sxt.cdn.skype.com/assets/dropzone/hoverstate.png") left center; }
+
+@keyframes sxt-play-anim-hover {
+  from {
+    background-position: 0px; }
+  to {
+    background-position: -5250px; } }
+  .backpack.dropzone.saving .title::before {
+    content: 'Saving to'; }
+  .backpack.dropzone.saving .animation {
+    background: url("https://sxt.cdn.skype.com/assets/dropzone/saving_loop.png") left center;
+    animation: sxt-play-anim-saving steps(59) 2.46s infinite; }
+
+@keyframes sxt-play-anim-saving {
+  100% {
+    background-position: -14750px; } }
+  .backpack.dropzone.saved .title::before {
+    content: 'Saved to'; }
+  .backpack.dropzone.saved .animation {
+    background: url("https://sxt.cdn.skype.com/assets/dropzone/saved.png") left center;
+    animation: sxt-play-anim-saved steps(20) 0.83s forwards; }
+
+@keyframes sxt-play-anim-saved {
+  100% {
+    background-position: -5000px; } }
+</style></head><body bgcolor="FDEBAC" text="000000" onload="SetFocus()"><iframe id="_yuiResizeMonitor" title="Text Resize Monitor" style="position: absolute; visibility: visible; width: 2em; height: 2em; top: -37px; left: 0px; border-width: 0px;"></iframe><div class="noprint"><img id="cmecfLogo" class="cmecfLogo" src="/graphics/cmecf-logo.gif" alt="CM/ECF" title="" onclick="CMECF.MainMenu.showCourtInformation(); return false"><img src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage" id="helpImage" onclick="CMECF.MainMenu.showHelpPage(''); return false" onmouseover="CMECF.MainMenu.helpImageOn()" onmouseout="CMECF.MainMenu.helpImageOff()"><div id="topmenu" class="yuimenubar yui-module yui-overlay visible" style="z-index: 2; position: static; display: block; visibility: visible;"><div class="bd"><ul class="first-of-type"><li class="yuimenubaritem first-of-type" style="width:9%" id="yui-gen0" groupindex="0" index="0"><a class="yuimenubaritemlabel" href="/cgi-bin/iquery.pl"><u>Q</u>uery</a></li><li class="yuimenubaritem yuimenubaritem-hassubmenu" style="width:11%" id="yui-gen1" groupindex="0" index="1"><a class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu" href="/cgi-bin/DisplayMenu.pl?Reports&amp;id=-1"><u>R</u>eports</a></li><li class="yuimenubaritem yuimenubaritem-hassubmenu" style="width:11%" id="yui-gen2" groupindex="0" index="2"><a class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu" href="/cgi-bin/DisplayMenu.pl?Utilities&amp;id=-1"><u>U</u>tilities</a></li><li class="yuimenubaritem" style="width:10%" id="yui-gen3" groupindex="0" index="3"><a class="yuimenubaritemlabel" href="/cgi-bin/login.pl?logout">Logout</a></li></ul></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout( function(){ CMECF.MainMenu.createMenu(); }, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);}</script><div id="cmecfMainContent" style="height: 879px;"><input type="hidden" id="cmecfMainContentScroll" value="0"><script language="JavaScript"> 
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;				
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</script>
+<center>
+<b><font size="+1">17-16301-TBM</font></b>
+<b></b>Stacy Ann Dickerson                               
+<br>
+<b>Case type:</b> bk
+<b>Chapter:</b> 7
+<b>Asset:</b> Yes
+<b>Vol: </b> v
+<b>Judge:</b> Thomas B. McNamara 
+<br>
+<b>Date filed:</b> 07/10/2017
+<b>Date of last filing:</b> 11/15/2017
+<br><b>Debtor&nbsp;discharged:</b>&nbsp;10/16/2017
+<br>
+</center><br>
+
+		   <script language="JavaScript">
+		   <!--
+		   var aNewWin;
+		   function DktText(Id, cs_caseid, doc_num, seq_no, csrf_number) {
+			 var hyperlink = "/cgi-bin/HistDocQry.pl?" + Id + "-L_ShowDktTxt_1-0-" + cs_caseid + "-" + doc_num + "-" + seq_no + "&csrf=" + csrf_number;
+			 if (!aNewWin || aNewWin.closed) {
+			   aNewWin = window.open(hyperlink,"DktText","scrollbars=yes,resizable=yes,height=250,width=400");
+			 } else {
+			   aNewWin.location = hyperlink;
+			 }
+			 aNewWin.focus();
+		   }
+		   // -->
+		   </script>
+		  <center><b> <font size="5">History</font></b><br><br>
+		   <table cellpadding="2" cellspacing="0" border="1">
+		   <tbody><tr><th>Doc.<br>No.</th>
+		   <th>Dates</th>
+		   <th>Description</th>
+		  </tr>
+
+			 <tr valign="top">
+			 <td align="center">&nbsp;</td>
+			 <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td><i>Filed &amp; Entered: </i></td><td align="right">11/15/2017</td></tr></tbody></table></td>
+<td>
+			 <a href="javascript:DktText('404550100616644','461890','','82','0.572994340249476')">
+			 <img src="/graphics/silverball.gif" width="14" height="14" border="0" alt="Docket Text"></a>
+			Zero Clerk's Fees Due</td>
+</tr>
+
+			 <tr valign="top">
+			 <td align="center"><a href="/doc1/038033781800" oncontextmenu="this.href=&quot;https://ecf.cob.uscourts.gov/doc1/038033781800&quot;">16</a></td>
+			 <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td><i>Filed &amp; Entered: </i></td><td align="right">11/09/2017</td></tr></tbody></table></td>
+<td>
+			 <a href="javascript:DktText('404550100616644','461890','16','80','0.572994340249476')">
+			 <img src="/graphics/silverball.gif" width="14" height="14" border="0" alt="Docket Text"></a>
+			Notice of Change of Address</td>
+</tr>
+
+			 <tr valign="top">
+			 <td align="center"><a href="/doc1/038033681581" oncontextmenu="this.href=&quot;https://ecf.cob.uscourts.gov/doc1/038033681581&quot;">15</a></td>
+			 <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td><i>Filed &amp; Entered: </i></td><td align="right">10/18/2017</td></tr></tbody></table></td>
+<td>
+			 <a href="javascript:DktText('404550100616644','461890','15','77','0.572994340249476')">
+			 <img src="/graphics/silverball.gif" width="14" height="14" border="0" alt="Docket Text"></a>
+			BNC Certificate of Mailing Re: Order of Discharge</td>
+</tr>
+
+			 <tr valign="top">
+			 <td align="center"><a href="/doc1/038033665721" oncontextmenu="this.href=&quot;https://ecf.cob.uscourts.gov/doc1/038033665721&quot;">14</a></td>
+			 <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td><i>Filed &amp; Entered: </i></td><td align="right">10/16/2017</td></tr></tbody></table></td>
+<td>
+			 <a href="javascript:DktText('404550100616644','461890','14','70','0.572994340249476')">
+			 <img src="/graphics/silverball.gif" width="14" height="14" border="0" alt="Docket Text"></a>
+			Order Discharging Debtor-Auto Docket</td>
+</tr>
+
+			 <tr valign="top">
+			 <td align="center">&nbsp;</td>
+			 <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td><i>Filed &amp; Entered: </i></td><td align="right">08/22/2017</td></tr></tbody></table></td>
+<td>
+			 <a href="javascript:DktText('404550100616644','461890','','62','0.572994340249476')">
+			 <img src="/graphics/silverball.gif" width="14" height="14" border="0" alt="Docket Text"></a>
+			Meeting of Creditors Satisfied</td>
+</tr>
+
+			 <tr valign="top">
+			 <td align="center"><a href="/doc1/038033396690" oncontextmenu="this.href=&quot;https://ecf.cob.uscourts.gov/doc1/038033396690&quot;">13</a></td>
+			 <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td><i>Filed &amp; Entered: </i></td><td align="right">08/21/2017</td></tr></tbody></table></td>
+<td>
+			 <a href="javascript:DktText('404550100616644','461890','13','60','0.572994340249476')">
+			 <img src="/graphics/silverball.gif" width="14" height="14" border="0" alt="Docket Text"></a>
+			Financial Management Course Certificate</td>
+</tr>
+
+			 <tr valign="top">
+			 <td align="center"><a href="/doc1/038033358935" oncontextmenu="this.href=&quot;https://ecf.cob.uscourts.gov/doc1/038033358935&quot;">12</a></td>
+			 <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td><i>Filed &amp; Entered: </i></td><td align="right">08/13/2017</td></tr></tbody></table></td>
+<td>
+			 <a href="javascript:DktText('404550100616644','461890','12','54','0.572994340249476')">
+			 <img src="/graphics/silverball.gif" width="14" height="14" border="0" alt="Docket Text"></a>
+			BNC Certificate of Mailing Re: Notice of Possible Dividend</td>
+</tr>
+
+			 <tr valign="top">
+			 <td align="center"><a href="/doc1/038033354368" oncontextmenu="this.href=&quot;https://ecf.cob.uscourts.gov/doc1/038033354368&quot;">11</a></td>
+			 <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td><i>Filed &amp; Entered: </i></td><td align="right">08/10/2017</td></tr></tbody></table></td>
+<td>
+			 <a href="javascript:DktText('404550100616644','461890','11','48','0.572994340249476')">
+			 <img src="/graphics/silverball.gif" width="14" height="14" border="0" alt="Docket Text"></a>
+			Notice of Possible Dividends</td>
+</tr>
+
+			 <tr valign="top">
+			 <td align="center"><a href="/doc1/038033212483" oncontextmenu="this.href=&quot;https://ecf.cob.uscourts.gov/doc1/038033212483&quot;">10</a></td>
+			 <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td><i>Filed &amp; Entered: </i></td><td align="right">07/13/2017</td></tr></tbody></table></td>
+<td>
+			 <a href="javascript:DktText('404550100616644','461890','10','45','0.572994340249476')">
+			 <img src="/graphics/silverball.gif" width="14" height="14" border="0" alt="Docket Text"></a>
+			BNC Certificate of Mailing Re: Meeting of Creditors</td>
+</tr>
+
+			 <tr valign="top">
+			 <td align="center">&nbsp;</td>
+			 <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td><i>Filed &amp; Entered: </i></td><td align="right">07/11/2017</td></tr></tbody></table></td>
+<td>
+			 <a href="javascript:DktText('404550100616644','461890','','28','0.572994340249476')">
+			 <img src="/graphics/silverball.gif" width="14" height="14" border="0" alt="Docket Text"></a>
+			Set UST Statement of Abuse and Financial Course Due Date</td>
+</tr>
+
+			 <tr valign="top">
+			 <td align="center">&nbsp;</td>
+			 <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td><i>Filed &amp; Entered: </i></td><td align="right">07/11/2017</td></tr></tbody></table></td>
+<td>
+			 <a href="javascript:DktText('404550100616644','461890','','30','0.572994340249476')">
+			 <img src="/graphics/silverball.gif" width="14" height="14" border="0" alt="Docket Text"></a>
+			Set Notice of Financial Course Due Date</td>
+</tr>
+
+			 <tr valign="top">
+			 <td align="center"><a href="/doc1/038033187318" oncontextmenu="this.href=&quot;https://ecf.cob.uscourts.gov/doc1/038033187318&quot;">1</a></td>
+			 <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td><i>Filed &amp; Entered: </i></td><td align="right">07/10/2017</td></tr></tbody></table></td>
+<td>
+			 <a href="javascript:DktText('404550100616644','461890','1','2','0.572994340249476')">
+			 <img src="/graphics/silverball.gif" width="14" height="14" border="0" alt="Docket Text"></a>
+			Voluntary Petition-Chapter 7</td>
+</tr>
+
+			 <tr valign="top">
+			 <td align="center"><a href="/doc1/038033187322" oncontextmenu="this.href=&quot;https://ecf.cob.uscourts.gov/doc1/038033187322&quot;">2</a></td>
+			 <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td><i>Filed &amp; Entered: </i></td><td align="right">07/10/2017</td></tr></tbody></table></td>
+<td>
+			 <a href="javascript:DktText('404550100616644','461890','2','8','0.572994340249476')">
+			 <img src="/graphics/silverball.gif" width="14" height="14" border="0" alt="Docket Text"></a>
+			Social Security Number</td>
+</tr>
+
+			 <tr valign="top">
+			 <td align="center"><a href="/doc1/038033187328" oncontextmenu="this.href=&quot;https://ecf.cob.uscourts.gov/doc1/038033187328&quot;">3</a></td>
+			 <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td><i>Filed &amp; Entered: </i></td><td align="right">07/10/2017</td></tr></tbody></table></td>
+<td>
+			 <a href="javascript:DktText('404550100616644','461890','3','11','0.572994340249476')">
+			 <img src="/graphics/silverball.gif" width="14" height="14" border="0" alt="Docket Text"></a>
+			Disclosure of Compensation</td>
+</tr>
+
+			 <tr valign="top">
+			 <td align="center"><a href="/doc1/038033187336" oncontextmenu="this.href=&quot;https://ecf.cob.uscourts.gov/doc1/038033187336&quot;">4</a></td>
+			 <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td><i>Filed &amp; Entered: </i></td><td align="right">07/10/2017</td></tr></tbody></table></td>
+<td>
+			 <a href="javascript:DktText('404550100616644','461890','4','13','0.572994340249476')">
+			 <img src="/graphics/silverball.gif" width="14" height="14" border="0" alt="Docket Text"></a>
+			Statement of Intent</td>
+</tr>
+
+			 <tr valign="top">
+			 <td align="center"><a href="/doc1/038033187343" oncontextmenu="this.href=&quot;https://ecf.cob.uscourts.gov/doc1/038033187343&quot;">5</a></td>
+			 <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td><i>Filed &amp; Entered: </i></td><td align="right">07/10/2017</td></tr></tbody></table></td>
+<td>
+			 <a href="javascript:DktText('404550100616644','461890','5','15','0.572994340249476')">
+			 <img src="/graphics/silverball.gif" width="14" height="14" border="0" alt="Docket Text"></a>
+			Chapter 7 Statements - Monthly Income Form (122A-1)/Exemption Presumption of Abuse (122A-1Supp)</td>
+</tr>
+
+			 <tr valign="top">
+			 <td align="center"><a href="/doc1/038033187349" oncontextmenu="this.href=&quot;https://ecf.cob.uscourts.gov/doc1/038033187349&quot;">6</a></td>
+			 <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td><i>Filed &amp; Entered: </i></td><td align="right">07/10/2017</td></tr></tbody></table></td>
+<td>
+			 <a href="javascript:DktText('404550100616644','461890','6','17','0.572994340249476')">
+			 <img src="/graphics/silverball.gif" width="14" height="14" border="0" alt="Docket Text"></a>
+			Certificate of Budget and Credit Counseling Course</td>
+</tr>
+
+			 <tr valign="top">
+			 <td align="center"><a href="/doc1/038033187355" oncontextmenu="this.href=&quot;https://ecf.cob.uscourts.gov/doc1/038033187355&quot;">7</a></td>
+			 <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td><i>Filed &amp; Entered: </i></td><td align="right">07/10/2017</td></tr></tbody></table></td>
+<td>
+			 <a href="javascript:DktText('404550100616644','461890','7','19','0.572994340249476')">
+			 <img src="/graphics/silverball.gif" width="14" height="14" border="0" alt="Docket Text"></a>
+			Employee Income Record and/or Statement Concerning No Employee Income Record</td>
+</tr>
+
+			 <tr valign="top">
+			 <td align="center">8</td>
+			 <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td><i>Filed &amp; Entered: </i></td><td align="right">07/10/2017</td></tr></tbody></table></td>
+<td>
+			 <a href="javascript:DktText('404550100616644','461890','8','21','0.572994340249476')">
+			 <img src="/graphics/silverball.gif" width="14" height="14" border="0" alt="Docket Text"></a>
+			Automatic Docket of Credit Card</td>
+</tr>
+
+			 <tr valign="top">
+			 <td align="center"><a href="/doc1/038033193939" oncontextmenu="this.href=&quot;https://ecf.cob.uscourts.gov/doc1/038033193939&quot;">9</a></td>
+			 <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td><i>Filed &amp; Entered: </i></td><td align="right">07/10/2017</td></tr></tbody></table></td>
+<td>
+			 <a href="javascript:DktText('404550100616644','461890','9','26','0.572994340249476')">
+			 <img src="/graphics/silverball.gif" width="14" height="14" border="0" alt="Docket Text"></a>
+			Meeting of Creditors-Chapter 7</td>
+</tr>
+</tbody></table>
+			<script type="text/javascript">
+				document.cookie = 'RECENT_CASES=' + "461890^465263;";
+			</script>
+		<hr><center><table border="1" bgcolor="white" width="400"><tbody><tr><th colspan="4"><font size="+1" color="DARKRED">PACER Service Center </font></th></tr><tr><th colspan="4"><font color="DARKBLUE">Transaction Receipt </font></th></tr><tr></tr><tr></tr><tr><td colspan="4" align="CENTER"><font size="-1" color="DARKBLUE">11/17/2017 17:24:44</font></td></tr><tr><th align="LEFT"><font size="-1" color="DARKBLUE"> PACER Login: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> gavelonfire:5130305:0 </font></td><th align="LEFT"><font size="-1" color="DARKBLUE"> Client Code: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> dickerson </font></td></tr><tr><th align="LEFT"><font size="-1" color="DARKBLUE"> Description: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> History/Documents </font></td><th align="LEFT"><font size="-1" color="DARKBLUE"> Search Criteria: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> 17-16301-TBM Type: History  </font></td></tr><tr><th align="LEFT"><font size="-1" color="DARKBLUE"> Billable Pages: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> 1 </font></td><th align="LEFT"><font size="-1" color="DARKBLUE"> Cost: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> 0.10 </font></td></tr><tr></tr><tr></tr></tbody></table></center><br><br></center></div><script type="text/javascript">( function(){ window.SIG_EXT = {}; } )()</script></body>

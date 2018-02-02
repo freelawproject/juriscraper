@@ -1,0 +1,458 @@
+<head><title>Live Database Area</title>
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+    <script type="text/javascript" src="/lib/core.js"></script>
+    <script type="text/javascript">if (top != self) {
+      top.location.replace(location.href);
+    }</script>
+    <script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script>
+</head>
+<body bgcolor="FFFFF0" text="000000" onload="SetFocus()">
+<iframe id="_yuiResizeMonitor" title="Text Resize Monitor"
+        style="position: absolute; visibility: visible; width: 2em; height: 2em; top: -37px; left: 0px; border-width: 0px;"></iframe>
+<div class="noprint"><img id="cmecfLogo" class="cmecfLogo"
+                          src="/graphics/cmecf-logo.gif" alt="CM/ECF" title=""
+                          onclick="CMECF.MainMenu.showCourtInformation(); return false"><img
+        src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage"
+        id="helpImage" onclick="CMECF.MainMenu.showHelpPage(''); return false"
+        onmouseover="CMECF.MainMenu.helpImageOn()"
+        onmouseout="CMECF.MainMenu.helpImageOff()">
+    <div id="topmenu" class="yuimenubar yui-module yui-overlay visible"
+         style="z-index: 2; position: static; display: block; visibility: visible;">
+        <div class="bd">
+            <ul class="first-of-type">
+                <li class="yuimenubaritem first-of-type" style="width:9%"
+                    id="yui-gen0" groupindex="0" index="0"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/iquery.pl"><u>Q</u>uery</a></li>
+                <li class="yuimenubaritem yuimenubaritem-hassubmenu"
+                    style="width:11%" id="yui-gen1" groupindex="0" index="1"><a
+                        class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu"
+                        href="/cgi-bin/DisplayMenu.pl?Reports&amp;id=-1"><u>R</u>eports</a>
+                </li>
+                <li class="yuimenubaritem yuimenubaritem-hassubmenu"
+                    style="width:11%" id="yui-gen2" groupindex="0" index="2"><a
+                        class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu"
+                        href="/cgi-bin/DisplayMenu.pl?Utilities&amp;id=-1"><u>U</u>tilities</a>
+                </li>
+                <li class="yuimenubaritem" style="width:10%" id="yui-gen3"
+                    groupindex="0" index="3"><a class="yuimenubaritemlabel"
+                                                href="/cgi-bin/login.pl?logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">if (navigator.appVersion.indexOf("MSIE") == -1) {
+  window.setTimeout(function () {
+    CMECF.MainMenu.createMenu();
+  }, 0);
+} else {
+  CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);
+}</script>
+<div id="cmecfMainContent" style="height: 909px;"><input type="hidden"
+                                                         id="cmecfMainContentScroll"
+                                                         value="0">
+    <script language="JavaScript">
+      var IsForm = false;
+      var FirstField;
+
+      function SetFocus() {
+        if (IsForm) {
+          if (FirstField) {
+            var ind = FirstField.indexOf('document.', 0);
+            if (ind == 0) {
+              eval(FirstField);
+            }
+            else {
+              var Code = "document.forms[0]." + FirstField + ".focus();";
+              eval(Code);
+            }
+          } else {
+            var Cnt = 0;
+            while (document.forms[0].elements[Cnt] != null) {
+              if (document.forms[0].elements[Cnt].type != "hidden") {
+                document.forms[0].elements[Cnt].focus();
+                break;
+              }
+              Cnt += 1;
+            }
+          }
+        }
+        return (true);
+      }
+    </script>
+    <center>
+        <b><font size="+1">17-17064-elf</font></b>
+        <b></b>Walter A. Clark
+        <br>
+        <b>Case type:</b> bk
+        <b>Chapter:</b> 13
+        <b>Asset:</b> Yes
+        <b>Vol: </b> v
+        <b>Chief Judge:</b> Eric L. Frank
+        <br>
+        <b>Date filed:</b> 10/18/2017
+        <b>Date of last filing:</b> 10/28/2017
+        <br>
+    </center>
+    <br>
+
+    <script language="JavaScript">
+      <!--
+      var aNewWin;
+
+      function DktText(Id, cs_caseid, doc_num, seq_no, csrf_number) {
+        var hyperlink = "/cgi-bin/HistDocQry.pl?" + Id + "-L_ShowDktTxt_1-0-" + cs_caseid + "-" + doc_num + "-" + seq_no + "&csrf=" + csrf_number;
+        if (!aNewWin || aNewWin.closed) {
+          aNewWin = window.open(hyperlink, "DktText", "scrollbars=yes,resizable=yes,height=250,width=400");
+        } else {
+          aNewWin.location = hyperlink;
+        }
+        aNewWin.focus();
+      }
+
+      // -->
+    </script>
+    <center><b> <font size="5">History</font></b><br><br>
+        <table cellpadding="2" cellspacing="0" border="1">
+            <tbody>
+            <tr>
+                <th>Doc.<br>No.</th>
+                <th>Dates</th>
+                <th>Description</th>
+            </tr>
+
+            <tr valign="top">
+                <td align="center">&nbsp;</td>
+                <td>
+                    <table width="100%" border="0" cellpadding="0"
+                           cellspacing="0">
+                        <tbody>
+                        <tr>
+                            <td><i>Filed &amp; Entered: </i></td>
+                            <td align="right">10/18/2017</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <a href="javascript:DktText('512363078566765','475595','','22','0.288082561726821')">
+                        <img src="/graphics/silverball.gif" width="14"
+                             height="14" border="0" alt="Docket Text"></a>
+                    Automatic docket of credit card
+                </td>
+            </tr>
+
+            <tr valign="top">
+                <td align="center"><a href="/doc1/152026451941"
+                                      oncontextmenu="this.href=&quot;https://ecf.paeb.uscourts.gov/doc1/152026451941&quot;">1</a>
+                </td>
+                <td>
+                    <table width="100%" border="0" cellpadding="0"
+                           cellspacing="0">
+                        <tbody>
+                        <tr>
+                            <td><i>Filed &amp; Entered: </i></td>
+                            <td align="right">10/18/2017</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <a href="javascript:DktText('512363078566765','475595','1','2','0.288082561726821')">
+                        <img src="/graphics/silverball.gif" width="14"
+                             height="14" border="0" alt="Docket Text"></a>
+                    Voluntary Petition (Chapter 13)
+                </td>
+            </tr>
+
+            <tr valign="top">
+                <td align="center"><a href="/doc1/152026451944"
+                                      oncontextmenu="this.href=&quot;https://ecf.paeb.uscourts.gov/doc1/152026451944&quot;">2</a>
+                </td>
+                <td>
+                    <table width="100%" border="0" cellpadding="0"
+                           cellspacing="0">
+                        <tbody>
+                        <tr>
+                            <td><i>Filed &amp; Entered: </i></td>
+                            <td align="right">10/18/2017</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <a href="javascript:DktText('512363078566765','475595','2','11','0.288082561726821')">
+                        <img src="/graphics/silverball.gif" width="14"
+                             height="14" border="0" alt="Docket Text"></a>
+                    Chapter 13 Plan
+                </td>
+            </tr>
+
+            <tr valign="top">
+                <td align="center">3</td>
+                <td>
+                    <table width="100%" border="0" cellpadding="0"
+                           cellspacing="0">
+                        <tbody>
+                        <tr>
+                            <td><i>Filed &amp; Entered: </i></td>
+                            <td align="right">10/18/2017</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <a href="javascript:DktText('512363078566765','475595','3','14','0.288082561726821')">
+                        <img src="/graphics/silverball.gif" width="14"
+                             height="14" border="0" alt="Docket Text"></a>
+                    Matrix
+                </td>
+            </tr>
+
+            <tr valign="top">
+                <td align="center"><a href="/doc1/152026451949"
+                                      oncontextmenu="this.href=&quot;https://ecf.paeb.uscourts.gov/doc1/152026451949&quot;">4</a>
+                </td>
+                <td>
+                    <table width="100%" border="0" cellpadding="0"
+                           cellspacing="0">
+                        <tbody>
+                        <tr>
+                            <td><i>Filed &amp; Entered: </i></td>
+                            <td align="right">10/18/2017</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <a href="javascript:DktText('512363078566765','475595','4','16','0.288082561726821')">
+                        <img src="/graphics/silverball.gif" width="14"
+                             height="14" border="0" alt="Docket Text"></a>
+                    Statement of Social Security Number
+                </td>
+            </tr>
+
+            <tr valign="top">
+                <td align="center"><a href="/doc1/152026451952"
+                                      oncontextmenu="this.href=&quot;https://ecf.paeb.uscourts.gov/doc1/152026451952&quot;">5</a>
+                </td>
+                <td>
+                    <table width="100%" border="0" cellpadding="0"
+                           cellspacing="0">
+                        <tbody>
+                        <tr>
+                            <td><i>Filed &amp; Entered: </i></td>
+                            <td align="right">10/18/2017</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <a href="javascript:DktText('512363078566765','475595','5','18','0.288082561726821')">
+                        <img src="/graphics/silverball.gif" width="14"
+                             height="14" border="0" alt="Docket Text"></a>
+                    Chapter 13 Statement of Monthly Income
+                </td>
+            </tr>
+
+            <tr valign="top">
+                <td align="center"><a href="/doc1/152026451955"
+                                      oncontextmenu="this.href=&quot;https://ecf.paeb.uscourts.gov/doc1/152026451955&quot;">6</a>
+                </td>
+                <td>
+                    <table width="100%" border="0" cellpadding="0"
+                           cellspacing="0">
+                        <tbody>
+                        <tr>
+                            <td><i>Filed &amp; Entered: </i></td>
+                            <td align="right">10/18/2017</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <a href="javascript:DktText('512363078566765','475595','6','20','0.288082561726821')">
+                        <img src="/graphics/silverball.gif" width="14"
+                             height="14" border="0" alt="Docket Text"></a>
+                    Certificate of Credit Counseling
+                </td>
+            </tr>
+
+            <tr valign="top">
+                <td align="center">&nbsp;</td>
+                <td>
+                    <table width="100%" border="0" cellpadding="0"
+                           cellspacing="0">
+                        <tbody>
+                        <tr>
+                            <td><i>Filed &amp; Entered: </i></td>
+                            <td align="right">10/19/2017</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <a href="javascript:DktText('512363078566765','475595','','28','0.288082561726821')">
+                        <img src="/graphics/silverball.gif" width="14"
+                             height="14" border="0" alt="Docket Text"></a>
+                    Add Trustee
+                </td>
+            </tr>
+
+            <tr valign="top">
+                <td align="center"><a href="/doc1/152026457100"
+                                      oncontextmenu="this.href=&quot;https://ecf.paeb.uscourts.gov/doc1/152026457100&quot;">7</a>
+                </td>
+                <td>
+                    <table width="100%" border="0" cellpadding="0"
+                           cellspacing="0">
+                        <tbody>
+                        <tr>
+                            <td><i>Filed &amp; Entered: </i></td>
+                            <td align="right">10/19/2017</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <a href="javascript:DktText('512363078566765','475595','7','25','0.288082561726821')">
+                        <img src="/graphics/silverball.gif" width="14"
+                             height="14" border="0" alt="Docket Text"></a>
+                    Creditor Request for Notices
+                </td>
+            </tr>
+
+            <tr valign="top">
+                <td align="center">&nbsp;</td>
+                <td>
+                    <table width="100%" border="0" cellpadding="0"
+                           cellspacing="0">
+                        <tbody>
+                        <tr>
+                            <td><i>Filed &amp; Entered: </i></td>
+                            <td align="right">10/25/2017</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <a href="javascript:DktText('512363078566765','475595','','31','0.288082561726821')">
+                        <img src="/graphics/silverball.gif" width="14"
+                             height="14" border="0" alt="Docket Text"></a>
+                    Add Trustee
+                </td>
+            </tr>
+
+            <tr valign="top">
+                <td align="center"><a href="/doc1/152026483908"
+                                      oncontextmenu="this.href=&quot;https://ecf.paeb.uscourts.gov/doc1/152026483908&quot;">8</a>
+                </td>
+                <td>
+                    <table width="100%" border="0" cellpadding="0"
+                           cellspacing="0">
+                        <tbody>
+                        <tr>
+                            <td><i>Filed &amp; Entered: </i></td>
+                            <td align="right">10/25/2017</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <a href="javascript:DktText('512363078566765','475595','8','34','0.288082561726821')">
+                        <img src="/graphics/silverball.gif" width="14"
+                             height="14" border="0" alt="Docket Text"></a>
+                    Meeting of Creditors Chapter 13
+                </td>
+            </tr>
+
+            <tr valign="top">
+                <td align="center"><a href="/doc1/152026492705"
+                                      oncontextmenu="this.href=&quot;https://ecf.paeb.uscourts.gov/doc1/152026492705&quot;">9</a>
+                </td>
+                <td>
+                    <table width="100%" border="0" cellpadding="0"
+                           cellspacing="0">
+
+                        <tbody>
+                        <tr>
+                            <td><i>Filed: </i></td>
+                            <td align="right">10/28/2017</td>
+                        </tr>
+                        <tr>
+                            <td><i>Entered: </i></td>
+                            <td align="right">10/29/2017</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <a href="javascript:DktText('512363078566765','475595','9','36','0.288082561726821')">
+                        <img src="/graphics/silverball.gif" width="14"
+                             height="14" border="0" alt="Docket Text"></a>
+                    BNC Certificate of Mailing - Meeting of Creditors
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <script type="text/javascript">
+          document.cookie = 'RECENT_CASES=' + "475595^470100^470607^469052^468622^470655^474175^466246^469802^473993;";
+        </script>
+        <hr>
+        <center>
+            <table border="1" bgcolor="white" width="400">
+                <tbody>
+                <tr>
+                    <th colspan="4"><font size="+1" color="DARKRED">PACER
+                        Service Center </font></th>
+                </tr>
+                <tr>
+                    <th colspan="4"><font color="DARKBLUE">Transaction
+                        Receipt </font></th>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td colspan="4" align="CENTER"><font size="-1"
+                                                         color="DARKBLUE">11/14/2017
+                        12:49:07</font></td>
+                </tr>
+                <tr>
+                    <th align="LEFT"><font size="-1" color="DARKBLUE"> PACER
+                        Login: </font></th>
+                    <td align="LEFT"><font size="-1" color="DARKBLUE">
+                        SadekCooperlaw:3164402:0 </font></td>
+                    <th align="LEFT"><font size="-1" color="DARKBLUE"> Client
+                        Code: </font></th>
+                    <td align="LEFT"><font size="-1" color="DARKBLUE"> </font>
+                    </td>
+                </tr>
+                <tr>
+                    <th align="LEFT"><font size="-1" color="DARKBLUE">
+                        Description: </font></th>
+                    <td align="LEFT"><font size="-1" color="DARKBLUE">
+                        History/Documents </font></td>
+                    <th align="LEFT"><font size="-1" color="DARKBLUE"> Search
+                        Criteria: </font></th>
+                    <td align="LEFT"><font size="-1" color="DARKBLUE">
+                        17-17064-elf Type: History </font></td>
+                </tr>
+                <tr>
+                    <th align="LEFT"><font size="-1" color="DARKBLUE"> Billable
+                        Pages: </font></th>
+                    <td align="LEFT"><font size="-1" color="DARKBLUE"> 1 </font>
+                    </td>
+                    <th align="LEFT"><font size="-1" color="DARKBLUE">
+                        Cost: </font></th>
+                    <td align="LEFT"><font size="-1" color="DARKBLUE">
+                        0.10 </font></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                </tbody>
+            </table>
+        </center>
+        <br><br></center>
+</div>
+</body>
