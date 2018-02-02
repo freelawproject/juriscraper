@@ -1,56 +1,56 @@
 {
-  "assigned_to_str": "Daniel S.",
-  "case_name": "Michael Patrick Steele",
-  "cause": "",
-  "court_id": "mieb",
-  "date_converted": null,
-  "date_discharged": null,
-  "date_filed": "2009-12-11",
-  "date_terminated": "2010-03-19",
-  "demand": "",
+  "assigned_to_str": "Daniel S.", 
+  "case_name": "Michael Patrick Steele", 
+  "cause": "", 
+  "court_id": "mieb", 
+  "date_converted": null, 
+  "date_discharged": "2010-03-16", 
+  "date_filed": "2009-12-11", 
+  "date_terminated": "2010-03-19", 
+  "demand": "", 
   "docket_entries": [
     {
-      "date_filed": "2009-12-11",
-      "description": "Chapter 7 Voluntary Petition : Fee Amount $299. Filed by Michael Patrick Steele, Kristie Kay Steele (Biddinger, Michelle) (Entered: 12/11/2009)",
-      "document_number": "1",
+      "date_filed": "2009-12-11", 
+      "description": "Chapter 7 Voluntary Petition : Fee Amount $299. Filed by Michael Patrick Steele, Kristie Kay Steele (Biddinger, Michelle) (Entered: 12/11/2009)", 
+      "document_number": "1", 
       "pacer_doc_id": "096021301318"
     }
-  ],
-  "docket_number": "09-24465",
-  "jurisdiction": "",
-  "jury_demand": "",
-  "nature_of_suit": "",
+  ], 
+  "docket_number": "09-24465", 
+  "jurisdiction": "", 
+  "jury_demand": "", 
+  "nature_of_suit": "", 
   "parties": [
     {
       "attorneys": [
         {
-          "contact": "4431 S. Seeger Street\nCass City, MI 48726\n(989) 872-5601\nEmail: michelle@biddingerandbitzer.com\n",
-          "name": "Michelle P. Biddinger",
+          "contact": "4431 S. Seeger Street\nCass City, MI 48726\n(989) 872-5601\nEmail: michelle@biddingerandbitzer.com\n", 
+          "name": "Michelle P. Biddinger", 
           "roles": []
         }
-      ],
-      "extra_info": "1712 Pobanz Road\nPigeon, MI 48755\nSSN / ITIN: xxx-xx-8785",
-      "name": "Michael Patrick Steele",
+      ], 
+      "extra_info": "1712 Pobanz Road\nPigeon, MI 48755\nSSN / ITIN: xxx-xx-8785", 
+      "name": "Michael Patrick Steele", 
       "type": "Debtor"
-    },
+    }, 
     {
       "attorneys": [
         {
-          "contact": "4431 S. Seeger Street\nCass City, MI 48726\n(989) 872-5601\nEmail: michelle@biddingerandbitzer.com\n",
-          "name": "Michelle P. Biddinger",
+          "contact": "4431 S. Seeger Street\nCass City, MI 48726\n(989) 872-5601\nEmail: michelle@biddingerandbitzer.com\n", 
+          "name": "Michelle P. Biddinger", 
           "roles": []
         }
-      ],
-      "extra_info": "1712 Pobanz Road\nPigeon, MI 48755\nSSN / ITIN: xxx-xx-2427",
-      "name": "Kristie Kay Steele",
+      ], 
+      "extra_info": "1712 Pobanz Road\nPigeon, MI 48755\nSSN / ITIN: xxx-xx-2427", 
+      "name": "Kristie Kay Steele", 
       "type": "Joint Debtor"
-    },
+    }, 
     {
-      "attorneys": [],
-      "extra_info": "Law Firm of Randall Frank\nP.O. Box 2220\nBay City, MI 48707\n989-893-2238",
-      "name": "Randall L Frank",
+      "attorneys": [], 
+      "extra_info": "Law Firm of Randall Frank\nP.O. Box 2220\nBay City, MI 48707\n989-893-2238", 
+      "name": "Randall L Frank", 
       "type": "Trustee"
     }
-  ],
+  ], 
   "referred_to_str": ""
 }

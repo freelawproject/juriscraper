@@ -1,74 +1,74 @@
 {
-  "assigned_to_str": "James F. Schneider",
-  "case_name": "Mildred S Brown",
-  "cause": "",
-  "court_id": "mdb",
-  "date_converted": null,
-  "date_discharged": null,
-  "date_filed": "2010-02-16",
-  "date_terminated": null,
-  "demand": "",
+  "assigned_to_str": "James F. Schneider", 
+  "case_name": "Mildred S Brown", 
+  "cause": "", 
+  "court_id": "mdb", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2010-02-16", 
+  "date_terminated": null, 
+  "demand": "", 
   "docket_entries": [
     {
-      "date_filed": "2010-02-16",
-      "description": "Chapter 7 Voluntary Petition. Fee Amount $299 Filed by Mildred S Brown. Section 521(i)(1) Incomplete Filing date: 04/2/2010. (Cohen, David) (Entered: 02/16/2010)",
-      "document_number": "1",
+      "date_filed": "2010-02-16", 
+      "description": "Chapter 7 Voluntary Petition. Fee Amount $299 Filed by Mildred S Brown. Section 521(i)(1) Incomplete Filing date: 04/2/2010. (Cohen, David) (Entered: 02/16/2010)", 
+      "document_number": "1", 
       "pacer_doc_id": "092017819296"
-    },
+    }, 
     {
-      "date_filed": "2010-02-16",
-      "description": "Disclosure of Compensation of Attorney for Debtor Filed by David W. Cohen. (Cohen, David) (Entered: 02/16/2010)",
-      "document_number": "2",
+      "date_filed": "2010-02-16", 
+      "description": "Disclosure of Compensation of Attorney for Debtor Filed by David W. Cohen. (Cohen, David) (Entered: 02/16/2010)", 
+      "document_number": "2", 
       "pacer_doc_id": "092017819305"
-    },
+    }, 
     {
-      "date_filed": "2010-02-16",
-      "description": "Social Security Number Verification Page on behalf of Mildred S Brown Filed by David W. Cohen. (Cohen, David) (Entered: 02/16/2010)",
-      "document_number": "3",
+      "date_filed": "2010-02-16", 
+      "description": "Social Security Number Verification Page on behalf of Mildred S Brown Filed by David W. Cohen. (Cohen, David) (Entered: 02/16/2010)", 
+      "document_number": "3", 
       "pacer_doc_id": "092017819308"
-    },
+    }, 
     {
-      "date_filed": "2010-02-16",
-      "description": "Statement of Intent on behalf of Mildred S Brown Filed by David W. Cohen. (Cohen, David) (Entered: 02/16/2010)",
-      "document_number": "4",
+      "date_filed": "2010-02-16", 
+      "description": "Statement of Intent on behalf of Mildred S Brown Filed by David W. Cohen. (Cohen, David) (Entered: 02/16/2010)", 
+      "document_number": "4", 
       "pacer_doc_id": "092017819311"
-    },
+    }, 
     {
-      "date_filed": "2010-02-16",
-      "description": "No Presumption of Abuse. Chapter 7 Statement of Current Monthly Income and Means Test Calculation - Form 22A on Behalf of Mildred S Brown Filed by David W. Cohen. (Cohen, David) (Entered: 02/16/2010)",
-      "document_number": "5",
+      "date_filed": "2010-02-16", 
+      "description": "No Presumption of Abuse. Chapter 7 Statement of Current Monthly Income and Means Test Calculation - Form 22A on Behalf of Mildred S Brown Filed by David W. Cohen. (Cohen, David) (Entered: 02/16/2010)", 
+      "document_number": "5", 
       "pacer_doc_id": "092017819316"
-    },
+    }, 
     {
-      "date_filed": "2010-02-16",
-      "description": "Receipt of filing fee for Voluntary Petition (Chapter 7)(10-12990) [misc,volp7a] ( 299.00). Receipt number 12976767, (U.S. Treasury) (Entered: 02/16/2010)",
-      "document_number": "6",
+      "date_filed": "2010-02-16", 
+      "description": "Receipt of filing fee for Voluntary Petition (Chapter 7)(10-12990) [misc,volp7a] ( 299.00). Receipt number 12976767, (U.S. Treasury) (Entered: 02/16/2010)", 
+      "document_number": "6", 
       "pacer_doc_id": null
     }
-  ],
-  "docket_number": "10-12990",
-  "jurisdiction": "",
-  "jury_demand": "",
-  "nature_of_suit": "",
+  ], 
+  "docket_number": "10-12990", 
+  "jurisdiction": "", 
+  "jury_demand": "", 
+  "nature_of_suit": "", 
   "parties": [
     {
       "attorneys": [
         {
-          "contact": "Law Office of David W. Cohen\n1 N. Charles St., Ste. 350\nBaltimore, MD 21201\n(410) 837-6340\nEmail:\n",
-          "name": "David W. Cohen",
+          "contact": "Law Office of David W. Cohen\n1 N. Charles St., Ste. 350\nBaltimore, MD 21201\n(410) 837-6340\nEmail:\n", 
+          "name": "David W. Cohen", 
           "roles": []
         }
-      ],
-      "extra_info": "4028 Lyndale Ave\nBaltimore, MD 21213\nSSN / ITIN: xxx-xx-2403",
-      "name": "Mildred S Brown",
+      ], 
+      "extra_info": "4028 Lyndale Ave\nBaltimore, MD 21213\nSSN / ITIN: xxx-xx-2403", 
+      "name": "Mildred S Brown", 
       "type": "Debtor"
-    },
+    }, 
     {
-      "attorneys": [],
-      "extra_info": "Law Offices of Sean C. Logan, Esq.\n2530 Riva Road,  Suite 400\nAnnapolis, MD 21401\n443-569-5968\nEmail:\ndvs@loganyumkas.com",
-      "name": "Sean C Logan",
+      "attorneys": [], 
+      "extra_info": "Law Offices of Sean C. Logan, Esq.\n2530 Riva Road,  Suite 400\nAnnapolis, MD 21401\n443-569-5968\nEmail:\ndvs@loganyumkas.com", 
+      "name": "Sean C Logan", 
       "type": "Trustee"
     }
-  ],
+  ], 
   "referred_to_str": ""
 }

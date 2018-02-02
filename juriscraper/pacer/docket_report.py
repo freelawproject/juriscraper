@@ -9,7 +9,8 @@ from .reports import BaseReport
 from .utils import get_pacer_doc_id_from_doc1_url, clean_pacer_object
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import convert_date_string, force_unicode, harmonize
+from ..lib.string_utils import convert_date_string, force_unicode, harmonize, \
+    clean_string
 from ..lib.utils import previous_and_next
 
 logger = make_default_logger()
@@ -24,7 +25,7 @@ class DocketReport(BaseReport):
     date_filed_regex = re.compile(r'Date [fF]iled:\s+(%s)' % date_regex)
     date_terminated_regex = re.compile(r'Date [tT]erminated:\s+(%s)' % date_regex)
     date_converted_regex = re.compile(r'Date [Cc]onverted:\s+(%s)' % date_regex)
-    date_discharged_regex = re.compile(r'Date [Dd]ischarged:\s+(%s)' % date_regex)
+    date_discharged_regex = re.compile(r'(?:Date|Debtor)\s+[Dd]ischarged:\s+(%s)' % date_regex)
     assigned_to_regex = re.compile(r'Assigned to:\s+(.*)')
     referred_to_regex = re.compile(r'Referred to:\s+(.*)')
     cause_regex = re.compile(r'Cause:\s+(.*)')
@@ -33,7 +34,7 @@ class DocketReport(BaseReport):
     jurisdiction_regex = re.compile(r'Jurisdiction:\s+(.*)')
     demand_regex = re.compile(r'^Demand:\s+(.*)')
     docket_number_dist_regex = re.compile(r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
-    docket_number_bankr_regex = re.compile(r"#:\s+((\d-)?\d\d-\d*)")
+    docket_number_bankr_regex = re.compile(r"(?:#:\s+)((\d-)?\d\d-\d*)")
 
     PATH = 'cgi-bin/DktRpt.pl'
 
@@ -511,7 +512,6 @@ class DocketReport(BaseReport):
             u'/ancestor::table[not(.//center)][last()]'
         )[0]
         cells = table.xpath(u'.//td')
-        self.metadata_values = []
         # Convert the <br> separated content into text strings, treating as much
         # as possible as HTML.
         values = []
@@ -625,7 +625,7 @@ class DocketReport(BaseReport):
             else:
                 case_name = u"Unknown Case Title"
 
-        return harmonize(case_name)
+        return clean_string(harmonize(case_name))
 
     def _get_docket_number(self):
         if self.is_bankruptcy:
