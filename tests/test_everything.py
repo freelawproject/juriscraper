@@ -127,8 +127,6 @@ class ScraperExampleTest(unittest.TestCase):
         module_strings = build_module_list('juriscraper')
         num_scrapers = len([s for s in module_strings
                             if 'backscraper' not in s])
-        msg = "Testing {count} scrapers against their example files:"
-        print(msg.format(count=num_scrapers))
         max_len_mod_string = max(len(mod) for mod in module_strings
                                  if 'backscraper' not in mod) + 2
         num_example_files = 0
@@ -215,8 +213,8 @@ class ScraperExampleTest(unittest.TestCase):
                 if warning_msg:
                     num_warnings += 1
 
-                print('(%s test(s) in %0.1f seconds%s)' %
-                      (num_tests, duration, msg))
+                print('(%s test(s) in %0.1f seconds)' %
+                      (num_tests, duration))
 
         print("\n{num_scrapers} scrapers tested successfully against "
               "{num_example_files} example files, with {num_warnings} "
