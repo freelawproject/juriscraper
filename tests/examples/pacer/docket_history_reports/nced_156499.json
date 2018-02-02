@@ -4,7 +4,367 @@
   "court_id": "nced", 
   "date_discharged": null, 
   "date_filed": "2017-04-05", 
+  "date_last_filing": "2017-10-05", 
   "date_terminated": null, 
+  "docket_entries": [
+    {
+      "date_filed": "2017-04-05", 
+      "description": "", 
+      "document_number": "1", 
+      "pacer_doc_id": "13105361293", 
+      "short_description": "Complaint"
+    }, 
+    {
+      "date_filed": "2017-04-05", 
+      "description": "", 
+      "document_number": "2", 
+      "pacer_doc_id": "13105361372", 
+      "short_description": "Notice - other"
+    }, 
+    {
+      "date_filed": "2017-04-05", 
+      "description": "", 
+      "document_number": "3", 
+      "pacer_doc_id": "13105361380", 
+      "short_description": "Financial Disclosure Statement"
+    }, 
+    {
+      "date_filed": "2017-04-05", 
+      "description": "", 
+      "document_number": "4", 
+      "pacer_doc_id": "13105361383", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2017-04-05", 
+      "description": "", 
+      "document_number": "5", 
+      "pacer_doc_id": "13105361386", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2017-04-06", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Notice of Deficiency"
+    }, 
+    {
+      "date_filed": "2017-04-06", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Notice to Counsel"
+    }, 
+    {
+      "date_filed": "2017-04-06", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Filing Fee Received"
+    }, 
+    {
+      "date_filed": "2017-04-06", 
+      "description": "", 
+      "document_number": "6", 
+      "pacer_doc_id": "13105361819", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2017-04-06", 
+      "description": "", 
+      "document_number": "7", 
+      "pacer_doc_id": "13105362097", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2017-04-06", 
+      "description": "", 
+      "document_number": "8", 
+      "pacer_doc_id": "13105362132", 
+      "short_description": "Notice - other"
+    }, 
+    {
+      "date_filed": "2017-04-07", 
+      "description": "", 
+      "document_number": "9", 
+      "pacer_doc_id": "13105365093", 
+      "short_description": "Summons Issued"
+    }, 
+    {
+      "date_filed": "2017-04-25", 
+      "description": "", 
+      "document_number": "10", 
+      "pacer_doc_id": "13105391379", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2017-04-25", 
+      "description": "", 
+      "document_number": "11", 
+      "pacer_doc_id": "13105391398", 
+      "short_description": "Motion for Extension of Time to File Answer"
+    }, 
+    {
+      "date_filed": "2017-04-26", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Motion Referred to Clerk"
+    }, 
+    {
+      "date_filed": "2017-04-27", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Order on Motion for Extension of Time to Answer"
+    }, 
+    {
+      "date_filed": "2017-05-01", 
+      "description": "", 
+      "document_number": "12", 
+      "pacer_doc_id": "13105398367", 
+      "short_description": "Summons Returned Executed"
+    }, 
+    {
+      "date_filed": "2017-05-01", 
+      "description": "", 
+      "document_number": "13", 
+      "pacer_doc_id": "13105398378", 
+      "short_description": "Summons Returned Executed"
+    }, 
+    {
+      "date_filed": "2017-05-01", 
+      "description": "", 
+      "document_number": "14", 
+      "pacer_doc_id": "13105398386", 
+      "short_description": "Summons Returned Executed"
+    }, 
+    {
+      "date_filed": "2017-05-01", 
+      "description": "", 
+      "document_number": "15", 
+      "pacer_doc_id": "13105398396", 
+      "short_description": "Summons Returned Executed"
+    }, 
+    {
+      "date_filed": "2017-05-18", 
+      "description": "", 
+      "document_number": "16", 
+      "pacer_doc_id": "13105427231", 
+      "short_description": "Summons Returned Executed"
+    }, 
+    {
+      "date_filed": "2017-05-18", 
+      "description": "", 
+      "document_number": "17", 
+      "pacer_doc_id": "13105427242", 
+      "short_description": "Summons Returned Executed"
+    }, 
+    {
+      "date_filed": "2017-05-23", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Notice of Deficiency - Filing is not text searchable"
+    }, 
+    {
+      "date_filed": "2017-05-23", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Notice of Deficiency"
+    }, 
+    {
+      "date_filed": "2017-05-23", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Motion Referred to Clerk"
+    }, 
+    {
+      "date_filed": "2017-05-23", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Order on Motion for Extension of Time to Answer"
+    }, 
+    {
+      "date_filed": "2017-05-23", 
+      "description": "", 
+      "document_number": "18", 
+      "pacer_doc_id": "13105433228", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2017-05-23", 
+      "description": "", 
+      "document_number": "19", 
+      "pacer_doc_id": "13105433253", 
+      "short_description": "Financial Disclosure Statement"
+    }, 
+    {
+      "date_filed": "2017-05-23", 
+      "description": "", 
+      "document_number": "20", 
+      "pacer_doc_id": "13105433286", 
+      "short_description": "Motion for Extension of Time to File Answer"
+    }, 
+    {
+      "date_filed": "2017-05-23", 
+      "description": "", 
+      "document_number": "21", 
+      "pacer_doc_id": "13105433309", 
+      "short_description": "Response"
+    }, 
+    {
+      "date_filed": "2017-06-12", 
+      "description": "", 
+      "document_number": "22", 
+      "pacer_doc_id": "13105460221", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2017-06-12", 
+      "description": "", 
+      "document_number": "23", 
+      "pacer_doc_id": "13105460263", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2017-06-12", 
+      "description": "", 
+      "document_number": "24", 
+      "pacer_doc_id": "13105460281", 
+      "short_description": "Motion for Extension of Time to File Answer"
+    }, 
+    {
+      "date_filed": "2017-06-13", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Motion Referred to Clerk"
+    }, 
+    {
+      "date_filed": "2017-06-13", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Order on Motion for Extension of Time to Answer"
+    }, 
+    {
+      "date_filed": "2017-06-30", 
+      "description": "", 
+      "document_number": "25", 
+      "pacer_doc_id": "13105491133", 
+      "short_description": "Answer to Complaint"
+    }, 
+    {
+      "date_filed": "2017-07-03", 
+      "description": "", 
+      "document_number": "26", 
+      "pacer_doc_id": "13105493635", 
+      "short_description": "Answer to Complaint"
+    }, 
+    {
+      "date_filed": "2017-07-04", 
+      "description": "", 
+      "document_number": "27", 
+      "pacer_doc_id": "13105494114", 
+      "short_description": "Order"
+    }, 
+    {
+      "date_filed": "2017-07-05", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Notice of Deficiency Failure to File Financial Disclosure"
+    }, 
+    {
+      "date_filed": "2017-07-05", 
+      "description": "", 
+      "document_number": "28", 
+      "pacer_doc_id": "13105495158", 
+      "short_description": "Notice of Special Appearance"
+    }, 
+    {
+      "date_filed": "2017-07-06", 
+      "description": "", 
+      "document_number": "29", 
+      "pacer_doc_id": "13105496517", 
+      "short_description": "Notice to Counsel of Failure to Make Service within 120 Days regarding defendant"
+    }, 
+    {
+      "date_filed": "2017-07-20", 
+      "description": "", 
+      "document_number": "30", 
+      "pacer_doc_id": "13105519152", 
+      "short_description": "Status Report"
+    }, 
+    {
+      "date_filed": "2017-08-01", 
+      "description": "", 
+      "document_number": "31", 
+      "pacer_doc_id": "13105534725", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2017-08-02", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Notice of Deficiency"
+    }, 
+    {
+      "date_filed": "2017-08-02", 
+      "description": "", 
+      "document_number": "32", 
+      "pacer_doc_id": "13105536566", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2017-08-07", 
+      "description": "", 
+      "document_number": "33", 
+      "pacer_doc_id": "13105543621", 
+      "short_description": "Rule 26(f) Report (joint)"
+    }, 
+    {
+      "date_filed": "2017-08-09", 
+      "description": "", 
+      "document_number": "34", 
+      "pacer_doc_id": "13105546834", 
+      "short_description": "Scheduling Order"
+    }, 
+    {
+      "date_filed": "2017-08-30", 
+      "description": "", 
+      "document_number": "35", 
+      "pacer_doc_id": "13105577874", 
+      "short_description": "Selection of Mediator"
+    }, 
+    {
+      "date_filed": "2017-09-18", 
+      "description": "", 
+      "document_number": "36", 
+      "pacer_doc_id": "13105603647", 
+      "short_description": "Notice of Special Appearance"
+    }, 
+    {
+      "date_filed": "2017-10-04", 
+      "description": "", 
+      "document_number": "37", 
+      "pacer_doc_id": "13105627327", 
+      "short_description": "Motion for Extension of Time to File Response/Reply"
+    }, 
+    {
+      "date_filed": "2017-10-05", 
+      "description": "", 
+      "document_number": "38", 
+      "pacer_doc_id": "13105630903", 
+      "short_description": "Order on Motion for Extension of Time to File Response/Reply"
+    }
+  ], 
   "docket_number": "7:17-cv-00071", 
   "referred_to_str": ""
 }

@@ -4,7 +4,31 @@
   "court_id": "gamd", 
   "date_discharged": null, 
   "date_filed": "2017-12-18", 
+  "date_last_filing": "2017-12-18", 
   "date_terminated": null, 
+  "docket_entries": [
+    {
+      "date_filed": "2017-12-18", 
+      "description": "", 
+      "document_number": "1", 
+      "pacer_doc_id": "05303103032", 
+      "short_description": "Financial Affidavit - CJA23"
+    }, 
+    {
+      "date_filed": "2017-12-18", 
+      "description": "", 
+      "document_number": "2", 
+      "pacer_doc_id": "05303103042", 
+      "short_description": "Order Appointing Counsel"
+    }, 
+    {
+      "date_filed": "2017-12-18", 
+      "description": "", 
+      "document_number": "3", 
+      "pacer_doc_id": "05303103247", 
+      "short_description": "Notice of Attorney Appearance - Defendant"
+    }
+  ], 
   "docket_number": "5:17-mj-00108", 
   "referred_to_str": ""
 }

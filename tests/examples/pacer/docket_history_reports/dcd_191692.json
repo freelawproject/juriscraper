@@ -4,7 +4,73 @@
   "court_id": "dcd", 
   "date_discharged": null, 
   "date_filed": "2017-12-04", 
+  "date_last_filing": "2017-12-05", 
   "date_terminated": null, 
+  "docket_entries": [
+    {
+      "date_filed": "2017-12-04", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Case Assigned/Reassigned"
+    }, 
+    {
+      "date_filed": "2017-12-04", 
+      "description": "", 
+      "document_number": "1", 
+      "pacer_doc_id": "04506332246", 
+      "short_description": "Complaint"
+    }, 
+    {
+      "date_filed": "2017-12-05", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Notice of Corrected Docket Entry"
+    }, 
+    {
+      "date_filed": "2017-12-05", 
+      "description": "", 
+      "document_number": "2", 
+      "pacer_doc_id": "04506333093", 
+      "short_description": "Summons Issued Electronically as to AUSA"
+    }, 
+    {
+      "date_filed": "2017-12-05", 
+      "description": "", 
+      "document_number": "3", 
+      "pacer_doc_id": "04506333696", 
+      "short_description": "Notice of Related Case"
+    }, 
+    {
+      "date_filed": "2017-12-05", 
+      "description": "", 
+      "document_number": "4", 
+      "pacer_doc_id": "04506333839", 
+      "short_description": "Corporate Disclosure Statement"
+    }, 
+    {
+      "date_filed": "2017-12-05", 
+      "description": "", 
+      "document_number": "5", 
+      "pacer_doc_id": "04506333846", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2017-12-05", 
+      "description": "", 
+      "document_number": "6", 
+      "pacer_doc_id": "04506333910", 
+      "short_description": "Order"
+    }, 
+    {
+      "date_filed": "2017-12-05", 
+      "description": "", 
+      "document_number": "7", 
+      "pacer_doc_id": "04506334634", 
+      "short_description": "Notice of Appearance"
+    }
+  ], 
   "docket_number": "1:17-cv-02591", 
   "referred_to_str": ""
 }

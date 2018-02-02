@@ -4,7 +4,353 @@
   "court_id": "gand", 
   "date_discharged": null, 
   "date_filed": "2017-02-22", 
+  "date_last_filing": "2017-11-03", 
   "date_terminated": null, 
+  "docket_entries": [
+    {
+      "date_filed": "2017-02-22", 
+      "description": "", 
+      "document_number": "1", 
+      "pacer_doc_id": "05509701639", 
+      "short_description": "Indictment"
+    }, 
+    {
+      "date_filed": "2017-02-22", 
+      "description": "", 
+      "document_number": "2", 
+      "pacer_doc_id": "05509701642", 
+      "short_description": "Defendant Information Sheet"
+    }, 
+    {
+      "date_filed": "2017-02-22", 
+      "description": "", 
+      "document_number": "3", 
+      "pacer_doc_id": "05509701657", 
+      "short_description": "Notice of Filing"
+    }, 
+    {
+      "date_filed": "2017-02-23", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Warrant Issued"
+    }, 
+    {
+      "date_filed": "2017-02-23", 
+      "description": "", 
+      "document_number": "4", 
+      "pacer_doc_id": "05509703630", 
+      "short_description": "Leave of Absence"
+    }, 
+    {
+      "date_filed": "2017-02-28", 
+      "description": "", 
+      "document_number": "5", 
+      "pacer_doc_id": "05509713788", 
+      "short_description": "Writ of Habeas Corpus ad Prosequendum Issued"
+    }, 
+    {
+      "date_filed": "2017-03-21", 
+      "description": "", 
+      "document_number": "6", 
+      "pacer_doc_id": "05509766088", 
+      "short_description": "Motion for Detention"
+    }, 
+    {
+      "date_filed": "2017-03-22", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Case Assigned/Reassigned"
+    }, 
+    {
+      "date_filed": "2017-03-22", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Motion for Extension of Time"
+    }, 
+    {
+      "date_filed": "2017-03-22", 
+      "description": "", 
+      "document_number": "7", 
+      "pacer_doc_id": "05509767550", 
+      "short_description": "Financial Affidavit - CJA23"
+    }, 
+    {
+      "date_filed": "2017-03-22", 
+      "description": "", 
+      "document_number": "8", 
+      "pacer_doc_id": "05509767572", 
+      "short_description": "Order on Motion for Extension of Time"
+    }, 
+    {
+      "date_filed": "2017-03-23", 
+      "description": "", 
+      "document_number": "9", 
+      "pacer_doc_id": "05509770258", 
+      "short_description": "Order Appointing Public Defender"
+    }, 
+    {
+      "date_filed": "2017-03-23", 
+      "description": "", 
+      "document_number": "10", 
+      "pacer_doc_id": "05509770263", 
+      "short_description": "Pretrial Scheduling Order"
+    }, 
+    {
+      "date_filed": "2017-04-05", 
+      "description": "", 
+      "document_number": "11", 
+      "pacer_doc_id": "05509804386", 
+      "short_description": "Warrant Returned Executed"
+    }, 
+    {
+      "date_filed": "2017-04-20", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Motion for Extension of Time"
+    }, 
+    {
+      "date_filed": "2017-04-20", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Order on Motion for Extension of Time"
+    }, 
+    {
+      "date_filed": "2017-04-24", 
+      "description": "", 
+      "document_number": "12", 
+      "pacer_doc_id": "05509841601", 
+      "short_description": "Motion to Suppress Statements"
+    }, 
+    {
+      "date_filed": "2017-04-24", 
+      "description": "", 
+      "document_number": "13", 
+      "pacer_doc_id": "05509844927", 
+      "short_description": "Motion to Suppress Evidence"
+    }, 
+    {
+      "date_filed": "2017-04-24", 
+      "description": "", 
+      "document_number": "14", 
+      "pacer_doc_id": "05509844936", 
+      "short_description": "Motion to Suppress Evidence"
+    }, 
+    {
+      "date_filed": "2017-05-09", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Notice of Hearing on Motion"
+    }, 
+    {
+      "date_filed": "2017-05-22", 
+      "description": "", 
+      "document_number": "15", 
+      "pacer_doc_id": "05509908167", 
+      "short_description": "Motion to Continue"
+    }, 
+    {
+      "date_filed": "2017-05-24", 
+      "description": "", 
+      "document_number": "16", 
+      "pacer_doc_id": "05509915811", 
+      "short_description": "Leave of Absence"
+    }, 
+    {
+      "date_filed": "2017-05-26", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Order on Motion to Continue"
+    }, 
+    {
+      "date_filed": "2017-06-07", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Case Assigned/Reassigned"
+    }, 
+    {
+      "date_filed": "2017-07-05", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Order on Motion to Continue"
+    }, 
+    {
+      "date_filed": "2017-07-05", 
+      "description": "", 
+      "document_number": "17", 
+      "pacer_doc_id": "055010012812", 
+      "short_description": "Motion to Continue"
+    }, 
+    {
+      "date_filed": "2017-07-21", 
+      "description": "", 
+      "document_number": "18", 
+      "pacer_doc_id": "055010053489", 
+      "short_description": "Leave of Absence"
+    }, 
+    {
+      "date_filed": "2017-07-25", 
+      "description": "", 
+      "document_number": "19", 
+      "pacer_doc_id": "055010061959", 
+      "short_description": "Leave of Absence"
+    }, 
+    {
+      "date_filed": "2017-08-07", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Notice of Hearing"
+    }, 
+    {
+      "date_filed": "2017-08-15", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Notice of Hearing"
+    }, 
+    {
+      "date_filed": "2017-08-15", 
+      "description": "", 
+      "document_number": "20", 
+      "pacer_doc_id": "055010110189", 
+      "short_description": "Evidentiary Hearing"
+    }, 
+    {
+      "date_filed": "2017-08-15", 
+      "description": "", 
+      "document_number": "21", 
+      "pacer_doc_id": "055010110194", 
+      "short_description": "Exhibit List"
+    }, 
+    {
+      "date_filed": "2017-08-15", 
+      "description": "", 
+      "document_number": "22", 
+      "pacer_doc_id": "055010110744", 
+      "short_description": "Exhibits"
+    }, 
+    {
+      "date_filed": "2017-08-25", 
+      "description": "", 
+      "document_number": "23", 
+      "pacer_doc_id": "055010137624", 
+      "short_description": "Transcript"
+    }, 
+    {
+      "date_filed": "2017-09-01", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Notice of Hearing"
+    }, 
+    {
+      "date_filed": "2017-09-01", 
+      "description": "", 
+      "document_number": "24", 
+      "pacer_doc_id": "055010153563", 
+      "short_description": "Evidentiary Hearing"
+    }, 
+    {
+      "date_filed": "2017-09-06", 
+      "description": "", 
+      "document_number": "25", 
+      "pacer_doc_id": "055010159588", 
+      "short_description": "Leave of Absence"
+    }, 
+    {
+      "date_filed": "2017-09-07", 
+      "description": "", 
+      "document_number": "26", 
+      "pacer_doc_id": "055010165372", 
+      "short_description": "Motion to Suppress Evidence"
+    }, 
+    {
+      "date_filed": "2017-09-08", 
+      "description": "", 
+      "document_number": "27", 
+      "pacer_doc_id": "055010167442", 
+      "short_description": "Exhibits"
+    }, 
+    {
+      "date_filed": "2017-09-08", 
+      "description": "", 
+      "document_number": "28", 
+      "pacer_doc_id": "055010167454", 
+      "short_description": "Exhibits"
+    }, 
+    {
+      "date_filed": "2017-09-15", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Notice of Hearing"
+    }, 
+    {
+      "date_filed": "2017-09-20", 
+      "description": "", 
+      "document_number": "29", 
+      "pacer_doc_id": "055010192817", 
+      "short_description": "Transcript"
+    }, 
+    {
+      "date_filed": "2017-09-25", 
+      "description": "", 
+      "document_number": "30", 
+      "pacer_doc_id": "055010204150", 
+      "short_description": "Exhibit List"
+    }, 
+    {
+      "date_filed": "2017-09-25", 
+      "description": "", 
+      "document_number": "31", 
+      "pacer_doc_id": "055010204358", 
+      "short_description": "Evidentiary Hearing"
+    }, 
+    {
+      "date_filed": "2017-10-11", 
+      "description": "", 
+      "document_number": "32", 
+      "pacer_doc_id": "055010245517", 
+      "short_description": "Transcript"
+    }, 
+    {
+      "date_filed": "2017-10-26", 
+      "description": "", 
+      "document_number": "33", 
+      "pacer_doc_id": "055010284374", 
+      "short_description": "Exhibits"
+    }, 
+    {
+      "date_filed": "2017-10-26", 
+      "description": "", 
+      "document_number": "34", 
+      "pacer_doc_id": "055010284396", 
+      "short_description": "Exhibits"
+    }, 
+    {
+      "date_filed": "2017-11-03", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Order on Motion for Extension of Time"
+    }, 
+    {
+      "date_filed": "2017-11-03", 
+      "description": "", 
+      "document_number": "35", 
+      "pacer_doc_id": "055010304368", 
+      "short_description": "Motion for Extension of Time"
+    }
+  ], 
   "docket_number": "2:17-cr-00005", 
   "referred_to_str": ""
 }

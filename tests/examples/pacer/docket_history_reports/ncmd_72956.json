@@ -4,7 +4,976 @@
   "court_id": "ncmd", 
   "date_discharged": null, 
   "date_filed": "2016-08-05", 
+  "date_last_filing": "2018-01-11", 
   "date_terminated": null, 
+  "docket_entries": [
+    {
+      "date_filed": "2018-01-11", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Set/Reset Motion and R and R Deadlines/Hearings"
+    }, 
+    {
+      "date_filed": "2018-01-11", 
+      "description": "", 
+      "document_number": "119", 
+      "pacer_doc_id": "13302799117", 
+      "short_description": "Motion to Stay"
+    }, 
+    {
+      "date_filed": "2018-01-11", 
+      "description": "", 
+      "document_number": "120", 
+      "pacer_doc_id": "13302799499", 
+      "short_description": "Order"
+    }, 
+    {
+      "date_filed": "2018-01-09", 
+      "description": "", 
+      "document_number": "118", 
+      "pacer_doc_id": "13302798311", 
+      "short_description": "Memorandum and Opinion"
+    }, 
+    {
+      "date_filed": "2017-11-06", 
+      "description": "", 
+      "document_number": "112", 
+      "pacer_doc_id": "13302759552", 
+      "short_description": "Proposed Findings of Fact and Conclusions of Law"
+    }, 
+    {
+      "date_filed": "2017-11-06", 
+      "description": "", 
+      "document_number": "113", 
+      "pacer_doc_id": "13302759561", 
+      "short_description": "Trial Brief"
+    }, 
+    {
+      "date_filed": "2017-11-06", 
+      "description": "", 
+      "document_number": "114", 
+      "pacer_doc_id": "13302759564", 
+      "short_description": "Proposed Findings of Fact and Conclusions of Law"
+    }, 
+    {
+      "date_filed": "2017-11-06", 
+      "description": "", 
+      "document_number": "115", 
+      "pacer_doc_id": "13302759567", 
+      "short_description": "Trial Brief"
+    }, 
+    {
+      "date_filed": "2017-11-06", 
+      "description": "", 
+      "document_number": "116", 
+      "pacer_doc_id": "13302759595", 
+      "short_description": "Trial Brief"
+    }, 
+    {
+      "date_filed": "2017-11-06", 
+      "description": "", 
+      "document_number": "117", 
+      "pacer_doc_id": "13302759598", 
+      "short_description": "Proposed Findings of Fact and Conclusions of Law"
+    }, 
+    {
+      "date_filed": "2017-11-02", 
+      "description": "", 
+      "document_number": "111", 
+      "pacer_doc_id": "13302757357", 
+      "short_description": "Notice (Other)"
+    }, 
+    {
+      "date_filed": "2017-10-27", 
+      "description": "", 
+      "document_number": "110", 
+      "pacer_doc_id": "13302752955", 
+      "short_description": "Notice (Other)"
+    }, 
+    {
+      "date_filed": "2017-10-26", 
+      "description": "", 
+      "document_number": "108", 
+      "pacer_doc_id": "13302752234", 
+      "short_description": "Transcript"
+    }, 
+    {
+      "date_filed": "2017-10-26", 
+      "description": "", 
+      "document_number": "109", 
+      "pacer_doc_id": "13302752240", 
+      "short_description": "Exhibit List"
+    }, 
+    {
+      "date_filed": "2017-10-24", 
+      "description": "", 
+      "document_number": "105", 
+      "pacer_doc_id": "13302749668", 
+      "short_description": "Transcript"
+    }, 
+    {
+      "date_filed": "2017-10-24", 
+      "description": "", 
+      "document_number": "106", 
+      "pacer_doc_id": "13302749671", 
+      "short_description": "Transcript"
+    }, 
+    {
+      "date_filed": "2017-10-24", 
+      "description": "", 
+      "document_number": "107", 
+      "pacer_doc_id": "13302749674", 
+      "short_description": "Transcript"
+    }, 
+    {
+      "date_filed": "2017-10-19", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Bench Trial - Completed"
+    }, 
+    {
+      "date_filed": "2017-10-19", 
+      "description": "", 
+      "document_number": "104", 
+      "pacer_doc_id": "13302746983", 
+      "short_description": "Exhibit List"
+    }, 
+    {
+      "date_filed": "2017-10-18", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Bench Trial - Held"
+    }, 
+    {
+      "date_filed": "2017-10-18", 
+      "description": "", 
+      "document_number": "103", 
+      "pacer_doc_id": "13302746759", 
+      "short_description": "Exhibit List"
+    }, 
+    {
+      "date_filed": "2017-10-17", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Bench Trial - Held"
+    }, 
+    {
+      "date_filed": "2017-10-16", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Bench Trial - Begun"
+    }, 
+    {
+      "date_filed": "2017-10-15", 
+      "description": "", 
+      "document_number": "102", 
+      "pacer_doc_id": "13302744458", 
+      "short_description": "Exhibit List"
+    }, 
+    {
+      "date_filed": "2017-10-13", 
+      "description": "", 
+      "document_number": "98", 
+      "pacer_doc_id": "13302743843", 
+      "short_description": "Statement"
+    }, 
+    {
+      "date_filed": "2017-10-13", 
+      "description": "", 
+      "document_number": "99", 
+      "pacer_doc_id": "13302743859", 
+      "short_description": "Statement"
+    }, 
+    {
+      "date_filed": "2017-10-13", 
+      "description": "", 
+      "document_number": "100", 
+      "pacer_doc_id": "13302743968", 
+      "short_description": "Statement"
+    }, 
+    {
+      "date_filed": "2017-10-13", 
+      "description": "", 
+      "document_number": "101", 
+      "pacer_doc_id": "13302744397", 
+      "short_description": "Notice (Other)"
+    }, 
+    {
+      "date_filed": "2017-10-11", 
+      "description": "", 
+      "document_number": "97", 
+      "pacer_doc_id": "13302741921", 
+      "short_description": "Response in Support of Motion"
+    }, 
+    {
+      "date_filed": "2017-10-10", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Motions Submitted"
+    }, 
+    {
+      "date_filed": "2017-10-10", 
+      "description": "", 
+      "document_number": "96", 
+      "pacer_doc_id": "13302741783", 
+      "short_description": "Amended Document"
+    }, 
+    {
+      "date_filed": "2017-10-09", 
+      "description": "", 
+      "document_number": "91", 
+      "pacer_doc_id": "13302740723", 
+      "short_description": "Exhibit List"
+    }, 
+    {
+      "date_filed": "2017-10-09", 
+      "description": "", 
+      "document_number": "92", 
+      "pacer_doc_id": "13302740733", 
+      "short_description": "Motion to Bifurcate"
+    }, 
+    {
+      "date_filed": "2017-10-09", 
+      "description": "", 
+      "document_number": "93", 
+      "pacer_doc_id": "13302740737", 
+      "short_description": "Memorandum"
+    }, 
+    {
+      "date_filed": "2017-10-09", 
+      "description": "", 
+      "document_number": "94", 
+      "pacer_doc_id": "13302740759", 
+      "short_description": "Exhibit List"
+    }, 
+    {
+      "date_filed": "2017-10-09", 
+      "description": "", 
+      "document_number": "95", 
+      "pacer_doc_id": "13302740765", 
+      "short_description": "Exhibit List"
+    }, 
+    {
+      "date_filed": "2017-10-04", 
+      "description": "", 
+      "document_number": "90", 
+      "pacer_doc_id": "13302738255", 
+      "short_description": "Final Pretrial Order"
+    }, 
+    {
+      "date_filed": "2017-09-11", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Set/Reset Deadlines/Hearings"
+    }, 
+    {
+      "date_filed": "2017-09-11", 
+      "description": "", 
+      "document_number": "88", 
+      "pacer_doc_id": "13302721780", 
+      "short_description": "Notice of Hearing"
+    }, 
+    {
+      "date_filed": "2017-09-11", 
+      "description": "", 
+      "document_number": "89", 
+      "pacer_doc_id": "13302721891", 
+      "short_description": "Notice of Trial Calendar"
+    }, 
+    {
+      "date_filed": "2017-09-08", 
+      "description": "", 
+      "document_number": "87", 
+      "pacer_doc_id": "13302721185", 
+      "short_description": "Memorandum and Opinion"
+    }, 
+    {
+      "date_filed": "2017-09-01", 
+      "description": "", 
+      "document_number": "86", 
+      "pacer_doc_id": "13302717243", 
+      "short_description": "Transcript"
+    }, 
+    {
+      "date_filed": "2017-08-29", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Motion Hearing"
+    }, 
+    {
+      "date_filed": "2017-08-29", 
+      "description": "", 
+      "document_number": "85", 
+      "pacer_doc_id": "13302714356", 
+      "short_description": "Order on Motion to Stay"
+    }, 
+    {
+      "date_filed": "2017-08-28", 
+      "description": "", 
+      "document_number": "84", 
+      "pacer_doc_id": "13302712865", 
+      "short_description": "Suggestion of Subsequently Decided Authority"
+    }, 
+    {
+      "date_filed": "2017-08-23", 
+      "description": "", 
+      "document_number": "83", 
+      "pacer_doc_id": "13302709606", 
+      "short_description": "Notice of Hearing"
+    }, 
+    {
+      "date_filed": "2017-08-11", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Motions Submitted"
+    }, 
+    {
+      "date_filed": "2017-08-07", 
+      "description": "", 
+      "document_number": "82", 
+      "pacer_doc_id": "13302699755", 
+      "short_description": "Notice of Withdrawal and Substitution of Counsel"
+    }, 
+    {
+      "date_filed": "2017-08-04", 
+      "description": "", 
+      "document_number": "81", 
+      "pacer_doc_id": "13302699242", 
+      "short_description": "Notice of Withdrawal and Substitution of Counsel"
+    }, 
+    {
+      "date_filed": "2017-07-31", 
+      "description": "", 
+      "document_number": "80", 
+      "pacer_doc_id": "13302696054", 
+      "short_description": "Reply to Response to Motion"
+    }, 
+    {
+      "date_filed": "2017-07-17", 
+      "description": "", 
+      "document_number": "77", 
+      "pacer_doc_id": "13302687306", 
+      "short_description": "Reply to Response to Motion"
+    }, 
+    {
+      "date_filed": "2017-07-17", 
+      "description": "", 
+      "document_number": "78", 
+      "pacer_doc_id": "13302687431", 
+      "short_description": "Response in Opposition to Motion"
+    }, 
+    {
+      "date_filed": "2017-07-17", 
+      "description": "", 
+      "document_number": "79", 
+      "pacer_doc_id": "13302687665", 
+      "short_description": "Response in Opposition to Motion"
+    }, 
+    {
+      "date_filed": "2017-07-03", 
+      "description": "", 
+      "document_number": "76", 
+      "pacer_doc_id": "13302679408", 
+      "short_description": "Response in Opposition to Motion"
+    }, 
+    {
+      "date_filed": "2017-06-26", 
+      "description": "", 
+      "document_number": "74", 
+      "pacer_doc_id": "13302674619", 
+      "short_description": "Motion to Stay"
+    }, 
+    {
+      "date_filed": "2017-06-26", 
+      "description": "", 
+      "document_number": "75", 
+      "pacer_doc_id": "13302674627", 
+      "short_description": "Memorandum"
+    }, 
+    {
+      "date_filed": "2017-06-19", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Pretrial Conference"
+    }, 
+    {
+      "date_filed": "2017-06-19", 
+      "description": "", 
+      "document_number": "72", 
+      "pacer_doc_id": "13302669399", 
+      "short_description": "Motion in Limine"
+    }, 
+    {
+      "date_filed": "2017-06-19", 
+      "description": "", 
+      "document_number": "73", 
+      "pacer_doc_id": "13302669422", 
+      "short_description": "Brief"
+    }, 
+    {
+      "date_filed": "2017-06-13", 
+      "description": "", 
+      "document_number": "67", 
+      "pacer_doc_id": "13302666638", 
+      "short_description": "Amended Document"
+    }, 
+    {
+      "date_filed": "2017-06-13", 
+      "description": "", 
+      "document_number": "68", 
+      "pacer_doc_id": "13302666641", 
+      "short_description": "Designation of Deposition Transcript"
+    }, 
+    {
+      "date_filed": "2017-06-13", 
+      "description": "", 
+      "document_number": "69", 
+      "pacer_doc_id": "13302666644", 
+      "short_description": "Objection - Other"
+    }, 
+    {
+      "date_filed": "2017-06-13", 
+      "description": "", 
+      "document_number": "70", 
+      "pacer_doc_id": "13302666655", 
+      "short_description": "Objection - Other"
+    }, 
+    {
+      "date_filed": "2017-06-13", 
+      "description": "", 
+      "document_number": "71", 
+      "pacer_doc_id": "13302666661", 
+      "short_description": "Objection - Other"
+    }, 
+    {
+      "date_filed": "2017-06-09", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Order"
+    }, 
+    {
+      "date_filed": "2017-06-08", 
+      "description": "", 
+      "document_number": "66", 
+      "pacer_doc_id": "13302664045", 
+      "short_description": "Notice of Hearing"
+    }, 
+    {
+      "date_filed": "2017-06-05", 
+      "description": "", 
+      "document_number": "61", 
+      "pacer_doc_id": "13302660873", 
+      "short_description": "Proposed Findings of Fact and Conclusions of Law"
+    }, 
+    {
+      "date_filed": "2017-06-05", 
+      "description": "", 
+      "document_number": "62", 
+      "pacer_doc_id": "13302660906", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2017-06-05", 
+      "description": "", 
+      "document_number": "63", 
+      "pacer_doc_id": "13302660934", 
+      "short_description": "Proposed Findings of Fact and Conclusions of Law"
+    }, 
+    {
+      "date_filed": "2017-06-05", 
+      "description": "", 
+      "document_number": "64", 
+      "pacer_doc_id": "13302660937", 
+      "short_description": "Trial Brief"
+    }, 
+    {
+      "date_filed": "2017-06-05", 
+      "description": "", 
+      "document_number": "65", 
+      "pacer_doc_id": "13302660948", 
+      "short_description": "Proposed Findings of Fact and Conclusions of Law"
+    }, 
+    {
+      "date_filed": "2017-05-31", 
+      "description": "", 
+      "document_number": "60", 
+      "pacer_doc_id": "13302658023", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2017-05-30", 
+      "description": "", 
+      "document_number": "55", 
+      "pacer_doc_id": "13302656441", 
+      "short_description": "Final Pretrial Disclosures"
+    }, 
+    {
+      "date_filed": "2017-05-30", 
+      "description": "", 
+      "document_number": "56", 
+      "pacer_doc_id": "13302656470", 
+      "short_description": "Final Pretrial Disclosures"
+    }, 
+    {
+      "date_filed": "2017-05-30", 
+      "description": "", 
+      "document_number": "57", 
+      "pacer_doc_id": "13302656473", 
+      "short_description": "Pretrial Disclosures"
+    }, 
+    {
+      "date_filed": "2017-05-30", 
+      "description": "", 
+      "document_number": "58", 
+      "pacer_doc_id": "13302656489", 
+      "short_description": "Exhibit List"
+    }, 
+    {
+      "date_filed": "2017-05-30", 
+      "description": "", 
+      "document_number": "59", 
+      "pacer_doc_id": "13302656653", 
+      "short_description": "Final Pretrial Disclosures"
+    }, 
+    {
+      "date_filed": "2017-05-23", 
+      "description": "", 
+      "document_number": "54", 
+      "pacer_doc_id": "13302652675", 
+      "short_description": "Notice of Trial Calendar"
+    }, 
+    {
+      "date_filed": "2017-04-19", 
+      "description": "", 
+      "document_number": "53", 
+      "pacer_doc_id": "13302630060", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2017-04-11", 
+      "description": "", 
+      "document_number": "52", 
+      "pacer_doc_id": "13302624877", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2017-03-03", 
+      "description": "", 
+      "document_number": "49", 
+      "pacer_doc_id": "13302598136", 
+      "short_description": "Answer to Amended Complaint"
+    }, 
+    {
+      "date_filed": "2017-03-03", 
+      "description": "", 
+      "document_number": "50", 
+      "pacer_doc_id": "13302598203", 
+      "short_description": "Memorandum and Opinion"
+    }, 
+    {
+      "date_filed": "2017-03-03", 
+      "description": "", 
+      "document_number": "51", 
+      "pacer_doc_id": "13302598270", 
+      "short_description": "Order on Motion to Dismiss for Failure to State a Claim"
+    }, 
+    {
+      "date_filed": "2017-03-01", 
+      "description": "", 
+      "document_number": "47", 
+      "pacer_doc_id": "13302595600", 
+      "short_description": "Rule 26f (Joint)"
+    }, 
+    {
+      "date_filed": "2017-03-01", 
+      "description": "", 
+      "document_number": "48", 
+      "pacer_doc_id": "13302595611", 
+      "short_description": "Order on Motion to Withdraw as Attorney"
+    }, 
+    {
+      "date_filed": "2017-02-21", 
+      "description": "", 
+      "document_number": "45", 
+      "pacer_doc_id": "13302590628", 
+      "short_description": "Motion to Dismiss for Failure to State a Claim"
+    }, 
+    {
+      "date_filed": "2017-02-21", 
+      "description": "", 
+      "document_number": "46", 
+      "pacer_doc_id": "13302590636", 
+      "short_description": "Memorandum"
+    }, 
+    {
+      "date_filed": "2017-02-16", 
+      "description": "", 
+      "document_number": "44", 
+      "pacer_doc_id": "13302588486", 
+      "short_description": "Motion to Withdraw as Attorney"
+    }, 
+    {
+      "date_filed": "2017-02-15", 
+      "description": "", 
+      "document_number": "43", 
+      "pacer_doc_id": "13302587267", 
+      "short_description": "Notice (Other)"
+    }, 
+    {
+      "date_filed": "2017-02-14", 
+      "description": "", 
+      "document_number": "42", 
+      "pacer_doc_id": "13302586254", 
+      "short_description": "Rule 26(f) Report (Joint)"
+    }, 
+    {
+      "date_filed": "2017-02-07", 
+      "description": "", 
+      "document_number": "41", 
+      "pacer_doc_id": "13302582567", 
+      "short_description": "Order"
+    }, 
+    {
+      "date_filed": "2017-02-06", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Motions Submitted"
+    }, 
+    {
+      "date_filed": "2017-02-06", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Pretrial Conference"
+    }, 
+    {
+      "date_filed": "2017-02-02", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Motions Submitted"
+    }, 
+    {
+      "date_filed": "2017-02-02", 
+      "description": "", 
+      "document_number": "39", 
+      "pacer_doc_id": "13302580518", 
+      "short_description": "Motion to Consolidate Cases"
+    }, 
+    {
+      "date_filed": "2017-02-02", 
+      "description": "", 
+      "document_number": "40", 
+      "pacer_doc_id": "13302580525", 
+      "short_description": "Memorandum"
+    }, 
+    {
+      "date_filed": "2017-02-01", 
+      "description": "", 
+      "document_number": "38", 
+      "pacer_doc_id": "13302579436", 
+      "short_description": "Rule 26(f) Report (Individual)"
+    }, 
+    {
+      "date_filed": "2017-01-13", 
+      "description": "", 
+      "document_number": "37", 
+      "pacer_doc_id": "13302568076", 
+      "short_description": "Notice of Hearing"
+    }, 
+    {
+      "date_filed": "2016-12-19", 
+      "description": "", 
+      "document_number": "36", 
+      "pacer_doc_id": "13302553092", 
+      "short_description": "Order on Motion for Conference"
+    }, 
+    {
+      "date_filed": "2016-12-15", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Motions Referred"
+    }, 
+    {
+      "date_filed": "2016-12-14", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Motions Submitted"
+    }, 
+    {
+      "date_filed": "2016-12-14", 
+      "description": "", 
+      "document_number": "35", 
+      "pacer_doc_id": "13302551405", 
+      "short_description": "Motion for Conference"
+    }, 
+    {
+      "date_filed": "2016-12-07", 
+      "description": "", 
+      "document_number": "34", 
+      "pacer_doc_id": "13302547095", 
+      "short_description": "Reply to Response to Motion"
+    }, 
+    {
+      "date_filed": "2016-11-23", 
+      "description": "", 
+      "document_number": "33", 
+      "pacer_doc_id": "13302537862", 
+      "short_description": "Response in Opposition to Motion"
+    }, 
+    {
+      "date_filed": "2016-11-14", 
+      "description": "", 
+      "document_number": "32", 
+      "pacer_doc_id": "13302531660", 
+      "short_description": "Rule 26(f) Report (Individual)"
+    }, 
+    {
+      "date_filed": "2016-11-10", 
+      "description": "", 
+      "document_number": "30", 
+      "pacer_doc_id": "13302530671", 
+      "short_description": "Rule 26(f) Report (Individual)"
+    }, 
+    {
+      "date_filed": "2016-11-10", 
+      "description": "", 
+      "document_number": "31", 
+      "pacer_doc_id": "13302530691", 
+      "short_description": "Memorandum"
+    }, 
+    {
+      "date_filed": "2016-10-31", 
+      "description": "", 
+      "document_number": "28", 
+      "pacer_doc_id": "13302523126", 
+      "short_description": "Motion to Dismiss for Failure to State a Claim"
+    }, 
+    {
+      "date_filed": "2016-10-31", 
+      "description": "", 
+      "document_number": "29", 
+      "pacer_doc_id": "13302523129", 
+      "short_description": "Memorandum"
+    }, 
+    {
+      "date_filed": "2016-10-25", 
+      "description": "", 
+      "document_number": "27", 
+      "pacer_doc_id": "13302518315", 
+      "short_description": "Order"
+    }, 
+    {
+      "date_filed": "2016-10-18", 
+      "description": "", 
+      "document_number": "26", 
+      "pacer_doc_id": "13302514292", 
+      "short_description": "Response in Opposition to Motion"
+    }, 
+    {
+      "date_filed": "2016-10-13", 
+      "description": "", 
+      "document_number": "23", 
+      "pacer_doc_id": "13302511886", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2016-10-13", 
+      "description": "", 
+      "document_number": "24", 
+      "pacer_doc_id": "13302511891", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2016-10-13", 
+      "description": "", 
+      "document_number": "25", 
+      "pacer_doc_id": "13302511896", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2016-09-15", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Order on Motion for Extension of Time to Answer"
+    }, 
+    {
+      "date_filed": "2016-09-15", 
+      "description": "", 
+      "document_number": "22", 
+      "pacer_doc_id": "13302493886", 
+      "short_description": "Motion for Extension of Time to File Answer"
+    }, 
+    {
+      "date_filed": "2016-09-12", 
+      "description": "", 
+      "document_number": "20", 
+      "pacer_doc_id": "13302491002", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2016-09-12", 
+      "description": "", 
+      "document_number": "21", 
+      "pacer_doc_id": "13302491009", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2016-09-07", 
+      "description": "", 
+      "document_number": "12", 
+      "pacer_doc_id": "13302487221", 
+      "short_description": "Amended Complaint"
+    }, 
+    {
+      "date_filed": "2016-09-07", 
+      "description": "", 
+      "document_number": "13", 
+      "pacer_doc_id": "13302487287", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2016-09-07", 
+      "description": "", 
+      "document_number": "14", 
+      "pacer_doc_id": "13302487307", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2016-09-07", 
+      "description": "", 
+      "document_number": "15", 
+      "pacer_doc_id": "13302487855", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2016-09-07", 
+      "description": "", 
+      "document_number": "16", 
+      "pacer_doc_id": "13302487860", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2016-09-07", 
+      "description": "", 
+      "document_number": "17", 
+      "pacer_doc_id": "13302487863", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2016-09-07", 
+      "description": "", 
+      "document_number": "18", 
+      "pacer_doc_id": "13302488164", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2016-09-07", 
+      "description": "", 
+      "document_number": "19", 
+      "pacer_doc_id": "13302488182", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2016-08-15", 
+      "description": "", 
+      "document_number": "11", 
+      "pacer_doc_id": "13302472658", 
+      "short_description": "Waiver of Service of Summons"
+    }, 
+    {
+      "date_filed": "2016-08-10", 
+      "description": "", 
+      "document_number": "10", 
+      "pacer_doc_id": "13302470416", 
+      "short_description": "Waiver of Service of Summons"
+    }, 
+    {
+      "date_filed": "2016-08-08", 
+      "description": "", 
+      "document_number": "8", 
+      "pacer_doc_id": "13302468782", 
+      "short_description": "Summons Issued"
+    }, 
+    {
+      "date_filed": "2016-08-08", 
+      "description": "", 
+      "document_number": "9", 
+      "pacer_doc_id": "13302468792", 
+      "short_description": "Notice of Right to Consent"
+    }, 
+    {
+      "date_filed": "2016-08-05", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Case Assigned"
+    }, 
+    {
+      "date_filed": "2016-08-05", 
+      "description": "", 
+      "document_number": "1", 
+      "pacer_doc_id": "13302467318", 
+      "short_description": "Complaint"
+    }, 
+    {
+      "date_filed": "2016-08-05", 
+      "description": "", 
+      "document_number": "2", 
+      "pacer_doc_id": "13302467341", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2016-08-05", 
+      "description": "", 
+      "document_number": "3", 
+      "pacer_doc_id": "13302467354", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2016-08-05", 
+      "description": "", 
+      "document_number": "4", 
+      "pacer_doc_id": "13302467364", 
+      "short_description": "Corporate Disclosure Statement - 7.1(a)"
+    }, 
+    {
+      "date_filed": "2016-08-05", 
+      "description": "", 
+      "document_number": "5", 
+      "pacer_doc_id": "13302467449", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2016-08-05", 
+      "description": "", 
+      "document_number": "6", 
+      "pacer_doc_id": "13302467456", 
+      "short_description": "Notice of Appearance"
+    }, 
+    {
+      "date_filed": "2016-08-05", 
+      "description": "", 
+      "document_number": "7", 
+      "pacer_doc_id": "13302467459", 
+      "short_description": "Notice of Appearance"
+    }
+  ], 
   "docket_number": "1:16-cv-01026", 
   "referred_to_str": "Joi Elizabeth Peake"
 }

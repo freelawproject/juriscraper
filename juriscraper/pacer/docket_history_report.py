@@ -1,13 +1,14 @@
 # coding=utf-8
 import re
 
-from juriscraper.lib.utils import previous_and_next
 from .docket_report import DocketReport
-from .utils import clean_pacer_object, get_nonce_from_form
+from .utils import clean_pacer_object, get_nonce_from_form, \
+    get_pacer_doc_id_from_doc1_url
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import force_unicode, harmonize, \
-    clean_string
+    clean_string, convert_date_string
+from ..lib.utils import previous_and_next
 
 logger = make_default_logger()
 
@@ -17,26 +18,25 @@ date_regex = r'[—\d\-–/]*'
 class DocketHistoryReport(DocketReport):
     assigned_to_regex = re.compile(r'(.*),\s+presiding', flags=re.IGNORECASE)
     referred_to_regex = re.compile(r'(.*),\s+referral', flags=re.IGNORECASE)
+    date_filed_regex = re.compile(r'[fF]iled:\s+(%s)' % date_regex)
+    date_last_filing_regex = re.compile(r'last\s+filing:\s+(%s)' % date_regex,
+                                        flags=re.IGNORECASE)
+    date_filed_and_entered_regex = re.compile(r'& Entered:\s+(%s)' % date_regex)
 
     PATH = 'cgi-bin/HistDocQry.pl'
-
-    def __init__(self, court_id, pacer_session=None):
-        super(DocketHistoryReport, self).__init__(court_id, pacer_session)
-
-        if self.court_id.endswith('b'):
-            self.is_bankruptcy = True
-        else:
-            self.is_bankruptcy = False
 
     @property
     def data(self):
         """Get all the data back from this endpoint."""
         data = self.metadata.copy()
-        #data[u'docket_entries'] = self.docket_entries
+        data[u'docket_entries'] = self.docket_entries
         return data
 
     @property
     def metadata(self):
+        if self._metadata is not None:
+            return self._metadata
+
         self._set_metadata_values()
         data = {
             u'court_id': self.court_id,
@@ -44,6 +44,8 @@ class DocketHistoryReport(DocketReport):
             u'case_name': self._get_case_name(),
             u'date_filed': self._get_value(self.date_filed_regex,
                                            cast_to_date=True),
+            u'date_last_filing': self._get_value(self.date_last_filing_regex,
+                                                 cast_to_date=True),
             u'date_terminated': self._get_value(self.date_terminated_regex,
                                                 cast_to_date=True),
             u'date_discharged': self._get_value(self.date_discharged_regex,
@@ -53,6 +55,7 @@ class DocketHistoryReport(DocketReport):
         }
 
         data = clean_pacer_object(data)
+        self._metadata = data
         return data
 
     def query(self, pacer_case_id, query_type="History", order_by='asc',
@@ -100,6 +103,52 @@ class DocketHistoryReport(DocketReport):
         self.response = self.session.post(self.url + '?' + nonce,
                                           data=query_params)
         self.parse()
+
+    @property
+    def docket_entries(self):
+        if self._docket_entries is not None:
+            return self._docket_entries
+
+        docket_header = './/th/text()[contains(., "Description")]'
+        docket_entry_rows = self.tree.xpath(
+            '//table[%s]//tr' % docket_header
+        )[1:]  # Skip first row
+
+        docket_entries = []
+        for row in docket_entry_rows:
+            cells = row.xpath('./td')
+            if len(cells) == 3:
+                # Normal row, parse the document_number, date, etc.
+                de = {}
+                de[u'document_number'] = clean_string(cells[0].text_content())
+                hrefs = cells[0].xpath('.//@href')
+                if len(hrefs) == 1:
+                    de[u'pacer_doc_id'] = get_pacer_doc_id_from_doc1_url(hrefs[0])
+                else:
+                    de[u'pacer_doc_id'] = ''
+                de[u'date_filed'] = self._get_date_filed(cells[1])
+                de[u'short_description'] = force_unicode(cells[2].text_content())
+                de[u'description'] = u''
+                docket_entries.append(de)
+            elif len(cells) == 1:
+                # Document long description. Get it, and add it to previous de.
+                desc = force_unicode(cells[0].text_content())
+                label = 'Docket Text: '
+                if desc.startswith(label):
+                    desc = desc[len(label):]
+                docket_entries[-1]['description'] = desc
+
+        docket_entries = clean_pacer_object(docket_entries)
+        self._docket_entries = docket_entries
+        return docket_entries
+
+    def _get_date_filed(self, cell):
+        s = clean_string(cell.text_content())
+        regexes = [self.date_filed_regex, self.date_filed_and_entered_regex]
+        for regex in regexes:
+            m = regex.search(s)
+            if m:
+                return convert_date_string(m.group(1))
 
     def _set_metadata_values(self):
         text_nodes = self.tree.xpath('//center[not(.//table)]//text()')

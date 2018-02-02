@@ -4,7 +4,38 @@
   "court_id": "txnd", 
   "date_discharged": null, 
   "date_filed": "2017-12-27", 
+  "date_last_filing": "2017-12-27", 
   "date_terminated": null, 
+  "docket_entries": [
+    {
+      "date_filed": "2017-12-27", 
+      "description": "", 
+      "document_number": "1", 
+      "pacer_doc_id": "177011225602", 
+      "short_description": "Information - Felony"
+    }, 
+    {
+      "date_filed": "2017-12-27", 
+      "description": "", 
+      "document_number": "2", 
+      "pacer_doc_id": "177011225671", 
+      "short_description": "Factual Resume"
+    }, 
+    {
+      "date_filed": "2017-12-27", 
+      "description": "", 
+      "document_number": "3", 
+      "pacer_doc_id": "177011225674", 
+      "short_description": "Plea Agreement"
+    }, 
+    {
+      "date_filed": "2017-12-27", 
+      "description": "", 
+      "document_number": "5", 
+      "pacer_doc_id": "177011225693", 
+      "short_description": "Waiver of Indictment"
+    }
+  ], 
   "docket_number": "3:17-cr-00678", 
   "referred_to_str": ""
 }

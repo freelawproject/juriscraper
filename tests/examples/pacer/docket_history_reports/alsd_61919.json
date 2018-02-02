@@ -4,7 +4,24 @@
   "court_id": "alsd", 
   "date_discharged": null, 
   "date_filed": "2017-12-07", 
+  "date_last_filing": "2017-12-08", 
   "date_terminated": null, 
+  "docket_entries": [
+    {
+      "date_filed": "2017-12-07", 
+      "description": "", 
+      "document_number": "1", 
+      "pacer_doc_id": "02102577238", 
+      "short_description": "Motion for Extension of Time"
+    }, 
+    {
+      "date_filed": "2017-12-08", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": "", 
+      "short_description": "Motions Referred"
+    }
+  ], 
   "docket_number": "1:17-mc-00016", 
   "referred_to_str": ""
 }

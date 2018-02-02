@@ -4,7 +4,381 @@
   "court_id": "flsd", 
   "date_discharged": null, 
   "date_filed": "2015-04-17", 
+  "date_last_filing": "2017-08-11", 
   "date_terminated": "2016-02-24", 
+  "docket_entries": [
+    {
+      "date_filed": "2015-04-17", 
+      "description": "", 
+      "document_number": "1", 
+      "pacer_doc_id": "051014937573", 
+      "short_description": "Complaint"
+    }, 
+    {
+      "date_filed": "2015-04-17", 
+      "description": "", 
+      "document_number": "2", 
+      "pacer_doc_id": "", 
+      "short_description": "Judge Assignment"
+    }, 
+    {
+      "date_filed": "2015-04-17", 
+      "description": "", 
+      "document_number": "3", 
+      "pacer_doc_id": "051014937850", 
+      "short_description": "Clerk's Notice of Consent to Proceed Before Magistrate Judge"
+    }, 
+    {
+      "date_filed": "2015-04-17", 
+      "description": "", 
+      "document_number": "4", 
+      "pacer_doc_id": "051014937925", 
+      "short_description": "Form AO 120/121"
+    }, 
+    {
+      "date_filed": "2015-04-21", 
+      "description": "", 
+      "document_number": "5", 
+      "pacer_doc_id": "051014948507", 
+      "short_description": "Order Referring Case to Magistrate Judge"
+    }, 
+    {
+      "date_filed": "2015-04-21", 
+      "description": "", 
+      "document_number": "6", 
+      "pacer_doc_id": "051014948513", 
+      "short_description": "Order Requiring Joint Scheduling Report"
+    }, 
+    {
+      "date_filed": "2015-04-21", 
+      "description": "", 
+      "document_number": "7", 
+      "pacer_doc_id": "051014948539", 
+      "short_description": "Order"
+    }, 
+    {
+      "date_filed": "2015-04-21", 
+      "description": "", 
+      "document_number": "8", 
+      "pacer_doc_id": "", 
+      "short_description": "Calendar Entry"
+    }, 
+    {
+      "date_filed": "2015-04-21", 
+      "description": "", 
+      "document_number": "9", 
+      "pacer_doc_id": "051014948557", 
+      "short_description": "Notice of Court Practice"
+    }, 
+    {
+      "date_filed": "2015-04-21", 
+      "description": "", 
+      "document_number": "10", 
+      "pacer_doc_id": "051014950980", 
+      "short_description": "Notice of Filing Proposed Summons(es)"
+    }, 
+    {
+      "date_filed": "2015-04-21", 
+      "description": "", 
+      "document_number": "11", 
+      "pacer_doc_id": "051014951392", 
+      "short_description": "Summons Issued"
+    }, 
+    {
+      "date_filed": "2015-04-21", 
+      "description": "", 
+      "document_number": "12", 
+      "pacer_doc_id": "051014953673", 
+      "short_description": "Motion to Appear Pro Hac Vice"
+    }, 
+    {
+      "date_filed": "2015-04-21", 
+      "description": "", 
+      "document_number": "13", 
+      "pacer_doc_id": "051014953676", 
+      "short_description": "Motion to Appear Pro Hac Vice"
+    }, 
+    {
+      "date_filed": "2015-04-23", 
+      "description": "", 
+      "document_number": "14", 
+      "pacer_doc_id": "", 
+      "short_description": "Order on Motion to Appear Pro Hac Vice"
+    }, 
+    {
+      "date_filed": "2015-04-23", 
+      "description": "", 
+      "document_number": "15", 
+      "pacer_doc_id": "", 
+      "short_description": "Order on Motion to Appear Pro Hac Vice"
+    }, 
+    {
+      "date_filed": "2015-05-18", 
+      "description": "", 
+      "document_number": "16", 
+      "pacer_doc_id": "051015059611", 
+      "short_description": "Certificate of Interested Parties/Corporate Disclosure Statement"
+    }, 
+    {
+      "date_filed": "2015-05-18", 
+      "description": "", 
+      "document_number": "17", 
+      "pacer_doc_id": "051015059628", 
+      "short_description": "Certificate of Interested Parties/Corporate Disclosure Statement"
+    }, 
+    {
+      "date_filed": "2015-05-18", 
+      "description": "", 
+      "document_number": "18", 
+      "pacer_doc_id": "051015059657", 
+      "short_description": "Certificate of Interested Parties/Corporate Disclosure Statement"
+    }, 
+    {
+      "date_filed": "2015-05-28", 
+      "description": "", 
+      "document_number": "19", 
+      "pacer_doc_id": "051015102471", 
+      "short_description": "Motion for Miscellaneous Relief"
+    }, 
+    {
+      "date_filed": "2015-07-16", 
+      "description": "", 
+      "document_number": "20", 
+      "pacer_doc_id": "051015296541", 
+      "short_description": "Notice of Supplemental Authority"
+    }, 
+    {
+      "date_filed": "2015-08-03", 
+      "description": "", 
+      "document_number": "21", 
+      "pacer_doc_id": "051015363582", 
+      "short_description": "Order on Motion for Miscellaneous Relief"
+    }, 
+    {
+      "date_filed": "2015-08-06", 
+      "description": "", 
+      "document_number": "22", 
+      "pacer_doc_id": "051015379822", 
+      "short_description": "Certificate of Service"
+    }, 
+    {
+      "date_filed": "2015-09-04", 
+      "description": "", 
+      "document_number": "23", 
+      "pacer_doc_id": "051015495271", 
+      "short_description": "Motion for Clerks Entry of Default"
+    }, 
+    {
+      "date_filed": "2015-09-04", 
+      "description": "", 
+      "document_number": "24", 
+      "pacer_doc_id": "051015496757", 
+      "short_description": "Order on Motion for Clerks Entry of Default"
+    }, 
+    {
+      "date_filed": "2015-09-09", 
+      "description": "", 
+      "document_number": "25", 
+      "pacer_doc_id": "051015507648", 
+      "short_description": "Certificate of Counsel"
+    }, 
+    {
+      "date_filed": "2015-10-02", 
+      "description": "", 
+      "document_number": "26", 
+      "pacer_doc_id": "051015604870", 
+      "short_description": "Motion for Default Judgment"
+    }, 
+    {
+      "date_filed": "2015-10-02", 
+      "description": "", 
+      "document_number": "27", 
+      "pacer_doc_id": "051015606255", 
+      "short_description": "Motion for Miscellaneous Relief"
+    }, 
+    {
+      "date_filed": "2015-10-02", 
+      "description": "", 
+      "document_number": "28", 
+      "pacer_doc_id": "051015606989", 
+      "short_description": "Certificate of Service"
+    }, 
+    {
+      "date_filed": "2015-10-19", 
+      "description": "", 
+      "document_number": "29", 
+      "pacer_doc_id": "051015663046", 
+      "short_description": "Order to Show Cause"
+    }, 
+    {
+      "date_filed": "2015-10-19", 
+      "description": "", 
+      "document_number": "30", 
+      "pacer_doc_id": "051015664932", 
+      "short_description": "Certificate of Service"
+    }, 
+    {
+      "date_filed": "2015-10-19", 
+      "description": "", 
+      "document_number": "31", 
+      "pacer_doc_id": "051015665209", 
+      "short_description": "Order on Motion for Miscellaneous Relief"
+    }, 
+    {
+      "date_filed": "2015-10-20", 
+      "description": "", 
+      "document_number": "32", 
+      "pacer_doc_id": "051015671077", 
+      "short_description": "Notice of Conventional Filing"
+    }, 
+    {
+      "date_filed": "2015-10-20", 
+      "description": "", 
+      "document_number": "33", 
+      "pacer_doc_id": "051015671086", 
+      "short_description": "Clerk's Notice of Filing Deficiency"
+    }, 
+    {
+      "date_filed": "2016-02-24", 
+      "description": "", 
+      "document_number": "34", 
+      "pacer_doc_id": "051016147008", 
+      "short_description": "Order on Motion for Default Judgment"
+    }, 
+    {
+      "date_filed": "2016-02-24", 
+      "description": "", 
+      "document_number": "35", 
+      "pacer_doc_id": "051016147188", 
+      "short_description": "Form AO 120/121"
+    }, 
+    {
+      "date_filed": "2016-03-17", 
+      "description": "", 
+      "document_number": "36", 
+      "pacer_doc_id": "051016242578", 
+      "short_description": "Motion to Alter Judgment"
+    }, 
+    {
+      "date_filed": "2016-03-22", 
+      "description": "", 
+      "document_number": "37", 
+      "pacer_doc_id": "051016257045", 
+      "short_description": "Order on Motion to Alter Judgment"
+    }, 
+    {
+      "date_filed": "2016-08-04", 
+      "description": "", 
+      "document_number": "38", 
+      "pacer_doc_id": "051016822517", 
+      "short_description": "Motion for Clarification"
+    }, 
+    {
+      "date_filed": "2016-08-12", 
+      "description": "", 
+      "document_number": "39", 
+      "pacer_doc_id": "051016854122", 
+      "short_description": "Motion to Appear Pro Hac Vice"
+    }, 
+    {
+      "date_filed": "2016-08-12", 
+      "description": "", 
+      "document_number": "40", 
+      "pacer_doc_id": "051016856042", 
+      "short_description": "Motion to Appear Pro Hac Vice"
+    }, 
+    {
+      "date_filed": "2016-08-12", 
+      "description": "", 
+      "document_number": "41", 
+      "pacer_doc_id": "051016856107", 
+      "short_description": "Motion to Appear Pro Hac Vice"
+    }, 
+    {
+      "date_filed": "2016-08-12", 
+      "description": "", 
+      "document_number": "42", 
+      "pacer_doc_id": "051016856575", 
+      "short_description": "Response in Opposition to Motion"
+    }, 
+    {
+      "date_filed": "2016-08-22", 
+      "description": "", 
+      "document_number": "43", 
+      "pacer_doc_id": "051016888451", 
+      "short_description": "Reply to Response to Motion"
+    }, 
+    {
+      "date_filed": "2016-11-07", 
+      "description": "", 
+      "document_number": "44", 
+      "pacer_doc_id": "051017191139", 
+      "short_description": "Notice of Change of Address"
+    }, 
+    {
+      "date_filed": "2017-01-27", 
+      "description": "", 
+      "document_number": "45", 
+      "pacer_doc_id": "", 
+      "short_description": "Order on Motion to Appear Pro Hac Vice"
+    }, 
+    {
+      "date_filed": "2017-01-27", 
+      "description": "", 
+      "document_number": "46", 
+      "pacer_doc_id": "", 
+      "short_description": "Order on Motion to Appear Pro Hac Vice"
+    }, 
+    {
+      "date_filed": "2017-01-27", 
+      "description": "", 
+      "document_number": "47", 
+      "pacer_doc_id": "", 
+      "short_description": "Order on Motion to Appear Pro Hac Vice"
+    }, 
+    {
+      "date_filed": "2017-03-23", 
+      "description": "", 
+      "document_number": "48", 
+      "pacer_doc_id": "051017718408", 
+      "short_description": "Order on Motion for Clarification"
+    }, 
+    {
+      "date_filed": "2017-07-20", 
+      "description": "", 
+      "document_number": "49", 
+      "pacer_doc_id": "051018193285", 
+      "short_description": "Motion to Vacate"
+    }, 
+    {
+      "date_filed": "2017-08-03", 
+      "description": "", 
+      "document_number": "50", 
+      "pacer_doc_id": "051018247117", 
+      "short_description": "Response in Opposition to Motion"
+    }, 
+    {
+      "date_filed": "2017-08-10", 
+      "description": "", 
+      "document_number": "51", 
+      "pacer_doc_id": "051018274032", 
+      "short_description": "Reply to Response to Motion"
+    }, 
+    {
+      "date_filed": "2017-08-11", 
+      "description": "", 
+      "document_number": "52", 
+      "pacer_doc_id": "051018279512", 
+      "short_description": "Notice of Striking"
+    }, 
+    {
+      "date_filed": "2017-08-11", 
+      "description": "", 
+      "document_number": "53", 
+      "pacer_doc_id": "051018279542", 
+      "short_description": "Reply to Response to Motion"
+    }
+  ], 
   "docket_number": "1:15-cv-21450", 
   "referred_to_str": "Edwin G. Torres"
 }

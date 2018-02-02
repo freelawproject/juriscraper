@@ -4,7 +4,31 @@
   "court_id": "ned", 
   "date_discharged": null, 
   "date_filed": "2018-01-19", 
+  "date_last_filing": "2018-01-22", 
   "date_terminated": null, 
+  "docket_entries": [
+    {
+      "date_filed": "2018-01-19", 
+      "description": "", 
+      "document_number": "1", 
+      "pacer_doc_id": "11303916144", 
+      "short_description": "Complaint"
+    }, 
+    {
+      "date_filed": "2018-01-22", 
+      "description": "", 
+      "document_number": "2", 
+      "pacer_doc_id": "", 
+      "short_description": "Assignment of Judges"
+    }, 
+    {
+      "date_filed": "2018-01-22", 
+      "description": "", 
+      "document_number": "3", 
+      "pacer_doc_id": "", 
+      "short_description": "Notice Regarding Corporate Disclosure Statement"
+    }
+  ], 
   "docket_number": "8:18-cv-00020", 
   "referred_to_str": "Susan M. Bazis"
 }
