@@ -139,7 +139,8 @@ class DocketHistoryReport(DocketReport):
                 docket_entries[-1]['description'] = desc
 
         # Strip minute orders that lack a document number.
-        docket_entries = [de for de in docket_entries if de['document_number']]
+        docket_entries = [de for de in docket_entries if
+                          de['document_number'].isdigit()]
         docket_entries = clean_pacer_object(docket_entries)
         self._docket_entries = docket_entries
         return docket_entries
