@@ -34,7 +34,7 @@ class DocketReport(BaseReport):
     jurisdiction_regex = re.compile(r'Jurisdiction:\s+(.*)')
     demand_regex = re.compile(r'^Demand:\s+(.*)')
     docket_number_dist_regex = re.compile(r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
-    docket_number_bankr_regex = re.compile(r"(?:#:\s+)((\d-)?\d\d-\d*)")
+    docket_number_bankr_regex = re.compile(r"(?:#:\s+)?((\d-)?\d\d-\d*)")
 
     PATH = 'cgi-bin/DktRpt.pl'
 
@@ -632,8 +632,8 @@ class DocketReport(BaseReport):
             docket_number_path = '//font'
             # Uses both b/c sometimes the bankr. cases have a dist-style docket
             # number.
-            regexes = [self.docket_number_bankr_regex,
-                       self.docket_number_dist_regex]
+            regexes = [self.docket_number_dist_regex,
+                       self.docket_number_bankr_regex]
         else:
             docket_number_path = '//h3'
             regexes = [self.docket_number_dist_regex]

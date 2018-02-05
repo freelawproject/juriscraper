@@ -1,0 +1,176 @@
+<head><title>CTB Live Database Area</title>
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+    <script type="text/javascript" src="/lib/core.js"></script>
+    <script type="text/javascript">if (top != self) {
+      top.location.replace(location.href);
+    }</script>
+    <script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script>
+</head>
+<body bgcolor="FFFFFF" text="000000" onload="SetFocus()">
+<iframe id="_yuiResizeMonitor" title="Text Resize Monitor"
+        style="position: absolute; visibility: visible; width: 2em; height: 2em; top: -37px; left: 0px; border-width: 0px;"></iframe>
+<div class="noprint"><img id="cmecfLogo" class="cmecfLogo"
+                          src="/graphics/cmecf-logo.gif" alt="CM/ECF" title=""
+                          onclick="CMECF.MainMenu.showCourtInformation(); return false"><img
+        src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage"
+        id="helpImage" onclick="CMECF.MainMenu.showHelpPage(''); return false"
+        onmouseover="CMECF.MainMenu.helpImageOn()"
+        onmouseout="CMECF.MainMenu.helpImageOff()">
+    <div id="topmenu" class="yuimenubar yui-module yui-overlay visible"
+         style="z-index: 2; position: static; display: block; visibility: visible;">
+        <div class="bd">
+            <ul class="first-of-type">
+                <li class="yuimenubaritem first-of-type" style="width:9%"
+                    id="yui-gen0" groupindex="0" index="0"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/iquery.pl"><u>Q</u>uery</a></li>
+                <li class="yuimenubaritem yuimenubaritem-hassubmenu"
+                    style="width:11%" id="yui-gen1" groupindex="0" index="1"><a
+                        class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu"
+                        href="/cgi-bin/DisplayMenu.pl?Reports&amp;id=-1"><u>R</u>eports</a>
+                </li>
+                <li class="yuimenubaritem yuimenubaritem-hassubmenu"
+                    style="width:11%" id="yui-gen2" groupindex="0" index="2"><a
+                        class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu"
+                        href="/cgi-bin/DisplayMenu.pl?Utilities&amp;id=-1"><u>U</u>tilities</a>
+                </li>
+                <li class="yuimenubaritem" style="width:10%" id="yui-gen3"
+                    groupindex="0" index="3"><a class="yuimenubaritemlabel"
+                                                href="/cgi-bin/login.pl?logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">if (navigator.appVersion.indexOf("MSIE") == -1) {
+  window.setTimeout(function () {
+    CMECF.MainMenu.createMenu();
+  }, 0);
+} else {
+  CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);
+}</script>
+<div id="cmecfMainContent" style="height: 551px;"><input type="hidden"
+                                                         id="cmecfMainContentScroll"
+                                                         value="0">
+    <script language="JavaScript">
+      var IsForm = false;
+      var FirstField;
+
+      function SetFocus() {
+        if (IsForm) {
+          if (FirstField) {
+            var ind = FirstField.indexOf('document.', 0);
+            if (ind == 0) {
+              eval(FirstField);
+            }
+            else {
+              var Code = "document.forms[0]." + FirstField + ".focus();";
+              eval(Code);
+            }
+          } else {
+            var Cnt = 0;
+            while (document.forms[0].elements[Cnt] != null) {
+              if (document.forms[0].elements[Cnt].type != "hidden") {
+                document.forms[0].elements[Cnt].focus();
+                break;
+              }
+              Cnt += 1;
+            }
+          }
+        }
+        return (true);
+      }
+    </script>
+    <center>
+        <b><font size="+1">92-53097</font></b>
+        <b></b>Rudolf E. Altena and Joanne K. Altena
+        <br>
+        <b>Case type:</b> bk
+        <b>Chapter:</b> 7
+        <b>Asset:</b> No
+        <b>Vol: </b> v
+        <b>Judge:</b> Alan H. W. Shiff
+        <br>
+        <b>Date filed:</b> 09/15/1992
+        <b>Date of last filing:</b> 01/14/1993
+        <b>Date discharged:</b> 01/14/1993
+        <br><b>Date terminated:</b> 01/14/1993
+        <br>
+    </center>
+    <br>
+
+    <script language="JavaScript">
+      <!--
+      var aNewWin;
+
+      function DktText(Id, cs_caseid, doc_num, seq_no, csrf_number) {
+        var hyperlink = "/cgi-bin/HistDocQry.pl?" + Id + "-L_ShowDktTxt_1-0-" + cs_caseid + "-" + doc_num + "-" + seq_no + "&csrf=" + csrf_number;
+        if (!aNewWin || aNewWin.closed) {
+          aNewWin = window.open(hyperlink, "DktText", "scrollbars=yes,resizable=yes,height=250,width=400");
+        } else {
+          aNewWin.location = hyperlink;
+        }
+        aNewWin.focus();
+      }
+
+      // -->
+    </script>
+    <center><b> <font size="5">Documents</font></b><br><br>
+        <h3>There are no documents for this case.</h3>
+        <hr>
+        <center>
+            <table border="1" bgcolor="white" width="400">
+                <tbody>
+                <tr>
+                    <th colspan="4"><font size="+1" color="DARKRED">PACER
+                        Service Center </font></th>
+                </tr>
+                <tr>
+                    <th colspan="4"><font color="DARKBLUE">Transaction
+                        Receipt </font></th>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td colspan="4" align="CENTER"><font size="-1"
+                                                         color="DARKBLUE">11/15/2017
+                        14:10:59</font></td>
+                </tr>
+                <tr>
+                    <th align="LEFT"><font size="-1" color="DARKBLUE"> PACER
+                        Login: </font></th>
+                    <td align="LEFT"><font size="-1" color="DARKBLUE">
+                        [ redacted ] </font></td>
+                    <th align="LEFT"><font size="-1" color="DARKBLUE"> Client
+                        Code: </font></th>
+                    <td align="LEFT"><font size="-1" color="DARKBLUE"> </font>
+                    </td>
+                </tr>
+                <tr>
+                    <th align="LEFT"><font size="-1" color="DARKBLUE">
+                        Description: </font></th>
+                    <td align="LEFT"><font size="-1" color="DARKBLUE">
+                        History/Documents </font></td>
+                    <th align="LEFT"><font size="-1" color="DARKBLUE"> Search
+                        Criteria: </font></th>
+                    <td align="LEFT"><font size="-1" color="DARKBLUE"> 92-53097
+                        Type: Documents </font></td>
+                </tr>
+                <tr>
+                    <th align="LEFT"><font size="-1" color="DARKBLUE"> Billable
+                        Pages: </font></th>
+                    <td align="LEFT"><font size="-1" color="DARKBLUE"> 1 </font>
+                    </td>
+                    <th align="LEFT"><font size="-1" color="DARKBLUE">
+                        Cost: </font></th>
+                    <td align="LEFT"><font size="-1" color="DARKBLUE">
+                        0.10 </font></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                </tbody>
+            </table>
+        </center>
+        <br><br></center>
+</div>
+</body>
