@@ -1,7 +1,7 @@
 """Scraper for the Rhode Island Supreme Court
 CourtID: ri
 Court Short Name: R.I.
-Court Contact: webmaster@courts.ri.gov
+Court Contact: helpdesk@courts.ri.gov, MFerris@courts.ri.gov (Ferris, Mirella), webmaster@courts.ri.gov
     https://www.courts.ri.gov/PDF/TelephoneDirectory.pdf
 Author: Brian W. Carver
 Date created: 2013-08-10

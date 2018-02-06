@@ -1,6 +1,7 @@
 """Scraper for the Rhode Island Supreme Court
 CourtID: ri
 Court Short Name: R.I.
+Court Contact: (see ri_p)
 Author: Brian W. Carver
 Date created: 2013-08-10
 """
