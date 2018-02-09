@@ -3,16 +3,16 @@
 # - 2013-06-11: Birth.
 # - 2013-08-06: Revised by Brian Carver
 # - 2014-08-05: Updated URL by mlr
-from datetime import datetime
 
 import os
 import re
+from lxml import html
+from selenium import webdriver
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
-from juriscraper.lib.string_utils import titlecase
-from lxml import html
-from selenium import webdriver
+from juriscraper.lib.string_utils import titlecase, convert_date_string
 
 
 class Site(OpinionSite):
@@ -34,32 +34,44 @@ class Site(OpinionSite):
             (6, 2013),
         ]
         self.uses_selenium = True
+        regex_year_group = '(\d{4} S\.?D\.? \d{1,4})'
+        self.regex = '(.*)%s' % regex_year_group
+        # The court decided to publish 5 records on January 24th 2018
+        # in an alternate format where the neutral citation appears
+        # before the case name, instead of vice versa.  We contacted the
+        # court multiple times, but they wouldn't respond, so we had to
+        # add the additional regex below to handle this use case.
+        self.regex_alt = '%s, (.*)' % regex_year_group
+        self.base_path = "//table[@id='ContentPlaceHolder1_PageContent_gvOpinions']//tr[position()>1]/td"
 
     def _get_download_urls(self):
-        path = "//table[@id = 'ContentPlaceHolder1_PageContent_gvOpinions']//a/@href[contains(.,'pdf')]"
+        path = "%s//a/@href[contains(.,'pdf')]" % self.base_path
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
-        path = "//table[@id = 'ContentPlaceHolder1_PageContent_gvOpinions']//tr[position() > 1]/td/a[contains(@href, 'pdf')]/text()"
+        path = "%s/a[contains(@href, 'pdf')]/text()" % self.base_path
         case_names = []
         for s in self.html.xpath(path):
-            case_name = re.search('(.*)(\d{4} S\.?D\.? \d{1,4})', s, re.MULTILINE).group(1)
+            case_name = self.extract_regex_group(1, s)
+            if not case_name:
+                case_name = self.extract_regex_group(2, s, True)
             case_names.append(titlecase(case_name.upper()))
         return case_names
 
     def _get_case_dates(self):
-        path = "//table[@id = 'ContentPlaceHolder1_PageContent_gvOpinions']//tr[position() >1]/td[1]/text()"
-        return [datetime.strptime(date_string, '%m/%d/%Y').date()
-                for date_string in self.html.xpath(path)]
+        path = "%s[1]/text()" % self.base_path
+        return [convert_date_string(ds) for ds in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
 
     def _get_neutral_citations(self):
-        path = "//table[@id = 'ContentPlaceHolder1_PageContent_gvOpinions']//tr[position() > 1]/td/a[contains(@href, 'pdf')]/text()"
+        path = "%s/a[contains(@href, 'pdf')]/text()" % self.base_path
         neutral_cites = []
         for s in self.html.xpath(path):
-            neutral_cite = re.search('(.*)(\d{4} S\.?D\.? \d{1,4})', s, re.MULTILINE).group(2)
+            neutral_cite = self.extract_regex_group(2, s)
+            if not neutral_cite:
+                neutral_cite = self.extract_regex_group(1, s, True)
             # Make the citation SD instead of S.D. The former is a neutral cite, the latter, the South Dakota Reporter
             neutral_cites.append(neutral_cite.replace('.', ''))
         return neutral_cites
@@ -91,5 +103,9 @@ class Site(OpinionSite):
                                 base_href=self.request['url'])
         self.html = html_tree
         self.status = 200
+
+    def extract_regex_group(self, group, string, alt=False):
+        regex = self.regex_alt if alt else self.regex
+        return re.search(regex, string, re.MULTILINE).group(group)
 
 
