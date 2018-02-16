@@ -45,6 +45,8 @@ class Site(OpinionSite):
         # PLEASE NOTE: Tests still hit network in _extract_cases_from_sub_page
         # because awful court site doesn't direct link to PDF resources on date
         # listing pages
+        # PLEASE ALSO NOTE: coloctapp_example_3.html is supposed to have 0
+        # results.  It is a blank page test case covering is_this_a_blank_page().
         if self.method == 'LOCAL':
             date_string = landing_page_html.xpath('//h3')[0].text_content()
             date_obj = convert_date_string(date_string)
@@ -149,6 +151,7 @@ class Site(OpinionSite):
 
     @classmethod
     def _extract_docket_from_text(cls, text):
+        text = text.strip()
         try:
             match = re.match(cls.regex, text).group(6)
         except:
@@ -159,6 +162,7 @@ class Site(OpinionSite):
 
     @classmethod
     def _extract_name_from_text(cls, text):
+        text = text.strip()
         try:
             match = re.match(cls.regex, text).group(12)
         except:
