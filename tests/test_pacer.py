@@ -395,7 +395,7 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
 
     def test_filtering_by_office_number(self):
         """Can we filter by office number?"""
-        d = self.report.data(office_number=1)
+        d = self.report.data(office_number='1')
         self.assertEqual('1000068', d['pacer_case_id'])
 
     def test_filtering_by_civil_or_criminal(self):
@@ -406,7 +406,7 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
     def test_filtering_by_office_and_civil_criminal(self):
         """Can we filter by multiple variables?"""
         d = self.report.data(
-            office_number=2,
+            office_number='2',
             criminal_or_civil='cr',
         )
         self.assertEqual('977548', d['pacer_case_id'])
@@ -416,12 +416,12 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
         self.assertEqual('977547', d['pacer_case_id'])
 
     def test_filtering_by_office_and_case_name(self):
-        d = self.report.data(office_number=2, case_name="Willy Wonka")
+        d = self.report.data(office_number='2', case_name="Willy Wonka")
         self.assertEqual('977547', d['pacer_case_id'])
 
     def test_choosing_the_lowest_sequentially(self):
         """When the ids are sequential, can we pick the lowest one?"""
-        d = self.report.data(office_number=2)
+        d = self.report.data(office_number='2')
         self.assertEqual('977547', d['pacer_case_id'])
 
     def test_cannot_make_choice_because_not_sequential_ids(self):
@@ -429,7 +429,7 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
         give up and throw an error?
         """
         with self.assertRaises(ParsingException):
-            _ = self.report.data(office_number=3)
+            _ = self.report.data(office_number='3')
 
     def test_no_case_name_with_sequential_ids(self):
         """Does this work properly when we don't have a case name, but we do
@@ -453,7 +453,7 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
         """
         report = PossibleCaseNumberApi('anything')
         report._parse_text(xml)
-        d = report.data(office_number=4, criminal_or_civil='cr')
+        d = report.data(office_number='4', criminal_or_civil='cr')
         self.assertEqual('313707', d['pacer_case_id'])
 
 

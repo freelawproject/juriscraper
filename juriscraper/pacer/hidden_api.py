@@ -53,7 +53,8 @@ class PossibleCaseNumberApi(BaseReport):
         Usually, this will show up as part of the extended docket number, before
         the colon. For example, in this instance the office number is 2:
         2:16-cr-01152-JZB. Sometimes we know the office number, for example, if
-        we're using the IDB.
+        we're using the IDB. Note that office "numbers" can sometimes be
+        a letter. The numbering appears to be 1-9, then A-Z.
         :param criminal_or_civil: Sometimes you'll know if you're looking up a
         civil case or a criminal one. If you do, you can add this parameter to
         help filter the possible results based on the docket numbers returned.
@@ -66,9 +67,6 @@ class PossibleCaseNumberApi(BaseReport):
         if criminal_or_civil not in [None, u'cv', u'cr']:
             raise ValueError(u"Invalid value for 'criminal_or_civil' "
                              u"parameter please select from 'cr', 'cv' or None")
-        if office_number is not None:
-            assert type(office_number) is int, "office_number must be an int."
-
         case_count = self.tree.xpath('count(//case)')
         nodes = self.tree.xpath('//case')
         if case_count == 0:
@@ -92,7 +90,7 @@ class PossibleCaseNumberApi(BaseReport):
                 # other than the correct office number.
                 def correct_office_number(node):
                     try:
-                        number = int(node.xpath('./@number')[0].split(':')[0])
+                        number = node.xpath('./@number')[0].split(':')[0]
                     except IndexError:
                         # Don't filter...something went wrong.
                         return True
