@@ -57,7 +57,7 @@ class PossibleCaseNumberApi(BaseReport):
             except IndexError:
                 pass
             else:
-                if "Cannot find case" in msg:
+                if "Cannot find case" in msg or "Case Under Seal" in msg:
                     logger.info("Cannot find case.")
                     return None
             raise Exception("Unknown XML content in PossibleCaseNumberApi "
