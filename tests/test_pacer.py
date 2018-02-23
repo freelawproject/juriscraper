@@ -13,7 +13,7 @@ import mock
 import vcr
 from requests import ConnectionError
 
-from juriscraper.lib.exceptions import PacerLoginException
+from juriscraper.lib.exceptions import PacerLoginException, ParsingException
 from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.lib.test_utils import warn_or_crash_slow_parser
@@ -330,6 +330,34 @@ class PacerFreeOpinionsTest(unittest.TestCase):
 
 
 class PacerPossibleCaseNumbersTest(unittest.TestCase):
+
+    def setUp(self):
+        xml = """
+            <request number="16-01152">
+                <case number="1:16-cr-1152" id="1000068"
+                      title="1:16-cr-01152-JZB USA v. Abuarar (closed 01/26/2017)"
+                      sortable="1:2016-cr-01152"/>
+                      
+                <!-- For use with office and case name filtering -->
+                <case number="2:16-cv-1152" id="977547"
+                      title="2:16-cv-01152-JJT Willy Wonka v. Charlie (closed 06/09/2017)"
+                      sortable="2:2016-cv-01152-JJT"/>
+                <case number="2:16-cr-1152" id="977548"
+                      title="2:16-cv-01152-JJT Armes v. Hot Pizzas LLC (closed 06/09/2017)"
+                      sortable="2:2016-cv-01152-JJT"/>
+                      
+                <!-- Not non-sequential id values -->
+                <case number="3:16-cr-1152" id="1"
+                      title="3:16-cr-01152-JJT Willy Wonka v. Charlie (closed 06/09/2017)"
+                      sortable="3:2016-cr-01152-JJT"/>
+                <case number="3:16-cr-1152" id="3"
+                      title="3:16-cv-01152-JJT Armes v. Hot Pizzas LLC (closed 06/09/2017)"
+                      sortable="3:2016-cv-01152-JJT"/>
+            </request>
+        """
+        self.report = PossibleCaseNumberApi('anything')
+        self.report._parse_text(xml)
+
     def test_parsing_results(self):
         """Can we do a simple query and parse?"""
         paths = []
@@ -364,6 +392,69 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
                 )
 
             sys.stdout.write("✓\n")
+
+    def test_filtering_by_office_number(self):
+        """Can we filter by office number?"""
+        d = self.report.data(office_number=1)
+        self.assertEqual('1000068', d['pacer_case_id'])
+
+    def test_filtering_by_civil_or_criminal(self):
+        """Can we filter by civil or criminal?"""
+        d = self.report.data(criminal_or_civil='cv')
+        self.assertEqual('977547', d['pacer_case_id'])
+
+    def test_filtering_by_office_and_civil_criminal(self):
+        """Can we filter by multiple variables?"""
+        d = self.report.data(
+            office_number=2,
+            criminal_or_civil='cr',
+        )
+        self.assertEqual('977548', d['pacer_case_id'])
+
+    def test_filtering_by_case_name(self):
+        d = self.report.data(case_name='Willy Wonka')
+        self.assertEqual('977547', d['pacer_case_id'])
+
+    def test_filtering_by_office_and_case_name(self):
+        d = self.report.data(office_number=2, case_name="Willy Wonka")
+        self.assertEqual('977547', d['pacer_case_id'])
+
+    def test_choosing_the_lowest_sequentially(self):
+        """When the ids are sequential, can we pick the lowest one?"""
+        d = self.report.data(office_number=2)
+        self.assertEqual('977547', d['pacer_case_id'])
+
+    def test_cannot_make_choice_because_not_sequential_ids(self):
+        """When the remaining nodes only have IDs that aren't sequential, do we
+        give up and throw an error?
+        """
+        with self.assertRaises(ParsingException):
+            _ = self.report.data(office_number=3)
+
+    def test_no_case_name_with_sequential_ids(self):
+        """Does this work properly when we don't have a case name, but we do
+        have the office number, criminal vs. civil info, and sequential ids?
+        """
+        xml = """
+        <request number='1700355'>
+            <case number='3:17-cv-355' id='307135'
+                  title='3:17-cv-00355-MEJ Emeziem v. JPMorgan Chase Bank, N.A. (closed 11/09/2017)'
+                  sortable='3:2017-cv-00355-MEJ'/>
+            <case number='4:17-cr-355' id='313707'
+                  title='4:17-cr-00355-YGR USA v. Kim et al' defendant='0'
+                  sortable='4:2017-cr-00355-YGR'/>
+            <case number='4:17-cr-355-1' id='313708'
+                  title='4:17-cr-00355-YGR-1 Man Young Kim' defendant='1'
+                  sortable='4:2017-cr-00355'/>
+            <case number='4:17-cr-355-2' id='313709'
+                  title='4:17-cr-00355-YGR-2 Kyong Ja Kim' defendant='2'
+                  sortable='4:2017-cr-00355'/>
+        </request>
+        """
+        report = PossibleCaseNumberApi('anything')
+        report._parse_text(xml)
+        d = report.data(office_number=4, criminal_or_civil='cr')
+        self.assertEqual('313707', d['pacer_case_id'])
 
 
 class PacerShowCaseDocApiTest(unittest.TestCase):

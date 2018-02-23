@@ -43,14 +43,34 @@ class PossibleCaseNumberApi(BaseReport):
         """
         self.tree = etree.fromstring(text)
 
-    def data(self, case_name=None):
+    def data(self, case_name=None, office_number=None, criminal_or_civil=None):
         """Get data back from this query for the matching case.
 
         :param case_name: This endpoint can return multiple cases for a given
         query. If a case name is provided, and more than one case is returned,
         we will try to identify the most similar case.
+        :param office_number: The office number where the item was litigated.
+        Usually, this will show up as part of the extended docket number, before
+        the colon. For example, in this instance the office number is 2:
+        2:16-cr-01152-JZB. Sometimes we know the office number, for example, if
+        we're using the IDB.
+        :param criminal_or_civil: Sometimes you'll know if you're looking up a
+        civil case or a criminal one. If you do, you can add this parameter to
+        help filter the possible results based on the docket numbers returned.
+        For example, if you set this to "cv", and you get back two results:
+          2:16-cr-01152-JZB
+          2:16-cv-01152-JZB
+        You'll know that it's the second result because cv means civil. Again
+        this is something you might know if you're using the IDB.
         """
+        if criminal_or_civil not in [None, u'cv', u'cr']:
+            raise ValueError(u"Invalid value for 'criminal_or_civil' "
+                             u"parameter please select from 'cr', 'cv' or None")
+        if office_number is not None:
+            assert type(office_number) is int, "office_number must be an int."
+
         case_count = self.tree.xpath('count(//case)')
+        nodes = self.tree.xpath('//case')
         if case_count == 0:
             try:
                 msg = self.tree.xpath('//message/@text')[0]
@@ -63,37 +83,67 @@ class PossibleCaseNumberApi(BaseReport):
             raise Exception("Unknown XML content in PossibleCaseNumberApi "
                             "result.")
         elif case_count == 1:
-            case_index = 0
+            # Only one node, all set to go.
+            pass
         elif case_count > 1:
-            if case_name is not None:
+            # Filter by things we know
+            if office_number is not None:
+                # Remove items by docket number, if they lead with something
+                # other than the correct office number.
+                def correct_office_number(node):
+                    try:
+                        number = int(node.xpath('./@number')[0].split(':')[0])
+                    except IndexError:
+                        # Don't filter...something went wrong.
+                        return True
+                    return number == office_number
+
+                nodes = filter(correct_office_number, nodes)
+
+            if len(nodes) > 1 and criminal_or_civil is not None:
+                # Remove items by docket number, if they have cv or cr.
+                f = lambda node: criminal_or_civil in node.xpath('./@number')[0]
+                nodes = filter(f, nodes)
+
+            if len(nodes) > 1:
+                # If we only have sequential pacer_case_ids, pick the lowest one
+                ids = sorted([int(x.xpath('./@id')[0]) for x in nodes])
+                missing_ids = set(range(ids[0], ids[-1] + 1)).difference(ids)
+                if len(missing_ids) > 0:
+                    # The IDs are not sequential. Can't use this technique.
+                    pass
+                else:
+                    nodes = self.tree.xpath('//case[@id=%s]' % ids[0])
+
+            if len(nodes) > 1 and case_name is not None:
                 # Disambiguate the possible case nodes to find the best one.
                 # Initial strings take the form:
                 #    2:16-cr-01152-JZB USA v. Abuarar (closed 01/26/2017)
                 # Attempt to pull out just the case name.
-                strs = [x.split(' ', 1)[1].split('(closed', 1)[0] for x in
-                        self.tree.xpath('//case/@title')]
+                title_attrs = [node.xpath('./@title')[0] for node in nodes]
+                strs = [title.split(' ', 1)[1].split('(closed', 1)[0] for
+                        title in title_attrs]
                 case_index = get_closest_match_index(case_name, strs)
                 if case_index is None:
                     logger.warn("Got %s candidates, but unable to find good "
-                                "match to '%s'" % (case_count, case_name))
-                    return None
-            else:
-                raise Exception("Multiple results returned but no way to "
-                                "choose the right match. Try the case_name "
-                                "parameter?")
+                                "match to '%s'" % (len(nodes), case_name))
+                else:
+                    nodes = [nodes[case_index]]
 
+            if len(nodes) > 1:
+                raise ParsingException(
+                    "Multiple results returned but no way to choose the right "
+                    "match. Try the case_name, office_number, or "
+                    "criminal_or_civil parameters?"
+                )
+
+        node = nodes[0]
         return {
-            u'docket_number': force_unicode(
-                self.tree.xpath('//case/@number')[case_index]
-            ),
-            u'pacer_case_id': force_unicode(
-                self.tree.xpath('//case/@id')[case_index]
-            ),
+            u'docket_number': force_unicode(node.xpath('./@number')[0]),
+            u'pacer_case_id': force_unicode(node.xpath('./@id')[0]),
             # This could be further post processed to pull out the date closed
             # and a cleaner title.
-            u'title': force_unicode(
-                self.tree.xpath('//case/@title')[case_index]
-            ),
+            u'title': force_unicode(node.xpath('./@title')[0]),
         }
 
 
