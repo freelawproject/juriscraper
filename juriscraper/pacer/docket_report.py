@@ -443,6 +443,8 @@ class DocketReport(BaseReport):
         # Set up and sanity tests
         assert self.session is not None, \
             "session attribute of DocketReport cannot be None."
+        assert bool(pacer_case_id), \
+            "pacer_case_id must be truthy, not '%s'" % pacer_case_id
 
         if date_range_type not in [u'Filed', u'Entered']:
             raise ValueError(u"Invalid value for 'date_range_type' parameter.")
