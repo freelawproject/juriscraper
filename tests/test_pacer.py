@@ -400,14 +400,14 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
 
     def test_filtering_by_civil_or_criminal(self):
         """Can we filter by civil or criminal?"""
-        d = self.report.data(criminal_or_civil='cv')
+        d = self.report.data(docket_number_letters='cv')
         self.assertEqual('977547', d['pacer_case_id'])
 
     def test_filtering_by_office_and_civil_criminal(self):
         """Can we filter by multiple variables?"""
         d = self.report.data(
             office_number='2',
-            criminal_or_civil='cr',
+            docket_number_letters='cr',
         )
         self.assertEqual('977548', d['pacer_case_id'])
 
@@ -453,8 +453,32 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
         """
         report = PossibleCaseNumberApi('anything')
         report._parse_text(xml)
-        d = report.data(office_number='4', criminal_or_civil='cr')
+        d = report.data(office_number='4', docket_number_letters='cr')
         self.assertEqual('313707', d['pacer_case_id'])
+
+    def test_pick_sequentially_by_defendant_number(self):
+        """Does this work properly when we pick by sequential defendant number?
+        """
+        xml = """
+        <request number='1700355'>
+            <case number='2:15-cr-158'   id='284385'
+                  title='2:15-cr-00158-JAM USA v. Beaver et al (closed 12/12/2017)'
+                  defendant='0' sortable='2:2015-cr-00158-JAM'/>
+            <case number='2:15-cr-158-1' id='285846'
+                  title='2:15-cr-00158-JAM-1 Bryce Beaver (closed 05/24/2016)'
+                  defendant='1' sortable='2:2015-cr-00158'/>
+            <case number='2:15-cr-158-2' id='284386'
+                  title='2:15-cr-00158-JAM-2 Charles Beaver (closed 10/18/2016)'
+                  defendant='2' sortable='2:2015-cr-00158'/>
+            <case number='2:15-cr-158-3' id='284858'
+                  title='2:15-cr-00158-JAM-3 Sharod Gibbons (closed 12/12/2017)'
+                  defendant='3' sortable='2:2015-cr-00158'/>
+        </request>
+        """
+        report = PossibleCaseNumberApi('anything')
+        report._parse_text(xml)
+        d = report.data()
+        self.assertEqual('284385', d['pacer_case_id'])
 
 
 class PacerShowCaseDocApiTest(unittest.TestCase):

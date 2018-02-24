@@ -43,7 +43,8 @@ class PossibleCaseNumberApi(BaseReport):
         """
         self.tree = etree.fromstring(text)
 
-    def data(self, case_name=None, office_number=None, criminal_or_civil=None):
+    def data(self, case_name=None, office_number=None,
+             docket_number_letters=None):
         """Get data back from this query for the matching case.
 
         :param case_name: This endpoint can return multiple cases for a given
@@ -55,16 +56,17 @@ class PossibleCaseNumberApi(BaseReport):
         2:16-cr-01152-JZB. Sometimes we know the office number, for example, if
         we're using the IDB. Note that office "numbers" can sometimes be
         a letter. The numbering appears to be 1-9, then A-Z.
-        :param criminal_or_civil: Sometimes you'll know if you're looking up a
-        civil case or a criminal one. If you do, you can add this parameter to
-        help filter the possible results based on the docket numbers returned.
+        :param docket_number_letters: Sometimes you'll know the letters that
+        should be in the returned docket number. For example, they might be 'cr'
+        or 'cv'. If you do, you can add this parameter to help filter the
+        possible results based on the docket numbers returned.
         For example, if you set this to "cv", and you get back two results:
           2:16-cr-01152-JZB
           2:16-cv-01152-JZB
         You'll know that it's the second result because cv means civil. Again
         this is something you might know if you're using the IDB.
         """
-        if criminal_or_civil not in [None, u'cv', u'cr']:
+        if docket_number_letters not in [None, u'cv', u'cr', 'md']:
             raise ValueError(u"Invalid value for 'criminal_or_civil' "
                              u"parameter please select from 'cr', 'cv' or None")
         case_count = self.tree.xpath('count(//case)')
@@ -78,8 +80,8 @@ class PossibleCaseNumberApi(BaseReport):
                 if "Cannot find case" in msg or "Case Under Seal" in msg:
                     logger.info("Cannot find case.")
                     return None
-            raise Exception("Unknown XML content in PossibleCaseNumberApi "
-                            "result.")
+            raise ParsingException("Unknown XML content in "
+                                   "PossibleCaseNumberApi result.")
         elif case_count == 1:
             # Only one node, all set to go.
             pass
@@ -98,20 +100,30 @@ class PossibleCaseNumberApi(BaseReport):
 
                 nodes = filter(correct_office_number, nodes)
 
-            if len(nodes) > 1 and criminal_or_civil is not None:
+            if len(nodes) > 1 and docket_number_letters is not None:
                 # Remove items by docket number, if they have cv or cr.
-                f = lambda node: criminal_or_civil in node.xpath('./@number')[0]
+                f = lambda node: docket_number_letters in node.xpath('./@number')[0]
                 nodes = filter(f, nodes)
 
             if len(nodes) > 1:
-                # If we only have sequential pacer_case_ids, pick the lowest one
-                ids = sorted([int(x.xpath('./@id')[0]) for x in nodes])
+                # If we only have sequential defendant attributes, pick the
+                # lowest one.
+                try:
+                    _ = nodes[0].xpath('./@defendant')[0]
+                    attribute = '@defendant'
+                except IndexError:
+                    # No defendant attribute. Try it by pacer_case_id instead.
+                    # We used to do this by default, instead of defendant
+                    # number, but it is not always sequential.
+                    attribute = '@id'
+
+                ids = sorted([int(x.xpath('./%s' % attribute)[0]) for x in nodes])
                 missing_ids = set(range(ids[0], ids[-1] + 1)).difference(ids)
                 if len(missing_ids) > 0:
                     # The IDs are not sequential. Can't use this technique.
                     pass
                 else:
-                    nodes = self.tree.xpath('//case[@id=%s]' % ids[0])
+                    nodes = self.tree.xpath('//case[%s=%s]' % (attribute, ids[0]))
 
             if len(nodes) > 1 and case_name is not None:
                 # Disambiguate the possible case nodes to find the best one.
@@ -135,14 +147,17 @@ class PossibleCaseNumberApi(BaseReport):
                     "criminal_or_civil parameters?"
                 )
 
-        node = nodes[0]
-        return {
-            u'docket_number': force_unicode(node.xpath('./@number')[0]),
-            u'pacer_case_id': force_unicode(node.xpath('./@id')[0]),
-            # This could be further post processed to pull out the date closed
-            # and a cleaner title.
-            u'title': force_unicode(node.xpath('./@title')[0]),
-        }
+        if nodes:
+            node = nodes[0]
+            return {
+                u'docket_number': force_unicode(node.xpath('./@number')[0]),
+                u'pacer_case_id': force_unicode(node.xpath('./@id')[0]),
+                # This could be further post processed to pull out the date closed
+                # and a cleaner title.
+                u'title': force_unicode(node.xpath('./@title')[0]),
+            }
+        else:
+            raise ParsingException("Unable to identify case.")
 
 
 class ShowCaseDocApi(BaseReport):
