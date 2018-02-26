@@ -485,6 +485,13 @@ class DocketReport(BaseReport):
             query_params[u'date_to'] = date_end.strftime(u'%m/%d/%Y')
         if doc_num_start:
             query_params[u'documents_numbered_from_'] = str(int(doc_num_start))
+        else:
+            # If it's a big docket and you don't filter by document number in
+            # some form, you get a intermediate page that says, paraphrasing:
+            # "Do you really want to pull that whole, big, docket?" However, if
+            # we always make sure to have this field populated, we don't see
+            # that page. ∴, always set this value. See #210.
+            query_params[u'documents_numbered_from_'] = '1'
         if doc_num_end:
             query_params[u'documents_numbered_to_'] = str(int(doc_num_end))
         if show_parties_and_counsel is True:
