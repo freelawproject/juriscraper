@@ -66,9 +66,10 @@ class PossibleCaseNumberApi(BaseReport):
         You'll know that it's the second result because cv means civil. Again
         this is something you might know if you're using the IDB.
         """
-        if docket_number_letters not in [None, u'cv', u'cr', 'md']:
+        if docket_number_letters not in [None, u'cv', u'cr', u'md']:
             raise ValueError(u"Invalid value for 'criminal_or_civil' "
-                             u"parameter please select from 'cr', 'cv' or None")
+                             u"parameter please select from 'cr', 'cv', 'md' "
+                             u"or None")
         case_count = self.tree.xpath('count(//case)')
         nodes = self.tree.xpath('//case')
         if case_count == 0:
@@ -107,7 +108,8 @@ class PossibleCaseNumberApi(BaseReport):
 
             if len(nodes) > 1:
                 # If we only have sequential defendant attributes, pick the
-                # lowest one.
+                # lowest one. The lowest one tends to be the main case, and the
+                # others are additional dockets for specific defendants.
                 try:
                     _ = nodes[0].xpath('./@defendant')[0]
                     attribute = '@defendant'
@@ -144,7 +146,7 @@ class PossibleCaseNumberApi(BaseReport):
                 raise ParsingException(
                     "Multiple results returned but no way to choose the right "
                     "match. Try the case_name, office_number, or "
-                    "criminal_or_civil parameters?"
+                    "docket_number_letters parameters?"
                 )
 
         if nodes:
