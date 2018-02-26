@@ -1,85 +1,109 @@
-#  Scraper for Iowa Supreme Court
+# Scraper for Iowa Supreme Court
 # CourtID: iowa
 # Court Short Name: iowa
-# Author: Andrei Chelaru
-# Reviewer: mlr
-# Date created: 25 July 2014
 
-import re
-import time
-from datetime import date
-
+from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import titlecase, clean_if_py3
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.year = date.today().year
-        self.url = 'http://www.iowacourts.gov/About_the_Courts/Supreme_Court/Supreme_Court_Opinions/Opinions_Archive/index.asp'
+        self.cases = []
+        self.archive = False
+        self.back_scrape_iterable = ['placeholder']  # this array can't be empty
+        self.url = 'https://www.iowacourts.gov/iowa-courts/supreme-court/supreme-court-opinions/'
 
     def _download(self, request_dict={}):
-        if self.method == 'LOCAL':
-            # Note that this is returning a list of HTML trees.
-            html_trees = [super(Site, self)._download(request_dict=request_dict)]
-        else:
-            html_l = OpinionSite._download(self)
-            html_trees = []
-            for url in html_l.xpath("//td[@width='49%']//tr[contains(., ', {year}')]/td[5]/a/@href".format(year=self.year)):
-                html_tree = self._get_html_tree_by_url(url, request_dict)
-                html_trees.append(html_tree)
-        return html_trees
+        html = super(Site, self)._download(request_dict)
+        self.extract_cases(html)
+        if self.method == 'LOCAL' or self.archive:
+            return html
+
+        # Walk over pagination "Next" page(s), if present
+        proceed = True
+        while proceed:
+            next_page_url = self.extract_next_page_url(html)
+            if next_page_url:
+                logger.info('Scraping next page: %s' % next_page_url)
+                html = self._get_html_tree_by_url(next_page_url)
+                self.extract_cases(html)
+            else:
+                proceed = False
 
     def _get_case_names(self):
-        case_names = []
-        for html_tree in self.html:
-            case_names.extend(self._return_case_names(html_tree))
-        return case_names
-
-    @staticmethod
-    def _return_case_names(html_tree):
-        path = "//*[contains(concat(' ',@id,' '),' wfLabel')]/text()"
-        return [titlecase(s.strip().lower()) for s in html_tree.xpath(path)]
+        return [case['name'] for case in self.cases]
 
     def _get_download_urls(self):
-        download_urls = []
-        for html_tree in self.html:
-            download_urls.extend(self._return_download_urls(html_tree))
-        return download_urls
-
-    @staticmethod
-    def _return_download_urls(html_tree):
-        path = "//*[contains(concat(' ',@id,' '),' wfLabel')]/preceding::tr[2]/td[1]/a/@href"
-        return list(html_tree.xpath(path))
+        return [case['url'] for case in self.cases]
 
     def _get_case_dates(self):
-        case_dates = []
-        for html_tree in self.html:
-            case_dates.extend(self._return_dates(html_tree))
-        return case_dates
-
-    @staticmethod
-    def _return_dates(html_tree):
-        path = "//*[contains(concat(' ',@id,' '),' wfHeader') and not(contains(., 'Iowa'))]/text()"
-        dates = []
-        text = clean_if_py3(html_tree.xpath(path)[0])
-        case_date = date.fromtimestamp(time.mktime(time.strptime(text.strip(), '%B %d, %Y')))
-        dates.extend([case_date] * int(html_tree.xpath("count(//*[contains(concat(' ',@id,' '),' wfLabel')])")))
-        return dates
+        return [convert_date_string(case['date']) for case in self.cases]
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_dates)
 
     def _get_docket_numbers(self):
-        docket_numbers = []
-        for html_tree in self.html:
-            docket_numbers.extend(self._return_docket_numbers(html_tree))
-        return docket_numbers
+        return [case['docket'] for case in self.cases]
 
-    @staticmethod
-    def _return_docket_numbers(html_tree):
-        path = "//*[contains(concat(' ',@id,' '),' wfLabel')]/preceding::tr[2]/td[1]/a/text()"
-        return [clean_if_py3(re.sub(r'Nos?.', '', e).strip())
-                for e in html_tree.xpath(path)]
+    def _download_backwards(self, _):
+        """Walk over all "Archive" links on Archive page,
+        extract cases dictionaries, and add to self.cases
+        """
+        self.archive = True
+        self.url = self.url + 'opinions-archive/'
+        landing_page_html = self._download()
+        path = '//div[@class="main-content-wrapper"]//a[contains(./text(), "Opinions Archive")]/@href'
+        for archive_page_url in landing_page_html.xpath(path):
+            logger.info("Back scraping archive page: %s" % archive_page_url)
+            archive_page_html = self._get_html_tree_by_url(archive_page_url)
+            self.extract_archive_cases(archive_page_html)
+
+    def extract_cases(self, html):
+        """Extract case dictionaries from "Recent" html page
+        and add them to self.cases
+        """
+        case_substring = 'Case No.'
+        case_elements = html.xpath('//h3[contains(., "%s")]' % case_substring)
+        for case_element in case_elements:
+            text = case_element.text_content()
+            parts = text.split(':')
+            docket = parts[0].replace(case_substring, '').strip()
+            name = parts[1].strip()
+            date_text = case_element.xpath('./following::p[1]')[0].text_content()
+            date_string = date_text.replace('Filed', '')
+            url = case_element.xpath('./following::p[2]//a/@href')[0]
+            self.cases.append({
+                'name': name,
+                'docket': docket,
+                'date': date_string,
+                'url': url,
+            })
+
+    def extract_archive_cases(self, html):
+        """Extract case dictionaries from "Archive" html page
+        and add them to self.cases
+        """
+        path_date = '//div[@class="cms_category_icon_title_row"]'
+        for date_header in html.xpath(path_date):
+            text = date_header.text_content()
+            date_string = text.replace('- DELETE', '')
+            path_cases = './following::div[@class="cms_items"][1]/div[@class="cms_item"]'
+            for case_container in date_header.xpath(path_cases):
+                docket_element = case_container.xpath('./div[@class="cms_item_icon_title_row"]')[0]
+                self.cases.append({
+                    'date': date_string,
+                    'url': docket_element.xpath('.//a/@href')[0],
+                    'docket': docket_element.text_content().strip(),
+                    'name': case_container.xpath('./div[@class="cms_item_description"]')[0].text_content().strip(),
+                })
+
+    def extract_next_page_url(self, html):
+        """Return the href url from "Next" pagination element
+        if it exists, otherwise return False.
+        """
+        path = '//div[contains(./@class, "pagination-next-page")]//a/@href'
+        elements = html.xpath(path)
+        return elements[0] if elements else False
