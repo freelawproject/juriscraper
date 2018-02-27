@@ -487,7 +487,7 @@ class DocketReport(BaseReport):
             # to pull that whole, big, docket?" However, if we always make sure
             # to have this field populated, we don't see that page. ∴, always
             # set this value. See #210.
-            query_params[u'date_from'] = '1960-01-01'
+            query_params[u'date_from'] = '1/1/1960'
         if date_end:
             query_params[u'date_to'] = date_end.strftime(u'%m/%d/%Y')
         if doc_num_start:
