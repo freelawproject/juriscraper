@@ -369,7 +369,7 @@ class DocketReport(BaseReport):
         docket_entry_rows = self.tree.xpath(
             '//table['
             '  preceding-sibling::table[%s] or %s'
-            ']//tr' % (docket_header, docket_header)
+            ']/tbody/tr' % (docket_header, docket_header)
         )[1:]  # Skip the first row.
 
         docket_entries = []

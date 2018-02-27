@@ -1,0 +1,888 @@
+<head><title>Illinois Northern Bankruptcy Live System</title>
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+    <script type="text/javascript" src="/lib/core.js"></script>
+    <script type="text/javascript">if (top != self) {
+      top.location.replace(location.href);
+    }</script>
+    <script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script>
+</head>
+<body bgcolor="FFFFFF" text="000000" background="/graphics/database.gif"
+      onload="SetFocus()">
+<iframe id="_yuiResizeMonitor" title="Text Resize Monitor"
+        style="position: absolute; visibility: visible; width: 2em; height: 2em; top: -37px; left: 0px; border-width: 0px;"></iframe>
+<div class="noprint"><img id="cmecfLogo" class="cmecfLogo"
+                          src="/graphics/cmecf-logo.gif" alt="CM/ECF" title=""
+                          onclick="CMECF.MainMenu.showCourtInformation(); return false"><img
+        id="Madcap" class="Madcap" src="/graphics/Madcap.gif" alt="Madcap"
+        onclick="window.open('https://tdi.ilnb.uscourts.gov/madcap/Default.htm','Madcap','HEIGHT=600,WIDTH=800,scrollbars=yes'); return false"
+        title=""><img src="/graphics/menubar-help.gif" alt="?" title=""
+                      class="helpImage" id="helpImage"
+                      onclick="CMECF.MainMenu.showHelpPage(''); return false"
+                      onmouseover="CMECF.MainMenu.helpImageOn()"
+                      onmouseout="CMECF.MainMenu.helpImageOff()">
+    <div id="topmenu" class="yuimenubar yui-module yui-overlay visible"
+         style="z-index: 2; position: static; display: block; visibility: visible;">
+        <div class="bd">
+            <ul class="first-of-type">
+                <li class="yuimenubaritem first-of-type" style="width:9%"
+                    id="yui-gen0" groupindex="0" index="0"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/iquery.pl"><u>Q</u>uery</a></li>
+                <li class="yuimenubaritem yuimenubaritem-hassubmenu"
+                    style="width:11%" id="yui-gen1" groupindex="0" index="1"><a
+                        class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu"
+                        href="/cgi-bin/DisplayMenu.pl?Reports&amp;id=-1"><u>R</u>eports</a>
+                </li>
+                <li class="yuimenubaritem yuimenubaritem-hassubmenu"
+                    style="width:11%" id="yui-gen2" groupindex="0" index="2"><a
+                        class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu"
+                        href="/cgi-bin/DisplayMenu.pl?Utilities&amp;id=-1"><u>U</u>tilities</a>
+                </li>
+                <li class="yuimenubaritem" style="width:10%" id="yui-gen3"
+                    groupindex="0" index="3"><a class="yuimenubaritemlabel"
+                                                href="/cgi-bin/login.pl?logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">if (navigator.appVersion.indexOf("MSIE") == -1) {
+  window.setTimeout(function () {
+    CMECF.MainMenu.createMenu();
+  }, 0);
+} else {
+  CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);
+}</script>
+<div id="cmecfMainContent" style="height: 842px;"><input type="hidden"
+                                                         id="cmecfMainContentScroll"
+                                                         value="0">
+    <script language="JavaScript">
+      var IsForm = false;
+      var FirstField;
+
+      function SetFocus() {
+        if (IsForm) {
+          if (FirstField) {
+            var ind = FirstField.indexOf('document.', 0);
+            if (ind == 0) {
+              eval(FirstField);
+            }
+            else {
+              var Code = "document.forms[0]." + FirstField + ".focus();";
+              eval(Code);
+            }
+          } else {
+            var Cnt = 0;
+            while (document.forms[0].elements[Cnt] != null) {
+              if (document.forms[0].elements[Cnt].type != "hidden") {
+                document.forms[0].elements[Cnt].focus();
+                break;
+              }
+              Cnt += 1;
+            }
+          }
+        }
+        return (true);
+      }
+    </script>
+    <script type="text/JavaScript">
+      document.cookie = "PDFNoHeaderReferer=486774912959285; path=/";
+    </script>
+    <script type="text/javascript" src="/lib/widgits.js"></script>
+    <script>
+      var debtorPanel = null;
+
+      function create_panel(clid, message) {
+        if (!debtorPanel) {
+          debtorPanel = new CMECF.widget.Panel('debtorPanel', {
+            close: true,
+            draggable: false,
+            context: [clid, 'tl', 'br'],
+            width: "250" + "px",
+            height: "110" + "px",
+            constraintoviewport: true
+          });
+          debtorPanel.setHeader("Barred Debtor Information");
+          debtorPanel.setBody(message);
+          debtorPanel.body.style.height = "8em";
+          debtorPanel.render(document.body);
+        } else {
+          debtorPanel.show();
+        }
+      }
+
+      function close_panel() {
+        if (debtorPanel) {
+          debtorPanel.destroy();
+          debtorPanel = null;
+        }
+      }
+    </script>
+    <table width="100%" align="right" border="0" cellspacing="5">
+        <tbody>
+        <tr>
+            <td align="right"><h2><font size="3">DebtEd</font></h2></td>
+        </tr>
+        </tbody>
+    </table>
+    <br><br><br>
+    <center><b><font size="+1">U.S. Bankruptcy Court<br>Northern District of
+        Illinois (Chicago)<br>Bankruptcy Petition #: 17-31455</font></b>
+    </center>
+    <table width="100%" border="0" cellspacing="1">
+        <tbody>
+        <tr>
+            <td valign="top" width="50%"><font size="+0"><br><i>Assigned to:</i>
+                Honorable Judge A. Benjamin Goldgar<br>Chapter
+                13<br>Voluntary<br>Asset
+                <div class="noprint"><a
+                        href="/cgi-bin/SearchClaims.pl?caseid=1418711;sc">Claims
+                    Register</a></div>
+                <br><br> </font></td>
+            <td valign="top" width="50%" align="right"><font size="+0">
+                <table border="0" cellspacing="0" cellpadding="0"
+                       align="center">
+                    <tbody>
+                    <tr>
+                        <td align="right" valign="top"><i>Date filed:</i></td>
+                        <td align="left" valign="top">&nbsp;&nbsp;10/20/2017
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" valign="top"><i>Plan confirmed:</i>
+                        </td>
+                        <td align="left" valign="top">&nbsp;&nbsp;01/02/2018
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" valign="top"><i>341 meeting:</i></td>
+                        <td align="left" valign="top">&nbsp;&nbsp;12/19/2017
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" valign="top"><i>Deadline for filing
+                            claims:</i></td>
+                        <td align="left" valign="top">&nbsp;&nbsp;02/20/2018
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" valign="top"><i>Deadline for filing
+                            claims (govt.):</i></td>
+                        <td align="left" valign="top">&nbsp;&nbsp;04/18/2018
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </font></td>
+        </tr>
+        </tbody>
+    </table>
+    <br><font size="5"><b></b>
+    </font>
+    <table width="100%" border="0" cellspacing="1">
+        <tbody>
+        <tr></tr>
+        <tr>
+            <td valign="top" width="50%"><font size="+0"><i><b>Debtor
+                1</b></i><br><b>Sonya A. Norman</b>
+                <br>6145 S Indiana
+                <br>Apt. A
+                <br>Chicago, IL 60637
+                <br>COOK-IL
+                <br>SSN / ITIN: xxx-xx-0991<br><i><b>aka </b></i><b>Sonya
+                    Powell</b><br><i><b>aka </b></i><b>Sonya Norman</b><br><br>
+            </font></td>
+            <td valign="top" align="right"><font size="+0">represented
+                by </font></td>
+            <td valign="top" width="40%">
+                <font size="+0"><b>David M Siegel</b>
+                    <br>David M. Siegel &amp; Associates
+                    <br>790 Chaddick Drive
+                    <br>Wheeling, IL 60090
+                    <br>847 520-8100
+                    <br>Email:&nbsp;<a href="mailto:davidsiegelbk@gmail.com">davidsiegelbk@gmail.com</a><br><br></font>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" width="50%"><font
+                    size="+0"><i><b>Trustee</b></i><br><b>Marilyn O Marshall</b>
+                <br>224 South Michigan Ste 800
+                <br>Chicago, IL 60604
+                <br>312-431-1300<br><br> </font></td>
+            <td valign="top" width="20%" align="right"><font
+                    size="+0">&nbsp; </font></td>
+            <td valign="top" width="40%" nowrap="">
+                <font size="+0">&nbsp;</font></td>
+        </tr>
+        <tr>
+            <td valign="top" width="50%"><font size="+0"><i><b>U.S. Trustee</b></i><br><b>Patrick
+                S Layng</b>
+                <br>Office of the U.S. Trustee, Region 11
+                <br>219 S Dearborn St
+                <br>Room 873
+                <br>Chicago, IL 60604
+                <br>312-886-5785 </font></td>
+            <td valign="top" width="20%" align="right"><font
+                    size="+0">&nbsp; </font></td>
+            <td valign="top" width="40%"><font size="+0">&nbsp; </font></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tbody>
+        <tr>
+            <th width="94" nowrap="">Filing Date</th>
+            <th colspan="2" align="center">#</th>
+            <th align="center">Docket Text</th>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">10/20/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066063234770"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066063234770&quot;">1</a>
+                <br>
+                <nobr>(62&nbsp;pgs; 2&nbsp;docs)</nobr>
+            </td>
+            <td valign="bottom"> Chapter 13 Voluntary Petition for an Individual
+                Fee Amount $310, Filed by David M Siegel on behalf of Sonya A.
+                Norman Government Proof of Claim due by 04/18/2018.Chapter 13
+                Plan due by 11/3/2017. (Attachments: # <a
+                        href="https://ecf.ilnb.uscourts.gov/doc1/066163234771">1</a>
+                Signature Pages) (Siegel, David) (Entered: 10/20/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">10/20/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066063234780"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066063234780&quot;">2</a>
+                <br>
+                <nobr>(5&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Chapter 13 Plan Filed by David M Siegel on
+                behalf of Sonya A. Norman (RE: <a
+                        href="https://ecf.ilnb.uscourts.gov/doc1/066063234770">1</a>
+                Voluntary Petition (Chapter 13)). (Siegel, David) (Entered:
+                10/20/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">10/20/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066063234783"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066063234783&quot;">3</a>
+                <br>
+                <nobr>(3&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Chapter 13 Statement of Your Current Monthly
+                Income and Calculation of Commitment Period for 3 Years (Form
+                122C-1) Disposable Income Is Not Determined Filed by David M
+                Siegel on behalf of Sonya A. Norman. (Siegel, David) (Entered:
+                10/20/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">10/20/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066063234789"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066063234789&quot;">4</a>
+            </td>
+            <td valign="bottom"> Statement About Your Social Security Numbers
+                Filed by David M Siegel on behalf of Sonya A. Norman. (Siegel,
+                David) (Entered: 10/20/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">10/20/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066063234795"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066063234795&quot;">5</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Certificate of Credit Counseling Filed by David
+                M Siegel on behalf of Sonya A. Norman. (Siegel, David) (Entered:
+                10/20/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">10/20/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px">6
+            </td>
+            <td valign="bottom"> Meeting of Creditors with 341(a) meeting to be
+                held on 11/22/2017 at 12:00 PM at 224 South Michigan, Suite 800,
+                Chicago, Illinois 60604. Confirmation hearing to be held on
+                12/12/2017 at 11:00 AM at 219 South Dearborn, Courtroom 642,
+                Chicago, Illinois 60604. Proof of Claim due by 02/20/2018.
+                Objection to Dischargeability due by 01/22/2018. (Siegel, David)
+                (Entered: 10/20/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">10/20/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px">7
+            </td>
+            <td valign="bottom"> Receipt of Voluntary Petition (Chapter
+                13)(17-31455) [misc,volp13a] ( 310.00) Filing Fee. Receipt
+                number 35754234. Fee Amount $ 310.00 (re:Doc# <a
+                        href="https://ecf.ilnb.uscourts.gov/doc1/066063234770">1</a>)
+                (U.S. Treasury) (Entered: 10/20/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">10/23/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px">8
+            </td>
+            <td valign="bottom"> Notice of Debtor's Prior Filings<br>
+                <table border="1">
+                    <tbody>
+                    <tr>
+                        <th>Debtor</th>
+                        <th>Case No</th>
+                        <th>Note</th>
+                    </tr>
+                    <tr>
+                        <td>Sonya A. Norman</td>
+                        <td>
+                            <a href="https://ecf.ilnb.uscourts.gov/cgi-bin/DktRpt.pl?1371667">16-29400</a>
+                        </td>
+                        <td>Ch13 filed in Illinois Northern Bankruptcy on
+                            09/15/2016, Dismissed for failure to make plan
+                            payments on 10/18/2017
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                (Admin) (Entered: 10/23/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">10/23/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066063256911"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066063256911&quot;">9</a>
+                <br>
+                <nobr>(2&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Notice of Chapter 13 Bankruptcy Case . (Boyd,
+                Shante) (Entered: 10/23/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">10/23/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066063259276"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066063259276&quot;">10</a>
+                <br>
+                <nobr>(16&nbsp;pgs; 2&nbsp;docs)</nobr>
+            </td>
+            <td valign="bottom"> Notice of Motion and Motion to Extend Automatic
+                Stay Filed by David M Siegel on behalf of Sonya A. Norman.
+                Hearing scheduled for 10/31/2017 at 09:30 AM at 219 South
+                Dearborn, Courtroom 642, Chicago, Illinois 60604. (Attachments:
+                #
+                <a href="https://ecf.ilnb.uscourts.gov/doc1/066163259277">1</a>
+                Proposed Order) (Siegel, David) (Entered: 10/23/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">10/23/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066063297154"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066063297154&quot;">11</a>
+                <br>
+                <nobr>(4&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Notice - Meeting of
+                Creditors. (RE: <a
+                        href="https://ecf.ilnb.uscourts.gov/doc1/066063256911">9</a>
+                Notice of Chapter 13 Bankruptcy Case). No. of Notices: 23.
+                Notice Date 10/25/2017. (Admin.) (Entered: 10/25/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">10/23/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066063297155"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066063297155&quot;">12</a>
+                <br>
+                <nobr>(7&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Notice - PDF Document. (RE:
+                <a href="https://ecf.ilnb.uscourts.gov/doc1/066063234780">2</a>
+                Chapter 13 Plan/Modified Plan). No. of Notices: 27. Notice Date
+                10/25/2017. (Admin.) (Entered: 10/25/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">10/31/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066063372649"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066063372649&quot;">13</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Order Granting Motion to Extend Automatic Stay
+                (Related Doc # <a
+                        href="https://ecf.ilnb.uscourts.gov/doc1/066063259276">10</a>.
+                Signed on 10/31/2017. (Ward, Charles) (Entered: 11/01/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">11/13/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066063510227"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066063510227&quot;">14</a>
+                <br>
+                <nobr>(13&nbsp;pgs; 2&nbsp;docs)</nobr>
+            </td>
+            <td valign="bottom"> Notice of Motion and Application for
+                Compensation for David M Siegel, Debtor's Attorney, Fee:
+                $4,000.00, Expenses: $30.00. Filed by David M Siegel. Hearing
+                scheduled for 12/12/2017 at 11:00 AM at 219 South Dearborn,
+                Courtroom 642, Chicago, Illinois 60604. (Attachments: # <a
+                        href="https://ecf.ilnb.uscourts.gov/doc1/066163510228">1</a>
+                Proposed Order) (Siegel, David) (Entered: 11/13/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">11/13/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066063511724"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066063511724&quot;">15</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Appearance Filed by Steven A Montalto on behalf
+                of Total Finance AC LLC. (Montalto, Steven) (Entered:
+                11/13/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">11/22/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px">16
+            </td>
+            <td valign="bottom"> Statement Adjourning Meeting of Creditors.
+                Section 341(a) Meeting Continued on 12/19/2017 at 01:00 PM at
+                224 South Michigan, Suite 800, Chicago, Illinois 60604.
+                (Marshall, Marilyn) (Entered: 11/22/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">12/12/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px">17
+            </td>
+            <td valign="bottom"> (E)Confirmation Hearing Continued. Confirmation
+                Hearing to be held on 01/02/2018 at 11:00 AM at Courtroom 642
+                219 South Dearborn, Chicago, IL, 60604.. Signed on 12/12/2017.
+                (LeBeau, Brittany) (Entered: 12/12/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">12/12/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px">18
+            </td>
+            <td valign="bottom"> (E)Hearing Continued (RE: <a
+                    href="https://ecf.ilnb.uscourts.gov/doc1/066063510227"
+                    onclick="goDLS('/doc1/066063510227','1418711','40','','0','','','','','');return(false)">14</a>
+                Compensation WITH Notice of Motion). hearing scheduled for
+                01/02/2018 at 11:00 AM at Courtroom 642 219 South Dearborn,
+                Chicago, IL, 60604.. Signed on 12/12/2017. (LeBeau, Brittany)
+                (Entered: 12/12/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">12/20/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px">19
+            </td>
+            <td valign="bottom"> Meeting of Creditors Held (Marshall, Marilyn)
+                (Entered: 12/20/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">12/20/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066063970573"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066063970573&quot;">20</a>
+                <br>
+                <nobr>(2&nbsp;pgs; 2&nbsp;docs)</nobr>
+            </td>
+            <td valign="bottom"> Notice of Motion and Motion to Dismiss Debtor
+                for Unreasonable Delay Filed by Marilyn O Marshall Hearing
+                scheduled for 1/2/2018 at 11:00 AM at 219 South Dearborn,
+                Courtroom 642, Chicago, Illinois 60604. (Attachments: # <a
+                        href="https://ecf.ilnb.uscourts.gov/doc1/066163970574">1</a>
+                Proposed Order) (Olivadoti, O.) (Entered: 12/20/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">12/29/2017</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066064042860"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066064042860&quot;">21</a>
+                <br>
+                <nobr>(5&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Amended Chapter 13 Plan Filed by Christine H
+                Clar on behalf of Sonya A. Norman. (Clar, Christine) (Entered:
+                12/29/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">01/02/2018</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px">22
+            </td>
+            <td valign="bottom"> (E)Order Withdrawing Trustee's Motion To
+                Dismiss (Related Doc # <a
+                        href="https://ecf.ilnb.uscourts.gov/doc1/066063970573"
+                        onclick="goDLS('/doc1/066063970573','1418711','57','','0','','','','','');return(false)">20</a>
+                ). Signed on 01/02/2018. (Rodriguez, Shanda) (Entered:
+                01/02/2018)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">01/02/2018</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066064078166"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066064078166&quot;">23</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Order Granting Application For Compensation
+                (Related Doc # <a
+                        href="https://ecf.ilnb.uscourts.gov/doc1/066063510227">14</a>).
+                David M Siegel, fees awarded: $4000.00, expenses awarded:
+                $30.00. Signed on 1/2/2018. (Ward, Charles) (Entered:
+                01/03/2018)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">01/02/2018</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066064078284"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066064078284&quot;">24</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Order Confirming Chapter 13 Plan (RE: <a
+                    href="https://ecf.ilnb.uscourts.gov/doc1/066064042860">21</a>
+                Chapter 13 Plan/Amended Plan). Signed on 1/2/2018 (Ward,
+                Charles) (Entered: 01/03/2018)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">01/02/2018</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066064103931"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066064103931&quot;">25</a>
+                <br>
+                <nobr>(7&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Notice - PDF Document. (RE:
+                <a href="https://ecf.ilnb.uscourts.gov/doc1/066064042860">21</a>
+                Chapter 13 Plan/Amended Plan). No. of Notices: 28. Notice Date
+                01/04/2018. (Admin.) (Entered: 01/04/2018)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">01/16/2018</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066064232437"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066064232437&quot;">26</a>
+                <br>
+                <nobr>(6&nbsp;pgs; 2&nbsp;docs)</nobr>
+            </td>
+            <td valign="bottom"> Notice of Motion and Motion to Vacate (related
+                documents <a
+                        href="https://ecf.ilnb.uscourts.gov/doc1/066064078284">24</a>
+                Order Confirming Chapter 13 Plan) Filed by Dustin B Allen on
+                behalf of Sonya A. Norman. Hearing scheduled for 1/30/2018 at
+                09:30 AM at 219 South Dearborn, Courtroom 642, Chicago, Illinois
+                60604. (Attachments: # <a
+                        href="https://ecf.ilnb.uscourts.gov/doc1/066164232438">1</a>
+                Proposed Order) (Allen, Dustin) (Entered: 01/16/2018)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">01/30/2018</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066064403986"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066064403986&quot;">27</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Order Granting Motion To Vacate Confirmation
+                Order. The Trustee's Motion to Dismiss is reinstated and
+                continued (Related Doc # <a
+                        href="https://ecf.ilnb.uscourts.gov/doc1/066064232437">26</a>).
+                Signed on 1/30/2018. (Ward, Charles) (Entered: 01/31/2018)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">01/31/2018</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px">28
+            </td>
+            <td valign="bottom"> Confirmation Hearing Continued . Confirmation
+                hearing to be held on 2/27/2018 at 11:00 AM at 219 South
+                Dearborn, Courtroom 642, Chicago, Illinois 60604. (Castellano,
+                Nancy) (Entered: 01/31/2018)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">01/31/2018</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px">29
+            </td>
+            <td valign="bottom"> Hearing Continued (RE: <a
+                    href="https://ecf.ilnb.uscourts.gov/doc1/066063970573">20</a>
+                Dismiss). Hearing scheduled for 2/27/2018 at 11:00 AM at 219
+                South Dearborn, Courtroom 642, Chicago, Illinois 60604.
+                (Castellano, Nancy) (Entered: 01/31/2018)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">02/26/2018</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066064707121"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066064707121&quot;">30</a>
+                <br>
+                <nobr>(5&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Amended Chapter 13 Plan Filed by David M Siegel
+                on behalf of Sonya A. Norman. (Siegel, David) (Entered:
+                02/26/2018)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">02/26/2018</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/066064709259"
+                    oncontextmenu="this.href=&quot;https://ecf.ilnb.uscourts.gov/doc1/066064709259&quot;">31</a>
+                <br>
+                <nobr>(8&nbsp;pgs; 2&nbsp;docs)</nobr>
+            </td>
+            <td valign="bottom"> Notice of Motion and Motion to Incur Debt Filed
+                by Dustin B Allen on behalf of Sonya A. Norman. Hearing
+                scheduled for 3/13/2018 at 09:30 AM at 219 South Dearborn,
+                Courtroom 642, Chicago, Illinois 60604. (Attachments: # <a
+                        href="https://ecf.ilnb.uscourts.gov/doc1/066164709260">1</a>
+                Proposed Order) (Allen, Dustin) (Entered: 02/26/2018)
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <br><br><br><br>
+    <script type="text/javascript">
+      document.cookie = 'RECENT_CASES=' + "1418711^1432036;";
+    </script>
+    <hr>
+    <center>
+        <table border="1" bgcolor="white" width="400">
+            <tbody>
+            <tr>
+                <th colspan="4"><font size="+1" color="DARKRED">PACER Service
+                    Center </font></th>
+            </tr>
+            <tr>
+                <th colspan="4"><font color="DARKBLUE">Transaction
+                    Receipt </font></th>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr>
+                <td colspan="4" align="CENTER"><font size="-1" color="DARKBLUE">02/26/2018
+                    18:14:47</font></td>
+            </tr>
+            <tr>
+                <th align="LEFT"><font size="-1" color="DARKBLUE"> PACER
+                    Login: </font></th>
+                <td align="LEFT"><font size="-1" color="DARKBLUE">
+                    [REDACTED] </font></td>
+                <th align="LEFT"><font size="-1" color="DARKBLUE"> Client
+                    Code: </font></th>
+                <td align="LEFT"><font size="-1" color="DARKBLUE"> </font></td>
+            </tr>
+            <tr>
+                <th align="LEFT"><font size="-1" color="DARKBLUE">
+                    Description: </font></th>
+                <td align="LEFT"><font size="-1" color="DARKBLUE"> Docket
+                    Report </font></td>
+                <th align="LEFT"><font size="-1" color="DARKBLUE"> Search
+                    Criteria: </font></th>
+                <td align="LEFT"><font size="-1" color="DARKBLUE"> 17-31455 Fil
+                    or Ent: filed From: 2/24/2017 To: 2/26/2018 Doc From: 0 Doc
+                    To: 99999999 Term: included Format: html Page counts for
+                    documents: included </font></td>
+            </tr>
+            <tr>
+                <th align="LEFT"><font size="-1" color="DARKBLUE"> Billable
+                    Pages: </font></th>
+                <td align="LEFT"><font size="-1" color="DARKBLUE"> 3 </font>
+                </td>
+                <th align="LEFT"><font size="-1" color="DARKBLUE"> Cost: </font>
+                </th>
+                <td align="LEFT"><font size="-1" color="DARKBLUE"> 0.30 </font>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            </tbody>
+        </table>
+    </center>
+    <br><br></div>
+</body>
