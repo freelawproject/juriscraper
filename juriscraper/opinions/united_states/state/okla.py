@@ -47,9 +47,7 @@ class Site(OpinionSite):
 
     @staticmethod
     def _return_desired_group(element_text, nr):
-        print('RAW: %s' % element_text)
         desired_str = re.search(r'([^,]+), (\d{2}.\d{2}.\d{4}), (.*)', element_text).group(nr)
-        print('DESIRED: %s' % desired_str)
         if nr == 2:
             return date.fromtimestamp(time.mktime(time.strptime(desired_str, '%m/%d/%Y')))
         else:
