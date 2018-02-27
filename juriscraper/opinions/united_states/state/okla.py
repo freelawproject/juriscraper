@@ -1,9 +1,10 @@
 # Scraper for Supreme Court of Oklahoma
-#CourtID: okla
-#Court Short Name: OK
-#Author: Andrei Chelaru
-#Reviewer: mlr
-#Date: 2014-07-05
+# CourtID: okla
+# Court Short Name: OK
+# Court Contact: webmaster@oscn.net
+# Author: Andrei Chelaru
+# Reviewer: mlr
+# Date: 2014-07-05
 
 from datetime import date
 import time
@@ -46,7 +47,9 @@ class Site(OpinionSite):
 
     @staticmethod
     def _return_desired_group(element_text, nr):
+        print('RAW: %s' % element_text)
         desired_str = re.search(r'([^,]+), (\d{2}.\d{2}.\d{4}), (.*)', element_text).group(nr)
+        print('DESIRED: %s' % desired_str)
         if nr == 2:
             return date.fromtimestamp(time.mktime(time.strptime(desired_str, '%m/%d/%Y')))
         else:
