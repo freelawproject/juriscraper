@@ -525,7 +525,7 @@ class DocketReport(BaseReport):
         # as possible as HTML.
         values = []
         for cell in cells:
-            clean_texts = self._br_split(cell)
+            clean_texts = [clean_string(s) for s in self._br_split(cell)]
             values.extend(clean_texts)
         values.append(' '.join(values))
         self.metadata_values = values
@@ -710,5 +710,5 @@ class DocketReport(BaseReport):
         html_text = tostring(element, encoding='unicode')
         html_text = re.sub(r'<br/?>', sep, html_text, flags=re.I)
         element = fromstring(html_text)
-        text = force_unicode(element.text_content())
+        text = force_unicode(' '.join(s for s in element.xpath('.//text()')))
         return [s.strip() for s in text.split(sep) if s]

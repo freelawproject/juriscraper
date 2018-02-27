@@ -6,13 +6,14 @@ titles = [
     'visiting', 'special', 'senior-judge', 'master', 'u.s.magistrate',
 ]
 blacklist = [
-    'a998', 'agb', 'am', 'ca', 'cet', 'ch.', 'cla', 'clerk', 'cp', 'cvb', 'db',
-    'debt-magistrate', 'discovery', 'dj', 'docket', 'duty', 'duty', 'ec', 'eck',
-    'general', 'grc', 'gs', 'hhl', 'hon', 'honorable', 'inactive', 'jne', 'jv',
-    'kec', 'law', 'lc', 'llh', 'lq', 'maryland', 'mediator', 'merged', 'mj',
-    'mmh', 'msh', 'mwd', 'no', 'none', 'prisoner', 'pslc', 'pro', 'pso', 'pt',
-    'rmh', 'se', 'sf', 'successor', 'u.s.', 'tjc', 'unassigned', 'unassigned2',
-    'unassigneddj', 'unknown', 'us', 'usdc', 'vjdistrict',
+    'a998', 'agb', 'am', 'associated', 'ca', 'cases', 'cet', 'ch.', 'cla',
+    'clerk', 'cp', 'cvb', 'db', 'debt-magistrate', 'discovery', 'dj', 'docket',
+    'duty', 'duty', 'ec', 'eck', 'general', 'grc', 'gs', 'hhl', 'hon',
+    'honorable', 'inactive', 'jne', 'jv', 'kec', 'law', 'lc', 'llh', 'lq',
+    'maryland', 'mediator', 'merged', 'mj', 'mmh', 'msh', 'mwd', 'no', 'none',
+    'prisoner', 'pslc', 'pro', 'pso', 'pt', 'rmh', 'se', 'sf', 'show',
+    'successor', 'u.s.', 'tjc', 'unassigned', 'unassigned2', 'unassigneddj',
+    'unknown', 'us', 'usdc', 'vjdistrict',
 ]
 
 judge_normalizers = {
@@ -98,13 +99,13 @@ def normalize_judge_names(name):
 
 def normalize_judge_string(judge):
     """Split a string representing a judge returning their name and title.
-    
-    This code was generated and tested against all judge strings in the RECAP 
+
+    This code was generated and tested against all judge strings in the RECAP
     Archive.
-    
-    :param judge: A string representing a judge, e.g. 
+
+    :param judge: A string representing a judge, e.g.
     :return: A tuple of the judge's name and their normalized position.
-    
+
     >>> normalize_judge_string('Honorable Sue W. Wright')
     ('Sue W. Wright', 'jud')
     """
