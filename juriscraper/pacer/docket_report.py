@@ -95,6 +95,7 @@ class DocketReport(BaseReport):
             "The starting document number must be less than or equal to the ending document number",
             "Case not found.",
             "Either you do not have permission to view the document, or the document does not exist in the case.",
+            "Format: text",
         ]
         for error_string in error_strings:
             error_string_re = re.compile('\s+'.join(error_string.split()),

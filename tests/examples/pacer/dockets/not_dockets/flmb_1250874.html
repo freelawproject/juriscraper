@@ -1,0 +1,181 @@
+<head><title>Middle District of Florida Live Database</title>
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+    <script type="text/javascript" src="/lib/core.js"></script>
+    <script type="text/javascript">if (top != self) {
+      top.location.replace(location.href);
+    }</script>
+</head>
+<body onload="SetFocus()">
+<div class="noprint"><img id="cmecfLogo" class="cmecfLogo"
+                          src="/graphics/cmecf-logo.gif" alt="CM/ECF"
+                          title=""><img src="/graphics/menubar-help.gif" alt="?"
+                                        title="" class="helpImage"
+                                        id="helpImage"
+                                        onclick="CMECF.MainMenu.showHelpPage(''); return false"
+                                        onmouseover="CMECF.MainMenu.helpImageOn()"
+                                        onmouseout="CMECF.MainMenu.helpImageOff()">
+    <div id="topmenu" class="yuimenubar">
+        <div class="bd">
+            <ul class="first-of-type">
+                <li class="yuimenubaritem" style="width:9%"><a
+                        class="yuimenubaritemlabel" href="/cgi-bin/iquery.pl">Query</a>
+                </li>
+                <li class="yuimenubaritem" style="width:11%"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/DisplayMenu.pl?Reports&amp;id=-1">Reports</a>
+                </li>
+                <li class="yuimenubaritem" style="width:11%"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/DisplayMenu.pl?Utilities&amp;id=-1">Utilities</a>
+                </li>
+                <li class="yuimenubaritem" style="width:10%"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/login.pl?logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">if (navigator.appVersion.indexOf("MSIE") == -1) {
+  window.setTimeout(function () {
+    CMECF.MainMenu.renderSimpleMenu();
+  }, 0);
+} else {
+  CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.renderSimpleMenu);
+}</script>
+<div id="cmecfMainContent" style="height: 860px;"><input type="hidden"
+                                                         id="cmecfMainContentScroll"
+                                                         value="0">
+    <script language="JavaScript">
+      var IsForm = false;
+      var FirstField;
+
+      function SetFocus() {
+        if (IsForm) {
+          if (FirstField) {
+            var ind = FirstField.indexOf('document.', 0);
+            if (ind == 0) {
+              eval(FirstField);
+            }
+            else {
+              var Code = "document.forms[0]." + FirstField + ".focus();";
+              eval(Code);
+            }
+          } else {
+            var Cnt = 0;
+            while (document.forms[0].elements[Cnt] != null) {
+              if (document.forms[0].elements[Cnt].type != "hidden") {
+                document.forms[0].elements[Cnt].focus();
+                break;
+              }
+              Cnt += 1;
+            }
+          }
+        }
+        return (true);
+      }
+    </script>
+    <script type="text/JavaScript">
+      document.cookie = "PDFNoHeaderReferer=867806840312224; path=/";
+    </script>
+    <script type="text/javascript" src="/lib/widgits.js"></script>
+    <script>
+      var debtorPanel = null;
+
+      function create_panel(clid, message) {
+        if (!debtorPanel) {
+          debtorPanel = new CMECF.widget.Panel('debtorPanel', {
+            close: true,
+            draggable: false,
+            context: [clid, 'tl', 'br'],
+            width: "250" + "px",
+            height: "110" + "px",
+            constraintoviewport: true
+          });
+          debtorPanel.setHeader("Barred Debtor Information");
+          debtorPanel.setBody(message);
+          debtorPanel.body.style.height = "8em";
+          debtorPanel.render(document.body);
+        } else {
+          debtorPanel.show();
+        }
+      }
+
+      function close_panel() {
+        if (debtorPanel) {
+          debtorPanel.destroy();
+          debtorPanel = null;
+        }
+      }
+    </script>
+    <pre>                                                      JNTADMN, LEAD, ADV, PlnDue, DsclsDue
+</pre>
+    <pre>                                    U.S. Bankruptcy Court
+                              Middle District of Florida (Tampa)
+                           Bankruptcy Petition #: 8:18-bk-00997-CED
+</pre>
+    <pre>Assigned to:  Caryl E. Delano                          Date filed: 02/09/2018
+Chapter 11                                             341 meeting: 03/15/2018
+Voluntary                                              Deadline for filing claims: 05/29/2018
+Asset
+</pre>
+    <pre>Debtor                                    represented by  Edward J. Peterson, III
+C &amp; D Fruit and Vegetable Co., Inc.                       Stichter, Riedel, Blain &amp; Postler, P.A.
+P.O. Box 110598                                           110 East Madison Street, Suite 200
+Bradenton, FL 34211                                       Tampa, FL 33602
+MANATEE-FL                                                (813) 229- 0144
+Tax ID / EIN: 59-2188444                                  Fax  : (813) 229-1811
+                                                          Email: epeterson@srbp.com
+
+                                                          Amy Denton Harris
+                                                          Stichter Riedel Blain &amp; Postler, P.A.
+                                                          110 E Madison Street
+                                                          Suite 200
+                                                          Tampa, FL 33602-4700
+                                                          (813) 229-0144
+                                                          Fax  : (813) 229-1811
+                                                          Email: aharris.ecf@srbp.com
+</pre>
+    <pre>U.S. Trustee                              represented by  Benjamin E. Lambers
+United States Trustee - TPA                               Timberlake Annex
+Timberlake Annex, Suite 1200                              501 E. Polk Street, Suite 1200
+501 E Polk Street                                         Tampa, FL 33602
+Tampa, FL 33602                                           813-228-2000
+813-228-2000                                              Email: Ben.E.Lambers@usdoj.gov
+</pre>
+    <br>
+    <pre>Filing Date    #                                     Docket Text
+</pre>
+    <pre>02/09/2018     1        Voluntary Petition under Chapter 11. (Fee Paid.). <i></i>
+                        Schedules and Statements Incomplete, Statement of Financial
+                        Affairs Not Filed or Incomplete, Disclosure of Compensation
+                        of Attorney Not Filed or Not Required, <i></i> Filed by
+                        Edward J. Peterson III on behalf of C &amp; D Fruit and
+                        Vegetable Co., Inc.. (Peterson, Edward) (Entered:
+                        02/09/2018)
+</pre>
+    <pre>02/09/2018     2        List of 20 Largest Unsecured Creditors <i></i> Filed by
+                        Edward J. Peterson III on behalf of Debtor C &amp; D Fruit and
+                        Vegetable Co., Inc.. (Peterson, Edward) (Entered:
+                        02/09/2018)
+</pre>
+    <script type="text/javascript">
+      document.cookie = 'RECENT_CASES=' + "1250874;";
+    </script>
+    <pre>----------------------------------------------------------------------------------------------------
+                             PACER Service Center
+                             Transaction Receipt
+
+                             02/26/2018 10:41:12
+
+PACER Login: keely.a.Ward:5003631:453 Client Code: 888060.00001
+Description: Docket Report            Search Criteria: 8:18-bk-00997-CED Fil or Ent:
+                                                       filed   Doc From: 0 Doc To:
+                                                       99999999 Term: included
+                                                       Format: text Page counts for
+                                                       documents: included
+Billable Pages: 5                     Cost: 0.50
+----------------------------------------------------------------------------------------------------
+</pre>
+</div>
+</body>
+<rmchdummyelement id="dummy_rmch_element"></rmchdummyelement>
