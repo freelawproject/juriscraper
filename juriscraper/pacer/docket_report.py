@@ -381,16 +381,15 @@ class DocketReport(BaseReport):
                 # column. See almb, 92-04963
                 del cells[1]
 
-            if not cells[1].text_content().strip():
-                # Minute order. Skip for now.
-                continue
-
             date_filed_str = force_unicode(cells[0].text_content())
             de[u'date_filed'] = convert_date_string(date_filed_str)
             de[u'document_number'] = self._get_document_number(cells[1])
             de[u'pacer_doc_id'] = self._get_pacer_doc_id(cells[1],
                                                          de[u'document_number'])
             de[u'description'] = self._get_description(cells)
+            if not de[u'document_number']:
+                # Minute order. Skip for now.
+                continue
             docket_entries.append(de)
 
         docket_entries = clean_pacer_object(docket_entries)
