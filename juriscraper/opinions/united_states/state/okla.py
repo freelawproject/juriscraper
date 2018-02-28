@@ -1,9 +1,10 @@
 # Scraper for Supreme Court of Oklahoma
-#CourtID: okla
-#Court Short Name: OK
-#Author: Andrei Chelaru
-#Reviewer: mlr
-#Date: 2014-07-05
+# CourtID: okla
+# Court Short Name: OK
+# Court Contact: webmaster@oscn.net
+# Author: Andrei Chelaru
+# Reviewer: mlr
+# Date: 2014-07-05
 
 from datetime import date
 import time
