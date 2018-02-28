@@ -93,6 +93,7 @@ class DocketReport(BaseReport):
             "This case was administratively closed",
             "The start date must be less than or equal to the end date",
             "The starting document number must be less than or equal to the ending document number",
+            "Case not found.",
         ]
         for error_string in error_strings:
             error_string_re = re.compile('\s+'.join(error_string.split()),
