@@ -716,6 +716,7 @@ class DocketParseTest(unittest.TestCase):
         paths.sort()
         path_max_len = max(len(path) for path in paths) + 2
         for i, path in enumerate(paths):
+
             sys.stdout.write("%s. Doing %s" % (i, path.ljust(path_max_len)))
             t1 = time.time()
             dirname, filename = os.path.split(path)
