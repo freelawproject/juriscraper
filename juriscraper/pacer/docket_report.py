@@ -390,6 +390,9 @@ class DocketReport(BaseReport):
             if not de[u'document_number']:
                 # Minute order. Skip for now.
                 continue
+            if not de[u'document_number'].isdigit():
+                # Some courts put weird stuff in this column.
+                continue
             docket_entries.append(de)
 
         docket_entries = clean_pacer_object(docket_entries)

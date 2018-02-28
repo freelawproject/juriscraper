@@ -1,0 +1,536 @@
+<head><title>Louisiana Western Bankruptcy Live Database</title>
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+    <script type="text/javascript" src="/lib/core.js"></script>
+    <script type="text/javascript">if (top != self) {
+      top.location.replace(location.href);
+    }</script>
+</head>
+<body bgcolor="CCCCCC" text="000000" onload="SetFocus()">
+<div class="noprint"><img id="cmecfLogo" class="cmecfLogo"
+                          src="/graphics/cmecf-logo.gif" alt="CM/ECF"
+                          title=""><img src="/graphics/menubar-help.gif" alt="?"
+                                        title="" class="helpImage"
+                                        id="helpImage"
+                                        onclick="CMECF.MainMenu.showHelpPage(''); return false"
+                                        onmouseover="CMECF.MainMenu.helpImageOn()"
+                                        onmouseout="CMECF.MainMenu.helpImageOff()">
+    <div id="topmenu" class="yuimenubar">
+        <div class="bd">
+            <ul class="first-of-type">
+                <li class="yuimenubaritem" style="width:9%"><a
+                        class="yuimenubaritemlabel" href="/cgi-bin/iquery.pl">Query</a>
+                </li>
+                <li class="yuimenubaritem" style="width:11%"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/DisplayMenu.pl?Reports&amp;id=-1">Reports</a>
+                </li>
+                <li class="yuimenubaritem" style="width:11%"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/DisplayMenu.pl?Utilities&amp;id=-1">Utilities</a>
+                </li>
+                <li class="yuimenubaritem" style="width:10%"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/login.pl?logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">if (navigator.appVersion.indexOf("MSIE") == -1) {
+  window.setTimeout(function () {
+    CMECF.MainMenu.renderSimpleMenu();
+  }, 0);
+} else {
+  CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.renderSimpleMenu);
+}</script>
+<div id="cmecfMainContent" style="height: 633px;"><input type="hidden"
+                                                         id="cmecfMainContentScroll"
+                                                         value="0">
+    <script type="text/javascript">
+      document.cookie = 'RECENT_CASES=' + "18072^47736^325066^169506;";
+    </script>
+    <script language="JavaScript">
+      var IsForm = false;
+      var FirstField;
+
+      function SetFocus() {
+        if (IsForm) {
+          if (FirstField) {
+            var ind = FirstField.indexOf('document.', 0);
+            if (ind == 0) {
+              eval(FirstField);
+            }
+            else {
+              var Code = "document.forms[0]." + FirstField + ".focus();";
+              eval(Code);
+            }
+          } else {
+            var Cnt = 0;
+            while (document.forms[0].elements[Cnt] != null) {
+              if (document.forms[0].elements[Cnt].type != "hidden") {
+                document.forms[0].elements[Cnt].focus();
+                break;
+              }
+              Cnt += 1;
+            }
+          }
+        }
+        return (true);
+      }
+    </script>
+    <script type="text/JavaScript">
+      document.cookie = "PDFNoHeaderReferer=858534478093836; path=/";
+    </script>
+    <script type="text/javascript" src="/lib/widgits.js"></script>
+    <script>
+      var debtorPanel = null;
+
+      function create_panel(clid, message) {
+        if (!debtorPanel) {
+          debtorPanel = new CMECF.widget.Panel('debtorPanel', {
+            close: true,
+            draggable: false,
+            context: [clid, 'tl', 'br'],
+            width: "250" + "px",
+            height: "110" + "px",
+            constraintoviewport: true
+          });
+          debtorPanel.setHeader("Barred Debtor Information");
+          debtorPanel.setBody(message);
+          debtorPanel.body.style.height = "8em";
+          debtorPanel.render(document.body);
+        } else {
+          debtorPanel.show();
+        }
+      }
+
+      function close_panel() {
+        if (debtorPanel) {
+          debtorPanel.destroy();
+          debtorPanel = null;
+        }
+      }
+    </script>
+    <table width="100%" align="right" border="0" cellspacing="5">
+        <tbody>
+        <tr>
+            <td align="right"><h2><font size="3">Closed, MonAlx</font></h2></td>
+        </tr>
+        </tbody>
+    </table>
+    <br><br><br>
+    <center><b><font size="+1">U.S. Bankruptcy Court<br>Western District of
+        Louisiana (Monroe)<br>Bankruptcy Petition #: 01-30276</font></b>
+    </center>
+    <table width="100%" border="0" cellspacing="1">
+        <tbody>
+        <tr>
+            <td valign="top" width="50%"><font size="+0"><br><i>Assigned to:</i>
+                Judge Henley A. Hunter<br>Chapter 7<br>Voluntary<br>No asset
+                <div class="noprint"><a
+                        href="/cgi-bin/SearchClaims.pl?caseid=18072;sc">Claims
+                    Register</a></div>
+            </font></td>
+            <td valign="top" width="50%" align="right"><font size="+0">
+                <table border="0" cellspacing="0" cellpadding="0"
+                       align="center">
+                    <tbody>
+                    <tr>
+                        <td align="right" valign="top"><i>Date filed:</i></td>
+                        <td align="left" valign="top">&nbsp;&nbsp;02/16/2001
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" valign="top"><i>Date terminated:</i>
+                        </td>
+                        <td align="left" valign="top">&nbsp;&nbsp;12/11/2001
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" valign="top"><i>Date discharged:</i>
+                        </td>
+                        <td align="left" valign="top">&nbsp;&nbsp;07/11/2001
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" valign="top"><i>341 meeting:</i></td>
+                        <td align="left" valign="top">&nbsp;&nbsp;03/19/2001
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </font></td>
+        </tr>
+        </tbody>
+    </table>
+    <br><font size="5"><b></b>
+    </font>
+    <table width="100%" border="0" cellspacing="1">
+        <tbody>
+        <tr></tr>
+        <tr>
+            <td valign="top" width="50%"><font
+                    size="+0"><i><b>Debtor</b></i><br><b>Don Durwin Caraway</b>
+                <br>1156 Grigsby Rd.
+                <br>Ruston, LA 71270
+                <br>LINCOLN-LA
+                <br>SSN / ITIN: xxx-xx-6398<br><br> </font></td>
+            <td valign="top" align="right"><font size="+0">represented
+                by </font></td>
+            <td valign="top" width="40%">
+                <font size="+0"><b>Kenneth W. Campbell</b>
+                    <br>702 Hudson Lane
+                    <br>Monroe, LA 71201
+                    <br>(318) 323-5523
+                    <br>Fax : 318-329-8149
+                    <br>Email:&nbsp;<a href="mailto:kwcamp@bayou.com">kwcamp@bayou.com</a><br><br></font>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" width="50%"><font
+                    size="+0"><i><b>Debtor</b></i><br><b>Elizabeth Ann
+                Caraway</b>
+                <br>1156 Grigsby Rd.
+                <br>Ruston, LA 71270
+                <br>LINCOLN-LA
+                <br>SSN / ITIN: xxx-xx-3455<br><br> </font></td>
+            <td valign="top" align="right"><font size="+0">represented
+                by </font></td>
+            <td valign="top" width="40%">
+                <font size="+0"><b>Kenneth W. Campbell</b>
+                    <br>(See above for address)<br><br></font></td>
+        </tr>
+        <tr>
+            <td valign="top" width="50%"><font
+                    size="+0"><i><b>Trustee</b></i><br><b>E. Eugene Hastings (Ch
+                7 Trustee)</b>
+                <br>401 Walnut St
+                <br>Monroe, LA 71201
+                <br>318-325-1274 </font></td>
+            <td valign="top" width="20%" align="right"><font
+                    size="+0">&nbsp; </font></td>
+            <td valign="top" width="40%"><font size="+0">&nbsp; </font></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tbody>
+        <tr>
+            <th width="94" nowrap="">Filing Date</th>
+            <th colspan="2" align="center">#</th>
+            <th align="center">Docket Text</th>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">02/16/2001</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/0880287063"
+                    oncontextmenu="this.href=&quot;https://ecf.lawb.uscourts.gov/doc1/0880287063&quot;">1</a>
+            </td>
+            <td valign="bottom"> Voluntary Petition all schedules and
+                statements. (jodi) (Entered: 02/16/2001)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">02/16/2001</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/0880287065"
+                    oncontextmenu="this.href=&quot;https://ecf.lawb.uscourts.gov/doc1/0880287065&quot;">2</a>
+            </td>
+            <td valign="bottom"> Disclosure of Compensation By Attorney For
+                Debtor. (jodi) (Entered: 02/16/2001)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">02/16/2001</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/0880287066"
+                    oncontextmenu="this.href=&quot;https://ecf.lawb.uscourts.gov/doc1/0880287066&quot;">3</a>
+            </td>
+            <td valign="bottom"> Notice of Automatic Stay to debtor's atty
+                (jodi) (Entered: 02/16/2001)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">02/27/2001</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px">&nbsp;
+            </td>
+            <td valign="bottom"> First Meeting of Creditors Scheduled For 9:00
+                3/19/01 At Rm. 116B, 201 Jackson, Monroe Discharge Issue Date
+                7/11/01 . (jodi) (Entered: 02/27/2001)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">03/01/2001</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/0880393551"
+                    oncontextmenu="this.href=&quot;https://ecf.lawb.uscourts.gov/doc1/0880393551&quot;">doc</a>
+            </td>
+            <td valign="bottom"> Courts BNC Certificate of Service RE: [0-0]
+                First Meeting . Notices sent: 16 (bnc) (Entered: 03/01/2001)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">03/26/2001</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/08804754087"
+                    oncontextmenu="this.href=&quot;https://ecf.lawb.uscourts.gov/doc1/08804754087&quot;">4</a>
+            </td>
+            <td valign="bottom"> First Meeting Held 3/19/01 all parties present.
+                (fran) (Entered: 03/26/2001)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">05/31/2001</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/08804804172"
+                    oncontextmenu="this.href=&quot;https://ecf.lawb.uscourts.gov/doc1/08804804172&quot;">5</a>
+            </td>
+            <td valign="bottom"> Trustee's Report of No Assets. (lore) (Entered:
+                05/31/2001)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">06/21/2001</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/0880301791"
+                    oncontextmenu="this.href=&quot;https://ecf.lawb.uscourts.gov/doc1/0880301791&quot;">6</a>
+            </td>
+            <td valign="bottom"> Joint Motion of Intent to sell "misc. equip."
+                to secured creditor and pay 506(c) costs filed by Trustee E.
+                Eugene Hastings, Creditor Tower Loan w/exhs.. (glor) (Entered:
+                06/21/2001)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">06/21/2001</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/08804918331"
+                    oncontextmenu="this.href=&quot;https://ecf.lawb.uscourts.gov/doc1/08804918331&quot;">7</a>
+            </td>
+            <td valign="bottom"> Notice of Hearing (Served) RE: [6-1] Intent to
+                Sell Joint Motion by Tower Loan, E. Eugene Hastings; If
+                Objections, hearing will be held 7/11/01 @ 9:30AM-Monroe w/exh..
+                (glor) (Entered: 06/21/2001)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">06/21/2001</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/0880301796"
+                    oncontextmenu="this.href=&quot;https://ecf.lawb.uscourts.gov/doc1/0880301796&quot;">8</a>
+            </td>
+            <td valign="bottom"> Affidavit of Expenses. (glor) (Entered:
+                06/21/2001)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">07/11/2001</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/0880432493"
+                    oncontextmenu="this.href=&quot;https://ecf.lawb.uscourts.gov/doc1/0880432493&quot;">9</a>
+            </td>
+            <td valign="bottom"> Order Discharging Debtor(s) (lore) (Entered:
+                07/11/2001)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">07/13/2001</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/0880413440"
+                    oncontextmenu="this.href=&quot;https://ecf.lawb.uscourts.gov/doc1/0880413440&quot;">doc</a>
+            </td>
+            <td valign="bottom"> Courts BNC Certificate of Service RE: [9-1]
+                Discharge Order . Notices sent: 16 (bnc) (Entered: 07/13/2001)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">07/16/2001</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a href="/doc1/08802771"
+                                                          oncontextmenu="this.href=&quot;https://ecf.lawb.uscourts.gov/doc1/08802771&quot;">10</a>
+            </td>
+            <td valign="bottom"> Order authorizing consensual sale. RE: [6-1]
+                Intent to Sell Joint Motion by Tower Loan, E. Eugene Hastings
+                w/exh. (fran) (Entered: 07/16/2001)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">07/24/2001</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a href="/doc1/088091365"
+                                                          oncontextmenu="this.href=&quot;https://ecf.lawb.uscourts.gov/doc1/088091365&quot;">11</a>
+            </td>
+            <td valign="bottom"> Certificate Of Service By Trustee E. Eugene
+                Hastings Of [10-1] Consensual Sale Order . (fran) (Entered:
+                07/25/2001)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">10/17/2001</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/08804871582"
+                    oncontextmenu="this.href=&quot;https://ecf.lawb.uscourts.gov/doc1/08804871582&quot;">12</a>
+            </td>
+            <td valign="bottom"> Trustee's Report of No Distribution For No
+                Asset Case with Consenual Sale(s). (fran) (Entered: 10/17/2001)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">12/11/2001</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px"><a
+                    href="/doc1/0880143269"
+                    oncontextmenu="this.href=&quot;https://ecf.lawb.uscourts.gov/doc1/0880143269&quot;">13</a>
+            </td>
+            <td valign="bottom"> Final Decree (jodi) (Entered: 12/11/2001)</td>
+        </tr>
+        <tr>
+            <td width="94" nowrap="" valign="bottom">12/11/2001</td>
+            <td width="74" valign="top" align="right"
+                style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td width="30" valign="top" align="left"
+                style="border-left:0;padding-left:1px">&nbsp;
+            </td>
+            <td valign="bottom"> Case Closed. (jodi) (Entered: 12/11/2001)</td>
+        </tr>
+        </tbody>
+    </table>
+    <br><br><br><br>
+    <script type="text/javascript">
+      document.cookie = 'RECENT_CASES=' + "18072^47736^325066^169506;";
+    </script>
+    <hr>
+    <center>
+        <table border="1" bgcolor="white" width="400">
+            <tbody>
+            <tr>
+                <th colspan="4"><font size="+1" color="DARKRED">PACER Service
+                    Center </font></th>
+            </tr>
+            <tr>
+                <th colspan="4"><font color="DARKBLUE">Transaction
+                    Receipt </font></th>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr>
+                <td colspan="4" align="CENTER"><font size="-1" color="DARKBLUE">02/27/2018
+                    15:53:40</font></td>
+            </tr>
+            <tr>
+                <th align="LEFT"><font size="-1" color="DARKBLUE"> PACER
+                    Login: </font></th>
+                <td align="LEFT"><font size="-1" color="DARKBLUE">
+                    [REDACTED] </font></td>
+                <th align="LEFT"><font size="-1" color="DARKBLUE"> Client
+                    Code: </font></th>
+                <td align="LEFT"><font size="-1" color="DARKBLUE"> 1-5 </font>
+                </td>
+            </tr>
+            <tr>
+                <th align="LEFT"><font size="-1" color="DARKBLUE">
+                    Description: </font></th>
+                <td align="LEFT"><font size="-1" color="DARKBLUE"> Docket
+                    Report </font></td>
+                <th align="LEFT"><font size="-1" color="DARKBLUE"> Search
+                    Criteria: </font></th>
+                <td align="LEFT"><font size="-1" color="DARKBLUE"> 01-30276 Fil
+                    or Ent: filed Doc From: 0 Doc To: 99999999 Term: included
+                    Format: html </font></td>
+            </tr>
+            <tr>
+                <th align="LEFT"><font size="-1" color="DARKBLUE"> Billable
+                    Pages: </font></th>
+                <td align="LEFT"><font size="-1" color="DARKBLUE"> 1 </font>
+                </td>
+                <th align="LEFT"><font size="-1" color="DARKBLUE"> Cost: </font>
+                </th>
+                <td align="LEFT"><font size="-1" color="DARKBLUE"> 0.10 </font>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            </tbody>
+        </table>
+    </center>
+    <br><br></div>
+</body>
