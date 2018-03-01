@@ -223,6 +223,9 @@ class DocketReport(BaseReport):
                 # Bankruptcy - party type value.
                 s = force_unicode(cells[0].xpath(u'.//i')[0].text_content())
                 party = {u'type': normalize_party_types(s)}
+            elif len(cells) == 3 and u'service list' in row_text:
+                # Special case to handle the service list.
+                party = {u'type': u"Service List"}
 
             name_path = u'.//b[not(./parent::i)][not(./u)][not(contains(., "------"))]'
             is_party_name_cell = (len(cells[0].xpath(name_path)) > 0)
