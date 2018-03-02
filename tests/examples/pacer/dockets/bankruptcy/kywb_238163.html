@@ -1,0 +1,183 @@
+<html><head><title>KYWB Production Database</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script><script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script></head><body BGCOLOR=FFFFF0 TEXT=000000 onLoad='SetFocus()'><div class="noprint"><img id="cmecfLogo" class="cmecfLogo" src="/graphics/cmecf-logo.gif" alt="CM/ECF" title="" onClick="CMECF.MainMenu.showCourtInformation(); return false" /><img src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage" id="helpImage" onClick="CMECF.MainMenu.showHelpPage(''); return false" onMouseOver="CMECF.MainMenu.helpImageOn()" onMouseOut="CMECF.MainMenu.helpImageOff()" /><div id="topmenu" class="yuimenubar"><div class="bd"><ul class="first-of-type"><li class="yuimenubaritem" style="width:9%"><a class="yuimenubaritemlabel" href='/cgi-bin/iquery.pl'><u>Q</u>uery</a></li><li class="yuimenubaritem" style="width:11%"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Reports&id=-1'><u>R</u>eports</a></li><li class="yuimenubaritem" style="width:11%"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Utilities&id=-1'><u>U</u>tilities</a></li><li class="yuimenubaritem" style="width:10%"><a class="yuimenubaritemlabel" href='/cgi-bin/login.pl?logout'>Logout</a></li></ul></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout( function(){ CMECF.MainMenu.createMenu(); }, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);}</script><div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript">
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+<script type='text/JavaScript'>
+document.cookie="PDFHeaderReferer=350206382263055; path=/";
+</script>
+		<script type="text/javascript" src="/lib/widgits.js"></script>
+		<script>
+		var debtorPanel = null;
+
+		function create_panel(clid, message) {
+		    if (!debtorPanel) {
+		        debtorPanel = new CMECF.widget.Panel('debtorPanel', {
+				close:true,
+				draggable:false,
+				context:[clid, 'tl', 'br'],
+				width: "250" + "px",
+				height: "110" + "px",
+				constraintoviewport:true
+			});
+			debtorPanel.setHeader("Barred Debtor Information");
+			debtorPanel.setBody(message);
+			debtorPanel.body.style.height = "8em";
+			debtorPanel.render(document.body);
+		    } else {
+		        debtorPanel.show();
+		    }
+		}
+
+		function close_panel() {
+		    if (debtorPanel) {
+		        debtorPanel.destroy();
+		        debtorPanel = null;
+		    }
+		}
+		</script>
+		<TABLE width="100%" align=right BORDER=0 CELLSPACING=5><TR><TD ALIGN=right><h2> <FONT SIZE="3">CLOSED</FONT></h2></TD></TR></TABLE><BR><BR><BR><CENTER><B><FONT SIZE="+1">U.S. Bankruptcy Court<BR>Western District of Kentucky (Louisville)<BR>Bankruptcy Petition #: 08-33673-thf</FONT></B></CENTER><TABLE width="100%" BORDER=0 CELLSPACING=1><TR>	<TD VALIGN=top  WIDTH="50%"><FONT SIZE="+0"><BR><I>Assigned to:</I>       Thomas H. Fulton<BR>Chapter          7<BR>Voluntary<BR>Asset <br><div class="noprint"><A HREF='/cgi-bin/qryAscCases.pl?238163'>Show Associated Cases</A></div> <div class="noprint"><a href='/cgi-bin/SearchClaims.pl?caseid=238163;sc'>Claims Register</a></div><BR><BR><BR><I>Debtor disposition:</I>&nbsp;&nbsp;Discharge Not Applicable	</FONT></TD>
+	<TD VALIGN=top  WIDTH="50%" ALIGN=right><FONT SIZE="+0"><TABLE border=0 cellspacing=0 cellpadding=0 align=center><TR><td align="right" valign="top"><I>Date filed:</I></td><td align="left" valign="top">&nbsp;&nbsp;08/20/2008</td></TR><TR><td align="right" valign="top"><I>Date terminated:</I></td><td align="left" valign="top">&nbsp;&nbsp;08/27/2015</td></TR><TR><td align="right" valign="top"><I>341 meeting:</I></td><td align="left" valign="top">&nbsp;&nbsp;10/10/2008</td></TR></TABLE>	</FONT></TD>
+</TR>
+</TABLE><BR><FONT SIZE="5"><B></B>
+		</FONT><TABLE width="100%" BORDER=0 CELLSPACING=1><TR><TR>	<TD VALIGN=top  WIDTH="50%"><FONT SIZE="+0"><I><B>Debtor</B></I><BR><B>Prajna Group, Inc.</B>
+<BR>9300 Shelbyville Road
+<BR>Suite 400
+<BR>Louisville, KY 40222
+<BR>JEFFERSON-KY
+<BR>Tax ID / EIN: 36-4296082     <BR><I><B>dba </B></I><B>Liberty Mortgage Funding</B><BR><BR>	</FONT></TD>
+	<TD VALIGN=top  ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Prajna Group, Inc.</B>
+<BR>PRO SE<BR>
+<BR><B></B><BR><BR></font></TD><TR>	<TD VALIGN=top  WIDTH="50%"><FONT SIZE="+0"><I><B>Trustee</B></I><BR><B>John R. Wilson</B>
+<BR>Wilson & Wilson, Attorneys at Law, PLLC
+<BR>10355 Linn Station Rd.
+<BR>Louisville, KY 40223
+<BR>899-4725<BR><BR>	</FONT></TD>
+	<TD VALIGN=top  ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+<TD valign="top" WIDTH="40%">
+  	                    <font size="+0"><B>Henry Schildknecht</B>
+<BR>6000 Brownsboro Park Boulevard
+<BR>Suite H
+<BR>Louisville, KY 40207
+<BR>502-583-7768
+<BR>Fax  : 502-587-7336
+<BR>Email:&nbsp;<a href='mailto:hankatty@gmail.com'>hankatty@gmail.com</a><BR><BR><B>Daniel A. Staeven</B><BR><BR><B>Kenneth S. Strauss</B>
+<BR>Levin Ginsburg
+<BR> Suite 3200
+<BR>180 N LaSalle St.
+<BR>Chicago, IL 60601-2800
+<BR>312-368-0100<BR><BR><B>James C. Wagner</B>
+<BR>PO Box 23
+<BR>Fox River Grove, IL 60021
+<BR>(847) 639-1800<BR><BR><B>John R. Wilson</B>
+<BR>&#096;0355 Linn Station Road
+<BR>Louisville, KY 40223-3816
+<BR>(502)899-4725
+<BR>Fax  : (502)899-4732
+<BR>Email:&nbsp;<a href='mailto:jrwils1@iglou.com'>jrwils1@iglou.com</a><BR><BR><B>John R. Wilson</B>
+<BR>Wilson & Wilson, Attorneys at Law, PLLC
+<BR>6006 Brownsboro Park Blvd. Suite A
+<BR>Louisville, KY 40207
+<BR>899-4725
+<BR>Email:&nbsp;<a href='mailto:jrwils1@iglou.com'>jrwils1@iglou.com</a><BR><BR><B>Michael Rollin Wilson</B>
+<BR>Wilson & Wilson, Attorneys at Law, PLLC
+<BR>10355 Linn Station Rd.
+<BR>Louisville, KY 40223
+<BR>(502) 899-4725
+<BR>Email:&nbsp;<a href='mailto:Michael.Rollin.Wilson@hotmail.com'>Michael.Rollin.Wilson@hotmail.com</a><BR><BR><B>Wilson & Wilson, Attorneys at Law, PLLC</B><BR><BR></font></TD></TR><TR>	<TD VALIGN=top  WIDTH="50%"><FONT SIZE="+0"><I><B>US Trustee</B></I><BR><B>Charles R. Merrill</B>
+<BR>Asst. U.S.Trustee
+<BR>601 West Broadway &#035;512
+<BR>Louisville, KY 40202
+<BR>502-582-6000	</FONT></TD>
+	<TD VALIGN=top  WIDTH="20%" ALIGN=right><FONT SIZE="+0">represented by	</FONT></TD>
+	<TD VALIGN=top  WIDTH="40%"><FONT SIZE="+0"><B>Scott J. Goldberg</B>
+<BR>601 W. Broadway
+<BR>Room 512
+<BR>Louisville, KY 40202
+<BR>582-6000
+<BR>Email:&nbsp;<a href='mailto:ustpregion08.lo.ecf@usdoj.gov'>ustpregion08.lo.ecf@usdoj.gov</a>	</FONT></TD>
+</TR></TABLE><BR><script>
+function calculateTotal(inputItem, bytes) {
+  max_file_size = 10485760;
+  with (inputItem.form) {
+	  if (inputItem.checked == false) {   // unchecked - subtract from total
+		  calculatedTotal.value = eval(calculatedTotal.value) - bytes;
+	  } else {   // checked - add to total
+		  calculatedTotal.value = eval(calculatedTotal.value) + bytes;
+	  }
+	  if (calculatedTotal.value > max_file_size) {
+		  document.view_multi_docs.view_selected.disabled = true;
+		  document.view_multi_docs.dl_selected.disabled = true;
+		  document.getElementById('file_too_big').style.display = 'block';
+	  } else {
+		  document.view_multi_docs.view_selected.disabled = false;
+		  document.view_multi_docs.dl_selected.disabled = false;
+		  document.getElementById('file_too_big').style.display = 'none';
+	  }
+    return(calculatedTotal.value / 1000000);
+  }
+}
+</script>
+<form enctype='multipart/form-data' method=post action='show_multidocs.pl?caseid=238163&pdf_header=1' name=view_multi_docs><input type='hidden' name='caseid' value='238163'><script language="javascript">
+<!-- Begin
+function checkAll(field) {
+if (field.length) {
+						for (i = 0; i < field.length; i++) field[i].checked = true;
+					} else {
+						if (! field.checked) {
+							field.checked = true;
+						}
+					}
+		}
+function uncheckAll(field) {
+if (field.length) {
+                        for (i = 0; i < field.length; i++) field[i].checked = false;
+                    } else {
+                        if (field.checked) {
+                            field.checked = false;
+                        }
+                    }
+        }
+//  End -->
+</script>
+<TABLE BORDER=1 CELLPADDING=10 CELLSPACING=0><TR><TH width='94' nowrap>Filing Date</TH>
+<TH colspan=2 align='center'>#</TH>
+            <th white-space:nowrap'><SMALL>
+            <a href='#' onClick="uncheckAll(document.view_multi_docs.arr_de_seq_nums)"'>clear</SMALL></a></th>
+        <TH align=center>Docket Text</TH></TR>
+<TR><TD width="94" nowrap valign=bottom>08/20/2008</TD><TD width=74 valign=top align=right style='border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap'><nobr>  &nbsp;</TD><TD width=30 valign=top align=left style='border-left:0;padding-left:1px'><a href='/doc1/08205689712' onContextMenu='this.href="https://ecf.kywb.uscourts.gov/doc1/08205689712"'>1</a> <br><nobr>(14&nbsp;pgs)</nobr></nobr></TD><td align=center><input type=checkbox name='arr_de_seq_nums'  value='2'></td><TD valign=bottom>  Chapter 7 Voluntary Petition. Fee Amount $299. Filed by PRAJNA GROUP, INC. d/b/a Liberty Mortgage Funding. Remaining Petition Due by 9/4/2008.<font color=red> This case may be dismissed without further notice if the schedules are not filed timely.</font> (McClain, Michael) (Entered: 08/20/2008)</TD></TR>
+</TABLE><BR><BR><BR><BR><input type='hidden' name='zipit' value='0'>
+<input type=submit value='View Selected' onclick="document.view_multi_docs.zipit.value=0;"><br> or <br>
+<input type=submit value='Download Selected' name='dl_selected' onclick="document.view_multi_docs.zipit.value=1;">
+			<script type='text/javascript'>
+				document.cookie = 'RECENT_CASES=' + "238163^329139;";
+			</script>
+		<HR><CENTER><TABLE BORDER=1 BGCOLOR=white width="400"><TR><TH COLSPAN=4><FONT SIZE=+1 COLOR=DARKRED>PACER Service Center </FONT></TH></TR><TR><TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH></TR><TR></TR><TR></TR><TR><TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1 COLOR=DARKBLUE>03/02/2018 17:34:33</FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> mlissner.flp:4512899:0 </FONT></TH></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE>  </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Docket Report </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search Criteria: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 08-33673-thf Fil or Ent: filed   Doc From: 1 Doc To: 1   Headers: included  Multiple Docs: on Format: html Page counts for documents: included </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Billable Pages: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 1 </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.10 </FONT></TD></TR><TR></TR><TR></TR></TABLE></CENTER></HR><BR></BR></div></body></html>

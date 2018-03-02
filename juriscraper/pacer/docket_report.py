@@ -359,10 +359,14 @@ class DocketReport(BaseReport):
         # tables lack column headers, so we have to use the preceding-sibling
         # tables to make sure it's right.
         docket_header = './/text()[contains(., "Docket Text")]'
+        bankr_multi_doc = 'not(.//text()[contains(., "Total file size of selected documents")])'
         docket_entry_rows = self.tree.xpath(
             '//table['
-            '  preceding-sibling::table[%s] or %s'
-            ']/tbody/tr' % (docket_header, docket_header)
+            '  preceding-sibling::table[{dh}] or {dh}'
+            '][{b_multi_doc}]/tbody/tr'.format(
+                dh=docket_header,
+                b_multi_doc=bankr_multi_doc,
+            )
         )[1:]  # Skip the first row.
 
         docket_entries = []
