@@ -21,8 +21,11 @@ class BaseReport(object):
     # Subclasses should override PATH
     PATH = ''
 
+    # Strings below (and in subclasses) are used to identify HTML that should
+    # not be parsed or processed for a variety of reasons. Spaces in the strings
+    # below are converted to \s whitespace searches using regexes.
     ERROR_STRINGS = [
-        "MetaMask",
+        "MetaMask.*web3",
     ]
 
     def __init__(self, court_id, pacer_session=None):
