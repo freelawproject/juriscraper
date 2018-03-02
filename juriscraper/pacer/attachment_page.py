@@ -55,6 +55,9 @@ class AttachmentPage(BaseReport):
 
         See the JSON objects in the tests for more examples.
         """
+        if self.is_valid is False:
+            return {}
+
         rows = self.tree.xpath('//tr[.//a]')
         if not rows:
             logger.info("No documents found on attachment page.")
