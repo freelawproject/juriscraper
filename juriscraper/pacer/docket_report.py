@@ -41,6 +41,21 @@ class DocketReport(BaseReport):
     CACHE_ATTRS = ['metadata', 'parties', 'docket_entries',
                    'is_adversary_proceeding']
 
+    ERROR_STRINGS = BaseReport.ERROR_STRINGS + [
+        "The report may take a long time to run because this case has many docket entries",
+        "The page ID does not exist. Please enter a valid page ID number. ",
+        "There are no documents in this case.",
+        "Incomplete request. Please try your query again by choosing the Query or Reports option",
+        "To accept charges shown below, click on the 'View Report' button",
+        "Unable to create PDF file.",
+        "This case was administratively closed",
+        "The start date must be less than or equal to the end date",
+        "The starting document number must be less than or equal to the ending document number",
+        "Case not found.",
+        "Either you do not have permission to view the document, or the document does not exist in the case.",
+        "Format: text",
+    ]
+
     def __init__(self, court_id, pacer_session=None):
         super(DocketReport, self).__init__(court_id, pacer_session)
         # Initialize the empty cache properties.
@@ -68,41 +83,13 @@ class DocketReport(BaseReport):
     @property
     def data(self):
         """Get all the data back from this endpoint."""
-        if self._is_valid_docket():
-            data = self.metadata.copy()
-            data[u'parties'] = self.parties
-            data[u'docket_entries'] = self.docket_entries
-            return data
-        else:
+        if self.is_valid is False:
             return {}
 
-    def _is_valid_docket(self):
-        """PACER has a variety of things it returns instead of returning actual
-        valid docket reports. Error pages, for example. This function tests for
-        the ones we know about, and returns False if any known patterns are
-        found.
-        """
-        docket_text = self.tree.text_content()
-        error_strings = [
-            "The report may take a long time to run because this case has many docket entries",
-            "The page ID does not exist. Please enter a valid page ID number. ",
-            "There are no documents in this case.",
-            "Incomplete request. Please try your query again by choosing the Query or Reports option",
-            "To accept charges shown below, click on the 'View Report' button",
-            "Unable to create PDF file.",
-            "This case was administratively closed",
-            "The start date must be less than or equal to the end date",
-            "The starting document number must be less than or equal to the ending document number",
-            "Case not found.",
-            "Either you do not have permission to view the document, or the document does not exist in the case.",
-            "Format: text",
-        ]
-        for error_string in error_strings:
-            error_string_re = re.compile('\s+'.join(error_string.split()),
-                                         flags=re.I)
-            if error_string_re.search(docket_text):
-                return False
-        return True
+        data = self.metadata.copy()
+        data[u'parties'] = self.parties
+        data[u'docket_entries'] = self.docket_entries
+        return data
 
     @property
     def metadata(self):

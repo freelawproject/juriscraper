@@ -21,11 +21,16 @@ class BaseReport(object):
     # Subclasses should override PATH
     PATH = ''
 
+    ERROR_STRINGS = [
+        "MetaMask",
+    ]
+
     def __init__(self, court_id, pacer_session=None):
         self.court_id = court_id
         self.session = pacer_session
         self.tree = None
         self.response = None
+        self.is_valid = None
         super(BaseReport, self).__init__()
 
     @property
@@ -64,9 +69,25 @@ class BaseReport(object):
         assert isinstance(text, unicode), \
             "Input must be unicode, not %s" % type(text)
         text = clean_html(text)
-        self.tree = get_html5_parsed_text(text)
-        etree.strip_elements(self.tree, u'script')
-        self.tree.rewrite_links(fix_links_in_lxml_tree, base_href=self.url)
+        self.check_validity(text)
+        if self.is_valid:
+            self.tree = get_html5_parsed_text(text)
+            etree.strip_elements(self.tree, u'script')
+            self.tree.rewrite_links(fix_links_in_lxml_tree, base_href=self.url)
+
+    def check_validity(self, text):
+        """Place sanity checks here to make sure that the returned text is
+        valid and not an error page or some other kind of problem.
+
+        Set self.is_valid flag to True or False
+        """
+        for error_string in self.ERROR_STRINGS:
+            error_string_re = re.compile('\s+'.join(error_string.split()),
+                                         flags=re.I)
+            if error_string_re.search(text):
+                self.is_valid = False
+                return
+        self.is_valid = True
 
     @property
     def data(self):
