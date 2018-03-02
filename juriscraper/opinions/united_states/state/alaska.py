@@ -17,18 +17,22 @@ from juriscraper.lib.string_utils import convert_date_string, split_date_range_s
 
 
 class Site(OpinionSite):
+    url_court_id = 'sp'
+
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
-        self.url = 'http://www.courtrecords.alaska.gov/webdocs/opinions/sp.htm'
+        self.url = 'https://public.courts.alaska.gov/web/appellate/%s.htm' % self.url_court_id
         self.court_id = self.__module__
         self.date_string_path = '//h4'
         self.sub_opinion_path = './following-sibling::ul[1]//a/em'
 
     def _get_case_names(self):
-        return [e for e in self.html.xpath("//ul/li[descendant::a/em]//em/text()")]
+        path = "//ul/li[descendant::a/em]//em/text()"
+        return [t for t in self.html.xpath(path)]
 
     def _get_download_urls(self):
-        return [h for h in self.html.xpath("//ul/li/a[child::em]/@href")]
+        path = "//ul/li/a[child::em]/@href"
+        return [h for h in self.html.xpath(path)]
 
     def _get_case_dates(self):
         dates = []
@@ -44,14 +48,15 @@ class Site(OpinionSite):
             except ValueError:
                 # It a date range string like 'January - March 2016'
                 # return the middle date, unless its in the future
-                # in which case return todays date
+                # in which case return today's date
                 middle_date = split_date_range_string(date_string)
                 date = min(datetime.date.today(), middle_date)
             dates.extend([date] * count)
         return dates
 
     def _get_docket_numbers(self):
-        return [t for t in self.html.xpath("//ul/li[descendant::a/em]/text()[1]")]
+        path = "//ul/li[descendant::a/em]/text()[1]"
+        return [t for t in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
