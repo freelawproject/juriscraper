@@ -183,9 +183,12 @@ class DocketReport(BaseReport):
             # Handling for CA cases that put non-party info in the party html
             # table (see cand, 3:09-cr-00418).
             if cells[0].xpath('.//b/u'):
-                # If a header is followed by a cell that lacks bold text, punt
-                # the header row.
                 if nxt is None or not nxt.xpath('.//b'):
+                    # If a header is followed by a cell that lacks bold text,
+                    # punt the header row.
+                    continue
+                if len(cells) == 3 and cells[2].text_content() == 'Disposition':
+                    # This row contains count/offense information. Punt it.
                     continue
             elif not row.xpath('.//b'):
                 # If a row has no bold text, we can punt it. The bold normally
@@ -218,7 +221,8 @@ class DocketReport(BaseReport):
 
             name_path = u'.//b[not(./parent::i)][not(./u)][not(contains(., "------"))]'
             is_party_name_cell = (len(cells[0].xpath(name_path)) > 0)
-            if is_party_name_cell:
+            prev_has_disposition = prev is not None and 'Disposition' in prev.text_content()
+            if is_party_name_cell and not prev_has_disposition:
                 element = cells[0].xpath(name_path)[0]
                 party[u'name'] = force_unicode(element.text_content().strip())
                 party[u'extra_info'] = u'\n'.join(
@@ -227,10 +231,10 @@ class DocketReport(BaseReport):
                     s.strip()
                 )
 
-            if len(cells) == 3:
+            if len(cells) == 3 and party != {}:
                 party[u'attorneys'] = self._get_attorneys(cells[2])
 
-            if party not in parties:
+            if party not in parties and party != {}:
                 # Sometimes there are dups in the docket. Avoid them.
                 parties.append(party)
 
