@@ -71,6 +71,13 @@ class AttachmentPage(BaseReport):
             'pacer_case_id': self._get_pacer_case_id(),
             'attachments': []
         }
+        if result['document_number'] is None and not self.is_bankruptcy:
+            # Abort. Sometimes some attachment pages we receive have a blank
+            # area instead of having a proper document number. When going to
+            # PACER to reproduce this, things look fine, so I don't know why we
+            # get the bad data. In any case, simply give up since we can't do
+            # much without a document number.
+            return {}
         for row in rows:
             result['attachments'].append({
                 'attachment_number': self._get_attachment_number(row),
@@ -90,7 +97,10 @@ class AttachmentPage(BaseReport):
         if self.is_bankruptcy:
             return None
         else:
-            return int(row.xpath('.//a/text()')[0].strip())
+            try:
+                return int(row.xpath('.//a/text()')[0].strip())
+            except IndexError:
+                return None
 
     def _get_attachment_number(self, row):
         """Return the attachment number for an item.
