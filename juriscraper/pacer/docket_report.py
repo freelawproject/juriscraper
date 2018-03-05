@@ -15,7 +15,7 @@ from ..lib.utils import previous_and_next
 
 logger = make_default_logger()
 
-date_regex = r'[—\d\-–/]*'
+date_regex = r'[—\d\-–/]+'
 
 
 class DocketReport(BaseReport):
@@ -25,6 +25,7 @@ class DocketReport(BaseReport):
     date_filed_regex = re.compile(r'Date [fF]iled:\s+(%s)' % date_regex)
     date_terminated_regex = re.compile(r'Date [tT]erminated:\s+(%s)' % date_regex)
     date_converted_regex = re.compile(r'Date [Cc]onverted:\s+(%s)' % date_regex)
+    # Be careful this does not match "Joint debtor discharged" field.
     date_discharged_regex = re.compile(r'(?:Date|Debtor)\s+[Dd]ischarged:\s+(%s)' % date_regex)
     assigned_to_regex = re.compile(r'Assigned to:\s+(.*)')
     referred_to_regex = re.compile(r'Referred to:\s+(.*)')

@@ -1,0 +1,1996 @@
+<head><title>CM/ECF v5.2 - LIVE</title>
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+    <script type="text/javascript" src="/lib/core.js"></script>
+    <script type="text/javascript">if (top != self) {
+      top.location.replace(location.href);
+    }</script>
+</head>
+<body onload="SetFocus()" text="000000" bgcolor="FFFFF0">
+<div class="noprint"><img id="cmecfLogo" class="cmecfLogo"
+                          src="/graphics/cmecf-logo.gif" alt="CM/ECF"
+                          title=""><img src="/graphics/menubar-help.gif" alt="?"
+                                        title="" class="helpImage"
+                                        id="helpImage"
+                                        onclick="CMECF.MainMenu.showHelpPage(''); return false"
+                                        onmouseover="CMECF.MainMenu.helpImageOn()"
+                                        onmouseout="CMECF.MainMenu.helpImageOff()">
+    <div id="topmenu" class="yuimenubar">
+        <div class="bd">
+            <ul class="first-of-type">
+                <li class="yuimenubaritem" style="width:9%"><a
+                        class="yuimenubaritemlabel" href="/cgi-bin/iquery.pl">Query</a>
+                </li>
+                <li class="yuimenubaritem" style="width:11%"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/DisplayMenu.pl?Reports&amp;id=-1">Reports</a>
+                </li>
+                <li class="yuimenubaritem" style="width:11%"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/DisplayMenu.pl?Utilities&amp;id=-1">Utilities</a>
+                </li>
+                <li class="yuimenubaritem" style="width:10%"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/login.pl?logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">if (navigator.appVersion.indexOf("MSIE") == -1) {
+  window.setTimeout(function () {
+    CMECF.MainMenu.renderSimpleMenu();
+  }, 0);
+} else {
+  CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.renderSimpleMenu);
+}</script>
+<div id="cmecfMainContent" style="height: 723px;"><input
+        id="cmecfMainContentScroll" value="0" type="hidden">
+    <script language="JavaScript">
+      var IsForm = false;
+      var FirstField;
+
+      function SetFocus() {
+        if (IsForm) {
+          if (FirstField) {
+            var ind = FirstField.indexOf('document.', 0);
+            if (ind == 0) {
+              eval(FirstField);
+            }
+            else {
+              var Code = "document.forms[0]." + FirstField + ".focus();";
+              eval(Code);
+            }
+          } else {
+            var Cnt = 0;
+            while (document.forms[0].elements[Cnt] != null) {
+              if (document.forms[0].elements[Cnt].type != "hidden") {
+                document.forms[0].elements[Cnt].focus();
+                break;
+              }
+              Cnt += 1;
+            }
+          }
+        }
+        return (true);
+      }
+    </script>
+    <script type="text/JavaScript">
+      document.cookie = "PDFNoHeaderReferer=763878438675477; path=/";
+    </script>
+    <script type="text/javascript" src="/lib/widgits.js"></script>
+    <script>
+      var debtorPanel = null;
+
+      function create_panel(clid, message) {
+        if (!debtorPanel) {
+          debtorPanel = new CMECF.widget.Panel('debtorPanel', {
+            close: true,
+            draggable: false,
+            context: [clid, 'tl', 'br'],
+            width: "250" + "px",
+            height: "110" + "px",
+            constraintoviewport: true
+          });
+          debtorPanel.setHeader("Barred Debtor Information");
+          debtorPanel.setBody(message);
+          debtorPanel.body.style.height = "8em";
+          debtorPanel.render(document.body);
+        } else {
+          debtorPanel.show();
+        }
+      }
+
+      function close_panel() {
+        if (debtorPanel) {
+          debtorPanel.destroy();
+          debtorPanel = null;
+        }
+      }
+    </script>
+    <table width="100%" cellspacing="5" border="0" align="right">
+        <tbody>
+        <tr>
+            <td align="right"><h2><font size="3">FMHELD, FEESPAID, DismSpouse,
+                DISCHARGE</font></h2></td>
+        </tr>
+        </tbody>
+    </table>
+    <br><br><br>
+    <center><b><font size="+1">U.S. Bankruptcy Court<br>Western District of
+        Tennessee (Memphis)<br>Bankruptcy Petition #: 12-31010</font></b>
+    </center>
+    <table width="100%" cellspacing="1" border="0">
+        <tbody>
+        <tr>
+            <td width="50%" valign="top"><font size="+0"><br><i>Assigned to:</i>
+                David S. Kennedy<br>Chapter 13<br>Voluntary<br>Asset
+                <div class="noprint"><a
+                        href="/cgi-bin/SearchClaims.pl?caseid=420776;sc">Claims
+                    Register</a></div>
+                <br><br><br><i>Debtor disposition:</i>&nbsp;&nbsp;Dismissed for
+                Other Reason<br><i>Joint debtor disposition:</i> Standard
+                Discharge </font></td>
+            <td width="50%" valign="top" align="right"><font size="+0">
+                <table cellspacing="0" cellpadding="0" border="0"
+                       align="center">
+                    <tbody>
+                    <tr>
+                        <td valign="top" align="right"><i>Date filed:</i></td>
+                        <td valign="top" align="left">&nbsp;&nbsp;10/12/2012
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" align="right"><i>Debtor discharged:</i>
+                        </td>
+                        <td valign="top" align="left">&nbsp;&nbsp;N/A</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" align="right"><i>Joint debtor
+                            discharged:</i></td>
+                        <td valign="top" align="left">&nbsp;&nbsp;12/20/2017
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" align="right"><i>Debtor dismissed:</i>
+                        </td>
+                        <td valign="top" align="left">&nbsp;&nbsp;05/28/2014
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" align="right"><i>Joint debtor
+                            dismissed:</i></td>
+                        <td valign="top" align="left">&nbsp;&nbsp;N/A</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" align="right"><i>Plan confirmed:</i>
+                        </td>
+                        <td valign="top" align="left">&nbsp;&nbsp;12/21/2012
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" align="right"><i>341 meeting:</i></td>
+                        <td valign="top" align="left">&nbsp;&nbsp;11/13/2012
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" align="right"><i>Deadline for filing
+                            claims:</i></td>
+                        <td valign="top" align="left">&nbsp;&nbsp;02/11/2013
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" align="right"><i>Deadline for filing
+                            claims (govt.):</i></td>
+                        <td valign="top" align="left">&nbsp;&nbsp;04/10/2013
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </font></td>
+        </tr>
+        </tbody>
+    </table>
+    <br><font size="5"><b></b>
+    </font>
+    <table width="100%" cellspacing="1" border="0">
+        <tbody>
+        <tr></tr>
+        <tr>
+            <td width="50%" valign="top"><font
+                    size="+0"><i><b>Debtor</b></i><br><b>Runar Gustaf Jensen</b>
+                <br>1956 Court Avenue
+                <br>Memphis, TN 38104
+                <br>SHELBY-TN
+                <br>SSN / ITIN: xxx-xx-7057
+                <br><i> TERMINATED: 05/28/2014</i><br><br> </font></td>
+            <td valign="top" align="right"><font size="+0">represented
+                by </font></td>
+            <td width="40%" valign="top">
+                <font size="+0"><b>S. Jonathan Garrett</b>
+                    <br>2670 Union Avenue Extended
+                    <br>Suite 1200
+                    <br>Memphis, TN 38112-4424
+                    <br>901-323-3200
+                    <br>Fax : 901-323-3275
+                    <br>Email:&nbsp;<a
+                            href="mailto:bk@garrettbankruptcylaw.com">bk@garrettbankruptcylaw.com</a>
+                    <br><i> TERMINATED: 05/28/2014</i><br><br></font></td>
+        </tr>
+        <tr>
+            <td width="50%" valign="top"><font size="+0"><i><b>Joint Debtor</b></i><br><b>Mary
+                Ellen Jensen</b>
+                <br>1956 Court Avenue
+                <br>Memphis, TN 38104
+                <br>SHELBY-TN
+                <br>SSN / ITIN: xxx-xx-8837<br><br> </font></td>
+            <td valign="top" align="right"><font size="+0">represented
+                by </font></td>
+            <td width="40%" valign="top">
+                <font size="+0"><b>S. Jonathan Garrett</b>
+                    <br>(See above for address)<br><br></font></td>
+        </tr>
+        <tr>
+            <td width="50%" valign="top"><font
+                    size="+0"><i><b>Trustee</b></i><br><b>George W. Stevenson
+                Chapter 13</b>
+                <br>5350 Poplar Avenue, Suite 500
+                <br>Memphis, TN 38119-3697
+                <br>(901) 821-2400<br><br> </font></td>
+            <td width="20%" valign="top" align="right"><font
+                    size="+0">&nbsp; </font></td>
+            <td width="40%" valign="top" nowrap="">
+                <font size="+0">&nbsp;</font></td>
+        </tr>
+        <tr>
+            <td width="50%" valign="top"><font size="+0"><i><b>U.S. Trustee</b></i><br><b>U.S.
+                Trustee</b>
+                <br>Office of the U.S. Trustee
+                <br>One Memphis Place
+                <br>200 Jefferson Avenue, Suite 400
+                <br>Memphis, TN 38103 </font></td>
+            <td width="20%" valign="top" align="right"><font
+                    size="+0">&nbsp; </font></td>
+            <td width="40%" valign="top"><font size="+0">&nbsp; </font></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <table cellspacing="0" cellpadding="10" border="1">
+        <tbody>
+        <tr>
+            <th width="94" nowrap="">Filing Date</th>
+            <th colspan="2" align="center">#</th>
+            <th align="center">Docket Text</th>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">10/12/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170030734191"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170030734191&quot;">1</a>
+                <br>
+                <nobr>(38&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Chapter 13 Voluntary Petition (Filing Fee
+                Amount Paid $0.) Filed by Runar Gustaf Jensen, Mary Ellen Jensen
+                (Garrett, S.) (Entered: 10/12/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">10/12/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170030734197"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170030734197&quot;">2</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Chapter 13 Plan Filed by Joint Debtor Mary
+                Ellen Jensen, Debtor Runar Gustaf Jensen. <b>(Garrett, S.)</b>
+                (Entered: 10/12/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">10/12/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left">&nbsp;
+            </td>
+            <td valign="bottom"> Matrix Filed by S. Jonathan Garrett on behalf
+                of Joint Debtor Mary Ellen Jensen, Debtor Runar Gustaf Jensen.
+                (Garrett, S.) (Entered: 10/12/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">10/12/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170030734208"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170030734208&quot;">3</a>
+            </td>
+            <td valign="bottom"> Statement of Social Security Number Filed by S.
+                Jonathan Garrett on behalf of Joint Debtor Mary Ellen Jensen,
+                Debtor Runar Gustaf Jensen. (Garrett, S.) (Entered: 10/12/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">10/12/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170030734211"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170030734211&quot;">4</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Application to Pay Filing Fee in Installments
+                Filed by S. Jonathan Garrett on behalf of Joint Debtor Mary
+                Ellen Jensen, Debtor Runar Gustaf Jensen. (Garrett, S.)
+                (Entered: 10/12/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">10/12/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170030734214"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170030734214&quot;">5</a>
+                <br>
+                <nobr>(7&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Chapter 13 Statement of Current Monthly and
+                Disposable Income <i></i> Filed by S. Jonathan Garrett on behalf
+                of Joint Debtor Mary Ellen Jensen, Debtor Runar Gustaf Jensen.
+                (Garrett, S.) (Entered: 10/12/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">10/12/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170030734222"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170030734222&quot;">6</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Certificate of Credit Counseling <i></i> Filed
+                by S. Jonathan Garrett on behalf of Debtor Runar Gustaf Jensen.
+                (Garrett, S.) (Entered: 10/12/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">10/12/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170030734227"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170030734227&quot;">7</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Certificate of Credit Counseling <i></i> Filed
+                by S. Jonathan Garrett on behalf of Joint Debtor Mary Ellen
+                Jensen. (Garrett, S.) (Entered: 10/12/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">10/12/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170030738875"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170030738875&quot;">8</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Bankruptcy Clerk's Approval of Application to
+                Pay Filing Fees in Installments (RE: related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170030734211">4</a>
+                Application to Pay Filing Fee in Installments Filed by S.
+                Jonathan Garrett on behalf of Joint Debtor Mary Ellen Jensen,
+                Debtor Runar Gustaf Jensen. (Garrett, S.)) Filing Fees Due By
+                2/11/2013 (jbr) (Entered: 10/12/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">10/12/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170030738967"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170030738967&quot;">9</a>
+                <br>
+                <nobr>(3&nbsp;pgs; 2&nbsp;docs)</nobr>
+            </td>
+            <td valign="bottom"> Meeting of Creditors 341(a) meeting to be held
+                on 11/13/2012 at 01:00 PM at Room 175, Memphis, TN. Section
+                523(c)Complaint Due By 1/14/2013. Proof of Claims due by
+                2/11/2013.Government Proof of Claims due by 4/10/2013.
+                Confirmation hearing to be held on 12/18/2012 at 09:00 AM at
+                Room 600, Memphis, TN. Last day to Object to Confirmation
+                12/11/2012. (jbr) (Entered: 10/12/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">10/14/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170030752346"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170030752346&quot;">10</a>
+                <br>
+                <nobr>(4&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing - Meeting of
+                Creditors (RE: related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170030738967">9</a>
+                Meeting of Creditors 341(a) meeting to be held on 11/13/2012 at
+                01:00 PM at Room 175, Memphis, TN. Section 523(c)Complaint Due
+                By 1/14/2013. Proof of Claims due by 2/11/2013.Government Proof
+                of Claims due by 4/10/2013. Confirmation hearing to be held on
+                12/18/2012 at 09:00 AM at Room 600, Memphis, TN. Last day to
+                Object to Confirmation 12/11/2012. (jbr)) Notice Date
+                10/14/2012. (Admin.) (Entered: 10/15/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">10/14/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170030752347"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170030752347&quot;">11</a>
+                <br>
+                <nobr>(3&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170030738875">8</a>
+                Bankruptcy Clerk's Approval of Application to Pay Filing Fees in
+                Installments (RE: related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170030734211">4</a>
+                Application to Pay Filing Fee in Installments Filed by S.
+                Jonathan Garrett on behalf of Joint Debtor Mary Ellen Jensen,
+                Debtor Runar Gustaf Jensen. (Garrett, S.)) Filing Fees Due By
+                2/11/2013 (jbr)) Notice Date 10/14/2012. (Admin.) (Entered:
+                10/15/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">10/14/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170030752348"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170030752348&quot;">12</a>
+                <br>
+                <nobr>(3&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing - PDF Document (RE:
+                related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170030738967">9</a>
+                Meeting of Creditors 341(a) meeting to be held on 11/13/2012 at
+                01:00 PM at Room 175, Memphis, TN. Section 523(c)Complaint Due
+                By 1/14/2013. Proof of Claims due by 2/11/2013.Government Proof
+                of Claims due by 4/10/2013. Confirmation hearing to be held on
+                12/18/2012 at 09:00 AM at Room 600, Memphis, TN. Last day to
+                Object to Confirmation 12/11/2012. (jbr)) Notice Date
+                10/14/2012. (Admin.) (Entered: 10/15/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">10/16/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170030767309"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170030767309&quot;">13</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Order Directing Debtor To Make Payments To
+                Trustee (jbr) (Entered: 10/16/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">10/18/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170030798933"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170030798933&quot;">14</a>
+                <br>
+                <nobr>(3&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170030767309">13</a>
+                Order Directing Debtor To Make Payments To Trustee (jbr)) Notice
+                Date 10/18/2012. (Admin.) (Entered: 10/19/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">10/31/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170030908175"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170030908175&quot;">15</a>
+                <br>
+                <nobr>(2&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Request for Notice <i></i> Filed by Wells Fargo
+                Bank, N.A.. (Lozano, Joe) (Entered: 10/31/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">11/07/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170030976542"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170030976542&quot;">16</a>
+                <br>
+                <nobr>(3&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Objection to Confirmation of Plan Filed by
+                Creditor Wells Fargo Bank, N.A. (RE: related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170030734197">2</a>
+                Chapter 13 Plan Filed by Joint Debtor Mary Ellen Jensen, Debtor
+                Runar Gustaf Jensen. <b>(Garrett, S.)</b>). <b>(Maner,
+                    Richard)</b> (Entered: 11/07/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">11/09/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170031003807"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170031003807&quot;">17</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Notice Of Hearing; (RE: related document(s)<a
+                    href="https://ecf.tnwb.uscourts.gov/doc1/170030976542">16</a>
+                Objection to Confirmation of Plan Filed by Creditor Wells Fargo
+                Bank, N.A. (RE: related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170030734197">2</a>
+                Chapter 13 Plan Filed by Joint Debtor Mary Ellen Jensen, Debtor
+                Runar Gustaf Jensen. <b>(Garrett, S.)</b>). <b>(Maner,
+                    Richard)</b>) Hearing scheduled 12/18/2012 at 09:00 AM at
+                Room 600, Memphis, TN. (tll) (Entered: 11/09/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">11/11/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170031014963"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170031014963&quot;">18</a>
+                <br>
+                <nobr>(3&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170031003807">17</a>
+                Notice Of Hearing; (RE: related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170030976542">16</a>
+                Objection to Confirmation of Plan Filed by Creditor Wells Fargo
+                Bank, N.A. (RE: related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170030734197">2</a>
+                Chapter 13 Plan Filed by Joint Debtor Mary Ellen Jensen, Debtor
+                Runar Gustaf Jensen. <b>(Garrett, S.)</b>). <b>(Maner,
+                    Richard)</b>) Hearing scheduled 12/18/2012 at 09:00 AM at
+                Room 600, Memphis, TN. (tll)) Notice Date 11/11/2012. (Admin.)
+                (Entered: 11/12/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">11/14/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170031039446"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170031039446&quot;">19</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Meeting Of Creditors Held. <i>Auto-docketed for
+                George W. Stevenson by George Stevenson 16</i> (Entered:
+                11/14/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">11/15/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left">&nbsp;
+            </td>
+            <td valign="bottom"> Filing Fee Paid Receipt #336896, in the amount
+                of $281.00, by Chapter 13 Trustee. Auto Docketed.(CRECF)
+                (Entered: 11/21/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">12/19/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170031348903"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170031348903&quot;">20</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Order Directing Debtor To Change Payments To
+                Trustee (jbr) (Entered: 12/19/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">12/21/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170031376565"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170031376565&quot;">21</a>
+                <br>
+                <nobr>(3&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Order Confirming Chapter 13 Plan (jbr)
+                (Entered: 12/21/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">12/21/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170031384756"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170031384756&quot;">22</a>
+                <br>
+                <nobr>(3&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170031348903">20</a>
+                Order Directing Debtor To Change Payments To Trustee (jbr))
+                Notice Date 12/21/2012. (Admin.) (Entered: 12/22/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">12/23/2012</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170031397465"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170031397465&quot;">23</a>
+                <br>
+                <nobr>(5&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170031376565">21</a>
+                Order Confirming Chapter 13 Plan (jbr)) Notice Date 12/23/2012.
+                (Admin.) (Entered: 12/24/2012)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">01/23/2013</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170031636066"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170031636066&quot;">24</a>
+                <br>
+                <nobr>(2&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Assignment/Transfer Of Claim 5 Filed by
+                Creditor Cheswold (Ophrys), LLC. (Johnson, Larry) (Entered:
+                01/23/2013)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">01/24/2013</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170031639196"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170031639196&quot;">25</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Notice Of Filing Evidence Of Transfer Or If A
+                Timely Obj. Is Not Filed, The Transferee Shall Be Substituted
+                Without Further Notice (RE: related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170031636066">24</a>
+                Assignment/Transfer Of Claim 5 Filed by Creditor Cheswold
+                (Ophrys), LLC. (Johnson, Larry)) (jbr) (Entered: 01/24/2013)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">01/26/2013</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170031672270"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170031672270&quot;">26</a>
+                <br>
+                <nobr>(3&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170031639196">25</a>
+                Notice Of Filing Evidence Of Transfer Or If A Timely Obj. Is Not
+                Filed, The Transferee Shall Be Substituted Without Further
+                Notice (RE: related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170031636066">24</a>
+                Assignment/Transfer Of Claim 5 Filed by Creditor Cheswold
+                (Ophrys), LLC. (Johnson, Larry)) (jbr)) Notice Date 01/26/2013.
+                (Admin.) (Entered: 01/27/2013)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">03/19/2013</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170032150077"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170032150077&quot;">27</a>
+                <br>
+                <nobr>(3&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Consent Order Filed by Richard B. Maner on
+                behalf of Creditor Wells Fargo Bank, N.A. Resolving (related
+                document(s):<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170030976542">16</a>
+                Objection to Confirmation of Plan Filed by Creditor Wells Fargo
+                Bank, N.A. (RE: related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170030734197">2</a>
+                Chapter 13 Plan Filed by Joint Debtor Mary Ellen Jensen, Debtor
+                Runar Gustaf Jensen. <b>(Garrett, S.)</b>). <b>(Maner,
+                    Richard)</b>) (jbr) (Entered: 03/19/2013)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">03/21/2013</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170032178968"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170032178968&quot;">28</a>
+                <br>
+                <nobr>(5&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170032150077">27</a>
+                Consent Order Filed by Richard B. Maner on behalf of Creditor
+                Wells Fargo Bank, N.A. Resolving (related document(s):<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170030976542">16</a>
+                Objection to Confirmation of Plan Filed by Creditor Wells Fargo
+                Bank, N.A. (RE: related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170030734197">2</a>
+                Chapter 13 Plan Filed by Joint Debtor Mary Ellen Jensen, Debtor
+                Runar Gustaf Jensen. <b>(Garrett, S.)</b>). <b>(Maner,
+                    Richard)</b>) (jbr)) Notice Date 03/21/2013. (Admin.)
+                (Entered: 03/22/2013)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">04/16/2013</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170032423681"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170032423681&quot;">29</a>
+                <br>
+                <nobr>(2&nbsp;pgs; 2&nbsp;docs)</nobr>
+            </td>
+            <td valign="bottom"> Assignment/Transfer Of Claim 15 Filed by
+                Creditor PRA Receivables Management, LLC. (Attachments: # <a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170132423682"
+                        onclick="goDLS('/doc1/170132423682','420776','95','','0','','','','','');return(false)">1</a>
+                Appendix)(Garcia, Dolores) (Entered: 04/16/2013)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">04/18/2013</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170032441574"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170032441574&quot;">30</a>
+                <br>
+                <nobr>(4&nbsp;pgs; 2&nbsp;docs)</nobr>
+            </td>
+            <td valign="bottom"> Joint Assignment/Transfer Of Claim 6 Filed by
+                Creditor LVNV Funding LLC. (Attachments: # <a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170132441575"
+                        onclick="goDLS('/doc1/170132441575','420776','98','','0','','','','','');return(false)">1</a>
+                Appendix)(Gaines, Susan) (Entered: 04/18/2013)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">04/18/2013</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170032449785"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170032449785&quot;">31</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Notice Of Filing Evidence Of Transfer Or If A
+                Timely Obj. Is Not Filed, The Transferee Shall Be Substituted
+                Without Further Notice (RE: related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170032423681">29</a>
+                Assignment/Transfer Of Claim 15 Filed by Creditor PRA
+                Receivables Management, LLC. (Attachments: # 1 Appendix)(Garcia,
+                Dolores)) (jbr) (Entered: 04/18/2013)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">04/18/2013</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170032449828"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170032449828&quot;">32</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Notice Of Filing Evidence Of Transfer Or If A
+                Timely Obj. Is Not Filed, The Transferee Shall Be Substituted
+                Without Further Notice (RE: related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170032441574">30</a>
+                Joint Assignment/Transfer Of Claim 6 Filed by Creditor LVNV
+                Funding LLC. (Attachments: # 1 Appendix)(Gaines, Susan)) (jbr)
+                (Entered: 04/18/2013)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">04/20/2013</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170032484976"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170032484976&quot;">33</a>
+                <br>
+                <nobr>(3&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170032449785">31</a>
+                Notice Of Filing Evidence Of Transfer Or If A Timely Obj. Is Not
+                Filed, The Transferee Shall Be Substituted Without Further
+                Notice (RE: related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170032423681">29</a>
+                Assignment/Transfer Of Claim 15 Filed by Creditor PRA
+                Receivables Management, LLC. (Attachments: # 1 Appendix)(Garcia,
+                Dolores)) (jbr)) Notice Date 04/20/2013. (Admin.) (Entered:
+                04/21/2013)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">04/20/2013</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170032484977"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170032484977&quot;">34</a>
+                <br>
+                <nobr>(3&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170032449828">32</a>
+                Notice Of Filing Evidence Of Transfer Or If A Timely Obj. Is Not
+                Filed, The Transferee Shall Be Substituted Without Further
+                Notice (RE: related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170032441574">30</a>
+                Joint Assignment/Transfer Of Claim 6 Filed by Creditor LVNV
+                Funding LLC. (Attachments: # 1 Appendix)(Gaines, Susan)) (jbr))
+                Notice Date 04/20/2013. (Admin.) (Entered: 04/21/2013)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">05/17/2013</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170032740050"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170032740050&quot;">35</a>
+                <br>
+                <nobr>(4&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Administrative Order Allowing Claims (jbr)
+                (Entered: 05/17/2013)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">05/19/2013</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170032753486"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170032753486&quot;">36</a>
+                <br>
+                <nobr>(7&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170032740050">35</a>
+                Administrative Order Allowing Claims (jbr)) Notice Date
+                05/19/2013. (Admin.) (Entered: 05/20/2013)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">07/24/2013</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170033309491"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170033309491&quot;">doc</a>
+                <br>
+                <nobr>(7&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Notice of Mortgage Payment Change (Claim # 13)
+                with Certificate of Service Filed by Creditor Wells Fargo Bank,
+                N.A.. (Ward, Anjeanette) (Entered: 07/24/2013)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">10/16/2013</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170034042172"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170034042172&quot;">37</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Order Providing Percent To Unsecured Creditors
+                (jbr) (Entered: 10/16/2013)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">10/18/2013</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170034075504"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170034075504&quot;">38</a>
+                <br>
+                <nobr>(3&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170034042172">37</a>
+                Order Providing Percent To Unsecured Creditors (jbr)) Notice
+                Date 10/18/2013. (Admin.) (Entered: 10/19/2013)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">05/28/2014</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170035914797"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170035914797&quot;">39</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Order Directing Debtor To Make Payments To
+                Trustee (jbr) (Entered: 05/28/2014)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">05/28/2014</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170035915075"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170035915075&quot;">40</a>
+                <br>
+                <nobr>(2&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Order Voluntarily Dismissing Runar Gustaf
+                Jensen ONLY From Chapter 13 Case Number 12-31010. (jbr)
+                (Entered: 05/28/2014)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">05/30/2014</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170035942075"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170035942075&quot;">41</a>
+                <br>
+                <nobr>(3&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Motion to Modify Plan <i></i>, in addition to
+                Motion To Delete Creditor First National Bank of Omaha, Alaska
+                Commission on Postsecondary Education, FedLoan Servicing,
+                InSolve Recovery, Cheswold, Postfolio Recovery Associates, Salle
+                Mae PC Trust, Capital One Bank <i></i> <b>Filed by S. Jonathan
+                    Garrett on behalf of Mary Ellen Jensen </b> (Garrett, S.)
+                (Entered: 05/30/2014)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">05/30/2014</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170035943920"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170035943920&quot;">42</a>
+                <br>
+                <nobr>(4&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170035915075">40</a>
+                Order Voluntarily Dismissing Runar Gustaf Jensen ONLY From
+                Chapter 13 Case Number 12-31010. (jbr)) Notice Date 05/30/2014.
+                (Admin.) (Entered: 05/31/2014)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">05/30/2014</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170035943921"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170035943921&quot;">43</a>
+                <br>
+                <nobr>(2&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170035914797">39</a>
+                Order Directing Debtor To Make Payments To Trustee (jbr)) Notice
+                Date 05/30/2014. (Admin.) (Entered: 05/31/2014)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">06/02/2014</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170035958652"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170035958652&quot;">44</a>
+                <br>
+                <nobr>(2&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Notice Of Hearing; (RE: related document(s)<a
+                    href="https://ecf.tnwb.uscourts.gov/doc1/170035942075">41</a>
+                Motion to Modify Plan <i></i>, in addition to Motion To Delete
+                Creditor First National Bank of Omaha, Alaska Commission on
+                Postsecondary Education, FedLoan Servicing, InSolve Recovery,
+                Cheswold, Postfolio Recovery Associates, Salle Mae PC Trust,
+                Capital One Bank <i></i> <b>Filed by S. Jonathan Garrett on
+                    behalf of Mary Ellen Jensen </b> (Garrett, S.)) Hearing
+                scheduled 6/17/2014 at 09:00 AM at Room 600, Memphis, TN. (tll)
+                (Entered: 06/02/2014)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">06/04/2014</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170035977140"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170035977140&quot;">45</a>
+                <br>
+                <nobr>(4&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170035958652">44</a>
+                Notice Of Hearing; (RE: related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170035942075">41</a>
+                Motion to Modify Plan <i></i>, in addition to Motion To Delete
+                Creditor First National Bank of Omaha, Alaska Commission on
+                Postsecondary Education, FedLoan Servicing, InSolve Recovery,
+                Cheswold, Postfolio Recovery Associates, Salle Mae PC Trust,
+                Capital One Bank <i></i> <b>Filed by S. Jonathan Garrett on
+                    behalf of Mary Ellen Jensen </b> (Garrett, S.)) Hearing
+                scheduled 6/17/2014 at 09:00 AM at Room 600, Memphis, TN. (tll))
+                Notice Date 06/04/2014. (Admin.) (Entered: 06/05/2014)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">06/26/2014</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170036163683"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170036163683&quot;">46</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Order Directing Debtor To Change Payments To
+                Trustee (jbr) (Entered: 06/26/2014)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">06/26/2014</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170036165747"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170036165747&quot;">47</a>
+                <br>
+                <nobr>(3&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Order Granting Motion To Modify Plan And Delete
+                Creditors From Chapter 13 Plan (Related Doc # <a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170035942075">41</a>)
+                (jbr) (Entered: 06/26/2014)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">06/28/2014</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170036185676"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170036185676&quot;">48</a>
+                <br>
+                <nobr>(2&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170036163683">46</a>
+                Order Directing Debtor To Change Payments To Trustee (jbr))
+                Notice Date 06/28/2014. (Admin.) (Entered: 06/29/2014)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">06/28/2014</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170036185677"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170036185677&quot;">49</a>
+                <br>
+                <nobr>(5&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170036165747">47</a>
+                Order Granting Motion To Modify Plan And Delete Creditors From
+                Chapter 13 Plan (Related Doc <a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170035942075">41</a>)
+                (jbr)) Notice Date 06/28/2014. (Admin.) (Entered: 06/29/2014)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">07/06/2015</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170039039500"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170039039500&quot;">doc</a>
+                <br>
+                <nobr>(6&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Notice of Mortgage Payment Change (Claim # 13)
+                with Certificate of Service Filed by Creditor Wells Fargo Bank,
+                N.A.. (Fowler, Angela) (Entered: 07/06/2015)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">08/12/2015</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170039333115"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170039333115&quot;">50</a>
+                <br>
+                <nobr>(2&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Notice of Appearance and Request for Notice
+                <i></i> Filed by Kyle Stewart on behalf of Wells Fargo Bank,
+                N.A.. (Stewart, Kyle) (Entered: 08/12/2015)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">02/22/2016</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170040782288"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170040782288&quot;">51</a>
+                <br>
+                <nobr>(31&nbsp;pgs; 5&nbsp;docs)</nobr>
+            </td>
+            <td valign="bottom"> Motion for Relief from Stay in RE: 1956 Court
+                Avenue, Memphis, TN 38104 <i></i> Filing Fee Due $176, or in the
+                alternative Motion for Adequate Protection <i></i> <b>Filed by
+                    Kyle Stewart on behalf of Wells Fargo Bank, N.A. </b>
+                (Attachments: # <a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170140782289">1</a>
+                Exhibit Note # <a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170140782290">2</a>
+                Exhibit Deed of Trust # <a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170140782291">3</a>
+                Exhibit Deed of Trust # <a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170140782292">4</a>
+                Exhibit Declaration in Support) (Stewart, Kyle) (Entered:
+                02/22/2016)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">02/22/2016</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170040782353"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170040782353&quot;">52</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Exhibit: <i>Payment History</i> Payment History
+                Filed by Kyle Stewart on behalf of Creditor Wells Fargo Bank,
+                N.A. (RE: related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170040782288">51</a>
+                Motion for Relief from Stay in RE: 1956 Court Avenue, Memphis,
+                TN 38104 <i></i> Filing Fee Due $176, Motion for Adequate
+                Protection <i></i>). (Stewart, Kyle) (Entered: 02/22/2016)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">02/22/2016</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left">&nbsp;
+            </td>
+            <td valign="bottom"> Receipt of Motion for Relief From
+                Stay(12-31010) [motion,mrlfsty] ( 176.00) filing fee. Receipt
+                number 27628210, amount $ 176.00. (U.S. Treasury) (Entered:
+                02/22/2016)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">02/23/2016</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170040789061"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170040789061&quot;">53</a>
+                <br>
+                <nobr>(2&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Notice Of Hearing; (RE: related document(s)<a
+                    href="https://ecf.tnwb.uscourts.gov/doc1/170040782288">51</a>
+                Motion for Relief from Stay in RE: 1956 Court Avenue, Memphis,
+                TN 38104 <i></i> Filing Fee Due $176, or in the alternative
+                Motion for Adequate Protection <i></i> <b>Filed by Kyle Stewart
+                    on behalf of Wells Fargo Bank, N.A. </b> (Attachments: # 1
+                Exhibit Note # 2 Exhibit Deed of Trust # 3 Exhibit Deed of Trust
+                # 4 Exhibit Declaration in Support)) Hearing scheduled 3/8/2016
+                at 09:00 AM at Room 600, Memphis, TN. (tll) (Entered:
+                02/23/2016)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">02/25/2016</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170040812111"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170040812111&quot;">54</a>
+                <br>
+                <nobr>(3&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170040789061">53</a>
+                Notice Of Hearing; (RE: related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170040782288">51</a>
+                Motion for Relief from Stay in RE: 1956 Court Avenue, Memphis,
+                TN 38104 <i></i> Filing Fee Due $176, or in the alternative
+                Motion for Adequate Protection <i></i> <b>Filed by Kyle Stewart
+                    on behalf of Wells Fargo Bank, N.A. </b> (Attachments: # 1
+                Exhibit Note # 2 Exhibit Deed of Trust # 3 Exhibit Deed of Trust
+                # 4 Exhibit Declaration in Support)) Hearing scheduled 3/8/2016
+                at 09:00 AM at Room 600, Memphis, TN. (tll)) Notice Date
+                02/25/2016. (Admin.) (Entered: 02/26/2016)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">03/10/2016</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left">&nbsp;
+            </td>
+            <td valign="bottom"> Notice Of Continuance Motion for Relief from
+                Stay in RE: 1956 Court Avenue, Memphis, TN 38104 Filing Fee Due
+                $176, or in. (RE: related document(s) <a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170040782288"
+                        onclick="goDLS('/doc1/170040782288','420776','162','','0','','','','','');return(false)">51</a>
+                Motion for Relief from Stay in RE: 1956 Court Avenue, Memphis,
+                TN 38104 <i></i> Filing Fee Due $176, or in the alternative
+                Motion for Adequate Protection <i></i> <b>Filed by Kyle Stewart
+                    on behalf of Wells Fargo Bank, N.A. </b> (Attachments: # <a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170140782289">1</a>
+                Exhibit Note # <a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170140782290">2</a>
+                Exhibit Deed of Trust # <a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170140782291">3</a>
+                Exhibit Deed of Trust # <a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170140782292">4</a>
+                Exhibit Declaration in Support) (Stewart, Kyle)) Hearing
+                scheduled 03/22/2016 at 10:00 AM at Room 600, Memphis, TN. <i>Auto-docketed
+                    for George W. Stevenson by George Stevenson 16</i> (Entered:
+                03/10/2016)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">03/28/2016</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170041037987"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170041037987&quot;">55</a>
+                <br>
+                <nobr>(10&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Order Granting Relief From The Automatic Stay
+                As To Wells Fargo Bank, N.A. Regarding Real Property Located At
+                1956 Court Avenue, Memphis, Tennessee 38104 (Related Doc # <a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170040782288">51</a>)
+                (jbr) (Entered: 03/28/2016)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">03/30/2016</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170041052422"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170041052422&quot;">56</a>
+                <br>
+                <nobr>(11&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170041037987">55</a>
+                Order Granting Relief From The Automatic Stay As To Wells Fargo
+                Bank, N.A. Regarding Real Property Located At 1956 Court Avenue,
+                Memphis, Tennessee 38104 (Related Doc <a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170040782288">51</a>)
+                (jbr)) Notice Date 03/30/2016. (Admin.) (Entered: 03/31/2016)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">12/02/2016</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170042832760"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170042832760&quot;">57</a>
+                <br>
+                <nobr>(2&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Motion To Reduce Payment <i></i> <b>Filed by S.
+                Jonathan Garrett on behalf of Mary Ellen Jensen </b> (Garrett,
+                S.) (Entered: 12/02/2016)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">12/06/2016</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170042857868"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170042857868&quot;">58</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Notice Of Hearing; (RE: related document(s)<a
+                    href="https://ecf.tnwb.uscourts.gov/doc1/170042832760">57</a>
+                Motion To Reduce Payment <i></i> <b>Filed by S. Jonathan Garrett
+                    on behalf of Mary Ellen Jensen </b> (Garrett, S.)) Hearing
+                scheduled 1/10/2017 at 09:00 AM at Room 600, Memphis, TN. (dch)
+                (Entered: 12/06/2016)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">12/08/2016</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170042879734"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170042879734&quot;">59</a>
+                <br>
+                <nobr>(3&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170042857868">58</a>
+                Notice Of Hearing; (RE: related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170042832760">57</a>
+                Motion To Reduce Payment <i></i> <b>Filed by S. Jonathan Garrett
+                    on behalf of Mary Ellen Jensen </b> (Garrett, S.)) Hearing
+                scheduled 1/10/2017 at 09:00 AM at Room 600, Memphis, TN. (dch))
+                Notice Date 12/08/2016. (Admin.) (Entered: 12/09/2016)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">01/11/2017</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left">&nbsp;
+            </td>
+            <td valign="bottom"> Notice Of Continuance Motion To Reduce Payment.
+                (RE: related document(s) <a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170042832760"
+                        onclick="goDLS('/doc1/170042832760','420776','189','','0','','','','','');return(false)">57</a>
+                Motion To Reduce Payment <i></i> <b>Filed by S. Jonathan Garrett
+                    on behalf of Mary Ellen Jensen </b> (Garrett, S.)) Hearing
+                scheduled 01/24/2017 at 09:00 AM at Room 600, Memphis, TN. <i>Auto-docketed
+                    for George W. Stevenson by George Stevenson 16</i> (Entered:
+                01/11/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">01/25/2017</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left">&nbsp;
+            </td>
+            <td valign="bottom"> Notice Of Continuance Motion To Reduce Payment
+                1/10. (RE: related document(s) <a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170042832760"
+                        onclick="goDLS('/doc1/170042832760','420776','189','','0','','','','','');return(false)">57</a>
+                Motion To Reduce Payment <i></i> <b>Filed by S. Jonathan Garrett
+                    on behalf of Mary Ellen Jensen </b> (Garrett, S.)) Hearing
+                scheduled 02/07/2017 at 09:00 AM at Room 600, Memphis, TN. <i>Auto-docketed
+                    for George W. Stevenson by George Stevenson 16</i> (Entered:
+                01/25/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">02/08/2017</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left">&nbsp;
+            </td>
+            <td valign="bottom"> Notice Of Continuance Motion To Reduce Payment
+                3) 1/24. (RE: related document(s) <a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170042832760"
+                        onclick="goDLS('/doc1/170042832760','420776','189','','0','','','','','');return(false)">57</a>
+                Motion To Reduce Payment <i></i> <b>Filed by S. Jonathan Garrett
+                    on behalf of Mary Ellen Jensen </b> (Garrett, S.)) Hearing
+                scheduled 02/21/2017 at 09:00 AM at Room 600, Memphis, TN. <i>Auto-docketed
+                    for George W. Stevenson by George Stevenson 16</i> (Entered:
+                02/08/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">02/22/2017</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left">&nbsp;
+            </td>
+            <td valign="bottom"> Notice Of Continuance Motion To Reduce Payment
+                4) 2/7. (RE: related document(s) <a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170042832760"
+                        onclick="goDLS('/doc1/170042832760','420776','189','','0','','','','','');return(false)">57</a>
+                Motion To Reduce Payment <i></i> <b>Filed by S. Jonathan Garrett
+                    on behalf of Mary Ellen Jensen </b> (Garrett, S.)) Hearing
+                scheduled 03/07/2017 at 09:00 AM at Room 600, Memphis, TN. <i>Auto-docketed
+                    for George W. Stevenson by George Stevenson 16</i> (Entered:
+                02/23/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">03/08/2017</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left">&nbsp;
+            </td>
+            <td valign="bottom"> Notice Of Continuance Motion To Reduce Payment
+                4) 2/7. (RE: related document(s) <a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170042832760"
+                        onclick="goDLS('/doc1/170042832760','420776','189','','0','','','','','');return(false)">57</a>
+                Motion To Reduce Payment <i></i> <b>Filed by S. Jonathan Garrett
+                    on behalf of Mary Ellen Jensen </b> (Garrett, S.)) Hearing
+                scheduled 03/21/2017 at 09:00 AM at Room 600, Memphis, TN. <i>Auto-docketed
+                    for George W. Stevenson by George Stevenson 16</i> (Entered:
+                03/08/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">03/10/2017</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170043518100"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170043518100&quot;">60</a>
+                <br>
+                <nobr>(4&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Amended Schedule I: Individual Your Income
+                <i></i>, Amended Schedule J: Individual Your Expenses <i></i>
+                Filed by S. Jonathan Garrett on behalf of Joint Debtor Mary
+                Ellen Jensen, Debtor Runar Gustaf Jensen. (Garrett, S.)
+                (Entered: 03/10/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">04/04/2017</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170043688207"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170043688207&quot;">61</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Order Directing Debtor To Change Payments To
+                Trustee (jbr) (Entered: 04/04/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">04/05/2017</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170043697029"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170043697029&quot;">62</a>
+                <br>
+                <nobr>(2&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Order Granting Motion To Reduce Plan Payments
+                (Related Doc #<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170042832760">57</a>)
+                (jbr) (Entered: 04/05/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">04/06/2017</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170043712276"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170043712276&quot;">63</a>
+                <br>
+                <nobr>(2&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170043688207">61</a>
+                Order Directing Debtor To Change Payments To Trustee (jbr))
+                Notice Date 04/06/2017. (Admin.) (Entered: 04/07/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">04/07/2017</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170043720269"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170043720269&quot;">64</a>
+                <br>
+                <nobr>(4&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing (RE: related
+                document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170043697029">62</a>
+                Order Granting Motion To Reduce Plan Payments (Related Doc #<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170042832760">57</a>)
+                (jbr)) Notice Date 04/07/2017. (Admin.) (Entered: 04/08/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">07/06/2017</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170044343397"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170044343397&quot;">65</a>
+                <br>
+                <nobr>(2&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Assignment/Transfer Of Claim 3 Fee Amount Due
+                $25 Filed by Creditor PRA Receivables Management, LLC. (Munson,
+                Victor) (Entered: 07/06/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">07/07/2017</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left">&nbsp;
+            </td>
+            <td valign="bottom"> Receipt of Assignment/Transfer Of
+                Claim(12-31010) [claims,ntctrmax] ( 25.00) filing fee. Receipt
+                number 30414604, amount $ 25.00. (U.S. Treasury) (Entered:
+                07/07/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">10/16/2017</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170045085666"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170045085666&quot;">66</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Withdrawal Of TRANSFER OF CLAIM Filed by PRA
+                Receivables Management, LLC (related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170044343397">65</a>
+                Assignment/Transfer Of Claim). (Hendricks, Glenda) (Entered:
+                10/16/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">12/04/2017</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170045425938"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170045425938&quot;">67</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> THIS ENTRY IS VOID; ENTRY DOCKETED IN ERROR.
+                INCORRECT DEBTOR LISTED IN DOCKET TEXT. FILING PARTY HAS FILED A
+                CORRECTED PLEADING. Financial Management Course Certificate For
+                Debtor (Stevenson 23, George) Modified on 12/6/2017 (Geiger,
+                Fred). (Entered: 12/04/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">12/04/2017</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170045425951"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170045425951&quot;">68</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Financial Management Course Certificate For
+                Joint Debtor (Stevenson 23, George) (Entered: 12/04/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">12/06/2017</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left">&nbsp;
+            </td>
+            <td valign="bottom"><font color="red"><b><u>Notice Of Corrective
+                Entry</u></b></font> (related document(s)<a
+                    href="https://ecf.tnwb.uscourts.gov/doc1/170045425938">67</a>
+                THIS ENTRY IS VOID; ENTRY DOCKETED IN ERROR. INCORRECT DEBTOR
+                LISTED IN DOCKET TEXT. FILING PARTY HAS FILED A CORRECTED
+                PLEADING. Financial Management Course Certificate For Debtor
+                (Stevenson 23, George) Modified on 12/6/2017 .) (fjg) (Entered:
+                12/06/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">12/18/2017</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170045529415"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170045529415&quot;">69</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Chapter 13 Debtor's Certifications Regarding
+                Domestic Support Obligations and Section 522(q) Filed by S.
+                Jonathan Garrett on behalf of Joint Debtor Mary Ellen Jensen.
+                (Garrett, S.) (Entered: 12/18/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">12/19/2017</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170045540201"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170045540201&quot;">70</a>
+                <br>
+                <nobr>(1&nbsp;pg)</nobr>
+            </td>
+            <td valign="bottom"> Trustee's Certification And Request that a
+                Discharge be granted to Mary Ellen Jensen. <i>Auto-docketed for
+                    George W. Stevenson by George Stevenson 16</i> (Entered:
+                12/19/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">12/20/2017</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170045540645"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170045540645&quot;">71</a>
+                <br>
+                <nobr>(2&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> Order Discharging Debtor Mary Ellen Jensen ONLY
+                After Completion of all Payments Under Chapter 13 Plan Combined
+                With Related Orders and Notice Of The Entry Thereof (fjg)
+                (Entered: 12/20/2017)
+            </td>
+        </tr>
+        <tr>
+            <td width="94" valign="bottom" nowrap="">12/22/2017</td>
+            <td style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"
+                width="74" valign="top" align="right">
+                <nobr> &nbsp;</nobr>
+            </td>
+            <td style="border-left:0;padding-left:1px" width="30" valign="top"
+                align="left"><a href="/doc1/170045574490"
+                                oncontextmenu="this.href=&quot;https://ecf.tnwb.uscourts.gov/doc1/170045574490&quot;">72</a>
+                <br>
+                <nobr>(4&nbsp;pgs)</nobr>
+            </td>
+            <td valign="bottom"> BNC Certificate of Mailing - Order of Discharge
+                (related document(s)<a
+                        href="https://ecf.tnwb.uscourts.gov/doc1/170045540645">71</a>
+                Order Discharging Debtor Mary Ellen Jensen ONLY After Completion
+                of all Payments Under Chapter 13 Plan Combined With Related
+                Orders and Notice Of The Entry Thereof (fjg)) Notice Date
+                12/22/2017. (Admin.) (Entered: 12/23/2017)
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <br><br><br><br>
+    <script type="text/javascript">
+      document.cookie = 'RECENT_CASES=' + "420776;";
+    </script>
+    <hr>
+    <center>
+        <table width="400" border="1" bgcolor="white">
+            <tbody>
+            <tr>
+                <th colspan="4"><font size="+1" color="DARKRED">PACER Service
+                    Center </font></th>
+            </tr>
+            <tr>
+                <th colspan="4"><font color="DARKBLUE">Transaction
+                    Receipt </font></th>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr>
+                <td colspan="4" align="CENTER"><font size="-1" color="DARKBLUE">03/03/2018
+                    11:49:38</font></td>
+            </tr>
+            <tr>
+                <th align="LEFT"><font size="-1" color="DARKBLUE"> PACER
+                    Login: </font></th>
+                <td align="LEFT"><font size="-1" color="DARKBLUE">
+                    CRG85718:3236144:0 </font></td>
+                <th align="LEFT"><font size="-1" color="DARKBLUE"> Client
+                    Code: </font></th>
+                <td align="LEFT"><font size="-1" color="DARKBLUE"> AMT </font>
+                </td>
+            </tr>
+            <tr>
+                <th align="LEFT"><font size="-1" color="DARKBLUE">
+                    Description: </font></th>
+                <td align="LEFT"><font size="-1" color="DARKBLUE"> Docket
+                    Report </font></td>
+                <th align="LEFT"><font size="-1" color="DARKBLUE"> Search
+                    Criteria: </font></th>
+                <td align="LEFT"><font size="-1" color="DARKBLUE"> 12-31010 Fil
+                    or Ent: filed Doc From: 0 Doc To: 99999999 Term: included
+                    Format: htmlFil or Ent: filed Doc From: 0 Doc To: 99999999
+                    Term: included Format: html Page counts for documents:
+                    included </font></td>
+            </tr>
+            <tr>
+                <th align="LEFT"><font size="-1" color="DARKBLUE"> Billable
+                    Pages: </font></th>
+                <td align="LEFT"><font size="-1" color="DARKBLUE"> 7 </font>
+                </td>
+                <th align="LEFT"><font size="-1" color="DARKBLUE"> Cost: </font>
+                </th>
+                <td align="LEFT"><font size="-1" color="DARKBLUE"> 0.70 </font>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            </tbody>
+        </table>
+    </center>
+    <br><br></div>
+</body>
