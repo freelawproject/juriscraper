@@ -26,6 +26,7 @@ class BaseReport(object):
     # below are converted to \s whitespace searches using regexes.
     ERROR_STRINGS = [
         "MetaMask.*web3",
+        'console\.log\(".*CloudMask',
     ]
 
     def __init__(self, court_id, pacer_session=None):
