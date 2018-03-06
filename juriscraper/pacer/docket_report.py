@@ -56,6 +56,7 @@ class DocketReport(BaseReport):
         "Either you do not have permission to view the document, or the document does not exist in the case.",
         "Format: text",
         "Server timeout waiting for the HTTP request from the client.",
+        "The case type was.*but it must be",
     ]
 
     def __init__(self, court_id, pacer_session=None):
