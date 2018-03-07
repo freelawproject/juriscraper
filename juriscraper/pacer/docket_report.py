@@ -387,6 +387,9 @@ class DocketReport(BaseReport):
                 del cells[1]
 
             date_filed_str = force_unicode(cells[0].text_content())
+            if not date_filed_str:
+                # Some older dockets have missing dates. Press on.
+                continue
             de[u'date_filed'] = convert_date_string(date_filed_str)
             de[u'document_number'] = self._get_document_number(cells[1])
             de[u'pacer_doc_id'] = self._get_pacer_doc_id(cells[1],
