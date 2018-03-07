@@ -1,0 +1,605 @@
+<head><title>LIVE Database Area</title>
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+    <script type="text/javascript" src="/lib/core.js"></script>
+    <script type="text/javascript">if (top != self) {
+      top.location.replace(location.href);
+    }</script>
+    <script type="text/javascript" src="/cgi-bin/menu.pl?id=173379"></script>
+</head>
+<body onload="SetFocus()" text="000000" bgcolor="ddddfee">
+<iframe id="_yuiResizeMonitor" title="Text Resize Monitor"
+        style="position: absolute; visibility: visible; width: 2em; height: 2em; top: -37px; left: 0px; border-width: 0px;"></iframe>
+<div class="noprint"><img id="cmecfLogo" class="cmecfLogo"
+                          src="/graphics/cmecf-logo.gif" alt="CM/ECF" title=""
+                          onclick="CMECF.MainMenu.showCourtInformation(); return false"><img
+        src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage"
+        id="helpImage" onclick="CMECF.MainMenu.showHelpPage(''); return false"
+        onmouseover="CMECF.MainMenu.helpImageOn()"
+        onmouseout="CMECF.MainMenu.helpImageOff()">
+    <div id="topmenu" class="yuimenubar yui-module yui-overlay visible"
+         style="z-index: 2; position: static; display: block; visibility: visible;">
+        <div class="bd">
+            <ul class="first-of-type">
+                <li class="yuimenubaritem first-of-type yuimenubaritem-hassubmenu"
+                    style="width:15%" id="yui-gen0" groupindex="0" index="0"><a
+                        class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu"
+                        href="/cgi-bin/DisplayMenu.pl?BankruptcyEvents&amp;id=173379">Ba<u>n</u>kruptcy</a>
+                </li>
+                <li class="yuimenubaritem yuimenubaritem-hassubmenu"
+                    style="width:13%" id="yui-gen1" groupindex="0" index="1"><a
+                        class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu"
+                        href="/cgi-bin/DisplayMenu.pl?AdversaryEvents&amp;id=173379"><u>A</u>dversary</a>
+                </li>
+                <li class="yuimenubaritem" style="width:9%" id="yui-gen2"
+                    groupindex="0" index="2"><a class="yuimenubaritemlabel"
+                                                href="/cgi-bin/iquery.pl"><u>Q</u>uery</a>
+                </li>
+                <li class="yuimenubaritem yuimenubaritem-hassubmenu"
+                    style="width:11%" id="yui-gen3" groupindex="0" index="3"><a
+                        class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu"
+                        href="/cgi-bin/DisplayMenu.pl?Reports&amp;id=173379"><u>R</u>eports</a>
+                </li>
+                <li class="yuimenubaritem yuimenubaritem-hassubmenu"
+                    style="width:11%" id="yui-gen4" groupindex="0" index="4"><a
+                        class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu"
+                        href="/cgi-bin/DisplayMenu.pl?Utilities&amp;id=173379"><u>U</u>tilities</a>
+                </li>
+                <li class="yuimenubaritem" style="width:10%" id="yui-gen5"
+                    groupindex="0" index="5"><a class="yuimenubaritemlabel"
+                                                href="javascript: CMECF.MainMenu.searchPrompt();">Sear<u>c</u>h</a>
+                </li>
+                <li class="yuimenubaritem" style="width:10%" id="yui-gen6"
+                    groupindex="0" index="6"><a class="yuimenubaritemlabel"
+                                                href="/cgi-bin/login.pl?logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">if (navigator.appVersion.indexOf("MSIE") == -1) {
+  window.setTimeout(function () {
+    CMECF.MainMenu.createMenu();
+  }, 0);
+} else {
+  CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);
+}</script>
+<div id="cmecfMainContent" style="height: 907px;"><input
+        id="cmecfMainContentScroll" value="0" type="hidden">
+    <script language="JavaScript">
+      var IsForm = false;
+      var FirstField;
+
+      function SetFocus() {
+        if (IsForm) {
+          if (FirstField) {
+            var ind = FirstField.indexOf('document.', 0);
+            if (ind == 0) {
+              eval(FirstField);
+            }
+            else {
+              var Code = "document.forms[0]." + FirstField + ".focus();";
+              eval(Code);
+            }
+          } else {
+            var Cnt = 0;
+            while (document.forms[0].elements[Cnt] != null) {
+              if (document.forms[0].elements[Cnt].type != "hidden") {
+                document.forms[0].elements[Cnt].focus();
+                break;
+              }
+              Cnt += 1;
+            }
+          }
+        }
+        return (true);
+      }
+    </script>
+    <form enctype="multipart/form-data" method="POST"
+          action="../cgi-bin/DktRpt.pl?707984093721955-L_1_0-1">
+        <!---ShowPage(DktRpt.htm)--->
+
+        <!-- RPM Packages: ao-bkecf-web-* -->
+        <!-- RPM Permissions: 444 -->
+        <!-- RPM Owner: nobody -->
+        <!-- RPM Group: nobody -->
+        <!-- RPM Flags: configure -->
+
+        <script src="/lib/CommonLib.js" language="Javascript"></script>
+        <script src="/lib/Dhtml.js" language="Javascript"></script>
+
+        <script>
+          function ValidateAllOnSubmit(function_name, form_num, ignoreInvisible, ignoreNotDisplayed, inputTypesList) {
+            var i, j, length, node, inputElements, msg, match;
+            var inputTypes;
+            var function_names, function_call;
+
+            // which input field types to check - only text input fields by default
+            if (inputTypesList) {
+              inputTypesList.replace(/\s+/g, "");
+              inputTypes = inputTypesList.split(","); // so we can loop over them
+              // load each type as a key in the array/hash - speeds up checking below
+              for (i = 0, length = inputTypes.length; i < length; i++)
+                inputTypes[inputTypes[i]] = inputTypes[i];
+            } else {
+              inputTypes = new Object();
+              inputTypes["text"] = "text";
+            }
+
+            // anticipate programmer errors - if no quotes around 1st param, its a function reference
+            if (typeof(function_name) == "function")
+              function_name = function_name.toString().match(/function\s+([^\(]+)/)[1];
+
+            function_names = function_name.split(',');
+            if (form_num == null) form_num = 0; // default if not provided
+
+            for (i = 0; i < document.forms[form_num].length; i++) {
+              node = document.forms[form_num].elements[i];
+
+              // check if this is one of the input types the user wants to validate
+              if (inputTypes[node.type] == null) continue;
+
+              msg = (node.onchange) + "";       // convert to a string
+              if (msg.length == 0) continue; // no onchange attribute to run
+
+              if (!isOnScreen(node, ignoreInvisible, ignoreNotDisplayed)) continue;
+
+              for (j = 0; j < function_names.length; j++) {
+                // if the onchange attribute matches the function name (and optionally an arg list)
+                re = new RegExp(function_names[j] + "(\\s*\\([^)]*\\))?"); // think of each \\ as \
+                match = msg.match(re);
+                if (!match) continue;
+                function_call = match[0];
+
+                // reference the object explicitly in place of "this"
+                function_call = function_call.replace(/this/g,
+                  "document.forms[" + form_num + "].elements[" + i + "]");
+
+                // Execute validation function in question and see if it failed
+                if (!eval(function_call)) {
+                  node.focus();
+                  return (false);
+                }
+              } // end looping over function names
+            } // end looping over elements
+            return (1);
+          }
+        </script>
+
+        <script type="text/javascript">CMECF.widget.MakeEnterSubmitForm();</script>
+
+        <basefont size="3">
+        <font face="arial,helvetica" color="#0000cc" size="4"><b>Docket
+            Sheet</b>
+        </font>
+        <br>
+        <br>
+
+
+        <label>&nbsp;Case number</label>
+        <input id="all_case_ids" name="all_case_ids"
+               style="background-color:lightblue" value="85446"
+               type="hidden"><span id="case_number_area"
+                                   style="white-space: nowrap;"><input
+            id="case_number_text_area_0" name="case_num" autocomplete="off"
+            type="text"><input id="case_number_show_button_0"
+                               style="display: none; width: 8em;"
+                               value="Show Case List" type="button"><input
+            id="case_number_hide_button_0" style="display: none; width: 8em;"
+            value="Hide Case List" type="button"><input
+            id="case_number_find_button_0" style="display: none; width: 8em;"
+            value="Find This Case" type="button"><span
+            id="case_number_message_area_0"></span><div
+            id="case_number_pick_area_0" style="display: none;"></div></span>
+        <script type="text/javascript">
+          setTimeout(function () {
+            CMECF.CaseNumberSelect.AddCaseNumberLine('cookie')
+          }, 0);
+        </script>
+
+        <br>
+
+        <table class="alignment">
+            <tbody>
+            <tr>
+                <td valign="CENTER">
+                    <input id="filed_date_type" name="date_type" value="filed"
+                           checked="" type="radio"><label for="filed_date_type">Filed</label>
+                    <br>
+                    <input id="entered_date_type" name="date_type"
+                           value="entered" type="radio"><label
+                        for="entered_date_type">Entered</label>
+                </td>
+
+                <td>
+                    <script src="/lib/DateLib.js"
+                            language="Javascript"></script>
+
+                    <script language="JavaScript">
+                      var mon_array = "31/28/31/30/31/30/31/31/30/31/30/31";
+                      var MON;
+                      MON = mon_array.split("/");
+                      var G_yr, G_mn, G_dy;
+
+                      function GetNWDData() {
+                        return ("MNYR2016MN01010203091016171823243031MN020607080913141520212728MN030506121319202627MN04020309101617232430MN0501070814152122282930MN060405111218192526MN070203040910161723243031MN080607131420212728MN09030405101117182425MN100102080910151622232930MN11050611121319202627MN1203041011171824252631MNYR2017MN010102070814151621222829MN020405111218192025262728MN030405111218192526MN0401020809151622232930MN05060713142021272829MN060304101117182425MN070102040809151622232930MN080506121319202627MN0902030409101617232430MN1001070809141521222829MN1104051112181923242526MN120203091016172324253031");
+                      }
+                    </script>
+
+                    <link rel="stylesheet" type="text/css"
+                          href="/cgi-bin/styles.pl">
+                    <script language="text/javascript"
+                            src="/lib/DateLib.js"></script>
+                    <input name="date_from" id="date_from" class="dateTextField"
+                           value="" size="10" maxlength="10"
+                           onchange="CheckDate(document.forms[0].date_from.value,0,document.forms[0].date_from,'\x22from\x22 date',0)"
+                           type="text"><input id="date_from_button"
+                                              class="calendarButton"
+                                              tabindex="10000"><span
+                        class="calendarWrapper"><span
+                        id="date_from_calendar_container"></span></span>
+                    <script>CMECF.CalendarButton.item('date_from', null, null, {});</script>
+                    <label>to</label>
+                    <input name="date_to" id="date_to" class="dateTextField"
+                           value="" size="10" maxlength="10"
+                           onchange="CheckDate(document.forms[0].date_to.value,0,document.forms[0].date_to,'\x22to\x22 date',0)"
+                           type="text"><input id="date_to_button"
+                                              class="calendarButton"
+                                              tabindex="10000"><span
+                        class="calendarWrapper"><span
+                        id="date_to_calendar_container"></span></span>
+                    <script>CMECF.CalendarButton.item('date_to', null, null, {});</script>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Documents</td>
+                <td>
+                    <input name="documents_numbered_from_" size="6"
+                           maxlength="8"
+                           onchange="if(CheckNumber(this.value,0)==0){this.focus();this.select();}else{return true}"
+                           value="" type="TEXT">
+                    <label>to</label>
+                    <input name="documents_numbered_to_" size="6" maxlength="8"
+                           onchange="if(CheckNumber(this.value,0)==0){this.focus();this.select();}else{return true}"
+                           value="" type="TEXT">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+
+        <table class="alignment">
+            <tbody>
+            <tr>
+                <td valign="top"><br><label>Include:</label><br>
+                    <div><input id="terminated_parties"
+                                name="terminated_parties" value="on" checked=""
+                                type="checkbox"><label
+                            id="label_for_terminated_parties"
+                            for="terminated_parties" class="option">Terminated
+                        parties</label></div>
+                    <div><input id="links_to_nef" name="links_to_nef" value="on"
+                                type="checkbox"><label
+                            id="label_for_links_to_nef" for="links_to_nef"
+                            class="option">Links to Notices of Electronic
+                        Filing</label></div>
+                    <div><input id="page_count" name="page_count" value="on"
+                                checked="" type="checkbox"><label
+                            id="label_for_page_count" for="page_count"
+                            class="option">Page counts for documents</label>
+                    </div>
+                    <div style="display: none;"><input disabled="disabled"
+                                                       name="include_claim_supplements"
+                                                       value="on"
+                                                       type="checkbox"></div>
+                </td>
+                <td>&nbsp; &nbsp;</td>
+                <td valign="top"><br>
+                    <script language="JavaScript">
+                      var show_formats = function (action) {
+                        var disable = false;
+                        var output_format = document.getElementById('format_radio_buttons');
+
+                        if (!output_format) {
+                          return;
+                        }
+
+                        if (action == true) {
+                          // Disable.
+                          document.forms[0].output_format[0].checked = true;
+                          disable = true;
+                        }
+
+                        if (document.forms[0].output_format[0].checked) {
+                          document.forms[0].output_format[0].checked = true;
+                        }
+                        if (document.forms[0].output_format[1].checked) {
+                          document.forms[0].output_format[1].checked = true;
+                        }
+                        CMECF.widget.setContainerElementsDisabled(output_format, disable, true);
+                      } //function
+                    </script>
+
+
+                    <script type="text/javascript">
+
+                      var set_abridge_options_disabled = function (option, source_is_click) {
+
+                        if (source_is_click) {
+                          option = !option;
+                        }
+
+                        var make_container_enabled = option;
+                        var abridge_container = document.getElementById('abridge_container');
+
+                        CMECF.widget.setContainerElementsDisabled(abridge_container, make_container_enabled, true);
+                        generate_roa_message();
+
+                        return true;
+                      }
+
+                      var check_and_display_saved_abridged_options_for = function (roa_checkbox_id) {
+
+                        var disabled_option = true;
+
+                        if (document.getElementById(roa_checkbox_id).checked) {
+                          disabled_option = false;
+                        }
+
+                        set_abridge_options_disabled(disabled_option, '');
+
+                        return true;
+                      }
+
+                      var generate_roa_message = function () {
+
+                        var create_roa_selected = document.getElementById('create_appendix').checked;
+                        var all_docket_entries_selected = document.getElementById('full_docket_full').checked;
+                        var selected_docket_entries_only_selected = document.getElementById('full_docket_abridged').checked;
+                        var include_PDF_documents_selected = document.getElementById('docs_include').checked;
+                        var message = '';
+
+                        document.getElementById('docket_entries_message').style.display = 'none';
+                        document.getElementById('pdf_documents_message').style.display = 'none';
+
+                        if (create_roa_selected == true) {
+
+                          if (all_docket_entries_selected == true && include_PDF_documents_selected == true) {
+                            message = '(select documents on the next screen)';
+                            document.getElementById('pdf_documents_message').style.display = 'inline';
+                            document.getElementById('pdf_documents_message').style.fontStyle = 'italic';
+                            document.getElementById('pdf_documents_message').innerHTML = message;
+                          }
+
+                          if (selected_docket_entries_only_selected == true) {
+                            message = '(select docket entries on the next screen)';
+                            document.getElementById('docket_entries_message').style.display = 'inline';
+                            document.getElementById('docket_entries_message').style.fontStyle = 'italic';
+                            document.getElementById('docket_entries_message').innerHTML = message;
+                          }
+                        }
+                      }
+
+                    </script>
+                    <b>Document options:</b><br>
+                    <div><input id="view_multi_docs" name="view_multi_docs"
+                                value="on" onclick="Disable_Tied_Checkbox('view_multi_docs','create_roa');
+                         Disable_Tied_Checkbox('view_multi_docs','save_options');
+                         Disable_Tied_Checkbox('view_multi_docs','schedule_id');
+                         Disable_Tied_Checkbox('view_multi_docs','create_appendix');
+                         show_formats(this.checked); " type="checkbox"><label
+                            id="label_for_view_multi_docs" for="view_multi_docs"
+                            class="option">View multiple documents</label></div>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><br></td>
+                <td>&nbsp; &nbsp;</td>
+                <td valign="top">
+                    <div style="height:0.5em"></div>
+                    <b>Format:</b><br>
+                    <span id="format_radio_buttons" class="">
+				<input id="html_output_format" name="output_format" value="html"
+                       checked="checked" onclick="CMECF.widget.SetDisabled(document.forms[0].links_to_nef,'tied',false);
+        CMECF.widget.SetDisabled(document.forms[0].page_count,'tied',false);;CMECF.widget.SetDisabled(document.forms[0].view_multi_docs,'tied',false); "
+                       type="radio"><label for="html_output_format"
+                                           class="option">HTML</label> <br>
+				<input id="text_output_format" name="output_format" value="text"
+                       onclick="document.forms[0].links_to_nef.checked=false;
+             document.forms[0].page_count.checked=false;
+             CMECF.widget.SetDisabled(document.forms[0].links_to_nef,'tied',true);
+             CMECF.widget.SetDisabled(document.forms[0].page_count,'tied',true);
+            ;document.forms[0].view_multi_docs.checked=false;
+              CMECF.widget.SetDisabled(document.forms[0].view_multi_docs,'tied', true);
+             " type="radio"><label for="text_output_format"
+                                   class="option">Text</label>
+			</span>
+
+                    <script language="JavaScript">
+                      function reset_buttons() {
+
+                        CMECF.widget.SetDisabled(document.forms[0].terminated_parties, "tied", false);
+                        document.forms[0].terminated_parties.checked = true;
+                        CMECF.widget.SetDisabled(document.forms[0].links_to_nef, 'tied', false);
+                        CMECF.widget.SetDisabled(document.forms[0].page_count, 'tied', false);
+                        document.forms[0].page_count.checked = true;
+                        CMECF.widget.SetDisabled(document.forms[0].view_multi_docs, 'tied', false);
+                        ;show_formats(this.checked);
+                        ;
+                      }
+                    </script>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <script>
+          function vmd_wrapper() {
+            //alert("defined vmd_wrapper.");
+            if (document.forms[0].create_roa) {
+              if (document.forms[0].create_roa.checked == false) {
+                //alert("set to run vmd_wrapper.");
+
+                Disable_Tied_Checkbox('view_multi_docs', 'create_roa');
+                Disable_Tied_Checkbox('view_multi_docs', 'save_options');
+                Disable_Tied_Checkbox('view_multi_docs', 'schedule_id');
+                Disable_Tied_Checkbox('view_multi_docs', 'create_appendix');
+                show_formats(document.forms[0].view_multi_docs.checked);
+                ;
+              }
+            } else {
+
+              Disable_Tied_Checkbox('view_multi_docs', 'create_roa');
+              Disable_Tied_Checkbox('view_multi_docs', 'save_options');
+              Disable_Tied_Checkbox('view_multi_docs', 'schedule_id');
+              Disable_Tied_Checkbox('view_multi_docs', 'create_appendix');
+              show_formats(document.forms[0].view_multi_docs.checked);
+              ;
+            }
+            return (1);
+          }
+
+          window.setTimeout("vmd_wrapper()", 0);
+        </script>
+
+        <script>
+          function format_wrapper() {
+            var multi = false;
+            var create = false;
+
+            if (document.forms[0].view_multi_docs) {
+              multi = true;
+            }
+            if (document.forms[0].create_roa) {
+              create = true;
+            }
+            if (multi == true && create == true) {
+              if (document.forms[0].view_multi_docs.checked == false && document.forms[0].create_roa.checked == false) {
+                if (document.forms[0].output_format[0].checked == 1) {
+                  CMECF.widget.SetDisabled(document.forms[0].links_to_nef, 'tied', false);
+                  CMECF.widget.SetDisabled(document.forms[0].page_count, 'tied', false);
+                  ;CMECF.widget.SetDisabled(document.forms[0].view_multi_docs, 'tied', false);
+                } else if (document.forms[0].output_format[1].checked == 1) {
+                  document.forms[0].links_to_nef.checked = false;
+                  document.forms[0].page_count.checked = false;
+                  CMECF.widget.SetDisabled(document.forms[0].links_to_nef, 'tied', true);
+                  CMECF.widget.SetDisabled(document.forms[0].page_count, 'tied', true);
+                  ;document.forms[0].view_multi_docs.checked = false;
+                  CMECF.widget.SetDisabled(document.forms[0].view_multi_docs, 'tied', true);
+
+                }
+              }
+            }
+            return (1);
+          }
+
+          window.setTimeout("format_wrapper()", 0);
+        </script>
+
+
+        <label>&nbsp;Sort by</label>
+
+        <select name="sort1">
+
+            <option value="oldest date first" selected="">Oldest date first
+            </option>
+            <option value="most recent date first">Most recent date first
+            </option>
+            <option value="document number ascending">Document number
+                ascending
+            </option>
+            <option value="document number descending">Document number
+                descending
+            </option>
+        </select>
+
+        <br>
+        <br>
+
+
+        <input name="button1" value="Run Report" onclick="ProcessForm()"
+               type="button">&nbsp;<input name="reset" value="Clear"
+                                          onclick="setTimeout('RunAfterClear()',100)"
+                                          type="reset"></form>
+    <script language="JavaScript">
+      var timerId;
+      var BeenHere = 0;
+      IsForm = true;
+
+      function empty(s) {
+        var whitespace = " \t\n\r";
+        if (s == null || s.length == 0) {
+          return (true);
+        }
+        // Is s only whitespace characters?
+        for (var i = 0; i < s.length; i++) {
+          var c = s.charAt(i);
+          if (whitespace.indexOf(c) == -1) return false;
+        }
+        return (true);
+      }
+
+      function ClearTimer() {
+        BeenHere = 0;
+        clearTimeout(timerId);
+        return (true);
+      }
+
+      var FormId = 0;
+
+      function ProcessForm() {
+        if (BeenHere == 1) {
+          alert("Submission already made, please wait for response from server");
+          return (false);
+        }
+        BeenHere = 1;
+        timerId = setTimeout("ClearTimer()", 5000);
+        if (!ValidateAllOnSubmit("CheckNumber")) {
+          ClearTimer();
+          return false;
+        }
+        if (!(document.forms[0].date_from.disabled || (CheckDate(document.forms[0].date_from.value, 0, document.forms[0].date_from, '\x22from\x22 date', false) && CompareDateFT(document.forms[0].date_to.value, document.forms[0].date_from.value, 'The \x22from\x22 date must be on or before the \x22to\x22 date.', '\x22to\x22 date', '\x22from\x22 date', document.forms[0].date_from, 0)))) {
+          ClearTimer();
+          return false;
+        }
+        if (!(document.forms[0].date_to.disabled || (CheckDate(document.forms[0].date_to.value, 0, document.forms[0].date_to, '\x22to\x22 date', false)))) {
+          ClearTimer();
+          return false;
+        }
+        document.forms[FormId].submit();
+        return true
+      }
+
+      function RunAfterClear() {
+        reset_buttons()
+      }
+    </script>
+
+    <script language="JavaScript">
+      var AssignResetButtonTimeout;
+
+      function AssignResetButton() {
+        if (AssignResetButtonTimeout)
+          window.clearTimeout(AssignResetButtonTimeout);
+
+        var resetButton = document.forms[0].reset;
+        if (resetButton && resetButton.value) {
+          var oldHandler = resetButton.onclick;
+          var newHandler = function () {
+            setTimeout("RunAfterClear()", 100)
+          };
+          resetButton.onclick = function () {
+            if (oldHandler) {
+              oldHandler();
+            }
+            newHandler();
+          }
+        }
+        else
+          AssignResetButtonTimeout = window.setTimeout(AssignResetButton, 1);
+      }
+
+      AssignResetButton();
+    </script>
+</div>
+</body>

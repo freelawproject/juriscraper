@@ -58,6 +58,7 @@ class DocketReport(BaseReport):
         "Server timeout waiting for the HTTP request from the client.",
         "The case type was.*but it must be",
         "This case is in the process of being opened, please check back later for additional information.",
+        "Submission already made, please wait for response from server",
     ]
 
     def __init__(self, court_id, pacer_session=None):
