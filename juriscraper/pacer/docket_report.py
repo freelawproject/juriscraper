@@ -237,6 +237,10 @@ class DocketReport(BaseReport):
             if len(cells) == 3 and party != {}:
                 party[u'attorneys'] = self._get_attorneys(cells[2])
 
+            if party != {} and party.get(u'type') is None:
+                # Ensure that every record has a type value of some kind.
+                party[u'type'] = u"Unknown"
+
             if party not in parties and party != {}:
                 # Sometimes there are dups in the docket. Avoid them.
                 parties.append(party)
