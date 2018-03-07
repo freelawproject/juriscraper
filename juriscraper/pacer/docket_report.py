@@ -373,19 +373,23 @@ class DocketReport(BaseReport):
         # tables to make sure it's right.
         docket_header = './/text()[contains(., "Docket Text")]'
         bankr_multi_doc = 'not(.//text()[contains(., "Total file size of selected documents")])'
+        footer_multi_doc = 'not(.//text()[contains(., "Footer format:")])'
         docket_entry_rows = self.tree.xpath(
-            '//table['
-            '  preceding-sibling::table[{dh}] or {dh}'
-            '][{b_multi_doc}]/tbody/tr'.format(
+            '//table'
+              '[preceding-sibling::table[{dh}] or {dh}]'
+              '[{b_multi_doc}]'
+              '[{footer_multi_doc}]'
+            '/tbody/tr'.format(
                 dh=docket_header,
                 b_multi_doc=bankr_multi_doc,
+                footer_multi_doc=footer_multi_doc,
             )
         )[1:]  # Skip the first row.
 
         docket_entries = []
         for row in docket_entry_rows:
             de = {}
-            cells = row.xpath(u'./td')
+            cells = row.xpath(u'./td[not(./input)]')
             if len(cells) == 4:
                 # In some instances, the document entry table has an extra
                 # column. See almb, 92-04963

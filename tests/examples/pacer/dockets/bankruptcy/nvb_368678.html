@@ -1,0 +1,669 @@
+<head><title>LIVE ECF</title>
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+    <script type="text/javascript" src="/lib/core.js"></script>
+    <script type="text/javascript">if (top != self) {
+      top.location.replace(location.href);
+    }</script>
+</head>
+<body bgcolor="FFFFF0" text="000000" onload="SetFocus()" style="">
+<div class="noprint"><img id="cmecfLogo" class="cmecfLogo"
+                          src="/graphics/cmecf-logo.gif" alt="CM/ECF"
+                          title=""><img src="/graphics/menubar-help.gif" alt="?"
+                                        title="" class="helpImage"
+                                        id="helpImage"
+                                        onclick="CMECF.MainMenu.showHelpPage(''); return false"
+                                        onmouseover="CMECF.MainMenu.helpImageOn()"
+                                        onmouseout="CMECF.MainMenu.helpImageOff()">
+    <div id="topmenu" class="yuimenubar">
+        <div class="bd">
+            <ul class="first-of-type">
+                <li class="yuimenubaritem" style="width:15%"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/DisplayMenu.pl?BankruptcyEvents&amp;id=949344">Bankruptcy</a>
+                </li>
+                <li class="yuimenubaritem" style="width:13%"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/DisplayMenu.pl?AdversaryEvents&amp;id=949344">Adversary</a>
+                </li>
+                <li class="yuimenubaritem" style="width:9%"><a
+                        class="yuimenubaritemlabel" href="/cgi-bin/iquery.pl">Query</a>
+                </li>
+                <li class="yuimenubaritem" style="width:11%"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/DisplayMenu.pl?Reports&amp;id=949344">Reports</a>
+                </li>
+                <li class="yuimenubaritem" style="width:11%"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/DisplayMenu.pl?Utilities&amp;id=949344">Utilities</a>
+                </li>
+                <li class="yuimenubaritem" style="width:10%"><a
+                        class="yuimenubaritemlabel"
+                        href="javascript: CMECF.MainMenu.searchPrompt();">Search</a>
+                </li>
+                <li class="yuimenubaritem" style="width:10%"><a
+                        class="yuimenubaritemlabel"
+                        href="/cgi-bin/login.pl?logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">if (navigator.appVersion.indexOf("MSIE") == -1) {
+  window.setTimeout(function () {
+    CMECF.MainMenu.renderSimpleMenu();
+  }, 0);
+} else {
+  CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.renderSimpleMenu);
+}</script>
+<div id="cmecfMainContent" style="height: 841px;"><input type="hidden"
+                                                         id="cmecfMainContentScroll"
+                                                         value="0">
+    <script language="JavaScript">
+      var IsForm = false;
+      var FirstField;
+
+      function SetFocus() {
+        if (IsForm) {
+          if (FirstField) {
+            var ind = FirstField.indexOf('document.', 0);
+            if (ind == 0) {
+              eval(FirstField);
+            }
+            else {
+              var Code = "document.forms[0]." + FirstField + ".focus();";
+              eval(Code);
+            }
+          } else {
+            var Cnt = 0;
+            while (document.forms[0].elements[Cnt] != null) {
+              if (document.forms[0].elements[Cnt].type != "hidden") {
+                document.forms[0].elements[Cnt].focus();
+                break;
+              }
+              Cnt += 1;
+            }
+          }
+        }
+        return (true);
+      }
+    </script>
+    <script type="text/JavaScript">
+      document.cookie = "PDFNoHeaderReferer=425211969264674; path=/";
+    </script>
+    <script type="text/javascript" src="/lib/widgits.js"></script>
+    <script>
+      var debtorPanel = null;
+
+      function create_panel(clid, message) {
+        if (!debtorPanel) {
+          debtorPanel = new CMECF.widget.Panel('debtorPanel', {
+            close: true,
+            draggable: false,
+            context: [clid, 'tl', 'br'],
+            width: "250" + "px",
+            height: "110" + "px",
+            constraintoviewport: true
+          });
+          debtorPanel.setHeader("Barred Debtor Information");
+          debtorPanel.setBody(message);
+          debtorPanel.body.style.height = "8em";
+          debtorPanel.render(document.body);
+        } else {
+          debtorPanel.show();
+        }
+      }
+
+      function close_panel() {
+        if (debtorPanel) {
+          debtorPanel.destroy();
+          debtorPanel = null;
+        }
+      }
+    </script>
+    <table width="100%" align="right" border="0" cellspacing="5">
+        <tbody>
+        <tr>
+            <td align="right"><h2><font size="3">BAPCPA, PRIORFILING,
+                MEANSNO</font></h2></td>
+        </tr>
+        </tbody>
+    </table>
+    <br><br><br>
+    <center><b><font size="+1">U.S. Bankruptcy Court<br>District of Nevada (Las
+        Vegas)<br>Bankruptcy Petition #: 17-16656-led</font></b></center>
+    <table width="100%" border="0" cellspacing="1">
+        <tbody>
+        <tr>
+            <td valign="top" width="50%"><font size="+0"><br><i>Assigned to:</i>
+                LAUREL E. DAVIS<br>Chapter 7<br>Voluntary<br>No asset<br><br>
+            </font></td>
+            <td valign="top" width="50%" align="right"><font size="+0">
+                <table border="0" cellspacing="0" cellpadding="0"
+                       align="center">
+                    <tbody>
+                    <tr>
+                        <td align="right" valign="top"><i>Date filed:</i></td>
+                        <td align="left" valign="top">&nbsp;&nbsp;12/14/2017
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" valign="top"><i>341 meeting:</i></td>
+                        <td align="left" valign="top">&nbsp;&nbsp;01/31/2018
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" valign="top"><i>Deadline for objecting
+                            to discharge:</i></td>
+                        <td align="left" valign="top">&nbsp;&nbsp;03/19/2018
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </font></td>
+        </tr>
+        </tbody>
+    </table>
+    <br><font size="5"><b></b>
+    </font>
+    <table width="100%" border="0" cellspacing="1">
+        <tbody>
+        <tr></tr>
+        <tr>
+            <td valign="top" width="50%"><font
+                    size="+0"><i><b>Debtor</b></i><br><b>MELANIE ANN ONDIK</b>
+                <br>86 MAGICAL MYSTERY LANE
+                <br>HENDERSON, NV 89074
+                <br>CLARK-NV
+                <br>SSN / ITIN: xxx-xx-0604<br><br> </font></td>
+            <td valign="top" align="right"><font size="+0">represented
+                by </font></td>
+            <td valign="top" width="40%">
+                <font size="+0"><b>AMBERLEA DAVIS</b>
+                    <br>415 S. 6TH STREET, STE 300
+                    <br>LAS VEGAS, NV 89101
+                    <br>(702) 518 4377
+                    <br>Fax : (702) 933 9117
+                    <br>Email:&nbsp;<a href="mailto:Amber@SheIsMyLawyer.com">Amber@SheIsMyLawyer.com</a><br><br></font>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" width="50%"><font
+                    size="+0"><i><b>Trustee</b></i><br><b>LENARD E.
+                SCHWARTZER</b>
+                <br>2850 S. JONES BLVD., #1
+                <br>LAS VEGAS, NV 89146
+                <br>(702) 307-2022<br><br> </font></td>
+            <td valign="top" width="20%" align="right"><font
+                    size="+0">&nbsp; </font></td>
+            <td valign="top" width="40%" nowrap="">
+                <font size="+0">&nbsp;</font></td>
+        </tr>
+        <tr>
+            <td valign="top" width="50%"><font size="+0"><i><b>U.S. Trustee</b></i><br><b>U.S.
+                TRUSTEE - LV - 7</b>
+                <br>300 LAS VEGAS BOULEVARD, SO.
+                <br>SUITE 4300
+                <br>LAS VEGAS, NV 89101 </font></td>
+            <td valign="top" width="20%" align="right"><font
+                    size="+0">&nbsp; </font></td>
+            <td valign="top" width="40%"><font size="+0">&nbsp; </font></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <div style="font-style: italic; font-size: 110%; font-weight: bold; color: #FF0000"
+         class="instruction">**** All docket entries in this case will be
+        included in the Docket Sheet. Check the boxes for documents to be
+        appended.
+    </div>
+    <br>
+    <script>
+      function calculateTotal(inputItem, bytes) {
+        max_file_size = 10485760;
+        with (inputItem.form) {
+          if (inputItem.checked == false) {   // unchecked - subtract from total
+            calculatedTotal.value = eval(calculatedTotal.value) - bytes;
+          } else {   // checked - add to total
+            calculatedTotal.value = eval(calculatedTotal.value) + bytes;
+          }
+          if (calculatedTotal.value > max_file_size) {
+            document.view_multi_docs.view_selected.disabled = true;
+            document.getElementById('file_too_big').style.display = 'block';
+          } else {
+            document.view_multi_docs.view_selected.disabled = false;
+            document.getElementById('file_too_big').style.display = 'none';
+          }
+          return (calculatedTotal.value / 1000000);
+        }
+      }
+    </script>
+    <form enctype="multipart/form-data" method="post"
+          action="show_multidocs.pl?caseid=368678&amp;pdf_header=3"
+          name="view_multi_docs"><input type="hidden" name="caseid"
+                                        value="368678"><input type="hidden"
+                                                              name="create_roa"
+                                                              value="1">
+        <script language="javascript">
+          <!--
+          Begin
+
+          function checkAll(field) {
+            if (field.length) {
+              for (i = 0; i < field.length; i++) field[i].checked = true;
+            } else {
+              if (!field.checked) {
+                field.checked = true;
+              }
+            }
+          }
+
+          function uncheckAll(field) {
+            if (field.length) {
+              for (i = 0; i < field.length; i++) field[i].checked = false;
+            } else {
+              if (field.checked) {
+                field.checked = false;
+              }
+            }
+          }
+
+          //  End -->
+        </script>
+        <table border="1" cellpadding="10" cellspacing="0">
+            <tbody>
+            <tr>
+                <th width="94" nowrap="">Filing Date</th>
+                <th colspan="2" align="center">#</th>
+                <th white-space:nowrap
+                '="">
+                <small>
+                    <a href="#"
+                       onclick="uncheckAll(document.view_multi_docs.arr_de_seq_nums)"
+                    '="">clear</a></small>
+                </th>
+                <th align="center">Docket Text</th>
+            </tr>
+            <tr>
+                <td width="94" nowrap="" valign="bottom">12/14/2017</td>
+                <td width="74" valign="top" align="right"
+                    style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                    <nobr> &nbsp;</nobr>
+                </td>
+                <td width="30" valign="top" align="left"
+                    style="border-left:0;padding-left:1px"><a
+                        href="/doc1/114030000422"
+                        oncontextmenu="this.href=&quot;https://ecf.nvb.uscourts.gov/doc1/114030000422&quot;">1</a>
+                </td>
+                <td align="center"><input type="checkbox" name="arr_de_seq_nums"
+                                          value="2"></td>
+                <td valign="bottom"> Chapter 7 Voluntary Petition Individual.
+                    Fee Amount $335. Filed by AMBERLEA DAVIS on behalf of
+                    MELANIE ANN ONDIK (DAVIS, AMBERLEA) (Entered: 12/14/2017)
+                </td>
+            </tr>
+            <tr>
+                <td width="94" nowrap="" valign="bottom">12/14/2017</td>
+                <td width="74" valign="top" align="right"
+                    style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                    <nobr> &nbsp;</nobr>
+                </td>
+                <td width="30" valign="top" align="left"
+                    style="border-left:0;padding-left:1px"><a
+                        href="/doc1/114030000428"
+                        oncontextmenu="this.href=&quot;https://ecf.nvb.uscourts.gov/doc1/114030000428&quot;">2</a>
+                </td>
+                <td align="center"><input type="checkbox" name="arr_de_seq_nums"
+                                          value="8"></td>
+                <td valign="bottom"> Declaration Re: Electronic Filing Filed by
+                    AMBERLEA DAVIS on behalf of MELANIE ANN ONDIK (DAVIS,
+                    AMBERLEA) (Entered: 12/14/2017)
+                </td>
+            </tr>
+            <tr>
+                <td width="94" nowrap="" valign="bottom">12/14/2017</td>
+                <td width="74" valign="top" align="right"
+                    style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                    <nobr> &nbsp;</nobr>
+                </td>
+                <td width="30" valign="top" align="left"
+                    style="border-left:0;padding-left:1px"><a
+                        href="/doc1/114030000431"
+                        oncontextmenu="this.href=&quot;https://ecf.nvb.uscourts.gov/doc1/114030000431&quot;">3</a>
+                </td>
+                <td align="center"><input type="checkbox" name="arr_de_seq_nums"
+                                          value="10"></td>
+                <td valign="bottom"> Statement of Social Security Number(s). <b><font
+                        color="red">This document contains sensitive information
+                    and cannot be viewed by the public.</font></b> Filed by
+                    AMBERLEA DAVIS on behalf of MELANIE ANN ONDIK (DAVIS,
+                    AMBERLEA) (Entered: 12/14/2017)
+                </td>
+            </tr>
+            <tr>
+                <td width="94" nowrap="" valign="bottom">12/14/2017</td>
+                <td width="74" valign="top" align="right"
+                    style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                    <nobr> &nbsp;</nobr>
+                </td>
+                <td width="30" valign="top" align="left"
+                    style="border-left:0;padding-left:1px"><a
+                        href="/doc1/114030000434"
+                        oncontextmenu="this.href=&quot;https://ecf.nvb.uscourts.gov/doc1/114030000434&quot;">4</a>
+                </td>
+                <td align="center"><input type="checkbox" name="arr_de_seq_nums"
+                                          value="12"></td>
+                <td valign="bottom"> Certificate of Credit Counseling <i></i>
+                    Filed by AMBERLEA DAVIS on behalf of MELANIE ANN ONDIK
+                    (DAVIS, AMBERLEA) (Entered: 12/14/2017)
+                </td>
+            </tr>
+            <tr>
+                <td width="94" nowrap="" valign="bottom">12/14/2017</td>
+                <td width="74" valign="top" align="right"
+                    style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                    <nobr> &nbsp;</nobr>
+                </td>
+                <td width="30" valign="top" align="left"
+                    style="border-left:0;padding-left:1px"><a
+                        href="/doc1/114030003462"
+                        oncontextmenu="this.href=&quot;https://ecf.nvb.uscourts.gov/doc1/114030003462&quot;">5</a>
+                </td>
+                <td align="center"><input type="checkbox" name="arr_de_seq_nums"
+                                          value="16"></td>
+                <td valign="bottom"> Meeting of Creditors and Notice of
+                    Appointment of Trustee LENARD E. SCHWARTZER, . 341 meeting
+                    to be held on 01/17/2018 at 09:00 AM at 341s - Foley Bldg,Rm
+                    1500. Deadline to Object to Debtor's Discharge or to
+                    Challenge Dischargeability of Certain Debts due by
+                    03/19/2018. (Entered: 12/14/2017)
+                </td>
+            </tr>
+            <tr>
+                <td width="94" nowrap="" valign="bottom">12/15/2017</td>
+                <td width="74" valign="top" align="right"
+                    style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                    <nobr> &nbsp;</nobr>
+                </td>
+                <td width="30" valign="top" align="left"
+                    style="border-left:0;padding-left:1px"><a
+                        href="/doc1/114030003713"
+                        oncontextmenu="this.href=&quot;https://ecf.nvb.uscourts.gov/doc1/114030003713&quot;">6</a>
+                </td>
+                <td align="center"><input type="checkbox" name="arr_de_seq_nums"
+                                          value="18"></td>
+                <td valign="bottom"> Request for Special Notice <i></i> Filed by
+                    PRA RECEIVABLES MANAGEMENT, LLC (PORTFOLIO RECOVERY
+                    ASSOCIATES,LLC (vs)) (Entered: 12/15/2017)
+                </td>
+            </tr>
+            <tr>
+                <td width="94" nowrap="" valign="bottom">12/15/2017</td>
+                <td width="74" valign="top" align="right"
+                    style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                    <nobr> &nbsp;</nobr>
+                </td>
+                <td width="30" valign="top" align="left"
+                    style="border-left:0;padding-left:1px">&nbsp;
+                </td>
+                <td align="center"><input type="checkbox" name="arr_de_seq_nums"
+                                          value="21"></td>
+                <td valign="bottom"> Notice of Debtor's Prior Filing for debtor
+                    MELANIE ANN ONDIK Case Number <a
+                            href="https://ecf.paeb.uscourts.gov/cgi-bin/DktRpt.pl?162244">04-16350</a>,
+                    Chapter 7 filed in Pennsylvania Eastern Bankruptcy Court on
+                    05/05/2004 , Standard Discharge on 09/10/2004; Case Number
+                    <a href="https://ecf.nvb.uscourts.gov/cgi-bin/DktRpt.pl?366705">17-15009</a>,
+                    Chapter 7 filed in Nevada Bankruptcy Court on 09/18/2017 ,
+                    Dismissed for Failure to File Information on
+                    11/07/2017.(Admin) (Entered: 12/15/2017)
+                </td>
+            </tr>
+            <tr>
+                <td width="94" nowrap="" valign="bottom">12/15/2017</td>
+                <td width="74" valign="top" align="right"
+                    style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                    <nobr> &nbsp;</nobr>
+                </td>
+                <td width="30" valign="top" align="left"
+                    style="border-left:0;padding-left:1px">7
+                </td>
+                <td align="center"><input type="checkbox" name="arr_de_seq_nums"
+                                          value="23"></td>
+                <td valign="bottom"> Receipt of Filing Fee for Voluntary
+                    Petition 7(17-16656) [misc,volp7pb] ( 335.00). Receipt
+                    number 17923167, fee amount $ 335.00.(re: Doc#<a
+                            href="https://ecf.nvb.uscourts.gov/doc1/114030000422">1</a>)
+                    (U.S. Treasury) (Entered: 12/15/2017)
+                </td>
+            </tr>
+            <tr>
+                <td width="94" nowrap="" valign="bottom">12/15/2017</td>
+                <td width="74" valign="top" align="right"
+                    style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                    <nobr> &nbsp;</nobr>
+                </td>
+                <td width="30" valign="top" align="left"
+                    style="border-left:0;padding-left:1px"><a
+                        href="/doc1/114030006657"
+                        oncontextmenu="this.href=&quot;https://ecf.nvb.uscourts.gov/doc1/114030006657&quot;">8</a>
+                </td>
+                <td align="center"><input type="checkbox" name="arr_de_seq_nums"
+                                          value="26"></td>
+                <td valign="bottom"> Order Determining Debtor's Compliance with
+                    Filing Requirements of 11 U.S.C. Section 521(a)(1).
+                    (Entered: 12/15/2017)
+                </td>
+            </tr>
+            <tr>
+                <td width="94" nowrap="" valign="bottom">12/17/2017</td>
+                <td width="74" valign="top" align="right"
+                    style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                    <nobr> &nbsp;</nobr>
+                </td>
+                <td width="30" valign="top" align="left"
+                    style="border-left:0;padding-left:1px"><a
+                        href="/doc1/114030007617"
+                        oncontextmenu="this.href=&quot;https://ecf.nvb.uscourts.gov/doc1/114030007617&quot;">9</a>
+                </td>
+                <td align="center"><input type="checkbox" name="arr_de_seq_nums"
+                                          value="28"></td>
+                <td valign="bottom"> BNC Certificate of Mailing (Related
+                    document(s)<a
+                            href="https://ecf.nvb.uscourts.gov/doc1/114030003462">5</a>
+                    Meeting of Creditors Chapter 7 No Asset (BNC)) No. of
+                    Notices: 30. Notice Date 12/17/2017. (Admin.) (Entered:
+                    12/17/2017)
+                </td>
+            </tr>
+            <tr>
+                <td width="94" nowrap="" valign="bottom">12/20/2017</td>
+                <td width="74" valign="top" align="right"
+                    style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                    <nobr> &nbsp;</nobr>
+                </td>
+                <td width="30" valign="top" align="left"
+                    style="border-left:0;padding-left:1px"><a
+                        href="/doc1/114030017602"
+                        oncontextmenu="this.href=&quot;https://ecf.nvb.uscourts.gov/doc1/114030017602&quot;">10</a>
+                </td>
+                <td align="center"><input type="checkbox" name="arr_de_seq_nums"
+                                          value="31"></td>
+                <td valign="bottom"> BNC Certificate of Mailing - pdf (Related
+                    document(s)<a
+                            href="https://ecf.nvb.uscourts.gov/doc1/114030006657">8</a>
+                    Order Determining Debtor's Compliance with Filing
+                    Requirements of 11 U.S.C. Section 521(a)(1) (BNC)) No. of
+                    Notices: 1. Notice Date 12/20/2017. (Admin.) (Entered:
+                    12/20/2017)
+                </td>
+            </tr>
+            <tr>
+                <td width="94" nowrap="" valign="bottom">01/03/2018</td>
+                <td width="74" valign="top" align="right"
+                    style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                    <nobr> &nbsp;</nobr>
+                </td>
+                <td width="30" valign="top" align="left"
+                    style="border-left:0;padding-left:1px"><a
+                        href="/doc1/114030045465"
+                        oncontextmenu="this.href=&quot;https://ecf.nvb.uscourts.gov/doc1/114030045465&quot;">11</a>
+                </td>
+                <td align="center"><input type="checkbox" name="arr_de_seq_nums"
+                                          value="34"></td>
+                <td valign="bottom"> Personal Financial Management Course
+                    Certificate for Debtor (DOLLAR LEARNING FOUNDATION, INC.
+                    (bw)) (Entered: 01/03/2018)
+                </td>
+            </tr>
+            <tr>
+                <td width="94" nowrap="" valign="bottom">01/18/2018</td>
+                <td width="74" valign="top" align="right"
+                    style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                    <nobr> &nbsp;</nobr>
+                </td>
+                <td width="30" valign="top" align="left"
+                    style="border-left:0;padding-left:1px">12
+                </td>
+                <td align="center"><input type="checkbox" name="arr_de_seq_nums"
+                                          value="38"></td>
+                <td valign="bottom"> Statement Adjourning Meeting of 341(a)
+                    Meeting of Creditors. Section 341(a) Meeting Continued on
+                    1/31/2018 at 09:00 AM at 341s - Foley Bldg,Rm 1500.
+                    ADDITIONAL INFORMATION REQUESTED Debtor absent. (SCHWARTZER,
+                    LENARD) (Entered: 01/18/2018)
+                </td>
+            </tr>
+            <tr>
+                <td width="94" nowrap="" valign="bottom">01/30/2018</td>
+                <td width="74" valign="top" align="right"
+                    style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                    <nobr> &nbsp;</nobr>
+                </td>
+                <td width="30" valign="top" align="left"
+                    style="border-left:0;padding-left:1px"><a
+                        href="/doc1/114030113760"
+                        oncontextmenu="this.href=&quot;https://ecf.nvb.uscourts.gov/doc1/114030113760&quot;">13</a>
+                </td>
+                <td align="center"><input type="checkbox" name="arr_de_seq_nums"
+                                          value="40"></td>
+                <td valign="bottom"> Amended Individual Summary of Assets and
+                    Liabilities, Schedule[s]A/B, Real Property Amount: $ 0,
+                    Personal Property Amount: $ 8100, C, Amount $8100, H, I,
+                    Average Income Amount: $ 5130.02, J, Current Expenditures
+                    Amount: $ 5682.00, Declaration Concerning Debtor[s]
+                    Schedules, <i></i>, Amended Statement of Financial Affairs
+                    for Individual <i></i>, Amended Chapter 7 Statement of
+                    Current Monthly Income Form 122A-1 <i></i>, Chapter 7 Means
+                    Test Calculation Form 122A-2 <i></i> Filed by AMBERLEA DAVIS
+                    on behalf of MELANIE ANN ONDIK (DAVIS, AMBERLEA) (Entered:
+                    01/30/2018)
+                </td>
+            </tr>
+            <tr>
+                <td width="94" nowrap="" valign="bottom">01/31/2018</td>
+                <td width="74" valign="top" align="right"
+                    style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap">
+                    <nobr> &nbsp;</nobr>
+                </td>
+                <td width="30" valign="top" align="left"
+                    style="border-left:0;padding-left:1px"><a
+                        href="/doc1/114030114233"
+                        oncontextmenu="this.href=&quot;https://ecf.nvb.uscourts.gov/doc1/114030114233&quot;">14</a>
+                </td>
+                <td align="center"><input type="checkbox" name="arr_de_seq_nums"
+                                          value="45"></td>
+                <td valign="bottom"> Notice of Docketing Error (Related
+                    document(s)<a
+                            href="https://ecf.nvb.uscourts.gov/doc1/114030113760">13</a>
+                    Schedules/Declaration Re Schedules filed by Debtor MELANIE
+                    ANN ONDIK, Statement of Financial Affairs, 122A-1 Chapter 7
+                    Statement of Your Monthly Income Form, 122A-2 Chapter 7
+                    Means Test Calculation Form) (arv) (Entered: 01/31/2018)
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <br><br><br><br><input type="hidden" name="zipit" value="0">
+
+        <table>
+            <tbody>
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; Footer format: <input
+                        name="bates_format" value="<pagenum>" size="25"
+                        maxlength="100"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; (Numbers, letters, spaces, and &lt;pagenum&gt;
+                    only)
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <br><input type="submit" value="View Selected"
+                   onclick="document.view_multi_docs.zipit.value=0;">
+        <input type="hidden" name="full_docket" value="full">
+        <input type="hidden" name="docs_include" value="documents">
+
+        <input type="hidden" name="include_claim_supplements" value="">
+
+        <script type="text/javascript">
+          document.cookie = 'RECENT_CASES=' + "368678^365217;";
+        </script>
+        <hr>
+        <center>
+            <table border="1" bgcolor="white" width="400">
+                <tbody>
+                <tr>
+                    <th colspan="4"><font size="+1" color="DARKRED">PACER
+                        Service Center </font></th>
+                </tr>
+                <tr>
+                    <th colspan="4"><font color="DARKBLUE">Transaction
+                        Receipt </font></th>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td colspan="4" align="CENTER"><font size="-1"
+                                                         color="DARKBLUE">01/31/2018
+                        11:05:21</font></td>
+                </tr>
+                <tr>
+                    <th align="LEFT"><font size="-1" color="DARKBLUE"> PACER
+                        Login: </font></th>
+                    <td align="LEFT"><font size="-1" color="DARKBLUE">
+                        ad3007:3631756:0 </font></td>
+                    <th align="LEFT"><font size="-1" color="DARKBLUE"> Client
+                        Code: </font></th>
+                    <td align="LEFT"><font size="-1" color="DARKBLUE"> </font>
+                    </td>
+                </tr>
+                <tr>
+                    <th align="LEFT"><font size="-1" color="DARKBLUE">
+                        Description: </font></th>
+                    <td align="LEFT"><font size="-1" color="DARKBLUE"> Docket
+                        Report </font></td>
+                    <th align="LEFT"><font size="-1" color="DARKBLUE"> Search
+                        Criteria: </font></th>
+                    <td align="LEFT"><font size="-1" color="DARKBLUE">
+                        17-16656-led Fil or Ent: filed Doc From: 0 Doc To:
+                        99999999 Term: included Multiple Docs: on Format:
+                        html </font></td>
+                </tr>
+                <tr>
+                    <th align="LEFT"><font size="-1" color="DARKBLUE"> Billable
+                        Pages: </font></th>
+                    <td align="LEFT"><font size="-1" color="DARKBLUE"> 2 </font>
+                    </td>
+                    <th align="LEFT"><font size="-1" color="DARKBLUE">
+                        Cost: </font></th>
+                    <td align="LEFT"><font size="-1" color="DARKBLUE">
+                        0.20 </font></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                </tbody>
+            </table>
+        </center>
+        <br><br></form>
+</div>
+</body>
