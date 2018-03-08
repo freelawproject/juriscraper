@@ -519,6 +519,29 @@ def normalize_dashes(raw_string):
 
 class CaseNameTweaker(object):
     def __init__(self):
+        self._bad_words = None
+        super(CaseNameTweaker, self).__init__()
+
+    @property
+    def bad_words(self):
+        """A list of words that shouldn't be in small case names according to
+        Blue Book rules.
+
+        Includes:
+
+         - Acronyms
+         - Common names
+         - Attorneys General
+         - Large cities
+         - Counties
+         - States
+         - Punctuation and capitalization variations on the above
+
+        Created lazily and then cached the first time the property is called.
+        """
+        if self._bad_words is not None:
+            return self._bad_words
+
         acros = [u'a.g.p.', u'c.d.c.', u'c.i.a.', u'd.o.c.', u'e.e.o.c.',
                  u'e.p.a.', u'f.b.i.', u'f.c.c.', u'f.d.i.c.', u'f.s.b.',
                  u'f.t.c.', u'i.c.c.', u'i.n.s.', u'i.r.s.', u'n.a.a.c.p.',
@@ -546,7 +569,6 @@ class CaseNameTweaker(object):
                u'Speed', u'Stanbery', u'Stanton', u'Stone', u'Taft', u'Taney',
                u'Thornburgh', u'Toucey', u'Wickersham', u'Williams', u'Wirt']
         # self.corp_acros = corp_acros + corp_acros_sans_dots
-        self.corp_identifiers = [u'Co.', u'Corp.', u'Inc.', u'Ltd.']
         bad_words = acros + acros_sans_dots + common_names + ags + \
             self.make_geographies_list()
 
@@ -559,10 +581,9 @@ class CaseNameTweaker(object):
         bad_words = bad_words + punctuation_bad_words
 
         bad_words = [s.lower() for s in bad_words]
-        self.bad_words = bad_words
 
-
-        super(CaseNameTweaker, self).__init__()
+        self._bad_words = bad_words
+        return bad_words
 
     @staticmethod
     def make_geographies_list():
