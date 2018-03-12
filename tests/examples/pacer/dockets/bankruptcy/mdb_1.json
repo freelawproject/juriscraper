@@ -167,6 +167,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "7916 Leeds Drive\nPasadena, MD 21122\nSSN / ITIN: xxx-xx-2462", 
       "name": "Craig Allen Wynne", 
       "type": "Debtor"
@@ -179,18 +180,21 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "7916 Leeds Drive\nPasadena, MD 21122\nSSN / ITIN: xxx-xx-2109", 
       "name": "Janet Louise Wynne", 
       "type": "Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": "1998-07-31", 
       "extra_info": "P. O. Box 20016\nBaltimore, MD 21284-0016\n(410) 825-5923\nFax  : (410) 825-5904\nEmail:\nECF@ch13balt.com\nTERMINATED: 07/31/1998", 
       "name": "Ellen W. Cosby", 
       "type": "Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "Protiviti Inc.\n1 East Pratt Street\nSuite 800\nBaltimore, MD 21202\n(410) 454-6830\nFax  : (410) 454-6801\nEmail:\nmd-bank@protiviti.com", 
       "name": "Charles R. Goldstein", 
       "type": "Trustee"

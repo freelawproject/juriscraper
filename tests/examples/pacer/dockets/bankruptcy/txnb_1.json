@@ -251,6 +251,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "409 Victory Lane\nMansfield, TX 76063\nTARRANT-TX\nSSN / ITIN: xxx-xx-7195", 
       "name": "Mark Anthony Downs", 
       "type": "Debtor"
@@ -263,18 +264,21 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "409 Victory Lane\nMansfield, TX 76063\nTARRANT-TX\nSSN / ITIN: xxx-xx-6057", 
       "name": "Wanda Jean Downs", 
       "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "6851 N.E. Loop 820, Suite 300\nN Richland Hills, TX 76180\n817-770-8500", 
       "name": "Tim Truman", 
       "type": "Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "1100 Commerce Street\nRoom 976\nDallas, TX 75242\n214-767-8967", 
       "name": "United States Trustee", 
       "type": "U.S. Trustee"

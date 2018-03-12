@@ -76,6 +76,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "3579 ARBOLADO DRIVE\nLAS VEGAS, NV 89121\n(702) 480-1369\nSSN / ITIN: xxx-xx-0395", 
       "name": "TAYRA AGUAYO", 
       "type": "Debtor"
@@ -93,12 +94,14 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "3579 ARBOLADO DRIVE\nLAS VEGAS, NV 89121\n(702) 480-1369\nSSN / ITIN: xxx-xx-5955", 
       "name": "JUAN CORTES", 
       "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "201 LAS VEGAS BLVD., SO. #200\nLAS VEGAS, NV 89101\n(702) 853-0700", 
       "name": "KATHLEEN A. LEAVITT", 
       "type": "Trustee"

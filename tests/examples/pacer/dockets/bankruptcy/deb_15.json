@@ -174,18 +174,21 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "Canon's Court\n22 Victoria Street\nHamilton HM EX\nOUTSIDE U. S.\nBermuda\nTax ID / EIN: 98-0454245", 
       "name": "ProtoStar Ltd.", 
       "type": "Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "Office of United States Trustee\nJ. Caleb Boggs Federal Building\n844 King Street, Suite 2207\nLockbox 35\nWilmington, DE 19899-0035\n302-573-6491", 
       "name": "U.S. Trustee", 
       "type": "U.S. Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": "2013-07-03", 
       "extra_info": "www.kccllc.com\n2335 Alaska Ave\nEl Segundo, CA 90245\n310-823-9000\nTERMINATED: 07/03/2013", 
       "name": "Kurtzman Carson Consultants LLC", 
       "type": "Claims Agent"
@@ -218,6 +221,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "OFFICIAL COMMITTEE OF UNSECURED CREDITORS", 
       "type": "Creditor Committee"

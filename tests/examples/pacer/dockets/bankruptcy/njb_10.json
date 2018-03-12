@@ -101,6 +101,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "1016 Cooper St\nEdgewater Park, NJ 08010\nSSN / ITIN: xxx-xx-5135", 
       "name": "Stephen Sadowski", 
       "type": "Debtor"
@@ -113,12 +114,14 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "1016 Cooper St\nEdgewater Park, NJ 08010\nSSN / ITIN: xxx-xx-1650", 
       "name": "Kathryn Sadowski", 
       "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "Law Offices of John W. Hargrave\n117 Clements Bridge Rd\nBarrington, NJ 08007\n(856) 547-6500", 
       "name": "John W. Hargrave", 
       "type": "Trustee"

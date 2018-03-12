@@ -521,6 +521,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "506 E Pennington Dr\nWestampton, NJ 08060\nSSN / ITIN: xxx-xx-5496", 
       "name": "Wayne Carter", 
       "type": "Debtor"
@@ -533,18 +534,21 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "506 E Pennington Dr\nWestampton, NJ 08060\nSSN / ITIN: xxx-xx-8468", 
       "name": "Anna Carter", 
       "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": "2009-11-20", 
       "extra_info": "Standing Chapter 13 Trustee\nCN 4853\nTrenton, NJ 08650-4853\n(609) 587-6888\nTERMINATED: 11/20/2009", 
       "name": "Albert Russo", 
       "type": "Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "TEICH GROH\n691 State Highway  33\nTrenton, NJ 08619-4407\n609-890-1500", 
       "name": "Barry Frost", 
       "type": "Trustee"

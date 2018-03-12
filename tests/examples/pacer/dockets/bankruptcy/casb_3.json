@@ -95,6 +95,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "5101 Roscrea Avenue\nSan Diego, CA 92117\nSSN / ITIN: xxx-xx-3019", 
       "name": "Juan Antonio Berumen", 
       "type": "Debtor"
@@ -107,12 +108,14 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "5101 Roscrea Avenue\nSan Diego, CA 92117\nSSN / ITIN: xxx-xx-3814", 
       "name": "Maria Irene Berumen", 
       "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "10755 Scripps Poway Pkwy., #370\nSan Diego, CA 92131\n858-564-9310", 
       "name": "Ronald E. Stadtmueller", 
       "type": "Trustee"

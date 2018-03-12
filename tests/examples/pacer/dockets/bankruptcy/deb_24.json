@@ -45,6 +45,7 @@
           ]
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "1628 John F. Kennedy Blvd.\nSuite 950\nPhiladelphia, PA 19103-2110\n215-561-0950", 
       "name": "George L. Miller", 
       "type": "Plaintiff"
@@ -62,6 +63,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": "2012-05-18", 
       "extra_info": "TERMINATED: 05/18/2012", 
       "name": "Greenwich Capital Financial Products, Inc", 
       "type": "Defendant"
@@ -116,6 +118,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "c/o Draper & Goldberg, PLLC\nP.O. Box 947\n512 East Market Streetr\nGeorgetown, DE 19947\n302-855-9252", 
       "name": "Ocwen Loan Servicing, LLC", 
       "type": "Defendant"
@@ -133,6 +136,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": "2007-12-21", 
       "extra_info": "Sixth & Marquette\nMAC N9303-120\nMinneapolis, MN 55479\nTERMINATED: 12/21/2007", 
       "name": "Wells Fargo Bank, N.A,", 
       "type": "Defendant"
@@ -155,6 +159,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": "2007-12-21", 
       "extra_info": "767 Third Avenue, 31st Floor\nNew York, NY 10017\nTERMINATED: 12/21/2007", 
       "name": "Law Debenture Trust Company of New York", 
       "type": "Defendant"
@@ -172,6 +177,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": "2011-07-28", 
       "extra_info": "553 Capital Drive\nLake Zurich, IL 60047\nTERMINATED: 07/28/2011", 
       "name": "The Berkshire Group LP", 
       "type": "Defendant"
@@ -189,18 +195,21 @@
           "roles": []
         }
       ], 
+      "date_terminated": "2011-07-28", 
       "extra_info": "c/o The Berkshire Group\n553 Capital Drive\nLake Zurich, IL 60047\nTERMINATED: 07/28/2011", 
       "name": "Michael W. Trickey", 
       "type": "Defendant"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "1628 John F. Kennedy Blvd.\nSuite 950\nPhiladelphia, PA 19103-2110\n215-561-0950", 
       "name": "George L. Miller", 
       "type": "Counter-Defendant"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": "2012-05-18", 
       "extra_info": "TERMINATED: 05/18/2012", 
       "name": "Greenwich Capital Financial Products, Inc", 
       "type": "Counter-Claimant"
@@ -213,6 +222,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "c/o Draper & Goldberg, PLLC\nP.O. Box 947\n512 East Market Streetr\nGeorgetown, DE 19947\n302-855-9252", 
       "name": "Ocwen Loan Servicing, LLC", 
       "type": "Counter-Claimant"

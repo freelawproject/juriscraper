@@ -70,6 +70,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "4942 Union Pacific Ave\nLos Angeles, CA 90022\n323-263-3299\nSSN / ITIN: xxx-xx-4055", 
       "name": "Jose Carrillo Jauregui", 
       "type": "Debtor"
@@ -87,18 +88,21 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "4942 Union Pacific Ave\nLos Angeles, CA 90022\n323-263-3299\nSSN / ITIN: xxx-xx-2459", 
       "name": "Rosalba Torres Jauregui", 
       "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "835 Wilshire Blvd., Suite 300\nLos Angeles, CA 90017\n(213) 683-3317", 
       "name": "John J Menchaca", 
       "type": "Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "725 S Figueroa St., 26th Floor\nLos Angeles, CA 90017", 
       "name": "United States Trustee (LA)", 
       "type": "U.S. Trustee"

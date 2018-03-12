@@ -34,6 +34,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "Landis Rath & Cobb LLP\n919 Market Street\nSuite 1800\nWilmington, DE 19801", 
       "name": "JPMorgan Chase Bank, National Association", 
       "type": "Plaintiff"
@@ -51,6 +52,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "P.O. Box 10451\nNewport Beach, CA 92658", 
       "name": "Peter Szanto", 
       "type": "Plaintiff"
@@ -83,6 +85,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": "2012-03-20", 
       "extra_info": "TERMINATED: 03/20/2012", 
       "name": "Washington Mutual, Inc.", 
       "type": "Defendant"
@@ -100,6 +103,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": "2012-03-20", 
       "extra_info": "1301 Second Avenue\nSeattle, WA 98101\nTax ID / EIN: 20-5885395\nTERMINATED: 03/20/2012", 
       "name": "WMI Investment Corp.", 
       "type": "Defendant"
@@ -130,6 +134,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": "2009-07-23", 
       "extra_info": "TERMINATED: 07/23/2009", 
       "name": "Federal Deposit Insurance Corporation", 
       "type": "Defendant"
@@ -152,24 +157,28 @@
           "roles": []
         }
       ], 
+      "date_terminated": "2012-03-20", 
       "extra_info": "TERMINATED: 03/20/2012", 
       "name": "Official Committee of Unsecured Creditors", 
       "type": "Creditor Committee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "1301 Second Avenue\nSeattle, WA 98101\nTax ID / EIN: 20-5885395", 
       "name": "WMI Investment Corp.", 
       "type": "Counter-Claimant"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "Washington Mutual, Inc.", 
       "type": "Counter-Claimant"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "Landis Rath & Cobb LLP\n919 Market Street\nSuite 1800\nWilmington, DE 19801", 
       "name": "JPMorgan Chase Bank, National Association", 
       "type": "Counter-Defendant"

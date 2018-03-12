@@ -24,6 +24,7 @@
           ]
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "105 West Clarkstown Road\nNew City, NY 10956\nSSN / ITIN: xxx-xx-2120", 
       "name": "Patrick Fagan", 
       "type": "Plaintiff"
@@ -38,6 +39,7 @@
           ]
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "105 West Clarkstown Road\nNew City, NY 10956\nSSN / ITIN: xxx-xx-3251", 
       "name": "Christine Fagan", 
       "type": "Plaintiff"
@@ -50,6 +52,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "152 McClean Ave\nStaten Island, NY 10305", 
       "name": "CJP Abstract LLC", 
       "type": "Defendant"
@@ -62,6 +65,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "5600 Cox Road\nGlen Allen, VA 23060", 
       "name": "Commonwealth Land Title Insurance", 
       "type": "Defendant"
@@ -74,6 +78,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "4837 Watt Ave\nNorth Highlands, CA 95660-5108", 
       "name": "HomeQ Servicing Corp.", 
       "type": "Defendant"
@@ -86,6 +91,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "1 Wachovia Center\nCharlotte, NC 28288-0013", 
       "name": "Wachovia Bank", 
       "type": "Defendant"
@@ -98,6 +104,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "333 Westchester Ave\nWhite Plains, NY 10604", 
       "name": "Argent Mortgage Company", 
       "type": "Defendant"
@@ -110,6 +117,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "505 City Parkway West\nSuite 100\nOrange, CA 92868", 
       "name": "AMC Mortgage Services Inc.", 
       "type": "Defendant"
@@ -124,11 +132,13 @@
           ]
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "420 Montgomery Street\nSan Francisco, CA 94163", 
       "name": "Wells Fargo Bank", 
       "type": "Defendant"
     }, 
     {
+      "date_terminated": null, 
       "extra_info": "fictitious names for substation of parties when discovered.", 
       "name": "John Doe, Jane Doe, XYZ Corp.,  fictitious names for substation of parties when discovered.", 
       "type": "Defendant"
@@ -141,6 +151,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "c/o Rosicki, Rosicki & Associates, P.C.\n51 E. Bethpage Rd.\nPlainview, NY 11803", 
       "name": "BARCLAYS CAPITAL REAL ESTATE DBA HOMEQ SERVICING S/H/A HOMEQ SERVICING CORP. AND WELLS FARGO BANK, N.A. AS TRUSTEE UNDER POOLING AND SERVICING AGREEMENT DATED AS OF AUGUST 1, 2005 ASSET-BACKED PASS-TH", 
       "type": "Defendant"
@@ -153,6 +164,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "505 City Parkway West\nSuite 100\nOrange, CA 92868", 
       "name": "AMC Mortgage Services Inc.", 
       "type": "Cross-Claimant"
@@ -165,11 +177,13 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "333 Westchester Ave\nWhite Plains, NY 10604", 
       "name": "Argent Mortgage Company", 
       "type": "Cross-Claimant"
     }, 
     {
+      "date_terminated": null, 
       "extra_info": "420 Montgomery Street\nSan Francisco, CA 94163", 
       "name": "Wells Fargo Bank", 
       "type": "Cross Defendant"
@@ -182,6 +196,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "5600 Cox Road\nGlen Allen, VA 23060", 
       "name": "Commonwealth Land Title Insurance", 
       "type": "Cross-Claimant"
@@ -199,6 +214,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "152 McClean Ave\nStaten Island, NY 10305", 
       "name": "CJP Abstract LLC", 
       "type": "Cross Defendant"

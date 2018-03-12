@@ -365,6 +365,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "5423 SAN FLORENTINE AVE\nLAS VEGAS, NV 89141\nSSN / ITIN: xxx-xx-4284", 
       "name": "JULIAN BETTENCOURT", 
       "type": "Debtor"
@@ -377,18 +378,21 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "5423 SAN FLORENTINE AVE\nLAS VEGAS, NV 89141\nSSN / ITIN: xxx-xx-4007", 
       "name": "MARIA N BETTENCOURT", 
       "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": "2010-01-20", 
       "extra_info": "201 LAS VEGAS BLVD., SO. #200\nLAS VEGAS, NV 89101\n(702) 853-0700\nTERMINATED: 01/20/2010", 
       "name": "KATHLEEN A. LEAVITT", 
       "type": "Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "300 LAS VEGAS BOULEVARD S.\nSUITE 4300\nLAS VEGAS, NV 89101", 
       "name": "U.S. TRUSTEE - LV - 11, 11", 
       "type": "U.S. Trustee"

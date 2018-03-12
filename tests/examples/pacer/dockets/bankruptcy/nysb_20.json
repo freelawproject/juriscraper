@@ -436,6 +436,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "227 East 19th Street\nNew York, NY 10003\nTax ID / EIN: 13-5648609", 
       "name": "Cabrini Medical Center", 
       "type": "Debtor"
@@ -453,12 +454,14 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "33 Whitehall Street\n21st Floor\nNew York, NY 10004\n(212) 510-0500", 
       "name": "United States Trustee", 
       "type": "U.S. Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "Attn: James Le\n2335 Alaska Avenue\nEl Segundo, CA 90245\nwww.kccllc.com\n310-823-9000", 
       "name": "Kurtzman Carson Claims Agent", 
       "type": "Claims and Noticing Agent"
@@ -486,6 +489,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "Official Committee of Unsecured Creditors of Cabrini Medical Center", 
       "type": "Creditor Committee"

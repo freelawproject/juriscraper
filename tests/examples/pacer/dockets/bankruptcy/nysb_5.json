@@ -415,6 +415,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "1221 McKinney Street\nHouston, TX 77010\nTax ID / EIN: 95-4160558", 
       "name": "Lyondell Chemical Company", 
       "type": "Debtor"
@@ -432,24 +433,28 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "33 Whitehall Street\n21st Floor\nNew York, NY 10004\n(212) 510-0500", 
       "name": "United States Trustee", 
       "type": "U.S. Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "(f/k/a Bankruptcy Services LLC)\n757 Third Avenue, 3rd Floor\nNew York, NY 10017\nwww.bsillc.com\n646-282-2500", 
       "name": "Epiq Bankruptcy Solutions, LLC Claims Agent", 
       "type": "Claims and Noticing Agent"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "William Patterson", 
       "type": "Cred. Comm. Chair"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "Official Committee of Unsecured Creditors", 
       "type": "Creditor Committee"

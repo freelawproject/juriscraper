@@ -233,6 +233,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "3614 LONE OAK ST\nLAS VEGAS, NV 89115\nSSN / ITIN: xxx-xx-1302", 
       "name": "MARTIN CONTRERAS", 
       "type": "Debtor"
@@ -245,12 +246,14 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "3614 LONE OAK ST\nLAS VEGAS, NV 89115\nSSN / ITIN: xxx-xx-2951", 
       "name": "OLIVIA CONTRERAS", 
       "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "701 BRIDGER AVE., #820\nLAS VEGAS, NV 89101\n(702) 853-4500", 
       "name": "RICK A. YARNALL", 
       "type": "Trustee"

@@ -293,6 +293,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "c/o GC Andersen Partners\n430 Park Avenue\nSuite 701\nNew York, NY 10022\nTax ID / EIN: 22-3726792", 
       "name": "Millennium Cell Inc.", 
       "type": "Debtor"
@@ -305,12 +306,14 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "1628 John F. Kennedy Blvd.\nSuite 950\nPhiladelphia, PA 19103-2110\n215-561-0950", 
       "name": "George L. Miller", 
       "type": "Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "844 King Street, Room 2207\nLockbox #35\nWilmington, DE 19899-0035\n302-573-6491", 
       "name": "United States Trustee", 
       "type": "U.S. Trustee"

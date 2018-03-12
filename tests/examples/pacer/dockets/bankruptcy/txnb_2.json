@@ -329,6 +329,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "409 Victory Lane\nMansfield, TX 76063\nTARRANT-TX\nSSN / ITIN: xxx-xx-7295", 
       "name": "Mark A. Downs", 
       "type": "Debtor"
@@ -341,24 +342,28 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "409 Victory Lane\nMansfield, TX 76063\nTARRANT-TX\nSSN / ITIN: xxx-xx-6057", 
       "name": "Wanda J. Downs", 
       "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": "2008-07-02", 
       "extra_info": "6851 N.E. Loop 820, Suite 300\nN Richland Hills, TX 76180\n817-770-8500\nTERMINATED: 07/02/2008", 
       "name": "Tim Truman", 
       "type": "Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": "2008-12-10", 
       "extra_info": "Chapter 7 Trustee\nPO Box 93749\nSouthlake, TX 76092\n(817) 348-0777\nTERMINATED: 12/10/2008", 
       "name": "Shawn K. Brown", 
       "type": "Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "1100 Commerce Street\nRoom 976\nDallas, TX 75242\n214-767-8967", 
       "name": "United States Trustee", 
       "type": "U.S. Trustee"

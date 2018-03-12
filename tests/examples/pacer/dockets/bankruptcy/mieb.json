@@ -186,6 +186,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "835 Mason Avenue\nDearborn, MI 48124\nTax ID / EIN: 38-2866329", 
       "name": "Plastech Engineered Products, Inc.", 
       "type": "Debtor in Possession"
@@ -198,6 +199,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "C/o Kotz Sangster, Wysocki And Berg, P.c\n400 Renaissance Center, Ste. 3400\nDetroit, MI 48243-1618", 
       "name": "Reliant Energy Retail Services, LLC", 
       "type": "Petitioning Creditor"
@@ -250,12 +252,14 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "Carroll Services LLC", 
       "type": "Liquidating Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": "2008-07-11", 
       "extra_info": "TERMINATED: 07/11/2008", 
       "name": "Habbo G. Fokkena", 
       "type": "U.S. Trustee"
@@ -268,6 +272,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "Daniel M. McDermott", 
       "type": "U.S. Trustee"
@@ -289,6 +294,7 @@
           ]
         }
       ], 
+      "date_terminated": "2008-06-13", 
       "extra_info": "TERMINATED: 06/13/2008", 
       "name": "Michael A. Stevenson", 
       "type": "Interim Trustee"
@@ -306,6 +312,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "Unsecured Creditors Committee", 
       "type": "Creditor Committee"

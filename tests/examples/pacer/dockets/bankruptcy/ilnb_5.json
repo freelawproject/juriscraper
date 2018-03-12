@@ -53,6 +53,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "1213 Simpson Road\nRockford, IL 61102\nSSN / ITIN: xxx-xx-6103", 
       "name": "Mark P Dal Santo", 
       "type": "Debtor"
@@ -65,12 +66,14 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "1213 Simpson Road\nRockford, IL 61102\nSSN / ITIN: xxx-xx-4113", 
       "name": "Carla A Dal Santo", 
       "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "Lydia Meyer - 13 Trustee\nP.o. Box 14127\nRockford, IL 61105-4127\n815-968-5354", 
       "name": "Lydia Meyer", 
       "type": "Trustee"

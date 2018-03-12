@@ -94,6 +94,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "225 Lowell Dr\nBakersfield, CA 93308\n661-399-2482\nSSN / ITIN: xxx-xx-9131", 
       "name": "Jerry Lee Arney", 
       "type": "Debtor"
@@ -111,18 +112,21 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "225 Lowell Dr\nBakersfield, CA 93308\n661-399-2482\nSSN / ITIN: xxx-xx-3277", 
       "name": "Susan Elaine Arney", 
       "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "PO Box 28950\nFresno, CA 93729-8950\n(559) 275-9512", 
       "name": "Michael H. Meyer", 
       "type": "Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "United States Courthouse\n2500 Tulare Street, Room 1401\nFresno, CA 93721", 
       "name": "Office of the U.S. Trustee", 
       "type": "U.S. Trustee"

@@ -299,6 +299,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "5212 OVERLAND AVENUE\nLAS VEGAS, NV 89107\nSSN / ITIN: xxx-xx-6802", 
       "name": "JOSE PEREZ-CHACON", 
       "type": "Debtor"
@@ -311,12 +312,14 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "5212 OVERLAND AVENUE\nLAS VEGAS, NV 89107\nSSN / ITIN: xxx-xx-2687", 
       "name": "MARIA IRMA PRADO DE PEREZ", 
       "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "201 LAS VEGAS BLVD., SO. #200\nLAS VEGAS, NV 89101\n(702) 853-0700", 
       "name": "KATHLEEN A. LEAVITT", 
       "type": "Trustee"

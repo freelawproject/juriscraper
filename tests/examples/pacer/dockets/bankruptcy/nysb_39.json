@@ -211,6 +211,7 @@
           ]
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "Enron Creditors Recovery Corp., et al", 
       "type": "Plaintiff"
@@ -225,6 +226,7 @@
           ]
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "The Official Committee of Unsecured Creditors of Enron Creditors Recovery Corp., et al", 
       "type": "Plaintiff"
@@ -237,6 +239,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "399 Park Avenue\nNew York, NY 10043", 
       "name": "Citigroup, Inc.", 
       "type": "Defendant"
@@ -249,6 +252,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "399 Park Avenue\nNew York, NY 10043\n(315) 478-2222", 
       "name": "Citibank, N.A.", 
       "type": "Defendant"
@@ -261,6 +265,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "450 Mamaroneck Avenue\nHarrison, NY 10528", 
       "name": "Citicorp North America, Inc.", 
       "type": "Defendant"
@@ -273,11 +278,13 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "450 Mamaroneck Avenue\nHarrison, NY 10528", 
       "name": "Citicorp USA, Inc.", 
       "type": "Defendant"
     }, 
     {
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "Citigroup Inc., Citibank, N.A., Citicorp North America, Inc., Citicorp USA, Inc. and Banco National de Mexico", 
       "type": "Defendant"

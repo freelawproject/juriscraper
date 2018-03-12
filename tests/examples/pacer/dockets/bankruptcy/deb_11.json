@@ -39,6 +39,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "Washington Mutual, Inc.", 
       "type": "Plaintiff"
@@ -63,6 +64,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "1301 Second Avenue\nSeattle, WA 98101\nTax ID / EIN: 20-5885395", 
       "name": "WMI Investment Corp.", 
       "type": "Plaintiff"
@@ -80,6 +82,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": "2012-03-20", 
       "extra_info": "TERMINATED: 03/20/2012", 
       "name": "JPMorgan Chase Bank, N.A.", 
       "type": "Defendant"
@@ -97,36 +100,42 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "Official Committee of Unsecured Creditors of Washington Mutual, Inc., and WMI Investment Corp.", 
       "type": "Intervenor-Plaintiff"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "1301 Second Avenue\nSeattle, WA 98101\nTax ID / EIN: 20-5885395", 
       "name": "WMI Investment Corp.", 
       "type": "Counter-Defendant"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "Washington Mutual, Inc.", 
       "type": "Counter-Defendant"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "JPMorgan Chase Bank, N.A.", 
       "type": "Cross-Claimant"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": "2012-03-20", 
       "extra_info": "TERMINATED: 03/20/2012", 
       "name": "Federal Deposit Insurance Corporation", 
       "type": "Cross Defendant"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "Federal Deposit Insurance Corporation", 
       "type": "Cross Defendant"

@@ -281,6 +281,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "1900 Andover Lane\nCrystal Lake, IL 60014\nSSN / ITIN: xxx-xx-4134", 
       "name": "Sean Burke", 
       "type": "Debtor"
@@ -293,6 +294,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "1900 Andover Lane\nCrystal Lake, IL 60014\nSSN / ITIN: xxx-xx-5103", 
       "name": "Nikole Burke", 
       "type": "Joint Debtor"
@@ -310,12 +312,14 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "Ehrmann Gehlbach Badger & Lee\nPob 447- 215 E First St, Ste 100\nDixon, IL 61021\n815-288-4949", 
       "name": "Megan G Heeg", 
       "type": "Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "Office of the U.S. Trustee, Region 11\n780 Regent St.\nSuite 304\nMadison, WI 53715\n608-264-5522", 
       "name": "William Neary", 
       "type": "U.S. Trustee"

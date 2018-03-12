@@ -1,68 +1,72 @@
 {
-  "assigned_to_str": "Timothy M. Burgess",
-  "case_name": "West American Insurance Company v. Gifford",
-  "cause": "28:2201 Declaratory Judgment",
-  "court_id": "akd",
-  "date_converted": null,
-  "date_discharged": null,
-  "date_filed": "2008-12-23",
-  "date_terminated": "2009-06-04",
-  "demand": "",
+  "assigned_to_str": "Timothy M. Burgess", 
+  "case_name": "West American Insurance Company v. Gifford", 
+  "cause": "28:2201 Declaratory Judgment", 
+  "court_id": "akd", 
+  "date_converted": null, 
+  "date_discharged": null, 
+  "date_filed": "2008-12-23", 
+  "date_terminated": "2009-06-04", 
+  "demand": "", 
   "docket_entries": [
     {
-      "date_filed": "2009-01-09",
-      "description": "AFFIDAVIT of Service for Complaint for declaratory judgment; and summons served on Matthew Brent Gifford on 12/30/08, filed by West American Insurance Company. (Attachments: # 1 Return receipt card)(Jamieson, Brewster) (Entered: 01/09/2009)",
-      "document_number": "4",
+      "date_filed": "2009-01-09", 
+      "description": "AFFIDAVIT of Service for Complaint for declaratory judgment; and summons served on Matthew Brent Gifford on 12/30/08, filed by West American Insurance Company. (Attachments: # 1 Return receipt card)(Jamieson, Brewster) (Entered: 01/09/2009)", 
+      "document_number": "4", 
       "pacer_doc_id": "0230436525"
-    },
+    }, 
     {
-      "date_filed": "2009-01-09",
-      "description": "AFFIDAVIT of Service for Complaint for declaratory judgment; and summons served on Communications Equipment and Service, LLC on 12/30/08, filed by West American Insurance Company. (Attachments: # 1 Return receipt card)(Jamieson, Brewster) (Entered: 01/09/2009)",
-      "document_number": "5",
+      "date_filed": "2009-01-09", 
+      "description": "AFFIDAVIT of Service for Complaint for declaratory judgment; and summons served on Communications Equipment and Service, LLC on 12/30/08, filed by West American Insurance Company. (Attachments: # 1 Return receipt card)(Jamieson, Brewster) (Entered: 01/09/2009)", 
+      "document_number": "5", 
       "pacer_doc_id": "0230436538"
-    },
+    }, 
     {
-      "date_filed": "2009-01-09",
-      "description": "AFFIDAVIT of Service for Complaint for Declaratory Judgment; and Summons served on Personal Page, Inc. on 12/30/08, filed by West American Insurance Company. (Attachments: # 1 Return receipt card)(Jamieson, Brewster) (Entered: 01/09/2009)",
-      "document_number": "6",
+      "date_filed": "2009-01-09", 
+      "description": "AFFIDAVIT of Service for Complaint for Declaratory Judgment; and Summons served on Personal Page, Inc. on 12/30/08, filed by West American Insurance Company. (Attachments: # 1 Return receipt card)(Jamieson, Brewster) (Entered: 01/09/2009)", 
+      "document_number": "6", 
       "pacer_doc_id": "0230436549"
     }
-  ],
-  "docket_number": "3:08-cv-00284",
-  "jurisdiction": "Diversity",
-  "jury_demand": "None",
-  "nature_of_suit": "110 Insurance",
+  ], 
+  "docket_number": "3:08-cv-00284", 
+  "jurisdiction": "Diversity", 
+  "jury_demand": "None", 
+  "nature_of_suit": "110 Insurance", 
   "parties": [
     {
       "attorneys": [
         {
-          "contact": "Lane Powell LLC\n301 W. Nothern Lights Blvd., Suite 301\nAnchorage, AK 99503-2648\n907-277-9511\nFax: 907-276-2631\nEmail: jamiesonb@lanepowell.com\n",
-          "name": "Brewster H. Jamieson",
+          "contact": "Lane Powell LLC\n301 W. Nothern Lights Blvd., Suite 301\nAnchorage, AK 99503-2648\n907-277-9511\nFax: 907-276-2631\nEmail: jamiesonb@lanepowell.com\n", 
+          "name": "Brewster H. Jamieson", 
           "roles": [
-            "LEAD ATTORNEY",
+            "LEAD ATTORNEY", 
             "ATTORNEY TO BE NOTICED"
           ]
         }
-      ],
-      "extra_info": "",
-      "name": "West American Insurance Company",
+      ], 
+      "date_terminated": null, 
+      "extra_info": "", 
+      "name": "West American Insurance Company", 
       "type": "Plaintiff"
-    },
+    }, 
     {
-      "extra_info": "",
-      "name": "Matthew Brent Gifford",
+      "date_terminated": null, 
+      "extra_info": "", 
+      "name": "Matthew Brent Gifford", 
       "type": "Defendant"
-    },
+    }, 
     {
-      "extra_info": "",
-      "name": "Personal Page, Inc.",
+      "date_terminated": null, 
+      "extra_info": "", 
+      "name": "Personal Page, Inc.", 
       "type": "Defendant"
-    },
+    }, 
     {
-      "extra_info": "TERMINATED: 04/07/2009",
-      "name": "Communications Equipment and Service, LLC.",
+      "date_terminated": "2009-04-07", 
+      "extra_info": "TERMINATED: 04/07/2009", 
+      "name": "Communications Equipment and Service, LLC.", 
       "type": "Defendant"
     }
-  ],
+  ], 
   "referred_to_str": ""
 }

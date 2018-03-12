@@ -186,6 +186,7 @@
           ]
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "et al.\n915 DeGuigne Drive\nSunnyvale, CA 94085\nOUTSIDE HOME STATE\nTax ID / EIN: 20-3898239", 
       "name": "Spansion Inc.,  et al.", 
       "type": "Debtor"
@@ -198,18 +199,21 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "Office of United States Trustee\nJ. Caleb Boggs Federal Building\n844 King Street, Suite 2207\nLockbox 35\nWilmington, DE 19899-0035\n302-573-6491", 
       "name": "U.S. Trustee", 
       "type": "U.S. Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": "2014-02-26", 
       "extra_info": "Office of the U.S. Trustee\n844 King Street Suite 2207\nWilmington, DE 19801\n302-573-6493\nSSN / ITIN: xxx-xx-1604\nTERMINATED: 02/26/2014", 
       "name": "Thomas Patrick Tinker", 
       "type": "U.S. Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": "2014-07-11", 
       "extra_info": "www.epiqsystems.com\n777 Third Avenue, 12th Floor\nNew York, NY 10017\n646-282-2500\nTERMINATED: 07/11/2014", 
       "name": "Epiq Bankruptcy Solutions LLC", 
       "type": "Claims Agent"

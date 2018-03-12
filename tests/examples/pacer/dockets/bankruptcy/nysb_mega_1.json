@@ -510,6 +510,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "(f/k/a Chrysler LLC)\n1000 Chrysler Drive\nAuburn Hills, MI 48326\nTax ID / EIN: 38-2673623", 
       "name": "Old Carco LLC,  (f/k/a Chrysler LLC)", 
       "type": "Debtor"
@@ -522,6 +523,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "U.S. Bank National Association, in its capacity as Indenture Trustee", 
       "type": "Trustee"
@@ -534,12 +536,14 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "33 Whitehall Street\n21st Floor\nNew York, NY 10004\n(212) 510-0500", 
       "name": "United States Trustee", 
       "type": "U.S. Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "(f/k/a Bankruptcy Services LLC)\n757 Third Avenue, 3rd Floor\nNew York, NY 10017\nwww.bsillc.com\n646-282-2500", 
       "name": "Epiq Bankruptcy Solutions, LLC Claims Agent", 
       "type": "Claims and Noticing Agent"
@@ -567,6 +571,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "The Official Committee of Unsecured Creditors of Chrysler LLC, et al.", 
       "type": "Creditor Committee"
@@ -599,6 +604,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "Pachulski Stang Ziehl & Jones LLP\n780 Third Avenue, 36 Fl.\nNew York, NY 10017\n212-561-7700", 
       "name": "Official Committee of Unsecured Creditors", 
       "type": "Creditor Committee"
@@ -611,6 +617,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "Conflicts Counsel to the Official Committee of Unsecured Creditors of Old Carco LLC f/k/a Chrysler LLC, et al.", 
       "type": "Creditor Committee"

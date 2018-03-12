@@ -145,12 +145,14 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "1301 Second Avenue\nSeattle, WA 98101\nTax ID / EIN: 91-1653725", 
       "name": "Washington Mutual, Inc.", 
       "type": "Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "844 King Street, Room 2207\nLockbox #35\nWilmington, DE 19899-0035\n302-573-6491", 
       "name": "United States Trustee", 
       "type": "U.S. Trustee"
@@ -203,6 +205,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "Official Committee of Unsecured Creditors", 
       "type": "Creditor Committee"

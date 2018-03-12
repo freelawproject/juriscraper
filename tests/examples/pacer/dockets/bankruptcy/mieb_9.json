@@ -95,6 +95,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "18028 Cider Mill\nMacomb, MI 48044\nSSN / ITIN: xxx-xx-6130", 
       "name": "Michael J. Bologna", 
       "type": "Debtor"
@@ -107,12 +108,14 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "18028 Cider Mill\nMacomb, MI 48044\nSSN / ITIN: xxx-xx-5159", 
       "name": "Leslie F. Bologna", 
       "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "24901 Northwestern Highway\nSuite 444\nSouthfield, MI 48075\n248-350-8220", 
       "name": "Stuart A. Gold", 
       "type": "Trustee"

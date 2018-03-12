@@ -131,6 +131,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "22019 Witchhazel Ave\nMoreno Valley, CA 92553\nSSN / ITIN: xxx-xx-7421", 
       "name": "Roman Trigo", 
       "type": "Debtor"
@@ -143,18 +144,21 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "22019 Witchhazel Ave\nMoreno Valley, CA 92553\nSSN / ITIN: xxx-xx-9766", 
       "name": "Suzana Trigo", 
       "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "4361 Latham Street, Suite 270\nRiverside, CA 92501\n(951) 826-8000", 
       "name": "Rod (MJ) Danielson", 
       "type": "Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "3685 Main Street, Suite 300\nRiverside, CA 92501", 
       "name": "United States Trustee (RS)", 
       "type": "U.S. Trustee"

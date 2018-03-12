@@ -179,6 +179,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "902 Delta Ct\nSan Jose, CA 95122-0000\nSSN / ITIN: xxx-xx-2607", 
       "name": "Milton Do", 
       "type": "Debtor"
@@ -191,18 +192,21 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "902 Delta Ct\nSan Jose, CA 95122-0000\nSSN / ITIN: xxx-xx-0602", 
       "name": "Annie Nguyen", 
       "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "P.O. Box 50013\nSan Jose, CA 95150-0013\n(408) 354-8151", 
       "name": "Devin Derham-Burk", 
       "type": "Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "U.S. Federal Bldg.\n280 S 1st St. #268\nSan Jose, CA 95113-3004\n(   )", 
       "name": "Office of the U.S. Trustee / SJ", 
       "type": "U.S. Trustee"

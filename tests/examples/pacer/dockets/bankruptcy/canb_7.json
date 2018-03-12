@@ -239,6 +239,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "23401 Tarman Ave.\nHayward, CA 94544\nSSN / ITIN: xxx-xx-0380", 
       "name": "Carlos Caudillo", 
       "type": "Debtor"
@@ -251,18 +252,21 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "23401 Tarman Ave.\nHayward, CA 94544\nSSN / ITIN: xxx-xx-0383", 
       "name": "Ines Vega", 
       "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "P.O. Box 5004\nHayward, CA 94540-5004\n510-266-5580", 
       "name": "Martha G. Bronitsky", 
       "type": "Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "Office of the U.S. Trustee\n1301 Clay St. #690N\nOakland, CA 94612\n(510) 637-3200", 
       "name": "Office of the U.S. Trustee/Oak", 
       "type": "U.S. Trustee"

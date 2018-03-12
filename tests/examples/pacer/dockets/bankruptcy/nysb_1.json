@@ -215,6 +215,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "60 Grant Street\nSloatsburg, NY 10974\nSSN / ITIN: xxx-xx-1072", 
       "name": "Spiro Milliaressis", 
       "type": "Debtor"
@@ -227,18 +228,21 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "60 Grant Street\nSloatsburg, NY 10974\nSSN / ITIN: xxx-xx-1690", 
       "name": "Ann Milliaressis", 
       "type": "Joint Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "As Chapter 13 and 12 Trustee\n399 Knollwood Road\nSuite 102\nWhite Plains, NY 10603\n(914) 328-6333", 
       "name": "Jeffrey L. Sapir-13", 
       "type": "Trustee"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "33 Whitehall Street\n21st Floor\nNew York, NY 10004\n(212) 510-0500", 
       "name": "United States Trustee", 
       "type": "U.S. Trustee"

@@ -743,6 +743,7 @@
   "parties": [
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "Shiptrade, Inc.,", 
       "type": "Consolidated Debtor"
@@ -755,30 +756,35 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "GCL Shipping Corp.,", 
       "type": "Consolidated Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "Redstone Shipping Corp.,", 
       "type": "Consolidated Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "Gilmore Shipping Corp.,", 
       "type": "Consolidated Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "Global Progress LLC,", 
       "type": "Consolidated Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "Global Prosperity LLC,", 
       "type": "Consolidated Debtor"
@@ -796,12 +802,14 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "100 Quentin Roosevelt Boulevard\nGarden City, NY 11530\nTax ID / EIN: 11-3024523", 
       "name": "Global Container Lines Limited", 
       "type": "Debtor"
     }, 
     {
       "attorneys": [], 
+      "date_terminated": null, 
       "extra_info": "Office of the United States Trustee\nLong Island Federal Courthouse\n560 Federal Plaza - Room 560\nCentral Islip, NY 11722-4437\n(631) 715-7800", 
       "name": "Diana G. Adams", 
       "type": "U.S. Trustee"
@@ -814,6 +822,7 @@
           "roles": []
         }
       ], 
+      "date_terminated": null, 
       "extra_info": "", 
       "name": "Official Committee Of Unsecured Creditors", 
       "type": "Creditor Committee"

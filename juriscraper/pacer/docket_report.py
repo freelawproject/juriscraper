@@ -23,7 +23,7 @@ class DocketReport(BaseReport):
     case_name_regex = re.compile(r"(?:Case\s+title:\s+)?(.*\bv\.?\s.*)")
     in_re_regex = re.compile(r"(\bIN\s+RE:\s+.*)", flags=re.IGNORECASE)
     date_filed_regex = re.compile(r'Date [fF]iled:\s+(%s)' % date_regex)
-    date_terminated_regex = re.compile(r'Date [tT]erminated:\s+(%s)' % date_regex)
+    date_terminated_regex = re.compile(r'[tT]erminated:\s+(%s)' % date_regex, flags=re.IGNORECASE)
     date_converted_regex = re.compile(r'Date [Cc]onverted:\s+(%s)' % date_regex)
     # Be careful this does not match "Joint debtor discharged" field.
     date_discharged_regex = re.compile(r'(?:Date|Debtor)\s+[Dd]ischarged:\s+(%s)' % date_regex)
@@ -107,20 +107,27 @@ class DocketReport(BaseReport):
             u'docket_number': self._get_docket_number(),
             u'case_name': self._get_case_name(),
             u'date_filed': self._get_value(self.date_filed_regex,
+                                           self.metadata_values,
                                            cast_to_date=True),
             u'date_terminated': self._get_value(self.date_terminated_regex,
+                                                self.metadata_values,
                                                 cast_to_date=True),
             u'date_converted': self._get_value(self.date_converted_regex,
+                                               self.metadata_values,
                                                cast_to_date=True),
             u'date_discharged': self._get_value(self.date_discharged_regex,
+                                                self.metadata_values,
                                                 cast_to_date=True),
             u'assigned_to_str': self._get_judge(self.assigned_to_regex),
             u'referred_to_str': self._get_judge(self.referred_to_regex),
-            u'cause': self._get_value(self.cause_regex),
+            u'cause': self._get_value(self.cause_regex, self.metadata_values),
             u'nature_of_suit': self._get_nature_of_suit(),
-            u'jury_demand': self._get_value(self.jury_demand_regex),
-            u'demand': self._get_value(self.demand_regex),
-            u'jurisdiction': self._get_value(self.jurisdiction_regex),
+            u'jury_demand': self._get_value(self.jury_demand_regex,
+                                            self.metadata_values),
+            u'demand': self._get_value(self.demand_regex,
+                                       self.metadata_values),
+            u'jurisdiction': self._get_value(self.jurisdiction_regex,
+                                             self.metadata_values),
         }
         data = clean_pacer_object(data)
         self._metadata = data
@@ -135,6 +142,7 @@ class DocketReport(BaseReport):
             parties = [{
                 'name': 'NATIONAL VETERANS LEGAL SERVICES PROGRAM',
                 'type': 'Plaintiff',
+                'date_terminated': '2018-03-12',
                 'extra_info': ("1600 K Street, NW\n"
                                "Washington, DC 20006"),
                 'attorneys': [{
@@ -232,6 +240,11 @@ class DocketReport(BaseReport):
                     force_unicode(s.strip()) for s in
                     cells[0].xpath(u'.//text()[not(./parent::b)]') if
                     s.strip()
+                )
+                party[u'date_terminated'] = self._get_value(
+                    self.date_terminated_regex,
+                    party[u'extra_info'],
+                    cast_to_date=True,
                 )
 
             if len(cells) == 3 and party != {}:
@@ -687,14 +700,14 @@ class DocketReport(BaseReport):
                     nos.append(' '.join(cell_texts))
             return '; '.join(nos) or ''
         else:
-            return self._get_value(self.nos_regex)
+            return self._get_value(self.nos_regex, self.metadata_values)
 
     def _get_judge(self, regex):
-        judge_str = self._get_value(regex)
+        judge_str = self._get_value(regex, self.metadata_values)
         if judge_str is not None:
             return normalize_judge_string(judge_str)[0]
 
-    def _get_value(self, regex, cast_to_date=False):
+    def _get_value(self, regex, query_strings, cast_to_date=False):
         """Find the matching value for a regex.
 
         Iterate over a list of values and return group(1) for the first that
@@ -702,7 +715,10 @@ class DocketReport(BaseReport):
 
         If cast_to_date is True, convert the string to a date object.
         """
-        for v in self.metadata_values:
+        if isinstance(query_strings, basestring):
+            query_strings = [query_strings]
+
+        for v in query_strings:
             m = regex.search(v)
             if m:
                 if cast_to_date:
