@@ -257,10 +257,11 @@ Version History
 - 1.11.* - Adds system for identifying invalid dockets in PACER.
 - 1.12.* - Adds new parsers for PACER's show_case_doc URLs
 - 1.13.* - Fixes issues with Python build compatibility
+- 1.14.* - Adds new parser for PACER's docket history report
 
 **Current**
 
-- 1.14.* - Adds new parser for PACER's docket history report
+- 1.15.* - Adds date termination parsing to parties on PACER dockets.
 
 **Immediate Future Goals**
 
