@@ -1,3 +1,8 @@
+"""
+CourtID:	ca6
+Court Contact:	WebSupport@ca6.uscourts.gov
+"""
+
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string, clean_if_py3
 

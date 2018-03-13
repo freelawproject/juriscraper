@@ -1,6 +1,7 @@
 """Oral Argument Audio Scraper for Court of Appeals for the Sixth Circuit
 CourtID: ca6
 Court Short Name: 6th Cir.
+Court Contact: WebSupport@ca6.uscourts.gov
 Authors: Brian W. Carver, Michael Lissner
 Reviewer: None
 History:
