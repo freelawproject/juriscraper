@@ -28,6 +28,8 @@ class DocketHistoryReport(DocketReport):
     @property
     def data(self):
         """Get all the data back from this endpoint."""
+        if self.is_valid is False:
+            return {}
         data = self.metadata.copy()
         data[u'docket_entries'] = self.docket_entries
         return data
