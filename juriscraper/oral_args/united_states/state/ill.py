@@ -17,10 +17,11 @@ class Site(OralArgumentSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://www.illinoiscourts.gov/Media/On_Demand.asp'
-        self.xpath_root = '(//table[(.//th)[1][contains(.//text(), "Argument Date")]])[last()]//tr[position() > 1][.//@href]'
         self.download_url_path = "/td[6]//@href"
         self.case_name_path = '/td[3]'
         self.docket_number_path = "/td[2]"
+        # Extract data from all rows with mp3 url/link
+        self.xpath_root = '(//table[(.//th)[1][contains(.//text(), "Argument Date")]])[last()]//tr[position() > 1][.//@href[contains(., ".mp3")]]'
         self.back_scrape_iterable = range(2008, 2016)
 
     def _get_download_urls(self):
