@@ -21,7 +21,7 @@ class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://www.ca6.uscourts.gov/internet/court_audio/aud1.php'
+        self.url = 'http://www.opn.ca6.uscourts.gov/internet/court_audio/aud1.php'
         self.xpath_root = '//table[@class="views-table cols-3"]'
         self.regex = re.compile('((?:\d{2}[- ]\d{4}\s*)+)(.*)')
         self.back_scrape_iterable = ['nothing']  # Just a placeholder for this court
