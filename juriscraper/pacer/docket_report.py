@@ -187,6 +187,9 @@ class DocketReport(BaseDocketReport, BaseReport):
         super(DocketReport, self).__init__(court_id, pacer_session)
         # Initialize the empty cache properties.
         self._clear_caches()
+        self._metadata = None
+        self._parties = None
+        self._docket_entries = None
 
         if self.court_id.endswith('b'):
             self.is_bankruptcy = True
