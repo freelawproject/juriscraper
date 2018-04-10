@@ -184,3 +184,40 @@ def clean_pacer_object(obj):
         return re.sub('\s+,', ',', s)
     else:
         return obj
+
+
+BASE_IA_URL = "https://www.archive.org/download"
+
+
+def get_bucket_name(court, pacer_case_id):
+    bucketlist = ["gov", "uscourts", court, unicode(pacer_case_id)]
+    return ".".join(bucketlist)
+
+
+def get_docket_filename(court, pacer_case_id):
+    return ".".join(["gov", "uscourts", unicode(court), unicode(pacer_case_id),
+                     "docket.xml"])
+
+
+def get_document_filename(court, pacer_case_id, document_number,
+                          attachment_number):
+    return ".".join(["gov", "uscourts", unicode(court), unicode(pacer_case_id),
+                     unicode(document_number), unicode(attachment_number or 0),
+                     "pdf"])
+
+
+def get_docketxml_url(court, pacer_case_id):
+    return "%s/%s/%s" % (
+        BASE_IA_URL,
+        get_bucket_name(court, pacer_case_id),
+        get_docket_filename(court, pacer_case_id),
+    )
+
+
+def get_pdf_url(court, pacer_case_id, document_number, attachment_number):
+    return "%s/%s/%s" % (
+        BASE_IA_URL,
+        get_bucket_name(court, pacer_case_id),
+        get_document_filename(court, pacer_case_id, document_number,
+                              attachment_number),
+    )
