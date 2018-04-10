@@ -79,8 +79,7 @@ class InternetArchive(BaseDocketReport):
         data = {
             u'court_id': self._get_str_from_tree('//court'),
             u'docket_number': self._get_str_from_tree('//docket_num'),
-            u'case_name': clean_string(harmonize(
-                self._get_str_from_tree('//case_name'))),
+            u'case_name': self._get_case_name(),
             u'date_filed': self.get_datetime_from_tree(
                 '//date_case_filed', cast_to_date=True),
             u'date_terminated': self.get_datetime_from_tree(
@@ -204,3 +203,11 @@ class InternetArchive(BaseDocketReport):
         judge_str = self._get_str_from_tree(path)
         if judge_str is not None:
             return normalize_judge_string(judge_str)[0]
+
+    def _get_case_name(self):
+        case_name = self._get_str_from_tree('//case_name')
+        case_name = clean_string(harmonize(case_name))
+        if not case_name:
+            return u"Unknown Case Title"
+        return case_name
+
