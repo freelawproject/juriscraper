@@ -6,7 +6,8 @@ Author: Philip Ardery
 Reviewer: mlr
 Date created: 2016-06-03
 Contact: Email "Internet and Technology" staff listed at http://www.cobar.org/staff
-         they usually fix issues without resonding to the emails directly
+         they usually fix issues without resonding to the emails directly. You can
+         also try submitting the form here: http://www.cobar.org/contact
 """
 
 import re
