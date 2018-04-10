@@ -466,13 +466,15 @@ def trunc(s, length, ellipsis=None):
         return s
 
 
-def convert_date_string(date_string, fuzzy=False):
+def convert_date_string(date_string, fuzzy=False, datetime=False):
     """Sanitize date string and convert into standard date object
 
     :param date_string: A string to convert to a datetime object.
     :param fuzzy: whether fuzzy string matching should be used, as defined by
     dateutil.
-    :return: datetime object
+    :param datetime: If True, return a datetime object. If false, cast to a
+    date.
+    :return: datetime or date object, depending on the datetime parameter.
     """
     date_string = date_string.replace('(', '')
     date_string = date_string.replace(')', '')
@@ -481,7 +483,11 @@ def convert_date_string(date_string, fuzzy=False):
     date_string = clean_if_py3(date_string)
 
     date_string = date_string.strip()
-    return parser.parse(date_string, fuzzy=fuzzy).date()
+    dt = parser.parse(date_string, fuzzy=fuzzy)
+    if datetime:
+        return dt
+    else:
+        return dt.date()
 
 
 def split_date_range_string(date_range_string):
