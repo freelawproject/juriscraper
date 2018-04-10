@@ -1,6 +1,7 @@
 # coding=utf-8
 import re
 
+from dateutil.tz import gettz
 from lxml import etree
 from lxml.html import tostring, fromstring, HtmlElement
 
@@ -18,12 +19,133 @@ logger = make_default_logger()
 date_regex = r'[—\d\-–/]+'
 
 
-class DocketReport(BaseReport):
+class BaseDocketReport(object):
+    """A small class to hold functions common to the InternetArchive report
+    and the PACER DocketReport
 
+    It might be possible to have the InternetArchive report subclass the
+    DocketReport, but that brings a lot of cruft along. Better to have this
+    little class as a mixin with the common components.
+    """
+    date_terminated_regex = re.compile(r'[tT]erminated:\s+(%s)' % date_regex,
+                                       flags=re.IGNORECASE)
+
+    def _clear_caches(self):
+        """Clear any caches that are on the object."""
+        for attr in self.CACHE_ATTRS:
+            setattr(self, '_%s' % attr, None)
+
+    @property
+    def data(self):
+        """Get all the data back from this endpoint."""
+        if self.is_valid is False:
+            return {}
+
+        data = self.metadata.copy()
+        data[u'parties'] = self.parties
+        data[u'docket_entries'] = self.docket_entries
+        return data
+
+    @staticmethod
+    def _normalize_see_above_attorneys(parties):
+        """PACER frequently has "See above" for the contact info of an attorney.
+        Normalize these values.
+        """
+        atty_cache = {}
+        for party in parties:
+            for atty in party.get(u'attorneys', []):
+                if not atty[u'contact']:
+                    continue
+
+                if re.search(r'see\s+above', atty[u'contact'], re.I):
+                    try:
+                        atty_info = atty_cache[atty[u'name']]
+                    except KeyError:
+                        # Unable to find the atty in the cache, therefore, we
+                        # don't know their contact info.
+                        atty[u'contact'] = u''
+                    else:
+                        # Found the atty in the cache. Use the info.
+                        atty[u'contact'] = atty_info
+                else:
+                    # We have atty info. Save it.
+                    atty_cache[atty[u'name']] = atty[u'contact']
+        return parties
+
+    def _get_value(self, regex, query_strings, cast_to_date=False):
+        """Find the matching value for a regex.
+
+        Iterate over a list of values and return group(1) for the first that
+        matches regex. If none matches, return the empty string.
+
+        If cast_to_date is True, convert the string to a date object.
+        """
+        if isinstance(query_strings, basestring):
+            query_strings = [query_strings]
+
+        for v in query_strings:
+            m = regex.search(v)
+            if m:
+                if cast_to_date:
+                    return convert_date_string(m.group(1))
+                hit = m.group(1)
+                if "date filed" not in hit.lower():
+                    # Safety check. Sometimes a match is made against the merged
+                    # text string, including its headers. This is wrong.
+                    return hit
+
+        if cast_to_date:
+            return None
+        else:
+            return ''
+
+    @staticmethod
+    def _xpath_text_0(node, xpath):
+        """Get the first text element from a node or return ''
+
+        This is annoyingly hard with normal xpath.
+        """
+        try:
+            return node.xpath('%s/text()' % xpath)[0]
+        except IndexError:
+            return ''
+
+    def _get_str_from_tree(self, path):
+        try:
+            s = self.tree.xpath('%s/text()' % path)[0].strip()
+        except IndexError:
+            return ''  # Return an empty string. Don't return None.
+        else:
+            return s
+
+    def get_datetime_from_tree(self, path, cast_to_date=False):
+        """Parse a datetime from the XML located at node.
+
+        If cast_to_date is true, the datetime object will be converted to a
+        date. Else, will return a datetime object in parsed TZ if possible.
+        Failing that, it will assume UTC.
+        """
+        try:
+            s = self.tree.xpath('%s/text()' % path)[0].strip()
+        except IndexError:
+            return None
+        else:
+            try:
+                d = convert_date_string(s, datetime=True)
+            except ValueError:
+                logger.debug("Couldn't parse date: %s" % s)
+                return None
+            else:
+                d = d.replace(tzinfo=d.tzinfo or gettz('UTC'))  # Set it to UTC.
+                if cast_to_date is True:
+                    return d.date()
+                return d
+
+
+class DocketReport(BaseDocketReport, BaseReport):
     case_name_regex = re.compile(r"(?:Case\s+title:\s+)?(.*\bv\.?\s.*)")
     in_re_regex = re.compile(r"(\bIN\s+RE:\s+.*)", flags=re.IGNORECASE)
     date_filed_regex = re.compile(r'Date [fF]iled:\s+(%s)' % date_regex)
-    date_terminated_regex = re.compile(r'[tT]erminated:\s+(%s)' % date_regex, flags=re.IGNORECASE)
     date_converted_regex = re.compile(r'Date [Cc]onverted:\s+(%s)' % date_regex)
     # Be careful this does not match "Joint debtor discharged" field.
     date_discharged_regex = re.compile(r'(?:Date|Debtor)\s+[Dd]ischarged:\s+(%s)' % date_regex)
@@ -71,11 +193,6 @@ class DocketReport(BaseReport):
         else:
             self.is_bankruptcy = False
 
-    def _clear_caches(self):
-        """Clear any caches that are on the object."""
-        for attr in self.CACHE_ATTRS:
-            setattr(self, '_%s' % attr, None)
-
     def parse(self):
         """Parse the item, but be sure to clear the cache before you do so.
 
@@ -84,17 +201,6 @@ class DocketReport(BaseReport):
         """
         self._clear_caches()
         super(DocketReport, self).parse()
-
-    @property
-    def data(self):
-        """Get all the data back from this endpoint."""
-        if self.is_valid is False:
-            return {}
-
-        data = self.metadata.copy()
-        data[u'parties'] = self.parties
-        data[u'docket_entries'] = self.docket_entries
-        return data
 
     @property
     def metadata(self):
@@ -347,32 +453,6 @@ class DocketReport(BaseReport):
                     break
 
         return attorneys
-
-    @staticmethod
-    def _normalize_see_above_attorneys(parties):
-        """PACER frequently has "See above" for the contact info of an attorney.
-        Normalize these values.
-        """
-        atty_cache = {}
-        for party in parties:
-            for atty in party.get(u'attorneys', []):
-                if not atty[u'contact']:
-                    continue
-
-                if re.search(r'see\s+above', atty[u'contact'], re.I):
-                    try:
-                        atty_info = atty_cache[atty[u'name']]
-                    except KeyError:
-                        # Unable to find the atty in the cache, therefore, we
-                        # don't know their contact info.
-                        atty[u'contact'] = u''
-                    else:
-                        # Found the atty in the cache. Use the info.
-                        atty[u'contact'] = atty_info
-                else:
-                    # We have atty info. Save it.
-                    atty_cache[atty[u'name']] = atty[u'contact']
-        return parties
 
     @property
     def docket_entries(self):
@@ -706,33 +786,6 @@ class DocketReport(BaseReport):
         judge_str = self._get_value(regex, self.metadata_values)
         if judge_str is not None:
             return normalize_judge_string(judge_str)[0]
-
-    def _get_value(self, regex, query_strings, cast_to_date=False):
-        """Find the matching value for a regex.
-
-        Iterate over a list of values and return group(1) for the first that
-        matches regex. If none matches, return the empty string.
-
-        If cast_to_date is True, convert the string to a date object.
-        """
-        if isinstance(query_strings, basestring):
-            query_strings = [query_strings]
-
-        for v in query_strings:
-            m = regex.search(v)
-            if m:
-                if cast_to_date:
-                    return convert_date_string(m.group(1))
-                hit = m.group(1)
-                if "date filed" not in hit.lower():
-                    # Safety check. Sometimes a match is made against the merged
-                    # text string, including its headers. This is wrong.
-                    return hit
-
-        if cast_to_date:
-            return None
-        else:
-            return ''
 
     @staticmethod
     def _br_split(element):
