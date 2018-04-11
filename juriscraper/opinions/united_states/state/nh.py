@@ -1,6 +1,7 @@
 #Scraper for New Hampshire Supreme Court
 #CourtID: nh
 #Court Short Name: NH
+#Court Contact: webmaster@courts.state.nh.us
 #Author: Andrei Chelaru
 #Reviewer: mlr
 #History:
