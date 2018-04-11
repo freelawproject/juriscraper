@@ -142,6 +142,9 @@ class InternetArchive(BaseDocketReport):
             roles = []
             role_str = self._xpath_text_0(atty_node, './attorney_role')
             for role in role_str.split('\n'):
+                role = role.strip()
+                if not role:
+                    continue
                 if not any([role.lower().startswith(u'bar status'),
                             role.lower().startswith(u'designation')]):
                     roles.append(role)
