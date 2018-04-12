@@ -174,8 +174,13 @@ class InternetArchive(BaseDocketReport):
             date_filed_str = self._xpath_text_0(de_node, './date_filed')
             if date_filed_str:
                 # Got a date. Set it, and save it for the next item.
-                de[u'date_filed'] = convert_date_string(date_filed_str)
-                prev_date_filed = de[u'date_filed']
+                try:
+                    de[u'date_filed'] = convert_date_string(date_filed_str)
+                except ValueError:
+                    # Fails for dates like 0000-00-00
+                    de[u'date_filed'] = None
+                else:
+                    prev_date_filed = de[u'date_filed']
             else:
                 # No date found.
                 if de.get(u'attachment_number'):
