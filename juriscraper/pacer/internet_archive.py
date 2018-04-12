@@ -110,9 +110,13 @@ class InternetArchive(BaseDocketReport):
         for prev, party_node, nxt in previous_and_next(party_nodes):
             pt = self._xpath_text_0(party_node, './type')
             extra_info = self._xpath_text_0(party_node, './extra_info')
+            name = self._xpath_text_0(party_node, './name')
+            if not name.strip():
+                # Happens in adversary proceedings? See cacb_1669936.xml.
+                continue
             party = {
                 u'type': normalize_party_types(pt),
-                u'name': party_node.xpath('./name/text()')[0],
+                u'name': name,
                 u'extra_info': extra_info,
             }
 
