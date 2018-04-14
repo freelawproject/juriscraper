@@ -32,10 +32,7 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.url = "http://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions"
         self.base_path = "//div[@id='dnn_ctr2509_ModuleContent']/ul/li/a"
-        self.next_page_path = "//a[@id='dnn_ctr2509_View_MyPageNav_cmdNext']"
         self.next_subpage_path = None
-        # dummy sequence to force one call to _download_backwards
-        self.back_scrape_iterable = ['dummy']
         self.cases = []
 
     def _download(self, request_dict={}):
@@ -62,7 +59,8 @@ class Site(OpinionSite):
             html_list = html_list[1:]
 
             # Loop over sub-pages
-            for ahref in html_l.xpath(self.base_path):
+            hrefs = html_l.xpath(self.base_path)
+            for ahref in hrefs:
                 date_string = ahref.xpath("./text()")[0]
                 url = ahref.xpath("./@href")[0]
                 date_obj = convert_date_string(date_string)
@@ -74,19 +72,15 @@ class Site(OpinionSite):
                 html_trees.append((html_tree, date_obj))
 
                 # process all sub-pages
-                if self.next_subpage_path is not None and self.method != 'LOCAL':
+                if self.next_subpage_path and self.method != 'LOCAL':
                     while True:
                         next_subpage_html = self.get_next_page(html_tree, self.next_subpage_path, request_dict, url)
                         if next_subpage_html is None:
                             break
+
                         self._extract_cases_from_sub_page(next_subpage_html, date_obj)
                         html_trees.append((next_subpage_html, date_obj))
                         html_tree = next_subpage_html
-
-            if self.method != 'LOCAL':
-                next_page_html = self.get_next_page(html_l, self.next_page_path, request_dict, self.url)
-                if next_page_html is not None:
-                    html_list.append(next_page_html)
 
         return html_trees
 
@@ -307,10 +301,3 @@ class Site(OpinionSite):
 
     def _get_nature_of_suit(self):
         return [case['nature'] for case in self.cases]
-
-    def _download_backwards(self, _):
-        # dummy backscraper parameter is ignored
-        # should be called only once as it parses the whole page
-        # and all sub-pages on every call
-        self.base_path = "//table//td[1]/ul/li/strong/a"
-        self.html = self._download()
