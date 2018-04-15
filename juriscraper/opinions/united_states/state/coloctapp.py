@@ -12,5 +12,4 @@ class Site(colo.Site):
         self.court_id = self.__module__
         self.url = "http://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Court-of-Appeals-Opinions"
         self.base_path = "//div[@id='dnn_ctr2514_ModuleContent']/ul/li/a"
-        self.next_page_path = "//a[@id='dnn_ctr2514_View_MyPageNav_cmdNext']"
         self.next_subpage_path = "//a[@id='dnn_ctr2517_DNNArticle_List_MyArticleList_MyPageNav_cmdNext']"

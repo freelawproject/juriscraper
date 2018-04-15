@@ -1,6 +1,7 @@
 """Scraper for the Supreme Court of Vermont
 CourtID: vt
 Court Short Name: VT
+Court Contact: submit form here https://www.vermontjudiciary.org/website-feedback-form
 Author: Brian W. Carver
 Date created: 18 Aug 2013
 Reviewer: Mike Lissner
