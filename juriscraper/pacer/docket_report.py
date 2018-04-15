@@ -146,6 +146,7 @@ class DocketReport(BaseDocketReport, BaseReport):
     case_name_str = r"(?:Case\s+title:\s+)?(.*\bv\.?\s.*)"
     case_name_regex = re.compile(case_name_str)
     case_name_i_regex = re.compile(case_name_str, flags=re.IGNORECASE)
+    case_title_regex = re.compile(r"(?:Case\s+title:\s+)(.*)", flags=re.IGNORECASE)
     in_re_regex = re.compile(r"(\bIN\s+RE:\s+.*)", flags=re.IGNORECASE)
     date_filed_regex = re.compile(r'Date [fF]iled:\s+(%s)' % date_regex)
     date_converted_regex = re.compile(r'Date [Cc]onverted:\s+(%s)' % date_regex)
@@ -740,20 +741,12 @@ class DocketReport(BaseDocketReport, BaseReport):
             # Skip the last value, it's a concat of all previous values and
             # isn't needed for case name matching.
             for v in self.metadata_values[:-1]:
-                m = self.case_name_regex.search(v)
-                if m:
-                    matches.append(m)
-                    continue
-
-                m = self.case_name_i_regex.search(v)
-                if m:
-                    matches.append(m)
-                    continue
-
-                in_re_m = self.in_re_regex.search(v)
-                if in_re_m:
-                    matches.append(in_re_m)
-                    continue
+                for regex in [self.case_name_regex, self.case_name_i_regex,
+                              self.case_title_regex, self.in_re_regex]:
+                    m = regex.search(v)
+                    if m:
+                        matches.append(m)
+                        break
 
             if len(matches) == 1:
                 case_name = matches[0].group(1)
