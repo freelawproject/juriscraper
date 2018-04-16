@@ -65,7 +65,7 @@ class AttachmentPage(BaseReport):
 
         first_row = rows.pop(0)
         result = {
-            'document_number': self._get_document_number(first_row),
+            'document_number': self._get_document_number(),
             'page_count': self._get_page_count_from_tr(first_row),
             'pacer_doc_id': self._get_pacer_doc_id(first_row),
             'pacer_case_id': self._get_pacer_case_id(),
@@ -88,7 +88,7 @@ class AttachmentPage(BaseReport):
 
         return result
 
-    def _get_document_number(self, row):
+    def _get_document_number(self):
         """Return the document number for an item.
 
         In district court attachment pages, this is easy to extract with an
@@ -98,7 +98,8 @@ class AttachmentPage(BaseReport):
             return None
         else:
             try:
-                return int(row.xpath('.//a/text()')[0].strip())
+                path = '//tr[contains(., "Document Number")]//a/text()'
+                return int(self.tree.xpath(path)[0].strip())
             except IndexError:
                 return None
 

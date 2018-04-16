@@ -1,0 +1,71 @@
+<html><head><title>CM/ECF - USDC Massachusetts - Version  6.1.1.2 as of 7/29/2017</title>
+<script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script><link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><link rel="stylesheet" type="text/css" href="/css/print.css" media="print"><script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script></head><body BGCOLOR=F5F5F5 TEXT=01359B onLoad='SetFocus()'><div class="noprint"><div id="topmenu" class="yuimenubar"><div class="bd"><img src="/graphics/cmecf-logo.gif" class="cmecfLogo" id="cmecfLogo" alt="CM/ECF" title="" /><img src="/graphics/menubar-help.gif" class="helpImage" id="helpImage" alt="?" title="" onMouseOver="CMECF.MainMenu.helpImageOn()" onMouseOut="CMECF.MainMenu.helpImageOff()" /><ul class="first-of-type"><li class="yuimenubaritem" style="width:11%"><a class="yuimenubaritemlabel" href="/cgi-bin/iquery.pl"><u>Q</u>uery</a></li><li class="yuimenubaritem" style="width:11%"><a class="yuimenubaritemlabel" href="/cgi-bin/DisplayMenu.pl?Reports"><u>R</u>eports</a></li><li class="yuimenubaritem" style="width:11%"><a class="yuimenubaritemlabel" href="/cgi-bin/DisplayMenu.pl?Utilities"><u>U</u>tilities</a></li><li class="yuimenubaritem" style="width:11%"><a class="yuimenubaritemlabel" href="/cgi-bin/login.pl?logout"><u>L</u>ogout</a></li></ul></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.createMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);}</script><div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript">
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;
+					while(document.forms[0].elements[Cnt] != null) {
+						try {
+							if(document.forms[0].elements[Cnt].type != "hidden" &&
+									!document.forms[0].elements[Cnt].disabled &&
+									!document.forms[0].elements[Cnt].readOnly) {
+								document.forms[0].elements[Cnt].focus();
+								break;
+							}
+						}
+						catch(e) {}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+
+			<p>&nbsp;&nbsp;<B>Document Selection Menu</B></p>
+		
+			<p>&nbsp;&nbsp;Select the document you wish to view.</p>
+			<script type="text/javascript">CMECF.MainMenu.alternateHelp="////show_multidocs.htm"</script>
+			<table width=600 cellpadding=4 cellspacing=3>
+		
+				<tr>
+					<td width=100 valign=top><a href="https://ecf.mad.uscourts.gov/doc1/09511786991" onClick="goDLS('/doc1/09511786991','94392','886','','1','1','','');return(false);">2</a></td>
+					<td width=240> Part 2</td>
+					<td width=400>21 pages</td>
+					<td width=600>417 kb</td>
+				</tr>
+			  
+				<tr>
+					<td width=100 valign=top><a href="https://ecf.mad.uscourts.gov/doc1/09511786993" onClick="goDLS('/doc1/09511786993','94392','886','','1','1','','');return(false);">3</a></td>
+					<td width=240> Part 3</td>
+					<td width=400>16 pages</td>
+					<td width=600>295 kb</td>
+				</tr>
+			  
+				<tr>
+					<td width=100 valign=top><a href="https://ecf.mad.uscourts.gov/doc1/09511786994" onClick="goDLS('/doc1/09511786994','94392','886','','1','1','','');return(false);">4</a></td>
+					<td width=240> Part4</td>
+					<td width=400>17 pages</td>
+					<td width=600>308 kb</td>
+				</tr>
+			  
+				<tr>
+					<td width=100 valign=top><a href="https://ecf.mad.uscourts.gov/doc1/09511899796" onClick="goDLS('/doc1/09511899796','94392','886','','1','1','','');return(false);">6</a></td>
+					<td width=240> Part 1</td>
+					<td width=400>26 pages</td>
+					<td width=600>448 kb</td>
+				</tr>
+			  <tr><td colspan='4'><hr></td></tr><tr><td colspan=2><input type='button' onClick="parent.location='/cgi-bin/show_multidocs.pl?caseid=94392&arr_de_seq_nums=886&magic_num=&pdf_header=1&hdr=&pdf_toggle_possible=1'" value='View All'>&nbsp;&nbsp;or&nbsp;&nbsp;<input type='button' onClick="parent.location='/cgi-bin/show_multidocs.pl?caseid=94392&arr_de_seq_nums=886&magic_num=&pdf_header=1&hdr=&pdf_toggle_possible=1&zipit=1'" value='Download All'></td><td>80 pages</td><td>  1.4 mb</td></tr></table></div></body></html>
