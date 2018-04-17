@@ -178,7 +178,7 @@ class DocketHistoryReport(DocketReport):
         else:
             regexes = [self.docket_number_dist_regex]
 
-        matches = []
+        matches = set()
         # Skip the last value, it's a concat of all previous values and
         # isn't needed for case name matching.
         for prev, v, nxt in previous_and_next(self.metadata_values[:-1]):
@@ -189,12 +189,13 @@ class DocketHistoryReport(DocketReport):
                 if match:
                     if self.is_bankruptcy:
                         return harmonize(v)
-                    for cn_regex in [self.case_name_regex, self.in_re_regex]:
+                    for cn_regex in [self.case_name_regex, self.case_name_i_regex,
+                                     self.in_re_regex, self.in_the_matter_regex]:
                         cn_match = cn_regex.match(v)
                         if cn_match:
-                            matches.append(cn_match)
+                            matches.add(cn_match.group(1))
         if len(matches) == 1:
-            case_name = matches[0].group(1)
+            case_name = list(matches)[0]
         else:
             case_name = u"Unknown Case Title"
         return harmonize(case_name)
