@@ -149,6 +149,10 @@ class DocketReport(BaseDocketReport, BaseReport):
     case_title_regex = re.compile(r"(?:Case\s+title:\s+)(.*)", flags=re.IGNORECASE)
     in_re_regex = re.compile(r"(\bIN\s+RE:\s+.*)", flags=re.IGNORECASE)
     in_the_matter_regex = re.compile(r"(\bIn\s+the\s+matter\s+.*)", flags=re.IGNORECASE)
+    case_name_regexes = [
+        case_name_regex, case_name_i_regex, case_title_regex, in_re_regex,
+        in_the_matter_regex,
+    ]
     date_filed_regex = re.compile(r'Date [fF]iled:\s+(%s)' % date_regex)
     date_converted_regex = re.compile(r'Date [Cc]onverted:\s+(%s)' % date_regex)
     # Be careful this does not match "Joint debtor discharged" field.
@@ -742,9 +746,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             # Skip the last value, it's a concat of all previous values and
             # isn't needed for case name matching.
             for v in self.metadata_values[:-1]:
-                for regex in [self.case_name_regex, self.case_name_i_regex,
-                              self.case_title_regex, self.in_re_regex,
-                              self.in_the_matter_regex]:
+                for regex in self.case_name_regexes:
                     m = regex.search(v)
                     if m:
                         matches.append(m)

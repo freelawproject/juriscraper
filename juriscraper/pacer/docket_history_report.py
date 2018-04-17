@@ -189,8 +189,7 @@ class DocketHistoryReport(DocketReport):
                 if match:
                     if self.is_bankruptcy:
                         return harmonize(v)
-                    for cn_regex in [self.case_name_regex, self.case_name_i_regex,
-                                     self.in_re_regex, self.in_the_matter_regex]:
+                    for cn_regex in self.case_name_regexes:
                         cn_match = cn_regex.match(v)
                         if cn_match:
                             matches.add(cn_match.group(1))
