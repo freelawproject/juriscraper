@@ -646,7 +646,7 @@ class InternetArchiveReportTest(unittest.TestCase):
 
 class PacerRssFeedTest(unittest.TestCase):
     def setUp(self):
-        self.maxDiff = 1000
+        self.maxDiff = 200000
 
     def test_parsing_results(self):
         """Can we do a simple query and parse?"""
