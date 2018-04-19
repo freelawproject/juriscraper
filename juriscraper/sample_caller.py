@@ -2,7 +2,8 @@ import signal
 import six
 import sys
 import traceback
-from six.moves.urllib import parse as urllib2
+from six.moves.urllib import parse as six_parse
+from six.moves.urllib import request as six_request
 from optparse import OptionParser
 
 from juriscraper.lib.importer import build_module_list, site_yielder
@@ -39,11 +40,11 @@ def scrape_court(site, binaries=False):
     """
     for item in site:
         # Percent encode URLs (this is a Python wart)
-        download_url = urllib2.quote(item['download_urls'], safe="%/:=&?~#+!$,;'@()*[]")
+        download_url = six_parse.quote(item['download_urls'], safe="%/:=&?~#+!$,;'@()*[]")
 
         if binaries:
             try:
-                opener = urllib2.build_opener()
+                opener = six_request.build_opener()
                 for cookie_dict in site.cookies:
                     opener.addheaders.append(("Cookie", "%s=%s" % (cookie_dict['name'], cookie_dict['value'])))
                 data = opener.open(download_url).read()
