@@ -3,6 +3,7 @@ argparse
 cchardet>=1.1.2
 certifi
 chardet
+feedparser
 geonamescache==0.20
 html5lib
 lxml==3.5.0
