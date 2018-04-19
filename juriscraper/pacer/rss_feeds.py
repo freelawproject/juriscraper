@@ -15,7 +15,7 @@ logger = make_default_logger()
 
 
 class PacerRssFeed(DocketReport):
-    document_number_regex = re.compile(r'\((\d+)\)')
+    document_number_regex = re.compile(r'">(\d+)</a>')
     doc1_url_regex = re.compile(r'href="(.*)"')
     short_desc_regex = re.compile(r'\[(.*?)\] \(')  # Matches 'foo': [ foo ] (
 
@@ -99,11 +99,10 @@ class PacerRssFeed(DocketReport):
                 self._get_value(self.short_desc_regex, entry.summary)),
         }
         doc1_url = self._get_value(self.doc1_url_regex, entry.summary)
-        if doc1_url.strip():
-            de[u'pacer_doc_id'] = get_pacer_doc_id_from_doc1_url(doc1_url)
-        else:
-            # No link for a pacer_doc_id; just abort.
+        if not all([doc1_url.strip(), de['document_number']]):
             return []
+
+        de[u'pacer_doc_id'] = get_pacer_doc_id_from_doc1_url(doc1_url)
 
         return [de]
 
