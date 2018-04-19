@@ -9,6 +9,7 @@ from lxml.html import html5parser, fromstring, tostring
 from lxml.html.clean import Cleaner
 from six import text_type
 from six.moves.urllib.parse import urlsplit, urlunsplit
+from six.moves.html_parser import HTMLParser
 
 try:
     # Use cchardet for performance to detect the character encoding.
@@ -65,6 +66,11 @@ def get_visible_text(html_content):
                                                                  parent::head |
                                                                  parent::script)]""")
     return " ".join(text)
+
+
+def html_unescape(s):
+    h = HTMLParser()
+    return h.unescape(s)
 
 
 def set_response_encoding(request):
