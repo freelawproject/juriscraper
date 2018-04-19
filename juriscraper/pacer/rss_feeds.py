@@ -13,10 +13,6 @@ from ..lib.string_utils import harmonize, clean_string
 
 logger = make_default_logger()
 
-# XXX - how are attachments handled?
-# xxx - These won't tell me the date filed for the docket. Can the data model
-#       even handle that? What to do?
-
 
 class PacerRssFeed(DocketReport):
     document_number_regex = re.compile(r'\((\d+)\)')
@@ -27,11 +23,6 @@ class PacerRssFeed(DocketReport):
 
     def __init__(self, court_id):
         super(PacerRssFeed, self).__init__(court_id)
-        self._clear_caches()
-        self._metadata = None
-        self._parties = None
-        self._docket_entries = None
-
         self.session = Session()
         self.is_valid = True
 
@@ -77,7 +68,8 @@ class PacerRssFeed(DocketReport):
             u'pacer_case_id': get_pacer_case_id_from_docket_url(entry.link),
             u'docket_number': self._get_docket_number(entry.title),
             u'case_name': self._get_case_name(entry.title),
-            u'date_filed': None,  # xxx ugh....
+            # Filing date is not available. Also the case for free opinions.
+            u'date_filed': None,
             u'date_terminated': None,
             u'date_converted': None,
             u'date_discharged': None,
@@ -94,7 +86,7 @@ class PacerRssFeed(DocketReport):
 
     @property
     def parties(self):
-        return None
+        raise NotImplementedError("No parties for RSS feeds.")
 
     def docket_entries(self, entry):
         """Parse the RSS item to get back a docket entry-like object"""
