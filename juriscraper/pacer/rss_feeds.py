@@ -122,7 +122,10 @@ class PacerRssFeed(DocketReport):
 
     def _get_case_name(self, title_text):
         # 1:18-cv-04423 Chau v. Gorg &amp; Smith et al --> Chau v. Gorg & Smith
-        case_name = title_text.split(' ', 1)[1]
+        try:
+            case_name = title_text.split(' ', 1)[1]
+        except IndexError:
+            return u"Unknown Case Title"
         case_name = html_unescape(case_name)
         case_name = clean_string(harmonize(case_name))
         return case_name
