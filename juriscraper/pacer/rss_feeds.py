@@ -34,7 +34,8 @@ class PacerRssFeed(DocketReport):
     def query(self, court_id):
         """Query the RSS feed for a given court ID"""
         logger.info(u"Querying the RSS feed for %s" % self.court_id)
-        self.response = self.session.get(self.url)
+        timeout = (60, 300)
+        self.response = self.session.get(self.url, timeout=timeout)
 
     def parse(self):
         self.response.raise_for_status()
