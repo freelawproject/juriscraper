@@ -31,7 +31,7 @@ class PacerRssFeed(DocketReport):
         else:
             self.is_bankruptcy = False
 
-    def query(self, court_id):
+    def query(self):
         """Query the RSS feed for a given court ID"""
         logger.info(u"Querying the RSS feed for %s" % self.court_id)
         timeout = (60, 300)
