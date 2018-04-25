@@ -31,6 +31,13 @@ class PacerRssFeed(DocketReport):
         else:
             self.is_bankruptcy = False
 
+    @property
+    def url(self):
+        if self.court_id == 'ilnb':
+            return "https://tdi.ilnb.uscourts.gov/wwwroot/RSS/rss_outside.xml"
+        else:
+            return "https://ecf.%s.uscourts.gov/%s" % (self.court_id, self.PATH)
+
     def query(self):
         """Query the RSS feed for a given court ID"""
         logger.info(u"Querying the RSS feed for %s" % self.court_id)
