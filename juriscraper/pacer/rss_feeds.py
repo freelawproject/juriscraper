@@ -13,6 +13,24 @@ from ..lib.string_utils import harmonize, clean_string
 
 logger = make_default_logger()
 
+"""
+As of 2018-04-25, these jurisdictions do not have functional RSS feeds:
+
+'miwb', 'nceb', 'nmib', 'alnd', 'caed', 'flnd', 'gand', 'gasd', 'hid', 'ilsd',
+'kyed', 'mdd', 'msnd', 'mtd', 'nvd', 'nywd', 'ndd', 'oked', 'oknd', 'pamd',
+'scd', 'tnwd', 'txnd', 'vaed'
+
+I reached out to all of these jurisdictions and heard back the following:
+
+ - vaed: "We are currently looking into this and will possibly have this 
+   feature in the near future."
+ - txnd: Left me a long voicemail. They're working on it and have it in 
+   committee. Expectation is that they may require an en banc meeting of the 
+   judges to make a decision, but that the decision should come soon and be 
+   positive.
+
+"""
+
 
 class PacerRssFeed(DocketReport):
     document_number_regex = re.compile(r'">(\d+)</a>')
