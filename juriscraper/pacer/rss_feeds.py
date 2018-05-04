@@ -57,7 +57,20 @@ class PacerRssFeed(DocketReport):
             return "https://ecf.%s.uscourts.gov/%s" % (self.court_id, self.PATH)
 
     def query(self):
-        """Query the RSS feed for a given court ID"""
+        """Query the RSS feed for a given court ID
+
+        Note that we use requests here, and so we forgo some of the useful
+        features that feedparser offers around the Etags and Last-Modified
+        headers. This is fine for now because no PACER site seems to support
+        these headers, but eventually we'll probably want to do better here. The
+        reason we *don't* use feedparser already is because it presents a
+        different set of APIs and Exceptions that we don't want to monkey with,
+        at least, not yet, and especially not yet if PACER itself doesn't seem
+        to care.
+
+        For a good summary of this issue, see:
+        https://github.com/freelawproject/juriscraper/issues/195#issuecomment-385848344
+        """
         logger.info(u"Querying the RSS feed for %s" % self.court_id)
         timeout = (60, 300)
         self.response = self.session.get(self.url, timeout=timeout)
