@@ -1,4 +1,5 @@
 import re
+import sys
 from datetime import date
 
 import feedparser
@@ -167,3 +168,16 @@ class PacerRssFeed(DocketReport):
         case_name = html_unescape(case_name)
         case_name = clean_string(harmonize(case_name))
         return case_name
+
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python -m juriscraper.pacer.rss_feeds [pacer_court_id]")
+        print("Please provide a valid PACER court id as your only argument")
+        sys.exit(1)
+    feed = PacerRssFeed(sys.argv[1])
+    print("Querying RSS feed at: %s" % feed.url)
+    feed.query()
+    print("Parsing RSS feed for %s" % feed.court_id)
+    feed.parse()
+    print("Got %s items" % len(feed.data))
