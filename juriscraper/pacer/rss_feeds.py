@@ -40,8 +40,12 @@ class PacerRssFeed(DocketReport):
 
     PATH = 'cgi-bin/rss_outside.pl'
 
+    CACHE_ATTRS = ['data']
+
     def __init__(self, court_id):
         super(PacerRssFeed, self).__init__(court_id)
+        self._clear_caches()
+        self._data = None
         self.session = Session()
         self.is_valid = True
 
@@ -77,6 +81,7 @@ class PacerRssFeed(DocketReport):
         self.response = self.session.get(self.url, timeout=timeout)
 
     def parse(self):
+        self._clear_caches()
         self.response.raise_for_status()
         self._parse_text(self.response.text)
 
@@ -93,6 +98,9 @@ class PacerRssFeed(DocketReport):
         """Override this to create a list of docket-like objects instead of the
          usual dict that is usually provided by the docket report.
         """
+        if self._data is not None:
+            return self._data
+
         data_list = []
         for entry in self.feed.entries:
             data = self.metadata(entry)
@@ -100,6 +108,7 @@ class PacerRssFeed(DocketReport):
             data[u'docket_entries'] = self.docket_entries(entry)
             if data[u'docket_entries']:
                 data_list.append(data)
+        self._data = data_list
         return data_list
 
     def metadata(self, entry):
