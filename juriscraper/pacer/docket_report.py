@@ -1,5 +1,7 @@
 # coding=utf-8
+import pprint
 import re
+import sys
 
 from dateutil.tz import gettz
 from lxml import etree
@@ -811,3 +813,17 @@ class DocketReport(BaseDocketReport, BaseReport):
         element = fromstring(html_text)
         text = force_unicode(' '.join(s for s in element.xpath('.//text()')))
         return [s.strip() for s in text.split(sep) if s]
+
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python -m juriscraper.pacer.docket_report filepath")
+        print("Please provide a path to an HTML file to parse.")
+        sys.exit(1)
+    report = DocketReport('cand')  # Court ID is only needed for querying.
+    filepath = sys.argv[1]
+    print("Parsing HTML file at %s" % filepath)
+    with open(filepath, 'r') as f:
+        text = f.read().decode('utf-8')
+    report._parse_text(text)
+    pprint.pprint(report.data, indent=2)
