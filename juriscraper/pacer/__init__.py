@@ -1,3 +1,4 @@
+from .appellate_docket import AppellateDocketReport
 from .attachment_page import AttachmentPage
 from .docket_history_report import DocketHistoryReport
 from .docket_report import DocketReport
@@ -9,4 +10,4 @@ from .rss_feeds import PacerRssFeed
 
 __all__ = [FreeOpinionReport, DocketReport, DocketHistoryReport,
            PossibleCaseNumberApi, AttachmentPage, ShowCaseDocApi, PacerSession,
-           InternetArchive, PacerRssFeed]
+           InternetArchive, PacerRssFeed, AppellateDocketReport]
