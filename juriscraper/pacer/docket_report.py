@@ -278,7 +278,25 @@ class DocketReport(BaseDocketReport, BaseReport):
                               'ATTORNEY TO BE NOTICED'],
                 }, {
                     ...more attorneys here...
-                }]
+                }],
+                'criminal_data': {
+                    'pending_counts': 'None',
+                    'highest_offense_level_opening': 'None',
+                    'highest_offense_level_terminated': 'Felony',
+                    'counts': [{
+                        'name': 'Attempted money laundering',
+                        'disposition': '',
+                        'status': 'pending',
+                    }, {
+                        'name': 'Theft of public property',
+                        'disposition': 'Dismissed on deft's motion',
+                        'status': 'terminated',
+                    }],
+                    'complaints': [{
+                        'name': '18 USC 1956',
+                        'disposition': '',
+                    }],
+                },
             }, {
                 ...more parties (and their attorneys) here...
             }]
