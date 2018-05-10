@@ -1,4 +1,5 @@
 # coding=utf-8
+import copy
 import pprint
 import re
 import sys
@@ -168,6 +169,11 @@ class DocketReport(BaseDocketReport, BaseReport):
     demand_regex = re.compile(r'^Demand:\s+(.*)')
     docket_number_dist_regex = re.compile(r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
     docket_number_bankr_regex = re.compile(r"(?:#:\s+)?((\d-)?\d\d-\d*)")
+    offense_regex = re.compile(
+        r'highest\s+offense.*(?P<status>opening|terminated)', flags=re.I)
+    counts_regex = re.compile(r'(?P<status>pending|terminated)\s+counts',
+                              flags=re.I)
+    complaints_regex = re.compile(r'(?P<status>complaints)', flags=re.I)
 
     PATH = 'cgi-bin/DktRpt.pl'
 
@@ -280,21 +286,7 @@ class DocketReport(BaseDocketReport, BaseReport):
                     ...more attorneys here...
                 }],
                 'criminal_data': {
-                    'highest_offense_level_opening': 'None',
-                    'highest_offense_level_terminated': 'Felony',
-                    'counts': [{
-                        'name': 'Attempted money laundering',
-                        'disposition': '',
-                        'status': 'pending',
-                    }, {
-                        'name': 'Theft of public property',
-                        'disposition': 'Dismissed on deft's motion',
-                        'status': 'terminated',
-                    }],
-                    'complaints': [{
-                        'name': '18 USC 1956',
-                        'disposition': '',
-                    }],
+                    ...See self._add_criminal_data_to_parties()...
                 },
             }, {
                 ...more parties (and their attorneys) here...
@@ -364,6 +356,12 @@ class DocketReport(BaseDocketReport, BaseReport):
                 party = {}
 
         parties = self._normalize_see_above_attorneys(parties)
+
+        # Do a second pass to get the criminal data if any and attach it to the
+        # correct party.
+        if not self.is_bankruptcy:
+            self._add_criminal_data_to_parties(parties, party_rows)
+
         self._parties = parties
         return parties
 
@@ -386,7 +384,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             # Empty or nearly empty row. Press on.
             return True
 
-        # Handling for CA cases that put non-party info in the party html
+        # Handling for criminal cases that put non-party info in the party html
         # table (see cand, 3:09-cr-00418).
         if cells[0].xpath('.//b/u'):
             if nxt is None or not nxt.xpath('.//b'):
@@ -438,6 +436,121 @@ class DocketReport(BaseDocketReport, BaseReport):
             return {u'type': u"Service List"}, False
         else:
             return party, False
+
+    def _add_criminal_data_to_parties(self, parties, party_rows):
+        """Iterate over the party rows, identify criminal data, and add it.
+
+        Final criminal data will look like:
+
+        'criminal_data': {
+            'highest_offense_level_opening': 'None',
+            'highest_offense_level_terminated': 'Felony',
+            'counts': [{
+                'name': 'Attempted money laundering',
+                'disposition': '',
+                'status': 'pending',
+            }, {
+                'name': 'Theft of public property',
+                'disposition': 'Dismissed on deft's motion',
+                'status': 'terminated',
+            }],
+            'complaints': [{
+                'name': '18 USC 1956',
+                'disposition': '',
+            }],
+        },
+
+        :param parties: The already-populated party dicts
+        :param party_rows: The trs with party/criminal data
+        :return: None
+        """
+        # Because criminal data spans multiple trs, the way we do this is by
+        # keeping track of which party we're currently working on. Then, when we
+        # get useful criminal data, we add it to that party.
+        empty_criminal_data = {
+            u'counts': [],
+            u'complaints': [],
+            u'highest_offense_level_opening': '',
+            u'highest_offense_level_terminated': ''
+        }
+        current_party_i = -1
+        criminal_data = copy.deepcopy(empty_criminal_data)
+        for prev, row, nxt in previous_and_next(party_rows):
+            cells = row.xpath('.//td')
+            if len(cells) == 0:
+                # Empty row. Press on.
+                continue
+            row_text = force_unicode(row.text_content()).strip().lower()
+            if not row_text or row_text == 'v.':
+                # Empty or nearly empty row. Press on.
+                continue
+
+            if len(cells) == 3:
+                cell_1_text = clean_string(cells[1].text_content())
+                if 'represented by' in cell_1_text:
+                    # Each time we see this, we know we're working on the next party
+                    # Increment the party index, so we know to whom we should
+                    # associate the criminal data.
+                    if criminal_data != empty_criminal_data:
+                        criminal_data = clean_pacer_object(criminal_data)
+                        parties[current_party_i]['criminal_data'] = criminal_data
+                    current_party_i += 1
+                    criminal_data = copy.deepcopy(empty_criminal_data)
+                    continue
+
+            if nxt is None:
+                # Last row. We don't need it. But check for this *after* we do
+                # our "represented by" check because the last row is often also
+                # the last party.
+                continue
+
+            cell_0_text = clean_string(cells[0].text_content())
+            cells_nxt = nxt.xpath('.//td')
+            offense_m = self.offense_regex.search(cell_0_text)
+            if offense_m:
+                offense_level = cells_nxt[0].text_content()
+                key = u'highest_offense_level_%s' % \
+                      offense_m.group('status').lower()
+                criminal_data[key] = offense_level
+                continue
+
+            counts_m = self.counts_regex.search(cell_0_text)
+            if counts_m:
+                try:
+                    disposition = cells_nxt[2].text_content()
+                except IndexError:
+                    # Sometimes, if there's no disposition, the cell itself is
+                    # missing.
+                    disposition = ''
+                count_name = cells_nxt[0].text_content().strip()
+                if count_name == u'None':
+                    # No counts here. (Happens with terminated ones a lot.)
+                    continue
+                criminal_data[u'counts'].append({
+                    u'name': count_name,
+                    u'disposition': disposition,
+                    u'status': counts_m.group('status').lower(),
+                })
+                continue
+
+            complaint_m = self.complaints_regex.search(cell_0_text)
+            if complaint_m:
+                try:
+                    disposition = cells_nxt[2].text_content()
+                except IndexError:
+                    # No disposition info.
+                    disposition = ''
+                complaint_name = cells_nxt[0].text_content()
+                if complaint_name == u'None':
+                    # No counts here. (Happens with terminated ones a lot.)
+                    continue
+                criminal_data[u'complaints'].append({
+                    u'name': complaint_name,
+                    u'disposition': disposition,
+                })
+
+        # if criminal_data != empty_criminal_data:
+        #     parties[current_party_i][u'criminal_data'] = criminal_data
 
     @staticmethod
     def _get_attorneys(cell):
