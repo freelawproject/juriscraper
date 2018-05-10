@@ -280,7 +280,6 @@ class DocketReport(BaseDocketReport, BaseReport):
                     ...more attorneys here...
                 }],
                 'criminal_data': {
-                    'pending_counts': 'None',
                     'highest_offense_level_opening': 'None',
                     'highest_offense_level_terminated': 'Felony',
                     'counts': [{
@@ -320,52 +319,13 @@ class DocketReport(BaseDocketReport, BaseReport):
         party = {}
         for prev, row, nxt in previous_and_next(party_rows):
             cells = row.xpath('.//td')
-            if len(cells) == 0:
-                # Empty row. Press on.
-                continue
-            row_text = force_unicode(row.text_content()).strip().lower()
-            if not row_text or row_text == 'v.':
-                # Empty or nearly empty row. Press on.
+            should_continue = self._test_for_early_continues(row, cells, nxt)
+            if should_continue:
                 continue
 
-            # Handling for CA cases that put non-party info in the party html
-            # table (see cand, 3:09-cr-00418).
-            if cells[0].xpath('.//b/u'):
-                if nxt is None or not nxt.xpath('.//b'):
-                    # If a header is followed by a cell that lacks bold text,
-                    # punt the header row.
-                    continue
-                if len(cells) == 3 and cells[2].text_content() == 'Disposition':
-                    # This row contains count/offense information. Punt it.
-                    continue
-            elif not row.xpath('.//b'):
-                # If a row has no bold text, we can punt it. The bold normally
-                # signifies the party's name, or the party type. This ignores
-                # the metadata under these sections.
+            party, should_continue = self._get_party_type(row, cells, party)
+            if should_continue:
                 continue
-
-            if len(cells) == 1 and cells[0].xpath('.//b/u'):
-                # Regular docket - party type value.
-                s = force_unicode(cells[0].text_content())
-                party = {u'type': normalize_party_types(s)}
-                continue
-            elif '------' in row_text:
-                # Adversary proceeding
-                s = force_unicode(cells[0].text_content().strip())
-                if len(cells) == 1:
-                    s = re.sub(u'----*', '', s)
-                    party = {u'type': normalize_party_types(s)}
-                    continue
-                elif len(cells) == 3:
-                    # Some courts have malformed HTML that requires extra work.
-                    party = {u'type': re.split(u'----*', s)[0]}
-            elif len(cells) == 3 and cells[0].xpath('.//i/b'):
-                # Bankruptcy - party type value.
-                s = force_unicode(cells[0].xpath(u'.//i')[0].text_content())
-                party = {u'type': normalize_party_types(s)}
-            elif len(cells) == 3 and u'service list' in row_text:
-                # Special case to handle the service list.
-                party = {u'type': u"Service List"}
 
             name_path = u'.//b[not(./parent::i)][not(./u)][not(contains(., "------"))]'
             is_party_name_cell = (len(cells[0].xpath(name_path)) > 0)
@@ -406,6 +366,78 @@ class DocketReport(BaseDocketReport, BaseReport):
         parties = self._normalize_see_above_attorneys(parties)
         self._parties = parties
         return parties
+
+    @staticmethod
+    def _test_for_early_continues(row, cells, nxt):
+        """Check for opportunities to skip the current row.
+
+        :param row: The tr that we're parsing.
+        :param cells: A list of tds within the row.
+        :param nxt: The next row after the current one, so we can look ahead in
+        it.
+        :returns bool: True if there's an opportunity to abort the current loop;
+        False if not.
+        """
+        if len(cells) == 0:
+            # Empty row. Press on.
+            return True
+        row_text = force_unicode(row.text_content()).strip().lower()
+        if not row_text or row_text == 'v.':
+            # Empty or nearly empty row. Press on.
+            return True
+
+        # Handling for CA cases that put non-party info in the party html
+        # table (see cand, 3:09-cr-00418).
+        if cells[0].xpath('.//b/u'):
+            if nxt is None or not nxt.xpath('.//b'):
+                # If a header is followed by a cell that lacks bold text,
+                # punt the header row.
+                return True
+            if len(cells) == 3 and cells[2].text_content() == 'Disposition':
+                # This row contains count/offense information. Punt it.
+                return True
+        elif not row.xpath('.//b'):
+            # If a row has no bold text, we can punt it. The bold normally
+            # signifies the party's name, or the party type. This ignores
+            # the metadata under these sections.
+            return True
+        return False
+
+    @staticmethod
+    def _get_party_type(row, cells, party):
+        """Get the party type info and return it as a dict.
+
+        :param row: The tr we're currently processing.
+        :param cells: The array of cells in the row.
+        :param party: The party dict as it existed before this iteration. If
+        no matches happen in this code, we just pass this through.
+        :returns A tuple of the party dict with just the type parameter
+        completed and a boolean indicating whether the calling function should
+        continue its loop.
+        """
+        row_text = force_unicode(row.text_content()).strip().lower()
+        if len(cells) == 1 and cells[0].xpath('.//b/u'):
+            # Regular docket - party type value.
+            s = force_unicode(cells[0].text_content())
+            return {u'type': normalize_party_types(s)}, True
+        elif '------' in row_text:
+            # Adversary proceeding
+            s = force_unicode(cells[0].text_content().strip())
+            if len(cells) == 1:
+                s = re.sub(u'----*', '', s)
+                return {u'type': normalize_party_types(s)}, True
+            elif len(cells) == 3:
+                # Some courts have malformed HTML that requires extra work.
+                return {u'type': re.split(u'----*', s)[0]}, False
+        elif len(cells) == 3 and cells[0].xpath('.//i/b'):
+            # Bankruptcy - party type value.
+            s = force_unicode(cells[0].xpath(u'.//i')[0].text_content())
+            return {u'type': normalize_party_types(s)}, False
+        elif len(cells) == 3 and u'service list' in row_text:
+            # Special case to handle the service list.
+            return {u'type': u"Service List"}, False
+        else:
+            return party, False
 
     @staticmethod
     def _get_attorneys(cell):
