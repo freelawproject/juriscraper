@@ -473,9 +473,14 @@ class DocketReport(BaseDocketReport, BaseReport):
             u'highest_offense_level_opening': '',
             u'highest_offense_level_terminated': ''
         }
+        section_info = {
+            'current_section': None,
+            'header_info': None,
+            'changed': False
+        }
         current_party_i = -1
         criminal_data = copy.deepcopy(empty_criminal_data)
-        for prev, row, nxt in previous_and_next(party_rows):
+        for row in party_rows:
             cells = row.xpath('.//td')
             if len(cells) == 0:
                 # Empty row. Press on.
@@ -493,54 +498,45 @@ class DocketReport(BaseDocketReport, BaseReport):
                     # associate the criminal data.
                     if criminal_data != empty_criminal_data:
                         criminal_data = clean_pacer_object(criminal_data)
-                        parties[current_party_i]['criminal_data'] = criminal_data
+                        parties[current_party_i][u'criminal_data'] = criminal_data
                     current_party_i += 1
                     criminal_data = copy.deepcopy(empty_criminal_data)
                     continue
 
-            if nxt is None:
-                # Last row. We don't need it. But check for this *after* we do
-                # our "represented by" check because the last row is often also
-                # the last party.
+            section_info = self._get_current_section(section_info, cells)
+            if section_info['changed']:
                 continue
 
-            cell_0_text = clean_string(cells[0].text_content())
-            cells_nxt = nxt.xpath('.//td')
-            offense_m = self.offense_regex.search(cell_0_text)
-            if offense_m:
-                offense_level = cells_nxt[0].text_content()
-                key = u'highest_offense_level_%s' % \
-                      offense_m.group('status').lower()
-                criminal_data[key] = offense_level
+            if section_info['current_section'] == 'highest_offense':
+                offense_level = cells[0].text_content()
+                criminal_data[section_info['header_info']] = offense_level
                 continue
 
-            counts_m = self.counts_regex.search(cell_0_text)
-            if counts_m:
+            if section_info['current_section'] == 'counts':
                 try:
-                    disposition = cells_nxt[2].text_content()
+                    disposition = cells[2].text_content()
                 except IndexError:
                     # Sometimes, if there's no disposition, the cell itself is
                     # missing.
                     disposition = ''
-                count_name = cells_nxt[0].text_content().strip()
+                count_name = cells[0].text_content().strip()
                 if count_name == u'None':
                     # No counts here. (Happens with terminated ones a lot.)
                     continue
                 criminal_data[u'counts'].append({
                     u'name': count_name,
                     u'disposition': disposition,
-                    u'status': counts_m.group('status').lower(),
+                    u'status': section_info['header_info'],
                 })
                 continue
 
-            complaint_m = self.complaints_regex.search(cell_0_text)
-            if complaint_m:
+            if section_info['current_section'] == 'complaints':
                 try:
-                    disposition = cells_nxt[2].text_content()
+                    disposition = cells[2].text_content()
                 except IndexError:
                     # No disposition info.
                     disposition = ''
-                complaint_name = cells_nxt[0].text_content()
+                complaint_name = cells[0].text_content()
                 if complaint_name == u'None':
                     # No counts here. (Happens with terminated ones a lot.)
                     continue
@@ -549,8 +545,59 @@ class DocketReport(BaseDocketReport, BaseReport):
                     u'disposition': disposition,
                 })
 
-        # if criminal_data != empty_criminal_data:
-        #     parties[current_party_i][u'criminal_data'] = criminal_data
+    def _get_current_section(self, current_section, cells):
+        """Get the current section for the row.
+
+        If the row contains a section header, then we return the new section
+        value. If not, then we return the current_section value (without
+        changing it).
+
+        :param current_section: The current section when this function is
+        started. This might just get passed through.
+        :param cells: The cells (tds) in the current row.
+        :returns dict with keys:
+          'current_section': the current section, if it has changed,
+          'header_info': any extra info that might be needed by the caller that
+                         we gather from the section header itself,
+          'changed': whether the section has changed, a boolean,
+        """
+        cell_0_text = clean_string(cells[0].text_content())
+        offense_m = self.offense_regex.search(cell_0_text)
+        if offense_m:
+            return {
+                'current_section': u'highest_offense',
+                'header_info': u'highest_offense_level_%s' %
+                               offense_m.group('status').lower(),
+                'changed': True,
+            }
+
+        counts_m = self.counts_regex.search(cell_0_text)
+        if counts_m:
+            return {
+                'current_section': u'counts',
+                'header_info': counts_m.group('status').lower(),
+                'changed': True,
+            }
+
+        complaint_m = self.complaints_regex.search(cell_0_text)
+        if complaint_m:
+            return {
+                'current_section': u'complaints',
+                'header_info': None,
+                'changed': True
+            }
+
+        if cells[0].xpath('./b/u'):
+            # it's a header we don't recognize like "Plaintiff". We can't hard
+            # code them all.
+            return {
+                'current_section': 'unknown',
+                'header_info': None,
+                'changed': True,
+            }
+
+        current_section['changed'] = False
+        return current_section
 
     @staticmethod
     def _get_attorneys(cell):
