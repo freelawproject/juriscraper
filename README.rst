@@ -259,10 +259,11 @@ Version History
 - 1.13.* - Fixes issues with Python build compatibility
 - 1.14.* - Adds new parser for PACER's docket history report
 - 1.15.* - Adds date termination parsing to parties on PACER dockets.
+- 1.16.* - Adds PACER RSS feed parsers.
 
 **Current**
 
-- 1.16.* - Adds PACER RSS feed parsers.
+- 1.17.* - Adds support for criminal data in PACER
 
 **Immediate Future Goals**
 
