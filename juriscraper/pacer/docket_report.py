@@ -373,8 +373,8 @@ class DocketReport(BaseDocketReport, BaseReport):
         :param cells: A list of tds within the row.
         :param nxt: The next row after the current one, so we can look ahead in
         it.
-        :returns bool: True if there's an opportunity to abort the current loop;
-        False if not.
+        :returns bool: True if there's an opportunity to continue to the next
+        iteration in the current loop; False if not.
         """
         if len(cells) == 0:
             # Empty row. Press on.
@@ -392,7 +392,8 @@ class DocketReport(BaseDocketReport, BaseReport):
                 # punt the header row.
                 return True
             if len(cells) == 3 and cells[2].text_content() == 'Disposition':
-                # This row contains count/offense information. Punt it.
+                # This row contains count/offense information. Skip it until
+                # criminal data is done in a second pass through the rows.
                 return True
         elif not row.xpath('.//b'):
             # If a row has no bold text, we can punt it. The bold normally
@@ -554,11 +555,11 @@ class DocketReport(BaseDocketReport, BaseReport):
 
         :param current_section: The current section when this function is
         started. This might just get passed through.
-        :param cells: The cells (tds) in the current row.
+        :param cells: The cells (tds) in the current row as a list
         :returns dict with keys:
-          'current_section': the current section, if it has changed,
+          'current_section': the current section name
           'header_info': any extra info that might be needed by the caller that
-                         we gather from the section header itself,
+                         we gather from the section header itself
           'changed': whether the section has changed, a boolean,
         """
         cell_0_text = clean_string(cells[0].text_content())
