@@ -1,3 +1,4 @@
+import pprint
 import re
 import sys
 from datetime import date
@@ -106,7 +107,7 @@ class PacerRssFeed(DocketReport):
             data = self.metadata(entry)
             data[u'parties'] = None
             data[u'docket_entries'] = self.docket_entries(entry)
-            if data[u'docket_entries']:
+            if data[u'docket_entries'] and data['docket_number']:
                 data_list.append(data)
         self._data = data_list
         return data_list
