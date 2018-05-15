@@ -481,7 +481,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         }
         current_party_i = -1
         criminal_data = copy.deepcopy(empty_criminal_data)
-        for row in party_rows:
+        for prev, row, nxt in previous_and_next(party_rows):
             cells = row.xpath('.//td')
             if len(cells) == 0:
                 # Empty row. Press on.
@@ -491,18 +491,30 @@ class DocketReport(BaseDocketReport, BaseReport):
                 # Empty or nearly empty row. Press on.
                 continue
 
-            if len(cells) == 3:
-                cell_1_text = clean_string(cells[1].text_content())
-                if 'represented by' in cell_1_text:
-                    # Each time we see this, we know we're working on the next party
-                    # Increment the party index, so we know to whom we should
-                    # associate the criminal data.
-                    if criminal_data != empty_criminal_data:
-                        criminal_data = clean_pacer_object(criminal_data)
-                        parties[current_party_i][u'criminal_data'] = criminal_data
-                    current_party_i += 1
-                    criminal_data = copy.deepcopy(empty_criminal_data)
-                    continue
+            is_represented_by_row = len(cells) == 3 and \
+                'represented by' in clean_string(cells[1].text_content())
+            # A row representing a party without representation. ID it by
+            # looking for bold underlined text in this row followed by bold
+            # text in the next row.
+            is_special_party_type_row = all([
+                len(cells) == 1,
+                cells[0].xpath('.//b/u'),
+                nxt is not None and nxt.xpath('.//b') and
+                'represented by' not in clean_string(nxt.text_content())
+            ])
+            if any([is_represented_by_row, is_special_party_type_row]):
+                # If we hit a "represented by" row or a row that looks like a
+                # party type row, we know we've moved to the next party.
+                # Increment the party index, so we know to whom we should
+                # associate the criminal data.
+                if criminal_data != empty_criminal_data:
+                    criminal_data = clean_pacer_object(criminal_data)
+                    parties[current_party_i][u'criminal_data'] = criminal_data
+                current_party_i += 1
+                # Reset section info and criminal data.
+                criminal_data = copy.deepcopy(empty_criminal_data)
+                self._values_to_none(section_info)
+                continue
 
             section_info = self._get_current_section(section_info, cells)
             if section_info['changed']:
@@ -545,6 +557,12 @@ class DocketReport(BaseDocketReport, BaseReport):
                     u'name': complaint_name,
                     u'disposition': disposition,
                 })
+
+    @staticmethod
+    def _values_to_none(d):
+        """Set the values for a dictionary all to None"""
+        for k in d.keys():
+            d[k] = None
 
     def _get_current_section(self, current_section, cells):
         """Get the current section for the row.
