@@ -1,11 +1,13 @@
 import pprint
+import re
 import sys
 
 from lxml.html import HtmlElement
 
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
-from .utils import clean_pacer_object
+from .utils import clean_pacer_object, get_court_id_from_url
+from ..lib.judge_parsers import normalize_judge_string
 from ..lib.string_utils import clean_string, convert_date_string, harmonize
 from ..lib.utils import previous_and_next
 
@@ -18,7 +20,10 @@ def re_xpath(self, path):
 HtmlElement.re_xpath = re_xpath
 
 
-class AppellateDocketReport(BaseDocketReport, BaseReport):
+class AppellateDocketReport(BaseDocketReport, BaseReport, ):
+    docket_number_dist_regex = re.compile(
+        r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
+
     PATH = 'xxx'  # xxx for self.query
     CACHE_ATTRS = ['metadata', 'parties', 'docket_entries']
 
@@ -70,6 +75,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             u'date_filed': self._get_tail_by_regex('Docketed', True),
             u'date_terminated': self._get_tail_by_regex('Termed', True),
             u'case_type_information': self._get_case_type_info(),
+            u'originating_court_information': self._get_originating_court_info(),
         }
         data = clean_pacer_object(data)
         self._metadata = data
@@ -168,6 +174,40 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             if not any([tail == 'None', tail == 'null', tail == '-']):
                 case_info.append(node.tail)
         return ', '.join(case_info)
+
+    def _get_originating_court_info(self):
+        """Get all of the originating type information as a dict."""
+        ogc_table = self.tree.re_xpath('//*[re:match(text(), "Originating Court Information")]/ancestor::table[1]')[0]
+        ogc_info = {}
+        docket_number_str = ogc_table.xpath('.//a/text()')[0]
+        m = self.docket_number_dist_regex.search(docket_number_str)
+        if m:
+            ogc_info['docket_number'] = m.group(1)
+
+        og_court_url = ogc_table.xpath('.//a/@href')[0]
+        ogc_info['court_id'] = get_court_id_from_url(og_court_url)
+
+        judge_str = self._get_tail_by_regex('Trial Judge')
+        if judge_str:
+            ogc_info['assigned_to'] = normalize_judge_string(judge_str)[0]
+
+        ogc_info['court_reporter'] = self._get_tail_by_regex('Court Reporter')
+        ogc_info['date_filed'] = self._get_tail_by_regex('Date Filed', True)
+
+        date_labels = ogc_table.xpath('.//tr[last() - 1]/td//text()')
+        dates = ogc_table.xpath('.//tr[last()]/td//text()')
+        for label, date in zip(date_labels, dates):
+            label = clean_string(label)
+            date = convert_date_string(clean_string(date))
+            if label == 'Date Order/Judgment:':
+                ogc_info['date_judgment'] = date
+            if label == 'Date Order/Judgment EOD:':
+                ogc_info['date_judgment_eod'] = date
+            if label == 'Date NOA Filed:':
+                ogc_info['date_filed_noa'] = date
+            if label == "Date Rec'd COA:":
+                ogc_info['date_received_coa'] = date
+        return ogc_info
 
     def _get_tail_by_regex(self, regex, cast_to_date=False):
         """Search all text nodes for a string that matches the regex, then
