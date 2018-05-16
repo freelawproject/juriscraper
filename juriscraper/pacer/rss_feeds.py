@@ -184,19 +184,31 @@ class PacerRssFeed(DocketReport):
 
 def _main():
     if len(sys.argv) < 2:
-        print("Usage: python -m juriscraper.pacer.rss_feeds [pacer_court_id] "
+        print("Usage: "
+              "python -m juriscraper.pacer.rss_feeds [pacer_court_id] "
               "[verbose]")
         print("Please provide a valid PACER court id as your only argument")
         sys.exit(1)
+    if sys.argv[1] == '-':
+        # Let's use stdin!
+
+        # Not a court, not 4 chars, will confuse bankruptcy check.
+        feed = PacerRssFeed('stdin')
+        print("Faking up RSS feed from stdin")
+        # "not url: (%s,%s,%s)" % (__package__, __file__, feed.url)
+        f = sys.stdin
+        feed._parse_text(f.read().decode('utf-8'))
+    else:
         feed = PacerRssFeed(sys.argv[1])
         print("Querying RSS feed at: %s" % feed.url)
         feed.query()
         print("Parsing RSS feed for %s" % feed.court_id)
         feed.parse()
-        print("Got %s items" % len(feed.data))
-        if len(sys.argv) == 3 and sys.argv[2] == 'verbose':
-            print("Here they are:\n")
-            pprint.pprint(feed.data, indent=2)
+
+    print("Got %s items" % len(feed.data))
+    if len(sys.argv) == 3 and sys.argv[2] == 'verbose':
+        print("Here they are:\n")
+        pprint.pprint(feed.data, indent=2)
 
 
 if __name__ == "__main__":
