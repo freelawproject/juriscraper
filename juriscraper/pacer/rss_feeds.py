@@ -44,7 +44,7 @@ class PacerRssFeed(DocketReport):
     # We use three simple matches rather than a complex one with three groups.
     document_number_regex = re.compile(r'">(\d+)</a>')
     doc1_url_regex = re.compile(r'href="(.*)"')
-    short_desc_regex = re.compile(r'\[(.*?)\] \(')
+    short_desc_regex = re.compile(r'\[(.*?)\]')
 
     PATH = 'cgi-bin/rss_outside.pl'
 
