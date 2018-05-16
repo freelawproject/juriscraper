@@ -12,6 +12,7 @@ from .utils import clean_pacer_object, get_pacer_case_id_from_docket_url, \
 from ..lib.html_utils import html_unescape
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import harmonize, clean_string
+from ..lib.utils import previous_and_next
 
 logger = make_default_logger()
 
@@ -115,12 +116,11 @@ class PacerRssFeed(DocketReport):
             return all(matching_fields)
 
         data_list = []
-        prevdata = None
-        preventry = None
-        for entry in self.feed.entries:
+        for preventry, entry, nextentry in previous_and_next(self.feed.entries):
             data = self.metadata(entry)
 
             de = self.docket_entries(entry)
+            prevdata = data_list[-1] if len(data_list) else None
             # If this entry and the immediately prior entry match
             # in metadata, then add the current description to
             # the previous entry's and continue the loop.
@@ -140,9 +140,6 @@ class PacerRssFeed(DocketReport):
             data[u'docket_entries'] = self.docket_entries(entry)
             if data[u'docket_entries'] and data[u'docket_number']:
                 data_list.append(data)
-
-            preventry = entry
-            prevdata = data
 
         self._data = data_list
         return data_list
