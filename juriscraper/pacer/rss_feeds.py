@@ -109,6 +109,11 @@ class PacerRssFeed(DocketReport):
         if self._data is not None:
             return self._data
 
+        def twin_entries(a, b):
+            fields = ['title', 'link', 'id', 'published']
+            matching_fields = (a[f] == b[f] for f in fields)
+            return all(matching_fields)
+
         data_list = []
         prevdata = None
         preventry = None
@@ -122,10 +127,7 @@ class PacerRssFeed(DocketReport):
             if (
                     preventry and
                     prevdata[u'docket_entries'] and
-                    entry.title == preventry.title and
-                    entry.link == preventry.link and
-                    entry.id == preventry.id and
-                    entry.published == preventry.published and
+                    twin_entries(entry, preventry) and
                     len(de) > 0  # xxx
             ):
                 # xxx we rely on the fact that there's only ever one
