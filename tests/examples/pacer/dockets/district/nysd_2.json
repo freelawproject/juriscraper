@@ -8,12 +8,25 @@
   "date_filed": "2018-04-13", 
   "date_terminated": null, 
   "demand": "", 
-  "docket_entries": [], 
+  "docket_entries": [
+    {
+      "date_filed": "2018-04-13", 
+      "description": "MEMORANDUM OF LAW in Opposition to Michael Cohen's Motion for a Temporary Restraining Order by USA as to UNITED STATES OF AMERICA. (vb) (Entered: 04/13/2018)", 
+      "document_number": "1", 
+      "pacer_doc_id": "127022241322"
+    }
+  ], 
   "docket_number": "1:18-mj-03161", 
   "jurisdiction": "", 
   "jury_demand": "", 
   "nature_of_suit": "", 
   "parties": [
+    {
+      "date_terminated": null, 
+      "extra_info": "(Ret.)", 
+      "name": "Hon.  Barbara S. Jones", 
+      "type": "Special Master"
+    }, 
     {
       "attorneys": [
         {
@@ -61,10 +74,33 @@
     {
       "attorneys": [
         {
-          "contact": "Spears & Imes LLP\n51 Madison Avenue\nNew York, NY 10010\n(212) 213-6553\nFax: (212) 213-0849\nEmail: jhendon@spearsimes.com\n", 
-          "name": "Joanna C Hendon", 
+          "contact": "Eagan O'malley & Avenatti, LLP\n450 Newport Center Drive, 2nd Floor\nNewport Beach, CA 92660\n(949)-706-7000\nFax: (949)-706-7050\nEmail: mavenatti@eoalaw.com\n", 
+          "name": "Michael J Avenatti", 
           "roles": [
             "LEAD ATTORNEY", 
+            "ATTORNEY TO BE NOTICED"
+          ]
+        }
+      ], 
+      "date_terminated": null, 
+      "extra_info": "", 
+      "name": "Stephanie Clifford", 
+      "type": "Interested Party"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "Spears & Imes LLP\n51 Madison Avenue\nNew York, NY 10010\n(212) 213-6996\nFax: (212) 213-0849\nEmail: jhendon@spearsimes.com\n", 
+          "name": "Joanna Calne Hendon", 
+          "roles": [
+            "LEAD ATTORNEY", 
+            "ATTORNEY TO BE NOTICED"
+          ]
+        }, 
+        {
+          "contact": "Spears & Imes, L.L.P.\n51 Madison Avenue\nNew York, NY 10010\n(212)-213-6833\nFax: (212)-213-0849\nEmail: cdysard@spearsimes.com\n", 
+          "name": "Christopher William Dysard", 
+          "roles": [
             "ATTORNEY TO BE NOTICED"
           ]
         }
@@ -76,6 +112,37 @@
     }, 
     {
       "attorneys": [
+        {
+          "contact": "Law Offices of Alan S. Futerfas\n565 Fifth Avenue, 7th Floor\nNew York, NY 10016\n212-684-8400\nFax: 212-684-5259\nEmail: asfuterfas@futerfaslaw.com\n", 
+          "name": "Alan Samuel Futerfas", 
+          "roles": [
+            "LEAD ATTORNEY", 
+            "ATTORNEY TO BE NOTICED"
+          ]
+        }, 
+        {
+          "contact": "Law Offices of Alan S. Futerfas\n565 Fifth Ave\nSeventh Floor\nNew York, NY 10016\n(212) 684-8400\nFax: (212)-684-5259\nEmail: ebresnick@futerfaslaw.com\n", 
+          "name": "Ellen Beth Resnick", 
+          "roles": [
+            "ATTORNEY TO BE NOTICED"
+          ]
+        }
+      ], 
+      "date_terminated": null, 
+      "extra_info": "", 
+      "name": "The Trump Organization", 
+      "type": "Intervenor"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "United States Attorney's Office, SDNY\nOne Saint Andrew's Plaza\nNew York, NY 10007\n(212)-637-1205\nFax: (212)-637-2443\nEmail: andrea.griswold@usdoj.gov\n", 
+          "name": "Andrea Michelle Griswold", 
+          "roles": [
+            "LEAD ATTORNEY", 
+            "ATTORNEY TO BE NOTICED"
+          ]
+        }, 
         {
           "contact": "United States Attorney's Office, SDNY\nOne Saint Andrew's Plaza\nNew York, NY 10007\n(212)-637-2421\nEmail: nicolas.roos@usdoj.gov\n", 
           "name": "Nicolas Tyler Landsman-Roos", 

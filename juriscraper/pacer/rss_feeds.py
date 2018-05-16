@@ -1,3 +1,4 @@
+import pprint
 import re
 import sys
 from datetime import date
@@ -106,7 +107,7 @@ class PacerRssFeed(DocketReport):
             data = self.metadata(entry)
             data[u'parties'] = None
             data[u'docket_entries'] = self.docket_entries(entry)
-            if data[u'docket_entries']:
+            if data[u'docket_entries'] and data['docket_number']:
                 data_list.append(data)
         self._data = data_list
         return data_list
@@ -180,8 +181,9 @@ class PacerRssFeed(DocketReport):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python -m juriscraper.pacer.rss_feeds [pacer_court_id]")
+    if len(sys.argv) < 2:
+        print("Usage: python -m juriscraper.pacer.rss_feeds [pacer_court_id] "
+              "[verbose]")
         print("Please provide a valid PACER court id as your only argument")
         sys.exit(1)
     feed = PacerRssFeed(sys.argv[1])
@@ -190,3 +192,6 @@ if __name__ == "__main__":
     print("Parsing RSS feed for %s" % feed.court_id)
     feed.parse()
     print("Got %s items" % len(feed.data))
+    if len(sys.argv) == 3 and sys.argv[2] == 'verbose':
+        print("Here they are:\n")
+        pprint.pprint(feed.data, indent=2)

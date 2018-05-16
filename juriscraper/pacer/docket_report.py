@@ -1,5 +1,8 @@
 # coding=utf-8
+import copy
+import pprint
 import re
+import sys
 
 from dateutil.tz import gettz
 from lxml import etree
@@ -166,6 +169,11 @@ class DocketReport(BaseDocketReport, BaseReport):
     demand_regex = re.compile(r'^Demand:\s+(.*)')
     docket_number_dist_regex = re.compile(r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
     docket_number_bankr_regex = re.compile(r"(?:#:\s+)?((\d-)?\d\d-\d*)")
+    offense_regex = re.compile(
+        r'highest\s+offense.*(?P<status>opening|terminated)', flags=re.I)
+    counts_regex = re.compile(r'(?P<status>pending|terminated)\s+counts',
+                              flags=re.I)
+    complaints_regex = re.compile(r'(?P<status>complaints)', flags=re.I)
 
     PATH = 'cgi-bin/DktRpt.pl'
 
@@ -276,7 +284,10 @@ class DocketReport(BaseDocketReport, BaseReport):
                               'ATTORNEY TO BE NOTICED'],
                 }, {
                     ...more attorneys here...
-                }]
+                }],
+                'criminal_data': {
+                    ...See self._add_criminal_data_to_parties()...
+                },
             }, {
                 ...more parties (and their attorneys) here...
             }]
@@ -300,52 +311,13 @@ class DocketReport(BaseDocketReport, BaseReport):
         party = {}
         for prev, row, nxt in previous_and_next(party_rows):
             cells = row.xpath('.//td')
-            if len(cells) == 0:
-                # Empty row. Press on.
-                continue
-            row_text = force_unicode(row.text_content()).strip().lower()
-            if not row_text or row_text == 'v.':
-                # Empty or nearly empty row. Press on.
+            should_continue = self._test_for_early_continues(row, cells, nxt)
+            if should_continue:
                 continue
 
-            # Handling for CA cases that put non-party info in the party html
-            # table (see cand, 3:09-cr-00418).
-            if cells[0].xpath('.//b/u'):
-                if nxt is None or not nxt.xpath('.//b'):
-                    # If a header is followed by a cell that lacks bold text,
-                    # punt the header row.
-                    continue
-                if len(cells) == 3 and cells[2].text_content() == 'Disposition':
-                    # This row contains count/offense information. Punt it.
-                    continue
-            elif not row.xpath('.//b'):
-                # If a row has no bold text, we can punt it. The bold normally
-                # signifies the party's name, or the party type. This ignores
-                # the metadata under these sections.
+            party, should_continue = self._get_party_type(row, cells, party)
+            if should_continue:
                 continue
-
-            if len(cells) == 1 and cells[0].xpath('.//b/u'):
-                # Regular docket - party type value.
-                s = force_unicode(cells[0].text_content())
-                party = {u'type': normalize_party_types(s)}
-                continue
-            elif '------' in row_text:
-                # Adversary proceeding
-                s = force_unicode(cells[0].text_content().strip())
-                if len(cells) == 1:
-                    s = re.sub(u'----*', '', s)
-                    party = {u'type': normalize_party_types(s)}
-                    continue
-                elif len(cells) == 3:
-                    # Some courts have malformed HTML that requires extra work.
-                    party = {u'type': re.split(u'----*', s)[0]}
-            elif len(cells) == 3 and cells[0].xpath('.//i/b'):
-                # Bankruptcy - party type value.
-                s = force_unicode(cells[0].xpath(u'.//i')[0].text_content())
-                party = {u'type': normalize_party_types(s)}
-            elif len(cells) == 3 and u'service list' in row_text:
-                # Special case to handle the service list.
-                party = {u'type': u"Service List"}
 
             name_path = u'.//b[not(./parent::i)][not(./u)][not(contains(., "------"))]'
             is_party_name_cell = (len(cells[0].xpath(name_path)) > 0)
@@ -384,8 +356,267 @@ class DocketReport(BaseDocketReport, BaseReport):
                 party = {}
 
         parties = self._normalize_see_above_attorneys(parties)
+
+        # Do a second pass to get the criminal data if any and attach it to the
+        # correct party.
+        if not self.is_bankruptcy:
+            self._add_criminal_data_to_parties(parties, party_rows)
+
         self._parties = parties
         return parties
+
+    @staticmethod
+    def _test_for_early_continues(row, cells, nxt):
+        """Check for opportunities to skip the current row.
+
+        :param row: The tr that we're parsing.
+        :param cells: A list of tds within the row.
+        :param nxt: The next row after the current one, so we can look ahead in
+        it.
+        :returns bool: True if there's an opportunity to continue to the next
+        iteration in the current loop; False if not.
+        """
+        if len(cells) == 0:
+            # Empty row. Press on.
+            return True
+        row_text = force_unicode(row.text_content()).strip().lower()
+        if not row_text or row_text == 'v.':
+            # Empty or nearly empty row. Press on.
+            return True
+
+        # Handling for criminal cases that put non-party info in the party html
+        # table (see cand, 3:09-cr-00418).
+        if cells[0].xpath('.//b/u'):
+            if nxt is None or not nxt.xpath('.//b'):
+                # If a header is followed by a cell that lacks bold text,
+                # punt the header row.
+                return True
+            if len(cells) == 3 and cells[2].text_content() == 'Disposition':
+                # This row contains count/offense information. Skip it until
+                # criminal data is done in a second pass through the rows.
+                return True
+        elif not row.xpath('.//b'):
+            # If a row has no bold text, we can punt it. The bold normally
+            # signifies the party's name, or the party type. This ignores
+            # the metadata under these sections.
+            return True
+        return False
+
+    @staticmethod
+    def _get_party_type(row, cells, party):
+        """Get the party type info and return it as a dict.
+
+        :param row: The tr we're currently processing.
+        :param cells: The array of cells in the row.
+        :param party: The party dict as it existed before this iteration. If
+        no matches happen in this code, we just pass this through.
+        :returns A tuple of the party dict with just the type parameter
+        completed and a boolean indicating whether the calling function should
+        continue its loop.
+        """
+        row_text = force_unicode(row.text_content()).strip().lower()
+        if len(cells) == 1 and cells[0].xpath('.//b/u'):
+            # Regular docket - party type value.
+            s = force_unicode(cells[0].text_content())
+            return {u'type': normalize_party_types(s)}, True
+        elif '------' in row_text:
+            # Adversary proceeding
+            s = force_unicode(cells[0].text_content().strip())
+            if len(cells) == 1:
+                s = re.sub(u'----*', '', s)
+                return {u'type': normalize_party_types(s)}, True
+            elif len(cells) == 3:
+                # Some courts have malformed HTML that requires extra work.
+                return {u'type': re.split(u'----*', s)[0]}, False
+        elif len(cells) == 3 and cells[0].xpath('.//i/b'):
+            # Bankruptcy - party type value.
+            s = force_unicode(cells[0].xpath(u'.//i')[0].text_content())
+            return {u'type': normalize_party_types(s)}, False
+        elif len(cells) == 3 and u'service list' in row_text:
+            # Special case to handle the service list.
+            return {u'type': u"Service List"}, False
+        else:
+            return party, False
+
+    def _add_criminal_data_to_parties(self, parties, party_rows):
+        """Iterate over the party rows, identify criminal data, and add it.
+
+        Final criminal data will look like:
+
+        'criminal_data': {
+            'highest_offense_level_opening': 'None',
+            'highest_offense_level_terminated': 'Felony',
+            'counts': [{
+                'name': 'Attempted money laundering',
+                'disposition': '',
+                'status': 'pending',
+            }, {
+                'name': 'Theft of public property',
+                'disposition': 'Dismissed on deft's motion',
+                'status': 'terminated',
+            }],
+            'complaints': [{
+                'name': '18 USC 1956',
+                'disposition': '',
+            }],
+        },
+
+        :param parties: The already-populated party dicts
+        :param party_rows: The trs with party/criminal data
+        :return: None
+        """
+        # Because criminal data spans multiple trs, the way we do this is by
+        # keeping track of which party we're currently working on. Then, when we
+        # get useful criminal data, we add it to that party.
+        empty_criminal_data = {
+            u'counts': [],
+            u'complaints': [],
+            u'highest_offense_level_opening': '',
+            u'highest_offense_level_terminated': ''
+        }
+        section_info = {
+            'current_section': None,
+            'header_info': None,
+            'changed': False
+        }
+        current_party_i = -1
+        criminal_data = copy.deepcopy(empty_criminal_data)
+        for prev, row, nxt in previous_and_next(party_rows):
+            cells = row.xpath('.//td')
+            if len(cells) == 0:
+                # Empty row. Press on.
+                continue
+            row_text = force_unicode(row.text_content()).strip().lower()
+            if not row_text or row_text == 'v.':
+                # Empty or nearly empty row. Press on.
+                continue
+
+            is_represented_by_row = len(cells) == 3 and \
+                'represented by' in clean_string(cells[1].text_content())
+            # A row representing a party without representation. ID it by
+            # looking for bold underlined text in this row followed by bold
+            # text in the next row.
+            is_special_party_type_row = all([
+                len(cells) == 1,
+                cells[0].xpath('.//b/u'),
+                nxt is not None and nxt.xpath('.//b') and
+                'represented by' not in clean_string(nxt.text_content())
+            ])
+            if any([is_represented_by_row, is_special_party_type_row]):
+                # If we hit a "represented by" row or a row that looks like a
+                # party type row, we know we've moved to the next party.
+                # Increment the party index, so we know to whom we should
+                # associate the criminal data.
+                if criminal_data != empty_criminal_data:
+                    criminal_data = clean_pacer_object(criminal_data)
+                    parties[current_party_i][u'criminal_data'] = criminal_data
+                current_party_i += 1
+                # Reset section info and criminal data.
+                criminal_data = copy.deepcopy(empty_criminal_data)
+                self._values_to_none(section_info)
+                continue
+
+            section_info = self._get_current_section(section_info, cells)
+            if section_info['changed']:
+                continue
+
+            if section_info['current_section'] == 'highest_offense':
+                offense_level = cells[0].text_content()
+                criminal_data[section_info['header_info']] = offense_level
+                continue
+
+            if section_info['current_section'] == 'counts':
+                try:
+                    disposition = cells[2].text_content()
+                except IndexError:
+                    # Sometimes, if there's no disposition, the cell itself is
+                    # missing.
+                    disposition = ''
+                count_name = cells[0].text_content().strip()
+                if count_name == u'None':
+                    # No counts here. (Happens with terminated ones a lot.)
+                    continue
+                criminal_data[u'counts'].append({
+                    u'name': count_name,
+                    u'disposition': disposition,
+                    u'status': section_info['header_info'],
+                })
+                continue
+
+            if section_info['current_section'] == 'complaints':
+                try:
+                    disposition = cells[2].text_content()
+                except IndexError:
+                    # No disposition info.
+                    disposition = ''
+                complaint_name = cells[0].text_content()
+                if complaint_name == u'None':
+                    # No counts here. (Happens with terminated ones a lot.)
+                    continue
+                criminal_data[u'complaints'].append({
+                    u'name': complaint_name,
+                    u'disposition': disposition,
+                })
+
+    @staticmethod
+    def _values_to_none(d):
+        """Set the values for a dictionary all to None"""
+        for k in d.keys():
+            d[k] = None
+
+    def _get_current_section(self, current_section, cells):
+        """Get the current section for the row.
+
+        If the row contains a section header, then we return the new section
+        value. If not, then we return the current_section value (without
+        changing it).
+
+        :param current_section: The current section when this function is
+        started. This might just get passed through.
+        :param cells: The cells (tds) in the current row as a list
+        :returns dict with keys:
+          'current_section': the current section name
+          'header_info': any extra info that might be needed by the caller that
+                         we gather from the section header itself
+          'changed': whether the section has changed, a boolean,
+        """
+        cell_0_text = clean_string(cells[0].text_content())
+        offense_m = self.offense_regex.search(cell_0_text)
+        if offense_m:
+            return {
+                'current_section': u'highest_offense',
+                'header_info': u'highest_offense_level_%s' %
+                               offense_m.group('status').lower(),
+                'changed': True,
+            }
+
+        counts_m = self.counts_regex.search(cell_0_text)
+        if counts_m:
+            return {
+                'current_section': u'counts',
+                'header_info': counts_m.group('status').lower(),
+                'changed': True,
+            }
+
+        complaint_m = self.complaints_regex.search(cell_0_text)
+        if complaint_m:
+            return {
+                'current_section': u'complaints',
+                'header_info': None,
+                'changed': True
+            }
+
+        if cells[0].xpath('./b/u'):
+            # it's a header we don't recognize like "Plaintiff". We can't hard
+            # code them all.
+            return {
+                'current_section': 'unknown',
+                'header_info': None,
+                'changed': True,
+            }
+
+        current_section['changed'] = False
+        return current_section
 
     @staticmethod
     def _get_attorneys(cell):
@@ -811,3 +1042,17 @@ class DocketReport(BaseDocketReport, BaseReport):
         element = fromstring(html_text)
         text = force_unicode(' '.join(s for s in element.xpath('.//text()')))
         return [s.strip() for s in text.split(sep) if s]
+
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python -m juriscraper.pacer.docket_report filepath")
+        print("Please provide a path to an HTML file to parse.")
+        sys.exit(1)
+    report = DocketReport('cand')  # Court ID is only needed for querying.
+    filepath = sys.argv[1]
+    print("Parsing HTML file at %s" % filepath)
+    with open(filepath, 'r') as f:
+        text = f.read().decode('utf-8')
+    report._parse_text(text)
+    pprint.pprint(report.data, indent=2)
