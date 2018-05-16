@@ -6,7 +6,7 @@ from lxml.html import HtmlElement
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
 from .utils import clean_pacer_object
-from ..lib.string_utils import clean_string, convert_date_string
+from ..lib.string_utils import clean_string, convert_date_string, harmonize
 from ..lib.utils import previous_and_next
 
 
@@ -38,6 +38,10 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         # xxx this is likely to need to be overridden.
         pass
 
+    def query(self):
+        # xxx this will need to be overridden.
+        pass
+
     @property
     def metadata(self):
         if self._metadata is not None:
@@ -46,9 +50,11 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         data = {
             u'court_id': self.court_id,
             u'docket_number': self._get_tail_by_regex("Docket #"),
-            # u'case_name': '',
+            u'case_name': self._get_case_name(),
+            # xxx do these apply in BAP cases? Do we handle those?
             u'date_converted': None,
             u'date_discharged': None,
+            # xxx Um, where is the appellate judge listed?
             # u'assigned_to_str': self._get_judge(self.assigned_to_regex),
             # u'referred_to_str': self._get_judge(self.referred_to_regex),
             # u'cause': self._get_value(self.cause_regex, self.metadata_values),
@@ -63,6 +69,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             u'fee_status': self._get_tail_by_regex('Fee Status'),
             u'date_filed': self._get_tail_by_regex('Docketed', True),
             u'date_terminated': self._get_tail_by_regex('Termed', True),
+            u'case_type_information': self._get_case_type_info(),
         }
         data = clean_pacer_object(data)
         self._metadata = data
@@ -141,6 +148,26 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         docket_entries = clean_pacer_object(docket_entries)
         self._docket_entries = docket_entries
         return docket_entries
+
+    def _get_case_name(self):
+        """Get the case name."""
+        # xxx What about bankruptcy?
+        # The text of a cell that doesn't have bold text.
+        path = '//table[contains(., "Docketed")]//td[not(.//b)]'
+        case_name = self.tree.xpath(path)[0].text_content()
+        return clean_string(harmonize(case_name))
+
+    def _get_case_type_info(self):
+        """Get the case type information and return it as a csv string"""
+        path = ('//*[re:match(text(), "Case Type Information")]/'
+                'ancestor::table[1]//b')
+        bold_nodes = self.tree.re_xpath(path)
+        case_info = []
+        for node in bold_nodes:
+            tail = str(node.tail).strip()
+            if not any([tail == 'None', tail == 'null', tail == '-']):
+                case_info.append(node.tail)
+        return ', '.join(case_info)
 
     def _get_tail_by_regex(self, regex, cast_to_date=False):
         """Search all text nodes for a string that matches the regex, then
