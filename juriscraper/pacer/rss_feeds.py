@@ -100,17 +100,48 @@ class PacerRssFeed(DocketReport):
     def data(self):
         """Return a list of docket-like objects instead of the usual dict that
          is usually provided by the BaseDocketReport superclass.
+
+        When CMECF generates the RSS feed, it breaks up items with
+        multiple consecutive entries into multiple RSS items with
+        identical timestamp/id/title.  We reverse that and recombine
+        those items.
         """
         if self._data is not None:
             return self._data
 
         data_list = []
+        prevdata = None
+        preventry = None
         for entry in self.feed.entries:
             data = self.metadata(entry)
+
+            de = self.docket_entries(entry)
+            # If this entry and the immediately prior entry match
+            # in metadata, then add the current description to
+            # the previous entry's and continue the loop.
+            if (
+                    preventry and
+                    prevdata[u'docket_entries'] and
+                    entry.title == preventry.title and
+                    entry.link == preventry.link and
+                    entry.id == preventry.id and
+                    entry.published == preventry.published and
+                    len(de) > 0  # xxx
+            ):
+                # xxx we rely on the fact that there's only ever one
+                # item in this array, which is true but flawed
+                prevdata['docket_entries'][0][u'short_description'] += (
+                    ' AND ' + de[0][u'short_description'])
+                continue
+
             data[u'parties'] = None
             data[u'docket_entries'] = self.docket_entries(entry)
-            if data[u'docket_entries'] and data['docket_number']:
+            if data[u'docket_entries'] and data[u'docket_number']:
                 data_list.append(data)
+
+            preventry = entry
+            prevdata = data
+
         self._data = data_list
         return data_list
 
