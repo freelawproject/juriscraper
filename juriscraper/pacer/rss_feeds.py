@@ -190,6 +190,8 @@ def _main():
         prog="python -m %s.%s" %
         (__package__,
          os.path.splitext(os.path.basename(sys.argv[0]))[0]))
+    parser.add_argument('-b', '--bankruptcy', action='store_true',
+                        help='Use bankruptcy parser variant.')
     parser.add_argument('-v', '--verbose', action='store_true')
     parser.add_argument('court_or_file', nargs='?', default='-',
                         help='''
@@ -207,12 +209,16 @@ sorry if that was your filename.''')
         print("Parsing RSS feed for %s" % feed.court_id)
         feed.parse()
     else:
-        feed = PacerRssFeed('stdin')
-        if args.court_or_file=='-':
-            print("Faking up RSS feed from stdin")
+        if not args.bankruptcy:
+            feed = PacerRssFeed('fake')
+        else:
+            feed = PacerRssFeed('fakb')  # final 'b' char means bankruptcy
+        if args.court_or_file == '-':
+            print("Faking up RSS feed from stdin as %s" % feed.court_id)
             f = sys.stdin
         else:
-            print("Reading RSS feed from %s" % args.court_or_file)
+            print("Reading RSS feed from %s as %s" %
+                  (args.court_or_file, feed.court_id))
             f = open(args.court_or_file)
         feed._parse_text(f.read().decode('utf-8'))
 
