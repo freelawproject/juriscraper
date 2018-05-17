@@ -1,4 +1,6 @@
+import argparse
 import pprint
+import os
 import re
 import sys
 from datetime import date
@@ -183,30 +185,39 @@ class PacerRssFeed(DocketReport):
 
 
 def _main():
-    if len(sys.argv) < 2:
-        print("Usage: "
-              "python -m juriscraper.pacer.rss_feeds [pacer_court_id] "
-              "[verbose]")
-        print("Please provide a valid PACER court id as your only argument")
-        sys.exit(1)
-    if sys.argv[1] == '-':
-        # Let's use stdin!
+    # For help: python -m juriscraper.pacer.rss_feeds -h
+    parser = argparse.ArgumentParser(
+        prog="python -m %s.%s" %
+        (__package__,
+         os.path.splitext(os.path.basename(sys.argv[0]))[0]))
+    parser.add_argument('-v', '--verbose', action='store_true')
+    parser.add_argument('court_or_file', nargs='?', default='-',
+                        help='''
+A PACER court id or a local filename; defaults to stdin (-).
+Any 3 or 4 character string is presumed to be a court;
+sorry if that was your filename.''')
 
-        # Not a court, not 4 chars, will confuse bankruptcy check.
-        feed = PacerRssFeed('stdin')
-        print("Faking up RSS feed from stdin")
-        # "not url: (%s,%s,%s)" % (__package__, __file__, feed.url)
-        f = sys.stdin
-        feed._parse_text(f.read().decode('utf-8'))
-    else:
-        feed = PacerRssFeed(sys.argv[1])
+    args = parser.parse_args()
+
+    arg_len = len(args.court_or_file)
+    if arg_len >= 3 and arg_len <= 4:
+        feed = PacerRssFeed(args.court_or_file)
         print("Querying RSS feed at: %s" % feed.url)
         feed.query()
         print("Parsing RSS feed for %s" % feed.court_id)
         feed.parse()
+    else:
+        feed = PacerRssFeed('stdin')
+        if args.court_or_file=='-':
+            print("Faking up RSS feed from stdin")
+            f = sys.stdin
+        else:
+            print("Reading RSS feed from %s" % args.court_or_file)
+            f = open(args.court_or_file)
+        feed._parse_text(f.read().decode('utf-8'))
 
     print("Got %s items" % len(feed.data))
-    if len(sys.argv) == 3 and sys.argv[2] == 'verbose':
+    if args.verbose:
         print("Here they are:\n")
         pprint.pprint(feed.data, indent=2)
 
