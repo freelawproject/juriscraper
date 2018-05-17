@@ -24,11 +24,11 @@ As of 2018-04-25, these jurisdictions do not have functional RSS feeds:
 
 I reached out to all of these jurisdictions and heard back the following:
 
- - vaed: "We are currently looking into this and will possibly have this 
+ - vaed: "We are currently looking into this and will possibly have this
    feature in the near future."
- - txnd: Left me a long voicemail. They're working on it and have it in 
-   committee. Expectation is that they may require an en banc meeting of the 
-   judges to make a decision, but that the decision should come soon and be 
+ - txnd: Left me a long voicemail. They're working on it and have it in
+   committee. Expectation is that they may require an en banc meeting of the
+   judges to make a decision, but that the decision should come soon and be
    positive.
 
 """
@@ -60,19 +60,21 @@ class PacerRssFeed(DocketReport):
         if self.court_id == 'ilnb':
             return "https://tdi.ilnb.uscourts.gov/wwwroot/RSS/rss_outside.xml"
         else:
-            return "https://ecf.%s.uscourts.gov/%s" % (self.court_id, self.PATH)
+            return "https://ecf.%s.uscourts.gov/%s" % \
+                (self.court_id, self.PATH)
 
     def query(self):
         """Query the RSS feed for a given court ID
 
-        Note that we use requests here, and so we forgo some of the useful
-        features that feedparser offers around the Etags and Last-Modified
-        headers. This is fine for now because no PACER site seems to support
-        these headers, but eventually we'll probably want to do better here. The
-        reason we *don't* use feedparser already is because it presents a
-        different set of APIs and Exceptions that we don't want to monkey with,
-        at least, not yet, and especially not yet if PACER itself doesn't seem
-        to care.
+        Note that we use requests here, and so we forgo some of the
+        useful features that feedparser offers around the Etags and
+        Last-Modified headers. This is fine for now because no PACER
+        site seems to support these headers, but eventually we'll
+        probably want to do better here. The reason we *don't* use
+        feedparser already is because it presents a different set of
+        APIs and Exceptions that we don't want to monkey with, at
+        least, not yet, and especially not yet if PACER itself doesn't
+        seem to care.
 
         For a good summary of this issue, see:
         https://github.com/freelawproject/juriscraper/issues/195#issuecomment-385848344
