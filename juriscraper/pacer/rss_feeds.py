@@ -182,18 +182,22 @@ class PacerRssFeed(DocketReport):
         return case_name
 
 
-if __name__ == "__main__":
+def _main():
     if len(sys.argv) < 2:
         print("Usage: python -m juriscraper.pacer.rss_feeds [pacer_court_id] "
               "[verbose]")
         print("Please provide a valid PACER court id as your only argument")
         sys.exit(1)
-    feed = PacerRssFeed(sys.argv[1])
-    print("Querying RSS feed at: %s" % feed.url)
-    feed.query()
-    print("Parsing RSS feed for %s" % feed.court_id)
-    feed.parse()
-    print("Got %s items" % len(feed.data))
-    if len(sys.argv) == 3 and sys.argv[2] == 'verbose':
-        print("Here they are:\n")
-        pprint.pprint(feed.data, indent=2)
+        feed = PacerRssFeed(sys.argv[1])
+        print("Querying RSS feed at: %s" % feed.url)
+        feed.query()
+        print("Parsing RSS feed for %s" % feed.court_id)
+        feed.parse()
+        print("Got %s items" % len(feed.data))
+        if len(sys.argv) == 3 and sys.argv[2] == 'verbose':
+            print("Here they are:\n")
+            pprint.pprint(feed.data, indent=2)
+
+
+if __name__ == "__main__":
+    _main()
