@@ -110,11 +110,6 @@ class PacerRssFeed(DocketReport):
         if self._data is not None:
             return self._data
 
-        def twin_entries(a, b):
-            fields = ['title', 'link', 'id', 'published']
-            matching_fields = (a[f] == b[f] for f in fields)
-            return all(matching_fields)
-
         data_list = []
         for preventry, entry, nextentry in previous_and_next(self.feed.entries):
             data = self.metadata(entry)
@@ -125,10 +120,13 @@ class PacerRssFeed(DocketReport):
             # in metadata, then add the current description to
             # the previous entry's and continue the loop.
             if (
-                    preventry and
-                    prevdata[u'docket_entries'] and
-                    twin_entries(entry, preventry) and
-                    len(de) > 0  # xxx
+                preventry
+                and prevdata[u'docket_entries']
+                and entry.title == preventry.title
+                and entry.link == preventry.link
+                and entry.id == preventry.id
+                and entry.published == preventry.published
+                and len(de) > 0  # xxx
             ):
                 # xxx we rely on the fact that there's only ever one
                 # item in this array, which is true but flawed
