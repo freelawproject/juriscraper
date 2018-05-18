@@ -180,7 +180,7 @@ class PacerRssFeed(DocketReport):
             u'date_filed': date(*entry.published_parsed[:3]),
             u'document_number': self._get_value(self.document_number_regex,
                                                 entry.summary),
-            u'description': '',
+            u'description': u'',
             u'short_description': html_unescape(
                 self._get_value(self.short_desc_regex, entry.summary)),
         }
