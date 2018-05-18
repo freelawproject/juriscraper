@@ -159,7 +159,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport, ):
         """Get the case name."""
         # xxx What about bankruptcy?
         # The text of a cell that doesn't have bold text.
-        path = '//table[contains(., "Docketed")]//td[not(.//b)]'
+        path = '//table[contains(., "Court of Appeals Docket")]//td[not(.//b)]'
         case_name = self.tree.xpath(path)[0].text_content()
         return clean_string(harmonize(case_name))
 
