@@ -137,7 +137,8 @@ class PacerRssFeed(DocketReport):
                 and data['docket_entries']
             ):
                 data_list[-1][u'docket_entries'][0][u'short_description'] += (
-                    ' AND ' + data[u'docket_entries'][0][u'short_description'])
+                    ' AND ' +
+                    data[u'docket_entries'][0][u'short_description'])
                 continue
 
             data[u'parties'] = None
