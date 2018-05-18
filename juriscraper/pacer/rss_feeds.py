@@ -126,7 +126,7 @@ class PacerRssFeed(DocketReport):
                 and entry.link == previous_entry.link
                 and entry.id == previous_entry.id
                 and entry.published == previous_entry.published
-                and len(data['docket_entries') > 0  # xxx
+                and data['docket_entries']
             ):
                 # xxx we rely on the fact that there's only ever one
                 # item in this array, which is true but flawed
