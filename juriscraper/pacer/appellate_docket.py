@@ -198,15 +198,15 @@ class AppellateDocketReport(BaseDocketReport, BaseReport, ):
         dates = ogc_table.xpath('.//tr[last()]/td//text()')
         for label, date in zip(date_labels, dates):
             label = clean_string(label)
-            date = convert_date_string(clean_string(date))
+            date = clean_string(date)
             if label == 'Date Order/Judgment:':
-                ogc_info['date_judgment'] = date
+                ogc_info['date_judgment'] = convert_date_string(date)
             if label == 'Date Order/Judgment EOD:':
-                ogc_info['date_judgment_eod'] = date
+                ogc_info['date_judgment_eod'] = convert_date_string(date)
             if label == 'Date NOA Filed:':
-                ogc_info['date_filed_noa'] = date
+                ogc_info['date_filed_noa'] = convert_date_string(date)
             if label == "Date Rec'd COA:":
-                ogc_info['date_received_coa'] = date
+                ogc_info['date_received_coa'] = convert_date_string(date)
         return ogc_info
 
     def _get_tail_by_regex(self, regex, cast_to_date=False):
@@ -218,12 +218,18 @@ class AppellateDocketReport(BaseDocketReport, BaseReport, ):
         :returns unicode object: The tailing string cleaned up and optionally
         converted to a date.
         """
-        tail = clean_string(self.tree.re_xpath(
-            '//*[re:match(text(), "%s")]' % regex
-        )[0].tail.strip())
-        if cast_to_date:
-            return convert_date_string(tail)
-        return tail
+        nodes = self.tree.re_xpath('//*[re:match(text(), "%s")]' % regex)
+        try:
+            tail = clean_string(nodes[0].tail.strip())
+        except IndexError:
+            if cast_to_date:
+                return None
+            else:
+                return ''
+        else:
+            if cast_to_date:
+                return convert_date_string(tail)
+            return tail
 
 
 if __name__ == "__main__":
