@@ -128,8 +128,7 @@ class PacerRssFeed(DocketReport):
             # in metadata, then add the current description to
             # the previous entry's and continue the loop.
             if (
-                previous_entry and data_list[-1]
-                and data_list[-1][u'docket_entries']
+                data_list and data_list[-1][u'docket_entries']
                 and data[u'docket_entries']
                 and entry.title == previous_entry.title
                 and entry.link == previous_entry.link
