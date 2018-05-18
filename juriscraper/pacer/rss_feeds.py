@@ -202,7 +202,7 @@ sorry if that was your filename.''')
     args = parser.parse_args()
 
     arg_len = len(args.court_or_file)
-    if arg_len >= 3 and arg_len <= 4:
+    if 3 <= arg_len <= 4:
         feed = PacerRssFeed(args.court_or_file)
         print("Querying RSS feed at: %s" % feed.url)
         feed.query()
