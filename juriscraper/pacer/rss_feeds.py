@@ -14,6 +14,7 @@ from .utils import clean_pacer_object, get_pacer_case_id_from_docket_url, \
 from ..lib.html_utils import html_unescape
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import harmonize, clean_string
+from ..lib.utils import previous_and_next
 
 logger = make_default_logger()
 
@@ -107,19 +108,57 @@ class PacerRssFeed(DocketReport):
 
     @property
     def data(self):
-        """Override this to create a list of docket-like objects instead of the
-         usual dict that is usually provided by the docket report.
+        """Return a list of docket-like objects, rather than a single docket
+        with many entries. This allows CourtListener's merging code to
+        process seperate dockets, which it already knows how to do,
+        rather than having to learn how to manage updating multiple
+        cases from a docket containing different cases, as it would be
+        if this class returned a docket with all the entries from the
+        RSS feed, as provided by the BaseDocketReport superclass.
+
+        When CMECF generates the RSS feed, it breaks up items with
+        multiple consecutive entries into multiple RSS items with
+        identical timestamp/id/title.  We reverse that and recombine
+        those items.
         """
         if self._data is not None:
             return self._data
 
         data_list = []
-        for entry in self.feed.entries:
-            data = self.metadata(entry)
+        for previous_item, item, next_item in previous_and_next(
+                self.feed.entries):
+            data = self.metadata(item)
+
+            # We are guaranteed to only have a single docket entry for each
+            # RSS item, and thus we use data['docket_entries'][0] below.
+            # Coming up with an alternative data representation here and
+            # then transforming it into what CL expects after we're done
+            # iterating over the list is just not worth the bother.
+            data[u'docket_entries'] = self.docket_entries(item)
+            # BUT: Guarantee this condition persists into the future:
+            assert len(data[u'docket_entries']) <= 1
+
+            # If this item and the immediately prior item match
+            # in metadata, then add the current description to
+            # the previous item's and continue the loop.
+            if (
+                data_list and data_list[-1][u'docket_entries']
+                and data[u'docket_entries']
+                and item.title == previous_item.title
+                and item.link == previous_item.link
+                and item.id == previous_item.id
+                and item.published == previous_item.published
+            ):
+                data_list[-1][u'docket_entries'][0][u'short_description'] += (
+                    ' AND ' +
+                    data[u'docket_entries'][0][u'short_description'])
+                continue
+
             data[u'parties'] = None
-            data[u'docket_entries'] = self.docket_entries(entry)
-            if data[u'docket_entries'] and data['docket_number']:
+            data[u'docket_entries'] = self.docket_entries(item)
+            if data[u'docket_entries'] and data[u'docket_number']:
                 data_list.append(data)
+
         self._data = data_list
         return data_list
 
@@ -161,7 +200,7 @@ class PacerRssFeed(DocketReport):
             u'date_filed': date(*entry.published_parsed[:3]),
             u'document_number': self._get_value(self.document_number_regex,
                                                 entry.summary),
-            u'description': '',
+            u'description': u'',
             u'short_description': html_unescape(
                 self._get_value(self.short_desc_regex, entry.summary)),
         }
