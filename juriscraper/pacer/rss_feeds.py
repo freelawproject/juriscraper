@@ -37,9 +37,16 @@ I reached out to all of these jurisdictions and heard back the following:
 
 
 class PacerRssFeed(DocketReport):
+    # The entries are HTML entity-coded, and these matches are run AFTER
+    # decoding. A typical entry is of the form:
+    #   [short_description] (<a href="doc1_url">document_mumber</a>)
+    # Or a literal example (line breaks added):
+    #   [Scheduling Order] (<a href="https://ecf.mad.uscourts.gov/doc1/
+    #   09518690740?caseid=186403&de_seq_num=98">39</a>)
+    # We use three simple matches rather than a complex one with three groups.
     document_number_regex = re.compile(r'">(\d+)</a>')
     doc1_url_regex = re.compile(r'href="(.*)"')
-    short_desc_regex = re.compile(r'\[(.*?)\] \(')  # Matches 'foo': [ foo ] (
+    short_desc_regex = re.compile(r'\[(.*?)\]')
 
     PATH = 'cgi-bin/rss_outside.pl'
 
@@ -143,7 +150,13 @@ class PacerRssFeed(DocketReport):
         raise NotImplementedError("No parties for RSS feeds.")
 
     def docket_entries(self, entry):
-        """Parse the RSS item to get back a docket entry-like object"""
+        """Parse the RSS item to get back a docket entry-like object.
+        Although there is only one, return it as a list.
+
+        We do not return paperless or so-called "minute orders" that
+        lack attached documents (such minute orders may have entry
+        numbers).
+        """
         de = {
             u'date_filed': date(*entry.published_parsed[:3]),
             u'document_number': self._get_value(self.document_number_regex,
@@ -153,7 +166,7 @@ class PacerRssFeed(DocketReport):
                 self._get_value(self.short_desc_regex, entry.summary)),
         }
         doc1_url = self._get_value(self.doc1_url_regex, entry.summary)
-        if not all([doc1_url.strip(), de['document_number']]):
+        if not all([doc1_url.strip(), de[u'document_number']]):
             return []
 
         de[u'pacer_doc_id'] = get_pacer_doc_id_from_doc1_url(doc1_url)
