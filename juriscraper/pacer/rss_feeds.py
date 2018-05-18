@@ -1,4 +1,6 @@
+import argparse
 import pprint
+import os
 import re
 import sys
 from datetime import date
@@ -182,18 +184,50 @@ class PacerRssFeed(DocketReport):
         return case_name
 
 
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python -m juriscraper.pacer.rss_feeds [pacer_court_id] "
-              "[verbose]")
-        print("Please provide a valid PACER court id as your only argument")
-        sys.exit(1)
-    feed = PacerRssFeed(sys.argv[1])
-    print("Querying RSS feed at: %s" % feed.url)
-    feed.query()
-    print("Parsing RSS feed for %s" % feed.court_id)
-    feed.parse()
+def _main():
+    # For help: python -m juriscraper.pacer.rss_feeds -h
+    parser = argparse.ArgumentParser(
+        prog="python -m %s.%s" %
+        (__package__,
+         os.path.splitext(os.path.basename(sys.argv[0]))[0]))
+    parser.add_argument('-b', '--bankruptcy', action='store_true',
+                        help='Use bankruptcy parser variant.')
+    parser.add_argument('-v', '--verbose', action='store_true')
+    parser.add_argument('court_or_file', nargs='?', default='-',
+                        help='''
+A PACER court id or a local filename; defaults to stdin (-).
+Any 3 or 4 character string is presumed to be a court;
+sorry if that was your filename.''')
+
+    args = parser.parse_args()
+
+    arg_len = len(args.court_or_file)
+    if 3 <= arg_len <= 4:
+        feed = PacerRssFeed(args.court_or_file)
+        print("Querying RSS feed at: %s" % feed.url)
+        feed.query()
+        print("Parsing RSS feed for %s" % feed.court_id)
+        feed.parse()
+    else:
+        if not args.bankruptcy:
+            feed = PacerRssFeed('fake_district_court_id')
+        else:
+            # final 'b' char is interpretted as bankruptcy
+            feed = PacerRssFeed('fake_bankruptcy_court_id_b')
+        if args.court_or_file == '-':
+            print("Faking up RSS feed from stdin as %s" % feed.court_id)
+            f = sys.stdin
+        else:
+            print("Reading RSS feed from %s as %s" %
+                  (args.court_or_file, feed.court_id))
+            f = open(args.court_or_file)
+        feed._parse_text(f.read().decode('utf-8'))
+
     print("Got %s items" % len(feed.data))
-    if len(sys.argv) == 3 and sys.argv[2] == 'verbose':
+    if args.verbose:
         print("Here they are:\n")
         pprint.pprint(feed.data, indent=2)
+
+
+if __name__ == "__main__":
+    _main()
