@@ -19,7 +19,7 @@ from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.lib.test_utils import warn_or_crash_slow_parser
 from juriscraper.pacer import DocketReport, FreeOpinionReport, \
     PossibleCaseNumberApi, AttachmentPage, ShowCaseDocApi, \
-    DocketHistoryReport, InternetArchive
+    DocketHistoryReport, InternetArchive, AppellateDocketReport
 from juriscraper.pacer.http import PacerSession
 from juriscraper.pacer.rss_feeds import PacerRssFeed
 from juriscraper.pacer.utils import (
@@ -562,6 +562,18 @@ class ParsingTestCase(object):
             warn_or_crash_slow_parser(duration, max_duration=2)
 
             sys.stdout.write("✓\n")
+
+
+class PacerAppellateDocketParseTest(unittest.TestCase, ParsingTestCase):
+    """Can we parse the appellate dockets effectively?"""
+
+    def setUp(self):
+        self.maxDiff = 200000
+
+    def test_parsing_appellate_dockets(self):
+        path_root = os.path.join(TESTS_ROOT, 'examples', 'pacer', 'dockets',
+                                 'appellate')
+        self.parse_files(path_root, '*.html', AppellateDocketReport)
 
 
 class PacerAttachmentPageTest(unittest.TestCase, ParsingTestCase):
