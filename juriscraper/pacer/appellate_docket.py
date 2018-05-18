@@ -204,6 +204,13 @@ class AppellateDocketReport(BaseDocketReport, BaseReport, ):
 
         ogc_info['court_reporter'] = self._get_tail_by_regex('Court Reporter')
         ogc_info['date_filed'] = self._get_tail_by_regex('Date Filed', True)
+        ogc_info['date_disposed'] = self._get_tail_by_regex('Date Disposed', True)
+        ogc_info['disposition'] = self._get_tail_by_regex('Disposition')
+
+        trial_judge_str = self._get_tail_by_regex('Trial Judge')
+        ogc_info['assigned_to'] = normalize_judge_string(trial_judge_str)[0]
+        order_judge_str = self._get_tail_by_regex('Ordering Judge')
+        ogc_info['ordering_judge'] = normalize_judge_string(order_judge_str)[0]
 
         date_labels = ogc_table.xpath('.//tr[last() - 1]/td//text()')
         dates = ogc_table.xpath('.//tr[last()]/td//text()')
