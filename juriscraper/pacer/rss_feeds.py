@@ -115,7 +115,15 @@ class PacerRssFeed(DocketReport):
                 self.feed.entries):
             data = self.metadata(entry)
 
+            # We are guaranteed to only have a single docket entry for each
+            # RSS item, and thus we use data['docket_entries'][0] below.
+            # Coming up with an alternative data representation here and
+            # then transforming it into what CL expects after we're done
+            # iterating over the list is just not worth the bother.
             data[u'docket_entries'] = self.docket_entries(entry)
+            # BUT: Guarantee this condition persists into the future:
+            assert len(data[u'docket_entries']) <= 1
+
             # If this entry and the immediately prior entry match
             # in metadata, then add the current description to
             # the previous entry's and continue the loop.
@@ -128,8 +136,6 @@ class PacerRssFeed(DocketReport):
                 and entry.published == previous_entry.published
                 and data['docket_entries']
             ):
-                # xxx we rely on the fact that there's only ever one
-                # item in this array, which is true but flawed
                 data_list[-1][u'docket_entries'][0][u'short_description'] += (
                     ' AND ' + data[u'docket_entries'][0][u'short_description'])
                 continue
