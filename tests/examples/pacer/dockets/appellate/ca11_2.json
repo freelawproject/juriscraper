@@ -12,10 +12,14 @@
   "fee_status": "Fee Not Required", 
   "nature_of_suit": "", 
   "originating_court_information": {
+    "assigned_to": "", 
     "court_id": "flsd", 
     "court_reporter": "", 
+    "date_disposed": null, 
     "date_filed": "2016-11-22", 
-    "docket_number": "0:16-cv-62769"
+    "disposition": "", 
+    "docket_number": "0:16-cv-62769", 
+    "ordering_judge": ""
   }, 
   "parties": []
 }
