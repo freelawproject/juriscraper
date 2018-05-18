@@ -210,9 +210,10 @@ sorry if that was your filename.''')
         feed.parse()
     else:
         if not args.bankruptcy:
-            feed = PacerRssFeed('fake')
+            feed = PacerRssFeed('fake_district_court_id')
         else:
-            feed = PacerRssFeed('fakb')  # final 'b' char means bankruptcy
+            # final 'b' char is interpretted as bankruptcy
+            feed = PacerRssFeed('fake_bankruptcy_court_id_b')
         if args.court_or_file == '-':
             print("Faking up RSS feed from stdin as %s" % feed.court_id)
             f = sys.stdin
