@@ -130,11 +130,11 @@ class PacerRssFeed(DocketReport):
             if (
                 previous_entry and data_list[-1]
                 and data_list[-1][u'docket_entries']
+                and data[u'docket_entries']
                 and entry.title == previous_entry.title
                 and entry.link == previous_entry.link
                 and entry.id == previous_entry.id
                 and entry.published == previous_entry.published
-                and data['docket_entries']
             ):
                 data_list[-1][u'docket_entries'][0][u'short_description'] += (
                     ' AND ' +
