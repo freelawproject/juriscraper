@@ -99,8 +99,13 @@ class PacerRssFeed(DocketReport):
 
     @property
     def data(self):
-        """Return a list of docket-like objects instead of the usual dict that
-         is usually provided by the BaseDocketReport superclass.
+        """Return a list of docket-like objects, rather than a single docket
+        with many entries. This allows CourtListener's merging code to
+        process seperate dockets, which it already knows how to do,
+        rather than having to learn how to manage updating multiple
+        cases from a docket containing different cases, as it would be
+        if this class returned a docket with all the entries from the
+        RSS feed, as provided by the BaseDocketReport superclass.
 
         When CMECF generates the RSS feed, it breaks up items with
         multiple consecutive entries into multiple RSS items with
