@@ -179,13 +179,24 @@ class AppellateDocketReport(BaseDocketReport, BaseReport, ):
         """Get all of the originating type information as a dict."""
         ogc_table = self.tree.re_xpath('//*[re:match(text(), "Originating Court Information")]/ancestor::table[1]')[0]
         ogc_info = {}
-        docket_number_str = ogc_table.xpath('.//a/text()')[0]
-        m = self.docket_number_dist_regex.search(docket_number_str)
+        docket_number_node_str = ogc_table.re_xpath(
+            './/*[re:match(text(), "District")]/ancestor::td[1]'
+        )[0].text_content()
+        m = self.docket_number_dist_regex.search(docket_number_node_str)
         if m:
             ogc_info['docket_number'] = m.group(1)
+        else:
+            # Regex didn't match. Try another way. Seems to happen when the OGC
+            # is a case that wasn't in a normal district court. E.g. BIA.
+            ogc_info['docket_number'] = docket_number_node_str.split(':')[2]
 
-        og_court_url = ogc_table.xpath('.//a/@href')[0]
-        ogc_info['court_id'] = get_court_id_from_url(og_court_url)
+        try:
+            og_court_url = ogc_table.xpath('.//a/@href')[0]
+        except IndexError:
+            # Happens when dockets don't link to their OGC.
+            ogc_info['court_id'] = ''
+        else:
+            ogc_info['court_id'] = get_court_id_from_url(og_court_url)
 
         judge_str = self._get_tail_by_regex('Trial Judge')
         if judge_str:
