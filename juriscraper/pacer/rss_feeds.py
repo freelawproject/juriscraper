@@ -116,29 +116,29 @@ class PacerRssFeed(DocketReport):
             return self._data
 
         data_list = []
-        for previous_entry, entry, next_entry in previous_and_next(
+        for previous_item, item, next_item in previous_and_next(
                 self.feed.entries):
-            data = self.metadata(entry)
+            data = self.metadata(item)
 
             # We are guaranteed to only have a single docket entry for each
             # RSS item, and thus we use data['docket_entries'][0] below.
             # Coming up with an alternative data representation here and
             # then transforming it into what CL expects after we're done
             # iterating over the list is just not worth the bother.
-            data[u'docket_entries'] = self.docket_entries(entry)
+            data[u'docket_entries'] = self.docket_entries(item)
             # BUT: Guarantee this condition persists into the future:
             assert len(data[u'docket_entries']) <= 1
 
-            # If this entry and the immediately prior entry match
+            # If this item and the immediately prior item match
             # in metadata, then add the current description to
-            # the previous entry's and continue the loop.
+            # the previous item's and continue the loop.
             if (
                 data_list and data_list[-1][u'docket_entries']
                 and data[u'docket_entries']
-                and entry.title == previous_entry.title
-                and entry.link == previous_entry.link
-                and entry.id == previous_entry.id
-                and entry.published == previous_entry.published
+                and item.title == previous_item.title
+                and item.link == previous_item.link
+                and item.id == previous_item.id
+                and item.published == previous_item.published
             ):
                 data_list[-1][u'docket_entries'][0][u'short_description'] += (
                     ' AND ' +
@@ -146,7 +146,7 @@ class PacerRssFeed(DocketReport):
                 continue
 
             data[u'parties'] = None
-            data[u'docket_entries'] = self.docket_entries(entry)
+            data[u'docket_entries'] = self.docket_entries(item)
             if data[u'docket_entries'] and data[u'docket_number']:
                 data_list.append(data)
 
