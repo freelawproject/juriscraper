@@ -227,19 +227,21 @@ class AppellateDocketReport(BaseDocketReport, BaseReport, ):
                 ogc_info['date_received_coa'] = convert_date_string(date)
         return ogc_info
 
-    def _get_tail_by_regex(self, regex, cast_to_date=False):
+    def _get_tail_by_regex(self, regex, cast_to_date=False, node=None):
         """Search all text nodes for a string that matches the regex, then
         return the `tail`ing text.
 
         :param regex: A regex to search for in all text nodes.
         :param cast_to_date: Whether to convert the resulting text to a date.
+        :param node: The node to search. If None, does self.tree.
         :returns unicode object: The tailing string cleaned up and optionally
         converted to a date.
         """
-        nodes = self.tree.re_xpath('//*[re:match(text(), "%s")]' % regex)
+        node = node if node is not None else self.tree
+        nodes = node.re_xpath('//*[re:match(text(), "%s")]' % regex)
         try:
             tail = clean_string(nodes[0].tail.strip())
-        except IndexError:
+        except (IndexError, AttributeError):
             if cast_to_date:
                 return None
             else:
