@@ -59,9 +59,9 @@ class AppellateDocketReport(BaseDocketReport, BaseReport, ):
             # xxx do these apply in BAP cases? Do we handle those?
             u'date_converted': None,
             u'date_discharged': None,
-            # xxx Um, where is the appellate judge listed?
-            # u'assigned_to_str': self._get_judge(self.assigned_to_regex),
-            # u'referred_to_str': self._get_judge(self.referred_to_regex),
+            u'assigned_to_str': None,
+            u'referred_to_str': None,
+            u'panel': self._get_panel(),
             # u'cause': self._get_value(self.cause_regex, self.metadata_values),
             u'nature_of_suit': self._get_tail_by_regex("Nature of Suit"),
             # u'jury_demand': self._get_value(self.jury_demand_regex,
@@ -163,6 +163,21 @@ class AppellateDocketReport(BaseDocketReport, BaseReport, ):
         case_name = self.tree.xpath(path)[0].text_content()
         return clean_string(harmonize(case_name))
 
+    def _get_panel(self):
+        """Get the panel information"""
+        path = '//*[re:match(text(), "Panel Assignment")]/ancestor::td[1]'
+        try:
+            panel_table = self.tree.re_xpath(path)[0]
+        except IndexError:
+            # No panel table.
+            return []
+
+        panel_string = self._get_tail_by_regex('Panel:', node=panel_table)
+        if panel_string in ['', "Not available"]:
+            return []
+        else:
+            return panel_string.split()
+
     def _get_case_type_info(self):
         """Get the case type information and return it as a csv string"""
         path = ('//*[re:match(text(), "Case Type Information")]/'
@@ -184,33 +199,33 @@ class AppellateDocketReport(BaseDocketReport, BaseReport, ):
         )[0].text_content()
         m = self.docket_number_dist_regex.search(docket_number_node_str)
         if m:
-            ogc_info['docket_number'] = m.group(1)
+            ogc_info[u'docket_number'] = m.group(1)
         else:
             # Regex didn't match. Try another way. Seems to happen when the OGC
             # is a case that wasn't in a normal district court. E.g. BIA.
-            ogc_info['docket_number'] = docket_number_node_str.split(':')[2]
+            ogc_info[u'docket_number'] = docket_number_node_str.split(':')[2]
 
         try:
             og_court_url = ogc_table.xpath('.//a/@href')[0]
         except IndexError:
             # Happens when dockets don't link to their OGC.
-            ogc_info['court_id'] = ''
+            ogc_info[u'court_id'] = u''
         else:
-            ogc_info['court_id'] = get_court_id_from_url(og_court_url)
+            ogc_info[u'court_id'] = get_court_id_from_url(og_court_url)
 
         judge_str = self._get_tail_by_regex('Trial Judge')
         if judge_str:
-            ogc_info['assigned_to'] = normalize_judge_string(judge_str)[0]
+            ogc_info[u'assigned_to'] = normalize_judge_string(judge_str)[0]
 
-        ogc_info['court_reporter'] = self._get_tail_by_regex('Court Reporter')
-        ogc_info['date_filed'] = self._get_tail_by_regex('Date Filed', True)
-        ogc_info['date_disposed'] = self._get_tail_by_regex('Date Disposed', True)
-        ogc_info['disposition'] = self._get_tail_by_regex('Disposition')
+        ogc_info[u'court_reporter'] = self._get_tail_by_regex('Court Reporter')
+        ogc_info[u'date_filed'] = self._get_tail_by_regex('Date Filed', True)
+        ogc_info[u'date_disposed'] = self._get_tail_by_regex('Date Disposed', True)
+        ogc_info[u'disposition'] = self._get_tail_by_regex('Disposition')
 
         trial_judge_str = self._get_tail_by_regex('Trial Judge')
-        ogc_info['assigned_to'] = normalize_judge_string(trial_judge_str)[0]
+        ogc_info[u'assigned_to'] = normalize_judge_string(trial_judge_str)[0]
         order_judge_str = self._get_tail_by_regex('Ordering Judge')
-        ogc_info['ordering_judge'] = normalize_judge_string(order_judge_str)[0]
+        ogc_info[u'ordering_judge'] = normalize_judge_string(order_judge_str)[0]
 
         date_labels = ogc_table.xpath('.//tr[last() - 1]/td//text()')
         dates = ogc_table.xpath('.//tr[last()]/td//text()')
@@ -218,13 +233,13 @@ class AppellateDocketReport(BaseDocketReport, BaseReport, ):
             label = clean_string(label)
             date = clean_string(date)
             if label == 'Date Order/Judgment:':
-                ogc_info['date_judgment'] = convert_date_string(date)
+                ogc_info[u'date_judgment'] = convert_date_string(date)
             if label == 'Date Order/Judgment EOD:':
-                ogc_info['date_judgment_eod'] = convert_date_string(date)
+                ogc_info[u'date_judgment_eod'] = convert_date_string(date)
             if label == 'Date NOA Filed:':
-                ogc_info['date_filed_noa'] = convert_date_string(date)
+                ogc_info[u'date_filed_noa'] = convert_date_string(date)
             if label == "Date Rec'd COA:":
-                ogc_info['date_received_coa'] = convert_date_string(date)
+                ogc_info[u'date_received_coa'] = convert_date_string(date)
         return ogc_info
 
     def _get_tail_by_regex(self, regex, cast_to_date=False, node=None):
