@@ -1,4 +1,6 @@
+import argparse
 import pprint
+import os
 import re
 import sys
 from datetime import date
@@ -24,20 +26,27 @@ As of 2018-04-25, these jurisdictions do not have functional RSS feeds:
 
 I reached out to all of these jurisdictions and heard back the following:
 
- - vaed: "We are currently looking into this and will possibly have this 
+ - vaed: "We are currently looking into this and will possibly have this
    feature in the near future."
- - txnd: Left me a long voicemail. They're working on it and have it in 
-   committee. Expectation is that they may require an en banc meeting of the 
-   judges to make a decision, but that the decision should come soon and be 
+ - txnd: Left me a long voicemail. They're working on it and have it in
+   committee. Expectation is that they may require an en banc meeting of the
+   judges to make a decision, but that the decision should come soon and be
    positive.
 
 """
 
 
 class PacerRssFeed(DocketReport):
+    # The entries are HTML entity-coded, and these matches are run AFTER
+    # decoding. A typical entry is of the form:
+    #   [short_description] (<a href="doc1_url">document_mumber</a>)
+    # Or a literal example (line breaks added):
+    #   [Scheduling Order] (<a href="https://ecf.mad.uscourts.gov/doc1/
+    #   09518690740?caseid=186403&de_seq_num=98">39</a>)
+    # We use three simple matches rather than a complex one with three groups.
     document_number_regex = re.compile(r'">(\d+)</a>')
     doc1_url_regex = re.compile(r'href="(.*)"')
-    short_desc_regex = re.compile(r'\[(.*?)\] \(')  # Matches 'foo': [ foo ] (
+    short_desc_regex = re.compile(r'\[(.*?)\]')
 
     PATH = 'cgi-bin/rss_outside.pl'
 
@@ -60,19 +69,21 @@ class PacerRssFeed(DocketReport):
         if self.court_id == 'ilnb':
             return "https://tdi.ilnb.uscourts.gov/wwwroot/RSS/rss_outside.xml"
         else:
-            return "https://ecf.%s.uscourts.gov/%s" % (self.court_id, self.PATH)
+            return "https://ecf.%s.uscourts.gov/%s" % \
+                (self.court_id, self.PATH)
 
     def query(self):
         """Query the RSS feed for a given court ID
 
-        Note that we use requests here, and so we forgo some of the useful
-        features that feedparser offers around the Etags and Last-Modified
-        headers. This is fine for now because no PACER site seems to support
-        these headers, but eventually we'll probably want to do better here. The
-        reason we *don't* use feedparser already is because it presents a
-        different set of APIs and Exceptions that we don't want to monkey with,
-        at least, not yet, and especially not yet if PACER itself doesn't seem
-        to care.
+        Note that we use requests here, and so we forgo some of the
+        useful features that feedparser offers around the Etags and
+        Last-Modified headers. This is fine for now because no PACER
+        site seems to support these headers, but eventually we'll
+        probably want to do better here. The reason we *don't* use
+        feedparser already is because it presents a different set of
+        APIs and Exceptions that we don't want to monkey with, at
+        least, not yet, and especially not yet if PACER itself doesn't
+        seem to care.
 
         For a good summary of this issue, see:
         https://github.com/freelawproject/juriscraper/issues/195#issuecomment-385848344
@@ -146,7 +157,13 @@ class PacerRssFeed(DocketReport):
         raise NotImplementedError("No parties for RSS feeds.")
 
     def docket_entries(self, entry):
-        """Parse the RSS item to get back a docket entry-like object"""
+        """Parse the RSS item to get back a docket entry-like object.
+        Although there is only one, return it as a list.
+
+        We do not return paperless or so-called "minute orders" that
+        lack attached documents (such minute orders may have entry
+        numbers).
+        """
         de = {
             u'date_filed': date(*entry.published_parsed[:3]),
             u'document_number': self._get_value(self.document_number_regex,
@@ -156,7 +173,7 @@ class PacerRssFeed(DocketReport):
                 self._get_value(self.short_desc_regex, entry.summary)),
         }
         doc1_url = self._get_value(self.doc1_url_regex, entry.summary)
-        if not all([doc1_url.strip(), de['document_number']]):
+        if not all([doc1_url.strip(), de[u'document_number']]):
             return []
 
         de[u'pacer_doc_id'] = get_pacer_doc_id_from_doc1_url(doc1_url)
@@ -187,18 +204,50 @@ class PacerRssFeed(DocketReport):
         return case_name
 
 
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python -m juriscraper.pacer.rss_feeds [pacer_court_id] "
-              "[verbose]")
-        print("Please provide a valid PACER court id as your only argument")
-        sys.exit(1)
-    feed = PacerRssFeed(sys.argv[1])
-    print("Querying RSS feed at: %s" % feed.url)
-    feed.query()
-    print("Parsing RSS feed for %s" % feed.court_id)
-    feed.parse()
+def _main():
+    # For help: python -m juriscraper.pacer.rss_feeds -h
+    parser = argparse.ArgumentParser(
+        prog="python -m %s.%s" %
+        (__package__,
+         os.path.splitext(os.path.basename(sys.argv[0]))[0]))
+    parser.add_argument('-b', '--bankruptcy', action='store_true',
+                        help='Use bankruptcy parser variant.')
+    parser.add_argument('-v', '--verbose', action='store_true')
+    parser.add_argument('court_or_file', nargs='?', default='-',
+                        help='''
+A PACER court id or a local filename; defaults to stdin (-).
+Any 3 or 4 character string is presumed to be a court;
+sorry if that was your filename.''')
+
+    args = parser.parse_args()
+
+    arg_len = len(args.court_or_file)
+    if 3 <= arg_len <= 4:
+        feed = PacerRssFeed(args.court_or_file)
+        print("Querying RSS feed at: %s" % feed.url)
+        feed.query()
+        print("Parsing RSS feed for %s" % feed.court_id)
+        feed.parse()
+    else:
+        if not args.bankruptcy:
+            feed = PacerRssFeed('fake_district_court_id')
+        else:
+            # final 'b' char is interpretted as bankruptcy
+            feed = PacerRssFeed('fake_bankruptcy_court_id_b')
+        if args.court_or_file == '-':
+            print("Faking up RSS feed from stdin as %s" % feed.court_id)
+            f = sys.stdin
+        else:
+            print("Reading RSS feed from %s as %s" %
+                  (args.court_or_file, feed.court_id))
+            f = open(args.court_or_file)
+        feed._parse_text(f.read().decode('utf-8'))
+
     print("Got %s items" % len(feed.data))
-    if len(sys.argv) == 3 and sys.argv[2] == 'verbose':
+    if args.verbose:
         print("Here they are:\n")
         pprint.pprint(feed.data, indent=2)
+
+
+if __name__ == "__main__":
+    _main()
