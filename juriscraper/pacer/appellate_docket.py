@@ -95,9 +95,9 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     def parties(self):
         """Return the party table as HTML.
 
-        Unfortunately, the parties for appellate dockets are very, very hard to
-        parse. It can probably be done, but it's telling that this is the first
-        piece of data that the original RECAP authors didn't even bother with.
+        Unfortunately, the parties for appellate dockets are hard to parse. It
+        can probably be done, but it's telling that this is the first piece of
+        data that the original RECAP authors didn't even bother with.
 
         The problems with parsing this data can be summarized thusly: <br>. In
         short, there is a lot of complicated data, and it's pretty much all
@@ -105,21 +105,25 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         meaning. This is the kind of thing that we could do poorly, with a lot
         of effort, but that we'd always struggle to do well.
 
-        Instead of doing that, we just collect the innerHTML of this section
-        and return it as a string. This should *not* be considered safe HTML
-        in your application.
+        Instead of doing that, we just collect the HTML of this section and
+        return it as a string. This should *not* be considered safe HTML in
+        your application.
         """
 
         # Grab the first table following a comment about the table.
         path = ('//comment()[contains(., "Party/Aty List")]/'
                 'following-sibling::table[1]')
-        party_table = self.tree.xpath(path)[0]
-        return tostring(
-            party_table,
-            pretty_print=True,
-            encoding='unicode',
-            with_tail=False,
-        )
+        try:
+            party_table = self.tree.xpath(path)[0]
+        except IndexError:
+            return ""
+        else:
+            return tostring(
+                party_table,
+                pretty_print=True,
+                encoding='unicode',
+                with_tail=False,
+            )
 
     def _get_attorneys(self, cell):
         # Get the attorneys here.
