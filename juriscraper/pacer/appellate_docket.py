@@ -2,14 +2,13 @@ import pprint
 import re
 import sys
 
-from lxml.html import HtmlElement
+from lxml.html import HtmlElement, tostring
 
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
 from .utils import clean_pacer_object, get_court_id_from_url
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.string_utils import clean_string, convert_date_string, harmonize
-from ..lib.utils import previous_and_next
 
 
 # Patch the HtmlElement class to add a function that can handle regular
@@ -20,12 +19,23 @@ def re_xpath(self, path):
 HtmlElement.re_xpath = re_xpath
 
 
-class AppellateDocketReport(BaseDocketReport, BaseReport, ):
+class AppellateDocketReport(BaseDocketReport, BaseReport):
+    """Parse appellate dockets.
+
+    These can be particularly detailed and for the most part we parse the data
+    and provide it in our output. There are some exceptions:
+
+     1. We don't parse the Prior/Current Cases table.
+     1. We cheat on the parties attribute and just return HTML rather than
+        structured data.
+
+    """
+
     docket_number_dist_regex = re.compile(
         r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
 
     PATH = 'xxx'  # xxx for self.query
-    CACHE_ATTRS = ['metadata', 'parties', 'docket_entries']
+    CACHE_ATTRS = ['metadata', 'docket_entries']
 
     def query(self, *args, **kwargs):
         raise NotImplementedError("We currently do not support querying "
@@ -83,56 +93,33 @@ class AppellateDocketReport(BaseDocketReport, BaseReport, ):
 
     @property
     def parties(self):
-        """Get the party info from the HTML or return it if it's cached.
+        """Return the party table as HTML.
 
-        The data here will look like this:
+        Unfortunately, the parties for appellate dockets are very, very hard to
+        parse. It can probably be done, but it's telling that this is the first
+        piece of data that the original RECAP authors didn't even bother with.
 
-            parties = [{
-                'name': 'NATIONAL VETERANS LEGAL SERVICES PROGRAM',
-                'type': 'Plaintiff',
-                'date_terminated': '2018-03-12',
-                'extra_info': ("1600 K Street, NW\n"
-                               "Washington, DC 20006"),
-                'attorneys': [{
-                    'name': 'William H. Narwold',
-                    'contact': ("1 Corporate Center\n",
-                                "20 Church Street\n",
-                                "17th Floor\n",
-                                "Hartford, CT 06103\n",
-                                "860-882-1676\n",
-                                "Fax: 860-882-1682\n",
-                                "Email: bnarwold@motleyrice.com"),
-                    'roles': ['LEAD ATTORNEY',
-                              'PRO HAC VICE',
-                              'ATTORNEY TO BE NOTICED'],
-                }, {
-                    ...more attorneys here...
-                }]
-            }, {
-                ...more parties (and their attorneys) here...
-            }]
+        The problems with parsing this data can be summarized thusly: <br>. In
+        short, there is a lot of complicated data, and it's pretty much all
+        separated by <br> tags instead of something that provides any kind of
+        meaning. This is the kind of thing that we could do poorly, with a lot
+        of effort, but that we'd always struggle to do well.
+
+        Instead of doing that, we just collect the innerHTML of this section
+        and return it as a string. This should *not* be considered safe HTML
+        in your application.
         """
-        if self._parties is not None:
-            return self._parties
 
-        path = 'xxx'
-        party_rows = self.tree.xpath(path)
-
-        parties = []
-        party = {}
-        for prev, row, nxt in previous_and_next(party_rows):
-            # xxx get party metadata here
-            cells = row.xpath('xxx')
-            if len(cells) == 3 and party != {}:
-                party[u'attorneys'] = self._get_attorneys(cells[2])
-
-            if party not in parties and party != {}:
-                # Sometimes there are dups in the docket. Avoid them.
-                parties.append(party)
-
-        parties = self._normalize_see_above_attorneys(parties)
-        self._parties = parties
-        return parties
+        # Grab the first table following a comment about the table.
+        path = ('//comment()[contains(., "Party/Aty List")]/'
+                'following-sibling::table[1]')
+        party_table = self.tree.xpath(path)[0]
+        return tostring(
+            party_table,
+            pretty_print=True,
+            encoding='unicode',
+            with_tail=False,
+        )
 
     def _get_attorneys(self, cell):
         # Get the attorneys here.
