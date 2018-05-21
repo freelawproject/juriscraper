@@ -104,11 +104,18 @@ class PacerRssFeed(DocketReport):
 
         data_list = []
         for entry in self.feed.entries:
-            data = self.metadata(entry)
-            data[u'parties'] = None
-            data[u'docket_entries'] = self.docket_entries(entry)
-            if data[u'docket_entries'] and data['docket_number']:
-                data_list.append(data)
+            try:
+                data = self.metadata(entry)
+                data[u'parties'] = None
+                data[u'docket_entries'] = self.docket_entries(entry)
+            except AttributeError:
+                # Happens when RSS items lack necessary attributes like a URL
+                # or published date.
+                pass
+            else:
+                if data[u'docket_entries'] and data['docket_number']:
+                    data_list.append(data)
+
         self._data = data_list
         return data_list
 
