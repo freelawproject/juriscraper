@@ -160,8 +160,8 @@ class DocketReport(BaseDocketReport, BaseReport):
     date_converted_regex = re.compile(r'Date [Cc]onverted:\s+(%s)' % date_regex)
     # Be careful this does not match "Joint debtor discharged" field.
     date_discharged_regex = re.compile(r'(?:Date|Debtor)\s+[Dd]ischarged:\s+(%s)' % date_regex)
-    assigned_to_regex = re.compile(r'Assigned to:\s+(.*)')
-    referred_to_regex = re.compile(r'Referred to:\s+(.*)')
+    assigned_to_regex = r'Assigned to:\s+(.*)'
+    referred_to_regex = r'Referred to:\s+(.*)'
     cause_regex = re.compile(r'Cause:\s+(.*)')
     nos_regex = re.compile(r'Nature of Suit:\s+(.*)')
     jury_demand_regex = re.compile(r'Jury Demand:\s+(.*)')
@@ -1025,8 +1025,18 @@ class DocketReport(BaseDocketReport, BaseReport):
             return self._get_value(self.nos_regex, self.metadata_values)
 
     def _get_judge(self, regex):
-        judge_str = self._get_value(regex, self.metadata_values)
-        if judge_str is not None:
+        judge_str = self._get_value(re.compile(regex), self.metadata_values)
+        if judge_str:
+            return normalize_judge_string(judge_str)[0]
+        else:
+            # No luck getting it in the metadata_values attribute. Broaden
+            # the search to look in the entire docket HTML.
+            path = '//*[re:match(text(), "%s")]' % regex
+            try:
+                judge_str = self.tree.re_xpath(path)[0].text_content()
+            except IndexError:
+                return ''
+            judge_str = judge_str.split('to:')[1]
             return normalize_judge_string(judge_str)[0]
 
     @staticmethod
