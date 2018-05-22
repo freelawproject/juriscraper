@@ -56,6 +56,8 @@ def get_pacer_doc_id_from_doc1_url(url):
 
     See tests for more examples.
     """
+    assert "show_case_doc" not in url, \
+        "Cannot get doc1 ID from show_case_doc URL"
     url = url.rsplit('/', 1)[1].split('?')[0]
     url = url[:3] + "0" + url[4:]
     return url
