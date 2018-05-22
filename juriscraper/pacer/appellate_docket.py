@@ -106,15 +106,11 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             return self._docket_entries
 
         # Full dockets have the docket entry in a form. Summary dockets do not.
-        # Use two XPath queries.
+        # Find the first table or form after the comment and all the trs below
+        # it.
         path = ('//comment()[contains(., "DOCKET ENTRIES")]/'
-                'following-sibling::form//table[1]//tr')
+                'following-sibling::*[self::table | self::form]//tr')
         docket_entry_rows = self.tree.xpath(path)
-        if len(docket_entry_rows) == 0:
-            # The summary dockets use this path.
-            path = ('//comment()[contains(., "DOCKET ENTRIES")]/'
-                    'following-sibling::table//tr')
-            docket_entry_rows = self.tree.xpath(path)
 
         docket_entries = []
         for row in docket_entry_rows:
