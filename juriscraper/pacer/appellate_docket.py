@@ -6,9 +6,11 @@ from lxml.html import tostring
 
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
-from .utils import clean_pacer_object, get_court_id_from_url
+from .utils import clean_pacer_object, get_court_id_from_url, \
+    get_pacer_doc_id_from_doc1_url
 from ..lib.judge_parsers import normalize_judge_string
-from ..lib.string_utils import clean_string, convert_date_string, harmonize
+from ..lib.string_utils import clean_string, convert_date_string, harmonize, \
+    force_unicode
 
 
 class AppellateDocketReport(BaseDocketReport, BaseReport):
@@ -127,16 +129,52 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         if self._docket_entries is not None:
             return self._docket_entries
 
-        docket_entry_rows = self.tree.xpath(
-            'xxx'
-        )[1:]  # Skip the first row
+        # Sometimes there's a form following the comment, sometimes not. Yay.
+        path = ('//comment()[contains(., "DOCKET ENTRIES")]/'
+                'following-sibling::form//table[1]//tr')
+        docket_entry_rows = self.tree.xpath(path)
+        if len(docket_entry_rows) == 0:
+            # Try a different path. The summary dockets use this path.
+            path = ('//comment()[contains(., "DOCKET ENTRIES")]/'
+                    'following-sibling::table//tr')
+            docket_entry_rows = self.tree.xpath(path)
+
         docket_entries = []
         for row in docket_entry_rows:
             de = {}
+            cells = row.xpath(u'./td')
+            if len(cells) == 1:
+                continue
+            date_filed_str = force_unicode(cells[0].text_content())
+            de[u'date_filed'] = convert_date_string(date_filed_str)
+            de[u'document_number'] = self._get_document_number(cells[1])
+            de[u'pacer_doc_id'] = self._get_pacer_doc_id(cells[1])
+            de[u'description'] = force_unicode(cells[2].text_content())
+            docket_entries.append(de)
 
         docket_entries = clean_pacer_object(docket_entries)
         self._docket_entries = docket_entries
         return docket_entries
+
+    def _get_document_number(self, cell):
+        """Get the document number"""
+        text_nodes = cell.xpath('.//text()[not(parent::font)]')
+        text_nodes = map(clean_string, text_nodes)
+        for text_node in text_nodes:
+            if text_node.isdigit():
+                return text_node
+        return u''
+
+    @staticmethod
+    def _get_pacer_doc_id(cell):
+        urls = cell.xpath(u'.//a')
+        if len(urls) == 0:
+            # Entry exists, but lacks a URL. It's sealed or otherwise
+            # unavailable.
+            return None
+        else:
+            doc1_url = urls[0].xpath('./@href')[0]
+            return get_pacer_doc_id_from_doc1_url(doc1_url)
 
     def _get_case_name(self):
         """Get the case name."""
