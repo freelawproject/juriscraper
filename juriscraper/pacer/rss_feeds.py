@@ -1,6 +1,6 @@
 import argparse
-import pprint
 import os
+import pprint
 import re
 import sys
 from datetime import date
@@ -39,7 +39,7 @@ I reached out to all of these jurisdictions and heard back the following:
 class PacerRssFeed(DocketReport):
     # The entries are HTML entity-coded, and these matches are run AFTER
     # decoding. A typical entry is of the form:
-    #   [short_description] (<a href="doc1_url">document_mumber</a>)
+    #   [short_description] (<a href="doc1_url">document_number</a>)
     # Or a literal example (line breaks added):
     #   [Scheduling Order] (<a href="https://ecf.mad.uscourts.gov/doc1/
     #   09518690740?caseid=186403&de_seq_num=98">39</a>)
@@ -166,17 +166,23 @@ class PacerRssFeed(DocketReport):
         """
         de = {
             u'date_filed': date(*entry.published_parsed[:3]),
+            u'description': u'',
             u'document_number': self._get_value(self.document_number_regex,
                                                 entry.summary),
-            u'description': '',
             u'short_description': html_unescape(
                 self._get_value(self.short_desc_regex, entry.summary)),
         }
-        doc1_url = self._get_value(self.doc1_url_regex, entry.summary)
-        if not all([doc1_url.strip(), de[u'document_number']]):
-            return []
+        if self.court_id == 'nyed':
+            # NYED does RSS differently than any other court, so it gets its
+            # own special treatment.
+            de[u'pacer_doc_id'] = u''
+        else:
+            doc1_url = self._get_value(self.doc1_url_regex, entry.summary)
+            if doc1_url:
+                de[u'pacer_doc_id'] = get_pacer_doc_id_from_doc1_url(doc1_url)
 
-        de[u'pacer_doc_id'] = get_pacer_doc_id_from_doc1_url(doc1_url)
+        if not de[u'document_number']:
+            return []
 
         return [de]
 
