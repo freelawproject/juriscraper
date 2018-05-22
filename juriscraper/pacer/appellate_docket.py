@@ -105,9 +105,9 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         if self._docket_entries is not None:
             return self._docket_entries
 
-        # Full dockets have the docket entry in a form. Summary dockets do not.
-        # Find the first table or form after the comment and all the trs below
-        # it.
+        # If "View Multiple Documents" is checked, there's a form, if not, it's
+        # a table. Thus, find all the trs below the first table or form after
+        # the comment.
         path = ('//comment()[contains(., "DOCKET ENTRIES")]/'
                 'following-sibling::*[self::table | self::form]//tr')
         docket_entry_rows = self.tree.xpath(path)
