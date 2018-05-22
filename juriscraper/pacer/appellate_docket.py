@@ -2,21 +2,13 @@ import pprint
 import re
 import sys
 
-from lxml.html import HtmlElement, tostring
+from lxml.html import tostring
 
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
 from .utils import clean_pacer_object, get_court_id_from_url
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.string_utils import clean_string, convert_date_string, harmonize
-
-
-# Patch the HtmlElement class to add a function that can handle regular
-# expressions within XPath queries. See usages throughout AppellateDocketReport.
-def re_xpath(self, path):
-    return self.xpath(path, namespaces={
-        're': 'http://exslt.org/regular-expressions'})
-HtmlElement.re_xpath = re_xpath
 
 
 class AppellateDocketReport(BaseDocketReport, BaseReport):
