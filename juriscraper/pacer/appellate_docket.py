@@ -143,8 +143,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     def _get_pacer_doc_id(cell):
         urls = cell.xpath(u'.//a')
         if len(urls) == 0:
-            # Entry exists, but lacks a URL. It's sealed or otherwise
-            # unavailable.
+            # Entry exists but lacks a URL. Probably a minute order or similar.
             return None
         else:
             doc1_url = urls[0].xpath('./@href')[0]
