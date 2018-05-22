@@ -45,7 +45,7 @@ class PacerRssFeed(DocketReport):
     #   09518690740?caseid=186403&de_seq_num=98">39</a>)
     # We use three simple matches rather than a complex one with three groups.
     document_number_regex = re.compile(r'">(\d+)</a>')
-    doc1_url_regex = re.compile(r'href="(.*)"')
+    doc1_url_regex = re.compile(r'href="(.*/doc1/.*)"')
     short_desc_regex = re.compile(r'\[(.*?)\]')
 
     PATH = 'cgi-bin/rss_outside.pl'
@@ -172,14 +172,15 @@ class PacerRssFeed(DocketReport):
             u'short_description': html_unescape(
                 self._get_value(self.short_desc_regex, entry.summary)),
         }
-        if self.court_id == 'nyed':
-            # NYED does RSS differently than any other court, so it gets its
-            # own special treatment.
-            de[u'pacer_doc_id'] = u''
+
+        doc1_url = self._get_value(self.doc1_url_regex, entry.summary)
+        if doc1_url:
+            de[u'pacer_doc_id'] = get_pacer_doc_id_from_doc1_url(doc1_url)
         else:
-            doc1_url = self._get_value(self.doc1_url_regex, entry.summary)
-            if doc1_url:
-                de[u'pacer_doc_id'] = get_pacer_doc_id_from_doc1_url(doc1_url)
+            # Some courts, in particular, NYED do not provide doc1 links and
+            # instead provide show_case_doc links. Some docket entries don't
+            # provide links. In either case, we can't provide pacer_doc_id.
+            de[u'pacer_doc_id'] = u''
 
         if not de[u'document_number']:
             return []
