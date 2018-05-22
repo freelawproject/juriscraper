@@ -22,6 +22,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
      1. We don't parse the Prior/Current Cases table.
      1. We cheat on the parties attribute and just return HTML rather than
         structured data.
+     1. We don't handle bankruptcy appellate panel dockets (yet)
 
     """
 
@@ -31,10 +32,6 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     PATH = 'xxx'  # xxx for self.query
     CACHE_ATTRS = ['metadata', 'docket_entries']
 
-    def query(self, *args, **kwargs):
-        raise NotImplementedError("We currently do not support querying "
-                                  "appellate docket reports.")
-
     def __init__(self, court_id, pacer_session=None):
         super(AppellateDocketReport, self).__init__(court_id, pacer_session)
         # Initialize the empty cache properties
@@ -43,12 +40,12 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         self._parties = None
         self._docket_entries = None
 
+    def query(self, *args, **kwargs):
+        raise NotImplementedError("We currently do not support querying "
+                                  "appellate docket reports.")
+
     def download_pdf(self, pacer_case_id, pacer_document_number):
         # xxx this is likely to need to be overridden.
-        pass
-
-    def query(self):
-        # xxx this will need to be overridden.
         pass
 
     @property
@@ -60,20 +57,8 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             u'court_id': self.court_id,
             u'docket_number': self._get_tail_by_regex("Docket #"),
             u'case_name': self._get_case_name(),
-            # xxx do these apply in BAP cases? Do we handle those?
-            u'date_converted': None,
-            u'date_discharged': None,
-            u'assigned_to_str': None,
-            u'referred_to_str': None,
             u'panel': self._get_panel(),
-            # u'cause': self._get_value(self.cause_regex, self.metadata_values),
             u'nature_of_suit': self._get_tail_by_regex("Nature of Suit"),
-            # u'jury_demand': self._get_value(self.jury_demand_regex,
-            #                                 self.metadata_values),
-            # u'demand': self._get_value(self.demand_regex,
-            #                            self.metadata_values),
-            # u'jurisdiction': self._get_value(self.jurisdiction_regex,
-            #                                  self.metadata_values),
             u'appeal_from': self._get_tail_by_regex('Appeal From'),
             u'fee_status': self._get_tail_by_regex('Fee Status'),
             u'date_filed': self._get_tail_by_regex('Docketed', True),
@@ -90,20 +75,19 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         """Return the party table as HTML.
 
         Unfortunately, the parties for appellate dockets are hard to parse. It
-        can probably be done, but it's telling that this is the first piece of
-        data that the original RECAP authors didn't even bother with.
+        can probably be done, but it's telling that this is a piece of data
+        that the original RECAP authors didn't even bother with.
 
         The problems with parsing this data can be summarized thusly: <br>. In
         short, there is a lot of complicated data, and it's pretty much all
         separated by <br> tags instead of something that provides any kind of
-        meaning. This is the kind of thing that we could do poorly, with a lot
-        of effort, but that we'd always struggle to do well.
+        semantics. This is the kind of thing that we could do poorly, with a
+        lot of effort, but that we'd always struggle to do well.
 
         Instead of doing that, we just collect the HTML of this section and
         return it as a string. This should *not* be considered safe HTML in
         your application.
         """
-
         # Grab the first table following a comment about the table.
         path = ('//comment()[contains(., "Party/Aty List")]/'
                 'following-sibling::table[1]')
@@ -112,16 +96,8 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         except IndexError:
             return ""
         else:
-            return tostring(
-                party_table,
-                pretty_print=True,
-                encoding='unicode',
-                with_tail=False,
-            )
-
-    def _get_attorneys(self, cell):
-        # Get the attorneys here.
-        pass
+            return tostring(party_table, pretty_print=True, encoding='unicode',
+                            with_tail=False)
 
     @property
     def docket_entries(self):
@@ -129,12 +105,13 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         if self._docket_entries is not None:
             return self._docket_entries
 
-        # Sometimes there's a form following the comment, sometimes not. Yay.
+        # Full dockets have the docket entry in a form. Summary dockets do not.
+        # Use two XPath queries.
         path = ('//comment()[contains(., "DOCKET ENTRIES")]/'
                 'following-sibling::form//table[1]//tr')
         docket_entry_rows = self.tree.xpath(path)
         if len(docket_entry_rows) == 0:
-            # Try a different path. The summary dockets use this path.
+            # The summary dockets use this path.
             path = ('//comment()[contains(., "DOCKET ENTRIES")]/'
                     'following-sibling::table//tr')
             docket_entry_rows = self.tree.xpath(path)
@@ -156,7 +133,8 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         self._docket_entries = docket_entries
         return docket_entries
 
-    def _get_document_number(self, cell):
+    @staticmethod
+    def _get_document_number( cell):
         """Get the document number"""
         text_nodes = cell.xpath('.//text()[not(parent::font)]')
         text_nodes = map(clean_string, text_nodes)
@@ -178,7 +156,6 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
     def _get_case_name(self):
         """Get the case name."""
-        # xxx What about bankruptcy?
         # The text of a cell that doesn't have bold text.
         path = '//table[contains(., "Court of Appeals Docket")]//td[not(.//b)]'
         case_name = self.tree.xpath(path)[0].text_content()
