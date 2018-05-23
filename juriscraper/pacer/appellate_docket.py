@@ -185,7 +185,12 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
     def _get_originating_court_info(self):
         """Get all of the originating type information as a dict."""
-        ogc_table = self.tree.re_xpath('//*[re:match(text(), "Originating Court Information")]/ancestor::table[1]')[0]
+        try:
+            ogc_table = self.tree.re_xpath('//*[re:match(text(), "Originating Court Information")]/ancestor::table[1]')[0]
+        except IndexError:
+            # No originating court info.
+            return {}
+
         ogc_info = {}
         docket_number_node_str = ogc_table.re_xpath(
             './/*[re:match(text(), "District")]/ancestor::td[1]'
