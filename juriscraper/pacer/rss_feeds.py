@@ -18,20 +18,53 @@ from ..lib.string_utils import harmonize, clean_string
 logger = make_default_logger()
 
 """
-As of 2018-04-25, these jurisdictions do not have functional RSS feeds:
-
-'miwb', 'nceb', 'nmib', 'alnd', 'caed', 'flnd', 'gand', 'gasd', 'hid', 'ilsd',
-'kyed', 'mdd', 'msnd', 'mtd', 'nvd', 'nywd', 'ndd', 'oked', 'oknd', 'pamd',
-'scd', 'tnwd', 'txnd', 'vaed'
-
-I reached out to all of these jurisdictions and heard back the following:
-
- - vaed: "We are currently looking into this and will possibly have this
-   feature in the near future."
- - txnd: Left me a long voicemail. They're working on it and have it in
-   committee. Expectation is that they may require an en banc meeting of the
-   judges to make a decision, but that the decision should come soon and be
+As of 2018-04-25, the jurisdictions below do not have functional RSS feeds. I 
+reached out to all of these jurisdictions and heard back the following:
+ 
+ - miwb: Sent email. Left a VM.
+ - nceb: "The Judges in our District have given direction that they do not want 
+   the RSS feed turned on in our court.  This has been discussed several times 
+   and their decision remains the same."
+    - Update via email: "At this time, the court declined to participate.  
+      However, the court anticipates transitioning to the NextGen version of 
+      CM/ECF in 2019 and will likely participate at that time.
+ - nmib (Northern Mariana Islands, 17 hours ahead): Sent email.
+ - alnd: Sent email.
+ - caed: Sent email. 916-930-4000, left message with IT director, Richard.
+ - flnd: Sent email.
+ - gand: Left a message at the "Systems" department
+ - gasd: Sent email.
+ - hid: Sent email. 808-541-1304, Lian Abernathy, Chief Deputy 
+ - ilsd: Sent email.
+ - kyed: Need to call Sharon Drolijk (Operations Manager) at (859) 233-2503.
+ - mdd: Spoke with "Attorney Adviser". He asked for a letter, which I sent. He 
+   will take it up with the court, though they didn't have any policy that he 
+   was aware of. It's going through their "court committee system for 
+   consideration." Seems it wasn't done for performance reasons years ago. They
+   will take it up again.
+ - msnd: Sent email.
+ - mtd: Julie Collins, Deputy Clerk in charge of Billings division, called back. 
+   She's going to look into it.
+ - ndd: Sent email. 701-530-2313, Clerk of Clerk, Rob. On the to do list. 
+   Hopefully by end of the year (2018). Nobody ever asked before.
+ - nvd: Sent email. Talked to Robert in "Quality Control". He shook me a bit 
+   with how difficult he was. He insists I need to send a letter to the chief 
+   judge, but that they're not considering this currently.
+    - A different tack: Trying the operations manager, Lia at 775-686-5840. 
+      She's friendly. Requested a letter for chief judge. Sent.
+ - nywd: Sent email.
+ - oked: Sent email.
+ - oknd: Sent email.
+ - pamd: Sent email.
+ - scd: "We have forwarded your request on to management staff at the District 
+   Court for further consideration." 
+ - tnwd: Sent email.
+ - txnd: Left me a long voicemail. They're working on it and have it in 
+   committee. Expectation is that they may require an en banc meeting of the 
+   judges to make a decision, but that the decision should come soon and be 
    positive.
+ - vaed: "We are currently looking into this and will possibly have this 
+   feature in the near future."
 
 """
 
@@ -39,14 +72,14 @@ I reached out to all of these jurisdictions and heard back the following:
 class PacerRssFeed(DocketReport):
     # The entries are HTML entity-coded, and these matches are run AFTER
     # decoding. A typical entry is of the form:
-    #   [short_description] (<a href="doc1_url">document_number</a>)
+    #   [short_description] (<a href="doc1_url">document_mumber</a>)
     # Or a literal example (line breaks added):
     #   [Scheduling Order] (<a href="https://ecf.mad.uscourts.gov/doc1/
     #   09518690740?caseid=186403&de_seq_num=98">39</a>)
     # We use three simple matches rather than a complex one with three groups.
     document_number_regex = re.compile(r'">(\d+)</a>')
-    doc1_url_regex = re.compile(r'href="(.*/doc1/.*)"')
-    short_desc_regex = re.compile(r'\[(.*?)\]')
+    doc1_url_regex = re.compile(r'href="(.*)"')
+    short_desc_regex = re.compile(r'\[(.*?)\] \(')  # Matches 'foo': [ foo ] (
 
     PATH = 'cgi-bin/rss_outside.pl'
 
@@ -166,24 +199,17 @@ class PacerRssFeed(DocketReport):
         """
         de = {
             u'date_filed': date(*entry.published_parsed[:3]),
-            u'description': u'',
             u'document_number': self._get_value(self.document_number_regex,
                                                 entry.summary),
+            u'description': '',
             u'short_description': html_unescape(
                 self._get_value(self.short_desc_regex, entry.summary)),
         }
-
         doc1_url = self._get_value(self.doc1_url_regex, entry.summary)
-        if doc1_url:
-            de[u'pacer_doc_id'] = get_pacer_doc_id_from_doc1_url(doc1_url)
-        else:
-            # Some courts, in particular, NYED do not provide doc1 links and
-            # instead provide show_case_doc links. Some docket entries don't
-            # provide links. In either case, we can't provide pacer_doc_id.
-            de[u'pacer_doc_id'] = u''
-
-        if not de[u'document_number']:
+        if not all([doc1_url.strip(), de[u'document_number']]):
             return []
+
+        de[u'pacer_doc_id'] = get_pacer_doc_id_from_doc1_url(doc1_url)
 
         return [de]
 
