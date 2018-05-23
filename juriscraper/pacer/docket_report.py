@@ -764,8 +764,8 @@ class DocketReport(BaseDocketReport, BaseReport):
         self._is_adversary_proceeding = adversary_proceeding
         return adversary_proceeding
 
-    def query(self, pacer_case_id, date_range_type='Filed', date_start='',
-              date_end='', doc_num_start='', doc_num_end='',
+    def query(self, pacer_case_id, date_range_type='Filed', date_start=None,
+              date_end=None, doc_num_start='', doc_num_end='',
               show_parties_and_counsel=False, show_terminated_parties=False,
               show_list_of_member_cases=False, include_pdf_headers=True,
               show_multiple_docs=False, output_format='html',
@@ -775,8 +775,8 @@ class DocketReport(BaseDocketReport, BaseReport):
         :param pacer_case_id: The internal PACER case ID for a case.
         :param date_range_type: Whether the date range refers to the date items
         were entered into PACER or the date they were filed.
-        :param date_start: The start date for the date range.
-        :param date_end: The end date for the date range.
+        :param date_start: The start date for the date range (as a date object)
+        :param date_end: The end date for the date range (as a date object)
         :param doc_num_start: A range of documents can be requested. This is the
         lower bound of their ID numbers.
         :param doc_num_end: The upper bound of the requested documents.
@@ -792,7 +792,8 @@ class DocketReport(BaseDocketReport, BaseReport):
         :param output_format: Whether to get back the results as a PDF or as
         HTML.
         :param order_by: The ordering desired for the results.
-        :return: request response object
+        :return: None. Instead sets self.response attribute and runs
+        self.parse()
         """
         # Set up and sanity tests
         assert self.session is not None, \
