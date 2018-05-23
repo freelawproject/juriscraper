@@ -130,13 +130,19 @@ class PacerSession(requests.Session):
             raise PacerLoginException("Invalid username/password")
         if u'timeout error' in r.text:
             raise PacerLoginException("Timeout")
-        # The cookie value is in the HTML. Extract it.
-        m = re.search('PacerSession=(\w+);', r.text)
-        if m is not None:
-            self.cookies.set('PacerSession', m.group(1), domain='.uscourts.gov',
-                             path='/')
-        else:
-            raise PacerLoginException('Could not log into PACER')
+
+        if not self.cookies.get('PacerSession'):
+            # Some versions of PACER do the normal thing and set the cookie
+            # using HTTP headers. Those are easy. For the ones that do not,
+            # they set the HTTP headers using JavaScript embedded in the
+            # returned HTML. For those, we need to do some basic parsing of the
+            # HTML to grab and set the value.
+            m = re.search('PacerSession=(\w+);', r.text)
+            if m is not None:
+                self.cookies.set('PacerSession', m.group(1),
+                                 domain='.uscourts.gov', path='/')
+            else:
+                raise PacerLoginException('Could not log into PACER')
 
         logger.info(u'New PACER session established.')
 
