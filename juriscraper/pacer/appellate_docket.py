@@ -189,6 +189,15 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         self.response = self.session.get(self.url, params=query_params)
         self.parse()
 
+    def parse(self):
+        """Parse the item, but be sure to clear the cache before you do so.
+
+        This ensures that if the DocketReport is used to parse multiple items,
+        the cache is cleared in between.
+        """
+        self._clear_caches()
+        super(AppellateDocketReport, self).parse()
+
     def download_pdf(self, pacer_case_id, pacer_document_number):
         # xxx this is likely to need to be overridden.
         pass
