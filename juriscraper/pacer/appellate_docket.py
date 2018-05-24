@@ -7,7 +7,7 @@ from lxml.html import tostring
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
 from .utils import clean_pacer_object, get_court_id_from_url, \
-    get_pacer_doc_id_from_doc1_url
+    get_pacer_doc_id_from_doc1_url, is_pdf
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import clean_string, convert_date_string, harmonize, \
@@ -198,9 +198,72 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         self._clear_caches()
         super(AppellateDocketReport, self).parse()
 
-    def download_pdf(self, pacer_case_id, pacer_document_number):
-        # xxx this is likely to need to be overridden.
-        pass
+    def download_pdf(self, pacer_document_number, pacer_case_id=None):
+        """Download a PDF from an appellate court.
+
+        :param pacer_case_id: The case ID for the docket
+        :param pacer_document_number: The document ID for the item.
+        :return: request.Response object containing the PDF, if one can be
+        found, else returns None.
+
+        This is a functional curl command to get a PDF (though the cookies have
+        been changed to protect the innocent):
+
+        curl 'https://ecf.ca1.uscourts.gov/n/beam/servlet/TransportRoom' \
+            -H 'Referer: https://external' \
+            -H 'Cookie: CMECFASESSIONID=xzy; NextGenCSO=abc;  PacerSession=def' \
+            --data 'servlet=ShowDoc&incPdfHeader=Y&incPdfHeaderDisp=Y&dls_id=00116008873&pacer=t' \
+            --output test.pdf
+
+        This is done with the following HTML and JavaScript:
+
+        <form name="AccCharge" action="TransportRoom" method="post">
+            <input name="servlet" value="ShowDoc" type="hidden">
+            <input name="CSRF" value="csrf_-7746865752981737651" type="hidden">
+            <input name="incPdfHeader" value="N" type="hidden">
+            <input name="incPdfHeaderDisp" value="Y" checked="" type="checkbox"> Show PDF Header
+            <input name="dls_id" value="00116008873" type="hidden">
+            <input name="caseId" value="30442" type="hidden">
+            <input name="recp" value="" type="hidden"><input name="pacer" value="t" type="hidden">
+            <input value="Accept Charges and Retrieve" onclick="doSubmit()" type="button">
+        </form>
+
+        var today = new Date();
+        function doSubmit() {
+            document.AccCharge.recp.value=today.getTime()+"";
+
+            if (document.forms[0].incPdfHeaderDisp.checked) {
+                document.forms[0].incPdfHeader.value = 'Y';
+            } else {
+                document.forms[0].incPdfHeader.value = 'N';
+            }
+
+            document.AccCharge.submit();
+        }
+
+        Note that although the recp parameter is created by the JS, and so you
+        might think it's important, it doesn't seem to do anything that we've
+        identified and so is ignored below.
+        """
+        assert self.session is not None, \
+            u'session attribute of AppellateDocketReport cannot be None.'
+        query_params = {
+            u'servlet': u'ShowDoc',
+            u'incPdfHeader': u'Y',
+            u'incPdfHeaderDisp': u'Y',
+            u'dls_id': pacer_document_number,
+            u'pacer': u't',  # Not sure what this does, but it's required.
+        }
+        if pacer_case_id:
+            query_params[u'caseId'] = pacer_case_id
+        logger.info(u"GETting PDF at URL: %s with params: %s" % (
+            self.url, query_params))
+        r = self.session.get(self.url, params=query_params)
+        r.raise_for_status()
+        if is_pdf(r):
+            logger.info("Got PDF binary data for document #%s in court %s" %
+                        (pacer_document_number, self.court_id))
+            return r
 
     @property
     def metadata(self):
