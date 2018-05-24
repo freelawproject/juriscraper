@@ -9,8 +9,11 @@ from .reports import BaseReport
 from .utils import clean_pacer_object, get_court_id_from_url, \
     get_pacer_doc_id_from_doc1_url
 from ..lib.judge_parsers import normalize_judge_string
+from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import clean_string, convert_date_string, harmonize, \
     force_unicode
+
+logger = make_default_logger()
 
 
 class AppellateDocketReport(BaseDocketReport, BaseReport):
@@ -20,16 +23,15 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     and provide it in our output. There are some exceptions:
 
      1. We don't parse the Prior/Current Cases table.
-     1. We cheat on the parties attribute and just return HTML rather than
-        structured data.
+     1. When parsing HTML, we cheat on the parties attribute and just return
+        HTML rather than structured data.
      1. We don't handle bankruptcy appellate panel dockets (yet)
-
     """
 
     docket_number_dist_regex = re.compile(
         r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
 
-    PATH = 'xxx'  # xxx for self.query
+    PATH = 'n/beam/servlet/TransportRoom'
     CACHE_ATTRS = ['metadata', 'docket_entries']
 
     def __init__(self, court_id, pacer_session=None):
@@ -40,9 +42,152 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         self._parties = None
         self._docket_entries = None
 
-    def query(self, *args, **kwargs):
-        raise NotImplementedError("We currently do not support querying "
-                                  "appellate docket reports.")
+    def query(self, docket_number, show_docket_entries=False,
+              show_orig_docket=False, show_prior_cases=False,
+              show_associated_cases=False, show_panel_info=False,
+              show_party_atty_info=False, show_caption=False,
+              date_start=None, date_end=None, output_format='html'):
+        """
+        Query PACER to get a docket report.
+
+        For the most part, this is a straightforward report to generate
+        according to the parameters below. The report can be generated as
+        either HTML (the default) or XML.
+
+        :param docket_number: Required argument indicating the docket number
+        you wish to view. Example from ca1 is 10-1095
+        :param show_docket_entries: Whether to show docket entries.
+        :param show_orig_docket: Whether to show information about the docket
+        in the lower court.
+        :param show_prior_cases: Whether to show information about the prior
+        cases in the lower court.
+        :param show_associated_cases: Whether to show information about
+        associated cases.
+        :param show_panel_info: Whether to show information about the judicial
+        panel, if it is available.
+        :param show_party_atty_info: Whether to show information about the
+        parties and attorneys.
+        :param show_caption: Whether to show the full caption. E.g.
+
+            IN RE:  GIFTY R. SAMUELS
+
+            Debtor
+
+            -----------------------------------------------
+
+            GIFTY R. SAMUELS
+
+            Appellant
+
+            v.
+
+            DEUTSCHE BANK NATIONAL TRUST COMPANY, as Trustee of the Argent
+            Securities, Inc., Asset-Backed Pass-Through Certificates, Series
+            2005-W3
+
+            Appellee
+
+        :param date_start: A filter for the docket entries. Only show entries
+        from after this date (inclusive).
+        :param date_end: A filter for the docket entries. Only show entries
+        before this date (inclusive).
+        :param output_format: Either xml or html.
+        :return: None, but self.response is set and self.parse() is run
+
+        Some examples of GET and POST requests follow.
+
+        Standard GET request when you click on a docket you want after
+        searching for it (this is the "summary" docket):
+            Url: https://ecf.ca1.uscourts.gov/n/beam/servlet/TransportRoom?
+            Params:
+                servlet=CaseSummary.jsp
+                caseNum=10-1095
+                incOrigDkt=Y
+                incDktEntries=Y
+
+        POST that's sent when you request the full docket as HTML:
+            Url: https://ecf.ca1.uscourts.gov/n/beam/servlet/TransportRoom
+            Params:
+                servlet=CaseSummary.jsp
+                CSRF=csrf_-3765577682638124700
+                caseNum=10-1095
+                fullDocketReport=Y
+                incOrigDkt=Y
+                incPrior=Y
+                incAssoc=Y
+                incPanel=Y
+                incPtyAty=Y
+                incCaption=long
+                incDktEntries=Y
+                dateFrom
+                dateTo
+                incPdfMulti=Y
+                actionType=Run+Docket+Report
+            Also works as a GET:
+                https://ecf.ca1.uscourts.gov/n/beam/servlet/TransportRoom?servlet=CaseSummary.jsp&CSRF=csrf_-3765577682638124700&caseNum=10-1095&fullDocketReport=Y&incOrigDkt=Y&incPrior=Y&incAssoc=Y&incPanel=Y&incPtyAty=Y&incCaption=long&incDktEntries=Y&dateFrom&dateTo&incPdfMulti=Y&actionType=Run+Docket+Report
+
+        POST that's done by clicking the XML button:
+            Url: https://ecf.ca1.uscourts.gov/n/beam/servlet/TransportRoom
+            Params:
+                All parameters same as above, except...
+                outputXML_TXT=XML <-- added
+                actionType <-- removed
+
+        POST that's done by clicking the "Accept Charges and Retrieve" button
+        that's shown to you *after* you request the XML the first time:
+            Url: https://ecf.ca1.uscourts.gov/n/beam/servlet/TransportRoom
+            Params:
+                All parameters same as above, except...
+                confirmCharge=y <-- Added
+        """
+        assert self.session is not None, \
+            u'session attribute of AppellateDocketReport cannot be None.'
+        assert bool(docket_number), \
+            u'docket_number must be a valid value, not "%s"' % docket_number
+
+        if not show_docket_entries and (date_end or date_start):
+            raise ValueError(u'Cannot set date filtering on docket entries '
+                             u'while show_docket_entries=False')
+
+        if output_format.lower() not in [u'xml', u'html']:
+            raise ValueError(u"Invalid value for output_format parameter.")
+
+        query_params = {
+            u'servlet': u'CaseSummary.jsp',
+            u'caseNum': docket_number,
+        }
+        if show_docket_entries:
+            query_params[u'incDktEntries'] = u'Y'
+        if show_orig_docket:
+            query_params[u'incOrigDkt'] = u'Y'
+        if show_prior_cases:
+            query_params[u'incPrior'] = u'Y'
+        if show_associated_cases:
+            query_params[u'incAssoc'] = u'Y'
+        if show_panel_info:
+            query_params[u'incPanel'] = u'Y'
+        if show_party_atty_info:
+            query_params[u'incPtyAty'] = u'Y'
+        if show_caption:
+            query_params[u'incCaption'] = u'long'
+
+        if date_start:
+            query_params[u'dateFrom'] = date_start.strftime(u'%m/%d/%Y')
+        if date_end:
+            query_params[u'dateTo'] = date_end.strftime(u'%m/%d/%Y')
+
+        if output_format.lower() == u'xml':
+            query_params[u'outputXML_TXT'] = u'XML'
+            query_params[u'confirmCharge'] = u'y'  # Lowercase y.
+        elif output_format.lower() == u'html':
+            # When doing HTML, we need to do actionType param.
+            query_params[u'fullDocketReport'] = u'Y'
+            query_params[u'actionType'] = u'Run+Docket+Report'
+
+        logger.info(u"Querying appellate docket report for docket number '%s' "
+                    u"with params %s" % (docket_number, query_params))
+        self.response = self.session.get(self.url, params=query_params)
+        self.parse()
 
     def download_pdf(self, pacer_case_id, pacer_document_number):
         # xxx this is likely to need to be overridden.
