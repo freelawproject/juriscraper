@@ -2,7 +2,7 @@ import pprint
 import re
 import sys
 
-from lxml.html import tostring
+from lxml.html import tostring, fromstring
 
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
@@ -289,34 +289,184 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         self._metadata = data
         return data
 
+    def redelimit_p(self, target_element, delimiter_re):
+        """Redelimit the children of the target element with <p> tags.
+
+        Insert a <p> tag immediately after the target tag,
+        and then replace the delimeter_re with <p> tags.
+        Note that <p> is special because the lxml parser knows it
+        it self-closing, so this would not work with arbitrary
+        tags.
+
+        Use this to turn:
+          <foo>a<br>b<br>c</foo>
+        Into the more easily iterable:
+          <foo>
+            <p>a</p>
+            <p>b</p>
+            <p>c</p>
+          </foo>
+        """
+        html_text = tostring(target_element, encoding='unicode')
+        html_text = re.sub(r'(?i)^(<[^>]*>)', r'\1<p>', html_text)
+        html_text = re.sub(delimiter_re, r'<p>', html_text)
+        return fromstring(html_text)
+
+    # Translation table from Appellate CMECF party fields schema to
+    # juriscaper schema.
+    PARTY_FIELDS = {
+        u'Terminated': u'date_terminated',
+    }
+
     @property
     def parties(self):
         """Return the party table as HTML.
 
-        Unfortunately, the parties for appellate dockets are hard to parse. It
-        can probably be done, but it's telling that this is a piece of data
-        that the original RECAP authors didn't even bother with.
+        Take the first table inside the first table following
+        `NEW SECTION - Party/Aty List` and for each non-blank
+        `<tr>`, the first `<td>` is the party and the second `<td>`
+        is the atty list, with individual attorneys delimited with
+        `<br><br>` (which are notional `<p>`s) and lines of an atty
+        delimited by `<br>`, where the first line is the name.
 
-        The problems with parsing this data can be summarized thusly: <br>. In
-        short, there is a lot of complicated data, and it's pretty much all
-        separated by <br> tags instead of something that provides any kind of
-        semantics. This is the kind of thing that we could do poorly, with a
-        lot of effort, but that we'd always struggle to do well.
-
-        Instead of doing that, we just collect the HTML of this section and
-        return it as a string. This should *not* be considered safe HTML in
-        your application.
         """
-        # Grab the first table following a comment about the table.
-        path = ('//comment()[contains(., "Party/Aty List")]/'
-                'following-sibling::table[1]')
-        try:
-            party_table = self.tree.xpath(path)[0]
-        except IndexError:
-            return ""
-        else:
-            return tostring(party_table, pretty_print=True, encoding='unicode',
-                            with_tail=False)
+        if self._parties is not None:
+            return self._parties
+
+        # Grab the rows of the first nested table
+        # following the comment defining this section of the report
+        path = ('//comment()[contains(., "NEW SECTION - Party/Aty List")]/'
+                'following-sibling::table[1]//table//tr')
+
+        party_rows = self.tree.xpath(path)
+
+        parties = []
+        for row in party_rows:
+            cells = row.xpath('.//td')
+            party = {}
+
+            # Skip merged cells, such as blank dividers
+            if len(cells) < 2:
+                continue
+
+            # Format:
+            #  <tr><td valign=top width=50%>
+            #  THEODORE D'APUZZO, P.A.<BR>
+            #  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[...];Petitioner
+            # but sometimes there are more fields in there:
+            #  <tr>
+            #  <td valign=top width=50%>LORETTA E. LYNCH, Attorney General<BR>
+            #  <B>Terminated: </B>07/31/2017<BR>
+            #  Respondent
+
+            name_role = self.redelimit_p(cells[0], r'(?i)<br/?>')
+            count = len(name_role)
+            assert count >= 2, \
+                "Expecting 2+ <br>-delimited portions of first cell."
+
+            # Name is first, Role is last
+            party[u'name'] = force_unicode(name_role[0].text_content().strip())
+            party[u'type'] = name_role[count-1].text_content().strip()
+
+            unparsed = []
+            for i in range(1, count-1):
+                element = name_role[i]
+                #  <B>Terminated: </B>07/31/2017<BR>
+                bold = element.find('b')
+                if bold is not None:
+                    field = bold.text_content().strip()
+                    # Remove terminal colon
+                    field = re.sub(r':$', '', field)
+                    # Translate field name to Juriscraper schema, if it exists
+                    if field in self.PARTY_FIELDS:
+                        field = self.PARTY_FIELDS[field]
+                    value = bold.tail
+                    party[field] = force_unicode(value)
+                else:
+                    s = ''.join(
+                        tostring(e, encoding='unicode') for e in element)
+                    unparsed.append(s)
+
+            if unparsed:
+                party[u'unparsed'] = unparsed
+
+            attorneys = cells[1]
+
+            # For reference, here's how the XML defines the schema:
+            # <attorney firstName="David"
+            #    middleName="G."
+            #    lastName="Baker"
+            #    generation=""
+            #    suffix=""
+            #    title=""
+            #    email=""
+            #    fax="866-661-5328"
+            #    address1="236 Huntington Ave"
+            #    address2=""
+            #    address3=""
+            #    office=""
+            #    unit=""
+            #    room=""
+            #    businessPhone=""
+            #    personalPhone="617-367-4260"
+            #    city="Boston"
+            #    state="MA"
+            #    zip="02115-4701"
+            #    terminationDate=""
+            #    noticeInfo="[COR NTC Retained]" />
+
+            # Here's the HTML we have to work with. Note that
+            # sometimes we have a "Direct:" phone (personalPhone)
+            # first, but it can be omitted.  It's followed by the
+            # noticeInfo, [bracketed].
+            # HTML:
+            #   <td width="50%" valign="top">
+            #   Nicole Giuliano
+            #   <br>Direct: 954-848-2940
+            #   <br>[COR LD NTC Retained]
+            #   <br>Giuliano Law, PA
+            #   <br>500 E BROWARD BLVD STE 1710
+            #   <br>FT LAUDERDALE, FL 33394
+            #   <br>
+            #   <br>
+            #   Morgan L. Weinstein
+            #   <br>[COR NTC Retained]
+            #   <br>Law Office of Morgan L. Weinstein
+            #   <br>Firm: 954-540-2755
+            #   <br>5216 VAN BUREN ST
+            #   <br>HOLLYWOOD, FL 33021
+            #   </td>
+
+            # We fixup the raw HTML by separating attorneys into <p>
+            # elements, replacing <br><br> pairs.
+            attorney_rows = self.redelimit_p(attorneys, r'(?i)<br/?><br/?>')
+            attorneys = []
+            for attorney_row in attorney_rows:
+                attorney = {}
+                # Performance note: _br_split() unparses and reparses
+                # the element, just as redelimit_p() does above. So
+                # it's a bit wasteful to use both.
+                attorney_lines = self._br_split(attorney_row)
+                # First line is the name
+                attorney[u'name'] = attorney_lines.pop(0)
+                roles = []
+                contacts = []
+                for attorney_line in attorney_lines:
+                    # [Bracketted] lines are roles, others are contacts.
+                    m = re.match(r'\[(.*)\]', attorney_line)
+                    if m:
+                        roles.append(m.group(1))
+                    else:
+                        contacts.append(attorney_line)
+                attorney[u'roles'] = roles
+                attorney[u'contact'] = u'\n'.join(contacts)
+                attorneys.append(attorney)
+
+            party[u'attorneys'] = attorneys
+            parties.append(party)
+
+        self._parties = parties
+        return parties
 
     @property
     def docket_entries(self):
