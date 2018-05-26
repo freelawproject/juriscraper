@@ -23,9 +23,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     and provide it in our output. There are some exceptions:
 
      1. We don't parse the Prior/Current Cases table.
-     1. When parsing HTML, we cheat on the parties attribute and just return
-        HTML rather than structured data.
-     1. We don't handle bankruptcy appellate panel dockets (yet)
+     2. We don't handle bankruptcy appellate panel dockets (yet)
     """
 
     docket_number_dist_regex = re.compile(
