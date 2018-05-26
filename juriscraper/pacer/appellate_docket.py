@@ -465,6 +465,8 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             party[u'attorneys'] = attorneys
             parties.append(party)
 
+        parties = self._normalize_see_above_attorneys(parties)
+
         self._parties = parties
         return parties
 
