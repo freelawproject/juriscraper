@@ -366,7 +366,10 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
             # Name is first, Role is last
             party[u'name'] = force_unicode(name_role[0].text_content().strip())
-            party[u'type'] = name_role[count-1].text_content().strip()
+            role = name_role[count-1].text_content().strip()
+            # Strip terminal comma, if present.
+            role = re.sub(r',$', '', role)
+            party[u'type'] = role
 
             unparsed = []
             for i in range(1, count-1):
