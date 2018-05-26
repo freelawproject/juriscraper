@@ -420,9 +420,25 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         if m:
             ogc_info[u'docket_number'] = m.group(1)
         else:
-            # Regex didn't match. Try another way. Seems to happen when the OGC
-            # is a case that wasn't in a normal district court. E.g. BIA.
-            ogc_info[u'docket_number'] = docket_number_node_str.split(':')[2]
+            # Regex didn't match. Try another way. Seems to happen
+            # when the OGC is a case that wasn't in a normal district
+            # court. E.g. BIA.
+            #   <B>District: </B>BIA-1 : A096-416-756
+            docket_number = docket_number_node_str.split(':')[2].strip()
+            ogc_info[u'docket_number'] = docket_number
+
+        # Alien numbers are somewhat like social security numbers for
+        # non-citizens, and attorneys generally redact them from
+        # public filings. Although FRAP 25(a)(5) / FRCP 5.2(c) only
+        # require SSNs and TINs be redacted, it's not great to be
+        # sharing Alien Numbers.  Unfortunately, many/most appeals
+        # courts list them in the docket metadata, but it would be
+        # best not to do so on CL without a paywall.
+        #
+        # Place them in their own field so we can restrict access to them
+        if (re.match(r'A[0-9-]+', ogc_info[u'docket_number'])):
+            ogc_info[u'RESTRICTED_ALIEN_NUMBER'] = ogc_info.pop(
+                u'docket_number')
 
         try:
             og_court_url = ogc_table.xpath('.//a/@href')[0]
