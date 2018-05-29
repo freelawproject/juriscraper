@@ -304,6 +304,11 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             <p>b</p>
             <p>c</p>
           </foo>
+
+        :param target_element: An lxml HtmlElement that will be redelimited
+        :param delimiter_re: a re pattern matching the tag to replace, e.g.
+            r'(?i)<br ?/?>' for a <br> tag (with optional space and optional /)
+        :returns: The redelimited HtmlElement.
         """
         html_text = tostring(target_element, encoding='unicode')
         html_text = re.sub(r'(?i)^(<[^>]*>)', r'\1<p>', html_text)
