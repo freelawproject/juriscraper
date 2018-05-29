@@ -32,12 +32,12 @@ class Site(OpinionSite):
         hrefs = list(self.html.xpath(path))
         good_anchors = list()
         for href in hrefs:
-            if href.startswith('Imaging'):
+            if '/Imaging\\' in href:
                 basename = href.split('\\')[-1]
-                href = os,path.join('../../Images/Opinions', basename)
+                href = "http://courts.ms.gov/Images/Opinions/{}"
+                href = href.format(basename)
             good_anchors.append(href)
         return good_anchors
-    
 
     def _get_case_dates(self):
         path = '{base}/following-sibling::tr[1]/td[3]//@href'.format(
