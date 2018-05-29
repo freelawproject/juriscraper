@@ -307,7 +307,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
         :param target_element: An lxml HtmlElement that will be redelimited
         :param delimiter_re: a re pattern matching the tag to replace, e.g.
-            r'(?i)<br ?/?>' for a <br> tag (with optional space and optional /)
+            r'(?i)<br\s*/?>' for a <br> (with optional space and optional /)
         :returns: The redelimited HtmlElement.
         """
         html_text = tostring(target_element, encoding='unicode')
@@ -362,7 +362,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             #  <B>Terminated: </B>07/31/2017<BR>
             #  Respondent
 
-            name_role = self.redelimit_p(cells[0], r'(?i)<br/?>')
+            name_role = self.redelimit_p(cells[0], r'(?i)<br\s*/?>')
             count = len(name_role)
             assert count >= 2, \
                 "Expecting 2+ <br>-delimited portions of first cell."
@@ -445,7 +445,8 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
             # We fixup the raw HTML by separating attorneys into <p>
             # elements, replacing <br><br> pairs.
-            attorney_rows = self.redelimit_p(attorneys, r'(?i)<br/?><br/?>')
+            attorney_rows = self.redelimit_p(attorneys,
+                                             r'(?i)<br\s*/?><br\s*/?>')
             attorneys = []
             for attorney_row in attorney_rows:
                 attorney = {}
