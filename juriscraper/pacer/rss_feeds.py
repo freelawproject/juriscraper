@@ -72,14 +72,14 @@ reached out to all of these jurisdictions and heard back the following:
 class PacerRssFeed(DocketReport):
     # The entries are HTML entity-coded, and these matches are run AFTER
     # decoding. A typical entry is of the form:
-    #   [short_description] (<a href="doc1_url">document_mumber</a>)
+    #   [short_description] (<a href="doc1_url">document_number</a>)
     # Or a literal example (line breaks added):
     #   [Scheduling Order] (<a href="https://ecf.mad.uscourts.gov/doc1/
     #   09518690740?caseid=186403&de_seq_num=98">39</a>)
     # We use three simple matches rather than a complex one with three groups.
     document_number_regex = re.compile(r'">(\d+)</a>')
-    doc1_url_regex = re.compile(r'href="(.*)"')
-    short_desc_regex = re.compile(r'\[(.*?)\] \(')  # Matches 'foo': [ foo ] (
+    doc1_url_regex = re.compile(r'href="(.*/doc1/.*)"')
+    short_desc_regex = re.compile(r'\[(.*?)\]')  # Matches 'foo': [ foo ] (
 
     PATH = 'cgi-bin/rss_outside.pl'
 
@@ -199,17 +199,24 @@ class PacerRssFeed(DocketReport):
         """
         de = {
             u'date_filed': date(*entry.published_parsed[:3]),
+            u'description': u'',
             u'document_number': self._get_value(self.document_number_regex,
                                                 entry.summary),
-            u'description': '',
             u'short_description': html_unescape(
                 self._get_value(self.short_desc_regex, entry.summary)),
         }
-        doc1_url = self._get_value(self.doc1_url_regex, entry.summary)
-        if not all([doc1_url.strip(), de[u'document_number']]):
-            return []
 
-        de[u'pacer_doc_id'] = get_pacer_doc_id_from_doc1_url(doc1_url)
+        doc1_url = self._get_value(self.doc1_url_regex, entry.summary)
+        if doc1_url:
+            de[u'pacer_doc_id'] = get_pacer_doc_id_from_doc1_url(doc1_url)
+        else:
+            # Some courts, in particular, NYED do not provide doc1 links and
+            # instead provide show_case_doc links. Some docket entries don't
+            # provide links. In either case, we can't provide pacer_doc_id.
+            de[u'pacer_doc_id'] = u''
+
+        if not de[u'document_number']:
+            return []
 
         return [de]
 
