@@ -130,13 +130,19 @@ class PacerSession(requests.Session):
             raise PacerLoginException("Invalid username/password")
         if u'timeout error' in r.text:
             raise PacerLoginException("Timeout")
-        # The cookie value is in the HTML. Extract it.
-        m = re.search('PacerSession=(\w+);', r.text)
-        if m is not None:
-            self.cookies.set('PacerSession', m.group(1), domain='.uscourts.gov',
-                             path='/')
-        else:
-            raise PacerLoginException('Could not log into PACER')
+
+        if not self.cookies.get('PacerSession'):
+            # Some versions of PACER do the normal thing and set the cookie
+            # using HTTP headers. Those are easy. For the ones that do not,
+            # they set the HTTP headers using JavaScript embedded in the
+            # returned HTML. For those, we need to do some basic parsing of the
+            # HTML to grab and set the value.
+            m = re.search('PacerSession=(\w+);', r.text)
+            if m is not None:
+                self.cookies.set('PacerSession', m.group(1),
+                                 domain='.uscourts.gov', path='/')
+            else:
+                raise PacerLoginException('Could not log into PACER')
 
         logger.info(u'New PACER session established.')
 
@@ -164,7 +170,10 @@ class PacerSession(requests.Session):
             # An authenticated PossibleCaseNumberApi XML result.
             return False
 
-        if '/cgi-bin/login.pl?logout' in r.text:
+        # file:///home/mlissner/.IntelliJIdea2018.1/config/scratches/TransportRoom?servlet=InvalidUserLogin.jsp&logout=y
+        found_district_logout_link = '/cgi-bin/login.pl?logout' in r.text
+        found_appellate_logout_link = 'InvalidUserLogin.jsp&logout=y' in r.text
+        if any([found_district_logout_link, found_appellate_logout_link]):
             # A normal HTML page we're logged into.
             return False
 
