@@ -120,9 +120,6 @@ def clean_html(text):
     if isinstance(text, text_type):
         text = re.sub(r'^\s*<\?xml\s+.*?\?>', '', text)
 
-    # Fix </br>
-    text = re.sub('</br>', '<br/>', text)
-
     # Fix invalid bytes in XML (http://stackoverflow.com/questions/8733233/)
     # Note that this won't work completely on narrow builds of Python, which
     # existed prior to Py3. Thus, we check if it's a narrow build, and adjust
