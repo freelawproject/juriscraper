@@ -221,7 +221,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             <input name="servlet" value="ShowDoc" type="hidden">
             <input name="CSRF" value="csrf_-7746865752981737651" type="hidden">
             <input name="incPdfHeader" value="N" type="hidden">
-            <input name="incPdfHeaderDisp" value="Y" checked="" type="checkbox"> Show PDF Header
+            <input name="incPdfHeaderDisp" value="Y" checked="" type="checkbox">Show PDF Header
             <input name="dls_id" value="00116008873" type="hidden">
             <input name="caseId" value="30442" type="hidden">
             <input name="recp" value="" type="hidden"><input name="pacer" value="t" type="hidden">
@@ -244,6 +244,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         Note that although the recp parameter is created by the JS, and so you
         might think it's important, it doesn't seem to do anything that we've
         identified and so is ignored below.
+        # noqa
         """
         assert self.session is not None, \
             u'session attribute of AppellateDocketReport cannot be None.'
@@ -281,7 +282,8 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             u'date_filed': self._get_tail_by_regex('Docketed', True),
             u'date_terminated': self._get_tail_by_regex('Termed', True),
             u'case_type_information': self._get_case_type_info(),
-            u'originating_court_information': self._get_originating_court_info(),
+            u'originating_court_information':
+                self._get_originating_court_info(),
         }
         data = clean_pacer_object(data)
         self._metadata = data
@@ -347,7 +349,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         return docket_entries
 
     @staticmethod
-    def _get_document_number( cell):
+    def _get_document_number(cell):
         """Get the document number"""
         text_nodes = cell.xpath('.//text()[not(parent::font)]')
         text_nodes = map(clean_string, text_nodes)
@@ -403,7 +405,9 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     def _get_originating_court_info(self):
         """Get all of the originating type information as a dict."""
         try:
-            ogc_table = self.tree.re_xpath('//*[re:match(text(), "Originating Court Information")]/ancestor::table[1]')[0]
+            ogc_table = self.tree.re_xpath(
+                '//*[re:match(text(), "Originating Court Information")]/ancestor::table[1]' # noqa
+            )[0]
         except IndexError:
             # No originating court info.
             return {}
@@ -434,13 +438,15 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
         ogc_info[u'court_reporter'] = self._get_tail_by_regex('Court Reporter')
         ogc_info[u'date_filed'] = self._get_tail_by_regex('Date Filed', True)
-        ogc_info[u'date_disposed'] = self._get_tail_by_regex('Date Disposed', True)
+        ogc_info[u'date_disposed'] = self._get_tail_by_regex(
+            'Date Disposed', True)
         ogc_info[u'disposition'] = self._get_tail_by_regex('Disposition')
 
         trial_judge_str = self._get_tail_by_regex('Trial Judge')
         ogc_info[u'assigned_to'] = normalize_judge_string(trial_judge_str)[0]
         order_judge_str = self._get_tail_by_regex('Ordering Judge')
-        ogc_info[u'ordering_judge'] = normalize_judge_string(order_judge_str)[0]
+        ogc_info[u'ordering_judge'] = normalize_judge_string(
+            order_judge_str)[0]
 
         date_labels = ogc_table.xpath('.//tr[last() - 1]/td//text()')
         dates = ogc_table.xpath('.//tr[last()]/td//text()')

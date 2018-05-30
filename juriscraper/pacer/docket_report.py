@@ -144,6 +144,20 @@ class BaseDocketReport(object):
                     return d.date()
                 return d
 
+    @staticmethod
+    def _br_split(element):
+        """Split the text of an element on the BRs.
+
+        :param element: Any HTML element
+        :return: A list of text nodes from that element split on BRs.
+        """
+        sep = u'FLP_SEPARATOR'
+        html_text = tostring(element, encoding='unicode')
+        html_text = re.sub(r'<br/?>', sep, html_text, flags=re.I)
+        element = fromstring(html_text)
+        text = force_unicode(' '.join(s for s in element.xpath('.//text()')))
+        return [s.strip() for s in text.split(sep) if s]
+
 
 class DocketReport(BaseDocketReport, BaseReport):
     case_name_str = r"(?:Case\s+title:\s+)?(.*\bv\.?\s.*)"
@@ -1039,21 +1053,6 @@ class DocketReport(BaseDocketReport, BaseReport):
                 return ''
             judge_str = judge_str.split('to:')[1]
             return normalize_judge_string(judge_str)[0]
-
-    @staticmethod
-    def _br_split(element):
-        """Split the text of an element on the BRs.
-
-        :param element: Any HTML element
-        :return: A list of text nodes from that element split on BRs.
-        """
-        sep = u'FLP_SEPARATOR'
-        html_text = tostring(element, encoding='unicode')
-        html_text = re.sub(r'<br/?>', sep, html_text, flags=re.I)
-        element = fromstring(html_text)
-        text = force_unicode(' '.join(s for s in element.xpath('.//text()')))
-        return [s.strip() for s in text.split(sep) if s]
-
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
