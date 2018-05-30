@@ -121,5 +121,52 @@
     "ordering_judge": "Rya W. Zobel"
   }, 
   "panel": [], 
-  "parties": "<table cellpadding=\"0\" width=\"100%\" border=\"1\">\n<tbody>\n<tr><td>\n\t<table cellpadding=\"4\" width=\"100%\" border=\"0\" cellspacing=\"0\">\n<tbody>\n<tr><td colspan=\"2\"></td></tr>\n\t<tr>\n<td width=\"50%\" valign=\"top\">GIFTY R. SAMUELS<br>\n\nAppellant\n\n</td>\n\t\t<td width=\"50%\" valign=\"top\">\nDavid G. Baker<br>Direct: 617-367-4260<br>Fax: 866-661-5328<br>[COR NTC Retained]<br>236 Huntington Ave<br>Boston, MA 02115-4701</td>\n</tr>\n<tr><td colspan=\"2\">v.<br><br>\n</td></tr>\n\t<tr>\n<td width=\"50%\" valign=\"top\">DEUTSCHE BANK NATIONAL TRUST COMPANY, as Trustee of the Argent Securities, Inc., Asset-Backed Pass-Through Certificates, Series 2005-W3<br>\n\nAppellee\n\n</td>\n\t\t<td width=\"50%\" valign=\"top\">\nRichard A. Oetheimer<br>Direct: 617-570-1259<br>Fax: 617-523-1231<br>[COR NTC Retained]<br>Goodwin Procter LLP<br>100 Northern Ave<br>Boston, MA 02210<br><br>\nMatthew J. Thaler<br>Direct: 617-570-1000<br>[COR NTC Retained]<br>Goodwin Procter LLP<br>100 Northern Ave<br>Boston, MA 02210</td>\n</tr>\n<tr><td colspan=\"2\">------------------------------<br><br>\n</td></tr>\n\t<tr>\n<td width=\"50%\" valign=\"top\">JOHN FITZGERALD, Assistant U.S. Trustee<br>\n\nInterested\u00a0Party\n\n</td>\n\t\t<td width=\"50%\" valign=\"top\">\nJohn Fitzgerald<br>[NTC Pro Se]<br>Thomas P.'Neill Jr., Federal Bldg.<br>10 Causeway St.<br>Region 1<br>Boston, MA 02222-0000</td>\n</tr>\n</tbody>\n</table>\n</td></tr>\n</tbody>\n</table>\n"
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "contact": "Direct: 617-367-4260\nFax: 866-661-5328\n236 Huntington Ave\nBoston, MA 02115-4701", 
+          "name": "David G. Baker", 
+          "roles": [
+            "COR NTC Retained"
+          ]
+        }
+      ], 
+      "name": "GIFTY R. SAMUELS", 
+      "type": "Appellant"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "Direct: 617-570-1259\nFax: 617-523-1231\nGoodwin Procter LLP\n100 Northern Ave\nBoston, MA 02210", 
+          "name": "Richard A. Oetheimer", 
+          "roles": [
+            "COR NTC Retained"
+          ]
+        }, 
+        {
+          "contact": "Direct: 617-570-1000\nGoodwin Procter LLP\n100 Northern Ave\nBoston, MA 02210", 
+          "name": "Matthew J. Thaler", 
+          "roles": [
+            "COR NTC Retained"
+          ]
+        }
+      ], 
+      "name": "DEUTSCHE BANK NATIONAL TRUST COMPANY, as Trustee of the Argent Securities, Inc., Asset-Backed Pass-Through Certificates, Series 2005-W3", 
+      "type": "Appellee"
+    }, 
+    {
+      "attorneys": [
+        {
+          "contact": "Thomas P.'Neill Jr., Federal Bldg.\n10 Causeway St.\nRegion 1\nBoston, MA 02222-0000", 
+          "name": "John Fitzgerald", 
+          "roles": [
+            "NTC Pro Se"
+          ]
+        }
+      ], 
+      "name": "JOHN FITZGERALD, Assistant U.S. Trustee", 
+      "type": "Interested\u00a0Party"
+    }
+  ]
 }
