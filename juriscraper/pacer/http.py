@@ -170,7 +170,6 @@ class PacerSession(requests.Session):
             # An authenticated PossibleCaseNumberApi XML result.
             return False
 
-        # file:///home/mlissner/.IntelliJIdea2018.1/config/scratches/TransportRoom?servlet=InvalidUserLogin.jsp&logout=y
         found_district_logout_link = '/cgi-bin/login.pl?logout' in r.text
         found_appellate_logout_link = 'InvalidUserLogin.jsp&logout=y' in r.text
         if any([found_district_logout_link, found_appellate_logout_link]):
