@@ -29,20 +29,8 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     docket_number_dist_regex = re.compile(
         r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
 
+    PATH = 'n/beam/servlet/TransportRoom'
     CACHE_ATTRS = ['metadata', 'docket_entries']
-
-    ERROR_STRINGS = BaseReport.ERROR_STRINGS + [
-        'The link to this page may not have originated from within CM/ECF.',
-        'Click on the "Accept Charges and Retrieve" button ONCE at the bottom '
-        'of this page to download the document image.',
-        '<embed width="100%" height="100%" name="plugin" id="plugin"',
-        'Access to the document you are about to view has been restricted.*Do '
-        'not allow it to be seen by unauthorized persons.',
-        'document.location\s*=\s*"https://pacer.login.uscourts.gov',
-        'http-equiv="REFRESH"',
-        'Case Number Not Found</b>',
-        '<title>404 Not Found</title>',
-    ]
 
     def __init__(self, court_id, pacer_session=None):
         super(AppellateDocketReport, self).__init__(court_id, pacer_session)
@@ -51,18 +39,6 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         self._metadata = None
         self._parties = None
         self._docket_entries = None
-
-    @property
-    def url(self):
-        if self.court_id == 'psc':
-            return "https://dcecf.psc.uscourts.gov/" \
-                   "n/beam/servlet/TransportRoom"
-        elif self.court_id in ['ca5', 'ca7', 'ca11']:
-            return "https://ecf.%s.uscourts.gov/" \
-                   "cmecf/servlet/TransportRoom" % self.court_id
-        else:
-            return "https://ecf.%s.uscourts.gov/" \
-                   "n/beam/servlet/TransportRoom" % self.court_id
 
     def query(self, docket_number, show_docket_entries=False,
               show_orig_docket=False, show_prior_cases=False,
@@ -311,10 +287,34 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         self._metadata = data
         return data
 
-    # Fields that need to be converted with convert_date_str()
-    PARTY_DATE_FIELDS = [
-        u'Terminated'
-    ]
+    def redelimit_p(self, target_element, delimiter_re):
+        """Redelimit the children of the target element with <p> tags.
+
+        Insert a <p> tag immediately after the target tag,
+        and then replace the delimeter_re with <p> tags.
+        Note that <p> is special because the lxml parser knows it
+        it self-closing, so this would not work with arbitrary
+        tags.
+
+        Use this to turn:
+          <foo>a<br>b<br>c</foo>
+        Into the more easily iterable:
+          <foo>
+            <p>a</p>
+            <p>b</p>
+            <p>c</p>
+          </foo>
+
+        :param target_element: An lxml HtmlElement that will be redelimited
+        :param delimiter_re: a re pattern matching the tag to replace, e.g.
+            r'(?i)<br\s*/?>' for a <br> (with optional space and optional /)
+        :returns: The redelimited HtmlElement.
+        """
+        html_text = tostring(target_element, encoding='unicode')
+        html_text = re.sub(r'(?i)^(<[^>]*>)', r'\1<p>', html_text)
+        html_text = re.sub(delimiter_re, r'<p>', html_text)
+        return fromstring(html_text)
+
     # Translation table from Appellate CMECF party fields schema to
     # juriscaper schema.
     PARTY_FIELDS = {
@@ -362,7 +362,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             #  <B>Terminated: </B>07/31/2017<BR>
             #  Respondent
 
-            name_role = self.redelimit_p(cells[0], self.BR_REGEX)
+            name_role = self.redelimit_p(cells[0], r'(?i)<br\s*/?>')
             count = len(name_role)
             assert count >= 2, \
                 "Expecting 2+ <br>-delimited portions of first cell."
@@ -380,22 +380,14 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 #  <B>Terminated: </B>07/31/2017<BR>
                 bold = element.find('b')
                 if bold is not None:
-                    raw_field = bold.text_content().strip()
+                    field = bold.text_content().strip()
                     # Remove terminal colon
-                    raw_field = re.sub(r':$', '', raw_field)
+                    field = re.sub(r':$', '', field)
                     # Translate field name to Juriscraper schema, if it exists
-                    if raw_field in self.PARTY_FIELDS:
-                        field = self.PARTY_FIELDS[raw_field]
-                    else:
-                        field = raw_field
-
+                    if field in self.PARTY_FIELDS:
+                        field = self.PARTY_FIELDS[field]
                     value = bold.tail
-                    if raw_field in self.PARTY_DATE_FIELDS:
-                        value = convert_date_string(value)
-                    else:
-                        value = force_unicode(value)
-
-                    party[field] = value
+                    party[field] = force_unicode(value)
                 else:
                     s = ''.join(
                         tostring(e, encoding='unicode') for e in element)
@@ -464,8 +456,6 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 attorney_lines = self._br_split(attorney_row)
                 # First line is the name
                 attorney[u'name'] = attorney_lines.pop(0)
-                if not attorney[u'name']:
-                    continue
                 roles = []
                 contacts = []
                 for attorney_line in attorney_lines:
@@ -505,23 +495,11 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             de = {}
             cells = row.xpath(u'./td')
             if len(cells) == 1:
-                if cells[0].text_content() == 'No docket entries found.':
-                    break
                 continue
-
             date_filed_str = force_unicode(cells[0].text_content())
             de[u'date_filed'] = convert_date_string(date_filed_str)
             de[u'document_number'] = self._get_document_number(cells[1])
             de[u'pacer_doc_id'] = self._get_pacer_doc_id(cells[1])
-            if not de[u'document_number']:
-                if de[u'pacer_doc_id']:
-                    # If we lack the document number, but have
-                    # the pacer ID, use it.
-                    de[u'document_number'] = de[u'pacer_doc_id']
-                else:
-                    # We lack both the document number and the pacer ID.
-                    # Probably a minute order. Press on.
-                    continue
             de[u'description'] = force_unicode(cells[2].text_content())
             docket_entries.append(de)
 
@@ -552,8 +530,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     def _get_case_name(self):
         """Get the case name."""
         # The text of a cell that doesn't have bold text.
-        path = '//table[contains(., "Court of Appeals Docket") or ' \
-               'contains(., "Bankruptcy Appellate Panel Docket")]//td[not(.//b)]'
+        path = '//table[contains(., "Court of Appeals Docket")]//td[not(.//b)]'
         case_name = self.tree.xpath(path)[0].text_content()
         return clean_string(harmonize(case_name))
 
@@ -655,7 +632,6 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 ogc_info[u'date_judgment'] = convert_date_string(date)
             if label == 'Date Order/Judgment EOD:':
                 ogc_info[u'date_judgment_eod'] = convert_date_string(date)
-            # NOA: Notice of appeal
             if label == 'Date NOA Filed:':
                 ogc_info[u'date_filed_noa'] = convert_date_string(date)
             if label == "Date Rec'd COA:":

@@ -158,6 +158,34 @@ class BaseDocketReport(object):
         text = force_unicode(' '.join(s for s in element.xpath('.//text()')))
         return [s.strip() for s in text.split(sep) if s]
 
+    def redelimit_p(self, target_element, delimiter_re):
+        """Redelimit the children of the target element with <p> tags.
+
+        Insert a <p> tag immediately after the target tag,
+        and then replace the delimeter_re with <p> tags.
+        Note that <p> is special because the lxml parser knows it
+        it self-closing, so this would not work with arbitrary
+        tags.
+
+        Use this to turn:
+          <foo>a<br>b<br>c</foo>
+        Into the more easily iterable:
+          <foo>
+            <p>a</p>
+            <p>b</p>
+            <p>c</p>
+          </foo>
+
+        :param target_element: An lxml HtmlElement that will be redelimited
+        :param delimiter_re: a re pattern matching the tag to replace, e.g.
+            r'(?i)<br\s*/?>' for a <br> (with optional space and optional /)
+        :returns: The redelimited HtmlElement.
+        """
+        html_text = tostring(target_element, encoding='unicode')
+        html_text = re.sub(r'(?i)^(<[^>]*>)', r'\1<p>', html_text)
+        html_text = re.sub(delimiter_re, r'<p>', html_text)
+        return fromstring(html_text)
+
 
 class DocketReport(BaseDocketReport, BaseReport):
     case_name_str = r"(?:Case\s+title:\s+)?(.*\bv\.?\s.*)"
