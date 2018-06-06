@@ -113,8 +113,6 @@ class CaseQuery(BaseDocketReport, BaseReport):
         # data, so go with both.
         case_name = clean_string(harmonize(raw_case_name))
 
-        judge_name = None
-
         # Iterate through the remaining rows, recognizing that the second row
         # may be special (district court), in which case it lacks the
         # <b> tag used for key/value pairs and it gives the judge's name.
@@ -128,24 +126,26 @@ class CaseQuery(BaseDocketReport, BaseReport):
             # xxx: What if there are no bold tags and it's not the first row?
             if bolds is None and i == 1:
                 # Second row, no bold => judge name!
-                # xxx: What if it's not ", presiding". Assert?
-                judge_name = force_unicode(rows[i].text_content()
-                                           .rstrip(", presiding"))
+                judge_role = force_unicode(rows[i].text_content())
+                PRESIDING = ", presiding"
+                assert judge_role.endswith(PRESIDING)
+                data[u'judge_name'] = judge_role.rstrip(PRESIDING)
             for bold in bolds:
-                field = bold.text_content().strip().rstrip(':')
+                boldtext = bold.text_content().strip()
+                assert boldtext.endswith(':')
+                field = boldtext.rstrip(':')
                 cleanfield = field.lower().replace(' ', '_').decode('utf-8')
+
                 value = bold.tail.strip()
                 data[cleanfield] = force_unicode(value)
 
-        # xxx use of dict.update() is kind of weird, as is judge_name None
+        # xxx use of dict.update() is kind of weird
         data.update({
             u'court_id': self.court_id,
             u'docket_number': docket_number,
             u'case_name': case_name,
             u'raw_case_name': raw_case_name,
         })
-        if judge_name is not None:  # awk.
-            data[u'judge_name'] = judge_name,
 
         # I don't think this is a good idea, it's too indiscriminate
         # data = clean_pacer_object(data)
