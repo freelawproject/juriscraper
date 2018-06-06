@@ -1,5 +1,4 @@
 import pprint
-import re
 import sys
 
 from .docket_report import BaseDocketReport
@@ -18,10 +17,6 @@ class CaseQuery(BaseDocketReport, BaseReport):
     This is pretty limited metadata.
     """
 
-    docket_number_dist_regex = re.compile(
-        r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
-
-    # PATH = 'n/beam/servlet/TransportRoom'
     CACHE_ATTRS = ['metadata']
 
     def __init__(self, court_id, pacer_session=None):
@@ -29,8 +24,6 @@ class CaseQuery(BaseDocketReport, BaseReport):
         # Initialize the empty cache properties
         self._clear_caches()
         self._metadata = None
-        self._parties = None
-        self._docket_entries = None
 
     @property
     def metadata(self):
