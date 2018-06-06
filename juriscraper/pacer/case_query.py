@@ -106,12 +106,12 @@ class CaseQuery(BaseDocketReport, BaseReport):
         # although we could but have chosen the first <b> tag.
         docket_number = force_unicode(rows[0].find('.//font').text_content())
         # And case caption following the final <b></b> pair.
-        raw_case_name = force_unicode(rows[0].find('.//b[last()]').tail)
+        case_name_raw = force_unicode(rows[0].find('.//b[last()]').tail)
 
         # Our job as a parser is to return the data, not to filter, clean,
         # amend, or "harmonize" it. However downstream often expects harmonized
         # data, so go with both.
-        case_name = clean_string(harmonize(raw_case_name))
+        case_name = clean_string(harmonize(case_name_raw))
 
         # Iterate through the remaining rows, recognizing that the second row
         # may be special (district court), in which case it lacks the
@@ -146,7 +146,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
             u'court_id': self.court_id,
             u'docket_number': docket_number,
             u'case_name': case_name,
-            u'raw_case_name': raw_case_name,
+            u'case_name_raw': case_name_raw,
         })
 
         # I don't think this is a good idea, it's too indiscriminate
