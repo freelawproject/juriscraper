@@ -32,15 +32,6 @@ class CaseQuery(BaseDocketReport, BaseReport):
         self._parties = None
         self._docket_entries = None
 
-    def parse(self):
-        """Parse the item, but be sure to clear the cache before you do so.
-
-        This ensures that if the DocketReport is used to parse multiple items,
-        the cache is cleared in between.
-        """
-        self._clear_caches()
-        super(CaseQuery, self).parse()
-
     @property
     def metadata(self):
         if self._metadata is not None:
