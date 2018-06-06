@@ -158,7 +158,10 @@ class BaseDocketReport(object):
         text = force_unicode(' '.join(s for s in element.xpath('.//text()')))
         return [s.strip() for s in text.split(sep) if s]
 
-    def redelimit_p(self, target_element, delimiter_re):
+
+    BR_REGEX = r'(?i)<br\s*/?>'
+    @staticmethod
+    def redelimit_p(target_element, delimiter_re):
         """Redelimit the children of the target element with <p> tags.
 
         Insert a <p> tag immediately after the target tag,
@@ -178,7 +181,8 @@ class BaseDocketReport(object):
 
         :param target_element: An lxml HtmlElement that will be redelimited
         :param delimiter_re: a re pattern matching the tag to replace, e.g.
-            r'(?i)<br\s*/?>' for a <br> (with optional space and optional /)
+        BR_REGEX aka r'(?i)<br\s*/?>'
+        for a <br> (with optional space and optional /)
         :returns: The redelimited HtmlElement.
         """
         html_text = tostring(target_element, encoding='unicode')

@@ -31,7 +31,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
             return self._metadata
 
         center = self.tree.xpath('.//div[@id="cmecfMainContent"]//center')[0]
-        rows = self.redelimit_p(center, r'(?i)<br\s*/?>')
+        rows = self.redelimit_p(center, self.BR_REGEX)
 
         # First row is special
         docket_number = force_unicode(rows[0].find('.//font').text_content())
