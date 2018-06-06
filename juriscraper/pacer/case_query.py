@@ -14,7 +14,8 @@ logger = make_default_logger()
 class CaseQuery(BaseDocketReport, BaseReport):
     """Parse the iquery.pl ("Query" menu) result.
 
-    This is pretty limited metadata.
+    This is pretty limited metadata about the case, although it
+    presents some more information for BK cases.
     """
 
     CACHE_ATTRS = ['metadata']
@@ -30,21 +31,104 @@ class CaseQuery(BaseDocketReport, BaseReport):
         if self._metadata is not None:
             return self._metadata
 
+        # The data we're after look like this (respacing):
+        #
+        # <div id="cmecfMainContent">
+        #   <input type="hidden" id="cmecfMainContentScroll" value="0">
+        #   <CENTER>
+        #       <B><FONT SIZE=+1>1:11-cv-10230-MLW</FONT></B>
+        #        Arkansas Teacher Retirement System v. State Street
+        #         Corporation et al
+        #     <BR>
+        #       Mark L. Wolf, presiding
+        #     <BR>
+        #       <B>Date filed:</B> 02/10/2011
+        #     <BR>
+        #       <B>Date terminated:</B> 06/23/2014
+        #     <BR>
+        #       <B>Date of last filing:</B> 06/06/2018
+        #     <BR>
+        #   </CENTER>
+        #
+        # There's a bit more structured data in bankruptcy cases;
+        # but note the extra <B></B> pair in the first line:
+        #
+        # <div id="cmecfMainContent">
+        #   <input type="hidden" id="cmecfMainContentScroll" value="0">
+        #   <CENTER>
+        #       <B><FONT SIZE=+1>18-11572</FONT></B>
+        #       <B></B>Nancy Jean Stevens
+        #     <BR>
+        #       <B>Case type:</B> bk
+        #       <B>Chapter:</B> 7
+        #       <B>Asset:</B> No
+        #       <B>Vol: </B> v
+        #       <b>Judge:</b> Frank J. Bailey
+        #     <BR>
+        #       <B>Date filed:</B> 04/30/2018
+        #       <B>Date of last filing:</B> 06/04/2018
+        #     <BR>
+        #   </CENTER>
+        #
+        # There is some BK variation, both in terms of preence of
+        # docket numbers suffixes, and how the Judge: field name
+        # varies depending on the judge's chief judge status:
+        #
+        # <div id="cmecfMainContent">
+        #   <input type="hidden" id="cmecfMainContentScroll" value="0">
+        #   <CENTER>
+        #       <B><FONT SIZE=+1>18-11573</FONT></B>
+        #       <B></B>Sara A Taylor
+        #     <BR>
+        #       <B>Case type:</B> bk
+        #       <B>Chapter:</B> 7
+        #       <B>Asset:</B> No
+        #       <B>Vol: </B> v
+        #       <b>Chief Judge:</b> Melvin S. Hoffman
+        #     <BR>
+        #       <B>Date filed:</B> 04/30/2018
+        #       <B>Date of last filing:</B> 06/06/2018
+        #     <BR>
+        #   </CENTER>
+
+        # Rather than take the approach used by DocketParser of
+        # searching throughout the document for a docket number by
+        # regular expression, instead we take the <center> tag that follows
+        # the relevant cmecfMainContent <div>, and go line-by-line,
+        # delimited by <br>s. This approach is more structured:
+
         center = self.tree.xpath('.//div[@id="cmecfMainContent"]//center')[0]
         rows = self.redelimit_p(center, self.BR_REGEX)
 
-        # First row is special
+        # The first row demands special handling:
+        #   <B><FONT SIZE=+1>18-11572</FONT></B><B></B>Nancy Jean Stevens
+        # We take the docket number from the <font> tag (the innermost tag),
+        # although we could but have chosen the first <b> tag.
         docket_number = force_unicode(rows[0].find('.//font').text_content())
+        # And case caption following the final <b></b> pair.
         raw_case_name = force_unicode(rows[0].find('.//b[last()]').tail)
+
+        # Our job as a parser is to return the data, not to filter, clean,
+        # amend, or "harmonize" it. However downstream often expects harmonized
+        # data, so go with both.
+        case_name = clean_string(harmonize(raw_case_name))
+
         judge_name = None
 
-        # Remainder are <b>Field name:</b> value
-        # Except the 2nd row might or might not be.
+        # Iterate through the remaining rows, recognizing that the second row
+        # may be special (district court), in which case it lacks the
+        # <b> tag used for key/value pairs and it gives the judge's name.
+        # Such as:
+        #   Mark L. Wolf, presiding
+        #   <B>Date filed:</B> 02/10/2011
+        #   <B>Date filed:</B> 04/30/2018<B>Date of last filing:</B> 06/06/2018
         data = {}
         for i in xrange(1, len(rows)):
             bolds = rows[i].findall('.//b')
+            # xxx: What if there are no bold tags and it's not the first row?
             if bolds is None and i == 1:
                 # Second row, no bold => judge name!
+                # xxx: What if it's not ", presiding". Assert?
                 judge_name = force_unicode(rows[i].text_content()
                                            .rstrip(", presiding"))
             for bold in bolds:
@@ -53,15 +137,14 @@ class CaseQuery(BaseDocketReport, BaseReport):
                 value = bold.tail.strip()
                 data[cleanfield] = force_unicode(value)
 
-        case_name = clean_string(harmonize(raw_case_name))
-
+        # xxx use of dict.update() is kind of weird, as is judge_name None
         data.update({
             u'court_id': self.court_id,
             u'docket_number': docket_number,
             u'case_name': case_name,
             u'raw_case_name': raw_case_name,
         })
-        if judge_name is not None:
+        if judge_name is not None:  # awk.
             data[u'judge_name'] = judge_name,
 
         # I don't think this is a good idea, it's too indiscriminate
@@ -72,7 +155,11 @@ class CaseQuery(BaseDocketReport, BaseReport):
 
     @property
     def data(self):
-        """Get all the data back from this endpoint."""
+        """Get all the data back from this endpoint.
+
+        Don't attempt to return parties or docket_entries like the superclass
+        does.
+        """
         if self.is_valid is False:
             return {}
 
