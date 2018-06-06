@@ -123,13 +123,15 @@ class CaseQuery(BaseDocketReport, BaseReport):
         data = {}
         for i in xrange(1, len(rows)):
             bolds = rows[i].findall('.//b')
-            # xxx: What if there are no bold tags and it's not the first row?
-            if bolds is None and i == 1:
-                # Second row, no bold => judge name!
-                judge_role = force_unicode(rows[i].text_content())
-                PRESIDING = ", presiding"
-                assert judge_role.endswith(PRESIDING)
-                data[u'judge_name'] = judge_role.rstrip(PRESIDING)
+            if bolds is None:
+                if i == 1:
+                    # Second row, no bold => judge name!
+                    judge_role = force_unicode(rows[i].text_content())
+                    PRESIDING = ", presiding"
+                    assert judge_role.endswith(PRESIDING)
+                    data[u'judge_name'] = judge_role.rstrip(PRESIDING)
+                else:
+                    raise AssertionError('Line with no boldface?')
             for bold in bolds:
                 boldtext = bold.text_content().strip()
                 assert boldtext.endswith(':')
