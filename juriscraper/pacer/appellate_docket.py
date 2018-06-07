@@ -396,7 +396,10 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                     value = bold.tail
                     if raw_field in self.PARTY_DATE_FIELDS:
                         value = convert_date_string(value)
-                    party[field] = force_unicode(value)
+                    else:
+                        value = force_unicode(value)
+
+                    party[field] = value
                 else:
                     s = ''.join(
                         tostring(e, encoding='unicode') for e in element)
