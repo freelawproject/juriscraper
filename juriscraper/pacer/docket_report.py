@@ -756,12 +756,15 @@ class DocketReport(BaseDocketReport, BaseReport):
                 b_multi_doc=bankr_multi_doc,
                 footer_multi_doc=footer_multi_doc,
             )
-        )[1:]  # Skip the first row.
+        )
 
+        CELL_XPATH = u'./td[not(./input)]'
+        
         docket_entries = []
-        for row in docket_entry_rows:
+        # Skip the first row.
+        for row in docket_entry_rows[1:]:
             de = {}
-            cells = row.xpath(u'./td[not(./input)]')
+            cells = row.xpath(CELL_XPATH)
             if len(cells) == 4:
                 # In some instances, the document entry table has an extra
                 # column. See almb, 92-04963
