@@ -32,7 +32,7 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.url = "http://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions"
         self.base_path = "//div[@id='dnn_ctr2509_ModuleContent']/ul/li/a"
-        self.next_subpage_path = None
+        self.next_subpage_path = "//a[@id='dnn_ctr2512_DNNArticle_List_MyArticleList_MyPageNav_cmdNext']"
         self.cases = []
 
     def _download(self, request_dict={}):
@@ -71,19 +71,37 @@ class Site(OpinionSite):
                 self._extract_cases_from_sub_page(html_tree, date_obj)
                 html_trees.append((html_tree, date_obj))
 
-                # process all sub-pages
-                if self.next_subpage_path and self.method != 'LOCAL':
-                    while True:
-                        next_subpage_html = self.get_next_page(html_tree, self.next_subpage_path, request_dict, url)
-                        if next_subpage_html is None:
-                            break
-
-                        self._extract_cases_from_sub_page(next_subpage_html, date_obj)
-                        html_trees.append((next_subpage_html, date_obj))
-                        html_tree = next_subpage_html
+                # DEACTIVATED BY arderyp ON 2018.06.07, SEE NOTE ON get_next_page()
+                # # process all sub-pages
+                # if self.next_subpage_path and self.method != 'LOCAL':
+                #     while True:
+                #         next_subpage_html = self.get_next_page(html_tree, self.next_subpage_path, request_dict, url)
+                #         if next_subpage_html is None:
+                #             break
+                #
+                #         self._extract_cases_from_sub_page(next_subpage_html, date_obj)
+                #         html_trees.append((next_subpage_html, date_obj))
+                #         html_tree = next_subpage_html
 
         return html_trees
 
+    # CALLS TO THIS FUNCTION DEACTIVATED BY arderyp ON 2018.06.07
+    # This is (temporarily) disabled because it no longer works,
+    # and I (arderyp) am not familiar enough with asp.net to get
+    # it working agian without investing a lot of time.  In short,
+    # this process is finding the "Next" pagination button, collecting
+    # the asp.net <input> field/values from the page, and posting
+    # these inputs back to the same page, using the special "Next"
+    # button hash/id value.  However, something isn't working, because
+    # the posted fields are not being picked up properly, as the same
+    # page loads again, instead of the next page.  As a result, we
+    # enter an infinite look of finding the next button, submitting
+    # the data, landing back on the same page, finding the samenext
+    # button, submitting the data, landing back on the same page yet
+    # again... end on and on and on. Example pages to test againast:
+    #   http://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Court-of-Appeals-Opinions/Date/bdate/2018-4-19/edate/2018-4-19/cid/6
+    #   http://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions/Date/bdate/2017-6-5/edate/2017-6-5/cid/4
+    #
     def get_next_page(self, html_l, next_page_xpath, request_dict, url):
         result = None
         for nhref in html_l.xpath(next_page_xpath):
