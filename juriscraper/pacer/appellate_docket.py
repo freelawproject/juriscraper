@@ -468,6 +468,8 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 attorney_lines = self._br_split(attorney_row)
                 # First line is the name
                 attorney[u'name'] = attorney_lines.pop(0)
+                if not attorney[u'name']:
+                    continue
                 roles = []
                 contacts = []
                 for attorney_line in attorney_lines:
