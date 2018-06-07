@@ -500,6 +500,15 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             de[u'date_filed'] = convert_date_string(date_filed_str)
             de[u'document_number'] = self._get_document_number(cells[1])
             de[u'pacer_doc_id'] = self._get_pacer_doc_id(cells[1])
+            if not de[u'document_number']:
+                if de[u'pacer_doc_id']:
+                    # If we lack the document number, but have
+                    # the pacer ID, use it.
+                    de[u'document_number'] = de[u'pacer_doc_id']
+                else:
+                    # We lack both the document number and the pacer ID.
+                    # Probably a minute order. Press on.
+                    continue
             de[u'description'] = force_unicode(cells[2].text_content())
             docket_entries.append(de)
 
@@ -632,6 +641,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 ogc_info[u'date_judgment'] = convert_date_string(date)
             if label == 'Date Order/Judgment EOD:':
                 ogc_info[u'date_judgment_eod'] = convert_date_string(date)
+            # NOA: Notice of appeal
             if label == 'Date NOA Filed:':
                 ogc_info[u'date_filed_noa'] = convert_date_string(date)
             if label == "Date Rec'd COA:":
