@@ -758,8 +758,26 @@ class DocketReport(BaseDocketReport, BaseReport):
             )
         )
 
-        CELL_XPATH = u'./td[not(./input)]'
-        
+        CELL_XPATH = u'(./td[not(./input)] | ./th[not(./input)])'
+
+        if not docket_entry_rows:
+            return []
+
+        def normalize_whitespace(str):
+            ''' Split (on whitespace) and then rejoin with spaces.
+            Replaces non-terminal runs of whitespace with a single space.
+            '''
+            return ' '.join(str.split())
+
+        raw_date_kind = normalize_whitespace(
+            docket_entry_rows[0].xpath(CELL_XPATH)[0].text_content())
+        if raw_date_kind == 'Date Entered':
+            date_kind = u'date_entered'
+        elif raw_date_kind in ['Date Filed', 'Filing Date', 'Docket Date']:
+            date_kind = u'date_filed'
+        else:
+            raise AssertionError('Unknown date(?) kind <%s>' % raw_date_kind)
+
         docket_entries = []
         # Skip the first row.
         for row in docket_entry_rows[1:]:
@@ -770,11 +788,11 @@ class DocketReport(BaseDocketReport, BaseReport):
                 # column. See almb, 92-04963
                 del cells[1]
 
-            date_filed_str = force_unicode(cells[0].text_content())
-            if not date_filed_str:
+            date_str = force_unicode(cells[0].text_content())
+            if not date_str:
                 # Some older dockets have missing dates. Press on.
                 continue
-            de[u'date_filed'] = convert_date_string(date_filed_str)
+            de[date_kind] = convert_date_string(date_str)
             de[u'document_number'] = self._get_document_number(cells[1])
             de[u'pacer_doc_id'] = self._get_pacer_doc_id(
                 cells[1], de[u'document_number'])
