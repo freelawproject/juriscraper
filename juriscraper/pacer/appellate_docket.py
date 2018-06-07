@@ -380,12 +380,14 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 #  <B>Terminated: </B>07/31/2017<BR>
                 bold = element.find('b')
                 if bold is not None:
-                    field = bold.text_content().strip()
+                    raw_field = bold.text_content().strip()
                     # Remove terminal colon
-                    field = re.sub(r':$', '', field)
+                    raw_field = re.sub(r':$', '', raw_field)
                     # Translate field name to Juriscraper schema, if it exists
-                    if field in self.PARTY_FIELDS:
-                        field = self.PARTY_FIELDS[field]
+                    if raw_field in self.PARTY_FIELDS:
+                        field = self.PARTY_FIELDS[raw_field]
+                    else:
+                        field = raw_field
                     value = bold.tail
                     party[field] = force_unicode(value)
                 else:
