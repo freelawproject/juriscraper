@@ -32,6 +32,10 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     PATH = 'n/beam/servlet/TransportRoom'
     CACHE_ATTRS = ['metadata', 'docket_entries']
 
+    ERROR_STRINGS = BaseReport.ERROR_STRINGS + [
+        'The link to this page may not have originated from within CM/ECF.'
+    ]
+
     def __init__(self, court_id, pacer_session=None):
         super(AppellateDocketReport, self).__init__(court_id, pacer_session)
         # Initialize the empty cache properties
