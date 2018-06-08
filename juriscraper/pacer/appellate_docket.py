@@ -33,7 +33,14 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     CACHE_ATTRS = ['metadata', 'docket_entries']
 
     ERROR_STRINGS = BaseReport.ERROR_STRINGS + [
-        'The link to this page may not have originated from within CM/ECF.'
+        'The link to this page may not have originated from within CM/ECF.',
+        'Click on the "Accept Charges and Retrieve" button ONCE at the bottom '
+        'of this page to download the document image.',
+        '<embed width="100%" height="100%" name="plugin" id="plugin"',
+        'Access to the document you are about to view has been restricted.*Do '
+        'not allow it to be seen by unauthorized persons.',
+        'document.location = "https://pacer.login.uscourts.gov',
+        'http-equiv="REFRESH"',
     ]
 
     def __init__(self, court_id, pacer_session=None):
