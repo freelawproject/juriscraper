@@ -575,6 +575,11 @@ class PacerAppellateDocketParseTest(unittest.TestCase, ParsingTestCase):
                                  'appellate')
         self.parse_files(path_root, '*.html', AppellateDocketReport)
 
+    def test_not_docket_dockets(self):
+        path_root = os.path.join(TESTS_ROOT, 'examples', 'pacer', 'dockets',
+                                 'not_appellate_dockets')
+        self.parse_files(path_root, '*.html', AppellateDocketReport)
+
 
 class PacerAttachmentPageTest(unittest.TestCase, ParsingTestCase):
     def setUp(self):
