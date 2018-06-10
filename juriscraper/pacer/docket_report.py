@@ -797,6 +797,20 @@ class DocketReport(BaseDocketReport, BaseReport):
             de[u'pacer_doc_id'] = self._get_pacer_doc_id(
                 cells[1], de[u'document_number'])
             de[u'description'] = self._get_description(cells)
+
+            # If there's a '(Entered: xx/yy/zzzz)' notation at end, use it!
+            match = re.search(r'\(Entered: (\d{2}/\d{2}/\d{4})\)$',
+                              de[u'description'])
+            if match:
+                date_entered = convert_date_string(match.group(1))
+                if u'date_entered' in de:
+                    assert de[u'date_entered'] == date_entered, (
+                        'Date Entered column (%s) does not match parsed value '
+                        'from end of description (%s)' % (de[u'date_entered'],
+                                                          date_entered))
+                else:
+                    de[u'date_entered'] = date_entered
+
             if not de[u'document_number']:
                 # Minute order. Skip for now.
                 continue
