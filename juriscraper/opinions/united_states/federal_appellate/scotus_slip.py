@@ -88,24 +88,36 @@ class Site(OpinionSite):
                 # Below will raise key error is new judge key encountered (new SC judge appointed)
                 case['judge'] = self.justices[case['J.']] if case['J.'] else ''
                 self.cases.append(case)
-                if 'Revised' in case and 'Revised_Url' in case:
+                for revision_data in case['revisions']:
                     revision = case.copy()
-                    revision['Date'] = case['Revised']
-                    revision['Name_Url'] = case['Revised_Url']
+                    revision['Date'] = revision_data['date_string']
+                    revision['Name_Url'] = revision_data['href']
                     self.cases.append(revision)
 
     def extract_case_data_from_row(self, row):
-        case = {}
         cell_index = 0
+        case = {'revisions': []}
         # Process each cell in row
         for cell in row.xpath('./td'):
             text = cell.text_content().strip()
-            # Skip blank rows with blank first cell
+            # Skip rows with blank first cell
             if cell_index == 0 and not text:
                 break
             label = self.headers[cell_index]
-            # We only care about certain columns
-            if label not in ['R-', 'Pt.']:
+            if label in ['R-', 'Pt.']:
+                # Ignore some columns that we don't need
+                pass
+            elif label == 'Revised':
+                # It is possible for an opinion to have
+                # multiple revisions, so we need to iterate
+                # over the links the the cell
+                for anchor in cell.xpath('a'):
+                    case['revisions'].append({
+                        'href': anchor.xpath('@href')[0],
+                        'date_string': anchor.text_content(),
+                    })
+            else:
+                # Handle normal data cells
                 case[label] = text
                 href = cell.xpath('./a/@href')
                 if href:
