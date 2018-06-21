@@ -145,8 +145,9 @@ class AttachmentPage(BaseReport):
                     pg_cnt_str = pg_cnt_str_node.strip()
                     return int(pg_cnt_str.split()[0])
                 except ValueError:
-                    # Happens when the description field contains the word "page"
-                    # and gets caught by the xpath. Just press on.
+                    # Happens when the description field contains the
+                    # word "page" and gets caught by the xpath. Just
+                    # press on.
                     continue
 
     @staticmethod
