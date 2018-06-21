@@ -15,12 +15,9 @@ class AttachmentPage(BaseReport):
 
     def __init__(self, court_id, pacer_session=None):
         super(AttachmentPage, self).__init__(court_id, pacer_session)
-        if self.court_id.endswith('b'):
-            # Note that parsing bankruptcy attachment pages does not reveal the
-            # document number, only the attachment numbers.
-            self.is_bankruptcy = True
-        else:
-            self.is_bankruptcy = False
+        # Note that parsing bankruptcy attachment pages does not reveal the
+        # document number, only the attachment numbers.
+        self.is_bankruptcy = self.court_id.endswith('b')
 
     def query(self, document_number):
         """Query the "attachment page" endpoint and set the results to self.response.
@@ -34,7 +31,7 @@ class AttachmentPage(BaseReport):
         # the attachment page.
         document_number = document_number[:3] + "0" + document_number[4:]
         url = self.url + document_number
-        logger.info(u'Querying the attachment page endpoint at URL: %s' % url)
+        logger.info(u'Querying the attachment page endpoint at URL: %s', url)
         self.response = self.session.get(url)
         self.parse()
 
@@ -123,7 +120,7 @@ class AttachmentPage(BaseReport):
         else:
             index = 3
         description_text_nodes = row.xpath('./td[%s]//text()' % index)
-        if len(description_text_nodes) == 0:
+        if not description_text_nodes:
             # No text in the cell.
             return u''
         else:
@@ -136,7 +133,7 @@ class AttachmentPage(BaseReport):
         int extracted from the cell specified by index.
         """
         pg_cnt_str_nodes = tr.xpath('./td[contains(., "page")]/text()')
-        if len(pg_cnt_str_nodes) == 0:
+        if not pg_cnt_str_nodes:
             # It's a restricted document without page count information.
             return None
         else:
@@ -197,4 +194,3 @@ class AttachmentPage(BaseReport):
                 m = re.search(r'[?&]caseid=(\d+)', onclick, flags=re.I)
                 if m:
                     return m.group(1)
-
