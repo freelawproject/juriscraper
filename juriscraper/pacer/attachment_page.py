@@ -1,4 +1,6 @@
 import re
+import pprint
+import sys
 
 from .reports import BaseReport
 from .utils import get_pacer_doc_id_from_doc1_url, reverse_goDLS_function
@@ -194,3 +196,21 @@ class AttachmentPage(BaseReport):
                 m = re.search(r'[?&]caseid=(\d+)', onclick, flags=re.I)
                 if m:
                     return m.group(1)
+
+
+def _main():
+    if len(sys.argv) != 2:
+        print "Usage: python -m juriscraper.pacer.attachment_page filepath"
+        print "Please provide a path to an HTML file to parse."
+        sys.exit(1)
+    report = AttachmentPage('cand')  # Court ID is only needed for querying.
+    filepath = sys.argv[1]
+    print "Parsing HTML file at %s" % filepath
+    with open(filepath, 'r') as f:
+        text = f.read().decode('utf-8')
+    report._parse_text(text)
+    pprint.pprint(report.data, indent=2)
+
+
+if __name__ == "__main__":
+    _main()
