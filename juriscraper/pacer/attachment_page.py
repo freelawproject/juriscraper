@@ -1,4 +1,6 @@
 import re
+import pprint
+import sys
 
 from .reports import BaseReport
 from .utils import get_pacer_doc_id_from_doc1_url, reverse_goDLS_function
@@ -15,12 +17,9 @@ class AttachmentPage(BaseReport):
 
     def __init__(self, court_id, pacer_session=None):
         super(AttachmentPage, self).__init__(court_id, pacer_session)
-        if self.court_id.endswith('b'):
-            # Note that parsing bankruptcy attachment pages does not reveal the
-            # document number, only the attachment numbers.
-            self.is_bankruptcy = True
-        else:
-            self.is_bankruptcy = False
+        # Note that parsing bankruptcy attachment pages does not reveal the
+        # document number, only the attachment numbers.
+        self.is_bankruptcy = self.court_id.endswith('b')
 
     def query(self, document_number):
         """Query the "attachment page" endpoint and set the results to self.response.
@@ -34,7 +33,7 @@ class AttachmentPage(BaseReport):
         # the attachment page.
         document_number = document_number[:3] + "0" + document_number[4:]
         url = self.url + document_number
-        logger.info(u'Querying the attachment page endpoint at URL: %s' % url)
+        logger.info(u'Querying the attachment page endpoint at URL: %s', url)
         self.response = self.session.get(url)
         self.parse()
 
@@ -123,7 +122,7 @@ class AttachmentPage(BaseReport):
         else:
             index = 3
         description_text_nodes = row.xpath('./td[%s]//text()' % index)
-        if len(description_text_nodes) == 0:
+        if not description_text_nodes:
             # No text in the cell.
             return u''
         else:
@@ -136,7 +135,7 @@ class AttachmentPage(BaseReport):
         int extracted from the cell specified by index.
         """
         pg_cnt_str_nodes = tr.xpath('./td[contains(., "page")]/text()')
-        if len(pg_cnt_str_nodes) == 0:
+        if not pg_cnt_str_nodes:
             # It's a restricted document without page count information.
             return None
         else:
@@ -145,8 +144,9 @@ class AttachmentPage(BaseReport):
                     pg_cnt_str = pg_cnt_str_node.strip()
                     return int(pg_cnt_str.split()[0])
                 except ValueError:
-                    # Happens when the description field contains the word "page"
-                    # and gets caught by the xpath. Just press on.
+                    # Happens when the description field contains the
+                    # word "page" and gets caught by the xpath. Just
+                    # press on.
                     continue
 
     @staticmethod
@@ -197,3 +197,20 @@ class AttachmentPage(BaseReport):
                 if m:
                     return m.group(1)
 
+
+def _main():
+    if len(sys.argv) != 2:
+        print "Usage: python -m juriscraper.pacer.attachment_page filepath"
+        print "Please provide a path to an HTML file to parse."
+        sys.exit(1)
+    report = AttachmentPage('cand')  # Court ID is only needed for querying.
+    filepath = sys.argv[1]
+    print "Parsing HTML file at %s" % filepath
+    with open(filepath, 'r') as f:
+        text = f.read().decode('utf-8')
+    report._parse_text(text)
+    pprint.pprint(report.data, indent=2)
+
+
+if __name__ == "__main__":
+    _main()
