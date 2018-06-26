@@ -100,7 +100,7 @@ class Site(OpinionSite):
         return case_dates
 
     def _return_dates(self, html_tree):
-        prefixes = ['Opinions', 'OPINIONS', 'OPINION']
+        prefixes = ['Opinions', 'OPINIONS', 'Opinion', 'OPINION']
         paths = ["//*[starts-with(., '%s ')]/text()" % string for string in prefixes]
         path = ' | '.join(paths)
         date_text = html_tree.xpath(path)
