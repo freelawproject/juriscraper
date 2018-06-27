@@ -522,7 +522,10 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             de = {}
             cells = row.xpath(u'./td')
             if len(cells) == 1:
+                if cells[0].text_content() == 'No docket entries found.':
+                    break
                 continue
+
             date_filed_str = force_unicode(cells[0].text_content())
             de[u'date_filed'] = convert_date_string(date_filed_str)
             de[u'document_number'] = self._get_document_number(cells[1])
