@@ -39,7 +39,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         '<embed width="100%" height="100%" name="plugin" id="plugin"',
         'Access to the document you are about to view has been restricted.*Do '
         'not allow it to be seen by unauthorized persons.',
-        'document.location = "https://pacer.login.uscourts.gov',
+        'document.location\s*=\s*"https://pacer.login.uscourts.gov',
         'http-equiv="REFRESH"',
         'Case Number Not Found</b>',
     ]
