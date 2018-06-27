@@ -41,6 +41,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         'not allow it to be seen by unauthorized persons.',
         'document.location = "https://pacer.login.uscourts.gov',
         'http-equiv="REFRESH"',
+        'Case Number Not Found</b>',
     ]
 
     def __init__(self, court_id, pacer_session=None):
