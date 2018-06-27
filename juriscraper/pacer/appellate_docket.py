@@ -42,6 +42,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         'document.location\s*=\s*"https://pacer.login.uscourts.gov',
         'http-equiv="REFRESH"',
         'Case Number Not Found</b>',
+        '<title>404 Not Found</title>',
     ]
 
     def __init__(self, court_id, pacer_session=None):
