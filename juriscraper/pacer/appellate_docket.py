@@ -565,7 +565,8 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     def _get_case_name(self):
         """Get the case name."""
         # The text of a cell that doesn't have bold text.
-        path = '//table[contains(., "Court of Appeals Docket")]//td[not(.//b)]'
+        path = '//table[contains(., "Court of Appeals Docket") or ' \
+               'contains(., "Bankruptcy Appellate Panel Docket")]//td[not(.//b)]'
         case_name = self.tree.xpath(path)[0].text_content()
         return clean_string(harmonize(case_name))
 
