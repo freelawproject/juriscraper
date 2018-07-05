@@ -142,7 +142,24 @@ class PacerAuthTest(unittest.TestCase):
             self.fail('Could not log into PACER')
 
     def test_logging_in_bad_credentials(self):
+        # Make sure password is more than eight characters.
+        session = PacerSession(username='foofoo', password='barbarbar')
+        with self.assertRaises(PacerLoginException):
+            session.login()
+
+    def test_logging_short_password(self):
+        """If a short password is provided, do we throw an appropriate
+        exception?
+        """
         session = PacerSession(username='foo', password='bar')
+        with self.assertRaises(PacerLoginException):
+            session.login()
+
+    def test_logging_short_username(self):
+        """If a username shorter than six characters is provided, do we
+        throw an appropriate exception?
+        """
+        session = PacerSession(username='foo', password='barbarbar')
         with self.assertRaises(PacerLoginException):
             session.login()
 
