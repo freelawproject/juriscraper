@@ -5,7 +5,7 @@ from requests.packages.urllib3 import exceptions
 
 from ..lib.exceptions import PacerLoginException
 from ..lib.log_tools import make_default_logger
-from ..pacer.utils import is_pdf, get_court_id_from_url
+from ..pacer.utils import is_pdf
 
 logger = make_default_logger()
 
@@ -20,6 +20,8 @@ class PacerSession(requests.Session):
     Also includes utilities for logging into PACER and re-logging in when
     sessions expire.
     """
+    LOGIN_URL = 'https://pacer.login.uscourts.gov/csologin/login.jsf'
+
     def __init__(self, cookies=None, username=None, password=None):
         """
         Instantiate a new PACER HTTP Session with some Juriscraper defaults
@@ -115,6 +117,8 @@ class PacerSession(requests.Session):
         if url is None:
             url = self._make_login_url()
         logger.info(u'Attempting PACER site login')
+        if url is None:
+            url = self.LOGIN_URL
         r = self.post(
             url,
             headers={'User-Agent': 'Juriscraper'},
@@ -146,10 +150,6 @@ class PacerSession(requests.Session):
 
         logger.info(u'New PACER session established.')
 
-    def login_training(self):
-        url = self._make_login_url('psc')
-        self.login(url=url)
-
     def _login_again(self, r):
         """Log into PACER if the session has credentials and the session has
         expired.
@@ -179,22 +179,10 @@ class PacerSession(requests.Session):
         if self.username and self.password:
             logger.info(u"Invalid/expired PACER session. Establishing new "
                         u"session.")
-            court_id = get_court_id_from_url(r.url)
-            if court_id == 'psc':
-                self.login_training()
-            else:
-                self.login()
+            self.login()
             return True
         else:
             msg = (u"Invalid/expired PACER session and do not have credentials "
                    u"for re-login.")
             logger.error(msg)
             raise PacerLoginException(msg)
-
-    @staticmethod
-    def _make_login_url(court_id=None):
-        """Make a login URL for a given court id."""
-        if court_id == 'psc':
-            # training website
-            return 'https://dcecf.psc.uscourts.gov/cgi-bin/login.pl'
-        return 'https://ecf.cand.uscourts.gov/cgi-bin/login.pl'

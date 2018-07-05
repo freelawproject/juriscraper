@@ -146,18 +146,6 @@ class PacerAuthTest(unittest.TestCase):
         with self.assertRaises(PacerLoginException):
             session.login()
 
-    def test_logging_into_test_site(self):
-        try:
-            pacer_session = PacerSession(username='tr1234',
-                                         password='Pass!234')
-            pacer_session.login_training()
-            self.assertIsNotNone(pacer_session)
-            self.assertIsNotNone(pacer_session.cookies.get(
-                'PacerSession', None, domain='.uscourts.gov', path='/'))
-
-        except PacerLoginException:
-            self.fail('Could not log into PACER test site!')
-
 
 class PacerFreeOpinionsTest(unittest.TestCase):
     """A variety of tests relating to the Free Written Opinions report"""
