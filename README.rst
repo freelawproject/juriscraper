@@ -261,10 +261,11 @@ Version History
 - 1.15.* - Adds date termination parsing to parties on PACER dockets.
 - 1.16.* - Adds PACER RSS feed parsers.
 - 1.17.* - Adds support for criminal data in PACER
+- 1.18.* - Adds support for appellate docket parsing!
 
 **Current**
 
-- 1.18.* - Adds support for appellate docket parsing!
+- 1.19.* - Adds support for NextGen PACER logins, but drops support for the PACER training website. The training website now uses a different login flow than the rest of PACER.
 
 **Immediate Future Goals**
 
