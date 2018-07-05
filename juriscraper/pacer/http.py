@@ -113,9 +113,53 @@ class PacerSession(requests.Session):
         return output
 
     def login(self, url=None):
-        """Attempt to log into the PACER site."""
-        if url is None:
-            url = self._make_login_url()
+        """Attempt to log into the PACER site.
+
+        Logging into PACER has two flows. If you have filing permission in any
+        court, you wind up making three POST request which are tied together by
+        a JSESSIONID value that's in a cookie set by the first request.
+
+        If you do *not* have filing permissions, only the first request below
+        is needed. The trick to determine what's needed is to watch for a 302
+        response status or the cookies to be set properly. If you get one or
+        the other, that indicates that you're logged in or that you're being
+        redirected to the correct court/webpage.
+
+        Here are the requests that are needed. First, submit your user/pass:
+
+            curl 'https://pacer.login.uscourts.gov/csologin/login.jsf' \
+              -H 'Content-Type: application/x-www-form-urlencoded' \
+              --data 'login=login&login%3AloginName=mlissner.flp&login%3Apassword=QKAXmos0DyAtpX%26U30O7Vqt%401NNwa3z%5E&login%3AclientCode=&login%3AfbtnLogin=&javax.faces.ViewState=stateless' \
+              --verbose > /tmp/curl-out.html
+
+        If this is *not* a filing account, you should receive a 302 response
+        and the proper cookies at this point. You're logged in.
+
+        If this *is* a filing account, the second request happens when you
+        click the *box* (not the button) saying you'll agree to the redaction
+        rules. Note that the JSESSIONID cookie in this request and the next one
+        is set by the previous request and needs to be carried through. If you
+        receive a new JSESSIONID cookie in response to your second request,
+        something has gone wrong:
+
+            curl 'https://pacer.login.uscourts.gov/csologin/login.jsf' \
+              -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' \
+              -H 'Cookie: JSESSIONID=C73BDC1E4CA8C5BDEE13EB2F4CB75E06' \
+              --data 'javax.faces.partial.ajax=true&javax.faces.source=regmsg%3AchkRedact&javax.faces.partial.execute=regmsg%3AchkRedact&javax.faces.partial.render=regmsg%3AbpmConfirm&javax.faces.behavior.event=valueChange&javax.faces.partial.event=change&regmsg=regmsg&regmsg%3AchkRedact_input=on&javax.faces.ViewState=stateless' \
+              --verbose > /tmp/curl-out.html
+
+        The third request happens when you submit the form saying you promise
+        to redact:
+
+            curl 'https://pacer.login.uscourts.gov/csologin/login.jsf' \
+              -H 'Content-Type: application/x-www-form-urlencoded' \
+              -H 'Cookie: JSESSIONID=C73BDC1E4CA8C5BDEE13EB2F4CB75E06' \
+              --data 'regmsg=regmsg&regmsg%3AchkRedact_input=on&regmsg%3AbpmConfirm=&javax.faces.ViewState=stateless'\
+              --verbose > /tmp/curl-out.html
+
+        If you get a 302 response and the proper cookies at this point, that
+        means you're logged in.
+        """
         logger.info(u'Attempting PACER site login')
         if url is None:
             url = self.LOGIN_URL
@@ -126,27 +170,67 @@ class PacerSession(requests.Session):
             timeout=60,
             auto_login=False,
             data={
-                'login': self.username,
-                'key': self.password,
+                'javax.faces.ViewState': 'stateless',
+                'login': 'login',
+                'login:clientCode': '',
+                'login:fbtnLogin': '',
+                'login:loginName': self.username,
+                'login:password': self.password,
             },
         )
-        if u'Invalid ID or password' in r.text:
+        if u'Invalid username or password' in r.text:
             raise PacerLoginException("Invalid username/password")
+        if u'Username must be at least 6 characters' in r.text:
+            raise PacerLoginException("Username must be at least six "
+                                      "characters")
+        if u'Password must be at least 8 characters' in r.text:
+            raise PacerLoginException("Password must be at least eight "
+                                      "characters")
         if u'timeout error' in r.text:
             raise PacerLoginException("Timeout")
 
         if not self.cookies.get('PacerSession'):
-            # Some versions of PACER do the normal thing and set the cookie
-            # using HTTP headers. Those are easy. For the ones that do not,
-            # they set the HTTP headers using JavaScript embedded in the
-            # returned HTML. For those, we need to do some basic parsing of the
-            # HTML to grab and set the value.
-            m = re.search('PacerSession=(\w+);', r.text)
-            if m is not None:
-                self.cookies.set('PacerSession', m.group(1),
-                                 domain='.uscourts.gov', path='/')
-            else:
-                raise PacerLoginException('Could not log into PACER')
+            logger.info("Did not get cookies from first log in POST. Assuming "
+                        "this is a filing user and doing two more POSTs.")
+            self.post(
+                url,
+                headers={'User-Agent': 'Juriscraper'},
+                verify=False,
+                timeout=60,
+                auto_login=False,
+                data={
+                    'javax.faces.partial.ajax': 'true',
+                    'javax.faces.source': 'regmsg:chkRedact',
+                    'javax.faces.partial.execute': 'regmsg:chkRedact',
+                    'javax.faces.partial.render': 'regmsg:bpmConfirm',
+                    'javax.faces.behavior.event': 'valueChange',
+                    'javax.faces.partial.event': 'change',
+                    'regmsg': 'regmsg',
+                    'regmsg:chkRedact_input': 'on',
+                    'javax.faces.ViewState': 'stateless',
+                },
+            )
+            # The box is now checked. Submit the form to say so.
+            self.post(
+                url,
+                headers={'User-Agent': 'Juriscraper'},
+                verify=False,
+                timeout=60,
+                auto_login=False,
+                data={
+                    'regmsg': 'regmsg',
+                    'regmsg:chkRedact_input': 'on',
+                    'regmsg:bpmConfirm': '',
+                    'javax.faces.ViewState': 'stateless',
+                },
+            )
+
+        if not self.cookies.get('PacerSession') and \
+                self.cookies.get('NextGenCSO'):
+            raise PacerLoginException(
+                'Did not get PacerSession and NextGenCSO cookies when '
+                'attempting PACER login.'
+            )
 
         logger.info(u'New PACER session established.')
 
