@@ -226,10 +226,10 @@ class PacerSession(requests.Session):
             )
 
         if not self.cookies.get('PacerSession') and \
-                self.cookies.get('NextGenCSO'):
+                not self.cookies.get('NextGenCSO'):
             raise PacerLoginException(
-                'Did not get PacerSession and NextGenCSO cookies when '
-                'attempting PACER login.'
+                'Did not get PacerSession and NextGenCSO '
+                'cookies when attempting PACER login.'
             )
 
         logger.info(u'New PACER session established.')
