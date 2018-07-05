@@ -24,6 +24,10 @@ class Site(OralArgumentSite):
                                      range(2007, d.year + 1) for month in
                                      range(1, 13)]
 
+    def _download(self, **kwargs):
+        # The certificate on their site has expired.
+        return super(Site, self)._download(request_dict={'verify': False})
+
     def _get_download_urls(self):
         path = "id('ViewBody')//div[contains(concat(' ',@class,' '),' row-entry')]//@href"
         return list(self.html.xpath(path))

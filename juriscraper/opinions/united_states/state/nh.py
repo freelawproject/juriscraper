@@ -57,7 +57,7 @@ class Site(OpinionSite):
         path = 'id("content")/div//strong'
         sub_path = './following-sibling::ul[1]//li|../following-sibling::ul[1]//li'
         for element in self.html.xpath(path):
-            text = element.text_content().strip(':')
+            text = element.text_content().strip().rstrip(':')
             try:
                 case_date = convert_date_string(text)
             except ValueError:

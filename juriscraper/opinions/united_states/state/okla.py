@@ -6,49 +6,46 @@
 # Reviewer: mlr
 # Date: 2014-07-05
 
-from datetime import date
-import time
 import re
+from datetime import date
 
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        d = date.today()
+        year = date.today().year
         self.elements = []
         self.len_elements = 0
-        self.general_path = "//a[contains(./text(), '{year}')]".format(year=d.year)
-        self.url = 'http://www.oscn.net/applications/oscn/Index.asp?ftdb=STOKCSSC&year={year}&level=1'.format(
-            year=d.year
-        )
+        self.regex = r'([^,]+), (\d{2}.\d{2}.\d{4}), (.*)'
+        self.base_path = "//a[contains(./text(), '%d')]" % year
+        self.url = 'http://www.oscn.net/applications/oscn/Index.asp?ftdb=STOKCSSC&year=%d&level=1' % year
+
+    def _download(self, request_dict={}):
+        html = super(Site, self)._download(request_dict)
+        self.elements = html.xpath(self.base_path)
+        return html
 
     def _get_download_urls(self):
-        path = "{gen_path}/@href".format(gen_path=self.general_path)
-        return list(self.html.xpath(path))
-
-    def _get_case_names(self):
-        # Depends on _get_case_dates being run prior.
-        return list(map(self._return_desired_group, self.elements, [3] * self.len_elements))
+        path = "%s/@href" % self.base_path
+        return self.html.xpath(path)
 
     def _get_case_dates(self):
-        path = "{gen_path}/text()".format(gen_path=self.general_path)
-        self.elements = self.html.xpath(path)
-        self.len_elements = len(self.elements)
-        return list(map(self._return_desired_group, self.elements, [2] * self.len_elements))
+        return [self._return_substring(e, 2) for e in self.elements]
+
+    def _get_case_names(self):
+        return [self._return_substring(e, 3) for e in self.elements]
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
 
     def _get_neutral_citations(self):
-        return list(map(self._return_desired_group, self.elements, [1] * self.len_elements))
+        return [self._return_substring(e, 1) for e in self.elements]
 
-    @staticmethod
-    def _return_desired_group(element_text, nr):
-        desired_str = re.search(r'([^,]+), (\d{2}.\d{2}.\d{4}), (.*)', element_text).group(nr)
-        if nr == 2:
-            return date.fromtimestamp(time.mktime(time.strptime(desired_str, '%m/%d/%Y')))
-        else:
-            return desired_str
+    def _return_substring(self, element, group):
+        text = element.text_content()
+        substring = re.search(self.regex, text).group(group)
+        return substring if group != 2 else convert_date_string(substring)
