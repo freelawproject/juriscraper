@@ -246,7 +246,8 @@ class PacerSession(requests.Session):
         if is_pdf(r):
             return False
 
-        valid_case_number_query = '<case number=' in r.text
+        valid_case_number_query = '<case number=' in r.text or \
+            "<request number=" in r.text
         no_results_case_number_query = re.search('<message.*Cannot find', r.text)
         sealed_case_query = re.search('<message.*Case Under Seal', r.text)
         if any([valid_case_number_query, no_results_case_number_query,
