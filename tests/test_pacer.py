@@ -636,10 +636,10 @@ class PacerDocketReportTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        pacer_session = PacerSession(username='tr1234',
-                                     password='Pass!234')
-        cls.report = DocketReport('psc', pacer_session)
-        cls.pacer_case_id = '62866'  # 1:07-cr-00001-RJA-HKS USA v. Green
+        pacer_session = PacerSession(username=PACER_USERNAME,
+                                     password=PACER_PASSWORD)
+        cls.report = DocketReport('cand', pacer_session)
+        cls.pacer_case_id = '186730'  # 4:06-cv-07294 Foley v. Bates
 
     @staticmethod
     def _count_rows(html):
@@ -651,64 +651,52 @@ class PacerDocketReportTest(unittest.TestCase):
         tree = get_html_parsed_text(html)
         return len(tree.xpath('//table[./tr/td[3]]/tr')) - 1  # No header row
 
-    @vcr.use_cassette(record_mode='new_episodes')
     def test_queries(self):
         """Do a variety of queries work?"""
         self.report.query(self.pacer_case_id)
-        self.assertIn('Deft previously', self.report.response.text,
+        self.assertIn('Foley v. Bates', self.report.response.text,
                       msg="Super basic query failed")
 
-        self.report.query(self.pacer_case_id, date_start=date(2007, 2, 7))
+        self.report.query(self.pacer_case_id, date_start=date(2007, 11, 1))
         row_count = self._count_rows(self.report.response.text)
-        self.assertEqual(row_count, 25, msg="Didn't get expected number of "
+        self.assertEqual(2, row_count, msg="Didn't get expected number of "
                                             "rows when filtering by start "
                                             "date. Got %s." % row_count)
 
-        self.report.query(self.pacer_case_id, date_start=date(2007, 2, 7),
-                          date_end=date(2007, 2, 8))
+        self.report.query(self.pacer_case_id, date_start=date(2007, 11, 1),
+                          date_end=date(2007, 11, 28))
         row_count = self._count_rows(self.report.response.text)
-        self.assertEqual(row_count, 2, msg="Didn't get expected number of "
+        self.assertEqual(1, row_count, msg="Didn't get expected number of "
                                            "rows when filtering by start and "
                                            "end dates. Got %s." % row_count)
 
         self.report.query(self.pacer_case_id, doc_num_start=5,
                           doc_num_end=5)
         row_count = self._count_rows(self.report.response.text)
-        self.assertEqual(row_count, 1, msg="Didn't get expected number of rows "
+        self.assertEqual(1, row_count, msg="Didn't get expected number of rows "
                                            "when filtering by doc number. Got "
                                            "%s" % row_count)
 
-        self.report.query(self.pacer_case_id, date_start=date(2007, 2, 7),
-                          date_end=date(2007, 2, 8), date_range_type="Entered")
+        self.report.query(self.pacer_case_id, date_start=date(2007, 11, 1),
+                          date_end=date(2007, 11, 28),
+                          date_range_type="Entered")
         row_count = self._count_rows(self.report.response.text)
-        self.assertEqual(row_count, 2, msg="Didn't get expected number of rows "
+        self.assertEqual(1, row_count, msg="Didn't get expected number of rows "
                                            "when filtering by start and end "
                                            "dates and date_range_type of "
                                            "Entered. Got %s" % row_count)
 
         self.report.query(self.pacer_case_id, doc_num_start=500,
                           show_parties_and_counsel=True)
-        self.assertIn('deRosas', self.report.response.text,
+        self.assertIn('Cheema', self.report.response.text,
                       msg="Didn't find party info when it was explicitly "
                           "requested.")
         self.report.query(self.pacer_case_id, doc_num_start=500,
                           show_parties_and_counsel=False)
-        self.assertNotIn('deRosas', self.report.response.text,
+        self.assertNotIn('Cheema', self.report.response.text,
                          msg="Got party info but it was not requested.")
 
-        self.report.query(self.pacer_case_id, doc_num_start=500,
-                          show_terminated_parties=True,
-                          show_parties_and_counsel=True)
-        self.assertIn('Rosado', self.report.response.text,
-                      msg="Didn't get terminated party info when it was "
-                          "requested.")
-        self.report.query(self.pacer_case_id, doc_num_start=500,
-                          show_terminated_parties=False)
-        self.assertNotIn('Rosado', self.report.response.text,
-                         msg="Got terminated party info but it wasn't "
-                             "requested.")
 
-    @vcr.use_cassette(record_mode='new_episodes')
     def test_using_same_report_twice(self):
         """Do the caches get properly nuked between runs?
 
