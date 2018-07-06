@@ -29,7 +29,6 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     docket_number_dist_regex = re.compile(
         r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
 
-    PATH = 'n/beam/servlet/TransportRoom'
     CACHE_ATTRS = ['metadata', 'docket_entries']
 
     ERROR_STRINGS = BaseReport.ERROR_STRINGS + [
@@ -52,6 +51,18 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         self._metadata = None
         self._parties = None
         self._docket_entries = None
+
+    @property
+    def url(self):
+        if self.court_id == 'psc':
+            return "https://dcecf.psc.uscourts.gov/" \
+                   "n/beam/servlet/TransportRoom"
+        elif self.court_id in ['ca5', 'ca7', 'ca11']:
+            return "https://ecf.%s.uscourts.gov/" \
+                   "cmecf/servlet/TransportRoom" % self.court_id
+        else:
+            return "https://ecf.%s.uscourts.gov/" \
+                   "n/beam/servlet/TransportRoom" % self.court_id
 
     def query(self, docket_number, show_docket_entries=False,
               show_orig_docket=False, show_prior_cases=False,
