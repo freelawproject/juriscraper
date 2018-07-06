@@ -256,7 +256,7 @@ class PacerSession(requests.Session):
             return False
 
         found_district_logout_link = '/cgi-bin/login.pl?logout' in r.text
-        found_appellate_logout_link = 'InvalidUserLogin.jsp&logout=y' in r.text
+        found_appellate_logout_link = 'InvalidUserLogin.jsp' in r.text
         if any([found_district_logout_link, found_appellate_logout_link]):
             # A normal HTML page we're logged into.
             return False
