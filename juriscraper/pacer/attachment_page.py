@@ -1,5 +1,5 @@
-import re
 import pprint
+import re
 import sys
 
 from .reports import BaseReport
@@ -45,11 +45,13 @@ class AttachmentPage(BaseReport):
         following fields:
             - document_number: The document number we're working with.
             - page_count: The number of pages of the item
+            - num_bytes: The number of bytes in the file or null if unknown
             - pacer_doc_id: The doc ID for the main document.
             - attachments: A list of attached items with the following fields:
                 - attachment_number: The attachment number.
                 - description: A description of the item.
                 - page_count: The number of pages.
+                - num_bytes: The number of bytes in the file or null if unknown
                 - pacer_doc_id: The document ID for the attachment (a str).
 
         See the JSON objects in the tests for more examples.
@@ -66,6 +68,7 @@ class AttachmentPage(BaseReport):
         result = {
             'document_number': self._get_document_number(),
             'page_count': self._get_page_count_from_tr(first_row),
+            'num_bytes': self._get_num_bytes_from_tr(first_row),
             'pacer_doc_id': self._get_pacer_doc_id(first_row),
             'pacer_case_id': self._get_pacer_case_id(),
             'attachments': []
@@ -82,6 +85,7 @@ class AttachmentPage(BaseReport):
                 'attachment_number': self._get_attachment_number(row),
                 'description': self._get_description_from_tr(row),
                 'page_count': self._get_page_count_from_tr(row),
+                'num_bytes': self._get_num_bytes_from_tr(row),
                 'pacer_doc_id': self._get_pacer_doc_id(row)
             })
 
@@ -148,6 +152,17 @@ class AttachmentPage(BaseReport):
                     # word "page" and gets caught by the xpath. Just
                     # press on.
                     continue
+
+    @staticmethod
+    def _get_num_bytes_from_tr(tr):
+        """Take a row from the attachment table and return the number of bytes
+        as an int.
+        """
+        cells = tr.xpath('./td')
+        last_cell_contents = cells[-1].text_content()
+        units = ['kb', 'mb']
+        if any(unit in last_cell_contents.lower() for unit in units):
+            return last_cell_contents
 
     @staticmethod
     def _get_pacer_doc_id(row):
