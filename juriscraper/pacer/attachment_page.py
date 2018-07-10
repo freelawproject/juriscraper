@@ -164,6 +164,7 @@ class AttachmentPage(BaseReport):
         units = ['kb', 'mb']
         if any(unit in last_cell_contents.lower() for unit in units):
             return last_cell_contents
+        return ""
 
     @staticmethod
     def _get_pacer_doc_id(row):
