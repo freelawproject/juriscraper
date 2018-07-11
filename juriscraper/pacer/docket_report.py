@@ -180,6 +180,7 @@ class DocketReport(BaseDocketReport, BaseReport):
     nos_regex = re.compile(r'Nature of Suit:\s+(.*)')
     jury_demand_regex = re.compile(r'Jury Demand:\s+(.*)')
     jurisdiction_regex = re.compile(r'Jurisdiction:\s+(.*)')
+    mdl_status_regex = re.compile(r'MDL Status:\s+(.*)')
     demand_regex = re.compile(r'^Demand:\s+(.*)')
     docket_number_dist_regex = re.compile(r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
     docket_number_bankr_regex = re.compile(r"(?:#:\s+)?((\d-)?\d\d-\d*)")
@@ -268,6 +269,8 @@ class DocketReport(BaseDocketReport, BaseReport):
                                        self.metadata_values),
             u'jurisdiction': self._get_value(self.jurisdiction_regex,
                                              self.metadata_values),
+            u'mdl_status': self._get_value(self.mdl_status_regex,
+                                           self.metadata_values)
         }
         data = clean_pacer_object(data)
         self._metadata = data
