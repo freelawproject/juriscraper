@@ -183,6 +183,7 @@ class DocketReport(BaseDocketReport, BaseReport):
     demand_regex = re.compile(r'^Demand:\s+(.*)')
     docket_number_dist_regex = re.compile(r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
     docket_number_bankr_regex = re.compile(r"(?:#:\s+)?((\d-)?\d\d-\d*)")
+    docket_number_jpml = re.compile(r'(MDL No.\s+\d*)')
     offense_regex = re.compile(
         r'highest\s+offense.*(?P<status>opening|terminated)', flags=re.I)
     counts_regex = re.compile(r'(?P<status>pending|terminated)\s+counts',
@@ -1014,7 +1015,8 @@ class DocketReport(BaseDocketReport, BaseReport):
                        self.docket_number_bankr_regex]
         else:
             docket_number_path = '//h3'
-            regexes = [self.docket_number_dist_regex]
+            regexes = [self.docket_number_dist_regex,
+                       self.docket_number_jpml]
         nodes = self.tree.xpath(docket_number_path)
         string_nodes = [s.text_content() for s in nodes]
         for regex in regexes:
