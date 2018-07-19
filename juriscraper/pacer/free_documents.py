@@ -18,8 +18,8 @@ logger = make_default_logger()
 class FreeOpinionReport(BaseReport):
     """An object for querying and parsing the free opinion report."""
 
-    EXCLUDED_COURT_IDS = ['casb', 'ganb', 'innb', 'mieb', 'miwb', 'nmib', 'nvb',
-                          'ohsb', 'tnwb', 'vib']
+    EXCLUDED_COURT_IDS = ['casb', 'ganb', 'innb', 'mieb', 'miwb',
+                          'nmib', 'nvb', 'ohsb', 'tnwb', 'vib']
     VALID_SORT_PARAMS = ('date_filed', 'case_number')
 
     def __init__(self, court_id, pacer_session):
@@ -58,7 +58,8 @@ class FreeOpinionReport(BaseReport):
             end = end.strftime('%m/%d/%Y')
             # Iterate one day at a time. Any more and PACER chokes.
             logger.info("Querying written opinions report for '%s' between %s "
-                        "and %s, ordered by %s" % (self.court_id, start, end, sort))
+                        "and %s, ordered by %s"
+                        % (self.court_id, start, end, sort))
             data = {
                 'filed_from': start,
                 'filed_to': end,
@@ -139,15 +140,17 @@ class FreeOpinionRow(object):
     def __init__(self, element, last_good_row, court_id):
         """Initialize the object.
 
-        last_good_row should be a dict representing the values from the previous
-        row in the table. This is necessary because the report skips the case
-        name if it's the same for two cases in a row. For example:
+        last_good_row should be a dict representing the values from
+        the previous row in the table. This is necessary because the
+        report skips the case name if it's the same for two cases in a
+        row. For example:
 
         Joe v. Volcano | 12/31/2008 | 128 | The first doc from case | More here
                        | 12/31/2008 | 129 | The 2nd doc from case   | More here
 
         By having the values from the previous row, we can be sure to be able
         to complete the empty cells.
+
         """
         super(FreeOpinionRow, self).__init__()
         self.element = element
@@ -191,10 +194,10 @@ class FreeOpinionRow(object):
 
             Joe v. Volcano | 12/31/2008 | 128 | The first doc | More here
 
-        The case name is always a link, so the simple way to do this is to check
-        if there's a link in the second cell of the row. If so, it's ordered by
-        date_filed. Else, by case_number. Note that the first cell is often
-        blank.
+        The case name is always a link, so the simple way to do this
+        is to check if there's a link in the second cell of the
+        row. If so, it's ordered by date_filed. Else, by
+        case_number. Note that the first cell is often blank.
         """
         if len(self.element.xpath('./td[2]//@href')) > 0:
             return 'date_filed'
@@ -202,9 +205,10 @@ class FreeOpinionRow(object):
             return 'case_number'
 
     def get_pacer_case_id(self):
-        # It's tempting to get this value from the URL in the first cell, but
-        # that URL can sometimes differ from the URL used in the goDLS function.
-        # When that's the case, the download fails.
+        # It's tempting to get this value from the URL in the first
+        # cell, but that URL can sometimes differ from the URL used in
+        # the goDLS function.  When that's the case, the download
+        # fails.
         try:
             onclick = self.element.xpath('./td[3]//@onclick')[0]
         except IndexError:
@@ -242,9 +246,11 @@ class FreeOpinionRow(object):
             s = cell.text_content().strip()
 
         if self._column_count == 4 or self.court_id in ['areb', 'arwb']:
-            # In this case s will be something like: 14-90018 Stewart v.
-            # Kauanui. split on the first space, left is docket number, right is
-            # case name.
+
+            # In this case s will be something like:
+            #   14-90018 Stewart v. Kauanui
+            # Split on the first space, left is docket number, right
+            # is case name.
             return s.split(' ', 1)[0]
         else:
             return s
