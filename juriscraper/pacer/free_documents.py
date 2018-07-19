@@ -1,4 +1,8 @@
 # coding=utf-8
+"""Classes for querying PACER's Written Opinion Report (WrtOpRpt.pl),
+which is free.
+"""
+
 from .reports import BaseReport
 from ..lib.date_utils import make_date_range_tuples
 from ..lib.html_utils import (
@@ -47,22 +51,22 @@ class FreeOpinionReport(BaseReport):
         """
         if self.court_id in self.EXCLUDED_COURT_IDS:
             logger.error("Cannot get written opinions report from '%s'. It is "
-                         "not provided by the court or is in disuse." %
+                         "not provided by the court or is in disuse.",
                          self.court_id)
-            return []
+            return
 
         dates = make_date_range_tuples(start, end, gap=day_span)
         responses = []
-        for start, end in dates:
-            start = start.strftime('%m/%d/%Y')
-            end = end.strftime('%m/%d/%Y')
+        for _start, _end in dates:
+            _start = _start.strftime('%m/%d/%Y')
+            _end = _end.strftime('%m/%d/%Y')
             # Iterate one day at a time. Any more and PACER chokes.
             logger.info("Querying written opinions report for '%s' between %s "
-                        "and %s, ordered by %s"
-                        % (self.court_id, start, end, sort))
+                        "and %s, ordered by %s",
+                        self.court_id, _start, _end, sort)
             data = {
-                'filed_from': start,
-                'filed_to': end,
+                'filed_from': _start,
+                'filed_to': _end,
                 'ShowFull': '1',
                 'Key1': self._normalize_sort_param(sort),
                 'all_case_ids': '0'
@@ -106,8 +110,8 @@ class FreeOpinionReport(BaseReport):
                 else:
                     row = FreeOpinionRow(row, {}, self.court_id)
                 results.append(row)
-        logger.info("Parsed %s results from written opinions report at %s" %
-                    (len(results), self.court_id))
+        logger.info("Parsed %s results from written opinions report at %s",
+                    len(results), self.court_id)
         return results
 
     def _normalize_sort_param(self, sort):
@@ -275,10 +279,9 @@ class FreeOpinionRow(object):
             try:
                 return cell.xpath('.//b')[0].text_content()
             except IndexError:
-                logger.warn("Unable to get case name for %s in %s." % (
-                    self.docket_number,
-                    self.court_id,
-                ))
+                logger.warn("Unable to get case name for %s in %s.",
+                            self.docket_number,
+                            self.court_id)
                 return "Case name unknown"
 
     def get_date_filed(self):
