@@ -27,7 +27,7 @@ class FreeOpinionReport(BaseReport):
     VALID_SORT_PARAMS = ('date_filed', 'case_number')
 
     def __init__(self, court_id, pacer_session):
-        self.responses = None
+        self.responses = []
         self.trees = []
         super(FreeOpinionReport, self).__init__(court_id, pacer_session)
 
