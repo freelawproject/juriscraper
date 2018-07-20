@@ -325,13 +325,13 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         """Do we properly catch and prevent a query against disused courts?"""
         mock_session = mock.MagicMock()
 
-        report = self.reports['ganb']
+        report = self.reports['casb']
         report.session = mock_session
 
         some_date = convert_date_string('1/1/2015')
 
-        results = report.query(some_date, some_date, sort='case_number')
-        self.assertEqual([], results, 'should have empty result set')
+        report.query(some_date, some_date, sort='case_number')
+        self.assertEqual([], report.responses, 'should have empty result set')
         self.assertFalse(mock_session.post.called,
                          msg='should not trigger a POST query')
 
