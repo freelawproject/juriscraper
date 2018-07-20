@@ -1,4 +1,8 @@
 # coding=utf-8
+"""Classes for querying PACER's Written Opinion Report (WrtOpRpt.pl),
+which is free.
+"""
+
 from .reports import BaseReport
 from ..lib.date_utils import make_date_range_tuples
 from ..lib.html_utils import (
@@ -18,8 +22,8 @@ logger = make_default_logger()
 class FreeOpinionReport(BaseReport):
     """An object for querying and parsing the free opinion report."""
 
-    EXCLUDED_COURT_IDS = ['casb', 'ganb', 'innb', 'mieb', 'miwb', 'nmib', 'nvb',
-                          'ohsb', 'tnwb', 'vib']
+    EXCLUDED_COURT_IDS = ['casb', 'ganb', 'innb', 'mieb', 'miwb',
+                          'nmib', 'nvb', 'ohsb', 'tnwb', 'vib']
     VALID_SORT_PARAMS = ('date_filed', 'case_number')
 
     def __init__(self, court_id, pacer_session):
@@ -47,21 +51,22 @@ class FreeOpinionReport(BaseReport):
         """
         if self.court_id in self.EXCLUDED_COURT_IDS:
             logger.error("Cannot get written opinions report from '%s'. It is "
-                         "not provided by the court or is in disuse." %
+                         "not provided by the court or is in disuse.",
                          self.court_id)
-            return []
+            return
 
         dates = make_date_range_tuples(start, end, gap=day_span)
         responses = []
-        for start, end in dates:
-            start = start.strftime('%m/%d/%Y')
-            end = end.strftime('%m/%d/%Y')
+        for _start, _end in dates:
+            _start = _start.strftime('%m/%d/%Y')
+            _end = _end.strftime('%m/%d/%Y')
             # Iterate one day at a time. Any more and PACER chokes.
             logger.info("Querying written opinions report for '%s' between %s "
-                        "and %s, ordered by %s" % (self.court_id, start, end, sort))
+                        "and %s, ordered by %s",
+                        self.court_id, _start, _end, sort)
             data = {
-                'filed_from': start,
-                'filed_to': end,
+                'filed_from': _start,
+                'filed_to': _end,
                 'ShowFull': '1',
                 'Key1': self._normalize_sort_param(sort),
                 'all_case_ids': '0'
@@ -105,8 +110,8 @@ class FreeOpinionReport(BaseReport):
                 else:
                     row = FreeOpinionRow(row, {}, self.court_id)
                 results.append(row)
-        logger.info("Parsed %s results from written opinions report at %s" %
-                    (len(results), self.court_id))
+        logger.info("Parsed %s results from written opinions report at %s",
+                    len(results), self.court_id)
         return results
 
     def _normalize_sort_param(self, sort):
@@ -139,15 +144,17 @@ class FreeOpinionRow(object):
     def __init__(self, element, last_good_row, court_id):
         """Initialize the object.
 
-        last_good_row should be a dict representing the values from the previous
-        row in the table. This is necessary because the report skips the case
-        name if it's the same for two cases in a row. For example:
+        last_good_row should be a dict representing the values from
+        the previous row in the table. This is necessary because the
+        report skips the case name if it's the same for two cases in a
+        row. For example:
 
         Joe v. Volcano | 12/31/2008 | 128 | The first doc from case | More here
                        | 12/31/2008 | 129 | The 2nd doc from case   | More here
 
         By having the values from the previous row, we can be sure to be able
         to complete the empty cells.
+
         """
         super(FreeOpinionRow, self).__init__()
         self.element = element
@@ -191,10 +198,10 @@ class FreeOpinionRow(object):
 
             Joe v. Volcano | 12/31/2008 | 128 | The first doc | More here
 
-        The case name is always a link, so the simple way to do this is to check
-        if there's a link in the second cell of the row. If so, it's ordered by
-        date_filed. Else, by case_number. Note that the first cell is often
-        blank.
+        The case name is always a link, so the simple way to do this
+        is to check if there's a link in the second cell of the
+        row. If so, it's ordered by date_filed. Else, by
+        case_number. Note that the first cell is often blank.
         """
         if len(self.element.xpath('./td[2]//@href')) > 0:
             return 'date_filed'
@@ -202,9 +209,10 @@ class FreeOpinionRow(object):
             return 'case_number'
 
     def get_pacer_case_id(self):
-        # It's tempting to get this value from the URL in the first cell, but
-        # that URL can sometimes differ from the URL used in the goDLS function.
-        # When that's the case, the download fails.
+        # It's tempting to get this value from the URL in the first
+        # cell, but that URL can sometimes differ from the URL used in
+        # the goDLS function.  When that's the case, the download
+        # fails.
         try:
             onclick = self.element.xpath('./td[3]//@onclick')[0]
         except IndexError:
@@ -242,9 +250,11 @@ class FreeOpinionRow(object):
             s = cell.text_content().strip()
 
         if self._column_count == 4 or self.court_id in ['areb', 'arwb']:
-            # In this case s will be something like: 14-90018 Stewart v.
-            # Kauanui. split on the first space, left is docket number, right is
-            # case name.
+
+            # In this case s will be something like:
+            #   14-90018 Stewart v. Kauanui
+            # Split on the first space, left is docket number, right
+            # is case name.
             return s.split(' ', 1)[0]
         else:
             return s
@@ -269,10 +279,9 @@ class FreeOpinionRow(object):
             try:
                 return cell.xpath('.//b')[0].text_content()
             except IndexError:
-                logger.warn("Unable to get case name for %s in %s." % (
-                    self.docket_number,
-                    self.court_id,
-                ))
+                logger.warn("Unable to get case name for %s in %s.",
+                            self.docket_number,
+                            self.court_id)
                 return "Case name unknown"
 
     def get_date_filed(self):
