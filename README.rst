@@ -262,10 +262,13 @@ Version History
 - 1.16.* - Adds PACER RSS feed parsers.
 - 1.17.* - Adds support for criminal data in PACER
 - 1.18.* - Adds support for appellate docket parsing!
+- 1.19.* - Adds support for NextGen PACER logins, but drops support for the PACER training website. The training website now uses a different login flow than the rest of PACER.
 
 **Current**
 
-- 1.19.* - Adds support for NextGen PACER logins, but drops support for the PACER training website. The training website now uses a different login flow than the rest of PACER.
+- 1.20.* - Tweaks the API of the query method in the FreeOpinionReport object
+  to consistently return None instead of sometimes returning []. Version bumped
+  because of breaking API changes.
 
 **Immediate Future Goals**
 
