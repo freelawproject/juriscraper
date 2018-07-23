@@ -30,7 +30,7 @@ class PossibleCaseNumberApi(BaseReport):
         """
         assert self.session is not None, \
             "session attribute of PossibleCaseNUmberApi cannot be None."
-        url = "%s?%s" % (self.url, docket_number)
+        url = "%s?%s" % (self.url, docket_number.lower())
         logger.info(u'Querying the possible case number endpoint at URL: %s' %
                     url)
         self.response = self.session.get(url)
