@@ -128,13 +128,16 @@ class CaseQuery(BaseDocketReport, BaseReport):
                     # Second row, no bold => judge name!
                     judge_role = force_unicode(rows[i].text_content())
                     PRESIDING = ", presiding"
-                    assert judge_role.endswith(PRESIDING)
+                    assert judge_role.endswith(PRESIDING), \
+                        ("We expected the judge's name to end with "
+                         "', presiding'.")
                     data[u'judge_name'] = judge_role.rstrip(PRESIDING)
                 else:
                     raise AssertionError('Line with no boldface?')
             for bold in bolds:
                 boldtext = bold.text_content().strip()
-                assert boldtext.endswith(':')
+                assert boldtext.endswith(':'), \
+                    "Boldface fieldnames should end with colon (:)"
                 field = boldtext.rstrip(':')
                 cleanfield = field.lower().replace(' ', '_').decode('utf-8')
 
