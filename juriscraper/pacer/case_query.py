@@ -169,8 +169,6 @@ class CaseQuery(BaseDocketReport, BaseReport):
             return {}
 
         data = self.metadata.copy()
-        # data[u'parties'] = self.parties
-        # data[u'docket_entries'] = self.docket_entries
         return data
 
 
