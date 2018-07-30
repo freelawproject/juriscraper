@@ -152,7 +152,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
             u'case_name_raw': case_name_raw,
         })
 
-        # I don't think this is a good idea, it's too indiscriminate
+        # xxx: I don't think this is a good idea, it's too indiscriminate
         # data = clean_pacer_object(data)
 
         self._metadata = data
