@@ -8,6 +8,15 @@ from .http import PacerSession
 from .internet_archive import InternetArchive
 from .rss_feeds import PacerRssFeed
 
-__all__ = [FreeOpinionReport, DocketReport, DocketHistoryReport,
-           PossibleCaseNumberApi, AttachmentPage, ShowCaseDocApi, PacerSession,
-           InternetArchive, PacerRssFeed, AppellateDocketReport]
+__all__ = [
+    AppellateDocketReport,
+    AttachmentPage,
+    DocketHistoryReport,
+    DocketReport,
+    FreeOpinionReport,
+    InternetArchive,
+    PacerRssFeed,
+    PacerSession,
+    PossibleCaseNumberApi,
+    ShowCaseDocApi,
+]
