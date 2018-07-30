@@ -121,9 +121,9 @@ class CaseQuery(BaseDocketReport, BaseReport):
         #   <B>Date filed:</B> 02/10/2011
         #   <B>Date filed:</B> 04/30/2018<B>Date of last filing:</B> 06/06/2018
         data = {}
-        for i in xrange(1, len(rows)):
+        for i in xrange(1, len(rows)-1):
             bolds = rows[i].findall('.//b')
-            if bolds is None:
+            if not bolds:
                 if i == 1:
                     # Second row, no bold => judge name!
                     judge_role = force_unicode(rows[i].text_content())
