@@ -22,6 +22,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
     This is pretty limited metadata about the case, although it
     presents some more information for BK cases.
     """
+    PATH = 'cgi-bin/iquery.pl'
 
     CACHE_ATTRS = ['metadata']
 
@@ -168,6 +169,72 @@ class CaseQuery(BaseDocketReport, BaseReport):
 
         self._metadata = data
         return data
+
+    def query(self, pacer_case_id):
+        """Use a district court's PACER query function with a known case ID
+
+        At the top of every district PACER court, there's a button that says,
+        "Query". When you click that button, it either does a query for the
+        criteria you specify, returning a list of results or it returns the
+        specific case you were looking for, including metadata and a list of
+        reports you can run on that case.
+
+        While there is utility in both of these result types, this method only
+        supports the use case where you know the pacer_case_id in advance, and
+        are expecting only one result in return. This method does *not* support
+        parsing the search results that the Query button can return (though
+        we're not opposed to adding such support).
+
+        :param pacer_case_id: A pacer_case_id for a case to lookup.
+        :return None: Instead, sets self.response attribute and runs
+        self.parse()
+        """
+
+        """
+        This is an example of a query that could be sent, and which we're 
+        attempting to replicate:
+            curl 'https://ecf.ord.uscourts.gov/cgi-bin/iquery.pl?1-L_1_0-1' 
+                -H 'Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7Sz5UdWuoi5TbtDj' 
+                -H 'Referer: https://external' 
+                -H 'Cookie: CASE_NUM=6:16-cv-01710(128548); PacerSession=xxx; PacerPref=receipt=Y' 
+                --data-binary $'------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data;
+                    name="UserType"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data;
+                    name="all_case_ids"\r\n\r\n128548\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data; 
+                    name="case_num"\r\n\r\n6:16-cv-1710\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data; 
+                    name="Qry_filed_from"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data; 
+                    name="Qry_filed_to"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data; 
+                    name="lastentry_from"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data; 
+                    name="lastentry_to"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data; 
+                    name="last_name"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data; 
+                    name="first_name"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data; 
+                    name="middle_name"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data; 
+                    name="person_type"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj--\r\n'
+                    
+        The important notes, from testing:
+         - The CASE_NUM cookie isn't needed.
+         - The case_num parameter needs a value; any value will do.
+         - As usual, the ?1-L_1_0-1 business in the URL is needed
+        """
+        assert self.session is not None, \
+            "session attribute of DocketReport cannot be None."
+        assert bool(pacer_case_id), \
+            "pacer_case_id must be truthy, not '%s'" % pacer_case_id
+        params = {
+            u'UserType': '',
+            u'all_case_ids': pacer_case_id,
+            u'case_num': 'foo',  # We just need *some* value here.
+            u'Qry_filed_from': '',
+            u'Qry_filed_to': '',
+            u'lastentry_from': '',
+            u'lastentry_to': '',
+            u'last_name': '',
+            u'first_name': '',
+            u'middle_name': '',
+            u'person_type': '',
+        }
+        logger.info(u"Running case query for case ID '%s'", pacer_case_id)
+        self.response = self.session.post(self.url + '?1-L_1_0-1', data=params)
+        self.parse()
 
     @property
     def data(self):
