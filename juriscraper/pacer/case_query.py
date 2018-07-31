@@ -10,7 +10,7 @@ from .docket_report import BaseDocketReport
 from .reports import BaseReport
 from .utils import clean_pacer_object
 from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import clean_string, harmonize, \
+from ..lib.string_utils import clean_string, convert_date_string, harmonize, \
     force_unicode
 
 logger = make_default_logger()
@@ -128,6 +128,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
         data = {}
         field_names = {
             'date_of_last_filing': 'date_last_filing',
+            'plan_confirmed': 'date_plan_confirmed',
         }
         for i in xrange(1, len(rows)-1):
             bolds = rows[i].findall('.//b')
@@ -151,6 +152,9 @@ class CaseQuery(BaseDocketReport, BaseReport):
                 clean_field = field_names.get(clean_field, clean_field)
 
                 value = bold.tail.strip()
+                if clean_field.startswith('date_'):
+                    # Known date field. Parse it.
+                    value = convert_date_string(value)
                 data[clean_field] = force_unicode(value)
 
         data.update({
