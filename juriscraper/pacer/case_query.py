@@ -126,6 +126,9 @@ class CaseQuery(BaseDocketReport, BaseReport):
         #   <B>Date filed:</B> 02/10/2011
         #   <B>Date filed:</B> 04/30/2018<B>Date of last filing:</B> 06/06/2018
         data = {}
+        field_names = {
+            'date_of_last_filing': 'date_last_filing',
+        }
         for i in xrange(1, len(rows)-1):
             bolds = rows[i].findall('.//b')
             if not bolds:
@@ -136,18 +139,19 @@ class CaseQuery(BaseDocketReport, BaseReport):
                     assert judge_role.endswith(PRESIDING), \
                         ("We expected the judge's name to end with "
                          "', presiding'.")
-                    data[u'judge_name'] = judge_role.rstrip(PRESIDING)
+                    data[u'assigned_to_str'] = judge_role.rstrip(PRESIDING)
                 else:
                     raise AssertionError('Line with no boldface?')
             for bold in bolds:
-                boldtext = bold.text_content().strip()
-                assert boldtext.endswith(':'), \
+                bold_text = bold.text_content().strip()
+                assert bold_text.endswith(':'), \
                     "Boldface fieldnames should end with colon (:)"
-                field = boldtext.rstrip(':')
-                cleanfield = field.lower().replace(' ', '_').decode('utf-8')
+                field = bold_text.rstrip(':')
+                clean_field = field.lower().replace(' ', '_').decode('utf-8')
+                clean_field = field_names.get(clean_field, clean_field)
 
                 value = bold.tail.strip()
-                data[cleanfield] = force_unicode(value)
+                data[clean_field] = force_unicode(value)
 
         data.update({
             u'court_id': self.court_id,
