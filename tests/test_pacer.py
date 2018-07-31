@@ -19,7 +19,7 @@ from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.lib.test_utils import warn_or_crash_slow_parser
 from juriscraper.pacer import DocketReport, FreeOpinionReport, \
     PossibleCaseNumberApi, AttachmentPage, ShowCaseDocApi, \
-    DocketHistoryReport, InternetArchive, AppellateDocketReport
+    DocketHistoryReport, InternetArchive, AppellateDocketReport, CaseQuery
 from juriscraper.pacer.http import PacerSession
 from juriscraper.pacer.rss_feeds import PacerRssFeed
 from juriscraper.pacer.utils import (
@@ -606,6 +606,18 @@ class PacerDocketHistoryReportTest(unittest.TestCase, ParsingTestCase):
         path_root = os.path.join(TESTS_ROOT, 'examples', 'pacer',
                                  'docket_history_reports')
         self.parse_files(path_root, '*.html', DocketHistoryReport)
+
+
+class PacerCaseQueryTest(unittest.TestCase, ParsingTestCase):
+    """Tests for the CaseQuery report."""
+
+    def setUp(self):
+        self.maxDiff = 200000
+
+    def test_parsing_history_documents(self):
+        path_root = os.path.join(TESTS_ROOT, 'examples', 'pacer',
+                                 'case_queries')
+        self.parse_files(path_root, '*.html', CaseQuery)
 
 
 class InternetArchiveReportTest(unittest.TestCase, ParsingTestCase):
