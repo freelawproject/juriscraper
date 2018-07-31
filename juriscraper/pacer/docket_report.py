@@ -158,7 +158,6 @@ class BaseDocketReport(object):
         text = force_unicode(' '.join(s for s in element.xpath('.//text()')))
         return [s.strip() for s in text.split(sep) if s]
 
-
     BR_REGEX = r'(?i)<br\s*/?>'
     @staticmethod
     def redelimit_p(target_element, delimiter_re):

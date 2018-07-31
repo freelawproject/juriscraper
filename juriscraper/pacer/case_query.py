@@ -8,7 +8,7 @@ import sys
 
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
-# from .utils import clean_pacer_object
+from .utils import clean_pacer_object
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import clean_string, harmonize, \
     force_unicode
@@ -36,7 +36,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
         if self._metadata is not None:
             return self._metadata
 
-        # The data we're after look like this (respacing):
+        # The data we're after look like this (re-spacing):
         #
         # <div id="cmecfMainContent">
         #   <input type="hidden" id="cmecfMainContentScroll" value="0">
@@ -75,7 +75,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
         #     <BR>
         #   </CENTER>
         #
-        # There is some BK variation, both in terms of preence of
+        # There is some BK variation, both in terms of presence of
         # docket numbers suffixes, and how the Judge: field name
         # varies depending on the judge's chief judge status:
         #
@@ -149,7 +149,6 @@ class CaseQuery(BaseDocketReport, BaseReport):
                 value = bold.tail.strip()
                 data[cleanfield] = force_unicode(value)
 
-        # xxx use of dict.update() is kind of weird
         data.update({
             u'court_id': self.court_id,
             u'docket_number': docket_number,
@@ -157,8 +156,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
             u'case_name_raw': case_name_raw,
         })
 
-        # xxx: I don't think this is a good idea, it's too indiscriminate
-        # data = clean_pacer_object(data)
+        data = clean_pacer_object(data)
 
         self._metadata = data
         return data
@@ -179,14 +177,15 @@ class CaseQuery(BaseDocketReport, BaseReport):
 
 def _main():
     if len(sys.argv) != 2:
-        print "Usage: python -m juriscraper.pacer.case_query filepath"
-        print "Please provide a path to an HTML file to parse."
+        print("Usage: python -m juriscraper.pacer.case_query filepath")
+        print("Please provide a path to an HTML file to parse.")
         sys.exit(1)
-    report = CaseQuery(
-        # xxx that's a lie, court id appears in output
-        'mad')  # Court ID is only needed for querying.
+
+    # Court ID is only needed for querying. Actual
+    # parsed value appears in output
+    report = CaseQuery('mad')
     filepath = sys.argv[1]
-    print "Parsing HTML file at %s" % filepath
+    print("Parsing HTML file at %s" % filepath)
     with open(filepath, 'r') as f:
         text = f.read().decode('utf-8')
     report._parse_text(text)
