@@ -1,6 +1,7 @@
 # Auth: ryee
 # Review: mlr
 # Date: 2013-04-26
+# Court Contact: bkraft@courts.ms.gov (see https://courts.ms.gov/aoc/aoc.php)
 
 from juriscraper.OpinionSite import OpinionSite
 import re
@@ -29,6 +30,16 @@ class Site(OpinionSite):
 
     def _get_download_urls(self):
         path = '{base}/td/b/a/@href'.format(base=self.base)
+        hrefs = list(self.html.xpath(path))
+        good_anchors = list()
+        for href in hrefs:
+            if '/Imaging\\' in href:
+                basename = href.split('\\')[-1]
+                href = "http://courts.ms.gov/Images/Opinions/{}"
+                href = href.format(basename)
+            good_anchors.append(href)
+        return good_anchors
+
         hrefs = list(self.html.xpath(path))
         good_anchors = list()
         for href in hrefs:

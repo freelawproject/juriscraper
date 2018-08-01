@@ -30,7 +30,7 @@ class PossibleCaseNumberApi(BaseReport):
         """
         assert self.session is not None, \
             "session attribute of PossibleCaseNUmberApi cannot be None."
-        url = "%s?%s" % (self.url, docket_number)
+        url = "%s?%s" % (self.url, docket_number.lower())
         logger.info(u'Querying the possible case number endpoint at URL: %s' %
                     url)
         self.response = self.session.get(url)
@@ -111,15 +111,18 @@ class PossibleCaseNumberApi(BaseReport):
                 # lowest one. The lowest one tends to be the main case, and the
                 # others are additional dockets for specific defendants.
                 try:
-                    _ = nodes[0].xpath('./@defendant')[0]
                     attribute = '@defendant'
+                    ids = sorted([int(x.xpath('./%s' % attribute)[0])
+                                  for x in nodes])
                 except IndexError:
-                    # No defendant attribute. Try it by pacer_case_id instead.
-                    # We used to do this by default, instead of defendant
-                    # number, but it is not always sequential.
+                    # No defendant attribute one of the nodes. Try by
+                    # pacer_case_id instead. We used to do this by default,
+                    # instead of defendant number, but it is not always
+                    # sequential.
                     attribute = '@id'
+                    ids = sorted([int(x.xpath('./%s' % attribute)[0])
+                                  for x in nodes])
 
-                ids = sorted([int(x.xpath('./%s' % attribute)[0]) for x in nodes])
                 missing_ids = set(range(ids[0], ids[-1] + 1)).difference(ids)
                 if len(missing_ids) > 0:
                     # The IDs are not sequential. Can't use this technique.

@@ -260,10 +260,16 @@ Version History
 - 1.14.* - Adds new parser for PACER's docket history report
 - 1.15.* - Adds date termination parsing to parties on PACER dockets.
 - 1.16.* - Adds PACER RSS feed parsers.
+- 1.17.* - Adds support for criminal data in PACER
+- 1.18.* - Adds support for appellate docket parsing!
+- 1.19.* - Adds support for NextGen PACER logins, but drops support for the PACER training website. The training website now uses a different login flow than the rest of PACER.
+- 1.20.* - Tweaks the API of the query method in the FreeOpinionReport object
+  to consistently return None instead of sometimes returning []. Version bumped
+  because of breaking API changes.
 
 **Current**
 
-- 1.17.* - Adds support for criminal data in PACER
+- 1.21.* - Adds support for the case report, which is the term we use to describe the page you see when you press the "Query" button in a district court PACER website. This is the page at the iQuery.pl URL.
 
 **Immediate Future Goals**
 

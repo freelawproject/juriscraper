@@ -1,0 +1,16 @@
+<head><title>Document</title></head>
+<body onload="forward()">
+<script type="text/javascript">
+  function forward() {
+    if (confirm('Access to the document you are about to view has been restricted.\nDo not allow it to be seen by unauthorized persons.\nClick "OK" to continue.\n')) {
+      window.location.replace('TransportRoom?servlet=ShowDoc&isWarn=yes&CSRF=csrf_-2576396028227789602&incPdfHeader=Y&incPdfHeaderDisp=Y&dls_id=009129838552&caseId=299715&pacer=t&recp=1528480677475');
+    } else {
+      history.go(-1);
+      if (window.history.length <= 1) {
+        window.close();
+      }
+    }
+  }
+</script>
+
+</body>

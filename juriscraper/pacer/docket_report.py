@@ -144,6 +144,51 @@ class BaseDocketReport(object):
                     return d.date()
                 return d
 
+    @staticmethod
+    def _br_split(element):
+        """Split the text of an element on the BRs.
+
+        :param element: Any HTML element
+        :return: A list of text nodes from that element split on BRs.
+        """
+        sep = u'FLP_SEPARATOR'
+        html_text = tostring(element, encoding='unicode')
+        html_text = re.sub(r'<br/?>', sep, html_text, flags=re.I)
+        element = fromstring(html_text)
+        text = force_unicode(' '.join(s for s in element.xpath('.//text()')))
+        return [s.strip() for s in text.split(sep) if s]
+
+    BR_REGEX = r'(?i)<br\s*/?>'
+    @staticmethod
+    def redelimit_p(target_element, delimiter_re):
+        """Redelimit the children of the target element with <p> tags.
+
+        Insert a <p> tag immediately after the target tag,
+        and then replace the delimeter_re with <p> tags.
+        Note that <p> is special because the lxml parser knows it
+        it self-closing, so this would not work with arbitrary
+        tags.
+
+        Use this to turn:
+          <foo>a<br>b<br>c</foo>
+        Into the more easily iterable:
+          <foo>
+            <p>a</p>
+            <p>b</p>
+            <p>c</p>
+          </foo>
+
+        :param target_element: An lxml HtmlElement that will be redelimited
+        :param delimiter_re: a re pattern matching the tag to replace, e.g.
+        BR_REGEX aka r'(?i)<br\s*/?>'
+        for a <br> (with optional space and optional /)
+        :returns: The redelimited HtmlElement.
+        """
+        html_text = tostring(target_element, encoding='unicode')
+        html_text = re.sub(r'(?i)^(<[^>]*>)', r'\1<p>', html_text)
+        html_text = re.sub(delimiter_re, r'<p>', html_text)
+        return fromstring(html_text)
+
 
 class DocketReport(BaseDocketReport, BaseReport):
     case_name_str = r"(?:Case\s+title:\s+)?(.*\bv\.?\s.*)"
@@ -160,15 +205,17 @@ class DocketReport(BaseDocketReport, BaseReport):
     date_converted_regex = re.compile(r'Date [Cc]onverted:\s+(%s)' % date_regex)
     # Be careful this does not match "Joint debtor discharged" field.
     date_discharged_regex = re.compile(r'(?:Date|Debtor)\s+[Dd]ischarged:\s+(%s)' % date_regex)
-    assigned_to_regex = re.compile(r'Assigned to:\s+(.*)')
-    referred_to_regex = re.compile(r'Referred to:\s+(.*)')
+    assigned_to_regex = r'Assigned to:\s+(.*)'
+    referred_to_regex = r'Referred to:\s+(.*)'
     cause_regex = re.compile(r'Cause:\s+(.*)')
     nos_regex = re.compile(r'Nature of Suit:\s+(.*)')
     jury_demand_regex = re.compile(r'Jury Demand:\s+(.*)')
     jurisdiction_regex = re.compile(r'Jurisdiction:\s+(.*)')
+    mdl_status_regex = re.compile(r'MDL Status:\s+(.*)')
     demand_regex = re.compile(r'^Demand:\s+(.*)')
     docket_number_dist_regex = re.compile(r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
     docket_number_bankr_regex = re.compile(r"(?:#:\s+)?((\d-)?\d\d-\d*)")
+    docket_number_jpml = re.compile(r'(MDL No.\s+\d*)')
     offense_regex = re.compile(
         r'highest\s+offense.*(?P<status>opening|terminated)', flags=re.I)
     counts_regex = re.compile(r'(?P<status>pending|terminated)\s+counts',
@@ -253,6 +300,8 @@ class DocketReport(BaseDocketReport, BaseReport):
                                        self.metadata_values),
             u'jurisdiction': self._get_value(self.jurisdiction_regex,
                                              self.metadata_values),
+            u'mdl_status': self._get_value(self.mdl_status_regex,
+                                           self.metadata_values)
         }
         data = clean_pacer_object(data)
         self._metadata = data
@@ -764,8 +813,8 @@ class DocketReport(BaseDocketReport, BaseReport):
         self._is_adversary_proceeding = adversary_proceeding
         return adversary_proceeding
 
-    def query(self, pacer_case_id, date_range_type='Filed', date_start='',
-              date_end='', doc_num_start='', doc_num_end='',
+    def query(self, pacer_case_id, date_range_type='Filed', date_start=None,
+              date_end=None, doc_num_start='', doc_num_end='',
               show_parties_and_counsel=False, show_terminated_parties=False,
               show_list_of_member_cases=False, include_pdf_headers=True,
               show_multiple_docs=False, output_format='html',
@@ -775,8 +824,8 @@ class DocketReport(BaseDocketReport, BaseReport):
         :param pacer_case_id: The internal PACER case ID for a case.
         :param date_range_type: Whether the date range refers to the date items
         were entered into PACER or the date they were filed.
-        :param date_start: The start date for the date range.
-        :param date_end: The end date for the date range.
+        :param date_start: The start date for the date range (as a date object)
+        :param date_end: The end date for the date range (as a date object)
         :param doc_num_start: A range of documents can be requested. This is the
         lower bound of their ID numbers.
         :param doc_num_end: The upper bound of the requested documents.
@@ -792,7 +841,8 @@ class DocketReport(BaseDocketReport, BaseReport):
         :param output_format: Whether to get back the results as a PDF or as
         HTML.
         :param order_by: The ordering desired for the results.
-        :return: request response object
+        :return: None. Instead sets self.response attribute and runs
+        self.parse()
         """
         # Set up and sanity tests
         assert self.session is not None, \
@@ -999,7 +1049,8 @@ class DocketReport(BaseDocketReport, BaseReport):
                        self.docket_number_bankr_regex]
         else:
             docket_number_path = '//h3'
-            regexes = [self.docket_number_dist_regex]
+            regexes = [self.docket_number_dist_regex,
+                       self.docket_number_jpml]
         nodes = self.tree.xpath(docket_number_path)
         string_nodes = [s.text_content() for s in nodes]
         for regex in regexes:
@@ -1025,24 +1076,19 @@ class DocketReport(BaseDocketReport, BaseReport):
             return self._get_value(self.nos_regex, self.metadata_values)
 
     def _get_judge(self, regex):
-        judge_str = self._get_value(regex, self.metadata_values)
-        if judge_str is not None:
+        judge_str = self._get_value(re.compile(regex), self.metadata_values)
+        if judge_str:
             return normalize_judge_string(judge_str)[0]
-
-    @staticmethod
-    def _br_split(element):
-        """Split the text of an element on the BRs.
-
-        :param element: Any HTML element
-        :return: A list of text nodes from that element split on BRs.
-        """
-        sep = u'FLP_SEPARATOR'
-        html_text = tostring(element, encoding='unicode')
-        html_text = re.sub(r'<br/?>', sep, html_text, flags=re.I)
-        element = fromstring(html_text)
-        text = force_unicode(' '.join(s for s in element.xpath('.//text()')))
-        return [s.strip() for s in text.split(sep) if s]
-
+        else:
+            # No luck getting it in the metadata_values attribute. Broaden
+            # the search to look in the entire docket HTML.
+            path = '//*[re:match(text(), "%s")]' % regex
+            try:
+                judge_str = self.tree.re_xpath(path)[0].text_content()
+            except IndexError:
+                return ''
+            judge_str = judge_str.split('to:')[1]
+            return normalize_judge_string(judge_str)[0]
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:

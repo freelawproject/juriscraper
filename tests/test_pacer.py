@@ -19,7 +19,7 @@ from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.lib.test_utils import warn_or_crash_slow_parser
 from juriscraper.pacer import DocketReport, FreeOpinionReport, \
     PossibleCaseNumberApi, AttachmentPage, ShowCaseDocApi, \
-    DocketHistoryReport, InternetArchive
+    DocketHistoryReport, InternetArchive, AppellateDocketReport, CaseQuery
 from juriscraper.pacer.http import PacerSession
 from juriscraper.pacer.rss_feeds import PacerRssFeed
 from juriscraper.pacer.utils import (
@@ -142,21 +142,26 @@ class PacerAuthTest(unittest.TestCase):
             self.fail('Could not log into PACER')
 
     def test_logging_in_bad_credentials(self):
+        # Make sure password is more than eight characters.
+        session = PacerSession(username='foofoo', password='barbarbar')
+        with self.assertRaises(PacerLoginException):
+            session.login()
+
+    def test_logging_short_password(self):
+        """If a short password is provided, do we throw an appropriate
+        exception?
+        """
         session = PacerSession(username='foo', password='bar')
         with self.assertRaises(PacerLoginException):
             session.login()
 
-    def test_logging_into_test_site(self):
-        try:
-            pacer_session = PacerSession(username='tr1234',
-                                         password='Pass!234')
-            pacer_session.login_training()
-            self.assertIsNotNone(pacer_session)
-            self.assertIsNotNone(pacer_session.cookies.get(
-                'PacerSession', None, domain='.uscourts.gov', path='/'))
-
-        except PacerLoginException:
-            self.fail('Could not log into PACER test site!')
+    def test_logging_short_username(self):
+        """If a username shorter than six characters is provided, do we
+        throw an appropriate exception?
+        """
+        session = PacerSession(username='foo', password='barbarbar')
+        with self.assertRaises(PacerLoginException):
+            session.login()
 
 
 class PacerFreeOpinionsTest(unittest.TestCase):
@@ -320,13 +325,13 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         """Do we properly catch and prevent a query against disused courts?"""
         mock_session = mock.MagicMock()
 
-        report = self.reports['ganb']
+        report = self.reports['casb']
         report.session = mock_session
 
         some_date = convert_date_string('1/1/2015')
 
-        results = report.query(some_date, some_date, sort='case_number')
-        self.assertEqual([], results, 'should have empty result set')
+        report.query(some_date, some_date, sort='case_number')
+        self.assertEqual([], report.responses, 'should have empty result set')
         self.assertFalse(mock_session.post.called,
                          msg='should not trigger a POST query')
 
@@ -522,28 +527,30 @@ class PacerShowCaseDocApiTest(unittest.TestCase):
             ShowCaseDocApi('caeb', pacer_session=self.pacer_session)
 
 
-class PacerAttachmentPageTest(unittest.TestCase):
-    def setUp(self):
-        self.maxDiff = 200000
+class ParsingTestCase(object):
+    """A mixin to add a parsing test."""
 
-    def test_parsing_results(self):
+    def parse_files(self, path_root, file_ext, test_class,
+                    initialize_with_court=True):
         """Can we do a simple query and parse?"""
         paths = []
-        path_root = os.path.join(TESTS_ROOT, "examples", "pacer",
-                                 "attachment_pages")
         for root, dirnames, filenames in os.walk(path_root):
-            for filename in fnmatch.filter(filenames, '*.html'):
+            for filename in fnmatch.filter(filenames, file_ext):
                 paths.append(os.path.join(root, filename))
         paths.sort()
         path_max_len = max(len(path) for path in paths) + 2
         for i, path in enumerate(paths):
+            t1 = time.time()
             sys.stdout.write("%s. Doing %s" % (i, path.ljust(path_max_len)))
             dirname, filename = os.path.split(path)
             filename_sans_ext = filename.split('.')[0]
             json_path = os.path.join(dirname, '%s.json' % filename_sans_ext)
-            court = filename_sans_ext.split('_')[0]
 
-            report = AttachmentPage(court)
+            if initialize_with_court:
+                court = filename_sans_ext.split('_')[0]
+                report = test_class(court)
+            else:
+                report = test_class()
             with open(path, 'r') as f:
                 report._parse_text(f.read().decode('utf-8'))
             data = report.data
@@ -551,138 +558,89 @@ class PacerAttachmentPageTest(unittest.TestCase):
                 with open(json_path, 'w') as f:
                     print("Creating new file at %s" % json_path)
                     json.dump(data, f, indent=2, sort_keys=True)
-                    continue
+                continue
             with open(json_path) as f:
                 j = json.load(f)
                 self.assertEqual(j, data)
+            t2 = time.time()
+            duration = t2 - t1
+            warn_or_crash_slow_parser(duration, max_duration=2)
 
             sys.stdout.write("✓\n")
 
 
-class PacerDocketHistoryReportTest(unittest.TestCase):
+class PacerAppellateDocketParseTest(unittest.TestCase, ParsingTestCase):
+    """Can we parse the appellate dockets effectively?"""
+
+    def setUp(self):
+        self.maxDiff = 200000
+
+    def test_parsing_appellate_dockets(self):
+        path_root = os.path.join(TESTS_ROOT, 'examples', 'pacer', 'dockets',
+                                 'appellate')
+        self.parse_files(path_root, '*.html', AppellateDocketReport)
+
+    def test_not_docket_dockets(self):
+        path_root = os.path.join(TESTS_ROOT, 'examples', 'pacer', 'dockets',
+                                 'not_appellate_dockets')
+        self.parse_files(path_root, '*.html', AppellateDocketReport)
+
+
+class PacerAttachmentPageTest(unittest.TestCase, ParsingTestCase):
+    def setUp(self):
+        self.maxDiff = 200000
+
+    def test_parsing_attachment_pages(self):
+        path_root = os.path.join(TESTS_ROOT, "examples", "pacer",
+                                 "attachment_pages")
+        self.parse_files(path_root, '*.html', AttachmentPage)
+
+
+class PacerDocketHistoryReportTest(unittest.TestCase, ParsingTestCase):
     """Tests for the docket history report."""
 
     def setUp(self):
         self.maxDiff = 200000
 
-    def test_parsing_results(self):
-        """Can we do a simple query and parse?"""
-        paths = []
+    def test_parsing_history_documents(self):
         path_root = os.path.join(TESTS_ROOT, 'examples', 'pacer',
                                  'docket_history_reports')
-        for root, dirnames, filenames in os.walk(path_root):
-            for filename in fnmatch.filter(filenames, '*.html'):
-                paths.append(os.path.join(root, filename))
-        paths.sort()
-        path_max_len = max(len(path) for path in paths) + 2
-        for i, path in enumerate(paths):
-            t1 = time.time()
-            sys.stdout.write("%s. Doing %s" % (i, path.ljust(path_max_len)))
-            dirname, filename = os.path.split(path)
-            filename_sans_ext = filename.split('.')[0]
-            json_path = os.path.join(dirname, '%s.json' % filename_sans_ext)
-            court = filename_sans_ext.split('_')[0]
-
-            report = DocketHistoryReport(court)
-            with open(path, 'r') as f:
-                report._parse_text(f.read().decode('utf-8'))
-            data = report.data
-            if not os.path.exists(json_path):
-                with open(json_path, 'w') as f:
-                    print("Creating new file at %s" % json_path)
-                    json.dump(data, f, indent=2, sort_keys=True)
-                continue
-            with open(json_path) as f:
-                j = json.load(f)
-                self.assertEqual(j, data)
-            t2 = time.time()
-            duration = t2 - t1
-            warn_or_crash_slow_parser(duration, max_duration=2)
-
-            sys.stdout.write("✓\n")
+        self.parse_files(path_root, '*.html', DocketHistoryReport)
 
 
-class InternetArchiveReportTest(unittest.TestCase):
+class PacerCaseQueryTest(unittest.TestCase, ParsingTestCase):
+    """Tests for the CaseQuery report."""
+
+    def setUp(self):
+        self.maxDiff = 200000
+
+    def test_parsing_case_query_results(self):
+        path_root = os.path.join(TESTS_ROOT, 'examples', 'pacer',
+                                 'case_queries')
+        self.parse_files(path_root, '*.html', CaseQuery)
+
+
+class InternetArchiveReportTest(unittest.TestCase, ParsingTestCase):
     """Tests for the IA XML docket parser"""
 
     def setUp(self):
         self.maxDiff = 200000
 
-    def test_parsing_results(self):
-        """Can we do a simple query and parse?"""
-        paths = []
+    def test_parsing_ia_xml_files(self):
         path_root = os.path.join(TESTS_ROOT, 'examples', 'pacer',
                                  'dockets_internet_archive')
-        for root, dirnames, filenames in os.walk(path_root):
-            for filename in fnmatch.filter(filenames, '*.xml'):
-                paths.append(os.path.join(root, filename))
-        paths.sort()
-        path_max_len = max(len(path) for path in paths) + 2
-        for i, path in enumerate(paths):
-            t1 = time.time()
-            sys.stdout.write("%s. Doing %s" % (i, path.ljust(path_max_len)))
-            dirname, filename = os.path.split(path)
-            filename_sans_ext = filename.split('.')[0]
-            json_path = os.path.join(dirname, '%s.json' % filename_sans_ext)
-
-            report = InternetArchive()
-            with open(path, 'r') as f:
-                report._parse_text(f.read().decode('utf-8'))
-            data = report.data
-            if not os.path.exists(json_path):
-                with open(json_path, 'w') as f:
-                    print("Creating new file at %s" % json_path)
-                    json.dump(data, f, indent=2, sort_keys=True)
-                continue
-            with open(json_path) as f:
-                j = json.load(f)
-                self.assertEqual(j, data)
-            t2 = time.time()
-            duration = t2 - t1
-            warn_or_crash_slow_parser(duration, max_duration=2)
-
-            sys.stdout.write("✓\n")
+        self.parse_files(path_root, '*.xml', InternetArchive,
+                         initialize_with_court=False)
 
 
-class PacerRssFeedTest(unittest.TestCase):
+class PacerRssFeedTest(unittest.TestCase, ParsingTestCase):
     def setUp(self):
         self.maxDiff = 200000
 
-    def test_parsing_results(self):
-        """Can we do a simple query and parse?"""
-        paths = []
+    def test_parsing_rss_parsing(self):
         path_root = os.path.join(TESTS_ROOT, 'examples', 'pacer',
                                  'rss_feeds')
-        for root, dirnames, filenames in os.walk(path_root):
-            for filename in fnmatch.filter(filenames, '*.xml'):
-                paths.append(os.path.join(root, filename))
-        paths.sort()
-        path_max_len = max(len(path) for path in paths) + 2
-        for i, path in enumerate(paths):
-            t1 = time.time()
-            sys.stdout.write("%s. Doing %s" % (i, path.ljust(path_max_len)))
-            dirname, filename = os.path.split(path)
-            filename_sans_ext = filename.split('.')[0]
-            json_path = os.path.join(dirname, '%s.json' % filename_sans_ext)
-            court = filename_sans_ext.split('_')[0]
-
-            report = PacerRssFeed(court)
-            with open(path, 'r') as f:
-                report._parse_text(f.read().decode('utf-8'))
-            data = report.data
-            if not os.path.exists(json_path):
-                with open(json_path, 'w') as f:
-                    print("Creating new file at %s" % json_path)
-                    json.dump(data, f, indent=2, sort_keys=True)
-                continue
-            with open(json_path) as f:
-                j = json.load(f)
-                self.assertEqual(j, data)
-            t2 = time.time()
-            duration = t2 - t1
-            warn_or_crash_slow_parser(duration, max_duration=2)
-
-            sys.stdout.write("✓\n")
+        self.parse_files(path_root, '*.xml', PacerRssFeed)
 
 
 class PacerDocketReportTest(unittest.TestCase):
@@ -690,10 +648,10 @@ class PacerDocketReportTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        pacer_session = PacerSession(username='tr1234',
-                                     password='Pass!234')
-        cls.report = DocketReport('psc', pacer_session)
-        cls.pacer_case_id = '62866'  # 1:07-cr-00001-RJA-HKS USA v. Green
+        pacer_session = PacerSession(username=PACER_USERNAME,
+                                     password=PACER_PASSWORD)
+        cls.report = DocketReport('cand', pacer_session)
+        cls.pacer_case_id = '186730'  # 4:06-cv-07294 Foley v. Bates
 
     @staticmethod
     def _count_rows(html):
@@ -705,64 +663,52 @@ class PacerDocketReportTest(unittest.TestCase):
         tree = get_html_parsed_text(html)
         return len(tree.xpath('//table[./tr/td[3]]/tr')) - 1  # No header row
 
-    @vcr.use_cassette(record_mode='new_episodes')
     def test_queries(self):
         """Do a variety of queries work?"""
         self.report.query(self.pacer_case_id)
-        self.assertIn('Deft previously', self.report.response.text,
+        self.assertIn('Foley v. Bates', self.report.response.text,
                       msg="Super basic query failed")
 
-        self.report.query(self.pacer_case_id, date_start=date(2007, 2, 7))
+        self.report.query(self.pacer_case_id, date_start=date(2007, 11, 1))
         row_count = self._count_rows(self.report.response.text)
-        self.assertEqual(row_count, 25, msg="Didn't get expected number of "
+        self.assertEqual(2, row_count, msg="Didn't get expected number of "
                                             "rows when filtering by start "
                                             "date. Got %s." % row_count)
 
-        self.report.query(self.pacer_case_id, date_start=date(2007, 2, 7),
-                          date_end=date(2007, 2, 8))
+        self.report.query(self.pacer_case_id, date_start=date(2007, 11, 1),
+                          date_end=date(2007, 11, 28))
         row_count = self._count_rows(self.report.response.text)
-        self.assertEqual(row_count, 2, msg="Didn't get expected number of "
+        self.assertEqual(1, row_count, msg="Didn't get expected number of "
                                            "rows when filtering by start and "
                                            "end dates. Got %s." % row_count)
 
         self.report.query(self.pacer_case_id, doc_num_start=5,
                           doc_num_end=5)
         row_count = self._count_rows(self.report.response.text)
-        self.assertEqual(row_count, 1, msg="Didn't get expected number of rows "
+        self.assertEqual(1, row_count, msg="Didn't get expected number of rows "
                                            "when filtering by doc number. Got "
                                            "%s" % row_count)
 
-        self.report.query(self.pacer_case_id, date_start=date(2007, 2, 7),
-                          date_end=date(2007, 2, 8), date_range_type="Entered")
+        self.report.query(self.pacer_case_id, date_start=date(2007, 11, 1),
+                          date_end=date(2007, 11, 28),
+                          date_range_type="Entered")
         row_count = self._count_rows(self.report.response.text)
-        self.assertEqual(row_count, 2, msg="Didn't get expected number of rows "
+        self.assertEqual(1, row_count, msg="Didn't get expected number of rows "
                                            "when filtering by start and end "
                                            "dates and date_range_type of "
                                            "Entered. Got %s" % row_count)
 
         self.report.query(self.pacer_case_id, doc_num_start=500,
                           show_parties_and_counsel=True)
-        self.assertIn('deRosas', self.report.response.text,
+        self.assertIn('Cheema', self.report.response.text,
                       msg="Didn't find party info when it was explicitly "
                           "requested.")
         self.report.query(self.pacer_case_id, doc_num_start=500,
                           show_parties_and_counsel=False)
-        self.assertNotIn('deRosas', self.report.response.text,
+        self.assertNotIn('Cheema', self.report.response.text,
                          msg="Got party info but it was not requested.")
 
-        self.report.query(self.pacer_case_id, doc_num_start=500,
-                          show_terminated_parties=True,
-                          show_parties_and_counsel=True)
-        self.assertIn('Rosado', self.report.response.text,
-                      msg="Didn't get terminated party info when it was "
-                          "requested.")
-        self.report.query(self.pacer_case_id, doc_num_start=500,
-                          show_terminated_parties=False)
-        self.assertNotIn('Rosado', self.report.response.text,
-                         msg="Got terminated party info but it wasn't "
-                             "requested.")
 
-    @vcr.use_cassette(record_mode='new_episodes')
     def test_using_same_report_twice(self):
         """Do the caches get properly nuked between runs?
 

@@ -1,6 +1,8 @@
 # coding=utf-8
 import re
+
 from lxml import etree
+from lxml.html import HtmlElement
 from six.moves.urllib.parse import urljoin
 
 from .utils import make_doc1_url, is_pdf
@@ -11,6 +13,14 @@ from ..lib.html_utils import (
 from ..lib.log_tools import make_default_logger
 
 logger = make_default_logger()
+
+
+# Patch the HtmlElement class to add a function that can handle regular
+# expressions within XPath queries. See usages throughout AppellateDocketReport.
+def re_xpath(self, path):
+    return self.xpath(path, namespaces={
+        're': 'http://exslt.org/regular-expressions'})
+HtmlElement.re_xpath = re_xpath
 
 
 class BaseReport(object):
