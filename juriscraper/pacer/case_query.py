@@ -128,8 +128,8 @@ class CaseQuery(BaseDocketReport, BaseReport):
         #   <B>Date filed:</B> 04/30/2018<B>Date of last filing:</B> 06/06/2018
         data = {}
         field_names = {
-            'date_of_last_filing': 'date_last_filing',
-            'plan_confirmed': 'date_plan_confirmed',
+            u'date_of_last_filing': u'date_last_filing',
+            u'plan_confirmed': u'date_plan_confirmed',
         }
         for i in xrange(1, len(rows)-1):
             bolds = rows[i].findall('.//b')
@@ -155,8 +155,9 @@ class CaseQuery(BaseDocketReport, BaseReport):
                 value = bold.tail.strip()
                 if clean_field.startswith('date_'):
                     # Known date field. Parse it.
-                    value = convert_date_string(value)
-                data[clean_field] = force_unicode(value)
+                    data[clean_field] = convert_date_string(value)
+                else:
+                    data[clean_field] = force_unicode(value)
 
         data.update({
             u'court_id': self.court_id,
