@@ -129,6 +129,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
         data = {}
         field_names = {
             u'date_of_last_filing': u'date_last_filing',
+            u'judge': u'assigned_to_str',
             u'plan_confirmed': u'date_plan_confirmed',
         }
         for i in xrange(1, len(rows)-1):
