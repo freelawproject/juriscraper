@@ -451,8 +451,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             return True
         return False
 
-    @staticmethod
-    def _get_party_type(row, cells, party):
+    def _get_party_type(self, row, cells, party):
         """Get the party type info and return it as a dict.
 
         :param row: The tr we're currently processing.
@@ -477,7 +476,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             elif len(cells) == 3:
                 # Some courts have malformed HTML that requires extra work.
                 return {u'type': re.split(u'----*', s)[0]}, False
-        elif len(cells) == 3 and cells[0].xpath('.//i/b'):
+        elif self.is_bankruptcy and len(cells) == 3 and cells[0].xpath('.//i/b'):
             # Bankruptcy - party type value.
             s = force_unicode(cells[0].xpath(u'.//i')[0].text_content())
             return {u'type': normalize_party_types(s)}, False
