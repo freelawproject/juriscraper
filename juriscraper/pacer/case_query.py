@@ -143,6 +143,14 @@ class CaseQuery(BaseDocketReport, BaseReport):
                         ("We expected the judge's name to end with "
                          "', presiding'.")
                     data[u'assigned_to_str'] = judge_role.rstrip(PRESIDING)
+                elif i == 2:
+                    # Third row, no bold => referred judge name!
+                    judge_role = force_unicode(rows[i].text_content())
+                    REFERRAL = ", referral"
+                    assert judge_role.endswith(REFERRAL), \
+                        ("We expected the referred judge's name to end "
+                         "with , referral")
+                    data[u'referred_to_str'] = judge_role.rstrip(REFERRAL)
                 else:
                     raise AssertionError('Line with no boldface?')
             for bold in bolds:
