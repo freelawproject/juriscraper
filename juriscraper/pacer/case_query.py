@@ -32,6 +32,10 @@ class CaseQuery(BaseDocketReport, BaseReport):
         self._clear_caches()
         self._metadata = None
 
+    def parse(self):
+        self._clear_caches()
+        super(CaseQuery, self).parse()
+
     @property
     def metadata(self):
         if self._metadata is not None:
