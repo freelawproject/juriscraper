@@ -556,12 +556,12 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         # 1: Find the comment defining this section of the report
         # 2: On its following-sibling axis, take the next table descendant,
         # 3: as long as there is boldface in the first row of the table.
-        # 4: Within that table, take the 2nd row.
+        # 4: Within that table, take the cell that doesn't have any bold.
 
         path = ('//comment()[contains(., "NEW SECTION - Case Stub")]/'  # 1
                 'following-sibling::*//table[1]'  # 2
                 '[.//tr[1]//b]//'  # 3
-                'tr[2]')  # 4
+                'td[not(.//b)]')  # 4
 
         case_name = self.tree.xpath(path)[0].text_content()
         return clean_string(harmonize(case_name))
