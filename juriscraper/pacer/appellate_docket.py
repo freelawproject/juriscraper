@@ -2,7 +2,7 @@ import pprint
 import re
 import sys
 
-from lxml.html import tostring, fromstring
+from lxml.html import tostring
 
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
