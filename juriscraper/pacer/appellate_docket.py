@@ -296,7 +296,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
         data = {
             u'court_id': self.court_id,
-            u'docket_number': self._get_tail_by_regex("Docket #"),
+            u'docket_number': self._get_tail_by_regex("Docket #|Case Number"),
             u'case_name': self._get_case_name(),
             u'panel': self._get_panel(),
             u'nature_of_suit': self._get_tail_by_regex("Nature of Suit"),
