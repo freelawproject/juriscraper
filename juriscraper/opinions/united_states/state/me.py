@@ -14,6 +14,7 @@ History:
 from datetime import datetime
 
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import convert_date_string
 from lxml import html
 
 
@@ -35,16 +36,11 @@ class Site(OpinionSite):
         return case_names
 
     def _get_case_dates(self):
-        path = '//table//tr/td[3]/text()'
-        date_styles = ['%B %d, %Y', '%B %d,%Y']
+        path = '//table[contains(.//th[1], "Opinion")]//tr/td[3]'
         dates = []
-        for s in self.html.xpath(path):
-            for date_style in date_styles:
-                try:
-                    d = datetime.strptime(s.strip(), date_style).date()
-                except ValueError:
-                    continue
-                dates.append(d)
+        for cell in self.html.xpath(path):
+            date_string = cell.text_content().replace('Aguust', 'August')
+            dates.append(convert_date_string(date_string))
         return dates
 
     def _get_precedential_statuses(self):
