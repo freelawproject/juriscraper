@@ -11,8 +11,6 @@ History:
   2014-12-15: Fixes insanity exception by tweaking the XPaths.
 """
 
-from datetime import datetime
-
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
 from lxml import html
