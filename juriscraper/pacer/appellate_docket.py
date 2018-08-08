@@ -2,7 +2,7 @@ import pprint
 import re
 import sys
 
-from lxml.html import tostring, fromstring
+from lxml.html import tostring
 
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
@@ -32,16 +32,16 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     CACHE_ATTRS = ['metadata', 'docket_entries']
 
     ERROR_STRINGS = BaseReport.ERROR_STRINGS + [
-        'The link to this page may not have originated from within CM/ECF.',
-        'Click on the "Accept Charges and Retrieve" button ONCE at the bottom '
-        'of this page to download the document image.',
-        '<embed width="100%" height="100%" name="plugin" id="plugin"',
-        'Access to the document you are about to view has been restricted.*Do '
-        'not allow it to be seen by unauthorized persons.',
-        'document.location\s*=\s*"https://pacer.login.uscourts.gov',
-        'http-equiv="REFRESH"',
-        'Case Number Not Found</b>',
-        '<title>404 Not Found</title>',
+        r'The link to this page may not have originated from within CM/ECF.',
+        r'Click on the "Accept Charges and Retrieve" button ONCE at the bottom '
+        r'of this page to download the document image.',
+        r'<embed width="100%" height="100%" name="plugin" id="plugin"',
+        r'Access to the document you are about to view has been restricted.*Do '
+        r'not allow it to be seen by unauthorized persons.',
+        r'document.location\s*=\s*"https://pacer.login.uscourts.gov',
+        r'http-equiv="REFRESH"',
+        r'Case Number Not Found</b>',
+        r'<title>404 Not Found</title>',
     ]
 
     def __init__(self, court_id, pacer_session=None):
@@ -207,7 +207,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             query_params[u'actionType'] = u'Run+Docket+Report'
 
         logger.info(u"Querying appellate docket report for docket number '%s' "
-                    u"with params %s" % (docket_number, query_params))
+                    u"with params %s", docket_number, query_params)
         self.response = self.session.get(self.url, params=query_params)
         self.parse()
 
@@ -279,14 +279,15 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         }
         if pacer_case_id:
             query_params[u'caseId'] = pacer_case_id
-        logger.info(u"GETting PDF at URL: %s with params: %s" % (
-            self.url, query_params))
+        logger.info(u"GETting PDF at URL: %s with params: %s",
+                    self.url, query_params)
         r = self.session.get(self.url, params=query_params)
         r.raise_for_status()
         if is_pdf(r):
-            logger.info("Got PDF binary data for document #%s in court %s" %
-                        (pacer_document_number, self.court_id))
+            logger.info("Got PDF binary data for document #%s in court %s",
+                        pacer_document_number, self.court_id)
             return r
+        return None
 
     @property
     def metadata(self):
@@ -542,7 +543,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     @staticmethod
     def _get_pacer_doc_id(cell):
         urls = cell.xpath(u'.//a')
-        if len(urls) == 0:
+        if not urls:
             # Entry exists but lacks a URL. Probably a minute order or similar.
             return None
         else:
@@ -551,9 +552,17 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
     def _get_case_name(self):
         """Get the case name."""
-        # The text of a cell that doesn't have bold text.
-        path = '//table[contains(., "Court of Appeals Docket") or ' \
-               'contains(., "Bankruptcy Appellate Panel Docket")]//td[not(.//b)]'
+
+        # 1: Find the comment defining this section of the report
+        # 2: On its following-sibling axis, take the next table descendant,
+        # 3: as long as there is boldface in the first row of the table.
+        # 4: Within that table, take the 2nd row.
+
+        path = ('//comment()[contains(., "NEW SECTION - Case Stub")]/'  # 1
+                'following-sibling::*//table[1]'  # 2
+                '[.//tr[1]//b]//'  # 3
+                'tr[2]')  # 4
+
         case_name = self.tree.xpath(path)[0].text_content()
         return clean_string(harmonize(case_name))
 
@@ -618,7 +627,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         # best not to do so on CL without a paywall.
         #
         # Place them in their own field so we can restrict access to them
-        if (re.match(r'A[0-9-]+', ogc_info[u'docket_number'])):
+        if re.match(r'A[0-9-]+', ogc_info[u'docket_number']):
             ogc_info[u'RESTRICTED_ALIEN_NUMBER'] = ogc_info.pop(
                 u'docket_number')
 
@@ -686,17 +695,19 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 return convert_date_string(tail)
             return tail
 
-
-if __name__ == "__main__":
+def _main():
     if len(sys.argv) != 2:
-        print("Usage: python -m juriscraper.pacer.appellate_docket filepath")
-        print("Please provide a path to an HTML file to parse.")
+        print "Usage: python -m juriscraper.pacer.appellate_docket filepath"
+        print "Please provide a path to an HTML file to parse."
         sys.exit(1)
     report = AppellateDocketReport(
         'ca9')  # Court ID is only needed for querying.
     filepath = sys.argv[1]
-    print("Parsing HTML file at %s" % filepath)
+    print "Parsing HTML file at %s" % filepath
     with open(filepath, 'r') as f:
         text = f.read().decode('utf-8')
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)
+
+if __name__ == "__main__":
+    _main()
