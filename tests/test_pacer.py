@@ -108,6 +108,7 @@ class PacerSessionTest(unittest.TestCase):
                          'default should be 300')
 
     @mock.patch('juriscraper.pacer.http.PacerSession.login')
+    @SKIP_IF_NO_PACER_LOGIN
     def test_auto_login(self, mock_login):
         """Do we automatically log in if needed?"""
         court_id = 'ksd'
@@ -344,7 +345,7 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
                 <case number="1:16-cr-1152" id="1000068"
                       title="1:16-cr-01152-JZB USA v. Abuarar (closed 01/26/2017)"
                       sortable="1:2016-cr-01152"/>
-                      
+
                 <!-- For use with office and case name filtering -->
                 <case number="2:16-cv-1152" id="977547"
                       title="2:16-cv-01152-JJT Willy Wonka v. Charlie (closed 06/09/2017)"
@@ -352,7 +353,7 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
                 <case number="2:16-cr-1152" id="977548"
                       title="2:16-cv-01152-JJT Armes v. Hot Pizzas LLC (closed 06/09/2017)"
                       sortable="2:2016-cv-01152-JJT"/>
-                      
+
                 <!-- Not non-sequential id values -->
                 <case number="3:16-cr-1152" id="1"
                       title="3:16-cr-01152-JJT Willy Wonka v. Charlie (closed 06/09/2017)"
@@ -521,6 +522,7 @@ class PacerShowCaseDocApiTest(unittest.TestCase):
                 expected,
             )
 
+    @SKIP_IF_NO_PACER_LOGIN
     def test_bankruptcy_fails(self):
         """Does initializing the API fail on bankruptcy courts?"""
         with self.assertRaises(AssertionError):
@@ -663,6 +665,7 @@ class PacerDocketReportTest(unittest.TestCase):
         tree = get_html_parsed_text(html)
         return len(tree.xpath('//table[./tr/td[3]]/tr')) - 1  # No header row
 
+    @SKIP_IF_NO_PACER_LOGIN
     def test_queries(self):
         """Do a variety of queries work?"""
         self.report.query(self.pacer_case_id)
@@ -709,6 +712,7 @@ class PacerDocketReportTest(unittest.TestCase):
                          msg="Got party info but it was not requested.")
 
 
+    @SKIP_IF_NO_PACER_LOGIN
     def test_using_same_report_twice(self):
         """Do the caches get properly nuked between runs?
 
