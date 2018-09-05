@@ -17,20 +17,19 @@ class Site(OralArgumentSite):
         self.court_id = self.__module__
         self.url = 'http://www.ca11.uscourts.gov/oral-argument-recordings'
         self.back_scrape_iterable = [i for i in range(0, 52)]
+        self.base_path = ("//tr[contains(@class, 'odd') or "
+                          "contains(@class, 'even')]")
 
     def _get_download_urls(self):
-        path = ("//tr[contains(@class, 'odd') "
-                "or contains(@class, 'even')]//td[5]//@href")
+        path = self.base_path + "//td[5]//@href"
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
-        path = ("//tr[contains(@class, 'odd') "
-                "or contains(@class, 'even')]//td[2]/text()")
+        path = self.base_path + "//td[2]/text()"
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
-        path = ("//tr[contains(@class, 'odd') "
-                "or contains(@class, 'even')]//td[3]/span/text()")
+        path = self.base_path + "//td[3]/span/text()"
         return map(self._return_case_date, self.html.xpath(path))
 
     @staticmethod
@@ -38,8 +37,7 @@ class Site(OralArgumentSite):
         return datetime.strptime(s.strip(), '%Y-%m-%d').date()
 
     def _get_docket_numbers(self):
-        path = ("//tr[contains(@class, 'odd') "
-                "or contains(@class, 'even')]//td[1]/text()")
+        path = self.base_path + "//td[1]/text()"
         # normalize docket numbers
         # get rid of "consolidated with" text
         # parse docket numbers like docketnum1 & docketnum2
