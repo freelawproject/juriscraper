@@ -37,9 +37,6 @@ class Site(OpinionSite):
         return '%s%d-%d.aspx' % (self.base_url, year, year + 1)
 
     def _download(self, request_dict={}):
-        # Site has non-chained, bad certificate, need to
-        # ignore ssl verification for now for scraper to work
-        request_dict['verify'] = False
         html = super(Site, self)._download(request_dict)
         self.extract_cases_from_html(html)
         return html

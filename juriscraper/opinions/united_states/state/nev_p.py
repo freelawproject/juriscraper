@@ -19,9 +19,6 @@ class Site(OpinionSite):
         self.table_number = 2
         self.base_path = '(//table)[{table_number}]//td[{i}]'
         self.date_path = self._make_date_path()
-        # Site has bad certificate, need to ignore
-        # verification for now for scraper to work
-        self.request['verify'] = False
 
     def _make_date_path(self):
         """Needed so that subclasses can make a date path as part of their
