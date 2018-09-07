@@ -23,6 +23,12 @@ class Site(OpinionSite):
         self.my_download_urls = []
         self.my_docket_numbers = []
 
+    def  _download(self, request_dict={}):
+        # Site has non-chained, bad certificate, need to
+        # ignore ssl verification for now for scraper to work
+        request_dict['verify'] = False
+        return super(Site, self)._download(request_dict)
+
     def _clean_text(self, text):
         """This page is a txt file, so here we convert it to something that
         can be easily ingested by lxml.
