@@ -9,7 +9,7 @@ History:
                (2) Finding the latest 100 items, (3) Handling bad audio URLs.
 """
 
-from datetime import date, datetime
+from datetime import datetime
 
 from juriscraper.DeferringList import DeferringList
 from juriscraper.OralArgumentSite import OralArgumentSite
@@ -21,9 +21,14 @@ class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.case_date = date.today()
-        #self.case_date = date(month=7, day=18, year=2014)
-        self.url = 'http://www.ca9.uscourts.gov/media/'
+        self.url = 'https://www.ca9.uscourts.gov/media/'
+        self._set_parameters()
+        self.method = 'POST'
+        # One less than total number of pages, because last page has a bit of a
+        # mess, and it's easier to simply not deal with it.
+        self.back_scrape_iterable = range(1, 268)
+
+    def _set_parameters(self, page=1):
         self.parameters = {
             'c_mode': 'view',
             'c_page_size': '100',
@@ -31,8 +36,8 @@ class Site(OralArgumentSite):
             'c_sort_field_by': '7',
             'c_sort_type': 'desc',
             'c_field_type': '',
+            'c_p': page,
         }
-        self.method = 'POST'
 
     def _post_parse(self):
         """Unfortunately, some of the items do not have audio files despite
@@ -131,3 +136,7 @@ class Site(OralArgumentSite):
     def _get_docket_numbers(self):
         path = "//*[contains(concat(' ',@id,' '),' case_num')]/text()"
         return list(self.html.xpath(path))
+
+    def _download_backwards(self, page):
+        self._set_parameters(page=page)
+        self.html = self._download()
