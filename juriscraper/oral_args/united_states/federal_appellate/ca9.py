@@ -36,7 +36,7 @@ class Site(OralArgumentSite):
             'c_sort_field_by': '7',
             'c_sort_type': 'desc',
             'c_field_type': '',
-            'c_p': page,
+            'c_p': str(page),
         }
 
     def _post_parse(self):
