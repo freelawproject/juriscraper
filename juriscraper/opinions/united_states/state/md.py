@@ -44,4 +44,10 @@ class Site(OpinionSite):
 
     def _get_west_state_citations(self):
         path = '//table//tr/td[2]/font/text()'
-        return list(self.html.xpath(path))
+        cites = []
+        for c in list(self.html.xpath(path)):
+            if c == '.':
+                cites.append('')
+            else:
+                cites.append(c)
+        return cites
