@@ -79,9 +79,6 @@ class Site(OpinionSite):
     def _get_docket_numbers(self):
         return [case['docket'] for case in self.cases]
 
-    def _get_neutral_citations(self):
-        return [case['citation'] for case in self.cases]
-
     def _get_precedential_statuses(self):
         return [case['status'] for case in self.cases]
 
