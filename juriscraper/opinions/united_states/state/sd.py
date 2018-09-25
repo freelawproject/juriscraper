@@ -6,13 +6,14 @@
 
 import os
 import re
+
 from lxml import html
 from selenium import webdriver
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
-from juriscraper.lib.string_utils import titlecase, convert_date_string
+from juriscraper.lib.string_utils import convert_date_string, titlecase
 
 
 class Site(OpinionSite):
@@ -73,7 +74,7 @@ class Site(OpinionSite):
             if not neutral_cite:
                 neutral_cite = self.extract_regex_group(1, s, True)
             # Make the citation SD instead of S.D. The former is a neutral cite, the latter, the South Dakota Reporter
-            neutral_cites.append(neutral_cite.replace('.', ''))
+            neutral_cites.append(neutral_cite.replace('.', '').upper())
         return neutral_cites
 
     def _download_backwards(self, page_year):
