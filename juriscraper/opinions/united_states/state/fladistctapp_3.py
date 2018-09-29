@@ -9,12 +9,11 @@ History:
  - 2014-07-24: Reviewed by mlr
  - 2015-07-28: Updated by m4h7
 """
-import re
-import time
+
 from lxml import html
 from datetime import date
 
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import titlecase, convert_date_string
 from juriscraper.OpinionSite import OpinionSite
 
 
@@ -28,6 +27,8 @@ class Site(OpinionSite):
 
     def _download(self, request_dict={}):
         html_l = super(Site, self)._download(request_dict)
+        if self.method == 'LOCAL':
+            return html_l
         html_trees = []
         # this path reads the row for the last month in that year
         path = "//th[contains(., '{year}')]/following::tr[1]/td[position()>1]/a[contains(., '/')]/@href".format(
@@ -70,8 +71,8 @@ class Site(OpinionSite):
         path = "//h3/text()"
         dates = []
         text = html_tree.xpath(path)[0]
-        text = re.search('(\d{2}-\d{2}-\d{4})', text).group(1)
-        case_date = date.fromtimestamp(time.mktime(time.strptime(text.strip(), '%m-%d-%Y')))
+        date_string = text.split()[0]
+        case_date = convert_date_string(date_string)
         dates.extend([case_date] * int(html_tree.xpath("count({base})".format(base=self.base_path))))
         return dates
 
