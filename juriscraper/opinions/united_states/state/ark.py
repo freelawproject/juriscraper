@@ -7,6 +7,13 @@ from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase, convert_date_string
 
+## WARNING: THIS SCRAPER IS FAILING:
+## This scraper is succeeding in development, but
+## is failing in production.  We are not exactly
+## sure why, and suspect that the hosting court
+## site may be blocking our production IP and/or
+## throttling/manipulating requests from production.
+
 
 class Site(OpinionSite):
     """This website implements anti-bot mechanisms. There is some threshold

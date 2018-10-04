@@ -3,6 +3,13 @@
 
 from juriscraper.opinions.united_states.state import ark
 
+## WARNING: THIS SCRAPER IS FAILING:
+## This scraper is succeeding in development, but
+## is failing in production.  We are not exactly
+## sure why, and suspect that the hosting court
+## site may be blocking our production IP and/or
+## throttling/manipulating requests from production.
+
 
 class Site(ark.Site):
     def __init__(self, *args, **kwargs):

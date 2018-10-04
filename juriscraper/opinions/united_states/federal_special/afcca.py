@@ -20,6 +20,8 @@ class Site(OpinionSite):
         self.url_base = 'http://afcca.law.af.mil/content/opinions_date_%d.html'
         self.url = self.url_base % date.today().year
         self.table_cell_path = '//table[@width="800"][@align="center"]/tr[position() > 2]/td[%d]%s'
+        # HTTPS certificate is bad, but hopefully they'll fix it and we can remove the line below
+        self.request['verify'] = False
 
     def cell_path(self, cell, substring=''):
         return self.table_cell_path % (cell, substring)

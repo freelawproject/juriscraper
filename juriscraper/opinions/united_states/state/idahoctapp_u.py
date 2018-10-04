@@ -23,10 +23,6 @@ class Site(OpinionSite):
         ]
         self.court_id = self.__module__
 
-    def _download(self, **kwargs):
-        # Idaho uses a certificate with a bad chain, so we can't verify it.
-        return super(Site, self)._download(request_dict={'verify': False})
-
     def _get_precedential_statuses(self):
         return ["Unpublished"] * len(self.case_names)
 
