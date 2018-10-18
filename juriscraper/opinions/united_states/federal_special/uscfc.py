@@ -8,13 +8,13 @@ Notes:
     Scraper adapted for new website as of February 20, 2014.
 """
 
-from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import titlecase, clean_if_py3
 import re
 import six
-import time
-from datetime import date
+import datetime
 from lxml import html
+from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.exceptions import InsanityException
+from juriscraper.lib.string_utils import titlecase, clean_if_py3, convert_date_string
 
 
 class Site(OpinionSite):
@@ -26,11 +26,17 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         dates = []
-        for t in self.html.xpath('//span[@class="feed-item-date"]/text()'):
-            # Text has contents like "Filed 05/09/2014"
-            t = t.strip().split(' ')[1]
-            dates.append(date.fromtimestamp(time.mktime(time.strptime(
-                t.strip(), '%m/%d/%Y'))))
+        for item in self.html.xpath('//span[@class="feed-item-date"]'):
+            text = item.text_content().strip()
+            words = text.split()
+            if len(words) == 2:
+                date = convert_date_string(words[1])
+            elif words[2] == 'hours' and words[4] == 'min' and words[5] == 'ago':
+                # The record was added today "X hours and Y min ago"
+                date = datetime.datetime.now()
+            else:
+                raise InsanityException('Unrecodgnized date element string: %s' % text)
+            dates.append(date)
         return dates
 
     def _get_case_names(self):
