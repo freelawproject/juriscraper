@@ -23,6 +23,13 @@ class Site(OpinionSite):
         self.url = 'http://www.uscfc.uscourts.gov/aggregator/sources/8'
         self.back_scrape_iterable = range(1, 4)
         self.court_id = self.__module__
+        self.today = datetime.datetime.now()
+
+    def _download(self, request_dict={}):
+        if self.method == 'LOCAL':
+            # Use static 'today' date for consisting test results
+            self.today = convert_date_string('2018/10/17')
+        return super(Site, self)._download(request_dict)
 
     def _get_case_dates(self):
         dates = []
@@ -33,7 +40,7 @@ class Site(OpinionSite):
                 date = convert_date_string(words[1])
             elif words[2] == 'hours' and words[4] == 'min' and words[5] == 'ago':
                 # The record was added today "X hours and Y min ago"
-                date = datetime.datetime.now()
+                date = self.today
             else:
                 raise InsanityException('Unrecodgnized date element string: %s' % text)
             dates.append(date)
