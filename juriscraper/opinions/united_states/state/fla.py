@@ -14,6 +14,14 @@ from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import convert_date_string
 
 
+# NOTE: tests/examples/opinions/united_states/fla_example_3.html parses only 262
+# opinions, when in fact there are 263 on the page.  We had to adjust the scraper
+# to accommodate their funky, one-off formatting that the court page exhibited on
+# 2018.10.17.  Hopefully they will revert back to using their old format.  If they do
+# indeed go back to formatting all date sections in the same way (in UL tags, as
+# opposed to the first/most recent being in a separate bordered table), then the
+# aforementioned example file can be removed.
+
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
@@ -62,13 +70,15 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         case_dates = []
-        for e in self.html.xpath(self.base_path):
-            text = e.text_content()
-            if 'No opinions released' in text:
+        path = '%s/following::ul' % self.base_path
+        for ul in self.html.xpath(path):
+            h2 = ul.getprevious()
+            text = h2.text_content().strip()
+            if 'No opinions released' in text or not text:
                 continue
-            date_string = self.regex_date.search(text).group(1)
             count = 0
-            for a in e.xpath('./following::ul[1]//li//a[not(contains(., "Notice"))][not(contains(., "Rehearing Order"))]'):
+            date_string = self.regex_date.search(text).group(1)
+            for a in h2.xpath('./following::ul[1]//li//a[not(contains(., "Notice"))][not(contains(., "Rehearing Order"))]'):
                 try:
                     case_name_check = self.regex.search(html.tostring(a, method='text', encoding='unicode')).group(2)
                     if case_name_check.strip():
