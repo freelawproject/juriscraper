@@ -72,6 +72,7 @@ class AttachmentPage(BaseReport):
             'file_size_str': self._get_file_size_str_from_tr(first_row),
             'pacer_doc_id': self._get_pacer_doc_id(first_row),
             'pacer_case_id': self._get_pacer_case_id(),
+            'pacer_seq_no': self._get_pacer_seq_no_from_tr(first_row),
             'attachments': []
         }
         if result['document_number'] is None and not self.is_bankruptcy:
@@ -87,7 +88,11 @@ class AttachmentPage(BaseReport):
                 'description': self._get_description_from_tr(row),
                 'page_count': self._get_page_count_from_tr(row),
                 'file_size_str': self._get_file_size_str_from_tr(row),
-                'pacer_doc_id': self._get_pacer_doc_id(row)
+                'pacer_doc_id': self._get_pacer_doc_id(row),
+                # It may not be needed to reparse the seq_no
+                # for each row, but we may as well. So far, it
+                # has always been the same as the main document.
+                'pacer_seq_no': self._get_pacer_seq_no_from_tr(row),
             })
 
         return result
@@ -182,6 +187,32 @@ class AttachmentPage(BaseReport):
         else:
             doc1_url = url.xpath('./@href')[0]
             return get_pacer_doc_id_from_doc1_url(doc1_url)
+
+    @staticmethod
+    def _get_pacer_seq_no_from_tr(row):
+        """Take a row of the attachment page, and return the sequence number
+        from the goDLS function.
+        """
+        try:
+            url = row.xpath(u'.//a')[0]
+        except IndexError:
+            # No link in the row. Maybe its sealed.
+            pass
+        else:
+            try:
+                onclick = url.xpath('./@onclick')[0]
+            except IndexError:
+                # No onclick on this row.
+                pass
+            else:
+                if 'goDLS' in onclick:
+                    go_dls_parts = reverse_goDLS_function(onclick)
+                    return go_dls_parts['de_seq_num']
+
+        # 1. Couldn't find a link in the row: Maybe it's sealed.
+        # 2. No onclick on the row.
+        # 3. No goDLS in the onclick
+        return None
 
     def _get_pacer_case_id(self):
         """Get the pacer_case_id value by inspecting the HTML
