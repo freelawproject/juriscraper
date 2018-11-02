@@ -6,15 +6,15 @@ import sys
 
 from dateutil.tz import gettz
 from lxml import etree
-from lxml.html import tostring, fromstring, HtmlElement
+from lxml.html import HtmlElement, fromstring, tostring
 
 from .docket_utils import normalize_party_types
 from .reports import BaseReport
-from .utils import get_pacer_doc_id_from_doc1_url, clean_pacer_object
+from .utils import clean_pacer_object, get_pacer_doc_id_from_doc1_url
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import convert_date_string, force_unicode, harmonize, \
-    clean_string
+from ..lib.string_utils import clean_string, convert_date_string, \
+    force_unicode, harmonize
 from ..lib.utils import previous_and_next
 
 logger = make_default_logger()
@@ -784,8 +784,8 @@ class DocketReport(BaseDocketReport, BaseReport):
                 continue
             de[u'date_filed'] = convert_date_string(date_filed_str)
             de[u'document_number'] = self._get_document_number(cells[1])
-            de[u'pacer_doc_id'] = self._get_pacer_doc_id(cells[1],
-                                                         de[u'document_number'])
+            de[u'pacer_doc_id'] = self._get_pacer_doc_id(
+                cells[1], de[u'document_number'])
             de[u'description'] = self._get_description(cells)
             if not de[u'document_number']:
                 # Minute order. Skip for now.
@@ -1088,6 +1088,7 @@ class DocketReport(BaseDocketReport, BaseReport):
                 return ''
             judge_str = judge_str.split('to:')[1]
             return normalize_judge_string(judge_str)[0]
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
