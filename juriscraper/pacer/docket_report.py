@@ -10,7 +10,8 @@ from lxml.html import HtmlElement, fromstring, tostring
 
 from .docket_utils import normalize_party_types
 from .reports import BaseReport
-from .utils import clean_pacer_object, get_pacer_doc_id_from_doc1_url
+from .utils import clean_pacer_object, get_pacer_doc_id_from_doc1_url, \
+    reverse_goDLS_function
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import clean_string, convert_date_string, \
@@ -784,8 +785,9 @@ class DocketReport(BaseDocketReport, BaseReport):
                 continue
             de[u'date_filed'] = convert_date_string(date_filed_str)
             de[u'document_number'] = self._get_document_number(cells[1])
-            de[u'pacer_doc_id'] = self._get_pacer_doc_id(
+            results = self._get_pacer_doc_id_and_seq_no(
                 cells[1], de[u'document_number'])
+            de[u'pacer_doc_id'], de[u'pacer_seq_no'] = results[0], results[1]
             de[u'description'] = self._get_description(cells)
             if not de[u'document_number']:
                 # Minute order. Skip for now.
@@ -934,9 +936,19 @@ class DocketReport(BaseDocketReport, BaseReport):
         self.metadata_values = values
 
     @staticmethod
-    def _get_pacer_doc_id(cell, document_number):
-        if not document_number:
+    def _get_pacer_seq_no_from_url(url):
+        try:
+            onclick = url.xpath('./@onclick')[0]
+        except IndexError:
             return None
+        else:
+            if 'goDLS' in onclick:
+                go_dls_parts = reverse_goDLS_function(onclick)
+                return go_dls_parts['de_seq_num']
+
+    def _get_pacer_doc_id_and_seq_no(self, cell, document_number):
+        if not document_number:
+            return None, None
         else:
             # We find the first link having the document number as text.
             # This is needed because txnb combines the second and third
@@ -945,11 +957,16 @@ class DocketReport(BaseDocketReport, BaseReport):
             if len(urls) == 0:
                 # Docket entry exists, but cannot download document (it's sealed
                 # or otherwise unavailable in PACER).
-                return None
+                return None, None
             for url in urls:
                 if url.text_content().strip() == document_number:
                     doc1_url = url.xpath('./@href')[0]
-                    return get_pacer_doc_id_from_doc1_url(doc1_url)
+                    pacer_doc_id = get_pacer_doc_id_from_doc1_url(doc1_url)
+                    pacer_seq_no = self._get_pacer_seq_no_from_url(url)
+                    return pacer_doc_id, pacer_seq_no
+
+        # In case none of our URLs can be parsed.
+        return None, None
 
     def _get_document_number(self, cell):
         """Get the document number.
