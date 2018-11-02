@@ -98,10 +98,11 @@ def reverse_goDLS_function(s):
        passing this parameter bypasses the download attachment screen and takes
        you directly to the PDF that you're trying to download. For an example,
        see document 108 from 1:12-cv-00102 in tnmd, which is a free opinion that
-       has an attachment.
+       has an attachment. Note that the eighth parameter was added some time
+       after 2010. Dockets older than that date only have seven responses.
     """
     args = re.findall("\'(.*?)\'", s)
-    return {
+    parts = {
         'form_post_url': args[0],
         'caseid': args[1],
         'de_seq_num': args[2],
@@ -109,8 +110,13 @@ def reverse_goDLS_function(s):
         'pdf_header': args[4],
         'pdf_toggle_possible': args[5],
         'magic_num': args[6],
-        'hdr': args[7],
     }
+    try:
+        parts['hdr'] = args[7]
+    except IndexError:
+        # At some point dockets added this eighth parameter. Older ones lack it
+        parts['hdr'] = None
+    return parts
 
 
 def make_doc1_url(court_id, pacer_doc_id, skip_attachment_page):
