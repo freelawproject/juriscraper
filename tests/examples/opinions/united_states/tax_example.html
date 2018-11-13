@@ -1,254 +1,956 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" >
-<head id="Head1"><title>
+<html xmlns="http://www.w3.org/1999/xhtml" style=""><head id="Head1">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
 	USTC
-</title><link href="styles/print.css" type="text/css" rel="stylesheet" media="print" /><link href="styles/style_sheet.css" rel="stylesheet" type="text/css" media="screen" />
+</title><link href="tax_example_files/print.css" type="text/css" rel="stylesheet" media="print"><link href="tax_example_files/style_sheet.css" rel="stylesheet" type="text/css" media="screen">
 
+        <script type="text/javascript" src="tax_example_files/jquery.js"></script>
+
+        
+
+
+        <script type="text/javascript">
+            <!--
+            
+
+                var modalDiv = null;
+
+                function warnIsSummary(opinionId) 
+                {
+                    var opinionOkLink = document.getElementById("lnkSummaryOpinion");
+                    opinionOkLink.href = "OpinionViewer.aspx?ID=" + opinionId;
+                    var radNotification1 = $find("ctl00_nfSummary");
+                    radNotification1.show();
+                }
+
+                function summaryOpinionOk()
+                {                   
+                    var radNotification1 = $find("ctl00_nfSummary");
+                    radNotification1.hide();
+                    var opinionOkLink = document.getElementById("lnkSummaryOpinion");
+                    setTimeout(function() {opinionOkLink.href = "#";}, 50);
+                }
+
+                function showModalDiv(sender, args) 
+                {
+                    if (!modalDiv)
+                    {
+                        modalDiv = document.createElement("div");
+                        modalDiv.className="modalBackground";
+                        modalDiv.setAttribute("unselectable", "on");
+                        modalDiv.style.zIndex = (sender.get_zIndex() - 1).toString();
+                        modalDiv.setAttribute("onclick", "summaryOpinionOk();")
+                        document.body.appendChild(modalDiv);
+                    }
+                    modalDiv.style.width = $(document).width() + "px";
+                    modalDiv.style.height = $(document).height() + "px";
+                    modalDiv.style.display = "";
+                }
+
+                function hideModalDiv() 
+                {
+                    modalDiv.style.display = "none";
+                }
+            
+                function focus(ControlName) 
+                {
+                    if (ControlName === 'null') 
+                    {
+                        return;
+                    } 
+                    else 
+                    {
+                        document.getElementById(ControlName).focus();
+                        return;
+                    }
+                }  
+            
+
+            //-->
+        </script>
+
+    <link href="tax_example_files/WebResource_005.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet"><link href="tax_example_files/WebResource_006.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet"><link href="tax_example_files/WebResource_008.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet"><link href="tax_example_files/WebResource_007.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet"><link href="tax_example_files/WebResource_004.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet"><link href="tax_example_files/WebResource_003.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet"><link href="tax_example_files/WebResource.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet"><link href="tax_example_files/WebResource_002.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet"></head>
+    <body onload="focus('null');"><div class="RadCalendarPopup RadCalendarPopupShadows" style="position: absolute; border: 0px none; z-index: 5002; left: 627px; top: 301px; display: none;"></div><div class="RadCalendarPopup RadCalendarPopupShadows" style="position: absolute; border: 0px none; z-index: 5000; left: 381px; top: 301px; display: none;"></div>
+        <form method="post" action="./OpinionSearch.aspx" id="ContentForm">
+<div class="aspNetHidden">
+<input type="hidden" name="rsm_TSM" id="rsm_TSM" value=";;System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35:en-US:633eaa5d-379a-4e64-bd2c-5631e139ee64:ea597d4b:b25378d2;Telerik.Web.UI:en-US:ac569a84-d93e-434a-9289-e373c0a8e676:16e4e7cd:f7645509:22a6274a:365331c3:88144a7a:7c926187:8674cba1:b7778d6c:c08e9f8a:a51ee93e:59462f1:874f8ea2:24ee1bba:c172ae1e:19620875:f46195d3:9cdfc6e7:e330518b:2003d0b8:c128760b:1e771326:c8618e41:e4f8f289:1a73651d:333f8d94;">
+
+
+
+</div>
 
 <script type="text/javascript">
-<!--
-    function focus(ControlName) {
-        if (ControlName == 'null') {
-            return;
-        } else {
-            document.getElementById(ControlName).focus();
-            return;
-        }
+//<![CDATA[
+var theForm = document.forms['ContentForm'];
+if (!theForm) {
+    theForm = document.ContentForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
     }
-//-->
+}
+//]]>
 </script>
 
-</head>
-<body onload="focus('null');">
-<form method="post" action="TodaysOpinions.aspx" id="ContentForm">
-<div class="aspNetHidden">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTM3NDIwNzQ3NA9kFgJmD2QWAgIBD2QWAgIDD2QWAgIBD2QWAgIHD2QWCAIDDxYCHgtfIUl0ZW1Db3VudAIBFgICAQ9kFgJmDxUDS2h0dHA6Ly93d3cudXN0YXhjb3VydC5nb3YvSW5PcFRvZGF5cy9BZ3JvLUphbEZhcm1pbmdFbnRlciUyY0luYy4uVEMuV1BELnBkZiJBZ3JvLUphbCBGYXJtaW5nIEVudGVycHJpc2VzLCBJbmMuCjA3LzMwLzIwMTVkAgcPFgIfAAIBFgICAQ9kFgJmDxUDPmh0dHA6Ly93d3cudXN0YXhjb3VydC5nb3YvSW5PcFRvZGF5cy9MYXUuTWVtby5OZWdhLlRDTS5XUEQucGRmEkVkd2luYSBXYW4tV2VuIExhdQowNy8zMC8yMDE1ZAIJDw8WAh4HVmlzaWJsZWdkZAILDxYCHwFoZGT/T6cVsj/QwNFY/Z3o1w9ka/NanNkok9SzpIDcFZFYgg==" />
-</div>
+
+<script src="tax_example_files/WebResource.axd" type="text/javascript"></script>
+
+
+<script src="tax_example_files/Telerik.axd" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
 
 <div class="aspNetHidden">
 
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="02D235AB" />
+	
+	
 </div>
-    <div id="masthead">
-      <table width="100%" border="0" cellpadding="0" cellspacing="0">
-        <tr>
-            <td height="36"><img src="images/rwb_design_36.gif" alt="Masthead graphic" width="580" height="36" id="IMG1" onclick="return IMG1_onclick()" /></td>
-            <td width="18" align="right" valign="top"><img src="images/blue_corner.gif" alt="Corner graphic" width="18" height="18" /></td>
-        </tr>
-      </table>
-    </div>
-    <div id="navcontainer">
-      <div id="navigation">
-        <table width="100%" border="0" cellpadding="0" cellspacing="0">
-          <tr align="center">
-            <td width="9" valign="top" bgcolor="#000000"><img src="images/tab_left.gif" width="9" height="18" alt="Left tab" /></td>
-            <td nowrap="nowrap" bgcolor="#000000" class="white-text"><a href="http://www.ustaxcourt.gov/about.htm">About the Court</a></td>
-            <td width="19" valign="top" bgcolor="#000000"><img src="images/tab_center.gif" width="19" height="18" alt="Center tab" /></td>
-            <td nowrap="nowrap" bgcolor="#000000" class="white-text"><a href="http://www.ustaxcourt.gov/USTCInOP/asp/Todays.asp">Today's Opinions</a></td>
-            <td width="19" valign="top" bgcolor="#000000"><img src="images/tab_center.gif" width="19" height="18" alt="Center tab" /></td>
-            <td nowrap="nowrap" bgcolor="#000000" class="white-text"><a href="http://www.ustaxcourt.gov/USTCInOP/asp/HistoricOptions.asp">Opinions Search</a></td>
-            <td width="19" valign="top" bgcolor="#000000"><img src="images/tab_center.gif" width="19" height="18" alt="Center tab" /></td>
-            <td nowrap="nowrap" bgcolor="#000000" class="white-text"><a href="http://www.ustaxcourt.gov/InternetOrders">Orders</a></td>
-            <td width="19" valign="top" bgcolor="#000000"><img src="images/tab_center.gif" width="19" height="18" alt="Center tab" /></td>
-            <td nowrap="nowrap" bgcolor="#000000" class="white-text"><a href="http://www.ustaxcourt.gov/docket.htm">Docket Inquiry</a></td>
 
-            <td width="19" valign="top" bgcolor="#000000"><img src="images/tab_center.gif" width="19" height="18" alt="Center tab" /></td>
-            <td nowrap="nowrap" bgcolor="#000000" class="white-text"><a href="https://www.ustaxcourt.gov/FinalStatusReport/">Final Status Report</a></td>
-            <td width="19" valign="top" bgcolor="#000000"><img src="images/tab_center.gif" width="19" height="18" alt="Center tab" /></td>
-            <td nowrap="nowrap" bgcolor="#000000" class="white-text"><a href="http://www.ustaxcourt.gov/electronic_access.htm">eAccess</a></td>
-
-            <td width="19" valign="top" bgcolor="#000000"><img src="images/tab_center.gif" width="19" height="18" alt="Center tab" /></td>
-            <td nowrap="nowrap" bgcolor="#000000" class="white-text"><a href="http://www.ustaxcourt.gov/forms.htm">Forms</a></td>
-            <td width="19" valign="top" bgcolor="#000000"><img src="images/tab_center.gif" width="19" height="18" alt="Right tab" /></td>
-            <td bgcolor="#000000" class="white-text"><a href="http://www.ustaxcourt.gov/judges.htm">Judges</a></td>
-            <td width="9" valign="top" bgcolor="#000000"><img src="images/tab_right.gif" width="9" height="18" alt="Right tab" /></td>
-          </tr>
-        </table>
-      </div>
-      <div id="Div1">
-        <table width="100%" border="0" cellpadding="0" cellspacing="0">
-          <tr align="center">
-            <td width="9" bgcolor="#000000"><img src="images/tab_left.gif" width="9" height="18" alt="Left tab" /></td>
-            <td nowrap="nowrap" bgcolor="#000000" class="white-text"><a href="http://www.ustaxcourt.gov/notice.htm">Rules</a></td>
-            <td width="19" bgcolor="#000000"><img src="images/tab_center.gif" width="19" height="18" alt="Center tab" /></td>
-            <td nowrap="nowrap" bgcolor="#000000" class="white-text"><a href="http://www.ustaxcourt.gov/press.htm">Press Releases</a> </td>
-            <td width="19" bgcolor="#000000"><img src="images/tab_center.gif" width="19" height="18" alt="Center tab" /></td>
-            <td nowrap="nowrap" bgcolor="#000000" class="white-text"><a href="http://www.ustaxcourt.gov/phone.htm">Telephone Numbers</a></td>
-            <td width="19" bgcolor="#000000"><img src="images/tab_center.gif" width="19" height="18" alt="Center tab" /></td>
-            <td nowrap="nowrap" bgcolor="#000000" class="white-text"><a href="http://www.ustaxcourt.gov/fees.htm">Fees/Charges</a></td>
-            <td width="19" bgcolor="#000000"><img src="images/tab_center.gif" width="19" height="18" alt="Center tab" /></td>
-            <td nowrap="nowrap" bgcolor="#000000" class="white-text"><a href="http://www.ustaxcourt.gov/taxpayer_info_intro.htm">Taxpayer Information </a></td>
-
-			<td width="19" bgcolor="#000000"><img src="images/tab_center.gif" width="19" height="18" alt="Center tab" /></td>
-			<td nowrap="nowrap" bgcolor="#000000" class="white-text"><a href="http://www.ustaxcourt.gov/clinics.htm">Clinics/Student Practice/Calendar Call</a></td>
-
-            <td width="19" bgcolor="#000000"><img src="images/tab_center.gif" width="19" height="18" alt="Right tab" /></td>
-            <td nowrap="nowrap" bgcolor="#000000" class="white-text"><a href="http://www.ustaxcourt.gov/employment.htm">Employment</a></td>
-            <td width="19" bgcolor="#000000"><img src="images/tab_center_blk_red.gif" width="19" height="18" alt="Right tab" /></td>
-            <td bgcolor="#000000" class="white-text-red-bckgrd"><a href="http://www.ustaxcourt.gov/help.htm">Help</a></td>
-            <td width="9" bgcolor="#000000"><img src="images/tab_right_red.gif" width="9" height="18" alt="Right tab" /></td>
-          </tr>
-        </table>
-      </div>
-    </div>
-    <div id="address">
-	    <font size = "-1">
-		    <strong>United States Tax Court</strong>, 400 Second Street, NW, Washington, DC 20217 <strong>Telephone:</strong> 202-521-0700
-	    </font>
-    </div>
-    <div id="crumbs">
-      <table width="98%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-		    <span class="small_text">
-			     <span class="red-text">You are here</span>
-			     &raquo; <a href="http://www.ustaxcourt.gov/index.htm">Home</a>
-			     &raquo;
-
-    Today's Opinions
-
-		    </span>
-	      </td>
-          <td align="right">
-          Thursday, July 30, 2015
-          </td>
-        </tr>
-      </table>
-    </div>
-
-    <div id="DocketInqNav">
-        <span class="red-text">Go to</span> &raquo;
-        <a id="lnkTodaysOpinions" class="black-text" href="TodaysOpinions.aspx">Today's Opinions</a>,
-        <a id="lnkSearchOpinions" class="black-text" href="OpinionSearch.aspx">Search Opinions</a>
-    </div>
-    <div>
-
-    <div style="width:100%;margin-top:10px;">
-    <div id="DocketWrapper">
-
-        <h1>Today's Opinions</h1>
-
-    <hr />
-
-    <div id="Content_pnlSearchResults">
+            <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$rsm', 'ContentForm', ['tctl00$Content$pnlUpdate','Content_pnlUpdate'], [], [], 90, 'ctl00');
+//]]>
+</script>
 
 
-        <div class="DropShadowPanel">
-            <div class="RoundedPanel">
-                <div style="text-align:center;">
+            <div id="masthead">
+                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                    <tbody><tr>
+                        <td height="36">
+                            <img src="tax_example_files/rwb_design_36.gif" alt="Masthead graphic" id="IMG1" onclick="return IMG1_onclick()" width="580" height="36">
+                        </td>
+                        <td width="18" valign="top" align="right">
+                            <img src="tax_example_files/blue_corner.gif" alt="Corner graphic" width="18" height="18">
+                        </td>
+                    </tr>
+                </tbody></table>
+            </div>
+            <div id="navcontainer">
+                <div id="navigation">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tbody><tr align="center">
+                            <td width="9" valign="top" bgcolor="#000000">
+                                <img src="tax_example_files/tab_left.gif" alt="Left tab" width="9" height="18">
+                            </td>
+                            <td class="white-text" nowrap="nowrap" bgcolor="#000000">
+                                <a href="http://www.ustaxcourt.gov/about.htm">About the Court</a>
+                            </td>
+                            <td width="19" valign="top" bgcolor="#000000">
+                                <img src="tax_example_files/tab_center.gif" alt="Center tab" width="19" height="18">
+                            </td>
+                            <td class="white-text" nowrap="nowrap" bgcolor="#000000">
+                                <a href="http://www.ustaxcourt.gov/USTCInOP/asp/Todays.asp">Today's Opinions</a>
+                            </td>
+                            <td width="19" valign="top" bgcolor="#000000">
+                                <img src="tax_example_files/tab_center.gif" alt="Center tab" width="19" height="18">
+                            </td>
+                            <td class="white-text" nowrap="nowrap" bgcolor="#000000">
+                                <a href="http://www.ustaxcourt.gov/USTCInOP/asp/HistoricOptions.asp">Opinions Search</a>
+                            </td>
+                            <td width="19" valign="top" bgcolor="#000000">
+                                <img src="tax_example_files/tab_center.gif" alt="Center tab" width="19" height="18">
+                            </td>
+                            <td class="white-text" nowrap="nowrap" bgcolor="#000000">
+                                <a href="http://www.ustaxcourt.gov/InternetOrders">Orders</a>
+                            </td>
+                            <td width="19" valign="top" bgcolor="#000000">
+                                <img src="tax_example_files/tab_center.gif" alt="Center tab" width="19" height="18">
+                            </td>
+                            <td class="white-text" nowrap="nowrap" bgcolor="#000000">
+                                <a href="http://www.ustaxcourt.gov/docket.htm">Docket Inquiry</a>
+                            </td>
 
+                            <td width="19" valign="top" bgcolor="#000000">
+                                <img src="tax_example_files/tab_center.gif" alt="Center tab" width="19" height="18">
+                            </td>
+                            <td class="white-text" nowrap="nowrap" bgcolor="#000000">
+                                <a href="https://www.ustaxcourt.gov/FinalStatusReport/">Final Status Report</a>
+                            </td>
+                            <td width="19" valign="top" bgcolor="#000000">
+                                <img src="tax_example_files/tab_center.gif" alt="Center tab" width="19" height="18">
+                            </td>
+                            <td class="white-text" nowrap="nowrap" bgcolor="#000000">
+                                <a href="http://www.ustaxcourt.gov/electronic_access.htm">eAccess</a>
+                            </td>
 
-
+                            <td width="19" valign="top" bgcolor="#000000">
+                                <img src="tax_example_files/tab_center.gif" alt="Center tab" width="19" height="18">
+                            </td>
+                            <td class="white-text" nowrap="nowrap" bgcolor="#000000">
+                                <a href="http://www.ustaxcourt.gov/forms.htm">Forms</a>
+                            </td>
+                            <td width="19" valign="top" bgcolor="#000000">
+                                <img src="tax_example_files/tab_center.gif" alt="Right tab" width="19" height="18">
+                            </td>
+                            <td class="white-text" bgcolor="#000000">
+                                <a href="http://www.ustaxcourt.gov/judges.htm">Judges</a>
+                            </td>
+                            <td width="9" valign="top" bgcolor="#000000">
+                                <img src="tax_example_files/tab_right.gif" alt="Right tab" width="9" height="18">
+                            </td>
+                        </tr>
+                    </tbody></table>
                 </div>
-                <div id="Content_pnlOpinions">
+                <div id="Div1">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tbody><tr align="center">
+                            <td width="9" bgcolor="#000000">
+                                <img src="tax_example_files/tab_left.gif" alt="Left tab" width="9" height="18">
+                            </td>
+                            <td class="white-text" nowrap="nowrap" bgcolor="#000000">
+                                <a href="http://www.ustaxcourt.gov/notice.htm">Rules</a>
+                            </td>
+                            <td width="19" bgcolor="#000000">
+                                <img src="tax_example_files/tab_center.gif" alt="Center tab" width="19" height="18">
+                            </td>
+                            <td class="white-text" nowrap="nowrap" bgcolor="#000000">
+                                <a href="http://www.ustaxcourt.gov/press.htm">Press Releases</a>
+                            </td>
+                            <td width="19" bgcolor="#000000">
+                                <img src="tax_example_files/tab_center.gif" alt="Center tab" width="19" height="18">
+                            </td>
+                            <td class="white-text" nowrap="nowrap" bgcolor="#000000">
+                                <a href="http://www.ustaxcourt.gov/phone.htm">Telephone Numbers</a>
+                            </td>
+                            <td width="19" bgcolor="#000000">
+                                <img src="tax_example_files/tab_center.gif" alt="Center tab" width="19" height="18">
+                            </td>
+                            <td class="white-text" nowrap="nowrap" bgcolor="#000000">
+                                <a href="http://www.ustaxcourt.gov/fees.htm">Fees/Charges</a>
+                            </td>
+                            <td width="19" bgcolor="#000000">
+                                <img src="tax_example_files/tab_center.gif" alt="Center tab" width="19" height="18">
+                            </td>
+                            <td class="white-text" nowrap="nowrap" bgcolor="#000000">
+                                <a href="http://www.ustaxcourt.gov/taxpayer_info_intro.htm">Taxpayer Information </a>
+                            </td>
+
+                            <td width="19" bgcolor="#000000">
+                                <img src="tax_example_files/tab_center.gif" alt="Center tab" width="19" height="18">
+                            </td>
+                            <td class="white-text" nowrap="nowrap" bgcolor="#000000">
+                                <a href="http://www.ustaxcourt.gov/clinics.htm">Clinics/Student Practice/Calendar Call</a>
+                            </td>
+
+                            <td width="19" bgcolor="#000000">
+                                <img src="tax_example_files/tab_center.gif" alt="Right tab" width="19" height="18">
+                            </td>
+                            <td class="white-text" nowrap="nowrap" bgcolor="#000000">
+                                <a href="http://www.ustaxcourt.gov/employment.htm">Employment</a>
+                            </td>
+                            <td width="19" bgcolor="#000000">
+                                <img src="tax_example_files/tab_center_blk_red.gif" alt="Right tab" width="19" height="18">
+                            </td>
+                            <td class="white-text-red-bckgrd" bgcolor="#000000">
+                                <a href="http://www.ustaxcourt.gov/help.htm">Help</a>
+                            </td>
+                            <td width="9" bgcolor="#000000">
+                                <img src="tax_example_files/tab_right_red.gif" alt="Right tab" width="9" height="18">
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+            <div id="address">
+                <font size="-1">
+                    <strong>United States Tax Court</strong>, 400 Second Street, NW, Washington, DC 20217 <strong>Telephone:</strong> 202-521-0700
+                </font>
+            </div>
+            <div id="crumbs">
+                <table width="98%" cellspacing="0" cellpadding="0" border="0">
+                    <tbody><tr>
+                        <td>
+                            <span class="small_text"> <span class="red-text">You are here</span>
+                                »
+                                <a href="http://www.ustaxcourt.gov/index.htm">Home</a>
+                                »
+                                
+    Opinions Search
+ </span>
+                        </td>
+                        <td align="right">
+                        Tuesday, November 13, 2018
+                        </td>
+                    </tr>
+                </tbody></table>
+            </div>
+
+            <div id="DocketInqNav">
+                <span class="red-text">Go to</span> »
+                <a id="lnkTodaysOpinions" class="black-text" href="https://www.ustaxcourt.gov/UstcInOp/TodaysOpinions.aspx">Today's Opinions</a>,
+                <a id="lnkSearchOpinions" class="black-text" href="https://www.ustaxcourt.gov/UstcInOp/OpinionSearch.aspx">Search Opinions</a>
+            </div>
+            <div>
+                
+   
+    <script type="text/javascript" language="javascript">
+        Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(startRequest);
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(endRequest);
+
+        function startRequest(sender, e) {
+            document.getElementById('Content_btnSearch').disabled = true;
+            document.getElementById('Content_btnReset').disabled = true;
+        }
+
+        function endRequest(sender, e) {
+            document.getElementById('Content_btnSearch').disabled = false;
+            document.getElementById('Content_btnReset').disabled = false;
+        }
+
+        function btnSearch_ClientClicking() {
+            var datePickers = DatePickers();
+            for (var i = 0; i < datePickers.length; i++) {
+                if (datePickers[i].get_dateInput()._holdsValidValue === false) {
+                    return false;
+                    break;
+                }
+            }
+            return true;
+        }
+
+        function DatePickers() {
+            var datePickers = new Array();
+
+            datePickers[0] = $find('ctl00_Content_dpDateSearch');
+            datePickers[1] = $find('ctl00_Content_dpDateSearchTo');
+
+            return datePickers;
+        }
+    </script>
+
+    <div id="Content_pnlUpdate">
 
 
+            <div style="width:100%;margin-top:10px;">
+                <div id="DocketWrapper">
+
+                    <h1>Opinions Search</h1>
+
+                    <hr>
 
 
-
-                            <table class="ResultsTable" cellpadding="0" cellspacing="0" style="margin-bottom:10px;">
-                                <tr class="ResultsHeader">
-                                    <th align="left">TC Opinions</th>
-                                    <th width="10%">Released</th>
-                                </tr>
-
-                            <tr class="ResultsOddRow">
-                                <td><a href='http://www.ustaxcourt.gov/InOpTodays/Agro-JalFarmingEnter%2cInc..TC.WPD.pdf' target="_blank">Agro-Jal Farming Enterprises, Inc.</a></td>
-                                <td>07/30/2015</td>
-                            </tr>
-
-                            </table>
-
-
-
-
-
-                            <table class="ResultsTable" cellpadding="0" cellspacing="0" style="margin-bottom:10px;">
-                                <tr class="ResultsHeader">
-                                    <th align="left">Memorandum Opinions</th>
-                                    <th width="10%">Released</th>
-                                </tr>
-
-                            <tr class="ResultsOddRow">
-                                <td><a href='http://www.ustaxcourt.gov/InOpTodays/Lau.Memo.Nega.TCM.WPD.pdf' target="_blank">Edwina Wan-Wen Lau</a></td>
-                                <td>07/30/2015</td>
-                            </tr>
-
-                            </table>
-
-
-                    <div id="Content_pnlNoSummaryOpinions">
-
-                        <table class="ResultsTable" cellpadding="0" cellspacing="0" style="margin-bottom:10px;">
-                            <tr class="ResultsHeader">
-                                <th align="left">
-                                    Summary Opinions
-                                    <br />
-                                    <span style="font-size:.7em;">* <span style="color:Red;">Pursuant to Internal Revenue Code Section 7463(b), Summary opinions may not be treated as precedent for any other case. </span></span>
-                                </th>
-                                <th width="10%">Released</th>
-                            </tr>
-                            <tr class="ResultsOddRow">
+                    <div id="Content_pnlSearch">
+	
+                    
+                        <table style="width:100%;">
+                            <tbody><tr>
                                 <td colspan="2" align="center">
-                                    <span class="red-text">
-                                        No Opinions
-                                    </span>
+                   			TC and Memorandum Opinions starting 09/25/95; TC 
+Opinions in published format starting 01/11/10; Summary Opinions 
+starting 01/10/01*
+                                </td>
+                                <td>
+                                    <a href="https://www.ustaxcourt.gov/UstcInOp/help/OpinionsHelp.htm" target="_blank"><img src="tax_example_files/help2.png" alt="?" style="border: none;" width="16px" height="16px"> Opinions Help</a>
                                 </td>
                             </tr>
-                        </table>
+                        </tbody></table>
 
-		</div>
-
-
-
-
+                        <table id="SearchTable" class="center" style="width:600px;">
+                            <tbody><tr>
+                                <td colspan="3" align="center">
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="width:175px;" align="right">
+                                    Date&nbsp;Search:
+                                </th>
+                                <td style="width:200px;">
+                                    <table width="200px">
+                                        <tbody><tr>
+                                            <td style="width:40px;">From:</td>
+                                            <td>
+				                                <div id="ctl00_Content_dpDateSearch_wrapper" class="RadPicker RadPicker_Web20" style="display:inline-block;width:160px;">
+		<!-- 2014.3.1024.40 --><input style="visibility:hidden;display:block;float:right;margin:0 0 -1px -1px;width:1px;height:1px;overflow:hidden;border:0;padding:0;" id="ctl00_Content_dpDateSearch" name="ctl00$Content$dpDateSearch" type="text" class="rdfd_ radPreventDecorate" value="2018-10-30" title="Visually hidden input created for functionality purposes."><table class="rcTable rcSingle" summary="Table holding date picker control for selection of dates." style="width:160px;" cellspacing="0">
+			<caption style="display:none;">
+				RadDatePicker
+			</caption><thead style="display:none;">
+				<tr>
+					<th scope="col">RadDatePicker</th>
+				</tr>
+			</thead><tbody>
+				<tr>
+					<td class="rcInputCell" style="width:100%;"><span id="ctl00_Content_dpDateSearch_dateInput_wrapper" class="riSingle RadInput RadInput_Web20" style="display:block;width:100%;"><input id="ctl00_Content_dpDateSearch_dateInput" name="ctl00$Content$dpDateSearch$dateInput" class="riTextBox riEnabled" value="10/30/2018" type="text"><input id="ctl00_Content_dpDateSearch_dateInput_ClientState" name="ctl00_Content_dpDateSearch_dateInput_ClientState" type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;2018-10-30-00-00-00&quot;,&quot;valueAsString&quot;:&quot;2018-10-30-00-00-00&quot;,&quot;minDateStr&quot;:&quot;1980-01-01-00-00-00&quot;,&quot;maxDateStr&quot;:&quot;2099-12-31-00-00-00&quot;,&quot;lastSetTextBoxValue&quot;:&quot;10/30/2018&quot;}"></span></td><td><a title="Open the calendar popup." href="#" id="ctl00_Content_dpDateSearch_popupButton" class="rcCalPopup">Open the calendar popup.</a><div id="ctl00_Content_dpDateSearch_calendar_wrapper" style="display:none;">
+						<table id="ctl00_Content_dpDateSearch_calendar" summary="Calendar control which enables the selection of dates." class="RadCalendar RadCalendar_Web20" cellspacing="0">
+							<caption>
+								<span style="display:none;">Calendar</span>
+							</caption><thead>
+								<tr>
+									<td class="rcTitlebar"><table summary="Title and navigation which can change and show the current year and month." cellspacing="0">
+										<caption>
+											<span style="display:none;">Title and navigation</span>
+										</caption><thead>
+											<tr style="display:none;">
+												<th scope="col">Title and navigation</th>
+											</tr>
+										</thead><tbody>
+	<tr>
+		<td><a id="ctl00_Content_dpDateSearch_calendar_FNP" class="rcFastPrev" title="&lt;&lt;" href="#">&lt;&lt;</a></td><td><a id="ctl00_Content_dpDateSearch_calendar_NP" class="rcPrev" title="&lt;" href="#">&lt;</a></td><td id="ctl00_Content_dpDateSearch_calendar_Title" class="rcTitle">November, 2018</td><td><a id="ctl00_Content_dpDateSearch_calendar_NN" class="rcNext" title="&gt;" href="#">&gt;</a></td><td><a id="ctl00_Content_dpDateSearch_calendar_FNN" class="rcFastNext" title="&gt;&gt;" href="#">&lt;&lt;</a></td>
+	</tr>
+</tbody>
+									</table></td>
+								</tr>
+							</thead><tbody>
+	<tr>
+		<td class="rcMain"><table id="ctl00_Content_dpDateSearch_calendar_Top" class="rcMainTable" summary="Table containing all dates for the currently selected month." cellspacing="0">
+	<caption>
+		<span style="display:none;">November, 2018</span>
+	</caption><thead>
+		<tr class="rcWeek">
+			<th class="rcViewSel" scope="col">&nbsp;</th><th id="ctl00_Content_dpDateSearch_calendar_Top_cs_1" title="Sunday" scope="col" abbr="Sun">S</th><th id="ctl00_Content_dpDateSearch_calendar_Top_cs_2" title="Monday" scope="col" abbr="Mon">M</th><th id="ctl00_Content_dpDateSearch_calendar_Top_cs_3" title="Tuesday" scope="col" abbr="Tue">T</th><th id="ctl00_Content_dpDateSearch_calendar_Top_cs_4" title="Wednesday" scope="col" abbr="Wed">W</th><th id="ctl00_Content_dpDateSearch_calendar_Top_cs_5" title="Thursday" scope="col" abbr="Thu">T</th><th id="ctl00_Content_dpDateSearch_calendar_Top_cs_6" title="Friday" scope="col" abbr="Fri">F</th><th id="ctl00_Content_dpDateSearch_calendar_Top_cs_7" title="Saturday" scope="col" abbr="Sat">S</th>
+		</tr>
+	</thead><tbody>
+		<tr class="rcRow">
+			<th id="ctl00_Content_dpDateSearch_calendar_Top_rs_1" scope="row">44</th><td class="rcOtherMonth" title="Sunday, October 28, 2018"><a href="#">28</a></td><td class="rcOtherMonth" title="Monday, October 29, 2018"><a href="#">29</a></td><td class="rcSelected" title="Tuesday, October 30, 2018"><a href="#">30</a></td><td class="rcOtherMonth" title="Wednesday, October 31, 2018"><a href="#">31</a></td><td title="Thursday, November 01, 2018"><a href="#">1</a></td><td title="Friday, November 02, 2018"><a href="#">2</a></td><td class="rcWeekend" title="Saturday, November 03, 2018"><a href="#">3</a></td>
+		</tr><tr class="rcRow">
+			<th id="ctl00_Content_dpDateSearch_calendar_Top_rs_2" scope="row">45</th><td class="rcWeekend" title="Sunday, November 04, 2018"><a href="#">4</a></td><td title="Monday, November 05, 2018"><a href="#">5</a></td><td title="Tuesday, November 06, 2018"><a href="#">6</a></td><td title="Wednesday, November 07, 2018"><a href="#">7</a></td><td title="Thursday, November 08, 2018"><a href="#">8</a></td><td title="Friday, November 09, 2018"><a href="#">9</a></td><td class="rcWeekend" title="Saturday, November 10, 2018"><a href="#">10</a></td>
+		</tr><tr class="rcRow">
+			<th id="ctl00_Content_dpDateSearch_calendar_Top_rs_3" scope="row">46</th><td class="rcWeekend" title="Sunday, November 11, 2018"><a href="#">11</a></td><td title="Monday, November 12, 2018"><a href="#">12</a></td><td title="Tuesday, November 13, 2018"><a href="#">13</a></td><td title="Wednesday, November 14, 2018"><a href="#">14</a></td><td title="Thursday, November 15, 2018"><a href="#">15</a></td><td title="Friday, November 16, 2018"><a href="#">16</a></td><td class="rcWeekend" title="Saturday, November 17, 2018"><a href="#">17</a></td>
+		</tr><tr class="rcRow">
+			<th id="ctl00_Content_dpDateSearch_calendar_Top_rs_4" scope="row">47</th><td class="rcWeekend" title="Sunday, November 18, 2018"><a href="#">18</a></td><td title="Monday, November 19, 2018"><a href="#">19</a></td><td title="Tuesday, November 20, 2018"><a href="#">20</a></td><td title="Wednesday, November 21, 2018"><a href="#">21</a></td><td title="Thursday, November 22, 2018"><a href="#">22</a></td><td title="Friday, November 23, 2018"><a href="#">23</a></td><td class="rcWeekend" title="Saturday, November 24, 2018"><a href="#">24</a></td>
+		</tr><tr class="rcRow">
+			<th id="ctl00_Content_dpDateSearch_calendar_Top_rs_5" scope="row">48</th><td class="rcWeekend" title="Sunday, November 25, 2018"><a href="#">25</a></td><td title="Monday, November 26, 2018"><a href="#">26</a></td><td title="Tuesday, November 27, 2018"><a href="#">27</a></td><td title="Wednesday, November 28, 2018"><a href="#">28</a></td><td title="Thursday, November 29, 2018"><a href="#">29</a></td><td title="Friday, November 30, 2018"><a href="#">30</a></td><td class="rcOtherMonth" title="Saturday, December 01, 2018"><a href="#">1</a></td>
+		</tr><tr class="rcRow">
+			<th id="ctl00_Content_dpDateSearch_calendar_Top_rs_6" scope="row">49</th><td class="rcOtherMonth" title="Sunday, December 02, 2018"><a href="#">2</a></td><td class="rcOtherMonth" title="Monday, December 03, 2018"><a href="#">3</a></td><td class="rcOtherMonth" title="Tuesday, December 04, 2018"><a href="#">4</a></td><td class="rcOtherMonth" title="Wednesday, December 05, 2018"><a href="#">5</a></td><td class="rcOtherMonth" title="Thursday, December 06, 2018"><a href="#">6</a></td><td class="rcOtherMonth" title="Friday, December 07, 2018"><a href="#">7</a></td><td class="rcOtherMonth" title="Saturday, December 08, 2018"><a href="#">8</a></td>
+		</tr>
+	</tbody>
+</table></td>
+	</tr>
+</tbody>
+						</table><input type="hidden" name="ctl00_Content_dpDateSearch_calendar_SD" id="ctl00_Content_dpDateSearch_calendar_SD" value="[[2018,10,30]]"><input type="hidden" name="ctl00_Content_dpDateSearch_calendar_AD" id="ctl00_Content_dpDateSearch_calendar_AD" value="[[1980,1,1],[2099,12,30],[2018,11,13]]">
+					</div></td>
+				</tr>
+			</tbody>
+		</table><input id="ctl00_Content_dpDateSearch_ClientState" name="ctl00_Content_dpDateSearch_ClientState" type="hidden" autocomplete="off">
 	</div>
-            </div>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                </td>
+                                <td style="padding-left:10px;width:225px;">
+                                    <table width="225px">
+                                        <tbody><tr>
+                                            <td style="width:80px;">To: <span style="color:Gray;">(Optional)</span></td>
+				                            <td>
+				                                <div id="ctl00_Content_dpDateSearchTo_wrapper" class="RadPicker RadPicker_Web20" style="display:inline-block;width:160px;">
+		<input style="visibility:hidden;display:block;float:right;margin:0 0 -1px -1px;width:1px;height:1px;overflow:hidden;border:0;padding:0;" id="ctl00_Content_dpDateSearchTo" name="ctl00$Content$dpDateSearchTo" type="text" class="rdfd_ radPreventDecorate" value="2018-11-16" title="Visually hidden input created for functionality purposes."><table class="rcTable rcSingle" summary="Table holding date picker control for selection of dates." style="width:160px;" cellspacing="0">
+			<caption style="display:none;">
+				RadDatePicker
+			</caption><thead style="display:none;">
+				<tr>
+					<th scope="col">RadDatePicker</th>
+				</tr>
+			</thead><tbody>
+				<tr>
+					<td class="rcInputCell" style="width:100%;"><span id="ctl00_Content_dpDateSearchTo_dateInput_wrapper" class="riSingle RadInput RadInput_Web20" style="display:block;width:100%;"><input id="ctl00_Content_dpDateSearchTo_dateInput" name="ctl00$Content$dpDateSearchTo$dateInput" class="riTextBox riEnabled" value="11/16/2018" type="text"><input id="ctl00_Content_dpDateSearchTo_dateInput_ClientState" name="ctl00_Content_dpDateSearchTo_dateInput_ClientState" type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;2018-11-16-00-00-00&quot;,&quot;valueAsString&quot;:&quot;2018-11-16-00-00-00&quot;,&quot;minDateStr&quot;:&quot;1980-01-01-00-00-00&quot;,&quot;maxDateStr&quot;:&quot;2099-12-31-00-00-00&quot;,&quot;lastSetTextBoxValue&quot;:&quot;11/16/2018&quot;}"></span></td><td><a title="Open the calendar popup." href="#" id="ctl00_Content_dpDateSearchTo_popupButton" class="rcCalPopup">Open the calendar popup.</a><div id="ctl00_Content_dpDateSearchTo_calendar_wrapper" style="display:none;">
+						<table id="ctl00_Content_dpDateSearchTo_calendar" summary="Calendar control which enables the selection of dates." class="RadCalendar RadCalendar_Web20" cellspacing="0">
+							<caption>
+								<span style="display:none;">Calendar</span>
+							</caption><thead>
+								<tr>
+									<td class="rcTitlebar"><table summary="Title and navigation which can change and show the current year and month." cellspacing="0">
+										<caption>
+											<span style="display:none;">Title and navigation</span>
+										</caption><thead>
+											<tr style="display:none;">
+												<th scope="col">Title and navigation</th>
+											</tr>
+										</thead><tbody>
+	<tr>
+		<td><a id="ctl00_Content_dpDateSearchTo_calendar_FNP" class="rcFastPrev" title="&lt;&lt;" href="#">&lt;&lt;</a></td><td><a id="ctl00_Content_dpDateSearchTo_calendar_NP" class="rcPrev" title="&lt;" href="#">&lt;</a></td><td id="ctl00_Content_dpDateSearchTo_calendar_Title" class="rcTitle">November, 2018</td><td><a id="ctl00_Content_dpDateSearchTo_calendar_NN" class="rcNext" title="&gt;" href="#">&gt;</a></td><td><a id="ctl00_Content_dpDateSearchTo_calendar_FNN" class="rcFastNext" title="&gt;&gt;" href="#">&lt;&lt;</a></td>
+	</tr>
+</tbody>
+									</table></td>
+								</tr>
+							</thead><tbody>
+	<tr>
+		<td class="rcMain"><table id="ctl00_Content_dpDateSearchTo_calendar_Top" class="rcMainTable" summary="Table containing all dates for the currently selected month." cellspacing="0">
+	<caption>
+		<span style="display:none;">November, 2018</span>
+	</caption><thead>
+		<tr class="rcWeek">
+			<th class="rcViewSel" scope="col">&nbsp;</th><th id="ctl00_Content_dpDateSearchTo_calendar_Top_cs_1" title="Sunday" scope="col" abbr="Sun">S</th><th id="ctl00_Content_dpDateSearchTo_calendar_Top_cs_2" title="Monday" scope="col" abbr="Mon">M</th><th id="ctl00_Content_dpDateSearchTo_calendar_Top_cs_3" title="Tuesday" scope="col" abbr="Tue">T</th><th id="ctl00_Content_dpDateSearchTo_calendar_Top_cs_4" title="Wednesday" scope="col" abbr="Wed">W</th><th id="ctl00_Content_dpDateSearchTo_calendar_Top_cs_5" title="Thursday" scope="col" abbr="Thu">T</th><th id="ctl00_Content_dpDateSearchTo_calendar_Top_cs_6" title="Friday" scope="col" abbr="Fri">F</th><th id="ctl00_Content_dpDateSearchTo_calendar_Top_cs_7" title="Saturday" scope="col" abbr="Sat">S</th>
+		</tr>
+	</thead><tbody>
+		<tr class="rcRow">
+			<th id="ctl00_Content_dpDateSearchTo_calendar_Top_rs_1" scope="row">44</th><td class="rcOtherMonth" title="Sunday, October 28, 2018"><a href="#">28</a></td><td class="rcOtherMonth" title="Monday, October 29, 2018"><a href="#">29</a></td><td class="rcOtherMonth" title="Tuesday, October 30, 2018"><a href="#">30</a></td><td class="rcOtherMonth" title="Wednesday, October 31, 2018"><a href="#">31</a></td><td title="Thursday, November 01, 2018"><a href="#">1</a></td><td title="Friday, November 02, 2018"><a href="#">2</a></td><td class="rcWeekend" title="Saturday, November 03, 2018"><a href="#">3</a></td>
+		</tr><tr class="rcRow">
+			<th id="ctl00_Content_dpDateSearchTo_calendar_Top_rs_2" scope="row">45</th><td class="rcWeekend" title="Sunday, November 04, 2018"><a href="#">4</a></td><td title="Monday, November 05, 2018"><a href="#">5</a></td><td title="Tuesday, November 06, 2018"><a href="#">6</a></td><td title="Wednesday, November 07, 2018"><a href="#">7</a></td><td title="Thursday, November 08, 2018"><a href="#">8</a></td><td title="Friday, November 09, 2018"><a href="#">9</a></td><td class="rcWeekend" title="Saturday, November 10, 2018"><a href="#">10</a></td>
+		</tr><tr class="rcRow">
+			<th id="ctl00_Content_dpDateSearchTo_calendar_Top_rs_3" scope="row">46</th><td class="rcWeekend" title="Sunday, November 11, 2018"><a href="#">11</a></td><td title="Monday, November 12, 2018"><a href="#">12</a></td><td title="Tuesday, November 13, 2018"><a href="#">13</a></td><td title="Wednesday, November 14, 2018"><a href="#">14</a></td><td title="Thursday, November 15, 2018"><a href="#">15</a></td><td class="rcSelected" title="Friday, November 16, 2018"><a href="#">16</a></td><td class="rcWeekend" title="Saturday, November 17, 2018"><a href="#">17</a></td>
+		</tr><tr class="rcRow">
+			<th id="ctl00_Content_dpDateSearchTo_calendar_Top_rs_4" scope="row">47</th><td class="rcWeekend" title="Sunday, November 18, 2018"><a href="#">18</a></td><td title="Monday, November 19, 2018"><a href="#">19</a></td><td title="Tuesday, November 20, 2018"><a href="#">20</a></td><td title="Wednesday, November 21, 2018"><a href="#">21</a></td><td title="Thursday, November 22, 2018"><a href="#">22</a></td><td title="Friday, November 23, 2018"><a href="#">23</a></td><td class="rcWeekend" title="Saturday, November 24, 2018"><a href="#">24</a></td>
+		</tr><tr class="rcRow">
+			<th id="ctl00_Content_dpDateSearchTo_calendar_Top_rs_5" scope="row">48</th><td class="rcWeekend" title="Sunday, November 25, 2018"><a href="#">25</a></td><td title="Monday, November 26, 2018"><a href="#">26</a></td><td title="Tuesday, November 27, 2018"><a href="#">27</a></td><td title="Wednesday, November 28, 2018"><a href="#">28</a></td><td title="Thursday, November 29, 2018"><a href="#">29</a></td><td title="Friday, November 30, 2018"><a href="#">30</a></td><td class="rcOtherMonth" title="Saturday, December 01, 2018"><a href="#">1</a></td>
+		</tr><tr class="rcRow">
+			<th id="ctl00_Content_dpDateSearchTo_calendar_Top_rs_6" scope="row">49</th><td class="rcOtherMonth" title="Sunday, December 02, 2018"><a href="#">2</a></td><td class="rcOtherMonth" title="Monday, December 03, 2018"><a href="#">3</a></td><td class="rcOtherMonth" title="Tuesday, December 04, 2018"><a href="#">4</a></td><td class="rcOtherMonth" title="Wednesday, December 05, 2018"><a href="#">5</a></td><td class="rcOtherMonth" title="Thursday, December 06, 2018"><a href="#">6</a></td><td class="rcOtherMonth" title="Friday, December 07, 2018"><a href="#">7</a></td><td class="rcOtherMonth" title="Saturday, December 08, 2018"><a href="#">8</a></td>
+		</tr>
+	</tbody>
+</table></td>
+	</tr>
+</tbody>
+						</table><input type="hidden" name="ctl00_Content_dpDateSearchTo_calendar_SD" id="ctl00_Content_dpDateSearchTo_calendar_SD" value="[[2018,11,16]]"><input type="hidden" name="ctl00_Content_dpDateSearchTo_calendar_AD" id="ctl00_Content_dpDateSearchTo_calendar_AD" value="[[1980,1,1],[2099,12,30],[2018,11,13]]">
+					</div></td>
+				</tr>
+			</tbody>
+		</table><input id="ctl00_Content_dpDateSearchTo_ClientState" name="ctl00_Content_dpDateSearchTo_ClientState" type="hidden" autocomplete="off">
+	</div>
+				                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <th align="right">Case Name Keyword:</th>
+                                <td><input name="ctl00$Content$txtCaseNameKeyword" type="text" maxlength="255" id="Content_txtCaseNameKeyword" onfocus="Javascript:this.style.borderColor = '#e3b549';" onblur="Javascript:this.style.borderColor = '#7f9db9';" style="width:97%;border:1px solid #7f9db9;"></td>
+                                <td style="padding-left:10px;">(e.g., petitioner's last name)</td>
+                            </tr>
+                            <tr>
+                                <th align="right">Judge:</th>
+                                <td>
+                                    <select name="ctl00$Content$ddlJudges" id="Content_ddlJudges" style="width:100%;">
+		<option selected="selected" value="0">All Judges</option>
+		<option value="22">Aarons</option>
+		<option value="21">Armen</option>
+		<option value="73">Ashford</option>
+		<option value="35">Beghe</option>
+		<option value="70">Buch</option>
+		<option value="20">Buckley</option>
+		<option value="28">Cantrel</option>
+		<option value="55">Carluzzo</option>
+		<option value="43">Chabot</option>
+		<option value="18">Chiechi</option>
+		<option value="2">Clapp</option>
+		<option value="54">Cohen</option>
+		<option value="42">Colvin</option>
+		<option value="77">Copeland</option>
+		<option value="58">Couvillion</option>
+		<option value="30">Dawson</option>
+		<option value="5">Dean</option>
+		<option value="62">Dinan</option>
+		<option value="41">Drennen</option>
+		<option value="34">Fay</option>
+		<option value="66">Featherston</option>
+		<option value="61">Foley</option>
+		<option value="32">Gale</option>
+		<option value="1">Galloway</option>
+		<option value="7">Gerber</option>
+		<option value="12">Goeke</option>
+		<option value="25">Goffe</option>
+		<option value="59">Goldberg</option>
+		<option value="9">Gussis</option>
+		<option value="14">Gustafson</option>
+		<option value="69">Guy</option>
+		<option value="63">Haines</option>
+		<option value="52">Halpern</option>
+		<option value="13">Hamblen</option>
+		<option value="40">Holmes</option>
+		<option value="23">Jacobs</option>
+		<option value="68">Kerrigan</option>
+		<option value="19">Korner</option>
+		<option value="39">Kroupa</option>
+		<option value="26">Laro</option>
+		<option value="71">Lauber</option>
+		<option value="75">Leyden</option>
+		<option value="45">Marvel</option>
+		<option value="36">Morrison</option>
+		<option value="33">Nameroff</option>
+		<option value="72">Nega</option>
+		<option value="37">Nims</option>
+		<option value="31">Pajak</option>
+		<option value="27">Panuthos</option>
+		<option value="8">Paris</option>
+		<option value="64">Parker</option>
+		<option value="56">Parr</option>
+		<option value="44">Pate</option>
+		<option value="65">Peterson</option>
+		<option value="46">Powell</option>
+		<option value="74">Pugh</option>
+		<option value="4">Raum</option>
+		<option value="10">Ruwe</option>
+		<option value="29">Scott</option>
+		<option value="51">Shields</option>
+		<option value="3">Simpson</option>
+		<option value="57">Sterrett</option>
+		<option value="38">Swift</option>
+		<option value="15">Tannenwald</option>
+		<option value="48">Thornton</option>
+		<option value="76">Urda</option>
+		<option value="53">Vandervort</option>
+		<option value="24">Vasquez</option>
+		<option value="6">Wells</option>
+		<option value="50">Whalen</option>
+		<option value="49">Wherry</option>
+		<option value="17">Whitaker</option>
+		<option value="60">Wilbur</option>
+		<option value="11">Wiles</option>
+		<option value="47">Williams</option>
+		<option value="16">Wolfe</option>
+		<option value="67">Wright</option>
+
+	</select>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th align="right">Opinion Type:</th>
+                                <td>
+                                    <select name="ctl00$Content$ddlOpinionTypes" id="Content_ddlOpinionTypes" style="width:100%;">
+		<option selected="selected" value="0">All Types</option>
+		<option value="3">Memorandum</option>
+		<option value="2">Summary*</option>
+		<option value="1">TC Opinion</option>
+
+	</select>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th align="right">Sort By:</th>
+                                <td>
+                                    &nbsp;<table id="Content_rdoCaseName">
+		<tbody><tr>
+			<td><input id="Content_rdoCaseName_0" type="radio" name="ctl00$Content$rdoCaseName" value="C" checked="checked"><label for="Content_rdoCaseName_0">Case Name</label></td><td><input id="Content_rdoCaseName_1" type="radio" name="ctl00$Content$rdoCaseName" value="D"><label for="Content_rdoCaseName_1">Release Date</label></td>
+		</tr>
+	</tbody></table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th align="right">Text Search:</th>
+                                <td colspan="2"><input name="ctl00$Content$txtDocumentKeywords" type="text" maxlength="255" id="Content_txtDocumentKeywords" onfocus="Javascript:this.style.borderColor = '#e3b549';" onblur="Javascript:this.style.borderColor = '#7f9db9';" style="width:98%;border:1px solid #7f9db9;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:right;" colspan="3"><div style="width:99%;">[<a href="https://www.ustaxcourt.gov/excluded_words.htm" target="_blank">Excluded Words List</a>] [<a href="https://www.ustaxcourt.gov/UstcInOp/help/DocSearchHelp.htm" target="_blank">Help</a>]</div></td>
+                            </tr>
+                            <tr>
+                                <th align="right">Number of hits to display:</th>
+                                <td><select name="ctl00$Content$ddlDocumentNumHits" id="Content_ddlDocumentNumHits" style="width:99%;">
+		<option value="All">All</option>
+		<option value="1">1</option>
+		<option selected="selected" value="5">5</option>
+		<option value="10">10</option>
+		<option value="None">None</option>
+
+	</select></td>
+                            </tr>
+
+                        </tbody></table>
+
+                    
+</div>
+
+                    <div id="Content_pnlSearchButtons" style="width:100%;">
+	
+                        <div class="searchbuttons">
+                            <br>
+                            <input type="submit" name="ctl00$Content$btnSearch" value="Search" onclick="return btnSearch_ClientClicking();" id="Content_btnSearch" style="width:100px;">
+                            <input type="submit" name="ctl00$Content$btnReset" value="Reset" id="Content_btnReset" style="width:100px;">
+                            <div id="Content_updProgress" style="display:none;" role="status" aria-hidden="true">
+		
+                                    <div style="width:100%;text-align:center;font-weight:bold;"><img src="tax_example_files/loadspinner.gif" alt="" width="16px" height="16px">Searching...</div>
+                                
+	</div>
+                        </div>
+                    
+</div>
+
+                    <div id="Content_pnlSearchResults">
+	
+
+                        <div class="DropShadowPanel">
+                            <div class="RoundedPanel">
+                                
+                                
+
+                                <div id="Content_pnlCaseHistory">
+		
+                                    <div style="float:left;">
+                                        <span style="font-weight:bold;font-size:.99em;">Max. Results per Page:</span> <select name="ctl00$Content$ddlResultsPerPage" onchange="javascript:setTimeout('__doPostBack(\'ctl00$Content$ddlResultsPerPage\',\'\')', 0)" id="Content_ddlResultsPerPage">
+			<option value="10">10</option>
+			<option selected="selected" value="25">25</option>
+			<option value="50">50</option>
+			<option value="75">75</option>
+			<option value="100">100</option>
+
+		</select>
+                                    </div>
+
+                                    
+                                    <div style="clear:both;"></div>
+                                    
+                                            <table class="ResultsTable" cellspacing="0" cellpadding="0">
+                                                <tbody><tr class="ResultsHeader">
+                                                    <th>Case Name</th>
+                                                    <th>Type</th>
+                                                    <th>Released</th>
+                                                </tr>
+                                        
+                                            <tr class="ResultsOddRow">
+                                                <td>
+				                                    <a name="11813" href="#11813" onclick="warnIsSummary('11813');">Rolanda Michelle Curtis &amp; Bryon Curtis</a>
+                                                </td>
+                                                <td>Summary*</td>
+                                                <td>11/01/2018</td>
+                                            </tr>
+                                        
+                                            <tr class="ResultsEvenRow">
+                                                <td>
+				                                    <a name="11815" href="https://www.ustaxcourt.gov/UstcInOp/OpinionViewer.aspx?ID=11815" target="_blank">Peter Gianulis &amp; Gabriela Rexach Subira</a>
+                                                </td>
+                                                <td>Memorandum</td>
+                                                <td>11/05/2018</td>
+                                            </tr>
+                                        
+                                            <tr class="ResultsOddRow">
+                                                <td>
+				                                    <a name="11808" href="https://www.ustaxcourt.gov/UstcInOp/OpinionViewer.aspx?ID=11808" target="_blank">Craig Douglas Hoglund &amp; Christine Joan Hoglund</a>
+                                                </td>
+                                                <td>Memorandum</td>
+                                                <td>11/05/2018</td>
+                                            </tr>
+                                        
+                                            <tr class="ResultsEvenRow">
+                                                <td>
+				                                    <a name="11810" href="#11810" onclick="warnIsSummary('11810');">Larry L. Leuenberger</a>
+                                                </td>
+                                                <td>Summary*</td>
+                                                <td>11/08/2018</td>
+                                            </tr>
+                                        
+                                            <tr class="ResultsOddRow">
+                                                <td>
+				                                    <a name="11806" href="https://www.ustaxcourt.gov/UstcInOp/OpinionViewer.aspx?ID=11806" target="_blank">W. T. Snipes</a>
+                                                </td>
+                                                <td>Memorandum</td>
+                                                <td>11/01/2018</td>
+                                            </tr>
+                                        
+                                            <tr class="ResultsEvenRow">
+                                                <td>
+				                                    <a name="11814" href="https://www.ustaxcourt.gov/UstcInOp/OpinionViewer.aspx?ID=11814" target="_blank">Max Sutherland &amp; Eric P. Decker</a>
+                                                </td>
+                                                <td>Memorandum</td>
+                                                <td>11/05/2018</td>
+                                            </tr>
+                                        
+                                            <tr class="ResultsOddRow">
+                                                <td>
+				                                    <a name="11812" href="#11812" onclick="warnIsSummary('11812');">Enrique Fernando Dancausa Valle</a>
+                                                </td>
+                                                <td>Summary*</td>
+                                                <td>11/05/2018</td>
+                                            </tr>
+                                        
+                                            <tr class="ResultsEvenRow">
+                                                <td>
+				                                    <a name="11816" href="https://www.ustaxcourt.gov/UstcInOp/OpinionViewer.aspx?ID=11816" target="_blank">Michael James Wells &amp; Lynn Anita Kirchner-Wells</a>
+                                                </td>
+                                                <td>Memorandum</td>
+                                                <td>11/08/2018</td>
+                                            </tr>
+                                        
+                                            <tr class="ResultsOddRowNoOpinion">
+                                                <td>
+				                                    No Opinions Released by the Court on 10/30/2018
+                                                </td>
+                                                <td></td>
+                                                <td>10/30/2018</td>
+                                            </tr>
+                                        
+                                            <tr class="ResultsEvenRowNoOpinion">
+                                                <td>
+				                                    No Opinions Released by the Court on 10/31/2018
+                                                </td>
+                                                <td></td>
+                                                <td>10/31/2018</td>
+                                            </tr>
+                                        
+                                            <tr class="ResultsOddRowNoOpinion">
+                                                <td>
+				                                    No Opinions Released by the Court on 11/02/2018
+                                                </td>
+                                                <td></td>
+                                                <td>11/02/2018</td>
+                                            </tr>
+                                        
+                                            <tr class="ResultsEvenRowNoOpinion">
+                                                <td>
+				                                    No Opinions Released by the Court on 11/06/2018
+                                                </td>
+                                                <td></td>
+                                                <td>11/06/2018</td>
+                                            </tr>
+                                        
+                                            <tr class="ResultsOddRowNoOpinion">
+                                                <td>
+				                                    No Opinions Released by the Court on 11/07/2018
+                                                </td>
+                                                <td></td>
+                                                <td>11/07/2018</td>
+                                            </tr>
+                                        
+                                            <tr class="ResultsEvenRowNoOpinion">
+                                                <td>
+				                                    No Opinions Released by the Court on 11/09/2018
+                                                </td>
+                                                <td></td>
+                                                <td>11/09/2018</td>
+                                            </tr>
+                                        
+                                            </tbody></table>
+                                        
+
+                                    <div style="float:left;">
+                                        <span style="font-weight:bold;font-size:.99em;">Total Opinions:&nbsp;</span><span id="Content_lblTotalOpinions" style="font-weight:bold;font-size:.99em;">14</span> 
+                                    </div>
+
+                                    
+                                    <div style="clear:both;"></div>
+                                
+	</div>
+                            </div>
+                        </div>
+                    
+</div>
+
+                    <div style="width:100%;text-align:left;font-size:.7em;">
+                        <span>* <span style="color:Red;">Pursuant to Internal Revenue Code Section 7463(b), Summary opinions may not be treated as precedent for any other case. </span></span>
+                        <br><br>
+                        <img src="tax_example_files/help2.png" alt="?" style="border: none;" width="16px" height="16px"> If you are having difficulty locating an opinion, please refer to the
+                        <a href="https://www.ustaxcourt.gov/UstcInOp/help/OpinionsHelp.htm" target="_blank"> Opinions Search Help</a> file. <br>
+                        <span style="font-size: small; font-family: Verdana, Arial, Helvetica, sans-serif; font-weight:bold;"><br><a href="http://www.ustaxcourt.gov/cited_URL_list.htm" target="_blank">Internet Sources Cited in Opinions</a><br><br></span>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                            <tbody><tr>
+                                <td width="95">
+                                    <a href="http://www.adobe.com/products/acrobat/readstep.html" target="_blank">
+                                        <font color="RED"><img src="tax_example_files/get_acrobat_reader.gif" alt="Get Adobe Acrobat graphic" width="88" height="31" border="0"></font>
+                                    </a>
+                                </td>
+                                <td>
+                                    <font color="RED">Adobe Acrobat Reader is required to view and print opinions.</font>
+                                    <br>
+                                    Adobe Acrobat Reader can be obtained free of charge from <a href="http://www.adobe.com/prodindex/acrobat/readstep.html" target="_blank">www.adobe.com</a>.
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+            </div>                          
+        
         </div>
 
-        <div style="clear:both;"></div>
+            </div>
+            <div style="clear:both;"> &nbsp;</div>
 
+            <div id="footer">
+                <table width="100%" cellspacing="5" cellpadding="0" border="0">
+                    <tbody><tr>
+                        <td>
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 65px" align="center">
+                            <br><b>Generated by Blackstone ... The Judicial System<br>© 2018 All Rights Reserved,
+                                <a title="CMC Software" href="http://www.cmcsoftware.com/">CMC Software</a><br><br></b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            To contact the Webmaster for technical issues or problems with the Web site, send an e-mail to
+                            <a href="mailto:webmaster@ustaxcourt.gov">webmaster@ustaxcourt.gov</a>.
+ For your information, no documents can be filed with the Court at this 
+or any other e-mail address. For all non-technical questions, including 
+procedural, case-related, or general questions about the Court, you must
+ contact the Office of the Clerk of the Court at (202) 521-0700 or by 
+postal mail at U.S. Tax Court, 400 Second Street, N.W., Washington, DC 
+20217, Attention: Office of the Clerk of the Court.
+                        </td>
+                    </tr>
+                </tbody></table>
+            </div>
 
+            <div id="ctl00_nfSummary" style="display:none;">
+	<input id="ctl00_nfSummary_ClientState" name="ctl00_nfSummary_ClientState" type="hidden" autocomplete="off">
 </div>
-    <div style="width:100%;text-align:left;font-size:.7em;">
-        <table width="100%" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-            <td width="88"><font color="RED"><a href="http://www.adobe.com/products/acrobat/readstep.html" target="_blank"><img src="images/get_acrobat_reader.gif" alt="Get Adobe Acrobat graphic" width="88" height="31" border="0"></a></font></td>
-            <td><font color="RED">&nbsp;Adobe Acrobat Reader is required to
-                view and print opinions.</font><font color="RED">&nbsp;</font><br>
-                &nbsp;Adobe Acrobat Reader can be obtained free of charge from
-                <a href="http://www.adobe.com/prodindex/acrobat/readstep.html" target="_blank">www.adobe.com</a>.</td>
-            </tr>
-        </table>
-    </div>
 
-    </div>
-</div>
+        
 
-    </div>
-    <div style="clear:both;"> &nbsp;</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadDateInput, {"_displayText":"","_focused":false,"_initialValueAsText":"","_postBackEventReferenceScript":"__doPostBack(\u0027ctl00$Content$dpDateSearch\u0027,\u0027\u0027)","_skin":"Web20","_validationText":"","clientStateFieldID":"ctl00_Content_dpDateSearch_dateInput_ClientState","dateFormat":"M/d/yyyy","dateFormatInfo":{"DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"AbbreviatedDayNames":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"AMDesignator":"AM","PMDesignator":"PM","DateSeparator":"/","TimeSeparator":":","FirstDayOfWeek":0,"DateSlots":{"Month":0,"Day":1,"Year":2},"ShortYearCenturyEnd":2029,"TimeInputOnly":false,"MonthYearOnly":false},"displayDateFormat":"M/d/yyyy","enabled":true,"incrementSettings":{InterceptArrowKeys:true,InterceptMouseWheel:true,Step:1},"styles":{HoveredStyle: ["width:100%;", "riTextBox riHover"],InvalidStyle: ["width:100%;", "riTextBox riError"],DisabledStyle: ["width:100%;", "riTextBox riDisabled"],FocusedStyle: ["width:100%;", "riTextBox riFocused"],EmptyMessageStyle: ["width:100%;", "riTextBox riEmpty"],ReadOnlyStyle: ["width:100%;", "riTextBox riRead"],EnabledStyle: ["width:100%;", "riTextBox riEnabled"]}}, null, null, $get("ctl00_Content_dpDateSearch_dateInput"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadCalendar, {"_DayRenderChangedDays":{},"_FormatInfoArray":[["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],["January","February","March","April","May","June","July","August","September","October","November","December",""],["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"dddd, MMMM dd, yyyy h:mm:ss tt","dddd, MMMM dd, yyyy","h:mm:ss tt","MMMM dd","ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","M/d/yyyy","h:mm tt","yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","MMMM, yyyy","AM","PM","/",":",0],"_ViewRepeatableDays":{},"_ViewsHash":{"ctl00_Content_dpDateSearch_calendar_Top" : [[2018,11,1], 1]},"_calendarWeekRule":0,"_culture":"en-US","_enableKeyboardNavigation":false,"_enableViewSelector":false,"_firstDayOfWeek":7,"_postBackCall":"__doPostBack(\u0027ctl00$Content$dpDateSearch$calendar\u0027,\u0027@@\u0027)","_rangeSelectionMode":0,"clientStateFieldID":"ctl00_Content_dpDateSearch_calendar_ClientState","enableMultiSelect":false,"enabled":true,"monthYearNavigationSettings":["Today","OK","Cancel","Date is out of range.","False","True","300","1","300","1","False"],"skin":"Web20","specialDaysArray":[],"stylesHash":{"DayStyle": ["", ""],"CalendarTableStyle": ["", "rcMainTable"],"OtherMonthDayStyle": ["", "rcOtherMonth"],"TitleStyle": ["", ""],"SelectedDayStyle": ["", "rcSelected"],"SelectorStyle": ["", ""],"DisabledDayStyle": ["", "rcDisabled"],"OutOfRangeDayStyle": ["", "rcOutOfRange"],"WeekendDayStyle": ["", "rcWeekend"],"DayOverStyle": ["", "rcHover"],"FastNavigationStyle": ["", "RadCalendarMonthView RadCalendarMonthView_Web20"],"ViewSelectorStyle": ["", "rcViewSel"]},"titleFormat":"MMMM, yyyy","useColumnHeadersAsSelectors":false,"useRowHeadersAsSelectors":false}, null, null, $get("ctl00_Content_dpDateSearch_calendar"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadDatePicker, {"_PopupButtonSettings":{ ResolvedImageUrl : "", ResolvedHoverImageUrl : ""},"_animationSettings":{ShowAnimationDuration:300,ShowAnimationType:1,HideAnimationDuration:300,HideAnimationType:1},"_popupControlID":"ctl00_Content_dpDateSearch_popupButton","clientStateFieldID":"ctl00_Content_dpDateSearch_ClientState","focusedDate":"2018-11-13-00-00-00"}, null, {"calendar":"ctl00_Content_dpDateSearch_calendar","dateInput":"ctl00_Content_dpDateSearch_dateInput"}, $get("ctl00_Content_dpDateSearch"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadDateInput, {"_displayText":"","_focused":false,"_initialValueAsText":"","_postBackEventReferenceScript":"__doPostBack(\u0027ctl00$Content$dpDateSearchTo\u0027,\u0027\u0027)","_skin":"Web20","_validationText":"","clientStateFieldID":"ctl00_Content_dpDateSearchTo_dateInput_ClientState","dateFormat":"M/d/yyyy","dateFormatInfo":{"DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"AbbreviatedDayNames":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"AMDesignator":"AM","PMDesignator":"PM","DateSeparator":"/","TimeSeparator":":","FirstDayOfWeek":0,"DateSlots":{"Month":0,"Day":1,"Year":2},"ShortYearCenturyEnd":2029,"TimeInputOnly":false,"MonthYearOnly":false},"displayDateFormat":"M/d/yyyy","enabled":true,"incrementSettings":{InterceptArrowKeys:true,InterceptMouseWheel:true,Step:1},"styles":{HoveredStyle: ["width:100%;", "riTextBox riHover"],InvalidStyle: ["width:100%;", "riTextBox riError"],DisabledStyle: ["width:100%;", "riTextBox riDisabled"],FocusedStyle: ["width:100%;", "riTextBox riFocused"],EmptyMessageStyle: ["width:100%;", "riTextBox riEmpty"],ReadOnlyStyle: ["width:100%;", "riTextBox riRead"],EnabledStyle: ["width:100%;", "riTextBox riEnabled"]}}, null, null, $get("ctl00_Content_dpDateSearchTo_dateInput"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadCalendar, {"_DayRenderChangedDays":{},"_FormatInfoArray":[["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],["January","February","March","April","May","June","July","August","September","October","November","December",""],["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"dddd, MMMM dd, yyyy h:mm:ss tt","dddd, MMMM dd, yyyy","h:mm:ss tt","MMMM dd","ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","M/d/yyyy","h:mm tt","yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","MMMM, yyyy","AM","PM","/",":",0],"_ViewRepeatableDays":{},"_ViewsHash":{"ctl00_Content_dpDateSearchTo_calendar_Top" : [[2018,11,1], 1]},"_calendarWeekRule":0,"_culture":"en-US","_enableKeyboardNavigation":false,"_enableViewSelector":false,"_firstDayOfWeek":7,"_postBackCall":"__doPostBack(\u0027ctl00$Content$dpDateSearchTo$calendar\u0027,\u0027@@\u0027)","_rangeSelectionMode":0,"clientStateFieldID":"ctl00_Content_dpDateSearchTo_calendar_ClientState","enableMultiSelect":false,"enabled":true,"monthYearNavigationSettings":["Today","OK","Cancel","Date is out of range.","False","True","300","1","300","1","False"],"skin":"Web20","specialDaysArray":[],"stylesHash":{"DayStyle": ["", ""],"CalendarTableStyle": ["", "rcMainTable"],"OtherMonthDayStyle": ["", "rcOtherMonth"],"TitleStyle": ["", ""],"SelectedDayStyle": ["", "rcSelected"],"SelectorStyle": ["", ""],"DisabledDayStyle": ["", "rcDisabled"],"OutOfRangeDayStyle": ["", "rcOutOfRange"],"WeekendDayStyle": ["", "rcWeekend"],"DayOverStyle": ["", "rcHover"],"FastNavigationStyle": ["", "RadCalendarMonthView RadCalendarMonthView_Web20"],"ViewSelectorStyle": ["", "rcViewSel"]},"titleFormat":"MMMM, yyyy","useColumnHeadersAsSelectors":false,"useRowHeadersAsSelectors":false}, null, null, $get("ctl00_Content_dpDateSearchTo_calendar"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadDatePicker, {"_PopupButtonSettings":{ ResolvedImageUrl : "", ResolvedHoverImageUrl : ""},"_animationSettings":{ShowAnimationDuration:300,ShowAnimationType:1,HideAnimationDuration:300,HideAnimationType:1},"_popupControlID":"ctl00_Content_dpDateSearchTo_popupButton","clientStateFieldID":"ctl00_Content_dpDateSearchTo_ClientState","focusedDate":"2018-11-13-00-00-00"}, null, {"calendar":"ctl00_Content_dpDateSearchTo_calendar","dateInput":"ctl00_Content_dpDateSearchTo_dateInput"}, $get("ctl00_Content_dpDateSearchTo"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("Content_updProgress"));
+});
 
-    <div id="footer">
-    <table border="0" cellspacing="5" cellpadding="0" width="100%">
-        <tr>
-            <td><hr /></td>
-        </tr>
-        <tr>
-            <td align="center" style="height: 65px"><br /><b>Generated by Blackstone ... The Judicial System<br />&copy 2015 All Rights Reserved, <a title="CMC Software" href="http://www.cmcsoftware.com">CMC Software</a><br /><br /></b></td>
-        </tr>
-        <tr>
-            <td><hr /></td>
-        </tr>
-        <tr>
-            <td>To contact the Webmaster for technical issues or problems with the Web site, send an e-mail to <a href="mailto:webmaster@ustaxcourt.gov">webmaster@ustaxcourt.gov</a>. For your information, no documents can be filed with the Court at this or any other e-mail address. For all non-technical questions, including procedural, case-related, or general questions about the Court, you must contact the Office of the Clerk of the Court at (202) 521-0700 or by postal mail at U.S. Tax Court, 400 Second Street, N.W., Washington, DC 20217, Attention: Office of the Clerk of the Court.</td>
-        </tr>
-    </table>
-    </div>
-     </form>
-</body>
-</html>
+var callBackFrameUrl='/UstcInOp/WebResource.axd?d=Q3ZE5oHPApONEeyobF4mGcWjMKcZY_yCCJHNnumviYZ2yxK9OMKOWr-JCdim-IVhK5OUZxcmX6wkrJF9BJLXGY_0zOHfqgQkHfc4i_DOio81&t=636692048580000000';
+WebForm_InitCallback();Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadXmlHttpPanel, {"_isCallbackPanel":true,"_uniqueId":"ctl00$nfSummary$XmlPanel","clientStateFieldID":"ctl00_nfSummary_XmlPanel_ClientState","enableClientScriptEvaluation":true,"loadingPanelID":""}, null, null, $get("ctl00_nfSummary_XmlPanel"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadContextMenu, {"_childListElementCssClass":"rmActive rmVertical rmGroup rmLevel1","_skin":"Web20","clientStateFieldID":"ctl00_nfSummary_TitleMenu_ClientState","collapseAnimation":"{\"duration\":450}","enableRoundedCorners":true,"enableShadows":true,"expandAnimation":"{\"duration\":450}","itemData":[],"targets":[]}, null, null, $get("ctl00_nfSummary_TitleMenu"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadNotification, {"_audioUrl":"none","animation":2,"animationDuration":150,"autoCloseDelay":0,"clientStateFieldID":"ctl00_nfSummary_ClientState","formID":"ContentForm","position":22,"showCloseButton":false,"title":"Summary Opinion"}, {"hidden":hideModalDiv,"showing":showModalDiv}, null, $get("ctl00_nfSummary"));
+});
+//]]>
+</script>
+<div id="ctl00_nfSummary_popup" class="RadNotification RadNotification_Web20 rnRoundedCorners rnShadows" style="position: absolute; z-index: 10000; left: 260px; top: 392px; visibility: visible; display: none;">
+		<div class="rnTitleBar" id="ctl00_nfSummary_titlebar">
+			<span class="rnTitleBarTitle">Summary Opinion</span>
+		</div><div id="ctl00_nfSummary_XmlPanel" class="RadXmlHttpPanel">
+			<div id="ctl00_nfSummary_C" class="rnContentWrapper">
+				
+                       <div class="notificationContent" style="text-align:center;padding:15px;font-size:1.2em;font-weight:bold;">
+                            <br>
+                            PURSUANT TO INTERNAL REVENUE CODE<br>
+                            SECTION 7463(b), THIS OPINION MAY NOT<br>
+                            BE TREATED AS PRECEDENT FOR ANY<br>
+                            OTHER CASE.
+                            <br><br>
+
+                            <a id="lnkSummaryOpinion" class="button" href="#" target="_blank" onclick="summaryOpinionOk();">
+                               OK
+                            </a>
+
+                       </div>
+                  
+			</div><input type="hidden" name="ctl00$nfSummary$hiddenState" id="ctl00_nfSummary_hiddenState"><input id="ctl00_nfSummary_XmlPanel_ClientState" name="ctl00_nfSummary_XmlPanel_ClientState" type="hidden" autocomplete="off">
+		</div><div id="ctl00_nfSummary_TitleMenu" style="display: none; visibility: visible; z-index: 7000;">
+			<div class="RadMenu RadMenu_Web20 RadMenu_Context RadMenu_Web20_Context rmRoundedCorners rmRoundedCorners_Web20 rmShadows" style="display: none; visibility: visible; z-index: 10100;" id="ctl00_nfSummary_TitleMenu_detached">
+
+			<ul class="rmActive rmVertical rmGroup rmLevel1" style="float: left;"></ul></div><input class="rmActive rmVertical rmGroup rmLevel1" id="ctl00_nfSummary_TitleMenu_ClientState" name="ctl00_nfSummary_TitleMenu_ClientState" type="hidden" autocomplete="off">
+		</div>
+	</div><span style="display: none !important;"><input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value=""></span><span style="display: none !important;"><input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value=""></span><span style="display: none !important;"><input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value=""></span><span style="display: none !important;"><input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUIMzE2NzY2NzcPFgQeDE9waW5pb25UeXBlczKPCwABAAAA/////wEAAAAAAAAABAEAAADhAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkRpY3Rpb25hcnlgMltbU3lzdGVtLkludDMyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQQAAAAHVmVyc2lvbghDb21wYXJlcghIYXNoU2l6ZQ1LZXlWYWx1ZVBhaXJzAAMAAwiRAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkdlbmVyaWNFcXVhbGl0eUNvbXBhcmVyYDFbW1N5c3RlbS5JbnQzMiwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0I5QFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5LZXlWYWx1ZVBhaXJgMltbU3lzdGVtLkludDMyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXVtdAwAAAAkCAAAAAwAAAAkDAAAABAIAAACRAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkdlbmVyaWNFcXVhbGl0eUNvbXBhcmVyYDFbW1N5c3RlbS5JbnQzMiwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0AAAAABwMAAAAAAQAAAAMAAAAD4wFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5LZXlWYWx1ZVBhaXJgMltbU3lzdGVtLkludDMyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQT8////4wFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5LZXlWYWx1ZVBhaXJgMltbU3lzdGVtLkludDMyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQIAAAADa2V5BXZhbHVlAAEIAwAAAAYFAAAACk1lbW9yYW5kdW0B+v////z///8CAAAABgcAAAAIU3VtbWFyeSoB+P////z///8BAAAABgkAAAAKVEMgT3BpbmlvbgseC0N1cnJlbnRQYWdlZhYCZg9kFgICAQ9kFgQCBA9kFgJmD2QWAmYPZBYEAgEPZBYIAgMPDxYKHhVFbmFibGVFbWJlZGRlZFNjcmlwdHNnHhxFbmFibGVFbWJlZGRlZEJhc2VTdHlsZXNoZWV0Zx4SUmVzb2x2ZWRSZW5kZXJNb2RlCylzVGVsZXJpay5XZWIuVUkuUmVuZGVyTW9kZSwgVGVsZXJpay5XZWIuVUksIFZlcnNpb249MjAxNC4zLjEwMjQuNDAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNAEeDFNlbGVjdGVkRGF0ZQYAAK+i+j3WCB4RX3NraXBNTVZhbGlkYXRpb25oZBYEZg8UKwAIDxYYHg1MYWJlbENzc0NsYXNzBQdyaUxhYmVsHgxFbXB0eU1lc3NhZ2VlHgRUZXh0BRMyMDE4LTEwLTMwLTAwLTAwLTAwHwNnHwQLKwQBHgRTa2luBQVXZWIyMB8GaB4HTWF4RGF0ZQYAQHFvsT4xCR4XRW5hYmxlQWpheFNraW5SZW5kZXJpbmdoHwJnHhFFbmFibGVBcmlhU3VwcG9ydGgeB01pbkRhdGUGAIBMBLe1qghkFggeBVdpZHRoGwAAAAAAAFlABwAAAB4KUmVzaXplTW9kZQspc1RlbGVyaWsuV2ViLlVJLlJlc2l6ZU1vZGUsIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTQuMy4xMDI0LjQwLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTEyMWZhZTc4MTY1YmEzZDQAHghDc3NDbGFzcwURcmlUZXh0Qm94IHJpSG92ZXIeBF8hU0ICggIWCB8PGwAAAAAAAFlABwAAAB8QCysFAB8RBRFyaVRleHRCb3ggcmlFcnJvch8SAoICFggfDxsAAAAAAABZQAcAAAAfEAsrBQAfEQUTcmlUZXh0Qm94IHJpRm9jdXNlZB8SAoICFgYfDxsAAAAAAABZQAcAAAAfEQUTcmlUZXh0Qm94IHJpRW5hYmxlZB8SAoICFggfDxsAAAAAAABZQAcAAAAfEAsrBQAfEQUUcmlUZXh0Qm94IHJpRGlzYWJsZWQfEgKCAhYIHw8bAAAAAAAAWUAHAAAAHxALKwUAHxEFEXJpVGV4dEJveCByaUVtcHR5HxICggIWCB8PGwAAAAAAAFlABwAAAB8QCysFAB8RBRByaVRleHRCb3ggcmlSZWFkHxICggJkAgIPFCsADQ8WDgUNU2VsZWN0ZWREYXRlcw8FkAFUZWxlcmlrLldlYi5VSS5DYWxlbmRhci5Db2xsZWN0aW9ucy5EYXRlVGltZUNvbGxlY3Rpb24sIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTQuMy4xMDI0LjQwLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTEyMWZhZTc4MTY1YmEzZDQUKwABBgAAr6L6PdYIBQRGb2NEBgCAd/T6SNYIBRFFbmFibGVNdWx0aVNlbGVjdGgFD1JlbmRlckludmlzaWJsZWcFC1NwZWNpYWxEYXlzDwWTAVRlbGVyaWsuV2ViLlVJLkNhbGVuZGFyLkNvbGxlY3Rpb25zLkNhbGVuZGFyRGF5Q29sbGVjdGlvbiwgVGVsZXJpay5XZWIuVUksIFZlcnNpb249MjAxNC4zLjEwMjQuNDAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNBQrAAAFBE1pbkQGAIBMBLe1qggFBE1heEQGAIAHReg9MQkPFgwfAmcfA2cfDWgfCgUFV2ViMjAfBAsrBAEfDGhkZBYEHxEFC3JjTWFpblRhYmxlHxICAhYEHxEFDHJjT3RoZXJNb250aB8SAgJkFgQfEQUKcmNTZWxlY3RlZB8SAgJkFgQfEQUKcmNEaXNhYmxlZB8SAgIWBB8RBQxyY091dE9mUmFuZ2UfEgICFgQfEQUJcmNXZWVrZW5kHxICAhYEHxEFB3JjSG92ZXIfEgICFgQfEQUvUmFkQ2FsZW5kYXJNb250aFZpZXcgUmFkQ2FsZW5kYXJNb250aFZpZXdfV2ViMjAfEgICFgQfEQUJcmNWaWV3U2VsHxICAmQCBQ8PFgofAmcfA2cfBAsrBAEfBQYAwLRzVkvWCB8GaGQWBGYPFCsACA8WGB8HBQdyaUxhYmVsHwhlHwkFEzIwMTgtMTEtMTYtMDAtMDAtMDAfA2cfBAsrBAEfCgUFV2ViMjAfBmgfCwYAQHFvsT4xCR8MaB8CZx8NaB8OBgCATAS3taoIZBYIHw8bAAAAAAAAWUAHAAAAHxALKwUAHxEFEXJpVGV4dEJveCByaUhvdmVyHxICggIWCB8PGwAAAAAAAFlABwAAAB8QCysFAB8RBRFyaVRleHRCb3ggcmlFcnJvch8SAoICFggfDxsAAAAAAABZQAcAAAAfEAsrBQAfEQUTcmlUZXh0Qm94IHJpRm9jdXNlZB8SAoICFgYfDxsAAAAAAABZQAcAAAAfEQUTcmlUZXh0Qm94IHJpRW5hYmxlZB8SAoICFggfDxsAAAAAAABZQAcAAAAfEAsrBQAfEQUUcmlUZXh0Qm94IHJpRGlzYWJsZWQfEgKCAhYIHw8bAAAAAAAAWUAHAAAAHxALKwUAHxEFEXJpVGV4dEJveCByaUVtcHR5HxICggIWCB8PGwAAAAAAAFlABwAAAB8QCysFAB8RBRByaVRleHRCb3ggcmlSZWFkHxICggJkAgIPFCsADQ8WDgUNU2VsZWN0ZWREYXRlcw8FkAFUZWxlcmlrLldlYi5VSS5DYWxlbmRhci5Db2xsZWN0aW9ucy5EYXRlVGltZUNvbGxlY3Rpb24sIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTQuMy4xMDI0LjQwLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTEyMWZhZTc4MTY1YmEzZDQUKwABBgDAtHNWS9YIBQRGb2NEBgCAd/T6SNYIBRFFbmFibGVNdWx0aVNlbGVjdGgFD1JlbmRlckludmlzaWJsZWcFC1NwZWNpYWxEYXlzDwWTAVRlbGVyaWsuV2ViLlVJLkNhbGVuZGFyLkNvbGxlY3Rpb25zLkNhbGVuZGFyRGF5Q29sbGVjdGlvbiwgVGVsZXJpay5XZWIuVUksIFZlcnNpb249MjAxNC4zLjEwMjQuNDAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNBQrAAAFBE1pbkQGAIBMBLe1qggFBE1heEQGAIAHReg9MQkPFgwfAmcfA2cfDWgfCgUFV2ViMjAfBAsrBAEfDGhkZBYEHxEFC3JjTWFpblRhYmxlHxICAhYEHxEFDHJjT3RoZXJNb250aB8SAgJkFgQfEQUKcmNTZWxlY3RlZB8SAgJkFgQfEQUKcmNEaXNhYmxlZB8SAgIWBB8RBQxyY091dE9mUmFuZ2UfEgICFgQfEQUJcmNXZWVrZW5kHxICAhYEHxEFB3JjSG92ZXIfEgICFgQfEQUvUmFkQ2FsZW5kYXJNb250aFZpZXcgUmFkQ2FsZW5kYXJNb250aFZpZXdfV2ViMjAfEgICFgQfEQUJcmNWaWV3U2VsHxICAmQCCw8QDxYGHg1EYXRhVGV4dEZpZWxkBQdEaXNwbGF5Hg5EYXRhVmFsdWVGaWVsZAUFVmFsdWUeC18hRGF0YUJvdW5kZ2QQFU4KQWxsIEp1ZGdlcwZBYXJvbnMFQXJtZW4HQXNoZm9yZAVCZWdoZQRCdWNoB0J1Y2tsZXkHQ2FudHJlbAhDYXJsdXp6bwZDaGFib3QHQ2hpZWNoaQVDbGFwcAVDb2hlbgZDb2x2aW4IQ29wZWxhbmQKQ291dmlsbGlvbgZEYXdzb24ERGVhbgVEaW5hbgdEcmVubmVuA0ZheQtGZWF0aGVyc3RvbgVGb2xleQRHYWxlCEdhbGxvd2F5BkdlcmJlcgVHb2VrZQVHb2ZmZQhHb2xkYmVyZwZHdXNzaXMJR3VzdGFmc29uA0d1eQZIYWluZXMHSGFscGVybgdIYW1ibGVuBkhvbG1lcwZKYWNvYnMIS2VycmlnYW4GS29ybmVyBktyb3VwYQRMYXJvBkxhdWJlcgZMZXlkZW4GTWFydmVsCE1vcnJpc29uCE5hbWVyb2ZmBE5lZ2EETmltcwVQYWphawhQYW51dGhvcwVQYXJpcwZQYXJrZXIEUGFycgRQYXRlCFBldGVyc29uBlBvd2VsbARQdWdoBFJhdW0EUnV3ZQVTY290dAdTaGllbGRzB1NpbXBzb24IU3RlcnJldHQFU3dpZnQKVGFubmVud2FsZAhUaG9ybnRvbgRVcmRhClZhbmRlcnZvcnQHVmFzcXVlegVXZWxscwZXaGFsZW4GV2hlcnJ5CFdoaXRha2VyBldpbGJ1cgVXaWxlcwhXaWxsaWFtcwVXb2xmZQZXcmlnaHQVTgEwAjIyAjIxAjczAjM1AjcwAjIwAjI4AjU1AjQzAjE4ATICNTQCNDICNzcCNTgCMzABNQI2MgI0MQIzNAI2NgI2MQIzMgExATcCMTICMjUCNTkBOQIxNAI2OQI2MwI1MgIxMwI0MAIyMwI2OAIxOQIzOQIyNgI3MQI3NQI0NQIzNgIzMwI3MgIzNwIzMQIyNwE4AjY0AjU2AjQ0AjY1AjQ2Ajc0ATQCMTACMjkCNTEBMwI1NwIzOAIxNQI0OAI3NgI1MwIyNAE2AjUwAjQ5AjE3AjYwAjExAjQ3AjE2AjY3FCsDTmdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2RkAg0PEA8WBh8TBQdEaXNwbGF5HxQFBVZhbHVlHxVnZBAVBAlBbGwgVHlwZXMKTWVtb3JhbmR1bQhTdW1tYXJ5KgpUQyBPcGluaW9uFQQBMAEzATIBMRQrAwRnZ2dnZGQCBQ8PFgIeB1Zpc2libGVnZBYCAgUPZBYKAgEPEGRkFgECAWQCAw8PFgIfFmhkFgoCAQ8PFgIfCQULUGFnZSAxIG9mIDFkZAIDDw8WAh4HRW5hYmxlZGhkZAIFDw8WAh8XaGRkAgkPDxYCHxdoZGQCCw8PFgIfF2hkZAIFDxYCHgtfIUl0ZW1Db3VudAIOFhwCAQ9kFgJmDxUEDVJlc3VsdHNPZGRSb3drPGEgbmFtZT0nMTE4MTMnIGhyZWY9JyMxMTgxMycgb25jbGljaz0id2FybklzU3VtbWFyeSgnMTE4MTMnKTsiID5Sb2xhbmRhIE1pY2hlbGxlIEN1cnRpcyAmIEJyeW9uIEN1cnRpczwvYT4IU3VtbWFyeSoKMTEvMDEvMjAxOGQCAg9kFgJmDxUEDlJlc3VsdHNFdmVuUm93bzxhIG5hbWU9JzExODE1JyBocmVmPSdPcGluaW9uVmlld2VyLmFzcHg/SUQ9MTE4MTUnICB0YXJnZXQ9J19ibGFuayc+UGV0ZXIgR2lhbnVsaXMgJiBHYWJyaWVsYSBSZXhhY2ggU3ViaXJhPC9hPgpNZW1vcmFuZHVtCjExLzA1LzIwMThkAgMPZBYCZg8VBA1SZXN1bHRzT2RkUm93djxhIG5hbWU9JzExODA4JyBocmVmPSdPcGluaW9uVmlld2VyLmFzcHg/SUQ9MTE4MDgnICB0YXJnZXQ9J19ibGFuayc+Q3JhaWcgRG91Z2xhcyBIb2dsdW5kICYgQ2hyaXN0aW5lIEpvYW4gSG9nbHVuZDwvYT4KTWVtb3JhbmR1bQoxMS8wNS8yMDE4ZAIED2QWAmYPFQQOUmVzdWx0c0V2ZW5Sb3dZPGEgbmFtZT0nMTE4MTAnIGhyZWY9JyMxMTgxMCcgb25jbGljaz0id2FybklzU3VtbWFyeSgnMTE4MTAnKTsiID5MYXJyeSBMLiBMZXVlbmJlcmdlcjwvYT4IU3VtbWFyeSoKMTEvMDgvMjAxOGQCBQ9kFgJmDxUEDVJlc3VsdHNPZGRSb3dUPGEgbmFtZT0nMTE4MDYnIGhyZWY9J09waW5pb25WaWV3ZXIuYXNweD9JRD0xMTgwNicgIHRhcmdldD0nX2JsYW5rJz5XLiBULiBTbmlwZXM8L2E+Ck1lbW9yYW5kdW0KMTEvMDEvMjAxOGQCBg9kFgJmDxUEDlJlc3VsdHNFdmVuUm93ZzxhIG5hbWU9JzExODE0JyBocmVmPSdPcGluaW9uVmlld2VyLmFzcHg/SUQ9MTE4MTQnICB0YXJnZXQ9J19ibGFuayc+TWF4IFN1dGhlcmxhbmQgJiBFcmljIFAuIERlY2tlcjwvYT4KTWVtb3JhbmR1bQoxMS8wNS8yMDE4ZAIHD2QWAmYPFQQNUmVzdWx0c09kZFJvd2Q8YSBuYW1lPScxMTgxMicgaHJlZj0nIzExODEyJyBvbmNsaWNrPSJ3YXJuSXNTdW1tYXJ5KCcxMTgxMicpOyIgPkVucmlxdWUgRmVybmFuZG8gRGFuY2F1c2EgVmFsbGU8L2E+CFN1bW1hcnkqCjExLzA1LzIwMThkAggPZBYCZg8VBA5SZXN1bHRzRXZlblJvd3c8YSBuYW1lPScxMTgxNicgaHJlZj0nT3BpbmlvblZpZXdlci5hc3B4P0lEPTExODE2JyAgdGFyZ2V0PSdfYmxhbmsnPk1pY2hhZWwgSmFtZXMgV2VsbHMgJiBMeW5uIEFuaXRhIEtpcmNobmVyLVdlbGxzPC9hPgpNZW1vcmFuZHVtCjExLzA4LzIwMThkAgkPZBYCZg8VBBZSZXN1bHRzT2RkUm93Tm9PcGluaW9uL05vIE9waW5pb25zIFJlbGVhc2VkIGJ5IHRoZSBDb3VydCBvbiAxMC8zMC8yMDE4AAoxMC8zMC8yMDE4ZAIKD2QWAmYPFQQXUmVzdWx0c0V2ZW5Sb3dOb09waW5pb24vTm8gT3BpbmlvbnMgUmVsZWFzZWQgYnkgdGhlIENvdXJ0IG9uIDEwLzMxLzIwMTgACjEwLzMxLzIwMThkAgsPZBYCZg8VBBZSZXN1bHRzT2RkUm93Tm9PcGluaW9uL05vIE9waW5pb25zIFJlbGVhc2VkIGJ5IHRoZSBDb3VydCBvbiAxMS8wMi8yMDE4AAoxMS8wMi8yMDE4ZAIMD2QWAmYPFQQXUmVzdWx0c0V2ZW5Sb3dOb09waW5pb24vTm8gT3BpbmlvbnMgUmVsZWFzZWQgYnkgdGhlIENvdXJ0IG9uIDExLzA2LzIwMTgACjExLzA2LzIwMThkAg0PZBYCZg8VBBZSZXN1bHRzT2RkUm93Tm9PcGluaW9uL05vIE9waW5pb25zIFJlbGVhc2VkIGJ5IHRoZSBDb3VydCBvbiAxMS8wNy8yMDE4AAoxMS8wNy8yMDE4ZAIOD2QWAmYPFQQXUmVzdWx0c0V2ZW5Sb3dOb09waW5pb24vTm8gT3BpbmlvbnMgUmVsZWFzZWQgYnkgdGhlIENvdXJ0IG9uIDExLzA5LzIwMTgACjExLzA5LzIwMThkAgcPDxYCHwkFAjE0ZGQCCQ8PFgIfFmhkFgoCAQ8PFgIfCQULUGFnZSAxIG9mIDFkZAIDDw8WAh8XaGRkAgUPDxYCHxdoZGQCCQ8PFgIfF2hkZAILDw8WAh8XaGRkAgUPDxYIHwxoHwQLKwQBHwNnHwJnZBYEZg8PFgYfDGgfAmcfBAsrBAFkZAIBDxQrAAIUKwACFCsAAg8WEB8DZx4TRW5hYmxlRW1iZWRkZWRTa2luc2cfDGgfCgUFV2ViMjAeFEVuYWJsZVJvdW5kZWRDb3JuZXJzZx4NRW5hYmxlU2hhZG93c2cfAmcfBAsrBAFkZGRkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WCQUaY3RsMDAkQ29udGVudCRkcERhdGVTZWFyY2gFI2N0bDAwJENvbnRlbnQkZHBEYXRlU2VhcmNoJGNhbGVuZGFyBSNjdGwwMCRDb250ZW50JGRwRGF0ZVNlYXJjaCRjYWxlbmRhcgUcY3RsMDAkQ29udGVudCRkcERhdGVTZWFyY2hUbwUlY3RsMDAkQ29udGVudCRkcERhdGVTZWFyY2hUbyRjYWxlbmRhcgUlY3RsMDAkQ29udGVudCRkcERhdGVTZWFyY2hUbyRjYWxlbmRhcgUPY3RsMDAkbmZTdW1tYXJ5BRhjdGwwMCRuZlN1bW1hcnkkWG1sUGFuZWwFGWN0bDAwJG5mU3VtbWFyeSRUaXRsZU1lbnUomS8y6LMGL0SjdVZYiw3US2F6ONAmXvWyywXgP7/Rxw=="></span><span style="display: none !important;"><input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F7AD4B41"></span><span style="display: none !important;"><input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAGgLyh2ab8DmG0sFHq0f/WCq+wAsuA0kaOrTuuEYBUzVmvaWbOaHhC2+07v6E1tabM2qAtZwGUijsvr2gVT7C7puSx8GX8iH0FN+0HPxQerslijmAscQt7fPhomKKP1fzVnohk0t3GZdkraxtI093mI/miBmKCoOdjjA5RvpOkxG5sS1zjQuaA8YIRTE+b6/GnS0f8zdUAksshyrnn4vVAoNluiAXMD7YvStLgpA7uSN5VH8cX7RJ6GHFX4XqV+Wb+E+ePOf76a01FYMaQfy6P9yYIz5QyZ90sCOevcIBIdNK2OUVQsw9sOXFhcfl2vBUCflr17fUOOl4CAWYDc30VgMQxm79/rcpU7HTJDTKq4RtHctuPmdpl4Ai0VIwlQ2t5oi3uwSUASvZX8QzkFy0oHpxxBSPOYsK9FfEZZBg1o8DTLYQppyFfaC9f6eKBmQu2mW6ezOCOQ8DVYOe4ePJ+IbUlcxQo5miXd8AbLLuOxq/Y48jmlxIUf99dlv5Ln2NYu7S9MNZ4/V0UeNdCVUTWIK3A37j/9lr88d/+BzcDiIcNzzqZlk9lhMZ9nkHinX5zBkqMWDZ5BF0k2SEmwmZcfge3jbQIho0EScfiMGSzNg1W4vZKy91JmxV2UrEB4pFkWEYzcB+TvXz29Y1EdK2CmCmUx61KLMJughWWbhZwwql7c499S7XszbFdtGsQ+VFYhvJpyN/uK1F81ir9uHaCQRM92+m91/ZJDAqrebFn0ZH65a7oyPm2Gra0kVv5D74DD4eZGFLiiJwut3/jf9viVV5FwubeeZ4SBl3NbaLvBZfQcWvVqHoGDe0eZ5bSSG7MVewZdGo2CQd3mfyMvM7+xBnUJmuisbe6WkihDf4OlbUOUl0v1maEx5G62ONItNpHDNdSNRRn+fIP5FwCBmzUzBBAQsi2RbPw3YCa7y4o3jhSCpoDd4o0l8rLicyluJU3aJezkgU5HrHrXXTQVRopXkUnIfAUSy5cfdGKLhtO/WSpw8lmVUzOx72ElrF7B0dvSzNK+t1x/NfMf/IWtwalSa1S3WEN9aKIdQfHQeseYFnNFmj/uQ9jrhV/J0zeophKLmdprAWzMSbQc3wyOv/LtkesDtAqIFk8EPp/KYqiEClHZ9MGlpQafSOpYMsr6UBnsED7hn6AijFZCJqqlH2IAee7VCnMtGmf9rdiTS4JgOHmeifUHjm8qfvUh0FgaAsxOtm8r8KWOLs0vb07x3pE9zOs+MFXm199ixmSv0fvbkhoN2MMZvAZwpoGtfMTryowGW1DkWotdzdGJzL35kqp+KuaRxfnu7m2nt1Ooxko7VxRsvM/u2tr6SbGURtzVPwvNojakN3Q8L4x97bOCZUPfViXlkZZM+2Lff0oDiaKUkK5fydRDCeV6/cCOjRMk8dCmZtHd4B91EABHsfRTIxgUqYq4LscFp6yxhuYpjzBI80eg/tWhNo5bqdmAD1VrgICkBgfQ5UGLRTvRFtRIcu9MJU8r4phSojvM9EOPWdnzfaLlnQfQRI+ZlHLPa8MVi2GosRfKBRuyHJgOivWsF9+xMIyDIXumA3nV0yGB5dRd4GN987WPCHlr8QbZBKyYcvDgeu/5TDcRCEf5sn9aWlil722e4nVE6eptVSsI4hzXQxMWWy4X+79jqPL4TlZjsX6Y0t1hYZ5ElDRdro15RB8E3p+bqb5/1GsfQfa7X8ztRERCvo0zkA0CzLg8BBlAOp7bSueye0k6pXmCUgN1/HEnWLjyHqA6hdobAomI+YL1ZKDY6O5T2pVV6EdePd5b8/xoKDPfsF8ZqHaDlBe8L3GIxvzHGCZF51yjNZmB8dvqNwvbS9Y/sNu/A2o46v+gi4hJNwXLSxNrGN7zMk06H9kNLCF4J8wOijBsFbwGZshReFK0+c+AKmMW7K6o0nE/uBLnSDPSADQDOrHQlWJizOYjTDvI6mWeVK5qbrlfmS3mC7XvNhK9v8GNrdlXOzeZDOUJ6xQNj8kUERD0T4d03D1CAA6bDqCQkTovUqNQHNPo2Rv5p2ijX8+CN9y4k3snCrMoI/STw3X92c/xim07hGpLQe/Q+Zk7i/7oPQSo0E2uOYILTFQajXvAJxQ0Kfbv2PJJkwpdX0QhrPMsOwL3bUpHov6ETvLduQA+F/HrpH0zuKW1RnoSULijAgk4x/rXyf+GF4rNsMKAxd1doKkOI41bqUMkD/g6MaUGZ+v4eGL2V2I84AJQbkLxzxW4PAvumJk4QwRKTlNvlPFcuQvV0aDDH"></span></form>
+    
+
+<div class="modalBackground" unselectable="on" style="z-index: 9999; width: 897px; height: 1378px; display: none;" onclick="summaryOpinionOk();"></div></body><style id="igor_ext_nofollow">a[rel~='nofollow']{outline:.14em dotted red !important; outline-offset:.2em;}a[rel~='nofollow'] > img{outline:thin dotted red !important; outline-offset:.2em;}</style></html>
