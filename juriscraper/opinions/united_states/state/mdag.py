@@ -3,10 +3,11 @@ CourtID: ag
 Court Short Name: Maryland Attorney General
 """
 
-import os
 import datetime
-from lxml import html
+import os
 from time import sleep
+
+from lxml import html
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 
@@ -48,7 +49,6 @@ class Site(OpinionSite):
             # extract 0 cases because nothing there
             return [super(Site, self)._download(request_dict)]
         return trees
-
 
     def get_dynamic_html_trees(self):
         # Initialize driver

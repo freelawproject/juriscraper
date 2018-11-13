@@ -9,15 +9,15 @@ History:
  - 2015-07-31: Redone by mlr to use ghost driver. Alas, their site used to be
                great, but now it's terribly frustrating.
 """
+import os
 from datetime import date, datetime
 
-import os
-from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSite import OpinionSite
 from lxml import html
 from lxml.html import tostring
 from selenium import webdriver
 
+from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 from juriscraper.lib.string_utils import clean_if_py3
 
@@ -44,41 +44,41 @@ class Site(OpinionSite):
         """
         if self.method == 'LOCAL':
             return super(Site, self)._download(request_dict=request_dict)
-        else:
-            driver = webdriver.PhantomJS(
-                executable_path='/usr/local/phantomjs/phantomjs',
-                service_log_path=os.path.devnull,  # Disable ghostdriver.log
-            )
-            driver.implicitly_wait(30)
-            logger.info("Now downloading case page at: %s" % self.url)
-            driver.get(self.url)
 
-            # Court drop down...
-            driver.find_element_by_xpath(
-                "//select[@id='MainContent_ddlCourt']"
-                "/option[@value='{court}']".format(court=self.court_index)
-            ).click()
+        driver = webdriver.PhantomJS(
+            executable_path='/usr/local/phantomjs/phantomjs',
+            service_log_path=os.path.devnull,  # Disable ghostdriver.log
+        )
+        driver.implicitly_wait(30)
+        logger.info("Now downloading case page at: %s" % self.url)
+        driver.get(self.url)
 
-            # Year drop down...
-            yearDropDownId = 'MainContent_ddlDecidedYear'
-            yearDropDownPath = "//select[@id='{id}']/option[@value='%s']" % self.year
-            yearDropdownPaths = [
-                yearDropDownPath.format(id=yearDropDownId),             # Legacy examples
-                yearDropDownPath.format(id=yearDropDownId + 'Min'),     # current (2017)
-            ]
-            driver.find_element_by_xpath(' | '.join(yearDropdownPaths)).click()
+        # Court drop down...
+        driver.find_element_by_xpath(
+            "//select[@id='MainContent_ddlCourt']"
+            "/option[@value='{court}']".format(court=self.court_index)
+        ).click()
 
-            # Hit submit
-            submitPath = "//input[@id='MainContent_btnSubmit']"
-            driver.find_element_by_xpath(submitPath).click()
+        # Year drop down...
+        yearDropDownId = 'MainContent_ddlDecidedYear'
+        yearDropDownPath = "//select[@id='{id}']/option[@value='%s']" % self.year
+        yearDropdownPaths = [
+            yearDropDownPath.format(id=yearDropDownId),             # Legacy examples
+            yearDropDownPath.format(id=yearDropDownId + 'Min'),     # current (2017)
+        ]
+        driver.find_element_by_xpath(' | '.join(yearDropdownPaths)).click()
 
-            # Selenium doesn't give us the actual code, we have to hope.
-            self.status = 200
+        # Hit submit
+        submitPath = "//input[@id='MainContent_btnSubmit']"
+        driver.find_element_by_xpath(submitPath).click()
 
-            text = self._clean_text(driver.page_source)
-            html_tree = html.fromstring(text)
-            html_tree.rewrite_links(fix_links_in_lxml_tree,
-                                    base_href=self.request['url'])
+        # Selenium doesn't give us the actual code, we have to hope.
+        self.status = 200
+
+        text = self._clean_text(driver.page_source)
+        html_tree = html.fromstring(text)
+        html_tree.rewrite_links(fix_links_in_lxml_tree,
+                                base_href=self.request['url'])
         return html_tree
 
     def _get_case_names(self):

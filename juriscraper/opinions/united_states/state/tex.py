@@ -1,8 +1,8 @@
 # Scraper for Texas Supreme Court
 # CourtID: tex
 # Court Short Name: TX
-# Court Contacts: 
-#  - http://www.txcourts.gov/contact-us/ 
+# Court Contacts:
+#  - http://www.txcourts.gov/contact-us/
 #  - Angie Sharp <Angie.Sharp@txcourts.gov>
 #  - Eddie Murillo <Eddie.Murillo@txcourts.gov>
 #  - Judicial Info <JudInfo@txcourts.gov>
@@ -17,9 +17,10 @@
 
 
 import os
-from lxml import html
-from datetime import date, timedelta, datetime
+from datetime import date, datetime, timedelta
+
 from dateutil.rrule import WEEKLY, rrule
+from lxml import html
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
@@ -108,7 +109,7 @@ class Site(OpinionSite):
 
             end_date = driver.find_element_by_id("ctl00_ContentPlaceHolder1_dtDocumentTo_dateInput")
             end_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
-            #driver.save_screenshot('%s.png' % self.case_date)
+            # driver.save_screenshot('%s.png' % self.case_date)
 
             submit = driver.find_element_by_id("ctl00_ContentPlaceHolder1_btnSearchText")
             submit.click()
