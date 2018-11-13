@@ -5,16 +5,16 @@
 # Reviewer: mlr
 # Date: 2015-10-30
 
-from datetime import date, timedelta, datetime
-from lxml import html
 import os
-from dateutil.rrule import DAILY, rrule
 import re
+from datetime import date, datetime, timedelta
 
+from dateutil.rrule import DAILY, rrule
+from lxml import html
 from selenium import webdriver
-from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
@@ -64,7 +64,6 @@ class Site(OpinionSite):
         self.base_path = '//tr[td[5]//a][td[7][contains(., "Opinion")]]'  # Any element with a link on the 5th column
         self.href_js = re.compile(r"funcNewWindow\(\\{0,1}'(.*\.htm)\\{0,1}'\)")
         self.href_standard = re.compile(r"http(s)?://www.nycourts.gov/(.*).htm")
-        self.use_sessions = True
         self.uses_selenium = True
 
     def _download(self, request_dict={}):

@@ -7,16 +7,14 @@ import requests
 import six
 from requests.adapters import HTTPAdapter
 
-from juriscraper.lib.date_utils import json_date_handler, fix_future_year_typo
+from juriscraper.lib.date_utils import fix_future_year_typo, json_date_handler
 from juriscraper.lib.exceptions import InsanityException
-from juriscraper.lib.html_utils import (
-    get_html_parsed_text, set_response_encoding, clean_html,
-    fix_links_in_lxml_tree
-)
+from juriscraper.lib.html_utils import (clean_html, fix_links_in_lxml_tree,
+                                        get_html_parsed_text,
+                                        set_response_encoding)
 from juriscraper.lib.log_tools import make_default_logger
-from juriscraper.lib.string_utils import (
-    harmonize, clean_string, trunc, CaseNameTweaker
-)
+from juriscraper.lib.string_utils import (CaseNameTweaker, clean_string,
+                                          harmonize, trunc)
 from juriscraper.lib.test_utils import MockRequest
 
 logger = make_default_logger()
@@ -35,7 +33,6 @@ class AbstractSite(object):
         self.hash = None
         self.html = None
         self.method = 'GET'
-        self.use_sessions = False
         self.back_scrape_iterable = None
         self.downloader_executed = False
         self.cookies = {}

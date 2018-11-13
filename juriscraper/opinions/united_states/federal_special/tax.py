@@ -14,7 +14,6 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.ustaxcourt.gov/UstcInOp/asp/Todays.asp'
-        self.use_sessions = True
         self.court_id = self.__module__
 
     def _get_download_urls(self):
