@@ -5,11 +5,11 @@ import sys
 
 from lxml import html
 from lxml.etree import XMLSyntaxError
-from lxml.html import html5parser, fromstring, tostring
+from lxml.html import fromstring, html5parser, tostring
 from lxml.html.clean import Cleaner
 from six import text_type
-from six.moves.urllib.parse import urlsplit, urlunsplit
 from six.moves.html_parser import HTMLParser
+from six.moves.urllib.parse import urlsplit, urlunsplit
 
 try:
     # Use cchardet for performance to detect the character encoding.
@@ -134,8 +134,16 @@ def clean_html(text):
     return text
 
 
-def fix_links_in_lxml_tree(link):
+def fix_links_but_keep_anchors(link):
+    # Wrap the function below so that we have one that can be passed to
+    # lxml's rewrite_links method, which doesn't accept any parameters.
+    return fix_links_in_lxml_tree(link, keep_anchors=True)
+
+
+def fix_links_in_lxml_tree(link, keep_anchors=False):
     """Fix links in an lxml tree.
+
+    :param keep_anchors: Whether to nuke anchors at the ends of links.
 
     This function is called by the rewrite_links method of an lxml tree, and is
     used to normalize links in a few ways. It makes links absolute, works
@@ -164,4 +172,7 @@ def fix_links_in_lxml_tree(link):
         (re.sub('^(/\.\.)+', '', url_parts.path),) +
         url_parts[3:]
     )
-    return url.split('#')[0]
+    if keep_anchors:
+        return url
+    else:
+        return url.split('#')[0]
