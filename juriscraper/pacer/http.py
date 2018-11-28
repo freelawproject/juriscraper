@@ -252,8 +252,17 @@ class PacerSession(requests.Session):
         sealed_case_query = re.search('<message.*Case Under Seal', r.text)
         if any([valid_case_number_query, no_results_case_number_query,
                 sealed_case_query]):
-            # An authenticated PossibleCaseNumberApi XML result.
-            return False
+            not_logged_in = re.search('text.*Not logged in', r.text)
+            if not_logged_in:
+                # An unauthenticated PossibleCaseNumberApi XML result. Simply
+                # continue onwards. The complete result looks like:
+                # <request number='1501084'>
+                #   <message text='Not logged in.  Please refresh this page.'/>
+                # </request>
+                # An authenticated PossibleCaseNumberApi XML result.
+                pass
+            else:
+                return False
 
         found_district_logout_link = '/cgi-bin/login.pl?logout' in r.text
         found_appellate_logout_link = 'InvalidUserLogin.jsp' in r.text
