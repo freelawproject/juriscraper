@@ -943,16 +943,16 @@ class DocketReport(BaseDocketReport, BaseReport):
             # We find the first link having the document number as text.
             # This is needed because txnb combines the second and third
             # column in their docket report.
-            urls = cell.xpath(u'.//a')
-            if len(urls) == 0:
+            anchors = cell.xpath(u'.//a')
+            if len(anchors) == 0:
                 # Docket entry exists, but cannot download document (it's sealed
                 # or otherwise unavailable in PACER).
                 return None, None
-            for url in urls:
-                if url.text_content().strip() == document_number:
-                    doc1_url = url.xpath('./@href')[0]
+            for anchor in anchors:
+                if anchor.text_content().strip() == document_number:
+                    doc1_url = anchor.xpath('./@href')[0]
                     pacer_doc_id = get_pacer_doc_id_from_doc1_url(doc1_url)
-                    pacer_seq_no = get_pacer_seq_no_from_doc1_anchor(url)
+                    pacer_seq_no = get_pacer_seq_no_from_doc1_anchor(anchor)
                     return pacer_doc_id, pacer_seq_no
 
         # In case none of our URLs can be parsed.
