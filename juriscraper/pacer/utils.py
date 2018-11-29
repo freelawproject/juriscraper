@@ -63,6 +63,23 @@ def get_pacer_doc_id_from_doc1_url(url):
     return url
 
 
+def get_pacer_seq_no_from_doc1_anchor(anchor):
+    """Extract the PACER sequence number from an HTML anchor node.
+
+    :param anchor: An LXML Element.
+    :return: None if no sequence number can be found. Otherwise returns the
+    sequence number.
+    """
+    try:
+        onclick = anchor.xpath('./@onclick')[0]
+    except IndexError:
+        return None
+    else:
+        if 'goDLS' in onclick:
+            go_dls_parts = reverse_goDLS_function(onclick)
+            return go_dls_parts['de_seq_num']
+
+
 def reverse_goDLS_function(s):
     """Extract the arguments from the goDLS JavaScript function.
 

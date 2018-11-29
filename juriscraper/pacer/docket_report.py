@@ -11,7 +11,7 @@ from lxml.html import HtmlElement, fromstring, tostring
 from .docket_utils import normalize_party_types
 from .reports import BaseReport
 from .utils import clean_pacer_object, get_pacer_doc_id_from_doc1_url, \
-    reverse_goDLS_function
+    get_pacer_seq_no_from_doc1_anchor
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import clean_string, convert_date_string, \
@@ -936,17 +936,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         self.metadata_values = values
 
     @staticmethod
-    def _get_pacer_seq_no_from_url(url):
-        try:
-            onclick = url.xpath('./@onclick')[0]
-        except IndexError:
-            return None
-        else:
-            if 'goDLS' in onclick:
-                go_dls_parts = reverse_goDLS_function(onclick)
-                return go_dls_parts['de_seq_num']
-
-    def _get_pacer_doc_id_and_seq_no(self, cell, document_number):
+    def _get_pacer_doc_id_and_seq_no(cell, document_number):
         if not document_number:
             return None, None
         else:
@@ -962,7 +952,7 @@ class DocketReport(BaseDocketReport, BaseReport):
                 if url.text_content().strip() == document_number:
                     doc1_url = url.xpath('./@href')[0]
                     pacer_doc_id = get_pacer_doc_id_from_doc1_url(doc1_url)
-                    pacer_seq_no = self._get_pacer_seq_no_from_url(url)
+                    pacer_seq_no = get_pacer_seq_no_from_doc1_anchor(url)
                     return pacer_doc_id, pacer_seq_no
 
         # In case none of our URLs can be parsed.
