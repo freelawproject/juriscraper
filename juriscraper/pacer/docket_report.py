@@ -789,11 +789,11 @@ class DocketReport(BaseDocketReport, BaseReport):
                 cells[1], de[u'document_number'])
             de[u'pacer_doc_id'], de[u'pacer_seq_no'] = results[0], results[1]
             de[u'description'] = self._get_description(cells)
-            if not de[u'document_number']:
-                # Minute order. Skip for now.
-                continue
-            if not de[u'document_number'].isdigit():
-                # Some courts put weird stuff in this column.
+
+            number = de[u'document_number']
+            if not number.isdigit() and number != '':
+                # Some courts use the word "doc" instead of a docket number. We
+                # skip these for now.
                 continue
             docket_entries.append(de)
 
@@ -945,8 +945,8 @@ class DocketReport(BaseDocketReport, BaseReport):
             # column in their docket report.
             anchors = cell.xpath(u'.//a')
             if len(anchors) == 0:
-                # Docket entry exists, but cannot download document (it's sealed
-                # or otherwise unavailable in PACER).
+                # Docket entry exists, but cannot download document (it's
+                # sealed, a minute entry, or otherwise unavailable in PACER).
                 return None, None
             for anchor in anchors:
                 if anchor.text_content().strip() == document_number:
