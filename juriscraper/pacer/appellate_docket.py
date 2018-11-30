@@ -10,8 +10,8 @@ from .utils import clean_pacer_object, get_court_id_from_url, \
     get_pacer_doc_id_from_doc1_url, is_pdf
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import clean_string, convert_date_string, harmonize, \
-    force_unicode
+from ..lib.string_utils import clean_string, convert_date_string, \
+    force_unicode, harmonize
 
 logger = make_default_logger()
 
@@ -521,8 +521,8 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                     de[u'document_number'] = de[u'pacer_doc_id']
                 else:
                     # We lack both the document number and the pacer ID.
-                    # Probably a minute order. Press on.
-                    continue
+                    # Probably a minute order. No need to set either.
+                    pass
             de[u'description'] = force_unicode(cells[2].text_content())
             docket_entries.append(de)
 
