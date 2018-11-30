@@ -12,6 +12,7 @@
       "description": "", 
       "document_number": "1", 
       "pacer_doc_id": "14305947327", 
+      "pacer_seq_no": "5", 
       "short_description": "Complaint"
     }, 
     {
@@ -19,6 +20,7 @@
       "description": "", 
       "document_number": "4", 
       "pacer_doc_id": "14305947336", 
+      "pacer_seq_no": "8", 
       "short_description": "Notice of Hearing"
     }, 
     {
@@ -26,6 +28,7 @@
       "description": "", 
       "document_number": "5", 
       "pacer_doc_id": "14305947339", 
+      "pacer_seq_no": "9", 
       "short_description": "Initial Appearance"
     }, 
     {
@@ -33,6 +36,7 @@
       "description": "", 
       "document_number": "6", 
       "pacer_doc_id": "14305947342", 
+      "pacer_seq_no": "10", 
       "short_description": "Financial Affidavit - CJA23"
     }, 
     {
@@ -40,6 +44,7 @@
       "description": "", 
       "document_number": "7", 
       "pacer_doc_id": "14305947345", 
+      "pacer_seq_no": "11", 
       "short_description": "Order Appointing Public Defender"
     }, 
     {
@@ -47,6 +52,7 @@
       "description": "", 
       "document_number": "8", 
       "pacer_doc_id": "14305947348", 
+      "pacer_seq_no": "12", 
       "short_description": "Waiver of Detention Hearing"
     }, 
     {
@@ -54,6 +60,7 @@
       "description": "", 
       "document_number": "9", 
       "pacer_doc_id": "14305947351", 
+      "pacer_seq_no": "13", 
       "short_description": "Order of Detention"
     }, 
     {
@@ -61,6 +68,7 @@
       "description": "", 
       "document_number": "10", 
       "pacer_doc_id": "14305947354", 
+      "pacer_seq_no": "14", 
       "short_description": "Preliminary Hearing"
     }, 
     {
@@ -68,6 +76,7 @@
       "description": "", 
       "document_number": "11", 
       "pacer_doc_id": "14305947823", 
+      "pacer_seq_no": "34", 
       "short_description": "Indictment"
     }, 
     {
@@ -75,13 +84,15 @@
       "description": "", 
       "document_number": "13", 
       "pacer_doc_id": "14305953391", 
+      "pacer_seq_no": "51", 
       "short_description": "Notice of Hearing"
     }, 
     {
       "date_filed": "2016-04-08", 
       "description": "", 
       "document_number": "14", 
-      "pacer_doc_id": "", 
+      "pacer_doc_id": null, 
+      "pacer_seq_no": null, 
       "short_description": "Arraignment"
     }, 
     {
@@ -89,6 +100,7 @@
       "description": "", 
       "document_number": "15", 
       "pacer_doc_id": "14305961315", 
+      "pacer_seq_no": "57", 
       "short_description": "Scheduling Order"
     }, 
     {
@@ -96,6 +108,7 @@
       "description": "", 
       "document_number": "16", 
       "pacer_doc_id": "14305983471", 
+      "pacer_seq_no": "59", 
       "short_description": "Notice (Other)"
     }, 
     {
@@ -103,13 +116,23 @@
       "description": "", 
       "document_number": "17", 
       "pacer_doc_id": "14306016515", 
+      "pacer_seq_no": "62", 
       "short_description": "Motion to Continue"
+    }, 
+    {
+      "date_filed": "2016-05-26", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": null, 
+      "pacer_seq_no": null, 
+      "short_description": "Set/Reset Hearings"
     }, 
     {
       "date_filed": "2016-05-26", 
       "description": "", 
       "document_number": "18", 
       "pacer_doc_id": "14306018506", 
+      "pacer_seq_no": "65", 
       "short_description": "Order on Motion to Continue"
     }, 
     {
@@ -117,6 +140,7 @@
       "description": "", 
       "document_number": "19", 
       "pacer_doc_id": "14306188220", 
+      "pacer_seq_no": "69", 
       "short_description": "Motion to Continue"
     }, 
     {
@@ -124,20 +148,39 @@
       "description": "", 
       "document_number": "20", 
       "pacer_doc_id": "14306191806", 
+      "pacer_seq_no": "72", 
       "short_description": "Order on Motion to Continue"
+    }, 
+    {
+      "date_filed": "2016-10-13", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": null, 
+      "pacer_seq_no": null, 
+      "short_description": "Set/Reset Hearings"
     }, 
     {
       "date_filed": "2016-10-19", 
       "description": "", 
       "document_number": "21", 
       "pacer_doc_id": "14306206456", 
+      "pacer_seq_no": "76", 
       "short_description": "Notice of Attorney Appearance - USA"
+    }, 
+    {
+      "date_filed": "2016-11-21", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": null, 
+      "pacer_seq_no": null, 
+      "short_description": "Notice of Hearing"
     }, 
     {
       "date_filed": "2016-11-29", 
       "description": "", 
       "document_number": "23", 
       "pacer_doc_id": "14306254960", 
+      "pacer_seq_no": "83", 
       "short_description": "Motion for Protective Order"
     }, 
     {
@@ -145,6 +188,7 @@
       "description": "", 
       "document_number": "25", 
       "pacer_doc_id": "14306256705", 
+      "pacer_seq_no": "88", 
       "short_description": "Order on Motion for Protective Order"
     }, 
     {
@@ -152,6 +196,7 @@
       "description": "", 
       "document_number": "26", 
       "pacer_doc_id": "14306259145", 
+      "pacer_seq_no": "90", 
       "short_description": "Motion in Limine"
     }, 
     {
@@ -159,6 +204,7 @@
       "description": "", 
       "document_number": "28", 
       "pacer_doc_id": "14306268059", 
+      "pacer_seq_no": "95", 
       "short_description": "Status Conference"
     }, 
     {
@@ -166,6 +212,7 @@
       "description": "", 
       "document_number": "29", 
       "pacer_doc_id": "14306270970", 
+      "pacer_seq_no": "98", 
       "short_description": "Motion to Suppress"
     }, 
     {
@@ -173,13 +220,23 @@
       "description": "", 
       "document_number": "30", 
       "pacer_doc_id": "14306271417", 
+      "pacer_seq_no": "101", 
       "short_description": "Motion to Dismiss"
+    }, 
+    {
+      "date_filed": "2016-12-13", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": null, 
+      "pacer_seq_no": null, 
+      "short_description": "Notice of Hearing"
     }, 
     {
       "date_filed": "2016-12-13", 
       "description": "", 
       "document_number": "31", 
       "pacer_doc_id": "14306272161", 
+      "pacer_seq_no": "104", 
       "short_description": "Notice (Other)"
     }, 
     {
@@ -187,6 +244,7 @@
       "description": "", 
       "document_number": "32", 
       "pacer_doc_id": "14306272179", 
+      "pacer_seq_no": "106", 
       "short_description": "Notice (Other)"
     }, 
     {
@@ -194,6 +252,7 @@
       "description": "", 
       "document_number": "33", 
       "pacer_doc_id": "14306272470", 
+      "pacer_seq_no": "108", 
       "short_description": "Order"
     }, 
     {
@@ -201,6 +260,7 @@
       "description": "", 
       "document_number": "35", 
       "pacer_doc_id": "14306276035", 
+      "pacer_seq_no": "116", 
       "short_description": "Response in Opposition"
     }, 
     {
@@ -208,6 +268,7 @@
       "description": "", 
       "document_number": "37", 
       "pacer_doc_id": "14306280252", 
+      "pacer_seq_no": "121", 
       "short_description": "Motion Hearing"
     }, 
     {
@@ -215,6 +276,7 @@
       "description": "", 
       "document_number": "38", 
       "pacer_doc_id": "14306288173", 
+      "pacer_seq_no": "125", 
       "short_description": "Transcript"
     }, 
     {
@@ -222,20 +284,39 @@
       "description": "", 
       "document_number": "39", 
       "pacer_doc_id": "14306290911", 
+      "pacer_seq_no": "127", 
       "short_description": "Response in Opposition"
+    }, 
+    {
+      "date_filed": "2017-01-04", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": null, 
+      "pacer_seq_no": null, 
+      "short_description": "Notice of Hearing"
     }, 
     {
       "date_filed": "2017-01-05", 
       "description": "", 
       "document_number": "41", 
       "pacer_doc_id": "14306295741", 
+      "pacer_seq_no": "134", 
       "short_description": "Order on Motion to Dismiss"
+    }, 
+    {
+      "date_filed": "2017-01-06", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": null, 
+      "pacer_seq_no": null, 
+      "short_description": "Status Conference"
     }, 
     {
       "date_filed": "2017-01-06", 
       "description": "", 
       "document_number": "44", 
       "pacer_doc_id": "14306297139", 
+      "pacer_seq_no": "140", 
       "short_description": "Supplemental - Supporting (non motion)"
     }, 
     {
@@ -243,6 +324,7 @@
       "description": "", 
       "document_number": "45", 
       "pacer_doc_id": "14306297311", 
+      "pacer_seq_no": "142", 
       "short_description": "Response in Opposition"
     }, 
     {
@@ -250,6 +332,7 @@
       "description": "", 
       "document_number": "46", 
       "pacer_doc_id": "14306297472", 
+      "pacer_seq_no": "145", 
       "short_description": "Motion for Miscellaneous Relief"
     }, 
     {
@@ -257,6 +340,7 @@
       "description": "", 
       "document_number": "47", 
       "pacer_doc_id": "14306297543", 
+      "pacer_seq_no": "148", 
       "short_description": "Supplemental - Opposing"
     }, 
     {
@@ -264,6 +348,7 @@
       "description": "", 
       "document_number": "48", 
       "pacer_doc_id": "14306297841", 
+      "pacer_seq_no": "151", 
       "short_description": "Order"
     }, 
     {
@@ -271,13 +356,23 @@
       "description": "", 
       "document_number": "50", 
       "pacer_doc_id": "14306301237", 
+      "pacer_seq_no": "159", 
       "short_description": "Motion to Strike"
+    }, 
+    {
+      "date_filed": "2017-01-11", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": null, 
+      "pacer_seq_no": null, 
+      "short_description": "Omnibus Hearing"
     }, 
     {
       "date_filed": "2017-01-11", 
       "description": "", 
       "document_number": "51", 
       "pacer_doc_id": "14306302333", 
+      "pacer_seq_no": "163", 
       "short_description": "Order on Motion to Suppress"
     }, 
     {
@@ -285,6 +380,7 @@
       "description": "", 
       "document_number": "52", 
       "pacer_doc_id": "14306303115", 
+      "pacer_seq_no": "168", 
       "short_description": "Response in Opposition"
     }, 
     {
@@ -292,6 +388,7 @@
       "description": "", 
       "document_number": "53", 
       "pacer_doc_id": "14306303849", 
+      "pacer_seq_no": "171", 
       "short_description": "Order on Motion for Miscellaneous Relief"
     }, 
     {
@@ -299,6 +396,7 @@
       "description": "", 
       "document_number": "54", 
       "pacer_doc_id": "14306304944", 
+      "pacer_seq_no": "173", 
       "short_description": "Indictment"
     }, 
     {
@@ -306,6 +404,7 @@
       "description": "", 
       "document_number": "56", 
       "pacer_doc_id": "14306304978", 
+      "pacer_seq_no": "185", 
       "short_description": "Order on Motion in Limine"
     }, 
     {
@@ -313,6 +412,7 @@
       "description": "", 
       "document_number": "57", 
       "pacer_doc_id": "14306307578", 
+      "pacer_seq_no": "187", 
       "short_description": "Exhibit List"
     }, 
     {
@@ -320,6 +420,7 @@
       "description": "", 
       "document_number": "58", 
       "pacer_doc_id": "14306309875", 
+      "pacer_seq_no": "189", 
       "short_description": "Voir Dire"
     }, 
     {
@@ -327,6 +428,7 @@
       "description": "", 
       "document_number": "60", 
       "pacer_doc_id": "14306311516", 
+      "pacer_seq_no": "201", 
       "short_description": "Jury Trial"
     }, 
     {
@@ -334,6 +436,7 @@
       "description": "", 
       "document_number": "61", 
       "pacer_doc_id": "14306313090", 
+      "pacer_seq_no": "203", 
       "short_description": "Jury Trial"
     }, 
     {
@@ -341,6 +444,7 @@
       "description": "", 
       "document_number": "62", 
       "pacer_doc_id": "14306315093", 
+      "pacer_seq_no": "205", 
       "short_description": "Jury Trial"
     }, 
     {
@@ -348,6 +452,7 @@
       "description": "", 
       "document_number": "63", 
       "pacer_doc_id": "14306315106", 
+      "pacer_seq_no": "207", 
       "short_description": "Jury Instructions"
     }, 
     {
@@ -355,6 +460,7 @@
       "description": "", 
       "document_number": "64", 
       "pacer_doc_id": "14306315130", 
+      "pacer_seq_no": "209", 
       "short_description": "Jury Verdict"
     }, 
     {
@@ -362,6 +468,7 @@
       "description": "", 
       "document_number": "66", 
       "pacer_doc_id": "14306315136", 
+      "pacer_seq_no": "221", 
       "short_description": "Order of Referral to Probation for Presentence Investigation and Report"
     }, 
     {
@@ -369,6 +476,7 @@
       "description": "", 
       "document_number": "67", 
       "pacer_doc_id": "14306315807", 
+      "pacer_seq_no": "223", 
       "short_description": "Presentence Report Disclosure Notification"
     }, 
     {
@@ -376,6 +484,7 @@
       "description": "", 
       "document_number": "68", 
       "pacer_doc_id": "14306317039", 
+      "pacer_seq_no": "225", 
       "short_description": "Exhibit List"
     }, 
     {
@@ -383,6 +492,7 @@
       "description": "", 
       "document_number": "69", 
       "pacer_doc_id": "14306323468", 
+      "pacer_seq_no": "227", 
       "short_description": "Presentence Report Disclosure Notification"
     }, 
     {
@@ -390,6 +500,7 @@
       "description": "", 
       "document_number": "70", 
       "pacer_doc_id": "14306362878", 
+      "pacer_seq_no": "229", 
       "short_description": "Motion for Forfeiture of Property"
     }, 
     {
@@ -397,6 +508,7 @@
       "description": "", 
       "document_number": "71", 
       "pacer_doc_id": "14306375079", 
+      "pacer_seq_no": "231", 
       "short_description": "Order on Motion for Forfeiture of Property"
     }, 
     {
@@ -404,6 +516,7 @@
       "description": "", 
       "document_number": "72", 
       "pacer_doc_id": "14306445625", 
+      "pacer_seq_no": "235", 
       "short_description": "Notice of Hearing"
     }, 
     {
@@ -411,6 +524,7 @@
       "description": "", 
       "document_number": "73", 
       "pacer_doc_id": "14306445652", 
+      "pacer_seq_no": "237", 
       "short_description": "Notice (Other)"
     }, 
     {
@@ -418,6 +532,7 @@
       "description": "", 
       "document_number": "74", 
       "pacer_doc_id": "14306484121", 
+      "pacer_seq_no": "240", 
       "short_description": "Motion to Continue"
     }, 
     {
@@ -425,6 +540,7 @@
       "description": "", 
       "document_number": "75", 
       "pacer_doc_id": "14306485904", 
+      "pacer_seq_no": "242", 
       "short_description": "Order on Motion to Continue"
     }, 
     {
@@ -432,6 +548,7 @@
       "description": "", 
       "document_number": "76", 
       "pacer_doc_id": "14306512871", 
+      "pacer_seq_no": "244", 
       "short_description": "Sentencing Memorandum"
     }, 
     {
@@ -439,6 +556,7 @@
       "description": "", 
       "document_number": "77", 
       "pacer_doc_id": "14306529666", 
+      "pacer_seq_no": "246", 
       "short_description": "Sentencing Memorandum"
     }, 
     {
@@ -446,6 +564,7 @@
       "description": "", 
       "document_number": "78", 
       "pacer_doc_id": "14306538153", 
+      "pacer_seq_no": "248", 
       "short_description": "Sentencing"
     }, 
     {
@@ -453,6 +572,7 @@
       "description": "", 
       "document_number": "79", 
       "pacer_doc_id": "14306555084", 
+      "pacer_seq_no": "258", 
       "short_description": "Judgment"
     }, 
     {
@@ -460,6 +580,7 @@
       "description": "", 
       "document_number": "81", 
       "pacer_doc_id": "14306558331", 
+      "pacer_seq_no": "270", 
       "short_description": "Notice of Appeal - Final Judgment"
     }, 
     {
@@ -467,6 +588,7 @@
       "description": "", 
       "document_number": "82", 
       "pacer_doc_id": "14306564080", 
+      "pacer_seq_no": "273", 
       "short_description": "USCA Case Number"
     }, 
     {
@@ -474,6 +596,7 @@
       "description": "", 
       "document_number": "83", 
       "pacer_doc_id": "14306637477", 
+      "pacer_seq_no": "277", 
       "short_description": "Transcript"
     }, 
     {
@@ -481,6 +604,7 @@
       "description": "", 
       "document_number": "85", 
       "pacer_doc_id": "14306637485", 
+      "pacer_seq_no": "281", 
       "short_description": "Transcript"
     }, 
     {
@@ -488,6 +612,7 @@
       "description": "", 
       "document_number": "86", 
       "pacer_doc_id": "14306637488", 
+      "pacer_seq_no": "283", 
       "short_description": "Transcript"
     }, 
     {
@@ -495,6 +620,7 @@
       "description": "", 
       "document_number": "88", 
       "pacer_doc_id": "14306637499", 
+      "pacer_seq_no": "287", 
       "short_description": "Transcript"
     }, 
     {
@@ -502,6 +628,7 @@
       "description": "", 
       "document_number": "90", 
       "pacer_doc_id": "14306637514", 
+      "pacer_seq_no": "291", 
       "short_description": "Transcript"
     }, 
     {
@@ -509,6 +636,7 @@
       "description": "", 
       "document_number": "91", 
       "pacer_doc_id": "14306637522", 
+      "pacer_seq_no": "293", 
       "short_description": "Transcript"
     }, 
     {
@@ -516,6 +644,7 @@
       "description": "", 
       "document_number": "92", 
       "pacer_doc_id": "14306637528", 
+      "pacer_seq_no": "295", 
       "short_description": "Transcript"
     }
   ], 

@@ -10,8 +10,17 @@
     {
       "date_filed": "2017-10-18", 
       "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": null, 
+      "pacer_seq_no": null, 
+      "short_description": "Automatic docket of credit card"
+    }, 
+    {
+      "date_filed": "2017-10-18", 
+      "description": "", 
       "document_number": "1", 
       "pacer_doc_id": "152026451941", 
+      "pacer_seq_no": null, 
       "short_description": "Voluntary Petition (Chapter 13)"
     }, 
     {
@@ -19,13 +28,15 @@
       "description": "", 
       "document_number": "2", 
       "pacer_doc_id": "152026451944", 
+      "pacer_seq_no": null, 
       "short_description": "Chapter 13 Plan"
     }, 
     {
       "date_filed": "2017-10-18", 
       "description": "", 
       "document_number": "3", 
-      "pacer_doc_id": "", 
+      "pacer_doc_id": null, 
+      "pacer_seq_no": null, 
       "short_description": "Matrix"
     }, 
     {
@@ -33,6 +44,7 @@
       "description": "", 
       "document_number": "4", 
       "pacer_doc_id": "152026451949", 
+      "pacer_seq_no": null, 
       "short_description": "Statement of Social Security Number"
     }, 
     {
@@ -40,6 +52,7 @@
       "description": "", 
       "document_number": "5", 
       "pacer_doc_id": "152026451952", 
+      "pacer_seq_no": null, 
       "short_description": "Chapter 13 Statement of Monthly Income"
     }, 
     {
@@ -47,20 +60,39 @@
       "description": "", 
       "document_number": "6", 
       "pacer_doc_id": "152026451955", 
+      "pacer_seq_no": null, 
       "short_description": "Certificate of Credit Counseling"
+    }, 
+    {
+      "date_filed": "2017-10-19", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": null, 
+      "pacer_seq_no": null, 
+      "short_description": "Add Trustee"
     }, 
     {
       "date_filed": "2017-10-19", 
       "description": "", 
       "document_number": "7", 
       "pacer_doc_id": "152026457100", 
+      "pacer_seq_no": null, 
       "short_description": "Creditor Request for Notices"
+    }, 
+    {
+      "date_filed": "2017-10-25", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": null, 
+      "pacer_seq_no": null, 
+      "short_description": "Add Trustee"
     }, 
     {
       "date_filed": "2017-10-25", 
       "description": "", 
       "document_number": "8", 
       "pacer_doc_id": "152026483908", 
+      "pacer_seq_no": null, 
       "short_description": "Meeting of Creditors Chapter 13"
     }, 
     {
@@ -68,6 +100,7 @@
       "description": "", 
       "document_number": "9", 
       "pacer_doc_id": "152026492705", 
+      "pacer_seq_no": null, 
       "short_description": "BNC Certificate of Mailing - Meeting of Creditors"
     }
   ], 

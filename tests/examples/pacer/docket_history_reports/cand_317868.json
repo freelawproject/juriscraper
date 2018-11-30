@@ -12,6 +12,7 @@
       "description": "", 
       "document_number": "1", 
       "pacer_doc_id": "035015952180", 
+      "pacer_seq_no": "7", 
       "short_description": "Petition for Writ of Habeas Corpus"
     }, 
     {
@@ -19,13 +20,15 @@
       "description": "", 
       "document_number": "2", 
       "pacer_doc_id": "035015952251", 
+      "pacer_seq_no": "10", 
       "short_description": "Proposed Summons"
     }, 
     {
       "date_filed": "2017-10-04", 
       "description": "", 
       "document_number": "3", 
-      "pacer_doc_id": "", 
+      "pacer_doc_id": null, 
+      "pacer_seq_no": null, 
       "short_description": "Case Assigned by Intake"
     }, 
     {
@@ -33,13 +36,15 @@
       "description": "", 
       "document_number": "4", 
       "pacer_doc_id": "035015953979", 
+      "pacer_seq_no": "15", 
       "short_description": "Consent/Declination to Proceed Before a US Magistrate Judge"
     }, 
     {
       "date_filed": "2017-10-05", 
       "description": "", 
       "document_number": "5", 
-      "pacer_doc_id": "", 
+      "pacer_doc_id": null, 
+      "pacer_seq_no": null, 
       "short_description": "Clerk's Notice of Impending Reassignment - Text Only"
     }, 
     {
@@ -47,6 +52,7 @@
       "description": "", 
       "document_number": "6", 
       "pacer_doc_id": "035015961137", 
+      "pacer_seq_no": "19", 
       "short_description": "Order Reassigning Case"
     }, 
     {
@@ -54,13 +60,23 @@
       "description": "", 
       "document_number": "7", 
       "pacer_doc_id": "035015966297", 
+      "pacer_seq_no": "26", 
       "short_description": "Summons Issued"
+    }, 
+    {
+      "date_filed": "2017-10-10", 
+      "description": "", 
+      "document_number": "", 
+      "pacer_doc_id": null, 
+      "pacer_seq_no": null, 
+      "short_description": "Electronic Filing Error"
     }, 
     {
       "date_filed": "2017-10-10", 
       "description": "", 
       "document_number": "8", 
       "pacer_doc_id": "035015970281", 
+      "pacer_seq_no": "28", 
       "short_description": "Certificate of Service"
     }, 
     {
@@ -68,6 +84,7 @@
       "description": "", 
       "document_number": "9", 
       "pacer_doc_id": "035015972469", 
+      "pacer_seq_no": "33", 
       "short_description": "Motion for Order to Show Cause"
     }, 
     {
@@ -75,6 +92,7 @@
       "description": "", 
       "document_number": "10", 
       "pacer_doc_id": "035016019039", 
+      "pacer_seq_no": "35", 
       "short_description": "Notice of Appearance"
     }, 
     {
@@ -82,6 +100,7 @@
       "description": "", 
       "document_number": "11", 
       "pacer_doc_id": "035016019995", 
+      "pacer_seq_no": "41", 
       "short_description": "Order"
     }, 
     {
@@ -89,6 +108,7 @@
       "description": "", 
       "document_number": "12", 
       "pacer_doc_id": "035016050947", 
+      "pacer_seq_no": "45", 
       "short_description": "Stipulation"
     }, 
     {
@@ -96,6 +116,7 @@
       "description": "", 
       "document_number": "13", 
       "pacer_doc_id": "035016054470", 
+      "pacer_seq_no": "49", 
       "short_description": "Order on Stipulation"
     }
   ], 
