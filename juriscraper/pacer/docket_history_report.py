@@ -136,7 +136,7 @@ class DocketHistoryReport(DocketReport):
                         anchors[0])
                 else:
                     # Unlinked minute entry; may or may not be numbered
-                    de[u'pacer_doc_id'] = ''
+                    de[u'pacer_doc_id'] = None
                     de[u'pacer_seq_no'] = None
                 de[u'date_filed'] = self._get_date_filed(cells[1])
                 de[u'short_description'] = force_unicode(cells[2].text_content())
