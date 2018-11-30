@@ -4,10 +4,10 @@ from requests import Session
 
 from .docket_report import BaseDocketReport
 from .docket_utils import normalize_party_types
-from .utils import clean_pacer_object,  get_pdf_url, is_pdf, get_docketxml_url
+from .utils import clean_pacer_object, get_docketxml_url, get_pdf_url, is_pdf
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import convert_date_string, harmonize, clean_string
+from ..lib.string_utils import clean_string, convert_date_string, harmonize
 from ..lib.utils import previous_and_next
 
 logger = make_default_logger()
@@ -199,9 +199,6 @@ class InternetArchive(BaseDocketReport):
             de[u'pacer_doc_id'] = self._xpath_text_0(de_node,
                                                      './pacer_doc_id') or None
 
-            if not de[u'document_number']:
-                # Minute order. Skip for now.
-                continue
             if not de[u'document_number'].isdigit():
                 # Some courts put weird stuff in this column.
                 continue
