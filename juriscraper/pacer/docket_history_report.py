@@ -3,11 +3,11 @@ import re
 
 from .docket_report import DocketReport
 from .utils import clean_pacer_object, get_nonce_from_form, \
-    get_pacer_doc_id_from_doc1_url
+    get_pacer_doc_id_from_doc1_url, get_pacer_seq_no_from_doc1_anchor
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import force_unicode, harmonize, \
-    clean_string, convert_date_string
+from ..lib.string_utils import clean_string, convert_date_string, \
+    force_unicode, harmonize
 from ..lib.utils import previous_and_next
 
 logger = make_default_logger()
@@ -127,11 +127,17 @@ class DocketHistoryReport(DocketReport):
                 # Normal row, parse the document_number, date, etc.
                 de = {}
                 de[u'document_number'] = clean_string(cells[0].text_content())
-                hrefs = cells[0].xpath('.//@href')
-                if len(hrefs) == 1:
-                    de[u'pacer_doc_id'] = get_pacer_doc_id_from_doc1_url(hrefs[0])
+                anchors = cells[0].xpath('.//a')
+                if len(anchors) == 1:
+                    doc1_url = anchors[0].xpath('./@href')[0]
+                    de[u'pacer_doc_id'] = get_pacer_doc_id_from_doc1_url(
+                        doc1_url)
+                    de[u'pacer_seq_no'] = get_pacer_seq_no_from_doc1_anchor(
+                        anchors[0])
                 else:
+                    # Unlinked minute entry; may or may not be numbered
                     de[u'pacer_doc_id'] = ''
+                    de[u'pacer_seq_no'] = None
                 de[u'date_filed'] = self._get_date_filed(cells[1])
                 de[u'short_description'] = force_unicode(cells[2].text_content())
                 de[u'description'] = u''
@@ -144,9 +150,12 @@ class DocketHistoryReport(DocketReport):
                     desc = desc[len(label):]
                 docket_entries[-1]['description'] = desc
 
-        # Strip minute orders that lack a document number.
+        # Some docket history entries show the word "doc" instead of an entry
+        # number. These items aren't on the docket itself, and so for now we
+        # just skip them.
         docket_entries = [de for de in docket_entries if
-                          de['document_number'].isdigit()]
+                          de['document_number'].isdigit() or
+                          de['document_number'] == '']
         docket_entries = clean_pacer_object(docket_entries)
         self._docket_entries = docket_entries
         return docket_entries
