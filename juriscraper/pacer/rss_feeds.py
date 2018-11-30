@@ -13,7 +13,7 @@ from .utils import clean_pacer_object, get_pacer_case_id_from_docket_url, \
     get_pacer_doc_id_from_doc1_url
 from ..lib.html_utils import html_unescape
 from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import harmonize, clean_string
+from ..lib.string_utils import clean_string, harmonize
 
 logger = make_default_logger()
 
@@ -192,10 +192,6 @@ class PacerRssFeed(DocketReport):
     def docket_entries(self, entry):
         """Parse the RSS item to get back a docket entry-like object.
         Although there is only one, return it as a list.
-
-        We do not return paperless or so-called "minute orders" that
-        lack attached documents (such minute orders may have entry
-        numbers).
         """
         de = {
             u'date_filed': date(*entry.published_parsed[:3]),
@@ -214,9 +210,6 @@ class PacerRssFeed(DocketReport):
             # instead provide show_case_doc links. Some docket entries don't
             # provide links. In either case, we can't provide pacer_doc_id.
             de[u'pacer_doc_id'] = u''
-
-        if not de[u'document_number']:
-            return []
 
         return [de]
 
