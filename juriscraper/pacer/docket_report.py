@@ -52,7 +52,9 @@ class BaseDocketReport(object):
 
     @staticmethod
     def _normalize_see_above_attorneys(parties):
-        """PACER frequently has "See above" for the contact info of an attorney.
+        """PACER frequently has "See above" for the contact info of an
+        attorney.
+
         Normalize these values.
         """
         atty_cache = {}
@@ -94,8 +96,8 @@ class BaseDocketReport(object):
                     return convert_date_string(m.group(1))
                 hit = m.group(1)
                 if "date filed" not in hit.lower():
-                    # Safety check. Sometimes a match is made against the merged
-                    # text string, including its headers. This is wrong.
+                    # Safety check. Sometimes a match is made against the
+                    # merged text string, including its headers. This is wrong.
                     return hit
 
         if cast_to_date:
@@ -140,7 +142,8 @@ class BaseDocketReport(object):
                 logger.debug("Couldn't parse date: %s" % s)
                 return None
             else:
-                d = d.replace(tzinfo=d.tzinfo or gettz('UTC'))  # Set it to UTC.
+                # Set it to UTC.
+                d = d.replace(tzinfo=d.tzinfo or gettz('UTC'))
                 if cast_to_date is True:
                     return d.date()
                 return d
@@ -195,17 +198,21 @@ class DocketReport(BaseDocketReport, BaseReport):
     case_name_str = r"(?:Case\s+title:\s+)?(.*\bv\.?\s.*)"
     case_name_regex = re.compile(case_name_str)
     case_name_i_regex = re.compile(case_name_str, flags=re.IGNORECASE)
-    case_title_regex = re.compile(r"(?:Case\s+title:\s+)(.*)", flags=re.IGNORECASE)
+    case_title_regex = re.compile(r"(?:Case\s+title:\s+)(.*)",
+                                  flags=re.IGNORECASE)
     in_re_regex = re.compile(r"(\bIN\s+RE:\s+.*)", flags=re.IGNORECASE)
-    in_the_matter_regex = re.compile(r"(\bIn\s+the\s+matter\s+.*)", flags=re.IGNORECASE)
+    in_the_matter_regex = re.compile(r"(\bIn\s+the\s+matter\s+.*)",
+                                     flags=re.IGNORECASE)
     case_name_regexes = [
         case_name_regex, case_name_i_regex, case_title_regex, in_re_regex,
         in_the_matter_regex,
     ]
     date_filed_regex = re.compile(r'Date [fF]iled:\s+(%s)' % date_regex)
-    date_converted_regex = re.compile(r'Date [Cc]onverted:\s+(%s)' % date_regex)
+    date_converted_regex = re.compile(r'Date [Cc]onverted:\s+(%s)' %
+                                      date_regex)
     # Be careful this does not match "Joint debtor discharged" field.
-    date_discharged_regex = re.compile(r'(?:Date|Debtor)\s+[Dd]ischarged:\s+(%s)' % date_regex)
+    date_discharged_regex = re.compile(
+        r'(?:Date|Debtor)\s+[Dd]ischarged:\s+(%s)' % date_regex)
     assigned_to_regex = r'Assigned to:\s+(.*)'
     referred_to_regex = r'Referred to:\s+(.*)'
     cause_regex = re.compile(r'Cause:\s+(.*)')
@@ -214,7 +221,8 @@ class DocketReport(BaseDocketReport, BaseReport):
     jurisdiction_regex = re.compile(r'Jurisdiction:\s+(.*)')
     mdl_status_regex = re.compile(r'MDL Status:\s+(.*)')
     demand_regex = re.compile(r'^Demand:\s+(.*)')
-    docket_number_dist_regex = re.compile(r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
+    docket_number_dist_regex = re.compile(
+        r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
     docket_number_bankr_regex = re.compile(r"(?:#:\s+)?((\d-)?\d\d-\d*)")
     docket_number_jpml = re.compile(r'(MDL No.\s+\d*)')
     offense_regex = re.compile(
@@ -229,21 +237,26 @@ class DocketReport(BaseDocketReport, BaseReport):
                    'is_adversary_proceeding']
 
     ERROR_STRINGS = BaseReport.ERROR_STRINGS + [
-        "The report may take a long time to run because this case has many docket entries",
+        "The report may take a long time to run because this case has many "
+        "docket entries",
         "The page ID does not exist. Please enter a valid page ID number. ",
         "There are no documents in this case.",
-        "Incomplete request. Please try your query again by choosing the Query or Reports option",
+        "Incomplete request. Please try your query again by choosing the "
+        "Query or Reports option",
         "To accept charges shown below, click on the 'View Report' button",
         "Unable to create PDF file.",
         "This case was administratively closed",
         "The start date must be less than or equal to the end date",
-        "The starting document number must be less than or equal to the ending document number",
+        "The starting document number must be less than or equal to the "
+        "ending document number",
         "Case not found.",
-        "Either you do not have permission to view the document, or the document does not exist in the case.",
+        "Either you do not have permission to view the document, or the "
+        "document does not exist in the case.",
         "Format: text",
         "Server timeout waiting for the HTTP request from the client.",
         "The case type was.*but it must be",
-        "This case is in the process of being opened, please check back later for additional information.",
+        "This case is in the process of being opened, please check back later "
+        "for additional information.",
         "Submission already made, please wait for response from server",
     ]
 
@@ -350,9 +363,12 @@ class DocketReport(BaseDocketReport, BaseReport):
         # document table has bold/underline/italic text.
         path = (
             '//tr['
-            '    ./td[1]//i/b/text() or '  # Bankruptcy
-            '    ./td[1]//b/u/text() or '  # Regular district
-            '    ./td[1]//b/text()[contains(., "-----")]'  # Adversary proceedings
+            # Bankruptcy
+            '    ./td[1]//i/b/text() or '
+            # Regular district
+            '    ./td[1]//b/u/text() or '
+            # Adversary proceedings
+            '    ./td[1]//b/text()[contains(., "-----")]'
             ']/../tr'
         )
         party_rows = self.tree.xpath(path)
@@ -369,9 +385,11 @@ class DocketReport(BaseDocketReport, BaseReport):
             if should_continue:
                 continue
 
-            name_path = u'.//b[not(./parent::i)][not(./u)][not(contains(., "------"))]'
+            name_path = (u'.//b[not(./parent::i)][not(./u)]'
+                         u'[not(contains(., "------"))]')
             is_party_name_cell = (len(cells[0].xpath(name_path)) > 0)
-            prev_has_disposition = prev is not None and 'Disposition' in prev.text_content()
+            prev_has_disposition = prev is not None and 'Disposition' in \
+                prev.text_content()
             if is_party_name_cell and not prev_has_disposition:
                 element = cells[0].xpath(name_path)[0]
                 party[u'name'] = force_unicode(element.text_content().strip())
@@ -399,8 +417,8 @@ class DocketReport(BaseDocketReport, BaseReport):
 
             if self.is_adversary_proceeding:
                 # In adversary proceedings, there are multiple rows under one
-                # party type header. Nuke the bulk of the party dict, except for
-                # the type so that it's ready for the next iteration.
+                # party type header. Nuke the bulk of the party dict, except
+                # for the type so that it's ready for the next iteration.
                 party = {u'type': party[u'type']}
             else:
                 party = {}
@@ -477,7 +495,8 @@ class DocketReport(BaseDocketReport, BaseReport):
             elif len(cells) == 3:
                 # Some courts have malformed HTML that requires extra work.
                 return {u'type': re.split(u'----*', s)[0]}, False
-        elif self.is_bankruptcy and len(cells) == 3 and cells[0].xpath('.//i/b'):
+        elif all([self.is_bankruptcy, len(cells) == 3,
+                  cells[0].xpath('.//i/b')]):
             # Bankruptcy - party type value.
             s = force_unicode(cells[0].xpath(u'.//i')[0].text_content())
             return {u'type': normalize_party_types(s)}, False
@@ -515,8 +534,8 @@ class DocketReport(BaseDocketReport, BaseReport):
         :return: None
         """
         # Because criminal data spans multiple trs, the way we do this is by
-        # keeping track of which party we're currently working on. Then, when we
-        # get useful criminal data, we add it to that party.
+        # keeping track of which party we're currently working on. Then, when
+        # we get useful criminal data, we add it to that party.
         empty_criminal_data = {
             u'counts': [],
             u'complaints': [],
@@ -716,7 +735,8 @@ class DocketReport(BaseDocketReport, BaseReport):
         """
         attorneys = []
         for atty_node in cell.xpath('.//b'):
-            name_parts = force_unicode(atty_node.text_content().strip()).split()
+            name_parts = force_unicode(
+                atty_node.text_content().strip()).split()
             attorney = {
                 u'name': u' '.join(name_parts),
                 u'roles': [],
@@ -727,7 +747,8 @@ class DocketReport(BaseDocketReport, BaseReport):
                 # noinspection PyProtectedMember
                 if isinstance(node, (etree._ElementStringResult,
                                      etree._ElementUnicodeResult)):
-                    clean_atty = u'%s\n' % ' '.join(n.strip() for n in node.split())
+                    clean_atty = u'%s\n' % ' '.join(
+                        n.strip() for n in node.split())
                     if clean_atty.strip():
                         attorney[u'contact'] += clean_atty
                 else:
@@ -750,13 +771,14 @@ class DocketReport(BaseDocketReport, BaseReport):
         if self._docket_entries is not None:
             return self._docket_entries
 
-        # There can be multiple docket entry tables on a single docket page. See
-        # https://github.com/freelawproject/courtlistener/issues/762. ∴ we need
-        # to identify the first table, and all following tables. The following
-        # tables lack column headers, so we have to use the preceding-sibling
-        # tables to make sure it's right.
+        # There can be multiple docket entry tables on a single docket page.
+        # See https://github.com/freelawproject/courtlistener/issues/762. ∴ we
+        # need to identify the first table, and all following tables. The
+        # following tables lack column headers, so we have to use the
+        # preceding-sibling tables to make sure it's right.
         docket_header = './/text()[contains(., "Docket Text")]'
-        bankr_multi_doc = 'not(.//text()[contains(., "Total file size of selected documents")])'
+        bankr_multi_doc = 'not(.//text()[contains(., "Total file size of ' \
+                          'selected documents")])'
         footer_multi_doc = 'not(.//text()[contains(., "Footer format:")])'
         docket_entry_rows = self.tree.xpath(
             '//table'
@@ -827,11 +849,11 @@ class DocketReport(BaseDocketReport, BaseReport):
         were entered into PACER or the date they were filed.
         :param date_start: The start date for the date range (as a date object)
         :param date_end: The end date for the date range (as a date object)
-        :param doc_num_start: A range of documents can be requested. This is the
-        lower bound of their ID numbers.
+        :param doc_num_start: A range of documents can be requested. This is
+        the lower bound of their ID numbers.
         :param doc_num_end: The upper bound of the requested documents.
-        :param show_parties_and_counsel: Whether to show the parties and counsel
-        in a case (note this adds expense).
+        :param show_parties_and_counsel: Whether to show the parties and
+        counsel in a case (note this adds expense).
         :param show_terminated_parties: Whether to show terminated parties in a
         case (note this adds expense).
         :param show_list_of_member_cases: Whether to show a list of member
@@ -926,8 +948,8 @@ class DocketReport(BaseDocketReport, BaseReport):
             u'/ancestor::table[not(.//center)][last()]'
         )[0]
         cells = table.xpath(u'.//td')
-        # Convert the <br> separated content into text strings, treating as much
-        # as possible as HTML.
+        # Convert the <br> separated content into text strings, treating as
+        # much as possible as HTML.
         values = []
         for cell in cells:
             clean_texts = [clean_string(s) for s in self._br_split(cell)]
@@ -969,9 +991,9 @@ class DocketReport(BaseDocketReport, BaseReport):
         if words:
             first_word = re.sub(u'[\s\u00A0]', '', words[0])
             if self.court_id == u'txnb':
-                # txnb merges the second and third columns, so if the first word
-                # is a number, return it. Otherwise, assume doc number isn't
-                # listed for the item.
+                # txnb merges the second and third columns, so if the first
+                # word is a number, return it. Otherwise, assume doc number
+                # isn't listed for the item.
                 if first_word.isdigit():
                     return first_word
             else:
@@ -985,8 +1007,8 @@ class DocketReport(BaseDocketReport, BaseReport):
         s = force_unicode(cells[1].text_content())
         # In txnb the second and third columns of the docket entries are
         # combined. The field can have one of four formats. Attempt the most
-        # detailed first, then work our way down to just giving up and capturing
-        # it all.
+        # detailed first, then work our way down to just giving up and
+        # capturing it all.
         ws = u'[\s\u00A0]'  # Whitespace including nbsp
         regexes = [
             # 2 (23 pgs; 4 docs) Blab blah (happens when attachments exist and
