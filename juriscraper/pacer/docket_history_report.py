@@ -127,6 +127,8 @@ class DocketHistoryReport(DocketReport):
                 # Normal row, parse the document_number, date, etc.
                 de = {}
                 de[u'document_number'] = clean_string(cells[0].text_content())
+                if de[u'document_number'] == '':
+                    de[u'document_number'] = None
                 anchors = cells[0].xpath('.//a')
                 if len(anchors) == 1:
                     doc1_url = anchors[0].xpath('./@href')[0]
@@ -154,8 +156,8 @@ class DocketHistoryReport(DocketReport):
         # number. These items aren't on the docket itself, and so for now we
         # just skip them.
         docket_entries = [de for de in docket_entries if
-                          de['document_number'].isdigit() or
-                          de['document_number'] == '']
+                          de['document_number'] is None or
+                          de['document_number'].isdigit()]
         docket_entries = clean_pacer_object(docket_entries)
         self._docket_entries = docket_entries
         return docket_entries

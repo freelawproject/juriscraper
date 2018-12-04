@@ -813,7 +813,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             de[u'description'] = self._get_description(cells)
 
             number = de[u'document_number']
-            if not number.isdigit() and number != '':
+            if number is not None and not number.isdigit():
                 # Some courts use the word "doc" instead of a docket number. We
                 # skip these for now.
                 continue
@@ -998,7 +998,7 @@ class DocketReport(BaseDocketReport, BaseReport):
                     return first_word
             else:
                 return first_word
-        return u''
+        return None
 
     def _get_description(self, cells):
         if self.court_id != u'txnb':
