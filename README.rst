@@ -266,10 +266,11 @@ Version History
 - 1.20.* - Tweaks the API of the query method in the FreeOpinionReport object
   to consistently return None instead of sometimes returning []. Version bumped
   because of breaking API changes.
+- 1.21.* - Adds support for the case report, which is the term we use to describe the page you see when you press the "Query" button in a district court PACER website. This is the page at the iQuery.pl URL.
 
 **Current**
 
-- 1.21.* - Adds support for the case report, which is the term we use to describe the page you see when you press the "Query" button in a district court PACER website. This is the page at the iQuery.pl URL.
+- 1.22.* - Adds support for de_seqno values parsed from PACER RSS, dockets, docket history reports, and attachment pages.
 
 **Immediate Future Goals**
 
