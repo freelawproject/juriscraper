@@ -5,10 +5,8 @@ which is free.
 
 from .reports import BaseReport
 from ..lib.date_utils import make_date_range_tuples
-from ..lib.html_utils import (
-    set_response_encoding, clean_html, fix_links_in_lxml_tree,
-    get_html_parsed_text
-)
+from ..lib.html_utils import (clean_html, fix_links_in_lxml_tree,
+                              get_html_parsed_text, set_response_encoding)
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import convert_date_string
 from ..pacer.utils import (
@@ -163,7 +161,8 @@ class FreeOpinionRow(object):
         self._sort_order = self._detect_sort_order()
 
         # Parsed data
-        self.pacer_case_id = self.get_pacer_case_id()
+        results = self.get_pacer_case_id_and_pacer_seq_no()
+        self.pacer_case_id, self.pacer_seq_no = results[0], results[1]
         self.docket_number = self.get_docket_number()
         self.case_name = self.get_case_name()
         self.date_filed = self.get_date_filed()
@@ -207,7 +206,12 @@ class FreeOpinionRow(object):
         else:
             return 'case_number'
 
-    def get_pacer_case_id(self):
+    def get_pacer_case_id_and_pacer_seq_no(self):
+        """Get the pacer_case_id and pacer_seq_no values for a document.
+
+        Both come from the link to the document, if it has an onclick
+        attribute.
+        """
         # It's tempting to get this value from the URL in the first
         # cell, but that URL can sometimes differ from the URL used in
         # the goDLS function.  When that's the case, the download
@@ -220,7 +224,8 @@ class FreeOpinionRow(object):
             if 'goDLS' in onclick:
                 # Sometimes the onclick is something else, like in insb's free
                 # opinion report.
-                return reverse_goDLS_function(onclick)['caseid']
+                go_dls_parts = reverse_goDLS_function(onclick)
+                return go_dls_parts['caseid'], go_dls_parts['de_seq_num']
 
         # No onclick, onclick isn't a goDLS link, etc. Try second format.
         if self._sort_order == 'case_number':
@@ -231,10 +236,11 @@ class FreeOpinionRow(object):
                 logger.info("No content provided in first cell of row. Using "
                             "last good row for pacer_case_id, docket_number, "
                             "and case_name.")
-                return self.last_good_row.pacer_case_id
+                last_row = self.last_good_row
+                return last_row.pacer_case_id, last_row.pacer_seq_no
         elif self._sort_order == 'date_filed':
             href = self.element.xpath('./td[2]//@href')[0]
-        return get_pacer_case_id_from_docket_url(href)
+        return get_pacer_case_id_from_docket_url(href), None
 
     def get_docket_number(self):
         try:
