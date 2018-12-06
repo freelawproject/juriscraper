@@ -538,7 +538,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         for text_node in text_nodes:
             if text_node.isdigit():
                 return text_node
-        return u''
+        return None
 
     @staticmethod
     def _get_pacer_doc_id(cell):
