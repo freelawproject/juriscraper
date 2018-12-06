@@ -42,6 +42,15 @@ def get_pacer_case_id_from_docket_url(url):
     return param
 
 
+def get_pacer_seq_no_from_doc1_url(url):
+    """Extract the seq_no from the doc1 URL."""
+    match = re.search('de_seq_num=(\d+)', url)
+    if match:
+        return match.group(1)
+    else:
+        return None
+
+
 def get_pacer_doc_id_from_doc1_url(url):
     """Extract the pacer document ID from the doc1 URL. Coerce the fourth digit
     to zero.

@@ -10,7 +10,7 @@ from requests import Session
 
 from .docket_report import DocketReport
 from .utils import clean_pacer_object, get_pacer_case_id_from_docket_url, \
-    get_pacer_doc_id_from_doc1_url
+    get_pacer_doc_id_from_doc1_url, get_pacer_seq_no_from_doc1_url
 from ..lib.html_utils import html_unescape
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import clean_string, harmonize
@@ -205,11 +205,13 @@ class PacerRssFeed(DocketReport):
         doc1_url = self._get_value(self.doc1_url_regex, entry.summary)
         if doc1_url:
             de[u'pacer_doc_id'] = get_pacer_doc_id_from_doc1_url(doc1_url)
+            de[u'pacer_seq_no'] = get_pacer_seq_no_from_doc1_url(doc1_url)
         else:
             # Some courts, in particular, NYED do not provide doc1 links and
             # instead provide show_case_doc links. Some docket entries don't
             # provide links. In either case, we can't provide pacer_doc_id.
             de[u'pacer_doc_id'] = u''
+            de[u'pacer_seq_no'] = None
 
         return [de]
 
