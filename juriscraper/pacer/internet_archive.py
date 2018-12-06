@@ -170,6 +170,8 @@ class InternetArchive(BaseDocketReport):
                 u'description': self._xpath_text_0(de_node, './long_desc'),
                 u'short_description': self._xpath_text_0(de_node,
                                                          './short_desc'),
+                u'pacer_seq_no': self._xpath_text_0(
+                    de_node, './pacer_de_seq_num') or None
             }
             attachment_number = de_node.xpath('./@attachment_num')[0]
             if attachment_number != '0':
