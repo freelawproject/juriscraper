@@ -14,7 +14,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import logger, phantomjs_executable_path
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.html_utils import fix_links_but_keep_anchors
 
@@ -42,7 +42,7 @@ class Site(OpinionSite):
             return super(Site, self)._download(request_dict=request_dict)
 
         driver = webdriver.PhantomJS(
-            executable_path='/usr/local/phantomjs/phantomjs',
+            executable_path=phantomjs_executable_path,
             service_log_path=os.path.devnull,  # Disable ghostdriver.log
         )
         driver.implicitly_wait(30)

@@ -18,6 +18,7 @@ from juriscraper.lib.string_utils import (CaseNameTweaker, clean_string,
 from juriscraper.lib.test_utils import MockRequest
 
 logger = make_default_logger()
+phantomjs_executable_path = '/usr/local/bin/phantomjs'
 
 
 class AbstractSite(object):

@@ -11,6 +11,7 @@ from lxml import html
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 
+from juriscraper.AbstractSite import logger, phantomjs_executable_path
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
 
@@ -53,7 +54,7 @@ class Site(OpinionSite):
     def get_dynamic_html_trees(self):
         # Initialize driver
         driver = webdriver.PhantomJS(
-            executable_path='/usr/local/phantomjs/phantomjs',
+            executable_path=phantomjs_executable_path,
             service_log_path=os.path.devnull,  # Disable ghostdriver.log
         )
         driver.get(self.url)

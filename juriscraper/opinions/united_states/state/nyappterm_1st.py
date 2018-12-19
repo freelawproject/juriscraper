@@ -16,7 +16,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import logger, phantomjs_executable_path
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.cookie_utils import normalize_cookies
 from juriscraper.lib.network_utils import add_delay
@@ -175,7 +175,7 @@ class Site(OpinionSite):
         logger.info("Running Selenium browser PhantomJS to get the cookies...")
         add_delay(20, 5)
         driver = webdriver.PhantomJS(
-            executable_path='/usr/local/phantomjs/phantomjs',
+            executable_path=phantomjs_executable_path,
             service_log_path=os.path.devnull,  # Disable ghostdriver.log
         )
 
