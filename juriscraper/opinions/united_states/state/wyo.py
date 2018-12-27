@@ -16,15 +16,12 @@ from juriscraper.OpinionSite import OpinionSite
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
-        self.base_url = 'http://www.courts.state.wy.us'
-        self.url = 'http://services.courts.state.wy.us/Supreme/OpinionsVM?StartDate=1%2F1%2F' + str(date.today().year)
         self.court_id = self.__module__
+        self.base_url = 'http://www.courts.state.wy.us'
+        self.url = 'https://opinions.courts.state.wy.us/Home/GetOpinions?StartDate=1%2F1%2F' + str(date.today().year)
 
     def _get_case_names(self):
-        case_names = []
-        for record in self.html:
-            case_names.append('%s v. %s' % (record['Appellant'], record['Appellee']))
-        return case_names
+        return ['%s v. %s' % (opinion['Appellant'], opinion['Appellee']) for opinion in self.html]
 
     def _get_download_urls(self):
         download_urls = []
@@ -47,10 +44,10 @@ class Site(OpinionSite):
         return case_dates
 
     def _get_docket_numbers(self):
-        return [record['DocketNumber'] for record in self.html]
+        return [opinion['DocketNumber'] for opinion in self.html]
 
     def _get_neutral_citations(self):
-        return [record['OpinionID'] for record in self.html]
+        return [opinion['OpinionID'] for opinion in self.html]
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
