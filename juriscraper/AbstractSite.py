@@ -23,9 +23,9 @@ phantomjs_executable_path = '/usr/local/bin/phantomjs'
 _legacy_path = "/usr/local/phantomjs/phantomjs"
 if os.path.isfile(_legacy_path) and os.access(_legacy_path, os.X_OK):
     phantomjs_executable_path = _legacy_path
-    # Alternatively, we could also possibly perform os.rename
-    # to /usr/local/bin if user is in "staff" group.
-    # Not sure of the best way to handle this; too many ways to skin the cat.
+    msg = """Please place phantomjs executable in /usr/local/bin.
+    See https://github.com/freelawproject/juriscraper/pull/241"""
+    raise DeprecationWarning(msg)
 
 
 class AbstractSite(object):
