@@ -16,7 +16,7 @@ from lxml import html
 from lxml.html import tostring
 from selenium import webdriver
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import logger, phantomjs_executable_path
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 from juriscraper.lib.string_utils import clean_if_py3
@@ -46,7 +46,7 @@ class Site(OpinionSite):
             return super(Site, self)._download(request_dict=request_dict)
 
         driver = webdriver.PhantomJS(
-            executable_path='/usr/local/phantomjs/phantomjs',
+            executable_path=phantomjs_executable_path,
             service_log_path=os.path.devnull,  # Disable ghostdriver.log
         )
         driver.implicitly_wait(30)

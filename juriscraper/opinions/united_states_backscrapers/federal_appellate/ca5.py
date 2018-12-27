@@ -8,7 +8,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import logger, phantomjs_executable_path
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.cookie_utils import normalize_cookies
 
@@ -39,7 +39,7 @@ class Site(OpinionSite):
         else:
             logger.info("Running Selenium browser PhantomJS...")
             driver = webdriver.PhantomJS(
-                executable_path='/usr/local/phantomjs/phantomjs',
+                executable_path=phantomjs_executable_path,
                 service_log_path=os.path.devnull,  # Disable ghostdriver.log
             )
 

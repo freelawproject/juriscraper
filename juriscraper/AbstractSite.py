@@ -1,3 +1,4 @@
+import os
 import hashlib
 import json
 from datetime import date, datetime
@@ -18,6 +19,13 @@ from juriscraper.lib.string_utils import (CaseNameTweaker, clean_string,
 from juriscraper.lib.test_utils import MockRequest
 
 logger = make_default_logger()
+phantomjs_executable_path = '/usr/local/bin/phantomjs'
+_legacy_path = "/usr/local/phantomjs/phantomjs"
+if os.path.isfile(_legacy_path) and os.access(_legacy_path, os.X_OK):
+    phantomjs_executable_path = _legacy_path
+    msg = """Please place phantomjs executable in /usr/local/bin.
+    See https://github.com/freelawproject/juriscraper/pull/241"""
+    raise DeprecationWarning(msg)
 
 
 class AbstractSite(object):
