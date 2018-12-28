@@ -8,6 +8,7 @@ from requests.models import Request, Response
 from .exceptions import SlownessException
 
 IS_TRAVIS = 'TRAVIS' in os.environ
+SKIP_SLOWNESS = "JURISCRAPER_SKIP_SLOWNESS_ERRORS" in os.environ or IS_TRAVIS
 
 
 class MockRequest(Request):
@@ -48,7 +49,7 @@ class MockRequest(Request):
 def warn_or_crash_slow_parser(duration, warn_duration=1, max_duration=15):
     msg = ''
     if duration > max_duration:
-        if sys.gettrace() is None and not IS_TRAVIS:
+        if sys.gettrace() is None and not SKIP_SLOWNESS:
             # Only do this if we're not debugging. Debuggers make things slower
             # and breakpoints make things stop.
             raise SlownessException(
