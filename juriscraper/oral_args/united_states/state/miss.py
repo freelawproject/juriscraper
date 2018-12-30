@@ -14,20 +14,6 @@ from juriscraper.lib.string_utils import titlecase
 from juriscraper.lib.string_utils import convert_date_string
 
 
-appellate_url = "https://courts.ms.gov/appellatecourts"
-
-
-def get_sitting_basename(year, sitting, court='coa'):
-    if court == 'sc':
-        court = 'scs'
-    return "{}{}{}.php".format(court, sitting, year)
-
-
-def get_sitting_url(year, sitting, court='coa'):
-    basename = get_sitting_basename(year, sitting, court)
-    return os.path.join(appellate_url, court, 'archive', str(year), basename)
-
-
 def make_year_iterable(year):
     "returns a (year, sitting) tuple"
     iterable = list()
@@ -47,11 +33,18 @@ class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "https://courts.ms.gov/appellatecourts/sc/archive/2018/scs{sitting}{year}.php".format(year=2018, sitting=6)  # noqa: E501
+        self._url_template = "https://courts.ms.gov/appellatecourts/{court}/archive/{year}/{scourt}{sitting}{year}.php"  # noqa: E501
         self.method = 'GET'
         self.uses_selenium = False
         # Complete this variable if you create a backscraper.
         self.back_scrape_iterable = make_back_scrape_iterable()
+        self.url = self._make_url(2018, 6)
+        
+    def _make_url(self, year, sitting):
+        data = dict(year=year, sitting=sitting)
+        court_name = dict(court="sc", scourt="scs")
+        data.update(court_name)
+        return self._url_template.format(**data)
 
     def _get_download_urls(self):
         path = "//iframe/following-sibling::a"
@@ -90,5 +83,5 @@ class Site(OralArgumentSite):
     def _download_backwards(self, page_tuple):
         "** this variable is a (year, sitting) tuple **"
         year, sitting = page_tuple
-        self.url = "https://courts.ms.gov/appellatecourts/sc/archive/{year}/scs{sitting}{year}.php".format(year=year, sitting=sitting)  # noqa: E501
+        self.url = self._make_url(year, sitting)
         self.html = self._download()

@@ -19,10 +19,9 @@ from .miss import Site as MissSite
 class Site(MissSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
-        self.url = "https://courts.ms.gov/appellatecourts/coa/archive/2018/coa{sitting}{year}.php".format(year=2018, sitting=6)  # noqa: E501
 
-    def _download_backwards(self, page_tuple):
-        "** this variable is a (year, sitting) tuple **"
-        year, sitting = page_tuple
-        self.url = "https://courts.ms.gov/appellatecourts/coa/archive/{year}/coa{sitting}{year}.php".format(year=year, sitting=sitting)  # noqa: E501
-        self.html = self._download()
+    def _make_url(self, year, sitting):
+        data = dict(year=year, sitting=sitting)
+        court_name = dict(court="coa", scourt="coa")
+        data.update(court_name)
+        return self._url_template.format(**data)
