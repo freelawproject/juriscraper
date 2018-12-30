@@ -16,6 +16,7 @@ from juriscraper.lib.string_utils import convert_date_string
 
 appellate_url = "https://courts.ms.gov/appellatecourts"
 
+
 def get_sitting_basename(year, sitting, court='coa'):
     if court == 'sc':
         court = 'scs'
@@ -46,17 +47,11 @@ class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://court-url.gov/some-path.html'
         self.url = "https://courts.ms.gov/appellatecourts/sc/archive/2018/scs{sitting}{year}.php".format(year=2018, sitting=6)  # noqa: E501
         self.method = 'GET'
         self.uses_selenium = False
         # Complete this variable if you create a backscraper.
         self.back_scrape_iterable = make_back_scrape_iterable()
-
-    def _download_backwards(self, page_tuple):
-        year, sitting = page_tuple
-        self.url = "https://courts.ms.gov/appellatecourts/sc/archive/2018/scs{sitting}{year}.php".format(year=year, sitting=sitting)  # noqa: E501
-        self.html = self._download()
 
     def _get_download_urls(self):
         """ This is an example of a basic piece of meta data accessible with a
@@ -67,8 +62,9 @@ class Site(OralArgumentSite):
             Note that relative URLs are made absolute by the AbstractSite
             object's cleanup routines, so doing so here is not needed.
         """
-        path = '//path/to/text/text()'
-        return list(self.html.xpath(path))
+        # path = '//path/to/text/text()'
+        path = "//table/tr/td/a"
+        return [el.get('href') for el in self.html.xpath(path)]
 
     def _get_case_names(self):
         """ This example demonstrates how to extract text from an element that
@@ -85,7 +81,8 @@ class Site(OralArgumentSite):
             cases where the name is provided in uppercase only.
         """
         case_names = []
-        for e in self.html.xpath('//path/to/an/element/p'):
+        path = "//table/tr/td/a"
+        for e in self.html.xpath(path):
             s = html.tostring(e, method='text', encoding='unicode')
             case_names.append(titlecase(s))
         return case_names
@@ -96,9 +93,15 @@ class Site(OralArgumentSite):
             on the site you are scraping. The datetime formats can be found
             here: http://docs.python.org/2/library/datetime.html
         """
-        path = '//path/to/text/text()'
-        return [convert_date_string(date_string) for date_string in
-                self.html.xpath(path)]
+        path = "//table/tr/td/a"
+        # path = '//path/to/text/text()'
+        elements = self.html.xpath(path)
+        date_strings = list()
+        for el in elements:
+            text = el.getnext().getnext().text_content()
+            dstring = convert_date_string(text)
+            date_strings.append(dstring)
+        return date_strings
 
     """
       High priority fields
@@ -109,7 +112,8 @@ class Site(OralArgumentSite):
         """
           This is typically of the form ##-####
         """
-        return None
+        urls = self._get_download_urls()
+        return [os.path.basename(u) for u in urls]
 
     def _get_judges(self):
         """
@@ -120,7 +124,7 @@ class Site(OralArgumentSite):
     """
       Optional method used for downloading multiple pages of a court site.
     """
-    def _download_backwards(self, date_str):
+    def _download_backwards(self, page_tuple):
         """ This is a simple method that can be used to generate Site objects
             that can be used to paginate through a court's entire website.
 
@@ -133,9 +137,8 @@ class Site(OralArgumentSite):
             iteration.
             That variable is often a date that is getting iterated or is simply
             a index (i), that we iterate upon.
-
-            This can also be used to hold notes useful to future backscraper
-            development.
+            ** this variable is a (year, sitting) tuple **
         """
-        self.url = 'http://example.com/new/url/%s' % date_str
+        year, sitting = page_tuple
+        self.url = "https://courts.ms.gov/appellatecourts/sc/archive/2018/scs{sitting}{year}.php".format(year=year, sitting=sitting)  # noqa: E501
         self.html = self._download()
