@@ -7,11 +7,17 @@ History:
   YYYY-MM-DD: Created by XXX
 """
 import os
+import calendar
 
 from lxml import html
 from juriscraper.OralArgumentSite import OralArgumentSite
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.lib.string_utils import convert_date_string
+
+DAYS = [d.lower() for d in calendar.day_name]
+
+def get_first_word(text):
+    return text.split()[0]
 
 
 def make_year_iterable(year):
@@ -29,6 +35,42 @@ def make_back_scrape_iterable():
     return iterable
 
 
+def parse_sibling_text_nodes(iframe):
+    textlist = iframe.xpath("./following-sibling::text()")
+    textlist = [el.strip() for el in textlist if el.strip()]
+    text_nodes = list()
+    for tnode in textlist:
+        if tnode != '\\r\\n':
+            text_nodes.append(tnode)
+    if len(text_nodes) > 1:
+        raise RuntimeError("Parsing error on {}".format(iframe))
+    return text_nodes
+
+
+def parse_emboldened_nodes(iframe):
+    # FIXME test './following-sibling::b|strong'
+    # or variants
+    boldlist = iframe.xpath('./following-sibling::b')
+    if not len(boldlist):
+        boldlist = iframe.xpath('./following-sibling::strong')
+    if not len(boldlist):
+        msg = "No emboldened node in {}".format(iframe.getparent())
+        raise RuntimeError(msg)
+    date_text = None
+    while len(boldlist):
+        el = boldlist.pop(0)
+        text = el.text_content()
+        # Expecting date string to start with capitalized day name
+        fword = get_first_word(text)
+        if fword.endswith(','):
+            fword = fword.split(',')[0]
+        if fword.lower() not in DAYS:
+            continue
+        else:
+            date_text = text
+    return date_text
+
+
 class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
@@ -38,8 +80,8 @@ class Site(OralArgumentSite):
         self.uses_selenium = False
         # Complete this variable if you create a backscraper.
         self.back_scrape_iterable = make_back_scrape_iterable()
-        self.url = self._make_url(2018, 6)
-        
+        self.url = "https://courts.ms.gov/appellatecourts/sc/scoa.php"
+
     def _make_url(self, year, sitting):
         data = dict(year=year, sitting=sitting)
         court_name = dict(court="sc", scourt="scs")
@@ -48,32 +90,39 @@ class Site(OralArgumentSite):
 
     def _get_download_urls(self):
         path = "//iframe/following-sibling::a"
-        return [el.get('href') for el in self.html.xpath(path)]
+        urls = list()
+        for el in self.html.xpath(path):
+            href = el.get('href')
+            if href not in urls:
+                urls.append(href)
+        return urls
 
     def _get_case_names(self):
-        case_names = []
+        case_names = list()
         path = "//iframe/following-sibling::a"
-        for e in self.html.xpath(path):
-            s = html.tostring(e, method='text', encoding='unicode')
-            case_names.append(titlecase(s))
+        urls = list()
+        for el in self.html.xpath(path):
+            href = el.get('href')
+            if href not in urls:
+                urls.append(href)
+                s = html.tostring(el, method='text', encoding='unicode')
+                case_names.append(titlecase(s))
         return case_names
 
     def _get_case_dates(self):
         path = "//iframe"
         elements = self.html.xpath(path)
-        date_strings = list()
+        dates = list()
         for el in elements:
-            dtel = el.xpath('./following-sibling::b')
-            if not len(dtel):
-                dtel = el.xpath('./following-sibling::strong')
-            if not len(dtel):
-                "Unable to find date {}".format(el)
-                raise RuntimeError(msg)
-            bel = dtel[0]
-            text = bel.text_content()
-            dstring = convert_date_string(text)
-            date_strings.append(dstring)
-        return date_strings
+            tlist = parse_sibling_text_nodes(el)
+            if len(tlist):
+                text = tlist[0]
+            else:
+                text = parse_emboldened_nodes(el)
+            date = convert_date_string(text)
+            dates.append(date)
+            print("DATES", dates)
+        return dates
 
     def _get_docket_numbers(self):
         "This is typically of the form year-casetype-casenumber-court"

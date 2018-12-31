@@ -19,6 +19,7 @@ from .miss import Site as MissSite
 class Site(MissSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
+        self.url = "https://courts.ms.gov/appellatecourts/coa/coaoa.php"
 
     def _make_url(self, year, sitting):
         data = dict(year=year, sitting=sitting)
