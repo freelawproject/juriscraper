@@ -121,7 +121,6 @@ class Site(OralArgumentSite):
                 text = parse_emboldened_nodes(el)
             date = convert_date_string(text)
             dates.append(date)
-            print("DATES", dates)
         return dates
 
     def _get_docket_numbers(self):
