@@ -17,14 +17,19 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        year = date.today().year
         self.elements = []
-        self.len_elements = 0
+        self.base_path = False
+        self.year = date.today().year
         self.regex = r'([^,]+), (\d{2}.\d{2}.\d{4}), (.*)'
+        self.url = 'http://www.oscn.net/applications/oscn/Index.asp?ftdb=STOKCSSC&year=%d&level=1' % self.year
+
+    def set_base_path(self):
+        # All test files should be edited to use year value of 2018
+        year = 2018 if self.method == 'LOCAL' else self.year
         self.base_path = "//a[contains(./text(), '%d')]" % year
-        self.url = 'http://www.oscn.net/applications/oscn/Index.asp?ftdb=STOKCSSC&year=%d&level=1' % year
 
     def _download(self, request_dict={}):
+        self.set_base_path()
         html = super(Site, self)._download(request_dict)
         self.elements = html.xpath(self.base_path)
         return html
