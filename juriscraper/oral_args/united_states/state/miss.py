@@ -37,15 +37,11 @@ def make_back_scrape_iterable():
 
 def parse_sibling_text_nodes(iframe):
     textlist = iframe.xpath("./following-sibling::text()")
-    textlist = [el.strip() for el in textlist if el.strip()]
-    text_nodes = list()
-    for tnode in textlist:
-        if tnode != '\\r\\n':
-            text_nodes.append(tnode)
-    if len(text_nodes) > 1:
-        raise RuntimeError("Parsing error on {}".format(iframe))
-    return text_nodes
-
+    textlist = [el.strip() for el in textlist
+                if el.strip() and el.strip() != "\\r\\n"]
+    if len(textlist) > 1:
+        raise RuntimeError("Parsing error on {}".format(textlist))
+    return textlist
 
 def parse_emboldened_nodes(iframe):
     # FIXME test './following-sibling::b|strong'
