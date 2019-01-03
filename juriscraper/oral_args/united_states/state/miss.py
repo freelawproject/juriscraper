@@ -43,6 +43,7 @@ def parse_sibling_text_nodes(iframe):
         raise RuntimeError("Parsing error on {}".format(textlist))
     return textlist
 
+
 def parse_emboldened_nodes(iframe):
     # FIXME test './following-sibling::b|strong'
     # or variants
