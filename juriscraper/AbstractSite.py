@@ -26,8 +26,6 @@ if os.path.isfile(_legacy_path) and os.access(_legacy_path, os.X_OK):
     phantomjs_executable_path = _legacy_path
     msg = """Please place phantomjs executable in /usr/local/bin.
     See https://github.com/freelawproject/juriscraper/pull/241"""
-    # oops don't raise DeprecationWarning(msg)
-    # https://stackoverflow.com/a/3891852/1869821
     warnings.warn(msg, DeprecationWarning)
 
 
