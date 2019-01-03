@@ -83,7 +83,7 @@ class Site(OralArgumentSite):
         return self._url_template.format(**data)
 
     def _get_download_urls(self):
-        "These urls should be downloaded with youtube-dl"
+        # These urls should be downloaded with youtube-dl
         path = "//iframe/following-sibling::a/@href"
         urls = list()
         for href in self.html.xpath(path):
