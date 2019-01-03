@@ -1,10 +1,10 @@
-"""Scraper for [Full name of court]
-CourtID: [unique abbreviation to be used by software/filesystem]
-Court Short Name: [standard abbreviation used in citations]
-Author:
-Reviewer:
+"""Scraper for the Supreme Court of Mississippi
+CourtID: miss
+Court Short Name: Miss
+Author: umeboshi2
+Reviewer: mlr
 History:
-  YYYY-MM-DD: Created by XXX
+  2019-01-03: Created by Joseph Rawson
 """
 import os
 import calendar
@@ -45,11 +45,8 @@ def parse_sibling_text_nodes(iframe):
 
 
 def parse_emboldened_nodes(iframe):
-    # FIXME test './following-sibling::b|strong'
-    # or variants
-    boldlist = iframe.xpath('./following-sibling::b')
-    if not len(boldlist):
-        boldlist = iframe.xpath('./following-sibling::strong')
+    path = './following-sibling::b | ./following-sibling::strong'
+    boldlist = iframe.xpath(path)
     if not len(boldlist):
         msg = "No emboldened node in {}".format(iframe.getparent())
         raise RuntimeError(msg)
@@ -86,10 +83,10 @@ class Site(OralArgumentSite):
         return self._url_template.format(**data)
 
     def _get_download_urls(self):
-        path = "//iframe/following-sibling::a"
+        "These urls should be downloaded with youtube-dl"
+        path = "//iframe/following-sibling::a/@href"
         urls = list()
-        for el in self.html.xpath(path):
-            href = el.get('href')
+        for href in self.html.xpath(path):
             if href not in urls:
                 urls.append(href)
         return urls

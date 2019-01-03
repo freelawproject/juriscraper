@@ -1,18 +1,11 @@
-"""Scraper for [Full name of court]
-CourtID: [unique abbreviation to be used by software/filesystem]
-Court Short Name: [standard abbreviation used in citations]
-Author:
-Reviewer:
+"""Scraper for the Mississippi Court of Appeals
+CourtID: missctapp
+Court Short Name: Miss
+Author: umeboshi2
+Reviewer: mlr
 History:
-  YYYY-MM-DD: Created by XXX
+  2019-01-03: Created by Joseph Rawson
 """
-import os
-
-from lxml import html
-from juriscraper.OralArgumentSite import OralArgumentSite
-from juriscraper.lib.string_utils import titlecase
-from juriscraper.lib.string_utils import convert_date_string
-
 from .miss import Site as MissSite
 
 
