@@ -2,6 +2,7 @@ import os
 import hashlib
 import json
 from datetime import date, datetime
+import warnings
 
 import certifi
 import requests
@@ -25,7 +26,9 @@ if os.path.isfile(_legacy_path) and os.access(_legacy_path, os.X_OK):
     phantomjs_executable_path = _legacy_path
     msg = """Please place phantomjs executable in /usr/local/bin.
     See https://github.com/freelawproject/juriscraper/pull/241"""
-    raise DeprecationWarning(msg)
+    # oops don't raise DeprecationWarning(msg)
+    # https://stackoverflow.com/a/3891852/1869821
+    warnings.warn(msg, DeprecationWarning)
 
 
 class AbstractSite(object):
