@@ -9,8 +9,6 @@ from requests.models import Request, Response
 from .exceptions import SlownessException
 
 WARN_SLOW_SRAPERS = 'TRAVIS' in os.environ
-# FIXME: when testing, should we only find the first warning
-# or provide a warning for each slow scraper?
 warnings.simplefilter("always")
 
 
