@@ -3,6 +3,7 @@ import re
 
 from lxml import etree
 from lxml.html import HtmlElement
+import six
 from six.moves.urllib.parse import urljoin
 
 from .utils import make_doc1_url, is_pdf
@@ -80,7 +81,7 @@ class BaseReport(object):
         :param text: A unicode object
         :return: None
         """
-        assert isinstance(text, unicode), \
+        assert isinstance(text, six.text_type), \
             "Input must be unicode, not %s" % type(text)
         text = clean_html(text)
         self.check_validity(text)
