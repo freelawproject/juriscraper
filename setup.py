@@ -58,7 +58,7 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     install_requires=requirements,
-    tests_require=['jsondate', 'mock', 'vcrpy'],
+    tests_require=['mock', 'vcrpy'],
     include_package_data=True,
     test_suite='tests',
 )

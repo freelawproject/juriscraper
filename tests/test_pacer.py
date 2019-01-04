@@ -8,7 +8,7 @@ import time
 import unittest
 from datetime import timedelta, date
 
-import jsondate as json
+import juriscraper.lib.jsondate as json
 import mock
 import vcr
 from requests import ConnectionError
