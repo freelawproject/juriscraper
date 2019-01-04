@@ -6,6 +6,7 @@ presents some more information for BK cases.
 import pprint
 import sys
 
+import six
 from six.moves import range
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
@@ -163,7 +164,9 @@ class CaseQuery(BaseDocketReport, BaseReport):
                 assert bold_text.endswith(':'), \
                     "Boldface fieldnames should end with colon (:)"
                 field = bold_text.rstrip(':')
-                clean_field = field.lower().replace(' ', '_').decode('utf-8')
+                clean_field = field.lower().replace(' ', '_')
+                if six.PY2:
+                    clean_field = clean_field.decode('utf-8')
                 clean_field = field_names.get(clean_field, clean_field)
 
                 value = bold.tail.strip()
