@@ -4,7 +4,8 @@ Court Short Name: VT
 Court Contact: submit form here https://www.vermontjudiciary.org/website-feedback-form
 """
 
-import vt
+from __future__ import absolute_import
+from . import vt
 
 
 class Site(vt.Site):

@@ -2,7 +2,8 @@
 # CourtID: iowactapp
 # Court Short Name: iowactapp
 
-import iowa
+from __future__ import absolute_import
+from . import iowa
 from juriscraper.AbstractSite import logger
 
 
