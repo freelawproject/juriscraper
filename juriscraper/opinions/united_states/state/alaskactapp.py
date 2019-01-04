@@ -4,7 +4,6 @@ ID: alaskactapp
 Court Short Name: Alaska Court of Appeals
 """
 
-from __future__ import absolute_import
 from . import alaska
 
 

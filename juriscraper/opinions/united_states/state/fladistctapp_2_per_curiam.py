@@ -2,7 +2,6 @@
 # CourtID: flaapp2
 # Court Short Name: flaapp2
 
-from __future__ import absolute_import
 from . import fladistctapp_1_per_curiam
 
 
