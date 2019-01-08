@@ -6,6 +6,4 @@ __all__ = [
     'illappct_4th_dist',
     'illappct_5th_dist',
     'illappct_workers_comp',
-    'miss',
-    'missctapp',
 ]
