@@ -99,12 +99,12 @@ class PossibleCaseNumberApi(BaseReport):
                         return True
                     return number == office_number
 
-                nodes = filter(correct_office_number, nodes)
+                nodes = list(filter(correct_office_number, nodes))
 
             if len(nodes) > 1 and docket_number_letters is not None:
                 # Remove items by docket number, if they have cv or cr.
                 f = lambda node: docket_number_letters in node.xpath('./@number')[0]
-                nodes = filter(f, nodes)
+                nodes = list(filter(f, nodes))
 
             if len(nodes) > 1:
                 # If we only have sequential defendant attributes, pick the

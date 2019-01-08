@@ -4,6 +4,7 @@ import pprint
 import re
 import sys
 
+import six
 from dateutil.tz import gettz
 from lxml import etree
 from lxml.html import HtmlElement, fromstring, tostring
@@ -86,7 +87,7 @@ class BaseDocketReport(object):
 
         If cast_to_date is True, convert the string to a date object.
         """
-        if isinstance(query_strings, basestring):
+        if isinstance(query_strings, six.string_types):
             query_strings = [query_strings]
 
         for v in query_strings:
