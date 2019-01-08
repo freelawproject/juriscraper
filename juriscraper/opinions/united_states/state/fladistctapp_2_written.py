@@ -2,7 +2,7 @@
 # CourtID: flaapp2
 # Court Short Name: flaapp2
 
-import fladistctapp_2_per_curiam
+from . import fladistctapp_2_per_curiam
 
 
 class Site(fladistctapp_2_per_curiam.Site):

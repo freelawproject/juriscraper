@@ -4,7 +4,7 @@ ID: alaskactapp
 Court Short Name: Alaska Court of Appeals
 """
 
-import alaska
+from . import alaska
 
 
 class Site(alaska.Site):

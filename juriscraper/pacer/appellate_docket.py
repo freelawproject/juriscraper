@@ -1,3 +1,4 @@
+from __future__ import print_function
 import pprint
 import re
 import sys
@@ -697,13 +698,13 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
 def _main():
     if len(sys.argv) != 2:
-        print "Usage: python -m juriscraper.pacer.appellate_docket filepath"
-        print "Please provide a path to an HTML file to parse."
+        print("Usage: python -m juriscraper.pacer.appellate_docket filepath")
+        print("Please provide a path to an HTML file to parse.")
         sys.exit(1)
     report = AppellateDocketReport(
         'ca9')  # Court ID is only needed for querying.
     filepath = sys.argv[1]
-    print "Parsing HTML file at %s" % filepath
+    print("Parsing HTML file at {}".format(filepath))
     with open(filepath, 'r') as f:
         text = f.read().decode('utf-8')
     report._parse_text(text)

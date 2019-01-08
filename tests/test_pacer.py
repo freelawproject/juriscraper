@@ -383,7 +383,7 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
             json_path = os.path.join(dirname, '%s.json' % filename_sans_ext)
 
             report = PossibleCaseNumberApi('anything')
-            with open(path, 'r') as f:
+            with open(path, 'rb') as f:
                 report._parse_text(f.read().decode('utf-8'))
             data = report.data(case_name=filename_sans_ext)
             if os.path.exists(json_path):
@@ -553,7 +553,7 @@ class ParsingTestCase(object):
                 report = test_class(court)
             else:
                 report = test_class()
-            with open(path, 'r') as f:
+            with open(path, 'rb') as f:
                 report._parse_text(f.read().decode('utf-8'))
             data = report.data
             if not os.path.exists(json_path):
@@ -760,7 +760,7 @@ class DocketParseTest(unittest.TestCase):
             court = filename_sans_ext.split('_')[0]
 
             report = DocketReport(court)
-            with open(path, 'r') as f:
+            with open(path, 'rb') as f:
                 report._parse_text(f.read().decode('utf-8'))
             data = report.data
 
