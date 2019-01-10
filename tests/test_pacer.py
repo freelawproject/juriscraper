@@ -6,7 +6,7 @@ import os
 import sys
 import time
 import unittest
-from datetime import timedelta, date
+from datetime import date, timedelta
 
 import jsondate as json
 import mock
@@ -17,17 +17,16 @@ from juriscraper.lib.exceptions import PacerLoginException, ParsingException
 from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.lib.test_utils import warn_or_crash_slow_parser
-from juriscraper.pacer import DocketReport, FreeOpinionReport, \
-    PossibleCaseNumberApi, AttachmentPage, ShowCaseDocApi, \
-    DocketHistoryReport, InternetArchive, AppellateDocketReport, CaseQuery
+from juriscraper.pacer import AppellateDocketReport, AttachmentPage, CaseQuery, \
+    DocketHistoryReport, DocketReport, FreeOpinionReport, InternetArchive, \
+    PossibleCaseNumberApi, ShowCaseDocApi
 from juriscraper.pacer.http import PacerSession
 from juriscraper.pacer.rss_feeds import PacerRssFeed
-from juriscraper.pacer.utils import (
-    get_courts_from_json, get_court_id_from_url,
-    get_pacer_case_id_from_docket_url, get_pacer_doc_id_from_doc1_url,
-    reverse_goDLS_function, make_doc1_url,
-    clean_pacer_object
-)
+from juriscraper.pacer.utils import (clean_pacer_object, get_court_id_from_url,
+                                     get_courts_from_json,
+                                     get_pacer_case_id_from_docket_url,
+                                     get_pacer_doc_id_from_doc1_url,
+                                     make_doc1_url, reverse_goDLS_function)
 from . import JURISCRAPER_ROOT, TESTS_ROOT
 
 vcr = vcr.VCR(cassette_library_dir=os.path.join(TESTS_ROOT, 'fixtures/cassettes'))
@@ -251,7 +250,6 @@ class PacerFreeOpinionsTest(unittest.TestCase):
                 self.assertEqual(r.headers['Content-Type'], 'application/pdf')
 
     @SKIP_IF_NO_PACER_LOGIN
-    @vcr.use_cassette(record_mode='new_episodes')
     def test_download_simple_pdf(self):
         """Can we download a PDF document returned directly?"""
         report = self.reports['alnb']
@@ -259,7 +257,6 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         self.assertEqual(r.headers['Content-Type'], 'application/pdf')
 
     @SKIP_IF_NO_PACER_LOGIN
-    @vcr.use_cassette(record_mode='new_episodes')
     def test_download_iframed_pdf(self):
         """Can we download a PDF document returned in IFrame?"""
         report = self.reports['vib']
@@ -267,7 +264,6 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         self.assertEqual(r.headers['Content-Type'], 'application/pdf')
 
     @SKIP_IF_NO_PACER_LOGIN
-    @vcr.use_cassette(record_mode='new_episodes')
     def test_download_unavailable_pdf(self):
         """Do we throw an error if the item is unavailable?"""
         # 5:11-cr-40057-JAR, document 3
