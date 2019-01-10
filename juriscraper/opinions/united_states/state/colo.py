@@ -142,7 +142,7 @@ class Site(OpinionSite):
             return []
         for anchor in anchors:
             text = self._extract_text_from_anchor(anchor)
-            if self.is_this_skippable_date_anchor(text, date_obj):
+            if self.is_this_skippable_date_anchor(text):
                 # Sometimes COBAR includes link to worthless Opinion
                 # Announcement PDF provided by colo court site. These
                 # links usually have text that is a simple date string.
@@ -284,14 +284,13 @@ class Site(OpinionSite):
             return True
         if anchor_count == 1:
             text = self._extract_text_from_anchor(anchors[0])
-            return self.is_this_skippable_date_anchor(text, date_obj)
+            return self.is_this_skippable_date_anchor(text)
 
-    def is_this_skippable_date_anchor(self, text, date_obj):
+    def is_this_skippable_date_anchor(self, text):
         """Return true is link text is parsible date"""
         try:
-            string_to_date = convert_date_string(text)
-            if string_to_date == date_obj:
-                return True
+            convert_date_string(text)
+            return True
         except:
             pass
         return False
