@@ -18,6 +18,7 @@ class Site(OpinionSite):
         'A': 'Samuel Alito',
         'AS': 'Antonin Scalia',
         'B': 'Stephen Breyer',
+        'BK': 'Brett Kavanaugh',
         'D': 'Decree',
         'DS': 'David Souter',
         'EK': 'Elana Kagan',
