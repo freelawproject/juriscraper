@@ -16,6 +16,10 @@ class SlownessWarning(UserWarning):
     pass
 
 
+class CompareFileGeneratedWarning(UserWarning):
+    pass
+
+
 class TooSlowWarning(SlownessWarning):
     pass
 
@@ -77,3 +81,8 @@ def warn_or_crash_slow_parser(duration, warn_duration=1, max_duration=15):
     else:
         msg = ''
     return msg
+
+
+def warn_generated_compare_file(path_to_compare_file):
+    warning = 'WARNING: GENERATED COMPARE FILE: %s' % path_to_compare_file
+    warnings.warn(warning, CompareFileGeneratedWarning)

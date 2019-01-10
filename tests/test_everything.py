@@ -24,7 +24,7 @@ from juriscraper.lib.string_utils import (
     CaseNameTweaker, convert_date_string, normalize_dashes,
     split_date_range_string
 )
-from juriscraper.lib.test_utils import warn_or_crash_slow_parser
+from juriscraper.lib.test_utils import warn_or_crash_slow_parser, warn_generated_compare_file
 from juriscraper.opinions.united_states.state import colo, mass, massappct, \
     nh, pa
 from juriscraper.oral_args.united_states.federal_appellate import ca6
@@ -133,6 +133,7 @@ class ScraperExampleTest(unittest.TestCase):
         num_warnings = 0
         cnt = CaseNameTweaker()
         json_compare_extension = '.compare.json'
+        json_compare_files_generated = []
         for module_string in module_strings:
             package, module = module_string.rsplit('.', 1)
             mod = __import__("%s.%s" % (package, module),
@@ -205,6 +206,8 @@ class ScraperExampleTest(unittest.TestCase):
                         # Generate corresponding json file if it doesn't
                         # already exist. This should only happen once
                         # when adding a new example html file.
+                        warn_generated_compare_file(json_path)
+                        json_compare_files_generated.append(json_path)
                         with open(json_path, 'w') as json_example:
                             json.dump(json_data, json_example, indent=2)
                 t2 = time.time()
@@ -222,6 +225,11 @@ class ScraperExampleTest(unittest.TestCase):
                   num_scrapers=num_scrapers,
                   num_example_files=num_example_files,
                   num_warnings=num_warnings,))
+        if json_compare_files_generated:
+            msg = 'Generated compare file(s) during test, please review before proceeding. ' \
+                  'If the data looks good, run tests again, then be sure to include ' \
+                  'the new compare file(s) in your commit: %s'
+            self.fail(msg % ', '.join(json_compare_files_generated))
         if num_warnings:
             print("\nAt least one speed warning was triggered during the "
                    "tests. If this is due to a slow scraper you wrote, we "

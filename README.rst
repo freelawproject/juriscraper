@@ -211,6 +211,28 @@ We got that! You can (and should) run the tests with
 ``tox``. This will run ``python setup.py test`` for all supported Python runtimes,
 iterating over all of the ``*_example*`` files and run the scrapers against them.
 
+Each scraper has one or more ``*_example*`` files.  When creating a new scraper,
+or covering a new use case for an existing scraper, you will have to create an
+example file yourself.  Please see the files under ``tests/examples/`` to see
+for yourself how the naming structure works.  What you want to put in your new
+example file is the HTML/json/xml that the scraper in question needs to test
+parsing.  Sometimes creating these files can be tricky, but more often than not,
+it is as simple as getting the data to display in your browser, viewing then copying
+the page source, then pasting that text into your new example file.
+
+Each ``*_example*`` file has a corresponding ``*_example*.compare.json`` file. This
+file contains a json data object that represents the data extracted when parsing
+the corresponding ``*_example*`` file.  These are used to ensure that each scraper
+parses the exact data we expect from each of its ``*_example*`` files. You do not
+need to create these ``*_example*.compare.json`` files yourself.  Simply create
+your ``*_example*`` file, then run the test suite.  It will fail the first time,
+indicating that a new ``*_example*.compare.json`` file was generated.  You should
+review that file, make sure the data is correct, then re-run the test suite.  This
+time, the tests should pass (or at least they shouldn't fail because of the newly
+generated ``*_example*.compare.json`` file).  Once the tests are passing,
+feel free to commit, but **please remember** to include the new ``*_example*``
+**and** ``*_example*.compare.json`` files in your commit.
+
 Individual tests can be run with:
 
    python -m unittest tests.test_pacer.DocketParseTest.test_district_court_dockets
