@@ -1052,19 +1052,17 @@ class DocketReport(BaseDocketReport, BaseReport):
             if self.is_adversary_proceeding:
                 case_name += u' - Adversary Proceeding'
         else:
-            matches = []
             # Skip the last value, it's a concat of all previous values and
             # isn't needed for case name matching.
-            for v in self.metadata_values[:-1]:
-                for regex in self.case_name_regexes:
-                    m = regex.search(v)
-                    if m:
-                        matches.append(m)
-                        break
+            case_name = None
+            v = self.metadata_values[0]
+            for regex in self.case_name_regexes:
+                m = regex.search(v)
+                if m:
+                    case_name = m.group(1)
+                    break
 
-            if len(matches) == 1:
-                case_name = matches[0].group(1)
-            else:
+            if case_name is None:
                 case_name = u"Unknown Case Title"
 
         return clean_string(harmonize(case_name))
