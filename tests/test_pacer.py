@@ -10,7 +10,6 @@ from datetime import date, timedelta
 
 import jsondate as json
 import mock
-import vcr
 from requests import ConnectionError
 
 from juriscraper.lib.exceptions import PacerLoginException, ParsingException
@@ -28,8 +27,6 @@ from juriscraper.pacer.utils import (clean_pacer_object, get_court_id_from_url,
                                      get_pacer_doc_id_from_doc1_url,
                                      make_doc1_url, reverse_goDLS_function)
 from . import JURISCRAPER_ROOT, TESTS_ROOT
-
-vcr = vcr.VCR(cassette_library_dir=os.path.join(TESTS_ROOT, 'fixtures/cassettes'))
 
 PACER_USERNAME = os.environ.get('PACER_USERNAME', None)
 PACER_PASSWORD = os.environ.get('PACER_PASSWORD', None)
@@ -188,7 +185,6 @@ class PacerFreeOpinionsTest(unittest.TestCase):
             self.reports[court_id] = FreeOpinionReport(court_id, pacer_session)
 
     @unittest.skip('disabling during refactor')
-    @vcr.use_cassette(record_mode='new_episodes')
     def test_extract_written_documents_report(self):
         """Do all the written reports work?"""
 
