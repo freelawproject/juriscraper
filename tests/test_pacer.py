@@ -167,8 +167,7 @@ class PacerAuthTest(unittest.TestCase):
 class PacerFreeOpinionsTest(unittest.TestCase):
     """A variety of tests relating to the Free Written Opinions report"""
 
-    @classmethod
-    def setUpClass(cls):
+    def setUp(self):
         pacer_session = PacerSession()
 
         if PACER_USERNAME and PACER_PASSWORD:
@@ -177,16 +176,16 @@ class PacerFreeOpinionsTest(unittest.TestCase):
                                          password=PACER_PASSWORD)
 
         with open(os.path.join(JURISCRAPER_ROOT, 'pacer/courts.json')) as j:
-            cls.courts = get_courts_from_json(json.load(j))
+            self.courts = get_courts_from_json(json.load(j))
 
         path = os.path.join(TESTS_ROOT, 'fixtures/valid_free_opinion_dates.json')
         with open(path) as j:
-            cls.valid_dates = json.load(j)
+            self.valid_dates = json.load(j)
 
-        cls.reports = {}
-        for court in cls.courts:
+        self.reports = {}
+        for court in self.courts:
             court_id = get_court_id_from_url(court['court_link'])
-            cls.reports[court_id] = FreeOpinionReport(court_id, pacer_session)
+            self.reports[court_id] = FreeOpinionReport(court_id, pacer_session)
 
     @unittest.skip('disabling during refactor')
     @vcr.use_cassette(record_mode='new_episodes')
@@ -644,12 +643,11 @@ class PacerRssFeedTest(unittest.TestCase, ParsingTestCase):
 class PacerDocketReportTest(unittest.TestCase):
     """A variety of tests for the docket report"""
 
-    @classmethod
-    def setUpClass(cls):
+    def setUp(self):
         pacer_session = PacerSession(username=PACER_USERNAME,
                                      password=PACER_PASSWORD)
-        cls.report = DocketReport('cand', pacer_session)
-        cls.pacer_case_id = '186730'  # 4:06-cv-07294 Foley v. Bates
+        self.report = DocketReport('cand', pacer_session)
+        self.pacer_case_id = '186730'  # 4:06-cv-07294 Foley v. Bates
 
     @staticmethod
     def _count_rows(html):
