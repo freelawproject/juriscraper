@@ -171,6 +171,7 @@ class PacerFreeOpinionsTest(unittest.TestCase):
             # CAND chosen at random
             pacer_session = PacerSession(username=PACER_USERNAME,
                                          password=PACER_PASSWORD)
+            pacer_session.login()
 
         with open(os.path.join(JURISCRAPER_ROOT, 'pacer/courts.json')) as j:
             self.courts = get_courts_from_json(json.load(j))
@@ -642,6 +643,7 @@ class PacerDocketReportTest(unittest.TestCase):
     def setUp(self):
         pacer_session = PacerSession(username=PACER_USERNAME,
                                      password=PACER_PASSWORD)
+        pacer_session.login()
         self.report = DocketReport('cand', pacer_session)
         self.pacer_case_id = '186730'  # 4:06-cv-07294 Foley v. Bates
 
