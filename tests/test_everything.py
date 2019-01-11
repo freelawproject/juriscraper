@@ -11,27 +11,24 @@ import sys
 import time
 import unittest
 
-import vcr
-
-from juriscraper.lib.date_utils import (
-    parse_dates, quarter, is_first_month_in_quarter, fix_future_year_typo,
-    make_date_range_tuples)
+from juriscraper.lib.date_utils import (fix_future_year_typo,
+                                        is_first_month_in_quarter,
+                                        make_date_range_tuples, parse_dates,
+                                        quarter)
 from juriscraper.lib.importer import build_module_list
-from juriscraper.lib.judge_parsers import normalize_judge_string, \
-    normalize_judge_names
-from juriscraper.lib.string_utils import (
-    clean_string, fix_camel_case, force_unicode, harmonize, titlecase,
-    CaseNameTweaker, convert_date_string, normalize_dashes,
-    split_date_range_string
-)
-from juriscraper.lib.test_utils import warn_or_crash_slow_parser, warn_generated_compare_file
+from juriscraper.lib.judge_parsers import normalize_judge_names, \
+    normalize_judge_string
+from juriscraper.lib.string_utils import (CaseNameTweaker, clean_string,
+                                          convert_date_string, fix_camel_case,
+                                          force_unicode, harmonize,
+                                          normalize_dashes,
+                                          split_date_range_string, titlecase)
+from juriscraper.lib.test_utils import warn_generated_compare_file, \
+    warn_or_crash_slow_parser
 from juriscraper.opinions.united_states.state import colo, mass, massappct, \
     nh, pa
 from juriscraper.oral_args.united_states.federal_appellate import ca6
 from juriscraper.pacer.docket_utils import normalize_party_types
-from . import TESTS_ROOT
-
-vcr = vcr.VCR(cassette_library_dir=os.path.join(TESTS_ROOT, 'fixtures/cassettes'))
 
 
 class DateTest(unittest.TestCase):
@@ -118,7 +115,6 @@ class ScraperExampleTest(unittest.TestCase):
         # Re-enable logging
         logging.disable(logging.NOTSET)
 
-    @vcr.use_cassette(record_mode='new_episodes')
     def test_scrape_all_example_files(self):
         """Finds all the $module_example* files and tests them with the sample
         scraper.

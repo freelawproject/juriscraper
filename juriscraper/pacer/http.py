@@ -264,6 +264,8 @@ class PacerSession(requests.Session):
             else:
                 return False
 
+        # Detect if we are logged in. If so, no need to do so. If not, we login
+        # again below.
         found_district_logout_link = '/cgi-bin/login.pl?logout' in r.text
         found_appellate_logout_link = 'InvalidUserLogin.jsp' in r.text
         if any([found_district_logout_link, found_appellate_logout_link]):

@@ -703,7 +703,6 @@ class PacerDocketReportTest(unittest.TestCase):
         self.assertNotIn('Cheema', self.report.response.text,
                          msg="Got party info but it was not requested.")
 
-
     @SKIP_IF_NO_PACER_LOGIN
     def test_using_same_report_twice(self):
         """Do the caches get properly nuked between runs?
