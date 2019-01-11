@@ -12,6 +12,44 @@ logger = make_default_logger()
 requests.packages.urllib3.disable_warnings(exceptions.InsecureRequestWarning)
 
 
+def check_if_logged_in_page(text):
+    """Is this a valid HTML page from PACER?
+
+    Check if the html in 'text' is from a valid PACER page or valid PACER XML
+    document, or if it's from a page telling you to log in or informing you
+    that you're not logged in.
+    :param text: The HTML or XML of the page to test
+    :return boolean: True if logged in, False if not.
+    """
+    valid_case_number_query = '<case number=' in text or \
+                              "<request number=" in text
+    no_results_case_number_query = re.search('<message.*Cannot find', text)
+    sealed_case_query = re.search('<message.*Case Under Seal', text)
+    if any([valid_case_number_query, no_results_case_number_query,
+            sealed_case_query]):
+        not_logged_in = re.search('text.*Not logged in', text)
+        if not_logged_in:
+            # An unauthenticated PossibleCaseNumberApi XML result. Simply
+            # continue onwards. The complete result looks like:
+            # <request number='1501084'>
+            #   <message text='Not logged in.  Please refresh this page.'/>
+            # </request>
+            # An authenticated PossibleCaseNumberApi XML result.
+            return False
+        else:
+            return True
+
+    # Detect if we are logged in. If so, no need to do so. If not, we login
+    # again below.
+    found_district_logout_link = '/cgi-bin/login.pl?logout' in text
+    found_appellate_logout_link = 'InvalidUserLogin.jsp' in text
+    if any([found_district_logout_link, found_appellate_logout_link]):
+        # A normal HTML page we're logged into.
+        return True
+
+    return False
+
+
 class PacerSession(requests.Session):
     """
     Extension of requests.Session to handle PACER oddities making it easier
@@ -246,30 +284,8 @@ class PacerSession(requests.Session):
         if is_pdf(r):
             return False
 
-        valid_case_number_query = '<case number=' in r.text or \
-            "<request number=" in r.text
-        no_results_case_number_query = re.search('<message.*Cannot find', r.text)
-        sealed_case_query = re.search('<message.*Case Under Seal', r.text)
-        if any([valid_case_number_query, no_results_case_number_query,
-                sealed_case_query]):
-            not_logged_in = re.search('text.*Not logged in', r.text)
-            if not_logged_in:
-                # An unauthenticated PossibleCaseNumberApi XML result. Simply
-                # continue onwards. The complete result looks like:
-                # <request number='1501084'>
-                #   <message text='Not logged in.  Please refresh this page.'/>
-                # </request>
-                # An authenticated PossibleCaseNumberApi XML result.
-                pass
-            else:
-                return False
-
-        # Detect if we are logged in. If so, no need to do so. If not, we login
-        # again below.
-        found_district_logout_link = '/cgi-bin/login.pl?logout' in r.text
-        found_appellate_logout_link = 'InvalidUserLogin.jsp' in r.text
-        if any([found_district_logout_link, found_appellate_logout_link]):
-            # A normal HTML page we're logged into.
+        login_again = check_if_logged_in_page(r.text)
+        if not login_again:
             return False
 
         if self.username and self.password:
@@ -278,7 +294,7 @@ class PacerSession(requests.Session):
             self.login()
             return True
         else:
-            msg = (u"Invalid/expired PACER session and do not have credentials "
-                   u"for re-login.")
+            msg = (u"Invalid/expired PACER session and do not have "
+                   u"credentials for re-login.")
             logger.error(msg)
             raise PacerLoginException(msg)
