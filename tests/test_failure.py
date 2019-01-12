@@ -17,6 +17,31 @@ SKIP_IF_NO_PACER_LOGIN = unittest.skipUnless(
     reason=PACER_SETTINGS_MSG)
 
 
+class AuthTest(unittest.TestCase):
+    """Test logging in twice."""
+
+    @staticmethod
+    def _count_rows(html):
+        """Count the rows in the docket report.
+
+        :param html: The HTML of the docket report.
+        :return: The count of the number of rows.
+        """
+        tree = get_html_parsed_text(html)
+        return len(tree.xpath('//table[./tr/td[3]]/tr')) - 1  # No header row
+
+    def test_double_auth(self):
+        s = PacerSession(username=PACER_USERNAME, password=PACER_PASSWORD)
+        s.login()
+        s.login()
+        report = DocketReport('cand', s)
+        report.query('186730', date_start=date(2007, 11, 1))
+        row_count = self._count_rows(report.response.text)
+        self.assertEqual(2, row_count, msg="Didn't get expected number of "
+                                           "rows when filtering by start "
+                                           "date. Got %s." % row_count)
+
+
 class PacerDocketReportTest(unittest.TestCase):
     """A variety of tests for the docket report"""
 
@@ -45,6 +70,7 @@ class PacerDocketReportTest(unittest.TestCase):
         self.assertIn('Foley v. Bates', self.report.response.text,
                       msg="Super basic query failed")
 
+        self.report = DocketReport('cand', self.pacer_session)
         self.report.query(self.pacer_case_id, date_start=date(2007, 11, 1))
         row_count = self._count_rows(self.report.response.text)
         self.assertEqual(2, row_count, msg="Didn't get expected number of "
