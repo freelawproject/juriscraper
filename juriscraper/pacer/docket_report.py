@@ -942,16 +942,12 @@ class DocketReport(BaseDocketReport, BaseReport):
 
     def _set_metadata_values(self):
         # The first ancestor table of the table cell containing "date filed"
-        try:
-            table = self.tree.xpath(
-                # Match any td containing Date [fF]iled
-                u'//td[.//text()[contains(translate(., "f", "F"), "Date Filed:")]]'
-                # And find its highest ancestor table that lacks a center tag.
-                u'/ancestor::table[not(.//center)][last()]'
-            )[0]
-        except IndexError:
-            print('IndexError!')
-            print(tostring(self.tree, encoding='utf-8'))
+        table = self.tree.xpath(
+            # Match any td containing Date [fF]iled
+            u'//td[.//text()[contains(translate(., "f", "F"), "Date Filed:")]]'
+            # And find its highest ancestor table that lacks a center tag.
+            u'/ancestor::table[not(.//center)][last()]'
+        )[0]
         cells = table.xpath(u'.//td')
         # Convert the <br> separated content into text strings, treating as
         # much as possible as HTML.
