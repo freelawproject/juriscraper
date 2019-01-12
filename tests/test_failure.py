@@ -66,11 +66,12 @@ class PacerDocketReportTest(unittest.TestCase):
     @SKIP_IF_NO_PACER_LOGIN
     def test_queries(self):
         """Do a variety of queries work?"""
-        self.report.query(self.pacer_case_id)
-        self.assertIn('Foley v. Bates', self.report.response.text,
-                      msg="Super basic query failed")
-
-        self.report = DocketReport('cand', self.pacer_session)
+        # self.report.query(self.pacer_case_id)
+        # self.assertIn('Foley v. Bates', self.report.response.text,
+        #               msg="Super basic query failed")
+        #
+        # self.pacer_session.login()
+        # self.report = DocketReport('cand', self.pacer_session)
         self.report.query(self.pacer_case_id, date_start=date(2007, 11, 1))
         row_count = self._count_rows(self.report.response.text)
         self.assertEqual(2, row_count, msg="Didn't get expected number of "
