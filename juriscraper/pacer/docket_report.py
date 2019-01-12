@@ -937,6 +937,7 @@ class DocketReport(BaseDocketReport, BaseReport):
                     (pacer_case_id, query_params))
 
         self.response = self.session.post(self.url + '?1-L_1_0-1',
+                                          auto_login=False,
                                           data=query_params)
         self.parse()
 
