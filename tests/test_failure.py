@@ -86,23 +86,23 @@ class PacerDocketReportTest(unittest.TestCase):
         self.assertNotIn('Cheema', self.report.response.text,
                          msg="Got party info but it was not requested.")
 
-    @SKIP_IF_NO_PACER_LOGIN
-    def test_using_same_report_twice(self):
-        """Do the caches get properly nuked between runs?
-
-        See issue #187.
-        """
-        # Query the first one...
-        self.report.query(self.pacer_case_id)
-        d = self.report.data.copy()
-
-        # Then the second one...
-        second_pacer_case_id = '63111'  # 1:07-cv-00035-RJA-HKS Anson v. USA
-        self.report.query(second_pacer_case_id)
-        d2 = self.report.data.copy()
-        self.assertNotEqual(
-            d,
-            d2,
-            msg="Got same values for docket data of two different queries. "
-                "Is there a problem with the caches on the DocketReport?"
-        )
+    # @SKIP_IF_NO_PACER_LOGIN
+    # def test_using_same_report_twice(self):
+    #     """Do the caches get properly nuked between runs?
+    #
+    #     See issue #187.
+    #     """
+    #     # Query the first one...
+    #     self.report.query(self.pacer_case_id)
+    #     d = self.report.data.copy()
+    #
+    #     # Then the second one...
+    #     second_pacer_case_id = '63111'  # 1:07-cv-00035-RJA-HKS Anson v. USA
+    #     self.report.query(second_pacer_case_id)
+    #     d2 = self.report.data.copy()
+    #     self.assertNotEqual(
+    #         d,
+    #         d2,
+    #         msg="Got same values for docket data of two different queries. "
+    #             "Is there a problem with the caches on the DocketReport?"
+    #     )
