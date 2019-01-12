@@ -284,8 +284,8 @@ class PacerSession(requests.Session):
         if is_pdf(r):
             return False
 
-        login_again = check_if_logged_in_page(r.text)
-        if not login_again:
+        logged_in = check_if_logged_in_page(r.text)
+        if logged_in:
             return False
 
         if self.username and self.password:
