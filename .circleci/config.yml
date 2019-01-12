@@ -17,8 +17,4 @@ jobs:
             virtualenv ./venv
             . venv/bin/activate
             pip install -r requirements.txt
-
-      - run:
-          name: run tests
-          command: |
             python setup.py test
