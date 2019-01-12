@@ -1,6 +1,7 @@
 from __future__ import print_function
 
 import os
+import time
 import unittest
 from datetime import date
 
@@ -72,19 +73,21 @@ class PacerDocketReportTest(unittest.TestCase):
         #
         # self.pacer_session.login()
         # self.report = DocketReport('cand', self.pacer_session)
+        time.sleep(1)
         self.report.query(self.pacer_case_id, date_start=date(2007, 11, 1))
         row_count = self._count_rows(self.report.response.text)
         self.assertEqual(2, row_count, msg="Didn't get expected number of "
                                            "rows when filtering by start "
                                            "date. Got %s." % row_count)
 
+        time.sleep(1)
         self.report.query(self.pacer_case_id, date_start=date(2007, 11, 1),
                           date_end=date(2007, 11, 28))
         row_count = self._count_rows(self.report.response.text)
         self.assertEqual(1, row_count, msg="Didn't get expected number of "
                                            "rows when filtering by start and "
                                            "end dates. Got %s." % row_count)
-
+        time.sleep(1)
         self.report.query(self.pacer_case_id, doc_num_start=5,
                           doc_num_end=5)
         row_count = self._count_rows(self.report.response.text)
@@ -92,7 +95,7 @@ class PacerDocketReportTest(unittest.TestCase):
                          msg="Didn't get expected number of rows "
                              "when filtering by doc number. Got "
                              "%s" % row_count)
-
+        time.sleep(1)
         self.report.query(self.pacer_case_id, date_start=date(2007, 11, 1),
                           date_end=date(2007, 11, 28),
                           date_range_type="Entered")
@@ -102,12 +105,13 @@ class PacerDocketReportTest(unittest.TestCase):
                              "when filtering by start and end "
                              "dates and date_range_type of "
                              "Entered. Got %s" % row_count)
-
+        time.sleep(1)
         self.report.query(self.pacer_case_id, doc_num_start=500,
                           show_parties_and_counsel=True)
         self.assertIn('Cheema', self.report.response.text,
                       msg="Didn't find party info when it was explicitly "
                           "requested.")
+        time.sleep(1)
         self.report.query(self.pacer_case_id, doc_num_start=500,
                           show_parties_and_counsel=False)
         self.assertNotIn('Cheema', self.report.response.text,
