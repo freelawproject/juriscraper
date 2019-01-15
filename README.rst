@@ -69,9 +69,8 @@ Joining the Project as a Developer
 
 For scrapers to be merged:
 
--  Running tests via ``tox`` must pass, listing the results for any new
-   scrapers. The test suite will be run automatically by
-   `Travis-CI <https://travis-ci.org/freelawproject/juriscraper>`__. If changes are being made to the pacer code, the pacer tests must also pass when run. These tests are skipped by default. To run them, set environment variables for PACER_USERNAME and PACER_PASSWORD.
+-  Automated testing should pass. The test suite will be run automatically by
+   `CircleCI <https://circleci.com/gh/freelawproject/juriscraper/>`__. If changes are being made to the pacer code, the pacer tests must also pass when run. These tests are skipped by default. To run them, set environment variables for PACER_USERNAME and PACER_PASSWORD.
 -  A \*\_example\* file must be included in the ``tests/examples``
    directory (this is needed for the tests to run your code).
 -  Your code should be
@@ -241,12 +240,12 @@ Or, to run and drop to the Python debugger if it fails, but you must install `no
 
   nosetests -v --pdb tests/test_pacer.py:DocketParseTest.test_district_court_dockets
 
-In addition, we use `Travis-CI <https://travis-ci.org/>`__ to
+In addition, we use `CircleCI <https://circleci.com/gh/freelawproject/juriscraper/>`__ to
 automatically run the tests whenever code is committed to the repository
 or whenever a pull request is created. You can make sure that your pull
 request is good to go by waiting for the automated tests to complete.
 
-The current status of Travis CI on our master branch is:
+The current status of CircleCI on our master branch is:
 
 |Build Status|
 
@@ -306,7 +305,7 @@ Version History
 Deployment
 ==========
 
-Deployment to PyPi should happen automatically by Travis CI whenever a new tag is created in Github on the master branch. It will fail if the version has not been updated or if Travis CI failed.
+Deployment to PyPi should happen automatically by CircleCI whenever a new tag is created in Github on the master branch. It will fail if the version has not been updated or if CircleCI failed.
 
 If you wish to create a new version manually, the process is:
 
@@ -334,5 +333,5 @@ License
 
 Juriscraper is licensed under the permissive BSD license.
 
-.. |Build Status| image:: https://travis-ci.org/freelawproject/juriscraper.svg?branch=master
-   :target: https://travis-ci.org/freelawproject/juriscraper
+.. |Build Status| image:: https://circleci.com/gh/freelawproject/juriscraper.svg?style=svg
+    :target: https://circleci.com/gh/freelawproject/juriscraper
