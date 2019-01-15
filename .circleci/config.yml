@@ -2,8 +2,6 @@ version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
-      # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
       - image: circleci/python:2.7.14
 
     working_directory: ~/repo
@@ -17,4 +15,8 @@ jobs:
             virtualenv ./venv
             . venv/bin/activate
             pip install -r requirements.txt
-            python setup.py test
+      - run:
+          name: tests
+          command: |
+            . venv/bin/activate
+            pip install -r requirements.txt
