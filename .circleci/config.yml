@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: juriscraper-v1-{{ .Branch }}-{{ checksum "requirements.txt" }}
+          key: juriscraper-v1-{{ .Branch }}-{{ checksum "requirements.txt" }}-{{ checksum "requirements-dev.txt" }}
       - run:
           name: Install Dependencies
           command: |
@@ -17,12 +17,13 @@ jobs:
             virtualenv ./venv
             . venv/bin/activate
             pip install -r requirements.txt
+            pip install -r requirements-dev.txt
       - run:
           name: Tests
           command: |
             . venv/bin/activate
             python setup.py test
       - save_cache:
-          key: juriscraper-v1-{{ .Branch }}-{{ checksum "requirements.txt" }}
+          key: juriscraper-v1-{{ .Branch }}-{{ checksum "requirements.txt" }}-{{ checksum "requirements-dev.txt" }}
           paths:
             - venv
