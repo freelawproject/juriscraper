@@ -6,6 +6,14 @@
 version: 2.1
 
 
+only-deploy-tags: &only-deploy-tags
+  filters:
+    tags:
+      only: /[0-9]+(\.[0-9]+)*/
+    branches:
+      ignore: /.*/
+
+
 executors:
   python:
     docker:
@@ -75,13 +83,9 @@ workflows:
 
   tagged:
     jobs:
-      - build-test:
-          filters:
-            tags:
-              only: /[0-9]+(\.[0-9]+)*/
-            branches:
-              ignore: /.*/
+      - build-test: *only-deploy-tags
       - deploy:
+          <<: *only-deploy-tags
           requires:
             - build-test
 
