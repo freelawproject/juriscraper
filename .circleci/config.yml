@@ -71,10 +71,11 @@ workflows:
 
   untagged:
     jobs:
-      - build-test:
-          filters:
-            tags:
-              ignore: /.*/
+      - build-test
+#      - build-test:
+#          filters:
+#            tags:
+#              ignore: /.*/
 
   tagged:
     jobs:
@@ -86,7 +87,7 @@ workflows:
           filters:
             tags:
               only: /[0-9]+(\.[0-9]+)*/
-#            branches:
-#              ignore: /.*/
+            branches:
+              ignore: /.*/
           requires:
             - build-test
