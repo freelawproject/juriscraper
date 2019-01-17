@@ -6,7 +6,6 @@
 version: 2.1
 
 
-
 filter-tags: &filter-tags
   filters:
     tags:
@@ -96,24 +95,24 @@ jobs:
 workflows:
   version: 2
 
-    untagged:
-      jobs:
-        - build-test
+  untagged:
+    jobs:
+      - build-test
 
-    tagged:
-      jobs:
-        - build-test: *filter-tags
-        - build-test-p35:
-            <<: *filter-tags
-            requires:
-              - build-test
-        - build-test-p36:
-            <<: *filter-tags
-            requires:
-              - build-test
-        - deploy:
-            <<: *filter-tags
-            requires:
-              - build-test
-              - build-test-p35
-              - build-test-p36
+  tagged:
+    jobs:
+      - build-test: *filter-tags
+      - build-test-p35:
+          <<: *filter-tags
+          requires:
+            - build-test
+      - build-test-p36:
+          <<: *filter-tags
+          requires:
+            - build-test
+      - deploy:
+          <<: *filter-tags
+          requires:
+            - build-test
+            - build-test-p35
+            - build-test-p36
