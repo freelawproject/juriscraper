@@ -67,9 +67,18 @@ jobs:
 
 
 workflows:
-  build-test-deploy:
+  version: 2
+
+  untagged:
     jobs:
       - build-test
+
+  tagged:
+    jobs:
+      - build-test:
+          filters:
+            tags:
+              only: /[0-9]+(\.[0-9]+)*/
       - deploy:
           filters:
             tags:
@@ -78,3 +87,16 @@ workflows:
               ignore: /.*/
           requires:
             - build-test
+
+
+#  build-test-deploy:
+#    jobs:
+#      - build-test
+#      - deploy:
+#          filters:
+#            tags:
+#              only: /[0-9]+(\.[0-9]+)*/
+#            branches:
+#              ignore: /.*/
+#          requires:
+#            - build-test
