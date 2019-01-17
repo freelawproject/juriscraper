@@ -41,7 +41,7 @@ commands:
 
 
 jobs:
-  build-and-test:
+  build-test:
     executor: python
     steps:
       - build
@@ -67,12 +67,12 @@ jobs:
 
 
 workflows:
-  build_test_deploy:
+  build-test-deploy:
     jobs:
-      - build-and-test:
+      - build-test
       - deploy:
           requires:
-            - build-and-test
+            - build-test
           filters:
             branches:
               only: master

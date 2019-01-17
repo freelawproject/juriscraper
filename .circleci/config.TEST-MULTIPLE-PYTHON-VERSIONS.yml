@@ -45,20 +45,20 @@ commands:
 
 
 jobs:
-  build-and-test:
+  build-test:
     executor: python
     steps:
       - build
       - test
 
-  build-and-test-p35:
+  build-test-p35:
     executor: python
       version: "3.5"
     steps:
       - build
       - test
 
-  build-and-test-p36:
+  build-test-p36:
     executor: python
       version: "3.6"
     steps:
@@ -85,20 +85,20 @@ jobs:
 
 
 workflows:
-  build_test_deploy:
+  build-test-deploy:
     jobs:
-      - build-and-test:
-      - build-and-test-p35:
+      - build-test
+      - build-test-p35:
           requires:
-            - build-and-test
-      - build-and-test-p36:
+            - build-test
+      - build-test-p36:
           requires:
-            - buildbuild-and-test
+            - build-test
       - deploy:
           requires:
-            - build-and-test
-            - build-and-test-p35
-            - build-and-test-p36
+            - build-test
+            - build-test-p35
+            - build-test-p36
           filters:
             branches:
               only: master
