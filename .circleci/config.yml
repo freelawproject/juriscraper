@@ -79,11 +79,30 @@ workflows:
           filters:
             tags:
               only: /[0-9]+(\.[0-9]+)*/
-      - deploy:
-          filters:
-            tags:
-              only: /[0-9]+(\.[0-9]+)*/
             branches:
               ignore: /.*/
+      - deploy:
           requires:
             - build-test
+
+#workflows:
+#  version: 2
+#
+#  untagged:
+#    jobs:
+#      - build-test
+#
+#  tagged:
+#    jobs:
+#      - build-test:
+#          filters:
+#            tags:
+#              only: /[0-9]+(\.[0-9]+)*/
+#      - deploy:
+#          filters:
+#            tags:
+#              only: /[0-9]+(\.[0-9]+)*/
+#            branches:
+#              ignore: /.*/
+#          requires:
+#            - build-test
