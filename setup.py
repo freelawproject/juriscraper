@@ -33,7 +33,7 @@ class VerifyVersionCommand(install):
         tag = os.getenv('CIRCLE_TAG')
 
         if tag is None:
-            sys.exit("The 'verify' option is only available in CircleCI environment")
+            sys.exit("The 'verify' option is only available in tagged CircleCI container")
 
         if tag != VERSION:
             message = "Git tag: {0} does not match the version of this app: {1}"
