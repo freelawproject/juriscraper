@@ -6,6 +6,15 @@
 version: 2.1
 
 
+
+filter-tags: &filter-tags
+  filters:
+    tags:
+      only: /[0-9]+(\.[0-9]+)*/
+    branches:
+      ignore: /.*/
+
+
 executors:
   python:
     parameters:
@@ -93,49 +102,18 @@ workflows:
 
     tagged:
       jobs:
-        - build-test:
-            filters:
-              tags:
-                only: /[0-9]+(\.[0-9]+)*/
-              branches:
-                ignore: /.*/
+        - build-test: *filter-tags
         - build-test-p35:
+            <<: *filter-tags
             requires:
               - build-test
         - build-test-p36:
+            <<: *filter-tags
             requires:
               - build-test
         - deploy:
+            <<: *filter-tags
             requires:
               - build-test
               - build-test-p35
               - build-test-p36
-
-#    tagged:
-#      jobs:
-#        - build-test:
-#            filters:
-#              tags:
-#                only: /[0-9]+(\.[0-9]+)*/
-#        - build-test-p35:
-#            filters:
-#              tags:
-#                only: /[0-9]+(\.[0-9]+)*/
-#            requires:
-#              - build-test
-#        - build-test-p36:
-#            filters:
-#              tags:
-#                only: /[0-9]+(\.[0-9]+)*/
-#            requires:
-#              - build-test
-#        - deploy:
-#            filters:
-#              tags:
-#                only: /[0-9]+(\.[0-9]+)*/
-#              branches:
-#                ignore: /.*/
-#            requires:
-#              - build-test
-#              - build-test-p35
-#              - build-test-p36
