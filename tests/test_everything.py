@@ -120,6 +120,8 @@ class ScraperExampleTest(unittest.TestCase):
         scraper.
         """
 
+        self.fail("TESTING TO SEE IF TEST FAILURE PREVENTS CIRCLE DEPLOY")
+
         module_strings = build_module_list('juriscraper')
         num_scrapers = len([s for s in module_strings
                             if 'backscraper' not in s])
