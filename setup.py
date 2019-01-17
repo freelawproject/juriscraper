@@ -10,7 +10,7 @@ except ImportError:  # for pip <= 9.0.3
 from setuptools import setup, find_packages
 from setuptools.command.install import install
 
-VERSION = "1.22.15"
+VERSION = "1.22.16"
 AUTHOR = "Mike Lissner"
 EMAIL = "info@free.law"
 HERE = os.path.abspath(os.path.dirname(__file__))

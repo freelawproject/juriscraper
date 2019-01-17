@@ -89,10 +89,7 @@ workflows:
 
     untagged:
       jobs:
-        - build-test:
-            filters:
-              tags:
-                ignore: /.*/
+        - build-test
 
     tagged:
       jobs:

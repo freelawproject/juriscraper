@@ -72,10 +72,6 @@ workflows:
   untagged:
     jobs:
       - build-test
-#      - build-test:
-#          filters:
-#            tags:
-#              ignore: /.*/
 
   tagged:
     jobs:
