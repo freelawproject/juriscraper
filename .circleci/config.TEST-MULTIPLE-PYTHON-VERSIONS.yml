@@ -85,22 +85,40 @@ jobs:
 
 
 workflows:
-  build-test-deploy:
-    jobs:
-      - build-test
-      - build-test-p35:
-          requires:
-            - build-test
-      - build-test-p36:
-          requires:
-            - build-test
-      - deploy:
-          filters:
-            tags:
-              only: /[0-9]+(\.[0-9]+)*/
-            branches:
-              ignore: /.*/
-          requires:
-            - build-test
-            - build-test-p35
-            - build-test-p36
+  version: 2
+
+    untagged:
+      jobs:
+        - build-test:
+            filters:
+              tags:
+                ignore: /.*/
+
+    tagged:
+      jobs:
+        - build-test:
+            filters:
+              tags:
+                only: /[0-9]+(\.[0-9]+)*/
+        - build-test-p35:
+            filters:
+              tags:
+                only: /[0-9]+(\.[0-9]+)*/
+            requires:
+              - build-test
+        - build-test-p36:
+            filters:
+              tags:
+                only: /[0-9]+(\.[0-9]+)*/
+            requires:
+              - build-test
+        - deploy:
+            filters:
+              tags:
+                only: /[0-9]+(\.[0-9]+)*/
+              branches:
+                ignore: /.*/
+            requires:
+              - build-test
+              - build-test-p35
+              - build-test-p36
