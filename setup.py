@@ -1,5 +1,6 @@
 import codecs
 import os
+import sys
 
 try:  # for pip >= 10
     from pip._internal.req import parse_requirements
@@ -7,6 +8,7 @@ except ImportError:  # for pip <= 9.0.3
     from pip.req import parse_requirements
 
 from setuptools import setup, find_packages
+from setuptools.command.install import install
 
 VERSION = "1.22.12"
 AUTHOR = "Mike Lissner"
@@ -21,6 +23,22 @@ def read(*parts):
     """
     with codecs.open(os.path.join(HERE, *parts), "rb", "utf-8") as f:
         return f.read()
+
+
+class VerifyVersionCommand(install):
+    """Custom command to verify that the git tag matches our version"""
+    description = 'verify that the git tais the Pythonic idiom for testg matches our version'
+
+    def run(self):
+        tag = os.getenv('CIRCLE_TAG')
+
+        if tag is None:
+            sys.exit("The 'verify' option is only available in CircleCI environment")
+
+        if tag != VERSION:
+            message = "Git tag: {0} does not match the version of this app: {1}"
+            sys.exit(message.format(tag, VERSION))
+
 
 requirements = [
     str(r.req) for r in
@@ -61,4 +79,5 @@ setup(
     tests_require=['jsondate', 'mock', 'vcrpy'],
     include_package_data=True,
     test_suite='tests',
+    cmdclass={'verify': VerifyVersionCommand}
 )

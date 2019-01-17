@@ -8,8 +8,12 @@ version: 2.1
 
 executors:
   python:
+    parameters:
+      version:
+        type: string
+        default: "2.7"
     docker:
-      - image: circleci/python:2.7
+      - image: circleci/python:<< parameters.version >>
     working_directory: ~/repo
 
 
@@ -47,6 +51,20 @@ jobs:
       - build
       - test
 
+  build-and-test-p35:
+    executor: python
+      version: "3.5"
+    steps:
+      - build
+      - test
+
+  build-and-test-p36:
+    executor: python
+      version: "3.6"
+    steps:
+      - build
+      - test
+
   deploy:
     executor: python
     steps:
@@ -70,9 +88,17 @@ workflows:
   build_test_deploy:
     jobs:
       - build-and-test:
+      - build-and-test-p35:
+          requires:
+            - build-and-test
+      - build-and-test-p36:
+          requires:
+            - buildbuild-and-test
       - deploy:
           requires:
             - build-and-test
+            - build-and-test-p35
+            - build-and-test-p36
           filters:
             branches:
               only: master
