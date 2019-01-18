@@ -6,14 +6,6 @@
 version: 2.1
 
 
-filter-tags: &filter-tags
-  filters:
-    tags:
-      only: /[0-9]+(\.[0-9]+)*/
-    branches:
-      ignore: /.*/
-
-
 executors:
   python:
     docker:
@@ -83,7 +75,12 @@ workflows:
 
   tagged:
     jobs:
-      - build-test: *filter-tags
+      - build-test: &filter-tags
+          filters:
+            tags:
+              only: /[0-9]+(\.[0-9]+)*/
+            branches:
+              ignore: /.*/
       - deploy:
           <<: *filter-tags
           requires:
