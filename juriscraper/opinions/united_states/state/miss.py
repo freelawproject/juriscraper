@@ -15,7 +15,7 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://courts.ms.gov/scripts/websiteX_cgi.exe/GetOpinion?Year=%s&Court=Supreme+Court&Submit=Submit' % date.today().year
-        self.back_scrape_iterable = range(1990, 2012)
+        self.back_scrape_iterable = range(1990, 2019)
         self.base = '//tr[following-sibling::tr[1]/td[2][text()]]'
 
     def _get_case_names(self):
