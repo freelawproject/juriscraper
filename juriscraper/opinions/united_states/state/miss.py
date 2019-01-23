@@ -14,8 +14,8 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://courts.ms.gov/scripts/websiteX_cgi.exe/GetOpinion?Year=%s&Court=Supreme+Court&Submit=Submit' % date.today().year
-        self.back_scrape_iterable = range(1990, 2012)
+        self.url = 'http://courts.ms.gov/scripts/websiteX_cgi.exe/GetOpinion?Year=%s&Court=Supreme+Court&Submit=Submit' % date.today().year  # noqa: E501
+        self.back_scrape_iterable = range(1990, 2019)
         self.base = '//tr[following-sibling::tr[1]/td[2][text()]]'
 
     def _get_case_names(self):
@@ -46,7 +46,7 @@ class Site(OpinionSite):
         path = '{base}/following-sibling::tr[1]/td[3]//@href'.format(
             base=self.base)
         dates = []
-        date_re = re.compile('(\d{2}-\d{2}-\d{4})')
+        date_re = re.compile(r'(\d{2}-\d{2}-\d{4})')
         for href in self.html.xpath(path):
             date_string = date_re.search(href).group(1)
             dates.append(date.fromtimestamp(time.mktime(time.strptime(
@@ -62,7 +62,5 @@ class Site(OpinionSite):
         return list(self.html.xpath(path))
 
     def _download_backwards(self, year):
-        self.url = 'http://courts.ms.gov/scripts/websiteX_cgi.exe/GetOpinion?Year=%s&Court=Supreme+Court&Submit=Submit' % year
+        self.url = 'http://courts.ms.gov/scripts/websiteX_cgi.exe/GetOpinion?Year=%s&Court=Supreme+Court&Submit=Submit' % year  # noqa: E501
         self.html = self._download()
-
-
