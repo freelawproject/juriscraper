@@ -8,12 +8,13 @@ import sys
 
 import six
 from six.moves import range
+
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
 from .utils import clean_pacer_object
 from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import clean_string, convert_date_string, harmonize, \
-    force_unicode
+from ..lib.string_utils import clean_string, convert_date_string, \
+    force_unicode, harmonize
 
 logger = make_default_logger()
 
@@ -200,8 +201,9 @@ class CaseQuery(BaseDocketReport, BaseReport):
         While there is utility in both of these result types, this method only
         supports the use case where you know the pacer_case_id in advance, and
         are expecting only one result in return. This method does *not* support
-        parsing the search results that the Query button can return (though
-        we're not opposed to adding such support).
+        parsing the search results that the Query button can return. That use
+        case is supposed by the CaseQueryAdvancedBankruptcy and
+        CaseQueryAdvancedDistrict objects.
 
         :param pacer_case_id: A pacer_case_id for a case to lookup.
         :return None: Instead, sets self.response attribute and runs
