@@ -17,8 +17,8 @@ from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.lib.test_utils import warn_or_crash_slow_parser
 from juriscraper.pacer import AppellateDocketReport, AttachmentPage, CaseQuery, \
-    DocketHistoryReport, DocketReport, FreeOpinionReport, InternetArchive, \
-    PossibleCaseNumberApi, ShowCaseDocApi
+    CaseQueryAdvancedBankruptcy, DocketHistoryReport, DocketReport, \
+    FreeOpinionReport, InternetArchive, PossibleCaseNumberApi, ShowCaseDocApi
 from juriscraper.pacer.http import PacerSession, check_if_logged_in_page
 from juriscraper.pacer.rss_feeds import PacerRssFeed
 from juriscraper.pacer.utils import (clean_pacer_object, get_court_id_from_url,
@@ -655,6 +655,18 @@ class PacerCaseQueryTest(unittest.TestCase, ParsingTestCase):
         path_root = os.path.join(TESTS_ROOT, 'examples', 'pacer',
                                  'case_queries')
         self.parse_files(path_root, '*.html', CaseQuery)
+
+
+class PacerCaseQueryAdvancedBankruptcyTest(unittest.TestCase, ParsingTestCase):
+    """Tests for the CaseQuery Bankruptcy Advanced results."""
+
+    def setUp(self):
+        self.maxDiff = 200000
+
+    def test_parsing_case_query_results(self):
+        path_root = os.path.join(TESTS_ROOT, 'examples', 'pacer',
+                                 'case_queries_advanced')
+        self.parse_files(path_root, '*.html', CaseQueryAdvancedBankruptcy)
 
 
 class InternetArchiveReportTest(unittest.TestCase, ParsingTestCase):
