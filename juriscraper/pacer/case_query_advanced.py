@@ -11,7 +11,7 @@ import sys
 
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
-from .utils import clean_pacer_object
+from .utils import clean_pacer_object, get_pacer_case_id_from_nonce_url
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import clean_string, convert_date_string, \
     force_unicode, harmonize
@@ -106,8 +106,11 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
                 'chapter': self.get_text_for_cell(cells[3]),
                 'date_filed': self.get_date_for_cell(cells[4]),
                 'party_role': self.get_text_for_cell(cells[5]),
-                'date_closed': self.get_date_for_cell(cells[6])
+                'date_closed': self.get_date_for_cell(cells[6]),
             }
+            href = cells[1].xpath('.//@href')[0]
+            row_data['pacer_case_id'] = get_pacer_case_id_from_nonce_url(href)
+
             data.append(row_data)
 
         data = clean_pacer_object(data)
