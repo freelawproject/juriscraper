@@ -1,0 +1,380 @@
+<html>
+<head><title>CANB Live Database</title>
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+    <script type="text/javascript" src="/lib/core.js"></script>
+    <script type="text/javascript">if (top != self) {
+      top.location.replace(location.href);
+    }</script>
+</head>
+<body BGCOLOR=FFFFCC TEXT=000000 onLoad='SetFocus()'>
+<div class="noprint"><img id="cmecfLogo" class="cmecfLogo"
+                          src="/graphics/cmecf-logo.gif" alt="CM/ECF"
+                          title=""/><img src="/graphics/menubar-help.gif"
+                                         alt="?" title="" class="helpImage"
+                                         id="helpImage"
+                                         onClick="CMECF.MainMenu.showHelpPage(''); return false"
+                                         onMouseOver="CMECF.MainMenu.helpImageOn()"
+                                         onMouseOut="CMECF.MainMenu.helpImageOff()"/>
+    <div id="topmenu" class="yuimenubar">
+        <div class="bd">
+            <ul class="first-of-type">
+                <li class="yuimenubaritem" style="width:9%"><a
+                        class="yuimenubaritemlabel"
+                        href='/cgi-bin/iquery.pl'>Q</u>uery</a></li>
+                <li class="yuimenubaritem" style="width:11%"><a
+                        class="yuimenubaritemlabel"
+                        href='/cgi-bin/DisplayMenu.pl?Reports&id=-1'>R</u>eports</a>
+                </li>
+                <li class="yuimenubaritem" style="width:11%"><a
+                        class="yuimenubaritemlabel"
+                        href='/cgi-bin/DisplayMenu.pl?Utilities&id=-1'>U</u>tilities</a>
+                </li>
+                <li class="yuimenubaritem" style="width:10%"><a
+                        class="yuimenubaritemlabel"
+                        href='/cgi-bin/login.pl?logout'>Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">if (navigator.appVersion.indexOf("MSIE") == -1) {
+  window.setTimeout(function () {
+    CMECF.MainMenu.renderSimpleMenu();
+  }, 0);
+} else {
+  CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.renderSimpleMenu);
+}</script>
+<div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll"
+                                  value="0">
+    <SCRIPT LANGUAGE="JavaScript">
+      var IsForm = false;
+      var FirstField;
+
+      function SetFocus() {
+        if (IsForm) {
+          if (FirstField) {
+            var ind = FirstField.indexOf('document.', 0);
+            if (ind == 0) {
+              eval(FirstField);
+            } else {
+              var Code = "document.forms[0]." + FirstField + ".focus();";
+              eval(Code);
+            }
+          } else {
+            var Cnt = 0;
+            while (document.forms[0].elements[Cnt] != null) {
+              if (document.forms[0].elements[Cnt].type != "hidden") {
+                document.forms[0].elements[Cnt].focus();
+                break;
+              }
+              Cnt += 1;
+            }
+          }
+        }
+        return (true);
+      }
+    </SCRIPT>
+    <h2 align=center>Select a Case</h2><br>
+    <center>
+        <TABLE BORDER=0 CELLSPACING=10>
+            <TR>
+                <TD colspan=7 align=left><B>There were 16 matching persons.</B>
+                </TD>
+            </TR>
+            <TR>
+                <TD colspan=7 align=left><B>There were 16 matching cases.</B>
+                </TD>
+            </TR>
+            <TR>
+                <TD><BR></TD>
+            </TR>
+            <TR>
+                <TD VALIGN=top ALIGN=left><FONT SIZE="+0"><B>Name</B> </FONT>
+                </TD>
+                <TD VALIGN=top ALIGN=left><FONT SIZE="+0"><B>Case No.</B>
+                </FONT></TD>
+                <TD VALIGN=top ALIGN=left><FONT SIZE="+0"><B>Case Title</B>
+                </FONT></TD>
+                <TD VALIGN=top ALIGN=left><FONT
+                        SIZE="+0"><B>Chapter / Lead BK case</B> </FONT></TD>
+                <TD VALIGN=top ALIGN=left><FONT SIZE="+0"><B>Date Filed</B>
+                </FONT></TD>
+                <TD VALIGN=top ALIGN=left><FONT SIZE="+0"><B>Party Role</B>
+                </FONT></TD>
+                <TD VALIGN=top ALIGN=left><FONT SIZE="+0"><B>Date Closed</B>
+                </FONT></TD>
+            </TR>
+            <TR class=rowBackground1>
+                <TD VALIGN=center>PacifiCorp (pty) <br> (1 case)</TD>
+                <TD NOWRAP VALIGN=center><A
+                        HREF="iquery.pl?440916540563012-L_1_0-0-12612">01-30923</A>
+                </TD>
+                <TD VALIGN=center>Pacific Gas and Electric Co.</TD>
+                <TD VALIGN=center> 11</TD>
+                <TD VALIGN=center> 04/06/01</TD>
+                <TD VALIGN=center> Creditor</TD>
+                <TD VALIGN=center>N / A</TD>
+
+            </TR>
+            <TR class=rowbackground2>
+                <TD VALIGN=center>Pacific Bell Telephone Co. (pty)
+                    <br> (1 case)
+                </TD>
+                <TD NOWRAP VALIGN=center><A
+                        HREF="iquery.pl?440916540563012-L_1_0-0-12612">01-30923</A>
+                </TD>
+                <TD VALIGN=center>Pacific Gas and Electric Co.</TD>
+                <TD VALIGN=center> 11</TD>
+                <TD VALIGN=center> 04/06/01</TD>
+                <TD VALIGN=center> Creditor</TD>
+                <TD VALIGN=center>N / A</TD>
+
+            </TR>
+            <TR class=rowBackground1>
+                <TD VALIGN=center>Pacific Bell Wireless (pty) <br> (1 case)
+                </TD>
+                <TD NOWRAP VALIGN=center><A
+                        HREF="iquery.pl?440916540563012-L_1_0-0-12612">01-30923</A>
+                </TD>
+                <TD VALIGN=center>Pacific Gas and Electric Co.</TD>
+                <TD VALIGN=center> 11</TD>
+                <TD VALIGN=center> 04/06/01</TD>
+                <TD VALIGN=center> Creditor</TD>
+                <TD VALIGN=center>N / A</TD>
+
+            </TR>
+            <TR class=rowbackground2>
+                <TD VALIGN=center>Pacific Gas and Electric Co. (pty)
+                    <br> (1 case)
+                </TD>
+                <TD NOWRAP VALIGN=center><A
+                        HREF="iquery.pl?440916540563012-L_1_0-0-12612">01-30923</A>
+                </TD>
+                <TD VALIGN=center>Pacific Gas and Electric Co.</TD>
+                <TD VALIGN=center> 11</TD>
+                <TD VALIGN=center> 04/06/01</TD>
+                <TD VALIGN=center> Debtor</TD>
+                <TD VALIGN=center>N / A</TD>
+
+            </TR>
+            <TR class=rowBackground1>
+                <TD VALIGN=center>Pacific Gas and Electric Corp. (pty)
+                    <br> (1 case)
+                </TD>
+                <TD NOWRAP VALIGN=center><A
+                        HREF="iquery.pl?440916540563012-L_1_0-0-12612">01-30923</A>
+                </TD>
+                <TD VALIGN=center>Pacific Gas and Electric Co.</TD>
+                <TD VALIGN=center> 11</TD>
+                <TD VALIGN=center> 04/06/01</TD>
+                <TD VALIGN=center> Creditor</TD>
+                <TD VALIGN=center>N / A</TD>
+
+            </TR>
+            <TR class=rowbackground2>
+                <TD VALIGN=center>Pacific Indemnity Co. (pty) <br> (1 case)
+                </TD>
+                <TD NOWRAP VALIGN=center><A
+                        HREF="iquery.pl?440916540563012-L_1_0-0-12612">01-30923</A>
+                </TD>
+                <TD VALIGN=center>Pacific Gas and Electric Co.</TD>
+                <TD VALIGN=center> 11</TD>
+                <TD VALIGN=center> 04/06/01</TD>
+                <TD VALIGN=center> Creditor</TD>
+                <TD VALIGN=center>N / A</TD>
+
+            </TR>
+            <TR class=rowBackground1>
+                <TD VALIGN=center>Pacific Investment Management Co. (pty)
+                    <br> (1 case)
+                </TD>
+                <TD NOWRAP VALIGN=center><A
+                        HREF="iquery.pl?440916540563012-L_1_0-0-12612">01-30923</A>
+                </TD>
+                <TD VALIGN=center>Pacific Gas and Electric Co.</TD>
+                <TD VALIGN=center> 11</TD>
+                <TD VALIGN=center> 04/06/01</TD>
+                <TD VALIGN=center> Creditor</TD>
+                <TD VALIGN=center>N / A</TD>
+
+            </TR>
+            <TR class=rowbackground2>
+                <TD VALIGN=center>Pacific Lumber Co. (pty) <br> (1 case)</TD>
+                <TD NOWRAP VALIGN=center><A
+                        HREF="iquery.pl?440916540563012-L_1_0-0-12612">01-30923</A>
+                </TD>
+                <TD VALIGN=center>Pacific Gas and Electric Co.</TD>
+                <TD VALIGN=center> 11</TD>
+                <TD VALIGN=center> 04/06/01</TD>
+                <TD VALIGN=center> Creditor</TD>
+                <TD VALIGN=center>N / A</TD>
+
+            </TR>
+            <TR class=rowBackground1>
+                <TD VALIGN=center>Pacific Offshore Pipeline Co. (pty)
+                    <br> (1 case)
+                </TD>
+                <TD NOWRAP VALIGN=center><A
+                        HREF="iquery.pl?440916540563012-L_1_0-0-12612">01-30923</A>
+                </TD>
+                <TD VALIGN=center>Pacific Gas and Electric Co.</TD>
+                <TD VALIGN=center> 11</TD>
+                <TD VALIGN=center> 04/06/01</TD>
+                <TD VALIGN=center> Creditor</TD>
+                <TD VALIGN=center>N / A</TD>
+
+            </TR>
+            <TR class=rowbackground2>
+                <TD VALIGN=center>Pacific Oroville Power (pty) <br> (1 case)
+                </TD>
+                <TD NOWRAP VALIGN=center><A
+                        HREF="iquery.pl?440916540563012-L_1_0-0-12612">01-30923</A>
+                </TD>
+                <TD VALIGN=center>Pacific Gas and Electric Co.</TD>
+                <TD VALIGN=center> 11</TD>
+                <TD VALIGN=center> 04/06/01</TD>
+                <TD VALIGN=center> Creditor</TD>
+                <TD VALIGN=center>N / A</TD>
+
+            </TR>
+            <TR class=rowBackground1>
+                <TD VALIGN=center>Pacific Pima Gin Co., Inc. (pty)
+                    <br> (1 case)
+                </TD>
+                <TD NOWRAP VALIGN=center><A
+                        HREF="iquery.pl?440916540563012-L_1_0-0-12612">01-30923</A>
+                </TD>
+                <TD VALIGN=center>Pacific Gas and Electric Co.</TD>
+                <TD VALIGN=center> 11</TD>
+                <TD VALIGN=center> 04/06/01</TD>
+                <TD VALIGN=center> Creditor</TD>
+                <TD VALIGN=center>N / A</TD>
+
+            </TR>
+            <TR class=rowbackground2>
+                <TD VALIGN=center>Pacific Pre-Cut Produce, Inc. (pty)
+                    <br> (1 case)
+                </TD>
+                <TD NOWRAP VALIGN=center><A
+                        HREF="iquery.pl?440916540563012-L_1_0-0-12612">01-30923</A>
+                </TD>
+                <TD VALIGN=center>Pacific Gas and Electric Co.</TD>
+                <TD VALIGN=center> 11</TD>
+                <TD VALIGN=center> 04/06/01</TD>
+                <TD VALIGN=center> Creditor</TD>
+                <TD VALIGN=center>N / A</TD>
+
+            </TR>
+            <TR class=rowBackground1>
+                <TD VALIGN=center>Pacific Services Employee Assoc. (pty)
+                    <br> (1 case)
+                </TD>
+                <TD NOWRAP VALIGN=center><A
+                        HREF="iquery.pl?440916540563012-L_1_0-0-12612">01-30923</A>
+                </TD>
+                <TD VALIGN=center>Pacific Gas and Electric Co.</TD>
+                <TD VALIGN=center> 11</TD>
+                <TD VALIGN=center> 04/06/01</TD>
+                <TD VALIGN=center> Creditor</TD>
+                <TD VALIGN=center>N / A</TD>
+
+            </TR>
+            <TR class=rowbackground2>
+                <TD VALIGN=center>Pacific Shores Development (pty)
+                    <br> (1 case)
+                </TD>
+                <TD NOWRAP VALIGN=center><A
+                        HREF="iquery.pl?440916540563012-L_1_0-0-12612">01-30923</A>
+                </TD>
+                <TD VALIGN=center>Pacific Gas and Electric Co.</TD>
+                <TD VALIGN=center> 11</TD>
+                <TD VALIGN=center> 04/06/01</TD>
+                <TD VALIGN=center> Creditor</TD>
+                <TD VALIGN=center>N / A</TD>
+
+            </TR>
+            <TR class=rowBackground1>
+                <TD VALIGN=center>Pacific Telesis Group (pty) <br> (1 case)
+                </TD>
+                <TD NOWRAP VALIGN=center><A
+                        HREF="iquery.pl?440916540563012-L_1_0-0-12612">01-30923</A>
+                </TD>
+                <TD VALIGN=center>Pacific Gas and Electric Co.</TD>
+                <TD VALIGN=center> 11</TD>
+                <TD VALIGN=center> 04/06/01</TD>
+                <TD VALIGN=center> Creditor</TD>
+                <TD VALIGN=center>N / A</TD>
+
+            </TR>
+            <TR class=rowbackground2>
+                <TD VALIGN=center>Pacific Ultrapower Chinese Station (pty)
+                    <br> (1 case)
+                </TD>
+                <TD NOWRAP VALIGN=center><A
+                        HREF="iquery.pl?440916540563012-L_1_0-0-12612">01-30923</A>
+                </TD>
+                <TD VALIGN=center>Pacific Gas and Electric Co.</TD>
+                <TD VALIGN=center> 11</TD>
+                <TD VALIGN=center> 04/06/01</TD>
+                <TD VALIGN=center> Creditor</TD>
+                <TD VALIGN=center>N / A</TD>
+
+            </TR>
+        </TABLE>
+    </CENTER>
+    <BR>
+    <HR>
+    <CENTER>
+        <TABLE BORDER=1 BGCOLOR=white width="400">
+            <TR>
+                <TH COLSPAN=4><FONT SIZE=+1
+                                    COLOR=DARKRED>PACER Service Center </FONT>
+                </TH>
+            </TR>
+            <TR>
+                <TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT>
+                </TH>
+            </TR>
+            <TR></TR>
+            <TR></TR>
+            <TR>
+                <TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1
+                                                 COLOR=DARKBLUE>01/25/2019 15:37:08</FONT>
+                </TD>
+            </TR>
+            <TR>
+                <TH ALIGN=LEFT><FONT SIZE=-1
+                                     COLOR=DARKBLUE> PACER Login: </FONT></TH>
+                <TD ALIGN=LEFT><FONT SIZE=-1
+                                     COLOR=DARKBLUE> mlissner.flp:4512899:0 </FONT>
+                </TH></TD>
+                <TH ALIGN=LEFT><FONT SIZE=-1
+                                     COLOR=DARKBLUE> Client Code: </FONT></TH>
+                <TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> </FONT></TD>
+            </TR>
+            <TR>
+                <TH ALIGN=LEFT><FONT SIZE=-1
+                                     COLOR=DARKBLUE> Description: </FONT></TH>
+                <TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search </FONT>
+                </TD>
+                <TH ALIGN=LEFT><FONT SIZE=-1
+                                     COLOR=DARKBLUE> Search Criteria: </FONT>
+                </TH>
+                <TD ALIGN=LEFT><FONT SIZE=-1
+                                     COLOR=DARKBLUE> LName: Pacific Filed From: 04/06/2001 Filed To: 04/06/2001 </FONT>
+                </TD>
+            </TR>
+            <TR>
+                <TH ALIGN=LEFT><FONT SIZE=-1
+                                     COLOR=DARKBLUE> Billable Pages: </FONT>
+                </TH>
+                <TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 1 </FONT></TD>
+                <TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH>
+                <TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.10 </FONT></TD>
+            </TR>
+            <TR></TR>
+            <TR></TR>
+        </TABLE>
+    </CENTER>
+    </HR><BR></BR></div>
+</body>
+</html>
