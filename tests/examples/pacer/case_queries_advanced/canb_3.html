@@ -1,0 +1,362 @@
+<html><head><title>CANB Live Database</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script></head><body BGCOLOR=FFFFCC TEXT=000000 onLoad='SetFocus()'><div class="noprint"><img id="cmecfLogo" class="cmecfLogo" src="/graphics/cmecf-logo.gif" alt="CM/ECF" title=""  /><img src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage" id="helpImage" onClick="CMECF.MainMenu.showHelpPage(''); return false" onMouseOver="CMECF.MainMenu.helpImageOn()" onMouseOut="CMECF.MainMenu.helpImageOff()" /><div id="topmenu" class="yuimenubar"><div class="bd"><ul class="first-of-type"><li class="yuimenubaritem" style="width:9%"><a class="yuimenubaritemlabel" href='/cgi-bin/iquery.pl'>Q</u>uery</a></li><li class="yuimenubaritem" style="width:11%"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Reports&id=-1'>R</u>eports</a></li><li class="yuimenubaritem" style="width:11%"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Utilities&id=-1'>U</u>tilities</a></li><li class="yuimenubaritem" style="width:10%"><a class="yuimenubaritemlabel" href='/cgi-bin/login.pl?logout'>Logout</a></li></ul></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout( function(){ CMECF.MainMenu.renderSimpleMenu(); }, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.renderSimpleMenu);}</script><div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript">
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+<h2 align=center>Select a Case</h2><br><center><TABLE BORDER=0 CELLSPACING=10 width='100%'>
+<TR><TD colspan=6 align=left> <B>There were 613 matching cases.</B></TD></TR>
+<tr style='font-weight: bold'><td>Case No.</td><td>Case Title</td><td>Chapter / Lead BK case</td><td>Date Filed</td><td>Date Closed</td></tr><TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-359273">08-32514</A></TD>
+	<TD VALIGN=center>Heller Ehrman LLP                                 </TD>
+	<TD VALIGN=center> 11</TD>
+	<TD VALIGN=center> 12/28/08</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowbackground2>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-352619">08-55305</A></TD>
+	<TD VALIGN=center>James Madison Kelley                              </TD>
+	<TD VALIGN=center> 7</TD>
+	<TD VALIGN=center> 09/19/08</TD>
+	<TD VALIGN=center> 01/25/19</TD>
+
+</TR>
+<TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-381307">09-12803</A></TD>
+	<TD VALIGN=center>Maria Sebastiano                                  </TD>
+	<TD VALIGN=center> 7</TD>
+	<TD VALIGN=center> 08/31/09</TD>
+	<TD VALIGN=center> 01/25/19</TD>
+
+</TR>
+<TR class= rowbackground2>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-426413">10-14095</A></TD>
+	<TD VALIGN=center>Jacqueline Janssen                                </TD>
+	<TD VALIGN=center> 7</TD>
+	<TD VALIGN=center> 10/23/10</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-400694">10-30821</A></TD>
+	<TD VALIGN=center>German G. Rivas and Lilian Rivas                                      </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 03/11/10</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowbackground2>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-459898">11-49803</A></TD>
+	<TD VALIGN=center>Mortgage Fund &#039;08 LLC                        </TD>
+	<TD VALIGN=center> 11</TD>
+	<TD VALIGN=center> 09/12/11</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-487310">12-12136</A></TD>
+	<TD VALIGN=center>Kathy C Eddy                                      </TD>
+	<TD VALIGN=center> 7</TD>
+	<TD VALIGN=center> 08/03/12</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowbackground2>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-479544">12-43638</A></TD>
+	<TD VALIGN=center>Charo Garcia Ordonez and Vikki Ordonez                                     </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 04/26/12</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-483790">12-45224</A></TD>
+	<TD VALIGN=center>Raymond D Smith                                   </TD>
+	<TD VALIGN=center> 7</TD>
+	<TD VALIGN=center> 06/19/12</TD>
+	<TD VALIGN=center> 12/21/12</TD>
+
+</TR>
+<TR class= rowbackground2>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-514089">13-12012</A></TD>
+	<TD VALIGN=center>Matthew Anderson and Carolina Anderson                                 </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 10/30/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-515249">13-12152</A></TD>
+	<TD VALIGN=center>Daniel Brown                                      </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 11/24/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowbackground2>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-516478">13-12317</A></TD>
+	<TD VALIGN=center>Randall Ichihana                                  </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 12/26/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-499762">13-30340</A></TD>
+	<TD VALIGN=center>Gabriel Technologies Corporation                  </TD>
+	<TD VALIGN=center> 7</TD>
+	<TD VALIGN=center> 02/14/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowbackground2>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-502923">13-30794</A></TD>
+	<TD VALIGN=center>Ramon Martinez                                    </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 04/03/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-506928">13-31384</A></TD>
+	<TD VALIGN=center>Matthew Henderson                                 </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 06/12/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowbackground2>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-511258">13-31972</A></TD>
+	<TD VALIGN=center>John Eugene Coman, Jr.                            </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 08/31/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-511589">13-32023</A></TD>
+	<TD VALIGN=center>Javier Mendoza                                    </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 09/09/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowbackground2>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-509730">13-44464</A></TD>
+	<TD VALIGN=center>Judith Dollaga Belen                              </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 08/01/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-514444">13-46073</A></TD>
+	<TD VALIGN=center>Richard Eugene Showers and Rachel Lynn Ayala-Showers                         </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 11/05/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowbackground2>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-515374">13-46390</A></TD>
+	<TD VALIGN=center>George Gumataotao, Jr. and Alexandrea Julie Sepulveda                        </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 11/26/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-515441">13-46408</A></TD>
+	<TD VALIGN=center>Paul J. Herbst                                    </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 11/27/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowbackground2>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-515552">13-46434</A></TD>
+	<TD VALIGN=center>Ann Jacqueline Abeyta                             </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 12/02/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-515672">13-46487</A></TD>
+	<TD VALIGN=center>Ricardo Cusguen                                   </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 12/05/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowbackground2>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-516100">13-46638</A></TD>
+	<TD VALIGN=center>Jon Sterling Brower and Tina Lyn Brower                                   </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 12/16/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-508057">13-53607</A></TD>
+	<TD VALIGN=center>Tarsin, Inc.                                      </TD>
+	<TD VALIGN=center> 7</TD>
+	<TD VALIGN=center> 07/02/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowbackground2>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-509943">13-54235</A></TD>
+	<TD VALIGN=center>Rene Bauyon Salgado and Eden A. Salgado                                   </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 08/06/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-510668">13-54490</A></TD>
+	<TD VALIGN=center>Melydy Farma Reyes                                </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 08/21/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowbackground2>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-513050">13-55324</A></TD>
+	<TD VALIGN=center>Jeffrey Roger Kimball and Linda Diane Kimball                               </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 10/08/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-513091">13-55341</A></TD>
+	<TD VALIGN=center>Marilyn Garibay                                   </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 10/08/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowbackground2>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-513579">13-55531</A></TD>
+	<TD VALIGN=center>David Rodriguez and Ursula Rodriguez                                  </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 10/18/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-514844">13-55981</A></TD>
+	<TD VALIGN=center>David Y. David and Juliet E. David                                   </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 11/14/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowbackground2>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-514861">13-55991</A></TD>
+	<TD VALIGN=center>Parisa Daria Bolourchi                            </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 11/14/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-515904">13-56332</A></TD>
+	<TD VALIGN=center>Robert Andrew Bauer and Anna Marie Bauer                                  </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 12/10/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowbackground2>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-516182">13-56421</A></TD>
+	<TD VALIGN=center>Goran Erceg and Vlatka Erceg                                      </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 12/17/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-516679">13-56578</A></TD>
+	<TD VALIGN=center>Anthony B. Campo and Caterina A. Campo                                 </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 12/31/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowbackground2>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-516699">13-56586</A></TD>
+	<TD VALIGN=center>James Ross Riley, III                             </TD>
+	<TD VALIGN=center> 13</TD>
+	<TD VALIGN=center> 12/31/13</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-527835">14-03117</A></TD>
+	<TD VALIGN=center>Schoenmann v. Hujazi et al                                      </TD>
+<TD><I>Lead BK: </I> 12-32747
+ The Zuercher Trust of 1999                         </TD>	<TD VALIGN=center> 09/24/14</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowbackground2>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-527836">14-03118</A></TD>
+	<TD VALIGN=center>Schoenmann v. Hujazi et al                                      </TD>
+<TD><I>Lead BK: </I> 12-32747
+ The Zuercher Trust of 1999                         </TD>	<TD VALIGN=center> 09/24/14</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-527919">14-03120</A></TD>
+	<TD VALIGN=center>Schoenmann v. M & J Real Estate Appraisal                       </TD>
+<TD><I>Lead BK: </I> 12-32747
+ The Zuercher Trust of 1999                         </TD>	<TD VALIGN=center> 09/26/14</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowbackground2>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-527923">14-03122</A></TD>
+	<TD VALIGN=center>Schoenmann v. Brownstone Lofts, LLC                             </TD>
+<TD><I>Lead BK: </I> 12-32747
+ The Zuercher Trust of 1999                         </TD>	<TD VALIGN=center> 09/26/14</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<TR class= rowBackground1>
+	<TD NOWRAP VALIGN=center><A HREF="iquery.pl?748514993141343-L_9999_1-0-527927">14-03123</A></TD>
+	<TD VALIGN=center>Schoenmann v. 2141 Forest View, LLC                             </TD>
+<TD><I>Lead BK: </I> 12-32747
+ The Zuercher Trust of 1999                         </TD>	<TD VALIGN=center> 09/26/14</TD>
+	<TD VALIGN=center>N / A</TD>
+
+</TR>
+<HR><CENTER><TABLE BORDER=1 BGCOLOR=white width="400"><TR><TH COLSPAN=4><FONT SIZE=+1 COLOR=DARKRED>PACER Service Center </FONT></TH></TR><TR><TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH></TR><TR></TR><TR></TR><TR><TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1 COLOR=DARKBLUE>01/25/2019 17:18:15</FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> mlissner.flp:4512899:0 </FONT></TH></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE>  </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search Criteria: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE>            Last Entry From: 1/25/2019 Last Entry To: 1/30/2019  </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Billable Pages: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 20 </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 2.00 </FONT></TD></TR><TR></TR><TR></TR></TABLE></CENTER></HR><BR></BR></div></body></html>
