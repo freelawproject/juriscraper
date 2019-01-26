@@ -23,7 +23,7 @@ from juriscraper.pacer.http import PacerSession, check_if_logged_in_page
 from juriscraper.pacer.rss_feeds import PacerRssFeed
 from juriscraper.pacer.utils import (clean_pacer_object, get_court_id_from_url,
                                      get_courts_from_json,
-                                     get_pacer_case_id_from_docket_url,
+                                     get_pacer_case_id_from_nonce_url,
                                      get_pacer_doc_id_from_doc1_url,
                                      make_doc1_url, reverse_goDLS_function)
 from . import JURISCRAPER_ROOT, TESTS_ROOT
@@ -895,10 +895,12 @@ class PacerUtilTest(unittest.TestCase):
             ('https://ecf.almd.uscourts.gov/cgi-bin/DktRpt.pl?56120',
              '56120'),
             ('https://ecf.azb.uscourts.gov/cgi-bin/iquery.pl?625371913403797-L_9999_1-0-663150',
-             '663150')
+             '663150'),
+            ('https://ecf.canb.uscourts.gov/cgi-bin/iquery.pl?382858949667811-L_1_0-0-12612',
+             '12612'),
         )
         for q, a in qa_pairs:
-            self.assertEqual(get_pacer_case_id_from_docket_url(q), a)
+            self.assertEqual(get_pacer_case_id_from_nonce_url(q), a)
 
     def test_getting_court_id_from_url(self):
         qa_pairs = (

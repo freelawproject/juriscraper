@@ -10,7 +10,7 @@ from ..lib.html_utils import (clean_html, fix_links_in_lxml_tree,
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import convert_date_string
 from ..pacer.utils import (
-    get_pacer_case_id_from_docket_url, get_pacer_doc_id_from_doc1_url,
+    get_pacer_case_id_from_nonce_url, get_pacer_doc_id_from_doc1_url,
     reverse_goDLS_function,
 )
 
@@ -240,7 +240,7 @@ class FreeOpinionRow(object):
                 return last_row.pacer_case_id, last_row.pacer_seq_no
         elif self._sort_order == 'date_filed':
             href = self.element.xpath('./td[2]//@href')[0]
-        return get_pacer_case_id_from_docket_url(href), None
+        return get_pacer_case_id_from_nonce_url(href), None
 
     def get_docket_number(self):
         try:

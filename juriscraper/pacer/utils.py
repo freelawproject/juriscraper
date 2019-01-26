@@ -28,8 +28,8 @@ def get_court_id_from_url(url):
     return parts.subdomain.split('.')[1]
 
 
-def get_pacer_case_id_from_docket_url(url):
-    """Extract the pacer case ID from the docket URL.
+def get_pacer_case_id_from_nonce_url(url):
+    """Extract the pacer case ID from the URL.
 
     In: https://ecf.almd.uscourts.gov/cgi-bin/DktRpt.pl?56120
     Out: 56120

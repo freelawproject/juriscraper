@@ -9,7 +9,7 @@ import feedparser
 from requests import Session
 
 from .docket_report import DocketReport
-from .utils import clean_pacer_object, get_pacer_case_id_from_docket_url, \
+from .utils import clean_pacer_object, get_pacer_case_id_from_nonce_url, \
     get_pacer_doc_id_from_doc1_url, get_pacer_seq_no_from_doc1_url
 from ..lib.html_utils import html_unescape
 from ..lib.log_tools import make_default_logger
@@ -166,7 +166,7 @@ class PacerRssFeed(DocketReport):
     def metadata(self, entry):
         data = {
             u'court_id': self.court_id,
-            u'pacer_case_id': get_pacer_case_id_from_docket_url(entry.link),
+            u'pacer_case_id': get_pacer_case_id_from_nonce_url(entry.link),
             u'docket_number': self._get_docket_number(entry.title),
             u'case_name': self._get_case_name(entry.title),
             # Filing date is not available. Also the case for free opinions.
