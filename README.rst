@@ -287,12 +287,13 @@ Version History
   to consistently return None instead of sometimes returning []. Version bumped
   because of breaking API changes.
 - 1.21.* - Adds support for the case report, which is the term we use to describe the page you see when you press the "Query" button in a district court PACER website. This is the page at the iQuery.pl URL.
+- 1.22.* - Adds support for de_seqno values parsed from PACER RSS, dockets, docket history reports, and attachment pages.
 
 **Current**
 
-- 1.22.* - Adds support for de_seqno values parsed from PACER RSS, dockets, docket history reports, and attachment pages.
+- 1.23.* - Adds support for the advacned case report when it returns search results instead of a single item.
 
-**Immediate Future Goals**
+**Future Goals**
 
 -  Support for additional PACER pages and utilities
 -  Support opinions from for all intermediate appellate state courts
