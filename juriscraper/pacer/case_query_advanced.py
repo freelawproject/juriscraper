@@ -86,29 +86,41 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
         # </TR>
         #
         # With the following columns (in bankruptcy):
-        #     Name  (we skip this for now)
-        #     Case Number
-        #     Case Title
-        #     Chapter / Lead BK case
-        #     Date Filed
-        #     Party Role
-        #     Date Closed
+        #    1. Name  (we skip this for now)
+        #    2. Case Number
+        #    3. Case Title
+        #    4. Chapter / Lead BK case
+        #    5. Date Filed
+        #    6. Party Role (we skip this row for now)
+        #    7. Date Closed
+        #
+        # Columns 1 and 6 are not always present, and so as a first pass below
+        # we just nuke them. They're not that important to us now anyway. But
+        # none would deny this is a hackish way to normalize the results.
+
         table_rows = self.tree.xpath('//table//tr[@class="rowBackground1" or '
                                      '@class="rowbackground2"]')
         data = []
 
         for table_row in table_rows:
             cells = table_row.xpath('./td')
+            if len(cells) == 7:
+                # There are person and case results. Eliminate the first and
+                # sixth cells to normalize with tables that lack person results
+                # This is a hack that makes debugging harder. Better would be
+                # to sniff the header row.
+                del cells[5]
+                del cells[0]
+
             row_data = {
-                'docket_number': self.get_text_for_cell(cells[1]),
+                'docket_number': self.get_text_for_cell(cells[0]),
                 'case_name': clean_string(
-                    harmonize(self.get_text_for_cell(cells[2]))),
-                'chapter': self.get_text_for_cell(cells[3]),
-                'date_filed': self.get_date_for_cell(cells[4]),
-                'party_role': self.get_text_for_cell(cells[5]),
-                'date_closed': self.get_date_for_cell(cells[6]),
+                    harmonize(self.get_text_for_cell(cells[1]))),
+                'chapter': self.get_text_for_cell(cells[2]),
+                'date_filed': self.get_date_for_cell(cells[3]),
+                'date_closed': self.get_date_for_cell(cells[4]),
             }
-            href = cells[1].xpath('.//@href')[0]
+            href = cells[0].xpath('.//@href')[0]
             row_data['pacer_case_id'] = get_pacer_case_id_from_nonce_url(href)
 
             data.append(row_data)
