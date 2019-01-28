@@ -176,6 +176,19 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
         assert all([last_entry_from, last_entry_to]) or \
             not any([last_entry_from, last_entry_to]), \
             "Both or neither of last entry date fields must be complete."
+
+        # PACER only allows so many days per query. Exceed this threshold and
+        # you get an error message and zero results.
+        max_days = 31
+        max_days_msg = "PACER has a %s day limit on date filters. " \
+                       "Narrow your search." % max_days
+        if filed_from:
+            assert (filed_to - filed_from).days + 1 < max_days, \
+                max_days_msg
+        if last_entry_from:
+            assert (last_entry_to - last_entry_from).days + 1 < max_days, \
+                max_days_msg
+
         params = {}
         if filed_from:
             params[u'filed_from'] = filed_from.strftime(u'%m/%d/%Y')
