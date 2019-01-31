@@ -1,4 +1,5 @@
 from __future__ import print_function
+
 import pprint
 import re
 import sys
@@ -221,11 +222,11 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         self._clear_caches()
         super(AppellateDocketReport, self).parse()
 
-    def download_pdf(self, pacer_document_number, pacer_case_id=None):
+    def download_pdf(self, pacer_doc_id, pacer_case_id=None):
         """Download a PDF from an appellate court.
 
         :param pacer_case_id: The case ID for the docket
-        :param pacer_document_number: The document ID for the item.
+        :param pacer_doc_id: The document ID for the item.
         :return: request.Response object containing the PDF, if one can be
         found, else returns None.
 
@@ -275,7 +276,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             u'servlet': u'ShowDoc',
             u'incPdfHeader': u'Y',
             u'incPdfHeaderDisp': u'Y',
-            u'dls_id': pacer_document_number,
+            u'dls_id': pacer_doc_id,
             u'pacer': u't',  # Not sure what this does, but it's required.
         }
         if pacer_case_id:
@@ -286,7 +287,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         r.raise_for_status()
         if is_pdf(r):
             logger.info("Got PDF binary data for document #%s in court %s",
-                        pacer_document_number, self.court_id)
+                        pacer_doc_id, self.court_id)
             return r
         return None
 
