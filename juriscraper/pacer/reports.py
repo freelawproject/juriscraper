@@ -1,16 +1,15 @@
 # coding=utf-8
 import re
 
+import six
 from lxml import etree
 from lxml.html import HtmlElement
-import six
 from six.moves.urllib.parse import urljoin
 
-from .utils import make_doc1_url, is_pdf
-from ..lib.html_utils import (
-    set_response_encoding, clean_html, fix_links_in_lxml_tree,
-    get_html5_parsed_text, get_html_parsed_text,
-)
+from .utils import is_pdf, make_doc1_url
+from ..lib.html_utils import (clean_html, fix_links_in_lxml_tree,
+                              get_html5_parsed_text, get_html_parsed_text,
+                              set_response_encoding)
 from ..lib.log_tools import make_default_logger
 
 logger = make_default_logger()
@@ -109,7 +108,28 @@ class BaseReport(object):
         """Extract the data from the tree and return it."""
         raise NotImplementedError('.data() must be overridden.')
 
-    def download_pdf(self, pacer_case_id, pacer_document_number):
+    def _query_pdf_download(self, pacer_case_id, pacer_doc_id, got_receipt):
+        """Query the doc1 download URL.
+
+        :param pacer_case_id: The case ID for the case. Used for disambiguating
+        which case the document is associated with when a pacer_doc_id is used
+        in multiple cases.
+        :param pacer_doc_id: The doc id for the document
+        :param got_receipt: Whether to get the receipt for the page ('0') or
+        get the PDF itself ('1').
+        :return the Request.response object and the url queried
+        """
+        timeout = (60, 300)
+        url = make_doc1_url(self.court_id, pacer_doc_id, True)
+        data = {
+            'case_id': pacer_case_id,
+            'got_receipt': got_receipt,
+        }
+        logger.info("GETting URL: %s with params: %s" % (url, data))
+        r = self.session.get(url, params=data, timeout=timeout)
+        return r, url
+
+    def download_pdf(self, pacer_case_id, pacer_doc_id):
         """Download a PDF from PACER.
 
         Note that this doesn't support attachments yet.
@@ -117,15 +137,8 @@ class BaseReport(object):
         :returns: request.Response object containing a PDF, if one can be found
         (is not sealed, gone, etc.). Else, returns None.
         """
-        timeout = (60, 300)
-        url = make_doc1_url(self.court_id, pacer_document_number, True)
-        data = {
-            'case_id': pacer_case_id,
-            'got_receipt': '1',
-        }
-
-        logger.info("GETting PDF at URL: %s with params: %s" % (url, data))
-        r = self.session.get(url, params=data, timeout=timeout)
+        r, url = self._query_pdf_download(pacer_case_id, pacer_doc_id,
+                                          got_receipt='1')
 
         if u'This document is not available' in r.text:
             logger.error("Document not available in case: %s at %s" %
@@ -165,9 +178,19 @@ class BaseReport(object):
                              "URL: %s, caseid: %s" % (url, pacer_case_id))
             return None
 
-        r = self.session.get(iframe_src, timeout=timeout)
+        r = self.session.get(iframe_src)
         if is_pdf(r):
             logger.info('Got iframed PDF data for case %s at: %s' %
                         (url, iframe_src))
 
         return r
+
+    def is_pdf_sealed(self, pacer_case_id, pacer_doc_id):
+        """Check if a PDF is sealed without trying to actually download
+        it.
+        """
+        r, url = self._query_pdf_download(pacer_case_id, pacer_doc_id,
+                                          got_receipt='0')
+        sealed = 'You do not have permission to view this document.'
+        return sealed in r.content
+
