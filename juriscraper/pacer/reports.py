@@ -141,24 +141,25 @@ class BaseReport(object):
                                           got_receipt='1')
 
         if u'This document is not available' in r.text:
-            logger.error("Document not available in case: %s at %s" %
-                         (url, pacer_case_id))
+            logger.error("Document not available in case: %s at %s", url,
+                         pacer_case_id)
             return None
 
         # Some pacer sites use window.location in their JS, so we have to look
-        # for that. See: oknd, 13-cv-00357-JED-FHM, doc #24. But, be warned, you
-        # can only catch the redirection with JS off.
+        # for that. See: oknd, 13-cv-00357-JED-FHM, doc #24. But, be warned,
+        # you can only catch the redirection with JS off.
         m = self.REDIRECT_REGEX.search(r.text)
         if m is not None:
             r = self.session.get(urljoin(url, m.group(1)))
             r.raise_for_status()
 
         # The request above sometimes generates an HTML page with an iframe
-        # containing the PDF, and other times returns the PDF directly. ∴ either
-        # get the src of the iframe and download the PDF or just return the pdf.
+        # containing the PDF, and other times returns the PDF directly. ∴
+        # either get the src of the iframe and download the PDF or just return
+        # the pdf.
         r.raise_for_status()
         if is_pdf(r):
-            logger.info('Got PDF binary data for case %s at: %s' % (url, data))
+            logger.info('Got PDF binary data for case at %s', url)
             return r
 
         text = clean_html(r.text)
@@ -170,18 +171,19 @@ class BaseReport(object):
         except IndexError:
             if 'pdf:Producer' in text:
                 logger.error("Unable to download PDF. PDF content was placed "
-                             "directly in HTML. URL: %s, caseid: %s" %
-                             (url, pacer_case_id))
+                             "directly in HTML. URL: %s, caseid: %s", url,
+                             pacer_case_id)
             else:
-                logger.error("Unable to download PDF. PDF not served as binary "
-                             "data and unable to find iframe src attribute. "
-                             "URL: %s, caseid: %s" % (url, pacer_case_id))
+                logger.error("Unable to download PDF. PDF not served as "
+                             "binary data and unable to find iframe src "
+                             "attribute. URL: %s, caseid: %s", url,
+                             pacer_case_id)
             return None
 
         r = self.session.get(iframe_src)
         if is_pdf(r):
-            logger.info('Got iframed PDF data for case %s at: %s' %
-                        (url, iframe_src))
+            logger.info('Got iframed PDF data for case %s at: %s', url,
+                        iframe_src)
 
         return r
 
