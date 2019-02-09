@@ -45,6 +45,18 @@ def get_html5_parsed_text(text):
     return fromstring(tostring(parsed, encoding='unicode'))
 
 
+def get_table_column_text(html, cell_num, path_base=False):
+    path_cell = '//table//tr/td[%d]' % cell_num
+    path = path_base + path_cell if path_base else path_cell
+    return [cell.text_content().strip() for cell in html.xpath(path)]
+
+
+def get_table_column_links(html, cell_num, path_base=False):
+    path_cell = '//table//tr/td[%d]//a/@href' % cell_num
+    path = path_base + path_cell if path_base else path_cell
+    return html.xpath(path)
+
+
 def get_clean_body_content(content, remove_extra_tags=[]):
     """Parse out the body from an html string, clean it up, and send it along.
     """
