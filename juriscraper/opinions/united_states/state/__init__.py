@@ -19,8 +19,8 @@ __all__ = [
     'calctapp_6th',
     'calctapp_app_div',
     'calctapp_u',
-    #'colo',        # See scraper, works in dev but not production; its been months and no solution; slow tests fail
-    #'coloctapp',   # See scraper, works in dev but not production; its been months and no solution; slow tests fail
+    #'colo',        # Tests are extremely slow, since they hit the network
+    #'coloctapp',   # Tests are extremely slow, since they hit the network
     'conn',
     'connappct',
     'dc',
