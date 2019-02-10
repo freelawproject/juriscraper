@@ -12,6 +12,7 @@ Contact: Email "Internet and Technology" staff listed at http://www.cobar.org/st
 
 import re
 from lxml import html
+from urlparse import urlparse
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
@@ -40,9 +41,15 @@ class Site(OpinionSite):
         landing_page_html = super(Site, self)._download(request_dict)
 
         # Test/example files should use html from direct resource page
-        # PLEASE NOTE: Tests still hit network in _extract_cases_from_sub_page
-        # because awful court site doesn't direct link to PDF resources on date
-        # listing pages
+        #
+        # PLEASE NOTE: if your adding a new example file, ensure that,
+        # if any of the opinion links on the page do not link directly to
+        # a pdf url, that you manually edit your example file and add '.pdf'
+        # to the end of all those opinion anchor hrefs. We do this in order
+        # to prevent the tests form hitting the network.  HINT: if your new
+        # test takes any more than a split second to run, its probably hitting
+        # the network and needs ot be fixed as explained above.
+        #
         # PLEASE ALSO NOTE: coloctapp_example_3.html is supposed to have 0
         # results.  It is a blank page test case covering is_this_a_blank_page().
         if self.method == 'LOCAL':
@@ -150,12 +157,20 @@ class Site(OpinionSite):
                 continue
             name = self._extract_name_from_text(text)
             url = self._extract_url_from_anchor(anchor)
-            direct_url, resource_name = self.extract_pdf_url_and_name_from_resource(url)
+
+            # For whatever insane reason, some pages provide direct links
+            # to PDFs, and other link off to subpages that must themselves
+            # be scraped to extract the real PDF url.
+            if not self.is_url_pdf(url):
+                alt_url, alt_name = self.extract_pdf_url_and_name_from_resource(url)
+                url = alt_url if alt_url else url
+                name = alt_name if alt_name else name
+
             self.cases.append({
+                'url': url,
+                'name': name,
                 'date': date_obj,
                 'status': 'Published',
-                'name': name if name else resource_name,
-                'url': direct_url if direct_url else url,
                 'docket': self._extract_docket_from_text(text),
                 'citation': self._extract_citation_from_text(text),
                 'summary': self._extract_summary_relative_to_anchor(anchor),
@@ -294,6 +309,10 @@ class Site(OpinionSite):
         except:
             pass
         return False
+
+    def is_url_pdf(self, url):
+        parsed = urlparse(url)
+        return parsed.path.lower().endswith('.pdf')
 
     def _get_case_names(self):
         return [case['name'] for case in self.cases]

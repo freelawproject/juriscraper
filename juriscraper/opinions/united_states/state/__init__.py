@@ -19,8 +19,8 @@ __all__ = [
     'calctapp_6th',
     'calctapp_app_div',
     'calctapp_u',
-    #'colo',        # Tests are extremely slow, since they hit the network
-    #'coloctapp',   # Tests are extremely slow, since they hit the network
+    'colo',
+    'coloctapp',
     'conn',
     'connappct',
     'dc',
