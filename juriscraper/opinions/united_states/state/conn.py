@@ -40,12 +40,15 @@ class Site(OpinionSite):
         # Strip inconsistently placed <font> and <br>
         # tags that make stable coverage almost impossible
         etree.strip_tags(html, 'font', 'br')
-        for ul in html.xpath('//table[@id="AutoNumber1"]/tr[2]/td/table/tr/td//ul'):
+        path = '//table[@id="AutoNumber1"]//ul'
+        for ul in html.xpath(path):
             preceding = ul.xpath('./preceding::*[1]')[0]
             preceding_text = ' '.join(preceding.text_content().split()).strip(':')
-            if preceding_text and not preceding_text.lower().endswith('future date'):
-                # Below will fail if they change up strings or date formats
-                case_date = convert_date_string(preceding_text.split()[-1])
+            # Skip sections that are marked to be published at future date
+            if preceding_text and not preceding_text.lower().endswith(' date'):
+                # Below will fail if they change up string format
+                date_string = preceding_text.split()[-1]
+                case_date = convert_date_string(date_string)
                 for element in ul.xpath('./li | ./a'):
                     if element.tag == 'li':
                         text = normalize_dashes(' '.join(element.text_content().split()))
