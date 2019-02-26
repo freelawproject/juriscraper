@@ -9,10 +9,6 @@ class Site(OpinionSite):
         self.url = 'http://www.cadc.uscourts.gov/internet/opinions.nsf/uscadcopinions.xml'
         self.court_id = self.__module__
 
-    def _download(self, **kwargs):
-        # The certificate on their site has expired.
-        return super(Site, self)._download(request_dict={'verify': False})
-
     def _get_case_names(self):
         return [e for e in self.html.xpath('//item/description/text()')]
 
