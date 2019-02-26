@@ -19,10 +19,6 @@ class Site(OpinionSite):
         self.url = "http://www.armfor.uscourts.gov/newcaaf/opinions.htm"
         self.row_base_path = '//table[@border="1"]//tr[descendant::a]'
         self.path_to_landing_page_links = '//blockquote/ul/li[1]/font/a[1]/@href'
-        # Site has non-chained, bad certificate, need to
-        # ignore ssl verification for now for scraper to work
-        self.request['verify'] = False
-
 
     def _download(self, request_dict={}):
         landing_page_html = super(Site, self)._download(request_dict)
