@@ -18,33 +18,34 @@ from juriscraper.lib.string_utils import convert_date_string
 
 class Site(OpinionSite):
     DOWNLOAD_URL_SUB_PATH = "td[2]//@href[not(contains(., 'DecisionList'))]"
-    FOUR_CELLS_SUB_PATH = '//*[count(td)=4'
+    FOUR_CELLS_SUB_PATH = '//*[count(td)=3'
 
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
-        self.crawl_date = date.today()
-        # https://www.nycourts.gov/ctapps/Decisions/2015/Dec15/Dec15.html
-        self.url = 'http://www.nycourts.gov/ctapps/Decisions/{year}/{mon}{yr}/{mon}{yr}.html'.format(
-            year=self.crawl_date.year,
-            yr=self.crawl_date.strftime("%y"),
-            mon=self.crawl_date.strftime("%b"))
+        today = date.today()
+        # https://www.nycourts.gov/ctapps/Decisions/2015/Dec15/December15.html
+        self.url = 'http://www.nycourts.gov/ctapps/Decisions/{year}/{mon}{yr}/{month}{yr}.html'.format(
+            year=today.year,
+            yr=today.strftime("%y"),
+            mon=today.strftime("%b"),
+            month=today.strftime("%B")
+        )
         self.court_id = self.__module__
 
     def _make_html_tree(self, text):
         return get_html5_parsed_text(text)
 
     def _get_case_names(self):
-        path = '%s and %s]' % (
-            self.FOUR_CELLS_SUB_PATH, self.DOWNLOAD_URL_SUB_PATH)
+        path = '%s and %s]' % (self.FOUR_CELLS_SUB_PATH, self.DOWNLOAD_URL_SUB_PATH)
         case_names = []
         for element in self.html.xpath(path):
             case_name_parts = []
-            for t in element.xpath('./td[4]/p/font/text()'):
+            for t in element.xpath('./td[3]/p/font/text()'):
                 if t.strip():
                     case_name_parts.append(t)
             if not case_name_parts:
                 # No hits for first XPath, try another that sometimes works.
-                for t in element.xpath('./td[4]//text()'):
+                for t in element.xpath('./td[3]//text()'):
                     if t.strip():
                         case_name_parts.append(t)
             if case_name_parts:
@@ -99,7 +100,7 @@ class Site(OpinionSite):
         return ', '.join(raw_docket_string.split(' / '))
 
     def _row_contains_opinion(self, row):
-        p1 = './td[4]'
+        p1 = './td[3]'
         p2 = './%s' % self.DOWNLOAD_URL_SUB_PATH
         return row.xpath(p1) and row.xpath(p2)
 
