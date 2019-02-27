@@ -21,7 +21,9 @@ class Site(OralArgumentSite):
         return get_table_column_text(self.html, 2)
 
     def _get_docket_numbers(self):
-        return get_table_column_text(self.html, 1)
+        dockets = get_table_column_text(self.html, 1)
+        # Handle case where "no results" message is put in table cell, see: ca10_example_2.html
+        return [] if len(dockets) == 1 and 'no results' in dockets[0].lower() else dockets
 
     def _get_case_dates(self):
         return [convert_date_string(ds) for ds in get_table_column_text(self.html, 3)]
