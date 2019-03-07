@@ -10,14 +10,6 @@ import re
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
 
-## WARNING: THIS SCRAPER IS FAILING:
-## The page on which the hosting court was
-## previously publishing opionions publically
-## not shows a messgae that opinions are only
-## available upon request. Unless we can convince
-## the court to start publishing opinions publicly
-## agian, we can get rid of this scraper.
-
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):

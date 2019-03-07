@@ -85,7 +85,6 @@ __all__ = [
     'neb',
     'nebctapp',
     'nd',
-    'ndctapp',
     'nev_p',
     'nev_u',
     'nh',

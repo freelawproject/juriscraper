@@ -991,34 +991,6 @@ class ScraperSpotTest(unittest.TestCase):
             except AttributeError:
                 self.fail("Unable to parse %s string: '%s'" % (site_id, raw_string))
 
-    def test_pa(self):
-        """Ensures our regex parses what we think it can, and fails otherwise.
-        """
-        string_pairs = (
-            ("In Re: Reaccreditation of the American Board of Certification as"
-             " a Certifying Organization for Consumer Bankruptcy, Creditors' "
-             "Rights and Business Bankruptcy",
-             False),
-            ("Commonwealth v. Brown, M., Pet - No. 176 WAL 2014",
-             True),
-        )
-        site = pa.Site()
-        for s, expectation in string_pairs:
-            try:
-                site.return_case_name(s)
-                outcome = True
-            except:
-                outcome = False
-            self.assertEqual(
-                expectation,
-                outcome,
-                msg="Did not get expected result ({expectation}) when parsing "
-                    "string in 'pa' test. Instead got: {outcome}".format(
-                    expectation=expectation,
-                    outcome=outcome,
-                )
-            )
-
     def test_nh(self):
         """Ensures regex parses what we think it should."""
         string_pairs = (

@@ -105,6 +105,9 @@ class AbstractSite(object):
             # Run the downloader if it hasn't been run already
             self.html = self._download()
 
+            # Process the available html (optional)
+            self._process_html()
+
         # Set the attribute to the return value from _get_foo()
         # e.g., this does self.case_names = _get_case_names()
         for attr in self._all_attrs:
@@ -293,6 +296,15 @@ class AbstractSite(object):
             self._request_url_mock(self.url)
         self._post_process_response()
         return self._return_response_text_object()
+
+    def _process_html(self):
+        """Hook for processing available self.html after it's been downloaded.
+        This step is completely optional, but is useful if you want to transform
+        the html before running the data getters (_get_*), or if its easier to
+        extract the cases form the html in a linear function (here) as opposed
+        to using separate data getters.  See sc.py for example.
+        """
+        pass
 
     def _process_request_parameters(self, parameters={}):
         """Hook for processing injected parameter overrides"""

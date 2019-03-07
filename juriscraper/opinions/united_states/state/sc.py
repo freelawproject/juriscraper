@@ -9,6 +9,7 @@ History:
  - 2017-10-04: Updated by mlr to deal with their anti-bot system. Crux of change
                is to ensure that we get a cookie in our session by visiting the
                homepage before we go and scrape. Dumb.
+ - 2019-02-26: Restructured completely by arderyp
 
 Contact information:
  - Help desk: (803) 734-1193, Travis
@@ -16,83 +17,84 @@ Contact information:
  - Web Developer (who can help with firewall issues): 803-734-0373, Winkie Clark
 """
 
-from datetime import date
-from datetime import datetime
-
-import re
+import datetime
 
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.exceptions import InsanityException
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        today = date.today()
+        today = datetime.date.today()
         self.url = 'http://www.sccourts.org/opinions/indexSCPub.cfm?year=%d&month=%d' % (today.year, today.month)
-        self.sc_homepage = 'http://www.sccourts.org'
+        self.cases = []
 
-    def _request_url_get(self, url):
-        """SC has an annoying system that requires cookies to scrape.
+    def _process_html(self):
+        path = '//a[@class="blueLink2"][contains(./@href, ".pdf") or contains(./@href, "?orderNo=")]'
+        for link in self.html.xpath(path):
+            docket, name, url = self.extract_docket_name_url_from_link(link)
+            date, summary = self.extract_date_summary_from_link(link)
+            self.cases.append({
+                'date': date,
+                'docket': docket,
+                'name': name,
+                'url': url,
+                'summary': summary,
+            })
 
-        Therefore, before we scrape, we go and get some cookies.
-        """
-        self.request['session'].get(self.sc_homepage)
-        self.request['url'] = url
-        self.request['response'] = self.request['session'].get(
-            url,
-            headers=self.request['headers'],
-            verify=self.request['verify'],
-            timeout=60,
-            **self.request['parameters']
-        )
+    def extract_docket_name_url_from_link(self, link):
+        url = link.attrib['href']
+        text = link.text_content().strip()
+        parts = text.split('-', 1)
+        name = parts[1]
+        docket = parts[0].strip()
+        docket = '' if 'order' in docket.lower() else docket
+        return docket, name, url
+
+    def extract_date_summary_from_link(self, link):
+        # Link should be within a <p> tag directly under <div id='maincontent'>, but
+        # occasionally the courts forgets the wrap it in a <p>, in which case it should
+        # be directly under the <div id='maincontent'>
+        container_id = 'maincontent'
+        parent = link.getparent()
+        parents_parent = parent.getparent()
+        if 'id' in parent.attrib and parent.attrib['id'] == container_id:
+            search_root = link
+        elif 'id' in parents_parent.attrib and parents_parent.attrib['id'] == container_id:
+            search_root = parent
+        else:
+            raise InsanityException('Unrecognized placement of Opinion url on page: "%s"' % link.text_content().strip())
+
+        # Find date from bolded header element above link (ex: "5-14-2014 - Opinions" or "5-21-2014 - Orders")
+        element_date = search_root.xpath('./preceding-sibling::b')[-1]
+        element_date_text = element_date.text_content().strip().lower()
+        if not element_date_text.endswith('opinions') and not element_date_text.endswith('orders'):
+            raise InsanityException('Unrecognized bold (date) element: "%s"' % element_date_text)
+        date_string = element_date_text.split()[0]
+
+        # Find summary from blockquote element below link
+        element_blockquote = search_root.xpath('./following-sibling::blockquote')[0]
+        summary = element_blockquote.text_content().strip()
+
+        return convert_date_string(date_string), summary
 
     def _get_download_urls(self):
-        path = '//div[@id="pageContentOpinionList"]//a[contains(@href, "HTMLFiles") or contains(@href, "courtOrders")]/@href'
-        return list(self.html.xpath(path))
+        return [case['url'] for case in self.cases]
 
     def _get_case_names(self):
-        case_names = []
-        path = '//div[@id="pageContentOpinionList"]//a[contains(@href, "HTMLFiles") or contains(@href, "courtOrders")]/text()'
-        for txt in self.html.xpath(path):
-            expression = '(.* - )(.*)'
-            case_name = re.search(expression, txt, re.MULTILINE).group(2)
-            case_names.append(case_name)
-        return case_names
+        return [case['name'] for case in self.cases]
 
     def _get_case_dates(self):
-        dates = []
-        for node in self.html.xpath('//div[@id="pageContentOpinionList"]/node()[not(self::text())]'):
-            try:
-                tag_name = node.tag
-                if tag_name == 'b':
-                    # It's a header, grab the date and reset the counter
-                    date_obj = datetime.strptime(node.text.strip().split(' ', 1)[0],
-                                                 '%m-%d-%Y').date()
-                elif tag_name == 'a':
-                    # If it's a link, we've already got the correct date, so each time we have a link, append it to
-                    # our list.
-                    dates.append(date_obj)
-                else:
-                    continue
-            except AttributeError:
-                # Text node; something else
-                tag_name = None  # Not essential, but reset this for the next iteration of the loop
-                continue
-
-        return dates
-
-    def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_names)
+        return [case['date'] for case in self.cases]
 
     def _get_docket_numbers(self):
-        docket_numbers = []
-        path = '//div[@id="pageContentOpinionList"]//a[contains(@href, "HTMLFiles") or contains(@href, "courtOrders")]/text()'
-        for txt in self.html.xpath(path):
-            expression = '(.* - )(.*)'
-            docket_number = re.search(expression, txt,
-                                      re.MULTILINE).group(1)
-            if 'order' in docket_number.lower():
-                docket_number = ''
-            docket_numbers.append(docket_number)
-        return docket_numbers
+        return [case['docket'] for case in self.cases]
+
+    def _get_precedential_statuses(self):
+        return ['Published'] * len(self.cases)
+
+    def _get_summaries(self):
+        return [case['summary'] for case in self.cases]
