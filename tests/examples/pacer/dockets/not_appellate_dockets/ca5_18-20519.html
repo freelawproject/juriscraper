@@ -1,0 +1,45 @@
+<head><title>Document</title></head>
+<body bgcolor="#DAF4F0">
+<table border="0" align="center">
+<tbody><tr><th align="center"><b>2 Documents are attached to this filing</b><br><br></th></tr>
+</tbody></table>
+<table border="1" align="center" cellpadding="5">
+<tbody><tr><td>
+	<table border="0" cellpadding="5">
+	<tbody><tr><th align="center" colspan="2">Document</th>	<th align="center">Description</th><th align="center">Pages</th></tr>
+	<tr><td align="center">1</td><td align="center"><a href="https://ecf.ca5.uscourts.gov/docs1/00514857763" onclick="return doDocPostURL('00514857763')"><img title="Open Document" width="13" height="15" border="2" src="TransportRoom?servlet=document.gif" alt="Open document"></a>&nbsp;</td><td>Record Excerpts Filed</td><td align="center">102</td></tr>
+	<tr><td align="center">2</td><td align="center"><a href="https://ecf.ca5.uscourts.gov/docs1/00514858606" onclick="return doDocPostURL('00514858606')"><img title="Open Document" width="13" height="15" border="2" src="TransportRoom?servlet=document.gif" alt="Open form"></a>&nbsp;</td><td>Paper Copies Form</td><td align="center">2</td></tr>
+	</tbody></table>
+</td></tr>
+</tbody></table>
+<br>
+<center>
+104 pages
+
+<form name="dktEntry" action=""><input value="y" type="checkbox" name="incPdfFooter"><b>Include Page Numbers</b><br><input value="Combine All Documents" type="button" onclick="ProcessForm(&quot;view&quot;)">
+</form>
+<script type="text/javascript">
+<!--
+var winOptions = 'location=no,resizable,toolbar,status,scrollbars';
+var winTarget = '_blank';
+function doDocPostURL(dls) {
+//This use of a function when a user clicks a document
+//link was done so params aren't in copied doc hyperlinks.
+//This allows user to right click & get the URL for copying doc
+//links, but still gets params back to the server as needed
+	var aWin = window.open('TransportRoom?servlet=ShowDoc&caseId=183425&dktType=dktPublic&dls_id='+dls+'&caseId=183425',winTarget,winOptions,false);
+	return false;
+}
+function ProcessForm(uChoice) {
+	if(uChoice=='view'){
+		var incFoot = '';
+		if (document.dktEntry.incPdfFooter.checked)
+			incFoot = 'y';
+		window.location='TransportRoom?servlet=ShowDocMulti&caseId=183425&dktType=dktPublic&outputType=doc&d=8996422&outputForm=view&incPdfFooter='+incFoot;
+	}
+	return false;
+}
+
+//-->
+</script>
+</center></body>
