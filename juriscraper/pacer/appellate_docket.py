@@ -44,6 +44,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         r'http-equiv="REFRESH"',
         r'Case Number Not Found</b>',
         r'<title>404 Not Found</title>',
+        r'<b>\d+ Documents are attached to this filing</b>',
     ]
 
     def __init__(self, court_id, pacer_session=None):
