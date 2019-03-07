@@ -35,11 +35,11 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
     ERROR_STRINGS = BaseReport.ERROR_STRINGS + [
         r'The link to this page may not have originated from within CM/ECF.',
-        r'Click on the "Accept Charges and Retrieve" button ONCE at the bottom '
-        r'of this page to download the document image.',
+        r'Click on the "Accept Charges and Retrieve" button ONCE at the '
+        r'bottom of this page to download the document image.',
         r'<embed width="100%" height="100%" name="plugin" id="plugin"',
-        r'Access to the document you are about to view has been restricted.*Do '
-        r'not allow it to be seen by unauthorized persons.',
+        r'Access to the document you are about to view has been restricted.*'
+        r'Do not allow it to be seen by unauthorized persons.',
         r'document.location\s*=\s*"https://pacer.login.uscourts.gov',
         r'http-equiv="REFRESH"',
         r'Case Number Not Found</b>',
@@ -599,7 +599,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         """Get all of the originating type information as a dict."""
         try:
             ogc_table = self.tree.re_xpath(
-                '//*[re:match(text(), "Originating Court Information")]/ancestor::table[1]' # noqa
+                '//*[re:match(text(), "Originating Court Information")]/ancestor::table[1]'  # noqa
             )[0]
         except IndexError:
             # No originating court info.
@@ -697,6 +697,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 return convert_date_string(tail)
             return tail
 
+
 def _main():
     if len(sys.argv) != 2:
         print("Usage: python -m juriscraper.pacer.appellate_docket filepath")
@@ -710,6 +711,7 @@ def _main():
         text = f.read().decode('utf-8')
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)
+
 
 if __name__ == "__main__":
     _main()
