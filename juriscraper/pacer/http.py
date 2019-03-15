@@ -226,6 +226,9 @@ class PacerSession(requests.Session):
                                       "characters")
         if u'timeout error' in r.text:
             raise PacerLoginException("Timeout")
+        if u'Your PACER account has been disabled' in r.text:
+            raise PacerLoginException("Account disabled; try via the browser "
+                                      "to see full error message.")
 
         if not self.cookies.get('PacerSession'):
             logger.info("Did not get cookies from first log in POST. Assuming "
