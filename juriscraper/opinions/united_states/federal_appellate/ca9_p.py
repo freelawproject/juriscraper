@@ -16,22 +16,44 @@ from juriscraper.lib.string_utils import titlecase, convert_date_string
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
-        self.url = "http://www.ca9.uscourts.gov/opinions/index.php"
-        self.base = ('//table[@id="search-results-table"]//tr['
-                     '    not(@id="c_row_") and '
-                     '    not('
-                     '        contains(child::td//text(), "NO OPINIONS") or'
-                     '        contains(child::td//text(), "No Opinions") or'
-                     '        contains(child::td//text(), "NO MEMO") or'
-                     '        contains(child::td//text(), "No Memo")'
-                     '    )'
-                     '][position() > 1]')
         self.court_id = self.__module__
-        self.back_scrape_iterable = [i.date() for i in rrule(
-            DAILY,
-            dtstart=date(2005, 1, 3),
-            until=date(2015, 1, 1),
-        )]
+        self.url = "http://www.ca9.uscourts.gov/opinions/index.php"
+        self.position = '[position() > 1]'
+        self.base = self.get_base_path()
+        self.back_scrape_date_start = date(2005, 1, 3)
+        self.back_scrape_date_end = date(2015, 1, 1)
+        self.back_scrape_iterable = self.get_backscrape_iterable()
+        self.back_scrape_url = self.url
+
+    def get_backscrape_iterable(self):
+        date_rules = rrule(DAILY, dtstart=self.back_scrape_date_start, until=self.back_scrape_date_end)
+        return [rule.date() for rule in date_rules]
+
+    def get_back_scrape_parameters(self, d):
+        return {
+            'c_page_size': '50',
+            'c__ff_cms_opinions_case_name_operator': 'like',
+            'c__ff_cms_opinions_case_num_operator': 'like',
+            'c__ff_cms_opinions_case_origin_operator': 'like',
+            'c__ff_cms_opinions_case_origin': 'like',
+            'c__ff_j1_name_operator': 'like%25',
+            'c__ff_j2_name_operator': 'like%25',
+            'c__ff_cms_opinions_case_type_operator': '%3D',
+            'c__ff_cms_opinion_date_published_operator': 'like',
+            'c__ff_cms_opinion_date_published': d.strftime('%m/%d/%Y'),
+            'c__ff_onSUBMIT_FILTER': 'Search'
+        }
+
+    def get_base_path(self):
+        return ('//table[@id="search-results-table"]//tr['
+                '    not(@id="c_row_") and '
+                '    not('
+                '        contains(child::td//text(), "NO OPINIONS") or'
+                '        contains(child::td//text(), "No Opinions") or'
+                '        contains(child::td//text(), "NO MEMO") or'
+                '        contains(child::td//text(), "No Memo")'
+                '    )'
+                ']' + self.position)
 
     def _get_case_names(self):
         path = '%s/td[1]/a/text()' % self.base
@@ -72,19 +94,8 @@ class Site(OpinionSite):
 
     def _download_backwards(self, d):
         self.method = 'POST'
-        self.parameters = {
-            'c_page_size': '50',
-            'c__ff_cms_opinions_case_name_operator': 'like',
-            'c__ff_cms_opinions_case_num_operator': 'like',
-            'c__ff_cms_opinions_case_origin_operator': 'like',
-            'c__ff_cms_opinions_case_origin': 'like',
-            'c__ff_j1_name_operator': 'like%25',
-            'c__ff_j2_name_operator': 'like%25',
-            'c__ff_cms_opinions_case_type_operator': '%3D',
-            'c__ff_cms_opinion_date_published_operator': 'like',
-            'c__ff_cms_opinion_date_published': d.strftime('%m/%d/%Y'),
-            'c__ff_onSUBMIT_FILTER': 'Search'
-        }
+        self.url = self.back_scrape_url
+        self.parameters = self.get_back_scrape_parameters(d)
 
         self.html = self._download()
         if self.html is not None:
