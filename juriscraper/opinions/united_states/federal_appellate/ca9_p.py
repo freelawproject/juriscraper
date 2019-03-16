@@ -6,21 +6,19 @@ History:
       the scraper started working without my fixing it. Very odd.
 """
 
-import time
 from datetime import date
-
 from dateutil.rrule import DAILY, rrule
+
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import titlecase
-from lxml import html
+from juriscraper.lib.string_utils import titlecase, convert_date_string
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.url = "http://www.ca9.uscourts.gov/opinions/index.php"
-        self.base = ('//table[@id = "search-data-table"]//tr['
-                     '    not(@id = "c_row_") and '
+        self.base = ('//table[@id="search-results-table"]//tr['
+                     '    not(@id="c_row_") and '
                      '    not('
                      '        contains(child::td//text(), "NO OPINIONS") or'
                      '        contains(child::td//text(), "No Opinions") or'
@@ -36,49 +34,41 @@ class Site(OpinionSite):
         )]
 
     def _get_case_names(self):
-        path = '{base}/td[1]/a/text()'.format(base=self.base)
+        path = '%s/td[1]/a/text()' % self.base
         return [titlecase(text) for text in self.html.xpath(path)]
 
     def _get_download_urls(self):
-        path = '{base}/td[1]/a/@href'.format(base=self.base)
-        return list(self.html.xpath(path))
+        path = '%s/td[1]/a/@href' % self.base
+        return self.html.xpath(path)
 
     def _get_case_dates(self):
-        path = '{base}/td[7]//text()'.format(base=self.base)
-        return [date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%Y')))
-                for date_string in self.html.xpath(path)]
+        path = '%s/td[7]//text()' % self.base
+        return [convert_date_string(date_string) for date_string in self.html.xpath(path)]
 
     def _get_docket_numbers(self):
-        docket_numbers = []
-        for e in self.html.xpath('{}/td[2]'.format(self.base)):
-            s = html.tostring(e, method='text', encoding='unicode')
-            docket_numbers.append(s)
-        return docket_numbers
+        path = '%s/td[2]' % self.base
+        return [cell.text_content() for cell in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
-        statuses = []
-        for _ in range(0, len(self.case_names)):
-            if 'opinion' in self.url.lower():
-                statuses.append('Published')
-            elif 'memoranda' in self.url.lower():
-                statuses.append('Unpublished')
-            else:
-                statuses.append('Unknown')
-        return statuses
+        if 'opinion' in self.url.lower():
+            status = 'Published'
+        elif 'memoranda' in self.url.lower():
+            status = 'Unpublished'
+        else:
+            status = 'Unknown'
+        return [status] * len(self.case_names)
 
     def _get_nature_of_suit(self):
-        path = '{base}/td[5]'.format(base=self.base)
-        nos = []
-        for e in self.html.xpath(path):
-            t = html.tostring(e, method='text', encoding='unicode')
-            if t.lower().strip() == 'n/a':
-                t = ''
-            nos.append(t)
-        return nos
+        natures = []
+        path = '%s/td[5]' % self.base
+        for cell in self.html.xpath(path):
+            text = cell.text_content()
+            natures.append('' if text.lower().strip() == 'n/a' else text)
+        return natures
 
     def _get_lower_court(self):
-        path = '{base}/td[3]//text()'.format(base=self.base)
-        return list(self.html.xpath(path))
+        path = '%s/td[3]//text()' % self.base
+        return self.html.xpath(path)
 
     def _download_backwards(self, d):
         self.method = 'POST'
