@@ -4,6 +4,7 @@ import requests
 from requests.packages.urllib3 import exceptions
 
 from ..lib.exceptions import PacerLoginException
+from ..lib.html_utils import get_html_parsed_text, get_xml_parsed_text
 from ..lib.log_tools import make_default_logger
 from ..pacer.utils import is_pdf
 
@@ -150,12 +151,61 @@ class PacerSession(requests.Session):
             output[key] = (None, data[key])
         return output
 
+    @staticmethod
+    def _get_view_state(r):
+        """Get the viewState parameter of the form
+
+        This is an annoying thing we have to do. The login flow has three
+        requests that you make and each requires the view state from the one
+        prior. Thus, we capture that viewState each time and submit it during
+        each of the next submissions.
+
+        The HTML takes the form of:
+
+        <input type="hidden" name="javax.faces.ViewState"
+               id="j_id1:javax.faces.ViewState:0"
+               value="some-long-value-here">
+
+        :param r: A request.Response object
+        :return The value of the "value" attribute of the ViewState input
+        element.
+        """
+        tree = get_html_parsed_text(r.content)
+        xpath = '//form[@id="loginForm"]//input[' \
+                '    @name="javax.faces.ViewState"' \
+                ']/@value'
+        return tree.xpath(xpath)[0]
+
+    @staticmethod
+    def _get_xml_view_state(r):
+        """Same idea as above, but sometimes PACER returns XML so we parse
+        that instead of the HTML.
+
+        Here's a sample of the XML:
+
+        <partial-response id="j_id1">
+          <changes>
+            <update id="regmsg:bpmConfirm">
+              <![CDATA[<button id="regmsg:bpmConfirm" name="regmsg:bpmConfirm" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.ab({s:&quot;regmsg:bpmConfirm&quot;,pa:[{name:&quot;dialogName&quot;,value:&quot;redactionDlg&quot;}]});return false;" style="margin-right: 20px;" type="submit"><span class="ui-button-text ui-c">Continue</span></button><script id="regmsg:bpmConfirm_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_regmsg_bpmConfirm",{id:"regmsg:bpmConfirm"});</script>]]>
+            </update>
+            <update id="loginForm:pclLoginMessages">
+              <![CDATA[<div id="loginForm:pclLoginMessages" class="ui-messages ui-widget" style="font-size: 0.85em;" aria-live="polite"></div>]]>
+            </update>
+            <update id="j_id1:javax.faces.ViewState:0"><![CDATA]]>
+            </update>
+          </changes>
+        </partial-response>
+        """
+        tree = get_xml_parsed_text(r.content)
+        xpath = "//update[@id='j_id1:javax.faces.ViewState:0']/text()"
+        return tree.xpath(xpath)[0]
+
     def login(self, url=None):
         """Attempt to log into the PACER site.
 
         Logging into PACER has two flows. If you have filing permission in any
-        court, you wind up making three POST request which are tied together by
-        a JSESSIONID value that's in a cookie set by the first request.
+        court, you wind up making four POST request which are tied together by
+        a JSESSIONID cookie value and ViewState hidden form inputs.
 
         If you do *not* have filing permissions, only the first request below
         is needed. The trick to determine what's needed is to watch for a 302
@@ -163,7 +213,8 @@ class PacerSession(requests.Session):
         the other, that indicates that you're logged in or that you're being
         redirected to the correct court/webpage.
 
-        Here are the requests that are needed. First, submit your user/pass:
+        Here are the requests that are needed. First, just GET the login page
+        and parse out the ViewState form value. Then, submit your user/pass:
 
             curl 'https://pacer.login.uscourts.gov/csologin/login.jsf' \
               -H 'Content-Type: application/x-www-form-urlencoded' \
@@ -173,12 +224,13 @@ class PacerSession(requests.Session):
         If this is *not* a filing account, you should receive a 302 response
         and the proper cookies at this point. You're logged in.
 
-        If this *is* a filing account, the second request happens when you
+        If this *is* a filing account, the third request happens when you
         click the *box* (not the button) saying you'll agree to the redaction
         rules. Note that the JSESSIONID cookie in this request and the next one
         is set by the previous request and needs to be carried through. If you
         receive a new JSESSIONID cookie in response to your second request,
-        something has gone wrong:
+        something has gone wrong. We also grab the ViewState value from the
+        previous request:
 
             curl 'https://pacer.login.uscourts.gov/csologin/login.jsf' \
               -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' \
@@ -186,7 +238,7 @@ class PacerSession(requests.Session):
               --data 'javax.faces.partial.ajax=true&javax.faces.source=regmsg%3AchkRedact&javax.faces.partial.execute=regmsg%3AchkRedact&javax.faces.partial.render=regmsg%3AbpmConfirm&javax.faces.behavior.event=valueChange&javax.faces.partial.event=change&regmsg=regmsg&regmsg%3AchkRedact_input=on&javax.faces.ViewState=stateless' \
               --verbose > /tmp/curl-out.html
 
-        The third request happens when you submit the form saying you promise
+        The fourth request happens when you submit the form saying you promise
         to redact:
 
             curl 'https://pacer.login.uscourts.gov/csologin/login.jsf' \
@@ -201,36 +253,55 @@ class PacerSession(requests.Session):
         logger.info(u'Attempting PACER site login')
         if url is None:
             url = self.LOGIN_URL
-        r = self.post(
+
+        # Load the page in order to get the ViewState value from the HTML
+        load_page_r = self.get(
+            url,
+            headers={'User-Agent': 'Juriscraper'},
+            auto_login=False,
+            verify=False,
+            timeout=60,
+        )
+        login_post_r = self.post(
             url,
             headers={'User-Agent': 'Juriscraper'},
             verify=False,
             timeout=60,
             auto_login=False,
             data={
-                'javax.faces.ViewState': 'stateless',
-                'login': 'login',
-                'login:clientCode': '',
-                'login:fbtnLogin': '',
-                'login:loginName': self.username,
-                'login:password': self.password,
+                'javax.faces.partial.ajax': 'true',
+                'javax.faces.partial.execute': '@all',
+                'javax.faces.source': 'loginForm:fbtnLogin',
+                'javax.faces.partial.render':
+                    'pscLoginPanel+loginForm+redactionConfirmation+popupMsgId',
+                'javax.faces.ViewState': self._get_view_state(load_page_r),
+
+                'loginForm:courtId_input': 'E_ALMDC',
+                'loginForm:courtId_focus': '',
+                'loginForm:fbtnLogin': 'loginForm:fbtnLogin',
+                'loginForm:loginName': self.username,
+                'loginForm:password': self.password,
+                'loginForm:clientCode': '',
+                'loginForm': 'loginForm',
+
             },
         )
-        if u'Invalid username or password' in r.text:
+        if u'Invalid username or password' in login_post_r.text:
             raise PacerLoginException("Invalid username/password")
-        if u'Username must be at least 6 characters' in r.text:
+        if u'Username must be at least 6 characters' in login_post_r.text:
             raise PacerLoginException("Username must be at least six "
                                       "characters")
-        if u'Password must be at least 8 characters' in r.text:
+        if u'Password must be at least 8 characters' in login_post_r.text:
             raise PacerLoginException("Password must be at least eight "
                                       "characters")
-        if u'timeout error' in r.text:
+        if u'timeout error' in login_post_r.text:
             raise PacerLoginException("Timeout")
 
         if not self.cookies.get('PacerSession'):
-            logger.info("Did not get cookies from first log in POST. Assuming "
-                        "this is a filing user and doing two more POSTs.")
-            self.post(
+            logger.info("Did not get cookies from first log in POSTs. "
+                        "Assuming this is a filing user and doing two more "
+                        "POSTs.")
+            reg_msg_r = self.post(
                 url,
                 headers={'User-Agent': 'Juriscraper'},
                 verify=False,
@@ -241,11 +312,13 @@ class PacerSession(requests.Session):
                     'javax.faces.source': 'regmsg:chkRedact',
                     'javax.faces.partial.execute': 'regmsg:chkRedact',
                     'javax.faces.partial.render': 'regmsg:bpmConfirm',
-                    'javax.faces.behavior.event': 'valueChange',
                     'javax.faces.partial.event': 'change',
+                    'javax.faces.behavior.event': 'valueChange',
+                    'javax.faces.ViewState': self._get_xml_view_state(
+                        login_post_r),
+
                     'regmsg': 'regmsg',
                     'regmsg:chkRedact_input': 'on',
-                    'javax.faces.ViewState': 'stateless',
                 },
             )
             # The box is now checked. Submit the form to say so.
@@ -256,10 +329,17 @@ class PacerSession(requests.Session):
                 timeout=60,
                 auto_login=False,
                 data={
+                    'javax.faces.partial.ajax': 'true',
+                    'javax.faces.source': 'regmsg:bpmConfirm',
+                    'javax.faces.partial.execute': '@all',
+                    'javax.faces.ViewState': self._get_xml_view_state(
+                        reg_msg_r),
+
                     'regmsg': 'regmsg',
                     'regmsg:chkRedact_input': 'on',
-                    'regmsg:bpmConfirm': '',
-                    'javax.faces.ViewState': 'stateless',
+                    'regmsg:bpmConfirm': 'regmsg:bpmConfirm',
+
+                    'dialogName': 'redactionDlg',
                 },
             )
 
