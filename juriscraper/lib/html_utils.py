@@ -3,7 +3,7 @@
 import re
 import sys
 
-from lxml import html
+from lxml import etree, html
 from lxml.etree import XMLSyntaxError
 from lxml.html import fromstring, html5parser, tostring
 from lxml.html.clean import Cleaner
@@ -22,6 +22,10 @@ if sys.maxunicode == 65535:
     logger = make_default_logger()
     logger.warn("You are using a narrow build of Python, which is not "
                 "completely supported. See issue #188 for details.")
+
+
+def get_xml_parsed_text(text):
+    return etree.fromstring(text)
 
 
 def get_html_parsed_text(text):
