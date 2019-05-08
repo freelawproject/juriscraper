@@ -64,12 +64,15 @@ class PossibleCaseNumberApi(BaseReport):
           2:16-cr-01152-JZB
           2:16-cv-01152-JZB
         You'll know that it's the second result because cv means civil. Again
-        this is something you might know if you're using the IDB.
+        this is something you might know if you're using the IDB. These are
+        some known values:
+         - cv - Civil
+         - cr - Criminal
+         - ap - Appellate (bankruptcy?)
+         - mdl - Multi-district litigation
+         - bk - Bankruptcy
+        There are others too, feel free to add them if you know them.
         """
-        if docket_number_letters not in [None, u'cv', u'cr', u'md']:
-            raise ValueError(u"Invalid value for 'criminal_or_civil' "
-                             u"parameter please select from 'cr', 'cv', 'md' "
-                             u"or None")
         case_count = self.tree.xpath('count(//case)')
         nodes = self.tree.xpath('//case')
         if case_count == 0:
