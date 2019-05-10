@@ -94,6 +94,12 @@ class AbstractSite(object):
                 item[attr_name] = attr_value[i]
         return item
 
+    def enable_test_mode(self):
+        self.method = 'LOCAL'
+
+    def test_mode_enabled(self):
+        return self.method == 'LOCAL'
+
     def to_json(self):
         return json.dumps(
             [item for item in self],
@@ -292,7 +298,7 @@ class AbstractSite(object):
             self._request_url_get(self.url)
         elif self.method == 'POST':
             self._request_url_post(self.url)
-        elif self.method == 'LOCAL':
+        elif self.test_mode_enabled():
             self._request_url_mock(self.url)
         self._post_process_response()
         return self._return_response_text_object()

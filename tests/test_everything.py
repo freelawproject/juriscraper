@@ -171,7 +171,7 @@ class ScraperExampleTest(unittest.TestCase):
                     site = mod.Site(cnt=cnt)
                     site.url = path
                     # Forces a local GET
-                    site.method = 'LOCAL'
+                    site.enable_test_mode()
                     site.parse()
                     # Now validate that the parsed result is as we expect
                     json_path = '%s%s' % (path.rsplit('.', 1)[0], json_compare_extension)
