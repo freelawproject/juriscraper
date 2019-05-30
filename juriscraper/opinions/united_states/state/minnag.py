@@ -26,9 +26,9 @@ class Site(OpinionSite):
 
     def _extract_case_data_from_html(self, html):
         for p in html.xpath("//div[@id='content']/div[@id='op']/p"):
-            name = p.xpath('a/strong/following-sibling::text()[1]')[0].split(u"\u2014", 1)[1]
+            text = p.xpath('a/strong/following-sibling::text()[1]')[0]
+            name = ' '.join(text.split()[1:])  # strip leading dash charater, which can be one of various unicode dash characters
             name = re.sub("\\s+", " ", name).strip()
-
             summary = ' '.join(p.xpath('br/following-sibling::text() | br/following-sibling::*//text()'))
             summary = re.sub('\\s+', ' ', summary).strip()
 
