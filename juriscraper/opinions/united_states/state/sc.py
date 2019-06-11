@@ -71,9 +71,10 @@ class Site(OpinionSite):
         # Find date from bolded header element above link (ex: "5-14-2014 - Opinions" or "5-21-2014 - Orders")
         element_date = search_root.xpath('./preceding-sibling::b')[-1]
         element_date_text = element_date.text_content().strip().lower()
-        if not element_date_text.endswith('opinions') and not element_date_text.endswith('orders'):
+        try:
+            date_string = element_date_text.split()[0]
+        except:
             raise InsanityException('Unrecognized bold (date) element: "%s"' % element_date_text)
-        date_string = element_date_text.split()[0]
 
         # Find summary from blockquote element below link
         element_blockquote = search_root.xpath('./following-sibling::blockquote')[0]
