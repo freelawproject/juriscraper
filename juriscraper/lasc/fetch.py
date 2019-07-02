@@ -20,6 +20,8 @@ class LASCDocket(object):
         self.case_url = self.lasc.fetch_url % (internal_case_id)
         self.case_data = self.lasc.s.get(self.case_url, verify=False, allow_redirects=True).text
         self.success = True if json.loads(self.case_data)['IsSuccess'] == True else False
+        if self.success == True:
+            logger.info(u'Successful query into LASC map')
 
     # date string is MM-DD-YYYY (ex. 12-31-2018)
     # This query will need to be repeated back dated to get files uploaded later and added to the database
@@ -29,14 +31,19 @@ class LASCDocket(object):
 
     # Using the unique internal case id information and document id we can collect all the pdfs
     def get_pdf_by_case_and_document_id(self, case_id, doc_id):
+        logger.info(u'Query for pdf')
         self.pdf_url = self.documnet_url % (case_id, doc_id)
         self.pdf_data = self.lasc.s.get(self.pdf_url, verify=False, allow_redirects=False).content
 
-    # This function probably works 99% of the time,
-    # but it is unknown how common if at all case numbers are repeated in unlimited cases.
+    # This function probably works 99% of the time.
+    # But it is unknown how common if at all case numbers are repeated in unlimited cases.
     # Currently it grabs the first result, if a case number is not unique.
     def get_case_by_case_id(self, case_id):
         self.case_search_url = self.case_search % (case_id)
         self.internal_case_id = json.loads(self.lasc.s.get(self.case_search_url).text)['ResultList'][0]['NonCriminalCases'][0]['CaseID']
         self.get_json_from_internal_case_id(self.internal_case_id)
 
+
+    # Future function to check for updates to case by ID
+    def check_for_update_to_case(self, internal_case_id):
+        pass
