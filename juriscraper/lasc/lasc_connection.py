@@ -66,9 +66,7 @@ class LASCSession(object):
 
         # A second login is required within the azure, microsoft court login.
         self.make_second_post_data()
-        self.html = self.s.post(self.post_url2, headers=self.headers, allow_redirects=True, data=self.data2)
-
-
+        self.html = self.s.post(self.post_url2, headers=self.headers, allow_redirects=True, data=self.data2).text
 
     def extract_csrf_token(self):
         self.csrf = self.html.split("csrf")[1].split("\"")[2]
