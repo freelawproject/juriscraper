@@ -251,6 +251,13 @@ class PacerSession(requests.Session):
         means you're logged in.
         """
         logger.info(u'Attempting PACER site login')
+
+        # Clear any remaining cookies. This is important because sometimes we
+        # want to login before an old session has entirely died. One example of
+        # when we do that is when we get the page saying that "This page will
+        # expire in...[so many minutes]." When we see that we just log in
+        # fresh and try again.
+        self.cookies.clear()
         if url is None:
             url = self.LOGIN_URL
 
