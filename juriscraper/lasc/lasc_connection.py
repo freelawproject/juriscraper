@@ -20,7 +20,11 @@ class LASC_Session(requests.Session):
         Instantiate a new LASC HTTP Session with some Juriscraper defaults.
         This method requires credentials from the media access portal to
 
+        :param username: media access portal credentials
+        :param password: media access portal credentials
+
         """
+
 
         self.s = requests.session()
         self.html = None
@@ -80,7 +84,7 @@ class LASC_Session(requests.Session):
         kwargs.setdefault('timeout', 30)
 
         r = self.s.get(url, **kwargs)
-        
+
         return r
 
     def post(self, url, auto_login=False, **kwargs):
@@ -161,11 +165,8 @@ class LASC_Session(requests.Session):
     def parse_html_for_keys(self):
         """
         This method parses the HTML after the first login page and idenitifies the two parameter values
+        Both parameters are required and both are used multiple times.
 
-        :param => transID and/or tx
-        :param => X-CSRF-TOKEN and/or crsf_token
-
-        Both parameters are required and both are used multiple times
         :return:
 
         """
@@ -187,9 +188,6 @@ class LASC_Session(requests.Session):
         This method parses the HTML after the first login page and idenitifies the three parameter values required.
         the f method comes from lxml.html import fromstring as f
 
-        :param => code
-        :param => id_token
-        :param => state
 
         :return:
         """
@@ -203,7 +201,10 @@ class LASC_Session(requests.Session):
 
 
 class LASCLoginException(Exception):
-    """Raised when the system cannot authenticate with LASC MAP"""
+
+    """
+    Raised when the system cannot authenticate with LASC MAP
+    """
 
     def __init__(self, message):
         Exception.__init__(self, message)
