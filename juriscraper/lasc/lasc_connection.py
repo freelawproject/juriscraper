@@ -1,36 +1,40 @@
 import requests
 requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
 from ..lib.log_tools import make_default_logger
+from urllib import urlencode
 logger = make_default_logger()
+from lxml.html import fromstring as f
 
-
-class LASCSession(object):
-    def __init__(self, cookies=None, username=None, password=None):
-        super(LASCSession, self).__init__()
+class LASC_Session(object):
+    def __init__(self, username=None, password=None):
+        super(LASC_Session, self).__init__()
 
         self.s = requests.session()
-        self.html = ""
+        self.html = None
 
-        self.base_url = 'https://media.lacourt.org'
-        self.login_url = 'https://media.lacourt.org/api/Account/Login'
-        self.post_url = "https://login.microsoftonline.com/calcourts02b2c.onmicrosoft.com/" \
-                        "B2C_1_Media-LASC-SUSI/SelfAsserted?tx=%s&p=B2C_1_Media-LASC-SUSI"
-        self.post_url2 = "https://media.lacourt.org/signin-oidc"
-        self.fetch_url = "https://media.lacourt.org/api/AzureApi/GetCaseDetail/%s"
-        self.case_url = None
-        self.case_data = None
+        # Los Angeles Superior Court MAP urls and paths
+        self.la_domain = 'https://media.lacourt.org'
 
-        self.microsoft_login = "https://login.microsoftonline.com/calcourts02b2c.onmicrosoft.com/B2C_1_Media-LASC-SUSI/" \
-                               "api/CombinedSigninAndSignup/confirmed?csrf_token={CSRF}&tx={TRANSID}&p=B2C_1_Media-LASC-SUSI" \
-                               "&diags=%7B%22pageViewId%22%3A%22955aa286-f9d8-43de-b867-fb48bc4e08a3%22%2C%22pageId%22%3A%22" \
-                               "CombinedSigninAndSignup%22%2C%22trace%22%3A%5B%7B%22ac%22%3A%22T005%22%2C%22acST%22%3A1559936193" \
-                               "%2C%22acD%22%3A2%7D%2C%7B%22ac%22%3A%22T021%20-%20URL%3Ahttps%3A%2F%2Flascproduction.blob.core.windows.net" \
-                               "%2Fb2clascbranding%2Flasc%2Funified.html%22%2C%22acST%22%3A1559936193%2C%22acD%22%3A111%7D%2C%7B%22" \
-                               "ac%22%3A%22T029%22%2C%22acST%22%3A1559936193%2C%22acD%22%3A8%7D%2C%7B%22ac%22%3A%22T004%22%2C%22a" \
-                               "cST%22%3A1559936193%2C%22acD%22%3A3%7D%2C%7B%22ac%22%3A%22T019%22%2C%22acST%22%3A1559936193%2C%22a" \
-                               "cD%22%3A16%7D%2C%7B%22ac%22%3A%22T003%22%2C%22acST%22%3A1559936193%2C%22acD%22%3A13%7D%2C%7B%22a" \
-                               "c%22%3A%22T002%22%2C%22acST%22%3A0%2C%22acD%22%3A0%7D%5D%7D"
+        self.la_signin_path = "/signin-oidc"
+        self.la_login_path = "/api/Account/Login"
 
+        self.la_login_url = '%s%s' % (self.la_domain, self.la_login_path)
+        self.la_signin_url = "%s%s" % (self.la_domain, self.la_signin_path)
+
+        # Microsoft urls and paths
+        self.micro_domain = "https://login.microsoftonline.com"
+        self.api_base_path = "/calcourts02b2c.onmicrosoft.com/B2C_1_Media-LASC-SUSI/"
+
+        self.api1 = "SelfAsserted?"
+        self.api2 = "api/CombinedSigninAndSignup/confirmed?"
+
+        self.api_path1 = "%s%s" % (self.api_base_path, self.api1)
+        self.api_path2 = "%s%s" % (self.api_base_path, self.api2)
+
+        self.api_call1 = "%s%s{url_encoding1}" % (self.micro_domain, self.api_path1)
+        self.api_call2 = "%s%s{url_encoding2}" % (self.micro_domain, self.api_path2)
+
+        # Login Post Data
         self.data = {
             "logonIdentifier": username,
             "password": password,
@@ -39,58 +43,66 @@ class LASCSession(object):
 
         self.data2 = {}
 
+        self.url_encoding1 = {"p":"B2C_1_Media-LASC-SUSI",
+                              "tx":""}
+
+        self.url_encoding2 = {"p":"B2C_1_Media-LASC-SUSI"}
+
         self.headers = {
-            "Origin": "https://login.microsoftonline.com",
-            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) "
-                          "Chrome/74.0.3729.169 Safari/537.36",
+            "Origin": self.micro_domain,
+            "User-Agent": "Juriscraper",
             "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "X-Requested-With": "XMLHttpRequest"
         }
 
 
-    def log_into_map(self):
+    def login(self):
         logger.info(u'Attempting LASC MAP login')
 
-        self.s.get(self.base_url, verify=False, allow_redirects=True)
-        self.html = self.s.get(self.login_url, verify=False, allow_redirects=True).text
+        # Initialize connection to LASC MAP
+        self.s.get(self.la_domain)
 
-        self.extract_csrf_token()
-        self.extract_trans_id()
+        # Redirect to login page
+        self.html = self.s.get(self.la_login_url, timeout=30).text
 
-        self.post_url = self.post_url % (self.transid)
-        self.s.post(self.post_url, headers=self.headers, data=self.data, allow_redirects=True, verify=False)
+        # Parse tokens and key data from html of Microsoft login page
+        self.parse_html_for_keys()
 
-        self.create_login_url()
-        self.html = self.s.get(self.second_post, headers=self.headers).text
+        # Call Part one of Microsoft login API
+        self.s.post(self.api_call1.format(url_encoding1=urlencode(self.url_encoding1)), headers=self.headers, data=self.data, timeout=30)
 
-        # A second login is required within the azure, microsoft court login.
-        self.make_second_post_data()
-        self.html = self.s.post(self.post_url2, headers=self.headers, allow_redirects=True, data=self.data2).text
+        # Call Part two of Microsoft login API - Redirect
+        self.html = self.s.get(self.api_call2.format(url_encoding2 = urlencode(self.url_encoding2)), headers=self.headers, timeout=30).text
 
-    def extract_csrf_token(self):
+        # Parse the current page for new key data
+        self.parse_new_html_for_keys()
+
+        # Finalize login with post into LA MAP site
+        self.s.post(self.la_signin_url, headers=self.headers, data=self.data2, timeout=30)
+
+
+    # This is a setting required to continue
+    def parse_html_for_keys(self):
+        # CSRF Token
         self.csrf = self.html.split("csrf")[1].split("\"")[2]
-        self.headers['X-CSRF-TOKEN'] = self.html.split("csrf")[1].split("\"")[2]
-
-    def extract_trans_id(self):
         self.transid = self.html.split("transId")[1].split("\"")[2]
 
-    def create_login_url(self):
-        self.second_post = self.microsoft_login.format(
-            CSRF = self.headers['X-CSRF-TOKEN'],
-            TRANSID = self.transid
-            )
+        self.headers['X-CSRF-TOKEN'] = self.csrf
 
-    #this is hidden in javasript so harder to grab then lxml path
-    def make_second_post_data(self):
-        self.data2['code'] = self.html.split("id='code' value='")[1].split("'")[0]
-        self.data2['id_token'] = self.html.split("id='id_token' value='")[1].split("'")[0]
-        self.data2['state'] = self.html.split("id='state' value='")[1].split("'")[0]
+        self.url_encoding1['tx'] = self.transid
+
+        self.url_encoding2['csrf_token'] = self.csrf
+        self.url_encoding2['TRANSID'] = self.transid
 
 
-    # This returns the JSON value of the store
-    def get_json_from_internal_case_id(self, internal_case_id):
-        self.case_url = self.fetch_url % (internal_case_id)
-        self.case_data = self.s.get(self.case_url, verify=False, allow_redirects=True).text
+    # Xpath added
+    def parse_new_html_for_keys(self):
+        # Parse HTML with LXML by Xpath.
+        j = f(self.html)
+
+        self.data2['code'] = j.xpath('//*[@id="code"]')[0].value
+        self.data2['id_token'] = j.xpath('//*[@id="id_token"]')[0].value
+        self.data2['state'] = j.xpath('//*[@id="state"]')[0].value
 
 
