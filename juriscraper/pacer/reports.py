@@ -37,6 +37,7 @@ class BaseReport(object):
     ERROR_STRINGS = [
         "MetaMask.*web3",
         'console\.log\(".*CloudMask',
+        'Drumpf',
     ]
 
     def __init__(self, court_id, pacer_session=None):
