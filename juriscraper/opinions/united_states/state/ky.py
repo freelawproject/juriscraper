@@ -1,6 +1,7 @@
 """Scraper for Kentucky Supreme Court
 CourtID: ky
 Court Short Name: Ky.
+Contact: https://courts.ky.gov/aoc/technologyservices/Pages/ContactTS.aspx
 
 History:
     2014-08-07: Created by mlr.
