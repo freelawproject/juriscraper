@@ -5,7 +5,7 @@ logger = make_default_logger()
 from lxml.html import fromstring as f
 
 
-class LASC_Session(requests.Session):
+class LASCSession(requests.Session):
     """
     Extension for Courtlistner to connect into the
     Los Angeles Superior Court Media Access Portal.
