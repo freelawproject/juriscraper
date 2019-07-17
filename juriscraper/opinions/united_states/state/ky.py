@@ -19,8 +19,10 @@ Notes:
     this information for supreme court cases, so extending this to do kyctapp
     won't be possible.
 
-    Primary Search Portal:      http://162.114.92.72/dtsearch.asp
-    Secondary Search Portal:    http://162.114.92.78/dockets/SearchbyCaseNumber.htm
+    Primary Search Portal:          http://apps.courts.ky.gov/supreme/sc_opinions.shtm
+    Primary Search Portal POST:     http://162.114.92.72/dtsearch.asp
+    Secondary Search Portal:        https://appellate.kycourts.net/SC/SCDockets/
+    Secondary Search Portal GET:    https://appellate.kycourts.net/SC/SCDockets/CaseDetails.aspx?cn={yyyySC######}
 
     Our two step process is as follows:
       1. Get the pdf url, case date, and docket number from the Primary Search Portal
@@ -45,13 +47,9 @@ Notes:
 """
 
 import re
-import certifi
-import requests
-from lxml import html
-from requests.exceptions import HTTPError, ConnectionError, Timeout
 
-from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.lib.string_utils import convert_date_string
 
@@ -127,7 +125,8 @@ class Site(OpinionSite):
                             name = 'No case names fetched during tests.'
                         else:
                             # Fetch case name from external portal search (see doc string at top for details)
-                            name = self._fetch_case_name(docket_match.group('year'), docket_match.group('number'))
+                            case_number = '%s%s%s' % (docket_match.group('year'), docket_match.group('court'), docket_match.group('number'))
+                            name = self._fetch_case_name(case_number)
                         if name:
                             docket_number = '%s %s %s' % (
                                 docket_match.group('year'),
@@ -149,7 +148,7 @@ class Site(OpinionSite):
                 pass
         return date
 
-    def _fetch_case_name(self, year, number):
+    def _fetch_case_name(self, case_number):
         """Fetch case name for a given docket number + publication year pair.
 
         Some resources show 'Public Access Restricted' messages and do not
@@ -158,63 +157,32 @@ class Site(OpinionSite):
         be to parse the case name from the raw PDF text itself.
         """
 
-        ip_addresses = ['162.114.92.72', '162.114.92.78']
-        for ip_address in ip_addresses:
-            last_ip = (ip_address == ip_addresses[-1])
-            url = 'http://%s/dockets/SearchCaseDetail.asp' % ip_address
-
-            try:
-                r = requests.post(
-                    url,
-                    headers={'User-Agent': 'Juriscraper'},
-                    timeout=60,
-                    verify=certifi.where(),
-                    data={
-                        'txtyear': year,
-                        'txtcasenumber': number,
-                        'cmdnamesearh': 'Search',
-                    },
-                )
-
-                # Throw an error if a bad status code is returned,
-                # otherwise, break the loop so we don't try more ip
-                # addresses than necessary.
-                r.raise_for_status()
-                break
-            except HTTPError as e:
-                logger.info('404 error connecting to: %s' % ip_address)
-                if e.response.status_code == 404 and not last_ip:
-                    continue
-                else:
-                    raise e
-            except (ConnectionError, Timeout) as e:
-                logger.info('Timeout/Connection error connecting to: %s' % ip_address)
-                if not last_ip:
-                    continue
-                else:
-                    raise e
-
-        # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
-        if r.encoding == 'ISO-8859-1':
-            r.encoding = 'cp1252'
-
-        # Grab the content
-        page_text = self._clean_text(r.text)
-        html_tree = html.fromstring(page_text)
-
-        # And finally, we parse out the good stuff.
-        parties_path = "//tr[descendant::text()[contains(., 'Appell')]]//td[3]//text()"
-        case_name_parts = []
-        for text in html_tree.xpath(parties_path):
-            text = text.strip()
-            if text:
-                case_name_parts.append(titlecase(text.lower()))
-            if len(case_name_parts) == 2:
-                break
-        if case_name_parts:
-            return ' v. '.join(case_name_parts)
-        else:
+        # If case_number is not expected 12 characters, skip it, since
+        # we can't know how to fix the courts typo. They likely forgot
+        # to '0' pad the beginning or the end of the 'number' suffix,
+        # but we can't know for sure.
+        if len(case_number) != 12:
             return False
+
+        # Site has non-chained, bad certificate, need to
+        # ignore ssl verification for now for scraper to work
+        self.request['verify'] = False
+
+        url = 'https://appellate.kycourts.net/SC/SCDockets/CaseDetails.aspx?cn=%s' % case_number
+        html = self._get_html_tree_by_url(url)
+
+        # Halt if there is a (dismissible) error/warning on the page
+        path_error_warning = '//div[contains(@class, "alert-dismissible")]'
+        if html.xpath(path_error_warning):
+            raise InsanityException('Invalid sub-resource url (%s). Is case number (%s) invalid?' % (url, case_number))
+
+        # Ensure that only two substrings are present
+        path_party = '//td[@class="party"]/text()'
+        parties = html.xpath(path_party)
+        if len(parties) != 2:
+            raise InsanityException('Unexpected party elements. Expected two substrings, got: %s' % ', '.join(parties))
+
+        return titlecase(' v. '.join(parties))
 
     def _get_download_urls(self):
         return self.DOWNLOAD_URLS
