@@ -128,6 +128,7 @@ __all__ = [
     'ri_u',
     'sd',
     'sc',
+    'scctapp',
     'tenn',
     'tennctapp',
     'tenncrimapp',
