@@ -262,6 +262,7 @@ class PacerSession(requests.Session):
             verify=False,
             timeout=60,
         )
+
         login_post_r = self.post(
             url,
             headers={'User-Agent': 'Juriscraper'},

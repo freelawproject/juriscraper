@@ -1,9 +1,9 @@
-import json
 from ..lib.log_tools import make_default_logger
+import json
 
 logger = make_default_logger()
 
-class LASC_Docket(object):
+class LASCSearch(object):
     """
 
     """
@@ -14,6 +14,7 @@ class LASC_Docket(object):
         """
         self.lasc = lasc
         self.api_base = "https://media.lacourt.org/api/AzureApi/"
+
         self.GetRecentCivilCases = "%sGetRecentCivilCases/%s/%s"
         self.ViewDocument = "%sViewDocument/%s/%s"
         self.GetCaseList = "%sGetCaseList/%s"
@@ -24,6 +25,14 @@ class LASC_Docket(object):
         self.success = None
         self.internal_case_id = None
 
+    def check_success(self, *args, **kwargs):
+
+
+        if json.loads(args[0].text)['IsSuccess'] == True:
+            logger.info(u'Successful query into LASC map')
+            self.case_data = args[0].text
+        else:
+            logger.info(u'Failure to query into LASC map')
 
     def _get_json_from_internal_case_id(self, internal_case_id):
         """
@@ -31,12 +40,9 @@ class LASC_Docket(object):
         :param internal_case_id:
         :return:
         """
-        self.case_url = self.GetCaseDetail % (self.api_base, internal_case_id)
-        self.case_data = self.lasc.get(self.case_url, verify=False, allow_redirects=True).text
-        self.success = json.loads(self.case_data)['IsSuccess']
 
-        if self.success == True:
-            logger.info(u'Successful query into LASC map')
+        self.lasc.get(self.GetCaseDetail % (self.api_base, internal_case_id), hooks={'response': [self.check_success]})
+
 
     def _get_case_list_for_date(self, date_string):
         """
@@ -47,7 +53,7 @@ class LASC_Docket(object):
         :return:
         """
         self.date_query = self.GetRecentCivilCases % (self.api_base, date_string, date_string)
-        self.date_case_list = self.lasc.get(self.date_query, verify=False, allow_redirects=True).text
+        self.date_case_list = self.lasc.get(self.date_query).text
 
 
     def _get_pdf_by_case_and_document_id(self, case_id, doc_id):
@@ -60,7 +66,12 @@ class LASC_Docket(object):
         """
         logger.info(u'Api ViewDocument called.  Downloading PDF ')
         self.pdf_url = self.ViewDocument % (self.api_base, case_id, doc_id)
-        self.pdf_data = self.lasc.get(self.pdf_url, verify=False, allow_redirects=False).content
+        self.pdf_data = self.lasc.get(self.pdf_url).content
+
+
+    def _get_internal_id(self, *args, **kwargs):
+        self.internal_case_id = json.loads(args[0].text)['ResultList'][0]['NonCriminalCases'][0]['CaseID']
+
 
     # This function probably works 99% of the time.
     # But it is unknown how common if at all case numbers are repeated in unlimited cases.
@@ -74,15 +85,16 @@ class LASC_Docket(object):
         logger.info(u'Search case by case id only. Assumes first result is the only result.')
 
         self.case_search_url = self.GetCaseList % (self.api_base, case_id)
-        self.internal_case_id = json.loads(self.lasc.get(self.case_search_url).text)['ResultList'][0]['NonCriminalCases'][0]['CaseID']
+        self.lasc.get(self.case_search_url, hooks={'response': [self._get_internal_id]})
         self._get_json_from_internal_case_id(self.internal_case_id)
 
 
     # Future function to check for updates to case by ID
-    def check_for_update_to_case(self, internal_case_id):
+    def _check_for_update_to_case(self, internal_case_id):
         """
 
         :param internal_case_id:
         :return:
         """
         pass
+
