@@ -142,7 +142,16 @@ class LASCSearch(object):
                     for row in data:
                         for k, v in row.items():
                             kj = k[:1].upper() + k[1:]
-                            row["_".join(l.lower() for l in re.findall('[A-Z][^A-Z]*', kj)).replace("_i_d", "_id").replace("disp_", "disposition_").replace("u_r_l", "url")] = row.pop(k)
+                            row["_".join(l.lower() for l in re.findall('[A-Z][^A-Z]*', kj)).replace("_i_d", "_id")
+                                            .replace("disp_", "disposition_")
+                                            .replace("u_r_l", "url")
+                                            .replace("c_r_s", "crs")
+                                            .replace("c_x_c", "cxc")] = row.pop(k)
+
+                if x == "DocumentImages":
+                    for row in data:
+                        row['document_url'] = self.ViewDocument % (self.api_base, datum['CaseInformation']['case_id'], row["doc_id"])
+
 
         self.normalized_case_data = datum
 
