@@ -1,5 +1,6 @@
 from ..lib.log_tools import make_default_logger
-import json
+import json, re
+import datetime
 
 logger = make_default_logger()
 
@@ -24,6 +25,8 @@ class LASCSearch(object):
         self.pdf_data = None
         self.success = None
         self.internal_case_id = None
+        self.normalized_case_data = None
+        self.normalized_date_data = None
 
     def check_success(self, *args, **kwargs):
 
@@ -42,6 +45,15 @@ class LASCSearch(object):
         """
 
         self.lasc.get(self.GetCaseDetail % (self.api_base, internal_case_id), hooks={'response': [self.check_success]})
+
+
+    def _get_case_list_for_last_seven_days(self):
+        dt = datetime.datetime.today()
+        date_string = dt.strftime('%m-%d-%Y')
+        minus_seven = datetime.timedelta(days=-7)
+        last_week = (dt + minus_seven).strftime('%m-%d-%Y')
+        self.date_query = self.GetRecentCivilCases % (self.api_base, last_week, date_string)
+        self.date_case_list = self.lasc.get(self.date_query).text
 
 
     def _get_case_list_for_date(self, date_string):
@@ -64,6 +76,7 @@ class LASCSearch(object):
         :param doc_id:
         :return:
         """
+
         logger.info(u'Api ViewDocument called.  Downloading PDF ')
         self.pdf_url = self.ViewDocument % (self.api_base, case_id, doc_id)
         self.pdf_data = self.lasc.get(self.pdf_url).content
@@ -89,6 +102,7 @@ class LASCSearch(object):
         self._get_json_from_internal_case_id(self.internal_case_id)
 
 
+
     # Future function to check for updates to case by ID
     def _check_for_update_to_case(self, internal_case_id):
         """
@@ -96,5 +110,41 @@ class LASCSearch(object):
         :param internal_case_id:
         :return:
         """
+
         pass
+
+
+    def _parse_date_data(self):
+        logger.info(u'Parsing Date Data')
+        datum = json.loads(self.date_case_list)['ResultList']
+
+        for data in datum:
+            for k, v in data.items():
+                data["_".join(l.lower() for l in re.findall('[A-Z][^A-Z]*', k)).replace("_i_d", "_id").replace("disp_", "disposition_")] = data.pop(k)
+
+        self.normalized_date_data = datum
+
+
+
+    def _parse_case_data(self):
+        logger.info(u'Parsing Data')
+
+        datum = json.loads(self.case_data)['ResultList'][0]['NonCriminalCaseInformation']
+        for x in datum:
+            data = datum[x]
+
+            if datum[x] != None:
+                if x == "CaseInformation":
+                    for k, v in data.items():
+                        kj = k[:1].upper() + k[1:]
+                        data["_".join(l.lower() for l in re.findall('[A-Z][^A-Z]*', kj)).replace("_i_d", "_id").replace("disp_", "disposition_").replace("u_r_l", "url")] = data.pop(k)
+                else:
+                    for row in data:
+                        for k, v in row.items():
+                            kj = k[:1].upper() + k[1:]
+                            row["_".join(l.lower() for l in re.findall('[A-Z][^A-Z]*', kj)).replace("_i_d", "_id").replace("disp_", "disposition_").replace("u_r_l", "url")] = row.pop(k)
+
+        self.normalized_case_data = datum
+
+
 
