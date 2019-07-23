@@ -146,6 +146,7 @@ class LASCSearch(object):
                                             .replace("disp_", "disposition_")
                                             .replace("u_r_l", "url")
                                             .replace("c_r_s", "crs")
+                                            .replace("a_m_p_m", "am_pm")
                                             .replace("c_x_c", "cxc")] = row.pop(k)
 
                 if x == "DocumentImages":
