@@ -121,6 +121,7 @@ class LASCSearch(object):
         for data in datum:
             for k, v in data.items():
                 data["_".join(l.lower() for l in re.findall('[A-Z][^A-Z]*', k)).replace("_i_d", "_id").replace("disp_", "disposition_")] = data.pop(k)
+            data['case_id'] = data['internal_case_id']
 
         self.normalized_date_data = datum
 
@@ -138,6 +139,7 @@ class LASCSearch(object):
                     for k, v in data.items():
                         kj = k[:1].upper() + k[1:]
                         data["_".join(l.lower() for l in re.findall('[A-Z][^A-Z]*', kj)).replace("_i_d", "_id").replace("disp_", "disposition_").replace("u_r_l", "url")] = data.pop(k)
+                    data['internal_case_id'] = data['case_id']
                 else:
                     for row in data:
                         for k, v in row.items():
