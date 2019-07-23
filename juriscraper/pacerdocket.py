@@ -3,9 +3,9 @@
 #  Takes an .html file on the command line, parses it using the PACER
 #  Docket Report parser, and outputs json to stdout.
 
-import jsondate as json
 import sys
 
+import juriscraper.lib.jsondate as json
 from juriscraper.pacer.http import PacerSession
 from juriscraper.pacer import DocketReport
 
