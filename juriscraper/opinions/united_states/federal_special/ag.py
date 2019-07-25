@@ -13,8 +13,14 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.url = "https://www.justice.gov/olc/opinions?items_per_page=40"
         self.back_scrape_url = self.url + '&page=%d'
-        self.back_scrape_iterable = range(0, self.get_last_page() + 1)
+        self.back_scrape_iterable = None
         self.cell_path = '//table//tr/td[%d]'
+
+    def _download(self, request_dict={}):
+        if not self.test_mode_enabled():
+            # don't set this if running tests, as it hits the network
+            self.back_scrape_iterable = range(0, self.get_last_page() + 1)
+        return super(Site, self)._download(request_dict)
 
     def _get_case_names(self):
         cells = self.html.xpath(self.cell_path % 2)
