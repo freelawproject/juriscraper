@@ -49,7 +49,7 @@ class Site(OpinionSite):
         a new example file, you can retrieve the html with:
             curl "<CASE-PAGE-URL>?iframe=true"
         """
-        if self.method == 'LOCAL':
+        if self.test_mode_enabled():
             self.subpage_html = html
             self.extract_case_from_subpage()
         else:

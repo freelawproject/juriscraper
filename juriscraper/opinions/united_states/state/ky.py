@@ -120,7 +120,7 @@ class Site(OpinionSite):
                     docket_match = self.docket_number_regex.search(link_text)
                     # Cell must contain a docket number conforming to expected format
                     if docket_match:
-                        if self.method == 'LOCAL':
+                        if self.test_mode_enabled():
                             # Don't fetch names when running tests
                             name = 'No case names fetched during tests.'
                         else:

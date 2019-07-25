@@ -26,7 +26,7 @@ class Site(OpinionSite):
         self.today = datetime.datetime.now()
 
     def _download(self, request_dict={}):
-        if self.method == 'LOCAL':
+        if self.test_mode_enabled():
             # Use static 'today' date for consisting test results
             self.today = convert_date_string('2018/10/17')
         return super(Site, self)._download(request_dict)

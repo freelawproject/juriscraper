@@ -25,7 +25,7 @@ class Site(OpinionSite):
 
     def _download(self, request_dict={}):
         html_l = super(Site, self)._download(request_dict)
-        if self.method == 'LOCAL':
+        if self.test_mode_enabled():
             return [html_l]
         html_trees = []
         # this path reads the row for the last month in that year

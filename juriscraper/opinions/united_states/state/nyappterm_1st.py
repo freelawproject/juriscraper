@@ -71,7 +71,7 @@ class Site(OpinionSite):
         We use selenium to get the cookies, and then we check if we got the
         correct page. If not we retry for a total of 11 times.
         """
-        if self.method == 'LOCAL':
+        if self.test_mode_enabled():
             return super(Site, self)._download(request_dict)
 
         self.set_cookies()

@@ -21,7 +21,7 @@ class Site(OpinionSite):
         self.next_page_xpath = "//div[@class='adjacent-pagination']//li[@class='active']//following-sibling::li/a/@href"
 
     def _download(self, request_dict={}):
-        if self.method == 'LOCAL':
+        if self.test_mode_enabled():
             # Note that this is returning a list of HTML trees.
             html_trees = [
                 super(Site, self)._download(request_dict=request_dict),

@@ -25,7 +25,7 @@ class Site(OpinionSite):
 
     def set_base_path(self):
         # All test files should be edited to use year value of 2018
-        year = 2018 if self.method == 'LOCAL' else self.year
+        year = 2018 if self.test_mode_enabled() else self.year
         self.base_path = "//a[contains(./text(), '%d')]" % year
 
     def _download(self, request_dict={}):

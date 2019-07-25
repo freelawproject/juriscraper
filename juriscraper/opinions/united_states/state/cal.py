@@ -11,7 +11,7 @@ class Site(OpinionSite):
         self.court_code = 'S'
 
     def _download(self, request_dict={}):
-        if self.method != 'LOCAL':
+        if not self.test_mode_enabled():
             self.url = self.build_url()
         return super(Site, self)._download(request_dict)
 

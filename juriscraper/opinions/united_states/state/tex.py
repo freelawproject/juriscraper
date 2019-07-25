@@ -40,8 +40,6 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.case_date = date.today()
         self.backwards_days = 7
-
-        #self.case_date = date(month=7, year=2014, day=11)
         self.records_nr = 0
         self.courts = {'sc': 0, 'ccrimapp': 1, 'capp_1': 2, 'capp_2': 3, 'capp_3': 4,
                        'capp_4': 5, 'capp_5': 6, 'capp_6': 7, 'capp_7': 8, 'capp_8': 9,
@@ -59,7 +57,7 @@ class Site(OpinionSite):
 
     def _download(self, request_dict={}):
         self.request_dict = request_dict
-        if self.method == 'LOCAL':
+        if self.test_mode_enabled():
             html_tree_list = [
                 super(Site, self)._download(request_dict=request_dict)]
             self.records_nr = len(html_tree_list[0].xpath("//tr[@class='rgRow' or @class='rgAltRow']"))
@@ -170,7 +168,7 @@ class Site(OpinionSite):
 
     def _get_case_names(self):
         def fetcher(url):
-            if self.method == 'LOCAL':
+            if self.test_mode_enabled():
                 return "No case names fetched during tests."
             else:
                 html_tree = self._get_html_tree_by_url(url, self.request_dict)
