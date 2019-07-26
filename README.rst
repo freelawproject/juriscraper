@@ -114,6 +114,12 @@ Instead of installing Juriscraper via pip, do the following:
     pip install -r requirements.txt
     python setup.py test
 
+    # run tests against multiple python versions via tox
+    tox
+
+    # run network tests (on demand, not run via default command above)
+    python -m unittest discover -s tests/network -v
+
 You may need to also install Juriscraper locally with:
 
 ::
