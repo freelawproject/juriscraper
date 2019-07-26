@@ -53,7 +53,7 @@ commands:
           name: Run the Network Test Suite (these tests don't run by default)
           command: |
             . venv/bin/activate
-            python -m unittest discover -s tests/network -v
+            python setup.py testnetwork
 
 # QUESTION: should we just call tox instead?
 jobs:
