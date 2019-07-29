@@ -24,7 +24,7 @@ class Site(OpinionSite):
         landing_page_html = super(Site, self)._download(request_dict)
 
         # Example test files should include html of direct resource page
-        if self.method == 'LOCAL':
+        if self.test_mode_enabled():
             return [landing_page_html]
 
         urls = landing_page_html.xpath(self.path_to_landing_page_links)

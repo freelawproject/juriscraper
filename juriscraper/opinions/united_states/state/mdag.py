@@ -41,7 +41,7 @@ class Site(OpinionSite):
         self.driver = False
 
     def _download(self, request_dict={}):
-        if self.method == 'LOCAL':
+        if self.test_mode_enabled():
             return [super(Site, self)._download(request_dict)]
         trees = self.get_dynamic_html_trees()
         if not len(trees):

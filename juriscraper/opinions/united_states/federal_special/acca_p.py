@@ -25,11 +25,11 @@ class Site(OpinionSite):
         self.request['verify'] = False
 
     def _get_download_urls(self):
-        path = '//table//table//tr[position() > 2]/td[5]//a[2]/@href'
+        path = "//a[@class='td_frmOpinion']/@href"
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
-        path = '//table//table//tr[position() > 2]/td[5]//a[2]'
+        path = "//a[@class='td_frmOpinion']"
         case_names = []
         for e in self.html.xpath(path):
             s = html.tostring(e, method='text', encoding='unicode')
@@ -38,14 +38,14 @@ class Site(OpinionSite):
         return case_names
 
     def _get_case_dates(self):
-        path = '//table//table//tr[position() > 2]/td[4]//text()'
+        path = "//a[@class='DtOpn2']/text()"
         return [convert_date_string(date_string) for date_string in  self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        path = '//table//table//tr[position() > 2]/td[5]//a[2]'
+        path = "//a[@class='td_frmOpinion']"
         docket_numbers = []
         for e in self.html.xpath(path):
             s = html.tostring(e, method='text', encoding='unicode')

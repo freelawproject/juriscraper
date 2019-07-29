@@ -38,7 +38,7 @@ class Site(OpinionSite):
 
     def _download(self, request_dict={}):
         """Uses Selenium because doing it with requests is a pain."""
-        if self.method == 'LOCAL':
+        if self.test_mode_enabled():
             return super(Site, self)._download(request_dict=request_dict)
 
         driver = webdriver.PhantomJS(

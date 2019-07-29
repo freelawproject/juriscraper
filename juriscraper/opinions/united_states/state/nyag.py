@@ -23,7 +23,7 @@ class Site(OpinionSite):
 
     def _download(self, request_dict={}):
         html = super(Site, self)._download(request_dict)
-        if self.method == 'LOCAL':
+        if self.test_mode_enabled():
             # Make sure the year-table you want to test is first in example file
             self.year = int(html.xpath('//table[1]/caption')[0].text_content())
             self.set_paths()

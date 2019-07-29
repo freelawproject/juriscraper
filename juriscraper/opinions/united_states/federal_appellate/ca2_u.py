@@ -1,3 +1,11 @@
+"""Scraper for Second Circuit
+CourtID: ca2
+Contact:
+  Webmaster@ca2.uscourts.gov ('Calendar Team' handles updates, and is responsive)
+  ecfhelpdesk@ca2.uscourts.gov
+"""
+
+
 from juriscraper.opinions.united_states.federal_appellate import ca2_p
 
 

@@ -38,7 +38,7 @@ class Site(OpinionSite):
         """Follow top-most opinions urls on landing page to resource page"""
         # Process landing page
         landing_html = super(Site, self)._download(request_dict)
-        if self.method == 'LOCAL':
+        if self.test_mode_enabled():
             # Example file should be direct resource page
             return landing_html
         # Load resource page

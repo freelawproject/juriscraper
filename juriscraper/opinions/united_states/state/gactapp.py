@@ -31,7 +31,7 @@ class Site(OpinionSite):
         )
 
     def _download(self, request_dict={}):
-        if self.method == 'LOCAL':
+        if self.test_mode_enabled():
             # This is an arbitrary date that we need to set
             # for our compar.json test to pass
             self.case_date = convert_date_string('2017-08-14')

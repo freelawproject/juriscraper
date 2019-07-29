@@ -29,7 +29,7 @@ class Site(OpinionSite):
 
     def _download(self, request_dict={}):
         html_l = OpinionSite._download(self)
-        if self.method == 'LOCAL':
+        if self.test_mode_enabled():
             return [html_l]
         html_trees = []
         path = "//td[contains(./text(),'Opinion') or contains(./text(), 'PER CURIAM')]/preceding-sibling::td[1]//@href"

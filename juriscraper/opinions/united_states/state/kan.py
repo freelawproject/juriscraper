@@ -24,7 +24,7 @@ class Site(OpinionSite):
         self.url = 'http://www.kscourts.org/Cases-and-Opinions/Date-of-Release-List/'
 
     def _download(self, request_dict={}):
-        if self.method == 'LOCAL':
+        if self.test_mode_enabled():
             # Note that this is returning a list of HTML trees.
             html_trees = [super(Site, self)._download(request_dict=request_dict)]
         else:
