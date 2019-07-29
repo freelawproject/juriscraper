@@ -164,10 +164,11 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         info['creditor_id'] = info['creditor_id'].strip('()')
 
         # Redelimit the <br> tags, then use newlines to join everything but the
-        # first line in the cell
+        # first line in the cell, and the "Claimant History" link if applicable
         better_td = self.redelimit_p(td, self.BR_REGEX)
-        info['creditor_details'] = '\n'.join([p.text_content().strip() for p in
-                                              better_td.xpath('.//p')[1:]])
+        good_text = [s.strip() for s in better_td.xpath('.//p/text()')[1:]]
+        info['creditor_details'] = '\n'.join(good_text).strip()
+
         return info
 
     def _parse_claim_number_cell(self, td):
