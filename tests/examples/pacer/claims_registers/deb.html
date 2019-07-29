@@ -1,0 +1,789 @@
+<html><head><title>Internal CM/ECF Live Database</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script></head><body BGCOLOR=FFFFF0 TEXT=000000 onLoad='SetFocus()'><div class="noprint"><img id="cmecfLogo" class="cmecfLogo" src="/graphics/cmecf-logo.gif" alt="CM/ECF" title=""  /><img src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage" id="helpImage" onClick="CMECF.MainMenu.showHelpPage(''); return false" onMouseOver="CMECF.MainMenu.helpImageOn()" onMouseOut="CMECF.MainMenu.helpImageOff()" /><div id="topmenu" class="yuimenubar"><div class="bd"><ul class="first-of-type"><li class="yuimenubaritem" style="width:9%"><a class="yuimenubaritemlabel" href='/cgi-bin/iquery.pl'>Q</u>uery</a></li><li class="yuimenubaritem" style="width:11%"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Reports&id=-1'>R</u>eports</a></li><li class="yuimenubaritem" style="width:11%"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Utilities&id=-1'>U</u>tilities</a></li><li class="yuimenubaritem" style="width:10%"><a class="yuimenubaritemlabel" href='/cgi-bin/login.pl?logout'>Logout</a></li></ul></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout( function(){ CMECF.MainMenu.renderSimpleMenu(); }, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.renderSimpleMenu);}</script><div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript">
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;
+					while(document.forms[0].elements[Cnt] != null) {
+						if(document.forms[0].elements[Cnt].type != "hidden") {
+							document.forms[0].elements[Cnt].focus();
+							break;
+						}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+
+			<script type='text/javascript'>
+				document.cookie = 'RECENT_CASES=' + "171908;";
+			</script>
+		<CENTER><H2>District of Delaware<BR>Claims Register </H2><FONT SIZE=+1><A HREF=/cgi-bin/DktRpt.pl?171908>18-10160-LSS Scottish Holdings, Inc.                           </A> <span class='label'>Converted</span> 04/16/2019<br><p></FONT><TABLE ><TR><TD><B>Judge:</B>  Laurie Selber Silverstein</B><TD><B> </B><TD><B>Chapter: </B> 7<TR><TD><B>Office: </B> Delaware<TD><B>&nbsp;&nbsp; &nbsp;&nbsp;    </B><TD><B>Last Date to file claims: </B> 07/25/2019<TR><TD><B>Trustee: </B> Don A. Beskrone <TD><B> </B><TD><B>Last Date to file (Govt): </B> 10/15/2019</TABLE><TABLE class=complexReport ><TR class = rowBackground1 ><TD align=left valign=top width="30%">
+<FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(12396593)&nbsp;&nbsp;<BR> NW Cullman Park LP<br>Kevin S. Neiman, Esq.<br>Law Offices of Kevin S. Neiman, pc<br>999 18th Street, Suite 1230 S<br>Denver, CO 80202&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT>
+</TD>
+<TD align=left valign=top  width="20%">
+<FONT SIZE="-1">
+<B>Claim No: 1</B><BR><I>Original Filed Date</I>:&nbsp;04/25/2018<BR><I>Original Entered Date</I>:&nbsp;04/25/2018<BR>
+<BR>
+</FONT>
+</TD>
+<TD align=left valign=top width="30%">
+<FONT SIZE="-1">
+<I>Status:</I>
+<BR><I>Filed by:</I> CR
+<BR><I>Entered by:</I>
+  EPOC Filer
+<BR><I>Modified:</I>
+</FONT>
+</TD>
+</TR>
+<TR  class = rowBackground1><TD colspan=3><TABLE>
+<TR  class = ><TD align=left><FONT SIZE='-1'>&nbsp;Amount <TD><FONT SIZE='-1'> claimed:<TD align=right><FONT SIZE='-1'> $0.00</TD><TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD> <TD></TR>
+<TR  class = $rowBackground><TD align=left>
+<FONT SIZE="-1">
+</TR>
+</TABLE><TFOOT>
+<TR  class = rowBackground1 valign='top'>
+<TD colspan=5 align=left>
+<FONT SIZE="-1">
+<I>History:</I>
+</FONT>
+<table width='100%' border='0'><tr valign='top'><td width='4%'><font size='-1'><a href="/cgi-bin/ClaimHistory.pl?171908,1-1,424461,18-10160-LSS">Details</a></font></td><td width='3%' align='right'></td><td width='6%' align='center'><font size='-1'><a href='/cgi-bin/show_doc.pl?caseid=171908&claim_id=15134869&claim_num=1-1&magic_num=MAGIC' id='documentKcaseidV171908Kclaim_idV15134869Kclaim_numV1-1Kmagic_numVMAGIC'>1-1</a><script>CMECF.widget.DocLink('documentKcaseidV171908Kclaim_idV15134869Kclaim_numV1-1Kmagic_numVMAGIC');</script></font></td><td width='4%'><font size='-1'>04/25/2018</font></td><td><font size='-1'> Claim #1 filed by NW Cullman Park LP, Amount claimed: $0.00 (EPOC Filer) </font></td></table></TD>
+</TR>
+<TR  class = rowBackground1>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Description:</I> </FONT>
+</TD>
+</TR>
+<TR  class = rowBackground1>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Remarks:</I> (1-1)  Filer Comment: See Attachment Exhibit 1  <BR></FONT>
+</TD>
+</TR>
+</TABLE><BR>
+<TABLE class=complexReport ><TR class = rowBackground2 ><TD align=left valign=top width="30%">
+<FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(12413160)&nbsp;&nbsp;<BR> U.S. Bank National Association<br>Benjamin Krueger<br>60 Livingston Ave., EP-MN-WSID<br>St. Paul, MN 55107&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT>
+</TD>
+<TD align=left valign=top  width="20%">
+<FONT SIZE="-1">
+<B>Claim No: 2</B><BR><I>Original Filed Date</I>:&nbsp;05/01/2018<BR><I>Original Entered Date</I>:&nbsp;05/01/2018<BR>
+<BR>
+</FONT>
+</TD>
+<TD align=left valign=top width="30%">
+<FONT SIZE="-1">
+<I>Status:</I>
+<BR><I>Filed by:</I> CR
+<BR><I>Entered by:</I>
+  BJM
+<BR><I>Modified:</I>
+</FONT>
+</TD>
+</TR>
+<TR  class = rowBackground2><TD colspan=3><TABLE>
+<TR  class = ><TD align=left><FONT SIZE='-1'>&nbsp;Amount <TD><FONT SIZE='-1'> claimed:<TD align=right><FONT SIZE='-1'> $22847863.87</TD><TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD> <TD></TR>
+<TR  class = $rowBackground><TD align=left>
+<FONT SIZE="-1">
+</TR>
+</TABLE><TFOOT>
+<TR  class = rowBackground2 valign='top'>
+<TD colspan=5 align=left>
+<FONT SIZE="-1">
+<I>History:</I>
+</FONT>
+<table width='100%' border='0'><tr valign='top'><td width='4%'><font size='-1'><a href="/cgi-bin/ClaimHistory.pl?171908,2-1,424662,18-10160-LSS">Details</a></font></td><td width='3%' align='right'></td><td width='6%' align='center'><font size='-1'><a href='/cgi-bin/show_doc.pl?caseid=171908&claim_id=15145618&claim_num=2-1&magic_num=MAGIC' id='documentKcaseidV171908Kclaim_idV15145618Kclaim_numV2-1Kmagic_numVMAGIC'>2-1</a><script>CMECF.widget.DocLink('documentKcaseidV171908Kclaim_idV15145618Kclaim_numV2-1Kmagic_numVMAGIC');</script></font></td><td width='4%'><font size='-1'>05/01/2018</font></td><td><font size='-1'> Claim #2 filed by U.S. Bank National Association, Amount claimed: $22847863.87 (BJM) </font></td></table></TD>
+</TR>
+<TR  class = rowBackground2>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Description:</I> (2-1) Money Loaned/Services Performed<BR></FONT>
+</TD>
+</TR>
+<TR  class = rowBackground2>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Remarks:</I> </FONT>
+</TD>
+</TR>
+</TABLE><BR>
+<TABLE class=complexReport ><TR class = rowBackground1 ><TD align=left valign=top width="30%">
+<FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(12413160)&nbsp;&nbsp;<BR> U.S. Bank National Association<br>Benjamin Krueger<br>60 Livingston Ave., EP-MN-WSID<br>St. Paul, MN 55107&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT>
+</TD>
+<TD align=left valign=top  width="20%">
+<FONT SIZE="-1">
+<B>Claim No: 3</B><BR><I>Original Filed Date</I>:&nbsp;05/01/2018<BR><I>Original Entered Date</I>:&nbsp;05/02/2018<BR>
+<BR>
+</FONT>
+</TD>
+<TD align=left valign=top width="30%">
+<FONT SIZE="-1">
+<I>Status:</I>
+<BR><I>Filed by:</I> CR
+<BR><I>Entered by:</I>
+  BJM
+<BR><I>Modified:</I>
+</FONT>
+</TD>
+</TR>
+<TR  class = rowBackground1><TD colspan=3><TABLE>
+<TR  class = ><TD align=left><FONT SIZE='-1'>&nbsp;Amount <TD><FONT SIZE='-1'> claimed:<TD align=right><FONT SIZE='-1'> $26147239.88</TD><TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD> <TD></TR>
+<TR  class = $rowBackground><TD align=left>
+<FONT SIZE="-1">
+</TR>
+</TABLE><TFOOT>
+<TR  class = rowBackground1 valign='top'>
+<TD colspan=5 align=left>
+<FONT SIZE="-1">
+<I>History:</I>
+</FONT>
+<table width='100%' border='0'><tr valign='top'><td width='4%'><font size='-1'><a href="/cgi-bin/ClaimHistory.pl?171908,3-1,424682,18-10160-LSS">Details</a></font></td><td width='3%' align='right'></td><td width='6%' align='center'><font size='-1'><a href='/cgi-bin/show_doc.pl?caseid=171908&claim_id=15146706&claim_num=3-1&magic_num=MAGIC' id='documentKcaseidV171908Kclaim_idV15146706Kclaim_numV3-1Kmagic_numVMAGIC'>3-1</a><script>CMECF.widget.DocLink('documentKcaseidV171908Kclaim_idV15146706Kclaim_numV3-1Kmagic_numVMAGIC');</script></font></td><td width='4%'><font size='-1'>05/01/2018</font></td><td><font size='-1'> Claim #3 filed by U.S. Bank National Association, Amount claimed: $26147239.88 (BJM) </font></td></table></TD>
+</TR>
+<TR  class = rowBackground1>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Description:</I> (3-1) Money Loaned/Services Performed<BR></FONT>
+</TD>
+</TR>
+<TR  class = rowBackground1>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Remarks:</I> </FONT>
+</TD>
+</TR>
+</TABLE><BR>
+<TABLE class=complexReport ><TR class = rowBackground2 ><TD align=left valign=top width="30%">
+<FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(12413160)&nbsp;&nbsp;<BR> U.S. Bank National Association<br>Benjamin Krueger<br>60 Livingston Ave., EP-MN-WSID<br>St. Paul, MN 55107&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT>
+</TD>
+<TD align=left valign=top  width="20%">
+<FONT SIZE="-1">
+<B>Claim No: 4</B><BR><I>Original Filed Date</I>:&nbsp;05/01/2018<BR><I>Original Entered Date</I>:&nbsp;05/02/2018<BR>
+<BR>
+</FONT>
+</TD>
+<TD align=left valign=top width="30%">
+<FONT SIZE="-1">
+<I>Status:</I>
+<BR><I>Filed by:</I> CR
+<BR><I>Entered by:</I>
+  BJM
+<BR><I>Modified:</I>
+</FONT>
+</TD>
+</TR>
+<TR  class = rowBackground2><TD colspan=3><TABLE>
+<TR  class = ><TD align=left><FONT SIZE='-1'>&nbsp;Amount <TD><FONT SIZE='-1'> claimed:<TD align=right><FONT SIZE='-1'> $41300979.84</TD><TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD> <TD></TR>
+<TR  class = $rowBackground><TD align=left>
+<FONT SIZE="-1">
+</TR>
+</TABLE><TFOOT>
+<TR  class = rowBackground2 valign='top'>
+<TD colspan=5 align=left>
+<FONT SIZE="-1">
+<I>History:</I>
+</FONT>
+<table width='100%' border='0'><tr valign='top'><td width='4%'><font size='-1'><a href="/cgi-bin/ClaimHistory.pl?171908,4-1,424685,18-10160-LSS">Details</a></font></td><td width='3%' align='right'></td><td width='6%' align='center'><font size='-1'><a href='/cgi-bin/show_doc.pl?caseid=171908&claim_id=15146721&claim_num=4-1&magic_num=MAGIC' id='documentKcaseidV171908Kclaim_idV15146721Kclaim_numV4-1Kmagic_numVMAGIC'>4-1</a><script>CMECF.widget.DocLink('documentKcaseidV171908Kclaim_idV15146721Kclaim_numV4-1Kmagic_numVMAGIC');</script></font></td><td width='4%'><font size='-1'>05/01/2018</font></td><td><font size='-1'> Claim #4 filed by U.S. Bank National Association, Amount claimed: $41300979.84 (BJM) </font></td></table></TD>
+</TR>
+<TR  class = rowBackground2>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Description:</I> (4-1) Money Loaned/Services Performed<BR></FONT>
+</TD>
+</TR>
+<TR  class = rowBackground2>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Remarks:</I> </FONT>
+</TD>
+</TR>
+</TABLE><BR>
+<TABLE class=complexReport ><TR class = rowBackground1 ><TD align=left valign=top width="30%">
+<FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(12413716)&nbsp;&nbsp;<BR> The Bank of New York Mellon Trust Company, N.A.<br>601 Travis Street<br>Houston, TX 77002&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT>
+</TD>
+<TD align=left valign=top  width="20%">
+<FONT SIZE="-1">
+<B>Claim No: 5</B><BR><I>Original Filed Date</I>:&nbsp;05/03/2018<BR><I>Original Entered Date</I>:&nbsp;05/03/2018<BR>
+<BR>
+</FONT>
+</TD>
+<TD align=left valign=top width="30%">
+<FONT SIZE="-1">
+<I>Status:</I>
+<BR><I>Filed by:</I> CR
+<BR><I>Entered by:</I>
+Thomas A. Pitta
+<BR><I>Modified:</I>
+</FONT>
+</TD>
+</TR>
+<TR  class = rowBackground1><TD colspan=3><TABLE>
+<TR  class = ><TD align=left><FONT SIZE='-1'>&nbsp;Amount <TD><FONT SIZE='-1'> claimed:<TD align=right><FONT SIZE='-1'> $12563506.29</TD><TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD> <TD></TR>
+<TR  class = $rowBackground><TD align=left>
+<FONT SIZE="-1">
+</TR>
+</TABLE><TFOOT>
+<TR  class = rowBackground1 valign='top'>
+<TD colspan=5 align=left>
+<FONT SIZE="-1">
+<I>History:</I>
+</FONT>
+<table width='100%' border='0'><tr valign='top'><td width='4%'><font size='-1'><a href="/cgi-bin/ClaimHistory.pl?171908,5-1,424775,18-10160-LSS">Details</a></font></td><td width='3%' align='right'></td><td width='6%' align='center'><font size='-1'><a href='/cgi-bin/show_doc.pl?caseid=171908&claim_id=15150097&claim_num=5-1&magic_num=MAGIC' id='documentKcaseidV171908Kclaim_idV15150097Kclaim_numV5-1Kmagic_numVMAGIC'>5-1</a><script>CMECF.widget.DocLink('documentKcaseidV171908Kclaim_idV15150097Kclaim_numV5-1Kmagic_numVMAGIC');</script></font></td><td width='4%'><font size='-1'>05/03/2018</font></td><td><font size='-1'> Claim #5 filed by The Bank of New York Mellon Trust Company, N.A., Amount claimed: $12563506.29 (Pitta, Thomas) </font></td></table></TD>
+</TR>
+<TR  class = rowBackground1>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Description:</I> (5-1) Money Loaned<BR></FONT>
+</TD>
+</TR>
+<TR  class = rowBackground1>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Remarks:</I> </FONT>
+</TD>
+</TR>
+</TABLE><BR>
+<TABLE class=complexReport ><TR class = rowBackground2 ><TD align=left valign=top width="30%">
+<FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(12413910)&nbsp;&nbsp;<BR> Scottish Re Group Limited, in official liquidation<br>See Attachment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT>
+</TD>
+<TD align=left valign=top  width="20%">
+<FONT SIZE="-1">
+<B>Claim No: 6</B><BR><I>Original Filed Date</I>:&nbsp;05/04/2018<BR><I>Original Entered Date</I>:&nbsp;05/04/2018<BR>
+<BR>
+</FONT>
+</TD>
+<TD align=left valign=top width="30%">
+<FONT SIZE="-1">
+<I>Status:</I>
+<BR><I>Filed by:</I> CR
+<BR><I>Entered by:</I>
+  EPOC Filer
+<BR><I>Modified:</I>
+</FONT>
+</TD>
+</TR>
+<TR  class = rowBackground2><TD colspan=3><TABLE>
+<TR  class = ><TD align=left><FONT SIZE='-1'>&nbsp;Amount <TD><FONT SIZE='-1'> claimed:<TD align=right><FONT SIZE='-1'> $0.00</TD><TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD> <TD></TR>
+<TR  class = $rowBackground><TD align=left>
+<FONT SIZE="-1">
+</TR>
+</TABLE><TFOOT>
+<TR  class = rowBackground2 valign='top'>
+<TD colspan=5 align=left>
+<FONT SIZE="-1">
+<I>History:</I>
+</FONT>
+<table width='100%' border='0'><tr valign='top'><td width='4%'><font size='-1'><a href="/cgi-bin/ClaimHistory.pl?171908,6-1,424823,18-10160-LSS">Details</a></font></td><td width='3%' align='right'></td><td width='6%' align='center'><font size='-1'><a href='/cgi-bin/show_doc.pl?caseid=171908&claim_id=15151672&claim_num=6-1&magic_num=MAGIC' id='documentKcaseidV171908Kclaim_idV15151672Kclaim_numV6-1Kmagic_numVMAGIC'>6-1</a><script>CMECF.widget.DocLink('documentKcaseidV171908Kclaim_idV15151672Kclaim_numV6-1Kmagic_numVMAGIC');</script></font></td><td width='4%'><font size='-1'>05/04/2018</font></td><td><font size='-1'> Claim #6 filed by Scottish Re Group Limited, in official liquidation, Amount claimed: $0.00 (EPOC Filer) </font></td></table></TD>
+</TR>
+<TR  class = rowBackground2>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Description:</I> </FONT>
+</TD>
+</TR>
+<TR  class = rowBackground2>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Remarks:</I> (6-1)  Filer Comment: See attachment  <BR></FONT>
+</TD>
+</TR>
+</TABLE><BR>
+<TABLE class=complexReport ><TR class = rowBackground1 ><TD align=left valign=top width="30%">
+<FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(12413917)&nbsp;&nbsp;<BR> Scottish Finance (Luxembourg) Sarl<br>Max Mailliet, as Receiver for SFL<br>c/o E2M Sarl<br>52 Rue Raymond Poincare<br>Luxembourg L-2342&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT>
+</TD>
+<TD align=left valign=top  width="20%">
+<FONT SIZE="-1">
+<B>Claim No: 7</B><BR><I>Original Filed Date</I>:&nbsp;05/04/2018<BR><I>Original Entered Date</I>:&nbsp;05/04/2018<BR>
+<BR>
+</FONT>
+</TD>
+<TD align=left valign=top width="30%">
+<FONT SIZE="-1">
+<I>Status:</I>
+<BR><I>Filed by:</I> CR
+<BR><I>Entered by:</I>
+  EPOC Filer
+<BR><I>Modified:</I>
+</FONT>
+</TD>
+</TR>
+<TR  class = rowBackground1><TD colspan=3><TABLE>
+<TR  class = ><TD align=left><FONT SIZE='-1'>&nbsp;Amount <TD><FONT SIZE='-1'> claimed:<TD align=right><FONT SIZE='-1'> $63536041.32</TD><TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD> <TD></TR>
+<TR  class = $rowBackground><TD align=left>
+<FONT SIZE="-1">
+</TR>
+</TABLE><TFOOT>
+<TR  class = rowBackground1 valign='top'>
+<TD colspan=5 align=left>
+<FONT SIZE="-1">
+<I>History:</I>
+</FONT>
+<table width='100%' border='0'><tr valign='top'><td width='4%'><font size='-1'><a href="/cgi-bin/ClaimHistory.pl?171908,7-1,424833,18-10160-LSS">Details</a></font></td><td width='3%' align='right'></td><td width='6%' align='center'><font size='-1'><a href='/cgi-bin/show_doc.pl?caseid=171908&claim_id=15151763&claim_num=7-1&magic_num=MAGIC' id='documentKcaseidV171908Kclaim_idV15151763Kclaim_numV7-1Kmagic_numVMAGIC'>7-1</a><script>CMECF.widget.DocLink('documentKcaseidV171908Kclaim_idV15151763Kclaim_numV7-1Kmagic_numVMAGIC');</script></font></td><td width='4%'><font size='-1'>05/04/2018</font></td><td><font size='-1'> Claim #7 filed by Scottish Finance (Luxembourg) Sarl, Amount claimed: $63536041.32 (EPOC Filer) </font></td><tr valign='top'><td width='4%'></td><td width='2%'></td><td width='6%' align='center'><font size='-1'><a href='/cgi-bin/show_doc.pl?caseid=171908&de_seq_num=981&dm_id=15184563&doc_num=287' id='document1KcaseidV171908Kde_seq_numV981Kdm_idV15184563Kdoc_numV287'>287</a><script>CMECF.widget.DocLink('document1KcaseidV171908Kde_seq_numV981Kdm_idV15184563Kdoc_numV287');</script></font></td><td width='4%' align='left'><font size='-1'>05/23/2018</font></td><td width='83%'><font size='-1'>Withdrawal of Claim(s): 7 <i></i>. Filed by Nazy Modiri. (NAB)</font></td></tr></table></TD>
+</TR>
+<TR  class = rowBackground1>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Description:</I> </FONT>
+</TD>
+</TR>
+<TR  class = rowBackground1>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Remarks:</I> </FONT>
+</TD>
+</TR>
+</TABLE><BR>
+<TABLE class=complexReport ><TR class = rowBackground2 ><TD align=left valign=top width="30%">
+<FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(13737085)&nbsp;&nbsp;<BR> Merced Private Claims, LLC<br>601 Carlson Parkway, Suite 200<br>Minnetonka, MN55305<br>Attn: Vince Vertin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='/cgi-bin/Claimant.pl?171908,8,18-10160-LSS'>Claimant History</a> </FONT>
+</TD>
+<TD align=left valign=top  width="20%">
+<FONT SIZE="-1">
+<B>Claim No: 8</B><BR><I>Original Filed Date</I>:&nbsp;05/04/2018<BR><I>Original Entered Date</I>:&nbsp;05/04/2018<BR>
+<BR>
+</FONT>
+</TD>
+<TD align=left valign=top width="30%">
+<FONT SIZE="-1">
+<I>Status:</I>
+<BR><I>Filed by:</I> CR
+<BR><I>Entered by:</I>
+  BJM
+<BR><I>Modified:</I>
+</FONT>
+</TD>
+</TR>
+<TR  class = rowBackground2><TD colspan=3><TABLE>
+<TR  class = ><TD align=left><FONT SIZE='-1'>&nbsp;Amount <TD><FONT SIZE='-1'> claimed:<TD align=right><FONT SIZE='-1'> $15382566.69</TD><TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD> <TD></TR>
+<TR  class = $rowBackground><TD align=left>
+<FONT SIZE="-1">
+</TR>
+</TABLE><TFOOT>
+<TR  class = rowBackground2 valign='top'>
+<TD colspan=5 align=left>
+<FONT SIZE="-1">
+<I>History:</I>
+</FONT>
+<table width='100%' border='0'><tr valign='top'><td width='4%'><font size='-1'><a href="/cgi-bin/ClaimHistory.pl?171908,8-1,424839,18-10160-LSS">Details</a></font></td><td width='3%' align='right'></td><td width='6%' align='center'><font size='-1'><a href='/cgi-bin/show_doc.pl?caseid=171908&claim_id=15151823&claim_num=8-1&magic_num=MAGIC' id='documentKcaseidV171908Kclaim_idV15151823Kclaim_numV8-1Kmagic_numVMAGIC'>8-1</a><script>CMECF.widget.DocLink('documentKcaseidV171908Kclaim_idV15151823Kclaim_numV8-1Kmagic_numVMAGIC');</script></font></td><td width='4%'><font size='-1'>05/04/2018</font></td><td><font size='-1'> Claim #8 filed by Security Life of Denver Insurance Company, Amount claimed: $15382566.69 (BJM) </font></td><tr valign='top'><td width='4%'></td><td width='2%'></td><td width='6%' align='center'><font size='-1'><a href='/cgi-bin/show_doc.pl?caseid=171908&de_seq_num=2600&dm_id=15895108&doc_num=800' id='document1KcaseidV171908Kde_seq_numV2600Kdm_idV15895108Kdoc_numV800'>800</a><script>CMECF.widget.DocLink('document1KcaseidV171908Kde_seq_numV2600Kdm_idV15895108Kdoc_numV800');</script></font></td><td width='4%' align='left'><font size='-1'>07/25/2019</font></td><td width='83%'><font size='-1'>Transfer/Assignment of Claim. Fee Amount &#036;25 Transfer Agreement 3001 (e) 2 Transferor: <A HREF="/cgi-bin/CredHistory.pl?171908,12413920">Security Life of Denver Insurance Company</A> (Claim No. 8) To Merced Private Claims, LLC. Filed by Merced Private Claims, LLC. (Propps, Andrew)</font></td></tr></table></TD>
+</TR>
+<TR  class = rowBackground2>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Description:</I> (8-1) Breach of Contract<BR></FONT>
+</TD>
+</TR>
+<TR  class = rowBackground2>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Remarks:</I> </FONT>
+</TD>
+</TR>
+</TABLE><BR>
+<TABLE class=complexReport ><TR class = rowBackground1 ><TD align=left valign=top width="30%">
+<FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(12572803)&nbsp;&nbsp;<BR> State of Delaware, Division of Corporations<br>Delaware Division of Corporations<br>401 Federal Street, Ste. 4<br>Dover, DE 19901&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT>
+</TD>
+<TD align=left valign=top  width="20%">
+<FONT SIZE="-1">
+<B>Claim No: 9</B><BR><I>Original Filed Date</I>:&nbsp;07/20/2018<BR><I>Original Entered Date</I>:&nbsp;07/20/2018<BR>
+<BR>
+</FONT>
+</TD>
+<TD align=left valign=top width="30%">
+<FONT SIZE="-1">
+<I>Status:</I>
+<BR><I>Filed by:</I> CR
+<BR><I>Entered by:</I>
+  BJM
+<BR><I>Modified:</I>
+</FONT>
+</TD>
+</TR>
+<TR  class = rowBackground1><TD colspan=3><TABLE>
+<TR  class = ><TD align=left><FONT SIZE='-1'>&nbsp;Amount <TD><FONT SIZE='-1'> claimed:<TD align=right><FONT SIZE='-1'> $189.38</TD><TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD> <TD></TR>
+<TR  class = ><TD align=left><FONT SIZE='-1'>&nbsp;Priority <TD><FONT SIZE='-1'> claimed:<TD align=right><FONT SIZE='-1'> $189.38</TD><TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD> <TD></TR>
+<TR  class = $rowBackground><TD align=left>
+<FONT SIZE="-1">
+</TR>
+</TABLE><TFOOT>
+<TR  class = rowBackground1 valign='top'>
+<TD colspan=5 align=left>
+<FONT SIZE="-1">
+<I>History:</I>
+</FONT>
+<table width='100%' border='0'><tr valign='top'><td width='4%'><font size='-1'><a href="/cgi-bin/ClaimHistory.pl?171908,9-1,427656,18-10160-LSS">Details</a></font></td><td width='3%' align='right'></td><td width='6%' align='center'><font size='-1'><a href='/cgi-bin/show_doc.pl?caseid=171908&claim_id=15284937&claim_num=9-1&magic_num=MAGIC' id='documentKcaseidV171908Kclaim_idV15284937Kclaim_numV9-1Kmagic_numVMAGIC'>9-1</a><script>CMECF.widget.DocLink('documentKcaseidV171908Kclaim_idV15284937Kclaim_numV9-1Kmagic_numVMAGIC');</script></font></td><td width='4%'><font size='-1'>07/20/2018</font></td><td><font size='-1'> Claim #9 filed by State of Delaware, Division of Corporations, Amount claimed: $189.38 (BJM) </font></td></table></TD>
+</TR>
+<TR  class = rowBackground1>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Description:</I> (9-1) Annual Franchise Tax<BR></FONT>
+</TD>
+</TR>
+<TR  class = rowBackground1>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Remarks:</I> (9-1) 4857<BR></FONT>
+</TD>
+</TR>
+</TABLE><BR>
+<TABLE class=complexReport ><TR class = rowBackground2 ><TD align=left valign=top width="30%">
+<FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(12658709)&nbsp;&nbsp;<BR> Michael Baumstein<br>2210 Sutton Springs Road<br>Charlotte, NC 28226&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT>
+</TD>
+<TD align=left valign=top  width="20%">
+<FONT SIZE="-1">
+<B>Claim No: 10</B><BR><I>Original Filed Date</I>:&nbsp;08/09/2018<BR><I>Original Entered Date</I>:&nbsp;08/09/2018<BR>
+<BR>
+</FONT>
+</TD>
+<TD align=left valign=top width="30%">
+<FONT SIZE="-1">
+<I>Status:</I>
+<BR><I>Filed by:</I> CR
+<BR><I>Entered by:</I>
+  EPOC Filer
+<BR><I>Modified:</I>
+</FONT>
+</TD>
+</TR>
+<TR  class = rowBackground2><TD colspan=3><TABLE>
+<style type="text/css"> i { white-space:nowrap; } </style><i>No amounts claimed</i><TR  class = $rowBackground><TD align=left>
+<FONT SIZE="-1">
+</TR>
+</TABLE><TFOOT>
+<TR  class = rowBackground2 valign='top'>
+<TD colspan=5 align=left>
+<FONT SIZE="-1">
+<I>History:</I>
+</FONT>
+<table width='100%' border='0'><tr valign='top'><td width='4%'><font size='-1'><a href="/cgi-bin/ClaimHistory.pl?171908,10-1,428998,18-10160-LSS">Details</a></font></td><td width='3%' align='right'></td><td width='6%' align='center'><font size='-1'><a href='/cgi-bin/show_doc.pl?caseid=171908&claim_id=15320825&claim_num=10-1&magic_num=MAGIC' id='documentKcaseidV171908Kclaim_idV15320825Kclaim_numV10-1Kmagic_numVMAGIC'>10-1</a><script>CMECF.widget.DocLink('documentKcaseidV171908Kclaim_idV15320825Kclaim_numV10-1Kmagic_numVMAGIC');</script></font></td><td width='4%'><font size='-1'>08/09/2018</font></td><td><font size='-1'> Claim #10 filed by Michael Baumstein, Amount claimed:  (EPOC Filer) </font></td></table></TD>
+</TR>
+<TR  class = rowBackground2>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Description:</I> </FONT>
+</TD>
+</TR>
+<TR  class = rowBackground2>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Remarks:</I> (10-1)  Filer Comment: Contribution and/or indemnity obligations arising from service as a former officer and/or director of the debtor  <BR></FONT>
+</TD>
+</TR>
+</TABLE><BR>
+<TABLE class=complexReport ><TR class = rowBackground1 ><TD align=left valign=top width="30%">
+<FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(12966367)&nbsp;&nbsp;<BR> Business Wire, Inc.<br>101 California St., 20 Fl.<br>San Francisco, CA 94111&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT>
+</TD>
+<TD align=left valign=top  width="20%">
+<FONT SIZE="-1">
+<B>Claim No: 11</B><BR><I>Original Filed Date</I>:&nbsp;12/03/2018<BR><I>Original Entered Date</I>:&nbsp;12/04/2018<BR>
+<BR>
+</FONT>
+</TD>
+<TD align=left valign=top width="30%">
+<FONT SIZE="-1">
+<I>Status:</I>
+<BR><I>Filed by:</I> CR
+<BR><I>Entered by:</I>
+  BJM
+<BR><I>Modified:</I>
+</FONT>
+</TD>
+</TR>
+<TR  class = rowBackground1><TD colspan=3><TABLE>
+<TR  class = ><TD align=left><FONT SIZE='-1'>&nbsp;Amount <TD><FONT SIZE='-1'> claimed:<TD align=right><FONT SIZE='-1'> $4890.00</TD><TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD> <TD></TR>
+<TR  class = $rowBackground><TD align=left>
+<FONT SIZE="-1">
+</TR>
+</TABLE><TFOOT>
+<TR  class = rowBackground1 valign='top'>
+<TD colspan=5 align=left>
+<FONT SIZE="-1">
+<I>History:</I>
+</FONT>
+<table width='100%' border='0'><tr valign='top'><td width='4%'><font size='-1'><a href="/cgi-bin/ClaimHistory.pl?171908,11-1,438034,18-10160-LSS">Details</a></font></td><td width='3%' align='right'></td><td width='6%' align='center'><font size='-1'><a href='/cgi-bin/show_doc.pl?caseid=171908&claim_id=15528824&claim_num=11-1&magic_num=MAGIC' id='documentKcaseidV171908Kclaim_idV15528824Kclaim_numV11-1Kmagic_numVMAGIC'>11-1</a><script>CMECF.widget.DocLink('documentKcaseidV171908Kclaim_idV15528824Kclaim_numV11-1Kmagic_numVMAGIC');</script></font></td><td width='4%'><font size='-1'>12/03/2018</font></td><td><font size='-1'> Claim #11 filed by Business Wire, Inc., Amount claimed: $4890.00 (BJM) </font></td></table></TD>
+</TR>
+<TR  class = rowBackground1>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Description:</I> (11-1) Service<BR></FONT>
+</TD>
+</TR>
+<TR  class = rowBackground1>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Remarks:</I> (11-1) 0774<BR></FONT>
+</TD>
+</TR>
+</TABLE><BR>
+<TABLE class=complexReport ><TR class = rowBackground2 ><TD align=left valign=top width="30%">
+<FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(13659974)&nbsp;&nbsp;<BR> Morris, Nichols, Arsht &#038; Tunnell, LLP<br>c/o Eric D. Schwartz, Esq.<br>1201 N. Market Street, 16th Floor<br>Wilmington, DE 19801&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT>
+</TD>
+<TD align=left valign=top  width="20%">
+<FONT SIZE="-1">
+<B>Claim No: 12</B><BR><I>Original Filed Date</I>:&nbsp;06/25/2019<BR><I>Original Entered Date</I>:&nbsp;06/25/2019<BR>
+<BR>
+</FONT>
+</TD>
+<TD align=left valign=top width="30%">
+<FONT SIZE="-1">
+<I>Status:</I>
+<BR><I>Filed by:</I> CR
+<BR><I>Entered by:</I>
+  EPOC Filer
+<BR><I>Modified:</I>
+</FONT>
+</TD>
+</TR>
+<TR  class = rowBackground2><TD colspan=3><TABLE>
+<TR  class = ><TD align=left><FONT SIZE='-1'>&nbsp;Amount <TD><FONT SIZE='-1'> claimed:<TD align=right><FONT SIZE='-1'> $675059.53</TD><TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD> <TD></TR>
+<TR  class = ><TD align=left><FONT SIZE='-1'>&nbsp;Priority <TD><FONT SIZE='-1'> claimed:<TD align=right><FONT SIZE='-1'> $675059.53</TD><TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD> <TD></TR>
+<TR  class = $rowBackground><TD align=left>
+<FONT SIZE="-1">
+</TR>
+</TABLE><TFOOT>
+<TR  class = rowBackground2 valign='top'>
+<TD colspan=5 align=left>
+<FONT SIZE="-1">
+<I>History:</I>
+</FONT>
+<table width='100%' border='0'><tr valign='top'><td width='4%'><font size='-1'><a href="/cgi-bin/ClaimHistory.pl?171908,12-1,446864,18-10160-LSS">Details</a></font></td><td width='3%' align='right'></td><td width='6%' align='center'><font size='-1'><a href='/cgi-bin/show_doc.pl?caseid=171908&claim_id=15846273&claim_num=12-1&magic_num=MAGIC' id='documentKcaseidV171908Kclaim_idV15846273Kclaim_numV12-1Kmagic_numVMAGIC'>12-1</a><script>CMECF.widget.DocLink('documentKcaseidV171908Kclaim_idV15846273Kclaim_numV12-1Kmagic_numVMAGIC');</script></font></td><td width='4%'><font size='-1'>06/25/2019</font></td><td><font size='-1'> Claim #12 filed by Morris, Nichols, Arsht &#038; Tunnell, LLP, Amount claimed: $675059.53 (EPOC Filer) </font></td></table></TD>
+</TR>
+<TR  class = rowBackground2>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Description:</I> </FONT>
+</TD>
+</TR>
+<TR  class = rowBackground2>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Remarks:</I> </FONT>
+</TD>
+</TR>
+</TABLE><BR>
+<TABLE class=complexReport ><TR class = rowBackground1 ><TD align=left valign=top width="30%">
+<FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(13659979)&nbsp;&nbsp;<BR> Hogan Lovells US LLP<br>c/o Peter A. Ivanick, Esq.<br>390 Madison Avenue<br>New York, NY 10017&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT>
+</TD>
+<TD align=left valign=top  width="20%">
+<FONT SIZE="-1">
+<B>Claim No: 13</B><BR><I>Original Filed Date</I>:&nbsp;06/25/2019<BR><I>Original Entered Date</I>:&nbsp;06/25/2019<BR>
+<BR>
+</FONT>
+</TD>
+<TD align=left valign=top width="30%">
+<FONT SIZE="-1">
+<I>Status:</I>
+<BR><I>Filed by:</I> CR
+<BR><I>Entered by:</I>
+  EPOC Filer
+<BR><I>Modified:</I>
+</FONT>
+</TD>
+</TR>
+<TR  class = rowBackground1><TD colspan=3><TABLE>
+<TR  class = ><TD align=left><FONT SIZE='-1'>&nbsp;Amount <TD><FONT SIZE='-1'> claimed:<TD align=right><FONT SIZE='-1'> $101823.98</TD><TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD> <TD></TR>
+<TR  class = ><TD align=left><FONT SIZE='-1'>&nbsp;Priority <TD><FONT SIZE='-1'> claimed:<TD align=right><FONT SIZE='-1'> $101823.98</TD><TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD> <TD></TR>
+<TR  class = $rowBackground><TD align=left>
+<FONT SIZE="-1">
+</TR>
+</TABLE><TFOOT>
+<TR  class = rowBackground1 valign='top'>
+<TD colspan=5 align=left>
+<FONT SIZE="-1">
+<I>History:</I>
+</FONT>
+<table width='100%' border='0'><tr valign='top'><td width='4%'><font size='-1'><a href="/cgi-bin/ClaimHistory.pl?171908,13-1,446870,18-10160-LSS">Details</a></font></td><td width='3%' align='right'></td><td width='6%' align='center'><font size='-1'><a href='/cgi-bin/show_doc.pl?caseid=171908&claim_id=15846647&claim_num=13-1&magic_num=MAGIC' id='documentKcaseidV171908Kclaim_idV15846647Kclaim_numV13-1Kmagic_numVMAGIC'>13-1</a><script>CMECF.widget.DocLink('documentKcaseidV171908Kclaim_idV15846647Kclaim_numV13-1Kmagic_numVMAGIC');</script></font></td><td width='4%'><font size='-1'>06/25/2019</font></td><td><font size='-1'> Claim #13 filed by Hogan Lovells US LLP, Amount claimed: $101823.98 (EPOC Filer) </font></td></table></TD>
+</TR>
+<TR  class = rowBackground1>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Description:</I> </FONT>
+</TD>
+</TR>
+<TR  class = rowBackground1>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Remarks:</I> </FONT>
+</TD>
+</TR>
+</TABLE><BR>
+<TABLE class=complexReport ><TR class = rowBackground2 ><TD align=left valign=top width="30%">
+<FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(13660087)&nbsp;&nbsp;<BR> Mayer Brown LLP<br>c/o Nicholas C. Listermann, Esq.<br>230 S. LaSalle Street, 9th Floor<br>Chicago, IL 60604&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT>
+</TD>
+<TD align=left valign=top  width="20%">
+<FONT SIZE="-1">
+<B>Claim No: 14</B><BR><I>Original Filed Date</I>:&nbsp;06/25/2019<BR><I>Original Entered Date</I>:&nbsp;06/25/2019<BR>
+<BR>
+</FONT>
+</TD>
+<TD align=left valign=top width="30%">
+<FONT SIZE="-1">
+<I>Status:</I>
+<BR><I>Filed by:</I> CR
+<BR><I>Entered by:</I>
+  EPOC Filer
+<BR><I>Modified:</I>
+</FONT>
+</TD>
+</TR>
+<TR  class = rowBackground2><TD colspan=3><TABLE>
+<TR  class = ><TD align=left><FONT SIZE='-1'>&nbsp;Amount <TD><FONT SIZE='-1'> claimed:<TD align=right><FONT SIZE='-1'> $73629.43</TD><TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD> <TD></TR>
+<TR  class = ><TD align=left><FONT SIZE='-1'>&nbsp;Priority <TD><FONT SIZE='-1'> claimed:<TD align=right><FONT SIZE='-1'> $73629.43</TD><TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD> <TD></TR>
+<TR  class = $rowBackground><TD align=left>
+<FONT SIZE="-1">
+</TR>
+</TABLE><TFOOT>
+<TR  class = rowBackground2 valign='top'>
+<TD colspan=5 align=left>
+<FONT SIZE="-1">
+<I>History:</I>
+</FONT>
+<table width='100%' border='0'><tr valign='top'><td width='4%'><font size='-1'><a href="/cgi-bin/ClaimHistory.pl?171908,14-1,446888,18-10160-LSS">Details</a></font></td><td width='3%' align='right'></td><td width='6%' align='center'><font size='-1'><a href='/cgi-bin/show_doc.pl?caseid=171908&claim_id=15847532&claim_num=14-1&magic_num=MAGIC' id='documentKcaseidV171908Kclaim_idV15847532Kclaim_numV14-1Kmagic_numVMAGIC'>14-1</a><script>CMECF.widget.DocLink('documentKcaseidV171908Kclaim_idV15847532Kclaim_numV14-1Kmagic_numVMAGIC');</script></font></td><td width='4%'><font size='-1'>06/25/2019</font></td><td><font size='-1'> Claim #14 filed by Mayer Brown LLP, Amount claimed: $73629.43 (EPOC Filer) </font></td></table></TD>
+</TR>
+<TR  class = rowBackground2>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Description:</I> </FONT>
+</TD>
+</TR>
+<TR  class = rowBackground2>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Remarks:</I> (14-1) Account Number (last 4 digits):9326  <BR></FONT>
+</TD>
+</TR>
+</TABLE><BR>
+<TABLE class=complexReport ><TR class = rowBackground1 ><TD align=left valign=top width="30%">
+<FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(13660112)&nbsp;&nbsp;<BR> 600 N King St, Suite 400<br>Bayard, P.A. (Attn: G. Finizio)<br>600 N King St, Suite 400<br>Wilmington, DE 19801&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT>
+</TD>
+<TD align=left valign=top  width="20%">
+<FONT SIZE="-1">
+<B>Claim No: 15</B><BR><I>Original Filed Date</I>:&nbsp;06/25/2019<BR><I>Original Entered Date</I>:&nbsp;06/25/2019<BR>
+<BR>
+</FONT>
+</TD>
+<TD align=left valign=top width="30%">
+<FONT SIZE="-1">
+<I>Status:</I>
+<BR><I>Filed by:</I> CR
+<BR><I>Entered by:</I>
+  EPOC Filer
+<BR><I>Modified:</I>
+</FONT>
+</TD>
+</TR>
+<TR  class = rowBackground1><TD colspan=3><TABLE>
+<TR  class = ><TD align=left><FONT SIZE='-1'>&nbsp;Amount <TD><FONT SIZE='-1'> claimed:<TD align=right><FONT SIZE='-1'> $192392.00</TD><TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD> <TD></TR>
+<TR  class = $rowBackground><TD align=left>
+<FONT SIZE="-1">
+</TR>
+</TABLE><TFOOT>
+<TR  class = rowBackground1 valign='top'>
+<TD colspan=5 align=left>
+<FONT SIZE="-1">
+<I>History:</I>
+</FONT>
+<table width='100%' border='0'><tr valign='top'><td width='4%'><font size='-1'><a href="/cgi-bin/ClaimHistory.pl?171908,15-1,446895,18-10160-LSS">Details</a></font></td><td width='3%' align='right'></td><td width='6%' align='center'><font size='-1'><a href='/cgi-bin/show_doc.pl?caseid=171908&claim_id=15847991&claim_num=15-1&magic_num=MAGIC' id='documentKcaseidV171908Kclaim_idV15847991Kclaim_numV15-1Kmagic_numVMAGIC'>15-1</a><script>CMECF.widget.DocLink('documentKcaseidV171908Kclaim_idV15847991Kclaim_numV15-1Kmagic_numVMAGIC');</script></font></td><td width='4%'><font size='-1'>06/25/2019</font></td><td><font size='-1'> Claim #15 filed by 600 N King St, Suite 400, Amount claimed: $192392.00 (EPOC Filer) </font></td><tr valign='top'><td width='4%'></td><td width='2%'></td><td width='6%' align='center'><font size='-1'><a href='/cgi-bin/show_doc.pl?caseid=171908&de_seq_num=2567&dm_id=15849920&doc_num=790' id='document1KcaseidV171908Kde_seq_numV2567Kdm_idV15849920Kdoc_numV790'>790</a><script>CMECF.widget.DocLink('document1KcaseidV171908Kde_seq_numV2567Kdm_idV15849920Kdoc_numV790');</script></font></td><td width='4%' align='left'><font size='-1'>06/26/2019</font></td><td width='83%'><font size='-1'>Withdrawal of Claim(s): 15 <i></i>. Filed by Bayard, P.A.. (Finizio, GianClaudio)</font></td></tr></table></TD>
+</TR>
+<TR  class = rowBackground1>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Description:</I> </FONT>
+</TD>
+</TR>
+<TR  class = rowBackground1>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Remarks:</I> </FONT>
+</TD>
+</TR>
+</TABLE><BR>
+<TABLE class=complexReport ><TR class = rowBackground2 ><TD align=left valign=top width="30%">
+<FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(13660113)&nbsp;&nbsp;<BR> Scottish Re (U.S.), Inc.<br>Bayard, P.A. (Attn: G. Finizio)<br>600 N. King Street, Suite 400<br>Wilmington, DE 19801&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT>
+</TD>
+<TD align=left valign=top  width="20%">
+<FONT SIZE="-1">
+<B>Claim No: 16</B><BR><I>Original Filed Date</I>:&nbsp;06/25/2019<BR><I>Original Entered Date</I>:&nbsp;06/25/2019<BR>
+<BR>
+</FONT>
+</TD>
+<TD align=left valign=top width="30%">
+<FONT SIZE="-1">
+<I>Status:</I>
+<BR><I>Filed by:</I> CR
+<BR><I>Entered by:</I>
+  EPOC Filer
+<BR><I>Modified:</I>
+</FONT>
+</TD>
+</TR>
+<TR  class = rowBackground2><TD colspan=3><TABLE>
+<TR  class = ><TD align=left><FONT SIZE='-1'>&nbsp;Amount <TD><FONT SIZE='-1'> claimed:<TD align=right><FONT SIZE='-1'> $192392.00</TD><TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD> <TD></TR>
+<TR  class = $rowBackground><TD align=left>
+<FONT SIZE="-1">
+</TR>
+</TABLE><TFOOT>
+<TR  class = rowBackground2 valign='top'>
+<TD colspan=5 align=left>
+<FONT SIZE="-1">
+<I>History:</I>
+</FONT>
+<table width='100%' border='0'><tr valign='top'><td width='4%'><font size='-1'><a href="/cgi-bin/ClaimHistory.pl?171908,16-1,446896,18-10160-LSS">Details</a></font></td><td width='3%' align='right'></td><td width='6%' align='center'><font size='-1'><a href='/cgi-bin/show_doc.pl?caseid=171908&claim_id=15848003&claim_num=16-1&magic_num=MAGIC' id='documentKcaseidV171908Kclaim_idV15848003Kclaim_numV16-1Kmagic_numVMAGIC'>16-1</a><script>CMECF.widget.DocLink('documentKcaseidV171908Kclaim_idV15848003Kclaim_numV16-1Kmagic_numVMAGIC');</script></font></td><td width='4%'><font size='-1'>06/25/2019</font></td><td><font size='-1'> Claim #16 filed by Scottish Re (U.S.), Inc., Amount claimed: $192392.00 (EPOC Filer) </font></td></table></TD>
+</TR>
+<TR  class = rowBackground2>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Description:</I> </FONT>
+</TD>
+</TR>
+<TR  class = rowBackground2>
+<TD colspan=3 align=left>
+<FONT SIZE="-1">
+<I>Remarks:</I> </FONT>
+</TD>
+</TR>
+</TABLE><BR>
+<CENTER><H3>Claims Register Summary</H3></CENTER><B>Case Name:</B>				Scottish Holdings, Inc.                           <BR><B>Case Number:</B>			18-10160-LSS<BR><B>Chapter:</B>				7<BR><B>Date Filed:</B>				01/28/2018<BR><B>Total Number Of Claims:</B> 16<BR><BR><table border=1><TR><TH>Total Amount Claimed* &nbsp;</TH><TD align=center>$183018574.21 &nbsp;</TD></TR><TR><TH>Total Amount Allowed* &nbsp;</th><TD align=center> &nbsp;</TD></TR></TABLE>*Includes general unsecured claims<BR><BR><b>The values are reflective of the data entered. Always refer to claim documents for actual amounts.</b> <BR><BR><CENTER><TABLE BORDER=1><TR><TH></TH><TH>Claimed</TH><TH>Allowed</TH></TR><TR><TH align=left>Secured</TH><TD align=center> &nbsp;</TD><TD align=center> &nbsp;</TD></TR><TR><TH align=left>Priority</TH><TD align=center>$850702.32 &nbsp;</TD><TD align=center> &nbsp;</TD></TR><TR><TH align=left>Administrative</TH><TD align=center> &nbsp;</TD><TD align=center> &nbsp;</TD></TR></table><br><HR><CENTER><TABLE BORDER=1 BGCOLOR=white width="400"><TR><TH COLSPAN=4><FONT SIZE=+1 COLOR=DARKRED>PACER Service Center </FONT></TH></TR><TR><TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH></TR><TR></TR><TR></TR><TR><TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1 COLOR=DARKBLUE>07/27/2019 00:23:15</FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> mlissner.flp:4512899:0 </FONT></TH></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE>  </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Claims Register </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Search Criteria: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 18-10160-LSS      Filed or Entered From: 7/5/2017 Filed or Entered To: 12/31/2019  </FONT></TD></TR><TR><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Billable Pages: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 2 </FONT></TD><TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH><TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.20 </FONT></TD></TR><TR></TR><TR></TR></TABLE></CENTER></HR><BR></BR></div></body></html>
