@@ -34,10 +34,18 @@ commands:
   test:
     steps:
       - run:
-          name: Run the Test Suite
+          name: Run the Default Test Suite
           command: |
             . venv/bin/activate
             python setup.py test
+
+  test-network:
+    steps:
+      - run:
+          name: Run the Network Test Suite (these tests don't run by default)
+          command: |
+            . venv/bin/activate
+            python setup.py testnetwork
 
 
 jobs:
@@ -46,6 +54,19 @@ jobs:
     steps:
       - build
       - test
+
+  build-test-network:
+    executor: python
+    steps:
+      - build
+      - test-network
+
+  build-test-all:
+    executor: python
+    steps:
+      - build
+      - test
+      - test-network
 
   deploy:
     executor: python
@@ -71,8 +92,10 @@ workflows:
 
   untagged:
     jobs:
-      - build-test
+      - build-test-all
 
+  # For tagged releases, run all tests across all version, but don't
+  # *require* network tests to pass in order to publish release
   tagged:
     jobs:
       - build-test: &filter-tags
@@ -81,6 +104,7 @@ workflows:
               only: /[0-9]+(\.[0-9]+)*/
             branches:
               ignore: /.*/
+      - build-test-network: *filter-tags
       - deploy:
           <<: *filter-tags
           requires:

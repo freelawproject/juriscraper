@@ -46,28 +46,55 @@ commands:
             echo "{ Testing: python $PYTHON_VERSION }"
             . venv/bin/activate
             python setup.py test
+
+  test-network:
+    steps:
+      - run:
+          name: Run the Network Test Suite (these tests don't run by default)
+          command: |
+            . venv/bin/activate
+            python setup.py testnetwork
+
+# QUESTION: should we just call tox instead?
 jobs:
   build:
     executor: python
     steps:
       - build
 
-  build-test-2.7:
+  2.7-build-test:
     executor: python
     <<: &build-test
       steps:
         - build
         - test
 
-  build-test-3.5:
+  2.7-build-test-network:
     executor: python
-      version: "3.5"
-    <<: *build-test
+    <<: &build-test-network
+      steps:
+        - build
+        - test-network
 
-  build-test-3.6:
-    executor: python
-      version: "3.6"
+  3.5-build-test:
     <<: *build-test
+    <<: &3.5
+      executor: python
+        version: "3.5"
+
+  3.5-build-test-network:
+    <<: *build-test-network
+    <<: *3.5
+
+  3.6-build-test:
+    <<: *build-test
+    <<: &3.6
+      executor: python
+        version: "3.6"
+
+  3.6-build-test-network:
+    <<: *build-test-network
+    <<: *3.5
 
   deploy:
     executor: python
@@ -89,12 +116,17 @@ workflows:
   untagged:
     jobs:
       - build
-      - build-test-2.7: &require-build
+      - 2.7-build-test: &require-build
           requires:
             - build
-      - build-test-3.5: *require-build
-      - build-test-3.6: *require-build
+      - 2.7-build-test-network: *require-build
+      - 3.5-build-test: *require-build
+      - 3.5-build-test-network: *require-build
+      - 3.6-build-test: *require-build
+      - 3.6-build-test-network: *require-build
 
+  # For tagged releases, run all tests across all version, but don't
+  # *require* network tests to pass in order to publish release
   tagged:
     jobs:
       - build: &filter-tags
@@ -103,11 +135,14 @@ workflows:
               only: /[0-9]+(\.[0-9]+)*/
             branches:
               ignore: /.*/
-      - build-test-2.7: &filter-tags-and-require-build
+      - 2.7-build-test: &filter-tags-and-require-build
           <<: *filter-tags
           <<: *require-build
-      - build-test-3.5: *filter-tags-and-require-build
-      - build-test-3.6: *filter-tags-and-require-build
+      - 2.7-build-test-network: *filter-tags
+      - 3.5-build-test: *filter-tags-and-require-build
+      - 3.5-build-test-network: *filter-tags
+      - 3.6-build-test: *filter-tags-and-require-build
+      - 3.6-build-test-network: *filter-tags-and-require-build
       - deploy:
           <<: *filter-tags
           requires:
