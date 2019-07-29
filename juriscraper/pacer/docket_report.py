@@ -34,6 +34,10 @@ class BaseDocketReport(object):
     """
     date_terminated_regex = re.compile(r'[tT]erminated:\s+(%s)' % date_regex,
                                        flags=re.IGNORECASE)
+    docket_number_dist_regex = re.compile(
+        r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
+    docket_number_bankr_regex = re.compile(r"(?:#:\s+)?((\d-)?\d\d-\d*)")
+    docket_number_jpml = re.compile(r'(MDL No.\s+\d*)')
 
     def _clear_caches(self):
         """Clear any caches that are on the object."""
@@ -222,10 +226,6 @@ class DocketReport(BaseDocketReport, BaseReport):
     jurisdiction_regex = re.compile(r'Jurisdiction:\s+(.*)')
     mdl_status_regex = re.compile(r'MDL Status:\s+(.*)')
     demand_regex = re.compile(r'^Demand:\s+(.*)')
-    docket_number_dist_regex = re.compile(
-        r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
-    docket_number_bankr_regex = re.compile(r"(?:#:\s+)?((\d-)?\d\d-\d*)")
-    docket_number_jpml = re.compile(r'(MDL No.\s+\d*)')
     offense_regex = re.compile(
         r'highest\s+offense.*(?P<status>opening|terminated)', flags=re.I)
     counts_regex = re.compile(r'(?P<status>pending|terminated)\s+counts',
