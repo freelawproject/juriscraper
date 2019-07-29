@@ -6,15 +6,13 @@ presents some more information for BK cases.
 import pprint
 import sys
 
-import six
 from six.moves import range
 
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
 from .utils import clean_pacer_object
 from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import clean_string, convert_date_string, \
-    force_unicode, harmonize
+from ..lib.string_utils import clean_string, force_unicode, harmonize
 
 logger = make_default_logger()
 
@@ -161,21 +159,8 @@ class CaseQuery(BaseDocketReport, BaseReport):
                 else:
                     raise AssertionError('Line with no boldface?')
             for bold in bolds:
-                bold_text = bold.text_content().strip()
-                assert bold_text.endswith(':'), \
-                    "Boldface fieldnames should end with colon (:)"
-                field = bold_text.rstrip(':')
-                clean_field = field.lower().replace(' ', '_')
-                if six.PY2:
-                    clean_field = clean_field.decode('utf-8')
-                clean_field = field_names.get(clean_field, clean_field)
-
-                value = bold.tail.strip()
-                if clean_field.startswith('date_'):
-                    # Known date field. Parse it.
-                    data[clean_field] = convert_date_string(value)
-                else:
-                    data[clean_field] = force_unicode(value)
+                data.update(self._get_label_value_pair(bold, True,
+                                                       field_names))
 
         data.update({
             u'court_id': self.court_id,

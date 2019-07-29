@@ -198,6 +198,38 @@ class BaseDocketReport(object):
         html_text = re.sub(delimiter_re, r'<p>', html_text)
         return fromstring(html_text)
 
+    @staticmethod
+    def _get_label_value_pair(node, require_colon, field_mappings):
+        """Get the field name and value for a node with a tailed value
+
+        :param node: The node with a tailing value.
+        :param require_colon: Whether to check for a colon at the end of a
+        field name. If True, labels without a colon are ignored.
+        :param field_mappings: A dict mapping PACER labels to Juriscraper ones.
+        :return a dict with a k-v mapping between a label and its value.
+        """
+        label = node.text_content().strip()
+        if require_colon and not label.endswith(':'):
+            return {}
+        label = label.strip().lower().replace(' ', '_') \
+            .replace('(', '').replace(')', '').rstrip(':')
+        if six.PY2:
+            label = label.decode('utf-8')
+        label = field_mappings.get(label, label)
+
+        value = node.tail.strip()
+        # Sometimes the colon is in the tail instead of in the label.
+        value = value.lstrip(':').strip()
+        if label.startswith('date_'):
+            # Known date field. Parse it.
+            if value:
+                data = {label: convert_date_string(value)}
+            else:
+                data = {label: None}
+        else:
+            data = {label: force_unicode(value)}
+        return data
+
 
 class DocketReport(BaseDocketReport, BaseReport):
     case_name_str = r"(?:Case\s+title:\s+)?(.*\bv\.?\s.*)"
