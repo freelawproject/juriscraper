@@ -295,10 +295,11 @@ Version History
 - 1.21.* - Adds support for the case report, which is the term we use to describe the page you see when you press the "Query" button in a district court PACER website. This is the page at the iQuery.pl URL.
 - 1.22.* - Adds support for de_seqno values parsed from PACER RSS, dockets, docket history reports, and attachment pages.
 - 1.23.* - Adds support for the advacned case report when it returns search results instead of a single item.
+- 1.24.* - Adds support for bankruptcy claims register parsing and querying
 
 **Current**
 
-- 1.24.* - Adds support for bankruptcy claims register parsing and querying
+- 1.25.* - Major refactor of tests to split them into network and local tests. Should make CI more consistent.
 
 **Future Goals**
 
