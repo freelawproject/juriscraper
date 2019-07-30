@@ -13,8 +13,7 @@ class PacerShowCaseDocApiTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         if pacer_credentials_are_defined():
-            cls.pacer_session = get_pacer_session()
-            cls.report = ShowCaseDocApi('dcd', cls.pacer_session)
+            cls.report = ShowCaseDocApi('dcd', get_pacer_session())
 
     @SKIP_IF_NO_PACER_LOGIN
     def test_queries(self):
@@ -40,9 +39,3 @@ class PacerShowCaseDocApiTest(unittest.TestCase):
                 got,
                 expected,
             )
-
-    @SKIP_IF_NO_PACER_LOGIN
-    def test_bankruptcy_fails(self):
-        """Does initializing the API fail on bankruptcy courts?"""
-        with self.assertRaises(AssertionError):
-            ShowCaseDocApi('caeb', pacer_session=self.pacer_session)
