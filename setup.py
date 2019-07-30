@@ -11,7 +11,7 @@ except ImportError:  # for pip <= 9.0.3
 from setuptools import setup, find_packages
 from setuptools.command.install import install
 
-VERSION = "1.25.0"
+VERSION = "1.25.1"
 AUTHOR = "Mike Lissner"
 EMAIL = "info@free.law"
 HERE = os.path.abspath(os.path.dirname(__file__))
@@ -26,7 +26,7 @@ def read(*parts):
         return f.read()
 
 
-class CommandTestNetwork(install):
+class TestNetwork(install):
     """Run network test only"""
     description = 'run isolated tests that hit the network'
 
@@ -37,7 +37,7 @@ class CommandTestNetwork(install):
         runner.run(tests)
 
 
-class CommandVerifyVersion(install):
+class VerifyVersion(install):
     """Custom command to verify that the git tag matches our version"""
     description = 'verify that the git tag matches our version'
 
@@ -90,9 +90,9 @@ setup(
     install_requires=requirements,
     tests_require=['jsondate', 'mock', 'vcrpy'],
     include_package_data=True,
-    test_suite='tests',
+    test_suite='tests.test_local',
     cmdclass={
-        'verify': CommandVerifyVersion,
-        'testnetwork': CommandTestNetwork,
+        'verify': VerifyVersion,
+        'testnetwork': TestNetwork,
     }
 )
