@@ -47,15 +47,6 @@ commands:
             . venv/bin/activate
             python setup.py test
 
-#  testnetwork:
-#    steps:
-#      - run:
-#          name: Run the Network Test Suite (these tests don't run by default)
-#          command: |
-#            . venv/bin/activate
-#            python setup.py testnetwork
-
-# QUESTION: should we just call tox instead?
 jobs:
   build:
     executor: python
@@ -69,32 +60,17 @@ jobs:
         - build
         - test
 
-#  2.7-build-testnetwork:
-#    executor: python
-#    <<: &build-testnetwork
-#      steps:
-#        - build
-#        - testnetwork
-
   3.5-build-test:
     <<: *build-test
     <<: &3.5
       executor: python
         version: "3.5"
 
-#  3.5-build-testnetwork:
-#    <<: *build-testnetwork
-#    <<: *3.5
-
   3.6-build-test:
     <<: *build-test
     <<: &3.6
       executor: python
         version: "3.6"
-
-#  3.6-build-testnetwork:
-#    <<: *build-testnetwork
-#    <<: *3.5
 
   deploy:
     executor: python
@@ -119,14 +95,9 @@ workflows:
       - 2.7-build-test: &require-build
           requires:
             - build
-#      - 2.7-build-testnetwork: *require-build
       - 3.5-build-test: *require-build
-#      - 3.5-build-testnetwork: *require-build
       - 3.6-build-test: *require-build
-#      - 3.6-build-testnetwork: *require-build
 
-  # For tagged releases, run all tests across all version, but don't
-  # *require* network tests to pass in order to publish release
   tagged:
     jobs:
       - build: &filter-tags
@@ -138,11 +109,8 @@ workflows:
       - 2.7-build-test: &filter-tags-and-require-build
           <<: *filter-tags
           <<: *require-build
-#      - 2.7-build-testnetwork: *filter-tags
       - 3.5-build-test: *filter-tags-and-require-build
-#      - 3.5-build-testnetwork: *filter-tags
       - 3.6-build-test: *filter-tags-and-require-build
-#      - 3.6-build-testnetwork: *filter-tags-and-require-build
       - deploy:
           <<: *filter-tags
           requires:
