@@ -34,7 +34,7 @@ commands:
   test:
     steps:
       - run:
-          name: Run the Default Test Suite
+          name: Run the Test Suite
           command: |
             . venv/bin/activate
             python setup.py test
