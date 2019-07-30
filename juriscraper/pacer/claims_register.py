@@ -182,6 +182,8 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         fields = {
             'original_filed_date': 'date_original_filed',
             'original_entered_date': 'date_original_entered',
+            'last_amendment_filed': 'date_last_amendment_filed',
+            'last_amendment_entered': 'date_last_amendment_entered',
         }
         for label in labels:
             data.update(self._get_label_value_pair(label, False, fields))
