@@ -4,10 +4,12 @@ import datetime
 
 logger = make_default_logger()
 
+
 class LASCSearch(object):
     """
 
     """
+
     def __init__(self, lasc):
         """
 
@@ -30,7 +32,6 @@ class LASCSearch(object):
 
     def check_success(self, *args, **kwargs):
 
-
         if json.loads(args[0].text)['IsSuccess'] == True:
             logger.info(u'Successful query into LASC map')
             self.case_data = args[0].text
@@ -46,7 +47,6 @@ class LASCSearch(object):
 
         self.lasc.get(self.GetCaseDetail % (self.api_base, internal_case_id), hooks={'response': [self.check_success]})
 
-
     def _get_case_list_for_last_seven_days(self):
         dt = datetime.datetime.today()
         date_string = dt.strftime('%m-%d-%Y')
@@ -55,6 +55,9 @@ class LASCSearch(object):
         self.date_query = self.GetRecentCivilCases % (self.api_base, last_week, date_string)
         self.date_case_list = self.lasc.get(self.date_query).text
 
+    def _get_cases_around_dates(self, date1, date2):
+        self.date_query = self.GetRecentCivilCases % (self.api_base, date1, date2)
+        self.date_case_list = self.lasc.get(self.date_query).text
 
     def _get_case_list_for_date(self, date_string):
         """
@@ -66,7 +69,6 @@ class LASCSearch(object):
         """
         self.date_query = self.GetRecentCivilCases % (self.api_base, date_string, date_string)
         self.date_case_list = self.lasc.get(self.date_query).text
-
 
     def _get_pdf_by_case_and_document_id(self, case_id, doc_id):
         """
@@ -81,10 +83,8 @@ class LASCSearch(object):
         self.pdf_url = self.ViewDocument % (self.api_base, case_id, doc_id)
         self.pdf_data = self.lasc.get(self.pdf_url).content
 
-
     def _get_internal_id(self, *args, **kwargs):
         self.internal_case_id = json.loads(args[0].text)['ResultList'][0]['NonCriminalCases'][0]['CaseID']
-
 
     # This function probably works 99% of the time.
     # But it is unknown how common if at all case numbers are repeated in unlimited cases.
@@ -101,8 +101,6 @@ class LASCSearch(object):
         self.lasc.get(self.case_search_url, hooks={'response': [self._get_internal_id]})
         self._get_json_from_internal_case_id(self.internal_case_id)
 
-
-
     # Future function to check for updates to case by ID
     def _check_for_update_to_case(self, internal_case_id):
         """
@@ -113,19 +111,19 @@ class LASCSearch(object):
 
         pass
 
-
     def _parse_date_data(self):
         logger.info(u'Parsing Date Data')
         datum = json.loads(self.date_case_list)['ResultList']
 
         for data in datum:
             for k, v in data.items():
-                data["_".join(l.lower() for l in re.findall('[A-Z][^A-Z]*', k)).replace("_i_d", "_id").replace("disp_", "disposition_")] = data.pop(k)
+                data["_".join(l.lower() for l in re.findall('[A-Z][^A-Z]*', k)).replace("_i_d", "_id").replace("disp_",
+                                                                                                               "disposition_")] = data.pop(
+                    k)
             data['case_id'] = data['internal_case_id']
+            del data['internal_case_id']
 
         self.normalized_date_data = datum
-
-
 
     def _parse_case_data(self):
         logger.info(u'Parsing Data')
@@ -138,23 +136,33 @@ class LASCSearch(object):
                 if x == "CaseInformation":
                     for k, v in data.items():
                         kj = k[:1].upper() + k[1:]
-                        data["_".join(l.lower() for l in re.findall('[A-Z][^A-Z]*', kj)).replace("_i_d", "_id").replace("disp_", "disposition_").replace("u_r_l", "url")] = data.pop(k)
-                    data['internal_case_id'] = data['case_id']
+                        data["_".join(l.lower() for l in re.findall('[A-Z][^A-Z]*', kj)).replace("_i_d", "_id").replace(
+                            "disp_", "disposition_").replace("u_r_l", "url")] = data.pop(k)
+                    # data['internal_case_id'] = data['case_id']
+
+                    datum[x]['filing_date'] = datetime.datetime.strptime(datum[x]['filing_date'][0:10],
+                                                                         '%Y-%m-%d').date()
+
                 else:
                     for row in data:
                         for k, v in row.items():
                             kj = k[:1].upper() + k[1:]
                             row["_".join(l.lower() for l in re.findall('[A-Z][^A-Z]*', kj)).replace("_i_d", "_id")
-                                            .replace("disp_", "disposition_")
-                                            .replace("u_r_l", "url")
-                                            .replace("c_r_s", "crs")
-                                            .replace("a_m_p_m", "am_pm")
-                                            .replace("c_x_c", "cxc")] = row.pop(k)
+                                .replace("disp_", "disposition_")
+                                .replace("u_r_l", "url")
+                                .replace("c_r_s", "crs")
+                                .replace("a_m_p_m", "am_pm")
+                                .replace("c_x_c", "cxc")] = row.pop(k)
 
                 if x == "DocumentImages":
                     for row in data:
-                        row['document_url'] = self.ViewDocument % (self.api_base, datum['CaseInformation']['case_id'], row["doc_id"])
-
+                        row['document_url'] = self.ViewDocument % (
+                        self.api_base, datum['CaseInformation']['case_id'], row["doc_id"])
+                        row['doc_filing_date'] = datetime.datetime.strptime(row['doc_filing_date'][0:10],
+                                                                            '%Y-%m-%d').date()
+                if x == "DocumentsField":
+                    for row in data:
+                        row['date_filed'] = datetime.datetime.strptime(row['date_filed'][0:10], '%Y-%m-%d').date()
 
         self.normalized_case_data = datum
 
