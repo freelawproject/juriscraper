@@ -4,6 +4,12 @@ from juriscraper.OpinionSite import OpinionSite
 
 
 class OpinionSiteLinear(OpinionSite):
+    """This class can be used for any site that needs to be scraped linearly,
+    instead of, for example, with separate html path parsing getters. Sometimes
+    it is just easier and less repetitive to scrape a site this way, in which
+    case you can simply extend this class and implement _process_html().
+    """
+
     def __init__(self, *args, **kwargs):
         super(OpinionSiteLinear, self).__init__(*args, **kwargs)
         self.cases = []
@@ -31,13 +37,12 @@ class OpinionSiteLinear(OpinionSite):
 
     # optional getters below
 
-    # def _get_optional_field_by_id(self, id):
-    #     if self.cases and id in self.cases[0]:
-    #         return [case[id] for case in self.cases]
+    def _get_optional_field_by_id(self, id):
+        if self.cases and id in self.cases[0]:
+            return [case[id] for case in self.cases]
 
-    # def _get_judges(self):
-    #     return self._get_optional_field_by_id('judge')
+    def _get_judges(self):
+        return self._get_optional_field_by_id('judge')
 
-    # def _get_neutral_citations(self):
-    #     return self._get_optional_field_by_id('neutral_citation')
-
+    def _get_neutral_citations(self):
+        return self._get_optional_field_by_id('neutral_citation')
