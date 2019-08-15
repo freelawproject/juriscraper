@@ -1,29 +1,28 @@
-# Author: Michael Lissner
-# History:
-#  - 2013-06-03: Created by mlr.
-#  - 2014-08-06: Updated by mlr for new website.
-
-from juriscraper.lib.string_utils import titlecase
-from juriscraper.opinions.united_states.state import nev_p
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+from juriscraper.lib.string_utils import convert_date_string
 
 
-class Site(nev_p.Site):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://nvcourts.gov/Supreme/Decisions/Unpublished_Orders/'
-        self.xpath_adjustment = -1
-        self.table_number = 1
-        self.date_path = self._make_date_path()
+        self.status = 'Published'
 
-    def _get_case_names(self):
-        # Runs the code from super, but titlecases.
-        names = super(Site, self)._get_case_names()
-        return [titlecase(name.lower()) for name in names]
+    def _process_html(self):
+        table_row_path = '//table[@id="ctl00_ContentPlaceHolderContent_UnpublishedOrders_GridView1"]//tr[position()>1]'
+        for row in self.html.xpath(table_row_path):
+            url = row.xpath('.//td[3]//a/@href')
 
-    def _get_precedential_statuses(self):
-        return ['Unpublished'] * len(self.case_names)
+            # skip rows with malformed html
+            if not url:
+                continue
 
-    def _get_neutral_citations(self):
-        # None for unpublished.
-        return None
+            date_string = row.xpath('.//td[3]')
+
+            self.cases.append({
+                'date': convert_date_string(date_string[0].text_content()),
+                'docket': row.xpath('.//td[1]')[0].text_content(),
+                'name': row.xpath('.//td[2]')[0].text_content().title(),
+                'url': url[0],
+            })
