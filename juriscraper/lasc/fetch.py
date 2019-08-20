@@ -25,6 +25,7 @@ class LASCSearch(object):
 
         self.date_case_list = None
         self.pdf_data = None
+        self.pdfs_data = []
         self.success = None
         self.internal_case_id = None
         self.normalized_case_data = None
@@ -83,6 +84,40 @@ class LASCSearch(object):
         self.pdf_url = self.ViewDocument % (self.api_base, case_id, doc_id)
         self.pdf_data = self.lasc.get(self.pdf_url).content
 
+    def _get_pdf_from_url(self, pdf_url):
+        """
+        # Using the unique internal case id information and document id we can collect all the pdfs
+
+        :param case_id:
+        :param doc_id:
+        :return:
+        """
+
+        logger.info(u'Api ViewDocument called.  Downloading PDF ')
+        self.pdf_data = self.lasc.get(pdf_url).content
+
+    def _get_pdfs_from_urls(self, pdf_urls):
+        """
+        # Using the unique internal case id information and document id we can collect all the pdfs
+
+        :param case_id:
+        :param doc_id:
+        :return:
+        """
+
+        # logger.info(u'Api ViewDocument called.  Downloading PDF ')
+        # self.pdf_data = self.lasc.get(pdf_url).content
+
+        from multiprocessing.dummy import Pool
+        pool = Pool(10)
+
+        futures = []
+        for url in pdf_urls:
+            futures.append(pool.apply_async(self.lasc.get, [url]))
+
+        for future in futures:
+            self.pdfs_data.append(future.get().content)
+
     def _get_internal_id(self, *args, **kwargs):
         self.internal_case_id = json.loads(args[0].text)['ResultList'][0]['NonCriminalCases'][0]['CaseID']
 
@@ -129,10 +164,12 @@ class LASCSearch(object):
         logger.info(u'Parsing Data')
 
         datum = json.loads(self.case_data)['ResultList'][0]['NonCriminalCaseInformation']
+        datum["Proceedings"] = []
         for x in datum:
             data = datum[x]
 
             if datum[x] != None:
+
                 if x == "CaseInformation":
                     for k, v in data.items():
                         kj = k[:1].upper() + k[1:]
@@ -163,6 +200,30 @@ class LASCSearch(object):
                 if x == "DocumentsField":
                     for row in data:
                         row['date_filed'] = datetime.datetime.strptime(row['date_filed'][0:10], '%Y-%m-%d').date()
+
+                if x == "PastProceedings":
+
+                    p = datum["Proceedings"]
+                    for x in data:
+                        x['past_or_future'] = 1
+
+                    p.extend(data)
+                    datum["Proceedings"] = p
+
+                if x == "FutureProceedings":
+
+                    p = datum["Proceedings"]
+                    for x in data:
+                        x['past_or_future'] = 2
+                    p.extend(data)
+                    datum["Proceedings"] = p
+
+        del datum['FutureProceedings']
+        del datum['PastProceedings']
+
+        caseinfo = [datum['CaseInformation']]
+        del datum['CaseInformation']
+        datum['CaseInformation'] = caseinfo
 
         self.normalized_case_data = datum
 
