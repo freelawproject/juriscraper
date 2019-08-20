@@ -29,7 +29,7 @@ class Site(OpinionSite):
         return html
 
     def _extract_cases_from_html(self, html):
-        for date_block in html.xpath('//div[@id="main-content"]/div/form/table/tr/td'):
+        for date_block in html.xpath("//div[@id='content']/div/form/table/tr/td"):
             date_string = date_block.xpath('input/@value')
             if date_string:
                 for case_block in date_block.xpath('table/tr/td'):

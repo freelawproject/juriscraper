@@ -45,7 +45,7 @@ class Site(OpinionSite):
         past years will fail
         """
         html = super(Site, self)._download(request_dict)
-        if self.method == 'LOCAL':
+        if self.test_mode_enabled():
             path = '//h2[contains(./text(), "Today\'s Published Opinions")]'
             header_text = html.xpath(path)[0].text_content()
             self.year = int(header_text.split(' ')[-1])

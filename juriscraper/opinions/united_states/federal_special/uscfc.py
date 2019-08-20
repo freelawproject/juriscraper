@@ -26,7 +26,7 @@ class Site(OpinionSite):
         self.today = datetime.datetime.now()
 
     def _download(self, request_dict={}):
-        if self.method == 'LOCAL':
+        if self.test_mode_enabled():
             # Use static 'today' date for consisting test results
             self.today = convert_date_string('2018/10/17')
         return super(Site, self)._download(request_dict)
@@ -38,11 +38,11 @@ class Site(OpinionSite):
             words = text.split()
             if len(words) == 2:
                 date = convert_date_string(words[1])
-            elif words[2] == 'hours' and words[4] == 'min' and words[5] == 'ago':
+            elif 'ago' in text:
                 # The record was added today "X hours and Y min ago"
                 date = self.today
             else:
-                raise InsanityException('Unrecodgnized date element string: %s' % text)
+                raise InsanityException('Unrecognized date element string: %s' % text)
             dates.append(date)
         return dates
 

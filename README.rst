@@ -114,6 +114,12 @@ Instead of installing Juriscraper via pip, do the following:
     pip install -r requirements.txt
     python setup.py test
 
+    # run tests against multiple python versions via tox
+    tox
+
+    # run network tests (on demand, not run via default command above)
+    python setup.py testnetwork
+
 You may need to also install Juriscraper locally with:
 
 ::
@@ -234,11 +240,11 @@ feel free to commit, but **please remember** to include the new ``*_example*``
 
 Individual tests can be run with:
 
-   python -m unittest tests.test_pacer.DocketParseTest.test_district_court_dockets
+   python -m unittest -v tests.local.test_DateTest.DateTest.test_various_date_extractions
 
 Or, to run and drop to the Python debugger if it fails, but you must install `nost` to have `nosetests`:
 
-  nosetests -v --pdb tests/test_pacer.py:DocketParseTest.test_district_court_dockets
+  nosetests -v --pdb tests/local/test_DateTest.py:DateTest.test_various_date_extractions
 
 In addition, we use `CircleCI <https://circleci.com/gh/freelawproject/juriscraper/>`__ to
 automatically run the tests whenever code is committed to the repository
@@ -288,10 +294,12 @@ Version History
   because of breaking API changes.
 - 1.21.* - Adds support for the case report, which is the term we use to describe the page you see when you press the "Query" button in a district court PACER website. This is the page at the iQuery.pl URL.
 - 1.22.* - Adds support for de_seqno values parsed from PACER RSS, dockets, docket history reports, and attachment pages.
+- 1.23.* - Adds support for the advacned case report when it returns search results instead of a single item.
+- 1.24.* - Adds support for bankruptcy claims register parsing and querying
 
 **Current**
 
-- 1.23.* - Adds support for the advacned case report when it returns search results instead of a single item.
+- 1.25.* - Major refactor of tests to split them into network and local tests. Should make CI more consistent.
 
 **Future Goals**
 

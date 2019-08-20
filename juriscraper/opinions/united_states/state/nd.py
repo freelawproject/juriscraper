@@ -1,4 +1,5 @@
 # Author: Phil Ardery
+# Contact: https://www.ndcourts.gov/contact-us
 # Date created: 2019-02-28
 
 from juriscraper.OpinionSite import OpinionSite

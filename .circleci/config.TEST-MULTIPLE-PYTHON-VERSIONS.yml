@@ -42,28 +42,32 @@ commands:
           command: |
             . venv/bin/activate
             python setup.py test
+
+            
 jobs:
   build:
     executor: python
     steps:
       - build
 
-  build-test-2.7:
+  2.7-build-test:
     executor: python
     <<: &build-test
       steps:
         - build
         - test
 
-  build-test-3.5:
-    executor: python
-      version: "3.5"
+  3.5-build-test:
     <<: *build-test
+    <<: &3.5
+      executor: python
+        version: "3.5"
 
-  build-test-3.6:
-    executor: python
-      version: "3.6"
+  3.6-build-test:
     <<: *build-test
+    <<: &3.6
+      executor: python
+        version: "3.6"
 
   deploy:
     executor: python
@@ -85,11 +89,11 @@ workflows:
   untagged:
     jobs:
       - build
-      - build-test-2.7: &require-build
+      - 2.7-build-test: &require-build
           requires:
             - build
-      - build-test-3.5: *require-build
-      - build-test-3.6: *require-build
+      - 3.5-build-test: *require-build
+      - 3.6-build-test: *require-build
 
   tagged:
     jobs:
@@ -99,11 +103,11 @@ workflows:
               only: /[0-9]+(\.[0-9]+)*/
             branches:
               ignore: /.*/
-      - build-test-2.7: &filter-tags-and-require-build
+      - 2.7-build-test: &filter-tags-and-require-build
           <<: *filter-tags
           <<: *require-build
-      - build-test-3.5: *filter-tags-and-require-build
-      - build-test-3.6: *filter-tags-and-require-build
+      - 3.5-build-test: *filter-tags-and-require-build
+      - 3.6-build-test: *filter-tags-and-require-build
       - deploy:
           <<: *filter-tags
           requires:

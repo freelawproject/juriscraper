@@ -35,7 +35,7 @@ class Site(OpinionSite):
 
         # Test/example files should use html from direct resource page
         # NOTE: fladistctapp_5_example_5.html SHOULD have 0 results
-        if self.method == 'LOCAL':
+        if self.test_mode_enabled():
             return [html_l]
 
         html_trees = []

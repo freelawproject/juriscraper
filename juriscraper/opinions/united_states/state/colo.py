@@ -52,7 +52,7 @@ class Site(OpinionSite):
         #
         # PLEASE ALSO NOTE: coloctapp_example_3.html is supposed to have 0
         # results.  It is a blank page test case covering is_this_a_blank_page().
-        if self.method == 'LOCAL':
+        if self.test_mode_enabled():
             date_string = landing_page_html.xpath('//h3')[0].text_content()
             date_obj = convert_date_string(date_string)
             self._extract_cases_from_sub_page(landing_page_html, date_obj)
@@ -80,7 +80,7 @@ class Site(OpinionSite):
 
                 # DEACTIVATED BY arderyp ON 2018.06.07, SEE NOTE ON get_next_page()
                 # # process all sub-pages
-                # if self.next_subpage_path and self.method != 'LOCAL':
+                # if self.next_subpage_path and self.test_mode_enabled():
                 #     while True:
                 #         next_subpage_html = self.get_next_page(html_tree, self.next_subpage_path, request_dict, url)
                 #         if next_subpage_html is None:

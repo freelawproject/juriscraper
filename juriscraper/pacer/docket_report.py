@@ -34,6 +34,10 @@ class BaseDocketReport(object):
     """
     date_terminated_regex = re.compile(r'[tT]erminated:\s+(%s)' % date_regex,
                                        flags=re.IGNORECASE)
+    docket_number_dist_regex = re.compile(
+        r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
+    docket_number_bankr_regex = re.compile(r"(?:#:\s+)?((\d-)?\d\d-\d*)")
+    docket_number_jpml = re.compile(r'(MDL No.\s+\d*)')
 
     def _clear_caches(self):
         """Clear any caches that are on the object."""
@@ -194,6 +198,38 @@ class BaseDocketReport(object):
         html_text = re.sub(delimiter_re, r'<p>', html_text)
         return fromstring(html_text)
 
+    @staticmethod
+    def _get_label_value_pair(node, require_colon, field_mappings):
+        """Get the field name and value for a node with a tailed value
+
+        :param node: The node with a tailing value.
+        :param require_colon: Whether to check for a colon at the end of a
+        field name. If True, labels without a colon are ignored.
+        :param field_mappings: A dict mapping PACER labels to Juriscraper ones.
+        :return a dict with a k-v mapping between a label and its value.
+        """
+        label = node.text_content().strip()
+        if require_colon and not label.endswith(':'):
+            return {}
+        label = label.strip().lower().replace(' ', '_') \
+            .replace('(', '').replace(')', '').rstrip(':')
+        if six.PY2:
+            label = label.decode('utf-8')
+        label = field_mappings.get(label, label)
+
+        value = node.tail.strip()
+        # Sometimes the colon is in the tail instead of in the label.
+        value = value.lstrip(':').strip()
+        if label.startswith('date_'):
+            # Known date field. Parse it.
+            if value:
+                data = {label: convert_date_string(value)}
+            else:
+                data = {label: None}
+        else:
+            data = {label: force_unicode(value)}
+        return data
+
 
 class DocketReport(BaseDocketReport, BaseReport):
     case_name_str = r"(?:Case\s+title:\s+)?(.*\bv\.?\s.*)"
@@ -222,10 +258,6 @@ class DocketReport(BaseDocketReport, BaseReport):
     jurisdiction_regex = re.compile(r'Jurisdiction:\s+(.*)')
     mdl_status_regex = re.compile(r'MDL Status:\s+(.*)')
     demand_regex = re.compile(r'^Demand:\s+(.*)')
-    docket_number_dist_regex = re.compile(
-        r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})")
-    docket_number_bankr_regex = re.compile(r"(?:#:\s+)?((\d-)?\d\d-\d*)")
-    docket_number_jpml = re.compile(r'(MDL No.\s+\d*)')
     offense_regex = re.compile(
         r'highest\s+offense.*(?P<status>opening|terminated)', flags=re.I)
     counts_regex = re.compile(r'(?P<status>pending|terminated)\s+counts',

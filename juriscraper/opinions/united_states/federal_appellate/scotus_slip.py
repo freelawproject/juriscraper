@@ -63,7 +63,7 @@ class Site(OpinionSite):
             return today.strftime('%y')
 
     def _download(self, request_dict={}):
-        if self.method != 'LOCAL':
+        if not self.test_mode_enabled():
             self.set_url()
         html = super(Site, self)._download(request_dict)
         self.extract_cases_from_html(html)

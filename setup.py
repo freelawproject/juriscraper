@@ -1,6 +1,7 @@
 import codecs
 import os
 import sys
+import unittest
 
 try:  # for pip >= 10
     from pip._internal.req import parse_requirements
@@ -10,7 +11,7 @@ except ImportError:  # for pip <= 9.0.3
 from setuptools import setup, find_packages
 from setuptools.command.install import install
 
-VERSION = "1.23.24"
+VERSION = "1.25.4"
 AUTHOR = "Mike Lissner"
 EMAIL = "info@free.law"
 HERE = os.path.abspath(os.path.dirname(__file__))
@@ -25,9 +26,20 @@ def read(*parts):
         return f.read()
 
 
-class VerifyVersionCommand(install):
+class TestNetwork(install):
+    """Run network test only"""
+    description = 'run isolated tests that hit the network'
+
+    def run(self):
+        loader = unittest.defaultTestLoader
+        runner = unittest.TextTestRunner(verbosity=2)
+        tests = loader.discover('./tests/network')
+        runner.run(tests)
+
+
+class VerifyVersion(install):
     """Custom command to verify that the git tag matches our version"""
-    description = 'verify that the git tais the Pythonic idiom for testg matches our version'
+    description = 'verify that the git tag matches our version'
 
     def run(self):
         tag = os.getenv('CIRCLE_TAG')
@@ -78,6 +90,9 @@ setup(
     install_requires=requirements,
     tests_require=['jsondate', 'mock', 'vcrpy'],
     include_package_data=True,
-    test_suite='tests',
-    cmdclass={'verify': VerifyVersionCommand}
+    test_suite='tests.test_local',
+    cmdclass={
+        'verify': VerifyVersion,
+        'testnetwork': TestNetwork,
+    }
 )

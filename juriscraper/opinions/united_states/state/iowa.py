@@ -19,7 +19,7 @@ class Site(OpinionSite):
     def _download(self, request_dict={}):
         html = super(Site, self)._download(request_dict)
         self.extract_cases(html)
-        if self.method == 'LOCAL' or self.archive:
+        if self.test_mode_enabled() or self.archive:
             return html
 
         # Walk over pagination "Next" page(s), if present

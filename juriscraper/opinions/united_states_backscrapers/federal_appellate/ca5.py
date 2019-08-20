@@ -29,7 +29,7 @@ class Site(OpinionSite):
         self.uses_selenium = True
 
     def _download(self, request_dict={}):
-        if self.method == 'LOCAL':
+        if self.test_mode_enabled():
             html_tree_list = [
                 super(Site, self)._download(request_dict=request_dict)]
             self.records_nr = len(html_tree_list[0].xpath(

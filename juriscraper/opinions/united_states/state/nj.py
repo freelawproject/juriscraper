@@ -13,7 +13,7 @@ class Site(OpinionSite):
         - Published_tax
         - Unpublished_Tax
         - Unpublished_Trial
-        
+
     Human web interface: http://www.judiciary.state.nj.us/attorneys/opinions.html#Supreme
     """
 
@@ -21,6 +21,7 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.base_url = 'http://www.judiciary.state.nj.us/attorneys/assets'
+        self.servername = 'http://www.judiciary.state.nj.us'
         self.url = '%s/js/objects/opinions/op2017.json' % self.base_url
         self.case_types = ['Supreme']
 
@@ -34,10 +35,13 @@ class Site(OpinionSite):
     def _get_download_urls(self):
         urls = []
         for type in self.case_types:
-            for opinion in self.html[type]:
-                # They don't have uniform keys across all data, which is... odd
-                path = opinion['DocumentURL'] if 'DocumentURL' in opinion else opinion['Document']
-                urls.append(self.get_absolute_opinion_path(path, type))
+          for opinion in self.html[type]:
+            # They don't have uniform keys across all data, which is... odd
+            if 'DocumentURL' in opinion:
+              url = "%s%s" % (self.servername, opinion['DocumentURL'])
+            else:
+              url = self.get_absolute_opinion_path(opinion['Document'], type)
+            urls.append(url)
         return urls
 
     def _get_case_names(self):
