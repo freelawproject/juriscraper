@@ -1,0 +1,728 @@
+{
+  "assigned_to_str": "James M. Carr", 
+  "case_name": "ITT Educational Services, Inc. and Daniel Webster College, Inc.", 
+  "chapter": "7", 
+  "claims": [
+    {
+      "amount_claimed": "$32611.40", 
+      "claim_number": 1, 
+      "creditor_details": "Richardson Indepedent School District\nC/O PERDUE BRANDON FIELDER ET AL\n500 E BORDER STREET, SUITE 640\nARLINGTON, TX 76010", 
+      "creditor_id": "14073979", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-19", 
+      "date_original_filed": "2016-09-19", 
+      "description": "", 
+      "entered_by": "Administrator", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-19", 
+          "description": "Claim #1 filed by Richardson Indepedent School District, Amount claimed: $32611.40 (adm)", 
+          "document_number": 1, 
+          "id": "34412514", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "secured_claimed": "$32611.40", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$40326.58", 
+      "claim_number": 2, 
+      "creditor_details": "Arlington Independent School District\nC/O PERDUE BRANDON FIELDER ET AL\n500 E BORDER STREET, SUITE 640\nARLINGTON, TX 76010", 
+      "creditor_id": "14073996", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-19", 
+      "date_original_filed": "2016-09-19", 
+      "description": "", 
+      "entered_by": "Administrator", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-19", 
+          "description": "Claim #2 filed by Arlington Independent School District, Amount claimed: $40326.58 (adm)", 
+          "document_number": 2, 
+          "id": "34412562", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "secured_claimed": "$40326.58", 
+      "status": ""
+    }, 
+    {
+      "claim_number": 3, 
+      "creditor_details": "Dennis Artis et al Individually and on\nbehalf of all WARN ACT Claiments\nCharles A Ercole Esquire\n1835 Market Street suite 1400\nPhiladelphia PA 19103", 
+      "creditor_id": "14078555", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-20", 
+      "date_original_filed": "2016-09-20", 
+      "description": "", 
+      "entered_by": "Toni S Williams", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-20", 
+          "description": "Claim #3 filed by Dennis Artis et al Individually and on, Amount claimed: (tsw)", 
+          "document_number": 3, 
+          "id": "34419850", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "(3-1) Amount unclear", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$186405.00", 
+      "claim_number": 4, 
+      "creditor_details": "ABC Holding Company, Inc (KABC-TV)\n500 South Buena Vista Street\nMail Code: 9750\nBurbank, CA 91521-9750", 
+      "creditor_id": "14079736", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-21", 
+      "date_original_filed": "2016-09-21", 
+      "description": "", 
+      "entered_by": "Administrator", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-21", 
+          "description": "Claim #4 filed by ABC Holding Company, Inc (KABC-TV), Amount claimed: $186405.00 (adm)", 
+          "document_number": 4, 
+          "id": "34424782", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$7458.75", 
+      "claim_number": 5, 
+      "creditor_details": "KFSN-TV LLC\n500 South Buena Vista Street\nMail Code: 9750\nBurbank, CA 91521-9750", 
+      "creditor_id": "14079737", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-21", 
+      "date_original_filed": "2016-09-21", 
+      "description": "", 
+      "entered_by": "Administrator", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-21", 
+          "description": "Claim #5 filed by KFSN-TV LLC, Amount claimed: $7458.75 (adm)", 
+          "document_number": 5, 
+          "id": "34424817", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$75505.10", 
+      "claim_number": 6, 
+      "creditor_details": "Harris County et al.\nc/o John P. Dillman\nLinebarger Goggan Blair & Sampson LLP\nP.O. Box 3064\nHouston, Tx. 77253-3064", 
+      "creditor_id": "14079815", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-21", 
+      "date_original_filed": "2016-09-21", 
+      "description": "(6-1) Ad Valorem Taxes", 
+      "entered_by": "John P. Dillman", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-21", 
+          "description": "Claim #6 filed by Harris County et al., Amount claimed: $75505.10 (Dillman, John)", 
+          "document_number": 6, 
+          "id": "34425172", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "secured_claimed": "$75505.10", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$1348.40", 
+      "claim_number": 7, 
+      "creditor_details": "CDW, LLC\nAttn: Ronelle Erickson\n200 N. Milwaukee Ave.\nVernon Hills, IL 60061", 
+      "creditor_id": "14079855", 
+      "date_modified": "2016-09-22", 
+      "date_original_entered": "2016-09-21", 
+      "date_original_filed": "2016-09-21", 
+      "description": "", 
+      "entered_by": "Teresa L. Keil", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-21", 
+          "description": "Claim #7 filed by CDW, LLC, Amount claimed: $1348.40 (tlk) \u00a0\u00a0Correction History", 
+          "document_number": 7, 
+          "id": "34425818", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "priority_claimed": "$167.73", 
+      "remarks": "", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$122369.32", 
+      "claim_number": 8, 
+      "creditor_details": "Dove Data Products\nPO Box 6106\nFlorence, SC 29502", 
+      "creditor_id": "14081795", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-22", 
+      "date_original_filed": "2016-09-22", 
+      "description": "", 
+      "entered_by": "Brian T. West", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-22", 
+          "description": "Claim #8 filed by Dove Data Products, Amount claimed: $122369.32 (btw)", 
+          "document_number": 8, 
+          "id": "34432903", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$1952.68", 
+      "claim_number": 9, 
+      "creditor_details": "Alief Independent School District\nP.O. Box 368\nAlief, TX 77411", 
+      "creditor_id": "14083125", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-23", 
+      "date_original_filed": "2016-09-23", 
+      "description": "(9-1) Ad Valorem Property Taxes", 
+      "entered_by": "Carl Olaf Sandin", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-23", 
+          "description": "Claim #9 filed by Alief Independent School District, Amount claimed: $1952.68 (Sandin, Carl)", 
+          "document_number": 9, 
+          "id": "34437176", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "secured_claimed": "$1952.68", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$917.03", 
+      "claim_number": 10, 
+      "creditor_details": "City of Houston\n1235 North Loop West, Suite 600\nHouston, TX 77008", 
+      "creditor_id": "14083126", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-23", 
+      "date_original_filed": "2016-09-23", 
+      "description": "(10-1) Ad Valorem Property Taxes", 
+      "entered_by": "Carl Olaf Sandin", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-23", 
+          "description": "Claim #10 filed by City of Houston, Amount claimed: $917.03 (Sandin, Carl)", 
+          "document_number": 10, 
+          "id": "34437188", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "secured_claimed": "$917.03", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$74517.15", 
+      "claim_number": 11, 
+      "creditor_details": "Clear Creek Independent School District\nP.O. Box 799\nLeague City, TX 77574", 
+      "creditor_id": "14083127", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-23", 
+      "date_original_filed": "2016-09-23", 
+      "description": "(11-1) Ad Valorem Property Taxes", 
+      "entered_by": "Carl Olaf Sandin", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-23", 
+          "description": "Claim #11 filed by Clear Creek Independent School District, Amount claimed: $74517.15 (Sandin, Carl)", 
+          "document_number": 11, 
+          "id": "34437201", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "secured_claimed": "$74517.15", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$19810.33", 
+      "claim_number": 12, 
+      "creditor_details": "Harris County Municipal Utility District #189\n6935 Barney Road, Suite # 110\nHouston, TX 77092", 
+      "creditor_id": "14083128", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-23", 
+      "date_original_filed": "2016-09-23", 
+      "description": "(12-1) Ad Valorem Property Taxes", 
+      "entered_by": "Carl Olaf Sandin", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-23", 
+          "description": "Claim #12 filed by Harris County Municipal Utility District #189, Amount claimed: $19810.33 (Sandin, Carl)", 
+          "document_number": 12, 
+          "id": "34437208", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "secured_claimed": "$19810.33", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$59429.38", 
+      "claim_number": 13, 
+      "creditor_details": "Spring Independent School District\n16717 Ella Boulevard\nHouston, TX 77090", 
+      "creditor_id": "14083129", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-23", 
+      "date_original_filed": "2016-09-23", 
+      "description": "(13-1) Ad Valorem Property Taxes", 
+      "entered_by": "Carl Olaf Sandin", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-23", 
+          "description": "Claim #13 filed by Spring Independent School District, Amount claimed: $59429.38 (Sandin, Carl)", 
+          "document_number": 13, 
+          "id": "34437217", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "secured_claimed": "$59429.38", 
+      "status": ""
+    }, 
+    {
+      "claim_number": 14, 
+      "creditor_details": "Christin M. Long, Individually and on behalf of al\nc/o Jacobson Hile, LLC\nOne Indiana Square, Suite 1600\n211 N. Pennsylvania Street\nIndianapolis, IN 46204", 
+      "creditor_id": "14084036", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-23", 
+      "date_original_filed": "2016-09-23", 
+      "description": "(14-1) Amounts Unknown (see attached)", 
+      "entered_by": "Michael W. Hile", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-23", 
+          "description": "Claim #14 filed by Christin M. Long, Individually and on behalf of al, Amount claimed: (Hile, Michael)", 
+          "document_number": 14, 
+          "id": "34442099", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$800000.00", 
+      "claim_number": 15, 
+      "creditor_details": "Kristen Trease\nJames Burr Shields\n2390 E. Camelback, #400\nPhoenix, AZ 85016", 
+      "creditor_id": "14084496", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-23", 
+      "date_original_filed": "2016-09-23", 
+      "description": "", 
+      "entered_by": "Administrator", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-23", 
+          "description": "Claim #15 filed by Kristen Trease, Amount claimed: $800000.00 (adm)", 
+          "document_number": 15, 
+          "id": "34442887", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$4762.87", 
+      "claim_number": 16, 
+      "creditor_details": "Tarrant County\nElizabeth Weller\nLinebarger Goggan Blair & Sampson LLP\n2777 N. Stemmons Freeway suite 1000\nDallas TX 75207", 
+      "creditor_id": "14088068", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-26", 
+      "date_original_filed": "2016-09-26", 
+      "description": "", 
+      "entered_by": "Toni S Williams", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-26", 
+          "description": "Claim #16 filed by Tarrant County, Amount claimed: $4762.87 (tsw)", 
+          "document_number": 16, 
+          "id": "34452210", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "secured_claimed": "$4762.87", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$27715.00", 
+      "claim_number": 17, 
+      "creditor_details": "Boston Portfolio Advisors\n600 Corporate Drive, Suite 502\nFt. Lauderdale, FL 33334", 
+      "creditor_id": "14088340", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-26", 
+      "date_original_filed": "2016-09-26", 
+      "description": "", 
+      "entered_by": "Administrator", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-26", 
+          "description": "Claim #17 filed by Boston Portfolio Advisors, Amount claimed: $27715.00 (adm)", 
+          "document_number": 17, 
+          "id": "34452623", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$5188.05", 
+      "claim_number": 18, 
+      "creditor_details": "Lynda Hall\nTax Collector of Madison CO AL\n100 NorthSide Square Room 116\nHuntsville AL 35760", 
+      "creditor_id": "14088741", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-27", 
+      "date_original_filed": "2016-09-26", 
+      "description": "", 
+      "entered_by": "Toni S Williams", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-26", 
+          "description": "Claim #18 filed by Lynda Hall, Amount claimed: $5188.05 (tsw)", 
+          "document_number": 18, 
+          "id": "34454715", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "priority_claimed": "$5188.05", 
+      "remarks": "", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$766.08", 
+      "claim_number": 19, 
+      "creditor_details": "Adecco USA INC.\nDerek Prudente\n175 Broadhollow Road\nMelville NY 11747", 
+      "creditor_id": "14088743", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-27", 
+      "date_original_filed": "2016-09-26", 
+      "description": "", 
+      "entered_by": "Toni S Williams", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-26", 
+          "description": "Claim #19 filed by Adecco USA INC., Amount claimed: $766.08 (tsw)", 
+          "document_number": 19, 
+          "id": "34454742", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$10712.37", 
+      "claim_number": 20, 
+      "creditor_details": "Office Depot\n6600 N Military Trail S413G\nBoca Raton FL 33496", 
+      "creditor_id": "14088744", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-27", 
+      "date_original_filed": "2016-09-26", 
+      "description": "", 
+      "entered_by": "Toni S Williams", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-26", 
+          "description": "Claim #20 filed by Office Depot, Amount claimed: $10712.37 (tsw)", 
+          "document_number": 20, 
+          "id": "34454776", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$262610.30", 
+      "claim_number": 21, 
+      "creditor_details": "Office Depot\n6600 N Military Trail S413G\nBoca Raton FL 33496", 
+      "creditor_id": "14088744", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-27", 
+      "date_original_filed": "2016-09-26", 
+      "description": "", 
+      "entered_by": "Toni S Williams", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-26", 
+          "description": "Claim #21 filed by Office Depot, Amount claimed: $262610.30 (tsw)", 
+          "document_number": 21, 
+          "id": "34454820", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$111394.90", 
+      "claim_number": 22, 
+      "creditor_details": "Bexar County\nLinebarger Goggan Blair & Sampson, LLP\n711 Navarro Street, Ste. 300\nSan Antonio, TX 78205", 
+      "creditor_id": "14088752", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-27", 
+      "date_original_filed": "2016-09-26", 
+      "description": "", 
+      "entered_by": "Michelle J Dole", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-26", 
+          "description": "Claim #22 filed by Bexar County, Amount claimed: $111394.90 (mjd)", 
+          "document_number": 22, 
+          "id": "34454870", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "secured_claimed": "$111394.90", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$367965.00", 
+      "claim_number": 23, 
+      "creditor_details": "Ion Media Networks, Inc.\nAttn: Alicia Suarez\n810 7th Ave. 31st Floor\nNew York, NY 10019", 
+      "creditor_id": "14088756", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-27", 
+      "date_original_filed": "2016-09-26", 
+      "description": "", 
+      "entered_by": "Michelle J Dole", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-26", 
+          "description": "Claim #23 filed by Ion Media Networks, Inc., Amount claimed: $367965.00 (mjd)", 
+          "document_number": 23, 
+          "id": "34454916", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$112182.84", 
+      "claim_number": 24, 
+      "creditor_details": "Indiana Department of Revenue, Bankruptcy Section\n100 N Senate Ave., RM N240\nIndianapolis, IN 46204", 
+      "creditor_id": "14089281", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-27", 
+      "date_original_filed": "2016-09-27", 
+      "description": "", 
+      "entered_by": "Anita E. Terrell", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-27", 
+          "description": "Claim #24 filed by Indiana Department of Revenue, Bankruptcy Section, Amount claimed: $112182.84 (Terrell, Anita)", 
+          "document_number": 24, 
+          "id": "34457289", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "priority_claimed": "$80098.28", 
+      "remarks": "", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$4855.55", 
+      "claim_number": 25, 
+      "creditor_details": "PCM\nRoxanne Harlow\n1940 E. Mariposa Avenue\nEl Segundo, CA 90245", 
+      "creditor_id": "14095166", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-30", 
+      "date_original_filed": "2016-09-28", 
+      "description": "", 
+      "entered_by": "Michelle J Dole", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-28", 
+          "description": "Claim #25 filed by PCM, Amount claimed: $4855.55 (mjd)", 
+          "document_number": 25, 
+          "id": "34477032", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$13776000.00", 
+      "claim_number": 26, 
+      "creditor_details": "The State of California\nc/o Julian Hammond\nHammondLaw, PC\n1829 Reisterstown Rd.\nSuite 410\nBaltimore, MD 21208", 
+      "creditor_id": "14095672", 
+      "date_modified": null, 
+      "date_original_entered": "2016-09-30", 
+      "date_original_filed": "2016-09-30", 
+      "description": "", 
+      "entered_by": "Julian Ari Hammond", 
+      "filed_by": "AT", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-09-30", 
+          "description": "Claim #26 filed by The State of California, Amount claimed: $13776000.00 (Hammond, Julian)", 
+          "document_number": 26, 
+          "id": "34478738", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "priority_claimed": "$3400000.00", 
+      "remarks": "", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$484912.11", 
+      "claim_number": 27, 
+      "creditor_details": "Tennessee Department of Revenue\nTDOR c/o Attorney General\nP.O. Box 20207\nNashville, TN 37202-0207", 
+      "creditor_id": "14098060", 
+      "date_modified": null, 
+      "date_original_entered": "2016-10-03", 
+      "date_original_filed": "2016-10-03", 
+      "description": "", 
+      "entered_by": "Michelle J Dole", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-10-03", 
+          "description": "Claim #27 filed by Tennessee Department of Revenue, Amount claimed: $484912.11 (mjd)", 
+          "document_number": 27, 
+          "id": "34488648", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "priority_claimed": "$484912.11", 
+      "remarks": "", 
+      "status": ""
+    }, 
+    {
+      "amount_claimed": "$250000.00", 
+      "claim_number": 28, 
+      "creditor_details": "Clare Christle\nc/o Bradley Winston, Esq.\n2924 Davie Road, Suite 201\nDavie, FL 33314", 
+      "creditor_id": "14098418", 
+      "date_modified": null, 
+      "date_original_entered": "2016-10-03", 
+      "date_original_filed": "2016-10-03", 
+      "description": "", 
+      "entered_by": "Michelle J Dole", 
+      "filed_by": "CR", 
+      "history": [
+        {
+          "attachment_number": 1, 
+          "date_filed": "2016-10-03", 
+          "description": "Claim #28 filed by Clare Christle, Amount claimed: $250000.00 (mjd)", 
+          "document_number": 28, 
+          "id": "34489904", 
+          "pacer_case_id": "671949", 
+          "type": "claim"
+        }
+      ], 
+      "remarks": "", 
+      "status": ""
+    }
+  ], 
+  "court_id": "insb", 
+  "date_filed": "2016-09-16", 
+  "date_last_to_file_claims": "2017-01-30", 
+  "date_last_to_file_govt": "2017-03-15", 
+  "docket_number": "07-JMC-7", 
+  "office": "Indianapolis", 
+  "total_number_of_claims": "28", 
+  "trustee_str": "Deborah J. Caruso"
+}

@@ -83,7 +83,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
 
         # Finally, do the cells in the footer area. These look like:
         # <b>Case Name:</b> Scottish Holdings, Inc. <br>
-        label_nodes = self.tree.xpath('//center[1]/b')
+        label_nodes = self.tree.xpath('//center/b')
         for label_node in label_nodes:
             data.update(self._get_label_value_pair(label_node, True,
                                                    field_mappings))
@@ -324,7 +324,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             params['f_todt'] = date_end.strftime(u'%m/%d/%Y')
 
         logger.info("Querying claims register for case ID '%s' in court '%s' "
-                    "with params %s", self.court_id, pacer_case_id, params)
+                    "with params %s", pacer_case_id, self.court_id, params)
         self.response = self.session.post(self.url + '?1-L_1_0-1',
                                           data=params)
         self.parse()

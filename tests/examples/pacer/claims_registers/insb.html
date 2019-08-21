@@ -1,0 +1,2545 @@
+<html>
+<head>
+  <link rel="shortcut icon" href="/favicon.ico"/>
+  <title>CM/ECF - U.S. Bankruptcy Court:insb</title>
+  <script>var default_base_path = "/"; </script>
+  <link rel="stylesheet" type="text/css" href="/css/default.css">
+  <script type="text/javascript" src="/lib/core.js"></script>
+  <script type="text/javascript" src="/lib/autocomplete.js"></script>
+  <script type="text/javascript" src="/lib/DisableAJTALinks.js"></script>
+  <script type="text/javascript">if (top != self) {
+    top.location.replace(location.href);
+  }</script>
+  <script>var default_base_path = "/"; </script>
+  <SCRIPT LANGUAGE="JavaScript">
+    /********************************************************************************************
+     Purpose: To open Procedures Manual page in a new window
+
+     Parameters:
+     tcPmLink: URL of Procedures Manual page
+
+     Return: Always false
+     ********************************************************************************************/
+
+    function VisitPmLink(tcPmLink) {
+// Pull up Procedures Manual page in a new window
+
+      if (typeof (oPmWindow) == 'undefined' || oPmWindow.closed ||
+        typeof (cPmLink) == 'undefined' || cPmLink != tcPmLink) {
+        // If window/link have never been activated...
+        cPmLink = tcPmLink;                          // Save URL to prevent duplicate windows
+        oPmWindow = window.open(cPmLink, 'PmLink', 'location=yes,resizable=yes,scrollbars=yes');
+        // Open window with Procedures Manual page
+      }
+      oPmWindow.focus();                             // Make sure Procedures Manual window is on top
+
+// Exit method
+
+      return false;                                  // Prevent processing of HREF from onClick
+    }
+  </SCRIPT>
+  <script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script>
+</head>
+<body BGCOLOR=F9F9F9 TEXT=000000 onLoad='SetFocus()'>
+<div class="noprint">
+  <div id="topmenu" class="yuimenubar">
+    <div class="bd">
+      <img id="cmecfLogo" class="cmecfLogo" src="/graphics/logo-cmecf-sm.png"
+           alt="CM/ECF" title=""
+           onClick="CMECF.MainMenu.showCourtInformation(); return false"/>
+      <ul class="first-of-type">
+
+        <li class="yuimenubaritem"><a class="yuimenubaritemlabel"
+                                      href='/cgi-bin/iquery.pl'><u>Q</u>uery</a>
+        </li>
+        <li class="yuimenubaritem"><a class="yuimenubaritemlabel"
+                                      href='/cgi-bin/DisplayMenu.pl?Reports&id=-1'><u>R</u>eports
+          <div class='spritedownarrow'></div>
+        </a></li>
+        <li class="yuimenubaritem"><a class="yuimenubaritemlabel"
+                                      href='/cgi-bin/DisplayMenu.pl?Utilities&id=-1'><u>U</u>tilities
+          <div class='spritedownarrow'></div>
+        </a></li>
+        <li class="yuimenubaritem"><a class="yuimenubaritemlabel"
+                                      onClick="CMECF.MainMenu.showHelpPage(''); return false">Help</a>
+        </li>
+        <li class="yuimenubaritem"><a class="yuimenubaritemlabel"
+                                      href='/cgi-bin/login.pl?logout'>Log Out</a>
+        </li>
+        <li class='yuimenubaritem' id='placeholderForAlertsIcon'></li>
+      </ul>
+    </div>
+    <hr class="hrmenuseparator">
+  </div>
+</div>
+
+<script type="text/javascript">
+  callCreateMenu = function () {
+    var fn = "CMECF.MainMenu.createMenu";
+    if (typeof CMECF.MainMenu.createMenu == 'function') {
+      CMECF.MainMenu.createMenu();
+    }
+  }
+  if (navigator.appVersion.indexOf("MSIE") == -1) {
+    window.setTimeout(function () {
+      callCreateMenu();
+    }, 1);
+  } else {
+    CMECF.util.Event.addListener(window, "load", callCreateMenu());
+  }</script>
+<div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll"
+                                  value="0">
+  <script type='text/javascript'>
+    document.cookie = 'RECENT_CASES=' + "671949^685089;";
+  </script>
+  <SCRIPT LANGUAGE="JavaScript">
+    var IsForm = false;
+    var FirstField;
+
+    function SetFocus() {
+      if (IsForm) {
+        if (FirstField) {
+          var ind = FirstField.indexOf('document.', 0);
+          if (ind == 0) {
+            eval(FirstField);
+          } else {
+            var Code = "document.forms[0]." + FirstField + ".focus();";
+            eval(Code);
+          }
+        } else {
+          var Cnt = 0;
+          while (document.forms[0].elements[Cnt] != null) {
+            try {
+              if (document.forms[0].elements[Cnt].type != "hidden" &&
+                !document.forms[0].elements[Cnt].disabled &&
+                !document.forms[0].elements[Cnt].readOnly) {
+                document.forms[0].elements[Cnt].focus();
+                break;
+              }
+            } catch (e) {
+            }
+            Cnt += 1;
+          }
+        }
+      }
+      return (true);
+    }
+  </SCRIPT>
+  <SCRIPT LANGUAGE="JavaScript">
+    var IsForm = false;
+    var FirstField;
+
+    function SetFocus() {
+      if (IsForm) {
+        if (FirstField) {
+          var ind = FirstField.indexOf('document.', 0);
+          if (ind == 0) {
+            eval(FirstField);
+          } else {
+            var Code = "document.forms[0]." + FirstField + ".focus();";
+            eval(Code);
+          }
+        } else {
+          var Cnt = 0;
+          while (document.forms[0].elements[Cnt] != null) {
+            try {
+              if (document.forms[0].elements[Cnt].type != "hidden" &&
+                !document.forms[0].elements[Cnt].disabled &&
+                !document.forms[0].elements[Cnt].readOnly) {
+                document.forms[0].elements[Cnt].focus();
+                break;
+              }
+            } catch (e) {
+            }
+            Cnt += 1;
+          }
+        }
+      }
+      return (true);
+    }
+  </SCRIPT>
+
+  <script type='text/javascript'>
+    document.cookie = 'RECENT_CASES=' + "671949^685089;";
+  </script>
+  <CENTER><H2>Southern District of Indiana<BR>Claims Register </H2></CENTER>
+  <FONT SIZE=+1
+        COLOR=blue><BR><B>This case has a claims agent. Subsequent claims may have been filed with the agent. Contact the agent below for more information. If none is shown, please contact the debtor&#039;s attorney.</B></FONT><BR><BR><BR><BR>
+  <CENTER><FONT SIZE=+1><A HREF=/cgi-bin/DktRpt.pl?671949><FONT
+      COLOR=Green>16-07207-JMC-7A ITT Educational Services, Inc. and Daniel Webster College, Inc. </FONT></A><br>
+    <p></FONT>
+    <TABLE>
+      <TR>
+        <TD><B>Judge:</B> James M. Carr</B>
+        <TD><B> </B>
+        <TD><B>Chapter: </B> 7
+      <TR>
+        <TD><B>Office: </B> Indianapolis
+        <TD><B>&nbsp;&nbsp; &nbsp;&nbsp; </B>
+        <TD><B>Last Date to file claims: </B> 01/30/2017
+      <TR>
+        <TD><B>Trustee: </B> Deborah J. Caruso
+        <TD><B> </B>
+        <TD><B>Last Date to file (Govt): </B> 03/15/2017
+    </TABLE>
+    <TABLE class=complexReport>
+      <TR class=rowBackground1>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14073979)&nbsp;&nbsp;<BR> Richardson Indepedent School District<br>C/O PERDUE BRANDON FIELDER ET AL<br>500 E BORDER STREET, SUITE 640<br>ARLINGTON, TX 76010&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 1</B><BR><I>Original Filed Date</I>:&nbsp;09/19/2016<BR><I>Original Entered Date</I>:&nbsp;09/19/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Administrator
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground1>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $32611.40</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Secured
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $32611.40</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground1 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,1-1,2036383,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035226699?caseid=671949&claim_id=34412514&claim_num=1-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34412514Kclaim_numV1-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>1-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34412514Kclaim_numV1-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/19/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #1 filed by Richardson Indepedent School District, Amount claimed: $32611.40 (adm)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground2>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14073996)&nbsp;&nbsp;<BR> Arlington Independent School District<br>C/O PERDUE BRANDON FIELDER ET AL<br>500 E BORDER STREET, SUITE 640<br>ARLINGTON, TX 76010&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 2</B><BR><I>Original Filed Date</I>:&nbsp;09/19/2016<BR><I>Original Entered Date</I>:&nbsp;09/19/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Administrator
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground2>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $40326.58</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Secured
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $40326.58</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground2 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,2-1,2036387,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035226752?caseid=671949&claim_id=34412562&claim_num=2-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34412562Kclaim_numV2-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>2-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34412562Kclaim_numV2-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/19/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #2 filed by Arlington Independent School District, Amount claimed: $40326.58 (adm)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground1>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14078555)&nbsp;&nbsp;<BR> Dennis Artis et al Individually and on<br>behalf of all WARN ACT Claiments<br>Charles A Ercole Esquire<br>1835 Market Street suite 1400<br>Philadelphia PA 19103&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 3</B><BR><I>Original Filed Date</I>:&nbsp;09/20/2016<BR><I>Original Entered Date</I>:&nbsp;09/20/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Toni S Williams
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground1>
+        <TD colspan=3>
+          <TABLE>
+            <style type="text/css"> i {
+              white-space: nowrap;
+            } </style>
+            <i>No amounts claimed</i>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground1 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,3-1,2036685,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035234390?caseid=671949&claim_id=34419850&claim_num=3-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34419850Kclaim_numV3-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>3-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34419850Kclaim_numV3-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/20/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #3 filed by Dennis Artis et al Individually and on, Amount claimed: (tsw)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> (3-1) Amount unclear<BR></FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground2>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14079736)&nbsp;&nbsp;<BR> ABC Holding Company, Inc (KABC-TV)<br>500 South Buena Vista Street<br>Mail Code: 9750<br>Burbank, CA 91521-9750&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 4</B><BR><I>Original Filed Date</I>:&nbsp;09/21/2016<BR><I>Original Entered Date</I>:&nbsp;09/21/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Administrator
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground2>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $186405.00</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground2 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,4-1,2036930,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035239388?caseid=671949&claim_id=34424782&claim_num=4-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34424782Kclaim_numV4-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>4-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34424782Kclaim_numV4-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/21/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #4 filed by ABC Holding Company, Inc (KABC-TV), Amount claimed: $186405.00 (adm)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground1>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14079737)&nbsp;&nbsp;<BR> KFSN-TV LLC<br>500 South Buena Vista Street<br>Mail Code: 9750<br>Burbank, CA 91521-9750&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 5</B><BR><I>Original Filed Date</I>:&nbsp;09/21/2016<BR><I>Original Entered Date</I>:&nbsp;09/21/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Administrator
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground1>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $7458.75</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground1 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,5-1,2036931,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035239423?caseid=671949&claim_id=34424817&claim_num=5-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34424817Kclaim_numV5-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>5-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34424817Kclaim_numV5-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/21/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #5 filed by KFSN-TV LLC, Amount claimed: $7458.75 (adm)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground2>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14079815)&nbsp;&nbsp;<BR> Harris County et al.<br>c/o John P. Dillman<br>Linebarger Goggan Blair & Sampson LLP<br>P.O. Box 3064<br>Houston, Tx. 77253-3064&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 6</B><BR><I>Original Filed Date</I>:&nbsp;09/21/2016<BR><I>Original Entered Date</I>:&nbsp;09/21/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            John P. Dillman
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground2>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $75505.10</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Secured
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $75505.10</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground2 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,6-1,2036944,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035239794?caseid=671949&claim_id=34425172&claim_num=6-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34425172Kclaim_numV6-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>6-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34425172Kclaim_numV6-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/21/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #6 filed by Harris County et al., Amount claimed: $75505.10 (Dillman, John)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> (6-1) Ad Valorem Taxes<BR></FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground1>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14079855)&nbsp;&nbsp;<BR> CDW, LLC<br>Attn: Ronelle Erickson<br>200 N. Milwaukee Ave.<br>Vernon Hills, IL 60061&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 7</B><BR><I>Original Filed Date</I>:&nbsp;09/21/2016<BR><I>Original Entered Date</I>:&nbsp;09/21/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Teresa L. Keil
+            <BR><I>Modified:</I> 09/22/2016
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground1>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $1348.40</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Priority
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $167.73</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground1 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,7-1,2036977,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035240450?caseid=671949&claim_id=34425818&claim_num=7-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34425818Kclaim_numV7-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>7-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34425818Kclaim_numV7-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/21/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #7 filed by CDW, LLC, Amount claimed: $1348.40 (tlk) &nbsp;&nbsp;<A
+                      HREF='javascript: void(0)'
+                      onClick='window.open("/cgi-bin/InsbCorrectionClaimHistory.pl?caseid=671949&claimid=2036977")'>Correction History</A></font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground2>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14081795)&nbsp;&nbsp;<BR> Dove Data Products<br>PO Box 6106<br>Florence, SC 29502&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 8</B><BR><I>Original Filed Date</I>:&nbsp;09/22/2016<BR><I>Original Entered Date</I>:&nbsp;09/22/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Brian T. West
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground2>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $122369.32</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground2 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,8-1,2037177,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035247567?caseid=671949&claim_id=34432903&claim_num=8-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34432903Kclaim_numV8-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>8-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34432903Kclaim_numV8-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/22/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #8 filed by Dove Data Products, Amount claimed: $122369.32 (btw)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground1>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14083125)&nbsp;&nbsp;<BR> Alief Independent School District<br>P.O. Box 368<br>Alief, TX 77411&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 9</B><BR><I>Original Filed Date</I>:&nbsp;09/23/2016<BR><I>Original Entered Date</I>:&nbsp;09/23/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Carl Olaf Sandin
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground1>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $1952.68</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Secured
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $1952.68</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground1 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,9-1,2037307,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035252060?caseid=671949&claim_id=34437176&claim_num=9-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34437176Kclaim_numV9-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>9-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34437176Kclaim_numV9-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/23/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #9 filed by Alief Independent School District, Amount claimed: $1952.68 (Sandin, Carl)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> (9-1) Ad Valorem Property Taxes<BR></FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground2>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14083126)&nbsp;&nbsp;<BR> City of Houston<br>1235 North Loop West, Suite 600<br>Houston, TX 77008&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 10</B><BR><I>Original Filed Date</I>:&nbsp;09/23/2016<BR><I>Original Entered Date</I>:&nbsp;09/23/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Carl Olaf Sandin
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground2>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $917.03</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Secured
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $917.03</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground2 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,10-1,2037308,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035252073?caseid=671949&claim_id=34437188&claim_num=10-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34437188Kclaim_numV10-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>10-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34437188Kclaim_numV10-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/23/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #10 filed by City of Houston, Amount claimed: $917.03 (Sandin, Carl)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> (10-1) Ad Valorem Property Taxes<BR></FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground1>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14083127)&nbsp;&nbsp;<BR> Clear Creek Independent School District<br>P.O. Box 799<br>League City, TX 77574&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 11</B><BR><I>Original Filed Date</I>:&nbsp;09/23/2016<BR><I>Original Entered Date</I>:&nbsp;09/23/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Carl Olaf Sandin
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground1>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $74517.15</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Secured
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $74517.15</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground1 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,11-1,2037309,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035252084?caseid=671949&claim_id=34437201&claim_num=11-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34437201Kclaim_numV11-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>11-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34437201Kclaim_numV11-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/23/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #11 filed by Clear Creek Independent School District, Amount claimed: $74517.15 (Sandin, Carl)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> (11-1) Ad Valorem Property Taxes<BR></FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground2>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14083128)&nbsp;&nbsp;<BR> Harris County Municipal Utility District &#035;189<br>6935 Barney Road, Suite &#035; 110<br>Houston, TX 77092&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 12</B><BR><I>Original Filed Date</I>:&nbsp;09/23/2016<BR><I>Original Entered Date</I>:&nbsp;09/23/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Carl Olaf Sandin
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground2>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $19810.33</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Secured
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $19810.33</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground2 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,12-1,2037310,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035252091?caseid=671949&claim_id=34437208&claim_num=12-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34437208Kclaim_numV12-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>12-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34437208Kclaim_numV12-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/23/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #12 filed by Harris County Municipal Utility District &#035;189, Amount claimed: $19810.33 (Sandin, Carl)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> (12-1) Ad Valorem Property Taxes<BR></FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground1>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14083129)&nbsp;&nbsp;<BR> Spring Independent School District<br>16717 Ella Boulevard<br>Houston, TX 77090&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 13</B><BR><I>Original Filed Date</I>:&nbsp;09/23/2016<BR><I>Original Entered Date</I>:&nbsp;09/23/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Carl Olaf Sandin
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground1>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $59429.38</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Secured
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $59429.38</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground1 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,13-1,2037311,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035252101?caseid=671949&claim_id=34437217&claim_num=13-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34437217Kclaim_numV13-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>13-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34437217Kclaim_numV13-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/23/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #13 filed by Spring Independent School District, Amount claimed: $59429.38 (Sandin, Carl)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> (13-1) Ad Valorem Property Taxes<BR></FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground2>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14084036)&nbsp;&nbsp;<BR> Christin M. Long, Individually and on behalf of al<br>c/o Jacobson Hile, LLC<br>One Indiana Square, Suite 1600<br>211 N. Pennsylvania Street<br>Indianapolis, IN 46204&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 14</B><BR><I>Original Filed Date</I>:&nbsp;09/23/2016<BR><I>Original Entered Date</I>:&nbsp;09/23/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Michael W. Hile
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground2>
+        <TD colspan=3>
+          <TABLE>
+            <style type="text/css"> i {
+              white-space: nowrap;
+            } </style>
+            <i>No amounts claimed</i>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground2 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,14-1,2037576,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035257137?caseid=671949&claim_id=34442099&claim_num=14-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34442099Kclaim_numV14-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>14-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34442099Kclaim_numV14-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/23/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #14 filed by Christin M. Long, Individually and on behalf of al, Amount claimed: (Hile, Michael)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> (14-1) Amounts Unknown (see attached)<BR></FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground1>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14084496)&nbsp;&nbsp;<BR> Kristen Trease<br>James Burr Shields<br>2390 E. Camelback, #400<br>Phoenix, AZ 85016&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 15</B><BR><I>Original Filed Date</I>:&nbsp;09/23/2016<BR><I>Original Entered Date</I>:&nbsp;09/23/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Administrator
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground1>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $800000.00</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground1 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,15-1,2037628,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035257982?caseid=671949&claim_id=34442887&claim_num=15-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34442887Kclaim_numV15-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>15-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34442887Kclaim_numV15-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/23/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #15 filed by Kristen Trease, Amount claimed: $800000.00 (adm)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground2>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14088068)&nbsp;&nbsp;<BR> Tarrant County<br>Elizabeth Weller<br>Linebarger Goggan Blair & Sampson LLP<br>2777 N. Stemmons Freeway suite 1000<br>Dallas TX 75207&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 16</B><BR><I>Original Filed Date</I>:&nbsp;09/26/2016<BR><I>Original Entered Date</I>:&nbsp;09/26/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Toni S Williams
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground2>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $4762.87</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Secured
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $4762.87</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground2 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,16-1,2037870,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035267481?caseid=671949&claim_id=34452210&claim_num=16-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34452210Kclaim_numV16-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>16-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34452210Kclaim_numV16-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/26/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #16 filed by Tarrant County, Amount claimed: $4762.87 (tsw)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground1>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14088340)&nbsp;&nbsp;<BR> Boston Portfolio Advisors<br>600 Corporate Drive, Suite 502<br>Ft. Lauderdale, FL 33334&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 17</B><BR><I>Original Filed Date</I>:&nbsp;09/26/2016<BR><I>Original Entered Date</I>:&nbsp;09/26/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Administrator
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground1>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $27715.00</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground1 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,17-1,2037888,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035267869?caseid=671949&claim_id=34452623&claim_num=17-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34452623Kclaim_numV17-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>17-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34452623Kclaim_numV17-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/26/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #17 filed by Boston Portfolio Advisors, Amount claimed: $27715.00 (adm)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground2>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14088741)&nbsp;&nbsp;<BR> Lynda Hall<br> Tax Collector of Madison CO AL<br>100 NorthSide Square Room 116<br>Huntsville AL 35760&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 18</B><BR><I>Original Filed Date</I>:&nbsp;09/26/2016<BR><I>Original Entered Date</I>:&nbsp;09/27/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Toni S Williams
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground2>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $5188.05</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Priority
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $5188.05</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground2 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,18-1,2037973,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035270081?caseid=671949&claim_id=34454715&claim_num=18-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34454715Kclaim_numV18-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>18-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34454715Kclaim_numV18-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/26/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #18 filed by Lynda Hall, Amount claimed: $5188.05 (tsw)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground1>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14088743)&nbsp;&nbsp;<BR> Adecco USA INC.<br>Derek Prudente<br>175 Broadhollow Road<br>Melville NY 11747&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 19</B><BR><I>Original Filed Date</I>:&nbsp;09/26/2016<BR><I>Original Entered Date</I>:&nbsp;09/27/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Toni S Williams
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground1>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $766.08</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground1 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,19-1,2037974,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035270098?caseid=671949&claim_id=34454742&claim_num=19-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34454742Kclaim_numV19-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>19-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34454742Kclaim_numV19-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/26/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #19 filed by Adecco USA INC., Amount claimed: $766.08 (tsw)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground2>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14088744)&nbsp;&nbsp;<BR> Office Depot<br>6600 N Military Trail S413G<br>Boca Raton FL 33496&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 20</B><BR><I>Original Filed Date</I>:&nbsp;09/26/2016<BR><I>Original Entered Date</I>:&nbsp;09/27/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Toni S Williams
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground2>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $10712.37</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground2 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,20-1,2037975,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035270136?caseid=671949&claim_id=34454776&claim_num=20-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34454776Kclaim_numV20-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>20-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34454776Kclaim_numV20-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/26/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #20 filed by Office Depot, Amount claimed: $10712.37 (tsw)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground1>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14088744)&nbsp;&nbsp;<BR> Office Depot<br>6600 N Military Trail S413G<br>Boca Raton FL 33496&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 21</B><BR><I>Original Filed Date</I>:&nbsp;09/26/2016<BR><I>Original Entered Date</I>:&nbsp;09/27/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Toni S Williams
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground1>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $262610.30</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground1 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,21-1,2037978,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035270172?caseid=671949&claim_id=34454820&claim_num=21-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34454820Kclaim_numV21-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>21-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34454820Kclaim_numV21-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/26/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #21 filed by Office Depot, Amount claimed: $262610.30 (tsw)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground2>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14088752)&nbsp;&nbsp;<BR> Bexar County<br>Linebarger Goggan Blair & Sampson, LLP<br>711 Navarro Street, Ste. 300<br>San Antonio, TX 78205&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 22</B><BR><I>Original Filed Date</I>:&nbsp;09/26/2016<BR><I>Original Entered Date</I>:&nbsp;09/27/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Michelle J Dole
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground2>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $111394.90</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Secured
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $111394.90</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground2 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,22-1,2037982,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035270211?caseid=671949&claim_id=34454870&claim_num=22-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34454870Kclaim_numV22-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>22-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34454870Kclaim_numV22-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/26/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #22 filed by Bexar County, Amount claimed: $111394.90 (mjd)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground1>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14088756)&nbsp;&nbsp;<BR> Ion Media Networks, Inc.<br>Attn: Alicia Suarez<br>810 7th Ave. 31st Floor<br>New York, NY 10019&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 23</B><BR><I>Original Filed Date</I>:&nbsp;09/26/2016<BR><I>Original Entered Date</I>:&nbsp;09/27/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Michelle J Dole
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground1>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $367965.00</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground1 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,23-1,2037985,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035270256?caseid=671949&claim_id=34454916&claim_num=23-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34454916Kclaim_numV23-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>23-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34454916Kclaim_numV23-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/26/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #23 filed by Ion Media Networks, Inc., Amount claimed: $367965.00 (mjd)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground2>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14089281)&nbsp;&nbsp;<BR> Indiana Department of Revenue, Bankruptcy Section<br>100 N Senate Ave., RM N240<br>Indianapolis, IN 46204&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 24</B><BR><I>Original Filed Date</I>:&nbsp;09/27/2016<BR><I>Original Entered Date</I>:&nbsp;09/27/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Anita E. Terrell
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground2>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $112182.84</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Priority
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $80098.28</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground2 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,24-1,2038069,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035272542?caseid=671949&claim_id=34457289&claim_num=24-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34457289Kclaim_numV24-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>24-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34457289Kclaim_numV24-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/27/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #24 filed by Indiana Department of Revenue, Bankruptcy Section, Amount claimed: $112182.84 (Terrell, Anita)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground1>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14095166)&nbsp;&nbsp;<BR> PCM<br>Roxanne Harlow<br>1940 E. Mariposa Avenue<br>El Segundo, CA 90245&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 25</B><BR><I>Original Filed Date</I>:&nbsp;09/28/2016<BR><I>Original Entered Date</I>:&nbsp;09/30/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Michelle J Dole
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground1>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $4855.55</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground1 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,25-1,2038891,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035292582?caseid=671949&claim_id=34477032&claim_num=25-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34477032Kclaim_numV25-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>25-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34477032Kclaim_numV25-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/28/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #25 filed by PCM, Amount claimed: $4855.55 (mjd)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground2>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14095672)&nbsp;&nbsp;<BR> The State of California<br>c/o Julian Hammond<br>HammondLaw, PC<br>1829 Reisterstown Rd.<br>Suite 410<br>Baltimore, MD 21208&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 26</B><BR><I>Original Filed Date</I>:&nbsp;09/30/2016<BR><I>Original Entered Date</I>:&nbsp;09/30/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> AT
+            <BR><I>Entered by:</I>
+            Julian Ari Hammond
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground2>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $13776000.00</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Priority
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $3400000.00</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground2 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,26-1,2038975,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035294280?caseid=671949&claim_id=34478738&claim_num=26-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34478738Kclaim_numV26-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>26-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34478738Kclaim_numV26-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/30/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #26 filed by The State of California, Amount claimed: $13776000.00 (Hammond, Julian)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground1>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14098060)&nbsp;&nbsp;<BR> Tennessee Department of Revenue<br>TDOR c/o Attorney General<br>P.O. Box 20207<br>Nashville, TN 37202-0207&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 27</B><BR><I>Original Filed Date</I>:&nbsp;10/03/2016<BR><I>Original Entered Date</I>:&nbsp;10/03/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Michelle J Dole
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground1>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $484912.11</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Priority
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $484912.11</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground1 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,27-1,2039203,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035304346?caseid=671949&claim_id=34488648&claim_num=27-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34488648Kclaim_numV27-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>27-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34488648Kclaim_numV27-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>10/03/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #27 filed by Tennessee Department of Revenue, Amount claimed: $484912.11 (mjd)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground2>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(14098418)&nbsp;&nbsp;<BR> Clare Christle<br>c/o Bradley Winston, Esq.<br>2924 Davie Road, Suite 201<br>Davie, FL 33314&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 28</B><BR><I>Original Filed Date</I>:&nbsp;10/03/2016<BR><I>Original Entered Date</I>:&nbsp;10/03/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Michelle J Dole
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground2>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $250000.00</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground2 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?671949,28-1,2039248,16-07207-JMC-7A">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='https://ecf.insb.uscourts.gov/doc1/072035305573?caseid=671949&claim_id=34489904&claim_num=28-1&magic_num=MAGIC&pdf_header=1'
+                      id='documentKcaseidV671949Kclaim_idV34489904Kclaim_numV28-1Kmagic_numVMAGICKpdf_headerV1'
+                      onclick='this.style.color = document.vlinkColor; document.cookie="CASE_NUM=1-16-bk-7207(671949)"'>28-1</a>
+                    <SCRIPT>CMECF.widget.DocLink('documentKcaseidV671949Kclaim_idV34489904Kclaim_numV28-1Kmagic_numVMAGICKpdf_headerV1');</SCRIPT>
+                  </font></td>
+                  <td width='4%'><font size='-1'>10/03/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #28 filed by Clare Christle, Amount claimed: $250000.00 (mjd)</font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <CENTER><H3>Claims Register Summary</H3></CENTER>
+    <B>Case Name:</B> ITT Educational Services, Inc. and Daniel Webster College, Inc.
+    <BR><B>Case Number:</B> 16-07207-JMC-7A<BR><B>Chapter:</B> 7<BR><B>Date Filed:</B> 09/16/2016<BR><B>Total Number Of Claims:</B> 28<BR><BR>
+    <table border=1>
+      <TR>
+        <TH>Total Amount Claimed* &nbsp;</TH>
+        <TD align=center>$16841716.19 &nbsp;</TD>
+      </TR>
+      <TR>
+        <TH>Total Amount Allowed* &nbsp;</th>
+        <TD align=center> &nbsp;</TD>
+      </TR>
+    </TABLE>
+    *Includes general unsecured claims<BR><BR><b>The values are reflective of the data entered. Always refer to claim documents for actual amounts.</b>
+    <BR><BR>
+    <CENTER>
+      <TABLE BORDER=1>
+        <TR>
+          <TH></TH>
+          <TH>Claimed</TH>
+          <TH>Allowed</TH>
+        </TR>
+        <TR>
+          <TH align=left>Secured</TH>
+          <TD align=center>$421227.42 &nbsp;</TD>
+          <TD align=center> &nbsp;</TD>
+        </TR>
+        <TR>
+          <TH align=left>Priority</TH>
+          <TD align=center>$3970366.17 &nbsp;</TD>
+          <TD align=center> &nbsp;</TD>
+        </TR>
+        <TR>
+          <TH align=left>Administrative</TH>
+          <TD align=center> &nbsp;</TD>
+          <TD align=center> &nbsp;</TD>
+        </TR>
+      </table>
+      <br>
+      <HR>
+      <CENTER>
+        <TABLE BORDER=1 BGCOLOR=white width="400">
+          <TR>
+            <TH COLSPAN=4><FONT SIZE=+1
+                                COLOR=DARKRED>PACER Service Center </FONT></TH>
+          </TR>
+          <TR>
+            <TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH>
+          </TR>
+          <TR></TR>
+          <TR></TR>
+          <TR>
+            <TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1
+                                             COLOR=DARKBLUE>08/21/2019 16:20:27</FONT>
+            </TD>
+          </TR>
+          <TR>
+            <TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT>
+            </TH>
+            <TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> mlissner.flp </FONT>
+            </TH></TD>
+            <TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT>
+            </TH>
+            <TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> </FONT></TD>
+          </TR>
+          <TR>
+            <TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT>
+            </TH>
+            <TD ALIGN=LEFT><FONT SIZE=-1
+                                 COLOR=DARKBLUE> Claims Register </FONT></TD>
+            <TH ALIGN=LEFT><FONT SIZE=-1
+                                 COLOR=DARKBLUE> Search Criteria: </FONT></TH>
+            <TD ALIGN=LEFT><FONT SIZE=-1
+                                 COLOR=DARKBLUE> 16-07207-JMC-7A Filed or Entered From: 11/1/1974 Filed or Entered To: 8/21/2019 </FONT>
+            </TD>
+          </TR>
+          <TR>
+            <TH ALIGN=LEFT><FONT SIZE=-1
+                                 COLOR=DARKBLUE> Billable Pages: </FONT></TH>
+            <TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 3 </FONT></TD>
+            <TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH>
+            <TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.30 </FONT></TD>
+          </TR>
+          <TR></TR>
+          <TR></TR>
+        </TABLE>
+      </CENTER>
+      </HR><BR></BR>
+</div>
+</body>
+</html>
