@@ -23,6 +23,9 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
     """
     PATH = 'cgi-bin/SearchClaims.pl'
     CACHE_ATTRS = ['claims', 'metadata']
+    ERROR_STRINGS = BaseReport.ERROR_STRINGS + [
+        'No claims found for this case using selection criteria entered'
+    ]
 
     def __init__(self, court_id, pacer_session=None):
         super(ClaimsRegister, self).__init__(court_id, pacer_session)
