@@ -215,6 +215,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             'Secured': 'secured_claimed',
             'Priority': 'priority_claimed',
             'Unsecured': 'unsecured_claimed',
+            'Admin': 'admin_claimed',
         }
         rows = td.xpath('.//tr')
         data = {}
