@@ -280,7 +280,8 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             history_rows.append(row)
         return history_rows
 
-    def query(self, pacer_case_id, date_start=None, date_end=None):
+    def query(self, pacer_case_id, docket_number, date_start=None,
+              date_end=None):
         """Query the claims register and return the results.
 
         :param pacer_case_id: The internal PACER ID for the case
@@ -291,6 +292,9 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         :param date_end: The latest claim entry you with to have. Default is
         tomorrow.
         :type date_end: date
+        :param docket_number: A docket number to look up. Something like
+        2:17-bk-39239.
+        :type: str
         :return: request response object
         """
         assert self.session is not None, \
@@ -305,7 +309,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             'f_sort1': 'cl_claimno',
             'f_sort2': 'cl_dt_filed',
             # This field seems to be required while 'all_case_ids' is not.
-            'case_num': '2:17-bk-31853',
+            'case_num': docket_number,
         }
         if date_start:
             params['f_fromdt'] = date_start.strftime(u'%m/%d/%Y')
@@ -315,8 +319,8 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         if date_end:
             params['f_todt'] = date_end.strftime(u'%m/%d/%Y')
 
-        logger.info("Querying claims register for case ID '%s' with "
-                    "params %s", pacer_case_id, params)
+        logger.info("Querying claims register for case ID '%s' in court '%s' "
+                    "with params %s", self.court_id, pacer_case_id, params)
         self.response = self.session.post(self.url + '?1-L_1_0-1',
                                           data=params)
         self.parse()
