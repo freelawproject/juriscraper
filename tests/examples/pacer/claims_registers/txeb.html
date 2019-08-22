@@ -1,0 +1,1274 @@
+<html>
+<head><title>TXEB Live Database V5.2.2</title>
+  <link rel="stylesheet" type="text/css" href="/css/default.css">
+  <script type="text/javascript" src="/lib/core.js"></script>
+  <script type="text/javascript">if (top != self) {
+    top.location.replace(location.href);
+  }</script>
+  <script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script>
+</head>
+<body BGCOLOR=FFFFCC TEXT=330099 onLoad='SetFocus()'>
+<div class="noprint"><img id="cmecfLogo" class="cmecfLogo"
+                          src="/graphics/cmecf-logo.gif" alt="CM/ECF" title=""
+                          onClick="CMECF.MainMenu.showCourtInformation(); return false"/><img
+    src="/graphics/menubar-help.gif" alt="?" title="" class="helpImage"
+    id="helpImage" onClick="CMECF.MainMenu.showHelpPage(''); return false"
+    onMouseOver="CMECF.MainMenu.helpImageOn()"
+    onMouseOut="CMECF.MainMenu.helpImageOff()"/>
+  <div id="topmenu" class="yuimenubar">
+    <div class="bd">
+      <ul class="first-of-type">
+        <li class="yuimenubaritem" style="width:9%"><a
+            class="yuimenubaritemlabel" href='/cgi-bin/iquery.pl'><u>Q</u>uery</a>
+        </li>
+        <li class="yuimenubaritem" style="width:11%"><a
+            class="yuimenubaritemlabel"
+            href='/cgi-bin/DisplayMenu.pl?Reports&id=-1'><u>R</u>eports</a>
+        </li>
+        <li class="yuimenubaritem" style="width:11%"><a
+            class="yuimenubaritemlabel"
+            href='/cgi-bin/DisplayMenu.pl?Utilities&id=-1'><u>U</u>tilities</a>
+        </li>
+        <li class="yuimenubaritem" style="width:10%"><a
+            class="yuimenubaritemlabel"
+            href='/cgi-bin/login.pl?logout'>Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script
+    type="text/javascript">if (navigator.appVersion.indexOf("MSIE") == -1) {
+  window.setTimeout(function () {
+    CMECF.MainMenu.createMenu();
+  }, 0);
+} else {
+  CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);
+}</script>
+<div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll"
+                                  value="0">
+  <SCRIPT LANGUAGE="JavaScript">
+    var IsForm = false;
+    var FirstField;
+
+    function SetFocus() {
+      if (IsForm) {
+        if (FirstField) {
+          var ind = FirstField.indexOf('document.', 0);
+          if (ind == 0) {
+            eval(FirstField);
+          } else {
+            var Code = "document.forms[0]." + FirstField + ".focus();";
+            eval(Code);
+          }
+        } else {
+          var Cnt = 0;
+          while (document.forms[0].elements[Cnt] != null) {
+            if (document.forms[0].elements[Cnt].type != "hidden") {
+              document.forms[0].elements[Cnt].focus();
+              break;
+            }
+            Cnt += 1;
+          }
+        }
+      }
+      return (true);
+    }
+  </SCRIPT>
+  <SCRIPT LANGUAGE="JavaScript">
+    var IsForm = false;
+    var FirstField;
+
+    function SetFocus() {
+      if (IsForm) {
+        if (FirstField) {
+          var ind = FirstField.indexOf('document.', 0);
+          if (ind == 0) {
+            eval(FirstField);
+          } else {
+            var Code = "document.forms[0]." + FirstField + ".focus();";
+            eval(Code);
+          }
+        } else {
+          var Cnt = 0;
+          while (document.forms[0].elements[Cnt] != null) {
+            if (document.forms[0].elements[Cnt].type != "hidden") {
+              document.forms[0].elements[Cnt].focus();
+              break;
+            }
+            Cnt += 1;
+          }
+        }
+      }
+      return (true);
+    }
+  </SCRIPT>
+
+  <script type='text/javascript'>
+    document.cookie = 'RECENT_CASES=' + "165367;";
+  </script>
+  <CENTER><H2>Eastern District of Texas<BR>Claims Register </H2><FONT
+      SIZE=+1><A
+      HREF=/cgi-bin/DktRpt.pl?165367>16-40642 Tango Transport, LLC </A><br>
+    <p></FONT>
+    <TABLE>
+      <TR>
+        <TD><B>Judge:</B> Brenda T. Rhoades</B>
+        <TD><B> </B>
+        <TD><B>Chapter: </B> 11
+      <TR>
+        <TD><B>Office: </B> Sherman
+        <TD><B>&nbsp;&nbsp; &nbsp;&nbsp; </B>
+        <TD><B>Last Date to file claims: </B>
+      <TR>
+        <TD><B>Trustee: </B> Christopher J. Moser
+        <TD><B> </B>
+        <TD><B>Last Date to file (Govt): </B>
+    </TABLE>
+    <TABLE class=complexReport>
+      <TR class=rowBackground1>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(7156496)&nbsp;&nbsp;<BR> Verizon Wireless<br>William M. Vermette<br>22001 Loudoun County PKWY<br>Ashburn, VA 20147&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 70</B><BR><I>Original Filed Date</I>:&nbsp;08/12/2016<BR><I>Original Entered Date</I>:&nbsp;08/12/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            slt
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground1>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $2407.38</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground1 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?165367,70-1,1036095,16-40642">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&claim_id=15930051&claim_num=70-1&magic_num=MAGIC'
+                      id='documentKcaseidV165367Kclaim_idV15930051Kclaim_numV70-1Kmagic_numVMAGIC'>70-1</a>
+                    <script>CMECF.widget.DocLink('documentKcaseidV165367Kclaim_idV15930051Kclaim_numV70-1Kmagic_numVMAGIC');</script>
+                  </font></td>
+                  <td width='4%'><font size='-1'>08/12/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #70 filed by Verizon Wireless, Amount claimed: $2407.38 (slt) </font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground2>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(7156499)&nbsp;&nbsp;<BR> STEWART FOY<br>1003 ROWLAND ROAD<br>MONROE, LA 71203&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 71</B><BR><I>Original Filed Date</I>:&nbsp;08/11/2016<BR><I>Original Entered Date</I>:&nbsp;08/12/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            slt
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground2>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $6272.00</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground2 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?165367,71-1,1036097,16-40642">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&claim_id=15930103&claim_num=71-1&magic_num=MAGIC'
+                      id='documentKcaseidV165367Kclaim_idV15930103Kclaim_numV71-1Kmagic_numVMAGIC'>71-1</a>
+                    <script>CMECF.widget.DocLink('documentKcaseidV165367Kclaim_idV15930103Kclaim_numV71-1Kmagic_numVMAGIC');</script>
+                  </font></td>
+                  <td width='4%'><font size='-1'>08/11/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #71 filed by STEWART FOY, Amount claimed: $6272.00 (slt) </font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground1>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(7156500)&nbsp;&nbsp;<BR> J & J Machinery Transport Inc.<br>700 Westinghouse Blvd<br>Charlotte, NC 28273&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 72</B><BR><I>Original Filed Date</I>:&nbsp;08/11/2016<BR><I>Original Entered Date</I>:&nbsp;08/12/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            slt
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground1>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $1000.00</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground1 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?165367,72-1,1036098,16-40642">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&claim_id=15930115&claim_num=72-1&magic_num=MAGIC'
+                      id='documentKcaseidV165367Kclaim_idV15930115Kclaim_numV72-1Kmagic_numVMAGIC'>72-1</a>
+                    <script>CMECF.widget.DocLink('documentKcaseidV165367Kclaim_idV15930115Kclaim_numV72-1Kmagic_numVMAGIC');</script>
+                  </font></td>
+                  <td width='4%'><font size='-1'>08/11/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #72 filed by J & J Machinery Transport Inc., Amount claimed: $1000.00 (slt) </font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground2>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(7157095)&nbsp;&nbsp;&nbsp;&nbsp;<A
+              HREF='/cgi-bin/CredHistory.pl?165367,7157095'>History</A><BR> Memorial Hermann Health System<br>c/o Michael J. Dulaney<br>3200 Southwest Freeway, Suite 2200<br>Houston, Texas 77027&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 73</B><BR><I>Original Filed Date</I>:&nbsp;08/15/2016<BR><I>Original Entered Date</I>:&nbsp;08/15/2016<BR><I>Last Amendment Filed</I>:&nbsp;09/08/2016<BR><I>Last Amendment Entered</I>:&nbsp;09/08/2016<BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            Michael J. Dulaney
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground2>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $151588.85</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground2 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?165367,73-1,1036210,16-40642">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&claim_id=15933288&claim_num=73-1&magic_num=MAGIC'
+                      id='documentKcaseidV165367Kclaim_idV15933288Kclaim_numV73-1Kmagic_numVMAGIC'>73-1</a>
+                    <script>CMECF.widget.DocLink('documentKcaseidV165367Kclaim_idV15933288Kclaim_numV73-1Kmagic_numVMAGIC');</script>
+                  </font></td>
+                  <td width='4%'><font size='-1'>08/15/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #73 filed by Memorial Hermann Health System, Amount claimed: $151588.85 (Dulaney, Michael) </font>
+                  </td>
+                <tr valign='top'>
+                  <td width='4%'></td>
+                  <td width='2%'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&de_seq_num=946&dm_id=15964715&doc_num=237'
+                      id='document1KcaseidV165367Kde_seq_numV946Kdm_idV15964715Kdoc_numV237'>237</a>
+                    <script>CMECF.widget.DocLink('document1KcaseidV165367Kde_seq_numV946Kdm_idV15964715Kdoc_numV237');</script>
+                  </font></td>
+                  <td width='4%' align='left'><font size='-1'>08/31/2016</font>
+                  </td>
+                  <td width='83%'><font
+                      size='-1'>Notice of Intent to Strike Deficient Proof of Claim 73 From Claims Registry Amended Claim or Withdrawal of Claim Due By: 09/14/2016. (slt)</font>
+                  </td>
+                </tr>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?165367,73-2,1038312,16-40642">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&claim_id=15980628&claim_num=73-2&magic_num=MAGIC'
+                      id='documentKcaseidV165367Kclaim_idV15980628Kclaim_numV73-2Kmagic_numVMAGIC'>73-2</a>
+                    <script>CMECF.widget.DocLink('documentKcaseidV165367Kclaim_idV15980628Kclaim_numV73-2Kmagic_numVMAGIC');</script>
+                  </font></td>
+                  <td width='4%'><font size='-1'>09/08/2016</font></td>
+                  <td><font
+                      size='-1'>Amended Claim #73 filed by Memorial Hermann Health System, Amount claimed: $151588.85 (Dulaney, Michael) </font>
+                  </td>
+                <tr valign='top'>
+                  <td width='4%'></td>
+                  <td width='2%'></td>
+                  <td width='6%' align='center'><font size='-1'></font></td>
+                  <td width='4%' align='left'><font size='-1'>09/15/2016</font>
+                  </td>
+                  <td width='83%'><font
+                      size='-1'>Due to the Filing of an Amended Proof of Claim, the Notice of Intent to Strike Deficient Proof of Claim is Now Moot.
+                    <font color=green><i>(RE: related document(s)<a
+                        href='https://ecf.txeb.uscourts.gov/doc1/174016038549'>237</a> Notice of Intent to Strike Deficient Proof of Claim 73 From Claims Registry Amended Claim or Withdrawal of Claim Due By: 09/14/2016. (slt)).</i></font> (slt)</font>
+                  </td>
+                </tr>
+                <tr valign='top'>
+                  <td width='4%'></td>
+                  <td width='2%'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&de_seq_num=2089&dm_id=17308986&doc_num=575'
+                      id='documentKcaseidV165367Kde_seq_numV2089Kdm_idV17308986Kdoc_numV575'>575</a>
+                    <script>CMECF.widget.DocLink('documentKcaseidV165367Kde_seq_numV2089Kdm_idV17308986Kdoc_numV575');</script>
+                  </font></td>
+                  <td width='4%' align='left'><font size='-1'>05/15/2018</font>
+                  </td>
+                  <td width='83%'><font
+                      size='-1'>Objection to Claim (With Objection Language) 73 of Memorial Hermann Health System in the amount of &#036; 151,588.85 Filed by Christopher J. Moser (Attachments: #
+                    <a href='https://ecf.txeb.uscourts.gov/doc1/174117455019'>1</a> Exhibit POC #73 #
+                    <a href='https://ecf.txeb.uscourts.gov/doc1/174117455020'>2</a> Proposed Order)(Manthey, Tristan) Modified on 7/11/2018 (kms).</font>
+                  </td>
+                </tr>
+                <tr valign='top'>
+                  <td width='4%'></td>
+                  <td width='2%'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&de_seq_num=2136&dm_id=17401081&doc_num=589'
+                      id='documentKcaseidV165367Kde_seq_numV2136Kdm_idV17401081Kdoc_numV589'>589</a>
+                    <script>CMECF.widget.DocLink('documentKcaseidV165367Kde_seq_numV2136Kdm_idV17401081Kdoc_numV589');</script>
+                  </font></td>
+                  <td width='4%' align='left'><font size='-1'>06/28/2018</font>
+                  </td>
+                  <td width='83%'><font size='-1'>Order Sustaining <font
+                      color=green><i> <a
+                      href='https://ecf.txeb.uscourts.gov/doc1/174017455018'>575</a> Objection to Claim #73 of Memorial Hermann Health System in the amount of &#036; 151,588.85 Filed by Trustee Christopher J. Moser.</i></font> (lc)</font>
+                  </td>
+                </tr>
+                <tr valign='top'>
+                  <td width='4%'></td>
+                  <td width='2%'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&de_seq_num=2191&dm_id=17443254&doc_num=604'
+                      id='documentKcaseidV165367Kde_seq_numV2191Kdm_idV17443254Kdoc_numV604'>604</a>
+                    <script>CMECF.widget.DocLink('documentKcaseidV165367Kde_seq_numV2191Kdm_idV17443254Kdoc_numV604');</script>
+                  </font></td>
+                  <td width='4%' align='left'><font size='-1'>07/18/2018</font>
+                  </td>
+                  <td width='83%'><font size='-1'>Order Sustaining <font
+                      color=green><i> <a
+                      href='https://ecf.txeb.uscourts.gov/doc1/174017455018'>575</a> Objection to Claim Number 73 of Memorial Hermann Health System in the amount of &#036; 151,588.85 Filed by Trustee Christopher J. Moser.</i></font> (lc)</font>
+                  </td>
+                </tr>
+                <tr valign='top'>
+                  <td width='4%'></td>
+                  <td width='2%'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&de_seq_num=2197&dm_id=17448407&doc_num=606'
+                      id='documentKcaseidV165367Kde_seq_numV2197Kdm_idV17448407Kdoc_numV606'>606</a>
+                    <script>CMECF.widget.DocLink('documentKcaseidV165367Kde_seq_numV2197Kdm_idV17448407Kdoc_numV606');</script>
+                  </font></td>
+                  <td width='4%' align='left'><font size='-1'>07/19/2018</font>
+                  </td>
+                  <td width='83%'><font
+                      size='-1'>Order Vacating (Related document(s) <a
+                      href='https://ecf.txeb.uscourts.gov/doc1/174017596359'>604</a> Order Sustaining Objection to Claim)
+                    <font color=green><i> <a
+                        href='https://ecf.txeb.uscourts.gov/doc1/174017455018'>575</a> Objection to Claim Number 73 of Memorial Hermann Health System in the amount of &#036; 151,588.85 Filed by Christopher J. Moser.</i></font> (lc).. Modified on 7/19/2018 (lc).</font>
+                  </td>
+                </tr>
+                <tr valign='top'>
+                  <td width='4%'></td>
+                  <td width='2%'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&de_seq_num=2270&dm_id=17585967&doc_num=628'
+                      id='document1KcaseidV165367Kde_seq_numV2270Kdm_idV17585967Kdoc_numV628'>628</a>
+                    <script>CMECF.widget.DocLink('document1KcaseidV165367Kde_seq_numV2270Kdm_idV17585967Kdoc_numV628');</script>
+                  </font></td>
+                  <td width='4%' align='left'><font size='-1'>09/20/2018</font>
+                  </td>
+                  <td width='83%'><font
+                      size='-1'>Agreed Order On Objection On Proof Of Claim Number 73 Filed By Memorial Hermann Health System
+                    <a href='https://ecf.txeb.uscourts.gov/doc1/174017455018'>575</a> (With Objection Language) 73 of Memorial Hermann Health System in the amount of &#036; 151,588.85 Filed by Christopher J. Moser (Attachments: # 1 Exhibit POC #73 # 2 Proposed Order)(Manthey, Tristan) Modified on 7/11/2018 (kms). filed by Trustee Christopher J. Moser. (jc)</font>
+                  </td>
+                </tr>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> (73-1) Services performed by Memorial Hermann Health System<BR>(73-2) Services Performed<BR></FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground1>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(7157129)&nbsp;&nbsp;<BR> Lowen Corporation<br>PO Box 1528<br>Hutchinson, KS 67504-1528&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 74</B><BR><I>Original Filed Date</I>:&nbsp;08/15/2016<BR><I>Original Entered Date</I>:&nbsp;08/15/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            slt
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground1>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $1799.17</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground1 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?165367,74-1,1036215,16-40642">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&claim_id=15933364&claim_num=74-1&magic_num=MAGIC'
+                      id='documentKcaseidV165367Kclaim_idV15933364Kclaim_numV74-1Kmagic_numVMAGIC'>74-1</a>
+                    <script>CMECF.widget.DocLink('documentKcaseidV165367Kclaim_idV15933364Kclaim_numV74-1Kmagic_numVMAGIC');</script>
+                  </font></td>
+                  <td width='4%'><font size='-1'>08/15/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #74 filed by Lowen Corporation, Amount claimed: $1799.17 (slt) </font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground2>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(7158052)&nbsp;&nbsp;<BR> MapQuest, Inc.<br>c/o Tiffany Strelow Cobb<br>52 East Gay Street<br>Columbus, OH 43215&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 75</B><BR><I>Original Filed Date</I>:&nbsp;08/17/2016<BR><I>Original Entered Date</I>:&nbsp;08/17/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            slt
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground2>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $2900.00</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground2 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?165367,75-1,1036487,16-40642">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&claim_id=15937518&claim_num=75-1&magic_num=MAGIC'
+                      id='documentKcaseidV165367Kclaim_idV15937518Kclaim_numV75-1Kmagic_numVMAGIC'>75-1</a>
+                    <script>CMECF.widget.DocLink('documentKcaseidV165367Kclaim_idV15937518Kclaim_numV75-1Kmagic_numVMAGIC');</script>
+                  </font></td>
+                  <td width='4%'><font size='-1'>08/17/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #75 filed by MapQuest, Inc., Amount claimed: $2900.00 (slt) </font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground1>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(7146397)&nbsp;&nbsp;&nbsp;&nbsp;<A
+              HREF='/cgi-bin/CredHistory.pl?165367,7146397'>History</A><BR> JAMES COLEMAN<br>910 WOODS ST<br>MINDEN, LA 71055&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 76</B><BR><I>Original Filed Date</I>:&nbsp;08/17/2016<BR><I>Original Entered Date</I>:&nbsp;08/17/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            bd
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground1>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $79617.52</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground1 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?165367,76-1,1036492,16-40642">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&claim_id=15937558&claim_num=76-1&magic_num=MAGIC'
+                      id='documentKcaseidV165367Kclaim_idV15937558Kclaim_numV76-1Kmagic_numVMAGIC'>76-1</a>
+                    <script>CMECF.widget.DocLink('documentKcaseidV165367Kclaim_idV15937558Kclaim_numV76-1Kmagic_numVMAGIC');</script>
+                  </font></td>
+                  <td width='4%'><font size='-1'>08/17/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #76 filed by JAMES COLEMAN, Amount claimed: $79617.52 (bd) </font>
+                  </td>
+                <tr valign='top'>
+                  <td width='4%'></td>
+                  <td width='2%'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&de_seq_num=2435&dm_id=18133761&doc_num=677'
+                      id='documentKcaseidV165367Kde_seq_numV2435Kdm_idV18133761Kdoc_numV677'>677</a>
+                    <script>CMECF.widget.DocLink('documentKcaseidV165367Kde_seq_numV2435Kdm_idV18133761Kdoc_numV677');</script>
+                  </font></td>
+                  <td width='4%' align='left'><font size='-1'>05/24/2019</font>
+                  </td>
+                  <td width='83%'><font
+                      size='-1'>Objection to Claim (With Objection Language) 76 of James Henry Coleman in the amount of &#036; 79,617.52 Filed by Christopher J. Moser (Attachments: #
+                    <a href='https://ecf.txeb.uscourts.gov/doc1/174118321643'>1</a> POC &#035;76 #
+                    <a href='https://ecf.txeb.uscourts.gov/doc1/174118321644'>2</a> Proposed Order)(Manthey, Tristan)</font>
+                  </td>
+                </tr>
+                <tr valign='top'>
+                  <td width='4%'></td>
+                  <td width='2%'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&de_seq_num=2466&dm_id=18212545&doc_num=688'
+                      id='document1KcaseidV165367Kde_seq_numV2466Kdm_idV18212545Kdoc_numV688'>688</a>
+                    <script>CMECF.widget.DocLink('document1KcaseidV165367Kde_seq_numV2466Kdm_idV18212545Kdoc_numV688');</script>
+                  </font></td>
+                  <td width='4%' align='left'><font size='-1'>06/28/2019</font>
+                  </td>
+                  <td width='83%'><font
+                      size='-1'>Order Sustaining Objection To Proof of Claim
+                    <font color=green><i> <a
+                        href='https://ecf.txeb.uscourts.gov/doc1/174018321642'>677</a> Objection to Claim (With Objection Language) 76 of James Henry Coleman in the amount of &#036; 79,617.52 Filed by Christopher J. Moser (Attachments: # 1 POC #76 # 2 Proposed Order) filed by Trustee Christopher J. Moser.</i></font> (pr)</font>
+                  </td>
+                </tr>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground2>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(7146616)&nbsp;&nbsp;&nbsp;&nbsp;<A
+              HREF='/cgi-bin/CredHistory.pl?165367,7146616'>History</A><BR> Robert E. Gorman<br>H. N. Cunningham 111<br>8333 Douglas Avenue, Suite 1000<br>Dallas TX 75225&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 77</B><BR><I>Original Filed Date</I>:&nbsp;08/17/2016<BR><I>Original Entered Date</I>:&nbsp;08/17/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            James C. Baker
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground2>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $7911296.95</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground2 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?165367,77-1,1036497,16-40642">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&claim_id=15937640&claim_num=77-1&magic_num=MAGIC'
+                      id='documentKcaseidV165367Kclaim_idV15937640Kclaim_numV77-1Kmagic_numVMAGIC'>77-1</a>
+                    <script>CMECF.widget.DocLink('documentKcaseidV165367Kclaim_idV15937640Kclaim_numV77-1Kmagic_numVMAGIC');</script>
+                  </font></td>
+                  <td width='4%'><font size='-1'>08/17/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #77 filed by Robert E. Gorman, Amount claimed: $7911296.95 (Baker, James) </font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> (77-1) Promissory Note with Interest<BR></FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground1>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(7146616)&nbsp;&nbsp;&nbsp;&nbsp;<A
+              HREF='/cgi-bin/CredHistory.pl?165367,7146616'>History</A><BR> Robert E. Gorman<br>H. N. Cunningham 111<br>8333 Douglas Avenue, Suite 1000<br>Dallas TX 75225&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 78</B><BR><I>Original Filed Date</I>:&nbsp;08/17/2016<BR><I>Original Entered Date</I>:&nbsp;08/17/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            James C. Baker
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground1>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $29696085.00</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground1 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?165367,78-1,1036498,16-40642">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&claim_id=15937654&claim_num=78-1&magic_num=MAGIC'
+                      id='documentKcaseidV165367Kclaim_idV15937654Kclaim_numV78-1Kmagic_numVMAGIC'>78-1</a>
+                    <script>CMECF.widget.DocLink('documentKcaseidV165367Kclaim_idV15937654Kclaim_numV78-1Kmagic_numVMAGIC');</script>
+                  </font></td>
+                  <td width='4%'><font size='-1'>08/17/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #78 filed by Robert E. Gorman, Amount claimed: $29696085.00 (Baker, James) </font>
+                  </td>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> (78-1) Indemnification from Claims by Navistar and BMO Harris Bank<BR></FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground2>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(7146447)&nbsp;&nbsp;<BR> JOAN LESLEY<br>PO BOX 335<br>HUGO, OK 74743&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 79</B><BR><I>Original Filed Date</I>:&nbsp;08/16/2016<BR><I>Original Entered Date</I>:&nbsp;08/17/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            slt
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground2>
+        <TD colspan=3>
+          <TABLE>
+            <style type="text/css"> i {
+              white-space: nowrap;
+            } </style>
+            <i>No amounts claimed</i>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground2 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?165367,79-1,1036507,16-40642">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&claim_id=15937780&claim_num=79-1&magic_num=MAGIC'
+                      id='documentKcaseidV165367Kclaim_idV15937780Kclaim_numV79-1Kmagic_numVMAGIC'>79-1</a>
+                    <script>CMECF.widget.DocLink('documentKcaseidV165367Kclaim_idV15937780Kclaim_numV79-1Kmagic_numVMAGIC');</script>
+                  </font></td>
+                  <td width='4%'><font size='-1'>08/16/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #79 filed by JOAN LESLEY, Amount claimed: (slt) </font>
+                  </td>
+                <tr valign='top'>
+                  <td width='4%'></td>
+                  <td width='2%'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&de_seq_num=2437&dm_id=18133783&doc_num=678'
+                      id='documentKcaseidV165367Kde_seq_numV2437Kdm_idV18133783Kdoc_numV678'>678</a>
+                    <script>CMECF.widget.DocLink('documentKcaseidV165367Kde_seq_numV2437Kdm_idV18133783Kdoc_numV678');</script>
+                  </font></td>
+                  <td width='4%' align='left'><font size='-1'>05/24/2019</font>
+                  </td>
+                  <td width='83%'><font
+                      size='-1'>Objection to Claim (With Objection Language) 79 of Joan Lesley in the amount of &#036; Filed by Christopher J. Moser (Attachments: #
+                    <a href='https://ecf.txeb.uscourts.gov/doc1/174118321665'>1</a> POC &#035;79 #
+                    <a href='https://ecf.txeb.uscourts.gov/doc1/174118321666'>2</a> Proposed Order)(Manthey, Tristan)</font>
+                  </td>
+                </tr>
+                <tr valign='top'>
+                  <td width='4%'></td>
+                  <td width='2%'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&de_seq_num=2469&dm_id=18212560&doc_num=689'
+                      id='document1KcaseidV165367Kde_seq_numV2469Kdm_idV18212560Kdoc_numV689'>689</a>
+                    <script>CMECF.widget.DocLink('document1KcaseidV165367Kde_seq_numV2469Kdm_idV18212560Kdoc_numV689');</script>
+                  </font></td>
+                  <td width='4%' align='left'><font size='-1'>06/28/2019</font>
+                  </td>
+                  <td width='83%'><font
+                      size='-1'>Order Sustaining Objection To Proof of Claim
+                    <font color=green><i> <a
+                        href='https://ecf.txeb.uscourts.gov/doc1/174018321664'>678</a> Objection to Claim (With Objection Language) 79 of Joan Lesley in the amount of &#036; Filed by Christopher J. Moser (Attachments: # 1 POC #79 # 2 Proposed Order) filed by Trustee Christopher J. Moser.</i></font> (pr)</font>
+                  </td>
+                </tr>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground2>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <TABLE class=complexReport>
+      <TR class=rowBackground1>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1"><I>Creditor:</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(7158142)&nbsp;&nbsp;<BR> JAMES W. ADAMS<br>c/o Don R. Click<br>5272 FM 1528<br>Klondike, TX 75448&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="20%">
+          <FONT SIZE="-1">
+            <B>Claim No: 80</B><BR><I>Original Filed Date</I>:&nbsp;08/17/2016<BR><I>Original Entered Date</I>:&nbsp;08/17/2016<BR>
+            <BR>
+          </FONT>
+        </TD>
+        <TD align=left valign=top width="30%">
+          <FONT SIZE="-1">
+            <I>Status:</I>
+            <BR><I>Filed by:</I> CR
+            <BR><I>Entered by:</I>
+            slt
+            <BR><I>Modified:</I>
+          </FONT>
+        </TD>
+      </TR>
+      <TR class=rowBackground1>
+        <TD colspan=3>
+          <TABLE>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Amount
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $100000.00</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=>
+              <TD align=left><FONT SIZE='-1'>&nbsp;Priority
+              <TD><FONT SIZE='-1'> claimed:
+              <TD align=right><FONT SIZE='-1'> $100000.00</TD>
+              <TD align=right><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <TD>
+              <TD>
+            </TR>
+            <TR class=$rowBackground>
+              <TD align=left>
+                <FONT SIZE="-1">
+            </TR>
+          </TABLE>
+          <TFOOT>
+          <TR class=rowBackground1 valign='top'>
+            <TD colspan=5 align=left>
+              <FONT SIZE="-1">
+                <I>History:</I>
+              </FONT>
+              <table width='100%' border='0'>
+                <tr valign='top'>
+                  <td width='4%'><font size='-1'><a
+                      href="/cgi-bin/ClaimHistory.pl?165367,80-1,1036508,16-40642">Details</a></font>
+                  </td>
+                  <td width='3%' align='right'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&claim_id=15937783&claim_num=80-1&magic_num=MAGIC'
+                      id='documentKcaseidV165367Kclaim_idV15937783Kclaim_numV80-1Kmagic_numVMAGIC'>80-1</a>
+                    <script>CMECF.widget.DocLink('documentKcaseidV165367Kclaim_idV15937783Kclaim_numV80-1Kmagic_numVMAGIC');</script>
+                  </font></td>
+                  <td width='4%'><font size='-1'>08/17/2016</font></td>
+                  <td><font
+                      size='-1'> Claim #80 filed by JAMES W. ADAMS, Amount claimed: $100000.00 (slt) </font>
+                  </td>
+                <tr valign='top'>
+                  <td width='4%'></td>
+                  <td width='2%'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&de_seq_num=2433&dm_id=18133752&doc_num=676'
+                      id='documentKcaseidV165367Kde_seq_numV2433Kdm_idV18133752Kdoc_numV676'>676</a>
+                    <script>CMECF.widget.DocLink('documentKcaseidV165367Kde_seq_numV2433Kdm_idV18133752Kdoc_numV676');</script>
+                  </font></td>
+                  <td width='4%' align='left'><font size='-1'>05/24/2019</font>
+                  </td>
+                  <td width='83%'><font
+                      size='-1'>Objection to Claim (With Objection Language) 80 of James W. Adams in the amount of &#036; 100,000 Filed by Christopher J. Moser (Attachments: #
+                    <a href='https://ecf.txeb.uscourts.gov/doc1/174118321632'>1</a> POC &#035;80 #
+                    <a href='https://ecf.txeb.uscourts.gov/doc1/174118321633'>2</a> Proposed Order)(Manthey, Tristan)</font>
+                  </td>
+                </tr>
+                <tr valign='top'>
+                  <td width='4%'></td>
+                  <td width='2%'></td>
+                  <td width='6%' align='center'><font size='-1'><a
+                      href='/cgi-bin/show_doc.pl?caseid=165367&de_seq_num=2463&dm_id=18212518&doc_num=687'
+                      id='document1KcaseidV165367Kde_seq_numV2463Kdm_idV18212518Kdoc_numV687'>687</a>
+                    <script>CMECF.widget.DocLink('document1KcaseidV165367Kde_seq_numV2463Kdm_idV18212518Kdoc_numV687');</script>
+                  </font></td>
+                  <td width='4%' align='left'><font size='-1'>06/28/2019</font>
+                  </td>
+                  <td width='83%'><font
+                      size='-1'>Order Sustaining Objection To Proof of Claim
+                    <font color=green><i> <a
+                        href='https://ecf.txeb.uscourts.gov/doc1/174018321631'>676</a> Objection to Claim (With Objection Language) 80 of James W. Adams in the amount of &#036; 100,000 Filed by Christopher J. Moser (Attachments: # 1 POC #80 # 2 Proposed Order) filed by Trustee Christopher J. Moser.</i></font> (pr)</font>
+                  </td>
+                </tr>
+              </table>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Description:</I> </FONT>
+            </TD>
+          </TR>
+          <TR class=rowBackground1>
+            <TD colspan=3 align=left>
+              <FONT SIZE="-1">
+                <I>Remarks:</I> </FONT>
+            </TD>
+          </TR>
+    </TABLE>
+    <BR>
+    <CENTER><H3>Claims Register Summary</H3></CENTER>
+    <B>Case Name:</B> Tango Transport, LLC <BR><B>Case Number:</B> 16-40642<BR><B>Chapter:</B> 11<BR><B>Date Filed:</B> 04/06/2016<BR><B>Total Number Of Claims:</B> 11<BR><BR>
+    <table border=1>
+      <TR>
+        <TH>Total Amount Claimed* &nbsp;</TH>
+        <TD align=center>$37952966.87 &nbsp;</TD>
+      </TR>
+      <TR>
+        <TH>Total Amount Allowed* &nbsp;</th>
+        <TD align=center> &nbsp;</TD>
+      </TR>
+    </TABLE>
+    *Includes general unsecured claims<BR><BR><b>The values are reflective of the data entered. Always refer to claim documents for actual amounts.</b>
+    <BR><BR>
+    <CENTER>
+      <TABLE BORDER=1>
+        <TR>
+          <TH></TH>
+          <TH>Claimed</TH>
+          <TH>Allowed</TH>
+        </TR>
+        <TR>
+          <TH align=left>Secured</TH>
+          <TD align=center> &nbsp;</TD>
+          <TD align=center> &nbsp;</TD>
+        </TR>
+        <TR>
+          <TH align=left>Priority</TH>
+          <TD align=center>$100000.00 &nbsp;</TD>
+          <TD align=center> &nbsp;</TD>
+        </TR>
+        <TR>
+          <TH align=left>Administrative</TH>
+          <TD align=center> &nbsp;</TD>
+          <TD align=center> &nbsp;</TD>
+        </TR>
+      </table>
+      <br>
+      <HR>
+      <CENTER>
+        <TABLE BORDER=1 BGCOLOR=white width="400">
+          <TR>
+            <TH COLSPAN=4><FONT SIZE=+1
+                                COLOR=DARKRED>PACER Service Center </FONT></TH>
+          </TR>
+          <TR>
+            <TH COLSPAN=4><FONT COLOR=DARKBLUE>Transaction Receipt </FONT></TH>
+          </TR>
+          <TR></TR>
+          <TR></TR>
+          <TR>
+            <TD COLSPAN=4 ALIGN=CENTER><FONT SIZE=-1
+                                             COLOR=DARKBLUE>08/22/2019 15:26:05</FONT>
+            </TD>
+          </TR>
+          <TR>
+            <TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> PACER Login: </FONT>
+            </TH>
+            <TD ALIGN=LEFT><FONT SIZE=-1
+                                 COLOR=DARKBLUE> fddadmin1726:4454635:0 </FONT>
+            </TH></TD>
+            <TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Client Code: </FONT>
+            </TH>
+            <TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> </FONT></TD>
+          </TR>
+          <TR>
+            <TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Description: </FONT>
+            </TH>
+            <TD ALIGN=LEFT><FONT SIZE=-1
+                                 COLOR=DARKBLUE> Claims Register </FONT></TD>
+            <TH ALIGN=LEFT><FONT SIZE=-1
+                                 COLOR=DARKBLUE> Search Criteria: </FONT></TH>
+            <TD ALIGN=LEFT><FONT SIZE=-1
+                                 COLOR=DARKBLUE> 16-40642 Claim Number From: 70 Claim Number To: 80 Filed or Entered From: 8/2/2000 Filed or Entered To: 12/31/2019 </FONT>
+            </TD>
+          </TR>
+          <TR>
+            <TH ALIGN=LEFT><FONT SIZE=-1
+                                 COLOR=DARKBLUE> Billable Pages: </FONT></TH>
+            <TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 1 </FONT></TD>
+            <TH ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> Cost: </FONT></TH>
+            <TD ALIGN=LEFT><FONT SIZE=-1 COLOR=DARKBLUE> 0.10 </FONT></TD>
+          </TR>
+          <TR></TR>
+          <TR></TR>
+        </TABLE>
+      </CENTER>
+      </HR><BR></BR>
+</div>
+</body>
+</html>
