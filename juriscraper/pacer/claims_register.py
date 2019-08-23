@@ -259,19 +259,23 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
 
             # Next do the URL parsing for whatever is in it (if we have a URL)
             if row['document_number'] is not None:
-                href = number_cell.xpath('.//a/@href')[0]
-                qs = href.rsplit('?')[1]
-                qs_dict = urlparse.parse_qs(qs)
-                if row['type'] == 'claim':
-                    row['id'] = qs_dict['claim_id'][0]
-                    row['pacer_case_id'] = qs_dict['caseid'][0]
-                elif row['type'] == 'docket_entry':
-                    # Unfortunately, no doc1 value. There is a dm_id, which I'm
-                    # not familiar with, but I'm not sure what it does, and we
-                    # lack a field for it in our DB.
-                    row['pacer_seq_no'] = qs_dict['de_seq_num'][0]
-                    row['pacer_case_id'] = qs_dict['caseid'][0]
-                    row['pacer_dm_id'] = qs_dict['dm_id'][0]
+                try:
+                    href = number_cell.xpath('.//a/@href')[0]
+                except IndexError:
+                    pass
+                else:
+                    qs = href.rsplit('?')[1]
+                    qs_dict = urlparse.parse_qs(qs)
+                    if row['type'] == 'claim':
+                        row['id'] = qs_dict['claim_id'][0]
+                        row['pacer_case_id'] = qs_dict['caseid'][0]
+                    elif row['type'] == 'docket_entry':
+                        # Unfortunately, no doc1 value. There is a dm_id, which I'm
+                        # not familiar with, but I'm not sure what it does, and we
+                        # lack a field for it in our DB.
+                        row['pacer_seq_no'] = qs_dict['de_seq_num'][0]
+                        row['pacer_case_id'] = qs_dict['caseid'][0]
+                        row['pacer_dm_id'] = qs_dict['dm_id'][0]
 
             # Date
             date_cell = entry_tr.xpath('./td[4]')[0]
