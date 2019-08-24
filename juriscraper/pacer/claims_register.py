@@ -4,7 +4,7 @@ import urlparse
 
 from juriscraper.pacer.reports import BaseReport
 from .docket_report import BaseDocketReport
-from .utils import clean_pacer_object
+from .utils import clean_pacer_object, get_pacer_doc_id_from_doc1_url
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import convert_date_string, force_unicode, harmonize
 
@@ -230,8 +230,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             data[label] = value
         return data
 
-    @staticmethod
-    def _parse_history_cell(td):
+    def _parse_history_cell(self, td):
         """Parse the history table.
 
         This is similar to a mini-docket entries table, but it has a mixture of
@@ -244,27 +243,57 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             row = {}
             number_cell = entry_tr.xpath('./td[3]')[0]
             number = number_cell.text_content().strip()
+
+            """
+            Four kinds of entry formats:
+
+            Claim
+             - Number format: 7-1
+             - Link: /cgi-bin/show_doc.pl?caseid=171908&claim_id=15151763&claim_num=7-1&magic_num=MAGIC
+             
+             Claim 2:
+              - Number format: 7-1
+              - Link: /doc1/072035305573?caseid=671949&claim_id=34489904&claim_num=28-1&magic_num=MAGIC&pdf_header=1
+
+            Docket entry:
+             - Number format: 287 
+             - Link: /cgi-bin/show_doc.pl?caseid=171908&de_seq_num=981&dm_id=15184563&doc_num=287
+
+             Docket entry 2:
+              - Number format: 7-1
+              - Link: /doc1/150014580417
+            """
+            try:
+                href = number_cell.xpath('.//a/@href')[0]
+            except IndexError:
+                href = None
+
             if '-' in number:
-                row['type'] = 'claim'
                 nums = [int(v) for v in number.split('-')]
                 row['document_number'] = nums[0]
                 row['attachment_number'] = nums[1]
             else:
-                row['type'] = 'docket_entry'
                 try:
                     row['document_number'] = int(number)
                 except ValueError:
                     # Minute entry
                     row['document_number'] = None
 
+            if href and 'claim_id' in href:
+                row['type'] = 'claim'
+            else:
+                row['type'] = 'docket_entry'
+
             # Next do the URL parsing for whatever is in it (if we have a URL)
-            if row['document_number'] is not None:
+            if href and row['document_number'] is not None:
+                if 'doc1' in href:
+                    row['pacer_doc_id'] = get_pacer_doc_id_from_doc1_url(href)
+
                 try:
-                    href = number_cell.xpath('.//a/@href')[0]
+                    qs = href.rsplit('?')[1]
                 except IndexError:
                     pass
                 else:
-                    qs = href.rsplit('?')[1]
                     qs_dict = urlparse.parse_qs(qs)
                     if row['type'] == 'claim':
                         row['id'] = qs_dict['claim_id'][0]
