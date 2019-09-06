@@ -1,6 +1,8 @@
 import requests, json
+
 requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
 from ..lib.log_tools import make_default_logger
+
 logger = make_default_logger()
 from lxml.html import fromstring as f
 
@@ -55,12 +57,14 @@ class LASCSession(requests.Session):
 
         self.data2 = {}
 
-        self.api_params = {"p":"B2C_1_Media-LASC-SUSI", "tx":""}
+        self.api_params = {"p": "B2C_1_Media-LASC-SUSI", "tx": ""}
 
         self.headers = {
             "Origin": self.micro_domain,
             "User-Agent": "Juriscraper",
         }
+
+        self.cookies = {}
 
     def get(self, url, auto_login=False, **kwargs):
         """Overrides request.Session.get with session retry logic.
@@ -74,6 +78,7 @@ class LASCSession(requests.Session):
 
         kwargs.setdefault('headers', self.headers)
         kwargs.setdefault('timeout', 30)
+        kwargs.setdefault('cookies', self.cookies)
 
         if not hasattr(self, 's'):
             self.s = requests.session()
@@ -132,7 +137,6 @@ class LASCSession(requests.Session):
         self.data2['id_token'] = j.xpath('//*[@id="id_token"]')[0].value
         self.data2['state'] = j.xpath('//*[@id="state"]')[0].value
 
-
     def check_login(self, *args, **kwargs):
         # Error handling for authentication.
         if args[0].status_code != 200:
@@ -143,7 +147,6 @@ class LASCSession(requests.Session):
             if u'We can\'t seem to find your account' in json.loads(args[0])['message']:
                 logger.info(u'Invalid Email Address')
                 raise LASCLoginException("Invalid Email Address")
-
 
     def log_status(self, *args, **kwargs):
         """
@@ -157,7 +160,6 @@ class LASCSession(requests.Session):
 
         if args[0].url == "https://media.lacourt.org/":
             logger.info(u'Successfully Logged into MAP')
-
 
     def login(self):
         """
@@ -224,7 +226,6 @@ class LASCSession(requests.Session):
 
         """
 
-
         # Load the page in order to get the TransID and CSFR Token values from the HTML
         self.get(self.la_login_url, hooks={'response': [self.parse_html_for_keys, self.log_status]})
 
@@ -238,11 +239,7 @@ class LASCSession(requests.Session):
         self.post(self.la_signin_url, data=self.data2)
 
 
-
-
-
 class LASCLoginException(Exception):
-
     """
     Raised when the system cannot authenticate with LASC MAP
     """
