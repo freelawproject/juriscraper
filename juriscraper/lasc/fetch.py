@@ -317,6 +317,3 @@ class LASCSearch(object):
             cd['TentativeRuling'].append(cdd)
 
         self.normalized_case_data = cd
-
-
-
