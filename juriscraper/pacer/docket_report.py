@@ -232,7 +232,7 @@ class BaseDocketReport(object):
 
 
 class DocketReport(BaseDocketReport, BaseReport):
-    case_name_str = r"(?:Case\s+title:\s+)?(.*\bv\.?\s.*)"
+    case_name_str = r"(?:Case\s+title:\s+)?(.*\bvs?\.?\s.*)"
     case_name_regex = re.compile(case_name_str)
     case_name_i_regex = re.compile(case_name_str, flags=re.IGNORECASE)
     case_title_regex = re.compile(r"(?:Case\s+title:\s+)(.*)",

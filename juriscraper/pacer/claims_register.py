@@ -4,7 +4,7 @@ import urlparse
 
 from juriscraper.pacer.reports import BaseReport
 from .docket_report import BaseDocketReport
-from .utils import clean_pacer_object
+from .utils import clean_pacer_object, get_pacer_doc_id_from_doc1_url
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import convert_date_string, force_unicode, harmonize
 
@@ -23,6 +23,9 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
     """
     PATH = 'cgi-bin/SearchClaims.pl'
     CACHE_ATTRS = ['claims', 'metadata']
+    ERROR_STRINGS = BaseReport.ERROR_STRINGS + [
+        'No claims found for this case using selection criteria entered'
+    ]
 
     def __init__(self, court_id, pacer_session=None):
         super(ClaimsRegister, self).__init__(court_id, pacer_session)
@@ -80,7 +83,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
 
         # Finally, do the cells in the footer area. These look like:
         # <b>Case Name:</b> Scottish Holdings, Inc. <br>
-        label_nodes = self.tree.xpath('//center[1]/b')
+        label_nodes = self.tree.xpath('//center/b')
         for label_node in label_nodes:
             data.update(self._get_label_value_pair(label_node, True,
                                                    field_mappings))
@@ -212,6 +215,8 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             'Secured': 'secured_claimed',
             'Priority': 'priority_claimed',
             'Unsecured': 'unsecured_claimed',
+            'Admin': 'admin_claimed',
+            'Unknown': 'unknown_claimed',
         }
         rows = td.xpath('.//tr')
         data = {}
@@ -226,8 +231,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             data[label] = value
         return data
 
-    @staticmethod
-    def _parse_history_cell(td):
+    def _parse_history_cell(self, td):
         """Parse the history table.
 
         This is similar to a mini-docket entries table, but it has a mixture of
@@ -240,34 +244,68 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             row = {}
             number_cell = entry_tr.xpath('./td[3]')[0]
             number = number_cell.text_content().strip()
+
+            """
+            Four kinds of entry formats:
+
+            Claim
+             - Number format: 7-1
+             - Link: /cgi-bin/show_doc.pl?caseid=171908&claim_id=15151763&claim_num=7-1&magic_num=MAGIC
+             
+             Claim 2:
+              - Number format: 7-1
+              - Link: /doc1/072035305573?caseid=671949&claim_id=34489904&claim_num=28-1&magic_num=MAGIC&pdf_header=1
+
+            Docket entry:
+             - Number format: 287 
+             - Link: /cgi-bin/show_doc.pl?caseid=171908&de_seq_num=981&dm_id=15184563&doc_num=287
+
+             Docket entry 2:
+              - Number format: 7-1
+              - Link: /doc1/150014580417
+            """
+            try:
+                href = number_cell.xpath('.//a/@href')[0]
+            except IndexError:
+                href = None
+
             if '-' in number:
-                row['type'] = 'claim'
                 nums = [int(v) for v in number.split('-')]
                 row['document_number'] = nums[0]
                 row['attachment_number'] = nums[1]
             else:
-                row['type'] = 'docket_entry'
                 try:
                     row['document_number'] = int(number)
                 except ValueError:
                     # Minute entry
                     row['document_number'] = None
 
+            if href and 'claim_id' in href:
+                row['type'] = 'claim'
+            else:
+                row['type'] = 'docket_entry'
+
             # Next do the URL parsing for whatever is in it (if we have a URL)
-            if row['document_number'] is not None:
-                href = number_cell.xpath('.//a/@href')[0]
-                qs = href.rsplit('?')[1]
-                qs_dict = urlparse.parse_qs(qs)
-                if row['type'] == 'claim':
-                    row['id'] = qs_dict['claim_id'][0]
-                    row['pacer_case_id'] = qs_dict['caseid'][0]
-                elif row['type'] == 'docket_entry':
-                    # Unfortunately, no doc1 value. There is a dm_id, which I'm
-                    # not familiar with, but I'm not sure what it does, and we
-                    # lack a field for it in our DB.
-                    row['pacer_seq_no'] = qs_dict['de_seq_num'][0]
-                    row['pacer_case_id'] = qs_dict['caseid'][0]
-                    row['pacer_dm_id'] = qs_dict['dm_id'][0]
+            if href and row['document_number'] is not None:
+                if 'doc1' in href:
+                    row['pacer_doc_id'] = get_pacer_doc_id_from_doc1_url(href)
+
+                try:
+                    qs = href.rsplit('?')[1]
+                except IndexError:
+                    pass
+                else:
+                    qs_dict = urlparse.parse_qs(qs)
+                    if row['type'] == 'claim':
+                        row['id'] = qs_dict['claim_id'][0]
+                        row['pacer_case_id'] = qs_dict['caseid'][0]
+                    elif row['type'] == 'docket_entry':
+                        # Unfortunately, no doc1 value. There is a dm_id, which I'm
+                        # not familiar with, but I'm not sure what it does, and we
+                        # lack a field for it in our DB.
+                        row['pacer_seq_no'] = qs_dict['de_seq_num'][0]
+                        row['pacer_case_id'] = qs_dict['caseid'][0]
+                        row['pacer_dm_id'] = qs_dict['dm_id'][0]
 
             # Date
             date_cell = entry_tr.xpath('./td[4]')[0]
@@ -280,7 +318,8 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             history_rows.append(row)
         return history_rows
 
-    def query(self, pacer_case_id, date_start=None, date_end=None):
+    def query(self, pacer_case_id, docket_number, date_start=None,
+              date_end=None):
         """Query the claims register and return the results.
 
         :param pacer_case_id: The internal PACER ID for the case
@@ -291,6 +330,9 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         :param date_end: The latest claim entry you with to have. Default is
         tomorrow.
         :type date_end: date
+        :param docket_number: A docket number to look up. Something like
+        2:17-bk-39239.
+        :type: str
         :return: request response object
         """
         assert self.session is not None, \
@@ -305,7 +347,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             'f_sort1': 'cl_claimno',
             'f_sort2': 'cl_dt_filed',
             # This field seems to be required while 'all_case_ids' is not.
-            'case_num': '2:17-bk-31853',
+            'case_num': docket_number,
         }
         if date_start:
             params['f_fromdt'] = date_start.strftime(u'%m/%d/%Y')
@@ -315,8 +357,8 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         if date_end:
             params['f_todt'] = date_end.strftime(u'%m/%d/%Y')
 
-        logger.info("Querying claims register for case ID '%s' with "
-                    "params %s", pacer_case_id, params)
+        logger.info("Querying claims register for case ID '%s' in court '%s' "
+                    "with params %s", pacer_case_id, self.court_id, params)
         self.response = self.session.post(self.url + '?1-L_1_0-1',
                                           data=params)
         self.parse()

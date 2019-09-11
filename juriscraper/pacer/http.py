@@ -60,6 +60,7 @@ class PacerSession(requests.Session):
     sessions expire.
     """
     LOGIN_URL = 'https://pacer.login.uscourts.gov/csologin/login.jsf'
+    INDEX = 'https://ecf.ilnd.uscourts.gov/cgi-bin/ShowIndex.pl'
 
     def __init__(self, cookies=None, username=None, password=None):
         """
@@ -358,6 +359,7 @@ class PacerSession(requests.Session):
                 'cookies when attempting PACER login.'
             )
 
+        self.get(self.INDEX, auto_login=False)
         logger.info(u'New PACER session established.')
 
     def _login_again(self, r):

@@ -5,14 +5,13 @@ which is free.
 
 from .reports import BaseReport
 from ..lib.date_utils import make_date_range_tuples
-from ..lib.html_utils import (clean_html, fix_links_in_lxml_tree,
-                              get_html_parsed_text, set_response_encoding)
+from ..lib.html_utils import clean_html, fix_links_in_lxml_tree, \
+    get_html_parsed_text, set_response_encoding
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import convert_date_string
-from ..pacer.utils import (
-    get_pacer_case_id_from_nonce_url, get_pacer_doc_id_from_doc1_url,
-    reverse_goDLS_function,
-)
+from ..pacer.utils import get_nonce_from_form, \
+    get_pacer_case_id_from_nonce_url,  get_pacer_doc_id_from_doc1_url, \
+    reverse_goDLS_function
 
 logger = make_default_logger()
 
@@ -61,6 +60,12 @@ class FreeOpinionReport(BaseReport):
             logger.info("Querying written opinions report for '%s' between %s "
                         "and %s, ordered by %s",
                         self.court_id, _start, _end, sort)
+
+            # Get the first page, grab the nonce, and submit using that.
+            response = self.session.get(self.url)
+            nonce = get_nonce_from_form(response)
+            logger.info("Got nonce of %s", nonce)
+
             data = {
                 'filed_from': _start,
                 'filed_to': _end,
@@ -68,7 +73,7 @@ class FreeOpinionReport(BaseReport):
                 'Key1': self._normalize_sort_param(sort),
                 'all_case_ids': '0'
             }
-            response = self.session.post(self.url + '?1-L_1_0-1', data=data)
+            response = self.session.post(self.url + '?' + nonce, data=data)
             responses.append(response)
 
         self.responses = responses
