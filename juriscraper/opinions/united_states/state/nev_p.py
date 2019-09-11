@@ -16,14 +16,14 @@ class Site(OpinionSiteLinear):
             docket = row.xpath('.//td[2]')[0].text_content()
             name = row.xpath('.//td[3]')[0].text_content()
             url = row.xpath('.//td[4]//a/@href')
-            date_string = row.xpath('.//td[4]')
-            date = convert_date_string(date_string[0].text_content())
+            date_string = row.xpath('.//td[4]')[0].text_content()
+            year = convert_date_string(date_string).year
 
             self.cases.append({
-                'date': date,
+                'date': date_string,
                 'docket': docket,
                 'name': name if name else "Unknown",
-                'neutral_citation': '%d NV %s' % (date.year, citation),
+                'neutral_citation': '%d NV %s' % (year, citation),
                 'url': url[0],
 
             })
