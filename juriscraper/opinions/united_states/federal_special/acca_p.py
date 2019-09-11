@@ -20,9 +20,6 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.url = 'https://www.jagcnet.army.mil/85257546006DF36B/ODD?OpenView&Count=-1'
         self.docket_case_name_splitter = re.compile('(.*[\dX]{5,8})(.*)')
-        # DoD uses an annoying certificate that isn't installed. Thus, we
-        # disable certificate verification in requests.
-        self.request['verify'] = False
 
     def _get_download_urls(self):
         path = "//a[@class='td_frmOpinion']/@href"
