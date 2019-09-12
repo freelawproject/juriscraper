@@ -7,25 +7,21 @@ logger = make_default_logger()
 
 class LASCSearch(object):
     """
-    An object designed to search the LA Superior Court Media Access portal.
-    It search by date, lookup individual cases and collect PDFs on those cases
-    if made available by LA Media.
-
+    An object designed to search the LA Superior Court Media Access Portal
+    (MAP). It searches by date, looks up individual cases, and collects PDFs on
+    those cases if made available in the MAP.
     """
 
     def __init__(self, session):
-
         self.session = session
         self.api_base = "media.lacourt.org/api/AzureApi/"
 
     def get_json_from_internal_case_id(self, internal_case_id):
-        """
-        Query LASC for the case json based on the internal case id
+        """Query LASC for the case json based on the internal case id
 
-        :param internal_case_id:
-        :return:
+        :param internal_case_id: An internal ID of the form, 19STCV25157;SS;CV
+        :return: The parsed docket data for the case requested
         """
-
         r = self.session.get("https://%sGetCaseDetail/%s" %
                              (self.api_base, internal_case_id))
         self._check_success(r)
@@ -37,7 +33,7 @@ class LASCSearch(object):
 
         The LASC interface only allows queries of up to seven days at a time.
         If a wider request is made, break it into multiple smaller requests
-        and append them together.
+        and append their results together.
 
         :param start: A date object to start the query
         :param end: A date object to end the query
@@ -57,7 +53,7 @@ class LASCSearch(object):
             r = self.session.get(date_query_url)
             cases.extend(r.json()['ResultList'])
 
-        # Normalizes the date data
+        # Normalize the date data
         normal_cases = []
         for case in cases:
             clean_case = {
@@ -70,12 +66,10 @@ class LASCSearch(object):
         return normal_cases
 
     def get_pdf_from_url(self, pdf_url):
-        """
-        Using the unique internal case id information and
-        document id we can collect all the pdfs
+        """Get a PDF from the MAP
 
-        :param pdf_url:
-        :return:
+        :param pdf_url: The URL to a particular PDF you wish to download
+        :return: The binary PDF data
         """
 
         logger.info(u'Api ViewDocument called.  Downloading PDF ')
@@ -84,11 +78,16 @@ class LASCSearch(object):
     @staticmethod
     def _parse_case_data(case_data):
         """
-        This function normalizes the json response we get from LA MAP
+        This function normalizes the json docket data we get from LA MAP
 
-        :param case_data:
-        :return:
-        :return:
+        The MAP, mercifully, gives us JSON data, so this isn't too bad. The
+        main task, then, is to convert the various field names it provides over
+        to field names following our conventions.
+
+        :param case_data: A python dict of a docket as gathered from the MAP
+        (this will be JSON data in the MAP, but convert it to Python before
+        calling this method.)
+        :return: The parsed, cleaned, normalized data
         """
         logger.info(u'Parsing Data')
 
@@ -122,20 +121,18 @@ class LASCSearch(object):
 
         if case_info['StatusDate'] is not None:
             docket['date_status'] = case_info['StatusDate']
-            """Need to add in timezone support here"""
-            docket['date_status'] = datetime. \
-                strptime(case_info['StatusDate'], '%m/%d/%Y') \
+            # XXX Need to add in timezone support here
+            docket['date_status'] = datetime \
+                .strptime(case_info['StatusDate'], '%m/%d/%Y') \
                 .strftime('%Y-%m-%d %H:%M:%S%z')
         else:
             docket['date_status'] = case_info['StatusDate']
 
-        docket['status_code'] = case_info['StatusCode'] if \
-            case_info['StatusCode'] is not None else ""
-
+        docket['status_code'] = case_info['StatusCode'] or ""
         docket['status_str'] = case_info['Status']
         clean_data['Docket'] = docket
 
-        # Register of Actions Normalization
+        # Register of Actions normalization
         clean_data['Action'] = []
         for action in data['RegisterOfActions']:
             registered_action = {
@@ -145,7 +142,7 @@ class LASCSearch(object):
             }
             clean_data['Action'].append(registered_action)
 
-        # Cross References Normalization
+        # Cross References normalization
         clean_data['CrossReference'] = []
         for cross_ref in data['CrossReferences']:
             cross_reference = {
@@ -170,7 +167,6 @@ class LASCSearch(object):
 
         clean_data['QueuedPDF'] = []
         clean_data['DocumentImage'] = []
-
         for doc_image in data['DocumentImages']:
             image = {
                 'date_processed': doc_image['createDate'],
@@ -208,7 +204,6 @@ class LASCSearch(object):
                 'party_type_code': party['PartyTypeCode'],
                 'party_description': party['PartyDescription']
             }
-
             clean_data['Party'].append(party_obj)
 
         clean_data['Proceeding'] = []
