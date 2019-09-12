@@ -18,7 +18,6 @@ class LASCSearch(object):
         self.session = session
         self.api_base = "https://media.lacourt.org/api/AzureApi/"
 
-        self.GetRecentCivilCases = "%sGetRecentCivilCases/%s/%s"
         self.ViewDocument = "%sViewDocument/%s/%s"
         self.GetCaseList = "%sGetCaseList/%s"
         self.GetCaseDetail = "%sGetCaseDetail/%s"
@@ -49,9 +48,9 @@ class LASCSearch(object):
         r = self.session.get(self.GetCaseDetail % (self.api_base, internal_case_id))
         self.check_success(r)
 
-    def _get_cases_around_dates(self, date1, date2):
-        self.date_query = self.GetRecentCivilCases % (self.api_base, date1, date2)
-        self.date_case_list = self.lasc.get(self.date_query).text
+    def _query_cases_by_date_range(self, date1, date2):
+        self.date_query_url = "%sGetRecentCivilCases/%s/%s" % (self.api_base, date1, date2)
+        self.date_case_list = self.session.get(self.date_query_url).text
 
 
     def _get_pdf_from_url(self, pdf_url):
