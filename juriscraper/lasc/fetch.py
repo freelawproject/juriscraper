@@ -10,12 +10,12 @@ class LASCSearch(object):
 
     """
 
-    def __init__(self, lasc):
+    def __init__(self, session):
         """
 
         :param lasc:
         """
-        self.lasc = lasc
+        self.session = session
         self.api_base = "https://media.lacourt.org/api/AzureApi/"
 
         self.GetRecentCivilCases = "%sGetRecentCivilCases/%s/%s"
