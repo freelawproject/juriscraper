@@ -166,154 +166,162 @@ class LASCSearch(object):
         self.normalized_date_data = datum
 
     def _parse_case_data(self):
+        """
+
+        :return:
+        """
         logger.info(u'Parsing Data')
 
         data = json.loads(self.case_data)['ResultList'][0]['NonCriminalCaseInformation']
 
         # Docket Normalization
-        cd = {}
-        cd['Docket'] = {}
-        cd['Action'] = []
-        cd['CrossReference'] = []
-        cd['DocumentFiled'] = []
-        cd['DocumentImage'] = []
-        cd['Party'] = []
-        cd['Proceeding'] = []
-        cd['TentativeRuling'] = []
-        cd['QueuedPDF'] = []
-        cd['QueuedCase'] = []
-        cd['LASCPDF'] = []
-        cd['LASCJSON'] = []
+        clean_data = {}
+        clean_data['QueuedCase'] = []
+        clean_data['LASCPDF'] = []
+        clean_data['LASCJSON'] = []
 
-        cd['Docket']['date_filed'] = datetime.datetime.strptime(data['CaseInformation']['FilingDate'][0:10],
+        docket = {}
+        docket['date_filed'] = datetime.datetime.strptime(data['CaseInformation']['FilingDate'][0:10],
                                                                 '%Y-%m-%d').date()
-        cd['Docket']['date_disposition'] = None
-        cd['Docket']['docket_number'] = data['CaseInformation']['CaseNumber'].strip()
-        cd['Docket']['district'] = data['CaseInformation']['District'].strip()
-        cd['Docket']['division_code'] = data['CaseInformation']['DivisionCode'].strip()
-        cd['Docket']['disposition_type'] = data['CaseInformation']['DispositionType']
-        cd['Docket']['disposition_type_code'] = ""
-        cd['Docket']['case_type_str'] = data['CaseInformation']['CaseTypeDescription']
-        cd['Docket']['case_type_code'] = data['CaseInformation']['CaseType']
-        cd['Docket']['case_name'] = data['CaseInformation']['CaseTitle'].strip()
-        cd['Docket']['judge_code'] = ""
-        cd['Docket']['judge_name'] = data['CaseInformation']['JudicialOfficer']
-        cd['Docket']['courthouse_name'] = data['CaseInformation']['Courthouse']
+        docket['date_disposition'] = None
+        docket['docket_number'] = data['CaseInformation']['CaseNumber'].strip()
+        docket['district'] = data['CaseInformation']['District'].strip()
+        docket['division_code'] = data['CaseInformation']['DivisionCode'].strip()
+        docket['disposition_type'] = data['CaseInformation']['DispositionType']
+        docket['disposition_type_code'] = ""
+        docket['case_type_str'] = data['CaseInformation']['CaseTypeDescription']
+        docket['case_type_code'] = data['CaseInformation']['CaseType']
+        docket['case_name'] = data['CaseInformation']['CaseTitle'].strip()
+        docket['judge_code'] = ""
+        docket['judge_name'] = data['CaseInformation']['JudicialOfficer']
+        docket['courthouse_name'] = data['CaseInformation']['Courthouse']
+
         if data['CaseInformation']['StatusDate'] != None:
-            cd['Docket']['date_status'] = data['CaseInformation']['StatusDate']
+            docket['date_status'] = data['CaseInformation']['StatusDate']
             """Need to add in timezone support here"""
-            cd['Docket']['date_status'] = datetime.datetime. \
+            docket['date_status'] = datetime.datetime. \
                 strptime(data['CaseInformation']['StatusDate'], '%m/%d/%Y') \
                 .strftime('%Y-%m-%d %H:%M:%S%z')
         else:
-            cd['Docket']['date_status'] = data['CaseInformation']['StatusDate']
-        cd['Docket']['status_code'] = data['CaseInformation']['StatusCode'] if data['CaseInformation'][
+            docket['date_status'] = data['CaseInformation']['StatusDate']
+
+        docket['status_code'] = data['CaseInformation']['StatusCode'] if data['CaseInformation'][
                                                                                    'StatusCode'] != None else ""
-        cd['Docket']['status_str'] = data['CaseInformation']['Status']
+        docket['status_str'] = data['CaseInformation']['Status']
+        clean_data['Docket'] = docket
+
 
         # Register of Actions Normalization
+        clean_data['Action'] = []
         for action in data['RegisterOfActions']:
-            cdd = {}
-            cdd['date_of_action'] = action['RegisterOfActionDate']
-            cdd['description'] = action['Description']
-            cdd['additional_information'] = action['AdditionalInformation']
-            cd['Action'].append(cdd)
+            registered_action = {}
+            registered_action['date_of_action'] = action['RegisterOfActionDate']
+            registered_action['description'] = action['Description']
+            registered_action['additional_information'] = action['AdditionalInformation']
+            clean_data['Action'].append(registered_action)
+
 
         # Cross References Normalization
+        clean_data['CrossReference'] = []
+        for cross_ref in data['CrossReferences']:
+            cross_reference = {}
+            cross_reference['date_cross_reference'] = cross_ref['CrossReferenceDate']
+            cross_reference['cross_reference_docket_number'] = cross_ref['CrossReferenceCaseNumber']
+            cross_reference['cross_reference_type'] = cross_ref['CrossReferenceTypeDescription']
+            clean_data['CrossReference'].append(cross_reference)
 
-        for cxref in data['CrossReferences']:
-            cdd = {}
-            cdd['date_cross_reference'] = cxref['CrossReferenceDate']
-            cdd['cross_reference_docket_number'] = cxref['CrossReferenceCaseNumber']
-            cdd['cross_reference_type'] = cxref['CrossReferenceTypeDescription']
-            cd['CrossReference'].append(cdd)
 
         # Documents Filed
-        for df in data['DocumentsFiled']:
-            cdd = {}
-            cdd['date_filed'] = df['DateFiled']
-            cdd['memo'] = df['Memo'] if df['Memo'] != None else ""
-            cdd['document_type'] = df['Document'] if df['Document'] != None else ""
-            cdd['party_str'] = df['Party'] if df['Party'] != None else ""
-            cd['DocumentFiled'].append(cdd)
+        clean_data['DocumentFiled'] = []
+        for doc_filed in data['DocumentsFiled']:
+            document = {}
+            document['date_filed'] = doc_filed['DateFiled']
+            document['memo'] = doc_filed['Memo'] if doc_filed['Memo'] != None else ""
+            document['document_type'] = doc_filed['Document'] if doc_filed['Document'] != None else ""
+            document['party_str'] = doc_filed['Party'] if doc_filed['Party'] != None else ""
+            clean_data['DocumentFiled'].append(document)
 
-        for df in data['DocumentImages']:
-            cdd = {}
-            cde = {}
-            cdd['date_processed'] = df['createDate']
-            cdd['date_filed'] = df['docFilingDate']
 
-            cdd['doc_id'] = df['docId']
-            cdd['page_count'] = df['pageCount']
-            cdd['document_type'] = df['documentType'] if df['documentType'] != None else ""
-            cdd['document_type_code'] = df['documentTypeID']
+        clean_data['QueuedPDF'] = []
+        clean_data['DocumentImage'] = []
+        for doc_image in data['DocumentImages']:
+            image = {}
+            pdf_queue = {}
+            image['date_processed'] = doc_image['createDate']
+            image['date_filed'] = doc_image['docFilingDate']
+            image['doc_id'] = doc_image['docId']
+            image['page_count'] = doc_image['pageCount']
+            image['document_type'] = doc_image['documentType'] if doc_image['documentType'] != None else ""
+            image['document_type_code'] = doc_image['documentTypeID']
+            image['image_type_id'] = doc_image['imageTypeId']
+            image['app_id'] = doc_image['appId'] if doc_image['appId'] != None else ""
+            image['odyssey_id'] = doc_image['OdysseyID'] if doc_image['OdysseyID'] != None else ""
+            image['is_downloadable'] = doc_image['IsDownloadable']
+            image['security_level'] = doc_image['securityLevel']
+            image['description'] = doc_image['description']
+            image['doc_part'] = doc_image['docPart'] if doc_image['docPart'] != None else ""
+            image['is_available'] = False
 
-            cdd['image_type_id'] = df['imageTypeId']
-            cdd['app_id'] = df['appId'] if df['appId'] != None else ""
-            cdd['odyssey_id'] = df['OdysseyID'] if df['OdysseyID'] != None else ""
-            cdd['is_downloadable'] = df['IsDownloadable']
-            cdd['security_level'] = df['securityLevel']
-            cdd['description'] = df['description']
-            cdd['doc_part'] = df['docPart'] if df['docPart'] != None else ""
-            cdd['is_available'] = False
+            pdf_queue['internal_case_id'] = data['CaseInformation']['CaseID']
+            pdf_queue['document_id'] = doc_image['docId']
 
-            cde['internal_case_id'] = data['CaseInformation']['CaseID']
-            cde['document_id'] = df['docId']
-            cd['QueuedPDF'].append(cde)
+            clean_data['QueuedPDF'].append(pdf_queue)
+            clean_data['DocumentImage'].append(image)
 
-            cd['DocumentImage'].append(cdd)
 
-        for df in data['Parties']:
-            cdd = {}
-            cdd['attorney_name'] = df['AttorneyName']
-            cdd['attorney_firm'] = df['AttorneyFirm']
-            cdd['entity_number'] = df['EntityNumber']
+        clean_data['Party'] = []
+        for party in data['Parties']:
+            party_obj = {}
+            party_obj['attorney_name'] = party['AttorneyName']
+            party_obj['attorney_firm'] = party['AttorneyFirm']
+            party_obj['entity_number'] = party['EntityNumber']
+            party_obj['party_name'] = party['Name']
+            party_obj['party_flag'] = party['PartyFlag']
+            party_obj['party_type_code'] = party['PartyTypeCode']
+            party_obj['party_description'] = party['PartyDescription']
+            clean_data['Party'].append(party_obj)
 
-            cdd['party_name'] = df['Name']
-            cdd['party_flag'] = df['PartyFlag']
-            cdd['party_type_code'] = df['PartyTypeCode']
-            cdd['party_description'] = df['PartyDescription']
 
-            cd['Party'].append(cdd)
+        clean_data['Proceeding'] = []
+        for proceeding in data['PastProceedings']:
+            event = {}
+            event['past_or_future'] = 1
+            event['date_proceeding'] = proceeding['ProceedingDate']
+            event['proceeding_time'] = proceeding['ProceedingTime']
+            event['proceeding_room'] = proceeding['ProceedingRoom']
+            event['am_pm'] = proceeding['AMPM']
+            event['memo'] = proceeding['Memo']
+            event['courthouse_name'] = proceeding['CourthouseName']
+            event['address'] = proceeding['Address']
+            event['result'] = proceeding['Result']
+            event['judge_name'] = proceeding['Judge']
+            event['event'] = proceeding['Event']
+            clean_data['Proceeding'].append(event)
 
-        for df in data['PastProceedings']:
-            cdd = {}
-            cdd['past_or_future'] = 1
-            cdd['date_proceeding'] = df['ProceedingDate']
-            cdd['proceeding_time'] = df['ProceedingTime']
-            cdd['proceeding_room'] = df['ProceedingRoom']
-            cdd['am_pm'] = df['AMPM']
-            cdd['memo'] = df['Memo']
-            cdd['courthouse_name'] = df['CourthouseName']
-            cdd['address'] = df['Address']
-            cdd['result'] = df['Result']
-            cdd['judge_name'] = df['Judge']
-            cdd['event'] = df['Event']
+        for proceeding in data['FutureProceedings']:
+            event = {}
+            event['past_or_future'] = 2
+            event['date_proceeding'] = proceeding['ProceedingDate']
+            event['proceeding_time'] = proceeding['ProceedingTime']
+            event['proceeding_room'] = proceeding['ProceedingRoom']
+            event['am_pm'] = proceeding['AMPM']
+            event['memo'] = proceeding['Memo']
+            event['courthouse_name'] = proceeding['CourthouseName']
+            event['address'] = proceeding['Address']
+            event['result'] = proceeding['Result']
+            event['judge_name'] = proceeding['Judge']
+            event['event'] = proceeding['Event']
+            clean_data['Proceeding'].append(event)
 
-            cd['Proceeding'].append(cdd)
 
-        for df in data['FutureProceedings']:
-            cdd = {}
-            cdd['past_or_future'] = 2
-            cdd['date_proceeding'] = df['ProceedingDate']
-            cdd['proceeding_time'] = df['ProceedingTime']
-            cdd['proceeding_room'] = df['ProceedingRoom']
-            cdd['am_pm'] = df['AMPM']
-            cdd['memo'] = df['Memo']
-            cdd['courthouse_name'] = df['CourthouseName']
-            cdd['address'] = df['Address']
-            cdd['result'] = df['Result']
-            cdd['judge_name'] = df['Judge']
-            cdd['event'] = df['Event']
-            cd['Proceeding'].append(cdd)
+        clean_data['TentativeRuling'] = []
+        for ruling in data['TentativeRulings']:
+            tenative_ruling = {}
+            tenative_ruling['date_created'] = ruling['CreationDate']
+            tenative_ruling['date_hearing'] = ruling['HearingDate']
+            tenative_ruling['department'] = ruling['Department']
+            tenative_ruling['ruling'] = ruling['Ruling']
 
-        for df in data['TentativeRulings']:
-            cdd = {}
-            cdd['date_created'] = df['CreationDate']
-            cdd['date_hearing'] = df['HearingDate']
-            cdd['department'] = df['Department']
-            cdd['ruling'] = df['Ruling']
+            clean_data['TentativeRuling'].append(tenative_ruling)
 
-            cd['TentativeRuling'].append(cdd)
-
-        self.normalized_case_data = cd
+        self.normalized_case_data = clean_data
