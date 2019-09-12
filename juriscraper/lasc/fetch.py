@@ -83,7 +83,7 @@ class LASCSearch(object):
         logger.info(u'Api ViewDocument called.  Downloading PDF ')
         self.pdf_data = self.session.get(pdf_url).content
 
-    def _parse_dates(self, cases):
+    def _parse_date_data(self, cases):
         logger.info(u'Parsing Date Data')
         normal_cases = []
         for case in cases:
