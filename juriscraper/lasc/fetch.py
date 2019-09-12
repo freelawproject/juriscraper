@@ -1,6 +1,7 @@
 from ..lib.log_tools import make_default_logger
 import json, re
 import datetime
+from dateutil.rrule import rrule, WEEKLY
 
 logger = make_default_logger()
 
@@ -48,9 +49,33 @@ class LASCSearch(object):
         r = self.session.get(self.GetCaseDetail % (self.api_base, internal_case_id))
         self.check_success(r)
 
-    def _query_cases_by_date_range(self, date1, date2):
-        self.date_query_url = "%sGetRecentCivilCases/%s/%s" % (self.api_base, date1, date2)
-        self.date_case_list = self.session.get(self.date_query_url).text
+
+    def query_cases_by_date(self, start, end):
+        """Query LASC for a list of cases between two dates (inclusive)
+
+        The LASC interface only allows queries of up to seven days at a time.
+        If a wider request is made, break it into multiple smaller requests and
+        append them together.
+
+        :param start: A date object to start the query
+        :param end: A date object to end the query
+        :return: A list of case metadata objects
+        """
+        end = min(end, datetime.datetime.today())
+        weekly_dates = rrule(freq=WEEKLY, dtstart=start, until=end)
+        cases = []
+        for dt in weekly_dates:
+            start_str = dt.strftime('%m-%d-%Y')
+            # Ensure end_str does not exceed the user's request. This may
+            # happen on the last iteration.
+            seven_days_later = dt + datetime.timedelta(days=7)
+            end_str = min(seven_days_later, end).strftime('%m-%d-%Y')
+            date_query_url = "%sGetRecentCivilCases/%s/%s" % (
+                self.api_base, start_str, end_str)
+            r = self.session.get(date_query_url)
+            cases.extend(r.json()['ResultList'])
+
+        return cases
 
 
     def _get_pdf_from_url(self, pdf_url):
