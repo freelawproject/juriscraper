@@ -8,6 +8,9 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.ca10.uscourts.gov/opinions/new/daily_decisions.rss'
         self.court_id = self.__module__
+        # Site has non-chained, bad certificate, need to
+        # ignore ssl verification for now for scraper to work
+        self.request['verify'] = False
 
     def _get_case_names(self):
         return [e for e in self.html.xpath('//item/title/text()')]

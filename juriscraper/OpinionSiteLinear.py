@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OpinionSite import OpinionSite
 
 
@@ -25,7 +26,7 @@ class OpinionSiteLinear(OpinionSite):
         return [case['url'] for case in self.cases]
 
     def _get_case_dates(self):
-        return [case['date'] for case in self.cases]
+        return [convert_date_string(case['date']) for case in self.cases]
 
     def _get_precedential_statuses(self):
         if not self.status:

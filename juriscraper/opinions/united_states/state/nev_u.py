@@ -1,5 +1,4 @@
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
-from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSiteLinear):
@@ -21,7 +20,7 @@ class Site(OpinionSiteLinear):
             date_string = row.xpath('.//td[3]')
 
             self.cases.append({
-                'date': convert_date_string(date_string[0].text_content()),
+                'date': date_string[0].text_content(),
                 'docket': row.xpath('.//td[1]')[0].text_content(),
                 'name': row.xpath('.//td[2]')[0].text_content().title(),
                 'url': url[0],
