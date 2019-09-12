@@ -19,17 +19,10 @@ class LASCSearch(object):
         self.session = session
         self.api_base = "https://media.lacourt.org/api/AzureApi/"
 
-        self.ViewDocument = "%sViewDocument/%s/%s"
-        self.GetCaseList = "%sGetCaseList/%s"
-        self.GetCaseDetail = "%sGetCaseDetail/%s"
-
+        self.case_data = None
         self.date_case_list = None
         self.pdf_data = None
-        self.pdfs_data = []
-        self.success = None
-        self.internal_case_id = None
         self.normalized_case_data = None
-        self.normalized_date_data = None
 
     def check_success(self, r):
 
@@ -47,7 +40,7 @@ class LASCSearch(object):
         :return:
         """
 
-        r = self.session.get(self.GetCaseDetail % (self.api_base, internal_case_id))
+        r = self.session.get("%sGetCaseDetail/%s" % (self.api_base, internal_case_id))
         self.check_success(r)
 
 
