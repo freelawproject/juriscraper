@@ -106,7 +106,7 @@ class LASCSearch(object):
 
     def _parse_case_data(self):
         """
-
+        This function Maps the LASC Data to our datamodel
         :return:
         """
         logger.info(u'Parsing Data')
