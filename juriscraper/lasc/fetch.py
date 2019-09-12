@@ -1,6 +1,5 @@
 from ..lib.log_tools import make_default_logger
-import json, re
-import datetime
+from datetime import datetime, timedelta
 from dateutil.rrule import rrule, WEEKLY
 
 logger = make_default_logger()
@@ -31,48 +30,34 @@ class LASCSearch(object):
                              (self.api_base, internal_case_id))
         self._check_success(r)
 
+        return self._parse_case_data(r.json())
 
     def query_cases_by_date(self, start, end):
         """Query LASC for a list of cases between two dates (inclusive)
 
         The LASC interface only allows queries of up to seven days at a time.
-        If a wider request is made, break it into multiple smaller requests and
-        append them together.
+        If a wider request is made, break it into multiple smaller requests
+        and append them together.
 
         :param start: A date object to start the query
         :param end: A date object to end the query
         :return: A list of case metadata objects
         """
-        end = min(end, datetime.datetime.today())
+        end = min(end, datetime.today())
         weekly_dates = rrule(freq=WEEKLY, dtstart=start, until=end)
         cases = []
         for dt in weekly_dates:
             start_str = dt.strftime('%m-%d-%Y')
             # Ensure end_str does not exceed the user's request. This may
             # happen on the last iteration.
-            seven_days_later = dt + datetime.timedelta(days=7)
+            seven_days_later = dt + timedelta(days=7)
             end_str = min(seven_days_later, end).strftime('%m-%d-%Y')
-            date_query_url = "%sGetRecentCivilCases/%s/%s" % (
+            date_query_url = "https://%sGetRecentCivilCases/%s/%s" % (
                 self.api_base, start_str, end_str)
             r = self.session.get(date_query_url)
             cases.extend(r.json()['ResultList'])
 
-        return cases
-
-
-    def _get_pdf_from_url(self, pdf_url):
-        """
-        # Using the unique internal case id information and document id we can collect all the pdfs
-
-        :param pdf_url:
-        :return:
-        """
-
-        logger.info(u'Api ViewDocument called.  Downloading PDF ')
-        self.pdf_data = self.session.get(pdf_url).content
-
-    def _parse_date_data(self, cases):
-        logger.info(u'Parsing Date Data')
+        # Normalizes the date data
         normal_cases = []
         for case in cases:
             clean_case = {
@@ -271,8 +256,9 @@ class LASCSearch(object):
         return clean_data
 
     @staticmethod
-    def _check_success(r):
+    def _check_success(self, r):
         if r.json()['IsSuccess']:
+            self.case_data = r.text
             logger.info(u'Successful query into LASC map')
         else:
             logger.info(u'Failure to query into LASC map')
