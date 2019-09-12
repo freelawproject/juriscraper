@@ -8,14 +8,14 @@ logger = make_default_logger()
 
 class LASCSearch(object):
     """
+    An object designed to search the LA Superior Court Media Access portal.
+    It search by date, lookup individual cases and collect PDFs on those cases
+    if made available by LA Media.
 
     """
 
     def __init__(self, session):
-        """
 
-        :param lasc:
-        """
         self.session = session
         self.api_base = "https://media.lacourt.org/api/AzureApi/"
 
@@ -41,7 +41,8 @@ class LASCSearch(object):
 
     def _get_json_from_internal_case_id(self, internal_case_id):
         """
-         # This returns the JSON value of the store
+        Query LASC for the case json based on the internal case id
+
         :param internal_case_id:
         :return:
         """
