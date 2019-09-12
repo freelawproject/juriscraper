@@ -46,7 +46,6 @@ class LASCSession(requests.Session):
             "password": password,
             "request_type": "RESPONSE"
         }
-        self.api_params = {"p": "B2C_1_Media-LASC-SUSI", "tx": ""}
         self.headers = {
             "Origin": ms_base_url,
             "User-Agent": "Juriscraper",
@@ -60,6 +59,8 @@ class LASCSession(requests.Session):
         :return: requests.Response
         """
         kwargs.setdefault('timeout', 30)
+        kwargs.setdefault('params', {"p": "B2C_1_Media-LASC-SUSI"})
+
         return super(LASCSession, self).get(url, **kwargs)
 
     def post(self, url, auto_login=False, **kwargs):
@@ -70,29 +71,10 @@ class LASCSession(requests.Session):
         :return: requests.Response
         """
         kwargs.setdefault('timeout', 30)
+        kwargs.setdefault('params', {"p": "B2C_1_Media-LASC-SUSI"})
+
         return super(LASCSession, self).post(url, **kwargs)
 
-    @staticmethod
-    def _parse_html_for_api_parameters(r):
-        """
-        Parse the HTML after the first login page and identify parameter values
-        needed in subsequent requests.
-
-        :param r: A request.Response object
-        :return A dict containing parsed parameter values
-        :raises: LASCLoginException
-        """
-        if r.status_code != 200:
-            raise LASCLoginException("Got bad status code when attempting "
-                                     "initial login: %s" % r.status_code)
-
-        csrf = r.text.split("csrf")[1].split("\"")[2]
-        transaction_id = r.text.split("transId")[1].split("\"")[2]
-        return {
-            'tx': transaction_id,
-            'csrf_token': csrf,
-            'TRANSID': transaction_id,
-        }
 
     @staticmethod
     def _parse_new_html_for_keys(r):
@@ -112,7 +94,7 @@ class LASCSession(requests.Session):
         }
 
     @staticmethod
-    def check_login(r):
+    def _check_login(r):
         """Check that the login succeeded
 
         :param r: A request.Response object
@@ -129,6 +111,10 @@ class LASCSession(requests.Session):
         if u"We can't seem to find your account" in message:
             logger.info(u'Invalid Email Address')
             raise LASCLoginException("Invalid Email Address")
+
+    def _update_header_token(self, r):
+        self.headers['X-CSRF-TOKEN'] = r.text.split("csrf")[1].split("\"")[2]
+
 
     def login(self):
         """Log into the LASC Media Access Portal
@@ -202,24 +188,23 @@ class LASCSession(requests.Session):
         :return: None
         :raises: LASCLoginException
         """
-        # Load the page and get the TransID and CSRF Token values from the HTML
+
         logger.info(u'Logging into MAP has begun')
         r = self.get(self.login_url)
-
-        # Set the CSRF header for subsequent requests
-        api_params = self._parse_html_for_api_parameters(r)
-        self.headers['X-CSRF-TOKEN'] = api_params['csrf_token']
+        self._update_header_token(r)
 
         # Call part one of Microsoft login API
-        r = self.post(self.api_url1, params=api_params, data=self.login_data)
-        self.check_login(r)
+        r = self.post(self.api_url1, data=self.login_data)
+        self._check_login(r)
 
         # Call part two of Microsoft login API - Redirect
-        r = self.get(self.api_url2, params=api_params)
+        r = self.get(self.api_url2)
 
         # Finalize login with post into LA MAP site
         parsed_keys = self._parse_new_html_for_keys(r)
+
         self.post(self.signin_url, data=parsed_keys)
+
         logger.info(u'Successfully Logged into MAP')
 
 
