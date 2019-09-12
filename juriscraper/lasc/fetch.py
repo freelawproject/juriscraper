@@ -239,18 +239,17 @@ class LASCSearch(object):
 
         clean_data['TentativeRuling'] = []
         for ruling in data['TentativeRulings']:
-            tenative_ruling = {
+            tentative_ruling = {
                 'date_created': ruling['CreationDate'],
                 'date_hearing': ruling['HearingDate'],
                 'department': ruling['Department'],
                 'ruling': ruling['Ruling']
             }
 
-            clean_data['TentativeRuling'].append(tenative_ruling)
+            clean_data['TentativeRuling'].append(tentative_ruling)
 
         return clean_data
 
-    @staticmethod
     def _check_success(self, r):
         if r.json()['IsSuccess']:
             self.case_data = r.text
