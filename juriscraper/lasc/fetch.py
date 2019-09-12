@@ -100,161 +100,180 @@ class LASCSearch(object):
 
     def _parse_case_data(self):
         """
-        This function Maps the LASC Data to our datamodel
+        This function normalizes the json response we get from LA MAP
+
+        :param case_data:
+        :return:
         :return:
         """
         logger.info(u'Parsing Data')
 
-        data = json.loads(self.case_data)['ResultList'][0]['NonCriminalCaseInformation']
+        data = case_data['ResultList'][0]['NonCriminalCaseInformation']
 
         # Docket Normalization
-        clean_data = {}
-        clean_data['QueuedCase'] = []
-        clean_data['LASCPDF'] = []
-        clean_data['LASCJSON'] = []
+        clean_data = {
+            'QueuedCase': [],
+            'LASCPDF': [],
+            'LASCJSON': []
+        }
 
-        docket = {}
-        docket['date_filed'] = datetime.datetime.strptime(data['CaseInformation']['FilingDate'][0:10],
-                                                                '%Y-%m-%d').date()
-        docket['date_disposition'] = None
-        docket['docket_number'] = data['CaseInformation']['CaseNumber'].strip()
-        docket['district'] = data['CaseInformation']['District'].strip()
-        docket['division_code'] = data['CaseInformation']['DivisionCode'].strip()
-        docket['disposition_type'] = data['CaseInformation']['DispositionType']
-        docket['disposition_type_code'] = ""
-        docket['case_type_str'] = data['CaseInformation']['CaseTypeDescription']
-        docket['case_type_code'] = data['CaseInformation']['CaseType']
-        docket['case_name'] = data['CaseInformation']['CaseTitle'].strip()
-        docket['judge_code'] = ""
-        docket['judge_name'] = data['CaseInformation']['JudicialOfficer']
-        docket['courthouse_name'] = data['CaseInformation']['Courthouse']
+        case_info = data['CaseInformation']
 
-        if data['CaseInformation']['StatusDate'] != None:
-            docket['date_status'] = data['CaseInformation']['StatusDate']
+        docket = {
+            'date_filed': datetime.strptime(
+                case_info['FilingDate'][0:10], '%Y-%m-%d').date(),
+            'date_disposition': None,
+            'docket_number': case_info['CaseNumber'].strip(),
+            'district': case_info['District'].strip(),
+            'division_code': case_info['DivisionCode'].strip(),
+            'disposition_type': case_info['DispositionType'],
+            'disposition_type_code': "",
+            'case_type_str': case_info['CaseTypeDescription'],
+            'case_type_code': case_info['CaseType'],
+            'case_name': case_info['CaseTitle'].strip(),
+            'judge_code': "",
+            'judge_name': case_info['JudicialOfficer'],
+            'courthouse_name': case_info['Courthouse'],
+        }
+
+        if case_info['StatusDate'] is not None:
+            docket['date_status'] = case_info['StatusDate']
             """Need to add in timezone support here"""
-            docket['date_status'] = datetime.datetime. \
-                strptime(data['CaseInformation']['StatusDate'], '%m/%d/%Y') \
+            docket['date_status'] = datetime. \
+                strptime(case_info['StatusDate'], '%m/%d/%Y') \
                 .strftime('%Y-%m-%d %H:%M:%S%z')
         else:
-            docket['date_status'] = data['CaseInformation']['StatusDate']
+            docket['date_status'] = case_info['StatusDate']
 
-        docket['status_code'] = data['CaseInformation']['StatusCode'] if data['CaseInformation'][
-                                                                                   'StatusCode'] != None else ""
-        docket['status_str'] = data['CaseInformation']['Status']
+        docket['status_code'] = case_info['StatusCode'] if \
+            case_info['StatusCode'] is not None else ""
+
+        docket['status_str'] = case_info['Status']
         clean_data['Docket'] = docket
-
 
         # Register of Actions Normalization
         clean_data['Action'] = []
         for action in data['RegisterOfActions']:
-            registered_action = {}
-            registered_action['date_of_action'] = action['RegisterOfActionDate']
-            registered_action['description'] = action['Description']
-            registered_action['additional_information'] = action['AdditionalInformation']
+            registered_action = {
+                'date_of_action': action['RegisterOfActionDate'],
+                'description': action['Description'],
+                'additional_information': action['AdditionalInformation']
+            }
             clean_data['Action'].append(registered_action)
-
 
         # Cross References Normalization
         clean_data['CrossReference'] = []
         for cross_ref in data['CrossReferences']:
-            cross_reference = {}
-            cross_reference['date_cross_reference'] = cross_ref['CrossReferenceDate']
-            cross_reference['cross_reference_docket_number'] = cross_ref['CrossReferenceCaseNumber']
-            cross_reference['cross_reference_type'] = cross_ref['CrossReferenceTypeDescription']
+            cross_reference = {
+                'date_cross_reference': cross_ref['CrossReferenceDate'],
+                'cross_reference_docket_number': cross_ref[
+                    'CrossReferenceCaseNumber'],
+                'cross_reference_type': cross_ref[
+                    'CrossReferenceTypeDescription']
+            }
             clean_data['CrossReference'].append(cross_reference)
-
 
         # Documents Filed
         clean_data['DocumentFiled'] = []
         for doc_filed in data['DocumentsFiled']:
-            document = {}
-            document['date_filed'] = doc_filed['DateFiled']
-            document['memo'] = doc_filed['Memo'] if doc_filed['Memo'] != None else ""
-            document['document_type'] = doc_filed['Document'] if doc_filed['Document'] != None else ""
-            document['party_str'] = doc_filed['Party'] if doc_filed['Party'] != None else ""
+            document = {
+                'date_filed': doc_filed['DateFiled'],
+                'memo': doc_filed['Memo'] or "",
+                'document_type': doc_filed['Document'] or "",
+                'party_str': doc_filed['Party'] or ""
+            }
             clean_data['DocumentFiled'].append(document)
-
 
         clean_data['QueuedPDF'] = []
         clean_data['DocumentImage'] = []
+
         for doc_image in data['DocumentImages']:
-            image = {}
-            pdf_queue = {}
-            image['date_processed'] = doc_image['createDate']
-            image['date_filed'] = doc_image['docFilingDate']
-            image['doc_id'] = doc_image['docId']
-            image['page_count'] = doc_image['pageCount']
-            image['document_type'] = doc_image['documentType'] if doc_image['documentType'] != None else ""
-            image['document_type_code'] = doc_image['documentTypeID']
-            image['image_type_id'] = doc_image['imageTypeId']
-            image['app_id'] = doc_image['appId'] if doc_image['appId'] != None else ""
-            image['odyssey_id'] = doc_image['OdysseyID'] if doc_image['OdysseyID'] != None else ""
-            image['is_downloadable'] = doc_image['IsDownloadable']
-            image['security_level'] = doc_image['securityLevel']
-            image['description'] = doc_image['description']
-            image['doc_part'] = doc_image['docPart'] if doc_image['docPart'] != None else ""
-            image['is_available'] = False
+            image = {
+                'date_processed': doc_image['createDate'],
+                'date_filed': doc_image['docFilingDate'],
+                'doc_id': doc_image['docId'],
+                'page_count': doc_image['pageCount'],
+                'document_type': doc_image['documentType'] or '',
+                'document_type_code': doc_image['documentTypeID'],
+                'image_type_id': doc_image['imageTypeId'],
+                'app_id': doc_image['appId'] or "",
+                'odyssey_id': doc_image['OdysseyID'] or '',
+                'is_downloadable': doc_image['IsDownloadable'],
+                'security_level': doc_image['securityLevel'],
+                'description': doc_image['description'],
+                'doc_part': doc_image['docPart'] or '',
+                'is_available': False,
+            }
 
-            pdf_queue['internal_case_id'] = data['CaseInformation']['CaseID']
-            pdf_queue['document_id'] = doc_image['docId']
+            pdf_queue = {
+                'internal_case_id': data['CaseInformation']['CaseID'],
+                'document_id': doc_image['docId'],
+            }
 
-            clean_data['QueuedPDF'].append(pdf_queue)
             clean_data['DocumentImage'].append(image)
-
+            clean_data['QueuedPDF'].append(pdf_queue)
 
         clean_data['Party'] = []
         for party in data['Parties']:
-            party_obj = {}
-            party_obj['attorney_name'] = party['AttorneyName']
-            party_obj['attorney_firm'] = party['AttorneyFirm']
-            party_obj['entity_number'] = party['EntityNumber']
-            party_obj['party_name'] = party['Name']
-            party_obj['party_flag'] = party['PartyFlag']
-            party_obj['party_type_code'] = party['PartyTypeCode']
-            party_obj['party_description'] = party['PartyDescription']
-            clean_data['Party'].append(party_obj)
+            party_obj = {
+                'attorney_name': party['AttorneyName'],
+                'attorney_firm': party['AttorneyFirm'],
+                'entity_number': party['EntityNumber'],
+                'party_name': party['Name'],
+                'party_flag': party['PartyFlag'],
+                'party_type_code': party['PartyTypeCode'],
+                'party_description': party['PartyDescription']
+            }
 
+            clean_data['Party'].append(party_obj)
 
         clean_data['Proceeding'] = []
         for proceeding in data['PastProceedings']:
-            event = {}
-            event['past_or_future'] = 1
-            event['date_proceeding'] = proceeding['ProceedingDate']
-            event['proceeding_time'] = proceeding['ProceedingTime']
-            event['proceeding_room'] = proceeding['ProceedingRoom']
-            event['am_pm'] = proceeding['AMPM']
-            event['memo'] = proceeding['Memo']
-            event['courthouse_name'] = proceeding['CourthouseName']
-            event['address'] = proceeding['Address']
-            event['result'] = proceeding['Result']
-            event['judge_name'] = proceeding['Judge']
-            event['event'] = proceeding['Event']
+            event = {
+                'past_or_future': 1,
+                'date_proceeding': proceeding['ProceedingDate'],
+                'proceeding_time': proceeding['ProceedingTime'],
+                'proceeding_room': proceeding['ProceedingRoom'],
+                'am_pm': proceeding['AMPM'], 'memo': proceeding['Memo'],
+                'courthouse_name': proceeding['CourthouseName'],
+                'address': proceeding['Address'],
+                'result': proceeding['Result'],
+                'judge_name': proceeding['Judge'],
+                'event': proceeding['Event']
+            }
             clean_data['Proceeding'].append(event)
 
         for proceeding in data['FutureProceedings']:
-            event = {}
-            event['past_or_future'] = 2
-            event['date_proceeding'] = proceeding['ProceedingDate']
-            event['proceeding_time'] = proceeding['ProceedingTime']
-            event['proceeding_room'] = proceeding['ProceedingRoom']
-            event['am_pm'] = proceeding['AMPM']
-            event['memo'] = proceeding['Memo']
-            event['courthouse_name'] = proceeding['CourthouseName']
-            event['address'] = proceeding['Address']
-            event['result'] = proceeding['Result']
-            event['judge_name'] = proceeding['Judge']
-            event['event'] = proceeding['Event']
+            event = {
+                'past_or_future': 2,
+                'date_proceeding': proceeding['ProceedingDate'],
+                'proceeding_time': proceeding['ProceedingTime'],
+                'proceeding_room': proceeding['ProceedingRoom'],
+                'am_pm': proceeding['AMPM'], 'memo': proceeding['Memo'],
+                'courthouse_name': proceeding['CourthouseName'],
+                'address': proceeding['Address'],
+                'result': proceeding['Result'],
+                'judge_name': proceeding['Judge'],
+                'event': proceeding['Event']
+            }
             clean_data['Proceeding'].append(event)
-
 
         clean_data['TentativeRuling'] = []
         for ruling in data['TentativeRulings']:
-            tenative_ruling = {}
-            tenative_ruling['date_created'] = ruling['CreationDate']
-            tenative_ruling['date_hearing'] = ruling['HearingDate']
-            tenative_ruling['department'] = ruling['Department']
-            tenative_ruling['ruling'] = ruling['Ruling']
+            tenative_ruling = {
+                'date_created': ruling['CreationDate'],
+                'date_hearing': ruling['HearingDate'],
+                'department': ruling['Department'],
+                'ruling': ruling['Ruling']
+            }
 
             clean_data['TentativeRuling'].append(tenative_ruling)
 
-        self.normalized_case_data = clean_data
+        return clean_data
+
+    @staticmethod
+    def _check_success(r):
+        if r.json()['IsSuccess']:
+            logger.info(u'Successful query into LASC map')
+        else:
+            logger.info(u'Failure to query into LASC map')
