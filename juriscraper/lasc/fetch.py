@@ -46,106 +46,25 @@ class LASCSearch(object):
         :return:
         """
 
-        self.lasc.get(self.GetCaseDetail % (self.api_base, internal_case_id), hooks={'response': [self.check_success]})
-
-    def _get_case_list_for_last_seven_days(self):
-        dt = datetime.datetime.today()
-        date_string = dt.strftime('%m-%d-%Y')
-        minus_seven = datetime.timedelta(days=-7)
-        last_week = (dt + minus_seven).strftime('%m-%d-%Y')
-        self.date_query = self.GetRecentCivilCases % (self.api_base, last_week, date_string)
-        self.date_case_list = self.lasc.get(self.date_query).text
+        r = self.session.get(self.GetCaseDetail % (self.api_base, internal_case_id))
+        self.check_success(r)
 
     def _get_cases_around_dates(self, date1, date2):
         self.date_query = self.GetRecentCivilCases % (self.api_base, date1, date2)
         self.date_case_list = self.lasc.get(self.date_query).text
 
-    def _get_case_list_for_date(self, date_string):
-        """
-        # date string is MM-DD-YYYY (ex. 12-31-2018)
-        # This query will need to be repeated back dated to get files uploaded later and added to the database
-
-        :param date_string:
-        :return:
-        """
-        self.date_query = self.GetRecentCivilCases % (self.api_base, date_string, date_string)
-        self.date_case_list = self.lasc.get(self.date_query).text
-
-    def _get_pdf_by_case_and_document_id(self, case_id, doc_id):
-        """
-        # Using the unique internal case id information and document id we can collect all the pdfs
-
-        :param case_id:
-        :param doc_id:
-        :return:
-        """
-
-        logger.info(u'Api ViewDocument called.  Downloading PDF ')
-        self.pdf_url = self.ViewDocument % (self.api_base, case_id, doc_id)
-        self.pdf_data = self.lasc.get(self.pdf_url).content
 
     def _get_pdf_from_url(self, pdf_url):
         """
         # Using the unique internal case id information and document id we can collect all the pdfs
 
-        :param case_id:
-        :param doc_id:
+        :param pdf_url:
         :return:
         """
 
         logger.info(u'Api ViewDocument called.  Downloading PDF ')
+        self.pdf_data = self.session.get(pdf_url).content
 
-        self.pdf_data = self.lasc.get(pdf_url).content
-
-    def _get_pdfs_from_urls(self, pdf_urls):
-        """
-        # Using the unique internal case id information and document id we can collect all the pdfs
-
-        :param case_id:
-        :param doc_id:
-        :return:
-        """
-
-        # logger.info(u'Api ViewDocument called.  Downloading PDF ')
-        # self.pdf_data = self.lasc.get(pdf_url).content
-
-        from multiprocessing.dummy import Pool
-        pool = Pool(10)
-
-        futures = []
-        for url in pdf_urls:
-            futures.append(pool.apply_async(self.lasc.get, [url]))
-
-        for future in futures:
-            self.pdfs_data.append(future.get().content)
-
-    def _get_internal_id(self, *args, **kwargs):
-        self.internal_case_id = json.loads(args[0].text)['ResultList'][0]['NonCriminalCases'][0]['CaseID']
-
-    # This function probably works 99% of the time.
-    # But it is unknown how common if at all case numbers are repeated in unlimited cases.
-    # Currently it grabs the first result, if a case number is not unique.
-    def _get_case_by_case_id(self, case_id):
-        """
-
-        :param case_id:
-        :return:
-        """
-        logger.info(u'Search case by case id only. Assumes first result is the only result.')
-
-        self.case_search_url = self.GetCaseList % (self.api_base, case_id)
-        self.lasc.get(self.case_search_url, hooks={'response': [self._get_internal_id]})
-        self._get_json_from_internal_case_id(self.internal_case_id)
-
-    # Future function to check for updates to case by ID
-    def _check_for_update_to_case(self, internal_case_id):
-        """
-
-        :param internal_case_id:
-        :return:
-        """
-
-        pass
 
     def _parse_date_data(self):
         logger.info(u'Parsing Date Data')
@@ -153,9 +72,9 @@ class LASCSearch(object):
 
         for data in datum:
             for k, v in data.items():
-                data["_".join(l.lower() for l in re.findall('[A-Z][^A-Z]*', k)).replace("_i_d", "_id").replace("disp_",
-                                                                                                               "disposition_")] = data.pop(
-                    k)
+                data["_".join(l.lower() for l in re.findall('[A-Z][^A-Z]*', k))
+                    .replace("_i_d", "_id").replace("disp_","disposition_")] = data.pop(k)
+
             data['case_id'] = data['internal_case_id']
             if data['judge_code'] == None:
                 data['judge_code'] = ""
