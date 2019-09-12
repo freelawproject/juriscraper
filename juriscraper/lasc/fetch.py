@@ -89,24 +89,20 @@ class LASCSearch(object):
         logger.info(u'Api ViewDocument called.  Downloading PDF ')
         self.pdf_data = self.session.get(pdf_url).content
 
-
-    def _parse_date_data(self):
+    def _parse_dates(self, cases):
         logger.info(u'Parsing Date Data')
-        datum = json.loads(self.date_case_list)['ResultList']
+        normal_cases = []
+        for case in cases:
+            clean_case = {
+                "internal_case_id": case['InternalCaseID'],
+                "judge_code": case['JudicialOfficer'],
+                "case_type_code": case['CaseTypeCode']
+            }
+            normal_cases.append(clean_case)
 
-        for data in datum:
-            for k, v in data.items():
-                data["_".join(l.lower() for l in re.findall('[A-Z][^A-Z]*', k))
-                    .replace("_i_d", "_id").replace("disp_","disposition_")] = data.pop(k)
+        return normal_cases
 
-            data['case_id'] = data['internal_case_id']
-            if data['judge_code'] == None:
-                data['judge_code'] = ""
-            if data['case_type_code'] == None:
-                data['case_type_code'] = ""
-            del data['internal_case_id']
 
-        self.normalized_date_data = datum
 
     def _parse_case_data(self):
         """
