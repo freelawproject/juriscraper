@@ -296,10 +296,11 @@ Version History
 - 1.22.* - Adds support for de_seqno values parsed from PACER RSS, dockets, docket history reports, and attachment pages.
 - 1.23.* - Adds support for the advacned case report when it returns search results instead of a single item.
 - 1.24.* - Adds support for bankruptcy claims register parsing and querying
+- 1.25.* - Major refactor of tests to split them into network and local tests. Should make CI more consistent.
 
 **Current**
 
-- 1.25.* - Major refactor of tests to split them into network and local tests. Should make CI more consistent.
+ - 1.26.* - Adds support for the Los Angeles Superior Court Media Access Portal (LASC MAP)
 
 **Future Goals**
 
