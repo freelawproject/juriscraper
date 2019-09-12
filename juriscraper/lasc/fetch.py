@@ -30,11 +30,11 @@ class LASCSearch(object):
         self.normalized_case_data = None
         self.normalized_date_data = None
 
-    def check_success(self, *args, **kwargs):
+    def check_success(self, r):
 
-        if json.loads(args[0].text)['IsSuccess'] == True:
+        if json.loads(r.text)['IsSuccess'] == True:
             logger.info(u'Successful query into LASC map')
-            self.case_data = args[0].text
+            self.case_data = r.text
         else:
             logger.info(u'Failure to query into LASC map')
 
