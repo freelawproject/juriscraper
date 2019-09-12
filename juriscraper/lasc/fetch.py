@@ -17,22 +17,9 @@ class LASCSearch(object):
     def __init__(self, session):
 
         self.session = session
-        self.api_base = "https://media.lacourt.org/api/AzureApi/"
+        self.api_base = "media.lacourt.org/api/AzureApi/"
 
-        self.case_data = None
-        self.date_case_list = None
-        self.pdf_data = None
-        self.normalized_case_data = None
-
-    def check_success(self, r):
-
-        if json.loads(r.text)['IsSuccess'] == True:
-            logger.info(u'Successful query into LASC map')
-            self.case_data = r.text
-        else:
-            logger.info(u'Failure to query into LASC map')
-
-    def _get_json_from_internal_case_id(self, internal_case_id):
+    def get_json_from_internal_case_id(self, internal_case_id):
         """
         Query LASC for the case json based on the internal case id
 
@@ -40,8 +27,9 @@ class LASCSearch(object):
         :return:
         """
 
-        r = self.session.get("%sGetCaseDetail/%s" % (self.api_base, internal_case_id))
-        self.check_success(r)
+        r = self.session.get("https://%sGetCaseDetail/%s" %
+                             (self.api_base, internal_case_id))
+        self._check_success(r)
 
 
     def query_cases_by_date(self, start, end):
@@ -96,9 +84,20 @@ class LASCSearch(object):
 
         return normal_cases
 
+    def get_pdf_from_url(self, pdf_url):
+        """
+        Using the unique internal case id information and
+        document id we can collect all the pdfs
 
+        :param pdf_url:
+        :return:
+        """
 
-    def _parse_case_data(self):
+        logger.info(u'Api ViewDocument called.  Downloading PDF ')
+        return self.session.get(pdf_url).content
+
+    @staticmethod
+    def _parse_case_data(case_data):
         """
         This function normalizes the json response we get from LA MAP
 
