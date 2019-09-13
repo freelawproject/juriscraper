@@ -58,7 +58,7 @@ class LASCSearch(object):
         for case in cases:
             clean_case = {
                 "internal_case_id": case['InternalCaseID'],
-                "judge_code": case['JudicialOfficer'],
+                "judge_code": case['JudgeCode'],
                 "case_type_code": case['CaseTypeCode']
             }
             normal_cases.append(clean_case)
