@@ -89,9 +89,13 @@ class LASCSearch(object):
         calling this method.)
         :return: The parsed, cleaned, normalized data
         """
-        logger.info(u'Parsing Data')
+        logger.info(u'Parsing lasc data from returned JSON into normalized '
+                    u'format')
 
-        data = case_data['ResultList'][0]['NonCriminalCaseInformation']
+        try:
+            data = case_data['ResultList'][0]['NonCriminalCaseInformation']
+        except TypeError:
+            data = case_data[0]['NonCriminalCaseInformation']
 
         # Docket Normalization
         clean_data = {
