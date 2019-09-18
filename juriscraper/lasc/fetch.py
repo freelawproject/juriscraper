@@ -92,7 +92,10 @@ class LASCSearch(object):
         """
         logger.info(u'Parsing Data')
 
-        data = case_data['ResultList'][0]['NonCriminalCaseInformation']
+        try:
+            data = case_data['ResultList'][0]['NonCriminalCaseInformation']
+        except TypeError:
+            data = case_data[0]['NonCriminalCaseInformation']
 
         # Docket Normalization
         clean_data = {
