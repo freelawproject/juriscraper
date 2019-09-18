@@ -86,11 +86,11 @@ class LASCSearch(object):
         """
         This function normalizes the json response we get from LA MAP
 
-        :param case_data:
-        :return:
-        :return:
+        :param case_data: A python object containing the docket data
+        :return: The parsed data with normalized fields
         """
-        logger.info(u'Parsing Data')
+        logger.info(u'Parsing lasc data from returned JSON into normalized '
+                    u'format')
 
         try:
             data = case_data['ResultList'][0]['NonCriminalCaseInformation']
