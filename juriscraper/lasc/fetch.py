@@ -205,7 +205,7 @@ class LASCSearch(object):
                 'entity_number': party['EntityNumber'],
                 'party_name': party['Name'],
                 'party_flag': party['PartyFlag'],
-                'party_type_code': party['PartyTypeCode'],
+                'party_type_code': party['PartyTypeCode'] or "",
                 'party_description': party['PartyDescription']
             }
             clean_data['Party'].append(party_obj)
