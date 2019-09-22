@@ -11,7 +11,7 @@
       "description": "REQUEST FOR DISMISSAL"
     }, 
     {
-      "additional_information": "<ul><li>Event Time: 08:30 AM</li><li>Event Room:  69</li><li>Result:  </li><li>Memo: OSC RE Dismissal; Order of Dismissal</li></ul>", 
+      "additional_information": "<ul><li>Event Time: 08:30 AM</li><li>Event Room: 69</li><li>Result: </li><li>Memo: OSC RE Dismissal; Order of Dismissal</li></ul>", 
       "date_of_action": "2018-02-08T23:00:00-08:00", 
       "description": ""
     }, 
@@ -21,7 +21,7 @@
       "description": "Minute Order"
     }, 
     {
-      "additional_information": "<ul><li>Event Time: 08:30 AM</li><li>Event Room:  69</li><li>Result:  </li><li>Memo: Conference-Case Management; Not held</li></ul>", 
+      "additional_information": "<ul><li>Event Time: 08:30 AM</li><li>Event Room: 69</li><li>Result: </li><li>Memo: Conference-Case Management; Not held</li></ul>", 
       "date_of_action": "2018-01-08T23:00:00-08:00", 
       "description": "Case Management Conference"
     }, 
@@ -31,7 +31,7 @@
       "description": "Minute Order"
     }, 
     {
-      "additional_information": "<ul><li>Event Time: 08:30 AM</li><li>Event Room:  69</li><li>Result:  </li><li>Memo: Conference-Case Management; Continued by Court</li></ul>", 
+      "additional_information": "<ul><li>Event Time: 08:30 AM</li><li>Event Room: 69</li><li>Result: </li><li>Memo: Conference-Case Management; Continued by Court</li></ul>", 
       "date_of_action": "2017-11-30T23:00:00-08:00", 
       "description": "Case Management Conference"
     }, 
@@ -61,7 +61,7 @@
       "description": "CASE MANAGEMENT STATEMENT"
     }, 
     {
-      "additional_information": "<ul><li>Event Time: 08:30 AM</li><li>Event Room:  69</li><li>Result:  </li><li>Memo: OSC - No Return of Service; OSC Discharged</li></ul>", 
+      "additional_information": "<ul><li>Event Time: 08:30 AM</li><li>Event Room: 69</li><li>Result: </li><li>Memo: OSC - No Return of Service; OSC Discharged</li></ul>", 
       "date_of_action": "2017-10-03T00:00:00-07:00", 
       "description": ""
     }, 
@@ -71,7 +71,7 @@
       "description": "Minute Order"
     }, 
     {
-      "additional_information": "<ul><li>Party: Nissan North America, Inc.                (Defendant)</li></ul>", 
+      "additional_information": "<ul><li>Party: Nissan North America, Inc. (Defendant)</li></ul>", 
       "date_of_action": "2017-09-11T00:00:00-07:00", 
       "description": "Answer"
     }, 
@@ -81,7 +81,7 @@
       "description": "DEFENDANT NISSAN NORTH AMERICA, INC.'S ANSWER TO PLAINTIFF'S UNVERIFIED COMPLAINT FOR BREACH OF WARRANTIES"
     }, 
     {
-      "additional_information": "<ul><li>Event Time: 11:28 AM</li><li>Event Room:  69</li><li>Result:  </li><li>Memo: Affidavit of Prejudice; Denied</li></ul>", 
+      "additional_information": "<ul><li>Event Time: 11:28 AM</li><li>Event Room: 69</li><li>Result: </li><li>Memo: Affidavit of Prejudice; Denied</li></ul>", 
       "date_of_action": "2017-08-24T00:00:00-07:00", 
       "description": ""
     }, 
@@ -103,7 +103,7 @@
     {
       "additional_information": "<ul></ul>", 
       "date_of_action": "2017-08-22T00:00:00-07:00", 
-      "description": "PEREMPTORY CHAL.LENGE TO JUDICIAL OFFICER (CODE CIV. PROC.,  170.6)"
+      "description": "PEREMPTORY CHAL.LENGE TO JUDICIAL OFFICER (CODE CIV. PROC., 170.6)"
     }, 
     {
       "additional_information": "<ul><li>Party: Clerk</li></ul>", 
@@ -235,7 +235,7 @@
       "date_filed": "2017-09-11T00:00:00-07:00", 
       "document_type": "Answer", 
       "memo": "", 
-      "party_str": "Nissan North America, Inc.                (Defendant)"
+      "party_str": "Nissan North America, Inc. (Defendant)"
     }, 
     {
       "date_filed": "2017-09-11T00:00:00-07:00", 
@@ -263,7 +263,7 @@
     }, 
     {
       "date_filed": "2017-08-22T00:00:00-07:00", 
-      "document_type": "PEREMPTORY CHAL.LENGE TO JUDICIAL OFFICER (CODE CIV. PROC.,  170.6)", 
+      "document_type": "PEREMPTORY CHAL.LENGE TO JUDICIAL OFFICER (CODE CIV. PROC., 170.6)", 
       "memo": "", 
       "party_str": ""
     }, 
@@ -573,9 +573,9 @@
       "judge_name": "", 
       "memo": "OSC RE Dismissal; Order of Dismissal", 
       "past_or_future": 1, 
-      "proceeding_room": " 69", 
+      "proceeding_room": "69", 
       "proceeding_time": "08:30", 
-      "result": " "
+      "result": ""
     }, 
     {
       "address": "", 
@@ -586,9 +586,9 @@
       "judge_name": "", 
       "memo": "Conference-Case Management; Not held", 
       "past_or_future": 1, 
-      "proceeding_room": " 69", 
+      "proceeding_room": "69", 
       "proceeding_time": "08:30", 
-      "result": " "
+      "result": ""
     }, 
     {
       "address": "", 
@@ -599,9 +599,9 @@
       "judge_name": "", 
       "memo": "Conference-Case Management; Continued by Court", 
       "past_or_future": 1, 
-      "proceeding_room": " 69", 
+      "proceeding_room": "69", 
       "proceeding_time": "08:30", 
-      "result": " "
+      "result": ""
     }, 
     {
       "address": "", 
@@ -612,9 +612,9 @@
       "judge_name": "", 
       "memo": "OSC - No Return of Service; OSC Discharged", 
       "past_or_future": 1, 
-      "proceeding_room": " 69", 
+      "proceeding_room": "69", 
       "proceeding_time": "08:30", 
-      "result": " "
+      "result": ""
     }, 
     {
       "address": "", 
@@ -625,9 +625,9 @@
       "judge_name": "", 
       "memo": "Affidavit of Prejudice; Denied", 
       "past_or_future": 1, 
-      "proceeding_room": " 69", 
+      "proceeding_room": "69", 
       "proceeding_time": "11:28", 
-      "result": " "
+      "result": ""
     }
   ], 
   "QueuedCase": [], 

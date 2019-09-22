@@ -1,4 +1,5 @@
 from ..lib.log_tools import make_default_logger
+from ..lib.utils import clean_court_object
 from datetime import datetime, timedelta
 from dateutil.rrule import rrule, WEEKLY
 
@@ -110,14 +111,14 @@ class LASCSearch(object):
             'date_filed': datetime.strptime(
                 case_info['FilingDate'][0:10], '%Y-%m-%d').date(),
             'date_disposition': None,
-            'docket_number': case_info['CaseNumber'].strip(),
-            'district': case_info['District'].strip(),
-            'division_code': case_info['DivisionCode'].strip(),
+            'docket_number': case_info['CaseNumber'],
+            'district': case_info['District'],
+            'division_code': case_info['DivisionCode'],
             'disposition_type': case_info['DispositionType'],
             'disposition_type_code': "",
             'case_type_str': case_info['CaseTypeDescription'],
             'case_type_code': case_info['CaseType'],
-            'case_name': case_info['CaseTitle'].strip(),
+            'case_name': case_info['CaseTitle'] or '',
             'judge_code': "",
             'judge_name': case_info['JudicialOfficer'],
             'courthouse_name': case_info['Courthouse'],
@@ -251,6 +252,8 @@ class LASCSearch(object):
             }
 
             clean_data['TentativeRuling'].append(tentative_ruling)
+
+        clean_data = clean_court_object(clean_data)
 
         return clean_data
 
