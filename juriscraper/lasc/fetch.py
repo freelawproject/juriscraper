@@ -152,7 +152,7 @@ class LASCSearch(object):
             cross_reference = {
                 'date_cross_reference': cross_ref['CrossReferenceDate'],
                 'cross_reference_docket_number': cross_ref[
-                    'CrossReferenceCaseNumber'],
+                    'CrossReferenceCaseNumber'] or '',
                 'cross_reference_type': cross_ref[
                     'CrossReferenceTypeDescription']
             }
@@ -184,7 +184,7 @@ class LASCSearch(object):
                 'odyssey_id': doc_image['OdysseyID'] or '',
                 'is_downloadable': doc_image['IsDownloadable'],
                 'security_level': doc_image['securityLevel'],
-                'description': doc_image['description'],
+                'description': doc_image['description'] or '',
                 'doc_part': doc_image['docPart'] or '',
                 'is_available': False,
             }
@@ -205,8 +205,8 @@ class LASCSearch(object):
                 'entity_number': party['EntityNumber'],
                 'party_name': party['Name'],
                 'party_flag': party['PartyFlag'],
-                'party_type_code': party['PartyTypeCode'] or "",
-                'party_description': party['PartyDescription']
+                'party_type_code': party['PartyTypeCode'] or '',
+                'party_description': party['PartyDescription'] or '',
             }
             clean_data['Party'].append(party_obj)
 
