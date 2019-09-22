@@ -9,11 +9,12 @@ import feedparser
 from requests import Session
 
 from .docket_report import DocketReport
-from .utils import clean_pacer_object, get_pacer_case_id_from_nonce_url, \
+from .utils import get_pacer_case_id_from_nonce_url, \
     get_pacer_doc_id_from_doc1_url, get_pacer_seq_no_from_doc1_url
 from ..lib.html_utils import html_unescape
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import clean_string, harmonize
+from ..lib.utils import clean_court_object
 
 logger = make_default_logger()
 
@@ -182,7 +183,7 @@ class PacerRssFeed(DocketReport):
             u'demand': '',
             u'jurisdiction': '',
         }
-        data = clean_pacer_object(data)
+        data = clean_court_object(data)
         return data
 
     @property

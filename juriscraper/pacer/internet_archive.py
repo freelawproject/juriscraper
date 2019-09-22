@@ -5,11 +5,11 @@ from requests import Session
 import six
 from .docket_report import BaseDocketReport
 from .docket_utils import normalize_party_types
-from .utils import clean_pacer_object, get_docketxml_url, get_pdf_url, is_pdf
+from .utils import get_docketxml_url, get_pdf_url, is_pdf
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import clean_string, convert_date_string, harmonize
-from ..lib.utils import previous_and_next
+from ..lib.utils import clean_court_object, previous_and_next
 
 logger = make_default_logger()
 
@@ -95,7 +95,7 @@ class InternetArchive(BaseDocketReport):
             u'demand': '',
             u'jurisdiction': self._get_str_from_tree('//jurisdiction'),
         }
-        data = clean_pacer_object(data)
+        data = clean_court_object(data)
         self._metadata = data
         return data
 
@@ -207,7 +207,7 @@ class InternetArchive(BaseDocketReport):
                 continue
             docket_entries.append(de)
 
-        docket_entries = clean_pacer_object(docket_entries)
+        docket_entries = clean_court_object(docket_entries)
         self._docket_entries = docket_entries
         return docket_entries
 

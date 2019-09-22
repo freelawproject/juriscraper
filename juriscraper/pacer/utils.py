@@ -3,9 +3,6 @@ import re
 import requests
 import tldextract
 from lxml import html
-from six import string_types
-
-from ..lib.string_utils import force_unicode
 
 
 def get_pacer_court_info():
@@ -183,41 +180,6 @@ def get_nonce_from_form(r):
         if '-L_' in nonce:
             return nonce
     return None
-
-
-def clean_pacer_object(obj):
-    """Clean a list or dict that is part of a scraping response.
-
-    PACER data is notoriously horrible, so this function attempts to clean up
-    common problems that it may have. You can pass in either a dict or a list,
-    and it will be cleaned recursively.
-
-    Supported cleanup includes:
-
-    1. Removing spaces before commas.
-    1. Stripping whitespace from the ends.
-    1. Normalizing white space.
-    1. Forcing unicode.
-
-    :param obj: A dict or list containing string objects.
-    :return: A dict or list with the string values cleaned.
-    """
-    if isinstance(obj, list):
-        l = []
-        for i in obj:
-            l.append(clean_pacer_object(i))
-        return l
-    elif isinstance(obj, dict):
-        d = {}
-        for k, v in obj.items():
-            d[k] = clean_pacer_object(v)
-        return d
-    elif isinstance(obj, string_types):
-        s = ' '.join(obj.strip().split())
-        s = force_unicode(s)
-        return re.sub('\s+,', ',', s)
-    else:
-        return obj
 
 
 BASE_IA_URL = "https://www.archive.org/download"

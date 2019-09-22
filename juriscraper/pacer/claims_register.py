@@ -4,9 +4,10 @@ import urlparse
 
 from juriscraper.pacer.reports import BaseReport
 from .docket_report import BaseDocketReport
-from .utils import clean_pacer_object, get_pacer_doc_id_from_doc1_url
+from .utils import get_pacer_doc_id_from_doc1_url
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import convert_date_string, force_unicode, harmonize
+from ..lib.utils import clean_court_object
 
 logger = make_default_logger()
 
@@ -92,7 +93,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             data.get('docket_number', ''))
 
         data['case_name'] = harmonize(data['case_name'])
-        data = clean_pacer_object(data)
+        data = clean_court_object(data)
         self._metadata = data
         return data
 

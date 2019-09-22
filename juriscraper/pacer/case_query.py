@@ -10,9 +10,9 @@ from six.moves import range
 
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
-from .utils import clean_pacer_object
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import clean_string, force_unicode, harmonize
+from ..lib.utils import clean_court_object
 
 logger = make_default_logger()
 
@@ -169,7 +169,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
             u'case_name_raw': case_name_raw,
         })
 
-        data = clean_pacer_object(data)
+        data = clean_court_object(data)
 
         self._metadata = data
         return data

@@ -2,13 +2,13 @@
 import re
 
 from .docket_report import DocketReport
-from .utils import clean_pacer_object, get_nonce_from_form, \
-    get_pacer_doc_id_from_doc1_url, get_pacer_seq_no_from_doc1_anchor
+from .utils import get_nonce_from_form, get_pacer_doc_id_from_doc1_url, \
+    get_pacer_seq_no_from_doc1_anchor
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import clean_string, convert_date_string, \
     force_unicode, harmonize
-from ..lib.utils import previous_and_next
+from ..lib.utils import clean_court_object, previous_and_next
 
 logger = make_default_logger()
 
@@ -60,7 +60,7 @@ class DocketHistoryReport(DocketReport):
             u'referred_to_str': self._get_judge(self.referred_to_regex),
         }
 
-        data = clean_pacer_object(data)
+        data = clean_court_object(data)
         self._metadata = data
         return data
 
@@ -158,7 +158,7 @@ class DocketHistoryReport(DocketReport):
         docket_entries = [de for de in docket_entries if
                           de['document_number'] is None or
                           de['document_number'].isdigit()]
-        docket_entries = clean_pacer_object(docket_entries)
+        docket_entries = clean_court_object(docket_entries)
         self._docket_entries = docket_entries
         return docket_entries
 

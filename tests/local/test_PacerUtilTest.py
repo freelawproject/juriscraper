@@ -5,7 +5,8 @@ from __future__ import print_function
 import unittest
 from datetime import date
 
-from juriscraper.pacer.utils import (clean_pacer_object, get_court_id_from_url,
+from juriscraper.lib.utils import clean_court_object
+from juriscraper.pacer.utils import (get_court_id_from_url,
                                      get_pacer_case_id_from_nonce_url,
                                      get_pacer_doc_id_from_doc1_url,
                                      make_doc1_url, reverse_goDLS_function)
@@ -100,4 +101,4 @@ class PacerUtilTest(unittest.TestCase):
             'a': ['asdf, asdf asdf'],
         })
         for test in tests:
-            self.assertEqual(clean_pacer_object(test['q']), test['a'])
+            self.assertEqual(clean_court_object(test['q']), test['a'])

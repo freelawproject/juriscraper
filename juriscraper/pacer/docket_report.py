@@ -11,13 +11,13 @@ from lxml.html import HtmlElement, fromstring, tostring
 
 from .docket_utils import normalize_party_types
 from .reports import BaseReport
-from .utils import clean_pacer_object, get_pacer_doc_id_from_doc1_url, \
+from .utils import get_pacer_doc_id_from_doc1_url, \
     get_pacer_seq_no_from_doc1_anchor
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import clean_string, convert_date_string, \
     force_unicode, harmonize
-from ..lib.utils import previous_and_next
+from ..lib.utils import clean_court_object, previous_and_next
 
 logger = make_default_logger()
 
@@ -350,7 +350,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             u'mdl_status': self._get_value(self.mdl_status_regex,
                                            self.metadata_values)
         }
-        data = clean_pacer_object(data)
+        data = clean_court_object(data)
         self._metadata = data
         return data
 
@@ -609,7 +609,7 @@ class DocketReport(BaseDocketReport, BaseReport):
                 # Increment the party index, so we know to whom we should
                 # associate the criminal data.
                 if criminal_data != empty_criminal_data:
-                    criminal_data = clean_pacer_object(criminal_data)
+                    criminal_data = clean_court_object(criminal_data)
                     parties[current_party_i][u'criminal_data'] = criminal_data
                 current_party_i += 1
                 # Reset section info and criminal data.
@@ -852,7 +852,7 @@ class DocketReport(BaseDocketReport, BaseReport):
                 continue
             docket_entries.append(de)
 
-        docket_entries = clean_pacer_object(docket_entries)
+        docket_entries = clean_court_object(docket_entries)
         self._docket_entries = docket_entries
         return docket_entries
 
