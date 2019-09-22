@@ -145,6 +145,11 @@ class BaseReport(object):
             logger.error("Document not available in case: %s at %s", url,
                          pacer_case_id)
             return None
+        if u'You do not have permission to view this document.' in r.text:
+            logger.warn("Permission denied getting document %s in case %s. "
+                        "It's probably sealed.",
+                        pacer_case_id, url)
+            return None
 
         # Some pacer sites use window.location in their JS, so we have to look
         # for that. See: oknd, 13-cv-00357-JED-FHM, doc #24. But, be warned,
