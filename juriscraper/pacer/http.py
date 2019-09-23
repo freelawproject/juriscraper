@@ -88,6 +88,16 @@ class PacerSession(requests.Session):
         kwargs.setdefault('timeout', 300)
 
         r = super(PacerSession, self).get(url, **kwargs)
+
+        if 'This user has no access privileges defined.' in r.text:
+            # This is a strange error that we began seeing in CM/ECF 6.3.1 at
+            # ILND. You can currently reproduce it by logging in on the central
+            # login page, selecting "Court Links" as your destination, and then
+            # loading: https://ecf.ilnd.uscourts.gov/cgi-bin/WrtOpRpt.pl
+            # The solution when this error shows up is to simply re-run the get
+            # request, so that's what we do here. PACER needs some frustrating
+            # and inelegant hacks sometimes.
+            r = super(PacerSession, self).get(url, **kwargs)
         if auto_login:
             updated = self._login_again(r)
             if updated:
