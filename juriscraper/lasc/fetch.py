@@ -40,19 +40,11 @@ class LASCSearch(object):
         :param end: A date object to end the query
         :return: A list of case metadata objects
         """
-        end = min(end, datetime.today())
-        weekly_dates = rrule(freq=WEEKLY, dtstart=start, until=end)
-        cases = []
-        for dt in weekly_dates:
-            start_str = dt.strftime('%m-%d-%Y')
-            # Ensure end_str does not exceed the user's request. This may
-            # happen on the last iteration.
-            seven_days_later = dt + timedelta(days=7)
-            end_str = min(seven_days_later, end).strftime('%m-%d-%Y')
-            date_query_url = "https://%sGetRecentCivilCases/%s/%s" % (
-                self.api_base, start_str, end_str)
-            r = self.session.get(date_query_url)
-            cases.extend(r.json()['ResultList'])
+
+        date_query_url = "https://%sGetRecentCivilCases/%s/%s" % (
+            self.api_base, start, end)
+        r = self.session.get(date_query_url)
+        cases = r.json()['ResultList']
 
         # Normalize the date data
         normal_cases = []
