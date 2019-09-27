@@ -48,13 +48,13 @@ class DateTest(unittest.TestCase):
 
     def test_date_range_creation(self):
         q_a = ({
-            # Six days (though it looks like five)
+            # Five days (though it looks like four)
             'q': {'start': datetime.date(2017, 1, 1),
                   'end': datetime.date(2017, 1, 5),
                   'gap': 7},
             'a': [(datetime.date(2017, 1, 1), datetime.date(2017, 1, 5))],
         }, {
-            # Seven days (though it looks like six)
+            # Six days (though it looks like five)
             'q': {'start': datetime.date(2017, 1, 1),
                   'end': datetime.date(2017, 1, 6),
                   'gap': 7},
