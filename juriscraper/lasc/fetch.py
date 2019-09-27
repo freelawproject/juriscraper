@@ -40,9 +40,10 @@ class LASCSearch(object):
         :param end: A date object to end the query
         :return: A list of case metadata objects
         """
-
+        start_str = start.strftime('%m-%d-%Y')
+        end_str = end.strftime('%m-%d-%Y')
         date_query_url = "https://%sGetRecentCivilCases/%s/%s" % (
-            self.api_base, start, end)
+            self.api_base, start_str, end_str)
         r = self.session.get(date_query_url)
         cases = r.json()['ResultList']
 
@@ -87,8 +88,10 @@ class LASCSearch(object):
 
         try:
             data = case_data['ResultList'][0]['NonCriminalCaseInformation']
-        except TypeError:
-            data = case_data[0]['NonCriminalCaseInformation']
+        except IndexError:
+            # Some cases don't have any data at all, see: P4160;JCC;CV. When
+            # this happens, Juriscraper returns nothing as well.
+            return {}
 
         # Docket Normalization
         clean_data = {
