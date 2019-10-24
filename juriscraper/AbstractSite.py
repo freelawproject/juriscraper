@@ -97,6 +97,13 @@ class AbstractSite(object):
     def enable_test_mode(self):
         self.method = 'LOCAL'
 
+    def disable_certificate_verification(self):
+        """Scrapers that require this due to website misconfiguration
+        should be checked periodically--calls to this method from
+         site scrapers should be removed when no longer necessary.
+         """
+        self.request['verify'] = False
+
     def test_mode_enabled(self):
         return self.method == 'LOCAL'
 

@@ -164,9 +164,8 @@ class Site(OpinionSite):
         if len(case_number) != 12:
             return False
 
-        # Site has non-chained, bad certificate, need to
-        # ignore ssl verification for now for scraper to work
-        self.request['verify'] = False
+        # HTTPS certificate is bad, but hopefully they'll fix it and we can remove the line below
+        self.disable_certificate_verification()
 
         url = 'https://appellate.kycourts.net/SC/SCDockets/CaseDetails.aspx?cn=%s' % case_number
         html = self._get_html_tree_by_url(url)
