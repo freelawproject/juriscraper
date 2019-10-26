@@ -13,9 +13,9 @@ class Site(OralArgumentSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'https://www.ca10.uscourts.gov/clerk/oral-argument-recordings'
-        # Site has non-chained, bad certificate, need to
-        # ignore ssl verification for now for scraper to work
-        self.request['verify'] = False
+
+        # HTTPS certificate is bad, but hopefully they'll fix it and we can remove the line below
+        self.disable_certificate_verification()
 
     def _get_download_urls(self):
         return get_table_column_links(self.html, 5)
