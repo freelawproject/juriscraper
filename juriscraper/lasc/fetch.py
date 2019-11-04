@@ -30,6 +30,22 @@ class LASCSearch(object):
 
         return self._parse_case_data(r.json())
 
+    def get_json_from_case_id(self, case_id):
+        """Query LASC for the case json based on the case id
+
+        :param case_id: An internal ID of the form, 19STCV25157
+        :return: The parsed docket data for the case requested
+        """
+        r = self.session.get("https://%sGetCaseList/%s" %
+                             (self.api_base, case_id))
+        r.raise_for_status()
+        internal_case_id = r.json()['ResultList'][0]['NonCriminalCases'][0]['CaseID']
+        r = self.session.get("https://%sGetCaseDetail/%s" %
+                             (self.api_base, internal_case_id))
+
+        self._check_success(r)
+        return self._parse_case_data(r.json())
+
     def query_cases_by_date(self, start, end):
         """Query LASC for a list of cases between two dates (inclusive)
 
