@@ -284,8 +284,26 @@ class LASCSearch(object):
         return clean_data
 
     def _check_success(self, r):
+
+        try:
+            r.json()['IsSuccess']
+        except:
+            logger.info(u'Cookie appears invalid')
+            raise LASCFetchException("Bad API response.")
+
+
         if r.json()['IsSuccess']:
             self.case_data = r.text
             logger.info(u'Successful query into LASC map')
         else:
             logger.info(u'Failure to query into LASC map')
+            raise LASCFetchException("Error message returned as: %s\nErrors "
+                                     "are sometimes inaccurate. "  %
+                                     r.json()['ErrorMessage'])
+
+class LASCFetchException(Exception):
+    """
+    Raised when the system cannot authenticate with LASC MAP
+    """
+    def __init__(self, message):
+        Exception.__init__(self, message)
