@@ -99,6 +99,18 @@ class LASCSearch(object):
         main task, then, is to convert the various field names it provides over
         to field names following our conventions.
 
+        Errors Example with malformed case number
+            {
+                u'ErrorCode': 500,
+                u'HasMoreResults': False,
+                u'ErrorMessage': u'Should only return one case
+                            for (1a9STCV23542;SS;CV) but returned multiple.',
+                u'ResultList': [],
+                u'IsSuccess': False,
+                u'Mode': u'production',
+                u'ConfigurationFile': u''
+            }
+
         :param case_data: A python dict of a docket as gathered from the MAP
         (this will be JSON data in the MAP, but convert it to Python before
         calling this method.)
