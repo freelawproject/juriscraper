@@ -96,6 +96,13 @@ class LASCSession(requests.Session):
     def _check_login(r):
         """Check that the login succeeded
 
+        The successful login response, looks like the following.  These are
+        real examples of the response from the court.
+
+        {"status": "400", "message": "Your password is incorrect"}
+        {"status": "200"}
+        We use the message to differentiate between the other failure reasons
+
         :param r: A request.Response object
         :return: None
         :raises LASCLoginException
@@ -107,9 +114,13 @@ class LASCSession(requests.Session):
         if u'Your password is incorrect' in message:
             logger.info(u'Password was incorrect')
             raise LASCLoginException("Invalid username/password")
-        if u"We can't seem to find your account" in message:
+        elif u"We can't seem to find your account" in message:
             logger.info(u'Invalid Email Address')
             raise LASCLoginException("Invalid Email Address")
+        else:
+            logger.info(u'Unknown Login Failure')
+            raise LASCLoginException("Login Failure/Unknown")
+
 
     def _update_header_token(self, r):
         self.headers['X-CSRF-TOKEN'] = r.text.split("csrf")[1].split("\"")[2]
