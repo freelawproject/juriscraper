@@ -61,6 +61,9 @@ class LASCSearch(object):
         date_query_url = "https://%sGetRecentCivilCases/%s/%s" % (
             self.api_base, start, end)
         r = self.session.get(date_query_url)
+
+        self._check_success(r)
+
         cases = r.json()['ResultList']
 
         # Normalize the date data
