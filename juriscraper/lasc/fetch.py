@@ -25,6 +25,7 @@ class LASCSearch(object):
         """
         r = self.session.get("https://%sGetCaseDetail/%s" %
                              (self.api_base, internal_case_id))
+        r.raise_for_status()
         self._check_success(r)
 
         return self._parse_case_data(r.json())
@@ -66,7 +67,9 @@ class LASCSearch(object):
         """
 
         logger.info(u'Api ViewDocument called.  Downloading PDF ')
-        return self.session.get(pdf_url).content
+        r = self.session.get(pdf_url)
+        r.raise_for_status()
+        return r.content
 
     @staticmethod
     def _parse_case_data(case_data):
