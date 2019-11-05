@@ -61,6 +61,29 @@ def get_table_column_links(html, cell_num, path_base=False):
     return html.xpath(path)
 
 
+def get_row_column_text(row, cell_num):
+    """Return string cell value for specified column.
+
+    :param row: HtmlElement
+    :param cell_num: int
+    :return: string
+    """
+    return row.xpath('.//td[%d]' % cell_num)[0].text_content().strip()
+
+
+def get_row_column_links(row, cell_num):
+    """Return string href value for link in specified column.
+
+    NOTE: if there are multiple links in the column, you might
+    need to write your own function.
+
+    :param row: HtmlElement
+    :param cell_num: int
+    :return: string
+    """
+    return row.xpath('.//td[%d]//a/@href' % cell_num)[0]
+
+
 def get_clean_body_content(content, remove_extra_tags=[]):
     """Parse out the body from an html string, clean it up, and send it along.
     """
