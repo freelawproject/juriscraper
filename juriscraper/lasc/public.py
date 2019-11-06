@@ -5,6 +5,11 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 
 class PublicSession(object):
+    """
+    This requires a different version of selenium and firefox webdriver
+    Session needs major revisions but is a being pushed to test on a
+    experimental task-server docker install.
+    """
     def __init__(self, docket_number=None):
         self.data = {
             '__VIEWSTATE' : "",
@@ -69,7 +74,11 @@ class PublicSession(object):
 
 
     def generate_ff(self):
-
+        """
+        This method takes the cookies from the requests session to load up the
+        PDFs neeeded.  Returns the list of PDFs opened.
+        :return:
+        """
         dict_resp_cookies = self.s.cookies.get_dict()
         response_cookies_browser = [{'name': name, 'value': value} for
                                     name, value in dict_resp_cookies.items()]
