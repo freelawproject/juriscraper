@@ -28,13 +28,13 @@ class PublicSession(object):
         self.url3 = "https://www.lacourt.org/paonlineservices/pacommerce/login.aspx?appid=IMG&casetype=CIV"
 
         # self.url2 = None
-        options = Options()
-        options.headless = True
-
-        self.driver = webdriver.Firefox(
-            executable_path=r'/usr/local/bin/geckodriver',
-            options=options,
-            )
+        options = webdriver.ChromeOptions()
+        options.add_argument('headless')
+        options.add_argument("silent")
+        options.add_experimental_option('w3c', False)
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-dev-shm-usage')
+        self.driver = webdriver.Chrome(chrome_options=options)
         self.docket_number = docket_number
 
     def launch_driver(self):
