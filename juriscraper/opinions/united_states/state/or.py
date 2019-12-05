@@ -21,7 +21,7 @@ class Site(OpinionSiteLinear):
                 continue
             ul = header.xpath('./following-sibling::ul')[0]
             for item in ul.xpath('.//li'):
-                # make sure two links are present
+                # Ensure two links are present (skip Petitions for Review rows)
                 # see or_example_2.html
                 anchors = item.xpath('.//a')
                 if not (len(anchors) > 1):
