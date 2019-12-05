@@ -32,8 +32,16 @@ class Site(OpinionSite):
         return [s.split('(')[0] for s in self.html.xpath(path)]
 
     def _get_case_dates(self):
+        dates = []
         path = '//table//tr/td[3]/font/text()'
-        return [convert_date_string(date_string) for date_string in self.html.xpath(path)]
+        for date_string in self.html.xpath(path):
+            # Logic in line below handles use case where date cell shows text
+            # like '2019-11-14 corrected 2019-11-19' instead of '2019-11-19'.
+            # See: mdctspecapp_example_2.html
+            date_string = date_string.split()[-1]
+            date_ = convert_date_string(date_string)
+            dates.append(date_)
+        return dates
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
