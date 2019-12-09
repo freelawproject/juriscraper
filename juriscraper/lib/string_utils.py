@@ -299,7 +299,7 @@ def harmonize(text):
     text = re.sub(re.compile(r' v '), u' v. ', text)
 
     # and finally, vs with v.
-    text = re.sub(re.compile(r' vs '), u' v. ', text)
+    text = re.sub(re.compile(r' vs ', re.IGNORECASE), u' v. ', text)
 
     # Remove the BAD_WORDS.
     text = text.split()
