@@ -28,6 +28,9 @@ class OpinionSiteLinear(OpinionSite):
     def _get_case_dates(self):
         return [convert_date_string(case['date']) for case in self.cases]
 
+    def _get_date_filed_is_approximate(self):
+        return [case.get('date_filed_is_approximate', False) for case in self.cases]
+
     def _get_precedential_statuses(self):
         if not self.status:
             raise Exception("Must define self.status in __init__ on OpinionSiteLinear child")
