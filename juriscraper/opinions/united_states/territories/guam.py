@@ -28,7 +28,8 @@ class Site(OpinionSiteLinear):
         self.back_scrape_iterable = range(1996, self._year)
 
     def _process_html(self):
-        middle_of_year = 'July 2, %d' % self._year
+        year = 2019 if self.test_mode_enabled() else self._year
+        middle_of_year = 'July 2, %d' % year
 
         for table in self.html.xpath('//a[@id="Opinion"]/following-sibling::table'):
             text = table.xpath('.//td/text()')[0]
