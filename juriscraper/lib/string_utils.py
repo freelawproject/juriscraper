@@ -557,7 +557,8 @@ class CaseNameTweaker(object):
         # corp_acros = ['L.L.C.', 'L.L.L.P.', 'L.L.P.', 'L.P.', 'P.A.', 'P.C.',
         #              'P.L.L.C.', ]
         # corp_acros_sans_dots = [acro.replace('.', '') for acro in corp_acros]
-        common_names = [u'state', u'people', u'smith', u'johnson']
+        common_names = [u'state', u'people', u'smith', u'johnson', u'commissioner']
+
         ags = [u'Akerman', u'Ashcroft', u'Barr', u'Bates', u'Bell', u'Berrien',
                u'Biddle', u'Black', u'Bonaparte', u'Bork', u'Bradford',
                u'Breckinridge', u'Brewster', u'Brownell', u'Butler',
