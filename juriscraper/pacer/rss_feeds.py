@@ -123,7 +123,11 @@ class PacerRssFeed(DocketReport):
         https://github.com/freelawproject/juriscraper/issues/195#issuecomment-385848344
         """
         logger.info(u"Querying the RSS feed for %s" % self.court_id)
-        timeout = 5
+        # The timeout here is a bit tricky. Too long, and national PACER
+        # outages cause us grief. Too short and slow courts don't get done.
+        # Previously, this value has been (60, 300), then 5. Hopefully the
+        # below is a reasonable middle ground.
+        timeout = (5, 20)
         self.response = self.session.get(self.url, timeout=timeout)
 
     def parse(self):
