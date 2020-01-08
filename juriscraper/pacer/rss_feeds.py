@@ -9,8 +9,11 @@ import feedparser
 from requests import Session
 
 from .docket_report import DocketReport
-from .utils import get_pacer_case_id_from_nonce_url, \
-    get_pacer_doc_id_from_doc1_url, get_pacer_seq_no_from_doc1_url
+from .utils import (
+    get_pacer_case_id_from_nonce_url,
+    get_pacer_doc_id_from_doc1_url,
+    get_pacer_seq_no_from_doc1_url,
+)
 from ..lib.html_utils import html_unescape
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import clean_string, harmonize
@@ -19,15 +22,15 @@ from ..lib.utils import clean_court_object
 logger = make_default_logger()
 
 """
-As of 2018-04-25, the jurisdictions below do not have functional RSS feeds. I 
+As of 2018-04-25, the jurisdictions below do not have functional RSS feeds. I
 reached out to all of these jurisdictions and heard back the following:
- 
+
  - miwb: Sent email. Left a VM.
- - nceb: "The Judges in our District have given direction that they do not want 
-   the RSS feed turned on in our court.  This has been discussed several times 
+ - nceb: "The Judges in our District have given direction that they do not want
+   the RSS feed turned on in our court.  This has been discussed several times
    and their decision remains the same."
-    - Update via email: "At this time, the court declined to participate.  
-      However, the court anticipates transitioning to the NextGen version of 
+    - Update via email: "At this time, the court declined to participate.
+      However, the court anticipates transitioning to the NextGen version of
       CM/ECF in 2019 and will likely participate at that time.
  - nmib (Northern Mariana Islands, 17 hours ahead): Sent email.
  - alnd: Sent email.
@@ -35,36 +38,36 @@ reached out to all of these jurisdictions and heard back the following:
  - flnd: Sent email.
  - gand: Left a message at the "Systems" department
  - gasd: Sent email.
- - hid: Sent email. 808-541-1304, Lian Abernathy, Chief Deputy 
+ - hid: Sent email. 808-541-1304, Lian Abernathy, Chief Deputy
  - ilsd: Sent email.
  - kyed: Need to call Sharon Drolijk (Operations Manager) at (859) 233-2503.
- - mdd: Spoke with "Attorney Adviser". He asked for a letter, which I sent. He 
-   will take it up with the court, though they didn't have any policy that he 
-   was aware of. It's going through their "court committee system for 
+ - mdd: Spoke with "Attorney Adviser". He asked for a letter, which I sent. He
+   will take it up with the court, though they didn't have any policy that he
+   was aware of. It's going through their "court committee system for
    consideration." Seems it wasn't done for performance reasons years ago. They
    will take it up again.
  - msnd: Sent email.
- - mtd: Julie Collins, Deputy Clerk in charge of Billings division, called back. 
+ - mtd: Julie Collins, Deputy Clerk in charge of Billings division, called back.
    She's going to look into it.
- - ndd: Sent email. 701-530-2313, Clerk of Clerk, Rob. On the to do list. 
+ - ndd: Sent email. 701-530-2313, Clerk of Clerk, Rob. On the to do list.
    Hopefully by end of the year (2018). Nobody ever asked before.
- - nvd: Sent email. Talked to Robert in "Quality Control". He shook me a bit 
-   with how difficult he was. He insists I need to send a letter to the chief 
+ - nvd: Sent email. Talked to Robert in "Quality Control". He shook me a bit
+   with how difficult he was. He insists I need to send a letter to the chief
    judge, but that they're not considering this currently.
-    - A different tack: Trying the operations manager, Lia at 775-686-5840. 
+    - A different tack: Trying the operations manager, Lia at 775-686-5840.
       She's friendly. Requested a letter for chief judge. Sent.
  - nywd: Sent email.
  - oked: Sent email.
  - oknd: Sent email.
  - pamd: Sent email.
- - scd: "We have forwarded your request on to management staff at the District 
-   Court for further consideration." 
+ - scd: "We have forwarded your request on to management staff at the District
+   Court for further consideration."
  - tnwd: Sent email.
- - txnd: Left me a long voicemail. They're working on it and have it in 
-   committee. Expectation is that they may require an en banc meeting of the 
-   judges to make a decision, but that the decision should come soon and be 
+ - txnd: Left me a long voicemail. They're working on it and have it in
+   committee. Expectation is that they may require an en banc meeting of the
+   judges to make a decision, but that the decision should come soon and be
    positive.
- - vaed: "We are currently looking into this and will possibly have this 
+ - vaed: "We are currently looking into this and will possibly have this
    feature in the near future."
 
 """
@@ -80,11 +83,11 @@ class PacerRssFeed(DocketReport):
     # We use three simple matches rather than a complex one with three groups.
     document_number_regex = re.compile(r'">(\d+)</a>')
     doc1_url_regex = re.compile(r'href="(.*/doc1/.*)"')
-    short_desc_regex = re.compile(r'\[(.*?)\]')  # Matches 'foo': [ foo ] (
+    short_desc_regex = re.compile(r"\[(.*?)\]")  # Matches 'foo': [ foo ] (
 
-    PATH = 'cgi-bin/rss_outside.pl'
+    PATH = "cgi-bin/rss_outside.pl"
 
-    CACHE_ATTRS = ['data']
+    CACHE_ATTRS = ["data"]
 
     def __init__(self, court_id):
         super(PacerRssFeed, self).__init__(court_id)
@@ -93,18 +96,17 @@ class PacerRssFeed(DocketReport):
         self.session = Session()
         self.is_valid = True
 
-        if self.court_id.endswith('b'):
+        if self.court_id.endswith("b"):
             self.is_bankruptcy = True
         else:
             self.is_bankruptcy = False
 
     @property
     def url(self):
-        if self.court_id == 'ilnb':
+        if self.court_id == "ilnb":
             return "https://tdi.ilnb.uscourts.gov/wwwroot/RSS/rss_outside.xml"
         else:
-            return "https://ecf.%s.uscourts.gov/%s" % \
-                (self.court_id, self.PATH)
+            return "https://ecf.%s.uscourts.gov/%s" % (self.court_id, self.PATH)
 
     def query(self):
         """Query the RSS feed for a given court ID
@@ -155,14 +157,14 @@ class PacerRssFeed(DocketReport):
         for entry in self.feed.entries:
             try:
                 data = self.metadata(entry)
-                data[u'parties'] = None
-                data[u'docket_entries'] = self.docket_entries(entry)
+                data[u"parties"] = None
+                data[u"docket_entries"] = self.docket_entries(entry)
             except AttributeError:
                 # Happens when RSS items lack necessary attributes like a URL
                 # or published date.
                 pass
             else:
-                if data[u'docket_entries'] and data['docket_number']:
+                if data[u"docket_entries"] and data["docket_number"]:
                     data_list.append(data)
 
         self._data = data_list
@@ -170,22 +172,22 @@ class PacerRssFeed(DocketReport):
 
     def metadata(self, entry):
         data = {
-            u'court_id': self.court_id,
-            u'pacer_case_id': get_pacer_case_id_from_nonce_url(entry.link),
-            u'docket_number': self._get_docket_number(entry.title),
-            u'case_name': self._get_case_name(entry.title),
+            u"court_id": self.court_id,
+            u"pacer_case_id": get_pacer_case_id_from_nonce_url(entry.link),
+            u"docket_number": self._get_docket_number(entry.title),
+            u"case_name": self._get_case_name(entry.title),
             # Filing date is not available. Also the case for free opinions.
-            u'date_filed': None,
-            u'date_terminated': None,
-            u'date_converted': None,
-            u'date_discharged': None,
-            u'assigned_to_str': '',
-            u'referred_to_str': '',
-            u'cause': '',
-            u'nature_of_suit': '',
-            u'jury_demand': '',
-            u'demand': '',
-            u'jurisdiction': '',
+            u"date_filed": None,
+            u"date_terminated": None,
+            u"date_converted": None,
+            u"date_discharged": None,
+            u"assigned_to_str": "",
+            u"referred_to_str": "",
+            u"cause": "",
+            u"nature_of_suit": "",
+            u"jury_demand": "",
+            u"demand": "",
+            u"jurisdiction": "",
         }
         data = clean_court_object(data)
         return data
@@ -199,24 +201,27 @@ class PacerRssFeed(DocketReport):
         Although there is only one, return it as a list.
         """
         de = {
-            u'date_filed': date(*entry.published_parsed[:3]),
-            u'description': u'',
-            u'document_number': self._get_value(self.document_number_regex,
-                                                entry.summary) or None,
-            u'short_description': html_unescape(
-                self._get_value(self.short_desc_regex, entry.summary)),
+            u"date_filed": date(*entry.published_parsed[:3]),
+            u"description": u"",
+            u"document_number": self._get_value(
+                self.document_number_regex, entry.summary
+            )
+            or None,
+            u"short_description": html_unescape(
+                self._get_value(self.short_desc_regex, entry.summary)
+            ),
         }
 
         doc1_url = self._get_value(self.doc1_url_regex, entry.summary)
         if doc1_url:
-            de[u'pacer_doc_id'] = get_pacer_doc_id_from_doc1_url(doc1_url)
-            de[u'pacer_seq_no'] = get_pacer_seq_no_from_doc1_url(doc1_url)
+            de[u"pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(doc1_url)
+            de[u"pacer_seq_no"] = get_pacer_seq_no_from_doc1_url(doc1_url)
         else:
             # Some courts, in particular, NYED do not provide doc1 links and
             # instead provide show_case_doc links. Some docket entries don't
             # provide links. In either case, we can't provide pacer_doc_id.
-            de[u'pacer_doc_id'] = u''
-            de[u'pacer_seq_no'] = None
+            de[u"pacer_doc_id"] = u""
+            de[u"pacer_seq_no"] = None
 
         return [de]
 
@@ -224,8 +229,7 @@ class PacerRssFeed(DocketReport):
         if self.is_bankruptcy:
             # Uses both b/c sometimes the bankr. cases have a dist-style docket
             # number.
-            regexes = [self.docket_number_dist_regex,
-                       self.docket_number_bankr_regex]
+            regexes = [self.docket_number_dist_regex, self.docket_number_bankr_regex]
         else:
             regexes = [self.docket_number_dist_regex]
         for regex in regexes:
@@ -236,7 +240,7 @@ class PacerRssFeed(DocketReport):
     def _get_case_name(self, title_text):
         # 1:18-cv-04423 Chau v. Gorg &amp; Smith et al --> Chau v. Gorg & Smith
         try:
-            case_name = title_text.split(' ', 1)[1]
+            case_name = title_text.split(" ", 1)[1]
         except IndexError:
             return u"Unknown Case Title"
         case_name = html_unescape(case_name)
@@ -247,17 +251,22 @@ class PacerRssFeed(DocketReport):
 def _main():
     # For help: python -m juriscraper.pacer.rss_feeds -h
     parser = argparse.ArgumentParser(
-        prog="python -m %s.%s" %
-        (__package__,
-         os.path.splitext(os.path.basename(sys.argv[0]))[0]))
-    parser.add_argument('-b', '--bankruptcy', action='store_true',
-                        help='Use bankruptcy parser variant.')
-    parser.add_argument('-v', '--verbose', action='store_true')
-    parser.add_argument('court_or_file', nargs='?', default='-',
-                        help='''
+        prog="python -m %s.%s"
+        % (__package__, os.path.splitext(os.path.basename(sys.argv[0]))[0])
+    )
+    parser.add_argument(
+        "-b", "--bankruptcy", action="store_true", help="Use bankruptcy parser variant."
+    )
+    parser.add_argument("-v", "--verbose", action="store_true")
+    parser.add_argument(
+        "court_or_file",
+        nargs="?",
+        default="-",
+        help="""
 A PACER court id or a local filename; defaults to stdin (-).
 Any 3 or 4 character string is presumed to be a court;
-sorry if that was your filename.''')
+sorry if that was your filename.""",
+    )
 
     args = parser.parse_args()
 
@@ -270,18 +279,19 @@ sorry if that was your filename.''')
         feed.parse()
     else:
         if not args.bankruptcy:
-            feed = PacerRssFeed('fake_district_court_id')
+            feed = PacerRssFeed("fake_district_court_id")
         else:
             # final 'b' char is interpretted as bankruptcy
-            feed = PacerRssFeed('fake_bankruptcy_court_id_b')
-        if args.court_or_file == '-':
+            feed = PacerRssFeed("fake_bankruptcy_court_id_b")
+        if args.court_or_file == "-":
             print("Faking up RSS feed from stdin as %s" % feed.court_id)
             f = sys.stdin
         else:
-            print("Reading RSS feed from %s as %s" %
-                  (args.court_or_file, feed.court_id))
+            print(
+                "Reading RSS feed from %s as %s" % (args.court_or_file, feed.court_id)
+            )
             f = open(args.court_or_file)
-        feed._parse_text(f.read().decode('utf-8'))
+        feed._parse_text(f.read().decode("utf-8"))
 
     print("Got %s items" % len(feed.data))
     if args.verbose:
