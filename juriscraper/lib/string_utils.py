@@ -555,9 +555,10 @@ class CaseNameTweaker(object):
                  u'u.s.', u'u.s.a.', u'u.s.e.e.o.c.', u'u.s.e.p.a.']
         acros_sans_dots = [acro.replace(u'.', u'') for acro in acros]
         # corp_acros = ['L.L.C.', 'L.L.L.P.', 'L.L.P.', 'L.P.', 'P.A.', 'P.C.',
-        #              'P.L.L.C.', ]
+        #              'P.L.L.C.',c ]
         # corp_acros_sans_dots = [acro.replace('.', '') for acro in corp_acros]
-        common_names = [u'state', u'people', u'smith', u'johnson', u'commissioner']
+        common_names = [u'state', u'people', u'smith', u'johnson',
+                        u'commissioner']
 
         ags = [u'Akerman', u'Ashcroft', u'Barr', u'Bates', u'Bell', u'Berrien',
                u'Biddle', u'Black', u'Bonaparte', u'Bork', u'Bradford',
@@ -572,9 +573,10 @@ class CaseNameTweaker(object):
                u'McKenna', u'McReynolds', u'Meese', u'Miller', u'Mitchell',
                u'Moody', u'Mukasey', u'Murphy', u'Nelson', u'Olney', u'Palmer',
                u'Pierrepont', u'Pinkney', u'Randolph', u'Reno', u'Richardson',
-               u'Rodney', u'Rogers', u'Rush', u'Sargent', u'Saxbe', u'Smith',
-               u'Speed', u'Stanbery', u'Stanton', u'Stone', u'Taft', u'Taney',
-               u'Thornburgh', u'Toucey', u'Wickersham', u'Williams', u'Wirt']
+               u'Rodney', u'Rogers', u'Rush', u'Sargent', u'Saxbe', u'Sessions',
+               u'Smith', u'Speed', u'Stanbery', u'Stanton', u'Stone', u'Taft',
+               u'Taney', u'Thornburgh', u'Toucey', u'Whitacker', u'Wickersham',
+               u'Williams', u'Wirt']
         # self.corp_acros = corp_acros + corp_acros_sans_dots
         bad_words = acros + acros_sans_dots + common_names + ags + \
             self.make_geographies_list()
