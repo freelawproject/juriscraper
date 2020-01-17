@@ -1,6 +1,5 @@
-"""Parse the iquery.pl ("Query" menu) result.
-This is pretty limited metadata about the case, although it
-presents some more information for BK cases.
+"""Parse the DktActivityRpt.pl ("Docket Activity Report") results.
+A parser for PACER's Docket Activity Report that results as JSON.
 """
 import pprint
 import sys
@@ -17,9 +16,8 @@ logger = make_default_logger()
 
 
 class ActivityReport(BaseDocketReport, BaseReport):
-    """Parse the iquery.pl ("Query" menu) result.
-    This is pretty limited metadata about the case, although it
-    presents some more information for BK cases.
+    """
+    Parse the DktActivityRpt.pl ("Docket Activity Report") results.
     """
     PATH = 'cgi-bin/DktActivityRpt.pl'
 
@@ -98,7 +96,7 @@ class ActivityReport(BaseDocketReport, BaseReport):
             cols = row.xpath('.//node()')
 
             def isFlags(cols):
-                #check for case flag
+                #Check for case flags. It's not always present.
                 try:
                     cols.index('Case Flags:')
                 except ValueError:
@@ -177,14 +175,26 @@ class ActivityReport(BaseDocketReport, BaseReport):
         end = 'm/d/yyyy'
 
         text = 'summary' or 'full'
-
-
-
-
-
         """
+
         assert self.session is not None, \
             "session attribute of DocketReport cannot be None."
+
+            #Example:
+            # One note, when open_cases is not checked in the form,
+            # it does not appear as form data in the header.
+            # u'all_case_ids': '0'
+            # u'case_num': ''
+            # u'closed_cases': 'on'
+            # u'office': '4'
+            # u'case_type': 'po'
+            # u'event_category':''
+            # u'case_flags': ''
+            # u'filed_from': '1/13/2020'
+            # u'filed_to': '1/13/2020'
+            # u'date_range_limit': ''
+            # u'docket_text': 'summary'
+            # u'sort1': 'case number'
 
         params = {
             u'all_case_ids': '0',
@@ -202,27 +212,12 @@ class ActivityReport(BaseDocketReport, BaseReport):
             u'sort1': 'case number'
         }
 
-        #Example:
-        # u'all_case_ids': '0'
-        # u'case_num': ''
-        # u'closed_cases': 'on'
-        # u'office': '4'
-        # u'case_type': 'po'
-        # u'event_category':''
-        # u'case_flags': ''
-        # u'filed_from': '1/13/2020'
-        # u'filed_to': '1/13/2020'
-        # u'date_range_limit': ''
-        # u'docket_text': 'summary'
-        # u'sort1': 'case number'
-
-
 
         logger.info(u"Running activity report from '%s' to '%s'", (start, end) )
         logger.info(self.url)
         self.response = self.session.post(self.url + '?1-L_1_0-1', data=params)
         logger.info(u"Response: %s", self.response)
-        
+
         self.parse()
 
     @property
