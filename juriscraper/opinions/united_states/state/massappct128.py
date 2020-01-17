@@ -14,7 +14,7 @@ from juriscraper.opinions.united_states.state import mass
 class Site(mass.Site):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
-        self.url = "https://www.mass.gov/service-details/new-opinions"
+        self.url = "https://128archive.com"
         self.court_id = self.__module__
         self.court_identifier = "AC"
         self.set_local_variables()
