@@ -18,3 +18,4 @@ class Site(mass.Site):
         self.court_id = self.__module__
         self.court_identifier = "AC"
         self.set_local_variables()
+        # https://128archive.com/Disposition/DownloadDisposition/{1 thru 14291}?dispositionId=14304
