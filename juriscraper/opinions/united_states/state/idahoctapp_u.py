@@ -1,8 +1,9 @@
-# coding=utf-8
+# # coding=utf-8
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import clean_string
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSiteLinear):
@@ -15,27 +16,26 @@ class Site(OpinionSiteLinear):
     def _process_html(self):
         for item in self.html.xpath('//li[contains(.//a/@href, ".pdf")]'):
             text = clean_string(item.text_content())
-            text_parts = text.split('-', 1)
-
-            if len(text_parts) != 2:
+            date_string = ' '.join(text.split()[0:3])
+            try:
+                convert_date_string(date_string)
+            except:
                 raise InsanityException('Unexpected text format: "%s"' % text)
+            docket_name = text.replace(date_string, '').strip().lstrip('-')
 
             # sometimes the records include a docket number(s) as the
             # first words in the second half of the hyphenated string,
             # but some don't include a docket at all.  So we test to see
             # if the first word is numeric (minus the slash characters
             # used to conjoin multiple docket numbers).
-            docket_name = text_parts[1].split(None, 1)
-            first_word = docket_name[0].replace('/', '')
-            if first_word.isnumeric():
-                docket = docket_name[0]
-                name = docket_name[1]
-            else:
+            docket, name = docket_name.split(None, 1)
+            first_word = docket[0].replace('/', '')
+            if not first_word.isnumeric():
                 docket = ''
-                name = text_parts[1]
+                name = docket_name
 
             self.cases.append({
-                'date': text_parts[0],
+                'date': date_string,
                 'docket': docket,
                 'name': name,
                 'url': item.xpath('.//a/@href')[0],

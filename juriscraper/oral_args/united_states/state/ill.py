@@ -17,7 +17,6 @@ class Site(OralArgumentSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://www.illinoiscourts.gov/Media/On_Demand.asp'
-        self.download_url_path = "/td[6]//@href"
         self.case_name_path = '/td[3]'
         self.docket_number_path = "/td[2]"
         # Extract data from all rows with mp3 url/link
@@ -25,7 +24,7 @@ class Site(OralArgumentSite):
         self.back_scrape_iterable = range(2008, 2016)
 
     def _get_download_urls(self):
-        path = self.xpath_root + self.download_url_path
+        path = self.xpath_root + '/td[5]//@href'
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
