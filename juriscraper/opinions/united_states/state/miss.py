@@ -30,7 +30,15 @@ class Site(OpinionSite):
 
     def _get_download_urls(self):
         path = '{base}/td/b/a/@href'.format(base=self.base)
-        return list(self.html.xpath(path))
+        hrefs = list(self.html.xpath(path))
+        good_anchors = list()
+        for href in hrefs:
+            if '/Imaging\\' in href:
+                basename = href.split('\\')[-1]
+                href = "http://courts.ms.gov/Images/Opinions/{}"
+                href = href.format(basename)
+            good_anchors.append(href)
+        return good_anchors
 
         hrefs = list(self.html.xpath(path))
         good_anchors = list()
