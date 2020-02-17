@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<!--
+Template Name: State of MS Judiciary
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html><!-- InstanceBegin template="/Templates/scm-NEW.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>2014 Supreme Court-6th Sitting - State of Mississippi Judiciary</title>
+<meta name="description" content="The Official Site of the State of Mississippi Judiciary - 2014 Supreme Court 6th sitting archived oral arguments." />
+<meta name="keywords" content="Mississippi Supreme Court, SCT Decisions, SCT District, SCT Judges, SCToral Arguments, Oral Arguments, Supreme Court, Court of Appeals, Circuit Courts, Chancery Courts, County Courts, Justice Courts, Drug Courts, Municipal Courts, Youth Courts, legal, law, decision, opinion, judicial, official, court, appeals, supreme, MS, Mississippi, rule, docket calendar, decisions, rules, other jurisdication, bar roll, state judiciary, clerk's office, MJC, Mississippi Judicial College, Law Library" />
+<!-- InstanceEndEditable -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+<link href="../../../../layout/styles/mobile2.css" rel="stylesheet" type="text/css">
+
+<!--Begin Google Analytics-->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-39264005-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+<!--End Google Analytics-->
+
+  
+  (function() {
+    var cx = '012070463754947639787:m-6q-zpg4sy';
+    var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+
+
+<script type="text/JavaScript">
+//JPJ - 06/13/2014 - resize div to expand with window
+window.onresize = function() 
+{
+	var adiv = document.getElementById("topdiv");
+	
+	//adiv.style.height =  (document.body.clientHeight - 290);
+	adiv.style.minHeight = "100px";
+	adiv.style.minWidth = "1000px";
+	//adiv.style.width =  (document.body.clientWidth - 1);
+} 
+
+//JPJ - 04/21/2015 - calls AJAX Post Request
+function makePOSTRequest(url, parameters) 
+{ 
+      //document.body.style.cursor = "wait";
+   
+      http_request = false;
+      if (window.XMLHttpRequest) { // Mozilla, Safari,...
+         http_request = new XMLHttpRequest();
+         if (http_request.overrideMimeType) {
+         	// set type accordingly to anticipated content type
+            //http_request.overrideMimeType('text/xml');
+            http_request.overrideMimeType('text/html');
+         }
+      } else if (window.ActiveXObject) { // IE
+         try {
+            http_request = new ActiveXObject("Msxml2.XMLHTTP");
+         } catch (e) {
+            try {
+               http_request = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (e) {}
+         }
+      }
+      if (!http_request) {
+         alert('Cannot create XMLHTTP instance');
+         return false;
+      }
+      
+      http_request.onreadystatechange = alertContents;
+      http_request.open('POST', url, true);
+      http_request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      //http_request.setRequestHeader("Content-length", parameters.length);
+      //http_request.setRequestHeader("Connection", "close");
+      http_request.send(parameters);
+   }
+
+//JPJ - 04/21/2015 - checks to make sure the call responds and is in the ready state..calls alertMethod  
+function alertContents() 
+{
+    if (http_request.readyState == 4) 
+     {
+        if (http_request.status == 200) 
+          {
+            //alert(http_request.responseText);
+            result = decodeURI(http_request.responseText);
+            alertMethod(result);
+            // alert('result '+result);                
+          // document.body.style.cursor = "default";
+          } 
+     }
+}
+
+//JPJ - 04/21/2015 - displays the response text to the webpage
+function alertMethod(aResult)
+{
+  //alert(aResult);
+
+  var rArray = aResult.split("~");
+  var icount = rArray.length;
+  var resultDiv = rArray[1];
+  var sw = parseInt(rArray[0]);
+  //alert(sw);
+  
+ switch(sw)
+ {
+
+  case 1:
+     //alert(rArray[3]); 
+     //document.getElementById(resultDiv).innerHTML = rArray[3];
+	 
+	 if (rArray[2] == 'N')
+     {
+		document.getElementById('logPass').value = '';
+		document.getElementById('errdiv').innerHTML = rArray[3];	   
+     }
+     else
+     { 
+		document.getElementById(resultDiv).innerHTML = rArray[3];
+		//window.location = "http://test-web-server3/newwebsite/index2.php";
+		//document.getElementById('errdiv').innerHTML =  ;
+     } 
+   break;
+  case 2:
+	 //alert(rArray[3]); 
+     document.getElementById(resultDiv).innerHTML = rArray[3]; 
+
+   break;
+  case 3:
+     //alert(rArray[1]); 
+     var retval = rArray[3]; 
+     //alert(retval);
+
+     if (rArray[2] == 'N')
+     {
+		document.getElementById('logPass').value = '';
+		document.getElementById('errdiv').innerHTML = rArray[3];	   
+     }
+     else
+     { 
+		document.getElementById(resultDiv).innerHTML = rArray[3];
+     } 
+     
+   break;
+   case 4:
+     //alert(rArray[3]); 
+     document.getElementById(resultDiv).innerHTML = rArray[3]; 
+
+   break;
+   case 5:
+     //alert(rArray[3]); 
+     document.getElementById(resultDiv).innerHTML = rArray[3]; 
+
+   break;
+   case 6:
+     //alert(rArray[3]); 
+     document.getElementById(resultDiv).innerHTML = rArray[3]; 
+
+   break;
+   case 7:
+     //alert(rArray[3]); 
+     document.getElementById(resultDiv).innerHTML = rArray[3]; 
+
+   break;
+ }
+}
+
+//JPJ - 04/21/2015 - check to see if applicant wants to force a relogin
+function frcLogin()
+{
+	var vMail = '';
+	//alert(vMail);
+	var vPass = '';
+	//alert(vPass); 
+  
+	var poststr = 'sEmail='+vMail+'&sPWD='+vPass;
+	//alert(poststr);
+   
+	makePOSTRequest('docketLogin.php', poststr);
+	//regLog();
+}
+
+//JPJ - 04/21/2015 - check to see if applicant wants to force a relogin
+function forceLogin()
+{
+	//window.location.href = 'index2.html';
+}
+
+//JPJ - 04/21/2015 - looks for the enter key event in order to call the login event when the enter key is presses
+function KeyDownHandler(event)
+{
+  if (event.which == 13 || event.keyCode == 13)
+   {
+     event.returnValue=false;
+     event.cancel = true;     
+     regLog();
+   
+   }
+  return true;
+}
+
+//JPJ - 04/21/2015 - calls login page
+function regLog()
+{ 
+  var vMail = document.getElementById('logEMAIL').value;
+  //alert(vMail);
+  var vPass = document.getElementById('logPass').value;
+  //alert(vPass); 
+  
+  var poststr = 'sEmail='+vMail+'&sPWD='+vPass;
+  //alert(poststr);
+   
+  makePOSTRequest('docketLogin.php', poststr);
+}
+
+//JPJ -- 04/21/2015 - clears the email and password input boxes
+function clearLog()
+{
+  document.getElementById('logEMAIL').value = '';
+  document.getElementById('logPass').value = '';
+}
+
+//JPJ - 04/21/2015 - verifies that an email address is in the correct format before updating database
+function checkEmail(email)
+{ 
+  var esymbols = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  
+  if (esymbols.test(email.value) && (email.value !== ''))
+   {
+     document.getElementById('regBtn').disabled = false;
+	 document.getElementById('regBtn').style.background = '#0040ff';
+	 return true;
+   }
+  else
+   {
+     alert("Invalid Email Address");
+	 document.getElementById('regBtn').disabled = true;
+	 document.getElementById('regBtn').style.background = '#808080';
+     return false;
+   }
+}
+
+//JPJ - 04/21/2015 - verifies a password
+function checkPass(sPass)
+{
+   var error = '';
+   var pw = sPass;
+   //alert(pw);
+   //alert(String(pw).match(/[0-9]/));
+   
+   if (String(pw).length < 10)       //JPJ - 12/11/2014 - changed to passwords must be 10 characters long for security
+    {
+	 error = 'Password must be 10 characters long!';
+	 document.getElementById('psStat').value = error;
+	 document.getElementById('psw').className = 'bpsw';
+	 //doucment.getElementById('psw').setAttribute('class', 'bpsw');
+	 document.getElementById('rpsw').className = 'bpsw';
+	 alert(error);
+	 return false
+    }
+   if (!String(pw).match(/[0-9]/))
+    {
+	 error = 'Password must contain at least one number!';
+	 document.getElementById('psStat').value = error;
+	 document.getElementById('psw').className = 'bpsw';
+	 document.getElementById('rpsw').className = 'bpsw';
+	 alert(error);
+	 return false;
+	}
+   if (!String(pw).match(/[a-z]/))
+    {
+	 error = 'Password must include at least one lower-case letter!';
+	 document.getElementById('psStat').value = error;
+	 document.getElementById('psw').className = 'bpsw';
+	 document.getElementById('rpsw').className = 'bpsw';
+	 //alert(error);
+	 return false;
+	}
+   if (!String(pw).match(/[A-Z]/))
+    {
+	 error = 'Password must include at least one upper-case letter!';
+	 document.getElementById('psStat').value = error;
+	 document.getElementById('psw').className = 'bpsw';
+	 document.getElementById('rpsw').className = 'bpsw';
+	 //alert(error);
+	 return false;
+	}
+   if (!String(pw).match(/[-!$%^&*()_+|~=`{}\[\]:";'<>?,.\@#/]/))
+    {
+	 error = 'Password must contain at least one symbol!';
+	 document.getElementById('psStat').value = error;
+	 document.getElementById('psw').className = 'bpsw';
+	 document.getElementById('rpsw').className = 'bpsw';
+	 //alert(error);
+	 return false;
+	}
+	
+	document.getElementById('psw').className = 'ipsw';
+	document.getElementById('rpsw').className = 'ipsw';
+	document.getElementById('psStat').value = 'Password is good!';
+	return true;
+}
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+ $(".usericon").mouseover(function() {
+    $(this).children(".description").show();
+}).mouseout(function() {
+    $(this).children(".description").hide();
+}); 
+</script>
+  
+<script type="text/javascript"> 
+
+//jpj - 10/24/2016 - when the user taps off of the mobile menu it should now hide
+$(document).ready( function(){
+
+    $('#nburger-link').click( function(event){
+        event.stopPropagation();
+        $('#nburger-drop').toggle();
+    });
+
+    $(document).click( function(){
+        $('#nburger-drop').hide();
+    });
+
+});
+
+</script>
+
+      <!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+      </head>
+      <body id="top" class="body">
+      <!-- ################################################################################################ --> 
+      <!-- ################################################################################################ --> 
+      <!-- ################################################################################################ -->
+      <ul id="nburger" class="New Burger">
+      <li> <a href="#" id="nburger-link">
+      <ul></ul>
+      <img src="../../../../images_folder/demo/icons/Burger_nav_icon2.png" width="70" height="28" class="nav"></a>
+      <ul id="nburger-drop">
+      <li><a href="../../../../index.php"><img src="/images_site/icons/Home_icon1.png"></a>
+      <li><a href="../../../../aboutcourts/aboutthecourts.php">APPELLATE COURT</a>
+      <ul>
+      <li><a href="../../sc.php">&raquo;Supreme Court</a></li>
+      <li><a href="../../../coa/coa.php">&raquo;Court of Appeals</a></li>
+      <li><a href="../../../clerk/clerk.php">&raquo;Clerk of Appellate</a></li>
+      </ul>
+      </li>
+      <li><a href="../../../../trialcourts/tc_aboutthecourts.php">TRIAL COURTS</a>
+      <ul>
+      <li><a href="../../../../trialcourts/chancerycourt/chancerycourt.php">&raquo;Chancery Court</a></li>
+      <li><a href="../../../../trialcourts/circuitcourt/circuitcourt.php">&raquo;Circuit Court</a></li>
+      <li><a href="../../../../trialcourts/countycourt/countycourt.php">&raquo;County Court</a></li>
+      <li><a href="../../../../trialcourts/drugcourt/drugcourt.php">&raquo;Drug Court</a></li>
+      <li><a href="../../../../trialcourts/justicecourt/justicecourt.php">&raquo;Justice Court</a></li>
+      <li><a href="../../../../trialcourts/municipalcourt/municipalcourt.php">&raquo;Municipal Court</a></li>
+      <li><a href="../../../../trialcourts/youthcourt/youthcourt.php">&raquo;Youth Court</a></li>
+      </ul>
+      </li>
+      <li><a href="../../../../aoc/aoc.php">AOC</a>
+      <ul>
+      <li><a href="../../../../aoc/courtinterpreter/courtinterpreter.php">&raquo;Court Intrepreters</a></li>
+      <li><a href="../../../../cle_bccr/BCCR/bccr.php">&raquo;Board of Certified Court Reporters</a></li>
+      <li><a href="../../../../aoc/forms/personnelinfo.php">&raquo;Employee Info and Forms</a></li>
+      <li><a href="../../../../statistics/statistics.php">&raquo;Statistics Reporting</a></li>
+      <li><a href="../../../../aoc/wireless/wirelesscommunications.php">&raquo;Wireless Communications</a></li>
+      </ul>
+      </li>
+      <li><a href="../../../../mec/mec.php">MEC</a></li>
+      <li><a href="../../../../records/records.php">RECORDS</a>
+      <ul>
+      <li><a href="../../../../records/records.php">&raquo;FAQ</a></li>
+      <li><a href="../../../../records/records.php">&raquo;Office of the Clerk</a></li>
+      <li><a href="../../../../records/media.php">&raquo;Media</a></li>
+      <li><a href="../../../../publicrecords_policy.pdf">&raquo;Public Records</a></li>
+      </ul>
+      </li>
+      <li><a href="../../../../commissions/commissionsforcescommittees.php">COMMISSIONS</a>
+      <ul>
+      <li><a href="../../../../commissions/commissionsforcescommittees.php">&raquo;Commissions, Task Forces &amp; Committees</a>
+      <li><a href="http://www.msatjc.org/">&raquo;MS Access to Justice Commission</a>
+      <li><a href="../../../../commissions/childrenjustice/childrensjustice.php">&raquo;MS Commission on Children's Justice</a>
+      </ul>
+      </li>
+      <li><a href="../../../../research/research.php">RESEARCH</a>
+      <ul>
+      <li><a href="http://www.lexisnexis.com/hottopics/mscode/">&raquo;MS Code</a>
+      <li><a href="../../../../research/research.php#msmodeljury">&raquo;MS Model Jury Intructions</a>
+      <li><a href="../../../../research/reports/reports.php">&raquo;Reports</a>
+      <li><a href="../../../../research/rules/rules.php">&raquo;Rules</a>
+      <li><a href="../../../../research/statelibrary/library.php">&raquo;State Library</a>
+      </ul>
+      </li>
+      <li><a href="../../../../bar/baradmissions/baradmissions.php">BAR</a>
+      <ul>
+      <li><a href="../../../../bar/baradmissions/baradmissions.php">&raquo;Bar Admissions</a></li>
+      <li><a href="../../../../bar/barroll/barroll.php">&raquo;Bar Roll</a></li>
+      <li><a href="../../../../cle_bccr/cle.php">&raquo;CLE</a></li>
+      </ul>
+      </li>
+      <li><a href="../../../../news/news.php">NEWS</a>
+      <ul>
+      <li><a href="../../../../news/news.php">&raquo;News</a></li>
+      <li><a href="../../../../news/newsletters/newsletters.php">&raquo;Newsletter</a></li>
+      </ul>
+      </li>
+      <li><a href="../../../../cle_bccr/cle.php">EDUCATION</a>
+      <ul>
+      <li><a href="../../../../cle_bccr/cle.php">&raquo;CLE</a></li>
+      <li><a href="../../../../cle_bccr/BCCR/bccr.php">&raquo;Board of Certified Court Reporters</a></li>
+      <li><a href="http://mjc.olemiss.edu/">&raquo;Judicial College</a></li>
+      </ul>
+      </li>
+      <li><a href="http://www.msatjc.org/" target="_blank">LEGAL HELP</a>
+      <ul>
+      <li><a href="../../../../Legal/CivilLegal.php" target="_blank">Civil Legal Assistance</a></li>
+      <li><a href="../../../../trialcourts/youthcourt/youthcourtvideos.php" target="_blank">Youth Court video tutorials</a></li>
+      </ul>
+      <li>
+      <li><a href="#"><img src="/images_site/icons/avatar1.png"></a><ul>
+						 <a  href="https://courts.ms.gov/appellatecourts/docket/login.php">Sign In</a>
+						 <a  href="https://www.pamecapps.mec.ms.gov/onlinereg/">Register</a></ul></li>            
+			      </ul>
+      </li>
+      </ul>
+      <!-- ################################################################################################ --> 
+      <!-- ################################################################################################ --> 
+      <!-- ################################################################################################ -->
+      <div class="wrapper row1">
+      <header id="header" class="clear"> 
+      <!-- ################################################################################################ -->
+      <div class="logo-seal"></div>
+      <a href="../../../../index.php"><img src="../../../../images_folder/demo/Judiciary-seal-cropped.png" alt=""/></a>
+      <div id="logo">
+      <div id="logo" class="fl_left">
+      <h1><a href="../../../../index.php">State of Mississippi Judiciary</a></h1>
+      <p><em>Administrative Office of Courts</em></p>
+      </div>
+      </div>
+      <div class="main_fl_right" >
+      <a href="#login_form_ajax" ><i class="fa fa-user"></i></a>
+						 <a  href="https://courts.ms.gov/appellatecourts/docket/login.php">&nbsp; Sign In </a> &#8739;
+						 <a  href="https://www.pamecapps.mec.ms.gov/onlinereg/">Register</a>            
+				 </div></header></div>
+     <!-- ################################################################################################ -->
+     <nav id="mainav" class="rounded2"> 
+     <!-- ################################################################################################ -->
+     <ul>
+     <li></li>
+     <li><a href="../../../../index.php"><img src="../../../../images_folder/demo/Home_icon.jpg" alt=""/></a></li>
+     <li><a href="../../../../aboutcourts/aboutthecourts.php">&#8227;Court</a>
+     <ul>
+     <li><a href="../../../../aboutcourts/aboutthecourts.php">&#8227;Appellate Courts</a>
+     <ul>
+     <li><a href="../../sc.php">Supreme Court</a></li>
+     <li><a href="../../../coa/coa.php">Court of Appeals</a></li>
+     <li><a href="../../../clerk/clerk.php">Clerk of Appellate Courts</a></li>
+     </ul>
+     </li>
+     <li><a href="../../../../trialcourts/tc_aboutthecourts.php">&#8227;Trial Courts</a>
+     <ul>
+     <li style="border-bottom: 1px solid #06213f;"><a href="../../../../trialcourts/chancerycourt/chancerycourt.php">Chancery Court</a></li>
+     <li style="border-bottom: 1px solid #06213f;"><a href="../../../../trialcourts/circuitcourt/circuitcourt.php">Circuit Court</a></li>
+     <li style="border-bottom: 1px solid #06213f;"><a href="../../../../trialcourts/countycourt/countycourt.php">County Court</a></li>
+     <li style="border-bottom: 1px solid #06213f;"><a href="../../../../trialcourts/drugcourt/drugcourt.php">Drug Court</a></li>
+     <li style="border-bottom: 1px solid #06213f;"><a href="../../../../trialcourts/justicecourt/justicecourt.php">Justice Court</a></li>
+     <li style="border-bottom: 1px solid #06213f;"><a href="../../../../trialcourts/municipalcourt/municipalcourt.php">Municipal Court</a></li>
+     <li><a href="../../../../trialcourts/youthcourt/youthcourt.php">Youth Court</a></li>
+     </ul>
+     </li>
+     </ul>
+     </li>
+     <li><a href="../../../../aoc/aoc.php">&#8227;AOC</a>
+     <ul>
+     <li><a href="../../../../aoc/courtinterpreter/courtinterpreter.php">Court Interpreters</a></li>
+     <li><a href="../../../../cle_bccr/BCCR/bccr.php">Board of Certified Court Reporters</a></li>
+     <li><a href="../../../../aoc/forms/personnelinfo.php">Employee Information & Forms</a></li>
+     <li><a href="../../../../statistics/statistics.php">Statistics Reporting</a></li>
+     <li><a href="../../../../aoc/wireless/wirelesscommunications.php">Wireless Communications</a></li>
+     </ul>
+     </li>
+     <li><a href="../../../../mec/mec.php">&#8227;MEC</a></li>
+     <li><a href="../../../../records/records.php">&#8227;Records</a>
+   	 <ul>
+     <li><a href="../../../../records/records.php">&#8227;FAQ</a>
+     <ul>
+     <li><a href="../../../../records/records.php">Clerk's Office</a></li>
+     <li><a href="../../../../records/media.php">Media</a></li>
+     </ul>
+     </li>
+     <li><a href="../../../../publicrecords_policy.pdf">Public Records</a></li>
+     </ul>
+     </li>
+     <li><a href="../../../../commissions/commissionsforcescommittees.php">&#8227;Commissions</a>
+     <ul>
+     <li><a href="../../../../commissions/commissionsforcescommittees.php">Commissions, Task Forces & Committees</a></li>
+     <li><a href="http://www.msatjc.org/">MS Access to Justice Commission</a></li>
+     <li><a href="../../../../commissions/childrenjustice/childrensjustice.php" >Mississippi Commission on Children's Justice</a></li>
+     </ul>
+     </li>
+     <li><a href="../../../../research/research.php">&#8227;Research</a>
+     <ul>
+     <li><a href="http://www.lexisnexis.com/hottopics/mscode/">MS Code</a></li>
+     <li><a href="../../../../research/research.php">MS Model Jury Instructions</a></li>
+     <li><a href="../../../../research/reports/reports.php">Reports</a></li>
+     <li><a href="../../../../research/rules/rules.php">Rules</a></li>            
+     <li><a href="../../../../research/statelibrary/library.php">&#8227;State Library</a>
+     <ul>
+     <li><a href="../../../../research/statelibrary/library.php">Catalog</a></li>
+     <li><a href="../../../../research/statelibrary/st_lib_faqs.pdf">FAQ</a></li>
+     <li><a href="../../../../research/statelibrary/history.php">History</a></li>
+     <li><a href="../../../../research/statelibrary/holidays.php">Holidays</a></li>
+     <li><a href="../../../../research/statelibrary/policies.php">Policies</a></li>
+     </ul>
+     </li>
+     </ul>
+     </li>
+     <li><a href="../../../../bar/baradmissions/baradmissions.php">&#8227;Bar</a>
+     <ul>
+     <li><a href="../../../../bar/baradmissions/baradmissions.php">Bar Admissions</a></li>
+     <li><a href="../../../../bar/barroll/barroll.php">Bar Roll</a></li>
+     <li><a href="../../../../cle_bccr/cle.php">CLE</a></li>
+     </ul>
+     </li>
+     <li><a href="../../../../news/news.php">&#8227;News</a>
+     <ul>
+     <li><a href="../../../../news/news.php">News</a></li>
+     <li><a href="../../../../news/newsletters/newsletters.php">Newsletters</a></li>
+     </ul>
+     </li>
+     <li><a href="../../../../cle_bccr/cle.php">&#8227;Education</a>
+     <ul>
+     <li><a href="../../../../cle_bccr/cle.php">CLE </a></li>
+     <li><a href="../../../../cle_bccr/BCCR/bccr.php">Board of Certified Court Reporters</a></li>
+     <li><a href="http://mjc.olemiss.edu/" target="_blank">Judicial College</a></li>
+     </ul>
+     </li>
+     <li><a href="http://www.msatjc.org/">&#8227; LEGAL HELP</a>
+     <ul>
+     <li><a href="../../../../Legal/CivilLegal.php" target="_blank">Civil Legal Assistance</a></li>
+     <li><a href="../../../../trialcourts/youthcourt/youthcourtvideos.php" target="_blank">Youth Court video tutorials</a></li>
+     </ul>
+     </li>
+     <li></li>
+     </ul>
+     <!-- ################################################################################################ --> 
+     </nav>
+     </div>
+     </div>
+     <div class="wrapper" >
+     <!-- InstanceBeginEditable name="slider" -->
+<div class="wrapper row4">
+<div class="rounded"><img src="../../../../images_folder/demo/Gartin_COURTS1.jpg" alt=""/></div>
+</div>
+<!-- InstanceEndEditable -->
+     </div>
+     <div class="wrapper row3" >
+     <div class="rounded">
+     <main class="container clear" > 
+     <!-- main body --> 
+     <!-- ################################################################################################ -->
+     <div class="group btmspace-30"> 
+     <!-- Left Column -->
+     <!-- InstanceBeginEditable name="sidebar" -->
+        <div class="sidebar one_quarter first"> 
+        <h6>Supreme Court</h6>
+        <nav class="sdb_holder">
+        <li><a href="../../../../appellatecourts/sc/sc.php">Supreme Court</a>
+        <li><a href="../../../../appellatecourts/sc/scdistricts.php" class="spacing">Districts</a></li>
+        <li><a href="../../../../appellatecourts/sc/scjustices.php" class="spacing">Justices</a></li>
+        <li><a href="../../../../appellatecourts/sc/scdecisions.php" class="spacing">Decisions</a></li>
+        <li><a href="../../../../appellatecourts/sc/scdocketcalendar.php" class="spacing">Docket Calendar</a></li>
+        <li><a href="../../../../index.php" target="_blank" class="spacing">General Docket</a></li>
+        <li><a href="../../../../appellatecourts/sc/scoa.php" class="spacing">Oral Argument Webcast</a></li>
+        <li><a href="#" class="spacing">Archives</a>
+        <li><a href="../../../../appellatecourts/sc/archive/2018/scsarchived_2018.php" class="spacing">2018 Archive</a></li>
+        <li><a href="../../../../appellatecourts/sc/archive/2017/scsarchived_2017.php" class="spacing">2017 Archive</a></li>
+        <li><a href="../../../../appellatecourts/sc/archive/2016/scsarchived_2016.php" class="spacing">2016 Archive</a></li>
+        <li><a href="../../../../appellatecourts/sc/archive/2015/scsarchived_2015.php" class="spacing">2015 Archive</a></li>
+        <li><a href="../../../../appellatecourts/sc/archive/2014/scsarchived_2014.php" class="spacing">2014 Archive</a></li>
+        <li><a href="../../../../appellatecourts/coa/coa.php">Court of Appeals</a></li>
+        <li><a href="../../../../appellatecourts/clerk/clerk.php">Clerk of Appellate Court</a></li>
+        </nav>
+       </div>
+        <!-- InstanceEndEditable -->
+     <!-- / Left Column --> 
+     <!-- Middle Column -->
+     <!-- InstanceBeginEditable name="content" -->
+        <div class="two_third">
+        <!-- ################################################################################################ -->
+        <span class="mainheading" style="font-size:24px;">Archive Supreme Court Oral Argument Webcasts</span>
+        <br><br>
+        <div  style="font-size: 16px; font-family: Arial, sans-serif; font-style: italic; font-weight: bold;">6th Sitting </div>
+        <div class="mainheading"  style="font-size:24px;">
+        <div class="mainheading"  style="font-size:24px;"></div>
+        <br> 
+        <a href="../../../../appellatecourts/sc/sc.php"><input name="button3" type="button" class="two_third" id="button" value="&raquo;Supreme Court">
+        <a href="../../../../appellatecourts/sc/scdistricts.php"><input name="button3" type="button" class="two_third" id="button" value="    &raquo;Districts">
+        <a href="../../../../appellatecourts/sc/scjustices.php"><input name="button" type="button" class="two_third" id="button" value="    &raquo;Justices">
+        <a href="../../../../appellatecourts/sc/scdecisions.php"><input name="button" type="button" class="two_third" id="button" value="    &raquo;Decisions">
+        <a href="../../../../appellatecourts/sc/scdocketcalendar.php"><input name="button" type="button" class="two_third" id="button" value="    &raquo;Docket Calendar">
+        <a href="../../../../index.php" target="_blank"><input name="button3" type="button" class="two_third" id="button" value="    &raquo;General Docket">
+        <a href="../../../../appellatecourts/sc/scoa.php"><input name="button" type="button" class="two_third" id="button" value="    &raquo;Oral Argument Webcast">
+        <a href="../../../../appellatecourts/sc/archive/2018/scsarchived_2018.php"><input name="button" type="button" class="two_third" id="button" value="       &raquo;2018 Archives"></a>
+        <a href="../../../../appellatecourts/sc/archive/2017/scsarchived_2017.php"><input name="button" type="button" class="two_third" id="button" value="       &raquo;2017 Archives"></a>
+        <a href="../../../../appellatecourts/sc/archive/2016/scsarchived_2016.php"><input name="button" type="button" class="two_third" id="button" value="       &raquo;2016 Archives"></a>
+        <a href="../../../../appellatecourts/sc/archive/2015/scsarchived_2015.php"><input name="button" type="button" class="two_third" id="button" value="       &raquo;2015 Archives"></a>
+        <a href="../../../../appellatecourts/sc/archive/2014/scsarchived_2014.php"><input name="button" type="button" class="two_third" id="button" value="       &raquo;2014 Archives"></a>
+		<a href="../../../../appellatecourts/coa/coa.php"><input name="button" type="button" class="two_third" id="button" value="&raquo;Court of Appeals"></a>
+        <a href="../../../../appellatecourts/clerk/clerk.php"><input name="button" type="button" class="two_third" id="button" value="&raquo;Clerk of Appellate Court"></a>
+		<p></p>
+        <div class="mainheading"  style="font-size:24px;">
+        <p></p></div>
+        <table cellpadding="5" cellspacing="5" class="nobgcolor">
+        <tr class="newscellbottomborder spaceUnder spaceAbove" height="10" >
+        <td class="nobgcolor newscellbottomborder" align="center"  style="color: white; background-color: #06213f; font-size: 16px;"><b>NOVEMBER 2014</b></td>
+        </tr>
+        <tr class="newscellbottomborder spaceUnder spaceAbove">
+        <td align="left" valign="middle" class="nobgcolor newscellbottomborder">
+        <iframe id="ls_embed_1527803166" src="https://livestream.com/accounts/13121278/events/7601456/player?width=325&height=183&enableInfoAndActivity=false&defaultDrawer=&autoPlay=true&mute=false" width="325" height="183" style="float:left;  padding-right: 5px;" frameborder="0" scrolling="no" allowfullscreen> </iframe><script type="text/javascript" data-embed_id="ls_embed_1527803166" src="https://livestream.com/assets/plugins/referrer_tracking.js"></script><br>
+        <a href="https://livestream.com/supremecourtofms/2013-CA-01535-SCT" target="_blank">2013-CA-01535-SCT Pat Harrison Waterway District v. County of Lamar, Political Subdivision of the State of Mississippi; Board of Supervisors of Lamar County, Joe Bounds, President; Tax Collector of Lamar County, Jack Smith, Collector</a><br>
+        <strong><i>Tuesday, November 4, 2014</i></strong><br>
+        <strong>10:00 a.m.</strong><br>
+        <!--<a href="http://courts.ms.gov/appellate_courts/docket/phpdocket.php?case_num=82043">Case Docket...</a></p></td></tr>-->
+        <tr class="newscellbottomborder spaceUnder spaceAbove">
+        <td align="left" valign="middle" class="nobgcolor newscellbottomborder">
+        <iframe id="ls_embed_1527803302" src="https://livestream.com/accounts/13121278/events/7601460/player?width=325&height=183&enableInfoAndActivity=false&defaultDrawer=&autoPlay=true&mute=false" width="325" height="183" style="float:left;  padding-right: 5px;" frameborder="0" scrolling="no" allowfullscreen> </iframe><script type="text/javascript" data-embed_id="ls_embed_1527803302" src="https://livestream.com/assets/plugins/referrer_tracking.js"></script><br>
+        <a href="https://livestream.com/supremecourtofms/2013-CA-01142-SCT" target="_blank">2013-CA-01142-SCT Melanie Bosarge v. LWC MS Properties, LLC</a><br>
+        <strong><i>Wednesday, November 12, 2014</i><br>
+        10:30 a.m.</strong><br>
+        <!--<a href="http://courts.ms.gov/appellate_courts/docket/phpdocket.php?case_num=82209">Case Docket...</a></p></td></tr>-->
+        <tr class="newscellbottomborder spaceUnder spaceAbove">
+        <td align="left" valign="middle" class="nobgcolor newscellbottomborder">
+        <iframe id="ls_embed_1527803361" src="https://livestream.com/accounts/13121278/events/7601461/player?width=325&height=183&enableInfoAndActivity=false&defaultDrawer=&autoPlay=true&mute=false" width="325" height="183" style="float:left;  padding-right: 5px;" frameborder="0" scrolling="no" allowfullscreen> </iframe><script type="text/javascript" data-embed_id="ls_embed_1527803361" src="https://livestream.com/assets/plugins/referrer_tracking.js"></script><br>
+        <a href="https://livestream.com/supremecourtofms/2013-IA-01162-SCT" target="_blank">2013-IA-01162-SCT Dependable Abrasives, Inc. v. Richard Pierce</a><br>
+        <strong><i>Tuesday, November 18, 2014</i><br>
+        10:30 a.m.</strong><br>
+        <!--<a href="http://courts.ms.gov/appellate_courts/docket/phpdocket.php?case_num=82209">Case Docket...</a></p></td></tr>-->
+        <tr class="newscellbottomborder spaceUnder spaceAbove" height="10" >
+        <td class="nobgcolor newscellbottomborder" align="center"  style="color: white; background-color: #06213f; font-size: 16px;"><b>DECEMBER 2014</b></td>
+        </tr>
+        <tr class="newscellbottomborder spaceUnder spaceAbove">
+        <td align="left" valign="middle" class="nobgcolor newscellbottomborder">
+        <iframe id="ls_embed_1527803409" src="https://livestream.com/accounts/13121278/events/7601463/player?width=325&height=183&enableInfoAndActivity=false&defaultDrawer=&autoPlay=true&mute=false" width="325" height="183" style="float:left;  padding-right: 5px;" frameborder="0" scrolling="no" allowfullscreen> </iframe><script type="text/javascript" data-embed_id="ls_embed_1527803409" src="https://livestream.com/assets/plugins/referrer_tracking.js"></script><br>
+        <a href="https://livestream.com/supremecourtofms/2013-CA-01643-SCT" target="_blank">2013-CA-01643-SCT Jeffery A. Stallworth v. State of Mississippi</a><br>
+        <strong><i>Monday, December 1, 2014</i><br>
+        1:30 p.m.</strong><br>
+        <!--<a href="http://courts.ms.gov/appellate_courts/docket/phpdocket.php?case_num=82209">Case Docket...</a></p></td></tr>-->
+        <tr class="newscellbottomborder spaceUnder spaceAbove">
+        <td align="left" valign="middle" class="nobgcolor newscellbottomborder">
+        <iframe id="ls_embed_1527803460" src="https://livestream.com/accounts/13121278/events/7601465/player?width=325&height=183&enableInfoAndActivity=false&defaultDrawer=&autoPlay=true&mute=false" width="325" height="183" style="float:left;  padding-right: 5px;" frameborder="0" scrolling="no" allowfullscreen> </iframe><script type="text/javascript" data-embed_id="ls_embed_1527803460" src="https://livestream.com/assets/plugins/referrer_tracking.js"></script><br>
+        <a href="https://livestream.com/supremecourtofms/2013-KA-01742-SCT" target="_blank">2013-KA-01742-SCT Marvin Kirk v. State of Mississippi</a><br>
+        <strong><i>Tuesday, December 2, 2014</i><br>
+        1:30 p.m.</strong><br>
+        <!--<a href="http://courts.ms.gov/appellate_courts/docket/phpdocket.php?case_num=82209">Case Docket...</a></p></td></tr>-->
+        <tr class="newscellbottomborder spaceUnder spaceAbove">
+        <td align="left" valign="middle" class="nobgcolor newscellbottomborder">
+        <iframe id="ls_embed_1527803502" src="https://livestream.com/accounts/13121278/events/7601468/player?width=325&height=183&enableInfoAndActivity=false&defaultDrawer=&autoPlay=true&mute=false" width="325" height="183" style="float:left;  padding-right: 5px;" frameborder="0" scrolling="no" allowfullscreen> </iframe><script type="text/javascript" data-embed_id="ls_embed_1527803502" src="https://livestream.com/assets/plugins/referrer_tracking.js"></script><br>
+        <a href="https://livestream.com/supremecourtofms/2013-CA-01089-SCT" target="_blank">2013-CA-01089-SCT Ricky Chase a/k/a Ricky Roy Chase v. State of Mississippi</a><br>
+        <strong><i>Monday, December 8, 2014</i><br>
+        1:30 p.m.</strong><br>
+        <!--<a href="http://courts.ms.gov/appellate_courts/docket/phpdocket.php?case_num=82209">Case Docket...</a></p></td></tr>-->
+        <tr class="newscellbottomborder spaceUnder spaceAbove">
+        <td align="left" valign="middle" class="nobgcolor newscellbottomborder">
+        <iframe id="ls_embed_1527803547" src="https://livestream.com/accounts/13121278/events/7601470/player?width=325&height=183&enableInfoAndActivity=false&defaultDrawer=&autoPlay=true&mute=false" width="325" height="183" style="float:left;  padding-right: 5px;" frameborder="0" scrolling="no" allowfullscreen> </iframe><script type="text/javascript" data-embed_id="ls_embed_1527803547" src="https://livestream.com/assets/plugins/referrer_tracking.js"></script><br>
+        <a href="https://livestream.com/supremecourtofms/2013-IA-00436-SCT" target="_blank">2013-IA-00436-SCT Mississippi Division of Medicaid and David J. Dzielak, in his Official Capacity as Executive Director of Mississippi Division of Medicaid v. Alliance Health Center</a><br>
+        <strong>CONSOLIDATED WITH:</strong><br>
+        <a href="https://livestream.com/supremecourtofms/2013-IA-00436-SCT" target="_blank">2013-IA-00438-SCT Mississippi Division of Medicaid and Robert L. Robinson, in his Official Capacity as Executive Director of Mississippi Division of Medicaid v. Crossgates River Oaks Hospital f/k/a Rankin Medical Center, Grenada Lake Medical Center, Riley Memorial Hospital, Natchez Community Hospital, Woman's Hospital, Northwest Mississippi Regional Medical Center, Biloxi Regional Medical Center, River Oaks Hospital, Delta Regional Medical Center, St. Dominic-Jackson Memorial Hospital, and King's Daughter Medical Center-Brookhaven</a><br> 
+        <strong><i>Tuesday, December 16, 2014</i><br>
+        1:30 p.m.</strong><br>
+        <!--<a href="http://courts.ms.gov/appellate_courts/docket/phpdocket.php?case_num=82209">Case Docket...</a></p></td></tr>-->
+        </table>
+        </div>
+        <!-- InstanceEndEditable -->
+     <!-- / Middle Column --> 
+     <!-- Right Column --><!-- / Right Column --> 
+     </div>
+     <!-- ################################################################################################ --> 
+     <!-- / main body -->
+     <div class="clear"></div>
+     </main>
+     <font color="#1E62B6">    </font>
+     <font color="#1E62B6">    </font> </div>
+     </div>
+     <!-- ################################################################################################ --> 
+     <!-- ################################################################################################ --> 
+     <!-- ################################################################################################ -->
+     <div class="wrapper row4">
+     <div class="rounded">
+     <footer id="footer" class="clear"> 
+     <!-- ################################################################################################ -->
+     <div class="one_third first">
+     <figure class="center"><img class="btmspace-15" src="../../../../images_folder/demo/worldmap.png" alt="">
+     <figcaption><a href="https://www.google.com/maps/place/450+High+St,+Jackson,+MS+39201/@32.3056503,-90.1823121,17z/data=!3m1!4b1!4m2!3m1!1s0x8628325402ad740b:0x63eb30a84a741fde" target="_blank" style="color:#000000">Find Us With Google Maps &raquo;</a></figcaption>
+     </figure>
+     </div>
+     <div class="one_third">
+     <font color="#000000">
+     <address>
+     <b>Physical Address: </b><br>
+     Gartin Justice Building<br>
+     450 High Street<br>
+     Jackson, MS 39201<br>
+     <br>
+     <i class="fa fa-envelope-o pright-10"></i>   <b>Mailing Address:</b> <br>
+     P O Box 249<br>
+     Jackson, MS 39205
+     </address>
+     </div>
+     <div class="one_third nospace">
+     <p class="nospace"><b class="header" style="color: #06213f">Resources</b>
+     <address>
+     <a href="../../../../map_visitorsguide.pdf#zoom=75" target="_blank" class="footerlink">Map & Visitor's Guide</a><br>
+     <a href="../../../../employment/employment.php" class="footerlink" >Employment</a><br>
+     <a href="../../../../aoc/forms/personnelinfo.php" class="footerlink">Employee Forms</a><br>
+     <a href="../../../../directory/directory.php" class="footerlink">Directories</a><br>
+     <!--<a href="https://courts.ms.gov/index.html" class="footerlink">Old Site (Archive)</a><br>-->
+     <br><b><font color="#000000">
+     Clerk's Office</font></b><br>
+     <i class="fa fa-phone pright-10"></i>  601-359-3694 | Fax: 601-359-2407<br/>
+     Hours: Monday - Friday 8:00am - 5:00pm
+     </address>
+     </p>
+     </div>
+     <!-- ################################################################################################ --> 
+     </footer>
+     </div>
+     </div>
+     <!-- ################################################################################################ --> 
+     <!-- ################################################################################################ --> 
+     <!-- ################################################################################################ -->
+     <div class="wrapper row5">
+     <div id="copyright" class="clear"> 
+    <!-- ################################################################################################ -->
+    <!-- <p class="fl_left">Copyright &copy; 2015 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>-->
+    <!-- ################################################################################################ --> 
+    </div>
+    </div>
+<!-- JAVASCRIPTS --> 
+<script src="../../../../layout/scripts/jquery.min.js"></script> 
+<script src="../../../../layout/scripts/jquery.fitvids.min.js"></script> 
+<script src="../../../../layout/scripts/tabslet/jquery.tabslet.min.js"></script>
+</body>
+<!-- InstanceEnd --></html>
