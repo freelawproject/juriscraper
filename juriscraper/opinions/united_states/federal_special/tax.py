@@ -120,9 +120,11 @@ class Site(OpinionSite):
         path = self.base_path + '//td[2]'
         for td in self.html.xpath(path):
             status = td.text_content().strip().lower()
-            if "memorandum" in status:
-                statuses.append('Published')
-            elif "summary" in status:
+            if "opinion" in status.lower():
+                statuses.append("Published")
+            elif "memorandum" in status.lower():
+                statuses.append('Unpublished')
+            elif "summary" in status.lower():
                 statuses.append('Unpublished')
             else:
                 statuses.append('Unknown')
