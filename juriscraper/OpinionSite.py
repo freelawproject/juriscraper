@@ -92,5 +92,8 @@ class OpinionSite(AbstractSite):
     def _get_west_state_citations(self):
         return None
 
+    def _extract_from_text(self, content):
+        return {}
+
     def _get_date_filed_is_approximate(self):
         return [False] * len(self.case_names)
