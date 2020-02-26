@@ -6,6 +6,7 @@
 # Neutral Citation Format (Summary opinions: T.C. Summary Opinion 2012-1
 
 import os
+import re
 from datetime import date, datetime, timedelta
 
 from dateutil.rrule import WEEKLY, rrule
@@ -146,3 +147,42 @@ class Site(OpinionSite):
             # Setting status is important because it prevents the download
             # function from being run a second time by the parse method.
             self.status = 200
+
+    def _extract_from_text(self, opinion_text):
+        """Can we extract the citation and related information
+
+        :param opinion_text: The content of the docuemnt downloaded
+        :return: dictionary of values
+        """
+
+        cd = {}
+
+        regex1 = r"([0-9]{1,4}).*UNITED STATES TAX COURT REPORTS?.*\(\d{1,4}\)"
+        regex2 = r"((T\. ?C\. ((Memo\.?)|(Summary Opinion))\s([0-9]{4}).([0-9]{1,3})\b)|([0-9]{1,4}).*(T\. ?C\. No\.).*(\d{1,4}))"
+        match = re.search(regex1, opinion_text)
+        if match:
+            cd['cite'] = match.group()
+            cd['volume'] = match.group(1)
+            cd['page'] = match.group(2)
+            cd['precedential_status'] = "published"
+            cd['reporter'] = "T.C."
+        else:
+            match = re.search(regex2, opinion_text)
+            if match:
+                cd['cite'] = match.group()
+                if "No." in match.group():
+                    cd['reporter'] = "T.C."
+                    cd['volume'] = match.group(8)
+                    cd['page'] = match.group(10)
+                    cd['precedential_status'] = "published"
+
+                else:
+                    if "Memo" in match.group():
+                        cd['reporter'] = "T.C. Memo."
+                    elif "Summary" in match.group():
+                        cd['reporter'] = "T.C. Summary Opinion"
+                    cd['volume'] = match.group(6)
+                    cd['page'] = match.group(7)
+                    cd['precedential_status'] = "unpublished"
+
+        return cd
