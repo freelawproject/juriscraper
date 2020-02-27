@@ -18,12 +18,14 @@
     }
 
     .error-header {
-      pointer: cursor;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
   <h1>Status Report</h1>
+  <p>Generated on {{ generated_on }}</p>
+
   <h2>{{ count }} total scrapers run</h2>
   <h2 style="color: {{'red' if total_errors > 0 else 'green'}}">{{ total_errors }} total errors</h2>
   <div class="error-tally">
@@ -48,7 +50,6 @@
       <div class="scraper">{{ name }}</div>
     {% endfor %}
     </div>
-
   </div>
 
   <h2 id="none" class="error-header">- {{ no_error | length }} scrapers completed successfully</h2>
@@ -59,8 +60,6 @@
     {% endfor %}
     </div>
   </div>
-
-  <p>Generated on {{ generated_on }}</p>
 
   <script
     src="https://code.jquery.com/jquery-3.4.1.js"

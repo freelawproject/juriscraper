@@ -1,5 +1,4 @@
 from datetime import datetime
-import pickle
 
 import jinja2
 
@@ -11,16 +10,20 @@ def generate_scraper_report(file_path, results):
   with_zero_results = []
   with_global_failure = []
   for name, scraper in results.items():
+    has_error = False
     if scraper['global_failure']:
       with_global_failure.append(name)
+      has_error = True
     scrape = scraper['scrape']
     if scrape.get('count') == 0:
       with_zero_results.append(name)
+      has_error = True
     for exc in scrape.get('exceptions', []):
       if len(exc) > 0:
         with_error.append(name)
+        has_error = True
         break
-    else:
+    if not has_error:
       no_error.append(name)
 
   display = {
