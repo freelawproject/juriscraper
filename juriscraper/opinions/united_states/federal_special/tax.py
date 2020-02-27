@@ -119,11 +119,11 @@ class Site(OpinionSite):
         path = self.base_path + "//td[2]"
         for td in self.html.xpath(path):
             status = td.text_content().strip().lower()
-            if "opinion" in status.lower():
+            if "opinion" in status:
                 statuses.append("Published")
-            elif "memorandum" in status.lower():
+            elif "memorandum" in status:
                 statuses.append("Unpublished")
-            elif "summary" in status.lower():
+            elif "summary" in status:
                 statuses.append("Unpublished")
             else:
                 statuses.append("Unknown")
@@ -151,13 +151,12 @@ class Site(OpinionSite):
             # function from being run a second time by the parse method.
             self.status = 200
 
-    def extract_from_text(self, opinion_text):
+    def extract_from_text(self, scraped_text):
         """Can we extract the citation and related information
 
-        :param opinion_text: The content of the docuemnt downloaded
-        :return: dictionary of values
+        :param scraped_text: The content of the docuemnt downloaded
+        :return: dictionary of citations, reporter, volume and page
         """
-
         metadata = {}
 
         tax_court_reports_regex = re.compile(
@@ -183,7 +182,7 @@ class Site(OpinionSite):
             re.VERBOSE | re.IGNORECASE,
         )
 
-        match = re.search(tax_court_reports_regex, opinion_text)
+        match = re.search(tax_court_reports_regex, scraped_text)
 
         if match:
             metadata["cite"] = match.group()
@@ -197,7 +196,7 @@ class Site(OpinionSite):
                 metadata["page"],
             )
         else:
-            match = re.search(tax_court_alt_regex, opinion_text)
+            match = re.search(tax_court_alt_regex, scraped_text)
             if match:
                 metadata["cite"] = match.group()
                 if "No." in match.group():
