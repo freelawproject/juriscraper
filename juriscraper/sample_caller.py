@@ -1,3 +1,5 @@
+from collections import defaultdict
+import os
 import signal
 import six
 import sys
@@ -8,6 +10,7 @@ from optparse import OptionParser
 
 from juriscraper.lib.importer import build_module_list, site_yielder
 from juriscraper.lib.string_utils import trunc
+from juriscraper.report import generate_scraper_report
 
 die_now = False
 
@@ -38,6 +41,7 @@ def scrape_court(site, binaries=False):
     Nonetheless, this caller is useful for testing, and for demonstrating some
     basic pitfalls that a caller will run into.
     """
+    exceptions = defaultdict(list)
     for item in site:
         # Percent encode URLs (this is a Python wart)
         download_url = six_parse.quote(item['download_urls'], safe="%/:=&?~#+!$,;'@()*[]")
@@ -50,10 +54,12 @@ def scrape_court(site, binaries=False):
                 data = opener.open(download_url).read()
                 # test for empty files (thank you CA1)
                 if len(data) == 0:
+                    exceptions['EmptyFileError'].append(download_url)
                     v_print(3, 'EmptyFileError: %s' % download_url)
                     v_print(3, traceback.format_exc())
                     continue
             except Exception:
+                exceptions['DownloadingError'].append(download_url)
                 v_print(3, 'DownloadingError: %s' % download_url)
                 v_print(3, traceback.format_exc())
                 continue
@@ -74,6 +80,7 @@ def scrape_court(site, binaries=False):
                 v_print(1, '    %s: %s' % (k, v))
 
     v_print(3, '\n%s: Successfully crawled %d items.' % (site.court_id, len(site)))
+    return {'count': len(site), 'exceptions': exceptions}
 
 
 v_print = None
@@ -83,11 +90,14 @@ def main():
     # this line is used for handling SIGTERM (CTRL+4), so things can die safely
     signal.signal(signal.SIGTERM, signal_handler)
 
-    usage = ('usage: %prog -c COURTID [-d|--daemon] [-b|--binaries]\n\n'
+    usage = ('usage: %prog -c COURTID [-d|--daemon] [-b|--binaries] [-r|--report]\n\n'
              'To test ca1, downloading binaries, use: \n'
              '    python %prog -c opinions.united_states.federal_appellate.ca1 -b\n\n'
              'To test all federal courts, omitting binaries, use: \n'
-             '    python %prog -c opinions.united_states.federal_appellate')
+             '    python %prog -c opinions.united_states.federal_appellate'
+
+             'Passing the --report option will generate an HTML report in '
+             'the root directory after scrapers have run')
     parser = OptionParser(usage)
     parser.add_option('-c', '--courts', dest='court_id', metavar="COURTID",
                       help=('The court(s) to scrape and extract. This should be in '
@@ -97,7 +107,7 @@ def main():
                             'simply "opinions" to do all opinions. If desired, '
                             'you can use slashes instead of dots to separate'
                             'the import path.'))
-    parser.add_option('-d', '--daemon', action="store_true", dest='daemonmode',
+    parser.add_option('-d', '--daemon', action='store_true', dest='daemonmode',
                       default=False, help=('Use this flag to turn on daemon '
                                            'mode, in which all courts requested '
                                            'will be scraped in turn, non-stop.'))
@@ -116,6 +126,11 @@ def main():
                       action='store_true',
                       default=False,
                       help='Download the historical corpus using the _download_backwards method.')
+    parser.add_option('-r',
+                      '--report',
+                      action='store_true',
+                      default=False,
+                      help='Generate a report.html with the outcome of running the scrapers')
 
     (options, args) = parser.parse_args()
 
@@ -123,6 +138,7 @@ def main():
     binaries = options.binaries
     court_id = options.court_id
     backscrape = options.backscrape
+    generate_report = options.report
 
     # Set up the print function
     print("Verbosity is set to: %s" % options.verbosity)
@@ -132,6 +148,8 @@ def main():
 
     global v_print
     v_print = _v_print
+
+    results = {}
 
     if not court_id:
         parser.error('You must specify a court as a package or module.')
@@ -148,6 +166,8 @@ def main():
         num_courts = len(module_strings)
         i = 0
         while i < num_courts:
+            current_court = module_strings[i]
+            results[current_court] = {'global_failure': False}
             # this catches SIGINT, so the code can be killed safely.
             if die_now:
                 v_print(3, 'The scraper has stopped.')
@@ -171,8 +191,10 @@ def main():
                     if site.uses_selenium:
                         v_print(3, "Selenium will be used.")
                     site.parse()
-                    scrape_court(site, binaries)
+                    results[current_court]['scrape'] = scrape_court(site, binaries)
             except Exception:
+                results[current_court]['global_failure'] = traceback.format_exc()
+                results[current_court]['scrape'] = {}
                 v_print(3, '*************!! CRAWLER DOWN !!****************')
                 v_print(3, '*****scrape_court method failed on mod: %s*****' % module_strings[i])
                 v_print(3, '*************!! ACTION NEEDED !!***************')
@@ -187,6 +209,12 @@ def main():
                 i += 1
 
     v_print(3, 'The scraper has stopped.')
+
+    if generate_report:
+      report_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../report.html'))
+      v_print(3, 'Generating HTML report at %s' % report_path)
+      generate_scraper_report(report_path, results)
+
     sys.exit(0)
 
 if __name__ == '__main__':
