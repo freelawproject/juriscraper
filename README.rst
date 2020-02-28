@@ -69,13 +69,20 @@ Joining the Project as a Developer
 
 For scrapers to be merged:
 
--  Automated testing should pass. The test suite will be run automatically by
-   `CircleCI <https://circleci.com/gh/freelawproject/juriscraper/>`__. If changes are being made to the pacer code, the pacer tests must also pass when run. These tests are skipped by default. To run them, set environment variables for PACER_USERNAME and PACER_PASSWORD.
+-  Automated testing should pass. The test suite will be run automatically by both
+   `CircleCI <https://circleci.com/gh/freelawproject/juriscraper/>`__ and Github Actions. If changes are being made to the pacer code, the pacer tests must also pass when run. These tests are skipped by default. To run them, set environment variables for PACER_USERNAME and PACER_PASSWORD.
+
 -  A \*\_example\* file must be included in the ``tests/examples``
    directory (this is needed for the tests to run your code).
+
 -  Your code should be
    `PEP8 <http://www.python.org/dev/peps/pep-0008/>`__ compliant with no
    major Pylint problems or Intellij inspection issues.
+
+-  We use the `black <https://black.readthedocs.io/en/stable/>`__ code formatter to make sure all our Python code has the same formatting. This is an automated tool that you must run on any code you run before you push it to Github. When you run it, it will reformat your code. We recommend `integrating it into your editor< https://black.readthedocs.io/en/stable/editor_integration.html>`__.
+
+-  Beyond what black will do for you by default, if you somehow find a way to do whitespace or other formatting changes, do so in their own commit and ideally in its own PR. When whitespace is combined with other code changes, the PR's become impossible to read and risky to merge. This is a big reason we use black.
+
 -  Your code should efficiently parse a page, returning no exceptions or
    speed warnings during tests on a modern machine.
 
