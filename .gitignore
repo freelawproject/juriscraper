@@ -20,3 +20,6 @@ juriscraper/pacer/private_settings.py
 tests/fixtures/cassettes/
 
 .tox
+
+# ignore sample_caller report
+report.html
