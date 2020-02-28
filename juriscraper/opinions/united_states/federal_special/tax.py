@@ -157,7 +157,14 @@ class Site(OpinionSite):
         :param scraped_text: The content of the docuemnt downloaded
         :return: dictionary of citations, reporter, volume and page
         """
-        metadata = {}
+        metadata = {
+                    "Citation": {
+                        "type": "SPECIALTY"
+                    },
+                    "OpinionCluster": {
+                        "precedential_status": ""
+                        }
+                    }
 
         tax_court_reports_regex = re.compile(
             r"""
@@ -185,38 +192,26 @@ class Site(OpinionSite):
         match = re.search(tax_court_reports_regex, scraped_text)
 
         if match:
-            metadata["cite"] = match.group()
-            metadata["volume"] = match.group(1)
-            metadata["page"] = match.group(2)
-            metadata["precedential_status"] = "published"
-            metadata["reporter"] = "T.C."
-            metadata["normalized_citation"] = "%s %s %s" % (
-                metadata["volume"],
-                metadata["reporter"],
-                metadata["page"],
-            )
+            metadata["Citation"]["volume"] = match.group(1)
+            metadata["Citation"]["page"] = match.group(2)
+            metadata["Citation"]["reporter"] = "T.C."
+            metadata["OpinionCluster"]["precedential_status"] = "Published"
         else:
             match = re.search(tax_court_alt_regex, scraped_text)
             if match:
                 metadata["cite"] = match.group()
                 if "No." in match.group():
-                    metadata["reporter"] = "T.C."
-                    metadata["volume"] = match.group(8)
-                    metadata["page"] = match.group(10)
-                    metadata["precedential_status"] = "published"
-
+                    metadata["Citation"]["reporter"] = "T.C."
+                    metadata["Citation"]["volume"] = match.group(8)
+                    metadata["Citation"]["page"] = match.group(10)
+                    metadata["OpinionCluster"]["precedential_status"] = "Published"
                 else:
                     if "Memo" in match.group():
-                        metadata["reporter"] = "T.C. Memo."
+                        metadata["Citation"]["reporter"] = "T.C. Memo."
                     elif "Summary" in match.group():
-                        metadata["reporter"] = "T.C. Summary Opinion"
-                    metadata["volume"] = match.group(6)
-                    metadata["page"] = match.group(7)
-                    metadata["precedential_status"] = "unpublished"
-                metadata["normalized_citation"] = "%s %s %s" % (
-                    metadata["volume"],
-                    metadata["reporter"],
-                    metadata["page"],
-                )
+                        metadata["Citation"]["reporter"] = "T.C. Summary Opinion"
+                    metadata["Citation"]["volume"] = match.group(6)
+                    metadata["Citation"]["page"] = match.group(7)
+                    metadata["OpinionCluster"]["precedential_status"] = "Unpublished"
 
         return metadata

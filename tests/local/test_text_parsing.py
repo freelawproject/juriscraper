@@ -170,5 +170,11 @@ VerDate Nov 24 2008   10:59 Jul 11, 2014   Jkt 372897   PO 20012   Frm 00002   F
         site = tax.Site()
         for q, a in test_pairs:
             results = site.extract_from_text(q)
-            self.assertEqual(results["normalized_citation"], a)
-            print "✓", results["normalized_citation"]
+            cite_string = "%s %s %s" % (
+                results["Citation"]["volume"],
+                results["Citation"]["reporter"],
+                results["Citation"]["page"],
+            )
+
+            self.assertEqual(cite_string, a)
+            print "✓", cite_string
