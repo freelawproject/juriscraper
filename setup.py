@@ -3,6 +3,7 @@ import os
 import sys
 import unittest
 
+
 try:  # for pip >= 10
     from pip._internal.req import parse_requirements
 except ImportError:  # for pip <= 9.0.3
@@ -10,6 +11,7 @@ except ImportError:  # for pip <= 9.0.3
 
 from setuptools import setup, find_packages
 from setuptools.command.install import install
+
 
 VERSION = "1.26.20"
 AUTHOR = "Free Law Project"
