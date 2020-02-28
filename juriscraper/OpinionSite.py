@@ -92,5 +92,13 @@ class OpinionSite(AbstractSite):
     def _get_west_state_citations(self):
         return None
 
+    def extract_from_text(self, scraped_text):
+        """Pass scraped text into function and return data as a dictionary
+
+        :param opinion_text: Text of scraped content
+        :return: dictionary of information
+        """
+        return {}
+
     def _get_date_filed_is_approximate(self):
         return [False] * len(self.case_names)
