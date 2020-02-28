@@ -158,13 +158,9 @@ class Site(OpinionSite):
         :return: dictionary of citations, reporter, volume and page
         """
         metadata = {
-                    "Citation": {
-                        "type": "SPECIALTY"
-                    },
-                    "OpinionCluster": {
-                        "precedential_status": ""
-                        }
-                    }
+            "Citation": {"type": "SPECIALTY"},
+            "OpinionCluster": {"precedential_status": ""},
+        }
 
         tax_court_reports_regex = re.compile(
             r"""
