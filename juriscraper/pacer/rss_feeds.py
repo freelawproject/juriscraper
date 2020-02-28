@@ -32,7 +32,6 @@ reached out to all of these jurisdictions and heard back the following:
     - Update via email: "At this time, the court declined to participate.
       However, the court anticipates transitioning to the NextGen version of
       CM/ECF in 2019 and will likely participate at that time.
- - nmib (Northern Mariana Islands, 17 hours ahead): Sent email.
  - alnd: Sent email.
  - caed: Sent email. 916-930-4000, left message with IT director, Richard.
  - flnd: Sent email.
