@@ -81,6 +81,17 @@ For scrapers to be merged:
 
 -  We use the `black <https://black.readthedocs.io/en/stable/>`__ code formatter to make sure all our Python code has the same formatting. This is an automated tool that you must run on any code you run before you push it to Github. When you run it, it will reformat your code. We recommend `integrating it into your editor< https://black.readthedocs.io/en/stable/editor_integration.html>`__.
 
+- This project is configured to use git pre-commit hooks managed by the
+Python program `pre-commit` ([website](https://pre-commit.com/)). Pre-
+commit checks let us easily ensure that the code is properly formatted with
+black before it can even be commited. If you install the dev dependencies in
+`requirements-dev.txt`, you should then be able to run `$ pre-commit install`
+which will set up a git pre-commit hook for you. This install step is only
+necessary once in your repository. When using this hook, any code
+files that do not comply to black will automatically be unstaged and re-
+formatted. You will see a message to this effect. It is your job to then re-stage
+and commit the files.
+
 -  Beyond what black will do for you by default, if you somehow find a way to do whitespace or other formatting changes, do so in their own commit and ideally in its own PR. When whitespace is combined with other code changes, the PR's become impossible to read and risky to merge. This is a big reason we use black.
 
 -  Your code should efficiently parse a page, returning no exceptions or
