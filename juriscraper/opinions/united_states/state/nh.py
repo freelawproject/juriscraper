@@ -31,7 +31,7 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.link_path = 'id("content")/div//ul//li//a[position()=1]'
         self.link_text_regex = re.compile(
-            "(\d{4}-\d+(?!.*\d{4}-\d+))(?:,|\.|\s?) (.*)"
+            "(\d{4}-\d+(?!.*\d{4}-\d+))(?:,|\.|\s?)\s+(.*)", re.M
         )
         self.docket_name_pairs = False
 
