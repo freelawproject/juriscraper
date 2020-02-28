@@ -1,48 +1,50 @@
 # Author: Michael Lissner
 # Date created: 2013-06-03
+# Date updated: 2020-02-25
 
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.lib.html_utils import (
-    get_table_column_text,
-    get_table_column_links,
-)
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = (
-            "https://courts.mt.gov/Portals/189/orders/orders/Recent_Orders.htm"
+        self.url = "https://juddocumentservice.mt.gov/getDailyOrders"
+        self.download_base = (
+            "https://juddocumentservice.mt.gov/getDocByCTrackId?DocId="
         )
 
-        # HTTPS certificate is bad, but hopefully they'll fix it and we can remove the line below
-        self.disable_certificate_verification()
-
     def _get_download_urls(self):
-        return get_table_column_links(self.html, 1)
+        return [
+            "%s%s" % (self.download_base, row["cTrackId"]) for row in self.html
+        ]
 
     def _get_case_names(self):
-        return get_table_column_text(self.html, 4)
+        return ["%s" % row["title"] for row in self.html]
 
     def _get_case_dates(self):
         return [
-            convert_date_string(date_string)
-            for date_string in get_table_column_text(self.html, 2)
+            convert_date_string("%s" % row["fileDate"]) for row in self.html
         ]
 
     def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
+        return [
+            "Published"
+            if "Published" in row["documentDescription"]
+            else "Unpublished"
+            for row in self.html
+        ]
 
     def _get_docket_numbers(self):
-        return get_table_column_text(self.html, 3)
+        return ["%s" % row["caseNumber"] for row in self.html]
 
     def _get_summaries(self):
-        return get_table_column_text(self.html, 1)
+        return ["%s" % row["documentDescription"] for row in self.html]
 
     def _get_nature_of_suit(self):
         natures = []
+
         for docket in self.docket_numbers:
             if docket.startswith("DA"):
                 nature = "Direct Appeal"
