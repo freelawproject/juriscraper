@@ -33,10 +33,12 @@ class Site(OpinionSiteLinear):
                 status = "Published"
             else:
                 status = "Unknown"
-            self.cases.append({
-                "url": url[0],
-                "name": "In re: %s" % titlecase(cell_1.text_content()),
-                "status": status,
-                "docket": row.xpath("./td[3]")[0].text_content(),
-                "date": row.xpath("./td[4]")[0].text_content(),
-            })
+            self.cases.append(
+                {
+                    "url": url[0],
+                    "name": "In re: %s" % titlecase(cell_1.text_content()),
+                    "status": status,
+                    "docket": row.xpath("./td[3]")[0].text_content(),
+                    "date": row.xpath("./td[4]")[0].text_content(),
+                }
+            )
