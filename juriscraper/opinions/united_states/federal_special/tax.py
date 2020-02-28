@@ -183,13 +183,13 @@ class Site(OpinionSite):
 
         tax_court_alt_regex = re.compile(
             r"""
-            ((T\.\ ?C\.\s((Memo\.?)|(Summary\ Opinion))\s{1,}   # T.C. Memo or Summary Opinion (reporter)
+            ((T\.\ ?C\.\s((Memo\.?)|(Summm?ary\ Opinion))\s{1,} # T.C. Memo or Summary Opinion (reporter)
             ([0-9]{4})                                          # Four digit year (volume)
             .                                                   # hyphen, em-dash etc.
             ([0-9]{1,3})\b)                                     # 1-3 digit number in order of publication (page)
             |                                                   # or 
             ([0-9]{1,4})\s{1,}                                  # (volume)
-            (T\.\ ?C\.\ No\.)\s{1,}                             # T.C. No. (reporter)
+            (T\.\ ?C\.\ No\.)(?:\s{1,})?                        # T.C. No. (reporter)
             (\d{1,4}))                                          # (page)
             """,
             re.VERBOSE | re.IGNORECASE,
@@ -205,9 +205,8 @@ class Site(OpinionSite):
         else:
             match = re.search(tax_court_alt_regex, scraped_text)
             if match:
-                metadata["cite"] = match.group()
                 if "No." in match.group():
-                    metadata["Citation"]["reporter"] = "T.C."
+                    metadata["Citation"]["reporter"] = "T.C. No."
                     metadata["Citation"]["volume"] = match.group(8)
                     metadata["Citation"]["page"] = match.group(10)
                     metadata["OpinionCluster"][
@@ -216,7 +215,7 @@ class Site(OpinionSite):
                 else:
                     if "Memo" in match.group():
                         metadata["Citation"]["reporter"] = "T.C. Memo."
-                    elif "Summary" in match.group():
+                    elif "Summ" in match.group():
                         metadata["Citation"][
                             "reporter"
                         ] = "T.C. Summary Opinion"
