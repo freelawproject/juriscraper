@@ -43,9 +43,11 @@ def scrape_court(site, binaries=False):
     """
     exceptions = defaultdict(list)
     for item in site:
+        # First turn the download urls into a utf-8 byte string
+        item_download_urls = item["download_urls"].encode("utf-8")
         # Percent encode URLs (this is a Python wart)
         download_url = six_parse.quote(
-            item["download_urls"], safe="%/:=&?~#+!$,;'@()*[]"
+            item_download_urls, safe="%/:=&?~#+!$,;'@()*[]"
         )
 
         if binaries:
