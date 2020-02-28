@@ -207,7 +207,7 @@ class Site(OpinionSite):
             if match:
                 metadata["cite"] = match.group()
                 if "No." in match.group():
-                    metadata["Citation"]["reporter"] = "T.C."
+                    metadata["Citation"]["reporter"] = "T.C. No."
                     metadata["Citation"]["volume"] = match.group(8)
                     metadata["Citation"]["page"] = match.group(10)
                     metadata["OpinionCluster"][
