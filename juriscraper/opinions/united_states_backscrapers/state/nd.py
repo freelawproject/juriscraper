@@ -16,19 +16,24 @@ class Site(nd.Site):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         today = date.today()
-        self.url = 'http://www.ndcourts.gov/opinions/month/%s.htm' % (today.strftime("%b%Y"))
+        self.url = "http://www.ndcourts.gov/opinions/month/%s.htm" % (
+            today.strftime("%b%Y")
+        )
 
     def _get_download_urls(self):
         """We use a fetcher and a DeferringList object and a HEAD request
         to test whether the wpd exists for a case"""
+
         def fetcher(html_link):
             if self.test_mode_enabled():
-                return html_link    # Can't fetch remote during tests
-            case_number = re.search(r'(\d+)', html_link).group(0)
-            wpd_link = 'http://www.ndcourts.gov/wp/%s.wpd' % case_number
-            r = requests.head(wpd_link,
-                              allow_redirects=False,
-                              headers={'User-Agent': 'Juriscraper'})
+                return html_link  # Can't fetch remote during tests
+            case_number = re.search(r"(\d+)", html_link).group(0)
+            wpd_link = "http://www.ndcourts.gov/wp/%s.wpd" % case_number
+            r = requests.head(
+                wpd_link,
+                allow_redirects=False,
+                headers={"User-Agent": "Juriscraper"},
+            )
             if r.status_code == 200:
                 return wpd_link
             else:
@@ -38,23 +43,22 @@ class Site(nd.Site):
             path = '//a/@href[contains(., "/court/opinions/")]'
             seed = list(self.html.xpath(path))
         else:
-            path = '//ul//a[text()]/@href'
+            path = "//ul//a[text()]/@href"
             seed = list(self.html.xpath(path))
-        return DeferringList(seed=seed,
-                             fetcher=fetcher)
+        return DeferringList(seed=seed, fetcher=fetcher)
 
     def _get_case_names(self):
         if self.crawl_date >= date(1998, 10, 1):
             path = '//a[contains(@href, "/court/opinions/")]/text()'
             return list(self.html.xpath(path))
         else:
-            path = '//ul//a/text()'
+            path = "//ul//a/text()"
             names = self.html.xpath(path)
             case_names = []
             if self.crawl_date < date(1996, 11, 1):
                 # A bad time.
                 for name in names:
-                    name = name.rsplit('-')[0]
+                    name = name.rsplit("-")[0]
                     case_names.append(name)
                 return case_names
             else:
@@ -65,29 +69,29 @@ class Site(nd.Site):
         # count them.
         case_dates = []
         if self.crawl_date >= date(1998, 10, 1):
-            test_path = '//body/a'
+            test_path = "//body/a"
             if len(self.html.xpath(test_path)) == 0:
                 # It's a month with no cases (like Jan, 2009)
                 return []
-            path = '//body/a|//body/font'
+            path = "//body/a|//body/font"
             for e in self.html.xpath(path):
-                if e.tag == 'font':
+                if e.tag == "font":
                     date_str = e.text
-                    dt = datetime.strptime(date_str, '%B %d, %Y').date()
-                elif e.tag == 'a':
+                    dt = datetime.strptime(date_str, "%B %d, %Y").date()
+                elif e.tag == "a":
                     try:
                         case_dates.append(dt)
                     except NameError:
                         # When we don't yet have the date
                         continue
         else:
-            path = '//h4|//li'
+            path = "//h4|//li"
             for e in self.html.xpath(path):
-                if e.tag == 'h4':
+                if e.tag == "h4":
                     # We make dates on h4's because there's one h4 per date.
                     date_str = e.text.strip()
-                    dt = datetime.strptime(date_str, '%B %d, %Y').date()
-                elif e.tag == 'li':
+                    dt = datetime.strptime(date_str, "%B %d, %Y").date()
+                elif e.tag == "li":
                     try:
                         # We append on li's, because there's one li per case.
                         case_dates.append(dt)
@@ -97,17 +101,17 @@ class Site(nd.Site):
         return case_dates
 
     def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_names)
+        return ["Published"] * len(self.case_names)
 
     def _get_docket_numbers(self):
         if self.crawl_date >= date(1998, 10, 1):
             path = '//a/@href[contains(., "/court/opinions/")]'
         else:
-            path = '//ul//a[text()]/@href'
+            path = "//ul//a[text()]/@href"
         docket_numbers = []
         for html_link in self.html.xpath(path):
             try:
-                docket_numbers.append(re.search(r'(\d+)', html_link).group(0))
+                docket_numbers.append(re.search(r"(\d+)", html_link).group(0))
             except AttributeError:
                 continue
         return docket_numbers
@@ -118,14 +122,18 @@ class Site(nd.Site):
             return None
         elif self.crawl_date < date(1998, 10, 1):
             # Old format with: 1997 ND 30 - Civil No. 960157 or 1997 ND 30
-            path = '//li/text()'
+            path = "//li/text()"
         elif self.crawl_date >= date(1998, 10, 1):
             # New format with: 1997 ND 30
-            path = '//body/text()'
+            path = "//body/text()"
         neutral_cites = []
         for t in self.html.xpath(path):
             try:
-                neutral_cites.append(re.search(r'^.{0,5}(\d{4} ND (?:App )?\d{1,4})', t, re.MULTILINE).group(1))
+                neutral_cites.append(
+                    re.search(
+                        r"^.{0,5}(\d{4} ND (?:App )?\d{1,4})", t, re.MULTILINE
+                    ).group(1)
+                )
             except AttributeError:
                 continue
         return neutral_cites
@@ -135,7 +143,7 @@ class Site(nd.Site):
         if self.neutral_citations:
             delete_items = []
             for i in range(0, len(self.neutral_citations)):
-                if 'App' in self.neutral_citations[i]:
+                if "App" in self.neutral_citations[i]:
                     delete_items.append(i)
 
             for i in sorted(delete_items, reverse=True):
@@ -151,5 +159,7 @@ class Site(nd.Site):
 
     def _download_backwards(self, d):
         self.crawl_date = d
-        self.url = 'http://www.ndcourts.gov/opinions/month/%s.htm' % (d.strftime("%b%Y"))
+        self.url = "http://www.ndcourts.gov/opinions/month/%s.htm" % (
+            d.strftime("%b%Y")
+        )
         self.html = self._download()

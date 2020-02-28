@@ -12,7 +12,7 @@ def normalize_cookies(cookies):
     if type(cookies) == list:
         # Phantom/Selenium cookies
         for cookie in cookies:
-            requests_cookies[cookie['name']] = cookie['value']
+            requests_cookies[cookie["name"]] = cookie["value"]
     elif type(cookies) == RequestsCookieJar:
         # Requests cookies. Convert to dict.
         requests_cookies = dict(cookies)

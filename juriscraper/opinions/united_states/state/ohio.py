@@ -32,7 +32,7 @@ class Site(OpinionSite):
         # not designed to walk through multiple pages.
         self.court_index = 0
         self.year = str(date.today().year)
-        self.url = 'http://www.supremecourtofohio.gov/rod/docs/'
+        self.url = "http://www.supremecourtofohio.gov/rod/docs/"
         self.court_id = self.__module__
         self.base_path = "id('MainContent_gvResults')//tr[position() > 1]/td[2][string-length(normalize-space(text())) > 1]"
         self.uses_selenium = True
@@ -60,13 +60,17 @@ class Site(OpinionSite):
         ).click()
 
         # Year drop down...
-        yearDropDownId = 'MainContent_ddlDecidedYear'
-        yearDropDownPath = "//select[@id='{id}']/option[@value='%s']" % self.year
+        yearDropDownId = "MainContent_ddlDecidedYear"
+        yearDropDownPath = (
+            "//select[@id='{id}']/option[@value='%s']" % self.year
+        )
         yearDropdownPaths = [
-            yearDropDownPath.format(id=yearDropDownId),             # Legacy examples
-            yearDropDownPath.format(id=yearDropDownId + 'Min'),     # current (2017)
+            yearDropDownPath.format(id=yearDropDownId),  # Legacy examples
+            yearDropDownPath.format(
+                id=yearDropDownId + "Min"
+            ),  # current (2017)
         ]
-        driver.find_element_by_xpath(' | '.join(yearDropdownPaths)).click()
+        driver.find_element_by_xpath(" | ".join(yearDropdownPaths)).click()
 
         # Hit submit
         submitPath = "//input[@id='MainContent_btnSubmit']"
@@ -77,8 +81,9 @@ class Site(OpinionSite):
 
         text = self._clean_text(driver.page_source)
         html_tree = html.fromstring(text)
-        html_tree.rewrite_links(fix_links_in_lxml_tree,
-                                base_href=self.request['url'])
+        html_tree.rewrite_links(
+            fix_links_in_lxml_tree, base_href=self.request["url"]
+        )
         return html_tree
 
     def _get_case_names(self):
@@ -86,12 +91,14 @@ class Site(OpinionSite):
         case_names = []
         for e in self.html.xpath(path):
             case_names.append(
-                tostring(e, method='text', encoding='unicode').strip()
+                tostring(e, method="text", encoding="unicode").strip()
             )
         return case_names
 
     def _get_download_urls(self):
-        path = "{base}/preceding::td[1]//a[1]/@href".format(base=self.base_path)
+        path = "{base}/preceding::td[1]//a[1]/@href".format(
+            base=self.base_path
+        )
         return list(self.html.xpath(path))
 
     def _get_docket_numbers(self):
@@ -106,15 +113,17 @@ class Site(OpinionSite):
         path = "{base}/following::td[4]//text()".format(base=self.base_path)
         dates = []
         for s in self.html.xpath(path):
-            dates.append(datetime.strptime(clean_if_py3(s).strip(), '%m/%d/%Y').date())
+            dates.append(
+                datetime.strptime(clean_if_py3(s).strip(), "%m/%d/%Y").date()
+            )
         return dates
 
     def _get_neutral_citations(self):
         path = "{base}/following::td[6]//text()".format(base=self.base_path)
-        return [s.replace('-', ' ') for s in self.html.xpath(path)]
+        return [s.replace("-", " ") for s in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_names)
+        return ["Published"] * len(self.case_names)
 
     def _get_judges(self):
         path = "{base}/following::td[2]".format(base=self.base_path)
@@ -126,4 +135,4 @@ class Site(OpinionSite):
         if txt:
             return txt[0]
         else:
-            return ''
+            return ""

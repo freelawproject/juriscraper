@@ -11,6 +11,7 @@ from juriscraper.opinions.united_states.state import delaware
 class Site(delaware.Site):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
-        self.url = 'http://courts.delaware.gov/opinions/List.aspx?ag=Superior%20Court'
+        self.url = (
+            "http://courts.delaware.gov/opinions/List.aspx?ag=Superior%20Court"
+        )
         self.court_id = self.__module__
-

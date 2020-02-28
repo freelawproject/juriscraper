@@ -27,15 +27,16 @@ class Site(OpinionSite):
     regex below, please add them to the test_mass
     method in test_everything.py
     """
+
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
-        self.url = 'https://www.mass.gov/service-details/new-opinions'
+        self.url = "https://www.mass.gov/service-details/new-opinions"
         self.court_id = self.__module__
-        self.court_identifier = 'SJC'
+        self.court_identifier = "SJC"
         # If you discover new examples that failed the
         # regex below, please add them to the test_mass
         # method in test_everything.py
-        self.regex = '(.*)\s+\((.*)\)\s+\((.*)\)'
+        self.regex = "(.*)\s+\((.*)\)\s+\((.*)\)"
         self.year = datetime.datetime.now().year
 
     def _download(self, request_dict={}):
@@ -48,7 +49,7 @@ class Site(OpinionSite):
         if self.test_mode_enabled():
             path = '//h2[contains(./text(), "Today\'s Published Opinions")]'
             header_text = html.xpath(path)[0].text_content()
-            self.year = int(header_text.split(' ')[-1])
+            self.year = int(header_text.split(" ")[-1])
         self.set_local_variables()
         return html
 
@@ -72,7 +73,7 @@ class Site(OpinionSite):
         self.base_path = "//a/text()[%s][%s][%s]" % (
             exclude_list,
             include_date,
-            include_court
+            include_court,
         )
         self.grouping_regex = re.compile(self.regex)
 
@@ -81,12 +82,12 @@ class Site(OpinionSite):
         for s in self.html.xpath(self.base_path):
             s = clean_string(s)
             name_raw = self.grouping_regex.search(s).group(1)
-            name = name_raw.replace(';', ' / ')
+            name = name_raw.replace(";", " / ")
             names.append(name)
         return names
 
     def _get_download_urls(self):
-        path = '%s/parent::a/@href' % self.base_path
+        path = "%s/parent::a/@href" % self.base_path
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
@@ -102,7 +103,9 @@ class Site(OpinionSite):
         for s in self.html.xpath(self.base_path):
             s = clean_string(s)
             docket_raw = self.grouping_regex.search(s).group(2)
-            docket = docket_raw.replace(';', ',').replace(self.court_identifier + ',', self.court_identifier)
+            docket = docket_raw.replace(";", ",").replace(
+                self.court_identifier + ",", self.court_identifier
+            )
             dockets.append(docket)
         return dockets
 

@@ -16,10 +16,12 @@ class SSLAdapter(HTTPAdapter):
         super(SSLAdapter, self).__init__(**kwargs)
 
     def init_poolmanager(self, connections, maxsize, block=False):
-        self.poolmanager = PoolManager(num_pools=connections,
-                                       maxsize=maxsize,
-                                       block=block,
-                                       ssl_version=self.ssl_version)
+        self.poolmanager = PoolManager(
+            num_pools=connections,
+            maxsize=maxsize,
+            block=block,
+            ssl_version=self.ssl_version,
+        )
 
 
 def add_delay(delay=0, deviation=0):

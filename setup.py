@@ -28,33 +28,38 @@ def read(*parts):
 
 class TestNetwork(install):
     """Run network test only"""
-    description = 'run isolated tests that hit the network'
+
+    description = "run isolated tests that hit the network"
 
     def run(self):
         loader = unittest.defaultTestLoader
         runner = unittest.TextTestRunner(verbosity=2)
-        tests = loader.discover('./tests/network')
+        tests = loader.discover("./tests/network")
         runner.run(tests)
 
 
 class VerifyVersion(install):
     """Custom command to verify that the git tag matches our version"""
-    description = 'verify that the git tag matches our version'
+
+    description = "verify that the git tag matches our version"
 
     def run(self):
-        tag = os.getenv('CIRCLE_TAG')
+        tag = os.getenv("CIRCLE_TAG")
 
         if tag is None:
-            sys.exit("The 'verify' option is only available in tagged CircleCI container")
+            sys.exit(
+                "The 'verify' option is only available in tagged CircleCI container"
+            )
 
         if tag != VERSION:
-            message = "Git tag: {0} does not match the version of this app: {1}"
+            message = (
+                "Git tag: {0} does not match the version of this app: {1}"
+            )
             sys.exit(message.format(tag, VERSION))
 
 
 requirements = [
-    str(r.req) for r in
-    parse_requirements('requirements.txt', session=False)
+    str(r.req) for r in parse_requirements("requirements.txt", session=False)
 ]
 
 setup(
@@ -69,7 +74,7 @@ setup(
     maintainer_email=EMAIL,
     keywords=["scraping", "legal", "pacer"],
     long_description=read("README.rst"),
-    packages=find_packages(exclude=['tests*']),
+    packages=find_packages(exclude=["tests*"]),
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
@@ -88,11 +93,8 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     install_requires=requirements,
-    tests_require=['jsondate', 'mock', 'vcrpy'],
+    tests_require=["jsondate", "mock", "vcrpy"],
     include_package_data=True,
-    test_suite='tests.test_local',
-    cmdclass={
-        'verify': VerifyVersion,
-        'testnetwork': TestNetwork,
-    }
+    test_suite="tests.test_local",
+    cmdclass={"verify": VerifyVersion, "testnetwork": TestNetwork,},
 )

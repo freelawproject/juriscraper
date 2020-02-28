@@ -20,7 +20,11 @@ class Site(pa.Site):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "http://www.pacourts.us/assets/rss/CommonwealthOpinionsRss.ashx"
+        self.url = (
+            "http://www.pacourts.us/assets/rss/CommonwealthOpinionsRss.ashx"
+        )
         self.set_regex("(.*)(?:- |et al.\s+)(\d+.*\d{4})")
-        self.base = "//item[not(contains(title/text(), 'Judgment List'))]" \
-                    "[not(contains(title/text(), 'Reargument Table'))]"
+        self.base = (
+            "//item[not(contains(title/text(), 'Judgment List'))]"
+            "[not(contains(title/text(), 'Reargument Table'))]"
+        )

@@ -13,42 +13,47 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://www.state.il.us/court/Opinions/recent_supreme.asp'
+        self.url = "http://www.state.il.us/court/Opinions/recent_supreme.asp"
         # Sometimes court forgets pdf link in 5th cell.
         # So, only process rows with a link in 5th cell.
         limiter = 'contains(./td[5]//a[1]/@href, "pdf")'
-        self.cell_path = '//table[@id="decisions"]//tr[' + limiter + ']/td[%d]'
+        self.cell_path = '//table[@id="decisions"]//tr[' + limiter + "]/td[%d]"
 
     def _get_download_urls(self):
-        path = '%s//a[1]/@href' % (self.cell_path % 5)
+        path = "%s//a[1]/@href" % (self.cell_path % 5)
         return [href for href in self.html.xpath(path)]
 
     def _get_case_names(self):
-        path = '%s//a[1]' % (self.cell_path % 5)
-        return [anchor.text_content().strip() for anchor in self.html.xpath(path)]
+        path = "%s//a[1]" % (self.cell_path % 5)
+        return [
+            anchor.text_content().strip() for anchor in self.html.xpath(path)
+        ]
 
     def _get_case_dates(self):
         path = self.cell_path % 1
-        return [convert_date_string(cell.text_content()) for cell in self.html.xpath(path)]
+        return [
+            convert_date_string(cell.text_content())
+            for cell in self.html.xpath(path)
+        ]
 
     def _get_precedential_statuses(self):
         statuses = []
-        path = '%s//div' % (self.cell_path % 3)
+        path = "%s//div" % (self.cell_path % 3)
         for div in self.html.xpath(path):
-            text = div.xpath('strong/text()')
-            if text and 'NRel' in text:
-                statuses.append('Unpublished')
+            text = div.xpath("strong/text()")
+            if text and "NRel" in text:
+                statuses.append("Unpublished")
             else:
-                statuses.append('Published')
+                statuses.append("Published")
         return statuses
 
     def _get_docket_numbers(self):
         docket_numbers = []
-        path = '%s//div' % (self.cell_path % 3)
+        path = "%s//div" % (self.cell_path % 3)
         for div in self.html.xpath(path):
-            text = div.xpath('text()')
-            text = ''.join(text).replace('cons.', '')
-            docket_numbers.append(' '.join(text.split()))
+            text = div.xpath("text()")
+            text = "".join(text).replace("cons.", "")
+            docket_numbers.append(" ".join(text.split()))
         return docket_numbers
 
     def _get_neutral_citations(self):

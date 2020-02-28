@@ -21,13 +21,13 @@ class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://www.ca2.uscourts.gov/decisions'
-        self.method = 'POST'
+        self.url = "http://www.ca2.uscourts.gov/decisions"
+        self.method = "POST"
         self.parameters = {
-            'IW_SORT': '-DATE',
-            'IW_BATCHSIZE': '100',
-            'IW_FIELD_TEXT': '*',
-            'IW_DATABASE': 'Oral Args'
+            "IW_SORT": "-DATE",
+            "IW_BATCHSIZE": "100",
+            "IW_FIELD_TEXT": "*",
+            "IW_DATABASE": "Oral Args",
         }
         self.uses_selenium = False
         self.base_xpath = '//tr[contains(.//a/@href, "mp3")]'
@@ -41,16 +41,16 @@ class Site(OralArgumentSite):
 
     def _get_case_names(self):
         case_names = []
-        for e in self.html.xpath('%s/td[2]' % self.base_xpath):
-            s = html.tostring(e, method='text', encoding='unicode')
+        for e in self.html.xpath("%s/td[2]" % self.base_xpath):
+            s = html.tostring(e, method="text", encoding="unicode")
             case_names.append(s)
         return case_names
 
     def _get_case_dates(self):
-        path = '%s/td[3]' % self.base_xpath
+        path = "%s/td[3]" % self.base_xpath
         dates = []
         for e in self.html.xpath(path):
-            date_string = html.tostring(e, method='text', encoding='unicode')
+            date_string = html.tostring(e, method="text", encoding="unicode")
             # For some reason, some records have mysterious
             # alpha characters after the date, in the date
             # column (example: '9-28-16 B'). Strip it here.
@@ -59,5 +59,5 @@ class Site(OralArgumentSite):
         return dates
 
     def _get_docket_numbers(self):
-        path = '%s/td[1]//text()' % self.base_xpath
+        path = "%s/td[1]//text()" % self.base_xpath
         return list(self.html.xpath(path))

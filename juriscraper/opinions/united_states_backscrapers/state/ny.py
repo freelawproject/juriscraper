@@ -8,17 +8,22 @@ History:
 from datetime import date
 from dateutil.rrule import rrule, DAILY
 
-from juriscraper.opinions.united_states.state.nyappterm_1st import Site as NySite
+from juriscraper.opinions.united_states.state.nyappterm_1st import (
+    Site as NySite,
+)
 
 
 class Site(NySite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.interval = 200
-        self.back_scrape_iterable = [i.date() for i in rrule(
-            DAILY,
-            interval=self.interval,
-            dtstart=date(2003, 6, 1),
-            until=date(2016, 1, 1),
-        )]
-        self.court = 'Court of Appeals'
+        self.back_scrape_iterable = [
+            i.date()
+            for i in rrule(
+                DAILY,
+                interval=self.interval,
+                dtstart=date(2003, 6, 1),
+                until=date(2016, 1, 1),
+            )
+        ]
+        self.court = "Court of Appeals"

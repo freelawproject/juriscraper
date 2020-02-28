@@ -5,13 +5,20 @@ which is free.
 
 from .reports import BaseReport
 from ..lib.date_utils import make_date_range_tuples
-from ..lib.html_utils import clean_html, fix_links_in_lxml_tree, \
-    get_html_parsed_text, set_response_encoding
+from ..lib.html_utils import (
+    clean_html,
+    fix_links_in_lxml_tree,
+    get_html_parsed_text,
+    set_response_encoding,
+)
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import convert_date_string
-from ..pacer.utils import get_nonce_from_form, \
-    get_pacer_case_id_from_nonce_url,  get_pacer_doc_id_from_doc1_url, \
-    reverse_goDLS_function
+from ..pacer.utils import (
+    get_nonce_from_form,
+    get_pacer_case_id_from_nonce_url,
+    get_pacer_doc_id_from_doc1_url,
+    reverse_goDLS_function,
+)
 
 logger = make_default_logger()
 
@@ -19,8 +26,8 @@ logger = make_default_logger()
 class FreeOpinionReport(BaseReport):
     """An object for querying and parsing the free opinion report."""
 
-    EXCLUDED_COURT_IDS = ['casb', 'innb', 'miwb', 'ohsb']
-    VALID_SORT_PARAMS = ('date_filed', 'case_number')
+    EXCLUDED_COURT_IDS = ["casb", "innb", "miwb", "ohsb"]
+    VALID_SORT_PARAMS = ("date_filed", "case_number")
 
     def __init__(self, court_id, pacer_session):
         self.responses = []
@@ -29,13 +36,15 @@ class FreeOpinionReport(BaseReport):
 
     @property
     def url(self):
-        if self.court_id == 'ohnd':
-            return 'https://ecf.ohnd.uscourts.gov/cgi-bin/OHND_WrtOpRpt.pl'
+        if self.court_id == "ohnd":
+            return "https://ecf.ohnd.uscourts.gov/cgi-bin/OHND_WrtOpRpt.pl"
         else:
-            return ('https://ecf.%s.uscourts.gov/cgi-bin/WrtOpRpt.pl' %
-                    self.court_id)
+            return (
+                "https://ecf.%s.uscourts.gov/cgi-bin/WrtOpRpt.pl"
+                % self.court_id
+            )
 
-    def query(self, start, end, sort='date_filed', day_span=7):
+    def query(self, start, end, sort="date_filed", day_span=7):
         """Query the Free Opinions report one day at a time.
 
         :param start: a date object representing the date you want to start at.
@@ -46,20 +55,27 @@ class FreeOpinionReport(BaseReport):
         week.
         """
         if self.court_id in self.EXCLUDED_COURT_IDS:
-            logger.error("Cannot get written opinions report from '%s'. It is "
-                         "not provided by the court or is in disuse.",
-                         self.court_id)
+            logger.error(
+                "Cannot get written opinions report from '%s'. It is "
+                "not provided by the court or is in disuse.",
+                self.court_id,
+            )
             return
 
         dates = make_date_range_tuples(start, end, gap=day_span)
         responses = []
         for _start, _end in dates:
-            _start = _start.strftime('%m/%d/%Y')
-            _end = _end.strftime('%m/%d/%Y')
+            _start = _start.strftime("%m/%d/%Y")
+            _end = _end.strftime("%m/%d/%Y")
             # Iterate one day at a time. Any more and PACER chokes.
-            logger.info("Querying written opinions report for '%s' between %s "
-                        "and %s, ordered by %s",
-                        self.court_id, _start, _end, sort)
+            logger.info(
+                "Querying written opinions report for '%s' between %s "
+                "and %s, ordered by %s",
+                self.court_id,
+                _start,
+                _end,
+                sort,
+            )
 
             # Get the first page, grab the nonce, and submit using that.
             response = self.session.get(self.url)
@@ -67,13 +83,13 @@ class FreeOpinionReport(BaseReport):
             logger.info("Got nonce of %s", nonce)
 
             data = {
-                'filed_from': _start,
-                'filed_to': _end,
-                'ShowFull': '1',
-                'Key1': self._normalize_sort_param(sort),
-                'all_case_ids': '0'
+                "filed_from": _start,
+                "filed_to": _end,
+                "ShowFull": "1",
+                "Key1": self._normalize_sort_param(sort),
+                "all_case_ids": "0",
             }
-            response = self.session.post(self.url + '?' + nonce, data=data)
+            response = self.session.post(self.url + "?" + nonce, data=data)
             responses.append(response)
 
         self.responses = responses
@@ -99,11 +115,14 @@ class FreeOpinionReport(BaseReport):
         results = []
         for tree in self.trees:
             opinion_count = int(
-                tree.xpath('//b[contains(text(), "Total number of '
-                           'opinions reported")]')[0].tail)
+                tree.xpath(
+                    '//b[contains(text(), "Total number of '
+                    'opinions reported")]'
+                )[0].tail
+            )
             if opinion_count == 0:
                 continue
-            rows = tree.xpath('(//table)[1]//tr[position() > 1]')
+            rows = tree.xpath("(//table)[1]//tr[position() > 1]")
             for row in rows:
                 if results:
                     # If we have results already, pass the previous result to
@@ -112,18 +131,23 @@ class FreeOpinionReport(BaseReport):
                 else:
                     row = FreeOpinionRow(row, {}, self.court_id)
                 results.append(row)
-        logger.info("Parsed %s results from written opinions report at %s",
-                    len(results), self.court_id)
+        logger.info(
+            "Parsed %s results from written opinions report at %s",
+            len(results),
+            self.court_id,
+        )
         return results
 
     def _normalize_sort_param(self, sort):
-        if sort == 'date_filed':
-            return 'de_date_filed'
-        elif sort == 'case_number':
-            return 'cs_sort_case_numb'
+        if sort == "date_filed":
+            return "de_date_filed"
+        elif sort == "case_number":
+            return "cs_sort_case_numb"
         else:
-            raise ValueError("Invalid sort parameter. Value must be one of: %s"
-                             % ', '.join(self.VALID_SORT_PARAMS))
+            raise ValueError(
+                "Invalid sort parameter. Value must be one of: %s"
+                % ", ".join(self.VALID_SORT_PARAMS)
+            )
 
 
 class FreeOpinionRow(object):
@@ -143,6 +167,7 @@ class FreeOpinionRow(object):
     In general, what we do is detect the column count, and sort order early on
     and then work from there.
     """
+
     def __init__(self, element, last_good_row, court_id):
         """Initialize the object.
 
@@ -178,17 +203,20 @@ class FreeOpinionRow(object):
         self.cause = self.get_cause()
 
     def __str__(self):
-        return '<FreeOpinionRow in %s>\n%s' % (self.court_id, {
-            'pacer_case_id': self.pacer_case_id,
-            'docket_number': self.docket_number,
-            'case_name': self.case_name,
-            'date_filed': self.date_filed,
-            'pacer_doc_id': self.pacer_doc_id,
-            'document_number': self.document_number,
-        })
+        return "<FreeOpinionRow in %s>\n%s" % (
+            self.court_id,
+            {
+                "pacer_case_id": self.pacer_case_id,
+                "docket_number": self.docket_number,
+                "case_name": self.case_name,
+                "date_filed": self.date_filed,
+                "pacer_doc_id": self.pacer_doc_id,
+                "document_number": self.document_number,
+            },
+        )
 
     def _get_column_count(self):
-        return len(self.element.xpath('./td'))
+        return len(self.element.xpath("./td"))
 
     def _detect_sort_order(self):
         """Detect whether the report is ordered by case number or by date filed.
@@ -206,10 +234,10 @@ class FreeOpinionRow(object):
         row. If so, it's ordered by date_filed. Else, by
         case_number. Note that the first cell is often blank.
         """
-        if len(self.element.xpath('./td[2]//@href')) > 0:
-            return 'date_filed'
+        if len(self.element.xpath("./td[2]//@href")) > 0:
+            return "date_filed"
         else:
-            return 'case_number'
+            return "case_number"
 
     def get_pacer_case_id_and_pacer_seq_no(self):
         """Get the pacer_case_id and pacer_seq_no values for a document.
@@ -222,114 +250,120 @@ class FreeOpinionRow(object):
         # the goDLS function.  When that's the case, the download
         # fails.
         try:
-            onclick = self.element.xpath('./td[3]//@onclick')[0]
+            onclick = self.element.xpath("./td[3]//@onclick")[0]
         except IndexError:
             pass
         else:
-            if 'goDLS' in onclick:
+            if "goDLS" in onclick:
                 # Sometimes the onclick is something else, like in insb's free
                 # opinion report.
                 go_dls_parts = reverse_goDLS_function(onclick)
-                return go_dls_parts['caseid'], go_dls_parts['de_seq_num']
+                return go_dls_parts["caseid"], go_dls_parts["de_seq_num"]
 
         # No onclick, onclick isn't a goDLS link, etc. Try second format.
-        if self._sort_order == 'case_number':
+        if self._sort_order == "case_number":
             try:
                 # This tends to work in the bankr. courts.
-                href = self.element.xpath('./td[1]//@href')[0]
+                href = self.element.xpath("./td[1]//@href")[0]
             except IndexError:
-                logger.info("No content provided in first cell of row. Using "
-                            "last good row for pacer_case_id, docket_number, "
-                            "and case_name.")
+                logger.info(
+                    "No content provided in first cell of row. Using "
+                    "last good row for pacer_case_id, docket_number, "
+                    "and case_name."
+                )
                 last_row = self.last_good_row
                 return last_row.pacer_case_id, last_row.pacer_seq_no
-        elif self._sort_order == 'date_filed':
-            href = self.element.xpath('./td[2]//@href')[0]
+        elif self._sort_order == "date_filed":
+            href = self.element.xpath("./td[2]//@href")[0]
         return get_pacer_case_id_from_nonce_url(href), None
 
     def get_docket_number(self):
         try:
-            if self._sort_order == 'case_number':
-                cell = self.element.xpath('./td[1]//a')[0]
+            if self._sort_order == "case_number":
+                cell = self.element.xpath("./td[1]//a")[0]
             else:
-                cell = self.element.xpath('./td[2]//a')[0]
+                cell = self.element.xpath("./td[2]//a")[0]
         except IndexError:
             # No content in the cell.
             return self.last_good_row.docket_number
         else:
             s = cell.text_content().strip()
 
-        if self._column_count == 4 or self.court_id in ['areb', 'arwb']:
+        if self._column_count == 4 or self.court_id in ["areb", "arwb"]:
 
             # In this case s will be something like:
             #   14-90018 Stewart v. Kauanui
             # Split on the first space, left is docket number, right
             # is case name.
-            return s.split(' ', 1)[0]
+            return s.split(" ", 1)[0]
         else:
             return s
 
     def get_case_name(self):
-        if self._sort_order == 'case_number':
-            cell = self.element.xpath('./td[1]')[0]
+        if self._sort_order == "case_number":
+            cell = self.element.xpath("./td[1]")[0]
         else:
-            cell = self.element.xpath('./td[2]')[0]
+            cell = self.element.xpath("./td[2]")[0]
         s = cell.text_content().strip()
         if not s:
             return self.last_good_row.case_name
 
-        if self._column_count == 4 or self.court_id in ['areb', 'arwb']:
+        if self._column_count == 4 or self.court_id in ["areb", "arwb"]:
             # See note in docket number
             try:
-                return s.split(' ', 1)[1]
+                return s.split(" ", 1)[1]
             except IndexError:
                 # No case name, but a docket number is provided.
                 return "Case name unknown"
         else:
             try:
-                return cell.xpath('.//b')[0].text_content()
+                return cell.xpath(".//b")[0].text_content()
             except IndexError:
-                logger.warn("Unable to get case name for %s in %s.",
-                            self.docket_number,
-                            self.court_id)
+                logger.warn(
+                    "Unable to get case name for %s in %s.",
+                    self.docket_number,
+                    self.court_id,
+                )
                 return "Case name unknown"
 
     def get_date_filed(self):
-        if self._sort_order == 'case_number':
-            path = './td[2]//text()'
-        elif self._sort_order == 'date_filed':
-            path = './td[1]//text()'
+        if self._sort_order == "case_number":
+            path = "./td[2]//text()"
+        elif self._sort_order == "date_filed":
+            path = "./td[1]//text()"
         s = self.element.xpath(path)[0]
-        if not s.strip() and self._sort_order == 'date_filed':
+        if not s.strip() and self._sort_order == "date_filed":
             # Empty cell, return the previous value.
             return self.last_good_row.date_filed
         else:
             return convert_date_string(s)
 
     def get_pacer_doc_id(self):
-        doc1_url = self.element.xpath('./td[3]//@href')[0]
+        doc1_url = self.element.xpath("./td[3]//@href")[0]
         return get_pacer_doc_id_from_doc1_url(doc1_url)
 
     def get_document_number(self):
-        return self.element.xpath('./td[3]//text()')[0]
+        return self.element.xpath("./td[3]//text()")[0]
 
     def get_description(self):
-        return self.element.xpath('./td[4]')[0].text_content()
+        return self.element.xpath("./td[4]")[0].text_content()
 
     def get_nos(self):
         if self._column_count == 4:
-            return ''
+            return ""
         try:
-            return self.element.xpath('./td[5]/i[contains(./text(), '
-                                      '"NOS")]')[0].tail.strip()
+            return self.element.xpath(
+                "./td[5]/i[contains(./text(), " '"NOS")]'
+            )[0].tail.strip()
         except IndexError:
-            return ''
+            return ""
 
     def get_cause(self):
         if self._column_count == 4:
-            return ''
+            return ""
         try:
-            return self.element.xpath('./td[5]/i[contains(./text(), '
-                                      '"Cause")]')[0].tail.strip()
+            return self.element.xpath(
+                "./td[5]/i[contains(./text(), " '"Cause")]'
+            )[0].tail.strip()
         except IndexError:
-            return ''
+            return ""

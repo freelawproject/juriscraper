@@ -20,7 +20,7 @@ def build_module_list(court_id):
         try:
             # Test that we have an __all__ attribute (proving that it's a
             # package) something like: opinions.united_states.federal
-            all_attr = __import__(court_id, globals(), locals(), ['*']).__all__
+            all_attr = __import__(court_id, globals(), locals(), ["*"]).__all__
 
             # Build the modules back up to full imports
             all_attr = ["%s.%s" % (court_id, item) for item in all_attr]
@@ -34,7 +34,7 @@ def build_module_list(court_id):
             # juriscraper.opinions.united_states.federal_appellate.ca1,
             # therefore, we add it to our list!
             module_strings.append(court_id)
-        #except ImportError as e:
+        # except ImportError as e:
         #    # Something has gone wrong with the import
         #    print("Import error: %s" % e)
         #    return []

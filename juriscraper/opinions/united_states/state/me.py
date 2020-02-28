@@ -20,16 +20,16 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://www.courts.maine.gov/opinions_orders/supreme/publishedopinions.shtml'
+        self.url = "http://www.courts.maine.gov/opinions_orders/supreme/publishedopinions.shtml"
 
     def _get_download_urls(self):
-        path = '//table//tr/td[2]/a[1]/@href'
+        path = "//table//tr/td[2]/a[1]/@href"
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
         case_names = []
-        for e in self.html.xpath('//table//tr/td[2]/a[1]'):
-            s = html.tostring(e, method='text', encoding='unicode')
+        for e in self.html.xpath("//table//tr/td[2]/a[1]"):
+            s = html.tostring(e, method="text", encoding="unicode")
             case_names.append(s)
         return case_names
 
@@ -37,7 +37,7 @@ class Site(OpinionSite):
         path = '//table[contains(.//th[1], "Opinion")]//tr/td[3]'
         dates = []
         for cell in self.html.xpath(path):
-            date_string = cell.text_content().replace('Aguust', 'August')
+            date_string = cell.text_content().replace("Aguust", "August")
             dates.append(convert_date_string(date_string))
         return dates
 
@@ -45,5 +45,5 @@ class Site(OpinionSite):
         return ["Published"] * len(self.case_names)
 
     def _get_neutral_citations(self):
-        path = '//table[position() > 1]//tr/td[1]//text()'
+        path = "//table[position() > 1]//tr/td[1]//text()"
         return list(self.html.xpath(path))

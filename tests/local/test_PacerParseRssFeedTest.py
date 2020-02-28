@@ -14,5 +14,5 @@ class PacerParseRssFeedTest(PacerParseTestCase):
         self.maxDiff = 200000
 
     def test_parsing_rss_parsing(self):
-        path_root = os.path.join(TESTS_ROOT_EXAMPLES_PACER, 'rss_feeds')
-        self.parse_files(path_root, '*.xml', PacerRssFeed)
+        path_root = os.path.join(TESTS_ROOT_EXAMPLES_PACER, "rss_feeds")
+        self.parse_files(path_root, "*.xml", PacerRssFeed)

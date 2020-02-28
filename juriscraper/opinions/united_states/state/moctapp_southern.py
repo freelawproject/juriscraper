@@ -9,4 +9,4 @@ class Site(mo.Site):
         self.url = self.build_url()
 
     def _get_divisions(self):
-        return ['Southern Distr.'] * len(self.cases)
+        return ["Southern Distr."] * len(self.cases)

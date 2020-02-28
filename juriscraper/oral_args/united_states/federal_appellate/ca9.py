@@ -21,22 +21,22 @@ class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'https://www.ca9.uscourts.gov/media/'
+        self.url = "https://www.ca9.uscourts.gov/media/"
         self._set_parameters()
-        self.method = 'POST'
+        self.method = "POST"
         # One less than total number of pages, because last page has a bit of a
         # mess, and it's easier to simply not deal with it.
         self.back_scrape_iterable = range(1, 268)
 
     def _set_parameters(self, page=1):
         self.parameters = {
-            'c_mode': 'view',
-            'c_page_size': '100',
-            'c_sort_field': '12',
-            'c_sort_field_by': '7',
-            'c_sort_type': 'desc',
-            'c_field_type': '',
-            'c_p': str(page),
+            "c_mode": "view",
+            "c_page_size": "100",
+            "c_sort_field": "12",
+            "c_sort_field_by": "7",
+            "c_sort_type": "desc",
+            "c_field_type": "",
+            "c_p": str(page),
         }
 
     def _post_parse(self):
@@ -61,9 +61,11 @@ class Site(OralArgumentSite):
 
         # Quick check: We did find *some* urls, right?
         if len(purge_indexes) == len(self.download_urls):
-            raise InsanityException("Didn't get any download URLs. Looks like "
-                                    "something is wrong in the _post_parse() "
-                                    "method.")
+            raise InsanityException(
+                "Didn't get any download URLs. Looks like "
+                "something is wrong in the _post_parse() "
+                "method."
+            )
 
         # Second, we purge them, beginning at the end and moving forwards. This
         # ensures that we don't delete the wrong items.
@@ -78,19 +80,22 @@ class Site(OralArgumentSite):
         """Links from the root page go to a second page where the real links
         are posted.
         """
+
         def fetcher(seed_url):
-            if self.method == 'LOCAL':
+            if self.method == "LOCAL":
                 return "No links fetched during tests."
             else:
                 # Goes to second page, grabs the link and returns it.
                 html_tree = self._get_html_tree_by_url(seed_url)
-                path_to_audio_file = "//*[@class='padboxauto_MediaContent']//a/@href"
+                path_to_audio_file = (
+                    "//*[@class='padboxauto_MediaContent']//a/@href"
+                )
                 try:
                     url = html_tree.xpath(path_to_audio_file)[0]
                 except IndexError:
                     # The URL wasn't found, so something is wrong and we'll have to
                     # fix it in the _post_parse() method.
-                    url = ''
+                    url = ""
                 return url
 
         path = "//tr[@class='dg_tr']/td[6]//@href"
@@ -102,12 +107,14 @@ class Site(OralArgumentSite):
         the real links are posted.
         """
         row_path = "//tr[@class='dg_tr'][.//*[contains(@id, 'case_num')]]"
-        date_path = ".//*[contains(concat(' ',@id,' '),' mod_hearing_date')]/text()"
+        date_path = (
+            ".//*[contains(concat(' ',@id,' '),' mod_hearing_date')]/text()"
+        )
         docket_path = ".//*[contains(concat(' ',@id,' '),' case_num')]/text()"
         urls = []
         for row in self.html.xpath(row_path):
             date_string = row.xpath(date_path)[0]
-            d = datetime.strptime(date_string, '%m/%d/%Y').date()
+            d = datetime.strptime(date_string, "%m/%d/%Y").date()
             docket_string = row.xpath(docket_path)[0]
             urls.append(self._return_download_url(d, docket_string))
         return urls
@@ -115,8 +122,7 @@ class Site(OralArgumentSite):
     @staticmethod
     def _return_download_url(d, docket_string):
         link = "http://cdn.ca9.uscourts.gov/datastore/media/{date}/{docket_nr}.wma".format(
-            date=d.strftime('%Y/%m/%d'),
-            docket_nr=docket_string,
+            date=d.strftime("%Y/%m/%d"), docket_nr=docket_string,
         )
         return link
 
@@ -126,8 +132,10 @@ class Site(OralArgumentSite):
 
     def _get_case_dates(self):
         path = "//*[contains(concat(' ',@id,' '),' mod_hearing_date')]/text()"
-        return [datetime.strptime(date_string, '%m/%d/%Y').date()
-                for date_string in self.html.xpath(path)]
+        return [
+            datetime.strptime(date_string, "%m/%d/%Y").date()
+            for date_string in self.html.xpath(path)
+        ]
 
     def _get_judges(self):
         path = "//*[contains(concat(' ',@id,' '),' case_panel')]/text()"

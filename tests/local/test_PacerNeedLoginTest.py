@@ -28,16 +28,16 @@ class PacerNeedLoginTest(unittest.TestCase):
             t1 = time.time()
             sys.stdout.write("%s. Doing %s" % (i, path.ljust(path_max_len)))
             dirname, filename = os.path.split(path)
-            filename_sans_ext = filename.split('.')[0]
-            json_path = os.path.join(dirname, '%s.json' % filename_sans_ext)
+            filename_sans_ext = filename.split(".")[0]
+            json_path = os.path.join(dirname, "%s.json" % filename_sans_ext)
 
-            with open(path, 'rb') as f:
+            with open(path, "rb") as f:
                 text = f.read()
 
             result = check_if_logged_in_page(text)
 
             if not os.path.exists(json_path):
-                with open(json_path, 'w') as f:
+                with open(json_path, "w") as f:
                     print("Creating new file at %s" % json_path)
                     json.dump(result, f, indent=2, sort_keys=True)
                 continue
@@ -51,5 +51,7 @@ class PacerNeedLoginTest(unittest.TestCase):
             sys.stdout.write("✓\n")
 
     def test_parsing_auth_samples(self):
-        path_root = os.path.join(TESTS_ROOT_EXAMPLES_PACER, 'authentication_samples')
-        self.parse_files(path_root, '*.html')
+        path_root = os.path.join(
+            TESTS_ROOT_EXAMPLES_PACER, "authentication_samples"
+        )
+        self.parse_files(path_root, "*.html")

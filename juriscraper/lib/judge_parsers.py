@@ -1,58 +1,120 @@
 from .string_utils import titlecase
 
 titles = [
-    'judge', 'magistrate', 'district', 'chief', 'senior',
-    'bankruptcy', 'mag.', 'magistrate-judge', 'mag/judge', 'mag',
-    'visiting', 'special', 'senior-judge', 'master', 'u.s.magistrate',
+    "judge",
+    "magistrate",
+    "district",
+    "chief",
+    "senior",
+    "bankruptcy",
+    "mag.",
+    "magistrate-judge",
+    "mag/judge",
+    "mag",
+    "visiting",
+    "special",
+    "senior-judge",
+    "master",
+    "u.s.magistrate",
 ]
 blacklist = [
-    'a998', 'agb', 'am', 'associated', 'ca', 'cases', 'cet', 'ch.', 'cla',
-    'clerk', 'cp', 'cvb', 'db', 'debt-magistrate', 'discovery', 'dj', 'docket',
-    'duty', 'duty', 'ec', 'eck', 'general', 'grc', 'gs', 'hhl', 'hon',
-    'honorable', 'inactive', 'jne', 'jv', 'kec', 'law', 'lc', 'llh', 'lq',
-    'maryland', 'mediator', 'merged', 'mj', 'mmh', 'msh', 'mwd', 'no', 'none',
-    'prisoner', 'pslc', 'pro', 'pso', 'pt', 'rmh', 'se', 'sf', 'show',
-    'successor', 'u.s.', 'tjc', 'unassigned', 'unassigned2', 'unassigneddj',
-    'unknown', 'us', 'usdc', 'vjdistrict',
+    "a998",
+    "agb",
+    "am",
+    "associated",
+    "ca",
+    "cases",
+    "cet",
+    "ch.",
+    "cla",
+    "clerk",
+    "cp",
+    "cvb",
+    "db",
+    "debt-magistrate",
+    "discovery",
+    "dj",
+    "docket",
+    "duty",
+    "duty",
+    "ec",
+    "eck",
+    "general",
+    "grc",
+    "gs",
+    "hhl",
+    "hon",
+    "honorable",
+    "inactive",
+    "jne",
+    "jv",
+    "kec",
+    "law",
+    "lc",
+    "llh",
+    "lq",
+    "maryland",
+    "mediator",
+    "merged",
+    "mj",
+    "mmh",
+    "msh",
+    "mwd",
+    "no",
+    "none",
+    "prisoner",
+    "pslc",
+    "pro",
+    "pso",
+    "pt",
+    "rmh",
+    "se",
+    "sf",
+    "show",
+    "successor",
+    "u.s.",
+    "tjc",
+    "unassigned",
+    "unassigned2",
+    "unassigneddj",
+    "unknown",
+    "us",
+    "usdc",
+    "vjdistrict",
 ]
 
 judge_normalizers = {
     # Generic Judge & Bankruptcy Judge we merge together for simplicity.
-    '': 'jud',
-    'Judge': 'jud',
-    'Judge Judge': 'jud',
-    'District Judge': 'jud',
-    'Visiting Judge': 'jud',
-    'Bankruptcy': 'jud',
-    'Bankruptcy Judge': 'jud',
-
+    "": "jud",
+    "Judge": "jud",
+    "Judge Judge": "jud",
+    "District Judge": "jud",
+    "Visiting Judge": "jud",
+    "Bankruptcy": "jud",
+    "Bankruptcy Judge": "jud",
     # Chief (normalize to jud for now, due to low sample size)
-    'Chief': 'jud',
-    'Chief Judge': 'jud',
-    'Chief District Judge': 'jud',
-
+    "Chief": "jud",
+    "Chief Judge": "jud",
+    "Chief District Judge": "jud",
     # Magistrate
-    'Mag': 'mag',
-    'Mag Judge': 'mag',
-    'mag/judge': 'mag',
-    'Magistrate': 'mag',
-    'Magistrate Judge': 'mag',
-    'Magistrate-Judge': 'mag',
-    'Magistrate Judge Mag': 'mag',
-    'Magistrate Judge Magistrate': 'mag',
-    'Magistrate Judge Magistrate Judge': 'mag',
-
+    "Mag": "mag",
+    "Mag Judge": "mag",
+    "mag/judge": "mag",
+    "Magistrate": "mag",
+    "Magistrate Judge": "mag",
+    "Magistrate-Judge": "mag",
+    "Magistrate Judge Mag": "mag",
+    "Magistrate Judge Magistrate": "mag",
+    "Magistrate Judge Magistrate Judge": "mag",
     # Chief Magistrate (normalize to magistrate for now, due to low sample size)
-    'Chief Magistrate': 'mag',
-    'Chief Magistrate Judge': 'mag',
-
+    "Chief Magistrate": "mag",
+    "Chief Magistrate Judge": "mag",
     # Senior
-    'Senior Judge': 'ret-senior-jud',
-    'Senior-Judge': 'ret-senior-jud',
-
+    "Senior Judge": "ret-senior-jud",
+    "Senior-Judge": "ret-senior-jud",
     # Special Master
-    'Special Master': 'spec-m',
-    'Chief Special Master': 'c-spec-m',
+    "Special Master": "spec-m",
+    "Chief Special Master": "c-spec-m",
 }
 
 
@@ -68,7 +130,7 @@ def normalize_judge_titles(title):
      - Blank --> Judge
      - Bankruptcy Judge --> Judge
     """
-    return judge_normalizers.get(title, 'UNKNOWN: %s' % title)
+    return judge_normalizers.get(title, "UNKNOWN: %s" % title)
 
 
 def normalize_judge_names(name):
@@ -78,23 +140,27 @@ def normalize_judge_names(name):
     for i, w in enumerate(words):
         # Michael J Lissner --> Michael J. Lissner
         if len(w) == 1 and w.isalpha():
-            w = '%s.' % w
+            w = "%s." % w
 
         # Michael Lissner Jr --> Michael Lissner Jr.
-        if w.lower() in ['jr', 'sr']:
-            w = '%s.' % w
+        if w.lower() in ["jr", "sr"]:
+            w = "%s." % w
 
         # J. Michael Lissner --> Michael Lissner
         # J. G. Lissner --> J. G. Lissner
-        if i == 0 and w.lower() in ['j.', 'j']:
+        if i == 0 and w.lower() in ["j.", "j"]:
             next_word = words[i + 1]
-            if not any([len(next_word) == 2 and next_word.endswith('.'),
-                        len(next_word) == 1]):
+            if not any(
+                [
+                    len(next_word) == 2 and next_word.endswith("."),
+                    len(next_word) == 1,
+                ]
+            ):
                 # Drop the word.
                 continue
         out.append(w)
 
-    return ' '.join(out)
+    return " ".join(out)
 
 
 def normalize_judge_string(judge):
@@ -109,17 +175,17 @@ def normalize_judge_string(judge):
     >>> normalize_judge_string('Honorable Sue W. Wright')
     ('Sue W. Wright', 'jud')
     """
-    judge = judge.replace(',', '')
+    judge = judge.replace(",", "")
     words = judge.lower().split()
 
     # Nuke bad junk (punct., j, blacklist, etc.)
     title_words = []
     name_words = []
     for w in words:
-        contains_parens = '(' in w or ')' in w
-        starts_poorly = w.startswith('-') or w.startswith('~')
+        contains_parens = "(" in w or ")" in w
+        starts_poorly = w.startswith("-") or w.startswith("~")
         blacklisted = w in blacklist
-        long_abbrev = (len(w) > 2 and '.' in w and w not in ['jr.', 'sr.'])
+        long_abbrev = len(w) > 2 and "." in w and w not in ["jr.", "sr."]
         if any([contains_parens, starts_poorly, blacklisted, long_abbrev]):
             continue
         if w in titles:
@@ -127,7 +193,7 @@ def normalize_judge_string(judge):
         else:
             name_words.append(w)
 
-    title = normalize_judge_titles(titlecase(' '.join(title_words)))
-    name = normalize_judge_names(titlecase(' '.join(name_words)))
+    title = normalize_judge_titles(titlecase(" ".join(title_words)))
+    name = normalize_judge_names(titlecase(" ".join(name_words)))
 
     return name, title

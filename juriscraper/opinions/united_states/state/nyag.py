@@ -14,7 +14,7 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.year = datetime.date.today().year
-        self.base_url = 'https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=%d'
+        self.base_url = "https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=%d"
         self.url = self.base_url % self.year
         self.back_scrape_iterable = range(1995, self.year + 1)
         self.row_path = False
@@ -25,14 +25,14 @@ class Site(OpinionSite):
         html = super(Site, self)._download(request_dict)
         if self.test_mode_enabled():
             # Make sure the year-table you want to test is first in example file
-            self.year = int(html.xpath('//table[1]/caption')[0].text_content())
+            self.year = int(html.xpath("//table[1]/caption")[0].text_content())
             self.set_paths()
         return html
 
     def _get_case_dates(self):
         """All we have are years, so estimate middle most day of year"""
         today = datetime.date.today()
-        middle_of_year = convert_date_string('July 2, %d' % self.year)
+        middle_of_year = convert_date_string("July 2, %d" % self.year)
         if self.year == today.year:
             # Not a backscraper, assume cases were filed on day scraped.
             return [today] * len(self.html.xpath(self.row_path))
@@ -41,21 +41,29 @@ class Site(OpinionSite):
 
     def _get_case_names(self):
         """No case names available"""
-        return ["Untitled New York Attorney General Opinion"] * len(self.case_dates)
+        return ["Untitled New York Attorney General Opinion"] * len(
+            self.case_dates
+        )
 
     def _get_download_urls(self):
-        path = '%s//a/@href' % (self.cell_path % 4)
+        path = "%s//a/@href" % (self.cell_path % 4)
         return [href for href in self.html.xpath(path)]
 
     def _get_docket_numbers(self):
-        return [cell.text_content().strip() for cell in self.html.xpath(self.cell_path % 1)]
+        return [
+            cell.text_content().strip()
+            for cell in self.html.xpath(self.cell_path % 1)
+        ]
 
     def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_dates)
+        return ["Published"] * len(self.case_dates)
 
     def _get_summaries(self):
         """Use Abstract column value"""
-        return [cell.text_content().strip() for cell in self.html.xpath(self.cell_path % 2)]
+        return [
+            cell.text_content().strip()
+            for cell in self.html.xpath(self.cell_path % 2)
+        ]
 
     def _get_date_filed_is_approximate(self):
         return [True] * len(self.case_dates)
@@ -68,4 +76,4 @@ class Site(OpinionSite):
 
     def set_paths(self):
         self.row_path = '//table[contains(caption, "%d")]/tbody/tr' % self.year
-        self.cell_path = self.row_path + '/td[%d]'
+        self.cell_path = self.row_path + "/td[%d]"

@@ -13,8 +13,8 @@ def get_pacer_court_info():
 def get_courts_from_json(j):
     courts = []
     for k, v in j.items():
-        for court in v['courts']:
-            court['type'] = k
+        for court in v["courts"]:
+            court["type"] = k
             courts.append(court)
     return courts
 
@@ -22,7 +22,7 @@ def get_courts_from_json(j):
 def get_court_id_from_url(url):
     """Extract the court ID from the URL."""
     parts = tldextract.extract(url)
-    return parts.subdomain.split('.')[1]
+    return parts.subdomain.split(".")[1]
 
 
 def get_pacer_case_id_from_nonce_url(url):
@@ -33,15 +33,15 @@ def get_pacer_case_id_from_nonce_url(url):
     In: https://ecf.azb.uscourts.gov/cgi-bin/iquery.pl?625371913403797-L_9999_1-0-663150
     Out: 663150
     """
-    param = url.split('?')[1]
-    if 'L' in param:
-        return param.rsplit('-', 1)[1]
+    param = url.split("?")[1]
+    if "L" in param:
+        return param.rsplit("-", 1)[1]
     return param
 
 
 def get_pacer_seq_no_from_doc1_url(url):
     """Extract the seq_no from the doc1 URL."""
-    match = re.search('de_seq_num=(\d+)', url)
+    match = re.search("de_seq_num=(\d+)", url)
     if match:
         return match.group(1)
     else:
@@ -62,9 +62,10 @@ def get_pacer_doc_id_from_doc1_url(url):
 
     See tests for more examples.
     """
-    assert "show_case_doc" not in url, \
-        "Cannot get doc1 ID from show_case_doc URL"
-    url = url.rsplit('/', 1)[1].split('?')[0]
+    assert (
+        "show_case_doc" not in url
+    ), "Cannot get doc1 ID from show_case_doc URL"
+    url = url.rsplit("/", 1)[1].split("?")[0]
     url = url[:3] + "0" + url[4:]
     return url
 
@@ -77,13 +78,13 @@ def get_pacer_seq_no_from_doc1_anchor(anchor):
     sequence number.
     """
     try:
-        onclick = anchor.xpath('./@onclick')[0]
+        onclick = anchor.xpath("./@onclick")[0]
     except IndexError:
         return None
     else:
-        if 'goDLS' in onclick:
+        if "goDLS" in onclick:
             go_dls_parts = reverse_goDLS_function(onclick)
-            return go_dls_parts['de_seq_num']
+            return go_dls_parts["de_seq_num"]
 
 
 def reverse_goDLS_function(s):
@@ -124,21 +125,21 @@ def reverse_goDLS_function(s):
        has an attachment. Note that the eighth parameter was added some time
        after 2010. Dockets older than that date only have seven responses.
     """
-    args = re.findall("\'(.*?)\'", s)
+    args = re.findall("'(.*?)'", s)
     parts = {
-        'form_post_url': args[0],
-        'caseid': args[1],
-        'de_seq_num': args[2],
-        'got_receipt': args[3],
-        'pdf_header': args[4],
-        'pdf_toggle_possible': args[5],
-        'magic_num': args[6],
+        "form_post_url": args[0],
+        "caseid": args[1],
+        "de_seq_num": args[2],
+        "got_receipt": args[3],
+        "pdf_header": args[4],
+        "pdf_toggle_possible": args[5],
+        "magic_num": args[6],
     }
     try:
-        parts['hdr'] = args[7]
+        parts["hdr"] = args[7]
     except IndexError:
         # At some point dockets added this eighth parameter. Older ones lack it
-        parts['hdr'] = None
+        parts["hdr"] = None
     return parts
 
 
@@ -148,16 +149,15 @@ def make_doc1_url(court_id, pacer_doc_id, skip_attachment_page):
     If skip_attachment_page is True, we replace the fourth digit with a 1
     instead of a zero, which bypasses the attachment page.
     """
-    if skip_attachment_page and pacer_doc_id[3] == '0':
+    if skip_attachment_page and pacer_doc_id[3] == "0":
         # If the fourth digit is a 0, replace it with a 1
-        pacer_doc_id = pacer_doc_id[:3] + '1' + pacer_doc_id[4:]
-    return 'https://ecf.%s.uscourts.gov/doc1/%s' % (court_id,
-                                                    pacer_doc_id)
+        pacer_doc_id = pacer_doc_id[:3] + "1" + pacer_doc_id[4:]
+    return "https://ecf.%s.uscourts.gov/doc1/%s" % (court_id, pacer_doc_id)
 
 
 def is_pdf(response):
     """Determines whether the item downloaded is a PDF or something else."""
-    if response.headers.get('content-type') == 'application/pdf':
+    if response.headers.get("content-type") == "application/pdf":
         return True
     return False
 
@@ -171,13 +171,13 @@ def get_nonce_from_form(r):
     can be found.
     """
     tree = html.fromstring(r.text)
-    form_attrs = tree.xpath('//form//@action')
+    form_attrs = tree.xpath("//form//@action")
     for attr in form_attrs:
         # The action attr will be a value like:
         # ../cgi-bin/HistDocQry.pl?112801540788508-L_1_0-1
         # Split on the '?', and return the nonce.
-        path, nonce = attr.split('?')
-        if '-L_' in nonce:
+        path, nonce = attr.split("?")
+        if "-L_" in nonce:
             return nonce
     return None
 
@@ -191,15 +191,31 @@ def get_bucket_name(court, pacer_case_id):
 
 
 def get_docket_filename(court, pacer_case_id):
-    return ".".join(["gov", "uscourts", unicode(court), unicode(pacer_case_id),
-                     "docket.xml"])
+    return ".".join(
+        [
+            "gov",
+            "uscourts",
+            unicode(court),
+            unicode(pacer_case_id),
+            "docket.xml",
+        ]
+    )
 
 
-def get_document_filename(court, pacer_case_id, document_number,
-                          attachment_number):
-    return ".".join(["gov", "uscourts", unicode(court), unicode(pacer_case_id),
-                     unicode(document_number), unicode(attachment_number or 0),
-                     "pdf"])
+def get_document_filename(
+    court, pacer_case_id, document_number, attachment_number
+):
+    return ".".join(
+        [
+            "gov",
+            "uscourts",
+            unicode(court),
+            unicode(pacer_case_id),
+            unicode(document_number),
+            unicode(attachment_number or 0),
+            "pdf",
+        ]
+    )
 
 
 def get_docketxml_url(court, pacer_case_id):
@@ -214,6 +230,7 @@ def get_pdf_url(court, pacer_case_id, document_number, attachment_number):
     return "%s/%s/%s" % (
         BASE_IA_URL,
         get_bucket_name(court, pacer_case_id),
-        get_document_filename(court, pacer_case_id, document_number,
-                              attachment_number),
+        get_document_filename(
+            court, pacer_case_id, document_number, attachment_number
+        ),
     )

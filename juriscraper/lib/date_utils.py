@@ -12,17 +12,16 @@ import datetime
 
 
 MISSPELLINGS = {
-    'Febraury': 'February',
-    'Feburay': 'February',
-    'Sepetmber': 'September',
-    'Sepember': 'September',
-    'Term': '1',
+    "Febraury": "February",
+    "Feburay": "February",
+    "Sepetmber": "September",
+    "Sepember": "September",
+    "Term": "1",
 }
 
 json_date_handler = lambda obj: (
     obj.isoformat()
-    if isinstance(obj, datetime.datetime)
-    or isinstance(obj, datetime.date)
+    if isinstance(obj, datetime.datetime) or isinstance(obj, datetime.date)
     else None
 )
 
@@ -47,10 +46,23 @@ class BetterInfo(parserinfo):
     to allow them for splitting. This class makes that possible by removing
     them from the JUMP variable.
     """
+
     # m from a.m/p.m, t from ISO T separator
-    JUMP = [" ", ".", ",", "-", "/", "'",
-            "ad", "m", "t",
-            "st", "nd", "rd", "th"]
+    JUMP = [
+        " ",
+        ".",
+        ",",
+        "-",
+        "/",
+        "'",
+        "ad",
+        "m",
+        "t",
+        "st",
+        "nd",
+        "rd",
+        "th",
+    ]
 
     def __init__(self):
         super(BetterInfo, self).__init__()
@@ -66,9 +78,19 @@ def timetoken(token):
         return True
     except ValueError:
         pass
-    return any(f(token) for f in (info.jump, info.weekday, info.month,
-                                  info.hms, info.ampm, info.pertain,
-                                  info.utczone, info.tzoffset))
+    return any(
+        f(token)
+        for f in (
+            info.jump,
+            info.weekday,
+            info.month,
+            info.hms,
+            info.ampm,
+            info.pertain,
+            info.utczone,
+            info.tzoffset,
+        )
+    )
 
 
 def timesplit(input_string):
@@ -86,8 +108,12 @@ def timesplit(input_string):
         yield " ".join(batch)
 
 
-def parse_dates(s, debug=False, sane_start=datetime.datetime(1750, 1, 1),
-                sane_end=datetime.datetime(2050, 1, 1)):
+def parse_dates(
+    s,
+    debug=False,
+    sane_start=datetime.datetime(1750, 1, 1),
+    sane_end=datetime.datetime(2050, 1, 1),
+):
     """Parse dates out of a string
 
     Based on http://stackoverflow.com/questions/7028689/, this method is a
@@ -112,23 +138,24 @@ def parse_dates(s, debug=False, sane_start=datetime.datetime(1750, 1, 1),
 
     # Ditch unicode (_timelex() flips out on unicode if the system has
     # cStringIO installed -- the default)
-    #if isinstance(s, six.text_type):
+    # if isinstance(s, six.text_type):
     #    s = s.encode('ascii', 'ignore')
 
     # Fix misspellings
     for i, j in MISSPELLINGS.items():
         s = s.replace(i, j)
 
-
     # Default is set to Christmas, 1600.
     DEFAULT = datetime.datetime(1600, 12, 25)
     dates = []
     for item in timesplit(s):
-        #print("Found:", item)
+        # print("Found:", item)
         try:
             d = p.parse(item, default=DEFAULT)
-            hit_default_year = (d.year == DEFAULT.year)
-            hit_default_day_and_month = (d.month == DEFAULT.month and d.day == DEFAULT.day)
+            hit_default_year = d.year == DEFAULT.year
+            hit_default_day_and_month = (
+                d.month == DEFAULT.month and d.day == DEFAULT.day
+            )
             if not any([hit_default_year, hit_default_day_and_month]):
                 if debug:
                     print("Item %s parsed as: %s" % (item, d))
@@ -164,10 +191,13 @@ def is_first_month_in_quarter(month):
 def fix_future_year_typo(future_date):
     """Fix current year typo, convert 2106 to 2016 in year 2016"""
     current_year = str(datetime.date.today().year)
-    transposed_year = current_year[0] + current_year[2] + current_year[1] + current_year[3]
+    transposed_year = (
+        current_year[0] + current_year[2] + current_year[1] + current_year[3]
+    )
     if transposed_year == str(future_date.year):
-        return datetime.date(int(current_year), future_date.month,
-                             future_date.day)
+        return datetime.date(
+            int(current_year), future_date.month, future_date.day
+        )
     return future_date
 
 
@@ -192,9 +222,12 @@ def make_date_range_tuples(start, end, gap):
     # We create a list of start dates and a list of end dates, then zip them
     # together. If end_dates is shorter than start_dates, fill the last value
     # with the original end date.
-    start_dates = [d.date() for d in rrule(DAILY, interval=gap, dtstart=start,
-                                           until=end)]
+    start_dates = [
+        d.date() for d in rrule(DAILY, interval=gap, dtstart=start, until=end)
+    ]
     end_start = start + datetime.timedelta(days=gap - 1)
-    end_dates = [d.date() for d in rrule(DAILY, interval=gap, dtstart=end_start,
-                                         until=end)]
+    end_dates = [
+        d.date()
+        for d in rrule(DAILY, interval=gap, dtstart=end_start, until=end)
+    ]
     return list(zip_longest(start_dates, end_dates, fillvalue=end))

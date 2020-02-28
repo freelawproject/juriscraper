@@ -17,8 +17,11 @@ class Site(haw.Site):
         today = date.today()
         if today.day < 15 and today.month == 1:
             year = today.year - 1
-            self.url = 'http://www.courts.state.hi.us/opinions_and_orders/opinions/%s/index.html' % year
+            self.url = (
+                "http://www.courts.state.hi.us/opinions_and_orders/opinions/%s/index.html"
+                % year
+            )
         else:
             # This simply aborts the crawler.
             self.status = 200
-            self.html = html.fromstring('<html></html>')
+            self.html = html.fromstring("<html></html>")

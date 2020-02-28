@@ -25,12 +25,16 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.uses_selenium = True
         self.url = "https://www.ustaxcourt.gov/UstcInOp/OpinionSearch.aspx"
-        self.base_path = '//tr[@class="ResultsOddRow" or ' '@class="ResultsEvenRow"]'
+        self.base_path = (
+            '//tr[@class="ResultsOddRow" or ' '@class="ResultsEvenRow"]'
+        )
         self.case_date = date.today()
         self.backwards_days = 14
         self.back_scrape_iterable = [
             i.date()
-            for i in rrule(WEEKLY, dtstart=date(1995, 9, 25), until=date(2018, 11, 13),)
+            for i in rrule(
+                WEEKLY, dtstart=date(1995, 9, 25), until=date(2018, 11, 13),
+            )
         ]
 
         self.court_id = self.__module__
@@ -71,7 +75,11 @@ class Site(OpinionSite):
 
         # Do not proceed until the results show up.
         wait = WebDriverWait(driver, 10)
-        wait.until(EC.presence_of_element_located((By.ID, "Content_ddlResultsPerPage")))
+        wait.until(
+            EC.presence_of_element_located(
+                (By.ID, "Content_ddlResultsPerPage")
+            )
+        )
         # driver.save_screenshot('with-results.png')
 
         text = self._clean_text(driver.page_source)
@@ -98,7 +106,9 @@ class Site(OpinionSite):
                 hrefs.append(href)
             else:
                 hrefs.append(
-                    href.replace("OpinionSearch.aspx#", "OpinionViewer.aspx?ID=")
+                    href.replace(
+                        "OpinionSearch.aspx#", "OpinionViewer.aspx?ID="
+                    )
                 )
         return hrefs
 
@@ -200,14 +210,20 @@ class Site(OpinionSite):
                     metadata["Citation"]["reporter"] = "T.C."
                     metadata["Citation"]["volume"] = match.group(8)
                     metadata["Citation"]["page"] = match.group(10)
-                    metadata["OpinionCluster"]["precedential_status"] = "Published"
+                    metadata["OpinionCluster"][
+                        "precedential_status"
+                    ] = "Published"
                 else:
                     if "Memo" in match.group():
                         metadata["Citation"]["reporter"] = "T.C. Memo."
                     elif "Summary" in match.group():
-                        metadata["Citation"]["reporter"] = "T.C. Summary Opinion"
+                        metadata["Citation"][
+                            "reporter"
+                        ] = "T.C. Summary Opinion"
                     metadata["Citation"]["volume"] = match.group(6)
                     metadata["Citation"]["page"] = match.group(7)
-                    metadata["OpinionCluster"]["precedential_status"] = "Unpublished"
+                    metadata["OpinionCluster"][
+                        "precedential_status"
+                    ] = "Unpublished"
 
         return metadata

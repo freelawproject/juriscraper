@@ -14,8 +14,10 @@ class Site(ri_p.Site):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.include_summary = False
-        self.precedential_status = 'Unpublished'
-        self.base_url = 'http://www.courts.ri.gov/Courts/SupremeCourt/Pages/Orders/Orders'
+        self.precedential_status = "Unpublished"
+        self.base_url = (
+            "http://www.courts.ri.gov/Courts/SupremeCourt/Pages/Orders/Orders"
+        )
         self.url = self.build_url()
 
     def _get_summaries(self):

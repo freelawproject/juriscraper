@@ -18,9 +18,8 @@ class Site(OralArgumentSite):
         d = date.today()
         # page_nr can be between 0 and 5
         page_nr = 0
-        self.url = 'http://www.oyez.org/cases/{year}?page={nr}'.format(
-            year=d.year - 1,
-            nr=page_nr
+        self.url = "http://www.oyez.org/cases/{year}?page={nr}".format(
+            year=d.year - 1, nr=page_nr
         )
         self.extender = {}
 
@@ -32,7 +31,7 @@ class Site(OralArgumentSite):
             path = "//a[contains(concat(' ',@class,' '),' arg-link audio') and contains(., 'Download')]/@href"
             urls = list(case_html.xpath(path))
             if len(urls) == 0:
-                download_urls.append('')
+                download_urls.append("")
                 self.extender[index] = 1
             else:
                 download_urls.extend(urls)
@@ -49,8 +48,8 @@ class Site(OralArgumentSite):
 
     @staticmethod
     def _return_case_date(e):
-        e = ''.join(e.split())
-        return datetime.strptime(e, '%m/%d/%Y').date()
+        e = "".join(e.split())
+        return datetime.strptime(e, "%m/%d/%Y").date()
 
     def _get_docket_numbers(self):
         path = "//td[contains(concat(' ',@class,' '),' views-field-field-argument-value')][contains(., '/')]/preceding-sibling::td[1]/text()"
@@ -58,7 +57,7 @@ class Site(OralArgumentSite):
 
     @staticmethod
     def _return_docket_number(e):
-        e = ''.join(e.split())
+        e = "".join(e.split())
         return e
 
     def _post_parse(self):

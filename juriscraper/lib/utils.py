@@ -53,8 +53,8 @@ def clean_court_object(obj):
             d[k] = clean_court_object(v)
         return d
     elif isinstance(obj, string_types):
-        s = ' '.join(obj.strip().split())
+        s = " ".join(obj.strip().split())
         s = force_unicode(s)
-        return re.sub('\s+,', ',', s)
+        return re.sub("\s+,", ",", s)
     else:
         return obj

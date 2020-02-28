@@ -19,22 +19,24 @@ class Site(OpinionSite):
         self.case_date = date.today()
         self.a_while_ago = date.today() - timedelta(days=20)
         self.base_path = "id('art-main')//tr[position() > 1]"
-        self.url = 'http://www.gaappeals.us/docketdate/results_all.php?searchterm=' \
-                   '{mn_ago:02d}%2F{day_ago:02d}%2F{year_ago}&searchterm2=' \
-                   '{mn:02d}%2F{day:02d}%2F{year}&submit=Search'.format(
-            mn_ago=self.a_while_ago.month,
-            day_ago=self.a_while_ago.day,
-            year_ago=self.a_while_ago.year,
-            mn=self.case_date.month,
-            day=self.case_date.day,
-            year=self.case_date.year,
+        self.url = (
+            "http://www.gaappeals.us/docketdate/results_all.php?searchterm="
+            "{mn_ago:02d}%2F{day_ago:02d}%2F{year_ago}&searchterm2="
+            "{mn:02d}%2F{day:02d}%2F{year}&submit=Search".format(
+                mn_ago=self.a_while_ago.month,
+                day_ago=self.a_while_ago.day,
+                year_ago=self.a_while_ago.year,
+                mn=self.case_date.month,
+                day=self.case_date.day,
+                year=self.case_date.year,
+            )
         )
 
     def _download(self, request_dict={}):
         if self.test_mode_enabled():
             # This is an arbitrary date that we need to set
             # for our compar.json test to pass
-            self.case_date = convert_date_string('2017-08-14')
+            self.case_date = convert_date_string("2017-08-14")
         return super(Site, self)._download(request_dict=request_dict)
 
     def _get_case_names(self):
@@ -46,10 +48,12 @@ class Site(OpinionSite):
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
-        return [self.case_date] * int(self.html.xpath("count({base})".format(base=self.base_path)))
+        return [self.case_date] * int(
+            self.html.xpath("count({base})".format(base=self.base_path))
+        )
 
     def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_names)
+        return ["Published"] * len(self.case_names)
 
     def _get_docket_numbers(self):
         path = "{base}/td[1]/text()".format(base=self.base_path)

@@ -20,4 +20,4 @@ class Site(ohioctcl.Site):
         else:
             # This simply aborts the crawler.
             self.status = 200
-            self.html = html.fromstring('<html></html>')
+            self.html = html.fromstring("<html></html>")

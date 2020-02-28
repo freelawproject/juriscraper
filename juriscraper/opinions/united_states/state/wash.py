@@ -11,27 +11,28 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.start = date.today() - timedelta(days=60)
         self.end = date.today()
-        self.url = 'http://www.courts.wa.gov/opinions/index.cfm?fa=opinions.processSearch'
-        self.method = 'POST'
+        self.url = "http://www.courts.wa.gov/opinions/index.cfm?fa=opinions.processSearch"
+        self.method = "POST"
 
-        self.courtLevel = 'S'
-        self.pubStatus = 'All'
+        self.courtLevel = "S"
+        self.pubStatus = "All"
         self._set_parameters()
         self.base = "//tr[../tr/td/strong[contains(., 'File Date')]]"
-        self.back_scrape_iterable = [i.date() for i in rrule(
-            MONTHLY,
-            dtstart=date(2014, 2, 1),
-            until=date.today(),
-        )]
+        self.back_scrape_iterable = [
+            i.date()
+            for i in rrule(
+                MONTHLY, dtstart=date(2014, 2, 1), until=date.today(),
+            )
+        ]
 
     def _set_parameters(self):
         self.parameters = {
-            'courtLevel': self.courtLevel,
-            'pubStatus': self.pubStatus,
-            'beginDate': self.start.strftime('%m/%d/%Y'),
-            'endDate': self.end.strftime('%m/%d/%Y'),
-            'SType': 'Phrase',
-            'SValue': ''
+            "courtLevel": self.courtLevel,
+            "pubStatus": self.pubStatus,
+            "beginDate": self.start.strftime("%m/%d/%Y"),
+            "endDate": self.end.strftime("%m/%d/%Y"),
+            "SType": "Phrase",
+            "SValue": "",
         }
 
     def _get_case_names(self):
@@ -44,7 +45,11 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         path = "{base}/td[1]/text()".format(base=self.base)
-        return [convert_date_string(date.strip()) for date in self.html.xpath(path) if date.strip()]
+        return [
+            convert_date_string(date.strip())
+            for date in self.html.xpath(path)
+            if date.strip()
+        ]
 
     def _get_download_urls(self):
         path = "{base}/td[2]/a[2]/@href".format(base=self.base)
@@ -58,6 +63,3 @@ class Site(OpinionSite):
         self.end = d + timedelta(days=32)
         self._set_parameters()
         self.html = self._download()
-
-
-

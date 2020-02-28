@@ -1,8 +1,8 @@
-#Scraper for Minnesota Court of Appeals Published Opinions
-#CourtID: minnctapp
-#Court Short Name: MN
-#Author: mlr
-#Date: 2016-06-03
+# Scraper for Minnesota Court of Appeals Published Opinions
+# CourtID: minnctapp
+# Court Short Name: MN
+# Author: mlr
+# Date: 2016-06-03
 
 
 from juriscraper.opinions.united_states.state import minn
@@ -13,4 +13,4 @@ class Site(minn.Site):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.court_filters = ['/ctapun/', '/ctappub/']
+        self.court_filters = ["/ctapun/", "/ctappub/"]

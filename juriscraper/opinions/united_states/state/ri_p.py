@@ -19,12 +19,12 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.base_url = 'http://www.courts.ri.gov/Courts/SupremeCourt/Pages/Opinions/Opinions'
+        self.base_url = "http://www.courts.ri.gov/Courts/SupremeCourt/Pages/Opinions/Opinions"
         self.url = self.build_url()
         self.cases = []
         self.previous_date = None
         self.include_summary = True
-        self.precedential_status = 'Published'
+        self.precedential_status = "Published"
 
         # HTTPS certificate is bad, but hopefully they'll fix it and we can remove the line below
         self.disable_certificate_verification()
@@ -37,7 +37,7 @@ class Site(OpinionSite):
             year = today.year
         else:
             year = today.year - 1
-        return '%s%d-%d.aspx' % (self.base_url, year, year + 1)
+        return "%s%d-%d.aspx" % (self.base_url, year, year + 1)
 
     def _download(self, request_dict={}):
         html = super(Site, self)._download(request_dict)
@@ -55,34 +55,34 @@ class Site(OpinionSite):
 
         for tr1, tr2 in row_triplets:
             case = self.extract_case_from_rows(tr1, tr2)
-            self.previous_date = case['date']
+            self.previous_date = case["date"]
             self.cases.append(case)
 
     def extract_case_from_rows(self, row1, row2):
-        docket = row1.xpath('./td/a/text()')[0]
-        docket = ', '.join([d.strip() for d in docket.split(',')])
+        docket = row1.xpath("./td/a/text()")[0]
+        docket = ", ".join([d.strip() for d in docket.split(",")])
         url = row1.xpath("./td/a/@href")[0]
         text = row1.xpath("./td[1]/text()")[0]
         text_to_parse = [text]
 
         if self.include_summary:
             summary_lines = row2.xpath("./td/div/text()")
-            summary = '\n'.join(summary_lines)
-            joined_text = '\n'.join([text, summary_lines[0]])
+            summary = "\n".join(summary_lines)
+            joined_text = "\n".join([text, summary_lines[0]])
             text_to_parse.append(joined_text)
         else:
             summary = False
 
         return {
-            'url': url,
-            'docket': docket,
-            'date': self.parse_date_from_text(text_to_parse),
-            'name': self.parse_name_from_text(text_to_parse),
-            'summary': summary,
+            "url": url,
+            "docket": docket,
+            "date": self.parse_date_from_text(text_to_parse),
+            "name": self.parse_name_from_text(text_to_parse),
+            "summary": summary,
         }
 
     def parse_date_from_text(self, text_list):
-        regex = '(.*?)(\((\w+\s+\d+\,\s+\d+)\))(.*?)'
+        regex = "(.*?)(\((\w+\s+\d+\,\s+\d+)\))(.*?)"
         for text in text_list:
             date_match = re.match(regex, text)
             if date_match:
@@ -92,20 +92,21 @@ class Site(OpinionSite):
         if self.previous_date:
             return self.previous_date
 
-        raise InsanityException('Could not parse date from string, and no '
-                                'previous date to fall back on: "%s"' %
-                                text_list)
+        raise InsanityException(
+            "Could not parse date from string, and no "
+            'previous date to fall back on: "%s"' % text_list
+        )
 
     @staticmethod
     def parse_name_from_text(text_list):
         regexes = [
             # Expected format
-            '(.*?)(,?\sNos?\.)(.*?)',
+            "(.*?)(,?\sNos?\.)(.*?)",
             # Clerk typo, forgot "No."/"Nos." substring
-            '(.*?)(,?\s\d+-\d+(,|\s))(.*?)',
+            "(.*?)(,?\s\d+-\d+(,|\s))(.*?)",
             # Same as above, and there's an unconventional docket number
             # like 'SU-14-324' instead of '14-324'. See ri_p_example_4.html
-            '(.*?)(,?\s(?:\w+-)?\d+-\d+(,|\s))(.*?)',
+            "(.*?)(,?\s(?:\w+-)?\d+-\d+(,|\s))(.*?)",
         ]
 
         for regex in regexes:
@@ -117,26 +118,27 @@ class Site(OpinionSite):
         # "No."/"Nos." and docket missing, fall back on whatever's before first
         # semi-colon
         for text in text_list:
-            if ';' in text:
-                return text.split(';')[0]
+            if ";" in text:
+                return text.split(";")[0]
 
-        raise InsanityException('Could not parse name from string: "%s"' %
-                                text_list)
+        raise InsanityException(
+            'Could not parse name from string: "%s"' % text_list
+        )
 
     def _get_case_names(self):
-        return [case['name'] for case in self.cases]
+        return [case["name"] for case in self.cases]
 
     def _get_download_urls(self):
-        return [case['url'] for case in self.cases]
+        return [case["url"] for case in self.cases]
 
     def _get_case_dates(self):
-        return [case['date'] for case in self.cases]
+        return [case["date"] for case in self.cases]
 
     def _get_precedential_statuses(self):
         return [self.precedential_status] * len(self.cases)
 
     def _get_docket_numbers(self):
-        return [case['docket'] for case in self.cases]
+        return [case["docket"] for case in self.cases]
 
     def _get_summaries(self):
-        return [case['summary'] for case in self.cases]
+        return [case["summary"] for case in self.cases]

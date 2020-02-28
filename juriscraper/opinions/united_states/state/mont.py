@@ -3,14 +3,19 @@
 
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.lib.html_utils import get_table_column_text, get_table_column_links
+from juriscraper.lib.html_utils import (
+    get_table_column_text,
+    get_table_column_links,
+)
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'https://courts.mt.gov/Portals/189/orders/orders/Recent_Orders.htm'
+        self.url = (
+            "https://courts.mt.gov/Portals/189/orders/orders/Recent_Orders.htm"
+        )
 
         # HTTPS certificate is bad, but hopefully they'll fix it and we can remove the line below
         self.disable_certificate_verification()
@@ -22,7 +27,10 @@ class Site(OpinionSite):
         return get_table_column_text(self.html, 4)
 
     def _get_case_dates(self):
-        return [convert_date_string(date_string) for date_string in get_table_column_text(self.html, 2)]
+        return [
+            convert_date_string(date_string)
+            for date_string in get_table_column_text(self.html, 2)
+        ]
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
@@ -36,15 +44,15 @@ class Site(OpinionSite):
     def _get_nature_of_suit(self):
         natures = []
         for docket in self.docket_numbers:
-            if docket.startswith('DA'):
-                nature = 'Direct Appeal'
-            elif docket.startswith('OP'):
-                nature = 'Original Proceeding'
-            elif docket.startswith('PR'):
-                nature = 'Professional Regulation'
-            elif docket.startswith('AF'):
-                nature = 'Administrative File'
+            if docket.startswith("DA"):
+                nature = "Direct Appeal"
+            elif docket.startswith("OP"):
+                nature = "Original Proceeding"
+            elif docket.startswith("PR"):
+                nature = "Professional Regulation"
+            elif docket.startswith("AF"):
+                nature = "Administrative File"
             else:
-                nature = 'Unknown'
+                nature = "Unknown"
             natures.append(nature)
         return natures

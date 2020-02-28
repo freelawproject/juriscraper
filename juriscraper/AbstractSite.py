@@ -11,16 +11,23 @@ from requests.adapters import HTTPAdapter
 
 from juriscraper.lib.date_utils import fix_future_year_typo, json_date_handler
 from juriscraper.lib.exceptions import InsanityException
-from juriscraper.lib.html_utils import (clean_html, fix_links_in_lxml_tree,
-                                        get_html_parsed_text,
-                                        set_response_encoding)
+from juriscraper.lib.html_utils import (
+    clean_html,
+    fix_links_in_lxml_tree,
+    get_html_parsed_text,
+    set_response_encoding,
+)
 from juriscraper.lib.log_tools import make_default_logger
-from juriscraper.lib.string_utils import (CaseNameTweaker, clean_string,
-                                          harmonize, trunc)
+from juriscraper.lib.string_utils import (
+    CaseNameTweaker,
+    clean_string,
+    harmonize,
+    trunc,
+)
 from juriscraper.lib.test_utils import MockRequest
 
 logger = make_default_logger()
-phantomjs_executable_path = '/usr/local/bin/phantomjs'
+phantomjs_executable_path = "/usr/local/bin/phantomjs"
 _legacy_path = "/usr/local/phantomjs/phantomjs"
 if os.path.isfile(_legacy_path) and os.access(_legacy_path, os.X_OK):
     phantomjs_executable_path = _legacy_path
@@ -41,21 +48,21 @@ class AbstractSite(object):
         # Computed metadata
         self.hash = None
         self.html = None
-        self.method = 'GET'
+        self.method = "GET"
         self.back_scrape_iterable = None
         self.downloader_executed = False
         self.cookies = {}
         self.cnt = cnt or CaseNameTweaker()
         self.request = {
-            'verify': certifi.where(),
-            'session': requests.session(),
-            'headers': {'User-Agent': 'Juriscraper'},
+            "verify": certifi.where(),
+            "session": requests.session(),
+            "headers": {"User-Agent": "Juriscraper"},
             # Disable CDN caching on sites like SCOTUS (ahem)
-            'cache-control': 'no-cache, no-store, max-age=1',
-            'parameters': {},
-            'request': None,
-            'status': None,
-            'url': None,
+            "cache-control": "no-cache, no-store, max-age=1",
+            "parameters": {},
+            "request": None,
+            "status": None,
+            "url": None,
         }
 
         # Sub-classed metadata
@@ -70,8 +77,8 @@ class AbstractSite(object):
     def __str__(self):
         out = []
         for attr, val in self.__dict__.items():
-            out.append('%s: %s' % (attr, val))
-        return '\n'.join(out)
+            out.append("%s: %s" % (attr, val))
+        return "\n".join(out)
 
     def __iter__(self):
         for i in range(0, len(self.case_names)):
@@ -95,23 +102,20 @@ class AbstractSite(object):
         return item
 
     def enable_test_mode(self):
-        self.method = 'LOCAL'
+        self.method = "LOCAL"
 
     def disable_certificate_verification(self):
         """Scrapers that require this due to website misconfiguration
         should be checked periodically--calls to this method from
          site scrapers should be removed when no longer necessary.
          """
-        self.request['verify'] = False
+        self.request["verify"] = False
 
     def test_mode_enabled(self):
-        return self.method == 'LOCAL'
+        return self.method == "LOCAL"
 
     def to_json(self):
-        return json.dumps(
-            [item for item in self],
-            default=json_date_handler,
-        )
+        return json.dumps([item for item in self], default=json_date_handler,)
 
     def parse(self):
         if not self.downloader_executed:
@@ -124,10 +128,10 @@ class AbstractSite(object):
         # Set the attribute to the return value from _get_foo()
         # e.g., this does self.case_names = _get_case_names()
         for attr in self._all_attrs:
-            self.__setattr__(attr, getattr(self, '_get_%s' % attr)())
+            self.__setattr__(attr, getattr(self, "_get_%s" % attr)())
 
         self._clean_attributes()
-        if 'case_name_shorts' in self._all_attrs:
+        if "case_name_shorts" in self._all_attrs:
             # This needs to be done *after* _clean_attributes() has been run.
             # The current architecture means this gets run twice. Once when we
             # iterate over _all_attrs, and again here. It's pretty cheap though.
@@ -156,14 +160,14 @@ class AbstractSite(object):
             if item is not None:
                 cleaned_item = []
                 for sub_item in item:
-                    if attr == 'download_urls':
+                    if attr == "download_urls":
                         sub_item = sub_item.strip()
                     else:
                         if isinstance(sub_item, six.string_types):
                             sub_item = clean_string(sub_item)
                         elif isinstance(sub_item, datetime):
                             sub_item = sub_item.date()
-                        if attr in ['case_names', 'docket_numbers']:
+                        if attr in ["case_names", "docket_numbers"]:
                             sub_item = harmonize(sub_item)
                     cleaned_item.append(sub_item)
                 self.__setattr__(attr, cleaned_item)
@@ -201,14 +205,19 @@ class AbstractSite(object):
         values = list(lengths.values())
         if values.count(values[0]) != len(values):
             # Are all elements equal?
-            raise InsanityException("%s: Scraped meta data fields have differing"
-                                    " lengths: %s" % (self.court_id, lengths))
+            raise InsanityException(
+                "%s: Scraped meta data fields have differing"
+                " lengths: %s" % (self.court_id, lengths)
+            )
         if len(self.case_names) == 0:
-            logger.warning('%s: Returned with zero items.' % self.court_id)
+            logger.warning("%s: Returned with zero items." % self.court_id)
         else:
             for field in self._req_attrs:
                 if self.__getattribute__(field) is None:
-                    raise InsanityException('%s: Required fields do not contain any data: %s' % (self.court_id, field))
+                    raise InsanityException(
+                        "%s: Required fields do not contain any data: %s"
+                        % (self.court_id, field)
+                    )
             i = 0
             prior_case_name = None
             for name in self.case_names:
@@ -223,39 +232,50 @@ class AbstractSite(object):
         for index, case_date in enumerate(self.case_dates):
             if not isinstance(case_date, date):
                 raise InsanityException(
-                    '%s: member of case_dates list not a valid date object. '
-                    'Instead it is: %s with value: %s' % (
-                        self.court_id, type(case_date), case_date)
+                    "%s: member of case_dates list not a valid date object. "
+                    "Instead it is: %s with value: %s"
+                    % (self.court_id, type(case_date), case_date)
                 )
             # Sanitize case date, fix typo of current year if present
             fixed_date = fix_future_year_typo(case_date)
             if fixed_date != case_date:
                 logger.info(
                     "Date year typo detected. Converting %s to %s "
-                    "for case '%s' in %s" % (case_date, fixed_date, self.case_names[index], self.court_id)
+                    "for case '%s' in %s"
+                    % (
+                        case_date,
+                        fixed_date,
+                        self.case_names[index],
+                        self.court_id,
+                    )
                 )
                 case_date = fixed_date
                 self.case_dates[index] = fixed_date
             if case_date.year > 2025:
                 raise InsanityException(
-                    '%s: member of case_dates list is from way in the future, '
-                    'with value %s' % (self.court_id, case_date.year)
+                    "%s: member of case_dates list is from way in the future, "
+                    "with value %s" % (self.court_id, case_date.year)
                 )
 
         # Is cookies a dict?
         if type(self.cookies) != dict:
-            raise InsanityException('self.cookies not set to be a dict by '
-                                    'scraper.')
-        logger.info("%s: Successfully found %s items." % (self.court_id,
-                                                          len(self.case_names)))
+            raise InsanityException(
+                "self.cookies not set to be a dict by " "scraper."
+            )
+        logger.info(
+            "%s: Successfully found %s items."
+            % (self.court_id, len(self.case_names))
+        )
 
     def _date_sort(self):
         """ Sort the object by date.
         """
         if len(self.case_names) > 0:
-            obj_list_attrs = [self.__getattribute__(attr) for attr in
-                              self._all_attrs if
-                              isinstance(self.__getattribute__(attr), list)]
+            obj_list_attrs = [
+                self.__getattribute__(attr)
+                for attr in self._all_attrs
+                if isinstance(self.__getattribute__(attr), list)
+            ]
             zipped = list(zip(*obj_list_attrs))
             zipped.sort(reverse=True)
             i = 0
@@ -293,17 +313,20 @@ class AbstractSite(object):
     def _download(self, request_dict={}):
         """Download the latest version of Site"""
         self.downloader_executed = True
-        if self.method == 'POST':
+        if self.method == "POST":
             truncated_params = {}
             for k, v in self.parameters.items():
-                truncated_params[k] = trunc(v, 50, ellipsis='...[truncated]')
-            logger.info("Now downloading case page at: %s (params: %s)" % (self.url, truncated_params))
+                truncated_params[k] = trunc(v, 50, ellipsis="...[truncated]")
+            logger.info(
+                "Now downloading case page at: %s (params: %s)"
+                % (self.url, truncated_params)
+            )
         else:
             logger.info("Now downloading case page at: %s" % self.url)
         self._process_request_parameters(request_dict)
-        if self.method == 'GET':
+        if self.method == "GET":
             self._request_url_get(self.url)
-        elif self.method == 'POST':
+        elif self.method == "POST":
             self._request_url_post(self.url)
         elif self.test_mode_enabled():
             self._request_url_mock(self.url)
@@ -321,62 +344,65 @@ class AbstractSite(object):
 
     def _process_request_parameters(self, parameters={}):
         """Hook for processing injected parameter overrides"""
-        if parameters.get('verify') is not None:
-            self.request['verify'] = parameters['verify']
-            del parameters['verify']
-        self.request['parameters'] = parameters
-        self.request['session'].mount('https://', self._get_adapter_instance())
+        if parameters.get("verify") is not None:
+            self.request["verify"] = parameters["verify"]
+            del parameters["verify"]
+        self.request["parameters"] = parameters
+        self.request["session"].mount("https://", self._get_adapter_instance())
 
     def _request_url_get(self, url):
         """Execute GET request and assign appropriate request dictionary
         values
         """
-        self.request['url'] = url
-        self.request['response'] = self.request['session'].get(
+        self.request["url"] = url
+        self.request["response"] = self.request["session"].get(
             url,
-            headers=self.request['headers'],
-            verify=self.request['verify'],
+            headers=self.request["headers"],
+            verify=self.request["verify"],
             timeout=60,
-            **self.request['parameters']
+            **self.request["parameters"]
         )
 
     def _request_url_post(self, url):
         """Execute POST request and assign appropriate request dictionary values"""
-        self.request['url'] = url
-        self.request['response'] = self.request['session'].post(
+        self.request["url"] = url
+        self.request["response"] = self.request["session"].post(
             url,
-            headers=self.request['headers'],
-            verify=self.request['verify'],
+            headers=self.request["headers"],
+            verify=self.request["verify"],
             data=self.parameters,
             timeout=60,
-            **self.request['parameters']
+            **self.request["parameters"]
         )
 
     def _request_url_mock(self, url):
         """Execute mock request, used for testing"""
-        self.request['url'] = url
-        self.request['response'] = MockRequest(url=self.url).get()
+        self.request["url"] = url
+        self.request["response"] = MockRequest(url=self.url).get()
 
     def _post_process_response(self):
         """Cleanup to response object"""
         self.tweak_response_object()
-        self.request['response'].raise_for_status()
-        set_response_encoding(self.request['response'])
+        self.request["response"].raise_for_status()
+        set_response_encoding(self.request["response"])
 
     def _return_response_text_object(self):
-        if self.request['response']:
-            if 'json' in self.request['response'].headers.get('content-type', ''):
-                return self.request['response'].json()
+        if self.request["response"]:
+            if "json" in self.request["response"].headers.get(
+                "content-type", ""
+            ):
+                return self.request["response"].json()
             else:
                 if six.PY2:
-                    payload = self.request['response'].text
+                    payload = self.request["response"].text
                 else:
-                    payload = str(self.request['response'].content)
+                    payload = str(self.request["response"].content)
 
                 text = self._clean_text(payload)
                 html_tree = self._make_html_tree(text)
-                html_tree.rewrite_links(fix_links_in_lxml_tree,
-                                        base_href=self.request['url'])
+                html_tree.rewrite_links(
+                    fix_links_in_lxml_tree, base_href=self.request["url"]
+                )
                 return html_tree
 
     def _get_html_tree_by_url(self, url, parameters={}):

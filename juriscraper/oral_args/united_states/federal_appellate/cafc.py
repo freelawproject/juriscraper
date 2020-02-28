@@ -19,15 +19,18 @@ class Site(OralArgumentSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         d = date.today()
-        self.url = 'http://www.cafc.uscourts.gov/oral-argument-recordings?field_date_value2[value][date]={date}'.format(
-            date=d.strftime('%Y-%m-%d')
+        self.url = "http://www.cafc.uscourts.gov/oral-argument-recordings?field_date_value2[value][date]={date}".format(
+            date=d.strftime("%Y-%m-%d")
         )
-        self.back_scrape_iterable = [i.date() for i in rrule(
-            DAILY,
-            interval=1,  # Every day
-            dtstart=date(2015, 7, 10),
-            until=date(2016, 4, 14),
-        )]
+        self.back_scrape_iterable = [
+            i.date()
+            for i in rrule(
+                DAILY,
+                interval=1,  # Every day
+                dtstart=date(2015, 7, 10),
+                until=date(2016, 4, 14),
+            )
+        ]
 
     def _get_download_urls(self):
         path = "//td[contains(@class,'views-field-field-filename')]//@href"
@@ -35,7 +38,7 @@ class Site(OralArgumentSite):
 
     def _get_case_names(self):
         path = "//td[contains(@class,'views-field-title')]//text()"
-        return [' '.join(s.split()) for s in self.html.xpath(path)]
+        return [" ".join(s.split()) for s in self.html.xpath(path)]
 
     def _get_case_dates(self):
         path = "//span[@class='date-display-single']/@content"
@@ -46,8 +49,9 @@ class Site(OralArgumentSite):
         return [s.strip() for s in self.html.xpath(path)]
 
     def _download_backwards(self, d):
-        self.url = self.url = 'http://www.cafc.uscourts.gov/oral-argument-recordings?field_date_value2[value][date]={date}'.format(
-                date=d.strftime('%Y-%m-%d')
+        self.url = (
+            self.url
+        ) = "http://www.cafc.uscourts.gov/oral-argument-recordings?field_date_value2[value][date]={date}".format(
+            date=d.strftime("%Y-%m-%d")
         )
         self.html = self._download()
-

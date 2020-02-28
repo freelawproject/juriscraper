@@ -17,10 +17,16 @@ class Site(miss.Site):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://courts.ms.gov/scripts/websiteX_cgi.exe/GetOpinion?Year=%s&Court=Court+of+Appeals&Submit=Submit' % date.today().year  # noqa: E501
+        self.url = (
+            "http://courts.ms.gov/scripts/websiteX_cgi.exe/GetOpinion?Year=%s&Court=Court+of+Appeals&Submit=Submit"
+            % date.today().year
+        )  # noqa: E501
         # self.back_scrape_iterable = range(2018, 1996 - 1, -1)
         self.back_scrape_iterable = range(1990, 2019)
 
     def _download_backwards(self, year):
-        self.url = 'http://courts.ms.gov/scripts/websiteX_cgi.exe/GetOpinion?Year=%s&Court=Court+of+Appeals&Submit=Submit' % year  # noqa: E501
+        self.url = (
+            "http://courts.ms.gov/scripts/websiteX_cgi.exe/GetOpinion?Year=%s&Court=Court+of+Appeals&Submit=Submit"
+            % year
+        )  # noqa: E501
         self.html = self._download()

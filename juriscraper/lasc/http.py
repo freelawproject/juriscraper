@@ -1,8 +1,10 @@
 import requests
 from lxml.html import fromstring
 from ..lib.log_tools import make_default_logger
+
 requests.packages.urllib3.disable_warnings(
-    requests.packages.urllib3.exceptions.InsecureRequestWarning)
+    requests.packages.urllib3.exceptions.InsecureRequestWarning
+)
 
 logger = make_default_logger()
 
@@ -27,24 +29,28 @@ class LASCSession(requests.Session):
         self.html = None
 
         # Los Angeles Superior Court MAP urls and paths
-        la_url = 'https://media.lacourt.org'
-        self.login_url = '%s/api/Account/Login' % la_url
+        la_url = "https://media.lacourt.org"
+        self.login_url = "%s/api/Account/Login" % la_url
         self.signin_url = "%s/signin-oidc" % la_url
 
         # Microsoft urls and paths
         ms_base_url = "https://login.microsoftonline.com"
-        api_path1 = "/calcourts02b2c.onmicrosoft.com/" \
-                    "B2C_1_Media-LASC-SUSI/SelfAsserted?"
-        api_path2 = "/calcourts02b2c.onmicrosoft.com/" \
-                    "B2C_1_Media-LASC-SUSI/api/" \
-                    "CombinedSigninAndSignup/confirmed?"
+        api_path1 = (
+            "/calcourts02b2c.onmicrosoft.com/"
+            "B2C_1_Media-LASC-SUSI/SelfAsserted?"
+        )
+        api_path2 = (
+            "/calcourts02b2c.onmicrosoft.com/"
+            "B2C_1_Media-LASC-SUSI/api/"
+            "CombinedSigninAndSignup/confirmed?"
+        )
         self.api_url1 = "%s%s" % (ms_base_url, api_path1)
         self.api_url2 = "%s%s" % (ms_base_url, api_path2)
 
         self.login_data = {
             "logonIdentifier": username,
             "password": password,
-            "request_type": "RESPONSE"
+            "request_type": "RESPONSE",
         }
         self.headers = {
             "Origin": ms_base_url,
@@ -58,8 +64,8 @@ class LASCSession(requests.Session):
         :param auto_login: Whether the auto-login procedure should happen.
         :return: requests.Response
         """
-        kwargs.setdefault('timeout', 30)
-        kwargs.setdefault('params', {"p": "B2C_1_Media-LASC-SUSI"})
+        kwargs.setdefault("timeout", 30)
+        kwargs.setdefault("params", {"p": "B2C_1_Media-LASC-SUSI"})
 
         return super(LASCSession, self).get(url, **kwargs)
 
@@ -70,8 +76,8 @@ class LASCSession(requests.Session):
         :param auto_login: Whether the auto-login procedure should happen.
         :return: requests.Response
         """
-        kwargs.setdefault('timeout', 30)
-        kwargs.setdefault('params', {"p": "B2C_1_Media-LASC-SUSI"})
+        kwargs.setdefault("timeout", 30)
+        kwargs.setdefault("params", {"p": "B2C_1_Media-LASC-SUSI"})
 
         return super(LASCSession, self).post(url, **kwargs)
 
@@ -87,9 +93,9 @@ class LASCSession(requests.Session):
         """
         html = fromstring(r.text)
         return {
-            'code': html.xpath('//*[@id="code"]')[0].value,
-            'id_token': html.xpath('//*[@id="id_token"]')[0].value,
-            'state': html.xpath('//*[@id="state"]')[0].value,
+            "code": html.xpath('//*[@id="code"]')[0].value,
+            "id_token": html.xpath('//*[@id="id_token"]')[0].value,
+            "state": html.xpath('//*[@id="state"]')[0].value,
         }
 
     @staticmethod
@@ -103,16 +109,16 @@ class LASCSession(requests.Session):
         if r.status_code == 200:
             return
 
-        message = r.json['message']
-        if u'Your password is incorrect' in message:
-            logger.info(u'Password was incorrect')
+        message = r.json["message"]
+        if u"Your password is incorrect" in message:
+            logger.info(u"Password was incorrect")
             raise LASCLoginException("Invalid username/password")
         if u"We can't seem to find your account" in message:
-            logger.info(u'Invalid Email Address')
+            logger.info(u"Invalid Email Address")
             raise LASCLoginException("Invalid Email Address")
 
     def _update_header_token(self, r):
-        self.headers['X-CSRF-TOKEN'] = r.text.split("csrf")[1].split("\"")[2]
+        self.headers["X-CSRF-TOKEN"] = r.text.split("csrf")[1].split('"')[2]
 
     def login(self):
         """Log into the LASC Media Access Portal
@@ -318,7 +324,7 @@ class LASCSession(requests.Session):
         :raises: LASCLoginException
         """
 
-        logger.info(u'Logging into MAP has begun')
+        logger.info(u"Logging into MAP has begun")
         r = self.get(self.login_url)
         self._update_header_token(r)
 
@@ -334,12 +340,13 @@ class LASCSession(requests.Session):
 
         self.post(self.signin_url, data=parsed_keys)
 
-        logger.info(u'Successfully Logged into MAP')
+        logger.info(u"Successfully Logged into MAP")
 
 
 class LASCLoginException(Exception):
     """
     Raised when the system cannot authenticate with LASC MAP
     """
+
     def __init__(self, message):
         Exception.__init__(self, message)

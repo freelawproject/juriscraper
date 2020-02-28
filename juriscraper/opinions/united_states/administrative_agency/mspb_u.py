@@ -14,7 +14,7 @@ class Site(mspb_p.Site):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.type = 'Nonprecedential'
+        self.type = "Nonprecedential"
         self.display = 60414
         self.column_diff = -1
         self.set_url()

@@ -20,8 +20,12 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://www.3dca.flcourts.org/Opinions/ArchivedOpinions.shtml'
-        self.base_path = "//h3/following::text()[.='OPINIONS']/following::table[1]//tr"
+        self.url = (
+            "http://www.3dca.flcourts.org/Opinions/ArchivedOpinions.shtml"
+        )
+        self.base_path = (
+            "//h3/following::text()[.='OPINIONS']/following::table[1]//tr"
+        )
 
     def _download(self, request_dict={}):
         html_l = super(Site, self)._download(request_dict)
@@ -37,7 +41,7 @@ class Site(OpinionSite):
         return html_trees
 
     def _get_case_names(self):
-        case_names = []            # return html_l
+        case_names = []  # return html_l
         for html_tree in self.html:
             case_names.extend(self._return_case_names(html_tree))
         return case_names
@@ -80,7 +84,7 @@ class Site(OpinionSite):
         return [case_date] * opinion_count
 
     def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_dates)
+        return ["Published"] * len(self.case_dates)
 
     def _get_docket_numbers(self):
         docket_numbers = []

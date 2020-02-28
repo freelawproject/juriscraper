@@ -31,23 +31,26 @@ class LASCParseTest(unittest.TestCase):
             sys.stdout.write("%s. Doing %s" % (i, path.ljust(path_max_len)))
             t1 = time.time()
             dirname, filename = os.path.split(path)
-            filename_sans_ext = filename.split('.')[0]
-            json_path = os.path.join(dirname, '%s_result.json' %
-                                     filename_sans_ext)
+            filename_sans_ext = filename.split(".")[0]
+            json_path = os.path.join(
+                dirname, "%s_result.json" % filename_sans_ext
+            )
 
             lasc = LASCSearch(session=None)
-            with open(path, 'rb') as f:
+            with open(path, "rb") as f:
                 data = json.load(f)
                 clean_data = lasc._parse_case_data(data)
 
             if not os.path.isfile(json_path):
                 # First time testing this docket
-                bar = '*' * 50
-                print("\n\n%s\nJSON FILE DID NOT EXIST. CREATING IT AT:"
-                      "\n\n  %s\n\n"
-                      "Please test the data in this file before assuming "
-                      "everything worked.\n%s\n" % (bar, json_path, bar))
-                with open(json_path, 'w') as f:
+                bar = "*" * 50
+                print(
+                    "\n\n%s\nJSON FILE DID NOT EXIST. CREATING IT AT:"
+                    "\n\n  %s\n\n"
+                    "Please test the data in this file before assuming "
+                    "everything worked.\n%s\n" % (bar, json_path, bar)
+                )
+                with open(json_path, "w") as f:
                     json.dump(clean_data, f, indent=2, sort_keys=True)
                     continue
 
@@ -61,5 +64,5 @@ class LASCParseTest(unittest.TestCase):
             sys.stdout.write("✓ - %0.1fs\n" % (t2 - t1))
 
     def test_dockets(self):
-        path = os.path.join(TESTS_ROOT_EXAMPLES_LASC, 'dockets', '*CV.json')
+        path = os.path.join(TESTS_ROOT_EXAMPLES_LASC, "dockets", "*CV.json")
         self.run_parsers_on_path(path)

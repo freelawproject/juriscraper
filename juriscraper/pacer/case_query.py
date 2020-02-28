@@ -23,9 +23,10 @@ class CaseQuery(BaseDocketReport, BaseReport):
     This is pretty limited metadata about the case, although it
     presents some more information for BK cases.
     """
-    PATH = 'cgi-bin/iquery.pl'
 
-    CACHE_ATTRS = ['metadata']
+    PATH = "cgi-bin/iquery.pl"
+
+    CACHE_ATTRS = ["metadata"]
 
     def __init__(self, court_id, pacer_session=None):
         super(CaseQuery, self).__init__(court_id, pacer_session)
@@ -115,9 +116,9 @@ class CaseQuery(BaseDocketReport, BaseReport):
         #   <B><FONT SIZE=+1>18-11572</FONT></B><B></B>Nancy Jean Stevens
         # We take the docket number from the <font> tag (the innermost tag),
         # although we could but have chosen the first <b> tag.
-        docket_number = force_unicode(rows[0].find('.//font').text_content())
+        docket_number = force_unicode(rows[0].find(".//font").text_content())
         # And case caption following the final <b></b> pair.
-        case_name_raw = force_unicode(rows[0].find('.//b[last()]').tail)
+        case_name_raw = force_unicode(rows[0].find(".//b[last()]").tail)
 
         # Our job as a parser is to return the data, not to filter, clean,
         # amend, or "harmonize" it. However downstream often expects harmonized
@@ -133,41 +134,46 @@ class CaseQuery(BaseDocketReport, BaseReport):
         #   <B>Date filed:</B> 04/30/2018<B>Date of last filing:</B> 06/06/2018
         data = {}
         field_names = {
-            u'date_of_last_filing': u'date_last_filing',
-            u'judge': u'assigned_to_str',
-            u'plan_confirmed': u'date_plan_confirmed',
+            u"date_of_last_filing": u"date_last_filing",
+            u"judge": u"assigned_to_str",
+            u"plan_confirmed": u"date_plan_confirmed",
         }
-        for i in range(1, len(rows)-1):
-            bolds = rows[i].findall('.//b')
+        for i in range(1, len(rows) - 1):
+            bolds = rows[i].findall(".//b")
             if not bolds:
                 if i == 1:
                     # Second row, no bold => judge name!
                     judge_role = force_unicode(rows[i].text_content())
                     PRESIDING = ", presiding"
-                    assert judge_role.endswith(PRESIDING), \
-                        ("We expected the judge's name to end with "
-                         "', presiding'.")
-                    data[u'assigned_to_str'] = judge_role.rstrip(PRESIDING)
+                    assert judge_role.endswith(PRESIDING), (
+                        "We expected the judge's name to end with "
+                        "', presiding'."
+                    )
+                    data[u"assigned_to_str"] = judge_role.rstrip(PRESIDING)
                 elif i == 2:
                     # Third row, no bold => referred judge name!
                     judge_role = force_unicode(rows[i].text_content())
                     REFERRAL = ", referral"
-                    assert judge_role.endswith(REFERRAL), \
-                        ("We expected the referred judge's name to end "
-                         "with , referral")
-                    data[u'referred_to_str'] = judge_role.rstrip(REFERRAL)
+                    assert judge_role.endswith(REFERRAL), (
+                        "We expected the referred judge's name to end "
+                        "with , referral"
+                    )
+                    data[u"referred_to_str"] = judge_role.rstrip(REFERRAL)
                 else:
-                    raise AssertionError('Line with no boldface?')
+                    raise AssertionError("Line with no boldface?")
             for bold in bolds:
-                data.update(self._get_label_value_pair(bold, True,
-                                                       field_names))
+                data.update(
+                    self._get_label_value_pair(bold, True, field_names)
+                )
 
-        data.update({
-            u'court_id': self.court_id,
-            u'docket_number': docket_number,
-            u'case_name': case_name,
-            u'case_name_raw': case_name_raw,
-        })
+        data.update(
+            {
+                u"court_id": self.court_id,
+                u"docket_number": docket_number,
+                u"case_name": case_name,
+                u"case_name_raw": case_name_raw,
+            }
+        )
 
         data = clean_court_object(data)
 
@@ -220,25 +226,27 @@ class CaseQuery(BaseDocketReport, BaseReport):
          - The case_num parameter needs a value; any value will do.
          - As usual, the ?1-L_1_0-1 business in the URL is needed
         """
-        assert self.session is not None, \
-            "session attribute of DocketReport cannot be None."
-        assert bool(pacer_case_id), \
+        assert (
+            self.session is not None
+        ), "session attribute of DocketReport cannot be None."
+        assert bool(pacer_case_id), (
             "pacer_case_id must be truthy, not '%s'" % pacer_case_id
+        )
         params = {
-            u'UserType': '',
-            u'all_case_ids': pacer_case_id,
-            u'case_num': 'foo',  # We just need *some* value here.
-            u'Qry_filed_from': '',
-            u'Qry_filed_to': '',
-            u'lastentry_from': '',
-            u'lastentry_to': '',
-            u'last_name': '',
-            u'first_name': '',
-            u'middle_name': '',
-            u'person_type': '',
+            u"UserType": "",
+            u"all_case_ids": pacer_case_id,
+            u"case_num": "foo",  # We just need *some* value here.
+            u"Qry_filed_from": "",
+            u"Qry_filed_to": "",
+            u"lastentry_from": "",
+            u"lastentry_to": "",
+            u"last_name": "",
+            u"first_name": "",
+            u"middle_name": "",
+            u"person_type": "",
         }
         logger.info(u"Running case query for case ID '%s'", pacer_case_id)
-        self.response = self.session.post(self.url + '?1-L_1_0-1', data=params)
+        self.response = self.session.post(self.url + "?1-L_1_0-1", data=params)
         self.parse()
 
     @property
@@ -263,11 +271,11 @@ def _main():
 
     # Court ID is only needed for querying. Actual
     # parsed value appears in output
-    report = CaseQuery('mad')
+    report = CaseQuery("mad")
     filepath = sys.argv[1]
     print("Parsing HTML file at %s" % filepath)
-    with open(filepath, 'r') as f:
-        text = f.read().decode('utf-8')
+    with open(filepath, "r") as f:
+        text = f.read().decode("utf-8")
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)
 

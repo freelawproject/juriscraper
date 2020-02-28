@@ -19,9 +19,12 @@ except ImportError:
 
 if sys.maxunicode == 65535:
     from .log_tools import make_default_logger
+
     logger = make_default_logger()
-    logger.warn("You are using a narrow build of Python, which is not "
-                "completely supported. See issue #188 for details.")
+    logger.warn(
+        "You are using a narrow build of Python, which is not "
+        "completely supported. See issue #188 for details."
+    )
 
 
 def get_xml_parsed_text(text):
@@ -45,18 +48,18 @@ def get_html5_parsed_text(text):
     :param text: The html of the document
     :return: an lxml.HtmlElement object
     """
-    parsed = html5parser.document_fromstring(text.encode('utf-8'))
-    return fromstring(tostring(parsed, encoding='unicode'))
+    parsed = html5parser.document_fromstring(text.encode("utf-8"))
+    return fromstring(tostring(parsed, encoding="unicode"))
 
 
 def get_table_column_text(html, cell_num, path_base=False):
-    path_cell = '//table//tr/td[%d]' % cell_num
+    path_cell = "//table//tr/td[%d]" % cell_num
     path = path_base + path_cell if path_base else path_cell
     return [cell.text_content().strip() for cell in html.xpath(path)]
 
 
 def get_table_column_links(html, cell_num, path_base=False):
-    path_cell = '//table//tr/td[%d]//a/@href' % cell_num
+    path_cell = "//table//tr/td[%d]//a/@href" % cell_num
     path = path_base + path_cell if path_base else path_cell
     return html.xpath(path)
 
@@ -68,7 +71,7 @@ def get_row_column_text(row, cell_num):
     :param cell_num: int
     :return: string
     """
-    return row.xpath('.//td[%d]' % cell_num)[0].text_content().strip()
+    return row.xpath(".//td[%d]" % cell_num)[0].text_content().strip()
 
 
 def get_row_column_links(row, cell_num):
@@ -81,29 +84,32 @@ def get_row_column_links(row, cell_num):
     :param cell_num: int
     :return: string
     """
-    return row.xpath('.//td[%d]//a/@href' % cell_num)[0]
+    return row.xpath(".//td[%d]//a/@href" % cell_num)[0]
 
 
 def get_clean_body_content(content, remove_extra_tags=[]):
     """Parse out the body from an html string, clean it up, and send it along.
     """
-    remove_tags = ['a', 'body', 'font', 'noscript']
+    remove_tags = ["a", "body", "font", "noscript"]
     remove_tags.extend(remove_extra_tags)
-    cleaner = Cleaner(style=True,
-                      remove_tags=remove_tags)
+    cleaner = Cleaner(style=True, remove_tags=remove_tags)
     try:
         return cleaner.clean_html(content)
     except XMLSyntaxError:
-        return "Unable to extract the content from this file. Please try " \
-               "reading the original."
+        return (
+            "Unable to extract the content from this file. Please try "
+            "reading the original."
+        )
 
 
 def get_visible_text(html_content):
     html_tree = html.fromstring(html_content)
-    text = html_tree.xpath("""//text()[normalize-space() and not(parent::style |
+    text = html_tree.xpath(
+        """//text()[normalize-space() and not(parent::style |
                                                                  parent::link |
                                                                  parent::head |
-                                                                 parent::script)]""")
+                                                                 parent::script)]"""
+    )
     return " ".join(text)
 
 
@@ -119,8 +125,8 @@ def set_response_encoding(request):
     """
     if request:
         # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
-        if request.encoding == 'ISO-8859-1':
-            request.encoding = 'cp1252'
+        if request.encoding == "ISO-8859-1":
+            request.encoding = "cp1252"
 
         if request.encoding is None:
             # Requests detects the encoding when the item is GET'ed using
@@ -132,9 +138,9 @@ def set_response_encoding(request):
             # performance boon, and can be removed once requests is upgraded
             if isinstance(request.content, text_type):
                 as_bytes = request.content.encode()
-                request.encoding = chardet.detect(as_bytes)['encoding']
+                request.encoding = chardet.detect(as_bytes)["encoding"]
             else:
-                request.encoding = chardet.detect(request.content)['encoding']
+                request.encoding = chardet.detect(request.content)["encoding"]
 
 
 def clean_html(text):
@@ -146,8 +152,8 @@ def clean_html(text):
         5. ?
     """
     # Remove <![CDATA because it causes breakage in lxml.
-    text = re.sub(r'<!\[CDATA\[', u'', text)
-    text = re.sub(r'\]\]>', u'', text)
+    text = re.sub(r"<!\[CDATA\[", u"", text)
+    text = re.sub(r"\]\]>", u"", text)
 
     # Remove <?xml> declaration in Unicode objects, because it causes an
     # error: "ValueError: Unicode strings with encoding declaration are not
@@ -157,18 +163,23 @@ def clean_html(text):
     # removing it. This moves our encoding detection to chardet, rather than
     # lxml.
     if isinstance(text, text_type):
-        text = re.sub(r'^\s*<\?xml\s+.*?\?>', '', text)
+        text = re.sub(r"^\s*<\?xml\s+.*?\?>", "", text)
 
     # Fix invalid bytes in XML (http://stackoverflow.com/questions/8733233/)
     # Note that this won't work completely on narrow builds of Python, which
     # existed prior to Py3. Thus, we check if it's a narrow build, and adjust
     # accordingly.
     if sys.maxunicode == 65535:
-        text = re.sub(u'[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD]+',
-                      u'', text)
+        text = re.sub(
+            u"[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD]+", u"", text
+        )
     else:
-        text = re.sub(u'[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD'
-                      u'\U00010000-\U0010FFFF]+', u'', text)
+        text = re.sub(
+            u"[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD"
+            u"\U00010000-\U0010FFFF]+",
+            u"",
+            text,
+        )
 
     return text
 
@@ -207,11 +218,11 @@ def fix_links_in_lxml_tree(link, keep_anchors=False):
     """
     url_parts = urlsplit(link)
     url = urlunsplit(
-        url_parts[:2] +
-        (re.sub('^(/\.\.)+', '', url_parts.path),) +
-        url_parts[3:]
+        url_parts[:2]
+        + (re.sub("^(/\.\.)+", "", url_parts.path),)
+        + url_parts[3:]
     )
     if keep_anchors:
         return url
     else:
-        return url.split('#')[0]
+        return url.split("#")[0]

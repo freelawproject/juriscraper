@@ -17,17 +17,18 @@ class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://court-url.gov/some-path.html'
-        self.method = 'POST'
+        self.url = "http://court-url.gov/some-path.html"
+        self.method = "POST"
         self.uses_selenium = False
         # Complete this variable if you create a backscraper.
         self.back_scrape_iterable = None
 
-    '''
+    """
       Required fields - InsanityExceptions will be thrown if omitted.
 
       Remove this comment before submission.
-    '''
+    """
+
     def _get_download_urls(self):
         """ This is an example of a basic piece of meta data accessible with a
             simple XPath query.
@@ -37,7 +38,7 @@ class Site(OralArgumentSite):
             Note that relative URLs are made absolute by the AbstractSite
             object's cleanup routines, so doing so here is not needed.
         """
-        path = '//path/to/text/text()'
+        path = "//path/to/text/text()"
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
@@ -55,8 +56,8 @@ class Site(OralArgumentSite):
             cases where the name is provided in uppercase only.
         """
         case_names = []
-        for e in self.html.xpath('//path/to/an/element/p'):
-            s = html.tostring(e, method='text', encoding='unicode')
+        for e in self.html.xpath("//path/to/an/element/p"):
+            s = html.tostring(e, method="text", encoding="unicode")
             case_names.append(titlecase(s))
         return case_names
 
@@ -66,15 +67,18 @@ class Site(OralArgumentSite):
             on the site you are scraping. The datetime formats can be found
             here: http://docs.python.org/2/library/datetime.html
         """
-        path = '//path/to/text/text()'
-        return [convert_date_string(date_string) for date_string in
-                self.html.xpath(path)]
+        path = "//path/to/text/text()"
+        return [
+            convert_date_string(date_string)
+            for date_string in self.html.xpath(path)
+        ]
 
     """
       High priority fields
 
       Remove this comment and any unused methods before submission
     """
+
     def _get_docket_numbers(self):
         """
           This is typically of the form ##-####
@@ -90,6 +94,7 @@ class Site(OralArgumentSite):
     """
       Optional method used for downloading multiple pages of a court site.
     """
+
     def _download_backwards(self, date_str):
         """ This is a simple method that can be used to generate Site objects
             that can be used to paginate through a court's entire website.
@@ -106,5 +111,5 @@ class Site(OralArgumentSite):
             This can also be used to hold notes useful to future backscraper
             development.
         """
-        self.url = 'http://example.com/new/url/%s' % date_str
+        self.url = "http://example.com/new/url/%s" % date_str
         self.html = self._download()

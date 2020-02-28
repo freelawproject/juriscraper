@@ -15,7 +15,9 @@ from juriscraper.lib.test_utils import warn_or_crash_slow_parser
 class PacerParseTestCase(unittest.TestCase):
     """A mixin to add a parsing test."""
 
-    def parse_files(self, path_root, file_ext, test_class, initialize_with_court=True):
+    def parse_files(
+        self, path_root, file_ext, test_class, initialize_with_court=True
+    ):
         """Can we do a simple query and parse?"""
         paths = []
         for root, dirnames, filenames in os.walk(path_root):
@@ -27,19 +29,19 @@ class PacerParseTestCase(unittest.TestCase):
             t1 = time.time()
             sys.stdout.write("%s. Doing %s" % (i, path.ljust(path_max_len)))
             dirname, filename = os.path.split(path)
-            filename_sans_ext = filename.split('.')[0]
-            json_path = os.path.join(dirname, '%s.json' % filename_sans_ext)
+            filename_sans_ext = filename.split(".")[0]
+            json_path = os.path.join(dirname, "%s.json" % filename_sans_ext)
 
             if initialize_with_court:
-                court = filename_sans_ext.split('_')[0]
+                court = filename_sans_ext.split("_")[0]
                 report = test_class(court)
             else:
                 report = test_class()
-            with open(path, 'rb') as f:
-                report._parse_text(f.read().decode('utf-8'))
+            with open(path, "rb") as f:
+                report._parse_text(f.read().decode("utf-8"))
             data = report.data
             if not os.path.exists(json_path):
-                with open(json_path, 'w') as f:
+                with open(json_path, "w") as f:
                     print("Creating new file at %s" % json_path)
                     json.dump(data, f, indent=2, sort_keys=True)
                 continue

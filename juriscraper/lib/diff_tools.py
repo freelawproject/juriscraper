@@ -6,12 +6,12 @@ import re
 from .string_utils import harmonize
 
 STOP_WORDS = (
-    'a|an|and|as|at|but|by|en|etc|for|if|in|is|of|on|or|the|to|v\.?|via|'
-    'vs\.?|et|al|appellants?|defendants?|administrator|'
-    'plaintiffs?|error|others|against|ex|parte|complainants?|original|'
-    'claimants?|devisee|executrix|executor'
+    "a|an|and|as|at|but|by|en|etc|for|if|in|is|of|on|or|the|to|v\.?|via|"
+    "vs\.?|et|al|appellants?|defendants?|administrator|"
+    "plaintiffs?|error|others|against|ex|parte|complainants?|original|"
+    "claimants?|devisee|executrix|executor"
 )
-STOP_WORDS_RE = re.compile(r'^(%s)$' % STOP_WORDS)
+STOP_WORDS_RE = re.compile(r"^(%s)$" % STOP_WORDS)
 
 
 def normalize_phrase(phrase):
@@ -27,14 +27,14 @@ def normalize_phrase(phrase):
 
     # strip punctuation
     exclude = set(string.punctuation)
-    phrase = ''.join(ch for ch in phrase if ch not in exclude)
+    phrase = "".join(ch for ch in phrase if ch not in exclude)
 
-    words = re.split('[\t ]', phrase)
+    words = re.split("[\t ]", phrase)
     result = []
     for word in words:
-        word = STOP_WORDS_RE.sub('', word)
+        word = STOP_WORDS_RE.sub("", word)
         result.append(word)
-    return ''.join(result)
+    return "".join(result)
 
 
 def get_closest_match_index(word, possibilities):
@@ -49,8 +49,9 @@ def get_closest_match_index(word, possibilities):
     word = normalize_phrase(word)
     possibilities = [normalize_phrase(x) for x in possibilities]
     try:
-        match = difflib.get_close_matches(word, possibilities, n=1,
-                                          cutoff=0.1)[0]
+        match = difflib.get_close_matches(
+            word, possibilities, n=1, cutoff=0.1
+        )[0]
     except IndexError:
         # No good matches.
         return None

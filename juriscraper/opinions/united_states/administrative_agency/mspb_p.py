@@ -29,14 +29,19 @@ class Site(OpinionSite):
         # identifying ourselves with the 'juriscraper' UA. The below
         # workaround is required to shows results for this scraper,
         # and also to show results (and prevent timeout) for mspb_u child.
-        self.request['headers'] = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
-        self.type = 'Precedential'
+        self.request["headers"] = {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+        }
+        self.type = "Precedential"
         self.display = 2368396
         self.set_url()
 
     def set_url(self):
-        cache_key = 'a' + str(random.randrange(1, 100000000))
-        pattern = 'https://www.mspb.gov/MSPBSEARCH/decisiondisplay_2011.aspx?timelapse=12&displaytype=%d&description=%s+Decisions&cachename=' + cache_key
+        cache_key = "a" + str(random.randrange(1, 100000000))
+        pattern = (
+            "https://www.mspb.gov/MSPBSEARCH/decisiondisplay_2011.aspx?timelapse=12&displaytype=%d&description=%s+Decisions&cachename="
+            + cache_key
+        )
         self.url = pattern % (self.display, self.type)
 
     def _get_download_urls(self):
@@ -50,15 +55,18 @@ class Site(OpinionSite):
         appellants = self.html.xpath(path)
         path = "//tr[@class='ITEMS']/td[%s]/text()" % (4 + self.column_diff)
         agencies = self.html.xpath(path)
-        return ["%s v. %s" % (appellant, agency)
-                for (appellant, agency)
-                in zip(appellants, agencies)]
+        return [
+            "%s v. %s" % (appellant, agency)
+            for (appellant, agency) in zip(appellants, agencies)
+        ]
 
     def _get_case_dates(self):
         """Example: Aug 06, 2014"""
         path = "//tr[@class='ITEMS']/td[1]/span/text()"
-        return [datetime.strptime(date_string, '%b %d, %Y').date()
-                for date_string in self.html.xpath(path)]
+        return [
+            datetime.strptime(date_string, "%b %d, %Y").date()
+            for date_string in self.html.xpath(path)
+        ]
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_dates)
@@ -66,7 +74,7 @@ class Site(OpinionSite):
     def _get_neutral_citations(self):
         """Example: 2014 MSPB 68"""
         path = "//tr[@class='ITEMS']/td[2]/text()"
-        return [s.replace('\u00A0', ' ') for s in self.html.xpath(path)]
+        return [s.replace("\u00A0", " ") for s in self.html.xpath(path)]
 
     def _get_case_name_shorts(self):
         # We don't (yet) support short case names for administrative bodies.

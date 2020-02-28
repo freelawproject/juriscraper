@@ -105,7 +105,10 @@ class PacerRssFeed(DocketReport):
         if self.court_id == "ilnb":
             return "https://tdi.ilnb.uscourts.gov/wwwroot/RSS/rss_outside.xml"
         else:
-            return "https://ecf.%s.uscourts.gov/%s" % (self.court_id, self.PATH)
+            return "https://ecf.%s.uscourts.gov/%s" % (
+                self.court_id,
+                self.PATH,
+            )
 
     def query(self):
         """Query the RSS feed for a given court ID
@@ -228,7 +231,10 @@ class PacerRssFeed(DocketReport):
         if self.is_bankruptcy:
             # Uses both b/c sometimes the bankr. cases have a dist-style docket
             # number.
-            regexes = [self.docket_number_dist_regex, self.docket_number_bankr_regex]
+            regexes = [
+                self.docket_number_dist_regex,
+                self.docket_number_bankr_regex,
+            ]
         else:
             regexes = [self.docket_number_dist_regex]
         for regex in regexes:
@@ -254,7 +260,10 @@ def _main():
         % (__package__, os.path.splitext(os.path.basename(sys.argv[0]))[0])
     )
     parser.add_argument(
-        "-b", "--bankruptcy", action="store_true", help="Use bankruptcy parser variant."
+        "-b",
+        "--bankruptcy",
+        action="store_true",
+        help="Use bankruptcy parser variant.",
     )
     parser.add_argument("-v", "--verbose", action="store_true")
     parser.add_argument(
@@ -287,7 +296,8 @@ sorry if that was your filename.""",
             f = sys.stdin
         else:
             print(
-                "Reading RSS feed from %s as %s" % (args.court_or_file, feed.court_id)
+                "Reading RSS feed from %s as %s"
+                % (args.court_or_file, feed.court_id)
             )
             f = open(args.court_or_file)
         feed._parse_text(f.read().decode("utf-8"))

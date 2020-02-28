@@ -22,33 +22,39 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.back_scrape_iterable = range(1, self.get_backscrape_max())
         self.element_path_format = "//article[@class='views-row media-document']/div[@class='views-field views-field-field-document%s']"
-        self.url = 'https://www.vermontjudiciary.org/opinions-decisions?f[0]=document_type%3A94&f[1]=court_division_opinions_library_%3A' + self.get_division_id()
-        self.backscrape_page_base_url = self.url + '&page='
+        self.url = (
+            "https://www.vermontjudiciary.org/opinions-decisions?f[0]=document_type%3A94&f[1]=court_division_opinions_library_%3A"
+            + self.get_division_id()
+        )
+        self.backscrape_page_base_url = self.url + "&page="
 
     def get_backscrape_max(self):
         return 7
 
     def get_division_id(self):
-        return '7'
+        return "7"
 
     def _get_download_urls(self):
-        path_base = self.element_path_format % ''
+        path_base = self.element_path_format % ""
         path = "%s//@href" % path_base
         return self.html.xpath(path)
 
     def _get_case_names(self):
-        path = self.element_path_format % ''
+        path = self.element_path_format % ""
         return [e.text_content().strip() for e in self.html.xpath(path)]
 
     def _get_case_dates(self):
-        path = self.element_path_format % '-expiration'
-        return [convert_date_string(e.text_content()) for e in self.html.xpath(path)]
+        path = self.element_path_format % "-expiration"
+        return [
+            convert_date_string(e.text_content())
+            for e in self.html.xpath(path)
+        ]
 
     def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_names)
+        return ["Published"] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        path = self.element_path_format % '-number'
+        path = self.element_path_format % "-number"
         return [e.text_content().strip() for e in self.html.xpath(path)]
 
     def _download_backwards(self, page_number):

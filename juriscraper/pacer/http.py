@@ -22,13 +22,19 @@ def check_if_logged_in_page(text):
     :param text: The HTML or XML of the page to test
     :return boolean: True if logged in, False if not.
     """
-    valid_case_number_query = '<case number=' in text or \
-                              "<request number=" in text
-    no_results_case_number_query = re.search('<message.*Cannot find', text)
-    sealed_case_query = re.search('<message.*Case Under Seal', text)
-    if any([valid_case_number_query, no_results_case_number_query,
-            sealed_case_query]):
-        not_logged_in = re.search('text.*Not logged in', text)
+    valid_case_number_query = (
+        "<case number=" in text or "<request number=" in text
+    )
+    no_results_case_number_query = re.search("<message.*Cannot find", text)
+    sealed_case_query = re.search("<message.*Case Under Seal", text)
+    if any(
+        [
+            valid_case_number_query,
+            no_results_case_number_query,
+            sealed_case_query,
+        ]
+    ):
+        not_logged_in = re.search("text.*Not logged in", text)
         if not_logged_in:
             # An unauthenticated PossibleCaseNumberApi XML result. Simply
             # continue onwards. The complete result looks like:
@@ -42,8 +48,8 @@ def check_if_logged_in_page(text):
 
     # Detect if we are logged in. If so, no need to do so. If not, we login
     # again below.
-    found_district_logout_link = '/cgi-bin/login.pl?logout' in text
-    found_appellate_logout_link = 'InvalidUserLogin.jsp' in text
+    found_district_logout_link = "/cgi-bin/login.pl?logout" in text
+    found_appellate_logout_link = "InvalidUserLogin.jsp" in text
     if any([found_district_logout_link, found_appellate_logout_link]):
         # A normal HTML page we're logged into.
         return True
@@ -59,8 +65,9 @@ class PacerSession(requests.Session):
     Also includes utilities for logging into PACER and re-logging in when
     sessions expire.
     """
-    LOGIN_URL = 'https://pacer.login.uscourts.gov/csologin/login.jsf'
-    INDEX = 'https://ecf.ilnd.uscourts.gov/cgi-bin/ShowIndex.pl'
+
+    LOGIN_URL = "https://pacer.login.uscourts.gov/csologin/login.jsf"
+    INDEX = "https://ecf.ilnd.uscourts.gov/cgi-bin/ShowIndex.pl"
 
     def __init__(self, cookies=None, username=None, password=None):
         """
@@ -68,8 +75,8 @@ class PacerSession(requests.Session):
         :param pacer_token: a PACER_SESSION token value
         """
         super(PacerSession, self).__init__()
-        self.headers['User-Agent'] = 'Juriscraper'
-        self.headers['Referer'] = 'https://external'  # For CVE-001-FLP.
+        self.headers["User-Agent"] = "Juriscraper"
+        self.headers["Referer"] = "https://external"  # For CVE-001-FLP.
         self.verify = False
 
         if cookies:
@@ -85,11 +92,11 @@ class PacerSession(requests.Session):
         :param auto_login: Whether the auto-login procedure should happen.
         :return: requests.Response
         """
-        kwargs.setdefault('timeout', 300)
+        kwargs.setdefault("timeout", 300)
 
         r = super(PacerSession, self).get(url, **kwargs)
 
-        if 'This user has no access privileges defined.' in r.text:
+        if "This user has no access privileges defined." in r.text:
             # This is a strange error that we began seeing in CM/ECF 6.3.1 at
             # ILND. You can currently reproduce it by logging in on the central
             # login page, selecting "Court Links" as your destination, and then
@@ -122,13 +129,13 @@ class PacerSession(requests.Session):
         :param kwargs: assorted keyword arguments
         :return: requests.Response
         """
-        kwargs.setdefault('timeout', 300)
+        kwargs.setdefault("timeout", 300)
 
         if data:
             pacer_data = self._prepare_multipart_form_data(data)
-            kwargs.update({'files': pacer_data})
+            kwargs.update({"files": pacer_data})
         else:
-            kwargs.update({'data': data, 'json': json})
+            kwargs.update({"data": data, "json": json})
 
         r = super(PacerSession, self).post(url, **kwargs)
         if auto_login:
@@ -146,7 +153,7 @@ class PacerSession(requests.Session):
         :param kwargs: assorted keyword arguments
         :return: requests.Response
         """
-        kwargs.setdefault('timeout', 300)
+        kwargs.setdefault("timeout", 300)
         return super(PacerSession, self).head(url, **kwargs)
 
     @staticmethod
@@ -182,9 +189,11 @@ class PacerSession(requests.Session):
         element.
         """
         tree = get_html_parsed_text(r.content)
-        xpath = '//form[@id="loginForm"]//input[' \
-                '    @name="javax.faces.ViewState"' \
-                ']/@value'
+        xpath = (
+            '//form[@id="loginForm"]//input['
+            '    @name="javax.faces.ViewState"'
+            "]/@value"
+        )
         return tree.xpath(xpath)[0]
 
     @staticmethod
@@ -261,7 +270,7 @@ class PacerSession(requests.Session):
         If you get a 302 response and the proper cookies at this point, that
         means you're logged in.
         """
-        logger.info(u'Attempting PACER site login')
+        logger.info(u"Attempting PACER site login")
 
         # Clear any remaining cookies. This is important because sometimes we
         # want to login before an old session has entirely died. One example of
@@ -275,7 +284,7 @@ class PacerSession(requests.Session):
         # Load the page in order to get the ViewState value from the HTML
         load_page_r = self.get(
             url,
-            headers={'User-Agent': 'Juriscraper'},
+            headers={"User-Agent": "Juriscraper"},
             auto_login=False,
             verify=False,
             timeout=60,
@@ -283,94 +292,95 @@ class PacerSession(requests.Session):
 
         login_post_r = self.post(
             url,
-            headers={'User-Agent': 'Juriscraper'},
+            headers={"User-Agent": "Juriscraper"},
             verify=False,
             timeout=60,
             auto_login=False,
             data={
-                'javax.faces.partial.ajax': 'true',
-                'javax.faces.partial.execute': '@all',
-                'javax.faces.source': 'loginForm:fbtnLogin',
-                'javax.faces.partial.render':
-                    'pscLoginPanel+loginForm+redactionConfirmation+popupMsgId',
-                'javax.faces.ViewState': self._get_view_state(load_page_r),
-
-                'loginForm:courtId_input': 'E_ALMDC',
-                'loginForm:courtId_focus': '',
-                'loginForm:fbtnLogin': 'loginForm:fbtnLogin',
-                'loginForm:loginName': self.username,
-                'loginForm:password': self.password,
-                'loginForm:clientCode': '',
-                'loginForm': 'loginForm',
-
+                "javax.faces.partial.ajax": "true",
+                "javax.faces.partial.execute": "@all",
+                "javax.faces.source": "loginForm:fbtnLogin",
+                "javax.faces.partial.render": "pscLoginPanel+loginForm+redactionConfirmation+popupMsgId",
+                "javax.faces.ViewState": self._get_view_state(load_page_r),
+                "loginForm:courtId_input": "E_ALMDC",
+                "loginForm:courtId_focus": "",
+                "loginForm:fbtnLogin": "loginForm:fbtnLogin",
+                "loginForm:loginName": self.username,
+                "loginForm:password": self.password,
+                "loginForm:clientCode": "",
+                "loginForm": "loginForm",
             },
         )
-        if u'Invalid username or password' in login_post_r.text:
+        if u"Invalid username or password" in login_post_r.text:
             raise PacerLoginException("Invalid username/password")
-        if u'Username must be at least 6 characters' in login_post_r.text:
-            raise PacerLoginException("Username must be at least six "
-                                      "characters")
-        if u'Password must be at least 8 characters' in login_post_r.text:
-            raise PacerLoginException("Password must be at least eight "
-                                      "characters")
-        if u'timeout error' in login_post_r.text:
+        if u"Username must be at least 6 characters" in login_post_r.text:
+            raise PacerLoginException(
+                "Username must be at least six " "characters"
+            )
+        if u"Password must be at least 8 characters" in login_post_r.text:
+            raise PacerLoginException(
+                "Password must be at least eight " "characters"
+            )
+        if u"timeout error" in login_post_r.text:
             raise PacerLoginException("Timeout")
 
-        if not self.cookies.get('PacerSession'):
-            logger.info("Did not get cookies from first log in POSTs. "
-                        "Assuming this is a filing user and doing two more "
-                        "POSTs.")
+        if not self.cookies.get("PacerSession"):
+            logger.info(
+                "Did not get cookies from first log in POSTs. "
+                "Assuming this is a filing user and doing two more "
+                "POSTs."
+            )
             reg_msg_r = self.post(
                 url,
-                headers={'User-Agent': 'Juriscraper'},
+                headers={"User-Agent": "Juriscraper"},
                 verify=False,
                 timeout=60,
                 auto_login=False,
                 data={
-                    'javax.faces.partial.ajax': 'true',
-                    'javax.faces.source': 'regmsg:chkRedact',
-                    'javax.faces.partial.execute': 'regmsg:chkRedact',
-                    'javax.faces.partial.render': 'regmsg:bpmConfirm',
-                    'javax.faces.partial.event': 'change',
-                    'javax.faces.behavior.event': 'valueChange',
-                    'javax.faces.ViewState': self._get_xml_view_state(
-                        login_post_r),
-
-                    'regmsg': 'regmsg',
-                    'regmsg:chkRedact_input': 'on',
+                    "javax.faces.partial.ajax": "true",
+                    "javax.faces.source": "regmsg:chkRedact",
+                    "javax.faces.partial.execute": "regmsg:chkRedact",
+                    "javax.faces.partial.render": "regmsg:bpmConfirm",
+                    "javax.faces.partial.event": "change",
+                    "javax.faces.behavior.event": "valueChange",
+                    "javax.faces.ViewState": self._get_xml_view_state(
+                        login_post_r
+                    ),
+                    "regmsg": "regmsg",
+                    "regmsg:chkRedact_input": "on",
                 },
             )
             # The box is now checked. Submit the form to say so.
             self.post(
                 url,
-                headers={'User-Agent': 'Juriscraper'},
+                headers={"User-Agent": "Juriscraper"},
                 verify=False,
                 timeout=60,
                 auto_login=False,
                 data={
-                    'javax.faces.partial.ajax': 'true',
-                    'javax.faces.source': 'regmsg:bpmConfirm',
-                    'javax.faces.partial.execute': '@all',
-                    'javax.faces.ViewState': self._get_xml_view_state(
-                        reg_msg_r),
-
-                    'regmsg': 'regmsg',
-                    'regmsg:chkRedact_input': 'on',
-                    'regmsg:bpmConfirm': 'regmsg:bpmConfirm',
-
-                    'dialogName': 'redactionDlg',
+                    "javax.faces.partial.ajax": "true",
+                    "javax.faces.source": "regmsg:bpmConfirm",
+                    "javax.faces.partial.execute": "@all",
+                    "javax.faces.ViewState": self._get_xml_view_state(
+                        reg_msg_r
+                    ),
+                    "regmsg": "regmsg",
+                    "regmsg:chkRedact_input": "on",
+                    "regmsg:bpmConfirm": "regmsg:bpmConfirm",
+                    "dialogName": "redactionDlg",
                 },
             )
 
-        if not self.cookies.get('PacerSession') and \
-                not self.cookies.get('NextGenCSO'):
+        if not self.cookies.get("PacerSession") and not self.cookies.get(
+            "NextGenCSO"
+        ):
             raise PacerLoginException(
-                'Did not get PacerSession and NextGenCSO '
-                'cookies when attempting PACER login.'
+                "Did not get PacerSession and NextGenCSO "
+                "cookies when attempting PACER login."
             )
 
         self.get(self.INDEX, auto_login=False)
-        logger.info(u'New PACER session established.')
+        logger.info(u"New PACER session established.")
 
     def _login_again(self, r):
         """Log into PACER if the session has credentials and the session has
@@ -389,12 +399,15 @@ class PacerSession(requests.Session):
             return False
 
         if self.username and self.password:
-            logger.info(u"Invalid/expired PACER session. Establishing new "
-                        u"session.")
+            logger.info(
+                u"Invalid/expired PACER session. Establishing new " u"session."
+            )
             self.login()
             return True
         else:
-            msg = (u"Invalid/expired PACER session and do not have "
-                   u"credentials for re-login.")
+            msg = (
+                u"Invalid/expired PACER session and do not have "
+                u"credentials for re-login."
+            )
             logger.error(msg)
             raise PacerLoginException(msg)

@@ -12,4 +12,4 @@ class Site(vt.Site):
         return 72
 
     def get_division_id(self):
-        return '3'
+        return "3"

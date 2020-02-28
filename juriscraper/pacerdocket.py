@@ -9,12 +9,11 @@ import sys
 from juriscraper.pacer.http import PacerSession
 from juriscraper.pacer import DocketReport
 
-pacer_session = PacerSession(username='tr1234',
-                             password='Pass!234')
-report = DocketReport('psc', pacer_session)
+pacer_session = PacerSession(username="tr1234", password="Pass!234")
+report = DocketReport("psc", pacer_session)
 
 for path in sys.argv[1:]:
-    with open(path, 'r') as f:
-        report._parse_text(f.read().decode('utf-8'))
+    with open(path, "r") as f:
+        report._parse_text(f.read().decode("utf-8"))
     data = report.data
-    print json.dumps(data, indent=2, sort_keys=True, separators=(',', ': '))
+    print json.dumps(data, indent=2, sort_keys=True, separators=(",", ": "))

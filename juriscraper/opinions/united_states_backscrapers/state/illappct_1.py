@@ -8,4 +8,4 @@ class Site(ill.Site):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        self.url_base = 'http://www.illinoiscourts.gov/Opinions/AppellateCourt/{year}/1stDistrict/default.asp'
+        self.url_base = "http://www.illinoiscourts.gov/Opinions/AppellateCourt/{year}/1stDistrict/default.asp"

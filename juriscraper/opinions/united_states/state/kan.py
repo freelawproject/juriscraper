@@ -21,23 +21,28 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.court_index = 1
         self.date = date.today()
-        self.url = 'http://www.kscourts.org/Cases-and-Opinions/Date-of-Release-List/'
+        self.url = (
+            "http://www.kscourts.org/Cases-and-Opinions/Date-of-Release-List/"
+        )
 
     def _download(self, request_dict={}):
         if self.test_mode_enabled():
             # Note that this is returning a list of HTML trees.
-            html_trees = [super(Site, self)._download(request_dict=request_dict)]
+            html_trees = [
+                super(Site, self)._download(request_dict=request_dict)
+            ]
         else:
             html_l = OpinionSite._download(self)
             html_trees = []
             path = "//td[@width='50%'][{court_index}]/h3[contains(., '{year}')]/following::ul[1]//a/@href".format(
-                court_index=self.court_index,
-                year=self.date.year,
+                court_index=self.court_index, year=self.date.year,
             )
 
             # The latest 7 urls on the page.
             for url in html_l.xpath(path)[0:7]:
-                logger.info("Downloading Kansas page at: {url}".format(url=url))
+                logger.info(
+                    "Downloading Kansas page at: {url}".format(url=url)
+                )
                 html_tree = self._get_html_tree_by_url(url, request_dict)
                 html_trees.append(html_tree)
         return html_trees
@@ -50,7 +55,7 @@ class Site(OpinionSite):
             except IndexError:
                 # When there were no opinions that week.
                 continue
-            etree.strip_tags(parent_elem, 'em')
+            etree.strip_tags(parent_elem, "em")
             case_names.extend(self._return_case_names(parent_elem))
         return case_names
 
@@ -78,14 +83,18 @@ class Site(OpinionSite):
 
     @staticmethod
     def _return_dates(html_tree):
-        path = "//*[starts-with(., 'Kansas')][contains(., 'Released')]/text()[2]"
+        path = (
+            "//*[starts-with(., 'Kansas')][contains(., 'Released')]/text()[2]"
+        )
         text = html_tree.xpath(path)[0]
-        text = re.sub('Opinions Released', '', text)
+        text = re.sub("Opinions Released", "", text)
         case_date = convert_date_string(text.strip())
-        return [case_date] * int(html_tree.xpath("count(//a[contains(./@href, '.pdf')])"))
+        return [case_date] * int(
+            html_tree.xpath("count(//a[contains(./@href, '.pdf')])")
+        )
 
     def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_dates)
+        return ["Published"] * len(self.case_dates)
 
     def _get_docket_numbers(self):
         docket_numbers = []

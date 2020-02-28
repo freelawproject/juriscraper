@@ -17,19 +17,21 @@ class OralArgumentSiteLinear(OralArgumentSite):
         self.status = None
 
     def _process_html(self):
-        raise Exception('Must implement _process_html() on OralArgumentSiteLinear child')
+        raise Exception(
+            "Must implement _process_html() on OralArgumentSiteLinear child"
+        )
 
     def _get_case_names(self):
-        return [case['name'] for case in self.cases]
+        return [case["name"] for case in self.cases]
 
     def _get_download_urls(self):
-        return [case['url'] for case in self.cases]
+        return [case["url"] for case in self.cases]
 
     def _get_case_dates(self):
-        return [convert_date_string(case['date']) for case in self.cases]
+        return [convert_date_string(case["date"]) for case in self.cases]
 
     def _get_docket_numbers(self):
-        return [case['docket'] for case in self.cases]
+        return [case["docket"] for case in self.cases]
 
     # optional getters below
 
@@ -38,4 +40,4 @@ class OralArgumentSiteLinear(OralArgumentSite):
             return [case[id] for case in self.cases]
 
     def _get_judges(self):
-        return self._get_optional_field_by_id('judge')
+        return self._get_optional_field_by_id("judge")

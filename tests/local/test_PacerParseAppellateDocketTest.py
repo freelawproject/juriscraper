@@ -16,11 +16,15 @@ class PacerParseAppellateDocketTest(PacerParseTestCase):
         self.maxDiff = 200000
 
     def test_parsing_appellate_dockets(self):
-        path_root = os.path.join(TESTS_ROOT_EXAMPLES_PACER, 'dockets', 'appellate')
-        self.parse_files(path_root, '*.html', AppellateDocketReport)
+        path_root = os.path.join(
+            TESTS_ROOT_EXAMPLES_PACER, "dockets", "appellate"
+        )
+        self.parse_files(path_root, "*.html", AppellateDocketReport)
         # PacerParseTestCase().parse_files(path_root, '*.html', AppellateDocketReport)
 
     def test_not_docket_dockets(self):
-        path_root = os.path.join(TESTS_ROOT_EXAMPLES_PACER, 'dockets', 'not_appellate_dockets')
-        self.parse_files(path_root, '*.html', AppellateDocketReport)
+        path_root = os.path.join(
+            TESTS_ROOT_EXAMPLES_PACER, "dockets", "not_appellate_dockets"
+        )
+        self.parse_files(path_root, "*.html", AppellateDocketReport)
         # PacerParseTestCase().parse_files(path_root, '*.html', AppellateDocketReport)

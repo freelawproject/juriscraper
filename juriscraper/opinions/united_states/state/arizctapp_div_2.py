@@ -18,7 +18,7 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         # Feeling down and tired of of your regular life? Check out this website.
-        self.url = 'https://www.appeals2.az.gov/ODSPlus/recentDecisions2.cfm'
+        self.url = "https://www.appeals2.az.gov/ODSPlus/recentDecisions2.cfm"
         self.base_path = "//*[@class='contentcontainer']//a[not(contains(., '(2)')) and not(contains(., 'page'))]"
 
     def _get_case_names(self):
@@ -35,12 +35,12 @@ class Site(OpinionSite):
 
     @staticmethod
     def _return_case_date(e):
-        e = re.sub(r'Opinion Filed:', '', clean_if_py3(e))
-        case_date = datetime.strptime(e.strip(), '%m/%d/%Y').date()
+        e = re.sub(r"Opinion Filed:", "", clean_if_py3(e))
+        case_date = datetime.strptime(e.strip(), "%m/%d/%Y").date()
         return case_date
 
     def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_names)
+        return ["Published"] * len(self.case_names)
 
     def _get_docket_numbers(self):
         path = "{base}/text()".format(base=self.base_path)
@@ -52,5 +52,5 @@ class Site(OpinionSite):
 
     @staticmethod
     def _return_summary(e):
-        text = ' '.join(e.xpath(".//text()"))
+        text = " ".join(e.xpath(".//text()"))
         return text.strip()

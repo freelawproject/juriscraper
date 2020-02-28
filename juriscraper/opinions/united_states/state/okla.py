@@ -20,8 +20,11 @@ class Site(OpinionSite):
         self.elements = []
         self.base_path = False
         self.year = date.today().year
-        self.regex = r'([^,]+), (\d{2}.\d{2}.\d{4}), (.*)'
-        self.url = 'http://www.oscn.net/applications/oscn/Index.asp?ftdb=STOKCSSC&year=%d&level=1' % self.year
+        self.regex = r"([^,]+), (\d{2}.\d{2}.\d{4}), (.*)"
+        self.url = (
+            "http://www.oscn.net/applications/oscn/Index.asp?ftdb=STOKCSSC&year=%d&level=1"
+            % self.year
+        )
 
     def set_base_path(self):
         # All test files should be edited to use year value of 2018
@@ -45,7 +48,7 @@ class Site(OpinionSite):
         return [self._return_substring(e, 3) for e in self.elements]
 
     def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_names)
+        return ["Published"] * len(self.case_names)
 
     def _get_neutral_citations(self):
         return [self._return_substring(e, 1) for e in self.elements]

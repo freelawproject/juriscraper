@@ -14,4 +14,4 @@ class Site(ind.Site):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://www.in.gov/judiciary/opinions/taxcourt.html'
+        self.url = "http://www.in.gov/judiciary/opinions/taxcourt.html"

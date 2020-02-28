@@ -16,5 +16,7 @@ class PacerParseDocketHistoryReportTest(PacerParseTestCase):
         self.maxDiff = 200000
 
     def test_parsing_history_documents(self):
-        path_root = os.path.join(TESTS_ROOT_EXAMPLES_PACER, 'docket_history_reports')
-        self.parse_files(path_root, '*.html', DocketHistoryReport)
+        path_root = os.path.join(
+            TESTS_ROOT_EXAMPLES_PACER, "docket_history_reports"
+        )
+        self.parse_files(path_root, "*.html", DocketHistoryReport)

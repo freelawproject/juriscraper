@@ -16,5 +16,5 @@ class PacerParseCaseQueryTest(PacerParseTestCase):
         self.maxDiff = 200000
 
     def test_parsing_case_query_results(self):
-        path_root = os.path.join(TESTS_ROOT_EXAMPLES_PACER, 'case_queries')
-        self.parse_files(path_root, '*.html', CaseQuery)
+        path_root = os.path.join(TESTS_ROOT_EXAMPLES_PACER, "case_queries")
+        self.parse_files(path_root, "*.html", CaseQuery)

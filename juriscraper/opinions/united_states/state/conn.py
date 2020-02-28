@@ -25,8 +25,9 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.crawl_date = date.today()
-        self.url = 'http://www.jud.ct.gov/external/supapp/archiveAROsup{year}.htm'.format(
-            year=self.crawl_date.strftime("%y"))
+        self.url = "http://www.jud.ct.gov/external/supapp/archiveAROsup{year}.htm".format(
+            year=self.crawl_date.strftime("%y")
+        )
         self.court_id = self.__module__
         self.cases = []
 
@@ -39,45 +40,53 @@ class Site(OpinionSite):
         """Build list of data dictionaries, one dictionary per case (table row)."""
         # Strip inconsistently placed <font> and <br>
         # tags that make stable coverage almost impossible
-        etree.strip_tags(html, 'font', 'br')
+        etree.strip_tags(html, "font", "br")
         path = '//table[@id="AutoNumber1"]//ul'
         for ul in html.xpath(path):
-            preceding = ul.xpath('./preceding::*[1]')[0]
-            preceding_text = ' '.join(preceding.text_content().split()).strip(':')
+            preceding = ul.xpath("./preceding::*[1]")[0]
+            preceding_text = " ".join(preceding.text_content().split()).strip(
+                ":"
+            )
             # Skip sections that are marked to be published at future date
-            if preceding_text and not preceding_text.lower().endswith(' date'):
+            if preceding_text and not preceding_text.lower().endswith(" date"):
                 # Below will fail if they change up string format
                 date_string = preceding_text.split()[-1]
                 case_date = convert_date_string(date_string)
-                for element in ul.xpath('./li | ./a'):
-                    if element.tag == 'li':
-                        text = normalize_dashes(' '.join(element.text_content().split()))
+                for element in ul.xpath("./li | ./a"):
+                    if element.tag == "li":
+                        text = normalize_dashes(
+                            " ".join(element.text_content().split())
+                        )
                         if not text:
                             continue
-                        anchor = element.xpath('.//a')[0]
-                    elif element.tag == 'a':
+                        anchor = element.xpath(".//a")[0]
+                    elif element.tag == "a":
                         # Malformed html, see connappct_example.html
                         anchor = element
-                        glued = '%s %s' % (anchor.text_content(), anchor.tail)
-                        text = normalize_dashes(' '.join(glued.split()))
-                    self.cases.append({
-                        'date': case_date,
-                        'url': anchor.xpath('./@href')[0],
-                        'docket': text.split('-')[0].replace('Concurrence', '').replace('Dissent', ''),
-                        'name': text.split('-', 1)[1],
-                    })
+                        glued = "%s %s" % (anchor.text_content(), anchor.tail)
+                        text = normalize_dashes(" ".join(glued.split()))
+                    self.cases.append(
+                        {
+                            "date": case_date,
+                            "url": anchor.xpath("./@href")[0],
+                            "docket": text.split("-")[0]
+                            .replace("Concurrence", "")
+                            .replace("Dissent", ""),
+                            "name": text.split("-", 1)[1],
+                        }
+                    )
 
     def _get_case_names(self):
-        return [case['name'] for case in self.cases]
+        return [case["name"] for case in self.cases]
 
     def _get_download_urls(self):
-        return [case['url'] for case in self.cases]
+        return [case["url"] for case in self.cases]
 
     def _get_case_dates(self):
-        return [case['date'] for case in self.cases]
+        return [case["date"] for case in self.cases]
 
     def _get_docket_numbers(self):
-        return [case['docket'] for case in self.cases]
+        return [case["docket"] for case in self.cases]
 
     def _get_precedential_statuses(self):
-        return ['Published'] * len(self.cases)
+        return ["Published"] * len(self.cases)

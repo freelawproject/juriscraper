@@ -27,12 +27,13 @@ class Site(OpinionSite):
 
     We are doing the best we can with a bad site.
     """
+
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.year = datetime.date.today().year
-        self.domain = 'http://www.marylandattorneygeneral.gov'
-        self.url = '%s/Pages/Opinions/index.aspx' % self.domain
+        self.domain = "http://www.marylandattorneygeneral.gov"
+        self.url = "%s/Pages/Opinions/index.aspx" % self.domain
         self.back_scrape_iterable = range(1993, self.year + 1)
         self.parent_path_base = '//tbody/tr/td[contains(./text(), "%d")]'
         self.parent_path = self.parent_path_base % self.year
@@ -61,7 +62,9 @@ class Site(OpinionSite):
 
         # Find and activate the opinion drop-down for year
         try:
-            date_anchor = driver.find_element_by_xpath('%s/a' % self.parent_path)
+            date_anchor = driver.find_element_by_xpath(
+                "%s/a" % self.parent_path
+            )
         except NoSuchElementException:
             # Year has no opinions drop-down on page
             return []
@@ -88,7 +91,9 @@ class Site(OpinionSite):
         # seem to work consistently with the site's
         # finicky responses.
         sleep(3)
-        source = driver.execute_script("return document.getElementsByTagName('html')[0].innerHTML")
+        source = driver.execute_script(
+            "return document.getElementsByTagName('html')[0].innerHTML"
+        )
         tree = html.fromstring(source)
         tree.make_links_absolute(self.domain)
         return tree
@@ -97,12 +102,14 @@ class Site(OpinionSite):
         names = []
         path = self.cell_path % 3
         for tree in self.html:
-            names.extend([cell.text_content().strip() for cell in tree.xpath(path)])
+            names.extend(
+                [cell.text_content().strip() for cell in tree.xpath(path)]
+            )
         return names
 
     def _get_download_urls(self):
         urls = []
-        path = (self.cell_path % 4) + '/a/@href'
+        path = (self.cell_path % 4) + "/a/@href"
         for tree in self.html:
             urls.extend([href for href in tree.xpath(path)])
         return urls
@@ -110,7 +117,7 @@ class Site(OpinionSite):
     def _get_case_dates(self):
         today = datetime.date.today()
         count = len(self._get_case_names())
-        middle_of_year = convert_date_string('July 2, %d' % self.year)
+        middle_of_year = convert_date_string("July 2, %d" % self.year)
         if self.year == today.year:
             # Not a backscraper, assume cases were filed on day scraped.
             return [today] * count
@@ -123,7 +130,7 @@ class Site(OpinionSite):
         path = self.cell_path % 1
         for tree in self.html:
             for cell in tree.xpath(path):
-                dockets.append(cell.text_content().replace('Unpublished', ''))
+                dockets.append(cell.text_content().replace("Unpublished", ""))
         return dockets
 
     def _get_precedential_statuses(self):
@@ -131,14 +138,14 @@ class Site(OpinionSite):
         path = self.cell_path % 1
         for tree in self.html:
             for cell in tree.xpath(path):
-                if 'Unpublished' in cell.text_content():
-                    statuses.append('Unpublished')
+                if "Unpublished" in cell.text_content():
+                    statuses.append("Unpublished")
                 else:
-                    statuses.append('Published')
+                    statuses.append("Published")
         return statuses
 
     def _get_date_filed_is_approximate(self):
-        return ['True'] * len(self.case_names)
+        return ["True"] * len(self.case_names)
 
     def _download_backwards(self, year):
         """Iterate over drop down for each year on the page"""
