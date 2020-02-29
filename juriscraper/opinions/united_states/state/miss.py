@@ -44,15 +44,15 @@ class Site(OpinionSiteLinear):
         # For testing, each example file should be a specific sub-date page,
         # like https://courts.ms.gov/Images/HDList/SCT02-27-2020.html
         if self.test_mode_enabled():
-            self.pages["%s" % datetime.date.today()] = dates_page
+            # date below is arbitrary and doesnt matter, it just
+            # needs to be static for testing to work
+            self.pages["2020-02-28"] = dates_page
             return
-        print("\n\nTODO:REMOVEME")
         for date in self.get_dates_from_date_page(dates_page):
             url = "%s/Images/HDList/SCT%s.html" % (
                 self.domain,
                 datetime.date.strftime(date, "%m-%d-%Y"),
             )
-            print(url)
             page = self._get_html_tree_by_url(url)
             self.pages["%s" % date] = page
 

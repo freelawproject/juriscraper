@@ -13,7 +13,7 @@ from setuptools import setup, find_packages
 from setuptools.command.install import install
 
 
-VERSION = "1.26.22"
+VERSION = "1.26.23"
 AUTHOR = "Free Law Project"
 EMAIL = "info@free.law"
 HERE = os.path.abspath(os.path.dirname(__file__))
