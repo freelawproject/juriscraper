@@ -61,3 +61,6 @@ class OpinionSiteLinear(OpinionSite):
 
     def _get_neutral_citations(self):
         return self._get_optional_field_by_id("neutral_citation")
+
+    def _get_summaries(self):
+        return self._get_optional_field_by_id("summary")
