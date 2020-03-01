@@ -1,108 +1,77 @@
-#  Scraper for Kansas Supreme Court
+# Scraper for Kansas Supreme Court
 # CourtID: kan
 # Court Short Name: kan
 # Author: Andrei Chelaru
+# Updated: William Palin
 # Reviewer: mlr
 # Date created: 25 July 2014
-
-
-import re
-from lxml import etree
-from datetime import date
+# Date updated: 2/29/2020
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import convert_date_string
+from datetime import datetime, timedelta
+import requests
+from lxml.html import fromstring
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.court_index = 1
-        self.date = date.today()
+        self.base_url = "https://www.kscourts.org"
         self.url = (
-            "http://www.kscourts.org/Cases-and-Opinions/Date-of-Release-List/"
+            "https://www.kscourts.org/Cases-Opinions/Opinions.aspx"
         )
+        self.case_date = datetime.now()
+        self.backwards_days = 14
+        self.go_until_date = self.case_date - timedelta(self.backwards_days)
+        self.court = "Select Court"    # Supreme Court, Court of Appeals / BOTH
+        self.status = "Select Status"  # Published, Unpublished / BOTH
 
     def _download(self, request_dict={}):
-        if self.test_mode_enabled():
-            # Note that this is returning a list of HTML trees.
-            html_trees = [
-                super(Site, self)._download(request_dict=request_dict)
+        s = requests.session()
+        r = s.get(self.url)
+        soup = fromstring(r.text)
+        content = []
+        rows = []
+        page = 1
+        rs = "p$lt$zonePagePlaceholder$pageplaceholder$p$lt$ctl02$OpinionFilter1$filterControl$drp"
+        ev = "p$lt$zonePagePlaceholder$pageplaceholder$p$lt$ctl06$UniversalPager$pagerElem"
+        date_regex = './/td/a[@class="link-pdf"]/ancestor::tr/td[1]'
+        while page:
+            data = [
+                ('__EVENTTARGET', ev),
+                ('__EVENTARGUMENT', str(page)),
+                ('__VIEWSTATE', soup.xpath('//*[@id="__VIEWSTATE"]/@value')[0]),
+                ('%sCourt' % rs, self.court),
+                ('%sPublished' % rs, self.status)
             ]
-        else:
-            html_l = OpinionSite._download(self)
-            html_trees = []
-            path = "//td[@width='50%'][{court_index}]/h3[contains(., '{year}')]/following::ul[1]//a/@href".format(
-                court_index=self.court_index, year=self.date.year,
-            )
+            r = s.post(self.url, data=data)
+            soup = fromstring(r.text)
+            content.append(r)
+            last_date_str = soup.xpath(date_regex)[-1].text_content().strip()
+            last_date = datetime.strptime(last_date_str, "%m/%d/%Y")
+            if last_date < self.go_until_date:
+                break
+            page = page + 1
 
-            # The latest 7 urls on the page.
-            for url in html_l.xpath(path)[0:7]:
-                logger.info(
-                    "Downloading Kansas page at: {url}".format(url=url)
-                )
-                html_tree = self._get_html_tree_by_url(url, request_dict)
-                html_trees.append(html_tree)
-        return html_trees
+        for page in content:
+            soup = fromstring(page.text)
+            for row in soup.xpath('.//td/a[@class="link-pdf"]/ancestor::tr'):
+                rows.append(row)
+        return rows
 
     def _get_case_names(self):
-        case_names = []
-        for html_tree in self.html:
-            try:
-                parent_elem = html_tree.xpath("//p/font[a]")[0]
-            except IndexError:
-                # When there were no opinions that week.
-                continue
-            etree.strip_tags(parent_elem, "em")
-            case_names.extend(self._return_case_names(parent_elem))
-        return case_names
-
-    @staticmethod
-    def _return_case_names(parent_elem):
-        path = "./a[contains(./@href, '.pdf')]"
-        return [e.tail.strip() for e in parent_elem.xpath(path)]
+        return [x.xpath(".//td[3]")[0].text_content().strip() for x in self.html]
 
     def _get_download_urls(self):
-        download_urls = []
-        for html_tree in self.html:
-            download_urls.extend(self._return_download_urls(html_tree))
-        return download_urls
-
-    @staticmethod
-    def _return_download_urls(html_tree):
-        path = "//a[contains(./@href, '.pdf')]/@href"
-        return list(html_tree.xpath(path))
+        return ["%s%s" % (self.base_url, x.xpath(".//td[6]/a")[0].get("href").strip()) for x in self.html]
 
     def _get_case_dates(self):
-        case_dates = []
-        for html_tree in self.html:
-            case_dates.extend(self._return_dates(html_tree))
-        return case_dates
-
-    @staticmethod
-    def _return_dates(html_tree):
-        path = (
-            "//*[starts-with(., 'Kansas')][contains(., 'Released')]/text()[2]"
-        )
-        text = html_tree.xpath(path)[0]
-        text = re.sub("Opinions Released", "", text)
-        case_date = convert_date_string(text.strip())
-        return [case_date] * int(
-            html_tree.xpath("count(//a[contains(./@href, '.pdf')])")
-        )
+        return [convert_date_string(x.xpath(".//td[1]")[0].text_content().strip()) for x in self.html]
 
     def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_dates)
+        return [x.xpath(".//td[5]")[0].text_content().strip() for x in self.html]
 
     def _get_docket_numbers(self):
-        docket_numbers = []
-        for html_tree in self.html:
-            docket_numbers.extend(self._return_docket_numbers(html_tree))
-        return docket_numbers
-
-    @staticmethod
-    def _return_docket_numbers(html_tree):
-        path = "//a[contains(./@href, '.pdf')]/text()"
-        return list(html_tree.xpath(path))
+        return [x.xpath(".//td[2]")[0].text_content().strip() for x in self.html]
