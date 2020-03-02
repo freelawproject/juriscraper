@@ -15,6 +15,7 @@ from juriscraper.lib.html_utils import (
     clean_html,
     fix_links_in_lxml_tree,
     get_html_parsed_text,
+    get_html_from_element,
     set_response_encoding,
 )
 from juriscraper.lib.log_tools import make_default_logger
@@ -103,6 +104,10 @@ class AbstractSite(object):
 
     def enable_test_mode(self):
         self.method = "LOCAL"
+
+    def dump_html(self, element):
+        """Use this dor debuging purposes"""
+        print(get_html_from_element(element))
 
     def disable_certificate_verification(self):
         """Scrapers that require this due to website misconfiguration

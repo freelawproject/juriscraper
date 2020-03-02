@@ -35,6 +35,10 @@ def get_html_parsed_text(text):
     return html.fromstring(text)
 
 
+def get_html_from_element(element):
+    return tostring(element)
+
+
 def get_html5_parsed_text(text):
     """Return content using the html5parser, ideal for faulty html.
 
