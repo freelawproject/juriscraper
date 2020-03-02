@@ -1,43 +1,26 @@
-# Scraper for Texas Supreme Court
-# CourtID: tex
-# Court Short Name: TX
-# Court Contacts:
-#  - http://www.txcourts.gov/contact-us/
-#  - Angie Sharp <Angie.Sharp@txcourts.gov>
-#  - Eddie Murillo <Eddie.Murillo@txcourts.gov>
-#  - Judicial Info <JudInfo@txcourts.gov>
-# Author: Andrei Chelaru
-# Reviewer: mlr
-# History:
-#  - 2014-07-10: Created by Andrei Chelaru
 #  - 2014-11-07: Updated by mlr to account for new website.
 #  - 2014-12-09: Updated by mlr to make the date range wider and more thorough.
 #  - 2015-08-19: Updated by Andrei Chelaru to add backwards scraping support.
 #  - 2015-08-27: Updated by Andrei Chelaru to add explicit waits
+#  - 2020-03-01: Updated by flooie to remove selenium
 
 
-from datetime import date, datetime, timedelta
-from dateutil.rrule import WEEKLY, rrule
+import requests
+from datetime import datetime, timedelta
 from lxml import html
-from selenium.webdriver import ActionChains
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
-
-from juriscraper.AbstractSite import logger
-from juriscraper.DeferringList import DeferringList
-from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import convert_date_string, titlecase
 
 
 class Site(OpinionSiteWebDriven):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.case_date = date.today()
+        self.case_date = datetime.now()
         self.backwards_days = 7
-        self.records_nr = 0
+        self.data = {}
         self.courts = {
+            "all": -1,
             "sc": 0,
             "ccrimapp": 1,
             "capp_1": 2,
@@ -57,258 +40,103 @@ class Site(OpinionSiteWebDriven):
         }
         self.court_name = "sc"
         self.url = (
-            "http://www.search.txcourts.gov/CaseSearch.aspx?coa=cossup&d=1"
+            "http://www.search.txcourts.gov/CaseSearch.aspx"
         )
-        self.back_scrape_iterable = [
-            i.date()
-            for i in rrule(
-                WEEKLY,  # YEARLY will result in timeouts
-                dtstart=date(2015, 1, 1),
-                until=date(2015, 12, 31),
-            )
-        ]
-
-        self.uses_selenium = True
+        self.base_url = "http://www.search.txcourts.gov"
 
     def _download(self, request_dict={}):
-        self.request_dict = request_dict
-        if self.test_mode_enabled():
-            html_tree_list = [
-                super(Site, self)._download(request_dict=request_dict)
-            ]
-            self.records_nr = len(
-                html_tree_list[0].xpath(
-                    "//tr[@class='rgRow' or @class='rgAltRow']"
-                )
-            )
-            return html_tree_list
-        else:
-            logger.info("Running Selenium browser...")
-            self.initiate_webdriven_session()
-            if self.court_name == "sc":
-                # Supreme Court is checked by default, so we don't want to
-                # check it again.
-                pass
-            else:
-                search_supreme_court = self.webdriver.find_element_by_xpath(
-                    "//*[@id='ctl00_ContentPlaceHolder1_chkListCourts_{court_nr}']".format(
-                        court_nr=self.courts["sc"]
-                    )
-                )
-                if search_supreme_court.is_selected():
-                    ActionChains(self.webdriver).click(
-                        search_supreme_court
-                    ).perform()
+        orders = []
+        self.set_local_variables()
+        s = requests.session()
+        r = s.get(self.url)
+        soup = html.fromstring(r.text)
+        self.data["__VIEWSTATE"] = (
+            soup.xpath('//*[@id="__VIEWSTATE"]/@value')[0],
+        )
+        r = s.post(self.url, params=self.params, data=self.data)
 
-                search_court_type = self.webdriver.find_element_by_id(
-                    "ctl00_ContentPlaceHolder1_chkListCourts_{court_nr}".format(
-                        court_nr=self.courts[self.court_name]
-                    )
-                )
-                ActionChains(self.webdriver).click(search_court_type).perform()
+        soup = html.fromstring(r.text)
+        for link in soup.xpath('.//a[text()="Opinion"]/ancestor::tr'):
+            orders.append(link)
 
-            search_opinions = self.webdriver.find_element_by_id(
-                "ctl00_ContentPlaceHolder1_chkListDocTypes_0"
-            )
-            search_opinions.click()
+        while int(soup.xpath(self.total_regex)[0].text_content()) > 25:
+            data = {
+                "__VIEWSTATE": soup.xpath('//*[@id="__VIEWSTATE"]/@value')[0],
+                "__EVENTTARGET": soup.xpath('.//a[@class="rgCurrentPage"]')[0]
+                .getnext()
+                .get("href")
+                .split("'")[1],
+            }
 
-            search_orders = self.webdriver.find_element_by_id(
-                "ctl00_ContentPlaceHolder1_chkListDocTypes_1"
-            )
-            search_orders.click()
+            response = s.post(self.url, data=data)
+            soup = html.fromstring(response.text)
 
-            start_date = self.webdriver.find_element_by_id(
-                "ctl00_ContentPlaceHolder1_dtDocumentFrom_dateInput"
-            )
-            start_date.send_keys(
-                (
-                    self.case_date - timedelta(days=self.backwards_days)
-                ).strftime("%m/%d/%Y")
-            )
-
-            end_date = self.webdriver.find_element_by_id(
-                "ctl00_ContentPlaceHolder1_dtDocumentTo_dateInput"
-            )
-            end_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
-            # self.take_screenshot()
-
-            submit = self.webdriver.find_element_by_id(
-                "ctl00_ContentPlaceHolder1_btnSearchText"
-            )
-            submit.click()
-
-            WebDriverWait(self.webdriver, 30).until(
-                EC.presence_of_element_located(
-                    (By.ID, "ctl00_ContentPlaceHolder1_grdDocuments")
-                )
-            )
-            self.status = 200
-            # self.take_screenshot()
-
-            nr_of_pages = self.webdriver.find_element_by_xpath(
-                '//thead//*[contains(concat(" ", normalize-space(@class), " "), " rgInfoPart ")]/strong[2]'
-            )
-            records_nr = self.webdriver.find_element_by_xpath(
-                '//thead//*[contains(concat(" ", normalize-space(@class), " "), " rgInfoPart ")]/strong[1]'
-            )
-            html_pages = []
-            if records_nr:
-                self.records_nr = int(records_nr.text)
-            if nr_of_pages:
-                if nr_of_pages.text == "1":
-                    text = self.webdriver.page_source
-                    self.webdriver.quit()
-
-                    html_tree = html.fromstring(text)
-                    html_tree.make_links_absolute(self.url)
-
-                    remove_anchors = lambda url: url.split("#")[0]
-                    html_tree.rewrite_links(remove_anchors)
-                    html_pages.append(html_tree)
-                else:
-                    logger.info(
-                        "Paginating through %s pages of results."
-                        % nr_of_pages.text
-                    )
-                    logger.info("  Getting page 1")
-                    text = self.webdriver.page_source
-
-                    html_tree = html.fromstring(text)
-                    html_tree.make_links_absolute(self.url)
-
-                    remove_anchors = lambda url: url.split("#")[0]
-                    html_tree.rewrite_links(remove_anchors)
-                    html_pages.append(html_tree)
-
-                    for i in range(int(nr_of_pages.text) - 1):
-                        logger.info("  Getting page %s" % (i + 2))
-                        next_page = self.webdriver.find_element_by_class_name(
-                            "rgPageNext"
-                        )
-                        next_page.click()
-                        self.webdriver.implicitly_wait(5)
-
-                        text = self.webdriver.page_source
-
-                        html_tree = html.fromstring(text)
-                        html_tree.make_links_absolute(self.url)
-
-                        remove_anchors = lambda url: url.split("#")[0]
-                        html_tree.rewrite_links(remove_anchors)
-                        html_pages.append(html_tree)
-                    self.webdriver.quit()
-            return html_pages
+            for link in soup.xpath('.//a[text()="Opinion"]/ancestor::tr'):
+                orders.append(link)
+            if soup.xpath('.//a[@class="rgCurrentPage"]')[0].getnext() is None:
+                break
+        return orders
 
     def _get_case_names(self):
-        def fetcher(url):
-            if self.test_mode_enabled():
-                return "No case names fetched during tests."
-            else:
-                html_tree = self._get_html_tree_by_url(url, self.request_dict)
-                plaintiff = ""
-                defendant = ""
-                try:
-                    plaintiff = html_tree.xpath(
-                        "//text()[contains(., 'Style:')]/ancestor::div[@class='span2']/following-sibling::div/text()"
-                    )[0]
-                    defendant = html_tree.xpath(
-                        "//text()[contains(., 'v.:')]/ancestor::div[@class='span2']/following-sibling::div/text()"
-                    )[0]
-                except IndexError:
-                    logger.warn(
-                        "No title or defendant found for {}".format(url)
-                    )
-
-                if defendant.strip():
-                    # If there's a defendant
-                    return titlecase("%s v. %s" % (plaintiff, defendant))
-                else:
-                    return titlecase(plaintiff)
-
-        seed_urls = []
-        for html_tree in self.html:
-            page_records_count = self._get_opinion_count(html_tree)
-            for record in range(page_records_count):
-                path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[5]//@href".format(
-                    n=record
-                )
-                seed_urls.append(html_tree.xpath(path)[0])
-        if seed_urls:
-            return DeferringList(seed=seed_urls, fetcher=fetcher)
-        else:
-            return []
+        case_names = []
+        case_urls = [row.xpath(".//td[5]/a/@href")[0] for row in self.html]
+        for case_url in case_urls:
+            soup = self._get_html_tree_by_url(
+                "%s/%s" % (self.base_url, case_url)
+            )
+            case = " v. ".join([x.strip() for x in soup.xpath(self.xp)])
+            case_names.append(titlecase(case))
+        return case_names
 
     def _get_case_dates(self):
-        for html_tree in self.html:
-            page_records_count = self._get_opinion_count(html_tree)
-            for record in range(page_records_count):
-                path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[2]/text()".format(
-                    n=record
-                )
-                yield datetime.strptime(html_tree.xpath(path)[0], "%m/%d/%Y")
+        return [
+            convert_date_string(row.xpath(".//td[2]/text()")[0])
+            for row in self.html
+        ]
 
     def _get_precedential_statuses(self):
-        return ["Published"] * self.records_nr
+        return ["" for row in self.html]
 
     def _get_download_urls(self):
-        for html_tree in self.html:
-            page_records_count = self._get_opinion_count(html_tree)
-            for record in range(page_records_count):
-                path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[4]//@href".format(
-                    n=record
-                )
-                yield html_tree.xpath(path)[0]
+        return [
+            "%s/%s"
+            % (self.base_url, row.xpath('.//a[text()="Opinion"]/@href')[0])
+            for row in self.html
+        ]
 
     def _get_docket_numbers(self):
-        for html_tree in self.html:
-            page_records_count = self._get_opinion_count(html_tree)
-            for record in range(page_records_count):
-                path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[5]//text()[contains(., '-')]".format(
-                    n=record
-                )
-                yield html_tree.xpath(path)[0]
+        return [row.xpath(".//td[5]/a/text()")[0] for row in self.html]
 
-    @staticmethod
-    def _get_opinion_count(html_tree):
-        return int(
-            html_tree.xpath(
-                "count(id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00')"
-                "//tr[contains(., 'Opinion') or contains(., 'Order')])"
-            )
+    def set_local_variables(self):
+        back_date = self.case_date - timedelta(self.backwards_days)
+        future_date_ymd = self.case_date.strftime("%Y-%m-%d-%H-%M-%S")
+        past_date_ymd = back_date.strftime("%Y-%m-%d-%H-%M-%S")
+        future_date_mdy = self.case_date.strftime("%m/%d/%Y")
+        past_date_mdy = back_date.strftime("%m/%d/%Y")
+
+        self.data = {
+            # 'ctl00$ContentPlaceHolder1$chkAllCourts': 'on',
+            "ctl00$ContentPlaceHolder1$chkListCourts$%s"
+            % self.courts[self.court_name]: "on",
+            "ctl00$ContentPlaceHolder1$dtDocumentFrom$dateInput": past_date_mdy,
+            "ctl00_ContentPlaceHolder1_dtDocumentFrom_dateInput_ClientState": '{"valueAsString":"%s","lastSetTextBoxValue":"%s"}'
+            % (past_date_ymd, past_date_mdy),
+            "ctl00$ContentPlaceHolder1$dtDocumentTo$dateInput": future_date_mdy,
+            "ctl00_ContentPlaceHolder1_dtDocumentTo_dateInput_ClientState": '{"valueAsString":"%s","lastSetTextBoxValue":"%s"}'
+            % (future_date_ymd, future_date_mdy),
+            "ctl00$ContentPlaceHolder1$chkListDocTypes$0": "on",
+            "ctl00$ContentPlaceHolder1$btnSearchText": "Search",
+        }
+        self.total_regex = (
+            '//*[@id="ctl00_ContentPlaceHolder1_grdDocuments_ctl00"]'
+            "/thead/tr[1]/td/table/tbody/tr/td/div[5]/strong[1]"
+        )
+        self.xp = (
+            "//text()[contains(., 'Style:') or contains(., 'v.:')]"
+            "//ancestor::div[@class='span2']/following-sibling::div/text()"
         )
 
-    def _download_backwards(self, d):
-        self.backwards_days = 7
-        self.case_date = d
-        logger.info(
-            "Running backscraper with date range: %s to %s"
-            % (
-                self.case_date - timedelta(days=self.backwards_days),
-                self.case_date,
-            )
+        self.params = (
+            ('coa', 'cossup'),
+            ('d', '1'),
         )
-        self.html = self._download()
-        if self.html is not None:
-            # Setting status is important because it prevents the download
-            # function from being run a second time by the parse method.
-            self.status = 200
-
-    def _post_parse(self):
-        """This will remove the cases without a case name"""
-        to_be_removed = [
-            index
-            for index, case_name in enumerate(self.case_names)
-            if not case_name
-        ]
-
-        for attr in self._all_attrs:
-            item = getattr(self, attr)
-            if item is not None:
-                new_item = self.remove_elements(item, to_be_removed)
-                self.__setattr__(attr, new_item)
-
-    @staticmethod
-    def remove_elements(list_, indexes_to_be_removed):
-        return [
-            i for j, i in enumerate(list_) if j not in indexes_to_be_removed
-        ]
