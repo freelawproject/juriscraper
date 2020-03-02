@@ -6,18 +6,19 @@
 # Neutral Citation Format (Summary opinions: T.C. Summary Opinion 2012-1
 
 import re
+import requests
 from datetime import date, datetime, timedelta
 from dateutil.rrule import WEEKLY, rrule
 
+from lxml import html
+
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
-from juriscraper.lib.html_utils import fix_links_but_keep_anchors
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSiteWebDriven):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
-        self.uses_selenium = True
         self.url = "https://www.ustaxcourt.gov/UstcInOp/OpinionSearch.aspx"
         self.base_path = (
             '//tr[@class="ResultsOddRow" or ' '@class="ResultsEvenRow"]'
@@ -27,50 +28,28 @@ class Site(OpinionSiteWebDriven):
         self.back_scrape_iterable = [
             i.date()
             for i in rrule(
-                WEEKLY, dtstart=date(1995, 9, 25), until=date(2018, 11, 13),
+                WEEKLY, dtstart=date(1995, 9, 25), until=self.case_date,
             )
         ]
 
         self.court_id = self.__module__
 
     def _download(self, request_dict={}):
-        """Uses Selenium because doing it with requests is a pain."""
-        if self.test_mode_enabled():
-            return super(Site, self)._download(request_dict=request_dict)
+        """
 
-        logger.info("Now downloading case page at: %s" % self.url)
-        self.initiate_webdriven_session()
+        :param request_dict:
+        :return:
+        """
+        s = requests.session()
+        r = s.get(self.url)
 
-        # Set the start and end dates
-        start_date_id = "ctl00_Content_dpDateSearch_dateInput"
-        start_date_input = self.webdriver.find_element_by_id(start_date_id)
-        start_date_input.send_keys(
-            (self.case_date - timedelta(days=self.backwards_days)).strftime(
-                "%-m/%-d/%Y"
-            )
-        )
+        self.set_local_variables(r)
 
-        end_date_id = "ctl00_Content_dpDateSearchTo_dateInput"
-        end_date_input = self.webdriver.find_element_by_id(end_date_id)
-        end_date_input.send_keys(self.case_date.strftime("%-m/%-d/%Y"))
-        # self.take_screenshot()
+        r = requests.post(self.url,
+                          headers=self.headers,
+                          data=self.data)
 
-        # Check ordering by case date (this orders by case date, *ascending*)
-        ordering_id = "Content_rdoCaseName_1"
-        self.webdriver.find_element_by_id(ordering_id).click()
-
-        # Submit
-        self.webdriver.find_element_by_id("Content_btnSearch").click()
-
-        # Do not proceed until the results show up.
-        self.wait_for_id("Content_ddlResultsPerPage")
-        # self.take_screenshot()
-
-        text = self._clean_text(self.webdriver.page_source)
-        self.webdriver.quit()
-        html_tree = self._make_html_tree(text)
-        html_tree.rewrite_links(fix_links_but_keep_anchors, base_href=self.url)
-        return html_tree
+        return html.fromstring(r.text)
 
     def _get_download_urls(self):
         # URLs here take two forms. For precedential cases, they're simple, and
@@ -210,3 +189,36 @@ class Site(OpinionSiteWebDriven):
                     ] = "Unpublished"
 
         return metadata
+
+    def set_local_variables(self, r):
+        """"""
+
+        backdate = self.case_date - timedelta(self.backwards_days)
+
+        f1_today = self.case_date.strftime("%m/%d/%Y")
+        f2_today = self.case_date.strftime("%Y-%m-%d-%H-%M-%S")
+
+        f1_backdate = backdate.strftime("%m/%d/%Y")
+        f2_backdate = backdate.strftime("%Y-%m-%d-%H-%M-%S")
+
+        self.headers = {
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+        }
+
+        self.data = {
+            'ctl00$Content$dpDateSearch$dateInput': f1_backdate,
+            'ctl00_Content_dpDateSearch_dateInput_ClientState': '{"enabled":true,"emptyMessage":"","validationText":"%s","valueAsString":"%s","minDateStr":"1980-01-01-00-00-00","maxDateStr":"2099-12-31-00-00-00","lastSetTextBoxValue":"%s"}' % (
+            f2_backdate, f2_backdate, f1_backdate),
+            'ctl00$Content$dpDateSearchTo$dateInput': f1_today,
+            'ctl00_Content_dpDateSearchTo_dateInput_ClientState': '{"enabled":true,"emptyMessage":"","validationText":"%s","valueAsString":"%s","minDateStr":"1980-01-01-00-00-00","maxDateStr":"2099-12-31-00-00-00","lastSetTextBoxValue":"%s"}' % (
+            f2_today, f2_today, f1_today),
+            'ctl00$Content$ddlJudges': '0',
+            'ctl00$Content$ddlOpinionTypes': '0',
+            'ctl00$Content$rdoCaseName': 'D',
+            'ctl00$Content$ddlDocumentNumHits': 'All',
+            'ctl00$Content$btnSearch': 'Search',
+        }
+
+        soup = html.fromstring(r.text)
+        self.data['__VIEWSTATE'] = soup.xpath('//*[@id="__VIEWSTATE"]/@value')[0]
+        self.data['__EVENTVALIDATION'] = soup.xpath('//*[@id="__EVENTVALIDATION"]/@value')[0]
