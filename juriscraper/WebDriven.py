@@ -17,18 +17,12 @@ class WebDriven:
         self.cookies = {}
         self.url = False
         self.uses_selenium = True
-        self.webdriver = webdriver.PhantomJS(
-            executable_path=phantomjs_executable_path,
-            service_args=["--ignore-ssl-errors=true", "--ssl-protocol=any"],
-            # uncomment line below to see webdriver log
-            service_log_path=os.path.devnull,
-        )
-        self.webdriver.implicitly_wait(30)
-        self.webdriver.set_window_size(5000, 3000)
-        self.wait = WebDriverWait(self.webdriver, 10)
+        self.wait = False
+        self.webdriver = False
 
     def __del__(self):
-        self.webdriver.quit()
+        if self.webdriver:
+            self.webdriver.quit()
 
     def get_page(self):
         text = clean_html(self.webdriver.page_source)
@@ -39,6 +33,15 @@ class WebDriven:
     def initiate_webdriven_session(self):
         if not self.url:
             raise Exception("self.url not set")
+        self.webdriver = webdriver.PhantomJS(
+            executable_path=phantomjs_executable_path,
+            service_args=["--ignore-ssl-errors=true", "--ssl-protocol=any"],
+            # uncomment line below to see webdriver log
+            service_log_path=os.path.devnull,
+        )
+        self.webdriver.implicitly_wait(30)
+        self.webdriver.set_window_size(5000, 3000)
+        self.wait = WebDriverWait(self.webdriver, 10)
         self.webdriver.get(self.url)
         self.cookies = normalize_cookies(self.webdriver.get_cookies())
 
