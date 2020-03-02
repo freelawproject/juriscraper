@@ -50,10 +50,10 @@ First step: Install Python 2.7.x, then:
 
     # -- Install PhantomJS
     # On Ubuntu/Debian Linux
-        wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
-        tar -x -f phantomjs-1.9.7-linux-x86_64.tar.bz2
-        sudo mv phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin
-        rm -r phantomjs-1.9.7*  # Cleanup
+        wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+        tar -x -f phantomjs-2.1.1-linux-x86_64.tar.bz2
+        sudo mv phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin
+        rm -r phantomjs-2.1.1*  # Cleanup
     # On macOS with Homebrew:
         brew install phantomjs
 
