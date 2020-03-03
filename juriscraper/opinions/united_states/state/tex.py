@@ -2,10 +2,9 @@
 #  - 2014-12-09: Updated by mlr to make the date range wider and more thorough.
 #  - 2015-08-19: Updated by Andrei Chelaru to add backwards scraping support.
 #  - 2015-08-27: Updated by Andrei Chelaru to add explicit waits
-#  - 2020-03-01: Updated by flooie to remove selenium
+#  - 2020-03-01: Updated by flooie to remove selen..
 
 
-import requests
 from datetime import datetime, timedelta
 from lxml import html
 from juriscraper.OpinionSite import OpinionSite
@@ -18,7 +17,6 @@ class Site(OpinionSiteWebDriven):
         self.court_id = self.__module__
         self.case_date = datetime.now()
         self.backwards_days = 7
-        self.data = {}
         self.courts = {
             "all": -1,
             "sc": 0,
@@ -39,47 +37,49 @@ class Site(OpinionSiteWebDriven):
             "capp_14": 15,
         }
         self.court_name = "sc"
-        self.url = (
-            "http://www.search.txcourts.gov/CaseSearch.aspx"
-        )
+        self.url = "http://www.search.txcourts.gov/CaseSearch.aspx"
+
+        self.url2 = "http://www.search.txcourts.gov/CaseSearch.aspx?coa=cossup"
         self.base_url = "http://www.search.txcourts.gov"
+        self.rows = []
+        self.data = {}
+        self.soup = None
+        self.vs_regex = '//*[@id="__VIEWSTATE"]/@value'
 
     def _download(self, request_dict={}):
-        orders = []
+        self.make_soup(self.url)
         self.set_local_variables()
-        s = requests.session()
-        r = s.get(self.url)
-        soup = html.fromstring(r.text)
-        self.data["__VIEWSTATE"] = (
-            soup.xpath('//*[@id="__VIEWSTATE"]/@value')[0],
-        )
-        r = s.post(self.url, params=self.params, data=self.data)
+        self.data["__VIEWSTATE"] = self.soup.xpath(self.vs_regex)[0]
+        self.make_soup(self.url2)
 
-        soup = html.fromstring(r.text)
-        for link in soup.xpath('.//a[text()="Opinion"]/ancestor::tr'):
-            orders.append(link)
+        for row in self.soup.xpath('.//a[text()="Opinion"]/ancestor::tr'):
+            self.rows.append(row)
 
-        while int(soup.xpath(self.total_regex)[0].text_content()) > 25:
-            data = {
-                "__VIEWSTATE": soup.xpath('//*[@id="__VIEWSTATE"]/@value')[0],
-                "__EVENTTARGET": soup.xpath('.//a[@class="rgCurrentPage"]')[0]
+        while int(self.soup.xpath(self.total_regex)[0].text_content()) > 25:
+            self.data = {
+                "__VIEWSTATE": self.soup.xpath(self.vs_regex)[0],
+                "__EVENTTARGET": self.soup.xpath(
+                    './/a[@class="rgCurrentPage"]'
+                )[0]
                 .getnext()
                 .get("href")
                 .split("'")[1],
             }
 
-            response = s.post(self.url, data=data)
-            soup = html.fromstring(response.text)
+            self.make_soup(self.url2)
 
-            for link in soup.xpath('.//a[text()="Opinion"]/ancestor::tr'):
-                orders.append(link)
-            if soup.xpath('.//a[@class="rgCurrentPage"]')[0].getnext() is None:
+            for row in self.soup.xpath('.//a[text()="Opinion"]/ancestor::tr'):
+                self.rows.append(row)
+
+            if (
+                self.soup.xpath('.//a[@class="rgCurrentPage"]')[0].getnext()
+                is None
+            ):
                 break
-        return orders
 
     def _get_case_names(self):
         case_names = []
-        case_urls = [row.xpath(".//td[5]/a/@href")[0] for row in self.html]
+        case_urls = [row.xpath(".//td[5]/a/@href")[0] for row in self.rows]
         for case_url in case_urls:
             soup = self._get_html_tree_by_url(
                 "%s/%s" % (self.base_url, case_url)
@@ -91,21 +91,21 @@ class Site(OpinionSiteWebDriven):
     def _get_case_dates(self):
         return [
             convert_date_string(row.xpath(".//td[2]/text()")[0])
-            for row in self.html
+            for row in self.rows
         ]
 
     def _get_precedential_statuses(self):
-        return ["" for row in self.html]
+        return ["" for row in self.rows]
 
     def _get_download_urls(self):
         return [
             "%s/%s"
             % (self.base_url, row.xpath('.//a[text()="Opinion"]/@href')[0])
-            for row in self.html
+            for row in self.rows
         ]
 
     def _get_docket_numbers(self):
-        return [row.xpath(".//td[5]/a/text()")[0] for row in self.html]
+        return [row.xpath(".//td[5]/a/text()")[0] for row in self.rows]
 
     def set_local_variables(self):
         back_date = self.case_date - timedelta(self.backwards_days)
@@ -136,7 +136,9 @@ class Site(OpinionSiteWebDriven):
             "//ancestor::div[@class='span2']/following-sibling::div/text()"
         )
 
-        self.params = (
-            ('coa', 'cossup'),
-            ('d', '1'),
-        )
+    def make_soup(self, process_url):
+        if self.data is None or self.data == {}:
+            r = self.request["session"].get(process_url)
+        else:
+            r = self.request["session"].post(process_url, data=self.data)
+        self.soup = html.fromstring(r.text)
