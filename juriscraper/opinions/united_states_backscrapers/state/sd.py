@@ -4,18 +4,18 @@
 import re
 from datetime import datetime
 from lxml import html
-from selenium import webdriver
 from time import sleep
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 from juriscraper.lib.string_utils import titlecase
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteWebDriven):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.sdjudicial.com/sc/scopinions.aspx"
         self.uses_selenium = True
+        self.year = False
 
     def _get_download_urls(self):
         path = '//tr[contains(@id, "ctl00xmainCopyxWGOpinions_r")]//a[2]/@href'
@@ -209,14 +209,13 @@ class Site(OpinionSite):
 
     def _download_backwards(self, year):
         self.year = year
-        browser = webdriver.PhantomJS()
-        browser.get(self.url)
-        elems = browser.find_elements_by_class_name("igeb_ItemLabel")
+        self.initiate_webdriven_session()
+        elems = self.webdriver.find_elements_by_class_name("igeb_ItemLabel")
         elem = [elem for elem in elems if elem.text == str(year)][0]
         elem.click()
         sleep(5)
 
-        text = browser.page_source
+        text = self.webdriver.page_source
         html_tree = html.fromstring(text)
         html_tree.make_links_absolute(self.url)
 
@@ -225,4 +224,4 @@ class Site(OpinionSite):
 
         self.html = html_tree
         self.status = 200
-        browser.quit()
+        self.webdriver.quit()
