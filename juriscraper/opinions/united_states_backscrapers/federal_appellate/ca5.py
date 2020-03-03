@@ -36,7 +36,7 @@ class Site(OpinionSiteWebDriven):
             )
             return html_tree_list
         else:
-            logger.info("Running Selenium browser PhantomJS...")
+            logger.info("Running Selenium browser...")
             self.initiate_webdriven_session()
             self.wait_for_id("ctl00_Body_C010_ctl00_ctl00_endDate_dateInput")
 
