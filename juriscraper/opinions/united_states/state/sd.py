@@ -5,7 +5,7 @@
 # - 2014-08-05: Updated URL by mlr
 
 from lxml import html
-from datetime import datetime
+from datetime import datetime, timedelta
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string, titlecase
 
@@ -15,7 +15,8 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://ujs.sd.gov/Supreme_Court/opinions.aspx"
-        self.year = int(datetime.today().year)
+        self.backwards_days = 14
+        self.case_date = datetime.now()
         self.soup = None
         self.data = None
 
@@ -26,11 +27,18 @@ class Site(OpinionSite):
             self.set_data()
             self.make_soup(self.url)
         self.rows = self.soup.xpath(self.row_xp)
+        last_dt = self.soup.xpath(self.date_xp)[-1].text_content().strip()
+        if datetime.strptime(last_dt, "%m/%d/%Y") < self.go_until_date:
+            return
 
         while self.soup.xpath(self.next_button_xp)[0].get("href"):
             self.update_data()
             self.make_soup(self.url)
             self.rows = self.rows + self.soup.xpath(self.row_xp)
+
+            last_dt = self.soup.xpath(self.date_xp)[-1].text_content().strip()
+            if datetime.strptime(last_dt, "%m/%d/%Y") < self.go_until_date:
+                break
 
     def _get_download_urls(self):
         hrefs = [row.xpath(".//a")[0].get("href") for row in self.rows]
@@ -80,6 +88,8 @@ class Site(OpinionSite):
         self.soup = html.fromstring(r.text)
 
     def set_local_variables(self):
+        self.year = int(self.case_date.year)
+        self.go_until_date = self.case_date - timedelta(self.backwards_days)
         self.next_button_xp = (
             '//*[@id="ContentPlaceHolder1_ChildContent1_LinkButton_Next"]'
         )
@@ -91,3 +101,4 @@ class Site(OpinionSite):
         self.vs = '//*[@id="__VIEWSTATE"]/@value'
         self.ev = '//*[@id="__EVENTVALIDATION"]/@value'
         self.row_xp = '//tr[contains(.//a/@href, ".pdf")]'
+        self.date_xp = '//tr[contains(.//a/@href, ".pdf")]/td[1]'
