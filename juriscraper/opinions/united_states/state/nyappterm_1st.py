@@ -1,29 +1,19 @@
-### BROKEN: Timeout #### Scraper and Back Scraper for New York Appellate Term 1st Dept.
+# Scraper and Back Scraper for New York Appellate Term 1st Dept.
 # CourtID: nyappterm_1st
 # Court Short Name: NY
-# Author: Andrei Chelaru
-# Reviewer: mlr
-# Date: 2015-10-30
 
-import os
 import re
 from datetime import date, datetime, timedelta
-
 from dateutil.rrule import DAILY, rrule
 from lxml import html
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.wait import WebDriverWait
 
-from juriscraper.AbstractSite import logger, phantomjs_executable_path
-from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.cookie_utils import normalize_cookies
+from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 from juriscraper.lib.network_utils import add_delay
 from juriscraper.lib.string_utils import clean_if_py3
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteWebDriven):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court = "Appellate+Term,+1st+Dept"
@@ -81,7 +71,10 @@ class Site(OpinionSite):
         if self.test_mode_enabled():
             return super(Site, self)._download(request_dict)
 
-        self.set_cookies()
+        # use selenium to establish required cookies
+        logger.info("Running Selenium browser to get the cookies...")
+        add_delay(20, 5)
+        self.initiate_webdriven_session()
         logger.info("Using cookies: %s" % self.cookies)
         request_dict.update({"cookies": self.cookies})
 
@@ -185,26 +178,6 @@ class Site(OpinionSite):
             # Setting status is important because it prevents the download
             # function from being run a second time by the parse method.
             self.status = 200
-
-    def set_cookies(self):
-        """Hit the main URL, and get the cookies so we can use them elsewhere.
-
-        This gets around some of their throttling mechanisms.
-        """
-        logger.info("Running Selenium browser PhantomJS to get the cookies...")
-        add_delay(20, 5)
-        driver = webdriver.PhantomJS(
-            executable_path=phantomjs_executable_path,
-            service_log_path=os.path.devnull,  # Disable ghostdriver.log
-        )
-
-        driver.set_window_size(1920, 1080)
-        driver.get(self.url)
-        WebDriverWait(driver, 30).until(
-            EC.presence_of_element_located((By.NAME, "dtEndDate"))
-        )
-        self.cookies = normalize_cookies(driver.get_cookies())
-        driver.close()
 
     @staticmethod
     def cleanup_content(content):

@@ -1,9 +1,6 @@
 # Scraper and Back Scraper for New York Commercial Division
 # CourtID: nysupct
 # Court Short Name: NY
-# Author: Andrei Chelaru
-# Reviewer:
-# Date: 2015-10-30
 
 from juriscraper.opinions.united_states.state import nyappterm_1st
 
