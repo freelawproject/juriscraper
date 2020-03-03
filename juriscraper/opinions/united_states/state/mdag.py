@@ -4,19 +4,15 @@ Court Short Name: Maryland Attorney General
 """
 
 import datetime
-import os
 from time import sleep
-
 from lxml import html
-from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 
-from juriscraper.AbstractSite import logger, phantomjs_executable_path
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 from juriscraper.lib.string_utils import convert_date_string
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteWebDriven):
     """This scraper is strange. The site it temperamental, and the javascript
     seems to load successfully on some runs, but not on others. The dates are
     also estimated, and the names are actually semi-long summaries. Furthermore,
@@ -39,7 +35,6 @@ class Site(OpinionSite):
         self.parent_path = self.parent_path_base % self.year
         self.cell_path = '//tbody[@isloaded="true"]/tr/td[%d]'
         self.next_path = '//a[@title="Next"]'
-        self.driver = False
 
     def _download(self, request_dict={}):
         if self.test_mode_enabled():
@@ -53,36 +48,34 @@ class Site(OpinionSite):
         return trees
 
     def get_dynamic_html_trees(self):
-        # Initialize driver
-        driver = webdriver.PhantomJS(
-            executable_path=phantomjs_executable_path,
-            service_log_path=os.path.devnull,  # Disable ghostdriver.log
-        )
-        driver.get(self.url)
+        # Initialize webdriver
+        self.initiate_webdriven_session()
 
         # Find and activate the opinion drop-down for year
         try:
-            date_anchor = driver.find_element_by_xpath(
+            date_anchor = self.webdriver.find_element_by_xpath(
                 "%s/a" % self.parent_path
             )
         except NoSuchElementException:
             # Year has no opinions drop-down on page
             return []
         date_anchor.click()
-        trees = [self.get_tree_from_driver_dom(driver)]
+        trees = [self.get_tree_from_driver_dom()]
 
         # Handle pagination if more than 30 results for year
         while True:
             try:
-                next_anchor = driver.find_element_by_xpath(self.next_path)
+                next_anchor = self.webdriver.find_element_by_xpath(
+                    self.next_path
+                )
             except NoSuchElementException:
                 # Less than 30 results
                 break
             next_anchor.click()
-            trees.append(self.get_tree_from_driver_dom(driver))
+            trees.append(self.get_tree_from_driver_dom())
         return trees
 
-    def get_tree_from_driver_dom(self, driver):
+    def get_tree_from_driver_dom(self):
         # Wait for js to load and dom html to update
         # Seems stupid, but necessary, and easier
         # thank loading lots of selenium dependencies
@@ -91,7 +84,7 @@ class Site(OpinionSite):
         # seem to work consistently with the site's
         # finicky responses.
         sleep(3)
-        source = driver.execute_script(
+        source = self.webdriver.execute_script(
             "return document.getElementsByTagName('html')[0].innerHTML"
         )
         tree = html.fromstring(source)
