@@ -4,19 +4,16 @@
 # - 2013-08-06: Revised by Brian Carver
 # - 2014-08-05: Updated URL by mlr
 
-import os
 import re
-
 from lxml import html
-from selenium import webdriver
 
-from juriscraper.AbstractSite import logger, phantomjs_executable_path
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 from juriscraper.lib.string_utils import convert_date_string, titlecase
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteWebDriven):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -78,30 +75,25 @@ class Site(OpinionSite):
         return neutral_cites
 
     def _download_backwards(self, page_year):
-        logger.info("Running PhantomJS with params: %s" % (page_year,))
-        driver = webdriver.PhantomJS(
-            executable_path=phantomjs_executable_path,
-            service_log_path=os.path.devnull,  # Disable ghostdriver.log
-        )
-        driver.implicitly_wait(30)
-        driver.get(self.url)
+        logger.info("Running with params: %s" % (page_year,))
+        self.initiate_webdriven_session()
 
         # Select the year (this won't trigger a GET unless it's changed)
         path = "//*[@id='ContentPlaceHolder1_PageContent_OpinionYears']/option[@value={year}]".format(
             year=page_year[1]
         )
-        option = driver.find_element_by_xpath(path)
+        option = self.webdriver.find_element_by_xpath(path)
         option.click()
 
         if page_year[0] != 0:
             # Not the first, page, go to the one desired.
-            links = driver.find_elements_by_xpath(
+            links = self.webdriver.find_elements_by_xpath(
                 "//a[@href[contains(., 'Page')]]"
             )
             links[page_year[0] - 1].click()
 
-        text = self._clean_text(driver.page_source)
-        driver.quit()
+        text = self._clean_text(self.webdriver.page_source)
+        self.webdriver.quit()
         html_tree = html.fromstring(text)
 
         html_tree.rewrite_links(
