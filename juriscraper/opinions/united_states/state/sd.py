@@ -14,88 +14,80 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "http://ujs.sd.gov/Supreme_Court/opinions.aspx"
+        self.url = "https://ujs.sd.gov/Supreme_Court/opinions.aspx"
         self.year = int(datetime.today().year)
-        self.y = "%0*d" % (2, int(datetime.today().year) - self.year)
-        self.rows = []
         self.soup = None
-
-        self.next_button_regex = (
-            '//*[@id="ContentPlaceHolder1_ChildContent1_LinkButton_Next"]'
-        )
+        self.data = None
 
     def _download(self, request_dict={}):
-        self.first_data()
+        self.set_local_variables()
         self.make_soup(self.url)
+        if int(datetime.today().year) != self.year:
+            self.set_data()
+            self.make_soup(self.url)
+        self.rows = self.soup.xpath(self.row_xp)
 
-        self.update_event_and_view()
-        self.make_soup(self.url)
-
-        for link in self.soup.xpath('//tr[contains(.//a/@href, ".pdf")]'):
-            row = [
-                x.text_content().strip() for x in link.xpath(".//td")
-            ] + link.xpath(".//a/@href")
-            self.rows.append(row)
-
-        while self.soup.xpath(self.next_button_regex)[0].get("href"):
-            self.second_data()
-            self.update_event_and_view()
-
-            response = self.request["session"].post(self.url, data=self.data)
-            self.soup = html.fromstring(response.text)
-
-            for link in self.soup.xpath('//tr[contains(.//a/@href, ".pdf")]'):
-                more_orders = [
-                    x.text_content().strip() for x in link.xpath(".//td")
-                ] + link.xpath(".//a/@href")
-                self.rows.append(more_orders)
+        while self.soup.xpath(self.next_button_xp)[0].get("href"):
+            self.update_data()
+            self.make_soup(self.url)
+            self.rows = self.rows + self.soup.xpath(self.row_xp)
 
     def _get_download_urls(self):
-        return ["https://ujs.sd.gov%s" % x[3] for x in self.rows]
+        hrefs = [row.xpath(".//a")[0].get("href") for row in self.rows]
+        return ["https://ujs.sd.gov%s" % href for href in hrefs]
 
     def _get_case_names(self):
-        return [
-            titlecase(x[1].split(", %s" % self.year)[0]) for x in self.rows
-        ]
+        titles = [row.xpath(".//a/text()")[0] for row in self.rows]
+        return [titlecase(title.split(",")[0]) for title in titles]
 
     def _get_case_dates(self):
-        return [convert_date_string(x[0]) for x in self.rows]
+        dates = [row.xpath(".//td/text()")[0].strip() for row in self.rows]
+        return [convert_date_string(date) for date in dates]
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
 
     def _get_neutral_citations(self):
-        return [x[1].split(", %s" % self.year)[1].strip() for x in self.rows]
+        cites = [row.xpath(".//td/text()")[1].strip() for row in self.rows]
+        return ["%s S.D. %s" % (self.year, cite) for cite in cites]
 
-    def first_data(self):
+    def set_data(self):
+        year_variable = "%0*d" % (2, int(datetime.today().year) - self.year)
+        self.yearKey = self.yearKey % year_variable
         self.data = {
-            "ctl00$ctl00$ScriptManager1": "ctl00$ctl00$ContentPlaceHolder1$ChildContent1$UpdatePanel_Opinions|ctl00$ctl00$ContentPlaceHolder1$ChildContent1$Repeater_OpinionsYear$ctl%s$LinkButton1"
-            % self.y,
-            "__EVENTTARGET": "ctl00$ctl00$ContentPlaceHolder1$ChildContent1$Repeater_OpinionsYear$ctl%s$LinkButton1"
-            % self.y,
+            "ctl00$ctl00$ScriptManager1": "%s|%s" % (self.upKey, self.yearKey),
+            "__EVENTTARGET": self.yearKey,
             "__EVENTARGUMENT": "",
             "__VIEWSTATEENCRYPTED": "",
+            "__VIEWSTATE": self.soup.xpath(self.vs)[0],
+            "__EVENTVALIDATION": self.soup.xpath(self.ev)[0],
         }
 
-    def update_event_and_view(self):
-        self.data["__VIEWSTATE"] = (
-            self.soup.xpath('//*[@id="__VIEWSTATE"]/@value')[0],
+    def update_data(self):
+        self.data["ctl00$ctl00$ScriptManager1"] = "%s|%s" % (
+            self.upKey,
+            self.nxtKey,
         )
-        self.data["__EVENTVALIDATION"] = self.soup.xpath(
-            '//*[@id="__EVENTVALIDATION"]/@value'
-        )[0]
-
-    def second_data(self):
-        self.data[
-            "ctl00$ctl00$ScriptManager1"
-        ] = "ctl00$ctl00$ContentPlaceHolder1$ChildContent1$UpdatePanel_Opinions|ctl00$ctl00$ContentPlaceHolder1$ChildContent1$LinkButton_Next"
-        self.data[
-            "__EVENTTARGET"
-        ] = "ctl00$ctl00$ContentPlaceHolder1$ChildContent1$LinkButton_Next"
+        self.data["__EVENTTARGET"] = "%s" % self.nxtKey
+        self.data["__VIEWSTATE"] = self.soup.xpath(self.vs)[0]
+        self.data["__EVENTVALIDATION"] = self.soup.xpath(self.ev)[0]
 
     def make_soup(self, process_url):
-        if self.data is not None:
+        if self.data is None:
             r = self.request["session"].get(process_url)
         else:
             r = self.request["session"].post(process_url, data=self.data)
         self.soup = html.fromstring(r.text)
+
+    def set_local_variables(self):
+        self.next_button_xp = (
+            '//*[@id="ContentPlaceHolder1_ChildContent1_LinkButton_Next"]'
+        )
+        self.upKey = "ctl00$ctl00$ContentPlaceHolder1$ChildContent1$UpdatePanel_Opinions"
+        self.nxtKey = (
+            "ctl00$ctl00$ContentPlaceHolder1$ChildContent1$LinkButton_Next"
+        )
+        self.yearKey = "ctl00$ctl00$ContentPlaceHolder1$ChildContent1$Repeater_OpinionsYear$ctl%s$LinkButton1"
+        self.vs = '//*[@id="__VIEWSTATE"]/@value'
+        self.ev = '//*[@id="__EVENTVALIDATION"]/@value'
+        self.row_xp = '//tr[contains(.//a/@href, ".pdf")]'
