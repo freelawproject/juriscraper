@@ -5,22 +5,16 @@
 # Neutral Citation Format (Memorandum opinions): T.C. Memo 2012-1
 # Neutral Citation Format (Summary opinions: T.C. Summary Opinion 2012-1
 
-import os
 import re
 from datetime import date, datetime, timedelta
-
 from dateutil.rrule import WEEKLY, rrule
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.wait import WebDriverWait
 
-from juriscraper.AbstractSite import logger, phantomjs_executable_path
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 from juriscraper.lib.html_utils import fix_links_but_keep_anchors
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteWebDriven):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.uses_selenium = True
@@ -44,17 +38,12 @@ class Site(OpinionSite):
         if self.test_mode_enabled():
             return super(Site, self)._download(request_dict=request_dict)
 
-        driver = webdriver.PhantomJS(
-            executable_path=phantomjs_executable_path,
-            service_log_path=os.path.devnull,  # Disable ghostdriver.log
-        )
-        driver.implicitly_wait(30)
         logger.info("Now downloading case page at: %s" % self.url)
-        driver.get(self.url)
+        self.initiate_webdriven_session()
 
         # Set the start and end dates
         start_date_id = "ctl00_Content_dpDateSearch_dateInput"
-        start_date_input = driver.find_element_by_id(start_date_id)
+        start_date_input = self.webdriver.find_element_by_id(start_date_id)
         start_date_input.send_keys(
             (self.case_date - timedelta(days=self.backwards_days)).strftime(
                 "%-m/%-d/%Y"
@@ -62,28 +51,23 @@ class Site(OpinionSite):
         )
 
         end_date_id = "ctl00_Content_dpDateSearchTo_dateInput"
-        end_date_input = driver.find_element_by_id(end_date_id)
+        end_date_input = self.webdriver.find_element_by_id(end_date_id)
         end_date_input.send_keys(self.case_date.strftime("%-m/%-d/%Y"))
-        # driver.save_screenshot('%s.png' % self.case_date)
+        # self.take_screenshot()
 
         # Check ordering by case date (this orders by case date, *ascending*)
         ordering_id = "Content_rdoCaseName_1"
-        driver.find_element_by_id(ordering_id).click()
+        self.webdriver.find_element_by_id(ordering_id).click()
 
         # Submit
-        driver.find_element_by_id("Content_btnSearch").click()
+        self.webdriver.find_element_by_id("Content_btnSearch").click()
 
         # Do not proceed until the results show up.
-        wait = WebDriverWait(driver, 10)
-        wait.until(
-            EC.presence_of_element_located(
-                (By.ID, "Content_ddlResultsPerPage")
-            )
-        )
-        # driver.save_screenshot('with-results.png')
+        self.wait_for_id("Content_ddlResultsPerPage")
+        # self.take_screenshot()
 
-        text = self._clean_text(driver.page_source)
-        driver.quit()
+        text = self._clean_text(self.webdriver.page_source)
+        self.webdriver.quit()
         html_tree = self._make_html_tree(text)
         html_tree.rewrite_links(fix_links_but_keep_anchors, base_href=self.url)
         return html_tree
@@ -187,7 +171,7 @@ class Site(OpinionSite):
             ([0-9]{4})                                          # Four digit year (volume)
             .                                                   # hyphen, em-dash etc.
             ([0-9]{1,3})\b)                                     # 1-3 digit number in order of publication (page)
-            |                                                   # or 
+            |                                                   # or
             ([0-9]{1,4})\s{1,}                                  # (volume)
             (T\.\ ?C\.\ No\.)(?:\s{1,})?                        # T.C. No. (reporter)
             (\d{1,4}))                                          # (page)
