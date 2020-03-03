@@ -42,12 +42,6 @@ class Site(OpinionSiteAspx):
         self.url2 = "http://www.search.txcourts.gov/CaseSearch.aspx?coa=cossup"
         self.base_url = "http://www.search.txcourts.gov"
         self.rows = []
-        self.data_tmpl = {
-            "ctl00$ContentPlaceHolder1$chkListDocTypes$0": "on",
-            "ctl00$ContentPlaceHolder1$btnSearchText": "Search",
-            "__VIEWSTATE": None,
-            "__EVENTTARGET": None,
-        }
         self.data = {}
         self.soup = None
         self.total_xp = (
@@ -58,6 +52,23 @@ class Site(OpinionSiteAspx):
             "//text()[contains(., 'Style:') or contains(., 'v.:')]"
             "//ancestor::div[@class='span2']/following-sibling::div/text()"
         )
+
+    # Required for OpinionSiteAspx
+    def _get_data_template(self):
+        return {
+            "ctl00$ContentPlaceHolder1$chkListDocTypes$0": "on",
+            "ctl00$ContentPlaceHolder1$btnSearchText": "Search",
+            "__VIEWSTATE": None,
+            "__EVENTTARGET": None,
+        }
+
+    # Required for OpinionSiteAspx
+    def _get_event_target(self):
+        el = self.soup.xpath('.//a[@class="rgCurrentPage"]')
+        if len(el):
+            return el[0].getnext().get("href").split("'")[1]
+        else:
+            return None
 
     def _download(self, request_dict={}):
         self._get_soup(self.url)
@@ -134,10 +145,3 @@ class Site(OpinionSiteAspx):
                 % (future_date_ymd, future_date_mdy),
             }
         )
-
-    def _get_event_target(self):
-        el = self.soup.xpath('.//a[@class="rgCurrentPage"]')
-        if len(el):
-            return el[0].getnext().get("href").split("'")[1]
-        else:
-            return None

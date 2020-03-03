@@ -8,9 +8,10 @@
 import re
 from lxml import html
 from datetime import date, datetime, timedelta
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteAspx import OpinionSiteAspx
 
-class Site(OpinionSite):
+
+class Site(OpinionSiteAspx):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.url = "https://www.ustaxcourt.gov/UstcInOp/OpinionSearch.aspx"
@@ -21,12 +22,23 @@ class Site(OpinionSite):
         self.backwards_days = 14
         self.court_id = self.__module__
         self.data = None
+        self.spoof_user_agent = True
+
+    def _get_data_template(self):
+        return {
+            "ctl00$Content$ddlJudges": "0",
+            "ctl00$Content$ddlOpinionTypes": "0",
+            "ctl00$Content$rdoCaseName": "D",
+            "ctl00$Content$ddlDocumentNumHits": "All",
+            "ctl00$Content$btnSearch": "Search",
+            "__VIEWSTATE": None,
+            "__EVENTVALIDATION": None,
+        }
 
     def _download(self, request_dict={}):
-        self.set_local_variables()
-        self.make_soup(self.url)
-        self.set_data()
-        self.make_soup(self.url)
+        self._get_soup(self.url)
+        self._update_data()
+        self._get_soup(self.url)
         return self.soup
 
     def _get_download_urls(self):
@@ -154,11 +166,11 @@ class Site(OpinionSite):
 
         return metadata
 
-    def set_local_variables(self):
-        self.vs = '//*[@id="__VIEWSTATE"]/@value'
-        self.ev = '//*[@id="__EVENTVALIDATION"]/@value'
+    def _update_data(self):
+        # Call the super class version, which creates a new data dict from the
+        # template and fills in ASPX specific values.
+        super(Site, self)._update_data()
 
-    def set_data(self):
         self.backdate = self.case_date - timedelta(self.backwards_days)
 
         f1_today = self.case_date.strftime("%m/%d/%Y")
@@ -167,25 +179,13 @@ class Site(OpinionSite):
         f1_backdate = self.backdate.strftime("%m/%d/%Y")
         f2_backdate = self.backdate.strftime("%Y-%m-%d-%H-%M-%S")
 
-        self.data = {'ctl00$Content$dpDateSearch$dateInput': f1_backdate,
-                     'ctl00_Content_dpDateSearch_dateInput_ClientState': '{"validationText":"%s","valueAsString":"%s","lastSetTextBoxValue":"%s"}' % (
-                         f2_backdate, f2_backdate, f1_backdate),
-                     'ctl00$Content$dpDateSearchTo$dateInput': f1_today,
-                     'ctl00_Content_dpDateSearchTo_dateInput_ClientState': '{"validationText":"%s","valueAsString":"%s","lastSetTextBoxValue":"%s"}' % (
-                         f2_today, f2_today, f1_today),
-                     'ctl00$Content$ddlJudges': '0',
-                     'ctl00$Content$ddlOpinionTypes': '0',
-                     'ctl00$Content$rdoCaseName': 'D',
-                     'ctl00$Content$ddlDocumentNumHits': 'All',
-                     'ctl00$Content$btnSearch': 'Search',
-                     '__VIEWSTATE':self.soup.xpath(self.vs)[0],
-                     '__EVENTVALIDATION': self.soup.xpath(self.ev)[0]}
-
-    def make_soup(self, process_url):
-        self.request["headers"] = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',}
-
-        if self.data is None:
-            r = self.request["session"].get(process_url)
-        else:
-            r = self.request["session"].post(process_url, data=self.data)
-        self.soup = html.fromstring(r.text)
+        self.data.update(
+            {
+                "ctl00$Content$dpDateSearch$dateInput": f1_backdate,
+                "ctl00_Content_dpDateSearch_dateInput_ClientState": '{"validationText":"%s","valueAsString":"%s","lastSetTextBoxValue":"%s"}'
+                % (f2_backdate, f2_backdate, f1_backdate),
+                "ctl00$Content$dpDateSearchTo$dateInput": f1_today,
+                "ctl00_Content_dpDateSearchTo_dateInput_ClientState": '{"validationText":"%s","valueAsString":"%s","lastSetTextBoxValue":"%s"}'
+                % (f2_today, f2_today, f1_today),
+            }
+        )
