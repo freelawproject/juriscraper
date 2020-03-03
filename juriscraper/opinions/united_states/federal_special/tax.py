@@ -6,17 +6,11 @@
 # Neutral Citation Format (Summary opinions: T.C. Summary Opinion 2012-1
 
 import re
-import requests
-from datetime import date, datetime, timedelta
-from dateutil.rrule import WEEKLY, rrule
-
 from lxml import html
-
-from juriscraper.AbstractSite import logger
+from datetime import date, datetime, timedelta
 from juriscraper.OpinionSite import OpinionSite
 
-
-class Site(OpinionSiteWebDriven):
+class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.url = "https://www.ustaxcourt.gov/UstcInOp/OpinionSearch.aspx"
@@ -25,31 +19,15 @@ class Site(OpinionSiteWebDriven):
         )
         self.case_date = date.today()
         self.backwards_days = 14
-        self.back_scrape_iterable = [
-            i.date()
-            for i in rrule(
-                WEEKLY, dtstart=date(1995, 9, 25), until=self.case_date,
-            )
-        ]
-
         self.court_id = self.__module__
+        self.data = None
 
     def _download(self, request_dict={}):
-        """
-
-        :param request_dict:
-        :return:
-        """
-        s = requests.session()
-        r = s.get(self.url)
-
-        self.set_local_variables(r)
-
-        r = requests.post(self.url,
-                          headers=self.headers,
-                          data=self.data)
-
-        return html.fromstring(r.text)
+        self.set_local_variables()
+        self.make_soup(self.url)
+        self.set_data()
+        self.make_soup(self.url)
+        return self.soup
 
     def _get_download_urls(self):
         # URLs here take two forms. For precedential cases, they're simple, and
@@ -110,20 +88,6 @@ class Site(OpinionSiteWebDriven):
             dates.append(datetime.strptime(date_string, "%m/%d/%Y").date())
         return dates
 
-    def _download_backwards(self, d):
-        self.backwards_days = 7
-        self.case_date = d
-        logger.info(
-            "Running backscraper with date range: %s to %s",
-            self.case_date - timedelta(days=self.backwards_days),
-            self.case_date,
-        )
-        self.html = self._download()
-        if self.html is not None:
-            # Setting status is important because it prevents the download
-            # function from being run a second time by the parse method.
-            self.status = 200
-
     def extract_from_text(self, scraped_text):
         """Can we extract the citation and related information
 
@@ -150,7 +114,7 @@ class Site(OpinionSiteWebDriven):
             ([0-9]{4})                                          # Four digit year (volume)
             .                                                   # hyphen, em-dash etc.
             ([0-9]{1,3})\b)                                     # 1-3 digit number in order of publication (page)
-            |                                                   # or
+            |                                                   # or 
             ([0-9]{1,4})\s{1,}                                  # (volume)
             (T\.\ ?C\.\ No\.)(?:\s{1,})?                        # T.C. No. (reporter)
             (\d{1,4}))                                          # (page)
@@ -190,35 +154,38 @@ class Site(OpinionSiteWebDriven):
 
         return metadata
 
-    def set_local_variables(self, r):
-        """"""
+    def set_local_variables(self):
+        self.vs = '//*[@id="__VIEWSTATE"]/@value'
+        self.ev = '//*[@id="__EVENTVALIDATION"]/@value'
 
-        backdate = self.case_date - timedelta(self.backwards_days)
+    def set_data(self):
+        self.backdate = self.case_date - timedelta(self.backwards_days)
 
         f1_today = self.case_date.strftime("%m/%d/%Y")
         f2_today = self.case_date.strftime("%Y-%m-%d-%H-%M-%S")
 
-        f1_backdate = backdate.strftime("%m/%d/%Y")
-        f2_backdate = backdate.strftime("%Y-%m-%d-%H-%M-%S")
+        f1_backdate = self.backdate.strftime("%m/%d/%Y")
+        f2_backdate = self.backdate.strftime("%Y-%m-%d-%H-%M-%S")
 
-        self.headers = {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
-        }
+        self.data = {'ctl00$Content$dpDateSearch$dateInput': f1_backdate,
+                     'ctl00_Content_dpDateSearch_dateInput_ClientState': '{"validationText":"%s","valueAsString":"%s","lastSetTextBoxValue":"%s"}' % (
+                         f2_backdate, f2_backdate, f1_backdate),
+                     'ctl00$Content$dpDateSearchTo$dateInput': f1_today,
+                     'ctl00_Content_dpDateSearchTo_dateInput_ClientState': '{"validationText":"%s","valueAsString":"%s","lastSetTextBoxValue":"%s"}' % (
+                         f2_today, f2_today, f1_today),
+                     'ctl00$Content$ddlJudges': '0',
+                     'ctl00$Content$ddlOpinionTypes': '0',
+                     'ctl00$Content$rdoCaseName': 'D',
+                     'ctl00$Content$ddlDocumentNumHits': 'All',
+                     'ctl00$Content$btnSearch': 'Search',
+                     '__VIEWSTATE':self.soup.xpath(self.vs)[0],
+                     '__EVENTVALIDATION': self.soup.xpath(self.ev)[0]}
 
-        self.data = {
-            'ctl00$Content$dpDateSearch$dateInput': f1_backdate,
-            'ctl00_Content_dpDateSearch_dateInput_ClientState': '{"enabled":true,"emptyMessage":"","validationText":"%s","valueAsString":"%s","minDateStr":"1980-01-01-00-00-00","maxDateStr":"2099-12-31-00-00-00","lastSetTextBoxValue":"%s"}' % (
-            f2_backdate, f2_backdate, f1_backdate),
-            'ctl00$Content$dpDateSearchTo$dateInput': f1_today,
-            'ctl00_Content_dpDateSearchTo_dateInput_ClientState': '{"enabled":true,"emptyMessage":"","validationText":"%s","valueAsString":"%s","minDateStr":"1980-01-01-00-00-00","maxDateStr":"2099-12-31-00-00-00","lastSetTextBoxValue":"%s"}' % (
-            f2_today, f2_today, f1_today),
-            'ctl00$Content$ddlJudges': '0',
-            'ctl00$Content$ddlOpinionTypes': '0',
-            'ctl00$Content$rdoCaseName': 'D',
-            'ctl00$Content$ddlDocumentNumHits': 'All',
-            'ctl00$Content$btnSearch': 'Search',
-        }
+    def make_soup(self, process_url):
+        self.request["headers"] = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',}
 
-        soup = html.fromstring(r.text)
-        self.data['__VIEWSTATE'] = soup.xpath('//*[@id="__VIEWSTATE"]/@value')[0]
-        self.data['__EVENTVALIDATION'] = soup.xpath('//*[@id="__EVENTVALIDATION"]/@value')[0]
+        if self.data is None:
+            r = self.request["session"].get(process_url)
+        else:
+            r = self.request["session"].post(process_url, data=self.data)
+        self.soup = html.fromstring(r.text)
