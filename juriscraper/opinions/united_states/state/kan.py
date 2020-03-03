@@ -38,7 +38,7 @@ class Site(OpinionSite):
         self.make_soup(self.url)
 
         while self.page:
-            self.set_local_variables()
+            self.update_data()
             self.make_soup(self.url)
 
             for row in self.soup.xpath(self.row_xp):
@@ -74,7 +74,7 @@ class Site(OpinionSite):
             x.xpath(".//td[2]")[0].text_content().strip() for x in self.rows
         ]
 
-    def set_local_variables(self):
+    def update_data(self):
         self.data = {
             "__EVENTTARGET": self.ev,
             "__EVENTARGUMENT": str(self.page),
