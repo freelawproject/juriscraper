@@ -16,25 +16,21 @@
 #  - 2015-08-27: Updated by Andrei Chelaru to add explicit waits
 
 
-import os
 from datetime import date, datetime, timedelta
-
 from dateutil.rrule import WEEKLY, rrule
 from lxml import html
-from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
-from juriscraper.AbstractSite import logger, phantomjs_executable_path
+from juriscraper.AbstractSite import logger
 from juriscraper.DeferringList import DeferringList
-from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.cookie_utils import normalize_cookies
+from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 from juriscraper.lib.string_utils import titlecase
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteWebDriven):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -87,59 +83,41 @@ class Site(OpinionSite):
             )
             return html_tree_list
         else:
-            logger.info("Running Selenium browser PhantomJS...")
-            driver = webdriver.PhantomJS(
-                executable_path=phantomjs_executable_path,
-                service_log_path=os.path.devnull,  # Disable ghostdriver.log
-            )
-
-            driver.set_window_size(1920, 1080)
-            driver.get(self.url)
-            # Get a screenshot in testing
-            # driver.save_screenshot('out.png')
-
-            # Set the cookie
-            self.cookies = normalize_cookies(driver.get_cookies())
-
-            WebDriverWait(driver, 15).until(
-                EC.presence_of_element_located(
-                    (
-                        By.XPATH,
-                        "//*[@id='ctl00_ContentPlaceHolder1_chkListCourts_15']",
-                    )
-                )
-            )
+            logger.info("Running Selenium browser...")
+            self.initiate_webdriven_session()
             if self.court_name == "sc":
                 # Supreme Court is checked by default, so we don't want to
                 # check it again.
                 pass
             else:
-                search_supreme_court = driver.find_element_by_xpath(
+                search_supreme_court = self.webdriver.find_element_by_xpath(
                     "//*[@id='ctl00_ContentPlaceHolder1_chkListCourts_{court_nr}']".format(
                         court_nr=self.courts["sc"]
                     )
                 )
                 if search_supreme_court.is_selected():
-                    ActionChains(driver).click(search_supreme_court).perform()
+                    ActionChains(self.webdriver).click(
+                        search_supreme_court
+                    ).perform()
 
-                search_court_type = driver.find_element_by_id(
+                search_court_type = self.webdriver.find_element_by_id(
                     "ctl00_ContentPlaceHolder1_chkListCourts_{court_nr}".format(
                         court_nr=self.courts[self.court_name]
                     )
                 )
-                ActionChains(driver).click(search_court_type).perform()
+                ActionChains(self.webdriver).click(search_court_type).perform()
 
-            search_opinions = driver.find_element_by_id(
+            search_opinions = self.webdriver.find_element_by_id(
                 "ctl00_ContentPlaceHolder1_chkListDocTypes_0"
             )
             search_opinions.click()
 
-            search_orders = driver.find_element_by_id(
+            search_orders = self.webdriver.find_element_by_id(
                 "ctl00_ContentPlaceHolder1_chkListDocTypes_1"
             )
             search_orders.click()
 
-            start_date = driver.find_element_by_id(
+            start_date = self.webdriver.find_element_by_id(
                 "ctl00_ContentPlaceHolder1_dtDocumentFrom_dateInput"
             )
             start_date.send_keys(
@@ -148,29 +126,29 @@ class Site(OpinionSite):
                 ).strftime("%m/%d/%Y")
             )
 
-            end_date = driver.find_element_by_id(
+            end_date = self.webdriver.find_element_by_id(
                 "ctl00_ContentPlaceHolder1_dtDocumentTo_dateInput"
             )
             end_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
-            # driver.save_screenshot('%s.png' % self.case_date)
+            # self.take_screenshot()
 
-            submit = driver.find_element_by_id(
+            submit = self.webdriver.find_element_by_id(
                 "ctl00_ContentPlaceHolder1_btnSearchText"
             )
             submit.click()
 
-            WebDriverWait(driver, 30).until(
+            WebDriverWait(self.webdriver, 30).until(
                 EC.presence_of_element_located(
                     (By.ID, "ctl00_ContentPlaceHolder1_grdDocuments")
                 )
             )
             self.status = 200
-            # driver.save_screenshot('out3.png')
+            # self.take_screenshot()
 
-            nr_of_pages = driver.find_element_by_xpath(
+            nr_of_pages = self.webdriver.find_element_by_xpath(
                 '//thead//*[contains(concat(" ", normalize-space(@class), " "), " rgInfoPart ")]/strong[2]'
             )
-            records_nr = driver.find_element_by_xpath(
+            records_nr = self.webdriver.find_element_by_xpath(
                 '//thead//*[contains(concat(" ", normalize-space(@class), " "), " rgInfoPart ")]/strong[1]'
             )
             html_pages = []
@@ -178,8 +156,8 @@ class Site(OpinionSite):
                 self.records_nr = int(records_nr.text)
             if nr_of_pages:
                 if nr_of_pages.text == "1":
-                    text = driver.page_source
-                    driver.quit()
+                    text = self.webdriver.page_source
+                    self.webdriver.quit()
 
                     html_tree = html.fromstring(text)
                     html_tree.make_links_absolute(self.url)
@@ -193,7 +171,7 @@ class Site(OpinionSite):
                         % nr_of_pages.text
                     )
                     logger.info("  Getting page 1")
-                    text = driver.page_source
+                    text = self.webdriver.page_source
 
                     html_tree = html.fromstring(text)
                     html_tree.make_links_absolute(self.url)
@@ -204,13 +182,13 @@ class Site(OpinionSite):
 
                     for i in range(int(nr_of_pages.text) - 1):
                         logger.info("  Getting page %s" % (i + 2))
-                        next_page = driver.find_element_by_class_name(
+                        next_page = self.webdriver.find_element_by_class_name(
                             "rgPageNext"
                         )
                         next_page.click()
-                        driver.implicitly_wait(5)
+                        self.webdriver.implicitly_wait(5)
 
-                        text = driver.page_source
+                        text = self.webdriver.page_source
 
                         html_tree = html.fromstring(text)
                         html_tree.make_links_absolute(self.url)
@@ -218,7 +196,7 @@ class Site(OpinionSite):
                         remove_anchors = lambda url: url.split("#")[0]
                         html_tree.rewrite_links(remove_anchors)
                         html_pages.append(html_tree)
-                    driver.quit()
+                    self.webdriver.quit()
             return html_pages
 
     def _get_case_names(self):
