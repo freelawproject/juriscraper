@@ -7,11 +7,11 @@
 
 from datetime import datetime, timedelta
 from lxml import html
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteAspx import OpinionSiteAspx
 from juriscraper.lib.string_utils import convert_date_string, titlecase
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteAspx):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -42,31 +42,34 @@ class Site(OpinionSite):
         self.url2 = "http://www.search.txcourts.gov/CaseSearch.aspx?coa=cossup"
         self.base_url = "http://www.search.txcourts.gov"
         self.rows = []
+        self.data_tmpl = {
+            "ctl00$ContentPlaceHolder1$chkListDocTypes$0": "on",
+            "ctl00$ContentPlaceHolder1$btnSearchText": "Search",
+            "__VIEWSTATE": None,
+            "__EVENTTARGET": None,
+        }
         self.data = {}
         self.soup = None
-        self.vs_regex = '//*[@id="__VIEWSTATE"]/@value'
+        self.total_xp = (
+            '//*[@id="ctl00_ContentPlaceHolder1_grdDocuments_ctl00"]'
+            "/thead/tr[1]/td/table/tbody/tr/td/div[5]/strong[1]"
+        )
+        self.xp = (
+            "//text()[contains(., 'Style:') or contains(., 'v.:')]"
+            "//ancestor::div[@class='span2']/following-sibling::div/text()"
+        )
 
     def _download(self, request_dict={}):
-        self.make_soup(self.url)
-        self.set_local_variables()
-        self.data["__VIEWSTATE"] = self.soup.xpath(self.vs_regex)[0]
-        self.make_soup(self.url2)
+        self._get_soup(self.url)
+        self._update_data()
+        self._get_soup(self.url2)
 
         for row in self.soup.xpath('.//a[text()="Opinion"]/ancestor::tr'):
             self.rows.append(row)
 
-        while int(self.soup.xpath(self.total_regex)[0].text_content()) > 25:
-            self.data = {
-                "__VIEWSTATE": self.soup.xpath(self.vs_regex)[0],
-                "__EVENTTARGET": self.soup.xpath(
-                    './/a[@class="rgCurrentPage"]'
-                )[0]
-                .getnext()
-                .get("href")
-                .split("'")[1],
-            }
-
-            self.make_soup(self.url2)
+        while int(self.soup.xpath(self.total_xp)[0].text_content()) > 25:
+            self._update_aspx_params()
+            self._get_soup(self.url2)
 
             for row in self.soup.xpath('.//a[text()="Opinion"]/ancestor::tr'):
                 self.rows.append(row)
@@ -107,38 +110,34 @@ class Site(OpinionSite):
     def _get_docket_numbers(self):
         return [row.xpath(".//td[5]/a/text()")[0] for row in self.rows]
 
-    def set_local_variables(self):
+    def _update_data(self):
+        # Call the super class version, which creates a new data dict from the
+        # template and fills in ASPX specific values.
+        super(Site, self)._update_data()
+
         back_date = self.case_date - timedelta(self.backwards_days)
         future_date_ymd = self.case_date.strftime("%Y-%m-%d-%H-%M-%S")
         past_date_ymd = back_date.strftime("%Y-%m-%d-%H-%M-%S")
         future_date_mdy = self.case_date.strftime("%m/%d/%Y")
         past_date_mdy = back_date.strftime("%m/%d/%Y")
 
-        self.data = {
-            # 'ctl00$ContentPlaceHolder1$chkAllCourts': 'on',
-            "ctl00$ContentPlaceHolder1$chkListCourts$%s"
-            % self.courts[self.court_name]: "on",
-            "ctl00$ContentPlaceHolder1$dtDocumentFrom$dateInput": past_date_mdy,
-            "ctl00_ContentPlaceHolder1_dtDocumentFrom_dateInput_ClientState": '{"valueAsString":"%s","lastSetTextBoxValue":"%s"}'
-            % (past_date_ymd, past_date_mdy),
-            "ctl00$ContentPlaceHolder1$dtDocumentTo$dateInput": future_date_mdy,
-            "ctl00_ContentPlaceHolder1_dtDocumentTo_dateInput_ClientState": '{"valueAsString":"%s","lastSetTextBoxValue":"%s"}'
-            % (future_date_ymd, future_date_mdy),
-            "ctl00$ContentPlaceHolder1$chkListDocTypes$0": "on",
-            "ctl00$ContentPlaceHolder1$btnSearchText": "Search",
-        }
-        self.total_regex = (
-            '//*[@id="ctl00_ContentPlaceHolder1_grdDocuments_ctl00"]'
-            "/thead/tr[1]/td/table/tbody/tr/td/div[5]/strong[1]"
-        )
-        self.xp = (
-            "//text()[contains(., 'Style:') or contains(., 'v.:')]"
-            "//ancestor::div[@class='span2']/following-sibling::div/text()"
+        self.data.update(
+            {
+                # 'ctl00$ContentPlaceHolder1$chkAllCourts': 'on',
+                "ctl00$ContentPlaceHolder1$chkListCourts$%s"
+                % self.courts[self.court_name]: "on",
+                "ctl00$ContentPlaceHolder1$dtDocumentFrom$dateInput": past_date_mdy,
+                "ctl00_ContentPlaceHolder1_dtDocumentFrom_dateInput_ClientState": '{"valueAsString":"%s","lastSetTextBoxValue":"%s"}'
+                % (past_date_ymd, past_date_mdy),
+                "ctl00$ContentPlaceHolder1$dtDocumentTo$dateInput": future_date_mdy,
+                "ctl00_ContentPlaceHolder1_dtDocumentTo_dateInput_ClientState": '{"valueAsString":"%s","lastSetTextBoxValue":"%s"}'
+                % (future_date_ymd, future_date_mdy),
+            }
         )
 
-    def make_soup(self, process_url):
-        if self.data is None or self.data == {}:
-            r = self.request["session"].get(process_url)
+    def _get_event_target(self):
+        el = self.soup.xpath('.//a[@class="rgCurrentPage"]')
+        if len(el):
+            return el[0].getnext().get("href").split("'")[1]
         else:
-            r = self.request["session"].post(process_url, data=self.data)
-        self.soup = html.fromstring(r.text)
+            return None
