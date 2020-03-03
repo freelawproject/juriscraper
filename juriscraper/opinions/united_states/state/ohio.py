@@ -9,20 +9,17 @@ History:
  - 2015-07-31: Redone by mlr to use ghost driver. Alas, their site used to be
                great, but now it's terribly frustrating.
 """
-import os
 from datetime import date, datetime
-
 from lxml import html
 from lxml.html import tostring
-from selenium import webdriver
 
 from juriscraper.AbstractSite import logger, phantomjs_executable_path
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 from juriscraper.lib.string_utils import clean_if_py3
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteWebDriven):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         # Changing the page # in the url will get additional pages
@@ -45,16 +42,11 @@ class Site(OpinionSite):
         if self.test_mode_enabled():
             return super(Site, self)._download(request_dict=request_dict)
 
-        driver = webdriver.PhantomJS(
-            executable_path=phantomjs_executable_path,
-            service_log_path=os.path.devnull,  # Disable ghostdriver.log
-        )
-        driver.implicitly_wait(30)
         logger.info("Now downloading case page at: %s" % self.url)
-        driver.get(self.url)
+        self.initiate_webdriven_session()
 
         # Court drop down...
-        driver.find_element_by_xpath(
+        self.webdriver.find_element_by_xpath(
             "//select[@id='MainContent_ddlCourt']"
             "/option[@value='{court}']".format(court=self.court_index)
         ).click()
@@ -70,16 +62,18 @@ class Site(OpinionSite):
                 id=yearDropDownId + "Min"
             ),  # current (2017)
         ]
-        driver.find_element_by_xpath(" | ".join(yearDropdownPaths)).click()
+        self.webdriver.find_element_by_xpath(
+            " | ".join(yearDropdownPaths)
+        ).click()
 
         # Hit submit
         submitPath = "//input[@id='MainContent_btnSubmit']"
-        driver.find_element_by_xpath(submitPath).click()
+        self.webdriver.find_element_by_xpath(submitPath).click()
 
         # Selenium doesn't give us the actual code, we have to hope.
         self.status = 200
 
-        text = self._clean_text(driver.page_source)
+        text = self._clean_text(self.webdriver.page_source)
         html_tree = html.fromstring(text)
         html_tree.rewrite_links(
             fix_links_in_lxml_tree, base_href=self.request["url"]
