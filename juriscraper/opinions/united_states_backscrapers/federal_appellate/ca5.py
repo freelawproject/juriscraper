@@ -1,19 +1,12 @@
-from datetime import datetime, timedelta, date
-
-import os
 from lxml import html
+from datetime import datetime, timedelta, date
 from dateutil.rrule import DAILY, rrule
-from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from juriscraper.AbstractSite import logger, phantomjs_executable_path
-from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.cookie_utils import normalize_cookies
+from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteWebDriven):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.url = "http://www.ca5.uscourts.gov/electronic-case-filing/case-information/current-opinions"
@@ -44,26 +37,10 @@ class Site(OpinionSite):
             return html_tree_list
         else:
             logger.info("Running Selenium browser PhantomJS...")
-            driver = webdriver.PhantomJS(
-                executable_path=phantomjs_executable_path,
-                service_log_path=os.path.devnull,  # Disable ghostdriver.log
-            )
+            self.initiate_webdriven_session()
+            self.wait_for_id("ctl00_Body_C010_ctl00_ctl00_endDate_dateInput")
 
-            driver.set_window_size(1920, 1080)
-            driver.get(self.url)
-            # Get a screenshot in testing
-            # driver.save_screenshot('out.png')
-
-            # Set the cookie
-            self.cookies = normalize_cookies(driver.get_cookies())
-            # driver.save_screenshot('screenie.png')
-            WebDriverWait(driver, 15).until(
-                EC.presence_of_element_located(
-                    (By.ID, "ctl00_Body_C010_ctl00_ctl00_endDate_dateInput")
-                )
-            )
-
-            start_date = driver.find_element_by_id(
+            start_date = self.webdriver.find_element_by_id(
                 "ctl00_Body_C010_ctl00_ctl00_startDate_dateInput"
             )
             start_date.send_keys(
@@ -72,33 +49,27 @@ class Site(OpinionSite):
                 )
             )
 
-            end_date = driver.find_element_by_id(
+            end_date = self.webdriver.find_element_by_id(
                 "ctl00_Body_C010_ctl00_ctl00_endDate_dateInput"
             )
             end_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
-            # driver.save_screenshot('%s.png' % self.case_date)
 
-            submit = driver.find_element_by_id(
+            submit = self.webdriver.find_element_by_id(
                 "Body_C010_ctl00_ctl00_btnSearch"
             )
             submit.click()
 
-            WebDriverWait(driver, 30).until(
-                EC.presence_of_element_located(
-                    (
-                        By.ID,
-                        "ctl00_Body_C010_ctl00_ctl00_radGridOpinions_ctl00",
-                    )
-                )
+            self.wait_for_id(
+                "ctl00_Body_C010_ctl00_ctl00_radGridOpinions_ctl00"
             )
+
             self.status = 200
-            # driver.save_screenshot('%s.png' % self.case_date)
 
             try:
-                nr_of_pages = driver.find_element_by_xpath(
+                nr_of_pages = self.webdriver.find_element_by_xpath(
                     '//div[contains(concat(" ", @class, " "), "rgInfoPart")]/strong[2]'
                 )
-                records_nr = driver.find_element_by_xpath(
+                records_nr = self.webdriver.find_element_by_xpath(
                     '//div[contains(concat(" ", @class, " "), "rgInfoPart")]/strong[1]'
                 )
                 self.records_nr = int(records_nr.text)
@@ -106,21 +77,21 @@ class Site(OpinionSite):
             except NoSuchElementException:
                 try:
                     self.records_nr = len(
-                        driver.find_elements_by_xpath(
+                        self.webdriver.find_elements_by_xpath(
                             "//tr[contains(concat('', @id, ''), 'ctl00_Body_C010_ctl00_ctl00_radGridOpinions_ctl00')]"
                         )
                     )
                     nr_of_pages = 1
                 except NoSuchElementException:
-                    driver.quit()
+                    self.webdriver.quit()
                     return []
             html_pages = []
             logger.info(
                 "records: {}, pages: {}".format(self.records_nr, nr_of_pages)
             )
             if nr_of_pages == 1:
-                text = driver.page_source
-                driver.quit()
+                text = self.webdriver.page_source
+                self.webdriver.quit()
 
                 html_tree = html.fromstring(text)
                 html_tree.make_links_absolute(self.url)
@@ -133,7 +104,7 @@ class Site(OpinionSite):
                     "Paginating through %s pages of results." % nr_of_pages
                 )
                 logger.info("  Getting page 1")
-                text = driver.page_source
+                text = self.webdriver.page_source
 
                 html_tree = html.fromstring(text)
                 html_tree.make_links_absolute(self.url)
@@ -144,11 +115,13 @@ class Site(OpinionSite):
 
                 for i in range(nr_of_pages - 1):
                     logger.info("  Getting page %s" % (i + 2))
-                    next_page = driver.find_element_by_class_name("rgPageNext")
+                    next_page = self.webdriver.find_element_by_class_name(
+                        "rgPageNext"
+                    )
                     next_page.click()
-                    driver.implicitly_wait(5)
+                    self.webdriver.implicitly_wait(5)
 
-                    text = driver.page_source
+                    text = self.webdriver.page_source
 
                     html_tree = html.fromstring(text)
                     html_tree.make_links_absolute(self.url)
@@ -156,7 +129,7 @@ class Site(OpinionSite):
                     remove_anchors = lambda url: url.split("#")[0]
                     html_tree.rewrite_links(remove_anchors)
                     html_pages.append(html_tree)
-                driver.quit()
+                self.webdriver.quit()
             return html_pages
 
     def _get_case_names(self):
