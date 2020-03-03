@@ -4,15 +4,9 @@
 # - 2013-08-06: Revised by Brian Carver
 # - 2014-08-05: Updated URL by mlr
 
-import os
-import re
-
 from lxml import html
-from selenium import webdriver
-
-from juriscraper.AbstractSite import logger, phantomjs_executable_path
+from datetime import datetime
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 from juriscraper.lib.string_utils import convert_date_string, titlecase
 
 
@@ -21,95 +15,87 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://ujs.sd.gov/Supreme_Court/opinions.aspx"
-        self.back_scrape_iterable = [
-            (0, 2014),
-            (1, 2014),
-            (2, 2014),
-            (3, 2014),
-            (0, 2013),
-            (1, 2013),
-            (2, 2013),
-            (3, 2013),
-            (4, 2013),
-            (5, 2013),
-            (6, 2013),
-        ]
-        self.uses_selenium = True
-        regex_year_group = "(\d{4} S\.?D\.? \d{1,4})"
-        self.regex = "(.*)%s" % regex_year_group
-        # The court decided to publish 5 records on January 24th 2018
-        # in an alternate format where the neutral citation appears
-        # before the case name, instead of vice versa.  We contacted the
-        # court multiple times, but they wouldn't respond, so we had to
-        # add the additional regex below to handle this use case.
-        self.regex_alt = "%s, (.*)" % regex_year_group
-        self.base_path = "//table[@id='ContentPlaceHolder1_PageContent_gvOpinions']//tr[position()>1]/td"
+        self.year = int(datetime.today().year)
+        self.y = "%0*d" % (2, int(datetime.today().year) - self.year)
+        self.rows = []
+        self.soup = None
+
+        self.next_button_regex = (
+            '//*[@id="ContentPlaceHolder1_ChildContent1_LinkButton_Next"]'
+        )
+
+    def _download(self, request_dict={}):
+        self.first_data()
+        self.make_soup(self.url)
+
+        self.update_event_and_view()
+        self.make_soup(self.url)
+
+        for link in self.soup.xpath('//tr[contains(.//a/@href, ".pdf")]'):
+            row = [
+                x.text_content().strip() for x in link.xpath(".//td")
+            ] + link.xpath(".//a/@href")
+            self.rows.append(row)
+
+        while self.soup.xpath(self.next_button_regex)[0].get("href"):
+            self.second_data()
+            self.update_event_and_view()
+
+            response = self.request["session"].post(self.url, data=self.data)
+            self.soup = html.fromstring(response.text)
+
+            for link in self.soup.xpath('//tr[contains(.//a/@href, ".pdf")]'):
+                more_orders = [
+                    x.text_content().strip() for x in link.xpath(".//td")
+                ] + link.xpath(".//a/@href")
+                self.rows.append(more_orders)
 
     def _get_download_urls(self):
-        path = "%s//a/@href[contains(.,'pdf')]" % self.base_path
-        return list(self.html.xpath(path))
+        return ["https://ujs.sd.gov%s" % x[3] for x in self.rows]
 
     def _get_case_names(self):
-        path = "%s/a[contains(@href, 'pdf')]/text()" % self.base_path
-        case_names = []
-        for s in self.html.xpath(path):
-            case_name = self.extract_regex_group(1, s)
-            if not case_name:
-                case_name = self.extract_regex_group(2, s, True)
-            case_names.append(titlecase(case_name.upper()))
-        return case_names
+        return [
+            titlecase(x[1].split(", %s" % self.year)[0]) for x in self.rows
+        ]
 
     def _get_case_dates(self):
-        path = "%s[1]/text()" % self.base_path
-        return [convert_date_string(ds) for ds in self.html.xpath(path)]
+        return [convert_date_string(x[0]) for x in self.rows]
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
 
     def _get_neutral_citations(self):
-        path = "%s/a[contains(@href, 'pdf')]/text()" % self.base_path
-        neutral_cites = []
-        for s in self.html.xpath(path):
-            neutral_cite = self.extract_regex_group(2, s)
-            if not neutral_cite:
-                neutral_cite = self.extract_regex_group(1, s, True)
-            # Make the citation SD instead of S.D. The former is a neutral cite, the latter, the South Dakota Reporter
-            neutral_cites.append(neutral_cite.replace(".", "").upper())
-        return neutral_cites
+        return [x[1].split(", %s" % self.year)[1].strip() for x in self.rows]
 
-    def _download_backwards(self, page_year):
-        logger.info("Running PhantomJS with params: %s" % (page_year,))
-        driver = webdriver.PhantomJS(
-            executable_path=phantomjs_executable_path,
-            service_log_path=os.path.devnull,  # Disable ghostdriver.log
+    def first_data(self):
+        self.data = {
+            "ctl00$ctl00$ScriptManager1": "ctl00$ctl00$ContentPlaceHolder1$ChildContent1$UpdatePanel_Opinions|ctl00$ctl00$ContentPlaceHolder1$ChildContent1$Repeater_OpinionsYear$ctl%s$LinkButton1"
+            % self.y,
+            "__EVENTTARGET": "ctl00$ctl00$ContentPlaceHolder1$ChildContent1$Repeater_OpinionsYear$ctl%s$LinkButton1"
+            % self.y,
+            "__EVENTARGUMENT": "",
+            "__VIEWSTATEENCRYPTED": "",
+        }
+
+    def update_event_and_view(self):
+        self.data["__VIEWSTATE"] = (
+            self.soup.xpath('//*[@id="__VIEWSTATE"]/@value')[0],
         )
-        driver.implicitly_wait(30)
-        driver.get(self.url)
+        self.data["__EVENTVALIDATION"] = self.soup.xpath(
+            '//*[@id="__EVENTVALIDATION"]/@value'
+        )[0]
 
-        # Select the year (this won't trigger a GET unless it's changed)
-        path = "//*[@id='ContentPlaceHolder1_PageContent_OpinionYears']/option[@value={year}]".format(
-            year=page_year[1]
-        )
-        option = driver.find_element_by_xpath(path)
-        option.click()
+    def second_data(self):
+        self.data[
+            "ctl00$ctl00$ScriptManager1"
+        ] = "ctl00$ctl00$ContentPlaceHolder1$ChildContent1$UpdatePanel_Opinions|ctl00$ctl00$ContentPlaceHolder1$ChildContent1$LinkButton_Next"
+        self.data[
+            "__EVENTTARGET"
+        ] = "ctl00$ctl00$ContentPlaceHolder1$ChildContent1$LinkButton_Next"
 
-        if page_year[0] != 0:
-            # Not the first, page, go to the one desired.
-            links = driver.find_elements_by_xpath(
-                "//a[@href[contains(., 'Page')]]"
-            )
-            links[page_year[0] - 1].click()
-
-        text = self._clean_text(driver.page_source)
-        driver.quit()
-        html_tree = html.fromstring(text)
-
-        html_tree.rewrite_links(
-            fix_links_in_lxml_tree, base_href=self.request["url"]
-        )
-        self.html = html_tree
-        self.status = 200
-
-    def extract_regex_group(self, group, string, alt=False):
-        regex = self.regex_alt if alt else self.regex
-        return re.search(regex, string, re.MULTILINE).group(group)
+    def make_soup(self, process_url):
+        if self.data is not None:
+            r = self.request["session"].get(process_url)
+        else:
+            r = self.request["session"].post(process_url, data=self.data)
+        self.soup = html.fromstring(r.text)
