@@ -12,7 +12,7 @@ from dateutil.rrule import WEEKLY, rrule
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 from juriscraper.lib.html_utils import fix_links_but_keep_anchors
-
+from juriscraper.lib.models import citation_types
 
 class Site(OpinionSiteWebDriven):
     def __init__(self, *args, **kwargs):
@@ -152,7 +152,7 @@ class Site(OpinionSiteWebDriven):
         :return: dictionary of citations, reporter, volume and page
         """
         metadata = {
-            "Citation": {"type": "SPECIALTY"},
+            "Citation": {"type": citation_types["SPECIALTY"]},
             "OpinionCluster": {"precedential_status": ""},
         }
 
