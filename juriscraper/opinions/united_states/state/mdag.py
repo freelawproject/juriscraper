@@ -22,11 +22,16 @@ class Site(OpinionSite):
         self.back_scrape_iterable = range(1993, self.year + 1)
 
     def _download(self, request_dict={}):
-        self.set_local_variables()
-        return self.request['session'].post(
-            "http://www.marylandattorneygeneral.gov/_layouts/15/inplview.aspx",
-            params=self.params,
-        ).json()
+        params = {
+            "List": "{1BA692B1-E50C-4754-AADD-E6753F46B403}",
+            "IsXslView": "TRUE",
+            "IsCSR": "TRUE",
+            "ListViewPageUrl": "http://www.marylandattorneygeneral.gov/Pages/Opinions/index.aspx",
+            "GroupString": ";#%s;#" % self.year,
+            "IsGroupRender": "TRUE",
+        }
+
+        return self.request["session"].post(self.url, params=params).json()
 
     def _get_case_names(self):
         return [x["Summary"] for x in self.html["Row"]]
@@ -60,16 +65,3 @@ class Site(OpinionSite):
     def _download_backwards(self, year):
         self.year = year
         self.html = self._download()
-
-    def set_local_variables(self):
-        self.params = (
-            ("List", "{1BA692B1-E50C-4754-AADD-E6753F46B403}"),
-            ("IsXslView", "TRUE"),
-            ("IsCSR", "TRUE"),
-            (
-                "ListViewPageUrl",
-                "http://www.marylandattorneygeneral.gov/Pages/Opinions/index.aspx",
-            ),
-            ("GroupString", ";#%s;#" % self.year),
-            ("IsGroupRender", "TRUE"),
-        )
