@@ -1,4 +1,6 @@
 from requests import HTTPError
+import pkgutil
+import juriscraper
 
 
 def build_module_list(court_id):
@@ -42,6 +44,20 @@ def build_module_list(court_id):
     find_all_attr_or_punt(court_id)
 
     return module_strings
+
+
+def get_module_by_name(name):
+    for importer, modname, ispkg in pkgutil.walk_packages(
+        path=juriscraper.__path__,
+        prefix=juriscraper.__name__ + ".",
+        onerror=lambda x: None,
+    ):
+        if modname.rsplit(".")[1] == name:
+            package, module = modname.rsplit(".", 1)
+            juriscraper_module = __import__(
+                "%s.%s" % (package, module), globals(), locals(), [module]
+            )
+            return juriscraper_module.Site()
 
 
 def site_yielder(iterable, mod):
