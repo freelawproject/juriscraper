@@ -7,13 +7,12 @@
 # Date created: 25 July 2014
 # Date updated: 2/29/2020
 
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteAspx import OpinionSiteAspx
 from juriscraper.lib.string_utils import convert_date_string
 from datetime import datetime, timedelta
-from lxml.html import fromstring
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteAspx):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -26,17 +25,31 @@ class Site(OpinionSite):
         self.soup = None
         self.data = None
 
-    def _download(self, request_dict={}):
-        # Set our local variables
-        self.set_local_variables()
+        self.go_until_date = self.case_date - timedelta(self.backwards_days)
+        self.page = 1
+        self.rs = "p$lt$zonePagePlaceholder$pageplaceholder$p$lt$ctl02$OpinionFilter1$filterControl$drp"
+        self.date_xp = './/td/a[@class="link-pdf"]/ancestor::tr/td[1]'
+        self.row_xp = './/td/a[@class="link-pdf"]/ancestor::tr'
 
+    # Required for OpinionSiteAspx
+    def _get_event_target(self):
+        return "p$lt$zonePagePlaceholder$pageplaceholder$p$lt$ctl06$UniversalPager$pagerElem"
+
+    # Required for OpinionSiteAspx
+    def _get_data_template(self):
+        return {
+            "__EVENTTARGET": None,
+            "__VIEWSTATE": None,
+        }
+
+    def _download(self, request_dict={}):
         # Load the homepage
-        self.make_soup(self.url)
+        self._get_soup(self.url)
 
         # Iterate over the pages until we reach our go until date
         while self.page:
-            self.set_data()
-            self.make_soup(self.url)
+            self._update_data()
+            self._get_soup(self.url)
             self.rows = self.soup.xpath(self.row_xp)
 
             last_dt = self.soup.xpath(self.date_xp)[-1].text_content().strip()
@@ -74,26 +87,14 @@ class Site(OpinionSite):
         ]
 
     def set_data(self):
-        self.data = {
-            "__EVENTTARGET": self.event_target_key,
-            "__EVENTARGUMENT": self.page,
-            "__VIEWSTATE": self.soup.xpath(self.view_state_xp)[0],
-            "%sCourt" % self.rs: self.court,
-            "%sPublished" % self.rs: self.status,
-        }
+        # Call the super class version, which creates a new data dict from the
+        # template and fills in ASPX specific values.
+        super(Site, self)._update_data()
 
-    def make_soup(self, process_url):
-        if self.data is None:
-            r = self.request["session"].get(process_url)
-        else:
-            r = self.request["session"].post(process_url, data=self.data)
-        self.soup = fromstring(r.text)
-
-    def set_local_variables(self):
-        self.go_until_date = self.case_date - timedelta(self.backwards_days)
-        self.page = 1
-        self.rs = "p$lt$zonePagePlaceholder$pageplaceholder$p$lt$ctl02$OpinionFilter1$filterControl$drp"
-        self.event_target_key = "p$lt$zonePagePlaceholder$pageplaceholder$p$lt$ctl06$UniversalPager$pagerElem"
-        self.date_xp = './/td/a[@class="link-pdf"]/ancestor::tr/td[1]'
-        self.row_xp = './/td/a[@class="link-pdf"]/ancestor::tr'
-        self.view_state_xp = '//*[@id="__VIEWSTATE"]/@value'
+        self.data.update(
+            {
+                "__EVENTARGUMENT": self.page,
+                "%sCourt" % self.rs: self.court,
+                "%sPublished" % self.rs: self.status,
+            }
+        )
