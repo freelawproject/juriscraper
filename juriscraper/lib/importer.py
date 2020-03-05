@@ -1,4 +1,6 @@
 from requests import HTTPError
+from glob import iglob
+import os
 
 
 def build_module_list(court_id):
@@ -42,6 +44,23 @@ def build_module_list(court_id):
     find_all_attr_or_punt(court_id)
 
     return module_strings
+
+
+def generate_site_from_name(name):
+    db_root = os.path.abspath(
+        os.path.join(
+            os.path.dirname(__file__), "..", "opinions/*/*/%s.py" % name
+        )
+    )
+    module = [mod for mod in iglob(db_root)]
+    pathways = module[0].split("/")[-5:]
+    juriscraper_module = __import__(
+        "%s.%s" % (".".join(pathways[:-1]), pathways[-1][:-3]),
+        globals(),
+        locals(),
+        [pathways[-1][:-3]],
+    )
+    return juriscraper_module.Site()
 
 
 def site_yielder(iterable, mod):
