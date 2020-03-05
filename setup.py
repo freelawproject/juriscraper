@@ -4,10 +4,13 @@ import sys
 import unittest
 
 
-try:  # for pip >= 10
-    from pip._internal.req import parse_requirements
-except ImportError:  # for pip <= 9.0.3
-    from pip.req import parse_requirements
+try:  # for pip >= xx
+    from pip._internal.req.req_file import parse_requirements
+except ImportError:  # for pip > 10 and < xx
+    try:
+        from pip._internal.req import parse_requirements
+    except ImportError: # for pdip <= 9.0.3
+        from pip.req import parse_requirements
 
 from setuptools import setup, find_packages
 from setuptools.command.install import install
