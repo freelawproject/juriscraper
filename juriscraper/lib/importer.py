@@ -45,7 +45,7 @@ def build_module_list(court_id):
     return module_strings
 
 
-def get_module_by_name(name):
+def get_court_object_by_name(name):
     db_root = os.path.abspath(
         os.path.join(os.path.dirname(__file__), "..", "opinions")
     )
