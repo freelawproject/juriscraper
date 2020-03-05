@@ -43,6 +43,7 @@ class Site(OpinionSite):
         hrefs = []
         path = self.base_path + "//@href"
         for href in self.html.xpath(path):
+            href = "https://www.ustaxcourt.gov/UstcInOp/" + href
             if "?ID" in href:
                 hrefs.append(href)
             else:
