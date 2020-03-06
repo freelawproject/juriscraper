@@ -196,7 +196,6 @@ class Site(OpinionSite):
         else:
             match = re.search(tax_court_alt_regex, scraped_text)
             if match:
-                metadata["cite"] = match.group()
                 if "No." in match.group():
                     metadata["Citation"]["reporter"] = "T.C."
                     metadata["Citation"]["volume"] = match.group(8)
