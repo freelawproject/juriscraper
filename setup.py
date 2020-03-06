@@ -3,15 +3,8 @@ import os
 import sys
 import unittest
 
-
-try:  # for pip >= 10
-    from pip._internal.req import parse_requirements
-except ImportError:  # for pip <= 9.0.3
-    from pip.req import parse_requirements
-
 from setuptools import setup, find_packages
 from setuptools.command.install import install
-
 
 VERSION = "1.26.26"
 AUTHOR = "Free Law Project"
@@ -59,11 +52,6 @@ class VerifyVersion(install):
             )
             sys.exit(message.format(tag, VERSION))
 
-
-requirements = [
-    str(r.req) for r in parse_requirements("requirements.txt", session=False)
-]
-
 setup(
     name="juriscraper",
     description="An API to scrape American court websites for metadata.",
@@ -95,7 +83,22 @@ setup(
         "Programming Language :: Python :: Implementation :: PyPy",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-    install_requires=requirements,
+    install_requires=[
+        'six',
+        'argparse',
+        "cchardet>=1.1.2",
+        "certifi>=2017.4.17",
+        "chardet<3.1.0,>=3.0.2",
+        "cssselect",
+        "feedparser",
+        "geonamescache==0.20",
+        "html5lib",
+        "lxml==3.5.0",
+        "python-dateutil==2.5.0",
+        "requests==2.20.0",
+        "selenium==2.53.6",
+        "tldextract",
+    ],
     tests_require=["jsondate", "mock", "vcrpy"],
     include_package_data=True,
     test_suite="tests.test_local",
