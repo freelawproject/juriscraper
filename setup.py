@@ -52,6 +52,7 @@ class VerifyVersion(install):
             )
             sys.exit(message.format(tag, VERSION))
 
+
 setup(
     name="juriscraper",
     description="An API to scrape American court websites for metadata.",
@@ -84,8 +85,8 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     install_requires=[
-        'six',
-        'argparse',
+        "six",
+        "argparse",
         "cchardet>=1.1.2",
         "certifi>=2017.4.17",
         "chardet<3.1.0,>=3.0.2",

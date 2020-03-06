@@ -14,6 +14,7 @@ from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 from juriscraper.lib.html_utils import fix_links_but_keep_anchors
 from juriscraper.lib.models import citation_types
 
+
 class Site(OpinionSiteWebDriven):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
