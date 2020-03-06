@@ -1,5 +1,3 @@
-
-
 citation_types = {
     "FEDERAL": 1,
     "STATE": 2,
@@ -8,5 +6,5 @@ citation_types = {
     "SCOTUS_EARLY": 5,
     "LEXIS": 6,
     "WEST": 7,
-    "NEUTRAL": 8
+    "NEUTRAL": 8,
 }
