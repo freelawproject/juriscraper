@@ -11,11 +11,11 @@ History:
 """
 from datetime import date, datetime, timedelta
 from lxml import html
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteAspx import OpinionSiteAspx
 from juriscraper.lib.string_utils import convert_date_string
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteAspx):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         # Changing the page # in the url will get additional pages
@@ -28,82 +28,101 @@ class Site(OpinionSite):
         self.backwards_days = 7
         self.url = "http://www.supremecourtofohio.gov/rod/docs/"
         self.court_id = self.__module__
-        self.base_path = '//tr[contains(.//a/@href, ".pdf")]/td[2][string-length(normalize-space(text())) > 1]/./..'
+        self.base_xp = '//tr[contains(.//a/@href, ".pdf")]/td[2][string-length(normalize-space(text())) > 1]/./..'
         self.end_date = date.today()
         self.start_date = self.end_date - timedelta(days=self.backwards_days)
+        self.page = 2
+        self.data = None
+        self.soup = None
 
+    # Required by OpinionSiteAspx
+    def _get_event_target(self):
+        return "ctl00$MainContent$gvResults"
+
+    # Required by OpinionSiteAspx
+    def _get_data_template(self):
+        return {
+            "__EVENTTARGET": None,
+            "__EVENTVALIDATION": None,
+            "__VIEWSTATE": None,
+            "__VIEWSTATEENCRYPTED": "",
+            "ctl00$MainContent$ddlCounty": "0",
+            "ctl00$MainContent$btnSubmit": "Submit",
+            "ctl00$MainContent$ddlRowsPerPage": "200",
+        }
 
     def _download(self, request_dict={}):
-        self.set_local_variables()
-        assert self.start_date.year == self.end_date.year, "Ohio can not wrap years"
-        pg = 2
-        r = self.request["session"].get(self.url)
-        soup = html.fromstring(r.text)
-        self.data["__VIEWSTATE"] = soup.xpath('//*[@id="__VIEWSTATE"]/@value')[
-            0
-        ]
-        self.data["__EVENTVALIDATION"] = soup.xpath(
-            '//*[@id="__EVENTVALIDATION"]/@value'
-        )[0]
+        self.start_date = self.end_date - timedelta(days=self.backwards_days)
+        assert (
+            self.start_date.year == self.end_date.year
+        ), "Ohio can not wrap years"
+        self._get_soup(self.url)
+        self._update_data()
+        self._get_soup(self.url)
 
-        response = self.request["session"].post(
-            "http://www.supremecourtofohio.gov/rod/docs/", data=self.data
-        )
-
-        soup = html.fromstring(response.text)
-        orders = soup.xpath(self.base_path)
-
+        orders = self.soup.xpath(self.base_xp)
+        print(orders)
         del self.data["ctl00$MainContent$btnSubmit"]
 
-        while soup.xpath('//a[contains(.//@href, "Page$%s\'")]' % pg):
-            self.data["__EVENTTARGET"] = "ctl00$MainContent$gvResults"
-            self.data["__EVENTARGUMENT"] = "Page$%s" % pg
-            self.data["__VIEWSTATE"] = soup.xpath(
-                '//*[@id="__VIEWSTATE"]/@value'
-            )[0]
-            self.data["__EVENTVALIDATION"] = soup.xpath(
-                '//*[@id="__EVENTVALIDATION"]/@value'
-            )[0]
-            next_page = self.request["session"].post(self.url, data=self.data)
-            if convert_date_string(orders[0].xpath(".//td")[5].text_content().strip()) <= self.end_date:
+        while self.soup.xpath(
+            '//a[contains(.//@href, "Page$%s\'")]' % self.page
+        ):
+            self._get_soup()
+            if (
+                convert_date_string(
+                    orders[0].xpath(".//td")[5].text_content().strip()
+                )
+                <= self.end_date
+            ):
                 pg = 999
 
-            soup = html.fromstring(next_page.text)
-            orders = orders + soup.xpath(self.base_path)
-            pg = pg + 1
+            orders = orders + self.soup.xpath(self.base_xp)
+            self.page += 1
 
-            if convert_date_string(orders[-1].xpath(".//td")[5].text_content().strip()) < self.start_date:
+            if (
+                convert_date_string(
+                    orders[-1].xpath(".//td")[5].text_content().strip()
+                )
+                < self.start_date
+            ):
                 pg = 999
 
-        return [x for x in orders if self.end_date >= convert_date_string(x.xpath(".//td")[5].text_content().strip()) >= self.start_date]
+        self.orders = [
+            x
+            for x in orders
+            if self.end_date
+            >= convert_date_string(x.xpath(".//td")[5].text_content().strip())
+            >= self.start_date
+        ]
+        return self.soup
 
     def _get_case_names(self):
         return [
-            row.xpath(".//td")[0].text_content().strip() for row in self.html
+            row.xpath(".//td")[0].text_content().strip() for row in self.orders
         ]
 
     def _get_download_urls(self):
-        return [row.xpath(".//a/@href")[0] for row in self.html]
+        return [row.xpath(".//a/@href")[0] for row in self.orders]
 
     def _get_docket_numbers(self):
         return [
-            row.xpath(".//td")[1].text_content().strip() for row in self.html
+            row.xpath(".//td")[1].text_content().strip() for row in self.orders
         ]
 
     def _get_summaries(self):
         return [
-            row.xpath(".//td")[2].text_content().strip() for row in self.html
+            row.xpath(".//td")[2].text_content().strip() for row in self.orders
         ]
 
     def _get_case_dates(self):
         return [
             convert_date_string(row.xpath(".//td")[5].text_content().strip())
-            for row in self.html
+            for row in self.orders
         ]
 
     def _get_neutral_citations(self):
         return [
-            row.xpath(".//td")[7].text_content().strip() for row in self.html
+            row.xpath(".//td")[7].text_content().strip() for row in self.orders
         ]
 
     def _get_precedential_statuses(self):
@@ -111,17 +130,19 @@ class Site(OpinionSite):
 
     def _get_judges(self):
         return [
-            row.xpath(".//td")[3].text_content().strip() for row in self.html
+            row.xpath(".//td")[3].text_content().strip() for row in self.orders
         ]
 
-    def set_local_variables(self):
-        self.start_date = self.end_date - timedelta(days=self.backwards_days)
-        self.data = {
-            "__VIEWSTATEENCRYPTED": "",
-            "ctl00$MainContent$ddlCourt": self.court_index,
-            "ctl00$MainContent$ddlCounty": "0",
-            "ctl00$MainContent$ddlDecidedYearMin": self.end_date.year,
-            "ctl00$MainContent$ddlDecidedYearMax": self.start_date.year,
-            "ctl00$MainContent$btnSubmit": "Submit",
-            "ctl00$MainContent$ddlRowsPerPage": "200",
-        }
+    def _update_data(self):
+        # Call the super class version, which creates a new data dict from the
+        # template and fills in ASPX specific values.
+        super(Site, self)._update_data()
+
+        self.data.update(
+            {
+                "__EVENTARGUMENT": "Page$%s" % self.page,
+                "ctl00$MainContent$ddlCourt": self.court_index,
+                "ctl00$MainContent$ddlDecidedYearMin": self.end_date.year,
+                "ctl00$MainContent$ddlDecidedYearMax": self.start_date.year,
+            }
+        )
