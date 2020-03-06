@@ -18,6 +18,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from juriscraper.AbstractSite import logger, phantomjs_executable_path
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.html_utils import fix_links_but_keep_anchors
+from juriscraper.lib.models import citation_types
 
 
 class Site(OpinionSite):
@@ -158,7 +159,7 @@ class Site(OpinionSite):
         :return: dictionary of citations, reporter, volume and page
         """
         metadata = {
-            "Citation": {"type": "SPECIALTY"},
+            "Citation": {"type": citation_types["SPECIALTY"]},
             "OpinionCluster": {"precedential_status": ""},
         }
 
