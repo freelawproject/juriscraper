@@ -7,12 +7,20 @@ class OpinionSiteAspx(OpinionSite):
         super(OpinionSiteAspx, self).__init__(*args, **kwargs)
         self.spoof_user_agent = False
 
-    def _get_soup(self, url):
-        """Download a page of the site. Can be called multiple times.
+    def _update_html(self, url=None):
+        """Download a page of the site and store the result in self.html.
+
+        Can be called multiple times.
+
+        Defaults to downloading self.url if no url is passed, or a custom url
+        can be given.
 
         Either the first page of the site with GET, if self.data is empty, or
         a subsequent page with POST, if it is filled.
         """
+        if url is None:
+            url = self.url
+
         if self.spoof_user_agent:
             self.request["headers"] = {
                 "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36",
@@ -22,7 +30,7 @@ class OpinionSiteAspx(OpinionSite):
             r = self.request["session"].get(url)
         else:
             r = self.request["session"].post(url, data=self.data)
-        self.soup = html.fromstring(r.text)
+        self.html = html.fromstring(r.text)
 
     def _get_data_template(self):
         """Returns a template for data that should be POSTed to an ASPX page.
@@ -54,14 +62,14 @@ class OpinionSiteAspx(OpinionSite):
         """Update the standard ASPX parameters in the self.data dictionary.
 
         To be useful, this method requires that a page has already been
-        downloaded, in order to extract the values. This means that self.soup
+        downloaded, in order to extract the values. This means that self.html
         should be populated.
         """
-        if self.soup is None:
+        if self.html is None:
             return
 
         if "__VIEWSTATE" in self.data:
-            self.data["__VIEWSTATE"] = self.soup.xpath(
+            self.data["__VIEWSTATE"] = self.html.xpath(
                 '//*[@id="__VIEWSTATE"]/@value'
             )[0]
 
@@ -69,6 +77,6 @@ class OpinionSiteAspx(OpinionSite):
             self.data["__EVENTTARGET"] = self._get_event_target()
 
         if "__EVENTVALIDATION" in self.data:
-            self.data["__EVENTVALIDATION"] = self.soup.xpath(
+            self.data["__EVENTVALIDATION"] = self.html.xpath(
                 '//*[@id="__EVENTVALIDATION"]/@value'
             )[0]

@@ -22,7 +22,7 @@ class Site(OpinionSiteAspx):
         self.backwards_days = 14
         self.court = "Select Court"  # Supreme Court, Court of Appeals / BOTH
         self.status = "Select Status"  # Published, Unpublished / BOTH
-        self.soup = None
+        self.html = None
         self.data = None
 
         self.go_until_date = self.case_date - timedelta(self.backwards_days)
@@ -44,15 +44,15 @@ class Site(OpinionSiteAspx):
 
     def _download(self, request_dict={}):
         # Load the homepage
-        self._get_soup(self.url)
+        self._update_html(self.url)
 
         # Iterate over the pages until we reach our go until date
         while self.page:
             self._update_data()
-            self._get_soup(self.url)
-            self.rows = self.soup.xpath(self.row_xp)
+            self._update_html(self.url)
+            self.rows = self.html.xpath(self.row_xp)
 
-            last_dt = self.soup.xpath(self.date_xp)[-1].text_content().strip()
+            last_dt = self.html.xpath(self.date_xp)[-1].text_content().strip()
             if datetime.strptime(last_dt, "%m/%d/%Y") < self.go_until_date:
                 break
             self.page = self.page + 1

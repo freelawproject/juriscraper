@@ -33,7 +33,7 @@ class Site(OpinionSiteAspx):
         self.start_date = self.end_date - timedelta(days=self.backwards_days)
         self.page = 2
         self.data = None
-        self.soup = None
+        self.html = None
 
     # Required by OpinionSiteAspx
     def _get_event_target(self):
@@ -56,18 +56,18 @@ class Site(OpinionSiteAspx):
         assert (
             self.start_date.year == self.end_date.year
         ), "Ohio can not wrap years"
-        self._get_soup(self.url)
+        self._update_html()
         self._update_data()
-        self._get_soup(self.url)
+        self._update_html()
 
-        orders = self.soup.xpath(self.base_xp)
-        print(orders)
+        orders = self.html.xpath(self.base_xp)
         del self.data["ctl00$MainContent$btnSubmit"]
 
-        while self.soup.xpath(
+        while self.html.xpath(
             '//a[contains(.//@href, "Page$%s\'")]' % self.page
         ):
-            self._get_soup()
+            self._update_data()
+            self._update_html()
             if (
                 convert_date_string(
                     orders[0].xpath(".//td")[5].text_content().strip()
@@ -76,7 +76,7 @@ class Site(OpinionSiteAspx):
             ):
                 pg = 999
 
-            orders = orders + self.soup.xpath(self.base_xp)
+            orders = orders + self.html.xpath(self.base_xp)
             self.page += 1
 
             if (
@@ -94,7 +94,7 @@ class Site(OpinionSiteAspx):
             >= convert_date_string(x.xpath(".//td")[5].text_content().strip())
             >= self.start_date
         ]
-        return self.soup
+        return self.html
 
     def _get_case_names(self):
         return [

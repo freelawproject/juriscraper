@@ -36,10 +36,10 @@ class Site(OpinionSiteAspx):
         }
 
     def _download(self, request_dict={}):
-        self._get_soup(self.url)
+        self._update_html()
         self._update_data()
-        self._get_soup(self.url)
-        return self.soup
+        self._update_html()
+        return self.html
 
     def _get_download_urls(self):
         # URLs here take two forms. For precedential cases, they're simple, and
