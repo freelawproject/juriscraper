@@ -43,7 +43,7 @@ class Site(OpinionSiteAspx):
         self.base_url = "http://www.search.txcourts.gov"
         self.rows = []
         self.data = {}
-        self.soup = None
+        self.html = None
         self.total_xp = (
             '//*[@id="ctl00_ContentPlaceHolder1_grdDocuments_ctl00"]'
             "/thead/tr[1]/td/table/tbody/tr/td/div[5]/strong[1]"
@@ -64,32 +64,34 @@ class Site(OpinionSiteAspx):
 
     # Required for OpinionSiteAspx
     def _get_event_target(self):
-        el = self.soup.xpath('.//a[@class="rgCurrentPage"]')
+        el = self.html.xpath('.//a[@class="rgCurrentPage"]')
         if len(el):
             return el[0].getnext().get("href").split("'")[1]
         else:
             return None
 
     def _download(self, request_dict={}):
-        self._get_soup(self.url)
+        self._update_html()
         self._update_data()
-        self._get_soup(self.url2)
+        self._update_html(self.url2)
 
-        for row in self.soup.xpath('.//a[text()="Opinion"]/ancestor::tr'):
+        for row in self.html.xpath('.//a[text()="Opinion"]/ancestor::tr'):
             self.rows.append(row)
 
-        while int(self.soup.xpath(self.total_xp)[0].text_content()) > 25:
-            self._update_aspx_params()
-            self._get_soup(self.url2)
+        while int(self.html.xpath(self.total_xp)[0].text_content()) > 25:
+            self._update_data()
+            self._update_html(self.url2)
 
-            for row in self.soup.xpath('.//a[text()="Opinion"]/ancestor::tr'):
+            for row in self.html.xpath('.//a[text()="Opinion"]/ancestor::tr'):
                 self.rows.append(row)
 
             if (
-                self.soup.xpath('.//a[@class="rgCurrentPage"]')[0].getnext()
+                self.html.xpath('.//a[@class="rgCurrentPage"]')[0].getnext()
                 is None
             ):
                 break
+
+        return self.html
 
     def _get_case_names(self):
         case_names = []
