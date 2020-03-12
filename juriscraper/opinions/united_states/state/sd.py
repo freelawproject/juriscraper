@@ -6,37 +6,63 @@
 
 from lxml import html
 from datetime import datetime, timedelta
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteAspx import OpinionSiteAspx
 from juriscraper.lib.string_utils import convert_date_string, titlecase
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteAspx):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://ujs.sd.gov/Supreme_Court/opinions.aspx"
         self.backwards_days = 14
         self.case_date = datetime.now()
-        self.soup = None
+        self.html = None
         self.data = None
 
+        self.year = int(self.case_date.year)
+        self.go_until_date = self.case_date - timedelta(self.backwards_days)
+        self.next_button_xp = (
+            '//*[@id="ContentPlaceHolder1_ChildContent1_LinkButton_Next"]'
+        )
+        self.upKey = "ctl00$ctl00$ContentPlaceHolder1$ChildContent1$UpdatePanel_Opinions"
+        self.nxtKey = (
+            "ctl00$ctl00$ContentPlaceHolder1$ChildContent1$LinkButton_Next"
+        )
+        self.yearKey = "ctl00$ctl00$ContentPlaceHolder1$ChildContent1$Repeater_OpinionsYear$ctl%s$LinkButton1"
+        self.row_xp = '//tr[contains(.//a/@href, ".pdf")]'
+        self.date_xp = '//tr[contains(.//a/@href, ".pdf")]/td[1]'
+
+    # Required for OpinionSiteAspx
+    def _get_event_target(self):
+        return "%s" % self.nxtKey
+
+    # Required for OpinionSiteAspx
+    def _get_template_data(self):
+        return {
+            "__EVENTARGUMENT": "",
+            "__VIEWSTATEENCRYPTED": "",
+            "__VIEWSTATE": None,
+            "__EVENTVALIDATION": None,
+            "__EVENTTARGET": None,
+        }
+
     def _download(self, request_dict={}):
-        self.set_local_variables()
-        self.make_soup(self.url)
+        self._update_html()
         if int(datetime.today().year) != self.year:
-            self.set_data()
-            self.make_soup(self.url)
-        self.rows = self.soup.xpath(self.row_xp)
-        last_dt = self.soup.xpath(self.date_xp)[-1].text_content().strip()
+            self._update_data()
+            self._update_html()
+        self.rows = self.html.xpath(self.row_xp)
+        last_dt = self.html.xpath(self.date_xp)[-1].text_content().strip()
         if datetime.strptime(last_dt, "%m/%d/%Y") < self.go_until_date:
             return
 
-        while self.soup.xpath(self.next_button_xp)[0].get("href"):
-            self.update_data()
-            self.make_soup(self.url)
-            self.rows = self.rows + self.soup.xpath(self.row_xp)
+        while self.html.xpath(self.next_button_xp)[0].get("href"):
+            self._update_data()
+            self._update_html()
+            self.rows = self.rows + self.html.xpath(self.row_xp)
 
-            last_dt = self.soup.xpath(self.date_xp)[-1].text_content().strip()
+            last_dt = self.html.xpath(self.date_xp)[-1].text_content().strip()
             if datetime.strptime(last_dt, "%m/%d/%Y") < self.go_until_date:
                 break
 
@@ -59,46 +85,20 @@ class Site(OpinionSite):
         cites = [row.xpath(".//td/text()")[1].strip() for row in self.rows]
         return ["%s S.D. %s" % (self.year, cite) for cite in cites]
 
-    def set_data(self):
+    def _update_data(self):
+        # Call the super class version, which creates a new data dict from the
+        # template and fills in ASPX specific values.
+        super(Site, self)._update_data()
+
         year_variable = "%0*d" % (2, int(datetime.today().year) - self.year)
         self.yearKey = self.yearKey % year_variable
-        self.data = {
-            "ctl00$ctl00$ScriptManager1": "%s|%s" % (self.upKey, self.yearKey),
-            "__EVENTTARGET": self.yearKey,
-            "__EVENTARGUMENT": "",
-            "__VIEWSTATEENCRYPTED": "",
-            "__VIEWSTATE": self.soup.xpath(self.vs)[0],
-            "__EVENTVALIDATION": self.soup.xpath(self.ev)[0],
-        }
-
-    def update_data(self):
+        self.data.update(
+            {
+                "ctl00$ctl00$ScriptManager1": "%s|%s"
+                % (self.upKey, self.yearKey),
+            }
+        )
         self.data["ctl00$ctl00$ScriptManager1"] = "%s|%s" % (
             self.upKey,
             self.nxtKey,
         )
-        self.data["__EVENTTARGET"] = "%s" % self.nxtKey
-        self.data["__VIEWSTATE"] = self.soup.xpath(self.vs)[0]
-        self.data["__EVENTVALIDATION"] = self.soup.xpath(self.ev)[0]
-
-    def make_soup(self, process_url):
-        if self.data is None:
-            r = self.request["session"].get(process_url)
-        else:
-            r = self.request["session"].post(process_url, data=self.data)
-        self.soup = html.fromstring(r.text)
-
-    def set_local_variables(self):
-        self.year = int(self.case_date.year)
-        self.go_until_date = self.case_date - timedelta(self.backwards_days)
-        self.next_button_xp = (
-            '//*[@id="ContentPlaceHolder1_ChildContent1_LinkButton_Next"]'
-        )
-        self.upKey = "ctl00$ctl00$ContentPlaceHolder1$ChildContent1$UpdatePanel_Opinions"
-        self.nxtKey = (
-            "ctl00$ctl00$ContentPlaceHolder1$ChildContent1$LinkButton_Next"
-        )
-        self.yearKey = "ctl00$ctl00$ContentPlaceHolder1$ChildContent1$Repeater_OpinionsYear$ctl%s$LinkButton1"
-        self.vs = '//*[@id="__VIEWSTATE"]/@value'
-        self.ev = '//*[@id="__EVENTVALIDATION"]/@value'
-        self.row_xp = '//tr[contains(.//a/@href, ".pdf")]'
-        self.date_xp = '//tr[contains(.//a/@href, ".pdf")]/td[1]'
