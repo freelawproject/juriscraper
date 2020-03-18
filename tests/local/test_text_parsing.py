@@ -309,7 +309,6 @@ VerDate Nov 24 2008   10:59 Jul 11, 2014   Jkt 372897   PO 20012   Frm 00002   F
                 results["Citation"]["reporter"],
                 results["Citation"]["page"],
             )
-            docket_number = results['Docket']['docket_number']
+            docket_number = results["Docket"]["docket_number"]
             self.assertEqual(docket_number, a)
             print "✓", docket_number
-
