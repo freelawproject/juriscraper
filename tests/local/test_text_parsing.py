@@ -211,7 +211,7 @@ VerDate Nov 24 2008   10:59 Jul 11, 2014   Jkt 372897   PO 20012   Frm 00002   F
                    MICHAEL KEITH SHENK, PETITIONER v. COMMISSIONER
                                                     OF INTERNAL REVENUE, RESPONDENT
     
-                                                        Docket No. 5706–12.                            Filed May 6, 2013.
+                                                        Docket No. 5706-12.                            Filed May 6, 2013.
     
                                                   P was divorced from his wife, and their 2003 ‘‘Judgment of
                                                Absolute Divorce’’ provided that his ex-wife would have pri-
@@ -304,11 +304,6 @@ VerDate Nov 24 2008   10:59 Jul 11, 2014   Jkt 372897   PO 20012   Frm 00002   F
         site = tax.Site()
         for q, a in test_pairs:
             results = site.extract_from_text(q)
-            cite_string = "%s %s %s" % (
-                results["Citation"]["volume"],
-                results["Citation"]["reporter"],
-                results["Citation"]["page"],
-            )
             docket_number = results["Docket"]["docket_number"]
             self.assertEqual(docket_number, a)
             print "✓", docket_number

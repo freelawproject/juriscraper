@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Scraper for the United States Tax Court
 # CourtID: tax
 # Court Short Name: Tax Ct.
