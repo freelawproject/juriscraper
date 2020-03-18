@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Scraper for the United States Tax Court
 # CourtID: tax
 # Court Short Name: Tax Ct.
@@ -154,6 +155,7 @@ class Site(OpinionSiteWebDriven):
         """
         metadata = {
             "Citation": {"type": citation_types["SPECIALTY"]},
+            "Docket": {"docket_number": ""},
             "OpinionCluster": {"precedential_status": ""},
         }
 
@@ -210,4 +212,48 @@ class Site(OpinionSiteWebDriven):
                         "precedential_status"
                     ] = "Unpublished"
 
+        metadata["Docket"]["docket_number"] = self.get_tax_docket_numbers(
+            scraped_text
+        )
         return metadata
+
+    def get_tax_docket_numbers(self, opinion_text):
+        """Parse opinion plain text for docket numbers.
+
+        First we idenitify where the docket numbers are in the document.
+        This is normally at the start of the document but can often follow
+         a lengthy case details section.
+
+        :param opinion_text: is the opinions plain_text
+        :return docket_string: as string of docket numbers Ex. (18710-94, 12321-95)
+        """
+        opinion_text = self.remove_en_em_dash(opinion_text)
+        parsed_text = ""
+        docket_no_re = r"Docket.? Nos?.? .*[0-9]{3,5}"
+        matches = re.finditer(docket_no_re, opinion_text)
+
+        for matchNum, match in enumerate(matches, start=1):
+            parsed_text = opinion_text[match.start() :]
+            break
+
+        matches2 = re.finditer(
+            r"[0-9]{3,5}(-|–)[\w]{2,4}([A-Z])?((\.)| [A-Z]\.)", parsed_text
+        )
+        for m2, match2 in enumerate(matches2, start=0):
+            parsed_text = parsed_text[: match2.end()]
+            break
+
+        docket_end_re = r"[0-9]{3,5}(-|–)[\w]{2,4}([A-Z])?((\,|\.)| [A-Z]\.)"
+
+        matches = re.finditer(docket_end_re, parsed_text, re.MULTILINE)
+        hits = []
+        for matchNum, match in enumerate(matches, start=1):
+            hits.append(match.group())
+        docket_string = ", ".join(hits).replace(",,", ",").replace(".", "")
+        return docket_string.strip()
+
+    def remove_en_em_dash(self, opinion_text):
+        opinion_text = re.sub(u"–", "-", opinion_text)
+        opinion_text = re.sub(u"—", "-", opinion_text)
+        opinion_text = re.sub(u"–", "-", opinion_text)
+        return opinion_text
