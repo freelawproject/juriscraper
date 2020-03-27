@@ -5,11 +5,10 @@ Author: Michael Lissner
 Date created: 13 June 2014
 """
 
-from datetime import datetime
 import re
-
 from juriscraper.OralArgumentSite import OralArgumentSite
 from juriscraper.lib.string_utils import clean_if_py3
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OralArgumentSite):
@@ -41,10 +40,11 @@ class Site(OralArgumentSite):
         for t in self.html.xpath(path):
             # t looks like: [Argued:91-1-2015]
             t = re.sub(r"[\[\]\s]", "", t)  # Strip out [ and ].
-            date_string = (
-                clean_if_py3(t).split(":", 1)[1].strip()
-            )  # Then get the date part.
-            dates.append(datetime.strptime(date_string, "%m-%d-%Y").date())
+            date_string = clean_if_py3(t).split(":", 1)[1].strip()
+            # sometimes there is a type like: [Argued:91-1-2015mp3]
+            # such as in ca1_example_2.xml
+            date_string = date_string.replace("mp3", "")
+            dates.append(convert_date_string(date_string))
         return dates
 
     def _get_docket_numbers(self):
