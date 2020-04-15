@@ -132,12 +132,21 @@ class BaseReport(object):
         get the PDF itself ('1').
         :return the Request.response object and the url queried
         """
-        timeout = (60, 300)
         url = make_doc1_url(self.court_id, pacer_doc_id, True)
         data = {
             "case_id": pacer_case_id,
             "got_receipt": got_receipt,
+            # Include the PDF header where possible. There are several
+            # variations on this:
+            #  1. CACD: The court doesn't allow headers. This param will have
+            #     no effect.
+            #  2. CAND: There's no user-facing option, but headers can be
+            #     toggled on (1) or off (2).
+            # PDF downloading also can do the thing with the iframe or not, but
+            # that doesn't seem to affect this.
+            "pdf_header": "1",
         }
+        timeout = (60, 300)
         logger.info("GETting URL: %s with params: %s" % (url, data))
         r = self.session.get(url, params=data, timeout=timeout)
         return r, url

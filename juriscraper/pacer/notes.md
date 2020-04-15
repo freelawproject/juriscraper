@@ -189,7 +189,9 @@ All of the JavaScript in PACER has been compressed making it difficult to unders
     //   download the PDF immediately. This is set to 1 *after* the user has
     //   seen the receipt. If receipts are disabled, I believe this will always
     //   be the empty string.
-    // pdf_header: ??
+    // pdf_header: Whether to put the blue header on the top of the generated
+    //  PDFs. 1 means to do so, 2 means to not do so. Some courts seem to 
+    //  treat the absence of this parameter as a desire not to do the header.
     // pdf_toggle_possible: ??
     // magic_num: ??
     // hdr: ??
