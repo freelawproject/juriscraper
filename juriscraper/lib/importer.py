@@ -11,6 +11,12 @@ def build_module_list(court_id):
     item is added to a list of modules.
 
     Returns either a list of modules or in the case of errors, an empty list.
+
+    *N.B.*: For the most part, this re-creates the `walk` function from the
+    pkgutil library. At some point, it's probably worth replacing this with
+    that. Live and learn.
+
+    https://docs.python.org/2/library/pkgutil.html#pkgutil.walk_packages
     """
     module_strings = []
 
