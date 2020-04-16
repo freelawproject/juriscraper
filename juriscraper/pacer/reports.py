@@ -134,7 +134,7 @@ class BaseReport(object):
         """
         url = make_doc1_url(self.court_id, pacer_doc_id, True)
         data = {
-            "case_id": pacer_case_id,
+            "caseid": pacer_case_id,
             "got_receipt": got_receipt,
             # Include the PDF header where possible. There are several
             # variations on this:
