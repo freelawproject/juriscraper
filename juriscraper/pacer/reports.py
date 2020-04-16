@@ -136,15 +136,16 @@ class BaseReport(object):
         data = {
             "caseid": pacer_case_id,
             "got_receipt": got_receipt,
-            # Include the PDF header where possible. There are several
-            # variations on this:
-            #  1. CACD: The court doesn't allow headers. This param will have
-            #     no effect.
-            #  2. CAND: There's no user-facing option, but headers can be
-            #     toggled on (1) or off (2).
-            # PDF downloading also can do the thing with the iframe or not, but
-            # that doesn't seem to affect this.
+            # Include the PDF header where possible. Different courts allow
+            # different things here. Some have the toggle on the Docket Report
+            # page to allow headers, others do not. The ones that do not *seem*
+            # to default to including the headers. There's also a setting in
+            # ECF accounts that you can toggle to always include headers, but
+            # it's entirely unclear how it interacts with the per-docket
+            # settings. Anyway, we aggressively turn on the headers without an
+            # option to turn them off atm.
             "pdf_header": "1",
+            "pdf_toggle_possible": "1",
         }
         timeout = (60, 300)
         logger.info("GETting URL: %s with params: %s" % (url, data))
