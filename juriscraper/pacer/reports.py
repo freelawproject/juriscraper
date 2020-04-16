@@ -148,8 +148,8 @@ class BaseReport(object):
             "pdf_toggle_possible": "1",
         }
         timeout = (60, 300)
-        logger.info("GETting URL: %s with params: %s" % (url, data))
-        r = self.session.get(url, params=data, timeout=timeout)
+        logger.info("POSTing URL: %s with params: %s" % (url, data))
+        r = self.session.post(url, data=data, timeout=timeout)
         return r, url
 
     def download_pdf(self, pacer_case_id, pacer_doc_id):
