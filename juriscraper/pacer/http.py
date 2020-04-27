@@ -393,7 +393,7 @@ class PacerSession(requests.Session):
         """
         if is_pdf(r):
             return False
-        
+
         if is_text(r):
             return False
 
