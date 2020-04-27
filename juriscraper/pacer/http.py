@@ -6,7 +6,7 @@ from requests.packages.urllib3 import exceptions
 from ..lib.exceptions import PacerLoginException
 from ..lib.html_utils import get_html_parsed_text, get_xml_parsed_text
 from ..lib.log_tools import make_default_logger
-from ..pacer.utils import is_pdf
+from ..pacer.utils import is_pdf, is_text
 
 logger = make_default_logger()
 
