@@ -164,7 +164,7 @@ def is_pdf(response):
 
 def is_text(response):
     """Determines whether the item downloaded is a text file or something else."""
-    if ".txt" in response.headers.get("content-type"):
+    if ".txt" in response.headers.get("content-type", ""):
         return True
     return False
 
