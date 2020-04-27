@@ -393,6 +393,9 @@ class PacerSession(requests.Session):
         """
         if is_pdf(r):
             return False
+        
+        if is_text(r):
+            return False
 
         logged_in = check_if_logged_in_page(r.text)
         if logged_in:
