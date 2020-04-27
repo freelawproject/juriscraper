@@ -6,7 +6,7 @@ from requests.packages.urllib3 import exceptions
 from ..lib.exceptions import PacerLoginException
 from ..lib.html_utils import get_html_parsed_text, get_xml_parsed_text
 from ..lib.log_tools import make_default_logger
-from ..pacer.utils import is_pdf
+from ..pacer.utils import is_pdf, is_text
 
 logger = make_default_logger()
 
@@ -392,6 +392,9 @@ class PacerSession(requests.Session):
         :raises: PacerLoginException, if unable to create a new session.
         """
         if is_pdf(r):
+            return False
+
+        if is_text(r):
             return False
 
         logged_in = check_if_logged_in_page(r.text)

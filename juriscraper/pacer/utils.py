@@ -162,6 +162,13 @@ def is_pdf(response):
     return False
 
 
+def is_text(response):
+    """Determines whether the item downloaded is a text file or something else."""
+    if ".txt" in response.headers.get("content-type", ""):
+        return True
+    return False
+
+
 def get_nonce_from_form(r):
     """Get a nonce value from a HTML response. Returns the first nonce that is
     found.
