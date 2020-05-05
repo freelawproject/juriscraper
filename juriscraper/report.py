@@ -38,6 +38,8 @@ def generate_scraper_report(file_path, results):
         + len(with_zero_results)
         + len(with_global_failure),
     }
-    template = jinja_env.get_template("juriscraper/templates/report.html.jinja2")
+    template = jinja_env.get_template(
+        "juriscraper/templates/report.html.jinja2"
+    )
     with open(file_path, "w") as f:
         f.write(template.render(display))
