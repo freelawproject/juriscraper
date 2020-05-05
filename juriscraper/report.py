@@ -21,7 +21,7 @@ def generate_scraper_report(file_path, results):
             has_error = True
         for exc in scrape.get("exceptions", []):
             if len(exc) > 0:
-                with_error.append(name)
+                with_errors.append(name)
                 has_error = True
                 break
         if not has_error:
@@ -38,6 +38,6 @@ def generate_scraper_report(file_path, results):
         + len(with_zero_results)
         + len(with_global_failure),
     }
-    template = jinja_env.get_template("report.html.jinja2")
+    template = jinja_env.get_template("juriscraper/templates/report.html.jinja2")
     with open(file_path, "w") as f:
         f.write(template.render(display))

@@ -21,7 +21,7 @@ class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "http://www.ca2.uscourts.gov/decisions"
+        self.url = "https://www.ca2.uscourts.gov/decisions"
         self.method = "POST"
         self.parameters = {
             "IW_SORT": "-DATE",
