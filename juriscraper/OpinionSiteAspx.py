@@ -65,8 +65,9 @@ class OpinionSiteAspx(OpinionSite):
         downloaded, in order to extract the values. This means that self.html
         should be populated.
         """
-        if self.html is None:
-            return
+        assert (
+            self.html is not None
+        ), "self.html needs to be set before updating"
 
         if "__VIEWSTATE" in self.data:
             self.data["__VIEWSTATE"] = self.html.xpath(
