@@ -6,71 +6,42 @@
 # Neutral Citation Format (Summary opinions: T.C. Summary Opinion 2012-1
 
 import re
+from lxml import html
 from datetime import date, datetime, timedelta
-from dateutil.rrule import WEEKLY, rrule
-
-from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
-from juriscraper.lib.html_utils import fix_links_but_keep_anchors
+from juriscraper.OpinionSiteAspx import OpinionSiteAspx
 
 
-class Site(OpinionSiteWebDriven):
+class Site(OpinionSiteAspx):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
-        self.uses_selenium = True
         self.url = "https://www.ustaxcourt.gov/UstcInOp/OpinionSearch.aspx"
         self.base_path = (
             '//tr[@class="ResultsOddRow" or ' '@class="ResultsEvenRow"]'
         )
         self.case_date = date.today()
         self.backwards_days = 14
-        self.back_scrape_iterable = [
-            i.date()
-            for i in rrule(
-                WEEKLY, dtstart=date(1995, 9, 25), until=date(2018, 11, 13),
-            )
-        ]
-
         self.court_id = self.__module__
+        self.data = None
+        self.spoof_user_agent = True
+
+    def _get_data_template(self):
+        return {
+            "ctl00$Content$ddlJudges": "0",
+            "ctl00$Content$ddlOpinionTypes": "0",
+            "ctl00$Content$rdoCaseName": "D",
+            "ctl00$Content$ddlDocumentNumHits": "All",
+            "ctl00$Content$btnSearch": "Search",
+            "__VIEWSTATE": None,
+            "__EVENTVALIDATION": None,
+        }
 
     def _download(self, request_dict={}):
-        """Uses Selenium because doing it with requests is a pain."""
-        if self.test_mode_enabled():
-            return super(Site, self)._download(request_dict=request_dict)
-
-        logger.info("Now downloading case page at: %s" % self.url)
-        self.initiate_webdriven_session()
-
-        # Set the start and end dates
-        start_date_id = "ctl00_Content_dpDateSearch_dateInput"
-        start_date_input = self.webdriver.find_element_by_id(start_date_id)
-        start_date_input.send_keys(
-            (self.case_date - timedelta(days=self.backwards_days)).strftime(
-                "%-m/%-d/%Y"
-            )
-        )
-
-        end_date_id = "ctl00_Content_dpDateSearchTo_dateInput"
-        end_date_input = self.webdriver.find_element_by_id(end_date_id)
-        end_date_input.send_keys(self.case_date.strftime("%-m/%-d/%Y"))
-        # self.take_screenshot()
-
-        # Check ordering by case date (this orders by case date, *ascending*)
-        ordering_id = "Content_rdoCaseName_1"
-        self.webdriver.find_element_by_id(ordering_id).click()
-
-        # Submit
-        self.webdriver.find_element_by_id("Content_btnSearch").click()
-
-        # Do not proceed until the results show up.
-        self.wait_for_id("Content_ddlResultsPerPage")
-        # self.take_screenshot()
-
-        text = self._clean_text(self.webdriver.page_source)
-        self.webdriver.quit()
-        html_tree = self._make_html_tree(text)
-        html_tree.rewrite_links(fix_links_but_keep_anchors, base_href=self.url)
-        return html_tree
+        self.method = "GET"
+        self._update_html()
+        self._update_data()
+        self.method = "POST"
+        self._update_html()
+        return self.html
 
     def _get_download_urls(self):
         # URLs here take two forms. For precedential cases, they're simple, and
@@ -131,20 +102,6 @@ class Site(OpinionSiteWebDriven):
             dates.append(datetime.strptime(date_string, "%m/%d/%Y").date())
         return dates
 
-    def _download_backwards(self, d):
-        self.backwards_days = 7
-        self.case_date = d
-        logger.info(
-            "Running backscraper with date range: %s to %s",
-            self.case_date - timedelta(days=self.backwards_days),
-            self.case_date,
-        )
-        self.html = self._download()
-        if self.html is not None:
-            # Setting status is important because it prevents the download
-            # function from being run a second time by the parse method.
-            self.status = 200
-
     def extract_from_text(self, scraped_text):
         """Can we extract the citation and related information
 
@@ -171,7 +128,7 @@ class Site(OpinionSiteWebDriven):
             ([0-9]{4})                                          # Four digit year (volume)
             .                                                   # hyphen, em-dash etc.
             ([0-9]{1,3})\b)                                     # 1-3 digit number in order of publication (page)
-            |                                                   # or
+            |                                                   # or 
             ([0-9]{1,4})\s{1,}                                  # (volume)
             (T\.\ ?C\.\ No\.)(?:\s{1,})?                        # T.C. No. (reporter)
             (\d{1,4}))                                          # (page)
@@ -210,3 +167,27 @@ class Site(OpinionSiteWebDriven):
                     ] = "Unpublished"
 
         return metadata
+
+    def _update_data(self):
+        # Call the super class version, which creates a new data dict from the
+        # template and fills in ASPX specific values.
+        super(Site, self)._update_data()
+
+        self.backdate = self.case_date - timedelta(self.backwards_days)
+
+        f1_today = self.case_date.strftime("%m/%d/%Y")
+        f2_today = self.case_date.strftime("%Y-%m-%d-%H-%M-%S")
+
+        f1_backdate = self.backdate.strftime("%m/%d/%Y")
+        f2_backdate = self.backdate.strftime("%Y-%m-%d-%H-%M-%S")
+
+        self.data.update(
+            {
+                "ctl00$Content$dpDateSearch$dateInput": f1_backdate,
+                "ctl00_Content_dpDateSearch_dateInput_ClientState": '{"validationText":"%s","valueAsString":"%s","lastSetTextBoxValue":"%s"}'
+                % (f2_backdate, f2_backdate, f1_backdate),
+                "ctl00$Content$dpDateSearchTo$dateInput": f1_today,
+                "ctl00_Content_dpDateSearchTo_dateInput_ClientState": '{"validationText":"%s","valueAsString":"%s","lastSetTextBoxValue":"%s"}'
+                % (f2_today, f2_today, f1_today),
+            }
+        )
