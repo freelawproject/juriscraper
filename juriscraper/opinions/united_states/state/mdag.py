@@ -3,13 +3,26 @@ CourtID: ag
 Court Short Name: Maryland Attorney General
 """
 
+from lxml import html
 import datetime
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.string_utils import convert_date_stringq
 
 
 class Site(OpinionSite):
-    """Can use JSON responses to extract information per year
+    """This scraper is strange. The site it temperamental, and the javascript
+    seems to load successfully on some runs, but not on others. The dates are
+    also estimated, and the names are actually semi-long summaries. Furthermore,
+    the site's source is unmanageable, which has prevented us from being able to
+    create legitimate test/example files for coverage. We have a single example
+    file that's an empty document skeleton to prevent the test mechanism from
+    complaining. But it isn't a test providing real coverage.
+
+    We are doing the best we can with a bad site.
+
+    Note: While this site use ASPX, it is not an OpinionSiteASPX because it
+    simply downloads JSON from an endpoint and doesn't use any of the features
+    of that class.
     """
 
     def __init__(self, *args, **kwargs):
@@ -29,15 +42,18 @@ class Site(OpinionSite):
             "ListViewPageUrl": "http://www.marylandattorneygeneral.gov/Pages/Opinions/index.aspx",
             "GroupString": ";#%s;#" % self.year,
             "IsGroupRender": "TRUE",
+            "WebPartID": "{E1A60D10-12C0-4029-8BE0-BA5F9AC93BF8}",
         }
 
-        return self.request["session"].post(self.url, params=params).json()
+        r = self.request["session"].post(self.url, params=params)
+        self.json = r.json()
+        return html.fromstring(r.text)
 
     def _get_case_names(self):
-        return [x["Summary"] for x in self.html["Row"]]
+        return [x["Summary"] for x in self.json["Row"]]
 
     def _get_download_urls(self):
-        return [x["FileRef.urlencodeasurl"] for x in self.html["Row"]]
+        return [x["FileRef.urlencodeasurl"] for x in self.json["Row"]]
 
     def _get_case_dates(self):
         today = datetime.date.today()
@@ -51,12 +67,12 @@ class Site(OpinionSite):
             return [middle_of_year] * count
 
     def _get_docket_numbers(self):
-        return [x["Title"] for x in self.html["Row"]]
+        return [x["Title"] for x in self.json["Row"]]
 
     def _get_precedential_statuses(self):
         return [
             "Published" if "unpublished" not in x["Title"] else "Unpublished"
-            for x in self.html["Row"]
+            for x in self.json["Row"]
         ]
 
     def _get_date_filed_is_approximate(self):
