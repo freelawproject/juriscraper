@@ -48,7 +48,9 @@ class Site(OpinionSiteAspx):
         }
 
     def _download(self, request_dict={}):
+        self.method = "GET"
         self._update_html()
+        self.method = "POST"
         if int(datetime.today().year) != self.year:
             self._update_data()
             self._update_html()

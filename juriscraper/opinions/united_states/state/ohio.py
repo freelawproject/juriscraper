@@ -56,8 +56,13 @@ class Site(OpinionSiteAspx):
         assert (
             self.start_date.year == self.end_date.year
         ), "Ohio can not wrap years"
+        # Get the initial site
+        self.method = "GET"
         self._update_html()
+
+        # Do a post with updated data to get the opinions.
         self._update_data()
+        self.method = "POST"
         self._update_html()
 
         orders = self.html.xpath(self.base_xp)

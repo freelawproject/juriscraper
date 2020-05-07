@@ -36,8 +36,10 @@ class Site(OpinionSiteAspx):
         }
 
     def _download(self, request_dict={}):
+        self.method = "GET"
         self._update_html()
         self._update_data()
+        self.method = "POST"
         self._update_html()
         return self.html
 

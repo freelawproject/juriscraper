@@ -71,8 +71,10 @@ class Site(OpinionSiteAspx):
             return None
 
     def _download(self, request_dict={}):
+        self.method = "GET"
         self._update_html()
         self._update_data()
+        self.method = "POST"
         self._update_html(self.url2)
 
         for row in self.html.xpath('.//a[text()="Opinion"]/ancestor::tr'):

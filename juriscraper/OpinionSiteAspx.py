@@ -23,12 +23,16 @@ class OpinionSiteAspx(OpinionSite):
 
         if self.spoof_user_agent:
             self.request["headers"] = {
-                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36",
+                "User-Agent": (
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) "
+                    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 "
+                    "Safari/537.36"
+                ),
             }
 
-        if not self.data:
+        if self.method == "GET":
             r = self.request["session"].get(url)
-        else:
+        elif self.method == "POST":
             r = self.request["session"].post(url, data=self.data)
         self.html = html.fromstring(r.text)
 
