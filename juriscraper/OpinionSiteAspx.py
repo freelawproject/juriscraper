@@ -17,6 +17,9 @@ class OpinionSiteAspx(OpinionSite):
 
         Either the first page of the site with GET, if self.data is empty, or
         a subsequent page with POST, if it is filled.
+
+        :param url: The url to download. Will fallback to self.url if not given.
+        :type url: str.
         """
         if url is None:
             url = self.url
