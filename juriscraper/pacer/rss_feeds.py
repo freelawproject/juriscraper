@@ -3,9 +3,9 @@ import os
 import pprint
 import re
 import sys
-from datetime import date
 
 import feedparser
+from dateutil import parser
 from requests import Session
 
 from .docket_report import DocketReport
@@ -203,7 +203,7 @@ class PacerRssFeed(DocketReport):
         Although there is only one, return it as a list.
         """
         de = {
-            u"date_filed": date(*entry.published_parsed[:3]),
+            u"date_filed": parser.parse(entry.published),
             u"description": u"",
             u"document_number": self._get_value(
                 self.document_number_regex, entry.summary
