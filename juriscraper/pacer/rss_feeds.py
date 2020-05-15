@@ -72,6 +72,42 @@ reached out to all of these jurisdictions and heard back the following:
 """
 
 
+def append_or_merge_entry(docket_list, new_docket):
+    """Append new entry to our output or merge it if it's a multi-event entry.
+
+    CMECF entries can contain multiple events, e.g. anyone filing a Motion can
+    select one or more of the event types; so too for judicial orders. When
+    this is rendered in the RSS feed, it is rendered as two (or more) entries
+    for the same case document, with identical times, titles, links, and guids.
+
+    If the new entry is part of a multi-event entry, merge it with the prior
+    one. If it's not, append it to the list.
+
+    :param docket_list: A list of docket-like dictionaries, each containing
+    docket entries
+    :param new_docket: A new docket-like dictionary that can be appended or
+    merged into the docket_list.
+    :return None
+    """
+    for docket in docket_list:
+        entry = docket["docket_entries"][0]
+        new_entry = new_docket["docket_entries"][0]
+        same_dn = docket["docket_number"] == new_docket["docket_number"]
+        same_cn = docket["pacer_case_id"] == new_docket["pacer_case_id"]
+        same_date = entry["date_filed"] == new_entry["date_filed"]
+        same_doc_id = entry["pacer_doc_id"] == new_entry["pacer_doc_id"]
+        if all([same_dn, same_cn, same_date, same_doc_id]):
+            # if docket number, pacer_case_id, date filing, and pacer_doc_id
+            # are same, merge.
+            entry["short_description"] += (
+                " AND %s" % new_entry["short_description"]
+            )
+            break
+    else:
+        # Loop exited without hitting a break; item is distinct; append.
+        docket_list.append(new_docket)
+
+
 class PacerRssFeed(DocketReport):
     # The entries are HTML entity-coded, and these matches are run AFTER
     # decoding. A typical entry is of the form:
@@ -155,22 +191,25 @@ class PacerRssFeed(DocketReport):
         if self._data is not None:
             return self._data
 
-        data_list = []
+        docket_list = []
         for entry in self.feed.entries:
             try:
-                data = self.metadata(entry)
-                data[u"parties"] = None
-                data[u"docket_entries"] = self.docket_entries(entry)
+                new_docket = self.metadata(entry)
+                new_docket[u"parties"] = None
+                new_docket[u"docket_entries"] = self.docket_entries(entry)
             except AttributeError:
                 # Happens when RSS items lack necessary attributes like a URL
                 # or published date.
                 pass
             else:
-                if data[u"docket_entries"] and data["docket_number"]:
-                    data_list.append(data)
+                if (
+                    new_docket[u"docket_entries"]
+                    and new_docket["docket_number"]
+                ):
+                    append_or_merge_entry(docket_list, new_docket)
 
-        self._data = data_list
-        return data_list
+        self._data = docket_list
+        return docket_list
 
     def metadata(self, entry):
         data = {
