@@ -99,161 +99,157 @@ class LASCSearch(object):
             return {}
 
         # Docket Normalization
-        clean_data = {"QueuedCase": [], "LASCPDF": [], "LASCJSON": []}
+        clean_data = {u"QueuedCase": [], u"LASCPDF": [], u"LASCJSON": []}
 
-        case_info = data["CaseInformation"]
+        case_info = data[u"CaseInformation"]
 
         docket = {
-            "date_filed": datetime.strptime(
-                case_info["FilingDate"][0:10], "%Y-%m-%d"
-            ).date(),
-            "date_disposition": None,
-            "docket_number": case_info["CaseNumber"],
-            "district": case_info["District"],
-            "division_code": case_info["DivisionCode"],
-            "disposition_type": case_info["DispositionType"],
-            "disposition_type_code": "",
-            "case_type_str": case_info["CaseTypeDescription"],
-            "case_type_code": case_info["CaseType"],
-            "case_name": case_info["CaseTitle"] or "",
-            "judge_code": "",
-            "judge_name": case_info["JudicialOfficer"],
-            "courthouse_name": case_info["Courthouse"],
+            u"date_filed": case_info[u"FilingDate"].date(),
+            u"date_disposition": None,
+            u"docket_number": case_info[u"CaseNumber"],
+            u"district": case_info[u"District"],
+            u"division_code": case_info[u"DivisionCode"],
+            u"disposition_type": case_info[u"DispositionType"],
+            u"disposition_type_code": u"",
+            u"case_type_str": case_info[u"CaseTypeDescription"],
+            u"case_type_code": case_info[u"CaseType"],
+            u"case_name": case_info[u"CaseTitle"] or u"",
+            u"judge_code": u"",
+            u"judge_name": case_info[u"JudicialOfficer"],
+            u"courthouse_name": case_info[u"Courthouse"],
         }
 
-        if case_info["StatusDate"] is not None:
-            docket["date_status"] = case_info["StatusDate"]
-            # XXX Need to add in timezone support here
+        if case_info[u"StatusDate"] is not None:
             docket["date_status"] = datetime.strptime(
                 case_info["StatusDate"], "%m/%d/%Y"
-            ).strftime("%Y-%m-%d %H:%M:%S%z")
+            ).date()
         else:
-            docket["date_status"] = case_info["StatusDate"]
+            docket[u"date_status"] = case_info[u"StatusDate"]
 
-        docket["status_code"] = case_info["StatusCode"] or ""
-        docket["status_str"] = case_info["Status"]
-        clean_data["Docket"] = docket
+        docket[u"status_code"] = case_info[u"StatusCode"] or ""
+        docket[u"status_str"] = case_info[u"Status"]
+        clean_data[u"Docket"] = docket
 
         # Register of Actions normalization
-        clean_data["Action"] = []
-        for action in data["RegisterOfActions"]:
+        clean_data[u"Action"] = []
+        for action in data[u"RegisterOfActions"]:
             registered_action = {
-                "date_of_action": action["RegisterOfActionDate"],
-                "description": action["Description"],
-                "additional_information": action["AdditionalInformation"],
+                u"date_of_action": action[u"RegisterOfActionDate"],
+                u"description": action[u"Description"],
+                u"additional_information": action[u"AdditionalInformation"],
             }
-            clean_data["Action"].append(registered_action)
+            clean_data[u"Action"].append(registered_action)
 
         # Cross References normalization
-        clean_data["CrossReference"] = []
-        for cross_ref in data["CrossReferences"]:
+        clean_data[u"CrossReference"] = []
+        for cross_ref in data[u"CrossReferences"]:
             cross_reference = {
-                "date_cross_reference": cross_ref["CrossReferenceDate"],
-                "cross_reference_docket_number": cross_ref[
-                    "CrossReferenceCaseNumber"
+                u"date_cross_reference": cross_ref[u"CrossReferenceDate"],
+                u"cross_reference_docket_number": cross_ref[
+                    u"CrossReferenceCaseNumber"
                 ]
-                or "",
-                "cross_reference_type": cross_ref[
-                    "CrossReferenceTypeDescription"
+                or u"",
+                u"cross_reference_type": cross_ref[
+                    u"CrossReferenceTypeDescription"
                 ],
             }
-            clean_data["CrossReference"].append(cross_reference)
+            clean_data[u"CrossReference"].append(cross_reference)
 
         # Documents Filed
-        clean_data["DocumentFiled"] = []
-        for doc_filed in data["DocumentsFiled"]:
+        clean_data[u"DocumentFiled"] = []
+        for doc_filed in data[u"DocumentsFiled"]:
             document = {
-                "date_filed": doc_filed["DateFiled"],
-                "memo": doc_filed["Memo"] or "",
-                "document_type": doc_filed["Document"] or "",
-                "party_str": doc_filed["Party"] or "",
+                u"date_filed": doc_filed[u"DateFiled"],
+                u"memo": doc_filed[u"Memo"] or "",
+                u"document_type": doc_filed[u"Document"] or "",
+                u"party_str": doc_filed[u"Party"] or "",
             }
-            clean_data["DocumentFiled"].append(document)
+            clean_data[u"DocumentFiled"].append(document)
 
-        clean_data["QueuedPDF"] = []
-        clean_data["DocumentImage"] = []
-        for doc_image in data["DocumentImages"]:
+        clean_data[u"QueuedPDF"] = []
+        clean_data[u"DocumentImage"] = []
+        for doc_image in data[u"DocumentImages"]:
             image = {
-                "date_processed": doc_image["createDate"],
-                "date_filed": doc_image["docFilingDate"],
-                "doc_id": doc_image["docId"],
-                "page_count": doc_image["pageCount"],
-                "document_type": doc_image["documentType"] or "",
-                "document_type_code": doc_image["documentTypeID"],
-                "image_type_id": doc_image["imageTypeId"],
-                "app_id": doc_image["appId"] or "",
-                "odyssey_id": doc_image["OdysseyID"] or "",
-                "is_downloadable": doc_image["IsDownloadable"],
-                "security_level": doc_image["securityLevel"],
-                "description": doc_image["description"] or "",
-                "doc_part": doc_image["docPart"] or "",
-                "is_available": False,
+                u"date_processed": doc_image[u"createDate"],
+                u"date_filed": doc_image[u"docFilingDate"],
+                u"doc_id": doc_image[u"docId"],
+                u"page_count": doc_image[u"pageCount"],
+                u"document_type": doc_image[u"documentType"] or "",
+                u"document_type_code": doc_image[u"documentTypeID"],
+                u"image_type_id": doc_image[u"imageTypeId"],
+                u"app_id": doc_image[u"appId"] or u"",
+                u"odyssey_id": doc_image[u"OdysseyID"] or "",
+                u"is_downloadable": doc_image[u"IsDownloadable"],
+                u"security_level": doc_image[u"securityLevel"],
+                u"description": doc_image[u"description"] or "",
+                u"doc_part": doc_image[u"docPart"] or "",
+                u"is_available": False,
             }
 
             pdf_queue = {
-                "internal_case_id": data["CaseInformation"]["CaseID"],
-                "document_id": doc_image["docId"],
+                u"internal_case_id": data[u"CaseInformation"][u"CaseID"],
+                u"document_id": doc_image[u"docId"],
             }
 
-            clean_data["DocumentImage"].append(image)
-            clean_data["QueuedPDF"].append(pdf_queue)
+            clean_data[u"DocumentImage"].append(image)
+            clean_data[u"QueuedPDF"].append(pdf_queue)
 
-        clean_data["Party"] = []
-        for party in data["Parties"]:
+        clean_data[u"Party"] = []
+        for party in data[u"Parties"]:
             party_obj = {
-                "attorney_name": party["AttorneyName"],
-                "attorney_firm": party["AttorneyFirm"],
-                "entity_number": party["EntityNumber"],
-                "party_name": party["Name"],
-                "party_flag": party["PartyFlag"],
-                "party_type_code": party["PartyTypeCode"] or "",
-                "party_description": party["PartyDescription"] or "",
+                u"attorney_name": party[u"AttorneyName"],
+                u"attorney_firm": party[u"AttorneyFirm"],
+                u"entity_number": party[u"EntityNumber"],
+                u"party_name": party[u"Name"],
+                u"party_flag": party[u"PartyFlag"],
+                u"party_type_code": party[u"PartyTypeCode"] or "",
+                u"party_description": party[u"PartyDescription"] or "",
             }
             clean_data["Party"].append(party_obj)
 
-        clean_data["Proceeding"] = []
-        for proceeding in data["PastProceedings"]:
+        clean_data[u"Proceeding"] = []
+        for proceeding in data[u"PastProceedings"]:
             event = {
-                "past_or_future": 1,
-                "date_proceeding": proceeding["ProceedingDate"],
-                "proceeding_time": proceeding["ProceedingTime"],
-                "proceeding_room": proceeding["ProceedingRoom"],
-                "am_pm": proceeding["AMPM"],
-                "memo": proceeding["Memo"],
-                "courthouse_name": proceeding["CourthouseName"],
-                "address": proceeding["Address"],
-                "result": proceeding["Result"],
-                "judge_name": proceeding["Judge"],
-                "event": proceeding["Event"],
+                u"past_or_future": 1,
+                u"date_proceeding": proceeding[u"ProceedingDate"],
+                u"proceeding_time": proceeding[u"ProceedingTime"],
+                u"proceeding_room": proceeding[u"ProceedingRoom"],
+                u"am_pm": proceeding[u"AMPM"],
+                u"memo": proceeding[u"Memo"],
+                u"courthouse_name": proceeding[u"CourthouseName"],
+                u"address": proceeding[u"Address"],
+                u"result": proceeding[u"Result"],
+                u"judge_name": proceeding[u"Judge"],
+                u"event": proceeding[u"Event"],
             }
-            clean_data["Proceeding"].append(event)
+            clean_data[u"Proceeding"].append(event)
 
-        for proceeding in data["FutureProceedings"]:
+        for proceeding in data[u"FutureProceedings"]:
             event = {
-                "past_or_future": 2,
-                "date_proceeding": proceeding["ProceedingDate"],
-                "proceeding_time": proceeding["ProceedingTime"],
-                "proceeding_room": proceeding["ProceedingRoom"],
-                "am_pm": proceeding["AMPM"],
-                "memo": proceeding["Memo"],
-                "courthouse_name": proceeding["CourthouseName"],
-                "address": proceeding["Address"],
-                "result": proceeding["Result"],
-                "judge_name": proceeding["Judge"],
-                "event": proceeding["Event"],
+                u"past_or_future": 2,
+                u"date_proceeding": proceeding[u"ProceedingDate"],
+                u"proceeding_time": proceeding[u"ProceedingTime"],
+                u"proceeding_room": proceeding[u"ProceedingRoom"],
+                u"am_pm": proceeding[u"AMPM"],
+                u"memo": proceeding[u"Memo"],
+                u"courthouse_name": proceeding[u"CourthouseName"],
+                u"address": proceeding[u"Address"],
+                u"result": proceeding[u"Result"],
+                u"judge_name": proceeding[u"Judge"],
+                u"event": proceeding[u"Event"],
             }
-            clean_data["Proceeding"].append(event)
+            clean_data[u"Proceeding"].append(event)
 
-        clean_data["TentativeRuling"] = []
-        for ruling in data["TentativeRulings"]:
+        clean_data[u"TentativeRuling"] = []
+        for ruling in data[u"TentativeRulings"]:
             tentative_ruling = {
-                "date_created": ruling["CreationDate"],
-                "date_hearing": ruling["HearingDate"],
-                "department": ruling["Department"],
-                "ruling": ruling["Ruling"],
+                u"date_created": ruling[u"CreationDate"],
+                u"date_hearing": ruling[u"HearingDate"],
+                u"department": ruling[u"Department"],
+                u"ruling": ruling[u"Ruling"],
             }
 
-            clean_data["TentativeRuling"].append(tentative_ruling)
+            clean_data[u"TentativeRuling"].append(tentative_ruling)
 
         clean_data = clean_court_object(clean_data)
 

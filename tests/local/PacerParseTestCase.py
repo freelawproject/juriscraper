@@ -7,7 +7,7 @@ import sys
 import time
 import unittest
 
-import jsondate as json
+import jsondate3 as json
 
 from juriscraper.lib.test_utils import warn_or_crash_slow_parser
 
