@@ -17,6 +17,4 @@ class Site(ill.Site):
         self.url = (
             "http://www.illinoiscourts.gov/Media/Appellate/3rd_District.asp"
         )
-        self.download_url_path = "/td[5]//@href"
-        self.case_name_path = "/td[3]"
-        self.docket_number_path = "/td[2]"
+        self.cell_index_download = 4

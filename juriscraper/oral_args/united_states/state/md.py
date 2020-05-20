@@ -31,8 +31,12 @@ class Site(OralArgumentSiteLinear):
 
     def _process_html(self):
         # Find rows that contain valid, non-"Bar Admissions", link
-        path = "//tr[.//a/@href][not(contains(.//@href, 'baradmission'))]"
-        for row in self.html.xpath(path):
+        path = (
+            "//tr[.//td[2]//a/@href][not(contains(.//@href, 'baradmission'))]"
+        )
+        rows = self.html.xpath(path)
+
+        for row in rows:
             cell_two = row.xpath("./td[2]")[0]
             self.cases.append(
                 {

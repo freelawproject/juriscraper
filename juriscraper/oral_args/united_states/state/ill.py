@@ -17,14 +17,15 @@ class Site(OralArgumentSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.illinoiscourts.gov/Media/On_Demand.asp"
-        self.case_name_path = "/td[3]"
-        self.docket_number_path = "/td[2]"
+        self.cell_index_docket = 2
+        self.cell_index_download = 5
+        self.cell_index_name = 3
         # Extract data from all rows with mp3 url/link
         self.xpath_root = '(//table[(.//th)[1][contains(.//text(), "Argument Date")]])[last()]//tr[position() > 1][.//@href[contains(., ".mp3")]]'
         self.back_scrape_iterable = range(2008, 2016)
 
     def _get_download_urls(self):
-        path = self.xpath_root + "/td[5]//@href"
+        path = self.xpath_root + "/td[%d]//@href" % self.cell_index_download
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
@@ -41,7 +42,7 @@ class Site(OralArgumentSite):
         return dates
 
     def _get_case_names(self):
-        path = self.xpath_root + self.case_name_path
+        path = "%s/td[%d]" % (self.xpath_root, self.cell_index_name)
         cases = []
         for case in self.html.xpath(path):
             case = case.text_content().strip()
@@ -50,7 +51,7 @@ class Site(OralArgumentSite):
         return cases
 
     def _get_docket_numbers(self):
-        path = self.xpath_root + self.docket_number_path
+        path = "%s/td[%d]" % (self.xpath_root, self.cell_index_docket)
         dockets = []
         for docket in self.html.xpath(path):
             docket = docket.text_content()
