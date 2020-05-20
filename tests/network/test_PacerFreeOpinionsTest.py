@@ -7,7 +7,7 @@ import time
 import unittest
 from datetime import date, timedelta
 
-import jsondate as json
+import jsondate3 as json
 import mock
 from requests import ConnectionError
 

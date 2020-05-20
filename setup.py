@@ -6,7 +6,7 @@ import unittest
 from setuptools import setup, find_packages
 from setuptools.command.install import install
 
-VERSION = "1.26.33"
+VERSION = "1.27.0"
 AUTHOR = "Free Law Project"
 EMAIL = "info@free.law"
 HERE = os.path.abspath(os.path.dirname(__file__))
@@ -100,7 +100,7 @@ setup(
         "selenium==2.53.6",
         "tldextract",
     ],
-    tests_require=["jsondate", "mock", "vcrpy"],
+    tests_require=["jsondate3-aware", "mock", "vcrpy"],
     include_package_data=True,
     test_suite="tests.test_local",
     cmdclass={"verify": VerifyVersion, "testnetwork": TestNetwork,},
