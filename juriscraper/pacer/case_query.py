@@ -202,25 +202,25 @@ class CaseQuery(BaseDocketReport, BaseReport):
         """
 
         """
-        This is an example of a query that could be sent, and which we're 
+        This is an example of a query that could be sent, and which we're
         attempting to replicate:
-            curl 'https://ecf.ord.uscourts.gov/cgi-bin/iquery.pl?1-L_1_0-1' 
-                -H 'Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7Sz5UdWuoi5TbtDj' 
-                -H 'Referer: https://external' 
-                -H 'Cookie: CASE_NUM=6:16-cv-01710(128548); PacerSession=xxx; PacerPref=receipt=Y' 
+            curl 'https://ecf.ord.uscourts.gov/cgi-bin/iquery.pl?1-L_1_0-1'
+                -H 'Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7Sz5UdWuoi5TbtDj'
+                -H 'Referer: https://external'
+                -H 'Cookie: CASE_NUM=6:16-cv-01710(128548); PacerSession=xxx; PacerPref=receipt=Y'
                 --data-binary $'------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data;
                     name="UserType"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data;
-                    name="all_case_ids"\r\n\r\n128548\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data; 
-                    name="case_num"\r\n\r\n6:16-cv-1710\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data; 
-                    name="Qry_filed_from"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data; 
-                    name="Qry_filed_to"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data; 
-                    name="lastentry_from"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data; 
-                    name="lastentry_to"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data; 
-                    name="last_name"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data; 
-                    name="first_name"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data; 
-                    name="middle_name"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data; 
+                    name="all_case_ids"\r\n\r\n128548\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data;
+                    name="case_num"\r\n\r\n6:16-cv-1710\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data;
+                    name="Qry_filed_from"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data;
+                    name="Qry_filed_to"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data;
+                    name="lastentry_from"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data;
+                    name="lastentry_to"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data;
+                    name="last_name"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data;
+                    name="first_name"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data;
+                    name="middle_name"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj\r\nContent-Disposition: form-data;
                     name="person_type"\r\n\r\n\r\n------WebKitFormBoundary7Sz5UdWuoi5TbtDj--\r\n'
-                    
+
         The important notes, from testing:
          - The CASE_NUM cookie isn't needed.
          - The case_num parameter needs a value; any value will do.
@@ -245,7 +245,11 @@ class CaseQuery(BaseDocketReport, BaseReport):
             u"middle_name": "",
             u"person_type": "",
         }
-        logger.info(u"Running case query for case ID '%s'", pacer_case_id)
+        logger.info(
+            u"Running case query for case ID '%s' in court '%s'",
+            pacer_case_id,
+            self.court_id,
+        )
         self.response = self.session.post(self.url + "?1-L_1_0-1", data=params)
         self.parse()
 
