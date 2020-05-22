@@ -1,6 +1,10 @@
 # Scraper for Louisiana Supreme Court
 # CourtID: la
 # Court Short Name: LA
+# Contact: Community relations department
+#          Robert Gunn
+#          504-310-2592
+#          rgunn@lasc.org
 
 from datetime import date
 from juriscraper.lib.html_utils import get_html_parsed_text
