@@ -9,6 +9,7 @@ from .free_documents import FreeOpinionReport
 from .hidden_api import PossibleCaseNumberApi, ShowCaseDocApi
 from .http import PacerSession
 from .internet_archive import InternetArchive
+from .mobile_query import MobileQuery
 from .rss_feeds import PacerRssFeed
 
 __all__ = [
