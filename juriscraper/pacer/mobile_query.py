@@ -73,7 +73,7 @@ class MobileQuery(BaseDocketReport, BaseReport):
         self._metadata = data
         return data
 
-    def query(self, pacer_case_number):
+    def query(self, pacer_docket_number):
         """Use a district court's PACER mobile query function with a known case number
 
         At the top of every district PACER court, there's a button that says,
@@ -83,13 +83,13 @@ class MobileQuery(BaseDocketReport, BaseReport):
         the number of docket entries in that case.
 
         While there is utility in both of these result types, this method only
-        supports the use case where you know the pacer_case_number in advance, and
+        supports the use case where you know the pacer_docket_number in advance, and
         are expecting only one result in return. This method does *not* support
         parsing the search results that the Query button can return. That use
         case is supposed by the CaseQueryAdvancedBankruptcy and
         CaseQueryAdvancedDistrict objects.
 
-        :param pacer_case_number: The case number to search for
+        :param pacer_docket_number: The case number to search for
         :return None: Instead, sets self.response attribute and runs
         self.parse()
         """
@@ -107,17 +107,18 @@ class MobileQuery(BaseDocketReport, BaseReport):
          """
         assert (
             self.session is not None
-        ), "session attribute of DocketReport cannot be None."
-        assert bool(pacer_case_number), (
-            "pacer_case_number must be truthy, not '%s'" % pacer_case_number
+        ), "session attribute of MobileQuery cannot be None."
+        assert bool(pacer_docket_number), (
+            "pacer_docket_number must be truthy, not '%s'"
+            % pacer_docket_number
         )
         logger.info(
             u"Running mobile query for case number '%s' in court '%s'",
-            pacer_case_number,
+            pacer_docket_number,
             self.court_id,
         )
         self.response = self.session.post(
-            self.url + "?caseOrNameSearch=" + pacer_case_number
+            self.url + "?caseOrNameSearch=" + pacer_docket_number
         )
         self.parse()
 

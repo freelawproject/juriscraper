@@ -21,12 +21,17 @@ class PacerMobileQueryTest(unittest.TestCase):
     def test_query(self):
         self.report.query(self.pacer_case_number)
 
-        """ Can we get the docket entry count"""
+        # Can we get the docket entry count
         metadata = self.report.metadata
         if metadata["cost"]:
             print("we were charged. Details:", metadata["cost"])
+        expected_de_count = 29
+        actual_de_count = metadata["entry_count"]
         self.assertEqual(
-            29, metadata["entry_count"], msg="entry_count query failed",
+            expected_de_count,
+            actual_de_count,
+            msg="entry_count query failed. Got %s; expected %s"
+            % (actual_de_count, expected_de_count),
         )
         self.assertEqual(
             "", metadata["cost"], msg="cost query failed",
