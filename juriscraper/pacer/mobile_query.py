@@ -60,14 +60,11 @@ class MobileQuery(BaseDocketReport, BaseReport):
             return data
         span = self.tree.xpath('.//a[@id="entriesLink"]//span')[0]
         entry_count = int(span.text_content().strip())
-        data = {}
-        data.update(
-            {
-                u"court_id": self.court_id,
-                u"entry_count": entry_count,
-                u"cost": cost_raw,
-            }
-        )
+        data = {
+            u"court_id": self.court_id,
+            u"entry_count": entry_count,
+            u"cost": cost_raw,
+        }
 
         data = clean_court_object(data)
 
