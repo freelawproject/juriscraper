@@ -9,17 +9,17 @@ from tests.network import SKIP_IF_NO_PACER_LOGIN, get_pacer_session
 
 
 class PacerMobileQueryTest(unittest.TestCase):
-    """A test of basic info for the Case Query"""
+    """A test of basic info for the Mobile Query"""
 
     def setUp(self):
         self.session = get_pacer_session()
         self.session.login()
         self.report = MobileQuery("cand", self.session)
-        self.pacer_case_number = "186730"  # Foley v. Bates
+        self.pacer_case_id = "186730"  # Foley v. Bates
 
     @SKIP_IF_NO_PACER_LOGIN
     def test_query(self):
-        self.report.query(self.pacer_case_number)
+        self.report.query(self.pacer_case_id)
 
         # Can we get the docket entry count
         metadata = self.report.metadata
