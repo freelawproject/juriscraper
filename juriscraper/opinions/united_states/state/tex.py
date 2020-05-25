@@ -3,7 +3,7 @@
 # Court Short Name: TX
 # Court Contacts:
 #  - http://www.txcourts.gov/contact-us/
-#  - Angie Sharp <Angie.Sharp@txcourts.gov>
+#  - Blake Hawthorne <Blake.Hawthorne@txcourts.gov>
 #  - Eddie Murillo <Eddie.Murillo@txcourts.gov>
 #  - Judicial Info <JudInfo@txcourts.gov>
 # Author: Andrei Chelaru
