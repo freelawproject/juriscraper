@@ -15,7 +15,7 @@ class PacerMobileQueryTest(unittest.TestCase):
         self.session = get_pacer_session()
         self.session.login()
         self.report = MobileQuery("cand", self.session)
-        self.pacer_case_number = "4:06-cv-07294"  # Foley v. Bates
+        self.pacer_case_number = "186730"  # Foley v. Bates
 
     @SKIP_IF_NO_PACER_LOGIN
     def test_query(self):

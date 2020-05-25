@@ -74,8 +74,8 @@ class MobileQuery(BaseDocketReport, BaseReport):
         self._metadata = data
         return data
 
-    def query(self, pacer_docket_number):
-        """Use a district court's PACER mobile query function with a known case number
+    def query(self, pacer_case_id):
+        """Use a district court's PACER mobile query function with a known case id
 
         At the top of every district PACER court, there's a button that says,
         "Query". When you click that button, you can select "Mobile Query".
@@ -84,13 +84,13 @@ class MobileQuery(BaseDocketReport, BaseReport):
         the number of docket entries in that case.
 
         While there is utility in both of these result types, this method only
-        supports the use case where you know the pacer_docket_number in advance, and
+        supports the use case where you know the pacer_case_id in advance, and
         are expecting only one result in return. This method does *not* support
         parsing the search results that the Query button can return. That use
         case is supposed by the CaseQueryAdvancedBankruptcy and
         CaseQueryAdvancedDistrict objects.
 
-        :param pacer_docket_number: The case number to search for
+        :param pacer_case_id: A pacer_case_id for a case to lookup.
         :return None: Instead, sets self.response attribute and runs
         self.parse()
         """
@@ -98,7 +98,7 @@ class MobileQuery(BaseDocketReport, BaseReport):
         """
         This is an example of a query that could be sent, and which we're
         attempting to replicate:
-        curl 'https://ecf.cand.uscourts.gov/cgi-bin/mobile_query.pl?caseOrNameSearch=4:06-cv-07294' \
+        curl 'https://ecf.cand.uscourts.gov/cgi-bin/mobile_query.pl?search=caseInfo&caseid=186730' \
         -H 'Content-Type: application/x-www-form-urlencoded' \
         -H 'Referer: https://external'\
         -H 'Cookie: CASE_NUM=4:06-cv-07294(186730); PacerSession=xxx; NextGenCSO=xxx; PacerPref=receipt=Y' \
@@ -109,17 +109,16 @@ class MobileQuery(BaseDocketReport, BaseReport):
         assert (
             self.session is not None
         ), "session attribute of MobileQuery cannot be None."
-        assert bool(pacer_docket_number), (
-            "pacer_docket_number must be truthy, not '%s'"
-            % pacer_docket_number
+        assert bool(pacer_case_id), (
+            "pacer_case_id must be truthy, not '%s'" % pacer_case_id
         )
         logger.info(
-            u"Running mobile query for case number '%s' in court '%s'",
-            pacer_docket_number,
+            u"Running mobile query for case id '%s' in court '%s'",
+            pacer_case_id,
             self.court_id,
         )
         self.response = self.session.post(
-            self.url + "?caseOrNameSearch=" + pacer_docket_number
+            self.url + "?search=caseInfo&caseid==" + pacer_case_id
         )
         self.parse()
 
