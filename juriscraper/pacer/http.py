@@ -23,7 +23,10 @@ def check_if_logged_in_page(text):
     :return boolean: True if logged in, False if not.
     """
     valid_case_number_query = (
-        "<case number=" in text or "<request number=" in text
+        "<case number=" in text
+        or "<request number=" in text
+        or 'id="caseid"' in text
+        or "Cost: " in text
     )
     no_results_case_number_query = re.search("<message.*Cannot find", text)
     sealed_case_query = re.search("<message.*Case Under Seal", text)

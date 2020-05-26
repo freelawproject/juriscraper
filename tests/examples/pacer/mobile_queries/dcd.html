@@ -1,0 +1,163 @@
+<!DOCTYPE html><html><head><title>Mobile Query</title>
+<!-ShowPage(mobile_query_page_header.htm)-> 
+<!-- RPM Packages: ao-dcecf-web-* -->
+<!-- RPM Permissions: 444 -->
+<!-- RPM Owner: nobody -->
+<!-- RPM Group: nobody -->
+<!-- RPM Flags: configure -->
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name = "format-detection" content = "telephone=no">
+
+        <link rel="stylesheet" href="../css/jquery.mobile.theme.live-1.1.1.min.css" />
+        <link rel="stylesheet" href="../css/jquery.mobile.structure-1.1.1.min.css" />
+        <link rel="stylesheet" href="../css/mobile_query.css" />
+
+        <script src="../lib/jquery.min.js"></script>
+        <script src="../lib/jquery.mobile-1.1.1.min.js"></script>
+        <script src="../lib/mobile_query.js"></script>
+
+        <script>
+            $.extend(  $.mobile , {
+                        ajaxEnabled      : false,
+                        hashListeningEnabled: false
+            });
+        </script>
+        <script>
+           if (top.frames.length != 0) top.location = self.document.location;
+        </script>
+        <script>
+		var mobileLogoutPrompt = function() {
+			var logoutMenuAltURL = "";
+			logoutMenuAltURL = logoutMenuAltURL=='undefined'?location.href.substring(0, location.href.indexOf('/', location.href.indexOf('//')+2)):logoutMenuAltURL;
+			var logoutMenuConfirmMessage = "Close your browser to log out from CM/ECF.<br>Do you want to go to JENIE?";
+			logoutMenuConfirmMessage = logoutMenuConfirmMessage=='undefined'?'Close your browser to log out from CM/ECF.Do you want to go to JENIE?':logoutMenuConfirmMessage;
+
+			if (confirm(logoutMenuConfirmMessage)) {
+				location.href=logoutMenuAltURL;
+			}
+		}
+		</script>
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-theme="b" data-role="page" id="page1">
+            <div data-theme="b" data-role="header" data-position="">
+                <a href="javascript:history.go(-1)" data-icon="back" data-iconpos="notext" data-rel="back" >Back</a>
+                <h3 style="margin-left: 10%; margin-right: 10%">
+                    CM/ECF Mobile - DCD
+                </h3>
+
+
+
+
+
+					<div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
+				    	<a href="?logout" data-role="button" data-icon="logout" data-iconpos="notext">Logout</a>
+				    	<a href="https://ecf.dcd.uscourts.gov" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+					</div>
+
+
+
+
+                <form action="">
+                    <label for="caseOrNameSearch" class="ui-hidden-accessible">Search</label>
+                    <input data-theme="c" id="caseOrNameSearch" name="caseOrNameSearch" placeholder="Case Number or Last, First"
+                    		value="" type="search" data-mini="true" autocorrect="off" autocapitalize="off" />
+                </form>
+
+
+            </div>
+<!-ShowPage(mobile_query_case_data_links.htm)-> 
+
+<!-- RPM Packages: ao-dcecf-web-* -->
+<!-- RPM Permissions: 444 -->
+<!-- RPM Owner: nobody -->
+<!-- RPM Group: nobody -->
+<!-- RPM Flags: configure -->
+
+        <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true"  data-split-theme="c" data-split-icon="search">
+                    <li data-role="list-divider" role="heading">
+
+
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					1:16-cv-00745-ESH
+				</div>
+				<div class="ui-block-b" style="text-align:right">
+					Filed: 04/21/2016
+				</div>
+			</div>
+			<div>NATIONAL VETERANS LEGAL SERVICES PROGRAM et al v. UNITED STATES  OF AMERICA</div>
+
+                    </li>
+                    <li data-theme="c">
+                        <a href="/cgi-bin/mobile_query.pl?search=atty&caseid=178502&caseNum=1:16-cv-00745-ESH" data-transition="slide">
+                            Attorneys
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="/cgi-bin/mobile_query.pl?search=pty&caseid=178502&caseNum=1:16-cv-00745-ESH" data-transition="slide">
+                            Parties
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="/cgi-bin/mobile_query.pl?search=deadLines&caseid=178502&caseNum=1:16-cv-00745-ESH" data-transition="slide">
+                            Deadlines / Hearings
+                        </a>
+                    </li>
+                    <li data-theme="c">
+						
+
+
+		                <form id="searchForm" name="entrySearch" action="" style="display:none;margin-right: 43px; margin-left: 3px">
+		                        <input id="docketEntrySearch" name="docketEntrySearch" data-mini="true" placeholder="Search Docket Entries"
+		                        		data-theme="c" value="" type="search" autocorrect="off" autocapitalize="off" />
+		                        <input id="caseid" type="hidden" name="caseid" value="178502" />
+		                        <input id="caseNum" type="hidden" name="caseNum" value="1:16-cv-00745-ESH" />
+		                </form>
+                        <a id="entriesLink" href="/cgi-bin/mobile_query.pl?search=dktEntry&caseid=178502&caseNum=1:16-cv-00745-ESH" data-transition="slide">
+                            Docket Entries
+                            <span class="ui-li-count">
+                                143
+                            </span>
+                        </a>
+                    	<a href="javascript:showDocketEntrySearch()" title="search">Search</a>
+
+						
+                    </li>
+                </ul>
+            </div>
+<!-ShowPage(mobile_query_page_footer.htm)-> 
+
+<!-- RPM Packages: ao-dcecf-web-* -->
+<!-- RPM Permissions: 444 -->
+<!-- RPM Owner: nobody -->
+<!-- RPM Group: nobody -->
+<!-- RPM Flags: configure -->
+
+
+            <div data-theme="a" data-role="footer" data-position="fixed" data-id="footer">
+
+	            <div class="ui-title" style="padding-right: 90px; margin: .8em 0 1em 5%; font-size:14px; text-align: left">
+
+					
+
+					
+
+				</div>
+				<a class="ui-btn-right" href="/cgi-bin/iqquerymenu.pl?178502" onClick="setDesktopMobileCookie('dtp')">Full Site</a>
+
+			</div>
+
+            <script>
+			function setDesktopMobileCookie(value){
+				var minutes = 720;
+				var expire = new Date();
+				expire.setTime(expire.getTime() + 60000*minutes);
+				document.cookie = "uiexperience="+value+";secure;path=/;expires=" + expire.toGMTString();
+			}
+            </script>
+</div></body></html>
