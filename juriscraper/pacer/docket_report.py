@@ -221,16 +221,18 @@ class BaseDocketReport(object):
         label = node.text_content().strip()
         if require_colon and not label.endswith(":"):
             return {}
+        if isinstance(label, str):
+            label = label.decode("utf-8")
+
         label = (
             label.strip()
             .lower()
             .replace(" ", "_")
+            .replace(u"\xa0", "_")  # Non-breaking space
             .replace("(", "")
             .replace(")", "")
             .rstrip(":")
         )
-        if six.PY2:
-            label = label.decode("utf-8")
         label = field_mappings.get(label, label)
 
         value = node.tail.strip()
