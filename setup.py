@@ -12,6 +12,11 @@ EMAIL = "info@free.law"
 HERE = os.path.abspath(os.path.dirname(__file__))
 
 
+reqs_path = HERE + "/requirements.txt"
+with open(reqs_path) as reqs_file:
+    reqs = reqs_file.read().splitlines()
+
+
 def read(*parts):
     """
     Build an absolute path from *parts* and and return the contents of the
@@ -84,22 +89,7 @@ setup(
         "Programming Language :: Python :: Implementation :: PyPy",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-    install_requires=[
-        "six",
-        "argparse",
-        "cchardet>=1.1.2",
-        "certifi>=2017.4.17",
-        "chardet<3.1.0,>=3.0.2",
-        "cssselect",
-        "feedparser",
-        "geonamescache==0.20",
-        "html5lib",
-        "lxml==3.5.0",
-        "python-dateutil==2.5.0",
-        "requests==2.20.0",
-        "selenium==2.53.6",
-        "tldextract",
-    ],
+    install_requires=reqs,
     tests_require=["jsondate3-aware", "mock", "vcrpy"],
     include_package_data=True,
     test_suite="tests.test_local",
