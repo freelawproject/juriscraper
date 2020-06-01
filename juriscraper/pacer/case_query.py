@@ -4,6 +4,7 @@ This is pretty limited metadata about the case, although it
 presents some more information for BK cases.
 """
 import pprint
+import re
 import sys
 
 from six.moves import range
@@ -146,26 +147,29 @@ class CaseQuery(BaseDocketReport, BaseReport):
         for i in range(1, len(rows) - 1):
             bolds = rows[i].findall(".//b")
             if not bolds:
+                line = force_unicode(rows[i].text_content())
+                if re.search(r"panel [2-3]$", line):
+                    # For now we only care about the first panelist
+                    continue
+
                 if i == 1:
                     # Second row, no bold => judge name!
-                    judge_role = force_unicode(rows[i].text_content())
-                    PRESIDING = ", presiding"
-                    assert judge_role.endswith(PRESIDING), (
+                    presiding_re = re.compile(", (presiding|panel 1)$")
+                    assert presiding_re.search(line), (
                         "We expected the judge's name to end with "
-                        "', presiding'."
+                        "'presiding or panel'. Instead, it's: '%s'" % line
                     )
-                    data[u"assigned_to_str"] = judge_role.rstrip(PRESIDING)
+                    data[u"assigned_to_str"] = presiding_re.sub("", line)
                 elif i == 2:
                     # Third row, no bold => referred judge name!
-                    judge_role = force_unicode(rows[i].text_content())
-                    REFERRAL = ", referral"
-                    assert judge_role.endswith(REFERRAL), (
+                    referral_re = re.compile(", referral$")
+                    assert referral_re.search(line), (
                         "We expected the referred judge's name to end "
-                        "with , referral"
+                        "with ', referral'. Instead it's: '%s'" % line
                     )
-                    data[u"referred_to_str"] = judge_role.rstrip(REFERRAL)
+                    data[u"referred_to_str"] = referral_re.sub("", line)
                 else:
-                    raise AssertionError("Line with no boldface?")
+                    raise AssertionError("Line with no boldface: '%s'" % line)
             for bold in bolds:
                 data.update(
                     self._get_label_value_pair(bold, True, field_names)
