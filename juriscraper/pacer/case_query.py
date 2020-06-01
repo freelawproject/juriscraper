@@ -28,6 +28,10 @@ class CaseQuery(BaseDocketReport, BaseReport):
 
     CACHE_ATTRS = ["metadata"]
 
+    ERROR_STRINGS = BaseReport.ERROR_STRINGS + [
+        r"Case not found\.",
+    ]
+
     def __init__(self, court_id, pacer_session=None):
         super(CaseQuery, self).__init__(court_id, pacer_session)
         # Initialize the empty cache properties

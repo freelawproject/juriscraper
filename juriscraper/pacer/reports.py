@@ -39,8 +39,8 @@ class BaseReport(object):
     PATH = ""
 
     # Strings below (and in subclasses) are used to identify HTML that should
-    # not be parsed or processed for a variety of reasons. Spaces in the strings
-    # below are converted to \s whitespace searches using regexes.
+    # not be parsed or processed for a variety of reasons. Spaces in the
+    # strings below are converted to \s whitespace searches using regexes.
     ERROR_STRINGS = [
         "MetaMask.*web3",
         'console\.log\(".*CloudMask',
