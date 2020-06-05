@@ -148,8 +148,9 @@ class CaseQuery(BaseDocketReport, BaseReport):
             bolds = rows[i].findall(".//b")
             if not bolds:
                 line = force_unicode(rows[i].text_content())
-                if re.search(r"panel [2-3]$", line):
-                    # For now we only care about the first panelist
+                if re.search(r"(panel [2-3]$|Probation)", line):
+                    # Skip panelists after the first, skip probation
+                    # assignments
                     continue
 
                 if i == 1:
