@@ -1223,18 +1223,16 @@ class DocketReport(BaseDocketReport, BaseReport):
             return self._get_value(self.nos_regex, self.metadata_values)
 
     def _get_judge(self, regex):
-        judge_str = self._get_value(re.compile(regex), self.metadata_values)
+        judge_regex = re.compile(regex, flags=re.DOTALL)
+        judge_str = self._get_value(judge_regex, self.metadata_values)
         if judge_str:
             return normalize_judge_string(judge_str)[0]
         else:
             # No luck getting it in the metadata_values attribute. Broaden
             # the search to look in the entire docket HTML.
-            path = '//*[re:match(text(), "%s")]' % regex
-            try:
-                judge_str = self.tree.re_xpath(path)[0].text_content()
-            except IndexError:
-                return ""
-            judge_str = judge_str.split("to:")[1]
+            text_nodes = self.tree.xpath("//text()")
+            text_nodes = [t for t in text_nodes if t and not t.isspace()]
+            judge_str = self._get_value(judge_regex, text_nodes)
             return normalize_judge_string(judge_str)[0]
 
 
