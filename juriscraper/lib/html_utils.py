@@ -3,6 +3,7 @@
 import re
 import sys
 
+import lxml
 from lxml import etree, html
 from lxml.etree import XMLSyntaxError
 from lxml.html import fromstring, html5parser, tostring
@@ -104,6 +105,47 @@ def get_clean_body_content(content, remove_extra_tags=[]):
             "Unable to extract the content from this file. Please try "
             "reading the original."
         )
+
+
+def strip_bad_html_tags_insecure(tree):
+    """Remove bad HTML that isn't used by our parsers.
+
+    This is insecure in the sense that it does not strip all JavaScript. lxml
+    provides a `javascript` parameter that can be passed to the Cleaner object,
+    but it will clean JS attributes off nodes, which we can't do because we
+    parse those for useful data.
+
+    :param tree: A tree you wish to cleanup
+    :type tree: lxml.html.HtmlElement
+    :return the cleaned HTML str
+    """
+    assert isinstance(tree, lxml.html.HtmlElement), (
+        "`tree` must be of type HtmlElement, but is of type %s. Cleaner() can "
+        "work with strs and unicode, but it does bad things to encodings if "
+        "given the chance." % type(tree)
+    )
+    cleaner = Cleaner(
+        # Keep JS: We parse onclicks for pacer metadata
+        javascript=False,
+        safe_attrs_only=False,
+        # Keep forms: We parse them for metadata
+        forms=False,
+        # Keep comments: We use them in appellate PACER. For discussion and fix
+        # to funky workaround below, see:
+        #   https://bugs.launchpad.net/lxml/+bug/1882606
+        # This workaround can be removed once lxml 4.5.2 is released
+        comments=False,
+        processing_instructions=False,
+        remove_unknown_tags=False,
+        allow_tags=set(lxml.html.defs.tags) | {lxml.etree.Comment},
+        # Things we *can* actually remove
+        scripts=True,
+        style=True,
+        links=True,
+        embedded=True,
+        frames=True,
+    )
+    return cleaner.clean_html(tree)
 
 
 def get_visible_text(html_content):

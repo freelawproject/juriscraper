@@ -13,6 +13,7 @@ from ..lib.html_utils import (
     get_html5_parsed_text,
     get_html_parsed_text,
     set_response_encoding,
+    strip_bad_html_tags_insecure,
 )
 from ..lib.log_tools import make_default_logger
 
@@ -97,8 +98,8 @@ class BaseReport(object):
         text = clean_html(text)
         self.check_validity(text)
         if self.is_valid:
-            self.tree = get_html5_parsed_text(text)
-            etree.strip_elements(self.tree, u"script")
+            tree = get_html5_parsed_text(text)
+            self.tree = strip_bad_html_tags_insecure(tree)
             self.tree.rewrite_links(fix_links_in_lxml_tree, base_href=self.url)
 
     def check_validity(self, text):
