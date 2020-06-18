@@ -1223,7 +1223,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             return self._get_value(self.nos_regex, self.metadata_values)
 
     def _get_judge(self, regex):
-        judge_regex = re.compile(regex, flags=re.DOTALL)
+        judge_regex = re.compile(regex, flags=re.DOTALL | re.IGNORECASE)
         judge_str = self._get_value(judge_regex, self.metadata_values)
         if judge_str:
             return normalize_judge_string(judge_str)[0]

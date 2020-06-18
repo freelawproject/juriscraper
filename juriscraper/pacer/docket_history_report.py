@@ -23,8 +23,8 @@ date_regex = r"[—\d\-–/]*"
 
 
 class DocketHistoryReport(DocketReport):
-    assigned_to_regex = re.compile(r"(.*),\s+presiding", flags=re.IGNORECASE)
-    referred_to_regex = re.compile(r"(.*),\s+referral", flags=re.IGNORECASE)
+    assigned_to_regex = r"(.*),\s+presiding"
+    referred_to_regex = r"(.*),\s+referral"
     date_filed_regex = re.compile(r"[fF]iled:\s+(%s)" % date_regex)
     date_last_filing_regex = re.compile(
         r"last\s+filing:\s+(%s)" % date_regex, flags=re.IGNORECASE
