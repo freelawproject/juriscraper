@@ -524,6 +524,9 @@ def convert_date_string(date_string, fuzzy=False, datetime=False):
     date_string = clean_if_py3(date_string)
 
     date_string = date_string.strip()
+    if date_string == "N/A":
+        return None
+
     dt = parser.parse(date_string, fuzzy=fuzzy)
     if datetime:
         return dt
