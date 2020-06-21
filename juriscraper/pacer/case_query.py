@@ -143,6 +143,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
             u"judge": u"assigned_to_str",
             u"plan_confirmed": u"date_plan_confirmed",
             u"debtor_discharged": u"date_debtor_dismissed",
+            u"joint_debtor_discharged": u"date_joint_debtor_dismissed",
         }
         for i in range(1, len(rows) - 1):
             bolds = rows[i].findall(".//b")
