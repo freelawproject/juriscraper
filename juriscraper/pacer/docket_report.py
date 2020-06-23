@@ -48,6 +48,13 @@ class BaseDocketReport(object):
     docket_number_bankr_regex = re.compile(r"(?:#:\s+)?((\d-)?\d\d-\d*)")
     docket_number_jpml = re.compile(r"(MDL No.\s+\d*)")
 
+    def __init__(self, court_id, pacer_session=None):
+        self.court_id = court_id
+        if self.court_id.endswith("b"):
+            self.is_bankruptcy = True
+        else:
+            self.is_bankruptcy = False
+
     def _clear_caches(self):
         """Clear any caches that are on the object."""
         for attr in self.CACHE_ATTRS:
