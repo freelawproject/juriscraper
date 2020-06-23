@@ -19,6 +19,4 @@ class PacerParseInternetArchiveReportTest(PacerParseTestCase):
         path_root = os.path.join(
             TESTS_ROOT_EXAMPLES_PACER, "dockets_internet_archive"
         )
-        self.parse_files(
-            path_root, "*.xml", InternetArchive, initialize_with_court=False
-        )
+        self.parse_files(path_root, "*.xml", InternetArchive)

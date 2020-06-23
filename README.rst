@@ -315,10 +315,13 @@ Version History
 - 1.23.* - Adds support for the advacned case report when it returns search results instead of a single item.
 - 1.24.* - Adds support for bankruptcy claims register parsing and querying
 - 1.25.* - Major refactor of tests to split them into network and local tests. Should make CI more consistent.
+- 1.26.* - Adds support for the Los Angeles Superior Court Media Access Portal (LASC MAP)
+- 1.27.* - Add merging of multi-event RSS entries
 
 **Current**
 
- - 1.26.* - Adds support for the Los Angeles Superior Court Media Access Portal (LASC MAP)
+ - 1.28.* - Changes the API for the InternetArchive parser so that it aligns with the rest of the parsers. Its constructor now requires a court_id value.
+
 
 **Future Goals**
 

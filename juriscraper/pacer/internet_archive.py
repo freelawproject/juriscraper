@@ -23,8 +23,8 @@ class InternetArchive(BaseDocketReport):
 
     CACHE_ATTRS = ["metadata", "parties", "docket_entries"]
 
-    def __init__(self):
-        super(InternetArchive, self).__init__()
+    def __init__(self, court_id):
+        super(InternetArchive, self).__init__(court_id)
         # Initialize the empty cache properties.
         self._clear_caches()
         self._metadata = None
@@ -37,13 +37,11 @@ class InternetArchive(BaseDocketReport):
         self.parser = etree.XMLParser(recover=True)
         self.is_valid = True
 
-    def download_pdf(
-        self, pacer_court_id, pacer_case_id, document_number, attachment_number
-    ):
+    def download_pdf(self, pacer_case_id, document_number, attachment_number):
         """Download a PDF from the Internet Archive"""
         timeout = (60, 300)
         url = get_pdf_url(
-            pacer_court_id, pacer_case_id, document_number, attachment_number
+            self.court_id, pacer_case_id, document_number, attachment_number
         )
         logger.info("GETting PDF at URL: %s")
         r = self.session.get(url, timeout=timeout)
@@ -54,10 +52,10 @@ class InternetArchive(BaseDocketReport):
         else:
             return r
 
-    def query(self, court_id, pacer_case_id):
+    def query(self, pacer_case_id):
         """Download a docket XML page from the Internet Archive"""
         timeout = (60, 300)
-        url = get_docketxml_url(court_id, pacer_case_id)
+        url = get_docketxml_url(self.court_id, pacer_case_id)
         logger.info("GETting docket XML at URL: %s")
         r = self.session.get(url, timeout=timeout)
         self.response = r
@@ -81,7 +79,7 @@ class InternetArchive(BaseDocketReport):
             return self._metadata
 
         data = {
-            u"court_id": self._get_str_from_tree("//court"),
+            u"court_id": self.court_id,
             u"docket_number": self._get_str_from_tree("//docket_num"),
             u"case_name": self._get_case_name(),
             u"date_filed": self.get_datetime_from_tree(
