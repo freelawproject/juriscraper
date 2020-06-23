@@ -145,6 +145,30 @@ class BaseDocketReport(object):
         else:
             return s
 
+    def _parse_docket_number_strs(self, potential_docket_numbers):
+        """Parse docket numbers from a list of potential ones
+
+        :param potential_docket_numbers: Potential docket number unicode
+        objects
+        :type potential_docket_numbers: list
+        :return: The correct docket number
+        :rtype: unicode
+        """
+        if self.is_bankruptcy:
+            # Uses both b/c sometimes the bankr. cases have a dist-style docket
+            # number.
+            regexes = [
+                self.docket_number_dist_regex,
+                self.docket_number_bankr_regex,
+            ]
+        else:
+            regexes = [self.docket_number_dist_regex, self.docket_number_jpml]
+        for regex in regexes:
+            for s in potential_docket_numbers:
+                match = regex.search(s)
+                if match:
+                    return match.group(1)
+
     def get_datetime_from_tree(self, path, cast_to_date=False):
         """Parse a datetime from the XML located at node.
 
@@ -1194,22 +1218,11 @@ class DocketReport(BaseDocketReport, BaseReport):
     def _get_docket_number(self):
         if self.is_bankruptcy:
             docket_number_path = "//font"
-            # Uses both b/c sometimes the bankr. cases have a dist-style docket
-            # number.
-            regexes = [
-                self.docket_number_dist_regex,
-                self.docket_number_bankr_regex,
-            ]
         else:
             docket_number_path = "//h3"
-            regexes = [self.docket_number_dist_regex, self.docket_number_jpml]
         nodes = self.tree.xpath(docket_number_path)
         string_nodes = [s.text_content() for s in nodes]
-        for regex in regexes:
-            for s in string_nodes:
-                match = regex.search(s)
-                if match:
-                    return match.group(1)
+        return self._parse_docket_number_strs(string_nodes)
 
     def _get_nature_of_suit(self):
         if self.is_adversary_proceeding:
