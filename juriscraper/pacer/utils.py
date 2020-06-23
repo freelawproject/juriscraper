@@ -4,6 +4,8 @@ import requests
 import tldextract
 from lxml import html
 
+from ..lib.exceptions import ParsingException
+
 
 def get_pacer_court_info():
     r = requests.get("https://court-version-scraper.herokuapp.com/courts.json")
@@ -183,9 +185,13 @@ def get_nonce_from_form(r):
         # The action attr will be a value like:
         # ../cgi-bin/HistDocQry.pl?112801540788508-L_1_0-1
         # Split on the '?', and return the nonce.
-        path, nonce = attr.split("?")
-        if "-L_" in nonce:
-            return nonce
+        try:
+            path, nonce = attr.split("?")
+        except ValueError:
+            raise ParsingException("Didn't get nonce from PACER form.")
+        else:
+            if "-L_" in nonce:
+                return nonce
     return None
 
 
