@@ -121,7 +121,9 @@ class CaseQuery(BaseDocketReport, BaseReport):
         #   <B><FONT SIZE=+1>18-11572</FONT></B><B></B>Nancy Jean Stevens
         # We take the docket number from the <font> tag (the innermost tag),
         # although we could but have chosen the first <b> tag.
-        docket_number = force_unicode(rows[0].find(".//font").text_content())
+        docket_number = self._parse_docket_number_strs(
+            [rows[0].find(".//font").text_content()]
+        )
         # And case caption following the final <b></b> pair.
         case_name_raw = force_unicode(rows[0].find(".//b[last()]").tail)
 
