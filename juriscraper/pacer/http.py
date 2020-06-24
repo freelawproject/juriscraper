@@ -411,9 +411,7 @@ class PacerSession(requests.Session):
             self.login()
             return True
         else:
-            msg = (
-                u"Invalid/expired PACER session and do not have "
-                u"credentials for re-login."
+            raise PacerLoginException(
+                u"Invalid/expired PACER session and do not have credentials "
+                u"for re-login."
             )
-            logger.error(msg)
-            raise PacerLoginException(msg)
