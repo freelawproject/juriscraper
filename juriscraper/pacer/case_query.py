@@ -164,22 +164,18 @@ class CaseQuery(BaseDocketReport, BaseReport):
                     # assignments
                     continue
 
-                if i == 1:
-                    # Second row, no bold => judge name!
+                if i == 1 or i == 2:
+                    # Second & third rows without bold => judge name!
                     presiding_re = re.compile(", (presiding|panel 1)$")
-                    assert presiding_re.search(line), (
-                        "We expected the judge's name to end with "
-                        "'presiding or panel'. Instead, it's: '%s'" % line
-                    )
-                    data[u"assigned_to_str"] = presiding_re.sub("", line)
-                elif i == 2:
-                    # Third row, no bold => referred judge name!
                     referral_re = re.compile(", referral$")
-                    assert referral_re.search(line), (
-                        "We expected the referred judge's name to end "
-                        "with ', referral'. Instead it's: '%s'" % line
-                    )
-                    data[u"referred_to_str"] = referral_re.sub("", line)
+                    if presiding_re.search(line):
+                        data[u"assigned_to_str"] = presiding_re.sub("", line)
+                    elif referral_re.search(line):
+                        data[u"referred_to_str"] = referral_re.sub("", line)
+                    else:
+                        raise AssertionError(
+                            "Unable to match judge row: %s" % line
+                        )
                 else:
                     raise AssertionError("Line with no boldface: '%s'" % line)
             for bold in bolds:
