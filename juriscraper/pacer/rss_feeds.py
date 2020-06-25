@@ -212,6 +212,9 @@ class PacerRssFeed(DocketReport):
         return docket_list
 
     def metadata(self, entry):
+        if self.is_valid is False:
+            return {}
+
         data = {
             u"court_id": self.court_id,
             u"pacer_case_id": get_pacer_case_id_from_nonce_url(entry.link),

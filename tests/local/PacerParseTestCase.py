@@ -34,6 +34,14 @@ class PacerParseTestCase(unittest.TestCase):
             report = test_class(court)
             with open(path, "rb") as f:
                 report._parse_text(f.read().decode("utf-8"))
+
+            # Does the metadata function work too? It usually, but not always,
+            # gets called by report.data
+            try:
+                _ = report.metadata
+            except AttributeError:
+                # Some reports don't have this method.
+                pass
             data = report.data
             if not os.path.exists(json_path):
                 with open(json_path, "w") as f:

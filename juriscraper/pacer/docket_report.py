@@ -376,6 +376,9 @@ class DocketReport(BaseDocketReport, BaseReport):
 
     @property
     def metadata(self):
+        if self.is_valid is False:
+            return {}
+
         if self._metadata is not None:
             return self._metadata
 
