@@ -34,7 +34,9 @@ class CaseQuery(BaseDocketReport, BaseReport):
     ]
 
     def __init__(self, court_id, pacer_session=None):
-        super(CaseQuery, self).__init__(court_id, pacer_session)
+        BaseDocketReport.__init__(self, court_id)
+        BaseReport.__init__(self, court_id, pacer_session)
+
         # Initialize the empty cache properties
         self._clear_caches()
         self._metadata = None
@@ -244,7 +246,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
         """
         assert (
             self.session is not None
-        ), "session attribute of DocketReport cannot be None."
+        ), "session attribute of CaseQuery report cannot be None."
         assert bool(pacer_case_id), (
             "pacer_case_id must be truthy, not '%s'" % pacer_case_id
         )

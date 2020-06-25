@@ -2,6 +2,8 @@
 from __future__ import print_function
 import unittest
 import mock
+from juriscraper.pacer import PacerSession, CaseQuery
+
 from tests.network import get_pacer_session
 
 
@@ -80,3 +82,10 @@ class PacerSessionTest(unittest.TestCase):
         self.assertEqual(
             300, mock_post.call_args[1]["timeout"], "default should be 300"
         )
+
+    def test_scraper_has_session_attribute(self):
+        report = CaseQuery("cand", PacerSession())
+        try:
+            report.session
+        except AttributeError:
+            self.fail("Did not have session attribute on CaseQuery object.")

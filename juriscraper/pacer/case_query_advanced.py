@@ -33,7 +33,9 @@ class BaseCaseQueryAdvanced(BaseDocketReport, BaseReport):
     CACHE_ATTRS = ["metadata"]
 
     def __init__(self, court_id, pacer_session=None):
-        super(BaseCaseQueryAdvanced, self).__init__(court_id, pacer_session)
+        BaseDocketReport.__init__(self, court_id)
+        BaseReport.__init__(self, court_id, pacer_session)
+
         # Initialize the empty cache properties
         self._clear_caches()
         self._metadata = None

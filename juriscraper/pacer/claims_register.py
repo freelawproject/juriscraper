@@ -30,7 +30,9 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
     ]
 
     def __init__(self, court_id, pacer_session=None):
-        super(ClaimsRegister, self).__init__(court_id, pacer_session)
+        BaseDocketReport.__init__(self, court_id)
+        BaseReport.__init__(self, court_id, pacer_session)
+
         self._clear_caches()
         self._metadata = None
         self._claims = None
@@ -267,13 +269,13 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             Claim
              - Number format: 7-1
              - Link: /cgi-bin/show_doc.pl?caseid=171908&claim_id=15151763&claim_num=7-1&magic_num=MAGIC
-             
+
              Claim 2:
               - Number format: 7-1
               - Link: /doc1/072035305573?caseid=671949&claim_id=34489904&claim_num=28-1&magic_num=MAGIC&pdf_header=1
 
             Docket entry:
-             - Number format: 287 
+             - Number format: 287
              - Link: /cgi-bin/show_doc.pl?caseid=171908&de_seq_num=981&dm_id=15184563&doc_num=287
 
              Docket entry 2:

@@ -25,6 +25,7 @@ class InternetArchive(BaseDocketReport):
 
     def __init__(self, court_id):
         super(InternetArchive, self).__init__(court_id)
+
         # Initialize the empty cache properties.
         self._clear_caches()
         self._metadata = None

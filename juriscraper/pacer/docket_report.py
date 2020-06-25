@@ -48,7 +48,7 @@ class BaseDocketReport(object):
     docket_number_bankr_regex = re.compile(r"(?:#:\s+)?((\d-)?\d\d-\d*)")
     docket_number_jpml = re.compile(r"(MDL No.\s+\d*)")
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id):
         self.court_id = court_id
         if self.court_id.endswith("b"):
             self.is_bankruptcy = True
@@ -356,17 +356,14 @@ class DocketReport(BaseDocketReport, BaseReport):
     ]
 
     def __init__(self, court_id, pacer_session=None):
-        super(DocketReport, self).__init__(court_id, pacer_session)
+        BaseDocketReport.__init__(self, court_id)
+        BaseReport.__init__(self, court_id, pacer_session)
+
         # Initialize the empty cache properties.
         self._clear_caches()
         self._metadata = None
         self._parties = None
         self._docket_entries = None
-
-        if self.court_id.endswith("b"):
-            self.is_bankruptcy = True
-        else:
-            self.is_bankruptcy = False
 
     def parse(self):
         """Parse the item, but be sure to clear the cache before you do so.

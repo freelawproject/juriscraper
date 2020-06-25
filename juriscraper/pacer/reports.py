@@ -54,7 +54,6 @@ class BaseReport(object):
         self.tree = None
         self.response = None
         self.is_valid = None
-        super(BaseReport, self).__init__()
 
     @property
     def url(self):
