@@ -182,7 +182,12 @@ class Site(OpinionSiteWebDriven):
     @staticmethod
     def cleanup_content(content):
         tree = html.fromstring(content)
+        # Return all subnodes of partyblock, see:
+        # https://stackoverflow.com/a/6396097/64911
         core_element = tree.xpath("//partyblock")[0]
-        return html.tostring(
-            core_element, pretty_print=True, encoding="unicode"
+        return (core_element.text or "") + "".join(
+            [
+                html.tostring(child, pretty_print=True, encoding="unicode")
+                for child in core_element.iterchildren()
+            ]
         )
