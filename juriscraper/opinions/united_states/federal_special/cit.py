@@ -39,11 +39,11 @@ class Site(OpinionSite):
         # Exclude confidential rows by ensuring there is a sibling row that
         # contains an anchor (which confidential cases do not)
         case_names = []
-        for e in self.html.xpath(
-            "{base}/td[2][../td/a]".format(base=self.base)
-        ):
-            text_nodes = e.xpath(".//text()")
-            case_names.append(text_nodes[0])
+        path = "{base}/td[2][../td/a]".format(base=self.base)
+        for e in self.html.xpath(path):
+            text = e.text_content().strip()
+            case_name = text.split("\n")[0]
+            case_names.append(case_name)
         return case_names
 
     def _get_precedential_statuses(self):
