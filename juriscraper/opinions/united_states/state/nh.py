@@ -19,7 +19,7 @@ from datetime import date
 
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.exceptions import InsanityException
-from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.string_utils import clean_string, convert_date_string
 
 
 class Site(OpinionSite):
@@ -97,7 +97,7 @@ class Site(OpinionSite):
             dockets = []
             name_substrings = []
             for text in anchor.xpath("text()"):
-                text = text.strip()
+                text = clean_string(text)
                 match = self.link_text_regex.search(text)
                 try:
                     docket = match.group(1)
