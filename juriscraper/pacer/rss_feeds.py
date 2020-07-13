@@ -140,6 +140,13 @@ class PacerRssFeed(DocketReport):
     def url(self):
         if self.court_id == "ilnb":
             return "https://tdi.ilnb.uscourts.gov/wwwroot/RSS/rss_outside.xml"
+        elif self.court_id == "nyed":
+            # EDNY has some special RSS software. In Sept. 2017,
+            # rss_outside.pl redirected to readyDockets.pl:
+            #   https://twitter.com/johnhawkinson/status/906005915622629376
+            # But that had stopped happening by 2020.
+            # Special case it for now, but EDNY/AOUSC follow is required:
+            return "https://ecf.nyed.uscourts.gov/cgi-bin/readyDockets.pl"
         else:
             return "https://ecf.%s.uscourts.gov/%s" % (
                 self.court_id,
