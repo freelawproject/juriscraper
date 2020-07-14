@@ -118,8 +118,14 @@ class CaseQuery(BaseDocketReport, BaseReport):
         # regular expression, instead we take the <center> tag that follows
         # the relevant cmecfMainContent <div>, and go line-by-line,
         # delimited by <br>s. This approach is more structured:
+        center_path = './/div[@id="cmecfMainContent"]//center'
+        try:
+            center = self.tree.xpath(center_path)[0]
+        except IndexError:
+            # Can happen for sealed cases? We have at least one test case here.
+            self._metadata = {}
+            return {}
 
-        center = self.tree.xpath('.//div[@id="cmecfMainContent"]//center')[0]
         rows = self.redelimit_p(center, self.BR_REGEX)
 
         # The first row demands special handling:
