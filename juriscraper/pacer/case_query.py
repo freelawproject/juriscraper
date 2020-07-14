@@ -130,7 +130,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
             [rows[0].find(".//font").text_content()]
         )
         # And case caption following the final <b></b> pair.
-        case_name_raw = force_unicode(rows[0].find(".//b[last()]").tail)
+        case_name_raw = force_unicode(rows[0].find(".//b[last()]").tail or "")
 
         # Our job as a parser is to return the data, not to filter, clean,
         # amend, or "harmonize" it. However downstream often expects harmonized
