@@ -203,6 +203,7 @@ class BaseDocketReport(object):
         sep = u"FLP_SEPARATOR"
         html_text = tostring(element, encoding="unicode")
         html_text = re.sub(r"<br/?>", sep, html_text, flags=re.I)
+        html_text = re.sub(r"<p/?>", sep, html_text, flags=re.I)
         element = fromstring(html_text)
         text = force_unicode(" ".join(s for s in element.xpath(".//text()")))
         return [s.strip() for s in text.split(sep) if s]
