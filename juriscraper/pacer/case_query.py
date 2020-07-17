@@ -174,10 +174,13 @@ class CaseQuery(BaseDocketReport, BaseReport):
                     # Second & third rows without bold => judge name!
                     presiding_re = re.compile(", (presiding|panel 1)$")
                     referral_re = re.compile(", referral$")
+                    related_re = re.search("Related case: (.*)", line)
                     if presiding_re.search(line):
                         data[u"assigned_to_str"] = presiding_re.sub("", line)
                     elif referral_re.search(line):
                         data[u"referred_to_str"] = referral_re.sub("", line)
+                    elif related_re:
+                        data[u"related_cases_str"] = related_re.group(1)
                     else:
                         raise AssertionError(
                             "Unable to match judge row: %s" % line
