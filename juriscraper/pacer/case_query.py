@@ -170,7 +170,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
                     # assignments
                     continue
 
-                if i == 1 or i == 2:
+                if i <= 3:
                     # Second & third rows without bold => judge name!
                     presiding_re = re.compile(", (presiding|panel 1)$")
                     referral_re = re.compile(", referral$")
