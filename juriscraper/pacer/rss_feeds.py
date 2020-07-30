@@ -138,15 +138,19 @@ class PacerRssFeed(DocketReport):
 
     @property
     def url(self):
-        if self.court_id == "ilnb":
-            return "https://tdi.ilnb.uscourts.gov/wwwroot/RSS/rss_outside.xml"
-        elif self.court_id == "nyed":
+        if self.court_id == "nyed":
             # EDNY has some special RSS software. In Sept. 2017,
             # rss_outside.pl redirected to readyDockets.pl:
             #   https://twitter.com/johnhawkinson/status/906005915622629376
             # But that had stopped happening by 2020.
             # Special case it for now, but EDNY/AOUSC follow is required:
             return "https://ecf.nyed.uscourts.gov/cgi-bin/readyDockets.pl"
+        elif self.court_id == "ared":
+            # In response to requests from their bar association, the Eastern
+            # District of Arkansas has a bunch of RSS feeds that you can see
+            # from their homepage. Their default one is limited to orders and
+            # opinions, but this one has "All Docket Entries".
+            return "https://ecf.ared.uscourts.gov/cgi-bin/rss_outside4.pl"
         else:
             return "https://ecf.%s.uscourts.gov/%s" % (
                 self.court_id,
