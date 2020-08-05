@@ -5,6 +5,7 @@ from __future__ import print_function
 import unittest
 
 from juriscraper.lib.date_utils import is_first_month_in_quarter, quarter
+from juriscraper.lib.diff_tools import normalize_phrase
 from juriscraper.lib.string_utils import (
     CaseNameTweaker,
     clean_string,
@@ -363,6 +364,23 @@ class StringUtilTest(unittest.TestCase):
         ]
         for pair in test_pairs:
             self.assertEqual(harmonize(clean_string(pair[0])), pair[1])
+
+    def test_normalize_phrase(self):
+        """Tests normalization of case titles."""
+        test_pairs = [
+            ["Commissioner v. Palin", u"palin"],
+            ["Commr v. Palin", u"palin"],
+            ["Comm'r v. Palin", u"palin"],
+            [
+                "United States v. Learned Hand et. al.",
+                u"unitedstateslearnedhand",
+            ],
+            ["Baker, Plaintiff v. Palin, Defendant", u"bakerpalin"],
+        ]
+        for pair in test_pairs:
+            self.assertEqual(
+                normalize_phrase(harmonize(clean_string(pair[0]))), pair[1]
+            )
 
     def test_titlecase(self):
         """Tests various inputs for the titlecase function"""
