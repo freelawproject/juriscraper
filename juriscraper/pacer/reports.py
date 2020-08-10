@@ -2,7 +2,6 @@
 import re
 
 import six
-from lxml import etree
 from lxml.html import HtmlElement
 from six.moves.urllib.parse import urljoin
 
