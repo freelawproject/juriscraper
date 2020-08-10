@@ -21,9 +21,8 @@ class AppellateAttachmentPage(BaseReport):
 
     def __init__(self, court_id, pacer_session=None):
         super(AppellateAttachmentPage, self).__init__(court_id, pacer_session)
-        # Note that parsing bankruptcy attachment pages does not reveal the
+        # Note that parsing appellate attachment pages does not reveal the
         # document number, only the attachment numbers.
-        self.is_bankruptcy = self.court_id.endswith("b")
 
     def query(self, document_number):
         """Query the "attachment page" endpoint and set the results to self.response.
@@ -65,7 +64,7 @@ class AppellateAttachmentPage(BaseReport):
 
         :return: If lookup fails, an empty dict. Else, a dict containing the
         following fields:
-            - dls_id: The id used to generate the POST request for this page.
+            - dls_id: The id used to generate the request from the docket.
             - case_id: The pacer case id for this case.
             - pacer_seq_no - The value of the docket row we came from.
 
@@ -73,7 +72,7 @@ class AppellateAttachmentPage(BaseReport):
                 - attachment_number: The attachment number.
                 - description: A description of the item.
                 - page_count: The number of pages for the attachment.
-                - pacer_doc_id: The document ID for the attachment (a str).
+                - pacer_doc_id: The pacer doc id for the attachment (a str).
 
         See the JSON objects in the tests for more examples.
         """
