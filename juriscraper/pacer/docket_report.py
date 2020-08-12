@@ -1212,6 +1212,20 @@ class DocketReport(BaseDocketReport, BaseReport):
                     break
 
             if case_name is None:
+                # Try to get the case name from the party attribute. Use first
+                # plaintiff v. first defendant
+                plaintiff = None
+                defendant = None
+                for party in self.parties:
+                    if plaintiff is None and party["type"] == "Plaintiff":
+                        plaintiff = party["name"]
+                    elif defendant is None and party["type"] == "Defendant":
+                        defendant = party["name"]
+                if plaintiff and defendant:
+                    case_name = "%s v. %s" % (plaintiff, defendant)
+
+            if case_name is None:
+                # All parsing has failed. Give up.
                 case_name = u"Unknown Case Title"
 
         return clean_string(harmonize(case_name))
