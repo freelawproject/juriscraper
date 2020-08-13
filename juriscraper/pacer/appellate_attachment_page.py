@@ -8,6 +8,7 @@ from lxml import html
 
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.string_utils import force_unicode
+from juriscraper.pacer.utils import get_pacer_doc_id_from_doc1_url
 from .reports import BaseReport
 from ..lib.log_tools import make_default_logger
 
@@ -170,7 +171,7 @@ class AppellateAttachmentPage(BaseReport):
         for the item in that row. Return None if the ID cannot be found.
         """
         try:
-            row.xpath(u".//a")[0]
+            url = row.xpath(u".//a")[0]
         except IndexError:
             # Item exists, but cannot download document. Perhaps it's sealed
             # or otherwise unavailable in PACER. This is carried over from the
@@ -178,7 +179,8 @@ class AppellateAttachmentPage(BaseReport):
             # precaution.
             return None
         else:
-            return row.xpath(".//td/a/@href")[0].split("/")[-1]
+            doc1_url = url.xpath("./@href")[0]
+            return get_pacer_doc_id_from_doc1_url(doc1_url)
 
     def _get_pacer_case_id(self):
         """Get the pacer_case_id value by inspecting the function scripts
