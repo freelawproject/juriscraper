@@ -15,9 +15,16 @@ logger = make_default_logger()
 
 
 class AppellateAttachmentPage(BaseReport):
-    """An object for querying and parsing the appellate att. page report."""
+    """An object for querying and parsing the appellate att. page report.
 
-    PATH = "doc1/"
+    * Some notes on Appellate attachement pages.
+    The document number for the main document is not identified as such in the
+    HTML.  Trial and error suggests it is the lowest numbered document
+    number.  This is not always the first document listed in the order of
+    attachments on the appellate attachment page.
+    """
+
+    PATH = "docs1/"
 
     def __init__(self, court_id, pacer_session=None):
         super(AppellateAttachmentPage, self).__init__(court_id, pacer_session)
@@ -27,14 +34,18 @@ class AppellateAttachmentPage(BaseReport):
     def query(self, document_number):
         """Query the "attachment page" endpoint and set the results to self.response.
 
+        The appellate attachment page uses the a variable called dls_id
+        in the URL path which appears to be a variation of the main document
+        id number.  We can generate the DLS ID by changing the fourth number
+        in the document ID to 0.
         :param document_number: The internal PACER document ID for the item.
         :return: a request response object
         """
         assert (
             self.session is not None
         ), "session attribute of DocketReport cannot be None."
-        # coerce the fourth digit of the document number to 1 to ensure we get
-        # the attachment page.
+
+        # Generate the document URL from the document number.
         document_number = document_number[:3] + "0" + document_number[4:]
         url = self.url + document_number
         logger.info(u"Querying the attachment page endpoint at URL: %s", url)
@@ -106,8 +117,7 @@ class AppellateAttachmentPage(BaseReport):
     def _get_dls_id(self):
         """Extract the dls_id.
 
-        The dls_id is associated with the docket row - and is one number
-        off from the main document ID.  This should be used to identify
+        The DLS ID  This should be used to identify
         document number row.
 
         In appellate attachment page, this is easy to extract with an XPath.
@@ -170,9 +180,8 @@ class AppellateAttachmentPage(BaseReport):
         else:
             return row.xpath(".//td/a/@href")[0].split("/")[-1]
 
-    @staticmethod
-    def _get_pacer_case_id(html_string):
-        """Get the pacer_case_id value by inspecting the original HTML
+    def _get_pacer_case_id(self):
+        """Get the pacer_case_id value by inspecting the function scripts
 
         :returns str: The pacer_case_id value
         """
@@ -193,7 +202,9 @@ class AppellateAttachmentPage(BaseReport):
 
 def _main():
     if len(sys.argv) != 2:
-        print("Usage: python -m juriscraper.pacer.attachment_page filepath")
+        print(
+            "Usage: python -m juriscraper.pacer.appellate_attachment_page filepath"
+        )
         print("Please provide a path to an HTML file to parse.")
         sys.exit(1)
     report = AppellateAttachmentPage(
