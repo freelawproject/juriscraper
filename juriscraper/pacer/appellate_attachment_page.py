@@ -90,15 +90,14 @@ class AppellateAttachmentPage(BaseReport):
             return {}
 
         rows = self.tree.xpath("//tbody/tr/td/a/parent::td/parent::tr")
-        html_str = html.tostring(self.tree)
         if not rows:
             logger.info("No documents found on attachment page.")
             return {}
 
         result = {
             "dls_id": self._get_dls_id(),
-            "case_id": self._get_pacer_case_id(html_str),
-            "pacer_seq_no": self._get_pacer_seq_no(html_str),
+            "case_id": self._get_pacer_case_id(),
+            "pacer_seq_no": self._get_pacer_seq_no(),
             "attachments": [],
         }
 
@@ -185,17 +184,18 @@ class AppellateAttachmentPage(BaseReport):
 
         :returns str: The pacer_case_id value
         """
-        m = re.search(r"[?&]caseid=(\d+)", html_string, flags=re.I)
+        script_html = html.tostring(self.tree.xpath(".//script")[0])
+        m = re.search(r"[?&]caseid=(\d+)", script_html, flags=re.I)
         if m:
             return m.group(1)
 
-    @staticmethod
-    def _get_pacer_seq_no(html_string):
+    def _get_pacer_seq_no(self):
         """Get pacer sequence number.
 
         This value corresponds to the value in the docket TR
         """
-        m = re.search(r"[?&]d=(\d+)&outputForm", html_string, flags=re.I)
+        script_html = html.tostring(self.tree.xpath(".//script")[0])
+        m = re.search(r"[?&]d=(\d+)&outputForm", script_html, flags=re.I)
         if m:
             return m.group(1)
 
