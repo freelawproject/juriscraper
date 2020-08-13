@@ -29,8 +29,6 @@ class AppellateAttachmentPage(BaseReport):
 
     def __init__(self, court_id, pacer_session=None):
         super(AppellateAttachmentPage, self).__init__(court_id, pacer_session)
-        # Note that parsing appellate attachment pages does not reveal the
-        # document number, only the attachment numbers.
 
     def query(self, document_number):
         """Query the "attachment page" endpoint and set the results to self.response.
