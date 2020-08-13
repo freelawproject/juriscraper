@@ -74,7 +74,7 @@ class AppellateAttachmentPage(BaseReport):
 
         :return: If lookup fails, an empty dict. Else, a dict containing the
         following fields:
-            - dls_id: The id used to generate the request from the docket.
+            - main_document_id: The id of the main document.
             - case_id: The pacer case id for this case.
             - pacer_seq_no - The value of the docket row we came from.
 
@@ -95,7 +95,7 @@ class AppellateAttachmentPage(BaseReport):
             return {}
 
         result = {
-            "dls_id": self._get_dls_id(),
+            "main_document_id": self._get_main_document_id(),
             "case_id": self._get_pacer_case_id(),
             "pacer_seq_no": self._get_pacer_seq_no(),
             "attachments": [],
@@ -112,14 +112,14 @@ class AppellateAttachmentPage(BaseReport):
             )
         return result
 
-    def _get_dls_id(self):
-        """Extract the dls_id.
+    def _get_main_document_id(self):
+        """Extract the main_document_id.
 
         The DLS ID  This should be used to identify
         document number row.
 
         In appellate attachment page, this is easy to extract with an XPath.
-        :return: dls_id
+        :return: main_document_id
         """
         try:
             rows = self.tree.xpath("//tbody/tr/td/a/@href")
