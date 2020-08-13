@@ -46,8 +46,8 @@ class AppellateAttachmentPage(BaseReport):
 
         :param tree: A tree you wish to cleanup
         :type tree: lxml.html.HtmlElement
-        Set self.tree to a cleaned lxml.html.HtmlElement
-        :return: None
+
+        :return: None, instead sets self.tree to a cleaned lxml.html.HtmlElement.
         """
         self.tree = strip_bad_html_tags_insecure(tree, remove_scripts=False)
 
