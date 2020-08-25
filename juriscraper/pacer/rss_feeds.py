@@ -219,7 +219,9 @@ class PacerRssFeed(DocketReport):
     def metadata(self, entry):
         if self.is_valid is False:
             return {}
-
+        bk_entry_data = self._parse_get_trustee_type_office_chapter(
+            entry.summary
+        )
         data = {
             u"court_id": self.court_id,
             u"pacer_case_id": get_pacer_case_id_from_nonce_url(entry.link),
@@ -237,6 +239,11 @@ class PacerRssFeed(DocketReport):
             u"jury_demand": "",
             u"demand": "",
             u"jurisdiction": "",
+            # bankruptcy data
+            u"trustee": bk_entry_data.get("trustee", ""),
+            u"type": bk_entry_data.get("type", ""),
+            u"office": bk_entry_data.get("office", ""),
+            u"chapter": bk_entry_data.get("chapter", ""),
         }
         data = clean_court_object(data)
         return data
@@ -273,6 +280,25 @@ class PacerRssFeed(DocketReport):
             de[u"pacer_seq_no"] = None
 
         return [de]
+
+    def _parse_get_trustee_type_office_chapter(self, entry_text):
+        if not self.is_bankruptcy:
+            return {}
+        data_parts_re = re.compile(
+            r"""
+            ^Type: (?P<type>.*?)
+            Office: (?P<office>.*?)
+            Chapter: (?P<chapter>.*?)
+            (Trustee: (?P<trustee>.*?))? \[""",
+            re.VERBOSE,
+        )
+        m = data_parts_re.search(entry_text)
+        return {
+            u"type": m.group("type"),
+            u"office": m.group("office"),
+            u"chapter": m.group("chapter"),
+            u"trustee": m.group("trustee") or "",
+        }
 
     def _get_docket_number(self, title_text):
         if self.is_bankruptcy:
