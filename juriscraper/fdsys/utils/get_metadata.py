@@ -27,10 +27,10 @@ def get_court_id(fdsys_court):
 def clean_up_rough_data(data):
     """Clean up the data so it's good.
 
-     - [ ] Strip extra spaces from all nodes.
-     - [ ] Convert newlines into spaces.
-     - [ ] Ensure good encodings?
-     - [ ] Review other items from Juriscraper.
+    - [ ] Strip extra spaces from all nodes.
+    - [ ] Convert newlines into spaces.
+    - [ ] Ensure good encodings?
+    - [ ] Review other items from Juriscraper.
 
     """
     return data

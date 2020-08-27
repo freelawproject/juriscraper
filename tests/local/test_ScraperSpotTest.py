@@ -162,7 +162,10 @@ class ScraperSpotTest(unittest.TestCase):
                 "2012-644, State of New Hampshire v. Adam Mueller",
                 "State of New Hampshire v. Adam Mueller",
             ),
-            ("2012-920, In re Trevor G.", "In re Trevor G.",),
+            (
+                "2012-920, In re Trevor G.",
+                "In re Trevor G.",
+            ),
             (
                 "2012-313, State of New Hampshire v. John A. Smith",
                 "State of New Hampshire v. John A. Smith",

@@ -93,5 +93,8 @@ setup(
     tests_require=["jsondate3-aware", "mock", "vcrpy"],
     include_package_data=True,
     test_suite="tests.test_local",
-    cmdclass={"verify": VerifyVersion, "testnetwork": TestNetwork,},
+    cmdclass={
+        "verify": VerifyVersion,
+        "testnetwork": TestNetwork,
+    },
 )

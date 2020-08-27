@@ -89,7 +89,10 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
 
     def test_filtering_by_office_and_civil_criminal(self):
         """Can we filter by multiple variables?"""
-        d = self.report.data(office_number="2", docket_number_letters="cr",)
+        d = self.report.data(
+            office_number="2",
+            docket_number_letters="cr",
+        )
         self.assertEqual("977548", d["pacer_case_id"])
 
     def test_filtering_by_case_name(self):
@@ -138,8 +141,7 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
         self.assertEqual("313707", d["pacer_case_id"])
 
     def test_pick_sequentially_by_defendant_number(self):
-        """Does this work properly when we pick by sequential defendant number?
-        """
+        """Does this work properly when we pick by sequential defendant number?"""
         xml = """
         <request number='1700355'>
             <case number='2:15-cr-158'   id='284385'

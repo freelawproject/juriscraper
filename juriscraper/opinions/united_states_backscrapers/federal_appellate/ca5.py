@@ -193,7 +193,10 @@ class Site(OpinionSiteWebDriven):
         self.case_date = d
         logger.info(
             "Running backscraper with date range: %s to %s"
-            % (self.case_date - timedelta(days=self.interval), self.case_date,)
+            % (
+                self.case_date - timedelta(days=self.interval),
+                self.case_date,
+            )
         )
         self.html = self._download()
         if self.html is not None:

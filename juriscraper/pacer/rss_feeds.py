@@ -191,7 +191,7 @@ class PacerRssFeed(DocketReport):
     @property
     def data(self):
         """Override this to create a list of docket-like objects instead of the
-         usual dict that is usually provided by the docket report.
+        usual dict that is usually provided by the docket report.
         """
         if self._data is not None:
             return self._data

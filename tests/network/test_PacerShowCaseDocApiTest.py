@@ -45,5 +45,6 @@ class PacerShowCaseDocApiTest(unittest.TestCase):
             self.report.query(**test)
             got = self.report.data
             self.assertEqual(
-                got, expected,
+                got,
+                expected,
             )

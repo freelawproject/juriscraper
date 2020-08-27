@@ -114,7 +114,11 @@ class DocketParseTest(unittest.TestCase):
     def test_fakerss_court_dockets(self):
         path_root = os.path.join(TESTS_ROOT_EXAMPLES_PACER_DOCKET, "fake-rss")
         self.run_parsers_on_path(
-            path_root, required_fields=["case_name", "docket_number",]
+            path_root,
+            required_fields=[
+                "case_name",
+                "docket_number",
+            ],
         )
 
     def test_specialty_court_dockets(self):

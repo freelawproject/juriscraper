@@ -122,7 +122,8 @@ class Site(OralArgumentSite):
     @staticmethod
     def _return_download_url(d, docket_string):
         link = "http://cdn.ca9.uscourts.gov/datastore/media/{date}/{docket_nr}.wma".format(
-            date=d.strftime("%Y/%m/%d"), docket_nr=docket_string,
+            date=d.strftime("%Y/%m/%d"),
+            docket_nr=docket_string,
         )
         return link
 

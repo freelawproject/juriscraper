@@ -17,10 +17,10 @@ STOP_WORDS_RE = re.compile(r"^(%s)$" % STOP_WORDS)
 def normalize_phrase(phrase):
     """Clean up words or phrases before sending them to be compared.
 
-     - Harmonize things like United States, USA, etc.
-     - Normalize to lower case.
-     - Remove punctuation.
-     - Remove stop words.
+    - Harmonize things like United States, USA, etc.
+    - Normalize to lower case.
+    - Remove punctuation.
+    - Remove stop words.
     """
     phrase = harmonize(phrase)
     phrase = phrase.lower()

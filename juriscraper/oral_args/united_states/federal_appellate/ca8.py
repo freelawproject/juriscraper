@@ -20,8 +20,7 @@ class Site(OralArgumentSite):
         self.url = "http://media-oa.ca8.uscourts.gov/circ8rss.xml"
 
     def _download(self, request_dict={}):
-        """Go through the items and filter out ones that aren't complete.
-        """
+        """Go through the items and filter out ones that aren't complete."""
         self.items = []
         html_tree = super(Site, self)._download(request_dict=request_dict)
         for item in html_tree.xpath("//item"):

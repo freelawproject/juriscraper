@@ -70,8 +70,8 @@ class Site(OpinionSite):
         return [case["status"] for case in self.cases]
 
     def _download_backwards(self, n):
-        self.url = "http://www.cafc.uscourts.gov/opinions-orders?page={}".format(
-            n
+        self.url = (
+            "http://www.cafc.uscourts.gov/opinions-orders?page={}".format(n)
         )
 
         self.html = self._download()

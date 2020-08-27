@@ -33,13 +33,20 @@ def make_default_logger(file_path=LOG_FILENAME):
                 errprint(
                     "\nWarning: %s: %s. "
                     "Have you created the directory for the log?"
-                    % (e.strerror, file_path,)
+                    % (
+                        e.strerror,
+                        file_path,
+                    )
                 )
             elif e.errno == 13:
                 errprint(
                     "\nWarning: %s: %s. "
                     "Cannot access file as user: %s"
-                    % (e.strerror, file_path, getpass.getuser(),)
+                    % (
+                        e.strerror,
+                        file_path,
+                        getpass.getuser(),
+                    )
                 )
             else:
                 errprint(

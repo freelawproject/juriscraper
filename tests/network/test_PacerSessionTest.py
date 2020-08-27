@@ -31,7 +31,10 @@ class PacerSessionTest(unittest.TestCase):
         self.session.password = PACER_PASSWORD
         _ = self.session.get(
             url,
-            params={"case_id": pacer_case_id, "got_receipt": "1",},
+            params={
+                "case_id": pacer_case_id,
+                "got_receipt": "1",
+            },
             allow_redirects=True,
         )
         self.assertTrue(

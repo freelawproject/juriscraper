@@ -17,7 +17,9 @@ class Site(OpinionSite):
         self.back_scrape_iterable = [
             i.date()
             for i in rrule(
-                DAILY, dtstart=date(1995, 11, 1), until=date(2015, 1, 1),
+                DAILY,
+                dtstart=date(1995, 11, 1),
+                until=date(2015, 1, 1),
             )
         ]
         self.base = (
