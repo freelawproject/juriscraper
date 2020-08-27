@@ -36,8 +36,8 @@ class Site(OpinionSiteWebDriven):
 
     def _download(self, request_dict={}):
         """This is another of the cursed MS asp.net pages with damned POST
-          parameters like __EVENTVALIDATION. These are near impossible to
-          scrape without using Selenium.
+        parameters like __EVENTVALIDATION. These are near impossible to
+        scrape without using Selenium.
         """
         if self.test_mode_enabled():
             return super(Site, self)._download(request_dict=request_dict)

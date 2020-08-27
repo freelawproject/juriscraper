@@ -121,7 +121,8 @@ class ScraperExampleTest(unittest.TestCase):
                             )
                             for i, item in enumerate(fixture_json):
                                 self.assertEqual(
-                                    fixture_json[i], json_data[i],
+                                    fixture_json[i],
+                                    json_data[i],
                                 )
 
                     else:

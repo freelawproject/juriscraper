@@ -34,5 +34,7 @@ class PacerMobileQueryTest(unittest.TestCase):
             % (actual_de_count, expected_de_count),
         )
         self.assertEqual(
-            "", metadata["cost"], msg="cost query failed",
+            "",
+            metadata["cost"],
+            msg="cost query failed",
         )

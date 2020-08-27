@@ -29,7 +29,9 @@ class Site(OpinionSiteWebDriven):
         self.back_scrape_iterable = [
             i.date()
             for i in rrule(
-                WEEKLY, dtstart=date(1995, 9, 25), until=date(2018, 11, 13),
+                WEEKLY,
+                dtstart=date(1995, 9, 25),
+                until=date(2018, 11, 13),
             )
         ]
 

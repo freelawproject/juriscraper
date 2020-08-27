@@ -135,7 +135,11 @@ class Site(OpinionSiteWebDriven):
 
     def _get_judges(self):
         judges = []
-        for element in self.html.xpath("{}/td[6]".format(self.base_path,)):
+        for element in self.html.xpath(
+            "{}/td[6]".format(
+                self.base_path,
+            )
+        ):
             judges.append(
                 "".join(x.strip() for x in element.xpath(".//text()"))
             )
@@ -143,7 +147,11 @@ class Site(OpinionSiteWebDriven):
 
     def _get_neutral_citations(self):
         neutral_citations = []
-        for element in self.html.xpath("{}/td[4]".format(self.base_path,)):
+        for element in self.html.xpath(
+            "{}/td[4]".format(
+                self.base_path,
+            )
+        ):
             neutral_citations.append(
                 "".join(x.strip() for x in element.xpath(".//text()"))
             )

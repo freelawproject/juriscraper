@@ -113,14 +113,17 @@ class AbstractSite(object):
         """Scrapers that require this due to website misconfiguration
         should be checked periodically--calls to this method from
          site scrapers should be removed when no longer necessary.
-         """
+        """
         self.request["verify"] = False
 
     def test_mode_enabled(self):
         return self.method == "LOCAL"
 
     def to_json(self):
-        return json.dumps([item for item in self], default=json_date_handler,)
+        return json.dumps(
+            [item for item in self],
+            default=json_date_handler,
+        )
 
     def parse(self):
         if not self.downloader_executed:
@@ -273,8 +276,7 @@ class AbstractSite(object):
         )
 
     def _date_sort(self):
-        """ Sort the object by date.
-        """
+        """Sort the object by date."""
         if len(self.case_names) > 0:
             obj_list_attrs = [
                 self.__getattribute__(attr)
@@ -425,34 +427,34 @@ class AbstractSite(object):
     @staticmethod
     def cleanup_content(content):
         """
-          Given the HTML from a page, the binary PDF file, or similar, do any
-          last-minute cleaning.
+        Given the HTML from a page, the binary PDF file, or similar, do any
+        last-minute cleaning.
 
-          This method should be called as the last step by any caller and works
-          to do any cleanup that is necessary. Usually, this is needed on HTML
-          pages, in jurisdictions that post their content in an HTML page with
-          headers, footers and other content must be stripped after the page
-          has been downloaded by the caller.
+        This method should be called as the last step by any caller and works
+        to do any cleanup that is necessary. Usually, this is needed on HTML
+        pages, in jurisdictions that post their content in an HTML page with
+        headers, footers and other content must be stripped after the page
+        has been downloaded by the caller.
         """
         return content
 
     def _get_cookies(self):
         """
-          Some websites require cookies in order to be scraped. This method
-          provides a hook where cookies can be retrieved by calling functions.
-          Generally the cookies will be set by the _download() method.
+        Some websites require cookies in order to be scraped. This method
+        provides a hook where cookies can be retrieved by calling functions.
+        Generally the cookies will be set by the _download() method.
 
-          self.cookies is a list of dicts of the form:
-          [
-              {
-                  u'domain':   u'www.search.txcourts.gov',
-                  u'httponly': True,
-                  u'name':     u'ASP.NET_SessionId',
-                  u'path':     u'/',
-                  u'secure':   False,
-                  u'value':    u'hryku05534xhgr45yxvusuux'
-              },
-          ]
+        self.cookies is a list of dicts of the form:
+        [
+            {
+                u'domain':   u'www.search.txcourts.gov',
+                u'httponly': True,
+                u'name':     u'ASP.NET_SessionId',
+                u'path':     u'/',
+                u'secure':   False,
+                u'value':    u'hryku05534xhgr45yxvusuux'
+            },
+        ]
         """
         return self._cookies
 

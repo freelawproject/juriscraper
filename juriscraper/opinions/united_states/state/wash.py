@@ -21,7 +21,9 @@ class Site(OpinionSite):
         self.back_scrape_iterable = [
             i.date()
             for i in rrule(
-                MONTHLY, dtstart=date(2014, 2, 1), until=date.today(),
+                MONTHLY,
+                dtstart=date(2014, 2, 1),
+                until=date.today(),
             )
         ]
 

@@ -93,8 +93,7 @@ def get_row_column_links(row, cell_num):
 
 
 def get_clean_body_content(content, remove_extra_tags=[]):
-    """Parse out the body from an html string, clean it up, and send it along.
-    """
+    """Parse out the body from an html string, clean it up, and send it along."""
     remove_tags = ["a", "body", "font", "noscript"]
     remove_tags.extend(remove_extra_tags)
     cleaner = Cleaner(style=True, remove_tags=remove_tags)
@@ -190,12 +189,12 @@ def set_response_encoding(request):
 
 
 def clean_html(text):
-    """ Cleans up text before we make it into an HTML tree:
-        1. Nukes <![CDATA stuff.
-        2. Nukes XML encoding declarations
-        3. Replaces </br> with <br/>
-        4. Nukes invalid bytes in input
-        5. ?
+    """Cleans up text before we make it into an HTML tree:
+    1. Nukes <![CDATA stuff.
+    2. Nukes XML encoding declarations
+    3. Replaces </br> with <br/>
+    4. Nukes invalid bytes in input
+    5. ?
     """
     # Remove <![CDATA because it causes breakage in lxml.
     text = re.sub(r"<!\[CDATA\[", u"", text)

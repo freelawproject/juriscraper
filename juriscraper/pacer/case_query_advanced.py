@@ -25,8 +25,7 @@ logger = make_default_logger()
 
 
 class BaseCaseQueryAdvanced(BaseDocketReport, BaseReport):
-    """Base query for both district and bankruptcy queries.
-    """
+    """Base query for both district and bankruptcy queries."""
 
     PATH = "cgi-bin/iquery.pl"
 

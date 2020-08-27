@@ -741,7 +741,10 @@ class DocketReport(BaseDocketReport, BaseReport):
                     # No counts here. (Happens with terminated ones a lot.)
                     continue
                 criminal_data[u"complaints"].append(
-                    {u"name": complaint_name, u"disposition": disposition,}
+                    {
+                        u"name": complaint_name,
+                        u"disposition": disposition,
+                    }
                 )
 
     @staticmethod

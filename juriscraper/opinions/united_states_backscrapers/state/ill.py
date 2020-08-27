@@ -115,8 +115,8 @@ class Site(OpinionSite):
             self.case_dates_path = base_path
             self.case_dates_path_day = "./preceding-sibling::td[3]//text()"
             self.case_dates_path_month = ".//ancestor::tr[1]/preceding-sibling::tr[count(./td) = 1][td//strong][1]/td//text()"
-            self.precedential_statuses_path = "{}/preceding-sibling::td[2]".format(
-                base_path
+            self.precedential_statuses_path = (
+                "{}/preceding-sibling::td[2]".format(base_path)
             )
             self.docket_numbers_path = "{}/preceding-sibling::td[2]".format(
                 base_path
@@ -141,8 +141,8 @@ class Site(OpinionSite):
                 self.case_dates_path = "{}/preceding-sibling::td[2]".format(
                     base_path
                 )
-            self.precedential_statuses_path = "{}/preceding-sibling::td[1]".format(
-                base_path
+            self.precedential_statuses_path = (
+                "{}/preceding-sibling::td[1]".format(base_path)
             )
             self.docket_numbers_path = "{}/preceding-sibling::td[1]".format(
                 base_path
@@ -155,8 +155,8 @@ class Site(OpinionSite):
             self.case_dates_path = "{}/preceding-sibling::td[3]".format(
                 base_path
             )
-            self.precedential_statuses_path = "{}/preceding-sibling::td[2]".format(
-                base_path
+            self.precedential_statuses_path = (
+                "{}/preceding-sibling::td[2]".format(base_path)
             )
             self.docket_numbers_path = "{}/preceding-sibling::td[2]".format(
                 base_path
