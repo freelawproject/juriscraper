@@ -49,9 +49,8 @@ Notes:
 import re
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.exceptions import InsanityException
-from juriscraper.lib.string_utils import titlecase
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.string_utils import titlecase
 
 ## WARNING: THIS SCRAPER IS FAILING:
 ## This scraper is succeeding in development, but
@@ -114,23 +113,22 @@ class Site(OpinionSite):
             # Cell must contain a link
             if cell.xpath("a"):
                 link_href = cell.xpath("a/@href")[0].strip()
-                link_text = cell.xpath("a/text()")[0].strip()
                 cell_text = cell.xpath("text()")
                 date = self._parse_date_from_cell_text(cell_text)
                 # Cell must contain a parse-able date
                 if date:
-                    docket_match = self.docket_number_regex.search(link_text)
-                    # Cell must contain a docket number conforming to expected format
+                    docket_match = self.docket_number_regex.search(link_href)
+                    # Link must contain a docket number conforming to expected format
                     if docket_match:
                         if self.test_mode_enabled():
                             # Don't fetch names when running tests
                             name = "No case names fetched during tests."
                         else:
                             # Fetch case name from external portal search (see doc string at top for details)
-                            case_number = "%s%s%s" % (
+                            case_number = "%s-%s-%s" % (
                                 docket_match.group("year"),
                                 docket_match.group("court"),
-                                docket_match.group("number"),
+                                docket_match.group("number")[-4:],
                             )
                             name = self._fetch_case_name(case_number)
                         if name:
@@ -156,11 +154,6 @@ class Site(OpinionSite):
 
     def _fetch_case_name(self, case_number):
         """Fetch case name for a given docket number + publication year pair.
-
-        Some resources show 'Public Access Restricted' messages and do not
-        provide parseable case name information.  These will be skipped by
-        our system by returning False below.  The only other approach would
-        be to parse the case name from the raw PDF text itself.
         """
 
         # If case_number is not expected 12 characters, skip it, since
@@ -170,33 +163,19 @@ class Site(OpinionSite):
         if len(case_number) != 12:
             return False
 
-        # HTTPS certificate is bad, but hopefully they'll fix it and we can remove the line below
-        self.disable_certificate_verification()
-
         url = (
-            "https://appellate.kycourts.net/SC/SCDockets/CaseDetails.aspx?cn=%s"
-            % case_number
+            "https://appellatepublic.kycourts.net/api/api/v1/cases/search?queryString=true&searchFields%5B0%5D.searchType=Starts%20With&searchFields%5B0%5D.operation=%3D&searchFields%5B0%5D.values%5B0%5D="
+            + case_number
+            + "&searchFields%5B0%5D.indexFieldName=caseNumber"
         )
-        html = self._get_html_tree_by_url(url)
 
-        # Halt if there is a (dismissible) error/warning on the page
-        path_error_warning = '//div[contains(@class, "alert-dismissible")]'
-        if html.xpath(path_error_warning):
-            raise InsanityException(
-                "Invalid sub-resource url (%s). Is case number (%s) invalid?"
-                % (url, case_number)
-            )
-
-        # Ensure that only two substrings are present
-        path_party = '//td[@class="party"]/text()'
-        parties = html.xpath(path_party)
-        if len(parties) != 2:
-            raise InsanityException(
-                "Unexpected party elements. Expected two substrings, got: %s"
-                % ", ".join(parties)
-            )
-
-        return titlecase(" v. ".join(parties))
+        self._request_url_get(url)
+        json = self.request["response"].json()
+        try:
+            title = json["resultItems"][0]["rowMap"]["shortTitle"]
+        except IndexError:
+            return False
+        return titlecase(title)
 
     def _get_download_urls(self):
         return self.DOWNLOAD_URLS
