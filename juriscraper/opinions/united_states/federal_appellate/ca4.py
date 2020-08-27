@@ -11,7 +11,7 @@ from dateutil.rrule import rrule, DAILY
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
-        self.url = "http://www.ca4.uscourts.gov/DataOpinions.aspx"
+        self.url = "https://www.ca4.uscourts.gov/DataOpinions.aspx"
         self.court_id = self.__module__
         td = date.today()
         self.parameters = {
