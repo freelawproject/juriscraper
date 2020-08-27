@@ -108,7 +108,7 @@ class Site(OpinionSite):
 
     def _build_data_lists_from_html(self, html):
         # Search second column cells for valid opinions
-        data_cell_path = "//table/tr/td[2]/font"
+        data_cell_path = "//table//tr/td[2]/font"
         for cell in html.xpath(data_cell_path):
             # Cell must contain a link
             if cell.xpath("a"):
@@ -153,8 +153,7 @@ class Site(OpinionSite):
         return date
 
     def _fetch_case_name(self, case_number):
-        """Fetch case name for a given docket number + publication year pair.
-        """
+        """Fetch case name for a given docket number + publication year pair."""
 
         # If case_number is not expected 12 characters, skip it, since
         # we can't know how to fix the courts typo. They likely forgot
