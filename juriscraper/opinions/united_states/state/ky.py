@@ -11,18 +11,18 @@ History:
     2016-03-16: Restructured by arderyp to pre-process all data at donwload time
                 to work around resources whose case names cannot be fetched to
                 to access restrictions.
+    2020-08-28: Updated to use new secondary search portal at https://appellatepublic.kycourts.net/
 Notes:
     This scraper is unique. Kentucky does not provide case names in the primary
     search portal's result page, making them almost useless. They have a secondary
     search portal that allows a lookup by case year and number, which *does* provide
-    the case name (and lots of other information). Note that it only provides
-    this information for supreme court cases, so extending this to do kyctapp
-    won't be possible.
+    the case name.
 
     Primary Search Portal:          http://apps.courts.ky.gov/supreme/sc_opinions.shtm
     Primary Search Portal POST:     http://162.114.92.72/dtsearch.asp
-    Secondary Search Portal:        https://appellate.kycourts.net/SC/SCDockets/
-    Secondary Search Portal GET:    https://appellate.kycourts.net/SC/SCDockets/CaseDetails.aspx?cn={yyyySC######}
+    Secondary Search Portal:        https://appellatepublic.kycourts.net/
+    Secondary Search Portal POST:   https://appellatepublic.kycourts.net/api/api/v1/cases/search
+
 
     Our two step process is as follows:
       1. Get the pdf url, case date, and docket number from the Primary Search Portal
@@ -51,13 +51,6 @@ import re
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.lib.string_utils import titlecase
-
-## WARNING: THIS SCRAPER IS FAILING:
-## This scraper is succeeding in development, but
-## is failing in production.  We are not exactly
-## sure why, and suspect that the hosting court
-## site may be blocking our production IP and/or
-## throttling/manipulating requests from production.
 
 
 class Site(OpinionSite):
@@ -162,14 +155,20 @@ class Site(OpinionSite):
         if len(case_number) != 12:
             return False
 
-        url = (
-            "https://appellatepublic.kycourts.net/api/api/v1/cases/search?queryString=true&searchFields%5B0%5D.searchType=Starts%20With&searchFields%5B0%5D.operation=%3D&searchFields%5B0%5D.values%5B0%5D="
-            + case_number
-            + "&searchFields%5B0%5D.indexFieldName=caseNumber"
-        )
+        url = "https://appellatepublic.kycourts.net/api/api/v1/cases/search"
+        self.request["parameters"] = {
+            "params": {
+                "queryString": "true",
+                "searchFields[0].searchType": "Starts With",
+                "searchFields[0].operation": "=",
+                "searchFields[0].values[0]": case_number,
+                "searchFields[0].indexFieldName": "caseNumber",
+            }
+        }
 
         self._request_url_get(url)
         json = self.request["response"].json()
+
         try:
             title = json["resultItems"][0]["rowMap"]["shortTitle"]
         except IndexError:
