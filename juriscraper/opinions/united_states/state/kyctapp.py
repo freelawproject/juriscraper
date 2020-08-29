@@ -11,11 +11,6 @@ from juriscraper.opinions.united_states.state import ky
 
 
 class Site(ky.Site):
-    CASE_NAMES = []
-    CASE_DATES = []
-    DOWNLOAD_URLS = []
-    DOCKET_NUMBERS = []
-
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__

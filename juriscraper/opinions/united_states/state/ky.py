@@ -48,17 +48,12 @@ Notes:
 
 import re
 
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.lib.string_utils import titlecase
 
 
-class Site(OpinionSite):
-    CASE_NAMES = []
-    CASE_DATES = []
-    DOWNLOAD_URLS = []
-    DOCKET_NUMBERS = []
-
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -94,15 +89,10 @@ class Site(OpinionSite):
         )
         self.hrefs_contain = "Opinions"
 
-    def _download(self, request_dict={}):
-        html = super(Site, self)._download(request_dict)
-        self._build_data_lists_from_html(html)
-        return html
-
-    def _build_data_lists_from_html(self, html):
+    def _process_html(self):
         # Search second column cells for valid opinions
         data_cell_path = "//table//tr/td[2]/font"
-        for cell in html.xpath(data_cell_path):
+        for cell in self.html.xpath(data_cell_path):
             # Cell must contain a link
             if cell.xpath("a"):
                 link_href = cell.xpath("a/@href")[0].strip()
@@ -130,16 +120,22 @@ class Site(OpinionSite):
                                 docket_match.group("court"),
                                 docket_match.group("number"),
                             )
-                            self.CASE_NAMES.append(name)
-                            self.CASE_DATES.append(date)
-                            self.DOCKET_NUMBERS.append(docket_number)
-                            self.DOWNLOAD_URLS.append(link_href)
+                            self.cases.append(
+                                {
+                                    "date": date,
+                                    "docket": docket_number,
+                                    "name": name,
+                                    "status": "Unknown",
+                                    "url": link_href,
+                                }
+                            )
 
     def _parse_date_from_cell_text(self, cell_text):
         date = False
         for text in cell_text:
             try:
-                date = convert_date_string(text.strip())
+                date = text.strip()
+                convert_date_string(date)
                 break
             except ValueError:
                 pass
@@ -174,18 +170,3 @@ class Site(OpinionSite):
         except IndexError:
             return False
         return titlecase(title)
-
-    def _get_download_urls(self):
-        return self.DOWNLOAD_URLS
-
-    def _get_case_names(self):
-        return self.CASE_NAMES
-
-    def _get_docket_numbers(self):
-        return self.DOCKET_NUMBERS
-
-    def _get_case_dates(self):
-        return self.CASE_DATES
-
-    def _get_precedential_statuses(self):
-        return ["Unknown"] * len(self.CASE_NAMES)
