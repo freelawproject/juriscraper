@@ -331,7 +331,7 @@ Version History
 -  Support opinions from for all federal district courts with non-PACER opinion listings
 -  For every court above where a backscraper is possible, it is implemented.
 -  Support video, additional oral argument audio, and transcripts everywhere available
-
+-  Support Python 3, exclusively.
 
 Deployment
 ==========
