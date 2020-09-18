@@ -91,7 +91,7 @@ class Site(OpinionSite):
 
     def sanitize_text(self, text):
         text = clean_string(text)
-        return text.replace(r"\n", "\n").replace(u"–", "-")
+        return text.replace(r"\n", "\n").replace("–", "-")
 
     def set_regex(self, pattern):
         self.regex = re.compile(pattern)

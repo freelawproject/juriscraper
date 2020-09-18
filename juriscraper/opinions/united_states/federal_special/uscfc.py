@@ -25,7 +25,7 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.url = "http://www.uscfc.uscourts.gov/aggregator/sources/8"
-        self.back_scrape_iterable = range(1, 4)
+        self.back_scrape_iterable = list(range(1, 4))
         self.court_id = self.__module__
         self.today = datetime.datetime.now()
 
@@ -61,8 +61,8 @@ class Site(OpinionSite):
                 if not isinstance(t, six.string_types):
                     t = str(t, encoding="utf-8")
 
-                if u" • " in t:
-                    t = t.split(u" • ")[1].strip()
+                if " • " in t:
+                    t = t.split(" • ")[1].strip()
                 t = titlecase(t.lower())
                 case_names.append(t)
         return case_names
@@ -83,8 +83,8 @@ class Site(OpinionSite):
                 if not isinstance(t, six.string_types):
                     t = str(t, encoding="utf-8")
 
-                if u" • " in t:
-                    t = t.split(u" • ")[0].strip()
+                if " • " in t:
+                    t = t.split(" • ")[0].strip()
                 docket_numbers.append(t)
         return docket_numbers
 

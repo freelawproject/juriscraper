@@ -16,7 +16,7 @@ class Site(OpinionSite):
         )
         self.url = self.base_url.format(year=date.today().year)
         self.court_id = self.__module__
-        self.back_scrape_iterable = range(2003, date.today().year + 1)
+        self.back_scrape_iterable = list(range(2003, date.today().year + 1))
         self.case_xpath = "//p[@class='article-listing']/a/@href"
         self.next_page_xpath = "//div[@class='adjacent-pagination']//li[@class='active']//following-sibling::li/a/@href"
 

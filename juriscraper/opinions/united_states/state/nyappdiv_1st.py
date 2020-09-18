@@ -69,14 +69,20 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         path = "%s/td[3]" % self.row_base_path
-        return map(
-            self._add_str_to_list_where_empty_element, self.html.xpath(path)
+        return list(
+            map(
+                self._add_str_to_list_where_empty_element,
+                self.html.xpath(path),
+            )
         )
 
     def _get_judges(self):
         path = "%s/td[2]" % self.row_base_path
-        return map(
-            self._add_str_to_list_where_empty_element, self.html.xpath(path)
+        return list(
+            map(
+                self._add_str_to_list_where_empty_element,
+                self.html.xpath(path),
+            )
         )
 
     def _get_neutral_citations(self):

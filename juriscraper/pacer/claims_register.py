@@ -1,6 +1,6 @@
 # coding=utf-8
 import re
-import urlparse
+import urllib.parse
 
 from juriscraper.pacer.reports import BaseReport
 from .docket_report import BaseDocketReport
@@ -316,7 +316,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
                 except IndexError:
                     pass
                 else:
-                    qs_dict = urlparse.parse_qs(qs)
+                    qs_dict = urllib.parse.parse_qs(qs)
                     if row["type"] == "claim":
                         row["id"] = qs_dict["claim_id"][0]
                         row["pacer_case_id"] = qs_dict["caseid"][0]
@@ -374,12 +374,12 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             "case_num": docket_number,
         }
         if date_start:
-            params["f_fromdt"] = date_start.strftime(u"%m/%d/%Y")
+            params["f_fromdt"] = date_start.strftime("%m/%d/%Y")
         else:
             # Set the default
             params["f_fromdt"] = "1/1/1960"
         if date_end:
-            params["f_todt"] = date_end.strftime(u"%m/%d/%Y")
+            params["f_todt"] = date_end.strftime("%m/%d/%Y")
 
         logger.info(
             "Querying claims register for case ID '%s' in court '%s' "

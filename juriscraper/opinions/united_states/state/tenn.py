@@ -14,7 +14,7 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.url = "http://www.tsc.state.tn.us/courts/supreme-court/opinions"
         self.court_id = self.__module__
-        self.back_scrape_iterable = range(0, 131)
+        self.back_scrape_iterable = list(range(0, 131))
 
     def _get_download_urls(self):
         return [

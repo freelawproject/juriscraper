@@ -216,24 +216,24 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
 
         params = {}
         if filed_from:
-            params[u"filed_from"] = filed_from.strftime(u"%m/%d/%Y")
+            params["filed_from"] = filed_from.strftime("%m/%d/%Y")
         if filed_to:
-            params[u"filed_to"] = filed_to.strftime(u"%m/%d/%Y")
+            params["filed_to"] = filed_to.strftime("%m/%d/%Y")
         if last_entry_from:
-            params[u"lastentry_from"] = last_entry_from.strftime(u"%m/%d/%Y")
+            params["lastentry_from"] = last_entry_from.strftime("%m/%d/%Y")
         if last_entry_to:
-            params[u"lastentry_to"] = last_entry_to.strftime(u"%m/%d/%Y")
+            params["lastentry_to"] = last_entry_to.strftime("%m/%d/%Y")
 
         params.update(
             {
                 # Name fields
-                u"last_name": name_last,
-                u"first_name": name_first,
-                u"middle_name": name_middle,
-                u"person_type": person_type,
+                "last_name": name_last,
+                "first_name": name_first,
+                "middle_name": name_middle,
+                "person_type": person_type,
             }
         )
-        logger.info(u"Running advanced case query with params '%s'", params)
+        logger.info("Running advanced case query with params '%s'", params)
         self.response = self.session.post(self.url + "?1-L_1_0-1", data=params)
         self.parse()
 

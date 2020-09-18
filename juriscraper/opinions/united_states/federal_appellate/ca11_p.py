@@ -15,7 +15,7 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://media.ca11.uscourts.gov/opinions/pub/logname.php"
-        self.back_scrape_iterable = range(20, 10000, 20)
+        self.back_scrape_iterable = list(range(20, 10000, 20))
 
     def _get_case_names(self):
         return [

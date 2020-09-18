@@ -81,7 +81,7 @@ def scrape_court(site, binaries=False):
 
         # Normally, you'd do your save routines here...
         v_print(1, "\nAdding new item:")
-        for k, v in item.items():
+        for k, v in list(item.items()):
             if isinstance(v, six.text_type):
                 value = trunc(v, 200, ellipsis="...")
                 v_print(1, '    %s: "%s"' % (k, value.encode("utf-8")))

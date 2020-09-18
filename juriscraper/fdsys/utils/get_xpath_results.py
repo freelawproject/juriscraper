@@ -46,7 +46,10 @@ def print_xpath_results(query):
 
     print("\nTotal found: %s" % total_result_count)
     print(
-        "All items same in %s/%s sample files" % (equalities, total_file_count)
+        (
+            "All items same in %s/%s sample files"
+            % (equalities, total_file_count)
+        )
     )
     print("Unique items: %s/%s" % (len(unique_items), total_result_count))
 

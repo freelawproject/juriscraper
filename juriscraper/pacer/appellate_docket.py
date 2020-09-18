@@ -1,5 +1,3 @@
-from __future__ import print_function
-
 import pprint
 import re
 import sys
@@ -193,55 +191,55 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         """
         assert (
             self.session is not None
-        ), u"session attribute of AppellateDocketReport cannot be None."
+        ), "session attribute of AppellateDocketReport cannot be None."
         assert bool(docket_number), (
-            u'docket_number must be a valid value, not "%s"' % docket_number
+            'docket_number must be a valid value, not "%s"' % docket_number
         )
 
         if not show_docket_entries and (date_end or date_start):
             raise ValueError(
-                u"Cannot set date filtering on docket entries "
-                u"while show_docket_entries=False"
+                "Cannot set date filtering on docket entries "
+                "while show_docket_entries=False"
             )
 
-        if output_format.lower() not in [u"xml", u"html"]:
-            raise ValueError(u"Invalid value for output_format parameter.")
+        if output_format.lower() not in ["xml", "html"]:
+            raise ValueError("Invalid value for output_format parameter.")
 
         query_params = {
-            u"servlet": u"CaseSummary.jsp",
-            u"caseNum": docket_number,
+            "servlet": "CaseSummary.jsp",
+            "caseNum": docket_number,
         }
         if show_docket_entries:
-            query_params[u"incDktEntries"] = u"Y"
+            query_params["incDktEntries"] = "Y"
         if show_orig_docket:
-            query_params[u"incOrigDkt"] = u"Y"
+            query_params["incOrigDkt"] = "Y"
         if show_prior_cases:
-            query_params[u"incPrior"] = u"Y"
+            query_params["incPrior"] = "Y"
         if show_associated_cases:
-            query_params[u"incAssoc"] = u"Y"
+            query_params["incAssoc"] = "Y"
         if show_panel_info:
-            query_params[u"incPanel"] = u"Y"
+            query_params["incPanel"] = "Y"
         if show_party_atty_info:
-            query_params[u"incPtyAty"] = u"Y"
+            query_params["incPtyAty"] = "Y"
         if show_caption:
-            query_params[u"incCaption"] = u"long"
+            query_params["incCaption"] = "long"
 
         if date_start:
-            query_params[u"dateFrom"] = date_start.strftime(u"%m/%d/%Y")
+            query_params["dateFrom"] = date_start.strftime("%m/%d/%Y")
         if date_end:
-            query_params[u"dateTo"] = date_end.strftime(u"%m/%d/%Y")
+            query_params["dateTo"] = date_end.strftime("%m/%d/%Y")
 
-        if output_format.lower() == u"xml":
-            query_params[u"outputXML_TXT"] = u"XML"
-            query_params[u"confirmCharge"] = u"y"  # Lowercase y.
-        elif output_format.lower() == u"html":
+        if output_format.lower() == "xml":
+            query_params["outputXML_TXT"] = "XML"
+            query_params["confirmCharge"] = "y"  # Lowercase y.
+        elif output_format.lower() == "html":
             # When doing HTML, we need to do actionType param.
-            query_params[u"fullDocketReport"] = u"Y"
-            query_params[u"actionType"] = u"Run+Docket+Report"
+            query_params["fullDocketReport"] = "Y"
+            query_params["actionType"] = "Run+Docket+Report"
 
         logger.info(
-            u"Querying appellate docket report for docket number '%s' "
-            u"with params %s",
+            "Querying appellate docket report for docket number '%s' "
+            "with params %s",
             docket_number,
             query_params,
         )
@@ -307,18 +305,18 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         """
         assert (
             self.session is not None
-        ), u"session attribute of AppellateDocketReport cannot be None."
+        ), "session attribute of AppellateDocketReport cannot be None."
         query_params = {
-            u"servlet": u"ShowDoc",
-            u"incPdfHeader": u"Y",
-            u"incPdfHeaderDisp": u"Y",
-            u"dls_id": pacer_doc_id,
-            u"pacer": u"t",  # Not sure what this does, but it's required.
+            "servlet": "ShowDoc",
+            "incPdfHeader": "Y",
+            "incPdfHeaderDisp": "Y",
+            "dls_id": pacer_doc_id,
+            "pacer": "t",  # Not sure what this does, but it's required.
         }
         if pacer_case_id:
-            query_params[u"caseId"] = pacer_case_id
+            query_params["caseId"] = pacer_case_id
         logger.info(
-            u"GETting PDF at URL: %s with params: %s", self.url, query_params
+            "GETting PDF at URL: %s with params: %s", self.url, query_params
         )
         r = self.session.get(self.url, params=query_params)
         r.raise_for_status()
@@ -340,28 +338,28 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             return self._metadata
 
         data = {
-            u"court_id": self.court_id,
-            u"docket_number": self._get_tail_by_regex("Docket #|Case Number"),
-            u"case_name": self._get_case_name(),
-            u"panel": self._get_panel(),
-            u"nature_of_suit": self._get_tail_by_regex("Nature of Suit"),
-            u"appeal_from": self._get_tail_by_regex("Appeal From"),
-            u"fee_status": self._get_tail_by_regex("Fee Status"),
-            u"date_filed": self._get_tail_by_regex("Docketed", True),
-            u"date_terminated": self._get_tail_by_regex("Termed", True),
-            u"case_type_information": self._get_case_type_info(),
-            u"originating_court_information": self._get_originating_court_info(),
+            "court_id": self.court_id,
+            "docket_number": self._get_tail_by_regex("Docket #|Case Number"),
+            "case_name": self._get_case_name(),
+            "panel": self._get_panel(),
+            "nature_of_suit": self._get_tail_by_regex("Nature of Suit"),
+            "appeal_from": self._get_tail_by_regex("Appeal From"),
+            "fee_status": self._get_tail_by_regex("Fee Status"),
+            "date_filed": self._get_tail_by_regex("Docketed", True),
+            "date_terminated": self._get_tail_by_regex("Termed", True),
+            "case_type_information": self._get_case_type_info(),
+            "originating_court_information": self._get_originating_court_info(),
         }
         data = clean_court_object(data)
         self._metadata = data
         return data
 
     # Fields that need to be converted with convert_date_str()
-    PARTY_DATE_FIELDS = [u"Terminated"]
+    PARTY_DATE_FIELDS = ["Terminated"]
     # Translation table from Appellate CMECF party fields schema to
     # juriscaper schema.
     PARTY_FIELDS = {
-        u"Terminated": u"date_terminated",
+        "Terminated": "date_terminated",
     }
 
     @property
@@ -414,11 +412,11 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             ), "Expecting 2+ <br>-delimited portions of first cell."
 
             # Name is first, Role is last
-            party[u"name"] = force_unicode(name_role[0].text_content().strip())
+            party["name"] = force_unicode(name_role[0].text_content().strip())
             role = name_role[count - 1].text_content().strip()
             # Strip terminal comma, if present.
             role = re.sub(r",$", "", role)
-            party[u"type"] = role
+            party["type"] = role
 
             unparsed = []
             for i in range(1, count - 1):
@@ -449,7 +447,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                     unparsed.append(s)
 
             if unparsed:
-                party[u"unparsed"] = unparsed
+                party["unparsed"] = unparsed
 
             attorneys = cells[1]
 
@@ -511,8 +509,8 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 # it's a bit wasteful to use both.
                 attorney_lines = self._br_split(attorney_row)
                 # First line is the name
-                attorney[u"name"] = attorney_lines.pop(0)
-                if not attorney[u"name"]:
+                attorney["name"] = attorney_lines.pop(0)
+                if not attorney["name"]:
                     continue
                 roles = []
                 contacts = []
@@ -523,11 +521,11 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                         roles.append(m.group(1))
                     else:
                         contacts.append(attorney_line)
-                attorney[u"roles"] = roles
-                attorney[u"contact"] = u"\n".join(contacts)
+                attorney["roles"] = roles
+                attorney["contact"] = "\n".join(contacts)
                 attorneys.append(attorney)
 
-            party[u"attorneys"] = attorneys
+            party["attorneys"] = attorneys
             parties.append(party)
 
         parties = self._normalize_see_above_attorneys(parties)
@@ -553,26 +551,26 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         docket_entries = []
         for row in docket_entry_rows:
             de = {}
-            cells = row.xpath(u"./td")
+            cells = row.xpath("./td")
             if len(cells) == 1:
                 if cells[0].text_content() == "No docket entries found.":
                     break
                 continue
 
             date_filed_str = force_unicode(cells[0].text_content())
-            de[u"date_filed"] = convert_date_string(date_filed_str)
-            de[u"document_number"] = self._get_document_number(cells[1])
-            de[u"pacer_doc_id"] = self._get_pacer_doc_id(cells[1])
-            if not de[u"document_number"]:
-                if de[u"pacer_doc_id"]:
+            de["date_filed"] = convert_date_string(date_filed_str)
+            de["document_number"] = self._get_document_number(cells[1])
+            de["pacer_doc_id"] = self._get_pacer_doc_id(cells[1])
+            if not de["document_number"]:
+                if de["pacer_doc_id"]:
                     # If we lack the document number, but have
                     # the pacer ID, use it.
-                    de[u"document_number"] = de[u"pacer_doc_id"]
+                    de["document_number"] = de["pacer_doc_id"]
                 else:
                     # We lack both the document number and the pacer ID.
                     # Probably a minute order. No need to set either.
                     pass
-            de[u"description"] = force_unicode(cells[2].text_content())
+            de["description"] = force_unicode(cells[2].text_content())
             docket_entries.append(de)
 
         docket_entries = clean_court_object(docket_entries)
@@ -583,7 +581,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     def _get_document_number(cell):
         """Get the document number"""
         text_nodes = cell.xpath(".//text()[not(parent::font)]")
-        text_nodes = map(clean_string, text_nodes)
+        text_nodes = list(map(clean_string, text_nodes))
         for text_node in text_nodes:
             if text_node.isdigit():
                 return text_node
@@ -591,7 +589,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
     @staticmethod
     def _get_pacer_doc_id(cell):
-        urls = cell.xpath(u".//a")
+        urls = cell.xpath(".//a")
         if not urls:
             # Entry exists but lacks a URL. Probably a minute order or similar.
             return None
@@ -662,14 +660,14 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         )[0].text_content()
         m = self.docket_number_dist_regex.search(docket_number_node_str)
         if m:
-            ogc_info[u"docket_number"] = m.group(1)
+            ogc_info["docket_number"] = m.group(1)
         else:
             # Regex didn't match. Try another way. Seems to happen
             # when the OGC is a case that wasn't in a normal district
             # court. E.g. BIA.
             #   <B>District: </B>BIA-1 : A999-999-999
             docket_number = docket_number_node_str.split(":")[2].strip()
-            ogc_info[u"docket_number"] = docket_number
+            ogc_info["docket_number"] = docket_number
 
         # Alien numbers are somewhat like social security numbers for
         # non-citizens, and attorneys generally redact them from
@@ -680,36 +678,32 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         # best not to do so on CL without a paywall.
         #
         # Place them in their own field so we can restrict access to them
-        if re.match(r"A[0-9-]+", ogc_info[u"docket_number"]):
-            ogc_info[u"RESTRICTED_ALIEN_NUMBER"] = ogc_info.pop(
-                u"docket_number"
-            )
+        if re.match(r"A[0-9-]+", ogc_info["docket_number"]):
+            ogc_info["RESTRICTED_ALIEN_NUMBER"] = ogc_info.pop("docket_number")
 
         try:
             og_court_url = ogc_table.xpath(".//a/@href")[0]
         except IndexError:
             # Happens when dockets don't link to their OGC.
-            ogc_info[u"court_id"] = u""
+            ogc_info["court_id"] = ""
         else:
-            ogc_info[u"court_id"] = get_court_id_from_url(og_court_url)
+            ogc_info["court_id"] = get_court_id_from_url(og_court_url)
 
         judge_str = self._get_tail_by_regex("Trial Judge")
         if judge_str:
-            ogc_info[u"assigned_to"] = normalize_judge_string(judge_str)[0]
+            ogc_info["assigned_to"] = normalize_judge_string(judge_str)[0]
 
-        ogc_info[u"court_reporter"] = self._get_tail_by_regex("Court Reporter")
-        ogc_info[u"date_filed"] = self._get_tail_by_regex("Date Filed", True)
-        ogc_info[u"date_disposed"] = self._get_tail_by_regex(
+        ogc_info["court_reporter"] = self._get_tail_by_regex("Court Reporter")
+        ogc_info["date_filed"] = self._get_tail_by_regex("Date Filed", True)
+        ogc_info["date_disposed"] = self._get_tail_by_regex(
             "Date Disposed", True
         )
-        ogc_info[u"disposition"] = self._get_tail_by_regex("Disposition")
+        ogc_info["disposition"] = self._get_tail_by_regex("Disposition")
 
         trial_judge_str = self._get_tail_by_regex("Trial Judge")
-        ogc_info[u"assigned_to"] = normalize_judge_string(trial_judge_str)[0]
+        ogc_info["assigned_to"] = normalize_judge_string(trial_judge_str)[0]
         order_judge_str = self._get_tail_by_regex("Ordering Judge")
-        ogc_info[u"ordering_judge"] = normalize_judge_string(order_judge_str)[
-            0
-        ]
+        ogc_info["ordering_judge"] = normalize_judge_string(order_judge_str)[0]
 
         date_labels = ogc_table.xpath(".//tr[last() - 1]/td//text()")
         dates = ogc_table.xpath(".//tr[last()]/td//text()")
@@ -717,14 +711,14 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             label = clean_string(label)
             date = clean_string(date)
             if label == "Date Order/Judgment:":
-                ogc_info[u"date_judgment"] = convert_date_string(date)
+                ogc_info["date_judgment"] = convert_date_string(date)
             if label == "Date Order/Judgment EOD:":
-                ogc_info[u"date_judgment_eod"] = convert_date_string(date)
+                ogc_info["date_judgment_eod"] = convert_date_string(date)
             # NOA: Notice of appeal
             if label == "Date NOA Filed:":
-                ogc_info[u"date_filed_noa"] = convert_date_string(date)
+                ogc_info["date_filed_noa"] = convert_date_string(date)
             if label == "Date Rec'd COA:":
-                ogc_info[u"date_received_coa"] = convert_date_string(date)
+                ogc_info["date_received_coa"] = convert_date_string(date)
         return ogc_info
 
     def _get_tail_by_regex(self, regex, cast_to_date=False, node=None):

@@ -30,7 +30,7 @@ class Site(OpinionSiteWebDriven):
         self.year = datetime.date.today().year
         self.domain = "http://www.marylandattorneygeneral.gov"
         self.url = "%s/Pages/Opinions/index.aspx" % self.domain
-        self.back_scrape_iterable = range(1993, self.year + 1)
+        self.back_scrape_iterable = list(range(1993, self.year + 1))
         self.parent_path_base = '//tbody/tr/td[contains(./text(), "%d")]'
         self.parent_path = self.parent_path_base % self.year
         self.cell_path = '//tbody[@isloaded="true"]/tr/td[%d]'

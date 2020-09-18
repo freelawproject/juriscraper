@@ -255,7 +255,7 @@ class Site(OpinionSiteWebDriven):
         return docket_string.strip()
 
     def remove_en_em_dash(self, opinion_text):
-        opinion_text = re.sub(u"–", "-", opinion_text)
-        opinion_text = re.sub(u"—", "-", opinion_text)
-        opinion_text = re.sub(u"–", "-", opinion_text)
+        opinion_text = re.sub("–", "-", opinion_text)
+        opinion_text = re.sub("—", "-", opinion_text)
+        opinion_text = re.sub("–", "-", opinion_text)
         return opinion_text

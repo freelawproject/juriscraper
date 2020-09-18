@@ -16,7 +16,7 @@ class Site(OpinionSite):
         self.year = datetime.date.today().year
         self.url_base = "https://oag.ca.gov/opinions/yearly-index?conclusion-year[value][year]="
         self.url = self.url_base + str(self.year)
-        self.back_scrape_iterable = range(1985, self.year + 1)
+        self.back_scrape_iterable = list(range(1985, self.year + 1))
         self.rows_path = '//tbody/tr[contains(./td[1]//a/@href, ".pdf")]'
         self.cell_path = self.rows_path + "/td[%d]"
 

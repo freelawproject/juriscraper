@@ -110,11 +110,11 @@ class LASCSession(requests.Session):
             return
 
         message = r.json["message"]
-        if u"Your password is incorrect" in message:
-            logger.info(u"Password was incorrect")
+        if "Your password is incorrect" in message:
+            logger.info("Password was incorrect")
             raise LASCLoginException("Invalid username/password")
-        if u"We can't seem to find your account" in message:
-            logger.info(u"Invalid Email Address")
+        if "We can't seem to find your account" in message:
+            logger.info("Invalid Email Address")
             raise LASCLoginException("Invalid Email Address")
 
     def _update_header_token(self, r):
@@ -324,7 +324,7 @@ class LASCSession(requests.Session):
         :raises: LASCLoginException
         """
 
-        logger.info(u"Logging into MAP has begun")
+        logger.info("Logging into MAP has begun")
         r = self.get(self.login_url)
         self._update_header_token(r)
 
@@ -340,7 +340,7 @@ class LASCSession(requests.Session):
 
         self.post(self.signin_url, data=parsed_keys)
 
-        logger.info(u"Successfully Logged into MAP")
+        logger.info("Successfully Logged into MAP")
 
 
 class LASCLoginException(Exception):

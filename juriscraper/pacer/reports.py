@@ -164,12 +164,12 @@ class BaseReport(object):
             pacer_case_id, pacer_doc_id, got_receipt="1"
         )
 
-        if u"This document is not available" in r.text:
+        if "This document is not available" in r.text:
             logger.error(
                 "Document not available in case: %s at %s", url, pacer_case_id
             )
             return None
-        if u"You do not have permission to view this document." in r.text:
+        if "You do not have permission to view this document." in r.text:
             logger.warn(
                 "Permission denied getting document %s in case %s. "
                 "It's probably sealed.",

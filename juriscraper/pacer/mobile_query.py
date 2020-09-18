@@ -60,15 +60,15 @@ class MobileQuery(BaseDocketReport, BaseReport):
             "Cost:" in cost_raw
         ):  # bad: means we were charged. Return immediately with bad news.
             cost = float(cost_raw.split("Cost: ", 1)[1])
-            data = {u"cost": cost, u"cost_raw": cost_raw}
+            data = {"cost": cost, "cost_raw": cost_raw}
             self._metadata = data
             return data
         span = self.tree.xpath('.//a[@id="entriesLink"]//span')[0]
         entry_count = int(span.text_content().strip())
         data = {
-            u"court_id": self.court_id,
-            u"entry_count": entry_count,
-            u"cost": cost_raw,
+            "court_id": self.court_id,
+            "entry_count": entry_count,
+            "cost": cost_raw,
         }
 
         data = clean_court_object(data)
@@ -115,7 +115,7 @@ class MobileQuery(BaseDocketReport, BaseReport):
             "pacer_case_id must be truthy, not '%s'" % pacer_case_id
         )
         logger.info(
-            u"Running mobile query for case id '%s' in court '%s'",
+            "Running mobile query for case id '%s' in court '%s'",
             pacer_case_id,
             self.court_id,
         )
