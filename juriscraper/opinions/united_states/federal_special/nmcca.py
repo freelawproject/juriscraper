@@ -15,7 +15,7 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.url = "http://www.jag.navy.mil/courts/opinion_archive.htm"
         self.court_id = self.__module__
-        self.back_scrape_iterable = range(2013, 2004 - 1, -1)
+        self.back_scrape_iterable = list(range(2013, 2004 - 1, -1))
 
     def _get_case_dates(self):
         # this court makes a lot of typos apparently

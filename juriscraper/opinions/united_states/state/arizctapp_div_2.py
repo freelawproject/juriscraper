@@ -31,7 +31,7 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         path = "{base}/following::td[2]/text()".format(base=self.base_path)
-        return map(self._return_case_date, self.html.xpath(path))
+        return list(map(self._return_case_date, self.html.xpath(path)))
 
     @staticmethod
     def _return_case_date(e):
@@ -48,7 +48,7 @@ class Site(OpinionSite):
 
     def _get_summaries(self):
         path = "{base}/following::tr[1]".format(base=self.base_path)
-        return map(self._return_summary, self.html.xpath(path))
+        return list(map(self._return_summary, self.html.xpath(path)))
 
     @staticmethod
     def _return_summary(e):

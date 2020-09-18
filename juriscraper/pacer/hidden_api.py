@@ -34,7 +34,7 @@ class PossibleCaseNumberApi(BaseReport):
         ), "session attribute of PossibleCaseNUmberApi cannot be None."
         url = "%s?%s" % (self.url, docket_number.lower())
         logger.info(
-            u"Querying the possible case number endpoint at URL: %s" % url
+            "Querying the possible case number endpoint at URL: %s" % url
         )
         self.response = self.session.get(url)
         self.parse()
@@ -174,11 +174,11 @@ class PossibleCaseNumberApi(BaseReport):
         if nodes:
             node = nodes[0]
             return {
-                u"docket_number": force_unicode(node.xpath("./@number")[0]),
-                u"pacer_case_id": force_unicode(node.xpath("./@id")[0]),
+                "docket_number": force_unicode(node.xpath("./@number")[0]),
+                "pacer_case_id": force_unicode(node.xpath("./@id")[0]),
                 # This could be further post processed to pull out the date closed
                 # and a cleaner title.
-                u"title": force_unicode(node.xpath("./@title")[0]),
+                "title": force_unicode(node.xpath("./@title")[0]),
             }
         else:
             raise ParsingException("Unable to identify case.")
@@ -228,7 +228,7 @@ class ShowCaseDocApi(BaseReport):
                 attachment_number=attachment_number,
             )
         )
-        logger.info(u"Querying the show_doc_url endpoint with URL: %s" % url)
+        logger.info("Querying the show_doc_url endpoint with URL: %s" % url)
         # Only do a head request, else we get text content we don't need.
         self.response = self.session.head(url, allow_redirects=True)
         self.parse()

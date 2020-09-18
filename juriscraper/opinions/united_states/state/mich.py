@@ -33,7 +33,7 @@ class Site(OpinionSite):
                 end_year=self.today.year,
             )
         )
-        self.back_scrape_iterable = range(0, 868)
+        self.back_scrape_iterable = list(range(0, 868))
         self.court_id = self.__module__
 
     def _get_case_dates(self):

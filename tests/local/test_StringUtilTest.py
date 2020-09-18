@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from __future__ import print_function
+
 
 import unittest
 
@@ -245,7 +245,7 @@ class StringUtilTest(unittest.TestCase):
             11: 4,
             12: 4,
         }
-        for month, q in answers.items():
+        for month, q in list(answers.items()):
             self.assertEqual(quarter(month), q)
 
     def test_is_first_month_in_quarter(self):
@@ -258,108 +258,108 @@ class StringUtilTest(unittest.TestCase):
             6: False,
             7: True,
         }
-        for month, is_first in answers.items():
+        for month, is_first in list(answers.items()):
             self.assertEqual(is_first_month_in_quarter(month), is_first)
 
     def test_harmonize_and_clean_string_tests(self):
         """Tests various inputs for the clean_string and harmonize functions"""
         test_pairs = [
             # Et al
-            ["Lissner, et. al.", u"Lissner"],
-            ["Lissner, et. al", u"Lissner"],
-            ["Lissner, et al.", u"Lissner"],
-            ["Lissner, et al", u"Lissner"],
-            ["Lissner et. al.", u"Lissner"],
-            ["Lissner et. al", u"Lissner"],
-            ["Lissner et al.", u"Lissner"],
-            ["Lissner et al", u"Lissner"],
+            ["Lissner, et. al.", "Lissner"],
+            ["Lissner, et. al", "Lissner"],
+            ["Lissner, et al.", "Lissner"],
+            ["Lissner, et al", "Lissner"],
+            ["Lissner et. al.", "Lissner"],
+            ["Lissner et. al", "Lissner"],
+            ["Lissner et al.", "Lissner"],
+            ["Lissner et al", "Lissner"],
             # US --> United States
-            ["US v. Lissner, Plaintiff", u"United States v. Lissner"],
+            ["US v. Lissner, Plaintiff", "United States v. Lissner"],
             [
                 "US v. Lissner, Petitioner-appellant",
-                u"United States v. Lissner",
+                "United States v. Lissner",
             ],
             [
                 "United States, Petitioner, v. Lissner",
-                u"United States v. Lissner",
+                "United States v. Lissner",
             ],
             [
                 "United States of America, Plaintiff-Appellee, v. Orlando B. "
                 "Pino, Defendant-Appellant, Joseph",
-                u"United States v. Orlando B. Pino, Joseph",
+                "United States v. Orlando B. Pino, Joseph",
             ],
-            ["Herring v. U.S. **", u"Herring v. United States"],
-            ["Test v. U.S", u"Test v. United States"],
-            ["The United States v. Lissner", u"United States v. Lissner"],
+            ["Herring v. U.S. **", "Herring v. United States"],
+            ["Test v. U.S", "Test v. United States"],
+            ["The United States v. Lissner", "United States v. Lissner"],
             # Tests the output from a titlecased word containing
             # US to ensure it gets harmonized.
-            ["Carver v. US", u"Carver v. United States"],
+            ["Carver v. US", "Carver v. United States"],
             # US Steel --> US Steel
-            ["US Steel v.  US", u"US Steel v. United States"],
-            ["US v. V.Vivack", u"United States v. V.Vivack"],
-            ["US vs. Lissner", u"United States v. Lissner"],
+            ["US Steel v.  US", "US Steel v. United States"],
+            ["US v. V.Vivack", "United States v. V.Vivack"],
+            ["US vs. Lissner", "United States v. Lissner"],
             [
                 "vs.boxer@gmail.com vs. USA",
-                u"vs.boxer@gmail.com v. United States",
+                "vs.boxer@gmail.com v. United States",
             ],
-            ["US v. US", u"United States v. United States"],
-            ["US  Steel v.  US", u"US Steel v. United States"],
-            ["U.S.A. v. Mr. v.", u"United States v. Mr. v."],
-            ["U.S.S. v. Lissner", u"U.S.S. v. Lissner"],
-            ["USC v. Lissner", u"USC v. Lissner"],
-            ["U.S.C. v. Lissner", u"U.S.C. v. Lissner"],
-            ["U.S. Steel v. Colgate", u"U.S. Steel v. Colgate"],
-            ["U.S.A. v. Lissner", u"United States v. Lissner"],
-            ["U.S. v. Lissner", u"United States v. Lissner"],
-            ["U. S. v. Lissner", u"United States v. Lissner"],
-            ["United States v. Lissner", u"United States v. Lissner"],
-            ["Usa v. Lissner", u"United States v. Lissner"],
-            ["USA v. Lissner", u"United States v. Lissner"],
+            ["US v. US", "United States v. United States"],
+            ["US  Steel v.  US", "US Steel v. United States"],
+            ["U.S.A. v. Mr. v.", "United States v. Mr. v."],
+            ["U.S.S. v. Lissner", "U.S.S. v. Lissner"],
+            ["USC v. Lissner", "USC v. Lissner"],
+            ["U.S.C. v. Lissner", "U.S.C. v. Lissner"],
+            ["U.S. Steel v. Colgate", "U.S. Steel v. Colgate"],
+            ["U.S.A. v. Lissner", "United States v. Lissner"],
+            ["U.S. v. Lissner", "United States v. Lissner"],
+            ["U. S. v. Lissner", "United States v. Lissner"],
+            ["United States v. Lissner", "United States v. Lissner"],
+            ["Usa v. Lissner", "United States v. Lissner"],
+            ["USA v. Lissner", "United States v. Lissner"],
             [
                 "United States of America v. Lissner",
-                u"United States v. Lissner",
+                "United States v. Lissner",
             ],
             [
                 "Lissner v. United States of America",
-                u"Lissner v. United States",
+                "Lissner v. United States",
             ],
             # tests no period in v.
-            ["USA v White", u"United States v. White"],
+            ["USA v White", "United States v. White"],
             # tests no period in vs.
-            ["USA vs White", u"United States v. White"],
+            ["USA vs White", "United States v. White"],
             [
                 "V.Vivack and Associates v. US",
-                u"V.Vivack and Associates v. United States",
+                "V.Vivack and Associates v. United States",
             ],
             [
                 "v.v. Hendricks & Sons v. James v. Smith",
-                u"v.v. Hendricks & Sons v. James v. Smith",
+                "v.v. Hendricks & Sons v. James v. Smith",
             ],
             # Normalize "The State"
-            ["Aimee v. The State", u"Aimee v. State"],
+            ["Aimee v. The State", "Aimee v. State"],
             # Nuke Pet (short for petitioners)
-            ["Commonwealth v. Mickle, V., Pet.", u"Commonwealth v. Mickle v."],
+            ["Commonwealth v. Mickle, V., Pet.", "Commonwealth v. Mickle v."],
             # Unchanged, despite having the word Pet
-            ["Pet Doctors inc. v. Spoon", u"Pet Doctors inc. v. Spoon"],
+            ["Pet Doctors inc. v. Spoon", "Pet Doctors inc. v. Spoon"],
             # Nukes the No. and Nos., but not
-            ["No. 23423", u"23423"],
-            ["Nos. 23 and 232", u"23 and 232"],
-            ["No Expletives Inc.", u"No Expletives Inc."],
+            ["No. 23423", "23423"],
+            ["Nos. 23 and 232", "23 and 232"],
+            ["No Expletives Inc.", "No Expletives Inc."],
             # Tests that "Nothing" doesn't get nuked.
             ["No. 232 Nothing 232", "232 Nothing 232"],
             # Garbage
             # leading slash.
-            ["/USA vs White", u"United States v. White"],
+            ["/USA vs White", "United States v. White"],
             # unicode input
-            ["12–1438-cr", u"12–1438-cr"],
+            ["12–1438-cr", "12–1438-cr"],
             # Randoms
-            ["clarinet alibi", u"clarinet alibi"],
-            ["papusa", u"papusa"],
-            ["CUSANO", u"CUSANO"],
+            ["clarinet alibi", "clarinet alibi"],
+            ["papusa", "papusa"],
+            ["CUSANO", "CUSANO"],
             # Filter out invalid XML characters
             [
-                u"Special Counsel ex rel. Karla Saunders",
-                u"Special Counsel ex rel. Karla Saunders",
+                "Special Counsel ex rel. Karla Saunders",
+                "Special Counsel ex rel. Karla Saunders",
             ],
         ]
         for pair in test_pairs:
@@ -368,14 +368,14 @@ class StringUtilTest(unittest.TestCase):
     def test_normalize_phrase(self):
         """Tests normalization of case titles."""
         test_pairs = [
-            ["Commissioner v. Palin", u"palin"],
-            ["Commr v. Palin", u"palin"],
-            ["Comm'r v. Palin", u"palin"],
+            ["Commissioner v. Palin", "palin"],
+            ["Commr v. Palin", "palin"],
+            ["Comm'r v. Palin", "palin"],
             [
                 "United States v. Learned Hand et. al.",
-                u"unitedstateslearnedhand",
+                "unitedstateslearnedhand",
             ],
-            ["Baker, Plaintiff v. Palin, Defendant", u"bakerpalin"],
+            ["Baker, Plaintiff v. Palin, Defendant", "bakerpalin"],
         ]
         for pair in test_pairs:
             self.assertEqual(
@@ -387,102 +387,102 @@ class StringUtilTest(unittest.TestCase):
         test_pairs = [
             [
                 "Q&A with steve jobs: 'that's what happens in technology'",
-                u"Q&A With Steve Jobs: 'That's What Happens in Technology'",
+                "Q&A With Steve Jobs: 'That's What Happens in Technology'",
             ],
-            ["What is AT&T's problem?", u"What is AT&T's Problem?"],
+            ["What is AT&T's problem?", "What is AT&T's Problem?"],
             [
                 "Apple deal with AT&T falls through",
-                u"Apple Deal With AT&T Falls Through",
+                "Apple Deal With AT&T Falls Through",
             ],
-            ["this v that", u"This v That"],
-            ["this v. that", u"This v. That"],
-            ["this vs that", u"This vs That"],
-            ["this vs. that", u"This vs. That"],
+            ["this v that", "This v That"],
+            ["this v. that", "This v. That"],
+            ["this vs that", "This vs That"],
+            ["this vs. that", "This vs. That"],
             [
                 "The SEC's Apple Probe: What You Need to Know",
-                u"The SEC's Apple Probe: What You Need to Know",
+                "The SEC's Apple Probe: What You Need to Know",
             ],
             [
                 "'by the Way, small word at the start but within quotes.'",
-                u"'By the Way, Small Word at the Start but Within Quotes.'",
+                "'By the Way, Small Word at the Start but Within Quotes.'",
             ],
             [
                 "Small word at end is nothing to be afraid of",
-                u"Small Word at End is Nothing to Be Afraid Of",
+                "Small Word at End is Nothing to Be Afraid Of",
             ],
             [
                 "Starting Sub-Phrase With a Small Word: a Trick, Perhaps?",
-                u"Starting Sub-Phrase With a Small Word: A Trick, Perhaps?",
+                "Starting Sub-Phrase With a Small Word: A Trick, Perhaps?",
             ],
             [
                 "Sub-Phrase With a Small Word in Quotes: 'a Trick, Perhaps?'",
-                u"Sub-Phrase With a Small Word in Quotes: 'A Trick, Perhaps?'",
+                "Sub-Phrase With a Small Word in Quotes: 'A Trick, Perhaps?'",
             ],
             [
                 'Sub-Phrase With a Small Word in Quotes: "a Trick, Perhaps?"',
-                u'Sub-Phrase With a Small Word in Quotes: "A Trick, Perhaps?"',
+                'Sub-Phrase With a Small Word in Quotes: "A Trick, Perhaps?"',
             ],
-            ['"Nothing to Be Afraid of?"', u'"Nothing to Be Afraid Of?"'],
-            ['"Nothing to be Afraid Of?"', u'"Nothing to Be Afraid Of?"'],
-            ["a thing", u"A Thing"],
+            ['"Nothing to Be Afraid of?"', '"Nothing to Be Afraid Of?"'],
+            ['"Nothing to be Afraid Of?"', '"Nothing to Be Afraid Of?"'],
+            ["a thing", "A Thing"],
             [
                 "2lmc Spool: 'gruber on OmniFocus and vapo(u)rware'",
-                u"2lmc Spool: 'Gruber on OmniFocus and Vapo(u)rware'",
+                "2lmc Spool: 'Gruber on OmniFocus and Vapo(u)rware'",
             ],
-            ["this is just an example.com", u"This is Just an example.com"],
+            ["this is just an example.com", "This is Just an example.com"],
             [
                 "this is something listed on del.icio.us",
-                u"This is Something Listed on del.icio.us",
+                "This is Something Listed on del.icio.us",
             ],
-            ["iTunes should be unmolested", u"iTunes Should Be Unmolested"],
+            ["iTunes should be unmolested", "iTunes Should Be Unmolested"],
             [
                 "Reading between the lines of steve jobs’s ‘thoughts on music’",
                 # Tests unicode
-                u"Reading Between the Lines of Steve Jobs’s ‘Thoughts on Music’",
+                "Reading Between the Lines of Steve Jobs’s ‘Thoughts on Music’",
             ],
             [
                 "seriously, ‘repair permissions’ is voodoo",  # Tests unicode
-                u"Seriously, ‘Repair Permissions’ is Voodoo",
+                "Seriously, ‘Repair Permissions’ is Voodoo",
             ],
             [
                 "generalissimo francisco franco: still dead; kieren McCarthy: "
                 "still a jackass",
-                u"Generalissimo Francisco Franco: Still Dead; Kieren McCarthy:"
-                u" Still a Jackass",
+                "Generalissimo Francisco Franco: Still Dead; Kieren McCarthy:"
+                " Still a Jackass",
             ],
             [
                 "Chapman v. u.s. Postal Service",
-                u"Chapman v. U.S. Postal Service",
+                "Chapman v. U.S. Postal Service",
             ],
             [
                 "Spread Spectrum Screening Llc. v. Eastman Kodak Co.",
-                u"Spread Spectrum Screening LLC. v. Eastman Kodak Co.",
+                "Spread Spectrum Screening LLC. v. Eastman Kodak Co.",
             ],
             [
                 "Consolidated Edison Co. of New York, Inc. v. Entergy Nuclear "
                 "Indian Point 2, Llc.",
-                u"Consolidated Edison Co. of New York, Inc. v. Entergy Nuclear"
-                u" Indian Point 2, LLC.",
+                "Consolidated Edison Co. of New York, Inc. v. Entergy Nuclear"
+                " Indian Point 2, LLC.",
             ],
             [
                 "Infosint s.a. v. H. Lundbeck A/s",
-                u"Infosint S.A. v. H. Lundbeck A/S",
+                "Infosint S.A. v. H. Lundbeck A/S",
             ],
             [
                 "KEVIN O'CONNELL v. KELLY HARRINGTON",
-                u"Kevin O'Connell v. Kelly Harrington",
+                "Kevin O'Connell v. Kelly Harrington",
             ],
             [
                 "International Union of Painter v. J&r Flooring, Inc",
-                u"International Union of Painter v. J&R Flooring, Inc",
+                "International Union of Painter v. J&R Flooring, Inc",
             ],
             [
                 "DOROTHY L. BIERY, and JERRAMY and ERIN PANKRATZ v. THE UNITED"
                 " STATES 07-693L And",
-                u"Dorothy L. Biery, and Jerramy and Erin Pankratz v. the "
-                u"United States 07-693l And",
+                "Dorothy L. Biery, and Jerramy and Erin Pankratz v. the "
+                "United States 07-693l And",
             ],
-            ["CARVER v. US", u"Carver v. US"],
+            ["CARVER v. US", "Carver v. US"],
         ]
 
         for pair in test_pairs:
@@ -540,7 +540,7 @@ class StringUtilTest(unittest.TestCase):
             "April - June 2016": convert_date_string("May 16, 2016"),
             "January March 2016": False,
         }
-        for before, after in tests.items():
+        for before, after in list(tests.items()):
             if after:
                 self.assertEqual(split_date_range_string(before), after)
             else:
@@ -550,12 +550,12 @@ class StringUtilTest(unittest.TestCase):
     def test_normalize_dashes(self):
         tests = [
             # copied from http://www.w3schools.com/charsets/ref_utf_punctuation.asp
-            u" this is    –a test–",  # en dash
-            u" this is    —a test—",  # em dash
-            u" this is    ‐a test‐",  # hyphen
-            u" this is    ‑a test‑",  # non-breaking hyphen
-            u" this is    ‒a test‒",  # figure dash
-            u" this is    ―a test―",  # horizontal bar
+            " this is    –a test–",  # en dash
+            " this is    —a test—",  # em dash
+            " this is    ‐a test‐",  # hyphen
+            " this is    ‑a test‑",  # non-breaking hyphen
+            " this is    ‒a test‒",  # figure dash
+            " this is    ―a test―",  # horizontal bar
         ]
         target = " this is    -a test-"
         for test in tests:

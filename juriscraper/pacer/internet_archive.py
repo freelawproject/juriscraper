@@ -83,24 +83,24 @@ class InternetArchive(BaseDocketReport):
             return self._metadata
 
         data = {
-            u"court_id": self.court_id,
-            u"docket_number": self._get_str_from_tree("//docket_num"),
-            u"case_name": self._get_case_name(),
-            u"date_filed": self.get_datetime_from_tree(
+            "court_id": self.court_id,
+            "docket_number": self._get_str_from_tree("//docket_num"),
+            "case_name": self._get_case_name(),
+            "date_filed": self.get_datetime_from_tree(
                 "//date_case_filed", cast_to_date=True
             ),
-            u"date_terminated": self.get_datetime_from_tree(
+            "date_terminated": self.get_datetime_from_tree(
                 "//date_case_terminated", cast_to_date=True
             ),
-            u"date_converted": None,
-            u"date_discharged": None,
-            u"assigned_to_str": self._get_judge("//assigned_to"),
-            u"referred_to_str": self._get_judge("//referred_to"),
-            u"cause": self._get_str_from_tree("//case_cause"),
-            u"nature_of_suit": self._get_str_from_tree("//nature_of_suit"),
-            u"jury_demand": self._get_str_from_tree("//jury_demand"),
-            u"demand": "",
-            u"jurisdiction": self._get_str_from_tree("//jurisdiction"),
+            "date_converted": None,
+            "date_discharged": None,
+            "assigned_to_str": self._get_judge("//assigned_to"),
+            "referred_to_str": self._get_judge("//referred_to"),
+            "cause": self._get_str_from_tree("//case_cause"),
+            "nature_of_suit": self._get_str_from_tree("//nature_of_suit"),
+            "jury_demand": self._get_str_from_tree("//jury_demand"),
+            "demand": "",
+            "jurisdiction": self._get_str_from_tree("//jurisdiction"),
         }
         data = clean_court_object(data)
         self._metadata = data
@@ -123,9 +123,9 @@ class InternetArchive(BaseDocketReport):
                 # Happens in adversary proceedings? See cacb_1669936.xml.
                 continue
             party = {
-                u"type": normalize_party_types(pt),
-                u"name": name,
-                u"extra_info": extra_info,
+                "type": normalize_party_types(pt),
+                "name": name,
+                "extra_info": extra_info,
             }
 
             m = self.date_terminated_regex.search(extra_info)
@@ -134,7 +134,7 @@ class InternetArchive(BaseDocketReport):
             else:
                 party["date_terminated"] = None
 
-            party[u"attorneys"] = self._get_attorneys(party_node)
+            party["attorneys"] = self._get_attorneys(party_node)
 
             if party not in parties and party != {}:
                 # Sometimes there are dups in the docket. Avoid them.
@@ -148,8 +148,8 @@ class InternetArchive(BaseDocketReport):
         attorneys = []
         for atty_node in party_node.xpath("./attorney_list/attorney"):
             attorney = {
-                u"name": self._xpath_text_0(atty_node, "./attorney_name"),
-                u"contact": self._xpath_text_0(atty_node, "./contact"),
+                "name": self._xpath_text_0(atty_node, "./attorney_name"),
+                "contact": self._xpath_text_0(atty_node, "./contact"),
             }
             roles = []
             role_str = self._xpath_text_0(atty_node, "./attorney_role")
@@ -159,8 +159,8 @@ class InternetArchive(BaseDocketReport):
                     continue
                 if not any(
                     [
-                        role.lower().startswith(u"bar status"),
-                        role.lower().startswith(u"designation"),
+                        role.lower().startswith("bar status"),
+                        role.lower().startswith("designation"),
                     ]
                 ):
                     roles.append(role)
@@ -178,46 +178,46 @@ class InternetArchive(BaseDocketReport):
         prev_date_filed = None
         for de_node in de_nodes:
             de = {
-                u"document_number": de_node.xpath("./@doc_num")[0],
-                u"description": self._xpath_text_0(de_node, "./long_desc"),
-                u"short_description": self._xpath_text_0(
+                "document_number": de_node.xpath("./@doc_num")[0],
+                "description": self._xpath_text_0(de_node, "./long_desc"),
+                "short_description": self._xpath_text_0(
                     de_node, "./short_desc"
                 ),
-                u"pacer_seq_no": self._xpath_text_0(
+                "pacer_seq_no": self._xpath_text_0(
                     de_node, "./pacer_de_seq_num"
                 )
                 or None,
             }
             attachment_number = de_node.xpath("./@attachment_num")[0]
             if attachment_number != "0":
-                de[u"attachment_number"] = attachment_number
+                de["attachment_number"] = attachment_number
 
             date_filed_str = self._xpath_text_0(de_node, "./date_filed")
             if date_filed_str:
                 # Got a date. Set it, and save it for the next item.
                 try:
-                    de[u"date_filed"] = convert_date_string(date_filed_str)
+                    de["date_filed"] = convert_date_string(date_filed_str)
                 except ValueError:
                     # Fails for dates like 0000-00-00
-                    de[u"date_filed"] = None
+                    de["date_filed"] = None
                 else:
-                    prev_date_filed = de[u"date_filed"]
+                    prev_date_filed = de["date_filed"]
             else:
                 # No date found.
-                if de.get(u"attachment_number"):
+                if de.get("attachment_number"):
                     # If it's an attachment, it probably lacks a date. Get it
                     # from the previously stored item.
-                    de[u"date_filed"] = prev_date_filed
+                    de["date_filed"] = prev_date_filed
                 else:
                     # If not an attachment, it's probably an old docket entry,
                     # which sometimes lack dates. Press on.
                     continue
 
-            de[u"pacer_doc_id"] = (
+            de["pacer_doc_id"] = (
                 self._xpath_text_0(de_node, "./pacer_doc_id") or None
             )
 
-            if not de[u"document_number"].isdigit():
+            if not de["document_number"].isdigit():
                 # Some courts put weird stuff in this column.
                 continue
             docket_entries.append(de)
@@ -235,5 +235,5 @@ class InternetArchive(BaseDocketReport):
         case_name = self._get_str_from_tree("//case_name")
         case_name = clean_string(harmonize(case_name))
         if not case_name:
-            return u"Unknown Case Title"
+            return "Unknown Case Title"
         return case_name

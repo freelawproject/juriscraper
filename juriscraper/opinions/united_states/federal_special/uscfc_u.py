@@ -10,7 +10,7 @@ class Site(uscfc.Site):
         super(Site, self).__init__(*args, **kwargs)
         self.url = "http://www.uscfc.uscourts.gov/aggregator/sources/10"
         self.court_id = self.__module__
-        self.back_scrape_iterable = range(1, 2)
+        self.back_scrape_iterable = list(range(1, 2))
 
     def _get_precedential_statuses(self):
         return ["Unpublished"] * len(self.case_names)

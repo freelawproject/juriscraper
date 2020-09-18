@@ -22,6 +22,9 @@ def check_if_logged_in_page(text):
     :param text: The HTML or XML of the page to test
     :return boolean: True if logged in, False if not.
     """
+    if isinstance(text, bytes):
+        text = text.decode("utf-8")
+
     valid_case_number_query = (
         "<case number=" in text
         or "<request number=" in text
@@ -273,7 +276,7 @@ class PacerSession(requests.Session):
         If you get a 302 response and the proper cookies at this point, that
         means you're logged in.
         """
-        logger.info(u"Attempting PACER site login")
+        logger.info("Attempting PACER site login")
 
         # Clear any remaining cookies. This is important because sometimes we
         # want to login before an old session has entirely died. One example of
@@ -314,17 +317,17 @@ class PacerSession(requests.Session):
                 "loginForm": "loginForm",
             },
         )
-        if u"Invalid username or password" in login_post_r.text:
+        if "Invalid username or password" in login_post_r.text:
             raise PacerLoginException("Invalid username/password")
-        if u"Username must be at least 6 characters" in login_post_r.text:
+        if "Username must be at least 6 characters" in login_post_r.text:
             raise PacerLoginException(
                 "Username must be at least six " "characters"
             )
-        if u"Password must be at least 8 characters" in login_post_r.text:
+        if "Password must be at least 8 characters" in login_post_r.text:
             raise PacerLoginException(
                 "Password must be at least eight " "characters"
             )
-        if u"timeout error" in login_post_r.text:
+        if "timeout error" in login_post_r.text:
             raise PacerLoginException("Timeout")
 
         if not self.cookies.get("PacerSession"):
@@ -383,7 +386,7 @@ class PacerSession(requests.Session):
             )
 
         self.get(self.INDEX, auto_login=False)
-        logger.info(u"New PACER session established.")
+        logger.info("New PACER session established.")
 
     def _login_again(self, r):
         """Log into PACER if the session has credentials and the session has
@@ -406,12 +409,12 @@ class PacerSession(requests.Session):
 
         if self.username and self.password:
             logger.info(
-                u"Invalid/expired PACER session. Establishing new " u"session."
+                "Invalid/expired PACER session. Establishing new " "session."
             )
             self.login()
             return True
         else:
             raise PacerLoginException(
-                u"Invalid/expired PACER session and do not have credentials "
-                u"for re-login."
+                "Invalid/expired PACER session and do not have credentials "
+                "for re-login."
             )

@@ -19,7 +19,9 @@ class Site(nc.Site):
             "http://appellate.nccourts.org/opinions/?c=coa&year=%s"
             % date.today().year
         )
-        self.back_scrape_iterable = range((date.today().year - 1), 1997, -1)
+        self.back_scrape_iterable = list(
+            range((date.today().year - 1), 1997, -1)
+        )
 
     def _download_backwards(self, year):
         self.url = (

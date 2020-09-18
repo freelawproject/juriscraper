@@ -22,7 +22,7 @@ class Site(OralArgumentSite):
         self.cell_index_name = 3
         # Extract data from all rows with mp3 url/link
         self.xpath_root = '(//table[(.//th)[1][contains(.//text(), "Argument Date")]])[last()]//tr[position() > 1][.//@href[contains(., ".mp3")]]'
-        self.back_scrape_iterable = range(2008, 2016)
+        self.back_scrape_iterable = list(range(2008, 2016))
 
     def _get_download_urls(self):
         path = self.xpath_root + "/td[%d]//@href" % self.cell_index_download

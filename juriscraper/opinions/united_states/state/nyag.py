@@ -16,7 +16,7 @@ class Site(OpinionSite):
         self.year = datetime.date.today().year
         self.base_url = "https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=%d"
         self.url = self.base_url % self.year
-        self.back_scrape_iterable = range(1995, self.year + 1)
+        self.back_scrape_iterable = list(range(1995, self.year + 1))
         self.row_path = False
         self.cell_path = False
         self.set_paths()

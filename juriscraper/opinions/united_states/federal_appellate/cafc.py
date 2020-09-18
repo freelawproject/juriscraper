@@ -7,7 +7,7 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.url = "http://www.cafc.uscourts.gov/opinions-orders?field_origin_value=All&field_report_type_value=All"
-        self.back_scrape_iterable = range(1, 700)
+        self.back_scrape_iterable = list(range(1, 700))
         self.court_id = self.__module__
 
     def _download(self, request_dict={}):
