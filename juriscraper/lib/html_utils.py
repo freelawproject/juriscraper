@@ -197,8 +197,8 @@ def clean_html(text):
     5. ?
     """
     # Remove <![CDATA because it causes breakage in lxml.
-    text = re.sub(r"<!\[CDATA\[", u"", text)
-    text = re.sub(r"\]\]>", u"", text)
+    text = re.sub(r"<!\[CDATA\[", "", text)
+    text = re.sub(r"\]\]>", "", text)
 
     # Remove <?xml> declaration in Unicode objects, because it causes an
     # error: "ValueError: Unicode strings with encoding declaration are not
@@ -216,13 +216,13 @@ def clean_html(text):
     # accordingly.
     if sys.maxunicode == 65535:
         text = re.sub(
-            u"[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD]+", u"", text
+            "[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD]+", "", text
         )
     else:
         text = re.sub(
-            u"[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD"
-            u"\U00010000-\U0010FFFF]+",
-            u"",
+            "[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD"
+            "\U00010000-\U0010FFFF]+",
+            "",
             text,
         )
 

@@ -36,7 +36,7 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.yy = self._get_current_term()
-        self.back_scrape_iterable = range(6, int(self.yy) + 1)
+        self.back_scrape_iterable = list(range(6, int(self.yy) + 1))
         self.url_base = "https://www.supremecourt.gov/opinions"
         self.path_table = "//table[@class='table table-bordered']"
         self.path_row = "%s/tr[position() > 1]" % self.path_table

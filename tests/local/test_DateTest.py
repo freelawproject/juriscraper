@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from __future__ import print_function
+
 
 import datetime
 import unittest
@@ -30,7 +30,7 @@ class DateTest(unittest.TestCase):
             ("Sepetmber 19 1924", [datetime.datetime(1924, 9, 19)]),
             # Using 'Term' as an indicator.
             ("November Term 2004.", [datetime.datetime(2004, 11, 1)]),
-            (u"April 26, 1961.[†]", [datetime.datetime(1961, 4, 26)]),
+            ("April 26, 1961.[†]", [datetime.datetime(1961, 4, 26)]),
         )
         for pair in test_pairs:
             dates = parse_dates(pair[0])
@@ -45,7 +45,7 @@ class DateTest(unittest.TestCase):
             "12/01/2806": "12/01/2806",  # Should not change
             "12/01/2886": "12/01/2886",  # Should not change
         }
-        for before, after in expectations.items():
+        for before, after in list(expectations.items()):
             fixed_date = fix_future_year_typo(convert_date_string(before))
             self.assertEqual(fixed_date, convert_date_string(after))
 

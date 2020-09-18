@@ -45,10 +45,12 @@ class LASCParseTest(unittest.TestCase):
                 # First time testing this docket
                 bar = "*" * 50
                 print(
-                    "\n\n%s\nJSON FILE DID NOT EXIST. CREATING IT AT:"
-                    "\n\n  %s\n\n"
-                    "Please test the data in this file before assuming "
-                    "everything worked.\n%s\n" % (bar, json_path, bar)
+                    (
+                        "\n\n%s\nJSON FILE DID NOT EXIST. CREATING IT AT:"
+                        "\n\n  %s\n\n"
+                        "Please test the data in this file before assuming "
+                        "everything worked.\n%s\n" % (bar, json_path, bar)
+                    )
                 )
                 with open(json_path, "w") as f:
                     json.dump(clean_data, f, indent=2, sort_keys=True)

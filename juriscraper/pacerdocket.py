@@ -16,4 +16,4 @@ for path in sys.argv[1:]:
     with open(path, "r") as f:
         report._parse_text(f.read().decode("utf-8"))
     data = report.data
-    print json.dumps(data, indent=2, sort_keys=True, separators=(",", ": "))
+    print(json.dumps(data, indent=2, sort_keys=True, separators=(",", ": ")))

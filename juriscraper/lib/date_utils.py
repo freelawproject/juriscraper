@@ -142,7 +142,7 @@ def parse_dates(
     #    s = s.encode('ascii', 'ignore')
 
     # Fix misspellings
-    for i, j in MISSPELLINGS.items():
+    for i, j in list(MISSPELLINGS.items()):
         s = s.replace(i, j)
 
     # Default is set to Christmas, 1600.

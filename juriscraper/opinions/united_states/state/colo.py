@@ -12,7 +12,7 @@ Contact: Email "Internet and Technology" staff listed at http://www.cobar.org/st
 
 import re
 from lxml import html
-from urlparse import urlparse
+from urllib.parse import urlparse
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
