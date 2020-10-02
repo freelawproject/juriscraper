@@ -253,8 +253,6 @@ class BaseDocketReport(object):
         label = node.text_content().strip()
         if require_colon and not label.endswith(":"):
             return {}
-        if isinstance(label, str):
-            label = label.decode("utf-8")
 
         label = (
             label.strip()

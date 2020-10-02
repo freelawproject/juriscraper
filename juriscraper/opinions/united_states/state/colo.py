@@ -12,7 +12,8 @@ Contact: Email "Internet and Technology" staff listed at http://www.cobar.org/st
 
 import re
 from lxml import html
-from urlparse import urlparse
+# from urlparse import urlparse
+import urllib.parse
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
@@ -328,7 +329,7 @@ class Site(OpinionSite):
         return False
 
     def is_url_pdf(self, url):
-        parsed = urlparse(url)
+        parsed = urllib.parse(url)
         return parsed.path.lower().endswith(".pdf")
 
     def _get_case_names(self):
