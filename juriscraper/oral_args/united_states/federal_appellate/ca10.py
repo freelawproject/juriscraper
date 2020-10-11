@@ -19,9 +19,6 @@ class Site(OralArgumentSite):
             "https://www.ca10.uscourts.gov/clerk/oral-argument-recordings"
         )
 
-        # HTTPS certificate is bad, but hopefully they'll fix it and we can remove the line below
-        self.disable_certificate_verification()
-
     def _get_download_urls(self):
         return get_table_column_links(self.html, 5)
 

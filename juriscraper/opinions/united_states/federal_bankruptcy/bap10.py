@@ -23,9 +23,6 @@ class Site(OpinionSite):
         self.my_download_urls = []
         self.my_docket_numbers = []
 
-        # HTTPS certificate is bad, but hopefully they'll fix it and we can remove the line below
-        self.disable_certificate_verification()
-
     def _clean_text(self, text):
         """This page is a txt file, so here we convert it to something that
         can be easily ingested by lxml.

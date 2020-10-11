@@ -24,9 +24,6 @@ class Site(OpinionSiteLinear):
         self.include_summary = True
         self.status = "Published"
 
-        # HTTPS certificate is bad, but hopefully they'll fix it and we can remove the line below
-        self.disable_certificate_verification()
-
     def build_url(self, base_url):
         # This court hears things from mid-September to end of June. This
         # defines the "term" for that year, which triggers the website updates.

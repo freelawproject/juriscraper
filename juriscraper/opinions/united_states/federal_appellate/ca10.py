@@ -12,9 +12,6 @@ class Site(OpinionSite):
         )
         self.court_id = self.__module__
 
-        # HTTPS certificate is bad, but hopefully they'll fix it and we can remove the line below
-        self.disable_certificate_verification()
-
     def _get_case_names(self):
         return [e for e in self.html.xpath("//item/title/text()")]
 
