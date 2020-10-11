@@ -6,7 +6,7 @@ import unittest
 from setuptools import setup, find_packages
 from setuptools.command.install import install
 
-VERSION = "1.28.20"
+VERSION = "1.28.21"
 AUTHOR = "Free Law Project"
 EMAIL = "info@free.law"
 HERE = os.path.abspath(os.path.dirname(__file__))
@@ -93,5 +93,8 @@ setup(
     tests_require=["jsondate3-aware", "mock", "vcrpy"],
     include_package_data=True,
     test_suite="tests.test_local",
-    cmdclass={"verify": VerifyVersion, "testnetwork": TestNetwork,},
+    cmdclass={
+        "verify": VerifyVersion,
+        "testnetwork": TestNetwork,
+    },
 )
