@@ -96,7 +96,10 @@ class Site(OpinionSite):
             i = 0
             dockets = []
             name_substrings = []
-            for text in anchor.xpath("text()"):
+            text_anchor = anchor.text_content()
+            text_clean = text_anchor.replace("\n", "")
+
+            for text in text_clean.split(';'):
                 text = clean_string(text)
                 match = self.link_text_regex.search(text)
                 try:
@@ -109,9 +112,7 @@ class Site(OpinionSite):
                 except AttributeError:
                     if i == 0:
                         # docket and name (root) should be contained in first substring
-                        error = (
-                            "Unexpected anchor root string format: %s" % text
-                        )
+                        error = "Invalid anchor root string format: %s" % text
                         raise InsanityException(error)
                     # no docket in the substring, its a trailing name substring
                     # that they broke over multiple lines, so glue it to the
