@@ -22,8 +22,11 @@ class WebDriven:
 
     def __del__(self):
         if self.webdriver:
-            # self.webdriver.quit()
-            pass
+            # sometimes quttintg below throws a cryptic and otherwise ignorable OS error
+            try:
+                self.webdriver.quit()
+            except:
+                pass
 
     def get_page(self):
         text = clean_html(self.webdriver.page_source)
