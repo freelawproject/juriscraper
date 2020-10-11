@@ -6,7 +6,10 @@ Contact: 3dca@flcourts.org, Angel Falero <faleroa@flcourts.org> (305-229-6743)
 """
 
 from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.lib.html_utils import get_table_column_links, get_table_column_text
+from juriscraper.lib.html_utils import (
+    get_table_column_links,
+    get_table_column_text,
+)
 from juriscraper.OpinionSite import OpinionSite
 
 
@@ -15,9 +18,7 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         # Browser url: https://www.3dca.flcourts.org/Opinions/Most-Recent-Opinion-Release
-        self.url = (
-            "https://www.3dca.flcourts.org/search/opinions/?sort=opinion/type%20desc,%20opinion/case_number%20asc&view=embed_custom&searchtype=opinions&recent_only=1&hide_search=1&hide_filters=1&limit=75&offset=0"
-        )
+        self.url = "https://www.3dca.flcourts.org/search/opinions/?sort=opinion/type%20desc,%20opinion/case_number%20asc&view=embed_custom&searchtype=opinions&recent_only=1&hide_search=1&hide_filters=1&limit=75&offset=0"
 
     def _get_case_names(self):
         return get_table_column_text(self.html, 4)
