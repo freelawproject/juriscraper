@@ -22,7 +22,8 @@ class WebDriven:
 
     def __del__(self):
         if self.webdriver:
-            self.webdriver.quit()
+            #self.webdriver.quit()
+            pass
 
     def get_page(self):
         text = clean_html(self.webdriver.page_source)
