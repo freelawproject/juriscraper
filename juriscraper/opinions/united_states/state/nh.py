@@ -99,7 +99,7 @@ class Site(OpinionSite):
             text_anchor = anchor.text_content()
             text_clean = text_anchor.replace("\n", "")
 
-            for text in text_clean.split(';'):
+            for text in text_clean.split(";"):
                 text = clean_string(text)
                 match = self.link_text_regex.search(text)
                 try:
