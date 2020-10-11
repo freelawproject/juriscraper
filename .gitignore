@@ -27,3 +27,6 @@ report.html
 
 # ignore WebDriven debug screenshots
 screenshot.png
+
+# ignore local Black config
+.pre-commit-config.yaml

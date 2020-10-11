@@ -9,6 +9,9 @@ class Site(OpinionSiteLinear):
         self.url = "http://nvcourts.gov/Supreme/Decisions/Advance_Opinions/"
         self.status = "Published"
 
+        # HTTPS certificate is bad, but hopefully they'll fix it and we can remove the line below
+        self.disable_certificate_verification()
+
     def _process_html(self):
         table_row_path = '//table[@style="border-spacing:0px"]//tr'
         for row in self.html.xpath(table_row_path):

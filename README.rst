@@ -129,6 +129,7 @@ Instead of installing Juriscraper via pip, do the following:
 ::
 
     git clone https://github.com/freelawproject/juriscraper.git .
+    cp .pre-commit-config.yaml.dist .pre-commit-config.yaml
     pip install -r requirements.txt
     python setup.py test
 
