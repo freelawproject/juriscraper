@@ -48,7 +48,7 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         return [
-            html.tostring(e, method="text", encoding="utf-8")
+            e.text_content()
             for e in self.html.xpath("//table/td/b/a/nobr")
         ]
 
