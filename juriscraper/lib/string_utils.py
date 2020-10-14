@@ -68,11 +68,11 @@ def titlecase(text, DEBUG=False):
     elif not text_sans_small_words.isupper() and DEBUG:
         print("Entire string not upper case. Not lowercasing: %s" % text)
 
-    lines = re.split("[\r\n]+", text)
+    lines = re.split(r"[\r\n]+", text)
     processed = []
     for line in lines:
         all_caps = ALL_CAPS.match(line)
-        words = re.split("[\t ]", line)
+        words = re.split(r"[\t ]", line)
         tc_line = []
         for i, word in enumerate(words):
             if DEBUG:

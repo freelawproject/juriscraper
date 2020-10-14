@@ -116,8 +116,8 @@ class PacerRssFeed(DocketReport):
     #   [Scheduling Order] (<a href="https://ecf.mad.uscourts.gov/doc1/
     #   09518690740?caseid=186403&de_seq_num=98">39</a>)
     # We use three simple matches rather than a complex one with three groups.
-    document_number_regex = re.compile(r'">(\d+)</a>')
-    doc1_url_regex = re.compile(r'href="(.*/doc1/.*)"')
+    document_number_regex = re.compile(r'[\"|\'] ?>(\d+)</a>')
+    doc1_url_regex = re.compile(r'href=[\"|\'](.*/doc1/.*)[\"|\']')
     short_desc_regex = re.compile(r"\[(.*?)\]")  # Matches 'foo': [ foo ] (
 
     PATH = "cgi-bin/rss_outside.pl"

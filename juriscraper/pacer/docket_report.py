@@ -1161,13 +1161,13 @@ class DocketReport(BaseDocketReport, BaseReport):
         regexes = [
             # 2 (23 pgs; 4 docs) Blab blah (happens when attachments exist and
             # page numbers are on)
-            "^{ws}*\d+{ws}+\(\d+{ws}+pgs;{ws}\d+{ws}docs\){ws}+(.*)",
+            r"^{ws}*\d+{ws}+\(\d+{ws}+pgs;{ws}\d+{ws}docs\){ws}+(.*)",
             # 2 (23 pgs) Blab blah (happens when pg nums are on)
-            "^{ws}*\d+{ws}+\(\d+{ws}+pgs\){ws}+(.*)",
+            r"^{ws}*\d+{ws}+\(\d+{ws}+pgs\){ws}+(.*)",
             # 2 Blab blah (happens when page nums are off)
-            "^{ws}*\d+{ws}+(.*)",
+            r"^{ws}*\d+{ws}+(.*)",
             # Blab blah (happens when a doc is sealed; can't be downloaded)
-            "^{ws}*(.*)",
+            r"^{ws}*(.*)",
         ]
         for regex in regexes:
             try:
