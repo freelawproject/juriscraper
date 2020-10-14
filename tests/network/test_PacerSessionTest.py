@@ -1,6 +1,6 @@
 # coding=utf-8
 
-import mock
+from unittest import mock
 import unittest
 
 from juriscraper.pacer.utils import make_doc1_url
