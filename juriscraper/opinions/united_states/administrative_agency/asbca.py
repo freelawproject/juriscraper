@@ -24,7 +24,7 @@ class Site(OpinionSite):
             % datetime.today().year
         )
         self.columns = None
-        self.back_scrape_iterable = range(2013, 2000 - 1, -1)
+        self.back_scrape_iterable = list(range(2013, 2000 - 1, -1))
 
     # Fix broken month names and funky whitespace usage.
     def _clean_text(self, text):

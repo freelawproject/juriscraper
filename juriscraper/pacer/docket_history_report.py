@@ -41,7 +41,7 @@ class DocketHistoryReport(DocketReport):
         if self.is_valid is False:
             return {}
         data = self.metadata.copy()
-        data[u"docket_entries"] = self.docket_entries
+        data["docket_entries"] = self.docket_entries
         return data
 
     @property
@@ -54,29 +54,29 @@ class DocketHistoryReport(DocketReport):
 
         self._set_metadata_values()
         data = {
-            u"court_id": self.court_id,
-            u"docket_number": self._get_docket_number(),
-            u"case_name": self._get_case_name(),
-            u"date_filed": self._get_value(
+            "court_id": self.court_id,
+            "docket_number": self._get_docket_number(),
+            "case_name": self._get_case_name(),
+            "date_filed": self._get_value(
                 self.date_filed_regex, self.metadata_values, cast_to_date=True
             ),
-            u"date_last_filing": self._get_value(
+            "date_last_filing": self._get_value(
                 self.date_last_filing_regex,
                 self.metadata_values,
                 cast_to_date=True,
             ),
-            u"date_terminated": self._get_value(
+            "date_terminated": self._get_value(
                 self.date_terminated_regex,
                 self.metadata_values,
                 cast_to_date=True,
             ),
-            u"date_discharged": self._get_value(
+            "date_discharged": self._get_value(
                 self.date_discharged_regex,
                 self.metadata_values,
                 cast_to_date=True,
             ),
-            u"assigned_to_str": self._get_assigned_judge(),
-            u"referred_to_str": self._get_judge(self.referred_to_regex),
+            "assigned_to_str": self._get_assigned_judge(),
+            "referred_to_str": self._get_judge(self.referred_to_regex),
         }
 
         data = clean_court_object(data)
@@ -108,33 +108,33 @@ class DocketHistoryReport(DocketReport):
             self.session is not None
         ), "session attribute of DocketHistoryReport cannot be None."
 
-        if query_type not in [u"History", u"Documents"]:
-            raise ValueError(u"Invalid value for 'query_type' parameter.")
+        if query_type not in ["History", "Documents"]:
+            raise ValueError("Invalid value for 'query_type' parameter.")
         if (
             show_de_descriptions is not True
             and show_de_descriptions is not False
         ):
-            raise ValueError(u"")
+            raise ValueError("")
         if order_by not in ["asc", "desc"]:
-            raise ValueError(u"Invalid value for 'order_by' parameter.")
+            raise ValueError("Invalid value for 'order_by' parameter.")
 
         logger.info(
-            u"Getting nonce for docket history report with "
-            u"pacer_case_id: %s" % pacer_case_id
+            "Getting nonce for docket history report with "
+            "pacer_case_id: %s" % pacer_case_id
         )
         r = self.session.get("%s?%s" % (self.url, pacer_case_id))
         nonce = get_nonce_from_form(r)
 
         query_params = {
-            u"QueryType": query_type,
-            u"sort1": order_by,
+            "QueryType": query_type,
+            "sort1": order_by,
         }
         if show_de_descriptions:
-            query_params["DisplayDktText"] = u"DisplayDktText"
+            query_params["DisplayDktText"] = "DisplayDktText"
 
         logger.info(
-            u"Querying docket history report for case ID '%s' with "
-            u"params %s and nonce %s" % (pacer_case_id, query_params, nonce)
+            "Querying docket history report for case ID '%s' with "
+            "params %s and nonce %s" % (pacer_case_id, query_params, nonce)
         )
 
         self.response = self.session.post(
@@ -158,27 +158,27 @@ class DocketHistoryReport(DocketReport):
             if len(cells) == 3:
                 # Normal row, parse the document_number, date, etc.
                 de = {}
-                de[u"document_number"] = clean_string(cells[0].text_content())
-                if de[u"document_number"] == "":
-                    de[u"document_number"] = None
+                de["document_number"] = clean_string(cells[0].text_content())
+                if de["document_number"] == "":
+                    de["document_number"] = None
                 anchors = cells[0].xpath(".//a")
                 if len(anchors) == 1:
                     doc1_url = anchors[0].xpath("./@href")[0]
-                    de[u"pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(
+                    de["pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(
                         doc1_url
                     )
-                    de[u"pacer_seq_no"] = get_pacer_seq_no_from_doc1_anchor(
+                    de["pacer_seq_no"] = get_pacer_seq_no_from_doc1_anchor(
                         anchors[0]
                     )
                 else:
                     # Unlinked minute entry; may or may not be numbered
-                    de[u"pacer_doc_id"] = None
-                    de[u"pacer_seq_no"] = None
-                de[u"date_filed"] = self._get_date_filed(cells[1])
-                de[u"short_description"] = force_unicode(
+                    de["pacer_doc_id"] = None
+                    de["pacer_seq_no"] = None
+                de["date_filed"] = self._get_date_filed(cells[1])
+                de["short_description"] = force_unicode(
                     cells[2].text_content()
                 )
-                de[u"description"] = u""
+                de["description"] = ""
                 docket_entries.append(de)
             elif len(cells) == 1:
                 # Document long description. Get it, and add it to previous de.
@@ -247,7 +247,7 @@ class DocketHistoryReport(DocketReport):
         if len(matches) == 1:
             case_name = list(matches)[0]
         else:
-            case_name = u"Unknown Case Title"
+            case_name = "Unknown Case Title"
         return harmonize(case_name)
 
     def _get_docket_number(self):

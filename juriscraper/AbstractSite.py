@@ -77,7 +77,7 @@ class AbstractSite(object):
 
     def __str__(self):
         out = []
-        for attr, val in self.__dict__.items():
+        for attr, val in list(self.__dict__.items()):
             out.append("%s: %s" % (attr, val))
         return "\n".join(out)
 
@@ -322,7 +322,7 @@ class AbstractSite(object):
         self.downloader_executed = True
         if self.method == "POST":
             truncated_params = {}
-            for k, v in self.parameters.items():
+            for k, v in list(self.parameters.items()):
                 truncated_params[k] = trunc(v, 50, ellipsis="...[truncated]")
             logger.info(
                 "Now downloading case page at: %s (params: %s)"
@@ -403,7 +403,10 @@ class AbstractSite(object):
                 if six.PY2:
                     payload = self.request["response"].text
                 else:
-                    payload = str(self.request["response"].content)
+                    try:
+                        payload = self.request["response"].content.decode('utf8')
+                    except:
+                        payload = self.request["response"].text
 
                 text = self._clean_text(payload)
                 html_tree = self._make_html_tree(text)

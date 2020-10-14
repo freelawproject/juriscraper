@@ -33,7 +33,7 @@ class Site(mich.Site):
                 end_year=self.today.year,
             )
         )
-        self.back_scrape_iterable = range(0, 200)
+        self.back_scrape_iterable = list(range(0, 200))
         self.court_id = self.__module__
 
     def _download_backwards(self, page):

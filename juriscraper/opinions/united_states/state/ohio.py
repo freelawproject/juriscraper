@@ -121,7 +121,7 @@ class Site(OpinionSiteWebDriven):
 
     def _get_judges(self):
         path = "{base}/following::td[2]".format(base=self.base_path)
-        return map(self._return_judge, self.html.xpath(path))
+        return list(map(self._return_judge, self.html.xpath(path)))
 
     @staticmethod
     def _return_judge(e):

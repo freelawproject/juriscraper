@@ -68,11 +68,11 @@ def titlecase(text, DEBUG=False):
     elif not text_sans_small_words.isupper() and DEBUG:
         print("Entire string not upper case. Not lowercasing: %s" % text)
 
-    lines = re.split("[\r\n]+", text)
+    lines = re.split(r"[\r\n]+", text)
     processed = []
     for line in lines:
         all_caps = ALL_CAPS.match(line)
-        words = re.split("[\t ]", line)
+        words = re.split(r"[\t ]", line)
         tc_line = []
         for i, word in enumerate(words):
             if DEBUG:
@@ -99,8 +99,10 @@ def titlecase(text, DEBUG=False):
             if INLINE_PERIOD.search(word):
                 if DEBUG:
                     print(
-                        "  INLINE_PERIOD matched. Uppercasing if == 1 char: "
-                        + word
+                        (
+                            "  INLINE_PERIOD matched. Uppercasing if == 1 char: "
+                            + word
+                        )
                     )
                 parts = word.split(".")
                 new_parts = []
@@ -119,8 +121,10 @@ def titlecase(text, DEBUG=False):
                 # This repeats INLINE_PERIOD. Could be more elegant.
                 if DEBUG:
                     print(
-                        "  INLINE_SLASH matched. Uppercasing if == 1 char: "
-                        + word
+                        (
+                            "  INLINE_SLASH matched. Uppercasing if == 1 char: "
+                            + word
+                        )
                     )
                 parts = word.split("/")
                 new_parts = []
@@ -146,7 +150,9 @@ def titlecase(text, DEBUG=False):
 
             if UC_ELSEWHERE.match(word):
                 if DEBUG:
-                    print("  UC_ELSEWHERE matched. Leaving unchanged: " + word)
+                    print(
+                        ("  UC_ELSEWHERE matched. Leaving unchanged: " + word)
+                    )
                 tc_line.append(word)
                 continue
 
@@ -313,52 +319,52 @@ def harmonize(text):
 
     result = ""
     # replace vs. with v.
-    text = re.sub(re.compile(r"\Wvs\.\W"), u" v. ", text)
+    text = re.sub(re.compile(r"\Wvs\.\W"), " v. ", text)
 
     # replace V. with v.
-    text = re.sub(re.compile(r"\WV\.\W"), u" v. ", text)
+    text = re.sub(re.compile(r"\WV\.\W"), " v. ", text)
 
     # replace v with v.
-    text = re.sub(re.compile(r" v "), u" v. ", text)
+    text = re.sub(re.compile(r" v "), " v. ", text)
 
     # and finally, vs with v.
-    text = re.sub(re.compile(r" vs "), u" v. ", text)
+    text = re.sub(re.compile(r" vs "), " v. ", text)
 
     # Remove the BAD_WORDS.
     text = text.split()
     cleaned_text = []
     for word in text:
-        word = re.sub(BAD_WORDS, u"", word)
+        word = re.sub(BAD_WORDS, "", word)
         cleaned_text.append(word)
-    text = u" ".join(cleaned_text)
+    text = " ".join(cleaned_text)
 
     # split on all ' v. ' and then deal with United States variations.
-    text = text.split(u" v. ")
+    text = text.split(" v. ")
     i = 1
     for frag in text:
         frag = frag.strip()
         if UNITED_STATES.match(frag):
-            result += u"United States"
+            result += "United States"
         elif THE_STATE.match(frag):
-            result += u"State"
+            result += "State"
         else:
             # needed here, because we can't put "US" as a case-insensitive
             # word into the UNITED_STATES regex.
-            frag = re.sub(re.compile(r"^US$"), u"United States", frag)
+            frag = re.sub(re.compile(r"^US$"), "United States", frag)
             # no match
             result += frag
 
         if i < len(text):
             # More stuff coming; append v.
-            result += u" v. "
+            result += " v. "
         i += 1
 
     # Remove the ET_AL words.
-    result = re.sub(ET_AL, u"", result)
+    result = re.sub(ET_AL, "", result)
 
     # Fix the No. and Nos.
-    if result.startswith(u"No.") or result.startswith(u"Nos."):
-        result = re.sub(r"^Nos?\.\s+", u"", result)
+    if result.startswith("No.") or result.startswith("Nos."):
+        result = re.sub(r"^Nos?\.\s+", "", result)
 
     return clean_string(result)
 
@@ -378,25 +384,25 @@ def clean_string(s):
 
     # Get rid of HTML encoded chars
     s = (
-        s.replace(u"&rsquo;", u"'")
-        .replace(u"&rdquo;", u'"')
-        .replace(u"&ldquo;", u'"')
-        .replace(u"&nbsp;", u" ")
-        .replace(u"&amp;", u"&")
-        .replace(u"%20", u" ")
-        .replace(u"&#160;", u" ")
+        s.replace("&rsquo;", "'")
+        .replace("&rdquo;", '"')
+        .replace("&ldquo;", '"')
+        .replace("&nbsp;", " ")
+        .replace("&amp;", "&")
+        .replace("%20", " ")
+        .replace("&#160;", " ")
     )
 
     # smart quotes
     s = (
-        s.replace(u"’", u"'")
-        .replace(u"‘", u"'")
-        .replace(u"“", u'"')
-        .replace(u"”", u'"')
+        s.replace("’", "'")
+        .replace("‘", "'")
+        .replace("“", '"')
+        .replace("”", '"')
     )
 
     # Get rid of weird punctuation
-    s = s.replace(u"*", u"").replace(u"#", u"").replace(u";", u"")
+    s = s.replace("*", "").replace("#", "").replace(";", "")
 
     # Strip bad stuff from the end of lines. Python's strip fails here because
     # we don't know the order of the various punctuation items to be stripped.
@@ -406,19 +412,19 @@ def clean_string(s):
     bad_endings = re.compile(r"%s$" % bad_punctuation)
     bad_beginnings = re.compile(r"^%s" % bad_punctuation)
 
-    s = s.split(u" v. ")
+    s = s.split(" v. ")
     cleaned_string = []
     for frag in s:
-        frag = re.sub(bad_endings, u"", frag)
-        frag = re.sub(bad_beginnings, u"", frag)
+        frag = re.sub(bad_endings, "", frag)
+        frag = re.sub(bad_beginnings, "", frag)
         cleaned_string.append(frag)
-    s = u" v. ".join(cleaned_string)
+    s = " v. ".join(cleaned_string)
 
     # get rid of '\t\n\x0b\x0c\r ', and replace them with a single space.
-    s = u" ".join(s.split())
+    s = " ".join(s.split())
 
     # Convert non-breaking spaces to regular spaces
-    s = s.replace(u"\u00A0", " ")
+    s = s.replace("\u00A0", " ")
 
     return s
 
@@ -497,13 +503,13 @@ def trunc(s, length, ellipsis=None):
         # find the rightmost space using a zero-indexed (+1) length minus the
         # length of the ellipsis.
         rightmost_space_index = length - ellipsis_length + 1
-        end = s.rfind(u" ", 0, rightmost_space_index)
+        end = s.rfind(" ", 0, rightmost_space_index)
         if end == -1:
             # no spaces found, just use max position
             end = length - ellipsis_length
         s = s[0:end]
         if ellipsis:
-            s = u"%s%s" % (s, ellipsis)
+            s = "%s%s" % (s, ellipsis)
         return s
 
 
@@ -554,14 +560,14 @@ def normalize_dashes(raw_string):
     """Replace various dash formats with normal dash"""
     dashes = [
         # copied from http://www.w3schools.com/charsets/ref_utf_punctuation.asp
-        u"–",  # en dash
-        u"—",  # em dash
-        u"‐",  # hyphen
-        u"‑",  # non-breaking hyphen
-        u"‒",  # figure dash
-        u"―",  # horizontal bar
+        "–",  # en dash
+        "—",  # em dash
+        "‐",  # hyphen
+        "‑",  # non-breaking hyphen
+        "‒",  # figure dash
+        "―",  # horizontal bar
     ]
-    normal = u"-"
+    normal = "-"
     for dash in dashes:
         raw_string = raw_string.replace(dash, normal)
     return raw_string
@@ -593,131 +599,131 @@ class CaseNameTweaker(object):
             return self._bad_words
 
         acros = [
-            u"a.g.p.",
-            u"c.d.c.",
-            u"c.i.a.",
-            u"d.o.c.",
-            u"e.e.o.c.",
-            u"e.p.a.",
-            u"f.b.i.",
-            u"f.c.c.",
-            u"f.d.i.c.",
-            u"f.s.b.",
-            u"f.t.c.",
-            u"i.c.c.",
-            u"i.n.s.",
-            u"i.r.s.",
-            u"n.a.a.c.p.",
-            u"n.l.r.b.",
-            u"p.l.c.",
-            u"s.e.c.",
-            u"s.p.a.",
-            u"s.r.l.",
-            u"u.s.",
-            u"u.s.a.",
-            u"u.s.e.e.o.c.",
-            u"u.s.e.p.a.",
+            "a.g.p.",
+            "c.d.c.",
+            "c.i.a.",
+            "d.o.c.",
+            "e.e.o.c.",
+            "e.p.a.",
+            "f.b.i.",
+            "f.c.c.",
+            "f.d.i.c.",
+            "f.s.b.",
+            "f.t.c.",
+            "i.c.c.",
+            "i.n.s.",
+            "i.r.s.",
+            "n.a.a.c.p.",
+            "n.l.r.b.",
+            "p.l.c.",
+            "s.e.c.",
+            "s.p.a.",
+            "s.r.l.",
+            "u.s.",
+            "u.s.a.",
+            "u.s.e.e.o.c.",
+            "u.s.e.p.a.",
         ]
-        acros_sans_dots = [acro.replace(u".", u"") for acro in acros]
+        acros_sans_dots = [acro.replace(".", "") for acro in acros]
         # corp_acros = ['L.L.C.', 'L.L.L.P.', 'L.L.P.', 'L.P.', 'P.A.', 'P.C.',
         #              'P.L.L.C.',c ]
         # corp_acros_sans_dots = [acro.replace('.', '') for acro in corp_acros]
         common_names = [
-            u"state",
-            u"people",
-            u"smith",
-            u"johnson",
-            u"commissioner",
+            "state",
+            "people",
+            "smith",
+            "johnson",
+            "commissioner",
         ]
 
         ags = [
-            u"Akerman",
-            u"Ashcroft",
-            u"Barr",
-            u"Bates",
-            u"Bell",
-            u"Berrien",
-            u"Biddle",
-            u"Black",
-            u"Bonaparte",
-            u"Bork",
-            u"Bradford",
-            u"Breckinridge",
-            u"Brewster",
-            u"Brownell",
-            u"Butler",
-            u"Civiletti",
-            u"Clark",
-            u"Clement",
-            u"Clifford",
-            u"Crittenden",
-            u"Cummings",
-            u"Cushing",
-            u"Daugherty",
-            u"Devens",
-            u"Evarts",
-            u"Filip",
-            u"Garland",
-            u"Gerson",
-            u"Gilpin",
-            u"Gonzales",
-            u"Gregory",
-            u"Griggs",
-            u"Grundy",
-            u"Harmon",
-            u"Hoar",
-            u"Holder",
-            u"Jackson",
-            u"Johnson",
-            u"Katzenbach",
-            u"Keisler",
-            u"Kennedy",
-            u"Kleindienst",
-            u"Knox",
-            u"Lee",
-            u"Legaré",
-            u"Levi",
-            u"Lincoln",
-            u"Lynch",
-            u"MacVeagh",
-            u"Mason",
-            u"McGranery",
-            u"McGrath",
-            u"McKenna",
-            u"McReynolds",
-            u"Meese",
-            u"Miller",
-            u"Mitchell",
-            u"Moody",
-            u"Mukasey",
-            u"Murphy",
-            u"Nelson",
-            u"Olney",
-            u"Palmer",
-            u"Pierrepont",
-            u"Pinkney",
-            u"Randolph",
-            u"Reno",
-            u"Richardson",
-            u"Rodney",
-            u"Rogers",
-            u"Rush",
-            u"Sargent",
-            u"Saxbe",
-            u"Sessions",
-            u"Smith",
-            u"Speed",
-            u"Stanbery",
-            u"Stanton",
-            u"Stone",
-            u"Taft",
-            u"Taney",
-            u"Thornburgh",
-            u"Toucey",
-            u"Whitacker",
-            u"Wickersham",
-            u"Williams",
-            u"Wirt",
+            "Akerman",
+            "Ashcroft",
+            "Barr",
+            "Bates",
+            "Bell",
+            "Berrien",
+            "Biddle",
+            "Black",
+            "Bonaparte",
+            "Bork",
+            "Bradford",
+            "Breckinridge",
+            "Brewster",
+            "Brownell",
+            "Butler",
+            "Civiletti",
+            "Clark",
+            "Clement",
+            "Clifford",
+            "Crittenden",
+            "Cummings",
+            "Cushing",
+            "Daugherty",
+            "Devens",
+            "Evarts",
+            "Filip",
+            "Garland",
+            "Gerson",
+            "Gilpin",
+            "Gonzales",
+            "Gregory",
+            "Griggs",
+            "Grundy",
+            "Harmon",
+            "Hoar",
+            "Holder",
+            "Jackson",
+            "Johnson",
+            "Katzenbach",
+            "Keisler",
+            "Kennedy",
+            "Kleindienst",
+            "Knox",
+            "Lee",
+            "Legaré",
+            "Levi",
+            "Lincoln",
+            "Lynch",
+            "MacVeagh",
+            "Mason",
+            "McGranery",
+            "McGrath",
+            "McKenna",
+            "McReynolds",
+            "Meese",
+            "Miller",
+            "Mitchell",
+            "Moody",
+            "Mukasey",
+            "Murphy",
+            "Nelson",
+            "Olney",
+            "Palmer",
+            "Pierrepont",
+            "Pinkney",
+            "Randolph",
+            "Reno",
+            "Richardson",
+            "Rodney",
+            "Rogers",
+            "Rush",
+            "Sargent",
+            "Saxbe",
+            "Sessions",
+            "Smith",
+            "Speed",
+            "Stanbery",
+            "Stanton",
+            "Stone",
+            "Taft",
+            "Taney",
+            "Thornburgh",
+            "Toucey",
+            "Whitacker",
+            "Wickersham",
+            "Williams",
+            "Wirt",
         ]
         # self.corp_acros = corp_acros + corp_acros_sans_dots
         bad_words = (
@@ -750,17 +756,17 @@ class CaseNameTweaker(object):
 
         # Make a list of cities with big populations.
         cities = [
-            v[u"name"]
-            for v in geonames.get_cities().values()
-            if (v[u"countrycode"] == u"US" and v[u"population"] > 150000)
+            v["name"]
+            for v in list(geonames.get_cities().values())
+            if (v["countrycode"] == "US" and v["population"] > 150000)
         ]
-        counties = [v[u"name"] for v in geonames.get_us_counties()]
-        states = [v[u"name"] for v in geonames.get_us_states().values()]
+        counties = [v["name"] for v in geonames.get_us_counties()]
+        states = [v["name"] for v in list(geonames.get_us_states().values())]
         return cities + counties + states
 
     def make_case_name_short(self, s):
         """Creates short case names where obvious ones can easily be made."""
-        parts = [part.strip().split() for part in s.split(u" v. ")]
+        parts = [part.strip().split() for part in s.split(" v. ")]
         if len(parts) == 1:
             # No v. Likely an "In re" or "Matter of" case.
             if len(parts[0]) <= 3:
@@ -768,7 +774,7 @@ class CaseNameTweaker(object):
                 return s
             else:
                 # Too long; too weird. Punt.
-                return u""
+                return ""
 
         elif len(parts) == 2:
             # X v. Y --> [['X'], ['Y']]
@@ -792,7 +798,7 @@ class CaseNameTweaker(object):
                         return parts[1][0]
 
         # More than 1 instance of v. or otherwise no matches --> Give up.
-        return u""
+        return ""
 
 
 def clean_if_py3(s):

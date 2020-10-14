@@ -15,7 +15,7 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.url = ""
         self.url_base = "http://www.illinoiscourts.gov/Opinions/SupremeCourt/{year}/default.asp"
-        self.back_scrape_iterable = range(1996, 2015)
+        self.back_scrape_iterable = list(range(1996, 2015))
         self.download_url_path = None
         self.case_name_path = None
         self.case_dates_path = None

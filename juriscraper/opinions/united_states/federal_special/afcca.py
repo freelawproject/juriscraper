@@ -16,7 +16,7 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.back_scrape_iterable = range(2013, 2002 - 1, -1)
+        self.back_scrape_iterable = list(range(2013, 2002 - 1, -1))
         self.url_base = "http://afcca.law.af.mil/content/opinions_date_%d.html"
         self.url = self.url_base % date.today().year
         self.table_cell_path = '//table[@width="800"][@align="center"]/tr[position() > 2]/td[%d]%s'

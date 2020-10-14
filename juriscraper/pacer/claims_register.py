@@ -374,12 +374,12 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             "case_num": docket_number,
         }
         if date_start:
-            params["f_fromdt"] = date_start.strftime(u"%m/%d/%Y")
+            params["f_fromdt"] = date_start.strftime("%m/%d/%Y")
         else:
             # Set the default
             params["f_fromdt"] = "1/1/1960"
         if date_end:
-            params["f_todt"] = date_end.strftime(u"%m/%d/%Y")
+            params["f_todt"] = date_end.strftime("%m/%d/%Y")
 
         logger.info(
             "Querying claims register for case ID '%s' in court '%s' "

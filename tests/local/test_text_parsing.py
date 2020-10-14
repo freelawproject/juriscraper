@@ -177,7 +177,7 @@ VerDate Nov 24 2008   10:59 Jul 11, 2014   Jkt 372897   PO 20012   Frm 00002   F
             )
 
             self.assertEqual(cite_string, a)
-            print "✓", cite_string
+            print("✓", cite_string)
 
     def test_tax_court_docket_number_extractor(self):
         """Test Docket Numbers extraction from opinions"""
@@ -306,4 +306,4 @@ VerDate Nov 24 2008   10:59 Jul 11, 2014   Jkt 372897   PO 20012   Frm 00002   F
             results = site.extract_from_text(q)
             docket_number = results["Docket"]["docket_number"]
             self.assertEqual(docket_number, a)
-            print "✓", docket_number
+            print("✓", docket_number)

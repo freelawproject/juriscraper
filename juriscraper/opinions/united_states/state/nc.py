@@ -26,7 +26,9 @@ class Site(OpinionSite):
             "http://appellate.nccourts.org/opinions/?c=sc&year=%s"
             % date.today().year
         )
-        self.back_scrape_iterable = range((date.today().year - 1), 1997, -1)
+        self.back_scrape_iterable = list(
+            range((date.today().year - 1), 1997, -1)
+        )
         self.my_download_urls = []
         self.my_case_names = []
         self.my_docket_numbers = []
@@ -103,7 +105,7 @@ class Site(OpinionSite):
 
             elif precedential_status == "Unpublished":
                 for span in row_el.xpath("./td/span"):
-                    if "onclick" not in span.attrib.keys():
+                    if "onclick" not in list(span.attrib.keys()):
                         continue
                     download_url = re.search(
                         'viewopinion\("(.*)"',

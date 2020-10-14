@@ -9,7 +9,7 @@ version: 2.1
 executors:
   python:
     docker:
-      - image: circleci/python:2.7
+      - image: circleci/python:3.8
     working_directory: ~/repo
 
 

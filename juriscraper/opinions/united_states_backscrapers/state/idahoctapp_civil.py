@@ -29,15 +29,15 @@ class Site(OpinionSite):
         for xelement in self.html.xpath('//li[@class="MsoNormal"]/span/a[1]'):
             # Our text nodes are randomly surrounded by HTML spans, so we start
             # at a high level node, and strip down to just what we want.
-            data_html = html.tostring(xelement, encoding=unicode)
+            data_html = html.tostring(xelement, encoding=str)
             data_string = re.sub(r"<[^>]*?>", "", data_html)
             data_string = " ".join(data_string.split())
 
             # Several regexes are needed since we have hyphen-separated values
             regexes = [
-                u"(.*?)[-–](.*?)–",
-                u"(.*?)[-–](.*)-",
-                u"(.*?)[-–](.*)$",
+                "(.*?)[-–](.*?)–",
+                "(.*?)[-–](.*)-",
+                "(.*?)[-–](.*)$",
             ]
             for regex in regexes:
                 try:
@@ -61,8 +61,8 @@ class Site(OpinionSite):
         for e in self.html.xpath('//li[@class="MsoNormal"]/span/a[1]'):
             s = html.tostring(e, method="text", encoding="unicode")
             # Cleanup...
-            s = s.split(u"-")[0]
-            s = s.split(u"–")[0]
+            s = s.split("-")[0]
+            s = s.split("–")[0]
             date_formats = ["%B %d, %Y", "%B %d %Y", "%B %d , %Y"]
             for format in date_formats:
                 try:

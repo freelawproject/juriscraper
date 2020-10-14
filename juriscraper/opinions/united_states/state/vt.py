@@ -20,7 +20,7 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.back_scrape_iterable = range(1, self.get_backscrape_max())
+        self.back_scrape_iterable = list(range(1, self.get_backscrape_max()))
         self.element_path_format = "//article[@class='views-row media-document']/div[@class='views-field views-field-field-document%s']"
         self.url = (
             "https://www.vermontjudiciary.org/opinions-decisions?f[0]=document_type%3A94&f[1]=court_division_opinions_library_%3A"

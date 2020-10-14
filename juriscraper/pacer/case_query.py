@@ -152,11 +152,11 @@ class CaseQuery(BaseDocketReport, BaseReport):
         #   <B>Date filed:</B> 04/30/2018<B>Date of last filing:</B> 06/06/2018
         data = {}
         field_names = {
-            u"date_of_last_filing": u"date_last_filing",
-            u"judge": u"assigned_to_str",
-            u"plan_confirmed": u"date_plan_confirmed",
-            u"debtor_discharged": u"date_debtor_dismissed",
-            u"joint_debtor_discharged": u"date_joint_debtor_dismissed",
+            "date_of_last_filing": "date_last_filing",
+            "judge": "assigned_to_str",
+            "plan_confirmed": "date_plan_confirmed",
+            "debtor_discharged": "date_debtor_dismissed",
+            "joint_debtor_discharged": "date_joint_debtor_dismissed",
         }
         for i in range(1, len(rows) - 1):
             bolds = rows[i].findall(".//b")
@@ -176,11 +176,11 @@ class CaseQuery(BaseDocketReport, BaseReport):
                     referral_re = re.compile(", referral$")
                     related_re = re.search("Related case: (.*)", line)
                     if presiding_re.search(line):
-                        data[u"assigned_to_str"] = presiding_re.sub("", line)
+                        data["assigned_to_str"] = presiding_re.sub("", line)
                     elif referral_re.search(line):
-                        data[u"referred_to_str"] = referral_re.sub("", line)
+                        data["referred_to_str"] = referral_re.sub("", line)
                     elif related_re:
-                        data[u"related_cases_str"] = related_re.group(1)
+                        data["related_cases_str"] = related_re.group(1)
                     else:
                         raise AssertionError(
                             "Unable to match judge row: %s" % line
@@ -194,10 +194,10 @@ class CaseQuery(BaseDocketReport, BaseReport):
 
         data.update(
             {
-                u"court_id": self.court_id,
-                u"docket_number": docket_number,
-                u"case_name": case_name,
-                u"case_name_raw": case_name_raw,
+                "court_id": self.court_id,
+                "docket_number": docket_number,
+                "case_name": case_name,
+                "case_name_raw": case_name_raw,
             }
         )
 
@@ -259,20 +259,20 @@ class CaseQuery(BaseDocketReport, BaseReport):
             "pacer_case_id must be truthy, not '%s'" % pacer_case_id
         )
         params = {
-            u"UserType": "",
-            u"all_case_ids": pacer_case_id,
-            u"case_num": "foo",  # We just need *some* value here.
-            u"Qry_filed_from": "",
-            u"Qry_filed_to": "",
-            u"lastentry_from": "",
-            u"lastentry_to": "",
-            u"last_name": "",
-            u"first_name": "",
-            u"middle_name": "",
-            u"person_type": "",
+            "UserType": "",
+            "all_case_ids": pacer_case_id,
+            "case_num": "foo",  # We just need *some* value here.
+            "Qry_filed_from": "",
+            "Qry_filed_to": "",
+            "lastentry_from": "",
+            "lastentry_to": "",
+            "last_name": "",
+            "first_name": "",
+            "middle_name": "",
+            "person_type": "",
         }
         logger.info(
-            u"Running case query for case ID '%s' in court '%s'",
+            "Running case query for case ID '%s' in court '%s'",
             pacer_case_id,
             self.court_id,
         )

@@ -10,7 +10,7 @@ def generate_scraper_report(file_path, results):
     with_errors = []
     with_zero_results = []
     with_global_failure = []
-    for name, scraper in results.items():
+    for name, scraper in list(results.items()):
         has_error = False
         if scraper["global_failure"]:
             with_global_failure.append(name)

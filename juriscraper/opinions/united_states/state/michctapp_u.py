@@ -33,7 +33,7 @@ class Site(mich.Site):
                 end_year=self.today.year,
             )
         )
-        self.back_scrape_iterable = range(0, 2275)
+        self.back_scrape_iterable = list(range(0, 2275))
         self.court_id = self.__module__
 
     def _get_precedential_statuses(self):

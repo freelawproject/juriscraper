@@ -40,7 +40,7 @@ class Site(OralArgumentSite):
 
     def _get_case_dates(self):
         path = "id('ViewBody')//date/text()"
-        return map(self._return_case_date, self.html.xpath(path))
+        return list(map(self._return_case_date, self.html.xpath(path)))
 
     @staticmethod
     def _return_case_date(e):

@@ -26,7 +26,7 @@ class Site(OralArgumentSite):
         self.method = "POST"
         # One less than total number of pages, because last page has a bit of a
         # mess, and it's easier to simply not deal with it.
-        self.back_scrape_iterable = range(1, 268)
+        self.back_scrape_iterable = list(range(1, 268))
 
     def _set_parameters(self, page=1):
         self.parameters = {

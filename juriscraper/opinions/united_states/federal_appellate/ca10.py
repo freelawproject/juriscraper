@@ -20,7 +20,7 @@ class Site(OpinionSite):
 
     def _get_download_urls(self):
         return [
-            html.tostring(e, method="text")
+            html.tostring(e, method="text").decode()
             for e in self.html.xpath("//item/link")
         ]
 
