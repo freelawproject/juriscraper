@@ -403,7 +403,10 @@ class AbstractSite(object):
                 if six.PY2:
                     payload = self.request["response"].text
                 else:
-                    payload = str(self.request["response"].content)
+                    try:
+                        payload = self.request["response"].content.decode('utf8')
+                    except:
+                        payload = self.request["response"].text
 
                 text = self._clean_text(payload)
                 html_tree = self._make_html_tree(text)
