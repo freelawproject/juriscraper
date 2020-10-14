@@ -48,8 +48,7 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         return [
-            e.text_content()
-            for e in self.html.xpath("//table/td/b/a/nobr")
+            e.text_content() for e in self.html.xpath("//table/td/b/a/nobr")
         ]
 
     def _get_precedential_statuses(self):

@@ -404,7 +404,9 @@ class AbstractSite(object):
                     payload = self.request["response"].text
                 else:
                     try:
-                        payload = self.request["response"].content.decode('utf8')
+                        payload = self.request["response"].content.decode(
+                            "utf8"
+                        )
                     except:
                         payload = self.request["response"].text
 
