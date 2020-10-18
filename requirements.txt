@@ -4,7 +4,6 @@ cchardet>=1.1.2
 certifi>=2017.4.17
 chardet<3.1.0,>=3.0.2
 cssselect
-git+https://github.com/kurtmckee/feedparser@develop#egg=package-name
 geonamescache==0.20
 html5lib
 lxml~=4.0

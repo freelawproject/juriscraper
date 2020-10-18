@@ -21,6 +21,7 @@ jobs:
         pip install wheel
         pip install -r requirements.txt
         pip install -r requirements-dev.txt
+        pip install git+https://github.com/kurtmckee/feedparser@develop
     - name: Run tests
       run: |
         python setup.py test
