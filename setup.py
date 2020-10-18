@@ -88,7 +88,7 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     install_requires=reqs,
-    tests_require=["jsondate3-aware", "mock", "vcrpy"],
+    tests_require=["jsondate3-aware", "vcrpy"],
     include_package_data=True,
     test_suite="tests.test_local",
     cmdclass={
