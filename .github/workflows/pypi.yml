@@ -1,0 +1,14 @@
+name: PyPI
+on:
+  push:
+    tags:
+      - v*.*.*
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: casperdcl/deploy-pypi@v1
+        with:
+          password: ${{ secrets.pypi_token }}
+          build: true
