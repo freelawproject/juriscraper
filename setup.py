@@ -6,7 +6,7 @@ import unittest
 from setuptools import setup, find_packages
 from setuptools.command.install import install
 
-VERSION = "2.0.0"
+VERSION = "2.0.1"
 AUTHOR = "Free Law Project"
 EMAIL = "info@free.law"
 HERE = os.path.abspath(os.path.dirname(__file__))
@@ -70,7 +70,7 @@ setup(
     maintainer_email=EMAIL,
     keywords=["scraping", "legal", "pacer"],
     long_description=read("README.rst"),
-    long_description_content_type="text/markdown",
+    long_description_content_type="text/x-rst",
     packages=find_packages(exclude=["tests*"]),
     classifiers=[
         "Development Status :: 5 - Production/Stable",
