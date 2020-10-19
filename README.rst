@@ -1,5 +1,3 @@
-|Build Status|
-
 What is This?
 =============
 
@@ -69,8 +67,7 @@ Joining the Project as a Developer
 
 For scrapers to be merged:
 
--  Automated testing should pass. The test suite will be run automatically by both
-   `CircleCI <https://circleci.com/gh/freelawproject/juriscraper/>`__ and Github Actions. If changes are being made to the pacer code, the pacer tests must also pass when run. These tests are skipped by default. To run them, set environment variables for PACER_USERNAME and PACER_PASSWORD.
+-  Automated testing should pass. The test suite will be run automatically by Github Actions. If changes are being made to the pacer code, the pacer tests must also pass when run. These tests are skipped by default. To run them, set environment variables for PACER_USERNAME and PACER_PASSWORD.
 
 -  A \*\_example\* file must be included in the ``tests/examples``
    directory (this is needed for the tests to run your code).
@@ -79,18 +76,18 @@ For scrapers to be merged:
    `PEP8 <http://www.python.org/dev/peps/pep-0008/>`__ compliant with no
    major Pylint problems or Intellij inspection issues.
 
--  We use the `black <https://black.readthedocs.io/en/stable/>`__ code formatter to make sure all our Python code has the same formatting. This is an automated tool that you must run on any code you run before you push it to Github. When you run it, it will reformat your code. We recommend `integrating it into your editor< https://black.readthedocs.io/en/stable/editor_integration.html>`__.
+-  We use the `black <https://black.readthedocs.io/en/stable/>`__ code formatter to make sure all our Python code has the same formatting. This is an automated tool that you must run on any code you run before you push it to Github. When you run it, it will reformat your code. We recommend `integrating into your editor  <https://black.readthedocs.io/en/stable/editor_integration.html/>`__.
 
 - This project is configured to use git pre-commit hooks managed by the
-Python program `pre-commit` ([website](https://pre-commit.com/)). Pre-
-commit checks let us easily ensure that the code is properly formatted with
-black before it can even be commited. If you install the dev dependencies in
-`requirements-dev.txt`, you should then be able to run `$ pre-commit install`
-which will set up a git pre-commit hook for you. This install step is only
-necessary once in your repository. When using this hook, any code
-files that do not comply to black will automatically be unstaged and re-
-formatted. You will see a message to this effect. It is your job to then re-stage
-and commit the files.
+  Python program `pre-commit` ([website](https://pre-commit.com/)). Pre-
+  commit checks let us easily ensure that the code is properly formatted with
+  black before it can even be commited. If you install the dev dependencies in
+  `requirements-dev.txt`, you should then be able to run `$ pre-commit install`
+  which will set up a git pre-commit hook for you. This install step is only
+  necessary once in your repository. When using this hook, any code
+  files that do not comply to black will automatically be unstaged and re-
+  formatted. You will see a message to this effect. It is your job to then re-stage
+  and commit the files.
 
 -  Beyond what black will do for you by default, if you somehow find a way to do whitespace or other formatting changes, do so in their own commit and ideally in its own PR. When whitespace is combined with other code changes, the PR's become impossible to read and risky to merge. This is a big reason we use black.
 
@@ -264,14 +261,6 @@ Or, to run and drop to the Python debugger if it fails, but you must install `no
 
   nosetests -v --pdb tests/local/test_DateTest.py:DateTest.test_various_date_extractions
 
-In addition, we use `CircleCI <https://circleci.com/gh/freelawproject/juriscraper/>`__ to
-automatically run the tests whenever code is committed to the repository
-or whenever a pull request is created. You can make sure that your pull
-request is good to go by waiting for the automated tests to complete.
-
-The current status of CircleCI on our master branch is:
-
-|Build Status|
 
 Version History
 ===============
@@ -323,7 +312,6 @@ Version History
 
 - 2.0.0 - Adds support for Python 3.8 and supports Python 3, exclusively.  Begins testing to Github workflows.
 
-
 **Future Goals**
 
 -  Support for additional PACER pages and utilities
@@ -337,7 +325,7 @@ Version History
 Deployment
 ==========
 
-Deployment to PyPi should happen automatically by CircleCI whenever a new tag is created in Github on the master branch. It will fail if the version has not been updated or if CircleCI failed.
+Deployment to PyPi should happen automatically when a tagged version is pushed to master in the format v*.*.*
 
 If you wish to create a new version manually, the process is:
 
@@ -358,6 +346,7 @@ If you wish to create a new version manually, the process is:
     ::
 
         twine upload dist/* -r pypi (or pypitest)
+
 
 
 License
