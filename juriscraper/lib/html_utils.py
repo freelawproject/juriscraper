@@ -9,7 +9,6 @@ from lxml.etree import XMLSyntaxError
 from lxml.html import fromstring, html5parser, tostring
 from lxml.html.clean import Cleaner
 from six import text_type
-from six.moves.html_parser import HTMLParser
 from six.moves.urllib.parse import urlsplit, urlunsplit
 
 try:
@@ -159,8 +158,8 @@ def get_visible_text(html_content):
 
 
 def html_unescape(s):
-    h = HTMLParser()
-    return h.unescape(s)
+    import html
+    return html.unescape(s)
 
 
 def set_response_encoding(request):
