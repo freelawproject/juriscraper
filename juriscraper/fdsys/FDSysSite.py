@@ -207,7 +207,7 @@ def get_court_locations_list():
 
     # change set to list
     cl = {}
-    for k, v in list(court_locations_list.items()):
+    for k, v in court_locations_list.items():
         cl[k] = list(v)
 
     # save as json

@@ -94,7 +94,7 @@ class PacerFreeOpinionsTest(unittest.TestCase):
             else:
                 # While loop ended normally (without hitting break)
                 for result in results:
-                    for k, v in list(result.items()):
+                    for k, v in result.items():
                         if k in ["nature_of_suit", "cause"]:
                             continue
                         self.assertIsNotNone(

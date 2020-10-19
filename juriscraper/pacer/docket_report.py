@@ -748,7 +748,7 @@ class DocketReport(BaseDocketReport, BaseReport):
     @staticmethod
     def _values_to_none(d):
         """Set the values for a dictionary all to None"""
-        for k in list(d.keys()):
+        for k in d:
             d[k] = None
 
     def _get_current_section(self, current_section, cells):

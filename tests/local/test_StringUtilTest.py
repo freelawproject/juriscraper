@@ -245,7 +245,7 @@ class StringUtilTest(unittest.TestCase):
             11: 4,
             12: 4,
         }
-        for month, q in list(answers.items()):
+        for month, q in answers.items():
             self.assertEqual(quarter(month), q)
 
     def test_is_first_month_in_quarter(self):
@@ -258,7 +258,7 @@ class StringUtilTest(unittest.TestCase):
             6: False,
             7: True,
         }
-        for month, is_first in list(answers.items()):
+        for month, is_first in answers.items():
             self.assertEqual(is_first_month_in_quarter(month), is_first)
 
     def test_harmonize_and_clean_string_tests(self):
@@ -540,7 +540,7 @@ class StringUtilTest(unittest.TestCase):
             "April - June 2016": convert_date_string("May 16, 2016"),
             "January March 2016": False,
         }
-        for before, after in list(tests.items()):
+        for before, after in tests.items():
             if after:
                 self.assertEqual(split_date_range_string(before), after)
             else:

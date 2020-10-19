@@ -71,7 +71,7 @@ class Site(OpinionSiteLinear):
         return dates[: self.number_of_dates_to_process]
 
     def _process_html(self):
-        for date, page in list(self.pages.items()):
+        for date, page in self.pages.items():
             for anchor in page.xpath(".//a[contains(./@href, '.pdf')]"):
                 parent = anchor.getparent()
 

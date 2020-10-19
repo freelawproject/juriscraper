@@ -14,7 +14,7 @@ def get_pacer_court_info():
 
 def get_courts_from_json(j):
     courts = []
-    for k, v in list(j.items()):
+    for k, v in j.items():
         for court in v["courts"]:
             court["type"] = k
             courts.append(court)
