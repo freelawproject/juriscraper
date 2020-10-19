@@ -13,4 +13,4 @@ class Site(tenn.Site):
         self.url = (
             "http://www.tsc.state.tn.us/courts/court-criminal-appeals/opinions"
         )
-        self.back_scrape_iterable = range(0, 1325)
+        self.back_scrape_iterable = list(range(0, 1325))

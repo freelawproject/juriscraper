@@ -199,7 +199,7 @@ BASE_IA_URL = "https://www.archive.org/download"
 
 
 def get_bucket_name(court, pacer_case_id):
-    bucketlist = ["gov", "uscourts", court, unicode(pacer_case_id)]
+    bucketlist = ["gov", "uscourts", court, str(pacer_case_id)]
     return ".".join(bucketlist)
 
 
@@ -208,8 +208,8 @@ def get_docket_filename(court, pacer_case_id):
         [
             "gov",
             "uscourts",
-            unicode(court),
-            unicode(pacer_case_id),
+            str(court),
+            str(pacer_case_id),
             "docket.xml",
         ]
     )
@@ -222,10 +222,10 @@ def get_document_filename(
         [
             "gov",
             "uscourts",
-            unicode(court),
-            unicode(pacer_case_id),
-            unicode(document_number),
-            unicode(attachment_number or 0),
+            str(court),
+            str(pacer_case_id),
+            str(document_number),
+            str(attachment_number or 0),
             "pdf",
         ]
     )

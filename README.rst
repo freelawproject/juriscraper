@@ -38,7 +38,7 @@ Some of the design goals for this project are:
 Installation & Dependencies
 ===========================
 
-First step: Install Python 2.7.x, then:
+First step: Install Python 3.8.x, then:
 
 ::
 
@@ -317,10 +317,11 @@ Version History
 - 1.25.* - Major refactor of tests to split them into network and local tests. Should make CI more consistent.
 - 1.26.* - Adds support for the Los Angeles Superior Court Media Access Portal (LASC MAP)
 - 1.27.* - Add merging of multi-event RSS entries
+- 1.28.* - Changes the API for the InternetArchive parser so that it aligns with the rest of the parsers. Its constructor now requires a court_id value.
 
 **Current**
 
- - 1.28.* - Changes the API for the InternetArchive parser so that it aligns with the rest of the parsers. Its constructor now requires a court_id value.
+- 2.0.0 - Adds support for Python 3.8 and supports Python 3, exclusively.  Begins testing to Github workflows.
 
 
 **Future Goals**
@@ -331,7 +332,7 @@ Version History
 -  Support opinions from for all federal district courts with non-PACER opinion listings
 -  For every court above where a backscraper is possible, it is implemented.
 -  Support video, additional oral argument audio, and transcripts everywhere available
--  Support Python 3, exclusively.
+-  Remove CircleCI testing.
 
 Deployment
 ==========
@@ -363,6 +364,3 @@ License
 =======
 
 Juriscraper is licensed under the permissive BSD license.
-
-.. |Build Status| image:: https://circleci.com/gh/freelawproject/juriscraper.svg?style=svg
-    :target: https://circleci.com/gh/freelawproject/juriscraper

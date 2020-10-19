@@ -11,4 +11,4 @@ class Site(tenn.Site):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.tsc.state.tn.us/courts/court-appeals/opinions"
-        self.back_scrape_iterable = range(0, 987)
+        self.back_scrape_iterable = list(range(0, 987))

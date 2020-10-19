@@ -18,11 +18,11 @@ class Site(OralArgumentSite):
         self.url = (
             "http://www.supremecourt.gov/oral_arguments/argument_audio.aspx"
         )
-        self.back_scrape_iterable = range(2010, 2015)
+        self.back_scrape_iterable = list(range(2010, 2015))
 
     def _get_download_urls(self):
         path = "id('list')//tr//a/text()"
-        return map(self._return_download_url, self.html.xpath(path))
+        return list(map(self._return_download_url, self.html.xpath(path)))
 
     @staticmethod
     def _return_download_url(d):

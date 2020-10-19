@@ -116,8 +116,8 @@ class PacerRssFeed(DocketReport):
     #   [Scheduling Order] (<a href="https://ecf.mad.uscourts.gov/doc1/
     #   09518690740?caseid=186403&de_seq_num=98">39</a>)
     # We use three simple matches rather than a complex one with three groups.
-    document_number_regex = re.compile(r'">(\d+)</a>')
-    doc1_url_regex = re.compile(r'href="(.*/doc1/.*)"')
+    document_number_regex = re.compile(r"[\"|\'] ?>(\d+)</a>")
+    doc1_url_regex = re.compile(r"href=[\"|\'](.*/doc1/.*)[\"|\']")
     short_desc_regex = re.compile(r"\[(.*?)\]")  # Matches 'foo': [ foo ] (
 
     PATH = "cgi-bin/rss_outside.pl"
@@ -173,7 +173,7 @@ class PacerRssFeed(DocketReport):
         For a good summary of this issue, see:
         https://github.com/freelawproject/juriscraper/issues/195#issuecomment-385848344
         """
-        logger.info(u"Querying the RSS feed for %s" % self.court_id)
+        logger.info("Querying the RSS feed for %s" % self.court_id)
         # The timeout here is a bit tricky. Too long, and national PACER
         # outages cause us grief. Too short and slow courts don't get done.
         # Previously, this value has been (60, 300), then 5. Hopefully the
@@ -206,15 +206,15 @@ class PacerRssFeed(DocketReport):
         for entry in self.feed.entries:
             try:
                 new_docket = self.metadata(entry)
-                new_docket[u"parties"] = None
-                new_docket[u"docket_entries"] = self.docket_entries(entry)
+                new_docket["parties"] = None
+                new_docket["docket_entries"] = self.docket_entries(entry)
             except AttributeError:
                 # Happens when RSS items lack necessary attributes like a URL
                 # or published date.
                 pass
             else:
                 if (
-                    new_docket[u"docket_entries"]
+                    new_docket["docket_entries"]
                     and new_docket["docket_number"]
                 ):
                     append_or_merge_entry(docket_list, new_docket)
@@ -227,27 +227,27 @@ class PacerRssFeed(DocketReport):
             return {}
 
         data = {
-            u"court_id": self.court_id,
-            u"pacer_case_id": get_pacer_case_id_from_nonce_url(entry.link),
-            u"docket_number": self._get_docket_number(entry.title),
-            u"case_name": self._get_case_name(entry.title),
+            "court_id": self.court_id,
+            "pacer_case_id": get_pacer_case_id_from_nonce_url(entry.link),
+            "docket_number": self._get_docket_number(entry.title),
+            "case_name": self._get_case_name(entry.title),
             # Filing date is not available. Also the case for free opinions.
-            u"date_filed": None,
-            u"date_terminated": None,
-            u"date_converted": None,
-            u"date_discharged": None,
-            u"assigned_to_str": "",
-            u"referred_to_str": "",
-            u"cause": "",
-            u"nature_of_suit": "",
-            u"jury_demand": "",
-            u"demand": "",
-            u"jurisdiction": "",
+            "date_filed": None,
+            "date_terminated": None,
+            "date_converted": None,
+            "date_discharged": None,
+            "assigned_to_str": "",
+            "referred_to_str": "",
+            "cause": "",
+            "nature_of_suit": "",
+            "jury_demand": "",
+            "demand": "",
+            "jurisdiction": "",
             # bankruptcy data
-            u"trustee_str": "",
-            u"type": "",
-            u"office": "",
-            u"chapter": "",
+            "trustee_str": "",
+            "type": "",
+            "office": "",
+            "chapter": "",
         }
         data.update(self._parse_get_trustee_type_office_chapter(entry.summary))
         data = clean_court_object(data)
@@ -262,27 +262,27 @@ class PacerRssFeed(DocketReport):
         Although there is only one, return it as a list.
         """
         de = {
-            u"date_filed": parser.parse(entry.published),
-            u"description": u"",
-            u"document_number": self._get_value(
+            "date_filed": parser.parse(entry.published),
+            "description": "",
+            "document_number": self._get_value(
                 self.document_number_regex, entry.summary
             )
             or None,
-            u"short_description": html_unescape(
+            "short_description": html_unescape(
                 self._get_value(self.short_desc_regex, entry.summary)
             ),
         }
 
         doc1_url = self._get_value(self.doc1_url_regex, entry.summary)
         if doc1_url:
-            de[u"pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(doc1_url)
-            de[u"pacer_seq_no"] = get_pacer_seq_no_from_doc1_url(doc1_url)
+            de["pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(doc1_url)
+            de["pacer_seq_no"] = get_pacer_seq_no_from_doc1_url(doc1_url)
         else:
             # Some courts, in particular, NYED do not provide doc1 links and
             # instead provide show_case_doc links. Some docket entries don't
             # provide links. In either case, we can't provide pacer_doc_id.
-            de[u"pacer_doc_id"] = u""
-            de[u"pacer_seq_no"] = None
+            de["pacer_doc_id"] = ""
+            de["pacer_seq_no"] = None
 
         return [de]
 
@@ -299,10 +299,10 @@ class PacerRssFeed(DocketReport):
         )
         m = data_parts_re.search(entry_text)
         return {
-            u"type": m.group("type"),
-            u"office": m.group("office"),
-            u"chapter": m.group("chapter"),
-            u"trustee_str": m.group("trustee") or "",
+            "type": m.group("type"),
+            "office": m.group("office"),
+            "chapter": m.group("chapter"),
+            "trustee_str": m.group("trustee") or "",
         }
 
     def _get_docket_number(self, title_text):
@@ -325,7 +325,7 @@ class PacerRssFeed(DocketReport):
         try:
             case_name = title_text.split(" ", 1)[1]
         except IndexError:
-            return u"Unknown Case Title"
+            return "Unknown Case Title"
         case_name = html_unescape(case_name)
         case_name = clean_string(harmonize(case_name))
         return case_name
@@ -374,8 +374,10 @@ sorry if that was your filename.""",
             f = sys.stdin
         else:
             print(
-                "Reading RSS feed from %s as %s"
-                % (args.court_or_file, feed.court_id)
+                (
+                    "Reading RSS feed from %s as %s"
+                    % (args.court_or_file, feed.court_id)
+                )
             )
             f = open(args.court_or_file)
         feed._parse_text(f.read().decode("utf-8"))

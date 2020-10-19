@@ -89,7 +89,7 @@ class FDSysModsContent(object):
         """Extract the parties from the XML into a nice object."""
         party_nodes = xpath(self.tree, "(//m:extension[m:party])[1]//m:party")
 
-        return map(self._get_party, party_nodes)
+        return list(map(self._get_party, party_nodes))
 
     @staticmethod
     def _get_party(party_node):
@@ -105,7 +105,7 @@ class FDSysModsContent(object):
         """Get the documents from the XML into a nice object."""
         document_nodes = xpath(self.tree, "//m:mods/m:relatedItem")
 
-        return map(self._get_document, document_nodes)
+        return list(map(self._get_document, document_nodes))
 
     def _get_document(self, document_node):
         desription = " ".join(
@@ -147,7 +147,7 @@ class FDSysSite(AbstractSite):
         current_year = date.today().year
         self.base_url = "https://www.gpo.gov/smap/fdsys/sitemap_{year}/{year}_USCOURTS_sitemap.xml"
         self.url = self.base_url.format(year=current_year)
-        self.back_scrape_iterable = range(1982, current_year + 1)
+        self.back_scrape_iterable = list(range(1982, current_year + 1))
 
     def __iter__(self):
         for i, url in enumerate(xpath(self.html, "//s:loc/text()")):

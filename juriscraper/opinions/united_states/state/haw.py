@@ -15,7 +15,7 @@ class Site(OpinionSite):
             "http://www.courts.state.hi.us/opinions_and_orders/opinions?yr=%s"
             % year
         )
-        self.back_scrape_iterable = range(2010, year + 1)
+        self.back_scrape_iterable = list(range(2010, year + 1))
         self.court_id = self.__module__
         self.target_id = "S.Ct"
         self.cases = []

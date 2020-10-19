@@ -19,7 +19,9 @@ class Site(OpinionSite):
     def _download(self, request_dict={}):
         if not self.test_mode_enabled():
             # don't set this if running tests, as it hits the network
-            self.back_scrape_iterable = range(0, self.get_last_page() + 1)
+            self.back_scrape_iterable = list(
+                range(0, self.get_last_page() + 1)
+            )
         return super(Site, self)._download(request_dict)
 
     def _get_case_names(self):

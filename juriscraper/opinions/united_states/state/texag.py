@@ -28,7 +28,9 @@ class Site(OpinionSite):
         self.opinion_sub_path = False
         self.domain = "https://texasattorneygeneral.gov"
         self.url = "%s/opinion/index-to-opinions" % self.domain
-        self.back_scrape_iterable = range(2, 16)  # Hard coded for initial run
+        self.back_scrape_iterable = list(
+            range(2, 16)
+        )  # Hard coded for initial run
         self.select_sub_path = ".//select/option[position()>1]"
         self.flat_list_path = (
             '//a[contains(./text(), "See a flat listing of all opinions")]'

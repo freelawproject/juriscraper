@@ -93,7 +93,7 @@ class Site(OpinionSite):
             "http://www.index.va.gov/search/va/bva_search.jsp?RPP=50&RS=%d"
             % (startat,)
         )
-        date_range = range(datetime.today().year, 1997 - 1, -1)
+        date_range = list(range(datetime.today().year, 1997 - 1, -1))
         self.url = (
             base_url + "&DB=" + "&DB=".join([str(n) for n in date_range])
         )

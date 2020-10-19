@@ -23,7 +23,7 @@ class Site(OralArgumentSite):
 
     def _get_download_urls(self):
         path = "//item/link"
-        return map(self._return_download_url, self.html.xpath(path))
+        return list(map(self._return_download_url, self.html.xpath(path)))
 
     @staticmethod
     def _return_download_url(e):
@@ -39,7 +39,7 @@ class Site(OralArgumentSite):
 
     def _get_case_dates(self):
         path = "//item/description/text()"
-        return map(self._return_case_date, self.html.xpath(path))
+        return list(map(self._return_case_date, self.html.xpath(path)))
 
     @staticmethod
     def _return_case_date(e):
@@ -47,7 +47,7 @@ class Site(OralArgumentSite):
 
     def _get_docket_numbers(self):
         path = "//item/title/text()"
-        return map(self._return_docket_number, self.html.xpath(path))
+        return list(map(self._return_docket_number, self.html.xpath(path)))
 
     def _return_docket_number(self, e):
         case_name = re.search(self.regex, e)

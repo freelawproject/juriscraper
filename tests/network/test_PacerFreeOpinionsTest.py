@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding=utf-8
-from __future__ import print_function
+
 
 import os
 import time
@@ -8,7 +8,7 @@ import unittest
 from datetime import date, timedelta
 
 import jsondate3 as json
-import mock
+from unittest import mock
 from requests import ConnectionError
 
 from juriscraper.lib.string_utils import convert_date_string

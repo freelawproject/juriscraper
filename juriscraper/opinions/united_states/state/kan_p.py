@@ -62,7 +62,7 @@ class Site(OpinionSiteLinearWebDriven):
 
     def paginate_through_search_results(self):
         """Click through search results pagination and store each page"""
-        page_numbers_to_process = range(2, self.pages_to_process + 1)
+        page_numbers_to_process = list(range(2, self.pages_to_process + 1))
 
         logger.info("Adding first result page")
         page_current = self.get_page()

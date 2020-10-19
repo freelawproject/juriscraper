@@ -1,5 +1,5 @@
 # coding=utf-8
-from __future__ import print_function
+
 
 import fnmatch
 import os
@@ -32,8 +32,8 @@ class PacerParseTestCase(unittest.TestCase):
 
             court = filename_sans_ext.split("_")[0]
             report = test_class(court)
-            with open(path, "rb") as f:
-                report._parse_text(f.read().decode("utf-8"))
+            with open(path, "r") as f:
+                report._parse_text(f.read())
 
             # Does the metadata function work too? It usually, but not always,
             # gets called by report.data
@@ -48,6 +48,7 @@ class PacerParseTestCase(unittest.TestCase):
                     print("Creating new file at %s" % json_path)
                     json.dump(data, f, indent=2, sort_keys=True)
                 continue
+            data = json.loads(json.dumps(data, sort_keys=True))
             with open(json_path) as f:
                 j = json.load(f)
                 self.assertEqual(j, data)

@@ -1,7 +1,7 @@
 # coding=utf-8
-from __future__ import print_function
+
 import unittest
-import mock
+from unittest import mock
 from juriscraper.pacer import PacerSession, CaseQuery
 
 from tests.network import get_pacer_session

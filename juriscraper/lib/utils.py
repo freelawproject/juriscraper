@@ -5,11 +5,6 @@ from six import string_types
 
 from .string_utils import force_unicode
 
-try:
-    from itertools import izip
-except ImportError:
-    izip = zip
-
 
 def previous_and_next(some_iterable):
     """Provide previous and next values while iterating a list.
@@ -22,7 +17,7 @@ def previous_and_next(some_iterable):
     prevs, items, nexts = tee(some_iterable, 3)
     prevs = chain([None], prevs)
     nexts = chain(islice(nexts, 1, None), [None])
-    return izip(prevs, items, nexts)
+    return zip(prevs, items, nexts)
 
 
 def clean_court_object(obj):

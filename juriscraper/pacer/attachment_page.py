@@ -1,4 +1,3 @@
-from __future__ import print_function
 import pprint
 import re
 import sys
@@ -35,7 +34,7 @@ class AttachmentPage(BaseReport):
         # the attachment page.
         document_number = document_number[:3] + "0" + document_number[4:]
         url = self.url + document_number
-        logger.info(u"Querying the attachment page endpoint at URL: %s", url)
+        logger.info("Querying the attachment page endpoint at URL: %s", url)
         self.response = self.session.get(url)
         self.parse()
 
@@ -138,7 +137,7 @@ class AttachmentPage(BaseReport):
         description_text_nodes = row.xpath("./td[%s]//text()" % index)
         if not description_text_nodes:
             # No text in the cell.
-            return u""
+            return ""
         else:
             description = description_text_nodes[0].strip()
             return force_unicode(description)
@@ -181,7 +180,7 @@ class AttachmentPage(BaseReport):
         for the item in that row. Return None if the ID cannot be found.
         """
         try:
-            url = row.xpath(u".//a")[0]
+            url = row.xpath(".//a")[0]
         except IndexError:
             # Item exists, but cannot download document. Perhaps it's sealed
             # or otherwise unavailable in PACER. This is carried over from the
@@ -198,7 +197,7 @@ class AttachmentPage(BaseReport):
         from the goDLS function.
         """
         try:
-            url = row.xpath(u".//a")[0]
+            url = row.xpath(".//a")[0]
         except IndexError:
             # No link in the row. Maybe its sealed.
             pass
