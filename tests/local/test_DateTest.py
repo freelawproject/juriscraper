@@ -45,7 +45,7 @@ class DateTest(unittest.TestCase):
             "12/01/2806": "12/01/2806",  # Should not change
             "12/01/2886": "12/01/2886",  # Should not change
         }
-        for before, after in list(expectations.items()):
+        for before, after in expectations.items():
             fixed_date = fix_future_year_typo(convert_date_string(before))
             self.assertEqual(fixed_date, convert_date_string(after))
 

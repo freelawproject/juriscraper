@@ -757,11 +757,11 @@ class CaseNameTweaker(object):
         # Make a list of cities with big populations.
         cities = [
             v["name"]
-            for v in list(geonames.get_cities().values())
+            for v in geonames.get_cities().values()
             if (v["countrycode"] == "US" and v["population"] > 150000)
         ]
         counties = [v["name"] for v in geonames.get_us_counties()]
-        states = [v["name"] for v in list(geonames.get_us_states().values())]
+        states = [v["name"] for v in geonames.get_us_states().values()]
         return cities + counties + states
 
     def make_case_name_short(self, s):

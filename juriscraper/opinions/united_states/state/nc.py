@@ -105,7 +105,7 @@ class Site(OpinionSite):
 
             elif precedential_status == "Unpublished":
                 for span in row_el.xpath("./td/span"):
-                    if "onclick" not in list(span.attrib.keys()):
+                    if "onclick" not in span.attrib:
                         continue
                     download_url = re.search(
                         'viewopinion\("(.*)"',

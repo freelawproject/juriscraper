@@ -135,7 +135,7 @@ class ScraperSpotTest(unittest.TestCase):
                 % site_id
             )
         site = mass.Site() if site_id == "mass" else massappct.Site()
-        for raw_string, parsed in list(strings.items()):
+        for raw_string, parsed in strings.items():
             # Set year on site scraper
             site.year = int(raw_string.split(" ")[-1].rstrip(")"))
             site.set_local_variables()
@@ -235,7 +235,7 @@ class ScraperSpotTest(unittest.TestCase):
         }
 
         scraper = colo.Site()
-        for raw_string, data in list(tests.items()):
+        for raw_string, data in tests.items():
             for field in ["docket", "name"]:
                 attribute = "_extract_%s_from_text" % field
                 result = getattr(scraper, attribute)(raw_string)

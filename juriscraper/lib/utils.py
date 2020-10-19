@@ -44,7 +44,7 @@ def clean_court_object(obj):
         return l
     elif isinstance(obj, dict):
         d = {}
-        for k, v in list(obj.items()):
+        for k, v in obj.items():
             d[k] = clean_court_object(v)
         return d
     elif isinstance(obj, string_types):
