@@ -38,26 +38,6 @@ class TestNetwork(install):
         runner.run(tests)
 
 
-class VerifyVersion(install):
-    """Custom command to verify that the git tag matches our version"""
-
-    description = "verify that the git tag matches our version"
-
-    def run(self):
-        tag = os.getenv("CIRCLE_TAG")
-
-        if tag is None:
-            sys.exit(
-                "The 'verify' option is only available in tagged CircleCI container"
-            )
-
-        if tag != VERSION:
-            message = (
-                "Git tag: {0} does not match the version of this app: {1}"
-            )
-            sys.exit(message.format(tag, VERSION))
-
-
 setup(
     name="juriscraper",
     description="An API to scrape American court websites for metadata.",

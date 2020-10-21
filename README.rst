@@ -310,7 +310,7 @@ Version History
 
 **Current**
 
-- 2.0.0 - Adds support for Python 3.8 and supports Python 3, exclusively.  Begins testing to Github workflows.
+- 2.0.* - Adds support for Python 3.8 and supports Python 3, exclusively.  Begins testing to Github workflows and remove CircleCI.
 
 **Future Goals**
 
@@ -320,7 +320,6 @@ Version History
 -  Support opinions from for all federal district courts with non-PACER opinion listings
 -  For every court above where a backscraper is possible, it is implemented.
 -  Support video, additional oral argument audio, and transcripts everywhere available
--  Remove CircleCI testing.
 
 Deployment
 ==========
