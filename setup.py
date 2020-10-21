@@ -72,7 +72,6 @@ setup(
     include_package_data=True,
     test_suite="tests.test_local",
     cmdclass={
-        "verify": VerifyVersion,
         "testnetwork": TestNetwork,
     },
 )
