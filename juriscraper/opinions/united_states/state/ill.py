@@ -13,7 +13,7 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "http://www.state.il.us/court/Opinions/recent_supreme.asp"
+        self.url = "http://www.illinoiscourts.gov/Opinions/recent_supreme.asp"
         # Sometimes court forgets pdf link in 5th cell.
         # So, only process rows with a link in 5th cell.
         limiter = 'contains(./td[5]//a[1]/@href, "pdf")'
