@@ -1,3 +1,13 @@
++---------------+---------------------+-------------------+
+| |Lint Badge|  | |Test Badge|        |  |Version Badge|  |
++---------------+---------------------+-------------------+
+
+
+.. |Lint Badge| image:: https://github.com/freelawproject/juriscraper/workflows/Lint/badge.svg
+.. |Test Badge| image:: https://github.com/freelawproject/juriscraper/workflows/Tests/badge.svg
+.. |Version Badge| image:: https://badge.fury.io/py/juriscraper.svg
+
+
 What is This?
 =============
 
@@ -352,3 +362,8 @@ License
 =======
 
 Juriscraper is licensed under the permissive BSD license.
+
+|forthebadge made-with-python|
+
+.. |forthebadge made-with-python| image:: http://ForTheBadge.com/images/badges/made-with-python.svg
+    :target: https://www.python.org/
