@@ -54,7 +54,7 @@ def get_html5_parsed_text(text):
     :return: an lxml.HtmlElement object
     """
 
-    text = __filter_printable(text)
+    # text = __filter_printable(text)
     parsed = html5parser.document_fromstring(text.encode("utf-8"))
     return fromstring(tostring(parsed, encoding="unicode"))
 
