@@ -53,6 +53,8 @@ def get_html5_parsed_text(text):
     :param text: The html of the document
     :return: an lxml.HtmlElement object
     """
+
+    text = __filter_printable(text)
     parsed = html5parser.document_fromstring(text.encode("utf-8"))
     return fromstring(tostring(parsed, encoding="unicode"))
 
@@ -271,3 +273,7 @@ def fix_links_in_lxml_tree(link, keep_anchors=False):
         return url
     else:
         return url.split("#")[0]
+
+
+def __filter_printable(text):
+    return re.sub(r"[\x00-\x1F\x7F]", "", text)
