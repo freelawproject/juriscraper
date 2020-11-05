@@ -1,10 +1,14 @@
+import os
 import getpass
 import logging.handlers
 import traceback
 
 import sys
 
-LOG_FILENAME = "/var/log/juriscraper/debug.log"
+
+LOG_FILENAME = os.environ.get(
+    "JURISCRAPER_LOG", "/var/log/juriscraper/debug.log"
+)
 
 
 def errprint(*args, **kwargs):

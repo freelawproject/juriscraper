@@ -46,7 +46,7 @@ Some of the design goals for this project are:
 Installation & Dependencies
 ===========================
 
-First step: Install Python 3.8.x, then:
+First step: Install Python 3.7+.x, then:
 
 ::
 
@@ -68,8 +68,9 @@ First step: Install Python 3.8.x, then:
     # Finally, install the code.
     pip install juriscraper
 
-    # create a directory for logs (this can be skipped, and no logs will be created)
-    sudo mkdir -p /var/log/juriscraper
+    # set an environment variable for where you want to stash your logs
+    # (this can be skipped, and `/var/log/juriscraper/debug.log` will be used as the default if it exists on the filesystem)
+    export JURISCRAPER_LOG=/path/to/your/log.txt
 
 
 Joining the Project as a Developer
