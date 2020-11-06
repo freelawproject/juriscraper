@@ -371,10 +371,11 @@ Version History
 - 1.26.* - Adds support for the Los Angeles Superior Court Media Access Portal (LASC MAP)
 - 1.27.* - Add merging of multi-event RSS entries
 - 1.28.* - Changes the API for the InternetArchive parser so that it aligns with the rest of the parsers. Its constructor now requires a court_id value.
+- 2.0.* - Adds support for Python 3.8 and supports Python 3, exclusively.  Begins testing to Github workflows and remove CircleCI.
 
 **Current**
 
-- 2.0.* - Adds support for Python 3.8 and supports Python 3, exclusively.  Begins testing to Github workflows and remove CircleCI.
+- 2.1.* - Removes support for deprecated phantomjs location; it had been deprecated for two years.
 
 **Future Goals**
 
