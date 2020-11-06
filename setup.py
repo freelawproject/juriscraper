@@ -1,12 +1,11 @@
 import codecs
 import os
-import sys
 import unittest
 
 from setuptools import setup, find_packages
 from setuptools.command.install import install
 
-VERSION = "2.0.4"
+VERSION = "2.0.5"
 AUTHOR = "Free Law Project"
 EMAIL = "info@free.law"
 HERE = os.path.abspath(os.path.dirname(__file__))
