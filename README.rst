@@ -48,29 +48,82 @@ Installation & Dependencies
 
 First step: Install Python 3.7+.x, then:
 
+Install the dependencies
+------------------------
+
+On Ubuntu/Debian Linux::
+
+    sudo apt-get install libxml2-dev libxslt-dev libyaml-dev
+
+On macOS with Homebrew <https://brew.sh>::
+
+    brew install libyaml
+
+
+Then install the code
+---------------------
+
 ::
 
-    # -- Install the dependencies
-    # On Ubuntu/Debian Linux:
-        sudo apt-get install libxml2-dev libxslt-dev libyaml-dev
-    # On macOS with Homebrew <https://brew.sh>:
-        brew install libyaml
-
-    # -- Install PhantomJS
-    # On Ubuntu/Debian Linux
-        wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
-        tar -x -f phantomjs-2.1.1-linux-x86_64.tar.bz2
-        sudo mv phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin
-        rm -r phantomjs-2.1.1*  # Cleanup
-    # On macOS with Homebrew:
-        brew install phantomjs
-
-    # Finally, install the code.
     pip install juriscraper
 
-    # set an environment variable for where you want to stash your logs
-    # (this can be skipped, and `/var/log/juriscraper/debug.log` will be used as the default if it exists on the filesystem)
+You can set an environment variable for where you want to stash your logs (this
+can be skipped, and `/var/log/juriscraper/debug.log` will be used as the
+default if it exists on the filesystem)::
+
     export JURISCRAPER_LOG=/path/to/your/log.txt
+
+Finally, do your WebDriver
+--------------------------
+Some websites are too difficult to crawl without some sort of automated
+WebDriver. For these, Juriscraper either uses a locally-installed copy of
+phantomJS or can be configured to connect to a remote webdriver. If you prefer
+the local installation, you can install phantomJS with::
+
+    # On Ubuntu/Debian Linux
+    wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+    tar -x -f phantomjs-2.1.1-linux-x86_64.tar.bz2
+    sudo mv phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin
+    rm -r phantomjs-2.1.1*  # Cleanup
+
+    # On macOS with Homebrew:
+    brew install phantomjs
+
+If you prefer to use a remote webdriver, like `Selenium's docker image <https://hub.docker.com/r/selenium/standalone-chrome-debug>`__, you can
+configure it with the following variables:
+
+``WEBDRIVER_CONN``: Use this to set the connection string to your remote
+webdriver. By default, this is ``local``, meaning it will look for a local
+installation of phantomJS. Instead, you can set this to something like,
+``'http://selenium:4444/wd/hub'``, which will switch it to using a remote
+driver and connect it to that location.
+
+``SELENIUM_VISIBLE``: Set this to any value to disable headless mode in your
+selenium driver, if it supports it. Otherwise, it defaults to headless.
+
+For example, if you want to watch a headless browser run, you can do so by
+starting selenium with::
+
+    docker run \
+        -p 4444 \
+        -p 5900 \
+        -v /dev/shm:/dev/shm \
+        -e JAVA_OPTS=-Dwebdriver.chrome.whitelistedIps= \
+        selenium/standalone-chrome-debug
+
+That'll launch it on your local machine with two open ports. 4444 is the
+default on the image for accessing the webdriver. 5900 can be used to connect
+via a VNC viewer, and can be used to watch progress if the ``SELENIUM_VISIBLE``
+variable is set.
+
+Once you have selenium running like that, you can do a test like::
+
+    WEBDRIVER_CONN='http://localhost:4444/wd/hub' \
+        SELENIUM_VISIBLE=yes \
+        python sample_caller.py -c juriscraper.opinions.united_states.state.kan_p
+
+Kansas's precedential scraper uses a webdriver. If you do this and watch
+selenium, you should see it in action.
 
 
 Joining the Project as a Developer
