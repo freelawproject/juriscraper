@@ -157,7 +157,7 @@ class PossibleCaseNumberApi(BaseReport):
                 ]
                 case_index = get_closest_match_index(case_name, strs)
                 if case_index is None:
-                    logger.warn(
+                    logger.warning(
                         "Got %s candidates, but unable to find good "
                         "match to '%s'" % (len(nodes), case_name)
                     )

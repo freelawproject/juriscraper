@@ -215,7 +215,7 @@ class Site(OpinionSiteWebDriven):
                         "//text()[contains(., 'v.:')]/ancestor::div[@class='span2']/following-sibling::div/text()"
                     )[0]
                 except IndexError:
-                    logger.warn(
+                    logger.warning(
                         "No title or defendant found for {}".format(url)
                     )
 

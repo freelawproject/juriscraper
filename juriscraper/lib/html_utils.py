@@ -22,7 +22,7 @@ if sys.maxunicode == 65535:
     from .log_tools import make_default_logger
 
     logger = make_default_logger()
-    logger.warn(
+    logger.warning(
         "You are using a narrow build of Python, which is not "
         "completely supported. See issue #188 for details."
     )

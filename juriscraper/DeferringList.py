@@ -15,7 +15,7 @@ class DeferringList(object):
     """
 
     def __init__(self, *args, **kwargs):
-        logger.warn(
+        logger.warning(
             "Using DeferringList object which cannot be sorted until "
             "fetched. Note that in usual processing, the fetching "
             "happens before the sorting, so this is OK."

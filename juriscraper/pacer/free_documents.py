@@ -319,7 +319,7 @@ class FreeOpinionRow(object):
             try:
                 return cell.xpath(".//b")[0].text_content()
             except IndexError:
-                logger.warn(
+                logger.warning(
                     "Unable to get case name for %s in %s.",
                     self.docket_number,
                     self.court_id,

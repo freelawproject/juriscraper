@@ -66,6 +66,10 @@ class AbstractSite(object):
         self._req_attrs = []
         self._all_attrs = []
 
+    def __del__(self):
+        if self.request["session"]:
+            self.request["session"].close()
+
     def __str__(self):
         out = []
         for attr, val in self.__dict__.items():

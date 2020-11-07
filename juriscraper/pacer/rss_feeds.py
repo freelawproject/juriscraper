@@ -136,6 +136,10 @@ class PacerRssFeed(DocketReport):
         else:
             self.is_bankruptcy = False
 
+    def __del__(self):
+        if self.session:
+            self.session.close()
+
     @property
     def url(self):
         if self.court_id == "nyed":

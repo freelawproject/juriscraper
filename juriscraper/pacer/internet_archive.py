@@ -38,6 +38,10 @@ class InternetArchive(BaseDocketReport):
         self.parser = etree.XMLParser(recover=True)
         self.is_valid = True
 
+    def __del__(self):
+        if self.session:
+            self.session.close()
+
     def download_pdf(self, pacer_case_id, document_number, attachment_number):
         """Download a PDF from the Internet Archive"""
         timeout = (60, 300)

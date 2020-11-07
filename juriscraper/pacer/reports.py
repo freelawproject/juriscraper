@@ -170,7 +170,7 @@ class BaseReport(object):
             )
             return None
         if "You do not have permission to view this document." in r.text:
-            logger.warn(
+            logger.warning(
                 "Permission denied getting document %s in case %s. "
                 "It's probably sealed.",
                 pacer_case_id,
