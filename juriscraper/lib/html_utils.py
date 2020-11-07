@@ -6,7 +6,7 @@ import sys
 import lxml
 from lxml import etree, html
 from lxml.etree import XMLSyntaxError
-from lxml.html import fromstring, html5parser, tostring
+from lxml.html import fromstring, html5parser, tostring, HtmlElement
 from lxml.html.clean import Cleaner
 from six import text_type
 from six.moves.html_parser import HTMLParser
@@ -57,14 +57,16 @@ def get_html5_parsed_text(text):
     return fromstring(tostring(parsed, encoding="unicode"))
 
 
-def get_table_column_text(html, cell_num, path_base=False):
-    path_cell = "//table//tr/td[%d]" % cell_num
+def get_table_column_text(html: HtmlElement, cell_num: int, path_base: bool = False, table_id: str = "") -> list:
+    table = "table[@id='%s']" % table_id if table_id else "table"
+    path_cell = "//%s//tr/td[%d]" % (table, cell_num)
     path = path_base + path_cell if path_base else path_cell
     return [cell.text_content().strip() for cell in html.xpath(path)]
 
 
-def get_table_column_links(html, cell_num, path_base=False):
-    path_cell = "//table//tr/td[%d]//a/@href" % cell_num
+def get_table_column_links(html: HtmlElement, cell_num: int, path_base: bool = False, table_id: str = "") -> list:
+    table = "table[@id='%s']" % table_id if table_id else "table"
+    path_cell = "//%s//tr/td[%d]//a/@href" % (table, cell_num)
     path = path_base + path_cell if path_base else path_cell
     return html.xpath(path)
 
