@@ -326,65 +326,15 @@ Or, to run and drop to the Python debugger if it fails, but you must install `no
   nosetests -v --pdb tests/local/test_DateTest.py:DateTest.test_various_date_extractions
 
 
-Version History
-===============
-
-**Past**
-
--  0.1 - Supports opinions from all 13 Federal Circuit courts and the
-   U.S. Supreme Court
--  0.2 - Supports opinions from all federal courts of special
-   jurisdiction (Veterans, Tax, etc.)
--  0.8 - Supports oral arguments for all possible Federal Circuit
-   courts.
--  0.9 - Supports all state courts of last resort (typically the
-   "Supreme" court)
--  1.0 - Support opinions from for all possible federal bankruptcy
-   appellate panels (9th and 10th Cir.)
--  1.1.* - Major code reorganization and first release on the Python Package Index (PyPi)
--  1.2.* - Continued improvements.
--  1.3.* - Adds support for scraping some parts of PACER.
--  1.4.* - Python 3 compatibility (this was later dropped due to dependencies).
--  1.5.* - Adds support for querying and parsing PACER dockets.
--  1.6.* - Adds automatic relogin code to PACER sessions, with reorganization of old login APIs.
-- 1.7.* - Adds support for hidden PACER APIs.
-- 1.8.* - Standardization of string fields in PACER objects so they return the empty string when they have no value instead of returning None sometimes and the empty string others. (This follows Django conventions.)
-- 1.9.* - Re-organization, simplification, and standardization of PACER classes.
-- 1.10.* - Better parsing for PACER attachment pages.
-- 1.11.* - Adds system for identifying invalid dockets in PACER.
-- 1.12.* - Adds new parsers for PACER's show_case_doc URLs
-- 1.13.* - Fixes issues with Python build compatibility
-- 1.14.* - Adds new parser for PACER's docket history report
-- 1.15.* - Adds date termination parsing to parties on PACER dockets.
-- 1.16.* - Adds PACER RSS feed parsers.
-- 1.17.* - Adds support for criminal data in PACER
-- 1.18.* - Adds support for appellate docket parsing!
-- 1.19.* - Adds support for NextGen PACER logins, but drops support for the PACER training website. The training website now uses a different login flow than the rest of PACER.
-- 1.20.* - Tweaks the API of the query method in the FreeOpinionReport object
-  to consistently return None instead of sometimes returning []. Version bumped
-  because of breaking API changes.
-- 1.21.* - Adds support for the case report, which is the term we use to describe the page you see when you press the "Query" button in a district court PACER website. This is the page at the iQuery.pl URL.
-- 1.22.* - Adds support for de_seqno values parsed from PACER RSS, dockets, docket history reports, and attachment pages.
-- 1.23.* - Adds support for the advacned case report when it returns search results instead of a single item.
-- 1.24.* - Adds support for bankruptcy claims register parsing and querying
-- 1.25.* - Major refactor of tests to split them into network and local tests. Should make CI more consistent.
-- 1.26.* - Adds support for the Los Angeles Superior Court Media Access Portal (LASC MAP)
-- 1.27.* - Add merging of multi-event RSS entries
-- 1.28.* - Changes the API for the InternetArchive parser so that it aligns with the rest of the parsers. Its constructor now requires a court_id value.
-- 2.0.* - Adds support for Python 3.8 and supports Python 3, exclusively.  Begins testing to Github workflows and remove CircleCI.
-
-**Current**
-
-- 2.1.* - Removes support for deprecated phantomjs location; it had been deprecated for two years.
-
-**Future Goals**
-
+Future Goals
+============
 -  Support for additional PACER pages and utilities
 -  Support opinions from for all intermediate appellate state courts
 -  Support opinions from for all courts of U.S. territories (Guam, American Samoa, etc.)
 -  Support opinions from for all federal district courts with non-PACER opinion listings
 -  For every court above where a backscraper is possible, it is implemented.
 -  Support video, additional oral argument audio, and transcripts everywhere available
+
 
 Deployment
 ==========
