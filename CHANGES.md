@@ -12,10 +12,13 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
-- 2.1.* - Removes support for deprecated phantomjs location; it had been deprecated for two years.
+- 2.2.0, 2020-11-08 - Remove `_get_adapter_instance` method. It is unused, was
+  a protected method, and causes many deprecation warnings in py3. 
  
+
 ## Past
 
+- 2.1.* - Removes support for deprecated phantomjs location; it had been deprecated for two years.
 - 2.0.* - Adds support for Python 3.8 and supports Python 3, exclusively.  Begins testing to Github workflows and remove CircleCI.
 - 1.28.* - Changes the API for the InternetArchive parser so that it aligns with the rest of the parsers. Its constructor now requires a court_id value.
 - 1.27.* - Add merging of multi-event RSS entries

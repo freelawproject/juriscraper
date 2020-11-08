@@ -293,15 +293,6 @@ class AbstractSite(object):
         """
         self.hash = hashlib.sha1(str(self.case_names).encode()).hexdigest()
 
-    def _get_adapter_instance(self):
-        """Hook for returning a custom HTTPAdapter
-
-        This function allows subclasses to do things like explicitly set
-        specific SSL configurations when being called. Certain courts don't work
-        unless you specify older versions of SSL.
-        """
-        return HTTPAdapter()
-
     def _make_html_tree(self, text):
         """Hook for custom HTML parsers
 
@@ -350,7 +341,6 @@ class AbstractSite(object):
             self.request["verify"] = parameters["verify"]
             del parameters["verify"]
         self.request["parameters"] = parameters
-        self.request["session"].mount("https://", self._get_adapter_instance())
 
     def _request_url_get(self, url):
         """Execute GET request and assign appropriate request dictionary
