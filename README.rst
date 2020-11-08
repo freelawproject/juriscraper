@@ -338,8 +338,10 @@ Future Goals
 
 Deployment
 ==========
-
-Deployment to PyPi should happen automatically when a tagged version is pushed to master in the format v*.*.*
+Deployment to PyPi should happen automatically when a tagged version is pushed
+to master in the format v*.*.*. If you do not have push permission on master,
+this will also work for merged, tagged pull requests. Simply update setup.py,
+tag your commit with the correct tag (v.*.*.*), and do a PR with that.
 
 If you wish to create a new version manually, the process is:
 
