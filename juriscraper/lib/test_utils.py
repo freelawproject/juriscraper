@@ -8,7 +8,7 @@ from requests.models import Request, Response
 
 from .exceptions import SlownessException
 
-WARN_SLOW_SRAPERS = "TRAVIS" in os.environ
+WARN_SLOW_SCRAPERS = "CI" in os.environ
 
 
 class SlownessWarning(UserWarning):
@@ -61,7 +61,7 @@ class MockRequest(Request):
 def warn_or_crash_slow_parser(duration, warn_duration=1, max_duration=15):
     msg = ""
     if duration > max_duration:
-        if sys.gettrace() is None and not WARN_SLOW_SRAPERS:
+        if sys.gettrace() is None and not WARN_SLOW_SCRAPERS:
             # Only do this if we're not debugging. Debuggers make things slower
             # and breakpoints make things stop.
             raise SlownessException(
@@ -71,7 +71,7 @@ def warn_or_crash_slow_parser(duration, warn_duration=1, max_duration=15):
                     duration=duration, max_duration=max_duration
                 )
             )
-        elif WARN_SLOW_SRAPERS:
+        elif WARN_SLOW_SCRAPERS:
             msg = " - WARNING: SLOW SCRAPER"
             wmsg = "WARNING: VERY SLOW SCRAPER (potential Error)"
             warnings.warn(wmsg, TooSlowWarning)
