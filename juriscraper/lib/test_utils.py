@@ -9,7 +9,6 @@ from requests.models import Request, Response
 from .exceptions import SlownessException
 
 WARN_SLOW_SRAPERS = "TRAVIS" in os.environ
-warnings.simplefilter("always")
 
 
 class SlownessWarning(UserWarning):
