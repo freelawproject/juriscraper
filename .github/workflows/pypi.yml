@@ -44,7 +44,7 @@ jobs:
 
           if tagged_sha1 in [x['id'] for x in context['event']['commits']]:
             if pattern.match(tag_name) is not None:
-              subprocess.call('echo ::set-env name=HIT::True', shell=True)
+              subprocess.call('echo ::set-output name=HIT::True', shell=True)
 
       - name: PyPI release!
         if: steps.vars.outputs.HIT == 'True'
