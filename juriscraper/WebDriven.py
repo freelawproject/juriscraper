@@ -24,7 +24,7 @@ class WebDriven:
         self.webdriver = False  # type: webdriver
 
     def __del__(self):
-        self.close_webdriver_session
+        self.close_webdriver_session()
 
     def action_chain_click(self, element: WebElement):
         """Try this when you are getting an error like:
