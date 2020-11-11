@@ -51,13 +51,6 @@ First step: Install Python 3.7+.x, then:
 Install the dependencies
 ------------------------
 
-Download Selenium FireFox Geckodriver::
-
-    # choose OS compatible package from:
-    #   https://github.com/mozilla/geckodriver/releases/tag/v0.28.0
-    # un-tar/zip your download
-    sudo mv geckodriver /usr/local/bin
-
 On Ubuntu/Debian Linux::
 
     sudo apt-get install libxml2-dev libxslt-dev libyaml-dev
@@ -88,7 +81,7 @@ geckodriver or can be configured to connect to a remote webdriver. If you prefer
 the local installation, you can download Selenium FireFox Geckodriver::
 
     # choose OS compatible package from:
-    #   https://github.com/mozilla/geckodriver/releases/tag/v0.28.0
+    #   https://github.com/mozilla/geckodriver/releases/tag/v0.26.0
     # un-tar/zip your download
     sudo mv geckodriver /usr/local/bin
 
