@@ -51,6 +51,13 @@ First step: Install Python 3.7+.x, then:
 Install the dependencies
 ------------------------
 
+Download Selenium FireFox Geckodriver::
+
+    # choose OS compatible package from:
+    #   https://github.com/mozilla/geckodriver/releases/tag/v0.28.0
+    # un-tar/zip your download
+    sudo mv geckodriver /usr/local/bin
+
 On Ubuntu/Debian Linux::
 
     sudo apt-get install libxml2-dev libxslt-dev libyaml-dev
@@ -77,24 +84,20 @@ Finally, do your WebDriver
 --------------------------
 Some websites are too difficult to crawl without some sort of automated
 WebDriver. For these, Juriscraper either uses a locally-installed copy of
-phantomJS or can be configured to connect to a remote webdriver. If you prefer
-the local installation, you can install phantomJS with::
+geckodriver or can be configured to connect to a remote webdriver. If you prefer
+the local installation, you can download Selenium FireFox Geckodriver::
 
-    # On Ubuntu/Debian Linux
-    wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
-    tar -x -f phantomjs-2.1.1-linux-x86_64.tar.bz2
-    sudo mv phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin
-    rm -r phantomjs-2.1.1*  # Cleanup
-
-    # On macOS with Homebrew:
-    brew install phantomjs
+    # choose OS compatible package from:
+    #   https://github.com/mozilla/geckodriver/releases/tag/v0.28.0
+    # un-tar/zip your download
+    sudo mv geckodriver /usr/local/bin
 
 If you prefer to use a remote webdriver, like `Selenium's docker image <https://hub.docker.com/r/selenium/standalone-chrome-debug>`__, you can
 configure it with the following variables:
 
 ``WEBDRIVER_CONN``: Use this to set the connection string to your remote
 webdriver. By default, this is ``local``, meaning it will look for a local
-installation of phantomJS. Instead, you can set this to something like,
+installation of geckodriver. Instead, you can set this to something like,
 ``'http://selenium:4444/wd/hub'``, which will switch it to using a remote
 driver and connect it to that location.
 
@@ -184,7 +187,7 @@ Getting Set Up as a Developer
 =============================
 
 To get set up as a developer of Juriscraper, you'll want to install the code
-from git. To do that, install the dependencies and phantomjs as described above.
+from git. To do that, install the dependencies and geckodriver as described above.
 Instead of installing Juriscraper via pip, do the following:
 
 ::

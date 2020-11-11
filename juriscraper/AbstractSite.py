@@ -5,7 +5,6 @@ from datetime import date, datetime
 import certifi
 import requests
 import six
-from requests.adapters import HTTPAdapter
 
 from juriscraper.lib.date_utils import fix_future_year_typo, json_date_handler
 from juriscraper.lib.exceptions import InsanityException
@@ -67,8 +66,7 @@ class AbstractSite(object):
         self._all_attrs = []
 
     def __del__(self):
-        if self.request["session"]:
-            self.request["session"].close()
+        self.close_session()
 
     def __str__(self):
         out = []
@@ -86,6 +84,10 @@ class AbstractSite(object):
     def __len__(self):
         return len(self.case_names)
 
+    def close_session(self):
+        if self.request["session"]:
+            self.request["session"].close()
+
     def _make_item(self, i):
         """Using i, convert a single item into a dict. This is effectively a
         different view of the data.
@@ -101,7 +103,7 @@ class AbstractSite(object):
         self.method = "LOCAL"
 
     def dump_html(self, element):
-        """Use this dor debuging purposes"""
+        """Use this for debugging purposes"""
         print(get_html_from_element(element))
 
     def disable_certificate_verification(self):

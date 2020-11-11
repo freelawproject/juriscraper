@@ -13,7 +13,7 @@ class Site(OpinionSiteLinearWebDriven):
         self.pages = []
         self.pages_to_process = 5
         self.status = "Published"
-        self.url = "https://www.kscourts.org/Cases-Opinions/Opinions"
+        self.url = "https://www.kscourts.org/Cases-Opinions/Opinions.aspx"
 
     def _download(self, request_dict={}):
         if self.test_mode_enabled():
@@ -38,19 +38,35 @@ class Site(OpinionSiteLinearWebDriven):
                 )
 
     def click_through_filter_form(self):
-        # select the status
-        id_status = self.get_form_id("Published")
-        path_status = self.get_dropdown_path(id_status, self.status)
-        self.webdriver.find_element_by_xpath(path_status).click()
+        """Fill out and the submit the form
 
-        # select the court
+        There is some bug that is preventing the standard webdriver
+        functions from working on this website. The form elements,
+        despite appearing proper in a screen shot, are recognized
+        by the webdriver has have hugely negative X coordinates,
+        which prevents us from being able to click them. I've tried
+        an ungodly amount of solution to scroll to the element, or
+        move it, before clicking, but simply couldn't get it to work.
+        So instead, we are just executing jQuery scripts on the page
+        to unselect and select form options before submitting.
+        """
+
+        # build and execute jQuery to manipulate form
+        id_status = self.get_form_id("Published")
         id_court = self.get_form_id("Court")
-        path_court = self.get_dropdown_path(id_court, self.court)
-        self.webdriver.find_element_by_xpath(path_court).click()
+        jquery_remove = "$('#%s option').each(function(){$(this).removeAttr('selected');});"
+        jquery_select = "$('#%s option[value=\"%s\"]').attr('selected','selected');"
+        jquery = ";".join([
+            jquery_remove % id_status,
+            jquery_remove % id_court,
+            jquery_select % (id_status, self.status),
+            jquery_select % (id_court, self.court),
+        ])
+        self.webdriver.execute_script(jquery)
 
         # submit the form and wait to load
         id_submit = self.get_form_id("Filter", "btn")
-        self.webdriver.find_element_by_id(id_submit).click()
+        self.find_element_by_id(id_submit).click()
 
     def get_cell_link(self, row, index):
         """Return the first anchor href in cell [index] in row"""
@@ -75,7 +91,7 @@ class Site(OpinionSiteLinearWebDriven):
                 break
 
             logger.info("Adding search result page %d" % page_number)
-            pagination_link = self.webdriver.find_element_by_xpath(path)
+            pagination_link = self.find_element_by_xpath(path)
             pagination_link.click()
             page_current = self.get_page()
             self.pages.append(page_current)

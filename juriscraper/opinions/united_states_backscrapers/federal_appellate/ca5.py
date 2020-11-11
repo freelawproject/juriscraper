@@ -40,7 +40,7 @@ class Site(OpinionSiteWebDriven):
             self.initiate_webdriven_session()
             self.wait_for_id("ctl00_Body_C010_ctl00_ctl00_endDate_dateInput")
 
-            start_date = self.webdriver.find_element_by_id(
+            start_date = self.find_element_by_id(
                 "ctl00_Body_C010_ctl00_ctl00_startDate_dateInput"
             )
             start_date.send_keys(
@@ -49,12 +49,12 @@ class Site(OpinionSiteWebDriven):
                 )
             )
 
-            end_date = self.webdriver.find_element_by_id(
+            end_date = self.find_element_by_id(
                 "ctl00_Body_C010_ctl00_ctl00_endDate_dateInput"
             )
             end_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
 
-            submit = self.webdriver.find_element_by_id(
+            submit = self.find_element_by_id(
                 "Body_C010_ctl00_ctl00_btnSearch"
             )
             submit.click()
@@ -66,10 +66,10 @@ class Site(OpinionSiteWebDriven):
             self.status = 200
 
             try:
-                nr_of_pages = self.webdriver.find_element_by_xpath(
+                nr_of_pages = self.find_element_by_xpath(
                     '//div[contains(concat(" ", @class, " "), "rgInfoPart")]/strong[2]'
                 )
-                records_nr = self.webdriver.find_element_by_xpath(
+                records_nr = self.find_element_by_xpath(
                     '//div[contains(concat(" ", @class, " "), "rgInfoPart")]/strong[1]'
                 )
                 self.records_nr = int(records_nr.text)
@@ -77,7 +77,7 @@ class Site(OpinionSiteWebDriven):
             except NoSuchElementException:
                 try:
                     self.records_nr = len(
-                        self.webdriver.find_elements_by_xpath(
+                        self.find_elements_by_xpath(
                             "//tr[contains(concat('', @id, ''), 'ctl00_Body_C010_ctl00_ctl00_radGridOpinions_ctl00')]"
                         )
                     )
@@ -115,7 +115,7 @@ class Site(OpinionSiteWebDriven):
 
                 for i in range(nr_of_pages - 1):
                     logger.info("  Getting page %s" % (i + 2))
-                    next_page = self.webdriver.find_element_by_class_name(
+                    next_page = self.find_element_by_class_name(
                         "rgPageNext"
                     )
                     next_page.click()

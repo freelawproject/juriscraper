@@ -46,7 +46,7 @@ class Site(OpinionSiteWebDriven):
         self.initiate_webdriven_session()
 
         # Court drop down...
-        self.webdriver.find_element_by_xpath(
+        self.find_element_by_xpath(
             "//select[@id='MainContent_ddlCourt']"
             "/option[@value='{court}']".format(court=self.court_index)
         ).click()
@@ -62,13 +62,13 @@ class Site(OpinionSiteWebDriven):
                 id=yearDropDownId + "Min"
             ),  # current (2017)
         ]
-        self.webdriver.find_element_by_xpath(
+        self.find_element_by_xpath(
             " | ".join(yearDropdownPaths)
         ).click()
 
         # Hit submit
         submitPath = "//input[@id='MainContent_btnSubmit']"
-        self.webdriver.find_element_by_xpath(submitPath).click()
+        self.find_element_by_xpath(submitPath).click()
 
         # Selenium doesn't give us the actual code, we have to hope.
         self.status = 200
@@ -126,7 +126,4 @@ class Site(OpinionSiteWebDriven):
     @staticmethod
     def _return_judge(e):
         txt = e.xpath(".//text()")
-        if txt:
-            return txt[0]
-        else:
-            return ""
+        return txt[0] if txt else ""

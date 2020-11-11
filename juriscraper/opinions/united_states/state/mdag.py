@@ -37,37 +37,43 @@ class Site(OpinionSiteWebDriven):
         self.next_path = '//a[@title="Next"]'
 
     def _download(self, request_dict={}):
-        if self.test_mode_enabled():
-            return [super(Site, self)._download(request_dict)]
-        trees = self.get_dynamic_html_trees()
-        if not len(trees):
-            # No opinions for current year on page, SO no
-            # js to load.  Return regular page html and
-            # extract 0 cases because nothing there
+        if not self.test_mode_enabled():
+            trees = self.get_dynamic_html_trees()
+        if self.test_mode_enabled() or not len(trees):
+            # If not test more, there arent any opinions for
+            # current year on page, SO no js to load. Return
+            # regular page html and extract 0 cases because
+            # nothing there
             return [super(Site, self)._download(request_dict)]
         return trees
 
     def get_dynamic_html_trees(self):
-        # Initialize webdriver
         self.initiate_webdriven_session()
 
         # Find and activate the opinion drop-down for year
         try:
-            date_anchor = self.webdriver.find_element_by_xpath(
-                "%s/a" % self.parent_path
-            )
+            path = "%s/a" % self.parent_path
+            date_anchor = self.find_element_by_xpath(path)
         except NoSuchElementException:
             # Year has no opinions drop-down on page
             return []
+
+        # if subscription overlay dialog div is present,
+        # close it, we will not be subscribing :)
+        path_dialog = "//*[@title='Close subscription dialog']"
+        dialog = self.find_element_by_xpath(path_dialog)
+        if dialog:
+            dialog.click()
+
+        # click the appropriate date anchor
         date_anchor.click()
+
         trees = [self.get_tree_from_driver_dom()]
 
         # Handle pagination if more than 30 results for year
         while True:
             try:
-                next_anchor = self.webdriver.find_element_by_xpath(
-                    self.next_path
-                )
+                next_anchor = self.find_element_by_xpath(self.next_path)
             except NoSuchElementException:
                 # Less than 30 results
                 break
@@ -84,9 +90,8 @@ class Site(OpinionSiteWebDriven):
         # seem to work consistently with the site's
         # finicky responses.
         sleep(3)
-        source = self.webdriver.execute_script(
-            "return document.getElementsByTagName('html')[0].innerHTML"
-        )
+        script = "return document.getElementsByTagName('html')[0].innerHTML"
+        source = self.webdriver.execute_script(script)
         tree = html.fromstring(source)
         tree.make_links_absolute(self.domain)
         return tree

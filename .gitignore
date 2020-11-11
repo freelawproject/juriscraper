@@ -26,4 +26,7 @@ tests/fixtures/cassettes/
 report.html
 
 # ignore WebDriven debug screenshots
-screenshot.png
+screenshot*.png
+
+# selenium FireFox driver
+geckodriver.log
