@@ -54,9 +54,7 @@ class Site(OpinionSiteWebDriven):
             )
             end_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
 
-            submit = self.find_element_by_id(
-                "Body_C010_ctl00_ctl00_btnSearch"
-            )
+            submit = self.find_element_by_id("Body_C010_ctl00_ctl00_btnSearch")
             submit.click()
 
             self.wait_for_id(
@@ -115,9 +113,7 @@ class Site(OpinionSiteWebDriven):
 
                 for i in range(nr_of_pages - 1):
                     logger.info("  Getting page %s" % (i + 2))
-                    next_page = self.find_element_by_class_name(
-                        "rgPageNext"
-                    )
+                    next_page = self.find_element_by_class_name("rgPageNext")
                     next_page.click()
                     self.webdriver.implicitly_wait(5)
 

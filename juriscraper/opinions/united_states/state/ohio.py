@@ -62,9 +62,7 @@ class Site(OpinionSiteWebDriven):
                 id=yearDropDownId + "Min"
             ),  # current (2017)
         ]
-        self.find_element_by_xpath(
-            " | ".join(yearDropdownPaths)
-        ).click()
+        self.find_element_by_xpath(" | ".join(yearDropdownPaths)).click()
 
         # Hit submit
         submitPath = "//input[@id='MainContent_btnSubmit']"

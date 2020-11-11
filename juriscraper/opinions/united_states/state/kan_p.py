@@ -55,13 +55,17 @@ class Site(OpinionSiteLinearWebDriven):
         id_status = self.get_form_id("Published")
         id_court = self.get_form_id("Court")
         jquery_remove = "$('#%s option').each(function(){$(this).removeAttr('selected');});"
-        jquery_select = "$('#%s option[value=\"%s\"]').attr('selected','selected');"
-        jquery = ";".join([
-            jquery_remove % id_status,
-            jquery_remove % id_court,
-            jquery_select % (id_status, self.status),
-            jquery_select % (id_court, self.court),
-        ])
+        jquery_select = (
+            "$('#%s option[value=\"%s\"]').attr('selected','selected');"
+        )
+        jquery = ";".join(
+            [
+                jquery_remove % id_status,
+                jquery_remove % id_court,
+                jquery_select % (id_status, self.status),
+                jquery_select % (id_court, self.court),
+            ]
+        )
         self.webdriver.execute_script(jquery)
 
         # submit the form and wait to load

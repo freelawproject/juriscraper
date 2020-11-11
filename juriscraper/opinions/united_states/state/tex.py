@@ -143,7 +143,7 @@ class Site(OpinionSiteWebDriven):
                 )
             )
             self.status = 200
-            #self.take_screenshot()
+            # self.take_screenshot()
 
             nr_of_pages = self.find_element_by_xpath(
                 '//thead//*[contains(concat(" ", normalize-space(@class), " "), " rgInfoPart ")]/strong[2]'
