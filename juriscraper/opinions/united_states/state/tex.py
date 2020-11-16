@@ -90,7 +90,7 @@ class Site(OpinionSiteWebDriven):
                 # check it again.
                 pass
             else:
-                search_supreme_court = self.webdriver.find_element_by_xpath(
+                search_supreme_court = self.find_element_by_xpath(
                     "//*[@id='ctl00_ContentPlaceHolder1_chkListCourts_{court_nr}']".format(
                         court_nr=self.courts["sc"]
                     )
@@ -100,24 +100,24 @@ class Site(OpinionSiteWebDriven):
                         search_supreme_court
                     ).perform()
 
-                search_court_type = self.webdriver.find_element_by_id(
+                search_court_type = self.find_element_by_id(
                     "ctl00_ContentPlaceHolder1_chkListCourts_{court_nr}".format(
                         court_nr=self.courts[self.court_name]
                     )
                 )
                 ActionChains(self.webdriver).click(search_court_type).perform()
 
-            search_opinions = self.webdriver.find_element_by_id(
+            search_opinions = self.find_element_by_id(
                 "ctl00_ContentPlaceHolder1_chkListDocTypes_0"
             )
             search_opinions.click()
 
-            search_orders = self.webdriver.find_element_by_id(
+            search_orders = self.find_element_by_id(
                 "ctl00_ContentPlaceHolder1_chkListDocTypes_1"
             )
             search_orders.click()
 
-            start_date = self.webdriver.find_element_by_id(
+            start_date = self.find_element_by_id(
                 "ctl00_ContentPlaceHolder1_dtDocumentFrom_dateInput"
             )
             start_date.send_keys(
@@ -126,13 +126,13 @@ class Site(OpinionSiteWebDriven):
                 ).strftime("%m/%d/%Y")
             )
 
-            end_date = self.webdriver.find_element_by_id(
+            end_date = self.find_element_by_id(
                 "ctl00_ContentPlaceHolder1_dtDocumentTo_dateInput"
             )
             end_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
             # self.take_screenshot()
 
-            submit = self.webdriver.find_element_by_id(
+            submit = self.find_element_by_id(
                 "ctl00_ContentPlaceHolder1_btnSearchText"
             )
             submit.click()
@@ -145,10 +145,10 @@ class Site(OpinionSiteWebDriven):
             self.status = 200
             # self.take_screenshot()
 
-            nr_of_pages = self.webdriver.find_element_by_xpath(
+            nr_of_pages = self.find_element_by_xpath(
                 '//thead//*[contains(concat(" ", normalize-space(@class), " "), " rgInfoPart ")]/strong[2]'
             )
-            records_nr = self.webdriver.find_element_by_xpath(
+            records_nr = self.find_element_by_xpath(
                 '//thead//*[contains(concat(" ", normalize-space(@class), " "), " rgInfoPart ")]/strong[1]'
             )
             html_pages = []
@@ -182,7 +182,7 @@ class Site(OpinionSiteWebDriven):
 
                     for i in range(int(nr_of_pages.text) - 1):
                         logger.info("  Getting page %s" % (i + 2))
-                        next_page = self.webdriver.find_element_by_class_name(
+                        next_page = self.find_element_by_class_name(
                             "rgPageNext"
                         )
                         next_page.click()
