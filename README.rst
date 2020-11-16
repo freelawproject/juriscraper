@@ -85,13 +85,13 @@ the local installation, you can download Selenium FireFox Geckodriver::
     # un-tar/zip your download
     sudo mv geckodriver /usr/local/bin
 
-If you prefer to use a remote webdriver, like `Selenium's docker image <https://hub.docker.com/r/selenium/standalone-chrome-debug>`__, you can
+If you prefer to use a remote webdriver, like `Selenium's docker image <https://hub.docker.com/r/selenium/standalone-firefox-debug>`__, you can
 configure it with the following variables:
 
 ``WEBDRIVER_CONN``: Use this to set the connection string to your remote
 webdriver. By default, this is ``local``, meaning it will look for a local
 installation of geckodriver. Instead, you can set this to something like,
-``'http://selenium:4444/wd/hub'``, which will switch it to using a remote
+``'http://YOUR_DOCKER_IP:4444/wd/hub'``, which will switch it to using a remote
 driver and connect it to that location.
 
 ``SELENIUM_VISIBLE``: Set this to any value to disable headless mode in your
@@ -105,7 +105,7 @@ starting selenium with::
         -p 5900 \
         -v /dev/shm:/dev/shm \
         -e JAVA_OPTS=-Dwebdriver.chrome.whitelistedIps= \
-        selenium/standalone-chrome-debug
+        selenium/standalone-firefox-debug
 
 That'll launch it on your local machine with two open ports. 4444 is the
 default on the image for accessing the webdriver. 5900 can be used to connect
