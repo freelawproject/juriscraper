@@ -110,8 +110,7 @@ class Site(OpinionSiteWebDriven):
         return statuses
 
     def _set_date_properties(self, today: str = None) -> None:
-        """Pass in artificial 'today' option for testing only.
-        """
+        """Pass in artificial 'today' option for testing only."""
         self.today = convert_date_string(today) if today else date.today()
         self.year = self.today.year
 
