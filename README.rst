@@ -101,10 +101,9 @@ For example, if you want to watch a headless browser run, you can do so by
 starting selenium with::
 
     docker run \
-        -p 4444 \
-        -p 5900 \
+        -p 4444:4444 \
+        -p 5900:5900 \
         -v /dev/shm:/dev/shm \
-        -e JAVA_OPTS=-Dwebdriver.chrome.whitelistedIps= \
         selenium/standalone-firefox-debug
 
 That'll launch it on your local machine with two open ports. 4444 is the

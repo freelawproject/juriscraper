@@ -12,6 +12,10 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+- 2.3.1, 2020-11-06 - Fix for connection to Selenium via Firefox
+
+## Past
+
 - 2.3.0, 2020-11-06 - Big selenium upgrade, removes support for phantomjs, and 
   moves exclusively to using Mozilla's `geckodriver`. `geckodriver` can be 
   accessed either locally or via a remote connection. See README for details on 
@@ -23,9 +27,6 @@ Releases are also tagged in git, if that's helpful.
     another tool. A tool that will be different in many ways, yet the same in 
     its inevitable abandonment and mortality. Long live PhantomJS: Born a 
     humble ghost; dying an immortal specter.
-
-## Past
-
 - 2.2.0, 2020-11-08 - Remove `_get_adapter_instance` method. It is unused, was
   a protected method, and causes many deprecation warnings in py3. 
 - 2.1.* - Removes support for deprecated phantomjs location; it had been deprecated for two years.

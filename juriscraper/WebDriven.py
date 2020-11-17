@@ -82,14 +82,7 @@ class WebDriven:
             # It's a connection string to a remote driver
             options = webdriver.ChromeOptions()
             if not os.environ.get("SELENIUM_VISIBLE", False):
-                options.add_argument("headless")
-            options.add_argument("silent")
-            options.add_experimental_option("w3c", False)
-
-            # Workaround for
-            # https://bugs.chromium.org/p/chromium/issues/detail?id=1033941
-            arg = "--disable-features=AvoidFlashBetweenNavigation,PaintHolding"
-            options.add_argument(arg)
+                options.add_argument("-headless")
 
             capabilities = options.to_capabilities()
             self.webdriver = webdriver.Remote(
