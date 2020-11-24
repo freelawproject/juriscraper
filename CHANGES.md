@@ -12,11 +12,12 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
-- 2.3.2, 2020-11-06 - Remove html_unescape helper method. Replace with calls 
-  directly to unescape. This fixes [#354](https://github.com/freelawproject/juriscraper/issues/354).
+- 2.3.3, 2020-11-24 - Fix remote selenium connection code
 
 ## Past
 
+- 2.3.2, 2020-11-06 - Remove html_unescape helper method. Replace with calls 
+  directly to unescape. This fixes [#354](https://github.com/freelawproject/juriscraper/issues/354).
 - 2.3.1, 2020-11-06 - Fix for connection to Selenium via Firefox
 - 2.3.0, 2020-11-06 - Big selenium upgrade, removes support for phantomjs, and 
   moves exclusively to using Mozilla's `geckodriver`. `geckodriver` can be 
