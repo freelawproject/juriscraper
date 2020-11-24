@@ -69,21 +69,17 @@ class WebDriven:
         if not self.url:
             raise Exception("self.url not set")
 
+        options = webdriver.FirefoxOptions()
+        if os.environ.get("SELENIUM_VISIBLE", False):
+            options.headless = False
+        else:
+            options.headless = True
+        options.accept_insecure_certs = True
         webdriver_conn = os.environ.get("WEBDRIVER_CONN", "local")
         if webdriver_conn == "local":
             # See README instruction for installing geckodriver
-            options = webdriver.FirefoxOptions()
-            # comment line below to see browser interaction window
-            options.headless = True
-            options.accept_insecure_certs = True
             self.webdriver = webdriver.Firefox(options=options)
-
         else:
-            # It's a connection string to a remote driver
-            options = webdriver.ChromeOptions()
-            if not os.environ.get("SELENIUM_VISIBLE", False):
-                options.add_argument("-headless")
-
             capabilities = options.to_capabilities()
             self.webdriver = webdriver.Remote(
                 webdriver_conn,
