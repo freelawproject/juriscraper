@@ -2,6 +2,7 @@
 # encoding: utf-8
 import re
 import sys
+from html import unescape
 
 import lxml
 from lxml import etree, html
@@ -168,11 +169,6 @@ def get_visible_text(html_content):
                                                                  parent::script)]"""
     )
     return " ".join(text)
-
-
-def html_unescape(s):
-    h = HTMLParser()
-    return h.unescape(s)
 
 
 def set_response_encoding(request):

@@ -17,7 +17,7 @@ class Site(OpinionSiteWebDriven):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "http://ujs.sd.gov/Supreme_Court/opinions.aspx"
+        self.url = "https://ujs.sd.gov/Supreme_Court/opinions.aspx"
         self.back_scrape_iterable = [
             (0, 2014),
             (1, 2014),
@@ -82,12 +82,12 @@ class Site(OpinionSiteWebDriven):
         path = "//*[@id='ContentPlaceHolder1_PageContent_OpinionYears']/option[@value={year}]".format(
             year=page_year[1]
         )
-        option = self.webdriver.find_element_by_xpath(path)
+        option = self.find_element_by_xpath(path)
         option.click()
 
         if page_year[0] != 0:
             # Not the first, page, go to the one desired.
-            links = self.webdriver.find_elements_by_xpath(
+            links = self.find_elements_by_xpath(
                 "//a[@href[contains(., 'Page')]]"
             )
             links[page_year[0] - 1].click()

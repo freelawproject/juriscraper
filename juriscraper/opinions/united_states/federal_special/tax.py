@@ -47,7 +47,7 @@ class Site(OpinionSiteWebDriven):
 
         # Set the start and end dates
         start_date_id = "ctl00_Content_dpDateSearch_dateInput"
-        start_date_input = self.webdriver.find_element_by_id(start_date_id)
+        start_date_input = self.find_element_by_id(start_date_id)
         start_date_input.send_keys(
             (self.case_date - timedelta(days=self.backwards_days)).strftime(
                 "%-m/%-d/%Y"
@@ -55,16 +55,16 @@ class Site(OpinionSiteWebDriven):
         )
 
         end_date_id = "ctl00_Content_dpDateSearchTo_dateInput"
-        end_date_input = self.webdriver.find_element_by_id(end_date_id)
+        end_date_input = self.find_element_by_id(end_date_id)
         end_date_input.send_keys(self.case_date.strftime("%-m/%-d/%Y"))
         # self.take_screenshot()
 
         # Check ordering by case date (this orders by case date, *ascending*)
         ordering_id = "Content_rdoCaseName_1"
-        self.webdriver.find_element_by_id(ordering_id).click()
+        self.find_element_by_id(ordering_id).click()
 
         # Submit
-        self.webdriver.find_element_by_id("Content_btnSearch").click()
+        self.find_element_by_id("Content_btnSearch").click()
 
         # Do not proceed until the results show up.
         self.wait_for_id("Content_ddlResultsPerPage")

@@ -12,12 +12,26 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
-- 2.2.0, 2020-11-08 - Remove `_get_adapter_instance` method. It is unused, was
-  a protected method, and causes many deprecation warnings in py3. 
- 
+- 2.3.3, 2020-11-24 - Fix remote selenium connection code
 
 ## Past
 
+- 2.3.2, 2020-11-06 - Remove html_unescape helper method. Replace with calls 
+  directly to unescape. This fixes [#354](https://github.com/freelawproject/juriscraper/issues/354).
+- 2.3.1, 2020-11-06 - Fix for connection to Selenium via Firefox
+- 2.3.0, 2020-11-06 - Big selenium upgrade, removes support for phantomjs, and 
+  moves exclusively to using Mozilla's `geckodriver`. `geckodriver` can be 
+  accessed either locally or via a remote connection. See README for details on 
+  how to set the correct environment variables for your system. 
+  
+    PhantomJS has not been supported for several years. Though it has served us 
+    well, the writing is on the wall that, like so many other once-useful 
+    technologies, it too had to be abandoned, only to be replaced by
+    another tool. A tool that will be different in many ways, yet the same in 
+    its inevitable abandonment and mortality. Long live PhantomJS: Born a 
+    humble ghost; dying an immortal specter.
+- 2.2.0, 2020-11-08 - Remove `_get_adapter_instance` method. It is unused, was
+  a protected method, and causes many deprecation warnings in py3. 
 - 2.1.* - Removes support for deprecated phantomjs location; it had been deprecated for two years.
 - 2.0.* - Adds support for Python 3.8 and supports Python 3, exclusively.  Begins testing to Github workflows and remove CircleCI.
 - 1.28.* - Changes the API for the InternetArchive parser so that it aligns with the rest of the parsers. Its constructor now requires a court_id value.

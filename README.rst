@@ -77,25 +77,21 @@ Finally, do your WebDriver
 --------------------------
 Some websites are too difficult to crawl without some sort of automated
 WebDriver. For these, Juriscraper either uses a locally-installed copy of
-phantomJS or can be configured to connect to a remote webdriver. If you prefer
-the local installation, you can install phantomJS with::
+geckodriver or can be configured to connect to a remote webdriver. If you prefer
+the local installation, you can download Selenium FireFox Geckodriver::
 
-    # On Ubuntu/Debian Linux
-    wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
-    tar -x -f phantomjs-2.1.1-linux-x86_64.tar.bz2
-    sudo mv phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin
-    rm -r phantomjs-2.1.1*  # Cleanup
+    # choose OS compatible package from:
+    #   https://github.com/mozilla/geckodriver/releases/tag/v0.26.0
+    # un-tar/zip your download
+    sudo mv geckodriver /usr/local/bin
 
-    # On macOS with Homebrew:
-    brew install phantomjs
-
-If you prefer to use a remote webdriver, like `Selenium's docker image <https://hub.docker.com/r/selenium/standalone-chrome-debug>`__, you can
+If you prefer to use a remote webdriver, like `Selenium's docker image <https://hub.docker.com/r/selenium/standalone-firefox-debug>`__, you can
 configure it with the following variables:
 
 ``WEBDRIVER_CONN``: Use this to set the connection string to your remote
 webdriver. By default, this is ``local``, meaning it will look for a local
-installation of phantomJS. Instead, you can set this to something like,
-``'http://selenium:4444/wd/hub'``, which will switch it to using a remote
+installation of geckodriver. Instead, you can set this to something like,
+``'http://YOUR_DOCKER_IP:4444/wd/hub'``, which will switch it to using a remote
 driver and connect it to that location.
 
 ``SELENIUM_VISIBLE``: Set this to any value to disable headless mode in your
@@ -105,11 +101,10 @@ For example, if you want to watch a headless browser run, you can do so by
 starting selenium with::
 
     docker run \
-        -p 4444 \
-        -p 5900 \
+        -p 4444:4444 \
+        -p 5900:5900 \
         -v /dev/shm:/dev/shm \
-        -e JAVA_OPTS=-Dwebdriver.chrome.whitelistedIps= \
-        selenium/standalone-chrome-debug
+        selenium/standalone-firefox-debug
 
 That'll launch it on your local machine with two open ports. 4444 is the
 default on the image for accessing the webdriver. 5900 can be used to connect
@@ -184,7 +179,7 @@ Getting Set Up as a Developer
 =============================
 
 To get set up as a developer of Juriscraper, you'll want to install the code
-from git. To do that, install the dependencies and phantomjs as described above.
+from git. To do that, install the dependencies and geckodriver as described above.
 Instead of installing Juriscraper via pip, do the following:
 
 ::

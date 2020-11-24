@@ -3,6 +3,7 @@ import os
 import pprint
 import re
 import sys
+from html import unescape
 
 import feedparser
 from dateutil import parser
@@ -14,7 +15,6 @@ from .utils import (
     get_pacer_doc_id_from_doc1_url,
     get_pacer_seq_no_from_doc1_url,
 )
-from ..lib.html_utils import html_unescape
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import clean_string, harmonize
 from ..lib.utils import clean_court_object
@@ -272,7 +272,7 @@ class PacerRssFeed(DocketReport):
                 self.document_number_regex, entry.summary
             )
             or None,
-            "short_description": html_unescape(
+            "short_description": unescape(
                 self._get_value(self.short_desc_regex, entry.summary)
             ),
         }
@@ -330,7 +330,7 @@ class PacerRssFeed(DocketReport):
             case_name = title_text.split(" ", 1)[1]
         except IndexError:
             return "Unknown Case Title"
-        case_name = html_unescape(case_name)
+        case_name = unescape(case_name)
         case_name = clean_string(harmonize(case_name))
         return case_name
 
