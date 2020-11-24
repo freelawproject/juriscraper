@@ -1,59 +1,14 @@
-# To explain this convoluted action.  We are trying to allow PR merges
-# into master & pushes directly into master with a version tag
-# (e.g. "v0.0.0") to automatically build and push to pypi.  This is more
-# complicated than one would immediately presume because PRs mergers
-# are technically pushes, tagging a commit and than PRing it removes the tag
-# from the context you can immediately pull up and changes after the tag
-# during a review, for example, would move the tag down the commit list.
-
-# What we do is this.  If a Push to master is tagged with our tag,
-# we validate the format and send to PyPI.
-
-# If a PR is closed and merged, we have to query the tags information and check
-# if the most recent tagged branch is inside all the commits in our current PR.
-# If the PR contains a properly formatted tag, we send to PyPI.  Additionally,
-# we check that this only happens on the default branch.
-
 name: PyPI
 on:
   push:
-    branches:
-      - master
-
+    tags:
+      - v*.*.*
 jobs:
-  run-pypi:
-    name: 'PyPI'
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check Tags
-        shell: python
-        id: vars
-        env:
-          CONTEXT: ${{ toJson(github) }}
-        run: |
-          import os, json, urllib, subprocess, re
-
-          subprocess.call('echo ::set-output name=HIT::False', shell=True)
-          context = json.loads(os.environ['CONTEXT'])
-          tag_url = context['event']['repository']['tags_url']
-          tags = json.loads(urllib.urlopen(tag_url).read())
-
-          tagged_sha1 = tags[0]['commit']['sha']
-          tag_name = tags[0]['name']
-          pattern = re.compile("^v\d{1,2}\.\d{1,2}\.\d{1,2}")
-
-          if tagged_sha1 in [x['id'] for x in context['event']['commits']]:
-            if pattern.match(tag_name) is not None:
-              subprocess.call('echo ::set-output name=HIT::True', shell=True)
-
-      - name: PyPI release!
-        if: steps.vars.outputs.HIT == 'True'
-        uses: casperdcl/deploy-pypi@v1
+      - uses: actions/checkout@v2
+      - uses: freelawproject/deploy-pypi@v1
         with:
           password: ${{ secrets.pypi_token }}
           build: true
-
-      - name: Not a PyPI release.
-        if: steps.vars.outputs.HIT == 'False'
-        run: |
-          echo "Not a PyPI release"
