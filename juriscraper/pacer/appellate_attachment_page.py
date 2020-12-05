@@ -3,6 +3,7 @@ from __future__ import print_function
 import pprint
 import re
 import sys
+from typing import Dict
 
 from lxml import html
 
@@ -62,12 +63,12 @@ class AppellateAttachmentPage(BaseReport):
         self.tree = strip_bad_html_tags_insecure(tree, remove_scripts=False)
 
     @property
-    def data(self):
+    def data(self) -> Dict:
         """Get data back from the query for the matching document entry.
 
         Appellate attachments is different than the district court.  We have
-        no document_id. Instead we can use the pacer_seq_no or the dls_id
-        to discern which attachment goes with which docket entry.
+        no document_id. Instead we can use the pacer_seq_no or the
+        main_document_id to discern which attachment goes with a docket entry.
 
         Additionally, the main document is not identifiable in attachments.
         It is presumed to be the document with the lowest pacer_doc_id.
@@ -89,6 +90,7 @@ class AppellateAttachmentPage(BaseReport):
         if self.is_valid is False:
             return {}
 
+        # We want the TR if the TR contains a td with an a tag.
         rows = self.tree.xpath("//tbody/tr/td/a/parent::td/parent::tr")
         if not rows:
             logger.info("No documents found on attachment page.")
