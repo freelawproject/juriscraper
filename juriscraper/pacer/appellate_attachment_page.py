@@ -186,7 +186,7 @@ class AppellateAttachmentPage(BaseReport):
 
         :returns str: The pacer_case_id value
         """
-        script_html = html.tostring(self.tree.xpath(".//script")[0])
+        script_html = html.tostring(self.tree.xpath(".//script")[0]).decode()
         m = re.search(r"[?&]caseid=(\d+)", script_html, flags=re.I)
         if m:
             return m.group(1)
@@ -196,7 +196,7 @@ class AppellateAttachmentPage(BaseReport):
 
         This value corresponds to the value in the docket TR
         """
-        script_html = html.tostring(self.tree.xpath(".//script")[0])
+        script_html = html.tostring(self.tree.xpath(".//script")[0]).decode()
         m = re.search(r"[?&]d=(\d+)&outputForm", script_html, flags=re.I)
         if m:
             return m.group(1)
