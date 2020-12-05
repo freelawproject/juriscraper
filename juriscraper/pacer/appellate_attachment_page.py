@@ -3,6 +3,7 @@ from __future__ import print_function
 import pprint
 import re
 import sys
+from typing import Dict
 
 from lxml import html
 
@@ -62,7 +63,7 @@ class AppellateAttachmentPage(BaseReport):
         self.tree = strip_bad_html_tags_insecure(tree, remove_scripts=False)
 
     @property
-    def data(self):
+    def data(self) -> Dict:
         """Get data back from the query for the matching document entry.
 
         Appellate attachments is different than the district court.  We have
@@ -129,7 +130,7 @@ class AppellateAttachmentPage(BaseReport):
         except IndexError:
             return None
 
-    def _get_attachment_number(self, row):
+    def _get_attachment_number(self, row) -> int:
         """ "Return the attachment number for an item.
 
         :param row: Table row as an lxml element
@@ -150,7 +151,7 @@ class AppellateAttachmentPage(BaseReport):
         """
         description_text_nodes = row.xpath(".//td")
         if not description_text_nodes:
-            return u""
+            return ""
         return force_unicode(description_text_nodes[2].text_content().strip())
 
     @staticmethod
@@ -169,7 +170,7 @@ class AppellateAttachmentPage(BaseReport):
         for the item in that row. Return None if the ID cannot be found.
         """
         try:
-            url = row.xpath(u".//a")[0]
+            url = row.xpath(".//a")[0]
         except IndexError:
             # Item exists, but cannot download document. Perhaps it's sealed
             # or otherwise unavailable in PACER. This is carried over from the
@@ -214,7 +215,7 @@ def _main():
     filepath = sys.argv[1]
     print("Parsing HTML file at {}".format(filepath))
     with open(filepath, "r") as f:
-        text = f.read().decode("utf-8")
+        text = f.read()
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)
 
