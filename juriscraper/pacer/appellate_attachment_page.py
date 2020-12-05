@@ -129,7 +129,7 @@ class AppellateAttachmentPage(BaseReport):
             return None
 
     def _get_attachment_number(self, row):
-        """"Return the attachment number for an item.
+        """ "Return the attachment number for an item.
 
         :param row: Table row as an lxml element
         :type: lxml HTML element
