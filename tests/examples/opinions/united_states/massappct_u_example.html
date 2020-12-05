@@ -1,0 +1,803 @@
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" style=""><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Search Dispositions</title>
+    <link href="/Content/css?v=wL3ZbvhrUiyitTT0vqtYZYbYMKufZY7bBzvp21ufnpQ1" rel="stylesheet">
+
+    <script src="/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+</head>
+        <body>
+
+
+
+<div id="headerPlaceholder" class="container-fluid" style="background-color: #F2F2F2;">
+
+        <div class="row" style="position:relative;">
+        <img src="/Images/header.png" alt="MROD" class="img-responsive">
+        <div class="col-md-offset-1 col-md-4 hidden-xs hidden-sm" style="position:absolute; top:20%; color:white; font-size:2.2vw;">
+            <p>
+                Massachusetts Appeals Court Summary Dispositions Pursuant to Rule 23.0 (formerly Rule 1:28)
+            </p>
+        </div>
+        <div class="col-xs-6 visible-xs visible-sm" style="position:absolute; top:10%; color:white; font-size:2.8vw;">
+            <p>
+                Massachusetts Appeals Court Summary Dispositions Pursuant to Rule 23.0 (formerly Rule 1:28)
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div id="contentPlaceholder" class="container-fluid container-fluid-padding" style="min-height: 654.859375px;">
+    <div id="headersection">
+        <!-- error message and confirmation message row-->
+        <div class="row">
+            <div class="col-md-12">
+
+
+
+            </div>
+        </div>
+
+        <!-- Page Title row -->
+        <div class="row">
+            <div class="col-md-11">
+                <h3 tabindex="0">Search Dispositions<span class="visuallyhidden">main content</span></h3>
+            </div>
+            <div class="col-md-1 backNavlink">
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-md-1" style="border-top:solid; border-top-color:darkseagreen; margin-left:15px; ">
+                    &nbsp;
+                </div>
+            </div>
+    </div>
+
+
+
+<div class="row">
+<form action="/" id="frmSearchDisposition" method="get"><input id="Action" name="Action" type="hidden" value="">        <div class="col-md-3">
+            <div class="panel bg-whitesmoke">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="text-info">Fill in at least one of these fields</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input id="btnsearch" type="submit" value="Search" class="btn btn-primary form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <input id="btnreset" name="btnreset" type="submit" value="Reset" class="btn btn-default form-control">
+                        </div>
+                    </div>
+                    <div>&nbsp;</div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="DocketNumber">Docket Number</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input class="form-control" id="DocketNumber" name="DocketNumber" style=" max-width:100%" type="text" value="">
+                                        <span class="text-info small">(Please enter in 09-P-0001 format)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="Party_Name">Party Name</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input class="form-control" id="PartyName" name="PartyName" style=" max-width:100%" type="text" value="">
+                                        <span class="text-info small">(Please enter last name)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="Release_Date">Release Date</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <label for="ReleaseDateFrom"> From </label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input class="form-control hasDatepicker" data-val="true" data-val-date="The field Release Date From must be a date." id="ReleaseDateFrom" name="ReleaseDateFrom" type="text" value="">
+                                        <span class="field-validation-valid text-danger" data-valmsg-for="ReleaseDateFrom" data-valmsg-replace="true"></span>
+                                        <span class="text-info small">(Please enter in mm/dd/yyyy format)</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <label for="ReleaseDateTo"> To </label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input class="form-control hasDatepicker" data-val="true" data-val-date="The field Release Date To must be a date." id="ReleaseDateTo" name="ReleaseDateTo" type="text" value="">
+                                        <span class="field-validation-valid text-danger" data-valmsg-for="ReleaseDateTo" data-valmsg-replace="true"></span>
+                                        <span class="text-info small">(Please enter in mm/dd/yyyy format)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="Keywords">Search Terms</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <textarea class="form-control" cols="20" id="Keywords" name="Keywords" rows="2" style="max-width:100%;"></textarea>
+                                    </div>
+                                    <div class="col-md-12 text-info small">
+                                        (Separate multiple terms by semicolon)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input id="btnsearch2" type="submit" value="Search" class="btn btn-primary form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <input id="btnreset2" name="btnreset" type="submit" value="Reset" class="btn btn-default form-control">
+                        </div>
+                    </div>
+                    <div>&nbsp;</div>
+                </div>
+            </div>
+            <div>&nbsp;</div>
+        </div>
+        <div class="col-md-9">
+            <div class="panel">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h3 class="panel-title" tabindex="0">
+                                <span class="visuallyhidden">Showing Results</span><span class="font-extra-large">SHOWING RESULTS: 10 of 15227</span>
+                            </h3>
+                        </div>
+                        <div class="col-md-1 right">
+                            <h3 class="panel-title" tabindex="0"><span class="font-extra-large">SORT BY</span></h3>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="SortColumnName" name="SortColumnName" onchange="form.submit();"><option>Docket No. Ascending Order</option>
+<option>Docket No. Descending Order</option>
+<option>Release Date Ascending Order</option>
+<option selected="selected">Release Date Descending Order</option>
+<option>Case Name Ascending Order</option>
+<option>Case Name Descending Order</option>
+</select>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="panel-body">
+                    <!-- Search Results here-->
+                    <input id="SortColumnName" name="SortColumnName" type="hidden" value="Release Date Descending Order">
+                    <input id="SortOrder" name="SortOrder" type="hidden" value="">
+
+                            <div class="row" data-rowtype="True" style="padding:10px;">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Docket Number
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        19-P-1256
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Case Name
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        COMMONWEALTH  vs.  MARIO FELICI.
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Release Date
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        12/04/2020
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">&nbsp;</div>
+                                    <div class="col-md-3 font-bold">
+<a href="/Disposition/DownloadDisposition/16251?dispositionId=16265" onclick="javascript: DoNotShowWaitSpinner();">Download PDF</a><br>
+                                    </div>
+                                    <div class="col-md-6 font-bold">
+                                        <a href="/Disposition/ViewDispositionDocInHtml?dispositionId=16265&amp;ispublicview=True">Read in Full</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row bg-whitesmoke" data-rowtype="False" style="padding:10px;">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Docket Number
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        19-P-1372
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Case Name
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        COMMONWEALTH  vs.  TIMOTHY PRINS.
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Release Date
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        12/04/2020
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">&nbsp;</div>
+                                    <div class="col-md-3 font-bold">
+<a href="/Disposition/DownloadDisposition/16252?dispositionId=16266" onclick="javascript: DoNotShowWaitSpinner();">Download PDF</a><br>
+                                    </div>
+                                    <div class="col-md-6 font-bold">
+                                        <a href="/Disposition/ViewDispositionDocInHtml?dispositionId=16266&amp;ispublicview=True">Read in Full</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" data-rowtype="True" style="padding:10px;">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Docket Number
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        19-P-1464
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Case Name
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        ROBERT FERRIER &amp; others  vs.  COMCAST CORPORATION &amp; others.
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Release Date
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        12/04/2020
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">&nbsp;</div>
+                                    <div class="col-md-3 font-bold">
+<a href="/Disposition/DownloadDisposition/16253?dispositionId=16267" onclick="javascript: DoNotShowWaitSpinner();">Download PDF</a><br>
+                                    </div>
+                                    <div class="col-md-6 font-bold">
+                                        <a href="/Disposition/ViewDispositionDocInHtml?dispositionId=16267&amp;ispublicview=True">Read in Full</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row bg-whitesmoke" data-rowtype="False" style="padding:10px;">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Docket Number
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        20-P-0254
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Case Name
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        COMMONWEALTH  vs.  CARLOS MUNIZ RODRIGUEZ.
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Release Date
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        12/04/2020
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">&nbsp;</div>
+                                    <div class="col-md-3 font-bold">
+<a href="/Disposition/DownloadDisposition/16254?dispositionId=16268" onclick="javascript: DoNotShowWaitSpinner();">Download PDF</a><br>
+                                    </div>
+                                    <div class="col-md-6 font-bold">
+                                        <a href="/Disposition/ViewDispositionDocInHtml?dispositionId=16268&amp;ispublicview=True">Read in Full</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" data-rowtype="True" style="padding:10px;">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Docket Number
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        19-P-1104
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Case Name
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        JOHN COE, SEX OFFENDER REGISTRY BOARD NO. 5481  vs.  SEX OFFENDER REGISTRY BOARD.
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Release Date
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        12/03/2020
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">&nbsp;</div>
+                                    <div class="col-md-3 font-bold">
+<a href="/Disposition/DownloadDisposition/16245?dispositionId=16259" onclick="javascript: DoNotShowWaitSpinner();">Download PDF</a><br>
+                                    </div>
+                                    <div class="col-md-6 font-bold">
+                                        <a href="/Disposition/ViewDispositionDocInHtml?dispositionId=16259&amp;ispublicview=True">Read in Full</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row bg-whitesmoke" data-rowtype="False" style="padding:10px;">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Docket Number
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        19-P-1354
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Case Name
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        COMMONWEALTH  vs.  RABICA NOV.
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Release Date
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        12/03/2020
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">&nbsp;</div>
+                                    <div class="col-md-3 font-bold">
+<a href="/Disposition/DownloadDisposition/16246?dispositionId=16260" onclick="javascript: DoNotShowWaitSpinner();">Download PDF</a><br>
+                                    </div>
+                                    <div class="col-md-6 font-bold">
+                                        <a href="/Disposition/ViewDispositionDocInHtml?dispositionId=16260&amp;ispublicview=True">Read in Full</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" data-rowtype="True" style="padding:10px;">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Docket Number
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        19-P-1526
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Case Name
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        KELLY ANDREA  vs.  RALPH ANDREA.
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Release Date
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        12/03/2020
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">&nbsp;</div>
+                                    <div class="col-md-3 font-bold">
+<a href="/Disposition/DownloadDisposition/16247?dispositionId=16261" onclick="javascript: DoNotShowWaitSpinner();">Download PDF</a><br>
+                                    </div>
+                                    <div class="col-md-6 font-bold">
+                                        <a href="/Disposition/ViewDispositionDocInHtml?dispositionId=16261&amp;ispublicview=True">Read in Full</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row bg-whitesmoke" data-rowtype="False" style="padding:10px;">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Docket Number
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        19-P-1682
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Case Name
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        CHRISTOPHER J. SULMONTE, trustee, &amp; another  vs.  JULIANO ENTERPRISES, INC.
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Release Date
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        12/03/2020
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">&nbsp;</div>
+                                    <div class="col-md-3 font-bold">
+<a href="/Disposition/DownloadDisposition/16248?dispositionId=16262" onclick="javascript: DoNotShowWaitSpinner();">Download PDF</a><br>
+                                    </div>
+                                    <div class="col-md-6 font-bold">
+                                        <a href="/Disposition/ViewDispositionDocInHtml?dispositionId=16262&amp;ispublicview=True">Read in Full</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" data-rowtype="True" style="padding:10px;">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Docket Number
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        19-P-1826
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Case Name
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        JACQUELINE RAE CALLAHAN  vs.  JONATHAN ALDEN BEDARD.
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Release Date
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        12/03/2020
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">&nbsp;</div>
+                                    <div class="col-md-3 font-bold">
+<a href="/Disposition/DownloadDisposition/16249?dispositionId=16263" onclick="javascript: DoNotShowWaitSpinner();">Download PDF</a><br>
+                                    </div>
+                                    <div class="col-md-6 font-bold">
+                                        <a href="/Disposition/ViewDispositionDocInHtml?dispositionId=16263&amp;ispublicview=True">Read in Full</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row bg-whitesmoke" data-rowtype="False" style="padding:10px;">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Docket Number
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        20-P-0430
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Case Name
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        ADOPTION OF ZAKIRA.
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Release Date
+                                    </div>
+                                    <div class="col-md-7 font-bold">
+                                        12/03/2020
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">&nbsp;</div>
+                                    <div class="col-md-3 font-bold">
+<a href="/Disposition/DownloadDisposition/16250?dispositionId=16264" onclick="javascript: DoNotShowWaitSpinner();">Download PDF</a><br>
+                                    </div>
+                                    <div class="col-md-6 font-bold">
+                                        <a href="/Disposition/ViewDispositionDocInHtml?dispositionId=16264&amp;ispublicview=True">Read in Full</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                            <h3 class="visuallyhidden">Search Results paging controls</h3>
+                            <div class="panel-default text-right">
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        <button id="btnmovefirst" name="btnmovefirst" type="submit" value="movefirst" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-step-backward"></span>First
+                                            <span class="visuallyhidden">Page of search results</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button id="btnmoveprevious" name="btnmoveprevious" type="submit" value="moveprevious" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-backward"></span>&nbsp;Previous
+                                            <span class="visuallyhidden">Page of search results</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-7 text-center container-inline">
+                                        <label for="CurrentPageNo">Current Page</label>
+                                        &nbsp;
+                                        <input data-val="true" data-val-number="The field Current Page must be a number." data-val-required="The Current Page field is required." id="CurrentPageNodn" name="CurrentPageNo" style="width:50px;" type="text" value="1">
+                                        of
+                                        1523
+                                        <input data-val="true" data-val-number="The field Total Pages must be a number." data-val-required="The Total Pages field is required." id="Pages" name="Pages" type="hidden" value="1523">
+                                        &nbsp;
+                                        <label for="PageSize">Page Size</label>
+                                        &nbsp;
+                                        <input data-val="true" data-val-number="The field Page Size must be a number." data-val-required="The Page Size field is required." id="PageSizedn" name="PageSize" style="width:80px;" type="text" value="10">
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button id="btnmovenext" name="btnmovenext" type="submit" value="movenext" class="btn btn-default btn-sm">
+                                            Next<span class="visuallyhidden">Page of search results</span>
+                                            &nbsp;<span class="glyphicon glyphicon-forward"></span>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button id="btnmovelast" name="btnmovelast" type="submit" value="movelast" class="btn btn-default btn-sm">
+                                            Last<span class="visuallyhidden">Page of search results</span>
+                                            &nbsp;<span class="glyphicon glyphicon-step-forward"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</form></div>
+
+
+
+
+</div>
+
+<div id="footerPlaceholder" class="container-fluid" style="padding:unset;">
+    <div class="panel-footer">
+        <footer class="text-center">
+            <span id="footerText" style="">
+                For technical assistance, please contact the Reporter of Decisions at 617-557-1030, Monday through Friday (except holidays), 8:30 a.m. to 4:30 p.m. Eastern time.
+            </span>
+            <input type="hidden" id="showFooterText" name="showFotterText" value="Y">
+        </footer>
+    </div>
+</div>
+
+
+<div id="loadingoverlay" class="loading-overlay" style="display: none;">
+    <div class="spin-loader"></div>
+</div>
+<input type="hidden" id="showwaitspinner" name="showwaitspinner" value="Y">
+
+<script src="/bundles/jquery?v=8Oos0avDZyPg-cbyVzvkIfERIE1DGSe3sRQdCSYrgEQ1"></script>
+
+<script src="/bundles/jquerycookie?v=Y88Y6HuE2a-2RAlgCbhRv5FnZoAZ_PJPVOgm1p031V81"></script>
+
+<script src="/bundles/bootstrap?v=COgzVU2zQC1zO7WfObWBpNUqv95WPQgENh3YfrFqmyI1"></script>
+
+
+<script type="text/javascript">
+    // Declare this global object to be use in all date pickers of application
+    var mrodDatePickerOptions = {
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "-25:+25",
+        dateFormat: "mm/dd/yy"
+    };
+</script>
+
+<script type="text/javascript">
+    //$('a.edit').click(function () {
+    //    var url = $(this).attr('href');
+    //    window.open(url, "popupWindow", "width=1000,height=970,scrollbars=yes");
+    //    return false;
+    //});
+
+    $("#reportIssue").click(function () {
+        var url = $(this).attr('href');
+        window.open(url, "popupWindow", "width=1000,height=970,scrollbars=yes");
+        return false;
+    });
+</script>
+
+
+
+    <script src="/bundles/jqueryui?v=yqCVigxSu97_s_vulMWzX97PVmpAp1RUApV3df4vSeo1"></script>
+
+
+    <script>
+
+        $(document).ready(function () {
+            $("#showFooterText").val('Y');
+        });
+
+        /* Change class of _Layout and assign value container-fluid */
+        $('#contentPlaceholder').removeClass('container div-z-index-2').addClass('container-fluid container-fluid-padding');
+
+        $("#ReleaseDateFrom").datepicker(mrodDatePickerOptions);
+        $("#ReleaseDateTo").datepicker(mrodDatePickerOptions);
+
+        $('#Keywords').keypress(function (e) {
+            if (e.which == 13) {
+                $(this).closest("form").submit();
+                e.preventDefault();
+            }
+        });
+        $("#btnsearch, #btnsearch2").click(function () { ShowWaitSpinner(); $("#Action").val("search"); $("#frmSearchDisposition").submit(); });
+        $("#btnreset, #btnreset2").click(function () { ShowWaitSpinner(); $("#Action").val("reset"); $("#frmSearchDisposition").submit(); });
+        $("#btnmovefirst").click(function () { ShowWaitSpinner(); $("#Action").val("movefirst"); $("#frmSearchDisposition").submit(); });
+        $("#btnmoveprevious").click(function () { ShowWaitSpinner(); $("#Action").val("moveprevious"); $("#frmSearchDisposition").submit(); });
+        $("#btnmovenext").click(function () { ShowWaitSpinner(); $("#Action").val("movenext"); $("#frmSearchDisposition").submit(); });
+        $("#btnmovelast").click(function () { ShowWaitSpinner(); $("#Action").val("movelast"); $("#frmSearchDisposition").submit(); });
+
+        $("#CurrentPageNodn").on("change", function () {
+            ShowWaitSpinner();
+            $("#Action").val("Search");
+            $("#frmSearchDisposition").submit();
+        });
+
+        $("#PageSizedn").on("change", function () {
+            ShowWaitSpinner();
+            $("#Action").val("Search");
+            $("#frmSearchDisposition").submit();
+        });
+
+        $("div[data-rowtype='False']").addClass("bg-whitesmoke");
+
+        $("#SortColumnName").on("change", function () {
+            ShowWaitSpinner();
+            $("#Action").val("Search");
+            $("#frmSearchDisposition").submit();
+        });
+    </script><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
+
+
+<script src="/Scripts/MROD/layout.js"></script>
+
+
+</body></html>
