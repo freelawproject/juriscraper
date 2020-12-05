@@ -89,6 +89,7 @@ class AppellateAttachmentPage(BaseReport):
         if self.is_valid is False:
             return {}
 
+        # Find the table/tr/td containing a link and return the tr's
         rows = self.tree.xpath("//tbody/tr/td/a/parent::td/parent::tr")
         if not rows:
             logger.info("No documents found on attachment page.")
