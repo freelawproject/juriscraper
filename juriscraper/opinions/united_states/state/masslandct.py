@@ -31,16 +31,22 @@ class Site(OpinionSite):
     def _get_download_urls(self) -> List[str]:
         return [
             quote(url.get("href"), safe=":/")
-            for url in self.html.xpath(".//table/tbody/tr//td[2]/a[1]")
+            for url in self.html.xpath(
+                f'//*[@id="{self.year}"]/../following-sibling::section/table/tbody/tr//td[2]/a[1]'
+            )
         ]
 
     def _get_docket_numbers(self) -> List[str]:
-        return self.html.xpath(".//table/tbody/tr//td[2]/a[1]/text()")
+        return self.html.xpath(
+            f'//*[@id="{self.year}"]/../following-sibling::section/table/tbody/tr//td[2]/a[1]/text()'
+        )
 
     def _get_case_names(self) -> List[str]:
         return [
             titlecase(case_name)
-            for case_name in self.html.xpath(".//table//tr/td[3]/text()")
+            for case_name in self.html.xpath(
+                f'//*[@id="{self.year}"]/../following-sibling::section/table//tr/td[3]/text()'
+            )
         ]
 
     def _get_case_dates(self) -> List[datetime.date]:
@@ -48,7 +54,9 @@ class Site(OpinionSite):
             convert_date_string(
                 date_text.replace("Auguset", "August"), fuzzy=True
             )
-            for date_text in self.html.xpath(".//table//tr/td[1]/text()")
+            for date_text in self.html.xpath(
+                f'//*[@id="{self.year}"]/../following-sibling::section/table//tr/td[1]/text()'
+            )
         ]
 
     def _get_precedential_statuses(self) -> List[str]:
