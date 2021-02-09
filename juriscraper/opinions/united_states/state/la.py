@@ -46,7 +46,7 @@ class Site(OpinionSiteLinear):
         )
         for html in self.html:
             for anchor in html.xpath(path):
-                date_string = self._get_date_above_anchor(anchor)
+                date_string = self._get_date_for_opinions(html)
                 text = anchor.text_content()
                 parts = text.split(None, 1)
                 summary_lines = anchor.getparent().xpath("./text()")
@@ -61,14 +61,8 @@ class Site(OpinionSiteLinear):
                     }
                 )
 
-    def _get_date_above_anchor(self, anchor):
-        path = (
-            "./preceding::p["
-            "contains(., ' day of ') and "
-            "contains(., ' %d ')"
-            "]" % self.year
-        )
-        element_date = anchor.xpath(path)[-1]
+    def _get_date_for_opinions(self, html):
+        element_date = html.xpath('//span')[0]
         element_date_text = element_date.text_content().strip()
         parts = element_date_text.split("day of")
         day = parts[0].split()[-1]
