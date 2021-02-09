@@ -26,7 +26,7 @@ class Site(OpinionSite):
         self.url = "http://www.masscases.com/land_date.html"
         self.court_id = self.__module__
         self.regex = r"(.*)\s+\((.*)\)\s+\((.*)\)"
-        self.year = datetime.datetime.now().year
+        self.year = None
 
     def _get_download_urls(self) -> List[str]:
         return [
@@ -50,6 +50,7 @@ class Site(OpinionSite):
         ]
 
     def _get_case_dates(self) -> List[datetime.date]:
+        self.year = self.html.xpath('//li[@class="menuitems"]/a/text()')[-1]
         return [
             convert_date_string(
                 date_text.replace("Auguset", "August"), fuzzy=True
