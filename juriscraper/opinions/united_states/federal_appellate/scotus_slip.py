@@ -16,6 +16,7 @@ class Site(OpinionSite):
     expected_headers = required_headers + ["Revised", "R-", "Pt."]
     justices = {
         "A": "Samuel Alito",
+        "AB": "Amy Coney Barrett",
         "AS": "Antonin Scalia",
         "B": "Stephen Breyer",
         "BK": "Brett Kavanaugh",
