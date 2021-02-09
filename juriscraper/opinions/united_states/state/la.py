@@ -62,7 +62,7 @@ class Site(OpinionSiteLinear):
                 )
 
     def _get_date_for_opinions(self, html):
-        element_date = html.xpath('//span')[0]
+        element_date = html.xpath("//span")[0]
         element_date_text = element_date.text_content().strip()
         parts = element_date_text.split("day of")
         day = parts[0].split()[-1]
