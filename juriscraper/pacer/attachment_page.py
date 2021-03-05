@@ -16,7 +16,7 @@ class AttachmentPage(BaseReport):
     PATH = "doc1/"
 
     def __init__(self, court_id, pacer_session=None):
-        super(AttachmentPage, self).__init__(court_id, pacer_session)
+        super().__init__(court_id, pacer_session)
         # Note that parsing bankruptcy attachment pages does not reveal the
         # document number, only the attachment numbers.
         self.is_bankruptcy = self.court_id.endswith("b")
@@ -108,12 +108,18 @@ class AttachmentPage(BaseReport):
         """
         if self.is_bankruptcy:
             return None
-        else:
+
+        # There are two styles of attachment menus. Try them both.
+        paths = (
+            '//tr[contains(., "Document Number")]//a/text()',
+            '//tr[contains(., "Main Document")]//a/text()',
+        )
+        for path in paths:
             try:
-                path = '//tr[contains(., "Document Number")]//a/text()'
                 return int(self.tree.xpath(path)[0].strip())
             except IndexError:
-                return None
+                continue
+        return None
 
     def _get_attachment_number(self, row):
         """Return the attachment number for an item.
@@ -171,7 +177,7 @@ class AttachmentPage(BaseReport):
         last_cell_contents = cells[-1].text_content()
         units = ["kb", "mb"]
         if any(unit in last_cell_contents.lower() for unit in units):
-            return last_cell_contents
+            return last_cell_contents.strip()
         return ""
 
     @staticmethod

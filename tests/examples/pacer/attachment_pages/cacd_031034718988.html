@@ -1,0 +1,101 @@
+<html><head><link rel="shortcut icon"  href="/favicon.ico"/><title>CM/ECF - California Central District</title>
+  <script type="text/javascript">var default_base_path = "/"; </script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script><link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><link rel="stylesheet" type="text/css" href="/css/print.css" media="print"><script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script></head><body BGCOLOR=F5F9D0 TEXT=000000 onLoad='SetFocus()'>        <div id="topmenu" class="yuimenubar">
+  <div class="bd"><img src="/graphics/logo-cmecf-sm.png" class="cmecfLogo" id="cmecfLogo" alt="CM/ECF" title="" />
+    <ul class="first-of-type">
+      <li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/iquery.pl'><u>Q</u>uery</a></li>
+      <li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Reports'>Reports <div class='spritedownarrow'></div></a></li>
+      <li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Utilities'><u>U</u>tilities <div class='spritedownarrow'></div></a></li>
+      <li class="yuimenubaritem">
+        <a class="yuimenubaritemlabel" onClick="CMECF.MainMenu.showHelpPage(); return false" >Help</a></li>
+
+      <li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/login.pl?logout'>Log Out</a></li></ul><hr class="hrmenuseparator"></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.createMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);}</script> <div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript">
+  var IsForm = false;
+  var FirstField;
+  function SetFocus() {
+    if(IsForm) {
+      if(FirstField) {
+        var ind = FirstField.indexOf('document.',0);
+        if(ind == 0)
+        {
+          eval(FirstField);
+        }
+        else
+        {
+          var Code = "document.forms[0]."+FirstField+".focus();";
+          eval(Code);
+        }
+      } else {
+        var Cnt = 0;
+        while(document.forms[0].elements[Cnt] != null) {
+          try {
+            if(document.forms[0].elements[Cnt].type != "hidden" &&
+              !document.forms[0].elements[Cnt].disabled &&
+              !document.forms[0].elements[Cnt].readOnly) {
+              document.forms[0].elements[Cnt].focus();
+              break;
+            }
+          }
+          catch(e) {}
+          Cnt += 1;
+        }
+      }
+    }
+    return(true);
+  }
+</SCRIPT>
+
+  <p>&nbsp;&nbsp;<B>Document Selection Menu</B></p>
+
+  <p>&nbsp;&nbsp;Select the document you wish to view.</p>
+  <script type="text/javascript">CMECF.MainMenu.alternateHelp="////show_multidocs.htm"</script>
+  <table width=700 cellpadding=4 cellspacing=3>
+
+    <tr>
+      <td width=100 valign=top><a href="https://ecf.cacd.uscourts.gov/doc1/031134718988" onClick="goDLS('/doc1/031134718988','805496','133','','','','','');return(false);">43</a></td>
+      <td width=240>Main Document </td>
+      <td width=400>2 pages</td>
+      <td width=600>  0.7 mb</td>
+    </tr>
+
+    <tr>
+      <td width=100 valign=top><a href="https://ecf.cacd.uscourts.gov/doc1/031134718989" onClick="goDLS('/doc1/031134718989','805496','133','','','','','');return(false);">1</a></td>
+      <td width=240>Declaration in Support of Notice</td>
+      <td width=400>2 pages</td>
+      <td width=600>  0.7 mb</td>
+    </tr>
+
+    <tr>
+      <td width=100 valign=top><a href="https://ecf.cacd.uscourts.gov/doc1/031134718990" onClick="goDLS('/doc1/031134718990','805496','133','','','','','');return(false);">2</a></td>
+      <td width=240>Exhibit A</td>
+      <td width=400>41 pages</td>
+      <td width=600>  1.2 mb</td>
+    </tr>
+
+    <tr>
+      <td width=100 valign=top><a href="https://ecf.cacd.uscourts.gov/doc1/031134718991" onClick="goDLS('/doc1/031134718991','805496','133','','','','','');return(false);">3</a></td>
+      <td width=240>Exhibit B</td>
+      <td width=400>41 pages</td>
+      <td width=600>  1.2 mb</td>
+    </tr>
+
+    <tr>
+      <td width=100 valign=top><a href="https://ecf.cacd.uscourts.gov/doc1/031134718992" onClick="goDLS('/doc1/031134718992','805496','133','','','','','');return(false);">4</a></td>
+      <td width=240>Exhibit C</td>
+      <td width=400>41 pages</td>
+      <td width=600>  1.2 mb</td>
+    </tr>
+
+    <tr>
+      <td width=100 valign=top><a href="https://ecf.cacd.uscourts.gov/doc1/031134718993" onClick="goDLS('/doc1/031134718993','805496','133','','','','','');return(false);">5</a></td>
+      <td width=240>Exhibit D</td>
+      <td width=400>41 pages</td>
+      <td width=600>  1.2 mb</td>
+    </tr>
+
+    <tr>
+      <td width=100 valign=top><a href="https://ecf.cacd.uscourts.gov/doc1/031134718994" onClick="goDLS('/doc1/031134718994','805496','133','','','','','');return(false);">6</a></td>
+      <td width=240>Exhibit E</td>
+      <td width=400>41 pages</td>
+      <td width=600>  1.2 mb</td>
+    </tr>
+  </table></div></body></html>
