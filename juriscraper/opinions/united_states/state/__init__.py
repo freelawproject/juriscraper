@@ -64,6 +64,7 @@ __all__ = [
     "la",
     "mass",
     "massappct",
+    "masslandct",
     "md",
     "mdag",
     "mdctspecapp",
