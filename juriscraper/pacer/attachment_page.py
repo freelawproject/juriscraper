@@ -131,8 +131,7 @@ class AttachmentPage(BaseReport):
         number = int(row.xpath(".//a/text()")[0].strip())
         if self.is_bankruptcy:
             return number - 1
-        else:
-            return number
+        return number
 
     def _get_description_from_tr(self, row):
         """Get the description from the row"""
@@ -144,9 +143,8 @@ class AttachmentPage(BaseReport):
         if not description_text_nodes:
             # No text in the cell.
             return ""
-        else:
-            description = description_text_nodes[0].strip()
-            return force_unicode(description)
+        description = description_text_nodes[0].strip()
+        return force_unicode(description)
 
     @staticmethod
     def _get_page_count_from_tr(tr):
@@ -157,16 +155,16 @@ class AttachmentPage(BaseReport):
         if not pg_cnt_str_nodes:
             # It's a restricted document without page count information.
             return None
-        else:
-            for pg_cnt_str_node in pg_cnt_str_nodes:
-                try:
-                    pg_cnt_str = pg_cnt_str_node.strip()
-                    return int(pg_cnt_str.split()[0])
-                except ValueError:
-                    # Happens when the description field contains the
-                    # word "page" and gets caught by the xpath. Just
-                    # press on.
-                    continue
+
+        for pg_cnt_str_node in pg_cnt_str_nodes:
+            try:
+                pg_cnt_str = pg_cnt_str_node.strip()
+                return int(pg_cnt_str.split()[0])
+            except ValueError:
+                # Happens when the description field contains the
+                # word "page" and gets caught by the xpath. Just
+                # press on.
+                continue
 
     @staticmethod
     def _get_file_size_str_from_tr(tr):
