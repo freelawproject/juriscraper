@@ -19,7 +19,7 @@ class Site(OralArgumentSite):
         self.url = (
             "http://www2.ca3.uscourts.gov/oralargument/OralArguments.xml"
         )
-        self.regex = "(\d{2}-\d{3,4})?(.+)\.(:?(wma)|(mp3)|(m4a))"
+        self.regex = r"(\d{2}-\d{3,4})?(.+)\.(:?(wma)|(mp3)|(m4a))"
 
     def _get_download_urls(self):
         path = "//item/link"

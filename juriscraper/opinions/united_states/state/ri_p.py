@@ -71,7 +71,7 @@ class Site(OpinionSiteLinear):
         }
 
     def parse_date_from_text(self, text_list):
-        regex = "(.*?)(\((\w+\s+\d+\,\s+\d+)\))(.*?)"
+        regex = r"(.*?)(\((\w+\s+\d+\,\s+\d+)\))(.*?)"
         for text in text_list:
             date_match = re.match(regex, text)
             if date_match:
@@ -90,12 +90,12 @@ class Site(OpinionSiteLinear):
     def parse_name_from_text(text_list):
         regexes = [
             # Expected format
-            "(.*?)(,?\sNos?\.)(.*?)",
+            r"(.*?)(,?\sNos?\.)(.*?)",
             # Clerk typo, forgot "No."/"Nos." substring
-            "(.*?)(,?\s\d+-\d+(,|\s))(.*?)",
+            r"(.*?)(,?\s\d+-\d+(,|\s))(.*?)",
             # Same as above, and there's an unconventional docket number
             # like 'SU-14-324' instead of '14-324'. See ri_p_example_4.html
-            "(.*?)(,?\s(?:\w+-)?\d+-\d+(,|\s))(.*?)",
+            r"(.*?)(,?\s(?:\w+-)?\d+-\d+(,|\s))(.*?)",
         ]
 
         for regex in regexes:

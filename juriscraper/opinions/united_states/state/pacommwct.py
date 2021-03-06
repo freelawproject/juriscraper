@@ -23,7 +23,7 @@ class Site(pa.Site):
         self.url = (
             "http://www.pacourts.us/assets/rss/CommonwealthOpinionsRss.ashx"
         )
-        self.set_regex("(.*)(?:- |et al.\s+)(\d+.*\d{4})")
+        self.set_regex(r"(.*)(?:- |et al.\s+)(\d+.*\d{4})")
         self.base = (
             "//item[not(contains(title/text(), 'Judgment List'))]"
             "[not(contains(title/text(), 'Reargument Table'))]"

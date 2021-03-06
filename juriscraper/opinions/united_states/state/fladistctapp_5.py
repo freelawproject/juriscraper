@@ -28,7 +28,7 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.url = "http://www.5dca.org/opinions_archived.shtml"
         self.base_path = "//a"
-        self.case_regex = "(5D.*-.*\d{1,3})([- ]+[A-Za-z1-9].*)"
+        self.case_regex = r"(5D.*-.*\d{1,3})([- ]+[A-Za-z1-9].*)"
 
     def _download(self, request_dict={}):
         html_l = super(Site, self)._download(request_dict)

@@ -40,7 +40,7 @@ class Site(OpinionSite):
         case_dates = []
         case_date = None
         precedential_status = "Published"
-        date_cleaner = "\d+ \w+ [12][90]\d\d"
+        date_cleaner = r"\d+ \w+ [12][90]\d\d"
         path = "//table//tr"
         for row_el in self.html.xpath(path):
             # Examine each row. If it contains the date, we set that as
@@ -75,7 +75,7 @@ class Site(OpinionSite):
 
                 # Pull the URL out of the javascript viewOpinion function.
                 download_url = re.search(
-                    'viewopinion\("(.*)"', urls[0], re.IGNORECASE
+                    r'viewopinion\("(.*)"', urls[0], re.IGNORECASE
                 ).group(1)
 
                 path = "./td/span/span[contains(@class,'title')]"
@@ -108,7 +108,7 @@ class Site(OpinionSite):
                     if "onclick" not in span.attrib:
                         continue
                     download_url = re.search(
-                        'viewopinion\("(.*)"',
+                        r'viewopinion\("(.*)"',
                         span.attrib["onclick"],
                         re.IGNORECASE,
                     ).group(1)
@@ -139,12 +139,12 @@ class Site(OpinionSite):
         try:
             name_and_citation = txt.rsplit("(", 1)[0].strip()
             docket_number = (
-                re.search("(.*\d).*?", txt.rsplit("(", 1)[1]).group(0).strip()
+                re.search(r"(.*\d).*?", txt.rsplit("(", 1)[1]).group(0).strip()
             )
             case_name = name_and_citation.rsplit(",", 1)[0].strip()
             try:
                 neutral_cite = name_and_citation.rsplit(",", 1)[1].strip()
-                if not re.search("^\d\d.*\d\d$", neutral_cite):
+                if not re.search(r"^\d\d.*\d\d$", neutral_cite):
                     neutral_cite = ""
             except IndexError:
                 # Unable to find comma to split on. No neutral cite.

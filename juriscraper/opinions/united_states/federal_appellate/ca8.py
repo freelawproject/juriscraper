@@ -26,7 +26,7 @@ class Site(OpinionSite):
 
     def _get_case_names(self):
         case_names = []
-        case_name_regex = re.compile("(\d{2}/\d{2}/\d{4})(.*)")
+        case_name_regex = re.compile(r"(\d{2}/\d{2}/\d{4})(.*)")
         for text in self.html.xpath(
             '//a[contains(@href, "opndir")]/following-sibling::b/text()'
         ):
@@ -40,7 +40,7 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         case_dates = []
-        case_date_regex = re.compile("(\d{2}/\d{2}/\d{4})(.*)")
+        case_date_regex = re.compile(r"(\d{2}/\d{2}/\d{4})(.*)")
         for text in self.html.xpath(
             '//a[contains(@href, "opndir")]/following-sibling::b/text()'
         ):
@@ -54,7 +54,7 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         docket_numbers = []
-        docket_number_regex = re.compile("(\d{2})(\d{4})(u|p)", re.IGNORECASE)
+        docket_number_regex = re.compile(r"(\d{2})(\d{4})(u|p)", re.IGNORECASE)
         for docket_number in self.html.xpath(
             '//a[contains(@href, "opndir")]/text()'
         ):

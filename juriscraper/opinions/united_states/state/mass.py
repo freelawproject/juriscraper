@@ -36,7 +36,7 @@ class Site(OpinionSite):
         # If you discover new examples that failed the
         # regex below, please add them to the test_mass
         # method in test_everything.py
-        self.regex = "(.*)\s+\((.*)\)\s+\((.*)\)"
+        self.regex = r"(.*)\s+\((.*)\)\s+\((.*)\)"
         self.year = datetime.datetime.now().year
 
     def _download(self, request_dict={}):

@@ -272,7 +272,7 @@ def fix_links_in_lxml_tree(link, keep_anchors=False):
     url_parts = urlsplit(link)
     url = urlunsplit(
         url_parts[:2]
-        + (re.sub("^(/\.\.)+", "", url_parts.path),)
+        + (re.sub(r"^(/\.\.)+", "", url_parts.path),)
         + url_parts[3:]
     )
     if keep_anchors:

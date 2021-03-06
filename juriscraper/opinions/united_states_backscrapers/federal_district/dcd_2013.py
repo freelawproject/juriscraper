@@ -104,7 +104,7 @@ class Site(OpinionSite):
                     judge_element, method="text", encoding="unicode"
                 )
                 judge = re.search(
-                    "(by\s)(.*)", judge_string, re.MULTILINE
+                    r"(by\s)(.*)", judge_string, re.MULTILINE
                 ).group(2)
                 # Determine the number of urls in each row and pad the judges
                 # list sufficiently
@@ -119,7 +119,7 @@ class Site(OpinionSite):
         ):
             # Because we are acting directly on the entire url list, no padding
             # of the nature of suit field is required.
-            regex = "(\?)(\d+)([a-z]+)(\d+)(\-)(.*)"
+            regex = r"(\?)(\d+)([a-z]+)(\d+)(\-)(.*)"
             url_str = re.search(r"(\?)(\d+)([a-z]+)(\d+)(-)(.*)", url)
             # In 2012 (and perhaps elsewhere) they have a few weird urls.
             if re.search(regex, url) is not None:

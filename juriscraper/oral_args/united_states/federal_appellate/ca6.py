@@ -25,7 +25,7 @@ class Site(OralArgumentSite):
             "http://www.opn.ca6.uscourts.gov/internet/court_audio/aud1.php"
         )
         self.xpath_root = '//table[@class="views-table cols-3"]'
-        self.regex = re.compile("((?:\d{2}[- ]\d{4}\s*)+)(.*)")
+        self.regex = re.compile(r"((?:\d{2}[- ]\d{4}\s*)+)(.*)")
         self.back_scrape_iterable = [
             "nothing"
         ]  # Just a placeholder for this court

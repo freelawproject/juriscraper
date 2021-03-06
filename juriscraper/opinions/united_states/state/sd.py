@@ -32,7 +32,7 @@ class Site(OpinionSiteWebDriven):
             (6, 2013),
         ]
         self.uses_selenium = True
-        regex_year_group = "(\d{4} S\.?D\.? \d{1,4})"
+        regex_year_group = r"(\d{4} S\.?D\.? \d{1,4})"
         self.regex = "(.*)%s" % regex_year_group
         # The court decided to publish 5 records on January 24th 2018
         # in an alternate format where the neutral citation appears

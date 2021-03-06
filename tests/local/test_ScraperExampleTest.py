@@ -101,7 +101,7 @@ class ScraperExampleTest(unittest.TestCase):
                         path.rsplit(".", 1)[0],
                         json_compare_extension,
                     )
-                    json_data = json.loads(site.to_json(), encoding="utf-8")
+                    json_data = json.loads(site.to_json())
                     if os.path.isfile(json_path):
                         # Compare result with corresponding json file
                         example_file = path.rsplit("/", 1)[1]

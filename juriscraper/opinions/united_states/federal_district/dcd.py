@@ -80,7 +80,7 @@ class Site(OpinionSite):
 
     def _get_docket_document_numbers(self):
         document_numbers = []
-        regex = re.compile("(\?)(\d+)([a-z]+)(\d+)(-)(.*)")
+        regex = re.compile(r"(\?)(\d+)([a-z]+)(\d+)(-)(.*)")
         for url in self.html.xpath(
             "//table[2]//tr[position()>0]/td[3]/a/@href"
         ):
@@ -105,7 +105,7 @@ class Site(OpinionSite):
                     judge_element, method="text", encoding="unicode"
                 )
                 judge = re.search(
-                    "(by\s)(.*)", judge_string, re.MULTILINE
+                    r"(by\s)(.*)", judge_string, re.MULTILINE
                 ).group(2)
                 # Determine the number of urls in each row and pad the judges
                 # list sufficiently
@@ -120,7 +120,7 @@ class Site(OpinionSite):
         ):
             # Because we are acting directly on the entire url list, no padding
             # of the nature of suit field is required.
-            regex = "(\?)(\d+)([a-z]+)(\d+)(\-)(.*)"
+            regex = r"(\?)(\d+)([a-z]+)(\d+)(\-)(.*)"
             url_str = re.search(r"(\?)(\d+)([a-z]+)(\d+)(-)(.*)", url)
             # In 2012 (and perhaps elsewhere) they have a few weird urls.
             if re.search(regex, url) is not None:
