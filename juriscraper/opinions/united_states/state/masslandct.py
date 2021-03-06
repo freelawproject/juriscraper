@@ -25,7 +25,6 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.url = "http://www.masscases.com/land_date.html"
         self.court_id = self.__module__
-        self.regex = r"(.*)\s+\((.*)\)\s+\((.*)\)"
         self.year = None
 
     def _get_download_urls(self) -> List[str]:
@@ -53,7 +52,10 @@ class Site(OpinionSite):
         self.year = self.html.xpath('//li[@class="menuitems"]/a/text()')[-1]
         return [
             convert_date_string(
-                date_text.replace("Auguset", "August"), fuzzy=True
+                date_text.replace("AUGUSET", "August").replace(
+                    "OCOTBER", "October"
+                ),
+                fuzzy=True,
             )
             for date_text in self.html.xpath(
                 f'//*[@id="{self.year}"]/../following-sibling::section/table//tr/td[1]/text()'
