@@ -57,7 +57,7 @@ class Site(OpinionSite):
                     self.cases.append(
                         {
                             "date": case_date,
-                            "url": item.xpath("//a[1]/@href")[0],
+                            "url": item.xpath(".//a[1]/@href")[0],
                             "docket": split[0].rstrip("."),
                             "name": titlecase(split[1]),
                         }
