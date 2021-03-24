@@ -8,7 +8,7 @@ from datetime import date
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.exceptions import InsanityException
-from juriscraper.lib.string_utils import clean_string, titlecase
+from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OpinionSiteLinear):
