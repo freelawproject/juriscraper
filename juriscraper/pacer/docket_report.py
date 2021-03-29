@@ -1281,6 +1281,6 @@ if __name__ == "__main__":
     filepath = sys.argv[1]
     print("Parsing HTML file at %s" % filepath)
     with open(filepath, "r") as f:
-        text = f.read().decode("utf-8")
+        text = f.read()
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)
