@@ -317,18 +317,11 @@ def harmonize(text):
     if not isinstance(text, six.string_types):
         text = str(text)
 
-    result = ""
     # replace vs. with v.
-    text = re.sub(re.compile(r"\Wvs\.\W"), " v. ", text)
+    text = re.sub(r"\svs\.?\s", " v. ", text)
 
-    # replace V. with v.
-    text = re.sub(re.compile(r"\WV\.\W"), " v. ", text)
-
-    # replace v with v.
-    text = re.sub(re.compile(r" v "), " v. ", text)
-
-    # and finally, vs with v.
-    text = re.sub(re.compile(r" vs "), " v. ", text)
+    # replace upper or lower case v with or without a preiod with v.
+    text = re.sub(re.compile(r"\sV\.?\s", flags=re.I), " v. ", text)
 
     # Remove the BAD_WORDS.
     text = text.split()
@@ -339,25 +332,22 @@ def harmonize(text):
     text = " ".join(cleaned_text)
 
     # split on all ' v. ' and then deal with United States variations.
-    text = text.split(" v. ")
-    i = 1
-    for frag in text:
-        frag = frag.strip()
-        if UNITED_STATES.match(frag):
-            result += "United States"
-        elif THE_STATE.match(frag):
-            result += "State"
+    harmonized_parts = []
+    parties = text.split(" v. ")
+    for party in parties:
+        party = party.strip()
+        if UNITED_STATES.match(party):
+            harmonized_parts.append("United States")
+        elif party.lower() == "the state":
+            harmonized_parts.append("State")
         else:
             # needed here, because we can't put "US" as a case-insensitive
             # word into the UNITED_STATES regex.
-            frag = re.sub(re.compile(r"^US$"), "United States", frag)
+            party = re.sub(re.compile(r"^US$"), "United States", party)
             # no match
-            result += frag
+            harmonized_parts.append(party)
 
-        if i < len(text):
-            # More stuff coming; append v.
-            result += " v. "
-        i += 1
+    result = " v. ".join(harmonized_parts)
 
     # Remove the ET_AL words.
     result = re.sub(ET_AL, "", result)

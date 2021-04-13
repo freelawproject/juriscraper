@@ -291,6 +291,8 @@ class StringUtilTest(unittest.TestCase):
             ["Herring v. U.S. **", "Herring v. United States"],
             ["Test v. U.S", "Test v. United States"],
             ["The United States v. Lissner", "United States v. Lissner"],
+            # Make sure a match at the beginning of a string isn't trouble
+            ["U.S. Coal Miners V. Test", "U.S. Coal Miners v. Test"],
             # Tests the output from a titlecased word containing
             # US to ensure it gets harmonized.
             ["Carver v. US", "Carver v. United States"],
@@ -335,10 +337,11 @@ class StringUtilTest(unittest.TestCase):
                 "v.v. Hendricks & Sons v. James v. Smith",
                 "v.v. Hendricks & Sons v. James v. Smith",
             ],
-            # Normalize "The State"
+            # Minimal normalization of "The State"
             ["Aimee v. The State", "Aimee v. State"],
+            ["Aimee v. The State of Texas", "Aimee v. The State of Texas"],
             # Nuke Pet (short for petitioners)
-            ["Commonwealth v. Mickle, V., Pet.", "Commonwealth v. Mickle v."],
+            ["Commonwealth v. Mickle, V., Pet.", "Commonwealth v. Mickle, V."],
             # Unchanged, despite having the word Pet
             ["Pet Doctors inc. v. Spoon", "Pet Doctors inc. v. Spoon"],
             # Nukes the No. and Nos., but not
@@ -363,7 +366,8 @@ class StringUtilTest(unittest.TestCase):
             ],
         ]
         for pair in test_pairs:
-            self.assertEqual(harmonize(clean_string(pair[0])), pair[1])
+            with self.subTest("Harmonize function", test=pair[0]):
+                self.assertEqual(harmonize(clean_string(pair[0])), pair[1])
 
     def test_normalize_phrase(self):
         """Tests normalization of case titles."""
