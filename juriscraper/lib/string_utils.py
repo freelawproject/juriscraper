@@ -288,7 +288,6 @@ def fix_camel_case(s):
 # More details: http://www.law.cornell.edu/citation/4-300.htm
 US = "USA|U\.S\.A\.|U\.S\.?|U\. S\.?|(The )?United States of America|The United States"
 UNITED_STATES = re.compile(r"^(%s)(,|\.)?$" % US, re.I)
-THE_STATE = re.compile(r"the state", re.I)
 ET_AL = re.compile(",?\set\.?\sal\.?", re.I)
 BW = (
     "appell(ee|ant)s?|claimants?|complainants?|defendants?|defendants?(--?|/)appell(ee|ant)s?"
@@ -320,8 +319,8 @@ def harmonize(text):
     # replace vs. with v.
     text = re.sub(r"\svs\.?\s", " v. ", text)
 
-    # replace upper or lower case v with or without a preiod with v.
-    text = re.sub(re.compile(r"\sV\.?\s", flags=re.I), " v. ", text)
+    # replace lower case v without a period with v.
+    text = re.sub(r"\sv\.?\s", " v. ", text)
 
     # Remove the BAD_WORDS.
     text = text.split()
