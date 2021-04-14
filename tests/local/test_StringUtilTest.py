@@ -292,7 +292,7 @@ class StringUtilTest(unittest.TestCase):
             ["Test v. U.S", "Test v. United States"],
             ["The United States v. Lissner", "United States v. Lissner"],
             # Make sure a match at the beginning of a string isn't trouble
-            ["U.S. Coal Miners V. Test", "U.S. Coal Miners v. Test"],
+            ["U.S. Coal Miners v. Test", "U.S. Coal Miners v. Test"],
             # Tests the output from a titlecased word containing
             # US to ensure it gets harmonized.
             ["Carver v. US", "Carver v. United States"],
