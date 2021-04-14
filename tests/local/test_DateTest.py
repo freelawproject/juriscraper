@@ -47,7 +47,8 @@ class DateTest(unittest.TestCase):
         }
         for before, after in expectations.items():
             fixed_date = fix_future_year_typo(convert_date_string(before))
-            self.assertEqual(fixed_date, convert_date_string(after))
+            with self.subTest("Future years", before=before):
+                self.assertEqual(fixed_date, convert_date_string(after))
 
     def test_date_range_creation(self):
         q_a = (
@@ -102,4 +103,5 @@ class DateTest(unittest.TestCase):
         )
         for test in q_a:
             result = make_date_range_tuples(**test["q"])
-            self.assertEqual(result, test["a"])
+            with self.subTest("Checking dates", test=test["q"]):
+                self.assertEqual(result, test["a"])
