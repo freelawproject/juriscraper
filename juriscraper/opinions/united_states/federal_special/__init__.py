@@ -6,6 +6,7 @@ __all__ = [
     "ag",
     "armfor",
     "cavc",
+    "cgcca",
     "cit",
     "nmcca",
     "tax",
@@ -13,5 +14,4 @@ __all__ = [
     "uscfc_u",
     "uscfc_vaccine",
     "uscfc_vaccine_u",
-    "uscgcca",
 ]
