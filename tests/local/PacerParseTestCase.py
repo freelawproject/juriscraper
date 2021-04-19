@@ -51,7 +51,10 @@ class PacerParseTestCase(unittest.TestCase):
             data = json.loads(json.dumps(data, sort_keys=True))
             with open(json_path) as f:
                 j = json.load(f)
-                self.assertEqual(j, data)
+                with self.subTest(
+                    "Parsing PACER", file=filename, klass=test_class
+                ):
+                    self.assertEqual(j, data)
             t2 = time.time()
             duration = t2 - t1
             warn_or_crash_slow_parser(duration, max_duration=2)
