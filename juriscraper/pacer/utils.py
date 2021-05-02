@@ -176,8 +176,8 @@ def get_nonce_from_form(r):
     found.
 
     :param r: The response object you wish to parse.
-    :returns A nonce object that can be used to query PACER or None, if no nonce
-    can be found.
+    :returns A nonce object that can be used to query PACER or None, if no
+    nonce can be found.
     """
     tree = html.fromstring(r.text)
     form_attrs = tree.xpath("//form//@action")

@@ -6,7 +6,7 @@ from juriscraper.opinions.united_states.federal_special import tax
 
 class TextExtraction(unittest.TestCase):
     def test_tax_court_citation_extractor(self):
-        """Find Tax Court Citations  """
+        """Find Tax Court Citations"""
 
         test_pairs = (
             (

@@ -11,7 +11,7 @@ logger = make_default_logger()
 
 
 class AttachmentPage(BaseReport):
-    """An object for querying and parsing the attachment page report. """
+    """An object for querying and parsing the attachment page report."""
 
     PATH = "doc1/"
 
