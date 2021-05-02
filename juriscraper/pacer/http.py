@@ -308,7 +308,7 @@ class PacerSession(requests.Session):
                 "javax.faces.source": "loginForm:fbtnLogin",
                 "javax.faces.partial.render": "pscLoginPanel+loginForm+redactionConfirmation+popupMsgId",
                 "javax.faces.ViewState": self._get_view_state(load_page_r),
-                "loginForm:courtId_input": "E_ALMDC",
+                "loginForm:courtId_input": "",
                 "loginForm:courtId_focus": "",
                 "loginForm:fbtnLogin": "loginForm:fbtnLogin",
                 "loginForm:loginName": self.username,
