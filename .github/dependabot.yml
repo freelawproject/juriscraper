@@ -8,7 +8,7 @@ updates:
   open-pull-requests-limit: 10
   ignore:
   - dependency-name: selenium
-    versions:
-    - 4.0.0.b1
-    - 4.0.0.b2
-    - 4.0.0.b2.post1
+  - dependency-name: black
+  - dependency-name: pylint
+  - dependency-name: flake8
+  - dependency-name: isort
