@@ -562,6 +562,16 @@ def normalize_dashes(raw_string):
     return raw_string
 
 
+def numbers_only(raw_string):
+    no_commas = re.sub(",", "", raw_string)
+    return list(
+        map(
+            lambda x: float(x) if "." in x else int(x),
+            re.findall("\d*\.?\d+|-\d*\.?\d+", no_commas),
+        )
+    )
+
+
 class CaseNameTweaker(object):
     def __init__(self):
         self._bad_words = None
