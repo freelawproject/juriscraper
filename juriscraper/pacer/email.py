@@ -1,18 +1,24 @@
-import datetime
 import re
+from datetime import date
+from typing import Dict, List, Optional, Union
 
+from .docket_report import BaseDocketReport
+from .utils import (
+    get_pacer_doc_id_from_doc1_url,
+    get_pacer_seq_no_from_doc1_anchor,
+)
 from ..lib.string_utils import (
     clean_string,
     convert_date_string,
     harmonize,
-    numbers_only,
 )
 from .reports import BaseReport
 
 
-class NotificationEmail(BaseReport):
+class NotificationEmail(BaseDocketReport, BaseReport):
     def __init__(self, court_id):
         self.court_id = court_id
+        super(NotificationEmail, self).__init__(court_id)
 
     @property
     def data(self):
@@ -31,19 +37,18 @@ class NotificationEmail(BaseReport):
 
         return {**base, **parsed}
 
-    def _get_case_name(self):
-        try:
-            path = '//td[contains(., "Case Name:")]/following-sibling::td[1]/text()'
-            case_name = harmonize(self.tree.xpath(path)[0])
-        except IndexError:
+    def _get_case_name(self) -> str:
+        path = '//td[contains(., "Case Name:")]/following-sibling::td[1]'
+        case_name = self._xpath_text_0(self.tree, path)
+        if not case_name:
             case_name = "Unknown Case Title"
-        return case_name
+        return clean_string(harmonize(case_name))
 
-    def _get_docket_number(self):
+    def _get_docket_number(self) -> str:
         path = '//td[contains(., "Case Number:")]/following-sibling::td[1]/a/text()'
-        return clean_string(self.tree.xpath(path)[0])
+        return self._parse_docket_number_strs(self.tree.xpath(path))
 
-    def _get_date_filed(self):
+    def _get_date_filed(self) -> date:
         date_filed = re.search(
             "filed\son\s([\d|\/]*)",
             self.tree.text_content(),
@@ -53,51 +58,47 @@ class NotificationEmail(BaseReport):
             date_filed[0].lower().replace("filed on ", "")
         )
 
-    def _get_document_number(self):
-        document_number = self._get_document_number_from_link()
-        if document_number is not None:
-            return document_number
-        return self._get_document_number_from_text()
+    def _get_document_number(self) -> str:
+        path = '//td[contains(., "Document Number:")]/following-sibling::td[1]'
+        text = self.tree.xpath(path)[0].text_content()
+        words = re.split(r"\(|\s", clean_string(text))
+        return words[0]
 
-    def _get_document_number_from_link(self):
+    def _get_doc1_anchor(self) -> str:
         try:
-            path = '//td[contains(., "Document Number:")]/following-sibling::td[1]/a/text()'
-            return numbers_only(self.tree.xpath(path)[0])[0]
-        except IndexError:
-            return None
-
-    def _get_document_number_from_text(self):
-        try:
-            path = '//td[contains(., "Document Number:")]/following-sibling::td[1]/text()'
-            return numbers_only(self.tree.xpath(path)[0])[0]
-        except IndexError:
-            return None
-
-    def _get_document_url(self):
-        try:
-            path = '//td[contains(., "Document Number:")]/following-sibling::td[1]/a/@href'
+            path = '//td[contains(., "Document Number:")]/following-sibling::td[1]/a'
             return self.tree.xpath(path)[0]
         except IndexError:
             return None
 
-    def _get_docket_entries(self):
+    def _get_docket_entries(
+        self,
+    ) -> List[Dict[str, Optional[Union[str, date]]]]:
         try:
             path = '//strong[contains(., "Docket Text:")]/following-sibling::font[1]/b/text()'
             description = clean_string(self.tree.xpath(path)[0])
-            return [
+            entries = [
                 {
                     "date_filed": self._get_date_filed(),
                     "description": description,
                     "document_number": self._get_document_number(),
-                    "document_url": self._get_document_url(),
                     "pacer_doc_id": None,
                     "pacer_seq_no": None,
                 }
             ]
+            anchor = self._get_doc1_anchor()
+            if anchor is not None:
+                entries[0]["pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(
+                    anchor.xpath("./@href")[0]
+                )
+                entries[0]["pacer_seq_no"] = get_pacer_seq_no_from_doc1_anchor(
+                    anchor
+                )
+            return entries
         except IndexError:
             return []
 
-    def _get_email_recipients(self):
+    def _get_email_recipients(self) -> List[Dict[str, Union[str, List[str]]]]:
         path = '//b[contains(., "Notice has been electronically mailed to")]/following-sibling::text()'
         recipient_lines = self.tree.xpath(path)
         email_recipients = []

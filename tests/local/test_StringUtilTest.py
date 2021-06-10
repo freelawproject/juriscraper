@@ -16,7 +16,6 @@ from juriscraper.lib.string_utils import (
     normalize_dashes,
     split_date_range_string,
     titlecase,
-    numbers_only,
 )
 
 
@@ -565,58 +564,3 @@ class StringUtilTest(unittest.TestCase):
         target = " this is    -a test-"
         for test in tests:
             self.assertEqual(normalize_dashes(test), target)
-
-    def test_numbers_only(self):
-        tests = [
-            (
-                "",
-                [],
-            ),
-            (
-                "25000",
-                [25000],
-            ),
-            (
-                "460(No document attached)",
-                [460],
-            ),
-            (
-                "25 OR 624",
-                [25, 624],
-            ),
-            (
-                "25.624",
-                [25.624],
-            ),
-            (
-                "0",
-                [0],
-            ),
-            (
-                "-25.624",
-                [-25.624],
-            ),
-            (
-                "-25,624",
-                [-25624],
-            ),
-            (
-                "TN-44-HG-L2",
-                [-44, 2],
-            ),
-            (
-                "256.27 With another period.",
-                [256.27],
-            ),
-            (
-                "-1 With dashes here - and here -",
-                [-1],
-            ),
-            (
-                "There are 88.2, three -29.6 numbers in this sentence 500.",
-                [88.2, -29.6, 500],
-            ),
-        ]
-        for test, target in tests:
-            with self.subTest("Checking numbers_only for ", q=test, a=target):
-                self.assertEqual(numbers_only(test), target)
