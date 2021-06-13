@@ -51,7 +51,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
     def _get_date_filed(self) -> date:
         date_filed = re.search(
             "filed\son\s([\d|\/]*)",
-            self.tree.text_content(),
+            clean_string(self.tree.text_content()),
             flags=re.IGNORECASE,
         )
         return convert_date_string(
