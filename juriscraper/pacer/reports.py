@@ -1,9 +1,10 @@
 # coding=utf-8
 import re
+from typing import Literal, Tuple, Union
 
 import six
-from lxml import etree
 from lxml.html import HtmlElement
+from requests import Response
 from six.moves.urllib.parse import urljoin
 
 from .utils import is_pdf, make_doc1_url
@@ -121,12 +122,13 @@ class BaseReport(object):
         """Extract the data from the tree and return it."""
         raise NotImplementedError(".data() must be overridden.")
 
-    def _query_pdf_download(self, pacer_case_id, pacer_doc_id, got_receipt):
+    def _query_pdf_download(
+        self,
+        pacer_doc_id: str,
+        got_receipt: Literal["0", "1"],
+    ) -> Tuple[Response, str]:
         """Query the doc1 download URL.
 
-        :param pacer_case_id: The case ID for the case. Used for disambiguating
-        which case the document is associated with when a pacer_doc_id is used
-        in multiple cases.
         :param pacer_doc_id: The doc id for the document
         :param got_receipt: Whether to get the receipt for the page ('0') or
         get the PDF itself ('1').
@@ -134,7 +136,15 @@ class BaseReport(object):
         """
         url = make_doc1_url(self.court_id, pacer_doc_id, True)
         data = {
-            "caseid": pacer_case_id,
+            # Don't send the case_id. It's an optional parameter b/c you get
+            # the correct result without it, but in many criminal cases, it
+            # causes issues. The problem is that criminal cases sometimes have
+            # documents from one case_id in cases with a different case_id. For
+            # example, case 1 might contain a document from case 2. When that
+            # happens, if you provide the wrong case_id, your download fails.
+            # If, instead, you provide *no* case ID, it works fine. So, just
+            # don't provide the case ID. This is part of the doppelganger bug.
+            # "caseid": pacer_case_id,
             "got_receipt": got_receipt,
             # Include the PDF header where possible. Different courts allow
             # different things here. Some have the toggle on the Docket Report
@@ -160,9 +170,7 @@ class BaseReport(object):
         :returns: request.Response object containing a PDF, if one can be found
         (is not sealed, gone, etc.). Else, returns None.
         """
-        r, url = self._query_pdf_download(
-            pacer_case_id, pacer_doc_id, got_receipt="1"
-        )
+        r, url = self._query_pdf_download(pacer_doc_id, got_receipt="1")
 
         if "This document is not available" in r.text:
             logger.error(
@@ -174,6 +182,13 @@ class BaseReport(object):
                 "Permission denied getting document %s in case %s. "
                 "It's probably sealed.",
                 pacer_case_id,
+                url,
+            )
+            return None
+        if "You do not have access to this transcript." in r.text:
+            logger.warning(
+                "Unable to get transcript %s in case %s.",
+                pacer_doc_id,
                 url,
             )
             return None
@@ -230,8 +245,6 @@ class BaseReport(object):
         """Check if a PDF is sealed without trying to actually download
         it.
         """
-        r, url = self._query_pdf_download(
-            pacer_case_id, pacer_doc_id, got_receipt="0"
-        )
+        r, url = self._query_pdf_download(pacer_doc_id, got_receipt="0")
         sealed = "You do not have permission to view this document."
         return sealed in r.content

@@ -50,7 +50,7 @@ def get_pacer_seq_no_from_doc1_url(url):
         return None
 
 
-def get_pacer_doc_id_from_doc1_url(url):
+def get_pacer_doc_id_from_doc1_url(url: str) -> str:
     """Extract the pacer document ID from the doc1 URL. Coerce the fourth digit
     to zero.
 
