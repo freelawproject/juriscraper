@@ -1,6 +1,6 @@
 # coding=utf-8
 import re
-from typing import Literal, Tuple, Union
+from typing import Tuple
 
 import six
 from lxml.html import HtmlElement
@@ -125,7 +125,7 @@ class BaseReport(object):
     def _query_pdf_download(
         self,
         pacer_doc_id: str,
-        got_receipt: Literal["0", "1"],
+        got_receipt: str,
     ) -> Tuple[Response, str]:
         """Query the doc1 download URL.
 
