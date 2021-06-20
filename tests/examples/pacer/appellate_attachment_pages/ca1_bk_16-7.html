@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<HTML><HEAD><TITLE>Document</TITLE></HEAD>
+<BODY BGCOLOR=#FFCCFF>
+<table border=0 align=center>
+<tr><th align=center><b>2 Documents are attached to this filing</b><br><br></th></tr>
+</table>
+<table border=1 align=center cellpadding=5>
+<tr><td>
+	<table border=0 cellpadding=5>
+	<tr><th align=center colspan=2>Document</th>	<th align=center>Description</th><th align=center>Pages</th></tr>
+	<tr><td align=center>1</td><td align=center><a HREF='https://ecf.ca1.uscourts.gov/docs4/001126651' ONCLICK="return doDocPostURL('001126651')"><img title='Open Document' width='13' height='15' BORDER=2 SRC='TransportRoom?servlet=document.gif' ALT='Open document' ></a>&nbsp;</td><td>Main Document</td><td align=center>27</td></tr>
+	<tr><td align=center>2</td><td align=center><a HREF='https://ecf.ca1.uscourts.gov/docs4/001126652' ONCLICK="return doDocPostURL('001126652')"><img title='Open Document' width='13' height='15' BORDER=2 SRC='TransportRoom?servlet=document.gif' ALT='Open document' ></a>&nbsp;</td><td>bankruptcy court transmittal of appeal</td><td align=center>1</td></tr>
+	</table>
+</td></tr>
+</table>
+<BR>
+<CENTER>
+28 pages
+
+<FORM name='dktEntry' action=''><INPUT Value='y' TYPE='checkbox' name='incPdfFooter'><B>Include Page Numbers</B><BR><INPUT Value='Combine All Documents' TYPE='button' ONCLICK='ProcessForm("view")'>
+</FORM>
+<SCRIPT type='text/javascript'>
+<!--
+var winOptions = 'location=no,resizable,toolbar,status,scrollbars';
+var winTarget = '_blank';
+function doDocPostURL(dls) {
+//This use of a function when a user clicks a document
+//link was done so params aren't in copied doc hyperlinks.
+//This allows user to right click & get the URL for copying doc
+//links, but still gets params back to the server as needed
+	var aWin = window.open('TransportRoom?servlet=ShowDoc&caseId=1817&dktType=dktPublic&dls_id='+dls+'&caseId=1817',winTarget,winOptions,false);
+	return false;
+}
+function ProcessForm(uChoice) {
+	if(uChoice=='view'){
+		var incFoot = '';
+		if (document.dktEntry.incPdfFooter.checked)
+			incFoot = 'y';
+		window.location='TransportRoom?servlet=ShowDocMulti&caseId=1817&dktType=dktPublic&outputType=doc&d=2178497&outputForm=view&incPdfFooter='+incFoot;
+	}
+	return false;
+}
+
+//-->
+</SCRIPT>
+</CENTER></BODY></HTML>
