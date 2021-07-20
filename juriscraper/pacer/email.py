@@ -2,17 +2,11 @@ import re
 from datetime import date
 from typing import Dict, List, Optional, Union
 
+from ..lib.string_utils import clean_string, convert_date_string, harmonize
 from .docket_report import BaseDocketReport
-from .utils import (
-    get_pacer_doc_id_from_doc1_url,
-    get_pacer_seq_no_from_doc1_anchor,
-)
-from ..lib.string_utils import (
-    clean_string,
-    convert_date_string,
-    harmonize,
-)
 from .reports import BaseReport
+from .utils import (get_pacer_doc_id_from_doc1_url,
+                    get_pacer_seq_no_from_doc1_anchor)
 
 
 class NotificationEmail(BaseDocketReport, BaseReport):
@@ -120,3 +114,56 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                     }
                 )
         return email_recipients
+
+
+class S3NotificationEmail(NotificationEmail):
+    def _combine_lines_with_proper_spaces(self, text):
+        lines = text.split("\n")
+        combined = ""
+        last_line_match = False
+        for line in lines:
+            stripped = line.strip()
+            match = re.search(r"=$", stripped)
+            if match:
+                combined += re.sub(r"=$", "", stripped)
+                last_line_match = True
+            elif last_line_match:
+                combined += stripped
+                last_line_match = False
+            else:
+                combined += " " + stripped
+        return combined
+
+    def _slice_points(self, text):
+        html_content_type_index = text.index("Content-Type: text/html")
+        try:
+            opening_tag_index = text.index("<html", html_content_type_index)
+            closing_tag_index = text.index("</html>")
+            return (
+                opening_tag_index,
+                closing_tag_index + 7,
+            )
+        except ValueError as e:
+            opening_tag_index = text.index("<div", html_content_type_index)
+            closing_tag_index = text.rfind("</div>")
+            return (
+                opening_tag_index,
+                closing_tag_index + 6,
+            )
+
+    def _html_from_s3_email(self, text):
+        # Remove line ends form S3 content
+        cleaned_s3_line_ends = self._combine_lines_with_proper_spaces(text)
+
+        # Find <html /> section in S3 file.
+        slice_points = self._slice_points(cleaned_s3_line_ends)
+        html_only = cleaned_s3_line_ends[
+            slice(slice_points[0], slice_points[1])
+        ]
+
+        # Clean special characters from S3.
+        return re.sub(r"=3D", "=", html_only)
+
+    def _parse_text(self, text):
+        html_only = self._html_from_s3_email(text)
+        return super()._parse_text(html_only)
