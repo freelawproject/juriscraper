@@ -124,11 +124,13 @@ class BaseReport(object):
 
     def _query_pdf_download(
         self,
+        pacer_case_id: str,
         pacer_doc_id: str,
         got_receipt: str,
     ) -> Tuple[Response, str]:
         """Query the doc1 download URL.
 
+        :param pacer_case_id: The ID of the case
         :param pacer_doc_id: The doc id for the document
         :param got_receipt: Whether to get the receipt for the page ('0') or
         get the PDF itself ('1').
@@ -136,15 +138,19 @@ class BaseReport(object):
         """
         url = make_doc1_url(self.court_id, pacer_doc_id, True)
         data = {
-            # Don't send the case_id. It's an optional parameter b/c you get
-            # the correct result without it, but in many criminal cases, it
-            # causes issues. The problem is that criminal cases sometimes have
-            # documents from one case_id in cases with a different case_id. For
-            # example, case 1 might contain a document from case 2. When that
-            # happens, if you provide the wrong case_id, your download fails.
-            # If, instead, you provide *no* case ID, it works fine. So, just
-            # don't provide the case ID. This is part of the doppelganger bug.
-            # "caseid": pacer_case_id,
+            # Sending the case ID is important if you want to get PDF headers.
+            # Without the case ID, PACER won't know what case it is, and won't
+            # be able to add the correct headers. That'd suggest that the case
+            # ID should always be sent. Unfortunately though, in many criminal
+            # cases, there are documents from other related cases, and at least
+            # in CourtListener, we do a bad job of keeping track of which doc
+            # is from which related criminal case. If you send the *wrong* case
+            # ID, you get no document at all. Though you do get a useful error
+            # message. As a result, the approach we take in self.download_pdf
+            # is to try it with the case ID, and then if we see that error
+            # message, we try it again without the case ID. We won't get the
+            # headers in that case, but we'll at least get the document.
+            "caseid": pacer_case_id,
             "got_receipt": got_receipt,
             # Include the PDF header where possible. Different courts allow
             # different things here. Some have the toggle on the Docket Report
@@ -170,7 +176,18 @@ class BaseReport(object):
         :returns: request.Response object containing a PDF, if one can be found
         (is not sealed, gone, etc.). Else, returns None.
         """
-        r, url = self._query_pdf_download(pacer_doc_id, got_receipt="1")
+        r, url = self._query_pdf_download(
+            pacer_case_id, pacer_doc_id, got_receipt="1"
+        )
+
+        if "Cannot locate the case with caseid" in r.text:
+            # This document is from a different docket, but is included in this
+            # docket. Probably a criminal case with the doppelganger bug. Try
+            # again, but do so without the pacer_case_id. This should work, but
+            # will omit the blue header on the PDFs.
+            r, url = self._query_pdf_download(
+                None, pacer_doc_id, got_receipt="1"
+            )
 
         if "This document is not available" in r.text:
             logger.error(
@@ -245,6 +262,8 @@ class BaseReport(object):
         """Check if a PDF is sealed without trying to actually download
         it.
         """
-        r, url = self._query_pdf_download(pacer_doc_id, got_receipt="0")
+        r, url = self._query_pdf_download(
+            pacer_case_id, pacer_doc_id, got_receipt="0"
+        )
         sealed = "You do not have permission to view this document."
         return sealed in r.content
