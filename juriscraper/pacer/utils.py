@@ -50,6 +50,24 @@ def get_pacer_seq_no_from_doc1_url(url):
         return None
 
 
+def get_pacer_case_id_from_doc1_url(url):
+    """Extract the caseid from the doc1 URL."""
+    match = re.search("caseid=(\d+)", url)
+    if match:
+        return match.group(1)
+    else:
+        return None
+
+
+def get_pacer_magic_num_from_doc1_url(url):
+    """Extract the caseid from the doc1 URL."""
+    match = re.search("magic_num=(\d+)", url)
+    if match:
+        return match.group(1)
+    else:
+        return None
+
+
 def get_pacer_doc_id_from_doc1_url(url: str) -> str:
     """Extract the pacer document ID from the doc1 URL. Coerce the fourth digit
     to zero.
