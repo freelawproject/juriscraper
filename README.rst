@@ -26,7 +26,7 @@ caller has been developed and is in use at
 caller can be `found
 here <https://github.com/freelawproject/courtlistener/tree/master/cl/scrapers/management/commands>`__.
 There is also a basic sample caller `included in
-Juriscraper <https://github.com/freelawproject/juriscraper/blob/master/juriscraper/sample_caller.py>`__
+Juriscraper <https://github.com/freelawproject/juriscraper/blob/main/sample_caller.py>`__
 that can be used for testing or as a starting point when developing your
 own.
 
