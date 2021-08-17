@@ -102,7 +102,7 @@ class BaseReport(object):
             self.tree = strip_bad_html_tags_insecure(tree)
             self.tree.rewrite_links(fix_links_in_lxml_tree, base_href=self.url)
 
-    def check_validity(self, text):
+    def check_validity(self, text: str) -> None:
         """Place sanity checks here to make sure that the returned text is
         valid and not an error page or some other kind of problem.
 

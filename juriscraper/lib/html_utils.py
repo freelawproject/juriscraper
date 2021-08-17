@@ -2,7 +2,6 @@
 # encoding: utf-8
 import re
 import sys
-from html import unescape
 
 import lxml
 from lxml import etree, html
@@ -10,7 +9,6 @@ from lxml.etree import XMLSyntaxError
 from lxml.html import fromstring, html5parser, tostring, HtmlElement
 from lxml.html.clean import Cleaner
 from six import text_type
-from six.moves.html_parser import HTMLParser
 from six.moves.urllib.parse import urlsplit, urlunsplit
 
 try:
@@ -196,7 +194,7 @@ def set_response_encoding(request):
                 request.encoding = chardet.detect(request.content)["encoding"]
 
 
-def clean_html(text):
+def clean_html(text: str) -> str:
     """Cleans up text before we make it into an HTML tree:
     1. Nukes <![CDATA stuff.
     2. Nukes XML encoding declarations
