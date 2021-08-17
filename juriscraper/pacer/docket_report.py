@@ -375,6 +375,33 @@ class DocketReport(BaseDocketReport, BaseReport):
         self._clear_caches()
         super(DocketReport, self).parse()
 
+    def get_anonymized_text(self) -> str:
+        """Remove the username from a docket
+
+        :return: The text of the docket, with the username removed by
+        lxml.
+        """
+        if self.tree is None:
+            if not self.is_valid:
+                return ""
+            raise ValueError(
+                "self.tree has not been set by the parse() or _parse_text() "
+                "method. Always run that before this method."
+            )
+        signature_node = self.tree.xpath(
+            # The PACER Login node
+            "//table//th[contains(./font, 'PACER Login')]"
+            # All the nodes inside the node with the username
+            "/following-sibling::td/*"
+        )[0]
+
+        # Remove the bad node from its parent
+        # (https://stackoverflow.com/a/7981894/64911)
+        signature_node.getparent().remove(signature_node)
+        return tostring(self.tree, pretty_print=True, encoding="utf-8").decode(
+            "utf-8"
+        )
+
     @property
     def metadata(self):
         if self.is_valid is False:

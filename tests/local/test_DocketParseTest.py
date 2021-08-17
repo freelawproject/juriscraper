@@ -1,6 +1,3 @@
-# coding=utf-8
-
-
 import fnmatch
 import os
 import sys
@@ -135,3 +132,53 @@ class DocketParseTest(unittest.TestCase):
             TESTS_ROOT_EXAMPLES_PACER_DOCKET, "not_dockets"
         )
         self.run_parsers_on_path(path_root)
+
+
+class DocketAnonymizeTest(unittest.TestCase):
+    """Does our docket anonymizer work?"""
+
+    def assert_anonymized(
+        self, path: str, skip_pre_test: bool = False
+    ) -> None:
+        report = DocketReport("akd")
+        with open(path, "rb") as f:
+            text = f.read().decode("utf-8")
+
+        if not skip_pre_test:
+            self.assertIn("LOGIN REMOVED", text)
+        report._parse_text(text)
+        anon_text = report.get_anonymized_text()
+        self.assertNotIn("LOGIN REMOVED", anon_text)
+        print(anon_text)
+
+    def test_anonymize_district(self) -> None:
+        path = os.path.join(
+            TESTS_ROOT_EXAMPLES_PACER_DOCKET,
+            "district",
+            "akd.html",
+        )
+        self.assert_anonymized(path)
+
+    def test_anonymize_bankruptcy(self) -> None:
+        path = os.path.join(
+            TESTS_ROOT_EXAMPLES_PACER_DOCKET,
+            "bankruptcy",
+            "akb.html",
+        )
+        self.assert_anonymized(path)
+
+    def test_anonymize_specialty(self) -> None:
+        path = os.path.join(
+            TESTS_ROOT_EXAMPLES_PACER_DOCKET,
+            "special",
+            "cit.html",
+        )
+        self.assert_anonymized(path)
+
+    def test_not_docket_dockets(self) -> None:
+        path = os.path.join(
+            TESTS_ROOT_EXAMPLES_PACER_DOCKET,
+            "not_dockets",
+            "cacd_628915.html",
+        )
+        self.assert_anonymized(path, skip_pre_test=True)
