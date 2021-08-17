@@ -1,4 +1,3 @@
-# coding=utf-8
 import copy
 import pprint
 import re
@@ -376,10 +375,12 @@ class DocketReport(BaseDocketReport, BaseReport):
         super(DocketReport, self).parse()
 
     def get_anonymized_text(self) -> str:
-        """Remove the username from a docket
+        """Remove the username that purchased a docket
 
-        :return: The text of the docket, with the username removed by
-        lxml.
+        Note: This does not anonymize the parties of a docket. It anonymizes
+        the user that purchased it.
+
+        :return: The text of the docket, with the username removed by lxml.
         """
         if self.tree is None:
             if not self.is_valid:
@@ -388,19 +389,21 @@ class DocketReport(BaseDocketReport, BaseReport):
                 "self.tree has not been set by the parse() or _parse_text() "
                 "method. Always run that before this method."
             )
-        signature_node = self.tree.xpath(
+        name_node = self.tree.xpath(
             # The PACER Login node
             "//table//th[contains(./font, 'PACER Login')]"
             # All the nodes inside the node with the username
             "/following-sibling::td/*"
         )[0]
 
-        # Remove the bad node from its parent
+        # Remove the username node from its parent
         # (https://stackoverflow.com/a/7981894/64911)
-        signature_node.getparent().remove(signature_node)
-        return tostring(self.tree, pretty_print=True, encoding="utf-8").decode(
-            "utf-8"
-        )
+        name_node.getparent().remove(name_node)
+        return tostring(
+            self.tree,
+            pretty_print=True,
+            encoding="utf-8",
+        ).decode("utf-8")
 
     @property
     def metadata(self):

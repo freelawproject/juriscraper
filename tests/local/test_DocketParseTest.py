@@ -181,4 +181,9 @@ class DocketAnonymizeTest(unittest.TestCase):
             "not_dockets",
             "cacd_628915.html",
         )
+        # Some things we get back from RECAP are not actually dockets. Normally
+        # the assert_anonymized method checks that the username is there before
+        # and then gone after running the anonymize function. But since these
+        # aren't actually dockets, it isn't there ahead of time. In that case,
+        # skip the before test.
         self.assert_anonymized(path, skip_pre_test=True)
