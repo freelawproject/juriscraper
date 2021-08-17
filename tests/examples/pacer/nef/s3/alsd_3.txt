@@ -1,0 +1,206 @@
+Return-Path: <ecfnotices+bncBAABBJXY2CEAMGQEMTSFJ4I@everettlawfirm.com>
+Received: from mail-qk1-f199.google.com (mail-qk1-f199.google.com [209.85.222.199])
+ by inbound-smtp.us-east-1.amazonaws.com with SMTP id v5b4almeodfdkkec9kovve3nuka57qpaph6tvo81
+ for pacer@everettlawfirm.business;
+ Wed, 11 Aug 2021 21:07:50 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: none (spfCheck: 209.85.222.199 is neither permitted nor denied by domain of everettlawfirm.com) client-ip=209.85.222.199; envelope-from=ecfnotices+bncBAABBJXY2CEAMGQEMTSFJ4I@everettlawfirm.com; helo=mail-qk1-f199.google.com;
+Authentication-Results: amazonses.com;
+ spf=none (spfCheck: 209.85.222.199 is neither permitted nor denied by domain of everettlawfirm.com) client-ip=209.85.222.199; envelope-from=ecfnotices+bncBAABBJXY2CEAMGQEMTSFJ4I@everettlawfirm.com; helo=mail-qk1-f199.google.com;
+ dkim=pass header.i=@everettlawfirm.com;
+ dmarc=fail header.from=alsd.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFIVkpZUTZtUkVKYndmNi9IN1ZINmhnZVNpaWlPOXBhQWFSUC9vbWRjRmE4UzJycWt6Sit3SUpoN0tGZmtVeEw4cFBaWEY0VW03M2Y5MjZsTVY1TzcxN09lRVZjb2U4YVQybS9CQS9ndjJyVkdyS1FYcGtsajk2cXE3d25GTk5EK3crU0MyTXJUaFg0ZXRLSmZJb2lGS3c2djR3Z3k0Y29scmFhT1dBdU5aemxFajlYNnQvaGxvUlFUY1JVVmpQazI1YTVEb3ZCMTRPb1pMRGFsWmpiZTY2SE5xRjBjM1UzVjE1SzFzaTF5TlZJNCtBaWNDNE5WaTJkSzRuTS9MTERVZFFVUUZIWDlCdTZQay9RN2VNUzdNV0JxMHc2dzV6d0xmcDBVa2p3ZWRiTThyRDY2bkppN20weUlxYkZTN3VTUUI3Z05qczdXQ0JjSFZCMGZueFlDU1E=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=Egqxm2MpjgYKQ1tpIOBvBeOMpymp/kDdzOIbHs4WSras7DcuY1ukmB3ConuSBONHA1un5nemnupCIWDsQbUGaYJia0yaNq7QRmpASd6wUXYYuHN0nJxWgrTNxzIOgU7RNYECrcTxEBOUNycCZjhM0zrRsFoz1tmCajgRxYGgw8A=; c=relaxed/simple; s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1628716071; v=1; bh=VpZNm7SWFm2HWgz3IVb3G40IDTbqe3yPqN2sC6PXNq0=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+Received: by mail-qk1-f199.google.com with SMTP id o6-20020a05620a0546b02903d22e7d9864sf2159717qko.16
+        for <pacer@everettlawfirm.business>; Wed, 11 Aug 2021 14:07:50 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=everettlawfirm.com; s=google;
+        h=sender:date:mime-version:from:to:message-id:subject
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:list-post:list-help:list-archive
+         :list-unsubscribe;
+        bh=TJse5AVEgXEGSEXxFeHttLl+FX90fYv/wXLmOiIXF+g=;
+        b=WTD7EmTxFHBHa7+wZBc+EQ9u2q8dXhNDi9aB1SRRFNmkLBK6cprBRxukpR9WWtlW+w
+         XB/XdekIwvW8SnWPsz6zGCcNe4xvKVrdongxkjTBBQJlTv6+bm5R5dvWkt46oaFV6LQe
+         E5L6TU/w0OiNFnYV7qqb+8gpFrlinKM2wFryE=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=sender:x-gm-message-state:date:mime-version:from:to:message-id
+         :subject:x-original-sender:x-original-authentication-results
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-unsubscribe;
+        bh=TJse5AVEgXEGSEXxFeHttLl+FX90fYv/wXLmOiIXF+g=;
+        b=cGaAA7OMfrT7XTKMoLjV5EKnP8JgHIEw9jCXb95w426eJU2RgMN+JC9WBWMwN+Nk4r
+         XxxfYLqUr9AFJindCROxbBZxf+5ZgUH5SUteCw1pvNWQb8pFDp7JPCvAnv5Y/pc00E0L
+         H7YEpw1xpxdbm6EAvFnHymZ60NdH9ruHxAn5EcRRFqd5dA04sZSx/osr2l5SnlhGNbvi
+         BPL2mv8LHLkPp454gpg/PEL+2aqoqM7ZYoEvtSQytrmjJnmC4McP6OL73hyM/aKF69Sx
+         fd5kMw2TTnWCBzdaCharhweXqTWWiUQ0isfaD7n9oyeWn1ssL3e2Ocn+kb+5tqqGQUZw
+         3zJQ==
+Sender: ecfnotices@everettlawfirm.com
+X-Gm-Message-State: AOAM533Cua1NXif17bdqA8DZOL5strVURXFu8VlvICvBpTQB+dRRxHHc
+	EWp0NlD3sOFVnNkEqjNIJZfOqA==
+X-Google-Smtp-Source: ABdhPJz/71JxAZYqbdOxiLyU+FWgeDl3iRmv1r0FR4v3zaHeZnhCkU64o2HSu2MtogWJCOz334n3pg==
+X-Received: by 2002:ac8:51c8:: with SMTP id d8mr667727qtn.344.1628716070161;
+        Wed, 11 Aug 2021 14:07:50 -0700 (PDT)
+X-BeenThere: ecfnotices@everettlawfirm.com
+Received: by 2002:ad4:5c42:: with SMTP id a2ls912336qva.4.gmail; Wed, 11 Aug
+ 2021 14:07:49 -0700 (PDT)
+X-Received: by 2002:ad4:58cc:: with SMTP id dh12mr738322qvb.32.1628716069658;
+        Wed, 11 Aug 2021 14:07:49 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1628716069; cv=none;
+        d=google.com; s=arc-20160816;
+        b=el0JIsikP/EMoIS4FVWC0ncM90vGs4NUPvHdw517EviA6MRXzUcXCDjKZZEIAQ5tAW
+         RlNHtoyZ5JdQiUoUjcxfVhGCGtmYJFrM0S3AFK8582VHio1JEYMcwa8sHOq2saIOiPn3
+         26OHq2QDHrrORDWS5obCAbPmJDKaomij/5ztUpCmvNLErx5tuBiTZwz2oY4gFMN8Kkzn
+         JMvwtpEj6jtCTR8WMLP/TlxDd5SSQVMHOTTjzdps3Bg+f3AhQDNcmAyhgQyx/iLPSc2f
+         Ljqp1P+aB62BIcs9XMcYXxe1VERENmC4u5+yXz++EfE5UE2vrx6zJxwORwKeKudXa642
+         a7HQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=subject:message-id:to:from:mime-version:date;
+        bh=TJse5AVEgXEGSEXxFeHttLl+FX90fYv/wXLmOiIXF+g=;
+        b=m4GsWtHp4cqneUg3byjF2kwEBjreBGjlaQYhwfS+9rdxx3Vhu4MXl1H/zJbo+1d+cM
+         4pfUDmxG/aEyJbC0KfH118HLL9sB/2/yS/KGzg3gxt9ygGJobooMij85xc8n+yEJT+ND
+         xT9BHSPQVHVmUM0aTiEhveQ84KLjke7VLRwzjoxAO70n2qQHRIhYKF+QhULGcQdjY6cf
+         OcNLLOZN0NVM5NC+BSZxKdAZEkv2LCL7oArrHbz8IuPUCYzd94eWzS6P2wbiDlirFsQf
+         ccFfBokILqNsIDNEq0wAb/HRd3bQV+Kgld/OuGeCo+o8b+RP3MHKW/CA4rfAYC5Rs4iX
+         7IoQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of efile_information@alsd.uscourts.gov designates 199.107.16.200 as permitted sender) smtp.mailfrom=efile_information@alsd.uscourts.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=uscourts.gov
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov. [199.107.16.200])
+        by mx.google.com with ESMTP id 23si415745qkc.226.2021.08.11.14.07.49
+        for <ecfnotices@everettlawfirm.com>;
+        Wed, 11 Aug 2021 14:07:49 -0700 (PDT)
+Received-SPF: pass (google.com: domain of efile_information@alsd.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.90
+Received: from alsddb.alsd.gtwy.dcn ([156.119.190.90])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 11 Aug 2021 17:07:49 -0400
+Received: from alsddb.alsd.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by alsddb.alsd.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 17BL7cXU007331;
+	Wed, 11 Aug 2021 16:07:39 -0500
+Received: (from ecf_web@localhost)
+	by alsddb.alsd.gtwy.dcn (8.14.4/8.14.4/Submit) id 17BL78Q0006701;
+	Wed, 11 Aug 2021 16:07:08 -0500
+Date: Wed, 11 Aug 2021 16:07:08 -0500
+X-Authentication-Warning: alsddb.alsd.gtwy.dcn: ecf_web set sender to efile_information@alsd.uscourts.gov using -f
+MIME-Version: 1.0
+From: efile_information@alsd.uscourts.gov
+To: efile_notice@alsd.uscourts.gov
+Message-Id: <2996363@alsd.uscourts.gov>
+Subject: Activity in Case 1:20-cv-00572-WS-MU Autrey v. Harrigan Lumber Co., Inc. et al Notice of Settlement
+Content-Type: text/html
+X-Original-Sender: efile_information@alsd.uscourts.gov
+X-Original-Authentication-Results: mx.google.com;       spf=pass (google.com:
+ domain of efile_information@alsd.uscourts.gov designates 199.107.16.200 as
+ permitted sender) smtp.mailfrom=efile_information@alsd.uscourts.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=uscourts.gov
+Precedence: list
+Mailing-list: list ecfnotices@everettlawfirm.com; contact ecfnotices+owners@everettlawfirm.com
+List-ID: <ecfnotices.everettlawfirm.com>
+X-Spam-Checked-In-Group: ecfnotices@everettlawfirm.com
+X-Google-Group-Id: 486450346794
+List-Post: <https://groups.google.com/a/everettlawfirm.com/group/ecfnotices/post>,
+ <mailto:ecfnotices@everettlawfirm.com>
+List-Help: <https://support.google.com/a/everettlawfirm.com/bin/topic.py?topic=25838>,
+ <mailto:ecfnotices+help@everettlawfirm.com>
+List-Archive: <https://groups.google.com/a/everettlawfirm.com/group/ecfnotices/>
+List-Unsubscribe: <mailto:googlegroups-manage+486450346794+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/everettlawfirm.com/group/ecfnotices/subscribe>
+
+<p><strong><font color="#FF0000">This is an automatic e-mail message generated by the CM/ECF system. 
+Please DO NOT RESPOND to this e-mail because the mail box is unattended.
+</font><br>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30 page limit do not apply.</strong></p>
+
+
+
+<p align=center><strong>U.S. District Court</strong></p>
+<p align=center><strong>SOUTHERN DISTRICT OF ALABAMA</strong></p>
+<font size="3" face="arial,helvetica"><b>Notice of Electronic Filing</b></font>
+
+<BR>
+
+<div><BR>
+The following transaction was entered  by Lowery, Courtney  on 8/11/2021 
+at 4:07 PM CDT and filed on 8/11/2021 <BR>
+
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Autrey v. Harrigan Lumber Co., 
+Inc. et al</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A 
+HREF=https://ecf.alsd.uscourts.gov/cgi-bin/DktRpt.pl?67619>1:20-cv-00572-WS-MU</A></td></tr>
+
+<tr><td><strong>Filer:</strong></td><td>Ethan 
+Autrey</td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href="https://ecf.alsd.uscourts.gov/doc1/02113212100?caseid=67619&de_seq_num=99&magic_num=95052604" 
+>24</a> 
+</td></tr>
+<tr><td><strong></strong></td><td></td></tr>
+</table>
+<p>
+<strong>Docket Text:</strong>
+<BR>
+<FONT  FACE="arial,helvetica" COLOR="#0000cc" SIZE=3><b>
+NOTICE of Settlement <i>, Joint</i> 
+  by Ethan Autrey  (Lowery, Courtney)
+
+</b></Font>
+</p>
+
+
+
+
+<BR>
+<B>
+1:20-cv-00572-WS-MU Notice has been electronically mailed to:
+</B>
+<BR>
+
+<BR>
+Cecily               L. Kaffer                                           
+  &nbsp &nbsp clk@kullmanlaw.com, ddn@kullmanlaw.com, sri@kullmanlaw.com 
+<BR>
+<BR>
+Courtney             Lowery                                             &nbsp 
+&nbsp courtney@everettlawfirm.com, ecfnotices@everettlawfirm.com <BR>
+<BR>
+Frank                Daniel Wood                                         
+     , Jr &nbsp &nbsp fdw@kullmanlaw.com, rjt@kullmanlaw.com <BR>
+
+<BR>
+
+<B>
+1:20-cv-00572-WS-MU Notice has been delivered by other means to:
+</B>
+<BR>
+
+
+
+
+
+
+<div>
+<p>
+The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document <BR>
+<STRONG>Original filename:</STRONG>n/a<BR>
+<STRONG>Electronic document Stamp:</STRONG><BR>
+<TAB>[STAMP dcecfStamp_ID=1026491878 [Date=8/11/2021] [FileNumber=2996361-0<BR>
+
+<TAB>] [a1a6aa275e3448b5c00f8fa29ec793e27ba83e3e4b342e71dd2c64959f4637c1e68<BR>
+
+<TAB>95e44808473cf3184fdd2f2f2f5416b021c54216d66fdbda0b28ceb1c8017]]<BR>
+
+
+
+</table>
+</div>

@@ -1,0 +1,238 @@
+Return-Path: <ecfnotices+bncBDNPPOXE4IMBBOEKY2EAMGQEM3J5O5A@everettlawfirm.com>
+Received: from mail-qv1-f70.google.com (mail-qv1-f70.google.com [209.85.219.70])
+ by inbound-smtp.us-east-1.amazonaws.com with SMTP id cg935o9cel8i5u8qb8ggjvpodi6skqeikkkbl101
+ for pacer@everettlawfirm.business;
+ Mon, 09 Aug 2021 19:42:49 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: none (spfCheck: 209.85.219.70 is neither permitted nor denied by domain of everettlawfirm.com) client-ip=209.85.219.70; envelope-from=ecfnotices+bncBDNPPOXE4IMBBOEKY2EAMGQEM3J5O5A@everettlawfirm.com; helo=mail-qv1-f70.google.com;
+Authentication-Results: amazonses.com;
+ spf=none (spfCheck: 209.85.219.70 is neither permitted nor denied by domain of everettlawfirm.com) client-ip=209.85.219.70; envelope-from=ecfnotices+bncBDNPPOXE4IMBBOEKY2EAMGQEM3J5O5A@everettlawfirm.com; helo=mail-qv1-f70.google.com;
+ dkim=pass header.i=@everettlawfirm.com;
+ dmarc=fail header.from=oknd.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFdU9aRHRjTmxnYnZwT296TG1RdG5wUTVlMEpqd1daQ01pb3duRmpuZjdlWTM0YjFXUFREaEZXQldHUk1pcDNPbVkrSFRucWRuQm9FU0crS2JpUDRzbVhpNFpoRUlHamdXVUJRK0s1K3ZtNm11cFZMd0JLN3NCQ3hQcjhLYkMyVEFDVnRaZUphSktwdTBCNUcwcGxBQXlXM1gzaXVWcVF3eUUwakJxZ25aMFozQUNOdGRTSTJuQnMyVG94MjNaOEQ1MnRRbEpXL3AvWS9SMkc1WGhqQ3NsTmpxZ3ZCQjN1OHhXanpBeHF0WVM1Yk9CTTUzWXVZYUZCNXNKaEtVNnl2ZVZWMVJvN3U4OGI4cTQ3SjYvUi9QVHFYR1RyWmZaSVQ0dG0yRmh6d3VFZmk2U2Q4UVU0Q3BJamRGRDg5cTRrWUh4K205RDFhOXRjRzRuY0x3TzJzQ2hPVHFCejAyMnBmcXpxN1hMK0ZRTEJ3PT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=BUjtUK2F0TShk1aP6Vf/Odki5s+wcFaSEthlmQLmQnXBz1kiWixO/g2kGsAos8N4auAU0Vw4rJA8taGtjy+PzgwgIgQdvbCUsonuB4tQfpCArYaDpIl9VIYlJcy2cgyr3/TGOXs39MFx9a+X6AufoOT17897ulJyQlp+ChEoj0A=; c=relaxed/simple; s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1628538169; v=1; bh=bBaOpNWW0mYj0X0sC9eEoidkRvY3pTS/hzCKqCj4fsc=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+Received: by mail-qv1-f70.google.com with SMTP id v6-20020a0cf9060000b029035546f11a23sf1883836qvn.2
+        for <pacer@everettlawfirm.business>; Mon, 09 Aug 2021 12:42:49 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=everettlawfirm.com; s=google;
+        h=sender:date:mime-version:from:to:message-id:subject
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:list-post:list-help:list-archive
+         :list-unsubscribe;
+        bh=OZFqwEpMOs0sgWBU9jhbT7060NBZB54uEnlFhmyZ0Xw=;
+        b=b/TKDrkA8LifQrZE+mGgzNreWyD3bmqwASGr4VQD+EPboMxsUaM3SpQPGEP0YeDWtY
+         290+93UJsvOq/VC8/xtbvJkCFnhp5BrGg60NYdAPM5yS0P9R6HqJwonGeFePPw0NfFcO
+         E0D/aL425rD665TaFizt/b7WiLmtljwEc6isI=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=sender:x-gm-message-state:date:mime-version:from:to:message-id
+         :subject:x-original-sender:x-original-authentication-results
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-unsubscribe;
+        bh=OZFqwEpMOs0sgWBU9jhbT7060NBZB54uEnlFhmyZ0Xw=;
+        b=Dpvrw7WYBdkbRZA/UH8U2RVhv1Ae/zslsTAAJKV7RXyRx0cQJnc4S1sU7CYMVEGvrk
+         tSBYzet1pWScHMFQkl3WnbLiMLIMFk7/EGUrfo75sG77zmTo6EAhSjT6to63NU8yCrx0
+         wU+g4q2TrvBsia1IbM7Y9H9G3BIV0nGcBWVBqqMZRspzAloQmSUSQFLyij0yiRdU1jGH
+         9oq175plY2f41OCUBkskXWlPNYexgkobTZNhgsYYNTh/1CWFvUGuQ3pNAlr4yhIpja0u
+         x+LLhjfBZ7/kWqKFSpXG5uGCeTSlcuobPpfsSLS5aJUL5+HkWKGA0p0aprg6XlQ0ZpeK
+         7iYA==
+Sender: ecfnotices@everettlawfirm.com
+X-Gm-Message-State: AOAM532nOrwRuYm8pT/mv/Re3WHVXc5qYgjChSLIAryuKQYcOsOORAbI
+	HG/NwegsJD8TJ/hk+8ssJCms9Q==
+X-Google-Smtp-Source: ABdhPJxDZ0KZyR69tEea1N5k4Xh8oFkJ3vStm7XIsnerbvklsfZoV/lENba9RY69IsqUxDTdDggwZg==
+X-Received: by 2002:a0c:ef84:: with SMTP id w4mr349236qvr.34.1628538169025;
+        Mon, 09 Aug 2021 12:42:49 -0700 (PDT)
+X-BeenThere: ecfnotices@everettlawfirm.com
+Received: by 2002:a0c:ecc1:: with SMTP id o1ls4897438qvq.0.gmail; Mon, 09 Aug
+ 2021 12:42:48 -0700 (PDT)
+X-Received: by 2002:a05:6214:a48:: with SMTP id ee8mr14526161qvb.4.1628538168455;
+        Mon, 09 Aug 2021 12:42:48 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1628538168; cv=none;
+        d=google.com; s=arc-20160816;
+        b=beuxjFlAr8n1mR0yl7km/FRoAzHJrbYTo0bmEEErTv43dFpHuHhAtlYrkwhse/XTKq
+         Jo/YNN2y8kKRPx7P8E01r5xjAGhhNMjZtzkDEuC0ykl2lS/gdBX7/Bjh+L2IfVV+wcu5
+         4zArd5jwhecoW/XivMGLSzjLQ8zkvSvKa1nu6Ochw4sicKzv06oM1U2fSlHx6mRZIJgh
+         ylU1eyYFMkhwaxcfmDJBBOkE6O48NxqmNakuYs8AeiACuMSnCVu01S4io4lBrIkbTAN+
+         AJr8ZKJa7Ix16lD3oHvkA8avrbOBt6UYIAMcAtQI2r01kQdX7BrHm4NnAEV4D8x38L1R
+         PMOw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=subject:message-id:to:from:mime-version:date;
+        bh=OZFqwEpMOs0sgWBU9jhbT7060NBZB54uEnlFhmyZ0Xw=;
+        b=TEZLRRVavPx857qPBC38NnCwjleo39MaloDdIxdF/jz1JeheCduPtVqECBpC7HaE0K
+         00czEJkMhAZgltdw2gtZs1+HZryjeYNZN5an1cfXG2OlMrdW1MTh7QN7XWMpcn7B7ENV
+         mK/aqDKMYtWVZ5VAZntnSDgfP57JOxnMsMsq5AXcqhWhMOSmLgRlhzOUvan446jUmYk9
+         cfb5XTDaGlQ2UgXPMv3S9eBfuJtXisbDNsEGehBuUmniMHMQQcWpzKe9h2K8YFS5zhBn
+         7gUdfb7f9zdrR4A4GYU2Yvvs/5XAG1pHao3eBP/VmuGr+xMxkBDYgJL4QhDLTTGJqzr2
+         S9oQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of cm-ecfmail_oknd@oknd.uscourts.gov designates 199.107.16.202 as permitted sender) smtp.mailfrom=CM-ECFMail_OKND@oknd.uscourts.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=uscourts.gov
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov. [199.107.16.202])
+        by mx.google.com with ESMTP id f8si6167402qtb.352.2021.08.09.12.42.48
+        for <ecfnotices@everettlawfirm.com>;
+        Mon, 09 Aug 2021 12:42:48 -0700 (PDT)
+Received-SPF: pass (google.com: domain of cm-ecfmail_oknd@oknd.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.214
+Received: from oknddb.oknd.gtwy.dcn ([156.119.56.214])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 09 Aug 2021 15:42:47 -0400
+Received: from oknddb.oknd.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by oknddb.oknd.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 179Jfx19109055;
+	Mon, 9 Aug 2021 14:42:00 -0500
+Received: (from ecf_web@localhost)
+	by oknddb.oknd.gtwy.dcn (8.14.4/8.14.4/Submit) id 179JfIJ7108313;
+	Mon, 9 Aug 2021 14:41:18 -0500
+Date: Mon, 9 Aug 2021 14:41:18 -0500
+X-Authentication-Warning: oknddb.oknd.gtwy.dcn: ecf_web set sender to CM-ECFMail_OKND@oknd.uscourts.gov using -f
+MIME-Version: 1.0
+From: CM-ECFMail_OKND@oknd.uscourts.gov
+To: Courtmail@oknd.uscourts.gov
+Message-Id: <2567767@oknd.uscourts.gov>
+Subject: Activity in OKND case 4:18-cv-00499-JED-CDL Wilson v. Filtrex Service Group Inc et al - Joint Status Report per LCvR16-1(b)(1)
+Content-Type: text/html
+X-Original-Sender: CM-ECFMail_OKND@oknd.uscourts.gov
+X-Original-Authentication-Results: mx.google.com;       spf=pass (google.com:
+ domain of cm-ecfmail_oknd@oknd.uscourts.gov designates 199.107.16.202 as
+ permitted sender) smtp.mailfrom=CM-ECFMail_OKND@oknd.uscourts.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=uscourts.gov
+Precedence: list
+Mailing-list: list ecfnotices@everettlawfirm.com; contact ecfnotices+owners@everettlawfirm.com
+List-ID: <ecfnotices.everettlawfirm.com>
+X-Spam-Checked-In-Group: ecfnotices@everettlawfirm.com
+X-Google-Group-Id: 486450346794
+List-Post: <https://groups.google.com/a/everettlawfirm.com/group/ecfnotices/post>,
+ <mailto:ecfnotices@everettlawfirm.com>
+List-Help: <https://support.google.com/a/everettlawfirm.com/bin/topic.py?topic=25838>,
+ <mailto:ecfnotices+help@everettlawfirm.com>
+List-Archive: <https://groups.google.com/a/everettlawfirm.com/group/ecfnotices/>
+List-Unsubscribe: <mailto:googlegroups-manage+486450346794+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/everettlawfirm.com/group/ecfnotices/subscribe>
+
+<p><strong><font color="#FF0000">This is an automatic e-mail message generated by the CM/ECF system. 
+Please DO NOT RESPOND to this e-mail because the mail box is unattended.
+</font><br>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30 page limit do not apply.</strong></p>
+
+
+
+<p align=center><strong>U.S. District Court</strong></p>
+<p align=center><strong>U.S. District Court for the Northern District of 
+Oklahoma</strong></p>
+<font size="3" face="arial,helvetica"><b>Notice of Electronic Filing</b></font>
+
+<BR>
+
+<div><BR>
+The following transaction was entered  by Wiley, Joshua  on 8/9/2021 at 
+2:41 PM CDT and filed on 8/9/2021 <BR>
+
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Wilson v. Filtrex Service Group 
+Inc et al</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A 
+HREF=https://ecf.oknd.uscourts.gov/cgi-bin/DktRpt.pl?44613>4:18-cv-00499-JED-CDL</A></td></tr>
+
+<tr><td><strong>Filer:</strong></td><td>Christopher 
+Boley</td></tr><tr><td></td><td>Lloyd Brashier</td></tr><tr><td></td><td>Robert 
+Brown</td></tr><tr><td></td><td>Jacob Calloway</td></tr><tr><td></td><td>Uriah 
+ Carter</td></tr><tr><td></td><td>Del Choate</td></tr><tr><td></td><td>Kevin 
+Clendenin</td></tr><tr><td></td><td>Corey Easter</td></tr><tr><td></td><td>Alexander 
+Fernandez</td></tr><tr><td></td><td>Michael Hynes</td></tr><tr><td></td><td>Rayn 
+Lipford</td></tr><tr><td></td><td>Joseph McDaniel</td></tr><tr><td></td><td>Chesley 
+Norton</td></tr><tr><td></td><td>Jacob Reid</td></tr><tr><td></td><td>Jerry 
+Rivas</td></tr><tr><td></td><td>Julian Russell</td></tr><tr><td></td><td>Scott 
+J Staggs</td></tr><tr><td></td><td>Scott Avery Wilson</td></tr>
+
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href="https://ecf.oknd.uscourts.gov/doc1/14712800417?caseid=44613&de_seq_num=189&magic_num=4094057" 
+>52</a> 
+</td></tr>
+<tr><td><strong></strong></td><td></td></tr>
+</table>
+<p>
+<strong>Docket Text:</strong>
+<BR>
+<FONT  FACE="arial,helvetica" COLOR="#0000cc" SIZE=3><b>
+  JOINT STATUS REPORT by Christopher 
+Boley, Lloyd Brashier, Robert Brown, Jacob Calloway, Uriah  Carter, Del Choate, 
+Kevin Clendenin, Corey Easter, Alexander Fernandez, Michael Hynes, Rayn Lipford, 
+Joseph McDaniel, Chesley Norton, Jacob Reid, Jerry Rivas, Julian Russell, 
+Scott J Staggs, Scott Avery Wilson  (Wiley, Joshua) 
+
+</b></Font>
+</p>
+
+
+
+
+<BR>
+<B>
+4:18-cv-00499-JED-CDL Notice has been electronically mailed to:
+</B>
+<BR>
+
+<BR>
+Charles              C Vaught                                            
+ &nbsp &nbsp cvaught@a-vlaw.com, cvaughtmobile@yahoo.com, tpreston@a-vlaw.com 
+<BR>
+<BR>
+Christopher          S Thrutchley                                        
+ &nbsp &nbsp cthrutchley@gablelaw.com, tcalvin@gablelaw.com, trobertson@gablelaw.com 
+<BR>
+<BR>
+John                 David Russell                                       
+     &nbsp &nbsp jrussell@gablelaw.com, nyates@gablelaw.com <BR>
+<BR>
+Joshua               Jon Wiley                                         
+   &nbsp &nbsp driscoll@everettlawfirm.com, daniel@everettlawfirm.com, ecfnotices@everettlawfirm.com, 
+michael@everettlawfirm.com, kiona@everettlawfirm.com <BR>
+<BR>
+Justin               Andrew Lollman                                      
+      &nbsp &nbsp jlollman@gablelaw.com, nyates@gablelaw.com <BR>
+
+<BR>
+
+<B>
+4:18-cv-00499-JED-CDL Notice has not been electronically mailed to:
+</B>
+<BR>
+
+<BR>
+Christopher          Wesley Burks                                        
+     <BR>
+Everett Legal Advisors PLLC<BR>
+ 650 S SHACKLEFORD STE 411<BR>
+ LITTLE ROCK,  AR 72211<BR>
+<BR>
+Daniel               D Ford                                              
+<BR>
+Everett Legal Advisors PLLC<BR>
+ 650 S SHACKLEFORD STE 411<BR>
+ LITTLE ROCK,  AR 72211<BR>
+
+
+
+
+
+<div>
+<p>
+The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document <BR>
+<STRONG>Original filename:</STRONG>n/a<BR>
+<STRONG>Electronic document Stamp:</STRONG><BR>
+<TAB>[STAMP dcecfStamp_ID=1058978411 [Date=8/9/2021] [FileNumber=2567765-0]<BR>
+
+<TAB> [a23efae8fb0f24ec898390af9980ccc1250f02656ad35afa271988ae7c04f8c75bc9<BR>
+
+<TAB>83e6ecde0342f327a82fcd2e4f862eac3606d87ddbda36ba7b2ac6f3f34e]]<BR>
+
+
+</table>
+</div>

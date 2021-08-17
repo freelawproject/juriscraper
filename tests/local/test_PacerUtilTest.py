@@ -10,6 +10,9 @@ from juriscraper.pacer.utils import (
     get_court_id_from_url,
     get_pacer_case_id_from_nonce_url,
     get_pacer_doc_id_from_doc1_url,
+    get_pacer_seq_no_from_doc1_url,
+    get_pacer_case_id_from_doc1_url,
+    get_pacer_magic_num_from_doc1_url,
     make_doc1_url,
     reverse_goDLS_function,
 )
@@ -51,6 +54,60 @@ class PacerUtilTest(unittest.TestCase):
         )
         for q, a in qa_pairs:
             self.assertEqual(get_pacer_doc_id_from_doc1_url(q), a)
+
+    def test_get_pacer_seq_no_from_doc1_url(self):
+        qa_pairs = (
+            (
+                "https://ecf.ilnd.uscourts.gov/doc1/067126041495?caseid=404197&de_seq_num=56&magic_num=83547811",
+                "56",
+            ),
+            (
+                "https://ecf.gand.uscourts.gov/doc1/055113859630?caseid=279164&de_seq_num=316&magic_num=7844319",
+                "316",
+            ),
+            (
+                "/doc1/02715225301?caseid=123862&de_seq_num=28&magic_num=22391555",
+                "28",
+            ),
+        )
+        for q, a in qa_pairs:
+            self.assertEqual(get_pacer_seq_no_from_doc1_url(q), a)
+
+    def test_get_pacer_case_id_from_doc1_url(self):
+        qa_pairs = (
+            (
+                "https://ecf.ilnd.uscourts.gov/doc1/067126041495?caseid=404197&de_seq_num=56&magic_num=83547811",
+                "404197",
+            ),
+            (
+                "https://ecf.gand.uscourts.gov/doc1/055113859630?caseid=279164&de_seq_num=316&magic_num=7844319",
+                "279164",
+            ),
+            (
+                "/doc1/02715225301?caseid=123862&de_seq_num=28&magic_num=22391555",
+                "123862",
+            ),
+        )
+        for q, a in qa_pairs:
+            self.assertEqual(get_pacer_case_id_from_doc1_url(q), a)
+
+    def test_get_pacer_magic_num_from_doc1_url(self):
+        qa_pairs = (
+            (
+                "https://ecf.ilnd.uscourts.gov/doc1/067126041495?caseid=404197&de_seq_num=56&magic_num=83547811",
+                "83547811",
+            ),
+            (
+                "https://ecf.gand.uscourts.gov/doc1/055113859630?caseid=279164&de_seq_num=316&magic_num=7844319",
+                "7844319",
+            ),
+            (
+                "/doc1/02715225301?caseid=123862&de_seq_num=28&magic_num=22391555",
+                "22391555",
+            ),
+        )
+        for q, a in qa_pairs:
+            self.assertEqual(get_pacer_magic_num_from_doc1_url(q), a)
 
     def test_reverse_dls_function(self):
         """Can we parse the javascript correctly to get a good dict?"""
