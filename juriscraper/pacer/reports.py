@@ -126,6 +126,7 @@ class BaseReport(object):
         self,
         pacer_case_id: str,
         pacer_doc_id: str,
+        pacer_magic_num: str,
         got_receipt: str,
     ) -> Tuple[Response, str]:
         """Query the doc1 download URL.
@@ -163,12 +164,17 @@ class BaseReport(object):
             "pdf_header": "1",
             "pdf_toggle_possible": "1",
         }
+
+        # This is not always set, so we give it an option here.
+        if pacer_magic_num is not None:
+            data["magic_num"] = pacer_magic_num
+
         timeout = (60, 300)
         logger.info("POSTing URL: %s with params: %s" % (url, data))
         r = self.session.post(url, data=data, timeout=timeout)
         return r, url
 
-    def download_pdf(self, pacer_case_id, pacer_doc_id):
+    def download_pdf(self, pacer_case_id, pacer_doc_id, pacer_magic_num=None):
         """Download a PDF from PACER.
 
         Note that this doesn't support attachments yet.
@@ -177,7 +183,7 @@ class BaseReport(object):
         (is not sealed, gone, etc.). Else, returns None.
         """
         r, url = self._query_pdf_download(
-            pacer_case_id, pacer_doc_id, got_receipt="1"
+            pacer_case_id, pacer_doc_id, pacer_magic_num, got_receipt="1"
         )
 
         if "Cannot locate the case with caseid" in r.text:
@@ -186,7 +192,7 @@ class BaseReport(object):
             # again, but do so without the pacer_case_id. This should work, but
             # will omit the blue header on the PDFs.
             r, url = self._query_pdf_download(
-                None, pacer_doc_id, got_receipt="1"
+                None, pacer_doc_id, pacer_magic_num, got_receipt="1"
             )
 
         if "This document is not available" in r.text:
@@ -258,12 +264,12 @@ class BaseReport(object):
 
         return r
 
-    def is_pdf_sealed(self, pacer_case_id, pacer_doc_id):
+    def is_pdf_sealed(self, pacer_case_id, pacer_doc_id, pacer_magic_num=None):
         """Check if a PDF is sealed without trying to actually download
         it.
         """
         r, url = self._query_pdf_download(
-            pacer_case_id, pacer_doc_id, got_receipt="0"
+            pacer_case_id, pacer_doc_id, pacer_magic_num, got_receipt="0"
         )
         sealed = "You do not have permission to view this document."
         return sealed in r.content
