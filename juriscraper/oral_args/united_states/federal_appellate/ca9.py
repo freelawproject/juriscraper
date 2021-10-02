@@ -3,7 +3,10 @@ CourtID: ca9
 Court Short Name: ca9
 """
 
-from juriscraper.lib.html_utils import get_row_column_text, get_row_column_links
+from juriscraper.lib.html_utils import (
+    get_row_column_text,
+    get_row_column_links,
+)
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
@@ -19,7 +22,7 @@ class Site(OralArgumentSiteLinear):
 
         for row in rows:
 
-            # the last row is not valid data, but a one celled footer
+            # the last row is not valid data, but a one celled table footer
             cells = row.xpath(".//td")
             if len(cells) != 7:
                 continue
