@@ -84,7 +84,7 @@ def scrape_court(site, binaries=False):
         for k, v in item.items():
             if isinstance(v, six.text_type):
                 value = trunc(v, 200, ellipsis="...")
-                v_print(1, '    %s: "%s"' % (k, value.encode("utf-8")))
+                v_print(1, '    %s: "%s"' % (k, value))
             else:
                 # Dates and such...
                 v_print(1, "    %s: %s" % (k, v))
