@@ -8,7 +8,6 @@ History:
 
 from datetime import date
 from dateutil.rrule import DAILY, rrule
-
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase, convert_date_string
 
@@ -17,7 +16,7 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "http://www.ca9.uscourts.gov/opinions/index.php"
+        self.url = "http://www.ca9.uscourts.gov/opinions/"
         self.position = "[position() > 1]"
         self.base = self.get_base_path()
         self.back_scrape_date_start = date(2005, 1, 3)
