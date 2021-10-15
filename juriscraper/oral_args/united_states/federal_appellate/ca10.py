@@ -18,7 +18,12 @@ class Site(OralArgumentSite):
         self.court_id = self.__module__
         # query for results of current month
         now = datetime.datetime.now()
-        start = "%d/01/%d" % (now.month, now.year)
+        start_date = now - datetime.timedelta(weeks=4)
+        start = "%d/%d/%d" % (
+            start_date.month,
+            start_date.day,
+            start_date.year,
+        )
         end = "%d/%d/%d" % (now.month, now.day, now.year)
         self.url = (
             "https://www.ca10.uscourts.gov/oralargument/search-results?"
