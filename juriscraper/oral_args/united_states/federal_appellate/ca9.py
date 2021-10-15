@@ -6,9 +6,6 @@ Court Short Name: ca9
 from juriscraper.lib.html_utils import (
     get_row_column_text,
     get_row_column_links,
-    get_html_parsed_text,
-    fix_links_but_keep_anchors,
-    clean_html,
 )
 from juriscraper.AbstractSite import logger
 from juriscraper.OralArgumentSiteLinearWebDriven import (
