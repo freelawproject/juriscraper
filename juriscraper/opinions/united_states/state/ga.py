@@ -4,7 +4,6 @@
 
 import re
 from datetime import date
-
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.exceptions import InsanityException
@@ -18,7 +17,7 @@ class Site(OpinionSiteLinear):
         self.url = self._get_url(date.today().year)
         self.status = "Published"
         self.back_scrape_iterable = range(2016, 2022)
-        self.regex_docket = re.compile(r"(S[0-9]{2}[A-Z]{1}[0-9]{4})")
+        self.regex_docket = re.compile(r"(S?[0-9]{2}[A-Z]{1}[0-9]{4})")
 
     def _get_url(self, year: int) -> str:
         return "https://www.gasupreme.us/opinions/%d-opinions/" % year
@@ -50,9 +49,15 @@ class Site(OpinionSiteLinear):
                     # Extract Docket numbers
                     dockets = re.findall(self.regex_docket, text)
                     if not dockets:
-                        raise InsanityException(
-                            "Could not find docket numbers in: 's'" % text
-                        )
+                        if (
+                            text
+                            == "IN RE: MOTION TO AMEND 2021-3 (Bar Rule 1.2)"
+                        ):
+                            continue
+                        else:
+                            raise InsanityException(
+                                f"Could not find docket numbers in: '{text}'"
+                            )
 
                     # Extract name substring; I am sure this could
                     # be done with a more slick regex, but its not
@@ -73,7 +78,7 @@ class Site(OpinionSiteLinear):
 
     def _download_backwards(self, year):
         self.url = self._get_url(year)
-        logger.info("Backscraping for year %d: %s" % (year, self.url))
+        logger.info(f"Backscraping for year {year}: {self.url}")
         self.html = self._download()
 
         # Setting status is important because it prevents the download
