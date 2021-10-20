@@ -1,4 +1,6 @@
-""" Scraper for Pennsylvania Commonwealth Court
+# -*- coding: utf-8 -*-
+"""
+Scraper for Pennsylvania Commonwealth Court
 CourtID: pacomm
 Court Short Name: pacomm
 Author: Andrei Chelaru
@@ -20,9 +22,7 @@ class Site(pa.Site):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = (
-            "http://www.pacourts.us/assets/rss/CommonwealthOpinionsRss.ashx"
-        )
+        self.url = "https://www.pacourts.us/Rss/Opinions/Commonwealth/"
         self.set_regex(r"(.*)(?:- |et al.\s+)(\d+.*\d{4})")
         self.base = (
             "//item[not(contains(title/text(), 'Judgment List'))]"
