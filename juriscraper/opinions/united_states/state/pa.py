@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-
-# Scraper for Pennsylvania Supreme Court
-# CourtID: pa
-# Court Short Name: pa
-
+"""
+Scraper for Pennsylvania Supreme Court
+CourtID: pa
+Court Short Name: pa
+"""
 import re
 
 from juriscraper.OpinionSite import OpinionSite
@@ -16,7 +16,7 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.regex = False
-        self.url = "http://www.pacourts.us/assets/rss/SupremeOpinionsRss.ashx"
+        self.url = "https://www.pacourts.us/Rss/Opinions/Supreme/"
         self.set_regex(r"(.*)(?:[,-]?\s+Nos?\.)(.*)")
         self.base = (
             "//item[not(contains(title/text(), 'Judgment List'))]"
@@ -25,29 +25,22 @@ class Site(OpinionSite):
         )
         self.cases = []
 
-    def _download(self, request_dict={}):
-        html = super(Site, self)._download(request_dict)
-        self._extract_case_data_from_html(html)
-        return html
-
-    def _extract_case_data_from_html(self, html):
-        for item in html.xpath(self.base):
-            creator = item.xpath("./creator")[0].text_content()
-            pubdate = item.xpath("./pubdate")[0].text_content()
+    def _process_html(self):
+        for item in self.html.xpath(self.base):
+            creator = item.xpath("./creator/text()")[0]
+            pubdate = item.xpath("./pubdate/text()")[0]
             pubdate_sanitized = self.sanitize_text(pubdate)
-            title = item.xpath("./title")[0].text_content()
+            title = item.xpath("./title/text()")[0]
             title_sanitized = self.sanitize_text(title)
             title_clean = clean_string(title_sanitized)
             search = self.regex.search(title_clean)
-            url = item.xpath(".//@href")[0]
-
+            url = item.xpath("./link/@href")[0]
             if search:
                 name = search.group(1)
                 docket = search.group(2)
             else:
                 name = title_clean
                 docket = self._extract_docket_from_url(url)
-
             self.cases.append(
                 {
                     "name": name,
@@ -69,7 +62,7 @@ class Site(OpinionSite):
         year_suffix = re.sub(
             "[^0-9]", "", year_suffix_text
         )  # Strip non-numeric characters
-        return "%s C.D. 20%s" % (number, year_suffix)
+        return f"{number} C.D. 20{year_suffix}"
 
     def _get_case_names(self):
         return [case["name"] for case in self.cases]
