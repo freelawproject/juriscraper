@@ -27,4 +27,5 @@ class Site(pa.Site):
         self.base = (
             "//item[not(contains(title/text(), 'Judgment List'))]"
             "[not(contains(title/text(), 'Reargument Table'))]"
+            "[not(contains(title/text(), 'Order Amending Rules'))]"
         )

@@ -20,6 +20,7 @@ class Site(OpinionSiteLinear):
         self.base = (
             "//item[not(contains(title/text(), 'Judgment List'))]"
             "[not(contains(title/text(), 'Reargument Table'))]"
+            "[not(contains(title/text(), 'Order Amending Rules'))]"
             "[contains(title/text(), 'No.')]"
         )
         self.cases = []
