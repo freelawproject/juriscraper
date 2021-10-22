@@ -259,3 +259,25 @@ fabric.properties
 # Ignore all local history of files
 .history
 .ionide
+
+### Juriscraper ###
+# Ignore sample_caller report
+report.html
+
+# Ignore WebDriven debug screenshots
+screenshot*.png
+
+# Selenium FireFox driver
+geckodriver.log
+
+# Private PACER stuff and test fixtures
+juriscraper/pacer/private_settings.py
+tests/fixtures/cassettes/
+
+### Other ###
+# File created by Mac OS X
+.DS_Store
+
+# Swap files
+*.swp
+*~
