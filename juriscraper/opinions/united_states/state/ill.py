@@ -31,20 +31,17 @@ class Site(OpinionSiteLinear):
             cells = row.xpath(".//td")
             if len(cells) == 7:
                 try:
-                    status = get_row_column_text(row, 6)
-                    # NRel = Not Published
-                    if status == "NRel":
+                    decision_type = get_row_column_text(row, 5)
+                    if decision_type == "Rule 23":
                         status = "Unpublished"
                     else:
                         status = "Published"
                     name = get_row_column_text(row, 1)
                     citation = get_row_column_text(row, 2)
-                    redirect_url = get_row_column_links(row, 1)
+                    url = get_row_column_links(row, 1)
                 except IndexError:
                     # If the opinion file's information is missing, skip record
                     continue
-
-                url = self.set_file_url(redirect_url, name, citation)
                 docket = self.extract_docket(citation)
                 self.cases.append(
                     {
@@ -56,22 +53,6 @@ class Site(OpinionSiteLinear):
                         "status": status,
                     }
                 )
-
-    def set_file_url(self, raw_url, case_name, case_citation):
-        # Opinions' URL redirect to the real PDF files' URL, this redirection
-        # might cause problems when downloading files in CourtListener
-        search = re.search(
-            r"(?:.*\/resources\/)([0-9A-Za-z]{8}-[0-9A-Za-z]{4}-4[0-9A-Za-z]{3}-[89ABab][0-9A-Za-z]{3}-[0-9A-Za-z]{12})(?:\/file)",
-            raw_url,
-        )
-        if search:
-            case_uuid = search.group(1)
-            file_name = quote(f"{case_name}, {case_citation}.pdf")
-            url = f"https://ilcourtsaudio.blob.core.windows.net/antilles-resources/resources/{case_uuid}/{file_name}"
-        else:
-            url = ""
-            logger.warning(f"Case UUID not found: {raw_url}")
-        return url
 
     def extract_docket(self, case_citation):
         # RegEx: "{YYYY: year_4_digit} IL {docket_number}"
