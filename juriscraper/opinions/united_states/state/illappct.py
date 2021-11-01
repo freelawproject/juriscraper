@@ -19,7 +19,7 @@ class Site(ill.Site):
         )
 
     def extract_docket(self, case_citation):
-        # RegEx: "[{YYYY: year_4_digit}|] IL [App|] ({d: appellate district}[st|d|th]) {docket_number}{-U: opcional}"
+        # RegEx: "[{YYYY: year_4_digit}|] IL [App|] ({d: appellate district}[st|d|th]) {docket_number}[-U|]"
         search = re.search(r"(?:.+\()(\d+)(?:.+\)\s+)(\d+)", case_citation)
         if search:
             district = search.group(1)

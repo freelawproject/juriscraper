@@ -32,20 +32,25 @@ class Site(OpinionSiteLinear):
             if len(cells) == 7:
                 try:
                     decision_type = get_row_column_text(row, 5)
+                    status = get_row_column_text(row, 6)
                     if decision_type == "Rule 23":
                         status = "Unpublished"
-                    else:
+                    elif status == "Published":
                         status = "Published"
+                    else:
+                        status = "Unnknown"
                     name = get_row_column_text(row, 1)
                     citation = get_row_column_text(row, 2)
+                    date = get_row_column_text(row, 3)
                     url = get_row_column_links(row, 1)
                 except IndexError:
-                    # If the opinion file's information is missing, skip record
+                    # If the opinion file's information is missing (as with
+                    # withdrawn opinions), skip record
                     continue
                 docket = self.extract_docket(citation)
                 self.cases.append(
                     {
-                        "date": get_row_column_text(row, 3),
+                        "date": date,
                         "docket": docket,
                         "name": name,
                         "neutral_citation": citation,
