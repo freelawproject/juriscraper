@@ -6,6 +6,8 @@ Contact: webmaster@illinoiscourts.gov, 217-558-4490, 312-793-3250
    2014-12-02: Updated by Mike Lissner to remove the summaries code.
    2016-02-26: Updated by arderyp: simplified thanks to new id attribute identifying decisions table
    2016-03-27: Updated by arderyp: fixed to handled non-standard formatting
+   2021-11-02: Status validation based on Amendment to Rule 23 rulings
+               https://chicagocouncil.org/illinois-supreme-court-amendment-to-rule-23/
 """
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -14,7 +16,7 @@ from juriscraper.lib.html_utils import (
     get_row_column_links,
     get_row_column_text,
 )
-from urllib.parse import quote
+import datetime
 import re
 
 
@@ -27,25 +29,33 @@ class Site(OpinionSiteLinear):
         )
 
     def _process_html(self):
+        date_amend_rule_23 = datetime.date(2021, 1, 1)
         for row in self.html.xpath("//table[@id='ctl04_gvDecisions']//tr"):
             cells = row.xpath(".//td")
             if len(cells) == 7:
                 try:
-                    decision_type = get_row_column_text(row, 5)
-                    status = get_row_column_text(row, 6)
-                    if decision_type == "Rule 23":
-                        status = "Unpublished"
-                    elif status == "Published":
-                        status = "Published"
-                    else:
-                        status = "Unnknown"
                     name = get_row_column_text(row, 1)
                     citation = get_row_column_text(row, 2)
                     date = get_row_column_text(row, 3)
                     url = get_row_column_links(row, 1)
+                    # After 2021-01-01, all documents are Precedential
+                    if (
+                        datetime.datetime.strptime(
+                            date.strip(), "%m/%d/%Y"
+                        ).date()
+                        >= date_amend_rule_23
+                    ):
+                        status = "Published"
+                    # Before 2021-01-01, Rule 23 rulings aren't Precedential
+                    else:
+                        decision_type = get_row_column_text(row, 5)
+                        if decision_type == "Rule 23":
+                            status = "Unpublished"
+                        else:
+                            status = "Published"
                 except IndexError:
                     # If the opinion file's information is missing (as with
-                    # withdrawn opinions), skip record
+                    # links to withdrawn opinions), skip record
                     continue
                 docket = self.extract_docket(citation)
                 self.cases.append(
