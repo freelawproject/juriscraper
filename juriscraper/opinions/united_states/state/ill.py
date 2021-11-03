@@ -1,61 +1,76 @@
-# Contact: webmaster@illinoiscourts.gov, 217-558-4490, 312-793-3250
-# History:
-#   2013-08-16: Created by Krist Jin
-#   2014-12-02: Updated by Mike Lissner to remove the summaries code.
-#   2016-02-26: Updated by arderyp: simplified thanks to new id attribute identifying decisions table
-#   2016-03-27: Updated by arderyp: fixed to handled non-standard formatting
+# -*- coding: utf-8 -*-
+"""
+Contact: webmaster@illinoiscourts.gov, 217-558-4490, 312-793-3250
+ History:
+   2013-08-16: Created by Krist Jin
+   2014-12-02: Updated by Mike Lissner to remove the summaries code.
+   2016-02-26: Updated by arderyp: simplified thanks to new id attribute identifying decisions table
+   2016-03-27: Updated by arderyp: fixed to handled non-standard formatting
+   2021-11-02: Status validation based on Amendment to Rule 23 rulings
+               https://chicagocouncil.org/illinois-supreme-court-amendment-to-rule-23/
+"""
 
-from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+from juriscraper.AbstractSite import logger
+from juriscraper.lib.html_utils import (
+    get_row_column_links,
+    get_row_column_text,
+)
+from juriscraper.lib.date_utils import parse_dates
+import re
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "http://www.illinoiscourts.gov/Opinions/recent_supreme.asp"
-        # Sometimes court forgets pdf link in 5th cell.
-        # So, only process rows with a link in 5th cell.
-        limiter = 'contains(./td[5]//a[1]/@href, "pdf")'
-        self.cell_path = '//table[@id="decisions"]//tr[' + limiter + "]/td[%d]"
+        self.url = (
+            "https://www.illinoiscourts.gov/top-level-opinions?type=supreme"
+        )
 
-    def _get_download_urls(self):
-        path = "%s//a[1]/@href" % (self.cell_path % 5)
-        return [href for href in self.html.xpath(path)]
+    def _process_html(self):
+        date_amend_rule_23 = parse_dates("2021-01-01")[0].date()
+        for row in self.html.xpath("//table[@id='ctl04_gvDecisions']//tr"):
+            cells = row.xpath(".//td")
+            if len(cells) != 7:
+                continue
+            try:
+                name = get_row_column_text(row, 1)
+                citation = get_row_column_text(row, 2)
+                date = get_row_column_text(row, 3)
+                url = get_row_column_links(row, 1)
+                # After 2021-01-01, all documents are Precedential
+                if parse_dates(date.strip())[0].date() >= date_amend_rule_23:
+                    status = "Published"
+                # Before 2021-01-01, Rule 23 rulings aren't Precedential
+                else:
+                    decision_type = get_row_column_text(row, 5)
+                    if decision_type == "Rule 23":
+                        status = "Unpublished"
+                    else:
+                        status = "Published"
+            except IndexError:
+                # If the opinion file's information is missing (as with
+                # links to withdrawn opinions), skip record
+                continue
+            docket = self.extract_docket(citation)
+            self.cases.append(
+                {
+                    "date": date,
+                    "docket": docket,
+                    "name": name,
+                    "neutral_citation": citation,
+                    "url": url,
+                    "status": status,
+                }
+            )
 
-    def _get_case_names(self):
-        path = "%s//a[1]" % (self.cell_path % 5)
-        return [
-            anchor.text_content().strip() for anchor in self.html.xpath(path)
-        ]
-
-    def _get_case_dates(self):
-        path = self.cell_path % 1
-        return [
-            convert_date_string(cell.text_content())
-            for cell in self.html.xpath(path)
-        ]
-
-    def _get_precedential_statuses(self):
-        statuses = []
-        path = "%s//div" % (self.cell_path % 3)
-        for div in self.html.xpath(path):
-            text = div.xpath("strong/text()")
-            if text and "NRel" in text:
-                statuses.append("Unpublished")
-            else:
-                statuses.append("Published")
-        return statuses
-
-    def _get_docket_numbers(self):
-        docket_numbers = []
-        path = "%s//div" % (self.cell_path % 3)
-        for div in self.html.xpath(path):
-            text = div.xpath("text()")
-            text = "".join(text).replace("cons.", "")
-            docket_numbers.append(" ".join(text.split()))
-        return docket_numbers
-
-    def _get_neutral_citations(self):
-        path = self.cell_path % 4
-        return [cell.text_content().strip() for cell in self.html.xpath(path)]
+    def extract_docket(self, case_citation):
+        # RegEx: "{YYYY: year_4_digit} IL {docket_number}"
+        search = re.search(r"(?:[0-9]{4}\s+IL\s+)([0-9]+)", case_citation)
+        if search:
+            docket = search.group(1)
+        else:
+            docket = ""
+            logger.warning(f"Docket not found: {case_citation}")
+        return docket
