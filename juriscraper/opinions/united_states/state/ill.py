@@ -16,7 +16,7 @@ from juriscraper.lib.html_utils import (
     get_row_column_links,
     get_row_column_text,
 )
-import datetime
+from juriscraper.lib.date_utils import parse_dates
 import re
 
 
@@ -29,45 +29,41 @@ class Site(OpinionSiteLinear):
         )
 
     def _process_html(self):
-        date_amend_rule_23 = datetime.date(2021, 1, 1)
+        date_amend_rule_23 = parse_dates("2021-01-01")[0].date()
         for row in self.html.xpath("//table[@id='ctl04_gvDecisions']//tr"):
             cells = row.xpath(".//td")
-            if len(cells) == 7:
-                try:
-                    name = get_row_column_text(row, 1)
-                    citation = get_row_column_text(row, 2)
-                    date = get_row_column_text(row, 3)
-                    url = get_row_column_links(row, 1)
-                    # After 2021-01-01, all documents are Precedential
-                    if (
-                        datetime.datetime.strptime(
-                            date.strip(), "%m/%d/%Y"
-                        ).date()
-                        >= date_amend_rule_23
-                    ):
-                        status = "Published"
-                    # Before 2021-01-01, Rule 23 rulings aren't Precedential
+            if len(cells) != 7:
+                continue
+            try:
+                name = get_row_column_text(row, 1)
+                citation = get_row_column_text(row, 2)
+                date = get_row_column_text(row, 3)
+                url = get_row_column_links(row, 1)
+                # After 2021-01-01, all documents are Precedential
+                if parse_dates(date.strip())[0].date() >= date_amend_rule_23:
+                    status = "Published"
+                # Before 2021-01-01, Rule 23 rulings aren't Precedential
+                else:
+                    decision_type = get_row_column_text(row, 5)
+                    if decision_type == "Rule 23":
+                        status = "Unpublished"
                     else:
-                        decision_type = get_row_column_text(row, 5)
-                        if decision_type == "Rule 23":
-                            status = "Unpublished"
-                        else:
-                            status = "Published"
-                except IndexError:
-                    # If the opinion file's information is missing (as with
-                    # links to withdrawn opinions), skip record
-                    continue
-                docket = self.extract_docket(citation)
-                self.cases.append(
-                    {
-                        "date": date,
-                        "docket": docket,
-                        "name": name,
-                        "neutral_citation": citation,
-                        "url": url,
-                        "status": status,
-                    }
-                )
+                        status = "Published"
+            except IndexError:
+                # If the opinion file's information is missing (as with
+                # links to withdrawn opinions), skip record
+                continue
+            docket = self.extract_docket(citation)
+            self.cases.append(
+                {
+                    "date": date,
+                    "docket": docket,
+                    "name": name,
+                    "neutral_citation": citation,
+                    "url": url,
+                    "status": status,
+                }
+            )
 
     def extract_docket(self, case_citation):
         # RegEx: "{YYYY: year_4_digit} IL {docket_number}"
