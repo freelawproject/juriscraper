@@ -14,9 +14,7 @@ class Site(ill.Site):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = (
-            "https://www.illinoiscourts.gov/top-level-opinions?type=appellate"
-        )
+        self.url = "https://www.illinoiscourts.gov/top-level-opinions?type=all%20appellate"
 
     def extract_docket(self, case_citation):
         # RegEx: "[{YYYY: year_4_digit}|] IL [App|] ({d: appellate district}[st|d|th]) {docket_number}[-U|]"
