@@ -28,7 +28,8 @@ class Site(OpinionSite):
 
     # I'm certain this can be done more professionally,
     # but I (arderyp) am not gifted at the art of regex
-    regex = r"(?:No.\s)?(\d+)\s+(\w+)(?:\s+)?(\d+M?\.?)\s*((Nos?\.?\s+)?((\w{5,8}\.?)(((\s+\&|\,)\s+\w{5,8})+)?))\.?(\s+)?(.*)"
+    regex = r"(?:No.\s)?(\d+)\s+(\w+)(?:\s+)?(\d+M?\.?)\s*((Nos?\.?\s+)?((\w{5,8}\.?)(((\s+\&|\,)\s+\w{5,8})+)?))\.?(\s+)?(.*)"  ### debug
+    # regex = r"(\d+\s+\w+\s+\d+)(?:\.?\s*Nos?\.?\s*)((\w{5,8})|(\w{5,8}(?:\s*&\s*\w{5,8})))(?:(\.|,)\s+)(.*)"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -162,6 +163,9 @@ class Site(OpinionSite):
                 # Skip them.
                 continue
             name = self._extract_name_from_text(text)
+            if name == "":
+                # COBAR Opinion Announcement, skip
+                continue
             url = self._extract_url_from_anchor(anchor)
 
             # For whatever insane reason, some pages provide direct links
@@ -194,7 +198,10 @@ class Site(OpinionSite):
     def _extract_docket_from_text(cls, text):
         text = text.strip()
         try:
-            match = re.match(cls.regex, text).group(6)
+            # match = re.match(cls.regex, text).group(6)   ### debug
+            match = re.match(cls.regex, text).group(2)
+            # TODO: Check for multiple dockets and cases name in the same file
+            # Ex: 2021 CO 65 No. 20SC261, Harvey v. Centura, No. 20SC784, Manzanares v. Centura
         except:
             raise InsanityException(f'Unable to parse docket from "{text}"')
         dockets_raw = match.rstrip(".").replace("&", " ").replace(",", " ")
@@ -205,7 +212,9 @@ class Site(OpinionSite):
     def _extract_name_from_text(cls, text):
         text = text.strip()
         try:
-            match = re.match(cls.regex, text).group(12)
+            # breakpoint()   ### debug
+            # match = re.match(cls.regex, text).group(12)   ### debug
+            match = re.match(cls.regex, text).group(6)
         except:
             raise InsanityException(f'Unable to parse case name from "{text}"')
         return match.strip().rstrip(".")
@@ -320,6 +329,8 @@ class Site(OpinionSite):
         """Return true is link text is parsible date"""
         try:
             convert_date_string(text)
+            # TODO: Add validation for court's announcements
+            # Ex: Colorado Supreme Court Announcements 9.27.2021
             return True
         except:
             pass
