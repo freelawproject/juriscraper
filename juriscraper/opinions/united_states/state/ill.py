@@ -6,8 +6,7 @@ History:
   2014-12-02: Updated by Mike Lissner to remove the summaries code.
   2016-02-26: Updated by arderyp: simplified thanks to new id attribute identifying decisions table
   2016-03-27: Updated by arderyp: fixed to handled non-standard formatting
-  2021-11-02: Updated by satsuki-chan: Updated to new page design and updated status validation based on Amendment to Rule 23 rulings
-              https://chicagocouncil.org/illinois-supreme-court-amendment-to-rule-23/
+  2021-11-02: Updated by satsuki-chan: Updated to new page design.
 """
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -39,10 +38,7 @@ class Site(OpinionSiteLinear):
                 url = get_row_column_links(row, 1)
                 # Opinions/Rulings with citation ending in
                 # '-U' or '-U[X: a char]' are Unpublished
-                if citation[-2:] == "-U" or citation[-3:-1] == "-U":
-                    status = "Unpublished"
-                else:
-                    status = "Published"
+                status = "Unpublished" if "-U" in citation else "Published"
             except IndexError:
                 # If the opinion file's information is missing (as with
                 # links to withdrawn opinions), skip record
@@ -50,6 +46,9 @@ class Site(OpinionSiteLinear):
             docket = self.extract_docket(citation)
             if docket == "":
                 # If Docket not found in citation, skip record
+                logger.critical(
+                    f"Incomplete record: '{name}', {citation}, {date}"
+                )
                 continue
             self.cases.append(
                 {

@@ -4,8 +4,7 @@ Author: Krist Jin
 History:
   2013-08-18: Created.
   2014-07-17: Updated by mlr to remedy InsanityException.
-  2021-11-02: Updated by satsuki-chan: Updated to new page design and updated status validation based on Amendment to Rule 23 rulings
-              https://chicagocouncil.org/illinois-supreme-court-amendment-to-rule-23/
+  2021-11-02: Updated by satsuki-chan: Updated to new page design.
 """
 
 from juriscraper.opinions.united_states.state import ill
@@ -29,7 +28,16 @@ class Site(ill.Site):
             docket = search.group(2)
             docket = f"{district}-{docket[0:2]}-{docket[2:]}"
         else:
-            district = ""
-            docket = ""
-            logger.critical(f"Docket not found: {case_citation}")
+            # Alternate RegEx in case of typos
+            search = re.search(
+                r"(?:\d+\sIL\sApp\s)(\d+)(?:[st|d|th].*)(\d+)", case_citation
+            )
+            if search:
+                district = search.group(1)
+                docket = search.group(2)
+                docket = f"{district}-{docket[0:2]}-{docket[2:]}"
+            else:
+                district = ""
+                docket = ""
+                logger.critical(f"Docket not found: {case_citation}")
         return docket
