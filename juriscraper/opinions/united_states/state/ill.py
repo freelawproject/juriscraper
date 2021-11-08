@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 """
 Contact: webmaster@illinoiscourts.gov, 217-558-4490, 312-793-3250
- History:
-   2013-08-16: Created by Krist Jin
-   2014-12-02: Updated by Mike Lissner to remove the summaries code.
-   2016-02-26: Updated by arderyp: simplified thanks to new id attribute identifying decisions table
-   2016-03-27: Updated by arderyp: fixed to handled non-standard formatting
+History:
+  2013-08-16: Created by Krist Jin
+  2014-12-02: Updated by Mike Lissner to remove the summaries code.
+  2016-02-26: Updated by arderyp: simplified thanks to new id attribute identifying decisions table
+  2016-03-27: Updated by arderyp: fixed to handled non-standard formatting
+  2021-11-02: Updated by satsuki-chan: Updated to new page design and updated status validation based on Amendment to Rule 23 rulings
+              https://chicagocouncil.org/illinois-supreme-court-amendment-to-rule-23/
 """
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -35,8 +37,9 @@ class Site(OpinionSiteLinear):
                 citation = get_row_column_text(row, 2)
                 date = get_row_column_text(row, 3)
                 url = get_row_column_links(row, 1)
-                decision_type = get_row_column_text(row, 5)
-                if decision_type == "Rule 23":
+                # Opinions/Rulings with citation ending in
+                # '-U' or '-U[X: a char]' are Unpublished
+                if citation[-2:] == "-U" or citation[-3:-1] == "-U":
                     status = "Unpublished"
                 else:
                     status = "Published"
@@ -45,6 +48,9 @@ class Site(OpinionSiteLinear):
                 # links to withdrawn opinions), skip record
                 continue
             docket = self.extract_docket(citation)
+            if docket == "":
+                # If Docket not found in citation, skip record
+                continue
             self.cases.append(
                 {
                     "date": date,
@@ -57,11 +63,11 @@ class Site(OpinionSiteLinear):
             )
 
     def extract_docket(self, case_citation):
-        # RegEx: "{YYYY: year_4_digit} IL {docket_number}"
+        # RegEx: "{YYYY: year_4_digit} IL {docket_number}[|-U|-B|-C|-UB|-UC]"
         search = re.search(r"(?:[0-9]{4}\s+IL\s+)([0-9]+)", case_citation)
         if search:
             docket = search.group(1)
         else:
             docket = ""
-            logger.warning(f"Docket not found: {case_citation}")
+            logger.critical(f"Docket not found: {case_citation}")
         return docket
