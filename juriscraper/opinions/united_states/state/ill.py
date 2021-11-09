@@ -41,14 +41,16 @@ class Site(OpinionSiteLinear):
 
         Return: None
         """
-        for row in self.html.xpath("//table[@id='ctl04_gvDecisions']//tr"):
+        for row in self.html.xpath("//table[@id='ctl04_gvDecisions']/tr"):
             cells = row.xpath(".//td")
-            if len(cells) != 7:
-                continue
-            name = get_row_column_text(row, 1)
-            citation = get_row_column_text(row, 2)
-            date = get_row_column_text(row, 3)
 
+            # Don't parse pagination rows or headers or footers
+            if len(cells) != 7 or row.xpath(".//table"):
+                continue
+
+            name = get_row_column_text(row, 1)
+            date = get_row_column_text(row, 3)
+            citation = get_row_column_text(row, 2)
             try:
                 url = get_row_column_links(row, 1)
             except IndexError:
