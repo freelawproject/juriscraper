@@ -26,9 +26,9 @@ class Site(OpinionSiteLinear):
             "https://www.illinoiscourts.gov/top-level-opinions?type=supreme"
         )
         self.docket_re = (
-            r"\d{4} "
+            r"(?P<year>\d{4})? ?"
             r"(?P<court>(IL App)|(IL)) "
-            r"(\((?P<district>[1-5])\w{1,2}\))? ?"
+            r"(\(?(?P<district>[1-5])\w{1,2}\))? ?"
             r"(?P<docket>\d{5,10})-?U?[BCD]?"
         )
 
