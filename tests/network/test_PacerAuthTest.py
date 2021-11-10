@@ -18,33 +18,12 @@ class PacerAuthTest(unittest.TestCase):
             self.session = get_pacer_session()
             self.session.login()
             self.assertIsNotNone(self.session)
-            self.assertIsNotNone(
-                self.session.cookies.get(
-                    "PacerSession", None, domain=".uscourts.gov", path="/"
-                )
-            )
-
+            self.assertIsNotNone(self.session.cookies.get("nextGenCSO"))
         except PacerLoginException:
             self.fail("Could not log into PACER")
 
     def test_logging_in_bad_credentials(self):
-        # Make sure password is more than eight characters.
+        """Make sure if username/password is incorrect an exception is throw"""
         session = PacerSession(username="foofoo", password="barbarbar")
-        with self.assertRaises(PacerLoginException):
-            session.login()
-
-    def test_logging_short_password(self):
-        """If a short password is provided, do we throw an appropriate
-        exception?
-        """
-        session = PacerSession(username="foo", password="bar")
-        with self.assertRaises(PacerLoginException):
-            session.login()
-
-    def test_logging_short_username(self):
-        """If a username shorter than six characters is provided, do we
-        throw an appropriate exception?
-        """
-        session = PacerSession(username="foo", password="barbarbar")
         with self.assertRaises(PacerLoginException):
             session.login()
