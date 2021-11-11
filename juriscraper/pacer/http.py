@@ -230,16 +230,16 @@ class PacerSession(requests.Session):
 
     def login(self, url=None):
         """Attempt to log into the PACER site.
-        To access court records, the first step is to get an authentication token using your PACER username and password.
-
-        To get the authentication token, its necesary to send a POST request:
+        The first step is to get an authentication token using a PACER
+        username and password.
+        To get the authentication token, it's necessary to send a POST request:
         curl --location --request POST 'https://pacer.login.uscourts.gov/services/cso-auth' \
             --header 'Accept: application/json' \
             --header 'User-Agent: Juriscraper' \
             --header 'Content-Type: application/json' \
             --data-raw '{
-                "loginId": "mlissner.flp.dev",
-                "password": "XBb#CAHAtiDnl90xi0h^4eHj1$^eLO7QfGN0gzWcl%a$g"
+                "loginId": "USERNAME",
+                "password": "PASSWORD"
             }'
 
         All documentation for PACER Authentication API User Guide can be found here:
@@ -251,7 +251,7 @@ class PacerSession(requests.Session):
         self.cookies.clear()
         if url is None:
             url = self.LOGIN_URL
-        # By default, it's assumed that user is a filer and the request body includes the redaction flag set to 1
+        # By default, it's assumed that the user is a filer. Redaction flag is set to 1
         data = {
             "loginId": self.username,
             "password": self.password,
@@ -295,7 +295,8 @@ class PacerSession(requests.Session):
         # Set up cookie with 'nextGenCSO' token (128-byte string of characters)
         session_cookies = requests.cookies.RequestsCookieJar()
         session_cookies.set("NextGenCSO", response.get("nextGenCSO"))
-        # If optional client code information is included, 'PacerClientCode' cookie should be set
+        # If optional client code information is included,
+        # 'PacerClientCode' cookie should be set
         if self.client_code:
             session_cookies.set("PacerClientCode", self.client_code)
         self.cookies = session_cookies
@@ -322,7 +323,7 @@ class PacerSession(requests.Session):
 
         if self.username and self.password:
             logger.info(
-                "Invalid/expired PACER session. Establishing new " "session."
+                "Invalid/expired PACER session. Establishing new session."
             )
             self.login()
             return True
