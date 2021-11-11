@@ -283,6 +283,7 @@ class PacerSession(requests.Session):
         # User logged, but with pending actions for their account
         if (
             response.get("loginResult") == "0"
+            and response.get("errorDescription") != None
             and response.get("errorDescription") != ""
         ):
             logger.info(response.get("errorDescription"))
@@ -293,7 +294,7 @@ class PacerSession(requests.Session):
             )
         # Set up cookie with 'nextGenCSO' token (128-byte string of characters)
         session_cookies = requests.cookies.RequestsCookieJar()
-        session_cookies.set("nextGenCSO", response.get("nextGenCSO"))
+        session_cookies.set("NextGenCSO", response.get("nextGenCSO"))
         # If optional client code information is included, 'PacerClientCode' cookie should be set
         if self.client_code:
             session_cookies.set("PacerClientCode", self.client_code)
