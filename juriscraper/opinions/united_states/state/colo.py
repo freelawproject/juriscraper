@@ -164,7 +164,7 @@ class Site(OpinionSite):
                 continue
             name = self._extract_name_from_text(text)
             if name == "":
-                # COBAR Opinion Announcement, skip
+                # COBAR Opinion Announcement, skip it
                 continue
             url = self._extract_url_from_anchor(anchor)
 
@@ -198,10 +198,11 @@ class Site(OpinionSite):
     def _extract_docket_from_text(cls, text):
         text = text.strip()
         try:
-            # match = re.match(cls.regex, text).group(6)   ### debug
-            match = re.match(cls.regex, text).group(2)
+            match = re.match(cls.regex, text).group(6)  ### debug
+            # match = re.match(cls.regex, text).group(2)
             # TODO: Check for multiple dockets and cases name in the same file
             # Ex: 2021 CO 65 No. 20SC261, Harvey v. Centura, No. 20SC784, Manzanares v. Centura
+            # Ex: 2021 CO 43, Nos. 20SC365 & 20SC367, Board of Country Commissioners v. Colorado Department of Public Health and Environment
         except:
             raise InsanityException(f'Unable to parse docket from "{text}"')
         dockets_raw = match.rstrip(".").replace("&", " ").replace(",", " ")
@@ -213,8 +214,8 @@ class Site(OpinionSite):
         text = text.strip()
         try:
             # breakpoint()   ### debug
-            # match = re.match(cls.regex, text).group(12)   ### debug
-            match = re.match(cls.regex, text).group(6)
+            match = re.match(cls.regex, text).group(12)  ### debug
+            # match = re.match(cls.regex, text).group(6)
         except:
             raise InsanityException(f'Unable to parse case name from "{text}"')
         return match.strip().rstrip(".")
@@ -329,11 +330,19 @@ class Site(OpinionSite):
         """Return true is link text is parsible date"""
         try:
             convert_date_string(text)
-            # TODO: Add validation for court's announcements
-            # Ex: Colorado Supreme Court Announcements 9.27.2021
             return True
         except:
             pass
+        # Alternate names for links to COBAR Opinion Announcements
+        # Ex: Colorado Supreme Court Announcements 9.27.2021
+        announcements = [
+            "colorado supreme court announcements",
+            "supreme court announcements",
+            "court announcements",
+        ]
+        for announ_link in announcements:
+            if announ_link in text.lower():
+                return True
         return False
 
     def is_url_pdf(self, url):
