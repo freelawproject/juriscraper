@@ -1,9 +1,7 @@
 #!/usr/bin/env python
-# coding=utf-8
-
+# -*- coding: utf-8 -*-
 
 import unittest
-
 from juriscraper.lib.exceptions import PacerLoginException
 from juriscraper.pacer.http import PacerSession
 from tests.network import SKIP_IF_NO_PACER_LOGIN, get_pacer_session
@@ -18,7 +16,11 @@ class PacerAuthTest(unittest.TestCase):
             self.session = get_pacer_session()
             self.session.login()
             self.assertIsNotNone(self.session)
-            self.assertIsNotNone(self.session.cookies.get("nextGenCSO"))
+            self.assertIsNotNone(
+                self.session.cookies.get(
+                    "NextGenCSO", None, domain=".uscourts.gov", path="/"
+                )
+            )
         except PacerLoginException:
             self.fail("Could not log into PACER")
 

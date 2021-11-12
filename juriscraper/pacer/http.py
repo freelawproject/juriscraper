@@ -1,5 +1,4 @@
 import re
-
 import requests
 from requests.packages.urllib3 import exceptions
 import json
@@ -79,7 +78,10 @@ class PacerSession(requests.Session):
     ):
         """
         Instantiate a new PACER API Session with some Juriscraper defaults
-        :param pacer_token: a PACER_SESSION token value
+        :param cookies: an optional RequestsCookieJar object with cookies for the session
+        :param username: a PACER account username
+        :param password: a PACER account password
+        :param client_code: an optional PACER client code for the session
         """
         super(PacerSession, self).__init__()
         self.headers["User-Agent"] = "Juriscraper"
@@ -272,33 +274,43 @@ class PacerSession(requests.Session):
             data=json.dumps(data),
         )
 
-        response = login_post_r.json()
+        response_json = login_post_r.json()
         # 'loginResult': '0', user successfully logged; '1', user not logged
         if (
-            response.get("loginResult") == None
-            or response.get("loginResult") == "1"
+            response_json.get("loginResult") == None
+            or response_json.get("loginResult") == "1"
         ):
-            message = f"Invalid username/password: {response.get('errorDescription')}"
+            message = f"Invalid username/password: {response_json.get('errorDescription')}"
             raise PacerLoginException(message)
         # User logged, but with pending actions for their account
         if (
-            response.get("loginResult") == "0"
-            and response.get("errorDescription") != None
-            and response.get("errorDescription") != ""
+            response_json.get("loginResult") == "0"
+            and response_json.get("errorDescription") != None
+            and response_json.get("errorDescription") != ""
         ):
-            logger.info(response.get("errorDescription"))
+            logger.info(response_json.get("errorDescription"))
 
-        if not response.get("nextGenCSO"):
+        if not response_json.get("nextGenCSO"):
             raise PacerLoginException(
                 "Did not get NextGenCSO cookie when attempting PACER login."
             )
         # Set up cookie with 'nextGenCSO' token (128-byte string of characters)
         session_cookies = requests.cookies.RequestsCookieJar()
-        session_cookies.set("NextGenCSO", response.get("nextGenCSO"))
+        session_cookies.set(
+            "NextGenCSO",
+            response_json.get("nextGenCSO"),
+            domain=".uscourts.gov",
+            path="/",
+        )
         # If optional client code information is included,
         # 'PacerClientCode' cookie should be set
         if self.client_code:
-            session_cookies.set("PacerClientCode", self.client_code)
+            session_cookies.set(
+                "PacerClientCode",
+                self.client_code,
+                domain=".uscourts.gov",
+                path="/",
+            )
         self.cookies = session_cookies
         logger.info("New PACER session established.")
 
