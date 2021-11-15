@@ -28,8 +28,8 @@ class Site(OpinionSite):
 
     # I'm certain this can be done more professionally,
     # but I (arderyp) am not gifted at the art of regex
-    regex = r"(?:No.\s)?(\d+)\s+(\w+)(?:\s+)?(\d+M?\.?)\s*((Nos?\.?\s+)?((\w{5,8}\.?)(((\s+\&|\,)\s+\w{5,8})+)?))\.?(\s+)?(.*)"  ### debug
-    # regex = r"(\d+\s+\w+\s+\d+)(?:\.?\s*Nos?\.?\s*)((\w{5,8})|(\w{5,8}(?:\s*&\s*\w{5,8})))(?:(\.|,)\s+)(.*)"
+    # regex = r"(?:No.\s)?(\d+)\s+(\w+)(?:\s+)?(\d+M?\.?)\s*((Nos?\.?\s+)?((\w{5,8}\.?)(((\s+\&|\,)\s+\w{5,8})+)?))\.?(\s+)?(.*)"  ### debug
+    regex = r"(\d+\s+\w+\s+\d+)(?:\.?,?\s*Nos?\.?\s*)((\w{5,8})|(\w{5,8}\s&\s\w{5,8}))(?:(\.|,)\s+)(.*)"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -163,9 +163,6 @@ class Site(OpinionSite):
                 # Skip them.
                 continue
             name = self._extract_name_from_text(text)
-            if name == "":
-                # COBAR Opinion Announcement, skip it
-                continue
             url = self._extract_url_from_anchor(anchor)
 
             # For whatever insane reason, some pages provide direct links
@@ -198,9 +195,10 @@ class Site(OpinionSite):
     def _extract_docket_from_text(cls, text):
         text = text.strip()
         try:
-            match = re.match(cls.regex, text).group(6)  ### debug
-            # match = re.match(cls.regex, text).group(2)
+            # match = re.match(cls.regex, text).group(6)  ### debug
+            match = re.match(cls.regex, text).group(2)
             # TODO: Check for multiple dockets and cases name in the same file
+            # Do a separete regex to seach for dockets
             # Ex: 2021 CO 65 No. 20SC261, Harvey v. Centura, No. 20SC784, Manzanares v. Centura
             # Ex: 2021 CO 43, Nos. 20SC365 & 20SC367, Board of Country Commissioners v. Colorado Department of Public Health and Environment
         except:
@@ -214,14 +212,23 @@ class Site(OpinionSite):
         text = text.strip()
         try:
             # breakpoint()   ### debug
-            match = re.match(cls.regex, text).group(12)  ### debug
-            # match = re.match(cls.regex, text).group(6)
+            # match = re.match(cls.regex, text).group(12)  ### debug
+            match = re.match(cls.regex, text).group(6)
+            # TODO: Check for multiple dockets and cases name in the same file
+            # Do a separete regex to seach for case names
+            # Ex: 2021 CO 65 No. 20SC261, Harvey v. Centura, No. 20SC784, Manzanares v. Centura
+            # Ex: 2021 CO 43, Nos. 20SC365 & 20SC367, Board of Country Commissioners v. Colorado Department of Public Health and Environment
         except:
             raise InsanityException(f'Unable to parse case name from "{text}"')
         return match.strip().rstrip(".")
 
     @classmethod
     def _extract_citation_from_text(cls, text):
+        # TODO: Fix citation extraction
+        # fails because of ', ' at the end or name extraction fix
+        # Do a separete regex to seach for citations
+        # Ex. neutral_citations: "2021 CO 43, No"
+        # Ex. neutral_citations: "2021 CO 36 No"
         return text.lstrip("No.").split(".")[0].strip()
 
     @classmethod
