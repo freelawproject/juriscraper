@@ -23,10 +23,10 @@ class Site(OpinionSite):
                 title_string = p_element.xpath("/p/text()")[0]
                 case_names.append(title_string)
             except:
-                logger.warning(
+                logger.error(f"Error while parsing case name: {title_string}")
+                raise InsanityException(
                     f"Error while parsing case name: {title_string}"
                 )
-                case_names.append(title_string)
         return case_names
 
     def _get_download_urls(self):
@@ -48,9 +48,7 @@ class Site(OpinionSite):
                     )
                 )
             except:
-                logger.critical(
-                    f"Error while parsing case date: {date_string}"
-                )
+                logger.error(f"Error while parsing case date: {date_string}")
                 raise InsanityException(
                     f"Error while parsing case date: {date_string}"
                 )
@@ -59,7 +57,7 @@ class Site(OpinionSite):
     def _get_docket_numbers(self):
         return [
             e.split(" - ")[0].split(":")[1]
-            for e in self.html.xpath("//item/description/text()[1]")
+            for e in self.html.xpath("//item/description/text()")
         ]
 
     def _get_precedential_statuses(self):
