@@ -285,8 +285,7 @@ class PacerSession(requests.Session):
         # User logged, but with pending actions for their account
         if (
             response_json.get("loginResult") == "0"
-            and response_json.get("errorDescription") != None
-            and response_json.get("errorDescription") != ""
+            and response_json.get("errorDescription")
         ):
             logger.info(response_json.get("errorDescription"))
 
