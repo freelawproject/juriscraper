@@ -197,7 +197,13 @@ def get_nonce_from_form(r):
     :returns A nonce object that can be used to query PACER or None, if no
     nonce can be found.
     """
-    tree = html.fromstring(r.text)
+    try:
+        tree = html.fromstring(r.text)
+    except ValueError:
+        # This usually happens when we are blocked from a court.
+        raise ParsingException(
+            "Got XML when expecting HTML and cannot parse it."
+        )
     form_attrs = tree.xpath("//form//@action")
     for attr in form_attrs:
         # The action attr will be a value like:
