@@ -1,9 +1,7 @@
 #!/usr/bin/env python
-# coding=utf-8
-
+# -*- coding: utf-8 -*-
 
 import unittest
-
 from juriscraper.lib.exceptions import PacerLoginException
 from juriscraper.pacer.http import PacerSession
 from tests.network import SKIP_IF_NO_PACER_LOGIN, get_pacer_session
@@ -20,31 +18,14 @@ class PacerAuthTest(unittest.TestCase):
             self.assertIsNotNone(self.session)
             self.assertIsNotNone(
                 self.session.cookies.get(
-                    "PacerSession", None, domain=".uscourts.gov", path="/"
+                    "NextGenCSO", None, domain=".uscourts.gov", path="/"
                 )
             )
-
         except PacerLoginException:
             self.fail("Could not log into PACER")
 
     def test_logging_in_bad_credentials(self):
-        # Make sure password is more than eight characters.
+        """Make sure if username/password is incorrect an exception is throw"""
         session = PacerSession(username="foofoo", password="barbarbar")
-        with self.assertRaises(PacerLoginException):
-            session.login()
-
-    def test_logging_short_password(self):
-        """If a short password is provided, do we throw an appropriate
-        exception?
-        """
-        session = PacerSession(username="foo", password="bar")
-        with self.assertRaises(PacerLoginException):
-            session.login()
-
-    def test_logging_short_username(self):
-        """If a username shorter than six characters is provided, do we
-        throw an appropriate exception?
-        """
-        session = PacerSession(username="foo", password="barbarbar")
         with self.assertRaises(PacerLoginException):
             session.login()
