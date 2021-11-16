@@ -283,9 +283,8 @@ class PacerSession(requests.Session):
             message = f"Invalid username/password: {response_json.get('errorDescription')}"
             raise PacerLoginException(message)
         # User logged, but with pending actions for their account
-        if (
-            response_json.get("loginResult") == "0"
-            and response_json.get("errorDescription")
+        if response_json.get("loginResult") == "0" and response_json.get(
+            "errorDescription"
         ):
             logger.info(response_json.get("errorDescription"))
 
