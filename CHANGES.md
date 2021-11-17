@@ -12,10 +12,26 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
-- 2.3.3, 2020-11-24 - Fix remote selenium connection code
+- 2.3.19, 2021-11-16 - Fix PA, IL. Update PACER to use new auth API. Update geonames cache with latest population data. Throw exception in Free Opinions report when IP address on blocklist.
 
 ## Past
 
+- 2.3.18, 2021-10-18 - Fix GA, CA9, CA10 Oral args
+- 2.3.17, 2021-08-17 - Add anonymizing function for PACER dockets
+- 2.3.16 - Yanked
+- 2.3.15, 2021-07-19 - Fix PACER downloaders
+- 2.3.14 - Yanked
+- 2.3.13, 2021-06-18 - Fix typing
+- 2.3.12, 2021-06-18 - Add PACER email parsers
+- 2.3.11, 2021-05-02 - Fix PACER auth function
+- 2.3.10, 2021-04-13 - Simplify harmonize function
+- 2.3.9, 2021-04-12 - Simplify case name cleanup util
+- 2.3.8, 2021-04-01 - More ME fixes
+- 2.3.7, 2021-04-01 - Add backscrapers scrapers for ME
+- 2.3.6, 2021-03-05 - Clean up deprecation warnings
+- 2.3.5, 2021-03-05 - Fix pypi
+- 2.3.4, 2021-02-09 - Fix IA scraper
+- 2.3.3, 2020-11-24 - Fix remote selenium connection code
 - 2.3.2, 2020-11-06 - Remove html_unescape helper method. Replace with calls 
   directly to unescape. This fixes [#354](https://github.com/freelawproject/juriscraper/issues/354).
 - 2.3.1, 2020-11-06 - Fix for connection to Selenium via Firefox
@@ -58,21 +74,21 @@ Releases are also tagged in git, if that's helpful.
 - 1.9.* - Re-organization, simplification, and standardization of PACER classes.
 - 1.8.* - Standardization of string fields in PACER objects so they return the empty string when they have no value instead of returning None sometimes and the empty string others. (This follows Django conventions.)
 - 1.7.* - Adds support for hidden PACER APIs.
--  1.6.* - Adds automatic relogin code to PACER sessions, with reorganization of old login APIs.
--  1.5.* - Adds support for querying and parsing PACER dockets.
--  1.4.* - Python 3 compatibility (this was later dropped due to dependencies).
--  1.3.* - Adds support for scraping some parts of PACER.
--  1.2.* - Continued improvements.
--  1.1.* - Major code reorganization and first release on the Python Package Index (PyPi)
--  1.0 - Support opinions from for all possible federal bankruptcy
+- 1.6.* - Adds automatic relogin code to PACER sessions, with reorganization of old login APIs.
+- 1.5.* - Adds support for querying and parsing PACER dockets.
+- 1.4.* - Python 3 compatibility (this was later dropped due to dependencies).
+- 1.3.* - Adds support for scraping some parts of PACER.
+- 1.2.* - Continued improvements.
+- 1.1.* - Major code reorganization and first release on the Python Package Index (PyPi)
+- 1.0 - Support opinions from for all possible federal bankruptcy
    appellate panels (9th and 10th Cir.)
--  0.9 - Supports all state courts of last resort (typically the
+- 0.9 - Supports all state courts of last resort (typically the
    "Supreme" court)
--  0.8 - Supports oral arguments for all possible Federal Circuit
+- 0.8 - Supports oral arguments for all possible Federal Circuit
    courts.
--  0.2 - Supports opinions from all federal courts of special
+- 0.2 - Supports opinions from all federal courts of special
    jurisdiction (Veterans, Tax, etc.)
--  0.1 - Supports opinions from all 13 Federal Circuit courts and the
+- 0.1 - Supports opinions from all 13 Federal Circuit courts and the
    U.S. Supreme Court
 
 
