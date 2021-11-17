@@ -6,10 +6,10 @@ from ..lib.string_utils import clean_string, convert_date_string, harmonize
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
 from .utils import (
-    get_pacer_doc_id_from_doc1_url,
     get_pacer_case_id_from_doc1_url,
-    get_pacer_seq_no_from_doc1_url,
+    get_pacer_doc_id_from_doc1_url,
     get_pacer_magic_num_from_doc1_url,
+    get_pacer_seq_no_from_doc1_url,
 )
 
 
@@ -18,7 +18,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
     def __init__(self, court_id):
         self.court_id = court_id
-        super(NotificationEmail, self).__init__(court_id)
+        super().__init__(court_id)
 
     @property
     def data(self):
@@ -46,7 +46,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :param label: The cell label
         :returns: The Xpath to the next cell
         """
-        return '//td[contains(., "%s:")]/following-sibling::td[1]' % (label,)
+        return f'//td[contains(., "{label}:")]/following-sibling::td[1]'
 
     def _get_case_name(self) -> str:
         """Gets a cleaned case name from the email text
@@ -56,7 +56,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         path = self._sibling_path("Case Name")
         case_name = self._xpath_text_0(self.tree, path)
         if not case_name:
-            case_name = self._xpath_text_0(self.tree, path + "/p")
+            case_name = self._xpath_text_0(self.tree, f"{path}/p")
             if not case_name:
                 case_name = "Unknown Case Title"
         return clean_string(harmonize(case_name))
@@ -68,11 +68,11 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         """
         path = self._sibling_path("Case Number")
         docket_number = self._parse_docket_number_strs(
-            self.tree.xpath(path + "/a/text()")
+            self.tree.xpath(f"{path}/a/text()")
         )
         if not docket_number:
             docket_number = self._parse_docket_number_strs(
-                self.tree.xpath(path + "/p/a/text()")
+                self.tree.xpath(f"{path}/p/a/text()")
             )
         return docket_number
 
@@ -82,7 +82,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: Date filed as date object
         """
         date_filed = re.search(
-            "filed\son\s([\d|\/]*)",
+            r"filed\son\s([\d|\/]*)",
             clean_string(self.tree.text_content()),
             flags=re.IGNORECASE,
         )
@@ -106,7 +106,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: Anchor tag, if it's found
         """
         try:
-            path = self._sibling_path("Document Number") + "//a"
+            path = f"{self._sibling_path('Document Number')}//a"
             return self.tree.xpath(path)[0]
         except IndexError:
             return None
@@ -117,11 +117,11 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: Cleaned docket text
         """
         path = '//strong[contains(., "Docket Text:")]/following-sibling::'
-        node = self.tree.xpath(path + "font[1]/b/text()")
+        node = self.tree.xpath(f"{path}font[1]/b/text()")
         if len(node):
             return clean_string(node[0])
 
-        node = self.tree.xpath(path + "b[1]/span/text()")
+        node = self.tree.xpath(f"{path}b[1]/span/text()")
         if len(node):
             return clean_string(node[0])
 
@@ -216,7 +216,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 "",
             ),
             (
-                re.escape(end_point) + r".*$",
+                f"{re.escape(end_point)}.*$",
                 "",
             ),
         ]
@@ -242,7 +242,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 ):
                     email_recipients.append({"name": recipient_part})
                 else:
-                    last_recipient["name"] += " %s" % recipient_part
+                    last_recipient["name"] += f" {recipient_part}"
         return list(
             filter(
                 lambda recipient: recipient.get("email_addresses", False)
@@ -257,8 +257,8 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: List of email recipients with names and email addresses
         """
         path = '//b[contains(., "Notice has been electronically mailed to")]/following-sibling::'
-        recipient_lines = self.tree.xpath(path + "text()")
-        link_lines = self.tree.xpath(path + "a")
+        recipient_lines = self.tree.xpath(f"{path}text()")
+        link_lines = self.tree.xpath(f"{path}a")
         if len(link_lines):
             return self._get_email_recipients_with_links(
                 self.tree.xpath(
@@ -290,7 +290,7 @@ class S3NotificationEmail(NotificationEmail):
                 combined += line
                 last_line_match = False
             else:
-                combined += " " + line
+                combined += f" {line}"
         return combined
 
     def _slice_points(self, text):

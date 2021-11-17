@@ -10,18 +10,19 @@ History:
                great, but now it's terribly frustrating.
 """
 from datetime import date, datetime
+
 from lxml import html
 from lxml.html import tostring
 
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 from juriscraper.lib.string_utils import clean_if_py3
+from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 
 
 class Site(OpinionSiteWebDriven):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         # Changing the page # in the url will get additional pages
         # Changing the source # (0-13) will get the 12 Courts of Appeals and
         # the Court of Claims. We do not use the "all sources" link because a
@@ -40,9 +41,9 @@ class Site(OpinionSiteWebDriven):
         scrape without using Selenium.
         """
         if self.test_mode_enabled():
-            return super(Site, self)._download(request_dict=request_dict)
+            return super()._download(request_dict=request_dict)
 
-        logger.info("Now downloading case page at: %s" % self.url)
+        logger.info(f"Now downloading case page at: {self.url}")
         self.initiate_webdriven_session()
 
         # Court drop down...
@@ -59,7 +60,7 @@ class Site(OpinionSiteWebDriven):
         yearDropdownPaths = [
             yearDropDownPath.format(id=yearDropDownId),  # Legacy examples
             yearDropDownPath.format(
-                id=yearDropDownId + "Min"
+                id=f"{yearDropDownId}Min"
             ),  # current (2017)
         ]
         self.find_element_by_xpath(" | ".join(yearDropdownPaths)).click()
@@ -79,7 +80,7 @@ class Site(OpinionSiteWebDriven):
         return html_tree
 
     def _get_case_names(self):
-        path = "{base}/preceding::td[1]".format(base=self.base_path)
+        path = f"{self.base_path}/preceding::td[1]"
         case_names = []
         for e in self.html.xpath(path):
             case_names.append(
@@ -88,21 +89,19 @@ class Site(OpinionSiteWebDriven):
         return case_names
 
     def _get_download_urls(self):
-        path = "{base}/preceding::td[1]//a[1]/@href".format(
-            base=self.base_path
-        )
+        path = f"{self.base_path}/preceding::td[1]//a[1]/@href"
         return list(self.html.xpath(path))
 
     def _get_docket_numbers(self):
-        path = "{base}//text()".format(base=self.base_path)
+        path = f"{self.base_path}//text()"
         return list(self.html.xpath(path))
 
     def _get_summaries(self):
-        path = "{base}/following::td[1]//text()".format(base=self.base_path)
+        path = f"{self.base_path}/following::td[1]//text()"
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
-        path = "{base}/following::td[4]//text()".format(base=self.base_path)
+        path = f"{self.base_path}/following::td[4]//text()"
         dates = []
         for s in self.html.xpath(path):
             dates.append(
@@ -111,14 +110,14 @@ class Site(OpinionSiteWebDriven):
         return dates
 
     def _get_neutral_citations(self):
-        path = "{base}/following::td[6]//text()".format(base=self.base_path)
+        path = f"{self.base_path}/following::td[6]//text()"
         return [s.replace("-", " ") for s in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
 
     def _get_judges(self):
-        path = "{base}/following::td[2]".format(base=self.base_path)
+        path = f"{self.base_path}/following::td[2]"
         return list(map(self._return_judge, self.html.xpath(path)))
 
     @staticmethod

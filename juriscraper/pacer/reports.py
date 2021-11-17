@@ -1,13 +1,10 @@
-# coding=utf-8
 import re
 from typing import Tuple
+from urllib.parse import urljoin
 
-import six
 from lxml.html import HtmlElement
 from requests import Response
-from six.moves.urllib.parse import urljoin
 
-from .utils import is_pdf, make_doc1_url
 from ..lib.html_utils import (
     clean_html,
     fix_links_in_lxml_tree,
@@ -17,6 +14,7 @@ from ..lib.html_utils import (
     strip_bad_html_tags_insecure,
 )
 from ..lib.log_tools import make_default_logger
+from .utils import is_pdf, make_doc1_url
 
 logger = make_default_logger()
 
@@ -32,10 +30,10 @@ def re_xpath(self, path):
 HtmlElement.re_xpath = re_xpath
 
 
-class BaseReport(object):
+class BaseReport:
     """A base report for working with pages on PACER."""
 
-    REDIRECT_REGEX = re.compile('window\.\s*?location\s*=\s*"(.*)"\s*;')
+    REDIRECT_REGEX = re.compile(r'window\.\s*?location\s*=\s*"(.*)"\s*;')
 
     # Subclasses should override PATH
     PATH = ""
@@ -45,7 +43,7 @@ class BaseReport(object):
     # strings below are converted to \s whitespace searches using regexes.
     ERROR_STRINGS = [
         "MetaMask.*web3",
-        'console\.log\(".*CloudMask',
+        r'console\.log\(".*CloudMask',
         "Drumpf",
     ]
 
@@ -59,12 +57,9 @@ class BaseReport(object):
     @property
     def url(self):
         if self.court_id == "psc":
-            return "https://dcecf.psc.uscourts.gov/%s" % self.PATH
+            return f"https://dcecf.psc.uscourts.gov/{self.PATH}"
         else:
-            return "https://ecf.%s.uscourts.gov/%s" % (
-                self.court_id,
-                self.PATH,
-            )
+            return f"https://ecf.{self.court_id}.uscourts.gov/{self.PATH}"
 
     def query(self, *args, **kwargs):
         """Query PACER and set self.response with the response."""
@@ -93,8 +88,8 @@ class BaseReport(object):
         :return: None
         """
         assert isinstance(
-            text, six.text_type
-        ), "Input must be unicode, not %s" % type(text)
+            text, str
+        ), f"Input must be unicode, not {type(text)}"
         text = clean_html(text)
         self.check_validity(text)
         if self.is_valid:
@@ -110,7 +105,7 @@ class BaseReport(object):
         """
         for error_string in self.ERROR_STRINGS:
             error_string_re = re.compile(
-                "\s+".join(error_string.split()), flags=re.I
+                r"\s+".join(error_string.split()), flags=re.I
             )
             if error_string_re.search(text):
                 self.is_valid = False
@@ -170,7 +165,7 @@ class BaseReport(object):
             data["magic_num"] = pacer_magic_num
 
         timeout = (60, 300)
-        logger.info("POSTing URL: %s with params: %s" % (url, data))
+        logger.info(f"POSTing URL: {url} with params: {data}")
         r = self.session.post(url, data=data, timeout=timeout)
         return r, url
 

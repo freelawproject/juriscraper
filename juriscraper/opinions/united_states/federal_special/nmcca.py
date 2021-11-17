@@ -6,13 +6,13 @@ History:
     15 Sep 2014: Created by Jon Andersen
 """
 
+from juriscraper.lib.string_utils import convert_date_string, titlecase
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import titlecase, convert_date_string
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = "http://www.jag.navy.mil/courts/opinion_archive.htm"
         self.court_id = self.__module__
         self.back_scrape_iterable = list(range(2013, 2004 - 1, -1))

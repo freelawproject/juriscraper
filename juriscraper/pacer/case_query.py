@@ -7,13 +7,11 @@ import pprint
 import re
 import sys
 
-from six.moves import range
-
-from .docket_report import BaseDocketReport
-from .reports import BaseReport
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import clean_string, force_unicode, harmonize
 from ..lib.utils import clean_court_object
+from .docket_report import BaseDocketReport
+from .reports import BaseReport
 
 logger = make_default_logger()
 
@@ -43,7 +41,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
 
     def parse(self):
         self._clear_caches()
-        super(CaseQuery, self).parse()
+        super().parse()
 
     @property
     def metadata(self):
@@ -183,10 +181,10 @@ class CaseQuery(BaseDocketReport, BaseReport):
                         data["related_cases_str"] = related_re.group(1)
                     else:
                         raise AssertionError(
-                            "Unable to match judge row: %s" % line
+                            f"Unable to match judge row: {line}"
                         )
                 else:
-                    raise AssertionError("Line with no boldface: '%s'" % line)
+                    raise AssertionError(f"Line with no boldface: '{line}'")
             for bold in bolds:
                 data.update(
                     self._get_label_value_pair(bold, True, field_names)
@@ -255,9 +253,9 @@ class CaseQuery(BaseDocketReport, BaseReport):
         assert (
             self.session is not None
         ), "session attribute of CaseQuery report cannot be None."
-        assert bool(pacer_case_id), (
-            "pacer_case_id must be truthy, not '%s'" % pacer_case_id
-        )
+        assert bool(
+            pacer_case_id
+        ), f"pacer_case_id must be truthy, not '{pacer_case_id}'"
         params = {
             "UserType": "",
             "all_case_ids": pacer_case_id,
@@ -276,7 +274,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
             pacer_case_id,
             self.court_id,
         )
-        self.response = self.session.post(self.url + "?1-L_1_0-1", data=params)
+        self.response = self.session.post(f"{self.url}?1-L_1_0-1", data=params)
         self.parse()
 
     @property
@@ -303,8 +301,8 @@ def _main():
     # parsed value appears in output
     report = CaseQuery("mad")
     filepath = sys.argv[1]
-    print("Parsing HTML file at %s" % filepath)
-    with open(filepath, "r") as f:
+    print(f"Parsing HTML file at {filepath}")
+    with open(filepath) as f:
         text = f.read().decode("utf-8")
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)

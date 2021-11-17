@@ -4,9 +4,10 @@ Court Short Name: Maryland Attorney General
 """
 
 from datetime import date
+from time import sleep
+
 from lxml import html
 from selenium.common.exceptions import NoSuchElementException
-from time import sleep
 
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
@@ -25,11 +26,11 @@ class Site(OpinionSiteWebDriven):
     """
 
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self._set_date_properties()
         self.domain = "http://www.marylandattorneygeneral.gov"
-        self.url = "%s/Pages/Opinions/index.aspx" % self.domain
+        self.url = f"{self.domain}/Pages/Opinions/index.aspx"
         self.back_scrape_iterable = list(range(1993, self.year + 1))
         self.parent_path_base = '//tbody/tr/td[contains(./text(), "%d")]'
         self.parent_path = self.parent_path_base % self.year
@@ -49,7 +50,7 @@ class Site(OpinionSiteWebDriven):
             # current year on page, SO no js to load. Return
             # regular page html and extract 0 cases because
             # nothing there
-            return [super(Site, self)._download(request_dict)]
+            return [super()._download(request_dict)]
         return trees
 
     def _download_backwards(self, year) -> None:
@@ -93,7 +94,7 @@ class Site(OpinionSiteWebDriven):
 
     def _get_download_urls(self) -> list:
         urls = []
-        path = (self.cell_path % 4) + "/a/@href"
+        path = f"{self.cell_path % 4}/a/@href"
         for tree in self.html:
             urls.extend([href for href in tree.xpath(path)])
         return urls
@@ -119,7 +120,7 @@ class Site(OpinionSiteWebDriven):
 
         # Find and activate the opinion drop-down for year
         try:
-            path = "%s/a" % self.parent_path
+            path = f"{self.parent_path}/a"
             date_anchor = self.find_element_by_xpath(path)
         except NoSuchElementException:
             # Year has no opinions drop-down on page

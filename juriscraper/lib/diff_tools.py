@@ -1,13 +1,12 @@
 import difflib
-import string
-
 import re
+import string
 
 from .string_utils import harmonize
 
 STOP_WORDS = (
-    "a|an|and|as|at|but|by|en|etc|for|if|in|is|of|on|or|the|to|v\.?|via|"
-    "vs\.?|et|al|appellants?|defendants?|administrator|"
+    r"a|an|and|as|at|but|by|en|etc|for|if|in|is|of|on|or|the|to|v\.?|via|"
+    r"vs\.?|et|al|appellants?|defendants?|administrator|"
     "plaintiffs?|error|others|against|ex|parte|complainants?|original|"
     "claimants?|devisee|executrix|executor|comm(issione)?r"
 )

@@ -23,7 +23,7 @@ _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
   })();
 <!--End Google Analytics-->
 
-  
+
   (function() {
     var cx = '012070463754947639787:m-6q-zpg4sy';
     var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
@@ -39,20 +39,20 @@ _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
 function autoFocus()
 {
 	var url = location.href;
-	
+
 	location.href = "#login";
-	
+
 	history.replaceState(null,null,url);
 	//alert(select.selectedIndex.value);
-	
+
 	//window.location.hash = 'div2';
 }
 
 //JPJ - 04/21/2015 - calls AJAX Post Request
-function makePOSTRequest(url, parameters) 
-{ 
+function makePOSTRequest(url, parameters)
+{
       //document.body.style.cursor = "wait";
-   
+
       http_request = false;
       if (window.XMLHttpRequest) { // Mozilla, Safari,...
          http_request = new XMLHttpRequest();
@@ -74,7 +74,7 @@ function makePOSTRequest(url, parameters)
          alert('Cannot create XMLHTTP instance');
          return false;
       }
-      
+
       http_request.onreadystatechange = alertContents;
       http_request.open('POST', url, true);
       http_request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -83,19 +83,19 @@ function makePOSTRequest(url, parameters)
       http_request.send(parameters);
    }
 
-//JPJ - 04/21/2015 - checks to make sure the call responds and is in the ready state..calls alertMethod  
-function alertContents() 
+//JPJ - 04/21/2015 - checks to make sure the call responds and is in the ready state..calls alertMethod
+function alertContents()
 {
-    if (http_request.readyState == 4) 
+    if (http_request.readyState == 4)
      {
-        if (http_request.status == 200) 
+        if (http_request.status == 200)
           {
             //alert(http_request.responseText);
             result = decodeURI(http_request.responseText);
             alertMethod(result);
-            // alert('result '+result);                
+            // alert('result '+result);
           // document.body.style.cursor = "default";
-          } 
+          }
      }
 }
 
@@ -109,58 +109,58 @@ function alertMethod(aResult)
   var resultDiv = rArray[1];
   var sw = parseInt(rArray[0]);
   //alert(sw);
-  
+
  switch(sw)
  {
 
-  case 1:	 
+  case 1:
 	 if (rArray[2] == 'N')
      {
 		document.getElementById('logPass').value = '';
-		document.getElementById('errdiv').innerHTML = rArray[3];	   
+		document.getElementById('errdiv').innerHTML = rArray[3];
      }
      else
-     { 
+     {
 		window.location = "https://" + window.location.hostname + "/trialcourts/drugcourt/members/committee.php";
-     } 
+     }
    break;
   case 2:
-     document.getElementById(resultDiv).innerHTML = rArray[3]; 
+     document.getElementById(resultDiv).innerHTML = rArray[3];
 
    break;
   case 3:
-     var retval = rArray[3]; 
+     var retval = rArray[3];
      //alert(retval);
 
      if (rArray[2] == 'N')
      {
 		document.getElementById('logPass').value = '';
-		document.getElementById('errdiv').innerHTML = rArray[3];	   
+		document.getElementById('errdiv').innerHTML = rArray[3];
      }
      else
-     { 
+     {
 		document.getElementById(resultDiv).innerHTML = rArray[3];
-     } 
-     
+     }
+
    break;
    case 4:
-     //alert(rArray[3]); 
-     document.getElementById(resultDiv).innerHTML = rArray[3]; 
+     //alert(rArray[3]);
+     document.getElementById(resultDiv).innerHTML = rArray[3];
 
    break;
    case 5:
-     //alert(rArray[3]); 
-     document.getElementById(resultDiv).innerHTML = rArray[3]; 
+     //alert(rArray[3]);
+     document.getElementById(resultDiv).innerHTML = rArray[3];
 
    break;
    case 6:
-     //alert(rArray[3]); 
-     document.getElementById(resultDiv).innerHTML = rArray[3]; 
+     //alert(rArray[3]);
+     document.getElementById(resultDiv).innerHTML = rArray[3];
 
    break;
    case 7:
-     //alert(rArray[3]); 
-     document.getElementById(resultDiv).innerHTML = rArray[3]; 
+     //alert(rArray[3]);
+     document.getElementById(resultDiv).innerHTML = rArray[3];
 
    break;
  }
@@ -172,11 +172,11 @@ function frcLogin()
 	var vMail = '';
 	//alert(vMail);
 	var vPass = '';
-	//alert(vPass); 
-  
+	//alert(vPass);
+
 	var poststr = 'sEmail='+vMail+'&sPWD='+vPass;
 	//alert(poststr);
-   
+
 	makePOSTRequest('docketLogin.php', poststr);
 	//regLog();
 }
@@ -193,24 +193,24 @@ function KeyDownHandler(event)
   if (event.which == 13 || event.keyCode == 13)
    {
      event.returnValue=false;
-     event.cancel = true;     
+     event.cancel = true;
      regLog();
-   
+
    }
   return true;
 }
 
 //JPJ - 04/21/2015 - calls login page
 function regLog()
-{ 
+{
   var vMail = document.getElementById('logEMAIL').value;
   //alert(vMail);
   var vPass = document.getElementById('logPass').value;
-  //alert(vPass); 
-  
+  //alert(vPass);
+
   var poststr = 'sEmail='+vMail+'&sPWD='+vPass;
   //alert(poststr);
-   
+
   makePOSTRequest('dcrtlogin.php', poststr);
 }
 
@@ -223,9 +223,9 @@ function clearLog()
 
 //JPJ - 04/21/2015 - verifies that an email address is in the correct format before updating database
 function checkEmail(email)
-{ 
+{
   var esymbols = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  
+
   if (esymbols.test(email.value) && (email.value !== ''))
    {
      document.getElementById('regBtn').disabled = false;
@@ -248,7 +248,7 @@ function checkPass(sPass)
    var pw = sPass;
    //alert(pw);
    //alert(String(pw).match(/[0-9]/));
-   
+
    if (String(pw).length < 10)       //JPJ - 12/11/2014 - changed to passwords must be 10 characters long for security
     {
 	 error = 'Password must be 10 characters long!';
@@ -295,7 +295,7 @@ function checkPass(sPass)
 	 //alert(error);
 	 return false;
 	}
-	
+
 	document.getElementById('psw').className = 'ipsw';
 	document.getElementById('rpsw').className = 'ipsw';
 	document.getElementById('psStat').value = 'Password is good!';
@@ -309,10 +309,10 @@ function checkPass(sPass)
     $(this).children(".description").show();
 }).mouseout(function() {
     $(this).children(".description").hide();
-}); 
+});
 </script>
-  
-<script type="text/javascript"> 
+
+<script type="text/javascript">
 
 //jpj - 10/24/2016 - when the user taps off of the mobile menu it should now hide
 $(document).ready( function(){
@@ -352,26 +352,26 @@ a:hover {
 </style>
 </head>
 <body id="top" class="body" onload="autoFocus();">
-<!-- ################################################################################################ --> 
-<!-- ################################################################################################ --> 
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 
 
-<!-- main body --> 
+<!-- main body -->
       <!-- ################################################################################################ -->
-      
+
 <div class="MEClogin-back" style="z-index: 5;">
   <div>&nbsp;</div>
           <div>&nbsp;</div>
           <div>&nbsp;</div>
           <div>&nbsp;</div>
-          
-        
+
+
 <div id='mainDiv'>
             <h1 class="MEClogin-content" style="font-family:Georgia, 'Times New Roman', sans-serif; font-size: 80px;  margin-top: 1px; margin-bottom: 1px; background-color: none; vertical-align:center; text-align: center; z-index:1;">&nbsp;   </h1>
             <h1 class="MEClogin-content" style="font-family:Georgia, 'Times New Roman', sans-serif; font-size: 80px;  margin-top: 1px; margin-bottom: 1px; background-color: none; vertical-align:center; text-align: center; z-index:1;">Page not found.</h1>
             <p style="font-family:Georgia, 'Times New Roman', sans-serif; font-size: 30px;  margin-top: 1px; margin-bottom: 1px; background-color: none; vertical-align:center; text-align: center; z-index:1;">&nbsp;</p>
-            
+
 	<center></center>
 	<center>
 	  <div style="font-family: Arial, sans-serif; font-size: 30px; margin-top: 1px; margin-bottom: 1px; background-color: none; vertical-align: center; text-align: center; z-index: 1; font-weight: bold;">
@@ -384,18 +384,18 @@ a:hover {
     <div style="font-family:Arial, sans-serif; font-size: 12px;  margin-top: 1px; margin-bottom: 1px; background-color: none; vertical-align:center; text-align: center; z-index:1;">
         <p><a href="/index.php">Home</a> | <a href="/aboutcourts/aboutthecourts.php">Appellate Courts</a> | <a href="/trialcourts/tc_aboutthecourts.php">Trial Courts</a> | <a href="/aoc/aoc.php">AOC</a> | <a href="/mec/mec.php">MEC</a> | <a href="/records/records.php">Records</a> | <a href="/commissions/commissionsforcescommittees.php">Commissions</a> | <a href="/research/research.php">Research</a> | <a href="/bar/baradmissions/baradmissions.php">Bar Admissions</a> | <a href="/news/news.php">News</a> | <a href="/cle_bccr/cle.php">Education</a></p>
     </div>
-    <!-- <table border="0" cellspacing="5" cellpadding="5" class="nobgcolor" style="color:#06213f; text-align:center;" >  
-             
+    <!-- <table border="0" cellspacing="5" cellpadding="5" class="nobgcolor" style="color:#06213f; text-align:center;" >
+
           <tr class="newscellbottomborder spaceUnder spaceAbove contenttext">
           	<td align="left" class="nobgcolor newscellbottomborder">
-            <div class="mainheading"  style="font-size:24px;"> 
-            
+            <div class="mainheading"  style="font-size:24px;">
+
             </div>
         </td>
         </tr>
       </table>
-      
-		
+
+
 				<form class="form-2" method="post">
 					<h1><span class="log-in">Log In</span> or <span class="sign-up">sign up</span></h1>
 					<p class="float">
@@ -406,61 +406,61 @@ a:hover {
 						<label for="password"><i class="icon-lock"></i>Password</label>
 						<input type="password" id='logPass' name="password" placeholder="Password" class="showpassword" onKeyPress="return KeyDownHandler(event)">
 					</p>
-					<p class="clearfix" align="center"> 
-						<a href="#" class="log-twitter">Log in with Twitter</a>    
+					<p class="clearfix" align="center">
+						<a href="#" class="log-twitter">Log in with Twitter</a>
 						<input type="button" name="submit" value="Log in" onclick="regLog()">
 					</p>
 				</form>​​
-				
+
 				<DIV align="center" style='height:20%;' >
 				<table class='login' >
-					<tr bgColor=#A9A9A9><td id=errdiv > 
+					<tr bgColor=#A9A9A9><td id=errdiv >
 					</td></tr>
 				</table>
 				</DIV>
-		
-			<!--<table  border="0" cellspacing="5" cellpadding="5" class="nobgcolor" style="color:#06213f; "><tr bgcolor="#06213f;"  height='10%'><th style="background-color:#06213f;"> 
+
+			<!--<table  border="0" cellspacing="5" cellpadding="5" class="nobgcolor" style="color:#06213f; "><tr bgcolor="#06213f;"  height='10%'><th style="background-color:#06213f;">
 			<b><font size="+1" >PAMEC Web Login</font></b></th></tr>
-   
+
 			<tr height='5%' align="center" id="doublebar"><td>Email Address &nbsp; <INPUT type=text id='logEMAIL' style='width:180px;' title='Enter Valid Email Address'></td></tr>
-			
-            <tr height='5%' align="center" id="doublebar"><td>Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT type=password id='logPass' 
+
+            <tr height='5%' align="center" id="doublebar"><td>Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT type=password id='logPass'
 			style='width:180px;' title='Enter Password' onKeyPress="return KeyDownHandler(event)" /></td></tr></center>
-			<center><tr height='10%' width="100%" align="center"><td colspan=2 bgColor=#A9A9A9 style='width:700px; padding-left:15px;'> 
+			<center><tr height='10%' width="100%" align="center"><td colspan=2 bgColor=#A9A9A9 style='width:700px; padding-left:15px;'>
 				 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<INPUT id="rbutton" type="button" value='Clear' onclick='clearLog()'  > &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 			<INPUT id="rbutton" type="button" value='Log In' onclick='regLog()' >
-			</td></tr></center>         
-			</table> 
-        
+			</td></tr></center>
+			</table>
+
 			<!--<DIV align="center" style='height:20%;' >
 				<table class='login nobgcolor' >
-					<tr bgColor=#A9A9A9><td id=errdiv > 
+					<tr bgColor=#A9A9A9><td id=errdiv >
 					</td></tr>
 				</table>
-			</DIV>--><!-- ################################################################################################ --> 
+			</DIV>--><!-- ################################################################################################ -->
       <!-- / main body -->
 <div class="clear"></div>
     </main>
   </div>
 </div>
-<!-- ################################################################################################ --> 
-<!-- ################################################################################################ --> 
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 
-<!-- ################################################################################################ --> 
-<!-- ################################################################################################ --> 
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <div class="wrapper row5">
-  <div id="copyright" class="clear"> 
+  <div id="copyright" class="clear">
     <!-- ################################################################################################ -->
    <!-- <p class="fl_left">Copyright &copy; 2015 - All Rights Reserved - <a href="#">Domain Name</a></p>
     <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>-->
-    <!-- ################################################################################################ --> 
+    <!-- ################################################################################################ -->
   </div>
 </div>
-<!-- JAVASCRIPTS --> 
-<script src="/layout/scripts/jquery.min.js"></script> 
-<script src="/layout/scripts/jquery.fitvids.min.js"></script> 
+<!-- JAVASCRIPTS -->
+<script src="/layout/scripts/jquery.min.js"></script>
+<script src="/layout/scripts/jquery.fitvids.min.js"></script>
 <script src="/layout/scripts/tabslet/jquery.tabslet.min.js"></script>
 </body>
 </html>

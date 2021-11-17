@@ -14,24 +14,27 @@ History:
 """
 
 import re
+
 from lxml import html
 
+from juriscraper.lib.string_utils import (
+    clean_string,
+    convert_date_string,
+    normalize_dashes,
+)
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.lib.string_utils import normalize_dashes
-from juriscraper.lib.string_utils import clean_string
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.5dca.org/opinions_archived.shtml"
         self.base_path = "//a"
         self.case_regex = r"(5D.*-.*\d{1,3})([- ]+[A-Za-z1-9].*)"
 
     def _download(self, request_dict={}):
-        html_l = super(Site, self)._download(request_dict)
+        html_l = super()._download(request_dict)
 
         # Test/example files should use html from direct resource page
         # NOTE: fladistctapp_5_example_5.html SHOULD have 0 results
@@ -114,7 +117,7 @@ class Site(OpinionSite):
     def _return_dates(self, html_tree):
         prefixes = ["Opinions", "OPINIONS", "Opinion", "OPINION"]
         paths = [
-            "//*[starts-with(., '%s ')]/text()" % string for string in prefixes
+            f"//*[starts-with(., '{string} ')]/text()" for string in prefixes
         ]
         path = " | ".join(paths)
         date_text = html_tree.xpath(path)
@@ -167,5 +170,5 @@ class Site(OpinionSite):
         """
         court_year_id = text.split("-")[0]
         if len(court_year_id) == 3 and court_year_id[0] == "D":
-            text = "5%s" % text
+            text = f"5{text}"
         return text

@@ -10,6 +10,6 @@ from juriscraper.opinions.united_states_backscrapers.state import ny
 
 class Site(ny.Site):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court = "App+Div,+2d+Dept"
         self.interval = 30

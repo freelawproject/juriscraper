@@ -1,71 +1,71 @@
 {
-  "assigned_to_str": "Sandra M. Snyder", 
-  "case_name": "(PC) Mitchell v. Rennick", 
-  "cause": "42:1983 Prisoner Civil Rights", 
-  "court_id": "caed", 
-  "date_converted": null, 
-  "date_discharged": null, 
-  "date_filed": "2009-03-20", 
-  "date_terminated": null, 
-  "demand": "", 
+  "assigned_to_str": "Sandra M. Snyder",
+  "case_name": "(PC) Mitchell v. Rennick",
+  "cause": "42:1983 Prisoner Civil Rights",
+  "court_id": "caed",
+  "date_converted": null,
+  "date_discharged": null,
+  "date_filed": "2009-03-20",
+  "date_terminated": null,
+  "demand": "",
   "docket_entries": [
     {
-      "date_filed": "2009-03-19", 
-      "description": "PRISONER CIVIL RIGHTS COMPLAINT against Rennick, Bott, Palmer, W Williams, Demery by Corey Mitchell.(Figueroa, O) (Entered: 03/20/2009)", 
-      "document_number": "1", 
-      "pacer_doc_id": "03303140067", 
+      "date_filed": "2009-03-19",
+      "description": "PRISONER CIVIL RIGHTS COMPLAINT against Rennick, Bott, Palmer, W Williams, Demery by Corey Mitchell.(Figueroa, O) (Entered: 03/20/2009)",
+      "document_number": "1",
+      "pacer_doc_id": "03303140067",
       "pacer_seq_no": "8"
     }
-  ], 
-  "docket_number": "1:09-cv-00515", 
-  "jurisdiction": "Federal Question", 
-  "jury_demand": "None", 
-  "mdl_status": "", 
-  "nature_of_suit": "550 Prisoner: Civil Rights", 
+  ],
+  "docket_number": "1:09-cv-00515",
+  "jurisdiction": "Federal Question",
+  "jury_demand": "None",
+  "mdl_status": "",
+  "nature_of_suit": "550 Prisoner: Civil Rights",
   "parties": [
     {
       "attorneys": [
         {
-          "contact": "F-23331\nSALINAS VALLEY STATE PRISON (1050)\nPO BOX 1050\nSOLEDAD, CA 93960-1050\nPRO SE\n", 
-          "name": "Corey Mitchell", 
+          "contact": "F-23331\nSALINAS VALLEY STATE PRISON (1050)\nPO BOX 1050\nSOLEDAD, CA 93960-1050\nPRO SE\n",
+          "name": "Corey Mitchell",
           "roles": []
         }
-      ], 
-      "date_terminated": null, 
-      "extra_info": "", 
-      "name": "Corey Mitchell", 
+      ],
+      "date_terminated": null,
+      "extra_info": "",
+      "name": "Corey Mitchell",
       "type": "Plaintiff"
-    }, 
+    },
     {
-      "date_terminated": null, 
-      "extra_info": "Correctional Officer", 
-      "name": "Rennick", 
+      "date_terminated": null,
+      "extra_info": "Correctional Officer",
+      "name": "Rennick",
       "type": "Defendant"
-    }, 
+    },
     {
-      "date_terminated": null, 
-      "extra_info": "Correctional Officer", 
-      "name": "Bott", 
+      "date_terminated": null,
+      "extra_info": "Correctional Officer",
+      "name": "Bott",
       "type": "Defendant"
-    }, 
+    },
     {
-      "date_terminated": null, 
-      "extra_info": "Correctional Officer", 
-      "name": "- Palmer", 
+      "date_terminated": null,
+      "extra_info": "Correctional Officer",
+      "name": "- Palmer",
       "type": "Defendant"
-    }, 
+    },
     {
-      "date_terminated": null, 
-      "extra_info": "Correctional Officer", 
-      "name": "W Williams", 
+      "date_terminated": null,
+      "extra_info": "Correctional Officer",
+      "name": "W Williams",
       "type": "Defendant"
-    }, 
+    },
     {
-      "date_terminated": null, 
-      "extra_info": "State Agent-Actor", 
-      "name": "Demery", 
+      "date_terminated": null,
+      "extra_info": "State Agent-Actor",
+      "name": "Demery",
       "type": "Defendant"
     }
-  ], 
+  ],
   "referred_to_str": ""
 }

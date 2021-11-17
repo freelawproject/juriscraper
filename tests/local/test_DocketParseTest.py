@@ -35,15 +35,11 @@ class DocketParseTest(unittest.TestCase):
         path_max_len = max(len(path) for path in paths) + 2
         for i, path in enumerate(paths):
             with self.subTest("Checking parsers", path=path):
-                sys.stdout.write(
-                    "%s. Doing %s" % (i, path.ljust(path_max_len))
-                )
+                sys.stdout.write(f"{i}. Doing {path.ljust(path_max_len)}")
                 t1 = time.time()
                 dirname, filename = os.path.split(path)
                 filename_sans_ext = filename.split(".")[0]
-                json_path = os.path.join(
-                    dirname, "%s.json" % filename_sans_ext
-                )
+                json_path = os.path.join(dirname, f"{filename_sans_ext}.json")
                 court = filename_sans_ext.split("_")[0]
 
                 report = DocketReport(court)
@@ -101,7 +97,7 @@ class DocketParseTest(unittest.TestCase):
 
                 duration = t2 - t1
                 warn_or_crash_slow_parser(duration, max_duration=1)
-                sys.stdout.write("✓ - %0.1fs\n" % (t2 - t1))
+                sys.stdout.write(f"✓ - {t2 - t1:0.1f}s\n")
 
     def test_bankruptcy_court_dockets(self):
         path_root = os.path.join(

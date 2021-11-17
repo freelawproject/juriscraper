@@ -3,9 +3,10 @@
 # Contact: 501-682-9400 (Administrative Office of the Curt)
 
 import time
+
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.string_utils import convert_date_string, titlecase
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import titlecase, convert_date_string
 
 ## WARNING: THIS SCRAPER IS FAILING:
 ## This scraper is succeeding in development, but
@@ -25,7 +26,7 @@ class Site(OpinionSite):
     """
 
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.cases = []
         self.subpage_html = False
@@ -33,13 +34,13 @@ class Site(OpinionSite):
         self.url = self.get_url()
 
     def get_url(self):
-        return "https://opinions.arcourts.gov/ark/%s/en/rss.do" % self.url_id
+        return f"https://opinions.arcourts.gov/ark/{self.url_id}/en/rss.do"
 
     def _download(self, request_dict={}):
         """We have to scrape each item url in the RSS feed, since the
         docket number and other info isn't included in the RSS result
         """
-        html = super(Site, self)._download(request_dict)
+        html = super()._download(request_dict)
         self.extract_cases_from_subpages(html)
         return html
 
@@ -57,14 +58,14 @@ class Site(OpinionSite):
             filter_by_citation = (
                 'contains(./title, "Ark.") or contains(./title, "ARK.")'
             )
-            path = "//item[%s]/link" % filter_by_citation
+            path = f"//item[{filter_by_citation}]/link"
             subpage_urls = [href.tail.strip() for href in html.xpath(path)]
             for i, subpage_url in enumerate(subpage_urls):
                 time.sleep(2.5)  # Avoid anti-bot mechanism
-                subpage_url = subpage_url + "?iframe=true"
+                subpage_url = f"{subpage_url}?iframe=true"
                 # cat /var/log/juriscraper/debug.log for more info
                 logger.info(
-                    "%s: Scraping sub-page: %s" % (self.court_id, subpage_url)
+                    f"{self.court_id}: Scraping sub-page: {subpage_url}"
                 )
                 self.subpage_html = self._get_html_tree_by_url(subpage_url)
                 self.extract_case_from_subpage()

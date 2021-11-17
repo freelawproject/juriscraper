@@ -1,16 +1,15 @@
-# -*- coding: utf-8 -*-
 import glob
 import json
+import re
 from collections import defaultdict
+from datetime import date
 from pprint import pprint
 
-import re
 import requests
-from juriscraper.AbstractSite import AbstractSite
-from datetime import date
-
 from lxml import etree
 from requests.exceptions import MissingSchema
+
+from juriscraper.AbstractSite import AbstractSite
 
 
 def get_tree(url):
@@ -33,7 +32,7 @@ def xpath(tree, query):
     )
 
 
-class FDSysModsContent(object):
+class FDSysModsContent:
     def __init__(self, url):
 
         self._all_attrs = [
@@ -63,7 +62,7 @@ class FDSysModsContent(object):
         self.tree = get_tree(url)
 
         for attr in self._all_attrs:
-            self.__setattr__(attr, getattr(self, "_get_%s" % attr)())
+            self.__setattr__(attr, getattr(self, f"_get_{attr}")())
 
     def _get_download_url(self):
         return "".join(
@@ -143,7 +142,7 @@ class FDSysSite(AbstractSite):
     """
 
     def __init__(self, *args, **kwargs):
-        super(FDSysSite, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         current_year = date.today().year
         self.base_url = "https://www.gpo.gov/smap/fdsys/sitemap_{year}/{year}_USCOURTS_sitemap.xml"
         self.url = self.base_url.format(year=current_year)
@@ -165,7 +164,7 @@ class FDSysSite(AbstractSite):
     def save_mods_file(self, url):
         mods_url = FDSysModsContent._get_mods_file_url(url)
         name = "-".join(mods_url.split("/")[-2].split("-")[1:])
-        with open("./examples/2006/{}.xml".format(name), "w") as handle:
+        with open(f"./examples/2006/{name}.xml", "w") as handle:
             response = requests.get(mods_url, stream=True)
             for block in response.iter_content(1024):
                 handle.write(block)

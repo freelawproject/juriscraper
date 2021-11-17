@@ -13,7 +13,7 @@ class Site(ca9_p.Site):
     overriding is done here. More than usual, but it's very slight tweaks."""
 
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = "http://www.ca9.uscourts.gov/memoranda/?o_mode=view&amp;o_sort_field=21&amp;o_sort_type=DESC&o_page_size=100"
         self.court_id = self.__module__
         self.position = ""

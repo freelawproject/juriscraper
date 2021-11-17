@@ -5,13 +5,13 @@
 from datetime import date
 
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.court_number = 1
         self.type_id = 0  # Per Curiam
@@ -104,7 +104,7 @@ class Site(OpinionSite):
         month = page_month_year[0]
         year = page_month_year[1]
         self.url = self.get_url(month, year)
-        logger.info("Back scraping: %s" % self.url)
+        logger.info(f"Back scraping: {self.url}")
         self.html = self._download()
 
     def get_cell_content(self, cell_num, sub_path=False):

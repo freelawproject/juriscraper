@@ -8,13 +8,13 @@ History:
 
 from datetime import date
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.back_scrape_iterable = list(range(2013, 2002 - 1, -1))
         self.url_base = "http://afcca.law.af.mil/content/opinions_date_%d.html"
@@ -44,9 +44,7 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         path = self.cell_path(3)
-        return [
-            "ACM %s" % cell.text_content() for cell in self.html.xpath(path)
-        ]
+        return [f"ACM {cell.text_content()}" for cell in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         statuses = []

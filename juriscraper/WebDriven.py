@@ -1,18 +1,18 @@
-# -*- coding: utf-8 -*-
-
 import os
 
-from juriscraper.lib.cookie_utils import normalize_cookies
-from juriscraper.lib.html_utils import clean_html
-from juriscraper.lib.html_utils import get_html_parsed_text
-from juriscraper.lib.html_utils import fix_links_but_keep_anchors
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import Select, WebDriverWait
+
+from juriscraper.lib.cookie_utils import normalize_cookies
+from juriscraper.lib.html_utils import (
+    clean_html,
+    fix_links_but_keep_anchors,
+    get_html_parsed_text,
+)
 
 
 class WebDriven:
@@ -120,5 +120,5 @@ class WebDriven:
 
     def take_screenshot(self, name: str = None):
         """Use this method to snap screenshots during debugging"""
-        name = name if name else "screenshot.%s.png" % self.__module__
+        name = name if name else f"screenshot.{self.__module__}.png"
         self.webdriver.save_screenshot(name)

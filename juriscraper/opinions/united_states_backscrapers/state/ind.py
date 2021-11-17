@@ -8,14 +8,15 @@ History:
     2014-09-02: Bug fix by Jon Andersen - recognize "(NFP)" in case name
     2014-09-03: Moved to backscrapers
 """
-from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
+
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = "http://www.in.gov/judiciary/opinions/archsup.html"
         self.court_id = self.__module__
         self.my_precedential_statuses = []

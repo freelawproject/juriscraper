@@ -1,7 +1,7 @@
 import os
 import unittest
-import juriscraper
 
+import juriscraper
 
 JURISCRAPER_ROOT = os.path.realpath(
     os.path.join(os.path.realpath(juriscraper.__file__), "..")

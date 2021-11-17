@@ -13,7 +13,7 @@ from juriscraper.opinions.united_states.state import nc
 
 class Site(nc.Site):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = (
             "http://appellate.nccourts.org/opinions/?c=coa&year=%s"
@@ -24,7 +24,5 @@ class Site(nc.Site):
         )
 
     def _download_backwards(self, year):
-        self.url = (
-            "http://appellate.nccourts.org/opinions/?c=coa&year=%s" % year
-        )
+        self.url = f"http://appellate.nccourts.org/opinions/?c=coa&year={year}"
         self.html = self._download()

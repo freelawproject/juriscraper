@@ -13,28 +13,28 @@ History:
 
 from lxml import html
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.courts.maine.gov/courts/sjc/opinions.html"
         self.path_root = '//table[contains(.//th[1], "Opinion")]'
 
     def _get_cell_path(self, cell_number: int, subpath: str = "") -> str:
         path = '//table[contains(.//th[1], "Opinion")]//td[%d]'
-        return "%s/%s" % (path, subpath) if subpath else path
+        return f"{path}/{subpath}" if subpath else path
 
     def _get_download_urls(self):
-        path = "%s//td[2]/a[1]/@href" % self.path_root
+        path = f"{self.path_root}//td[2]/a[1]/@href"
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
         case_names = []
-        path = "%s//td[2]/a[1]" % self.path_root
+        path = f"{self.path_root}//td[2]/a[1]"
         for e in self.html.xpath(path):
             s = html.tostring(e, method="text", encoding="unicode")
             case_names.append(s)
@@ -42,7 +42,7 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         dates = []
-        path = "%s//td[3]" % self.path_root
+        path = f"{self.path_root}//td[3]"
         for cell in self.html.xpath(path):
             date_string = cell.text_content().replace("Aguust", "August")
             dates.append(convert_date_string(date_string))
@@ -52,5 +52,5 @@ class Site(OpinionSite):
         return ["Published"] * len(self.case_names)
 
     def _get_neutral_citations(self):
-        path = "%s//td[1]//text()" % self.path_root
+        path = f"{self.path_root}//td[1]//text()"
         return list(self.html.xpath(path))

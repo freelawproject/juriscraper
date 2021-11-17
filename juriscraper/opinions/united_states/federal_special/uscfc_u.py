@@ -7,7 +7,7 @@ from juriscraper.opinions.united_states.federal_special import uscfc
 
 class Site(uscfc.Site):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = "http://www.uscfc.uscourts.gov/aggregator/sources/10"
         self.court_id = self.__module__
         self.back_scrape_iterable = list(range(1, 2))
@@ -17,7 +17,6 @@ class Site(uscfc.Site):
 
     def _download_backwards(self, page):
         self.url = (
-            "http://www.uscfc.uscourts.gov/aggregator/sources/10?page=%s"
-            % page
+            f"http://www.uscfc.uscourts.gov/aggregator/sources/10?page={page}"
         )
         self.html = self._download()

@@ -17,6 +17,7 @@
 
 
 from datetime import date, datetime, timedelta
+
 from dateutil.rrule import WEEKLY, rrule
 from lxml import html
 from selenium.webdriver import ActionChains
@@ -26,13 +27,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 from juriscraper.AbstractSite import logger
 from juriscraper.DeferringList import DeferringList
-from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 
 
 class Site(OpinionSiteWebDriven):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.case_date = date.today()
         self.backwards_days = 7
@@ -73,9 +74,7 @@ class Site(OpinionSiteWebDriven):
     def _download(self, request_dict={}):
         self.request_dict = request_dict
         if self.test_mode_enabled():
-            html_tree_list = [
-                super(Site, self)._download(request_dict=request_dict)
-            ]
+            html_tree_list = [super()._download(request_dict=request_dict)]
             self.records_nr = len(
                 html_tree_list[0].xpath(
                     "//tr[@class='rgRow' or @class='rgAltRow']"
@@ -181,7 +180,7 @@ class Site(OpinionSiteWebDriven):
                     html_pages.append(html_tree)
 
                     for i in range(int(nr_of_pages.text) - 1):
-                        logger.info("  Getting page %s" % (i + 2))
+                        logger.info(f"  Getting page {i + 2}")
                         next_page = self.find_element_by_class_name(
                             "rgPageNext"
                         )
@@ -215,13 +214,11 @@ class Site(OpinionSiteWebDriven):
                         "//text()[contains(., 'v.:')]/ancestor::div[@class='span2']/following-sibling::div/text()"
                     )[0]
                 except IndexError:
-                    logger.warning(
-                        "No title or defendant found for {}".format(url)
-                    )
+                    logger.warning(f"No title or defendant found for {url}")
 
                 if defendant.strip():
                     # If there's a defendant
-                    return titlecase("%s v. %s" % (plaintiff, defendant))
+                    return titlecase(f"{plaintiff} v. {defendant}")
                 else:
                     return titlecase(plaintiff)
 

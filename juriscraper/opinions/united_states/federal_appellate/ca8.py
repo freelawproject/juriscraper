@@ -1,13 +1,15 @@
-from juriscraper.OpinionSite import OpinionSite
 import re
 import time
 from datetime import date
+
 from dateutil.rrule import MONTHLY, rrule
+
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         today = date.today()
         self.url = (
             "http://media.ca8.uscourts.gov/cgi-bin/opnByMM.pl?theMM=%02d&theYY=%s&A1=Get+Opinions"
@@ -60,7 +62,7 @@ class Site(OpinionSite):
         ):
             regex_results = docket_number_regex.search(docket_number)
             docket_numbers.append(
-                "%s-%s" % (regex_results.group(1), regex_results.group(2))
+                f"{regex_results.group(1)}-{regex_results.group(2)}"
             )
         return docket_numbers
 

@@ -1,10 +1,8 @@
-import os
 import getpass
 import logging.handlers
-import traceback
-
+import os
 import sys
-
+import traceback
 
 LOG_FILENAME = os.environ.get(
     "JURISCRAPER_LOG", "/var/log/juriscraper/debug.log"
@@ -30,7 +28,7 @@ def make_default_logger(file_path=LOG_FILENAME):
             handler = logging.handlers.RotatingFileHandler(
                 file_path, maxBytes=5120000, backupCount=7
             )
-        except IOError as e:
+        except OSError as e:
             if e.errno == 2:
                 errprint(
                     "\nWarning: %s: %s. "

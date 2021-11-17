@@ -6,14 +6,14 @@ Date created: 13 June 2014
 """
 
 import re
+
+from juriscraper.lib.string_utils import clean_if_py3, convert_date_string
 from juriscraper.OralArgumentSite import OralArgumentSite
-from juriscraper.lib.string_utils import clean_if_py3
-from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://media.ca1.uscourts.gov/files/audio/audiorss.php"
 

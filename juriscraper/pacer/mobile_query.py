@@ -5,10 +5,10 @@ This provides the total number of docket entries, which is useful for alerts
 import pprint
 import sys
 
-from .docket_report import BaseDocketReport
-from .reports import BaseReport
 from ..lib.log_tools import make_default_logger
 from ..lib.utils import clean_court_object
+from .docket_report import BaseDocketReport
+from .reports import BaseReport
 
 logger = make_default_logger()
 
@@ -33,7 +33,7 @@ class MobileQuery(BaseDocketReport, BaseReport):
 
     def parse(self):
         self._clear_caches()
-        super(MobileQuery, self).parse()
+        super().parse()
 
     @property
     def metadata(self):
@@ -111,16 +111,16 @@ class MobileQuery(BaseDocketReport, BaseReport):
         assert (
             self.session is not None
         ), "session attribute of MobileQuery cannot be None."
-        assert bool(pacer_case_id), (
-            "pacer_case_id must be truthy, not '%s'" % pacer_case_id
-        )
+        assert bool(
+            pacer_case_id
+        ), f"pacer_case_id must be truthy, not '{pacer_case_id}'"
         logger.info(
             "Running mobile query for case id '%s' in court '%s'",
             pacer_case_id,
             self.court_id,
         )
         self.response = self.session.post(
-            self.url + "?search=caseInfo&caseid==" + pacer_case_id
+            f"{self.url}?search=caseInfo&caseid=={pacer_case_id}"
         )
         self.parse()
 
@@ -146,8 +146,8 @@ def _main():
 
     report = MobileQuery("mad")
     filepath = sys.argv[1]
-    print("Parsing HTML file at %s" % filepath)
-    with open(filepath, "r") as f:
+    print(f"Parsing HTML file at {filepath}")
+    with open(filepath) as f:
         text = f.read().decode("utf-8")
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)

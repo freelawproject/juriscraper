@@ -1,14 +1,16 @@
-from lxml import html
-from datetime import datetime, timedelta, date
+from datetime import date, datetime, timedelta
+
 from dateutil.rrule import DAILY, rrule
+from lxml import html
 from selenium.common.exceptions import NoSuchElementException
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 
 
 class Site(OpinionSiteWebDriven):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = "http://www.ca5.uscourts.gov/electronic-case-filing/case-information/current-opinions"
         self.court_id = self.__module__
         self.interval = 5
@@ -26,9 +28,7 @@ class Site(OpinionSiteWebDriven):
 
     def _download(self, request_dict={}):
         if self.test_mode_enabled():
-            html_tree_list = [
-                super(Site, self)._download(request_dict=request_dict)
-            ]
+            html_tree_list = [super()._download(request_dict=request_dict)]
             self.records_nr = len(
                 html_tree_list[0].xpath(
                     "//tr[contains(concat('', @id, ''), 'ctl00_Body_C010_ctl00_ctl00_radGridOpinions_ctl00')]"
@@ -84,9 +84,7 @@ class Site(OpinionSiteWebDriven):
                     self.webdriver.quit()
                     return []
             html_pages = []
-            logger.info(
-                "records: {}, pages: {}".format(self.records_nr, nr_of_pages)
-            )
+            logger.info(f"records: {self.records_nr}, pages: {nr_of_pages}")
             if nr_of_pages == 1:
                 text = self.webdriver.page_source
                 self.webdriver.quit()
@@ -99,7 +97,7 @@ class Site(OpinionSiteWebDriven):
                 html_pages.append(html_tree)
             else:
                 logger.info(
-                    "Paginating through %s pages of results." % nr_of_pages
+                    f"Paginating through {nr_of_pages} pages of results."
                 )
                 logger.info("  Getting page 1")
                 text = self.webdriver.page_source
@@ -112,7 +110,7 @@ class Site(OpinionSiteWebDriven):
                 html_pages.append(html_tree)
 
                 for i in range(nr_of_pages - 1):
-                    logger.info("  Getting page %s" % (i + 2))
+                    logger.info(f"  Getting page {i + 2}")
                     next_page = self.find_element_by_class_name("rgPageNext")
                     next_page.click()
                     self.webdriver.implicitly_wait(5)

@@ -15,7 +15,7 @@ from juriscraper.OpinionSite import OpinionSite
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.column_diff = 0
         # Something fishy is going on with this court's site. They
@@ -37,7 +37,7 @@ class Site(OpinionSite):
         self.set_url()
 
     def set_url(self):
-        cache_key = "a" + str(random.randrange(1, 100000000))
+        cache_key = f"a{str(random.randrange(1, 100000000))}"
         pattern = (
             "https://www.mspb.gov/MSPBSEARCH/decisiondisplay_2011.aspx?timelapse=12&displaytype=%d&description=%s+Decisions&cachename="
             + cache_key
@@ -46,17 +46,17 @@ class Site(OpinionSite):
 
     def _get_download_urls(self):
         """Example: http://www.mspb.gov/netsearch/viewdocs.aspx?docnumber=1075720&version=1080035&application=ACROBAT"""
-        path = "//tr[@class='ITEMS']/td[%s]/a/@href" % (3 + self.column_diff)
+        path = f"//tr[@class='ITEMS']/td[{3 + self.column_diff}]/a/@href"
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
         """Example: {Appellant} v. {Agency}"""
-        path = "//tr[@class='ITEMS']/td[%s]/a/text()" % (3 + self.column_diff)
+        path = f"//tr[@class='ITEMS']/td[{3 + self.column_diff}]/a/text()"
         appellants = self.html.xpath(path)
-        path = "//tr[@class='ITEMS']/td[%s]/text()" % (4 + self.column_diff)
+        path = f"//tr[@class='ITEMS']/td[{4 + self.column_diff}]/text()"
         agencies = self.html.xpath(path)
         return [
-            "%s v. %s" % (appellant, agency)
+            f"{appellant} v. {agency}"
             for (appellant, agency) in zip(appellants, agencies)
         ]
 

@@ -3,13 +3,13 @@ CourtID:	ca6
 Court Contact:	WebSupport@ca6.uscourts.gov
 """
 
+from juriscraper.lib.string_utils import clean_if_py3, convert_date_string
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import convert_date_string, clean_if_py3
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.opn.ca6.uscourts.gov/opinions/opinions.php"
 

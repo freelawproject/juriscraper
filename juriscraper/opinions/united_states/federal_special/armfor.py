@@ -2,9 +2,9 @@
 CourtID: armfor
 Court Short Name: C.A.A.F."""
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.html_utils import get_html5_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 # This court has some funky html that varies
@@ -13,7 +13,7 @@ from juriscraper.lib.string_utils import convert_date_string
 # by running: python juriscraper/sample_caller.py -c opinions.united_states.federal_special.armfor --backscrape
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.back_scrape_iterable = [""]
         self.url = "http://www.armfor.uscourts.gov/newcaaf/opinions.htm"
@@ -23,7 +23,7 @@ class Site(OpinionSite):
         )
 
     def _download(self, request_dict={}):
-        landing_page_html = super(Site, self)._download(request_dict)
+        landing_page_html = super()._download(request_dict)
 
         # Example test files should include html of direct resource page
         if self.test_mode_enabled():
@@ -34,7 +34,7 @@ class Site(OpinionSite):
 
     def _get_case_names(self):
         names = []
-        path = "%s/td[1]" % self.row_base_path
+        path = f"{self.row_base_path}/td[1]"
         for html_tree in self.html:
             names.extend(
                 [cell.text_content().strip() for cell in html_tree.xpath(path)]
@@ -43,14 +43,14 @@ class Site(OpinionSite):
 
     def _get_download_urls(self):
         urls = []
-        path = "%s/td[2]//a[last()]/@href" % self.row_base_path
+        path = f"{self.row_base_path}/td[2]//a[last()]/@href"
         for html_tree in self.html:
             urls.extend([url for url in html_tree.xpath(path)])
         return urls
 
     def _get_case_dates(self):
         dates = []
-        path = "%s/td[3]" % self.row_base_path
+        path = f"{self.row_base_path}/td[3]"
         for html_tree in self.html:
             for cell in html_tree.xpath(path):
                 dates.append(convert_date_string(cell.text_content()))
@@ -58,7 +58,7 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         dockets = []
-        path = "%s//td[2]" % self.row_base_path
+        path = f"{self.row_base_path}//td[2]"
         for html_tree in self.html:
             for cell in html_tree.xpath(path):
                 docket_raw = cell.text_content().strip()
@@ -73,7 +73,7 @@ class Site(OpinionSite):
         # are formatted differently and don't contain dates
         limitation = 'not(contains(@href, "1998Term.htm")) and not(contains(@href, "1997Term.htm"))'
         self.path_to_landing_page_links = (
-            "//blockquote/ul/li/font/a[1][%s]/@href" % limitation
+            f"//blockquote/ul/li/font/a[1][{limitation}]/@href"
         )
         self.html = self._download()
 

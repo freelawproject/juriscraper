@@ -10,7 +10,7 @@ from juriscraper.opinions.united_states.federal_special import acca_p
 
 class Site(acca_p.Site):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = "https://www.jagcnet.army.mil/85257546006DF36B/SDD?OpenView&Count=-1"
         self.court_id = self.__module__
 

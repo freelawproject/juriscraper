@@ -1,14 +1,15 @@
 # Court Contact: bkraft@courts.ms.gov (see https://courts.ms.gov/aoc/aoc.php)
 
 import datetime
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 # Landing page: https://courts.ms.gov/appellatecourts/sc/scdecisions.php
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.domain = "https://courts.ms.gov"
         self.court_id = self.__module__
         self.method = "POST"
@@ -16,7 +17,7 @@ class Site(OpinionSiteLinear):
         self.pages = {}
         self.parameters = {"crt": self.get_court_parameter()}
         self.status = "Published"
-        self.url = "%s/appellatecourts/docket/gethddates.php" % self.domain
+        self.url = f"{self.domain}/appellatecourts/docket/gethddates.php"
 
     def get_court_parameter(self):
         return "SCT"
@@ -29,7 +30,7 @@ class Site(OpinionSiteLinear):
     """
 
     def _download(self, request_dict={}):
-        dates_page = super(Site, self)._download(request_dict)
+        dates_page = super()._download(request_dict)
         self.parse_date_pages(dates_page)
 
     """Keep track of the most recent N date pages.
@@ -49,12 +50,12 @@ class Site(OpinionSiteLinear):
             self.pages["2020-02-28"] = dates_page
             return
         for date in self.get_dates_from_date_page(dates_page):
-            url = "%s/Images/HDList/SCT%s.html" % (
+            url = "{}/Images/HDList/SCT{}.html".format(
                 self.domain,
                 datetime.date.strftime(date, "%m-%d-%Y"),
             )
             page = self._get_html_tree_by_url(url)
-            self.pages["%s" % date] = page
+            self.pages[f"{date}"] = page
 
     """Convert string of dates on page into list of date objects.
     """

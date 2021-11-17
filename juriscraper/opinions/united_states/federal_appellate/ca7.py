@@ -3,9 +3,10 @@
 # Court Short Name: 7th Cir.
 
 import time
-from six.moves.urllib.parse import urlencode
 from datetime import date, timedelta
-from dateutil.rrule import rrule, DAILY
+from urllib.parse import urlencode
+
+from dateutil.rrule import DAILY, rrule
 from lxml import html
 
 from juriscraper.OpinionSite import OpinionSite
@@ -13,7 +14,7 @@ from juriscraper.OpinionSite import OpinionSite
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.a_while_ago = date.today() - timedelta(days=60)
         self.url = (
             "http://media.ca7.uscourts.gov/cgi-bin/rssExec.pl?Time=any&FromMonth={month}&FromDay={day}&FromYear={year}&"
@@ -123,7 +124,7 @@ class Site(OpinionSite):
             }
         )
         self.base_url = "http://media.ca7.uscourts.gov/cgi-bin/rssExec.pl"
-        self.url = "{}?{}".format(self.base_url, params)
+        self.url = f"{self.base_url}?{params}"
 
         self.html = self._download()
         if self.html is not None:

@@ -1,6 +1,6 @@
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
@@ -18,11 +18,11 @@ class Site(OpinionSite):
     """
 
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.base_url = "http://www.judiciary.state.nj.us/attorneys/assets"
         self.servername = "http://www.judiciary.state.nj.us"
-        self.url = "%s/js/objects/opinions/op2017.json" % self.base_url
+        self.url = f"{self.base_url}/js/objects/opinions/op2017.json"
         self.case_types = ["Supreme"]
 
     def tweak_response_object(self):
@@ -38,7 +38,7 @@ class Site(OpinionSite):
             for opinion in self.html[type]:
                 # They don't have uniform keys across all data, which is... odd
                 if "DocumentURL" in opinion:
-                    url = "%s%s" % (self.servername, opinion["DocumentURL"])
+                    url = f"{self.servername}{opinion['DocumentURL']}"
                 else:
                     url = self.get_absolute_opinion_path(
                         opinion["Document"], type
@@ -95,11 +95,11 @@ class Site(OpinionSite):
             type = type_parts[1].lower()
         else:
             raise InsanityException(
-                'Unrecognized type "%s", this should never ' "happen" % type
+                f'Unrecognized type "{type}", this should never happen'
             )
         if not suffix.startswith(type):
             if status:
-                suffix = "%s/%s/%s" % (type, status, suffix)
+                suffix = f"{type}/{status}/{suffix}"
             else:
-                suffix = "%s/%s" % (type, suffix)
-        return "%s/opinions/%s" % (self.base_url, suffix)
+                suffix = f"{type}/{suffix}"
+        return f"{self.base_url}/opinions/{suffix}"

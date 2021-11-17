@@ -1,19 +1,19 @@
 import re
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.court_code = "S"
 
     def _download(self, request_dict={}):
         if not self.test_mode_enabled():
             self.url = self.build_url()
-        return super(Site, self)._download(request_dict)
+        return super()._download(request_dict)
 
     def build_url(self):
         return (

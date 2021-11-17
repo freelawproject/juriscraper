@@ -1,6 +1,3 @@
-# coding=utf-8
-
-
 import fnmatch
 import os
 import sys
@@ -25,14 +22,14 @@ class PacerParseTestCase(unittest.TestCase):
         path_max_len = max(len(path) for path in paths) + 2
         for i, path in enumerate(paths):
             t1 = time.time()
-            sys.stdout.write("%s. Doing %s" % (i, path.ljust(path_max_len)))
+            sys.stdout.write(f"{i}. Doing {path.ljust(path_max_len)}")
             dirname, filename = os.path.split(path)
             filename_sans_ext = filename.split(".")[0]
-            json_path = os.path.join(dirname, "%s.json" % filename_sans_ext)
+            json_path = os.path.join(dirname, f"{filename_sans_ext}.json")
 
             court = filename_sans_ext.split("_")[0]
             report = test_class(court)
-            with open(path, "r") as f:
+            with open(path) as f:
                 report._parse_text(f.read())
 
             # Does the metadata function work too? It usually, but not always,
@@ -45,7 +42,7 @@ class PacerParseTestCase(unittest.TestCase):
             data = report.data
             if not os.path.exists(json_path):
                 with open(json_path, "w") as f:
-                    print("Creating new file at %s" % json_path)
+                    print(f"Creating new file at {json_path}")
                     json.dump(data, f, indent=2, sort_keys=True)
                 continue
             data = json.loads(json.dumps(data, sort_keys=True))

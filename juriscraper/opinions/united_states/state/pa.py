@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Scraper for Pennsylvania Supreme Court
 CourtID: pa
@@ -6,13 +5,13 @@ Court Short Name: pa
 """
 import re
 
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.regex = False
         self.url = "https://www.pacourts.us/Rss/Opinions/Supreme/"

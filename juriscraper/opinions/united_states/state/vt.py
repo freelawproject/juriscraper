@@ -12,13 +12,13 @@ She's very responsive.
 """
 
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.back_scrape_iterable = list(range(1, self.get_backscrape_max()))
         self.element_path_format = "//article[@class='views-row media-document']/div[@class='views-field views-field-field-document%s']"
@@ -26,7 +26,7 @@ class Site(OpinionSite):
             "https://www.vermontjudiciary.org/opinions-decisions?f[0]=document_type%3A94&f[1]=court_division_opinions_library_%3A"
             + self.get_division_id()
         )
-        self.backscrape_page_base_url = self.url + "&page="
+        self.backscrape_page_base_url = f"{self.url}&page="
 
     def get_backscrape_max(self):
         return 7
@@ -36,7 +36,7 @@ class Site(OpinionSite):
 
     def _get_download_urls(self):
         path_base = self.element_path_format % ""
-        path = "%s//@href" % path_base
+        path = f"{path_base}//@href"
         return self.html.xpath(path)
 
     def _get_case_names(self):

@@ -9,15 +9,15 @@ import feedparser
 from dateutil import parser
 from requests import Session
 
+from ..lib.log_tools import make_default_logger
+from ..lib.string_utils import clean_string, harmonize
+from ..lib.utils import clean_court_object
 from .docket_report import DocketReport
 from .utils import (
     get_pacer_case_id_from_nonce_url,
     get_pacer_doc_id_from_doc1_url,
     get_pacer_seq_no_from_doc1_url,
 )
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import clean_string, harmonize
-from ..lib.utils import clean_court_object
 
 logger = make_default_logger()
 
@@ -99,9 +99,9 @@ def append_or_merge_entry(docket_list, new_docket):
         if all([same_dn, same_cn, same_date, same_doc_id]):
             # if docket number, pacer_case_id, date filing, and pacer_doc_id
             # are same, merge.
-            entry["short_description"] += (
-                " AND %s" % new_entry["short_description"]
-            )
+            entry[
+                "short_description"
+            ] += f" AND {new_entry['short_description']}"
             break
     else:
         # Loop exited without hitting a break; item is distinct; append.
@@ -125,7 +125,7 @@ class PacerRssFeed(DocketReport):
     CACHE_ATTRS = ["data"]
 
     def __init__(self, court_id):
-        super(PacerRssFeed, self).__init__(court_id)
+        super().__init__(court_id)
         self._clear_caches()
         self._data = None
         self.session = Session()
@@ -156,10 +156,7 @@ class PacerRssFeed(DocketReport):
             # opinions, but this one has "All Docket Entries".
             return "https://ecf.ared.uscourts.gov/cgi-bin/rss_outside4.pl"
         else:
-            return "https://ecf.%s.uscourts.gov/%s" % (
-                self.court_id,
-                self.PATH,
-            )
+            return f"https://ecf.{self.court_id}.uscourts.gov/{self.PATH}"
 
     def query(self):
         """Query the RSS feed for a given court ID
@@ -177,7 +174,7 @@ class PacerRssFeed(DocketReport):
         For a good summary of this issue, see:
         https://github.com/freelawproject/juriscraper/issues/195#issuecomment-385848344
         """
-        logger.info("Querying the RSS feed for %s" % self.court_id)
+        logger.info(f"Querying the RSS feed for {self.court_id}")
         # The timeout here is a bit tricky. Too long, and national PACER
         # outages cause us grief. Too short and slow courts don't get done.
         # Previously, this value has been (60, 300), then 5. Hopefully the
@@ -363,9 +360,9 @@ sorry if that was your filename.""",
     arg_len = len(args.court_or_file)
     if 3 <= arg_len <= 4:
         feed = PacerRssFeed(args.court_or_file)
-        print("Querying RSS feed at: %s" % feed.url)
+        print(f"Querying RSS feed at: {feed.url}")
         feed.query()
-        print("Parsing RSS feed for %s" % feed.court_id)
+        print(f"Parsing RSS feed for {feed.court_id}")
         feed.parse()
     else:
         if not args.bankruptcy:
@@ -374,19 +371,17 @@ sorry if that was your filename.""",
             # final 'b' char is interpretted as bankruptcy
             feed = PacerRssFeed("fake_bankruptcy_court_id_b")
         if args.court_or_file == "-":
-            print("Faking up RSS feed from stdin as %s" % feed.court_id)
+            print(f"Faking up RSS feed from stdin as {feed.court_id}")
             f = sys.stdin
         else:
             print(
-                (
-                    "Reading RSS feed from %s as %s"
-                    % (args.court_or_file, feed.court_id)
-                )
+                "Reading RSS feed from %s as %s"
+                % (args.court_or_file, feed.court_id)
             )
             f = open(args.court_or_file)
         feed._parse_text(f.read().decode("utf-8"))
 
-    print("Got %s items" % len(feed.data))
+    print(f"Got {len(feed.data)} items")
     if args.verbose:
         print("Here they are:\n")
         pprint.pprint(feed.data, indent=2)

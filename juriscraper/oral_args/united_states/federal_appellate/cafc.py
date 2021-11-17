@@ -9,14 +9,16 @@ History:
 """
 
 from datetime import date
+
 from dateutil.rrule import DAILY, rrule
-from juriscraper.OralArgumentSite import OralArgumentSite
+
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OralArgumentSite import OralArgumentSite
 
 
 class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         d = date.today()
         self.url = "http://www.cafc.uscourts.gov/oral-argument-recordings?field_date_value2[value][date]={date}".format(

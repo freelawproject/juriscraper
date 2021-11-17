@@ -15,14 +15,13 @@ import datetime
 from typing import List
 from urllib.parse import quote
 
+from juriscraper.lib.string_utils import convert_date_string, titlecase
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = "http://www.masscases.com/land_date.html"
         self.court_id = self.__module__
         self.year = None

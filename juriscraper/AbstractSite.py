@@ -4,15 +4,14 @@ from datetime import date, datetime
 
 import certifi
 import requests
-import six
 
 from juriscraper.lib.date_utils import fix_future_year_typo, json_date_handler
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.html_utils import (
     clean_html,
     fix_links_in_lxml_tree,
-    get_html_parsed_text,
     get_html_from_element,
+    get_html_parsed_text,
     set_response_encoding,
 )
 from juriscraper.lib.log_tools import make_default_logger
@@ -27,14 +26,14 @@ from juriscraper.lib.test_utils import MockRequest
 logger = make_default_logger()
 
 
-class AbstractSite(object):
+class AbstractSite:
     """Contains generic methods for scraping data. Should be extended by all
     scrapers.
 
     Should not contain lists that can't be sorted by the _date_sort function."""
 
     def __init__(self, cnt=None):
-        super(AbstractSite, self).__init__()
+        super().__init__()
 
         # Computed metadata
         self.hash = None
@@ -71,7 +70,7 @@ class AbstractSite(object):
     def __str__(self):
         out = []
         for attr, val in self.__dict__.items():
-            out.append("%s: %s" % (attr, val))
+            out.append(f"{attr}: {val}")
         return "\n".join(out)
 
     def __iter__(self):
@@ -133,7 +132,7 @@ class AbstractSite(object):
         # Set the attribute to the return value from _get_foo()
         # e.g., this does self.case_names = _get_case_names()
         for attr in self._all_attrs:
-            self.__setattr__(attr, getattr(self, "_get_%s" % attr)())
+            self.__setattr__(attr, getattr(self, f"_get_{attr}")())
 
         self._clean_attributes()
         if "case_name_shorts" in self._all_attrs:
@@ -168,7 +167,7 @@ class AbstractSite(object):
                     if attr == "download_urls":
                         sub_item = sub_item.strip()
                     else:
-                        if isinstance(sub_item, six.string_types):
+                        if isinstance(sub_item, str):
                             sub_item = clean_string(sub_item)
                         elif isinstance(sub_item, datetime):
                             sub_item = sub_item.date()
@@ -215,7 +214,7 @@ class AbstractSite(object):
                 " lengths: %s" % (self.court_id, lengths)
             )
         if len(self.case_names) == 0:
-            logger.warning("%s: Returned with zero items." % self.court_id)
+            logger.warning(f"{self.court_id}: Returned with zero items.")
         else:
             for field in self._req_attrs:
                 if self.__getattribute__(field) is None:
@@ -317,7 +316,7 @@ class AbstractSite(object):
                 % (self.url, truncated_params)
             )
         else:
-            logger.info("Now downloading case page at: %s" % self.url)
+            logger.info(f"Now downloading case page at: {self.url}")
         self._process_request_parameters(request_dict)
         if self.method == "GET":
             self._request_url_get(self.url)
@@ -354,7 +353,7 @@ class AbstractSite(object):
             headers=self.request["headers"],
             verify=self.request["verify"],
             timeout=60,
-            **self.request["parameters"]
+            **self.request["parameters"],
         )
 
     def _request_url_post(self, url):
@@ -366,7 +365,7 @@ class AbstractSite(object):
             verify=self.request["verify"],
             data=self.parameters,
             timeout=60,
-            **self.request["parameters"]
+            **self.request["parameters"],
         )
 
     def _request_url_mock(self, url):
@@ -387,15 +386,10 @@ class AbstractSite(object):
             ):
                 return self.request["response"].json()
             else:
-                if six.PY2:
+                try:
+                    payload = self.request["response"].content.decode("utf8")
+                except:
                     payload = self.request["response"].text
-                else:
-                    try:
-                        payload = self.request["response"].content.decode(
-                            "utf8"
-                        )
-                    except:
-                        payload = self.request["response"].text
 
                 text = self._clean_text(payload)
                 html_tree = self._make_html_tree(text)

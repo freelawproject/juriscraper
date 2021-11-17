@@ -11,12 +11,13 @@ History:
 """
 
 from datetime import datetime
+
 from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = "http://www.bap10.uscourts.gov/opinions/new/opinion.txt"
         self.court_id = self.__module__
         self.my_case_names = []
@@ -31,7 +32,7 @@ class Site(OpinionSite):
           13-94.pdf|13|94|08/25/2014|Steve Christensen|Raymond Madsen|United States Bankruptcy Court for the District of Utah
         """
         # Nuke duplicates
-        lines = set([line for line in text.split("\n") if line])
+        lines = {line for line in text.split("\n") if line}
 
         # Build an XML tree.
         xml_text = "<rows>\n"
@@ -39,7 +40,7 @@ class Site(OpinionSite):
             values = line.split("|")
             xml_text += "  <row>\n"
             for value in values:
-                xml_text += "    <value>%s</value>\n" % value
+                xml_text += f"    <value>{value}</value>\n"
             xml_text += "  </row>\n"
         xml_text += "</rows>\n"
         return xml_text
@@ -56,7 +57,7 @@ class Site(OpinionSite):
         defendants = self.html.xpath("//row/value[7]/text()")
         case_names = []
         for p, d in zip(plaintiffs, defendants):
-            case_names.append("%s v. %s" % (p, d))
+            case_names.append(f"{p} v. {d}")
         return case_names
 
     def _get_download_urls(self):
@@ -64,9 +65,7 @@ class Site(OpinionSite):
         file_names = self.html.xpath("//row/value[1]/text()")
         urls = []
         for y, f_n in zip(years, file_names):
-            urls.append(
-                "http://www.bap10.uscourts.gov/opinions/%s/%s" % (y, f_n)
-            )
+            urls.append(f"http://www.bap10.uscourts.gov/opinions/{y}/{f_n}")
         return urls
 
     def _get_precedential_statuses(self):
@@ -77,5 +76,5 @@ class Site(OpinionSite):
         numbers = self.html.xpath("//row/value[3]/text()")
         docket_numbers = []
         for y, n in zip(years, numbers):
-            docket_numbers.append("%s-%s" % (y, n))
+            docket_numbers.append(f"{y}-{n}")
         return docket_numbers

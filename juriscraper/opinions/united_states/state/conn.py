@@ -1,4 +1,3 @@
-# coding=utf-8
 """Scraper for Connecticut Supreme Court
 CourtID: conn
 Court Short Name: Conn.
@@ -14,16 +13,17 @@ History:
         opinions without dates and flagged for 'future' publication
 """
 
-from lxml import etree
 from datetime import date
 
-from juriscraper.OpinionSite import OpinionSite
+from lxml import etree
+
 from juriscraper.lib.string_utils import convert_date_string, normalize_dashes
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.crawl_date = date.today()
         self.url = "http://www.jud.ct.gov/external/supapp/archiveAROsup{year}.htm".format(
             year=self.crawl_date.strftime("%y")
@@ -32,7 +32,7 @@ class Site(OpinionSite):
         self.cases = []
 
     def _download(self, request_dict={}):
-        html = super(Site, self)._download(request_dict)
+        html = super()._download(request_dict)
         self._extract_cases_from_html(html)
         return html
 
@@ -63,7 +63,7 @@ class Site(OpinionSite):
                     elif element.tag == "a":
                         # Malformed html, see connappct_example.html
                         anchor = element
-                        glued = "%s %s" % (anchor.text_content(), anchor.tail)
+                        glued = f"{anchor.text_content()} {anchor.tail}"
                         text = normalize_dashes(" ".join(glued.split()))
                     self.cases.append(
                         {

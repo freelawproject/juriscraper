@@ -19,14 +19,14 @@ Contact information:
 
 import datetime
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         today = datetime.date.today()
         self.url = (
@@ -86,7 +86,7 @@ class Site(OpinionSite):
             date_string = element_date_text.split()[0]
         except:
             raise InsanityException(
-                'Unrecognized bold (date) element: "%s"' % element_date_text
+                f'Unrecognized bold (date) element: "{element_date_text}"'
             )
 
         # Find summary from blockquote element below link

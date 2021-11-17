@@ -9,13 +9,14 @@ Date created: 2013-08-10
 
 import re
 from datetime import datetime
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+
 from juriscraper.lib.exceptions import InsanityException
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = self.build_url(
             "https://www.courts.ri.gov/Courts/SupremeCourt/Pages/Opinions/Opinions"
@@ -111,5 +112,5 @@ class Site(OpinionSiteLinear):
                 return text.split(";")[0]
 
         raise InsanityException(
-            'Could not parse name from string: "%s"' % text_list
+            f'Could not parse name from string: "{text_list}"'
         )

@@ -1,5 +1,6 @@
 import requests
 from lxml.html import fromstring
+
 from ..lib.log_tools import make_default_logger
 
 requests.packages.urllib3.disable_warnings(
@@ -24,14 +25,14 @@ class LASCSession(requests.Session):
         :param password: MAP password
         :return: A LASCSession object
         """
-        super(LASCSession, self).__init__()
+        super().__init__()
 
         self.html = None
 
         # Los Angeles Superior Court MAP urls and paths
         la_url = "https://media.lacourt.org"
-        self.login_url = "%s/api/Account/Login" % la_url
-        self.signin_url = "%s/signin-oidc" % la_url
+        self.login_url = f"{la_url}/api/Account/Login"
+        self.signin_url = f"{la_url}/signin-oidc"
 
         # Microsoft urls and paths
         ms_base_url = "https://login.microsoftonline.com"
@@ -44,8 +45,8 @@ class LASCSession(requests.Session):
             "B2C_1_Media-LASC-SUSI/api/"
             "CombinedSigninAndSignup/confirmed?"
         )
-        self.api_url1 = "%s%s" % (ms_base_url, api_path1)
-        self.api_url2 = "%s%s" % (ms_base_url, api_path2)
+        self.api_url1 = f"{ms_base_url}{api_path1}"
+        self.api_url2 = f"{ms_base_url}{api_path2}"
 
         self.login_data = {
             "logonIdentifier": username,
@@ -67,7 +68,7 @@ class LASCSession(requests.Session):
         kwargs.setdefault("timeout", 30)
         kwargs.setdefault("params", {"p": "B2C_1_Media-LASC-SUSI"})
 
-        return super(LASCSession, self).get(url, **kwargs)
+        return super().get(url, **kwargs)
 
     def post(self, url, auto_login=False, **kwargs):
         """Overrides request.Session.post with session retry logic.
@@ -79,7 +80,7 @@ class LASCSession(requests.Session):
         kwargs.setdefault("timeout", 30)
         kwargs.setdefault("params", {"p": "B2C_1_Media-LASC-SUSI"})
 
-        return super(LASCSession, self).post(url, **kwargs)
+        return super().post(url, **kwargs)
 
     @staticmethod
     def _parse_new_html_for_keys(r):

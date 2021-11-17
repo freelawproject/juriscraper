@@ -14,13 +14,13 @@ History:
 import re
 from datetime import datetime
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         # Cases before 1997 do not have a docket number to parse.
         url_query = "&DB=".join(
@@ -41,7 +41,7 @@ class Site(OpinionSite):
             startat += incr
 
     def _download(self, request_dict={}):
-        html = super(Site, self)._download(request_dict)
+        html = super()._download(request_dict)
         self._extract_case_data_from_html(html)
         return html
 
@@ -94,7 +94,5 @@ class Site(OpinionSite):
             % (startat,)
         )
         date_range = list(range(datetime.today().year, 1997 - 1, -1))
-        self.url = (
-            base_url + "&DB=" + "&DB=".join([str(n) for n in date_range])
-        )
+        self.url = f"{base_url}&DB={'&DB='.join([str(n) for n in date_range])}"
         self.html = self._download()

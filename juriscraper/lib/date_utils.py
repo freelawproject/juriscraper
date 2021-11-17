@@ -1,15 +1,12 @@
-# -*- coding: utf-8 -*-
-from math import ceil
-
-from datetime import date
-from dateutil.parser import _timelex, parser, parserinfo
-from dateutil.rrule import DAILY, rrule
-from six.moves import zip_longest
-
 # We import the entire datetime library because otherwise we run into
 # conflicts in our isinstance statements.
 import datetime
+from datetime import date
+from itertools import zip_longest
+from math import ceil
 
+from dateutil.parser import parser, parserinfo
+from dateutil.rrule import DAILY, rrule
 
 MISSPELLINGS = {
     "Febraury": "February",
@@ -65,7 +62,7 @@ class BetterInfo(parserinfo):
     ]
 
     def __init__(self):
-        super(BetterInfo, self).__init__()
+        super().__init__()
 
 
 p = parser(info=BetterInfo())
@@ -91,84 +88,6 @@ def timetoken(token):
             info.tzoffset,
         )
     )
-
-
-def timesplit(input_string):
-    batch = []
-    for token in _timelex(input_string):
-        if timetoken(token):
-            if info.jump(token):
-                continue
-            batch.append(token)
-        else:
-            if batch:
-                yield " ".join(batch)
-                batch = []
-    if batch:
-        yield " ".join(batch)
-
-
-def parse_dates(
-    s,
-    debug=False,
-    sane_start=datetime.datetime(1750, 1, 1),
-    sane_end=datetime.datetime(2050, 1, 1),
-):
-    """Parse dates out of a string
-
-    Based on http://stackoverflow.com/questions/7028689/, this method is a
-    wrapper for the above two functions. It simply takes a string, splits it
-    accordingly and then finds dates within it.
-
-    Since this parser will use the DEFAULT value to fill in missing pieces of
-    "partial" dates, we use a year way in the past and Christmas to eliminate
-    false positives. So if the parser finds the value "June 9th," it'll
-    convert this to June 9th, 1600, and it'll get punted out. If it finds just
-    a year, that'll get converted to Christmas, and likewise be punted out.
-    Note that this means dates in the year 1600 or on Christmas are never
-    returned.
-
-    returns a list of dates
-    """
-    if isinstance(sane_start, datetime.date):
-        # Convert to datetime.datetime
-        sane_start = datetime.datetime.combine(sane_start, datetime.time())
-    if isinstance(sane_end, datetime.date):
-        sane_end = datetime.datetime.combine(sane_end, datetime.time())
-
-    # Ditch unicode (_timelex() flips out on unicode if the system has
-    # cStringIO installed -- the default)
-    # if isinstance(s, six.text_type):
-    #    s = s.encode('ascii', 'ignore')
-
-    # Fix misspellings
-    for i, j in MISSPELLINGS.items():
-        s = s.replace(i, j)
-
-    # Default is set to Christmas, 1600.
-    DEFAULT = datetime.datetime(1600, 12, 25)
-    dates = []
-    for item in timesplit(s):
-        # print("Found:", item)
-        try:
-            d = p.parse(item, default=DEFAULT)
-            hit_default_year = d.year == DEFAULT.year
-            hit_default_day_and_month = (
-                d.month == DEFAULT.month and d.day == DEFAULT.day
-            )
-            if not any([hit_default_year, hit_default_day_and_month]):
-                if debug:
-                    print("Item %s parsed as: %s" % (item, d))
-                if sane_start < d < sane_end:
-                    dates.append(d)
-        except OverflowError:
-            pass
-        except ValueError:
-            pass
-        except TypeError:
-            pass
-
-    return dates
 
 
 def quarter(month):

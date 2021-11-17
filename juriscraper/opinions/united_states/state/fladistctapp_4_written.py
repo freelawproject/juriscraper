@@ -4,20 +4,20 @@
 # Contact: Errors can be reported to Laura or Brandon, who are the
 #  computer people for the court. The phone number is (561) 242-2000
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     """Web Interface: http://www.4dca.org/opinions_auto/most_recent_written.shtml"""
 
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.set_url("o")
 
     def set_url(self, type):
-        self.url = "https://edca.4dca.org/opinions.aspx?type=%s" % type
+        self.url = f"https://edca.4dca.org/opinions.aspx?type={type}"
 
     def _get_docket_numbers(self):
         return self.return_text_for_cell(1)
@@ -29,7 +29,7 @@ class Site(OpinionSite):
         return self.return_text_for_cell(5)
 
     def _get_download_urls(self):
-        path = "%s/a/@href" % self.cell_path(2)
+        path = f"{self.cell_path(2)}/a/@href"
         return [href for href in self.html.xpath(path)]
 
     def _get_case_dates(self):

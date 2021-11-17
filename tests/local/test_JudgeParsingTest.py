@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 
 import unittest
@@ -122,8 +121,7 @@ class JudgeParsingTest(unittest.TestCase):
         ]
         for pair in pairs:
             print(
-                "Normalizing PACER type of '%s' to '%s'..."
-                % (pair["q"], pair["a"]),
+                f"Normalizing PACER type of '{pair['q']}' to '{pair['a']}'...",
                 end="",
             )
             result = normalize_party_types(pair["q"])

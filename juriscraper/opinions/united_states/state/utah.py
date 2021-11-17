@@ -1,10 +1,11 @@
-from juriscraper.OpinionSite import OpinionSite
 from datetime import datetime
+
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = "http://www.utcourts.gov/opinions/supopin/index.htm"
         self.court_id = self.__module__
 
@@ -44,7 +45,7 @@ class Site(OpinionSite):
         ):
             parts = text.strip().split(", ")
             try:
-                caseDate = parts[-3] + ", " + parts[-2]
+                caseDate = f"{parts[-3]}, {parts[-2]}"
                 dates.append(datetime.strptime(caseDate, "Filed %B %d, %Y"))
             except IndexError:
                 # Happens in whitespace-only text nodes.

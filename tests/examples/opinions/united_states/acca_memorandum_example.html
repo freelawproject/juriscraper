@@ -17,7 +17,7 @@
 <script language="JavaScript" type="text/javascript" src="https://www.jagcnet.army.mil/85257546006DF36B/AjaxCall.js"></script>
 <title>ACCA - Opinions: Memorandum Opinions by Date</title>
 <script language="JavaScript" type="text/javascript">
-<!-- 
+<!--
 document._domino_target = "_self";
 function _doClick(v, o, t) {
   var returnValue = false;
@@ -36,7 +36,7 @@ function _doClick(v, o, t) {
 </script>
 
 <script language="JavaScript" type="text/javascript">
-<!-- 
+<!--
 function searchCatalog(searchOrder) {	doc=document.forms[0];	vwnm = doc.ViewName.value	var ageIndex=-1	var catIndex=-1	var countIndex=-1	age=""	query=""	categories=""	categorytext=""	FTSearch="";	ageIndex=-1;	if (doc.Search.value!=="") {		FTSearch=escape(doc.Search.value);		query=FTSearch		self.location.href= vwnm + "?SearchView&Query=("+query+")&SearchOrder="+searchOrder+"&SearchWV=TRUE&SearchThesaurus=FALSE&SearchFuzzy=True&Start=0&Count=50&SearchMax=0&vw="+vwnm;	}}function handleKey(btnid) {	var pressedKey = window.event.keyCode;	var objBtn;		if (pressedKey == 13)	{		window.event.returnValue=false;			objBtn = document.getElementById(btnid);		if (objBtn) objBtn.click();		return false;	}	else return true;}function newDoc() {	 	var path = document.getElementById("DbPath").value;	 	var view = document.getElementById("ViewName").value;		var url = path + "/frmOpinion?OpenForm&vw="+view + "&fm=opsu";		window.open(url, '_self');		window.focus();}function closeForm() {	var path = document.getElementById("DbPath").value;	var view = document.getElementById("ViewName").value;	var url =  path+"/"+view+"?OpenView&Count=-1&vw="+view;	window.open(url, '_self');}
 
 // -->
@@ -116,18 +116,18 @@ $( document ).ready(function() {
 			break;
 		case "AllDelOpns":
 			result = "All Deleted Opinions";
-	} 
-	$("#bannerTitle").html(result); 
+	}
+	$("#bannerTitle").html(result);
 	if( vwnm != "AllDelOpns" && vwnm != "DelMOD" && vwnm != "DelOD" && vwnm != "DelSD") {
 		$('#viewbttnbar').css("display","block");
 		$('#viewsrchfnd').css("display","block");
 		$('#viewsrchsctn').css("display","block");
-	} 
+	}
 	if( isSearchForm == 1 ) {
-		$('tr.domino-view-colhead').each(function(){  
+		$('tr.domino-view-colhead').each(function(){
 	  		$(this).children('th').eq(0).remove();
 		});
-		$('tr.domino-viewentry').each(function(){ 
+		$('tr.domino-viewentry').each(function(){
 		  	$(this).children('td').eq(0).remove();
 		});
 		if (result != "") {
@@ -141,7 +141,7 @@ $( document ).ready(function() {
 	} else {
 		classnm = classnm + "2";
 	}
-	$('.'+classnm).each(function(i){  
+	$('.'+classnm).each(function(i){
 		$(this).remove();
 	});
 	$('#tblViewBody').css("display","block");
@@ -167,7 +167,7 @@ $( document ).ready(function() {
 <tr valign="top"><td class="labelCell" width="865"><div id='viewsrchfnd' style='display:none;'></div></td></tr>
 
 <tr valign="top"><td class="labelCell" width="865"><div id='viewsrchsctn' style='display:none;'>
-<p>Enter your desired search term: <input type="text" name="Search" style="width: 350px;" onkeypress="return handleKey('btnFindOpinion')"> 
+<p>Enter your desired search term: <input type="text" name="Search" style="width: 350px;" onkeypress="return handleKey('btnFindOpinion')">
 <input type="button" onclick="showHideIndicator(&quot;block&quot;);searchCatalog(&quot;4&quot;)" value="Find Opinion" id="btnFindOpinion" style="background-color:#F7F7F7; width:100px" /></p>
 </div></td></tr>
 

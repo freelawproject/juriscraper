@@ -3,11 +3,11 @@ CourtID: ca9
 Court Short Name: ca9
 """
 
-from juriscraper.lib.html_utils import (
-    get_row_column_text,
-    get_row_column_links,
-)
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.html_utils import (
+    get_row_column_links,
+    get_row_column_text,
+)
 from juriscraper.OralArgumentSiteLinearWebDriven import (
     OralArgumentSiteLinearWebDriven,
 )
@@ -15,17 +15,17 @@ from juriscraper.OralArgumentSiteLinearWebDriven import (
 
 class Site(OralArgumentSiteLinearWebDriven):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.ca9.uscourts.gov/media/"
         self.uses_selenium = True
 
     def _download(self, request_dict={}):
         if self.test_mode_enabled():
-            return super(Site, self)._download(request_dict)
+            return super()._download(request_dict)
         else:
             self.initiate_webdriven_session()
-            return super(Site, self)._download(request_dict)
+            return super()._download(request_dict)
 
     def _process_html(self):
         path = "//table[@id='search-results-table']//tr"
@@ -39,7 +39,7 @@ class Site(OralArgumentSiteLinearWebDriven):
             # Skip cases where the URL includes spaces
             url = get_row_column_links(row, 6)
             if " " in url:
-                logger.warning("URL includes spaces: {}".format(url))
+                logger.warning(f"URL includes spaces: {url}")
                 continue
 
             self.cases.append(
@@ -75,9 +75,7 @@ class Site(OralArgumentSiteLinearWebDriven):
                     # fix it in the _post_parse() method.
                     url = ""
                     logger.warning(
-                        "Audio file link not found at page: {}".format(
-                            case_url
-                        )
+                        f"Audio file link not found at page: {case_url}"
                     )
                 return url
 

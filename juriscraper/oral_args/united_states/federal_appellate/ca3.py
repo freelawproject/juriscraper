@@ -5,8 +5,8 @@
 # Reviewer: mlr
 # Date created: 18 July 2014
 
-from datetime import datetime
 import re
+from datetime import datetime
 
 from juriscraper.lib.string_utils import fix_camel_case
 from juriscraper.OralArgumentSite import OralArgumentSite
@@ -14,7 +14,7 @@ from juriscraper.OralArgumentSite import OralArgumentSite
 
 class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = (
             "http://www2.ca3.uscourts.gov/oralargument/OralArguments.xml"
@@ -27,7 +27,7 @@ class Site(OralArgumentSite):
 
     @staticmethod
     def _return_download_url(e):
-        return "http://www2.ca3.uscourts.gov{end}".format(end=e.tail)
+        return f"http://www2.ca3.uscourts.gov{e.tail}"
 
     def _get_case_names(self):
         path = "//item/title/text()"

@@ -7,16 +7,17 @@ Reviewer:
 History:
     2014-09-03: Renamed to ind_2005.py by janderse
 """
-from juriscraper.OpinionSite import OpinionSite
-
 import time
 from datetime import date
+
 from lxml import html
+
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = "http://www.in.gov/judiciary/opinions/previous/archsup.html"
         self.court_id = self.__module__
 
@@ -38,14 +39,14 @@ class Site(OpinionSite):
                 dates.append(
                     date.fromtimestamp(
                         time.mktime(
-                            time.strptime(date_string + "98", "%m%d%y")
+                            time.strptime(f"{date_string}98", "%m%d%y")
                         )
                     )
                 )
             elif len(date_string) == 5:
                 dates.append(
                     date.fromtimestamp(
-                        time.mktime(time.strptime("0" + date_string, "%m%d%y"))
+                        time.mktime(time.strptime(f"0{date_string}", "%m%d%y"))
                     )
                 )
             elif len(date_string) == 6:

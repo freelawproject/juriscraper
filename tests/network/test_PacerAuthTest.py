@@ -1,7 +1,7 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 import unittest
+
 from juriscraper.lib.exceptions import PacerLoginException
 from juriscraper.pacer.http import PacerSession
 from tests.network import SKIP_IF_NO_PACER_LOGIN, get_pacer_session

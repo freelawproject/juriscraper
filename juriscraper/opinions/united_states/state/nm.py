@@ -1,6 +1,6 @@
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
@@ -41,16 +41,16 @@ class Site(OpinionSite):
     IFRAME = "iframe=true"
 
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = (
-            "https://nmonesource.com/nmos/nmsc/en/nav_date.do?" + self.IFRAME
+            f"https://nmonesource.com/nmos/nmsc/en/nav_date.do?{self.IFRAME}"
         )
         self.cases = []
 
     def _download(self, request_dict={}):
         self.request_dict = request_dict
-        html = super(Site, self)._download(self.request_dict)
+        html = super()._download(self.request_dict)
         self.extract_cases(html)
         return html
 
@@ -87,12 +87,12 @@ class Site(OpinionSite):
                     docket = "test-docket-placeholder"
                 else:
                     # find the docket from the sub page (unpublished opinion)
-                    self.url = "%s?%s" % (anchor.attrib["href"], self.IFRAME)
+                    self.url = f"{anchor.attrib['href']}?{self.IFRAME}"
                     logger.info(
                         "%s: searching for docket on sub page %s"
                         % (self.court_id, self.url)
                     )
-                    sub_page = super(Site, self)._download(self.request_dict)
+                    sub_page = super()._download(self.request_dict)
                     sub_request_count += 1
                     cell = sub_page.xpath(sub_page_docket_path)
                     if not cell:

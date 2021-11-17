@@ -13,7 +13,7 @@ from juriscraper.OralArgumentSite import OralArgumentSite
 
 class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = (
             "http://www.supremecourt.gov/oral_arguments/argument_audio.aspx"
@@ -50,7 +50,6 @@ class Site(OralArgumentSite):
 
     def _download_backwards(self, year):
         self.url = (
-            "http://www.supremecourt.gov/oral_arguments/argument_audio/%s"
-            % year
+            f"http://www.supremecourt.gov/oral_arguments/argument_audio/{year}"
         )
         self.html = self._download()

@@ -3,9 +3,9 @@ CourtID: texag
 Court Short Name: Texas Attorney General
 """
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 ## WARNING: THIS SCRAPER IS FAILING:
 ## The page on which the hosting court was
@@ -18,7 +18,7 @@ from juriscraper.lib.string_utils import convert_date_string
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.target_index = 2
         self.url_path = False
@@ -27,7 +27,7 @@ class Site(OpinionSite):
         self.year_sub_path = False
         self.opinion_sub_path = False
         self.domain = "https://texasattorneygeneral.gov"
-        self.url = "%s/opinion/index-to-opinions" % self.domain
+        self.url = f"{self.domain}/opinion/index-to-opinions"
         self.back_scrape_iterable = list(
             range(2, 16)
         )  # Hard coded for initial run
@@ -43,7 +43,7 @@ class Site(OpinionSite):
     def _download(self, request_dict={}):
         """Follow top-most opinions urls on landing page to resource page"""
         # Process landing page
-        landing_html = super(Site, self)._download(request_dict)
+        landing_html = super()._download(request_dict)
         if self.test_mode_enabled():
             # Example file should be direct resource page
             return landing_html
@@ -63,7 +63,7 @@ class Site(OpinionSite):
         dates = []
         for section in self.html.xpath(self.section_path):
             year = section.xpath(self.year_sub_path)[0].text_content().strip()
-            date = convert_date_string("July 2, %s" % year)
+            date = convert_date_string(f"July 2, {year}")
             count = len(section.xpath(self.opinion_sub_path))
             dates.extend([date] * count)
         return dates
@@ -113,7 +113,7 @@ class Site(OpinionSite):
 
     def set_dynamic_resource_paths(self):
         self.opinion_path = self.return_opinion_path()
-        self.opinion_sub_path = ".%s" % self.opinion_path
+        self.opinion_sub_path = f".{self.opinion_path}"
         self.url_path = self.return_url_path()
         self.section_path = self.return_section_path()
         self.year_sub_path = self.return_year_sub_path()
@@ -159,7 +159,7 @@ class Site(OpinionSite):
 
     def return_url_path(self):
         if "/option" in self.opinion_path:
-            return "%s/@value" % self.opinion_path
+            return f"{self.opinion_path}/@value"
         elif "/li/a" in self.opinion_path:
-            return "%s/@href" % self.opinion_path
+            return f"{self.opinion_path}/@href"
         raise InsanityException("No recognized path to url")

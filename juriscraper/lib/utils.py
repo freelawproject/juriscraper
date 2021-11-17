@@ -1,8 +1,6 @@
 import re
 from itertools import chain, islice, tee
 
-from six import string_types
-
 from .string_utils import force_unicode
 
 
@@ -47,9 +45,9 @@ def clean_court_object(obj):
         for k, v in obj.items():
             d[k] = clean_court_object(v)
         return d
-    elif isinstance(obj, string_types):
+    elif isinstance(obj, str):
         s = " ".join(obj.strip().split())
         s = force_unicode(s)
-        return re.sub("\s+,", ",", s)
+        return re.sub(r"\s+,", ",", s)
     else:
         return obj

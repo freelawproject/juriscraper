@@ -7,14 +7,16 @@ History:
 """
 
 from datetime import date
+
 from dateutil.rrule import DAILY, rrule
+
+from juriscraper.lib.string_utils import convert_date_string, titlecase
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import titlecase, convert_date_string
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.ca9.uscourts.gov/opinions/"
         self.position = "[position() > 1]"
@@ -61,22 +63,22 @@ class Site(OpinionSite):
         )
 
     def _get_case_names(self):
-        path = "%s/td[1]/a/text()" % self.base
+        path = f"{self.base}/td[1]/a/text()"
         return [titlecase(text) for text in self.html.xpath(path)]
 
     def _get_download_urls(self):
-        path = "%s/td[1]/a/@href" % self.base
+        path = f"{self.base}/td[1]/a/@href"
         return self.html.xpath(path)
 
     def _get_case_dates(self):
-        path = "%s/td[7]//text()" % self.base
+        path = f"{self.base}/td[7]//text()"
         return [
             convert_date_string(date_string)
             for date_string in self.html.xpath(path)
         ]
 
     def _get_docket_numbers(self):
-        path = "%s/td[2]" % self.base
+        path = f"{self.base}/td[2]"
         return [cell.text_content() for cell in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
@@ -90,14 +92,14 @@ class Site(OpinionSite):
 
     def _get_nature_of_suit(self):
         natures = []
-        path = "%s/td[5]" % self.base
+        path = f"{self.base}/td[5]"
         for cell in self.html.xpath(path):
             text = cell.text_content()
             natures.append("" if text.lower().strip() == "n/a" else text)
         return natures
 
     def _get_lower_court(self):
-        path = "%s/td[3]//text()" % self.base
+        path = f"{self.base}/td[3]//text()"
         return self.html.xpath(path)
 
     def _download_backwards(self, d):

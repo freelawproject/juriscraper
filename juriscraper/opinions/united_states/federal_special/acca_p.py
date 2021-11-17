@@ -12,7 +12,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.jagcnet.army.mil/85257546006DF36B/ODD?OpenView&Count=-1"
         self.status = "Published"

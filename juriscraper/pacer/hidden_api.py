@@ -1,11 +1,11 @@
 from lxml import etree
 
-from .reports import BaseReport
-from .utils import get_pacer_doc_id_from_doc1_url
 from ..lib.diff_tools import get_closest_match_index
 from ..lib.exceptions import ParsingException
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import force_unicode
+from .reports import BaseReport
+from .utils import get_pacer_doc_id_from_doc1_url
 
 logger = make_default_logger()
 
@@ -32,9 +32,9 @@ class PossibleCaseNumberApi(BaseReport):
         assert (
             self.session is not None
         ), "session attribute of PossibleCaseNUmberApi cannot be None."
-        url = "%s?%s" % (self.url, docket_number.lower())
+        url = f"{self.url}?{docket_number.lower()}"
         logger.info(
-            "Querying the possible case number endpoint at URL: %s" % url
+            f"Querying the possible case number endpoint at URL: {url}"
         )
         self.response = self.session.get(url)
         self.parse()
@@ -124,7 +124,7 @@ class PossibleCaseNumberApi(BaseReport):
                 try:
                     attribute = "@defendant"
                     ids = sorted(
-                        [int(x.xpath("./%s" % attribute)[0]) for x in nodes]
+                        int(x.xpath(f"./{attribute}")[0]) for x in nodes
                     )
                 except IndexError:
                     # No defendant attribute one of the nodes. Try by
@@ -133,7 +133,7 @@ class PossibleCaseNumberApi(BaseReport):
                     # sequential.
                     attribute = "@id"
                     ids = sorted(
-                        [int(x.xpath("./%s" % attribute)[0]) for x in nodes]
+                        int(x.xpath(f"./{attribute}")[0]) for x in nodes
                     )
 
                 missing_ids = set(range(ids[0], ids[-1] + 1)).difference(ids)
@@ -141,9 +141,7 @@ class PossibleCaseNumberApi(BaseReport):
                     # The IDs are not sequential. Can't use this technique.
                     pass
                 else:
-                    nodes = self.tree.xpath(
-                        "//case[%s=%s]" % (attribute, ids[0])
-                    )
+                    nodes = self.tree.xpath(f"//case[{attribute}={ids[0]}]")
 
             if len(nodes) > 1 and case_name is not None:
                 # Disambiguate the possible case nodes to find the best one.
@@ -203,7 +201,7 @@ class ShowCaseDocApi(BaseReport):
         assert not court_id.endswith(
             "b"
         ), "This API is not available at bankruptcy courts."
-        super(ShowCaseDocApi, self).__init__(court_id, pacer_session)
+        super().__init__(court_id, pacer_session)
 
     def query(self, pacer_case_id, document_number, attachment_number=""):
         """Query the show_case_doc endpoint and return the normalized doc1
@@ -228,7 +226,7 @@ class ShowCaseDocApi(BaseReport):
                 attachment_number=attachment_number,
             )
         )
-        logger.info("Querying the show_doc_url endpoint with URL: %s" % url)
+        logger.info(f"Querying the show_doc_url endpoint with URL: {url}")
         # Only do a head request, else we get text content we don't need.
         self.response = self.session.head(url, allow_redirects=True)
         self.parse()
@@ -245,5 +243,5 @@ class ShowCaseDocApi(BaseReport):
             return get_pacer_doc_id_from_doc1_url(url)
         else:
             raise ParsingException(
-                "Unable to get doc1-style URL. Instead got %s" % url
+                f"Unable to get doc1-style URL. Instead got {url}"
             )

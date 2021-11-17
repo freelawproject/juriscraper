@@ -3,15 +3,17 @@
 
 import re
 from datetime import datetime
-from lxml import html
 from time import sleep
-from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
+
+from lxml import html
+
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 
 
 class Site(OpinionSiteWebDriven):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.sdjudicial.com/sc/scopinions.aspx"
         self.uses_selenium = True
@@ -40,7 +42,7 @@ class Site(OpinionSiteWebDriven):
                 ).group(1)
                 case_names.append(titlecase(case_name.lower()))
             except AttributeError:
-                print("AttributeError on: %s" % titlecase(s))
+                print(f"AttributeError on: {titlecase(s)}")
                 if "myrl" in s.lower() and self.year == 2000:
                     case_names.append("Lends His Horse v. Myrl & Roy")
                 elif "springer" in s.lower() and self.year == 2000:

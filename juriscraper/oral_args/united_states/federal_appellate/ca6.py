@@ -11,15 +11,15 @@ History:
 
 import re
 from datetime import datetime
-from six.moves.urllib.parse import urlparse, urljoin, parse_qs
+from urllib.parse import parse_qs, urljoin, urlparse
 
-from juriscraper.OralArgumentSite import OralArgumentSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OralArgumentSite import OralArgumentSite
 
 
 class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = (
             "http://www.opn.ca6.uscourts.gov/internet/court_audio/aud1.php"
@@ -58,9 +58,9 @@ class Site(OralArgumentSite):
 
     def _get_case_names(self):
         if self.backscrape:
-            path = self.xpath_root + "//td[2]/text()"
+            path = f"{self.xpath_root}//td[2]/text()"
         else:
-            path = self.xpath_root + "/tr/td[1]/text()"
+            path = f"{self.xpath_root}/tr/td[1]/text()"
         case_names = []
         for s in self.html.xpath(path):
             case_names.append(self.regex.search(s).group(2))
@@ -88,9 +88,9 @@ class Site(OralArgumentSite):
 
     def _get_docket_numbers(self):
         if self.backscrape:
-            path = self.xpath_root + "//td[2]/text()"
+            path = f"{self.xpath_root}//td[2]/text()"
         else:
-            path = self.xpath_root + "/tr/td[1]/text()"
+            path = f"{self.xpath_root}/tr/td[1]/text()"
         return [
             self.regex.search(s).group(1).strip().replace(" ", "-")
             for s in self.html.xpath(path)

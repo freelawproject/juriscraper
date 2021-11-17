@@ -9,9 +9,6 @@ In the cases, we look up search results by name, date, etc.
 import pprint
 import sys
 
-from .docket_report import BaseDocketReport
-from .reports import BaseReport
-from .utils import get_pacer_case_id_from_nonce_url
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import (
     clean_string,
@@ -20,6 +17,9 @@ from ..lib.string_utils import (
     harmonize,
 )
 from ..lib.utils import clean_court_object
+from .docket_report import BaseDocketReport
+from .reports import BaseReport
+from .utils import get_pacer_case_id_from_nonce_url
 
 logger = make_default_logger()
 
@@ -41,7 +41,7 @@ class BaseCaseQueryAdvanced(BaseDocketReport, BaseReport):
 
     def parse(self):
         self._clear_caches()
-        super(BaseCaseQueryAdvanced, self).parse()
+        super().parse()
 
     @property
     def data(self):
@@ -234,7 +234,7 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
             }
         )
         logger.info("Running advanced case query with params '%s'", params)
-        self.response = self.session.post(self.url + "?1-L_1_0-1", data=params)
+        self.response = self.session.post(f"{self.url}?1-L_1_0-1", data=params)
         self.parse()
 
 
@@ -265,8 +265,8 @@ def _main():
     # parsed value appears in output
     report = CaseQueryAdvancedBankruptcy("mad")
     filepath = sys.argv[1]
-    print("Parsing HTML file at %s" % filepath)
-    with open(filepath, "r") as f:
+    print(f"Parsing HTML file at {filepath}")
+    with open(filepath) as f:
         text = f.read().decode("utf-8")
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)

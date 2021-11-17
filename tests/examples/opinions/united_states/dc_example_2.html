@@ -29,9 +29,9 @@
  </title> <link rel="stylesheet" type="text/css" href="/internet/currentTheme/css/allMH.css" />
     </head>
     <body class="pageBG" style="font-size: 13px">
-      
- 
- <!-- HEADERS for our page. --> 
+
+
+ <!-- HEADERS for our page. -->
  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -92,7 +92,7 @@ Search Type</label><input id="megaDropdownHeader:searchWebSite:searchForm:search
 
 
 
-<body> <!-- Start of the Organization Drop downs. We parse an XML file and load the menus here. There are special considerations being done to display individual components. --> 
+<body> <!-- Start of the Organization Drop downs. We parse an XML file and load the menus here. There are special considerations being done to display individual components. -->
 <ul id="megaDropdownHeader:organizationalMenus:orgMenuList" class="orgMenuUL">
 <li class="orgMenuLI"><a id="megaDropdownHeader:organizationalMenus:orgMenuList:0:orgcmdlinkwithstyle" name="megaDropdownHeader:organizationalMenus:orgMenuList:0:orgcmdlinkwithstyle" href="/internet/appellate/main.jsf" title="District of Columbia Court of Appeals" class="orgArrow">Court of Appeals</a><div class="orgDropLeft"><div class="orgDropOdd">
 <ul id="megaDropdownHeader:organizationalMenus:orgMenuList:0:orgMenuOddCategoriesList" class="orgCategoryUL">
@@ -218,14 +218,14 @@ Search Type</label><input id="megaDropdownHeader:searchWebSite:searchForm:search
 </ul></div></div></li>
 </ul>
 </body>
- 
+
  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 
 
 
 
-<body> <!-- Start of the Audience Drop downs. We parse an XML file and load the menus here. There are special considerations being done to display individual components. The XML DTD for both styles of menus (Organizational and Audience) is identical. The menu rendering is vastly different. --> 
+<body> <!-- Start of the Audience Drop downs. We parse an XML file and load the menus here. There are special considerations being done to display individual components. The XML DTD for both styles of menus (Organizational and Audience) is identical. The menu rendering is vastly different. -->
 <ul id="megaDropdownHeader:audienceMenus:audienceMenuList" class="audMenuUL">
 <li class="audMenuLI"><a id="megaDropdownHeader:audienceMenus:audienceMenuList:0:audcmdlinknostyle" name="megaDropdownHeader:audienceMenus:audienceMenuList:0:audcmdlinknostyle" href="/internet/welcome.jsf" title="Main website">HOME</a></li>
 <li class="audMenuLI"><a id="megaDropdownHeader:audienceMenus:audienceMenuList:1:audcmdlinkwithstyle" name="megaDropdownHeader:audienceMenus:audienceMenuList:1:audcmdlinkwithstyle" href="/internet/public/main.jsf" title="Helpful information for the general public" class="audArrow">PUBLIC</a><div class="audDropLeft"><div class="audDropOdd">
@@ -553,7 +553,7 @@ searchOpinionSelector_3AdateRangeSearchView_3AsearchMenuDates_3A0_3AsearchMenuDa
 		{
 			form = document.getElementById(formname);
 		}
-		
+
 		if(typeof form.elements[name]!='undefined' && (form.elements[name].nodeName=='INPUT' || form.elements[name].nodeName=='input'))
 		{
 			form.elements[name].value=value;
@@ -567,10 +567,10 @@ searchOpinionSelector_3AdateRangeSearchView_3AsearchMenuDates_3A0_3AsearchMenuDa
 			newInput.setAttribute('value',value);
 			form.appendChild(newInput);
 		}
-		
+
 	}
-	
-	
+
+
 	function oamClearHiddenInput(formname, name, value)
 	{
 		var form = document.forms[formname];
@@ -578,48 +578,48 @@ searchOpinionSelector_3AdateRangeSearchView_3AsearchMenuDates_3A0_3AsearchMenuDa
 		{
 			form = document.getElementById(formname);
 		}
-		
+
 		var hInput = form.elements[name];
 		if(typeof hInput !='undefined')
 		{
 			form.removeChild(hInput);
 		}
-		
+
 	}
-	
+
 	function oamSubmitForm(formName, linkId, target, params)
 	{
-		
+
 		var clearFn = 'clearFormHiddenParams_'+formName.replace(/-/g, '\$:').replace(/:/g,'_');
 		if(typeof window[clearFn] =='function')
 		{
 			window[clearFn](formName);
 		}
-		
+
 		var form = document.forms[formName];
 		if (typeof form == 'undefined')
 		{
 			form = document.getElementById(formName);
 		}
-		
+
 		var oldTarget = form.target;
 		if(target != null)
 		{
-			
+
 			form.target=target;
 		}
 		if((typeof params!='undefined') && params != null)
 		{
-			
+
 			for(var i=0, param; (param = params[i]); i++)
 			{
 				oamSetHiddenInput(formName,param[0], param[1]);
 			}
-			
+
 		}
-		
+
 		oamSetHiddenInput(formName,formName +':'+'_idcl',linkId);
-		
+
 		if(form.onsubmit)
 		{
 			var result=form.onsubmit();
@@ -631,9 +631,9 @@ searchOpinionSelector_3AdateRangeSearchView_3AsearchMenuDates_3A0_3AsearchMenuDa
 				}
 				catch(e){}
 			}
-			
+
 		}
-		else 
+		else
 		{
 			try
 			{
@@ -641,21 +641,21 @@ searchOpinionSelector_3AdateRangeSearchView_3AsearchMenuDates_3A0_3AsearchMenuDa
 			}
 			catch(e){}
 		}
-		
+
 		form.target=oldTarget;
 		if((typeof params!='undefined') && params != null)
 		{
-			
+
 			for(var i=0, param; (param = params[i]); i++)
 			{
 				oamClearHiddenInput(formName,param[0], param[1]);
 			}
-			
+
 		}
-		
+
 		oamClearHiddenInput(formName,formName +':'+'_idcl',linkId);return false;
 	}
-	
+
 </script><a href="#" onclick="return oamSubmitForm('searchGenericResults:0:resultsForm','searchGenericResults:0:resultsForm:searchOpinionResults:j_id22');">Case Number</a></th><th class="opinionsTH"><a href="#" onclick="return oamSubmitForm('searchGenericResults:0:resultsForm','searchGenericResults:0:resultsForm:searchOpinionResults:j_id23');">Case Name</a></th><th class="opinionsTH"><a href="#" onclick="return oamSubmitForm('searchGenericResults:0:resultsForm','searchGenericResults:0:resultsForm:searchOpinionResults:j_id24');">Released</a></th><th class="opinionsTH">Errata</th><th class="opinionsTH">Atlantic Citation</th></tr></thead>
 <tbody id="searchGenericResults:0:resultsForm:searchOpinionResults:tbody_element">
 <tr class="opinionTR1"><td class="opinionC1"><a href="/internet/documents/No-Opinions-May-11-2017.pdf" target="No-Opinions-May-11-2017.pdf">NO OPINIONS MAY 11, 2017</a></td><td class="opinionC2"><span style="color:red;">NO OPINIONS MAY 11, 2017</span></td><td class="opinionC3">May 11, 2017</td><td class="opinionC4"></td><td class="opinionC5"></td></tr>
@@ -711,7 +711,7 @@ searchOpinionSelector_3AdateRangeSearchView_3AsearchMenuDates_3A0_3AsearchMenuDa
 <ul id="fatFooter:pageAddressInfo" class="addressUL">
 <li class="addressLI"><div class="addressField">District of Columbia Courts</div><div class="addressField">(202) 879-1010</div></li>
 </ul>
- 
+
  <br> <a href="/internet/about/hours/main.jsf" title="Court Hours" class="hoursColumn">HOURS</a>
  <br> <a href="/internet/disclaimer.jsf" title="Disclaimer" class="disclaimerColumn">Disclaimer</a></div>Stay Connected<em class="footerH2">
  &nbsp; with D.C. Courts</em></div><div class="social">
@@ -723,7 +723,7 @@ searchOpinionSelector_3AdateRangeSearchView_3AsearchMenuDates_3A0_3AsearchMenuDa
           <li class="connectItems"><a href="https://www.youtube.com/channel/UC8T2CIV5UkqgYbzJaxUYMRA" title="Connect via YouTube" class="youtube"><span><img src="/internet/currentTheme/images/youtube-icon.gif" alt="youtube logo" /></span></a></li>
         </ul>
         <!--
-            
+
  --> </div></div><div class="footerColumns"><span id="fatFooter:audienceFooterMenuList"><div class="footerColumn"><span class="footerH3">PUBLIC</span>
 <ul id="fatFooter:audienceFooterMenuList:1:j_id_id40pc10">
 <li><a href="/internet/public/aud_marriage/marriage.jsf" title="">Marriage</a></li>
@@ -765,12 +765,12 @@ searchOpinionSelector_3AdateRangeSearchView_3AsearchMenuDates_3A0_3AsearchMenuDa
 <li><a href="/internet/about/main.jsf" title="">About D.C. Courts</a></li>
 <li><a href="/internet/about/jobs/howtoapply.jsf" title="">How to Apply</a></li>
 </ul></div></span></div></div>
-       
+
       <!--
       Load the jQuery scripts here after the body and the respective
       elements have been rendered to ensure that the jQuery functions
       do not error out on null elements and element styles.
-      
+
       The jQuery javascript functions, conflict with the javascript
       functions from the Date Picker component from JSF Tomahawk
       libraries. So we have disabled it for now.

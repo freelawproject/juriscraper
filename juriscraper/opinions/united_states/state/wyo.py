@@ -8,14 +8,14 @@ History:
 """
 
 import re
-from datetime import datetime, date
+from datetime import date, datetime
 
 from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.base_url = "http://www.courts.state.wy.us"
         self.url = (
@@ -25,7 +25,7 @@ class Site(OpinionSite):
 
     def _get_case_names(self):
         return [
-            "%s v. %s" % (opinion["Appellant"], opinion["Appellee"])
+            f"{opinion['Appellant']} v. {opinion['Appellee']}"
             for opinion in self.html
         ]
 
@@ -35,7 +35,7 @@ class Site(OpinionSite):
             pdf_file_name = record["DocumentName"]
             if pdf_file_name[:5] == "../..":
                 pdf_file_name = pdf_file_name[5:]
-            url = self.base_url + "/Documents/Opinions/" + pdf_file_name
+            url = f"{self.base_url}/Documents/Opinions/{pdf_file_name}"
             download_urls.append(url)
         return download_urls
 

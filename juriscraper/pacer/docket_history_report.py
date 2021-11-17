@@ -1,12 +1,5 @@
-# coding=utf-8
 import re
 
-from .docket_report import DocketReport
-from .utils import (
-    get_nonce_from_form,
-    get_pacer_doc_id_from_doc1_url,
-    get_pacer_seq_no_from_doc1_anchor,
-)
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import (
@@ -16,6 +9,12 @@ from ..lib.string_utils import (
     harmonize,
 )
 from ..lib.utils import clean_court_object, previous_and_next
+from .docket_report import DocketReport
+from .utils import (
+    get_nonce_from_form,
+    get_pacer_doc_id_from_doc1_url,
+    get_pacer_seq_no_from_doc1_anchor,
+)
 
 logger = make_default_logger()
 
@@ -122,7 +121,7 @@ class DocketHistoryReport(DocketReport):
             "Getting nonce for docket history report with "
             "pacer_case_id: %s" % pacer_case_id
         )
-        r = self.session.get("%s?%s" % (self.url, pacer_case_id))
+        r = self.session.get(f"{self.url}?{pacer_case_id}")
         nonce = get_nonce_from_form(r)
 
         query_params = {
@@ -138,7 +137,7 @@ class DocketHistoryReport(DocketReport):
         )
 
         self.response = self.session.post(
-            self.url + "?" + nonce, data=query_params
+            f"{self.url}?{nonce}", data=query_params
         )
         self.parse()
 
@@ -148,7 +147,7 @@ class DocketHistoryReport(DocketReport):
             return self._docket_entries
 
         docket_header = './/th/text()[contains(., "Description")]'
-        docket_entry_rows = self.tree.xpath("//table[%s]//tr" % docket_header)[
+        docket_entry_rows = self.tree.xpath(f"//table[{docket_header}]//tr")[
             1:
         ]  # Skip first row
 

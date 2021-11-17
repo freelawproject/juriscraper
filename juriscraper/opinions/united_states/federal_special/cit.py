@@ -3,43 +3,36 @@
 # Court Short Name: Ct. Int'l Trade
 # Neutral Citation Format: Ct. Int'l Trade No. 12-1
 
-from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
+
 from lxml import html
+
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = "http://www.cit.uscourts.gov/SlipOpinions/index.html"
         self.court_id = self.__module__
         self.base = '//tr[../tr/th[contains(., "Caption")]]'
 
     def _get_download_urls(self):
-        return [
-            t
-            for t in self.html.xpath(
-                "{base}/td[1]/a/@href".format(base=self.base)
-            )
-        ]
+        return [t for t in self.html.xpath(f"{self.base}/td[1]/a/@href")]
 
     def _get_neutral_citations(self):
         neutral_citations = []
-        for t in self.html.xpath(
-            "{base}/td[1]/a/text()".format(base=self.base)
-        ):
+        for t in self.html.xpath(f"{self.base}/td[1]/a/text()"):
             year, item_number = t.split("-")
-            neutral_citations.append(
-                "20{year} CIT {number}".format(year=year, number=item_number)
-            )
+            neutral_citations.append(f"20{year} CIT {item_number}")
         return neutral_citations
 
     def _get_case_names(self):
         # Exclude confidential rows by ensuring there is a sibling row that
         # contains an anchor (which confidential cases do not)
         case_names = []
-        path = "{base}/td[2][../td/a]".format(base=self.base)
+        path = f"{self.base}/td[2][../td/a]"
         for e in self.html.xpath(path):
             text = e.text_content().strip()
             case_name = text.split("\n")[0]
@@ -48,9 +41,7 @@ class Site(OpinionSite):
 
     def _get_precedential_statuses(self):
         statuses = []
-        for e in self.html.xpath(
-            "{base}/td[2][../td/a]".format(base=self.base)
-        ):
+        for e in self.html.xpath(f"{self.base}/td[2][../td/a]"):
             s = (
                 html.tostring(e, method="text", encoding="unicode")
                 .lower()
@@ -69,7 +60,7 @@ class Site(OpinionSite):
         dates = []
         date_formats = ["%m/%d/%Y", "%m/%d/%y"]
         for date_string in self.html.xpath(
-            "{base}/td[3][../td/a]//text()".format(base=self.base)
+            f"{self.base}/td[3][../td/a]//text()"
         ):
             for date_format in date_formats:
                 try:
@@ -87,9 +78,7 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         docket_numbers = []
-        for e in self.html.xpath(
-            "{base}/td[4][../td/a]".format(base=self.base)
-        ):
+        for e in self.html.xpath(f"{self.base}/td[4][../td/a]"):
             docket_numbers.append(
                 html.tostring(e, method="text", encoding="unicode").strip()
             )
@@ -97,17 +86,12 @@ class Site(OpinionSite):
 
     def _get_judges(self):
         judges = []
-        for e in self.html.xpath(
-            "{base}/td[5][../td/a]".format(base=self.base)
-        ):
+        for e in self.html.xpath(f"{self.base}/td[5][../td/a]"):
             s = html.tostring(e, method="text", encoding="unicode")
             judges.append(s)
         return judges
 
     def _get_nature_of_suit(self):
         return [
-            t
-            for t in self.html.xpath(
-                "{base}/td[6][../td/a]/text()".format(base=self.base)
-            )
+            t for t in self.html.xpath(f"{self.base}/td[6][../td/a]/text()")
         ]

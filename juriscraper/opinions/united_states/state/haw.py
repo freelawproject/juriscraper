@@ -3,13 +3,13 @@
 
 from datetime import date
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         year = date.today().year
         self.url = (
             "http://www.courts.state.hi.us/opinions_and_orders/opinions?yr=%s"
@@ -21,7 +21,7 @@ class Site(OpinionSite):
         self.cases = []
 
     def _download(self, request_dict={}):
-        html = super(Site, self)._download(request_dict)
+        html = super()._download(request_dict)
         self.extract_cases_from_table(html)
         return html
 

@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OpinionSite import OpinionSite
 
@@ -12,7 +10,7 @@ class OpinionSiteLinear(OpinionSite):
     """
 
     def __init__(self, *args, **kwargs):
-        super(OpinionSiteLinear, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.cases = []
         self.status = None
 

@@ -2,15 +2,17 @@
 #   2015-10-20: Created by Andrei Chelaru
 
 from datetime import datetime
-from lxml import html
+
 from dateutil import parser
-from juriscraper.OpinionSite import OpinionSite
+from lxml import html
+
 from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self):
-        super(Site, self).__init__()
+        super().__init__()
         self.year = 0
         self.court_id = self.__module__
         self.url = ""
@@ -47,7 +49,7 @@ class Site(OpinionSite):
                 try:
                     case_dates.append(
                         datetime.strptime(
-                            "{} {} {}".format(self.year, month, day),
+                            f"{self.year} {month} {day}",
                             "%Y %B %d",
                         )
                     )
@@ -97,7 +99,7 @@ class Site(OpinionSite):
         self.__set_paths(d)
 
         self.url = self.url_base.format(year=self.year)
-        logger.info("Scraping year {}".format(self.year))
+        logger.info(f"Scraping year {self.year}")
         self.html = self._download()
         if self.html is not None:
             # Setting status is important because it prevents the download
@@ -108,59 +110,45 @@ class Site(OpinionSite):
         self.year = year
         if year < 2006:
             base_path = "//tr/td[4][a]"
-            self.download_url_path = "{}/a[1]/@href".format(base_path)
-            self.case_name_path = "{}/preceding-sibling::td[1]".format(
-                base_path
-            )
+            self.download_url_path = f"{base_path}/a[1]/@href"
+            self.case_name_path = f"{base_path}/preceding-sibling::td[1]"
             self.case_dates_path = base_path
             self.case_dates_path_day = "./preceding-sibling::td[3]//text()"
             self.case_dates_path_month = ".//ancestor::tr[1]/preceding-sibling::tr[count(./td) = 1][td//strong][1]/td//text()"
             self.precedential_statuses_path = (
-                "{}/preceding-sibling::td[2]".format(base_path)
+                f"{base_path}/preceding-sibling::td[2]"
             )
-            self.docket_numbers_path = "{}/preceding-sibling::td[2]".format(
-                base_path
-            )
+            self.docket_numbers_path = f"{base_path}/preceding-sibling::td[2]"
             self.neutral_citations_path = None
         elif 2006 <= year <= 2010:
             if year == 2010:
                 base_path = "//tr/td[3][div/a]"
-                self.download_url_path = "{}/div[1]/a[1]/@href".format(
-                    base_path
-                )
-                self.case_name_path = "{}/div[1]/a[1]".format(base_path)
+                self.download_url_path = f"{base_path}/div[1]/a[1]/@href"
+                self.case_name_path = f"{base_path}/div[1]/a[1]"
             else:
                 base_path = "//tr/td[3][a]"
-                self.download_url_path = "{}/a[1]/@href".format(base_path)
-                self.case_name_path = "{}/a[1]".format(base_path)
+                self.download_url_path = f"{base_path}/a[1]/@href"
+                self.case_name_path = f"{base_path}/a[1]"
             if year == 2006:
                 self.case_dates_path = base_path
                 self.case_dates_path_day = "./preceding-sibling::td[2]//text()"
                 self.case_dates_path_month = ".//ancestor::tr[1]/preceding-sibling::tr[count(./td) = 1][1]/td//text()"
             else:
-                self.case_dates_path = "{}/preceding-sibling::td[2]".format(
-                    base_path
-                )
+                self.case_dates_path = f"{base_path}/preceding-sibling::td[2]"
             self.precedential_statuses_path = (
-                "{}/preceding-sibling::td[1]".format(base_path)
+                f"{base_path}/preceding-sibling::td[1]"
             )
-            self.docket_numbers_path = "{}/preceding-sibling::td[1]".format(
-                base_path
-            )
+            self.docket_numbers_path = f"{base_path}/preceding-sibling::td[1]"
             self.neutral_citations_path = None
         elif 2010 < year < 2015:
             base_path = "//tr/td[4][div/a/text()]"
-            self.download_url_path = "{}/div[1]/a[1]/@href".format(base_path)
-            self.case_name_path = "{}/div[1]/a[1]".format(base_path)
-            self.case_dates_path = "{}/preceding-sibling::td[3]".format(
-                base_path
-            )
+            self.download_url_path = f"{base_path}/div[1]/a[1]/@href"
+            self.case_name_path = f"{base_path}/div[1]/a[1]"
+            self.case_dates_path = f"{base_path}/preceding-sibling::td[3]"
             self.precedential_statuses_path = (
-                "{}/preceding-sibling::td[2]".format(base_path)
+                f"{base_path}/preceding-sibling::td[2]"
             )
-            self.docket_numbers_path = "{}/preceding-sibling::td[2]".format(
-                base_path
-            )
+            self.docket_numbers_path = f"{base_path}/preceding-sibling::td[2]"
             self.neutral_citations_path = "{}/preceding-sibling::td[1]".format(
                 base_path
             )

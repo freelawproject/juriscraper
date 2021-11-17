@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 
 import glob
@@ -48,12 +47,12 @@ class ScraperExampleTest(unittest.TestCase):
         for module_string in module_strings:
             package, module = module_string.rsplit(".", 1)
             mod = __import__(
-                "%s.%s" % (package, module), globals(), locals(), [module]
+                f"{package}.{module}", globals(), locals(), [module]
             )
             if "backscraper" in module_string:
                 continue
 
-            sys.stdout.write("  %s " % module_string.ljust(max_len_mod_string))
+            sys.stdout.write(f"  {module_string.ljust(max_len_mod_string)} ")
             sys.stdout.flush()
             # module_parts:
             # [0]  - "juriscraper"
@@ -70,7 +69,7 @@ class ScraperExampleTest(unittest.TestCase):
             )
             paths = [
                 path
-                for path in glob.glob("%s_example*" % example_path)
+                for path in glob.glob(f"{example_path}_example*")
                 if not path.endswith(json_compare_extension)
             ]
             self.assertTrue(
@@ -96,16 +95,13 @@ class ScraperExampleTest(unittest.TestCase):
                 site.enable_test_mode()
                 site.parse()
                 # Now validate that the parsed result is as we expect
-                json_path = "%s%s" % (
-                    path.rsplit(".", 1)[0],
-                    json_compare_extension,
-                )
+                json_path = f"{path.rsplit('.', 1)[0]}{json_compare_extension}"
                 json_data = json.loads(site.to_json())
                 if os.path.isfile(json_path):
                     # Compare result with corresponding json file
                     example_file = path.rsplit("/", 1)[1]
                     compare_file = json_path.rsplit("/", 1)[1]
-                    with open(json_path, "r") as input_file, self.subTest(
+                    with open(json_path) as input_file, self.subTest(
                         "Testing example files",
                         json_path=json_path,
                         module_string=module_string,
@@ -142,7 +138,7 @@ class ScraperExampleTest(unittest.TestCase):
             if warning_msg:
                 num_warnings += 1
 
-            print("(%s test(s) in %0.1f seconds)" % (num_tests, duration))
+            print(f"({num_tests} test(s) in {duration:0.1f} seconds)")
 
         print(
             "\n{num_scrapers} scrapers tested successfully against "

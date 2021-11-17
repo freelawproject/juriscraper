@@ -1,13 +1,13 @@
-# coding=utf-8
 import re
 import urllib.parse
 
 from juriscraper.pacer.reports import BaseReport
-from .docket_report import BaseDocketReport
-from .utils import get_pacer_doc_id_from_doc1_url
+
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import convert_date_string, force_unicode, harmonize
 from ..lib.utils import clean_court_object
+from .docket_report import BaseDocketReport
+from .utils import get_pacer_doc_id_from_doc1_url
 
 logger = make_default_logger()
 
@@ -199,7 +199,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         """Get the claim_number and date fields"""
         data = {}
         claim_number_text = td.xpath(".//b")[0].text_content()
-        claim_number = int(re.search("\d+", claim_number_text).group(0))
+        claim_number = int(re.search(r"\d+", claim_number_text).group(0))
         data["claim_number"] = claim_number
 
         labels = td.xpath(".//i")
@@ -388,5 +388,5 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             self.court_id,
             params,
         )
-        self.response = self.session.post(self.url + "?1-L_1_0-1", data=params)
+        self.response = self.session.post(f"{self.url}?1-L_1_0-1", data=params)
         self.parse()

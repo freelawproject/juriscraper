@@ -6,7 +6,8 @@ History:
  2015-10-27  Created by Andrei Chelaru
 """
 from datetime import date
-from dateutil.rrule import rrule, DAILY
+
+from dateutil.rrule import DAILY, rrule
 
 from juriscraper.opinions.united_states.state.nyappterm_1st import (
     Site as NySite,
@@ -15,7 +16,7 @@ from juriscraper.opinions.united_states.state.nyappterm_1st import (
 
 class Site(NySite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.interval = 200
         self.back_scrape_iterable = [
             i.date()

@@ -7,8 +7,9 @@
 
 from datetime import date
 
-from juriscraper.opinions.united_states.state import okla
 from lxml import html
+
+from juriscraper.opinions.united_states.state import okla
 
 ## WARNING: THIS SCRAPER IS FAILING:
 ## This scraper is succeeding in development, but
@@ -20,7 +21,7 @@ from lxml import html
 
 class Site(okla.Site):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         d = date.today()
         self.url = "http://www.oscn.net/applications/oscn/Index.asp?ftdb=STOKAG&year={year}&level=1".format(
             year=d.year

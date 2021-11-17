@@ -1,4 +1,3 @@
-# coding=utf-8
 """Scraper for Colorado Supreme Court
 CourtID: colo
 Court Short Name: Colo.
@@ -11,13 +10,14 @@ Contact: Email "Internet and Technology" staff listed at http://www.cobar.org/st
 """
 
 import re
-from lxml import html
 from urllib.parse import urlparse
 
+from lxml import html
+
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
@@ -31,7 +31,7 @@ class Site(OpinionSite):
     regex = r"(?:No.\s)?(\d+)\s+(\w+)(?:\s+)?(\d+M?\.?)\s*((Nos?\.?\s+)?((\w{5,8}\.?)(((\s+\&|\,)\s+\w{5,8})+)?))\.?(\s+)?(.*)"
 
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions"
         self.base_path = "//div[@id='dnn_ctr2509_ModuleContent']/ul/li/a"
@@ -40,7 +40,7 @@ class Site(OpinionSite):
 
     def _download(self, request_dict={}):
         self.request_dict = request_dict
-        landing_page_html = super(Site, self)._download(request_dict)
+        landing_page_html = super()._download(request_dict)
 
         # Test/example files should use html from direct resource page
         #
@@ -73,7 +73,7 @@ class Site(OpinionSite):
                 date_string = ahref.xpath("./text()")[0]
                 url = ahref.xpath("./@href")[0]
                 date_obj = convert_date_string(date_string)
-                logger.info("Getting sub-url: %s" % url)
+                logger.info(f"Getting sub-url: {url}")
 
                 # Fetch sub-page's content
                 html_tree = self._get_html_tree_by_url(url, self.request_dict)
@@ -143,7 +143,7 @@ class Site(OpinionSite):
                 self.url = url
                 # _download() in AbstractSite.py expects this to be not None
                 self.parameters = {}
-                result = super(Site, self)._download(files_request_dict)
+                result = super()._download(files_request_dict)
                 # restore method and url
                 self.method = prev_method
                 self.url = prev_url
@@ -196,7 +196,7 @@ class Site(OpinionSite):
         try:
             match = re.match(cls.regex, text).group(6)
         except:
-            raise InsanityException('Unable to parse docket from "%s"' % text)
+            raise InsanityException(f'Unable to parse docket from "{text}"')
         dockets_raw = match.rstrip(".").replace("&", " ").replace(",", " ")
         dockets = dockets_raw.split()
         return ", ".join(dockets)
@@ -207,9 +207,7 @@ class Site(OpinionSite):
         try:
             match = re.match(cls.regex, text).group(12)
         except:
-            raise InsanityException(
-                'Unable to parse case name from "%s"' % text
-            )
+            raise InsanityException(f'Unable to parse case name from "{text}"')
         return match.strip().rstrip(".")
 
     @classmethod
@@ -243,14 +241,14 @@ class Site(OpinionSite):
         path2 = (
             '//p/strong[starts-with(text(), "Petitioner:")]/parent::p/text()'
         )
-        parts = html_tree.xpath("%s | %s" % (path1, path2))
+        parts = html_tree.xpath(f"{path1} | {path2}")
         if parts:
             name = " ".join(part.strip() for part in parts if part.strip())
             return False, name
         return False, False
 
     def _extract_summary_relative_to_anchor(self, anchor):
-        parts = anchor.xpath("%s/p" % self.parent_summary_block_path)
+        parts = anchor.xpath(f"{self.parent_summary_block_path}/p")
         return " ".join([part.text_content().strip() for part in parts])
 
     def _extract_nature_relative_to_anchor(self, anchor):

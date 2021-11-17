@@ -8,19 +8,18 @@ History:
 """
 
 import re
-from datetime import date
-from datetime import datetime
 import traceback
+from datetime import date, datetime
 
-from juriscraper.OpinionSite import OpinionSite
 from lxml import html
 
 from juriscraper.lib.exceptions import InsanityException
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = (
             "http://appellate.nccourts.org/opinions/?c=sc&year=%s"
@@ -151,7 +150,7 @@ class Site(OpinionSite):
                 neutral_cite = ""
         except:
             raise InsanityException(
-                "Unable to parse: %s\n%s" % (txt, traceback.format_exc())
+                f"Unable to parse: {txt}\n{traceback.format_exc()}"
             )
         return case_name, neutral_cite, docket_number
 
@@ -174,7 +173,5 @@ class Site(OpinionSite):
         return self.my_precedential_statuses
 
     def _download_backwards(self, year):
-        self.url = (
-            "http://appellate.nccourts.org/opinions/?c=sc&year=%s" % year
-        )
+        self.url = f"http://appellate.nccourts.org/opinions/?c=sc&year={year}"
         self.html = self._download()

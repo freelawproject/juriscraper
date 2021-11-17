@@ -1,16 +1,17 @@
 import time
 from datetime import date
 
+import certifi
+import requests
+from lxml import html
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
-import certifi
-from lxml import html
-import requests
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.base_url = (
             "http://digitalcommons.law.villanova.edu/thirdcircuit_{year}/"
         )
@@ -24,10 +25,10 @@ class Site(OpinionSite):
         if self.test_mode_enabled():
             # Note that this is returning a list of HTML trees.
             html_trees = [
-                super(Site, self)._download(request_dict=request_dict),
+                super()._download(request_dict=request_dict),
             ]
         else:
-            html_l = super(Site, self)._download(request_dict)
+            html_l = super()._download(request_dict)
             html_trees = self._get_case_html_page([], html_l, request_dict)
 
             # handle the next page data
@@ -41,13 +42,13 @@ class Site(OpinionSite):
         """Gets each of the individual case pages"""
         s = requests.session()
         for case_url in html_l.xpath(self.case_xpath):
-            logger.info("  Getting sub-page at: %s" % case_url)
+            logger.info(f"  Getting sub-page at: {case_url}")
             r = s.get(
                 case_url,
                 headers={"User-Agent": "Juriscraper"},
                 verify=certifi.where(),
                 timeout=60,
-                **request_dict
+                **request_dict,
             )
 
             r.raise_for_status()

@@ -2,13 +2,14 @@
 # CourtID: iowactapp
 # Court Short Name: iowactapp
 
-from . import iowa
 from juriscraper.AbstractSite import logger
+
+from . import iowa
 
 
 class Site(iowa.Site):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.iowacourts.gov/iowa-courts/court-of-appeals/court-of-appeals-court-opinions/"
 
@@ -23,9 +24,9 @@ class Site(iowa.Site):
         path_filter_text = (
             'contains(./text(), "Archived Court of Appeals Opinions")'
         )
-        path = "//a[%s][%s]/@href" % (path_filter_class, path_filter_text)
+        path = f"//a[{path_filter_class}][{path_filter_text}]/@href"
         for archive_page_url in landing_page_html.xpath(path):
-            logger.info("Back scraping archive page: %s" % archive_page_url)
+            logger.info(f"Back scraping archive page: {archive_page_url}")
             archive_page_html = self._get_html_tree_by_url(archive_page_url)
             self.extract_archive_cases(archive_page_html)
 

@@ -1,14 +1,13 @@
 #!/usr/bin/env python
-# coding=utf-8
 
 
 import os
 import time
 import unittest
 from datetime import date, timedelta
+from unittest import mock
 
 import jsondate3 as json
-from unittest import mock
 from requests import ConnectionError
 
 from juriscraper.lib.string_utils import convert_date_string
@@ -71,7 +70,7 @@ class PacerFreeOpinionsTest(unittest.TestCase):
                 # however.
                 if some_date > date.today():
                     raise ValueError(
-                        "Runaway date query for %s: %s" % (court_id, some_date)
+                        f"Runaway date query for {court_id}: {some_date}"
                     )
                 try:
                     report.query(some_date, some_date, sort="case_number")
@@ -85,7 +84,7 @@ class PacerFreeOpinionsTest(unittest.TestCase):
                         retry_count += 1
                         continue
                     else:
-                        print("%s: Repeated errors at this court." % e)
+                        print(f"{e}: Repeated errors at this court.")
                         raise e
                 if not report.responses:
                     break  # Not a supported court.
@@ -169,15 +168,13 @@ class PacerFreeOpinionsTest(unittest.TestCase):
             self.assertEqual(
                 test["count"],
                 len(report.data),
-                "Should get %s response for %s"
-                % (test["count"], test["court"]),
+                f"Should get {test['count']} response for {test['court']}",
             )
             report.query(some_date, some_date, sort="case_number")
             self.assertEqual(
                 test["count"],
                 len(report.data),
-                "should get %s response for %s"
-                % (test["count"], test["court"]),
+                f"should get {test['count']} response for {test['court']}",
             )
 
     def test_catch_excluded_court_ids(self):

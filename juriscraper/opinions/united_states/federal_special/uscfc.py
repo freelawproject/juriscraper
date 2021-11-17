@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """Scraper for the United States Court of Federal Claims
 CourtID: uscfc
 Court Short Name: Fed. Cl.
@@ -8,22 +6,23 @@ Notes:
     Scraper adapted for new website as of February 20, 2014.
 """
 
-import re
-import six
 import datetime
+import re
+
 from lxml import html
-from juriscraper.OpinionSite import OpinionSite
+
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import (
-    titlecase,
     clean_if_py3,
     convert_date_string,
+    titlecase,
 )
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = "http://www.uscfc.uscourts.gov/aggregator/sources/8"
         self.back_scrape_iterable = list(range(1, 4))
         self.court_id = self.__module__
@@ -33,7 +32,7 @@ class Site(OpinionSite):
         if self.test_mode_enabled():
             # Use static 'today' date for consisting test results
             self.today = convert_date_string("2018/10/17")
-        return super(Site, self)._download(request_dict)
+        return super()._download(request_dict)
 
     def _get_case_dates(self):
         dates = []
@@ -47,7 +46,7 @@ class Site(OpinionSite):
                 date = self.today
             else:
                 raise InsanityException(
-                    "Unrecognized date element string: %s" % text
+                    f"Unrecognized date element string: {text}"
                 )
             dates.append(date)
         return dates
@@ -58,7 +57,7 @@ class Site(OpinionSite):
             t = " ".join(clean_if_py3(t).split())  # Normalize whitespace
             if t.strip():
                 # If there is something other than whitespace...
-                if not isinstance(t, six.string_types):
+                if not isinstance(t, str):
                     t = str(t, encoding="utf-8")
 
                 if " • " in t:
@@ -80,7 +79,7 @@ class Site(OpinionSite):
             t = clean_if_py3(t)
             if t.strip():
                 # If there is something other than whitespace...
-                if not isinstance(t, six.string_types):
+                if not isinstance(t, str):
                     t = str(t, encoding="utf-8")
 
                 if " • " in t:
@@ -136,6 +135,6 @@ class Site(OpinionSite):
 
     def _download_backwards(self, page):
         self.url = (
-            "http://www.uscfc.uscourts.gov/aggregator/sources/8?page=%s" % page
+            f"http://www.uscfc.uscourts.gov/aggregator/sources/8?page={page}"
         )
         self.html = self._download()

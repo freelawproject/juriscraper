@@ -11,13 +11,13 @@ History:
 import re
 from datetime import datetime
 
+from juriscraper.lib.string_utils import clean_if_py3, convert_date_string
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import convert_date_string, clean_if_py3
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = (
             "http://www.asbca.mil/Decisions/decisions%d.html"
@@ -28,7 +28,7 @@ class Site(OpinionSite):
 
     # Fix broken month names and funky whitespace usage.
     def _clean_text(self, text):
-        text = super(Site, self)._clean_text(text)
+        text = super()._clean_text(text)
         text = text.replace("&#160;", " ").replace("&nbsp;", " ")
         text = text.replace("Januray", "January")
         text = text.replace("Februrary", "February")
@@ -86,7 +86,7 @@ class Site(OpinionSite):
             return None
         path = "//table/tr[td/a]/td[%d]/text()" % self.columns["ASBCA Number"]
         return [
-            ("ASBCA No. " + clean_if_py3(txt).strip())
+            f"ASBCA No. {clean_if_py3(txt).strip()}"
             for txt in self.html.xpath(path)
         ]
 

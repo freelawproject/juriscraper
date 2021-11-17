@@ -6,19 +6,19 @@ Date created: 2014-02-27
 Substantially Revised: Brian W. Carver, 2014-03-28
 """
 
-import time
-from datetime import date
-from datetime import datetime
-from lxml import html
 import re
+import time
+from datetime import date, datetime
 
-from juriscraper.OpinionSite import OpinionSite
+from lxml import html
+
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://ecf.dcd.uscourts.gov/cgi-bin/Opinions.pl?2013"
 

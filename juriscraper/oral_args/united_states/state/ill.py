@@ -14,7 +14,7 @@ from juriscraper.OralArgumentSite import OralArgumentSite
 
 class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.illinoiscourts.gov/Media/On_Demand.asp"
         self.cell_index_docket = 2
@@ -30,7 +30,7 @@ class Site(OralArgumentSite):
 
     def _get_case_dates(self):
         dates = []
-        path = self.xpath_root + "/td[1]"
+        path = f"{self.xpath_root}/td[1]"
         for e in self.html.xpath(path):
             s = e.text_content()
             try:
@@ -72,5 +72,5 @@ class Site(OralArgumentSite):
             self.orig_url = self.url
 
         parts = self.url.rsplit(".", 1)
-        self.url = "%s_%s.%s" % (parts[0], date_str, parts[1])
+        self.url = f"{parts[0]}_{date_str}.{parts[1]}"
         self.html = self._download()

@@ -2,18 +2,17 @@
 # Date created: 2013-06-06
 
 import re
+from datetime import date, datetime
+
 import requests
 
-from datetime import date
-from datetime import datetime
-
-from juriscraper.opinions.united_states.state import nd
 from juriscraper.DeferringList import DeferringList
+from juriscraper.opinions.united_states.state import nd
 
 
 class Site(nd.Site):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         today = date.today()
         self.url = "http://www.ndcourts.gov/opinions/month/%s.htm" % (
@@ -28,7 +27,7 @@ class Site(nd.Site):
             if self.test_mode_enabled():
                 return html_link  # Can't fetch remote during tests
             case_number = re.search(r"(\d+)", html_link).group(0)
-            wpd_link = "http://www.ndcourts.gov/wp/%s.wpd" % case_number
+            wpd_link = f"http://www.ndcourts.gov/wp/{case_number}.wpd"
             r = requests.head(
                 wpd_link,
                 allow_redirects=False,

@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# coding=utf-8
 
 
 import unittest
@@ -8,11 +7,11 @@ from datetime import date
 from juriscraper.lib.utils import clean_court_object
 from juriscraper.pacer.utils import (
     get_court_id_from_url,
+    get_pacer_case_id_from_doc1_url,
     get_pacer_case_id_from_nonce_url,
     get_pacer_doc_id_from_doc1_url,
-    get_pacer_seq_no_from_doc1_url,
-    get_pacer_case_id_from_doc1_url,
     get_pacer_magic_num_from_doc1_url,
+    get_pacer_seq_no_from_doc1_url,
     make_doc1_url,
     reverse_goDLS_function,
 )

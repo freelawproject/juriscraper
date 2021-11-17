@@ -11,6 +11,6 @@ from juriscraper.opinions.united_states.state import minn
 class Site(minn.Site):
     # Only subclasses minn for the _download method.
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.court_filters = ["/ctapun/", "/ctappub/"]

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Scraper for the United States Tax Court
 # CourtID: tax
 # Court Short Name: Tax Ct.
@@ -8,17 +7,18 @@
 
 import re
 from datetime import date, datetime, timedelta
+
 from dateutil.rrule import WEEKLY, rrule
 
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 from juriscraper.lib.html_utils import fix_links_but_keep_anchors
 from juriscraper.lib.models import citation_types
+from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 
 
 class Site(OpinionSiteWebDriven):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.uses_selenium = True
         self.url = "https://www.ustaxcourt.gov/UstcInOp/OpinionSearch.aspx"
         self.base_path = (
@@ -40,9 +40,9 @@ class Site(OpinionSiteWebDriven):
     def _download(self, request_dict={}):
         """Uses Selenium because doing it with requests is a pain."""
         if self.test_mode_enabled():
-            return super(Site, self)._download(request_dict=request_dict)
+            return super()._download(request_dict=request_dict)
 
-        logger.info("Now downloading case page at: %s" % self.url)
+        logger.info(f"Now downloading case page at: {self.url}")
         self.initiate_webdriven_session()
 
         # Set the start and end dates
@@ -88,7 +88,7 @@ class Site(OpinionSiteWebDriven):
         # This is annoying, but we just have to swap out the ending and it
         # should be fine.
         hrefs = []
-        path = self.base_path + "//@href"
+        path = f"{self.base_path}//@href"
         for href in self.html.xpath(path):
             if "?ID" in href:
                 hrefs.append(href)
@@ -102,9 +102,9 @@ class Site(OpinionSiteWebDriven):
 
     def _get_case_names(self):
         case_names = []
-        path = self.base_path + "//td[1]"
+        path = f"{self.base_path}//td[1]"
         for td in self.html.xpath(path):
-            case_names.append(td.text_content().strip() + " v. Commissioner")
+            case_names.append(f"{td.text_content().strip()} v. Commissioner")
         return case_names
 
     def _get_case_name_shorts(self):
@@ -114,7 +114,7 @@ class Site(OpinionSiteWebDriven):
 
     def _get_precedential_statuses(self):
         statuses = []
-        path = self.base_path + "//td[2]"
+        path = f"{self.base_path}//td[2]"
         for td in self.html.xpath(path):
             status = td.text_content().strip().lower()
             if "opinion" in status:
@@ -129,7 +129,7 @@ class Site(OpinionSiteWebDriven):
 
     def _get_case_dates(self):
         dates = []
-        path = self.base_path + "//td[3]"
+        path = f"{self.base_path}//td[3]"
         for td in self.html.xpath(path):
             date_string = td.text_content().strip()
             dates.append(datetime.strptime(date_string, "%m/%d/%Y").date())

@@ -5,13 +5,13 @@ Court Short Name: New York Attorney General
 
 import datetime
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.year = datetime.date.today().year
         self.base_url = "https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=%d"
@@ -22,7 +22,7 @@ class Site(OpinionSite):
         self.set_paths()
 
     def _download(self, request_dict={}):
-        html = super(Site, self)._download(request_dict)
+        html = super()._download(request_dict)
         if self.test_mode_enabled():
             # Make sure the year-table you want to test is first in example file
             self.year = int(html.xpath("//table[1]/caption")[0].text_content())
@@ -46,7 +46,7 @@ class Site(OpinionSite):
         )
 
     def _get_download_urls(self):
-        path = "%s//a/@href" % (self.cell_path % 4)
+        path = f"{self.cell_path % 4}//a/@href"
         return [href for href in self.html.xpath(path)]
 
     def _get_docket_numbers(self):
@@ -76,4 +76,4 @@ class Site(OpinionSite):
 
     def set_paths(self):
         self.row_path = '//table[contains(caption, "%d")]/tbody/tr' % self.year
-        self.cell_path = self.row_path + "/td[%d]"
+        self.cell_path = f"{self.row_path}/td[%d]"

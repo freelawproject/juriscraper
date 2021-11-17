@@ -2,16 +2,18 @@
 # CourtID: cit
 # Court Short Name: Ct. Int'l Trade
 # Neutral Citation Format: Ct. Int'l Trade No. 12-1
-from juriscraper.OpinionSite import OpinionSite
 import re
 import time
 from datetime import date
+
 from lxml import html
+
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         # This is a special backscraper to deal with problems on the 2005 page.
         self.url = "http://www.cit.uscourts.gov/SlipOpinions/SlipOps-2005.html"
         self.court_id = self.__module__

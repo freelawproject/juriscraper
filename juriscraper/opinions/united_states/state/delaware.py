@@ -5,13 +5,13 @@ Creator: Andrei Chelaru
 Reviewer: mlr
 """
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = (
             "http://courts.delaware.gov/opinions/list.aspx?ag=supreme%20court"
         )

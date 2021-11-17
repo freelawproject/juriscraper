@@ -7,13 +7,13 @@ Date created: 04/27/2014
 
 from datetime import date
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url_slug = "Supreme"
         self.url = self.build_url()
@@ -24,7 +24,7 @@ class Site(OpinionSite):
         return url_template % (self.url_slug, date.today().year)
 
     def _download(self, request_dict={}):
-        html = super(Site, self)._download(request_dict)
+        html = super()._download(request_dict)
         self._extract_cases_from_html(html)
         return html
 

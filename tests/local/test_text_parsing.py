@@ -1,6 +1,5 @@
-# -*- coding: utf-8 -*-
-
 import unittest
+
 from juriscraper.opinions.united_states.federal_special import tax
 
 
@@ -73,7 +72,7 @@ class TextExtraction(unittest.TestCase):
                 "2003 T.C. Summary Opinion 150",
             ),
             (
-                """
+                r"""
                    MICHAEL KEITH SHENK, PETITIONER v. COMMISSIONER
                                                     OF INTERNAL REVENUE, RESPONDENT
 
@@ -170,7 +169,7 @@ VerDate Nov 24 2008   10:59 Jul 11, 2014   Jkt 372897   PO 20012   Frm 00002   F
         site = tax.Site()
         for q, a in test_pairs:
             results = site.extract_from_text(q)
-            cite_string = "%s %s %s" % (
+            cite_string = "{} {} {}".format(
                 results["Citation"]["volume"],
                 results["Citation"]["reporter"],
                 results["Citation"]["page"],
@@ -185,34 +184,34 @@ VerDate Nov 24 2008   10:59 Jul 11, 2014   Jkt 372897   PO 20012   Frm 00002   F
         test_pairs = (
             (
                 """  1 UNITED STATES TAX COURT REPORT (2018)
-    
-    
-    
+
+
+
                      UNITED STATES TAX COURT
-    
-    
-    
+
+
+
     BENTLEY COURT II LIMITED PARTNERSHIP, B.F. BENTLEY, INC., TAX
                  MATTERS PARTNER, Petitioner v.
           COMMISSIONER OF INTERNAL REVENUE, Respondent
-    
-    
-    
+
+
+
      Docket No. 5393-04.                Filed May 31, 2006.
-    
-    
-    
+
+
+
      Nancy Ortmeyer Kuhn, for petitioner.
         """,
                 "5393-04",
             ),
             (
-                """
+                r"""
                    MICHAEL KEITH SHENK, PETITIONER v. COMMISSIONER
                                                     OF INTERNAL REVENUE, RESPONDENT
-    
+
                                                         Docket No. 5706-12.                            Filed May 6, 2013.
-    
+
                                                   P was divorced from his wife, and their 2003 ‘‘Judgment of
                                                Absolute Divorce’’ provided that his ex-wife would have pri-
                                                mary residential custody of their three minor children. The
@@ -231,16 +230,16 @@ VerDate Nov 24 2008   10:59 Jul 11, 2014   Jkt 372897   PO 20012   Frm 00002   F
                                                any Form 8332 to his return. He also claimed head-of-house-
                                                hold filing status. His ex-wife, the custodial parent, timely
                                                filed a Federal income tax return for 2009 on which she also
-    
+
                                       200
-    
-    
-    
-    
+
+
+
+
     VerDate Nov 24 2008   10:59 Jul 11, 2014   Jkt 372897    PO 20012   Frm 00001   Fmt 3857   Sfmt 3857   V:\FILES\BOUND VOL. WITHOUT CROP MARKS\B.V.140\SHENK   JAMIE
                                           (200)                          SHENK v. COMMISSIONER                                        201
-    
-    
+
+
                                                claimed two dependency exemption deductions, so that one
                                                child was claimed on both parents’ returns. R allowed to P the
                                                dependency exemption deduction for one of the children but
@@ -262,7 +261,7 @@ VerDate Nov 24 2008   10:59 Jul 11, 2014   Jkt 372897   PO 20012   Frm 00002   F
                                                obtain and proffer such a declaration. Held, further, P is not
                                                entitled to head-of-household filing status under I.R.C. sec.
                                                2(b)(1) nor to the child tax credit under I.R.C. sec. 24.
-    
+
                                            Michael Keith Shenk, for himself.
                                            Shari Salu, for respondent.
                                          GUSTAFSON, Judge: The Internal Revenue Service (IRS)
@@ -277,23 +276,23 @@ VerDate Nov 24 2008   10:59 Jul 11, 2014   Jkt 372897   PO 20012   Frm 00002   F
                                       section 24(a), and head-of-household filing status under sec-
                                       tion 2(b)(1). On these issues, we hold for the IRS.
                                                                           FINDINGS OF FACT
-    
+
                                       The judgment of divorce
                                         Mr. Shenk was married to Julie Phillips, and they have
                                       three minor children—M.S., W.S., and L.S. They divorced in
                                       2003. The family court’s ‘‘Judgment of Absolute Divorce’’ pro-
                                          1 Unless otherwise indicated, all citations of sections refer to the Internal
-    
+
                                       Revenue Code (26 U.S.C.) in effect for the tax year at issue, and all cita-
                                       tions of Rules refer to the Tax Court Rules of Practice and Procedure.
-    
-    
-    
-    
+
+
+
+
     VerDate Nov 24 2008   10:59 Jul 11, 2014   Jkt 372897   PO 20012   Frm 00002   Fmt 3857   Sfmt 3857   V:\FILES\BOUND VOL. WITHOUT CROP MARKS\B.V.140\SHENK   JAMIE
                                           202                 140 UNITED STATES TAX COURT REPORTS                                   (200)
-    
-    
+
+
                                       vided: that Ms. Phillips was ‘‘awarded primary residential
                                       custody’’ of the parties’ three children; and that Mr. Shenk
                                       would be liable for child support payments; but that, as to

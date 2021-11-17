@@ -11,9 +11,9 @@ History:
 import re
 from datetime import date
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.html_utils import get_html5_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
@@ -21,7 +21,7 @@ class Site(OpinionSite):
     FOUR_CELLS_SUB_PATH = "//*[count(td)=3"
 
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         today = date.today()
         # https://www.nycourts.gov/ctapps/Decisions/2015/Dec15/December15.html
         self.url = "http://www.nycourts.gov/ctapps/Decisions/{year}/{mon}{yr}/{month}{yr}.html".format(
@@ -36,10 +36,7 @@ class Site(OpinionSite):
         return get_html5_parsed_text(text)
 
     def _get_case_names(self):
-        path = "%s and %s]" % (
-            self.FOUR_CELLS_SUB_PATH,
-            self.DOWNLOAD_URL_SUB_PATH,
-        )
+        path = f"{self.FOUR_CELLS_SUB_PATH} and {self.DOWNLOAD_URL_SUB_PATH}]"
         case_names = []
         for element in self.html.xpath(path):
             case_name_parts = []
@@ -57,7 +54,7 @@ class Site(OpinionSite):
 
     def _get_download_urls(self):
         return self.html.xpath(
-            "%s]/%s" % (self.FOUR_CELLS_SUB_PATH, self.DOWNLOAD_URL_SUB_PATH)
+            f"{self.FOUR_CELLS_SUB_PATH}]/{self.DOWNLOAD_URL_SUB_PATH}"
         )
 
     def _get_case_dates(self):
@@ -80,7 +77,7 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         docket_numbers = []
-        for cell in self.html.xpath("%s]/td[1]" % self.FOUR_CELLS_SUB_PATH):
+        for cell in self.html.xpath(f"{self.FOUR_CELLS_SUB_PATH}]/td[1]"):
             text = cell.text_content()
             date_from_text = self.get_date_from_text(text)
             if not date_from_text:
@@ -103,7 +100,7 @@ class Site(OpinionSite):
 
     def _row_contains_opinion(self, row):
         p1 = "./td[3]"
-        p2 = "./%s" % self.DOWNLOAD_URL_SUB_PATH
+        p2 = f"./{self.DOWNLOAD_URL_SUB_PATH}"
         return row.xpath(p1) and row.xpath(p2)
 
     def get_date_from_text(self, text):

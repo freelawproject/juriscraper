@@ -29,7 +29,7 @@
          	"value"   : "",
          	"text"    : "Main Navigation"
       	}).appendTo("#main-navigation select");
-		
+
 		$("#main-navigation > ul > li > a, #main-navigation > ul > li > ul > li > a").each(function() {
        		var el = $(this);
        			$("<option />", {
@@ -70,7 +70,7 @@
 		});
 		//add classes to mobile main nav options for styling purposes
 		$('.dropDown option:eq(1), .dropDown option:eq(11), .dropDown option:eq(18), .dropDown option:eq(24), .dropDown option:eq(31)').addClass('bold');
-	
+
 	});
 </script>
 <!-- InstanceBeginEditable name="head" -->
@@ -85,7 +85,7 @@
 <link href="../js/chosen/chosen.css" rel="stylesheet" type="text/css" media="screen" />
 <script type="text/javascript">
 	$(document).ready(function() {
-		
+
 		$('#opinions').dataTable({
 			"sPaginationType": "full_numbers",
 			"bAutoWidth": true,
@@ -111,17 +111,17 @@
 			sPlaceHolder: 'head:before',
 			aoColumns: [null, null, null, null, {type: 'select'}]
 		});
-		
+
 		$(".select_filter").chosen({no_results_text: "No results match"}).before('<div class="narrowText"><p>Are you looking for all cases with a specific decision type?</p></div>');
-		
+
 		//var oTable = $('#opinions').dataTable();
 		//new FixedHeader(oTable);
-		
+
 		$('#opinions tbody tr').each(function() {
         	var sTitle = '';
             var nTds = $(this).find('td');
             var sDescription = nTds.eq(3).text();
-                                                                                                
+
             switch(sDescription){
             	case "CR-F":
 					sTitle  = 'Felony (non-Death Penalty)';
@@ -193,18 +193,18 @@
                 	sTitle = 'Please review our integrated decision list information.';
                     break;
              }
-             nTds.eq(3).attr('title', sTitle ); 
+             nTds.eq(3).attr('title', sTitle );
         });
-		
+
 		$("#opinions tbody td[title]").tooltip({
 			effect: 'slide',
 			offset: [27, 0]
 		});
-		
+
 		$('a[href$="pdf"]').click(function() {
         	_gaq.push(['_trackEvent', 'September 2017 Opinions', 'Download', $(this).attr('href')]);
     	});
-		
+
 	});
 </script>
 <style type="text/css">
@@ -277,12 +277,12 @@
   <li><a href="#main-navigation">Skip to main menu</a></li>
   <li><a href="#main-content">Skip to main content</a></li>
 </ul>
-<!-- InstanceBeginEditable name="openHeaderEditableArea" --> 
+<!-- InstanceBeginEditable name="openHeaderEditableArea" -->
 <!-- Opinion Table Help -->
 <link rel="stylesheet" href="../../test/html5Redux/fonts/stylesheet.css">
 <style type="text/css">
-	.caseloadNotice { margin:0px auto; padding:0px; width:200px; height:200px; overflow:hidden; border:1px solid #8e1717; border-bottom:2px solid #8e1717; border-radius:50% 50%; -webkit-border-radius:50% 50%; 
-	background: -moz-linear-gradient(top, #e4effc 0%, #c5d9f1 100%); 
+	.caseloadNotice { margin:0px auto; padding:0px; width:200px; height:200px; overflow:hidden; border:1px solid #8e1717; border-bottom:2px solid #8e1717; border-radius:50% 50%; -webkit-border-radius:50% 50%;
+	background: -moz-linear-gradient(top, #e4effc 0%, #c5d9f1 100%);
 	background: -webkit-linear-gradient(top, #e4effc 0%,#c5d9f1 100%);
 	background: linear-gradient(to bottom, #e4effc 0%,#c5d9f1 100%);
 	box-shadow:inset 0 0 0 3px #ffffff; -webkit-box-shadow:inset 0 0 0 3px #ffffff; float:right; }
@@ -312,7 +312,7 @@
   <p class="navigation noPrint"><a href="../index.html">Home</a> | <a href="../contact.html">Contact</a> | <a href="../jobs.html">Jobs</a> | <a href="../sitemap.html">Sitemap</a></p>
   <h2 class="page-title"><!-- InstanceBeginEditable name="PageTitle" -->Opinions and Memo Decisions of the Supreme Court of Appeals<!-- InstanceEndEditable --></h2>
   <div id="tertiary-menu">
-		
+
     <ul class="sub-menu">
       <!-- InstanceBeginRepeat name="TertiaryMenuItems" --><!-- InstanceBeginRepeatEntry -->
       <!-- InstanceBeginEditable name="TertiaryMenuItem" -->
@@ -328,7 +328,7 @@
     <div id="searchText" class="noPrint">Search</div>
     <div id="cse-search-form" class="noPrint">Loading</div>
 	<script src="http://www.google.com/jsapi" type="text/javascript"></script>
-	<script type="text/javascript"> 
+	<script type="text/javascript">
   		google.load('search', '1', {language : 'en'});
   		google.setOnLoadCallback(function() {
     		var customSearchControl = new google.search.CustomSearchControl('002442811923801076369:gpk47hv1cg0');
@@ -347,9 +347,9 @@
           <li><a href="../public-resources/jury-information.html">Jury Information</a></li>
           <li><a href="../public-resources/law-library/law-library-home.html">Law Library</a></li>
           <li><a href="../public-resources/student-resources/index.html">Student Resources</a></li>
-          <li><a href="../public-resources/domestic/domestic-violence.html">Domestic Violence</a></li> 
+          <li><a href="../public-resources/domestic/domestic-violence.html">Domestic Violence</a></li>
           <li><a href="../public-resources/guardians-conservators.html">Guardians &amp; Conservators</a></li>
-          <li><a href="../public-resources/child-abuse-neglect.html">Child Abuse and Neglect</a></li> 
+          <li><a href="../public-resources/child-abuse-neglect.html">Child Abuse and Neglect</a></li>
           <li><a href="../public-resources/accessibility-information.html">Accessibility Information</a></li>
         </ul>
       </li>
@@ -370,8 +370,8 @@
           <li><a href="../lower-courts/family-courts.html">Family Courts</a></li>
           <li><a href="../lower-courts/magistrate-courts.html">Magistrate Courts</a></li>
           <li><a href="../lower-courts/treatment-courts.html">Treatment Courts</a></li>
-          <li><a href="../lower-courts/mlp/overview.html">Mass Litigation Panel</a></li> 
-          <li><a href="../lower-courts/business-court-division/index.html">Business Court Division</a></li>      
+          <li><a href="../lower-courts/mlp/overview.html">Mass Litigation Panel</a></li>
+          <li><a href="../lower-courts/business-court-division/index.html">Business Court Division</a></li>
     	</ul>
       </li>
       <li id="legal-community"><a href="../legal-community/index.html">Legal Community</a>
@@ -392,7 +392,7 @@
           <li><a href="../court-administration/probation/probation-services.html">Probation Services</a></li>
           <li><a href="../court-administration/access-to-justice.html">Access to Justice</a></li>
           <li><a href="../court-administration/juvenlie-justice-commission/History.html">Juvenile Justice Commission</a></li>
-          <li><a href="../court-administration/for-court-employees.html">For Court Employees</a></li>   
+          <li><a href="../court-administration/for-court-employees.html">For Court Employees</a></li>
     	</ul>
       </li>
       <li><a href="../viewing-pdf-files.html">Viewing PDF Files</a></li>
@@ -400,7 +400,7 @@
   </div>
   <div id="main-content"><!-- InstanceBeginEditable name="MainContent" -->
     <h3>Current Term Opinion List</h3>
-    
+
     <div class="notice caseloadNotice">
     	<a href="clerk/statistics/15-16QuickFacts.pdf" target="_blank" onclick="_gaq.push(['_trackEvent', 'Report Clerk Link', 'click', '2016 Caseload Report']);">
         	<h1>2016 Quick<br />Reference Facts</h1>
@@ -408,7 +408,7 @@
             <h6>Click Here</h6>
         </a>
     </div>
-    
+
     <p>Links to all decisions filed in the current term of court are listed in the table below. <strong>Are you looking for an opinion list from a prior term of court?</strong> If so, please <a href="opinion-information.html">visit the Information & Search page</a>. Opinions from the September 1991 term of court to the present day are available online.</p>
     <p>The new integrated decision list combines all of the decisions issued during a court term, identifed using case type and decision type codes. To re-sort the list quickly, click any of the column headers (except case number). For more information about using the decision list and for an explanation of the codes, review the page: <a href="integrated-decision-list-explained.html">About the Decision List</a>. </p>
     <div class="quickTip">
@@ -432,7 +432,7 @@
         </tr>
       </thead>
       <tbody>
-      
+
       <tr>
       		<td>02/09/2017</td>
             <td>16-0670</td>
@@ -810,56 +810,56 @@
             <td><a href="memo-decisions/spring2017/16-0650memo.pdf" target="_blank">In Re: P.B.</a></td>
             <td>JUV</td>
             <td>MD</td>
-       </tr> 
+       </tr>
       <tr>
         	<td>01/09/2017</td>
             <td>16-0624</td>
             <td><a href="memo-decisions/spring2017/16-0624memo.pdf" target="_blank">In Re: Z.H. and N.H.</a></td>
             <td>JUV</td>
             <td>MD</td>
-       </tr> 
+       </tr>
       <tr>
         	<td>01/09/2017</td>
             <td>16-0364 &amp; 16-0654</td>
             <td><a href="memo-decisions/spring2017/16-0364and16-0654memo.pdf" target="_blank">In Re: J.P.</a></td>
             <td>JUV</td>
             <td>MD</td>
-       </tr> 
+       </tr>
       <tr>
         	<td>01/09/2017</td>
             <td>16-0278</td>
             <td><a href="memo-decisions/spring2017/16-0278memo.pdf" target="_blank">State of West Virginia v. Londa Mae Hogue</a></td>
             <td>CR-F</td>
             <td>MD</td>
-       </tr> 
+       </tr>
       <tr>
         	<td>01/09/2017</td>
             <td>16-0206</td>
             <td><a href="memo-decisions/spring2017/16-0206memo.pdf" target="_blank">Charles L. Pearcy IV v. Karen Pszczolkowski, Warden</a></td>
             <td>CIV-O</td>
             <td>MD</td>
-       </tr> 
+       </tr>
       <tr>
         	<td>01/09/2017</td>
             <td>16-0126</td>
             <td><a href="memo-decisions/spring2017/16-0126memo.pdf" target="_blank">Deborah A. Phipps v. Lori Nohe, Warden</a></td>
             <td>CIV-O</td>
             <td>MD</td>
-       </tr> 
+       </tr>
       <tr>
         	<td>01/09/2017</td>
             <td>16-0086</td>
             <td><a href="memo-decisions/spring2017/16-0086memo.pdf" target="_blank">State of West Virginia v. Nathaniel Showalter</a></td>
             <td>CR-F</td>
             <td>MD</td>
-       </tr> 
+       </tr>
       <tr>
         	<td>01/09/2017</td>
             <td>15-1117</td>
             <td><a href="memo-decisions/spring2017/15-1117memo.pdf" target="_blank">State of West Virginia v. Joshua McCoy</a></td>
             <td>CR-F</td>
             <td>MD</td>
-       </tr> 
+       </tr>
       <tr>
         	<td>01/09/2017</td>
             <td>15-0849</td>
@@ -873,7 +873,7 @@
             <td><a href="memo-decisions/spring2017/15-0985memo.pdf" target="_blank">State of West Virginia v. Jackie S.</a></td>
             <td>CR-F</td>
             <td>MD</td>
-       </tr>      
+       </tr>
       <tr>
         	<td>01/06/2017</td>
             <td>16-0414</td>
@@ -903,25 +903,25 @@
             <td>CR-F</td>
             <td>MD</td>
        </tr>
-        
-            
+
+
       </tbody>
     </table>
     <!-- InstanceEndEditable --></div>
   </div>
 <div id="main-footer" class="noPrint">
   <p class="contact-info">&nbsp;<br />&nbsp;<br />&nbsp;</p>
-  
+
   <ul id="additionalNav">
   	<li class="redesign"><a href="about-this-redesign.html">About this Redesign</a></li>
     <li class="twitter"><a href="http://www.twitter.com/wvcourts" target="_blank">Twitter</a></li>
   </ul>
-  
+
   <ul id="additionalNav2">
   	<li class="redesign"><a href="http://www.flickr.com/photos/courtswv" target="_blank">Flickr</a></li>
     <li class="twitter"><a href="../courts-twitter.html">Twitter</a></li>
   </ul>
-  
+
   <ul class="navigation">
     <li><a href="../contact.html">Contact Information</a></li>
     <li><a href="../terms-of-use.html">Terms of Use</a></li>

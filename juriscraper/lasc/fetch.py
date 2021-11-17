@@ -1,12 +1,14 @@
+from datetime import datetime, timedelta
+
+from dateutil.rrule import WEEKLY, rrule
+
 from ..lib.log_tools import make_default_logger
 from ..lib.utils import clean_court_object
-from datetime import datetime, timedelta
-from dateutil.rrule import rrule, WEEKLY
 
 logger = make_default_logger()
 
 
-class LASCSearch(object):
+class LASCSearch:
     """
     An object designed to search the LA Superior Court Media Access Portal
     (MAP). It searches by date, looks up individual cases, and collects PDFs on
@@ -24,7 +26,7 @@ class LASCSearch(object):
         :return: The parsed docket data for the case requested
         """
         r = self.session.get(
-            "https://%sGetCaseDetail/%s" % (self.api_base, internal_case_id)
+            f"https://{self.api_base}GetCaseDetail/{internal_case_id}"
         )
         self._check_success(r)
 
@@ -43,7 +45,7 @@ class LASCSearch(object):
         """
         start_str = start.strftime("%m-%d-%Y")
         end_str = end.strftime("%m-%d-%Y")
-        date_query_url = "https://%sGetRecentCivilCases/%s/%s" % (
+        date_query_url = "https://{}GetRecentCivilCases/{}/{}".format(
             self.api_base,
             start_str,
             end_str,

@@ -1,7 +1,9 @@
+import json
 import re
+
 import requests
 from requests.packages.urllib3 import exceptions
-import json
+
 from ..lib.exceptions import PacerLoginException
 from ..lib.html_utils import get_html_parsed_text, get_xml_parsed_text
 from ..lib.log_tools import make_default_logger
@@ -83,7 +85,7 @@ class PacerSession(requests.Session):
         :param password: a PACER account password
         :param client_code: an optional PACER client code for the session
         """
-        super(PacerSession, self).__init__()
+        super().__init__()
         self.headers["User-Agent"] = "Juriscraper"
         self.headers["Referer"] = "https://external"  # For CVE-001-FLP.
         self.verify = False
@@ -104,7 +106,7 @@ class PacerSession(requests.Session):
         """
         kwargs.setdefault("timeout", 300)
 
-        r = super(PacerSession, self).get(url, **kwargs)
+        r = super().get(url, **kwargs)
 
         if "This user has no access privileges defined." in r.text:
             # This is a strange error that we began seeing in CM/ECF 6.3.1 at
@@ -114,12 +116,12 @@ class PacerSession(requests.Session):
             # The solution when this error shows up is to simply re-run the get
             # request, so that's what we do here. PACER needs some frustrating
             # and inelegant hacks sometimes.
-            r = super(PacerSession, self).get(url, **kwargs)
+            r = super().get(url, **kwargs)
         if auto_login:
             updated = self._login_again(r)
             if updated:
                 # Re-do the request with the new session.
-                return super(PacerSession, self).get(url, **kwargs)
+                return super().get(url, **kwargs)
         return r
 
     def post(self, url, data=None, json=None, auto_login=True, **kwargs):
@@ -147,12 +149,12 @@ class PacerSession(requests.Session):
         else:
             kwargs.update({"data": data, "json": json})
 
-        r = super(PacerSession, self).post(url, **kwargs)
+        r = super().post(url, **kwargs)
         if auto_login:
             updated = self._login_again(r)
             if updated:
                 # Re-do the request with the new session.
-                return super(PacerSession, self).post(url, **kwargs)
+                return super().post(url, **kwargs)
         return r
 
     def head(self, url, **kwargs):
@@ -164,7 +166,7 @@ class PacerSession(requests.Session):
         :return: requests.Response
         """
         kwargs.setdefault("timeout", 300)
-        return super(PacerSession, self).head(url, **kwargs)
+        return super().head(url, **kwargs)
 
     @staticmethod
     def _prepare_multipart_form_data(data):
@@ -263,7 +265,7 @@ class PacerSession(requests.Session):
         if self.client_code:
             data["clientCode"] = self.client_code
 
-        login_post_r = super(PacerSession, self).post(
+        login_post_r = super().post(
             url,
             headers={
                 "User-Agent": "Juriscraper",

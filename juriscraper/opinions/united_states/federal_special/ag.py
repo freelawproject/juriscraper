@@ -3,16 +3,16 @@ CourtID: ag
 Court Short Name: United States Attorney General
 """
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.justice.gov/olc/opinions?items_per_page=40"
-        self.back_scrape_url = self.url + "&page=%d"
+        self.back_scrape_url = f"{self.url}&page=%d"
         self.back_scrape_iterable = None
         self.cell_path = "//table//tr/td[%d]"
 
@@ -22,7 +22,7 @@ class Site(OpinionSite):
             self.back_scrape_iterable = list(
                 range(0, self.get_last_page() + 1)
             )
-        return super(Site, self)._download(request_dict)
+        return super()._download(request_dict)
 
     def _get_case_names(self):
         cells = self.html.xpath(self.cell_path % 2)
@@ -30,7 +30,7 @@ class Site(OpinionSite):
 
     def _get_download_urls(self):
         base_path = self.cell_path % 2
-        return [href for href in self.html.xpath("%s//a[1]/@href" % base_path)]
+        return [href for href in self.html.xpath(f"{base_path}//a[1]/@href")]
 
     def _get_case_dates(self):
         cells = self.html.xpath(self.cell_path % 1)

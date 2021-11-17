@@ -9,20 +9,20 @@ History:
 
 from datetime import datetime
 
-from juriscraper.OralArgumentSite import OralArgumentSite
 from juriscraper.lib.string_utils import clean_if_py3
+from juriscraper.OralArgumentSite import OralArgumentSite
 
 
 class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://media-oa.ca8.uscourts.gov/circ8rss.xml"
 
     def _download(self, request_dict={}):
         """Go through the items and filter out ones that aren't complete."""
         self.items = []
-        html_tree = super(Site, self)._download(request_dict=request_dict)
+        html_tree = super()._download(request_dict=request_dict)
         for item in html_tree.xpath("//item"):
             case_name = item.xpath("./title/text()")[0].split(":", 1)[1]
             if case_name.strip():

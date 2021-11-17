@@ -2,14 +2,14 @@
 # Contact: https://www.ndcourts.gov/contact-us
 # Date created: 2019-02-28
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.ndcourts.gov/supreme-court/recent-opinions?pageSize=100"
         self.cases = []
@@ -42,22 +42,22 @@ class Site(OpinionSite):
 
     def case_fields_validate(self, case):
         if "ND" not in case["citation"]:
-            raise InsanityException("Invalid citation: %s" % case["citation"])
+            raise InsanityException(f"Invalid citation: {case['citation']}")
         if not case["docket"].startswith("Docket No.:"):
             raise InsanityException(
-                "Invalid docket raw string: %s" % case["docket"]
+                f"Invalid docket raw string: {case['docket']}"
             )
         if not case["date"].startswith("Filing Date:"):
             raise InsanityException(
-                "Invalid date string raw string: %s" % case["date"]
+                f"Invalid date string raw string: {case['date']}"
             )
         if not case["nature"].startswith("Case Type:"):
             raise InsanityException(
-                "Invalid type raw string: %s" % case["nature"]
+                f"Invalid type raw string: {case['nature']}"
             )
         if not case["judge"].startswith("Author:"):
             raise InsanityException(
-                "Invalid author raw string: %s" % case["judge"]
+                f"Invalid author raw string: {case['judge']}"
             )
 
     def case_fields_sanitize(self, case):

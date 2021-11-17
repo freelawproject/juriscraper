@@ -1,87 +1,87 @@
 {
-  "assigned_to_str": "Barry Ted Moskowitz", 
-  "case_name": "United States v. Romero", 
-  "cause": "", 
-  "court_id": "casd", 
-  "date_converted": null, 
-  "date_discharged": null, 
-  "date_filed": "2007-12-04", 
-  "date_terminated": "2007-12-05", 
-  "demand": "", 
-  "docket_entries": [], 
-  "docket_number": "3:07-cr-03257", 
-  "jurisdiction": "", 
-  "jury_demand": "", 
-  "mdl_status": "", 
-  "nature_of_suit": "", 
+  "assigned_to_str": "Barry Ted Moskowitz",
+  "case_name": "United States v. Romero",
+  "cause": "",
+  "court_id": "casd",
+  "date_converted": null,
+  "date_discharged": null,
+  "date_filed": "2007-12-04",
+  "date_terminated": "2007-12-05",
+  "demand": "",
+  "docket_entries": [],
+  "docket_number": "3:07-cr-03257",
+  "jurisdiction": "",
+  "jury_demand": "",
+  "mdl_status": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
         {
-          "contact": "Federal Defenders of San Diego\n225 Broadway\nSuite 900\nSan Diego, CA 92101-5008\n(619)234-8467\nFax: (619)687-2666\nEmail: cassd_ecf@fd.org\n", 
-          "name": "Federal Defenders", 
+          "contact": "Federal Defenders of San Diego\n225 Broadway\nSuite 900\nSan Diego, CA 92101-5008\n(619)234-8467\nFax: (619)687-2666\nEmail: cassd_ecf@fd.org\n",
+          "name": "Federal Defenders",
           "roles": [
-            "TERMINATED: 11/26/2007", 
-            "LEAD ATTORNEY", 
+            "TERMINATED: 11/26/2007",
+            "LEAD ATTORNEY",
             "ATTORNEY TO BE NOTICED"
           ]
-        }, 
+        },
         {
-          "contact": "Federal Defenders of San Diego, Inc.\n225 Broadway\nSuite 900\nSan Diego, CA 92101-5008\n(619) 234-8467\nFax: (619) 687-2666\nEmail: Candis_Mitchell@fd.org\n", 
-          "name": "Candis L. Mitchell", 
+          "contact": "Federal Defenders of San Diego, Inc.\n225 Broadway\nSuite 900\nSan Diego, CA 92101-5008\n(619) 234-8467\nFax: (619) 687-2666\nEmail: Candis_Mitchell@fd.org\n",
+          "name": "Candis L. Mitchell",
           "roles": [
-            "LEAD ATTORNEY", 
+            "LEAD ATTORNEY",
             "ATTORNEY TO BE NOTICED"
           ]
         }
-      ], 
+      ],
       "criminal_data": {
         "complaints": [
           {
-            "disposition": "", 
+            "disposition": "",
             "name": "18:111 - Assault on a Federal Officer"
           }
-        ], 
+        ],
         "counts": [
           {
-            "disposition": "Defendant sentenced to time served; no supervised release imposed; abstract issued to USM", 
-            "name": "18:111(a)(1) - Assault on a Federal Officer (Misdemeanor)(1)", 
+            "disposition": "Defendant sentenced to time served; no supervised release imposed; abstract issued to USM",
+            "name": "18:111(a)(1) - Assault on a Federal Officer (Misdemeanor)(1)",
             "status": "pending"
           }
-        ], 
-        "highest_offense_level_opening": "Misdemeanor", 
+        ],
+        "highest_offense_level_opening": "Misdemeanor",
         "highest_offense_level_terminated": "None"
-      }, 
-      "date_terminated": "2007-12-05", 
-      "extra_info": "TERMINATED: 12/05/2007", 
-      "name": "John Steven Romero", 
+      },
+      "date_terminated": "2007-12-05",
+      "extra_info": "TERMINATED: 12/05/2007",
+      "name": "John Steven Romero",
       "type": "Defendant"
-    }, 
+    },
     {
       "attorneys": [
         {
-          "contact": "U S Attorneys Office Southern District of California\n880 Front Street\nRoom 6293\nSan Diego, CA 92101\n(619)557-5610\nFax: (619)557-5917\nEmail: Efile.dkt.gc2@usdoj.gov\n", 
-          "name": "U S Attorney CR", 
+          "contact": "U S Attorneys Office Southern District of California\n880 Front Street\nRoom 6293\nSan Diego, CA 92101\n(619)557-5610\nFax: (619)557-5917\nEmail: Efile.dkt.gc2@usdoj.gov\n",
+          "name": "U S Attorney CR",
           "roles": [
-            "TERMINATED: 12/06/2007", 
-            "LEAD ATTORNEY", 
+            "TERMINATED: 12/06/2007",
+            "LEAD ATTORNEY",
             "ATTORNEY TO BE NOTICED"
           ]
-        }, 
+        },
         {
-          "contact": "U S Attorneys Office Southern District of California\nCriminal Division\n880 Front Street\nRoom 6293\nSan Diego, CA 92101\n(619)546-6665\nFax: (619)546-0831\nEmail: Christopher.M.Alexander@usdoj.gov\n", 
-          "name": "Christopher Michael Alexander", 
+          "contact": "U S Attorneys Office Southern District of California\nCriminal Division\n880 Front Street\nRoom 6293\nSan Diego, CA 92101\n(619)546-6665\nFax: (619)546-0831\nEmail: Christopher.M.Alexander@usdoj.gov\n",
+          "name": "Christopher Michael Alexander",
           "roles": [
-            "LEAD ATTORNEY", 
+            "LEAD ATTORNEY",
             "ATTORNEY TO BE NOTICED"
           ]
         }
-      ], 
-      "date_terminated": null, 
-      "extra_info": "", 
-      "name": "USA", 
+      ],
+      "date_terminated": null,
+      "extra_info": "",
+      "name": "USA",
       "type": "Plaintiff"
     }
-  ], 
+  ],
   "referred_to_str": ""
 }

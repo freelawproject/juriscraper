@@ -2,10 +2,10 @@ import pprint
 import re
 import sys
 
-from .reports import BaseReport
-from .utils import get_pacer_doc_id_from_doc1_url, reverse_goDLS_function
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import force_unicode
+from .reports import BaseReport
+from .utils import get_pacer_doc_id_from_doc1_url, reverse_goDLS_function
 
 logger = make_default_logger()
 
@@ -32,7 +32,7 @@ class AttachmentPage(BaseReport):
         ), "session attribute of DocketReport cannot be None."
         # coerce the fourth digit of the document number to 1 to ensure we get
         # the attachment page.
-        document_number = document_number[:3] + "0" + document_number[4:]
+        document_number = f"{document_number[:3]}0{document_number[4:]}"
         url = self.url + document_number
         logger.info("Querying the attachment page endpoint at URL: %s", url)
         self.response = self.session.get(url)
@@ -139,7 +139,7 @@ class AttachmentPage(BaseReport):
             index = 2
         else:
             index = 3
-        description_text_nodes = row.xpath("./td[%s]//text()" % index)
+        description_text_nodes = row.xpath(f"./td[{index}]//text()")
         if not description_text_nodes:
             # No text in the cell.
             return ""
@@ -260,8 +260,8 @@ def _main():
         sys.exit(1)
     report = AttachmentPage("cand")  # Court ID is only needed for querying.
     filepath = sys.argv[1]
-    print("Parsing HTML file at {}".format(filepath))
-    with open(filepath, "r") as f:
+    print(f"Parsing HTML file at {filepath}")
+    with open(filepath) as f:
         text = f.read().decode("utf-8")
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)

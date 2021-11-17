@@ -1,5 +1,6 @@
-from requests import HTTPError
 import os
+
+from requests import HTTPError
 
 
 def build_module_list(court_id):
@@ -30,7 +31,7 @@ def build_module_list(court_id):
             all_attr = __import__(court_id, globals(), locals(), ["*"]).__all__
 
             # Build the modules back up to full imports
-            all_attr = ["%s.%s" % (court_id, item) for item in all_attr]
+            all_attr = [f"{court_id}.{item}" for item in all_attr]
             for module in all_attr:
                 # If we've made it this far, we have an __all__ attribute, so
                 # we should see if the items within that attribute do too. And
@@ -57,13 +58,13 @@ def get_module_by_name(name):
     )
     for dirName, subdirList, fileList in os.walk(db_root):
         for fname in fileList:
-            if "%s.py" % name == fname:
+            if f"{name}.py" == fname:
                 package, module = (
                     dirName.split("/juriscraper/", 1)[1].replace("/", "."),
                     fname[:-3],
                 )
                 juriscraper_module = __import__(
-                    "juriscraper.%s.%s" % (package, module),
+                    f"juriscraper.{package}.{module}",
                     globals(),
                     locals(),
                     [module],

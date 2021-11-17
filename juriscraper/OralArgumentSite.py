@@ -9,7 +9,7 @@ class OralArgumentSite(AbstractSite):
     """
 
     def __init__(self, *args, **kwargs):
-        super(OralArgumentSite, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
         self._opt_attrs = [
             "docket_numbers",

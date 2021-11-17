@@ -17,14 +17,14 @@
 import re
 from datetime import date
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import clean_string, convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = "http://www.courts.state.nh.us/supreme/opinions/{current_year}/index.htm".format(
             current_year=date.today().year
         )
@@ -112,12 +112,12 @@ class Site(OpinionSite):
                 except AttributeError:
                     if i == 0:
                         # docket and name (root) should be contained in first substring
-                        error = "Invalid anchor root string format: %s" % text
+                        error = f"Invalid anchor root string format: {text}"
                         raise InsanityException(error)
                     # no docket in the substring, its a trailing name substring
                     # that they broke over multiple lines, so glue it to the
                     # previous name substring
-                    name_substrings[i - 1] += " %s" % text
+                    name_substrings[i - 1] += f" {text}"
             pairs.append(
                 {
                     "docket": ", ".join(dockets),

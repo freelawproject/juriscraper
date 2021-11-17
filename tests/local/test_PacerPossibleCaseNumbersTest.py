@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 
 import fnmatch
@@ -53,10 +52,10 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
         paths.sort()
         path_max_len = max(len(path) for path in paths) + 2
         for i, path in enumerate(paths):
-            sys.stdout.write("%s. Doing %s" % (i, path.ljust(path_max_len)))
+            sys.stdout.write(f"{i}. Doing {path.ljust(path_max_len)}")
             dirname, filename = os.path.split(path)
             filename_sans_ext = filename.split(".")[0]
-            json_path = os.path.join(dirname, "%s.json" % filename_sans_ext)
+            json_path = os.path.join(dirname, f"{filename_sans_ext}.json")
 
             report = PossibleCaseNumberApi("anything")
             with open(path, "rb") as f:
@@ -68,12 +67,17 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
                     self.assertEqual(j, data)
             else:
                 # If no json file, data should be None.
-                self.assertIsNone(
-                    data,
-                    msg="No json file detected and response is not None. "
-                    "Either create a json file for this test or make sure "
-                    "you get back valid results.",
-                )
+                if data is not None:
+                    with open(json_path, "w") as f:
+                        print(f"Creating new file at {json_path}")
+                        json.dump(data, f, indent=2, sort_keys=True)
+                else:
+                    self.assertIsNone(
+                        data,
+                        msg="No json file detected and response is not None. "
+                        "Either create a json file for this test or make sure "
+                        "you get back valid results.",
+                    )
 
             sys.stdout.write("✓\n")
 

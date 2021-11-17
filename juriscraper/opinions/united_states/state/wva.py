@@ -1,10 +1,10 @@
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = "http://www.courtswv.gov/supreme-court/opinions.html"
         self.court_id = self.__module__
         self.cell_path = "//table/tbody/tr/td[%d]"
@@ -12,13 +12,13 @@ class Site(OpinionSite):
     def _get_case_names(self):
         return [
             anchor.text_content()
-            for anchor in self.html.xpath("%s/a[1]" % (self.cell_path % 3))
+            for anchor in self.html.xpath(f"{self.cell_path % 3}/a[1]")
         ]
 
     def _get_download_urls(self):
         return [
             href
-            for href in self.html.xpath("%s/a[1]/@href" % (self.cell_path % 3))
+            for href in self.html.xpath(f"{self.cell_path % 3}/a[1]/@href")
         ]
 
     def _get_case_dates(self):

@@ -1,10 +1,11 @@
-from juriscraper.opinions.united_states.federal_appellate import cadc
 import re
+
+from juriscraper.opinions.united_states.federal_appellate import cadc
 
 
 class Site(cadc.Site):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = "https://www.cadc.uscourts.gov/internet/judgments.nsf/uscadcjudgments.xml"
         self.court_id = self.__module__
 

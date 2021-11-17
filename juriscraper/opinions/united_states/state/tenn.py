@@ -3,15 +3,17 @@ Scraper for the Supreme Court of Tennessee
 CourtID: tenn
 Court Short Name: Tenn.
 """
-from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
+
 from lxml import html
+
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = "http://www.tsc.state.tn.us/courts/supreme-court/opinions"
         self.court_id = self.__module__
         self.back_scrape_iterable = list(range(0, 131))
@@ -101,5 +103,5 @@ class Site(OpinionSite):
         return ["Published"] * len(self.case_names)
 
     def _download_backwards(self, page):
-        self.url = "%s?page=%s" % (self.url, page)
+        self.url = f"{self.url}?page={page}"
         self.html = self._download()

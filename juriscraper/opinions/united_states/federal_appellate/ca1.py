@@ -1,14 +1,15 @@
-from six.moves.urllib.parse import urlencode
-from datetime import date, timedelta, datetime
-
 import re
+from datetime import date, datetime, timedelta
+from urllib.parse import urlencode
+
 from dateutil.rrule import DAILY, rrule
+
 from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.base_url = "http://media.ca1.uscourts.gov/cgi-bin/opinions.pl"
         self.court_id = self.__module__
         today = date.today()
@@ -19,7 +20,7 @@ class Site(OpinionSite):
                 "puid": "",
             }
         )
-        self.url = "{}/?{}".format(self.base_url, params)
+        self.url = f"{self.base_url}/?{params}"
         # self.url = "http://media.ca1.uscourts.gov/cgi-bin/opinions.pl/?TODATE=06%2F24%2F1993&puid=&FROMDATE=05%2F25%2F1993"
         self.interval = 30
         self.back_scrape_iterable = [
@@ -94,7 +95,7 @@ class Site(OpinionSite):
                 "puid": "",
             }
         )
-        self.url = "{}/?{}".format(self.base_url, params)
+        self.url = f"{self.base_url}/?{params}"
 
         self.html = self._download()
         if self.html is not None:

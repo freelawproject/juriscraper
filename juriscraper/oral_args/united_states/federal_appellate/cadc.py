@@ -6,14 +6,14 @@ Reviewer: mlr
 Date created: 18 July 2014
 """
 
-from datetime import datetime, date
+from datetime import date, datetime
 
 from juriscraper.OralArgumentSite import OralArgumentSite
 
 
 class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         d = date.today()
         # d = date(month=5, day=1, year=2014)
@@ -28,7 +28,7 @@ class Site(OralArgumentSite):
 
     def _download(self, **kwargs):
         # The certificate on their site has expired.
-        return super(Site, self)._download(request_dict={"verify": False})
+        return super()._download(request_dict={"verify": False})
 
     def _get_download_urls(self):
         path = "id('ViewBody')//div[contains(concat(' ',@class,' '),' row-entry')]//@href"

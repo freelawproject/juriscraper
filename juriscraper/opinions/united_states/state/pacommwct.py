@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Scraper for Pennsylvania Commonwealth Court
 CourtID: pacomm
@@ -20,7 +19,7 @@ from juriscraper.opinions.united_states.state import pa
 
 class Site(pa.Site):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.pacourts.us/Rss/Opinions/Commonwealth/"
         self.set_regex(r"(.*)(?:- |et al.\s+)(\d+.*\d{4})")

@@ -3,17 +3,10 @@ import pprint
 import re
 import sys
 
-import six
 from dateutil.tz import gettz
 from lxml import etree
 from lxml.html import HtmlElement, fromstring, tostring
 
-from .docket_utils import normalize_party_types
-from .reports import BaseReport
-from .utils import (
-    get_pacer_doc_id_from_doc1_url,
-    get_pacer_seq_no_from_doc1_anchor,
-)
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import (
@@ -23,13 +16,19 @@ from ..lib.string_utils import (
     harmonize,
 )
 from ..lib.utils import clean_court_object, previous_and_next
+from .docket_utils import normalize_party_types
+from .reports import BaseReport
+from .utils import (
+    get_pacer_doc_id_from_doc1_url,
+    get_pacer_seq_no_from_doc1_anchor,
+)
 
 logger = make_default_logger()
 
 date_regex = r"[—\d\-–/]+"
 
 
-class BaseDocketReport(object):
+class BaseDocketReport:
     """A small class to hold functions common to the InternetArchive report
     and the PACER DocketReport
 
@@ -57,7 +56,7 @@ class BaseDocketReport(object):
     def _clear_caches(self):
         """Clear any caches that are on the object."""
         for attr in self.CACHE_ATTRS:
-            setattr(self, "_%s" % attr, None)
+            setattr(self, f"_{attr}", None)
 
     @property
     def data(self):
@@ -106,7 +105,7 @@ class BaseDocketReport(object):
 
         If cast_to_date is True, convert the string to a date object.
         """
-        if isinstance(query_strings, six.string_types):
+        if isinstance(query_strings, str):
             query_strings = [query_strings]
 
         for v in query_strings:
@@ -132,13 +131,13 @@ class BaseDocketReport(object):
         This is annoyingly hard with normal xpath.
         """
         try:
-            return node.xpath("%s/text()" % xpath)[0]
+            return node.xpath(f"{xpath}/text()")[0]
         except IndexError:
             return ""
 
     def _get_str_from_tree(self, path):
         try:
-            s = self.tree.xpath("%s/text()" % path)[0].strip()
+            s = self.tree.xpath(f"{path}/text()")[0].strip()
         except IndexError:
             return ""  # Return an empty string. Don't return None.
         else:
@@ -176,14 +175,14 @@ class BaseDocketReport(object):
         Failing that, it will assume UTC.
         """
         try:
-            s = self.tree.xpath("%s/text()" % path)[0].strip()
+            s = self.tree.xpath(f"{path}/text()")[0].strip()
         except IndexError:
             return None
         else:
             try:
                 d = convert_date_string(s, datetime=True)
             except ValueError:
-                logger.debug("Couldn't parse date: %s" % s)
+                logger.debug(f"Couldn't parse date: {s}")
                 return None
             else:
                 # Set it to UTC.
@@ -211,7 +210,7 @@ class BaseDocketReport(object):
 
     @staticmethod
     def redelimit_p(target_element, delimiter_re):
-        """Redelimit the children of the target element with <p> tags.
+        r"""Redelimit the children of the target element with <p> tags.
 
         Insert a <p> tag immediately after the target tag,
         and then replace the delimeter_re with <p> tags.
@@ -372,7 +371,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         the cache is cleared in between.
         """
         self._clear_caches()
-        super(DocketReport, self).parse()
+        super().parse()
 
     def get_anonymized_text(self) -> str:
         """Remove the username that purchased a docket
@@ -1043,9 +1042,9 @@ class DocketReport(BaseDocketReport, BaseReport):
         assert (
             self.session is not None
         ), "session attribute of DocketReport cannot be None."
-        assert bool(pacer_case_id), (
-            "pacer_case_id must be truthy, not '%s'" % pacer_case_id
-        )
+        assert bool(
+            pacer_case_id
+        ), f"pacer_case_id must be truthy, not '{pacer_case_id}'"
 
         if date_range_type not in ["Filed", "Entered"]:
             raise ValueError("Invalid value for 'date_range_type' parameter.")
@@ -1112,7 +1111,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         )
 
         self.response = self.session.post(
-            self.url + "?1-L_1_0-1", data=query_params
+            f"{self.url}?1-L_1_0-1", data=query_params
         )
         self.parse()
 
@@ -1167,7 +1166,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             word for phrase in self._br_split(cell) for word in phrase.split()
         ]
         if words:
-            first_word = re.sub("[\s\u00A0]", "", words[0])
+            first_word = re.sub("[\\s\u00A0]", "", words[0])
             if self.court_id == "txnb":
                 # txnb merges the second and third columns, so if the first
                 # word is a number, return it. Otherwise, assume doc number
@@ -1187,7 +1186,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         # combined. The field can have one of four formats. Attempt the most
         # detailed first, then work our way down to just giving up and
         # capturing it all.
-        ws = "[\s\u00A0]"  # Whitespace including nbsp
+        ws = "[\\s\u00A0]"  # Whitespace including nbsp
         regexes = [
             # 2 (23 pgs; 4 docs) Blab blah (happens when attachments exist and
             # page numbers are on)
@@ -1253,7 +1252,7 @@ class DocketReport(BaseDocketReport, BaseReport):
                     elif defendant is None and party["type"] == "Defendant":
                         defendant = party["name"]
                 if plaintiff and defendant:
-                    case_name = "%s v. %s" % (plaintiff, defendant)
+                    case_name = f"{plaintiff} v. {defendant}"
 
             if case_name is None:
                 # All parsing has failed. Give up.
@@ -1309,8 +1308,8 @@ if __name__ == "__main__":
         sys.exit(1)
     report = DocketReport("cand")  # Court ID is only needed for querying.
     filepath = sys.argv[1]
-    print("Parsing HTML file at %s" % filepath)
-    with open(filepath, "r") as f:
+    print(f"Parsing HTML file at {filepath}")
+    with open(filepath) as f:
         text = f.read()
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)

@@ -8,13 +8,13 @@
 import re
 from datetime import date
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         # Get 500 most recent results for the year.  This number could be reduced after the
         # initial run of this fixed code.  We need ot start with a big number though to
@@ -26,7 +26,7 @@ class Site(OpinionSite):
         self.cases = []
 
     def _download(self, request_dict={}):
-        html = super(Site, self)._download(request_dict)
+        html = super()._download(request_dict)
         self._extract_case_data_from_html(html)
         return html
 

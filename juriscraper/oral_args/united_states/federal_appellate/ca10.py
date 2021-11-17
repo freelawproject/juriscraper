@@ -4,17 +4,18 @@ Author: mlr
 """
 
 import datetime
-from juriscraper.OralArgumentSite import OralArgumentSite
-from juriscraper.lib.string_utils import convert_date_string
+
 from juriscraper.lib.html_utils import (
-    get_table_column_text,
     get_table_column_links,
+    get_table_column_text,
 )
+from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OralArgumentSite import OralArgumentSite
 
 
 class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         # query for results of current month
         now = datetime.datetime.now()

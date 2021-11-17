@@ -10,7 +10,7 @@ from juriscraper.opinions.united_states.state import me
 
 class Site(me.Site):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.back_scrape_iterable = [2020, 2019, 2018, 2017]
 

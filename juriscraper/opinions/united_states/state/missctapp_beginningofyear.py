@@ -10,13 +10,14 @@ History:
 
 from datetime import date
 
-from juriscraper.opinions.united_states.state import miss
 from lxml import html
+
+from juriscraper.opinions.united_states.state import miss
 
 
 class Site(miss.Site):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
 
         # If it's the beginning of January, we need to make sure that we aren't

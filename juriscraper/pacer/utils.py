@@ -43,7 +43,7 @@ def get_pacer_case_id_from_nonce_url(url):
 
 def get_pacer_seq_no_from_doc1_url(url):
     """Extract the seq_no from the doc1 URL."""
-    match = re.search("de_seq_num=(\d+)", url)
+    match = re.search(r"de_seq_num=(\d+)", url)
     if match:
         return match.group(1)
     else:
@@ -52,7 +52,7 @@ def get_pacer_seq_no_from_doc1_url(url):
 
 def get_pacer_case_id_from_doc1_url(url):
     """Extract the caseid from the doc1 URL."""
-    match = re.search("caseid=(\d+)", url)
+    match = re.search(r"caseid=(\d+)", url)
     if match:
         return match.group(1)
     else:
@@ -61,7 +61,7 @@ def get_pacer_case_id_from_doc1_url(url):
 
 def get_pacer_magic_num_from_doc1_url(url):
     """Extract the caseid from the doc1 URL."""
-    match = re.search("magic_num=(\d+)", url)
+    match = re.search(r"magic_num=(\d+)", url)
     if match:
         return match.group(1)
     else:
@@ -86,7 +86,7 @@ def get_pacer_doc_id_from_doc1_url(url: str) -> str:
         "show_case_doc" not in url
     ), "Cannot get doc1 ID from show_case_doc URL"
     url = url.rsplit("/", 1)[1].split("?")[0]
-    url = url[:3] + "0" + url[4:]
+    url = f"{url[:3]}0{url[4:]}"
     return url
 
 
@@ -171,8 +171,8 @@ def make_doc1_url(court_id, pacer_doc_id, skip_attachment_page):
     """
     if skip_attachment_page and pacer_doc_id[3] == "0":
         # If the fourth digit is a 0, replace it with a 1
-        pacer_doc_id = pacer_doc_id[:3] + "1" + pacer_doc_id[4:]
-    return "https://ecf.%s.uscourts.gov/doc1/%s" % (court_id, pacer_doc_id)
+        pacer_doc_id = f"{pacer_doc_id[:3]}1{pacer_doc_id[4:]}"
+    return f"https://ecf.{court_id}.uscourts.gov/doc1/{pacer_doc_id}"
 
 
 def is_pdf(response):
@@ -256,7 +256,7 @@ def get_document_filename(
 
 
 def get_docketxml_url(court, pacer_case_id):
-    return "%s/%s/%s" % (
+    return "{}/{}/{}".format(
         BASE_IA_URL,
         get_bucket_name(court, pacer_case_id),
         get_docket_filename(court, pacer_case_id),
@@ -264,7 +264,7 @@ def get_docketxml_url(court, pacer_case_id):
 
 
 def get_pdf_url(court, pacer_case_id, document_number, attachment_number):
-    return "%s/%s/%s" % (
+    return "{}/{}/{}".format(
         BASE_IA_URL,
         get_bucket_name(court, pacer_case_id),
         get_document_filename(

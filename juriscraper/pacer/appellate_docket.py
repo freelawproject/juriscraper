@@ -4,13 +4,6 @@ import sys
 
 from lxml.html import tostring
 
-from .docket_report import BaseDocketReport
-from .reports import BaseReport
-from .utils import (
-    get_court_id_from_url,
-    get_pacer_doc_id_from_doc1_url,
-    is_pdf,
-)
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import (
@@ -20,6 +13,13 @@ from ..lib.string_utils import (
     harmonize,
 )
 from ..lib.utils import clean_court_object
+from .docket_report import BaseDocketReport
+from .reports import BaseReport
+from .utils import (
+    get_court_id_from_url,
+    get_pacer_doc_id_from_doc1_url,
+    is_pdf,
+)
 
 logger = make_default_logger()
 
@@ -192,9 +192,9 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         assert (
             self.session is not None
         ), "session attribute of AppellateDocketReport cannot be None."
-        assert bool(docket_number), (
-            'docket_number must be a valid value, not "%s"' % docket_number
-        )
+        assert bool(
+            docket_number
+        ), f'docket_number must be a valid value, not "{docket_number}"'
 
         if not show_docket_entries and (date_end or date_start):
             raise ValueError(
@@ -253,7 +253,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         the cache is cleared in between.
         """
         self._clear_caches()
-        super(AppellateDocketReport, self).parse()
+        super().parse()
 
     def download_pdf(self, pacer_doc_id, pacer_case_id=None):
         """Download a PDF from an appellate court.
@@ -732,7 +732,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         converted to a date.
         """
         node = node if node is not None else self.tree
-        nodes = node.re_xpath('//*[re:match(text(), "%s")]' % regex)
+        nodes = node.re_xpath(f'//*[re:match(text(), "{regex}")]')
         try:
             tail = clean_string(nodes[0].tail.strip())
         except (IndexError, AttributeError):
@@ -755,8 +755,8 @@ def _main():
         "ca9"
     )  # Court ID is only needed for querying.
     filepath = sys.argv[1]
-    print("Parsing HTML file at {}".format(filepath))
-    with open(filepath, "r") as f:
+    print(f"Parsing HTML file at {filepath}")
+    with open(filepath) as f:
         text = f.read().decode("utf-8")
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)

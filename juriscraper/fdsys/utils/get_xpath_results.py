@@ -1,6 +1,7 @@
 # !/usr/bin/python
 import argparse
 import glob
+
 from lxml import etree
 from lxml.etree import _ElementStringResult
 
@@ -15,7 +16,7 @@ def print_xpath_results(query):
     for f in glob.glob("../examples/*.xml"):
         total_file_count += 1
         indent = ""
-        print("\n%s%s:" % (indent, f))
+        print(f"\n{indent}{f}:")
         indent = "    "
         tree = etree.parse(f)
         results = tree.xpath(
@@ -23,35 +24,30 @@ def print_xpath_results(query):
         )
         count = 0
         if type(results) in [bool, float]:
-            print("%s%s.\t%s" % (indent, count, results))
+            print(f"{indent}{count}.\t{results}")
 
         elif type(results) == list:
             s = set()
             for result in results:
                 if type(result) == _ElementStringResult:
-                    print("%s%s.\t%s" % (indent, count, result))
+                    print(f"{indent}{count}.\t{result}")
                     s.add("".join(result.split()))
                 else:
                     result = etree.tostring(result).strip()
-                    print("%s%s.\t%s" % (indent, count, result))
+                    print(f"{indent}{count}.\t{result}")
                     s.add("".join(result.split()))
                 count += 1
             if len(s) == 1:
-                print("\n%sAll items were equal!" % indent)
+                print(f"\n{indent}All items were equal!")
                 equalities += 1
             else:
-                print("\n%s%s unique items" % (indent, len(s)))
+                print(f"\n{indent}{len(s)} unique items")
             unique_items = unique_items.union(s)
         total_result_count += count
 
-    print("\nTotal found: %s" % total_result_count)
-    print(
-        (
-            "All items same in %s/%s sample files"
-            % (equalities, total_file_count)
-        )
-    )
-    print("Unique items: %s/%s" % (len(unique_items), total_result_count))
+    print(f"\nTotal found: {total_result_count}")
+    print(f"All items same in {equalities}/{total_file_count} sample files")
+    print(f"Unique items: {len(unique_items)}/{total_result_count}")
 
 
 def main():

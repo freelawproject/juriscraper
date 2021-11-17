@@ -48,14 +48,13 @@ Notes:
 
 import re
 
+from juriscraper.lib.string_utils import convert_date_string, titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         # Sometimes they change the ip/endpoint below, in which
         # case the scraper will throw a 404 error. just go to
@@ -108,14 +107,14 @@ class Site(OpinionSiteLinear):
                             name = "No case names fetched during tests."
                         else:
                             # Fetch case name from external portal search (see doc string at top for details)
-                            case_number = "%s-%s-%s" % (
+                            case_number = "{}-{}-{}".format(
                                 docket_match.group("year"),
                                 docket_match.group("court"),
                                 docket_match.group("number")[-4:],
                             )
                             name = self._fetch_case_name(case_number)
                         if name:
-                            docket_number = "%s %s %s" % (
+                            docket_number = "{} {} {}".format(
                                 docket_match.group("year"),
                                 docket_match.group("court"),
                                 docket_match.group("number"),

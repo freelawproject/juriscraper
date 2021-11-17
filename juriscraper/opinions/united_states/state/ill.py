@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Contact: webmaster@illinoiscourts.gov, 217-558-4490, 312-793-3250
 History:
@@ -8,19 +7,19 @@ History:
   2016-03-27: Updated by arderyp: fixed to handled non-standard formatting
   2021-11-02: Updated by satsuki-chan: Updated to new page design.
 """
+import re
 from typing import List
 
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.html_utils import (
     get_row_column_links,
     get_row_column_text,
 )
-import re
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = (
             "https://www.illinoiscourts.gov/top-level-opinions?type=supreme"

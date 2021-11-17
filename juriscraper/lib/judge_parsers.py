@@ -130,7 +130,7 @@ def normalize_judge_titles(title):
      - Blank --> Judge
      - Bankruptcy Judge --> Judge
     """
-    return judge_normalizers.get(title, "UNKNOWN: %s" % title)
+    return judge_normalizers.get(title, f"UNKNOWN: {title}")
 
 
 def normalize_judge_names(name):
@@ -140,11 +140,11 @@ def normalize_judge_names(name):
     for i, w in enumerate(words):
         # Michael J Lissner --> Michael J. Lissner
         if len(w) == 1 and w.isalpha():
-            w = "%s." % w
+            w = f"{w}."
 
         # Michael Lissner Jr --> Michael Lissner Jr.
         if w.lower() in ["jr", "sr"]:
-            w = "%s." % w
+            w = f"{w}."
 
         # J. Michael Lissner --> Michael Lissner
         # J. G. Lissner --> J. G. Lissner

@@ -4,18 +4,19 @@
 
 import re
 from datetime import date, datetime, timedelta
+
 from dateutil.rrule import DAILY, rrule
 from lxml import html
 
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 from juriscraper.lib.network_utils import add_delay
 from juriscraper.lib.string_utils import clean_if_py3
+from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 
 
 class Site(OpinionSiteWebDriven):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court = "Appellate+Term,+1st+Dept"
         self.interval = 365
         self.back_scrape_iterable = [
@@ -69,22 +70,22 @@ class Site(OpinionSiteWebDriven):
         correct page. If not we retry for a total of 11 times.
         """
         if self.test_mode_enabled():
-            return super(Site, self)._download(request_dict)
+            return super()._download(request_dict)
 
         # use selenium to establish required cookies
         logger.info("Running Selenium browser to get the cookies...")
         add_delay(20, 5)
         self.initiate_webdriven_session()
-        logger.info("Using cookies: %s" % self.cookies)
+        logger.info(f"Using cookies: {self.cookies}")
         request_dict.update({"cookies": self.cookies})
 
-        html__ = super(Site, self)._download(request_dict)
+        html__ = super()._download(request_dict)
         i = 0
         while not html__.xpath("//table") and i < 10:
             add_delay(20, 5)
-            html__ = super(Site, self)._download(request_dict)
+            html__ = super()._download(request_dict)
             i += 1
-            logger.info("Got a bad response {} time(s)".format(i))
+            logger.info(f"Got a bad response {i} time(s)")
         return html__
 
     def _get_case_names(self):
@@ -116,9 +117,7 @@ class Site(OpinionSiteWebDriven):
 
     def _get_case_dates(self):
         case_dates = []
-        for element in self.html.xpath(
-            "{}/td[2]//text()".format(self.base_path)
-        ):
+        for element in self.html.xpath(f"{self.base_path}/td[2]//text()"):
             case_dates.append(datetime.strptime(element.strip(), "%m/%d/%Y"))
         return case_dates
 
@@ -135,11 +134,7 @@ class Site(OpinionSiteWebDriven):
 
     def _get_judges(self):
         judges = []
-        for element in self.html.xpath(
-            "{}/td[6]".format(
-                self.base_path,
-            )
-        ):
+        for element in self.html.xpath(f"{self.base_path}/td[6]"):
             judges.append(
                 "".join(x.strip() for x in element.xpath(".//text()"))
             )
@@ -147,11 +142,7 @@ class Site(OpinionSiteWebDriven):
 
     def _get_neutral_citations(self):
         neutral_citations = []
-        for element in self.html.xpath(
-            "{}/td[4]".format(
-                self.base_path,
-            )
-        ):
+        for element in self.html.xpath(f"{self.base_path}/td[4]"):
             neutral_citations.append(
                 "".join(x.strip() for x in element.xpath(".//text()"))
             )

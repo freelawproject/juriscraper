@@ -7,15 +7,16 @@ History:
  - 2014-08-05: Updated to have a dynamic URL, an oversight during check in.
 """
 
-from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import titlecase, clean_if_py3
 import time
 from datetime import date, timedelta
+
+from juriscraper.lib.string_utils import clean_if_py3, titlecase
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.today = date.today()
         self.a_while_ago = date.today() - timedelta(days=30)
         self.url = (

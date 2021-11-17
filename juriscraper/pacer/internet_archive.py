@@ -1,15 +1,13 @@
-# coding=utf-8
 from lxml import etree
 from requests import Session
 
-import six
-from .docket_report import BaseDocketReport
-from .docket_utils import normalize_party_types
-from .utils import get_docketxml_url, get_pdf_url, is_pdf
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import clean_string, convert_date_string, harmonize
 from ..lib.utils import clean_court_object, previous_and_next
+from .docket_report import BaseDocketReport
+from .docket_utils import normalize_party_types
+from .utils import get_docketxml_url, get_pdf_url, is_pdf
 
 logger = make_default_logger()
 
@@ -24,7 +22,7 @@ class InternetArchive(BaseDocketReport):
     CACHE_ATTRS = ["metadata", "parties", "docket_entries"]
 
     def __init__(self, court_id):
-        super(InternetArchive, self).__init__(court_id)
+        super().__init__(court_id)
 
         # Initialize the empty cache properties.
         self._clear_caches()
@@ -52,7 +50,7 @@ class InternetArchive(BaseDocketReport):
         r = self.session.get(url, timeout=timeout)
         r.raise_for_status()
         if not is_pdf(r):
-            logger.error("Got non-PDF data, but expected a PDF at: %s" % url)
+            logger.error(f"Got non-PDF data, but expected a PDF at: {url}")
             return None
         else:
             return r
@@ -74,8 +72,8 @@ class InternetArchive(BaseDocketReport):
 
     def _parse_text(self, text):
         assert isinstance(
-            text, six.text_type
-        ), "Input must be unicode, not %s" % type(text)
+            text, str
+        ), f"Input must be unicode, not {type(text)}"
         self.tree = etree.fromstring(text.encode("utf-8"), self.parser)
 
     @property

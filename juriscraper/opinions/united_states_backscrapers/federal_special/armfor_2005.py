@@ -1,12 +1,14 @@
-from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
+
 from lxml import html
+
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = (
             "http://www.armfor.uscourts.gov/newcaaf/opinions/2005Term.htm"
         )

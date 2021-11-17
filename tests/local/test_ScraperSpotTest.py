@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 
 import unittest
@@ -151,9 +150,7 @@ class ScraperSpotTest(unittest.TestCase):
                     parsed[1],
                 )
             except AttributeError:
-                self.fail(
-                    "Unable to parse %s string: '%s'" % (site_id, raw_string)
-                )
+                self.fail(f"Unable to parse {site_id} string: '{raw_string}'")
 
     def test_nh(self):
         """Ensures regex parses what we think it should."""
@@ -195,7 +192,7 @@ class ScraperSpotTest(unittest.TestCase):
                     "  Instead:  '%s'" % (test, result, case_name),
                 )
             except AttributeError:
-                self.fail("Unable to parse nh string: '{s}'".format(s=test))
+                self.fail(f"Unable to parse nh string: '{test}'")
 
     def test_colo_coloctapp(self):
         """Ensures colo/coloctapp regex parses what we think it should."""
@@ -237,7 +234,7 @@ class ScraperSpotTest(unittest.TestCase):
         scraper = colo.Site()
         for raw_string, data in tests.items():
             for field in ["docket", "name"]:
-                attribute = "_extract_%s_from_text" % field
+                attribute = f"_extract_{field}_from_text"
                 result = getattr(scraper, attribute)(raw_string)
                 self.assertEqual(
                     data[field],
@@ -282,4 +279,4 @@ class ScraperSpotTest(unittest.TestCase):
                     "  Instead:  '%s'" % (test, group_2, result_2),
                 )
             except AttributeError:
-                self.fail("Unable to parse ca6 string: '{s}'".format(s=test))
+                self.fail(f"Unable to parse ca6 string: '{test}'")

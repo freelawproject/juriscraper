@@ -6,16 +6,16 @@
 
         <script type="text/javascript" src="tax_example_files/jquery.js"></script>
 
-        
+
 
 
         <script type="text/javascript">
             <!--
-            
+
 
                 var modalDiv = null;
 
-                function warnIsSummary(opinionId) 
+                function warnIsSummary(opinionId)
                 {
                     var opinionOkLink = document.getElementById("lnkSummaryOpinion");
                     opinionOkLink.href = "OpinionViewer.aspx?ID=" + opinionId;
@@ -24,14 +24,14 @@
                 }
 
                 function summaryOpinionOk()
-                {                   
+                {
                     var radNotification1 = $find("ctl00_nfSummary");
                     radNotification1.hide();
                     var opinionOkLink = document.getElementById("lnkSummaryOpinion");
                     setTimeout(function() {opinionOkLink.href = "#";}, 50);
                 }
 
-                function showModalDiv(sender, args) 
+                function showModalDiv(sender, args)
                 {
                     if (!modalDiv)
                     {
@@ -47,24 +47,24 @@
                     modalDiv.style.display = "";
                 }
 
-                function hideModalDiv() 
+                function hideModalDiv()
                 {
                     modalDiv.style.display = "none";
                 }
-            
-                function focus(ControlName) 
+
+                function focus(ControlName)
                 {
-                    if (ControlName === 'null') 
+                    if (ControlName === 'null')
                     {
                         return;
-                    } 
-                    else 
+                    }
+                    else
                     {
                         document.getElementById(ControlName).focus();
                         return;
                     }
-                }  
-            
+                }
+
 
             //-->
         </script>
@@ -108,8 +108,8 @@ if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side frame
 
 <div class="aspNetHidden">
 
-	
-	
+
+
 </div>
 
             <script type="text/javascript">
@@ -270,7 +270,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$rsm', 'ContentForm', ['tctl00
                                 »
                                 <a href="http://www.ustaxcourt.gov/index.htm">Home</a>
                                 »
-                                
+
     Opinions Search
  </span>
                         </td>
@@ -287,8 +287,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$rsm', 'ContentForm', ['tctl00
                 <a id="lnkSearchOpinions" class="black-text" href="https://www.ustaxcourt.gov/UstcInOp/OpinionSearch.aspx">Search Opinions</a>
             </div>
             <div>
-                
-   
+
+
     <script type="text/javascript" language="javascript">
         Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(startRequest);
         Sys.WebForms.PageRequestManager.getInstance().add_endRequest(endRequest);
@@ -336,13 +336,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$rsm', 'ContentForm', ['tctl00
 
 
                     <div id="Content_pnlSearch">
-	
-                    
+
+
                         <table style="width:100%;">
                             <tbody><tr>
                                 <td colspan="2" align="center">
-                   			TC and Memorandum Opinions starting 09/25/95; TC 
-Opinions in published format starting 01/11/10; Summary Opinions 
+                   			TC and Memorandum Opinions starting 09/25/95; TC
+Opinions in published format starting 01/11/10; Summary Opinions
 starting 01/10/01*
                                 </td>
                                 <td>
@@ -354,7 +354,7 @@ starting 01/10/01*
                         <table id="SearchTable" class="center" style="width:600px;">
                             <tbody><tr>
                                 <td colspan="3" align="center">
-                                    
+
                                 </td>
                             </tr>
                             <tr>
@@ -506,7 +506,7 @@ starting 01/10/01*
                                     </tbody></table>
                                 </td>
                             </tr>
-                            
+
                             <tr>
                                 <th align="right">Case Name Keyword:</th>
                                 <td><input name="ctl00$Content$txtCaseNameKeyword" type="text" maxlength="255" id="Content_txtCaseNameKeyword" onfocus="Javascript:this.style.borderColor = '#e3b549';" onblur="Javascript:this.style.borderColor = '#7f9db9';" style="width:97%;border:1px solid #7f9db9;"></td>
@@ -643,34 +643,34 @@ starting 01/10/01*
 
                         </tbody></table>
 
-                    
+
 </div>
 
                     <div id="Content_pnlSearchButtons" style="width:100%;">
-	
+
                         <div class="searchbuttons">
                             <br>
                             <input type="submit" name="ctl00$Content$btnSearch" value="Search" onclick="return btnSearch_ClientClicking();" id="Content_btnSearch" style="width:100px;">
                             <input type="submit" name="ctl00$Content$btnReset" value="Reset" id="Content_btnReset" style="width:100px;">
                             <div id="Content_updProgress" style="display:none;" role="status" aria-hidden="true">
-		
+
                                     <div style="width:100%;text-align:center;font-weight:bold;"><img src="tax_example_files/loadspinner.gif" alt="" width="16px" height="16px">Searching...</div>
-                                
+
 	</div>
                         </div>
-                    
+
 </div>
 
                     <div id="Content_pnlSearchResults">
-	
+
 
                         <div class="DropShadowPanel">
                             <div class="RoundedPanel">
-                                
-                                
+
+
 
                                 <div id="Content_pnlCaseHistory">
-		
+
                                     <div style="float:left;">
                                         <span style="font-weight:bold;font-size:.99em;">Max. Results per Page:</span> <select name="ctl00$Content$ddlResultsPerPage" onchange="javascript:setTimeout('__doPostBack(\'ctl00$Content$ddlResultsPerPage\',\'\')', 0)" id="Content_ddlResultsPerPage">
 			<option value="10">10</option>
@@ -682,16 +682,16 @@ starting 01/10/01*
 		</select>
                                     </div>
 
-                                    
+
                                     <div style="clear:both;"></div>
-                                    
+
                                             <table class="ResultsTable" cellspacing="0" cellpadding="0">
                                                 <tbody><tr class="ResultsHeader">
                                                     <th>Case Name</th>
                                                     <th>Type</th>
                                                     <th>Released</th>
                                                 </tr>
-                                        
+
                                             <tr class="ResultsOddRow">
                                                 <td>
 				                                    <a name="11813" href="#11813" onclick="warnIsSummary('11813');">Rolanda Michelle Curtis &amp; Bryon Curtis</a>
@@ -699,7 +699,7 @@ starting 01/10/01*
                                                 <td>Summary*</td>
                                                 <td>11/01/2018</td>
                                             </tr>
-                                        
+
                                             <tr class="ResultsEvenRow">
                                                 <td>
 				                                    <a name="11815" href="https://www.ustaxcourt.gov/UstcInOp/OpinionViewer.aspx?ID=11815" target="_blank">Peter Gianulis &amp; Gabriela Rexach Subira</a>
@@ -707,7 +707,7 @@ starting 01/10/01*
                                                 <td>Memorandum</td>
                                                 <td>11/05/2018</td>
                                             </tr>
-                                        
+
                                             <tr class="ResultsOddRow">
                                                 <td>
 				                                    <a name="11808" href="https://www.ustaxcourt.gov/UstcInOp/OpinionViewer.aspx?ID=11808" target="_blank">Craig Douglas Hoglund &amp; Christine Joan Hoglund</a>
@@ -715,7 +715,7 @@ starting 01/10/01*
                                                 <td>Memorandum</td>
                                                 <td>11/05/2018</td>
                                             </tr>
-                                        
+
                                             <tr class="ResultsEvenRow">
                                                 <td>
 				                                    <a name="11810" href="#11810" onclick="warnIsSummary('11810');">Larry L. Leuenberger</a>
@@ -723,7 +723,7 @@ starting 01/10/01*
                                                 <td>Summary*</td>
                                                 <td>11/08/2018</td>
                                             </tr>
-                                        
+
                                             <tr class="ResultsOddRow">
                                                 <td>
 				                                    <a name="11806" href="https://www.ustaxcourt.gov/UstcInOp/OpinionViewer.aspx?ID=11806" target="_blank">W. T. Snipes</a>
@@ -731,7 +731,7 @@ starting 01/10/01*
                                                 <td>Memorandum</td>
                                                 <td>11/01/2018</td>
                                             </tr>
-                                        
+
                                             <tr class="ResultsEvenRow">
                                                 <td>
 				                                    <a name="11814" href="https://www.ustaxcourt.gov/UstcInOp/OpinionViewer.aspx?ID=11814" target="_blank">Max Sutherland &amp; Eric P. Decker</a>
@@ -739,7 +739,7 @@ starting 01/10/01*
                                                 <td>Memorandum</td>
                                                 <td>11/05/2018</td>
                                             </tr>
-                                        
+
                                             <tr class="ResultsOddRow">
                                                 <td>
 				                                    <a name="11812" href="#11812" onclick="warnIsSummary('11812');">Enrique Fernando Dancausa Valle</a>
@@ -747,7 +747,7 @@ starting 01/10/01*
                                                 <td>Summary*</td>
                                                 <td>11/05/2018</td>
                                             </tr>
-                                        
+
                                             <tr class="ResultsEvenRow">
                                                 <td>
 				                                    <a name="11816" href="https://www.ustaxcourt.gov/UstcInOp/OpinionViewer.aspx?ID=11816" target="_blank">Michael James Wells &amp; Lynn Anita Kirchner-Wells</a>
@@ -755,7 +755,7 @@ starting 01/10/01*
                                                 <td>Memorandum</td>
                                                 <td>11/08/2018</td>
                                             </tr>
-                                        
+
                                             <tr class="ResultsOddRowNoOpinion">
                                                 <td>
 				                                    No Opinions Released by the Court on 10/30/2018
@@ -763,7 +763,7 @@ starting 01/10/01*
                                                 <td></td>
                                                 <td>10/30/2018</td>
                                             </tr>
-                                        
+
                                             <tr class="ResultsEvenRowNoOpinion">
                                                 <td>
 				                                    No Opinions Released by the Court on 10/31/2018
@@ -771,7 +771,7 @@ starting 01/10/01*
                                                 <td></td>
                                                 <td>10/31/2018</td>
                                             </tr>
-                                        
+
                                             <tr class="ResultsOddRowNoOpinion">
                                                 <td>
 				                                    No Opinions Released by the Court on 11/02/2018
@@ -779,7 +779,7 @@ starting 01/10/01*
                                                 <td></td>
                                                 <td>11/02/2018</td>
                                             </tr>
-                                        
+
                                             <tr class="ResultsEvenRowNoOpinion">
                                                 <td>
 				                                    No Opinions Released by the Court on 11/06/2018
@@ -787,7 +787,7 @@ starting 01/10/01*
                                                 <td></td>
                                                 <td>11/06/2018</td>
                                             </tr>
-                                        
+
                                             <tr class="ResultsOddRowNoOpinion">
                                                 <td>
 				                                    No Opinions Released by the Court on 11/07/2018
@@ -795,7 +795,7 @@ starting 01/10/01*
                                                 <td></td>
                                                 <td>11/07/2018</td>
                                             </tr>
-                                        
+
                                             <tr class="ResultsEvenRowNoOpinion">
                                                 <td>
 				                                    No Opinions Released by the Court on 11/09/2018
@@ -803,21 +803,21 @@ starting 01/10/01*
                                                 <td></td>
                                                 <td>11/09/2018</td>
                                             </tr>
-                                        
+
                                             </tbody></table>
-                                        
+
 
                                     <div style="float:left;">
-                                        <span style="font-weight:bold;font-size:.99em;">Total Opinions:&nbsp;</span><span id="Content_lblTotalOpinions" style="font-weight:bold;font-size:.99em;">14</span> 
+                                        <span style="font-weight:bold;font-size:.99em;">Total Opinions:&nbsp;</span><span id="Content_lblTotalOpinions" style="font-weight:bold;font-size:.99em;">14</span>
                                     </div>
 
-                                    
+
                                     <div style="clear:both;"></div>
-                                
+
 	</div>
                             </div>
                         </div>
-                    
+
 </div>
 
                     <div style="width:100%;text-align:left;font-size:.7em;">
@@ -842,8 +842,8 @@ starting 01/10/01*
                         </tbody></table>
                     </div>
                 </div>
-            </div>                          
-        
+            </div>
+
         </div>
 
             </div>
@@ -871,11 +871,11 @@ starting 01/10/01*
                         <td>
                             To contact the Webmaster for technical issues or problems with the Web site, send an e-mail to
                             <a href="mailto:webmaster@ustaxcourt.gov">webmaster@ustaxcourt.gov</a>.
- For your information, no documents can be filed with the Court at this 
-or any other e-mail address. For all non-technical questions, including 
+ For your information, no documents can be filed with the Court at this
+or any other e-mail address. For all non-technical questions, including
 procedural, case-related, or general questions about the Court, you must
- contact the Office of the Clerk of the Court at (202) 521-0700 or by 
-postal mail at U.S. Tax Court, 400 Second Street, N.W., Washington, DC 
+ contact the Office of the Clerk of the Court at (202) 521-0700 or by
+postal mail at U.S. Tax Court, 400 Second Street, N.W., Washington, DC
 20217, Attention: Office of the Clerk of the Court.
                         </td>
                     </tr>
@@ -886,7 +886,7 @@ postal mail at U.S. Tax Court, 400 Second Street, N.W., Washington, DC
 	<input id="ctl00_nfSummary_ClientState" name="ctl00_nfSummary_ClientState" type="hidden" autocomplete="off">
 </div>
 
-        
+
 
 <script type="text/javascript">
 //<![CDATA[
@@ -929,7 +929,7 @@ Sys.Application.add_init(function() {
 			<span class="rnTitleBarTitle">Summary Opinion</span>
 		</div><div id="ctl00_nfSummary_XmlPanel" class="RadXmlHttpPanel">
 			<div id="ctl00_nfSummary_C" class="rnContentWrapper">
-				
+
                        <div class="notificationContent" style="text-align:center;padding:15px;font-size:1.2em;font-weight:bold;">
                             <br>
                             PURSUANT TO INTERNAL REVENUE CODE<br>
@@ -943,7 +943,7 @@ Sys.Application.add_init(function() {
                             </a>
 
                        </div>
-                  
+
 			</div><input type="hidden" name="ctl00$nfSummary$hiddenState" id="ctl00_nfSummary_hiddenState"><input id="ctl00_nfSummary_XmlPanel_ClientState" name="ctl00_nfSummary_XmlPanel_ClientState" type="hidden" autocomplete="off">
 		</div><div id="ctl00_nfSummary_TitleMenu" style="display: none; visibility: visible; z-index: 7000;">
 			<div class="RadMenu RadMenu_Web20 RadMenu_Context RadMenu_Web20_Context rmRoundedCorners rmRoundedCorners_Web20 rmShadows" style="display: none; visibility: visible; z-index: 10100;" id="ctl00_nfSummary_TitleMenu_detached">
@@ -951,6 +951,6 @@ Sys.Application.add_init(function() {
 			<ul class="rmActive rmVertical rmGroup rmLevel1" style="float: left;"></ul></div><input class="rmActive rmVertical rmGroup rmLevel1" id="ctl00_nfSummary_TitleMenu_ClientState" name="ctl00_nfSummary_TitleMenu_ClientState" type="hidden" autocomplete="off">
 		</div>
 	</div><span style="display: none !important;"><input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value=""></span><span style="display: none !important;"><input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value=""></span><span style="display: none !important;"><input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value=""></span><span style="display: none !important;"><input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUIMzE2NzY2NzcPFgQeDE9waW5pb25UeXBlczKPCwABAAAA/////wEAAAAAAAAABAEAAADhAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkRpY3Rpb25hcnlgMltbU3lzdGVtLkludDMyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQQAAAAHVmVyc2lvbghDb21wYXJlcghIYXNoU2l6ZQ1LZXlWYWx1ZVBhaXJzAAMAAwiRAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkdlbmVyaWNFcXVhbGl0eUNvbXBhcmVyYDFbW1N5c3RlbS5JbnQzMiwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0I5QFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5LZXlWYWx1ZVBhaXJgMltbU3lzdGVtLkludDMyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXVtdAwAAAAkCAAAAAwAAAAkDAAAABAIAAACRAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkdlbmVyaWNFcXVhbGl0eUNvbXBhcmVyYDFbW1N5c3RlbS5JbnQzMiwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0AAAAABwMAAAAAAQAAAAMAAAAD4wFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5LZXlWYWx1ZVBhaXJgMltbU3lzdGVtLkludDMyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQT8////4wFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5LZXlWYWx1ZVBhaXJgMltbU3lzdGVtLkludDMyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQIAAAADa2V5BXZhbHVlAAEIAwAAAAYFAAAACk1lbW9yYW5kdW0B+v////z///8CAAAABgcAAAAIU3VtbWFyeSoB+P////z///8BAAAABgkAAAAKVEMgT3BpbmlvbgseC0N1cnJlbnRQYWdlZhYCZg9kFgICAQ9kFgQCBA9kFgJmD2QWAmYPZBYEAgEPZBYIAgMPDxYKHhVFbmFibGVFbWJlZGRlZFNjcmlwdHNnHhxFbmFibGVFbWJlZGRlZEJhc2VTdHlsZXNoZWV0Zx4SUmVzb2x2ZWRSZW5kZXJNb2RlCylzVGVsZXJpay5XZWIuVUkuUmVuZGVyTW9kZSwgVGVsZXJpay5XZWIuVUksIFZlcnNpb249MjAxNC4zLjEwMjQuNDAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNAEeDFNlbGVjdGVkRGF0ZQYAAK+i+j3WCB4RX3NraXBNTVZhbGlkYXRpb25oZBYEZg8UKwAIDxYYHg1MYWJlbENzc0NsYXNzBQdyaUxhYmVsHgxFbXB0eU1lc3NhZ2VlHgRUZXh0BRMyMDE4LTEwLTMwLTAwLTAwLTAwHwNnHwQLKwQBHgRTa2luBQVXZWIyMB8GaB4HTWF4RGF0ZQYAQHFvsT4xCR4XRW5hYmxlQWpheFNraW5SZW5kZXJpbmdoHwJnHhFFbmFibGVBcmlhU3VwcG9ydGgeB01pbkRhdGUGAIBMBLe1qghkFggeBVdpZHRoGwAAAAAAAFlABwAAAB4KUmVzaXplTW9kZQspc1RlbGVyaWsuV2ViLlVJLlJlc2l6ZU1vZGUsIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTQuMy4xMDI0LjQwLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTEyMWZhZTc4MTY1YmEzZDQAHghDc3NDbGFzcwURcmlUZXh0Qm94IHJpSG92ZXIeBF8hU0ICggIWCB8PGwAAAAAAAFlABwAAAB8QCysFAB8RBRFyaVRleHRCb3ggcmlFcnJvch8SAoICFggfDxsAAAAAAABZQAcAAAAfEAsrBQAfEQUTcmlUZXh0Qm94IHJpRm9jdXNlZB8SAoICFgYfDxsAAAAAAABZQAcAAAAfEQUTcmlUZXh0Qm94IHJpRW5hYmxlZB8SAoICFggfDxsAAAAAAABZQAcAAAAfEAsrBQAfEQUUcmlUZXh0Qm94IHJpRGlzYWJsZWQfEgKCAhYIHw8bAAAAAAAAWUAHAAAAHxALKwUAHxEFEXJpVGV4dEJveCByaUVtcHR5HxICggIWCB8PGwAAAAAAAFlABwAAAB8QCysFAB8RBRByaVRleHRCb3ggcmlSZWFkHxICggJkAgIPFCsADQ8WDgUNU2VsZWN0ZWREYXRlcw8FkAFUZWxlcmlrLldlYi5VSS5DYWxlbmRhci5Db2xsZWN0aW9ucy5EYXRlVGltZUNvbGxlY3Rpb24sIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTQuMy4xMDI0LjQwLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTEyMWZhZTc4MTY1YmEzZDQUKwABBgAAr6L6PdYIBQRGb2NEBgCAd/T6SNYIBRFFbmFibGVNdWx0aVNlbGVjdGgFD1JlbmRlckludmlzaWJsZWcFC1NwZWNpYWxEYXlzDwWTAVRlbGVyaWsuV2ViLlVJLkNhbGVuZGFyLkNvbGxlY3Rpb25zLkNhbGVuZGFyRGF5Q29sbGVjdGlvbiwgVGVsZXJpay5XZWIuVUksIFZlcnNpb249MjAxNC4zLjEwMjQuNDAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNBQrAAAFBE1pbkQGAIBMBLe1qggFBE1heEQGAIAHReg9MQkPFgwfAmcfA2cfDWgfCgUFV2ViMjAfBAsrBAEfDGhkZBYEHxEFC3JjTWFpblRhYmxlHxICAhYEHxEFDHJjT3RoZXJNb250aB8SAgJkFgQfEQUKcmNTZWxlY3RlZB8SAgJkFgQfEQUKcmNEaXNhYmxlZB8SAgIWBB8RBQxyY091dE9mUmFuZ2UfEgICFgQfEQUJcmNXZWVrZW5kHxICAhYEHxEFB3JjSG92ZXIfEgICFgQfEQUvUmFkQ2FsZW5kYXJNb250aFZpZXcgUmFkQ2FsZW5kYXJNb250aFZpZXdfV2ViMjAfEgICFgQfEQUJcmNWaWV3U2VsHxICAmQCBQ8PFgofAmcfA2cfBAsrBAEfBQYAwLRzVkvWCB8GaGQWBGYPFCsACA8WGB8HBQdyaUxhYmVsHwhlHwkFEzIwMTgtMTEtMTYtMDAtMDAtMDAfA2cfBAsrBAEfCgUFV2ViMjAfBmgfCwYAQHFvsT4xCR8MaB8CZx8NaB8OBgCATAS3taoIZBYIHw8bAAAAAAAAWUAHAAAAHxALKwUAHxEFEXJpVGV4dEJveCByaUhvdmVyHxICggIWCB8PGwAAAAAAAFlABwAAAB8QCysFAB8RBRFyaVRleHRCb3ggcmlFcnJvch8SAoICFggfDxsAAAAAAABZQAcAAAAfEAsrBQAfEQUTcmlUZXh0Qm94IHJpRm9jdXNlZB8SAoICFgYfDxsAAAAAAABZQAcAAAAfEQUTcmlUZXh0Qm94IHJpRW5hYmxlZB8SAoICFggfDxsAAAAAAABZQAcAAAAfEAsrBQAfEQUUcmlUZXh0Qm94IHJpRGlzYWJsZWQfEgKCAhYIHw8bAAAAAAAAWUAHAAAAHxALKwUAHxEFEXJpVGV4dEJveCByaUVtcHR5HxICggIWCB8PGwAAAAAAAFlABwAAAB8QCysFAB8RBRByaVRleHRCb3ggcmlSZWFkHxICggJkAgIPFCsADQ8WDgUNU2VsZWN0ZWREYXRlcw8FkAFUZWxlcmlrLldlYi5VSS5DYWxlbmRhci5Db2xsZWN0aW9ucy5EYXRlVGltZUNvbGxlY3Rpb24sIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTQuMy4xMDI0LjQwLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTEyMWZhZTc4MTY1YmEzZDQUKwABBgDAtHNWS9YIBQRGb2NEBgCAd/T6SNYIBRFFbmFibGVNdWx0aVNlbGVjdGgFD1JlbmRlckludmlzaWJsZWcFC1NwZWNpYWxEYXlzDwWTAVRlbGVyaWsuV2ViLlVJLkNhbGVuZGFyLkNvbGxlY3Rpb25zLkNhbGVuZGFyRGF5Q29sbGVjdGlvbiwgVGVsZXJpay5XZWIuVUksIFZlcnNpb249MjAxNC4zLjEwMjQuNDAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNBQrAAAFBE1pbkQGAIBMBLe1qggFBE1heEQGAIAHReg9MQkPFgwfAmcfA2cfDWgfCgUFV2ViMjAfBAsrBAEfDGhkZBYEHxEFC3JjTWFpblRhYmxlHxICAhYEHxEFDHJjT3RoZXJNb250aB8SAgJkFgQfEQUKcmNTZWxlY3RlZB8SAgJkFgQfEQUKcmNEaXNhYmxlZB8SAgIWBB8RBQxyY091dE9mUmFuZ2UfEgICFgQfEQUJcmNXZWVrZW5kHxICAhYEHxEFB3JjSG92ZXIfEgICFgQfEQUvUmFkQ2FsZW5kYXJNb250aFZpZXcgUmFkQ2FsZW5kYXJNb250aFZpZXdfV2ViMjAfEgICFgQfEQUJcmNWaWV3U2VsHxICAmQCCw8QDxYGHg1EYXRhVGV4dEZpZWxkBQdEaXNwbGF5Hg5EYXRhVmFsdWVGaWVsZAUFVmFsdWUeC18hRGF0YUJvdW5kZ2QQFU4KQWxsIEp1ZGdlcwZBYXJvbnMFQXJtZW4HQXNoZm9yZAVCZWdoZQRCdWNoB0J1Y2tsZXkHQ2FudHJlbAhDYXJsdXp6bwZDaGFib3QHQ2hpZWNoaQVDbGFwcAVDb2hlbgZDb2x2aW4IQ29wZWxhbmQKQ291dmlsbGlvbgZEYXdzb24ERGVhbgVEaW5hbgdEcmVubmVuA0ZheQtGZWF0aGVyc3RvbgVGb2xleQRHYWxlCEdhbGxvd2F5BkdlcmJlcgVHb2VrZQVHb2ZmZQhHb2xkYmVyZwZHdXNzaXMJR3VzdGFmc29uA0d1eQZIYWluZXMHSGFscGVybgdIYW1ibGVuBkhvbG1lcwZKYWNvYnMIS2VycmlnYW4GS29ybmVyBktyb3VwYQRMYXJvBkxhdWJlcgZMZXlkZW4GTWFydmVsCE1vcnJpc29uCE5hbWVyb2ZmBE5lZ2EETmltcwVQYWphawhQYW51dGhvcwVQYXJpcwZQYXJrZXIEUGFycgRQYXRlCFBldGVyc29uBlBvd2VsbARQdWdoBFJhdW0EUnV3ZQVTY290dAdTaGllbGRzB1NpbXBzb24IU3RlcnJldHQFU3dpZnQKVGFubmVud2FsZAhUaG9ybnRvbgRVcmRhClZhbmRlcnZvcnQHVmFzcXVlegVXZWxscwZXaGFsZW4GV2hlcnJ5CFdoaXRha2VyBldpbGJ1cgVXaWxlcwhXaWxsaWFtcwVXb2xmZQZXcmlnaHQVTgEwAjIyAjIxAjczAjM1AjcwAjIwAjI4AjU1AjQzAjE4ATICNTQCNDICNzcCNTgCMzABNQI2MgI0MQIzNAI2NgI2MQIzMgExATcCMTICMjUCNTkBOQIxNAI2OQI2MwI1MgIxMwI0MAIyMwI2OAIxOQIzOQIyNgI3MQI3NQI0NQIzNgIzMwI3MgIzNwIzMQIyNwE4AjY0AjU2AjQ0AjY1AjQ2Ajc0ATQCMTACMjkCNTEBMwI1NwIzOAIxNQI0OAI3NgI1MwIyNAE2AjUwAjQ5AjE3AjYwAjExAjQ3AjE2AjY3FCsDTmdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2RkAg0PEA8WBh8TBQdEaXNwbGF5HxQFBVZhbHVlHxVnZBAVBAlBbGwgVHlwZXMKTWVtb3JhbmR1bQhTdW1tYXJ5KgpUQyBPcGluaW9uFQQBMAEzATIBMRQrAwRnZ2dnZGQCBQ8PFgIeB1Zpc2libGVnZBYCAgUPZBYKAgEPEGRkFgECAWQCAw8PFgIfFmhkFgoCAQ8PFgIfCQULUGFnZSAxIG9mIDFkZAIDDw8WAh4HRW5hYmxlZGhkZAIFDw8WAh8XaGRkAgkPDxYCHxdoZGQCCw8PFgIfF2hkZAIFDxYCHgtfIUl0ZW1Db3VudAIOFhwCAQ9kFgJmDxUEDVJlc3VsdHNPZGRSb3drPGEgbmFtZT0nMTE4MTMnIGhyZWY9JyMxMTgxMycgb25jbGljaz0id2FybklzU3VtbWFyeSgnMTE4MTMnKTsiID5Sb2xhbmRhIE1pY2hlbGxlIEN1cnRpcyAmIEJyeW9uIEN1cnRpczwvYT4IU3VtbWFyeSoKMTEvMDEvMjAxOGQCAg9kFgJmDxUEDlJlc3VsdHNFdmVuUm93bzxhIG5hbWU9JzExODE1JyBocmVmPSdPcGluaW9uVmlld2VyLmFzcHg/SUQ9MTE4MTUnICB0YXJnZXQ9J19ibGFuayc+UGV0ZXIgR2lhbnVsaXMgJiBHYWJyaWVsYSBSZXhhY2ggU3ViaXJhPC9hPgpNZW1vcmFuZHVtCjExLzA1LzIwMThkAgMPZBYCZg8VBA1SZXN1bHRzT2RkUm93djxhIG5hbWU9JzExODA4JyBocmVmPSdPcGluaW9uVmlld2VyLmFzcHg/SUQ9MTE4MDgnICB0YXJnZXQ9J19ibGFuayc+Q3JhaWcgRG91Z2xhcyBIb2dsdW5kICYgQ2hyaXN0aW5lIEpvYW4gSG9nbHVuZDwvYT4KTWVtb3JhbmR1bQoxMS8wNS8yMDE4ZAIED2QWAmYPFQQOUmVzdWx0c0V2ZW5Sb3dZPGEgbmFtZT0nMTE4MTAnIGhyZWY9JyMxMTgxMCcgb25jbGljaz0id2FybklzU3VtbWFyeSgnMTE4MTAnKTsiID5MYXJyeSBMLiBMZXVlbmJlcmdlcjwvYT4IU3VtbWFyeSoKMTEvMDgvMjAxOGQCBQ9kFgJmDxUEDVJlc3VsdHNPZGRSb3dUPGEgbmFtZT0nMTE4MDYnIGhyZWY9J09waW5pb25WaWV3ZXIuYXNweD9JRD0xMTgwNicgIHRhcmdldD0nX2JsYW5rJz5XLiBULiBTbmlwZXM8L2E+Ck1lbW9yYW5kdW0KMTEvMDEvMjAxOGQCBg9kFgJmDxUEDlJlc3VsdHNFdmVuUm93ZzxhIG5hbWU9JzExODE0JyBocmVmPSdPcGluaW9uVmlld2VyLmFzcHg/SUQ9MTE4MTQnICB0YXJnZXQ9J19ibGFuayc+TWF4IFN1dGhlcmxhbmQgJiBFcmljIFAuIERlY2tlcjwvYT4KTWVtb3JhbmR1bQoxMS8wNS8yMDE4ZAIHD2QWAmYPFQQNUmVzdWx0c09kZFJvd2Q8YSBuYW1lPScxMTgxMicgaHJlZj0nIzExODEyJyBvbmNsaWNrPSJ3YXJuSXNTdW1tYXJ5KCcxMTgxMicpOyIgPkVucmlxdWUgRmVybmFuZG8gRGFuY2F1c2EgVmFsbGU8L2E+CFN1bW1hcnkqCjExLzA1LzIwMThkAggPZBYCZg8VBA5SZXN1bHRzRXZlblJvd3c8YSBuYW1lPScxMTgxNicgaHJlZj0nT3BpbmlvblZpZXdlci5hc3B4P0lEPTExODE2JyAgdGFyZ2V0PSdfYmxhbmsnPk1pY2hhZWwgSmFtZXMgV2VsbHMgJiBMeW5uIEFuaXRhIEtpcmNobmVyLVdlbGxzPC9hPgpNZW1vcmFuZHVtCjExLzA4LzIwMThkAgkPZBYCZg8VBBZSZXN1bHRzT2RkUm93Tm9PcGluaW9uL05vIE9waW5pb25zIFJlbGVhc2VkIGJ5IHRoZSBDb3VydCBvbiAxMC8zMC8yMDE4AAoxMC8zMC8yMDE4ZAIKD2QWAmYPFQQXUmVzdWx0c0V2ZW5Sb3dOb09waW5pb24vTm8gT3BpbmlvbnMgUmVsZWFzZWQgYnkgdGhlIENvdXJ0IG9uIDEwLzMxLzIwMTgACjEwLzMxLzIwMThkAgsPZBYCZg8VBBZSZXN1bHRzT2RkUm93Tm9PcGluaW9uL05vIE9waW5pb25zIFJlbGVhc2VkIGJ5IHRoZSBDb3VydCBvbiAxMS8wMi8yMDE4AAoxMS8wMi8yMDE4ZAIMD2QWAmYPFQQXUmVzdWx0c0V2ZW5Sb3dOb09waW5pb24vTm8gT3BpbmlvbnMgUmVsZWFzZWQgYnkgdGhlIENvdXJ0IG9uIDExLzA2LzIwMTgACjExLzA2LzIwMThkAg0PZBYCZg8VBBZSZXN1bHRzT2RkUm93Tm9PcGluaW9uL05vIE9waW5pb25zIFJlbGVhc2VkIGJ5IHRoZSBDb3VydCBvbiAxMS8wNy8yMDE4AAoxMS8wNy8yMDE4ZAIOD2QWAmYPFQQXUmVzdWx0c0V2ZW5Sb3dOb09waW5pb24vTm8gT3BpbmlvbnMgUmVsZWFzZWQgYnkgdGhlIENvdXJ0IG9uIDExLzA5LzIwMTgACjExLzA5LzIwMThkAgcPDxYCHwkFAjE0ZGQCCQ8PFgIfFmhkFgoCAQ8PFgIfCQULUGFnZSAxIG9mIDFkZAIDDw8WAh8XaGRkAgUPDxYCHxdoZGQCCQ8PFgIfF2hkZAILDw8WAh8XaGRkAgUPDxYIHwxoHwQLKwQBHwNnHwJnZBYEZg8PFgYfDGgfAmcfBAsrBAFkZAIBDxQrAAIUKwACFCsAAg8WEB8DZx4TRW5hYmxlRW1iZWRkZWRTa2luc2cfDGgfCgUFV2ViMjAeFEVuYWJsZVJvdW5kZWRDb3JuZXJzZx4NRW5hYmxlU2hhZG93c2cfAmcfBAsrBAFkZGRkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WCQUaY3RsMDAkQ29udGVudCRkcERhdGVTZWFyY2gFI2N0bDAwJENvbnRlbnQkZHBEYXRlU2VhcmNoJGNhbGVuZGFyBSNjdGwwMCRDb250ZW50JGRwRGF0ZVNlYXJjaCRjYWxlbmRhcgUcY3RsMDAkQ29udGVudCRkcERhdGVTZWFyY2hUbwUlY3RsMDAkQ29udGVudCRkcERhdGVTZWFyY2hUbyRjYWxlbmRhcgUlY3RsMDAkQ29udGVudCRkcERhdGVTZWFyY2hUbyRjYWxlbmRhcgUPY3RsMDAkbmZTdW1tYXJ5BRhjdGwwMCRuZlN1bW1hcnkkWG1sUGFuZWwFGWN0bDAwJG5mU3VtbWFyeSRUaXRsZU1lbnUomS8y6LMGL0SjdVZYiw3US2F6ONAmXvWyywXgP7/Rxw=="></span><span style="display: none !important;"><input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F7AD4B41"></span><span style="display: none !important;"><input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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"></span></form>
-    
+
 
 <div class="modalBackground" unselectable="on" style="z-index: 9999; width: 897px; height: 1378px; display: none;" onclick="summaryOpinionOk();"></div></body><style id="igor_ext_nofollow">a[rel~='nofollow']{outline:.14em dotted red !important; outline-offset:.2em;}a[rel~='nofollow'] > img{outline:thin dotted red !important; outline-offset:.2em;}</style></html>

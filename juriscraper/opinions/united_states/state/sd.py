@@ -5,17 +5,18 @@
 # - 2014-08-05: Updated URL by mlr
 
 import re
+
 from lxml import html
 
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 from juriscraper.lib.string_utils import convert_date_string, titlecase
+from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
 
 
 class Site(OpinionSiteWebDriven):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://ujs.sd.gov/Supreme_Court/opinions.aspx"
         self.back_scrape_iterable = [
@@ -33,21 +34,21 @@ class Site(OpinionSiteWebDriven):
         ]
         self.uses_selenium = True
         regex_year_group = r"(\d{4} S\.?D\.? \d{1,4})"
-        self.regex = "(.*)%s" % regex_year_group
+        self.regex = f"(.*){regex_year_group}"
         # The court decided to publish 5 records on January 24th 2018
         # in an alternate format where the neutral citation appears
         # before the case name, instead of vice versa.  We contacted the
         # court multiple times, but they wouldn't respond, so we had to
         # add the additional regex below to handle this use case.
-        self.regex_alt = "%s, (.*)" % regex_year_group
+        self.regex_alt = f"{regex_year_group}, (.*)"
         self.base_path = "//table[@id='ContentPlaceHolder1_PageContent_gvOpinions']//tr[position()>1]/td"
 
     def _get_download_urls(self):
-        path = "%s//a/@href[contains(.,'pdf')]" % self.base_path
+        path = f"{self.base_path}//a/@href[contains(.,'pdf')]"
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
-        path = "%s/a[contains(@href, 'pdf')]/text()" % self.base_path
+        path = f"{self.base_path}/a[contains(@href, 'pdf')]/text()"
         case_names = []
         for s in self.html.xpath(path):
             case_name = self.extract_regex_group(1, s)
@@ -57,14 +58,14 @@ class Site(OpinionSiteWebDriven):
         return case_names
 
     def _get_case_dates(self):
-        path = "%s[1]/text()" % self.base_path
+        path = f"{self.base_path}[1]/text()"
         return [convert_date_string(ds) for ds in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
 
     def _get_neutral_citations(self):
-        path = "%s/a[contains(@href, 'pdf')]/text()" % self.base_path
+        path = f"{self.base_path}/a[contains(@href, 'pdf')]/text()"
         neutral_cites = []
         for s in self.html.xpath(path):
             neutral_cite = self.extract_regex_group(2, s)
@@ -75,7 +76,7 @@ class Site(OpinionSiteWebDriven):
         return neutral_cites
 
     def _download_backwards(self, page_year):
-        logger.info("Running with params: %s" % (page_year,))
+        logger.info(f"Running with params: {page_year}")
         self.initiate_webdriven_session()
 
         # Select the year (this won't trigger a GET unless it's changed)

@@ -1,14 +1,11 @@
-# # coding=utf-8
-
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.exceptions import InsanityException
-from juriscraper.lib.string_utils import clean_string
-from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.string_utils import clean_string, convert_date_string
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.isc.idaho.gov/appeals-court/coaunpublished"
         self.status = "Unpublished"
@@ -20,7 +17,7 @@ class Site(OpinionSiteLinear):
             try:
                 convert_date_string(date_string)
             except:
-                raise InsanityException('Unexpected text format: "%s"' % text)
+                raise InsanityException(f'Unexpected text format: "{text}"')
             docket_name = text.replace(date_string, "").strip().lstrip("-")
 
             # sometimes the records include a docket number(s) as the

@@ -10,15 +10,16 @@ Contact:
 import time
 from datetime import date, timedelta
 
-from dateutil.rrule import rrule, DAILY
+from dateutil.rrule import DAILY, rrule
 from lxml import html
-from juriscraper.OpinionSite import OpinionSite
+
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.interval = 30
         self.url = "http://www.ca2.uscourts.gov/decisions?IW_DATABASE=OPN&IW_FIELD_TEXT=*&IW_SORT=-Date"
         self.court_id = self.__module__

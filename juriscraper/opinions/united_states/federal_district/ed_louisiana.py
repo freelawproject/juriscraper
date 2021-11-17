@@ -1,15 +1,14 @@
-# -*- coding: utf-8 -*-
 import datetime
-from six.moves.urllib import urlparse
+from urllib.parse import urljoin
 
-import sys
-from dateutil.rrule import rrule, DAILY
+from dateutil.rrule import DAILY, rrule
+
 from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.court_name = (
             "United States District Court Eastern District of Louisiana"
@@ -41,7 +40,7 @@ class Site(OpinionSite):
         returns a list of html trees
         """
 
-        html_tree = super(Site, self)._download(request_dict)
+        html_tree = super()._download(request_dict)
         tree_list = [
             html_tree,
         ]
@@ -49,7 +48,7 @@ class Site(OpinionSite):
             "//div[@class='search-results-pagination']//a[contains(., 'Next')]/@href"
         )
         if next_page:
-            self.url = urlparse.urljoin(self.base_url, next_page[0])
+            self.url = urljoin(self.base_url, next_page[0])
             tree_list.extend(self._download())
         return tree_list
 
@@ -89,7 +88,7 @@ class Site(OpinionSite):
                     element.xpath(".//span[@class='results-line2']/text()")
                 )
                 case_date = case_date.split(",")
-                case_date = "{}{}".format(case_date[-2], case_date[-1]).strip()
+                case_date = f"{case_date[-2]}{case_date[-1]}".strip()
                 # January 26, 2015.
                 case_dates.append(
                     datetime.datetime.strptime(case_date.strip(), "%B %d %Y.")

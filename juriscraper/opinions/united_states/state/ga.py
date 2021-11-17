@@ -4,15 +4,16 @@
 
 import re
 from datetime import date
+
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = self._get_url(date.today().year)
         self.status = "Published"

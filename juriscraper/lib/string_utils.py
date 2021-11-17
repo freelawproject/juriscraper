@@ -1,47 +1,36 @@
-# -*- coding: utf-8 -*-
-
 import calendar
 import re
 import string
 from datetime import timedelta
 
 import geonamescache
-import six
 from dateutil import parser
 
 # For use in titlecase
-if six.PY2:
-    # Python 3.x doesn't like the old ur'' notation, so we need to hide it.
-    from .string_utils_py2 import *
-else:
-    BIG = (
-        "3D|AFL|AKA|A/K/A|BMG|CBS|CDC|CDT|CEO|CIO|CNMI|D/B/A|DOJ|DVA|EFF|"
-        "FCC|FTC|HSBC|IBM|II|III|IV|JJ|LLC|LLP|MCI|MJL|MSPB|ND|NLRB|PTO|"
-        "SD|UPS|RSS|SEC|UMG|US|USA|USC|USPS|WTO"
-    )
-    SMALL = (
-        "a|an|and|as|at|but|by|en|for|if|in|is|of|on|or|the|to|v\.?|via|vs\.?"
-    )
-    NUMS = "0123456789"
-    PUNCT = r"""!"#$¢%&'‘()*+,\-./:;?@[\\\]_—`{|}~"""
-    WEIRD_CHARS = (
-        r"¼½¾§ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜßàáâãäåæçèéêëìíîïñòóôœõöøùúûüÿ"
-    )
-    BIG_WORDS = re.compile(r"^(%s)[%s]?$" % (BIG, PUNCT), re.I | re.U)
-    SMALL_WORDS = re.compile(r"^(%s)$" % SMALL, re.I)
-    SMALL_WORD_INLINE = re.compile(r"(^|\s)(%s)(\s|$)" % SMALL, re.I | re.U)
-    INLINE_PERIOD = re.compile(r"[a-z][.][a-z]", re.I)
-    INLINE_SLASH = re.compile(r"[a-z][/][a-z]", re.I)
-    INLINE_AMPERSAND = re.compile(r"([a-z][&][a-z])(.*)", re.I)
-    UC_ELSEWHERE = re.compile(r"[%s]*?[a-zA-Z]+[A-Z]+?" % PUNCT, re.U)
-    CAPFIRST = re.compile(r"^[%s]*?([A-Za-z])" % PUNCT)
-    SMALL_FIRST = re.compile(r"^([%s]*)(%s)\b" % (PUNCT, SMALL), re.I | re.U)
-    SMALL_LAST = re.compile(r"\b(%s)[%s]?$" % (SMALL, PUNCT), re.I | re.U)
-    SUBPHRASE = re.compile(r"([:;?!][ ])(%s)" % SMALL)
-    APOS_SECOND = re.compile(r"^[dol]{1}['‘]{1}[a-z]+$", re.I)
-    ALL_CAPS = re.compile(r"^[A-Z\s%s%s%s]+$" % (PUNCT, WEIRD_CHARS, NUMS))
-    UC_INITIALS = re.compile(r"^(?:[A-Z]{1}\.{1}|[A-Z]{1}\.{1}[A-Z]{1})+,?$")
-    MAC_MC = re.compile(r"^([Mm]a?c)(\w+.*)")
+BIG = (
+    "3D|AFL|AKA|A/K/A|BMG|CBS|CDC|CDT|CEO|CIO|CNMI|D/B/A|DOJ|DVA|EFF|"
+    "FCC|FTC|HSBC|IBM|II|III|IV|JJ|LLC|LLP|MCI|MJL|MSPB|ND|NLRB|PTO|"
+    "SD|UPS|RSS|SEC|UMG|US|USA|USC|USPS|WTO"
+)
+SMALL = r"a|an|and|as|at|but|by|en|for|if|in|is|of|on|or|the|to|v\.?|via|vs\.?"
+NUMS = "0123456789"
+PUNCT = r"""!"#$¢%&'‘()*+,\-./:;?@[\\\]_—`{|}~"""
+WEIRD_CHARS = r"¼½¾§ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜßàáâãäåæçèéêëìíîïñòóôœõöøùúûüÿ"
+BIG_WORDS = re.compile(fr"^({BIG})[{PUNCT}]?$", re.I | re.U)
+SMALL_WORDS = re.compile(r"^(%s)$" % SMALL, re.I)
+SMALL_WORD_INLINE = re.compile(r"(^|\s)(%s)(\s|$)" % SMALL, re.I | re.U)
+INLINE_PERIOD = re.compile(r"[a-z][.][a-z]", re.I)
+INLINE_SLASH = re.compile(r"[a-z][/][a-z]", re.I)
+INLINE_AMPERSAND = re.compile(r"([a-z][&][a-z])(.*)", re.I)
+UC_ELSEWHERE = re.compile(r"[%s]*?[a-zA-Z]+[A-Z]+?" % PUNCT, re.U)
+CAPFIRST = re.compile(r"^[%s]*?([A-Za-z])" % PUNCT)
+SMALL_FIRST = re.compile(fr"^([{PUNCT}]*)({SMALL})\b", re.I | re.U)
+SMALL_LAST = re.compile(fr"\b({SMALL})[{PUNCT}]?$", re.I | re.U)
+SUBPHRASE = re.compile(r"([:;?!][ ])(%s)" % SMALL)
+APOS_SECOND = re.compile(r"^[dol]{1}['‘]{1}[a-z]+$", re.I)
+ALL_CAPS = re.compile(fr"^[A-Z\s{PUNCT}{WEIRD_CHARS}{NUMS}]+$")
+UC_INITIALS = re.compile(r"^(?:[A-Z]{1}\.{1}|[A-Z]{1}\.{1}[A-Z]{1})+,?$")
+MAC_MC = re.compile(r"^([Mm]a?c)(\w+.*)")
 
 
 def titlecase(text, DEBUG=False):
@@ -66,7 +55,7 @@ def titlecase(text, DEBUG=False):
             print("Entire string is uppercase, thus lowercasing.")
         text = text.lower()
     elif not text_sans_small_words.isupper() and DEBUG:
-        print("Entire string not upper case. Not lowercasing: %s" % text)
+        print(f"Entire string not upper case. Not lowercasing: {text}")
 
     lines = re.split(r"[\r\n]+", text)
     processed = []
@@ -76,22 +65,22 @@ def titlecase(text, DEBUG=False):
         tc_line = []
         for i, word in enumerate(words):
             if DEBUG:
-                print("Word: " + word)
+                print(f"Word: {word}")
             if all_caps:
                 if UC_INITIALS.match(word):
                     if DEBUG:
-                        print("  UC_INITIALS match for: " + word)
+                        print(f"  UC_INITIALS match for: {word}")
                     tc_line.append(word)
                     continue
                 else:
                     if DEBUG:
-                        print("  Not initials. Lowercasing: " + word)
+                        print(f"  Not initials. Lowercasing: {word}")
                     word = word.lower()
 
             if APOS_SECOND.match(word):
                 # O'Reiley, L'Oreal, D'Angelo
                 if DEBUG:
-                    print("  APOS_SECOND matched. Fixing it: " + word)
+                    print(f"  APOS_SECOND matched. Fixing it: {word}")
                 word = word[0:3].upper() + word[3:]
                 tc_line.append(word)
                 continue
@@ -99,10 +88,8 @@ def titlecase(text, DEBUG=False):
             if INLINE_PERIOD.search(word):
                 if DEBUG:
                     print(
-                        (
-                            "  INLINE_PERIOD matched. Uppercasing if == 1 char: "
-                            + word
-                        )
+                        "  INLINE_PERIOD matched. Uppercasing if == 1 char: "
+                        + word
                     )
                 parts = word.split(".")
                 new_parts = []
@@ -121,10 +108,8 @@ def titlecase(text, DEBUG=False):
                 # This repeats INLINE_PERIOD. Could be more elegant.
                 if DEBUG:
                     print(
-                        (
-                            "  INLINE_SLASH matched. Uppercasing if == 1 char: "
-                            + word
-                        )
+                        "  INLINE_SLASH matched. Uppercasing if == 1 char: "
+                        + word
                     )
                 parts = word.split("/")
                 new_parts = []
@@ -142,36 +127,34 @@ def titlecase(text, DEBUG=False):
             amp_match = INLINE_AMPERSAND.match(word)
             if amp_match:
                 if DEBUG:
-                    print("  INLINE_AMPERSAND matched. Uppercasing: " + word)
+                    print(f"  INLINE_AMPERSAND matched. Uppercasing: {word}")
                 tc_line.append(
-                    "%s%s" % (amp_match.group(1).upper(), amp_match.group(2))
+                    f"{amp_match.group(1).upper()}{amp_match.group(2)}"
                 )
                 continue
 
             if UC_ELSEWHERE.match(word):
                 if DEBUG:
-                    print(
-                        ("  UC_ELSEWHERE matched. Leaving unchanged: " + word)
-                    )
+                    print(f"  UC_ELSEWHERE matched. Leaving unchanged: {word}")
                 tc_line.append(word)
                 continue
 
             if SMALL_WORDS.match(word):
                 if DEBUG:
-                    print("  SMALL_WORDS matched. Lowercasing: " + word)
+                    print(f"  SMALL_WORDS matched. Lowercasing: {word}")
                 tc_line.append(word.lower())
                 continue
 
             if BIG_WORDS.match(word):
                 if DEBUG:
-                    print("  BIG_WORDS matched. Uppercasing: " + word)
+                    print(f"  BIG_WORDS matched. Uppercasing: {word}")
                 tc_line.append(word.upper())
                 continue
 
             match = MAC_MC.match(word)
             if match and (word not in ["mack", "machine"]):
                 if DEBUG:
-                    print("  MAC_MAC matched. Capitalizing: " + word)
+                    print(f"  MAC_MAC matched. Capitalizing: {word}")
                 tc_line.append(
                     "%s%s"
                     % (
@@ -189,12 +172,14 @@ def titlecase(text, DEBUG=False):
         result = " ".join(tc_line)
 
         result = SMALL_FIRST.sub(
-            lambda m: "%s%s" % (m.group(1), m.group(2).capitalize()), result
+            lambda m: f"{m.group(1)}{m.group(2).capitalize()}",
+            result,
         )
 
         result = SMALL_LAST.sub(lambda m: m.group(0).capitalize(), result)
         result = SUBPHRASE.sub(
-            lambda m: "%s%s" % (m.group(1), m.group(2).capitalize()), result
+            lambda m: f"{m.group(1)}{m.group(2).capitalize()}",
+            result,
         )
 
         processed.append(result)
@@ -240,7 +225,7 @@ def fix_camel_case(s):
                     s_out += s[i]
                     continue
                 if next_letter_is_lower:
-                    s_out += " %s" % s[i]
+                    s_out += f" {s[i]}"
                 else:
                     s_out += s[i]
             elif s[i - 1].islower() and s[i].isupper():
@@ -250,19 +235,19 @@ def fix_camel_case(s):
                         i - 2
                     ] == "M"
                 except KeyError:
-                    s_out += " %s" % s[i]
+                    s_out += f" {s[i]}"
                 if s[i - 1] == "c" and mac_or_mc:
                     s_out += s[i]
                 else:
-                    s_out += " %s" % s[i]
+                    s_out += f" {s[i]}"
             elif s[i].isupper() and s[i - 1].islower():
                 # Uppercase letter preceded by a lowercase one. Add a space then the letter.
-                s_out += " %s" % s[i]
+                s_out += f" {s[i]}"
             else:
                 s_out += s[i]
         # Fix v.'s that don't have spaces. These come in two forms:
         # 1. So and sov.so and so
-        s_out = " ".join(re.sub("v\.", " v. ", s_out).split())
+        s_out = " ".join(re.sub(r"v\.", " v. ", s_out).split())
         # 2. So and sov so and so --> So and so v. so and so
         if "v." not in s_out:
             s_out = " ".join(re.sub("([^ ])v ", r"\1 v. ", s_out).split())
@@ -286,12 +271,12 @@ def fix_camel_case(s):
 
 # For use in harmonize function
 # More details: http://www.law.cornell.edu/citation/4-300.htm
-US = "USA|U\.S\.A\.|U\.S\.?|U\. S\.?|(The )?United States of America|The United States"
+US = r"USA|U\.S\.A\.|U\.S\.?|U\. S\.?|(The )?United States of America|The United States"
 UNITED_STATES = re.compile(r"^(%s)(,|\.)?$" % US, re.I)
-ET_AL = re.compile(",?\set\.?\sal\.?", re.I)
+ET_AL = re.compile(r",?\set\.?\sal\.?", re.I)
 BW = (
     "appell(ee|ant)s?|claimants?|complainants?|defendants?|defendants?(--?|/)appell(ee|ant)s?"
-    + "|devisee|executor|executrix|pet(\.|itioner)s?|petitioners?(--?|/)appell(ee|ant)s?"
+    + r"|devisee|executor|executrix|pet(\.|itioner)s?|petitioners?(--?|/)appell(ee|ant)s?"
     + "|petitioners?(--?|/)defendants?|plaintiffs?|plaintiffs?(--?|/)appell(ee|ant)s?|respond(e|a)nts?"
     + "|respond(e|a)nts?(--?|/)appell(ee|ant)s?|cross(--?|/)respondents?|crosss?(--?|/)petitioners?"
     + "|cross(--?|/)appell(ees|ant)s?|deceased"
@@ -313,7 +298,7 @@ def harmonize(text):
 
     Lots of tests are in tests.py.
     """
-    if not isinstance(text, six.string_types):
+    if not isinstance(text, str):
         text = str(text)
 
     # replace vs. with v.
@@ -397,7 +382,7 @@ def clean_string(s):
     # we don't know the order of the various punctuation items to be stripped.
     # We split on the v., and handle fixes at either end of plaintiff or
     # appellant.
-    bad_punctuation = "(-|–|_|/|;|,|\s)*"
+    bad_punctuation = r"(-|–|_|/|;|,|\s)*"
     bad_endings = re.compile(r"%s$" % bad_punctuation)
     bad_beginnings = re.compile(r"^%s" % bad_punctuation)
 
@@ -424,15 +409,15 @@ def force_unicode(s, encoding="utf-8", strings_only=False, errors="strict"):
     # Handle the common case first, saves 30-40% in performance when s
     # is an instance of unicode. This function gets called often in that
     # setting.
-    if isinstance(s, six.text_type):
+    if isinstance(s, str):
         return s
     try:
-        if not isinstance(s, six.string_types):
+        if not isinstance(s, str):
             if hasattr(s, "__unicode__"):
-                s = six.text_type(s)
+                s = str(s)
             else:
                 try:
-                    s = six.text_type(str(s), encoding, errors)
+                    s = str(str(s), encoding, errors)
                 except UnicodeEncodeError:
                     if not isinstance(s, Exception):
                         raise
@@ -448,7 +433,7 @@ def force_unicode(s, encoding="utf-8", strings_only=False, errors="strict"):
                             for arg in s
                         ]
                     )
-        elif not isinstance(s, six.text_type):
+        elif not isinstance(s, str):
             # Note: We use .decode() here, instead of unicode(s, encoding,
             # errors), so that if s is a SafeString, it ends up being a
             # SafeUnicode at the end.
@@ -498,7 +483,7 @@ def trunc(s, length, ellipsis=None):
             end = length - ellipsis_length
         s = s[0:end]
         if ellipsis:
-            s = "%s%s" % (s, ellipsis)
+            s = f"{s}{ellipsis}"
         return s
 
 
@@ -534,11 +519,11 @@ def split_date_range_string(date_range_string):
     date_range_string = normalize_dashes(date_range_string)
     parts = date_range_string.split()
     if "-" not in date_range_string or len(parts) != 4:
-        raise Exception('Unrecognized date format: "%s"' % date_range_string)
+        raise Exception(f'Unrecognized date format: "{date_range_string}"')
     month1, month2, year = parts[0], parts[2], parts[3]
     months = {v: k for k, v in enumerate(calendar.month_name)}
     last_day = calendar.monthrange(int(year), months[month2])[1]
-    start_date = convert_date_string("%s 1, %s" % (month1, year))
+    start_date = convert_date_string(f"{month1} 1, {year}")
     end_date = convert_date_string("%s %d, %s" % (month2, last_day, year))
     delta = end_date - start_date
     dates_in_range = [start_date + timedelta(d) for d in range(delta.days + 1)]
@@ -562,10 +547,10 @@ def normalize_dashes(raw_string):
     return raw_string
 
 
-class CaseNameTweaker(object):
+class CaseNameTweaker:
     def __init__(self):
         self._bad_words = None
-        super(CaseNameTweaker, self).__init__()
+        super().__init__()
 
     @property
     def bad_words(self):
@@ -728,7 +713,7 @@ class CaseNameTweaker(object):
         for word in bad_words:
             for punctuation in string.punctuation:
                 if not word.endswith(punctuation):
-                    punctuation_bad_words.append("%s%s" % (word, punctuation))
+                    punctuation_bad_words.append(f"{word}{punctuation}")
         bad_words = bad_words + punctuation_bad_words
 
         bad_words = [s.lower() for s in bad_words]
@@ -798,10 +783,9 @@ def clean_if_py3(s):
     :return: string un-modified on Python 2.x, string with raw literals replaced
              with their string forms on Python 3.x
     """
-    if six.PY3:
-        replacements = [(r"\n", "\n"), (r"\t", "\t"), (r"\r", "\r")]
+    replacements = [(r"\n", "\n"), (r"\t", "\t"), (r"\r", "\r")]
 
-        for raw, replacement in replacements:
-            s = s.replace(raw, replacement)
+    for raw, replacement in replacements:
+        s = s.replace(raw, replacement)
 
     return s

@@ -12,14 +12,14 @@ History:
 
 from lxml import html
 
-from juriscraper.OralArgumentSite import OralArgumentSite
 from juriscraper.lib.html_utils import get_html5_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OralArgumentSite import OralArgumentSite
 
 
 class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.ca2.uscourts.gov/decisions"
         self.method = "POST"
@@ -41,13 +41,13 @@ class Site(OralArgumentSite):
 
     def _get_case_names(self):
         case_names = []
-        for e in self.html.xpath("%s/td[2]" % self.base_xpath):
+        for e in self.html.xpath(f"{self.base_xpath}/td[2]"):
             s = html.tostring(e, method="text", encoding="unicode")
             case_names.append(s)
         return case_names
 
     def _get_case_dates(self):
-        path = "%s/td[3]" % self.base_xpath
+        path = f"{self.base_xpath}/td[3]"
         dates = []
         for e in self.html.xpath(path):
             date_string = html.tostring(e, method="text", encoding="unicode")
@@ -59,5 +59,5 @@ class Site(OralArgumentSite):
         return dates
 
     def _get_docket_numbers(self):
-        path = "%s/td[1]//text()" % self.base_xpath
+        path = f"{self.base_xpath}/td[1]//text()"
         return list(self.html.xpath(path))

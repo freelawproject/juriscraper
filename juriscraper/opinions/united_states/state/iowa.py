@@ -3,13 +3,13 @@
 # Court Short Name: iowa
 
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.cases = []
         self.archive = False
@@ -19,7 +19,7 @@ class Site(OpinionSite):
         self.url = "https://www.iowacourts.gov/iowa-courts/supreme-court/supreme-court-opinions/"
 
     def _download(self, request_dict={}):
-        html = super(Site, self)._download(request_dict)
+        html = super()._download(request_dict)
         self.extract_cases(html)
         if self.test_mode_enabled() or self.archive:
             return html
@@ -29,7 +29,7 @@ class Site(OpinionSite):
         while proceed:
             next_page_url = self.extract_next_page_url(html)
             if next_page_url:
-                logger.info("Scraping next page: %s" % next_page_url)
+                logger.info(f"Scraping next page: {next_page_url}")
                 html = self._get_html_tree_by_url(next_page_url)
                 self.extract_cases(html)
             else:
@@ -55,11 +55,11 @@ class Site(OpinionSite):
         extract cases dictionaries, and add to self.cases
         """
         self.archive = True
-        self.url = self.url + "opinions-archive/"
+        self.url = f"{self.url}opinions-archive/"
         landing_page_html = self._download()
         path = '//div[@class="main-content-wrapper"]//a[contains(./text(), "Opinions Archive")]/@href'
         for archive_page_url in landing_page_html.xpath(path):
-            logger.info("Back scraping archive page: %s" % archive_page_url)
+            logger.info(f"Back scraping archive page: {archive_page_url}")
             archive_page_html = self._get_html_tree_by_url(archive_page_url)
             self.extract_archive_cases(archive_page_html)
 
@@ -68,7 +68,7 @@ class Site(OpinionSite):
         and add them to self.cases
         """
         case_substring = "Case No."
-        case_elements = html.xpath('//h3[contains(., "%s")]' % case_substring)
+        case_elements = html.xpath(f'//h3[contains(., "{case_substring}")]')
         for case_element in case_elements:
             text = case_element.text_content()
             parts = text.split(":")

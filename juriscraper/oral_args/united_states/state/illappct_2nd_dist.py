@@ -12,7 +12,7 @@ from juriscraper.oral_args.united_states.state import ill
 
 class Site(ill.Site):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = (
             "http://www.illinoiscourts.gov/Media/Appellate/2nd_District.asp"

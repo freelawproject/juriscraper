@@ -1,9 +1,7 @@
-# coding=utf-8
 """Classes for querying PACER's Written Opinion Report (WrtOpRpt.pl),
 which is free.
 """
 
-from .reports import BaseReport
 from ..lib.date_utils import make_date_range_tuples
 from ..lib.html_utils import (
     clean_html,
@@ -19,6 +17,7 @@ from ..pacer.utils import (
     get_pacer_doc_id_from_doc1_url,
     reverse_goDLS_function,
 )
+from .reports import BaseReport
 
 logger = make_default_logger()
 
@@ -32,7 +31,7 @@ class FreeOpinionReport(BaseReport):
     def __init__(self, court_id, pacer_session):
         self.responses = []
         self.trees = []
-        super(FreeOpinionReport, self).__init__(court_id, pacer_session)
+        super().__init__(court_id, pacer_session)
 
     @property
     def url(self):
@@ -40,8 +39,7 @@ class FreeOpinionReport(BaseReport):
             return "https://ecf.ohnd.uscourts.gov/cgi-bin/OHND_WrtOpRpt.pl"
         else:
             return (
-                "https://ecf.%s.uscourts.gov/cgi-bin/WrtOpRpt.pl"
-                % self.court_id
+                f"https://ecf.{self.court_id}.uscourts.gov/cgi-bin/WrtOpRpt.pl"
             )
 
     def query(self, start, end, sort="date_filed", day_span=7):
@@ -89,7 +87,7 @@ class FreeOpinionReport(BaseReport):
                 "Key1": self._normalize_sort_param(sort),
                 "all_case_ids": "0",
             }
-            response = self.session.post(self.url + "?" + nonce, data=data)
+            response = self.session.post(f"{self.url}?{nonce}", data=data)
             responses.append(response)
 
         self.responses = responses
@@ -150,7 +148,7 @@ class FreeOpinionReport(BaseReport):
             )
 
 
-class FreeOpinionRow(object):
+class FreeOpinionRow:
     """A row in the Free Opinions report.
 
     For the most part this is fairly straightforward, however eight courts have
@@ -183,7 +181,7 @@ class FreeOpinionRow(object):
         to complete the empty cells.
 
         """
-        super(FreeOpinionRow, self).__init__()
+        super().__init__()
         self.element = element
         self.last_good_row = last_good_row
         self.court_id = court_id
@@ -203,7 +201,7 @@ class FreeOpinionRow(object):
         self.cause = self.get_cause()
 
     def __str__(self):
-        return "<FreeOpinionRow in %s>\n%s" % (
+        return "<FreeOpinionRow in {}>\n{}".format(
             self.court_id,
             {
                 "pacer_case_id": self.pacer_case_id,

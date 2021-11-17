@@ -4,13 +4,13 @@ CourtID: bap9
 Court Short Name: 9th Cir. BAP
 """
 
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = "http://www.ca9.uscourts.gov/bap/"
         self.court_id = self.__module__
         self.method = "POST"
@@ -36,7 +36,7 @@ class Site(OpinionSiteLinear):
             self.cases.append(
                 {
                     "url": url[0],
-                    "name": "In re: %s" % titlecase(cell_1.text_content()),
+                    "name": f"In re: {titlecase(cell_1.text_content())}",
                     "status": status,
                     "docket": row.xpath("./td[3]")[0].text_content(),
                     "date": row.xpath("./td[4]")[0].text_content(),

@@ -1,16 +1,15 @@
-from datetime import date
-from datetime import datetime
-from datetime import timedelta
+from datetime import date, datetime, timedelta
+
+from dateutil.rrule import DAILY, rrule
 
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import clean_if_py3
-from dateutil.rrule import rrule, DAILY
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = "https://www.ca4.uscourts.gov/DataOpinions.aspx"
         self.court_id = self.__module__
         td = date.today()

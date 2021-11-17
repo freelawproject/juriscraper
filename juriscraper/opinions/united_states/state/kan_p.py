@@ -7,7 +7,7 @@ from juriscraper.OpinionSiteLinearWebDriven import OpinionSiteLinearWebDriven
 
 class Site(OpinionSiteLinearWebDriven):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court = "Supreme Court"
         self.court_id = self.__module__
         self.pages = []
@@ -17,7 +17,7 @@ class Site(OpinionSiteLinearWebDriven):
 
     def _download(self, request_dict={}):
         if self.test_mode_enabled():
-            test_page = super(Site, self)._download(request_dict)
+            test_page = super()._download(request_dict)
             self.pages.append(test_page)
             return
         self.initiate_webdriven_session()

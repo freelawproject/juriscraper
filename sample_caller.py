@@ -1,12 +1,10 @@
-from collections import defaultdict
 import os
 import signal
-import six
 import sys
 import traceback
-from six.moves.urllib import parse as six_parse
-from six.moves.urllib import request as six_request
+from collections import defaultdict
 from optparse import OptionParser
+from urllib import parse, request
 
 from juriscraper.lib.importer import build_module_list, site_yielder
 from juriscraper.lib.string_utils import trunc
@@ -46,31 +44,30 @@ def scrape_court(site, binaries=False):
         # First turn the download urls into a utf-8 byte string
         item_download_urls = item["download_urls"].encode("utf-8")
         # Percent encode URLs (this is a Python wart)
-        download_url = six_parse.quote(
+        download_url = parse.quote(
             item_download_urls, safe="%/:=&?~#+!$,;'@()*[]"
         )
 
         if binaries:
             try:
-                opener = six_request.build_opener()
+                opener = request.build_opener()
                 for cookie_dict in site.cookies:
                     opener.addheaders.append(
                         (
                             "Cookie",
-                            "%s=%s"
-                            % (cookie_dict["name"], cookie_dict["value"]),
+                            f"{cookie_dict['name']}={cookie_dict['value']}",
                         )
                     )
                 data = opener.open(download_url).read()
                 # test for empty files (thank you CA1)
                 if len(data) == 0:
                     exceptions["EmptyFileError"].append(download_url)
-                    v_print(3, "EmptyFileError: %s" % download_url)
+                    v_print(3, f"EmptyFileError: {download_url}")
                     v_print(3, traceback.format_exc())
                     continue
             except Exception:
                 exceptions["DownloadingError"].append(download_url)
-                v_print(3, "DownloadingError: %s" % download_url)
+                v_print(3, f"DownloadingError: {download_url}")
                 v_print(3, traceback.format_exc())
                 continue
 
@@ -82,12 +79,12 @@ def scrape_court(site, binaries=False):
         # Normally, you'd do your save routines here...
         v_print(1, "\nAdding new item:")
         for k, v in item.items():
-            if isinstance(v, six.text_type):
+            if isinstance(v, str):
                 value = trunc(v, 200, ellipsis="...")
-                v_print(1, '    %s: "%s"' % (k, value))
+                v_print(1, f'    {k}: "{value}"')
             else:
                 # Dates and such...
-                v_print(1, "    %s: %s" % (k, v))
+                v_print(1, f"    {k}: {v}")
 
     v_print(
         3, "\n%s: Successfully crawled %d items." % (site.court_id, len(site))
@@ -183,7 +180,7 @@ def main():
     generate_report = options.report
 
     # Set up the print function
-    print("Verbosity is set to: %s" % options.verbosity)
+    print(f"Verbosity is set to: {options.verbosity}")
 
     def _v_print(*verb_args):
         if verb_args[0] > (3 - options.verbosity):
@@ -217,10 +214,10 @@ def main():
                 sys.exit(1)
 
             package, module = module_strings[i].rsplit(".", 1)
-            v_print(3, "Current court: %s.%s" % (package, module))
+            v_print(3, f"Current court: {package}.{module}")
 
             mod = __import__(
-                "%s.%s" % (package, module), globals(), locals(), [module]
+                f"{package}.{module}", globals(), locals(), [module]
             )
             try:
                 if backscrape:
@@ -232,7 +229,8 @@ def main():
                 else:
                     site = mod.Site()
                     v_print(
-                        3, "Sent %s request to: %s" % (site.method, site.url)
+                        3,
+                        f"Sent {site.method} request to: {site.url}",
                     )
                     if site.uses_selenium:
                         v_print(3, "Selenium will be used.")
@@ -268,7 +266,7 @@ def main():
         report_path = os.path.abspath(
             os.path.join(os.path.dirname(__file__), "../report.html")
         )
-        v_print(3, "Generating HTML report at %s" % report_path)
+        v_print(3, f"Generating HTML report at {report_path}")
         generate_scraper_report(report_path, results)
 
     sys.exit(0)

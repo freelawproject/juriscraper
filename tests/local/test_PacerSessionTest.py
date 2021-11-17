@@ -1,9 +1,7 @@
-# coding=utf-8
-
 import unittest
 from unittest import mock
-from juriscraper.pacer import PacerSession, CaseQuery
 
+from juriscraper.pacer import CaseQuery, PacerSession
 from tests.network import get_pacer_session
 
 

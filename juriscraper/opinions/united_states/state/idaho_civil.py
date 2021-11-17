@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """
 Contact: Sara Velasquez, svelasquez@idcourts.net, 208-947-7501
 History:
@@ -11,10 +9,10 @@ History:
  - 2015-10-23, mlr: Updated to handle annoying situation.
  - 2016-02-25 arderyp: Updated to catch "ORDER" (in addition to "Order") in download url text
 """
-import six
 from lxml import html
+
+from juriscraper.lib.string_utils import clean_if_py3, convert_date_string
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import convert_date_string, clean_if_py3
 
 
 class Site(OpinionSite):
@@ -31,17 +29,17 @@ class Site(OpinionSite):
         'contains(.//text(), "Amended")'
         "]"
     )
-    path_conditional_row = "/td[4]//%s" % path_conditional_anchor
-    path_base = "%s[./%s]" % (path_table_row_start, path_conditional_row)
+    path_conditional_row = f"/td[4]//{path_conditional_anchor}"
+    path_base = f"{path_table_row_start}[./{path_conditional_row}]"
 
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = "https://www.isc.idaho.gov/appeals-court/isc_civil"
         self.court_id = self.__module__
 
     def _get_case_names(self):
         case_names = []
-        path = "%s/td[3]" % self.path_base
+        path = f"{self.path_base}/td[3]"
         for cell in self.html.xpath(path):
             name_string = html.tostring(
                 cell, method="text", encoding="unicode"
@@ -59,8 +57,8 @@ class Site(OpinionSite):
         # acceptable links, take the opinion link if present,
         # otherwise take the first acceptable link.
         opinion_urls = []
-        path = "%s/td[4]" % self.path_base
-        path_link = ".//%s" % self.path_conditional_anchor
+        path = f"{self.path_base}/td[4]"
+        path_link = f".//{self.path_conditional_anchor}"
         for cell in self.html.xpath(path):
             urls = []
             url_opinion = False
@@ -75,15 +73,13 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         case_dates = []
-        path = "%s/td[1]" % self.path_base
+        path = f"{self.path_base}/td[1]"
         for cell in self.html.xpath(path):
             date_string = html.tostring(
                 cell, method="text", encoding="unicode"
             )
             date_string = clean_if_py3(date_string).strip()
             if date_string:
-                if six.PY2:
-                    date_string = date_string.encode("ascii", "ignore")
                 date_string = date_string.replace(
                     "Sept ", "Sep "
                 )  # GIGO!  (+1 by arderyp)
@@ -91,7 +87,7 @@ class Site(OpinionSite):
         return case_dates
 
     def _get_docket_numbers(self):
-        path = "%s/td[2]//text()" % self.path_base
+        path = f"{self.path_base}/td[2]//text()"
         return [text.strip() for text in self.html.xpath(path) if text.strip()]
 
     def _get_precedential_statuses(self):

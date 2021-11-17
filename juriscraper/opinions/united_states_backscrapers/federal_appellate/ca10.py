@@ -1,14 +1,15 @@
 import time
 from datetime import date
-from lxml import html
+
 from dateutil.rrule import DAILY, rrule
+from lxml import html
 
 from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         today = date.today()
         self.url = "http://www.ca10.uscourts.gov/opinion/search/results?query=%20date%3A{}".format(
             today.strftime("%m/%d/%Y")
@@ -30,22 +31,20 @@ class Site(OpinionSite):
         return [
             e
             for e in self.html.xpath(
-                "{}/td[@class='case-name']/text()".format(self.base)
+                f"{self.base}/td[@class='case-name']/text()"
             )
         ]
 
     def _get_download_urls(self):
         return [
             e
-            for e in self.html.xpath(
-                "{}/td[@class='link']/a/@href".format(self.base)
-            )
+            for e in self.html.xpath(f"{self.base}/td[@class='link']/a/@href")
         ]
 
     def _get_case_dates(self):
         dates = []
         for date_string in self.html.xpath(
-            "{}/td[@class='publish-date']/text()".format(self.base)
+            f"{self.base}/td[@class='publish-date']/text()"
         ):
             # ex: Nov-02-1995
             dates.append(
@@ -59,7 +58,7 @@ class Site(OpinionSite):
         return [
             e
             for e in self.html.xpath(
-                "{}/td[@class='case-no']/text()".format(self.base)
+                f"{self.base}/td[@class='case-no']/text()"
             )
         ]
 
@@ -69,9 +68,7 @@ class Site(OpinionSite):
     def _get_lower_courts(self):
         return [
             e
-            for e in self.html.xpath(
-                "{}/td[@class='origin']/text()".format(self.base)
-            )
+            for e in self.html.xpath(f"{self.base}/td[@class='origin']/text()")
         ]
 
     def _download_backwards(self, d):

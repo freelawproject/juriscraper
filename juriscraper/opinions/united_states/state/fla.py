@@ -4,13 +4,13 @@
 
 from datetime import datetime
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         today = datetime.today().strftime("%m/%d/%Y")
         this_year = datetime.today().year
@@ -26,7 +26,7 @@ class Site(OpinionSite):
         self.cases = []
 
     def _download(self, request_dict={}):
-        html = super(Site, self)._download(request_dict)
+        html = super()._download(request_dict)
         self._extract_cases_from_html(html)
         return html
 

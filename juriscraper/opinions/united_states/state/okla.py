@@ -9,13 +9,13 @@
 import re
 from datetime import date
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.elements = []
         self.base_path = False
@@ -33,12 +33,12 @@ class Site(OpinionSite):
 
     def _download(self, request_dict={}):
         self.set_base_path()
-        html = super(Site, self)._download(request_dict)
+        html = super()._download(request_dict)
         self.elements = html.xpath(self.base_path)
         return html
 
     def _get_download_urls(self):
-        path = "%s/@href" % self.base_path
+        path = f"{self.base_path}/@href"
         return self.html.xpath(path)
 
     def _get_case_dates(self):

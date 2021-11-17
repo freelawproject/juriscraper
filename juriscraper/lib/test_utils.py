@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import os
 import sys
 import warnings
@@ -45,7 +44,7 @@ class MockRequest(Request):
                 r.status_code = 200
                 if self.url.endswith("json"):
                     r.headers["content-type"] = "application/json"
-        except IOError as e:
+        except OSError as e:
             r.status_code = 404
             raise ConnectionError(e)
 
@@ -84,5 +83,5 @@ def warn_or_crash_slow_parser(duration, warn_duration=1, max_duration=15):
 
 
 def warn_generated_compare_file(path_to_compare_file):
-    warning = "WARNING: GENERATED COMPARE FILE: %s" % path_to_compare_file
+    warning = f"WARNING: GENERATED COMPARE FILE: {path_to_compare_file}"
     warnings.warn(warning, CompareFileGeneratedWarning)

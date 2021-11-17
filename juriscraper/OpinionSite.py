@@ -9,7 +9,7 @@ class OpinionSite(AbstractSite):
     """
 
     def __init__(self, *args, **kwargs):
-        super(OpinionSite, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
         # Order of attributes is important as it affects the order of parsing.
         # Some methods rely on others having already been run.

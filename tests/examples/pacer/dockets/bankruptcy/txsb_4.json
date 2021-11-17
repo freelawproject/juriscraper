@@ -1,69 +1,69 @@
 {
-  "assigned_to_str": "Jeff Bohm", 
-  "case_name": "TA-LEE-HO ENERGY CORP., Debtor", 
-  "cause": "", 
-  "court_id": "txsb", 
-  "date_converted": null, 
-  "date_discharged": null, 
-  "date_filed": "2010-02-15", 
-  "date_terminated": null, 
-  "demand": "", 
+  "assigned_to_str": "Jeff Bohm",
+  "case_name": "TA-LEE-HO ENERGY CORP., Debtor",
+  "cause": "",
+  "court_id": "txsb",
+  "date_converted": null,
+  "date_discharged": null,
+  "date_filed": "2010-02-15",
+  "date_terminated": null,
+  "demand": "",
   "docket_entries": [
     {
-      "date_filed": "2010-02-15", 
-      "description": "Chapter 7 Voluntary Petition. Fee Amount $299. Filed by TA-LEE-HO ENERGY CORP.. (Fuqua, Richard) (Entered: 02/15/2010)", 
-      "document_number": "1", 
-      "pacer_doc_id": "sho0_doc.pl", 
+      "date_filed": "2010-02-15",
+      "description": "Chapter 7 Voluntary Petition. Fee Amount $299. Filed by TA-LEE-HO ENERGY CORP.. (Fuqua, Richard) (Entered: 02/15/2010)",
+      "document_number": "1",
+      "pacer_doc_id": "sho0_doc.pl",
       "pacer_seq_no": null
-    }, 
+    },
     {
-      "date_filed": "2010-02-15", 
-      "description": "Receipt of Voluntary Petition (Chapter 7)(10-31246) [misc,volp7a] ( 299.00) Filing Fee. Receipt number 9958191. Fee amount $ 299.00. (U.S. Treasury) (Entered: 02/15/2010)", 
-      "document_number": null, 
-      "pacer_doc_id": null, 
+      "date_filed": "2010-02-15",
+      "description": "Receipt of Voluntary Petition (Chapter 7)(10-31246) [misc,volp7a] ( 299.00) Filing Fee. Receipt number 9958191. Fee amount $ 299.00. (U.S. Treasury) (Entered: 02/15/2010)",
+      "document_number": null,
+      "pacer_doc_id": null,
       "pacer_seq_no": null
-    }, 
+    },
     {
-      "date_filed": "2010-02-15", 
-      "description": "Creditor Mailing List Loaded. (Filed By TA-LEE-HO ENERGY CORP. ). (Fuqua, Richard) (Entered: 02/15/2010)", 
-      "document_number": "2", 
-      "pacer_doc_id": "sho0_doc.pl", 
+      "date_filed": "2010-02-15",
+      "description": "Creditor Mailing List Loaded. (Filed By TA-LEE-HO ENERGY CORP. ). (Fuqua, Richard) (Entered: 02/15/2010)",
+      "document_number": "2",
+      "pacer_doc_id": "sho0_doc.pl",
       "pacer_seq_no": null
     }
-  ], 
-  "docket_number": "10-31246", 
-  "jurisdiction": "", 
-  "jury_demand": "", 
-  "mdl_status": "", 
-  "nature_of_suit": "", 
+  ],
+  "docket_number": "10-31246",
+  "jurisdiction": "",
+  "jury_demand": "",
+  "mdl_status": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
         {
-          "contact": "Fuqua & Keim\n2777 Allen Parkway\nSte 480\nHouston, TX 77019\n713-960-0277\nEmail: fuqua@fuquakeim.com\n", 
-          "name": "Richard L Fuqua, II", 
+          "contact": "Fuqua & Keim\n2777 Allen Parkway\nSte 480\nHouston, TX 77019\n713-960-0277\nEmail: fuqua@fuquakeim.com\n",
+          "name": "Richard L Fuqua, II",
           "roles": []
         }
-      ], 
-      "date_terminated": null, 
-      "extra_info": "Debtor\nPO Box 400\nNormangee, TX 77871\nTax ID / EIN: 74-2134970", 
-      "name": "TA-LEE-HO ENERGY CORP.,  Debtor", 
+      ],
+      "date_terminated": null,
+      "extra_info": "Debtor\nPO Box 400\nNormangee, TX 77871\nTax ID / EIN: 74-2134970",
+      "name": "TA-LEE-HO ENERGY CORP.,  Debtor",
       "type": "Debtor"
-    }, 
+    },
     {
-      "attorneys": [], 
-      "date_terminated": null, 
-      "extra_info": "Hughes Watters and Askanase\n333 Clay\n29th Floor\nHouston, TX 77002\n713-759-0818", 
-      "name": "Janet S Casciato-Northrup", 
+      "attorneys": [],
+      "date_terminated": null,
+      "extra_info": "Hughes Watters and Askanase\n333 Clay\n29th Floor\nHouston, TX 77002\n713-759-0818",
+      "name": "Janet S Casciato-Northrup",
       "type": "Trustee"
-    }, 
+    },
     {
-      "attorneys": [], 
-      "date_terminated": null, 
-      "extra_info": "Office of the US Trustee\n515 Rusk Ave\nSte 3516\nHouston, TX 77002\n713-718-4650", 
-      "name": "US Trustee", 
+      "attorneys": [],
+      "date_terminated": null,
+      "extra_info": "Office of the US Trustee\n515 Rusk Ave\nSte 3516\nHouston, TX 77002\n713-718-4650",
+      "name": "US Trustee",
       "type": "U.S. Trustee"
     }
-  ], 
+  ],
   "referred_to_str": ""
 }

@@ -1,7 +1,7 @@
+import json
 from pprint import pprint
 
 import requests
-import json
 from lxml import etree, html
 
 

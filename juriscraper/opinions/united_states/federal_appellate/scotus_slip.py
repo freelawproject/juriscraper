@@ -5,10 +5,10 @@ Court Contact: https://www.supremecourt.gov/contact/contact_webmaster.aspx
 
 from datetime import date
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
@@ -34,13 +34,13 @@ class Site(OpinionSite):
     }
 
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.yy = self._get_current_term()
         self.back_scrape_iterable = list(range(6, int(self.yy) + 1))
         self.url_base = "https://www.supremecourt.gov/opinions"
         self.path_table = "//table[@class='table table-bordered']"
-        self.path_row = "%s/tr[position() > 1]" % self.path_table
+        self.path_row = f"{self.path_table}/tr[position() > 1]"
         self.precedential = "Published"
         self.court = "slipopinion"
         self.headers = False
@@ -66,17 +66,17 @@ class Site(OpinionSite):
     def _download(self, request_dict={}):
         if not self.test_mode_enabled():
             self.set_url()
-        html = super(Site, self)._download(request_dict)
+        html = super()._download(request_dict)
         self.extract_cases_from_html(html)
         return html
 
     def set_url(self):
-        self.url = "%s/%s/%s" % (self.url_base, self.court, self.yy)
+        self.url = f"{self.url_base}/{self.court}/{self.yy}"
 
     def set_table_headers(self, html):
         # Do nothing if table is missing
         if html.xpath(self.path_table):
-            path = "%s//th" % self.path_table
+            path = f"{self.path_table}//th"
             self.headers = [
                 cell.text_content().strip() for cell in html.xpath(path)
             ]
@@ -127,7 +127,7 @@ class Site(OpinionSite):
                 case[label] = text
                 href = cell.xpath("./a/@href")
                 if href:
-                    case[label + "_Url"] = href[0]
+                    case[f"{label}_Url"] = href[0]
             cell_index += 1
         return case
 
@@ -150,6 +150,6 @@ class Site(OpinionSite):
         return [self.precedential] * len(self.cases)
 
     def _download_backwards(self, d):
-        self.yy = str(d if d >= 10 else "0{}".format(d))
-        logger.info("Running backscraper for year: 20%s" % self.yy)
+        self.yy = str(d if d >= 10 else f"0{d}")
+        logger.info(f"Running backscraper for year: 20{self.yy}")
         self.html = self._download()

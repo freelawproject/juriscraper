@@ -7,15 +7,16 @@ Reviewer: mlr
 History:
     2014-09-03: Created by Jon Andersen
 """
-from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import clean_if_py3
 import time
 from datetime import date
+
+from juriscraper.lib.string_utils import clean_if_py3
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.url = "http://www.in.gov/judiciary/opinions/supreme.html"
         self.court_id = self.__module__
         self.my_precedential_statuses = []

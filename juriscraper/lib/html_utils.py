@@ -1,15 +1,13 @@
 #!/usr/bin/env python
-# encoding: utf-8
 import re
 import sys
+from urllib.parse import urlsplit, urlunsplit
 
 import lxml
 from lxml import etree, html
 from lxml.etree import XMLSyntaxError
-from lxml.html import fromstring, html5parser, tostring, HtmlElement
+from lxml.html import HtmlElement, fromstring, html5parser, tostring
 from lxml.html.clean import Cleaner
-from six import text_type
-from six.moves.urllib.parse import urlsplit, urlunsplit
 
 try:
     # Use cchardet for performance to detect the character encoding.
@@ -62,7 +60,7 @@ def get_table_column_text(
     path_base: bool = False,
     table_id: str = "",
 ) -> list:
-    table = "table[@id='%s']" % table_id if table_id else "table"
+    table = f"table[@id='{table_id}']" if table_id else "table"
     path_cell = "//%s//tr/td[%d]" % (table, cell_num)
     path = path_base + path_cell if path_base else path_cell
     return [cell.text_content().strip() for cell in html.xpath(path)]
@@ -74,7 +72,7 @@ def get_table_column_links(
     path_base: bool = False,
     table_id: str = "",
 ) -> list:
-    table = "table[@id='%s']" % table_id if table_id else "table"
+    table = f"table[@id='{table_id}']" if table_id else "table"
     path_cell = "//%s//tr/td[%d]//a/@href" % (table, cell_num)
     path = path_base + path_cell if path_base else path_cell
     return html.xpath(path)
@@ -187,7 +185,7 @@ def set_response_encoding(request):
             # HTTP headers. This way it is done before r.text is accessed
             # (which would do it with vanilla chardet). This is a big
             # performance boon, and can be removed once requests is upgraded
-            if isinstance(request.content, text_type):
+            if isinstance(request.content, str):
                 as_bytes = request.content.encode()
                 request.encoding = chardet.detect(as_bytes)["encoding"]
             else:
@@ -213,7 +211,7 @@ def clean_html(text: str) -> str:
     # attribute, but we remove it in all cases, as there's no downside to
     # removing it. This moves our encoding detection to chardet, rather than
     # lxml.
-    if isinstance(text, text_type):
+    if isinstance(text, str):
         text = re.sub(r"^\s*<\?xml\s+.*?\?>", "", text)
 
     # Fix invalid bytes in XML (http://stackoverflow.com/questions/8733233/)
