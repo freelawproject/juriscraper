@@ -18,6 +18,7 @@ repos:
        args: [--remove]
      - id: trailing-whitespace
        args: [--markdown-linebreak-ext=md]
+       exclude: ^tests/examples/pacer/nef/s3/.*\.txt$
 
   - repo: https://github.com/ikamensh/flynt/
     rev: '0.69'
