@@ -1,21 +1,22 @@
 # Change Log
 
 As of this writing, in late 2020, we have issued over 400 releases. The vast
-majority of these releases fix a scraper so it works better on a particular 
+majority of these releases fix a scraper so it works better on a particular
 court's website. When that's the case, we don't update the changelog, we simply
-do the change, and you can find it in the git log. 
+do the change, and you can find it in the git log.
 
-The changes below represent changes in ambition, goals, or interface. In other 
+The changes below represent changes in ambition, goals, or interface. In other
 words, they're the ones you'll want to watch, and the others are mostly noise.
 
 Releases are also tagged in git, if that's helpful.
 
 ## Current
 
-- 2.3.19, 2021-11-16 - Fix PA, IL. Update PACER to use new auth API. Update geonames cache with latest population data. Throw exception in Free Opinions report when IP address on blocklist.
+2.3.20, 2021-11-17 - Fixes CA10 scraper, major code refactor
 
 ## Past
 
+- 2.3.19, 2021-11-16 - Fix PA, IL. Update PACER to use new auth API. Update geonames cache with latest population data. Throw exception in Free Opinions report when IP address on blocklist.
 - 2.3.18, 2021-10-18 - Fix GA, CA9, CA10 Oral args
 - 2.3.17, 2021-08-17 - Add anonymizing function for PACER dockets
 - 2.3.16 - Yanked
@@ -32,22 +33,22 @@ Releases are also tagged in git, if that's helpful.
 - 2.3.5, 2021-03-05 - Fix pypi
 - 2.3.4, 2021-02-09 - Fix IA scraper
 - 2.3.3, 2020-11-24 - Fix remote selenium connection code
-- 2.3.2, 2020-11-06 - Remove html_unescape helper method. Replace with calls 
+- 2.3.2, 2020-11-06 - Remove html_unescape helper method. Replace with calls
   directly to unescape. This fixes [#354](https://github.com/freelawproject/juriscraper/issues/354).
 - 2.3.1, 2020-11-06 - Fix for connection to Selenium via Firefox
-- 2.3.0, 2020-11-06 - Big selenium upgrade, removes support for phantomjs, and 
-  moves exclusively to using Mozilla's `geckodriver`. `geckodriver` can be 
-  accessed either locally or via a remote connection. See README for details on 
-  how to set the correct environment variables for your system. 
-  
-    PhantomJS has not been supported for several years. Though it has served us 
-    well, the writing is on the wall that, like so many other once-useful 
+- 2.3.0, 2020-11-06 - Big selenium upgrade, removes support for phantomjs, and
+  moves exclusively to using Mozilla's `geckodriver`. `geckodriver` can be
+  accessed either locally or via a remote connection. See README for details on
+  how to set the correct environment variables for your system.
+
+    PhantomJS has not been supported for several years. Though it has served us
+    well, the writing is on the wall that, like so many other once-useful
     technologies, it too had to be abandoned, only to be replaced by
-    another tool. A tool that will be different in many ways, yet the same in 
-    its inevitable abandonment and mortality. Long live PhantomJS: Born a 
+    another tool. A tool that will be different in many ways, yet the same in
+    its inevitable abandonment and mortality. Long live PhantomJS: Born a
     humble ghost; dying an immortal specter.
 - 2.2.0, 2020-11-08 - Remove `_get_adapter_instance` method. It is unused, was
-  a protected method, and causes many deprecation warnings in py3. 
+  a protected method, and causes many deprecation warnings in py3.
 - 2.1.* - Removes support for deprecated phantomjs location; it had been deprecated for two years.
 - 2.0.* - Adds support for Python 3.8 and supports Python 3, exclusively.  Begins testing to Github workflows and remove CircleCI.
 - 1.28.* - Changes the API for the InternetArchive parser so that it aligns with the rest of the parsers. Its constructor now requires a court_id value.

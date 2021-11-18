@@ -2,16 +2,16 @@ import codecs
 import os
 import unittest
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 from setuptools.command.install import install
 
-VERSION = "2.3.19"
+VERSION = "2.3.20"
 AUTHOR = "Free Law Project"
 EMAIL = "info@free.law"
 HERE = os.path.abspath(os.path.dirname(__file__))
 
 
-reqs_path = HERE + "/requirements.txt"
+reqs_path = f"{HERE}/requirements.txt"
 with open(reqs_path) as reqs_file:
     reqs = reqs_file.read().splitlines()
 
