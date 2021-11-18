@@ -28,8 +28,10 @@ class Site(OpinionSite):
 
     # I'm certain this can be done more professionally,
     # but I (arderyp) am not gifted at the art of regex
-    # regex = r"(?:No.\s)?(\d+)\s+(\w+)(?:\s+)?(\d+M?\.?)\s*((Nos?\.?\s+)?((\w{5,8}\.?)(((\s+\&|\,)\s+\w{5,8})+)?))\.?(\s+)?(.*)"  ### debug
-    regex = r"(\d+\s+\w+\s+\d+)(?:\.?,?\s*Nos?\.?\s*)((\w{5,8})|(\w{5,8}\s&\s\w{5,8}))(?:(\.|,)\s+)(.*)"
+    # regex = r"(?:No.\s)?(\d+)\s+(\w+)(?:\s+)?(\d+M?\.?)\s*((Nos?\.?\s+)?((\w{5,8}\.?)(((\s+\&|\,)\s+\w{5,8})+)?))\.?(\s+)?(.*)"   ### debug
+    regex = r"(\d+\s+\w+\s+\d+)(?:\.?,?\s*Nos?\.?\s*)(\w{5,8}\s&\s\w{5,8}|\w{5,8})(?:\.?,?\s+)(.*)"
+    # Regex for opinions with 2 cases
+    regex_second = r"(.*)(?:,\s*No\.\s*)(\w{5,8})(?:,?\s*)(.*)"  ### debug
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -193,48 +195,78 @@ class Site(OpinionSite):
 
     @classmethod
     def _extract_docket_from_text(cls, text):
+        """Extracts docket from opinion link
+        Also checks for multiple dockets in the same link file
+        One docket:
+            - 2021 CO 36 No.20SA103, San Isabel Electric v. Public Utilities Commission
+        Two dockets:
+            - 2021 CO 65 No. 20SC261, Harvey v. Centura, No. 20SC784, Manzanares v. Centura
+            - 2021 CO 43, Nos. 20SC365 & 20SC367, Board of Country Commissioners v. Colorado Department of Public Health and Environment
+        """
         text = text.strip()
         try:
-            # match = re.match(cls.regex, text).group(6)  ### debug
             match = re.match(cls.regex, text).group(2)
-            # TODO: Check for multiple dockets and cases name in the same file
-            # Do a separete regex to seach for dockets
-            # Ex: 2021 CO 65 No. 20SC261, Harvey v. Centura, No. 20SC784, Manzanares v. Centura
-            # Ex: 2021 CO 43, Nos. 20SC365 & 20SC367, Board of Country Commissioners v. Colorado Department of Public Health and Environment
         except:
             raise InsanityException(f'Unable to parse docket from "{text}"')
+        # Optional second docket inside case name
+        try:
+            match_second = re.match(cls.regex_second, text).group(2)
+            match = f"{match} & {match_second}"
+        except:
+            pass
         dockets_raw = match.rstrip(".").replace("&", " ").replace(",", " ")
         dockets = dockets_raw.split()
         return ", ".join(dockets)
 
     @classmethod
     def _extract_name_from_text(cls, text):
+        """Extracts case name from opinion link
+        Also checks for multiple cases names in the same link file
+        One case name:
+            - 2021 CO 36 No.20SA103, San Isabel Electric v. Public Utilities Commission
+        Two cases names:
+            - 2021 CO 65 No. 20SC261, Harvey v. Centura, No. 20SC784, Manzanares v. Centura
+            - 2021 CO 43, Nos. 20SC365 & 20SC367, Board of Country Commissioners v. Colorado Department of Public Health and Environment
+        """
         text = text.strip()
         try:
-            # breakpoint()   ### debug
-            # match = re.match(cls.regex, text).group(12)  ### debug
-            match = re.match(cls.regex, text).group(6)
-            # TODO: Check for multiple dockets and cases name in the same file
-            # Do a separete regex to seach for case names
-            # Ex: 2021 CO 65 No. 20SC261, Harvey v. Centura, No. 20SC784, Manzanares v. Centura
-            # Ex: 2021 CO 43, Nos. 20SC365 & 20SC367, Board of Country Commissioners v. Colorado Department of Public Health and Environment
+            match = re.match(cls.regex, text).group(3)
         except:
             raise InsanityException(f'Unable to parse case name from "{text}"')
-        return match.strip().rstrip(".")
+        # Optional second case name
+        try:
+            first_name = re.match(cls.regex_second, match).group(1)
+            second_name = re.match(cls.regex_second, match).group(3)
+            match = f"{first_name.strip()}, {second_name.strip()}"
+        except:
+            pass
+        return match.strip()
 
     @classmethod
     def _extract_citation_from_text(cls, text):
-        # TODO: Fix citation extraction
-        # fails because of ', ' at the end or name extraction fix
-        # Do a separete regex to seach for citations
-        # Ex. neutral_citations: "2021 CO 43, No"
-        # Ex. neutral_citations: "2021 CO 36 No"
-        return text.lstrip("No.").split(".")[0].strip()
+        """Extracts citation from opinion link
+        Examples:
+            - 2021 CO 43, Nos.
+            - 2021 CO 36 No.
+            - 2017 CO 101. No.
+        """
+        text = text.strip()
+        try:
+            match = re.match(cls.regex, text).group(1)
+        except:
+            raise InsanityException(f'Unable to parse citation from "{text}"')
+        return match.strip()
 
     @classmethod
     def _extract_text_from_anchor(cls, anchor):
         text = anchor.xpath("text()")[0]
-        text = text.replace("Nos.", "No.")
+        # TODO: Run tests for Colorado Appelate Court
+        # Also, check if this change doesn't affect is_this_a_blank_page()
+        # Ex. 2021 CO 55 No. 21SA125, In re Title, Ballot Title & Submission Clause for 2021-2022 #16
+        # https://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions/View/ArticleId/2374/2021-CO-55-No-21SA125-In-re-Title-Ballot-Title-Submission-Clause-for-2021-2022-16
+        # Ex. 2021 CO 60 No.21SA3, In re People v. Sprinkle
+        # https://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions/View/ArticleId/2383/2021-CO-60-No-21SA3-In-re-People-v-Sprinkle
+        # text = text.replace("Nos.", "No.")   ### debug
         if "No." in text and "No. " not in text:
             text = text.replace("No.", "No. ")
         return text
@@ -250,6 +282,11 @@ class Site(OpinionSite):
         the name is not displayed in plain text format. These return values
         are used as backups in case the original source data is non-ideal.
         """
+        # TODO: Check why is failing with these links:
+        # Ex. 2021 CO 55 No. 21SA125, In re Title, Ballot Title & Submission Clause for 2021-2022 #16
+        # https://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions/View/ArticleId/2374/2021-CO-55-No-21SA125-In-re-Title-Ballot-Title-Submission-Clause-for-2021-2022-16
+        # Ex. 2021 CO 60 No.21SA3, In re People v. Sprinkle
+        # https://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions/View/ArticleId/2383/2021-CO-60-No-21SA3-In-re-People-v-Sprinkle
         html_tree = self._get_html_tree_by_url(url, self.request_dict)
         href = html_tree.xpath("//h2/a[contains(@href, '.pdf')]/@href")
         if href:
@@ -326,6 +363,11 @@ class Site(OpinionSite):
         whose text is just the date string, a thing they do
         often for whatever reason.
         """
+        # TODO: check why it's failing with these links:
+        # Ex. 2021 CO 55 No. 21SA125, In re Title, Ballot Title & Submission Clause for 2021-2022 #16
+        # https://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions/View/ArticleId/2374/2021-CO-55-No-21SA125-In-re-Title-Ballot-Title-Submission-Clause-for-2021-2022-16
+        # Ex. 2021 CO 60 No.21SA3, In re People v. Sprinkle
+        # https://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions/View/ArticleId/2383/2021-CO-60-No-21SA3-In-re-People-v-Sprinkle
         anchor_count = len(anchors)
         if not anchor_count:
             return True
@@ -334,14 +376,17 @@ class Site(OpinionSite):
             return self.is_this_skippable_date_anchor(text)
 
     def is_this_skippable_date_anchor(self, text):
-        """Return true is link text is parsible date"""
+        """Return true if link text is parsible date
+        Also checks if text includes alternate names for links to
+        COBAR Opinion Announcements
+        Ex: Colorado Supreme Court Announcements 9.27.2021
+        """
         try:
             convert_date_string(text)
             return True
         except:
             pass
         # Alternate names for links to COBAR Opinion Announcements
-        # Ex: Colorado Supreme Court Announcements 9.27.2021
         announcements = [
             "colorado supreme court announcements",
             "supreme court announcements",
