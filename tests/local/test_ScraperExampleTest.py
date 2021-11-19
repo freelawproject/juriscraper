@@ -19,7 +19,7 @@ from juriscraper.lib.test_utils import (
 
 class ScraperExampleTest(unittest.TestCase):
     def setUp(self):
-        self.maxDiff = 1000
+        self.maxDiff = None
         # Disable logging
         logging.disable(logging.CRITICAL)
 

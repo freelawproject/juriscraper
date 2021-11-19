@@ -17,7 +17,10 @@ from lxml import html
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import convert_date_string
+<<<<<<< HEAD
 from juriscraper.OpinionSite import OpinionSite
+=======
+>>>>>>> dda7af83... Added exclussion of empty opinion pages and variant xpath to find PDF files
 
 
 class Site(OpinionSite):
@@ -25,13 +28,10 @@ class Site(OpinionSite):
     parent_summary_block_path = (
         'parent::p/following-sibling::div[@class="Normal"][1]'
     )
-
-    # I'm certain this can be done more professionally,
-    # but I (arderyp) am not gifted at the art of regex
-    # regex = r"(?:No.\s)?(\d+)\s+(\w+)(?:\s+)?(\d+M?\.?)\s*((Nos?\.?\s+)?((\w{5,8}\.?)(((\s+\&|\,)\s+\w{5,8})+)?))\.?(\s+)?(.*)"   ### debug
-    regex = r"(\d+\s+\w+\s+\d+)(?:\.?,?\s*Nos?\.?\s*)(\w{5,8}\s&\s\w{5,8}|\w{5,8})(?:\.?,?\s+)(.*)"
+    # Regex to extract opinion's data: citation, docket and case name
+    regex = r"(\d+\s+\w+\s+\d+|\d+\s?\w{3}\s?\d+)(?:\.?,?\s*Nos?\.?\s*)(\w{5,8}\s&\s\w{5,8}|\w{5,8}\sand\s\w{5,8}|\w{5,8})(?:\.?,?\s+)(.*)"
     # Regex for opinions with 2 cases
-    regex_second = r"(.*)(?:,\s*No\.\s*)(\w{5,8})(?:,?\s*)(.*)"  ### debug
+    regex_second = r"(.*)(?:,\s*No\.\s*)(\w{5,8})(?:,?\s*)(.*)"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -178,6 +178,17 @@ class Site(OpinionSite):
                 url = alt_url if alt_url else url
                 name = alt_name if alt_name else name
 
+            # In some weird cases, pages are empty and don't include any links
+            # to PDF's. Skip them
+            # Examples:
+            # 2021 CO 55 No. 21SA125, In re Title, Ballot Title & Submission Clause for 2021-2022 #16
+            # https://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions/View/ArticleId/2374/2021-CO-55-No-21SA125-In-re-Title-Ballot-Title-Submission-Clause-for-2021-2022-16
+            # 2021 CO 60 No.21SA3, In re People v. Sprinkle
+            # https://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions/View/ArticleId/2383/2021-CO-60-No-21SA3-In-re-People-v-Sprinkle
+            if not self.is_url_pdf(url):
+                logger.info(f"Empty page: {url}")
+                continue
+
             self.cases.append(
                 {
                     "url": url,
@@ -198,15 +209,21 @@ class Site(OpinionSite):
         """Extracts docket from opinion link
         Also checks for multiple dockets in the same link file
         One docket:
-            - 2021 CO 36 No.20SA103, San Isabel Electric v. Public Utilities Commission
+            - 2021 CO 27 No.19SC986, Dep't of Nat. Res. v. 5 Star Feedlot, Inc.
+            - 2020 CO 89 No. 19SC354 Denver Health v. Houchin
+            - 2019 CO 30. No. 16SC783. Gow v. People.
+            - 2016 COA176. No. 14CA1321. Hawg Tools, LLC v. Newsco International Energy Services, Inc.
         Two dockets:
             - 2021 CO 65 No. 20SC261, Harvey v. Centura, No. 20SC784, Manzanares v. Centura
             - 2021 CO 43, Nos. 20SC365 & 20SC367, Board of Country Commissioners v. Colorado Department of Public Health and Environment
+            - 2021 CO 10 No. 20SA262, In re People v. Subjack & No. 20SA283, In re People v. Lynch
+            - 2019 CO 80 Nos. 18SC34 and 18SC35, People v. Iannicelli, and People v. Brandt
         """
         text = text.strip()
         try:
             match = re.match(cls.regex, text).group(2)
         except:
+            logger.error(f'Unable to parse docket from "{text}"')
             raise InsanityException(f'Unable to parse docket from "{text}"')
         # Optional second docket inside case name
         try:
@@ -214,7 +231,9 @@ class Site(OpinionSite):
             match = f"{match} & {match_second}"
         except:
             pass
-        dockets_raw = match.rstrip(".").replace("&", " ").replace(",", " ")
+        dockets_raw = (
+            match.replace("&", " ").replace("and", " ").replace(",", " ")
+        )
         dockets = dockets_raw.split()
         return ", ".join(dockets)
 
@@ -223,21 +242,29 @@ class Site(OpinionSite):
         """Extracts case name from opinion link
         Also checks for multiple cases names in the same link file
         One case name:
-            - 2021 CO 36 No.20SA103, San Isabel Electric v. Public Utilities Commission
+            - 2021 CO 27 No.19SC986, Dep't of Nat. Res. v. 5 Star Feedlot, Inc.
+            - 2020 CO 89 No. 19SC354 Denver Health v. Houchin
+            - 2019 CO 30. No. 16SC783. Gow v. People.
+            - 2016 COA176. No. 14CA1321. Hawg Tools, LLC v. Newsco International Energy Services, Inc.
         Two cases names:
             - 2021 CO 65 No. 20SC261, Harvey v. Centura, No. 20SC784, Manzanares v. Centura
             - 2021 CO 43, Nos. 20SC365 & 20SC367, Board of Country Commissioners v. Colorado Department of Public Health and Environment
+            - 2021 CO 10 No. 20SA262, In re People v. Subjack & No. 20SA283, In re People v. Lynch
+            - 2019 CO 80 Nos. 18SC34 and 18SC35, People v. Iannicelli, and People v. Brandt
         """
         text = text.strip()
         try:
             match = re.match(cls.regex, text).group(3)
         except:
+            logger.error(f'Unable to parse docket from "{text}"')
             raise InsanityException(f'Unable to parse case name from "{text}"')
         # Optional second case name
         try:
             first_name = re.match(cls.regex_second, match).group(1)
             second_name = re.match(cls.regex_second, match).group(3)
-            match = f"{first_name.strip()}, {second_name.strip()}"
+            first_name = first_name.strip().rstrip("&")
+            second_name = second_name.strip()
+            match = f"{first_name} and {second_name}"
         except:
             pass
         return match.strip()
@@ -247,28 +274,20 @@ class Site(OpinionSite):
         """Extracts citation from opinion link
         Examples:
             - 2021 CO 43, Nos.
-            - 2021 CO 36 No.
+            - 2020 CO 83 No.
             - 2017 CO 101. No.
         """
         text = text.strip()
         try:
             match = re.match(cls.regex, text).group(1)
         except:
+            logger.error(f'Unable to parse citation from "{text}"')
             raise InsanityException(f'Unable to parse citation from "{text}"')
         return match.strip()
 
     @classmethod
     def _extract_text_from_anchor(cls, anchor):
         text = anchor.xpath("text()")[0]
-        # TODO: Run tests for Colorado Appelate Court
-        # Also, check if this change doesn't affect is_this_a_blank_page()
-        # Ex. 2021 CO 55 No. 21SA125, In re Title, Ballot Title & Submission Clause for 2021-2022 #16
-        # https://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions/View/ArticleId/2374/2021-CO-55-No-21SA125-In-re-Title-Ballot-Title-Submission-Clause-for-2021-2022-16
-        # Ex. 2021 CO 60 No.21SA3, In re People v. Sprinkle
-        # https://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions/View/ArticleId/2383/2021-CO-60-No-21SA3-In-re-People-v-Sprinkle
-        # text = text.replace("Nos.", "No.")   ### debug
-        if "No." in text and "No. " not in text:
-            text = text.replace("No.", "No. ")
         return text
 
     @classmethod
@@ -278,17 +297,16 @@ class Site(OpinionSite):
     def extract_pdf_url_and_name_from_resource(self, url):
         """Scrape the resource for a direct link to PDF or a backup case name
 
-        A resource can only have one or the other.  If the PDF is embedded,
+        A resource can only have one or the other. If the PDF is embedded,
         the name is not displayed in plain text format. These return values
         are used as backups in case the original source data is non-ideal.
         """
-        # TODO: Check why is failing with these links:
-        # Ex. 2021 CO 55 No. 21SA125, In re Title, Ballot Title & Submission Clause for 2021-2022 #16
-        # https://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions/View/ArticleId/2374/2021-CO-55-No-21SA125-In-re-Title-Ballot-Title-Submission-Clause-for-2021-2022-16
-        # Ex. 2021 CO 60 No.21SA3, In re People v. Sprinkle
-        # https://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions/View/ArticleId/2383/2021-CO-60-No-21SA3-In-re-People-v-Sprinkle
         html_tree = self._get_html_tree_by_url(url, self.request_dict)
-        href = html_tree.xpath("//h2/a[contains(@href, '.pdf')]/@href")
+        path1 = "//h2/a[contains(@href, '.pdf')]/@href"
+        path2 = (
+            "//div[@class='contentmain1']//a[contains(@href, '.pdf')]/@href"
+        )
+        href = html_tree.xpath(f"{path1} | {path2}")
         if href:
             return href[0], False
         path1 = '//p/strong[starts-with(text(), "Plaintiff-Appellee:")]/parent::p/text()'
@@ -313,7 +331,6 @@ class Site(OpinionSite):
         using a new html path, which should be added to the path_patterns list below.
         """
         nature = ""
-
         # The order of this list matters.  Generally, put
         # the more complex paths as the top
         path_patterns = [
@@ -363,11 +380,6 @@ class Site(OpinionSite):
         whose text is just the date string, a thing they do
         often for whatever reason.
         """
-        # TODO: check why it's failing with these links:
-        # Ex. 2021 CO 55 No. 21SA125, In re Title, Ballot Title & Submission Clause for 2021-2022 #16
-        # https://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions/View/ArticleId/2374/2021-CO-55-No-21SA125-In-re-Title-Ballot-Title-Submission-Clause-for-2021-2022-16
-        # Ex. 2021 CO 60 No.21SA3, In re People v. Sprinkle
-        # https://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions/View/ArticleId/2383/2021-CO-60-No-21SA3-In-re-People-v-Sprinkle
         anchor_count = len(anchors)
         if not anchor_count:
             return True
