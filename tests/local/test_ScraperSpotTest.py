@@ -182,6 +182,18 @@ class ScraperSpotTest(unittest.TestCase):
             "No. 2016 COA 137. 15CA0620. Edwards v. Colorado Department of Revenue, Motor Vehicle Division. ": {
                 "docket": "15CA0620",
                 "name": "Edwards v. Colorado Department of Revenue, Motor Vehicle Division",
+            },
+            "2019 CO 80 Nos. 18SC34 and 18SC35, People v. Iannicelli, and People v. Brandt": {
+                "docket": "18SC34, 18SC35",
+                "name": "People v. Iannicelli, and People v. Brandt",
+            },
+            "2021 CO 10 No. 20SA262, In re People v. Subjack & No. 20SA283, In re People v. Lynch": {
+                "docket": "20SA262, 20SA283",
+                "name": "In re People v. Subjack and In re People v. Lynch",
+            },
+            "2021 CO 65 No. 20SC261, Harvey v. Centura, No. 20SC784, Manzanares v. Centura": {
+                "docket": "20SC261, 20SC784",
+                "name": "Harvey v. Centura and Manzanares v. Centura",
             }
             #'': {
             #    'docket': '',

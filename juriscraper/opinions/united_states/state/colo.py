@@ -17,10 +17,7 @@ from lxml import html
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import convert_date_string
-<<<<<<< HEAD
 from juriscraper.OpinionSite import OpinionSite
-=======
->>>>>>> dda7af83... Added exclussion of empty opinion pages and variant xpath to find PDF files
 
 
 class Site(OpinionSite):
@@ -29,9 +26,9 @@ class Site(OpinionSite):
         'parent::p/following-sibling::div[@class="Normal"][1]'
     )
     # Regex to extract opinion's data: citation, docket and case name
-    regex = r"(\d+\s+\w+\s+\d+|\d+\s?\w{3}\s?\d+)(?:\.?,?\s*Nos?\.?\s*)(\w{5,8}\s&\s\w{5,8}|\w{5,8}\sand\s\w{5,8}|\w{5,8})(?:\.?,?\s+)(.*)"
+    regex = r"(?:No\.\s*|)(\d+\s?\w{3}\s?\d+|\d+\s+\w+\s+\d+)(?:[.,]\s+|\.?,?\s*Nos?\.\s*)((?:\w{5,8},\s+)*\w{5,8}\s+(?:[aA][nN][dD]|&)\s+\w{5,8}|\w{5,8})(?:[.,]\s*|\s+)(.*)"
     # Regex for opinions with 2 cases
-    regex_second = r"(.*)(?:,\s*No\.\s*)(\w{5,8})(?:,?\s*)(.*)"
+    regex_second = r"(.*)(?:\s*[,&]\s*No\.\s*)(\w{5,8})(?:,\s*)(.*)"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -178,15 +175,15 @@ class Site(OpinionSite):
                 url = alt_url if alt_url else url
                 name = alt_name if alt_name else name
 
-            # In some weird cases, pages are empty and don't include any links
-            # to PDF's. Skip them
+            # In some weird cases, subpages are empty and don't include any
+            # link to PDF files. Skip them
             # Examples:
             # 2021 CO 55 No. 21SA125, In re Title, Ballot Title & Submission Clause for 2021-2022 #16
             # https://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions/View/ArticleId/2374/2021-CO-55-No-21SA125-In-re-Title-Ballot-Title-Submission-Clause-for-2021-2022-16
             # 2021 CO 60 No.21SA3, In re People v. Sprinkle
             # https://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions/View/ArticleId/2383/2021-CO-60-No-21SA3-In-re-People-v-Sprinkle
             if not self.is_url_pdf(url):
-                logger.info(f"Empty page: {url}")
+                logger.info(f"Empty sub-page: {url}")
                 continue
 
             self.cases.append(
@@ -232,7 +229,10 @@ class Site(OpinionSite):
         except:
             pass
         dockets_raw = (
-            match.replace("&", " ").replace("and", " ").replace(",", " ")
+            match.replace(" & ", " ")
+            .replace(" AND ", " ")
+            .replace(" and ", " ")
+            .replace(",", " ")
         )
         dockets = dockets_raw.split()
         return ", ".join(dockets)
@@ -246,7 +246,7 @@ class Site(OpinionSite):
             - 2020 CO 89 No. 19SC354 Denver Health v. Houchin
             - 2019 CO 30. No. 16SC783. Gow v. People.
             - 2016 COA176. No. 14CA1321. Hawg Tools, LLC v. Newsco International Energy Services, Inc.
-        Two cases names:
+        Two case names:
             - 2021 CO 65 No. 20SC261, Harvey v. Centura, No. 20SC784, Manzanares v. Centura
             - 2021 CO 43, Nos. 20SC365 & 20SC367, Board of Country Commissioners v. Colorado Department of Public Health and Environment
             - 2021 CO 10 No. 20SA262, In re People v. Subjack & No. 20SA283, In re People v. Lynch
@@ -267,7 +267,7 @@ class Site(OpinionSite):
             match = f"{first_name} and {second_name}"
         except:
             pass
-        return match.strip()
+        return match.strip().rstrip(".")
 
     @classmethod
     def _extract_citation_from_text(cls, text):
@@ -276,6 +276,7 @@ class Site(OpinionSite):
             - 2021 CO 43, Nos.
             - 2020 CO 83 No.
             - 2017 CO 101. No.
+            - 2016 COA176. No.
         """
         text = text.strip()
         try:
