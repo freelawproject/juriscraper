@@ -54,6 +54,8 @@ class Site(OpinionSite):
         #
         # PLEASE ALSO NOTE: coloctapp_example_3.html is supposed to have 0
         # results.  It is a blank page test case covering is_this_a_blank_page().
+        # NOTE: colo_example_2.html is supposed to have 0 results. It's a page
+        # with the announcement link text validated in is_this_skippable_date_anchor()
         if self.test_mode_enabled():
             date_string = landing_page_html.xpath("//h3")[0].text_content()
             date_obj = convert_date_string(date_string)
@@ -70,7 +72,7 @@ class Site(OpinionSite):
             # Loop over sub-pages
             hrefs = html_l.xpath(self.base_path)
             for ahref in hrefs:
-                date_string = ahref.xpath("./text()")[0]
+                date_string = ahref.xpath("./text()")[0].strip()
                 url = ahref.xpath("./@href")[0]
                 date_obj = convert_date_string(date_string)
                 logger.info(f"Getting sub-url: {url}")
@@ -229,9 +231,9 @@ class Site(OpinionSite):
         except:
             pass
         dockets_raw = (
-            match.replace(" & ", " ")
-            .replace(" AND ", " ")
-            .replace(" and ", " ")
+            match.replace("&", " ")
+            .replace("AND", " ")
+            .replace("and", " ")
             .replace(",", " ")
         )
         dockets = dockets_raw.split()
@@ -264,6 +266,7 @@ class Site(OpinionSite):
             second_name = re.match(cls.regex_second, match).group(3)
             first_name = first_name.strip().rstrip("&")
             second_name = second_name.strip()
+            # Cases' names are joined with 'and'
             match = f"{first_name} and {second_name}"
         except:
             pass
@@ -399,14 +402,14 @@ class Site(OpinionSite):
             return True
         except:
             pass
-        # Alternate names for links to COBAR Opinion Announcements
-        announcements = [
+        announcement_texts = [
             "colorado supreme court announcements",
             "supreme court announcements",
             "court announcements",
         ]
-        for announ_link in announcements:
-            if announ_link in text.lower():
+        # Alternate names for links to COBAR Opinion Announcements
+        for announ_text in announcement_texts:
+            if announ_text in text.lower():
                 return True
         return False
 
