@@ -1,78 +1,61 @@
-from juriscraper.lib.string_utils import convert_date_string, titlecase
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.AbstractSite import logger
+from juriscraper.lib.html_utils import (
+    get_row_column_links,
+    get_row_column_text,
+)
+from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "http://www.cafc.uscourts.gov/opinions-orders?field_origin_value=All&field_report_type_value=All"
+        self.url = "https://cafc.uscourts.gov/home/case-information/opinions-orders/?field_origin_value=All&field_report_type_value=All"
         self.back_scrape_iterable = list(range(1, 700))
         self.court_id = self.__module__
 
-    def _download(self, request_dict={}):
-        html = super()._download(request_dict)
-        self._extract_cases_from_html(html)
-        return html
+    def _process_html(self):
+        """Process HTML
+        Iterate over each table row.
+        If a table row does not have a link, skip it
 
-    def _extract_cases_from_html(self, html):
-        """Build list of data dictionaries, one dictionary per case (table row)."""
-        self.cases = []
+        Return: None
+        """
+        for row in self.html.xpath("//table/tbody/tr"):
+            try:
+                url = get_row_column_links(row, 4)
+            except IndexError:
+                continue
 
-        for row in html.xpath("//table/tbody/tr"):
-            date, docket, url, name, status = False, False, False, False, False
+            date = get_row_column_text(row, 1)
+            docket = get_row_column_text(row, 2)
+            name = get_row_column_text(row, 4)
+            name = titlecase(name.split("[")[0].strip())
+            status_raw = get_row_column_text(row, 5)
+            status_raw = status_raw.lower()
+            if "nonprecedential" in status_raw:
+                status = "Unpublished"
+            elif "precedential" in status_raw:
+                status = "Published"
+            else:
+                status = "Unknown"
 
-            date = convert_date_string(row.xpath("td[1]/text()")[0])
-            docket = row.xpath("td[2]/text()")[0].strip()
-
-            url_raw = row.xpath("td[4]/a/@href")
-            if url_raw:
-                url = url_raw[0]
-
-            name_raw = row.xpath("td[4]/a/text()")
-            if name_raw:
-                name = titlecase(name_raw[0].split("[")[0].strip())
-
-            status_raw = row.xpath("td[5]/text()")
-            if status_raw:
-                status_raw = status_raw[0].strip().lower()
-                if "nonprecedential" in status_raw.lower():
-                    status = "Unpublished"
-                elif "precedential" in status_raw.lower():
-                    status = "Published"
-                else:
-                    status = "Unknown"
-
-            if date and docket and url and name and status:
-                self.cases.append(
-                    {
-                        "date": date,
-                        "docket": docket,
-                        "url": url,
-                        "name": name,
-                        "status": status,
-                    }
-                )
-
-    def _get_case_names(self):
-        return [case["name"] for case in self.cases]
-
-    def _get_download_urls(self):
-        return list(self.html.xpath("//table//tr/td[4]/a/@href"))
-
-    def _get_case_dates(self):
-        return [case["date"] for case in self.cases]
-
-    def _get_docket_numbers(self):
-        return [case["docket"] for case in self.cases]
-
-    def _get_precedential_statuses(self):
-        return [case["status"] for case in self.cases]
+            self.cases.append(
+                {
+                    "date": date,
+                    "docket": docket,
+                    "url": url,
+                    "name": name,
+                    "status": status,
+                }
+            )
 
     def _download_backwards(self, n):
         self.url = f"http://www.cafc.uscourts.gov/opinions-orders?page={n}"
-
+        logger.info(f"Backscraping for page {n}: {self.url}")
         self.html = self._download()
         if self.html is not None:
             # Setting status is important because it prevents the download
             # function from being run a second time by the parse method.
             self.status = 200
+            self._process_html()
