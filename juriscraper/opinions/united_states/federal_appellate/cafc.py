@@ -21,7 +21,7 @@ class Site(OpinionSite):
         for row in html.xpath("//table/tbody/tr"):
             date, docket, url, name, status = False, False, False, False, False
 
-            date = convert_date_string(row.xpath("td[1]/span/text()")[0])
+            date = convert_date_string(row.xpath("td[1]/text()")[0])
             docket = row.xpath("td[2]/text()")[0].strip()
 
             url_raw = row.xpath("td[4]/a/@href")
