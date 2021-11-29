@@ -1,37 +1,48 @@
+from urllib.parse import urlparse
+
 from juriscraper.AbstractSite import logger
-from juriscraper.lib.html_utils import (
-    get_row_column_links,
-    get_row_column_text,
-)
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import convert_date_string, titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "https://cafc.uscourts.gov/home/case-information/opinions-orders/?field_origin_value=All&field_report_type_value=All"
-        self.back_scrape_iterable = list(range(1, 700))
+        self.url = "https://cafc.uscourts.gov/category/opinion-order/feed/"
         self.court_id = self.__module__
 
     def _process_html(self):
         """Process HTML
-        Iterate over each table row.
-        If a table row does not have a link, skip it
+        Iterate over each item in the RSS feed
 
         Return: None
         """
-        for row in self.html.xpath("//table/tbody/tr"):
-            try:
-                url = get_row_column_links(row, 4)
-            except IndexError:
-                continue
+        for item in self.html.xpath("//item"):
+            # Expected <title> content:
+            # <title>21-1358: LEVARIO v. MCDONOUGH [OPINION], Nonprecedential</title>
+            title = item.xpath("./title/text()")[0]
+            # Expected <content:encoded> content:
+            # <content:encoded><![CDATA[<p>Opinions/Orders posted: </p><p><a href="/opinions-orders/21-1358.opinion.10-12-2021_1847104.pdf">LEVARIO v. MCDONOUGH [OPINION](pdf)</a> <br />Appeal Number: 21-1358 <br />Origin: CAVC <br />Nonprecedential </p><p>To see more opinions and orders, follow this link: <a href="/home/case-information/opinions-orders/">Opinions and Orders</a>.</p>]]></content:encoded>
+            p_element = item.xpath(
+                "./encoded",
+                namespaces={
+                    "content": "http://purl.org/rss/1.0/modules/content/"
+                },
+            )[0]
+            urls_raw = p_element.xpath("./p/a/@href")
+            for url_raw in urls_raw:
+                parsed = urlparse(url_raw)
+                if parsed.path.lower().endswith(".pdf"):
+                    url = url_raw
+                    break
+            # Expected <pubDate> content:
+            # <pubDate>Tue, 12 Oct 2021 15:00:23 +0000</pubDate>
+            pubdate = item.xpath("./pubdate/text()")[0]
 
-            date = get_row_column_text(row, 1)
-            docket = get_row_column_text(row, 2)
-            name = get_row_column_text(row, 4)
-            name = titlecase(name.split("[")[0].strip())
-            status_raw = get_row_column_text(row, 5)
+            docket = title.split(":")[0].strip()
+            title = title.split(":")[1].strip()
+            name = titlecase(title.split("[")[0].strip())
+            status_raw = title.split("],")[1].strip()
             status_raw = status_raw.lower()
             if "nonprecedential" in status_raw:
                 status = "Unpublished"
@@ -42,20 +53,10 @@ class Site(OpinionSiteLinear):
 
             self.cases.append(
                 {
-                    "date": date,
+                    "date": pubdate,
                     "docket": docket,
                     "url": url,
                     "name": name,
                     "status": status,
                 }
             )
-
-    def _download_backwards(self, n):
-        self.url = f"http://www.cafc.uscourts.gov/opinions-orders?page={n}"
-        logger.info(f"Backscraping for page {n}: {self.url}")
-        self.html = self._download()
-        if self.html is not None:
-            # Setting status is important because it prevents the download
-            # function from being run a second time by the parse method.
-            self.status = 200
-            self._process_html()
