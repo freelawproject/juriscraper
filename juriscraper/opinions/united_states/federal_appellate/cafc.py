@@ -1,8 +1,8 @@
 import feedparser
 from lxml.html import fromstring
 
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
