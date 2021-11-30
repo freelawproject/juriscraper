@@ -1,78 +1,47 @@
-from juriscraper.lib.string_utils import convert_date_string, titlecase
-from juriscraper.OpinionSite import OpinionSite
+import feedparser
+from lxml.html import fromstring
+
+from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "http://www.cafc.uscourts.gov/opinions-orders?field_origin_value=All&field_report_type_value=All"
-        self.back_scrape_iterable = list(range(1, 700))
+        self.url = "https://cafc.uscourts.gov/category/opinion-order/feed/"
         self.court_id = self.__module__
 
-    def _download(self, request_dict={}):
-        html = super()._download(request_dict)
-        self._extract_cases_from_html(html)
-        return html
+    def _process_html(self) -> None:
+        """Process the RSS feed.
 
-    def _extract_cases_from_html(self, html):
-        """Build list of data dictionaries, one dictionary per case (table row)."""
-        self.cases = []
+        Iterate over each item in the RSS feed to extract out
+        the date, case name, docket number, and status and pdf URL.
+        Return: None
+        """
+        feed = feedparser.parse(self.request["response"].content)
+        for item in feed["entries"]:
+            value = item["content"][0]["value"]
+            docket, title = item["title"].split(" [")[0].split(": ")
 
-        for row in html.xpath("//table/tbody/tr"):
-            date, docket, url, name, status = False, False, False, False, False
+            self.cases.append(
+                {
+                    "date": item["published"],
+                    "docket": docket,
+                    "url": fromstring(value).xpath(".//a/@href")[0],
+                    "name": titlecase(title),
+                    "status": self._get_status(item["title"].lower()),
+                }
+            )
 
-            date = convert_date_string(row.xpath("td[1]/span/text()")[0])
-            docket = row.xpath("td[2]/text()")[0].strip()
+    def _get_status(self, title: str) -> str:
+        """Get precedential status from title string.
 
-            url_raw = row.xpath("td[4]/a/@href")
-            if url_raw:
-                url = url_raw[0]
-
-            name_raw = row.xpath("td[4]/a/text()")
-            if name_raw:
-                name = titlecase(name_raw[0].split("[")[0].strip())
-
-            status_raw = row.xpath("td[5]/text()")
-            if status_raw:
-                status_raw = status_raw[0].strip().lower()
-                if "nonprecedential" in status_raw.lower():
-                    status = "Unpublished"
-                elif "precedential" in status_raw.lower():
-                    status = "Published"
-                else:
-                    status = "Unknown"
-
-            if date and docket and url and name and status:
-                self.cases.append(
-                    {
-                        "date": date,
-                        "docket": docket,
-                        "url": url,
-                        "name": name,
-                        "status": status,
-                    }
-                )
-
-    def _get_case_names(self):
-        return [case["name"] for case in self.cases]
-
-    def _get_download_urls(self):
-        return list(self.html.xpath("//table//tr/td[4]/a/@href"))
-
-    def _get_case_dates(self):
-        return [case["date"] for case in self.cases]
-
-    def _get_docket_numbers(self):
-        return [case["docket"] for case in self.cases]
-
-    def _get_precedential_statuses(self):
-        return [case["status"] for case in self.cases]
-
-    def _download_backwards(self, n):
-        self.url = f"http://www.cafc.uscourts.gov/opinions-orders?page={n}"
-
-        self.html = self._download()
-        if self.html is not None:
-            # Setting status is important because it prevents the download
-            # function from being run a second time by the parse method.
-            self.status = 200
+        return: The precedential status of the case.
+        """
+        if "nonprecedential" in title:
+            status = "Unpublished"
+        elif "precedential" in title:
+            status = "Published"
+        else:
+            status = "Unknown"
+        return status
