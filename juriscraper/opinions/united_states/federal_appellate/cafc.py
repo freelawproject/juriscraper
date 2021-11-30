@@ -22,12 +22,12 @@ class Site(OpinionSiteLinear):
         for item in feed["entries"]:
             value = item["content"][0]["value"]
             docket, title = item["title"].split(" [")[0].split(": ")
-
+            slug = fromstring(value).xpath(".//a/@href")[0]
             self.cases.append(
                 {
                     "date": item["published"],
                     "docket": docket,
-                    "url": fromstring(value).xpath(".//a/@href")[0],
+                    "url": f"https://cafc.uscourts.gov{slug}",
                     "name": titlecase(title),
                     "status": self._get_status(item["title"].lower()),
                 }
