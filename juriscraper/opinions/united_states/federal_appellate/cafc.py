@@ -1,5 +1,8 @@
-from juriscraper.lib.string_utils import titlecase
+import feedparser
+from lxml.html import fromstring
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OpinionSiteLinear):
@@ -15,39 +18,30 @@ class Site(OpinionSiteLinear):
         the date, case name, docket number, and status and pdf URL.
         Return: None
         """
-        for item in self.html.xpath("//item"):
-            title = item.xpath("./title/text()")[0]
-            p_element = item.xpath(
-                "./encoded",
-                namespaces={
-                    "content": "http://purl.org/rss/1.0/modules/content/"
-                },
-            )[0]
-
-            # Check for the existence of a link to the PDF, otherwise skip.
-            urls = p_element.xpath("//a[contains(@href, '.pdf')]/@href")
-            if not urls:
-                continue
-
-            pubdate = item.xpath("./pubdate/text()")[0]
-            docket = title.split(":")[0].strip()
-            title = title.split(":")[1].strip()
-            name = titlecase(title.split("[")[0].strip())
-            status_raw = title.split("],")[1].strip()
-            status_raw = status_raw.lower()
-            if "nonprecedential" in status_raw:
-                status = "Unpublished"
-            elif "precedential" in status_raw:
-                status = "Published"
-            else:
-                status = "Unknown"
+        feed = feedparser.parse(self.request["response"].content)
+        for item in feed["entries"]:
+            value = item["content"][0]["value"]
+            docket, title = item["title"].split(" [")[0].split(": ")
 
             self.cases.append(
                 {
-                    "date": pubdate,
+                    "date": item["published"],
                     "docket": docket,
-                    "url": urls[0],
-                    "name": name,
-                    "status": status,
+                    "url": fromstring(value).xpath(".//a/@href")[0],
+                    "name": titlecase(title),
+                    "status": self._get_status(item["title"].lower()),
                 }
             )
+
+    def _get_status(self, title: str) -> str:
+        """Get precedential status from title string.
+
+        return: The precedential status of the case.
+        """
+        if "nonprecedential" in title:
+            status = "Unpublished"
+        elif "precedential" in title:
+            status = "Published"
+        else:
+            status = "Unknown"
+        return status
