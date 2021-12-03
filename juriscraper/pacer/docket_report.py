@@ -286,7 +286,7 @@ class DocketReport(BaseDocketReport, BaseReport):
     case_title_regex = re.compile(
         r"(?:Case\s+title:\s+)(.*)", flags=re.IGNORECASE
     )
-    in_re_regex = re.compile(r"(\bIN\s+RE:\s+.*)", flags=re.IGNORECASE)
+    in_re_regex = re.compile(r"(\bIN\s+RE:?\s+.*)", flags=re.IGNORECASE)
     in_the_matter_regex = re.compile(
         r"(\bIn\s+the\s+matter\s+.*)", flags=re.IGNORECASE
     )
