@@ -91,6 +91,10 @@ class PacerSession(requests.Session):
         self.verify = False
 
         if cookies:
+            assert not isinstance(cookies, str), (
+                "Got str for cookie parameter. Did you mean "
+                "to use the `username` kwarg?"
+            )
             self.cookies = cookies
 
         self.username = username
