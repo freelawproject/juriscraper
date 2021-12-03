@@ -12,10 +12,13 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
-2.3.20, 2021-11-17 - Fixes CA10 scraper, major code refactor
+- 2.3.23, 2021-12-02 - Updates feedparser, adds Python 3.9 and 3.10 tests, and broadens our regex for parsing in re case names from PACER dockets.
 
 ## Past
 
+- 2.3.22, 2021-11-30 - Further CAFC fixes
+- 2.3.21, 2021-11-29 - Fixes CAFC, adds pre-commit
+- 2.3.20, 2021-11-17 - Fixes CA10 scraper, major code refactor
 - 2.3.19, 2021-11-16 - Fix PA, IL. Update PACER to use new auth API. Update geonames cache with latest population data. Throw exception in Free Opinions report when IP address on blocklist.
 - 2.3.18, 2021-10-18 - Fix GA, CA9, CA10 Oral args
 - 2.3.17, 2021-08-17 - Add anonymizing function for PACER dockets
