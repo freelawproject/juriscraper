@@ -93,7 +93,7 @@ class PacerSession(requests.Session):
         if cookies:
             assert not isinstance(cookies, str), (
                 "Got str for cookie parameter. Did you mean "
-                "to use the `username` kwarg?"
+                "to use the `username` and `password` kwargs?"
             )
             self.cookies = cookies
 
@@ -302,6 +302,14 @@ class PacerSession(requests.Session):
         session_cookies = requests.cookies.RequestsCookieJar()
         session_cookies.set(
             "NextGenCSO",
+            response_json.get("nextGenCSO"),
+            domain=".uscourts.gov",
+            path="/",
+        )
+        # Support "CurrentGen" servers as well. This can be remoevd if they're
+        # ever all upgraded to NextGen.
+        session_cookies.set(
+            "PacerSession",
             response_json.get("nextGenCSO"),
             domain=".uscourts.gov",
             path="/",
