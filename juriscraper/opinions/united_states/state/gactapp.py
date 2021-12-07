@@ -32,13 +32,6 @@ class Site(OpinionSite):
             )
         )
 
-    def _download(self, request_dict={}):
-        if self.test_mode_enabled():
-            # This is an arbitrary date that we need to set
-            # for our compar.json test to pass
-            self.case_date = convert_date_string("2017-08-14")
-        return super()._download(request_dict=request_dict)
-
     def _get_case_names(self):
         path = f"{self.base_path}/td[2]/text()"
         return [titlecase(e) for e in self.html.xpath(path)]
@@ -48,9 +41,8 @@ class Site(OpinionSite):
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
-        return [self.case_date] * int(
-            self.html.xpath(f"count({self.base_path})")
-        )
+        path = f"{self.base_path}/td[3]/text()"
+        return [convert_date_string(e) for e in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
