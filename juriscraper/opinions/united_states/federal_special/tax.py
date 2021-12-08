@@ -5,8 +5,8 @@
 # Neutral Citation Format (Memorandum opinions): T.C. Memo 2012-1
 # Neutral Citation Format (Summary opinions: T.C. Summary Opinion 2012-1
 
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
