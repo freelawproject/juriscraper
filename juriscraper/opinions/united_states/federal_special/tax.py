@@ -43,13 +43,14 @@ class Site(OpinionSiteLinear):
     def _get_url(self, docket_number: str, docketEntryId: str) -> str:
         """Fetch the PDF URL with AWS API key
 
-        param docket_number: The Docket number
-        param docketEntryId: The docket entry key for the document
-        return:
+        param docket_number: The docket number
+        param docketEntryId: The docket entry id
+        return: The URL to the PDF
         """
         self.url = f"https://public-api-green.dawson.ustaxcourt.gov/public-api/{docket_number}/{docketEntryId}/public-document-download-url"
         if self.test_mode_enabled():
-            # Don't fetch names when running tests
+            # Don't fetch urls when running tests.  Because it requires
+            # a second api request.
             return self.url
         pdf_url = super()._download()["url"]
         return pdf_url
