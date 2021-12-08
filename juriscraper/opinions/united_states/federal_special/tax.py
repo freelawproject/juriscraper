@@ -25,9 +25,9 @@ class Site(OpinionSiteLinear):
         for case in opinion_json:
             url = self._get_url(case["docketNumber"], case["docketEntryId"])
             status = (
-                "Precedential"
+                "Published"
                 if case["documentType"] == "T.C. Opinion"
-                else "Nonprecedential"
+                else "Unpublished"
             )
             self.cases.append(
                 {
