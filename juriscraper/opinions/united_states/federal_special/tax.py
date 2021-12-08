@@ -12,7 +12,7 @@ from juriscraper.lib.string_utils import titlecase
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "https://public-api-green.dawson.ustaxcourt.gov/public-api/todays-opinions/1/FILING_DATE_DESC"
+        self.url = "https://public-api-green.dawson.ustaxcourt.gov/public-api/todays-opinions"
         self.court_id = self.__module__
 
     def _process_html(self) -> None:
@@ -21,8 +21,8 @@ class Site(OpinionSiteLinear):
         Iterate over each item on the page collecting our data.
         return: None
         """
-        case_json = self.request["response"].json()
-        for case in case_json["results"][:1]:
+        opinion_json = self.request["response"].json()
+        for case in opinion_json:
             url = self._get_url(case["docketNumber"], case["docketEntryId"])
             status = (
                 "Precedential"
@@ -31,7 +31,7 @@ class Site(OpinionSiteLinear):
             )
             self.cases.append(
                 {
-                    "judge": case["signedJudgeName"],
+                    "judge": case["judge"],
                     "date": case["filingDate"][:10],
                     "docket": case["docketNumber"],
                     "url": url,
@@ -47,7 +47,9 @@ class Site(OpinionSiteLinear):
         param docketEntryId: The docket entry key for the document
         return:
         """
-        get_public_pdf_url = f"https://public-api-green.dawson.ustaxcourt.gov/public-api/{docket_number}/{docketEntryId}/public-document-download-url"
-        self.url = get_public_pdf_url
+        self.url = f"https://public-api-green.dawson.ustaxcourt.gov/public-api/{docket_number}/{docketEntryId}/public-document-download-url"
+        if self.test_mode_enabled():
+            # Don't fetch names when running tests
+            return self.url
         pdf_url = super()._download()["url"]
         return pdf_url
