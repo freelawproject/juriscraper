@@ -17,19 +17,12 @@ class Site(OpinionSite):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.case_date = date.today()
-        self.a_while_ago = date.today() - timedelta(days=20)
+        self.a_while_ago = date.today() - timedelta(days=28)
         self.base_path = "id('art-main')//tr[position() > 1]"
         self.url = (
-            "http://www.gaappeals.us/docketdate/results_all.php?searchterm="
-            "{mn_ago:02d}%2F{day_ago:02d}%2F{year_ago}&searchterm2="
-            "{mn:02d}%2F{day:02d}%2F{year}&submit=Search".format(
-                mn_ago=self.a_while_ago.month,
-                day_ago=self.a_while_ago.day,
-                year_ago=self.a_while_ago.year,
-                mn=self.case_date.month,
-                day=self.case_date.day,
-                year=self.case_date.year,
-            )
+            f"http://www.gaappeals.us/docketdate/results_all.php?searchterm="
+            f"{self.a_while_ago.month:02d}%2F{self.a_while_ago.day:02d}%2F{self.a_while_ago.year}&searchterm2="
+            f"{self.case_date.month:02d}%2F{self.case_date.day:02d}%2F{self.case_date.year}&submit=Search"
         )
 
     def _get_case_names(self):
