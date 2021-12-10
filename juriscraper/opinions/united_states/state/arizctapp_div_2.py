@@ -18,8 +18,8 @@ class Site(OpinionSite):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         # Feeling down and tired of of your regular life? Check out this website.
-        self.url = "https://www.appeals2.az.gov/ODSPlus/recentDecisions2.cfm"
-        self.base_path = "//*[@class='contentcontainer']//a[not(contains(., '(2)')) and not(contains(., 'page'))]"
+        self.url = "https://www.appeals2.az.gov/ODSPlus/recentOpinionsHTML.cfm"
+        self.base_path = "//*[@class='contentcontainer']//table//a[not(contains(., '(2)')) and not(contains(., 'page'))]"
 
     def _get_case_names(self):
         path = f"{self.base_path}/following::td[1]/*/text()"
