@@ -6,10 +6,8 @@ Author: Andrei Chelaru
 Reviewer: mlr
 History:
     2014-07-23: Created by Andrei Chelaru
-    2021-12-10: URL changed to recent opinions page
+    2021-12-10: URL changed to recent opinions page, satsuki-chan
 """
-
-from typing import List
 
 from juriscraper.lib.string_utils import clean_if_py3, titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -22,6 +20,7 @@ class Site(OpinionSiteLinear):
         # Feeling down and tired of of your regular life? Check out this website.
         self.url = "https://www.appeals2.az.gov/ODSPlus/recentOpinionsHTML.cfm"
         self.cases = []
+        self.status = "Published"
 
     def _process_html(self) -> None:
         path = "//table//a[contains(@href, '.pdf')]"
@@ -43,6 +42,3 @@ class Site(OpinionSiteLinear):
                     "summary": summary,
                 }
             )
-
-    def _get_precedential_statuses(self) -> List[str]:
-        return ["Published"] * len(self.case_names)
