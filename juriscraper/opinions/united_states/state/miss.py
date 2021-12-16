@@ -1,7 +1,17 @@
-# Court Contact: bkraft@courts.ms.gov (see https://courts.ms.gov/aoc/aoc.php)
+"""Scraper for Mississippi Supreme Court
+CourtID: miss
+Court Contact: bkraft@courts.ms.gov (see https://courts.ms.gov/aoc/aoc.php)
+Author: ryee
+Reviewer: mlr
+History:
+    2013-04-26: Created by ryee
+    2021-12-16: Court param name changed
+"""
 
 import datetime
+from typing import List
 
+from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -10,16 +20,16 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.domain = "https://courts.ms.gov"
         self.court_id = self.__module__
+        self.domain = "https://courts.ms.gov"
+        self.url = f"{self.domain}/appellatecourts/docket/gethddates.php"
         self.method = "POST"
         self.number_of_dates_to_process = 5
         self.pages = {}
-        self.parameters = {"crt": self.get_court_parameter()}
+        self.parameters = {"court": self.get_court_parameter()}
         self.status = "Published"
-        self.url = f"{self.domain}/appellatecourts/docket/gethddates.php"
 
-    def get_court_parameter(self):
+    def get_court_parameter(self) -> str:
         return "SCT"
 
     """Retrieve dates for which there are case listings.
@@ -29,7 +39,7 @@ class Site(OpinionSiteLinear):
     them.
     """
 
-    def _download(self, request_dict={}):
+    def _download(self, request_dict={}) -> None:
         dates_page = super()._download(request_dict)
         self.parse_date_pages(dates_page)
 
@@ -39,28 +49,27 @@ class Site(OpinionSiteLinear):
     number of date pages.  Since cases are usually published
     once a week, this means scraping about the most recent
     months worth of cases.
+    - Supreme: https://courts.ms.gov/Images/HDList/SCT02-27-2020.html
+    - Appeals: https://courts.ms.gov/Images/HDList/COA12-07-2021.html
     """
 
-    def parse_date_pages(self, dates_page):
+    def parse_date_pages(self, dates_page) -> None:
         # For testing, each example file should be a specific sub-date page,
-        # like https://courts.ms.gov/Images/HDList/SCT02-27-2020.html
         if self.test_mode_enabled():
-            # date below is arbitrary and doesnt matter, it just
+            # Date below is arbitrary and doesnt matter, it just
             # needs to be static for testing to work
             self.pages["2020-02-28"] = dates_page
             return
         for date in self.get_dates_from_date_page(dates_page):
-            url = "{}/Images/HDList/SCT{}.html".format(
-                self.domain,
-                datetime.date.strftime(date, "%m-%d-%Y"),
-            )
+            url = f"{self.domain}/Images/HDList/{self.get_court_parameter()}{datetime.date.strftime(date, '%m-%d-%Y')}.html"
+            logger.info(f"Scraping sub-page: {url}")
             page = self._get_html_tree_by_url(url)
             self.pages[f"{date}"] = page
 
     """Convert string of dates on page into list of date objects.
     """
 
-    def get_dates_from_date_page(self, dates_page):
+    def get_dates_from_date_page(self, dates_page) -> List[str]:
         dates = []
         substrings = dates_page.text_content().split('"')
         for substring in substrings:
@@ -71,12 +80,11 @@ class Site(OpinionSiteLinear):
         dates.sort(reverse=True)
         return dates[: self.number_of_dates_to_process]
 
-    def _process_html(self):
+    def _process_html(self) -> None:
         for date, page in self.pages.items():
             for anchor in page.xpath(".//a[contains(./@href, '.pdf')]"):
                 parent = anchor.getparent()
-
-                # sometimes the first opinion on the pages is nested
+                # Sometimes the first opinion on the pages is nested
                 # in a <p> tag for whatever reason.
                 while parent.getparent().tag != "body":
                     parent = parent.getparent()
