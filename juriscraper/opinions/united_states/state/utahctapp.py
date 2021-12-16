@@ -1,7 +1,7 @@
+import re
 from urllib.parse import quote
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
-import re
 
 
 class Site(OpinionSiteLinear):
