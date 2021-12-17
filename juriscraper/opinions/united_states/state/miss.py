@@ -11,8 +11,6 @@ History:
 from ast import literal_eval
 from datetime import datetime
 
-from lxml.html import tostring
-
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
