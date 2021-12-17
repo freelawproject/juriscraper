@@ -4,7 +4,7 @@ Court Short Name: Miss. Ct. App.
 Author: Jon Andersen
 History:
     2014-06-21: Created by Jon Andersen
-    2021-12-16: Court param name changed
+    2021-12-16: Update by satsuki-chan
 """
 
 from juriscraper.opinions.united_states.state import miss
@@ -12,5 +12,6 @@ from juriscraper.opinions.united_states.state import miss
 
 # Landing page: https://courts.ms.gov/appellatecourts/coa/coadecisions.php
 class Site(miss.Site):
-    def get_court_parameter(self) -> str:
-        return "COA"
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.court = "COA"
