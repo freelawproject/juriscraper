@@ -20,7 +20,6 @@ class Site(OpinionSiteLinear):
         # Feeling down and tired of of your regular life? Check out this website.
         self.url = "https://www.appeals2.az.gov/ODSPlus/recentOpinionsHTML.cfm"
         self.cases = []
-        self.status = "Published"
 
     def _process_html(self) -> None:
         path = "//table//a[contains(@href, '.pdf')]"
@@ -40,5 +39,6 @@ class Site(OpinionSiteLinear):
                     "docket": docket,
                     "url": url,
                     "summary": summary,
+                    "status": "Published",
                 }
             )
