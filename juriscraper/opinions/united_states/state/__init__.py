@@ -152,6 +152,7 @@ __all__ = [
     "texapp_14",
     "texcrimapp",
     "utah",
+    "utahctapp",
     "va",
     "vactapp_u",
     "vactapp_p",
