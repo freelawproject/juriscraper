@@ -19,7 +19,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.citation_regex = (
             r"(?P<MJ>\(?\d{2} M\.J\. \d+\)?)|(?P<WL>\(?\d{4} (WL|Wl) \d+\)?)"
