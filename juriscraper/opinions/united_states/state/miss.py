@@ -31,7 +31,7 @@ class Site(OpinionSiteLinear):
     def _download(self, request_dict={}) -> None:
 
         if self.test_mode_enabled():
-            self.date = "02/28/2020" # some random date for testing
+            self.date = "02/28/2020"  # some random date for testing
             self.html = super()._download()
             self._process_html()
             return
