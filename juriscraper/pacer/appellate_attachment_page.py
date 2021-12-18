@@ -52,14 +52,8 @@ class AppellateAttachmentPage(BaseReport):
         self.response = self.session.get(url)
         self.parse()
 
-    def _strip_bad_html_tags_insecure(self, tree):
-        """Remove bad tags from HTML while leaving scripts.
-
-        :param tree: A tree you wish to cleanup
-        :type tree: lxml.html.HtmlElement
-
-        :return: None, instead sets self.tree to a cleaned lxml.html.HtmlElement.
-        """
+    def _strip_bad_html_tags_insecure(self, tree) -> None:
+        """Override base function to include scripts."""
         self.tree = strip_bad_html_tags_insecure(tree, remove_scripts=False)
 
     @property
