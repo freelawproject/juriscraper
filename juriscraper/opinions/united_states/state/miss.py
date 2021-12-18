@@ -30,6 +30,7 @@ class Site(OpinionSiteLinear):
         """Download the HTML for the site."""
         if self.test_mode_enabled():
             self.date = "02/28/2020"  # some random date for testing
+            self.dates = ["02/28/2020"]
             return super()._download()
         if not self.dates:
             self.parameters = {"court": self.court}
@@ -38,7 +39,7 @@ class Site(OpinionSiteLinear):
     def make_dates(self) -> None:
         """Get last five dates sort and download them
 
-        :param html:The HTML for the inital call to the site
+        :param html:The HTML for the initial call to the site
         :return:None
         """
         dates = json.loads(self.html.xpath("//p/text()")[0])
@@ -59,12 +60,11 @@ class Site(OpinionSiteLinear):
 
         # Iterate over the dates to generate the HTML to parse
         for date in self.dates:
-            self.date = date
-            self.parameters["date"] = self.date
-            self.url = (
-                "https://courts.ms.gov/appellatecourts/docket/get_hd_file.php"
-            )
-            self.html = super()._download()
+            if not self.test_mode_enabled():
+                self.date = date
+                self.parameters["date"] = self.date
+                self.url = "https://courts.ms.gov/appellatecourts/docket/get_hd_file.php"
+                self.html = super()._download()
 
             rows = self.html.xpath(".//body/b") + self.html.xpath(".//body/p")
             for row in rows:
