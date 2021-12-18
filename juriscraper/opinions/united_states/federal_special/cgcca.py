@@ -41,34 +41,57 @@ class Site(OpinionSiteLinear):
             date_string = item.xpath(".//td[3]/text()")[0]
             m = re.search(self.citation_regex, first_cell)
             if m:
-                mj = m.group("MJ") if m.group("MJ") else ""
-                wl = m.group("WL") if m.group("WL") else ""
+                mj = m.group("MJ").strip("()") if m.group("MJ") else ""
+                wl = m.group("WL").strip("()") if m.group("WL") else ""
             else:
                 mj = ""
                 wl = ""
 
             status = "Published" if m and mj else "Unpublished"
 
-            # Sometimes the title has misc. information in parentheses
-            name = first_cell.replace(mj, "").replace(wl, "").strip()
-            name = re.sub(r"\(Merits\)|\(Per Curiam\)", "", name, flags=re.I)
-            name = name.replace("( )", "")
-
             self.cases.append(
                 {
-                    "name": titlecase(name),
+                    "name": first_cell,
                     "date": date_string,
                     "docket": docket,
                     "url": url,
                     "status": status,
-                    "west_state_citation": wl.strip("()"),
-                    "neutral_citation": mj.strip("()"),
+                    "west_state_citation": wl,
+                    "neutral_citation": mj,
                 }
             )
+
+    def _get_case_names(self) -> List[str]:
+        """Clean case names
+
+        :return: List of case names
+        """
+        for case in self.cases:
+            if case["neutral_citation"]:
+                case["name"] = re.sub(
+                    fr"\(?\s?{case['neutral_citation']}\s?\)?",
+                    "",
+                    case["name"],
+                )
+            if case["west_state_citation"]:
+                case["name"] = re.sub(
+                    fr"\(?\s?{case['west_state_citation']}\s?\)?",
+                    "",
+                    case["name"],
+                )
+            case["name"] = re.sub(
+                "\(UNPUBLISHED\)|\(MERITS\)|\(PER CURIAM\)|ORDER",
+                "",
+                case["name"],
+                flags=re.IGNORECASE,
+            )
+            case["name"] = titlecase(case["name"].strip(" -"))
+
+        return [c["name"] for c in self.cases]
 
     def _get_west_citations(self) -> List[str]:
         """Get West Citations
 
         :return: List of citations if any
         """
-        return [c["west_state_citation"].strip("()") for c in self.cases]
+        return [c["west_state_citation"] for c in self.cases]
