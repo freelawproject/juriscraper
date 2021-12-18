@@ -18,7 +18,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.case_date = date.today()
         self.backwards_days = 14
         self.url = "https://128archive.com"
@@ -61,7 +61,7 @@ class Site(OpinionSiteLinear):
         :return: The HTML
         """
         self.url = f"{self.url}/?{self.set_parameters()}"
-        html = super(Site, self)._download(request_dict)
+        html = super()._download(request_dict)
         return html
 
     def _process_html(self) -> None:
