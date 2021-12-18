@@ -12,6 +12,7 @@ from datetime import date, timedelta
 from urllib.parse import urlencode
 
 from lxml import html
+from lxml.html import tostring
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -21,11 +22,11 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.case_date = date.today()
         self.backwards_days = 14
-        self.url = "https://128archive.com"
+        self.base = "https://128archive.com"
+        self.url = self.make_url()
         self.court_id = self.__module__
-        self.court_identifier = "AC"
 
-    def set_parameters(self) -> str:
+    def make_url(self) -> str:
         """Build the urls to query
 
         :return: The url parameters (encoded)
@@ -52,34 +53,24 @@ class Site(OpinionSiteLinear):
             ("Pages", "1"),
             ("PageSize", "100"),
         )
-        return urlencode(self.parameters)
-
-    def _download(self, request_dict={}) -> html.HtmlElement:
-        """Download the HTML
-
-        :param request_dict:
-        :return: The HTML
-        """
-        self.url = f"{self.url}/?{self.set_parameters()}"
-        html = super()._download(request_dict)
-        return html
+        return f"{self.base}/?{urlencode(self.parameters)}"
 
     def _process_html(self) -> None:
         """Process the data
 
         :return: None
         """
-        for row in self.html.xpath("//div[@data-rowtype='True']"):
+        for row in self.html.xpath("//div[@data-rowtype]"):
             docket, name, date = row.xpath(
                 ".//div[@class='col-md-7 font-bold']/text()"
             )
-            url = row.xpath(".//div/div/a/@href")[0]
+            path = row.xpath(".//div/div/a/@href")[0]
             self.cases.append(
                 {
                     "date": date.strip(),
                     "docket": docket.strip(),
                     "name": name.strip(),
-                    "url": url,
+                    "url": f"{self.base}{path}",
                     "status": "Unpublished",
                 }
             )
