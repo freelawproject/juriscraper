@@ -11,13 +11,14 @@ Date: 2020-02-27
 from datetime import date, timedelta
 from urllib.parse import urlencode
 
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from lxml import html
+
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.case_date = date.today()
         self.backwards_days = 14
         self.url = "https://128archive.com"
@@ -33,21 +34,25 @@ class Site(OpinionSiteLinear):
         first_date = start_date.strftime("%m/%d/%Y")
         end_date = self.case_date.strftime("%m/%d/%Y")
         self.parameters = (
-            ('Action', 'search'),
-            ('DocketNumber', ''),
-            ('PartyName', ''),
-            ('ReleaseDateFrom', first_date),
-            ('ReleaseDateTo', end_date),
-            ('Keywords', ''),
-            ('SortColumnName', ['Release Date Descending Order',
-                                'Release Date Descending Order']),
-            ('SortOrder', ''),
-            ('CurrentPageNo', '1'),
-            ('Pages', '1'),
-            ('PageSize', '100'),
+            ("Action", "search"),
+            ("DocketNumber", ""),
+            ("PartyName", ""),
+            ("ReleaseDateFrom", first_date),
+            ("ReleaseDateTo", end_date),
+            ("Keywords", ""),
+            (
+                "SortColumnName",
+                [
+                    "Release Date Descending Order",
+                    "Release Date Descending Order",
+                ],
+            ),
+            ("SortOrder", ""),
+            ("CurrentPageNo", "1"),
+            ("Pages", "1"),
+            ("PageSize", "100"),
         )
         return urlencode(self.parameters)
-
 
     def _download(self, request_dict={}) -> html.HtmlElement:
         """Download the HTML
@@ -56,7 +61,7 @@ class Site(OpinionSiteLinear):
         :return: The HTML
         """
         self.url = f"{self.url}/?{self.set_parameters()}"
-        html = super(Site, self)._download(request_dict)
+        html = super()._download(request_dict)
         return html
 
     def _process_html(self) -> None:
@@ -65,7 +70,9 @@ class Site(OpinionSiteLinear):
         :return:
         """
         for row in self.html.xpath("//div[@data-rowtype='True']"):
-            docket, name, date = row.xpath(".//div[@class='col-md-7 font-bold']/text()")
+            docket, name, date = row.xpath(
+                ".//div[@class='col-md-7 font-bold']/text()"
+            )
             url = row.xpath(".//div/div/a/@href")[0]
 
             self.cases.append(
@@ -77,4 +84,3 @@ class Site(OpinionSiteLinear):
                     "status": "Unpublished",
                 }
             )
-
