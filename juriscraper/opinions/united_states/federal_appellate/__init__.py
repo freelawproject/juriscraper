@@ -16,6 +16,7 @@ __all__ = [
     "ca11_u",
     "cadc",
     "cadc_u",
+    "cadc_pi",
     "cafc",
     "scotus_chambers",
     "scotus_relating",
