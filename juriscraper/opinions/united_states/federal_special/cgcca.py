@@ -80,7 +80,7 @@ class Site(OpinionSiteLinear):
                     case["name"],
                 )
             case["name"] = re.sub(
-                "\(UNPUBLISHED\)|\(MERITS\)|\(PER CURIAM\)|ORDER",
+                r"\(UNPUBLISHED\)|\(MERITS\)|\(PER CURIAM\)|ORDER",
                 "",
                 case["name"],
                 flags=re.IGNORECASE,
