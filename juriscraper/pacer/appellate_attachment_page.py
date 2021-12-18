@@ -1,5 +1,3 @@
-from __future__ import print_function
-
 import pprint
 import re
 import sys
@@ -10,8 +8,9 @@ from lxml import html
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.string_utils import force_unicode
 from juriscraper.pacer.utils import get_pacer_doc_id_from_doc1_url
-from .reports import BaseReport
+
 from ..lib.log_tools import make_default_logger
+from .reports import BaseReport
 
 logger = make_default_logger()
 
@@ -29,7 +28,7 @@ class AppellateAttachmentPage(BaseReport):
     PATH = "docs1/"
 
     def __init__(self, court_id, pacer_session=None):
-        super(AppellateAttachmentPage, self).__init__(court_id, pacer_session)
+        super().__init__(court_id, pacer_session)
 
     def query(self, document_number):
         """Query the "attachment page" endpoint and set the results to self.response.
@@ -46,9 +45,9 @@ class AppellateAttachmentPage(BaseReport):
         ), "session attribute of DocketReport cannot be None."
 
         # Generate the document URL from the document number.
-        document_number = document_number[:3] + "0" + document_number[4:]
+        document_number = f"{document_number[:3]}0{document_number[4:]}"
         url = self.url + document_number
-        logger.info(u"Querying the attachment page endpoint at URL: %s", url)
+        logger.info("Querying the attachment page endpoint at URL: %s", url)
         self.response = self.session.get(url)
         self.parse()
 
@@ -119,8 +118,8 @@ class AppellateAttachmentPage(BaseReport):
         """
         try:
             rows = self.tree.xpath("//tbody/tr/td/a/@href")
-            pre_doc = sorted([row.split("/")[-1] for row in rows])[0]
-            return pre_doc[:3] + "0" + pre_doc[4:]
+            pre_doc = sorted(row.split("/")[-1] for row in rows)[0]
+            return f"{pre_doc[:3]}0{pre_doc[4:]}"
         except IndexError:
             return None
 
@@ -207,8 +206,8 @@ def _main():
         "cand"
     )  # Court ID is only needed for querying.
     filepath = sys.argv[1]
-    print("Parsing HTML file at {}".format(filepath))
-    with open(filepath, "r") as f:
+    print(f"Parsing HTML file at {filepath}")
+    with open(filepath) as f:
         text = f.read()
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)
