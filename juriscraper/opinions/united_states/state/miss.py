@@ -7,8 +7,7 @@ History:
     2013-04-26: Created by ryee
     2021-12-17: Updated by flooie
 """
-
-from ast import literal_eval
+import json
 from datetime import datetime
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -27,22 +26,29 @@ class Site(OpinionSiteLinear):
         self.court = "SCT"
 
     def _download(self, request_dict={}) -> None:
-
+        """Download the HTML for the site."""
         if self.test_mode_enabled():
             self.date = "02/28/2020"  # some random date for testing
-            self.html = super()._download()
-            self._process_html()
-            return
+            return super()._download()
 
         self.parameters = {"court": self.court}
-        dates = super()._download(request_dict)
-        dates = literal_eval(dates.xpath("//p")[0].text_content())
+        if not self.date:
+            html = super()._download(request_dict)
+            self.make_dates(html)
+        return super()._download(request_dict)
+
+    def make_dates(self, html) -> None:
+        """Get last five dates sort and download them
+
+        :param html:The HTML for the inital call to the site
+        :return:None
+        """
+        dates = json.loads(html.xpath("//p/text()")[0])
         dates.sort(
             key=lambda date: datetime.strptime(date, "%m-%d-%Y"), reverse=True
         )
-
-        # Check the last five dates.
-        for date in dates[:5]:
+        self.dates = dates[:5]
+        for date in self.dates:
             self.date = date
             self.parameters["date"] = date
             self.url = (
@@ -56,8 +62,6 @@ class Site(OpinionSiteLinear):
 
         :return:None
         """
-        if self.html is None:
-            return
         rows = self.html.xpath(".//body/b") + self.html.xpath(".//body/p")
         for row in rows:
             links = row.xpath(".//a[contains(@href, '.pdf')]")
