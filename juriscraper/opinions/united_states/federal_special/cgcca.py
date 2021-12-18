@@ -35,7 +35,9 @@ class Site(OpinionSiteLinear):
         for item in self.html.xpath(path):
             url = item.xpath(".//td/a/@href")[0]
             first_cell = item.xpath(".//td/a/text()")[0]
-            docket = item.xpath(".//td[2]/text()")[0]
+            docket = re.sub(
+                r"Docket Nos?\.", "", item.xpath(".//td[2]/text()")[0]
+            )
             date_string = item.xpath(".//td[3]/text()")[0]
             m = re.search(self.citation_regex, first_cell)
             if m:
@@ -49,8 +51,8 @@ class Site(OpinionSiteLinear):
 
             # Sometimes the title has misc. information in parentheses
             name = first_cell.replace(mj, "").replace(wl, "").strip()
-            name = name.replace("(MERITS)", "")
-            name = name.replace("( )", "").strip(")(")
+            name = re.sub(r"\(Merits\)|\(Per Curiam\)", "", name, flags=re.I)
+            name = name.replace("( )", "")
 
             self.cases.append(
                 {
