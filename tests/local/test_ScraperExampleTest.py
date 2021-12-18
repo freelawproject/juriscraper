@@ -182,25 +182,25 @@ class ScraperExampleTest(unittest.TestCase):
             "juriscraper.opinions.united_states.federal_appellate"
         )
 
-    # def test_scrape_opinion_fed_bankr_example_files(self):
-    #     self.run_tests_on_module_str(
-    #         "juriscraper.opinions.united_states.federal_bankruptcy"
-    #     )
-    #
-    # def test_scrape_opinion_fed_dist_example_files(self):
-    #     self.run_tests_on_module_str(
-    #         "juriscraper.opinions.united_states.federal_district"
-    #     )
-    #
-    # def test_scrape_opinion_fed_special_example_files(self):
-    #     self.run_tests_on_module_str(
-    #         "juriscraper.opinions.united_states.federal_special"
-    #     )
-    #
-    # def test_scrape_opinion_state_example_files(self):
-    #     self.run_tests_on_module_str(
-    #         "juriscraper.opinions.united_states.state"
-    #     )
-    #
-    # def test_scrape_oral_arg_example_files(self):
-    #     self.run_tests_on_module_str("juriscraper.oral_args")
+    def test_scrape_opinion_fed_bankr_example_files(self):
+        self.run_tests_on_module_str(
+            "juriscraper.opinions.united_states.federal_bankruptcy"
+        )
+
+    def test_scrape_opinion_fed_dist_example_files(self):
+        self.run_tests_on_module_str(
+            "juriscraper.opinions.united_states.federal_district"
+        )
+
+    def test_scrape_opinion_fed_special_example_files(self):
+        self.run_tests_on_module_str(
+            "juriscraper.opinions.united_states.federal_special"
+        )
+
+    def test_scrape_opinion_state_example_files(self):
+        self.run_tests_on_module_str(
+            "juriscraper.opinions.united_states.state"
+        )
+
+    def test_scrape_oral_arg_example_files(self):
+        self.run_tests_on_module_str("juriscraper.oral_args")
