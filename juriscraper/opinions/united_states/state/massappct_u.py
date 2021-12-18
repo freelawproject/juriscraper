@@ -9,33 +9,72 @@ Date: 2020-02-27
 """
 
 from datetime import date, timedelta
-from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import convert_date_string
+from urllib.parse import urlencode
+
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+from lxml import html
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
-        self.homepage = "https://128archive.com"
         self.case_date = date.today()
         self.backwards_days = 14
-        self.url = self.build_url()
+        self.url = "https://128archive.com"
         self.court_id = self.__module__
         self.court_identifier = "AC"
 
-    def build_url(self):
+    def set_parameters(self):
+        """Build the urls to query
+
+        :return:
+        """
         start_date = self.case_date - timedelta(days=self.backwards_days)
-        url_template = 'https://128archive.com/?Action=search&DocketNumber=&PartyName=&ReleaseDateFrom=%s&ReleaseDateTo=%s&Keywords=&SortColumnName=Release+Date+Descending+Order&SortColumnName=Release+Date+Descending+Order&SortOrder=&CurrentPageNo=1&Pages=1&PageSize=100'
-        return url_template % (start_date.strftime("%m/%d/%Y"), self.case_date.strftime("%m/%d/%Y"))
+        first_date = start_date.strftime("%m/%d/%Y")
+        end_date = self.case_date.strftime("%m/%d/%Y")
+        self.parameters = (
+            ('Action', 'search'),
+            ('DocketNumber', ''),
+            ('PartyName', ''),
+            ('ReleaseDateFrom', first_date),
+            ('ReleaseDateTo', end_date),
+            ('Keywords', ''),
+            ('SortColumnName', ['Release Date Descending Order',
+                                'Release Date Descending Order']),
+            ('SortOrder', ''),
+            ('CurrentPageNo', '1'),
+            ('Pages', '1'),
+            ('PageSize', '100'),
+        )
+        return urlencode(self.parameters)
 
-    def _download(self, request_dict={}):
-        return super(Site, self)._download(request_dict)
 
-    def _get_precedential_statuses(self):
-        xp = './/div[contains(text(),"Case Name")]/following-sibling::div[1]'
-        return ["Persuasive" for case_name in self.html.xpath(xp)]
+    def _download(self, request_dict={}) -> html.HtmlElement:
+        """Download the HTML
 
-    def _get_docket_numbers(self):
-        xp = './/div[contains(text(),"Docket Number")]/following-sibling::div[1]'
-        return [docket_number.text_content().strip() for docket_number in self.html.xpath(xp)]
+        :param request_dict:
+        :return: The HTML
+        """
+        self.url = f"{self.url}/?{self.set_parameters()}"
+        html = super(Site, self)._download(request_dict)
+        return html
+
+    def _process_html(self) -> None:
+        """Process the data
+
+        :return:
+        """
+        for row in self.html.xpath("//div[@data-rowtype='True']"):
+            docket, name, date = row.xpath(".//div[@class='col-md-7 font-bold']/text()")
+            url = row.xpath(".//div/div/a/@href")[0]
+
+            self.cases.append(
+                {
+                    "date": date.strip(),
+                    "docket": docket.strip(),
+                    "name": name.strip(),
+                    "url": url,
+                    "status": "Unpublished",
+                }
+            )
 
