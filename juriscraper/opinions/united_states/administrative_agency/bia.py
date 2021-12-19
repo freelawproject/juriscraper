@@ -8,7 +8,7 @@ History:
     2021-12-18: Created by William E. Palin
 """
 
-from typing import Dict, Any
+from typing import Any, Dict
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -39,22 +39,24 @@ class Site(OpinionSiteLinear):
         bold_text = elements[0].xpath(".//strong[1]/.. | .//b[1]/..")
         if not bold_text:
             return {}
-        intro_text = elements[0].xpath(".//strong[1]/.. | .//b[1]/..")[0].text_content()
+        intro_text = (
+            elements[0].xpath(".//strong[1]/.. | .//b[1]/..")[0].text_content()
+        )
         name, cite = intro_text.split(",", 1)
-        case['date_filed_is_approximate'] = True
-        case['date'] = f"{cite[-5:-1]}-07-01"
-        case['status'] = "Unpublished"
-        case['neutral_citation'] = cite
-        case['name'] = name
-        case['url'] = elements[0].xpath(".//a")[0].get('href')
-        case['docket'] = elements[0].xpath(".//a")[0].text_content()
+        case["date_filed_is_approximate"] = True
+        case["date"] = f"{cite[-5:-1]}-07-01"
+        case["status"] = "Unpublished"
+        case["neutral_citation"] = cite
+        case["name"] = name
+        case["url"] = elements[0].xpath(".//a")[0].get("href")
+        case["docket"] = elements[0].xpath(".//a")[0].text_content()
 
         # Iterate over the P tags that hold the summaries, sometimes
         summary = []
         for element in elements:
             if element.tag == "p":
                 summary.append(element.text_content())
-        case['summary'] = "\n".join(summary).strip()
+        case["summary"] = "\n".join(summary).strip()
         return case
 
     def _process_html(self):
@@ -71,4 +73,3 @@ class Site(OpinionSiteLinear):
                 if case:
                     self.cases.append(case)
                 elements, case = [], {}
-
