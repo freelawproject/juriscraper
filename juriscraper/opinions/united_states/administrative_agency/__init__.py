@@ -1,7 +1,7 @@
 __all__ = [
     "asbca",
+    "bia",
     "bva",
-    "doj_bia",
     "mspb_p",
     "mspb_u",
 ]
