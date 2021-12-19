@@ -23,6 +23,8 @@ class Site(OpinionSiteLinear):
     def _download(self, request_dict={}):
         html = super()._download(request_dict)
         self.url = html.xpath(".//table//tbody/tr/td/a/@href")[0]
+        if self.test_mode_enabled():
+            return html
         return self._get_html_tree_by_url(self.url)
 
     def _process_html(self):
@@ -46,7 +48,7 @@ class Site(OpinionSiteLinear):
                     "cite": cite,
                     "year": year,
                     "docket": docket.text_content(),
-                    "url": docket.get("href"),
+                    "url": f"https://www.justice.gov{docket.get('href')}",
                     "status": "Unpublished",
                     "date": f"{year}-07-01",
                 }
