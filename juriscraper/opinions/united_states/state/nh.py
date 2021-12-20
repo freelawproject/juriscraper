@@ -14,7 +14,7 @@ History:
     case names and docket numbers appear in anchor text for a single case pdf
     link. Multiple case names are concatenated, and docket numbers are
     concatenated with ',' delimiter
-    - 2021-12-22: Updated for new web site, by satsuki-chan
+    - 2021-12-21: Updated for new web site, by flooie and satsuki-chan
 """
 
 import re
@@ -37,6 +37,8 @@ class Site(OpinionSiteLinear):
         }
 
     def _download(self, request_dict={}):
+        if self.test_mode_enabled():
+            return super()._download(request_dict)
         resp = self.request["session"].get(self.url, params=self.parameters)
         return resp.json()
 
