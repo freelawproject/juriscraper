@@ -152,48 +152,6 @@ class ScraperSpotTest(unittest.TestCase):
             except AttributeError:
                 self.fail(f"Unable to parse {site_id} string: '{raw_string}'")
 
-    def test_nh(self):
-        """Ensures regex parses what we think it should."""
-        string_pairs = (
-            (
-                "2012-644, State of New Hampshire v. Adam Mueller",
-                "State of New Hampshire v. Adam Mueller",
-            ),
-            (
-                "2012-920, In re Trevor G.",
-                "In re Trevor G.",
-            ),
-            (
-                "2012-313, State of New Hampshire v. John A. Smith",
-                "State of New Hampshire v. John A. Smith",
-            ),
-            (
-                "2012-729, Appeal of the Local Government Center, Inc. & a . ",
-                "Appeal of the Local Government Center, Inc. & a .",
-            ),
-            (
-                "2013-0343  In the Matter of Susan Spenard and David Spenard",
-                "In the Matter of Susan Spenard and David Spenard",
-            ),
-            (
-                "2013-0893, Stephen E. Forster d/b/a Forster’s Christmas Tree",
-                "Stephen E. Forster d/b/a Forster’s Christmas Tree",
-            ),
-        )
-        regex = nh.Site().link_text_regex
-        for test, result in string_pairs:
-            try:
-                case_name = regex.search(test).group(2).strip()
-                self.assertEqual(
-                    case_name,
-                    result,
-                    msg="Did not get expected results when regex'ing: '%s'.\n"
-                    "  Expected: '%s'\n"
-                    "  Instead:  '%s'" % (test, result, case_name),
-                )
-            except AttributeError:
-                self.fail(f"Unable to parse nh string: '{test}'")
-
     def test_colo_coloctapp(self):
         """Ensures colo/coloctapp regex parses what we think it should."""
         tests = {
