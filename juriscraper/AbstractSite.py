@@ -414,8 +414,6 @@ class AbstractSite:
         with pdfplumber.load(BytesIO(pdf_bytes)) as pdf:
             return pdf
 
-
-
     def _download_backwards(self):
         # methods for downloading the entire Site
         pass

@@ -1,5 +1,5 @@
 __all__ = [
-    'ala',
+    "ala",
     "alaska",
     "alaskactapp",
     "ariz",
