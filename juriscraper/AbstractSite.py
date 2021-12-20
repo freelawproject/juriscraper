@@ -1,8 +1,10 @@
 import hashlib
 import json
 from datetime import date, datetime
+from io import BytesIO
 
 import certifi
+import pdfplumber
 import requests
 
 from juriscraper.lib.date_utils import fix_future_year_typo, json_date_handler
@@ -405,6 +407,14 @@ class AbstractSite:
         tree = self._return_response_text_object()
         tree.make_links_absolute(url)
         return tree
+
+    def _get_parsed_pdf(self, url):
+        """this is a stand in"""
+        pdf_bytes = requests.get(url, timeout=60).content
+        with pdfplumber.load(BytesIO(pdf_bytes)) as pdf:
+            return pdf
+
+
 
     def _download_backwards(self):
         # methods for downloading the entire Site
