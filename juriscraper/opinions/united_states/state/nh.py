@@ -17,7 +17,7 @@ History:
     - 2021-12-22: Updated for new web site, by satsuki-chan
 """
 
-from datetime import date
+import re
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -26,33 +26,31 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = f"https://www.courts.nh.gov/our-courts/supreme-court/orders-and-opinions/opinions/{date.today().year}"
-        self.cases = []
+        self.url = "https://www.courts.nh.gov/content/api/documents"
+        self.method = "GET"
+        self.parameters = {
+            "sort": "field_date_posted|desc",
+            "page": "1",
+            "size": "25",
+            "purpose": "1331+undefined",
+            "tag": "1206+",
+        }
+
+    def _download(self, request_dict={}):
+        resp = self.request["session"].get(self.url, params=self.parameters)
+        return resp.json()
 
     def _process_html(self) -> None:
-        path = "//div[@class='tabulator-cell']/div[@class='document__detail']/div[@class='document__detail__container']"
-        for item in self.html.xpath(path):
-            title = item.xpath(
-                "./div[@class='document__detail__title']/h3//text()"
-            )[0]
-            url = item.xpath(
-                "./div[@class='document__detail__title']/h3/a/@href"
-            )[0]
-            date = item.xpath(
-                "./div[@class='document__detail__information'][2]/div/text()"
-            )[0]
-            docket_name = title.split(", ", 1)
-            if not docket_name:
-                continue
-            docket = docket_name[0].strip()
-            name = docket_name[1].strip()
-
+        for op in self.html["data"]:
+            docket, name = op["documentName"].split(",", 1)
+            date = op["documentPosted"]
+            url = re.findall(r"(http.*docu.*\.pdf)", op["documentContent"])[0]
             self.cases.append(
                 {
                     "name": name,
-                    "url": url,
+                    "docket": docket,
                     "date": date,
                     "status": "Published",
-                    "docket": docket,
+                    "url": url,
                 }
             )
