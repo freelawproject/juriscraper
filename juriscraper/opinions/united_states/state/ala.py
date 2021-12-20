@@ -25,7 +25,9 @@ class Site(OpinionSiteLinear):
     def _download(self, request_dict={}):
         html = super()._download(request_dict)
         if self.test_mode_enabled:
-            self.pdf = pdfplumber.open("tests/examples/opinions/united_states/ala_example.pdf")
+            self.pdf = pdfplumber.open(
+                "tests/examples/opinions/united_states/ala_example.pdf"
+            )
             self.date = "December 17, 2021"
             return
 
