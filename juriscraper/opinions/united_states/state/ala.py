@@ -8,6 +8,7 @@ Reviewer:
 History:
  - 2021-12-19: Created.
 """
+import pdfplumber
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -23,6 +24,11 @@ class Site(OpinionSiteLinear):
 
     def _download(self, request_dict={}):
         html = super()._download(request_dict)
+        if self.test_mode_enabled:
+            self.pdf = pdfplumber.open("tests/examples/opinions/united_states/ala_example.pdf")
+            self.date = "December 17, 2021"
+            return
+
         self.url = html.xpath("//*[@id='FileTable']")[0].xpath(".//a/@href")[0]
         self.date = (
             html.xpath("//*[@id='FileTable']")[0]
@@ -43,6 +49,9 @@ class Site(OpinionSiteLinear):
                     return annot["uri"]
 
     def _process_html(self) -> None:
+        # This code uses the nice font size inforamtion to determine
+        # the type of content as it paginates the PDF.
+        # They may be difficult but they are at least consistent.
         for page in self.pdf.pages:
             words = page.extract_words(
                 keep_blank_chars=True, extra_attrs=["fontname", "size"]
@@ -51,20 +60,20 @@ class Site(OpinionSiteLinear):
             for word in words:
                 if word["size"] == 14.00:
                     author = word["text"]
-                    continue
                 if word["size"] == 12.00 and word["x0"] < 100:
                     docket = word["text"]
                     between = True
                     continue
                 if between:
                     case_info = word["text"]
+                    between = False
                     continue
                 if word["text"] == "OPINION":
                     case = {}
                     case["docket"] = docket
                     case["judge"] = author
                     case["name"] = case_info.split("  (")[0]
-                    case["date"] = self.date.split(",", 1)[1].strip()
+                    case["date"] = self.date
                     case["status"] = "Published"
                     case["url"] = self._get_url(page, word)
                     self.cases.append(case)
