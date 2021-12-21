@@ -11,9 +11,6 @@ Date: 2020-02-27
 from datetime import date, timedelta
 from urllib.parse import urlencode
 
-from lxml import html
-from lxml.html import tostring
-
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
