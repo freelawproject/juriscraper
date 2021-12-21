@@ -27,12 +27,13 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.courts.nh.gov/content/api/documents"
-        self.method = "GET"
         self.parameters = {
             "sort": "field_date_posted|desc",
             "page": "1",
             "size": "25",
+            # Opinions have a "documentPurposes" value of "1331|"
             "purpose": "1331+undefined",
+            # Opinions have a "documentTags" value of "1206|"
             "tag": "1206+",
         }
 
@@ -43,10 +44,12 @@ class Site(OpinionSiteLinear):
         return resp.json()
 
     def _process_html(self) -> None:
-        for op in self.html["data"]:
-            docket, name = op["documentName"].split(",", 1)
-            date = op["documentPosted"]
-            url = re.findall(r"(http.*docu.*\.pdf)", op["documentContent"])[0]
+        for case in self.html["data"]:
+            docket, name = case["documentName"].split(",", 1)
+            date = case["documentPosted"]
+            url = re.findall(r"(http.*docu.*\.pdf)", case["documentContent"])[
+                0
+            ]
             self.cases.append(
                 {
                     "name": name,
