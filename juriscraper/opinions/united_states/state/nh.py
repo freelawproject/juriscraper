@@ -40,6 +40,7 @@ class Site(OpinionSiteLinear):
     def _download(self, request_dict={}):
         if self.test_mode_enabled():
             return super()._download(request_dict)
+        # Calls to API with POST are not allowed, using GET method
         resp = self.request["session"].get(self.url, params=self.parameters)
         return resp.json()
 
