@@ -22,11 +22,15 @@ class Site(OpinionSiteLinear):
         }
 
     def _process_html(self) -> None:
-        vs = self.html.xpath("//input[@id='__VIEWSTATE']")[0].get("value")
-        self.parameters["__VIEWSTATE"] = vs
+        if not self.test_mode_enabled():
+            vs = self.html.xpath("//input[@id='__VIEWSTATE']")[0].get("value")
+            self.parameters["__VIEWSTATE"] = vs
+        else:
+            self.pages_to_process = 1
         for page in range(1, self.pages_to_process + 1):
-            self.parameters["__EVENTARGUMENT"] = page
-            self._request_url_post(self.url)
+            if not self.test_mode_enabled():
+                self.parameters["__EVENTARGUMENT"] = page
+                self._request_url_post(self.url)
             rows = self.html.xpath("//table[@class='info-table']/tbody/div/tr")
             for row in rows[1:]:
                 self.cases.append(
@@ -39,6 +43,8 @@ class Site(OpinionSiteLinear):
                         ),
                     }
                 )
+            if self.test_mode_enabled():
+                continue
 
     def get_cell_text(self, row: lxml.html.Element, index: int) -> str:
         """Return the text of cell [index] in row"""
