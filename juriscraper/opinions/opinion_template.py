@@ -25,7 +25,6 @@ class Site(OpinionSite):
         # if a POST, use these two attributes, otherwise, delete them.
         self.parameters = {}
         self.method = "POST"
-        self.uses_selenium = False
 
     """
     Required fields - InsanityExceptions will be thrown if omitted.

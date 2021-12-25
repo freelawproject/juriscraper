@@ -59,7 +59,6 @@ class AbstractSite:
         self.court_id = None
         self.url = None
         self.parameters = None
-        self.uses_selenium = None
         self._opt_attrs = []
         self._req_attrs = []
         self._all_attrs = []

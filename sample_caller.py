@@ -232,8 +232,6 @@ def main():
                         3,
                         f"Sent {site.method} request to: {site.url}",
                     )
-                    if site.uses_selenium:
-                        v_print(3, "Selenium will be used.")
                     site.parse()
                     results[current_court]["scrape"] = scrape_court(
                         site, binaries
