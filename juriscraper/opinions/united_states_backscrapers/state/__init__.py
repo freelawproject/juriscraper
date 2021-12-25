@@ -8,6 +8,5 @@ __all__ = [
     "idahoctapp_u",
     "me_2013",
     "nd",
-    "sd",
     "utahctapp",
 ]
