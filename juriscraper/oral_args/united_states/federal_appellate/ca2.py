@@ -29,7 +29,6 @@ class Site(OralArgumentSite):
             "IW_FIELD_TEXT": "*",
             "IW_DATABASE": "Oral Args",
         }
-        self.uses_selenium = False
         self.base_xpath = '//tr[contains(.//a/@href, "mp3")]'
 
     def _make_html_tree(self, text):

@@ -1,5 +1,5 @@
-# Scraper for Texas 6th Court of Appeals
-# CourtID: texapp6
+# Scraper for Texas 2nd Court of Appeals
+# CourtID: texapp2
 # Court Short Name: TX
 # Author: Andrei Chelaru
 # Reviewer: mlr
@@ -13,4 +13,6 @@ class Site(tex.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.court_name = "capp_6"
+        self.court_name = "capp_4"
+        del self.parameters["ctl00$ContentPlaceHolder1$chkListCourts$0"]
+        self.parameters["ctl00$ContentPlaceHolder1$chkListCourts$7"] = "on"

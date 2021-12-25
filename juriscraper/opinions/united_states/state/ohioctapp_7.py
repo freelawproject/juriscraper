@@ -1,4 +1,4 @@
-"""Scraper for the 1st District Court of Appeals
+"""Scraper for the 7th District Court of Appeals
 CourtID: ohio
 Court Short Name: Ohio
 Author: Andrei Chelaru
@@ -11,4 +11,4 @@ class Site(ohio.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.court_index = 7
+        self.data["ctl00$MainContent$ddlCourt"] = 7

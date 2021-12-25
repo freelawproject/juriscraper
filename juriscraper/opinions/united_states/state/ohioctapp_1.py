@@ -11,4 +11,4 @@ class Site(ohio.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.court_index = 1
+        self.data["ctl00$MainContent$ddlCourt"] = 1

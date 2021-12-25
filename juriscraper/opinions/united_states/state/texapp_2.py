@@ -14,3 +14,5 @@ class Site(tex.Site):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.court_name = "capp_2"
+        del self.parameters["ctl00$ContentPlaceHolder1$chkListCourts$0"]
+        self.parameters["ctl00$ContentPlaceHolder1$chkListCourts$3"] = "on"
