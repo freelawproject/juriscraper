@@ -9,14 +9,10 @@ History:
  - 2015-07-31: Redone by mlr to use ghost driver. Alas, their site used to be
                great, but now it's terribly frustrating.
 """
-from datetime import date, datetime
+from datetime import date
 
 from lxml import html
-from lxml.html import tostring
 
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.html_utils import fix_links_in_lxml_tree
-from juriscraper.lib.string_utils import clean_if_py3
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -48,7 +44,7 @@ class Site(OpinionSiteLinear):
             self.url = "https://www.supremecourt.ohio.gov/rod/docs/"
             response = self.request["session"].post(self.url, data=self.data)
             self.html = html.fromstring(response.text)
-            print(response.text)
+
         for row in self.html.xpath(
             ".//table[@id='MainContent_gvResults']//tr"
         )[3:-2]:

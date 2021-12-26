@@ -64,13 +64,9 @@ class Site(OpinionSiteLinear):
                 "//input[@id='__VIEWSTATE']"
             )[0].get("value")
             self._request_url_post(self.url)
-            self.results = lxml.html.fromstring(self.request["response"].text)
-        else:
-            self.results = self.html
+            self.html = lxml.html.fromstring(self.request["response"].text)
 
-        for row in self.results.xpath(
-            "//table[@class='rgMasterTable']/tbody/tr"
-        ):
+        for row in self.html.xpath("//table[@class='rgMasterTable']/tbody/tr"):
             case_slug = row.xpath(".//a")[2].get("href")
             case_url = f"https://search.txcourts.gov/{case_slug}"
             if self.test_mode_enabled():
