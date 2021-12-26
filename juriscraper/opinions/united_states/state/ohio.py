@@ -38,15 +38,17 @@ class Site(OpinionSiteLinear):
         }
 
     def _process_html(self):
-        self.data["__EVENTVALIDATION"] = self.html.xpath(
-            "//input[@id='__EVENTVALIDATION']"
-        )[0].get("value")
-        self.data["__VIEWSTATE"] = self.html.xpath(
-            "//input[@id='__VIEWSTATE']"
-        )[0].get("value")
-        self.url = "https://www.supremecourt.ohio.gov/rod/docs/"
-        response = self.request["session"].post(self.url, data=self.data)
-        self.html = html.fromstring(response.text)
+        if not self.test_mode_enabled():
+            self.data["__EVENTVALIDATION"] = self.html.xpath(
+                "//input[@id='__EVENTVALIDATION']"
+            )[0].get("value")
+            self.data["__VIEWSTATE"] = self.html.xpath(
+                "//input[@id='__VIEWSTATE']"
+            )[0].get("value")
+            self.url = "https://www.supremecourt.ohio.gov/rod/docs/"
+            response = self.request["session"].post(self.url, data=self.data)
+            self.html = html.fromstring(response.text)
+            print(response.text)
         for row in self.html.xpath(
             ".//table[@id='MainContent_gvResults']//tr"
         )[3:-2]:

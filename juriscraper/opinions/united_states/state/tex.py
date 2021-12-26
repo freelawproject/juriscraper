@@ -59,26 +59,36 @@ class Site(OpinionSiteLinear):
         }
 
     def _process_html(self) -> None:
-        self.parameters["__VIEWSTATE"] = self.html.xpath(
-            "//input[@id='__VIEWSTATE']"
-        )[0].get("value")
-        self._request_url_post(self.url)
-        self.results = lxml.html.fromstring(self.request["response"].text)
+        if not self.test_mode_enabled():
+            self.parameters["__VIEWSTATE"] = self.html.xpath(
+                "//input[@id='__VIEWSTATE']"
+            )[0].get("value")
+            self._request_url_post(self.url)
+            self.results = lxml.html.fromstring(self.request["response"].text)
+        else:
+            self.results = self.html
 
         for row in self.results.xpath(
             "//table[@class='rgMasterTable']/tbody/tr"
         ):
             case_slug = row.xpath(".//a")[2].get("href")
             case_url = f"https://search.txcourts.gov/{case_slug}"
-            self._request_url_get(case_url)
-            case_page = lxml.html.fromstring(self.request["response"].text)
-            name = case_page.xpath("//div[@class='span10']")[-2:]
-            name = " v. ".join([x.text_content().strip() for x in name])
+            if self.test_mode_enabled():
+                name = "No case names fetched during tests."
+            else:
+                self._request_url_get(case_url)
+                case_page = lxml.html.fromstring(self.request["response"].text)
+                name = case_page.xpath("//div[@class='span10']")[-2:]
+                name = " v. ".join([x.text_content().strip() for x in name])
+                name = titlecase(name)
+            url = row.xpath(".//a")[1].get("href")
+            if "http" not in url:
+                url = f"https://search.txcourts.gov/{url}"
             self.cases.append(
                 {
                     "date": row.xpath(f".//td[2]")[0].text_content(),
                     "docket": row.xpath(f".//td[5]")[0].text_content(),
-                    "name": titlecase(name),
-                    "url": f'https://search.txcourts.gov/{row.xpath(".//a")[1].get("href")}',
+                    "name": name,
+                    "url": url,
                 }
             )

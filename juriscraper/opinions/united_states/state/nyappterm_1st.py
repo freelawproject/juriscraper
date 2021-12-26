@@ -1,7 +1,7 @@
 # Scraper for New York Appellate Term 1st Dept.
 # CourtID: nyappterm_1st
 # Court Short Name: NY
-
+import re
 from datetime import date, timedelta
 
 from lxml.html import fromstring
@@ -42,15 +42,18 @@ class Site(OpinionSiteLinear):
         self.url = "https://iapps.courts.state.ny.us/lawReporting/Search?searchType=opinion"
 
     def _process_html(self):
-        self.request["session"].post(self.url, data=self.parameters)
-        self.html = fromstring(self.request["response"].text)
+        if not self.test_mode_enabled():
+            self.request["session"].post(self.url, data=self.parameters)
+            self.html = fromstring(self.request["response"].text)
         for row in self.html.xpath(".//table")[-1].xpath(".//tr")[1:]:
             docket = " ".join(row.xpath("./td[5]//text()"))
+            url = row.xpath(".//a")[0].get("href")
+            url = re.findall(r"(http.*htm)", url)[0]
             self.cases.append(
                 {
                     "name": row.xpath(".//td")[0].text_content(),
                     "date": row.xpath(".//td")[1].text_content(),
-                    "url": row.xpath(".//a")[0].get("href"),
+                    "url": url,
                     "status": "Published"
                     if "(U)" not in docket
                     else "Unpublished",

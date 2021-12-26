@@ -39,7 +39,6 @@ class Site(OpinionSiteLinear):
         )
 
     def _process_html(self):
-        print(self.json)
         for row in self.json["Row"]:
             url_path = row["FileRef.urlencodeasurl"]
             self.cases.append(
