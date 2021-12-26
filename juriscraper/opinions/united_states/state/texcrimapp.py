@@ -1,10 +1,10 @@
-# Scraper for Texas 2nd Court of Appeals
-# CourtID: texapp2
+# Scraper for Texas Criminal Court of Appeals
+# CourtID: texcrimapp
 # Court Short Name: TX
-# Author: Andrei Chelaru
-# Reviewer: mlr
-# Date: 2014-07-10
-
+# Author: Michael Lissner
+# Reviewer: None
+# Date: 2015-09-02
+# Updated: 2021-12-26, by: flooie
 
 from juriscraper.opinions.united_states.state import tex
 
