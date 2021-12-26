@@ -8,6 +8,7 @@ History:
  - 2014-07-30: Finished by Andrei Chelaru
  - 2015-07-31: Redone by mlr to use ghost driver. Alas, their site used to be
                great, but now it's terribly frustrating.
+ - 2021-12-26: Remove selenium
 """
 from datetime import date
 
@@ -23,6 +24,7 @@ class Site(OpinionSiteLinear):
         self.year = str(date.today().year)
         self.url = "https://www.supremecourtofohio.gov/rod/docs/"
         self.court_id = self.__module__
+        # The required data properties
         self.data = {
             "__VIEWSTATEENCRYPTED": "",
             "ctl00$MainContent$ddlCourt": f"{self.court_index}",
@@ -35,6 +37,7 @@ class Site(OpinionSiteLinear):
 
     def _process_html(self):
         if not self.test_mode_enabled():
+            # Update event validation and view state to enable posting
             self.data["__EVENTVALIDATION"] = self.html.xpath(
                 "//input[@id='__EVENTVALIDATION']"
             )[0].get("value")
@@ -45,6 +48,7 @@ class Site(OpinionSiteLinear):
             response = self.request["session"].post(self.url, data=self.data)
             self.html = html.fromstring(response.text)
 
+        # Skip the header rows and the footer rows
         for row in self.html.xpath(
             ".//table[@id='MainContent_gvResults']//tr"
         )[3:-2]:
