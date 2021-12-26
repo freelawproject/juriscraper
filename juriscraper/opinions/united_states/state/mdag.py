@@ -2,7 +2,7 @@
 CourtID: ag
 Court Short Name: Maryland Attorney General
 """
-
+import json
 from datetime import date
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -29,16 +29,19 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
 
     def _download(self, request_dict={}):
+        if self.test_mode_enabled():
+            self.json = json.load(open(self.url))
+            return
         self.json = (
             self.request["session"]
             .post(self.url, params=self.parameters)
             .json()
         )
-        return None
 
     def _process_html(self):
+        print(self.json)
         for row in self.json["Row"]:
-            url_path = {row["FileRef.urlencodeasurl"]}
+            url_path = row["FileRef.urlencodeasurl"]
             self.cases.append(
                 {
                     "docket": row["Title"],
