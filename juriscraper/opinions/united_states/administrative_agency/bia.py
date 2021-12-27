@@ -7,7 +7,7 @@ Type:
 History:
     2021-12-18: Created by William E. Palin
 """
-
+import re
 from typing import Any, Dict
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -19,18 +19,19 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = "https://www.justice.gov/eoir/ag-bia-decisions"
         self.article = None
-
-    def _download(self, request_dict={}):
-        html = super()._download(request_dict)
-        self.url = html.xpath(".//table//tbody/tr/td/a/@href")[0]
-        if self.test_mode_enabled():
-            return html
-        return self._get_html_tree_by_url(self.url)
+        self.volume = 0
+        self.urls = None
 
     def _process_elements(self, elements) -> Dict[str, Any]:
         """Process the element grouping.
 
-        They extra nest and its a real pain to get everything.
+        There is no easy way to parse our the content. Unfortunately, the DOJ
+        admins randomly nest elements and not others. The only consistency
+        is that they content is always split between HR tags.  So we iterate
+        over the elements in order until we find an HR tag and then process
+        the content.  Rinse Wash Repeat.
+
+        Additionally, the only date we have is the year of the decision.
 
         :param elements: The elements between <hr> tags.
         :return: Case data
@@ -42,11 +43,15 @@ class Site(OpinionSiteLinear):
         intro_text = (
             elements[0].xpath(".//strong[1]/.. | .//b[1]/..")[0].text_content()
         )
+        intro_text = intro_text.replace(";", ",")
         name, cite = intro_text.split(",", 1)
         # Unfortunately there are no accessible file dates without PDF parsing
         # So we generate a date and mark it as date_filed_is_approximate = True
         case["date_filed_is_approximate"] = True
-        case["date"] = f"{cite[-5:-1]}-07-01"
+        years = re.findall(r"\d{4}", cite)
+        if not years:
+            return {}
+        case["date"] = f"{years[-1]}-07-01"
         case["status"] = "Unpublished"
         case["neutral_citation"] = cite
         case["name"] = name
@@ -62,9 +67,29 @@ class Site(OpinionSiteLinear):
         return case
 
     def _process_html(self):
+        if not self.test_mode_enabled():
+            # Sort the URLS by volume to enable the backscraper
+            # We reverse sort the links by volume and choose the first one
+            # unless we are in a backscraper and then we choose what loop
+            # we are in.
+            if not self.urls:
+                urls = self.html.xpath(
+                    ".//table[1]/tbody/tr/td/a[contains(., 'Volume')]"
+                )
+
+                def get_text(elem):
+                    return elem.text_content()
+
+                self.urls = sorted(urls, key=get_text, reverse=True)
+            self.url = self.urls[self.volume].get("href")
+            # Download the new page of decisions
+            self.html = super()._download()
+
+        # Get the article which will contain all of our content.
         article = self.html.xpath(".//article")[0]
-        # get the last element in the article, this triggers the process_elements
-        # method on the final call.
+        # get the last element in the article
+        # this ends the process_elements method on the final call because no
+        # hr tag is present on the last decision
         *_, last = article.iter()
         # Iterate over every tag in the article to separate out the cases.
         elements = []
