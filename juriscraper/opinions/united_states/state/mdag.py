@@ -28,17 +28,16 @@ class Site(OpinionSiteLinear):
         }
         self.status = "Published"
 
-    def _download(self, request_dict={}):
+    def _process_html(self):
         if self.test_mode_enabled():
             self.json = json.load(open(self.url))
-            return
-        self.json = (
-            self.request["session"]
-            .post(self.url, params=self.parameters)
-            .json()
-        )
+        else:
+            self.json = (
+                self.request["session"]
+                .post(self.url, params=self.parameters)
+                .json()
+            )
 
-    def _process_html(self):
         for row in self.json["Row"]:
             url_path = row["FileRef.urlencodeasurl"]
             self.cases.append(
