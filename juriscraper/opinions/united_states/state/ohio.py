@@ -12,8 +12,6 @@ History:
 """
 from datetime import date
 
-from lxml import html
-
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -45,13 +43,17 @@ class Site(OpinionSiteLinear):
                 "//input[@id='__VIEWSTATE']"
             )[0].get("value")
             self.url = "https://www.supremecourt.ohio.gov/rod/docs/"
-            response = self.request["session"].post(self.url, data=self.data)
-            self.html = html.fromstring(response.text)
+            self.method = "POST"
+            self.parameters = self.data
+            self.html = self._download()
 
         # Skip the header rows and the footer rows
         for row in self.html.xpath(
             ".//table[@id='MainContent_gvResults']//tr"
         )[3:-2]:
+            # Filter out the case announcements and rulings (ie non-opinions)
+            if not row.xpath(".//td[2]//text()")[0].strip():
+                continue
             self.cases.append(
                 {
                     "judge": row.xpath(".//td[4]//text()")[0],
