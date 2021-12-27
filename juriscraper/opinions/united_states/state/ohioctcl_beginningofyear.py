@@ -1,15 +1,16 @@
 # Auth: arderyp
 # Date: 2017-01-26
 
-from juriscraper.opinions.united_states.state import ohioctcl
+from datetime import date
 
 from lxml import html
-from datetime import date
+
+from juriscraper.opinions.united_states.state import ohioctcl
 
 
 class Site(ohioctcl.Site):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
 
         # If it's January, we need to make sure that we aren't
@@ -20,4 +21,4 @@ class Site(ohioctcl.Site):
         else:
             # This simply aborts the crawler.
             self.status = 200
-            self.html = html.fromstring('<html></html>')
+            self.html = html.fromstring("<html></html>")

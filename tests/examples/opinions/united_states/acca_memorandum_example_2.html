@@ -17,7 +17,7 @@
 <script language="JavaScript" type="text/javascript" src="https://www.jagcnet.army.mil/85257546006DF36B/AjaxCall.js"></script>
 <title>ACCA - Opinions: Memorandum Opinions by Date</title>
 <script language="JavaScript" type="text/javascript">
-<!-- 
+<!--
 document._domino_target = "_self";
 function _doClick(v, o, t) {
   var returnValue = false;
@@ -36,7 +36,7 @@ function _doClick(v, o, t) {
 </script>
 
 <script language="JavaScript" type="text/javascript">
-<!-- 
+<!--
 function searchCatalog(searchOrder) {
 	doc=document.forms[0];
 	vwnm = doc.ViewName.value
@@ -57,13 +57,13 @@ function searchCatalog(searchOrder) {
 	}
 }
 
-function handleKey(btnid) 
+function handleKey(btnid)
 {
 	var pressedKey = window.event.keyCode;
-	var objBtn;	
+	var objBtn;
 	if (pressedKey == 13)
 	{
-		window.event.returnValue=false;	
+		window.event.returnValue=false;
 		objBtn = document.getElementById(btnid);
 		if (objBtn) objBtn.click();
 		return false;
@@ -162,18 +162,18 @@ $( document ).ready(function() {
 			break;
 		case "AllDelOpns":
 			result = "All Deleted Opinions";
-	} 
-	$("#bannerTitle").html(result); 
+	}
+	$("#bannerTitle").html(result);
 	if( vwnm != "AllDelOpns" && vwnm != "DelMOD" && vwnm != "DelOD" && vwnm != "DelSD") {
 		$('#viewbttnbar').css("display","block");
 		$('#viewsrchfnd').css("display","block");
 		$('#viewsrchsctn').css("display","block");
-	} 
+	}
 	if( isSearchForm == 1 ) {
-		$('tr.domino-view-colhead').each(function(){  
+		$('tr.domino-view-colhead').each(function(){
 	  		$(this).children('th').eq(0).remove();
 		});
-		$('tr.domino-viewentry').each(function(){ 
+		$('tr.domino-viewentry').each(function(){
 		  	$(this).children('td').eq(0).remove();
 		});
 		if (result != "") {
@@ -187,7 +187,7 @@ $( document ).ready(function() {
 	} else {
 		classnm = classnm + "2";
 	}
-	$('.'+classnm).each(function(i){  
+	$('.'+classnm).each(function(i){
 		$(this).remove();
 	});
 	$('#tblViewBody').css("display","block");
@@ -213,7 +213,7 @@ $( document ).ready(function() {
 <tr valign="top"><td class="labelCell" width="865"><div id='viewsrchfnd' style='display:none;'></div></td></tr>
 
 <tr valign="top"><td class="labelCell" width="865"><div id='viewsrchsctn' style='display:none;'>
-<p>Enter your desired search term: <input type="text" name="Search" style="width: 350px;" onkeypress="return handleKey('btnFindOpinion')"> 
+<p>Enter your desired search term: <input type="text" name="Search" style="width: 350px;" onkeypress="return handleKey('btnFindOpinion')">
 <input type="button" onclick="showHideIndicator(&quot;block&quot;);
 searchCatalog(&quot;4&quot;)" value="Find Opinion" id="btnFindOpinion" style="background-color:#F7F7F7; width:100px" /></p>
 </div></td></tr>
@@ -3718,7 +3718,7 @@ searchCatalog(&quot;4&quot;)" value="Find Opinion" id="btnFindOpinion" style="ba
 
 <tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">09/14/2000</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/89A6D334435CCF9C85256C650005F4D7?EditDocument&vw=MODD">09/14/2000</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/89A6D334435CCF9C85256C650005F4D7/$FILE/mo-yelder,al.doc">ARMY 9900741 - United States v. Private E2 ANTONIO L. YELDER</a></td></tr>
 
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">09/14/2000</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/609BAF78999923AB85256C650005F4B8?EditDocument&vw=MODD">09/14/2000</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/609BAF78999923AB85256C650005F4B8/$FILE/mo-vieyra-blanco,w.doc">ARMY 9900095 - United States v. Private E2 WALDO VIEYRA-BLANCO, 
+<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">09/14/2000</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/609BAF78999923AB85256C650005F4B8?EditDocument&vw=MODD">09/14/2000</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/609BAF78999923AB85256C650005F4B8/$FILE/mo-vieyra-blanco,w.doc">ARMY 9900095 - United States v. Private E2 WALDO VIEYRA-BLANCO,
 AKA WALDO VIEYRA</a></td></tr>
 
 <tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">09/01/2000</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/A37A51B526C318D685256C650005F3F9?EditDocument&vw=MODD">09/01/2000</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/A37A51B526C318D685256C650005F3F9/$FILE/mo-gutierrez,je.doc">ARMY 9901094 - United States v. Private E1 JAMIE E. GUTIERREZ</a></td></tr>

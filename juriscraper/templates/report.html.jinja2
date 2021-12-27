@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Juriscraper Status Report</title>
+  <style>
+    .error-tally {
+      margin-left: 2rem;
+    }
+
+    .error-detail {
+      margin-left: 1.5rem;
+    }
+
+    .scraper {
+      background-color: #CCC;
+      margin-top: .5rem;
+      padding: .2rem;
+    }
+
+    .error-header {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Status Report</h1>
+  <p>Generated on {{ generated_on }}</p>
+
+  <h2>{{ count }} total scrapers run</h2>
+  <h2 style="color: {{'red' if total_errors > 0 else 'green'}}">{{ total_errors }} total errors</h2>
+  <div class="error-tally">
+
+    <h3 id="zero" class="error-header">- {{ with_zero_results | length }} scrapers with zero downloaded results</h3>
+    <div class="error-detail zero-detail">
+    {% for name in with_zero_results %}
+      <div class="scraper">{{ name }}</div>
+    {% endfor %}
+    </div>
+
+    <h3 id="binary" class="error-header">- {{ with_errors | length }} scrapers with binary download errors</h3>
+    <div class="error-detail binary-detail">
+    {% for name in with_errors %}
+      <div class="scraper">{{ name }}</div>
+    {% endfor %}
+    </div>
+
+    <h3 id="total" class="error-header">- {{ with_global_failure | length }} scrapers with "total" failure ("CRAWLER DOWN")</h3>
+    <div class="error-detail total-detail">
+    {% for name in with_global_failure %}
+      <div class="scraper">{{ name }}</div>
+    {% endfor %}
+    </div>
+  </div>
+
+  <h2 id="none" class="error-header">- {{ no_error | length }} scrapers completed successfully</h2>
+  <div class="error-tally">
+    <div class="error-detail none-detail">
+    {% for name in no_error %}
+      <div class="scraper">{{ name }}</div>
+    {% endfor %}
+    </div>
+  </div>
+
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script>
+    $('.error-header').click(function() {
+      $('.' + this.id + '-detail').toggle();
+      if ($(this).text().indexOf('+') !== -1) {
+        $(this).text($(this).text().replace('+', '-'));
+      } else {
+        $(this).text($(this).text().replace('-', '+'));
+      }
+    });
+  </script>
+</body>
+</html>

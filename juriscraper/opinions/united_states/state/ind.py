@@ -7,21 +7,22 @@ Reviewer: mlr
 History:
     2014-09-03: Created by Jon Andersen
 """
-from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import clean_if_py3
 import time
 from datetime import date
+
+from juriscraper.lib.string_utils import clean_if_py3
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
-        self.url = 'http://www.in.gov/judiciary/opinions/supreme.html'
+        super().__init__(*args, **kwargs)
+        self.url = "http://www.in.gov/judiciary/opinions/supreme.html"
         self.court_id = self.__module__
         self.my_precedential_statuses = []
 
     def _get_case_names(self):
-        raw_case_names = [s for s in self.html.xpath('//dl/dt/a/text()')]
+        raw_case_names = [s for s in self.html.xpath("//dl/dt/a/text()")]
         case_names = []
         self.my_precedential_statuses = []
         for case_name in raw_case_names:
@@ -34,24 +35,30 @@ class Site(OpinionSite):
         return case_names
 
     def _get_download_urls(self):
-        return [s for s in self.html.xpath('//dl/dt/a/@href')]
+        return [s for s in self.html.xpath("//dl/dt/a/@href")]
 
     def _get_case_dates(self):
         dates = []
-        for date_string in self.html.xpath('//dl/dd/dd/dd/text()'):
+        for date_string in self.html.xpath("//dl/dd/dd/dd/text()"):
             date_string = clean_if_py3(date_string).strip()
-            if date_string == '':
-                dates.append('')
+            if date_string == "":
+                dates.append("")
             else:
-                dates.append(date.fromtimestamp(
-                    time.mktime(time.strptime(date_string, '%m/%d/%y'))))
+                dates.append(
+                    date.fromtimestamp(
+                        time.mktime(time.strptime(date_string, "%m/%d/%y"))
+                    )
+                )
         return dates
 
     def _get_docket_numbers(self):
-        return [s for s in self.html.xpath('//dl/dd/text()')]
+        return [s for s in self.html.xpath("//dl/dd/text()")]
 
     def _get_lower_court_numbers(self):
-        return [e if e.strip() != "N/A" else "" for e in self.html.xpath('//dl/dd/dd/text()')]
+        return [
+            e if e.strip() != "N/A" else ""
+            for e in self.html.xpath("//dl/dd/dd/text()")
+        ]
 
     def _get_precedential_statuses(self):
         return self.my_precedential_statuses

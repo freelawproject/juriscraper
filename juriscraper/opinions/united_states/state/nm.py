@@ -1,6 +1,6 @@
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
@@ -38,17 +38,19 @@ class Site(OpinionSite):
     # The url query parameter below is required to actually render the data.
     # For whatever reason, the main page (url without IFRAME_QUERY) loads itself
     # with IFRAME_QUERY into an iframe to render the results. Don't ask why.
-    IFRAME = 'iframe=true'
+    IFRAME = "iframe=true"
 
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'https://nmonesource.com/nmos/nmsc/en/nav_date.do?' + self.IFRAME
+        self.url = (
+            f"https://nmonesource.com/nmos/nmsc/en/nav_date.do?{self.IFRAME}"
+        )
         self.cases = []
 
     def _download(self, request_dict={}):
         self.request_dict = request_dict
-        html = super(Site, self)._download(self.request_dict)
+        html = super()._download(self.request_dict)
         self.extract_cases(html)
         return html
 
@@ -58,9 +60,17 @@ class Site(OpinionSite):
         for record in html.xpath('//div[@class="documentList"]//li'):
             url = record.xpath('.//div[@class="documents"]/a/@href')[0]
             info = record.xpath('.//div[@class="subinfo"]')[0]
-            date_string = info.xpath('.//span[@class="publicationDate"]')[0].text_content()
-            court_status_string = info.xpath('.//div[@class="subMetadata"]')[0].text_content()
-            status = 'Unpublished' if 'unreported' in court_status_string.lower() else 'Published'
+            date_string = info.xpath('.//span[@class="publicationDate"]')[
+                0
+            ].text_content()
+            court_status_string = info.xpath('.//div[@class="subMetadata"]')[
+                0
+            ].text_content()
+            status = (
+                "Unpublished"
+                if "unreported" in court_status_string.lower()
+                else "Published"
+            )
             anchor = info.xpath('.//span[@class="title"]/a')[0]
             name = anchor.text_content()
             citation = info.xpath('.//span[@class="citation"]')
@@ -74,39 +84,50 @@ class Site(OpinionSite):
                     continue
                 if self.test_mode_enabled():
                     # avoid hitting network during test
-                    docket = 'test-docket-placeholder'
+                    docket = "test-docket-placeholder"
                 else:
                     # find the docket from the sub page (unpublished opinion)
-                    self.url = '%s?%s' % (anchor.attrib['href'], self.IFRAME)
-                    logger.info('%s: searching for docket on sub page %s' % (self.court_id, self.url))
-                    sub_page = super(Site, self)._download(self.request_dict)
+                    self.url = f"{anchor.attrib['href']}?{self.IFRAME}"
+                    logger.info(
+                        "%s: searching for docket on sub page %s"
+                        % (self.court_id, self.url)
+                    )
+                    sub_page = super()._download(self.request_dict)
                     sub_request_count += 1
                     cell = sub_page.xpath(sub_page_docket_path)
                     if not cell:
                         # if no docket found on sub page, move on to the next opinion
-                        logger.info('no docket found on sub page, skipping opinion "%s"' % name)
+                        logger.info(
+                            'no docket found on sub page, skipping opinion "%s"'
+                            % name
+                        )
                         continue
                     docket = cell[0].text_content().strip()
-                    logger.info('found docket "%s" on sub page for opinion "%s"' % (docket, name))
-            self.cases.append({
-                'name': name,
-                'url': url,
-                'docket': docket,
-                'date': convert_date_string(date_string),
-                'status': status,
-            })
+                    logger.info(
+                        'found docket "%s" on sub page for opinion "%s"'
+                        % (docket, name)
+                    )
+            self.cases.append(
+                {
+                    "name": name,
+                    "url": url,
+                    "docket": docket,
+                    "date": convert_date_string(date_string),
+                    "status": status,
+                }
+            )
 
     def _get_download_urls(self):
-        return [case['url'] for case in self.cases]
+        return [case["url"] for case in self.cases]
 
     def _get_case_names(self):
-        return [case['name'] for case in self.cases]
+        return [case["name"] for case in self.cases]
 
     def _get_case_dates(self):
-        return [case['date'] for case in self.cases]
+        return [case["date"] for case in self.cases]
 
     def _get_precedential_statuses(self):
-        return [case['status'] for case in self.cases]
+        return [case["status"] for case in self.cases]
 
     def _get_docket_numbers(self):
-        return [case['docket'] for case in self.cases]
+        return [case["docket"] for case in self.cases]

@@ -1,10 +1,10 @@
-#Scraper for New Hampshire Supreme Court
-#CourtID: nh
-#Court Short Name: NH
-#Court Contact: webmaster@courts.state.nh.us
-#Author: Andrei Chelaru
-#Reviewer: mlr
-#History:
+# Scraper for New Hampshire Supreme Court
+# CourtID: nh
+# Court Short Name: NH
+# Court Contact: webmaster@courts.state.nh.us
+# Author: Andrei Chelaru
+# Reviewer: mlr
+# History:
 # - 2014-06-27: Created
 # - 2014-10-17: Updated by mlr to fix regex error.
 # - 2015-06-04: Updated by bwc so regex catches comma, period, or whitespaces
@@ -17,39 +17,44 @@
 import re
 from datetime import date
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.exceptions import InsanityException
-from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.string_utils import clean_string, convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
-        self.url = 'http://www.courts.state.nh.us/supreme/opinions/{current_year}/index.htm'.format(
-            current_year=date.today().year)
+        super().__init__(*args, **kwargs)
+        self.url = "http://www.courts.state.nh.us/supreme/opinions/{current_year}/index.htm".format(
+            current_year=date.today().year
+        )
         self.court_id = self.__module__
         self.link_path = 'id("content")/div//ul//li//a[position()=1]'
-        self.link_text_regex = re.compile('(\d{4}-\d+(?!.*\d{4}-\d+))(?:,|\.|\s?) (.*)')
+        self.link_text_regex = re.compile(
+            r"(\d{4}-\d+(?!.*\d{4}-\d+))(?:,|\.|\s?)\s+(.*)", re.M
+        )
         self.docket_name_pairs = False
 
     def _get_case_names(self):
         self.docket_name_pairs = self._get_anchor_docket_name_pairs()
-        return [pair['name'] for pair in self.docket_name_pairs]
+        return [pair["name"] for pair in self.docket_name_pairs]
 
     def _get_download_urls(self):
         path = "id('content')/div//ul//li//a[position()=1]"
         download_url = []
         for element in self.html.xpath(path):
-            url = element.xpath('./@href')[0]
+            url = element.xpath("./@href")[0]
             download_url.extend([url])
         return download_url
 
     def _get_case_dates(self):
         dates = []
         path = 'id("content")/div//strong'
-        sub_path = './following-sibling::ul[1]//li|../following-sibling::ul[1]//li'
+        sub_path = (
+            "./following-sibling::ul[1]//li|../following-sibling::ul[1]//li"
+        )
         for element in self.html.xpath(path):
-            text = element.text_content().strip().rstrip(':')
+            text = element.text_content().strip().rstrip(":")
             try:
                 case_date = convert_date_string(text)
             except ValueError:
@@ -60,10 +65,10 @@ class Site(OpinionSite):
         return dates
 
     def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_names)
+        return ["Published"] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        return [pair['docket'] for pair in self.docket_name_pairs]
+        return [pair["docket"] for pair in self.docket_name_pairs]
 
     def _get_anchor_docket_name_pairs(self):
         """The court has some ugly HTML practices that we need to handle.
@@ -91,27 +96,32 @@ class Site(OpinionSite):
             i = 0
             dockets = []
             name_substrings = []
-            for text in anchor.xpath('text()'):
-                text = text.strip()
+            text_anchor = anchor.text_content()
+            text_clean = text_anchor.replace("\n", "")
+
+            for text in text_clean.split(";"):
+                text = clean_string(text)
                 match = self.link_text_regex.search(text)
                 try:
                     docket = match.group(1)
                     dockets.append(docket)
                     name = match.group(2)
-                    name = ' '.join(name.split())
+                    name = " ".join(name.split())
                     name_substrings.append(name)
                     i += 1
                 except AttributeError:
                     if i == 0:
                         # docket and name (root) should be contained in first substring
-                        error = 'Unexpected anchor root string format: %s' % text
+                        error = f"Invalid anchor root string format: {text}"
                         raise InsanityException(error)
                     # no docket in the substring, its a trailing name substring
                     # that they broke over multiple lines, so glue it to the
                     # previous name substring
-                    name_substrings[i-1] += ' %s' % text
-            pairs.append({
-                'docket': ', '.join(dockets),
-                'name': ' and '.join(name_substrings),
-            })
+                    name_substrings[i - 1] += f" {text}"
+            pairs.append(
+                {
+                    "docket": ", ".join(dockets),
+                    "name": " and ".join(name_substrings),
+                }
+            )
         return pairs

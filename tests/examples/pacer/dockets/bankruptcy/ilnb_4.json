@@ -1,45 +1,45 @@
 {
-  "assigned_to_str": "Jack B. Schmetterer", 
-  "case_name": "Harry B Madsen", 
-  "cause": "", 
-  "court_id": "ilnb", 
-  "date_converted": "1989-02-17", 
-  "date_discharged": null, 
-  "date_filed": "1989-01-18", 
-  "date_terminated": "1998-05-29", 
-  "demand": "", 
-  "docket_entries": [], 
-  "docket_number": "89-00921", 
-  "jurisdiction": "", 
-  "jury_demand": "", 
-  "mdl_status": "", 
-  "nature_of_suit": "", 
+  "assigned_to_str": "Jack B. Schmetterer",
+  "case_name": "Harry B Madsen",
+  "cause": "",
+  "court_id": "ilnb",
+  "date_converted": "1989-02-17",
+  "date_discharged": null,
+  "date_filed": "1989-01-18",
+  "date_terminated": "1998-05-29",
+  "demand": "",
+  "docket_entries": [],
+  "docket_number": "89-00921",
+  "jurisdiction": "",
+  "jury_demand": "",
+  "mdl_status": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
         {
-          "contact": "PRO SE\n", 
-          "name": "Harry B Madsen", 
+          "contact": "PRO SE\n",
+          "name": "Harry B Madsen",
           "roles": []
-        }, 
+        },
         {
-          "contact": "", 
-          "name": "", 
+          "contact": "",
+          "name": "",
           "roles": []
         }
-      ], 
-      "date_terminated": null, 
-      "extra_info": "1 N Nw Hwy\nPark Ridge, IL 60068-3339\nSSN / ITIN: xxx-xx-1951", 
-      "name": "Harry B Madsen", 
+      ],
+      "date_terminated": null,
+      "extra_info": "1 N Nw Hwy\nPark Ridge, IL 60068-3339\nSSN / ITIN: xxx-xx-1951",
+      "name": "Harry B Madsen",
       "type": "Debtor"
-    }, 
+    },
     {
-      "attorneys": [], 
-      "date_terminated": null, 
-      "extra_info": "Joseph Baldi & Associates\n19 S Lasalle Street Suite 1500\nChicago, IL 60603\n312-726-8150", 
-      "name": "Joseph A Baldi, Tr", 
+      "attorneys": [],
+      "date_terminated": null,
+      "extra_info": "Joseph Baldi & Associates\n19 S Lasalle Street Suite 1500\nChicago, IL 60603\n312-726-8150",
+      "name": "Joseph A Baldi, Tr",
       "type": "Trustee"
     }
-  ], 
+  ],
   "referred_to_str": ""
 }

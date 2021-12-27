@@ -1,0 +1,38 @@
+repos:
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v2.29.1
+    hooks:
+     - id: pyupgrade
+       args: [--py37-plus]
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+     - id: check-added-large-files
+     - id: check-ast
+     - id: check-json
+     - id: check-merge-conflict
+     - id: check-toml
+     - id: check-yaml
+     - id: fix-byte-order-marker
+     - id: fix-encoding-pragma
+       args: [--remove]
+     - id: trailing-whitespace
+       args: [--markdown-linebreak-ext=md]
+       exclude: ^tests/examples/pacer/nef/s3/.*\.txt$
+
+  - repo: https://github.com/ikamensh/flynt/
+    rev: '0.69'
+    hooks:
+     - id: flynt
+       args: [--line-length=79, --transform-concats]
+
+  - repo: https://github.com/psf/black
+    rev: 21.12b0
+    hooks:
+     - id: black
+
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.10.1
+    hooks:
+     - id: isort
+       name: isort (python)

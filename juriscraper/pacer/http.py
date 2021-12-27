@@ -1,3 +1,4 @@
+import json
 import re
 
 import requests
@@ -6,7 +7,7 @@ from requests.packages.urllib3 import exceptions
 from ..lib.exceptions import PacerLoginException
 from ..lib.html_utils import get_html_parsed_text, get_xml_parsed_text
 from ..lib.log_tools import make_default_logger
-from ..pacer.utils import is_pdf
+from ..pacer.utils import is_pdf, is_text
 
 logger = make_default_logger()
 
@@ -22,13 +23,25 @@ def check_if_logged_in_page(text):
     :param text: The HTML or XML of the page to test
     :return boolean: True if logged in, False if not.
     """
-    valid_case_number_query = '<case number=' in text or \
-                              "<request number=" in text
-    no_results_case_number_query = re.search('<message.*Cannot find', text)
-    sealed_case_query = re.search('<message.*Case Under Seal', text)
-    if any([valid_case_number_query, no_results_case_number_query,
-            sealed_case_query]):
-        not_logged_in = re.search('text.*Not logged in', text)
+    if isinstance(text, bytes):
+        text = text.decode("utf-8")
+
+    valid_case_number_query = (
+        "<case number=" in text
+        or "<request number=" in text
+        or 'id="caseid"' in text
+        or "Cost: " in text
+    )
+    no_results_case_number_query = re.search("<message.*Cannot find", text)
+    sealed_case_query = re.search("<message.*Case Under Seal", text)
+    if any(
+        [
+            valid_case_number_query,
+            no_results_case_number_query,
+            sealed_case_query,
+        ]
+    ):
+        not_logged_in = re.search("text.*Not logged in", text)
         if not_logged_in:
             # An unauthenticated PossibleCaseNumberApi XML result. Simply
             # continue onwards. The complete result looks like:
@@ -42,8 +55,8 @@ def check_if_logged_in_page(text):
 
     # Detect if we are logged in. If so, no need to do so. If not, we login
     # again below.
-    found_district_logout_link = '/cgi-bin/login.pl?logout' in text
-    found_appellate_logout_link = 'InvalidUserLogin.jsp' in text
+    found_district_logout_link = "/cgi-bin/login.pl?logout" in text
+    found_appellate_logout_link = "InvalidUserLogin.jsp" in text
     if any([found_district_logout_link, found_appellate_logout_link]):
         # A normal HTML page we're logged into.
         return True
@@ -59,24 +72,34 @@ class PacerSession(requests.Session):
     Also includes utilities for logging into PACER and re-logging in when
     sessions expire.
     """
-    LOGIN_URL = 'https://pacer.login.uscourts.gov/csologin/login.jsf'
-    INDEX = 'https://ecf.ilnd.uscourts.gov/cgi-bin/ShowIndex.pl'
 
-    def __init__(self, cookies=None, username=None, password=None):
+    LOGIN_URL = "https://pacer.login.uscourts.gov/services/cso-auth"
+
+    def __init__(
+        self, cookies=None, username=None, password=None, client_code=None
+    ):
         """
-        Instantiate a new PACER HTTP Session with some Juriscraper defaults
-        :param pacer_token: a PACER_SESSION token value
+        Instantiate a new PACER API Session with some Juriscraper defaults
+        :param cookies: an optional RequestsCookieJar object with cookies for the session
+        :param username: a PACER account username
+        :param password: a PACER account password
+        :param client_code: an optional PACER client code for the session
         """
-        super(PacerSession, self).__init__()
-        self.headers['User-Agent'] = 'Juriscraper'
-        self.headers['Referer'] = 'https://external'  # For CVE-001-FLP.
+        super().__init__()
+        self.headers["User-Agent"] = "Juriscraper"
+        self.headers["Referer"] = "https://external"  # For CVE-001-FLP.
         self.verify = False
 
         if cookies:
+            assert not isinstance(cookies, str), (
+                "Got str for cookie parameter. Did you mean "
+                "to use the `username` and `password` kwargs?"
+            )
             self.cookies = cookies
 
         self.username = username
         self.password = password
+        self.client_code = client_code
 
     def get(self, url, auto_login=True, **kwargs):
         """Overrides request.Session.get with session retry logic.
@@ -85,11 +108,11 @@ class PacerSession(requests.Session):
         :param auto_login: Whether the auto-login procedure should happen.
         :return: requests.Response
         """
-        kwargs.setdefault('timeout', 300)
+        kwargs.setdefault("timeout", 300)
 
-        r = super(PacerSession, self).get(url, **kwargs)
+        r = super().get(url, **kwargs)
 
-        if 'This user has no access privileges defined.' in r.text:
+        if "This user has no access privileges defined." in r.text:
             # This is a strange error that we began seeing in CM/ECF 6.3.1 at
             # ILND. You can currently reproduce it by logging in on the central
             # login page, selecting "Court Links" as your destination, and then
@@ -97,12 +120,12 @@ class PacerSession(requests.Session):
             # The solution when this error shows up is to simply re-run the get
             # request, so that's what we do here. PACER needs some frustrating
             # and inelegant hacks sometimes.
-            r = super(PacerSession, self).get(url, **kwargs)
+            r = super().get(url, **kwargs)
         if auto_login:
             updated = self._login_again(r)
             if updated:
                 # Re-do the request with the new session.
-                return super(PacerSession, self).get(url, **kwargs)
+                return super().get(url, **kwargs)
         return r
 
     def post(self, url, data=None, json=None, auto_login=True, **kwargs):
@@ -122,20 +145,20 @@ class PacerSession(requests.Session):
         :param kwargs: assorted keyword arguments
         :return: requests.Response
         """
-        kwargs.setdefault('timeout', 300)
+        kwargs.setdefault("timeout", 300)
 
         if data:
             pacer_data = self._prepare_multipart_form_data(data)
-            kwargs.update({'files': pacer_data})
+            kwargs.update({"files": pacer_data})
         else:
-            kwargs.update({'data': data, 'json': json})
+            kwargs.update({"data": data, "json": json})
 
-        r = super(PacerSession, self).post(url, **kwargs)
+        r = super().post(url, **kwargs)
         if auto_login:
             updated = self._login_again(r)
             if updated:
                 # Re-do the request with the new session.
-                return super(PacerSession, self).post(url, **kwargs)
+                return super().post(url, **kwargs)
         return r
 
     def head(self, url, **kwargs):
@@ -146,8 +169,8 @@ class PacerSession(requests.Session):
         :param kwargs: assorted keyword arguments
         :return: requests.Response
         """
-        kwargs.setdefault('timeout', 300)
-        return super(PacerSession, self).head(url, **kwargs)
+        kwargs.setdefault("timeout", 300)
+        return super().head(url, **kwargs)
 
     @staticmethod
     def _prepare_multipart_form_data(data):
@@ -182,9 +205,11 @@ class PacerSession(requests.Session):
         element.
         """
         tree = get_html_parsed_text(r.content)
-        xpath = '//form[@id="loginForm"]//input[' \
-                '    @name="javax.faces.ViewState"' \
-                ']/@value'
+        xpath = (
+            '//form[@id="loginForm"]//input['
+            '    @name="javax.faces.ViewState"'
+            "]/@value"
+        )
         return tree.xpath(xpath)[0]
 
     @staticmethod
@@ -213,164 +238,93 @@ class PacerSession(requests.Session):
 
     def login(self, url=None):
         """Attempt to log into the PACER site.
+        The first step is to get an authentication token using a PACER
+        username and password.
+        To get the authentication token, it's necessary to send a POST request:
+        curl --location --request POST 'https://pacer.login.uscourts.gov/services/cso-auth' \
+            --header 'Accept: application/json' \
+            --header 'User-Agent: Juriscraper' \
+            --header 'Content-Type: application/json' \
+            --data-raw '{
+                "loginId": "USERNAME",
+                "password": "PASSWORD"
+            }'
 
-        Logging into PACER has two flows. If you have filing permission in any
-        court, you wind up making four POST request which are tied together by
-        a JSESSIONID cookie value and ViewState hidden form inputs.
-
-        If you do *not* have filing permissions, only the first request below
-        is needed. The trick to determine what's needed is to watch for a 302
-        response status or the cookies to be set properly. If you get one or
-        the other, that indicates that you're logged in or that you're being
-        redirected to the correct court/webpage.
-
-        Here are the requests that are needed. First, just GET the login page
-        and parse out the ViewState form value. Then, submit your user/pass:
-
-            curl 'https://pacer.login.uscourts.gov/csologin/login.jsf' \
-              -H 'Content-Type: application/x-www-form-urlencoded' \
-              --data 'login=login&login%3AloginName=mlissner.flp&login%3Apassword=QKAXmos0DyAtpX%26U30O7Vqt%401NNwa3z%5E&login%3AclientCode=&login%3AfbtnLogin=&javax.faces.ViewState=stateless' \
-              --verbose > /tmp/curl-out.html
-
-        If this is *not* a filing account, you should receive a 302 response
-        and the proper cookies at this point. You're logged in.
-
-        If this *is* a filing account, the third request happens when you
-        click the *box* (not the button) saying you'll agree to the redaction
-        rules. Note that the JSESSIONID cookie in this request and the next one
-        is set by the previous request and needs to be carried through. If you
-        receive a new JSESSIONID cookie in response to your second request,
-        something has gone wrong. We also grab the ViewState value from the
-        previous request:
-
-            curl 'https://pacer.login.uscourts.gov/csologin/login.jsf' \
-              -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' \
-              -H 'Cookie: JSESSIONID=C73BDC1E4CA8C5BDEE13EB2F4CB75E06' \
-              --data 'javax.faces.partial.ajax=true&javax.faces.source=regmsg%3AchkRedact&javax.faces.partial.execute=regmsg%3AchkRedact&javax.faces.partial.render=regmsg%3AbpmConfirm&javax.faces.behavior.event=valueChange&javax.faces.partial.event=change&regmsg=regmsg&regmsg%3AchkRedact_input=on&javax.faces.ViewState=stateless' \
-              --verbose > /tmp/curl-out.html
-
-        The fourth request happens when you submit the form saying you promise
-        to redact:
-
-            curl 'https://pacer.login.uscourts.gov/csologin/login.jsf' \
-              -H 'Content-Type: application/x-www-form-urlencoded' \
-              -H 'Cookie: JSESSIONID=C73BDC1E4CA8C5BDEE13EB2F4CB75E06' \
-              --data 'regmsg=regmsg&regmsg%3AchkRedact_input=on&regmsg%3AbpmConfirm=&javax.faces.ViewState=stateless'\
-              --verbose > /tmp/curl-out.html
-
-        If you get a 302 response and the proper cookies at this point, that
-        means you're logged in.
+        All documentation for PACER Authentication API User Guide can be found here:
+        https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide
         """
-        logger.info(u'Attempting PACER site login')
-
+        logger.info("Attempting PACER API login")
         # Clear any remaining cookies. This is important because sometimes we
-        # want to login before an old session has entirely died. One example of
-        # when we do that is when we get the page saying that "This page will
-        # expire in...[so many minutes]." When we see that we just log in
-        # fresh and try again.
+        # want to login before an old session has entirely died.
         self.cookies.clear()
         if url is None:
             url = self.LOGIN_URL
+        # By default, it's assumed that the user is a filer. Redaction flag is set to 1
+        data = {
+            "loginId": self.username,
+            "password": self.password,
+            "redactFlag": "1",
+        }
+        # If optional client code information is included, include in login request
+        if self.client_code:
+            data["clientCode"] = self.client_code
 
-        # Load the page in order to get the ViewState value from the HTML
-        load_page_r = self.get(
+        login_post_r = super().post(
             url,
-            headers={'User-Agent': 'Juriscraper'},
-            auto_login=False,
-            verify=False,
-            timeout=60,
-        )
-
-        login_post_r = self.post(
-            url,
-            headers={'User-Agent': 'Juriscraper'},
-            verify=False,
-            timeout=60,
-            auto_login=False,
-            data={
-                'javax.faces.partial.ajax': 'true',
-                'javax.faces.partial.execute': '@all',
-                'javax.faces.source': 'loginForm:fbtnLogin',
-                'javax.faces.partial.render':
-                    'pscLoginPanel+loginForm+redactionConfirmation+popupMsgId',
-                'javax.faces.ViewState': self._get_view_state(load_page_r),
-
-                'loginForm:courtId_input': 'E_ALMDC',
-                'loginForm:courtId_focus': '',
-                'loginForm:fbtnLogin': 'loginForm:fbtnLogin',
-                'loginForm:loginName': self.username,
-                'loginForm:password': self.password,
-                'loginForm:clientCode': '',
-                'loginForm': 'loginForm',
-
+            headers={
+                "User-Agent": "Juriscraper",
+                "Content-type": "application/json",
+                "Accept": "application/json",
             },
+            timeout=60,
+            data=json.dumps(data),
         )
-        if u'Invalid username or password' in login_post_r.text:
-            raise PacerLoginException("Invalid username/password")
-        if u'Username must be at least 6 characters' in login_post_r.text:
-            raise PacerLoginException("Username must be at least six "
-                                      "characters")
-        if u'Password must be at least 8 characters' in login_post_r.text:
-            raise PacerLoginException("Password must be at least eight "
-                                      "characters")
-        if u'timeout error' in login_post_r.text:
-            raise PacerLoginException("Timeout")
 
-        if not self.cookies.get('PacerSession'):
-            logger.info("Did not get cookies from first log in POSTs. "
-                        "Assuming this is a filing user and doing two more "
-                        "POSTs.")
-            reg_msg_r = self.post(
-                url,
-                headers={'User-Agent': 'Juriscraper'},
-                verify=False,
-                timeout=60,
-                auto_login=False,
-                data={
-                    'javax.faces.partial.ajax': 'true',
-                    'javax.faces.source': 'regmsg:chkRedact',
-                    'javax.faces.partial.execute': 'regmsg:chkRedact',
-                    'javax.faces.partial.render': 'regmsg:bpmConfirm',
-                    'javax.faces.partial.event': 'change',
-                    'javax.faces.behavior.event': 'valueChange',
-                    'javax.faces.ViewState': self._get_xml_view_state(
-                        login_post_r),
+        response_json = login_post_r.json()
+        # 'loginResult': '0', user successfully logged; '1', user not logged
+        if (
+            response_json.get("loginResult") == None
+            or response_json.get("loginResult") == "1"
+        ):
+            message = f"Invalid username/password: {response_json.get('errorDescription')}"
+            raise PacerLoginException(message)
+        # User logged, but with pending actions for their account
+        if response_json.get("loginResult") == "0" and response_json.get(
+            "errorDescription"
+        ):
+            logger.info(response_json.get("errorDescription"))
 
-                    'regmsg': 'regmsg',
-                    'regmsg:chkRedact_input': 'on',
-                },
-            )
-            # The box is now checked. Submit the form to say so.
-            self.post(
-                url,
-                headers={'User-Agent': 'Juriscraper'},
-                verify=False,
-                timeout=60,
-                auto_login=False,
-                data={
-                    'javax.faces.partial.ajax': 'true',
-                    'javax.faces.source': 'regmsg:bpmConfirm',
-                    'javax.faces.partial.execute': '@all',
-                    'javax.faces.ViewState': self._get_xml_view_state(
-                        reg_msg_r),
-
-                    'regmsg': 'regmsg',
-                    'regmsg:chkRedact_input': 'on',
-                    'regmsg:bpmConfirm': 'regmsg:bpmConfirm',
-
-                    'dialogName': 'redactionDlg',
-                },
-            )
-
-        if not self.cookies.get('PacerSession') and \
-                not self.cookies.get('NextGenCSO'):
+        if not response_json.get("nextGenCSO"):
             raise PacerLoginException(
-                'Did not get PacerSession and NextGenCSO '
-                'cookies when attempting PACER login.'
+                "Did not get NextGenCSO cookie when attempting PACER login."
             )
-
-        self.get(self.INDEX, auto_login=False)
-        logger.info(u'New PACER session established.')
+        # Set up cookie with 'nextGenCSO' token (128-byte string of characters)
+        session_cookies = requests.cookies.RequestsCookieJar()
+        session_cookies.set(
+            "NextGenCSO",
+            response_json.get("nextGenCSO"),
+            domain=".uscourts.gov",
+            path="/",
+        )
+        # Support "CurrentGen" servers as well. This can be remoevd if they're
+        # ever all upgraded to NextGen.
+        session_cookies.set(
+            "PacerSession",
+            response_json.get("nextGenCSO"),
+            domain=".uscourts.gov",
+            path="/",
+        )
+        # If optional client code information is included,
+        # 'PacerClientCode' cookie should be set
+        if self.client_code:
+            session_cookies.set(
+                "PacerClientCode",
+                self.client_code,
+                domain=".uscourts.gov",
+                path="/",
+            )
+        self.cookies = session_cookies
+        logger.info("New PACER session established.")
 
     def _login_again(self, r):
         """Log into PACER if the session has credentials and the session has
@@ -384,17 +338,21 @@ class PacerSession(requests.Session):
         if is_pdf(r):
             return False
 
+        if is_text(r):
+            return False
+
         logged_in = check_if_logged_in_page(r.text)
         if logged_in:
             return False
 
         if self.username and self.password:
-            logger.info(u"Invalid/expired PACER session. Establishing new "
-                        u"session.")
+            logger.info(
+                "Invalid/expired PACER session. Establishing new session."
+            )
             self.login()
             return True
         else:
-            msg = (u"Invalid/expired PACER session and do not have "
-                   u"credentials for re-login.")
-            logger.error(msg)
-            raise PacerLoginException(msg)
+            raise PacerLoginException(
+                "Invalid/expired PACER session and do not have credentials "
+                "for re-login."
+            )

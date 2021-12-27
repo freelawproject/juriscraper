@@ -1,0 +1,216 @@
+Return-Path: <ecfnotices+bncBCBL5ZGHVULBBN645KEAMGQEVEAKY6A@everettlawfirm.com>
+Received: from mail-qk1-f198.google.com (mail-qk1-f198.google.com [209.85.222.198])
+ by inbound-smtp.us-east-1.amazonaws.com with SMTP id vgs3r72itjb58hhrtmc2rm321flaqsk138oq7781
+ for pacer@everettlawfirm.business;
+ Mon, 16 Aug 2021 18:28:08 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: none (spfCheck: 209.85.222.198 is neither permitted nor denied by domain of everettlawfirm.com) client-ip=209.85.222.198; envelope-from=ecfnotices+bncBCBL5ZGHVULBBN645KEAMGQEVEAKY6A@everettlawfirm.com; helo=mail-qk1-f198.google.com;
+Authentication-Results: amazonses.com;
+ spf=none (spfCheck: 209.85.222.198 is neither permitted nor denied by domain of everettlawfirm.com) client-ip=209.85.222.198; envelope-from=ecfnotices+bncBCBL5ZGHVULBBN645KEAMGQEVEAKY6A@everettlawfirm.com; helo=mail-qk1-f198.google.com;
+ dkim=pass header.i=@everettlawfirm.com;
+ dmarc=fail header.from=txnd.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFYWZEOFBZM05POU9ZbUs3cHNGTE5YWDl4b2xVUi92QmlMZlUvTEo1VGhPak96Z1dNOFE5akNrV1pFL2FVa2UrRmFrempaL25JR1BBT0ZpSHBTN2FISnc0clZsM0FVQUR0cUJKOGxMa2pET1lTcHpUYmxSdzhQRUROYldzb3VDMjFDL2gxNmRFdlZoTlVtdkZuL1U3cXA2Z0VRYzZGSnc1UkRhOXIvUTFscGFnZlY5T3J2VFprQjNLZ25JSEFiMWxYZ3hyeEV4dENROUc5bER1TlBVbzBQYnEreVpaSnpiaGJGRkFkajZzM2pJQTNyUVErV1h6a3pKY1dtTUM2WmNUcC83RlhZVS9jL1Z1a245b251NjRSTXROMmVQUUdjb0g5NzJqQUJib1pucWh4NjRNNzdKRmIrdUE5eTdXWGRQcnlvOFpsTmYyMG1tck1ONTdtQmZITUc0RlVsWWExVlRZNjdSalRQTFZzNWN3PT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=CgJrqI3uPkfrGMmOTRzT3HovxOBvJERKHNQYKncTWcXkxzxjpSV60z2a4xiBB4lr/FjXvcaGySBl9TZwtpyVFOY+TBgzn1uQupty8tIIeSw/lapmo+SMuiyOMXJLII7Zyro0JW/KzeMdWQ8dqqNh9n+lffUQEitza9rwgl97ZLc=; c=relaxed/simple; s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1629138488; v=1; bh=eH3R3L2RtDRi0ao69LVA/N/EnMVz/kr6rhKQlIpkrMM=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+Received: by mail-qk1-f198.google.com with SMTP id l26-20020a05620a0c1ab02903ca414e2173sf9376614qki.20
+        for <pacer@everettlawfirm.business>; Mon, 16 Aug 2021 11:28:08 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=everettlawfirm.com; s=google;
+        h=sender:date:mime-version:from:to:message-id:subject
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:list-post:list-help:list-archive
+         :list-unsubscribe;
+        bh=YDi77CZ3SncLsKu39Jy+ApmC+epHwwMbI4jHxwkpYfw=;
+        b=hpRYTmfgPIbN9XfpNfuuu3J9dIVJUicwkSoJaQ1eXLd+ws/YPvhAdpJKKDAQMWsP96
+         MgflXLZ325ZCp5DVYnbN208yEYosmI/tNYK+gm2ujvFjucJp2uIsc/1ot13hnQlfudbs
+         THBNXN6n5FfBdqOQbK/wdhNxoUEoHSz2wMBhU=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=sender:x-gm-message-state:date:mime-version:from:to:message-id
+         :subject:x-original-sender:x-original-authentication-results
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-unsubscribe;
+        bh=YDi77CZ3SncLsKu39Jy+ApmC+epHwwMbI4jHxwkpYfw=;
+        b=q0HO4D8dSJOozkYdFSeTNupydTePLOuVDI5eDoDsmTHEyGqb3jyuxKnYm8gb9/BEcf
+         NcnZj3C2sbAQggs+ZPSyRkXfEFRFn6/NiLio9jxW1pkRh7e6IMzJYHwKXhTE/cJ7Yh54
+         DvDGyG0fk4Uo+zXqOAFnOKkSNWWBWQ87mAXaO6Hvga8FoTYXQGpafEYPko+Q8hcTl6mc
+         BIvvIxr1Ia34r5PPX3QinN2GNypK5qZjjokmXP6SKWuJ0zUcXFbuKqu4Oi1pBsc5kKKx
+         1+MY5DW9oEilGJMIMjK2EO4yLy7rmk69mT0jQLDuxQXB5BIkz3xfVFklWTE37mKd1m3B
+         AsVw==
+Sender: ecfnotices@everettlawfirm.com
+X-Gm-Message-State: AOAM531iDbBtpIVyT4G6lM+BhojtGED4rAqQ2+t3pcEL6GtS3HSQezSw
+	CpAnpDv416RXT9pMvoM8HBNRjQ==
+X-Google-Smtp-Source: ABdhPJz1cL3jV+LwzvckwY3A4GCYupLQtwjMOuGmWum325xREMT/BcXMsDt5uFwg9TYPuQuAc/BxEg==
+X-Received: by 2002:ac8:7f15:: with SMTP id f21mr243879qtk.75.1629138487826;
+        Mon, 16 Aug 2021 11:28:07 -0700 (PDT)
+X-BeenThere: ecfnotices@everettlawfirm.com
+Received: by 2002:ac8:5c0c:: with SMTP id i12ls39814qti.6.gmail; Mon, 16 Aug
+ 2021 11:28:07 -0700 (PDT)
+X-Received: by 2002:ac8:7217:: with SMTP id a23mr245310qtp.33.1629138487205;
+        Mon, 16 Aug 2021 11:28:07 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1629138487; cv=none;
+        d=google.com; s=arc-20160816;
+        b=nqixmOTo63k/X7X/FtMsCddELzz3Uq4q+NYgkUEhXkVbt0j4pMbK3q2h5anWytkLC4
+         zM4KcQmtdFsqNF1G7feuHXQL0xAN5SdLeQGOWwBm/nFDU8iKqx2S0vX2wFvlxpckUPNj
+         yWwZHjyvocOPUkO38FRyAhqiIHoPaikMFqLAVPQBgVfJ7/UQ9zM1dDqwWQPzcFMCfYg5
+         qWVG8U3MJANnr98leZMDgYGCXCxOiXRcUICKtAm8VrbfoV5dbpmHV/1in7zVSZmFtF1T
+         rTv/MZqpKkCYW9jki1HJv7zmbLtVNZnHnD7QkcNkYK+08CjVx3TQHxyEJhhO0UHo7AGd
+         vzjg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=subject:message-id:to:from:mime-version:date;
+        bh=YDi77CZ3SncLsKu39Jy+ApmC+epHwwMbI4jHxwkpYfw=;
+        b=0GiacONO6msMYAlNKfYN3wxl99PPmxMyg0vydfF/aW9bHnHkjVGcEXUyB9MmMvK1UG
+         iIFnDOcedaes06mFRJFJ17QSohxM2X0A2mfP2WD8Cd69HbNW/iN42Lg4VoDSLCIZQ4Vl
+         28BU/ru1YSpW7L3EFwD4m5MouRX1tVOQDKmyq3wltoOJvMur9Bc0UaN6dXnephnOFG/g
+         EWV0H23kg96TaJje5X/ri9j0TECochOLxqWtxjy73Lg1AM9Br1sUEGQ8AsfpV+B0HG1E
+         S8DASA7emZwXTzHjhC0dqKE62VNPHB1yczPHeMRyB8/kmky4aJ/ZwY/HRfvgpqaQmaw6
+         /IYg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of ecf_txnd@txnd.uscourts.gov designates 199.107.16.202 as permitted sender) smtp.mailfrom=ecf_txnd@txnd.uscourts.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=uscourts.gov
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov. [199.107.16.202])
+        by mx.google.com with ESMTP id s18si3218381qkg.377.2021.08.16.11.28.07
+        for <ecfnotices@everettlawfirm.com>;
+        Mon, 16 Aug 2021 11:28:07 -0700 (PDT)
+Received-SPF: pass (google.com: domain of ecf_txnd@txnd.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.190
+Received: from txnddb.txnd.gtwy.dcn ([156.119.56.190])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 16 Aug 2021 14:28:06 -0400
+Received: from txnddb.txnd.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by txnddb.txnd.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 17GIRnvT019979;
+	Mon, 16 Aug 2021 13:27:50 -0500
+Received: (from ecf_web@localhost)
+	by txnddb.txnd.gtwy.dcn (8.14.4/8.14.4/Submit) id 17GIRJwa018900;
+	Mon, 16 Aug 2021 13:27:19 -0500
+Date: Mon, 16 Aug 2021 13:27:19 -0500
+X-Authentication-Warning: txnddb.txnd.gtwy.dcn: ecf_web set sender to ecf_txnd@txnd.uscourts.gov using -f
+MIME-Version: 1.0
+From: ecf_txnd@txnd.uscourts.gov
+To: Courtmail@txnd.uscourts.gov
+Message-Id: <13381844@txnd.uscourts.gov>
+Subject: Activity in Case 4:21-cv-00953-P Caulkins v. Ditmore et al Notice of Attorney Appearance
+Content-Type: text/html
+X-Original-Sender: ecf_txnd@txnd.uscourts.gov
+X-Original-Authentication-Results: mx.google.com;       spf=pass (google.com:
+ domain of ecf_txnd@txnd.uscourts.gov designates 199.107.16.202 as permitted
+ sender) smtp.mailfrom=ecf_txnd@txnd.uscourts.gov;       dmarc=pass (p=NONE
+ sp=NONE dis=NONE) header.from=uscourts.gov
+Precedence: list
+Mailing-list: list ecfnotices@everettlawfirm.com; contact ecfnotices+owners@everettlawfirm.com
+List-ID: <ecfnotices.everettlawfirm.com>
+X-Spam-Checked-In-Group: ecfnotices@everettlawfirm.com
+X-Google-Group-Id: 486450346794
+List-Post: <https://groups.google.com/a/everettlawfirm.com/group/ecfnotices/post>,
+ <mailto:ecfnotices@everettlawfirm.com>
+List-Help: <https://support.google.com/a/everettlawfirm.com/bin/topic.py?topic=25838>,
+ <mailto:ecfnotices+help@everettlawfirm.com>
+List-Archive: <https://groups.google.com/a/everettlawfirm.com/group/ecfnotices/>
+List-Unsubscribe: <mailto:googlegroups-manage+486450346794+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/everettlawfirm.com/group/ecfnotices/subscribe>
+
+<p><strong><font color="#FF0000">This is an automatic e-mail message generated by the CM/ECF system. 
+Please DO NOT RESPOND to this e-mail because the mail box is unattended.
+</font><br>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30 page limit do not apply.</strong></p>
+<font color=red>If you need to know whether you must send the presiding judge 
+a paper copy of a document that you have docketed in this case, click here: 
+<a href="http://www.txnd.uscourts.gov/pdf/ecf/judgescopyrequirements.pdf">Judges' 
+Copy Requirements.</a> Click here to see <a href=http://www.txnd.uscourts.gov/judge-specific-requirements 
+target=blank> Judge Specific Requirements. </a> Unless exempted, attorneys 
+who are not admitted to practice in the Northern District of Texas must seek 
+admission promptly. <a href="http://www.txnd.uscourts.gov/attorneyinfo/bar.html">Forms 
+and Instructions</a> found at <a href="http://www.txnd.uscourts.gov">www.txnd.uscourts.gov</a>. 
+If admission requirements are not satisfied within 21 days, the clerk will 
+notify the presiding judge.</font>
+<BR>
+
+<p align=center><strong>U.S. District Court</strong></p>
+<p align=center><strong>Northern District of Texas</strong></p>
+<font size="3" face="arial,helvetica"><b>Notice of Electronic Filing</b></font>
+
+<BR>
+
+<div><BR>
+The following transaction was entered  by Miltenberger, Chris  on 8/16/2021 
+at 1:27 PM CDT and filed on 8/16/2021 <BR>
+
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Caulkins v. Ditmore et al</td></tr>
+
+<tr><td><strong>Case Number:</strong></td><td><A 
+HREF=https://ecf.txnd.uscourts.gov/cgi-bin/DktRpt.pl?351843>4:21-cv-00953-P</A></td></tr>
+
+<tr><td><strong>Filer:</strong></td><td>Kevin 
+Caulkins</td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td> 
+<a href="https://ecf.txnd.uscourts.gov/doc1/177114458489?caseid=351843&de_seq_num=14&magic_num=37789082" 
+>5</a> 
+</td></tr>
+<tr><td><strong></strong></td><td></td></tr>
+</table>
+<p>
+<strong>Docket Text:</strong>
+<BR>
+<FONT  FACE="arial,helvetica" COLOR="#0000cc" SIZE=3><b>
+NOTICE of Attorney Appearance  by Chris 
+R Miltenberger    on behalf of Kevin Caulkins. (Filer confirms contact info 
+in ECF is current.)  (Miltenberger, Chris)
+
+</b></Font>
+</p>
+
+
+
+<BR>
+<B>
+4:21-cv-00953-P Notice has been electronically mailed to:
+</B>
+<BR>
+
+<BR>
+Chris                R Miltenberger                                      
+ &nbsp &nbsp chris@crmlawpractice.com, cmilt@miltenbergerlaw.com, rkmilt@crmlawpractice.com 
+<BR>
+<BR>
+Joshua               Jon Wiley                                         
+   &nbsp &nbsp driscoll@everettlawfirm.com, Ecfnotices@everettlawfirm.com, michael@everettlawfirm.com, 
+sean@everettlawfirm.com, kiona@everettlawfirm.com, west@everettlawfirm.com 
+<BR>
+
+<BR>
+
+<B>
+4:21-cv-00953-P The CM/ECF system has NOT delivered notice electronically 
+to the names listed below. The clerk's office will only serve notice of court 
+Orders and Judgments by mail as required by the federal rules.
+</B>
+<BR>
+
+  
+
+
+
+<div>
+<p>
+The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document <BR>
+<STRONG>Original filename:</STRONG>n/a<BR>
+<STRONG>Electronic document Stamp:</STRONG><BR>
+<TAB>[STAMP dcecfStamp_ID=1004035775 [Date=8/16/2021] [FileNumber=13381843-<BR>
+
+<TAB>0] [3d57675d8b9dcfef048668cc24fe83506802482459d47595024a4b351ca8e83648<BR>
+
+<TAB>43a63a6dd1b7499f9f74f7e8f43213ce13ccb66ec89f0559c44a1cd91ff79c]]<BR>
+
+
+
+</table>
+</div>
+

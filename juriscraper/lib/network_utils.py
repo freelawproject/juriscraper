@@ -13,13 +13,15 @@ class SSLAdapter(HTTPAdapter):
     def __init__(self, ssl_version=None, **kwargs):
         self.ssl_version = ssl_version
 
-        super(SSLAdapter, self).__init__(**kwargs)
+        super().__init__(**kwargs)
 
     def init_poolmanager(self, connections, maxsize, block=False):
-        self.poolmanager = PoolManager(num_pools=connections,
-                                       maxsize=maxsize,
-                                       block=block,
-                                       ssl_version=self.ssl_version)
+        self.poolmanager = PoolManager(
+            num_pools=connections,
+            maxsize=maxsize,
+            block=block,
+            ssl_version=self.ssl_version,
+        )
 
 
 def add_delay(delay=0, deviation=0):
@@ -29,5 +31,5 @@ def add_delay(delay=0, deviation=0):
     deviation is the number of seconds that the delay can vary.
     """
     duration = random.randrange(delay - deviation, delay + deviation)
-    logger.info("Adding a delay of %s seconds. Please wait." % duration)
+    logger.info(f"Adding a delay of {duration} seconds. Please wait.")
     time.sleep(duration)

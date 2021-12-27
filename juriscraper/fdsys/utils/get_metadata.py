@@ -6,16 +6,16 @@ import pprint
 
 from lxml import etree
 
-__author__ = 'mlissner'
+__author__ = "mlissner"
 
 
 def xpath(tree, query):
     return tree.xpath(
         query,
         namespaces={
-            'm': 'http://www.loc.gov/mods/v3',
-            'xlink': 'http://www.w3.org/1999/xlink',
-        }
+            "m": "http://www.loc.gov/mods/v3",
+            "xlink": "http://www.w3.org/1999/xlink",
+        },
     )
 
 
@@ -27,10 +27,10 @@ def get_court_id(fdsys_court):
 def clean_up_rough_data(data):
     """Clean up the data so it's good.
 
-     - [ ] Strip extra spaces from all nodes.
-     - [ ] Convert newlines into spaces.
-     - [ ] Ensure good encodings?
-     - [ ] Review other items from Juriscraper.
+    - [ ] Strip extra spaces from all nodes.
+    - [ ] Convert newlines into spaces.
+    - [ ] Ensure good encodings?
+    - [ ] Review other items from Juriscraper.
 
     """
     return data
@@ -58,13 +58,15 @@ def get_parties(tree):
 
     parties = []
     for party_node in party_nodes:
-        parties.append({
-            'name_first': xpath(party_node, '@m:firstName'),
-            'name_last': xpath(party_node, '@m:lastName'),
-            'name_middle': xpath(party_node, '@m:middleName'),
-            'name_suffix': xpath(party_node, '@m:generation'),
-            'role': xpath(party_node, '@m:role'),
-        })
+        parties.append(
+            {
+                "name_first": xpath(party_node, "@m:firstName"),
+                "name_last": xpath(party_node, "@m:lastName"),
+                "name_middle": xpath(party_node, "@m:middleName"),
+                "name_suffix": xpath(party_node, "@m:generation"),
+                "role": xpath(party_node, "@m:role"),
+            }
+        )
     return parties
 
 
@@ -73,25 +75,31 @@ def get_documents(tree):
     document_nodes = xpath(tree, "//m:mods/m:relatedItem")
     documents = []
     for document_node in document_nodes:
-        documents.append({
-            'download_url': xpath(document_node, 'm:relatedItem/@xlink:href'),
-            'description': xpath(document_node, '//m:subTitle'),
-            'date_filed': xpath(document_node, 'XXX')
-        })
+        documents.append(
+            {
+                "download_url": xpath(
+                    document_node, "m:relatedItem/@xlink:href"
+                ),
+                "description": xpath(document_node, "//m:subTitle"),
+                "date_filed": xpath(document_node, "XXX"),
+            }
+        )
 
 
 def print_xpath_results():
-    for f in glob.glob('../examples/*.xml'):
+    for f in glob.glob("../examples/*.xml"):
         tree = etree.parse(f)
         rough_data = {
-            'download_url': xpath(tree, "(//m:identifier[@type='uri'])[1]/text()"),
-            'fdsys_id': xpath(tree, "(//m:accessId/text())[1]"),
-            'court_id': get_court_id(xpath(tree, "(//m:courtCode/text())[1]")),
-            'docket_number': xpath(tree, "(//m:caseNumber/text())[1]"),
-            'court_location': xpath(tree, "(//m:caseOffice/text())[1]"),
-            'parties': get_parties(tree),
-            'case_name': xpath(tree, "(//m:titleInfo/m:title/text())[1]"),
-            'documents': get_documents(tree),
+            "download_url": xpath(
+                tree, "(//m:identifier[@type='uri'])[1]/text()"
+            ),
+            "fdsys_id": xpath(tree, "(//m:accessId/text())[1]"),
+            "court_id": get_court_id(xpath(tree, "(//m:courtCode/text())[1]")),
+            "docket_number": xpath(tree, "(//m:caseNumber/text())[1]"),
+            "court_location": xpath(tree, "(//m:caseOffice/text())[1]"),
+            "parties": get_parties(tree),
+            "case_name": xpath(tree, "(//m:titleInfo/m:title/text())[1]"),
+            "documents": get_documents(tree),
         }
         data = clean_up_rough_data(rough_data)
         pprint.pprint(data)
@@ -99,7 +107,7 @@ def print_xpath_results():
 
 def main():
     parser = argparse.ArgumentParser(
-            description="Get all the metadata from a mods file."
+        description="Get all the metadata from a mods file."
     )
     args = parser.parse_args()
 
@@ -107,23 +115,26 @@ def main():
 
 
 def get_fdsys_court_names():
-    response = glob.glob('../examples/2015_USCOURTS_sitemap.xml')
+    response = glob.glob("../examples/2015_USCOURTS_sitemap.xml")
     tree = etree.parse(response[0])
     # print(etree.tostring(tree, pretty_print=True))
     data = dict()
 
-    for url in tree.xpath("//m:loc/text()", namespaces={
-            'm': 'http://www.sitemaps.org/schemas/sitemap/0.9',
-            'xlink': 'http://www.w3.org/1999/xlink',
-        }):
-        pre = url.split('-')[1]
+    for url in tree.xpath(
+        "//m:loc/text()",
+        namespaces={
+            "m": "http://www.sitemaps.org/schemas/sitemap/0.9",
+            "xlink": "http://www.w3.org/1999/xlink",
+        },
+    ):
+        pre = url.split("-")[1]
         # if pre not in data and url:
         data[pre] = url
 
-    with open('./fdsys_court_names.json', 'w') as f:
+    with open("./fdsys_court_names.json", "w") as f:
         json.dump(data, f)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
     # get_fdsys_court_names()

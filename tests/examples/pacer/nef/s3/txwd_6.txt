@@ -1,0 +1,222 @@
+Return-Path: <ecfnotices+bncBAABB3VS2GEAMGQEDK4TD7I@everettlawfirm.com>
+Received: from mail-qv1-f72.google.com (mail-qv1-f72.google.com [209.85.219.72])
+ by inbound-smtp.us-east-1.amazonaws.com with SMTP id rt4q50e6d34lmeongv119dmabuvfigfnnrhn2jo1
+ for pacer@everettlawfirm.business;
+ Wed, 11 Aug 2021 23:12:46 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: none (spfCheck: 209.85.219.72 is neither permitted nor denied by domain of everettlawfirm.com) client-ip=209.85.219.72; envelope-from=ecfnotices+bncBAABB3VS2GEAMGQEDK4TD7I@everettlawfirm.com; helo=mail-qv1-f72.google.com;
+Authentication-Results: amazonses.com;
+ spf=none (spfCheck: 209.85.219.72 is neither permitted nor denied by domain of everettlawfirm.com) client-ip=209.85.219.72; envelope-from=ecfnotices+bncBAABB3VS2GEAMGQEDK4TD7I@everettlawfirm.com; helo=mail-qv1-f72.google.com;
+ dkim=pass header.i=@everettlawfirm.com;
+ dmarc=fail header.from=txwd.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHM2MzWlB4cTE1QUNGZ3cveUJTeStDc1lwa0QrRWh6eWxSYmNDcjZ4cW9tOEs3NER0ZEdOMUk3d1dkS0wxVnpIS2FsYW1SUVMrSzBFV25yM3BQMDUxU1Izbk5CQUM2MFVHS3FyK05ieVBTb3Z2YThFY0lvVFRPa2dUNmI5YmRRZWNvTWhHck1jL3pZTGhzTzh0bEg1VTFHY2tCN1JaSUtIUGNoOCtCZEVXc0RCcXU4ZUZxbmUrTFdPbXpBOFBveXJuTjdWZG5rOXRtVGY0NFZDeFpXUXVMYWswaEZsZ1ZGR284dEYxa0VqYTFGQ3JkdmNzVjB0ZUswckJsdlNscVR3MDRGWHoyaXNJTWtXd3RPVVp4RTVSVktpK05UeXlYVS8ySUU0aG93VjZsb2ZlZmdTcHN2MXhaNEZ4Ty9ZQWUwenhnUE1NdnlUZTJEcnVicmlZeE5lUDY=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=DI3+LAmWAUWlU+eaiO06kd5GUA1ITzjmjTkAJjt6H4PE2Yj6RggkYay42KTItMJeR8dcVgZdBFieO0jS9li4ahE/l6UENdEzB54qjAMlsdBoxWHvDFioStDe/m/2I95v5eO+Wrj9v5NXtfWV9V3feVdmDHj/VGseeUejCiiNaIM=; c=relaxed/simple; s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1628723567; v=1; bh=K8j8CF4k/zRhmtLSQ7GTdOfgyXkbLAj1FYh1IFjoMFQ=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+Received: by mail-qv1-f72.google.com with SMTP id a3-20020a0cb3430000b02903432d100232sf2191055qvf.16
+        for <pacer@everettlawfirm.business>; Wed, 11 Aug 2021 16:12:46 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=everettlawfirm.com; s=google;
+        h=sender:date:mime-version:from:to:message-id:subject
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:list-post:list-help:list-archive
+         :list-unsubscribe;
+        bh=+MqPlL574XKhd9sUrVgDMlp41pUxWbtZyVZAsBteKeM=;
+        b=Z23zRH4CsMaKreu+HacKY2dErQlPEYgSz3m9iVREnbKpKQfJ/ckbHglUpgxICLoGUu
+         RKnhL8iOADTLiyQ1MdfTL2+3A1ByqVtA8xHF4bEl40ZEjZA8Va2WwYHZs8BdkjTb5p64
+         ElbqmWAUdKHKWHaBAPyiMijzc0Xa4dCNs1o6w=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=sender:x-gm-message-state:date:mime-version:from:to:message-id
+         :subject:x-original-sender:x-original-authentication-results
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-unsubscribe;
+        bh=+MqPlL574XKhd9sUrVgDMlp41pUxWbtZyVZAsBteKeM=;
+        b=GdeWZk6gepBdx1Etay5mSV0fKf/9kevZNnkWex7mBJlOHYbKevHsorHcySj+Cix5Iv
+         zy11teSkpzdfkLjin6gh/NRt+w4yDJZQ/Zm60kKdIXByD3ZkM7O3COJs69QpuXAbPIzd
+         /sT+vKyiSyVn9HbScMpcIwFm4lQrmUTJjBobpGLGKQeel/5QjI9HkgOUrGjJT3C9g5R0
+         E4xIX9VG6jggvdpvS7rySoLZacwSGuPiJQ9xqYwQk4Xnsk4Ku+lrBFb2axozDGoFftSg
+         uwDSxfhJfXP8CdHnNeYE71FzdhV0dm06Pq5R64xgpjc+buVVp+g2DrRTXKgdbeAYKEA5
+         d4xw==
+Sender: ecfnotices@everettlawfirm.com
+X-Gm-Message-State: AOAM533BfsTcjutKjroUtB4/xDgJOl9f2UCXbesBZeLQZQOFY3LyvI/J
+	WiMSUbAXMhTS6JI0nE/E9KCjvQ==
+X-Google-Smtp-Source: ABdhPJyvw1duAiY1FcZM1XhMLn81vTL5bfyfs+TVXpCD4RepSQl8GaP8/VFI+/DAfc1K9JG0JFRW0A==
+X-Received: by 2002:a05:620a:2a14:: with SMTP id o20mr1546350qkp.109.1628723566469;
+        Wed, 11 Aug 2021 16:12:46 -0700 (PDT)
+X-BeenThere: ecfnotices@everettlawfirm.com
+Received: by 2002:a05:620a:88d:: with SMTP id b13ls2407395qka.6.gmail; Wed, 11
+ Aug 2021 16:12:46 -0700 (PDT)
+X-Received: by 2002:a05:620a:cea:: with SMTP id c10mr1585869qkj.238.1628723565923;
+        Wed, 11 Aug 2021 16:12:45 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1628723565; cv=none;
+        d=google.com; s=arc-20160816;
+        b=BeA498wJyH0X6s6aIbDSJcCkSTQujUR7TK/8rWn9NX9Ucm29ZWFwL0Xa0FtoQDIzg6
+         wv4RGlKJn35luFR92dlVP83f0uA6j86narV3RxdPW9Xom30wC4UQZIozG+B6emGJtmgV
+         1JL2YyAk5feRuu+rGdIgxgEH/PUPdqxI4D6qcU9uqG3bOORV3GO3IxBtbK9A7PPZ1rwB
+         4qp+EliD99kzrY2tVciJ5QaIHNlhlIFWgSQda6cuG5DtBt7HK4QQdwQistq50cNi3nxk
+         MwScr4r/tQbwTNnC5dPWh1aOevZ4abXZr2scnMUW+t52ZR4cjxIY8/cFrxN6ZZq8TEpj
+         svvw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=subject:message-id:to:from:mime-version:date;
+        bh=+MqPlL574XKhd9sUrVgDMlp41pUxWbtZyVZAsBteKeM=;
+        b=R0/qE0LCBGuAKHdkLphC0pTSRQY0VMWcNm14d/fk1KXfso+XHw39eNRKl41SPCVgPV
+         QHtO2BpKgRWp2B4ct50cBDVo5n9xt++zTZC1KVEzqQ+mrCsNMQmOcENE9A9hIWhnYwb7
+         SR535IgSTwdO4ZT/4RC86HOC47B9xd86WER45RuDsaIuNmcT41yvexjMGg9FIjBbYvXR
+         8uh1t8XCTML4Jh1iSLFok/fWXnngq5x6qOgXRyeNPwsfh/++PEYv5GE2vqBofaPnh5RC
+         Thsb9Cdg2DpaSBTeIcx5xf9SqIJwv/ALYIqn0G5R27rSOSng90TZYhK3uLdDIrpobdCo
+         /lvQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of txw_usdc_notice@txwd.uscourts.gov designates 63.241.40.204 as permitted sender) smtp.mailfrom=TXW_USDC_Notice@txwd.uscourts.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=uscourts.gov
+Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov. [63.241.40.204])
+        by mx.google.com with ESMTP id c13si591832qka.12.2021.08.11.16.12.45
+        for <ecfnotices@everettlawfirm.com>;
+        Wed, 11 Aug 2021 16:12:45 -0700 (PDT)
+Received-SPF: pass (google.com: domain of txw_usdc_notice@txwd.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.160
+Received: from txwddb.txwd.gtwy.dcn ([156.119.56.160])
+  by icmecf201.gtwy.uscourts.gov with ESMTP; 11 Aug 2021 19:12:43 -0400
+Received: from txwddb.txwd.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by txwddb.txwd.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 17BNBwAF031285;
+	Wed, 11 Aug 2021 18:11:59 -0500
+Received: (from ecf_web@localhost)
+	by txwddb.txwd.gtwy.dcn (8.14.4/8.14.4/Submit) id 17BNBtQD031136;
+	Wed, 11 Aug 2021 18:11:55 -0500
+Date: Wed, 11 Aug 2021 18:11:55 -0500
+X-Authentication-Warning: txwddb.txwd.gtwy.dcn: ecf_web set sender to TXW_USDC_Notice@txwd.uscourts.gov using -f
+MIME-Version: 1.0
+From: TXW_USDC_Notice@txwd.uscourts.gov
+To: cmecf_notices@txwd.uscourts.gov
+Message-Id: <25400581@txwd.uscourts.gov>
+Subject: Activity in Case 1:20-cv-01202-RP Tanis v. Austin Private Car Service, Corp. et al Motion for Extension of Time to File
+Content-Type: text/html
+X-Original-Sender: txw_usdc_notice@txwd.uscourts.gov
+X-Original-Authentication-Results: mx.google.com;       spf=pass (google.com:
+ domain of txw_usdc_notice@txwd.uscourts.gov designates 63.241.40.204 as
+ permitted sender) smtp.mailfrom=TXW_USDC_Notice@txwd.uscourts.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=uscourts.gov
+Precedence: list
+Mailing-list: list ecfnotices@everettlawfirm.com; contact ecfnotices+owners@everettlawfirm.com
+List-ID: <ecfnotices.everettlawfirm.com>
+X-Spam-Checked-In-Group: ecfnotices@everettlawfirm.com
+X-Google-Group-Id: 486450346794
+List-Post: <https://groups.google.com/a/everettlawfirm.com/group/ecfnotices/post>,
+ <mailto:ecfnotices@everettlawfirm.com>
+List-Help: <https://support.google.com/a/everettlawfirm.com/bin/topic.py?topic=25838>,
+ <mailto:ecfnotices+help@everettlawfirm.com>
+List-Archive: <https://groups.google.com/a/everettlawfirm.com/group/ecfnotices/>
+List-Unsubscribe: <mailto:googlegroups-manage+486450346794+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/everettlawfirm.com/group/ecfnotices/subscribe>
+
+<p><strong><font color="#FF0000">This is an automatic e-mail message generated by the CM/ECF system. 
+Please DO NOT RESPOND to this e-mail because the mail box is unattended.
+</font><br>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30 page limit do not apply.</strong></p>
+
+
+
+<p align=center><strong>U.S. District Court [LIVE]</strong></p>
+<p align=center><strong>Western District of Texas</strong></p>
+<font size="3" face="arial,helvetica"><b>Notice of Electronic Filing</b></font>
+
+<BR>
+
+<div><BR>
+The following transaction was entered  by Smith, Michael  on 8/11/2021 at 
+6:11 PM CDT and filed on 8/11/2021 <BR>
+
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Tanis v. Austin Private Car 
+Service, Corp. et al</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A 
+HREF=https://ecf.txwd.uscourts.gov/cgi-bin/DktRpt.pl?1116583>1:20-cv-01202-RP</A></td></tr>
+
+<tr><td><strong>Filer:</strong></td><td>Austin 
+Private Car Service, Corp.</td></tr><tr><td></td><td>Brad Stevens</td></tr><tr><td></td><td>W. 
+John Waara</td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td> 
+<a href="https://ecf.txwd.uscourts.gov/doc1/181026785306?caseid=1116583&de_seq_num=80&magic_num=70834513" 
+>23</a> 
+</td></tr>
+<tr><td><strong></strong></td><td></td></tr>
+</table>
+<p>
+<strong>Docket Text:</strong>
+<BR>
+<FONT  FACE="arial,helvetica" COLOR="#0000cc" SIZE=3><b>
+Opposed  MOTION for Extension of Time 
+to File  <i>Dispositive Motions</i>  by Austin Private Car Service, Corp., 
+Brad Stevens, W. John Waara.  (Attachments:  # (1) Proposed Order)(Smith, 
+Michael)
+</b></Font>
+</p>
+
+
+
+
+
+<BR>
+<B>
+1:20-cv-01202-RP Notice has been electronically mailed to:
+</B>
+<BR>
+
+<BR>
+Josh                 Wiley                                            &nbsp 
+&nbsp driscoll@everettlawfirm.com, Ecfnotices@everettlawfirm.com, serina@everettlawfirm.com, 
+michael@everettlawfirm.com <BR>
+<BR>
+Merideth             Q. McEntire                                         
+  &nbsp &nbsp merideth@everettlawfirm.com, Ecfnotices@everettlawfirm.com, 
+kiona@everettlawfirm.com <BR>
+<BR>
+Michael              J. Smith                                            
+  &nbsp &nbsp msmith@thefowlerlawfirm.com, mjsmithjd@gmail.com, msipes@thefowlerlawfirm.com 
+<BR>
+
+<BR>
+
+<B>
+1:20-cv-01202-RP Notice has been delivered by other means to:
+</B>
+<BR>
+
+  
+
+
+
+
+<div>
+<p>
+The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document <BR>
+<STRONG>Original filename:</STRONG>n/a<BR>
+<STRONG>Electronic document Stamp:</STRONG><BR>
+<TAB>[STAMP dcecfStamp_ID=260075687 [Date=8/11/2021] [FileNumber=25400580-<BR>
+
+<TAB>0] [12d371689df4c38f5a510bbb1231498cfa36fb41b467dcd327a01e92473a87a3b3<BR>
+
+<TAB>7106d47e46b91a73ac975336f5e788c83e4436a5dd68d73b810547aff77dcd]]<BR>
+
+
+<STRONG>Document description:</STRONG>Proposed Order <BR>
+<STRONG>Original filename:</STRONG>n/a<BR>
+<STRONG>Electronic document Stamp:</STRONG><BR>
+<TAB>[STAMP dcecfStamp_ID=260075687 [Date=8/11/2021] [FileNumber=25400580-<BR>
+
+<TAB>1] [1f19876fc7f3475c4e764fb77013cbb3f6169ea58dbc8eb408a563d04dd2305a62<BR>
+
+<TAB>23924e9f1716dcbd24582a11ffe1b2d3065df4c48b63a53e74ff816764ee52]]<BR>
+
+
+
+</table>
+</div>
+

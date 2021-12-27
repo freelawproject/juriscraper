@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-# coding=utf-8
-from __future__ import print_function
+
 
 import unittest
 
@@ -15,4 +14,4 @@ class PacerShowCaseDocApiTest(unittest.TestCase):
     def test_bankruptcy_fails(self):
         """Does initializing the API fail on bankruptcy courts?"""
         with self.assertRaises(AssertionError):
-            ShowCaseDocApi('caeb', pacer_session=self.pacer_session)
+            ShowCaseDocApi("caeb", pacer_session=self.pacer_session)

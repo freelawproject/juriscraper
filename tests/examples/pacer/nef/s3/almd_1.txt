@@ -1,0 +1,204 @@
+Return-Path: <ecfnotices+bncBAABBKN3YWEAMGQEBC27WAQ@everettlawfirm.com>
+Received: from mail-qk1-f200.google.com (mail-qk1-f200.google.com [209.85.222.200])
+ by inbound-smtp.us-east-1.amazonaws.com with SMTP id vhfnltcuk4dp0fnfoki01hce6rbp0d1ash9c1vg1
+ for pacer@everettlawfirm.business;
+ Mon, 09 Aug 2021 16:54:01 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: none (spfCheck: 209.85.222.200 is neither permitted nor denied by domain of everettlawfirm.com) client-ip=209.85.222.200; envelope-from=ecfnotices+bncBAABBKN3YWEAMGQEBC27WAQ@everettlawfirm.com; helo=mail-qk1-f200.google.com;
+Authentication-Results: amazonses.com;
+ spf=none (spfCheck: 209.85.222.200 is neither permitted nor denied by domain of everettlawfirm.com) client-ip=209.85.222.200; envelope-from=ecfnotices+bncBAABBKN3YWEAMGQEBC27WAQ@everettlawfirm.com; helo=mail-qk1-f200.google.com;
+ dkim=pass header.i=@everettlawfirm.com;
+ dmarc=fail header.from=almd.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFGK1g5MVYxYzBrV1NwbEF4SnFDWFJJU2o4eG9Jdk5WT1N5UWVjczd2R2RodEc1bUJpUDBJVFRQRkRxM1dWRktXRkFKdEt3aFNBODBQcGQxaE9FUEtmVFlEcmhNU1lCcy9qeUVNRlRQN1A3aFVEdVVDcWI3blFwWWdYWCtrbE8vTGpYeUxWT0g1M1p2anI2RXNrMmxGaW5RQVdNcjRvUmRiandoNDJuVHZVZHVzSGpSOEEwM25rZ2tzT3dKWGkvaXIrOXRyNTJ0YjRPTnZhdTVCeWpVbGRNMnkwVnlnbXBYcEo5UlhBbE9lYjhFYm9kZ3Nlc1VCVGhCSXg1c0pQa2Jia1F0bEhMMkowOHo4aTl1bjloQk5xZGJBL3FnWXhwZUVlMmlwTFZ1UFRDdDVHNG45Y1lYZjJYN3NXS2xyTEhrWVVmY1Zncm8wM3loa1VkSldRNnBHWU0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=U2rwbBVxCqkfXL9HzKYgRNNLPVP48HGA3TZ3WVyat6AhkiB6XotRSCNtNau8vfDIS+Yn6WUpjnjvFZPdbETQOYaQEqA3gUdUWJRZ1di+JhwnSdoEAfKF78IOazQDJL66cj1ut8xFC7wBIs/sRLC1Gt1ecMOrsDrwCwfFMCTpjTg=; c=relaxed/simple; s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1628528042; v=1; bh=VbD/zS4PitKV6I2HenTqNwVjc3WD8xzw2ti62HRKBsQ=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+Received: by mail-qk1-f200.google.com with SMTP id h186-20020a37b7c30000b02903b914d9e335sf13188649qkf.17
+        for <pacer@everettlawfirm.business>; Mon, 09 Aug 2021 09:54:01 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=everettlawfirm.com; s=google;
+        h=sender:date:mime-version:from:to:message-id:subject
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:list-post:list-help:list-archive
+         :list-unsubscribe;
+        bh=gpKp6aebIHGa9SLSMpkuX/yMbvlA0b06UsrUSf968Yo=;
+        b=XpS97ms/XYqDN34m03/pmqws1sjW966iY5ovCiJdzMw/KkK4czg/oy6p2hKfuhG38E
+         8FIvTIVXGcW3qBmcllqzKMrxUZi/tNmY1PT1SD9YSEuTJ28h12M2NhpzoLE52M+oYR6J
+         ghZ4GCPn7pk/28udmz16rFj2yZ0oRVbSQpfIc=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=sender:x-gm-message-state:date:mime-version:from:to:message-id
+         :subject:x-original-sender:x-original-authentication-results
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-unsubscribe;
+        bh=gpKp6aebIHGa9SLSMpkuX/yMbvlA0b06UsrUSf968Yo=;
+        b=eD7nxz/hMe26l8/rEjPfF5D/XjzKce86tFKTE+yuvWEUwM9SsftLArQlkvzbrMP3tu
+         4x5qHbeK6SmwziRoDKJN5e5DP1MmqWvEgwQbaJfSn+5V0u8SVdoSoDsc6sh9SkGjd3Un
+         yrvKjIz42ly6CwwPt8jsuNxih2nWSOIi8tC0zIzefOkdYo8ynEOKUVaVwunFK2ZaaV4p
+         bAf+76FmfuedCVOH43se3DbnDuIZCPjmEs7kBuWm9LEKGO/blJKn6HZueGOgm5BY+IfW
+         wbd16ZQmEOmVqrem9Z9NzP6OjWlaQKBDbKm/YaTjodJv4V/RoMTpArzHbwHaPTOSo/eB
+         s2Gw==
+Sender: ecfnotices@everettlawfirm.com
+X-Gm-Message-State: AOAM533+FGecET+YML0wkXVxSqEAG7XrrXsa1FcDtXv3JXhgckKLZXkJ
+	8dc/17QPkucvW9Hr0fmDXEA1Wg==
+X-Google-Smtp-Source: ABdhPJw8YOtXCcvVef5fMMcHyl0w/3HHC8MUMcrlgJgbaA1gtl3pVk+kYd8YaHqaDSzRvsIP+TRxdA==
+X-Received: by 2002:ad4:5d61:: with SMTP id fn1mr24820014qvb.32.1628528041419;
+        Mon, 09 Aug 2021 09:54:01 -0700 (PDT)
+X-BeenThere: ecfnotices@everettlawfirm.com
+Received: by 2002:a05:620a:404b:: with SMTP id i11ls1381615qko.9.gmail; Mon,
+ 09 Aug 2021 09:54:01 -0700 (PDT)
+X-Received: by 2002:a05:620a:4144:: with SMTP id k4mr23980070qko.73.1628528040864;
+        Mon, 09 Aug 2021 09:54:00 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1628528040; cv=none;
+        d=google.com; s=arc-20160816;
+        b=0TtBDFqxwMn9LIJd9LguRF6wwWwS8bQbXAjVzT/yRG0AeN46YrpZPCO7dk+uyhZPRp
+         nRZqs6ZnoJdmHlLO9DeQ8Estve/eAiZlGw1Y/x0/c4j1ongnpUTJNUgA+iusk6l+Mooh
+         jsQwttQkXqXS0q9Ovwfe6V0VIumCKfqU19XEw15W5z/qeeDsEuSpNKgSClNCaLdvGy5o
+         Qa7Jm+x94v2EPvgR38MOvpCDY/DoE6Wd/JbC91ekevdtvhJHiv7cm1nTE1yuheeuPRuA
+         Vg6tNVKz6uGD+kG7ygD7xXkjRwXJ8edbci/oVLFk1qKK+1r+qJMvSK7WVhBpN/BoqFhJ
+         64RA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=subject:message-id:to:from:mime-version:date;
+        bh=gpKp6aebIHGa9SLSMpkuX/yMbvlA0b06UsrUSf968Yo=;
+        b=yN2GaI0AILM7+zwj8z3JhDCPq6vRlTsHIHzx6zggMYz8CuP3TXRFqweTwMDqP8MuzL
+         Q1rPKA2sqk+rO0qqg5LM5ByVjNkowB5GtgizoUCpGw1aeGsVWkRAd91raH7fSe2J90ou
+         rgnHBVpyWmdWka1vkmrC7thKIGqq4ywRwYQE6911sKZf5zgl079gxgIaqBX88z3Gfx0u
+         VeET5oqsXLgCEh/7I1jMX0vlYlR/N1q4W/Qe0XDDTzqZohu1lkFw0VwkAZwiNLo6bugF
+         U5VCfoWHoEFhE4auBerwOqtqWrX0uTj2pyfqNoxMPkPJNXubygxMUxpQIaQFNY335k/r
+         f8Og==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of efile_notice@almd.uscourts.gov designates 199.107.16.200 as permitted sender) smtp.mailfrom=efile_notice@almd.uscourts.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=uscourts.gov
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov. [199.107.16.200])
+        by mx.google.com with ESMTP id h2si135574qtn.242.2021.08.09.09.54.00
+        for <ecfnotices@everettlawfirm.com>;
+        Mon, 09 Aug 2021 09:54:00 -0700 (PDT)
+Received-SPF: pass (google.com: domain of efile_notice@almd.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.187
+Received: from almddb.almd.gtwy.dcn ([156.119.190.187])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 09 Aug 2021 12:54:00 -0400
+Received: from almddb.almd.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by almddb.almd.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 179GrwVR118542;
+	Mon, 9 Aug 2021 11:53:58 -0500
+Received: (from ecf_web@localhost)
+	by almddb.almd.gtwy.dcn (8.14.4/8.14.4/Submit) id 179Grq8i118481;
+	Mon, 9 Aug 2021 11:53:52 -0500
+Date: Mon, 9 Aug 2021 11:53:52 -0500
+X-Authentication-Warning: almddb.almd.gtwy.dcn: ecf_web set sender to efile_notice@almd.uscourts.gov using -f
+MIME-Version: 1.0
+From: efile_notice@almd.uscourts.gov
+To: almd_mailout@almd.uscourts.gov
+Message-Id: <3341944@almd.uscourts.gov>
+Subject: Activity in Case 3:21-cv-00437-ECM-SRW Stapler v. Automatic Food Service, Inc. Notice (Other)
+Content-Type: text/html
+X-Original-Sender: efile_notice@almd.uscourts.gov
+X-Original-Authentication-Results: mx.google.com;       spf=pass (google.com:
+ domain of efile_notice@almd.uscourts.gov designates 199.107.16.200 as
+ permitted sender) smtp.mailfrom=efile_notice@almd.uscourts.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=uscourts.gov
+Precedence: list
+Mailing-list: list ecfnotices@everettlawfirm.com; contact ecfnotices+owners@everettlawfirm.com
+List-ID: <ecfnotices.everettlawfirm.com>
+X-Spam-Checked-In-Group: ecfnotices@everettlawfirm.com
+X-Google-Group-Id: 486450346794
+List-Post: <https://groups.google.com/a/everettlawfirm.com/group/ecfnotices/post>,
+ <mailto:ecfnotices@everettlawfirm.com>
+List-Help: <https://support.google.com/a/everettlawfirm.com/bin/topic.py?topic=25838>,
+ <mailto:ecfnotices+help@everettlawfirm.com>
+List-Archive: <https://groups.google.com/a/everettlawfirm.com/group/ecfnotices/>
+List-Unsubscribe: <mailto:googlegroups-manage+486450346794+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/everettlawfirm.com/group/ecfnotices/subscribe>
+
+<p><strong><font color="#FF0000">This is an automatic e-mail message generated by the CM/ECF system. 
+Please DO NOT RESPOND to this e-mail because the mail box is unattended.
+</font><br>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30 page limit do not apply.</strong></p>
+
+
+
+<p align=center><strong>U.S. District Court</strong></p>
+<p align=center><strong>Alabama Middle District</strong></p>
+<font size="3" face="arial,helvetica"><b>Notice of Electronic Filing</b></font>
+
+<BR>
+
+<div><BR>
+The following transaction was entered  by Geisler, Kimberly  on 8/9/2021 
+at 11:53 AM CDT and filed on 8/9/2021 <BR>
+
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Stapler v. Automatic Food Service, 
+Inc.</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A 
+HREF=https://ecf.almd.uscourts.gov/cgi-bin/DktRpt.pl?75736>3:21-cv-00437-ECM-SRW</A></td></tr>
+
+<tr><td><strong>Filer:</strong></td><td>Automatic 
+Food Service, Inc.</td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href="https://ecf.almd.uscourts.gov/doc1/01713718205?caseid=75736&de_seq_num=30&magic_num=77910494" 
+>9</a> 
+</td></tr>
+<tr><td><strong></strong></td><td></td></tr>
+</table>
+<p>
+<strong>Docket Text:</strong>
+<BR>
+<FONT  FACE="arial,helvetica" COLOR="#0000cc" SIZE=3><b>
+NOTICE  by Automatic Food Service, Inc. 
+ re [7]    MOTION for Extension of Time to File Answer  re [1]  Complaint, 
+   <i></i>  <i></i>  (Geisler, Kimberly)
+
+</b></Font>
+</p>
+
+
+
+
+<BR>
+<B>
+3:21-cv-00437-ECM-SRW Notice has been electronically mailed to:
+</B>
+<BR>
+
+<BR>
+Courtney             Elizabeth Lowery                                    
+         &nbsp &nbsp courtney@everettlawfirm.com, ecfnotices@everettlawfirm.com 
+<BR>
+<BR>
+Kimberly             Wood Geisler                                        
+    &nbsp &nbsp kgeisler@scottdukeslaw.com, bbassham@scottdukeslaw.com, kgraves@scottdukeslaw.com 
+<BR>
+
+<BR>
+
+<B>
+3:21-cv-00437-ECM-SRW Notice has been delivered by other means to:
+</B>
+<BR>
+
+
+
+
+
+
+<div>
+<p>
+The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document <BR>
+<STRONG>Original filename:</STRONG>n/a<BR>
+<STRONG>Electronic document Stamp:</STRONG><BR>
+<TAB>[STAMP dcecfStamp_ID=1053018227 [Date=8/9/2021] [FileNumber=3341942-0]<BR>
+
+<TAB> [6feda77acbf0e8f7ebff0c382c8d5f9014b56aa4a11ad1fdf9a2a720f9441196038b<BR>
+
+<TAB>2b2c4053771b5c9b22092c05f9c2e4300e3854321bd88c6000667f89d717]]<BR>
+
+
+</table>
+</div>

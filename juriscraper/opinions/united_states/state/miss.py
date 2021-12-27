@@ -1,66 +1,100 @@
-# Auth: ryee
-# Review: mlr
-# Date: 2013-04-26
 # Court Contact: bkraft@courts.ms.gov (see https://courts.ms.gov/aoc/aoc.php)
 
-from juriscraper.OpinionSite import OpinionSite
-import re
-import time
-from datetime import date
-from lxml import html
+import datetime
+
+from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+# Landing page: https://courts.ms.gov/appellatecourts/sc/scdecisions.php
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
+        self.domain = "https://courts.ms.gov"
         self.court_id = self.__module__
-        self.url = 'http://courts.ms.gov/scripts/websiteX_cgi.exe/GetOpinion?Year=%s&Court=Supreme+Court&Submit=Submit' % date.today().year  # noqa: E501
-        self.back_scrape_iterable = range(1990, 2019)
-        self.base = '//tr[following-sibling::tr[1]/td[2][text()]]'
+        self.method = "POST"
+        self.number_of_dates_to_process = 5
+        self.pages = {}
+        self.parameters = {"crt": self.get_court_parameter()}
+        self.status = "Published"
+        self.url = f"{self.domain}/appellatecourts/docket/gethddates.php"
 
-    def _get_case_names(self):
-        # This could be a very simple xpath, but alas, they have missing fields
-        # for some cases. As a result, this xpath checks that the fields are
-        # valid (following-sibling), and only grabs those cases.
-        case_names = []
-        for e in self.html.xpath('{base}/td/b/a'.format(base=self.base)):
-            s = html.tostring(e, method='text', encoding='unicode')
-            case_names.append(s)
-        return case_names
+    def get_court_parameter(self):
+        return "SCT"
 
-    def _get_download_urls(self):
-        path = '{base}/td/b/a/@href'.format(base=self.base)
-        return list(self.html.xpath(path))
+    """Retrieve dates for which there are case listings.
+    This site's architecture is no bueno. We have to issue
+    a POST request to this page to get a array (in the form
+    of a string) or dates that have cases associated with
+    them.
+    """
 
-        hrefs = list(self.html.xpath(path))
-        good_anchors = list()
-        for href in hrefs:
-            if '/Imaging\\' in href:
-                basename = href.split('\\')[-1]
-                href = "http://courts.ms.gov/Images/Opinions/{}"
-                href = href.format(basename)
-            good_anchors.append(href)
-        return good_anchors
+    def _download(self, request_dict={}):
+        dates_page = super()._download(request_dict)
+        self.parse_date_pages(dates_page)
 
-    def _get_case_dates(self):
-        path = '{base}/following-sibling::tr[1]/td[3]//@href'.format(
-            base=self.base)
+    """Keep track of the most recent N date pages.
+    We dont want to crawl all the way back to 1996, so we only
+    parse the most recent [self.number_of_dates_to_process]
+    number of date pages.  Since cases are usually published
+    once a week, this means scraping about the most recent
+    months worth of cases.
+    """
+
+    def parse_date_pages(self, dates_page):
+        # For testing, each example file should be a specific sub-date page,
+        # like https://courts.ms.gov/Images/HDList/SCT02-27-2020.html
+        if self.test_mode_enabled():
+            # date below is arbitrary and doesnt matter, it just
+            # needs to be static for testing to work
+            self.pages["2020-02-28"] = dates_page
+            return
+        for date in self.get_dates_from_date_page(dates_page):
+            url = "{}/Images/HDList/SCT{}.html".format(
+                self.domain,
+                datetime.date.strftime(date, "%m-%d-%Y"),
+            )
+            page = self._get_html_tree_by_url(url)
+            self.pages[f"{date}"] = page
+
+    """Convert string of dates on page into list of date objects.
+    """
+
+    def get_dates_from_date_page(self, dates_page):
         dates = []
-        date_re = re.compile(r'(\d{2}-\d{2}-\d{4})')
-        for href in self.html.xpath(path):
-            date_string = date_re.search(href).group(1)
-            dates.append(date.fromtimestamp(time.mktime(time.strptime(
-                date_string, '%m-%d-%Y'))))
-        return dates
+        substrings = dates_page.text_content().split('"')
+        for substring in substrings:
+            try:
+                dates.append(convert_date_string(substring))
+            except ValueError:
+                pass
+        dates.sort(reverse=True)
+        return dates[: self.number_of_dates_to_process]
 
-    def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_names)
+    def _process_html(self):
+        for date, page in self.pages.items():
+            for anchor in page.xpath(".//a[contains(./@href, '.pdf')]"):
+                parent = anchor.getparent()
 
-    def _get_docket_numbers(self):
-        path = '{base}/following-sibling::tr[1]/td[1]/text()'.format(
-            base=self.base)
-        return list(self.html.xpath(path))
+                # sometimes the first opinion on the pages is nested
+                # in a <p> tag for whatever reason.
+                while parent.getparent().tag != "body":
+                    parent = parent.getparent()
 
-    def _download_backwards(self, year):
-        self.url = 'http://courts.ms.gov/scripts/websiteX_cgi.exe/GetOpinion?Year=%s&Court=Supreme+Court&Submit=Submit' % year  # noqa: E501
-        self.html = self._download()
+                sections = parent.xpath("./following-sibling::ul")
+                if not sections:
+                    # the while loop above should mean we never fall in here
+                    continue
+
+                section = sections[0]
+                self.cases.append(
+                    {
+                        "date": date,
+                        "docket": anchor.text_content().strip(),
+                        "name": section.xpath(".//b")[0]
+                        .text_content()
+                        .strip(),
+                        "summary": section.text_content().strip(),
+                        "url": anchor.xpath("./@href")[0],
+                    }
+                )

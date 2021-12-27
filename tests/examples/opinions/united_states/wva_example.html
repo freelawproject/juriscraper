@@ -28,7 +28,7 @@
          	"value"   : "",
          	"text"    : "Main Navigation"
       	}).appendTo("#main-navigation select");
-		
+
 		$("#main-navigation > ul > li > a, #main-navigation > ul > li > ul > li > a").each(function() {
        		var el = $(this);
        			$("<option />", {
@@ -69,7 +69,7 @@
 		});
 		//add classes to mobile main nav options for styling purposes
 		$('.dropDown option:eq(1), .dropDown option:eq(11), .dropDown option:eq(18), .dropDown option:eq(24), .dropDown option:eq(31)').addClass('bold');
-	
+
 	});
 </script>
 <!-- InstanceBeginEditable name="head" -->
@@ -91,7 +91,7 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		
+
 		$('#opinions').dataTable({
 			"sPaginationType": "full_numbers",
 			"bAutoWidth": true,
@@ -117,17 +117,17 @@
 			sPlaceHolder: 'head:before',
 			aoColumns: [null, null, null, null, {type: 'select'}]
 		});
-		
+
 		$(".select_filter").chosen({no_results_text: "No results match"}).before('<div class="narrowText"><p>Are you looking for all cases with a specific decision type?</p></div>');
-		
+
 		//var oTable = $('#opinions').dataTable();
 		//new FixedHeader(oTable);
-		
+
 		$('#opinions tbody tr').each(function() {
         	var sTitle = '';
             var nTds = $(this).find('td');
             var sDescription = nTds.eq(3).text();
-                                                                                                
+
             switch(sDescription){
             	case "CR-F":
 					sTitle  = 'Felony (non-Death Penalty)';
@@ -196,24 +196,24 @@
                 	sTitle = 'Please review our integrated decision list information.';
                     break;
              }
-             nTds.eq(3).attr('title', sTitle ); 
+             nTds.eq(3).attr('title', sTitle );
         });
-		
+
 		$("#opinions tbody td[title]").tooltip({
 			effect: 'slide',
 			offset: [27, 0]
 		});
-		
+
 	});
 </script>
 
 <style type="text/css">
 	#TB_title { background:#f7f7ef url(../images/calendar/dateFieldBGSm.jpg) repeat-x bottom; overflow:hidden; min-height:35px; }
 	#TB_ajaxWindowTitle { font-size:16px; font-weight:bold; color:#3f4c5b; padding-top:11px; }
-	
+
 	#TB_closeAjaxWindow { position:absolute; top:0px; right:0px; text-indent:-9999px; font-size:0px; margin:0px; padding:0px; }
 	#TB_closeAjaxWindow #TB_closeWindowButton { background:url(../images/clearSearchBtn.png) no-repeat; text-indent:-9999px; height:29px; width:29px; position:relative; float:right; margin:5px 5px 0px 0px; padding:0px; }
-	
+
 	.chzn-container { width:150px !important; }
 	.chzn-drop { width:148px !important; }
 	.chzn-search input[type="text"] { width:112px !important; }
@@ -261,7 +261,7 @@
       </ul>
       <p>For more detailed help on the new features of the Opinion List, download the overview by <a href="../siteOverViewTakeHome.pdf" target="_blank">clicking here.</a></p>
     </div>
-    <div id="tableHelpBtn"><span class="helpClosed">Open Help</span></div>  
+    <div id="tableHelpBtn"><span class="helpClosed">Open Help</span></div>
 </div>
 <!-- InstanceEndEditable -->
 <div id="main-header">
@@ -269,14 +269,14 @@
   <p class="navigation noPrint"><a href="../index.html">Home</a> | <a href="../contact.html">Contact</a> | <a href="../jobs.html">Jobs</a> | <a href="../sitemap.html">Sitemap</a></p>
   <h2 class="page-title"><!-- InstanceBeginEditable name="PageTitle" -->Opinions of the Supreme Court of Appeals<!-- InstanceEndEditable --></h2>
   <div id="tertiary-menu">
-		
+
     <ul class="sub-menu">
       <!-- InstanceBeginRepeat name="TertiaryMenuItems" --><!-- InstanceBeginRepeatEntry -->
       <!-- InstanceBeginEditable name="TertiaryMenuItem" -->
 	    <li><a href="opinion-information.html">Information & Search</a></li>
         <li><a href="integrated-decision-list-explained.html">About the Decision List</a></li>
         <li><a href="docs/fall2011/index.html">September 2011 Term</a></li>
-    		
+
       <!-- InstanceEndEditable -->      <!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
     </ul>
       </div>
@@ -286,7 +286,7 @@
     <div id="searchText" class="noPrint">Search</div>
     <div id="cse-search-form" class="noPrint">Loading</div>
 	<script src="http://www.google.com/jsapi" type="text/javascript"></script>
-	<script type="text/javascript"> 
+	<script type="text/javascript">
   		google.load('search', '1', {language : 'en'});
   		google.setOnLoadCallback(function() {
     		var customSearchControl = new google.search.CustomSearchControl('002442811923801076369:gpk47hv1cg0');
@@ -305,8 +305,8 @@
           <li><a href="../public-resources/jury-information.html">Jury information</a></li>
           <li><a href="../public-resources/law-library/law-library-home.html">Law Library</a></li>
           <li><a href="../public-resources/student-resources/index.html">Student Resources</a></li>
-          <li><a href="../public-resources/domestic/domestic-violence.html">Domestic Violence</a></li> 
-          <li><a href="../public-resources/guardians-conservators.html">Guardians &amp; Conservators</a></li> 
+          <li><a href="../public-resources/domestic/domestic-violence.html">Domestic Violence</a></li>
+          <li><a href="../public-resources/guardians-conservators.html">Guardians &amp; Conservators</a></li>
           <li><a href="../public-resources/accessibility-information.html">Accessibility Information</a></li>
         </ul>
       </li>
@@ -326,7 +326,7 @@
           <li><a href="../lower-courts/family-courts.html">Family Courts</a></li>
           <li><a href="../lower-courts/magistrate-courts.html">Magistrate Courts</a></li>
           <li><a href="../lower-courts/treatment-courts.html">Treatment Courts</a></li>
-          <li><a href="../lower-courts/mlp/overview.html">Mass Litigation Panel</a></li>       
+          <li><a href="../lower-courts/mlp/overview.html">Mass Litigation Panel</a></li>
     	</ul>
       </li>
       <li id="legal-community"><a href="../legal-community/index.html">Legal Community</a>
@@ -347,7 +347,7 @@
           <li><a href="../court-administration/probation/probation-services.html">Probation Services</a></li>
           <li><a href="../court-administration/access-to-justice.html">Access to Justice</a></li>
           <li><a href="../court-administration/judicial-projects.html">Judicial Projects</a></li>
-          <li><a href="../court-administration/for-court-employees.html">For Court Employees</a></li>   
+          <li><a href="../court-administration/for-court-employees.html">For Court Employees</a></li>
     	</ul>
       </li>
     </ul>
@@ -359,11 +359,11 @@
     <div class="quickTip">
     	<p><strong>QUICK TIP:</strong> For more help on using the opinion table, click the <span class="openHelp"><img class="helpBtnContent" src="../images/opinionTableHelp/blueQuestion.png" width="22" height="22" alt="Open Opinion Table Help" /></span> to the right on the page. When the page loads, the  Date Filed column is sorted descending.</p>
     </div>
-    
+
     <div id="caption">January 2012 Term of Court Opinions and Memorandum Decisions</div>
-    <table border="0" cellpadding="0" cellspacing="0" class="display" id="opinions"> 
+    <table border="0" cellpadding="0" cellspacing="0" class="display" id="opinions">
     	<caption>January 2012 Term of Court Opinions and Memorandum Decisions</caption>
-        
+
         <thead>
         	<tr class="searchRow OpinionsSelect">
             	<th colspan="5">decision Type</th>
@@ -376,7 +376,7 @@
     			<th width="11%">Decision Type</th>
     		</tr>
     	</thead>
-          
+
   		<tbody>
         <tr>
             	<td>3/12/2012</td>
@@ -384,7 +384,7 @@
                 <td><a href="memo-decisions/spring2012/11-0368memo.pdf" target="_blank">Lawrence E. Scible v. David Ballard, Warden</a></td>
                 <td>CIV-O</td>
                 <td>MD</td>
-            </tr>      
+            </tr>
         <tr>
             	<td>3/12/2012</td>
                 <td>11-0432</td>
@@ -1511,21 +1511,21 @@
             	<td><a href="memo-decisions/spring2012/101060memo.pdf" target="_blank">Roger L. Harris v. W. Va. Office of Insurance Commissioner/Patriot Mining</a></td>
             	<td>WC</td>
             	<td>MD</td>
-            </tr>        
+            </tr>
         <tr>
             	<td>1/19/2012</td>
             	<td>100965</td>
             	<td><a href="memo-decisions/spring2012/100965memo.pdf" target="_blank">Richard D. Spurlock v. W. Va. Office of Insurance Commissioner/Appalachian Power</a></td>
             	<td>WC</td>
             	<td>MD</td>
-            </tr>     
+            </tr>
          <tr>
             	<td>1/19/2012</td>
             	<td>101561</td>
             	<td><a href="memo-decisions/spring2012/101561memo.pdf" target="_blank">Richard D. Spurlock v. W. Va. Office of Insurance Commissioner/Appalachian Power</a></td>
             	<td>WC</td>
             	<td>MD</td>
-            </tr>        
+            </tr>
         	<tr>
             	<td>1/27/2012</td>
                 <td>11-0565</td>
@@ -1714,26 +1714,26 @@
             	<td>PR</td>
             	<td>MD</td>
             </tr>
-            
-        
+
+
     	</tbody>
     </table>
-   
+
   <!-- InstanceEndEditable --></div>
   </div>
 <div id="main-footer" class="noPrint">
   <p class="contact-info">&nbsp;<br />&nbsp;<br />&nbsp;</p>
-  
+
   <ul id="additionalNav">
   	<li class="redesign"><a href="about-this-redesign.html">About this Redesign</a></li>
     <li class="twitter"><a href="http://www.twitter.com/wvcourts" target="_blank">Twitter</a></li>
   </ul>
-  
+
   <ul id="additionalNav2">
   	<li class="redesign"><a href="../about-this-redesign.html">About this Redesign</a></li>
     <li class="twitter"><a href="../courts-twitter.html">Twitter</a></li>
   </ul>
-  
+
   <ul class="navigation">
     <li><a href="../contact.html">Contact Information</a></li>
     <li><a href="../terms-of-use.html">Terms of Use</a></li>

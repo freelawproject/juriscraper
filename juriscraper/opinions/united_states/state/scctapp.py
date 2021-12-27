@@ -13,8 +13,11 @@ from juriscraper.opinions.united_states.state import sc
 
 class Site(sc.Site):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         today = datetime.date.today()
-        self.url = 'http://www.sccourts.org/opinions/indexCOAPub.cfm?year=%d&month=%d' % (today.year, today.month)
+        self.url = (
+            "http://www.sccourts.org/opinions/indexCOAPub.cfm?year=%d&month=%d"
+            % (today.year, today.month)
+        )
         self.court_id = self.__module__
-        self.court_name = 'sctapp'
+        self.court_name = "sctapp"

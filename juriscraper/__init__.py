@@ -1,4 +1,4 @@
 __all__ = [
-    'opinions',
-    'oral_args',
+    "opinions",
+    "oral_args",
 ]

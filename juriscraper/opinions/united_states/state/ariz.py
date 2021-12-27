@@ -10,15 +10,15 @@ Court Short Name: Ariz.
 import time
 from datetime import date
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://www.azcourts.gov/opinions/SearchOpinionsMemoDecs.aspx?court=999'
+        self.url = "http://www.azcourts.gov/opinions/SearchOpinionsMemoDecs.aspx?court=999"
 
     def _get_download_urls(self):
         path = '//a[contains(@id , "hypCaseNum")]/@href'
@@ -30,19 +30,23 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         path = '//span[contains(@id , "FilingDate")]//text()'
-        return [date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%Y')))
-                for date_string in self.html.xpath(path)]
+        return [
+            date.fromtimestamp(
+                time.mktime(time.strptime(date_string, "%m/%d/%Y"))
+            )
+            for date_string in self.html.xpath(path)
+        ]
 
     def _get_precedential_statuses(self):
         statuses = []
         path = '//*[contains(@id, "DecType")]/text()'
         for s in self.html.xpath(path):
-            if 'OPINION' in s:
-                statuses.append('Published')
-            elif 'MEMORANDUM' in s:
-                statuses.append('Unpublished')
+            if "OPINION" in s:
+                statuses.append("Published")
+            elif "MEMORANDUM" in s:
+                statuses.append("Unpublished")
             else:
-                statuses.append('Unknown')
+                statuses.append("Unknown")
         return statuses
 
     def _get_docket_numbers(self):

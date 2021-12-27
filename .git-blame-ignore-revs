@@ -1,0 +1,16 @@
+# This file lists commits that changed large sections of the code and are best
+# ignored by git blame (which tools like PyCharm use for their "annotate"
+# feature).
+#
+# To use this file, go to the root of this project, and run:
+#
+#    git config blame.ignoreRevsFile .git-blame-ignore-revs
+#
+# That'll tell git to use this file. For this to work, you need Git 2.23.0
+# (released late 2019) or later.
+
+# Blackify code
+2c427b3c392459373726422fa928b43419029ac4
+f3941825341b925d693c6f273d3df7471e4a94ff
+f41b5a08fa38c831b17f6ae07732dcebbd3b0484
+21e8b1fb239610c521d727071b5dd8b882868277

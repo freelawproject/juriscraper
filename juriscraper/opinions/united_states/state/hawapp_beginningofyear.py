@@ -1,15 +1,16 @@
 # Auth: mlr
 # Date: 2013-05-28
 
-from juriscraper.opinions.united_states.state import hawapp
-
 from datetime import date
+
 from lxml import html
+
+from juriscraper.opinions.united_states.state import hawapp
 
 
 class Site(hawapp.Site):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
 
         # If it's the beginning of January, we need to make sure that we aren't
@@ -22,4 +23,4 @@ class Site(hawapp.Site):
         else:
             # This simply aborts the crawler.
             self.status = 200
-            self.html = html.fromstring('<html></html>')
+            self.html = html.fromstring("<html></html>")

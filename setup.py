@@ -1,20 +1,19 @@
 import codecs
 import os
-import sys
 import unittest
 
-try:  # for pip >= 10
-    from pip._internal.req import parse_requirements
-except ImportError:  # for pip <= 9.0.3
-    from pip.req import parse_requirements
-
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 from setuptools.command.install import install
 
-VERSION = "1.26.14"
+VERSION = "2.3.26"
 AUTHOR = "Free Law Project"
 EMAIL = "info@free.law"
 HERE = os.path.abspath(os.path.dirname(__file__))
+
+
+reqs_path = f"{HERE}/requirements.txt"
+with open(reqs_path) as reqs_file:
+    reqs = reqs_file.read().splitlines()
 
 
 def read(*parts):
@@ -28,34 +27,15 @@ def read(*parts):
 
 class TestNetwork(install):
     """Run network test only"""
-    description = 'run isolated tests that hit the network'
+
+    description = "run isolated tests that hit the network"
 
     def run(self):
         loader = unittest.defaultTestLoader
         runner = unittest.TextTestRunner(verbosity=2)
-        tests = loader.discover('./tests/network')
+        tests = loader.discover("./tests/network")
         runner.run(tests)
 
-
-class VerifyVersion(install):
-    """Custom command to verify that the git tag matches our version"""
-    description = 'verify that the git tag matches our version'
-
-    def run(self):
-        tag = os.getenv('CIRCLE_TAG')
-
-        if tag is None:
-            sys.exit("The 'verify' option is only available in tagged CircleCI container")
-
-        if tag != VERSION:
-            message = "Git tag: {0} does not match the version of this app: {1}"
-            sys.exit(message.format(tag, VERSION))
-
-
-requirements = [
-    str(r.req) for r in
-    parse_requirements('requirements.txt', session=False)
-]
 
 setup(
     name="juriscraper",
@@ -69,7 +49,8 @@ setup(
     maintainer_email=EMAIL,
     keywords=["scraping", "legal", "pacer"],
     long_description=read("README.rst"),
-    packages=find_packages(exclude=['tests*']),
+    long_description_content_type="text/x-rst",
+    packages=find_packages(exclude=["tests*"]),
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
@@ -77,22 +58,19 @@ setup(
         "License :: OSI Approved :: BSD License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2.6",
-        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: Implementation :: CPython",
         "Programming Language :: Python :: Implementation :: PyPy",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-    install_requires=requirements,
-    tests_require=['jsondate', 'mock', 'vcrpy'],
+    install_requires=reqs,
+    tests_require=["jsondate3-aware", "vcrpy"],
     include_package_data=True,
-    test_suite='tests.test_local',
+    test_suite="tests.test_local",
     cmdclass={
-        'verify': VerifyVersion,
-        'testnetwork': TestNetwork,
-    }
+        "testnetwork": TestNetwork,
+    },
 )

@@ -1,50 +1,44 @@
-"""Scraper for the United States Bankruptcy Appellate Panel for the Ninth Circuit
+"""
+Scraper for the United States Bankruptcy Appellate Panel for the Ninth Circuit
 CourtID: bap9
-Court Short Name: 9th Cir. BAP"""
+Court Short Name: 9th Cir. BAP
+"""
 
-import time
-from datetime import date
-
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
-        self.url = 'http://www.ca9.uscourts.gov/bap/'
+        super().__init__(*args, **kwargs)
+        self.url = "http://www.ca9.uscourts.gov/bap/"
         self.court_id = self.__module__
-        self.method = 'POST'
+        self.method = "POST"
         self.parameters = {
-            'c_mode': 'view',
-            'c_page_size': '500',
+            "c_mode": "view",
+            "c_page_size": "500",
         }
 
-    def _get_case_names(self):
-        path = '''//table[3]//tr/td[1]/a/text()'''
-        return ["In re: " + titlecase(text) for text in self.html.xpath(path)]
-
-    def _get_download_urls(self):
-        path = '''//table[3]//tr/td[1]/a/@href'''
-        return [e for e in self.html.xpath(path)]
-
-    def _get_precedential_statuses(self):
-        statuses = []
-        path = '''//table[3]//tr/td[2]//text()'''
-        for txt in self.html.xpath(path):
-            if 'Unpublished' in txt:
-                statuses.append('Unpublished')
-            elif 'Published' in txt:
-                statuses.append('Published')
+    def _process_html(self):
+        path = "//table[@id='search-results-table']//tr[position()>1]"
+        for row in self.html.xpath(path):
+            cell_1 = row.xpath("./td[1]")[0]
+            url = cell_1.xpath(".//a/@href")
+            if not url:
+                continue
+            type = row.xpath("./td[2]")[0].text_content()
+            if "Unpublished" in type:
+                status = "Unpublished"
+            elif "Published" in type:
+                status = "Published"
             else:
-                statuses.append('Unknown')
-        return statuses
-
-    def _get_docket_numbers(self):
-        path = '''//table[3]//tr/td[3]//text()'''
-        return [docket_number for docket_number in self.html.xpath(path)]
-
-    def _get_case_dates(self):
-        path = '''//table[3]//tr/td[4]//text()'''
-        return [date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%Y')))
-                    for date_string in self.html.xpath(path)]
+                status = "Unknown"
+            self.cases.append(
+                {
+                    "url": url[0],
+                    "name": f"In re: {titlecase(cell_1.text_content())}",
+                    "status": status,
+                    "docket": row.xpath("./td[3]")[0].text_content(),
+                    "date": row.xpath("./td[4]")[0].text_content(),
+                }
+            )

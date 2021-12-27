@@ -12,15 +12,15 @@ from juriscraper.opinions.united_states_backscrapers.state import ind
 
 class Site(ind.Site):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://www.in.gov/judiciary/opinions/archapp.html'
+        self.url = "http://www.in.gov/judiciary/opinions/archapp.html"
         self.back_scrape_iterable = (
-            'archapp2010.html',
-            'archapp2008.html',
-            'archapp2005.html'
+            "archapp2010.html",
+            "archapp2008.html",
+            "archapp2005.html",
         )
 
     def _download_backwards(self, page):
-        self.url = 'http://www.in.gov/judiciary/opinions/%s' % (page,)
+        self.url = f"http://www.in.gov/judiciary/opinions/{page}"
         self.html = self._download()

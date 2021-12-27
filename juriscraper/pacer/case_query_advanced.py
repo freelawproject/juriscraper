@@ -9,33 +9,39 @@ In the cases, we look up search results by name, date, etc.
 import pprint
 import sys
 
+from ..lib.log_tools import make_default_logger
+from ..lib.string_utils import (
+    clean_string,
+    convert_date_string,
+    force_unicode,
+    harmonize,
+)
+from ..lib.utils import clean_court_object
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
 from .utils import get_pacer_case_id_from_nonce_url
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import clean_string, convert_date_string, \
-    force_unicode, harmonize
-from ..lib.utils import clean_court_object
 
 logger = make_default_logger()
 
 
 class BaseCaseQueryAdvanced(BaseDocketReport, BaseReport):
-    """Base query for both district and bankruptcy queries.
-    """
-    PATH = 'cgi-bin/iquery.pl'
+    """Base query for both district and bankruptcy queries."""
 
-    CACHE_ATTRS = ['metadata']
+    PATH = "cgi-bin/iquery.pl"
+
+    CACHE_ATTRS = ["metadata"]
 
     def __init__(self, court_id, pacer_session=None):
-        super(BaseCaseQueryAdvanced, self).__init__(court_id, pacer_session)
+        BaseDocketReport.__init__(self, court_id)
+        BaseReport.__init__(self, court_id, pacer_session)
+
         # Initialize the empty cache properties
         self._clear_caches()
         self._metadata = None
 
     def parse(self):
         self._clear_caches()
-        super(BaseCaseQueryAdvanced, self).parse()
+        super().parse()
 
     @property
     def data(self):
@@ -69,6 +75,9 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
 
     @property
     def metadata(self):
+        if self.is_valid is False:
+            return {}
+
         if self._metadata is not None:
             return self._metadata
 
@@ -99,12 +108,14 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
         # we just nuke them. They're not that important to us now anyway. But
         # none would deny this is a hackish way to normalize the results.
 
-        table_rows = self.tree.xpath('//table//tr[@class="rowBackground1" or '
-                                     '@class="rowbackground2"]')
+        table_rows = self.tree.xpath(
+            '//table//tr[@class="rowBackground1" or '
+            '@class="rowbackground2"]'
+        )
         data = []
 
         for table_row in table_rows:
-            cells = table_row.xpath('./td')
+            cells = table_row.xpath("./td")
             if len(cells) == 7:
                 # There are person and case results. Eliminate the first and
                 # sixth cells to normalize with tables that lack person results
@@ -114,15 +125,16 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
                 del cells[0]
 
             row_data = {
-                'docket_number': self.get_text_for_cell(cells[0]),
-                'case_name': clean_string(
-                    harmonize(self.get_text_for_cell(cells[1]))),
-                'chapter': self.get_text_for_cell(cells[2]),
-                'date_filed': self.get_date_for_cell(cells[3]),
-                'date_closed': self.get_date_for_cell(cells[4]),
+                "docket_number": self.get_text_for_cell(cells[0]),
+                "case_name": clean_string(
+                    harmonize(self.get_text_for_cell(cells[1]))
+                ),
+                "chapter": self.get_text_for_cell(cells[2]),
+                "date_filed": self.get_date_for_cell(cells[3]),
+                "date_closed": self.get_date_for_cell(cells[4]),
             }
-            href = cells[0].xpath('.//@href')[0]
-            row_data['pacer_case_id'] = get_pacer_case_id_from_nonce_url(href)
+            href = cells[0].xpath(".//@href")[0]
+            row_data["pacer_case_id"] = get_pacer_case_id_from_nonce_url(href)
 
             data.append(row_data)
 
@@ -131,9 +143,18 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
         self._metadata = data
         return data
 
-    def query(self, name_last='', name_first='', name_middle='',
-              person_type='', filed_from=None, filed_to=None,
-              last_entry_from=None, last_entry_to=None, natures_of_suit=''):
+    def query(
+        self,
+        name_last="",
+        name_first="",
+        name_middle="",
+        person_type="",
+        filed_from=None,
+        filed_to=None,
+        last_entry_from=None,
+        last_entry_to=None,
+        natures_of_suit="",
+    ):
         """Use a bankruptcy court's PACER query function to look up cases
 
         At the top of every district PACER court, there's a button that says,
@@ -169,46 +190,51 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
         :return None: Instead, sets self.response attribute and runs
         self.parse()
         """
-        assert self.session is not None, \
-            "session attribute of DocketReport cannot be None."
-        assert all([filed_from, filed_to]) or \
-            not any([filed_from, filed_to]), \
-            "Both or neither of filing date fields must be complete."
-        assert all([last_entry_from, last_entry_to]) or \
-            not any([last_entry_from, last_entry_to]), \
-            "Both or neither of last entry date fields must be complete."
+        assert (
+            self.session is not None
+        ), "session attribute of DocketReport cannot be None."
+        assert all([filed_from, filed_to]) or not any(
+            [filed_from, filed_to]
+        ), "Both or neither of filing date fields must be complete."
+        assert all([last_entry_from, last_entry_to]) or not any(
+            [last_entry_from, last_entry_to]
+        ), "Both or neither of last entry date fields must be complete."
 
         # PACER only allows so many days per query. Exceed this threshold and
         # you get an error message and zero results.
         max_days = 31
-        max_days_msg = "PACER has a %s day limit on date filters. " \
-                       "Narrow your search." % max_days
+        max_days_msg = (
+            "PACER has a %s day limit on date filters. "
+            "Narrow your search." % max_days
+        )
         if filed_from:
-            assert (filed_to - filed_from).days + 1 < max_days, \
-                max_days_msg
+            assert (filed_to - filed_from).days + 1 < max_days, max_days_msg
         if last_entry_from:
-            assert (last_entry_to - last_entry_from).days + 1 < max_days, \
-                max_days_msg
+            assert (
+                last_entry_to - last_entry_from
+            ).days + 1 < max_days, max_days_msg
 
         params = {}
         if filed_from:
-            params[u'filed_from'] = filed_from.strftime(u'%m/%d/%Y')
+            params["filed_from"] = filed_from.strftime("%m/%d/%Y")
         if filed_to:
-            params[u'filed_to'] = filed_to.strftime(u'%m/%d/%Y')
+            params["filed_to"] = filed_to.strftime("%m/%d/%Y")
         if last_entry_from:
-            params[u'lastentry_from'] = last_entry_from.strftime(u'%m/%d/%Y')
+            params["lastentry_from"] = last_entry_from.strftime("%m/%d/%Y")
         if last_entry_to:
-            params[u'lastentry_to'] = last_entry_to.strftime(u'%m/%d/%Y')
+            params["lastentry_to"] = last_entry_to.strftime("%m/%d/%Y")
 
-        params.update({
-            # Name fields
-            u'last_name': name_last,
-            u'first_name': name_first,
-            u'middle_name': name_middle,
-            u'person_type': person_type,
-        })
-        logger.info(u"Running advanced case query with params '%s'", params)
-        self.response = self.session.post(self.url + '?1-L_1_0-1', data=params)
+        params.update(
+            {
+                # Name fields
+                "last_name": name_last,
+                "first_name": name_first,
+                "middle_name": name_middle,
+                "person_type": person_type,
+            }
+        )
+        logger.info("Running advanced case query with params '%s'", params)
+        self.response = self.session.post(f"{self.url}?1-L_1_0-1", data=params)
         self.parse()
 
 
@@ -219,6 +245,7 @@ class CaseQueryAdvancedDistrict(BaseCaseQueryAdvanced):
     query() method and the results parsed by the metadata() method are unique
     across district and bankruptcy.
     """
+
     def __init__(self):
         raise NotImplementedError("This object is a stub.")
 
@@ -228,17 +255,19 @@ class CaseQueryAdvancedDistrict(BaseCaseQueryAdvanced):
 
 def _main():
     if len(sys.argv) != 2:
-        print("Usage: python -m juriscraper.pacer.case_query_advanced filepath")
+        print(
+            "Usage: python -m juriscraper.pacer.case_query_advanced filepath"
+        )
         print("Please provide a path to an HTML file to parse.")
         sys.exit(1)
 
     # Court ID is only needed for querying. Actual
     # parsed value appears in output
-    report = CaseQueryAdvancedBankruptcy('mad')
+    report = CaseQueryAdvancedBankruptcy("mad")
     filepath = sys.argv[1]
-    print("Parsing HTML file at %s" % filepath)
-    with open(filepath, 'r') as f:
-        text = f.read().decode('utf-8')
+    print(f"Parsing HTML file at {filepath}")
+    with open(filepath) as f:
+        text = f.read().decode("utf-8")
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)
 

@@ -1,45 +1,45 @@
 {
-  "assigned_to_str": "John E. Ryan", 
-  "case_name": "Laurie A Hill", 
-  "cause": "", 
-  "court_id": "cacb", 
-  "date_converted": null, 
-  "date_discharged": "1999-10-04", 
-  "date_filed": "1999-06-22", 
-  "date_terminated": "1999-10-14", 
-  "demand": "", 
-  "docket_entries": [], 
-  "docket_number": "8:99-bk-16358", 
-  "jurisdiction": "", 
-  "jury_demand": "", 
-  "mdl_status": "", 
-  "nature_of_suit": "", 
+  "assigned_to_str": "John E. Ryan",
+  "case_name": "Laurie A Hill",
+  "cause": "",
+  "court_id": "cacb",
+  "date_converted": null,
+  "date_discharged": "1999-10-04",
+  "date_filed": "1999-06-22",
+  "date_terminated": "1999-10-14",
+  "demand": "",
+  "docket_entries": [],
+  "docket_number": "8:99-bk-16358",
+  "jurisdiction": "",
+  "jury_demand": "",
+  "mdl_status": "",
+  "nature_of_suit": "",
   "parties": [
     {
       "attorneys": [
         {
-          "contact": "PRO SE\n", 
-          "name": "Laurie A Hill", 
+          "contact": "PRO SE\n",
+          "name": "Laurie A Hill",
           "roles": []
-        }, 
+        },
         {
-          "contact": "", 
-          "name": "", 
+          "contact": "",
+          "name": "",
           "roles": []
         }
-      ], 
-      "date_terminated": null, 
-      "extra_info": "2515 Orange Ave  Apt B\nCosta Mesa, CA 92627\nSSN / ITIN: xxx-xx-3152", 
-      "name": "Laurie A Hill", 
+      ],
+      "date_terminated": null,
+      "extra_info": "2515 Orange Ave  Apt B\nCosta Mesa, CA 92627\nSSN / ITIN: xxx-xx-3152",
+      "name": "Laurie A Hill",
       "type": "Debtor"
-    }, 
+    },
     {
-      "attorneys": [], 
-      "date_terminated": null, 
-      "extra_info": "P.o. Box 1860\nCosta Mesa, CA 92626-1860\n714-445-1021", 
-      "name": "Theodor C. Albert", 
+      "attorneys": [],
+      "date_terminated": null,
+      "extra_info": "P.o. Box 1860\nCosta Mesa, CA 92626-1860\n714-445-1021",
+      "name": "Theodor C. Albert",
       "type": "Trustee"
     }
-  ], 
+  ],
   "referred_to_str": ""
 }

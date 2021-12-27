@@ -1,11 +1,11 @@
 from lxml import etree
 
-from .reports import BaseReport
-from .utils import get_pacer_doc_id_from_doc1_url
 from ..lib.diff_tools import get_closest_match_index
 from ..lib.exceptions import ParsingException
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import force_unicode
+from .reports import BaseReport
+from .utils import get_pacer_doc_id_from_doc1_url
 
 logger = make_default_logger()
 
@@ -20,7 +20,8 @@ class PossibleCaseNumberApi(BaseReport):
     This API is normally used via AJAX in the front end of PACER when you put a
     docket number into the docket report search box.
     """
-    PATH = 'cgi-bin/possible_case_numbers.pl'
+
+    PATH = "cgi-bin/possible_case_numbers.pl"
 
     def query(self, docket_number):
         """Query the "possible case numbers" endpoint and return the results.
@@ -28,11 +29,13 @@ class PossibleCaseNumberApi(BaseReport):
         :param docket_number: A string representing a docket number
         :return: a request response object
         """
-        assert self.session is not None, \
-            "session attribute of PossibleCaseNUmberApi cannot be None."
-        url = "%s?%s" % (self.url, docket_number.lower())
-        logger.info(u'Querying the possible case number endpoint at URL: %s' %
-                    url)
+        assert (
+            self.session is not None
+        ), "session attribute of PossibleCaseNUmberApi cannot be None."
+        url = f"{self.url}?{docket_number.lower()}"
+        logger.info(
+            f"Querying the possible case number endpoint at URL: {url}"
+        )
         self.response = self.session.get(url)
         self.parse()
 
@@ -43,8 +46,9 @@ class PossibleCaseNumberApi(BaseReport):
         """
         self.tree = etree.fromstring(text)
 
-    def data(self, case_name=None, office_number=None,
-             docket_number_letters=None):
+    def data(
+        self, case_name=None, office_number=None, docket_number_letters=None
+    ):
         """Get data back from this query for the matching case.
 
         :param case_name: This endpoint can return multiple cases for a given
@@ -73,19 +77,20 @@ class PossibleCaseNumberApi(BaseReport):
          - bk - Bankruptcy
         There are others too, feel free to add them if you know them.
         """
-        case_count = self.tree.xpath('count(//case)')
-        nodes = self.tree.xpath('//case')
+        case_count = self.tree.xpath("count(//case)")
+        nodes = self.tree.xpath("//case")
         if case_count == 0:
             try:
-                msg = self.tree.xpath('//message/@text')[0]
+                msg = self.tree.xpath("//message/@text")[0]
             except IndexError:
                 pass
             else:
                 if "Cannot find case" in msg or "Case Under Seal" in msg:
                     logger.info("Cannot find case.")
                     return None
-            raise ParsingException("Unknown XML content in "
-                                   "PossibleCaseNumberApi result.")
+            raise ParsingException(
+                "Unknown XML content in " "PossibleCaseNumberApi result."
+            )
         elif case_count == 1:
             # Only one node, all set to go.
             pass
@@ -96,7 +101,7 @@ class PossibleCaseNumberApi(BaseReport):
                 # other than the correct office number.
                 def correct_office_number(node):
                     try:
-                        number = node.xpath('./@number')[0].split(':')[0]
+                        number = node.xpath("./@number")[0].split(":")[0]
                     except IndexError:
                         # Don't filter...something went wrong.
                         return True
@@ -106,7 +111,10 @@ class PossibleCaseNumberApi(BaseReport):
 
             if len(nodes) > 1 and docket_number_letters is not None:
                 # Remove items by docket number, if they have cv or cr.
-                f = lambda node: docket_number_letters in node.xpath('./@number')[0]
+                f = (
+                    lambda node: docket_number_letters
+                    in node.xpath("./@number")[0]
+                )
                 nodes = list(filter(f, nodes))
 
             if len(nodes) > 1:
@@ -114,37 +122,43 @@ class PossibleCaseNumberApi(BaseReport):
                 # lowest one. The lowest one tends to be the main case, and the
                 # others are additional dockets for specific defendants.
                 try:
-                    attribute = '@defendant'
-                    ids = sorted([int(x.xpath('./%s' % attribute)[0])
-                                  for x in nodes])
+                    attribute = "@defendant"
+                    ids = sorted(
+                        int(x.xpath(f"./{attribute}")[0]) for x in nodes
+                    )
                 except IndexError:
                     # No defendant attribute one of the nodes. Try by
                     # pacer_case_id instead. We used to do this by default,
                     # instead of defendant number, but it is not always
                     # sequential.
-                    attribute = '@id'
-                    ids = sorted([int(x.xpath('./%s' % attribute)[0])
-                                  for x in nodes])
+                    attribute = "@id"
+                    ids = sorted(
+                        int(x.xpath(f"./{attribute}")[0]) for x in nodes
+                    )
 
                 missing_ids = set(range(ids[0], ids[-1] + 1)).difference(ids)
                 if len(missing_ids) > 0:
                     # The IDs are not sequential. Can't use this technique.
                     pass
                 else:
-                    nodes = self.tree.xpath('//case[%s=%s]' % (attribute, ids[0]))
+                    nodes = self.tree.xpath(f"//case[{attribute}={ids[0]}]")
 
             if len(nodes) > 1 and case_name is not None:
                 # Disambiguate the possible case nodes to find the best one.
                 # Initial strings take the form:
                 #    2:16-cr-01152-JZB USA v. Abuarar (closed 01/26/2017)
                 # Attempt to pull out just the case name.
-                title_attrs = [node.xpath('./@title')[0] for node in nodes]
-                strs = [title.split(' ', 1)[1].split('(closed', 1)[0] for
-                        title in title_attrs]
+                title_attrs = [node.xpath("./@title")[0] for node in nodes]
+                strs = [
+                    title.split(" ", 1)[1].split("(closed", 1)[0]
+                    for title in title_attrs
+                ]
                 case_index = get_closest_match_index(case_name, strs)
                 if case_index is None:
-                    logger.warn("Got %s candidates, but unable to find good "
-                                "match to '%s'" % (len(nodes), case_name))
+                    logger.warning(
+                        "Got %s candidates, but unable to find good "
+                        "match to '%s'" % (len(nodes), case_name)
+                    )
                 else:
                     nodes = [nodes[case_index]]
 
@@ -158,11 +172,11 @@ class PossibleCaseNumberApi(BaseReport):
         if nodes:
             node = nodes[0]
             return {
-                u'docket_number': force_unicode(node.xpath('./@number')[0]),
-                u'pacer_case_id': force_unicode(node.xpath('./@id')[0]),
+                "docket_number": force_unicode(node.xpath("./@number")[0]),
+                "pacer_case_id": force_unicode(node.xpath("./@id")[0]),
                 # This could be further post processed to pull out the date closed
                 # and a cleaner title.
-                u'title': force_unicode(node.xpath('./@title')[0]),
+                "title": force_unicode(node.xpath("./@title")[0]),
             }
         else:
             raise ParsingException("Unable to identify case.")
@@ -180,14 +194,16 @@ class ShowCaseDocApi(BaseReport):
     item using only the document_number, pacer_case_id, and (optionally) the
     attachment_number.
     """
-    PATH = 'cgi-bin/show_case_doc'
+
+    PATH = "cgi-bin/show_case_doc"
 
     def __init__(self, court_id, pacer_session=None):
-        assert not court_id.endswith('b'), \
-            "This API is not available at bankruptcy courts."
-        super(ShowCaseDocApi, self).__init__(court_id, pacer_session)
+        assert not court_id.endswith(
+            "b"
+        ), "This API is not available at bankruptcy courts."
+        super().__init__(court_id, pacer_session)
 
-    def query(self, pacer_case_id, document_number, attachment_number=''):
+    def query(self, pacer_case_id, document_number, attachment_number=""):
         """Query the show_case_doc endpoint and return the normalized doc1
         number.
 
@@ -196,18 +212,21 @@ class ShowCaseDocApi(BaseReport):
         :param attachment_number: The attachment number of the item on the
         attachment page.
         """
-        assert self.session is not None, \
-            "session attribute of ShowCaseDocApi cannot be None."
-        url = ('{url}?'
-               '{document_number},'
-               '{pacer_case_id},'
-               '{attachment_number},,'.format(
-                    url=self.url,
-                    document_number=document_number,
-                    pacer_case_id=pacer_case_id,
-                    attachment_number=attachment_number,
-               ))
-        logger.info(u'Querying the show_doc_url endpoint with URL: %s' % url)
+        assert (
+            self.session is not None
+        ), "session attribute of ShowCaseDocApi cannot be None."
+        url = (
+            "{url}?"
+            "{document_number},"
+            "{pacer_case_id},"
+            "{attachment_number},,".format(
+                url=self.url,
+                document_number=document_number,
+                pacer_case_id=pacer_case_id,
+                attachment_number=attachment_number,
+            )
+        )
+        logger.info(f"Querying the show_doc_url endpoint with URL: {url}")
         # Only do a head request, else we get text content we don't need.
         self.response = self.session.head(url, allow_redirects=True)
         self.parse()
@@ -220,7 +239,9 @@ class ShowCaseDocApi(BaseReport):
     def data(self):
         """Get the URL out of the response object."""
         url = self.response.url
-        if 'doc1' in url:
+        if "doc1" in url:
             return get_pacer_doc_id_from_doc1_url(url)
         else:
-            raise ParsingException("Unable to get doc1-style URL. Instead got %s" % url)
+            raise ParsingException(
+                f"Unable to get doc1-style URL. Instead got {url}"
+            )

@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
-from __future__ import print_function
+
 
 import os
 
@@ -16,5 +15,7 @@ class PacerParseDocketHistoryReportTest(PacerParseTestCase):
         self.maxDiff = 200000
 
     def test_parsing_history_documents(self):
-        path_root = os.path.join(TESTS_ROOT_EXAMPLES_PACER, 'docket_history_reports')
-        self.parse_files(path_root, '*.html', DocketHistoryReport)
+        path_root = os.path.join(
+            TESTS_ROOT_EXAMPLES_PACER, "docket_history_reports"
+        )
+        self.parse_files(path_root, "*.html", DocketHistoryReport)

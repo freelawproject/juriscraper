@@ -1,4 +1,12 @@
-|Build Status|
++---------------+---------------------+-------------------+
+| |Lint Badge|  | |Test Badge|        |  |Version Badge|  |
++---------------+---------------------+-------------------+
+
+
+.. |Lint Badge| image:: https://github.com/freelawproject/juriscraper/workflows/Lint/badge.svg
+.. |Test Badge| image:: https://github.com/freelawproject/juriscraper/workflows/Tests/badge.svg
+.. |Version Badge| image:: https://badge.fury.io/py/juriscraper.svg
+
 
 What is This?
 =============
@@ -18,7 +26,7 @@ caller has been developed and is in use at
 caller can be `found
 here <https://github.com/freelawproject/courtlistener/tree/master/cl/scrapers/management/commands>`__.
 There is also a basic sample caller `included in
-Juriscraper <https://github.com/freelawproject/juriscraper/blob/master/juriscraper/sample_caller.py>`__
+Juriscraper <https://github.com/freelawproject/juriscraper/blob/main/sample_caller.py>`__
 that can be used for testing or as a starting point when developing your
 own.
 
@@ -38,30 +46,79 @@ Some of the design goals for this project are:
 Installation & Dependencies
 ===========================
 
-First step: Install Python 2.7.x, then:
+First step: Install Python 3.7+.x, then:
+
+Install the dependencies
+------------------------
+
+On Ubuntu/Debian Linux::
+
+    sudo apt-get install libxml2-dev libxslt-dev libyaml-dev
+
+On macOS with Homebrew <https://brew.sh>::
+
+    brew install libyaml
+
+
+Then install the code
+---------------------
 
 ::
 
-    # -- Install the dependencies
-    # On Ubuntu/Debian Linux:
-        sudo apt-get install libxml2-dev libxslt-dev libyaml-dev
-    # On macOS with Homebrew <https://brew.sh>:
-        brew install libyaml
-
-    # -- Install PhantomJS
-    # On Ubuntu/Debian Linux
-        wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
-        tar -x -f phantomjs-1.9.7-linux-x86_64.tar.bz2
-        sudo mv phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin
-        rm -r phantomjs-1.9.7*  # Cleanup
-    # On macOS with Homebrew:
-        brew install phantomjs
-
-    # Finally, install the code.
     pip install juriscraper
 
-    # create a directory for logs (this can be skipped, and no logs will be created)
-    sudo mkdir -p /var/log/juriscraper
+You can set an environment variable for where you want to stash your logs (this
+can be skipped, and `/var/log/juriscraper/debug.log` will be used as the
+default if it exists on the filesystem)::
+
+    export JURISCRAPER_LOG=/path/to/your/log.txt
+
+Finally, do your WebDriver
+--------------------------
+Some websites are too difficult to crawl without some sort of automated
+WebDriver. For these, Juriscraper either uses a locally-installed copy of
+geckodriver or can be configured to connect to a remote webdriver. If you prefer
+the local installation, you can download Selenium FireFox Geckodriver::
+
+    # choose OS compatible package from:
+    #   https://github.com/mozilla/geckodriver/releases/tag/v0.26.0
+    # un-tar/zip your download
+    sudo mv geckodriver /usr/local/bin
+
+If you prefer to use a remote webdriver, like `Selenium's docker image <https://hub.docker.com/r/selenium/standalone-firefox-debug>`__, you can
+configure it with the following variables:
+
+``WEBDRIVER_CONN``: Use this to set the connection string to your remote
+webdriver. By default, this is ``local``, meaning it will look for a local
+installation of geckodriver. Instead, you can set this to something like,
+``'http://YOUR_DOCKER_IP:4444/wd/hub'``, which will switch it to using a remote
+driver and connect it to that location.
+
+``SELENIUM_VISIBLE``: Set this to any value to disable headless mode in your
+selenium driver, if it supports it. Otherwise, it defaults to headless.
+
+For example, if you want to watch a headless browser run, you can do so by
+starting selenium with::
+
+    docker run \
+        -p 4444:4444 \
+        -p 5900:5900 \
+        -v /dev/shm:/dev/shm \
+        selenium/standalone-firefox-debug
+
+That'll launch it on your local machine with two open ports. 4444 is the
+default on the image for accessing the webdriver. 5900 can be used to connect
+via a VNC viewer, and can be used to watch progress if the ``SELENIUM_VISIBLE``
+variable is set.
+
+Once you have selenium running like that, you can do a test like::
+
+    WEBDRIVER_CONN='http://localhost:4444/wd/hub' \
+        SELENIUM_VISIBLE=yes \
+        python sample_caller.py -c juriscraper.opinions.united_states.state.kan_p
+
+Kansas's precedential scraper uses a webdriver. If you do this and watch
+selenium, you should see it in action.
 
 
 Joining the Project as a Developer
@@ -69,13 +126,30 @@ Joining the Project as a Developer
 
 For scrapers to be merged:
 
--  Automated testing should pass. The test suite will be run automatically by
-   `CircleCI <https://circleci.com/gh/freelawproject/juriscraper/>`__. If changes are being made to the pacer code, the pacer tests must also pass when run. These tests are skipped by default. To run them, set environment variables for PACER_USERNAME and PACER_PASSWORD.
+-  Automated testing should pass. The test suite will be run automatically by Github Actions. If changes are being made to the pacer code, the pacer tests must also pass when run. These tests are skipped by default. To run them, set environment variables for PACER_USERNAME and PACER_PASSWORD.
+
 -  A \*\_example\* file must be included in the ``tests/examples``
    directory (this is needed for the tests to run your code).
+
 -  Your code should be
    `PEP8 <http://www.python.org/dev/peps/pep-0008/>`__ compliant with no
    major Pylint problems or Intellij inspection issues.
+
+-  We use the `black <https://black.readthedocs.io/en/stable/>`__ code formatter to make sure all our Python code has the same formatting. This is an automated tool that you must run on any code you run before you push it to Github. When you run it, it will reformat your code. We recommend `integrating into your editor  <https://black.readthedocs.io/en/stable/editor_integration.html/>`__.
+
+- This project is configured to use git pre-commit hooks managed by the
+  Python program `pre-commit` ([website](https://pre-commit.com/)). Pre-
+  commit checks let us easily ensure that the code is properly formatted with
+  black before it can even be commited. If you install the dev dependencies in
+  `requirements-dev.txt`, you should then be able to run `$ pre-commit install`
+  which will set up a git pre-commit hook for you. This install step is only
+  necessary once in your repository. When using this hook, any code
+  files that do not comply to black will automatically be unstaged and re-
+  formatted. You will see a message to this effect. It is your job to then re-stage
+  and commit the files.
+
+-  Beyond what black will do for you by default, if you somehow find a way to do whitespace or other formatting changes, do so in their own commit and ideally in its own PR. When whitespace is combined with other code changes, the PR's become impossible to read and risky to merge. This is a big reason we use black.
+
 -  Your code should efficiently parse a page, returning no exceptions or
    speed warnings during tests on a modern machine.
 
@@ -105,7 +179,7 @@ Getting Set Up as a Developer
 =============================
 
 To get set up as a developer of Juriscraper, you'll want to install the code
-from git. To do that, install the dependencies and phantomjs as described above.
+from git. To do that, install the dependencies and geckodriver as described above.
 Instead of installing Juriscraper via pip, do the following:
 
 ::
@@ -246,64 +320,9 @@ Or, to run and drop to the Python debugger if it fails, but you must install `no
 
   nosetests -v --pdb tests/local/test_DateTest.py:DateTest.test_various_date_extractions
 
-In addition, we use `CircleCI <https://circleci.com/gh/freelawproject/juriscraper/>`__ to
-automatically run the tests whenever code is committed to the repository
-or whenever a pull request is created. You can make sure that your pull
-request is good to go by waiting for the automated tests to complete.
 
-The current status of CircleCI on our master branch is:
-
-|Build Status|
-
-Version History
-===============
-
-**Past**
-
--  0.1 - Supports opinions from all 13 Federal Circuit courts and the
-   U.S. Supreme Court
--  0.2 - Supports opinions from all federal courts of special
-   jurisdiction (Veterans, Tax, etc.)
--  0.8 - Supports oral arguments for all possible Federal Circuit
-   courts.
--  0.9 - Supports all state courts of last resort (typically the
-   "Supreme" court)
--  1.0 - Support opinions from for all possible federal bankruptcy
-   appellate panels (9th and 10th Cir.)
--  1.1.* - Major code reorganization and first release on the Python Package Index (PyPi)
--  1.2.* - Continued improvements.
--  1.3.* - Adds support for scraping some parts of PACER.
--  1.4.* - Python 3 compatibility (this was later dropped due to dependencies).
--  1.5.* - Adds support for querying and parsing PACER dockets.
--  1.6.* - Adds automatic relogin code to PACER sessions, with reorganization of old login APIs.
-- 1.7.* - Adds support for hidden PACER APIs.
-- 1.8.* - Standardization of string fields in PACER objects so they return the empty string when they have no value instead of returning None sometimes and the empty string others. (This follows Django conventions.)
-- 1.9.* - Re-organization, simplification, and standardization of PACER classes.
-- 1.10.* - Better parsing for PACER attachment pages.
-- 1.11.* - Adds system for identifying invalid dockets in PACER.
-- 1.12.* - Adds new parsers for PACER's show_case_doc URLs
-- 1.13.* - Fixes issues with Python build compatibility
-- 1.14.* - Adds new parser for PACER's docket history report
-- 1.15.* - Adds date termination parsing to parties on PACER dockets.
-- 1.16.* - Adds PACER RSS feed parsers.
-- 1.17.* - Adds support for criminal data in PACER
-- 1.18.* - Adds support for appellate docket parsing!
-- 1.19.* - Adds support for NextGen PACER logins, but drops support for the PACER training website. The training website now uses a different login flow than the rest of PACER.
-- 1.20.* - Tweaks the API of the query method in the FreeOpinionReport object
-  to consistently return None instead of sometimes returning []. Version bumped
-  because of breaking API changes.
-- 1.21.* - Adds support for the case report, which is the term we use to describe the page you see when you press the "Query" button in a district court PACER website. This is the page at the iQuery.pl URL.
-- 1.22.* - Adds support for de_seqno values parsed from PACER RSS, dockets, docket history reports, and attachment pages.
-- 1.23.* - Adds support for the advacned case report when it returns search results instead of a single item.
-- 1.24.* - Adds support for bankruptcy claims register parsing and querying
-- 1.25.* - Major refactor of tests to split them into network and local tests. Should make CI more consistent.
-
-**Current**
-
- - 1.26.* - Adds support for the Los Angeles Superior Court Media Access Portal (LASC MAP)
-
-**Future Goals**
-
+Future Goals
+============
 -  Support for additional PACER pages and utilities
 -  Support opinions from for all intermediate appellate state courts
 -  Support opinions from for all courts of U.S. territories (Guam, American Samoa, etc.)
@@ -314,8 +333,10 @@ Version History
 
 Deployment
 ==========
-
-Deployment to PyPi should happen automatically by CircleCI whenever a new tag is created in Github on the master branch. It will fail if the version has not been updated or if CircleCI failed.
+Deployment to PyPi should happen automatically when a tagged version is pushed
+to master in the format v*.*.*. If you do not have push permission on master,
+this will also work for merged, tagged pull requests. Simply update setup.py,
+tag your commit with the correct tag (v.*.*.*), and do a PR with that.
 
 If you wish to create a new version manually, the process is:
 
@@ -338,10 +359,13 @@ If you wish to create a new version manually, the process is:
         twine upload dist/* -r pypi (or pypitest)
 
 
+
 License
 =======
 
 Juriscraper is licensed under the permissive BSD license.
 
-.. |Build Status| image:: https://circleci.com/gh/freelawproject/juriscraper.svg?style=svg
-    :target: https://circleci.com/gh/freelawproject/juriscraper
+|forthebadge made-with-python|
+
+.. |forthebadge made-with-python| image:: http://ForTheBadge.com/images/badges/made-with-python.svg
+    :target: https://www.python.org/

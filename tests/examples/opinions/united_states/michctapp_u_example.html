@@ -36,7 +36,7 @@ document.write('<script type="text/javascript" src="/ScriptResource.axd?d=qZKQiY
 
 <!-- page title - overridden by asp:content on pages or page layouts -->
 <title>
-	
+
 	Opinion &amp; Order Search
 
 </title>
@@ -68,12 +68,12 @@ document.write('<script type="text/javascript" src="/ScriptResource.axd?d=qZKQiY
 <script type="text/javascript" src="/Style%20Library/_js/jquery.dcjqaccordion.2.7.min.js"></script>
 <script type="text/javascript" src="/Style%20Library/_js/jquery.cookie.js"></script>
 <script type="text/javascript" src="/Style%20Library/_js/jquery.hoverIntent.minified.js"></script>
-<!-- JS Trigger - jRespond 
+<!-- JS Trigger - jRespond
 -->
 <script type="text/javascript" src="/Style%20Library/_js/_respondjs/jRespond.js"></script>
-<script type="text/javascript"> 
+<script type="text/javascript">
 	    $(document).ready(function($){
-	    
+
 				$('#accordion-2').dcAccordion({
 						eventType: 'click',
 						autoClose: true,
@@ -85,7 +85,7 @@ document.write('<script type="text/javascript" src="/ScriptResource.axd?d=qZKQiY
 						cookie: 'dcjq-accordion-1',
 						classExpand: 'dcjq-current-parent'
 				});
-					
+
 				$('#accordion-1').dcAccordion({
 						eventType: 'click',
 						autoClose: true,
@@ -97,7 +97,7 @@ document.write('<script type="text/javascript" src="/ScriptResource.axd?d=qZKQiY
 						cookie: 'dcjq-accordion-1',
 						classExpand: 'dcjq-current-parent'
 				});
-		
+
 				$('#accordion').accordion({
     				collapsible: true,
     				active: false
@@ -123,16 +123,16 @@ $(function() {
 </script>
 <script type="text/javascript">
 		function ProcessImn(){}
-		function ProcessImnMarkers(){}	
+		function ProcessImnMarkers(){}
 	</script>
 
 	<!-- additional header delegate control -->
-	
 
-	
-	
+
+
+
 	<!-- logic to remove scrolling  -->
-	
+
 <link rel="stylesheet" href="/Style%20Library/inc/ribbon.css" type="text/css" media="screen" />
 <!--[if lte IE 7]>
 <link rel="stylesheet" href="/style%20library/inc/ie7_ribbon.css" type="text/css" media="screen" />
@@ -152,14 +152,14 @@ $(function() {
             $(".dropdown dt a").click(function() {
                 $(".dropdown dd ul").toggle();
             });
-                        
+
             $(".dropdown dd ul li a").click(function() {
                 var text = $(this).html();
                 $(".dropdown dt a span").html(text);
                 $(".dropdown dd ul").hide();
                 $("#result").html("Selected value is: " + getSelectedValue("sample"));
             });
-                        
+
             function getSelectedValue(id) {
                 return $("#" + id).find("dt a span.value").html();
             }
@@ -196,20 +196,20 @@ $(document).ready(function(){
 
   href = ($(this).attr('href') == undefined) ? ('') : ($(this).attr('href'));
   href_lower = href.toLowerCase();
-  
-  if(href_lower.substr(-3) == "pdf" || href_lower.substr(-3) == 
+
+  if(href_lower.substr(-3) == "pdf" || href_lower.substr(-3) ==
      "xls" || href_lower.substr(-3) == "doc") {
-   _gaq.push(['_trackEvent', 'document', 'download', 
+   _gaq.push(['_trackEvent', 'document', 'download',
              href_lower.substr(-3), $(this).text()]);
    _gaq.push(['_trackPageview', href]);
   }
- 
+
   if(href_lower.substr(0, 4).toLowerCase() == "http") {
    _gaq.push(['_trackEvent', 'external_link', 'open', 'href', $(this).text()]);
    _gaq.push(['_trackPageview', href]);
   }
-  
-  if ($(this).attr('target') != undefined && $(this).attr('target').toLowerCase() != 
+
+  if ($(this).attr('target') != undefined && $(this).attr('target').toLowerCase() !=
      '_blank' && href_lower.substr(0,10) != "javascript") {
    setTimeout(function() { location.href = href; }, 200);
    return false;
@@ -221,32 +221,32 @@ $(document).ready(function(){
 </script>
 	<!-- End PDF Tracking -->
 	<!-- Adiitional page head -- SEO feature writes HTML title here. -->
-	
+
 <!-- JS Trigger - jRespond -->
 <script src="/Style%20Library/_js/_respondjs/jRespond-subpage.js"></script>
 
 			<div id="ctl00_PlaceHolderAdditionalPageHead_GetDisplay">
-	
-							
+
+
 </div>
-			
+
 
 <script>
 /*
 	$(document).ready(function() {
-	
+
 		var url = window.location.search;
 		if (url.match("SearchType").length > 0) {
-						
+
 			$( "<a name='query-results'></a>" ).insertBefore( "advanced-results" );
-								
-								
+
+
 		    var suffix = '#query-results';
 		    var currentUrl = window.location.href;
 		    if (currentUrl.match(suffix + '$') != suffix) {
 		        window.location.href = window.location.href + suffix;
     		}
-    
+
 		function scrollToAnchor(aid){
 		    var aTag = $("a[name='"+ aid +"']");
 		    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
@@ -389,7 +389,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['fctl00$WebPartAd
 //]]>
 </script>
 
-	
+
 	<noscript><div class='noindex'>You may be trying to access this site from a secured browser on the server. Please enable scripts and reload this page.</div></noscript>
 	<!-- ribbon -->
 	<div id="s4-ribbonrow" class="s4-pr s4-ribbonrowhidetitle">
@@ -425,25 +425,25 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 		<div id="notificationArea" class="s4-noti">
 		</div>
 		<!-- publishing console -->
-		
-		
+
+
 <span id="ctl00_SPNavigation_ctl00_publishingConsoleV4_publishingRibbon"></span>
 
 
 
-	
+
 		<!-- browse web parts (when adding new web parts) -->
 		<div id="WebPartAdderUpdatePanelContainer">
 			<div id="ctl00_WebPartAdderUpdatePanel">
-	
+
 				<span id="ctl00_WebPartAdder"></span>
-			
+
 </div>
 		</div>
 		</div>
 	<!-- /ribbon -->
 	<!-- Ribbon toggle default state code -->
-	
+
 	<!-- page status -->
 	<div id="s4-statusbarcontainer">
 		<div id="pageStatusBar" class="s4-status-s1">
@@ -550,7 +550,7 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 							<ul id="accordion-1" class="accordion">
 								<li class="dcjq-parent-li">
 								<span id="dcjq-main-menu"></span>
-								<a class="top-level-item dcjq-parent" href="#">Main 
+								<a class="top-level-item dcjq-parent" href="#">Main
 								Menu <span class="dcjq-icon"></span></a>
 								<ul style="display: none;">
 									<li>
@@ -583,8 +583,8 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 					<div class="body_wrapper">
 						<div id="sub_content" style="left: 0px; top: 0px">
 							<!-- page content loads from the pages and pages layout -->
-							
-	
+
+
 		<!--SEO WEB PART FIELDS TO READ VALUES FROM HTML BOXES ON PAGE LAYOUTS-->
 <!--END SEO WEB PART FIELDS-->
 
@@ -601,23 +601,23 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 
     <div id="one_column">
       <div id="full_column">
-      
+
 		<div id="ctl00_PlaceHolderMain_GetDisplay2">
-	
-		
+
+
 	<div id="smedia">
 		<div class="add_this_group">
 			<!-- AddThis Button BEGIN -->
 			<script type="text/javascript">var addthis_config = {
 			services_compact: 'print, email, facebook, twitter, favorites, digg, myspace, delicious, google, live, stumpleupon, more' }
 			</script>
-			
+
 			<a href="#" onclick="return addthis_open(this, '', 'http://www.addthis.com', 'AddThis.com - Bookmarking tool')" onmouseout="addthis_close()" onclick="return addthis_sendto()">
-			<img src="http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" border="0" alt="Bookmark and Share" style="border:0" /></a> 
+			<img src="http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" border="0" alt="Bookmark and Share" style="border:0" /></a>
 			<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4b9e32c80f28d8d9"></script>
 		</div>
 		<div class="print_icon">
-		<a href="javascript:return addthis_sendto('print');" onclick="return addthis_sendto('print');"><img src="/Style%20Library/_images/print_icon.png" width="16px" height="13px" border="0"/><span class=""> 
+		<a href="javascript:return addthis_sendto('print');" onclick="return addthis_sendto('print');"><img src="/Style%20Library/_images/print_icon.png" width="16px" height="13px" border="0"/><span class="">
 		Print</span></a>
 		</div>
 	</div>
@@ -626,10 +626,10 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 
 </div>
         <!-- #central column -->
-        
+
 <div>
 <div class="body_copy">
-	
+
 
 <script type="text/javascript">
 <!--
@@ -710,11 +710,11 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 		<li><a href="#Advanced">Advanced</a></li>
 	</ul>
 
-    
+
     <div id="PartyName" class="jqueryui-tab">
         <input type="hidden" name="ctl00$PlaceHolderMain$SearchOpinionsOrders$jQueryUITab_PartyName" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_jQueryUITab_PartyName" value="PartyName" />
         <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_PanelPartyName" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_PlaceHolderMain_SearchOpinionsOrders_ButtonByPartyName')">
-	
+
             <div id="partyname-form" class="mappis-form">
                 <div class="form-help">
                     Use the <i>By Party Name</i> search to locate the Court opinions and orders for a specific party name. The party name can be the name of an individual or organization. Do not include a comma and use only one space to separate names.
@@ -722,14 +722,14 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                 </div>
                 <div class="form_items_group">
                     <div class="form-field">
-                        <label for="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlPartyName" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_LabelPartyName">Party Name:</label> 
+                        <label for="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlPartyName" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_LabelPartyName">Party Name:</label>
                         <input name="ctl00$PlaceHolderMain$SearchOpinionsOrders$ControlPartyName" type="text" maxlength="100" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlPartyName" class="ControlPartyName" />
                         <div class="InputHelp">(Lastname Firstname Middle Initial OR Company Name)</div>
                         <span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_RequiredFieldValidatorPartyName" style="color:Red;display:none;">Party Name is required</span>
                         <span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_RegularExpressionValidatorPartyName" style="color:Red;display:none;">Party Name must contain at least 4 characters</span>
                     </div>
                     <div class="form-field">
-                        <label for="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlCourtType_PartyName" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_LabelCourtType_PartyName">Select Court:</label> 
+                        <label for="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlCourtType_PartyName" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_LabelCourtType_PartyName">Select Court:</label>
                         <table id="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlCourtType_PartyName" border="0">
 		<tr>
 			<td><input id="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlCourtType_PartyName_0" type="radio" name="ctl00$PlaceHolderMain$SearchOpinionsOrders$ControlCourtType_PartyName" value="1" /><label for="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlCourtType_PartyName_0">Supreme Court</label></td>
@@ -748,25 +748,25 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 
             </div>
 
-            
 
-            
+
+
 
             <div id="advanced-results" class="mappis-results stacked">
-                
-                
-                
+
+
+
             </div>
 
-        
+
 </div>
     </div>
 
-    
+
     <div id="CaseNumber" class="jqueryui-tab">
         <input type="hidden" name="ctl00$PlaceHolderMain$SearchOpinionsOrders$jQueryUITab_CaseNumber" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_jQueryUITab_CaseNumber" value="CaseNumber" />
         <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_PanelCaseNumber" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_PlaceHolderMain_SearchOpinionsOrders_ButtonByCaseNumber')">
-	
+
             <div id="casenumber-form" class="mappis-form">
                 <div class="form-help">
                     Use the <i>By Docket Number</i> search to locate the Court opinions and orders for a specific case docket number.  Choose either Supreme Court or Court of Appeals.
@@ -774,13 +774,13 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                 </div>
                 <div class="form_items_group">
                     <div class="form-field">
-                        <label for="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlCaseNumber" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_LabelCaseNumber">Case Docket Number:</label> 
+                        <label for="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlCaseNumber" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_LabelCaseNumber">Case Docket Number:</label>
                         <input name="ctl00$PlaceHolderMain$SearchOpinionsOrders$ControlCaseNumber" type="text" maxlength="6" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlCaseNumber" />
                         <span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_RangeValidatorCaseNumber" style="color:Red;display:none;">Case Docket Number must be a valid number less than 999999</span>
                         <span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_RequiredFieldValidatorCaseNumber" style="color:Red;display:none;">Case Docket Number is required</span>
                     </div>
                     <div class="form-field">
-                        <label for="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlCourtType_CaseNumber" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_LabelCourtType_CaseNumber">Select Court:</label> 
+                        <label for="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlCourtType_CaseNumber" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_LabelCourtType_CaseNumber">Select Court:</label>
                         <table id="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlCourtType_CaseNumber" border="0">
 		<tr>
 			<td><input id="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlCourtType_CaseNumber_0" type="radio" name="ctl00$PlaceHolderMain$SearchOpinionsOrders$ControlCourtType_CaseNumber" value="1" /><label for="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlCourtType_CaseNumber_0">Supreme Court</label></td>
@@ -795,30 +795,30 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                     <input type="button" name="ctl00$PlaceHolderMain$SearchOpinionsOrders$ButtonByCaseNumber" value="Search" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$PlaceHolderMain$SearchOpinionsOrders$ButtonByCaseNumber&quot;, &quot;&quot;, true, &quot;CaseNumber&quot;, &quot;&quot;, false, true))" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_ButtonByCaseNumber" />
                 </div>
             </div>
-            
 
-            
+
+
 
             <div id="advanced-results" class="mappis-results stacked">
-                
-                
-                
+
+
+
             </div>
 
-        
+
 </div>
     </div>
 
-    
+
     <div id="Keyword" class="jqueryui-tab">
         <input type="hidden" name="ctl00$PlaceHolderMain$SearchOpinionsOrders$jQueryUITab_Keyword" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_jQueryUITab_Keyword" value="Keyword" />
         <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_PanelKeyword">
-	
+
  <div class="keyword_search_input">
             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_KeywordSearchBox">
-		
-                
-            
+
+
+
 
             <div id="keyword-form" class="mappis-form">
                 <div class="form-help">
@@ -847,29 +847,29 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 	</div>
 </div>
             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_KeywordResults">
-		
-                
-            
+
+
+
 	</div>
-        
+
 </div>
     </div>
 
-    
+
     <div id="Advanced" class="jqueryui-tab">
         <input type="hidden" name="ctl00$PlaceHolderMain$SearchOpinionsOrders$jQueryUITab_Advanced" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_jQueryUITab_Advanced" value="Advanced" />
         <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_Panel_Advanced" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_PlaceHolderMain_SearchOpinionsOrders_ButtonAdvanced')">
-	
+
             <div id="advanced-form" class="mappis-form">
                 <div class="form-help">
                     Use the <i>Advanced</i> search to locate Court opinions and orders by selecting criteria in the provided fields. The required fields are the Date and Status fields. Both of these fields have default values. The remaining fields are optional.
                     <a class="SearchTips" href="OpinionOrderSearchTips.aspx" target="_blank">Search Tips</a>
                 </div>
-    
+
                 <div class="form">
                     <div class="form-band">
                         <div class="columnLeft">
-                           
+
                                     <div class="form-field">
                                        <div class="advanced_row_left"> <label for="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlAuthor_Advanced" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_LabelAuthor_Advanced">Author:</label></div>
                                          <div class="advanced_row_right"><select name="ctl00$PlaceHolderMain$SearchOpinionsOrders$ControlAuthor_Advanced" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlAuthor_Advanced">
@@ -936,7 +936,7 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 
 	</select></div>
                                     </div>
-                               
+
 
                                     <div class="form-field">
                                         <div class="advanced_row_left"><label for="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlPanelMember_Advanced" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_LabelPanelMember_Advanced">Panel Member:</label> </div>
@@ -1113,7 +1113,7 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 
 	</select></div>
                                     </div>
-                             
+
                                     <div class="form-field">
                                         <div class="advanced_row_left">  <label for="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlCaseNature_Advanced" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_LabelCaseNature_Advanced">Case Type:</label> </div>
                                        <div class="advanced_row_right"> <select name="ctl00$PlaceHolderMain$SearchOpinionsOrders$ControlCaseNature_Advanced" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlCaseNature_Advanced">
@@ -1317,11 +1317,11 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 	</select></div>
                                         <span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_RequiredFieldValidatorCaseNature_Advanced" style="color:Red;display:none;">Case Nature is required</span>
                                     </div>
-                               
+
 
                         </div>
                         <div class="columnRight">
-                          
+
                                      <div class="form-field">
                                        <div class="advanced_row_left"> <label for="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlLowerCourt_Advanced" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_LabelLowerCourt_Advanced">Lower Court:</label> </div>
                                        <div class="advanced_row_right"> <select name="ctl00$PlaceHolderMain$SearchOpinionsOrders$ControlLowerCourt_Advanced" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlLowerCourt_Advanced">
@@ -1632,7 +1632,7 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 	</select></div>
                                         <span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_RequiredFieldValidatorLowerCourt_Advanced" style="color:Red;display:none;">Lower Court is required</span>
                                     </div>
-                             
+
                                     <div class="form-field">
                                        <div class="advanced_row_left"> <label for="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlStatus_Advanced" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_LabelStatus_Advanced">Status:</label> </div>
                                         <div class="advanced_row_right"><select name="ctl00$PlaceHolderMain$SearchOpinionsOrders$ControlStatus_Advanced" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlStatus_Advanced">
@@ -1646,23 +1646,23 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 	</select></div>
                                         <span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_RequiredFieldValidatorStatus_Advanced" style="color:Red;display:none;">Status is required</span>
                                     </div>
-                               
+
                         </div>
                     </div>
                     <div class="form-band">
                         <div class="form-field">
-                            <label for="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlFirstDate_Advanced" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_LabelFirstDate_Advanced">Date:</label> 
+                            <label for="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlFirstDate_Advanced" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_LabelFirstDate_Advanced">Date:</label>
                             <input name="ctl00$PlaceHolderMain$SearchOpinionsOrders$ControlFirstDate_Advanced" type="text" value="8/19/2014" maxlength="10" size="10" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlFirstDate_Advanced" class="DatepickerInput" />
                             <span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_CustomValidatorFirstDate_Advanced" style="color:Red;display:none;">Beginning date required</span><!--  ClientValidationFunction="CustomValidatorFirstDate_Advanced_ClientValidate" -->
                             <span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_RegularExpressionValidatorFirstDate_Advanced" style="color:Red;display:none;">Invalid date</span>
                         </div>
                         <div class="form-field">
-                            <label for="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlLastDate_Advanced" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_LabelLastDate_Advanced">Through:</label> 
+                            <label for="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlLastDate_Advanced" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_LabelLastDate_Advanced">Through:</label>
                             <input name="ctl00$PlaceHolderMain$SearchOpinionsOrders$ControlLastDate_Advanced" type="text" value="9/19/2014" maxlength="10" size="10" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_ControlLastDate_Advanced" class="DatepickerInput" />
                             <span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_RegularExpressionValidatorLastDate_Advanced" style="color:Red;display:none;">Invalid date</span>
                         </div>
                     </div>
-         
+
                 </div>
                 <div class="form-button">
                     <input type="button" name="ctl00$PlaceHolderMain$SearchOpinionsOrders$ButtonAdvanced" value="Search" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$PlaceHolderMain$SearchOpinionsOrders$ButtonAdvanced&quot;, &quot;&quot;, true, &quot;Advanced&quot;, &quot;&quot;, false, true))" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_ButtonAdvanced" />
@@ -1686,7 +1686,7 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                 Advanced Opinions & Orders Search Results - <span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_LabelAdvancedResultsSummary" class="LabelAdvancedResultsSummary mappis-results-summary-detail"></span>
             </div>
 
-            
+
 
             <div id="advanced-results" class="mappis-results stacked">
                 <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_ResultsPagerTop_Pager" class="mappis-paging">
@@ -1695,33 +1695,33 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 			        <input type="hidden" name="ctl00$PlaceHolderMain$SearchOpinionsOrders$AdvancedSearchResults$ResultsPagerTop$ControlTotalResults" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_ResultsPagerTop_ControlTotalResults" value="272" />
 
 					<div class="mappis-paging-range">
-						Records 
-						<span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_ResultsPagerTop_LabelFirstRecord">1</span> - 
-						<span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_ResultsPagerTop_LabelLastRecord">25</span> of 
+						Records
+						<span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_ResultsPagerTop_LabelFirstRecord">1</span> -
+						<span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_ResultsPagerTop_LabelLastRecord">25</span> of
 						<span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_ResultsPagerTop_LabelTotalRecords">272</span>
 					</div>
-					
+
 					<div class="mappis-paging-buttons">
-						
-						
+
+
 						<a id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_ResultsPagerTop_LinkButtonNextPage" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$PlaceHolderMain$SearchOpinionsOrders$AdvancedSearchResults$ResultsPagerTop$LinkButtonNextPage&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Next ></a>
 						<a id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_ResultsPagerTop_LinkButtonLastPage" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$PlaceHolderMain$SearchOpinionsOrders$AdvancedSearchResults$ResultsPagerTop$LinkButtonLastPage&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Last >></a>
 					</div>
 				</div>
 
-                
+
                         <ul class="result-header">
                             <li class="record">&nbsp;</li>
                             <li class="casenumber">CASE NUMBER</li>
                             <li class="casedetails">CASE DETAILS</li>
                             <li class="download">DOWNLOAD</li>
                         </ul>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl01_Panel2">
-		
-                                
+
+
                                 <ul class='even'>
                                     <li class="record">1</li>
                                     <li class="casenumber">311059
@@ -1759,15 +1759,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl02_Panel2">
-		
-                                
+
+
                                 <ul class='odd'>
                                     <li class="record">2</li>
                                     <li class="casenumber">314824
@@ -1805,15 +1805,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl03_Panel2">
-		
-                                
+
+
                                 <ul class='even'>
                                     <li class="record">3</li>
                                     <li class="casenumber">314824
@@ -1851,15 +1851,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl04_Panel2">
-		
-                                
+
+
                                 <ul class='odd'>
                                     <li class="record">4</li>
                                     <li class="casenumber">314830
@@ -1897,15 +1897,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl05_Panel2">
-		
-                                
+
+
                                 <ul class='even'>
                                     <li class="record">5</li>
                                     <li class="casenumber">315030
@@ -1943,15 +1943,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl06_Panel2">
-		
-                                
+
+
                                 <ul class='odd'>
                                     <li class="record">6</li>
                                     <li class="casenumber">315030
@@ -1989,15 +1989,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl07_Panel2">
-		
-                                
+
+
                                 <ul class='even'>
                                     <li class="record">7</li>
                                     <li class="casenumber">316236
@@ -2035,15 +2035,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl08_Panel2">
-		
-                                
+
+
                                 <ul class='odd'>
                                     <li class="record">8</li>
                                     <li class="casenumber">316359
@@ -2081,15 +2081,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl09_Panel2">
-		
-                                
+
+
                                 <ul class='even'>
                                     <li class="record">9</li>
                                     <li class="casenumber">316409
@@ -2127,15 +2127,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl10_Panel2">
-		
-                                
+
+
                                 <ul class='odd'>
                                     <li class="record">10</li>
                                     <li class="casenumber">316414
@@ -2173,15 +2173,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl11_Panel2">
-		
-                                
+
+
                                 <ul class='even'>
                                     <li class="record">11</li>
                                     <li class="casenumber">316556
@@ -2219,15 +2219,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl12_Panel2">
-		
-                                
+
+
                                 <ul class='odd'>
                                     <li class="record">12</li>
                                     <li class="casenumber">316600
@@ -2265,15 +2265,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl13_Panel2">
-		
-                                
+
+
                                 <ul class='even'>
                                     <li class="record">13</li>
                                     <li class="casenumber">316600
@@ -2311,15 +2311,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl14_Panel2">
-		
-                                
+
+
                                 <ul class='odd'>
                                     <li class="record">14</li>
                                     <li class="casenumber">316690
@@ -2357,15 +2357,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl15_Panel2">
-		
-                                
+
+
                                 <ul class='even'>
                                     <li class="record">15</li>
                                     <li class="casenumber">316862
@@ -2403,15 +2403,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl16_Panel2">
-		
-                                
+
+
                                 <ul class='odd'>
                                     <li class="record">16</li>
                                     <li class="casenumber">318105
@@ -2449,15 +2449,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl17_Panel2">
-		
-                                
+
+
                                 <ul class='even'>
                                     <li class="record">17</li>
                                     <li class="casenumber">318163
@@ -2495,15 +2495,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl18_Panel2">
-		
-                                
+
+
                                 <ul class='odd'>
                                     <li class="record">18</li>
                                     <li class="casenumber">320045
@@ -2541,15 +2541,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl19_Panel2">
-		
-                                
+
+
                                 <ul class='even'>
                                     <li class="record">19</li>
                                     <li class="casenumber">320912
@@ -2587,15 +2587,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl20_Panel2">
-		
-                                
+
+
                                 <ul class='odd'>
                                     <li class="record">20</li>
                                     <li class="casenumber">303816
@@ -2633,15 +2633,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl21_Panel2">
-		
-                                
+
+
                                 <ul class='even'>
                                     <li class="record">21</li>
                                     <li class="casenumber">304255
@@ -2679,15 +2679,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl22_Panel2">
-		
-                                
+
+
                                 <ul class='odd'>
                                     <li class="record">22</li>
                                     <li class="casenumber">305463
@@ -2725,15 +2725,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl23_Panel2">
-		
-                                
+
+
                                 <ul class='even'>
                                     <li class="record">23</li>
                                     <li class="casenumber">306022
@@ -2771,15 +2771,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl24_Panel2">
-		
-                                
+
+
                                 <ul class='odd'>
                                     <li class="record">24</li>
                                     <li class="casenumber">308843
@@ -2817,15 +2817,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                         <div class="mappis-result stacked opinion">
-                            
+
                             <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_RepeaterOpinionOrderInquiryAdvanced_ctl25_Panel2">
-		
-                                
+
+
                                 <ul class='even'>
                                     <li class="record">25</li>
                                     <li class="casenumber">308843
@@ -2863,25 +2863,25 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
                                         </a>
                                     </li>
                                 </ul>
-                            
+
 	</div>
                         </div>
-                    
+
                 <div id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_ResultsPagerBottom_Pager" class="mappis-paging">
 			        <input type="hidden" name="ctl00$PlaceHolderMain$SearchOpinionsOrders$AdvancedSearchResults$ResultsPagerBottom$ControlPageIndex" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_ResultsPagerBottom_ControlPageIndex" value="0" />
 			        <input type="hidden" name="ctl00$PlaceHolderMain$SearchOpinionsOrders$AdvancedSearchResults$ResultsPagerBottom$ControlPageSize" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_ResultsPagerBottom_ControlPageSize" value="25" />
 			        <input type="hidden" name="ctl00$PlaceHolderMain$SearchOpinionsOrders$AdvancedSearchResults$ResultsPagerBottom$ControlTotalResults" id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_ResultsPagerBottom_ControlTotalResults" value="272" />
 
 					<div class="mappis-paging-range">
-						Records 
-						<span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_ResultsPagerBottom_LabelFirstRecord">1</span> - 
-						<span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_ResultsPagerBottom_LabelLastRecord">25</span> of 
+						Records
+						<span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_ResultsPagerBottom_LabelFirstRecord">1</span> -
+						<span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_ResultsPagerBottom_LabelLastRecord">25</span> of
 						<span id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_ResultsPagerBottom_LabelTotalRecords">272</span>
 					</div>
-					
+
 					<div class="mappis-paging-buttons">
-						
-						
+
+
 						<a id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_ResultsPagerBottom_LinkButtonNextPage" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$PlaceHolderMain$SearchOpinionsOrders$AdvancedSearchResults$ResultsPagerBottom$LinkButtonNextPage&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Next ></a>
 						<a id="ctl00_PlaceHolderMain_SearchOpinionsOrders_AdvancedSearchResults_ResultsPagerBottom_LinkButtonLastPage" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$PlaceHolderMain$SearchOpinionsOrders$AdvancedSearchResults$ResultsPagerBottom$LinkButtonLastPage&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Last >></a>
 					</div>
@@ -2889,7 +2889,7 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 
             </div>
 
-        
+
 </div>
     </div>
 </div>
@@ -2908,10 +2908,10 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 </div>
 	</div>
            </div>
-      
+
         <!-- #right column -->
       <div class="clearer">
-		
+
 		</div>
     </div>
     <!-- #central column -->
@@ -2944,7 +2944,7 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 										<a href="/courts/trialcourts/pages/default.aspx">
 										Trial Courts</a></li>
 										<li><span lang="en-us">
-										
+
 									</ul>
 								</div>
 								<div class="footer_column" style="left: 0px; top: 0px">
@@ -2990,7 +2990,7 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 										<li><span lang="en-us">
 										<a href="/Courts/MichiganSupremeCourt/oral-arguments/live-streaming/Pages/live-streaming.aspx">
 										Supreme Court Live</a><br><br></span></li>
-									
+
 
 									</ul>
 								</div>
@@ -3004,7 +3004,7 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 										<a href="/self-help/pages/default.aspx">
 										Help</a></li>
 										<li>
-										<a href="/sitemap/Pages/default.aspx">Site 
+										<a href="/sitemap/Pages/default.aspx">Site
 										Map</a></li>
 										<li>
 										<a href="/self-help/directories/pages/default.aspx">
@@ -3023,7 +3023,7 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 		</div>
 	</div>
 	<!-- hidden placeholders -->
-	
+
 	<input type="text" name="__spText1" title="text" style="display: none;" />
 	<input type="text" name="__spText2" title="text" style="display: none;" />
 	<!-- <div class="county_text"><p id="desc"></p></div> --->
@@ -3209,7 +3209,7 @@ ExecuteOrDelayUntilScriptLoaded(_RegisterWebPartPageCUI, "sp.ribbon.js"); var __
 ExecuteOrDelayUntilScriptLoaded(
 function()
 {
-var initInfo = 
+var initInfo =
 {
 itemPermMasks: {High:16,Low:200769},
 listPermMasks: {High:16,Low:200769},
@@ -3235,9 +3235,9 @@ function SearchEnsureSOD() { EnsureScript('search.js',typeof(GoSearch)); } _spBo
 $addHandler(window, 'load', function() {
   document.getElementById('ctl00_g_8b1c1df4_f95b_42df_a51e_3a33776735c6_S4377E58A_InputKeywords').name = 'InputKeywords';
 });
-function S4377E58A_OSBEK(event1) { 
+function S4377E58A_OSBEK(event1) {
 if((event1.which == 10) || (event1.which == 13))
-{   
+{
 S4377E58A_Submit();return false;
 }
 }
@@ -3270,9 +3270,9 @@ function SearchEnsureSOD() { EnsureScript('search.js',typeof(GoSearch)); } _spBo
 $addHandler(window, 'load', function() {
   document.getElementById('ctl00_PlaceHolderMain_SearchOpinionsOrders_ctl00_g_b2d63ef7_cc80_4b36_b988_9ec012f0eded_SF75852E3_InputKeywords').name = 'InputKeywords';
 });
-function SF75852E3_OSBEK(event1) { 
+function SF75852E3_OSBEK(event1) {
 if((event1.which == 10) || (event1.which == 13))
-{   
+{
 SF75852E3_Submit();return false;
 }
 }
@@ -3354,15 +3354,15 @@ document.getElementById('ctl00_PlaceHolderMain_SearchOpinionsOrders_RegularExpre
 //]]>
 </script>
 </form>
-	
 
-	
+
+
 	<!-- The JavaScript -->
 	<script type="text/javascript">
             $(function() {
 				var $oe_menu		= $('#oe_menu');
 				var $oe_menu_items	= $oe_menu.children('li');
-				
+
 
                 $oe_menu_items.bind('mouseenter',function(){
 					var $this = $(this);
@@ -3378,11 +3378,11 @@ document.getElementById('ctl00_PlaceHolderMain_SearchOpinionsOrders_RegularExpre
 
 				$oe_menu.bind('mouseenter',function(){
 					var $this = $(this);
-				
+
 					$this.addClass('hovered');
 				}).bind('mouseleave',function(){
 					var $this = $(this);
-					
+
 					$this.removeClass('hovered');
 					$oe_menu_items.children('div').hide();
 				})
@@ -3406,22 +3406,22 @@ document.getElementById('ctl00_PlaceHolderMain_SearchOpinionsOrders_RegularExpre
     //To add new external links copy the line below and remove the 2 slashes
     //Paste it above the last line above. 'NEXT NUMBER HERE' should be replaced
     //with the next sequential number in the external_links[number] series.
-    //Change the number in the 'var num_external_links = ........' line to 
+    //Change the number in the 'var num_external_links = ........' line to
     //reflect the new number of links.
     //NOTE: You only need the domain name, DO NOT include 'http://' or the actual
     //page you are linking to. This function only applies to domain names.
     //
-    //external_links[NEXT NUMBER HERE]="groupwise.birmingham.k12.mi.us"; 
+    //external_links[NEXT NUMBER HERE]="groupwise.birmingham.k12.mi.us";
     //
     //End External Link Area
 
 
     //function go_url(){
 
-    //rnd_number=Math.floor(Math.random()*diff + min_num); 
+    //rnd_number=Math.floor(Math.random()*diff + min_num);
 
-    //eval("window.open(url = video_link[" + rnd_number + "],'_blank');");  
-    //} 
+    //eval("window.open(url = video_link[" + rnd_number + "],'_blank');");
+    //}
 
     function ChangePage(formObject) {
         url = formObject.options[formObject.options.selectedIndex].value;
@@ -3448,7 +3448,7 @@ document.getElementById('ctl00_PlaceHolderMain_SearchOpinionsOrders_RegularExpre
                 return true;
             }
         } else {
-            // relative url  
+            // relative url
             return false;
         }
     }

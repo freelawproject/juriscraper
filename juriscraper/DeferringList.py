@@ -1,7 +1,7 @@
 from juriscraper.AbstractSite import logger
 
 
-class DeferringList(object):
+class DeferringList:
     """This object can be used to do deferred loading of meta data in the case
     that a piece of meta data requires some special work to obtain.
 
@@ -13,15 +13,19 @@ class DeferringList(object):
     For an example of how this can be used, see
     juriscraper.opinions.united_states.state.tex
     """
+
     def __init__(self, *args, **kwargs):
-        logger.warn("Using DeferringList object which cannot be sorted until "
-                    "fetched. Note that in usual processing, the fetching "
-                    "happens before the sorting, so this is OK.")
-        logger.info("DeferringList has %s entries to fetch." %
-                    len(kwargs['seed']))
-        self._data = kwargs['seed']
-        self._fetched_items = [False] * len(kwargs['seed'])
-        self._fetching_function = kwargs['fetcher']
+        logger.warning(
+            "Using DeferringList object which cannot be sorted until "
+            "fetched. Note that in usual processing, the fetching "
+            "happens before the sorting, so this is OK."
+        )
+        logger.info(
+            f"DeferringList has {len(kwargs['seed'])} entries to fetch."
+        )
+        self._data = kwargs["seed"]
+        self._fetched_items = [False] * len(kwargs["seed"])
+        self._fetching_function = kwargs["fetcher"]
 
     def __iter__(self):
         for item in range(0, len(self._data)):
@@ -35,7 +39,9 @@ class DeferringList(object):
             return self._data[item]
         else:
             # Go get the item using the fetching function
-            logger.info("Getting deferred value from seed: %s" % self._data[item])
+            logger.info(
+                f"Getting deferred value from seed: {self._data[item]}"
+            )
             new_val = self._fetching_function(self._data[item])
             self._data[item] = new_val
             self._fetched_items[item] = True
@@ -45,7 +51,9 @@ class DeferringList(object):
         if self._fetched_items[key]:
             self._data[key] = value
         else:
-            raise AttributeError('Cannot set item that has not yet been fetched.')
+            raise AttributeError(
+                "Cannot set item that has not yet been fetched."
+            )
 
     def __delitem__(self, item):
         del self._data[item]
@@ -55,8 +63,4 @@ class DeferringList(object):
         return len(self._data)
 
     def __str__(self):
-        return "<DeferringList %s>" % self.__dict__
-
-
-
-
+        return f"<DeferringList {self.__dict__}>"

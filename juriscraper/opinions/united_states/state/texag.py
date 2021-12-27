@@ -3,9 +3,9 @@ CourtID: texag
 Court Short Name: Texas Attorney General
 """
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 ## WARNING: THIS SCRAPER IS FAILING:
 ## The page on which the hosting court was
@@ -18,7 +18,7 @@ from juriscraper.lib.string_utils import convert_date_string
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.target_index = 2
         self.url_path = False
@@ -26,18 +26,24 @@ class Site(OpinionSite):
         self.section_path = False
         self.year_sub_path = False
         self.opinion_sub_path = False
-        self.domain = 'https://texasattorneygeneral.gov'
-        self.url = '%s/opinion/index-to-opinions' % self.domain
-        self.back_scrape_iterable = range(2, 16)  # Hard coded for initial run
-        self.select_sub_path = './/select/option[position()>1]'
-        self.flat_list_path = '//a[contains(./text(), "See a flat listing of all opinions")]'
-        self.target_sub_page_path_base = '//table/tbody/tr[%d]/td[2]//a/@href'
-        self.target_sub_page_path = self.target_sub_page_path_base % self.target_index
+        self.domain = "https://texasattorneygeneral.gov"
+        self.url = f"{self.domain}/opinion/index-to-opinions"
+        self.back_scrape_iterable = list(
+            range(2, 16)
+        )  # Hard coded for initial run
+        self.select_sub_path = ".//select/option[position()>1]"
+        self.flat_list_path = (
+            '//a[contains(./text(), "See a flat listing of all opinions")]'
+        )
+        self.target_sub_page_path_base = "//table/tbody/tr[%d]/td[2]//a/@href"
+        self.target_sub_page_path = (
+            self.target_sub_page_path_base % self.target_index
+        )
 
     def _download(self, request_dict={}):
         """Follow top-most opinions urls on landing page to resource page"""
         # Process landing page
-        landing_html = super(Site, self)._download(request_dict)
+        landing_html = super()._download(request_dict)
         if self.test_mode_enabled():
             # Example file should be direct resource page
             return landing_html
@@ -48,7 +54,7 @@ class Site(OpinionSite):
         if not flat_list_link:
             return resource_page_html
         # Load flat list page for older pages with bad js
-        url = flat_list_link[0].xpath('./@href')[0]
+        url = flat_list_link[0].xpath("./@href")[0]
         return self._get_html_tree_by_url(url)
 
     def _get_case_dates(self):
@@ -57,29 +63,40 @@ class Site(OpinionSite):
         dates = []
         for section in self.html.xpath(self.section_path):
             year = section.xpath(self.year_sub_path)[0].text_content().strip()
-            date = convert_date_string('July 2, %s' % year)
+            date = convert_date_string(f"July 2, {year}")
             count = len(section.xpath(self.opinion_sub_path))
             dates.extend([date] * count)
         return dates
 
     def _get_case_names(self):
         """No case names available"""
-        return ["Untitled Texas Attorney General Opinion"] * len(self.case_dates)
+        return ["Untitled Texas Attorney General Opinion"] * len(
+            self.case_dates
+        )
 
     def _get_download_urls(self):
         # Some listings provide direct links, others are relative
-        return [self.domain + v if self.domain not in v else v
-                for v in self.html.xpath(self.url_path)]
+        return [
+            self.domain + v if self.domain not in v else v
+            for v in self.html.xpath(self.url_path)
+        ]
 
     def _get_docket_numbers(self):
-        return [option.text_content().strip() for option in self.html.xpath(self.opinion_path)]
+        return [
+            option.text_content().strip()
+            for option in self.html.xpath(self.opinion_path)
+        ]
 
     def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_dates)
+        return ["Published"] * len(self.case_dates)
 
     def _get_judges(self):
-        breadcrumb = self.html.xpath('//div[contains(@class, "breadcrumb")]//li')[-1].text_content().strip()
-        return [breadcrumb.split('Opinions')[0]] * len(self.case_dates)
+        breadcrumb = (
+            self.html.xpath('//div[contains(@class, "breadcrumb")]//li')[-1]
+            .text_content()
+            .strip()
+        )
+        return [breadcrumb.split("Opinions")[0]] * len(self.case_dates)
 
     def _get_date_filed_is_approximate(self):
         return [True] * len(self.case_dates)
@@ -96,7 +113,7 @@ class Site(OpinionSite):
 
     def set_dynamic_resource_paths(self):
         self.opinion_path = self.return_opinion_path()
-        self.opinion_sub_path = '.%s' % self.opinion_path
+        self.opinion_sub_path = f".{self.opinion_path}"
         self.url_path = self.return_url_path()
         self.section_path = self.return_section_path()
         self.year_sub_path = self.return_year_sub_path()
@@ -113,7 +130,7 @@ class Site(OpinionSite):
         for path in paths:
             if self.html.xpath(path):
                 return path
-        raise InsanityException('No recognized path to opinion sections')
+        raise InsanityException("No recognized path to opinion sections")
 
     def return_year_sub_path(self):
         parent = self.html.xpath(self.section_path)[0]
@@ -128,7 +145,7 @@ class Site(OpinionSite):
         for path in paths:
             if parent.xpath(path):
                 return path
-        raise InsanityException('No recognized path to year string')
+        raise InsanityException("No recognized path to year string")
 
     def return_opinion_path(self):
         paths = [
@@ -138,11 +155,11 @@ class Site(OpinionSite):
         for path in paths:
             if self.html.xpath(path):
                 return path
-        raise InsanityException('No recognized path to opinion listings')
+        raise InsanityException("No recognized path to opinion listings")
 
     def return_url_path(self):
-        if '/option' in self.opinion_path:
-            return '%s/@value' % self.opinion_path
-        elif '/li/a' in self.opinion_path:
-            return '%s/@href' % self.opinion_path
-        raise InsanityException('No recognized path to url')
+        if "/option" in self.opinion_path:
+            return f"{self.opinion_path}/@value"
+        elif "/li/a" in self.opinion_path:
+            return f"{self.opinion_path}/@href"
+        raise InsanityException("No recognized path to url")

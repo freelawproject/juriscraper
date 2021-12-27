@@ -1,0 +1,248 @@
+Return-Path: <ecfnotices+bncBD44FD6K3MBRBAU422EAMGQE2CUDIMQ@everettlawfirm.com>
+Received: from mail-qv1-f69.google.com (mail-qv1-f69.google.com [209.85.219.69])
+ by inbound-smtp.us-east-1.amazonaws.com with SMTP id vbn3encja6581i5ilhnciau28uje2klb07844v01
+ for pacer@everettlawfirm.business;
+ Thu, 12 Aug 2021 21:09:22 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: none (spfCheck: 209.85.219.69 is neither permitted nor denied by domain of everettlawfirm.com) client-ip=209.85.219.69; envelope-from=ecfnotices+bncBD44FD6K3MBRBAU422EAMGQE2CUDIMQ@everettlawfirm.com; helo=mail-qv1-f69.google.com;
+Authentication-Results: amazonses.com;
+ spf=none (spfCheck: 209.85.219.69 is neither permitted nor denied by domain of everettlawfirm.com) client-ip=209.85.219.69; envelope-from=ecfnotices+bncBD44FD6K3MBRBAU422EAMGQE2CUDIMQ@everettlawfirm.com; helo=mail-qv1-f69.google.com;
+ dkim=pass header.i=@everettlawfirm.com;
+ dmarc=fail header.from=ared.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHNVpGU1ZnQXFPNWhkNXFkMXYyeG11RUwxbVFIeGgvSkttWFNaeXhEWmxMYVRnVkhqWE5meFpXSkhHc1dEYmtjRURHRnA4amJZVkl2YVRUdThDRlVNRC96Y2Z6NmpRaUpaOG1jdmRKeWVlQTlQVjRRNHMxeVY0ZGNlL0lkaHkzVllqam5aelFvdlo2UVp3d2RYNHZFZ3BIMk9PRmtybDAyZlR2ZUswTWEyb1N3MmE1dGxEaTM4Vmg0Sm5lSkx4TGlzSGJiR1BDOHA5SXZyWGF6dE1QSVpaaTFEUldwOHZtYUdWTkxRdjFMc1JrMzJsMUlkU2htTHlSeUdIWENqUGFuRFpjQ0dBbmpsNW1wNUJ4NkZVN1RuZjh1TjN0azF0VEJvZ1NDOHJPVm9Dell6M3NBM1hmandSeFdlYThHOWczeHZIZ21UR2NLRTJwUWQzUU9nKzkvck5RU1ZiWmhSbTl3Ym42YTM5NUVQckFRPT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=d/R92kAaULXTOEe7SbeM+NHLEeAhzwFi6R31+QV3JGDydLZqcKkoVTGnAEK0vuIQYhn+RAYCGeRPonxwaQqWN4tB7kYSKQApplzK+QGJuLGEnFS5Mtzn65UCRocXiGMAC7Enqfp0rq0gsIn74WKiSeIwP67JdHRDCKl6j55RvSA=; c=relaxed/simple; s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1628802563; v=1; bh=8eFag7TQC/EMtHB6zZjX6MPhxwcteo2qwWcRHHzqa50=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+Received: by mail-qv1-f69.google.com with SMTP id u8-20020a0cec880000b029035825559ec4sf4128575qvo.22
+        for <pacer@everettlawfirm.business>; Thu, 12 Aug 2021 14:09:22 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=everettlawfirm.com; s=google;
+        h=sender:date:mime-version:from:to:message-id:subject
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:list-post:list-help:list-archive
+         :list-unsubscribe;
+        bh=x9WmDkrO9usvNsWhKRDeu+4m5cOg1kMa0SBeIu3QBiE=;
+        b=OKs7Vlg6RDxEIJvk5DR/CqTFF2hKTTRAkfMVhnnp84qABDGPPhnEnAUQhr1Z/zlgpZ
+         iOFWie4KdzGnnWG+jmnBbZMKhRzcOx+IjVyPz1h0pn63n80y0Z+jNJnXAzj4C6mPgMLU
+         7wjyClx3D1gWHDQseaevC6IzhTVNyZtF2HwLc=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=sender:x-gm-message-state:date:mime-version:from:to:message-id
+         :subject:x-original-sender:x-original-authentication-results
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-unsubscribe;
+        bh=x9WmDkrO9usvNsWhKRDeu+4m5cOg1kMa0SBeIu3QBiE=;
+        b=WbhbfCP4buBBWJM709WnOzAhqsi0+wHzDsfExdXG8lK454P43yHGmmzV3dpHi3zo1L
+         wWgeSVL0vIEB5RwRVi578+bxm2+VTxijylvhgkPeJo4nOmsod4PwEXRLn5nqqcZWPS5g
+         MRCjsbWKfC8g5UWLHbyH7M7QH2ZEAQ6SApj1DwO6E+G259J+T5Y+jqddiIvsCjUbdlz4
+         FUK7w46gF6JfNE/oFCIGtxmajd4DxOYGTaAmuobW7YAgZk6nyTnK+Y0d+Ap7YU0dStGw
+         Gci2vfaX/UA99uSHowAwMynnZCZKOE8p5uhDb8lmbnjvXR7GzhVa63bBGnopxx9mESNT
+         D25A==
+Sender: ecfnotices@everettlawfirm.com
+X-Gm-Message-State: AOAM530Bwa/NEFqIJf8XIwzXH4NuTzTDj8aYuEsqWcY/ncCPgUfYKEdx
+	wrA2625wJR6f84H8oOCXegdorg==
+X-Google-Smtp-Source: ABdhPJw7QFre2bw10xUXC/KLI2Ub3nlkn0/0/CVYVSFHlf541zBrXk8TryHSrf25DgaZm+OqA/nv8A==
+X-Received: by 2002:a37:9bc1:: with SMTP id d184mr6594700qke.400.1628802562181;
+        Thu, 12 Aug 2021 14:09:22 -0700 (PDT)
+X-BeenThere: ecfnotices@everettlawfirm.com
+Received: by 2002:a37:a34d:: with SMTP id m74ls4223232qke.7.gmail; Thu, 12 Aug
+ 2021 14:09:21 -0700 (PDT)
+X-Received: by 2002:a05:620a:b10:: with SMTP id t16mr2586842qkg.69.1628802561450;
+        Thu, 12 Aug 2021 14:09:21 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1628802561; cv=none;
+        d=google.com; s=arc-20160816;
+        b=dmrYI80eMENB2NI8W1Uv7PWF3n/D2uxb9smb2ZPyIqca2UJMsonMvScc8LV0yhMEEy
+         kjFCadebsXCmoOkGX9+1OLMTg9vehirfobbRZ3euDCkihKKvBjDns8jDw7p6cL/PIKNk
+         uga2suLEd4823YVwwqfacUzRtiR+w18HJqDOvjRBKcmXHpwZJIHV+iqiOwc+UmAIvU2F
+         a15hgBMJbMAeQYAO5GDku+XFucRWrMAHQo9s22dybcKg2lFPOoErPw2wU+IBXczrbI7K
+         SZdixIaUnpn7OPu0MQ6RZO3/l7vuJZHyuwleVKIVPNVxTgQ4Tp5i0hDzWpTRp4QtGq05
+         cXnw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=subject:message-id:to:from:mime-version:date;
+        bh=x9WmDkrO9usvNsWhKRDeu+4m5cOg1kMa0SBeIu3QBiE=;
+        b=nc3sy/iiQobDpUK/1mNuBN0oxo0Dq7pEkk7dDnUxbcYEdLac0+JdqmehX5IKIfjX82
+         pCLZu2lqTwK6JEvQoApTHaMfMS6+2vr1Gowd2MegLZhP8VcvejjaUFCZYXDaqqEuhIi5
+         cFXupVSQ+0yxMo2kPqM4vLhmovNqBATtdL/8j4fOfb9vHEJ13YyAYUX77dkhbGR5z5aU
+         HbgsFAonmmeJ3mtHHZL+KnFeHx61twB3W+HG04DLWWQzCw2gtJJj+lmK/auQcSn5n4cP
+         7n+RD2faM91k+vdlaW3FvXGHVnB/oUZZSICoGii/w+1IwIaO6N8p4hTFU1mjuO3cEGEU
+         EESw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of ecf_support@ared.uscourts.gov designates 199.107.16.202 as permitted sender) smtp.mailfrom=ecf_support@ared.uscourts.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=uscourts.gov
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov. [199.107.16.202])
+        by mx.google.com with ESMTP id jf10si2750840qvb.158.2021.08.12.14.09.21
+        for <ecfnotices@everettlawfirm.com>;
+        Thu, 12 Aug 2021 14:09:21 -0700 (PDT)
+Received-SPF: pass (google.com: domain of ecf_support@ared.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.213
+Received: from areddb.ared.gtwy.dcn ([156.119.56.213])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 12 Aug 2021 17:09:20 -0400
+Received: from areddb.ared.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by areddb.ared.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 17CL9CI8060008;
+	Thu, 12 Aug 2021 16:09:13 -0500
+Received: (from ecf_web@localhost)
+	by areddb.ared.gtwy.dcn (8.14.4/8.14.4/Submit) id 17CL8jZG059278;
+	Thu, 12 Aug 2021 16:08:45 -0500
+Date: Thu, 12 Aug 2021 16:08:45 -0500
+X-Authentication-Warning: areddb.ared.gtwy.dcn: ecf_web set sender to ecf_support@ared.uscourts.gov using -f
+MIME-Version: 1.0
+From: ecf_support@ared.uscourts.gov
+To: ared_ecf@ared.uscourts.gov
+Message-Id: <8903201@ared.uscourts.gov>
+Subject: Activity in Case 5:18-cv-00222-DPM Bailey et al v. Jefferson County, Arkansas Motion for Attorney Fees
+Content-Type: text/html
+X-Original-Sender: ecf_support@ared.uscourts.gov
+X-Original-Authentication-Results: mx.google.com;       spf=pass (google.com:
+ domain of ecf_support@ared.uscourts.gov designates 199.107.16.202 as
+ permitted sender) smtp.mailfrom=ecf_support@ared.uscourts.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=uscourts.gov
+Precedence: list
+Mailing-list: list ecfnotices@everettlawfirm.com; contact ecfnotices+owners@everettlawfirm.com
+List-ID: <ecfnotices.everettlawfirm.com>
+X-Spam-Checked-In-Group: ecfnotices@everettlawfirm.com
+X-Google-Group-Id: 486450346794
+List-Post: <https://groups.google.com/a/everettlawfirm.com/group/ecfnotices/post>,
+ <mailto:ecfnotices@everettlawfirm.com>
+List-Help: <https://support.google.com/a/everettlawfirm.com/bin/topic.py?topic=25838>,
+ <mailto:ecfnotices+help@everettlawfirm.com>
+List-Archive: <https://groups.google.com/a/everettlawfirm.com/group/ecfnotices/>
+List-Unsubscribe: <mailto:googlegroups-manage+486450346794+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/everettlawfirm.com/group/ecfnotices/subscribe>
+
+<p><strong><font color="#FF0000">This is an automatic e-mail message generated by the CM/ECF system. 
+Please DO NOT RESPOND to this e-mail because the mail box is unattended.
+</font><br>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30 page limit do not apply.</strong></p>
+
+
+
+<p align=center><strong>U.S. District Court</strong></p>
+<p align=center><strong>Eastern District of Arkansas</strong></p>
+<font size="3" face="arial,helvetica"><b>Notice of Electronic Filing</b></font>
+
+<BR>
+
+<div><BR>
+The following transaction was entered  by Wiley, Joshua  on 8/12/2021 at 
+4:08 PM CDT and filed on 8/12/2021 <BR>
+
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Bailey et al v. Jefferson County, 
+Arkansas</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A 
+HREF=https://ecf.ared.uscourts.gov/cgi-bin/DktRpt.pl?113274>5:18-cv-00222-DPM</A></td></tr>
+
+<tr><td><strong>Filer:</strong></td><td>Trendia 
+Bailey</td></tr><tr><td></td><td>John'niqua Wofford-Libbett</td></tr>
+
+<tr><td colspan=2><strong>WARNING: CASE CLOSED on 07/29/2021</strong></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href="https://ecf.ared.uscourts.gov/doc1/02705260440?caseid=113274&de_seq_num=173&magic_num=29822617" 
+>70</a> 
+</td></tr>
+<tr><td><strong></strong></td><td></td></tr>
+</table>
+<p>
+<strong>Docket Text:</strong>
+<BR>
+<FONT  FACE="arial,helvetica" COLOR="#0000cc" SIZE=3><b>
+  MOTION for Attorney Fees <i>and Costs</i> 
+ by Trendia Bailey, John'niqua Wofford-Libbett  (Attachments:  # (1) 
+Exhibit 1: Billing Spreadsheet, # (2) Exhibit 2: Declaration of Attorney 
+Driscoll Wiley, # (3) Exhibit 3: Costs Invoice)(Wiley, Joshua)
+
+</b></Font>
+</p>
+
+
+
+
+<BR>
+<B>
+5:18-cv-00222-DPM Notice has been electronically mailed to:
+</B>
+<BR>
+
+<BR>
+Blake                Parker Hoyt                                         
+      &nbsp &nbsp blakehoytlaw@gmail.com, ecfnotices@everettlawfirm.com <BR>
+
+<BR>
+C.                   Burt Newell                                         
+    &nbsp &nbsp burt@hotspringslaw.net, aperma@hotspringslaw.net, bre@hotspringslaw.net, 
+kayla@hotspringslaw.net <BR>
+<BR>
+Joshua               Wiley                                            &nbsp 
+&nbsp driscoll@everettlawfirm.com, Ecfnotices@everettlawfirm.com, michael@everettlawfirm.com, 
+sean@everettlawfirm.com, steve@everettlawfirm.com, kiona@everettlawfirm.com 
+<BR>
+<BR>
+Stacy                Gibson                                             &nbsp 
+&nbsp stacy@everettlawfirm.com, kiona@everettlawfirm.com <BR>
+
+<BR>
+
+<B>
+5:18-cv-00222-DPM Notice has been delivered by other means to:
+</B>
+<BR>
+
+
+
+
+
+
+<div>
+<p>
+The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document <BR>
+<STRONG>Original filename:</STRONG>n/a<BR>
+<STRONG>Electronic document Stamp:</STRONG><BR>
+<TAB>[STAMP dcecfStamp_ID=1095794525 [Date=8/12/2021] [FileNumber=8903199-0<BR>
+
+<TAB>] [8534e53f0f89db0a67ad34b58e7ecfe777203dd1b02bd176c34969cf13f19b7e976<BR>
+
+<TAB>25c56021fe3982406fb979ab25d1a5e797779956cf35b53dec2a3d8bafe6e]]<BR>
+
+
+<STRONG>Document description:</STRONG>Exhibit 1: Billing Spreadsheet<BR>
+
+<STRONG>Original filename:</STRONG>n/a<BR>
+<STRONG>Electronic document Stamp:</STRONG><BR>
+<TAB>[STAMP dcecfStamp_ID=1095794525 [Date=8/12/2021] [FileNumber=8903199-1<BR>
+
+<TAB>] [335616cce00b315636549eb32910b542fbd5bcd505d8039462c3e9c6bb411a7984e<BR>
+
+<TAB>3f05637fd84b7189e33340da6230e1177e675990a51fec4b3c07b07ee8d23]]<BR>
+
+
+<STRONG>Document description:</STRONG>Exhibit 2: Declaration of Attorney 
+Driscoll Wiley<BR>
+<STRONG>Original filename:</STRONG>n/a<BR>
+<STRONG>Electronic document Stamp:</STRONG><BR>
+<TAB>[STAMP dcecfStamp_ID=1095794525 [Date=8/12/2021] [FileNumber=8903199-2<BR>
+
+<TAB>] [145d963c257ec80a75a51135167c47ff773351561f687698a8c0769a586ec46cd0a<BR>
+
+<TAB>ea62e62997e71f55b6d0f4453d4a39638bbdfd282415b43cc7dc141918fc3]]<BR>
+
+
+<STRONG>Document description:</STRONG>Exhibit 3: Costs Invoice<BR>
+<STRONG>Original filename:</STRONG>n/a<BR>
+<STRONG>Electronic document Stamp:</STRONG><BR>
+<TAB>[STAMP dcecfStamp_ID=1095794525 [Date=8/12/2021] [FileNumber=8903199-3<BR>
+
+<TAB>] [91a92e466428dd2b432c1812a3debe5e51d1c7686881d91d930b133a597b21cb05a<BR>
+
+<TAB>3f7c5775dd6c8331711ad939a5f878d6508d4cd75243b031e996ac409d7ae]]<BR>
+
+
+
+</table>
+</div>

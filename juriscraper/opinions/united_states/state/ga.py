@@ -1,75 +1,89 @@
 #  Scraper for Georgia Supreme Court
 # CourtID: ga
 # Court Short Name: ga
-# History:
-#  - 2014-07-25: Created by Andrei Chelaru, reviewed by mlr
-#  - 2015-07-30: MLR: Added more lenient dates.
-#  - 2016-09-02: arderyp: fixed to handle slight site redesign, while accomodating legacy
 
 import re
 from datetime import date
 
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.AbstractSite import logger
+from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import titlecase
-from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://www.gasupreme.us/opinions/{year}-opinions/'.format(year=date.today().year)
-        self.cases = []
+        self.url = self._get_url(date.today().year)
+        self.status = "Published"
+        self.back_scrape_iterable = range(2016, 2022)
+        self.regex_docket = re.compile(r"(S?[0-9]{2}[A-Z]{1}[0-9]{4})")
 
-    def _download(self, request_dict={}):
-        html = super(Site, self)._download(request_dict)
-        self.extract_cases_from_html(html)
-        return html
+    def _get_url(self, year: int) -> str:
+        return "https://www.gasupreme.us/opinions/%d-opinions/" % year
 
-    def extract_cases_from_html(self, html):
-        paths = '//p/strong | //p/b | //p/font/strong | //p/font/b'
-        for date_element in html.xpath(paths):
-            string = date_element.xpath('./text()')
+    def _process_html(self):
+        paths = "//p/strong | //p/b | //p/font/strong | //p/font/b"
+        for date_element in self.html.xpath(paths):
+            string = date_element.xpath("./text()")
             try:
                 string = string[0]
                 # handle examples where time but no date (ga_example_3.html)
-                if ':' in string and ('AM' in string or 'PM' in string):
+                if ":" in string and ("AM" in string or "PM" in string):
                     continue
                 # handle legacy example (ga_example.html)
-                string = string.split('SUMMARIES')[0]
-                date_string = re.sub(r'\W+', ' ', string)
+                string = string.split("SUMMARIES")[0]
+                date_string = re.sub(r"\W+", " ", string)
                 # handle legacy example (ga_example.html)
                 if len(date_string.split()) != 3:
                     continue
-                case_date = convert_date_string(date_string)
             except:
                 continue
-            parent = date_element.xpath('./..')[0]
+            parent = date_element.xpath("./..")[0]
             # handle legacy example (ga_example.html)
-            while parent.tag != 'p':
-                parent = parent.xpath('./..')[0]
-            for item in parent.getnext().xpath('./li'):
+            while parent.tag != "p":
+                parent = parent.xpath("./..")[0]
+            for item in parent.getnext().xpath("./li"):
                 text = item.text_content()
                 if text:
-                    split = text.split('.', 1)
-                    self.cases.append({
-                        'date': case_date,
-                        'url': item.xpath('//a[1]/@href')[0],
-                        'docket': split[0].rstrip('.'),
-                        'name': titlecase(split[1]),
-                    })
+                    # Extract Docket numbers
+                    dockets = re.findall(self.regex_docket, text)
+                    if not dockets:
+                        if (
+                            text
+                            == "IN RE: MOTION TO AMEND 2021-3 (Bar Rule 1.2)"
+                        ):
+                            continue
+                        else:
+                            raise InsanityException(
+                                f"Could not find docket numbers in: '{text}'"
+                            )
 
-    def _get_case_names(self):
-        return [case['name'] for case in self.cases]
+                    # Extract name substring; I am sure this could
+                    # be done with a more slick regex, but its not
+                    # my forte...
+                    name = text
+                    for docket in dockets:
+                        name = name.replace(docket, "")
+                    name = name.lstrip(" .,")
 
-    def _get_download_urls(self):
-        return [case['url'] for case in self.cases]
+                    self.cases.append(
+                        {
+                            "date": date_string,
+                            "docket": ", ".join(dockets),
+                            "name": titlecase(name.lstrip(" .,")),
+                            "url": item.xpath(".//a[1]/@href")[0],
+                        }
+                    )
 
-    def _get_case_dates(self):
-        return [case['date'] for case in self.cases]
+    def _download_backwards(self, year):
+        self.url = self._get_url(year)
+        logger.info(f"Backscraping for year {year}: {self.url}")
+        self.html = self._download()
 
-    def _get_docket_numbers(self):
-        return [case['docket'] for case in self.cases]
-
-    def _get_precedential_statuses(self):
-        return ['Published'] * len(self.cases)
+        # Setting status is important because it prevents the download
+        # function from being run a second time by the parse method.
+        if self.html is not None:
+            self.status = 200
+            self._process_html()

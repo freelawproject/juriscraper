@@ -9,22 +9,22 @@ History:
 
 
 from lxml import html
+
+from juriscraper.lib.string_utils import convert_date_string, titlecase
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import titlecase
-from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://court-url.gov/some-path.html'
+        self.url = "http://court-url.gov/some-path.html"
         # Complete this variable if you create a backscraper.
         self.back_scrape_iterable = None
 
         # if a POST, use these two attributes, otherwise, delete them.
         self.parameters = {}
-        self.method = 'POST'
+        self.method = "POST"
         self.uses_selenium = False
 
     """
@@ -32,6 +32,7 @@ class Site(OpinionSite):
 
     Remove this comment before submission.
     """
+
     def _get_download_urls(self):
         """
         This is an example of a basic piece of meta data accessible with a
@@ -42,7 +43,7 @@ class Site(OpinionSite):
         Note that relative URLs are made absolute by the AbstractSite
         object's cleanup routines, so doing so here is not needed.
         """
-        path = '//path/to/text/text()'
+        path = "//path/to/text/text()"
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
@@ -61,8 +62,8 @@ class Site(OpinionSite):
         cases where the name is provided in uppercase only.
         """
         case_names = []
-        for e in self.html.xpath('//path/to/an/element/p'):
-            s = html.tostring(e, method='text', encoding='unicode')
+        for e in self.html.xpath("//path/to/an/element/p"):
+            s = html.tostring(e, method="text", encoding="unicode")
             case_names.append(titlecase(s))
         return case_names
 
@@ -73,9 +74,11 @@ class Site(OpinionSite):
         on the site you are scraping. The datetime formats can be found
         here: http://docs.python.org/2/library/datetime.html
         """
-        path = '//path/to/text/text()'
-        return [convert_date_string(date_string) for date_string in
-                self.html.xpath(path)]
+        path = "//path/to/text/text()"
+        return [
+            convert_date_string(date_string)
+            for date_string in self.html.xpath(path)
+        ]
 
     def _get_precedential_statuses(self):
         """
@@ -83,14 +86,14 @@ class Site(OpinionSite):
         'Published' or 'Unpublished', as below.
         """
         statuses = []
-        for e in self.html.xpath('//path/to/text/text()'):
-            s = html.tostring(e, method='text', encoding='unicode')
-            if 'Opinion' in s:
-                statuses.append('Published')
-            elif 'Nonprecedential' in s:
-                statuses.append('Unpublished')
+        for e in self.html.xpath("//path/to/text/text()"):
+            s = html.tostring(e, method="text", encoding="unicode")
+            if "Opinion" in s:
+                statuses.append("Published")
+            elif "Nonprecedential" in s:
+                statuses.append("Unpublished")
             else:
-                statuses.append('Unknown')
+                statuses.append("Unknown")
         return statuses
 
     """
@@ -98,6 +101,7 @@ class Site(OpinionSite):
 
       Remove this comment and any unused methods before submission
     """
+
     def _get_docket_numbers(self):
         """
         This is typically of the form ##-####
@@ -157,6 +161,7 @@ class Site(OpinionSite):
 
     Remove this comment and any unused methods before submission
     """
+
     def _get_adversary_numbers(self):
         """
         Similar to a docket number, but found only in bankruptcy cases.
@@ -213,6 +218,7 @@ class Site(OpinionSite):
     """
     Optional methods for special purposes
     """
+
     @staticmethod
     def cleanup_content(content):
         """
@@ -246,5 +252,5 @@ class Site(OpinionSite):
         This can also be used to hold notes useful to future backscraper
         development.
         """
-        self.url = 'http://example.com/new/url/%s' % date_str
+        self.url = f"http://example.com/new/url/{date_str}"
         self.html = self._download()

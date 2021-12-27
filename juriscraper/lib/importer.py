@@ -1,3 +1,5 @@
+import os
+
 from requests import HTTPError
 
 
@@ -10,6 +12,12 @@ def build_module_list(court_id):
     item is added to a list of modules.
 
     Returns either a list of modules or in the case of errors, an empty list.
+
+    *N.B.*: For the most part, this re-creates the `walk` function from the
+    pkgutil library. At some point, it's probably worth replacing this with
+    that. Live and learn.
+
+    https://docs.python.org/2/library/pkgutil.html#pkgutil.walk_packages
     """
     module_strings = []
 
@@ -20,10 +28,10 @@ def build_module_list(court_id):
         try:
             # Test that we have an __all__ attribute (proving that it's a
             # package) something like: opinions.united_states.federal
-            all_attr = __import__(court_id, globals(), locals(), ['*']).__all__
+            all_attr = __import__(court_id, globals(), locals(), ["*"]).__all__
 
             # Build the modules back up to full imports
-            all_attr = ["%s.%s" % (court_id, item) for item in all_attr]
+            all_attr = [f"{court_id}.{item}" for item in all_attr]
             for module in all_attr:
                 # If we've made it this far, we have an __all__ attribute, so
                 # we should see if the items within that attribute do too. And
@@ -34,7 +42,7 @@ def build_module_list(court_id):
             # juriscraper.opinions.united_states.federal_appellate.ca1,
             # therefore, we add it to our list!
             module_strings.append(court_id)
-        #except ImportError as e:
+        # except ImportError as e:
         #    # Something has gone wrong with the import
         #    print("Import error: %s" % e)
         #    return []
@@ -42,6 +50,26 @@ def build_module_list(court_id):
     find_all_attr_or_punt(court_id)
 
     return module_strings
+
+
+def get_module_by_name(name):
+    db_root = os.path.abspath(
+        os.path.join(os.path.dirname(__file__), "..", "opinions")
+    )
+    for dirName, subdirList, fileList in os.walk(db_root):
+        for fname in fileList:
+            if f"{name}.py" == fname:
+                package, module = (
+                    dirName.split("/juriscraper/", 1)[1].replace("/", "."),
+                    fname[:-3],
+                )
+                juriscraper_module = __import__(
+                    f"juriscraper.{package}.{module}",
+                    globals(),
+                    locals(),
+                    [module],
+                )
+                return juriscraper_module.Site()
 
 
 def site_yielder(iterable, mod):

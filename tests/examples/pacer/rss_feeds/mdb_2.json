@@ -1,30 +1,34 @@
 [
   {
-    "assigned_to_str": "", 
-    "case_name": "Dozier v. A&E Television Networks", 
-    "cause": "", 
-    "court_id": "mdb", 
-    "date_converted": null, 
-    "date_discharged": null, 
-    "date_filed": null, 
-    "date_terminated": null, 
-    "demand": "", 
+    "assigned_to_str": "",
+    "case_name": "Dozier v. A&E Television Networks",
+    "cause": "",
+    "chapter": "",
+    "court_id": "mdb",
+    "date_converted": null,
+    "date_discharged": null,
+    "date_filed": null,
+    "date_terminated": null,
+    "demand": "",
     "docket_entries": [
       {
-        "date_filed": "2018-04-24", 
-        "description": "", 
-        "document_number": null, 
-        "pacer_doc_id": "", 
-        "pacer_seq_no": null, 
+        "date_filed": "2018-04-24T11:25:12+00:00",
+        "description": "",
+        "document_number": null,
+        "pacer_doc_id": "",
+        "pacer_seq_no": null,
         "short_description": "Close Adversary Case"
       }
-    ], 
-    "docket_number": "18-00079", 
-    "jurisdiction": "", 
-    "jury_demand": "", 
-    "nature_of_suit": "", 
-    "pacer_case_id": "711557", 
-    "parties": null, 
-    "referred_to_str": ""
+    ],
+    "docket_number": "18-00079",
+    "jurisdiction": "",
+    "jury_demand": "",
+    "nature_of_suit": "",
+    "office": "1",
+    "pacer_case_id": "711557",
+    "parties": null,
+    "referred_to_str": "",
+    "trustee_str": "",
+    "type": "ap"
   }
 ]

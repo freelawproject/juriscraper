@@ -1,14 +1,7 @@
 import re
 from itertools import chain, islice, tee
 
-from six import string_types
-
 from .string_utils import force_unicode
-
-try:
-    from itertools import izip
-except ImportError:
-    izip = zip
 
 
 def previous_and_next(some_iterable):
@@ -22,7 +15,7 @@ def previous_and_next(some_iterable):
     prevs, items, nexts = tee(some_iterable, 3)
     prevs = chain([None], prevs)
     nexts = chain(islice(nexts, 1, None), [None])
-    return izip(prevs, items, nexts)
+    return zip(prevs, items, nexts)
 
 
 def clean_court_object(obj):
@@ -52,9 +45,9 @@ def clean_court_object(obj):
         for k, v in obj.items():
             d[k] = clean_court_object(v)
         return d
-    elif isinstance(obj, string_types):
-        s = ' '.join(obj.strip().split())
+    elif isinstance(obj, str):
+        s = " ".join(obj.strip().split())
         s = force_unicode(s)
-        return re.sub('\s+,', ',', s)
+        return re.sub(r"\s+,", ",", s)
     else:
         return obj

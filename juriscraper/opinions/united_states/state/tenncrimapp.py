@@ -8,7 +8,9 @@ from juriscraper.opinions.united_states.state import tenn
 
 class Site(tenn.Site):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://www.tsc.state.tn.us/courts/court-criminal-appeals/opinions'
-        self.back_scrape_iterable = range(0, 1325)
+        self.url = (
+            "http://www.tsc.state.tn.us/courts/court-criminal-appeals/opinions"
+        )
+        self.back_scrape_iterable = list(range(0, 1325))

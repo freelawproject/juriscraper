@@ -1,4 +1,3 @@
-# coding=utf-8
 """Scraper for Colorado Supreme Court
 CourtID: colo
 Court Short Name: Colo.
@@ -11,25 +10,28 @@ Contact: Email "Internet and Technology" staff listed at http://www.cobar.org/st
 """
 
 import re
+from urllib.parse import urlparse
+
 from lxml import html
-from urlparse import urlparse
 
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     sub_page_opinion_link_path = "//a[@class='Head articletitle']"
-    parent_summary_block_path = 'parent::p/following-sibling::div[@class="Normal"][1]'
+    parent_summary_block_path = (
+        'parent::p/following-sibling::div[@class="Normal"][1]'
+    )
 
     # I'm certain this can be done more professionally,
     # but I (arderyp) am not gifted at the art of regex
-    regex = '(?:No.\s)?(\d+)\s+(\w+)(?:\s+)?(\d+M?\.?)\s*((Nos?\.?\s+)?((\w{5,8}\.?)(((\s+\&|\,)\s+\w{5,8})+)?))\.?(\s+)?(.*)'
+    regex = r"(?:No.\s)?(\d+)\s+(\w+)(?:\s+)?(\d+M?\.?)\s*((Nos?\.?\s+)?((\w{5,8}\.?)(((\s+\&|\,)\s+\w{5,8})+)?))\.?(\s+)?(.*)"
 
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.cobar.org/For-Members/Opinions-Rules-Statutes/Colorado-Supreme-Court-Opinions"
         self.base_path = "//div[@id='dnn_ctr2509_ModuleContent']/ul/li/a"
@@ -38,7 +40,7 @@ class Site(OpinionSite):
 
     def _download(self, request_dict={}):
         self.request_dict = request_dict
-        landing_page_html = super(Site, self)._download(request_dict)
+        landing_page_html = super()._download(request_dict)
 
         # Test/example files should use html from direct resource page
         #
@@ -53,7 +55,7 @@ class Site(OpinionSite):
         # PLEASE ALSO NOTE: coloctapp_example_3.html is supposed to have 0
         # results.  It is a blank page test case covering is_this_a_blank_page().
         if self.test_mode_enabled():
-            date_string = landing_page_html.xpath('//h3')[0].text_content()
+            date_string = landing_page_html.xpath("//h3")[0].text_content()
             date_obj = convert_date_string(date_string)
             self._extract_cases_from_sub_page(landing_page_html, date_obj)
             return [landing_page_html]
@@ -71,7 +73,7 @@ class Site(OpinionSite):
                 date_string = ahref.xpath("./text()")[0]
                 url = ahref.xpath("./@href")[0]
                 date_obj = convert_date_string(date_string)
-                logger.info("Getting sub-url: %s" % url)
+                logger.info(f"Getting sub-url: {url}")
 
                 # Fetch sub-page's content
                 html_tree = self._get_html_tree_by_url(url, self.request_dict)
@@ -113,31 +115,35 @@ class Site(OpinionSite):
         result = None
         for nhref in html_l.xpath(next_page_xpath):
             evtarget = None
-            class_, href = nhref.get('class'), nhref.get('href')
+            class_, href = nhref.get("class"), nhref.get("href")
             exp_start, exp_end = "javascript:__doPostBack('", "','')"
-            if href is not None and href.startswith(exp_start) and href.endswith(exp_end):
-                evtarget = href[len(exp_start):-len(exp_end)]
+            if (
+                href is not None
+                and href.startswith(exp_start)
+                and href.endswith(exp_end)
+            ):
+                evtarget = href[len(exp_start) : -len(exp_end)]
             # a disabled 'next page' link will contains this string in the class list
-            if evtarget is not None and 'aspNetDisabled' not in class_.split():
-                form = [('__EVENTTARGET', ('', evtarget))]
+            if evtarget is not None and "aspNetDisabled" not in class_.split():
+                form = [("__EVENTTARGET", ("", evtarget))]
                 form_items_xpath = "//input"
                 for form_el in html_l.xpath(form_items_xpath):
-                    name = form_el.get('name')
+                    name = form_el.get("name")
                     if name is not None:
-                        value = form_el.get('value') or ''
+                        value = form_el.get("value") or ""
                         # 1st tuple item is empty: don't include filename part
                         # in the multipart/form-data request
-                        form.append((name, ('', value)))
+                        form.append((name, ("", value)))
                 # use 'files' arg to make the request multipart/form-data
                 files_request_dict = dict(request_dict)
-                files_request_dict['files'] = form
+                files_request_dict["files"] = form
                 # temporarily override method and url
                 prev_method, prev_url = self.method, self.url
-                self.method = 'POST'
+                self.method = "POST"
                 self.url = url
                 # _download() in AbstractSite.py expects this to be not None
                 self.parameters = {}
-                result = super(Site, self)._download(files_request_dict)
+                result = super()._download(files_request_dict)
                 # restore method and url
                 self.method = prev_method
                 self.url = prev_url
@@ -162,20 +168,27 @@ class Site(OpinionSite):
             # to PDFs, and other link off to subpages that must themselves
             # be scraped to extract the real PDF url.
             if not self.is_url_pdf(url):
-                alt_url, alt_name = self.extract_pdf_url_and_name_from_resource(url)
+                (
+                    alt_url,
+                    alt_name,
+                ) = self.extract_pdf_url_and_name_from_resource(url)
                 url = alt_url if alt_url else url
                 name = alt_name if alt_name else name
 
-            self.cases.append({
-                'url': url,
-                'name': name,
-                'date': date_obj,
-                'status': 'Published',
-                'docket': self._extract_docket_from_text(text),
-                'citation': self._extract_citation_from_text(text),
-                'summary': self._extract_summary_relative_to_anchor(anchor),
-                'nature': self._extract_nature_relative_to_anchor(anchor),
-            })
+            self.cases.append(
+                {
+                    "url": url,
+                    "name": name,
+                    "date": date_obj,
+                    "status": "Published",
+                    "docket": self._extract_docket_from_text(text),
+                    "citation": self._extract_citation_from_text(text),
+                    "summary": self._extract_summary_relative_to_anchor(
+                        anchor
+                    ),
+                    "nature": self._extract_nature_relative_to_anchor(anchor),
+                }
+            )
 
     @classmethod
     def _extract_docket_from_text(cls, text):
@@ -183,10 +196,10 @@ class Site(OpinionSite):
         try:
             match = re.match(cls.regex, text).group(6)
         except:
-            raise InsanityException('Unable to parse docket from "%s"' % text)
-        dockets_raw = match.rstrip('.').replace('&', ' ').replace(',', ' ')
+            raise InsanityException(f'Unable to parse docket from "{text}"')
+        dockets_raw = match.rstrip(".").replace("&", " ").replace(",", " ")
         dockets = dockets_raw.split()
-        return ', '.join(dockets)
+        return ", ".join(dockets)
 
     @classmethod
     def _extract_name_from_text(cls, text):
@@ -194,24 +207,24 @@ class Site(OpinionSite):
         try:
             match = re.match(cls.regex, text).group(12)
         except:
-            raise InsanityException('Unable to parse case name from "%s"' % text)
-        return match.strip().rstrip('.')
+            raise InsanityException(f'Unable to parse case name from "{text}"')
+        return match.strip().rstrip(".")
 
     @classmethod
     def _extract_citation_from_text(cls, text):
-        return text.lstrip('No.').split('.')[0].strip()
+        return text.lstrip("No.").split(".")[0].strip()
 
     @classmethod
     def _extract_text_from_anchor(cls, anchor):
-        text = anchor.xpath('text()')[0]
-        text = text.replace('Nos.', 'No.')
-        if 'No.' in text and 'No. ' not in text:
-            text = text.replace('No.', 'No. ')
+        text = anchor.xpath("text()")[0]
+        text = text.replace("Nos.", "No.")
+        if "No." in text and "No. " not in text:
+            text = text.replace("No.", "No. ")
         return text
 
     @classmethod
     def _extract_url_from_anchor(cls, anchor):
-        return anchor.xpath('@href')[0]
+        return anchor.xpath("@href")[0]
 
     def extract_pdf_url_and_name_from_resource(self, url):
         """Scrape the resource for a direct link to PDF or a backup case name
@@ -225,16 +238,18 @@ class Site(OpinionSite):
         if href:
             return href[0], False
         path1 = '//p/strong[starts-with(text(), "Plaintiff-Appellee:")]/parent::p/text()'
-        path2 = '//p/strong[starts-with(text(), "Petitioner:")]/parent::p/text()'
-        parts = html_tree.xpath('%s | %s' % (path1, path2))
+        path2 = (
+            '//p/strong[starts-with(text(), "Petitioner:")]/parent::p/text()'
+        )
+        parts = html_tree.xpath(f"{path1} | {path2}")
         if parts:
-            name = ' '.join(part.strip() for part in parts if part.strip())
+            name = " ".join(part.strip() for part in parts if part.strip())
             return False, name
         return False, False
 
     def _extract_summary_relative_to_anchor(self, anchor):
-        parts = anchor.xpath('%s/p' % self.parent_summary_block_path)
-        return ' '.join([part.text_content().strip() for part in parts])
+        parts = anchor.xpath(f"{self.parent_summary_block_path}/p")
+        return " ".join([part.text_content().strip() for part in parts])
 
     def _extract_nature_relative_to_anchor(self, anchor):
         """Extract italicized nature summary that appears directly after download url
@@ -243,32 +258,34 @@ class Site(OpinionSite):
         If a "nature" field is showing blank in the results, it could be that they are
         using a new html path, which should be added to the path_patterns list below.
         """
-        nature = ''
+        nature = ""
 
         # The order of this list matters.  Generally, put
         # the more complex paths as the top
         path_patterns = [
-            '%s/p/strong/em/span/text()',
-            '%s/p/em/text()',
-            '%s/p/em/span/text()',
-            '%s/p/i/span/text()',
-            '%s/p/i/text()',
-            '%s/em/text()',
-            '%s/em/span/text()',
-            '%s/p/span/i/text()',
-            '%s/span/em/text()',
-            '%s/p/strong/em/text()',
-            '%s/strong/em/text()',
-            '%s/span/text()',
-            '%s/p/span/em/text()',
+            "%s/p/strong/em/span/text()",
+            "%s/p/em/text()",
+            "%s/p/em/span/text()",
+            "%s/p/i/span/text()",
+            "%s/p/i/text()",
+            "%s/em/text()",
+            "%s/em/span/text()",
+            "%s/p/span/i/text()",
+            "%s/span/em/text()",
+            "%s/p/strong/em/text()",
+            "%s/strong/em/text()",
+            "%s/span/text()",
+            "%s/p/span/em/text()",
         ]
         for pattern in path_patterns:
             try:
-                nature = anchor.xpath(pattern % self.parent_summary_block_path)[0]
+                nature = anchor.xpath(
+                    pattern % self.parent_summary_block_path
+                )[0]
                 break
             except:
                 continue
-        return nature.strip().rstrip('.')
+        return nature.strip().rstrip(".")
 
     @staticmethod
     def cleanup_content(content):
@@ -277,9 +294,7 @@ class Site(OpinionSite):
         if core_element:
             # its an HTML opinion, return only the core element
             return html.tostring(
-                core_element[0],
-                pretty_print=True,
-                encoding='unicode'
+                core_element[0], pretty_print=True, encoding="unicode"
             )
         else:
             # its raw pdf file content, which doesn't need to be manipulated
@@ -312,28 +327,28 @@ class Site(OpinionSite):
 
     def is_url_pdf(self, url):
         parsed = urlparse(url)
-        return parsed.path.lower().endswith('.pdf')
+        return parsed.path.lower().endswith(".pdf")
 
     def _get_case_names(self):
-        return [case['name'] for case in self.cases]
+        return [case["name"] for case in self.cases]
 
     def _get_download_urls(self):
-        return [case['url'] for case in self.cases]
+        return [case["url"] for case in self.cases]
 
     def _get_case_dates(self):
-        return [case['date'] for case in self.cases]
+        return [case["date"] for case in self.cases]
 
     def _get_docket_numbers(self):
-        return [case['docket'] for case in self.cases]
+        return [case["docket"] for case in self.cases]
 
     def _get_neutral_citations(self):
-        return [case['citation'] for case in self.cases]
+        return [case["citation"] for case in self.cases]
 
     def _get_precedential_statuses(self):
-        return [case['status'] for case in self.cases]
+        return [case["status"] for case in self.cases]
 
     def _get_summaries(self):
-        return [case['summary'] for case in self.cases]
+        return [case["summary"] for case in self.cases]
 
     def _get_nature_of_suit(self):
-        return [case['nature'] for case in self.cases]
+        return [case["nature"] for case in self.cases]

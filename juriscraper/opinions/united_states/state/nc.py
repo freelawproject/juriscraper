@@ -8,22 +8,26 @@ History:
 """
 
 import re
-from datetime import date
-from datetime import datetime
 import traceback
+from datetime import date, datetime
 
-from juriscraper.OpinionSite import OpinionSite
 from lxml import html
 
 from juriscraper.lib.exceptions import InsanityException
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://appellate.nccourts.org/opinions/?c=sc&year=%s' % date.today().year
-        self.back_scrape_iterable = range((date.today().year - 1), 1997, -1)
+        self.url = (
+            "http://appellate.nccourts.org/opinions/?c=sc&year=%s"
+            % date.today().year
+        )
+        self.back_scrape_iterable = list(
+            range((date.today().year - 1), 1997, -1)
+        )
         self.my_download_urls = []
         self.my_case_names = []
         self.my_docket_numbers = []
@@ -35,18 +39,19 @@ class Site(OpinionSite):
         case_dates = []
         case_date = None
         precedential_status = "Published"
-        date_cleaner = "\d+ \w+ [12][90]\d\d"
-        path = '//table//tr'
+        date_cleaner = r"\d+ \w+ [12][90]\d\d"
+        path = "//table//tr"
         for row_el in self.html.xpath(path):
             # Examine each row. If it contains the date, we set that as
             # the current date. If it contains a case, we parse it.
             try:
-                date_nodes = row_el.xpath('.//strong/text()')
+                date_nodes = row_el.xpath(".//strong/text()")
                 date_str = date_nodes[0]
                 if date_nodes:
-                    date_str = re.search(date_cleaner,
-                                         date_str, re.MULTILINE).group()
-                    case_date = datetime.strptime(date_str, '%d %B %Y').date()
+                    date_str = re.search(
+                        date_cleaner, date_str, re.MULTILINE
+                    ).group()
+                    case_date = datetime.strptime(date_str, "%d %B %Y").date()
                     # When a new date header appears, switch to Precedential
                     precedential_status = "Published"
                     continue  # Row contained just the date, move on
@@ -62,22 +67,20 @@ class Site(OpinionSite):
                 continue
 
             if precedential_status == "Published":
-                urls = row_el.xpath('./td/span/span[1]/@onclick')
+                urls = row_el.xpath("./td/span/span[1]/@onclick")
                 # Like: viewOpinion("http://appellate.nccourts.org/opinions/?c=1&amp;pdf=31511")
-                if len(urls) != 1 or urls[0].find('viewOpinion') != 0:
+                if len(urls) != 1 or urls[0].find("viewOpinion") != 0:
                     continue  # Only interested in cases with a download link
 
                 # Pull the URL out of the javascript viewOpinion function.
                 download_url = re.search(
-                    'viewopinion\("(.*)"',
-                    urls[0],
-                    re.IGNORECASE
+                    r'viewopinion\("(.*)"', urls[0], re.IGNORECASE
                 ).group(1)
 
                 path = "./td/span/span[contains(@class,'title')]"
-                txt = html.tostring(row_el.xpath(path)[0],
-                                    method='text',
-                                    encoding='unicode')
+                txt = html.tostring(
+                    row_el.xpath(path)[0], method="text", encoding="unicode"
+                )
                 case_name, neutral_cite, docket_number = self.parse_title(txt)
 
                 summary = ""
@@ -100,15 +103,21 @@ class Site(OpinionSite):
                 self.my_precedential_statuses.append(precedential_status)
 
             elif precedential_status == "Unpublished":
-                for span in row_el.xpath('./td/span'):
-                    if 'onclick' not in span.attrib.keys():
+                for span in row_el.xpath("./td/span"):
+                    if "onclick" not in span.attrib:
                         continue
-                    download_url = re.search('viewopinion\("(.*)"',
-                                             span.attrib['onclick'],
-                                             re.IGNORECASE).group(1)
+                    download_url = re.search(
+                        r'viewopinion\("(.*)"',
+                        span.attrib["onclick"],
+                        re.IGNORECASE,
+                    ).group(1)
 
                     txt = span.text_content().strip()
-                    (case_name, neutral_cite, docket_number) = self.parse_title(txt)
+                    (
+                        case_name,
+                        neutral_cite,
+                        docket_number,
+                    ) = self.parse_title(txt)
                     if case_name.strip() == "":
                         continue  # A few cases are missing a name
                     case_dates.append(case_date)
@@ -127,20 +136,22 @@ class Site(OpinionSite):
     @staticmethod
     def parse_title(txt):
         try:
-            name_and_citation = txt.rsplit('(', 1)[0].strip()
-            docket_number = re.search('(.*\d).*?',
-                                      txt.rsplit('(', 1)[1]).group(0).strip()
+            name_and_citation = txt.rsplit("(", 1)[0].strip()
+            docket_number = (
+                re.search(r"(.*\d).*?", txt.rsplit("(", 1)[1]).group(0).strip()
+            )
             case_name = name_and_citation.rsplit(",", 1)[0].strip()
             try:
                 neutral_cite = name_and_citation.rsplit(",", 1)[1].strip()
-                if not re.search('^\d\d.*\d\d$', neutral_cite):
-                    neutral_cite = ''
+                if not re.search(r"^\d\d.*\d\d$", neutral_cite):
+                    neutral_cite = ""
             except IndexError:
                 # Unable to find comma to split on. No neutral cite.
-                neutral_cite = ''
+                neutral_cite = ""
         except:
-            raise InsanityException("Unable to parse: %s\n%s" %
-                                    (txt, traceback.format_exc()))
+            raise InsanityException(
+                f"Unable to parse: {txt}\n{traceback.format_exc()}"
+            )
         return case_name, neutral_cite, docket_number
 
     def _get_download_urls(self):
@@ -162,5 +173,5 @@ class Site(OpinionSite):
         return self.my_precedential_statuses
 
     def _download_backwards(self, year):
-        self.url = 'http://appellate.nccourts.org/opinions/?c=sc&year=%s' % year
+        self.url = f"http://appellate.nccourts.org/opinions/?c=sc&year={year}"
         self.html = self._download()

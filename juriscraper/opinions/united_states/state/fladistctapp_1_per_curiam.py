@@ -5,13 +5,13 @@
 from datetime import date
 
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
-        super(Site, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.court_number = 1
         self.type_id = 0  # Per Curiam
@@ -86,13 +86,13 @@ class Site(OpinionSite):
         return self.get_cell_content(3)
 
     def _get_download_urls(self):
-        return self.get_cell_content(2, '//a/@href')
+        return self.get_cell_content(2, "//a/@href")
 
     def _get_case_dates(self):
         return [convert_date_string(ds) for ds in self.get_cell_content(6)]
 
     def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_dates)
+        return ["Published"] * len(self.case_dates)
 
     def _get_docket_numbers(self):
         return self.get_cell_content(1)
@@ -104,17 +104,22 @@ class Site(OpinionSite):
         month = page_month_year[0]
         year = page_month_year[1]
         self.url = self.get_url(month, year)
-        logger.info("Back scraping: %s" % self.url)
+        logger.info(f"Back scraping: {self.url}")
         self.html = self._download()
 
     def get_cell_content(self, cell_num, sub_path=False):
         path = '//table[@id="grdOpinions"]//tr/td[%d]' % cell_num
         cells = self.html.xpath(path + sub_path if sub_path else path)
-        return cells if sub_path else [cell.text_content().strip() for cell in cells]
+        return (
+            cells
+            if sub_path
+            else [cell.text_content().strip() for cell in cells]
+        )
 
     def get_url(self, month=False, year=False):
         month = month if month else date.today().month
         year = year if year else date.today().year
-        return 'https://edca.%ddca.org/Opinions.aspx?TypeID=%d&Day=All&Month=%d&Year=%d' % (
-            self.court_number, self.type_id, month, year
+        return (
+            "https://edca.%ddca.org/Opinions.aspx?TypeID=%d&Day=All&Month=%d&Year=%d"
+            % (self.court_number, self.type_id, month, year)
         )
