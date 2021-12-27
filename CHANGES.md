@@ -12,10 +12,12 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
-- 2.3.24, 2021-12-06 - Fix new PACER session code
+- 2.3.26, 2021-12-20 - Add Guam, Utah Ct App, Fix Ariz Ct App. Dist 2, Fix Ga Ct. App
 
 ## Past
 
+- 2.3.25, 2021-12-08 - Update US Tax Court (new website)
+- 2.3.24, 2021-12-06 - Fix new PACER session code
 - 2.3.23, 2021-12-02 - Updates feedparser, adds Python 3.9 and 3.10 tests, and broadens our regex for parsing in re case names from PACER dockets.
 - 2.3.22, 2021-11-30 - Further CAFC fixes
 - 2.3.21, 2021-11-29 - Fixes CAFC, adds pre-commit

@@ -28,6 +28,11 @@ class OpinionSiteLinear(OpinionSite):
     def _get_case_dates(self):
         return [convert_date_string(case["date"]) for case in self.cases]
 
+    def _get_date_filed_is_approximate(self):
+        return [
+            case.get("date_filed_is_approximate", False) for case in self.cases
+        ]
+
     def _get_precedential_statuses(self):
         # first try to use status values set in cases dictionary
         try:
