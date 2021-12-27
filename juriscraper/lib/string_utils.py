@@ -465,6 +465,8 @@ def trunc(s, length, ellipsis=None):
     If an ellipsis is provided, the right most space is used that allows the
     addition of the ellipsis without being longer than length.
     """
+    if type(s) != str:
+        return s
     if ellipsis:
         ellipsis_length = len(ellipsis)
     else:

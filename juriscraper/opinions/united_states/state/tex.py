@@ -19,7 +19,6 @@
 from datetime import date, timedelta
 
 import lxml
-import lxml.html
 
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -63,28 +62,29 @@ class Site(OpinionSiteLinear):
             self.parameters["__VIEWSTATE"] = self.html.xpath(
                 "//input[@id='__VIEWSTATE']"
             )[0].get("value")
-            self._request_url_post(self.url)
-            self.html = lxml.html.fromstring(self.request["response"].text)
+            self.method = "POST"
+            self.html = super()._download()
 
         for row in self.html.xpath("//table[@class='rgMasterTable']/tbody/tr"):
-            case_slug = row.xpath(".//a")[2].get("href")
-            case_url = f"https://search.txcourts.gov/{case_slug}"
             if self.test_mode_enabled():
                 name = "No case names fetched during tests."
             else:
-                self._request_url_get(case_url)
-                case_page = lxml.html.fromstring(self.request["response"].text)
-                name = case_page.xpath("//div[@class='span10']")[-2:]
-                name = " v. ".join([x.text_content().strip() for x in name])
-                name = titlecase(name)
-            url = row.xpath(".//a")[1].get("href")
-            if "http" not in url:
-                url = f"https://search.txcourts.gov/{url}"
+                self.url = row.xpath(".//a")[2].get("href")
+                self.method = "GET"
+                self.parameters = {}
+                self.html = self._download()
+                plaintiff = self.html.xpath(
+                    '//label[contains(text(), "Style:")]/parent::div/following-sibling::div/text()'
+                )[0].strip()
+                defendant = self.html.xpath(
+                    '//label[contains(text(), "v.:")]/parent::div/following-sibling::div/text()'
+                )[0].strip()
+                name = titlecase(f"{plaintiff} v. {defendant}")
             self.cases.append(
                 {
                     "date": row.xpath(f".//td[2]")[0].text_content(),
                     "docket": row.xpath(f".//td[5]")[0].text_content(),
                     "name": name,
-                    "url": url,
+                    "url": row.xpath(".//a")[1].get("href"),
                 }
             )
