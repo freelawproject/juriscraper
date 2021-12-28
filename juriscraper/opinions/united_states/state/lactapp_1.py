@@ -21,10 +21,7 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self._page_size = 50
-        self._base_url = (
-            "https://www.la-fcca.org/opiniongrid/opinionpub.php?opinionpage_size=%d"
-            % self._page_size
-        )
+        self._base_url = f"https://www.la-fcca.org/opiniongrid/opinionpub.php?opinionpage_size={self._page_size}"
         self.url = self._base_url
         self.back_scrape_iterable = self._generate_back_scrape_range()
 
@@ -52,7 +49,7 @@ class Site(OpinionSiteLinear):
         # "2018CA1742<br>Consolidated With<br>2018CA1743"
         #     => "2018CA1742, 2018CA1743"
         text = get_row_column_text(row, 2)
-        case_numbers = re.findall("[0-9]{4}[A-Z]{2,}[0-9]{4,}", text)
+        case_numbers = re.findall("[0-9]{4}[A-Z]{2}[0-9]{4}", text)
         return ", ".join(case_numbers)
 
     def _generate_back_scrape_range(self):
@@ -65,13 +62,13 @@ class Site(OpinionSiteLinear):
         yield from range(1, last_page + 1)
 
     def _get_last_page_number(self):
+        # The link to the last page has an onclick like:
+        # javascript:opinion_doPostBack('paging','','&opinionsort_field=sortdate&opinionsort_field_by=&opinionsort_field_type=&opinionsort_type=DESC&opinionpage_size=50&opinionp=395')
+        # where 395 is the last page number.
         html = self._get_html_tree_by_url(self._base_url, {})
-
-        # Text is something like "Results: 1 - 50 of 16,753"
-        text = html.cssselect("#frmPagingopinionUpper td")[0].text_content()
-        count_str = re.search(" of ([0-9,]+)", text).group(1)
-        count = int(count_str.replace(",", ""))
-        return int(math.ceil(count / float(self._page_size)))
+        el = html.cssselect("a[title=last]")[0]
+        onclick = el.get("onclick")
+        return int(re.findall(r"\d+", onclick)[-1])
 
     def _download_backwards(self, page):
         self.url = self._base_url + ("&opinionp=%d" % page)
