@@ -1,5 +1,5 @@
-"""Scraper for the 1st District Court of Appeals
-CourtID: ohio
+"""Scraper for the 9th District Court of Appeals
+CourtID: ohioctap_9
 Court Short Name: Ohio
 Author: Andrei Chelaru
 """
