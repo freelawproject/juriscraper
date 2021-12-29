@@ -8,6 +8,7 @@ History:
     2021-12-18: Created by William E. Palin
 """
 import re
+from datetime import datetime
 from typing import Any, Dict
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -90,7 +91,8 @@ class Site(OpinionSiteLinear):
         # get the last element in the article
         # this ends the process_elements method on the final call because no
         # hr tag is present on the last decision
-        *_, last = article.iter()
+
+        last = list(article.iter())[-1]
         # Iterate over every tag in the article to separate out the cases.
         elements = []
         for element in article.iter():
@@ -105,3 +107,18 @@ class Site(OpinionSiteLinear):
                 if case:
                     self.cases.append(case)
                 elements, case = [], {}
+
+    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+        """Can we extract the date filed from the text?
+
+        :param scraped_text: The content of the document downloaded
+        :return: Metadata to be added to the case
+        """
+        date = re.findall(
+            r"Decided (by Attorney General )?(.*\d{4})", scraped_text
+        )[0][1]
+        date_filed = datetime.strptime(date, "%B %d, %Y").strftime("%Y-%m-%d")
+        metadata = {
+            "OpinionCluster": {"date_filed": date_filed},
+        }
+        return metadata
