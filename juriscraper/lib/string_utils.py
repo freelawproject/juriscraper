@@ -302,7 +302,7 @@ def harmonize(text):
         text = str(text)
 
     # replace vs. with v.
-    text = re.sub(r"\svs\.?\s", " v. ", text)
+    text = re.sub(re.compile(r"\svs\.?\s", re.IGNORECASE), " v. ", text)
 
     # replace lower case v without a period with v.
     text = re.sub(r"\sv\.?\s", " v. ", text)

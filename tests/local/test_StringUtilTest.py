@@ -336,6 +336,11 @@ class StringUtilTest(unittest.TestCase):
                 "v.v. Hendricks & Sons v. James v. Smith",
                 "v.v. Hendricks & Sons v. James v. Smith",
             ],
+            # tests upper-case VS.
+            ["Lissner VS White", "Lissner v. White"],
+            ["Lissner Vs White", "Lissner v. White"],
+            ["Lissner VS. White", "Lissner v. White"],
+            ["Lissner Vs. White", "Lissner v. White"],
             # Minimal normalization of "The State"
             ["Aimee v. The State", "Aimee v. State"],
             ["Aimee v. The State of Texas", "Aimee v. The State of Texas"],

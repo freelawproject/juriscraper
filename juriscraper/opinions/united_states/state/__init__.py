@@ -62,6 +62,7 @@ __all__ = [
     "ky",
     "kyctapp",
     "la",
+    "lactapp_1",
     "mass",
     "massappct",
     "massappct_u",
