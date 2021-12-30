@@ -15,7 +15,6 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         today = date.today()
-        self.last_month = today - timedelta(days=31)
         self.url = self._get_url(today.year)
         self.status = "Published"
         self.back_scrape_iterable = range(2016, 2022)
@@ -31,32 +30,33 @@ class Site(OpinionSiteLinear):
     def _process_html(self) -> None:
         for link in self.html.xpath("//li/a[contains(@href, '.pdf')]"):
             url = link.get("href")
+            # Expected title content:
+            # - "S20A1505, S20A1506. PENDER v. THE STATE"
+            # - "S21A0306. BELL v. RAFFENSPERGER"
             title = link.text_content()
             if not title:
                 continue
             dockets = re.findall(r"S?\d{2}\w\d{4}", title)
             if not dockets:
-                # Skip empty links in the HTML
+                # Skip links to weekly summaries or cases without a docket
                 continue
             docket = ", ".join(dockets)
             name = title.split(dockets[-1])[-1].strip("., ")
+            # Expected summary content:
+            # - "October 19, 2021—SUMMARIES for NOTEWORTHY OPINIONS"
+            # - "July 7, 2021"
+            # - "February 15, 2021 – SUMMARIES for NOTEWORTHY OPINIONS"
             summary = link.xpath(
                 ".//parent::li/parent::ul/preceding-sibling::p[1]"
             )[0].text_content()
-            # We've got en/em dash and hyphens.
+            # Character separator for dates from summary text could be:
+            # - dash: "-"
+            # - hyphen: "—"
+            # - character U+2013: "–"
             date_str = (
                 summary.split("–")[0].split("—")[0].split("-")[0].strip()
             )
             date_summary = datetime.strptime(date_str, "%B %d, %Y")
-            if self.test_mode_enabled():
-                self.last_month = date(year=2019, month=11, day=1)
-
-            if date_summary.date() < self.last_month:
-                # GA lists all opinions from the previous year on the same page
-                # but we don't need to scrape them every time.  So cancel out
-                # after 31 days.
-                # This should resolve the speed warning we receive on GA.
-                break
             self.cases.append(
                 {
                     "date": date_str,
