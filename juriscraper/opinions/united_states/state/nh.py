@@ -37,7 +37,6 @@ Notes:
 """
 
 import re
-from typing import Tuple
 
 from lxml.html import fromstring
 
