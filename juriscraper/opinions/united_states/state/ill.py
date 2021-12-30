@@ -1,4 +1,6 @@
 """
+Scraper for Illinois Supreme Court
+CourtID: ill
 Contact: webmaster@illinoiscourts.gov, 217-558-4490, 312-793-3250
 History:
   2013-08-16: Created by Krist Jin
@@ -6,10 +8,13 @@ History:
   2016-02-26: Updated by arderyp: simplified thanks to new id attribute identifying decisions table
   2016-03-27: Updated by arderyp: fixed to handled non-standard formatting
   2021-11-02: Updated by satsuki-chan: Updated to new page design.
+  2021-12-30: Updated by satsuki-chan: Added validation when citation is missing.
 """
 import re
 from typing import List
 
+from juriscraper.AbstractSite import logger
+from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.html_utils import (
     get_row_column_links,
     get_row_column_text,
@@ -42,20 +47,22 @@ class Site(OpinionSiteLinear):
         """
         for row in self.html.xpath("//table[@id='ctl04_gvDecisions']/tr"):
             cells = row.xpath(".//td")
-
             # Don't parse pagination rows or headers or footers
             if len(cells) != 7 or row.xpath(".//table"):
                 continue
-
-            name = get_row_column_text(row, 1)
-            date = get_row_column_text(row, 3)
-            citation = get_row_column_text(row, 2)
             try:
                 url = get_row_column_links(row, 1)
             except IndexError:
                 # If the opinion file's information is missing (as with
                 # links to withdrawn opinions), skip record
                 continue
+            citation = get_row_column_text(row, 2)
+            if not citation:
+                logger.info(f"Opinion without citation: '{str(row)}'")
+                # If the opinion citation is missing, skip record
+                continue
+            name = get_row_column_text(row, 1)
+            date = get_row_column_text(row, 3)
             self.cases.append(
                 {
                     "date": date,
@@ -84,6 +91,12 @@ class Site(OpinionSiteLinear):
         """
         dockets_numbers = []
         for case in self.cases:
-            m = re.search(self.docket_re, case["citation"])
-            dockets_numbers.append(m.group("docket"))
+            match = re.search(self.docket_re, case["neutral_citation"])
+            if match:
+                dockets_numbers.append(match.group("docket"))
+            else:
+                logger.info(f"Could not find docket for case: '{case}'")
+                raise InsanityException(
+                    f"Could not find docket for case: '{case}'"
+                )
         return dockets_numbers
