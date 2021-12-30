@@ -1,7 +1,7 @@
 # Scraper for New York Appellate Term 1st Dept.
 # CourtID: nyappterm_1st
 # Court Short Name: NY
-
+import datetime
 import re
 from datetime import date, timedelta
 from typing import Any, Dict
@@ -16,18 +16,19 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = "https://iapps.courts.state.ny.us/lawReporting/Search?searchType=opinion"
         self.method = "POST"
-        self._set_parameters()
 
-    def _set_parameters(self):
+        self._set_parameters(date.today(), self.court)
+
+    def _set_parameters(self, today: datetime.date, court: str) -> None:
+        """Set the parameters for the POST request."""
+
         self.parameters = {
             "rbOpinionMotion": "opinion",
             "Pty": "",
             "and_or": "and",
-            "dtStartDate": (date.today() - timedelta(days=30)).strftime(
-                "%m/%d/%Y"
-            ),
-            "dtEndDate": date.today().strftime("%m/%d/%Y"),
-            "court": self.court,
+            "dtStartDate": (today - timedelta(days=30)).strftime("%m/%d/%Y"),
+            "dtEndDate": today.strftime("%m/%d/%Y"),
+            "court": court,
             "docket": "",
             "judge": "",
             "slipYear": "",
