@@ -23,12 +23,17 @@ class Site(OpinionSiteLinear):
         self.url = "https://www.supremecourtofohio.gov/rod/docs/"
         self.court_id = self.__module__
 
-    def _set_parameters(self) -> None:
+    def _set_parameters(
+        self,
+        event_validation: str,
+        view_state: str,
+    ) -> None:
         """Set the parameters for the search
 
+        :param: event_validation: the event validation token
+        :param: view_state: the view state token
         :return: None
         """
-
         self.parameters = {
             "__VIEWSTATEENCRYPTED": "",
             "ctl00$MainContent$ddlCourt": f"{self.court_index}",
@@ -37,21 +42,22 @@ class Site(OpinionSiteLinear):
             "ctl00$MainContent$ddlCounty": "0",
             "ctl00$MainContent$btnSubmit": "Submit",
             "ctl00$MainContent$ddlRowsPerPage": "50",
-            "__EVENTVALIDATION": self.html.xpath(
-                "//input[@id='__EVENTVALIDATION']"
-            )[0].get("value"),
-            "__VIEWSTATE": self.html.xpath("//input[@id='__VIEWSTATE']")[
-                0
-            ].get("value"),
+            "__EVENTVALIDATION": event_validation,
+            "__VIEWSTATE": view_state,
         }
         self.url = "https://www.supremecourt.ohio.gov/rod/docs/"
         self.method = "POST"
 
     def _process_html(self) -> None:
         """Process the HTML and extract the data"""
-
         if not self.test_mode_enabled():
-            self._set_parameters()
+            event_validation = self.html.xpath(
+                "//input[@id='__EVENTVALIDATION']"
+            )[0].get("value")
+            view_state = self.html.xpath("//input[@id='__VIEWSTATE']")[0].get(
+                "value"
+            )
+            self._set_parameters(event_validation, view_state)
             self.html = self._download()
 
         # Skip the header rows and the footer rows
