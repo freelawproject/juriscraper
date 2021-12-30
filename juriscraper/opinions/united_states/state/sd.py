@@ -6,6 +6,7 @@
 # - 2021-12-28: Updated by flooie
 
 import re
+from typing import Dict, Any
 
 from juriscraper.lib.html_utils import get_row_column_text
 from juriscraper.lib.string_utils import titlecase
@@ -27,6 +28,11 @@ class Site(OpinionSiteLinear):
             cite = re.findall(r"\d{4} S\.D\. \d+", get_row_column_text(row, 2))
             if not cite:
                 continue
+
+            # https://ujs.sd.gov/uploads/sc/opinions/2928369ef9a6.pdf
+            # 29283 is part of the full docket number
+            # 29283-a-JMK
+            docket = row.xpath(".//td[2]/a/@href")[0].split("/")[-1][:5]
             self.cases.append(
                 {
                     "date": get_row_column_text(row, 1),
@@ -35,8 +41,20 @@ class Site(OpinionSiteLinear):
                     ),
                     "citation": cite[0],
                     "url": row.xpath(".//td[2]/a/@href")[0],
-                    "docket": row.xpath(".//td[2]/a/@href")[0].split("/")[-1][
-                        :5
-                    ],
+                    "docket": docket,
                 }
             )
+
+    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+        """Can we extract the date filed from the text?
+
+        :param scraped_text: The content of the document downloaded
+        :return: Metadata to be added to the case
+        """
+        docket = re.findall(r"#\d+.*-.-\w{3}", scraped_text)[0][:20]
+        metadata = {
+            "Docket": {
+                "docket_number": docket,
+            },
+        }
+        return metadata
