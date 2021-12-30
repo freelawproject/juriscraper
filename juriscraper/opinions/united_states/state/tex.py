@@ -48,6 +48,9 @@ class Site(OpinionSiteLinear):
         last_month = today - timedelta(days=30)
         last_month_str = last_month.strftime("%m/%d/%Y")
         today_str = today.strftime("%m/%d/%Y")
+        view_state = self.html.xpath("//input[@id='__VIEWSTATE']")[0].get(
+            "value"
+        )
 
         date_param = (
             '{"enabled":true,"emptyMessage":"",'
@@ -69,9 +72,7 @@ class Site(OpinionSiteLinear):
             "ctl00$ContentPlaceHolder1$dtDocumentTo$dateInput": today_str,
             "ctl00$ContentPlaceHolder1$chkListDocTypes$0": "on",
             "ctl00$ContentPlaceHolder1$btnSearchText": "Search",
-            "__VIEWSTATE": self.html.xpath("//input[@id='__VIEWSTATE']")[
-                0
-            ].get("value"),
+            "__VIEWSTATE": view_state,
             f"ctl00$ContentPlaceHolder1$chkListCourts${self.checkbox}": "on",
         }
 
