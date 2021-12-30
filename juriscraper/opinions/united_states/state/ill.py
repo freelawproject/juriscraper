@@ -33,7 +33,7 @@ class Site(OpinionSiteLinear):
             r"(?P<year>\d{4})? ?"
             r"(?P<court>(IL App)|(IL)) "
             r"(\(?(?P<district>[1-5])\w{1,2}\))? ?"
-            r"(?P<docket>\d{5,10})-?U?[BCD]?"
+            r"(?P<docket>\d{5,10}\w{1,2})-?U?[BCD]?"
         )
 
     def _process_html(self) -> None:
@@ -53,6 +53,7 @@ class Site(OpinionSiteLinear):
             try:
                 url = get_row_column_links(row, 1)
             except IndexError:
+                logger.info(f"Opinion without URL to file: '{str(row)}'")
                 # If the opinion file's information is missing (as with
                 # links to withdrawn opinions), skip record
                 continue
@@ -86,7 +87,11 @@ class Site(OpinionSiteLinear):
 
     def _get_docket_numbers(self) -> List[str]:
         """Get the docket number from citation.
-
+        Examples:
+            Citation         - Docket
+            "2019 IL 123318" - 123318
+            "2020 IL 124831" - 124831
+            "2021 IL 126432" - 126432
         Returns: List of docket numbers
         """
         dockets_numbers = []
@@ -95,7 +100,7 @@ class Site(OpinionSiteLinear):
             if match:
                 dockets_numbers.append(match.group("docket"))
             else:
-                logger.info(f"Could not find docket for case: '{case}'")
+                logger.critical(f"Could not find docket for case: '{case}'")
                 raise InsanityException(
                     f"Could not find docket for case: '{case}'"
                 )
