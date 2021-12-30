@@ -26,9 +26,14 @@ class Site(ill.Site):
 
     def _get_docket_numbers(self) -> List[str]:
         """Get the docket number from citation.
-
         Extract district and docket number to construct the full docket number.
-
+        Examples:
+            Citation                      - Docket
+            "2018 IL App (5th) 150159-UB" - 5-15-0159
+            "2014 IL App (4th) 131281"    - 4-13-1281
+            "2019 IL App (3d) 180261-U"   - 3-18-0261
+            "2020 IL App (2d) 190759WC-U" - 2-19-0759WC
+            "2021 IL App (1st) 131973-B"  - 1-13-1973
         Returns: List of docket numbers
         """
         dockets_numbers = []
@@ -40,7 +45,7 @@ class Site(ill.Site):
                 docket = f"{district}-{raw_docket[0:2]}-{raw_docket[2:]}"
                 dockets_numbers.append(docket)
             else:
-                logger.info(f"Could not find docket for case: '{case}'")
+                logger.critical(f"Could not find docket for case: '{case}'")
                 raise InsanityException(
                     f"Could not find docket for case: '{case}'"
                 )
