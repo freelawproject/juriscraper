@@ -1,127 +1,92 @@
-# Scraper for New Hampshire Supreme Court
-# CourtID: nh
-# Court Short Name: NH
-# Court Contact: webmaster@courts.state.nh.us
-# Author: Andrei Chelaru
-# Reviewer: mlr
-# History:
-# - 2014-06-27: Created
-# - 2014-10-17: Updated by mlr to fix regex error.
-# - 2015-06-04: Updated by bwc so regex catches comma, period, or whitespaces
-#   as separator. Simplified by mlr to make regexes more semantic.
-# - 2016-02-20: Updated by arderyp to handle strange format where multiple
-#   case names and docket numbers appear in anchor text for a single case
-#   pdf link. Multiple case names are concatenated, and docket numbers are
-#   concatenated with ',' delimiter
+"""
+Scraper for New Hampshire Supreme Court
+CourtID: nh
+Court Short Name: NH
+Court Contact: webmaster@courts.state.nh.us
+Author: Andrei Chelaru
+Reviewer: mlr
+History:
+    - 2014-06-27: Created
+    - 2014-10-17: Updated by mlr to fix regex error.
+    - 2015-06-04: Updated by bwc so regex catches comma, period, or
+    whitespaces as separator. Simplified by mlr to make regexes more semantic.
+    - 2016-02-20: Updated by arderyp to handle strange format where multiple
+    case names and docket numbers appear in anchor text for a single case pdf
+    link. Multiple case names are concatenated, and docket numbers are
+    concatenated with ',' delimiter
+    - 2021-12-29: Updated for new web site, by flooie and satsuki-chan
+Notes:
+    To filer documents per year, the API expects the key number for the year
+    in parameter:
+    - 'tag': for years 2019 to date
+        * 2021: tag=1206    * 2020: tag=1366    * 2019: tag=1416
+    - 'subcategory': for years 2009 to 2018
+        * 2018: subcategory=1601    * 2017: subcategory=1596
+        * 2016: subcategory=1591    * 2015: subcategory=1586
+        * 2014: subcategory=1581    * 2013: subcategory=1576
+        * 2012: subcategory=1571    * 2011: subcategory=1566
+        * 2010: subcategory=1561    * 2009: subcategory=1556
+    Only one parameter can have a key number; using both with a value in the
+    same request (even with a valid key) returns zero documents.
+    Using none, returns all documents (regardless of the publication year)
+    found with the other parameters values.
+    For this scraper, filtering documents per year is not necesary.
+    Examples:
+        - https://www.courts.nh.gov/content/api/documents?text=&category=+undefined&purpose=1331+undefined&tag=+&subcategory=1556&sort=field_date_posted|desc&page=3&size=10
+        - https://www.courts.nh.gov/content/api/documents?text=&category=+undefined&purpose=1331+undefined&tag=1366+&subcategory=&sort=field_date_posted|desc&page=1&size=25
+"""
 
 import re
-from datetime import date
 
-from juriscraper.lib.exceptions import InsanityException
-from juriscraper.lib.string_utils import clean_string, convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+from lxml.html import fromstring
+
+from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "http://www.courts.state.nh.us/supreme/opinions/{current_year}/index.htm".format(
-            current_year=date.today().year
-        )
         self.court_id = self.__module__
-        self.link_path = 'id("content")/div//ul//li//a[position()=1]'
-        self.link_text_regex = re.compile(
-            r"(\d{4}-\d+(?!.*\d{4}-\d+))(?:,|\.|\s?)\s+(.*)", re.M
-        )
-        self.docket_name_pairs = False
+        # Parameters are included in the URL because this court's API only
+        # allows GET requests. Current architecture for scrapers only includes
+        # parameters in requests with the POST method
+        self.url = "https://www.courts.nh.gov/content/api/documents?sort=field_date_posted%7Cdesc&page=1&size=30&purpose=1331"
+        self.status = "Published"
 
-    def _get_case_names(self):
-        self.docket_name_pairs = self._get_anchor_docket_name_pairs()
-        return [pair["name"] for pair in self.docket_name_pairs]
-
-    def _get_download_urls(self):
-        path = "id('content')/div//ul//li//a[position()=1]"
-        download_url = []
-        for element in self.html.xpath(path):
-            url = element.xpath("./@href")[0]
-            download_url.extend([url])
-        return download_url
-
-    def _get_case_dates(self):
-        dates = []
-        path = 'id("content")/div//strong'
-        sub_path = (
-            "./following-sibling::ul[1]//li|../following-sibling::ul[1]//li"
-        )
-        for element in self.html.xpath(path):
-            text = element.text_content().strip().rstrip(":")
-            try:
-                case_date = convert_date_string(text)
-            except ValueError:
-                # Sometimes the court includes "To be released..."
-                # sections, without links, which we skip here
+    def _process_html(self) -> None:
+        for case in self.html["data"]:
+            content = fromstring(case["documentContent"])
+            urls = content.xpath(
+                ".//div[@class='document__detail__title']//a/@href"
+            )
+            if not urls:
+                logger.info(f"Opinion without URL to file: {case}")
                 continue
-            dates.extend([case_date] * len(element.xpath(sub_path)))
-        return dates
 
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
+            date = case["documentPosted"]
+            if not date:
+                logger.info(f"Opinion without date: {case}")
+                continue
 
-    def _get_docket_numbers(self):
-        return [pair["docket"] for pair in self.docket_name_pairs]
+            # In juvenile cases - the case name contains the docket number
+            # So we use a negative lookbehind to ignore docket numbers after
+            # the word juvenile.
+            regex = r"(?<!JUVENILE )((\b)(\w+-)?[\d]{2,4}-\d+)\/?"
+            dockets = re.findall(regex, case["documentName"])
+            docket = ", ".join([docket[0] for docket in dockets])
 
-    def _get_anchor_docket_name_pairs(self):
-        """The court has some ugly HTML practices that we need to handle.
+            # Get name by removing docket number from document text
+            rgx = r"(?<!JUVENILE )((\b)(\w+-)?[\d]{2,4}-\d+)\/?,? &? ?(and)? ?"
+            name = re.sub(rgx, "", case["documentName"])
+            # Strip out the bad pattern with slashes between adjoined docket numbers
+            name = re.sub(r"^\d+\/", "", name)
 
-        Most anchor links include single line strings with a single docket
-        number and a single case name.  However, there are two other formats
-        we've seen and must work around.
-
-        (CASE 1)
-        The anchor has multiple lines broken with <br> tag(s), and each
-        line contains "<docket> <name>". In this case we need to combine
-        the docket numbers and name strings respectively.
-        [EXAMPLE: February 18, 2016 in nh_example_2.html]
-
-        (CASE 2)
-        The anchor has multiple lines broken with <br> tag(s), and the
-        second line is a continuation of a long case name started on the first
-        line.  So, the second line does not lead with a docket number, thus
-        this line's string should be glued onto the <name> substring extracted
-        from the previous line.
-        [EXAMPLE: September 18, 2018 in nh_example_6.html]
-        """
-        pairs = []
-        for anchor in self.html.xpath(self.link_path):
-            i = 0
-            dockets = []
-            name_substrings = []
-            text_anchor = anchor.text_content()
-            text_clean = text_anchor.replace("\n", "")
-
-            for text in text_clean.split(";"):
-                text = clean_string(text)
-                match = self.link_text_regex.search(text)
-                try:
-                    docket = match.group(1)
-                    dockets.append(docket)
-                    name = match.group(2)
-                    name = " ".join(name.split())
-                    name_substrings.append(name)
-                    i += 1
-                except AttributeError:
-                    if i == 0:
-                        # docket and name (root) should be contained in first substring
-                        error = f"Invalid anchor root string format: {text}"
-                        raise InsanityException(error)
-                    # no docket in the substring, its a trailing name substring
-                    # that they broke over multiple lines, so glue it to the
-                    # previous name substring
-                    name_substrings[i - 1] += f" {text}"
-            pairs.append(
+            self.cases.append(
                 {
-                    "docket": ", ".join(dockets),
-                    "name": " and ".join(name_substrings),
+                    "name": name,
+                    "docket": docket,
+                    "date": date,
+                    "url": urls[0],
                 }
             )
-        return pairs
