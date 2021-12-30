@@ -15,7 +15,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.url = "https://www.kscourts.org/Cases-Opinions/Opinions.aspx"
 
-    def _set_parameters(self, page: int) -> None:
+    def _set_parameters(self, page: int, viewstate: str, court: str) -> None:
         """Set Parameters for Kansas Courts
 
         :param page: Page number to request
@@ -26,20 +26,24 @@ class Site(OpinionSiteLinear):
             "__EVENTARGUMENT": str(page),
             "__EVENTTARGET": "p$lt$zonePagePlaceholder$pageplaceholder$p$lt$ctl06$UniversalPager$pagerElem",
             "p$lt$zonePagePlaceholder$pageplaceholder$p$lt$ctl02$OpinionFilter1$filterControl$drpPublished": "Published",
-            "p$lt$zonePagePlaceholder$pageplaceholder$p$lt$ctl02$OpinionFilter1$filterControl$drpCourt": self.court,
+            "p$lt$zonePagePlaceholder$pageplaceholder$p$lt$ctl02$OpinionFilter1$filterControl$drpCourt": court,
             "p$lt$zonePagePlaceholder$pageplaceholder$p$lt$ctl02$OpinionFilter1$filterControl$drpSortBy": "Opinion Date",
+            "__VIEWSTATE": viewstate,
         }
-        vs = self.html.xpath("//input[@id='__VIEWSTATE']")[0].get("value")
-        self.parameters["__VIEWSTATE"] = vs
 
     def _process_html(self):
         if self.test_mode_enabled():
             self.pages_to_process = 1
 
         for page in range(1, self.pages_to_process + 1):
+
             if not self.test_mode_enabled():
-                self._set_parameters(page)
+                viewstate = self.html.xpath("//input[@id='__VIEWSTATE']")[
+                    0
+                ].get("value")
+                self._set_parameters(page, viewstate, self.court)
                 self.html = self._download()
+
             rows = self.html.xpath("//table[@class='info-table']/tbody/div/tr")
             for row in rows[1:]:
                 self.cases.append(
