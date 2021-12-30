@@ -22,7 +22,6 @@ class Site(OpinionSiteLinear):
         self.year = date.today().year
         self.url = "https://www.supremecourtofohio.gov/rod/docs/"
         self.court_id = self.__module__
-        self.status = "Published"
 
     def _set_parameters(
         self,
@@ -86,5 +85,6 @@ class Site(OpinionSiteLinear):
                     "url": row.xpath(".//a")[0].get("href"),
                     "neutral_citation": row.xpath(".//td[8]//text()")[0],
                     "summary": row.xpath(".//td[3]//text()")[0],
+                    "status": "Published",
                 }
             )
