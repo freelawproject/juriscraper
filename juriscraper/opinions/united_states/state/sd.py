@@ -30,8 +30,9 @@ class Site(OpinionSiteLinear):
                 continue
 
             # https://ujs.sd.gov/uploads/sc/opinions/2928369ef9a6.pdf
-            # 29283 is part of the full docket number
-            # 29283-a-JMK
+            # We abstract out the first part of the docket number here
+            # And process the full docket number in the `extract_from_text` method
+            # Called after the file has been downloaded.
             docket = row.xpath(".//td[2]/a/@href")[0].split("/")[-1][:5]
             self.cases.append(
                 {
