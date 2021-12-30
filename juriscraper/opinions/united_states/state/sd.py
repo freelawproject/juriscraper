@@ -6,7 +6,7 @@
 # - 2021-12-28: Updated by flooie
 
 import re
-from typing import Dict, Any
+from typing import Any, Dict
 
 from juriscraper.lib.html_utils import get_row_column_text
 from juriscraper.lib.string_utils import titlecase
