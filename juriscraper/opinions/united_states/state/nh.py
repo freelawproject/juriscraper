@@ -81,7 +81,7 @@ class Site(OpinionSiteLinear):
             rgx = r"(?<!JUVENILE )((\b)(\w+-)?[\d]{2,4}-\d+)\/?,? &? ?(and)? ?"
             name = re.sub(rgx, "", case["documentName"])
             # Strip out the bad pattern with slashes between adjoined docket numbers
-            name = re.sub("^\d+\/", "", name)
+            name = re.sub(r"^\d+\/", "", name)
 
             self.cases.append(
                 {
