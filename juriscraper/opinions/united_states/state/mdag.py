@@ -4,6 +4,7 @@ Court Short Name: Maryland Attorney General
 """
 
 import json
+import re
 from datetime import date
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -42,14 +43,16 @@ class Site(OpinionSiteLinear):
     def _process_html(self):
         for row in self.json["Row"]:
             url_path = row["FileRef.urlencodeasurl"]
-            # JSON returns created_x0020_date == 0;#2021-11-09 14:29:09
-            # its a date time string with a random string at the start.
+
+            # created_x0020_date looks like this 0;#2021-11-09 14:29:09
+            datetime_string = row["Created_x0020_Date"]
+            date = re.findall(r"\d{4}-\d{2}-\d{2}", datetime_string)[0]
             self.cases.append(
                 {
                     "docket": row["Title"],
                     "summary": row["Summary"],
                     "name": row["FileLeafRef.Name"],
                     "url": f"https://www.marylandattorneygeneral.gov{url_path}",
-                    "date": row["Created_x0020_Date"][3:13],
+                    "date": date,
                 }
             )
