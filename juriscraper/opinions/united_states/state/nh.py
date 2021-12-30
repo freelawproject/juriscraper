@@ -70,7 +70,19 @@ class Site(OpinionSiteLinear):
                 logger.info(f"Opinion without date: {case}")
                 continue
 
-            name, docket = self.name_docket(case["documentName"])
+            # In juvenile cases - the case name contains the docket number
+            # So we use a negative lookbehind to ignore docket numbers after
+            # the word juvenile.
+            regex = r"(?<!JUVENILE )((\b)(\w+-)?[\d]{2,4}-\d+)\/?"
+            dockets = re.findall(regex, case["documentName"])
+            docket = ", ".join([docket[0] for docket in dockets])
+
+            # Get name by removing docket number from document text
+            rgx = r"(?<!JUVENILE )((\b)(\w+-)?[\d]{2,4}-\d+)\/?,? &? ?(and)? ?"
+            name = re.sub(rgx, "", case["documentName"])
+            # Strip out the bad pattern with slashes between adjoined docket numbers
+            name = re.sub("^\d+\/", "", name)
+
             self.cases.append(
                 {
                     "name": name,
@@ -79,17 +91,3 @@ class Site(OpinionSiteLinear):
                     "url": urls[0],
                 }
             )
-
-    def name_docket(self, title) -> Tuple[str, str]:
-        docket_re = r"(?<!JUVENILE)((\w+-)?\d{2,4}-\d+)"
-        dockets = re.findall(docket_re, title)
-        docket = ", ".join([docket[0] for docket in dockets])
-        # Strip out the docket numbers and clean up the case names.
-        name = re.sub(docket_re, "", title)
-        name = name.strip(", ").replace(", and ,", " and ")
-        name = name.replace(" ,", ",").replace(",,", ",")
-        name = name.lstrip(" ,;.&/)")
-        if name[0:3].lower() == "and":
-            name = name[3:]
-            name = name.lstrip(" ,;.&/)")
-        return name, docket
