@@ -1,8 +1,10 @@
 # Scraper for New York Appellate Term 1st Dept.
 # CourtID: nyappterm_1st
 # Court Short Name: NY
+
 import re
 from datetime import date, timedelta
+from typing import Any, Dict
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -55,8 +57,29 @@ class Site(OpinionSiteLinear):
                     "status": "Published"
                     if "(U)" not in docket
                     else "Unpublished",
-                    "docket": docket,
+                    "docket": "",
                     "neutral_citation": docket,
                     "west_citation": citation,
                 }
             )
+
+    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+        """Can we extract the date filed from the text?
+
+        :param scraped_text: The content of the document downloaded
+        :return: Metadata to be added to the case
+        """
+        # Ny App Term 1st Dept. 2nd and Sup Ct all have different varying
+        # docket number types.
+        # ie. 123413/03 vs. 51706 vs. 2003-718 Q C or 2003-1288 K C
+
+        dockets = re.findall(
+            r"^(\d+\/\d+)|^(\d{5,})|^(\d+-\d+ \w+\s\w+)", scraped_text
+        )
+        dockets = [list(filter(None, x)) for x in dockets]
+        metadata = {
+            "Docket": {
+                "docket_number": dockets[0][0] if dockets else "",
+            },
+        }
+        return metadata
