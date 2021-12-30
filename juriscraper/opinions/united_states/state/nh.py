@@ -81,70 +81,15 @@ class Site(OpinionSiteLinear):
             )
 
     def name_docket(self, title) -> Tuple[str, str]:
-        """
-        Expected title values:
-            - 2020-0544 and 2020-0554, In re G.B.
-            - 2020-0528, 2020-0546, 2020-0548, In re S.A. & a.
-            - 2019-0283 In re R.M.
-            - 2017-0336 & 2019-0071  State of New Hampshire v. Daniel Turcotte
-            - 2014-0315, Deere & Company & a. v. The State of New Hampshire 2014-0441, Kubota Tractor Corporation v. The State of New Hampshire 2014-0575, Husqvarna Professional Products, Inc. v. The State of New Hampshire
-            - 2013-0779, Ichiban Japanese Steakhouse, Inc. v. Kymberly Rocheleau, and 2013-0780, Ichiban Japanese Steakhouse, Inc. v. Samantha Greaney
-            - 2013-0513, Greg DuPont v. Nashua Police Department (consolidated with 2014-0017, Gregory DuPont v. Peter McDonough & a.)
-            - 2013-0403, 2013-0445, and 2013-0593, In re Guardianship of Madelyn B.
-            - 2013-0392. State of New Hampshire v. Kevin Balch
-            - 010-290  Eric Lee Knight v. Cheryl Ann Maher
-            - 2010-233/2010-234 Appeal of the Hartford Insurance Company (New Hampshire Compensation Appeals Board)
-            - 10-436, New Hampshire Health Care Association & a. v. Governor & a.
-            - ADM-2009-024, Application of G.W.
-            - 2008-912, State of New Hampshire v. Charles Glenn, Jr. (modified by order dated Sept. 14, 2010)
-            - 2006-329, 2006-334, I/M/O State of NH and Estate of Frank Crabtree, III; I/M/O Katherine Crabtree & a.
-            - 2006-406, IN RE JUVENILE 2006-0406
-            - LD-2016-0005, Petition of Sanjeev Lath & a.
-            - LD-06-009, BOSSE'S CASE
-        Notes:
-            'and' was chosen as separator for opinions with several cases' names because the current architecture for scrapers removes semicolons from names.
-        """
-        docket_re = r"(?P<docket>(LD-|ADM-)?\d{2,4}-\d{2,5})"
-        docket_name = re.search(
-            r"(?P<docket>\d{2,4}-\d{2,5}),? (?P<name>In Re (Juvenile|Father) \d{2,4}-\d{2,5})",
-            title,
-            re.IGNORECASE,
-        )
-        if docket_name:
-            docket = docket_name.group("docket")
-            name = docket_name.group("name")
-        else:
-            dockets = re.findall(docket_re, title)
-            docket = ", ".join([d[0] for d in dockets])
-            name = (
-                re.sub(docket_re, "| ", title).strip("| ").lstrip(" ,;.&/)|")
-            )
-            if name[0:3].lower() == "and":
-                name = name[3:]
-                name = name.lstrip(" ,;.&/)|")
-
-            names = re.search(
-                r"(?P<first_name>.+)\(?consolidated with(?P<second_name>.+)\)?",
-                name,
-                re.IGNORECASE,
-            )
-            if names:
-                f_name = names.group("first_name").rstrip(" ,;(|")
-                s_name = names.group("second_name").lstrip(" ,;|").rstrip(" )")
-                name = f"{f_name}| {s_name}"
-
-            names = re.search(
-                r"(?P<name>.+)(\(modified.+\)|(\(|-)\s*originally issued.+\)?)",
-                name,
-                re.IGNORECASE,
-            )
-            if names:
-                name = f"{names.group('name').strip()}"
-
-            name = re.sub(
-                r"(\s*(,|;|\(|\|))?\s*(and|,|;|\(|\|)\s*\|", "|", name
-            )
-            name = re.sub(r"\|\s*(,|;|\)|\|)(\s*(,|;|\)|\|))?", "|", name)
-            name = re.sub(r"\s+\|", "|", name).rstrip(",;|")
-            name = re.sub(r"\|", " and ", name)
+        docket_re = r"(?<!JUVENILE)((\w+-)?\d{2,4}-\d+)"
+        dockets = re.findall(docket_re, title)
+        docket = ", ".join([docket[0] for docket in dockets])
+        # Strip out the docket numbers and clean up the case names.
+        name = re.sub(docket_re, "", title)
+        name = name.strip(", ").replace(", and ,", " and ")
+        name = name.replace(" ,", ",").replace(",,", ",")
+        name = name.lstrip(" ,;.&/)")
+        if name[0:3].lower() == "and":
+            name = name[3:]
+            name = name.lstrip(" ,;.&/)")
         return name, docket
