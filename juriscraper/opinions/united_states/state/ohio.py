@@ -19,26 +19,31 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_index = 0
-        self.year = str(date.today().year)
+        self.year = date.today().year
         self.url = "https://www.supremecourtofohio.gov/rod/docs/"
         self.court_id = self.__module__
+        self.status = "Published"
 
     def _set_parameters(
         self,
         event_validation: str,
         view_state: str,
+        court_index: int,
+        year: int,
     ) -> None:
         """Set the parameters for the search
 
         :param: event_validation: the event validation token
         :param: view_state: the view state token
+        :param: court_index: The court index (ie the checkbox value)
+        :param: year: The year to scrape
         :return: None
         """
         self.parameters = {
             "__VIEWSTATEENCRYPTED": "",
-            "ctl00$MainContent$ddlCourt": f"{self.court_index}",
-            "ctl00$MainContent$ddlDecidedYearMin": f"{self.year}",
-            "ctl00$MainContent$ddlDecidedYearMax": f"{self.year}",
+            "ctl00$MainContent$ddlCourt": f"{court_index}",
+            "ctl00$MainContent$ddlDecidedYearMin": f"{year}",
+            "ctl00$MainContent$ddlDecidedYearMax": f"{year}",
             "ctl00$MainContent$ddlCounty": "0",
             "ctl00$MainContent$btnSubmit": "Submit",
             "ctl00$MainContent$ddlRowsPerPage": "50",
@@ -57,7 +62,12 @@ class Site(OpinionSiteLinear):
             view_state = self.html.xpath("//input[@id='__VIEWSTATE']")[0].get(
                 "value"
             )
-            self._set_parameters(event_validation, view_state)
+            self._set_parameters(
+                event_validation,
+                view_state,
+                self.court_index,
+                self.year,
+            )
             self.html = self._download()
 
         # Skip the header rows and the footer rows
@@ -74,7 +84,6 @@ class Site(OpinionSiteLinear):
                     "date": row.xpath(".//td[6]//text()")[0],
                     "name": row.xpath(".//a/text()")[0],
                     "url": row.xpath(".//a")[0].get("href"),
-                    "status": "Published",
                     "neutral_citation": row.xpath(".//td[8]//text()")[0],
                     "summary": row.xpath(".//td[3]//text()")[0],
                 }
