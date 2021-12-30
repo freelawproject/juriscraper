@@ -48,6 +48,7 @@ class Site(OpinionSiteLinear):
         name, cite = intro_text.split(",", 1)
         # Unfortunately there are no accessible file dates without PDF parsing
         # So we generate a date and mark it as date_filed_is_approximate = True
+        # This is unset to false after it is extracted from the PDF on CL side.
         case["date_filed_is_approximate"] = True
         years = re.findall(r"\d{4}", cite)
         if not years:
@@ -119,6 +120,9 @@ class Site(OpinionSiteLinear):
         )[0][1]
         date_filed = datetime.strptime(date, "%B %d, %Y").strftime("%Y-%m-%d")
         metadata = {
-            "OpinionCluster": {"date_filed": date_filed},
+            "OpinionCluster": {
+                "date_filed": date_filed,
+                "date_filed_is_approximate": False,
+            },
         }
         return metadata
