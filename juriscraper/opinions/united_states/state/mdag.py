@@ -42,6 +42,8 @@ class Site(OpinionSiteLinear):
     def _process_html(self):
         for row in self.json["Row"]:
             url_path = row["FileRef.urlencodeasurl"]
+            # JSON returns created_x0020_date == 0;#2021-11-09 14:29:09
+            # its a date time string with a random string at the start.
             self.cases.append(
                 {
                     "docket": row["Title"],
