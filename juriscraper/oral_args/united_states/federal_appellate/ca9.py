@@ -18,6 +18,9 @@ class Site(OralArgumentSiteLinear):
         rows = self.html.xpath(path)
         for row in rows[1:-2]:
             parts = row.xpath(".//td[6]/a/@href")[0].split("/")
+            # the components needed to build the URL for the media file are
+            # are all availble in this HTML element.  The path consisters of
+            # year, month, day, and the docket number.mp3
             year = parts[-3][1:5]
             month = parts[-3][5:7]
             day = parts[-3][7:]
