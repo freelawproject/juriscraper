@@ -3,7 +3,7 @@
 
 import unittest
 
-from juriscraper.opinions.united_states.state import colo, mass, massappct, nh
+from juriscraper.opinions.united_states.state import mass, massappct
 from juriscraper.oral_args.united_states.federal_appellate import ca6
 
 
@@ -151,67 +151,6 @@ class ScraperSpotTest(unittest.TestCase):
                 )
             except AttributeError:
                 self.fail(f"Unable to parse {site_id} string: '{raw_string}'")
-
-    def test_colo_coloctapp(self):
-        """Ensures colo/coloctapp regex parses what we think it should."""
-        tests = {
-            "2016 COA 38. Nos. 14CA2454, 14CA2455, 14CA2456 & 14CA1457. People in the Interest of E.M.": {
-                "docket": "14CA2454, 14CA2455, 14CA2456, 14CA1457",
-                "name": "People in the Interest of E.M",
-            },
-            "2016 COA 32. No. 14CA1424. Brooks, Jr. v. Raemisch.": {
-                "docket": "14CA1424",
-                "name": "Brooks, Jr. v. Raemisch",
-            },
-            "2016 COA 33. Nos. 14CA1483 & 15CA0216. Rocky Mountain Exploration, Inc. v. Davis Graham & Stubbs LLP. ": {
-                "docket": "14CA1483, 15CA0216",
-                "name": "Rocky Mountain Exploration, Inc. v. Davis Graham & Stubbs LLP",
-            },
-            "2016 COA 79. 14CA2487. People v. Fransua.": {
-                "docket": "14CA2487",
-                "name": "People v. Fransua",
-            },
-            "2016 COA 51. No. 14CA2073.Campaign Integrity Watchdog v. Coloradans for a Better Future.": {
-                "docket": "14CA2073",
-                "name": "Campaign Integrity Watchdog v. Coloradans for a Better Future",
-            },
-            "2016 CO 43. No. 14SC1. Martinez v. Mintz.": {
-                "docket": "14SC1",
-                "name": "Martinez v. Mintz",
-            },
-            "No. 2016 COA 137. 15CA0620. Edwards v. Colorado Department of Revenue, Motor Vehicle Division. ": {
-                "docket": "15CA0620",
-                "name": "Edwards v. Colorado Department of Revenue, Motor Vehicle Division",
-            },
-            "2019 CO 80 Nos. 18SC34 and 18SC35, People v. Iannicelli, and People v. Brandt": {
-                "docket": "18SC34, 18SC35",
-                "name": "People v. Iannicelli, and People v. Brandt",
-            },
-            "2021 CO 10 No. 20SA262, In re People v. Subjack & No. 20SA283, In re People v. Lynch": {
-                "docket": "20SA262, 20SA283",
-                "name": "In re People v. Subjack and In re People v. Lynch",
-            },
-            "2021 CO 65 No. 20SC261, Harvey v. Centura, No. 20SC784, Manzanares v. Centura": {
-                "docket": "20SC261, 20SC784",
-                "name": "Harvey v. Centura and Manzanares v. Centura",
-            }
-            #'': {
-            #    'docket': '',
-            #    'name': '',
-            # },
-        }
-
-        scraper = colo.Site()
-        for raw_string, data in tests.items():
-            for field in ["docket", "name"]:
-                attribute = f"_extract_{field}_from_text"
-                result = getattr(scraper, attribute)(raw_string)
-                self.assertEqual(
-                    data[field],
-                    result,
-                    msg="Did not get expected %s results when regex'ing: '%s'.\n  Expected: '%s'\n  Instead:  '%s'"
-                    % (field, raw_string, data[field], result),
-                )
 
     def test_ca6_oa(self):
         # Tests are triads. 1: Input s, 2: Group 1, 3: Group 2.
