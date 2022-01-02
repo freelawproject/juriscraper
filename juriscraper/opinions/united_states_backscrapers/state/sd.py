@@ -98,7 +98,7 @@ class Site(OpinionSiteLinear):
                 page_count = self.html.xpath(
                     "//span[@id='ContentPlaceHolder1_ChildContent1_Label_Page']"
                 )[0].text_content()
-                page_of = re.findall("Page (\d+) of (\d+)", page_count)
+                page_of = re.findall(r"Page (\d+) of (\d+)", page_count)
                 if len(set(page_of[0])) == 1:
                     break
 
