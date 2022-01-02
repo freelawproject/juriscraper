@@ -52,6 +52,10 @@ class Site(OpinionSiteLinear):
         :param scraped_text: The content of the document downloaded
         :return: Metadata to be added to the case
         """
+
+        # The docket number appears to be the first text on the page.
+        # So I crop the text to avoid any confusion that might occur in the
+        # body of an opinion.
         docket = re.findall(r"#\d+.*-.-\w{3}", scraped_text)[0][:20]
         metadata = {
             "Docket": {
