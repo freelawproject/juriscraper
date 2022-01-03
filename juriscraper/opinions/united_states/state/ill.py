@@ -13,8 +13,9 @@ History:
 import re
 from typing import List
 
+from lxml.html import tostring
+
 from juriscraper.AbstractSite import logger
-from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.html_utils import (
     get_row_column_links,
     get_row_column_text,
@@ -53,13 +54,17 @@ class Site(OpinionSiteLinear):
             try:
                 url = get_row_column_links(row, 1)
             except IndexError:
-                logger.info(f"Opinion without URL to file: '{str(row)}'")
+                logger.info(
+                    f"Opinion without URL to file: '{str(tostring(row))}'"
+                )
                 # If the opinion file's information is missing (as with
                 # links to withdrawn opinions), skip record
                 continue
             citation = get_row_column_text(row, 2)
             if not citation:
-                logger.info(f"Opinion without citation: '{str(row)}'")
+                logger.info(
+                    f"Opinion without citation: '{str(tostring(row))}'"
+                )
                 # If the opinion citation is missing, skip record
                 continue
             name = get_row_column_text(row, 1)
@@ -101,7 +106,5 @@ class Site(OpinionSiteLinear):
                 dockets_numbers.append(match.group("docket"))
             else:
                 logger.critical(f"Could not find docket for case: '{case}'")
-                raise InsanityException(
-                    f"Could not find docket for case: '{case}'"
-                )
+                continue
         return dockets_numbers
