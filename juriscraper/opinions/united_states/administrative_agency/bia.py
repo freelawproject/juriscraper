@@ -116,7 +116,8 @@ class Site(OpinionSiteLinear):
         :return: Metadata to be added to the case
         """
         date = re.findall(
-            r"Decided (by Attorney General )?(.*\d{4})", scraped_text
+            r"Decided (by (Acting\s)?Attorney General )?(.*\d{4})",
+            scraped_text,
         )[0][1]
         date_filed = datetime.strptime(date, "%B %d, %Y").strftime("%Y-%m-%d")
         metadata = {
