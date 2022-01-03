@@ -80,7 +80,7 @@ class Site(OpinionSite):
     def _get_nature_of_suit(self):
         return [case["nature"] for case in self.cases]
 
-    def _get_neutral_citations(self):
+    def _get_citations(self):
         return [case["citation"] for case in self.cases]
 
     def _get_judges(self):

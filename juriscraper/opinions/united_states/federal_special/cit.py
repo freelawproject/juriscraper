@@ -21,7 +21,7 @@ class Site(OpinionSite):
     def _get_download_urls(self):
         return [t for t in self.html.xpath(f"{self.base}/td[1]/a/@href")]
 
-    def _get_neutral_citations(self):
+    def _get_citations(self):
         neutral_citations = []
         for t in self.html.xpath(f"{self.base}/td[1]/a/text()"):
             year, item_number = t.split("-")

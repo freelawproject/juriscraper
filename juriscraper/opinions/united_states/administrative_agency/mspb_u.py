@@ -22,5 +22,5 @@ class Site(mspb_p.Site):
     def _get_precedential_statuses(self):
         return ["Unpublished"] * len(self.case_dates)
 
-    def _get_neutral_citations(self):
+    def _get_citations(self):
         return None

@@ -52,7 +52,7 @@ class Site(OpinionSite):
         path = "//table//tr/td[1]//text()"
         return list(self.html.xpath(path))
 
-    def _get_west_state_citations(self):
+    def _get_citations(self):
         path = "//table//tr/td[2]/font/text()"
         cites = []
         for c in list(self.html.xpath(path)):

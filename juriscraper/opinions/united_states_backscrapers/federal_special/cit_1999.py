@@ -26,7 +26,7 @@ class Site(OpinionSite):
             )
         ]
 
-    def _get_neutral_citations(self):
+    def _get_citations(self):
         neutral_citations = []
         for e in self.html.xpath(
             "//table[3]//tr[position() > 1]/td[1]//font//a"

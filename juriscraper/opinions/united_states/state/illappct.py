@@ -28,7 +28,7 @@ class Site(ill.Site):
         """
         dockets_numbers = []
         for case in self.cases:
-            m = re.search(self.docket_re, case["neutral_citation"])
+            m = re.search(self.docket_re, case["citation"])
             raw_docket = m.group("docket")
             district = m.group("district")
             docket = f"{district}-{raw_docket[0:2]}-{raw_docket[2:]}"

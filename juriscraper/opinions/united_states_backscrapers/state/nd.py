@@ -115,7 +115,7 @@ class Site(nd.Site):
                 continue
         return docket_numbers
 
-    def _get_neutral_citations(self):
+    def _get_citations(self):
         if self.crawl_date < date(1997, 2, 1):
             # Old format, but no neutral cites, thus short circuit the function.
             return None

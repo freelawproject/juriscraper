@@ -50,7 +50,7 @@ class Site(OpinionSite):
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
 
-    def _get_neutral_citations(self):
+    def _get_citations(self):
         return [self._return_substring(e, 1) for e in self.elements]
 
     def _return_substring(self, element, group):

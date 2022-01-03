@@ -52,7 +52,7 @@ class Site(OpinionSite):
     def _get_docket_numbers(self):
         return [opinion["DocketNumber"] for opinion in self.html]
 
-    def _get_neutral_citations(self):
+    def _get_citations(self):
         return [opinion["OpinionID"] for opinion in self.html]
 
     def _get_precedential_statuses(self):

@@ -140,7 +140,7 @@ class Site(OpinionSiteWebDriven):
             )
         return judges
 
-    def _get_neutral_citations(self):
+    def _get_citations(self):
         neutral_citations = []
         for element in self.html.xpath(f"{self.base_path}/td[4]"):
             neutral_citations.append(

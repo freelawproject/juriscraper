@@ -60,7 +60,7 @@ class Site(OpinionSiteLinear):
                 {
                     "date": date,
                     "name": name,
-                    "neutral_citation": citation,
+                    "citation": citation,
                     "url": url,
                 }
             )
@@ -73,7 +73,7 @@ class Site(OpinionSiteLinear):
         Return: List of precedential statuses
         """
         return [
-            "Unpublished" if "-U" in case["neutral_citation"] else "Published"
+            "Unpublished" if "-U" in case["citation"] else "Published"
             for case in self.cases
         ]
 
@@ -84,6 +84,6 @@ class Site(OpinionSiteLinear):
         """
         dockets_numbers = []
         for case in self.cases:
-            m = re.search(self.docket_re, case["neutral_citation"])
+            m = re.search(self.docket_re, case["citation"])
             dockets_numbers.append(m.group("docket"))
         return dockets_numbers
