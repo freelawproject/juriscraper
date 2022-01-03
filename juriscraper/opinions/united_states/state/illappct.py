@@ -12,7 +12,6 @@ import re
 from typing import List
 
 from juriscraper.AbstractSite import logger
-from juriscraper.lib.exceptions import InsanityException
 from juriscraper.opinions.united_states.state import ill
 
 
@@ -46,7 +45,5 @@ class Site(ill.Site):
                 dockets_numbers.append(docket)
             else:
                 logger.critical(f"Could not find docket for case: '{case}'")
-                raise InsanityException(
-                    f"Could not find docket for case: '{case}'"
-                )
+                continue
         return dockets_numbers
