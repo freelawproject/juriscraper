@@ -120,7 +120,6 @@ class Site(OpinionSite):
         """
         return None
 
-
     def _get_judges(self):
         """
         For the name of the judge authoring the lead opinion

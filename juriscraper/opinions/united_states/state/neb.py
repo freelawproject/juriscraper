@@ -33,9 +33,7 @@ class Site(OpinionSiteLinear):
                         "date": date,
                         "docket": row.xpath(".//td[1]")[0].text_content(),
                         "name": row.xpath(".//td[3]")[0].text_content(),
-                        "citation": row.xpath(".//td[2]")[
-                            0
-                        ].text_content(),
+                        "citation": row.xpath(".//td[2]")[0].text_content(),
                         "url": url[0],
                     }
                 )
