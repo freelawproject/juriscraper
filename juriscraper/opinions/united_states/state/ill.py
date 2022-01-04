@@ -8,12 +8,10 @@ History:
   2016-02-26: Updated by arderyp: simplified thanks to new id attribute identifying decisions table
   2016-03-27: Updated by arderyp: fixed to handled non-standard formatting
   2021-11-02: Updated by satsuki-chan: Updated to new page design.
-  2021-12-30: Updated by satsuki-chan: Added validation when citation is missing.
+  2021-01-05: Updated by satsuki-chan: Added validation when citation is missing.
 """
 import re
-from typing import List
-
-from lxml.html import tostring
+from typing import Any, Dict
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import (
@@ -30,12 +28,8 @@ class Site(OpinionSiteLinear):
         self.url = (
             "https://www.illinoiscourts.gov/top-level-opinions?type=supreme"
         )
-        self.docket_re = (
-            r"(?P<year>\d{4})? ?"
-            r"(?P<court>(IL App)|(IL)) "
-            r"(\(?(?P<district>[1-5])\w{1,2}\))? ?"
-            r"(?P<docket>\d{5,10}\w{1,2})-?U?[BCD]?"
-        )
+        self.status = "Unpublished"
+        self.docket_re = r"\d{4}\s+IL( App)?\s+(\((?P<district>\d+)\w{1,2}\)\s+)?(?P<docket>\d+\w{1,2})-?U?[BCD]?"
 
     def _process_html(self) -> None:
         """Process HTML
@@ -46,65 +40,52 @@ class Site(OpinionSiteLinear):
 
         Return: None
         """
-        for row in self.html.xpath("//table[@id='ctl04_gvDecisions']/tr"):
-            cells = row.xpath(".//td")
-            # Don't parse pagination rows or headers or footers
-            if len(cells) != 7 or row.xpath(".//table"):
+        rows = self.html.xpath("//table[@id='ctl04_gvDecisions']/tr")[1:]
+        for row in rows:
+            # Don't parse rows for pagination, headers, footers or announcements
+            if len(row.xpath(".//td")) != 7 or row.xpath(".//table"):
                 continue
+            name = get_row_column_text(row, 1)
+            citation = get_row_column_text(row, 2)
+            date = get_row_column_text(row, 3)
+            match = re.search(self.docket_re, citation)
             try:
                 url = get_row_column_links(row, 1)
             except IndexError:
-                logger.info(
-                    f"Opinion without URL to file: '{str(tostring(row))}'"
-                )
-                # If the opinion file's information is missing (as with
-                # links to withdrawn opinions), skip record
+                # Likely a withdrawn opinion.
+                logger.info(f"Opinion '{citation}' has no URL. Skipping.")
                 continue
-            citation = get_row_column_text(row, 2)
-            if not citation:
-                logger.info(
-                    f"Opinion without citation: '{str(tostring(row))}'"
-                )
-                # If the opinion citation is missing, skip record
-                continue
-            name = get_row_column_text(row, 1)
-            date = get_row_column_text(row, 3)
             self.cases.append(
                 {
                     "date": date,
                     "name": name,
                     "citation": citation,
                     "url": url,
+                    "docket": match.group("docket"),
                 }
             )
 
-    def _get_precedential_statuses(self) -> List[str]:
-        """Extract the precedential status
+        def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+            """Can we extract the docket and status filed from the text?
 
-        If citation contains -U - mark case as unpublished.
+            :param scraped_text: The content of the document downloaded
+            :return: Metadata to be added to the case
+            """
+            citation_re = r"\d{4}\s+IL( App)?\s+(\((?P<district>\d+)\w{1,2}\)\s+)?(?P<docket>\d+\w{1,2}(-U?[BCD]?)?)"
+            m = re.search(citation_re, scraped_text)
+            docket_number = m.group("docket")
 
-        Return: List of precedential statuses
-        """
-        return [
-            "Unpublished" if "-U" in case["citation"] else "Published"
-            for case in self.cases
-        ]
-
-    def _get_docket_numbers(self) -> List[str]:
-        """Get the docket number from citation.
-        Examples:
-            Citation         - Docket
-            "2019 IL 123318" - 123318
-            "2020 IL 124831" - 124831
-            "2021 IL 126432" - 126432
-        Returns: List of docket numbers
-        """
-        dockets_numbers = []
-        for case in self.cases:
-            match = re.search(self.docket_re, case["neutral_citation"])
-            if match:
-                dockets_numbers.append(match.group("docket"))
+            if "-U" in docket_number:
+                status = "Unpublished"
             else:
-                logger.critical(f"Could not find docket for case: '{case}'")
-                continue
-        return dockets_numbers
+                status = "Published"
+
+            metadata = {
+                "Docket": {
+                    "docket_number": docket_number,
+                },
+                "OpinionCluster": {
+                    "precedential_status": status,
+                },
+            }
+            return metadata
