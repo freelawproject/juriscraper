@@ -105,6 +105,7 @@ class Site(OpinionSiteLinear):
 
     def _get_case_names(self):
         """Get case names using a deferring list."""
+
         def get_name(link):
             if self.test_mode_enabled():
                 return "No case names fetched during tests."
