@@ -6,7 +6,7 @@ History:
   2013-08-18: Created.
   2014-07-17: Updated by mlr to remedy InsanityException.
   2021-11-02: Updated by satsuki-chan: Updated to new page design.
-  2021-12-30: Updated by satsuki-chan: Added validation when citation is missing.
+  2021-01-05: Updated by satsuki-chan: Added validation when citation is missing.
 """
 import re
 from typing import List
@@ -44,6 +44,6 @@ class Site(ill.Site):
                 docket = f"{district}-{raw_docket[0:2]}-{raw_docket[2:]}"
                 dockets_numbers.append(docket)
             else:
-                logger.critical(f"Could not find docket for case: '{case}'")
-                continue
+                logger.critical(f"Could not find docket for opinion: '{case}'")
+                dockets_numbers.append("")
         return dockets_numbers
