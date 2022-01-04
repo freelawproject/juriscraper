@@ -19,6 +19,7 @@ from datetime import date, timedelta
 from typing import Optional
 
 from juriscraper.AbstractSite import logger
+from juriscraper.DeferringList import DeferringList
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -30,6 +31,7 @@ class Site(OpinionSiteLinear):
         self.checkbox = 0
         self.status = "Published"
         self.url = "https://search.txcourts.gov/CaseSearch.aspx?coa=cossup"
+        self.seeds = []
 
     def _set_parameters(
         self,
@@ -89,28 +91,30 @@ class Site(OpinionSiteLinear):
             self.html = super()._download()
 
         for row in self.html.xpath("//table[@class='rgMasterTable']/tbody/tr"):
-            if self.test_mode_enabled():
-                name = "No case names fetched during tests."
-            else:
-                # In texas we also have to ping the case page to get the name
-                # this is unfortunately part of the process.
-                self.url = row.xpath(".//a")[2].get("href")
-                self.method = "GET"
-                self.parameters = {}
-                self.html = self._download()
-                name = self._extract_name(self.url)
-                # If the name is not found, skip
-                if not name:
-                    continue
-
+            # In texas we also have to ping the case page to get the name
+            # this is unfortunately part of the process.
+            self.url = row.xpath(".//a")[2].get("href")
+            self.seeds.append(self.url)
             self.cases.append(
                 {
                     "date": row.xpath(f".//td[2]")[0].text_content(),
                     "docket": row.xpath(f".//td[5]")[0].text_content(),
-                    "name": name,
                     "url": row.xpath(".//a")[1].get("href"),
                 }
             )
+
+    def _get_case_names(self):
+        """Get case names using a deferring list."""
+        def get_name(link):
+            if self.test_mode_enabled():
+                return "No case names fetched during tests."
+            self.method = "GET"
+            self.parameters = {}
+            self.url = link
+            self.html = self._download()
+            return self._extract_name(link)
+
+        return DeferringList(seed=self.seeds, fetcher=get_name)
 
     def _extract_name(self, url: str) -> Optional[str]:
         """Extract the case name from the case page.
