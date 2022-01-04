@@ -1,7 +1,8 @@
 #  Scraper for Kansas Supreme Court
 # CourtID: kan_p
+from typing import List
 
-
+from juriscraper.DeferringList import DeferringList
 from juriscraper.lib.html_utils import get_row_column_text
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -35,18 +36,21 @@ class Site(OpinionSiteLinear):
     def _process_html(self):
         if self.test_mode_enabled():
             self.pages_to_process = 1
-
         for page in range(1, self.pages_to_process + 1):
             if not self.test_mode_enabled():
-                viewstate = self.html.xpath("//input[@id='__VIEWSTATE']")[
-                    0
-                ].get("value")
-                self._set_parameters(page, viewstate)
-                self.html = self._download()
+                pass
 
+    def _get_case_names(self) -> List:
+        def paginate(page):
+            viewstate = self.html.xpath("//input[@id='__VIEWSTATE']")[0].get(
+                "value"
+            )
+            self._set_parameters(page, viewstate)
+            self.html = self._download()
             rows = self.html.xpath("//table[@class='info-table']/tbody/div/tr")
+            cases = []
             for row in rows[1:]:
-                self.cases.append(
+                cases.append(
                     {
                         "date": row.xpath(f".//td[1]")[0].text_content(),
                         "docket": get_row_column_text(row, 2),
@@ -56,3 +60,9 @@ class Site(OpinionSiteLinear):
                         ),
                     }
                 )
+            return cases
+
+        seeds = list(range(1, self.pages_to_process + 1))
+        for def_list in DeferringList(seed=seeds, fetcher=paginate):
+            self.cases.extend(def_list)
+        return [case["name"] for case in self.cases]
