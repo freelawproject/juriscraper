@@ -84,7 +84,7 @@ class Site(OpinionSite):
             docket_numbers.append(nums)
         return docket_numbers
 
-    def _get_neutral_citations(self):
+    def _get_citations(self):
         neutral_citations = None
         if self.neutral_citations_path:
             neutral_citations = []

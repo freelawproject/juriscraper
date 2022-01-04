@@ -133,7 +133,7 @@ class Site(OpinionSiteWebDriven):
                 docket_numbers.append(None)
         return docket_numbers
 
-    def _get_neutral_citations(self):
+    def _get_citations(self):
         if self.year == 2005:
             strings = []
             path = '//tr[contains(@id, "ctl00xmainCopyxWGOpinions_r")]/td[2]'

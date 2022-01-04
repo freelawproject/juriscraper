@@ -52,7 +52,7 @@ class Site(OpinionSiteLinear):
                     "date_filed_is_approximate": date_match is None,
                     "docket": docket_match.group(0) if docket_match else "",
                     "name": table.xpath(".//a/text()")[0],
-                    "neutral_citation": neutral_citation_match.group(0)
+                    "citation": neutral_citation_match.group(0)
                     if neutral_citation_match
                     else "",
                     "url": table.xpath(".//a/@href")[0],

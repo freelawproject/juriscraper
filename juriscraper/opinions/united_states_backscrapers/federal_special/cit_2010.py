@@ -31,7 +31,7 @@ class Site(cit.Site):
     def _get_download_urls(self):
         return [t for t in self.html.xpath("//table[3]//tr/td[1]/a/@href")]
 
-    def _get_neutral_citations(self):
+    def _get_citations(self):
         return [t for t in self.html.xpath("//table[3]//tr/td[1]/a/text()")]
 
     def _get_case_names(self):

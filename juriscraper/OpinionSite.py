@@ -26,10 +26,9 @@ class OpinionSite(AbstractSite):
             "lower_court_judges",
             "lower_court_numbers",
             "nature_of_suit",
-            "neutral_citations",
+            "citations",
+            "parallel_citations",
             "summaries",
-            "west_citations",
-            "west_state_citations",
             "case_name_shorts",
         ]
         self._req_attrs = [
@@ -86,7 +85,10 @@ class OpinionSite(AbstractSite):
     def _get_nature_of_suit(self):
         return None
 
-    def _get_neutral_citations(self):
+    def _get_citations(self):
+        return None
+
+    def _get_parallel_citations(self):
         return None
 
     def _get_lower_courts(self):
@@ -104,12 +106,6 @@ class OpinionSite(AbstractSite):
         )
 
     def _get_summaries(self):
-        return None
-
-    def _get_west_citations(self):
-        return None
-
-    def _get_west_state_citations(self):
         return None
 
     def extract_from_text(self, scraped_text):

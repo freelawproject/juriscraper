@@ -55,7 +55,7 @@ class Site(OpinionSite):
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
 
-    def _get_neutral_citations(self):
+    def _get_citations(self):
         neutral_citations = []
         for text in self.html.xpath(
             '/html/body//div[@id="content"]//p[a[@class="bodylink"]]/text()'

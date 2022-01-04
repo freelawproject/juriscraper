@@ -27,7 +27,7 @@ class Site(OpinionSiteLinear):
                     "date": date_string,
                     "docket": docket,
                     "name": name if name else "Unknown",
-                    "neutral_citation": "%d NV %s" % (year, citation),
+                    "citation": "%d NV %s" % (year, citation),
                     "url": url[0],
                 }
             )

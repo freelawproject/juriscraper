@@ -109,7 +109,7 @@ class Site(OpinionSiteWebDriven):
             )
         return dates
 
-    def _get_neutral_citations(self):
+    def _get_citations(self):
         path = f"{self.base_path}/following::td[6]//text()"
         return [s.replace("-", " ") for s in self.html.xpath(path)]
 

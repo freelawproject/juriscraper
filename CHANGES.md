@@ -10,9 +10,13 @@ words, they're the ones you'll want to watch, and the others are mostly noise.
 
 Releases are also tagged in git, if that's helpful.
 
+## Coming up
+
+ - Drop Neutral, West and West State citations and Add generic citation and parallel citation.
+
 ## Current
 
-- 2.3.29, 2021-12-30 - Update GA Supremes, MDAG
+- 2.3.29, 2021-01-03 - Update GA Supremes, MDAG
 
 ## Past
 

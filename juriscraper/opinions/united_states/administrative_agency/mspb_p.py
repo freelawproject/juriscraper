@@ -71,7 +71,7 @@ class Site(OpinionSite):
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_dates)
 
-    def _get_neutral_citations(self):
+    def _get_citations(self):
         """Example: 2014 MSPB 68"""
         path = "//tr[@class='ITEMS']/td[2]/text()"
         return [s.replace("\\u00A0", " ") for s in self.html.xpath(path)]

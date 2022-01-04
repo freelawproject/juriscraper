@@ -29,7 +29,7 @@ class Site(OpinionSiteLinear):
                 {
                     "date": date,
                     "name": row.xpath(".//text()")[0],
-                    "neutral_citation": citation,
+                    "citation": citation,
                     "url": quote(link.attrib["href"], safe=":/"),
                     "docket": docket_number,
                     "status": "Published",

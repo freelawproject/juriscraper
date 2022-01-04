@@ -55,7 +55,7 @@ class Site(OpinionSiteLinear):
             return {}
         case["date"] = f"{years[-1]}-07-01"
         case["status"] = "Unpublished"
-        case["neutral_citation"] = cite
+        case["citation"] = cite
         case["name"] = name
         case["url"] = elements[0].xpath(".//a")[0].get("href")
         case["docket"] = elements[0].xpath(".//a")[0].text_content()

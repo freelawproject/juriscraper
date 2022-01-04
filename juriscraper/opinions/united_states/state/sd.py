@@ -64,7 +64,7 @@ class Site(OpinionSiteWebDriven):
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
 
-    def _get_neutral_citations(self):
+    def _get_citations(self):
         path = f"{self.base_path}/a[contains(@href, 'pdf')]/text()"
         neutral_cites = []
         for s in self.html.xpath(path):

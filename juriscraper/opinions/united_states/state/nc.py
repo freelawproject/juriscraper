@@ -166,7 +166,7 @@ class Site(OpinionSite):
     def _get_summaries(self):
         return self.my_summaries
 
-    def _get_neutral_citations(self):
+    def _get_citations(self):
         return self.my_neutral_citations
 
     def _get_precedential_statuses(self):

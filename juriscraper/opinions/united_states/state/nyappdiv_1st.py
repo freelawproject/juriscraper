@@ -86,7 +86,7 @@ class Site(OpinionSite):
             )
         )
 
-    def _get_neutral_citations(self):
+    def _get_citations(self):
         path = f"{self.row_base_path}/td[4]"
         return [cell.text_content().strip() for cell in self.html.xpath(path)]
 

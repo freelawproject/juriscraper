@@ -108,10 +108,15 @@ class Site(OpinionSite):
         """
         return None
 
-    def _get_neutral_citations(self):
+    def _get_citations(self):
         """
-        This is often of the form year, state abbreviation, sequential number
-        as in '2013 Neb. 12' which would be the 12th opinion issued in 2013.
+        A citation for the case.
+        """
+        return None
+
+    def _get_parallel_citations(self):
+        """
+        A second citation for the case.
         """
         return None
 
@@ -139,20 +144,6 @@ class Site(OpinionSite):
     def _get_summaries(self):
         """
         Some courts provide a summary of the case or the opinion's holding.
-        """
-        return None
-
-    def _get_west_citations(self):
-        """
-        You are unlikely to encounter these unless it's a backscraper because
-        these citations only exist once the document is in a bound volume.
-        """
-        return None
-
-    def _get_west_state_citations(self):
-        """
-        You are unlikely to encounter these unless it's a backscraper because
-        these citations only exist once the document is in a bound volume.
         """
         return None
 

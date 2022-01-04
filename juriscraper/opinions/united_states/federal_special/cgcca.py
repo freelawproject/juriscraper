@@ -56,8 +56,8 @@ class Site(OpinionSiteLinear):
                     "docket": docket,
                     "url": url,
                     "status": status,
-                    "west_state_citation": wl,
-                    "neutral_citation": mj,
+                    "citation": mj,
+                    "parallel_citation": wl,
                 }
             )
 
@@ -67,15 +67,15 @@ class Site(OpinionSiteLinear):
         :return: List of case names
         """
         for case in self.cases:
-            if case["neutral_citation"]:
+            if case["citation"]:
                 case["name"] = re.sub(
-                    fr"\(?\s?{case['neutral_citation']}\s?\)?",
+                    fr"\(?\s?{case['citation']}\s?\)?",
                     "",
                     case["name"],
                 )
-            if case["west_state_citation"]:
+            if case["parallel_citation"]:
                 case["name"] = re.sub(
-                    fr"\(?\s?{case['west_state_citation']}\s?\)?",
+                    fr"\(?\s?{case['parallel_citation']}\s?\)?",
                     "",
                     case["name"],
                 )
@@ -88,10 +88,3 @@ class Site(OpinionSiteLinear):
             case["name"] = titlecase(case["name"].strip(" -"))
 
         return [c["name"] for c in self.cases]
-
-    def _get_west_citations(self) -> List[str]:
-        """Get West Citations
-
-        :return: List of citations if any
-        """
-        return [c["west_state_citation"] for c in self.cases]

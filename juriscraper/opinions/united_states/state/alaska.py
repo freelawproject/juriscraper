@@ -29,7 +29,7 @@ class Site(OpinionSiteLinear):
                             "date": date,
                             "docket": get_row_column_text(row, 3),
                             "name": get_row_column_text(row, 4),
-                            "neutral_citation": get_row_column_text(row, 2),
+                            "citation": get_row_column_text(row, 2),
                             "url": url,
                         }
                     )

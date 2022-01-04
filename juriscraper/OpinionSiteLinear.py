@@ -62,8 +62,11 @@ class OpinionSiteLinear(OpinionSite):
     def _get_judges(self):
         return self._get_optional_field_by_id("judge")
 
-    def _get_neutral_citations(self):
-        return self._get_optional_field_by_id("neutral_citation")
+    def _get_citations(self):
+        return self._get_optional_field_by_id("citation")
+
+    def _get_parallel_citations(self):
+        return self._get_optional_field_by_id("parallel_citation")
 
     def _get_summaries(self):
         return self._get_optional_field_by_id("summary")
