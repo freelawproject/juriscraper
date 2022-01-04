@@ -1,6 +1,6 @@
 """Scraper for the 1st District Court of Appeals
-CourtID: ohio
-Court Short Name: Ohio
+CourtID: ohioctap_1
+Court Short Name: Ohio Dist Ct App 1
 Author: Andrei Chelaru
 """
 
