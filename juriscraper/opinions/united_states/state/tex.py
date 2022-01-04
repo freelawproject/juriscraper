@@ -15,7 +15,6 @@
 #  - 2015-08-19: Updated by Andrei Chelaru to add backwards scraping support.
 #  - 2015-08-27: Updated by Andrei Chelaru to add explicit waits
 #  - 2021-12-28: Updated by flooie to remove selenium.
-import datetime
 from datetime import date, timedelta
 from typing import Optional
 
