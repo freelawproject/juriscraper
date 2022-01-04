@@ -1,7 +1,7 @@
 # Scraper for New York Appellate Term 1st Dept.
 # CourtID: nyappterm_1st
 # Court Short Name: NY
-import datetime
+
 import re
 from datetime import date, timedelta
 from typing import Any, Dict
@@ -15,20 +15,19 @@ class Site(OpinionSiteLinear):
         self.court = "Appellate Term, 1st Dept"
         self.court_id = self.__module__
         self.url = "https://iapps.courts.state.ny.us/lawReporting/Search?searchType=opinion"
-        self.method = "POST"
+        self._set_parameters()
 
-        self._set_parameters(date.today(), self.court)
-
-    def _set_parameters(self, today: datetime.date, court: str) -> None:
+    def _set_parameters(self) -> None:
         """Set the parameters for the POST request."""
-
+        self.method = "POST"
+        today = date.today()
         self.parameters = {
             "rbOpinionMotion": "opinion",
             "Pty": "",
             "and_or": "and",
             "dtStartDate": (today - timedelta(days=30)).strftime("%m/%d/%Y"),
             "dtEndDate": today.strftime("%m/%d/%Y"),
-            "court": court,
+            "court": self.court,
             "docket": "",
             "judge": "",
             "slipYear": "",
@@ -46,21 +45,20 @@ class Site(OpinionSiteLinear):
 
     def _process_html(self):
         for row in self.html.xpath(".//table")[-1].xpath(".//tr")[1:]:
-            docket = " ".join(row.xpath("./td[5]//text()"))
-            citation = " ".join(row.xpath("./td[4]//text()"))
+            slip_cite = " ".join(row.xpath("./td[5]//text()"))
+            official_citation = " ".join(row.xpath("./td[4]//text()"))
             url = row.xpath(".//a")[0].get("href")
             url = re.findall(r"(http.*htm)", url)[0]
+            status = "Unpublished" if "(U)" in slip_cite else "Published"
             self.cases.append(
                 {
                     "name": row.xpath(".//td")[0].text_content(),
                     "date": row.xpath(".//td")[1].text_content(),
                     "url": url,
-                    "status": "Published"
-                    if "(U)" not in docket
-                    else "Unpublished",
+                    "status": status,
                     "docket": "",
-                    "neutral_citation": docket,
-                    "west_citation": citation,
+                    "citation": official_citation,
+                    "parallel_citation": slip_cite,
                 }
             )
 
