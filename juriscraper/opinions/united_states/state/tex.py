@@ -34,9 +34,7 @@ class Site(OpinionSiteLinear):
 
     def _set_parameters(
         self,
-        today: datetime.date,
         view_state: str,
-        checkbox: int,
     ) -> None:
         """Set ASPX post parameters
 
@@ -49,11 +47,10 @@ class Site(OpinionSiteLinear):
          3: 2nd District Court of Appeals
          ...etc
 
-        :param today: Today as a date object
         :param view_state: view state of the page
-        :param checkbox: checkbox value
         :return: None
         """
+        today = date.today()
         last_month = today - timedelta(days=30)
         last_month_str = last_month.strftime("%m/%d/%Y")
         today_str = today.strftime("%m/%d/%Y")
@@ -79,18 +76,17 @@ class Site(OpinionSiteLinear):
             "ctl00$ContentPlaceHolder1$chkListDocTypes$0": "on",
             "ctl00$ContentPlaceHolder1$btnSearchText": "Search",
             "__VIEWSTATE": view_state,
-            f"ctl00$ContentPlaceHolder1$chkListCourts${checkbox}": "on",
+            f"ctl00$ContentPlaceHolder1$chkListCourts${self.checkbox}": "on",
         }
 
     def _process_html(self) -> None:
         if not self.test_mode_enabled():
             # Make our post request to get our data
             self.method = "POST"
-            today = date.today()
             view_state = self.html.xpath("//input[@id='__VIEWSTATE']")[0].get(
                 "value"
             )
-            self._set_parameters(today, view_state, self.checkbox)
+            self._set_parameters(view_state)
             self.html = super()._download()
 
         for row in self.html.xpath("//table[@class='rgMasterTable']/tbody/tr"):
