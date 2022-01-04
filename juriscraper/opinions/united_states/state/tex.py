@@ -31,7 +31,6 @@ class Site(OpinionSiteLinear):
         self.checkbox = 0
         self.status = "Published"
         self.url = "https://search.txcourts.gov/CaseSearch.aspx?coa=cossup"
-        self.seeds = []
 
     def _set_parameters(
         self,
@@ -93,8 +92,8 @@ class Site(OpinionSiteLinear):
         for row in self.html.xpath("//table[@class='rgMasterTable']/tbody/tr"):
             # In texas we also have to ping the case page to get the name
             # this is unfortunately part of the process.
-            self.url = row.xpath(".//a")[2].get("href")
-            self.seeds.append(self.url)
+            # self.url = row.xpath(".//a")[2].get("href")
+            # self.seeds.append(self.url)
             self.cases.append(
                 {
                     "date": row.xpath(f".//td[2]")[0].text_content(),
@@ -103,26 +102,29 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _get_case_names(self):
+    def _get_case_names(self) -> DeferringList:
         """Get case names using a deferring list."""
+        seeds = []
+        for row in self.html.xpath("//table[@class='rgMasterTable']/tbody/tr"):
+            # In texas we also have to ping the case page to get the name
+            # this is unfortunately part of the process.
+            seeds.append(row.xpath(".//a")[2].get("href"))
 
-        def get_name(link):
+        def get_name(link: str) -> str:
+            """Abstract out the case name from the case page."""
             if self.test_mode_enabled():
                 return "No case names fetched during tests."
-            self.method = "GET"
-            self.parameters = {}
             self.url = link
             self.html = self._download()
-            return self._extract_name(link)
+            return self._extract_name()
 
-        return DeferringList(seed=self.seeds, fetcher=get_name)
+        return DeferringList(seed=seeds, fetcher=get_name)
 
-    def _extract_name(self, url: str) -> Optional[str]:
+    def _extract_name(self) -> Optional[str]:
         """Extract the case name from the case page.
 
         If no case name is found - throw an error to sentry.
 
-        :param url: The url of the case page.
         :return: Case name
         """
         try:
@@ -134,5 +136,5 @@ class Site(OpinionSiteLinear):
             )[0].strip()
             return titlecase(f"{plaintiff} v. {defendant}")
         except IndexError:
-            logger.warning(f"No title or defendant found for {url}")
+            logger.warning(f"No title or defendant found for {self.url}")
             return None
