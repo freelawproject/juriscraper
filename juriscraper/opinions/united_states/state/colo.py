@@ -65,7 +65,7 @@ class Site(OpinionSiteLinear):
                     "date": date,
                     "docket": docket,
                     "name": name,
-                    "neutral_citation": citation,
+                    "citation": citation,
                     "url": url,
                 }
             )
