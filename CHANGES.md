@@ -12,14 +12,27 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
- - Drop Neutral, West and West State citations and Add generic citation and parallel citation.
+ - N/A
 
 ## Current
 
-- 2.3.29, 2021-01-03 - Update GA Supremes, MDAG
+**2.4.0 - 2021-01-05**
+
+Features:
+
+- Updated citation parsing for websites.
+- Drop Neutral, West and West_state citations.
+- Add citation and parallel citation
+
+Changes:
+
+- This version is a major release. Updated Opinion Sites to drop support for specific citation formats.  Instead, we now let the user or more generally eyecite determine the specific citation format.
+- Selenium support for Texas Court scrapers is removed.  This is part of removing selenium from all scrapers.
+- Also includes a small fix for the Board of Immigration Appeals docket numbers.  
 
 ## Past
 
+- 2.3.29, 2021-01-03 - Update GA Supremes, MDAG
 - 2.3.28, 2021-12-30 - Add Board of Immigration Appeals (BIA), updates OA CA9, Fix NH
 - 2.3.27, 2021-12-29 - Add cadc_pi, massappct_u, lactapp_1, cgcca
 - 2.3.26, 2021-12-20 - Add Guam, Utah Ct App, Fix Ariz Ct App. Dist 2, Fix Ga Ct. App
