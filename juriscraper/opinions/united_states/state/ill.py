@@ -55,15 +55,16 @@ class Site(OpinionSiteLinear):
                 # Likely a withdrawn opinion.
                 logger.info(f"Opinion '{citation}' has no URL. Skipping.")
                 continue
-            self.cases.append(
-                {
-                    "date": date,
-                    "name": name,
-                    "citation": citation,
-                    "url": url,
-                    "docket": match.group("docket"),
-                }
-            )
+            if match:
+                self.cases.append(
+                    {
+                        "date": date,
+                        "name": name,
+                        "citation": citation,
+                        "url": url,
+                        "docket": match.group("docket"),
+                    }
+                )
 
         def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
             """Can we extract the docket and status filed from the text?
@@ -71,7 +72,7 @@ class Site(OpinionSiteLinear):
             :param scraped_text: The content of the document downloaded
             :return: Metadata to be added to the case
             """
-            citation_re = r"\d{4}\s+IL( App)?\s+(\((?P<district>\d+)\w{1,2}\)\s+)?(?P<docket>\d+\w{1,2}(-U?[BCD]?)?)"
+            citation_re = r"\d{4}\s+IL( App)?\s+(\((?P<district>\d+)\w{1,2}\)\s+)?(?P<docket>\d+\w{1,2}-?U?[BCD]?)"
             m = re.search(citation_re, scraped_text)
             docket_number = m.group("docket")
 
