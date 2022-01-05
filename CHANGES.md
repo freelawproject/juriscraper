@@ -16,7 +16,19 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
-**2.4.0 - 2021-01-05**
+**2.4.1 - 2022-01-05**
+
+Features:
+
+- None
+
+Changes:
+
+- Add init file for admin agency backscrapers. This was missing and causing a failure for tools to find the file.
+
+## Past
+
+**2.4.0 - 2022-01-05**
 
 Features:
 
@@ -30,9 +42,7 @@ Changes:
 - Selenium support for Texas Court scrapers is removed.  This is part of removing selenium from all scrapers.
 - Also includes a small fix for the Board of Immigration Appeals docket numbers.  
 
-## Past
-
-- 2.3.29, 2021-01-03 - Update GA Supremes, MDAG
+- 2.3.29, 2022-01-03 - Update GA Supremes, MDAG
 - 2.3.28, 2021-12-30 - Add Board of Immigration Appeals (BIA), updates OA CA9, Fix NH
 - 2.3.27, 2021-12-29 - Add cadc_pi, massappct_u, lactapp_1, cgcca
 - 2.3.26, 2021-12-20 - Add Guam, Utah Ct App, Fix Ariz Ct App. Dist 2, Fix Ga Ct. App
