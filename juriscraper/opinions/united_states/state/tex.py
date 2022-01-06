@@ -110,31 +110,30 @@ class Site(OpinionSiteLinear):
             # this is unfortunately part of the process.
             seeds.append(row.xpath(".//a")[2].get("href"))
 
-        def get_name(link: str) -> str:
+        def get_name(link: str) -> Optional[str]:
             """Abstract out the case name from the case page."""
             if self.test_mode_enabled():
                 return "No case names fetched during tests."
-            self.url = link
-            self.html = self._download()
-            return self._extract_name()
+            html = self._get_html_tree_by_url(link)
+            try:
+                plaintiff = html.xpath(
+                    '//label[contains(text(), "Style:")]/parent::div/following-sibling::div/text()'
+                )[0].strip()
+                defendant = html.xpath(
+                    '//label[contains(text(), "v.:")]/parent::div/following-sibling::div/text()'
+                )[0].strip()
+
+                # In many cases the court leaves off the plaintiff (The State of Texas).  But
+                # in some of these cases the appellant is ex parte.  So we need to
+                # add the state of texas in some cases but not others.
+                if defendant:
+                    return titlecase(f"{plaintiff} v. {defendant}")
+                elif "WR-" not in link:
+                    return titlecase(f"{plaintiff} v. The State of Texas")
+                else:
+                    return titlecase(f"{plaintiff}")
+            except IndexError:
+                logger.warning(f"No title or defendant found for {self.url}")
+                return None
 
         return DeferringList(seed=seeds, fetcher=get_name)
-
-    def _extract_name(self) -> Optional[str]:
-        """Extract the case name from the case page.
-
-        If no case name is found - throw an error to sentry.
-
-        :return: Case name
-        """
-        try:
-            plaintiff = self.html.xpath(
-                '//label[contains(text(), "Style:")]/parent::div/following-sibling::div/text()'
-            )[0].strip()
-            defendant = self.html.xpath(
-                '//label[contains(text(), "v.:")]/parent::div/following-sibling::div/text()'
-            )[0].strip()
-            return titlecase(f"{plaintiff} v. {defendant}")
-        except IndexError:
-            logger.warning(f"No title or defendant found for {self.url}")
-            return None
