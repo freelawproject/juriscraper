@@ -86,9 +86,7 @@ def scrape_court(site, binaries=False):
                 # Dates and such...
                 v_print(1, f"    {k}: {v}")
 
-    v_print(
-        3, "\n%s: Successfully crawled %d items." % (site.court_id, len(site))
-    )
+    v_print(3, f"\n{site.court_id}: Successfully crawled {len(site)} items.")
     return {"count": len(site), "exceptions": exceptions}
 
 
