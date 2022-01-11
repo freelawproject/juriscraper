@@ -23,7 +23,7 @@ repos:
        exclude: ^tests/examples/pacer/nef/s3/.*\.txt$
 
   - repo: https://github.com/ikamensh/flynt/
-    rev: '0.69'
+    rev: '0.76'
     hooks:
      - id: flynt
        args: [--line-length=79, --transform-concats]
