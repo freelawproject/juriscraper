@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.4.4 - 2022-01-14**
+
+Features:
+
+- Add DOJ Office of Legal Counsel Opinions (OLC)
+
+Changes:
+
+- Typo fixes
+
+## Past
+
 **2.4.3 - 2022-01-05**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - Add init file for admin agency backscrapers. This was missing and causing a failure for tools to find the file.
-
-## Past
 
 **2.4.0 - 2022-01-05**
 
