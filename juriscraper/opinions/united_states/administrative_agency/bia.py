@@ -1,6 +1,6 @@
-"""Scraper for Dept of Justice. Board of Immigration Appeals
+"""Scraper for Dept of Justice Board of Immigration Appeals
 CourtID: bia
-Court Short Name: Dept of Justice. Board of Immigration Appeals
+Court Short Name: Dept of Justice Board of Immigration Appeals
 Author: William Palin
 Reviewer:
 Type:
@@ -54,7 +54,7 @@ class Site(OpinionSiteLinear):
         if not years:
             return {}
         case["date"] = f"{years[-1]}-07-01"
-        case["status"] = "Unpublished"
+        case["status"] = "Published"
         case["citation"] = cite
         case["name"] = name
         case["url"] = elements[0].xpath(".//a")[0].get("href")
