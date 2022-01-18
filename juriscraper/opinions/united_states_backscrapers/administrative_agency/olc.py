@@ -23,4 +23,5 @@ class Site(olc.Site):
         """
         self.url = f"https://www.justice.gov/olc/opinions?items_per_page=40&page={page}"
         self.html = self._download()
+        self.cases = []
         self._process_html()
