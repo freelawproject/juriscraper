@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.4.5 - 2022-01-18**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Update OLC backscraper to function with CL more reliably.
+
+## Past
+
 **2.4.4 - 2022-01-14**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - Typo fixes
-
-## Past
 
 **2.4.3 - 2022-01-05**
 
