@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.4.6 - 2022-01-19**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Update the site_yielder method for backscraping to reset the site object after each iterable.
+
+## Past
+
 **2.4.5 - 2022-01-18**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - Update OLC backscraper to function with CL more reliably.
-
-## Past
 
 **2.4.4 - 2022-01-14**
 
