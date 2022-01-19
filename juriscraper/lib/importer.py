@@ -74,8 +74,8 @@ def get_module_by_name(name):
 
 def site_yielder(iterable, mod):
 
-    site = mod.Site()
     for i in iterable:
+        site = mod.Site()
         try:
             site._download_backwards(i)
             yield site
