@@ -66,27 +66,33 @@ class Site(OpinionSiteLinear):
                     }
                 )
 
-        def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
-            """Can we extract the docket and status filed from the text?
-
-            :param scraped_text: The content of the document downloaded
-            :return: Metadata to be added to the case
-            """
-            citation_re = r"\d{4}\s+IL( App)?\s+(\((?P<district>\d+)\w{1,2}\)\s+)?(?P<docket>\d+\w{1,2}-?U?[BCD]?)"
-            m = re.search(citation_re, scraped_text)
-            docket_number = m.group("docket")
-
+    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+        """Can we extract the docket and status filed from the text?
+        :param scraped_text: The content of the document downloaded
+        :return: Metadata to be added to the case
+        """
+        citation_re = r"\d{4}\s+IL( App)?\s+(\((?P<district>\d+)\w{1,2}\)\s+)?(?P<docket>\d+\w{1,2}-?U?[BCD]?)"
+        match = re.search(citation_re, scraped_text)
+        if match:
+            docket_number = match.group("docket")
             if "-U" in docket_number:
                 status = "Unpublished"
             else:
                 status = "Published"
+        else:
+            logger.critical(f"Docket not found in:\n'{scraped_text}'")
+            # No docket found
+            docket_number = ""
+            # Default status
+            status = self.status
 
-            metadata = {
-                "Docket": {
-                    "docket_number": docket_number,
-                },
-                "OpinionCluster": {
-                    "precedential_status": status,
-                },
-            }
-            return metadata
+        metadata = {
+            "Docket": {
+                "docket_number": docket_number,
+            },
+            "OpinionCluster": {
+                "precedential_status": status,
+            },
+        }
+        logger.info(f"Extracted docket: '{docket_number}', status: '{status}'")
+        return metadata
