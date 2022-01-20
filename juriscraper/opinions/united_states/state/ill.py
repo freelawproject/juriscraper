@@ -8,7 +8,7 @@ History:
   2016-02-26: Updated by arderyp: simplified thanks to new id attribute identifying decisions table
   2016-03-27: Updated by arderyp: fixed to handled non-standard formatting
   2021-11-02: Updated by satsuki-chan: Updated to new page design.
-  2021-01-05: Updated by satsuki-chan: Added validation when citation is missing.
+  2021-01-21: Updated by satsuki-chan: Added validation when citation is missing.
 """
 import re
 from typing import Any, Dict
@@ -29,7 +29,7 @@ class Site(OpinionSiteLinear):
             "https://www.illinoiscourts.gov/top-level-opinions?type=supreme"
         )
         self.status = "Unpublished"
-        self.docket_re = r"\d{4}\s+IL( App)?\s+(\((?P<district>\d+)\w{1,2}\)\s+)?(?P<docket>\d+\w{1,2})-?U?[BCD]?"
+        self.docket_re = r"(?P<citation>\d{4}\s+IL( App)?\s+(\((?P<district>\d+)\w{1,2}\)\s+)?(?P<docket>\d+\w{1,2})-?U?[BCD]?)"
 
     def _process_html(self) -> None:
         """Process HTML
@@ -65,22 +65,24 @@ class Site(OpinionSiteLinear):
                         "docket": match.group("docket"),
                     }
                 )
+            else:
+                logger.error(f"Opinion '{citation}' has no docket.")
 
     def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
         """Can we extract the docket and status filed from the text?
         :param scraped_text: The content of the document downloaded
         :return: Metadata to be added to the case
         """
-        citation_re = r"\d{4}\s+IL( App)?\s+(\((?P<district>\d+)\w{1,2}\)\s+)?(?P<docket>\d+\w{1,2}-?U?[BCD]?)"
-        match = re.search(citation_re, scraped_text)
+        match = re.search(self.docket_re, scraped_text)
         if match:
+            citation = match.group("citation")
             docket_number = match.group("docket")
-            if "-U" in docket_number:
+            if "-U" in citation:
                 status = "Unpublished"
             else:
                 status = "Published"
         else:
-            logger.critical(f"Docket not found in:\n'{scraped_text}'")
+            logger.critical(f"No docket found in:\n'{scraped_text}'")
             # No docket found
             docket_number = ""
             # Default status

@@ -6,10 +6,10 @@ History:
   2013-08-18: Created.
   2014-07-17: Updated by mlr to remedy InsanityException.
   2021-11-02: Updated by satsuki-chan: Updated to new page design.
-  2021-01-05: Updated by satsuki-chan: Added validation when citation is missing.
+  2021-01-21: Updated by satsuki-chan: Added validation when citation is missing.
 """
 import re
-from typing import List
+from typing import Any, Dict, List
 
 from juriscraper.AbstractSite import logger
 from juriscraper.opinions.united_states.state import ill
@@ -44,6 +44,41 @@ class Site(ill.Site):
                 docket = f"{district}-{raw_docket[0:2]}-{raw_docket[2:]}"
                 dockets_numbers.append(docket)
             else:
-                logger.critical(f"Could not find docket for opinion: '{case}'")
+                logger.critical(
+                    f"Could not find docket for opinion: '{case['citation']}'"
+                )
                 dockets_numbers.append("")
         return dockets_numbers
+
+    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+        """Can we extract the docket and status filed from the text?
+        :param scraped_text: The content of the document downloaded
+        :return: Metadata to be added to the case
+        """
+        match = re.search(self.docket_re, scraped_text)
+        if match:
+            citation = match.group("citation")
+            raw_docket = match.group("docket")
+            district = match.group("district")
+            docket_number = f"{district}-{raw_docket[0:2]}-{raw_docket[2:]}"
+            if "-U" in citation:
+                status = "Unpublished"
+            else:
+                status = "Published"
+        else:
+            logger.critical(f"No docket found in:\n'{scraped_text}'")
+            # No docket found
+            docket_number = ""
+            # Default status
+            status = self.status
+
+        metadata = {
+            "Docket": {
+                "docket_number": docket_number,
+            },
+            "OpinionCluster": {
+                "precedential_status": status,
+            },
+        }
+        logger.info(f"Extracted docket: '{docket_number}', status: '{status}'")
+        return metadata
