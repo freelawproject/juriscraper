@@ -1,3 +1,14 @@
+"""Scraper for United States Court of Appeals for the Federal Circuit
+CourtID: cafc
+Court Short Name: U.S. Court of Appeals for the Federal Circuit
+Author: Dave Voutila
+Reviewer:
+Type:
+History:
+    2016-05-10: Created by Dave Voutila, @voutilad
+    2021-01-24: Item's title split fixed to extract opinions name, @satsuki-chan
+"""
+
 import feedparser
 from lxml.html import fromstring
 
@@ -21,7 +32,7 @@ class Site(OpinionSiteLinear):
         feed = feedparser.parse(self.request["response"].content)
         for item in feed["entries"]:
             value = item["content"][0]["value"]
-            docket, title = item["title"].split(" [")[0].split(": ")
+            docket, title = item["title"].split(" [")[0].split(": ", 1)
             slug = fromstring(value).xpath(".//a/@href")[0]
             self.cases.append(
                 {
