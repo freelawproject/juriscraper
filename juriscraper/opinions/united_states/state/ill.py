@@ -85,8 +85,8 @@ class Site(OpinionSiteLinear):
             logger.critical(f"No docket found in:\n'{scraped_text}'")
             # No docket found
             docket_number = ""
-            # Default status
-            status = self.status
+            # No status found
+            status = ""
 
         metadata = {
             "Docket": {
