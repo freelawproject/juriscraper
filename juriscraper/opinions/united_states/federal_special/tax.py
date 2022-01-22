@@ -31,12 +31,12 @@ class Site(OpinionSiteLinear):
             )
             self.cases.append(
                 {
-                    "judge": case["judge"],
                     "date": case["filingDate"][:10],
                     "docket": case["docketNumber"],
                     "url": url,
                     "name": titlecase(case["caseCaption"]),
                     "status": status,
+                    "judge": case.get("signedJudgeName", ""),
                 }
             )
 
