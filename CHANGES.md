@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.4.7 - 2022-01-21**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Fix tax court. Fixes for Illinois Supreme and Illinois Appeals.
+
+## Past
+
 **2.4.6 - 2022-01-19**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - Update the site_yielder method for backscraping to reset the site object after each iterable.
-
-## Past
 
 **2.4.5 - 2022-01-18**
 
