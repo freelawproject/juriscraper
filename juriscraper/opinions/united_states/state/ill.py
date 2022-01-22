@@ -8,10 +8,10 @@ History:
   2016-02-26: Updated by arderyp: simplified thanks to new id attribute identifying decisions table
   2016-03-27: Updated by arderyp: fixed to handled non-standard formatting
   2021-11-02: Updated by satsuki-chan: Updated to new page design.
-  2021-01-05: Updated by satsuki-chan: Added validation when citation is missing.
+  2022-01-21: Updated by satsuki-chan: Added validation when citation is missing.
 """
+
 import re
-from typing import Any, Dict
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import (
@@ -25,11 +25,19 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
+        self.docket_re = r"\d{4} IL (?P<docket>\d+)"
         self.url = (
-            "https://www.illinoiscourts.gov/top-level-opinions?type=supreme"
+            f"https://www.illinoiscourts.gov/top-level-opinions?type=supreme"
         )
-        self.status = "Unpublished"
-        self.docket_re = r"\d{4}\s+IL( App)?\s+(\((?P<district>\d+)\w{1,2}\)\s+)?(?P<docket>\d+\w{1,2})-?U?[BCD]?"
+        self.status = "Published"
+
+    def _get_docket(self, match):
+        return match.group("docket")
+
+    def _get_status(self, citation):
+        if "-U" in citation:
+            return "Unpublished"
+        return "Published"
 
     def _process_html(self) -> None:
         """Process HTML
@@ -52,41 +60,25 @@ class Site(OpinionSiteLinear):
             try:
                 url = get_row_column_links(row, 1)
             except IndexError:
-                # Likely a withdrawn opinion.
-                logger.info(f"Opinion '{citation}' has no URL. Skipping.")
-                continue
-            if match:
-                self.cases.append(
-                    {
-                        "date": date,
-                        "name": name,
-                        "citation": citation,
-                        "url": url,
-                        "docket": match.group("docket"),
-                    }
+                logger.warning(
+                    f"Opinion '{citation}' has no URL. (Likely a withdrawn opinion)."
                 )
+                continue
 
-        def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
-            """Can we extract the docket and status filed from the text?
+            if not match:
+                logger.warning(f"Opinion '{citation}' has no docket.")
+                continue
 
-            :param scraped_text: The content of the document downloaded
-            :return: Metadata to be added to the case
-            """
-            citation_re = r"\d{4}\s+IL( App)?\s+(\((?P<district>\d+)\w{1,2}\)\s+)?(?P<docket>\d+\w{1,2}-?U?[BCD]?)"
-            m = re.search(citation_re, scraped_text)
-            docket_number = m.group("docket")
+            docket = self._get_docket(match)
+            status = self._get_status(citation)
 
-            if "-U" in docket_number:
-                status = "Unpublished"
-            else:
-                status = "Published"
-
-            metadata = {
-                "Docket": {
-                    "docket_number": docket_number,
-                },
-                "OpinionCluster": {
-                    "precedential_status": status,
-                },
-            }
-            return metadata
+            self.cases.append(
+                {
+                    "date": date,
+                    "name": name,
+                    "citation": citation,
+                    "url": url,
+                    "docket": docket,
+                    "status": status,
+                }
+            )
