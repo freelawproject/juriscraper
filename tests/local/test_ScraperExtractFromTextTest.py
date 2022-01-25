@@ -38,13 +38,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 pass
 
             module_parts = module_string.split(".")
-            example_path = os.path.join(
-                "tests",
-                "examples",
-                module_parts[1],
-                "united_states",
-                module_parts[-1],
-            )
+            example_path = Path("tests") / "examples" / module_parts[1] / "united_states" / module_parts[-1]
             # Run the compare file for any module (non-backscraper) that has extract_from_text implemented.
             with open(f"{example_path}_extract_from_text.compare.json") as f:
                 answers = json.load(f)
