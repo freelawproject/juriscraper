@@ -57,10 +57,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 f"{package}.{module}", globals(), locals(), [module]
             )
             site = mod.Site()
-            if (
-                site.__class__.extract_from_text
-                == OpinionSite.extract_from_text
-            ):
+            if mod.Site.extract_from_text == OpinionSite.extract_from_text:
                 # Method is not overridden, so skip it.
                 continue
             self.assertIn(
