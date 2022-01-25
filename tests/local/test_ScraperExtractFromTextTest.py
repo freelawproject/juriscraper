@@ -1,6 +1,7 @@
 import unittest
 
 from juriscraper.lib.importer import build_module_list
+from juriscraper.OpinionSite import OpinionSite
 
 
 class ScraperExtractFromText(unittest.TestCase):
@@ -56,13 +57,12 @@ class ScraperExtractFromText(unittest.TestCase):
                 f"{package}.{module}", globals(), locals(), [module]
             )
             site = mod.Site()
-            try:
-                if site.extract_from_text("This is a test.") == {}:
-                    continue
-            except:
-                # Fail if the extract_from_text method is implemented and test it.
-                pass
-
+            if (
+                site.__class__.extract_from_text
+                == OpinionSite.extract_from_text
+            ):
+                # Method is not overridden, so skip it.
+                continue
             self.assertIn(
                 module_string,
                 self.test_data.keys(),
