@@ -1,8 +1,4 @@
-import json
-import os
 import unittest
-from glob import glob
-from typing import List
 
 from juriscraper.lib.importer import build_module_list
 
@@ -12,19 +8,49 @@ class ScraperExtractFromText(unittest.TestCase):
     without a full integration test.
     """
 
-    def run_tests_on_module_str(self, module_str: str) -> List[str]:
-        """Finds all the $module_example* files and tests them with the sample
-        scraper.
-        """
-        return build_module_list(module_str)
+    test_data = {
+        "juriscraper.opinions.united_states.administrative_agency.bia": [
+            (
+                """Matter of Emmanuel LAGUERRE, Respondent \nDecided January 20, 2022 and more """,
+                {
+                    "OpinionCluster": {
+                        "date_filed": "2022-01-20",
+                        "date_filed_is_approximate": False,
+                    }
+                },
+            ),
+            (
+                "Matter of Enrique ALDAY-DOMINGUEZ, Respondent\nDecided June 1, 2017",
+                {
+                    "OpinionCluster": {
+                        "date_filed": "2017-06-01",
+                        "date_filed_is_approximate": False,
+                    }
+                },
+            ),
+        ],
+    }
+
+    def test_extract_from_text(self):
+        """Test that extract_from_text returns the expected data."""
+        for module_string, test_cases in self.test_data.items():
+            package, module = module_string.rsplit(".", 1)
+            mod = __import__(
+                f"{package}.{module}", globals(), locals(), [module]
+            )
+            site = mod.Site()
+            for test_case in test_cases:
+                self.assertEqual(
+                    site.extract_from_text(test_case[0]), test_case[1]
+                )
 
     def test_extract_from_text_properly_implemented(self):
         """Ensure that extract_from_text is properly implemented."""
 
-        module_strings = self.run_tests_on_module_str("juriscraper.opinions")
+        module_strings = build_module_list(
+            "juriscraper.opinions.united_states"
+        )
         for module_string in module_strings:
-            if "backscraper" in module_string:
-                continue
             package, module = module_string.rsplit(".", 1)
             mod = __import__(
                 f"{package}.{module}", globals(), locals(), [module]
@@ -37,32 +63,8 @@ class ScraperExtractFromText(unittest.TestCase):
                 # Fail if the extract_from_text method is implemented and test it.
                 pass
 
-            module_parts = module_string.split(".")
-            example_path = os.path.join(
-                "tests",
-                "examples",
-                module_parts[1],
-                "united_states",
-                module_parts[-1],
+            self.assertIn(
+                module_string,
+                self.test_data.keys(),
+                msg=f"{module_string} not yet added to extract_from_text test data.",
             )
-            # Run the compare file for any module (non-backscraper) that has extract_from_text implemented.
-            with open(f"{example_path}_extract_from_text.compare.json") as f:
-                answers = json.load(f)
-
-            sorted_paths = sorted(
-                glob(f"{example_path}_extract_from_text*.txt")
-            )
-
-            self.assertEqual(
-                len(sorted_paths),
-                len(answers),
-                msg=f"Missing test files for extract_from_text in {module_parts[-1]}",
-            )
-
-            for file in sorted(glob(f"{example_path}_extract_from_text*.txt")):
-                s = site.extract_from_text(open(file).read())
-                self.assertEqual(
-                    s,
-                    answers.pop(0),
-                    msg=f"Extract from text failed with {file}",
-                )
