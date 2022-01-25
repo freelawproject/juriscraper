@@ -14,8 +14,6 @@ class Site(colo.Site):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.courts.state.co.us/Courts/Court_Of_Appeals/Case_Announcements/Index.cfm"
-        # self.base_path = "//div[@id='dnn_ctr2514_ModuleContent']/ul/li/a"
-        # self.next_subpage_path = "//a[@id='dnn_ctr2517_DNNArticle_List_MyArticleList_MyPageNav_cmdNext']"
         self.status = "Unpublished"
 
     def _process_html(self) -> None:
@@ -31,9 +29,7 @@ class Site(colo.Site):
         ]
         match = re.search(r"(?P<date>\w+ \d+, \d+).*", date_text)
         if not match:
-            logger.error(
-                f"Unable to find date from announcements page: '{str(date_text)}'"
-            )
+            logger.error(f"Unable to find date: '{str(date_text)}'")
             return
         date = match.group("date")
 
@@ -42,7 +38,8 @@ class Site(colo.Site):
         ):
             # Expected title content:
             # - "21CA0738 People In Interest of A-D.M-F., a Child"
-            # - "21CA1334 People In Interest of A.D.C., a Child"
+            # - "2020CA1321 People v. Kelley Daniel Wiggins"
+            # - "20CA1803 & 20CA1942 LBA Realty Fund v. Landmark American Insurance"
             title = link.text_content()
             if not title:
                 continue

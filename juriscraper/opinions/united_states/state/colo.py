@@ -5,8 +5,8 @@ Author: Philip Ardery
 Reviewer: mlr
 Date created: 2016-06-03
 Contact: Email "Internet and Technology" staff listed at http://www.cobar.org/staff
-         they usually fix issues without resonding to the emails directly. You can
-         also try submitting the form here: http://www.cobar.org/contact
+    they usually fix issues without resonding to the emails directly. You can
+    also try submitting the form here: http://www.cobar.org/contact
 """
 
 import re
@@ -33,11 +33,9 @@ class Site(OpinionSiteLinear):
         date_text = self.html.xpath("//div[@id='main-content']//p[1]/text()")[
             0
         ]
-        match = re.search(r".*,\s+(?P<date>\w+ \d+, \d+),.*", date_text)
+        match = re.search(r".*,\s+(?P<date>\w+ \d+, \d+).*", date_text)
         if not match:
-            logger.error(
-                f"Unable to find date from announcements page: '{str(date_text)}'"
-            )
+            logger.error(f"Unable to find date: '{str(date_text)}'")
             return
         date = match.group("date")
 
