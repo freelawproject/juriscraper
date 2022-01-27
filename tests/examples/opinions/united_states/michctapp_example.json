@@ -1,5 +1,5 @@
 {
-  "currentPage": 1,
+ "currentPage": 1,
   "facets": [
     {
       "facets": [
@@ -7,9 +7,7 @@
       ],
       "name": "Resource Type",
       "queryStringKey": "resource",
-      "selectedFacets": [
-        "opinion"
-      ]
+      "selectedFacets": []
     },
     {
       "facets": [
@@ -21,40 +19,15 @@
       ],
       "name": "Release Date",
       "queryStringKey": "releaseDate",
-      "selectedFacets": []
+      "selectedFacets": [
+        "Past Year"
+      ]
     }
   ],
   "hasMoreResults": false,
   "pageSize": 100,
   "resultCount": 100,
   "searchItems": [
-    {
-      "attorneys": null,
-      "categories": null,
-      "caseId": "353824",
-      "caseUrl": "/c/courts/coa/case/353824",
-      "courtOfAppealsCaseStatus": null,
-      "courtOfAppealsCaseNumber": null,
-      "courtOfAppealsParties": null,
-      "courts": [
-        "GRAND TRAVERSE CIRCUIT COURT"
-      ],
-      "decision": "L/Ct Judgment/Order Affirmed",
-      "displayDate": "2022-01-20T00:00:00+00:00",
-      "documentUrl": "/48f787/siteassets/case-documents/uploads/opinions/final/coa/20220120_c353824_49_353824.opn.pdf",
-      "hasOpinions": false,
-      "hasOrders": false,
-      "isCourtOfAppealsCase": true,
-      "isCourtOfAppealsDocument": true,
-      "isFinalOpinion": false,
-      "isPublished": false,
-      "isSupremeCourtCase": false,
-      "isSupremeCourtDocument": false,
-      "supremeCourtCaseNumber": null,
-      "supremeCourtParties": null,
-      "supremeCourtCaseStatus": null,
-      "title": "COA 353824 PEOPLE OF MI V NICHOLAS DEAN CLARK Opinion - Per Curiam - Unpublished 01/19/2022"
-    },
     {
       "attorneys": null,
       "categories": null,
@@ -81,6 +54,33 @@
       "supremeCourtParties": null,
       "supremeCourtCaseStatus": null,
       "title": "COA 352561 PEOPLE OF MI V JUSTIN TYLER BEMBENECK Opinion - Per Curiam - Unpublished 01/19/2022"
+    },
+    {
+      "attorneys": null,
+      "categories": null,
+      "caseId": "353824",
+      "caseUrl": "/c/courts/coa/case/353824",
+      "courtOfAppealsCaseStatus": null,
+      "courtOfAppealsCaseNumber": null,
+      "courtOfAppealsParties": null,
+      "courts": [
+        "GRAND TRAVERSE CIRCUIT COURT"
+      ],
+      "decision": "L/Ct Judgment/Order Affirmed",
+      "displayDate": "2022-01-20T00:00:00+00:00",
+      "documentUrl": "/48f787/siteassets/case-documents/uploads/opinions/final/coa/20220120_c353824_49_353824.opn.pdf",
+      "hasOpinions": false,
+      "hasOrders": false,
+      "isCourtOfAppealsCase": true,
+      "isCourtOfAppealsDocument": true,
+      "isFinalOpinion": false,
+      "isPublished": false,
+      "isSupremeCourtCase": false,
+      "isSupremeCourtDocument": false,
+      "supremeCourtCaseNumber": null,
+      "supremeCourtParties": null,
+      "supremeCourtCaseStatus": null,
+      "title": "COA 353824 PEOPLE OF MI V NICHOLAS DEAN CLARK Opinion - Per Curiam - Unpublished 01/19/2022"
     },
     {
       "attorneys": null,
@@ -247,33 +247,6 @@
     {
       "attorneys": null,
       "categories": null,
-      "caseId": "354510",
-      "caseUrl": "/c/courts/coa/case/354510",
-      "courtOfAppealsCaseStatus": null,
-      "courtOfAppealsCaseNumber": null,
-      "courtOfAppealsParties": null,
-      "courts": [
-        "GRAND TRAVERSE CIRCUIT COURT"
-      ],
-      "decision": "Affirmed, Vacated, and Remanded",
-      "displayDate": "2022-01-20T00:00:00+00:00",
-      "documentUrl": "/48f791/siteassets/case-documents/uploads/opinions/final/coa/20220120_c354510_51_354510.opn.pdf",
-      "hasOpinions": false,
-      "hasOrders": false,
-      "isCourtOfAppealsCase": true,
-      "isCourtOfAppealsDocument": true,
-      "isFinalOpinion": false,
-      "isPublished": false,
-      "isSupremeCourtCase": false,
-      "isSupremeCourtDocument": false,
-      "supremeCourtCaseNumber": null,
-      "supremeCourtParties": null,
-      "supremeCourtCaseStatus": null,
-      "title": "COA 354510 TIMMIE DEWIGHT COLLINS JR V VINCENT MICHAEL NIZZI Opinion - Per Curiam - Unpublished 01/19/2022"
-    },
-    {
-      "attorneys": null,
-      "categories": null,
       "caseId": "356003",
       "caseUrl": "/c/courts/coa/case/356003",
       "courtOfAppealsCaseStatus": null,
@@ -301,17 +274,17 @@
     {
       "attorneys": null,
       "categories": null,
-      "caseId": "355549",
-      "caseUrl": "/c/courts/coa/case/355549",
+      "caseId": "354510",
+      "caseUrl": "/c/courts/coa/case/354510",
       "courtOfAppealsCaseStatus": null,
       "courtOfAppealsCaseNumber": null,
       "courtOfAppealsParties": null,
       "courts": [
-        "WAYNE CIRCUIT COURT"
+        "GRAND TRAVERSE CIRCUIT COURT"
       ],
-      "decision": "L/Ct Judgment/Order Affirmed",
+      "decision": "Affirmed, Vacated, and Remanded",
       "displayDate": "2022-01-20T00:00:00+00:00",
-      "documentUrl": "/48f78d/siteassets/case-documents/uploads/opinions/final/coa/20220120_c355549_45_355549.opn.pdf",
+      "documentUrl": "/48f791/siteassets/case-documents/uploads/opinions/final/coa/20220120_c354510_51_354510.opn.pdf",
       "hasOpinions": false,
       "hasOrders": false,
       "isCourtOfAppealsCase": true,
@@ -323,7 +296,7 @@
       "supremeCourtCaseNumber": null,
       "supremeCourtParties": null,
       "supremeCourtCaseStatus": null,
-      "title": "COA 355549 PEOPLE OF MI V DEMETRIUS TROY BRADLEY Opinion - Per Curiam - Unpublished 01/19/2022"
+      "title": "COA 354510 TIMMIE DEWIGHT COLLINS JR V VINCENT MICHAEL NIZZI Opinion - Per Curiam - Unpublished 01/19/2022"
     },
     {
       "attorneys": null,
@@ -351,6 +324,33 @@
       "supremeCourtParties": null,
       "supremeCourtCaseStatus": null,
       "title": "COA 355300 IN RE DONALD F CLARK TRUST Opinion - Per Curiam - Unpublished 01/19/2022"
+    },
+    {
+      "attorneys": null,
+      "categories": null,
+      "caseId": "355549",
+      "caseUrl": "/c/courts/coa/case/355549",
+      "courtOfAppealsCaseStatus": null,
+      "courtOfAppealsCaseNumber": null,
+      "courtOfAppealsParties": null,
+      "courts": [
+        "WAYNE CIRCUIT COURT"
+      ],
+      "decision": "L/Ct Judgment/Order Affirmed",
+      "displayDate": "2022-01-20T00:00:00+00:00",
+      "documentUrl": "/48f78d/siteassets/case-documents/uploads/opinions/final/coa/20220120_c355549_45_355549.opn.pdf",
+      "hasOpinions": false,
+      "hasOrders": false,
+      "isCourtOfAppealsCase": true,
+      "isCourtOfAppealsDocument": true,
+      "isFinalOpinion": false,
+      "isPublished": false,
+      "isSupremeCourtCase": false,
+      "isSupremeCourtDocument": false,
+      "supremeCourtCaseNumber": null,
+      "supremeCourtParties": null,
+      "supremeCourtCaseStatus": null,
+      "title": "COA 355549 PEOPLE OF MI V DEMETRIUS TROY BRADLEY Opinion - Per Curiam - Unpublished 01/19/2022"
     },
     {
       "attorneys": null,
@@ -544,33 +544,6 @@
     {
       "attorneys": null,
       "categories": null,
-      "caseId": "355589",
-      "caseUrl": "/c/courts/coa/case/355589",
-      "courtOfAppealsCaseStatus": null,
-      "courtOfAppealsCaseNumber": null,
-      "courtOfAppealsParties": null,
-      "courts": [
-        "WAYNE CIRCUIT COURT"
-      ],
-      "decision": "Reversed and Remanded",
-      "displayDate": "2022-01-20T00:00:00+00:00",
-      "documentUrl": "/48f78a/siteassets/case-documents/uploads/opinions/final/coa/20220120_c355589_47_355589.opn.pdf",
-      "hasOpinions": false,
-      "hasOrders": false,
-      "isCourtOfAppealsCase": true,
-      "isCourtOfAppealsDocument": true,
-      "isFinalOpinion": false,
-      "isPublished": false,
-      "isSupremeCourtCase": false,
-      "isSupremeCourtDocument": false,
-      "supremeCourtCaseNumber": null,
-      "supremeCourtParties": null,
-      "supremeCourtCaseStatus": null,
-      "title": "COA 355589 TYRONE RODGERS V CHAMPS AUTO SALES INC Opinion - Per Curiam - Unpublished 01/19/2022"
-    },
-    {
-      "attorneys": null,
-      "categories": null,
       "caseId": "357576",
       "caseUrl": "/c/courts/coa/case/357576",
       "courtOfAppealsCaseStatus": null,
@@ -594,6 +567,33 @@
       "supremeCourtParties": null,
       "supremeCourtCaseStatus": null,
       "title": "COA 357576 IN RE REVELES MINORS Opinion - Per Curiam - Unpublished 01/19/2022"
+    },
+    {
+      "attorneys": null,
+      "categories": null,
+      "caseId": "355589",
+      "caseUrl": "/c/courts/coa/case/355589",
+      "courtOfAppealsCaseStatus": null,
+      "courtOfAppealsCaseNumber": null,
+      "courtOfAppealsParties": null,
+      "courts": [
+        "WAYNE CIRCUIT COURT"
+      ],
+      "decision": "Reversed and Remanded",
+      "displayDate": "2022-01-20T00:00:00+00:00",
+      "documentUrl": "/48f78a/siteassets/case-documents/uploads/opinions/final/coa/20220120_c355589_47_355589.opn.pdf",
+      "hasOpinions": false,
+      "hasOrders": false,
+      "isCourtOfAppealsCase": true,
+      "isCourtOfAppealsDocument": true,
+      "isFinalOpinion": false,
+      "isPublished": false,
+      "isSupremeCourtCase": false,
+      "isSupremeCourtDocument": false,
+      "supremeCourtCaseNumber": null,
+      "supremeCourtParties": null,
+      "supremeCourtCaseStatus": null,
+      "title": "COA 355589 TYRONE RODGERS V CHAMPS AUTO SALES INC Opinion - Per Curiam - Unpublished 01/19/2022"
     },
     {
       "attorneys": null,
@@ -949,33 +949,6 @@
     {
       "attorneys": null,
       "categories": null,
-      "caseId": "352147",
-      "caseUrl": "/c/courts/coa/case/352147",
-      "courtOfAppealsCaseStatus": null,
-      "courtOfAppealsCaseNumber": null,
-      "courtOfAppealsParties": null,
-      "courts": [
-        "LARA BUREAU OF PROFESSIONAL LICENSING"
-      ],
-      "decision": "L/Ct Judgment/Order Affirmed",
-      "displayDate": "2022-01-13T00:00:00+00:00",
-      "documentUrl": "/48e626/siteassets/case-documents/uploads/opinions/final/coa/20220113_c352147_124_352147.opn.pdf",
-      "hasOpinions": false,
-      "hasOrders": false,
-      "isCourtOfAppealsCase": true,
-      "isCourtOfAppealsDocument": true,
-      "isFinalOpinion": false,
-      "isPublished": true,
-      "isSupremeCourtCase": false,
-      "isSupremeCourtDocument": false,
-      "supremeCourtCaseNumber": null,
-      "supremeCourtParties": null,
-      "supremeCourtCaseStatus": null,
-      "title": "COA 352147 IN RE SHELLY ANN-MARIE SANGSTER RN Opinion - Per Curiam - Published 01/12/2022"
-    },
-    {
-      "attorneys": null,
-      "categories": null,
       "caseId": "348766",
       "caseUrl": "/c/courts/coa/case/348766",
       "courtOfAppealsCaseStatus": null,
@@ -999,33 +972,6 @@
       "supremeCourtParties": null,
       "supremeCourtCaseStatus": null,
       "title": "COA 348766 O SHARON AUSTIN V HOSPICE NORTH OTTAWA COMMUNITY Opinion - On Remand SCt - Per Curiam - Unpublished 01/12/2022"
-    },
-    {
-      "attorneys": null,
-      "categories": null,
-      "caseId": "357705",
-      "caseUrl": "/c/courts/coa/case/357705",
-      "courtOfAppealsCaseStatus": null,
-      "courtOfAppealsCaseNumber": null,
-      "courtOfAppealsParties": null,
-      "courts": [
-        "CALHOUN JUVENILE DIVISION"
-      ],
-      "decision": "L/Ct Judgment/Order Affirmed",
-      "displayDate": "2022-01-13T00:00:00+00:00",
-      "documentUrl": "/48e5e6/siteassets/case-documents/uploads/opinions/final/coa/20220113_c357705_34_357705.opn.pdf",
-      "hasOpinions": false,
-      "hasOrders": false,
-      "isCourtOfAppealsCase": true,
-      "isCourtOfAppealsDocument": true,
-      "isFinalOpinion": false,
-      "isPublished": false,
-      "isSupremeCourtCase": false,
-      "isSupremeCourtDocument": false,
-      "supremeCourtCaseNumber": null,
-      "supremeCourtParties": null,
-      "supremeCourtCaseStatus": null,
-      "title": "COA 357705 IN RE I R KIDNEY MINOR Opinion - Per Curiam - Unpublished 01/12/2022"
     },
     {
       "attorneys": null,
@@ -1057,17 +1003,17 @@
     {
       "attorneys": null,
       "categories": null,
-      "caseId": "355286",
-      "caseUrl": "/c/courts/coa/case/355286",
+      "caseId": "357705",
+      "caseUrl": "/c/courts/coa/case/357705",
       "courtOfAppealsCaseStatus": null,
       "courtOfAppealsCaseNumber": null,
       "courtOfAppealsParties": null,
       "courts": [
-        "SANILAC CIRCUIT COURT"
+        "CALHOUN JUVENILE DIVISION"
       ],
-      "decision": "Appeal Dismissed",
+      "decision": "L/Ct Judgment/Order Affirmed",
       "displayDate": "2022-01-13T00:00:00+00:00",
-      "documentUrl": "/48e619/siteassets/case-documents/uploads/opinions/final/coa/20220113_c355286_43_355286.opn.pdf",
+      "documentUrl": "/48e5e6/siteassets/case-documents/uploads/opinions/final/coa/20220113_c357705_34_357705.opn.pdf",
       "hasOpinions": false,
       "hasOrders": false,
       "isCourtOfAppealsCase": true,
@@ -1079,7 +1025,7 @@
       "supremeCourtCaseNumber": null,
       "supremeCourtParties": null,
       "supremeCourtCaseStatus": null,
-      "title": "COA 355286 NORMA A MATTICE REVOCABLE TRUST V WILLIAM MATTICE Opinion - Per Curiam - Unpublished 01/12/2022"
+      "title": "COA 357705 IN RE I R KIDNEY MINOR Opinion - Per Curiam - Unpublished 01/12/2022"
     },
     {
       "attorneys": null,
@@ -1107,6 +1053,60 @@
       "supremeCourtParties": null,
       "supremeCourtCaseStatus": null,
       "title": "COA 353457 PEOPLE OF MI V EDGAR OROZCO-ESTRADA Opinion - Per Curiam - Unpublished 01/12/2022"
+    },
+    {
+      "attorneys": null,
+      "categories": null,
+      "caseId": "352147",
+      "caseUrl": "/c/courts/coa/case/352147",
+      "courtOfAppealsCaseStatus": null,
+      "courtOfAppealsCaseNumber": null,
+      "courtOfAppealsParties": null,
+      "courts": [
+        "LARA BUREAU OF PROFESSIONAL LICENSING"
+      ],
+      "decision": "L/Ct Judgment/Order Affirmed",
+      "displayDate": "2022-01-13T00:00:00+00:00",
+      "documentUrl": "/48e626/siteassets/case-documents/uploads/opinions/final/coa/20220113_c352147_124_352147.opn.pdf",
+      "hasOpinions": false,
+      "hasOrders": false,
+      "isCourtOfAppealsCase": true,
+      "isCourtOfAppealsDocument": true,
+      "isFinalOpinion": false,
+      "isPublished": true,
+      "isSupremeCourtCase": false,
+      "isSupremeCourtDocument": false,
+      "supremeCourtCaseNumber": null,
+      "supremeCourtParties": null,
+      "supremeCourtCaseStatus": null,
+      "title": "COA 352147 IN RE SHELLY ANN-MARIE SANGSTER RN Opinion - Per Curiam - Published 01/12/2022"
+    },
+    {
+      "attorneys": null,
+      "categories": null,
+      "caseId": "355286",
+      "caseUrl": "/c/courts/coa/case/355286",
+      "courtOfAppealsCaseStatus": null,
+      "courtOfAppealsCaseNumber": null,
+      "courtOfAppealsParties": null,
+      "courts": [
+        "SANILAC CIRCUIT COURT"
+      ],
+      "decision": "Appeal Dismissed",
+      "displayDate": "2022-01-13T00:00:00+00:00",
+      "documentUrl": "/48e619/siteassets/case-documents/uploads/opinions/final/coa/20220113_c355286_43_355286.opn.pdf",
+      "hasOpinions": false,
+      "hasOrders": false,
+      "isCourtOfAppealsCase": true,
+      "isCourtOfAppealsDocument": true,
+      "isFinalOpinion": false,
+      "isPublished": false,
+      "isSupremeCourtCase": false,
+      "isSupremeCourtDocument": false,
+      "supremeCourtCaseNumber": null,
+      "supremeCourtParties": null,
+      "supremeCourtCaseStatus": null,
+      "title": "COA 355286 NORMA A MATTICE REVOCABLE TRUST V WILLIAM MATTICE Opinion - Per Curiam - Unpublished 01/12/2022"
     },
     {
       "attorneys": null,
@@ -1246,6 +1246,60 @@
     {
       "attorneys": null,
       "categories": null,
+      "caseId": "356988",
+      "caseUrl": "/c/courts/coa/case/356988",
+      "courtOfAppealsCaseStatus": null,
+      "courtOfAppealsCaseNumber": null,
+      "courtOfAppealsParties": null,
+      "courts": [
+        "OAKLAND CIRCUIT COURT"
+      ],
+      "decision": "Affirm in Part, Reverse in Part, Remanded",
+      "displayDate": "2022-01-13T00:00:00+00:00",
+      "documentUrl": "/48e60b/siteassets/case-documents/uploads/opinions/final/coa/20220113_c356988_37_356988.opn.pdf",
+      "hasOpinions": false,
+      "hasOrders": false,
+      "isCourtOfAppealsCase": true,
+      "isCourtOfAppealsDocument": true,
+      "isFinalOpinion": false,
+      "isPublished": false,
+      "isSupremeCourtCase": false,
+      "isSupremeCourtDocument": false,
+      "supremeCourtCaseNumber": null,
+      "supremeCourtParties": null,
+      "supremeCourtCaseStatus": null,
+      "title": "COA 356988 JERILYN NADINE GURLEY V RUSSELL CHARLES GARTHA Opinion - Per Curiam - Unpublished 01/12/2022"
+    },
+    {
+      "attorneys": null,
+      "categories": null,
+      "caseId": "355779",
+      "caseUrl": "/c/courts/coa/case/355779",
+      "courtOfAppealsCaseStatus": null,
+      "courtOfAppealsCaseNumber": null,
+      "courtOfAppealsParties": null,
+      "courts": [
+        "VAN BUREN CIRCUIT COURT"
+      ],
+      "decision": "L/Ct Judgment/Order Affirmed",
+      "displayDate": "2022-01-13T00:00:00+00:00",
+      "documentUrl": "/48e609/siteassets/case-documents/uploads/opinions/final/coa/20220113_c355779_44_355779.opn.pdf",
+      "hasOpinions": false,
+      "hasOrders": false,
+      "isCourtOfAppealsCase": true,
+      "isCourtOfAppealsDocument": true,
+      "isFinalOpinion": false,
+      "isPublished": true,
+      "isSupremeCourtCase": false,
+      "isSupremeCourtDocument": false,
+      "supremeCourtCaseNumber": null,
+      "supremeCourtParties": null,
+      "supremeCourtCaseStatus": null,
+      "title": "COA 355779 LAKESIDE RETREATS LLC V CAMP NO COUNSELORS LLC Opinion - Authored - Published 01/12/2022"
+    },
+    {
+      "attorneys": null,
+      "categories": null,
       "caseId": "355452",
       "caseUrl": "/c/courts/coa/case/355452",
       "courtOfAppealsCaseStatus": null,
@@ -1269,6 +1323,33 @@
       "supremeCourtParties": null,
       "supremeCourtCaseStatus": null,
       "title": "COA 355452 C ALICE JENKINS V SMART Opinion - Concurrence 01/12/2022"
+    },
+    {
+      "attorneys": null,
+      "categories": null,
+      "caseId": "356510",
+      "caseUrl": "/c/courts/coa/case/356510",
+      "courtOfAppealsCaseStatus": null,
+      "courtOfAppealsCaseNumber": null,
+      "courtOfAppealsParties": null,
+      "courts": [
+        "OAKLAND JUVENILE DIVISION"
+      ],
+      "decision": "L/Ct Judgment/Order Affirmed",
+      "displayDate": "2022-01-13T00:00:00+00:00",
+      "documentUrl": "/48e61c/siteassets/case-documents/uploads/opinions/final/coa/20220113_c356510_45_356510.opn.pdf",
+      "hasOpinions": false,
+      "hasOrders": false,
+      "isCourtOfAppealsCase": true,
+      "isCourtOfAppealsDocument": true,
+      "isFinalOpinion": false,
+      "isPublished": false,
+      "isSupremeCourtCase": false,
+      "isSupremeCourtDocument": false,
+      "supremeCourtCaseNumber": null,
+      "supremeCourtParties": null,
+      "supremeCourtCaseStatus": null,
+      "title": "COA 356510 IN RE J MCKEEVER Opinion - Per Curiam - Unpublished 01/12/2022"
     },
     {
       "attorneys": null,
@@ -1323,87 +1404,6 @@
       "supremeCourtParties": null,
       "supremeCourtCaseStatus": null,
       "title": "COA 354450 IN RE ATTORNEY FEES OF JOHN W UJLAKY Opinion - Per Curiam - Unpublished 01/12/2022"
-    },
-    {
-      "attorneys": null,
-      "categories": null,
-      "caseId": "356988",
-      "caseUrl": "/c/courts/coa/case/356988",
-      "courtOfAppealsCaseStatus": null,
-      "courtOfAppealsCaseNumber": null,
-      "courtOfAppealsParties": null,
-      "courts": [
-        "OAKLAND CIRCUIT COURT"
-      ],
-      "decision": "Affirm in Part, Reverse in Part, Remanded",
-      "displayDate": "2022-01-13T00:00:00+00:00",
-      "documentUrl": "/48e60b/siteassets/case-documents/uploads/opinions/final/coa/20220113_c356988_37_356988.opn.pdf",
-      "hasOpinions": false,
-      "hasOrders": false,
-      "isCourtOfAppealsCase": true,
-      "isCourtOfAppealsDocument": true,
-      "isFinalOpinion": false,
-      "isPublished": false,
-      "isSupremeCourtCase": false,
-      "isSupremeCourtDocument": false,
-      "supremeCourtCaseNumber": null,
-      "supremeCourtParties": null,
-      "supremeCourtCaseStatus": null,
-      "title": "COA 356988 JERILYN NADINE GURLEY V RUSSELL CHARLES GARTHA Opinion - Per Curiam - Unpublished 01/12/2022"
-    },
-    {
-      "attorneys": null,
-      "categories": null,
-      "caseId": "356510",
-      "caseUrl": "/c/courts/coa/case/356510",
-      "courtOfAppealsCaseStatus": null,
-      "courtOfAppealsCaseNumber": null,
-      "courtOfAppealsParties": null,
-      "courts": [
-        "OAKLAND JUVENILE DIVISION"
-      ],
-      "decision": "L/Ct Judgment/Order Affirmed",
-      "displayDate": "2022-01-13T00:00:00+00:00",
-      "documentUrl": "/48e61c/siteassets/case-documents/uploads/opinions/final/coa/20220113_c356510_45_356510.opn.pdf",
-      "hasOpinions": false,
-      "hasOrders": false,
-      "isCourtOfAppealsCase": true,
-      "isCourtOfAppealsDocument": true,
-      "isFinalOpinion": false,
-      "isPublished": false,
-      "isSupremeCourtCase": false,
-      "isSupremeCourtDocument": false,
-      "supremeCourtCaseNumber": null,
-      "supremeCourtParties": null,
-      "supremeCourtCaseStatus": null,
-      "title": "COA 356510 IN RE J MCKEEVER Opinion - Per Curiam - Unpublished 01/12/2022"
-    },
-    {
-      "attorneys": null,
-      "categories": null,
-      "caseId": "355779",
-      "caseUrl": "/c/courts/coa/case/355779",
-      "courtOfAppealsCaseStatus": null,
-      "courtOfAppealsCaseNumber": null,
-      "courtOfAppealsParties": null,
-      "courts": [
-        "VAN BUREN CIRCUIT COURT"
-      ],
-      "decision": "L/Ct Judgment/Order Affirmed",
-      "displayDate": "2022-01-13T00:00:00+00:00",
-      "documentUrl": "/48e609/siteassets/case-documents/uploads/opinions/final/coa/20220113_c355779_44_355779.opn.pdf",
-      "hasOpinions": false,
-      "hasOrders": false,
-      "isCourtOfAppealsCase": true,
-      "isCourtOfAppealsDocument": true,
-      "isFinalOpinion": false,
-      "isPublished": true,
-      "isSupremeCourtCase": false,
-      "isSupremeCourtDocument": false,
-      "supremeCourtCaseNumber": null,
-      "supremeCourtParties": null,
-      "supremeCourtCaseStatus": null,
-      "title": "COA 355779 LAKESIDE RETREATS LLC V CAMP NO COUNSELORS LLC Opinion - Authored - Published 01/12/2022"
     },
     {
       "attorneys": null,
@@ -1597,17 +1597,17 @@
     {
       "attorneys": null,
       "categories": null,
-      "caseId": "356338",
-      "caseUrl": "/c/courts/coa/case/356338",
+      "caseId": "357173",
+      "caseUrl": "/c/courts/coa/case/357173",
       "courtOfAppealsCaseStatus": null,
       "courtOfAppealsCaseNumber": null,
       "courtOfAppealsParties": null,
       "courts": [
-        "MACOMB PROBATE COURT"
+        "GENESEE JUVENILE DIVISION"
       ],
-      "decision": "L/Ct Judgment/Order Affirmed",
+      "decision": "Appeal Dismissed",
       "displayDate": "2022-01-13T00:00:00+00:00",
-      "documentUrl": "/48e602/siteassets/case-documents/uploads/opinions/final/coa/20220113_c356338_67_356338.opn.pdf",
+      "documentUrl": "/48e606/siteassets/case-documents/uploads/opinions/final/coa/20220113_c357172_44_357172.opn.pdf",
       "hasOpinions": false,
       "hasOrders": false,
       "isCourtOfAppealsCase": true,
@@ -1619,7 +1619,7 @@
       "supremeCourtCaseNumber": null,
       "supremeCourtParties": null,
       "supremeCourtCaseStatus": null,
-      "title": "COA 356338 IN RE TIMCO ESTATE Opinion - Per Curiam - Unpublished 01/12/2022"
+      "title": "COA 357172 IN RE POTTERF MINORS Opinion - Per Curiam - Unpublished 01/12/2022"
     },
     {
       "attorneys": null,
@@ -1705,33 +1705,6 @@
     {
       "attorneys": null,
       "categories": null,
-      "caseId": "357173",
-      "caseUrl": "/c/courts/coa/case/357173",
-      "courtOfAppealsCaseStatus": null,
-      "courtOfAppealsCaseNumber": null,
-      "courtOfAppealsParties": null,
-      "courts": [
-        "GENESEE JUVENILE DIVISION"
-      ],
-      "decision": "Appeal Dismissed",
-      "displayDate": "2022-01-13T00:00:00+00:00",
-      "documentUrl": "/48e606/siteassets/case-documents/uploads/opinions/final/coa/20220113_c357172_44_357172.opn.pdf",
-      "hasOpinions": false,
-      "hasOrders": false,
-      "isCourtOfAppealsCase": true,
-      "isCourtOfAppealsDocument": true,
-      "isFinalOpinion": false,
-      "isPublished": false,
-      "isSupremeCourtCase": false,
-      "isSupremeCourtDocument": false,
-      "supremeCourtCaseNumber": null,
-      "supremeCourtParties": null,
-      "supremeCourtCaseStatus": null,
-      "title": "COA 357172 IN RE POTTERF MINORS Opinion - Per Curiam - Unpublished 01/12/2022"
-    },
-    {
-      "attorneys": null,
-      "categories": null,
       "caseId": "353209",
       "caseUrl": "/c/courts/coa/case/353209",
       "courtOfAppealsCaseStatus": null,
@@ -1755,6 +1728,33 @@
       "supremeCourtParties": null,
       "supremeCourtCaseStatus": null,
       "title": "COA 353209 PEOPLE OF MI V JOSEPH LEE JONES Opinion - Per Curiam - Unpublished 01/12/2022"
+    },
+    {
+      "attorneys": null,
+      "categories": null,
+      "caseId": "356338",
+      "caseUrl": "/c/courts/coa/case/356338",
+      "courtOfAppealsCaseStatus": null,
+      "courtOfAppealsCaseNumber": null,
+      "courtOfAppealsParties": null,
+      "courts": [
+        "MACOMB PROBATE COURT"
+      ],
+      "decision": "L/Ct Judgment/Order Affirmed",
+      "displayDate": "2022-01-13T00:00:00+00:00",
+      "documentUrl": "/48e602/siteassets/case-documents/uploads/opinions/final/coa/20220113_c356338_67_356338.opn.pdf",
+      "hasOpinions": false,
+      "hasOrders": false,
+      "isCourtOfAppealsCase": true,
+      "isCourtOfAppealsDocument": true,
+      "isFinalOpinion": false,
+      "isPublished": false,
+      "isSupremeCourtCase": false,
+      "isSupremeCourtDocument": false,
+      "supremeCourtCaseNumber": null,
+      "supremeCourtParties": null,
+      "supremeCourtCaseStatus": null,
+      "title": "COA 356338 IN RE TIMCO ESTATE Opinion - Per Curiam - Unpublished 01/12/2022"
     },
     {
       "attorneys": null,
@@ -1948,33 +1948,6 @@
     {
       "attorneys": null,
       "categories": null,
-      "caseId": "353532",
-      "caseUrl": "/c/courts/coa/case/353532",
-      "courtOfAppealsCaseStatus": null,
-      "courtOfAppealsCaseNumber": null,
-      "courtOfAppealsParties": null,
-      "courts": [
-        "GENESEE CIRCUIT COURT"
-      ],
-      "decision": "L/Ct Judgment/Order Affirmed",
-      "displayDate": "2022-01-06T00:00:00+00:00",
-      "documentUrl": "/48da76/siteassets/case-documents/uploads/opinions/final/coa/20220106_c353532_36_353532.opn.pdf",
-      "hasOpinions": false,
-      "hasOrders": false,
-      "isCourtOfAppealsCase": true,
-      "isCourtOfAppealsDocument": true,
-      "isFinalOpinion": false,
-      "isPublished": false,
-      "isSupremeCourtCase": false,
-      "isSupremeCourtDocument": false,
-      "supremeCourtCaseNumber": null,
-      "supremeCourtParties": null,
-      "supremeCourtCaseStatus": null,
-      "title": "COA 353532 PEOPLE OF MI V JOSHUA RAYMOND FERRIS Opinion - Per Curiam - Unpublished 01/05/2022"
-    },
-    {
-      "attorneys": null,
-      "categories": null,
       "caseId": "354997",
       "caseUrl": "/c/courts/coa/case/354997",
       "courtOfAppealsCaseStatus": null,
@@ -2002,33 +1975,6 @@
     {
       "attorneys": null,
       "categories": null,
-      "caseId": "357688",
-      "caseUrl": "/c/courts/coa/case/357688",
-      "courtOfAppealsCaseStatus": null,
-      "courtOfAppealsCaseNumber": null,
-      "courtOfAppealsParties": null,
-      "courts": [
-        "JACKSON CIRCUIT COURT"
-      ],
-      "decision": "Reversed and Remanded",
-      "displayDate": "2022-01-06T00:00:00+00:00",
-      "documentUrl": "/48da52/siteassets/case-documents/uploads/opinions/final/coa/20220106_c357688_39_357688.opn.pdf",
-      "hasOpinions": false,
-      "hasOrders": false,
-      "isCourtOfAppealsCase": true,
-      "isCourtOfAppealsDocument": true,
-      "isFinalOpinion": false,
-      "isPublished": false,
-      "isSupremeCourtCase": false,
-      "isSupremeCourtDocument": false,
-      "supremeCourtCaseNumber": null,
-      "supremeCourtParties": null,
-      "supremeCourtCaseStatus": null,
-      "title": "20220106_C357688_39_357688.OPN"
-    },
-    {
-      "attorneys": null,
-      "categories": null,
       "caseId": "349557",
       "caseUrl": "/c/courts/coa/case/349557",
       "courtOfAppealsCaseStatus": null,
@@ -2052,6 +1998,60 @@
       "supremeCourtParties": null,
       "supremeCourtCaseStatus": null,
       "title": "COA 349557 DELORES PROCTOR V SAGINAW COUNTY BOARD OF COMMISSIONERS Opinion - Authored - Published 01/05/2022"
+    },
+    {
+      "attorneys": null,
+      "categories": null,
+      "caseId": "353532",
+      "caseUrl": "/c/courts/coa/case/353532",
+      "courtOfAppealsCaseStatus": null,
+      "courtOfAppealsCaseNumber": null,
+      "courtOfAppealsParties": null,
+      "courts": [
+        "GENESEE CIRCUIT COURT"
+      ],
+      "decision": "L/Ct Judgment/Order Affirmed",
+      "displayDate": "2022-01-06T00:00:00+00:00",
+      "documentUrl": "/48da76/siteassets/case-documents/uploads/opinions/final/coa/20220106_c353532_36_353532.opn.pdf",
+      "hasOpinions": false,
+      "hasOrders": false,
+      "isCourtOfAppealsCase": true,
+      "isCourtOfAppealsDocument": true,
+      "isFinalOpinion": false,
+      "isPublished": false,
+      "isSupremeCourtCase": false,
+      "isSupremeCourtDocument": false,
+      "supremeCourtCaseNumber": null,
+      "supremeCourtParties": null,
+      "supremeCourtCaseStatus": null,
+      "title": "COA 353532 PEOPLE OF MI V JOSHUA RAYMOND FERRIS Opinion - Per Curiam - Unpublished 01/05/2022"
+    },
+    {
+      "attorneys": null,
+      "categories": null,
+      "caseId": "357688",
+      "caseUrl": "/c/courts/coa/case/357688",
+      "courtOfAppealsCaseStatus": null,
+      "courtOfAppealsCaseNumber": null,
+      "courtOfAppealsParties": null,
+      "courts": [
+        "JACKSON CIRCUIT COURT"
+      ],
+      "decision": "Reversed and Remanded",
+      "displayDate": "2022-01-06T00:00:00+00:00",
+      "documentUrl": "/48da52/siteassets/case-documents/uploads/opinions/final/coa/20220106_c357688_39_357688.opn.pdf",
+      "hasOpinions": false,
+      "hasOrders": false,
+      "isCourtOfAppealsCase": true,
+      "isCourtOfAppealsDocument": true,
+      "isFinalOpinion": false,
+      "isPublished": false,
+      "isSupremeCourtCase": false,
+      "isSupremeCourtDocument": false,
+      "supremeCourtCaseNumber": null,
+      "supremeCourtParties": null,
+      "supremeCourtCaseStatus": null,
+      "title": "20220106_C357688_39_357688.OPN"
     },
     {
       "attorneys": null,
@@ -2218,33 +2218,6 @@
     {
       "attorneys": null,
       "categories": null,
-      "caseId": "356976",
-      "caseUrl": "/c/courts/coa/case/356976",
-      "courtOfAppealsCaseStatus": null,
-      "courtOfAppealsCaseNumber": null,
-      "courtOfAppealsParties": null,
-      "courts": [
-        "DELTA JUVENILE DIVISION"
-      ],
-      "decision": "L/Ct Judgment/Order Affirmed",
-      "displayDate": "2022-01-06T00:00:00+00:00",
-      "documentUrl": "/48da63/siteassets/case-documents/uploads/opinions/final/coa/20220106_c356976_29_356976.opn.pdf",
-      "hasOpinions": false,
-      "hasOrders": false,
-      "isCourtOfAppealsCase": true,
-      "isCourtOfAppealsDocument": true,
-      "isFinalOpinion": false,
-      "isPublished": false,
-      "isSupremeCourtCase": false,
-      "isSupremeCourtDocument": false,
-      "supremeCourtCaseNumber": null,
-      "supremeCourtParties": null,
-      "supremeCourtCaseStatus": null,
-      "title": "COA 356976 IN RE M FOSTER MINOR Opinion - Per Curiam - Unpublished 01/05/2022"
-    },
-    {
-      "attorneys": null,
-      "categories": null,
       "caseId": "351635",
       "caseUrl": "/c/courts/coa/case/351635",
       "courtOfAppealsCaseStatus": null,
@@ -2295,6 +2268,33 @@
       "supremeCourtParties": null,
       "supremeCourtCaseStatus": null,
       "title": "COA 354708 MR SUNSHINE V DETROIT INSTITUTE OF ART BOARD OF DIRECTORS Opinion - Per Curiam - Unpublished 01/05/2022"
+    },
+    {
+      "attorneys": null,
+      "categories": null,
+      "caseId": "356976",
+      "caseUrl": "/c/courts/coa/case/356976",
+      "courtOfAppealsCaseStatus": null,
+      "courtOfAppealsCaseNumber": null,
+      "courtOfAppealsParties": null,
+      "courts": [
+        "DELTA JUVENILE DIVISION"
+      ],
+      "decision": "L/Ct Judgment/Order Affirmed",
+      "displayDate": "2022-01-06T00:00:00+00:00",
+      "documentUrl": "/48da63/siteassets/case-documents/uploads/opinions/final/coa/20220106_c356976_29_356976.opn.pdf",
+      "hasOpinions": false,
+      "hasOrders": false,
+      "isCourtOfAppealsCase": true,
+      "isCourtOfAppealsDocument": true,
+      "isFinalOpinion": false,
+      "isPublished": false,
+      "isSupremeCourtCase": false,
+      "isSupremeCourtDocument": false,
+      "supremeCourtCaseNumber": null,
+      "supremeCourtParties": null,
+      "supremeCourtCaseStatus": null,
+      "title": "COA 356976 IN RE M FOSTER MINOR Opinion - Per Curiam - Unpublished 01/05/2022"
     },
     {
       "attorneys": null,
@@ -2737,7 +2737,7 @@
     "Newest",
     "Oldest"
   ],
-  "totalPages": 713,
-  "totalResults": 71280,
+  "totalPages": 20,
+  "totalResults": 1919,
   "type": ""
 }
