@@ -38,7 +38,7 @@ class Site(mich.Site):
         :param title: The JSON API title string
         :return: The status of the case
         """
-        if " Published" in title:
+        if "Published" in title:
             status = "Published"
         else:
             status = "Unpublished"
