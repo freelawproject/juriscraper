@@ -22,16 +22,21 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = "https://www.courts.michigan.gov/api/CaseSearch/SearchCaseOpinions?resource=supreme-court-opinion&aAppellateCourt=Supreme%20Court&searchQuery=&sortOrder=Newest&page=1&pageSize=100"
         self.back_scrape_iterable = list(range(1, 99))
+        # The court's web site rejects request with the user agent "Juriscraper"
         self.request["headers"] = {"User-Agent": ""}
-        self.title_re = (
-            r"(MSC|COA) (?P<docket>\d+)\s+(?P<name>.+)\s+(Opinion|Order)"
-        )
         self.status = "Published"
         self.cases = []
 
     def _process_html(self) -> None:
+        """Process HTML
+        Iterate over each opinion item in the JSON response.
+        If an item's title does not have a docket and the case's name, skip it.
+
+        Return: None
+        """
+        title_re = r"MSC (?P<docket>\d+)\s+(?P<name>.+)\s+(Opinion|Order)"
         for item in self.html["searchItems"]:
-            match = re.search(self.title_re, item["title"])
+            match = re.search(title_re, item["title"])
             if not match:
                 logger.warning(
                     f"Opinion '{item['title']}' has no docket and case name."
@@ -56,12 +61,22 @@ class Site(OpinionSiteLinear):
             )
 
     def get_name(self, name_raw: str) -> str:
+        """Get case's name
+        Convert to title case and correct the shortened version for "People of Michigan"
+
+        Return: String
+        """
         name = titlecase(name_raw)
         if "People of Mi " in name:
             name = name.replace("People of Mi ", "People of Michigan ")
         return name
 
     def get_lower_courts(self, courts: List[str]) -> str:
+        """Get case's lower courts
+        Get in a single line the case's lower courts array
+
+        Return: String
+        """
         if courts:
             lower_courts = ", ".join(courts).lstrip(", ")
         else:

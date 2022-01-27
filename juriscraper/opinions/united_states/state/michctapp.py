@@ -24,9 +24,16 @@ class Site(mich.Site):
         self.back_scrape_iterable = list(range(1, 999))
 
     def _process_html(self) -> None:
+        """Process HTML
+        Iterate over each opinion item in the JSON response.
+        If an item's title does not have a docket and the case's name, skip it.
+
+        Return: None
+        """
+        title_re = r"COA (?P<docket>\d+)\s+(?P<name>.+)\s+Opinion"
         for item in self.html["searchItems"]:
             title = item["title"]
-            match = re.search(self.title_re, title)
+            match = re.search(title_re, title)
             if not match:
                 logger.warning(
                     f"Opinion '{title}' has no docket and case name."
@@ -53,7 +60,17 @@ class Site(mich.Site):
             )
 
     def get_status(self, title: str) -> str:
-        if " Published" in title:
+        """Get opinion's status
+        If the title's of an opinion includes the word "Published", then the document has that precential status. Unpublished documents include the word "Unpublished" or omit the status in the title.
+        Examples:
+            - "COA 353302 PEOPLE OF MI V DWIGHT T SAMUELS Opinion - Authored - Published 12/27/2021"
+            - "COA 356839 IN RE VARNADO MINORS Opinion - Per Curiam - Unpublished 12/27/2021"
+            - "COA 354223 C LOTUS SMITH V HENRY FORD HEALTH SYSTEM Opinion - Concurrence 12/27/2021"
+            - "COA 356970 P IN RE JAMES YANG Opinion - Partial Concurrence/Dissent 12/27/2021"
+
+        Return: String
+        """
+        if "Published" in title:
             status = "Published"
         else:
             status = "Unpublished"
