@@ -62,7 +62,7 @@ class Site(OpinionSiteLinear):
                     "docket": docket,
                     "name": name,
                     "url": url,
-                    "lower_courts": self.get_lower_courts(item["courts"]),
+                    "lower_court": self.get_lower_courts(item["courts"]),
                     "title": item["title"],
                 }
             )
