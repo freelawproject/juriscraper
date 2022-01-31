@@ -69,13 +69,13 @@ class Site(OpinionSiteLinear):
         for case in self.cases:
             if case["citation"]:
                 case["name"] = re.sub(
-                    fr"\(?\s?{case['citation']}\s?\)?",
+                    rf"\(?\s?{case['citation']}\s?\)?",
                     "",
                     case["name"],
                 )
             if case["parallel_citation"]:
                 case["name"] = re.sub(
-                    fr"\(?\s?{case['parallel_citation']}\s?\)?",
+                    rf"\(?\s?{case['parallel_citation']}\s?\)?",
                     "",
                     case["name"],
                 )
