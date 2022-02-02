@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.4.8 - 2022-02-02**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Fixes for CGCCA, Conn, Conn App Ct.  Added pacer case_queries examples
+
+## Past
+
 **2.4.7 - 2022-01-21**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - Fix tax court. Fixes for Illinois Supreme and Illinois Appeals.
-
-## Past
 
 **2.4.6 - 2022-01-19**
 
