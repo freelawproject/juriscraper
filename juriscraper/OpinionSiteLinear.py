@@ -73,3 +73,17 @@ class OpinionSiteLinear(OpinionSite):
 
     def _get_lower_courts(self):
         return self._get_optional_field_by_id("lower_court")
+
+    def _get_dispositions(self):
+        return self._get_optional_field_by_id("disposition")
+
+    def _get_divisions(self):
+        # Follows a design similar to _get_precedential_statuses(self)
+        # First, check if a singular 'division' is defined in init, useful
+        # if all cases on the page come from the same division
+        try:
+            return [self.division] * len(self.cases)
+        except AttributeError:
+            pass
+        # Next, try to use 'division' values set in cases dictionary
+        return self._get_optional_field_by_id("division")
