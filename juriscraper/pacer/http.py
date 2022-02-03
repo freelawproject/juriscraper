@@ -279,8 +279,13 @@ class PacerSession(requests.Session):
             timeout=60,
             data=json.dumps(data),
         )
+        try:
+            response_json = login_post_r.json()
+        except json.JSONDecodeError:
+            message = "Unable to get a valid JSON object to parse the PACER login reply."
+            logger.warning(message)
+            raise PacerLoginException(message)
 
-        response_json = login_post_r.json()
         # 'loginResult': '0', user successfully logged; '1', user not logged
         if (
             response_json.get("loginResult") == None
