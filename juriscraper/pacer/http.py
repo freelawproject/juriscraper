@@ -280,7 +280,14 @@ class PacerSession(requests.Session):
             data=json.dumps(data),
         )
 
-        response_json = login_post_r.json()
+        if login_post_r.status_code != requests.codes.ok:
+            message = f"Unable connect to PACER site: '{login_post_r.status_code}: {login_post_r.reason}'"
+            logger.warning(message)
+            raise PacerLoginException(message)
+            
+        # Continue with login when response code is "200: OK"            
+        response_json = login_post_r.json()            
+
         # 'loginResult': '0', user successfully logged; '1', user not logged
         if (
             response_json.get("loginResult") == None
