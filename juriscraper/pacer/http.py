@@ -279,10 +279,11 @@ class PacerSession(requests.Session):
             timeout=60,
             data=json.dumps(data),
         )
-        try:
+        # Continue with login when response code is "200: OK"
+        if login_post_r.status_code == requests.codes.ok:
             response_json = login_post_r.json()
-        except json.JSONDecodeError:
-            message = "Unable to get a valid JSON object to parse the PACER login reply."
+        else:
+            message = f"Unable connect to PACER site: '{login_post_r.status_code}: {login_post_r.reason}'"
             logger.warning(message)
             raise PacerLoginException(message)
 
