@@ -37,14 +37,17 @@ class Site(OpinionSiteLinear):
                 .strip()
             )
             cite = row.xpath(".//span[@class='citation']")
-            metadata = row.xpath(".//span[@class='subMetadata']/text()")
+            metadata = row.xpath(".//div[@class='subMetadata']/span/text()")
             if cite:
                 citation = cite[0].text_content().strip()
             else:
                 citation = ""
             if metadata:
+
                 status = (
-                    "Published" if "Reported" in metadata else "Unpublished"
+                    "Published"
+                    if "Reported" in metadata[-1]
+                    else "Unpublished"
                 )
             else:
                 status = "Unpublished"
