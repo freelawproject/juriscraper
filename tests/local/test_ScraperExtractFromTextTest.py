@@ -30,6 +30,18 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.nm": [
+            (
+                """Opinion Number: _______________ Filing Date: January 10, 2022\nNO. S-1-SC-38247\nCITIZENS FOR FAIR RATES""",
+                {"OpinionCluster": {"docket_number": "S-1-SC-38247"}},
+            )
+        ],
+        "juriscraper.opinions.united_states.state.nmctapp": [
+            (
+                """Opinion Number: _______________ Filing Date: January 10, 2022\nNo. A-1-CA-39059\nCITIZENS FOR FAIR RATES""",
+                {"OpinionCluster": {"docket_number": "A-1-CA-39059"}},
+            )
+        ],
     }
 
     def test_extract_from_text(self):

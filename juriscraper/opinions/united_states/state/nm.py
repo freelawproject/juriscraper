@@ -1,133 +1,82 @@
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+import datetime
+import re
+from typing import Any, Dict
+
+from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
-    """This cour's website is implemented by Decisia, a software
-    that has built-in anti-bot detection. If you make too many
-    requests in rapid succession, the site will render a captcha
-    page instead of rendering the real page content. Since the
-    docket numbers for unpublished opinions are not published on
-    the main results page (but on sub-info pages), we may (likely)
-    need to issues multiple sub-requests for each crawl to retrieve
-    the docket info for unpublished opinions.
+class Site(OpinionSiteLinear):
+    """This site has an artificial limit of 50/1 minute and 100/5 minutes.
 
-    Given the above, we need to track and limit the number of
-    sub-requests we make in order to prevent triggering the
-    anti-bot detection, which would trigger the captcha and
-    crash our scraping.
+    To stay under that cap we are going to just request the first 10 opinions.  Judging on the number of opinions
+    filed in each court we should be fine.
 
-    If we ever wanted to implement a back scraper for this court,
-    we'd likely need to create a separate class to handle it. In order
-    to do this, we'd need to use the 'Advanced Search' mechanism to
-    find all results. The results page will render 25 results. But,
-    in a browser, when you scroll down, more results populate dynamically
-    on the page via javascript.  So, we'd need to hit the page via a
-    phantomjs webdriver and keep loading results. To make things more
-    complicated, we'd also need to batch our (sub) requests in order
-    to prevent triggering the anti-bot detection. I've testing sleeping
-    for 1 minute every 40 requests, and that seems to work. Consequently,
-    the back scraper would take a very very long time to run, but if we
-    needed to do it, it can probably be done with the above method.
+    Additionally, we moved docket number capture to PDF extraction, to limit the number of requests.
     """
-
-    # fetch no more than 20 docket numbers for non-published opinions (see above)
-    SUB_REQUEST_LIMIT = 20
-
-    # The url query parameter below is required to actually render the data.
-    # For whatever reason, the main page (url without IFRAME_QUERY) loads itself
-    # with IFRAME_QUERY into an iframe to render the results. Don't ask why.
-    IFRAME = "iframe=true"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.court_id = self.__module__
-        self.url = (
-            f"https://nmonesource.com/nmos/nmsc/en/nav_date.do?{self.IFRAME}"
+        self.year = datetime.date.today().year
+        self.url = f"https://nmonesource.com/nmos/nmsc/en/{self.year}/nav_date.do?iframe=true"
+
+    def _process_html(self):
+        rows = self.html.xpath(
+            ".//li[contains(./@class, 'list-item-expanded')]"
         )
-        self.cases = []
-
-    def _download(self, request_dict={}):
-        self.request_dict = request_dict
-        html = super()._download(self.request_dict)
-        self.extract_cases(html)
-        return html
-
-    def extract_cases(self, html):
-        sub_request_count = 0
-        sub_page_docket_path = '//tr[contains(./td[@class="label"]/text(), "Docket")]/td[@class="metadata"]'
-        for record in html.xpath('//div[@class="documentList"]//li'):
-            url = record.xpath('.//div[@class="documents"]/a/@href')[0]
-            info = record.xpath('.//div[@class="subinfo"]')[0]
-            date_string = info.xpath('.//span[@class="publicationDate"]')[
-                0
-            ].text_content()
-            court_status_string = info.xpath('.//div[@class="subMetadata"]')[
-                0
-            ].text_content()
-            status = (
-                "Unpublished"
-                if "unreported" in court_status_string.lower()
-                else "Published"
+        for row in rows:
+            url = row.xpath(
+                ".//a[contains(@title, 'Download the PDF version')]/@href"
+            )[0]
+            name = (
+                row.xpath(".//span[@class='title']")[0].text_content().strip()
             )
-            anchor = info.xpath('.//span[@class="title"]/a')[0]
-            name = anchor.text_content()
-            citation = info.xpath('.//span[@class="citation"]')
-            if citation:
-                # the docket is displayed on the main results page (published opinion)
-                docket = citation[0].text_content()
+            date = (
+                row.xpath(".//span[@class='publicationDate']")[0]
+                .text_content()
+                .strip()
+            )
+            cite = row.xpath(".//span[@class='citation']")
+            metadata = row.xpath(".//div[@class='subMetadata']/span/text()")
+            if cite:
+                citation = cite[0].text_content().strip()
             else:
-                if sub_request_count >= self.SUB_REQUEST_LIMIT:
-                    # in order to avoid anti-bot detection, only don't fetch
-                    # too many docket numbers for un-published opinions
-                    continue
-                if self.test_mode_enabled():
-                    # avoid hitting network during test
-                    docket = "test-docket-placeholder"
-                else:
-                    # find the docket from the sub page (unpublished opinion)
-                    self.url = f"{anchor.attrib['href']}?{self.IFRAME}"
-                    logger.info(
-                        "%s: searching for docket on sub page %s"
-                        % (self.court_id, self.url)
-                    )
-                    sub_page = super()._download(self.request_dict)
-                    sub_request_count += 1
-                    cell = sub_page.xpath(sub_page_docket_path)
-                    if not cell:
-                        # if no docket found on sub page, move on to the next opinion
-                        logger.info(
-                            'no docket found on sub page, skipping opinion "%s"'
-                            % name
-                        )
-                        continue
-                    docket = cell[0].text_content().strip()
-                    logger.info(
-                        'found docket "%s" on sub page for opinion "%s"'
-                        % (docket, name)
-                    )
+                citation = ""
+            if metadata:
+
+                status = (
+                    "Published"
+                    if "Reported" in metadata[-1]
+                    else "Unpublished"
+                )
+            else:
+                status = "Unpublished"
+
+            if len(self.cases) >= 10:
+                # Limit to max of 10 cases per crawl to stay under limit.
+                continue
+
             self.cases.append(
                 {
-                    "name": name,
+                    "date": date,
+                    "docket": "",
+                    "name": titlecase(name),
+                    "citation": citation,
                     "url": url,
-                    "docket": docket,
-                    "date": convert_date_string(date_string),
                     "status": status,
                 }
             )
 
-    def _get_download_urls(self):
-        return [case["url"] for case in self.cases]
+    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+        """Pass scraped text into function and return data as a dictionary
 
-    def _get_case_names(self):
-        return [case["name"] for case in self.cases]
-
-    def _get_case_dates(self):
-        return [case["date"] for case in self.cases]
-
-    def _get_precedential_statuses(self):
-        return [case["status"] for case in self.cases]
-
-    def _get_docket_numbers(self):
-        return [case["docket"] for case in self.cases]
+        :param scraped_text: Text of scraped content
+        :return: metadata
+        """
+        docket_number = re.findall(r"N[oO]\.\s(.*)", scraped_text)[0]
+        metadata = {
+            "OpinionCluster": {
+                "docket_number": docket_number,
+            },
+        }
+        return metadata
