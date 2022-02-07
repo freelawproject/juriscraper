@@ -6,5 +6,5 @@ class Site(nm.Site):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = (
-            f"https://nmonesource.com/nmos/nmca/en/nav_date.do?{self.IFRAME}"
+            f"https://nmonesource.com/nmos/nmca/en/{self.year}/nav_date.do"
         )
