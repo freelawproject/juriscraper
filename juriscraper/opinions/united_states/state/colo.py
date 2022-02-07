@@ -13,6 +13,7 @@ History:
 
 import re
 
+from juriscraper.lib.string_utils import normalize_dashes
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -23,25 +24,34 @@ class Site(OpinionSiteLinear):
         self.url = "https://www.courts.state.co.us/Courts/Supreme_Court/Case_Announcements/"
 
     def _process_html(self) -> None:
-
         date = self.html.xpath(
             ".//p[contains(text(), 'case announcements for')]/text()"
-        )[0]
-        date_str = (
-            re.findall(r"case announcements for (.*) are now", date)[0]
-            .split(",", 1)[1]
-            .strip()
         )
-        for item in self.html.xpath(
-            ".//a[contains(@href, 'Supreme_Court/Opinions/')]"
-        ):
-            docket, name = item.text_content().split(" ", 1)
-            self.cases.append(
-                {
-                    "date": date_str,
-                    "docket": docket,
-                    "name": name,
-                    "url": item.attrib["href"],
-                    "status": "Published",
-                }
+        if date:
+            date_str = (
+                re.findall(r"case announcements for (.*) are now", date[0])[0]
+                .split(",", 1)[1]
+                .strip()
             )
+            for item in self.html.xpath(
+                ".//a[contains(@href, 'Supreme_Court/Opinions/')]"
+            ):
+                link_text = normalize_dashes(item.text_content().strip())
+                try:
+                    citation, link_text = link_text.split("-", 1)
+                except ValueError:
+                    citation = ""
+                    link_text = link_text
+                docket, name = link_text.split(" ", 1)
+                if not docket:
+                    docket, name = link_text.split(",", 1)
+                self.cases.append(
+                    {
+                        "date": date_str,
+                        "docket": docket,
+                        "name": name,
+                        "url": item.attrib["href"],
+                        "status": "Published",
+                        "citation": citation,
+                    }
+                )
