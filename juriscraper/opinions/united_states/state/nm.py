@@ -7,44 +7,20 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    """This court's website is implemented by Decisia, a software
-    that has built-in anti-bot detection. If you make too many
-    requests in rapid succession, the site will render a captcha
-    page instead of rendering the real page content. Since the
-    docket numbers for unpublished opinions are not published on
-    the main results page (but on sub-info pages), we may (likely)
-    need to issues multiple sub-requests for each crawl to retrieve
-    the docket info for unpublished opinions.
+    """This site has an artificial limit of 50/1 minute and 100/5 minutes.
 
-    Given the above, we need to track and limit the number of
-    sub-requests we make in order to prevent triggering the
-    anti-bot detection, which would trigger the captcha and
-    crash our scraping.
+    To stay under that cap we are going to just request the first 10 opinions.  Judging on the number of opinions
+    filed in each court we should be fine.
 
-    If we ever wanted to implement a back scraper for this court,
-    we'd likely need to create a separate class to handle it. In order
-    to do this, we'd need to use the 'Advanced Search' mechanism to
-    find all results. The results page will render 25 results. But,
-    in a browser, when you scroll down, more results populate dynamically
-    on the page via javascript.  So, we'd need to hit the page via a
-    phantomjs webdriver and keep loading results. To make things more
-    complicated, we'd also need to batch our (sub) requests in order
-    to prevent triggering the anti-bot detection. I've testing sleeping
-    for 1 minute every 40 requests, and that seems to work. Consequently,
-    the back scraper would take a very very long time to run, but if we
-    needed to do it, it can probably be done with the above method.
+    Additionally, we moved docket number capture to PDF extraction, to limit the number of requests.
     """
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.year = datetime.date.today().year
         self.url = f"https://nmonesource.com/nmos/nmsc/en/{self.year}/nav_date.do?iframe=true"
-        self.rate_limit = "100/5m"
-        self.rate_group = "nm"
-        self.request_count = 0
 
     def _process_html(self):
-        self.request_count += 1
         rows = self.html.xpath(
             ".//li[contains(./@class, 'list-item-expanded')]"
         )
@@ -72,6 +48,11 @@ class Site(OpinionSiteLinear):
                 )
             else:
                 status = "Unpublished"
+
+            if len(self.cases) >= 10:
+                # Limit to max of 10 cases per crawl to stay under limit.
+                continue
+
             self.cases.append(
                 {
                     "date": date,

@@ -54,9 +54,6 @@ class AbstractSite:
             "status": None,
             "url": None,
         }
-        self.request_count = None
-        self.rate_limit = None
-        self.rate_group = None
 
         # Sub-classed metadata
         self.court_id = None
