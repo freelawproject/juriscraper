@@ -42,6 +42,27 @@ class ScraperExtractFromText(unittest.TestCase):
                 {"OpinionCluster": {"docket_number": "A-1-CA-39059"}},
             )
         ],
+        "juriscraper.opinions.united_states.state.ark": [
+            (
+                """HONORABLE JODI RAINES DENNIS,\nCite as 2022 Ark. 19\nSUPREME COURT OF ARKANSAS No. CV-21-173\n  ARKANSAS DEPARTMENT OF CORRECTION""",
+                {"OpinionCluster": {"docket_number": "CV-21-173"}},
+            ),
+            # Some opinions don't have dockets because Arkansas publishes important announcements.
+            (
+                """Cite as 2022 Ark. 14\nSUPREME COURT OF ARKANSAS Opinion Delivered: January 27, 2022""",
+                {"OpinionCluster": {"docket_number": ""}},
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.arkctapp": [
+            (
+                """Cite as 2022 Ark. App. 51\nARKANSAS COURT OF APPEALS\nDIVISION II No. CV-20-579\n  ADDAM MAXWELL V.\nLORI MAXWELL""",
+                {"OpinionCluster": {"docket_number": "CV-20-579"}},
+            ),
+            (
+                """Cite as 2022 Ark. App. 43\nARKANSAS COURT OF APPEALS\nDIVISION IV No. E-21-215\n  FRED JACKSON""",
+                {"OpinionCluster": {"docket_number": "E-21-215"}},
+            ),
+        ],
     }
 
     def test_extract_from_text(self):
