@@ -4,6 +4,7 @@ Court Short Name: Colo. Ct. App.
 
 History:
     - 2022-01-31: Updated by William E. Palin
+    - 2022-02-09: Status verification and cases names cleaning, @satsuki-chan
 """
 
 from juriscraper.lib.string_utils import clean_string, convert_date_string

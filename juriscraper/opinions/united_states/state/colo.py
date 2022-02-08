@@ -5,10 +5,11 @@ Author: Philip Ardery
 Reviewer: mlr
 Date created: 2016-06-03
 Contact: Email "Internet and Technology" staff listed at http://www.cobar.org/staff
-         they usually fix issues without resonding to the emails directly. You can
-         also try submitting the form here: http://www.cobar.org/contact
+    they usually fix issues without resonding to the emails directly. You can
+    also try submitting the form here: http://www.cobar.org/contact
 History:
     - 2022-01-31: Updated by William E. Palin
+    - 2022-02-09: Date validation and regexp. improovements, @satsuki-chan
 """
 
 import re
@@ -37,19 +38,15 @@ class Site(OpinionSiteLinear):
                 ".//a[contains(@href, 'Supreme_Court/Opinions/')]"
             ):
                 link_text = normalize_dashes(item.text_content().strip())
-                cite_match = re.findall(r"\d{4} CO \d+", link_text)
-                docket_match = re.findall(r"\d{2,}\w{2}\d+", link_text)
-                if cite_match:
-                    citation = cite_match[0]
-                    link_text = link_text.replace(citation, "")
-                else:
-                    citation = ""
-                if docket_match:
-                    docket = docket_match[0]
-                    link_text = link_text.replace(docket, "")
-                else:
-                    docket = ""
-                name = link_text.lstrip(",- ")
+                cite_match = re.findall(r"(\d{4} CO \d+\w?)", link_text)
+                docket_match = re.findall(r"\d+[A-Z]+\d+", link_text)
+                docket = docket_match[0] if docket_match else ""
+                citation = cite_match[0] if cite_match else ""
+                name = (
+                    link_text.replace(docket, "")
+                    .replace(citation, "")
+                    .lstrip(",- ")
+                )
                 self.cases.append(
                     {
                         "date": date_str,
