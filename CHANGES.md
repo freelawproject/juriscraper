@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.4.10 - 2022-02-08**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Small fix for NM
+
+## Past
+
 **2.4.9 - 2022-02-08**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - Updates Ark, ArkCtApp, NM, NMCtApp to self throttle. Add login HTTP validation for PACER
-
-## Past
 
 **2.4.8 - 2022-02-02**
 
