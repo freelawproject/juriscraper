@@ -24,9 +24,6 @@ class Site(OpinionSiteLinear):
         self.cite_regex = r"\d{2,4} Ark\. \d+"
 
     def _process_html(self) -> None:
-
-        print(self.request["response"].text)
-
         feed = feedparser.parse(self.request["response"].content)
         for item in feed["entries"]:
             if not re.findall(self.cite_regex, item["title"], re.I | re.M):
