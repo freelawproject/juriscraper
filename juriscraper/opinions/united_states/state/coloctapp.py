@@ -6,7 +6,7 @@ History:
     - 2022-01-31: Updated by William E. Palin
 """
 
-from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.string_utils import clean_string, convert_date_string
 from juriscraper.opinions.united_states.state import colo
 
 
@@ -34,12 +34,14 @@ class Site(colo.Site):
         date = rows[0].text_content()
         date_year = convert_date_string(date)
 
-        if "P U B L I S H E D  O P I N I O N S" != rows[1].text_content():
+        if "P U B L I S H E D O P I N I O N S" != clean_string(
+            rows[1].text_content()
+        ):
             return {}
         for row in rows[2:]:
-            if row.text_content() == "U N P U B L I S H E D  O P I N I O N S":
+            row_text = clean_string(row.text_content().strip())
+            if row_text == "U N P U B L I S H E D O P I N I O N S":
                 break
-            row_text = row.text_content().strip()
             docket, name = row_text.split(" ", 1)
             self.cases.append(
                 {
