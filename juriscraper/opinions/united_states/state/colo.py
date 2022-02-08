@@ -37,14 +37,19 @@ class Site(OpinionSiteLinear):
                 ".//a[contains(@href, 'Supreme_Court/Opinions/')]"
             ):
                 link_text = normalize_dashes(item.text_content().strip())
-                try:
-                    citation, link_text = link_text.split("-", 1)
-                except ValueError:
+                cite_match = re.findall(r"\d{4} CO \d+", link_text)
+                docket_match = re.findall(r"\d{2,}\w{2}\d+", link_text)
+                if cite_match:
+                    citation = cite_match[0]
+                    link_text = link_text.replace(citation, "")
+                else:
                     citation = ""
-                    link_text = link_text
-                docket, name = link_text.split(" ", 1)
-                if not docket:
-                    docket, name = link_text.split(",", 1)
+                if docket_match:
+                    docket = docket_match[0]
+                    link_text = link_text.replace(docket, "")
+                else:
+                    docket = ""
+                name = link_text.lstrip(",- ")
                 self.cases.append(
                     {
                         "date": date_str,
