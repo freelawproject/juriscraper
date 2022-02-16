@@ -67,6 +67,7 @@ class ScraperExtractFromText(unittest.TestCase):
             (
                 """                 The Supreme Court of the State of Colorado\n                 2 East 14th Avenue • Denver, Colorado 80203\n\n                                   2020 CO 6\n\n                      Supreme Court Case No. 20SC758\n                    Certiorari to the Colorado Court of Appeals\n                      Court of Appeals Case No. 18CA38\n""",
                 {
+                    "OpinionCluster": {"docket_number": "20SC758"},
                     "Citation": {
                         "volume": "2020",
                         "reporter": "CO",

@@ -69,16 +69,19 @@ class Site(OpinionSiteLinear):
         :param scraped_text: Text of scraped content
         :return: metadata
         """
-        match = re.findall(r"\d{4}\s*CO\s*\d+", scraped_text)
+        cite_match = re.findall(r"\d{4}\s*CO\s*\d+", scraped_text)
+        docket_match = re.findall(r"\d{2}S[A|C]\d+", scraped_text)
         metadata = {}
-        if match:
-            volume, page = match[0].split("CO")
-            metadata = {
-                "Citation": {
-                    "volume": volume.strip(),
-                    "reporter": "CO",
-                    "page": page.strip(),
-                    "type": 2,
-                },
+        if cite_match:
+            volume, page = cite_match[0].split("CO")
+            metadata["Citation"] = {
+                "volume": volume.strip(),
+                "reporter": "CO",
+                "page": page.strip(),
+                "type": 2,
+            }
+        if docket_match:
+            metadata["OpinionCluster"] = {
+                "docket_number": docket_match[0],
             }
         return metadata
