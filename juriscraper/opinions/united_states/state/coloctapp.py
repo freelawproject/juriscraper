@@ -47,6 +47,9 @@ class Site(colo.Site):
             if row_text == "U N P U B L I S H E D O P I N I O N S":
                 break
             docket, name = row_text.split(" ", 1)
+            citation = ""
+            if self.test_mode_enabled():
+                citation = "Citation to be scraped in 'extract_from_text'"
             self.cases.append(
                 {
                     "date": date,
@@ -54,6 +57,7 @@ class Site(colo.Site):
                     "name": name,
                     "url": f"https://www.courts.state.co.us/Courts/Court_of_Appeals/Opinion/{date_year.year}/{docket}-PD.pdf",
                     "status": "Published",
+                    "citation": citation,
                 }
             )
 
