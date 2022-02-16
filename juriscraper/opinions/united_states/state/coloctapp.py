@@ -4,8 +4,11 @@ Court Short Name: Colo. Ct. App.
 
 History:
     - 2022-01-31: Updated by William E. Palin
-    - 2022-02-09: Status verification and cases names cleaning, @satsuki-chan
+    - 2022-02-18: Status verification, cases name cleaning and extract_from_text, @satsuki-chan
 """
+
+import re
+from typing import Any, Dict
 
 from juriscraper.lib.string_utils import clean_string, convert_date_string
 from juriscraper.opinions.united_states.state import colo
@@ -53,3 +56,32 @@ class Site(colo.Site):
                     "status": "Published",
                 }
             )
+
+    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+        """Pass scraped text into function and return data as a dictionary
+        Notes for 'Citation':
+            - Reporter key for this court: 'COA'
+            - Type for a state: 2
+        :param scraped_text: Text of scraped content
+        :return: metadata
+        """
+        match_re = r"The.*SUMMARY.*?(?P<citation>\d{4}COA\d+).*?No\. (?P<docket>\d+CA\d+), (?P<headnotes>.*?)\n{2,}(?P<summary>.*?)COLORADO COURT OF APPEALS"
+        match = re.findall(match_re, scraped_text, re.M | re.S)
+        if not match:
+            metadata = {}
+        else:
+            volume, page = match[0][0].split("COA")
+            metadata = {
+                "OpinionCluster": {
+                    "docket_number": match[0][1],
+                    "headnotes": clean_string(match[0][2]),
+                    "summary": clean_string(match[0][3]),
+                },
+                "Citation": {
+                    "volume": volume,
+                    "reporter": "COA",
+                    "page": page,
+                    "type": 2,
+                },
+            }
+        return metadata
