@@ -40,9 +40,11 @@ class Site(OpinionSiteLinear):
             ):
                 link_text = normalize_dashes(item.text_content().strip())
                 cite_match = re.findall(r"(\d{2,4}\s*CO\s*\d+\w?)", link_text)
+                citation = cite_match[0] if cite_match else ""
+                if self.test_mode_enabled() and citation == "":
+                    citation = "Citation to be scraped in 'extract_from_text'"
                 docket_match = re.findall(r"\d+[A-Z]+\d{2,}", link_text)
                 docket = docket_match[0] if docket_match else ""
-                citation = cite_match[0] if cite_match else ""
                 name = (
                     link_text.replace(docket, "")
                     .replace(citation, "")
@@ -63,7 +65,7 @@ class Site(OpinionSiteLinear):
         """Pass scraped text into function and return data as a dictionary
         Notes for 'Citation':
             - Reporter key for this court: 'CO'
-            - Type for a state: 2
+            - Type for citations from state-based reporters in CourtListener: 2
         :param scraped_text: Text of scraped content
         :return: metadata
         """

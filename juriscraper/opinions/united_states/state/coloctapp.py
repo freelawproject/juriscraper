@@ -61,7 +61,7 @@ class Site(colo.Site):
         """Pass scraped text into function and return data as a dictionary
         Notes for 'Citation':
             - Reporter key for this court: 'COA'
-            - Type for a state: 2
+            - Type for citations from state-based reporters in CourtListener: 2
         :param scraped_text: Text of scraped content
         :return: metadata
         """
