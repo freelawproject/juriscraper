@@ -9,8 +9,6 @@ class ScraperExtractFromText(unittest.TestCase):
     without a full integration test.
     """
 
-    # To avoid AssertionError when comparing example results for Colorado Appellate
-    maxDiff = None
     test_data = {
         "juriscraper.opinions.united_states.administrative_agency.bia": [
             (

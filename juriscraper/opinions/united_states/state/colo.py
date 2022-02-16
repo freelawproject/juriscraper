@@ -67,15 +67,14 @@ class Site(OpinionSiteLinear):
         :param scraped_text: Text of scraped content
         :return: metadata
         """
-        match_re = r"The Supreme Court of the State of Colorado.*?(?P<citation>\d{4}\s*CO\s*\d+).*?Supreme Court Case No\. (?P<docket>\d+S[A-Z]\d+)"
-        match = re.findall(match_re, scraped_text, re.M | re.S)
-        if not match:
-            metadata = {}
-        else:
-            volume, page = match[0][0].split("CO")
+        cite_match = re.findall(r"\d{4}\s*CO\s*\d+", scraped_text)
+        docket_match = re.findall(r"\d+S[A-Z]\d+", scraped_text)
+        metadata = {}
+        if cite_match and docket_match:
+            volume, page = cite_match[0].split("CO")
             metadata = {
                 "OpinionCluster": {
-                    "docket_number": match[0][1],
+                    "docket_number": docket_match[0],
                 },
                 "Citation": {
                     "volume": volume.strip(),

@@ -43,7 +43,7 @@ class Site(colo.Site):
         ):
             return {}
         for row in rows[2:]:
-            row_text = clean_string(row.text_content().strip())
+            row_text = clean_string(row.text_content())
             if row_text == "U N P U B L I S H E D O P I N I O N S":
                 break
             docket, name = row_text.split(" ", 1)
@@ -67,9 +67,8 @@ class Site(colo.Site):
         """
         match_re = r"The.*SUMMARY.*?(?P<citation>\d{4}COA\d+).*?No\. (?P<docket>\d+CA\d+), (?P<headnotes>.*?)\n{2,}(?P<summary>.*?)COLORADO COURT OF APPEALS"
         match = re.findall(match_re, scraped_text, re.M | re.S)
-        if not match:
-            metadata = {}
-        else:
+        metadata = {}
+        if match:
             volume, page = match[0][0].split("COA")
             metadata = {
                 "OpinionCluster": {
