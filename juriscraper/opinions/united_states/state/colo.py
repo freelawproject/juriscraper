@@ -24,6 +24,8 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.courts.state.co.us/Courts/Supreme_Court/Case_Announcements/"
+        self.cite_re = r"\d{4}\s+CO\s+\d+"
+        self.docket_re = r"\d{2}S[A|C]\d+"
 
     def _process_html(self) -> None:
         date = self.html.xpath(
@@ -39,17 +41,28 @@ class Site(OpinionSiteLinear):
                 ".//a[contains(@href, 'Supreme_Court/Opinions/')]"
             ):
                 link_text = normalize_dashes(item.text_content().strip())
+
                 cite_match = re.findall(r"(\d{2,4}\s*CO\s*\d+\w?)", link_text)
-                citation = cite_match[0] if cite_match else ""
-                if self.test_mode_enabled() and citation == "":
-                    citation = "Citation to be scraped in 'extract_from_text'"
-                docket_match = re.findall(r"\d+[A-Z]+\d{2,}", link_text)
-                docket = docket_match[0] if docket_match else ""
+                citation_raw = cite_match[0] if cite_match else ""
+                docket_match = re.findall(r"\d+S[A|C]\d{2,}", link_text)
+                docket_raw = docket_match[0] if docket_match else ""
                 name = (
-                    link_text.replace(docket, "")
-                    .replace(citation, "")
+                    link_text.replace(docket_raw, "")
+                    .replace(citation_raw, "")
                     .lstrip(",- ")
                 )
+                # Discard bad formatted citations and dockets. They'll be
+                # corrected with the data from extract_from_text
+                # Example:
+                #   - 22CO7, 19SC763- People v. Ray Ojeda
+                cite_match = re.findall(self.cite_re, citation_raw)
+                citation = cite_match[0] if cite_match else ""
+                docket_match = re.findall(self.docket_re, docket_raw)
+                docket = docket_match[0] if docket_match else ""
+                if self.test_mode_enabled() and citation == "":
+                    citation = "Citation to be scraped in 'extract_from_text'"
+                if self.test_mode_enabled() and docket == "":
+                    docket = "Docket to be scraped in 'extract_from_text'"
                 self.cases.append(
                     {
                         "date": date_str,
@@ -69,8 +82,8 @@ class Site(OpinionSiteLinear):
         :param scraped_text: Text of scraped content
         :return: metadata
         """
-        cite_match = re.findall(r"\d{4}\s*CO\s*\d+", scraped_text)
-        docket_match = re.findall(r"\d{2}S[A|C]\d+", scraped_text)
+        cite_match = re.findall(self.cite_re, scraped_text)
+        docket_match = re.findall(self.docket_re, scraped_text)
         metadata = {}
         if cite_match:
             volume, page = cite_match[0].split("CO")
