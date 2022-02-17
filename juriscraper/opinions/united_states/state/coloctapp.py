@@ -19,6 +19,7 @@ class Site(colo.Site):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.courts.state.co.us/Courts/Court_of_Appeals/Case_Announcements/"
+        self.status = "Published"
 
     def _process_html(self) -> None:
         """Process the HTML
@@ -56,7 +57,6 @@ class Site(colo.Site):
                     "docket": docket,
                     "name": name,
                     "url": f"https://www.courts.state.co.us/Courts/Court_of_Appeals/Opinion/{date_year.year}/{docket}-PD.pdf",
-                    "status": "Published",
                     "citation": citation,
                 }
             )
@@ -69,7 +69,7 @@ class Site(colo.Site):
         :param scraped_text: Text of scraped content
         :return: metadata
         """
-        match_re = r"The.*SUMMARY.*?(?P<citation>\d{4}COA\d+).*?No\. (?P<docket>\d+CA\d+), (?P<headnotes>.*?)\n{2,}(?P<summary>.*?)COLORADO COURT OF APPEALS"
+        match_re = r"(?P<citation>\d{4}COA\d+).*?(?P<docket>\d+CA\d+),.*? (?P<headnotes>—.*?)\n{2,}\s{4,}(?P<summary>.*?)COLORADO"
         match = re.findall(match_re, scraped_text, re.M | re.S)
         metadata = {}
         if match:
@@ -77,7 +77,7 @@ class Site(colo.Site):
             metadata = {
                 "OpinionCluster": {
                     "docket_number": match[0][1],
-                    "headnotes": clean_string(match[0][2]),
+                    "headnotes": clean_string(match[0][2]).lstrip("— "),
                     "summary": clean_string(match[0][3]),
                 },
                 "Citation": {

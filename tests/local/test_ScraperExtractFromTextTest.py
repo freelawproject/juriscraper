@@ -9,6 +9,8 @@ class ScraperExtractFromText(unittest.TestCase):
     without a full integration test.
     """
 
+    maxDiff = None
+
     test_data = {
         "juriscraper.opinions.united_states.administrative_agency.bia": [
             (
@@ -83,7 +85,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 {
                     "OpinionCluster": {
                         "docket_number": "20CA0621",
-                        "headnotes": "Cummings v. Arapahoe Cnty. Sheriff's Office — Government — County Officers — Sheriff — Deputies",
+                        "headnotes": "Government — County Officers — Sheriff — Deputies",
                         "summary": """A division of the court of appeals applies the holding from Cummings v. Arapahoe County Sheriff's Department, 2018 COA 136, to a sheriff's personnel policy granting notice of an investigation and provides guidance as to the scope of Cummings and section 30-10- 506, C.R.S. 2020. Because the subject policy did not effectuate the specific right section 30-10-506 grants a deputy — the right to notice "of the reason for the proposed revocation" of his employment — the division concludes the policy was not contractually binding. Accordingly, the district court erred by instructing the jury to consider the sheriff's compliance with the policy in determining whether he breached an implied employment contract.""",
                     },
                     "Citation": {

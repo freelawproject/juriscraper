@@ -24,8 +24,9 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.courts.state.co.us/Courts/Supreme_Court/Case_Announcements/"
+        self.status = "Published"
         self.cite_re = r"\d{4}\s+CO\s+\d+"
-        self.docket_re = r"\d{2}S[A|C]\d+"
+        self.docket_re = r"\d{2}S[AC]\d+"
 
     def _process_html(self) -> None:
         date = self.html.xpath(
@@ -41,10 +42,9 @@ class Site(OpinionSiteLinear):
                 ".//a[contains(@href, 'Supreme_Court/Opinions/')]"
             ):
                 link_text = normalize_dashes(item.text_content().strip())
-
                 cite_match = re.findall(r"(\d{2,4}\s*CO\s*\d+\w?)", link_text)
                 citation_raw = cite_match[0] if cite_match else ""
-                docket_match = re.findall(r"\d+S[A|C]\d{2,}", link_text)
+                docket_match = re.findall(r"\d+S[AC]\d{2,}", link_text)
                 docket_raw = docket_match[0] if docket_match else ""
                 name = (
                     link_text.replace(docket_raw, "")
@@ -69,7 +69,6 @@ class Site(OpinionSiteLinear):
                         "docket": docket,
                         "name": name,
                         "url": item.attrib["href"],
-                        "status": "Published",
                         "citation": citation,
                     }
                 )
