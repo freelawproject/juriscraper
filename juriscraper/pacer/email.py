@@ -331,6 +331,18 @@ class S3NotificationEmail(NotificationEmail):
         # Clean special characters from S3.
         replacements = [
             (
+                r"caseid=",
+                "caseid%",
+            ),
+            (
+                r"de_seq_num=",
+                "de_seq_num%",
+            ),
+            (
+                r"magic_num=",
+                "magic_num%",
+            ),
+            (
                 r"=2E",
                 ".",
             ),
@@ -345,6 +357,18 @@ class S3NotificationEmail(NotificationEmail):
             (
                 r"=3D",
                 "=",
+            ),
+            (
+                r"caseid%",
+                "caseid=",
+            ),
+            (
+                r"de_seq_num%",
+                "de_seq_num=",
+            ),
+            (
+                r"magic_num%",
+                "magic_num=",
             ),
         ]
         for replacement in replacements:
