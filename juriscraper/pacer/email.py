@@ -1,5 +1,5 @@
-import re
 import email
+import re
 from datetime import date
 from typing import Dict, List, Optional, Union
 
