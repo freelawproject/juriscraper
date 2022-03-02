@@ -165,13 +165,18 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: Cleaned docket text
         """
         path = '//strong[contains(., "Docket Text:")]/following-sibling::'
-        node = self.tree.xpath(f"{path}font[1]/b/text()")
+        node = self.tree.xpath(f"{path}font[1]/b//text()")
+        description = ""
         if len(node):
-            return clean_string(node[0])
+            for des_part in node:
+                description = description + des_part
+            return clean_string(description)
 
-        node = self.tree.xpath(f"{path}b[1]/span/text()")
+        node = self.tree.xpath(f"{path}b[1]/span//text()")
         if len(node):
-            return clean_string(node[0])
+            for des_part in node:
+                description = description + des_part
+            return clean_string(description)
 
         return None
 
