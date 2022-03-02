@@ -189,7 +189,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             for index_line in range(len(splitlines)):
                 if "Notice has been" not in splitlines[index_line]:
                     # Build description line by line
-                    description = description + " " + splitlines[index_line]
+                    description = f"{description} {splitlines[index_line]}"
                 else:
                     # Stop looking for description lines
                     break
