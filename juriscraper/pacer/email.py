@@ -1,3 +1,4 @@
+import email
 import re
 from datetime import date
 from typing import Dict, List, Optional, Union
@@ -18,6 +19,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
     def __init__(self, court_id):
         self.court_id = court_id
+        self.content_type = None
         super().__init__(court_id)
 
     @property
@@ -27,13 +29,22 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         }
         parsed = {}
         if self.tree is not None:
-            parsed = {
-                "case_name": self._get_case_name(),
-                "docket_number": self._get_docket_number(),
-                "date_filed": self._get_date_filed(),
-                "docket_entries": self._get_docket_entries(),
-                "email_recipients": self._get_email_recipients(),
-            }
+            if self.content_type == "text/plain":
+                parsed = {
+                    "case_name": self._get_case_name_plain(),
+                    "docket_number": self._get_docket_number_plain(),
+                    "date_filed": self._get_date_filed(),
+                    "docket_entries": self._get_docket_entries(),
+                    "email_recipients": self._get_email_recipients_plain(),
+                }
+            else:
+                parsed = {
+                    "case_name": self._get_case_name(),
+                    "docket_number": self._get_docket_number(),
+                    "date_filed": self._get_date_filed(),
+                    "docket_entries": self._get_docket_entries(),
+                    "email_recipients": self._get_email_recipients(),
+                }
 
         return {**base, **parsed}
 
@@ -61,6 +72,20 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 case_name = "Unknown Case Title"
         return clean_string(harmonize(case_name))
 
+    def _get_case_name_plain(self) -> str:
+        """Gets a cleaned case name from the plain email text
+
+        :returns: Case name, cleaned and harmonized
+        """
+        email_body = self.tree.text_content()
+        regex = r"Case Name:(.*)"
+        find_case = re.findall(regex, email_body)
+        if find_case:
+            case_name = find_case[0]
+        else:
+            case_name = "Unknown Case Title"
+        return clean_string(harmonize(case_name))
+
     def _get_docket_number(self) -> str:
         """Gets a docket number from the email text
 
@@ -75,6 +100,16 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 self.tree.xpath(f"{path}/p/a/text()")
             )
         return docket_number
+
+    def _get_docket_number_plain(self) -> str:
+        """Gets a docket number from the plain email text
+
+        :returns: Docket number, parsed
+        """
+        email_body = self.tree.text_content()
+        regex = r"Case Number:(.*)"
+        docket_number = re.findall(regex, email_body)
+        return self._parse_docket_number_strs(docket_number)
 
     def _get_date_filed(self) -> date:
         """Gets the filing date from the email text
@@ -100,6 +135,19 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         words = re.split(r"\(|\s", clean_string(text))
         return words[0]
 
+    def _get_document_number_plain(self) -> str:
+        """Gets the specific document number the notification is referring to
+
+        :returns: Document number, cleaned
+        """
+        email_body = self.tree.text_content()
+        regex = r"Document Number:(.*)"
+        document_number = re.findall(regex, email_body)
+        if document_number:
+            return clean_string(document_number[0])
+        else:
+            return None
+
     def _get_doc1_anchor(self) -> str:
         """Safely retrieves the anchor tag for the document
 
@@ -117,14 +165,41 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: Cleaned docket text
         """
         path = '//strong[contains(., "Docket Text:")]/following-sibling::'
-        node = self.tree.xpath(f"{path}font[1]/b/text()")
+        node = self.tree.xpath(f"{path}font[1]/b//text()")
+        description = ""
         if len(node):
-            return clean_string(node[0])
+            for des_part in node:
+                description = description + des_part
+            return clean_string(description)
 
-        node = self.tree.xpath(f"{path}b[1]/span/text()")
+        node = self.tree.xpath(f"{path}b[1]/span//text()")
         if len(node):
-            return clean_string(node[0])
+            for des_part in node:
+                description = description + des_part
+            return clean_string(description)
 
+        return None
+
+    def _get_description_plain(self):
+        """Gets the docket text for plain email
+
+        :returns: Cleaned docket text
+        """
+        email_body = self.tree.text_content()
+        regex = r"^.*?Docket Text:(.*?)electronically mailed to:"
+        find_description = re.findall(regex, email_body, re.DOTALL)
+        description = ""
+        if find_description:
+            splitlines = find_description[0].splitlines()
+            for index_line in range(len(splitlines)):
+                if "Notice has been" not in splitlines[index_line]:
+                    # Build description line by line
+                    description = f"{description} {splitlines[index_line]}"
+                else:
+                    # Stop looking for description lines
+                    break
+        if description:
+            return clean_string(description)
         return None
 
     def _get_docket_entries(
@@ -134,18 +209,33 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         :returns: List of docket entry dictionaries
         """
-        description = self._get_description()
+        if self.content_type == "text/plain":
+            description = self._get_description_plain()
+            if description is not None:
+                email_body = self.tree.text_content()
+                regex = r"view the document:[\r\n]+([^\r\n]+)"
+                url = re.findall(regex, email_body)
+                if url:
+                    document_url = url[0]
+                else:
+                    document_url = None
+                document_number = self._get_document_number_plain()
+        else:
+            description = self._get_description()
+            if description is not None:
+                anchor = self._get_doc1_anchor()
+                document_url = (
+                    anchor.xpath("./@href")[0] if anchor is not None else None
+                )
+                document_number = self._get_document_number()
+
         if description is not None:
-            anchor = self._get_doc1_anchor()
-            document_url = (
-                anchor.xpath("./@href")[0] if anchor is not None else None
-            )
             entries = [
                 {
                     "date_filed": self._get_date_filed(),
                     "description": description,
                     "document_url": document_url,
-                    "document_number": self._get_document_number(),
+                    "document_number": document_number,
                     "pacer_doc_id": None,
                     "pacer_case_id": None,
                     "pacer_seq_no": None,
@@ -267,6 +357,41 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             )
         return self._get_email_recipients_with_links(" ".join(recipient_lines))
 
+    def _get_email_recipients_plain(
+        self,
+    ) -> List[Dict[str, Union[str, List[str]]]]:
+        """Gets all the email recipients whether they come from plain text or more HTML formatting
+
+        :returns: List of email recipients with names and email addresses
+        """
+        email_recipients = []
+        mail_body = self.tree.text_content()
+        regex = r"^.*?Notice has been electronically mailed to:(.*?)$"
+
+        # Return all lines after recipients begins
+        find_emails = re.findall(regex, mail_body, re.DOTALL)
+        if find_emails:
+            email_lines = find_emails[0]
+            splitlines = email_lines.splitlines()
+            for index_line in range(len(splitlines)):
+                if "@" in splitlines[index_line]:
+                    email_separated = list(
+                        map(clean_string, splitlines[index_line].split(","))
+                    )
+                    # Obtains comma separated email addresses ["sbreyer@supremecourt.gov", "sbreyer@supremestreetwear.com"]
+                    name = clean_string(splitlines[index_line - 1])
+                    # Obtains recipient name
+                    email_recipients.append(
+                        {
+                            "email_addresses": email_separated,
+                            "name": name,
+                        }
+                    )
+                if "Notice will be delivered" in splitlines[index_line]:
+                    # Stop looking for email addresses
+                    break
+        return email_recipients
+
 
 class S3NotificationEmail(NotificationEmail):
     """A subclass of the NotificationEmail report. This handles all the S3 specific format issues that come from
@@ -293,27 +418,6 @@ class S3NotificationEmail(NotificationEmail):
                 combined += f" {line}"
         return combined
 
-    def _slice_points(self, text):
-        """Provides the critical character indexes where HTML starts and ends in the S3 record.
-
-        :returns: List with the two slice points
-        """
-        html_content_type_index = text.index("Content-Type: text/html")
-        try:
-            opening_tag_index = text.index("<html", html_content_type_index)
-            closing_tag_index = text.index("</html>")
-            return (
-                opening_tag_index,
-                closing_tag_index + 7,
-            )
-        except ValueError as e:
-            opening_tag_index = text.index("<div", html_content_type_index)
-            closing_tag_index = text.rfind("</div>")
-            return (
-                opening_tag_index,
-                closing_tag_index + 6,
-            )
-
     def _html_from_s3_email(self, text):
         """Pulls the HTML content, parsed with line breaks normalized for from the S3 email file
 
@@ -321,36 +425,40 @@ class S3NotificationEmail(NotificationEmail):
         """
         # Remove line ends form S3 content
         cleaned_s3_line_ends = self._combine_lines_with_proper_spaces(text)
-
-        # Find <html /> section in S3 file.
-        slice_points = self._slice_points(cleaned_s3_line_ends)
-        html_only = cleaned_s3_line_ends[
-            slice(slice_points[0], slice_points[1])
-        ]
-
-        # Clean special characters from S3.
-        replacements = [
-            (
-                r"=2E",
-                ".",
-            ),
-            (
-                r"=C2=A0",
-                " ",
-            ),
-            (
-                r"=20",
-                " ",
-            ),
-            (
-                r"=3D",
-                "=",
-            ),
-        ]
-        for replacement in replacements:
-            html_only = re.sub(replacement[0], replacement[1], html_only)
-        return html_only
+        return cleaned_s3_line_ends
 
     def _parse_text(self, text):
-        html_only = self._html_from_s3_email(text)
-        return super()._parse_text(html_only)
+        """MIME Parser from file text, text/html and text/plain messages are supported.
+        This obtains the email payload decoded as UTF-8.
+        """
+        message = email.message_from_string(text)
+        if message.is_multipart():
+            for part in message.walk():
+                c_type = part.get_content_type()
+                # If multipart message, parse text/html message
+                if c_type == "text/html":
+                    body = part.get_payload(decode=True)  # decode
+                    self.content_type = "text/html"
+                    break
+        else:
+            # If not multipart, parse either text/html or text/plain message
+            for part in message.walk():
+                c_type = part.get_content_type()
+                c_dispo = str(part.get("Content-Disposition"))
+
+                if c_type == "text/html":
+                    body = part.get_payload(decode=True)
+                    self.content_type = "text/html"
+                    break
+
+                elif c_type == "text/plain" and "attachment" not in c_dispo:
+                    body = message.get_payload(decode=True)
+                    self.content_type = "text/plain"
+                    break
+
+        email_body = body.decode("UTF-8")
+        if self.content_type == "text/plain":
+            return super()._parse_text(email_body)
+        elif self.content_type == "text/html":
+            html_only = self._html_from_s3_email(email_body)
+            return super()._parse_text(html_only)
