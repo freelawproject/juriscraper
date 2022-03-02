@@ -181,10 +181,20 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: Cleaned docket text
         """
         email_body = self.tree.text_content()
-        regex = r"Docket Text:[\r\n]+([^\r\n]+)"
-        description = re.findall(regex, email_body)
+        regex = r"^.*?Docket Text:(.*?)electronically mailed to:"
+        find_description = re.findall(regex, email_body, re.DOTALL)
+        description = ""
+        if find_description:
+            splitlines = find_description[0].splitlines()
+            for index_line in range(len(splitlines)):
+                if "Notice has been" not in splitlines[index_line]:
+                    # Build description line by line
+                    description = description + " " + splitlines[index_line]
+                else:
+                    # Stop looking for description lines
+                    break
         if description:
-            return clean_string(description[0])
+            return clean_string(description)
         return None
 
     def _get_docket_entries(
@@ -426,7 +436,7 @@ class S3NotificationEmail(NotificationEmail):
                     self.content_type = "text/html"
                     break
         else:
-            # If not multipart, parse either text/html or text/html message
+            # If not multipart, parse either text/html or text/plain message
             for part in message.walk():
                 c_type = part.get_content_type()
                 c_dispo = str(part.get("Content-Disposition"))
@@ -442,9 +452,8 @@ class S3NotificationEmail(NotificationEmail):
                     break
 
         email_body = body.decode("UTF-8")
-        html_only = self._html_from_s3_email(email_body)
-
         if self.content_type == "text/plain":
             return super()._parse_text(email_body)
         elif self.content_type == "text/html":
+            html_only = self._html_from_s3_email(email_body)
             return super()._parse_text(html_only)
