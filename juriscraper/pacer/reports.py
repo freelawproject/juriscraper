@@ -2,6 +2,7 @@ import re
 from typing import Tuple
 from urllib.parse import urljoin
 
+import requests
 from lxml.html import HtmlElement
 from requests import Response
 
@@ -252,6 +253,72 @@ class BaseReport:
             return None
 
         r = self.session.get(iframe_src)
+        if is_pdf(r):
+            logger.info(
+                "Got iframed PDF data for case %s at: %s", url, iframe_src
+            )
+
+        return r
+
+    def download_pdf_magic_link(
+        self, pacer_case_id, pacer_doc_id, de_seq_num, pacer_magic_num
+    ):
+        """Download a PDF from PACER for free with its magic link.
+        Fecht document anonymously without using a pacer_session
+
+        :returns: request.Response object containing a PDF, if one can be found
+        (is not sealed, gone, etc.). Else, returns None.
+        """
+        # Create PACER base url from court_id and pacer_doc_id
+        url = make_doc1_url(self.court_id, pacer_doc_id, True)
+        # Magic link parameters
+        params = {
+            "caseid": pacer_case_id,
+            "de_seq_num": de_seq_num,
+            "magic_num": pacer_magic_num,
+        }
+        # Add parameters to the PACER base url and make a GET request
+        r = requests.get(url, params=params)
+
+        # The request above sometimes generates an HTML page with an iframe
+        # containing the PDF, and other times returns the PDF directly. ∴
+        # either get the src of the iframe and download the PDF or just return
+        # the pdf.
+        r.raise_for_status()
+        if is_pdf(r):
+            logger.info("Got PDF binary data for case at %s", url)
+            return r
+
+        text = clean_html(r.text)
+        tree = get_html_parsed_text(text)
+        tree.rewrite_links(fix_links_in_lxml_tree, base_href=r.url)
+        try:
+            iframe_src = tree.xpath("//iframe/@src")[0]
+        except IndexError:
+            if "pdf:Producer" in text:
+                logger.error(
+                    "Unable to download PDF. PDF content was placed "
+                    "directly in HTML. URL: %s, caseid: %s, seq_num: %s, "
+                    "magic_num: %s",
+                    url,
+                    pacer_case_id,
+                    de_seq_num,
+                    pacer_magic_num,
+                )
+            else:
+                logger.error(
+                    "Unable to download PDF. PDF not served as "
+                    "binary data and unable to find iframe src "
+                    "attribute. URL: %s, caseid: %s, seq_num: %s, "
+                    "magic_num: %s",
+                    url,
+                    pacer_case_id,
+                    de_seq_num,
+                    pacer_magic_num,
+                )
+            return None
+
+        r = requests.get(iframe_src)
         if is_pdf(r):
             logger.info(
                 "Got iframed PDF data for case %s at: %s", url, iframe_src

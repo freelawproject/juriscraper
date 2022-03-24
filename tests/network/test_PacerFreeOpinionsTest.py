@@ -191,3 +191,39 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         self.assertFalse(
             mock_session.post.called, msg="should not trigger a POST query"
         )
+
+
+class PacerMagicLinkTest(unittest.TestCase):
+    """Test related to the PACER magic link free download"""
+
+    def setUp(self):
+        self.reports = {}
+        court_id = "alnb"
+        self.reports[court_id] = FreeOpinionReport(court_id, None)
+
+    @mock.patch("juriscraper.pacer.reports.logger")
+    def test_download_simple_pdf_magic_link_fails(self, mock_logger):
+        """Can we download a PACER document with an invalid or expired
+        magic link? land on a login page and returns an error.
+        """
+        report = self.reports["alnb"]
+
+        url = "https://ecf.alnb.uscourts.gov/doc1/018129511556"
+        pacer_case_id = "602431"
+        pacer_doc_id = "018129511556"
+        de_seq_num = "222"
+        pacer_magic_num = "87709433"
+        report.download_pdf_magic_link(
+            pacer_case_id, pacer_doc_id, de_seq_num, pacer_magic_num
+        )
+
+        mock_logger.error.assert_called_with(
+            "Unable to download PDF. PDF not served as "
+            "binary data and unable to find iframe src "
+            "attribute. URL: %s, caseid: %s, seq_num: %s, "
+            "magic_num: %s",
+            url,
+            pacer_case_id,
+            de_seq_num,
+            pacer_magic_num,
+        )
