@@ -178,47 +178,60 @@ class BaseReport:
         :returns: request.Response object containing a PDF, if one can be found
         (is not sealed, gone, etc.). Else, returns None.
         """
-        r, url = self._query_pdf_download(
-            pacer_case_id, pacer_doc_id, pacer_magic_num, got_receipt="1"
-        )
+        if pacer_magic_num:
+            # If magic_number is available try to download the
+            # document anonymously by its magic link
 
-        if "Cannot locate the case with caseid" in r.text:
-            # This document is from a different docket, but is included in this
-            # docket. Probably a criminal case with the doppelganger bug. Try
-            # again, but do so without the pacer_case_id. This should work, but
-            # will omit the blue header on the PDFs.
+            # Create PACER base url from court_id and pacer_doc_id
+            url = make_doc1_url(self.court_id, pacer_doc_id, True)
+
+            # Magic link parameters
+            # We don't need the de_seq_num parameter to fetch the free document
+            params = {
+                "caseid": pacer_case_id,
+                "magic_num": pacer_magic_num,
+            }
+            # Add parameters to the PACER base url and make a GET request
+            r = requests.get(url, params=params)
+        else:
+            # If no magic_number use normal method to fetch the document
             r, url = self._query_pdf_download(
-                None, pacer_doc_id, pacer_magic_num, got_receipt="1"
+                pacer_case_id, pacer_doc_id, pacer_magic_num, got_receipt="1"
             )
 
-        if "This document is not available" in r.text:
-            logger.error(
-                "Document not available in case: %s at %s", url, pacer_case_id
-            )
-            return None
-        if "You do not have permission to view this document." in r.text:
-            logger.warning(
-                "Permission denied getting document %s in case %s. "
-                "It's probably sealed.",
-                pacer_case_id,
-                url,
-            )
-            return None
-        if "You do not have access to this transcript." in r.text:
-            logger.warning(
-                "Unable to get transcript %s in case %s.",
-                pacer_doc_id,
-                url,
-            )
-            return None
+            if "Cannot locate the case with caseid" in r.text:
+                # This document is from a different docket, but is included in
+                # this docket. Probably a criminal case with the doppelganger
+                # bug. Try again, but do so without the pacer_case_id.
+                # This should work, but will omit the blue header on the PDFs.
+                r, url = self._query_pdf_download(
+                    None, pacer_doc_id, pacer_magic_num, got_receipt="1"
+                )
 
-        # Some pacer sites use window.location in their JS, so we have to look
-        # for that. See: oknd, 13-cv-00357-JED-FHM, doc #24. But, be warned,
-        # you can only catch the redirection with JS off.
-        m = self.REDIRECT_REGEX.search(r.text)
-        if m is not None:
-            r = self.session.get(urljoin(url, m.group(1)))
-            r.raise_for_status()
+            if "This document is not available" in r.text:
+                logger.error(
+                    f"Document not available in case: {url} at {pacer_case_id}"
+                )
+                return None
+            if "You do not have permission to view this document." in r.text:
+                logger.warning(
+                    f"Permission denied getting document {pacer_case_id} "
+                    f"in case {url}. It's probably sealed."
+                )
+                return None
+            if "You do not have access to this transcript." in r.text:
+                logger.warning(
+                    f"Unable to get transcript {pacer_doc_id} in case {url}."
+                )
+                return None
+
+            # Some pacer sites use window.location in their JS, so we have to
+            # look for that. See: oknd, 13-cv-00357-JED-FHM, doc #24. But, be
+            # warned, you can only catch the redirection with JS off.
+            m = self.REDIRECT_REGEX.search(r.text)
+            if m is not None:
+                r = self.session.get(urljoin(url, m.group(1)))
+                r.raise_for_status()
 
         # The request above sometimes generates an HTML page with an iframe
         # containing the PDF, and other times returns the PDF directly. ∴
@@ -226,7 +239,7 @@ class BaseReport:
         # the pdf.
         r.raise_for_status()
         if is_pdf(r):
-            logger.info("Got PDF binary data for case at %s", url)
+            logger.info(f"Got PDF binary data for case at {url}")
             return r
 
         text = clean_html(r.text)
@@ -238,90 +251,28 @@ class BaseReport:
             if "pdf:Producer" in text:
                 logger.error(
                     "Unable to download PDF. PDF content was placed "
-                    "directly in HTML. URL: %s, caseid: %s",
-                    url,
-                    pacer_case_id,
+                    f"directly in HTML. URL: {url}, caseid: {pacer_case_id}, "
+                    f"magic_num: {pacer_magic_num}"
                 )
             else:
                 logger.error(
                     "Unable to download PDF. PDF not served as "
                     "binary data and unable to find iframe src "
-                    "attribute. URL: %s, caseid: %s",
-                    url,
-                    pacer_case_id,
+                    f"attribute. URL: {url}, caseid: {pacer_case_id}, "
+                    f"magic_num: {pacer_magic_num}"
                 )
             return None
 
-        r = self.session.get(iframe_src)
+        if pacer_magic_num:
+            # If magic_number is available try to download the
+            # document anonymously from iframe_src
+            r = requests.get(iframe_src)
+        else:
+            # Use PACER session to fetch the document from iframe_src
+            r = self.session.get(iframe_src)
         if is_pdf(r):
             logger.info(
-                "Got iframed PDF data for case %s at: %s", url, iframe_src
-            )
-
-        return r
-
-    def download_pdf_magic_link(
-        self, pacer_case_id, pacer_doc_id, de_seq_num, pacer_magic_num
-    ):
-        """Download a PDF from PACER for free with its magic link.
-        Fecht document anonymously without using a pacer_session
-
-        :returns: request.Response object containing a PDF, if one can be found
-        (is not sealed, gone, etc.). Else, returns None.
-        """
-        # Create PACER base url from court_id and pacer_doc_id
-        url = make_doc1_url(self.court_id, pacer_doc_id, True)
-        # Magic link parameters
-        params = {
-            "caseid": pacer_case_id,
-            "de_seq_num": de_seq_num,
-            "magic_num": pacer_magic_num,
-        }
-        # Add parameters to the PACER base url and make a GET request
-        r = requests.get(url, params=params)
-
-        # The request above sometimes generates an HTML page with an iframe
-        # containing the PDF, and other times returns the PDF directly. ∴
-        # either get the src of the iframe and download the PDF or just return
-        # the pdf.
-        r.raise_for_status()
-        if is_pdf(r):
-            logger.info("Got PDF binary data for case at %s", url)
-            return r
-
-        text = clean_html(r.text)
-        tree = get_html_parsed_text(text)
-        tree.rewrite_links(fix_links_in_lxml_tree, base_href=r.url)
-        try:
-            iframe_src = tree.xpath("//iframe/@src")[0]
-        except IndexError:
-            if "pdf:Producer" in text:
-                logger.error(
-                    "Unable to download PDF. PDF content was placed "
-                    "directly in HTML. URL: %s, caseid: %s, seq_num: %s, "
-                    "magic_num: %s",
-                    url,
-                    pacer_case_id,
-                    de_seq_num,
-                    pacer_magic_num,
-                )
-            else:
-                logger.error(
-                    "Unable to download PDF. PDF not served as "
-                    "binary data and unable to find iframe src "
-                    "attribute. URL: %s, caseid: %s, seq_num: %s, "
-                    "magic_num: %s",
-                    url,
-                    pacer_case_id,
-                    de_seq_num,
-                    pacer_magic_num,
-                )
-            return None
-
-        r = requests.get(iframe_src)
-        if is_pdf(r):
-            logger.info(
-                "Got iframed PDF data for case %s at: %s", url, iframe_src
+                f"Got iframed PDF data for case {url} at: {iframe_src}"
             )
 
         return r

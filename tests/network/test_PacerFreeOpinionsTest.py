@@ -194,36 +194,35 @@ class PacerFreeOpinionsTest(unittest.TestCase):
 
 
 class PacerMagicLinkTest(unittest.TestCase):
-    """Test related to the PACER magic link free download"""
+    """Test related to PACER magic link free download"""
 
     def setUp(self):
+        pacer_session = PacerSession()
+        if pacer_credentials_are_defined():
+            # CAND chosen at random
+            pacer_session = get_pacer_session()
+            pacer_session.login()
+
         self.reports = {}
-        court_id = "alnb"
-        self.reports[court_id] = FreeOpinionReport(court_id, None)
+        court_id = "nysd"
+        self.reports[court_id] = FreeOpinionReport(court_id, pacer_session)
 
     @mock.patch("juriscraper.pacer.reports.logger")
     def test_download_simple_pdf_magic_link_fails(self, mock_logger):
         """Can we download a PACER document with an invalid or expired
         magic link? land on a login page and returns an error.
         """
-        report = self.reports["alnb"]
-
-        url = "https://ecf.alnb.uscourts.gov/doc1/018129511556"
-        pacer_case_id = "602431"
-        pacer_doc_id = "018129511556"
-        de_seq_num = "222"
-        pacer_magic_num = "87709433"
-        report.download_pdf_magic_link(
-            pacer_case_id, pacer_doc_id, de_seq_num, pacer_magic_num
-        )
-
+        report = self.reports["nysd"]
+        url = "https://ecf.nysd.uscourts.gov/doc1/127130869087"
+        pacer_case_id = "568350"
+        pacer_doc_id = "127130869087"
+        pacer_magic_num = "46253052"
+        r = report.download_pdf(pacer_case_id, pacer_doc_id, pacer_magic_num)
         mock_logger.error.assert_called_with(
             "Unable to download PDF. PDF not served as "
             "binary data and unable to find iframe src "
-            "attribute. URL: %s, caseid: %s, seq_num: %s, "
-            "magic_num: %s",
-            url,
-            pacer_case_id,
-            de_seq_num,
-            pacer_magic_num,
+            f"attribute. URL: {url}, caseid: {pacer_case_id}, "
+            f"magic_num: {pacer_magic_num}"
         )
+        # No PDF should be returned
+        self.assertEqual(r, None)
