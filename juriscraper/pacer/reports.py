@@ -192,7 +192,8 @@ class BaseReport:
                 "magic_num": pacer_magic_num,
             }
             # Add parameters to the PACER base url and make a GET request
-            r = requests.get(url, params=params)
+            req_timeout = (60, 300)
+            r = requests.get(url, params=params, timeout=req_timeout)
         else:
             # If no magic_number use normal method to fetch the document
             r, url = self._query_pdf_download(
@@ -266,7 +267,7 @@ class BaseReport:
         if pacer_magic_num:
             # If magic_number is available try to download the
             # document anonymously from iframe_src
-            r = requests.get(iframe_src)
+            r = requests.get(iframe_src, timeout=req_timeout)
         else:
             # Use PACER session to fetch the document from iframe_src
             r = self.session.get(iframe_src)
