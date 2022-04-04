@@ -16,6 +16,19 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.4.11 - 2022-04-22**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Add MIME parser to parse PACER emails notifications
+- Small fix to fetch free PACER documents using magic links
+
+## Past
+
 **2.4.10 - 2022-02-08**
 
 Features:
@@ -25,8 +38,6 @@ Features:
 Changes:
 
 - Small fix for NM
-
-## Past
 
 **2.4.9 - 2022-02-08**
 
