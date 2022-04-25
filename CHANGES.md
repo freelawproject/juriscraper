@@ -16,6 +16,36 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.0 - 2022-04-25**
+
+Features:
+
+ - The `download_pdf` function used by PACER reports now returns a two-tuple
+   containing the response object or None and a str. If there is an error,
+   the response object will be None and the str will have the error message. If
+   not, the response object will be populated and the str will be empty.
+
+    To adapt to the new version you can change old code like this:
+
+        r = report.download_pdf(...)
+
+    To something like:
+
+        r, _ = report.download_pdf(...)
+
+    If you wish, you could instead capture errors with something like:
+
+        r, msg = report.download_pdf(...)
+        if msg:
+            do_something()
+
+Changes:
+
+ - See notes re features.
+
+
+## Past
+
 **2.4.11 - 2022-04-22**
 
 Features:
@@ -26,8 +56,6 @@ Changes:
 
 - Add MIME parser to parse PACER emails notifications
 - Small fix to fetch free PACER documents using magic links
-
-## Past
 
 **2.4.10 - 2022-02-08**
 

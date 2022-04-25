@@ -340,6 +340,8 @@ tag your commit with the correct tag (v.*.*.*), and do a PR with that.
 
 If you wish to create a new version manually, the process is:
 
+1. Update CHANGES.md
+
 1. Update version info in ``setup.py``
 
 1. Install the requirements in requirements_dev.txt
