@@ -1,5 +1,5 @@
 import re
-from typing import Tuple
+from typing import Optional, Tuple
 from urllib.parse import urljoin
 
 import requests
@@ -170,13 +170,19 @@ class BaseReport:
         r = self.session.post(url, data=data, timeout=timeout)
         return r, url
 
-    def download_pdf(self, pacer_case_id, pacer_doc_id, pacer_magic_num=None):
+    def download_pdf(
+        self,
+        pacer_case_id: str,
+        pacer_doc_id: int,
+        pacer_magic_num: str = None,
+    ) -> (Optional[Response], str):
         """Download a PDF from PACER.
 
         Note that this doesn't support attachments yet.
 
-        :returns: request.Response object containing a PDF, if one can be found
-        (is not sealed, gone, etc.). Else, returns None.
+        :returns: A tuple of the request.Response object containing a PDF, if
+        one can be found (is not sealed, gone, etc.). And a string indicating
+        the error message, if there is one or else an empty string.
         """
         if pacer_magic_num:
             # If magic_number is available try to download the
@@ -209,22 +215,32 @@ class BaseReport:
                     None, pacer_doc_id, pacer_magic_num, got_receipt="1"
                 )
 
+            error = None
+            if "could not retrieve dktentry for dlsid" in r.text:
+                error = (
+                    f"Failed to get docket entry in case: "
+                    f"{pacer_case_id=} at {url}"
+                )
             if "This document is not available" in r.text:
-                logger.error(
-                    f"Document not available in case: {url} at {pacer_case_id}"
+                error = (
+                    f"Document not available in case: "
+                    f"{pacer_case_id=} at {url}"
                 )
-                return None
-            if "You do not have permission to view this document." in r.text:
-                logger.warning(
-                    f"Permission denied getting document {pacer_case_id} "
-                    f"in case {url}. It's probably sealed."
+            if re.search(
+                r"You do not have permission to view\s+this document.", r.text
+            ):
+                error = (
+                    f"Permission denied getting document in case "
+                    f"{pacer_case_id=} at {url}. It's probably sealed."
                 )
-                return None
             if "You do not have access to this transcript." in r.text:
-                logger.warning(
-                    f"Unable to get transcript {pacer_doc_id} in case {url}."
+                error = (
+                    f"Unable to get transcript at {url} in case "
+                    f"{pacer_doc_id=}."
                 )
-                return None
+            if error:
+                logger.warning(error)
+                return None, error
 
             # Some pacer sites use window.location in their JS, so we have to
             # look for that. See: oknd, 13-cv-00357-JED-FHM, doc #24. But, be
@@ -241,7 +257,7 @@ class BaseReport:
         r.raise_for_status()
         if is_pdf(r):
             logger.info(f"Got PDF binary data for case at {url}")
-            return r
+            return r, ""
 
         text = clean_html(r.text)
         tree = get_html_parsed_text(text)
@@ -250,19 +266,20 @@ class BaseReport:
             iframe_src = tree.xpath("//iframe/@src")[0]
         except IndexError:
             if "pdf:Producer" in text:
-                logger.error(
+                error = (
                     "Unable to download PDF. PDF content was placed "
                     f"directly in HTML. URL: {url}, caseid: {pacer_case_id}, "
                     f"magic_num: {pacer_magic_num}"
                 )
             else:
-                logger.error(
+                error = (
                     "Unable to download PDF. PDF not served as "
                     "binary data and unable to find iframe src "
                     f"attribute. URL: {url}, caseid: {pacer_case_id}, "
                     f"magic_num: {pacer_magic_num}"
                 )
-            return None
+            logger.error(error)
+            return None, error
 
         if pacer_magic_num:
             # If magic_number is available try to download the
@@ -276,7 +293,7 @@ class BaseReport:
                 f"Got iframed PDF data for case {url} at: {iframe_src}"
             )
 
-        return r
+        return r, ""
 
     def is_pdf_sealed(self, pacer_case_id, pacer_doc_id, pacer_magic_num=None):
         """Check if a PDF is sealed without trying to actually download

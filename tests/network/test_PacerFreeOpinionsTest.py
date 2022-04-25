@@ -103,7 +103,7 @@ class PacerFreeOpinionsTest(unittest.TestCase):
                         )
 
                 # Can we download one item from each court?
-                r = report.download_pdf(
+                r, msg = report.download_pdf(
                     results[0]["pacer_case_id"], results[0]["pacer_doc_id"]
                 )
                 if r is None:
@@ -115,14 +115,14 @@ class PacerFreeOpinionsTest(unittest.TestCase):
     def test_download_simple_pdf(self):
         """Can we download a PDF document returned directly?"""
         report = self.reports["alnb"]
-        r = report.download_pdf("602431", "018129511556")
+        r, msg = report.download_pdf("602431", "018129511556")
         self.assertEqual(r.headers["Content-Type"], "application/pdf")
 
     @SKIP_IF_NO_PACER_LOGIN
     def test_download_iframed_pdf(self):
         """Can we download a PDF document returned in IFrame?"""
         report = self.reports["vib"]
-        r = report.download_pdf("1507", "1921141093")
+        r, msg = report.download_pdf("1507", "1921141093")
         self.assertEqual(r.headers["Content-Type"], "application/pdf")
 
     @SKIP_IF_NO_PACER_LOGIN
@@ -130,8 +130,9 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         """Do we throw an error if the item is unavailable?"""
         # 5:11-cr-40057-JAR, document 3
         report = self.reports["ksd"]
-        r = report.download_pdf("81531", "07902639735")
+        r, msg = report.download_pdf("81531", "07902639735")
         self.assertIsNone(r)
+        self.assertIn("Failed to get docket entry", msg)
 
     @SKIP_IF_NO_PACER_LOGIN
     def test_query_can_get_multiple_results(self):
@@ -217,7 +218,9 @@ class PacerMagicLinkTest(unittest.TestCase):
         pacer_case_id = "568350"
         pacer_doc_id = "127130869087"
         pacer_magic_num = "46253052"
-        r = report.download_pdf(pacer_case_id, pacer_doc_id, pacer_magic_num)
+        r, msg = report.download_pdf(
+            pacer_case_id, pacer_doc_id, pacer_magic_num
+        )
         mock_logger.error.assert_called_with(
             "Unable to download PDF. PDF not served as "
             "binary data and unable to find iframe src "
