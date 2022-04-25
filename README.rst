@@ -46,7 +46,7 @@ Some of the design goals for this project are:
 Installation & Dependencies
 ===========================
 
-First step: Install Python 3.7+.x, then:
+First step: Install Python 3.8+.x, then:
 
 Install the dependencies
 ------------------------
@@ -339,6 +339,8 @@ this will also work for merged, tagged pull requests. Simply update setup.py,
 tag your commit with the correct tag (v.*.*.*), and do a PR with that.
 
 If you wish to create a new version manually, the process is:
+
+1. Update CHANGES.md
 
 1. Update version info in ``setup.py``
 
