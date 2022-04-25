@@ -16,7 +16,7 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
-**2.5.0 - 2022-04-25**
+**2.5.1 - 2022-04-25**
 
 Features:
 
@@ -40,6 +40,8 @@ Features:
             do_something()
 
 Changes:
+
+ - Python 3.7 is no longer supported.
 
  - See notes re features.
 

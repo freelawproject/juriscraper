@@ -46,7 +46,7 @@ Some of the design goals for this project are:
 Installation & Dependencies
 ===========================
 
-First step: Install Python 3.7+.x, then:
+First step: Install Python 3.8+.x, then:
 
 Install the dependencies
 ------------------------
