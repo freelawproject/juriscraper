@@ -175,7 +175,7 @@ class BaseReport:
         pacer_case_id: str,
         pacer_doc_id: int,
         pacer_magic_num: str = None,
-    ) -> (Optional[Response], str):
+    ) -> Tuple[Optional[Response], str]:
         """Download a PDF from PACER.
 
         Note that this doesn't support attachments yet.
