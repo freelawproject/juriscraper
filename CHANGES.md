@@ -16,6 +16,14 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.3 - 2022-04-30**
+
+Fixes:
+ - PACER document downloads will now throw a better error when a required
+   client code is not provided during login.
+
+## Past
+
 **2.5.1 - 2022-04-25**
 
 Features:
@@ -44,9 +52,6 @@ Changes:
  - Python 3.7 is no longer supported.
 
  - See notes re features.
-
-
-## Past
 
 **2.4.11 - 2022-04-22**
 
