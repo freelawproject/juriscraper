@@ -238,6 +238,12 @@ class BaseReport:
                     f"Unable to get transcript at {url} in case "
                     f"{pacer_doc_id=}."
                 )
+            if "A Client Code is required for PACER search" in r.text:
+                error = (
+                    f"Unable to get document. Client code required: "
+                    f"{pacer_case_id} at {url}."
+                )
+
             if error:
                 logger.warning(error)
                 return None, error
