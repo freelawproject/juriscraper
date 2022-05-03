@@ -9,7 +9,6 @@ History:
     Date created: 2013-08-10 by Brian W. Carver
     2022-05-02: Updated by William E. Palin, to use JSON responses
 """
-
 from datetime import datetime
 
 from lxml import html
@@ -25,37 +24,39 @@ class Site(OpinionSiteLinear):
         self.opinion_type = "Opinions"
         self.url = self.build_url()
 
-    def _fetch_json(self) -> None:
-        """Set parameters for the request to the ASPX endpoint.
-
-        :return: None
-        """
-        content = html.tostring(self.html)
-        self.params = {
-            "List": content.split(b"ctx.listName ")[1].split(b'"')[1],
-            "View": content.split(b"ctx.view ")[1].split(b'"')[1],
-            "ViewCount": 310,
-            "IsXslView": "TRUE",
-            "IsCSR": "TRUE",
-        }
-        self.request["parameters"] = {"params": self.params}
-        self._request_url_post(
-            "https://www.courts.ri.gov/Courts/SupremeCourt/_layouts/15/inplview.aspx"
-        )
-
     def _download(self, request_dict={}):
         if self.test_mode_enabled():
             self.json = super()._download(request_dict)
             return
-        html = super()._download(request_dict)
-        return html
+        return super()._download(request_dict)
+
+    def fetch_json(self) -> None:
+        """Fetch JSON data from the site.
+
+        :return: None
+        """
+        if self.test_mode_enabled():
+            return
+        content = html.tostring(self.html)
+        self.request["parameters"] = {
+            "params": {
+                "List": content.split(b"ctx.listName ")[1].split(b'"')[1],
+                "View": content.split(b"ctx.view ")[1].split(b'"')[1],
+                "ViewCount": 310,
+                "IsXslView": "TRUE",
+                "IsCSR": "TRUE",
+            }
+        }
+        self._request_url_post(
+            "https://www.courts.ri.gov/Courts/SupremeCourt/_layouts/15/inplview.aspx"
+        )
 
     def _process_html(self) -> None:
         """Extract content from JSON response
 
         :return: None
         """
-        self._fetch_json()
+        self.fetch_json()
         for row in self.request["response"].json()["Row"]:
             first_docket = row["FileLeafRef"][:-4].split(",")[0]
             name = row["Title"].split(first_docket)[0].strip("Nos. ")
@@ -77,7 +78,8 @@ class Site(OpinionSiteLinear):
 
         :return: URL to call before scraping JSON endpoint
         """
-        this_year = datetime.today().year
+        today = datetime.today()
+        this_year = today.year
         term_end = datetime(this_year, 9, 15)
-        year = this_year if datetime.today() >= term_end else this_year - 1
+        year = this_year if today >= term_end else this_year - 1
         return f"https://www.courts.ri.gov/Courts/SupremeCourt/Supreme{self.opinion_type}/Forms/{year}{year+1}.aspx"
