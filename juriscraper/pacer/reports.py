@@ -122,7 +122,7 @@ class BaseReport:
         self,
         pacer_case_id: str,
         pacer_doc_id: str,
-        pacer_magic_num: str,
+        pacer_magic_num: Optional[str],
         got_receipt: str,
     ) -> Tuple[Response, str]:
         """Query the doc1 download URL.
@@ -174,8 +174,8 @@ class BaseReport:
         self,
         pacer_case_id: str,
         pacer_doc_id: int,
-        pacer_magic_num: str = None,
-    ) -> (Optional[Response], str):
+        pacer_magic_num: Optional[str] = None,
+    ) -> Tuple[Optional[Response], str]:
         """Download a PDF from PACER.
 
         Note that this doesn't support attachments yet.
@@ -238,6 +238,15 @@ class BaseReport:
                     f"Unable to get transcript at {url} in case "
                     f"{pacer_doc_id=}."
                 )
+            if "Sealed Document" in r.text:
+                # See: https://ecf.almd.uscourts.gov/doc1/01712589088
+                error = f"Document is sealed: {pacer_case_id=} {url=}"
+            if "A Client Code is required for PACER search" in r.text:
+                error = (
+                    f"Unable to get document. Client code required: "
+                    f"{pacer_case_id} at {url}."
+                )
+
             if error:
                 logger.warning(error)
                 return None, error
