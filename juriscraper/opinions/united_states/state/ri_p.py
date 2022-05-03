@@ -5,12 +5,14 @@ Court Contact: helpdesk@courts.ri.gov, MFerris@courts.ri.gov (Ferris, Mirella), 
     https://www.courts.ri.gov/PDF/TelephoneDirectory.pdf
 Author: Brian W. Carver
 Date created: 2013-08-10
+History:
+    Date created: 2013-08-10 by Brian W. Carver
+    2022-05-02: Updated by William E. Palin, to use JSON responses
 """
-
-import re
 from datetime import datetime
 
-from juriscraper.lib.exceptions import InsanityException
+from lxml import html
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -18,99 +20,66 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = self.build_url(
-            "https://www.courts.ri.gov/Courts/SupremeCourt/Pages/Opinions/Opinions"
-        )
-        self.previous_date = None
-        self.include_summary = True
         self.status = "Published"
+        self.opinion_type = "Opinions"
+        self.url = self.build_url()
 
-    def build_url(self, base_url):
+    def _download(self, request_dict={}):
+        if self.test_mode_enabled():
+            self.json = super()._download(request_dict)
+            return
+        return super()._download(request_dict)
+
+    def fetch_json(self) -> None:
+        """Fetch JSON data from the site.
+
+        :return: None
+        """
+        if self.test_mode_enabled():
+            return
+        content = html.tostring(self.html)
+        self.request["parameters"] = {
+            "params": {
+                "List": content.split(b"ctx.listName ")[1].split(b'"')[1],
+                "View": content.split(b"ctx.view ")[1].split(b'"')[1],
+                "ViewCount": 310,
+                "IsXslView": "TRUE",
+                "IsCSR": "TRUE",
+            }
+        }
+        self._request_url_post(
+            "https://www.courts.ri.gov/Courts/SupremeCourt/_layouts/15/inplview.aspx"
+        )
+
+    def _process_html(self) -> None:
+        """Extract content from JSON response
+
+        :return: None
+        """
+        self.fetch_json()
+        for row in self.request["response"].json()["Row"]:
+            first_docket = row["FileLeafRef"][:-4].split(",")[0]
+            name = row["Title"].split(first_docket)[0].strip("Nos. ")
+            self.cases.append(
+                {
+                    "date": row["Published_x0020_Date"],
+                    "docket": row["FileLeafRef"][:-4],
+                    "name": name.strip(","),
+                    "summary": row.get("Description0", ""),
+                    "url": f"https://www.courts.ri.gov{row['FileRef']}",
+                }
+            )
+
+    def build_url(self) -> str:
+        """Generate URL for R.I. Supreme Court
+
         # This court hears things from mid-September to end of June. This
         # defines the "term" for that year, which triggers the website updates.
+
+        :return: URL to call before scraping JSON endpoint
+        """
         today = datetime.today()
         this_year = today.year
         term_end = datetime(this_year, 9, 15)
         year = this_year if today >= term_end else this_year - 1
-        return "%s%d-%d.aspx" % (base_url, year, year + 1)
-
-    def _process_html(self):
-        # case information spans over 3 rows, so must process 3 at a time:
-        #   <tr> - contains case name, docket number, date and pdf link
-        #   <tr> - contains case summary
-        #   <tr> - contains a one-pixel gif spacer
-        table = "//table[@id = 'onetidDoclibViewTbl0']/tr[position() > 1]"
-        rows = list(self.html.xpath(table))
-        row_triplets = list(zip(rows, rows[1:]))[::3]
-
-        for tr1, tr2 in row_triplets:
-            case = self.extract_case_from_rows(tr1, tr2)
-            self.previous_date = case["date"]
-            self.cases.append(case)
-
-    def extract_case_from_rows(self, row1, row2):
-        docket = row1.xpath("./td/a/text()")[0]
-        docket = ", ".join([d.strip() for d in docket.split(",")])
-        url = row1.xpath("./td/a/@href")[0]
-        text = row1.xpath("./td[1]/text()")[0]
-        text_to_parse = [text]
-
-        if self.include_summary:
-            summary_lines = row2.xpath("./td/div/text()")
-            summary = "\n".join(summary_lines)
-            joined_text = "\n".join([text, summary_lines[0]])
-            text_to_parse.append(joined_text)
-        else:
-            summary = False
-
-        return {
-            "url": url,
-            "docket": docket,
-            "date": self.parse_date_from_text(text_to_parse),
-            "name": self.parse_name_from_text(text_to_parse),
-            "summary": summary,
-        }
-
-    def parse_date_from_text(self, text_list):
-        regex = r"(.*?)(\((\w+\s+\d+\,\s+\d+)\))(.*?)"
-        for text in text_list:
-            date_match = re.match(regex, text)
-            if date_match:
-                return date_match.group(3)
-
-        # Fall back on previous case's date
-        if self.previous_date:
-            return self.previous_date
-
-        raise InsanityException(
-            "Could not parse date from string, and no "
-            'previous date to fall back on: "%s"' % text_list
-        )
-
-    @staticmethod
-    def parse_name_from_text(text_list):
-        regexes = [
-            # Expected format
-            r"(.*?)(,?\sNos?\.)(.*?)",
-            # Clerk typo, forgot "No."/"Nos." substring
-            r"(.*?)(,?\s\d+-\d+(,|\s))(.*?)",
-            # Same as above, and there's an unconventional docket number
-            # like 'SU-14-324' instead of '14-324'. See ri_p_example_4.html
-            r"(.*?)(,?\s(?:\w+-)?\d+-\d+(,|\s))(.*?)",
-        ]
-
-        for regex in regexes:
-            for text in text_list:
-                name_match = re.match(regex, text)
-                if name_match:
-                    return name_match.group(1)
-
-        # "No."/"Nos." and docket missing, fall back on whatever's before first
-        # semi-colon
-        for text in text_list:
-            if ";" in text:
-                return text.split(";")[0]
-
-        raise InsanityException(
-            f'Could not parse name from string: "{text_list}"'
-        )
+        return f"https://www.courts.ri.gov/Courts/SupremeCourt/Supreme{self.opinion_type}/Forms/{year}{year+1}.aspx"
