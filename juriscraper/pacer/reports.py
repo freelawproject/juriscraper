@@ -241,6 +241,15 @@ class BaseReport:
             if "Sealed Document" in r.text:
                 # See: https://ecf.almd.uscourts.gov/doc1/01712589088
                 error = f"Document is sealed: {pacer_case_id=} {url=}"
+            if (
+                "This image is not available for viewing by non-court users"
+                in r.text
+            ):
+                # See: https://ecf.wvsd.uscourts.gov/doc1/20115419289
+                error = (
+                    f"Image not available for viewing by non-court users: "
+                    f"{pacer_case_id=} {url=}"
+                )
             if "A Client Code is required for PACER search" in r.text:
                 error = (
                     f"Unable to get document. Client code required: "
