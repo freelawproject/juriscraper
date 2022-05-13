@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.4 - 2022-05-13**
+
+Features:
+
+ - Fix Rhode Island scraper
+
+Changes:
+
+ - Update to Rhode island Published and Unpublished opinions.
+
+## Past
+
 **2.5.1 - 2022-04-25**
 
 Features:
@@ -45,8 +57,6 @@ Changes:
 
  - See notes re features.
 
-
-## Past
 
 **2.4.11 - 2022-04-22**
 
