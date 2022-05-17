@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.5 - 2022-05-17**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix failing CAFC Oral Argument Scraper and Back Scraper.
+
+## Past
+
 **2.5.4 - 2022-05-13**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
  - Update to Rhode island Published and Unpublished opinions.
-
-## Past
 
 **2.5.1 - 2022-04-25**
 
