@@ -73,6 +73,14 @@ class Site(OralArgumentSiteLinear):
     def _process_html(self) -> None:
         """Extract content from JSON response
 
+        Each row in the json returns a list of values, see example below.
+        [
+          "05/06/2022",
+          "21-2084",
+          "<a sort=\"Best Medical International, Inc. v. Elekta Inc.\"
+          href=\"https://oralarguments.cafc.uscourts.gov/default.aspx?fl=21-2084_05062022.mp3\"
+          download>Best Medical International, Inc. v. Elekta Inc. (mp3)</a>"
+        ]
         :return: None
         """
         for row in self.request["response"].json()["data"]:
