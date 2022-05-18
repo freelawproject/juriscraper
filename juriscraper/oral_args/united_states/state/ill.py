@@ -5,72 +5,47 @@ Author: Rebecca Fordon
 Reviewer: Mike Lissner
 History:
 * 2016-06-22: Created by Rebecca Fordon
+* 2022-05-18: Updated by William E. Palin
 """
+from datetime import timedelta
+
+from dateutil.utils import today
+
+from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OralArgumentSite import OralArgumentSite
-
-
-class Site(OralArgumentSite):
+class Site(OralArgumentSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "http://www.illinoiscourts.gov/Media/On_Demand.asp"
-        self.cell_index_docket = 2
-        self.cell_index_download = 5
-        self.cell_index_name = 3
-        # Extract data from all rows with mp3 url/link
-        self.xpath_root = '(//table[(.//th)[1][contains(.//text(), "Argument Date")]])[last()]//tr[position() > 1][.//@href[contains(., ".mp3")]]'
-        self.back_scrape_iterable = list(range(2008, 2016))
+        self.url = "https://www.illinoiscourts.gov/courts/supreme-court/oral-argument-audio-and-video/"
+        self.method = "POST"
+        self.today = today().strftime("%m/%d/%Y")
+        self.earlier = (today() - timedelta(days=30)).strftime("%m/%d/%Y")
+        self._set_parameters()
 
-    def _get_download_urls(self):
-        path = self.xpath_root + "/td[%d]//@href" % self.cell_index_download
-        return list(self.html.xpath(path))
+    def _set_parameters(self):
+        self.parameters = {
+            "__EVENTTARGET": "ctl00$ctl04$txtFilterDateFrom",
+            "__EVENTARGUMENT": "",
+            "__LASTFOCUS": "",
+            "__VIEWSTATEGENERATOR": "66677877",
+            "ctl00$header$search$txtSearch": "",
+            "ctl00$ctl04$txtFilterName": "",
+            "ctl00$ctl04$ddlFilterDate": "Custom Date Range",
+            "ctl00$ctl04$txtFilterDateFrom": self.earlier,
+            "ctl00$ctl04$txtFilterDateTo": self.today,
+            "ctl00$ctl04$hdnSortField": "ArgumentDate",
+            "ctl00$ctl04$hdnSortDirection": "DESC",
+        }
 
-    def _get_case_dates(self):
-        dates = []
-        path = f"{self.xpath_root}/td[1]"
-        for e in self.html.xpath(path):
-            s = e.text_content()
-            try:
-                d = convert_date_string(s, fuzzy=True)
-            except ValueError:
-                continue
-            else:
-                dates.append(d)
-        return dates
-
-    def _get_case_names(self):
-        path = "%s/td[%d]" % (self.xpath_root, self.cell_index_name)
-        cases = []
-        for case in self.html.xpath(path):
-            case = case.text_content().strip()
-            if case:
-                cases.append(case)
-        return cases
-
-    def _get_docket_numbers(self):
-        path = "%s/td[%d]" % (self.xpath_root, self.cell_index_docket)
-        dockets = []
-        for docket in self.html.xpath(path):
-            docket = docket.text_content()
-            dockets.append(docket)
-        return dockets
-
-    def _download_backwards(self, date_str):
-        """Backwards urls are just the regular ones with a year munged at the
-        end.
-        """
-        # Set it to the value that seems to work everywhere.
-        if getattr(self, "orig_url", None):
-            # Set url back to its original value, if it has been reset already.
-            self.url = self.orig_url
-        else:
-            # First iteration. Set aside the original value, so we can use it
-            # in the remaining iterations.
-            self.orig_url = self.url
-
-        parts = self.url.rsplit(".", 1)
-        self.url = f"{parts[0]}_{date_str}.{parts[1]}"
-        self.html = self._download()
+    def _process_html(self):
+        for row in self.html.xpath(".//tr")[1:]:
+            self.cases.append(
+                {
+                    "date": row.xpath(".//td[1]/span[1]/text()")[0],
+                    "docket": row.xpath(".//td[2]/span[1]/text()")[0],
+                    "name": row.xpath(".//td[3]/span[1]/text()")[0],
+                    "url": row.xpath(".//a/@data-audio")[0],
+                }
+            )
