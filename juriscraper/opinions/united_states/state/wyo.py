@@ -18,6 +18,7 @@ class Site(OpinionSite):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.base_url = "http://www.courts.state.wy.us"
+        self.download_base = "https://documents.courts.state.wy.us/Opinions"
         self.url = (
             "https://opinions.courts.state.wy.us/Home/GetOpinions?StartDate=1%2F1%2F"
             + str(date.today().year)
@@ -35,7 +36,7 @@ class Site(OpinionSite):
             pdf_file_name = record["DocumentName"]
             if pdf_file_name[:5] == "../..":
                 pdf_file_name = pdf_file_name[5:]
-            url = f"{self.base_url}/Documents/Opinions/{pdf_file_name}"
+            url = f"{self.download_base}/{pdf_file_name}".replace(" ", "%20")
             download_urls.append(url)
         return download_urls
 
