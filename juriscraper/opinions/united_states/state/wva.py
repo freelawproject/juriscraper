@@ -1,3 +1,5 @@
+import requests
+
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OpinionSite import OpinionSite
 
@@ -76,3 +78,38 @@ class Site(OpinionSite):
             code = cell.text_content().strip()
             results.append(codes[code] if code in codes else "Unknown")
         return results
+
+    def check_url(self, url):
+        return (
+            requests.head(
+                url,
+                allow_redirects=False,
+                headers={"User-Agent": "Juriscraper"},
+            ).status_code
+            != 200
+        )
+
+    def _post_parse(self):
+        """Check newest 50 opinions for broken links.
+
+        No good explanation here. But it seems that sometimes there links just
+        dont work. Instead we should just do head requests on the newest 50
+        opinions and drop them.
+        """
+
+        to_be_removed = [
+            index
+            for index, url in enumerate(self.download_urls[:50])
+            if self.check_url(url)
+        ]
+        for attr in self._all_attrs:
+            item = getattr(self, attr)
+            if item is not None:
+                new_item = self.remove_elements(item, to_be_removed)
+                self.__setattr__(attr, new_item)
+
+    @staticmethod
+    def remove_elements(list_, indexes_to_be_removed):
+        return [
+            i for j, i in enumerate(list_) if j not in indexes_to_be_removed
+        ]
