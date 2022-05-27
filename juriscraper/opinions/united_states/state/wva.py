@@ -96,7 +96,8 @@ class Site(OpinionSite):
         dont work. Instead we should just do head requests on the newest 50
         opinions and drop them.
         """
-
+        if self.test_mode_enabled():
+            return
         to_be_removed = [
             index
             for index, url in enumerate(self.download_urls[:50])
