@@ -30,7 +30,7 @@ class Site(OpinionSite):
         "PC": "Per Curiam",
         "R": "John G. Roberts",
         "SS": "Sonia Sotomayor",
-        "T": "Clarence Thoma",
+        "T": "Clarence Thomas",
     }
 
     def __init__(self, *args, **kwargs):
