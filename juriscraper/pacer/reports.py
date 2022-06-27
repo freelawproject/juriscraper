@@ -15,7 +15,7 @@ from ..lib.html_utils import (
     strip_bad_html_tags_insecure,
 )
 from ..lib.log_tools import make_default_logger
-from .utils import is_pdf, make_doc1_url
+from .utils import is_html, is_pdf, make_doc1_url
 
 logger = make_default_logger()
 
@@ -200,6 +200,20 @@ class BaseReport:
             # Add parameters to the PACER base url and make a GET request
             req_timeout = (60, 300)
             r = requests.get(url, params=params, timeout=req_timeout)
+
+            # If the response is an HTML document and it doesn't contain an
+            # IFRAME, the magic link document is no longer available
+            error = None
+            if is_html(r) and not "iframe" in r.text:
+                error = (
+                    f"Magic link document not available in case: "
+                    f"URL: {url}, caseid: {pacer_case_id}, "
+                    f"magic_num: {pacer_magic_num}"
+                )
+            if error:
+                logger.warning(error)
+                return None, error
+
         else:
             # If no magic_number use normal method to fetch the document
             r, url = self._query_pdf_download(
@@ -221,7 +235,7 @@ class BaseReport:
                     f"Failed to get docket entry in case: "
                     f"{pacer_case_id=} at {url}"
                 )
-            if "This document is not available" in r.text:
+            if "document is not available" in r.text:
                 error = (
                     f"Document not available in case: "
                     f"{pacer_case_id=} at {url}"
@@ -238,7 +252,7 @@ class BaseReport:
                     f"Unable to get transcript at {url} in case "
                     f"{pacer_doc_id=}."
                 )
-            if "Sealed Document" in r.text:
+            if "Sealed Document" in r.text or "Under Seal" in r.text:
                 # See: https://ecf.almd.uscourts.gov/doc1/01712589088
                 error = f"Document is sealed: {pacer_case_id=} {url=}"
             if (
