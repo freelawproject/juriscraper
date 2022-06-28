@@ -8,6 +8,7 @@ from lxml import etree, html
 from lxml.etree import XMLSyntaxError
 from lxml.html import HtmlElement, fromstring, html5parser, tostring
 from lxml.html.clean import Cleaner
+from requests import Response
 
 try:
     # Use cchardet for performance to detect the character encoding.
@@ -275,3 +276,11 @@ def fix_links_in_lxml_tree(link, keep_anchors=False):
         return url
     else:
         return url.split("#")[0]
+
+
+def is_html(response: Response) -> bool:
+    """Determines whether the item downloaded is an HTML document or something
+    else."""
+    if "text/html" in response.headers.get("content-type", ""):
+        return True
+    return False

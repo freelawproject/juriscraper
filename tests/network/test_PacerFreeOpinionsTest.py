@@ -222,9 +222,9 @@ class PacerMagicLinkTest(unittest.TestCase):
             pacer_case_id, pacer_doc_id, pacer_magic_num
         )
         mock_logger.warning.assert_called_with(
-            "Magic link document not available in case: "
-            f"URL: {url}, caseid: {pacer_case_id}, "
-            f"magic_num: {pacer_magic_num}"
+            "Document not available via magic link in case: "
+            f"caseid: {pacer_case_id}, magic_num: {pacer_magic_num}, "
+            f"URL: {url}"
         )
         # No PDF should be returned
         self.assertEqual(r, None)

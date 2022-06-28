@@ -189,14 +189,6 @@ def is_text(response):
     return False
 
 
-def is_html(response):
-    """Determines whether the item downloaded is an HTML document or something
-    else."""
-    if "text/html" in response.headers.get("content-type", ""):
-        return True
-    return False
-
-
 def get_nonce_from_form(r):
     """Get a nonce value from a HTML response. Returns the first nonce that is
     found.
