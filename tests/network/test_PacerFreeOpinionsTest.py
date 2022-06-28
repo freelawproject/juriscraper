@@ -132,7 +132,7 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         report = self.reports["ksd"]
         r, msg = report.download_pdf("81531", "07902639735")
         self.assertIsNone(r)
-        self.assertIn("Failed to get docket entry", msg)
+        self.assertIn("Document not available in case", msg)
 
     @SKIP_IF_NO_PACER_LOGIN
     def test_query_can_get_multiple_results(self):
@@ -221,11 +221,10 @@ class PacerMagicLinkTest(unittest.TestCase):
         r, msg = report.download_pdf(
             pacer_case_id, pacer_doc_id, pacer_magic_num
         )
-        mock_logger.error.assert_called_with(
-            "Unable to download PDF. PDF not served as "
-            "binary data and unable to find iframe src "
-            f"attribute. URL: {url}, caseid: {pacer_case_id}, "
-            f"magic_num: {pacer_magic_num}"
+        mock_logger.warning.assert_called_with(
+            "Document not available via magic link in case: "
+            f"caseid: {pacer_case_id}, magic_num: {pacer_magic_num}, "
+            f"URL: {url}"
         )
         # No PDF should be returned
         self.assertEqual(r, None)

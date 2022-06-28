@@ -11,6 +11,7 @@ from ..lib.html_utils import (
     fix_links_in_lxml_tree,
     get_html5_parsed_text,
     get_html_parsed_text,
+    is_html,
     set_response_encoding,
     strip_bad_html_tags_insecure,
 )
@@ -200,6 +201,20 @@ class BaseReport:
             # Add parameters to the PACER base url and make a GET request
             req_timeout = (60, 300)
             r = requests.get(url, params=params, timeout=req_timeout)
+
+            # If the response is an HTML document, and it doesn't contain an
+            # IFRAME, the magic link document is no longer available
+            error = None
+            if is_html(r) and "iframe" not in r.text:
+                error = (
+                    f"Document not available via magic link in case: "
+                    f"caseid: {pacer_case_id}, magic_num: {pacer_magic_num}, "
+                    f"URL: {url}"
+                )
+            if error:
+                logger.warning(error)
+                return None, error
+
         else:
             # If no magic_number use normal method to fetch the document
             r, url = self._query_pdf_download(
@@ -221,7 +236,12 @@ class BaseReport:
                     f"Failed to get docket entry in case: "
                     f"{pacer_case_id=} at {url}"
                 )
-            if "This document is not available" in r.text:
+            if "document is not available" in r.text:
+                # See: https://ecf.akb.uscourts.gov/doc1/02211536343
+                # See: https://ecf.ksd.uscourts.gov/doc1/07912639735
+                # Matches against:
+                # "The document is not available" and
+                # "This document is not available"
                 error = (
                     f"Document not available in case: "
                     f"{pacer_case_id=} at {url}"
@@ -238,8 +258,12 @@ class BaseReport:
                     f"Unable to get transcript at {url} in case "
                     f"{pacer_doc_id=}."
                 )
-            if "Sealed Document" in r.text:
+            if "Sealed Document" in r.text or "Under Seal" in r.text:
                 # See: https://ecf.almd.uscourts.gov/doc1/01712589088
+                # See: https://ecf.cand.uscourts.gov/doc1/035122021132
+                # Matches against:
+                # "Sealed Document" and
+                # "This document is currently Under Seal and not available..."
                 error = f"Document is sealed: {pacer_case_id=} {url=}"
             if (
                 "This image is not available for viewing by non-court users"
