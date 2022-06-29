@@ -16,6 +16,22 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.7 - 2022-06-29**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Added support for more PACER download document errors messages
+ - Update thomas name in test files
+ - Drop future opinions
+ - Update url pattern for Wyoming
+ - Fix all failing Illinois Oral Argument Scrapers
+
+## Past
+
 **2.5.6 - 2022-05-17**
 
 Features:
@@ -25,8 +41,6 @@ Features:
 Changes:
 
  - Fix Mass Land Court scraper
-
-## Past
 
 **2.5.5 - 2022-05-17**
 
