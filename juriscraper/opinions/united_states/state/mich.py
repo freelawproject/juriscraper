@@ -84,9 +84,9 @@ class Site(OpinionSiteLinear):
                 # Else, query the API and return the name of the case
                 self.url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseSearchContent/?searchQuery={case['title']}"
                 self.html = self._download()
-                case["name"] = self.html["caseDetailResults"]["searchItems"][
-                    0
-                ]["title"].title()
+                case["name"] = self.html["opinionResults"]["searchItems"][0][
+                    "title"
+                ].title()
             return case["name"]
 
         return DeferringList(seed=self.cases, fetcher=fetcher)
