@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.8 - 2022-07-26**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix Michigan Supreme Court
+
+## Past
+
 **2.5.7 - 2022-06-29**
 
 Features:
@@ -29,8 +41,6 @@ Changes:
  - Drop future opinions
  - Update url pattern for Wyoming
  - Fix all failing Illinois Oral Argument Scrapers
-
-## Past
 
 **2.5.6 - 2022-05-17**
 
