@@ -92,12 +92,12 @@ class Site(OpinionSiteLinear):
         :param scraped_text: Text of scraped content
         :return: metadata
         """
-        if re.findall("\bPUBLISHED\b", scraped_text):
+        if re.findall(r"\bPUBLISHED\b", scraped_text):
             status = "Published"
-        elif re.findall("\bUNPUBLISHED\b", scraped_text):
+        elif re.findall(r"\bUNPUBLISHED\b", scraped_text):
             status = "Unpublished"
         else:
-            status = "Unkonwn"
+            status = "Unknown"
         metadata = {
             "OpinionCluster": {
                 "precedential_status": status,
