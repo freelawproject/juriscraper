@@ -1,92 +1,117 @@
-from datetime import date, datetime, timedelta
+import json
+import re
+from datetime import date, timedelta
+from typing import Any, Dict
 
 from dateutil.rrule import DAILY, rrule
 
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import clean_if_py3
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "https://www.ca4.uscourts.gov/DataOpinions.aspx"
+        self.url = "https://www.govinfo.gov/wssearch/search"
         self.court_id = self.__module__
-        td = date.today()
+        self.td = date.today()
+        today = self.td.strftime("%Y-%m-%d")
+        last_month = (self.td - timedelta(days=31)).strftime("%Y-%m-%d")
         self.parameters = {
-            "CASENUM": "",
-            "FROMDATE": (td - timedelta(days=10)).strftime("%m-%d-%Y"),
-            "TITLE": "",
-            "TODATE": td.strftime("%m-%d-%Y"),
+            "facets": {
+                "accodenav": [
+                    "USCOURTS",
+                ],
+                "governmentauthornav": [
+                    "United States Court of Appeals for the Fourth Circuit",
+                ],
+            },
+            "filterOrder": [
+                "accodenav",
+                "governmentauthornav",
+            ],
+            "facetToExpand": "governmentauthornav",
+            "offset": 0,
+            "pageSize": "100",
+            "sortBy": "2",
+            "query": f"publishdate:range({last_month},{today})",
+            "browseByDate": True,
+            "historical": False,
         }
         self.method = "POST"
-        self.interval = 30
+        self.json = {}
+
+        self.interval = 14
         self.back_scrape_iterable = [
             i.date()
             for i in rrule(
                 DAILY,
                 interval=self.interval,  # Every interval days
-                dtstart=date(1996, 1, 1),
-                until=date(2016, 1, 1),
+                dtstart=date(2022, 1, 1),
+                until=date(2022, 7, 1),
             )
         ]
 
-    def _get_case_names(self):
-        path = "//tr/td[4]/text()"
-        names = []
-        for s in self.html.xpath(path):
-            s = clean_if_py3(s)
-            if s.strip():
-                names.append(s)
-        logger.info(str(len(names)))
-        return names
-
-    def _get_download_urls(self):
-        path = "//tr/td[1]/a/@href"
-        return list(self.html.xpath(path))
-
-    def _get_case_dates(self):
-        path = "//tr/td[3]/text()"
-        case_dates = []
-        for date_string in self.html.xpath(path):
-            date_string = clean_if_py3(date_string).strip()
-            if date_string:
-                case_dates.append(
-                    datetime.strptime(date_string, "%m/%d/%Y").date()
+    def _download(self, request_dict={}):
+        if self.test_mode_enabled():
+            self.json = json.load(open(self.url))
+        else:
+            self.json = (
+                self.request["session"]
+                .post(
+                    self.url,
+                    json=self.parameters,
                 )
-        return case_dates
+                .json()
+            )
 
-    def _get_docket_numbers(self):
-        path = "//tr/td[2]//text()"
-        docket_numbers = []
-        for s in self.html.xpath(path):
-            s = clean_if_py3(s).strip()
-            if s:
-                docket_numbers.append(s)
-        return docket_numbers
+    def _process_html(self) -> None:
+        """Process CA4 Opinions
 
-    def _get_precedential_statuses(self):
-        statuses = []
-        # using download link, we can get the statuses
-        for download_url in self.download_urls:
-            file_name = download_url.split("/")[-1]
-            if "u" in file_name.lower():
-                statuses.append("Unpublished")
-            else:
-                statuses.append("Published")
-        return statuses
+        :return: None
+        """
+        for row in self.json["resultSet"]:
+            package_id = row["fieldMap"]["packageid"]
+            docket = row["line1"].split()[0]
+            date_str = row["line2"].split("day, ")[1].strip(".")
+            url = f"https://www.govinfo.gov/content/pkg/{package_id}/pdf/{package_id}-0.pdf"
 
-    def _download_backwards(self, d):
+            self.cases.append(
+                {
+                    "docket": docket,
+                    "name": row["fieldMap"]["title"],
+                    "url": url,
+                    "date": date_str,
+                    "status": "Unknown",
+                }
+            )
+        print(self.cases[0])
 
-        self.parameters = {
-            "CASENUM": "",
-            "FROMDATE": d.strftime("%m-%d-%Y"),
-            "TITLE": "",
-            "TODATE": (d + timedelta(self.interval)).strftime("%m-%d-%Y"),
+    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+        """Pass scraped text into function and return precedential status
+
+        :param scraped_text: Text of scraped content
+        :return: metadata
+        """
+        if re.findall(r"\bPUBLISHED\b", scraped_text):
+            status = "Published"
+        elif re.findall(r"\bUNPUBLISHED\b", scraped_text):
+            status = "Unpublished"
+        else:
+            status = "Unknown"
+        metadata = {
+            "OpinionCluster": {
+                "precedential_status": status,
+            },
         }
+        return metadata
 
+    def _download_backwards(self, dt) -> None:
+        """Download backward over time method
+
+        :param dt: Datetime object
+        :return: None
+        """
+        start = (dt - timedelta(days=7)).strftime("%Y-%m-%d")
+        end = dt.strftime("%Y-%m-%d")
+        self.parameters["query"] = f"publishdate:range({start},{end})"
         self.html = self._download()
-        if self.html is not None:
-            # Setting status is important because it prevents the download
-            # function from being run a second time by the parse method.
-            self.status = 200
