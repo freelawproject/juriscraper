@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.9 - 2022-07-28**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix CA4
+
+## Past
+
 **2.5.8 - 2022-07-26**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
  - Fix Michigan Supreme Court
-
-## Past
 
 **2.5.7 - 2022-06-29**
 
