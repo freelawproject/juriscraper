@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.11 - 2022-07-29**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix Tax Scraper
+
+## Past
+
 **2.5.10 - 2022-07-28**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
  - Bug fix
-
-## Past
 
 **2.5.9 - 2022-07-28**
 
