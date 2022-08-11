@@ -1,0 +1,69 @@
+Return-Path: <CMECF_No_Reply@ca3.uscourts.gov>
+Received: from icmecf202.gtwy.uscourts.gov (icmecf202.gtwy.uscourts.gov [63.241.40.205])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id kjsipl4av50k7qu51fu6a1j8d24jfhpr5jvmokg1
+ for archive@recap.email;
+ Mon, 08 Aug 2022 20:48:09 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ca3.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=CMECF_No_Reply@ca3.uscourts.gov; helo=icmecf202.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ca3.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=CMECF_No_Reply@ca3.uscourts.gov; helo=icmecf202.gtwy.uscourts.gov;
+ dmarc=none header.from=ca3.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFTW5MRUJuT21qQ3ZGcW1keTgwMU5HQ040ZnJDM2U2ckw4UERMVnB6QlFSSUlPbGtCMGxGSE9PMHlRSzUySXRBdFJ0WkVwckpMOGF3M2UrT0srd1MwbmkyYmZ4NUYxQzlFRmhnZmhOQlBDQ1Vib3FnOXRvODB2ZXBlU09RYmZ4cEJEaDVqYTdVYUpTY1B0R3B0WUYvZUY4SFAySldGbTl5dndjMlZSNHFlVDJJNy8yZDB0c3AwS2RtWHFwa05JNnR3OUYwWFZ6M2JlUWN6S3VBVkIrWEJZVFd4SVY3b2tFc3gyS2hqajJ5My91TTZOTC9sYXZadEErU3FCRisvZGlOR21kdFpqejh3V01OTUEvMWQ5ZzFKT1VGSGQrNmR1ZDBwYXhBcUNzczVqbU9lOSt6cTY2SmszU25iQnhGTFp2aGs9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=HBwDbf/G2QCGk4PCuhe0gYWvx+U4+DREN88tBGz9hqJbIhGfkKeJLfSpRTQ2GNue4lHjRJY7UOAzBq4i5DrUNY5atUYKkoDVo141MLeDI9HV/IH/7qm9kMS00UmuOSGBAXxQ5QnERNphFkerJ89d3MayQreu5M4KmU1N1Odx5Sg=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1659991689; v=1; bh=nH7SPB6jpWvRf+01P22bVhXZG51W3LholiL5Q/9FIng=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.191.41
+Received: from ca3db.ca3.gtwy.dcn ([156.119.191.41])
+  by icmecf202.gtwy.uscourts.gov with ESMTP; 08 Aug 2022 16:48:07 -0400
+Received: from ca3db.ca3.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by ca3db.ca3.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 278KlYI4077481
+	for <archive@recap.email>; Mon, 8 Aug 2022 16:47:34 -0400
+Date: Mon, 8 Aug 2022 16:47:34 -0400 (EDT)
+From: CMECF_No_Reply@ca3.uscourts.gov
+To: archive@recap.email
+Message-ID: <798611050.1627.1659991654414@ca3db.ca3.gtwy.dcn>
+Subject: 21-1832 Madison Lara, et al v. Commissioner PA State Police
+ "Supplemental Brief"
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><TITLE>21-1832 Madison Lara, et al v. Commissioner PA State Police "Supplemental Brief"</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFDA" TEXT="#000000" LINK="#0000ff" VLINK="#551a8b" ALINK="#ff0000">
+<P><STRONG>
+***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer.  PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing.</STRONG><BR>
+<P><CENTER><STRONG>Third Circuit Court of Appeals</STRONG></CENTER>
+<P><STRONG>Notice of Docket Activity</STRONG><BR>
+<BR>
+The following transaction was filed on 08/08/2022
+<TABLE BORDER=0 CELLSPACING=3>
+<TR><TD><STRONG>Case Name:</STRONG></TD>
+<TD colspan='2'>Madison Lara, et al v. Commissioner PA State Police<BR>
+</TD></TR>
+<TR><TD><STRONG>Case Number:&nbsp;&nbsp;</STRONG></TD>
+<TD><A HREF="https://ecf.ca3.uscourts.gov/n/beam/servlet/TransportRoom?servlet=DocketReportFilter.jsp&caseId=114792">21-1832</A></TD></TR>
+<TR><TD><STRONG>Document(s):</STRONG></TD>
+<TD><A HREF="https://ecf.ca3.uscourts.gov/docs1/003014193380?uid=3594681a19879633">Document(s)</A></TD></TR>
+</TABLE><BR>
+<P><STRONG>Docket Text:</STRONG><BR>
+ECF FILER: ELECTRONIC SUPPLEMENTAL BRIEF on behalf of Appellee Commissioner Pennsylvania State Police. Certificate of Service dated 08/08/2022 by ECF. [21-1832] (DBM)<BR>
+<BR>
+<STRONG>Notice will be electronically mailed to:</STRONG><BR><BR>
+David H. Thompson<BR>
+Joshua Prince<BR>
+James P. Davy<BR>
+John D. Ohlendorf<BR>
+Peter A. Patterson<BR>
+Lisa Ebersole<BR>
+<BR><BR>
+The following document(s) are associated with this transaction:<BR>
+<STRONG>Document Description: </STRONG>Supplemental Brief<BR>
+<STRONG>Original Filename: </STRONG>Commissioner's Reply Letter Brief v.FINAL.pdf<BR>
+<STRONG>Electronic Document Stamp:</STRONG><BR>
+[STAMP acecfStamp_ID=1107201326 [Date=08/08/2022] [FileNumber=4984055-0] [82ea32c6f3c06d60b4718e51eb18ac3edbff7982a40e9689ca9b3e458a2a6961f0340a91b3a01a147210680cf2f46c1ab895e24bf269f611311f450ba79c6cc1]]<BR>
+<BR>
+</BODY></HTML>

@@ -8,6 +8,9 @@ TESTS_ROOT_EXAMPLES_PACER_NEF = os.path.join(TESTS_ROOT_EXAMPLES_PACER, "nef")
 TESTS_ROOT_EXAMPLES_PACER_NEF_S3 = os.path.join(
     TESTS_ROOT_EXAMPLES_PACER, "nef/s3"
 )
+TESTS_ROOT_EXAMPLES_PACER_NDA_S3 = os.path.join(
+    TESTS_ROOT_EXAMPLES_PACER, "nda"
+)
 
 
 class PacerNotificationEmailTest(PacerParseTestCase):
@@ -27,4 +30,14 @@ class S3PacerNotificationEmailTest(PacerParseTestCase):
     def test_notification_emails_s3(self):
         self.parse_files(
             TESTS_ROOT_EXAMPLES_PACER_NEF_S3, "*.txt", S3NotificationEmail
+        )
+
+
+class S3PacerNdaNotificationEmailTest(PacerParseTestCase):
+    def setUp(self):
+        self.maxDiff = 200000
+
+    def test_notification_emails_s3(self):
+        self.parse_files(
+            TESTS_ROOT_EXAMPLES_PACER_NDA_S3, "*.txt", S3NotificationEmail
         )

@@ -20,6 +20,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
     def __init__(self, court_id):
         self.court_id = court_id
         self.content_type = None
+        self.email_notice_type = None
         super().__init__(court_id)
 
     @property
@@ -47,6 +48,19 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 }
 
         return {**base, **parsed}
+
+    def _email_notice_type(self) -> str:
+        """Gets the email notice type from the email text.
+
+        :returns: The email notice type NEF or NDA.
+        """
+        if self.email_notice_type is None:
+            if "Notice of Docket Activity" in self.tree.text_content():
+                self.email_notice_type = "NDA"
+                return self.email_notice_type
+            self.email_notice_type = "NEF"
+            return self.email_notice_type
+        return self.email_notice_type
 
     def _sibling_path(self, label):
         """Gets the path string for the sibling of a label cell (td)
@@ -91,6 +105,12 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         :returns: Docket number, parsed
         """
+
+        if self._email_notice_type() == "NDA":
+            path = self._sibling_path("Case Number")
+            case_number = self._xpath_text_0(self.tree, f"{path}/a")
+            return case_number
+
         path = self._sibling_path("Case Number")
         docket_number = self._parse_docket_number_strs(
             self.tree.xpath(f"{path}/a/text()")
@@ -154,7 +174,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: Anchor tag, if it's found
         """
         try:
-            path = f"{self._sibling_path('Document Number')}//a"
+            if self._email_notice_type() == "NDA":
+                path = f"{self._sibling_path('Document(s)')}//a"
+            else:
+                path = f"{self._sibling_path('Document Number')}//a"
             return self.tree.xpath(path)[0]
         except IndexError:
             return None
@@ -165,7 +188,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: Cleaned docket text
         """
         path = '//strong[contains(., "Docket Text:")]/following-sibling::'
-        node = self.tree.xpath(f"{path}font[1]/b//text()")
+        if self._email_notice_type() == "NDA":
+            node = self.tree.xpath(f"{path}br[1]/following::text()[1]")
+        else:
+            node = self.tree.xpath(f"{path}font[1]/b//text()")
         description = ""
         if len(node):
             for des_part in node:
@@ -227,7 +253,15 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 document_url = (
                     anchor.xpath("./@href")[0] if anchor is not None else None
                 )
-                document_number = self._get_document_number()
+                if self._email_notice_type() == "NDA":
+                    if document_url is not None:
+                        document_number = get_pacer_doc_id_from_doc1_url(
+                            document_url
+                        )
+                    else:
+                        document_number = None
+                else:
+                    document_number = self._get_document_number()
 
         if description is not None:
             entries = [
@@ -246,15 +280,18 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 entries[0]["pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(
                     document_url
                 )
-                entries[0]["pacer_case_id"] = get_pacer_case_id_from_doc1_url(
-                    document_url
-                )
-                entries[0]["pacer_seq_no"] = get_pacer_seq_no_from_doc1_url(
-                    document_url
-                )
-                entries[0][
-                    "pacer_magic_num"
-                ] = get_pacer_magic_num_from_doc1_url(document_url)
+                if self._email_notice_type() != "NDA":
+                    entries[0][
+                        "pacer_case_id"
+                    ] = get_pacer_case_id_from_doc1_url(document_url)
+                    entries[0][
+                        "pacer_seq_no"
+                    ] = get_pacer_seq_no_from_doc1_url(document_url)
+                    entries[0][
+                        "pacer_magic_num"
+                    ] = get_pacer_magic_num_from_doc1_url(document_url)
+            if self._email_notice_type() == "NDA":
+                entries[0]["pacer_case_id"] = self._get_docket_number()
             return entries
         return []
 
@@ -289,6 +326,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: List of email recipients with names and email addresses
         """
         # Matching names in this format is a bit less reliable. May be worth coming back to.
+
         end_point = self._get_docket_number()
 
         replacements = [
@@ -346,15 +384,19 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         :returns: List of email recipients with names and email addresses
         """
-        path = '//b[contains(., "Notice has been electronically mailed to")]/following-sibling::'
-        recipient_lines = self.tree.xpath(f"{path}text()")
-        link_lines = self.tree.xpath(f"{path}a")
-        if len(link_lines):
-            return self._get_email_recipients_with_links(
-                self.tree.xpath(
-                    'string(//b[contains(., "Notice has been electronically mailed to")]/parent::node())'
+        if self._email_notice_type() == "NDA":
+            path = '//strong[contains(., "Notice will be electronically mailed to")]/following-sibling::'
+            recipient_lines = self.tree.xpath(f"{path}text()")
+        else:
+            path = '//b[contains(., "Notice has been electronically mailed to")]/following-sibling::'
+            recipient_lines = self.tree.xpath(f"{path}text()")
+            link_lines = self.tree.xpath(f"{path}a")
+            if len(link_lines):
+                return self._get_email_recipients_with_links(
+                    self.tree.xpath(
+                        'string(//b[contains(., "Notice has been electronically mailed to")]/parent::node())'
+                    )
                 )
-            )
         return self._get_email_recipients_with_links(" ".join(recipient_lines))
 
     def _get_email_recipients_plain(
