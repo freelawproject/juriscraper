@@ -61,7 +61,8 @@ def get_pacer_case_id_from_doc1_url(url):
 
 
 def get_pacer_magic_num_from_doc1_url(
-    url: str, appellate: bool = False,
+    url: str,
+    appellate: bool = False,
 ) -> Optional[str]:
     """Extract the magic number from the doc1 URL."""
     if appellate:
