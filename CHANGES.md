@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.12 - 2022-08-12**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Added support to parse NDAs and download their free documents.
+
+## Past
+
 **2.5.11 - 2022-07-29**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
  - Fix Tax Scraper
-
-## Past
 
 **2.5.10 - 2022-07-28**
 
