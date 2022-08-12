@@ -242,9 +242,9 @@ class PacerMagicLinkTest(unittest.TestCase):
         pacer_case_id = "21-1832"
         pacer_doc_id = "003014193380"
         pacer_magic_num = "3594681a19879633"
-        email_notice_type = "NDA"
+        appellate = True
         r, msg = report.download_pdf(
-            pacer_case_id, pacer_doc_id, pacer_magic_num, email_notice_type
+            pacer_case_id, pacer_doc_id, pacer_magic_num, appellate
         )
         mock_logger.warning.assert_called_with(
             "Document not available via magic link in case: "

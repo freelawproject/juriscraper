@@ -20,7 +20,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
     def __init__(self, court_id):
         self.court_id = court_id
         self.content_type = None
-        self.email_notice_type = None
+        self.appellate = None
         super().__init__(court_id)
 
     @property
@@ -36,7 +36,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                     "contains_attachments": self._contains_attachments_plain(),
                     "docket_number": self._get_docket_number_plain(),
                     "date_filed": self._get_date_filed(),
-                    "email_notice_type": self._email_notice_type(),
+                    "appellate": self._is_appellate(),
                     "docket_entries": self._get_docket_entries(),
                     "email_recipients": self._get_email_recipients_plain(),
                 }
@@ -46,25 +46,25 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                     "contains_attachments": self._contains_attachments(),
                     "docket_number": self._get_docket_number(),
                     "date_filed": self._get_date_filed(),
-                    "email_notice_type": self._email_notice_type(),
+                    "appellate": self._is_appellate(),
                     "docket_entries": self._get_docket_entries(),
                     "email_recipients": self._get_email_recipients(),
                 }
 
         return {**base, **parsed}
 
-    def _email_notice_type(self) -> str:
+    def _is_appellate(self) -> str:
         """Gets the email notice type from the email text.
 
         :returns: The email notice type NEF or NDA.
         """
-        if self.email_notice_type is None:
+        if self.appellate is None:
             if "Notice of Docket Activity" in self.tree.text_content():
-                self.email_notice_type = "NDA"
-                return self.email_notice_type
-            self.email_notice_type = "NEF"
-            return self.email_notice_type
-        return self.email_notice_type
+                self.appellate = True
+                return self.appellate
+            self.appellate = False
+            return self.appellate
+        return self.appellate
 
     def _sibling_path(self, label):
         """Gets the path string for the sibling of a label cell (td)
@@ -110,7 +110,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: Docket number, parsed
         """
 
-        if self._email_notice_type() == "NDA":
+        if self._is_appellate():
             path = self._sibling_path("Case Number")
             case_number = self._xpath_text_0(self.tree, f"{path}/a")
             return case_number
@@ -178,7 +178,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: Anchor tag, if it's found
         """
         try:
-            if self._email_notice_type() == "NDA":
+            if self._is_appellate():
                 path = f"{self._sibling_path('Document(s)')}//a"
             else:
                 path = f"{self._sibling_path('Document Number')}//a"
@@ -192,7 +192,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: Cleaned docket text
         """
         path = '//strong[contains(., "Docket Text:")]/following-sibling::'
-        if self._email_notice_type() == "NDA":
+        if self._is_appellate():
             node = self.tree.xpath(f"{path}br[1]/following::text()[1]")
         else:
             node = self.tree.xpath(f"{path}font[1]/b//text()")
@@ -290,7 +290,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 document_url = (
                     anchor.xpath("./@href")[0] if anchor is not None else None
                 )
-                if self._email_notice_type() == "NDA":
+                if self._is_appellate():
                     if document_url is not None:
                         document_number = get_pacer_doc_id_from_doc1_url(
                             document_url
@@ -320,16 +320,16 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 entries[0][
                     "pacer_magic_num"
                 ] = get_pacer_magic_num_from_doc1_url(
-                    document_url, self.email_notice_type
+                    document_url, self.appellate
                 )
-                if self._email_notice_type() != "NDA":
+                if not self._is_appellate():
                     entries[0][
                         "pacer_case_id"
                     ] = get_pacer_case_id_from_doc1_url(document_url)
                     entries[0][
                         "pacer_seq_no"
                     ] = get_pacer_seq_no_from_doc1_url(document_url)
-            if self._email_notice_type() == "NDA":
+            if self._is_appellate():
                 entries[0]["pacer_case_id"] = self._get_docket_number()
             return entries
         return []
@@ -423,7 +423,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         :returns: List of email recipients with names and email addresses
         """
-        if self._email_notice_type() == "NDA":
+        if self._is_appellate():
             path = '//strong[contains(., "Notice will be electronically mailed to")]/following-sibling::'
             recipient_lines = self.tree.xpath(f"{path}text()")
         else:
