@@ -35,6 +35,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                     "case_name": self._get_case_name_plain(),
                     "docket_number": self._get_docket_number_plain(),
                     "date_filed": self._get_date_filed(),
+                    "email_notice_type": self._email_notice_type(),
                     "docket_entries": self._get_docket_entries(),
                     "email_recipients": self._get_email_recipients_plain(),
                 }
@@ -43,6 +44,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                     "case_name": self._get_case_name(),
                     "docket_number": self._get_docket_number(),
                     "date_filed": self._get_date_filed(),
+                    "email_notice_type": self._email_notice_type(),
                     "docket_entries": self._get_docket_entries(),
                     "email_recipients": self._get_email_recipients(),
                 }
@@ -280,6 +282,11 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 entries[0]["pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(
                     document_url
                 )
+                entries[0][
+                    "pacer_magic_num"
+                ] = get_pacer_magic_num_from_doc1_url(
+                    document_url, self.email_notice_type
+                )
                 if self._email_notice_type() != "NDA":
                     entries[0][
                         "pacer_case_id"
@@ -287,9 +294,6 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                     entries[0][
                         "pacer_seq_no"
                     ] = get_pacer_seq_no_from_doc1_url(document_url)
-                    entries[0][
-                        "pacer_magic_num"
-                    ] = get_pacer_magic_num_from_doc1_url(document_url)
             if self._email_notice_type() == "NDA":
                 entries[0]["pacer_case_id"] = self._get_docket_number()
             return entries

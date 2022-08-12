@@ -194,6 +194,7 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         )
 
 
+@mock.patch("juriscraper.pacer.reports.logger")
 class PacerMagicLinkTest(unittest.TestCase):
     """Test related to PACER magic link free download"""
 
@@ -206,9 +207,12 @@ class PacerMagicLinkTest(unittest.TestCase):
 
         self.reports = {}
         court_id = "nysd"
+        court_id_nda = "ca3"
         self.reports[court_id] = FreeOpinionReport(court_id, pacer_session)
+        self.reports[court_id_nda] = FreeOpinionReport(
+            court_id_nda, pacer_session
+        )
 
-    @mock.patch("juriscraper.pacer.reports.logger")
     def test_download_simple_pdf_magic_link_fails(self, mock_logger):
         """Can we download a PACER document with an invalid or expired
         magic link? land on a login page and returns an error.
@@ -220,6 +224,27 @@ class PacerMagicLinkTest(unittest.TestCase):
         pacer_magic_num = "46253052"
         r, msg = report.download_pdf(
             pacer_case_id, pacer_doc_id, pacer_magic_num
+        )
+        mock_logger.warning.assert_called_with(
+            "Document not available via magic link in case: "
+            f"caseid: {pacer_case_id}, magic_num: {pacer_magic_num}, "
+            f"URL: {url}"
+        )
+        # No PDF should be returned
+        self.assertEqual(r, None)
+
+    def test_download_nda_pdf_magic_link(self, mock_logger):
+        """Can we download a NDA PACER document with an invalid or expired
+        magic link? land on a login page and returns an error.
+        """
+        report = self.reports["ca3"]
+        url = "https://ecf.ca3.uscourts.gov/docs1/003014193380"
+        pacer_case_id = "21-1832"
+        pacer_doc_id = "003014193380"
+        pacer_magic_num = "3594681a19879633"
+        email_notice_type = "NDA"
+        r, msg = report.download_pdf(
+            pacer_case_id, pacer_doc_id, pacer_magic_num, email_notice_type
         )
         mock_logger.warning.assert_called_with(
             "Document not available via magic link in case: "
