@@ -176,7 +176,7 @@ class BaseReport:
         pacer_case_id: str,
         pacer_doc_id: int,
         pacer_magic_num: Optional[str] = None,
-        email_notice_type: Optional[str] = None,
+        appellate: bool = False,
     ) -> Tuple[Optional[Response], str]:
         """Download a PDF from PACER.
 
@@ -199,7 +199,7 @@ class BaseReport:
                 "caseid": pacer_case_id,
                 "magic_num": pacer_magic_num,
             }
-            if email_notice_type == "NDA":
+            if appellate:
                 url = make_docs1_url(self.court_id, pacer_doc_id)
                 params = {
                     "uid": pacer_magic_num,

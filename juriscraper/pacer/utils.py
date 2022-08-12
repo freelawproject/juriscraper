@@ -61,10 +61,10 @@ def get_pacer_case_id_from_doc1_url(url):
 
 
 def get_pacer_magic_num_from_doc1_url(
-    url: str, email_notice_type: Optional[str] = None
+    url: str, appellate: bool = False,
 ) -> Optional[str]:
     """Extract the magic number from the doc1 URL."""
-    if email_notice_type == "NDA":
+    if appellate:
         # NDA free look link format is:
         # https://ecf.ca2.uscourts.gov/docs1/00208721516?uid=b775e9908ad79ce2
         match = re.search(r"uid=(\w+)", url)
