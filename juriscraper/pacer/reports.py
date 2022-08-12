@@ -16,7 +16,7 @@ from ..lib.html_utils import (
     strip_bad_html_tags_insecure,
 )
 from ..lib.log_tools import make_default_logger
-from .utils import is_pdf, make_doc1_url
+from .utils import is_pdf, make_doc1_url, make_docs1_url
 
 logger = make_default_logger()
 
@@ -176,6 +176,7 @@ class BaseReport:
         pacer_case_id: str,
         pacer_doc_id: int,
         pacer_magic_num: Optional[str] = None,
+        email_notice_type: Optional[str] = None,
     ) -> Tuple[Optional[Response], str]:
         """Download a PDF from PACER.
 
@@ -198,6 +199,11 @@ class BaseReport:
                 "caseid": pacer_case_id,
                 "magic_num": pacer_magic_num,
             }
+            if email_notice_type == "NDA":
+                url = make_docs1_url(self.court_id, pacer_doc_id)
+                params = {
+                    "uid": pacer_magic_num,
+                }
             # Add parameters to the PACER base url and make a GET request
             req_timeout = (60, 300)
             r = requests.get(url, params=params, timeout=req_timeout)
