@@ -186,27 +186,58 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         except IndexError:
             return None
 
+    def _get_appellate_case_anchor(self) -> str:
+        """Safely retrieves the anchor tag for the appellate case
+
+        :returns: Anchor tag, if it's found
+        """
+        try:
+            path = f"{self._sibling_path('Case Number')}//a"
+            return self.tree.xpath(path)[0]
+        except IndexError:
+            return None
+
+    def _get_appellate_pacer_case_id(self) -> str:
+        """Extract the caseid from the appellate case anchor.
+
+        :returns: caseID, if it's found
+        """
+        document_url = self._get_appellate_case_anchor().xpath("./@href")[0]
+        match = re.search(r"caseId=(\d+)", document_url)
+        if match:
+            return match.group(1)
+        else:
+            return None
+
     def _get_description(self):
         """Gets the docket text
 
         :returns: Cleaned docket text
         """
-        path = '//strong[contains(., "Docket Text:")]/following-sibling::'
-        if self._is_appellate():
-            node = self.tree.xpath(f"{path}br[1]/following::text()[1]")
-        else:
-            node = self.tree.xpath(f"{path}font[1]/b//text()")
         description = ""
-        if len(node):
-            for des_part in node:
-                description = description + des_part
-            return clean_string(description)
+        if self._is_appellate():
+            path = '//strong[contains(., "Docket Text:")]/following::'
+            node = self.tree.xpath(f"{path}text()")
 
-        node = self.tree.xpath(f"{path}b[1]/span//text()")
-        if len(node):
-            for des_part in node:
-                description = description + des_part
-            return clean_string(description)
+            if len(node):
+                for des_part in node:
+                    if des_part == "Notice will be electronically mailed to:":
+                        break
+                    description = description + des_part
+                return clean_string(description)
+        else:
+            path = '//strong[contains(., "Docket Text:")]/following-sibling::'
+            node = self.tree.xpath(f"{path}font[1]/b//text()")
+            if len(node):
+                for des_part in node:
+                    description = description + des_part
+                return clean_string(description)
+
+            node = self.tree.xpath(f"{path}b[1]/span//text()")
+            if len(node):
+                for des_part in node:
+                    description = description + des_part
+                return clean_string(description)
 
         return None
 
@@ -291,12 +322,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                     anchor.xpath("./@href")[0] if anchor is not None else None
                 )
                 if self._is_appellate():
-                    if document_url is not None:
-                        document_number = get_pacer_doc_id_from_doc1_url(
-                            document_url
-                        )
-                    else:
-                        document_number = None
+                    document_number = None
                 else:
                     document_number = self._get_document_number()
 
@@ -330,7 +356,9 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                         "pacer_seq_no"
                     ] = get_pacer_seq_no_from_doc1_url(document_url)
             if self._is_appellate():
-                entries[0]["pacer_case_id"] = self._get_docket_number()
+                entries[0][
+                    "pacer_case_id"
+                ] = self._get_appellate_pacer_case_id()
             return entries
         return []
 

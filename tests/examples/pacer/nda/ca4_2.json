@@ -1,22 +1,22 @@
 {
-  "case_name": "Mackenzie Brown v. State of Arizona",
-  "court_id": "ca9",
-  "date_filed": "2022-08-08",
-  "docket_entries": [
-    {
-      "date_filed": "2022-08-08",
-      "description": "COURT DELETED INCORRECT ENTRY. Entered in error (already listed on docket).Notice about deletion sent to case participants registered for electronic filing. Original Text: Entered appearance of Amicus Curiae USA. [12511871] (SML)",
-      "document_number": null,
-      "document_url": null,
-      "pacer_case_id": "320925",
-      "pacer_doc_id": null,
-      "pacer_magic_num": null,
-      "pacer_seq_no": null
-    }
+  "court_id":"ca4",
+  "case_name":"Neuhtah Opiotennione v. Bozzuto Management Company",
+  "docket_number":"21-1919",
+  "date_filed":"2022-08-18",
+  "appellate":true,
+  "docket_entries":[
+     {
+        "date_filed":"2022-08-18",
+        "description":"NOTICE re: Notice re: Regarding Resolution of Conflict with Proposed Argument dates by Bozzuto Management Company. [1001214590] [21-1919] Lynn Calkins",
+        "document_url":"https://ecf.ca4.uscourts.gov/docs1/00409006913?uid=55e8d970a5a88b7a",
+        "document_number": null,
+        "pacer_doc_id":"00409006913",
+        "pacer_case_id":"164306",
+        "pacer_seq_no":null,
+        "pacer_magic_num":"55e8d970a5a88b7a"
+     }
   ],
-  "docket_number": "20-15568",
-  "appellate": true,
-  "email_recipients": [
+  "email_recipients":[
     {
        "name":"Recipient User Test 1:",
        "email_addresses":[

@@ -6,9 +6,9 @@
     {
       "date_filed": "2022-03-03",
       "description": "DEFECTIVE DOCUMENT,Amicus Brief, [166], on behalf of Amicus Curiae Muticultural Media, Telecom, and Internet Council, and Allvanza, FILED.[3270986] [21-1975]",
-      "document_number": "00208721516",
+      "document_number": null,
       "document_url": "https://ecf.ca2.uscourts.gov/docs1/00208721516?uid=b775e9908ad79ce2",
-      "pacer_case_id": "21-1975",
+      "pacer_case_id": "55129",
       "pacer_doc_id": "00208721516",
       "pacer_magic_num": "b775e9908ad79ce2",
       "pacer_seq_no": null
@@ -18,86 +18,30 @@
   "appellate": true,
   "email_recipients": [
     {
-      "email_addresses": [
-        "sangstreich@kellogghansen.com",
-        "aoak@kellogghansen.com",
-        "scott-angstreich-1818@ecf.pacerpro.com"
-      ],
-      "name": ":"
+       "name":":",
+       "email_addresses":[
+          "testing3@gexample.com",
+          "testing3_1@gexample.com",
+          "testing3_2@gexample.com"
+       ]
     },
     {
-      "email_addresses": [
-        "tbadgley@uschamber.com"
-      ],
-      "name": ":"
+       "name":":",
+       "email_addresses":[
+          "testing1@gexample.com"
+       ]
     },
     {
-      "email_addresses": [
-        "c.k.barthold@gmail.com"
-      ],
-      "name": ":"
+       "name":":",
+       "email_addresses":[
+          "testing2@gexample.com"
+       ]
     },
     {
-      "email_addresses": [
-        "mberry@akingump.com"
-      ],
-      "name": ":"
-    },
-    {
-      "email_addresses": [
-        "eric.delpozo@ag.ny.gov",
-        "nyoag.nycpdf@ag.ny.gov"
-      ],
-      "name": ":"
-    },
-    {
-      "email_addresses": [
-        "agoldsmith@kellogghansen.com",
-        "mswank@kellogghansen.com",
-        "jhois@kellogghansen.com"
-      ],
-      "name": ":"
-    },
-    {
-      "email_addresses": [
-        "jlamken@mololamken.com"
-      ],
-      "name": ":"
-    },
-    {
-      "email_addresses": [
-        "dmills@cooley.com",
-        "efiling-notice@ecf.pacerpro.com"
-      ],
-      "name": ":"
-    },
-    {
-      "email_addresses": [
-        "krussell@goldsteinrussell.com",
-        "eoevans@goldsteinrussell.com"
-
-      ],
-      "name": ":"
-    },
-    {
-      "email_addresses": [
-        "andyschwartzman@gmail.com"
-      ],
-      "name": ":"
-    },
-    {
-      "email_addresses": [
-        "estallman@clinical.law.berkeley.edu",
-        "estallman@recap.email"
-      ],
-      "name": ":"
-    },
-    {
-      "email_addresses": [
-        "steven.wu@ag.ny.gov",
-        "nyoag.nycpdf@ag.ny.gov"
-      ],
-      "name": ":"
+       "name":":",
+       "email_addresses":[
+          "testing4@gexample.com"
+       ]
     }
-  ]
+ ]
 }

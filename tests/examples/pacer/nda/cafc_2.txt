@@ -1,0 +1,68 @@
+Return-Path: <FilingNotice@cafc.uscourts.gov>
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id qbc2fahsm3tfk1m66gpn9sq8f2cie7vs9tjfbio1
+ for nrubin@recap.email;
+ Fri, 19 Aug 2022 17:31:10 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of cafc.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=FilingNotice@cafc.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of cafc.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=FilingNotice@cafc.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+ dmarc=none header.from=cafc.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHMlZZQ00zOE4waW11aFV0Q0lOZC9YbGZzbzczQit0cUlTdjk4Q3NiQnp5VDFnb0xwU1YzMmpZdTB1cG5ha1FCOGFwQ2MwT01KUHR1ZVRFMnNpa1R6ZENVWGJiWFp4THdsK2ZDSkJyZjJYSWsyQkxYN3FVRXZqQy95QkI3R1F1bzR3Wmo5d0pOZ1JVcXBSUW8xNUJQRzZ2NGZZa2NVcVJEMzZ3MGFtRnBtZEhBTHRLTzVGM0ZuRGRyMlVNTDdhWm9Xd1pzOVk3QzNhcXNnT0M3M0xIblpxdUVBT2l0UjlJQVdjVXBrYXI4WXFMRFRMWGFPQjZEV2xJZTJzMXJRdDgxTEFHUW1iOXN3ekVUUjhqV21RYjNvYUx1U0taQUhmVHNTbFZocWFVWDRMR1dJM1dQcjEwc1cwc3VPYmFPdGZiSlU9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=enjP9Pf+r1piqMnujGIoJyNsik+rsjvN2uC9rLzbWUVIiuEAG0Caj8ruGuJeN+ou3y7JDTviCazkphPetR0xpSm8WuxZ8rGnY05yALLxQgQpf73VxRtMTneMJDndQdExnYFTf8viQbCoznP3kENwSsc1RNc3m0DWunt/rUulwHk=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1660930270; v=1; bh=TK8sgOlwczP1BWhAoXSdrIH71xz14MIXgco3+MGKDdc=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.11
+Received: from cafcdb.cafc.gtwy.dcn ([156.119.190.11])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 19 Aug 2022 13:31:09 -0400
+Received: from cafcdb.cafc.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by cafcdb.cafc.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 27JHV3nF084944
+	for <nrubin@recap.email>; Fri, 19 Aug 2022 13:31:03 -0400
+Date: Fri, 19 Aug 2022 13:31:03 -0400 (EDT)
+From: FilingNotice@cafc.uscourts.gov
+To: nrubin@recap.email
+Message-ID: <669567887.774.1660930263840@cafcdb.cafc.gtwy.dcn>
+Subject: 22-1455-ED Corephotonics, Ltd. v. Apple Inc. "Motion EXTEND TIME TO
+ FILE BRIEF"
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><TITLE>22-1455-ED Corephotonics, Ltd. v. Apple Inc. "Motion EXTEND TIME TO FILE BRIEF"</TITLE>
+</HEAD>
+<BODY BGCOLOR="#D4ED91" TEXT="#000000" LINK="#0000ff" VLINK="#551a8b" ALINK="#ff0000"> 
+<P><STRONG>
+***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer.  PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing.</STRONG><BR>
+<P><CENTER><STRONG>United States Court of Appeals for the Federal Circuit</STRONG></CENTER>
+<P><STRONG>Notice of Docket Activity</STRONG><BR>
+<BR>
+The following transaction was entered on 08/19/2022 at 1:31:02 PM Eastern Daylight Time and filed on 08/19/2022
+<TABLE BORDER=0 CELLSPACING=3>
+<TR><TD><STRONG>Case Name:</STRONG></TD>
+<TD colspan='2'>Corephotonics, Ltd. v. Apple Inc.<BR>
+</TD></TR>
+<TR><TD><STRONG>Case Number:&nbsp;&nbsp;</STRONG></TD>
+<TD><A HREF="https://ecf.cafc.uscourts.gov/n/beam/servlet/TransportRoom?servlet=DocketReportFilter.jsp&caseId=18362">22-1455</A></TD></TR>
+<TR><TD><STRONG>Document(s):</STRONG></TD>
+<TD><A HREF="https://ecf.cafc.uscourts.gov/docs1/01301993624?uid=4c6ae1ed93856cd0">Document(s)</A></TD></TR>
+</TABLE><BR>
+<P><STRONG>Docket Text:</STRONG><BR>
+MOTION of Appellee Apple Inc. to extend the time to 10/28/2022 to file brief. Service: 08/19/2022 by email. [867380] [22-1455] [Erin Leach]<BR>
+<BR>
+<STRONG>Notice will be electronically mailed to:</STRONG><BR><BR>
+Recipient User Test 1, -: testing1@gexample.com<BR>
+Recipient User Test 2, -: testing2@gexample.com<BR>
+Recipient User Test 3, -: testing3@gexample.com, testing3_1@gexample.com<BR>
+Recipient User Test 4, -: testing4@gexample.com, testing4_1@gexample.com, testing4_2@gexample.com<BR>
+Recipient User Test 5, Deputy Clerk: Testing5@gexample.com<BR>
+<BR><BR>
+The following document(s) are associated with this transaction:<BR>
+<STRONG>Document Description: </STRONG>Motion<BR>
+<STRONG>Original Filename: </STRONG>22-1455 Response Brief Extension Motion.pdf<BR>
+<STRONG>Electronic Document Stamp:</STRONG><BR>
+[STAMP acecfStamp_ID=1222887174 [Date=08/19/2022] [FileNumber=867380-0] [15f2c7a23c6b7793e2292f3101b2e84c1abd86d89298dec56024591e1cb3b321874ff9c5d7c332cffc014ea3fbc489c21e18051b2e8a0cc50737347889a76a5f]]<BR>
+<BR>
+</BODY></HTML>

@@ -1,0 +1,60 @@
+Return-Path: <FilingNotice@cafc.uscourts.gov>
+Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov [63.241.40.204])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id p586ct3e4n0nbn85hm1uqfu4ld5f9fm5jrmnsg01
+ for nrubin@recap.email;
+ Mon, 22 Aug 2022 13:14:01 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of cafc.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=FilingNotice@cafc.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of cafc.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=FilingNotice@cafc.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+ dmarc=none header.from=cafc.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFIbTEwNUhzTjMydG9HN1JLZm5HdmJ3bmx3U2luNWhiY1E2TUNqZnBFcHQ2V1RUNG5qMVJZS0wvZGkrdWcxOTZ5czNzQk1QczJkK2RTR0hVc2ZkSzVKRzJjalVmWitsS2ltb0lZbE9DRm9vci8vdVh0T2JFNkRwU0x4MXdUWCsyZGZDOXJETDFXVHhMYm50MnBubllRb2RsVTJQaG00OCtUcWl1Y0d1clllRjVFd2NhNWtlMHV1Zk11RlhaU1hyUHhERVUrbHBmMjdjRkV5c0JvSHFPRDdheEhpeTIxSllEOGFHM0RYTjJwNmgyTTNZVE91cit2Z1AvZ0tmd2hhSDlJK3YwTzlMNE0vRUE1TDFmaTB0Wk1YL00rL0FCUWhSdzJWbXJ2dHlnYnhKZmU4WmNUNndQbDFwQUE0NDBuNXNyUXM9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=P5Qqk7CGGw1FO57L3S0DHFUHobvV0Azh3AAPKle+QJ8JNbrC/SjmbT13kwQiIBso1zgRPeGMgzAcu36uhd5AlElGsJjvIPP2tMfpsTJcT6sH6Tiqp2SnWNUaYJOGrOOehgl7hW5li19/UQTLPNDfzqroBQ2LLdVi/SHc2ID46lU=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1661174042; v=1; bh=02111tzKE/+Tg+62Z3m6rqSxsw2QnSYNC9HOVInN2l4=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.11
+Received: from cafcdb.cafc.gtwy.dcn ([156.119.190.11])
+  by icmecf201.gtwy.uscourts.gov with ESMTP; 22 Aug 2022 09:13:59 -0400
+Received: from cafcdb.cafc.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by cafcdb.cafc.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 27MDDiJF087335
+	for <nrubin@recap.email>; Mon, 22 Aug 2022 09:13:44 -0400
+Date: Mon, 22 Aug 2022 09:13:44 -0400 (EDT)
+From: FilingNotice@cafc.uscourts.gov
+To: nrubin@recap.email
+Message-ID: <1250237005.196.1661174024805@cafcdb.cafc.gtwy.dcn>
+Subject: 22-1455-MA Corephotonics, Ltd. v. Apple Inc. "Clerk Order Filed"
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><TITLE>22-1455-MA Corephotonics, Ltd. v. Apple Inc. "Clerk Order Filed"</TITLE>
+</HEAD>
+<BODY BGCOLOR="#D4ED91" TEXT="#000000" LINK="#0000ff" VLINK="#551a8b" ALINK="#ff0000"> 
+<P><STRONG>
+***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer.  PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing.</STRONG><BR>
+<P><CENTER><STRONG>United States Court of Appeals for the Federal Circuit</STRONG></CENTER>
+<P><STRONG>Notice of Docket Activity</STRONG><BR>
+<BR>
+The following transaction was entered on 08/22/2022 at 9:13:39 AM Eastern Daylight Time and filed on 08/22/2022
+<TABLE BORDER=0 CELLSPACING=3>
+<TR><TD><STRONG>Case Name:</STRONG></TD>
+<TD colspan='2'>Corephotonics, Ltd. v. Apple Inc.<BR>
+</TD></TR>
+<TR><TD><STRONG>Case Number:&nbsp;&nbsp;</STRONG></TD>
+<TD><A HREF="https://ecf.cafc.uscourts.gov/n/beam/servlet/TransportRoom?servlet=DocketReportFilter.jsp&caseId=18362">22-1455</A></TD></TR>
+</TABLE><BR>
+<P><STRONG>Docket Text:</STRONG><BR>
+**TEXT ONLY** ORDER granting motion to extend time to file brief [18] filed by Appellee Apple Inc. The response brief is due 10/28/2022. Service as of this date by the Clerk of Court.  This order has been issued without an attached document and is official and binding. [867470] [EKD]<BR>
+<BR>
+<STRONG>Notice will be electronically mailed to:</STRONG><BR><BR>
+Recipient User Test 1, -: testing1@gexample.com<BR>
+Recipient User Test 2, -: testing2@gexample.com<BR>
+Recipient User Test 3, -: testing3@gexample.com, testing3_1@gexample.com<BR>
+Recipient User Test 4, -: testing4@gexample.com, testing4_1@gexample.com, testing4_2@gexample.com<BR>
+Recipient User Test 5, Deputy Clerk: Testing5@gexample.com<BR>
+<BR><BR>
+
+</BODY></HTML>

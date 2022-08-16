@@ -6,9 +6,9 @@
     {
       "date_filed": "2022-03-23",
       "description": "REPLY BRIEF, on behalf of Appellant Letitia A. James, FILED. Service date 03/23/2022 by CM/ECF. [3283515] [21-1975]",
-      "document_number": "00208754210",
+      "document_number": null,
       "document_url": "https://ecf.ca2.uscourts.gov/docs1/00208754210?uid=59a7f7615f78153b",
-      "pacer_case_id": "21-1975",
+      "pacer_case_id": "55129",
       "pacer_doc_id": "00208754210",
       "pacer_magic_num": "59a7f7615f78153b",
       "pacer_seq_no": null
@@ -18,78 +18,37 @@
   "appellate": true,
   "email_recipients": [
     {
-      "email_addresses": [
-        "andyschwartzman@gmail.com"
-      ],
-      "name": "Mr. Andrew Jay Schwartzman, -:"
+       "name":"Recipient User Test A, -:",
+       "email_addresses":[
+          "testinga@gexample.com"
+       ]
     },
     {
-      "email_addresses": [
-        "mberry@akingump.com"
-      ],
-      "name": "Matthew B. Berry, -:"
+       "name":"Recipient User Test B, -:",
+       "email_addresses":[
+          "testingb@gexample.com"
+       ]
     },
     {
-      "email_addresses": [
-        "wus@dany.nyc.gov"
-      ],
-      "name": "Mr. Steven Wu, -:"
+       "name":"Recipient User Test C, -:",
+       "email_addresses":[
+          "testingc@gexample.com",
+          "testingcc@gexample.com"
+       ]
     },
     {
-      "email_addresses": [
-        "krussell@goldsteinrussell.com",
-        "eoevans@goldsteinrussell.com"
-      ],
-      "name": "Kevin K. Russell, -:"
+       "name":"Recipient User Test D, -:",
+       "email_addresses":[
+          "testingd@gexample.com",
+          "testingdd@gexample.com",
+          "testingddd@gexample.com"
+       ]
     },
     {
-      "email_addresses": [
-        "agoldsmith@kellogghansen.com",
-        "mswank@kellogghansen.com",
-        "jhois@kellogghansen.com"
-      ],
-      "name": "Mr. Andrew Edward Goldsmith, -:"
-    },
-    {
-      "email_addresses": [
-        "jlamken@mololamken.com"
-      ],
-      "name": "Mr. Jeffrey A. Lamken, -:"
-    },
-    {
-      "email_addresses": [
-        "sangstreich@kellogghansen.com",
-        "aoak@kellogghansen.com",
-        "scott-angstreich-1818@ecf.pacerpro.com"
-      ],
-      "name": "Mr. Scott Harris Angstreich, -:"
-    },
-    {
-      "email_addresses": [
-        "estallman@clinical.law.berkeley.edu",
-        "estallman@recap.email"
-      ],
-      "name": "Erik Robert Stallman, Assistant Director:"
-    },
-    {
-      "email_addresses": [
-        "eric.delpozo@ag.ny.gov",
-        "nyoag.nycpdf@ag.ny.gov"
-      ],
-      "name": "Eric Del Pozo, -:"
-    },
-    {
-      "email_addresses": [
-        "dmills@cooley.com",
-        "efiling-notice@ecf.pacerpro.com"
-      ],
-      "name": "David Mills, -:"
-    },
-    {
-      "email_addresses": [
-        "Wilson_Dudley@ca2.uscourts.gov"
-      ],
-      "name": "Wilson Dudley, Deputy Clerk:"
+       "name":"Recipient User Test F, Deputy Clerk:",
+       "email_addresses":[
+          "Testingf@gexample.com"
+       ]
     }
-  ]
+ ]
 }

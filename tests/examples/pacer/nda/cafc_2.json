@@ -1,21 +1,21 @@
 {
-  "case_name": "New York State Telecommunicati v. James",
-  "court_id": "ca2",
-  "date_filed": "2022-07-27",
-  "docket_entries": [
-    {
-      "date_filed": "2022-07-27",
-      "description": "LETTER, on behalf of Appellant Letitia A. James, <EDIT by Clerk's Office> RECEIVED. Service date 07/27/2022 by CM/ECF.[3355063] [21-1975]",
-      "document_number": null,
-      "document_url": "https://ecf.ca2.uscourts.gov/docs1/00208942267?uid=37cacbbc313ab362",
-      "pacer_case_id": "55129",
-      "pacer_doc_id": "00208942267",
-      "pacer_magic_num": "37cacbbc313ab362",
-      "pacer_seq_no": null
-    }
+  "court_id":"cafc",
+  "case_name":"Corephotonics, Ltd. v. Apple Inc.",
+  "docket_number":"22-1455",
+  "date_filed":"2022-08-19",
+  "appellate":true,
+  "docket_entries":[
+     {
+        "date_filed":"2022-08-19",
+        "description":"MOTION of Appellee Apple Inc. to extend the time to 10/28/2022 to file brief. Service: 08/19/2022 by email. [867380] [22-1455] [Erin Leach]",
+        "document_url":"https://ecf.cafc.uscourts.gov/docs1/01301993624?uid=4c6ae1ed93856cd0",
+        "document_number": null,
+        "pacer_doc_id":"01301993624",
+        "pacer_case_id":"18362",
+        "pacer_seq_no":null,
+        "pacer_magic_num":"4c6ae1ed93856cd0"
+     }
   ],
-  "docket_number": "21-1975",
-  "appellate": true,
   "email_recipients": [
     {
        "name":"Recipient User Test 1, -:",

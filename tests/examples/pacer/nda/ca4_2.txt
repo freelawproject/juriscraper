@@ -1,0 +1,69 @@
+Return-Path: <ecfnoticing@ca4.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id i0ejmtd1fkq36a5h29kmdcho0fh5ooev7pgf7j81
+ for archive@recap.email;
+ Thu, 18 Aug 2022 19:37:30 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ca4.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=ecfnoticing@ca4.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ca4.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=ecfnoticing@ca4.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=ca4.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFGSlQ1YUc5ZUd0SHJ6LzFGa0hzUFdaMTA1RGdTZytJV01CVGRmekJJdjlCUUN3VGRzcm4xTzdwZG1zTjIrNzNLSDYzSEdOS2FJaWZNSk92YVZ0NWlBR2tvU21NUzFBTEY0TmMrTHpycUw5ZWVSMjVtbDc2QlhwL1U2cG50cG05RGFiTEZrNTRGVG9zMW5ockRmZittb0tzblIrbFJYSWVBNnNpd1kxbWoxY2s4a09WL1o3MFFkUU9qZ2JQNXVqQUFxeDFodU9VamI2Z0kwM3p4MXFzU2t2aWp0V2ZHbnd1bFhZUFRvQlFER3pJUjVmZy9ocnl0Z3V6OWJqcUJWZzUvem54MDBQOXhpVy9jMTlSa1BXVGVTRnNQZ3RTOGFsZm1YWmRoWTRDWTA1TVE9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=jzFPhJH48ahe83BqXpvjz8puEBY3KC1b1NkUmfGSXcuipMWSWIrISYua6Eg5ZgN5TLtCOhtF5jzqd7aJfZHeOMhWhwtCXBWuMnVCqPE+F0feRP8nELaeQL/2LfXAOxTPEXqqkXJlaobKWSZai4DRkJfF5dNNbqOf62+UlACVhPg=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1660851450; v=1; bh=WOQiYoeHKCcRpI4S5sNVy9we9SJ2dmiz8apQvvYk+sU=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.41
+Received: from ca4db.ca4.gtwy.dcn ([156.119.190.41])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 18 Aug 2022 15:37:29 -0400
+Received: from ca4db.ca4.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by ca4db.ca4.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 27IJb8nJ025165
+	for <archive@recap.email>; Thu, 18 Aug 2022 15:37:09 -0400
+Date: Thu, 18 Aug 2022 15:37:08 -0400 (EDT)
+From: ecfnoticing@ca4.uscourts.gov
+To: archive@recap.email
+Message-ID: <624901235.1665.1660851429179@ca4db.ca4.gtwy.dcn>
+Subject: 21-1919 Neuhtah Opiotennione v. Bozzuto Management Company "Notice
+ re:"
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><TITLE>21-1919 Neuhtah Opiotennione v. Bozzuto Management Company "Notice re:"</TITLE>
+</HEAD>
+<BODY BGCOLOR="#CCCCFF" TEXT="#000000" LINK="#0000ff" VLINK="#551a8b" ALINK="#ff0000"> 
+<P><STRONG>
+***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer.  PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing.</STRONG><BR>
+<P><CENTER><STRONG>United States Court of Appeals for the Fourth Circuit</STRONG></CENTER>
+<P><STRONG>Notice of Docket Activity</STRONG><BR>
+<BR>
+The following transaction was entered on 08/18/2022 at 3:37:08 PM Eastern Daylight Time and filed on 08/18/2022
+<TABLE BORDER=0 CELLSPACING=3>
+<TR><TD><STRONG>Case Name:</STRONG></TD>
+<TD colspan='2'>Neuhtah Opiotennione v. Bozzuto Management Company<BR>
+</TD></TR>
+<TR><TD><STRONG>Case Number:&nbsp;&nbsp;</STRONG></TD>
+<TD><A HREF="https://ecf.ca4.uscourts.gov/n/beam/servlet/TransportRoom?servlet=DocketReportFilter.jsp&caseId=164306">21-1919</A></TD></TR>
+<TR><TD><STRONG>Document(s):</STRONG></TD>
+<TD><A HREF="https://ecf.ca4.uscourts.gov/docs1/00409006913?uid=55e8d970a5a88b7a">Document(s)</A></TD></TR>
+</TABLE><BR>
+<P><STRONG>Docket Text:</STRONG><BR>
+NOTICE re: Notice re: Regarding Resolution of Conflict with Proposed Argument dates by Bozzuto Management Company.
+ [1001214590] [21-1919] Lynn Calkins<BR>
+<BR>
+<STRONG>Notice will be electronically mailed to:</STRONG><BR><BR>
+Recipient User Test 1: testing1@gexample.com, testing1_1@gexample.com<BR>
+Recipient User Test 2: testing2@gexample.com, testing2_1@gexample.com<BR>
+Recipient User Test 3: testing3@gexample.com, testing3_1@gexample.com<BR>
+Recipient User Test 4: testing4@gexample.com, testing4_1@gexample.com, testing4_1@gexample.com<BR>
+Recipient User Test 5: testing5@gexample.com, testing5_1@gexample.com, testing5_1@gexample.com<BR>
+<BR><BR>
+The following document(s) are associated with this transaction:<BR>
+<STRONG>Document Description: </STRONG>Notice re: Regarding Resolution of Conflict with Proposed Argument dates<BR>
+<STRONG>Original Filename: </STRONG>Notice of Resolution of Conflict Unavailability(176961085.1)(177062886.pdf<BR>
+<STRONG>Electronic Document Stamp:</STRONG><BR>
+[STAMP acecfStamp_ID=1105645354 [Date=08/18/2022] [FileNumber=1001214590-0] [323d25f8ec9ee5ac1b6c83e7a42395b9df29dbf51b6c52d537437b445f83fdbf89169d19b859942b66c80c80f765f0fc8a4494f1478ea2c00636689d7d7300b1]]<BR>
+<BR>
+</BODY></HTML>

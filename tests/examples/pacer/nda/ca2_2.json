@@ -6,9 +6,9 @@
     {
       "date_filed": "2022-06-14",
       "description": "LETTER, on behalf of Appellee CTIA - The Wireless Association, New York State Telecommunications Association, Inc., NTCA - The Rural Broadband Association and USTelecom - The Broadband Association, <EDIT by Clerk's Office> RECEIVED. Service date 06/14/2022 by CM/ECF.[3332664] [21-1975]",
-      "document_number": "00208883934",
+      "document_number": null,
       "document_url": "https://ecf.ca2.uscourts.gov/docs1/00208883934?uid=4a800555f691be89",
-      "pacer_case_id": "21-1975",
+      "pacer_case_id": "55129",
       "pacer_doc_id": "00208883934",
       "pacer_magic_num": "4a800555f691be89",
       "pacer_seq_no": null
@@ -18,78 +18,37 @@
   "appellate": true,
   "email_recipients": [
     {
-      "email_addresses": [
-        "andyschwartzman@gmail.com"
-      ],
-      "name": "Mr. Andrew Jay Schwartzman, -:"
+       "name":"Recipient User Test 1, -:",
+       "email_addresses":[
+          "testing1@gexample.com"
+       ]
     },
     {
-      "email_addresses": [
-        "mberry@akingump.com"
-      ],
-      "name": "Matthew B. Berry, -:"
+       "name":"Recipient User Test 2, -:",
+       "email_addresses":[
+          "testing2@gexample.com"
+       ]
     },
     {
-      "email_addresses": [
-        "wus@dany.nyc.gov"
-      ],
-      "name": "Mr. Steven Wu, -:"
+       "name":"Recipient User Test 3, -:",
+       "email_addresses":[
+          "testing3@gexample.com",
+          "testing3_1@gexample.com"
+       ]
     },
     {
-      "email_addresses": [
-        "krussell@goldsteinrussell.com",
-        "eoevans@goldsteinrussell.com"
-      ],
-      "name": "Kevin K. Russell, -:"
+       "name":"Recipient User Test 4, -:",
+       "email_addresses":[
+          "testing4@gexample.com",
+          "testing4_1@gexample.com",
+          "testing4_2@gexample.com"
+       ]
     },
     {
-      "email_addresses": [
-        "agoldsmith@kellogghansen.com",
-        "mswank@kellogghansen.com",
-        "jhois@kellogghansen.com"
-      ],
-      "name": "Mr. Andrew Edward Goldsmith, -:"
-    },
-    {
-      "email_addresses": [
-        "jlamken@mololamken.com"
-      ],
-      "name": "Mr. Jeffrey A. Lamken, -:"
-    },
-    {
-      "email_addresses": [
-        "sangstreich@kellogghansen.com",
-        "aoak@kellogghansen.com",
-        "scott-angstreich-1818@ecf.pacerpro.com"
-      ],
-      "name": "Mr. Scott Harris Angstreich, -:"
-    },
-    {
-      "email_addresses": [
-        "estallman@clinical.law.berkeley.edu",
-        "estallman@recap.email"
-      ],
-      "name": "Erik Robert Stallman, Assistant Director:"
-    },
-    {
-      "email_addresses": [
-        "eric.delpozo@ag.ny.gov",
-        "nyoag.nycpdf@ag.ny.gov"
-      ],
-      "name": "Eric Del Pozo, -:"
-    },
-    {
-      "email_addresses": [
-        "dmills@cooley.com",
-        "efiling-notice@ecf.pacerpro.com"
-      ],
-      "name": "David E. Mills, -:"
-    },
-    {
-      "email_addresses": [
-        "Wilson_Dudley@ca2.uscourts.gov"
-      ],
-      "name": "Wilson Dudley, Deputy Clerk:"
+       "name":"Recipient User Test 5, Deputy Clerk:",
+       "email_addresses":[
+          "Testing5@gexample.com"
+       ]
     }
-  ]
+ ]
 }
