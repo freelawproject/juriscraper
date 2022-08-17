@@ -15,11 +15,14 @@ class AttachmentPage(BaseReport):
 
     PATH = "doc1/"
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(
+        self, court_id, pacer_session=None, notification_att_page=False
+    ):
         super().__init__(court_id, pacer_session)
         # Note that parsing bankruptcy attachment pages does not reveal the
         # document number, only the attachment numbers.
         self.is_bankruptcy = self.court_id.endswith("b")
+        self.is_notification_att_page = notification_att_page
 
     def query(self, document_number):
         """Query the "attachment page" endpoint and set the results to self.response.
@@ -139,6 +142,10 @@ class AttachmentPage(BaseReport):
             index = 2
         else:
             index = 3
+
+        if self.is_notification_att_page and self.court_id == "nyed":
+            index = 3
+
         description_text_nodes = row.xpath(f"./td[{index}]//text()")
         if not description_text_nodes:
             # No text in the cell.

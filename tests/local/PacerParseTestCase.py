@@ -12,7 +12,9 @@ from juriscraper.lib.test_utils import warn_or_crash_slow_parser
 class PacerParseTestCase(unittest.TestCase):
     """A mixin to add a parsing test."""
 
-    def parse_files(self, path_root, file_ext, test_class):
+    def parse_files(
+        self, path_root, file_ext, test_class, notification_att_page=False
+    ):
         """Can we do a simple query and parse?"""
         paths = []
         for root, dirnames, filenames in os.walk(path_root):
@@ -28,7 +30,12 @@ class PacerParseTestCase(unittest.TestCase):
             json_path = os.path.join(dirname, f"{filename_sans_ext}.json")
 
             court = filename_sans_ext.split("_")[0]
-            report = test_class(court)
+            if notification_att_page:
+                report = test_class(
+                    court, notification_att_page=notification_att_page
+                )
+            else:
+                report = test_class(court)
             with open(path) as f:
                 report._parse_text(f.read())
 

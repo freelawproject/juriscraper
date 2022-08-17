@@ -32,6 +32,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             if self.content_type == "text/plain":
                 parsed = {
                     "case_name": self._get_case_name_plain(),
+                    "contains_attachments": self._contains_attachments_plain(),
                     "docket_number": self._get_docket_number_plain(),
                     "date_filed": self._get_date_filed(),
                     "docket_entries": self._get_docket_entries(),
@@ -40,6 +41,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             else:
                 parsed = {
                     "case_name": self._get_case_name(),
+                    "contains_attachments": self._contains_attachments(),
                     "docket_number": self._get_docket_number(),
                     "date_filed": self._get_date_filed(),
                     "docket_entries": self._get_docket_entries(),
@@ -201,6 +203,40 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         if description:
             return clean_string(description)
         return None
+
+    def _contains_attachments(self) -> bool:
+        """Determines if the html notification contains attached documents.
+
+        :returns: True if it contains otherwise False.
+        """
+
+        path = '//p[contains(., "The following document(s) are associated with this transaction:")]/following::'
+        document_nodes = self.tree.xpath(
+            f'{path}strong[contains(., "Document description:")]'
+        )
+        if len(document_nodes) <= 1:
+            return False
+        return True
+
+    def _contains_attachments_plain(self) -> bool:
+        """Determines if the plain/txt notification contains attached documents.
+
+        :returns: True if it contains otherwise False.
+        """
+
+        mail_body = self.tree.text_content()
+        regex = r"^.*?The following document\(s\) are associated with this transaction:(.*?)$"
+
+        find_attachments = re.findall(regex, mail_body, re.DOTALL)
+        associated_documents = 0
+        if find_attachments:
+            splitlines = find_attachments[0].splitlines()
+            for index_line in range(len(splitlines)):
+                if "Document description:" in splitlines[index_line]:
+                    associated_documents = +1
+        if associated_documents <= 1:
+            return False
+        return True
 
     def _get_docket_entries(
         self,
