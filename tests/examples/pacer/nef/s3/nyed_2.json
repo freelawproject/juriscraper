@@ -18,44 +18,40 @@
    ],
    "email_recipients":[
       {
-         "name":"Carolyn Kay Depoian",
+         "name":"Recipient Test A",
          "email_addresses":[
-            "cdepoian@law.nyc.gov",
-            "carolyndepoian@gmail.com",
-            "ECF@law.nyc.gov"
+            "testing_a@gexample.com",
+            "testing_a_a@gexample.com"
          ]
       },
       {
-         "name":"Elena Louisa Cohen",
+         "name":"Recipient Test B",
          "email_addresses":[
-            "elenacohenesq@gmail.com"
+            "testing_b@gexample.com"
          ]
       },
       {
-         "name":"Gideon Orion Oliver",
+         "name":"Recipient Test C",
          "email_addresses":[
-            "gideon@gideonlaw.com"
+            "testing_c@gexample.com",
+            "testing_c_c@gexample.com"
          ]
       },
       {
-         "name":"Jessica S. Massimi",
+         "name":"Recipient Test D",
          "email_addresses":[
-            "jessica.massimi@gmail.com"
+            "testing_d@gexample.com",
+            "testing_d_d@gexample.com",
+            "testing_d_d_d@gexample.com",
+            "testing_d_d_d_d@gexample.com",
+            "testing_d_d_d_d_d@gexample.com"
          ]
       },
       {
-         "name":"Michael Pesin-Virovets",
+         "name":"Recipient Test F",
          "email_addresses":[
-            "mpvirove@law.nyc.gov"
-         ]
-      },
-      {
-         "name":"Remy Green",
-         "email_addresses":[
-            "remy@femmelaw.com",
-            "christine@femmelaw.com",
-            "protests@femmelaw.com",
-            "remygreen@recap.email"
+            "testing_f@gexample.com",
+            "testing_f_f@gexample.com"
          ]
       }
    ]

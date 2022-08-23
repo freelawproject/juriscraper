@@ -32,16 +32,3 @@ class S3PacerNotificationEmailTest(PacerParseTestCase):
         self.parse_files(
             TESTS_ROOT_EXAMPLES_PACER_NEF_S3, "*.txt", S3NotificationEmail
         )
-
-
-class S3PacerParseAttachmentPageTest(PacerParseTestCase):
-    def setUp(self):
-        self.maxDiff = 200000
-
-    def test_parsing_attachment_pages(self):
-        self.parse_files(
-            TESTS_ROOT_EXAMPLES_PACER_NEF_ATTACHMENT_PAGE,
-            "*.html",
-            AttachmentPage,
-            notification_att_page=True,
-        )

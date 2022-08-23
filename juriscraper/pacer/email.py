@@ -210,9 +210,8 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: True if it contains otherwise False.
         """
 
-        path = '//p[contains(., "The following document(s) are associated with this transaction:")]/following::'
         document_nodes = self.tree.xpath(
-            f'{path}strong[contains(., "Document description:")]'
+            '//strong[contains(., "Document description:")]'
         )
         if len(document_nodes) <= 1:
             return False

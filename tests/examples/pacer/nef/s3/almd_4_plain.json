@@ -18,23 +18,23 @@
   "docket_number": "1:17-cr-00201",
   "email_recipients": [
     {
-      "email_addresses": [
-        "ACJ@usdoj.gov"
-      ],
-      "name": "Adam C. Jed"
+       "email_addresses":[
+          "testing1@gexample.com"
+       ],
+       "name":"Recipient User Test"
     },
     {
-      "email_addresses": [
-        "aaw@usdoj.gov",
-        "ees@usdoj.gov"
-      ],
-      "name": "Andrew Weissmann"
+       "email_addresses":[
+          "testing2@gexample.com",
+          "testing2_1@gexample.com"
+       ],
+       "name":"Recipient User Test B"
     },
     {
-      "email_addresses": [
-        "EBP@usdoj.gov"
-      ],
-      "name": "Elizabeth Barchas Prelogar"
+       "email_addresses":[
+          "testing3@gexample.com"
+       ],
+       "name":"Recipient User Test C"
     }
-  ]
+ ]
 }

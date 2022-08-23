@@ -18,67 +18,40 @@
    ],
    "email_recipients":[
       {
-         "name":"Akiva M. Cohen",
+         "name":"Recipient Test A",
          "email_addresses":[
-            "acohen@kusklaw.com",
-            "ktewson@kusklaw.com"
+            "testing_a@gexample.com",
+            "testing_a_a@gexample.com"
          ]
       },
       {
-         "name":"David L. Finger",
+         "name":"Recipient Test B",
          "email_addresses":[
-            "dfinger@delawgroup.com"
+            "testing_b@gexample.com"
          ]
       },
       {
-         "name":"Dylan M Schmeyer",
+         "name":"Recipient Test C",
          "email_addresses":[
-            "dschmeyer@kusklaw.com",
-            "akivacohen@recap.email"
+            "testing_c@gexample.com",
+            "testing_c_c@gexample.com"
          ]
       },
       {
-         "name":"Geoffrey Graham Grivner",
+         "name":"Recipient Test D",
          "email_addresses":[
-            "geoffrey.grivner@bipc.com",
-            "donna.curcio@bipc.com",
-            "eservice@bipc.com",
-            "michelle.miller@bipc.com",
-            "patrick.keane@bipc.com",
-            "reeny.kelly@bipc.com",
-            "sherry.fornwalt@bipc.com"
+            "testing_d@gexample.com",
+            "testing_d_d@gexample.com",
+            "testing_d_d_d@gexample.com",
+            "testing_d_d_d_d@gexample.com",
+            "testing_d_d_d_d_d@gexample.com"
          ]
       },
       {
-         "name":"James Harry Stone Levine",
+         "name":"Recipient Test F",
          "email_addresses":[
-            "james.levine@troutman.com",
-            "kristin.wright@troutman.com"
-         ]
-      },
-      {
-         "name":"Kody Macgyver Sparks",
-         "email_addresses":[
-            "kody.sparks@bipc.com",
-            "eservice@bipc.com",
-            "sherry.fornwalt@bipc.com"
-         ]
-      },
-      {
-         "name":"Ronald P. Golden III",
-         "email_addresses":[
-            "rgolden@bayardlaw.com",
-            "dchase@bayardlaw.com",
-            "ntalarowski@bayardlaw.com"
-         ]
-      },
-      {
-         "name":"Stephen B. Brauerman",
-         "email_addresses":[
-            "sbrauerman@bayardlaw.com",
-            "dchase@bayardlaw.com",
-            "ntalarowski@bayardlaw.com",
-            "tdevine@bayardlaw.com"
+            "testing_f@gexample.com",
+            "testing_f_f@gexample.com"
          ]
       }
    ]

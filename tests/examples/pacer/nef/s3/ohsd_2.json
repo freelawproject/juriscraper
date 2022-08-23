@@ -18,46 +18,40 @@
    ],
    "email_recipients":[
       {
-         "name":"David John Barthel",
+         "name":"Recipient Test A",
          "email_addresses":[
-            "barthel@carpenterlipps.com"
+            "testing_a@gexample.com",
+            "testing_a_a@gexample.com"
          ]
       },
       {
-         "name":"Joshua A Engel",
+         "name":"Recipient Test B",
          "email_addresses":[
-            "engel@engelandmartin.com",
-            "archive@recap.email",
-            "Chloe.ryan@engelandmartin.com",
-            "stephanie@engelandmartin.com"
+            "testing_b@gexample.com"
          ]
       },
       {
-         "name":"Michael Hiram Carpenter",
+         "name":"Recipient Test C",
          "email_addresses":[
-            "carpenter@carpenterlipps.com",
-            "tootle@carpenterlipps.com"
+            "testing_c@gexample.com",
+            "testing_c_c@gexample.com"
          ]
       },
       {
-         "name":"Michael N. Beekhuizen",
+         "name":"Recipient Test D",
          "email_addresses":[
-            "Beekhuizen@carpenterlipps.com",
-            "Scaggs@carpenterlipps.com"
+            "testing_d@gexample.com",
+            "testing_d_d@gexample.com",
+            "testing_d_d_d@gexample.com",
+            "testing_d_d_d_d@gexample.com",
+            "testing_d_d_d_d_d@gexample.com"
          ]
       },
       {
-         "name":"Scott O'Reilly",
+         "name":"Recipient Test F",
          "email_addresses":[
-            "soreilly@engelandmartin.com"
-         ]
-      },
-      {
-         "name":"Timothy R Bricker",
-         "email_addresses":[
-            "bricker@carpenterlipps.com",
-            "houston@carpenterlipps.com",
-            "Klein@carpenterlipps.com"
+            "testing_f@gexample.com",
+            "testing_f_f@gexample.com"
          ]
       }
    ]

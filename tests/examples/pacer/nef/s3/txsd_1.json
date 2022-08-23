@@ -18,55 +18,40 @@
    ],
    "email_recipients":[
       {
-         "name":"Andrew A Bobb",
+         "name":"Recipient Test A",
          "email_addresses":[
-            "andrew.bobb@usdoj.gov",
-            "Sydnie.Kempen@usdoj.gov"
+            "testing_a@gexample.com",
+            "testing_a_a@gexample.com"
          ]
       },
       {
-         "name":"Cooke Kelsey",
+         "name":"Recipient Test B",
          "email_addresses":[
-            "cooke@parkersanchez.com",
-            "archive@recap.email",
-            "cooke-dist@parkersanchez.com"
+            "testing_b@gexample.com"
          ]
       },
       {
-         "name":"Jamie J McKey",
+         "name":"Recipient Test C",
          "email_addresses":[
-            "jgilmore@galyen.com"
+            "testing_c@gexample.com",
+            "testing_c_c@gexample.com"
          ]
       },
       {
-         "name":"Jody Lynn Rudman",
+         "name":"Recipient Test D",
          "email_addresses":[
-            "jody.rudman@huschblackwell.com",
-            "denee.elliottmodgling@huschblackwell.com",
-            "elizabeth.spivey@huschblackwell.com"
+            "testing_d@gexample.com",
+            "testing_d_d@gexample.com",
+            "testing_d_d_d@gexample.com",
+            "testing_d_d_d_d@gexample.com",
+            "testing_d_d_d_d_d@gexample.com"
          ]
       },
       {
-         "name":"Joe Kendall",
+         "name":"Recipient Test F",
          "email_addresses":[
-            "jkendall@kendalllawgroup.com",
-            "administrator@kendalllawgroup.com"
-         ]
-      },
-      {
-         "name":"Julie Margaret Redlinger",
-         "email_addresses":[
-            "Julie.Redlinger@usdoj.gov",
-            "CaseView.ECF@usdoj.gov",
-            "meiching.chentang@usdoj.gov"
-         ]
-      },
-      {
-         "name":"Karen Kay Maston",
-         "email_addresses":[
-            "kmaston2004@yahoo.com",
-            "daniel.hu@usdoj.gov",
-            "pam.anderson@usdoj.gov"
+            "testing_f@gexample.com",
+            "testing_f_f@gexample.com"
          ]
       }
    ]

@@ -17,84 +17,42 @@
      }
   ],
   "email_recipients":[
-     {
-        "name":"Andrew Clarke",
-        "email_addresses":[
-           "aclarke@cochranfirmmidsouth.com",
-           "ahaymon@cochranfirmmidsouth.com",
-           "asutton@cochranfirmmidsouth.com"
-        ]
-     },
-     {
-        "name":"Christopher W. Kaul",
-        "email_addresses":[
-           "ckaul@thompsoncoe.com",
-           "lpeterson@thompsoncoe.com",
-           "ssiek@thompsoncoe.com"
-        ]
-     },
-     {
-        "name":"Daniel Rault Martiny",
-        "email_addresses":[
-           "danny@martinylaw.com",
-           "jbalser@martinylaw.com",
-           "jhymel@martinylaw.com"
-        ]
-     },
-     {
-        "name":"Franz L. Zibilich",
-        "email_addresses":[
-           "fzibilich@bellsouth.net",
-           "jbalser@bellsouth.net"
-        ]
-     },
-     {
-        "name":"Hope A Phelps",
-        "email_addresses":[
-           "hopeaphelps@outlook.com"
-        ]
-     },
-     {
-        "name":"Howard B. Manis",
-        "email_addresses":[
-           "hmanis@cochranfirmmidsouth.com",
-           "jdaugherty@cochranfirmmidsouth.com"
-        ]
-     },
-     {
-        "name":"James Bryan Mullaly",
-        "email_addresses":[
-           "mulljtc@gmail.com",
-           "jamesmullaly1@hotmail.com",
-           "jmullaly@usryweeks.com",
-           "nclayton@usryweeks.com"
-        ]
-     },
-     {
-        "name":"Jeffrey David Martiny",
-        "email_addresses":[
-           "jeff@martinylaw.com",
-           "jbalser@martinylaw.com",
-           "jhymel@martinylaw.com"
-        ]
-     },
-     {
-        "name":"Mark Andrew Hill",
-        "email_addresses":[
-           "mhill@thompsoncoe.com",
-           "lpeterson@thompsoncoe.com",
-           "rsoape@thompsoncoe.com",
-           "wtyler@thompsoncoe.com"
-        ]
-     },
-     {
-        "name":"William Brock Most",
-        "email_addresses":[
-           "williammost@gmail.com",
-           "archive@recap.email",
-           "david.lanser@gmail.com",
-           "veronicasuzannebarnes@gmail.com"
-        ]
-     }
-  ]
+   {
+      "name":"Recipient Test A",
+      "email_addresses":[
+         "testing_a@gexample.com",
+         "testing_a_a@gexample.com"
+      ]
+   },
+   {
+      "name":"Recipient Test B",
+      "email_addresses":[
+         "testing_b@gexample.com"
+      ]
+   },
+   {
+      "name":"Recipient Test C",
+      "email_addresses":[
+         "testing_c@gexample.com",
+         "testing_c_c@gexample.com"
+      ]
+   },
+   {
+      "name":"Recipient Test D",
+      "email_addresses":[
+         "testing_d@gexample.com",
+         "testing_d_d@gexample.com",
+         "testing_d_d_d@gexample.com",
+         "testing_d_d_d_d@gexample.com",
+         "testing_d_d_d_d_d@gexample.com"
+      ]
+   },
+   {
+      "name":"Recipient Test F",
+      "email_addresses":[
+         "testing_f@gexample.com",
+         "testing_f_f@gexample.com"
+      ]
+   }
+]
 }

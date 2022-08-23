@@ -15,14 +15,11 @@ class AttachmentPage(BaseReport):
 
     PATH = "doc1/"
 
-    def __init__(
-        self, court_id, pacer_session=None, notification_att_page=False
-    ):
+    def __init__(self, court_id, pacer_session=None):
         super().__init__(court_id, pacer_session)
         # Note that parsing bankruptcy attachment pages does not reveal the
         # document number, only the attachment numbers.
         self.is_bankruptcy = self.court_id.endswith("b")
-        self.is_notification_att_page = notification_att_page
 
     def query(self, document_number):
         """Query the "attachment page" endpoint and set the results to self.response.
@@ -140,10 +137,12 @@ class AttachmentPage(BaseReport):
         """Get the description from the row"""
         if not self.is_bankruptcy:
             index = 2
+            # Some NEFs attachment pages for some courts have an extra column
+            # (see nyed_123019137279), use index 3 to get the description
+            columns_in_row = row.xpath(f"./td")
+            if len(columns_in_row) == 5:
+                index = 3
         else:
-            index = 3
-
-        if self.is_notification_att_page and self.court_id == "nyed":
             index = 3
 
         description_text_nodes = row.xpath(f"./td[{index}]//text()")
