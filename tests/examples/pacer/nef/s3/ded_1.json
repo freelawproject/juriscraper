@@ -1,0 +1,58 @@
+{
+  "court_id":"ded",
+  "case_name":"CBV, Inc. v. ChanBond, LLC",
+  "contains_attachments": true,
+  "docket_number":"1:21-cv-01456",
+  "date_filed":"2022-08-03",
+  "docket_entries":[
+     {
+        "date_filed":"2022-08-03",
+        "description":"Letter to The Honorable Maryellen Noreika from Geoffrey Grivner regarding health issue of Plaintiff and proposed Schedule. (Attachments: (1) Exhibit A, (2) Exhibit B)(Grivner, Geoffrey)",
+        "document_url":"https://ecf.ded.uscourts.gov/doc1/04305714362?caseid=76834&de_seq_num=529&magic_num=156066",
+        "document_number":"136",
+        "pacer_doc_id":"04305714362",
+        "pacer_case_id":"76834",
+        "pacer_seq_no":"529",
+        "pacer_magic_num":"156066"
+     }
+  ],
+  "email_recipients":[
+   {
+      "name":"Recipient Test A",
+      "email_addresses":[
+         "testing_a@gexample.com",
+         "testing_a_a@gexample.com"
+      ]
+   },
+   {
+      "name":"Recipient Test B",
+      "email_addresses":[
+         "testing_b@gexample.com"
+      ]
+   },
+   {
+      "name":"Recipient Test C",
+      "email_addresses":[
+         "testing_c@gexample.com",
+         "testing_c_c@gexample.com"
+      ]
+   },
+   {
+      "name":"Recipient Test D",
+      "email_addresses":[
+         "testing_d@gexample.com",
+         "testing_d_d@gexample.com",
+         "testing_d_d_d@gexample.com",
+         "testing_d_d_d_d@gexample.com",
+         "testing_d_d_d_d_d@gexample.com"
+      ]
+   },
+   {
+      "name":"Recipient Test F",
+      "email_addresses":[
+         "testing_f@gexample.com",
+         "testing_f_f@gexample.com"
+      ]
+   }
+]
+}

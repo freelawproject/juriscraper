@@ -1,0 +1,69 @@
+<html><head><link rel="shortcut icon"  href="/favicon.ico"/><title>LAED CM/ECF - Live</title>
+<script type="text/javascript">var default_base_path = "/"; </script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script><link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script></head><body><style type="text/css">body { overflow:auto;}</style><SCRIPT LANGUAGE="JavaScript">
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;
+					while(document.forms[0].elements[Cnt] != null) {
+						try {
+							if(document.forms[0].elements[Cnt].type != "hidden" &&
+									!document.forms[0].elements[Cnt].disabled &&
+									!document.forms[0].elements[Cnt].readOnly) {
+								document.forms[0].elements[Cnt].focus();
+								break;
+							}
+						}
+						catch(e) {}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+
+			<p>&nbsp;&nbsp;<B>Document Selection Menu</B></p>
+
+				<p align=center><big>Multiple Documents</big></p>
+				<p>To view the main document and its attachments without incurring a PACER fee,
+				click on the hyperlinks displayed on this menu.  You may incur a PACER fee
+				to view CM/ECF documents from hyperlinks within the documents.</p>
+
+			<p>&nbsp;&nbsp;Select the document you wish to view.</p>
+			<script type="text/javascript">CMECF.MainMenu.alternateHelp="////show_multidocs.htm"</script>
+			<table width=700 cellpadding=4 cellspacing=3>
+
+				<tr>
+					<td width=100 valign=top><a href="https://ecf.laed.uscourts.gov/doc1/085113034901" onClick="goDLS('/doc1/085113034901','195449','837','','','','73113691','');return(false);">251</a></td>
+					<td width=240>Main Document </td>
+					<td width=400>5 pages</td>
+					<td width=600>111 kb</td>
+				</tr>
+
+				<tr>
+					<td width=100 valign=top><a href="https://ecf.laed.uscourts.gov/doc1/085113034902" onClick="goDLS('/doc1/085113034902','195449','837','','','','73113691','');return(false);">1</a></td>
+					<td width=240>Pretrial Notice Form </td>
+					<td width=400>8 pages</td>
+					<td width=600>117 kb</td>
+				</tr>
+
+				<tr>
+					<td width=100 valign=top><a href="https://ecf.laed.uscourts.gov/doc1/085113034903" onClick="goDLS('/doc1/085113034903','195449','837','','','','73113691','');return(false);">2</a></td>
+					<td width=240> Standing Order</td>
+					<td width=400>2 pages</td>
+					<td width=600>20 kb</td>
+				</tr>
+			  </table></div></body></html>

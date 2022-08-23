@@ -1,0 +1,58 @@
+{
+   "court_id":"laed",
+   "case_name":"Grant v. Gusman",
+   "contains_attachments":true,
+   "docket_number":"2:17-cv-02797",
+   "date_filed":"2022-08-11",
+   "docket_entries":[
+      {
+         "date_filed":"2022-08-11",
+         "description":"SCHEDULING ORDER: Final Pretrial Conference set for 2/23/2023 04:00 PM before Chief Judge Nannette Jolivette Brown. Jury Trial set for 3/20/2023 09:00 AM before Chief Judge Nannette Jolivette Brown. Issued by Clerk. (Attachments: (1) Pretrial Notice Form, (2) Standing Order)(mp)",
+         "document_url":"https://ecf.laed.uscourts.gov/doc1/085013034901?caseid=195449&de_seq_num=837&magic_num=73113691",
+         "document_number":"251",
+         "pacer_doc_id":"085013034901",
+         "pacer_case_id":"195449",
+         "pacer_seq_no":"837",
+         "pacer_magic_num":"73113691"
+      }
+   ],
+   "email_recipients":[
+      {
+         "name":"Recipient Test A",
+         "email_addresses":[
+            "testing_a@gexample.com",
+            "testing_a_a@gexample.com"
+         ]
+      },
+      {
+         "name":"Recipient Test B",
+         "email_addresses":[
+            "testing_b@gexample.com"
+         ]
+      },
+      {
+         "name":"Recipient Test C",
+         "email_addresses":[
+            "testing_c@gexample.com",
+            "testing_c_c@gexample.com"
+         ]
+      },
+      {
+         "name":"Recipient Test D",
+         "email_addresses":[
+            "testing_d@gexample.com",
+            "testing_d_d@gexample.com",
+            "testing_d_d_d@gexample.com",
+            "testing_d_d_d_d@gexample.com",
+            "testing_d_d_d_d_d@gexample.com"
+         ]
+      },
+      {
+         "name":"Recipient Test F",
+         "email_addresses":[
+            "testing_f@gexample.com",
+            "testing_f_f@gexample.com"
+         ]
+      }
+   ]
+}

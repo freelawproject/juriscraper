@@ -1,0 +1,58 @@
+{
+   "court_id":"nysd",
+   "case_name":"IN RE: NEW YORK CITY POLICING DURING SUMMER 2020 DEMONSTRATIONS",
+   "contains_attachments":true,
+   "docket_number":"1:20-cv-08924",
+   "date_filed":"2022-08-08",
+   "docket_entries":[
+      {
+         "date_filed":"2022-08-08",
+         "description":"LETTER addressed to Magistrate Judge Gabriel W. Gorenstein from Lillian Marquez dated August 8, 2022 re: Request to Deem RFAs Admitted and Compel Discovery Responses. Document filed by People of The State of New York. (Attachments: (1) Exhibit A Objections and Responses, (2) Exhibit B Chart, (3) Exhibit C Suppl. Objections and Responses, (4) Exhibit D Email).(Marquez, Lillian)",
+         "document_url":"https://ecf.nysd.uscourts.gov/doc1/127031741309?caseid=546923&de_seq_num=2463&magic_num=25849322",
+         "document_number":"721",
+         "pacer_doc_id":"127031741309",
+         "pacer_case_id":"546923",
+         "pacer_seq_no":"2463",
+         "pacer_magic_num":"25849322"
+      }
+   ],
+   "email_recipients":[
+      {
+         "name":"Recipient Test A",
+         "email_addresses":[
+            "testing_a@gexample.com",
+            "testing_a_a@gexample.com"
+         ]
+      },
+      {
+         "name":"Recipient Test B",
+         "email_addresses":[
+            "testing_b@gexample.com"
+         ]
+      },
+      {
+         "name":"Recipient Test C",
+         "email_addresses":[
+            "testing_c@gexample.com",
+            "testing_c_c@gexample.com"
+         ]
+      },
+      {
+         "name":"Recipient Test D",
+         "email_addresses":[
+            "testing_d@gexample.com",
+            "testing_d_d@gexample.com",
+            "testing_d_d_d@gexample.com",
+            "testing_d_d_d_d@gexample.com",
+            "testing_d_d_d_d_d@gexample.com"
+         ]
+      },
+      {
+         "name":"Recipient Test F",
+         "email_addresses":[
+            "testing_f@gexample.com",
+            "testing_f_f@gexample.com"
+         ]
+      }
+   ]
+}

@@ -1,0 +1,58 @@
+{
+   "court_id":"nysd",
+   "case_name":"IN RE: NEW YORK CITY POLICING DURING SUMMER 2020 DEMONSTRATIONS",
+   "contains_attachments":true,
+   "docket_number":"1:20-cv-08924",
+   "date_filed":"2022-08-04",
+   "docket_entries":[
+      {
+         "date_filed":"2022-08-04",
+         "description":"JOINT LETTER MOTION for Extension of Time to Complete Discovery addressed to Magistrate Judge Gabriel W. Gorenstein from Omar J. Siddiqi dated August 4, 2022. Document filed by City of New York. (Attachments: (1) Text of Proposed Order Proposed Stipulation Signed by the Parties).(Siddiqi, Omar)",
+         "document_url":"https://ecf.nysd.uscourts.gov/doc1/127031722970?caseid=546923&de_seq_num=2447&magic_num=95806321",
+         "document_number":"716",
+         "pacer_doc_id":"127031722970",
+         "pacer_case_id":"546923",
+         "pacer_seq_no":"2447",
+         "pacer_magic_num":"95806321"
+      }
+   ],
+   "email_recipients":[
+      {
+         "name":"Recipient Test A",
+         "email_addresses":[
+            "testing_a@gexample.com",
+            "testing_a_a@gexample.com"
+         ]
+      },
+      {
+         "name":"Recipient Test B",
+         "email_addresses":[
+            "testing_b@gexample.com"
+         ]
+      },
+      {
+         "name":"Recipient Test C",
+         "email_addresses":[
+            "testing_c@gexample.com",
+            "testing_c_c@gexample.com"
+         ]
+      },
+      {
+         "name":"Recipient Test D",
+         "email_addresses":[
+            "testing_d@gexample.com",
+            "testing_d_d@gexample.com",
+            "testing_d_d_d@gexample.com",
+            "testing_d_d_d_d@gexample.com",
+            "testing_d_d_d_d_d@gexample.com"
+         ]
+      },
+      {
+         "name":"Recipient Test F",
+         "email_addresses":[
+            "testing_f@gexample.com",
+            "testing_f_f@gexample.com"
+         ]
+      }
+   ]
+}
