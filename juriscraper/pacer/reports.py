@@ -191,19 +191,21 @@ class BaseReport:
             # document anonymously by its magic link
 
             # Create PACER base url from court_id and pacer_doc_id
-            url = make_doc1_url(self.court_id, pacer_doc_id, True)
-
             # Magic link parameters
             # We don't need the de_seq_num parameter to fetch the free document
-            params = {
-                "caseid": pacer_case_id,
-                "magic_num": pacer_magic_num,
-            }
             if appellate:
                 url = make_docs1_url(self.court_id, pacer_doc_id)
+                # For appellate documents the magic_number is the uid param
                 params = {
                     "uid": pacer_magic_num,
                 }
+            else:
+                url = make_doc1_url(self.court_id, pacer_doc_id, True)
+                params = {
+                    "caseid": pacer_case_id,
+                    "magic_num": pacer_magic_num,
+                }
+
             # Add parameters to the PACER base url and make a GET request
             req_timeout = (60, 300)
             r = requests.get(url, params=params, timeout=req_timeout)
