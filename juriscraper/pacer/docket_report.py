@@ -962,7 +962,7 @@ class DocketReport(BaseDocketReport, BaseReport):
                 del cells[1]
 
             date_filed_str = force_unicode(cells[0].text_content())
-            if not date_filed_str:
+            if not date_filed_str.strip():
                 # Some older dockets have missing dates. Press on.
                 continue
             de["date_filed"] = convert_date_string(date_filed_str)
