@@ -25,6 +25,7 @@ Features:
 Changes:
 
  - Added support to parse NDAs and download their free documents.
+ - Added support to get attached documents from NEFs.
 
 ## Past
 
