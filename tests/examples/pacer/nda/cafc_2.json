@@ -1,0 +1,55 @@
+{
+  "court_id":"cafc",
+  "case_name":"Corephotonics, Ltd. v. Apple Inc.",
+  "contains_attachments": false,
+  "docket_number":"22-1455",
+  "date_filed":"2022-08-19",
+  "appellate":true,
+  "docket_entries":[
+     {
+        "date_filed":"2022-08-19",
+        "description":"MOTION of Appellee Apple Inc. to extend the time to 10/28/2022 to file brief. Service: 08/19/2022 by email. [867380] [22-1455] [Erin Leach]",
+        "document_url":"https://ecf.cafc.uscourts.gov/docs1/01301993624?uid=4c6ae1ed93856cd0",
+        "document_number": null,
+        "pacer_doc_id":"01301993624",
+        "pacer_case_id":"18362",
+        "pacer_seq_no":null,
+        "pacer_magic_num":"4c6ae1ed93856cd0"
+     }
+  ],
+  "email_recipients": [
+    {
+       "name":"Recipient User Test 1, -:",
+       "email_addresses":[
+          "testing1@gexample.com"
+       ]
+    },
+    {
+       "name":"Recipient User Test 2, -:",
+       "email_addresses":[
+          "testing2@gexample.com"
+       ]
+    },
+    {
+       "name":"Recipient User Test 3, -:",
+       "email_addresses":[
+          "testing3@gexample.com",
+          "testing3_1@gexample.com"
+       ]
+    },
+    {
+       "name":"Recipient User Test 4, -:",
+       "email_addresses":[
+          "testing4@gexample.com",
+          "testing4_1@gexample.com",
+          "testing4_2@gexample.com"
+       ]
+    },
+    {
+       "name":"Recipient User Test 5, Deputy Clerk:",
+       "email_addresses":[
+          "Testing5@gexample.com"
+       ]
+    }
+ ]
+}

@@ -1,0 +1,68 @@
+Return-Path: <ca9_ecfnoticing@ca9.uscourts.gov>
+Received: from icmecf202.gtwy.uscourts.gov (icmecf202.gtwy.uscourts.gov [63.241.40.205])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id gn83ofsnikvqa7t8ir9r992j8uj1hq5lkoa8fe81
+ for archive@recap.email;
+ Mon, 08 Aug 2022 22:31:54 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ca9.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=ca9_ecfnoticing@ca9.uscourts.gov; helo=icmecf202.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ca9.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=ca9_ecfnoticing@ca9.uscourts.gov; helo=icmecf202.gtwy.uscourts.gov;
+ dmarc=none header.from=ca9.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFTnMveWhyUDlaRzhSZk9paW84ekNHU3lQMFQ5QTd4VnRIekVmUnVUdXhNZHdCKzA5OG5rWjJuMkpUZStBMzVWOFNLclFzWjdoZVdPTUF2ODBTaFZObXhNaFE0SDdsdTl0a0gzUzZiRFpobVc2OURqYU8rS1dXR2lwRm1TRzc5YnVDNUdqRHUweVFTYXBKZm4xTUhWRlQvbUx6YTJ0WFcwdFNRNFJZb0gzY1R3L0JNMGFGRGRXSzNUajZFNHVLd0N1TkQxVmxQOS84V3NUVDFaY1Y1eGZxTTBxRjJQT3lnSjlveTZqQ3R2RWxWSENiWVJCdmRLQkdSa0lFci80QzVMYnBXTG5wM1IwN1BnWVgrMkhyKzV1OHZDTmZKRUdrWmRpMVg5clZuUE9qT3EzRi9NVnZZT050OExDRXUwWWVWWW89
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=Ce/p/s0oUhyv2M0opWFUFAFo1BuMoJJ3NoH7bkVzRVTSybgypb32yuCuN0TpHs9a3UNjjfoxe7vYEb4LM2SO8gh/CYXkd3BUyU1vWkx8h+IR5ewDcpOhbN72K9KFqRevOiWSVu7SVRsPvnXw9PjLtkDTJuEcgvCCRlmqYmeJfZU=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1659997914; v=1; bh=6saUJSbPWdxHyhJRfT8dxFMCzLr3btvUPb2y1E++2uM=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.100
+Received: from ca9db.ca9.gtwy.dcn ([156.119.56.100])
+  by icmecf202.gtwy.uscourts.gov with ESMTP; 08 Aug 2022 18:31:53 -0400
+Received: from ca9db.ca9.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by ca9db.ca9.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 278MVhAe119754
+	for <archive@recap.email>; Mon, 8 Aug 2022 15:31:43 -0700
+Date: Mon, 8 Aug 2022 15:31:43 -0700 (PDT)
+From: ca9_ecfnoticing@ca9.uscourts.gov
+To: archive@recap.email
+Message-ID: <851424647.6730.1659997903289@ca9db.ca9.gtwy.dcn>
+Subject: 21-16499 Rosemarie Vargas, et al v. Facebook, Inc. "28(j) Letter
+ (Citation of Supplemental Authorities)"
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><TITLE>21-16499 Rosemarie Vargas, et al v. Facebook, Inc. "28(j) Letter (Citation of Supplemental Authorities)"</TITLE>
+</HEAD>
+<BODY BGCOLOR="#F8F8F8" TEXT="#000000" LINK="#0000ff" VLINK="#551a8b" ALINK="#ff0000">
+<P><STRONG>
+***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer.  PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing.</STRONG><BR>
+<P><CENTER><STRONG>United States Court of Appeals for the Ninth Circuit</STRONG></CENTER>
+<P><STRONG>Notice of Docket Activity</STRONG><BR>
+<BR>
+The following transaction was entered on 08/08/2022 at 3:31:31 PM Pacific Daylight Time and filed on 08/08/2022
+<TABLE BORDER=0 CELLSPACING=3>
+<TR><TD><STRONG>Case Name:</STRONG></TD>
+<TD colspan='2'>Rosemarie Vargas, et al v. Facebook, Inc.<BR>
+</TD></TR>
+<TR><TD><STRONG>Case Number:&nbsp;&nbsp;</STRONG></TD>
+<TD><A HREF="https://ecf.ca9.uscourts.gov/n/beam/servlet/TransportRoom?servlet=DocketReportFilter.jsp&caseId=334146">21-16499</A></TD></TR>
+<TR><TD><STRONG>Document(s):</STRONG></TD>
+<TD><A HREF="https://ecf.ca9.uscourts.gov/docs1/009033568331?uid=472bdf5935654af5">Document(s)</A></TD></TR>
+</TABLE><BR>
+<P><STRONG>Docket Text:</STRONG><BR>
+Filed (ECF) Appellants Jenny Lin, Deillo Richards, Kisha Skipper, Jazmine Spencer and Rosemarie Vargas citation of supplemental authorities. Date of service: 08/08/2022. [12512349]--[COURT ENTERED FILING to correct entry [53].] (SLM)<BR>
+<BR>
+<STRONG>Notice will be electronically mailed to:</STRONG><BR><BR>
+Recipient User Test 1: testing1@gexample.com, testing1_1@gexample.com<BR>
+Recipient User Test 2: testing2@gexample.com, testing2_1@gexample.com<BR>
+Recipient User Test 3: testing3@gexample.com, testing3_1@gexample.com<BR>
+Recipient User Test 4: testing4@gexample.com, testing4_1@gexample.com, testing4_1@gexample.com<BR>
+Recipient User Test 5: testing5@gexample.com, testing5_1@gexample.com, testing5_1@gexample.com<BR>
+<BR><BR>
+The following document(s) are associated with this transaction:<BR>
+<STRONG>Document Description: </STRONG>Main Document<BR>
+<STRONG>Original Filename: </STRONG>21-16499 C 54.pdf<BR>
+<STRONG>Electronic Document Stamp:</STRONG><BR>
+[STAMP acecfStamp_ID=1106763461 [Date=08/08/2022] [FileNumber=12512349-0] [17ce8b8d28136a4e6c7b341c6470405eb4be5b5db979413d05d51c9eebd7af06642ec56b7a92a7aa222fca94645794a6a58c2b1026c359df9e9e34de5ff6aaeb]]<BR>
+<BR>
+</BODY></HTML>

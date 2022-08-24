@@ -1,0 +1,67 @@
+Return-Path: <ca06-ecf-noticedesk@ca6.uscourts.gov>
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 95ka5h1mdj60k89id01o3ke6ce13o49ep7l7iho1
+ for archive@recap.email;
+ Mon, 15 Aug 2022 19:22:19 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ca6.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=ca06-ecf-noticedesk@ca6.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ca6.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=ca06-ecf-noticedesk@ca6.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+ dmarc=none header.from=ca6.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHRDJWMTlBZ2dRek82SkIrMm5NdXd3TFpoSWFvYXJTd21FblZNbERlNGppbDhINFdwc25qb2pBN3BoeW1ZZk93WUxrOVZDSVhub1JkSVVLUWh5eXEraWpIa3hXV0Qrd3lPSnpjZTZ2M09qSmtXTnN0SmduMG1tTitVeEduUnVialBlZlVhYjNYQWFvOGtVU0IrclFEbkFxK3FjSlVCUFBOS28vamJGSlU2VTJLUWEyd0xybDVJeXplK3JaYU5ocW5MdHg0R0pYUzZWUFp1azhlejF1Z1lBbUZ3aG1RZkFOVjBxd0ZMd1JhQ2hMZVk2UHFMWE1kenBDSmM0WDFoR0xzVCtzV2IyeUp2U3JWSHpmZEs5MVdtTmV1WEE5bEgwK3UxOU9XeFgyM0lINk1rTGxNUm5lOTR6Y2RPWkNITkE1K2s9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=ACp0IkKVjRQdoMAAU7cogEzG0Unl9NZVl1ECeoWUxrgD1cw3IDphk9FoPvdvo1wFi/0fU5wDh/nj+uroLu0PNkEjOhMd8kx90RiYQ+GkhK7IhVSNenaI+FtTYN31zEQUQuiHC7vdBCt2pcxSfTbcAVHi1Lz+JCY0s4YF27F2dkQ=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1660591340; v=1; bh=OlVOigwZR6sp7i0jZY8Dp68+6rZ/djwJp/s0y5igD5w=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.128
+Received: from ca6db.ca6.gtwy.dcn ([156.119.190.128])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 15 Aug 2022 15:22:18 -0400
+Received: from ca6db.ca6.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by ca6db.ca6.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 27FJLwci027711
+	for <archive@recap.email>; Mon, 15 Aug 2022 15:21:58 -0400
+Date: Mon, 15 Aug 2022 15:21:58 -0400 (EDT)
+From: ca06-ecf-noticedesk@ca6.uscourts.gov
+To: archive@recap.email
+Message-ID: <1358103913.1670.1660591318437@ca6db.ca6.gtwy.dcn>
+Subject: 22-3289 Andrea Goldblum v. UC "motion extend time to file brief"
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><TITLE>22-3289 Andrea Goldblum v. UC "motion extend time to file brief"</TITLE>
+</HEAD>
+<BODY BGCOLOR="#CCCCFF" TEXT="#000000" LINK="#0000ff" VLINK="#551a8b" ALINK="#ff0000">
+<P><STRONG>
+***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer.  PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing.</STRONG><BR>
+<P><CENTER><STRONG>United States Court of Appeals for the Sixth Circuit</STRONG></CENTER>
+<P><STRONG>Notice of Docket Activity</STRONG><BR>
+<BR>
+The following transaction was filed on 08/15/2022
+<TABLE BORDER=0 CELLSPACING=3>
+<TR><TD><STRONG>Case Name:</STRONG></TD>
+<TD colspan='2'>Andrea Goldblum v. UC<BR>
+</TD></TR>
+<TR><TD><STRONG>Case Number:&nbsp;&nbsp;</STRONG></TD>
+<TD><A HREF="https://ecf.ca6.uscourts.gov/n/beam/servlet/TransportRoom?servlet=DocketReportFilter.jsp&caseId=143725">22-3289</A></TD></TR>
+<TR><TD><STRONG>Document(s):</STRONG></TD>
+<TD><A HREF="https://ecf.ca6.uscourts.gov/docs1/006014767502?uid=e957a05e64b3113b">Document(s)</A></TD></TR>
+</TABLE><BR>
+<P><STRONG>Docket Text:</STRONG><BR>
+MOTION filed by Ms. Marissa J. Palumbo for UC to extend time to file brief. Certificate of Service: 08/15/2022. [22-3289] (MJP)<BR>
+<BR>
+<STRONG>Notice will be electronically mailed to:</STRONG><BR><BR>
+Recipient User Test 1: testing1@gexample.com, testing1_1@gexample.com<BR>
+Recipient User Test 2: testing2@gexample.com, testing2_1@gexample.com<BR>
+Recipient User Test 3: testing3@gexample.com, testing3_1@gexample.com<BR>
+<BR><BR><BR><STRONG>Notice will be stored in the notice cart for:</STRONG><BR><BR>
+Ms. Michelle R. Lambert, Admin and/or Clerical Support<BR>
+<BR>
+The following document(s) are associated with this transaction:<BR>
+<STRONG>Document Description: </STRONG>motion<BR>
+<STRONG>Original Filename: </STRONG>2022-08-15 Def's Unopposed Second MET to File Merit Brief.pdf<BR>
+<STRONG>Electronic Document Stamp:</STRONG><BR>
+[STAMP acecfStamp_ID=1105031299 [Date=08/15/2022] [FileNumber=6851219-0] [9926ad66b23e4198e368a871ffa88227eb9a5f23a5462cf92301e60a808a0e4dcb8eed64f7212bd59a8eb409621a2c76878557682f9c94a8ba816ba11ec9ad0f]]<BR>
+<BR>
+</BODY></HTML>
