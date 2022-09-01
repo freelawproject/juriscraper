@@ -204,7 +204,7 @@ If you've not installed juriscraper, you can run `sample_caller.py` as:
 
 ::
 
-   PYTHONPATH=`pwd` python  juriscraper/sample_caller.py
+   PYTHONPATH=`pwd` python  sample_caller.py
 
 
 Usage
@@ -280,7 +280,7 @@ Example usage:
 
 ::
 
-   PYTHONPATH=`pwd` juriscraper/pacerdocket.py tests/examples/pacer/dockets/district/nysd.html
+   PYTHONPATH=`pwd` python juriscraper/pacerdocket.py tests/examples/pacer/dockets/district/nysd.html
 
 
 Tests
