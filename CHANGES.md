@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.14 - 2022-09-02**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Update Selenium version
+
+## Past
+
 **2.5.13 - 2022-08-24**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
  - Added support to get attached documents from NEFs.
-
-## Past
 
 **2.5.12 - 2022-08-12**
 
