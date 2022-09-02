@@ -15,6 +15,6 @@ report = DocketReport("psc", pacer_session)
 
 for path in sys.argv[1:]:
     with open(path) as f:
-        report._parse_text(f.read().decode("utf-8"))
+        report._parse_text(f.read())
     data = report.data
     print(json.dumps(data, indent=2, sort_keys=True, separators=(",", ": ")))

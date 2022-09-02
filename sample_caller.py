@@ -102,9 +102,9 @@ def main():
     usage = (
         "usage: %prog -c COURTID [-d|--daemon] [-b|--binaries] [-r|--report]\n\n"
         "To test ca1, downloading binaries, use: \n"
-        "    python %prog -c opinions.united_states.federal_appellate.ca1 -b\n\n"
+        "    python %prog -c juriscraper.opinions.united_states.federal_appellate.ca1 -b\n\n"
         "To test all federal courts, omitting binaries, use: \n"
-        "    python %prog -c opinions.united_states.federal_appellate"
+        "    python %prog -c juriscraper.opinions.united_states.federal_appellate\n\n"
         "Passing the --report option will generate an HTML report in "
         "the root directory after scrapers have run"
     )
