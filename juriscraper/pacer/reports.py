@@ -258,14 +258,11 @@ class BaseReport:
                 r"You do not have permission to view\s+this document.", r.text
             ):
                 error = (
-                    f"Permission denied getting document in case "
-                    f"{pacer_case_id=} at {url}. It's probably sealed."
+                    f"Permission denied getting document. It's probably "
+                    f"sealed. {pacer_case_id=}, {url=}"
                 )
             if "You do not have access to this transcript." in r.text:
-                error = (
-                    f"Unable to get transcript at {url} in case "
-                    f"{pacer_doc_id=}."
-                )
+                error = f"Unable to get transcript. {pacer_case_id=}, {url=}"
             if "Sealed Document" in r.text or "Under Seal" in r.text:
                 # See: https://ecf.almd.uscourts.gov/doc1/01712589088
                 # See: https://ecf.cand.uscourts.gov/doc1/035122021132
@@ -279,13 +276,22 @@ class BaseReport:
             ):
                 # See: https://ecf.wvsd.uscourts.gov/doc1/20115419289
                 error = (
-                    f"Image not available for viewing by non-court users: "
-                    f"{pacer_case_id=} {url=}"
+                    f"Image not available for viewing by non-court users. "
+                    f"{pacer_case_id=}, {url=}"
                 )
             if "A Client Code is required for PACER search" in r.text:
                 error = (
                     f"Unable to get document. Client code required: "
-                    f"{pacer_case_id} at {url}."
+                    f"{pacer_case_id=}, {url=}"
+                )
+            if (
+                "Permission to view this document is denied based on Nature of Suit"
+                in r.text
+            ):
+                # See: https://ecf.cacd.uscourts.gov/doc1/031134206600
+                error = (
+                    f"Permission denied getting document due to nature of "
+                    f"suit. {pacer_case_id=}, {url=}"
                 )
 
             if error:
