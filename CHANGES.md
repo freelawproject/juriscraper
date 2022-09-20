@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.16 - 2022-09-11**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix for OA CA1
+
+## Past
+
 **2.5.15 - 2022-09-06**
 
 Features:
@@ -26,7 +38,6 @@ Changes:
 
  - Update Selenium version 4.0.0.a7
 
-## Past
 
 **2.5.14 - 2022-09-02**
 
