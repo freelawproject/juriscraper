@@ -11,7 +11,7 @@ import jsondate3 as json
 from requests import ConnectionError
 
 from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.pacer import FreeOpinionReport
+from juriscraper.pacer import DownloadConfirmationPage, FreeOpinionReport
 from juriscraper.pacer.http import PacerSession
 from juriscraper.pacer.utils import get_court_id_from_url, get_courts_from_json
 from tests import JURISCRAPER_ROOT, TESTS_ROOT_EXAMPLES_PACER
@@ -253,3 +253,25 @@ class PacerMagicLinkTest(unittest.TestCase):
         )
         # No PDF should be returned
         self.assertEqual(r, None)
+
+
+class PacerDownloadConfirmationPageTest(unittest.TestCase):
+    """A variety of tests for the download confirmation page"""
+
+    def setUp(self):
+        self.session = get_pacer_session()
+        self.session.login()
+        self.report = DownloadConfirmationPage("ca8", self.session)
+        self.pacer_doc_id = "00812590792"
+
+    @SKIP_IF_NO_PACER_LOGIN
+    def test_get_document_number(self):
+        """Can we get the PACER document number from a download confirmation
+        page?"""
+        self.report.query(self.pacer_doc_id)
+        data_report = self.report.data
+        self.assertEqual(data_report["document_number"], "00812590792")
+        self.assertEqual(data_report["docket_number"], "14-3066")
+        self.assertEqual(data_report["cost"], "0.30")
+        self.assertEqual(data_report["billable_pages"], "3")
+        self.assertEqual(data_report["document_description"], "PDF Document")

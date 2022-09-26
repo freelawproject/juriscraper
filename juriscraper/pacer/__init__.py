@@ -5,6 +5,7 @@ from .case_query_advanced import CaseQueryAdvancedBankruptcy
 from .claims_register import ClaimsRegister
 from .docket_history_report import DocketHistoryReport
 from .docket_report import DocketReport
+from .download_confirmation_page import DownloadConfirmationPage
 from .email import NotificationEmail, S3NotificationEmail
 from .free_documents import FreeOpinionReport
 from .hidden_api import PossibleCaseNumberApi, ShowCaseDocApi
@@ -21,6 +22,7 @@ __all__ = [
     ClaimsRegister,
     DocketHistoryReport,
     DocketReport,
+    DownloadConfirmationPage,
     FreeOpinionReport,
     InternetArchive,
     NotificationEmail,

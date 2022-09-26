@@ -57,7 +57,17 @@ def check_if_logged_in_page(text):
     # again below.
     found_district_logout_link = "/cgi-bin/login.pl?logout" in text
     found_appellate_logout_link = "InvalidUserLogin.jsp" in text
-    if any([found_district_logout_link, found_appellate_logout_link]):
+
+    # A download confirmation page doesn't contain a logout link but we're
+    # logged into.
+    is_a_download_confirmation_page = "Download Confirmation" in text
+    if any(
+        [
+            found_district_logout_link,
+            found_appellate_logout_link,
+            is_a_download_confirmation_page,
+        ]
+    ):
         # A normal HTML page we're logged into.
         return True
 
