@@ -271,3 +271,7 @@ class PacerDownloadConfirmationPageTest(unittest.TestCase):
         self.report.query(self.pacer_doc_id)
         data_report = self.report.data
         self.assertEqual(data_report["document_number"], "00812590792")
+        self.assertEqual(data_report["docket_number"], "14-3066")
+        self.assertEqual(data_report["cost"], "0.30")
+        self.assertEqual(data_report["billable_pages"], "3")
+        self.assertEqual(data_report["document_description"], "PDF Document")
