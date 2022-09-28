@@ -16,6 +16,25 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.17 - 2022-09-28**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Added DownloadConfirmationPage report to parse the PACER download
+ confirmation page and get the following data:
+  - document_number
+  - docket_number
+  - cost
+  - billable_pages
+  - document_description
+  - transaction_date
+
+## Past
+
 **2.5.16 - 2022-09-11**
 
 Features:
@@ -25,8 +44,6 @@ Features:
 Changes:
 
  - Fix for OA CA1
-
-## Past
 
 **2.5.15 - 2022-09-06**
 
