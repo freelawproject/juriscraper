@@ -263,6 +263,7 @@ class PacerDownloadConfirmationPageTest(unittest.TestCase):
         self.session.login()
         self.report = DownloadConfirmationPage("ca8", self.session)
         self.pacer_doc_id = "00812590792"
+        self.no_confirmation_page_pacer_doc_id = "00802251695"
 
     @SKIP_IF_NO_PACER_LOGIN
     def test_get_document_number(self):
@@ -275,3 +276,11 @@ class PacerDownloadConfirmationPageTest(unittest.TestCase):
         self.assertEqual(data_report["cost"], "0.30")
         self.assertEqual(data_report["billable_pages"], "3")
         self.assertEqual(data_report["document_description"], "PDF Document")
+
+    @SKIP_IF_NO_PACER_LOGIN
+    def test_no_confirmation_page(self):
+        """If the download confirmation page is not available an empty
+        dictionary is returned"""
+        self.report.query(self.no_confirmation_page_pacer_doc_id)
+        data_report = self.report.data
+        self.assertEqual(data_report, {})

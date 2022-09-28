@@ -61,11 +61,23 @@ def check_if_logged_in_page(text):
     # A download confirmation page doesn't contain a logout link but we're
     # logged into.
     is_a_download_confirmation_page = "Download Confirmation" in text
+    # When looking for a download confirmation page sometimes an appellate
+    # attachment page is returned instead, see:
+    # https://ecf.ca8.uscourts.gov/n/beam/servlet/TransportRoom?servlet=ShowDoc&pacer=i&dls_id=00802251695
+    appellate_attachment_page = "Documents are attached to this filing" in text
+    # Sometimes the document is completely unavailable and an error message is
+    # shown, see:
+    # https://ecf.ca11.uscourts.gov/n/beam/servlet/TransportRoom?servlet=ShowDoc/009033568259
+    appellate_document_error = (
+        "The requested document cannot be displayed" in text
+    )
     if any(
         [
             found_district_logout_link,
             found_appellate_logout_link,
             is_a_download_confirmation_page,
+            appellate_attachment_page,
+            appellate_document_error,
         ]
     ):
         # A normal HTML page we're logged into.
