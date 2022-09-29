@@ -16,6 +16,20 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.18 - 2022-09-29**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Skip appellate attachment page when querying the download confirmation page
+ - Skip appellate attachment page when downloading the free document
+ - Fix getting filed date on email notifications
+
+## Past
+
 **2.5.17 - 2022-09-28**
 
 Features:
@@ -32,8 +46,6 @@ Changes:
   - billable_pages
   - document_description
   - transaction_date
-
-## Past
 
 **2.5.16 - 2022-09-11**
 
