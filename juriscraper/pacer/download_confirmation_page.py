@@ -30,7 +30,7 @@ class DownloadConfirmationPage(BaseReport):
         ), "session attribute of DownloadConfirmationPage cannot be None."
 
         # Make the NDA document URL
-        url = make_docs1_url(self.court_id, pacer_doc_id)
+        url = make_docs1_url(self.court_id, pacer_doc_id, True)
 
         logger.info("Querying the confirmation page endpoint at URL: %s", url)
         self.response = self.session.get(url)
