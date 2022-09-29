@@ -194,7 +194,7 @@ class BaseReport:
             # Magic link parameters
             # We don't need the de_seq_num parameter to fetch the free document
             if appellate:
-                url = make_docs1_url(self.court_id, pacer_doc_id)
+                url = make_docs1_url(self.court_id, pacer_doc_id, True)
                 # For appellate documents the magic_number is the uid param
                 params = {
                     "uid": pacer_magic_num,

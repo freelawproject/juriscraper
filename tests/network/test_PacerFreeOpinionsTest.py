@@ -262,8 +262,10 @@ class PacerDownloadConfirmationPageTest(unittest.TestCase):
         self.session = get_pacer_session()
         self.session.login()
         self.report = DownloadConfirmationPage("ca8", self.session)
+        self.report_att = DownloadConfirmationPage("ca5", self.session)
         self.pacer_doc_id = "00812590792"
         self.no_confirmation_page_pacer_doc_id = "00802251695"
+        self.pacer_doc_id_att = "00506470276"
 
     @SKIP_IF_NO_PACER_LOGIN
     def test_get_document_number(self):
@@ -275,6 +277,18 @@ class PacerDownloadConfirmationPageTest(unittest.TestCase):
         self.assertEqual(data_report["docket_number"], "14-3066")
         self.assertEqual(data_report["cost"], "0.30")
         self.assertEqual(data_report["billable_pages"], "3")
+        self.assertEqual(data_report["document_description"], "PDF Document")
+
+    @SKIP_IF_NO_PACER_LOGIN
+    def test_get_document_number_skipping_attachment_page(self):
+        """Can we get the PACER document number from a download confirmation
+        page skipping the attachment page?"""
+        self.report_att.query(self.pacer_doc_id_att)
+        data_report = self.report_att.data
+        self.assertEqual(data_report["document_number"], "00516470276")
+        self.assertEqual(data_report["docket_number"], "22-30311")
+        self.assertEqual(data_report["cost"], "1.50")
+        self.assertEqual(data_report["billable_pages"], "15")
         self.assertEqual(data_report["document_description"], "PDF Document")
 
     @SKIP_IF_NO_PACER_LOGIN

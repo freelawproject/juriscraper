@@ -186,12 +186,17 @@ def make_doc1_url(court_id, pacer_doc_id, skip_attachment_page):
     return f"https://ecf.{court_id}.uscourts.gov/doc1/{pacer_doc_id}"
 
 
-def make_docs1_url(court_id: str, pacer_doc_id: str) -> str:
+def make_docs1_url(
+    court_id: str, pacer_doc_id: str, skip_attachment_page
+) -> str:
     """Make a docs1 URL for NDAs free look downloads.
 
     :param court_id: The court ID.
     :param pacer_doc_id: The PACER document ID.
     """
+    if skip_attachment_page and pacer_doc_id[3] == "0":
+        # If the fourth digit is a 0, replace it with a 1
+        pacer_doc_id = f"{pacer_doc_id[:3]}1{pacer_doc_id[4:]}"
     return f"https://ecf.{court_id}.uscourts.gov/docs1/{pacer_doc_id}"
 
 
