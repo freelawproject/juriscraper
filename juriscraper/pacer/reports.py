@@ -35,8 +35,6 @@ HtmlElement.re_xpath = re_xpath
 class BaseReport:
     """A base report for working with pages on PACER."""
 
-    REDIRECT_REGEX = re.compile(r'window\.\s*?location\s*=\s*"(.*)"\s*;')
-
     # Subclasses should override PATH
     PATH = ""
 
@@ -229,7 +227,8 @@ class BaseReport:
                 pacer_case_id, pacer_doc_id, pacer_magic_num, got_receipt="1"
             )
 
-            if "Cannot locate the case with caseid" in r.text:
+            # Use r.content instead of r.text for performance. See #564
+            if b"Cannot locate the case with caseid" in r.content:
                 # This document is from a different docket, but is included in
                 # this docket. Probably a criminal case with the doppelganger
                 # bug. Try again, but do so without the pacer_case_id.
@@ -239,12 +238,12 @@ class BaseReport:
                 )
 
             error = None
-            if "could not retrieve dktentry for dlsid" in r.text:
+            if b"could not retrieve dktentry for dlsid" in r.content:
                 error = (
                     f"Failed to get docket entry in case: "
                     f"{pacer_case_id=} at {url}"
                 )
-            if "document is not available" in r.text:
+            if b"document is not available" in r.content:
                 # See: https://ecf.akb.uscourts.gov/doc1/02211536343
                 # See: https://ecf.ksd.uscourts.gov/doc1/07912639735
                 # Matches against:
@@ -255,15 +254,16 @@ class BaseReport:
                     f"{pacer_case_id=} at {url}"
                 )
             if re.search(
-                r"You do not have permission to view\s+this document.", r.text
+                rb"You do not have permission to view\s+this document.",
+                r.content,
             ):
                 error = (
                     f"Permission denied getting document. It's probably "
                     f"sealed. {pacer_case_id=}, {url=}"
                 )
-            if "You do not have access to this transcript." in r.text:
+            if b"You do not have access to this transcript." in r.content:
                 error = f"Unable to get transcript. {pacer_case_id=}, {url=}"
-            if "Sealed Document" in r.text or "Under Seal" in r.text:
+            if b"Sealed Document" in r.content or b"Under Seal" in r.content:
                 # See: https://ecf.almd.uscourts.gov/doc1/01712589088
                 # See: https://ecf.cand.uscourts.gov/doc1/035122021132
                 # Matches against:
@@ -271,22 +271,22 @@ class BaseReport:
                 # "This document is currently Under Seal and not available..."
                 error = f"Document is sealed: {pacer_case_id=} {url=}"
             if (
-                "This image is not available for viewing by non-court users"
-                in r.text
+                b"This image is not available for viewing by non-court users"
+                in r.content
             ):
                 # See: https://ecf.wvsd.uscourts.gov/doc1/20115419289
                 error = (
                     f"Image not available for viewing by non-court users. "
                     f"{pacer_case_id=}, {url=}"
                 )
-            if "A Client Code is required for PACER search" in r.text:
+            if b"A Client Code is required for PACER search" in r.content:
                 error = (
                     f"Unable to get document. Client code required: "
                     f"{pacer_case_id=}, {url=}"
                 )
             if (
-                "Permission to view this document is denied based on Nature of Suit"
-                in r.text
+                b"Permission to view this document is denied based on Nature of Suit"
+                in r.content
             ):
                 # See: https://ecf.cacd.uscourts.gov/doc1/031134206600
                 error = (
@@ -301,7 +301,8 @@ class BaseReport:
             # Some pacer sites use window.location in their JS, so we have to
             # look for that. See: oknd, 13-cv-00357-JED-FHM, doc #24. But, be
             # warned, you can only catch the redirection with JS off.
-            m = self.REDIRECT_REGEX.search(r.text)
+            redirect_re = re.compile(rb'window\.\s*?location\s*=\s*"(.*)"\s*;')
+            m = redirect_re.search(r.content)
             if m is not None:
                 r = self.session.get(urljoin(url, m.group(1)))
                 r.raise_for_status()
