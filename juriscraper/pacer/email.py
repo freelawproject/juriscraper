@@ -141,9 +141,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: Date filed as date object
         """
         date_filed = re.search(
-            r"filed\son\s([\d|\/]*)",
-            clean_string(self.tree.text_content()),
-            flags=re.IGNORECASE,
+            r"filed\son\s([\d|\/]*)", clean_string(self.tree.text_content())
         )
         return convert_date_string(
             date_filed[0].lower().replace("filed on ", "")
