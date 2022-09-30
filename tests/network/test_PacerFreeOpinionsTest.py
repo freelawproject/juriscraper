@@ -238,7 +238,7 @@ class PacerMagicLinkTest(unittest.TestCase):
         magic link? land on a login page and returns an error.
         """
         report = self.reports["ca3"]
-        url = "https://ecf.ca3.uscourts.gov/docs1/003014193380"
+        url = "https://ecf.ca3.uscourts.gov/docs1/003114193380"
         pacer_case_id = "21-1832"
         pacer_doc_id = "003014193380"
         pacer_magic_num = "3594681a19879633"
