@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.19 - 2022-09-29**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix performance when downloading large PDFs (see #564)
+
+## Past
+
 **2.5.18 - 2022-09-29**
 
 Features:
@@ -27,8 +39,6 @@ Changes:
  - Skip appellate attachment page when querying the download confirmation page
  - Skip appellate attachment page when downloading the free document
  - Fix getting filed date on email notifications
-
-## Past
 
 **2.5.17 - 2022-09-28**
 
