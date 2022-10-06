@@ -1,0 +1,107 @@
+Return-Path: <cmecfhelpdesk@cacb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id r8rndeuadg7kb6aquauv8mb2nddebhnuphuutk01
+ for benheston@recap.email;
+ Thu, 06 Oct 2022 10:59:18 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of cacb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=cmecfhelpdesk@cacb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of cacb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=cmecfhelpdesk@cacb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=cacb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFGL2JGMlRXMHFGbTBkN2dNL1huSmRGNXlRbEFEYWs1azFodVBuNWhHMlJlTGpSRmpRY2ZGbFVUcTExZGNkc1dDTGZnaGprY0dJMmNtU0FWaU8vUDdyaC9sdDYvd09CUnViajlyekNKM2lQYnQrYWR2TEl3Kzc3Mkc3Q3R0d0gxQWpQMU1ETG5hcVBSWVFTY1k4ZmdTdklPUy9CbGhIbm5PclhTQzJ5T09OTlFldnh2SXBzK1ZTYUU3NEExV2FqKy9RQkF3cjFBQzZ1emw1ZnNWNFJhZjJVRzRGVFRVcjlkOUx5UWlLREhBaFpvVkhiUFVhaGRuZFdQYTdFZlZva0pOeXRCTzlWL25sU2VzdHN3enhEWlU2TnlabGZ2SVZXZWlsRnNTWWhhNWUzUnhwMmdWRloxQ0xNWEpVcnRXQm9uL2c9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=DwSjlmGQQ1YXFHhMSEjIYSIldbMm866jE+wFpOfVLuu0MK/KXoWGCWMXYjzj7heg86UCVIfF0Kb/Iuv/D7mZYT6uZI0VXPwR//KwlHf+espsq7JD3QIZjQIHt1FDs8Cp9cUX6tv6n1ndJO5yxP6oexQY9+Ipe7P1w3CQA45YwbE=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1665053959; v=1; bh=zC8zZ3pqaa4WAplXEcVn9Qyr/HF6xST9H252OsGyGOc=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.188
+Received: from cacbdb.cacb.gtwy.dcn ([156.119.56.188])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 06 Oct 2022 06:59:18 -0400
+Received: from cacbdb.cacb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+  by cacbdb.cacb.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 296Ax9TP062721;
+  Thu, 6 Oct 2022 03:59:11 -0700
+Received: (from ecf_web@localhost)
+  by cacbdb.cacb.gtwy.dcn (8.14.4/8.14.4/Submit) id 296AwQhB061843;
+  Thu, 6 Oct 2022 03:58:26 -0700
+Date: Thu, 6 Oct 2022 03:58:26 -0700
+X-Authentication-Warning: cacbdb.cacb.gtwy.dcn: ecf_web set sender to cmecfhelpdesk@cacb.uscourts.gov using -f
+MIME-Version:1.0
+From:cmecfhelpdesk@cacb.uscourts.gov
+To:Courtmail@cacb.uscourts.gov
+Message-Id:<103130671@cacb.uscourts.gov>
+Subject:6:22-bk-13768-MH Request for courtesy Notice of Electronic Filing (NEF)
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Central District of California</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Valerie Smith entered on 10/6/2022 at 3:58 AM PDT and filed on 10/6/2022 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Matthew Condran                                   </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.cacb.uscourts.gov/cgi-bin/DktRpt.pl?1952574>6:22-bk-13768-MH</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.cacb.uscourts.gov/doc1/9730105879764?pdf_header=&magic_num=17864844&de_seq_num=20&caseid=1952574'>6</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Request for courtesy Notice of Electronic Filing (NEF) <i></i>  Filed by Smith, Valerie.   (Smith, Valerie)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document 
+<BR><STRONG>Original filename:</STRONG>noa_cacb.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1106918562 [Date=10/6/2022] [FileNumber=103130669
+<BR><TAB>-0] [b7aff47039840d9357b96ac76d9d2e46a1ff4a879755ff20727af3875f693d39e
+<BR><TAB>b0f3f840013ed5d22f28aec4be424563c87b144f4a93a0f5479e114bd1f2324]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+6:22-bk-13768-MH Notice will be electronically mailed to:
+</B>
+
+<BR>
+<B>
+6:22-bk-13768-MH Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR>
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>
