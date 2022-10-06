@@ -16,6 +16,20 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.20 - 2022-10-06**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix regression caught in COURTLISTENER-36Q, to properly handle
+   window.location redirects on weird PACER sites.
+
+
+## Past
+
 **2.5.19 - 2022-09-29**
 
 Features:
@@ -25,8 +39,6 @@ Features:
 Changes:
 
  - Fix performance when downloading large PDFs (see #564)
-
-## Past
 
 **2.5.18 - 2022-09-29**
 
