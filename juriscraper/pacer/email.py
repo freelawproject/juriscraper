@@ -563,7 +563,12 @@ class S3NotificationEmail(NotificationEmail):
                     self.content_type = "text/plain"
                     break
 
-        email_body = body.decode("UTF-8")
+        try:
+            # Try to decode email body using utf-8
+            email_body = body.decode("utf-8")
+        except UnicodeDecodeError:
+            # If it fails fallback on iso-8859-1
+            email_body = body.decode("iso-8859-1")
         if self.content_type == "text/plain":
             return super()._parse_text(email_body)
         elif self.content_type == "text/html":
