@@ -21,6 +21,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         self.court_id = court_id
         self.content_type = None
         self.appellate = None
+        self.content_encoding = "utf-8"
         super().__init__(court_id)
 
     @property
@@ -569,6 +570,7 @@ class S3NotificationEmail(NotificationEmail):
         except UnicodeDecodeError:
             # If it fails fallback on iso-8859-1
             email_body = body.decode("iso-8859-1")
+            self.content_encoding = "iso-8859-1"
         if self.content_type == "text/plain":
             return super()._parse_text(email_body)
         elif self.content_type == "text/html":

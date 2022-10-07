@@ -1,14 +1,14 @@
-Return-Path: <TXW_USDC_Notice@txwd.uscourts.gov>
+Return-Path: <court_test@court.example.com>
 Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov [63.241.40.204])
  by inbound-smtp.us-west-2.amazonaws.com with SMTP id mb4pvggqo1mbm1np4mgvrdq09el1acdmianjo0g1
- for nrubin@recap.email;
+ for recipient@example.com;
  Thu, 06 Oct 2022 03:17:21 +0000 (UTC)
 X-SES-Spam-Verdict: PASS
 X-SES-Virus-Verdict: PASS
-Received-SPF: pass (spfCheck: domain of txwd.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=TXW_USDC_Notice@txwd.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+Received-SPF: pass (spfCheck: domain of court.example.com designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=TXW_USDC_Notice@court.example.com; helo=icmecf201.gtwy.uscourts.gov;
 Authentication-Results: amazonses.com;
- spf=pass (spfCheck: domain of txwd.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=TXW_USDC_Notice@txwd.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
- dmarc=none header.from=txwd.uscourts.gov;
+ spf=pass (spfCheck: domain of court.example.com designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=TXW_USDC_Notice@court.example.com; helo=icmecf201.gtwy.uscourts.gov;
+ dmarc=none header.from=court.example.com;
 X-SES-RECEIPT: AEFBQUFBQUFBQUFHcGhNd2xkYmp2Uk9Bd0dRNUJ0elVQc212WUFScFZJQTBucGZuTmVYUWcvQXJROXU0TEFlbnIxenZsS2xESHJiQUdvWUQ0aGJac3d3SzJYTjM0Z1NLTzZEOUdBQXBlYjh5NFF0aEwvY3V5S1RNRHZVb1gyUlF5TkRWZGZ6Rmlhc25ZUkZMdnQzWmJaWUY3YW1vSlZvd1F5ckpnNE4zU1pobmZEU1dmTld4UFgxaENRWUpDK1NSYWU2OFNtdGRMV1FEQWFhZ3BsWTUxQkp0N29VOU1aNTZscGtLRzQwUnVnSkhPVDlhcWdaVmxSYXJ0N21NV2FCcXNjY2FEUjdRNDdVSCtGUHNTOHo4QkpHM2FYdFN6ajM4NzB3U1pKVmF1ZHJhQk11bUxlV0gzempNQTU5Q015ZUplUkVvRkNQUEg2cDA9
 X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=Opz0S+qXhcMk7WNBvVdMtigDnBvGmdhRqj3mm8JWKM6nvwa5IfRVUMuVWCTIqB7ldK3FiMKjpyvMuAQJH2qe5QKr7oXRS/EgEZxG+k2B7ioJLbipwBFuHjdeLt9xz5o9548gPH0z4rWj3sUTYyUiJYl7eHRFK8ufapSJ2x8hNU4=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1665026242; v=1; bh=Ngpi1YB3evHa534uqSj7I3a1YkCnTUo1hC3bcbRw7xA=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
 X-SBRS: None
@@ -22,11 +22,11 @@ Received: (from ecf_web@localhost)
 	by txwddb.txwd.gtwy.dcn (8.14.4/8.14.4/Submit) id 2963G9Zp049685;
 	Wed, 5 Oct 2022 22:16:09 -0500
 Date: Wed, 5 Oct 2022 22:16:09 -0500
-X-Authentication-Warning: txwddb.txwd.gtwy.dcn: ecf_web set sender to TXW_USDC_Notice@txwd.uscourts.gov using -f
+X-Authentication-Warning: txwddb.txwd.gtwy.dcn: ecf_web set sender to TXW_USDC_Notice@court.example.com using -f
 MIME-Version:1.0
-From:TXW_USDC_Notice@txwd.uscourts.gov
-To:cmecf_notices@txwd.uscourts.gov
-Message-Id:<27447094@txwd.uscourts.gov>
+From:court_test@court.example.com
+To:court_test@court.example.com
+Message-Id:<27447094@court.example.com>
 Subject:Activity in Case 6:22-cv-00351-ADA Lionra Technologies Limited v. Apple Inc. Redacted Copy
 Content-Type: text/html
 
