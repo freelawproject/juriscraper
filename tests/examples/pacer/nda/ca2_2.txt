@@ -1,7 +1,7 @@
 Return-Path: <cmecf@ca2.uscourts.gov>
 Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
  by inbound-smtp.us-west-2.amazonaws.com with SMTP id c7jk6m9ggfjeu8g9arh5acjcmlaei19ekf4lkp01
- for estallman@recap.email;
+ for recipient@example.com;
  Tue, 14 Jun 2022 20:21:13 +0000 (UTC)
 X-SES-Spam-Verdict: PASS
 X-SES-Virus-Verdict: PASS
@@ -17,10 +17,10 @@ Received: from ca2db.ca2.gtwy.dcn ([156.119.190.45])
   by icmecf101.gtwy.uscourts.gov with ESMTP; 14 Jun 2022 16:21:12 -0400
 Received: from ca2db.ca2.gtwy.dcn (localhost.localdomain [127.0.0.1])
 	by ca2db.ca2.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 25EKKIwX024465
-	for <estallman@recap.email>; Tue, 14 Jun 2022 16:20:18 -0400
+	for <recipient@example.com>; Tue, 14 Jun 2022 16:20:18 -0400
 Date: Tue, 14 Jun 2022 16:20:18 -0400 (EDT)
 From: cmecf@ca2.uscourts.gov
-To: estallman@recap.email
+To: recipient@example.com
 Message-ID: <367869517.2783.1655238018172@ca2db.ca2.gtwy.dcn>
 Subject: 21-1975 New York State Telecommunicati v. James "Letter RECEIVED"
 MIME-Version: 1.0

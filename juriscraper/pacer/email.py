@@ -157,7 +157,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         text_number = clean_string(node)
         if text_number == "No document attached":
             return None
-        words = re.split(r"\(|\s", clean_string(node))
+        words = re.split(r"\(|\s", text_number)
         return words[0]
 
     def _get_document_number_plain(self) -> str:
@@ -216,39 +216,24 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: Cleaned docket text
         """
         description = ""
+        # Paths to look for NEFs description
+        main_path = '//strong[contains(., "Docket Text:")]/following-sibling::'
+        possible_paths = ["font[1]/b//text()", "b[1]/span//text()", "text()"]
+
         if self._is_appellate():
-            path = '//strong[contains(., "Docket Text:")]/following::'
-            node = self.tree.xpath(f"{path}text()")
-
+            # Paths to look for NDAs description
+            main_path = '//strong[contains(., "Docket Text:")]/following::'
+            possible_paths = ["text()"]
+        for path in possible_paths:
+            node = self.tree.xpath(f"{main_path}{path}")
             if len(node):
                 for des_part in node:
-                    if des_part == "Notice will be electronically mailed to:":
-                        break
-                    description = description + des_part
-                description = clean_string(description)
-                if description:
-                    return description
-        else:
-            path = '//strong[contains(., "Docket Text:")]/following-sibling::'
-            node = self.tree.xpath(f"{path}font[1]/b//text()")
-            if len(node):
-                for des_part in node:
-                    description = description + des_part
-                description = clean_string(description)
-                if description:
-                    return description
-
-            node = self.tree.xpath(f"{path}b[1]/span//text()")
-            if len(node):
-                for des_part in node:
-                    description = description + des_part
-                description = clean_string(description)
-                if description:
-                    return description
-
-            node = self.tree.xpath(f"{path}text()")
-            if len(node):
-                for des_part in node:
+                    if self._is_appellate():
+                        if (
+                            des_part
+                            == "Notice will be electronically mailed to:"
+                        ):
+                            break
                     description = description + des_part
                 description = clean_string(description)
                 if description:

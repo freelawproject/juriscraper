@@ -1,13 +1,13 @@
-Return-Path: <cmecfhelpdesk@cacb.uscourts.gov>
+Return-Path: <court_test@cacb.uscourts.gov>
 Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov [63.241.40.204])
  by inbound-smtp.us-west-2.amazonaws.com with SMTP id 4qi4f6vf121uih2gdltqsq64ld5fbnn4j72lcq01
- for benheston@recap.email;
+ for recipient@example.com;
  Tue, 04 Oct 2022 21:40:29 +0000 (UTC)
 X-SES-Spam-Verdict: PASS
 X-SES-Virus-Verdict: PASS
-Received-SPF: pass (spfCheck: domain of cacb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=cmecfhelpdesk@cacb.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+Received-SPF: pass (spfCheck: domain of cacb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=court_test@cacb.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
 Authentication-Results: amazonses.com;
- spf=pass (spfCheck: domain of cacb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=cmecfhelpdesk@cacb.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+ spf=pass (spfCheck: domain of cacb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=court_test@cacb.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
  dmarc=none header.from=cacb.uscourts.gov;
 X-SES-RECEIPT: AEFBQUFBQUFBQUFGbGl2NXRlSU1oOHN2UEI5VlY3aks0aVRIeFVwWUVpQW9uaTloT2Z5YUE0QlV6RzA2Skdrc3JnRVpISXRtTWJBZUQ5TytFRk1zS1BQWlkzWWp2dS9OamQyK3pLWGhDaGFOUXB6MG45YmZ0L3ZJcGdWK3V0Slg3dUdBVXZWOCtwblRMSHhyNmdXamJZY09hd2JCYThFRVEzemQzZHZ6TVNvWTRxOGlTYnpoK2xtTDc3SGV4bzRMcEF6aFZCTUYyRzdwOXExK3ozWFFsdkg0WDZpTTZ6QUY0NGVKK2tjN1BEajQweG1nait0VEM4TUVJblBwV1ZZUjR0K2JuRy9TdlNjbFdhMi9McXBIcFdSdHl0TVl0M3V6WjlVb3gzRkhrQS8wQStLUTlUYWZySGo5Q0tTL3J2cExkeFpuQkhWSDZEaEk9
 X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=kMfg+anNhSY8jonv/o7qiHzGOmonSKX5pNuKtJST5NivHvYVtM/Jt+5sKDciDbbjeEicJ/drZYdEvc2h4od1dTT8B+BeFdzEJW+sOZxWtsbk06xO6PSLfJEFo2i6nPQIzswzkS8VEmwo6VROc79uKqgWpXAbAk/gYdYQMpGsiKo=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1664919629; v=1; bh=OmOKVyWfAuxyGyhfWgehPtPWdAl9RFb3IbTsQgePhG4=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
@@ -22,9 +22,9 @@ Received: (from ecf_web@localhost)
 	by cacbdb.cacb.gtwy.dcn (8.14.4/8.14.4/Submit) id 294Le2sC117113;
 	Tue, 4 Oct 2022 14:40:02 -0700
 Date: Tue, 4 Oct 2022 14:40:02 -0700
-X-Authentication-Warning: cacbdb.cacb.gtwy.dcn: ecf_web set sender to cmecfhelpdesk@cacb.uscourts.gov using -f
+X-Authentication-Warning: cacbdb.cacb.gtwy.dcn: ecf_web set sender to court_test@cacb.uscourts.gov using -f
 MIME-Version:1.0
-From:cmecfhelpdesk@cacb.uscourts.gov
+From:court_test@cacb.uscourts.gov
 To:Courtmail@cacb.uscourts.gov
 Message-Id:<103122209@cacb.uscourts.gov>
 Subject:6:22-bk-13643-SY Request for courtesy Notice of Electronic Filing (NEF)

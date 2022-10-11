@@ -1,7 +1,7 @@
 Return-Path: <ca9_ecfnoticing@ca9.uscourts.gov>
 Received: from icmecf202.gtwy.uscourts.gov (icmecf202.gtwy.uscourts.gov [63.241.40.205])
  by inbound-smtp.us-west-2.amazonaws.com with SMTP id gn83ofsnikvqa7t8ir9r992j8uj1hq5lkoa8fe81
- for archive@recap.email;
+ for recipient@example.com;
  Mon, 08 Aug 2022 22:31:54 +0000 (UTC)
 X-SES-Spam-Verdict: PASS
 X-SES-Virus-Verdict: PASS
@@ -17,10 +17,10 @@ Received: from ca9db.ca9.gtwy.dcn ([156.119.56.100])
   by icmecf202.gtwy.uscourts.gov with ESMTP; 08 Aug 2022 18:31:53 -0400
 Received: from ca9db.ca9.gtwy.dcn (localhost.localdomain [127.0.0.1])
 	by ca9db.ca9.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 278MVhAe119754
-	for <archive@recap.email>; Mon, 8 Aug 2022 15:31:43 -0700
+	for <recipient@example.com>; Mon, 8 Aug 2022 15:31:43 -0700
 Date: Mon, 8 Aug 2022 15:31:43 -0700 (PDT)
 From: ca9_ecfnoticing@ca9.uscourts.gov
-To: archive@recap.email
+To: recipient@example.com
 Message-ID: <851424647.6730.1659997903289@ca9db.ca9.gtwy.dcn>
 Subject: 21-16499 Rosemarie Vargas, et al v. Facebook, Inc. "28(j) Letter
  (Citation of Supplemental Authorities)"

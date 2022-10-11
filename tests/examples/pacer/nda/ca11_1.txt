@@ -1,7 +1,7 @@
 Return-Path: <ecf_help@ca11.uscourts.gov>
 Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
  by inbound-smtp.us-west-2.amazonaws.com with SMTP id 21j6f7k8qd262mhfcnh3ufpa1jml6l8n1kf8rco1
- for archive@recap.email;
+ for recipient@example.com;
  Wed, 10 Aug 2022 20:53:55 +0000 (UTC)
 X-SES-Spam-Verdict: PASS
 X-SES-Virus-Verdict: PASS
@@ -17,10 +17,10 @@ Received: from ca11db.ca11.gtwy.dcn ([156.119.190.227])
   by icmecf101.gtwy.uscourts.gov with ESMTP; 10 Aug 2022 16:53:55 -0400
 Received: from ca11db.ca11.gtwy.dcn (localhost.localdomain [127.0.0.1])
 	by ca11db.ca11.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 27AKrIuZ042298
-	for <archive@recap.email>; Wed, 10 Aug 2022 16:53:18 -0400
+	for <recipient@example.com>; Wed, 10 Aug 2022 16:53:18 -0400
 Date: Wed, 10 Aug 2022 16:53:18 -0400 (EDT)
 From: ecf_help@ca11.uscourts.gov
-To: archive@recap.email
+To: recipient@example.com
 Message-ID: <1485724778.3702.1660164798150@ca11db.ca11.gtwy.dcn>
 Subject: 22-11299-W Marjorie Taylor Greene v. Secretary of State for the
  State of Georgia, et al "Motion filed Take Judicial Notice"

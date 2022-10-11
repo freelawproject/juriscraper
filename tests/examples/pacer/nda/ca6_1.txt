@@ -1,7 +1,7 @@
 Return-Path: <ca06-ecf-noticedesk@ca6.uscourts.gov>
 Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
  by inbound-smtp.us-west-2.amazonaws.com with SMTP id 95ka5h1mdj60k89id01o3ke6ce13o49ep7l7iho1
- for archive@recap.email;
+ for recipient@example.com;
  Mon, 15 Aug 2022 19:22:19 +0000 (UTC)
 X-SES-Spam-Verdict: PASS
 X-SES-Virus-Verdict: PASS
@@ -17,10 +17,10 @@ Received: from ca6db.ca6.gtwy.dcn ([156.119.190.128])
   by icmecf102.gtwy.uscourts.gov with ESMTP; 15 Aug 2022 15:22:18 -0400
 Received: from ca6db.ca6.gtwy.dcn (localhost.localdomain [127.0.0.1])
 	by ca6db.ca6.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 27FJLwci027711
-	for <archive@recap.email>; Mon, 15 Aug 2022 15:21:58 -0400
+	for <recipient@example.com>; Mon, 15 Aug 2022 15:21:58 -0400
 Date: Mon, 15 Aug 2022 15:21:58 -0400 (EDT)
 From: ca06-ecf-noticedesk@ca6.uscourts.gov
-To: archive@recap.email
+To: recipient@example.com
 Message-ID: <1358103913.1670.1660591318437@ca6db.ca6.gtwy.dcn>
 Subject: 22-3289 Andrea Goldblum v. UC "motion extend time to file brief"
 MIME-Version: 1.0

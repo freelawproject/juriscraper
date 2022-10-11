@@ -1,7 +1,7 @@
 Return-Path: <cmecf@ca2.uscourts.gov>
 Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov [63.241.40.204])
  by inbound-smtp.us-west-2.amazonaws.com with SMTP id 21skljc94an8cvg0s19hp68a5f578v9e66v2q4o1
- for archive@recap.email;
+ for recipient@example.com;
  Wed, 10 Aug 2022 07:11:28 +0000 (UTC)
 X-SES-Spam-Verdict: PASS
 X-SES-Virus-Verdict: PASS
@@ -17,10 +17,10 @@ Received: from ca2db.ca2.gtwy.dcn ([156.119.190.45])
   by icmecf201.gtwy.uscourts.gov with ESMTP; 10 Aug 2022 03:11:28 -0400
 Received: from ca2db.ca2.gtwy.dcn (localhost.localdomain [127.0.0.1])
 	by ca2db.ca2.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 27A7BOmp088435
-	for <archive@recap.email>; Wed, 10 Aug 2022 03:11:24 -0400
+	for <recipient@example.com>; Wed, 10 Aug 2022 03:11:24 -0400
 Date: Wed, 10 Aug 2022 03:11:24 -0400 (EDT)
 From: cmecf@ca2.uscourts.gov
-To: archive@recap.email
+To: recipient@example.com
 Message-ID: <118177161.3712.1660115484179@ca2db.ca2.gtwy.dcn>
 Subject: 22-7 Elisa W. v. The City of New York "Appendix FILED"
 MIME-Version: 1.0

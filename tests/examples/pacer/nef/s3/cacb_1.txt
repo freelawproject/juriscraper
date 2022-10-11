@@ -1,13 +1,13 @@
-Return-Path: <cmecfhelpdesk@cacb.uscourts.gov>
+Return-Path: <court_test@cacb.uscourts.gov>
 Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov [63.241.40.204])
  by inbound-smtp.us-west-2.amazonaws.com with SMTP id rom4mdiassf2i4p25mm0m39fh9lt9sf1e1asdu01
- for benheston@recap.email;
+ for recipient@example.com;
  Thu, 06 Oct 2022 01:14:15 +0000 (UTC)
 X-SES-Spam-Verdict: PASS
 X-SES-Virus-Verdict: PASS
-Received-SPF: pass (spfCheck: domain of cacb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=cmecfhelpdesk@cacb.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+Received-SPF: pass (spfCheck: domain of cacb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=court_test@cacb.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
 Authentication-Results: amazonses.com;
- spf=pass (spfCheck: domain of cacb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=cmecfhelpdesk@cacb.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+ spf=pass (spfCheck: domain of cacb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=court_test@cacb.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
  dmarc=none header.from=cacb.uscourts.gov;
 X-SES-RECEIPT: AEFBQUFBQUFBQUFGVjRlWitkYS9xQ041WGpCTkpSTEQ0NS9XbWF5QWpETmgrUW5DTTFCV3pWNEpSdFQ5cXZWSmJwWEY3T3NvbEIxNGdIa0dZcld4S3lnOTJvQWFaV0hnaTY1SE41Wjc5d2ZhanlRSGhxaTU5SXVETGszRnpwdmEwQmM1YVN0a1hVNU0vSFFURENHdFBJVjZ4bTB2STB6U1Uxemh2TnFLWEpBMU9uNjQwVlkvOEhzWFBpZTcxcEl0d0ZLdUJhS2JLaFVIRWhiMksvTXp0VEcrOTBzUWttSHlhMEJaTlo0UXNwamtqb1pwWmpxUW4rbU5IZVNVaDhjSEhMZ29IZnIyUUd3ZnU1c2owK2ZtRmFFbXZuanIxd01TTERJMEpHTGNSUFJ3bWx2Y2s3VU0xSzY0eStxZG8xV0UxeGxDSnJaWjdHSk09
 X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=dCNbdd1cchdaKV9ucrVQnU8f3m6+WY5/49+AF9kGnLSwFzRQHfcLNk0T2XXeSFov3JsevzD9vX9EpWJr9tyIVb0ssoCrVs8skv4cfuEI12WCJnKA0cbnfhO0ViAlMpVdjq0/U1bC666P0gXR3Ut9AtPAB90az6ZkJaTq8ghXXs4=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1665018856; v=1; bh=8bPUvRODagfEVUYyxPhltkJ+y+wKpfWVp0NT8FVBFTU=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
@@ -22,9 +22,9 @@ Received: (from ecf_web@localhost)
 	by cacbdb.cacb.gtwy.dcn (8.14.4/8.14.4/Submit) id 2961DQ3R043126;
 	Wed, 5 Oct 2022 18:13:26 -0700
 Date: Wed, 5 Oct 2022 18:13:26 -0700
-X-Authentication-Warning: cacbdb.cacb.gtwy.dcn: ecf_web set sender to cmecfhelpdesk@cacb.uscourts.gov using -f
+X-Authentication-Warning: cacbdb.cacb.gtwy.dcn: ecf_web set sender to court_test@cacb.uscourts.gov using -f
 MIME-Version:1.0
-From:cmecfhelpdesk@cacb.uscourts.gov
+From:court_test@cacb.uscourts.gov
 To:Courtmail@cacb.uscourts.gov
 Message-Id:<103128817@cacb.uscourts.gov>
 Subject:6:22-bk-13768 Statement About Your Social Security Numbers (Official Form 121)

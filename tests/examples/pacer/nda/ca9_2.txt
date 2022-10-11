@@ -1,7 +1,7 @@
 Return-Path: <ca9_ecfnoticing@ca9.uscourts.gov>
 Received: from icmecf202.gtwy.uscourts.gov (icmecf202.gtwy.uscourts.gov [63.241.40.205])
  by inbound-smtp.us-west-2.amazonaws.com with SMTP id bk7takt74gqk40du15k0ae0j534nf1mlc8hb33o1
- for archive@recap.email;
+ for recipient@example.com;
  Mon, 08 Aug 2022 17:55:09 +0000 (UTC)
 X-SES-Spam-Verdict: PASS
 X-SES-Virus-Verdict: PASS
@@ -17,10 +17,10 @@ Received: from ca9db.ca9.gtwy.dcn ([156.119.56.100])
   by icmecf202.gtwy.uscourts.gov with ESMTP; 08 Aug 2022 13:55:08 -0400
 Received: from ca9db.ca9.gtwy.dcn (localhost.localdomain [127.0.0.1])
 	by ca9db.ca9.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 278HsOMm077347
-	for <archive@recap.email>; Mon, 8 Aug 2022 10:54:24 -0700
+	for <recipient@example.com>; Mon, 8 Aug 2022 10:54:24 -0700
 Date: Mon, 8 Aug 2022 10:54:24 -0700 (PDT)
 From: ca9_ecfnoticing@ca9.uscourts.gov
-To: archive@recap.email
+To: recipient@example.com
 Message-ID: <1303272048.2939.1659981264433@ca9db.ca9.gtwy.dcn>
 Subject: 20-15568 Mackenzie  Brown, et al v. State of Arizona, et al "Amicus
  Brief by Government or with Consent"

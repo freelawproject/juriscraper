@@ -1,7 +1,7 @@
 Return-Path: <ca9_ecfnoticing@ca9.uscourts.gov>
 Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
  by inbound-smtp.us-west-2.amazonaws.com with SMTP id 439p0i284ss1469e8dneefeivgeq6kji8cf8rco1
- for archive@recap.email;
+ for recipient@example.com;
  Mon, 08 Aug 2022 19:25:14 +0000 (UTC)
 X-SES-Spam-Verdict: PASS
 X-SES-Virus-Verdict: PASS
@@ -17,10 +17,10 @@ Received: from ca9db.ca9.gtwy.dcn ([156.119.56.100])
   by icmecf101.gtwy.uscourts.gov with ESMTP; 08 Aug 2022 15:25:14 -0400
 Received: from ca9db.ca9.gtwy.dcn (localhost.localdomain [127.0.0.1])
 	by ca9db.ca9.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 278JOno4065824
-	for <archive@recap.email>; Mon, 8 Aug 2022 12:24:49 -0700
+	for <recipient@example.com>; Mon, 8 Aug 2022 12:24:49 -0700
 Date: Mon, 8 Aug 2022 12:24:49 -0700 (PDT)
 From: ca9_ecfnoticing@ca9.uscourts.gov
-To: archive@recap.email
+To: recipient@example.com
 Message-ID: <1037275041.4166.1659986689643@ca9db.ca9.gtwy.dcn>
 Subject: Re-send: 20-15568 Mackenzie  Brown, et al v. State of Arizona, et
  al "Deleted Entry"
