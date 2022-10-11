@@ -16,6 +16,19 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.21 - 2022-10-11**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix NEFs description parsing for cacb.
+
+
+## Past
+
 **2.5.20 - 2022-10-06**
 
 Features:
@@ -27,8 +40,6 @@ Changes:
  - Fix regression caught in COURTLISTENER-36Q, to properly handle
    window.location redirects on weird PACER sites.
 
-
-## Past
 
 **2.5.19 - 2022-09-29**
 
