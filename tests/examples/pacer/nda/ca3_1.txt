@@ -1,7 +1,7 @@
 Return-Path: <CMECF_No_Reply@ca3.uscourts.gov>
 Received: from icmecf202.gtwy.uscourts.gov (icmecf202.gtwy.uscourts.gov [63.241.40.205])
  by inbound-smtp.us-west-2.amazonaws.com with SMTP id kjsipl4av50k7qu51fu6a1j8d24jfhpr5jvmokg1
- for archive@recap.email;
+ for recipient@example.com;
  Mon, 08 Aug 2022 20:48:09 +0000 (UTC)
 X-SES-Spam-Verdict: PASS
 X-SES-Virus-Verdict: PASS
@@ -17,10 +17,10 @@ Received: from ca3db.ca3.gtwy.dcn ([156.119.191.41])
   by icmecf202.gtwy.uscourts.gov with ESMTP; 08 Aug 2022 16:48:07 -0400
 Received: from ca3db.ca3.gtwy.dcn (localhost.localdomain [127.0.0.1])
 	by ca3db.ca3.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 278KlYI4077481
-	for <archive@recap.email>; Mon, 8 Aug 2022 16:47:34 -0400
+	for <recipient@example.com>; Mon, 8 Aug 2022 16:47:34 -0400
 Date: Mon, 8 Aug 2022 16:47:34 -0400 (EDT)
 From: CMECF_No_Reply@ca3.uscourts.gov
-To: archive@recap.email
+To: recipient@example.com
 Message-ID: <798611050.1627.1659991654414@ca3db.ca3.gtwy.dcn>
 Subject: 21-1832 Madison Lara, et al v. Commissioner PA State Police
  "Supplemental Brief"

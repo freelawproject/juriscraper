@@ -1,7 +1,7 @@
 Return-Path: <FilingNotice@cafc.uscourts.gov>
 Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov [63.241.40.204])
  by inbound-smtp.us-west-2.amazonaws.com with SMTP id p586ct3e4n0nbn85hm1uqfu4ld5f9fm5jrmnsg01
- for nrubin@recap.email;
+ for recipient@example.com;
  Mon, 22 Aug 2022 13:14:01 +0000 (UTC)
 X-SES-Spam-Verdict: PASS
 X-SES-Virus-Verdict: PASS
@@ -17,10 +17,10 @@ Received: from cafcdb.cafc.gtwy.dcn ([156.119.190.11])
   by icmecf201.gtwy.uscourts.gov with ESMTP; 22 Aug 2022 09:13:59 -0400
 Received: from cafcdb.cafc.gtwy.dcn (localhost.localdomain [127.0.0.1])
 	by cafcdb.cafc.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 27MDDiJF087335
-	for <nrubin@recap.email>; Mon, 22 Aug 2022 09:13:44 -0400
+	for <recipient@example.com>; Mon, 22 Aug 2022 09:13:44 -0400
 Date: Mon, 22 Aug 2022 09:13:44 -0400 (EDT)
 From: FilingNotice@cafc.uscourts.gov
-To: nrubin@recap.email
+To: recipient@example.com
 Message-ID: <1250237005.196.1661174024805@cafcdb.cafc.gtwy.dcn>
 Subject: 22-1455-MA Corephotonics, Ltd. v. Apple Inc. "Clerk Order Filed"
 MIME-Version: 1.0

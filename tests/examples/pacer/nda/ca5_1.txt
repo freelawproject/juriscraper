@@ -1,7 +1,7 @@
 Return-Path: <cmecf_caseprocessing@ca5.uscourts.gov>
 Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
  by inbound-smtp.us-west-2.amazonaws.com with SMTP id 4ahb8helrkdlpp7i3p67vvho8iihmcu7jmd0ido1
- for archive@recap.email;
+ for recipient@example.com;
  Tue, 16 Aug 2022 15:21:59 +0000 (UTC)
 X-SES-Spam-Verdict: PASS
 X-SES-Virus-Verdict: PASS
@@ -17,10 +17,10 @@ Received: from ca5db.ca5.gtwy.dcn ([156.119.56.85])
   by icmecf102.gtwy.uscourts.gov with ESMTP; 16 Aug 2022 11:21:58 -0400
 Received: from ca5db.ca5.gtwy.dcn (localhost.localdomain [127.0.0.1])
 	by ca5db.ca5.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 27GFLPoU121329
-	for <archive@recap.email>; Tue, 16 Aug 2022 10:21:25 -0500
+	for <recipient@example.com>; Tue, 16 Aug 2022 10:21:25 -0500
 Date: Tue, 16 Aug 2022 10:21:25 -0500 (CDT)
 From: cmecf_caseprocessing@ca5.uscourts.gov
-To: archive@recap.email
+To: recipient@example.com
 Message-ID: <1803106173.981.1660663285411@ca5db.ca5.gtwy.dcn>
 Subject: 22-30371 Certain Underwriters v. Cox Operating "Record Excerpts
  Filed"

@@ -1,7 +1,7 @@
 Return-Path: <cmecf_caseprocessing@ca5.uscourts.gov>
 Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
  by inbound-smtp.us-west-2.amazonaws.com with SMTP id p7f0gmbed5lt5l99njrd6nk4i1ossfft7hsenl81
- for archive@recap.email;
+ for recipient@example.com;
  Mon, 26 Sep 2022 23:04:52 +0000 (UTC)
 X-SES-Spam-Verdict: PASS
 X-SES-Virus-Verdict: PASS
@@ -17,10 +17,10 @@ Received: from ca5db.ca5.gtwy.dcn ([156.119.56.85])
   by icmecf101.gtwy.uscourts.gov with ESMTP; 26 Sep 2022 19:04:51 -0400
 Received: from ca5db.ca5.gtwy.dcn (localhost.localdomain [127.0.0.1])
 	by ca5db.ca5.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 28QN4kXb040821
-	for <archive@recap.email>; Mon, 26 Sep 2022 18:04:46 -0500
+	for <recipient@example.com>; Mon, 26 Sep 2022 18:04:46 -0500
 Date: Mon, 26 Sep 2022 18:04:46 -0500 (CDT)
 From: cmecf_caseprocessing@ca5.uscourts.gov
-To: archive@recap.email
+To: recipient@example.com
 Message-ID: <897970277.3282.1664233486595@ca5db.ca5.gtwy.dcn>
 Subject: 22-30311 Kenai Ironclad v. CP Marine Services "Motion Filed on
  Behalf of Party leave to file document"

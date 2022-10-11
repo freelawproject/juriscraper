@@ -153,8 +153,11 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: Document number, cleaned
         """
         path = self._sibling_path("Document Number")
-        text = self.tree.xpath(path)[0].text_content()
-        words = re.split(r"\(|\s", clean_string(text))
+        node = self.tree.xpath(path)[0].text_content()
+        text_number = clean_string(node)
+        if text_number == "No document attached":
+            return None
+        words = re.split(r"\(|\s", text_number)
         return words[0]
 
     def _get_document_number_plain(self) -> str:
@@ -207,37 +210,38 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         else:
             return None
 
-    def _get_description(self):
+    def _get_description(self) -> str:
         """Gets the docket text
 
         :returns: Cleaned docket text
         """
         description = ""
+        # Paths to look for NEFs description
+        main_path = '//strong[contains(., "Docket Text:")]/following-sibling::'
+        possible_paths = ["font[1]/b//text()", "b[1]/span//text()", "text()"]
+
         if self._is_appellate():
-            path = '//strong[contains(., "Docket Text:")]/following::'
-            node = self.tree.xpath(f"{path}text()")
-
+            # Paths to look for NDAs description
+            main_path = '//strong[contains(., "Docket Text:")]/following::'
+            possible_paths = ["text()"]
+        for path in possible_paths:
+            node = self.tree.xpath(f"{main_path}{path}")
             if len(node):
                 for des_part in node:
-                    if des_part == "Notice will be electronically mailed to:":
-                        break
+                    if self._is_appellate():
+                        if (
+                            des_part
+                            == "Notice will be electronically mailed to:"
+                        ):
+                            break
                     description = description + des_part
-                return clean_string(description)
-        else:
-            path = '//strong[contains(., "Docket Text:")]/following-sibling::'
-            node = self.tree.xpath(f"{path}font[1]/b//text()")
-            if len(node):
-                for des_part in node:
-                    description = description + des_part
-                return clean_string(description)
+                description = clean_string(description)
+                if description:
+                    return description
 
-            node = self.tree.xpath(f"{path}b[1]/span//text()")
-            if len(node):
-                for des_part in node:
-                    description = description + des_part
-                return clean_string(description)
-
-        return None
+        raise Exception(
+            f"Can't get docket entry description, court: {self.court_id}"
+        )
 
     def _get_description_plain(self):
         """Gets the docket text for plain email
@@ -257,9 +261,12 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 else:
                     # Stop looking for description lines
                     break
+        description = clean_string(description)
         if description:
-            return clean_string(description)
-        return None
+            return description
+        raise Exception(
+            f"Can't get docket entry description for court: {self.court_id}"
+        )
 
     def _contains_attachments(self) -> bool:
         """Determines if the html notification contains attached documents.

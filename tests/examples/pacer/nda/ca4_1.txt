@@ -1,7 +1,7 @@
 Return-Path: <ecfnoticing@ca4.uscourts.gov>
 Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
  by inbound-smtp.us-west-2.amazonaws.com with SMTP id 5prekpvfog97bh7isnfh4jmauobqj405ebdkgtg1
- for archive@recap.email;
+ for recipient@example.com;
  Fri, 19 Aug 2022 13:50:16 +0000 (UTC)
 X-SES-Spam-Verdict: PASS
 X-SES-Virus-Verdict: PASS
@@ -17,10 +17,10 @@ Received: from ca4db.ca4.gtwy.dcn ([156.119.190.41])
   by icmecf101.gtwy.uscourts.gov with ESMTP; 19 Aug 2022 09:50:16 -0400
 Received: from ca4db.ca4.gtwy.dcn (localhost.localdomain [127.0.0.1])
 	by ca4db.ca4.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 27JDoCgP092939
-	for <archive@recap.email>; Fri, 19 Aug 2022 09:50:12 -0400
+	for <recipient@example.com>; Fri, 19 Aug 2022 09:50:12 -0400
 Date: Fri, 19 Aug 2022 09:50:12 -0400 (EDT)
 From: ecfnoticing@ca4.uscourts.gov
-To: archive@recap.email
+To: recipient@example.com
 Message-ID: <349257739.509.1660917012783@ca4db.ca4.gtwy.dcn>
 Subject: 21-1919 Neuhtah Opiotennione v. Bozzuto Management Company "Case
  continued from tentative calendar"

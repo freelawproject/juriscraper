@@ -1,7 +1,7 @@
 Return-Path: <ecf_help@ca11.uscourts.gov>
 Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
  by inbound-smtp.us-west-2.amazonaws.com with SMTP id 7n68id1q0b33fouf2i492gqib2sgejn52n45mp81
- for archive@recap.email;
+ for recipient@example.com;
  Mon, 22 Aug 2022 16:26:53 +0000 (UTC)
 X-SES-Spam-Verdict: PASS
 X-SES-Virus-Verdict: PASS
@@ -17,10 +17,10 @@ Received: from ca11db.ca11.gtwy.dcn ([156.119.190.227])
   by icmecf101.gtwy.uscourts.gov with ESMTP; 22 Aug 2022 12:26:53 -0400
 Received: from ca11db.ca11.gtwy.dcn (localhost.localdomain [127.0.0.1])
 	by ca11db.ca11.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 27MGQqWJ075812
-	for <archive@recap.email>; Mon, 22 Aug 2022 12:26:52 -0400
+	for <recipient@example.com>; Mon, 22 Aug 2022 12:26:52 -0400
 Date: Mon, 22 Aug 2022 12:26:52 -0400 (EDT)
 From: ecf_help@ca11.uscourts.gov
-To: archive@recap.email
+To: recipient@example.com
 Message-ID: <912456404.1449.1661185612646@ca11db.ca11.gtwy.dcn>
 Subject: 22-11299-JJ Marjorie Taylor Greene v. Secretary of State for the
  State of Georgia, et al "Court Order Filed Granted by Court Withdraw as
