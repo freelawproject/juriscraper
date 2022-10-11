@@ -29,8 +29,15 @@ class PacerParseTestCase(unittest.TestCase):
 
             court = filename_sans_ext.split("_")[0]
             report = test_class(court)
-            with open(path) as f:
-                report._parse_text(f.read())
+
+            # Try to read the file using utf-8.
+            # If it fails fallback on iso-8859-1
+            try:
+                with open(path, "rb") as f:
+                    report._parse_text(f.read().decode("utf-8"))
+            except UnicodeDecodeError:
+                with open(path, "rb") as f:
+                    report._parse_text(f.read().decode("iso-8859-1"))
 
             # Does the metadata function work too? It usually, but not always,
             # gets called by report.data
