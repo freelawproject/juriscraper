@@ -16,6 +16,19 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.22 - 2022-10-12**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix email report decoding.
+
+
+## Past
+
 **2.5.21 - 2022-10-11**
 
 Features:
@@ -25,9 +38,6 @@ Features:
 Changes:
 
  - Fix NEFs description parsing for cacb.
-
-
-## Past
 
 **2.5.20 - 2022-10-06**
 
