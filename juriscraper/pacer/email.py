@@ -21,6 +21,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         self.court_id = court_id
         self.content_type = None
         self.appellate = None
+        self.claim = None
         self.content_encoding = "utf-8"
         super().__init__(court_id)
 
@@ -30,7 +31,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             "court_id": self.court_id,
         }
         parsed = {}
-        if self.tree is not None:
+        if self.tree is not None and self._is_claim() is False:
             if self.content_type == "text/plain":
                 parsed = {
                     "case_name": self._get_case_name_plain(),
@@ -54,10 +55,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         return {**base, **parsed}
 
-    def _is_appellate(self) -> str:
+    def _is_appellate(self) -> bool:
         """Gets the email notice type from the email text.
 
-        :returns: The email notice type NEF or NDA.
+        :returns: True if is an NDA otherwise False
         """
         if self.appellate is None:
             if "Notice of Docket Activity" in self.tree.text_content():
@@ -66,6 +67,22 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             self.appellate = False
             return self.appellate
         return self.appellate
+
+    def _is_claim(self) -> bool:
+        """Gets the email notice type from the email text.
+
+        :returns: True if is a Claims Filing otherwise False
+        """
+        if self.claim is None:
+            if (
+                "Notice of Electronic Claims Filing"
+                in self.tree.text_content()
+            ):
+                self.claim = True
+                return self.claim
+            self.claim = False
+            return self.claim
+        return self.claim
 
     def _sibling_path(self, label):
         """Gets the path string for the sibling of a label cell (td)

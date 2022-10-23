@@ -956,6 +956,10 @@ class DocketReport(BaseDocketReport, BaseReport):
         for row in docket_entry_rows:
             de = {}
             cells = row.xpath("./td[not(./input)]")
+            if len(cells) == 0:
+                # In some instances, the document entry table has an empty row
+                # <tr></tr>. See docket bankruptcy wiwb examples.
+                continue
             if len(cells) == 4:
                 # In some instances, the document entry table has an extra
                 # column. See almb, 92-04963
