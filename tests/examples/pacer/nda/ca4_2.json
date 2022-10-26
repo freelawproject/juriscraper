@@ -1,59 +1,63 @@
 {
-  "court_id":"ca4",
-  "case_name":"Neuhtah Opiotennione v. Bozzuto Management Company",
+  "appellate": true,
   "contains_attachments": false,
-  "docket_number":"21-1919",
-  "date_filed":"2022-08-18",
-  "appellate":true,
-  "docket_entries":[
-     {
-        "date_filed":"2022-08-18",
-        "description":"NOTICE re: Notice re: Regarding Resolution of Conflict with Proposed Argument dates by Bozzuto Management Company. [1001214590] [21-1919] Lynn Calkins",
-        "document_url":"https://ecf.ca4.uscourts.gov/docs1/00409006913?uid=55e8d970a5a88b7a",
-        "document_number": null,
-        "pacer_doc_id":"00409006913",
-        "pacer_case_id":"164306",
-        "pacer_seq_no":null,
-        "pacer_magic_num":"55e8d970a5a88b7a"
-     }
-  ],
-  "email_recipients":[
+  "court_id": "ca4",
+  "dockets": [
     {
-       "name":"Recipient User Test 1:",
-       "email_addresses":[
-          "testing1@gexample.com",
-          "testing1_1@gexample.com"
-       ]
-    },
-    {
-       "name":"Recipient User Test 2:",
-       "email_addresses":[
-          "testing2@gexample.com",
-          "testing2_1@gexample.com"
-       ]
-    },
-    {
-       "name":"Recipient User Test 3:",
-       "email_addresses":[
-          "testing3@gexample.com",
-          "testing3_1@gexample.com"
-       ]
-    },
-    {
-       "name":"Recipient User Test 4:",
-       "email_addresses":[
-          "testing4@gexample.com",
-          "testing4_1@gexample.com",
-          "testing4_1@gexample.com"
-       ]
-    },
-    {
-       "name":"Recipient User Test 5:",
-       "email_addresses":[
-          "testing5@gexample.com",
-          "testing5_1@gexample.com",
-          "testing5_1@gexample.com"
-       ]
+      "case_name": "Neuhtah Opiotennione v. Bozzuto Management Company",
+      "date_filed": "2022-08-18",
+      "docket_entries": [
+        {
+          "date_filed": "2022-08-18",
+          "description": "NOTICE re: Notice re: Regarding Resolution of Conflict with Proposed Argument dates by Bozzuto Management Company. [1001214590] [21-1919] Lynn Calkins",
+          "document_number": null,
+          "document_url": "https://ecf.ca4.uscourts.gov/docs1/00409006913?uid=55e8d970a5a88b7a",
+          "pacer_case_id": "164306",
+          "pacer_doc_id": "00409006913",
+          "pacer_magic_num": "55e8d970a5a88b7a",
+          "pacer_seq_no": null
+        }
+      ],
+      "docket_number": "21-1919"
     }
- ]
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "testing1@gexample.com",
+        "testing1_1@gexample.com"
+      ],
+      "name": "Recipient User Test 1:"
+    },
+    {
+      "email_addresses": [
+        "testing2@gexample.com",
+        "testing2_1@gexample.com"
+      ],
+      "name": "Recipient User Test 2:"
+    },
+    {
+      "email_addresses": [
+        "testing3@gexample.com",
+        "testing3_1@gexample.com"
+      ],
+      "name": "Recipient User Test 3:"
+    },
+    {
+      "email_addresses": [
+        "testing4@gexample.com",
+        "testing4_1@gexample.com",
+        "testing4_1@gexample.com"
+      ],
+      "name": "Recipient User Test 4:"
+    },
+    {
+      "email_addresses": [
+        "testing5@gexample.com",
+        "testing5_1@gexample.com",
+        "testing5_1@gexample.com"
+      ],
+      "name": "Recipient User Test 5:"
+    }
+  ]
 }

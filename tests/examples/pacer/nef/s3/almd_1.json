@@ -1,22 +1,26 @@
 {
-  "case_name": "Stapler v. Automatic Food Service, Inc.",
+  "appellate": false,
   "contains_attachments": false,
   "court_id": "almd",
-  "date_filed": "2021-08-09",
-  "docket_entries": [
+  "dockets": [
     {
+      "case_name": "Stapler v. Automatic Food Service, Inc.",
       "date_filed": "2021-08-09",
-      "description": "NOTICE by Automatic Food Service, Inc. re [7] MOTION for Extension of Time to File Answer re [1] Complaint, (Geisler, Kimberly)",
-      "document_number": "9",
-      "document_url": "https://ecf.almd.uscourts.gov/doc1/01713718205?caseid=75736&de_seq_num=30&magic_num=77910494",
-      "pacer_case_id": "75736",
-      "pacer_doc_id": "01703718205",
-      "pacer_magic_num": "77910494",
-      "pacer_seq_no": "30"
+      "docket_entries": [
+        {
+          "date_filed": "2021-08-09",
+          "description": "NOTICE by Automatic Food Service, Inc. re [7] MOTION for Extension of Time to File Answer re [1] Complaint, (Geisler, Kimberly)",
+          "document_number": "9",
+          "document_url": "https://ecf.almd.uscourts.gov/doc1/01713718205?caseid=75736&de_seq_num=30&magic_num=77910494",
+          "pacer_case_id": "75736",
+          "pacer_doc_id": "01703718205",
+          "pacer_magic_num": "77910494",
+          "pacer_seq_no": "30"
+        }
+      ],
+      "docket_number": "3:21-cv-00437"
     }
   ],
-  "docket_number": "3:21-cv-00437",
-  "appellate": false,
   "email_recipients": [
     {
       "email_addresses": [

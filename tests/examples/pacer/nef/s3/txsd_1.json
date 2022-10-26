@@ -1,59 +1,63 @@
 {
-   "court_id":"txsd",
-   "case_name":"United States of America, ex rel v. Merida Health Care Group",
-   "contains_attachments":true,
-   "docket_number":"2:15-cv-00208",
-   "appellate": false,
-   "date_filed":"2022-08-10",
-   "docket_entries":[
-      {
-         "date_filed":"2022-08-10",
-         "description":"MOTION for Partial Summary Judgment on Liability by United States of America, ex rel, filed. Motion Docket Date 8/31/2022. (Attachments: (1) Exhibit 1, (2) Exhibit 2, (3) Proposed Order Proposed Order)(Redlinger, Julie)",
-         "document_url":"https://ecf.txsd.uscourts.gov/doc1/179041128562?caseid=1263056&de_seq_num=81&magic_num=41371379",
-         "document_number":"32",
-         "pacer_doc_id":"179041128562",
-         "pacer_case_id":"1263056",
-         "pacer_seq_no":"81",
-         "pacer_magic_num":"41371379"
-      }
-   ],
-   "email_recipients":[
-      {
-         "name":"Recipient Test A",
-         "email_addresses":[
-            "testing_a@gexample.com",
-            "testing_a_a@gexample.com"
-         ]
-      },
-      {
-         "name":"Recipient Test B",
-         "email_addresses":[
-            "testing_b@gexample.com"
-         ]
-      },
-      {
-         "name":"Recipient Test C",
-         "email_addresses":[
-            "testing_c@gexample.com",
-            "testing_c_c@gexample.com"
-         ]
-      },
-      {
-         "name":"Recipient Test D",
-         "email_addresses":[
-            "testing_d@gexample.com",
-            "testing_d_d@gexample.com",
-            "testing_d_d_d@gexample.com",
-            "testing_d_d_d_d@gexample.com",
-            "testing_d_d_d_d_d@gexample.com"
-         ]
-      },
-      {
-         "name":"Recipient Test F",
-         "email_addresses":[
-            "testing_f@gexample.com",
-            "testing_f_f@gexample.com"
-         ]
-      }
-   ]
+  "appellate": false,
+  "contains_attachments": true,
+  "court_id": "txsd",
+  "dockets": [
+    {
+      "case_name": "United States of America, ex rel v. Merida Health Care Group",
+      "date_filed": "2022-08-10",
+      "docket_entries": [
+        {
+          "date_filed": "2022-08-10",
+          "description": "MOTION for Partial Summary Judgment on Liability by United States of America, ex rel, filed. Motion Docket Date 8/31/2022. (Attachments: (1) Exhibit 1, (2) Exhibit 2, (3) Proposed Order Proposed Order)(Redlinger, Julie)",
+          "document_number": "32",
+          "document_url": "https://ecf.txsd.uscourts.gov/doc1/179041128562?caseid=1263056&de_seq_num=81&magic_num=41371379",
+          "pacer_case_id": "1263056",
+          "pacer_doc_id": "179041128562",
+          "pacer_magic_num": "41371379",
+          "pacer_seq_no": "81"
+        }
+      ],
+      "docket_number": "2:15-cv-00208"
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "testing_a@gexample.com",
+        "testing_a_a@gexample.com"
+      ],
+      "name": "Recipient Test A"
+    },
+    {
+      "email_addresses": [
+        "testing_b@gexample.com"
+      ],
+      "name": "Recipient Test B"
+    },
+    {
+      "email_addresses": [
+        "testing_c@gexample.com",
+        "testing_c_c@gexample.com"
+      ],
+      "name": "Recipient Test C"
+    },
+    {
+      "email_addresses": [
+        "testing_d@gexample.com",
+        "testing_d_d@gexample.com",
+        "testing_d_d_d@gexample.com",
+        "testing_d_d_d_d@gexample.com",
+        "testing_d_d_d_d_d@gexample.com"
+      ],
+      "name": "Recipient Test D"
+    },
+    {
+      "email_addresses": [
+        "testing_f@gexample.com",
+        "testing_f_f@gexample.com"
+      ],
+      "name": "Recipient Test F"
+    }
+  ]
 }

@@ -1,55 +1,59 @@
 {
-  "case_name": "New York State Telecommunicati v. James",
+  "appellate": true,
   "contains_attachments": false,
   "court_id": "ca2",
-  "date_filed": "2022-07-27",
-  "docket_entries": [
+  "dockets": [
     {
+      "case_name": "New York State Telecommunicati v. James",
       "date_filed": "2022-07-27",
-      "description": "LETTER, on behalf of Appellant Letitia A. James, <EDIT by Clerk's Office> RECEIVED. Service date 07/27/2022 by CM/ECF.[3355063] [21-1975]",
-      "document_number": null,
-      "document_url": "https://ecf.ca2.uscourts.gov/docs1/00208942267?uid=37cacbbc313ab362",
-      "pacer_case_id": "55129",
-      "pacer_doc_id": "00208942267",
-      "pacer_magic_num": "37cacbbc313ab362",
-      "pacer_seq_no": null
+      "docket_entries": [
+        {
+          "date_filed": "2022-07-27",
+          "description": "LETTER, on behalf of Appellant Letitia A. James, <EDIT by Clerk's Office> RECEIVED. Service date 07/27/2022 by CM/ECF.[3355063] [21-1975]",
+          "document_number": null,
+          "document_url": "https://ecf.ca2.uscourts.gov/docs1/00208942267?uid=37cacbbc313ab362",
+          "pacer_case_id": "55129",
+          "pacer_doc_id": "00208942267",
+          "pacer_magic_num": "37cacbbc313ab362",
+          "pacer_seq_no": null
+        }
+      ],
+      "docket_number": "21-1975"
     }
   ],
-  "docket_number": "21-1975",
-  "appellate": true,
   "email_recipients": [
     {
-       "name":"Recipient User Test 1, -:",
-       "email_addresses":[
-          "testing1@gexample.com"
-       ]
+      "email_addresses": [
+        "testing1@gexample.com"
+      ],
+      "name": "Recipient User Test 1, -:"
     },
     {
-       "name":"Recipient User Test 2, -:",
-       "email_addresses":[
-          "testing2@gexample.com"
-       ]
+      "email_addresses": [
+        "testing2@gexample.com"
+      ],
+      "name": "Recipient User Test 2, -:"
     },
     {
-       "name":"Recipient User Test 3, -:",
-       "email_addresses":[
-          "testing3@gexample.com",
-          "testing3_1@gexample.com"
-       ]
+      "email_addresses": [
+        "testing3@gexample.com",
+        "testing3_1@gexample.com"
+      ],
+      "name": "Recipient User Test 3, -:"
     },
     {
-       "name":"Recipient User Test 4, -:",
-       "email_addresses":[
-          "testing4@gexample.com",
-          "testing4_1@gexample.com",
-          "testing4_2@gexample.com"
-       ]
+      "email_addresses": [
+        "testing4@gexample.com",
+        "testing4_1@gexample.com",
+        "testing4_2@gexample.com"
+      ],
+      "name": "Recipient User Test 4, -:"
     },
     {
-       "name":"Recipient User Test 5, Deputy Clerk:",
-       "email_addresses":[
-          "Testing5@gexample.com"
-       ]
+      "email_addresses": [
+        "Testing5@gexample.com"
+      ],
+      "name": "Recipient User Test 5, Deputy Clerk:"
     }
- ]
+  ]
 }

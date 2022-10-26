@@ -1,22 +1,26 @@
 {
-  "case_name": "Bailey v. Jefferson County, Arkansas",
+  "appellate": false,
   "contains_attachments": true,
   "court_id": "ared",
-  "date_filed": "2021-08-12",
-  "docket_entries": [
+  "dockets": [
     {
+      "case_name": "Bailey v. Jefferson County, Arkansas",
       "date_filed": "2021-08-12",
-      "description": "MOTION for Attorney Fees and Costs by Trendia Bailey, John'niqua Wofford-Libbett (Attachments: (1) Exhibit 1: Billing Spreadsheet, (2) Exhibit 2: Declaration of Attorney Driscoll Wiley, (3) Exhibit 3: Costs Invoice)(Wiley, Joshua)",
-      "document_number": "70",
-      "document_url": "https://ecf.ared.uscourts.gov/doc1/02705260440?caseid=113274&de_seq_num=173&magic_num=29822617",
-      "pacer_case_id": "113274",
-      "pacer_doc_id": "02705260440",
-      "pacer_magic_num": "29822617",
-      "pacer_seq_no": "173"
+      "docket_entries": [
+        {
+          "date_filed": "2021-08-12",
+          "description": "MOTION for Attorney Fees and Costs by Trendia Bailey, John'niqua Wofford-Libbett (Attachments: (1) Exhibit 1: Billing Spreadsheet, (2) Exhibit 2: Declaration of Attorney Driscoll Wiley, (3) Exhibit 3: Costs Invoice)(Wiley, Joshua)",
+          "document_number": "70",
+          "document_url": "https://ecf.ared.uscourts.gov/doc1/02705260440?caseid=113274&de_seq_num=173&magic_num=29822617",
+          "pacer_case_id": "113274",
+          "pacer_doc_id": "02705260440",
+          "pacer_magic_num": "29822617",
+          "pacer_seq_no": "173"
+        }
+      ],
+      "docket_number": "5:18-cv-00222"
     }
   ],
-  "docket_number": "5:18-cv-00222",
-  "appellate": false,
   "email_recipients": [
     {
       "email_addresses": [

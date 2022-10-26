@@ -1,59 +1,63 @@
 {
-  "court_id":"laed",
-  "case_name":"Lou v. Lopinto",
-  "contains_attachments": true,
-  "docket_number":"2:21-cv-00080",
   "appellate": false,
-  "date_filed":"2022-08-10",
-  "docket_entries":[
-     {
-        "date_filed":"2022-08-10",
-        "description":"MOTION for Partial Summary Judgment Regarding Search Warrants by Donna Lou, Daren Parsa. Motion(s) will be submitted on 8/30/2022. (Attachments: (1) Memorandum in Support, (2) Statement of Contested/Uncontested Facts, (3) Notice of Submission, (4) Exhibit A (Search Warrants and Applications), (5) Exhibit B (Dep. of JPSO 30(b)(6) Rep.))(Most, William)",
-        "document_url":"https://ecf.laed.uscourts.gov/doc1/085013031004?caseid=248571&de_seq_num=341&magic_num=50101731",
-        "document_number":"93",
-        "pacer_doc_id":"085013031004",
-        "pacer_case_id":"248571",
-        "pacer_seq_no":"341",
-        "pacer_magic_num":"50101731"
-     }
+  "contains_attachments": true,
+  "court_id": "laed",
+  "dockets": [
+    {
+      "case_name": "Lou v. Lopinto",
+      "date_filed": "2022-08-10",
+      "docket_entries": [
+        {
+          "date_filed": "2022-08-10",
+          "description": "MOTION for Partial Summary Judgment Regarding Search Warrants by Donna Lou, Daren Parsa. Motion(s) will be submitted on 8/30/2022. (Attachments: (1) Memorandum in Support, (2) Statement of Contested/Uncontested Facts, (3) Notice of Submission, (4) Exhibit A (Search Warrants and Applications), (5) Exhibit B (Dep. of JPSO 30(b)(6) Rep.))(Most, William)",
+          "document_number": "93",
+          "document_url": "https://ecf.laed.uscourts.gov/doc1/085013031004?caseid=248571&de_seq_num=341&magic_num=50101731",
+          "pacer_case_id": "248571",
+          "pacer_doc_id": "085013031004",
+          "pacer_magic_num": "50101731",
+          "pacer_seq_no": "341"
+        }
+      ],
+      "docket_number": "2:21-cv-00080"
+    }
   ],
-  "email_recipients":[
-   {
-      "name":"Recipient Test A",
-      "email_addresses":[
-         "testing_a@gexample.com",
-         "testing_a_a@gexample.com"
-      ]
-   },
-   {
-      "name":"Recipient Test B",
-      "email_addresses":[
-         "testing_b@gexample.com"
-      ]
-   },
-   {
-      "name":"Recipient Test C",
-      "email_addresses":[
-         "testing_c@gexample.com",
-         "testing_c_c@gexample.com"
-      ]
-   },
-   {
-      "name":"Recipient Test D",
-      "email_addresses":[
-         "testing_d@gexample.com",
-         "testing_d_d@gexample.com",
-         "testing_d_d_d@gexample.com",
-         "testing_d_d_d_d@gexample.com",
-         "testing_d_d_d_d_d@gexample.com"
-      ]
-   },
-   {
-      "name":"Recipient Test F",
-      "email_addresses":[
-         "testing_f@gexample.com",
-         "testing_f_f@gexample.com"
-      ]
-   }
-]
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "testing_a@gexample.com",
+        "testing_a_a@gexample.com"
+      ],
+      "name": "Recipient Test A"
+    },
+    {
+      "email_addresses": [
+        "testing_b@gexample.com"
+      ],
+      "name": "Recipient Test B"
+    },
+    {
+      "email_addresses": [
+        "testing_c@gexample.com",
+        "testing_c_c@gexample.com"
+      ],
+      "name": "Recipient Test C"
+    },
+    {
+      "email_addresses": [
+        "testing_d@gexample.com",
+        "testing_d_d@gexample.com",
+        "testing_d_d_d@gexample.com",
+        "testing_d_d_d_d@gexample.com",
+        "testing_d_d_d_d_d@gexample.com"
+      ],
+      "name": "Recipient Test D"
+    },
+    {
+      "email_addresses": [
+        "testing_f@gexample.com",
+        "testing_f_f@gexample.com"
+      ],
+      "name": "Recipient Test F"
+    }
+  ]
 }

@@ -1,21 +1,25 @@
 {
   "appellate": false,
-  "case_name": "Lionra Technologies Limited v. Apple Inc.",
   "contains_attachments": false,
   "court_id": "txwd",
-  "date_filed": "2022-10-05",
-  "docket_entries": [
+  "dockets": [
     {
+      "case_name": "Lionra Technologies Limited v. Apple Inc.",
       "date_filed": "2022-10-05",
-      "description": "Redacted Public Version of [31] Opposed Sealed Motion DEFENDANT APPLE INC.S OPPOSED SEALED MOTION TO TRANSFER VENUE PURSUANT TO 28 U.S.C. \u00A7 1404(a) by Apple Inc. by Apple Inc.. (Ravel, J.)",
-      "document_number": "35",
-      "document_url": "https://ecf.txwd.uscourts.gov/doc1/181129021191?caseid=1167732&de_seq_num=99&magic_num=8606983",
-      "pacer_case_id": "1167732",
-      "pacer_doc_id": "181029021191",
-      "pacer_magic_num": "8606983",
-      "pacer_seq_no": "99"
+      "docket_entries": [
+        {
+          "date_filed": "2022-10-05",
+          "description": "Redacted Public Version of [31] Opposed Sealed Motion DEFENDANT APPLE INC.S OPPOSED SEALED MOTION TO TRANSFER VENUE PURSUANT TO 28 U.S.C. \u00a7 1404(a) by Apple Inc. by Apple Inc.. (Ravel, J.)",
+          "document_number": "35",
+          "document_url": "https://ecf.txwd.uscourts.gov/doc1/181129021191?caseid=1167732&de_seq_num=99&magic_num=8606983",
+          "pacer_case_id": "1167732",
+          "pacer_doc_id": "181029021191",
+          "pacer_magic_num": "8606983",
+          "pacer_seq_no": "99"
+        }
+      ],
+      "docket_number": "6:22-cv-00351"
     }
   ],
-  "docket_number": "6:22-cv-00351",
   "email_recipients": []
 }

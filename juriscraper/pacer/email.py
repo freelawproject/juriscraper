@@ -1,7 +1,9 @@
 import email
 import re
 from datetime import date
-from typing import Dict, List, Optional, Union
+from typing import Dict, List, Optional, TypedDict, Union
+
+from lxml.html import HtmlElement
 
 from ..lib.string_utils import clean_string, convert_date_string, harmonize
 from .docket_report import BaseDocketReport
@@ -14,6 +16,24 @@ from .utils import (
 )
 
 
+class DocketEntryType(TypedDict):
+    date_filed: date
+    description: str
+    document_number: Optional[str]
+    document_url: Optional[str]
+    pacer_case_id: Optional[str]
+    pacer_doc_id: Optional[str]
+    pacer_magic_num: Optional[str]
+    pacer_seq_no: Optional[str]
+
+
+class DocketType(TypedDict):
+    case_name: str
+    date_filed: date
+    docket_entries: List[DocketEntryType]
+    docket_number: str
+
+
 class NotificationEmail(BaseDocketReport, BaseReport):
     """A BaseDocketReport for parsing PACER notification email parsing"""
 
@@ -23,6 +43,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         self.court_id = court_id
         self.content_type = None
         self.appellate = None
+        self.docket_numbers = []
         super().__init__(court_id)
 
     @property
@@ -34,25 +55,18 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         }
         if self.content_type == "text/plain":
             parsed = {
-                "case_name": self._get_case_name_plain(),
-                "contains_attachments": self._contains_attachments_plain(),
-                "docket_number": self._get_docket_number_plain(),
-                "date_filed": self._get_date_filed(),
                 "appellate": self._is_appellate(),
-                "docket_entries": self._get_docket_entries(),
+                "contains_attachments": self._contains_attachments_plain(),
+                "dockets": self._get_dockets(),
                 "email_recipients": self._get_email_recipients_plain(),
             }
         else:
             parsed = {
-                "case_name": self._get_case_name(),
-                "contains_attachments": self._contains_attachments(),
-                "docket_number": self._get_docket_number(),
-                "date_filed": self._get_date_filed(),
                 "appellate": self._is_appellate(),
-                "docket_entries": self._get_docket_entries(),
+                "contains_attachments": self._contains_attachments(),
+                "dockets": self._get_dockets(),
                 "email_recipients": self._get_email_recipients(),
             }
-
         return {**base, **parsed}
 
     def _is_appellate(self) -> bool:
@@ -77,17 +91,18 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :param label: The cell label
         :returns: The Xpath to the next cell
         """
-        return f'//td[contains(., "{label}:")]/following-sibling::td[1]'
+        return f'.//td[contains(., "{label}:")]/following-sibling::td[1]'
 
-    def _get_case_name(self) -> str:
+    def _get_case_name(self, current_node: HtmlElement) -> str:
         """Gets a cleaned case name from the email text
 
+        :param  current_node: The relative lxml.HtmlElement
         :returns: Case name, cleaned and harmonized
         """
         path = self._sibling_path("Case Name")
-        case_name = self._xpath_text_0(self.tree, path)
+        case_name = self._xpath_text_0(current_node, path)
         if not case_name:
-            case_name = self._xpath_text_0(self.tree, f"{path}/p")
+            case_name = self._xpath_text_0(current_node, f"{path}/p")
             if not case_name:
                 case_name = "Unknown Case Title"
         return clean_string(harmonize(case_name))
@@ -95,35 +110,44 @@ class NotificationEmail(BaseDocketReport, BaseReport):
     def _get_case_name_plain(self) -> str:
         """Gets a cleaned case name from the plain email text
 
+        Raise an exception if a potential multi-docket text/plain notification
+        is found so we can get the example and add support for it.
+
         :returns: Case name, cleaned and harmonized
         """
         email_body = self.tree.text_content()
         regex = r"Case Name:(.*)"
         find_case = re.findall(regex, email_body)
+        if len(find_case) > 1:
+            raise Exception(
+                f"Received a potential multi-docket text/plain notification, "
+                f"court: {self.court_id}"
+            )
         if find_case:
             case_name = find_case[0]
         else:
             case_name = "Unknown Case Title"
         return clean_string(harmonize(case_name))
 
-    def _get_docket_number(self) -> str:
+    def _get_docket_number(self, current_node: HtmlElement) -> str:
         """Gets a docket number from the email text
 
+        :param  current_node: The relative lxml.HtmlElement
         :returns: Docket number, parsed
         """
 
         if self._is_appellate():
             path = self._sibling_path("Case Number")
-            case_number = self._xpath_text_0(self.tree, f"{path}/a")
+            case_number = self._xpath_text_0(current_node, f"{path}/a")
             return case_number
 
         path = self._sibling_path("Case Number")
         docket_number = self._parse_docket_number_strs(
-            self.tree.xpath(f"{path}/a/text()")
+            current_node.xpath(f"{path}/a/text()")
         )
         if not docket_number:
             docket_number = self._parse_docket_number_strs(
-                self.tree.xpath(f"{path}/p/a/text()")
+                current_node.xpath(f"{path}/p/a/text()")
             )
         return docket_number
 
@@ -149,13 +173,14 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             date_filed[0].lower().replace("filed on ", "")
         )
 
-    def _get_document_number(self) -> str:
+    def _get_document_number(self, current_node: HtmlElement) -> str:
         """Gets the specific document number the notification is referring to
 
+        :param  current_node: The relative lxml.HtmlElement
         :returns: Document number, cleaned
         """
         path = self._sibling_path("Document Number")
-        node = self.tree.xpath(path)[0].text_content()
+        node = current_node.xpath(path)[0].text_content()
         text_number = clean_string(node)
         if text_number == "No document attached":
             return None
@@ -175,9 +200,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         else:
             return None
 
-    def _get_doc1_anchor(self) -> str:
+    def _get_doc1_anchor(self, current_node: HtmlElement) -> str:
         """Safely retrieves the anchor tag for the document
 
+        :param  current_node: The relative lxml.HtmlElement
         :returns: Anchor tag, if it's found
         """
         try:
@@ -185,7 +211,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 path = f"{self._sibling_path('Document(s)')}//a"
             else:
                 path = f"{self._sibling_path('Document Number')}//a"
-            return self.tree.xpath(path)[0]
+            return current_node.xpath(path)[0]
         except IndexError:
             return None
 
@@ -212,22 +238,24 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         else:
             return None
 
-    def _get_description(self) -> str:
+    def _get_description(self, current_node: HtmlElement) -> str:
         """Gets the docket text
 
+        :param  current_node: The relative lxml.HtmlElement
         :returns: Cleaned docket text
         """
+
         description = ""
         # Paths to look for NEFs description
-        main_path = '//strong[contains(., "Docket Text:")]/following-sibling::'
+        main_path = './following::strong[contains(., "Docket Text:")][1]/following-sibling::'
         possible_paths = ["font[1]/b//text()", "b[1]/span//text()", "text()"]
 
         if self._is_appellate():
             # Paths to look for NDAs description
-            main_path = '//strong[contains(., "Docket Text:")]/following::'
+            main_path = './following::strong[contains(., "Docket Text:")][1]/following::'
             possible_paths = ["text()"]
         for path in possible_paths:
-            node = self.tree.xpath(f"{main_path}{path}")
+            node = current_node.xpath(f"{main_path}{path}")
             if len(node):
                 for des_part in node:
                     if self._is_appellate():
@@ -303,11 +331,54 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             return False
         return True
 
+    def _get_dockets(self) -> DocketType:
+        """Get all the dockets mentioned in the notification.
+
+        Right now multiple docket notifications are only supported for text/html
+        NEF notifications since we don't have examples for text/plain or NDAs
+        that mention multiple dockets. When we get one we'll log an error
+        and get the example.
+
+        :return: DocketType Dict
+        """
+        dockets = []
+        if self.content_type == "text/plain":
+            docket = {
+                "case_name": self._get_case_name_plain(),
+                "docket_number": self._get_docket_number_plain(),
+                "date_filed": self._get_date_filed(),
+                "docket_entries": self._get_docket_entries(),
+            }
+            dockets.append(docket)
+        else:
+            dockets_table = self.tree.xpath(
+                "//table[contains(., 'Case Name:')]"
+            )
+            if self.appellate and len(dockets_table) > 1:
+                raise Exception(
+                    f"Received a potential multi-docket NDA notification, "
+                    f"court: {self.court_id}"
+                )
+            for docket_table in dockets_table:
+                docket_number = self._get_docket_number(docket_table)
+                # Cache the docket number for its later use in
+                # _get_email_recipients_with_links
+                self.docket_numbers.append(docket_number)
+                docket = {
+                    "case_name": self._get_case_name(docket_table),
+                    "docket_number": docket_number,
+                    "date_filed": self._get_date_filed(),
+                    "docket_entries": self._get_docket_entries(docket_table),
+                }
+                dockets.append(docket)
+        return dockets
+
     def _get_docket_entries(
-        self,
-    ) -> List[Dict[str, Optional[Union[str, date]]]]:
+        self, current_node: HtmlElement = None
+    ) -> List[DocketEntryType]:
         """Gets the full list of docket entries with document and sequence numbers
 
+        :param  current_node: The relative lxml.HtmlElement
         :returns: List of docket entry dictionaries
         """
         if self.content_type == "text/plain":
@@ -322,16 +393,16 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                     document_url = None
                 document_number = self._get_document_number_plain()
         else:
-            description = self._get_description()
+            description = self._get_description(current_node)
             if description is not None:
-                anchor = self._get_doc1_anchor()
+                anchor = self._get_doc1_anchor(current_node)
                 document_url = (
                     anchor.xpath("./@href")[0] if anchor is not None else None
                 )
                 if self._is_appellate():
                     document_number = None
                 else:
-                    document_number = self._get_document_number()
+                    document_number = self._get_document_number(current_node)
 
         if description is not None:
             entries = [
@@ -401,8 +472,6 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         """
         # Matching names in this format is a bit less reliable. May be worth coming back to.
 
-        end_point = self._get_docket_number()
-
         replacements = [
             (r"\n", ""),
             (
@@ -417,11 +486,14 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 r"^.*mailed\sto:",
                 "",
             ),
-            (
-                f"{re.escape(end_point)}.*$",
-                "",
-            ),
         ]
+        for end_point in self.docket_numbers:
+            replacements.append(
+                (
+                    f"{re.escape(end_point)}.*$",
+                    "",
+                )
+            )
 
         for replacement in replacements:
             text_content = re.sub(replacement[0], replacement[1], text_content)

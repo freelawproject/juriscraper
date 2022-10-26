@@ -1,61 +1,65 @@
 {
-  "case_name": "Elisa W. v. The City of New York",
+  "appellate": true,
   "contains_attachments": false,
   "court_id": "ca2",
-  "date_filed": "2022-08-10",
-  "docket_entries": [
+  "dockets": [
     {
+      "case_name": "Elisa W. v. The City of New York",
       "date_filed": "2022-08-10",
-      "description": "JOINT APPENDIX, volume 7 of 13, (pp. 1711-1995), on behalf of Appellant Dameon C., Thierry E., Mikayla G., Ayanna J., Myls J., Malik M., Tyrone M., Xavion M., Alexandria R., Ana-Maria R., Olivia R., Emmanuel S., Lucas T., Ximena T., Jose T.C., Valentina T.C., Matthew V., Brittney W. and Elisa W., FILED. Service date 08/09/2022 by CM/ECF.[3362641] [22-7]",
-      "document_number": null,
-      "document_url": "https://ecf.ca2.uscourts.gov/docs1/00208962225?uid=8d96e8f0a9737656",
-      "pacer_case_id": "56342",
-      "pacer_doc_id": "00208962225",
-      "pacer_magic_num": "8d96e8f0a9737656",
-      "pacer_seq_no": null
+      "docket_entries": [
+        {
+          "date_filed": "2022-08-10",
+          "description": "JOINT APPENDIX, volume 7 of 13, (pp. 1711-1995), on behalf of Appellant Dameon C., Thierry E., Mikayla G., Ayanna J., Myls J., Malik M., Tyrone M., Xavion M., Alexandria R., Ana-Maria R., Olivia R., Emmanuel S., Lucas T., Ximena T., Jose T.C., Valentina T.C., Matthew V., Brittney W. and Elisa W., FILED. Service date 08/09/2022 by CM/ECF.[3362641] [22-7]",
+          "document_number": null,
+          "document_url": "https://ecf.ca2.uscourts.gov/docs1/00208962225?uid=8d96e8f0a9737656",
+          "pacer_case_id": "56342",
+          "pacer_doc_id": "00208962225",
+          "pacer_magic_num": "8d96e8f0a9737656",
+          "pacer_seq_no": null
+        }
+      ],
+      "docket_number": "22-7"
     }
   ],
-  "docket_number": "22-7",
-  "appellate": true,
   "email_recipients": [
-   {
-      "name":"Recipient User Test 1, -:",
-      "email_addresses":[
-         "testing1@gexample.com"
-      ]
-   },
-   {
-      "name":"Recipient User Test 2, -:",
-      "email_addresses":[
-         "testing2@gexample.com"
-      ]
-   },
-   {
-      "name":"Recipient User Test 3, -:",
-      "email_addresses":[
-         "testing3@gexample.com",
-         "testing3_1@gexample.com"
-      ]
-   },
-   {
-      "name":"Recipient User Test 4, -:",
-      "email_addresses":[
-         "testing4@gexample.com",
-         "testing4_1@gexample.com",
-         "testing4_2@gexample.com"
-      ]
-   },
-   {
-      "name":"Recipient User Test 5, Deputy Clerk:",
-      "email_addresses":[
-         "Testing5@gexample.com"
-      ]
-   },
-   {
-      "name":"Recipient User Test 5, Case Manager:",
-      "email_addresses":[
-         "Testing_6@gexample.com"
-      ]
-   }
-]
+    {
+      "email_addresses": [
+        "testing1@gexample.com"
+      ],
+      "name": "Recipient User Test 1, -:"
+    },
+    {
+      "email_addresses": [
+        "testing2@gexample.com"
+      ],
+      "name": "Recipient User Test 2, -:"
+    },
+    {
+      "email_addresses": [
+        "testing3@gexample.com",
+        "testing3_1@gexample.com"
+      ],
+      "name": "Recipient User Test 3, -:"
+    },
+    {
+      "email_addresses": [
+        "testing4@gexample.com",
+        "testing4_1@gexample.com",
+        "testing4_2@gexample.com"
+      ],
+      "name": "Recipient User Test 4, -:"
+    },
+    {
+      "email_addresses": [
+        "Testing5@gexample.com"
+      ],
+      "name": "Recipient User Test 5, Deputy Clerk:"
+    },
+    {
+      "email_addresses": [
+        "Testing_6@gexample.com"
+      ],
+      "name": "Recipient User Test 5, Case Manager:"
+    }
+  ]
 }

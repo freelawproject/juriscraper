@@ -1,59 +1,63 @@
 {
-  "court_id":"ca5",
-  "case_name":"Certain Underwriters v. Cox Operating",
+  "appellate": true,
   "contains_attachments": false,
-  "docket_number":"22-30371",
-  "date_filed":"2022-08-16",
-  "appellate":true,
-  "docket_entries":[
-     {
-        "date_filed":"2022-08-16",
-        "description":"RECORD EXCERPTS FILED by Appellant Certain Underwriters at Lloyds London. Date of service: 08/16/2022 via email - Attorney for Appellants: Bohman, Morse Attorney for Appellees: Lowe, Shipman [22-30371] (Harry E. Morse )",
-        "document_url":"https://ecf.ca5.uscourts.gov/docs1/00506433781?uid=12e61e2debdbca3f",
-        "document_number": null,
-        "pacer_doc_id":"00506433781",
-        "pacer_case_id":"208667",
-        "pacer_seq_no":null,
-        "pacer_magic_num":"12e61e2debdbca3f"
-     }
-  ],
-  "email_recipients":[
+  "court_id": "ca5",
+  "dockets": [
     {
-       "name":"Recipient User Test 1:",
-       "email_addresses":[
-          "testing1@gexample.com",
-          "testing1_1@gexample.com"
-       ]
-    },
-    {
-       "name":"Recipient User Test 2:",
-       "email_addresses":[
-          "testing2@gexample.com",
-          "testing2_1@gexample.com"
-       ]
-    },
-    {
-       "name":"Recipient User Test 3:",
-       "email_addresses":[
-          "testing3@gexample.com",
-          "testing3_1@gexample.com"
-       ]
-    },
-    {
-       "name":"Recipient User Test 4:",
-       "email_addresses":[
-          "testing4@gexample.com",
-          "testing4_1@gexample.com",
-          "testing4_1@gexample.com"
-       ]
-    },
-    {
-       "name":"Recipient User Test 5:",
-       "email_addresses":[
-          "testing5@gexample.com",
-          "testing5_1@gexample.com",
-          "testing5_1@gexample.com"
-       ]
+      "case_name": "Certain Underwriters v. Cox Operating",
+      "date_filed": "2022-08-16",
+      "docket_entries": [
+        {
+          "date_filed": "2022-08-16",
+          "description": "RECORD EXCERPTS FILED by Appellant Certain Underwriters at Lloyds London. Date of service: 08/16/2022 via email - Attorney for Appellants: Bohman, Morse Attorney for Appellees: Lowe, Shipman [22-30371] (Harry E. Morse )",
+          "document_number": null,
+          "document_url": "https://ecf.ca5.uscourts.gov/docs1/00506433781?uid=12e61e2debdbca3f",
+          "pacer_case_id": "208667",
+          "pacer_doc_id": "00506433781",
+          "pacer_magic_num": "12e61e2debdbca3f",
+          "pacer_seq_no": null
+        }
+      ],
+      "docket_number": "22-30371"
     }
- ]
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "testing1@gexample.com",
+        "testing1_1@gexample.com"
+      ],
+      "name": "Recipient User Test 1:"
+    },
+    {
+      "email_addresses": [
+        "testing2@gexample.com",
+        "testing2_1@gexample.com"
+      ],
+      "name": "Recipient User Test 2:"
+    },
+    {
+      "email_addresses": [
+        "testing3@gexample.com",
+        "testing3_1@gexample.com"
+      ],
+      "name": "Recipient User Test 3:"
+    },
+    {
+      "email_addresses": [
+        "testing4@gexample.com",
+        "testing4_1@gexample.com",
+        "testing4_1@gexample.com"
+      ],
+      "name": "Recipient User Test 4:"
+    },
+    {
+      "email_addresses": [
+        "testing5@gexample.com",
+        "testing5_1@gexample.com",
+        "testing5_1@gexample.com"
+      ],
+      "name": "Recipient User Test 5:"
+    }
+  ]
 }

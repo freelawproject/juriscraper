@@ -1,59 +1,63 @@
 {
-  "case_name": "Mackenzie Brown v. State of Arizona",
+  "appellate": true,
   "contains_attachments": false,
   "court_id": "ca9",
-  "date_filed": "2022-08-08",
-  "docket_entries": [
+  "dockets": [
     {
+      "case_name": "Mackenzie Brown v. State of Arizona",
       "date_filed": "2022-08-08",
-      "description": "COURT DELETED INCORRECT ENTRY. Entered in error (already listed on docket).Notice about deletion sent to case participants registered for electronic filing. Original Text: Entered appearance of Amicus Curiae USA. [12511871] (SML)",
-      "document_number": null,
-      "document_url": null,
-      "pacer_case_id": "320925",
-      "pacer_doc_id": null,
-      "pacer_magic_num": null,
-      "pacer_seq_no": null
+      "docket_entries": [
+        {
+          "date_filed": "2022-08-08",
+          "description": "COURT DELETED INCORRECT ENTRY. Entered in error (already listed on docket).Notice about deletion sent to case participants registered for electronic filing. Original Text: Entered appearance of Amicus Curiae USA. [12511871] (SML)",
+          "document_number": null,
+          "document_url": null,
+          "pacer_case_id": "320925",
+          "pacer_doc_id": null,
+          "pacer_magic_num": null,
+          "pacer_seq_no": null
+        }
+      ],
+      "docket_number": "20-15568"
     }
   ],
-  "docket_number": "20-15568",
-  "appellate": true,
   "email_recipients": [
     {
-       "name":"Recipient User Test 1:",
-       "email_addresses":[
-          "testing1@gexample.com",
-          "testing1_1@gexample.com"
-       ]
+      "email_addresses": [
+        "testing1@gexample.com",
+        "testing1_1@gexample.com"
+      ],
+      "name": "Recipient User Test 1:"
     },
     {
-       "name":"Recipient User Test 2:",
-       "email_addresses":[
-          "testing2@gexample.com",
-          "testing2_1@gexample.com"
-       ]
+      "email_addresses": [
+        "testing2@gexample.com",
+        "testing2_1@gexample.com"
+      ],
+      "name": "Recipient User Test 2:"
     },
     {
-       "name":"Recipient User Test 3:",
-       "email_addresses":[
-          "testing3@gexample.com",
-          "testing3_1@gexample.com"
-       ]
+      "email_addresses": [
+        "testing3@gexample.com",
+        "testing3_1@gexample.com"
+      ],
+      "name": "Recipient User Test 3:"
     },
     {
-       "name":"Recipient User Test 4:",
-       "email_addresses":[
-          "testing4@gexample.com",
-          "testing4_1@gexample.com",
-          "testing4_1@gexample.com"
-       ]
+      "email_addresses": [
+        "testing4@gexample.com",
+        "testing4_1@gexample.com",
+        "testing4_1@gexample.com"
+      ],
+      "name": "Recipient User Test 4:"
     },
     {
-       "name":"Recipient User Test 5:",
-       "email_addresses":[
-          "testing5@gexample.com",
-          "testing5_1@gexample.com",
-          "testing5_1@gexample.com"
-       ]
+      "email_addresses": [
+        "testing5@gexample.com",
+        "testing5_1@gexample.com",
+        "testing5_1@gexample.com"
+      ],
+      "name": "Recipient User Test 5:"
     }
- ]
+  ]
 }
