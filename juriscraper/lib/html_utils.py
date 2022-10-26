@@ -38,9 +38,7 @@ def get_html_from_element(element):
     return tostring(element)
 
 
-def get_html5_parsed_text(
-    text: str, content_encoding: str = "utf-8"
-) -> HtmlElement:
+def get_html5_parsed_text(text: str) -> HtmlElement:
     """Return content using the html5parser, ideal for faulty html.
 
     This dance is slightly different than usual because it uses the
@@ -50,11 +48,10 @@ def get_html5_parsed_text(
     html5parser, and the usual lxml parser gives us the same API we are
     used to.
 
-    :param content_encoding: The original content encoding to use
     :param text: The html of the document
     :return: an lxml.HtmlElement object
     """
-    parsed = html5parser.document_fromstring(text.encode(content_encoding))
+    parsed = html5parser.document_fromstring(text)
     return fromstring(tostring(parsed, encoding="unicode"))
 
 

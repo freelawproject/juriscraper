@@ -53,7 +53,6 @@ class BaseReport:
         self.tree = None
         self.response = None
         self.is_valid = None
-        self.content_encoding = "utf-8"
 
     @property
     def url(self):
@@ -94,7 +93,7 @@ class BaseReport:
         text = clean_html(text)
         self.check_validity(text)
         if self.is_valid:
-            tree = get_html5_parsed_text(text, self.content_encoding)
+            tree = get_html5_parsed_text(text)
             self.tree = strip_bad_html_tags_insecure(tree)
             self.tree.rewrite_links(fix_links_in_lxml_tree, base_href=self.url)
 

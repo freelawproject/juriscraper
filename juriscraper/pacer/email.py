@@ -17,47 +17,48 @@ from .utils import (
 class NotificationEmail(BaseDocketReport, BaseReport):
     """A BaseDocketReport for parsing PACER notification email parsing"""
 
+    ERROR_STRINGS = ["Notice of Electronic Claims Filing"]
+
     def __init__(self, court_id):
         self.court_id = court_id
         self.content_type = None
         self.appellate = None
-        self.content_encoding = "utf-8"
         super().__init__(court_id)
 
     @property
     def data(self):
+        if self.is_valid is False or self.tree is None:
+            return {}
         base = {
             "court_id": self.court_id,
         }
-        parsed = {}
-        if self.tree is not None:
-            if self.content_type == "text/plain":
-                parsed = {
-                    "case_name": self._get_case_name_plain(),
-                    "contains_attachments": self._contains_attachments_plain(),
-                    "docket_number": self._get_docket_number_plain(),
-                    "date_filed": self._get_date_filed(),
-                    "appellate": self._is_appellate(),
-                    "docket_entries": self._get_docket_entries(),
-                    "email_recipients": self._get_email_recipients_plain(),
-                }
-            else:
-                parsed = {
-                    "case_name": self._get_case_name(),
-                    "contains_attachments": self._contains_attachments(),
-                    "docket_number": self._get_docket_number(),
-                    "date_filed": self._get_date_filed(),
-                    "appellate": self._is_appellate(),
-                    "docket_entries": self._get_docket_entries(),
-                    "email_recipients": self._get_email_recipients(),
-                }
+        if self.content_type == "text/plain":
+            parsed = {
+                "case_name": self._get_case_name_plain(),
+                "contains_attachments": self._contains_attachments_plain(),
+                "docket_number": self._get_docket_number_plain(),
+                "date_filed": self._get_date_filed(),
+                "appellate": self._is_appellate(),
+                "docket_entries": self._get_docket_entries(),
+                "email_recipients": self._get_email_recipients_plain(),
+            }
+        else:
+            parsed = {
+                "case_name": self._get_case_name(),
+                "contains_attachments": self._contains_attachments(),
+                "docket_number": self._get_docket_number(),
+                "date_filed": self._get_date_filed(),
+                "appellate": self._is_appellate(),
+                "docket_entries": self._get_docket_entries(),
+                "email_recipients": self._get_email_recipients(),
+            }
 
         return {**base, **parsed}
 
-    def _is_appellate(self) -> str:
+    def _is_appellate(self) -> bool:
         """Gets the email notice type from the email text.
 
-        :returns: The email notice type NEF or NDA.
+        :returns: True if is an NDA otherwise False
         """
         if self.appellate is None:
             if "Notice of Docket Activity" in self.tree.text_content():
@@ -577,7 +578,6 @@ class S3NotificationEmail(NotificationEmail):
         except UnicodeDecodeError:
             # If it fails fallback on iso-8859-1
             email_body = body.decode("iso-8859-1")
-            self.content_encoding = "iso-8859-1"
         if self.content_type == "text/plain":
             return super()._parse_text(email_body)
         elif self.content_type == "text/html":
