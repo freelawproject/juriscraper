@@ -17,40 +17,41 @@ from .utils import (
 class NotificationEmail(BaseDocketReport, BaseReport):
     """A BaseDocketReport for parsing PACER notification email parsing"""
 
+    ERROR_STRINGS = ["Notice of Electronic Claims Filing"]
+
     def __init__(self, court_id):
         self.court_id = court_id
         self.content_type = None
         self.appellate = None
-        self.claim = None
         super().__init__(court_id)
 
     @property
     def data(self):
+        if self.is_valid is False or self.tree is None:
+            return {}
         base = {
             "court_id": self.court_id,
         }
-        parsed = {}
-        if self.tree is not None and self._is_claim() is False:
-            if self.content_type == "text/plain":
-                parsed = {
-                    "case_name": self._get_case_name_plain(),
-                    "contains_attachments": self._contains_attachments_plain(),
-                    "docket_number": self._get_docket_number_plain(),
-                    "date_filed": self._get_date_filed(),
-                    "appellate": self._is_appellate(),
-                    "docket_entries": self._get_docket_entries(),
-                    "email_recipients": self._get_email_recipients_plain(),
-                }
-            else:
-                parsed = {
-                    "case_name": self._get_case_name(),
-                    "contains_attachments": self._contains_attachments(),
-                    "docket_number": self._get_docket_number(),
-                    "date_filed": self._get_date_filed(),
-                    "appellate": self._is_appellate(),
-                    "docket_entries": self._get_docket_entries(),
-                    "email_recipients": self._get_email_recipients(),
-                }
+        if self.content_type == "text/plain":
+            parsed = {
+                "case_name": self._get_case_name_plain(),
+                "contains_attachments": self._contains_attachments_plain(),
+                "docket_number": self._get_docket_number_plain(),
+                "date_filed": self._get_date_filed(),
+                "appellate": self._is_appellate(),
+                "docket_entries": self._get_docket_entries(),
+                "email_recipients": self._get_email_recipients_plain(),
+            }
+        else:
+            parsed = {
+                "case_name": self._get_case_name(),
+                "contains_attachments": self._contains_attachments(),
+                "docket_number": self._get_docket_number(),
+                "date_filed": self._get_date_filed(),
+                "appellate": self._is_appellate(),
+                "docket_entries": self._get_docket_entries(),
+                "email_recipients": self._get_email_recipients(),
+            }
 
         return {**base, **parsed}
 
@@ -66,22 +67,6 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             self.appellate = False
             return self.appellate
         return self.appellate
-
-    def _is_claim(self) -> bool:
-        """Gets the email notice type from the email text.
-
-        :returns: True if is a Claims Filing otherwise False
-        """
-        if self.claim is None:
-            if (
-                "Notice of Electronic Claims Filing"
-                in self.tree.text_content()
-            ):
-                self.claim = True
-                return self.claim
-            self.claim = False
-            return self.claim
-        return self.claim
 
     def _sibling_path(self, label):
         """Gets the path string for the sibling of a label cell (td)
