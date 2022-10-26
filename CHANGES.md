@@ -16,6 +16,19 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.23 - 2022-10-26**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix docket report entries table parsing for wiwb.
+ - Ignore claims filings notifications for email report.
+ - Fix UnicodeEncodeError when parsing a docket report.
+## Past
+
 **2.5.22 - 2022-10-12**
 
 Features:
@@ -25,9 +38,6 @@ Features:
 Changes:
 
  - Fix email report decoding.
-
-
-## Past
 
 **2.5.21 - 2022-10-11**
 
