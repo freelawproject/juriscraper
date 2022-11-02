@@ -16,6 +16,17 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.24 - 2022-11-02**
+
+Features:
+
+ - N/A
+
+Changes: Added support for parsing multi-docket NEFs
+
+ -
+## Past
+
 **2.5.23 - 2022-10-26**
 
 Features:
@@ -27,7 +38,6 @@ Changes:
  - Fix docket report entries table parsing for wiwb.
  - Ignore claims filings notifications for email report.
  - Fix UnicodeEncodeError when parsing a docket report.
-## Past
 
 **2.5.22 - 2022-10-12**
 
