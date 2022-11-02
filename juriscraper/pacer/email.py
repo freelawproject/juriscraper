@@ -119,8 +119,9 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         regex = r"Case Name:(.*)"
         find_case = re.findall(regex, email_body)
         if len(find_case) > 1:
-            raise Exception(
-                f"Received a potential multi-docket text/plain notification, "
+            raise NotImplementedError(
+                f"Received a potential multi-docket text/plain notification. "
+                f"This is probably our chance to add support for it. "
                 f"court: {self.court_id}"
             )
         if find_case:
@@ -355,8 +356,9 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 "//table[contains(., 'Case Name:')]"
             )
             if self.appellate and len(dockets_table) > 1:
-                raise Exception(
-                    f"Received a potential multi-docket NDA notification, "
+                raise NotImplementedError(
+                    f"Received a potential multi-docket NDA notification. "
+                    f"This is probably our chance to add support for it. "
                     f"court: {self.court_id}"
                 )
             for docket_table in dockets_table:
