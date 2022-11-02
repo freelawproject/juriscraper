@@ -1,22 +1,26 @@
 {
-  "case_name": "Fuller v. Singleton Farms LLC",
+  "appellate": false,
   "contains_attachments": true,
   "court_id": "ared",
-  "date_filed": "2021-06-28",
-  "docket_entries": [
+  "dockets": [
     {
+      "case_name": "Fuller v. Singleton Farms LLC",
       "date_filed": "2021-06-28",
-      "description": "RESPONSE re [11] Statement of Facts (Local Rule 56.1) Response to Statement of Undisputed Material Facts filed by Michael Fuller. (Attachments: (1) Exhibit 1 - Declaration of Michael Fuller)(Wiley, Joshua)",
-      "document_number": "13",
-      "document_url": "https://ecf.ared.uscourts.gov/doc1/02705225168?caseid=121728&de_seq_num=40&magic_num=74127345",
-      "pacer_case_id": "121728",
-      "pacer_doc_id": "02705225168",
-      "pacer_magic_num": "74127345",
-      "pacer_seq_no": "40"
+      "docket_entries": [
+        {
+          "date_filed": "2021-06-28",
+          "description": "RESPONSE re [11] Statement of Facts (Local Rule 56.1) Response to Statement of Undisputed Material Facts filed by Michael Fuller. (Attachments: (1) Exhibit 1 - Declaration of Michael Fuller)(Wiley, Joshua)",
+          "document_number": "13",
+          "document_url": "https://ecf.ared.uscourts.gov/doc1/02705225168?caseid=121728&de_seq_num=40&magic_num=74127345",
+          "pacer_case_id": "121728",
+          "pacer_doc_id": "02705225168",
+          "pacer_magic_num": "74127345",
+          "pacer_seq_no": "40"
+        }
+      ],
+      "docket_number": "2:20-cv-00082"
     }
   ],
-  "docket_number": "2:20-cv-00082",
-  "appellate": false,
   "email_recipients": [
     {
       "email_addresses": [

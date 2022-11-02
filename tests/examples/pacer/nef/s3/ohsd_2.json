@@ -1,59 +1,63 @@
 {
-   "court_id":"ohsd",
-   "case_name":"Roe v. University Of Cincinnati",
-   "contains_attachments":true,
-   "docket_number":"1:22-cv-00376",
-   "appellate": false,
-   "date_filed":"2022-08-08",
-   "docket_entries":[
-      {
-         "date_filed":"2022-08-08",
-         "description":"Unopposed MOTION for Extension of Time to File Response/Reply as to [2] MOTION for Leave to Proceed Anonymously New date requested 8/22/2022. by Defendant University Of Cincinnati. (Attachments: (1) Proposed Order) (Carpenter, Michael)",
-         "document_url":"https://ecf.ohsd.uscourts.gov/doc1/14309223490?caseid=270109&de_seq_num=29&magic_num=82294018",
-         "document_number":"8",
-         "pacer_doc_id":"14309223490",
-         "pacer_case_id":"270109",
-         "pacer_seq_no":"29",
-         "pacer_magic_num":"82294018"
-      }
-   ],
-   "email_recipients":[
-      {
-         "name":"Recipient Test A",
-         "email_addresses":[
-            "testing_a@gexample.com",
-            "testing_a_a@gexample.com"
-         ]
-      },
-      {
-         "name":"Recipient Test B",
-         "email_addresses":[
-            "testing_b@gexample.com"
-         ]
-      },
-      {
-         "name":"Recipient Test C",
-         "email_addresses":[
-            "testing_c@gexample.com",
-            "testing_c_c@gexample.com"
-         ]
-      },
-      {
-         "name":"Recipient Test D",
-         "email_addresses":[
-            "testing_d@gexample.com",
-            "testing_d_d@gexample.com",
-            "testing_d_d_d@gexample.com",
-            "testing_d_d_d_d@gexample.com",
-            "testing_d_d_d_d_d@gexample.com"
-         ]
-      },
-      {
-         "name":"Recipient Test F",
-         "email_addresses":[
-            "testing_f@gexample.com",
-            "testing_f_f@gexample.com"
-         ]
-      }
-   ]
+  "appellate": false,
+  "contains_attachments": true,
+  "court_id": "ohsd",
+  "dockets": [
+    {
+      "case_name": "Roe v. University Of Cincinnati",
+      "date_filed": "2022-08-08",
+      "docket_entries": [
+        {
+          "date_filed": "2022-08-08",
+          "description": "Unopposed MOTION for Extension of Time to File Response/Reply as to [2] MOTION for Leave to Proceed Anonymously New date requested 8/22/2022. by Defendant University Of Cincinnati. (Attachments: (1) Proposed Order) (Carpenter, Michael)",
+          "document_number": "8",
+          "document_url": "https://ecf.ohsd.uscourts.gov/doc1/14309223490?caseid=270109&de_seq_num=29&magic_num=82294018",
+          "pacer_case_id": "270109",
+          "pacer_doc_id": "14309223490",
+          "pacer_magic_num": "82294018",
+          "pacer_seq_no": "29"
+        }
+      ],
+      "docket_number": "1:22-cv-00376"
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "testing_a@gexample.com",
+        "testing_a_a@gexample.com"
+      ],
+      "name": "Recipient Test A"
+    },
+    {
+      "email_addresses": [
+        "testing_b@gexample.com"
+      ],
+      "name": "Recipient Test B"
+    },
+    {
+      "email_addresses": [
+        "testing_c@gexample.com",
+        "testing_c_c@gexample.com"
+      ],
+      "name": "Recipient Test C"
+    },
+    {
+      "email_addresses": [
+        "testing_d@gexample.com",
+        "testing_d_d@gexample.com",
+        "testing_d_d_d@gexample.com",
+        "testing_d_d_d_d@gexample.com",
+        "testing_d_d_d_d_d@gexample.com"
+      ],
+      "name": "Recipient Test D"
+    },
+    {
+      "email_addresses": [
+        "testing_f@gexample.com",
+        "testing_f_f@gexample.com"
+      ],
+      "name": "Recipient Test F"
+    }
+  ]
 }

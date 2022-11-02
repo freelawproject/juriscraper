@@ -1,22 +1,26 @@
 {
-  "case_name": "Santiago v. United Parcel Service Inc",
+  "appellate": false,
   "contains_attachments": false,
   "court_id": "ared",
-  "date_filed": "2021-06-10",
-  "docket_entries": [
+  "dockets": [
     {
+      "case_name": "Santiago v. United Parcel Service Inc",
       "date_filed": "2021-06-10",
-      "description": "Unopposed MOTION for Extension of Time to File Answer Unopposed Motion for Extension of Time to Respond to Plaintiff's Complaint by United Parcel Service Inc (Pruitt, Lyn)",
-      "document_number": "2",
-      "document_url": "https://ecf.ared.uscourts.gov/doc1/02715212135?caseid=128089&de_seq_num=10&magic_num=45019712",
-      "pacer_case_id": "128089",
-      "pacer_doc_id": "02705212135",
-      "pacer_magic_num": "45019712",
-      "pacer_seq_no": "10"
+      "docket_entries": [
+        {
+          "date_filed": "2021-06-10",
+          "description": "Unopposed MOTION for Extension of Time to File Answer Unopposed Motion for Extension of Time to Respond to Plaintiff's Complaint by United Parcel Service Inc (Pruitt, Lyn)",
+          "document_number": "2",
+          "document_url": "https://ecf.ared.uscourts.gov/doc1/02715212135?caseid=128089&de_seq_num=10&magic_num=45019712",
+          "pacer_case_id": "128089",
+          "pacer_doc_id": "02705212135",
+          "pacer_magic_num": "45019712",
+          "pacer_seq_no": "10"
+        }
+      ],
+      "docket_number": "4:21-cv-00428"
     }
   ],
-  "docket_number": "4:21-cv-00428",
-  "appellate": false,
   "email_recipients": [
     {
       "email_addresses": [

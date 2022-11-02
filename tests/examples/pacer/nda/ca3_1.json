@@ -1,21 +1,25 @@
 {
-  "case_name": "Madison Lara v. Commissioner PA State Police",
+  "appellate": true,
   "contains_attachments": false,
   "court_id": "ca3",
-  "date_filed": "2022-08-08",
-  "docket_entries": [
+  "dockets": [
     {
+      "case_name": "Madison Lara v. Commissioner PA State Police",
       "date_filed": "2022-08-08",
-      "description": "ECF FILER: ELECTRONIC SUPPLEMENTAL BRIEF on behalf of Appellee Commissioner Pennsylvania State Police. Certificate of Service dated 08/08/2022 by ECF. [21-1832] (DBM)",
-      "document_number": null,
-      "document_url": "https://ecf.ca3.uscourts.gov/docs1/003014193380?uid=3594681a19879633",
-      "pacer_case_id": "114792",
-      "pacer_doc_id": "003014193380",
-      "pacer_magic_num": "3594681a19879633",
-      "pacer_seq_no": null
+      "docket_entries": [
+        {
+          "date_filed": "2022-08-08",
+          "description": "ECF FILER: ELECTRONIC SUPPLEMENTAL BRIEF on behalf of Appellee Commissioner Pennsylvania State Police. Certificate of Service dated 08/08/2022 by ECF. [21-1832] (DBM)",
+          "document_number": null,
+          "document_url": "https://ecf.ca3.uscourts.gov/docs1/003014193380?uid=3594681a19879633",
+          "pacer_case_id": "114792",
+          "pacer_doc_id": "003014193380",
+          "pacer_magic_num": "3594681a19879633",
+          "pacer_seq_no": null
+        }
+      ],
+      "docket_number": "21-1832"
     }
   ],
-  "docket_number": "21-1832",
-  "appellate": true,
   "email_recipients": []
 }

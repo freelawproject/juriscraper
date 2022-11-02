@@ -1,22 +1,26 @@
 {
-  "case_name": "Huffman v. Associated Management Ltd",
+  "appellate": false,
   "contains_attachments": true,
   "court_id": "ared",
-  "date_filed": "2021-07-08",
-  "docket_entries": [
+  "dockets": [
     {
+      "case_name": "Huffman v. Associated Management Ltd",
       "date_filed": "2021-07-08",
-      "description": "MOTION for Recusal or Disqualification by Kristina Huffman (Attachments: (1) Exhibit Anonymous Letter, (2) Exhibit Declaration of Driscoll Wiley)(Wiley, Joshua)",
-      "document_number": "10",
-      "document_url": "https://ecf.ared.uscourts.gov/doc1/02705232553?caseid=125473&de_seq_num=31&magic_num=51422299",
-      "pacer_case_id": "125473",
-      "pacer_doc_id": "02705232553",
-      "pacer_magic_num": "51422299",
-      "pacer_seq_no": "31"
+      "docket_entries": [
+        {
+          "date_filed": "2021-07-08",
+          "description": "MOTION for Recusal or Disqualification by Kristina Huffman (Attachments: (1) Exhibit Anonymous Letter, (2) Exhibit Declaration of Driscoll Wiley)(Wiley, Joshua)",
+          "document_number": "10",
+          "document_url": "https://ecf.ared.uscourts.gov/doc1/02705232553?caseid=125473&de_seq_num=31&magic_num=51422299",
+          "pacer_case_id": "125473",
+          "pacer_doc_id": "02705232553",
+          "pacer_magic_num": "51422299",
+          "pacer_seq_no": "31"
+        }
+      ],
+      "docket_number": "4:20-cv-01296"
     }
   ],
-  "docket_number": "4:20-cv-01296",
-  "appellate": false,
   "email_recipients": [
     {
       "email_addresses": [
