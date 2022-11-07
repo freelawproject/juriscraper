@@ -26,6 +26,7 @@ class Site(OpinionSite):
         "G": "Ruth Bader Ginsburg",
         "JS": "John Paul Stephens",
         "K": "Anthony Kennedy",
+        "KJ": "Ketanji Brown Jackson",
         "NG": "Neil Gorsuch",
         "PC": "Per Curiam",
         "R": "John G. Roberts",
