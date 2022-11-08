@@ -16,16 +16,27 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.25 - 2022-11-07**
+
+Features:
+
+ - N/A
+
+Changes:
+
+- Update to support J. Jackson
+
+## Past
+
 **2.5.24 - 2022-11-02**
 
 Features:
 
  - N/A
 
-Changes: Added support for parsing multi-docket NEFs
+Changes:
 
- -
-## Past
+- Added support for parsing multi-docket NEFs
 
 **2.5.23 - 2022-10-26**
 
