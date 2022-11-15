@@ -119,6 +119,13 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         self.assertEqual(r.headers["Content-Type"], "application/pdf")
 
     @SKIP_IF_NO_PACER_LOGIN
+    def test_download_redirected_pdf(self):
+        """Can we download a PDF document returned after a redirection?"""
+        report = self.reports["azd"]
+        r, msg = report.download_pdf("1311031", "025125636132")
+        self.assertEqual(r.headers["Content-Type"], "application/pdf")
+
+    @SKIP_IF_NO_PACER_LOGIN
     def test_download_iframed_pdf(self):
         """Can we download a PDF document returned in IFrame?"""
         report = self.reports["vib"]
