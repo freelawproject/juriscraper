@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.26 - 2022-11-15**
+
+Features:
+
+ - N/A
+
+Changes:
+
+- Fix download PDF documents returned after a redirection.
+
+## Past
+
 **2.5.25 - 2022-11-07**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - Update to support J. Jackson
-
-## Past
 
 **2.5.24 - 2022-11-02**
 
