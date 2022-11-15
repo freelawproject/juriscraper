@@ -304,7 +304,8 @@ class BaseReport:
             redirect_re = re.compile(rb'window\.\s*?location\s*=\s*"(.*)"\s*;')
             m = redirect_re.search(r.content)
             if m is not None:
-                r = self.session.get(urljoin(url, str(m.group(1))))
+                redirect_url = m.group(1).decode("utf-8")
+                r = self.session.get(urljoin(url, redirect_url))
                 r.raise_for_status()
 
         # The request above sometimes generates an HTML page with an iframe
