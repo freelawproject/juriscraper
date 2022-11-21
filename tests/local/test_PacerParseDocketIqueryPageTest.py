@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+
+
+import os
+
+from juriscraper.pacer import DocketHistoryReport
+from tests import TESTS_ROOT_EXAMPLES_PACER
+from tests.local.PacerParseTestCase import PacerParseTestCase
+
+
+class PacerParseDocketIquertPageTest(PacerParseTestCase):
+    """Tests for the docket iQuery page."""
+
+    def setUp(self):
+        self.maxDiff = 200000
+
+    def test_parsing_history_documents(self):
+        path_root = os.path.join(
+            TESTS_ROOT_EXAMPLES_PACER, "docket_iquery_pages"
+        )
+        self.parse_files(path_root, "*.html", DocketHistoryReport)
