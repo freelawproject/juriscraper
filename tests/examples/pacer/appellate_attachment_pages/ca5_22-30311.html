@@ -17,9 +17,9 @@
 </tbody></table>
 <br>
 <center>
-<b>Selected Pages: 
+<b>Selected Pages:
 <input id="totPageCntFld" type="text" size="10" value="77" onfocus="this.blur();">
-&nbsp;&nbsp;Selected Size: 
+&nbsp;&nbsp;Selected Size:
 <input id="totByteSizeFld" type="text" size="10" value="2.17 MB" onfocus="this.blur();">
  </b>
 
@@ -85,52 +85,52 @@ var totNumByte = 0.0;
 var maxSize = 0;
 function sumDocSelected(aField, numPage, numByte, docId) {
    console.log('function sumDocSelected(%d, %d, %d, %d)', aField, numPage, numByte, docId);
-   console.log('totNumByte=%d', totNumByte); 
-   console.log('totNumPage=%d', totNumPage); 
-   console.log('dlsIdArr=%s', dlsIdArr); 
+   console.log('totNumByte=%d', totNumByte);
+   console.log('totNumPage=%d', totNumPage);
+   console.log('dlsIdArr=%s', dlsIdArr);
    pageLoadIndexUpdate();
    if (aField.checked == true) {
      console.log('Checkbox with docId=%d is checked', docId);
-     console.log('Before add - dlsIdArr=%s', dlsIdArr); 
-     dlsIdArr.push(docId);     console.log('After add - dlsIdArr=%s', dlsIdArr); 
+     console.log('Before add - dlsIdArr=%s', dlsIdArr);
+     dlsIdArr.push(docId);     console.log('After add - dlsIdArr=%s', dlsIdArr);
      totNumPage = parseInt(totNumPage) + parseInt(numPage);
      totNumByte = parseInt(totNumByte) + parseInt(numByte);
    } else {
      console.log('Checkbox with docId=%d is unchecked', docId);
-     console.log('Before delete - dlsIdArr=%s', dlsIdArr); 
+     console.log('Before delete - dlsIdArr=%s', dlsIdArr);
      var dlsIndex = dlsIdArr.indexOf(docId);
      dlsIdArr.splice(dlsIndex, 1);
-     console.log('After delete - dlsIdArr=%s', dlsIdArr); 
+     console.log('After delete - dlsIdArr=%s', dlsIdArr);
      totNumPage = parseInt(totNumPage) - parseInt(numPage);
      totNumByte = parseInt(totNumByte) - parseInt(numByte);
    }
-   console.log('Before - totPageCntFld=%s', document.getElementById('totPageCntFld').value); 
-   console.log('Before - totByteSizeFld=%s', document.getElementById('totByteSizeFld').value); 
-   console.log('Setting - totNumByte=%d', totNumByte); 
-   console.log('Setting - totNumPage=%d', totNumPage); 
+   console.log('Before - totPageCntFld=%s', document.getElementById('totPageCntFld').value);
+   console.log('Before - totByteSizeFld=%s', document.getElementById('totByteSizeFld').value);
+   console.log('Setting - totNumByte=%d', totNumByte);
+   console.log('Setting - totNumPage=%d', totNumPage);
    document.getElementById('totPageCntFld').value = totNumPage;
    document.getElementById('totByteSizeFld').value = getSize(totNumByte);
-   console.log('After - totPageCntFld=%s', document.getElementById('totPageCntFld').value); 
-   console.log('After - totByteSizeFld=%s', document.getElementById('totByteSizeFld').value); 
+   console.log('After - totPageCntFld=%s', document.getElementById('totPageCntFld').value);
+   console.log('After - totByteSizeFld=%s', document.getElementById('totByteSizeFld').value);
    document.dktEntry.dynaTotPageFld.value = totNumPage;
    document.dktEntry.dynaTotBytesFld.value = getSize(totNumByte);
-   console.log('After - dynaTotPageFld=%s', document.dktEntry.dynaTotPageFld.value); 
-   console.log('After - dynaTotBytesFld=%s', document.dktEntry.dynaTotBytesFld.value); 
-   tooManyDocs(totNumByte > 20971520); 
+   console.log('After - dynaTotPageFld=%s', document.dktEntry.dynaTotPageFld.value);
+   console.log('After - dynaTotBytesFld=%s', document.dktEntry.dynaTotBytesFld.value);
+   tooManyDocs(totNumByte > 20971520);
    return false;
 }
 
 function pageLoadIndexUpdate() {
-   console.log('ENTER pageLoadIndexUpdate()..'); 
+   console.log('ENTER pageLoadIndexUpdate()..');
    var pageLoadIndex = document.getElementById('pageLoadHFld').value;
-   console.log('pageLoadIndex=%s', pageLoadIndex); 
+   console.log('pageLoadIndex=%s', pageLoadIndex);
    if (pageLoadIndex == 1) {
      console.log('Updating totNumByte and totNumPage counts, done only the first time after page load.');
      totNumByte = document.getElementById('totBytesHFld').value;
      totNumPage = document.getElementById('totPageHFld').value;
-     console.log('Updated - totNumByte=%s', totNumByte); 
-     console.log('Updated - totNumPage=%s', totNumPage); 
-     document.getElementById('pageLoadHFld').value = 2; 
+     console.log('Updated - totNumByte=%s', totNumByte);
+     console.log('Updated - totNumPage=%s', totNumPage);
+     document.getElementById('pageLoadHFld').value = 2;
    }
    return false;
 }
@@ -149,8 +149,8 @@ function hideOpts() {
 
 function ProcessForm(uChoice) {
    pageLoadIndexUpdate();
-   console.log('ProcessForm - totNumByte=%d', totNumByte); 
-   console.log('ProcessForm - dlsIdArr=%s', dlsIdArr); 
+   console.log('ProcessForm - totNumByte=%d', totNumByte);
+   console.log('ProcessForm - dlsIdArr=%s', dlsIdArr);
    if (totNumByte == 0) {
      alert('No entries with accessible documents were selected. Please select the desired documents before proceeding.');
      return false;
