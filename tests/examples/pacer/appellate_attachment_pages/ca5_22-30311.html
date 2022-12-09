@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://ecf.ca5.uscourts.gov/n/beam/servlet/TransportRoom -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><title>Document</title></head>
+<body bgcolor="#DAF4F0">
+<table border="0" align="center">
+<tbody><tr><th align="center"><b>3 Documents are attached to this filing</b><br><br></th></tr>
+</tbody></table>
+<table border="1" align="center" cellpadding="5">
+<tbody><tr><td>
+  <table border="0" cellpadding="5">
+ <tbody><tr><th align="center" colspan="3">Document</th> <th align="center">Description</th><th align="center">Pages</th></tr>
+<tr><td align="center"><input class="selDocCl" type="checkbox" name="md" value="6485029" onclick="sumDocSelected(this,4,10293, 6485029)" checked=""></td><td align="center">1</td><td align="center"><a href="https://ecf.ca5.uscourts.gov/docs1/00516485029" onclick="return doDocPostURL(&#39;00516485029&#39;)"><img title="Open Document" width="13" height="15" border="2" src="./Att page ca5_files/document.gif" alt="Open document"></a>&nbsp;</td><td>Motion Filed on Behalf of Party</td><td align="center">4</td></tr>
+<tr><td align="center"><input class="selDocCl" type="checkbox" name="md" value="6485030" onclick="sumDocSelected(this,30,113319, 6485030)" checked=""></td><td align="center">2</td><td align="center"><a href="https://ecf.ca5.uscourts.gov/docs1/00516485030" onclick="return doDocPostURL(&#39;00516485030&#39;)"><img title="Open Document" width="13" height="15" border="2" src="./Att page ca5_files/document.gif" alt="Open document"></a>&nbsp;</td><td>Appellant Brief</td><td align="center">30</td></tr>
+<tr><td align="center"><input class="selDocCl" type="checkbox" name="md" value="6485031" onclick="sumDocSelected(this,43,2155547, 6485031)" checked=""></td><td align="center">3</td><td align="center"><a href="https://ecf.ca5.uscourts.gov/docs1/00516485031" onclick="return doDocPostURL(&#39;00516485031&#39;)"><img title="Open Document" width="13" height="15" border="2" src="./Att page ca5_files/document.gif" alt="Open document"></a>&nbsp;</td><td>Record Excerpts</td><td align="center">43</td></tr>
+  </tbody></table>
+</td></tr>
+</tbody></table>
+<br>
+<center>
+<b>Selected Pages: 
+<input id="totPageCntFld" type="text" size="10" value="77" onfocus="this.blur();">
+&nbsp;&nbsp;Selected Size: 
+<input id="totByteSizeFld" type="text" size="10" value="2.17 MB" onfocus="this.blur();">
+ </b>
+
+<br><b>Totals reflect accessible documents only and do not include unauthorized restricted documents.</b>
+ <br><br>
+<div id="opts"><form name="dktEntry" action="https://ecf.ca5.uscourts.gov/n/beam/servlet/TransportRoom"><input value="y" type="checkbox" name="incPdfFooter"><b>Include Page Numbers</b><br>
+<input name="viewSelBtn" value="View Selected" type="button" onclick="ProcessForm(&quot;view&quot;)">
+<input type="hidden" id="totPageHFld" value="77">
+<input type="hidden" id="totBytesHFld" value="2279159">
+<input type="hidden" id="dynaTotPageId" name="dynaTotPageFld" value="77">
+<input type="hidden" id="dynaTotBytesId" name="dynaTotBytesFld" value="2279159">
+<input type="hidden" id="pageLoadHFld" value="1">
+</form>
+</div><div id="noOpts" style="visibility:hidden"><b>Selected documents cannot be combined due to size. Please remove some selections to be below 20 MB.</b></div><script type="text/javascript">
+<!--
+var winOptions = 'location=no,resizable,toolbar,status,scrollbars';
+var winTarget = '_blank';
+function doDocPostURL(dls) {
+   // This use of a function when a user clicks a document
+   // link was done so params aren't in copied doc hyperlinks.
+   // This allows user to right click & get the URL for copying doc
+   // links, but still gets params back to the server as needed
+   var aWin = window.open('TransportRoom?servlet=ShowDoc&caseId=208282&dktType=dktPublic&dls_id='+dls+'&caseId=208282',winTarget,winOptions,false);
+   return false;
+}
+
+window.onload = function() {
+   console.log('ENTER onload()');
+}
+
+window.onpageshow = function(event) {
+   console.log('ENTER onpageshow()..');
+   console.log('performance.navigation.type=%s', performance.navigation.type);
+   if(performance.navigation.type == 2){
+     console.log('Executing - location.reload(true)');
+     location.reload(true);
+   }
+}
+
+var dlsIdArr = [6485029,6485030,6485031];
+function getSize(bytes) {
+   console.log('function getSize(%s)', bytes);
+   if (bytes >= 1048576) {
+     return Math.round(bytes/1048576*100)/100 + ' MB';
+   }
+   return Math.round(bytes/1024*100)/100 + ' KB';
+}
+function tooManyDocs(disable) {
+   if (disable) {
+     hideOpts();
+     if (document.dktEntry.viewSelBtn.disabled == false) {
+       document.dktEntry.viewSelBtn.disabled = true;
+       alert('Too many documents are selected: ' + getSize(totNumByte) + '. Please remove some selections to be below 20 MB.');
+     }
+   } else {
+     showOpts();
+     document.dktEntry.viewSelBtn.disabled = false;
+   }
+}
+
+var totNumPage = 0.0;
+var totNumByte = 0.0;
+var maxSize = 0;
+function sumDocSelected(aField, numPage, numByte, docId) {
+   console.log('function sumDocSelected(%d, %d, %d, %d)', aField, numPage, numByte, docId);
+   console.log('totNumByte=%d', totNumByte); 
+   console.log('totNumPage=%d', totNumPage); 
+   console.log('dlsIdArr=%s', dlsIdArr); 
+   pageLoadIndexUpdate();
+   if (aField.checked == true) {
+     console.log('Checkbox with docId=%d is checked', docId);
+     console.log('Before add - dlsIdArr=%s', dlsIdArr); 
+     dlsIdArr.push(docId);     console.log('After add - dlsIdArr=%s', dlsIdArr); 
+     totNumPage = parseInt(totNumPage) + parseInt(numPage);
+     totNumByte = parseInt(totNumByte) + parseInt(numByte);
+   } else {
+     console.log('Checkbox with docId=%d is unchecked', docId);
+     console.log('Before delete - dlsIdArr=%s', dlsIdArr); 
+     var dlsIndex = dlsIdArr.indexOf(docId);
+     dlsIdArr.splice(dlsIndex, 1);
+     console.log('After delete - dlsIdArr=%s', dlsIdArr); 
+     totNumPage = parseInt(totNumPage) - parseInt(numPage);
+     totNumByte = parseInt(totNumByte) - parseInt(numByte);
+   }
+   console.log('Before - totPageCntFld=%s', document.getElementById('totPageCntFld').value); 
+   console.log('Before - totByteSizeFld=%s', document.getElementById('totByteSizeFld').value); 
+   console.log('Setting - totNumByte=%d', totNumByte); 
+   console.log('Setting - totNumPage=%d', totNumPage); 
+   document.getElementById('totPageCntFld').value = totNumPage;
+   document.getElementById('totByteSizeFld').value = getSize(totNumByte);
+   console.log('After - totPageCntFld=%s', document.getElementById('totPageCntFld').value); 
+   console.log('After - totByteSizeFld=%s', document.getElementById('totByteSizeFld').value); 
+   document.dktEntry.dynaTotPageFld.value = totNumPage;
+   document.dktEntry.dynaTotBytesFld.value = getSize(totNumByte);
+   console.log('After - dynaTotPageFld=%s', document.dktEntry.dynaTotPageFld.value); 
+   console.log('After - dynaTotBytesFld=%s', document.dktEntry.dynaTotBytesFld.value); 
+   tooManyDocs(totNumByte > 20971520); 
+   return false;
+}
+
+function pageLoadIndexUpdate() {
+   console.log('ENTER pageLoadIndexUpdate()..'); 
+   var pageLoadIndex = document.getElementById('pageLoadHFld').value;
+   console.log('pageLoadIndex=%s', pageLoadIndex); 
+   if (pageLoadIndex == 1) {
+     console.log('Updating totNumByte and totNumPage counts, done only the first time after page load.');
+     totNumByte = document.getElementById('totBytesHFld').value;
+     totNumPage = document.getElementById('totPageHFld').value;
+     console.log('Updated - totNumByte=%s', totNumByte); 
+     console.log('Updated - totNumPage=%s', totNumPage); 
+     document.getElementById('pageLoadHFld').value = 2; 
+   }
+   return false;
+}
+
+function showOpts() {
+   document.getElementById('opts').style.pointerEvents = 'auto';
+   document.getElementById('opts').style.opacity = '1';
+   document.getElementById('noOpts').style.visibility = 'hidden';
+}
+
+function hideOpts() {
+   document.getElementById('opts').style.pointerEvents = 'none';
+   document.getElementById('opts').style.opacity = '0.4';
+   document.getElementById('noOpts').style.visibility = 'visible';
+}
+
+function ProcessForm(uChoice) {
+   pageLoadIndexUpdate();
+   console.log('ProcessForm - totNumByte=%d', totNumByte); 
+   console.log('ProcessForm - dlsIdArr=%s', dlsIdArr); 
+   if (totNumByte == 0) {
+     alert('No entries with accessible documents were selected. Please select the desired documents before proceeding.');
+     return false;
+   }
+   if(uChoice=='view'){
+     var incFoot = '';
+     if (document.dktEntry.incPdfFooter.checked) {
+       incFoot = 'y';
+     }
+     window.location='TransportRoom?servlet=ShowDocMulti&caseId=208282&dktType=dktPublic&outputType=doc&d=9947188&outputForm=view&incPdfFooter='+incFoot+'&dls='+dlsIdArr.join();
+   }
+   return false;
+}
+
+//-->
+</script>
+</center></body></html>

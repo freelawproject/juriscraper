@@ -108,18 +108,20 @@ class AppellateAttachmentPage(BaseReport):
         return result
 
     def _get_main_pacer_doc_id(self):
-        """Extract the main_document_id.
+        """Extract the main pacer_doc_id.
 
         The DLS ID  This should be used to identify
         document number row.
 
         In appellate attachment page, this is easy to extract with an XPath.
-        :return: main_document_id
+        :return: main pacer_doc_id
         """
         try:
             rows = self.tree.xpath("//tbody/tr/td/a/@href")
-            pre_doc = sorted(row.split("/")[-1] for row in rows)[0]
-            return f"{pre_doc[:3]}0{pre_doc[4:]}"
+            pacer_doc_ids = []
+            for url_row in rows:
+                pacer_doc_ids.append(get_pacer_doc_id_from_doc1_url(url_row))
+            return sorted(pacer_doc_ids)[0]
         except IndexError:
             return None
 
@@ -142,20 +144,20 @@ class AppellateAttachmentPage(BaseReport):
         :return: Row description
         :type: unicode
         """
-        description_text_nodes = row.xpath(".//td")
+        description_text_nodes = row.xpath(".//td/text()")
         if not description_text_nodes:
             return ""
-        return force_unicode(description_text_nodes[2].text_content().strip())
+        return force_unicode(description_text_nodes[2].strip())
 
     @staticmethod
     def _get_page_count_from_tr(row):
         """Take a row from the attachment table and return the page count as an
         int extracted from the cell specified by index.
         """
-        description_text_nodes = row.xpath(".//td")
+        description_text_nodes = row.xpath(".//td/text()")
         if not description_text_nodes:
             return None
-        return int(description_text_nodes[3].text_content().strip())
+        return int(description_text_nodes[3].strip())
 
     @staticmethod
     def _get_pacer_doc_id(row):
