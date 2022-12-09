@@ -1,7 +1,7 @@
 import pprint
 import re
 import sys
-from typing import Dict
+from typing import Dict, Optional
 
 from lxml import html
 
@@ -125,24 +125,20 @@ class AppellateAttachmentPage(BaseReport):
         except IndexError:
             return None
 
-    def _get_attachment_number(self, row) -> int:
-        """ "Return the attachment number for an item.
+    def _get_attachment_number(self, row: html.HtmlElement) -> int:
+        """Return the attachment number for an item.
 
         :param row: Table row as an lxml element
-        :type: lxml HTML element
         :return: Attachment number for row
-        :type: int
         """
         number = int(row.xpath(".//td/text()")[0].strip())
         return number
 
-    def _get_description_from_tr(self, row):
+    def _get_description_from_tr(self, row: html.HtmlElement) -> str:
         """Get the description from the row
 
         :param row: Table row
-        :type: lxml HTML element
-        :return: Row description
-        :type: unicode
+        :return: Attachment description
         """
         description_text_nodes = row.xpath(".//td/text()")
         if not description_text_nodes:
@@ -150,9 +146,12 @@ class AppellateAttachmentPage(BaseReport):
         return force_unicode(description_text_nodes[2].strip())
 
     @staticmethod
-    def _get_page_count_from_tr(row):
+    def _get_page_count_from_tr(row: html.HtmlElement) -> Optional[int]:
         """Take a row from the attachment table and return the page count as an
         int extracted from the cell specified by index.
+
+        :param row: Table row as an lxml element
+        :return: Attachment page count
         """
         description_text_nodes = row.xpath(".//td/text()")
         if not description_text_nodes:
@@ -160,9 +159,12 @@ class AppellateAttachmentPage(BaseReport):
         return int(description_text_nodes[3].strip())
 
     @staticmethod
-    def _get_pacer_doc_id(row):
+    def _get_pacer_doc_id(row: html.HtmlElement) -> Optional[str]:
         """Take in a row from the attachment table and return the pacer_doc_id
         for the item in that row. Return None if the ID cannot be found.
+
+        :param row: Table row as an lxml element
+        :return: Attachment pacer_doc_id
         """
         try:
             url = row.xpath(".//a")[0]
@@ -176,7 +178,7 @@ class AppellateAttachmentPage(BaseReport):
             doc1_url = url.xpath("./@href")[0]
             return get_pacer_doc_id_from_doc1_url(doc1_url)
 
-    def _get_pacer_case_id(self):
+    def _get_pacer_case_id(self) -> str:
         """Get the pacer_case_id value by inspecting the function scripts
 
         :returns str: The pacer_case_id value
@@ -186,10 +188,11 @@ class AppellateAttachmentPage(BaseReport):
         if m:
             return m.group(1)
 
-    def _get_pacer_seq_no(self):
+    def _get_pacer_seq_no(self) -> str:
         """Get pacer sequence number.
-
         This value corresponds to the value in the docket TR
+
+        :return: The pacer_seq_no
         """
         script_html = html.tostring(self.tree.xpath(".//script")[0]).decode()
         m = re.search(r"[?&]d=(\d+)&outputForm", script_html, flags=re.I)
