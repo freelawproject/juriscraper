@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.27 - 2022-12-13**
+
+Features:
+
+ - Added AppellateAttachmentPage report to parse appellate attachment pages.
+
+Changes:
+
+- N/A
+
+## Past
+
 **2.5.26 - 2022-11-15**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - Fix download PDF documents returned after a redirection.
-
-## Past
 
 **2.5.25 - 2022-11-07**
 
