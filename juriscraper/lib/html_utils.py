@@ -116,7 +116,7 @@ def get_clean_body_content(content, remove_extra_tags=[]):
         )
 
 
-def strip_bad_html_tags_insecure(tree):
+def strip_bad_html_tags_insecure(tree, remove_scripts=True):
     """Remove bad HTML that isn't used by our parsers.
 
     This is insecure in the sense that it does not strip all JavaScript. lxml
@@ -126,7 +126,9 @@ def strip_bad_html_tags_insecure(tree):
 
     :param tree: A tree you wish to cleanup
     :type tree: lxml.html.HtmlElement
-    :return the cleaned HTML str
+    :param remove_scripts: Do we want to remove scripts
+    :type remove_scripts: bool
+    :return the cleaned HTML string
     """
     assert isinstance(tree, lxml.html.HtmlElement), (
         "`tree` must be of type HtmlElement, but is of type %s. Cleaner() can "
@@ -148,7 +150,7 @@ def strip_bad_html_tags_insecure(tree):
         remove_unknown_tags=False,
         allow_tags=set(lxml.html.defs.tags) | {lxml.etree.Comment},
         # Things we *can* actually remove
-        scripts=True,
+        scripts=remove_scripts,
         style=True,
         links=True,
         embedded=True,
