@@ -168,5 +168,6 @@ __all__ = [
     "washctapp_u",
     "wis",
     "wva",
+    "wvactapp",
     "wyo",
 ]
