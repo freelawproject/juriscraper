@@ -4,7 +4,7 @@ from typing import Optional
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import clean_string, convert_date_string, force_unicode
 from .reports import BaseReport
-from .utils import make_docs1_url
+from .utils import is_pdf, make_docs1_url
 
 logger = make_default_logger()
 
@@ -34,6 +34,11 @@ class DownloadConfirmationPage(BaseReport):
 
         logger.info("Querying the confirmation page endpoint at URL: %s", url)
         self.response = self.session.get(url)
+        if is_pdf(self.response):
+            # Sometimes the PDF document is returned without showing the
+            # download confirmation page, not a valid page to parse.
+            self.is_valid = False
+            return
         self.parse()
 
     @property
