@@ -270,9 +270,11 @@ class PacerDownloadConfirmationPageTest(unittest.TestCase):
         self.session.login()
         self.report = DownloadConfirmationPage("ca8", self.session)
         self.report_att = DownloadConfirmationPage("ca5", self.session)
+        self.report_pdf = DownloadConfirmationPage("ca11", self.session)
         self.pacer_doc_id = "00812590792"
         self.no_confirmation_page_pacer_doc_id = "00802251695"
         self.pacer_doc_id_att = "00506470276"
+        self.pacer_doc_id_pdf = "011012534985"
 
     @SKIP_IF_NO_PACER_LOGIN
     def test_get_document_number(self):
@@ -304,4 +306,12 @@ class PacerDownloadConfirmationPageTest(unittest.TestCase):
         dictionary is returned"""
         self.report.query(self.no_confirmation_page_pacer_doc_id)
         data_report = self.report.data
+        self.assertEqual(data_report, {})
+
+    @SKIP_IF_NO_PACER_LOGIN
+    def test_no_confirmation_page_pdf_returned(self):
+        """If the download confirmation page is not available when the PDF is
+        returned directly, no valid page to parse."""
+        self.report_pdf.query(self.pacer_doc_id_pdf)
+        data_report = self.report_pdf.data
         self.assertEqual(data_report, {})
