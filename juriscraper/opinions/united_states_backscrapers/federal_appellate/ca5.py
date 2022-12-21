@@ -112,7 +112,7 @@ class Site(OpinionSiteLinear):
                 )
 
     def _set_dates(self, case_date):
-        """"""
+        """Set the backscrape dates"""
         d1 = case_date - timedelta(days=self.interval)
         e1 = case_date
 
@@ -140,7 +140,7 @@ class Site(OpinionSiteLinear):
         ] = "20"
 
     def _update_query_params(self, html):
-        """"""
+        """Update the query parameters for next page"""
         self.data["__VIEWSTATE"] = html.xpath(self.vs_xpath)[0].attrib["value"]
         self.data["__EVENTVALIDATION"] = html.xpath(self.ev_xpath)[0].attrib[
             "value"
@@ -153,7 +153,7 @@ class Site(OpinionSiteLinear):
         ].attrib["value"]
 
     def _update_pagination_data(self, page_content, current):
-        """"""
+        """Update subsequent pagination data if required."""
         target = self.html.xpath("//input[@class='rgPageNext']")[0].attrib[
             "name"
         ]
