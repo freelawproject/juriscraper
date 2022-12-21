@@ -1,187 +1,148 @@
 from datetime import date, datetime, timedelta
 
 from dateutil.rrule import DAILY, rrule
-from lxml import html
-from selenium.common.exceptions import NoSuchElementException
+from lxml.html import fromstring
 
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteWebDriven):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = "http://www.ca5.uscourts.gov/electronic-case-filing/case-information/current-opinions"
         self.court_id = self.__module__
-        self.interval = 5
-        self.case_date = datetime.today()
+        self.interval = 2
+        self.data = {}
+        self.headers = {
+            "Host": "www.ca5.uscourts.gov",
+            "Origin": "http://www.ca5.uscourts.gov",
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Safari/605.1.15",
+            "Referer": "http://www.ca5.uscourts.gov/electronic-case-filing/case-information/current-opinions",
+            "Connection": "keep-alive",
+        }
+
+        self.start_date = None
+        self.end_date = None
+
         self.back_scrape_iterable = [
             i.date()
             for i in rrule(
                 DAILY,
                 interval=self.interval,  # Every interval days
-                dtstart=date(1992, 5, 14),
-                until=date(2015, 1, 1),
+                dtstart=date(2022, 8, 11),
+                until=date(2022, 8, 13),
             )
         ]
-        self.uses_selenium = True
 
-    def _download(self, request_dict={}):
-        if self.test_mode_enabled():
-            html_tree_list = [super()._download(request_dict=request_dict)]
-            self.records_nr = len(
-                html_tree_list[0].xpath(
-                    "//tr[contains(concat('', @id, ''), 'ctl00_Body_C010_ctl00_ctl00_radGridOpinions_ctl00')]"
-                )
+    def _download(self):
+        r = self.request["session"].get(self.url)
+        vs_xpath = "//input[@name='__VIEWSTATE']"
+        ev_xpath = "//input[@name='__EVENTVALIDATION']"
+        et_xpath = "//input[@name='__EVENTTARGET']"
+        vsg_xpath = "//input[@name='__VIEWSTATEGENERATOR']"
+        x = "ctl00$Body$C010$ctl00$ctl00"
+        y = "ctl00_Body_C010_ctl00_ctl00"
+
+        self.data[f"{x}$startDate$dateInput"] = self.d2
+        self.data[f"{x}$endDate$dateInput"] = self.e2
+        self.data[f"{y}_startDate_dateInput_ClientState"] = self.start_date
+        self.data[f"{y}_endDate_dateInput_ClientState"] = self.end_date
+        self.data[f"{x}$btnSearch"] = "Search"
+        self.data[
+            f"{x}$radGridOpinions$ctl00$ctl03$ctl01$PageSizeComboBox"
+        ] = "20"
+
+        html = fromstring(r.text)
+        self.data["__VIEWSTATE"] = html.xpath(vs_xpath)[0].attrib["value"]
+        self.data["__EVENTVALIDATION"] = html.xpath(ev_xpath)[0].attrib[
+            "value"
+        ]
+        self.data["__EVENTTARGET"] = html.xpath(et_xpath)[0].attrib["value"]
+        self.data["__VIEWSTATEGENERATOR"] = html.xpath(vsg_xpath)[0].attrib[
+            "value"
+        ]
+
+        # Get first set of dates
+        r = self.request["session"].post(self.url, data=self.data)
+        return fromstring(r.text)
+
+    def _process_html(self) -> None:
+        """Process the html and extract out the opinions
+
+        :return: None
+        """
+        x = "ctl00$Body$C010$ctl00$ctl00"
+        y = "ctl00_Body_C010_ctl00_ctl00"
+        vs_xpath = "//input[@name='__VIEWSTATE']"
+        ev_xpath = "//input[@name='__EVENTVALIDATION']"
+
+        key = f"{y}_radGridOpinions_ctl00"
+        more_rows = self.html.xpath(f"//tr[contains(@id, '{key}')]")
+        for row in more_rows:
+            self.cases.append(
+                {
+                    "date": row.xpath(".//td[3]")[0].text_content(),
+                    "name": row.xpath(".//td[4]")[0].text_content(),
+                    "url": row.xpath(".//td[2]/a")[0].attrib["href"],
+                    "docket": row.xpath(".//td[2]/a")[0].attrib["title"],
+                    "status": "Published"
+                    if row.xpath(".//td[5]")[0].text_content() == "pub"
+                    else "Unpublished",
+                }
             )
-            return html_tree_list
-        else:
-            logger.info("Running Selenium browser...")
-            self.initiate_webdriven_session()
-            self.wait_for_id("ctl00_Body_C010_ctl00_ctl00_endDate_dateInput")
 
-            start_date = self.find_element_by_id(
-                "ctl00_Body_C010_ctl00_ctl00_startDate_dateInput"
-            )
-            start_date.send_keys(
-                (self.case_date - timedelta(days=self.interval)).strftime(
-                    "%m/%d/%Y"
-                )
-            )
+        del self.data[f"{x}$btnSearch"]
+        rad_script = f"{x}${x}$radGridOpinionsPanel|{x}$radGridOpinions$ctl00$ctl03$ctl01$ctl10"
 
-            end_date = self.find_element_by_id(
-                "ctl00_Body_C010_ctl00_ctl00_endDate_dateInput"
-            )
-            end_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
+        # switch to search mode for pagination
+        self.data[f"{x}$searchMode"] = "search"
+        self.data["__ASYNCPOST"] = "true"
+        self.data["RadAJAXControlID"] = f"{y}_radAjaxManager1"
+        self.data["ctl00$RadScriptManager1"] = rad_script
 
-            submit = self.find_element_by_id("Body_C010_ctl00_ctl00_btnSearch")
-            submit.click()
+        last = self.html.xpath(
+            "//div[@class='rgWrap rgNumPart']/a/span/text()"
+        )[-1]
 
-            self.wait_for_id(
-                "ctl00_Body_C010_ctl00_ctl00_radGridOpinions_ctl00"
-            )
+        current = self.html.xpath("//a[@class='rgCurrentPage']/span/text()")[0]
 
-            self.status = 200
-
-            try:
-                nr_of_pages = self.find_element_by_xpath(
-                    '//div[contains(concat(" ", @class, " "), "rgInfoPart")]/strong[2]'
-                )
-                records_nr = self.find_element_by_xpath(
-                    '//div[contains(concat(" ", @class, " "), "rgInfoPart")]/strong[1]'
-                )
-                self.records_nr = int(records_nr.text)
-                nr_of_pages = int(nr_of_pages.text)
-            except NoSuchElementException:
-                try:
-                    self.records_nr = len(
-                        self.find_elements_by_xpath(
-                            "//tr[contains(concat('', @id, ''), 'ctl00_Body_C010_ctl00_ctl00_radGridOpinions_ctl00')]"
-                        )
-                    )
-                    nr_of_pages = 1
-                except NoSuchElementException:
-                    self.webdriver.quit()
-                    return []
-            html_pages = []
-            logger.info(f"records: {self.records_nr}, pages: {nr_of_pages}")
-            if nr_of_pages == 1:
-                text = self.webdriver.page_source
-                self.webdriver.quit()
-
-                html_tree = html.fromstring(text)
-                html_tree.make_links_absolute(self.url)
-
-                remove_anchors = lambda url: url.split("#")[0]
-                html_tree.rewrite_links(remove_anchors)
-                html_pages.append(html_tree)
+        # All remaining pages
+        while last != current:
+            target = self.html.xpath("//input[@class='rgPageNext']")[0].attrib[
+                "name"
+            ]
+            if int(current) > 1:
+                viewstate = r.text.split("__VIEWSTATE|")[1].split("|")[0]
+                valiation = r.text.split("__EVENTVALIDATION|")[1].split("|")[0]
             else:
-                logger.info(
-                    f"Paginating through {nr_of_pages} pages of results."
-                )
-                logger.info("  Getting page 1")
-                text = self.webdriver.page_source
+                viewstate = self.html.xpath(vs_xpath)[0].attrib["value"]
+                valiation = self.html.xpath(ev_xpath)[0].attrib["value"]
 
-                html_tree = html.fromstring(text)
-                html_tree.make_links_absolute(self.url)
+            self.data["__EVENTTARGET"] = target
+            self.data["__VIEWSTATE"] = viewstate
+            self.data["__EVENTVALIDATION"] = valiation
 
-                remove_anchors = lambda url: url.split("#")[0]
-                html_tree.rewrite_links(remove_anchors)
-                html_pages.append(html_tree)
-
-                for i in range(nr_of_pages - 1):
-                    logger.info(f"  Getting page {i + 2}")
-                    next_page = self.find_element_by_class_name("rgPageNext")
-                    next_page.click()
-                    self.webdriver.implicitly_wait(5)
-
-                    text = self.webdriver.page_source
-
-                    html_tree = html.fromstring(text)
-                    html_tree.make_links_absolute(self.url)
-
-                    remove_anchors = lambda url: url.split("#")[0]
-                    html_tree.rewrite_links(remove_anchors)
-                    html_pages.append(html_tree)
-                self.webdriver.quit()
-            return html_pages
-
-    def _get_case_names(self):
-        case_names = []
-        for html_tree in self.html:
-            page_records_count = self._get_opinion_count(html_tree)
-            for record in range(page_records_count):
-                path = "id('ctl00_Body_C010_ctl00_ctl00_radGridOpinions_ctl00__{n}')/td[4]/text()".format(
-                    n=record
-                )
-                case_names.append(html_tree.xpath(path)[0])
-        return case_names
-
-    def _get_download_urls(self):
-        for html_tree in self.html:
-            page_records_count = self._get_opinion_count(html_tree)
-            for record in range(page_records_count):
-                path = "id('ctl00_Body_C010_ctl00_ctl00_radGridOpinions_ctl00__{n}')/td[2]/a/@href".format(
-                    n=record
-                )
-                yield html_tree.xpath(path)[0]
-
-    def _get_case_dates(self):
-        for html_tree in self.html:
-            page_records_count = self._get_opinion_count(html_tree)
-            for record in range(page_records_count):
-                path = "id('ctl00_Body_C010_ctl00_ctl00_radGridOpinions_ctl00__{n}')/td[3]/text()".format(
-                    n=record
-                )
-                yield datetime.strptime(html_tree.xpath(path)[0], "%m/%d/%Y")
-
-    def _get_docket_numbers(self):
-        for html_tree in self.html:
-            page_records_count = self._get_opinion_count(html_tree)
-            for record in range(page_records_count):
-                path = "id('ctl00_Body_C010_ctl00_ctl00_radGridOpinions_ctl00__{n}')/td[2]/a/text()".format(
-                    n=record
-                )
-                yield html_tree.xpath(path)[0]
-
-    def _get_precedential_statuses(self):
-        for html_tree in self.html:
-            page_records_count = self._get_opinion_count(html_tree)
-            for record in range(page_records_count):
-                path = "id('ctl00_Body_C010_ctl00_ctl00_radGridOpinions_ctl00__{n}')/td[5]/text()".format(
-                    n=record
-                )
-                yield "Unpublished" if "unpub" in html_tree.xpath(path)[
-                    0
-                ] else "Published"
-
-    @staticmethod
-    def _get_opinion_count(html_tree):
-        return int(
-            html_tree.xpath(
-                "count(//tr[contains(concat('', @id, ''), 'ctl00_Body_C010_ctl00_ctl00_radGridOpinions_ctl00')])"
+            r = self.request["session"].post(
+                self.url, headers=self.headers, data=self.data
             )
-        )
+            self.html = fromstring(r.text)
+            more_rows = self.html.xpath(f"//tr[contains(@id, '{key}')]")
+            for row in more_rows:
+                self.cases.append(
+                    {
+                        "date": row.xpath(".//td[3]")[0].text_content(),
+                        "name": row.xpath(".//td[4]")[0].text_content(),
+                        "url": row.xpath(".//td[2]/a")[0].attrib["href"],
+                        "docket": row.xpath(".//td[2]/a")[0].attrib["title"],
+                        "status": "Published"
+                        if row.xpath(".//td[5]")[0].text_content() == "pub"
+                        else "Unpublished",
+                    }
+                )
+            current = self.html.xpath(
+                "//a[@class='rgCurrentPage']/span/text()"
+            )[0]
 
     def _download_backwards(self, d):
         self.case_date = d
@@ -192,8 +153,19 @@ class Site(OpinionSiteWebDriven):
                 self.case_date,
             )
         )
-        self.html = self._download()
-        if self.html is not None:
-            # Setting status is important because it prevents the download
-            # function from being run a second time by the parse method.
-            self.status = 200
+        d1 = self.case_date - timedelta(days=self.interval)
+        self.d2 = datetime.strftime(d1, "%m/%d/%Y")
+        e1 = self.case_date
+        self.e2 = datetime.strftime(e1, "%m/%d/%Y")
+        self.start_date = str(
+            {
+                "valueAsString": f"{d1}-00-00-00",
+                "lastSetTextBoxValue": f"{self.d2}",
+            }
+        )
+        self.end_date = str(
+            {
+                "valueAsString": f"{e1}-00-00-00",
+                "lastSetTextBoxValue": f"{self.e2}",
+            }
+        )
