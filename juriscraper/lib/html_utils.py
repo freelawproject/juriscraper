@@ -135,10 +135,12 @@ def strip_bad_html_tags_insecure(
         text, str
     ), f"`text` must be of type str, but is of type {type(text)}."
 
-    # If removing scripts with Cleaner() and the script contains a '<' followed
-    # by any non-space character e.g: '<ca.length' it causes breakage and all
-    # the following content is also removed. To avoid this issue first remove
-    # all the script contents before removing the script tags. See: jpml_1551542
+    # lxml fails to parse a script element that contains a '<' followed by any
+    # non-space character e.g: '<ca.length' which causes breakage. Removing
+    # script elements with this problem through lxml will cause all the
+    # following elements are also removed. To avoid this issue first remove
+    # all the script elements using regex before removing the script tags.
+    # See: jpml_1551542
     if remove_scripts:
         text = re.sub(r"<script.*?>([\s\S]*?)<\/script>", "", text)
 

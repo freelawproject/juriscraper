@@ -1,0 +1,363 @@
+<head><script>(function(){function hookGeo() {
+  //<![CDATA[
+  const WAIT_TIME = 100;
+  const hookedObj = {
+    getCurrentPosition: navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),
+    watchPosition: navigator.geolocation.watchPosition.bind(navigator.geolocation),
+    fakeGeo: true,
+    genLat: 38.883333,
+    genLon: -77.000
+  };
+
+  function waitGetCurrentPosition() {
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        hookedObj.tmp_successCallback({
+          coords: {
+            latitude: hookedObj.genLat,
+            longitude: hookedObj.genLon,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        hookedObj.getCurrentPosition(hookedObj.tmp_successCallback, hookedObj.tmp_errorCallback, hookedObj.tmp_options);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        navigator.getCurrentPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        hookedObj.watchPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  Object.getPrototypeOf(navigator.geolocation).getCurrentPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp_successCallback = successCallback;
+    hookedObj.tmp_errorCallback = errorCallback;
+    hookedObj.tmp_options = options;
+    waitGetCurrentPosition();
+  };
+  Object.getPrototypeOf(navigator.geolocation).watchPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp2_successCallback = successCallback;
+    hookedObj.tmp2_errorCallback = errorCallback;
+    hookedObj.tmp2_options = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${hookGeo}
+          )();<\/script>`;
+
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'updateLocation':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          hookedObj.genLat = message.info.coords.lat;
+          hookedObj.genLon = message.info.coords.lon;
+          hookedObj.fakeGeo = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}hookGeo();})()</script><link rel="shortcut icon" href="/favicon.ico"><title>Pennsylvania Middle District Version 6.1</title>
+</head><body text="000000" bgcolor="F5F5F5"><iframe id="_yuiResizeMonitor" style="position: absolute; visibility: visible; width: 10em; height: 10em; top: -164px; left: -164px; border-width: 0px;"></iframe>
+					<div class="noprint"><div id="topmenu" class="yuimenubar yui-module yui-overlay visible" style="position: static; display: block; z-index: 30; visibility: visible;">
+					<div class="bd"><img src="/graphics/logo-cmecf-sm.png" class="cmecfLogo" id="cmecfLogo" alt="CM/ECF" title="">
+					<ul class="first-of-type">
+					<li class="yuimenubaritem first-of-type yuimenubaritem-hassubmenu" id="yui-gen0" groupindex="0" index="0"><a class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu" href="/cgi-bin/DisplayMenu.pl?CivilEvents">C<u>i</u>vil <div class="spritedownarrow"></div></a></li>
+					<li class="yuimenubaritem yuimenubaritem-hassubmenu" id="yui-gen1" groupindex="0" index="1"><a class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu" href="/cgi-bin/DisplayMenu.pl?CriminalEvents">Crimi<u>n</u>al <div class="spritedownarrow"></div></a></li>
+					<li class="yuimenubaritem" id="yui-gen2" groupindex="0" index="2"><a class="yuimenubaritemlabel" href="/cgi-bin/iquery.pl"><u>Q</u>uery</a></li>
+					<li class="yuimenubaritem yuimenubaritem-hassubmenu" id="yui-gen3" groupindex="0" index="3"><a class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu" href="/cgi-bin/DisplayMenu.pl?Reports"><u>R</u>eports <div class="spritedownarrow"></div></a></li>
+					<li class="yuimenubaritem yuimenubaritem-hassubmenu" id="yui-gen4" groupindex="0" index="4"><a class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu" href="/cgi-bin/DisplayMenu.pl?Utilities"><u>U</u>tilities <div class="spritedownarrow"></div></a></li>
+					<li class="yuimenubaritem" id="yui-gen5" groupindex="0" index="5"><a class="yuimenubaritemlabel" href="javascript:CMECF.MainMenu.searchPrompt();">Sear<u>c</u>h</a></li>
+					<li class="yuimenubaritem" id="yui-gen6" groupindex="0" index="6"><a class="yuimenubaritemlabel" onclick="CMECF.MainMenu.showHelpPage(); return false">Help</a></li>
+
+					<li class="yuimenubaritem" id="yui-gen7" groupindex="0" index="7"><a class="yuimenubaritemlabel" href="/cgi-bin/login.pl?logout">Log Out</a></li></ul><hr class="hrmenuseparator"></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.createMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);}</script> <div id="cmecfMainContent" style="height: 657px;"><input type="hidden" id="cmecfMainContentScroll" value="0">
+				<table width="100%" cellspacing="0" border="0">
+					<tbody><tr><a id="recap-alert-button" role="button" aria-disabled="false" class="disabled" href="https://www.courtlistener.com/alert/docket/new/?pacer_case_id=126546&amp;court_id=pamd"><img src="moz-extension://dbd9924c-4036-ab48-aaf6-30baed40851a/assets/images/grey-16.png"> Alerts not yet Supported for this Docket</a></tr><tr><td align="right"><span>PRSLC</span>,<span>REOPEN</span></td></tr>
+				</tbody></table>
+			<h3 align="center">United States District Court<br>
+Middle District of Pennsylvania (Harrisburg)<br>
+CIVIL DOCKET FOR CASE #: 1:20-cv-01787-MWB-MP</h3>
+<table width="100%" cellspacing="5" border="0"><tbody><tr>
+<td width="60%" valign="top"><br>Alford vs.  Baylor et al<br>
+Assigned to: Chief Judge Matthew W. Brann<br>
+Referred to: Pro Se Law Clerk MP<br>
+Cause: 42:1983 Prisoner Civil Rights</td>
+<td width="40%" valign="top"><br>Date Filed: 09/30/2020<br>
+Jury Demand: Both<br>
+Nature of Suit: 550 Prisoner: Civil Rights<br>
+Jurisdiction: Federal Question</td>
+</tr></tbody></table>
+<table width="100%" cellspacing="5" border="0">
+				<tbody><tr>
+					<td><b><u>Plaintiff                               </u></b></td>
+				</tr>
+
+			<tr>
+				<td width="40%" valign="top">
+					<b>Jhon Lora</b>
+<br><i>TERMINATED: 01/14/2022</i>
+		</td>
+<td width="20%" valign="top" align="right">represented&nbsp;by</td><td width="40%" valign="top"><b>Jhon Lora</b>
+<br>Monroe County Correctional Facility
+<br>SPECIAL MAIL-OPEN ONLY IN PRESENCE OF INMATE
+<br>4250 Manor Drive
+<br>Stroudsburg, PA 18360
+<br>PRO SE</td></tr><tr><td></td></tr>
+
+				<tr>
+					<td><b><u>Plaintiff                               </u></b></td>
+				</tr>
+
+			<tr>
+				<td width="40%" valign="top">
+					<b>Craig Alford</b>
+		</td>
+<td width="20%" valign="top" align="right">represented&nbsp;by</td><td width="40%" valign="top"><b>Craig Alford</b>
+<br>QL0225
+<br>SCI Phoenix
+<br>SPECIAL MAIL-OPEN ONLY IN PRESENCE OF INMATE
+<br>1200 Mokychic Road
+<br>Collegeville, PA 19426
+<br>PRO SE</td></tr><tr><td></td></tr>
+
+				<tr>
+					<td><b><u>Plaintiff                               </u></b></td>
+				</tr>
+
+			<tr>
+				<td width="40%" valign="top">
+					<b>Luis Medina </b>
+<br><i>TERMINATED: 01/14/2022</i>
+		</td>
+<td width="20%" valign="top" align="right">represented&nbsp;by</td><td width="40%" valign="top"><b>Luis Medina </b>
+<br>Monroe County Correctional Facility
+<br>SPECIAL MAIL-OPEN ONLY IN PRESENCE OF INMATE
+<br>4250 Manor Drive
+<br>Stroudsburg, PA 18360
+<br>PRO SE</td></tr><tr><td></td></tr>
+
+				<tr>
+					<td><b><u>Plaintiff                               </u></b></td>
+				</tr>
+
+			<tr>
+				<td width="40%" valign="top">
+					<b>Christopher J. Klement</b>
+<br><i>TERMINATED: 01/14/2022</i>
+		</td>
+<td width="20%" valign="top" align="right">represented&nbsp;by</td><td width="40%" valign="top"><b>Christopher J. Klement</b>
+<br>Monroe County Correctional Facility
+<br>SPECIAL MAIL - OPEN ONLY IN THE PRESENCE OF THE INMATE
+<br>4250 Manor Drive
+<br>Stroudsburg, PA 18360
+<br>PRO SE</td></tr><tr><td></td></tr>
+
+				<tr>
+					<td><b><u>Plaintiff                               </u></b></td>
+				</tr>
+
+			<tr>
+				<td width="40%" valign="top">
+					<b>Miguel Eduardo Rosario</b>
+<br><i>TERMINATED: 01/14/2022</i>
+		</td>
+<td width="20%" valign="top" align="right">represented&nbsp;by</td><td width="40%" valign="top"><b>Miguel Eduardo Rosario</b>
+<br>Monroe County Correctional Facility
+<br>SPECIAL MAIL-OPEN ONLY IN PRESENCE OF INMATE
+<br>4250 Manor Drive
+<br>Stroudsburg, PA 18360
+<br>PRO SE</td></tr><tr><td></td></tr>
+
+				<tr>
+					<td><b><u>Plaintiff                               </u></b></td>
+				</tr>
+
+			<tr>
+				<td width="40%" valign="top">
+					<b>Howard Wolfe</b>
+<br><i>TERMINATED: 01/14/2022</i>
+		</td>
+<td width="20%" valign="top" align="right">represented&nbsp;by</td><td width="40%" valign="top"><b>Howard Wolfe</b>
+<br>Monroe County Correctional Facility
+<br>SPECIAL MAIL-OPEN ONLY IN PRESENCE OF INMATE
+<br>4250 Manor Drive
+<br>Stroudsburg, PA 18360
+<br>PRO SE</td></tr><tr><td></td></tr>
+
+				<tr>
+					<td><b><u>Plaintiff                               </u></b></td>
+				</tr>
+
+			<tr>
+				<td width="40%" valign="top">
+					<b>Damaon Webster</b>
+<br><i>TERMINATED: 01/14/2022</i>
+		</td>
+<td width="20%" valign="top" align="right">represented&nbsp;by</td><td width="40%" valign="top"><b>Damaon Webster</b>
+<br>Monroe County Correctional Facility
+<br>SPECIAL MAIL-OPEN ONLY IN PRESENCE OF INMATE
+<br>4250 Manor Drive
+<br>Stroudsburg, PA 18360
+<br>
+<br>PRO SE</td></tr><tr><td></td></tr>
+
+				<tr>
+					<td><b><u>Plaintiff                               </u></b></td>
+				</tr>
+
+			<tr>
+				<td width="40%" valign="top">
+					<b>Justin Coate </b>
+<br><i>TERMINATED: 01/14/2022</i>
+		</td>
+<td width="20%" valign="top" align="right">represented&nbsp;by</td><td width="40%" valign="top"><b>Justin Coate </b>
+<br>Monroe County Correctional Facility
+<br>SPECIAL MAIL-OPEN ONLY IN PRESENCE OF INMATE
+<br>4250 Manor Drive
+<br>Stroudsburg, PA 18360
+<br>PRO SE</td></tr><tr><td></td></tr>
+<tr><td valign="top"><br>V.<br></td></tr>
+
+				<tr>
+					<td><b><u>Defendant                               </u></b></td>
+				</tr>
+
+			<tr>
+				<td width="40%" valign="top">
+					<b>Lt. Baylor</b> <br><i>Director of Monroe County Correctional Facility</i>
+		</td>
+<td width="20%" valign="top" align="right">represented&nbsp;by</td><td width="40%" valign="top"><b>Gerard               J.              Geiger                                            </b>
+<br>Newman, Williams, Mishkin, Corveleyn, Wolfe &amp; Fareri
+<br>712 Monroe St.
+<br>Stroudsburg, PA 18360
+<br>570-421-9090
+<br>Fax: 424-9739
+<br>Email: ggeiger@newmanwilliams.com
+<br><i>ATTORNEY TO BE NOTICED</i></td></tr><tr><td></td></tr>
+
+				<tr>
+					<td><b><u>Defendant                               </u></b></td>
+				</tr>
+
+			<tr>
+				<td width="40%" valign="top">
+					<b>Garry Haidle</b> <br><i>Warden of Monroe County Correctional Facility</i>
+		</td>
+<td width="20%" valign="top" align="right">represented&nbsp;by</td><td width="40%" valign="top"><b>Gerard               J.              Geiger                                            </b>
+<br>(See above for address)
+<br><i>ATTORNEY TO BE NOTICED</i></td></tr><tr><td></td></tr>
+
+				<tr>
+					<td><b><u>Defendant                               </u></b></td>
+				</tr>
+
+			<tr>
+				<td width="40%" valign="top">
+					<b>Mr. Armond</b> <br><i>Sgt. at Monroe County Correctional Facility</i>
+		</td>
+<td width="20%" valign="top" align="right">represented&nbsp;by</td><td width="40%" valign="top"><b>Gerard               J.              Geiger                                            </b>
+<br>(See above for address)
+<br><i>ATTORNEY TO BE NOTICED</i></td></tr><tr><td></td></tr>
+
+				<tr>
+					<td><b><u>Defendant                               </u></b></td>
+				</tr>
+
+			<tr>
+				<td width="40%" valign="top">
+					<b>George Warden</b> <br><i>Clerk at Monroe County Correctional Facility</i>
+<br><i>TERMINATED: 08/09/2022</i>
+		</td>
+<td width="20%" valign="top" align="right">represented&nbsp;by</td><td width="40%" valign="top"><b>Gerard               J.              Geiger                                            </b>
+<br>(See above for address)
+<br><i>ATTORNEY TO BE NOTICED</i></td></tr><tr><td></td></tr>
+</tbody></table>
+<br><table rules="all" width="99%" cellspacing="0" cellpadding="5" border="1" align="center">
+<tbody><tr><td style="font-weight:bold; width=94; white-space:nowrap">Date Filed</td>
+<th>#</th><td style="font-weight:bold">Docket Text</td></tr>
+<tr><td width="94" valign="top" nowrap="">10/01/2020</td><td style="white-space:nowrap" valign="top" align="right"><a href="https://ecf.pamd.uscourts.gov/doc1/15517376920" onclick="goDLS('/doc1/15517376920','126546','15','','1','1','','','');return(false);">1</a>&nbsp;</td><td valign="top"><!--SB-->COMPLAINT against All Defendants lodged pending the disposition of the Motion to Proceed In Forma Pauperis, filed by Miguel Eduardo Rosario, Luis Medina, Howard Wolfe, Craig Alford, Damaon Webster, Justine Coote, Jhon Lora, Christopher J. Klement.(lp) (Entered: 10/01/2020)</td></tr>
+<tr><td width="94" valign="top" nowrap="">10/01/2020</td><td style="white-space:nowrap" valign="top" align="right"><a href="https://ecf.pamd.uscourts.gov/doc1/15517376923" onclick="goDLS('/doc1/15517376923','126546','17','','1','1','','','');return(false);">2</a>&nbsp;</td><td valign="top"><!--SB--> MOTION for Leave to Proceed in forma pauperis by Jhon Lora.(lp) (Entered: 10/01/2020)</td></tr>
+</tbody></table><br>
+<hr><center><table width="400" border="1" bgcolor="white"><tbody><tr><th colspan="4"><font size="+1" color="DARKRED">PACER Service Center </font></th></tr><tr><th colspan="4"><font color="DARKBLUE">Transaction Receipt </font></th></tr><tr></tr><tr></tr><tr><td colspan="4" align="CENTER"><font size="-1" color="DARKBLUE">12/16/2022 11:20:00</font></td></tr><tr><th align="LEFT"><font size="-1" color="DARKBLUE"> PACER Login: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> NewmanWilliams712 </font></td><th align="LEFT"><font size="-1" color="DARKBLUE"> Client Code: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE">  </font></td></tr><tr><th align="LEFT"><font size="-1" color="DARKBLUE"> Description: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> Docket Report </font></td><th align="LEFT"><font size="-1" color="DARKBLUE"> Search Criteria: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> 1:20-cv-01787-MWB-MP     </font></td></tr><tr><th align="LEFT"><font size="-1" color="DARKBLUE"> Billable Pages: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> 8 </font></td><th align="LEFT"><font size="-1" color="DARKBLUE"> Cost: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> 0.80 </font></td></tr><tr><th align="LEFT"><font size="-1" color="DARKBLUE"> Exempt flag: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> Exempt </font></td><th align="LEFT"><font size="-1" color="DARKBLUE"> Exempt reason: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> Exempt Court Order </font></td></tr><tr></tr><tr></tr></tbody></table></center></div></body>
