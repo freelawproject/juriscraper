@@ -59,9 +59,28 @@ class BaseDocketReport:
             setattr(self, f"_{attr}", None)
 
     @property
+    def is_valid_docket_upload(self) -> bool:
+        """Validates if the docket page is not a bad upload that only contains
+        recap links.
+
+        :return: True if is a valid docket upload, otherwise False.
+        """
+        recap_links = self.tree.xpath('//div[@id="recap-action-button"]')
+        if not recap_links:
+            return True
+        rows = self.tree.xpath("//tr")
+        valid_content = False
+        for row in rows:
+            if row.getchildren():
+                valid_content = True
+                break
+        return valid_content
+
+    @property
     def data(self):
         """Get all the data back from this endpoint."""
-        if self.is_valid is False:
+
+        if self.is_valid is False or self.is_valid_docket_upload is False:
             return {}
 
         data = self.metadata.copy()

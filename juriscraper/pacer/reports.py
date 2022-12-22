@@ -93,19 +93,17 @@ class BaseReport:
         text = clean_html(text)
         self.check_validity(text)
         if self.is_valid:
-            tree = get_html5_parsed_text(text)
-            self._strip_bad_html_tags_insecure(tree)
+            self._strip_bad_html_tags_insecure(text)
             self.tree.rewrite_links(fix_links_in_lxml_tree, base_href=self.url)
 
-    def _strip_bad_html_tags_insecure(self, tree):
+    def _strip_bad_html_tags_insecure(self, text: str) -> None:
         """Remove bad tags from HTML
 
-        :param tree: A tree you wish to cleanup
-        :type tree: lxml.html.HtmlElement
+        :param text: The HTML string you wish to cleanup
         Set self.tree to a cleaned lxml.html.HtmlElement
         :return: None
         """
-        self.tree = strip_bad_html_tags_insecure(tree, remove_scripts=True)
+        self.tree = strip_bad_html_tags_insecure(text, remove_scripts=True)
 
     def check_validity(self, text: str) -> None:
         """Place sanity checks here to make sure that the returned text is
