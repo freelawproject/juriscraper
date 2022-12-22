@@ -1,0 +1,170 @@
+<head><link rel="shortcut icon" href="/favicon.ico"><title>CANB Live Database</title>
+<script type="text/javascript">document.cookie = "PRTYPE=web; path=/;"</script> <script>var default_base_path = "/"; </script> <link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript" src="/lib/DisableAJTALinks.js"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script><script>var default_base_path = "/"; </script><style>[object HTMLStyleElement]</style></head><body bgcolor="FFFFCC" text="000000" onload="SetFocus()">
+				<div class="noprint">
+				<div id="topmenu" class="yuimenubar"><div class="bd">
+				<img id="cmecfLogo" class="cmecfLogo" src="/graphics/logo-cmecf-sm.png" alt="CM/ECF" title="">
+				<ul class="first-of-type">
+			
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href="/cgi-bin/iquery.pl">Query</a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href="/cgi-bin/DisplayMenu.pl?Reports&amp;id=-1">Reports <div class="spritedownarrow"></div></a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href="/cgi-bin/DisplayMenu.pl?Utilities&amp;id=-1">Utilities <div class="spritedownarrow"></div></a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" onclick="CMECF.MainMenu.showHelpPage(''); return false">Help</a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href="/cgi-bin/login.pl?logout">Log Out</a></li><li class="yuimenubaritem" id="placeholderForAlertsIcon"></li>
+				</ul></div>
+				<hr class="hrmenuseparator"></div></div>
+				
+			<script type="text/javascript">
+callCreateMenu=function(){
+				var fn = "CMECF.MainMenu.renderSimpleMenu";
+				if(typeof CMECF.MainMenu.renderSimpleMenu == 'function') {
+					CMECF.MainMenu.renderSimpleMenu();
+				}
+                        }
+if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout( function(){ callCreateMenu(); }, 1);}else{CMECF.util.Event.addListener(window, "load",  callCreateMenu());}</script> <div id="cmecfMainContent" style="height: 607px;"><input type="hidden" id="cmecfMainContentScroll" value="0"><script language="JavaScript"> 
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;				
+					while(document.forms[0].elements[Cnt] != null) {
+						try {
+							if(document.forms[0].elements[Cnt].type != "hidden" &&
+									!document.forms[0].elements[Cnt].disabled &&
+									!document.forms[0].elements[Cnt].readOnly) {
+								document.forms[0].elements[Cnt].focus();
+								break;
+							}
+						}
+						catch(e) {}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</script>
+<script type="text/JavaScript">
+document.cookie="PDFHeaderReferer=127946427998256; path=/";
+</script>
+		<script type="text/javascript" src="/lib/widgits.js"></script>
+		<script>
+		var debtorPanel = null;
+
+		function create_panel(clid, message) {
+		    if (!debtorPanel) {
+		        debtorPanel = new CMECF.widget.Panel('debtorPanel', {
+				close:true,
+				draggable:false,
+				context:[clid, 'tl', 'br'],
+				width: "250" + "px",
+				height: "110" + "px",
+				constraintoviewport:true
+			});
+			debtorPanel.setHeader("Barred Debtor Information");
+			debtorPanel.setBody(message);
+			debtorPanel.body.style.height = "8em";
+			debtorPanel.render(document.body);
+		    } else {
+		        debtorPanel.show();
+		    }
+		}
+
+		function close_panel() {
+		    if (debtorPanel) {
+		        debtorPanel.destroy();
+		        debtorPanel = null;
+		    }
+		}
+		</script>
+		
+   <style>
+	table.DktRpt
+	{
+	font-family:times,serif,arial,helvetica,clean,sans-serif;
+	font-size: 14px;
+	}
+   </style>
+	<table class="DktRpt" width="100%" align="right" border="0" cellspacing="5"><tbody><tr><div class="btn-group" id="recap-action-button"><a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-spinner fa-spin recap-btn-spinner-hidden" id="recap-button-spinner"></i> RECAP Actions<span class="caret"></span></a><ul class="dropdown-menu"><h2 class="dropdown-header" id="action-button-dropdown-header">CourtListener</h2><li id="view-docket-button"><a href="https://www.courtlistener.com/recap/gov.uscourts.canb.531591/" target="_blank">View this docket</a></li><div class="recap-dropdown-divider"></div><li><a href="javascript:void(0);" id="refresh-recap-links" role="button">Refresh RECAP Links</a></li></ul></div></tr><tr><td align="right"><h2> <font size="3">CLOSED, MARIN</font></h2></td></tr></tbody></table><br><br><br><center><b><font size="+1">U.S. Bankruptcy Court<br>California Northern Bankruptcy Court (San Francisco)<br>Bankruptcy Petition #: 15-30037</font></b></center><table class="DktRpt" width="100%" border="0" cellspacing="1"><tbody><tr>	<td valign="top" width="50%"><font size="+0"><br><i>Assigned to:</i>      Judge Dennis Montali<br>Chapter          11<br>Voluntary<br>Asset<div class="noprint"><a href="/cgi-bin/SearchClaims.pl?caseid=531591;sc">Claims Register</a></div><br><br><br><i>Debtor disposition:</i>&nbsp;&nbsp;Discharge Not Applicable	</font></td>
+	<td valign="top" width="50%" align="right"><font size="+0"><table class="DktRpt" border="0" cellspacing="0" cellpadding="0" align="center"><tbody><tr><td align="right" valign="top"><i>Date filed:</i></td><td align="left" valign="top">&nbsp;&nbsp;01/13/2015</td></tr><tr><td align="right" valign="top"><i>Date reopened:</i></td><td align="left" valign="top">&nbsp;&nbsp;03/27/2018</td></tr><tr><td align="right" valign="top"><i>Date terminated:</i></td><td align="left" valign="top">&nbsp;&nbsp;07/03/2018</td></tr><tr><td align="right" valign="top"><i>Debtor discharged:</i></td><td align="left" valign="top">&nbsp;&nbsp;05/08/2018</td></tr><tr><td align="right" valign="top"><i>Plan confirmed:</i></td><td align="left" valign="top">&nbsp;&nbsp;03/21/2016</td></tr><tr><td align="right" valign="top"><i>341 meeting:</i></td><td align="left" valign="top">&nbsp;&nbsp;03/10/2015</td></tr><tr><td align="right" valign="top"><i>Deadline for objecting to discharge:</i></td><td align="left" valign="top">&nbsp;&nbsp;04/20/2015  </td></tr></tbody></table>	</font></td>
+</tr>
+</tbody></table><br><font size="5"><b></b>
+		</font><table class="DktRpt" width="100%" border="0" cellspacing="1"><tbody><tr></tr><tr>	<td valign="top" width="50%"><font size="+0"><i><b>Debtor</b></i><br><b>Sharyn Mitchell</b>
+<br>460 Aaron Street, Unit H
+<br>Cotati, CA 94931
+<br>MARIN-CA
+<br>SSN / ITIN: xxx-xx-3403<br><br>	</font></td>
+	<td valign="top" align="right"><font size="+0">represented by	</font></td>
+<td valign="top" width="40%">
+  						<font size="+0"><b>John A. Vos</b>
+<br>Law Offices of John A. Vos
+<br>1430 Lincoln Ave.
+<br>San Rafael, CA 94901
+<br>(415) 485-5332
+<br>Email:&nbsp;<a href="mailto:InvalidEMailECFonly@gmail.com">InvalidEMailECFonly@gmail.com</a><br><br></font></td></tr><tr>	<td valign="top" width="50%"><font size="+0"><i><b>U.S. Trustee</b></i><br><b>Office of the U.S. Trustee / SF</b>
+<br>Phillip J. Burton Federal Building
+<br>450 Golden Gate Ave. 5th Fl., #05-0153
+<br>San Francisco, CA 94102
+<br>(415)705-3333	</font></td>
+	<td valign="top" width="20%" align="right"><font size="+0">represented by	</font></td>
+	<td valign="top" width="40%"><font size="+0"><b>Julie Glosson Ishii</b>
+<br>Glosson Law
+<br>P.O. Box 1131
+<br>Pleasanton, CA 94566
+<br>(925) 400-8161
+<br>Email:&nbsp;<a href="mailto:Julie@jglossonlaw.com">Julie@jglossonlaw.com</a>
+<br><i> TERMINATED: 08/22/2016</i><br><br><b>Timothy S. Laffredi</b>
+<br>Office of the U.S. Trustee - SF
+<br>450 Golden Gate Ave.
+<br>Suite 05-0153
+<br>San Francisco, CA 94102
+<br>(415) 705-3333
+<br>Email:&nbsp;<a href="mailto:timothy.s.laffredi@usdoj.gov">timothy.s.laffredi@usdoj.gov</a><br><br><b>Barbara A. Matthews</b>
+<br>Office of the United States Trustee
+<br>Phillip J. Burton Federal Building
+<br>450 Golden Gate Ave. 5th Fl., #05-0153
+<br>San Francisco, CA 94102
+<br>(510) 637-3206
+<br>Email:&nbsp;<a href="mailto:barbara.a.matthews@usdoj.gov">barbara.a.matthews@usdoj.gov</a>
+<br><i> TERMINATED: 06/06/2018</i><br><br><b>Donna S. Tamanaha</b>
+<br>Office of the U.S. Trustee
+<br>Phillip J. Burton Federal Building
+<br>450 Golden Gate Ave. 5th Fl., #05-0153
+<br>San Francisco, CA 94102
+<br>(415) 705-3333
+<br>Email:&nbsp;<a href="mailto:Donna.S.Tamanaha@usdoj.gov">Donna.S.Tamanaha@usdoj.gov</a>
+<br><i> TERMINATED: 06/06/2018</i>	</font></td>
+</tr></tbody></table><br><table class="DktRpt" border="1" cellpadding="10" cellspacing="0"><tbody><tr><th width="94" nowrap="">Filing Date</th>
+<th colspan="2" align="center">#</th><th align="center">Docket Text</th></tr>
+<tr><td width="94" nowrap="" valign="bottom">03/25/2018</td><td width="74" valign="top" align="right" style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"><nobr>  &nbsp;</nobr></td><td width="30" valign="top" align="left" style="border-left:0;padding-left:1px"><a href="/doc1/034037085340" oncontextmenu="this.href=&quot;https://ecf.canb.uscourts.gov/doc1/034037085340&quot;">118</a> <br><nobr>(2&nbsp;pgs)</nobr></td><td valign="bottom">  Ex Parte Motion to Reopen Chapter 11 Case <i></i>, Fee Amount $1167 Filed by Debtor Sharyn Mitchell (Vos, John) CORRECTIVE ENTRY: Clerk modified docket text to reflect PDF. Modified on 3/26/2018 (ta). (Entered: 03/25/2018)</td></tr>
+<tr><td width="94" nowrap="" valign="bottom">03/25/2018</td><td width="74" valign="top" align="right" style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"><nobr>  &nbsp;</nobr></td><td width="30" valign="top" align="left" style="border-left:0;padding-left:1px">&nbsp;</td><td valign="bottom">  Receipt of filing fee for Motion to Reopen Chapter 11 Case(15-30037) [motion,mreop11] (1167.00). Receipt number 28450002, amount $1167.00 (re: Doc# <a href="https://ecf.canb.uscourts.gov/doc1/034037085340">118</a> Motion to Reopen Chapter 11 Case <i></i>, Fee Amount $1167) (U.S. Treasury) (Entered: 03/25/2018)</td></tr>
+<tr><td width="94" nowrap="" valign="bottom">03/27/2018</td><td width="74" valign="top" align="right" style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"><nobr>  &nbsp;</nobr></td><td width="30" valign="top" align="left" style="border-left:0;padding-left:1px"><a href="/doc1/034037093635" oncontextmenu="this.href=&quot;https://ecf.canb.uscourts.gov/doc1/034037093635&quot;">119</a> <br><nobr>(2&nbsp;pgs)</nobr></td><td valign="bottom">  Order Vacating Order for Final Decree and Order Closing Case (Related Doc # <a href="https://ecf.canb.uscourts.gov/doc1/034037085340">118</a>) Case Management Action due after 4/26/2018. (lp) (Entered: 03/27/2018)</td></tr>
+<tr><td width="94" nowrap="" valign="bottom">03/29/2018</td><td width="74" valign="top" align="right" style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"><nobr>  &nbsp;</nobr></td><td width="30" valign="top" align="left" style="border-left:0;padding-left:1px"><a href="/doc1/034037105242" oncontextmenu="this.href=&quot;https://ecf.canb.uscourts.gov/doc1/034037105242&quot;">120</a> <br><nobr>(1&nbsp;pg)</nobr></td><td valign="bottom">  Personal Financial Management Course Certificate. <i></i> Filed by Debtor Sharyn Mitchell (Vos, John) (Entered: 03/29/2018)</td></tr>
+<tr><td width="94" nowrap="" valign="bottom">03/29/2018</td><td width="74" valign="top" align="right" style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"><nobr>  &nbsp;</nobr></td><td width="30" valign="top" align="left" style="border-left:0;padding-left:1px"><a href="/doc1/034037105248" oncontextmenu="this.href=&quot;https://ecf.canb.uscourts.gov/doc1/034037105248&quot;">121</a> <br><nobr>(2&nbsp;pgs)</nobr></td><td valign="bottom">  Declaration of Sharyn Mitchell in support of application for discharge of <i></i> Filed by Debtor Sharyn Mitchell (Vos, John). Related document(s) <a href="https://ecf.canb.uscourts.gov/doc1/034037105260">122</a> Application for Entry of Final Decree <i>DISCHARGE</i> filed by Debtor Sharyn Mitchell. CORRECTIVE ENTRY: Clerk added linkage to document #122. DEFECTIVE ENTRY: PDF is blank on page 2. Modified on 3/30/2018 (dmf). (Entered: 03/29/2018)</td></tr>
+<tr><td width="94" nowrap="" valign="bottom">03/29/2018</td><td width="74" valign="top" align="right" style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"><nobr>  &nbsp;</nobr></td><td width="30" valign="top" align="left" style="border-left:0;padding-left:1px"><a href="/doc1/034037105260" oncontextmenu="this.href=&quot;https://ecf.canb.uscourts.gov/doc1/034037105260&quot;">122</a> <br><nobr>(1&nbsp;pg)</nobr></td><td valign="bottom">  Ex Parte Application for Entry of a Discharge Filed by Debtor Sharyn Mitchell (Vos, John) DEFECTIVE ENTRY: Incorrect event code selected. CORRECTIVE ENTRY: Clerk modified the docket text to reflect the information contained in the PDF. Modified on 3/30/2018 (dmf). (Entered: 03/29/2018)</td></tr>
+<tr><td width="94" nowrap="" valign="bottom">05/07/2018</td><td width="74" valign="top" align="right" style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"><nobr>  &nbsp;</nobr></td><td width="30" valign="top" align="left" style="border-left:0;padding-left:1px"><a href="/doc1/034037270192" oncontextmenu="this.href=&quot;https://ecf.canb.uscourts.gov/doc1/034037270192&quot;">123</a> <br><nobr>(2&nbsp;pgs)</nobr></td><td valign="bottom">  Order of Discharge (Related Doc # <a href="https://ecf.canb.uscourts.gov/doc1/034037105260">122</a>) (lp) (Entered: 05/08/2018)</td></tr>
+<tr><td width="94" nowrap="" valign="bottom">05/08/2018</td><td width="74" valign="top" align="right" style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"><nobr>  &nbsp;</nobr></td><td width="30" valign="top" align="left" style="border-left:0;padding-left:1px"><a href="/doc1/034037270206" oncontextmenu="this.href=&quot;https://ecf.canb.uscourts.gov/doc1/034037270206&quot;">124</a> <br><nobr>(3&nbsp;pgs; 2&nbsp;docs)</nobr></td><td valign="bottom">  Order Discharging Debtor (lp) (Entered: 05/08/2018)</td></tr>
+<tr><td width="94" nowrap="" valign="bottom">05/10/2018</td><td width="74" valign="top" align="right" style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"><nobr>  &nbsp;</nobr></td><td width="30" valign="top" align="left" style="border-left:0;padding-left:1px"><a href="/doc1/034037280893" oncontextmenu="this.href=&quot;https://ecf.canb.uscourts.gov/doc1/034037280893&quot;">125</a> <br><nobr>(4&nbsp;pgs)</nobr></td><td valign="bottom">  BNC Certificate of Mailing - Order of Discharge. (RE: related document(s) <a href="https://ecf.canb.uscourts.gov/doc1/034037270206">124</a> Order Discharging Debtor). Notice Date 05/10/2018. (Admin.) (Entered: 05/10/2018)</td></tr>
+<tr><td width="94" nowrap="" valign="bottom">05/21/2018</td><td width="74" valign="top" align="right" style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"><nobr>  &nbsp;</nobr></td><td width="30" valign="top" align="left" style="border-left:0;padding-left:1px"><a href="/doc1/034037321065" oncontextmenu="this.href=&quot;https://ecf.canb.uscourts.gov/doc1/034037321065&quot;">126</a> <br><nobr>(2&nbsp;pgs)</nobr></td><td valign="bottom">  Application for Entry of Final Decree <i></i> Filed by Debtor Sharyn Mitchell (Vos, John) (Entered: 05/21/2018)</td></tr>
+<tr><td width="94" nowrap="" valign="bottom">05/21/2018</td><td width="74" valign="top" align="right" style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"><nobr>  &nbsp;</nobr></td><td width="30" valign="top" align="left" style="border-left:0;padding-left:1px"><a href="/doc1/034037321072" oncontextmenu="this.href=&quot;https://ecf.canb.uscourts.gov/doc1/034037321072&quot;">127</a> <br><nobr>(2&nbsp;pgs)</nobr></td><td valign="bottom">  Notice and Opportunity for Hearing <i>(with notice of opportunity to be heard, movant to set hearing if timely requested)</i> (RE: related document(s)<a href="https://ecf.canb.uscourts.gov/doc1/034037321065">126</a> Application for Entry of Final Decree <i></i> Filed by Debtor Sharyn Mitchell). Filed by Debtor Sharyn Mitchell (Vos, John) (Entered: 05/21/2018)</td></tr>
+<tr><td width="94" nowrap="" valign="bottom">05/22/2018</td><td width="74" valign="top" align="right" style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"><nobr>  &nbsp;</nobr></td><td width="30" valign="top" align="left" style="border-left:0;padding-left:1px"><a href="/doc1/034037327530" oncontextmenu="this.href=&quot;https://ecf.canb.uscourts.gov/doc1/034037327530&quot;">128</a> <br><nobr>(8&nbsp;pgs)</nobr></td><td valign="bottom">  Certificate of Service <i></i> (RE: related document(s)<a href="https://ecf.canb.uscourts.gov/doc1/034037321072">127</a> Opportunity for Hearing). Filed by Debtor Sharyn Mitchell (Vos, John). Related document(s) <a href="https://ecf.canb.uscourts.gov/doc1/034037321065">126</a> Application for Entry of Final Decree <i></i> filed by Debtor Sharyn Mitchell. CORRECTIVE ENTRY: Clerk added/removed linkage to document #126. Modified on 5/23/2018 (aw). (Entered: 05/22/2018)</td></tr>
+<tr><td width="94" nowrap="" valign="bottom">06/06/2018</td><td width="74" valign="top" align="right" style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"><nobr>  &nbsp;</nobr></td><td width="30" valign="top" align="left" style="border-left:0;padding-left:1px"><a href="/doc1/034037383180" oncontextmenu="this.href=&quot;https://ecf.canb.uscourts.gov/doc1/034037383180&quot;">129</a> <br><nobr>(1&nbsp;pg)</nobr></td><td valign="bottom">  Substitution of Attorney <i></i>. Attorney Barbara A. Matthews and Donna S. Tamanaha terminated. Timothy S. Laffredi added to the case. Filed by U.S. Trustee Office of the U.S. Trustee / SF (Laffredi, Timothy) (Entered: 06/06/2018)</td></tr>
+<tr><td width="94" nowrap="" valign="bottom">06/28/2018</td><td width="74" valign="top" align="right" style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"><nobr>  &nbsp;</nobr></td><td width="30" valign="top" align="left" style="border-left:0;padding-left:1px"><a href="/doc1/034037470842" oncontextmenu="this.href=&quot;https://ecf.canb.uscourts.gov/doc1/034037470842&quot;">130</a> <br><nobr>(14&nbsp;pgs)</nobr></td><td valign="bottom">  Application for Entry of Final Decree <i>(after notice and opportunity for hearing, none requested, with attached certificate of service)</i> Filed by Debtor Sharyn Mitchell (Vos, John) DEFECTIVE ENTRY: Incorrect event code selected. Modified on 6/29/2018 (wbk). (Entered: 06/28/2018)</td></tr>
+<tr><td width="94" nowrap="" valign="bottom">07/02/2018</td><td width="74" valign="top" align="right" style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"><nobr>  &nbsp;</nobr></td><td width="30" valign="top" align="left" style="border-left:0;padding-left:1px"><a href="/doc1/034037483343" oncontextmenu="this.href=&quot;https://ecf.canb.uscourts.gov/doc1/034037483343&quot;">131</a> <br><nobr>(2&nbsp;pgs)</nobr></td><td valign="bottom">  Final Decree (Related Doc # <a href="https://ecf.canb.uscourts.gov/doc1/034037321065">126</a>) (lp) (Entered: 07/02/2018)</td></tr>
+<tr><td width="94" nowrap="" valign="bottom">07/03/2018</td><td width="74" valign="top" align="right" style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"><nobr>  &nbsp;</nobr></td><td width="30" valign="top" align="left" style="border-left:0;padding-left:1px">&nbsp;</td><td valign="bottom">  Bankruptcy Case Re-Closed. (tw) (Entered: 07/03/2018)</td></tr>
+</tbody></table><br><br><br><br>
+			<script type="text/javascript">
+				document.cookie = 'RECENT_CASES=' + "531591;";
+			</script>
+		<hr><center><table border="1" bgcolor="white" width="400"><tbody><tr><th colspan="4"><font size="+1" color="DARKRED">PACER Service Center </font></th></tr><tr><th colspan="4"><font color="DARKBLUE">Transaction Receipt </font></th></tr><tr></tr><tr></tr><tr><td colspan="4" align="CENTER"><font size="-1" color="DARKBLUE">12/16/2022 13:54:29</font></td></tr><tr><th align="LEFT"><font size="-1" color="DARKBLUE"> PACER Login: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> mlissner.flp </font></td><th align="LEFT"><font size="-1" color="DARKBLUE"> Client Code: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE">  </font></td></tr><tr><th align="LEFT"><font size="-1" color="DARKBLUE"> Description: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> Docket Report </font></td><th align="LEFT"><font size="-1" color="DARKBLUE"> Search Criteria: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> 15-30037 Fil or Ent: filed From: 10/17/2017 To: 12/16/2022 Doc From: 0 Doc To: 99999999 Term: included  Headers: included  Format: html Page counts for documents: included </font></td></tr><tr><th align="LEFT"><font size="-1" color="DARKBLUE"> Billable Pages: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> 2 </font></td><th align="LEFT"><font size="-1" color="DARKBLUE"> Cost: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> 0.20 </font></td></tr><tr></tr><tr></tr></tbody></table></center><br><br></div><scribe-shadow id="shadow-root-scribe-elem" style="position: fixed; width: 0px; height: 0px; top: 0px; left: 0px; z-index: 2147483647; overflow: visible;"></scribe-shadow></body>
