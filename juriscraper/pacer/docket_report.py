@@ -59,28 +59,9 @@ class BaseDocketReport:
             setattr(self, f"_{attr}", None)
 
     @property
-    def is_valid_docket_upload(self) -> bool:
-        """Validates if the docket page is not a bad upload that only contains
-        recap links.
-
-        :return: True if is a valid docket upload, otherwise False.
-        """
-        recap_links = self.tree.xpath('//div[@id="recap-action-button"]')
-        if not recap_links:
-            return True
-        rows = self.tree.xpath("//tr")
-        valid_content = False
-        for row in rows:
-            if row.getchildren():
-                valid_content = True
-                break
-        return valid_content
-
-    @property
     def data(self):
         """Get all the data back from this endpoint."""
-
-        if self.is_valid is False or self.is_valid_docket_upload is False:
+        if self.is_valid is False:
             return {}
 
         data = self.metadata.copy()
@@ -382,6 +363,27 @@ class DocketReport(BaseDocketReport, BaseReport):
         self._metadata = None
         self._parties = None
         self._docket_entries = None
+
+    @property
+    def docket_report_has_content(self) -> bool:
+        """Checks if the docket report has content.
+
+        :return: True if is the docket report is not blank, otherwise False.
+        """
+        rows = self.tree.xpath("//tr")
+        valid_content = False
+        for row in rows:
+            if row.getchildren():
+                valid_content = True
+                break
+        return valid_content
+
+    @property
+    def data(self):
+        """Get all the data back from this endpoint after validations."""
+        if self.is_valid is False or self.docket_report_has_content is False:
+            return {}
+        return super().data
 
     def parse(self):
         """Parse the item, but be sure to clear the cache before you do so.
