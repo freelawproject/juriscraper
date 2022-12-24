@@ -229,6 +229,10 @@ def clean_html(text: str) -> str:
     if isinstance(text, str):
         text = re.sub(r"^\s*<\?xml\s+.*?\?>", "", text)
 
+        # Remove bad escaped HTML chars &#01 or &#1 to &#08 or &#8 since are not
+        # valid XML bytes 0x1 to 0x8
+        text = re.sub(r"&#0[1-8]\b|&#[1-8]\b", "", text)
+
     # Fix invalid bytes in XML (http://stackoverflow.com/questions/8733233/)
     # Note that this won't work completely on narrow builds of Python, which
     # existed prior to Py3. Thus, we check if it's a narrow build, and adjust
