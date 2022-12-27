@@ -35,7 +35,7 @@ repos:
        additional_dependencies: ['click==8.0.4']
 
   - repo: https://github.com/PyCQA/isort
-    rev: v5.11.3
+    rev: 5.11.4
     hooks:
      - id: isort
        name: isort (python)
