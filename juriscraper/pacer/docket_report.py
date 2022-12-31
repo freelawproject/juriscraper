@@ -364,6 +364,27 @@ class DocketReport(BaseDocketReport, BaseReport):
         self._parties = None
         self._docket_entries = None
 
+    @property
+    def docket_report_has_content(self) -> bool:
+        """Checks if the docket report has content.
+
+        :return: True if is the docket report is not blank, otherwise False.
+        """
+        rows = self.tree.xpath("//tr")
+        valid_content = False
+        for row in rows:
+            if row.getchildren():
+                valid_content = True
+                break
+        return valid_content
+
+    @property
+    def data(self):
+        """Get all the data back from this endpoint after validations."""
+        if self.is_valid is False or self.docket_report_has_content is False:
+            return {}
+        return super().data
+
     def parse(self):
         """Parse the item, but be sure to clear the cache before you do so.
 

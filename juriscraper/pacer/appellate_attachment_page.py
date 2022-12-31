@@ -51,9 +51,9 @@ class AppellateAttachmentPage(BaseReport):
         self.response = self.session.get(url)
         self.parse()
 
-    def _strip_bad_html_tags_insecure(self, tree) -> None:
+    def _strip_bad_html_tags_insecure(self, text: str) -> None:
         """Override base function to include scripts."""
-        self.tree = strip_bad_html_tags_insecure(tree, remove_scripts=False)
+        self.tree = strip_bad_html_tags_insecure(text, remove_scripts=False)
 
     @property
     def data(self) -> Dict:

@@ -116,7 +116,9 @@ def get_clean_body_content(content, remove_extra_tags=[]):
         )
 
 
-def strip_bad_html_tags_insecure(tree, remove_scripts=True):
+def strip_bad_html_tags_insecure(
+    text: str, remove_scripts=True
+) -> HtmlElement:
     """Remove bad HTML that isn't used by our parsers.
 
     This is insecure in the sense that it does not strip all JavaScript. lxml
@@ -124,17 +126,27 @@ def strip_bad_html_tags_insecure(tree, remove_scripts=True):
     but it will clean JS attributes off nodes, which we can't do because we
     parse those for useful data.
 
-    :param tree: A tree you wish to cleanup
-    :type tree: lxml.html.HtmlElement
+    :param text: The HTML str you wish to cleanup
     :param remove_scripts: Do we want to remove scripts
-    :type remove_scripts: bool
-    :return the cleaned HTML string
+    :return: the cleaned HTML tree
     """
-    assert isinstance(tree, lxml.html.HtmlElement), (
-        "`tree` must be of type HtmlElement, but is of type %s. Cleaner() can "
-        "work with strs and unicode, but it does bad things to encodings if "
-        "given the chance." % type(tree)
-    )
+
+    assert isinstance(
+        text, str
+    ), f"`text` must be of type str, but is of type {type(text)}."
+
+    # lxml fails to parse a script element that contains a '<' followed by any
+    # non-space character e.g: '<ca.length' which causes breakage. Removing
+    # script elements with this problem through lxml will cause all the
+    # following elements are also removed. To avoid this issue first remove
+    # all the script elements using regex before removing the script tags.
+    # See: jpml_1551542
+    if remove_scripts:
+        text = re.sub(r"<script.*?>([\s\S]*?)<\/script>", "", text)
+
+    # Cleaner() can work with strs and unicode, but it does bad things to
+    # encodings if given the chance.
+    tree = get_html5_parsed_text(text)
     cleaner = Cleaner(
         # Keep JS: We parse onclicks for pacer metadata
         javascript=False,
@@ -216,6 +228,10 @@ def clean_html(text: str) -> str:
     # lxml.
     if isinstance(text, str):
         text = re.sub(r"^\s*<\?xml\s+.*?\?>", "", text)
+
+        # Remove bad escaped HTML chars &#01 or &#1 to &#08 or &#8 since are not
+        # valid XML bytes 0x1 to 0x8
+        text = re.sub(r"&#0[1-8]\b|&#[1-8]\b", "", text)
 
     # Fix invalid bytes in XML (http://stackoverflow.com/questions/8733233/)
     # Note that this won't work completely on narrow builds of Python, which

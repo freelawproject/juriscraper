@@ -16,6 +16,19 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.28 - 2022-12-22**
+
+Features:
+
+- Added scraper for WVA CT APP
+
+Changes:
+
+- Fix docket report parsing when there is no valid content and if there is
+  bad script content.
+- Fix avoid parsing the download confirmation page if a PDF binary is returned.
+- Fix parsing text/plain content multipart email notifications.
+
 **2.5.27 - 2022-12-13**
 
 Features:
