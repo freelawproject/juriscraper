@@ -13,7 +13,7 @@ class Site(OpinionSiteLinear):
         self.base = "http://www.ca5.uscourts.gov"
         self.url = f"{self.base}/electronic-case-filing/case-information/current-opinions"
         self.court_id = self.__module__
-        self.interval = 2
+        self.interval = 7
         self.data = {}
         self.headers = {
             "Host": "www.ca5.uscourts.gov",
@@ -34,8 +34,8 @@ class Site(OpinionSiteLinear):
             for i in rrule(
                 DAILY,
                 interval=self.interval,  # Every interval days
-                dtstart=date(2022, 8, 11),
-                until=date(2022, 8, 13),
+                dtstart=date(2022, 7, 1),
+                until=date(2022, 9, 1),
             )
         ]
 
