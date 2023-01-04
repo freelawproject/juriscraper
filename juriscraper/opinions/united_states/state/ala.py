@@ -1,7 +1,6 @@
 import re
-from pprint import pprint
 
-from lxml.html import fromstring
+from lxml.html import fromstring, tostring
 
 from juriscraper.OpinionSiteLinearWebDriven import OpinionSiteLinearWebDriven
 
@@ -16,58 +15,86 @@ class Site(OpinionSiteLinearWebDriven):
         self.uses_selenium = True
 
     def _process_html(self):
-        self.initiate_webdriven_session()
-        self.html = fromstring(self.webdriver.page_source)
+        if not self.test_mode_enabled():
+            self.initiate_webdriven_session()
 
-        for a in self.html.xpath('//*[@id="FileTable"]/tbody/tr/td/a')[:5]:
-            self.webdriver.get(a.get("href"))
-            print(a.get("href"))
-            self.webdriver.implicitly_wait(10000)
+        # Fetch from the last four Released documents
+        if not self.test_mode_enabled():
+            links = self.html.xpath('//*[@id="FileTable"]/tbody/tr/td/a')[:4]
+        else:
+            links = ["fake_link"]
+        for link in links:
+            if not self.test_mode_enabled():
+                # Fetch the PDF at the a_href link in the file table and parse it
+                self.webdriver.get(link.get("href"))
+                date_filed = link.text_content().split("day, ")[1].strip()
+                # Wait for pdf to render
+                self.webdriver.implicitly_wait(10000)
+                # And click next twice to make sure we fully render the PDF content
+                self.find_element_by_id("next").click()
+                self.find_element_by_id("next").click()
 
-            page_content = self.find_element_by_id("viewer").text
+                # Set the content for lxml parsing after this rendering.
+                self.html = fromstring(self.webdriver.page_source)
+            else:
+                super()._download()
+                date_filed = "JANUARY 4, 2023"
 
-            html = fromstring(self.webdriver.page_source)
-
-            for link in html.xpath(".//section/a/@href"):
-                title = html.xpath(f"//a[@title='{link}']/@id")
-                if not title:
+            start = False
+            content = []
+            author = ""
+            for element in self.html.xpath("//*"):
+                if b"markedContent" in tostring(element):
                     continue
-                title_id = title[0]
-                appellate_court = html.xpath(
-                    f"//span[@aria-owns='{title_id}']/text()"
-                )
-                case_info = []
-                author = None
-                date_filed = re.findall(
-                    r"(JANUARY|FEBRUARY|MARCH|APRIL|MAY|JUNE|JULY|AUGUST|SEPTEMBER|OCTOBER|NOVEMBER|DECEMBER \d{1,2}, \d{4})",
-                    page_content,
-                )[0]
-                page_content = re.sub(r"\n-\n", "-", page_content)
-                page_content = re.sub("\n ", " ", page_content)
-                docket = ""
-                for row in page_content.splitlines():
-                    m = re.findall(r"((\d{4}-\d{4})|(\d{7}) )", row)
-                    if m:
-                        docket = list({x for x in m[0] if x})[0]
-                        case_info = []
-                        case_info.append(row)
-                    if "JUSTICE" in row:
-                        author = row
-                    if case_info:
-                        case_info.append(row)
-                    if row == appellate_court[0]:
-                        break
-                case_data = " ".join(case_info)
-                case_title = case_data.split(docket)[1].strip()
-                self.cases.append(
-                    {
-                        "date": date_filed,
-                        "name": case_title,
-                        "docket": docket,
-                        "status": "Published",
-                        "url": link,
-                        "author": author,
-                    }
-                )
-        pprint(self.cases)
-        self.webdriver.quit()
+                elif b"left: 120" in tostring(
+                    element
+                ) or b"left: 119" in tostring(element):
+                    if (
+                        b"JUDGE" in tostring(element)
+                        or b"JUSTICE" in tostring(element)
+                        or b"PER CURIAM" in tostring(element)
+                    ):
+                        author = element.text_content()
+                    if b"REHEARING" in tostring(element):
+                        author = ""
+                    start = True
+                    content = []
+                    content.append(element.text_content())
+
+                elif start and b"aria-owns" in tostring(element):
+                    ao = element.get("aria-owns")
+                    if not ao:
+                        start = False
+                        continue
+                    if len(ao.split()) == 1:
+                        urls = self.html.xpath(f".//a[@id='{ao}']/@href")
+                    else:
+                        urls = self.html.xpath(
+                            f".//a[@id='{ao.split()[0]}']/@href"
+                        )
+
+                    content.append(element.text_content())
+                    all_content = " ".join(content)
+                    cleaned_content = re.sub(r"\s{2,}", " ", all_content)
+                    docket = re.findall(r"^[\w-]*", cleaned_content)[0]
+                    title = (
+                        cleaned_content.split("(")[0]
+                        .replace(docket, "")
+                        .strip()
+                    )
+                    content = []
+                    start = False
+                    self.cases.append(
+                        {
+                            "date": date_filed,
+                            "name": title,
+                            "docket": docket,
+                            "status": "Published",
+                            "url": urls[0],
+                            "author": author,
+                        }
+                    )
+                elif start:
+                    content.append(element.text_content())
+        if not self.test_mode_enabled():
+            self.webdriver.quit()
