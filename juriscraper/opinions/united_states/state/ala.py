@@ -1,3 +1,15 @@
+"""
+Scraper for Alabama Supreme Court
+CourtID: ala
+Court Short Name: Alabama
+Author: William Palin
+Court Contact:
+History:
+ - 2023-01-04: Created.
+Notes:
+ - This may be the only court (with the app. cts) that requires selenium
+"""
+
 import re
 
 from lxml.html import fromstring, tostring
@@ -40,6 +52,7 @@ class Site(OpinionSiteLinearWebDriven):
                 super()._download()
                 date_filed = "JANUARY 4, 2023"
 
+            # Iterate over the elements to extract out the content
             start = False
             content = []
             author = ""
@@ -49,6 +62,7 @@ class Site(OpinionSiteLinearWebDriven):
                 elif b"left: 120" in tostring(
                     element
                 ) or b"left: 119" in tostring(element):
+                    # Add an author if available
                     if (
                         b"JUDGE" in tostring(element)
                         or b"JUSTICE" in tostring(element)
@@ -62,6 +76,7 @@ class Site(OpinionSiteLinearWebDriven):
                     content.append(element.text_content())
 
                 elif start and b"aria-owns" in tostring(element):
+                    # Ascertain URL
                     ao = element.get("aria-owns")
                     if not ao:
                         start = False
@@ -72,7 +87,7 @@ class Site(OpinionSiteLinearWebDriven):
                         urls = self.html.xpath(
                             f".//a[@id='{ao.split()[0]}']/@href"
                         )
-
+                    # Cleanup whitespace and identify docket and case title
                     content.append(element.text_content())
                     all_content = " ".join(content)
                     cleaned_content = re.sub(r"\s{2,}", " ", all_content)
@@ -84,6 +99,7 @@ class Site(OpinionSiteLinearWebDriven):
                     )
                     content = []
                     start = False
+                    # Add case and start over
                     self.cases.append(
                         {
                             "date": date_filed,

@@ -1,3 +1,7 @@
+# Author: William E. Palin
+# Date created: 2023-01-04
+# Notes: See Alabama
+
 from juriscraper.opinions.united_states.state import ala
 
 
