@@ -24,11 +24,12 @@ class Site(OpinionSiteLinear):
         self.cite_regex = r"\d{2,4} Ark\. \d+"
 
     def _process_html(self) -> None:
+        if self.test_mode_enabled():
+            self.year = 2022
         feed = feedparser.parse(self.request["response"].content)
         for item in feed["entries"]:
             if not re.findall(self.cite_regex, item["title"], re.I | re.M):
                 continue
-
             name, cite, date = item["title"].split("\n")
             name = titlecase(name.strip(" -"))
             cite = cite.strip(" -")
