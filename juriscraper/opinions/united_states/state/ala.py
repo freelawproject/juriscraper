@@ -67,13 +67,14 @@ class Site(OpinionSiteLinearWebDriven):
                     content = []
                     content.append(element.text_content())
 
+                    text = element.text_content()
                     if (
-                        "JUDGE" in element.text_content()
-                        or "JUSTICE" in element.text_content()
-                        or "PER CURIAM" in element.text_content()
+                        "JUDGE" in text
+                        or "JUSTICE" in text
+                        or "PER CURIAM" text
                     ):
-                        author = element.text_content()
-                    if "REHEARING" in element.text_content():
+                        author = text
+                    if "REHEARING" in text:
                         author = ""
 
                 elif start and element.cssselect("span[aria-owns]"):
