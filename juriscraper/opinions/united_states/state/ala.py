@@ -71,7 +71,7 @@ class Site(OpinionSiteLinearWebDriven):
                     if (
                         "JUDGE" in text
                         or "JUSTICE" in text
-                        or "PER CURIAM" text
+                        or "PER CURIAM" in text
                     ):
                         author = text
                     if "REHEARING" in text:
