@@ -12,7 +12,7 @@ Notes:
 
 import re
 
-from lxml.html import fromstring, tostring
+from lxml.html import fromstring
 
 from juriscraper.OpinionSiteLinearWebDriven import OpinionSiteLinearWebDriven
 
@@ -57,36 +57,33 @@ class Site(OpinionSiteLinearWebDriven):
             content = []
             author = ""
             for element in self.html.xpath("//*"):
-                if b"markedContent" in tostring(element):
+                left = element.xpath(
+                    'substring-before(substring-after(@style, "left: "), "px")'
+                )
+                if element.cssselect("span[class='markedContent']"):
                     continue
-                elif b"left: 120" in tostring(
-                    element
-                ) or b"left: 119" in tostring(element):
-                    # Add an author if available
-                    if (
-                        b"JUDGE" in tostring(element)
-                        or b"JUSTICE" in tostring(element)
-                        or b"PER CURIAM" in tostring(element)
-                    ):
-                        author = element.text_content()
-                    if b"REHEARING" in tostring(element):
-                        author = ""
+                elif left and round(float(left)) == 120:
                     start = True
                     content = []
                     content.append(element.text_content())
 
-                elif start and b"aria-owns" in tostring(element):
-                    # Ascertain URL
+                    if (
+                        "JUDGE" in element.text_content()
+                        or "JUSTICE" in element.text_content()
+                        or "PER CURIAM" in element.text_content()
+                    ):
+                        author = element.text_content()
+                    if "REHEARING" in element.text_content():
+                        author = ""
+
+                elif start and element.cssselect("span[aria-owns]"):
                     ao = element.get("aria-owns")
                     if not ao:
                         start = False
                         continue
-                    if len(ao.split()) == 1:
-                        urls = self.html.xpath(f".//a[@id='{ao}']/@href")
-                    else:
-                        urls = self.html.xpath(
-                            f".//a[@id='{ao.split()[0]}']/@href"
-                        )
+                    urls = self.html.xpath(
+                        f".//a[@id='{ao.split()[0]}']/@href"
+                    )
                     # Cleanup whitespace and identify docket and case title
                     content.append(element.text_content())
                     all_content = " ".join(content)
@@ -107,7 +104,7 @@ class Site(OpinionSiteLinearWebDriven):
                             "docket": docket,
                             "status": "Published",
                             "url": urls[0],
-                            "author": author,
+                            "judge": author,
                         }
                     )
                 elif start:
