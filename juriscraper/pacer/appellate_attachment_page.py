@@ -140,10 +140,13 @@ class AppellateAttachmentPage(BaseReport):
         :param row: Table row
         :return: Attachment description
         """
-        description_text_nodes = row.xpath(".//td/text()")
-        if not description_text_nodes:
+        row_nodes = row.xpath(".//td")
+        if not row_nodes:
             return ""
-        return force_unicode(description_text_nodes[2].strip())
+        description = row_nodes[-2].xpath("text()")
+        if description:
+            return force_unicode(description[0].strip())
+        return ""
 
     @staticmethod
     def _get_page_count_from_tr(row: html.HtmlElement) -> Optional[int]:
@@ -156,7 +159,7 @@ class AppellateAttachmentPage(BaseReport):
         description_text_nodes = row.xpath(".//td/text()")
         if not description_text_nodes:
             return None
-        return int(description_text_nodes[3].strip())
+        return int(description_text_nodes[-1].strip())
 
     @staticmethod
     def _get_pacer_doc_id(row: html.HtmlElement) -> Optional[str]:
