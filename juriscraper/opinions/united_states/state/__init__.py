@@ -1,5 +1,7 @@
 __all__ = [
-    #'ala', Dead. Murdered by terrible site and per-page download fees.
+    "ala",
+    "alacivapp",
+    "alacrimapp",
     "alaska",
     "alaskactapp",
     "ariz",
