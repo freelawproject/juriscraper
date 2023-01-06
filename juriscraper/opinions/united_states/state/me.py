@@ -10,8 +10,9 @@ History:
               missing dates.
   2014-12-15: Fixes insanity exception by tweaking the XPaths.
 
-  2022-01-06: Maine scraper is still maintained but no longer in use at
-              Courtlistener.com.  The Court publishes directly into CL.
+  2022-01-06: This scraper is not maintained. Future work to gather this
+              data should be done by scraping the CourtListener API
+              https://www.courtlistener.com/api/rest/v3/clusters/?docket__court__id=me
 """
 
 from lxml import html
