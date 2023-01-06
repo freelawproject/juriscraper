@@ -9,6 +9,9 @@ History:
   2014-07-02: Was receiving InsanityException and tweaked date code to get some
               missing dates.
   2014-12-15: Fixes insanity exception by tweaking the XPaths.
+
+  2022-01-06: Maine scraper is still maintained but no longer in use at
+              Courtlistener.com.  The Court publishes directly into CL.
 """
 
 from lxml import html
