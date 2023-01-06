@@ -16,6 +16,23 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.29 - 2022-01-16**
+
+Features:
+
+- Added scrapers for
+  - Alabama Supreme Court
+  - Alabama Court of Civil Appeals
+  - Alabama Court of Criminal Appeals
+  - Colorado Supreme Court
+  - Colorado Court of Appeals
+
+Changes:
+
+- N/A
+
+## Past
+
 **2.5.28 - 2022-12-22**
 
 Features:
@@ -39,7 +56,6 @@ Changes:
 
 - N/A
 
-## Past
 
 **2.5.26 - 2022-11-15**
 
