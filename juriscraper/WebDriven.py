@@ -67,7 +67,7 @@ class WebDriven:
 
     def initiate_webdriven_session(self):
         if not self.url:
-            raise Exception("self.url not set")
+            raise Exception("self.url not set!")
 
         webdriver_conn = os.environ.get("WEBDRIVER_CONN", "local")
         if webdriver_conn == "local":
