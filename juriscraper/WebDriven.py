@@ -69,13 +69,17 @@ class WebDriven:
         if not self.url:
             raise Exception("self.url not set")
 
-        options = webdriver.FirefoxOptions()
+        webdriver_conn = os.environ.get("WEBDRIVER_CONN", "local")
+        if webdriver_conn == "local":
+            options = webdriver.FirefoxOptions()
+        else:
+            # If connecting to CL-Selenium use Chrome
+            options = webdriver.ChromeOptions()
         if os.environ.get("SELENIUM_VISIBLE", False):
             options.headless = False
         else:
             options.headless = True
         options.accept_insecure_certs = True
-        webdriver_conn = os.environ.get("WEBDRIVER_CONN", "local")
         if webdriver_conn == "local":
             # See README instruction for installing geckodriver
             self.webdriver = webdriver.Firefox(options=options)
