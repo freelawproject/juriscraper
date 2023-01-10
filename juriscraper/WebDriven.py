@@ -103,7 +103,10 @@ class WebDriven:
         self.webdriver.get(self.url)
         print("fetched")
 
+        print(self.webdriver.title)
+
         self.cookies = normalize_cookies(self.webdriver.get_cookies())
+        print("cookies collected?")
 
     def scroll_to_element_then_click(self, element: WebElement):
         script = "arguments[0].click();"
