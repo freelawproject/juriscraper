@@ -70,6 +70,7 @@ class WebDriven:
             raise Exception("self.url not set!")
 
         webdriver_conn = os.environ.get("WEBDRIVER_CONN", "local")
+        print(webdriver_conn, "<--")
         if webdriver_conn == "local":
             options = webdriver.FirefoxOptions()
         else:
@@ -80,21 +81,28 @@ class WebDriven:
         else:
             options.headless = True
         options.accept_insecure_certs = True
+        print("Conn,", webdriver_conn)
         if webdriver_conn == "local":
             # See README instruction for installing geckodriver
             self.webdriver = webdriver.Firefox(options=options)
         else:
             capabilities = options.to_capabilities()
+            print("CAPABILITIES", capabilities)
             self.webdriver = webdriver.Remote(
                 webdriver_conn,
                 desired_capabilities=capabilities,
                 keep_alive=True,
             )
-
+        print("Moving on?")
         self.webdriver.implicitly_wait(30)
+        print("waited?")
         self.webdriver.set_window_size(5000, 10000)
+        print("windowed?")
         self.wait = WebDriverWait(self.webdriver, 20)
+        print("fetching... next")
         self.webdriver.get(self.url)
+        print("fetched")
+
         self.cookies = normalize_cookies(self.webdriver.get_cookies())
 
     def scroll_to_element_then_click(self, element: WebElement):
