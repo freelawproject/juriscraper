@@ -123,6 +123,7 @@ class PacerSession(requests.Session):
         self.username = username
         self.password = password
         self.client_code = client_code
+        self.check_if_logged_in_count = 0
 
     def get(self, url, auto_login=True, **kwargs):
         """Overrides request.Session.get with session retry logic.
@@ -146,9 +147,12 @@ class PacerSession(requests.Session):
             r = super().get(url, **kwargs)
         if auto_login:
             updated = self._login_again(r)
+            self.check_if_logged_in_count = 1
             if updated:
                 # Re-do the request with the new session.
-                return super().get(url, **kwargs)
+                r = super().get(url, **kwargs)
+                # Do an additional check of the content returned.
+                self._login_again(r)
         return r
 
     def post(self, url, data=None, json=None, auto_login=True, **kwargs):
@@ -177,6 +181,7 @@ class PacerSession(requests.Session):
             kwargs.update({"data": data, "json": json})
 
         r = super().post(url, **kwargs)
+        self.check_if_logged_in_count = 1
         if auto_login:
             updated = self._login_again(r)
             if updated:
@@ -382,6 +387,10 @@ class PacerSession(requests.Session):
             self.login()
             return True
         else:
+            # Do an additional try, hopefully the content is returned properly
+            # this time, see https://github.com/freelawproject/courtlistener/issues/2160
+            if self.check_if_logged_in_count == 0:
+                return True
             raise PacerLoginException(
                 "Invalid/expired PACER session and do not have credentials "
                 "for re-login."
