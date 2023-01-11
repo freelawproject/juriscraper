@@ -16,7 +16,20 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
-**2.5.29 - 2022-01-16**
+**2.5.30 - 2022-01-11**
+
+Features:
+
+- Disabled scrapers for
+  - ME
+
+Changes:
+
+- N/A
+
+## Past
+
+**2.5.29 - 2022-01-06**
 
 Features:
 
@@ -31,7 +44,6 @@ Changes:
 
 - N/A
 
-## Past
 
 **2.5.28 - 2022-12-22**
 
