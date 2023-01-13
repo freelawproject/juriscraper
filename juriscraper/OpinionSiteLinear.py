@@ -1,4 +1,4 @@
-from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.string_utils import convert_date_string, titlecase
 from juriscraper.OpinionSite import OpinionSite
 
 
@@ -20,7 +20,7 @@ class OpinionSiteLinear(OpinionSite):
         )
 
     def _get_case_names(self):
-        return [case["name"] for case in self.cases]
+        return [titlecase(case["name"]) for case in self.cases]
 
     def _get_download_urls(self):
         return [case["url"] for case in self.cases]
