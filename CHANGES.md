@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.32 - 2022-01-13**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Fix the CA9 Published/Unpublished
+
+## Past
+
 **2.5.31 - 2022-01-13**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - Fix the four Kansas Scrapers for updated website.
-
-## Past
 
 **2.5.30 - 2022-01-11**
 
