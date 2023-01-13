@@ -72,6 +72,13 @@ __all__ = [
     "md",
     "mdag",
     "mdctspecapp",
+    # Maine now uploads their decisions directly to CourtListener, so
+    # this scraper is no longer needed by FLP. If *you* need this scraper,
+    # please let us know and we will enable it here and find a way to
+    # disable it in CourtListener. We don't currently have a way to do
+    # that. It will also be worth considering whether the scraper itself
+    # should be re-written to scrape CourtListener's API instead of the
+    # court's website.
     # "me",
     "mich",
     "michctapp",
