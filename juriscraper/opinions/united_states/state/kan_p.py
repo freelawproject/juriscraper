@@ -1,4 +1,4 @@
-# Scraper for Kansas Supreme Court
+# Scraper for Kansas Appeals Court
 # CourtID: kan_p
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -9,34 +9,26 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.kscourts.org/cases-opinions/opinions.html"
+        self.status = "Published" if "_p" in self.court_id else "Unpublished"
+        self.xpath = "kc-scu" if "kan_" in self.court_id else "kc-cau"
+        self.rows = "preceding" if "_p" in self.court_id else "following"
 
     def _process_html(self):
-        url = None
-        cap_column = self.html.xpath('//h2[@id="kc-scp"]')[0].getparent()
-        for element in cap_column.xpath(".//*"):
-            if element.tag == "h2":
-                if element.attrib["id"] == "kc-scp":
-                    status = "Published"
-                elif element.attrib["id"] == "kc-scu":
-                    status = "Unpublished"
-                    break
-            elif element.tag == "h3":
-                date = element.text_content()[6:]
-            elif element.tag == "p":
-                case_content = element.text_content()
-                components = case_content.split(" - ")
-                if "None Released" in case_content:
-                    continue
-                url = element.xpath(".//a/@href")[0]
-            if url == None:
+
+        h2_element = self.html.xpath(f'//h2[@id="{self.xpath}"]')[0]
+        ul_elements = h2_element.xpath(f"{self.rows}-sibling::ul")
+        for ul in ul_elements:
+            if "None Released" in ul.text_content():
                 continue
-            self.cases.append(
-                {
-                    "status": status,
-                    "date": date,
-                    "docket": components[0],
-                    "name": components[1],
-                    "url": url,
-                }
-            )
-            url = None
+            date = ul.getprevious().text_content()[6:]
+            for item in ul.xpath(".//p"):
+                components = item.text_content().split(" - ")
+                self.cases.append(
+                    {
+                        "status": self.status,
+                        "date": date,
+                        "docket": components[0],
+                        "name": components[1],
+                        "url": item.xpath(".//a/@href")[0],
+                    }
+                )
