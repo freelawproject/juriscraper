@@ -1,1629 +1,710 @@
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"//www.w3.org/TR/html4/strict.dtd">
-<html lang="en-us"><!-- InstanceBegin template="/Templates/index-body-small.dwt.php" codeOutsideHTMLIsLocked="false" -->
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>Opinions</title>
-
-<!-- InstanceEndEditable -->
-
-<!-- overLIB (c) Erik Bosrup -->
-<script src="//d1dmulxm8rv0nh.cloudfront.net/js/overlib.js" type="text/javascript"></script>
-
-<script src="search_assets/js/search.js" type="text/javascript"></script>
-
-<!-- Source File -->
-<link rel="stylesheet" href="//d1dmulxm8rv0nh.cloudfront.net/resources/yui/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
-
-<!-- Default Global Style Sheet -->
-<link rel="stylesheet" href="//d1dmulxm8rv0nh.cloudfront.net/css/default_NinthCircuit.css" type="text/css">
-
-<!-- Skin CSS -->
-<link rel="stylesheet" href="//d1dmulxm8rv0nh.cloudfront.net/resources/yui/build/menu/assets/skins/sam/menu.css" type="text/css">
-
-<!-- YUI Toolkit resources -->
-<script src="//d1dmulxm8rv0nh.cloudfront.net/resources/yui/build/yahoo-dom-event/yahoo-dom-event.js" type="text/javascript"></script>
-<script src="//d1dmulxm8rv0nh.cloudfront.net/resources/yui/build/element/element-beta-min.js" type="text/javascript"></script>
-<script src="//d1dmulxm8rv0nh.cloudfront.net/resources/yui/build/container/container_core-min.js" type="text/javascript"></script>
-<script src="//d1dmulxm8rv0nh.cloudfront.net/resources/yui/build/menu/menu-min.js" type="text/javascript"></script>
-
-<!-- Left Menu Source file -->
-<script src="//d1dmulxm8rv0nh.cloudfront.net/js/left_menu.js" type="text/javascript"></script>
-
-<!-- InstanceBeginEditable name="head" -->
-
-<script src="//d1dmulxm8rv0nh.cloudfront.net/resources/SpryAssets/SpryCollapsiblePanel.js" type="text/javascript"></script>
-
-<!-- LOCAL Style Sheet -->
-<link rel="stylesheet" href="search_assets/css/search.css" type="text/css">
-
-<script src="/js/jquery-3.1.1.min.js"></script>
-<script src="/js/jquery-ui/jquery-ui.min.js"></script>
-<link rel="stylesheet" href="/js/jquery-ui/jquery-ui.css" type="text/css">
-
-<script>
-         $(function() {
-             $( "#judge_autocomplete" ).autocomplete({
-                 source: 'search_assets/autocomplete.php'
-             });
-         });
-         $(function() {
-             $( "#judge2_autocomplete" ).autocomplete({
-                 source: 'search_assets/autocomplete.php'
-             });
-         });
-</script>
-
-
-
-<script type="text/javascript">
-function filterView(){
-        document.form_filter_view.submit();
-}
-
-//-->
-function MM_swapImgRestore() { //v3.0
-  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
-}
-function MM_preloadImages() { //v3.0
-  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
-    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
-    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
-}
-
-function MM_findObj(n, d) { //v4.01
-  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
-    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
-  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
-  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
-  if(!x && d.getElementById) x=d.getElementById(n); return x;
-}
-
-function MM_swapImage() { //v3.0
-  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
-   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
-}
-</script>
-
-<link href="/opinions/search_assets/css/SpryCollapsiblePanel.css" rel="stylesheet" type="text/css">
-
-<!-- InstanceEndEditable -->
-
-<!--[if IE 6]>
-<style type="text/css" media="screen">
-#yui-main .yui-b   {padding-left:10px;}
-#topAreaR p{margin:0;padding:0;}
-#headeraL{color:#9f9f9f;font-size:85%;padding:0;}
-#sub{position:relative;left:2px;}
-/* #headeraL{height:4em;} */
-#subHMaxCont{width:974px;height:28px;background:url('//d1dmulxm8rv0nh.cloudfront.net/images/header/topmenu/background_ninthcircuit.gif') repeat-x;margin-bottom:0.4em;overflow:hidden;}
-#subHContainer{margin-left:0;margin-right:auto;width:auto;}
-#subHIntCont{float:left;top:-0.2em;margin-left:75px;left:0em;bottom:0.1em;top:0em;z-index:201;}
-#ydnNav{float:left;padding:0;top:1em;}
-.yuimenubaritemlabel{padding:0;}
-.yuimenuitemlabel{margin-bottom:.1em;}
-#headerSubSandbag {top:6.0em;}
-.innerSubMenuArea{border:1px solid #d9d9d9;}
-.contentBox     {margin-bottom:0px: margin-left:0px;padding:0px;}
-.contentTitleBox{padding-left:4px; margin-left:-3px;}
-.twocolcont_cases_ann {width:575px; height:auto; margin:0px; padding:0px; }
-.twocolboxl_cases_ann {width:50%; height:auto; float:left;margin:0px; padding:0px; }
-.twocolboxr_cases_ann {margin-left:50%;padding-left:5px;margin-right:0;width:auto; height:auto; }
-</style>
-<![endif]-->
-<!--[if IE 7]>
-<style type="text/css" media="screen">
-#subHIntCont{position:relative;top:-0.1em;}
-</style>
-<![endif]-->
-<!--[if IE 8]>
-<style type="text/css" media="screen">
-.innerSubMenuArea{padding:.8em .8em;font-size:85%;text-align:left;border-top:0;z-index:183;border-top:1px solid #fff;}
-</style>
-<![endif]-->
-
-<script>
-  (function() {
-    var cx = '004651945820093364248:tsfuahgah4s';
-    var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-5523131-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-
-</head>
-<!-- InstanceBeginEditable name="bodytag" -->
-<body >
-<div id="doc4" class="yui-t2">
-<!-- InstanceEndEditable -->
-   <div id="hd">
-    <!-- Start Header -->
-
-        <!-- Begin Header Logo + Search -->
-        <div id="headerMaxCont">
-          <div id="headerContainer">
-              <span id="headeraL">
-                  <img src="//d1dmulxm8rv0nh.cloudfront.net/images/header/9cir_header_COA.jpg" alt="Ninth Circuit Appeals Court Logo" width="974" height="151" border="0" usemap="#header_map" class="ydnLogo" >
-                  <map name="header_map" id="header_map">
-                      <area shape="rect" coords="19,19,136,139" href="//www.ca9.uscourts.gov" alt="United States Courts for the Ninth Circuit Seal" />
-                      <area shape="rect" coords="154,106,331,150" href="//www.ca9.uscourts.gov" alt="Court of Appeals" />
-                      <area shape="rect" coords="337,106,512,158" href="//www.ca9.uscourts.gov/district/district_bankruptcy_courts.php" alt="District and Bankruptcy Courts" />
-                      <area shape="rect" coords="517,104,692,175" href="//www.ca9.uscourts.gov/judicial_council/judicial_council.php" alt="Judicial Council &amp; Judicial Conference" />
-                      <area shape="rect" coords="700,103,875,177" href="//www.ca9.uscourts.gov/library" alt="Ninth Circuit Library" />
-                  </map>
-              </span>
-              <span id="headeraR">
-            <div id="searchArea">
-                      <gcse:searchbox-only enableAutoComplete="true" autoCompleteMaxCompletions="5"></gcse:searchbox-only>
-                  </div>
-              </span>
-          </div>
-        </div>
-        <!-- End Header Logo + Search -->
-        <!-- Begin Top Navigation -->
-            <div id="subHMaxCont">
-            <div id="subHContainer">
-                <div id="subHIntCont">
-                    <div id="ydnNav" class="yuimenubar yuimenubarnav">  <!-- Start: main top nav -->
-                        <div class="bd">
-                            <ul class="first-of-type">
-                                <li class="yuimenubaritem first-of-type"><a class="yuimenubaritemlabel" href="/"><img src="//d1dmulxm8rv0nh.cloudfront.net/images/header/topmenu/topmenu_02.gif" alt="Home" /></a>                                </li>
-                                <li class="yuimenubaritem"><a class="yuimenubaritemlabel" href="/information"><img src="//d1dmulxm8rv0nh.cloudfront.net/images/header/topmenu/topmenu_03.gif" alt="About the Court" /></a>
-                                </li>
-                                <li class="yuimenubaritem"><a class="yuimenubaritemlabel" href="/attorneys"><img src="//d1dmulxm8rv0nh.cloudfront.net/images/header/topmenu/topmenu_04.gif" alt="Attorneys" /></a>                                </li>
-                                <li class="yuimenubaritem"><a class="yuimenubaritemlabel" href="/news_media"><img src="//d1dmulxm8rv0nh.cloudfront.net/images/header/topmenu/topmenu_05.gif" alt="News Media" /></a>                                </li>
-                                <li class="yuimenubaritem"><a class="yuimenubaritemlabel" href="/employment/"><img src="//d1dmulxm8rv0nh.cloudfront.net/images/header/topmenu/topmenu_06.gif" alt="Employment" /></a>                                </li>
-                            </ul>
-                        </div>     <!-- end bd class -->
-                    </div>
-                <!-- End: main top nav -->
-              </div>
-                <!-- <div id="subIContainer"><div id="subIIntCont"></div></div>!-->
-            </div>
-        </div>
-    <!-- End Top Navigation -->
-    <!-- End Header -->
-   </div>
-   <div id="bd">
-   <!-- Start Body -->
-      <div id="yui-main">
-        <!-- Start Main Content -->
-        <div class="yui-b">
-        <!-- InstanceBeginEditable name="MainBody" -->
-          <div class="contentBody">
-
-        <h1 style="margin-bottom:5px;">Opinions</h1>
-         <div style="border-top: 1px solid #cc9900; padding-left: 4px; margin-bottom: 4px; padding-bottom: 0px; padding-top: 0px;width: 99.5%;"></div>
-         <p><span style="font-size: small;">Opinions will generally be displayed&nbsp;on this website&nbsp;by 10 a.m. Pacific Time and Memorandum Dispositions by 1:00 p.m. Pacific Time on the day of filing. There is no charge to view or download these documents from our website. Please note that opinions and dispositions are also available from the PACER system shortly before they are posted to this site. PACER is a fee based system. Click <a href="http://www.pacer.gov/psc/efaq.html#CMECF" target="_blank">here</a> to open a PACER account and find out more about fees. PACER account holders may register as non-party users of the court's Appellate ECF system to obtain immediate email notification of the filing of opinions and dispositions in specific cases. Click <a href="http://www.pacer.gov/psc/efaq.html#CMECF" target="_blank">here</a> to register as a non-party user.</span></p>
-<p><span style="font-size: small;">A note about our&nbsp;&ldquo;Advanced Search&rdquo; function.&nbsp;This is a powerful tool that can be used to search the entire database of opinions and display them by year, month, case type, case number and case name. Use the "View" option to change the number of opinions displayed per page. Click the cells in the top row of the table to display opinions by case title, case number, case type, case code and date filed. </span></p>
-<div class="memorandaArchiveBox"><strong>Please contact the clerk's office at 415-355-8000 for Published Opinions posted before January 3, 2005.</strong></div>
-<div class="memorandaArchiveBox"><strong>Ninth Circuit opinions (along with those of several other circuits) dating back to January 2008 are available for free with advanced search capabilities at the Government Printing Office's Federal Digital System <a href="http://www.gpo.gov/fdsys/browse/collection.action?collectionCode=USCOURTS" target="_blank">here</a>.</strong></div>
-<p>&nbsp;</p>
-         <div style="margin-top: 10px;margin-bottom:30px;">
-                 To automatically receive a free list of all opinions filed each day, select a type of feed from the menu below and subscribe to the court's daily opinions RSS feed. "By judge" feeds will show all opinions on which the named judge authored the opinion, a concurrence, or a dissent.<br /><br />
-
-          <select id="select_opinions_feed" style="font-size:12px;font-weight:bold;" name="select_opinions_feed" onChange="window.open(this.options[this.selectedIndex].value,'_parent')">
-      <option value="/opinions/">--Select an opinion feed--</option>
-      <option value="/feed/opinions.xml">Today's opinions - 02/09/2017</option>
-      <option value="/feed/opinions_month.xml">Opinions from the last 30 days</option>
-      <option value="/opinions/">By judge (authoring/dissenting/concurring):</option>
-      <option value="/opinions/opinions.feed.php?judge=-958">--BEA, C.</option>
-<option value="/opinions/opinions.feed.php?judge=-952">--BERZON, M.</option>
-<option value="/opinions/opinions.feed.php?judge=-956">--BYBEE, J.</option>
-<option value="/opinions/opinions.feed.php?judge=-957">--CALLAHAN, C.</option>
-<option value="/opinions/opinions.feed.php?judge=-923">--CANBY, W.</option>
-<option value="/opinions/opinions.feed.php?judge=-963">--CHRISTEN, M.</option>
-<option value="/opinions/opinions.feed.php?judge=-955">--CLIFTON, R.</option>
-<option value="/opinions/opinions.feed.php?judge=-914">--FARRIS, J.</option>
-<option value="/opinions/opinions.feed.php?judge=-937">--FERNANDEZ, F.</option>
-<option value="/opinions/opinions.feed.php?judge=-949">--FISHER, R.</option>
-<option value="/opinions/opinions.feed.php?judge=-948">--FLETCHER, W.</option>
-<option value="/opinions/opinions.feed.php?judge=-968">--FRIEDLAND, M.</option>
-<option value="/opinions/opinions.feed.php?judge=-906">--GOODWIN, A.</option>
-<option value="/opinions/opinions.feed.php?judge=-950">--GOULD, R.</option>
-<option value="/opinions/opinions.feed.php?judge=-947">--GRABER, S.</option>
-<option value="/opinions/opinions.feed.php?judge=-941">--HAWKINS, M.</option>
-<option value="/opinions/opinions.feed.php?judge=-912">--HUG, P.</option>
-<option value="/opinions/opinions.feed.php?judge=-966">--HURWITZ, A.</option>
-<option value="/opinions/opinions.feed.php?judge=-960">--IKUTA, S.</option>
-<option value="/opinions/opinions.feed.php?judge=-940">--KLEINFELD, A.</option>
-<option value="/opinions/opinions.feed.php?judge=-931">--KOZINSKI, A.</option>
-<option value="/opinions/opinions.feed.php?judge=-935">--LEAVY, E.</option>
-<option value="/opinions/opinions.feed.php?judge=-962">--MURGUIA, M.</option>
-<option value="/opinions/opinions.feed.php?judge=-945">--McKEOWN, M.</option>
-<option value="/opinions/opinions.feed.php?judge=-922">--NELSON, D.</option>
-<option value="/opinions/opinions.feed.php?judge=-964">--NGUYEN, J.</option>
-<option value="/opinions/opinions.feed.php?judge=-932">--NOONAN, J.</option>
-<option value="/opinions/opinions.feed.php?judge=-934">--O'SCANNLAIN, D.</option>
-<option value="/opinions/opinions.feed.php?judge=-967">--OWENS, J.</option>
-<option value="/opinions/opinions.feed.php?judge=-951">--PAEZ, R.</option>
-<option value="/opinions/opinions.feed.php?judge=-919">--PREGERSON, H.</option>
-<option value="/opinions/opinions.feed.php?judge=-954">--RAWLINSON, J.</option>
-<option value="/opinions/opinions.feed.php?judge=-926">--REINHARDT, S.</option>
-<option value="/opinions/opinions.feed.php?judge=-918">--SCHROEDER, M.</option>
-<option value="/opinions/opinions.feed.php?judge=-944">--SILVERMAN, B.</option>
-<option value="/opinions/opinions.feed.php?judge=-959">--SMITH, M.</option>
-<option value="/opinions/opinions.feed.php?judge=-961">--SMITH, N.</option>
-<option value="/opinions/opinions.feed.php?judge=-953">--TALLMAN, R.</option>
-<option value="/opinions/opinions.feed.php?judge=-942">--TASHIMA, A.</option>
-<option value="/opinions/opinions.feed.php?judge=-943">--THOMAS, S.</option>
-<option value="/opinions/opinions.feed.php?judge=-936">--TROTT, S.</option>
-<option value="/opinions/opinions.feed.php?judge=-907">--WALLACE, J.</option>
-<option value="/opinions/opinions.feed.php?judge=-946">--WARDLAW, K.</option>
-<option value="/opinions/opinions.feed.php?judge=-965">--WATFORD, P.</option>
-      </select><a href="#" onMouseOver="return overlib('Link to our syndicated opinions feeds.',WIDTH, '200', MOUSEOFF);" onMouseOut="return nd();"><img src="//d1dmulxm8rv0nh.cloudfront.net/images/feed-icon-14x14.png" width="14" height="14" border="0" hspace="6" align="absmiddle"></a>
-      </div>
-
-      <div id="search" style="margin-top: -10px;">
-
- <div id="opinions_search"  style="padding-top: 5px;">
-  <div id="CollapsiblePanel1" class="CollapsiblePanel" style="margin-top:10px;">
-     <div class="CollapsiblePanelTab" tabindex="0">&nbsp;</div>
-     <div class="CollapsiblePanelContent">
-          <table width="780px" cellpadding="2" cellspacing="2" border="0">
-               <tr>
-               <td valign="top" class="codekey_label">
-                    <span class="codekey_title">*:</span> immediate filing
-                    <br>
-                    <span class="codekey_title">ad:</span> amended dissent
-                    <br>
-                    <span class="codekey_title">ao:</span> amended opinion
-                    <br>
-                    <span class="codekey_title">app:</span> appendix
-                    <br>
-                    <span class="codekey_title">cd:</span> concurrence/dissent
-                    <br>
-                    <span class="codekey_title">co:</span> corrected opinion
-               </td>
-               <td valign="top" class="codekey_label">
-                    <span class="codekey_title">eb:</span> en banc
-                    <br>
-                    <span class="codekey_title">ebo:</span> en banc order
-                    <br>
-                    <span class="codekey_title">ebop:</span> en banc opinion
-                    <br>
-                    <span class="codekey_title">o2:</span> second opinion
-                    <br>
-                    <span class="codekey_title">o:</span> order
-                    <br>
-                    <span class="codekey_title">oa:</span> order amending
-               </td>
-               <td valign="top" class="codekey_label">
-                    <span class="codekey_title">oad:</span> order amended dissent
-                    <br>
-                    <span class="codekey_title">oam:</span> order and amended memorandum
-                    <br>
-                    <span class="codekey_title">oap:</span> order and amended opinion
-                    <br>
-                    <span class="codekey_title">oop:</span> order & opinion
-                    <br>
-                    <span class="codekey_title">s:</span> supplemental opinion
-                    <br>
-                    <span class="codekey_title">sd:</span> supplemental dissent
-               </td>
-               </tr>
-          </table>
-     </div>
-</div>
-	 <div id="search-container">
-<div id="search">
-	<form method="post" action="index.php">
-	<table id="search_form" align="center">
-	<tr>
-	<th colspan="3">
-	Search Opinions
-	</th>
-	</tr><tr>
-	<td style="padding-left: 40px;">
-	Case Title:<br>
-	<input type="text" name="search_data[case_name]" value="">
-	</td><td>
-	Case No:<br>
-	<input type="text" name="search_data[case_num]" value="">
-	</td><td>
-	Case Origin:<br>
-	<input type="text" name="search_data[case_origin]" value="">
-	</td><tr>
-
-	<tr><td style="padding-left: 40px;">
-	Authoring Judge:<br>
-	<input type="text" id="judge_autocomplete" name="search_data[j1.name]" class="ui-widget judges-lookup" value="">
-	</td><td>
-	Concurring/Dissenting Judge:<br>
-	<input type="text" id="judge2_autocomplete" name="search_data[j2.name]" class="ui-widget judges-lookup" value="">
-	</td><td>
-	Case Type:<br>
-	<select name="search_data[case_type]">
-	<option value="">Select</option>
-	<option value="1292(b) Petition" >1292(b) Petition</option><option value="1453(c) Petition" >1453(c) Petition</option><option value="158(d) Petition" >158(d) Petition</option><option value="23(f) Petition" >23(f) Petition</option><option value="Agency" >Agency</option><option value="Bankruptcy" >Bankruptcy</option><option value="Civil" >Civil</option><option value="Criminal" >Criminal</option><option value="Frap 9(a)" >Frap 9(a)</option><option value="Habeas" >Habeas</option><option value="Judicial Misconduct" >Judicial Misconduct</option><option value="Original Proceeding" >Original Proceeding</option><option value="Prisoner" >Prisoner</option><option value="Prisoner Death Penalty" >Prisoner Death Penalty</option><option value="Tax Court" >Tax Court</option>	</td></tr>
-
-	<tr><td style="padding-left: 40px;">
-	Date Filed (mm/dd/yyyy):<br>
-	<input type="text" name="search_data[publish]" value="">
-	</td><td style="text-align: center;">
-	Search Type:<br>
-	<select name="operator" style="width: 75px;">
-		<option value="and" selected>AND</option>
-	<option value="OR">OR</option>
-	</td><td style="border: 0px solid red; padding: 14px 0 2px 15px;" id="search-submit">
-	<table><tr><td style="border: 0px solid green; padding: 0 10px;"><input class="search-submit-button" type="submit" value="Submit"></td><td style="border: 0px solid green; padding: 0 10px;"><input class="search-submit-button" type="button" onClick="location.href='/opinions/index.php?clear=1'" value='Clear'></td></tr></table>
-	</td></tr>
-	</table>
-</div>
-
-	<table align="center" id="search-results-table">
-	<tr>
-	<td colspan="7" align="center" class="control-table" style="padding: 0;">
-		<table>
-		<tr>
-		<td align="left" class="control-table">
-			Results: 100
- of 9329		</td>
-		<td align="center" class="control-table">
-					Pages  [<b>1</b>]  <a href='/opinions/index.php?pagenumber=2'>2</a>  <a href='/opinions/index.php?pagenumber=3'>3</a>  <a href='/opinions/index.php?pagenumber=4'>4</a>  <a href='/opinions/index.php?pagenumber=2'>></a>  <a href='/opinions/index.php?pagenumber=94'>>></a> 		</td>
-		<td align="right" class="control-table">
-					Results per page: <select name="per_page" onchange="location = this.options[this.selectedIndex].value;" style="height: 22px; width: 70px;">
-							<option value="index.php?per_page=10">10</option>
-							<option value="index.php?per_page=25">25</option>
-							<option value="index.php?per_page=50">50</option>
-							<option value="index.php?per_page=100" selected>100</option>
-							<option value="index.php?per_page=250">250</option>
-							<option value="index.php?per_page=500">500</option>
-							<option value="index.php?per_page=1000">1000</option>
-					</select>
-		</td>
-</tr>
-</table>
-</td>
-	</tr>
-	<tr>
-	<th><a href="/opinions/index.php?sort=1">Case&nbsp;Title</a></th>
-	<th><a href="/opinions/index.php?sort=2">Case&nbsp;No.</a></th>
-	<th><a href="/opinions/index.php?sort=3">Case&nbsp;Origin</a></th>
-	<th><a href="/opinions/index.php?sort=4">Authoring&nbsp;Judge</a></th>
-	<th><a href="/opinions/index.php?sort=5">Case&nbsp;Type</a></th>
-	<th><a href="/opinions/index.php?sort=6">Case<br>Code</a></th>
-	<th><a href="/opinions/index.php?sort=7">Date&nbsp;filed</a></th>
-	</tr><tr>
-
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/02/09/17-35105.pdf" target="_blank">STATE OF WASHINGTON V. DONALD J. TRUMP</a></td>
-	<td nowrap>17-35105</td>
-	<td>Seattle District Court     </td>
-	<td>Per Curiam</td>
-	<td>Civil</td>
-	<td align="center">o*</td>
-	<td>02/09/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/02/09/14-16701.pdf" target="_blank">DESIGN DATA CORP. V. UNIGATE ENTERPRISE, INC.</a></td>
-	<td nowrap>14-16701</td>
-	<td>San Francisco District Court</td>
-	<td>HAWKINS, Michael</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>02/09/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/02/08/No Opinions Filed Today.pdf" target="_blank">NO OPINIONS FILED TODAY</a></td>
-	<td nowrap> </td>
-	<td></td>
-	<td></td>
-	<td> </td>
-	<td align="center">  </td>
-	<td>02/08/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/02/07/14-16132.pdf" target="_blank">JUST FILM, INC. V. SAM BUONO</a></td>
-	<td nowrap>14-16132</td>
-	<td>Oakland District Court</td>
-	<td>GOULD, Ronald</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>02/07/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/02/07/14-50393.pdf" target="_blank">USA V. RUFINO PERALTA-SANCHEZ</a></td>
-	<td nowrap>14-50393</td>
-	<td>San Diego District Court</td>
-	<td>BYBEE, Jay</td>
-	<td>Criminal</td>
-	<td align="center">  </td>
-	<td>02/07/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/02/07/16-10121.pdf" target="_blank">USA V. LARRY LOUCIOUS</a></td>
-	<td nowrap>16-10121</td>
-	<td>Las Vegas District Court</td>
-	<td>GOULD, Ronald</td>
-	<td>Criminal</td>
-	<td align="center">  </td>
-	<td>02/07/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/02/06/13-17489.pdf" target="_blank">JOHN PRATHER V. AT&T</a></td>
-	<td nowrap>13-17489</td>
-	<td>San Francisco District Court</td>
-	<td>Sessions, William</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>02/06/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/02/03/14-10004.pdf" target="_blank">USA V. NICHOLAS LINDSEY</a></td>
-	<td nowrap>14-10004</td>
-	<td>Las Vegas District Court</td>
-	<td></td>
-	<td>Criminal</td>
-	<td align="center">o </td>
-	<td>02/03/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/02/03/14-35396.pdf" target="_blank">KATIE MAYES V. WINCO HOLDINGS, INC.</a></td>
-	<td nowrap>14-35396</td>
-	<td>Pocatello District Court</td>
-	<td>CHRISTEN, Morgan</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>02/03/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/02/03/15-55143.pdf" target="_blank">LORRIE POUBLON V. C.H. ROBINSON CO.</a></td>
-	<td nowrap>15-55143</td>
-	<td>Los Angeles District Court</td>
-	<td>IKUTA, Sandra</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>02/03/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/02/02/15-15307.pdf" target="_blank">ARIZONA DREAM ACT COALITION V. JANICE BREWER</a></td>
-	<td nowrap>15-15307</td>
-	<td>Phoenix District Court   </td>
-	<td>PREGERSON, Harry</td>
-	<td>Civil</td>
-	<td align="center">oa*</td>
-	<td>02/02/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/02/02/13-73199.pdf" target="_blank">SHAREMASTER V. SEC</a></td>
-	<td nowrap>13-73199</td>
-	<td>Securities & Exchange Comm</td>
-	<td>CALLAHAN, Consuelo</td>
-	<td>Agency</td>
-	<td align="center">  </td>
-	<td>02/02/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/02/02/14-16644.pdf" target="_blank">TERRY DIXON V. RENEE BAKER</a></td>
-	<td nowrap>14-16644</td>
-	<td>Reno District Court</td>
-	<td>Gilman, Ronald</td>
-	<td>Habeas</td>
-	<td align="center">  </td>
-	<td>02/02/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/02/02/14-16977.pdf" target="_blank">CTR FOR BIOLOGICAL DIVERSITY V. EPA</a></td>
-	<td nowrap>14-16977</td>
-	<td>San Francisco District Court</td>
-	<td>PAEZ, Richard</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>02/02/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/02/01/No Opinions Filed Today.pdf" target="_blank">NO OPINIONS FILED TODAY</a></td>
-	<td nowrap>  </td>
-	<td></td>
-	<td></td>
-	<td> </td>
-	<td align="center">  </td>
-	<td>02/01/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/31/15-10261.pdf" target="_blank">USA V. ABELARDO NIEBLA-TORRES</a></td>
-	<td nowrap>15-10261</td>
-	<td>Tucson District Court</td>
-	<td>CHRISTEN, Morgan</td>
-	<td>Criminal</td>
-	<td align="center">  </td>
-	<td>01/31/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/30/14-30244.pdf" target="_blank">USA V. MICHAEL LAURSEN</a></td>
-	<td nowrap>14-30244</td>
-	<td>Tacoma District Court</td>
-	<td>RAWLINSON, Johnnie</td>
-	<td>Criminal</td>
-	<td align="center"> </td>
-	<td>01/30/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/30/14-55980.pdf" target="_blank">BRADLEY VAN PATTEN V. VERTICAL FITNESS GROUP</a></td>
-	<td nowrap>14-55980</td>
-	<td>San Diego District Court</td>
-	<td>GOULD, Ronald</td>
-	<td>Civil</td>
-	<td align="center"> </td>
-	<td>01/30/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/30/15-15320.pdf" target="_blank">CHARLES MANLEY V. MICHAEL ROWLEY</a></td>
-	<td nowrap>15-15320</td>
-	<td>Reno District Court</td>
-	<td>SMITH, Milan</td>
-	<td>Prisoner</td>
-	<td align="center">  </td>
-	<td>01/30/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/27/15-10203.pdf" target="_blank">USA V. ALEXIS SIMON</a></td>
-	<td nowrap>15-10203</td>
-	<td>Las Vegas District Court    </td>
-	<td>THOMAS, Sidney</td>
-	<td>Criminal</td>
-	<td align="center">ebo*</td>
-	<td>01/27/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/27/13-56289.pdf" target="_blank">JAMES HARDY V. KEVIN CHAPPELL, WARDEN</a></td>
-	<td nowrap>13-56289</td>
-	<td>Los Angeles District Court</td>
-	<td>Bastian, Stanley</td>
-	<td>Habeas</td>
-	<td align="center">oa </td>
-	<td>01/27/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/27/13-71784.pdf" target="_blank">LEONEL SANDOVAL V. SALLY YATES</a></td>
-	<td nowrap>13-71784</td>
-	<td>Board of Immigration Appeals</td>
-	<td>FISHER, Raymond</td>
-	<td>Agency</td>
-	<td align="center"> </td>
-	<td>01/27/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/26/14-35028.pdf" target="_blank">EFRAIN REYNAGA V. ROSEBURG FOREST PRODUCTS</a></td>
-	<td nowrap>14-35028</td>
-	<td>Eugene District Court</td>
-	<td>PREGERSON, Harry</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/26/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/25/13-35574.pdf" target="_blank">ALASKA AIRLINES V. JUDY SCHURKE</a></td>
-	<td nowrap>13-35574</td>
-	<td>Seattle District Court</td>
-	<td>KLEINFELD, Andrew</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/25/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/25/13-56964.pdf" target="_blank">MICHAEL KOBY V. BERNADETTE HELMUTH</a></td>
-	<td nowrap>13-56964</td>
-	<td>San Diego District Court</td>
-	<td>WATFORD, Paul</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/25/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/24/No Opinions Filed Today.pdf" target="_blank">NO OPINIONS FILED TODAY</a></td>
-	<td nowrap> </td>
-	<td></td>
-	<td></td>
-	<td> </td>
-	<td align="center">  </td>
-	<td>01/24/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/23/15-55500.pdf" target="_blank">PERFECT 10, INC. V. GIGANEWS, INC.</a></td>
-	<td nowrap>15-55500</td>
-	<td>Los Angeles District Court</td>
-	<td>NELSON, Dorothy</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/23/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/23/15-60002.pdf" target="_blank">ZAFAR KHAN V. KENNETH BARTON</a></td>
-	<td nowrap>15-60002</td>
-	<td>BAP, Los Angeles Bankruptcy Ct</td>
-	<td>FERNANDEZ, Ferdinand</td>
-	<td>Bankruptcy</td>
-	<td align="center">  </td>
-	<td>01/23/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/20/12-70930.pdf" target="_blank">NATAVIDAD DURAN ESCOBAR V. LORETTA E. LYNCH</a></td>
-	<td nowrap>12-70930</td>
-	<td>Board of Immigration Appeals</td>
-	<td>CHRISTEN, Morgan</td>
-	<td>Agency</td>
-	<td align="center">  </td>
-	<td>01/20/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/20/14-15879.pdf" target="_blank">MARCUS LABERTEW V. LORAL LANGEMEIER</a></td>
-	<td nowrap>14-15879</td>
-	<td>Phoenix District Court</td>
-	<td>KLEINFELD, Andrew</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/20/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/20/14-17186.pdf" target="_blank">SARMAD SYED V. M-I, LLC</a></td>
-	<td nowrap>14-17186</td>
-	<td>Fresno District Court</td>
-	<td>WARDLAW, Kim</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/20/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/20/14-55900.pdf" target="_blank">CONSUMER FINANCIAL PROTECTION V. GREAT PLAINS LENDING</a></td>
-	<td nowrap>14-55900</td>
-	<td>Los Angeles District Court</td>
-	<td>RAWLINSON, Johnnie</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/20/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/20/14-56223.pdf" target="_blank">STEPHEN YAGMAN V. ERIC GARCETTI</a></td>
-	<td nowrap>14-56223</td>
-	<td>Los Angeles District Court</td>
-	<td>Zouhary, Jack</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/20/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/19/14-16433.pdf" target="_blank">RETAIL WHOLESALE UNION #338 V. HEWLETT-PACKARD CO.</a></td>
-	<td nowrap>14-16433</td>
-	<td>San Francisco District Court</td>
-	<td>Christensen, Dana</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/19/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/19/14-16994.pdf" target="_blank">DANIEL NORCIA V. SAMSUNG TELECOM AMERICA</a></td>
-	<td nowrap>14-16994</td>
-	<td>San Francisco District Court</td>
-	<td>IKUTA, Sandra</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/19/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/19/15-10096.pdf" target="_blank">USA V. ROY JOEY</a></td>
-	<td nowrap>15-10096</td>
-	<td>Prescott District Court</td>
-	<td>IKUTA, Sandra</td>
-	<td>Criminal</td>
-	<td align="center">  </td>
-	<td>01/19/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/18/13-70520.pdf" target="_blank">RAUL BARAJAS-ROMERO V. LORETTA E. LYNCH</a></td>
-	<td nowrap>13-70520</td>
-	<td>Board of Immigration Appeals</td>
-	<td>KLEINFELD, Andrew</td>
-	<td>Agency</td>
-	<td align="center">  </td>
-	<td>01/18/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/18/14-17229.pdf" target="_blank">SLEP-TONE ENTERTAINMENT CORP. V. WIRED FOR SOUND KARAOKE AND DJ</a></td>
-	<td nowrap>14-17229</td>
-	<td>Phoenix District Court</td>
-	<td>Per Curiam</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/18/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/18/14-56236.pdf" target="_blank">SAFARI CLUB INT'L V. LAWRENCE RUDOLPH</a></td>
-	<td nowrap>14-56236</td>
-	<td>Santa Ana District Court</td>
-	<td>Seeborg, Richard</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/18/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/17/14-17111.pdf" target="_blank">STATE OF MISSOURI V. KAMALA HARRIS</a></td>
-	<td nowrap>14-17111</td>
-	<td>Sacramento District Court</td>
-	<td>GRABER, Susan</td>
-	<td>Civil</td>
-	<td align="center"> </td>
-	<td>01/17/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/17/14-35576.pdf" target="_blank">MICHAEL SCHWERN V. PATRICK PLUNKETT</a></td>
-	<td nowrap>14-35576</td>
-	<td>Portland District Court</td>
-	<td>McKEOWN, M.</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/17/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/13/14-17087.pdf" target="_blank">CHIKE OKAFOR V. USA</a></td>
-	<td nowrap>14-17087</td>
-	<td>San Francisco District Court</td>
-	<td>TASHIMA, A.</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/13/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/13/14-17472.pdf" target="_blank">KUM TAT LIMITED V. LINDEN OX PASTURE, LLC</a></td>
-	<td nowrap>14-17472</td>
-	<td>San Francisco District Court</td>
-	<td>HURWITZ, Andrew</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/13/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/13/14-36035.pdf" target="_blank">TONJA AMES V. KING COUNTY</a></td>
-	<td nowrap>14-36035</td>
-	<td>Seattle District Court</td>
-	<td>TALLMAN, Richard</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/13/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/13/14-56017.pdf" target="_blank">PITZER COLLEGE V. INDIAN HARBOR INSURANCE CO.</a></td>
-	<td nowrap>14-56017</td>
-	<td>Los Angeles District Court</td>
-	<td></td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/13/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/13/14-56927.pdf" target="_blank">ZAKIA MASHIRI V. EPSTEN GRINNELL & HOWELL</a></td>
-	<td nowrap>14-56927</td>
-	<td>San Diego District Court</td>
-	<td>PAEZ, Richard</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/13/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/12/13-72699.pdf" target="_blank">FREDRIC GARDNER V. CIR</a></td>
-	<td nowrap>13-72699</td>
-	<td>Commissioner of Internal Rev</td>
-	<td>CALLAHAN, Consuelo</td>
-	<td>Tax Court</td>
-	<td align="center"> </td>
-	<td>01/12/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/12/14-15000.pdf" target="_blank">ROBERT PEPPER V. APPLE, INC.</a></td>
-	<td nowrap>14-15000</td>
-	<td>Oakland District Court</td>
-	<td>FLETCHER, William</td>
-	<td>Civil</td>
-	<td align="center"> </td>
-	<td>01/12/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/12/14-56769.pdf" target="_blank">US EX REL. DARRYN KELLY V. SERCO, INC.</a></td>
-	<td nowrap>14-56769</td>
-	<td>San Diego District Court</td>
-	<td>TALLMAN, Richard</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/12/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/11/15-10008.pdf" target="_blank">USA V. TONY WILLIAMS</a></td>
-	<td nowrap>15-10008</td>
-	<td>Las Vegas District Court</td>
-	<td>WALLACE, J.</td>
-	<td>Criminal</td>
-	<td align="center">oa </td>
-	<td>01/11/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/10/14-15940.pdf" target="_blank">PURE WAFER INC. V. CITY OF PRESCOTT</a></td>
-	<td nowrap>14-15940</td>
-	<td>Prescott District Court</td>
-	<td>O'SCANNLAIN, Diarmuid</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/10/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/09/13-55323.pdf" target="_blank">HECTOR NAVARRO V. ENCINO MOTORCARS</a></td>
-	<td nowrap>13-55323</td>
-	<td>Los Angeles District Court</td>
-	<td>GRABER, Susan</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/09/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/09/14-72082.pdf" target="_blank">FRANCISCO GUERRERO-ROQUE V. LORETTA E. LYNCH</a></td>
-	<td nowrap>14-72082</td>
-	<td>Board of Immigration Appeals</td>
-	<td>Per Curiam</td>
-	<td>Agency</td>
-	<td align="center">  </td>
-	<td>01/09/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/06/13-36024.pdf" target="_blank">BIBIJI KAUR PURI V. SOPURKH KAUR KHALSA</a></td>
-	<td nowrap>13-36024</td>
-	<td>Portland District Court</td>
-	<td>FISHER, Raymond</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/06/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/06/14-56305.pdf" target="_blank">TRAVIS GONZALES V. CARMAX AUTO SUPERSTORES</a></td>
-	<td nowrap>14-56305</td>
-	<td>Santa Ana District Court</td>
-	<td></td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/06/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/06/15-16282.pdf" target="_blank">CHARLES BYRD V. MARICOPA CTY BD OF SUPERVISORS</a></td>
-	<td nowrap>15-16282</td>
-	<td>Phoenix District Court</td>
-	<td>OWENS, John</td>
-	<td>Prisoner</td>
-	<td align="center">  </td>
-	<td>01/06/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/05/15-10418.pdf" target="_blank">USA V. GENARO ACEVEDO-DE LA CRUZ</a></td>
-	<td nowrap>15-10418</td>
-	<td>Tucson District Court</td>
-	<td>IKUTA, Sandra</td>
-	<td>Criminal</td>
-	<td align="center">  </td>
-	<td>01/05/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/04/15-70333.pdf" target="_blank">PAUL CONNORS V. NTSB</a></td>
-	<td nowrap>15-70333</td>
-	<td>Natl Transportation Safety Brd</td>
-	<td>NGUYEN, Jacqueline</td>
-	<td>Agency</td>
-	<td align="center">  </td>
-	<td>01/04/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/03/15-55563.pdf" target="_blank">PRESLIE HARDWICK V. MARCIA VREEKEN</a></td>
-	<td nowrap>15-55563</td>
-	<td>Santa Ana District Court</td>
-	<td>TROTT, Stephen</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/03/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/03/15-55727.pdf" target="_blank">ROBERT BRISENO V. CONAGRA FOODS, INC.</a></td>
-	<td nowrap>15-55727</td>
-	<td>Los Angeles District Court</td>
-	<td></td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/03/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/03/16-35210.pdf" target="_blank">CHAN HEALTHCARE GROUP, PS V. LIBERTY MUTUAL FIRE INSURANCE</a></td>
-	<td nowrap>16-35210</td>
-	<td>Seattle District Court</td>
-	<td>McKEOWN, M.</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>01/03/2017</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/30/13-71778.pdf" target="_blank">OTGONBAYAR LKHAGVASUREN V. LORETTA E. LYNCH</a></td>
-	<td nowrap>13-71778</td>
-	<td>Board of Immigration Appeals</td>
-	<td></td>
-	<td>Agency</td>
-	<td align="center">oa </td>
-	<td>12/30/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/29/14-16697.pdf" target="_blank">KONSTANTIN KUPFER V. KARIM SALMA</a></td>
-	<td nowrap>14-16697</td>
-	<td>San Francisco District Court</td>
-	<td>GRABER, Susan</td>
-	<td>Bankruptcy</td>
-	<td align="center"> </td>
-	<td>12/29/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/28/14-16812.pdf" target="_blank">GREAT BASIN RESOURCE WATCH V. BLM</a></td>
-	<td nowrap>14-16812</td>
-	<td>Reno District Court</td>
-	<td>GRABER, Susan</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>12/28/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/27/14-16090.pdf" target="_blank">JOHN DAVIS, JR. V. COMMONWEALTH ELECTION COMM'N</a></td>
-	<td nowrap>14-16090</td>
-	<td>NMI District Court</td>
-	<td>THOMAS, Sidney</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>12/27/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/27/14-35376.pdf" target="_blank">ILWU V. PORT OF PORTLAND</a></td>
-	<td nowrap>14-35376</td>
-	<td>Portland District Court</td>
-	<td></td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>12/27/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/27/13-17132.pdf" target="_blank">JOHN TEIXEIRA V. COUNTY OF ALAMEDA</a></td>
-	<td nowrap>13-17132</td>
-	<td>San Francisco District Court  </td>
-	<td>THOMAS, Sidney</td>
-	<td>Civil</td>
-	<td align="center">ebo </td>
-	<td>12/27/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/23/14-72553.pdf" target="_blank">HELPING HAND TOOLS V. USEPA</a></td>
-	<td nowrap>14-72553</td>
-	<td>Environmental Protection Agcy</td>
-	<td>TALLMAN, Richard</td>
-	<td>Agency</td>
-	<td align="center"> </td>
-	<td>12/23/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/22/No Opinions Filed Today.pdf" target="_blank">NO OPINIONS FILED TODAY</a></td>
-	<td nowrap>  </td>
-	<td></td>
-	<td></td>
-	<td> </td>
-	<td align="center">  </td>
-	<td>12/22/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/21/13-17358.pdf" target="_blank">KEVIN MARILLEY V. CHARLTON BONHAM</a></td>
-	<td nowrap>13-17358</td>
-	<td>Oakland District Court</td>
-	<td>FLETCHER, William</td>
-	<td>Civil</td>
-	<td align="center">ebop </td>
-	<td>12/21/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/21/14-10561.pdf" target="_blank">USA V. MELVIN SHIELDS</a></td>
-	<td nowrap>14-10561</td>
-	<td>San Jose District Court</td>
-	<td>SMITH, Milan</td>
-	<td>Criminal</td>
-	<td align="center">  </td>
-	<td>12/21/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/21/14-16983.pdf" target="_blank">KULVIR BARAPIND V. GOV'T OF THE REP. OF INDIA</a></td>
-	<td nowrap>14-16983</td>
-	<td>Fresno District Court</td>
-	<td>Restani, Jane</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>12/21/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/21/14-17106.pdf" target="_blank">DAVID RAINERO V. ARCHON CORPORATION</a></td>
-	<td nowrap>14-17106</td>
-	<td>Las Vegas District Court</td>
-	<td>THOMAS, Sidney</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>12/21/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/21/15-16178.pdf" target="_blank">ABDUL MOHAMED V. UBER TECHNOLOGIES, INC.</a></td>
-	<td nowrap>15-16178</td>
-	<td>San Francisco District Court</td>
-	<td>CLIFTON, Richard</td>
-	<td>Civil</td>
-	<td align="center"> </td>
-	<td>12/21/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/20/07-50051.pdf" target="_blank">USA V. YEPIZ</a></td>
-	<td nowrap>07-50051</td>
-	<td>Los Angeles District Court</td>
-	<td>NOONAN, John</td>
-	<td>Criminal</td>
-	<td align="center">  </td>
-	<td>12/20/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/20/14-10427.pdf" target="_blank">USA V. JOEL THOMAS, JR.</a></td>
-	<td nowrap>14-10427</td>
-	<td>Phoenix District Court</td>
-	<td>SCHROEDER, Mary</td>
-	<td>Criminal</td>
-	<td align="center">  </td>
-	<td>12/20/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/20/16-16236.pdf" target="_blank">FOWLER PACKING COMPANY, INC. V. DAVID LANIER</a></td>
-	<td nowrap>16-16236</td>
-	<td>Fresno District Court</td>
-	<td>GOULD, Ronald</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>12/20/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/19/No Opinions Filed Today.pdf" target="_blank">NO OPINIONS FILED TODAY</a></td>
-	<td nowrap>  </td>
-	<td></td>
-	<td></td>
-	<td> </td>
-	<td align="center">  </td>
-	<td>12/19/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/16/09-99023.pdf" target="_blank">CONRAD ZAPIEN V. MICHAEL MARTEL</a></td>
-	<td nowrap>09-99023</td>
-	<td>Los Angeles District Court</td>
-	<td>KOZINSKI, Alex</td>
-	<td>Prisoner Death Penalty</td>
-	<td align="center">oa </td>
-	<td>12/16/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/16/10-56406.pdf" target="_blank">GLENN TIBBLE V. EDISON INTERNATIONAL</a></td>
-	<td nowrap>10-56406</td>
-	<td>Los Angeles District Court</td>
-	<td>SMITH, Milan</td>
-	<td>Civil</td>
-	<td align="center">ebop </td>
-	<td>12/16/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/16/13-56746.pdf" target="_blank">USA V. UNITED HEALTHCARE INSURANCE CO</a></td>
-	<td nowrap>13-56746</td>
-	<td>Los Angeles District Court</td>
-	<td>FISHER, Raymond</td>
-	<td>Civil</td>
-	<td align="center">oa </td>
-	<td>12/16/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/15/No Opinions Filed Today.pdf" target="_blank">NO OPINIONS FILED TODAY</a></td>
-	<td nowrap> </td>
-	<td></td>
-	<td></td>
-	<td> </td>
-	<td align="center">  </td>
-	<td>12/15/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/14/14-16840.pdf" target="_blank">JEFF SILVESTER V. KAMALA HARRIS</a></td>
-	<td nowrap>14-16840</td>
-	<td>Fresno District Court</td>
-	<td>THOMAS, Sidney</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>12/14/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/13/14-35165.pdf" target="_blank">YAKAMA INDIAN NATION V. ALCOHOL & TOBACCO TAX & TRADE</a></td>
-	<td nowrap>14-35165</td>
-	<td>Spokane District Court</td>
-	<td>GOODWIN, Alfred</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>12/13/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/12/14-60080.pdf" target="_blank">AUGUSTINE BUSTOS V. STEVEN MOLASKY</a></td>
-	<td nowrap>14-60080</td>
-	<td>BAP, Las Vegas Bankruptcy Ct</td>
-	<td>THOMAS, Sidney</td>
-	<td>Bankruptcy</td>
-	<td align="center">  </td>
-	<td>12/12/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/12/15-10517.pdf" target="_blank">USA V. DOROTEO ROCHA-ALVARADO</a></td>
-	<td nowrap>15-10517</td>
-	<td>Tucson District Court</td>
-	<td>Restani, Jane</td>
-	<td>Criminal</td>
-	<td align="center">  </td>
-	<td>12/12/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/09/16-16236.pdf" target="_blank">FOWLER PACKING COMPANY, INC. V. DAVID LANIER</a></td>
-	<td nowrap>16-16236</td>
-	<td>Fresno District Court      </td>
-	<td></td>
-	<td>Civil</td>
-	<td align="center">o*</td>
-	<td>12/09/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/09/12-15080.pdf" target="_blank">JAMIE KIRKPATRICK V. COUNTY OF WASHOE</a></td>
-	<td nowrap>12-15080</td>
-	<td>Reno District Court</td>
-	<td>MURGUIA, Mary</td>
-	<td>Civil</td>
-	<td align="center">ebop </td>
-	<td>12/09/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/09/13-17102.pdf" target="_blank">FACEBOOK, INC. V. STEVEN VACHANI</a></td>
-	<td nowrap>13-17102</td>
-	<td>San Jose District Court</td>
-	<td>GRABER, Susan</td>
-	<td>Civil</td>
-	<td align="center">oa </td>
-	<td>12/09/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/09/15-30262.pdf" target="_blank">USA V. JOSEPH LOFTIS</a></td>
-	<td nowrap>15-30262</td>
-	<td>Butte District Court</td>
-	<td>FISHER, Raymond</td>
-	<td>Criminal</td>
-	<td align="center">  </td>
-	<td>12/09/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/08/14-10037.pdf" target="_blank">USA V. DAVID NOSAL</a></td>
-	<td nowrap>14-10037</td>
-	<td>San Francisco District Court</td>
-	<td>McKEOWN, M.</td>
-	<td>Criminal</td>
-	<td align="center">oa </td>
-	<td>12/08/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/07/No Opinions Filed Today.pdf" target="_blank">NO OPINIONS FILED TODAY</a></td>
-	<td nowrap>  </td>
-	<td></td>
-	<td></td>
-	<td> </td>
-	<td align="center">  </td>
-	<td>12/07/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/06/14-56837.pdf" target="_blank">JAPANESE VILLAGE, LLC V. FTA</a></td>
-	<td nowrap>14-56837</td>
-	<td>Los Angeles District Court</td>
-	<td>Whyte, Ronald</td>
-	<td>Civil</td>
-	<td align="center">  </td>
-	<td>12/06/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/05/14-30217.pdf" target="_blank">USA V. MOHAMED  MOHAMUD</a></td>
-	<td nowrap>14-30217</td>
-	<td>Portland District Court</td>
-	<td>OWENS, John</td>
-	<td>Criminal</td>
-	<td align="center">  </td>
-	<td>12/05/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/05/15-10475.pdf" target="_blank">USA V. ALFONZO WILLIAMS</a></td>
-	<td nowrap>15-10475</td>
-	<td>San Francisco District Court</td>
-	<td>HURWITZ, Andrew</td>
-	<td>Criminal</td>
-	<td align="center">  </td>
-	<td>12/05/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/02/No Opinions Filed Today.pdf" target="_blank">NO OPINIONS FILED TODAY</a></td>
-	<td nowrap> </td>
-	<td></td>
-	<td></td>
-	<td> </td>
-	<td align="center">  </td>
-	<td>12/02/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/12/01/No Opinions Filed Today.pdf" target="_blank">NO OPINIONS FILED TODAY</a></td>
-	<td nowrap> </td>
-	<td></td>
-	<td></td>
-	<td> </td>
-	<td align="center">  </td>
-	<td>12/01/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/11/30/08-99029.pdf" target="_blank">MICHAEL GALLEGOS V. CHARLES L. RYAN</a></td>
-	<td nowrap>08-99029</td>
-	<td>Phoenix District Court</td>
-	<td></td>
-	<td>Prisoner Death Penalty</td>
-	<td align="center">o </td>
-	<td>11/30/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/11/30/14-70686.pdf" target="_blank">WILFREDO REYES V. LORETTA E. LYNCH</a></td>
-	<td nowrap>14-70686</td>
-	<td>Board of Immigration Appeals</td>
-	<td>CALLAHAN, Consuelo</td>
-	<td>Agency</td>
-	<td align="center">  </td>
-	<td>11/30/2016</td>
-	</tr>
-
-	<tr>
-	<td><a href="http://cdn.ca9.uscourts.gov/datastore/opinions/2016/11/29/14-35231.pdf" target="_blank">MARIA GUTIERREZ V. CAROLYN COLVIN</a></td>
-	<td nowrap>14-35231</td>
-	<td>Portland District Court</td>
-	<td>Burns, Larry</td>
-	<td>Civil</td>
-	<td align="center">oop </td>
-	<td>11/29/2016</td>
-	</tr>
-		</table>
-</form>
-
-</div>
-
-</div>
-</div>
-</div>
-<!-- InstanceEndEditable -->
-        </div>
-        <!-- end Main Content -->
-      </div>
-      <div class="yui-b">
-      <!-- Start Left Navigation -->
-      <span class="yui-skin-sam">
-      <!-- InstanceBeginEditable name="LeftNavigation" -->
-          <div id="productsandservices" class="yuimenu">
-
-    <div class="bd">
-        <ul class="first-of-type">
-            <li class="yuimenuitem first-of-type">
-                <a class="yuimenuitemlabel" href="/cmecf">Electronic Filing - CM/ECF</a>
-            </li>
-            <li class="yuimenuitem">
-                <a class="yuimenuitemlabel" href="#">Opinions</a>
-                <div id="decisions" class="yuimenu">
-          			<div class="bd">
-            			<ul class="first-of-type">
-					 		<li class="yuimenuitem"><a href="/opinions/">Published</a></li>
-             				<li class="yuimenuitem"><a href="/memoranda/">Unpublished</a></li>
-	        			</ul>
-          			</div>
-        		</div>
-            </li>
-            <li class="yuimenuitem">
-                <a class="yuimenuitemlabel" href="#">Calendar</a>
-                <div id="calendar" class="yuimenu">
-          			<div class="bd">
-            			<ul class="first-of-type">
-					 		<li class="yuimenuitem"><a href="/calendar">Oral Arguments</a></li>
-             				<li class="yuimenuitem"><a href="/content/motionspanel.php">Motions Panel</a></li>
-	        			</ul>
-          			</div>
-        		</div>
-            </li>
-            <li class="yuimenuitem">
-                <a class="yuimenuitemlabel" href="#">Case Information</a>
-                <div id="case_info" class="yuimenu">
-          			<div class="bd">
-            			<ul class="first-of-type">
-					 		<li class="yuimenuitem"><a href="https://ecf.ca9.uscourts.gov/">Dockets (PACER)</a></li>
-             				<li class="yuimenuitem"><a href="/enbanc/">Pending En Banc Cases</a></li>
-	        			</ul>
-          			</div>
-        		</div>
-            </li>
-             <li class="yuimenuitem">
-                <a class="yuimenuitemlabel" href="#">FAQs, Forms and
-                <br>Instructions</a>
-                <div id="multi_info" class="yuimenu">
-          			<div class="bd">
-            			<ul class="first-of-type">
-					 		<li class="yuimenuitem"><a href="/content/faq.php">FAQs</a></li>
-             				<li class="yuimenuitem"><a href="/open_case_counsel/">After Opening a Case - Attorneys</a></li>
-                            <li class="yuimenuitem"><a href="/open_case_prose/">After Opening a Case - Pro Se</a></li>
-             				<li class="yuimenuitem"><a href="/forms/">Forms</a></li>
-                            <li class="yuimenuitem"><a href="/content/view.php?pk_id=0000000559">Fee Schedule</a></li>
-                            <li class="yuimenuitem"><a href="/content/view.php?pk_id=0000000237">Glossary</a></li>
-	        			</ul>
-          			</div>
-        		</div>
-            </li>
-            <li class="yuimenuitem">
-                <a class="yuimenuitemlabel" href="#">Rules</a>
-                  <div id="rules" class="yuimenu">
-          			<div class="bd">
-            			<ul class="first-of-type">
-					 		<li class="yuimenuitem"><a href="/rules/">FRAP & Circuit Rules</a></li>
-                            <!-- <li class="yuimenuitem"><a href="/streamlined">Streamlined Requests Replace Telephonic<br/>Requests for Extensions of Time</a></li> removed 1/1/15 -->
-                            <!-- <li class="yuimenuitem"><a href="/excerpts">Electronic Submission of Excerpts</a></li> -->
-                            <!-- <li class="yuimenuitem"><a href="/content/view.php?pk_id=0000000803">Proposed Rule Amendments</a></li> Removed, per Cole Benson, 11/24/15 -->
-                            <li class="yuimenuitem"><a href="/content/view.php?pk_id=0000000682">New, Amended & Interim Rules</a></li>
-                            <li class="yuimenuitem"><a href="/rules/general_orders.php">General Orders</a></li>
-	        			</ul>
-          			</div>
-        		</div>
-            </li>
-            <!--<li class="yuimenuitem first-of-type">
-                <a class="yuimenuitemlabel" href="/guides/">Guides and <br />Legal Outlines</a>
-            </li>-->
-            <li class="yuimenuitem">
-                <a class="yuimenuitemlabel" href="#">Guides and <br />Legal Outlines</a>
-                  <div id="guides" class="yuimenu">
-          			<div class="bd">
-            			<ul class="first-of-type">
-                        	<li class="yuimenuitem"><a href="/guides/appellate_jurisdiction.php">Appellate Jurisdiction in the Ninth Circuit</a></li>
-                            <li class="yuimenuitem"><a href="/content/view.php?pk_id=0000000858">Appellate Practice Guide</a></li>
-                            <li class="yuimenuitem"><a href="//cdn.ca9.uscourts.gov/datastore/uploads/general/Circuit CJA Policies Adopted 10-20-16.pdf" target="_blank">Criminal Justice Act Policy and Procedures</a></li>
-		       <!-- <li class="yuimenuitem"><a href="/guides/how_to_file_petition.php">How to File an Immigration Petition for Review</a></li> !-->
-			    <li class="yuimenuitem"><a href="/content/view.php?pk_id=0000000849">Habeas Training - Powerpoints and Materials</a></li>
-			    <li class="yuimenuitem"><a href="/content/view.php?pk_id=0000000818">Immigration Training - Powerpoints and Materials</a></li>
-			    <li class="yuimenuitem"><a href="/guides/immigration_outline.php">Ninth Circuit Immigration Outline</a></li>
-                            <li class="yuimenuitem"><a href="/guides/perfecting_your_appeal.php">Perfecting Your Appeal</a></li>
-                            <li class="yuimenuitem"><a href="/content/view.php?pk_id=0000000724">Section 1983 Outline</a></li>
- 			    <li class="yuimenuitem"><a href="//cdn.ca9.uscourts.gov/datastore/uploads/guides/2013_Social_Security_Outline_Westlaw.pdf">Social Security Outline</a></li>
-                            <li class="yuimenuitem"><a href="/content/view.php?pk_id=0000000368">Standards of Review</a></li>
-	        			</ul>
-          			</div>
-        		</div>
-            </li>
-            <li class=class="yuimenuitem first-of-type">
-                <!-- <a class="yuimenuitemlabel" href="/media">Audio and Video</a> -->
-		<a class="yuimenuitemlabel" href="#">Audio and Video</a>
-		<div id="media" class="yuimenu">
-          		<div class="bd">
-            		    <ul class="first-of-type">
-                        	<li class="yuimenuitem"><a href="/media/live_oral_arguments.php">Live Oral Arguments</a></li>
-				<!-- <li class="yuimenuitem"><a href="//www.ca9.uscourts.gov/AppellatePracticeGuide">Appellate Practice Guide</a></li> -->
-				<li class="yuimenuitem"><a href="/media">Archived Audio and Video</a></li>
-	        	    </ul>
-          		</div>
-        	</div>
-            </li>
-            <li class="yuimenuitem">
-                <a class="yuimenuitemlabel" href="/rss">RSS Feeds&nbsp;<img src="//d1dmulxm8rv0nh.cloudfront.net/images/feed-icon-14x14.png" /></a>
-            </li>
-            </ul>
-            <br>
-            <br>
-            <ul class="leftnav_bgcolor">
-            <li class="yuimenuitem">
-              <a class="yuimenuitemlabel" href="/content/view.php?pk_id=0000000142"><span class="leftnav_units">Clerk's Office</span></a>
-            </li>
-            <li>
-              <a class="yuimenuitemlabel" href="/mediation"><span class="leftnav_units">Mediation</span></a>
-            </li>
-            <li class="yuimenuitem">
-              <a class="yuimenuitemlabel" href="/content/view.php?pk_id=0000000130"><span class="leftnav_units">Appellate Commissioner</span></a>
-            </li>
-             <li class="yuimenuitem">
-              <a class="yuimenuitemlabel" href="/bap/"><span class="leftnav_units">Bankruptcy Appellate Panel</span></a>
-            </li>
-        </ul>
-        <!-- test !-->
-     </div>
-   </div>
-
-          <!-- InstanceEndEditable -->
-      </span>
-      <!-- end Left Navigation -->
-      <br>
-      <div class="welcome">
-      <table cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td valign="top"><strong>Welcome</strong> to the Internet portal of the United States Courts for the Ninth Circuit. <br><a href="/content/view.php?pk_id=0000000244">more >></a>
-          <br>
-          <br>
-          </td>
-          <td><img src="//d1dmulxm8rv0nh.cloudfront.net/images/blank.gif" width="8" height="1" border="0"></td>
-          <td valign="top"><img src="//d1dmulxm8rv0nh.cloudfront.net/images/Thomas_CA9.jpg" width="65" height="91">
-            <br>
-            <table cellpadding="0" cellspacing="0" border="0" align="right"><tr><td><span class="graphicsubtitle">- Chief Judge Sidney Thomas</span></td></tr></table>
-          </td>
-        </tr>
-      </table>
-    </div>
-       <a href="https://ecf.ca9.uscourts.gov/cmecf/servlet/TransportRoom?servlet=CaseSearch.jsp"><img src="//d1dmulxm8rv0nh.cloudfront.net/images/PACER.jpg" width="168" border="0" /></a>
-       <br>
-       <br>
-       <!-- Start Browser Requirements -->
-
-       <!-- End Browser Requirements -->
-      </div>
-    </div>
-    <!-- End Body -->
-          <!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats --> <br class="clearfloat" />
-    <div id="ft">
-    <!-- Start Footer -->
-    <div class="ft">
-          &nbsp;&nbsp;&nbsp;
-      <a href="/sitemap/">Site Map</a>
-      &nbsp; | &nbsp;
-      <a href="http://intranet.circ9.dcn">Intranet (Judiciary Only)</a>
-      &nbsp; | &nbsp;
-      <a href="/content/view.php?pk_id=0000000624">COOP Staff Page</a>
-      &nbsp; | &nbsp;
-      <a href="http://psds.uscourts.gov/seminar.fwx?mode=pubjdglist&cascode=a09xxxc" target="_blank">Seminar Disclosures</a>
-      &nbsp; | &nbsp;
-      <a href="http://www.ce9.uscourts.gov/misconduct/judicial_misconduct.html" target="_blank">Judicial Misconduct</a>
-      &nbsp; | &nbsp;
-      <!-- Begin Suggestions Link -->
-<script type="text/javascript">
-//<![CDATA[
-<!--
-var x="function f(x){var i,o=\"\",l=x.length;for(i=0;i<l;i+=2) {if(i+1<l)o+=" +
-"x.charAt(i+1);try{o+=x.charAt(i);}catch(e){}}return o;}f(\"ufcnitnof x({)av" +
-" r,i=o\\\"\\\"o,=l.xelgnhtl,o=;lhwli(e.xhcraoCedtAl(1/)3=!01)0t{yrx{=+;x+ll" +
-"=};acct(h)e}{f}roi(l=1-i;=>;0-i)-o{=+.xhcratAi(;)r}teru n.oussbrt0(o,)l};(f" +
-")\\\"22,1\\\"\\\\-$0 +5>r~3feqndp31\\\\03\\\\03\\\\\\\\17\\\\0+\\\\VH6.00\\" +
-"\\\\\\01\\\\03\\\\01\\\\\\\\3D03\\\\\\\\22\\\\06\\\\02\\\\\\\\27\\\\07\\\\0" +
-"1\\\\\\\\/=v/5o0102\\\\\\\\),q=%vz!HQQVYW20\\\\0l\\\\23\\\\0J\\\\ZO4N00\\\\" +
-"\\\\4C03\\\\\\\\4<tt`sb{\\\\y\\\\\\\"~\\\\cfwi2c02\\\\\\\\37\\\\0\\\\\\\\(\\"+
-"\"}fo;n uret}r);+)y+^(i)t(eAodrCha.c(xdeCoarChomfrg.intr=So+7;12%=;y++)y22<" +
-"1(iif){++;i<l;i=0(ior;fthnglex.l=\\\\,\\\\\\\"=\\\",o iar{vy)x,f(n ioctun\\" +
-"\"f)\")"                                                                     ;
-while(x=eval(x));
-//-->
-//]]>
-</script>
-
-<!-- End Suggestions Link -->
-    <!-- End Footer -->
-    </div>
-   </div>
-<!-- end #container -->
-</div>
-
-
-<script type="text/javascript">
-		var CollapsiblePanel1 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel1", {contentIsOpen:false});
-</script>
-
-
-
-</body>
-<!-- InstanceEnd --></html>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<channel>
+<title>United States Courts for the Ninth Circuit - Opinions</title>
+<link>https://www.ca9.uscourts.gov/opinions/</link>
+<description>Recent content in Opinions on United States Court of Appeals for the Ninth Circuit</description>
+<generator>Hugo -- gohugo.io</generator>
+<language>en-us</language>
+<atom:link href="https://www.ca9.uscourts.gov/opinions/index.xml" rel="self" type="application/rss+xml"/>
+<item>
+<title>IDANIA PEREZ-PORTILLO, ET AL V. MERRICK GARLAND</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/30/20-73486.pdf</link>
+<pubDate>12/30/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/30/20-73486.pdf</guid>
+<description>Date Filed 12/30/2022</description>
+</item>
+<item>
+<title>JEFFREY REICHERT, ET AL V. RAPID INVESTMENTS, INC., ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/30/21-35530.pdf</link>
+<pubDate>12/30/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/30/21-35530.pdf</guid>
+<description>Date Filed 12/30/2022</description>
+</item>
+<item>
+<title>PAULETTE SMITH V. EDWARD AGDEPPA, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/30/20-56254.pdf</link>
+<pubDate>12/30/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/30/20-56254.pdf</guid>
+<description>Date Filed 12/30/2022</description>
+</item>
+<item>
+<title>SAUK-SUIATTLE INDIAN TRIBE V. CITY OF SEATTLE, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/30/22-35000.pdf</link>
+<pubDate>12/30/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/30/22-35000.pdf</guid>
+<description>Date Filed 12/30/2022</description>
+</item>
+<item>
+<title>ERIC DODGE V. EVERGREEN SCHOOL DISTRICT #114, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/29/21-35400.pdf</link>
+<pubDate>12/29/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/29/21-35400.pdf</guid>
+<description>Date Filed 12/29/2022</description>
+</item>
+<item>
+<title>USA V. JONATHAN ANDERSON</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/29/20-50345.pdf</link>
+<pubDate>12/29/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/29/20-50345.pdf</guid>
+<description>Date Filed 12/29/2022</description>
+</item>
+<item>
+<title>ANOTHER PLANET ENTERTAINMENT V. VIGILANT INSURANCE COMPANY</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/28/21-16093.pdf</link>
+<pubDate>12/28/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/28/21-16093.pdf</guid>
+<description>Date Filed 12/28/2022</description>
+</item>
+<item>
+<title>CARA JONES, ET AL V. GOOGLE LLC, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/28/21-16281.pdf</link>
+<pubDate>12/28/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/28/21-16281.pdf</guid>
+<description>Date Filed 12/28/2022</description>
+</item>
+<item>
+<title>USA V. NOEL MACAPAGAL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/28/21-10262.pdf</link>
+<pubDate>12/28/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/28/21-10262.pdf</guid>
+<description>Date Filed 12/28/2022</description>
+</item>
+<item>
+<title>KEVIN CHEN, ET AL V. ALBANY UNIFIED SCHOOL DISTRICT, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/27/20-16540.pdf</link>
+<pubDate>12/27/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/27/20-16540.pdf</guid>
+<description>Date Filed 12/27/2022</description>
+</item>
+<item>
+<title>USA V. DAVID LINEHAN</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/22/21-50206.pdf</link>
+<pubDate>12/22/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/22/21-50206.pdf</guid>
+<description>Date Filed 12/22/2022</description>
+</item>
+<item>
+<title>CENTER FOR FOOD SAFETY, ET AL V. MICHAEL REGAN, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/21/19-72109.pdf</link>
+<pubDate>12/21/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/21/19-72109.pdf</guid>
+<description>Date Filed 12/21/2022</description>
+</item>
+<item>
+<title>COLIN BRICKMAN V. META PLATFORMS, INC.</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/21/21-16785.pdf</link>
+<pubDate>12/21/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/21/21-16785.pdf</guid>
+<description>Date Filed 12/21/2022</description>
+</item>
+<item>
+<title>LUIS PINO V. CARDONE CAPITAL, LLC, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/21/21-55564.pdf</link>
+<pubDate>12/21/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/21/21-55564.pdf</guid>
+<description>Date Filed 12/21/2022</description>
+</item>
+<item>
+<title>USA V. JOSHUA FISHER</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/21/20-10098.pdf</link>
+<pubDate>12/21/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/21/20-10098.pdf</guid>
+<description>Date Filed 12/21/2022</description>
+</item>
+<item>
+<title>D. R. V. RBUSD</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/20/21-56053.pdf</link>
+<pubDate>12/20/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/20/21-56053.pdf</guid>
+<description>Date Filed 12/20/2022</description>
+</item>
+<item>
+<title>SYLVESTER OWINO, ET AL V. CORECIVIC, INC.</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/20/21-55221.pdf</link>
+<pubDate>12/20/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/20/21-55221.pdf</guid>
+<description>Date Filed 12/20/2022</description>
+</item>
+<item>
+<title>USA V. SHARMISTHA BARAI</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/20/20-10318.pdf</link>
+<pubDate>12/20/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/20/20-10318.pdf</guid>
+<description>Date Filed 12/20/2022</description>
+</item>
+<item>
+<title>HAYDAY FARMS, INC., ET AL V. FEEDX HOLDINGS, INC.</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/19/21-55650.pdf</link>
+<pubDate>12/19/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/19/21-55650.pdf</guid>
+<description>Date Filed 12/19/2022</description>
+</item>
+<item>
+<title>DAVID SUSKI, ET AL V. COINBASE, INC., ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/16/22-15209.pdf</link>
+<pubDate>12/16/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/16/22-15209.pdf</guid>
+<description>Date Filed 12/16/2022</description>
+</item>
+<item>
+<title>NERY SALGUERO SOSA V. MERRICK GARLAND</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/16/19-70961.pdf</link>
+<pubDate>12/16/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/16/19-70961.pdf</guid>
+<description>Date Filed 12/16/2022</description>
+</item>
+<item>
+<title>RICHARD JOHNSON V. CHARLES RYAN, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/15/20-15293.pdf</link>
+<pubDate>12/15/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/15/20-15293.pdf</guid>
+<description>Date Filed 12/15/2022</description>
+</item>
+<item>
+<title>TWITTER, INC. V. KEN PAXTON</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/14/21-15869.pdf</link>
+<pubDate>12/14/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/14/21-15869.pdf</guid>
+<description>Date Filed 12/14/2022</description>
+</item>
+<item>
+<title>USA V. CYNTHIA MONTOYA</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/14/21-50129.pdf</link>
+<pubDate>12/14/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/14/21-50129.pdf</guid>
+<description>Date Filed 12/14/2022</description>
+</item>
+<item>
+<title>USA V. JAMES WELLS</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/14/20-30009.pdf</link>
+<pubDate>12/14/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/14/20-30009.pdf</guid>
+<description>Date Filed 12/14/2022</description>
+</item>
+<item>
+<title>CONSUMER FINANCIAL PROTECTION V. ARMOND ARIA, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/13/21-55525.pdf</link>
+<pubDate>12/13/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/13/21-55525.pdf</guid>
+<description>Date Filed 12/13/2022</description>
+</item>
+<item>
+<title>WILLIAN RAUDA V. DAVID JENNINGS, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/12/21-16062.pdf</link>
+<pubDate>12/12/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/12/21-16062.pdf</guid>
+<description>Date Filed 12/12/2022</description>
+</item>
+<item>
+<title>JAMES KLEISER, ET AL V. BENJAMIN CHAVEZ, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/09/21-36029.pdf</link>
+<pubDate>12/09/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/09/21-36029.pdf</guid>
+<description>Date Filed 12/09/2022</description>
+</item>
+<item>
+<title>LARISSA WALN, ET AL V. DYSART SCHOOL DISTRICT, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/09/21-15737.pdf</link>
+<pubDate>12/09/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/09/21-15737.pdf</guid>
+<description>Date Filed 12/09/2022</description>
+</item>
+<item>
+<title>MACKENZIE BROWN, ET AL V. STATE OF ARIZONA, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/09/20-15568.pdf</link>
+<pubDate>12/09/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/09/20-15568.pdf</guid>
+<description>Date Filed 12/09/2022</description>
+</item>
+<item>
+<title>KJERSTI FLAA, ET AL V. HOLLYWOOD FOREIGN PRESS ASSOC., ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/08/21-55347.pdf</link>
+<pubDate>12/08/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/08/21-55347.pdf</guid>
+<description>Date Filed 12/08/2022</description>
+</item>
+<item>
+<title>RAFAEL DIAZ-RODRIGUEZ V. MERRICK GARLAND</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/08/13-73719.pdf</link>
+<pubDate>12/08/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/08/13-73719.pdf</guid>
+<description>Date Filed 12/08/2022</description>
+</item>
+<item>
+<title>THOMAS GEARING, ET AL V. CITY OF HALF MOON BAY</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/08/21-16688.pdf</link>
+<pubDate>12/08/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/08/21-16688.pdf</guid>
+<description>Date Filed 12/08/2022</description>
+</item>
+<item>
+<title>DREAMSTIME.COM, LLC V. GOOGLE LLC</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/06/20-16472.pdf</link>
+<pubDate>12/06/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/06/20-16472.pdf</guid>
+<description>Date Filed 12/06/2022</description>
+</item>
+<item>
+<title>RONALD HOOKS V. NEXSTAR BROADCASTING, INC.</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/05/21-35252.pdf</link>
+<pubDate>12/05/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/05/21-35252.pdf</guid>
+<description>Date Filed 12/05/2022</description>
+</item>
+<item>
+<title>USA V. ELLEN REICHE</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/05/21-30275.pdf</link>
+<pubDate>12/05/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/05/21-30275.pdf</guid>
+<description>Date Filed 12/05/2022</description>
+</item>
+<item>
+<title>LUIS PEREZ-CAMACHO V. MERRICK GARLAND</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/02/19-72063.pdf</link>
+<pubDate>12/02/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/02/19-72063.pdf</guid>
+<description>Date Filed 12/02/2022</description>
+</item>
+<item>
+<title>RICARDO BRAVO-BRAVO V. MERRICK GARLAND</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/02/20-71042.pdf</link>
+<pubDate>12/02/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/02/20-71042.pdf</guid>
+<description>Date Filed 12/02/2022</description>
+</item>
+<item>
+<title>CALIFORNIA DEPARTMENT OF TOXIC, ET AL V. CENTURY INDEMNITY COMPANY, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/01/20-15029.pdf</link>
+<pubDate>12/01/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/12/01/20-15029.pdf</guid>
+<description>Date Filed 12/01/2022</description>
+</item>
+<item>
+<title>BYRON MCKNIGHT, ET AL V. UBER TECHNOLOGIES, INC., ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/30/21-16623.pdf</link>
+<pubDate>11/30/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/30/21-16623.pdf</guid>
+<description>Date Filed 11/30/2022</description>
+</item>
+<item>
+<title>A. CLARK V. SHIRLEY WEBER</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/29/21-56337.pdf</link>
+<pubDate>11/29/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/29/21-56337.pdf</guid>
+<description>Date Filed 11/29/2022</description>
+</item>
+<item>
+<title>JOHEL VALIENTE, ET AL V. SWIFT TRANSP. CO. OF ARIZ.</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/23/21-55456.pdf</link>
+<pubDate>11/23/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/23/21-55456.pdf</guid>
+<description>Date Filed 11/23/2022</description>
+</item>
+<item>
+<title>CHARLES MOORE, ET AL V. USA</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/22/20-36122.pdf</link>
+<pubDate>11/22/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/22/20-36122.pdf</guid>
+<description>Date Filed 11/22/2022</description>
+</item>
+<item>
+<title>USA V. FOREST KIRST</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/22/20-30193.pdf</link>
+<pubDate>11/22/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/22/20-30193.pdf</guid>
+<description>Date Filed 11/22/2022</description>
+</item>
+<item>
+<title>USA V. JUAN HOLIDAY</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/22/20-50157.pdf</link>
+<pubDate>11/22/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/22/20-50157.pdf</guid>
+<description>Date Filed 11/22/2022</description>
+</item>
+<item>
+<title>AROLDO RODRIGUEZ DIAZ V. MERRICK GARLAND, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/21/20-16245.pdf</link>
+<pubDate>11/21/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/21/20-16245.pdf</guid>
+<description>Date Filed 11/21/2022</description>
+</item>
+<item>
+<title>SAN CARLOS APACHE TRIBE V. XAVIER BECERRA, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/21/21-15641.pdf</link>
+<pubDate>11/21/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/21/21-15641.pdf</guid>
+<description>Date Filed 11/21/2022</description>
+</item>
+<item>
+<title>VICKI COLLIER V. LINCOLN LIFE ASSURANCE COMPANY</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/21/21-55465.pdf</link>
+<pubDate>11/21/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/21/21-55465.pdf</guid>
+<description>Date Filed 11/21/2022</description>
+</item>
+<item>
+<title>IN RE: SANDRA TILLMAN, ET AL V. LAWRENCE WARFIELD, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/18/21-16034.pdf</link>
+<pubDate>11/18/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/18/21-16034.pdf</guid>
+<description>Date Filed 11/18/2022</description>
+</item>
+<item>
+<title>APACHE STRONGHOLD V. USA, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/17/21-15295.pdf</link>
+<pubDate>11/17/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/17/21-15295.pdf</guid>
+<description>Date Filed 11/17/2022</description>
+</item>
+<item>
+<title>MISTY SMARTT V. KILOLO KIJAKAZI</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/17/21-16009.pdf</link>
+<pubDate>11/17/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/17/21-16009.pdf</guid>
+<description>Date Filed 11/17/2022</description>
+</item>
+<item>
+<title>USA V. JERRE NISHIDA</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/17/21-10070.pdf</link>
+<pubDate>11/17/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/17/21-10070.pdf</guid>
+<description>Date Filed 11/17/2022</description>
+</item>
+<item>
+<title>DAVID BORDEN V. EFINANCIAL, LLC</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/16/21-35746.pdf</link>
+<pubDate>11/16/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/16/21-35746.pdf</guid>
+<description>Date Filed 11/16/2022</description>
+</item>
+<item>
+<title>RUTH FARLOW V. KILOLO KIJAKAZI</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/16/21-35890.pdf</link>
+<pubDate>11/16/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/16/21-35890.pdf</guid>
+<description>Date Filed 11/16/2022</description>
+</item>
+<item>
+<title>EARNEST PRESCOTT V. KELLY SANTORO</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/15/19-17509.pdf</link>
+<pubDate>11/15/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/15/19-17509.pdf</guid>
+<description>Date Filed 11/15/2022</description>
+</item>
+<item>
+<title>MURRAY HOOPER V. DAVID SHINN, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/15/22-99012.pdf</link>
+<pubDate>11/15/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/15/22-99012.pdf</guid>
+<description>Date Filed 11/15/2022</description>
+</item>
+<item>
+<title>MURRAY HOOPER V. MARK BRNOVICH, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/15/22-16764.pdf</link>
+<pubDate>11/15/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/15/22-16764.pdf</guid>
+<description>Date Filed 11/15/2022</description>
+</item>
+<item>
+<title>CHRISTOPHER BARCLAY V. DEJAN BOSKOSKI</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/14/22-55098.pdf</link>
+<pubDate>11/14/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/14/22-55098.pdf</guid>
+<description>Date Filed 11/14/2022</description>
+</item>
+<item>
+<title>DENISE MEJIA V. WESLEY MILLER, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/14/21-56282.pdf</link>
+<pubDate>11/14/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/14/21-56282.pdf</guid>
+<description>Date Filed 11/14/2022</description>
+</item>
+<item>
+<title>PUNCHBOWL, INC. V. AJ PRESS, LLC</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/14/21-55881.pdf</link>
+<pubDate>11/14/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/14/21-55881.pdf</guid>
+<description>Date Filed 11/14/2022</description>
+</item>
+<item>
+<title>SAN ANTONIO WINERY, INC. V. JIAXING MICAROSE TRADE CO.</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/14/21-56036.pdf</link>
+<pubDate>11/14/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/14/21-56036.pdf</guid>
+<description>Date Filed 11/14/2022</description>
+</item>
+<item>
+<title>FRIENDS OF ALASKA NAT'L, ET AL V. DEBRA HAALAND, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/10/20-35721.pdf</link>
+<pubDate>11/10/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/10/20-35721.pdf</guid>
+<description>Date Filed 11/10/2022</description>
+</item>
+<item>
+<title>SEAVIEW TRADING, LLC, AGK INVE V. CIR</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/10/20-72416.pdf</link>
+<pubDate>11/10/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/10/20-72416.pdf</guid>
+<description>Date Filed 11/10/2022</description>
+</item>
+<item>
+<title>UNICOLORS, INC. V. H&M HENNES & MAURITZ, LP</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/10/18-56253.pdf</link>
+<pubDate>11/10/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/10/18-56253.pdf</guid>
+<description>Date Filed 11/10/2022</description>
+</item>
+<item>
+<title>LASSANA MAGASSA V. ALEJANDRO MAYORKAS, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/09/21-35700.pdf</link>
+<pubDate>11/09/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/09/21-35700.pdf</guid>
+<description>Date Filed 11/09/2022</description>
+</item>
+<item>
+<title>ONLINE MERCHANTS GUILD V. NICOLAS MADUROS</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/09/21-16911.pdf</link>
+<pubDate>11/09/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/09/21-16911.pdf</guid>
+<description>Date Filed 11/09/2022</description>
+</item>
+<item>
+<title>DANNY JONES V. CHARLES RYAN</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/07/18-99005.pdf</link>
+<pubDate>11/07/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/07/18-99005.pdf</guid>
+<description>Date Filed 11/07/2022</description>
+</item>
+<item>
+<title>TRINA RAY, ET AL V. LOS ANGELES COUNTY DEPARTMENT, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/04/20-56245.pdf</link>
+<pubDate>11/04/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/04/20-56245.pdf</guid>
+<description>Date Filed 11/04/2022</description>
+</item>
+<item>
+<title>LEOBARDO MORENO GALVEZ, ET AL V. UR JADDOU, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/03/20-36052.pdf</link>
+<pubDate>11/03/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/03/20-36052.pdf</guid>
+<description>Date Filed 11/03/2022</description>
+</item>
+<item>
+<title>ANITA GREEN V. MISS UNITED STATES OF AMERICA</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/02/21-35228.pdf</link>
+<pubDate>11/02/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/02/21-35228.pdf</guid>
+<description>Date Filed 11/02/2022</description>
+</item>
+<item>
+<title>ARMIDA RUELAS, ET AL V. COUNTY OF ALAMEDA, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/01/21-16528.pdf</link>
+<pubDate>11/01/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/01/21-16528.pdf</guid>
+<description>Date Filed 11/01/2022</description>
+</item>
+<item>
+<title>SAVE THE BULL TROUT, ET AL V. MARTHA WILLIAMS, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/01/21-35480.pdf</link>
+<pubDate>11/01/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/11/01/21-35480.pdf</guid>
+<description>Date Filed 11/01/2022</description>
+</item>
+<item>
+<title>GIOVANNY HERNANDEZ V. MERRICK GARLAND</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/31/20-72138.pdf</link>
+<pubDate>10/31/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/31/20-72138.pdf</guid>
+<description>Date Filed 10/31/2022</description>
+</item>
+<item>
+<title>USA V. JAMES RICHARDS</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/31/21-10190.pdf</link>
+<pubDate>10/31/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/31/21-10190.pdf</guid>
+<description>Date Filed 10/31/2022</description>
+</item>
+<item>
+<title>CITY OF RENO V. NETFLIX, INC., ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/28/21-16560.pdf</link>
+<pubDate>10/28/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/28/21-16560.pdf</guid>
+<description>Date Filed 10/28/2022</description>
+</item>
+<item>
+<title>GCIU-EMPLOYER RETIREMENT FUND, ET AL V. MNG ENTERPRISES, INC.</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/28/21-55864.pdf</link>
+<pubDate>10/28/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/28/21-55864.pdf</guid>
+<description>Date Filed 10/28/2022</description>
+</item>
+<item>
+<title>BLISS SEQUOIA INSURANCE, ET AL V. ALLIED PROPERTY & CASUALTY INS</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/27/20-35890.pdf</link>
+<pubDate>10/27/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/27/20-35890.pdf</guid>
+<description>Date Filed 10/27/2022</description>
+</item>
+<item>
+<title>ANDRE VERDUN, ET AL V. CITY OF SAN DIEGO, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/26/21-55046.pdf</link>
+<pubDate>10/26/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/26/21-55046.pdf</guid>
+<description>Date Filed 10/26/2022</description>
+</item>
+<item>
+<title>CALIFORNIA CHAMBER OF COMMERCE V. CERT, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/26/21-15745.pdf</link>
+<pubDate>10/26/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/26/21-15745.pdf</guid>
+<description>Date Filed 10/26/2022</description>
+</item>
+<item>
+<title>JANE DOE V. USDC-NVL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/25/22-70098.pdf</link>
+<pubDate>10/25/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/25/22-70098.pdf</guid>
+<description>Date Filed 10/25/2022</description>
+</item>
+<item>
+<title>CARIENE CADENA, ET AL V. CUSTOMER CONNEXX LLC, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/24/21-16522.pdf</link>
+<pubDate>10/24/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/24/21-16522.pdf</guid>
+<description>Date Filed 10/24/2022</description>
+</item>
+<item>
+<title>HEVER MENDOZA LINARES V. MERRICK GARLAND</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/24/20-71582.pdf</link>
+<pubDate>10/24/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/24/20-71582.pdf</guid>
+<description>Date Filed 10/24/2022</description>
+</item>
+<item>
+<title>JAMES SHAYLER V. 1310 PCH, LLC</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/24/21-56130.pdf</link>
+<pubDate>10/24/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/24/21-56130.pdf</guid>
+<description>Date Filed 10/24/2022</description>
+</item>
+<item>
+<title>JANE DOES, ET AL V. REDDIT, INC.</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/24/21-56293.pdf</link>
+<pubDate>10/24/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/24/21-56293.pdf</guid>
+<description>Date Filed 10/24/2022</description>
+</item>
+<item>
+<title>NOELLE LEE V. ROBERT FISHER, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/24/21-15923.pdf</link>
+<pubDate>10/24/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/24/21-15923.pdf</guid>
+<description>Date Filed 10/24/2022</description>
+</item>
+<item>
+<title>USA V. SOHIEL KABIR</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/24/21-50141.pdf</link>
+<pubDate>10/24/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/24/21-50141.pdf</guid>
+<description>Date Filed 10/24/2022</description>
+</item>
+<item>
+<title>PLANNED PARENTHOOD FEDERATION, ET AL V. CENTER FOR MEDICAL PROGRESS, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/21/20-16068.pdf</link>
+<pubDate>10/21/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/21/20-16068.pdf</guid>
+<description>Date Filed 10/21/2022</description>
+</item>
+<item>
+<title>RISVIN DE LEON LOPEZ V. MERRICK GARLAND</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/21/20-71529.pdf</link>
+<pubDate>10/21/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/21/20-71529.pdf</guid>
+<description>Date Filed 10/21/2022</description>
+</item>
+<item>
+<title>AARON KILLGORE V. SPECPRO PROFESSIONAL SERVICES</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/20/21-15897.pdf</link>
+<pubDate>10/20/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/20/21-15897.pdf</guid>
+<description>Date Filed 10/20/2022</description>
+</item>
+<item>
+<title>FREDDIE CRESPIN V. CHARLES RYAN, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/20/18-15073.pdf</link>
+<pubDate>10/20/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/20/18-15073.pdf</guid>
+<description>Date Filed 10/20/2022</description>
+</item>
+<item>
+<title>LORI WAKEFIELD V. VISALUS, INC.</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/20/21-35201.pdf</link>
+<pubDate>10/20/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/20/21-35201.pdf</guid>
+<description>Date Filed 10/20/2022</description>
+</item>
+<item>
+<title>MINGNAN DONG V. MERRICK GARLAND</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/19/16-70543.pdf</link>
+<pubDate>10/19/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/19/16-70543.pdf</guid>
+<description>Date Filed 10/19/2022</description>
+</item>
+<item>
+<title>KURT MICHAELS V. RON DAVIS, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/18/15-99005.pdf</link>
+<pubDate>10/18/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/18/15-99005.pdf</guid>
+<description>Date Filed 10/18/2022</description>
+</item>
+<item>
+<title>MARK BAX, ET AL V. DOCTORS MED. CTR. OF MODESTO, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/18/21-16532.pdf</link>
+<pubDate>10/18/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/18/21-16532.pdf</guid>
+<description>Date Filed 10/18/2022</description>
+</item>
+<item>
+<title>SUSAN PECK, ET AL V. ANTHONY MONTOYA, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/18/20-56413.pdf</link>
+<pubDate>10/18/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/18/20-56413.pdf</guid>
+<description>Date Filed 10/18/2022</description>
+</item>
+<item>
+<title>TIMOTHY RILEY V. VOLKSWAGEN GROUP OF AMERICA, I</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/18/20-15882.pdf</link>
+<pubDate>10/18/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/18/20-15882.pdf</guid>
+<description>Date Filed 10/18/2022</description>
+</item>
+<item>
+<title>USA V. SERGIO GUERRERO</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/18/21-10248.pdf</link>
+<pubDate>10/18/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/18/21-10248.pdf</guid>
+<description>Date Filed 10/18/2022</description>
+</item>
+<item>
+<title>JAIME HOYOS V. RONALD DAVIS</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/17/17-99009.pdf</link>
+<pubDate>10/17/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/17/17-99009.pdf</guid>
+<description>Date Filed 10/17/2022</description>
+</item>
+<item>
+<title>350 MONTANA, ET AL V. DEBRA HAALAND, ET AL</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/14/20-35411.pdf</link>
+<pubDate>10/14/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/14/20-35411.pdf</guid>
+<description>Date Filed 10/14/2022</description>
+</item>
+<item>
+<title>USA V. ENRIQUE HOLGUIN</title>
+<link>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/13/19-50158.pdf</link>
+<pubDate>10/13/2022</pubDate>
+<guid>https://cdn.ca9.uscourts.gov/datastore/opinions/2022/10/13/19-50158.pdf</guid>
+<description>Date Filed 10/13/2022</description>
+</item>
+</channel>
+</rss>
