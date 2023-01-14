@@ -73,6 +73,24 @@ class ScraperExtractFromText(unittest.TestCase):
                 {"OpinionCluster": {"precedential_status": "Published"}},
             ),
         ],
+        "juriscraper.opinions.united_states.state.nyappterm_1st": [
+            (
+                """<br>PRESENT: Brigantti, J.P., Hagler, Tisch, JJ. \n\n <br>570410/22 \n and more and more """,
+                {"Docket": {"docket_number": "570410/22"}},
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.nyappterm_2nd": [
+            (
+                """SUPREME COURT, APPELLATE TERM, FIRST DEPARTMENT \nPRESENT: Brigantti, J.P., Hagler, Tisch, JJ. \n 570613/17 """,
+                {"Docket": {"docket_number": "570613/17"}},
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.nysupct": [
+            (
+                """<br>Index No. 154867/2022 Robert R. Reed, J. \nThe following """,
+                {"Docket": {"docket_number": "154867/2022"}},
+            ),
+        ],
     }
 
     def test_extract_from_text(self):
