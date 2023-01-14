@@ -10,6 +10,7 @@ History:
 import feedparser
 from lxml.html import tostring
 
+from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -25,7 +26,7 @@ class Site(OpinionSiteLinear):
         for item in feed["entries"]:
             self.cases.append(
                 {
-                    "name": item["title"],
+                    "name": titlecase(item["title"]),
                     "url": item["link"],
                     "date": item["published"],
                     "status": self.status,
