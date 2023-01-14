@@ -1,0 +1,71 @@
+Return-Path: <cmecf@ca2.uscourts.gov>
+Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov [63.241.40.204])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 21skljc94an8cvg0s19hp68a5f578v9e66v2q4o1
+ for recipient@example.com;
+ Wed, 10 Aug 2022 07:11:28 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ca2.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=cmecf@ca2.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ca2.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=cmecf@ca2.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+ dmarc=none header.from=ca2.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFIelZISWdTWHdLcVd6VXh4RWh2TUtCVEFjR1R2c2lPU1EzL1B1NllkNHNXdWZGMGxOU28vUGdvaVdGRzE0VnY1NStGVEdFSTFQMWMyaFJocmp1TGNaQ0l2S2hZUFhOeTNJSEZFNmdEYjB5dURRdldaclUzU0l6NXVkME51d295WTZyckNhNHRYdVpQam5aM0pnQjREbXBKWFNSTGluWVk3L3BKOHpyNnZ2Q256bS9aSlJtY1VscVpaQjNHcHdaUGl5MWZ5T002M1daOUlvcTFMZEx4VzNWMUl6YUh1MWcyNFFoblArUXpVdEdYbC9jN2Rkb1JpQ2JLVmQwNHdnaVU3UjhpVndKUUpxVFhqM0JvZGtQVi9ncm9wMGc2THRDbnRZRHhBelBXek0xaHc9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=YNv9L1AlT3o1FGLR1prwhl3eDUpcKMs8aMenQ3afkU+Ewdl/91rUufQBt3JAQdthpvw5drnH+85jCyPd9Rl0Wninq/UDh0FsGmu2IXjfvGfyraeyqcRZs+NToOSItLnPltORlD92rS1ZvDworS8yDdhKIP5hW1lGxjUch2NN7MQ=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1660115489; v=1; bh=XJX1yJO1oqMn0FWbRqNhKXq59pjBNoQE0bYxmjjNK8U=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.45
+Received: from ca2db.ca2.gtwy.dcn ([156.119.190.45])
+  by icmecf201.gtwy.uscourts.gov with ESMTP; 10 Aug 2022 03:11:28 -0400
+Received: from ca2db.ca2.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by ca2db.ca2.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 27A7BOmp088435
+	for <recipient@example.com>; Wed, 10 Aug 2022 03:11:24 -0400
+Date: Wed, 10 Aug 2022 03:11:24 -0400 (EDT)
+From: cmecf@ca2.uscourts.gov
+To: recipient@example.com
+Message-ID: <118177161.3712.1660115484179@ca2db.ca2.gtwy.dcn>
+Subject: 22-7 Elisa W. v. The City of New York "Appendix FILED"
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><TITLE>22-7 Elisa W. v. The City of New York "Appendix FILED"</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFDA" TEXT="#000000" LINK="#0000ff" VLINK="#551a8b" ALINK="#ff0000">
+<P><STRONG>
+***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer.  PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing.</STRONG><BR>
+<P><CENTER><STRONG>Court of Appeals, 2nd Circuit</STRONG></CENTER>
+<P><STRONG>Notice of Docket Activity</STRONG><BR>
+<BR>
+The following transaction was filed on 08/10/2022
+<TABLE BORDER=0 CELLSPACING=3>
+<TR><TD><STRONG>Case Name:</STRONG></TD>
+<TD colspan='2'>Elisa W. v. The City of New York<BR>
+</TD></TR>
+<TR><TD><STRONG>Case Number:&nbsp;&nbsp;</STRONG></TD>
+<TD><A HREF="https://ecf.ca2.uscourts.gov/n/beam/servlet/TransportRoom?servlet=DocketReportFilter.jsp&caseId=56342">22-7</A></TD></TR>
+<TR><TD><STRONG>Document(s):</STRONG></TD>
+<TD><A HREF="https://ecf.ca2.uscourts.gov/docs1/00208962225?uid=8d96e8f0a9737656">Document(s)</A></TD></TR>
+</TABLE><BR>
+<P><STRONG>Docket Text:</STRONG><BR>
+JOINT APPENDIX, volume 7 of 13, (pp. 1711-1995), on behalf of Appellant Dameon C., Thierry E., Mikayla G., Ayanna J., Myls J., Malik M., Tyrone M., Xavion M., Alexandria R., Ana-Maria R., Olivia R., Emmanuel S., Lucas T., Ximena T., Jose T.C., Valentina T.C., Matthew V., Brittney W. and Elisa W., FILED. Service date 08/09/2022 by CM/ECF.[3362641] [22-7]<BR>
+<BR>
+<STRONG>Notice will be electronically mailed to:</STRONG><BR><BR>
+Recipient User Test 1, -: testing1@gexample.com<BR>
+Recipient User Test 2, -: testing2@gexample.com<BR>
+Recipient User Test 3, -: testing3@gexample.com, testing3_1@gexample.com<BR>
+Recipient User Test 4, -: testing4@gexample.com, testing4_1@gexample.com, testing4_2@gexample.com<BR>
+Recipient User Test 5, Deputy Clerk: Testing5@gexample.com<BR>
+Recipient User Test 5, Case Manager: Testing_6@gexample.com<BR>
+<BR><BR><BR><STRONG>Notice will be stored in the notice cart for:</STRONG><BR><BR>
+Mr. Ronald Willoughby, Case Manager<BR>
+Quality Control 1<BR>
+<BR>
+The following document(s) are associated with this transaction:<BR>
+<STRONG>Document Description: </STRONG>Appendix FILED<BR>
+<STRONG>Original Filename: </STRONG>VOL. 7 (for filing).pdf<BR>
+<STRONG>Electronic Document Stamp:</STRONG><BR>
+[STAMP acecfStamp_ID=1161632333 [Date=08/10/2022] [FileNumber=3362641-0] [46b2701c6e47a5048d3822ae754867ee6240f7385590daf75e8fe82e9529406021eb1dbfc96c6b317f4a6fd12a02dd5bd4c3f9bf412f3d4d760cbf46a515ecef]]<BR>
+<BR>
+</BODY></HTML>

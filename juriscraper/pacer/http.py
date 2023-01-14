@@ -14,26 +14,25 @@ logger = make_default_logger()
 requests.packages.urllib3.disable_warnings(exceptions.InsecureRequestWarning)
 
 
-def check_if_logged_in_page(text):
+def check_if_logged_in_page(content: bytes) -> bool:
     """Is this a valid HTML page from PACER?
 
-    Check if the html in 'text' is from a valid PACER page or valid PACER XML
-    document, or if it's from a page telling you to log in or informing you
+    Check if the data in 'content' is from a valid PACER page or valid PACER
+    XML document, or if it's from a page telling you to log in or informing you
     that you're not logged in.
-    :param text: The HTML or XML of the page to test
+    :param content: The data to test, of type bytes. This uses bytes to avoid
+    converting data to text using an unknown encoding. (see #564)
     :return boolean: True if logged in, False if not.
     """
-    if isinstance(text, bytes):
-        text = text.decode("utf-8")
 
     valid_case_number_query = (
-        "<case number=" in text
-        or "<request number=" in text
-        or 'id="caseid"' in text
-        or "Cost: " in text
+        b"<case number=" in content
+        or b"<request number=" in content
+        or b'id="caseid"' in content
+        or b"Cost: " in content
     )
-    no_results_case_number_query = re.search("<message.*Cannot find", text)
-    sealed_case_query = re.search("<message.*Case Under Seal", text)
+    no_results_case_number_query = re.search(b"<message.*Cannot find", content)
+    sealed_case_query = re.search(b"<message.*Case Under Seal", content)
     if any(
         [
             valid_case_number_query,
@@ -41,7 +40,7 @@ def check_if_logged_in_page(text):
             sealed_case_query,
         ]
     ):
-        not_logged_in = re.search("text.*Not logged in", text)
+        not_logged_in = re.search(b"text.*Not logged in", content)
         if not_logged_in:
             # An unauthenticated PossibleCaseNumberApi XML result. Simply
             # continue onwards. The complete result looks like:
@@ -55,9 +54,33 @@ def check_if_logged_in_page(text):
 
     # Detect if we are logged in. If so, no need to do so. If not, we login
     # again below.
-    found_district_logout_link = "/cgi-bin/login.pl?logout" in text
-    found_appellate_logout_link = "InvalidUserLogin.jsp" in text
-    if any([found_district_logout_link, found_appellate_logout_link]):
+    found_district_logout_link = b"/cgi-bin/login.pl?logout" in content
+    found_appellate_logout_link = b"InvalidUserLogin.jsp" in content
+
+    # A download confirmation page doesn't contain a logout link but we're
+    # logged into.
+    is_a_download_confirmation_page = b"Download Confirmation" in content
+    # When looking for a download confirmation page sometimes an appellate
+    # attachment page is returned instead, see:
+    # https://ecf.ca8.uscourts.gov/n/beam/servlet/TransportRoom?servlet=ShowDoc&pacer=i&dls_id=00802251695
+    appellate_attachment_page = (
+        b"Documents are attached to this filing" in content
+    )
+    # Sometimes the document is completely unavailable and an error message is
+    # shown, see:
+    # https://ecf.ca11.uscourts.gov/n/beam/servlet/TransportRoom?servlet=ShowDoc/009033568259
+    appellate_document_error = (
+        b"The requested document cannot be displayed" in content
+    )
+    if any(
+        [
+            found_district_logout_link,
+            found_appellate_logout_link,
+            is_a_download_confirmation_page,
+            appellate_attachment_page,
+            appellate_document_error,
+        ]
+    ):
         # A normal HTML page we're logged into.
         return True
 
@@ -112,7 +135,7 @@ class PacerSession(requests.Session):
 
         r = super().get(url, **kwargs)
 
-        if "This user has no access privileges defined." in r.text:
+        if b"This user has no access privileges defined." in r.content:
             # This is a strange error that we began seeing in CM/ECF 6.3.1 at
             # ILND. You can currently reproduce it by logging in on the central
             # login page, selecting "Court Links" as your destination, and then
@@ -280,7 +303,14 @@ class PacerSession(requests.Session):
             data=json.dumps(data),
         )
 
+        if login_post_r.status_code != requests.codes.ok:
+            message = f"Unable connect to PACER site: '{login_post_r.status_code}: {login_post_r.reason}'"
+            logger.warning(message)
+            raise PacerLoginException(message)
+
+        # Continue with login when response code is "200: OK"
         response_json = login_post_r.json()
+
         # 'loginResult': '0', user successfully logged; '1', user not logged
         if (
             response_json.get("loginResult") == None
@@ -341,7 +371,7 @@ class PacerSession(requests.Session):
         if is_text(r):
             return False
 
-        logged_in = check_if_logged_in_page(r.text)
+        logged_in = check_if_logged_in_page(r.content)
         if logged_in:
             return False
 

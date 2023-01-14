@@ -3,132 +3,113 @@ CourtID: mich
 Court Short Name: Mich.
 Contact: sitefeedback@courts.mi.gov
 History:
- - 2014-09-21: Updated by Jon Andersen to handle some fields being missing
- - 2014-08-05: Updated to have a dynamic URL, an oversight during check in.
+    - 2014-09-21: Updated by Jon Andersen to handle some fields being missing
+    - 2014-08-05: Updated to have a dynamic URL, an oversight during check in.
+    - 2022-01-28: Updated for new web site, @satsuki-chan.
 """
+import re
+from typing import List
+from urllib.parse import urlencode
 
-import time
-from datetime import date, timedelta
-
-from juriscraper.lib.string_utils import clean_if_py3, titlecase
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.DeferringList import DeferringList
+from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.today = date.today()
-        self.a_while_ago = date.today() - timedelta(days=30)
-        self.url = (
-            "http://courts.mi.gov/opinions_orders/opinions_orders/"
-            "Pages/default.aspx?SearchType=4"
-            "&Status_Advanced=sct&FirstDate_Advanced="
-            "{start_month}%2f{start_day}%2f{start_year}"
-            "&LastDate_Advanced="
-            "{end_month}%2f{end_day}%2f{end_year}".format(
-                start_day=self.a_while_ago.day,
-                start_month=self.a_while_ago.month,
-                start_year=self.a_while_ago.year,
-                end_day=self.today.day,
-                end_month=self.today.month,
-                end_year=self.today.year,
-            )
-        )
-        self.back_scrape_iterable = list(range(0, 868))
         self.court_id = self.__module__
-
-    def _get_case_dates(self):
-        dates = []
-        for txt in self.html.xpath('//li[@class="releaseDate"]/text()'):
-            # Release Date: 2/22/2013 --> 2/22/2013
-            txt = clean_if_py3(txt).strip().split(" ")[2]
-            dates.append(
-                date.fromtimestamp(
-                    time.mktime(time.strptime(txt.strip(), "%m/%d/%Y"))
-                )
-            )
-        return dates
-
-    def _get_docket_numbers(self):
-        docket_numbers = []
-        for s in self.html.xpath(
-            '//li[@class="casenumber" and not(ancestor::ul[@class="result-header"])]'
-        ):
-            docket_numbers.append(s.text)
-        return docket_numbers
-
-    def _get_case_names(self):
-        case_names = []
-        for case_name in self.html.xpath(
-            '//li[@class="title1" and not(ancestor::ul[@class="result-header"])]/a/text()'
-        ):
-            case_name = titlecase(case_name)
-            if "People of Mi " in case_name:
-                case_name = case_name.replace(
-                    "People of Mi ", "People of Michigan "
-                )
-            case_names.append(case_name)
-        return case_names
-
-    def _get_download_urls(self):
-        return [
-            s
-            for s in self.html.xpath(
-                '//li[@class="title1" and not(ancestor::ul[@class="result-header"])]/a/@href'
-            )
-        ]
-
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
-
-    def _get_lower_courts(self):
-        lower_courts = []
-        for el in self.html.xpath(
-            "//ul[contains(@class, 'odd') or contains(@class, 'even')]"
-        ):
-            try:
-                s = el.xpath(
-                    '//li[@class="casedetailsleft"]'
-                    '//li[@class="lowerCourt"]/text()'
-                )
-                lower_courts.append(
-                    titlecase(clean_if_py3(s[0]).strip().split(" ", 2)[2])
-                )
-            except IndexError:
-                lower_courts.append("")
-        return lower_courts
-
-    def _get_dispositions(self):
-        disps = []
-        for el in self.html.xpath(
-            "//ul[contains(@class, 'odd') or contains(@class, 'even')]"
-        ):
-            try:
-                s = el.xpath('//li[@class="caseNature"]/text()')
-                disps.append(clean_if_py3(s[0]).strip().split(" ", 2)[2])
-            except IndexError:
-                disps.append("")
-        return disps
-
-    def _get_lower_court_numbers(self):
-        nums = []
-        for el in self.html.xpath(
-            "//ul[contains(@class, 'odd') or contains(@class, 'even')]"
-        ):
-            try:
-                s = el.xpath(
-                    '//li[@class = "casedetailsright"]'
-                    '//li[@class = "lowerCourt"]/text()'
-                )
-                nums.append(clean_if_py3(s[0]).strip().split("No. ")[1])
-            except IndexError:
-                nums.append("")
-        return nums
-
-    def _download_backwards(self, page):
-        self.url = (
-            "http://courts.mi.gov/opinions_orders/opinions_orders/Pages/default.aspx?SearchType=4&Status_Advanced=sct&FirstDate_Advanced=3%2f1%2f2013&LastDate_Advanced=8%2f8%2f2014&PageIndex="
-            + str(page)
+        self.filters = (
+            ("releaseDate", "Past Year"),
+            ("page", "1"),
+            ("sortOrder", "Newest"),
+            ("searchQuery", ""),
+            ("resultType", "opinions"),
+            ("pageSize", "100"),
         )
-        time.sleep(6)  # This site throttles if faster than 2 hits / 5s.
-        self.html = self._download()
+        self.court = "Supreme Court"
+        params = self.filters + (
+            ("resource", "supreme-court-opinion"),
+            ("aAppellateCourt", self.court),
+        )
+        self.url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseOpinions?{urlencode(params)}"
+        # Currently blocked from Michigan so we drop the user agent for now
+        self.request["headers"] = {"User-Agent": ""}
+        self.title_re = r"(MSC|COA) (?P<docket>\d+)\s+(?P<name>.+)\s+Opinion"
+        self.status = "Published"
+        self.cases = []
+
+    def _process_html(self) -> None:
+        """Process the html and extract out the opinions
+
+        :return: None
+        """
+        for item in self.html["searchItems"]:
+            match = re.search(self.title_re, item["title"])
+            if match:
+                docket = match.group("docket")
+                name = self.cleanup_case_name(match.group("name"))
+            else:
+                # In some cases the case name is missing. Grab the docket from the title in a different manner
+                docket = item["title"].split("_")[0]
+                name = ""
+            self.cases.append(
+                {
+                    "date": item["displayDate"],
+                    "docket": docket,
+                    "name": name,
+                    "url": f"https://www.courts.michigan.gov{item['documentUrl'].strip()}",
+                    "lower_court": self.get_lower_courts(item["courts"]),
+                    "title": item["title"],
+                }
+            )
+
+    def _get_case_names(self) -> List[str]:
+        """Get case names *if* missing
+
+        In some cases the case name is missing. This method uses a deferred list to the get the case name.
+
+        :return: List of case names
+        """
+
+        def fetcher(case):
+            if case["name"] != "":
+                # Return the name we extracted without using fetcher
+                return case["name"]
+            elif self.test_mode_enabled():
+                # if we're in test mode, return a dummy name
+                return "Test Name"
+            else:
+                # Else, query the API and return the name of the case
+                self.url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseSearchContent/?searchQuery={case['title']}"
+                self.html = self._download()
+                case["name"] = self.html["opinionResults"]["searchItems"][0][
+                    "title"
+                ].title()
+            return case["name"]
+
+        return DeferringList(seed=self.cases, fetcher=fetcher)
+
+    def cleanup_case_name(self, name_raw: str) -> str:
+        """Clean up case name in Michigan
+
+        :param name_raw: Raw title string
+        :return: Cleaned name
+        """
+        name = titlecase(name_raw)
+        if "People of Mi " in name:
+            name = name.replace("People of Mi ", "People of Michigan ")
+        return name
+
+    def get_lower_courts(self, courts: List[str]) -> str:
+        """Get the lower courts
+
+        :param courts: Court names as an array
+        :return: The lower courts combined into a string
+        """
+        if courts:
+            lower_courts = ", ".join(courts).lstrip(", ")
+        else:
+            lower_courts = ""
+        return titlecase(lower_courts)

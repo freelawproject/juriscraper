@@ -1,0 +1,52 @@
+{
+  "appellate": true,
+  "contains_attachments": false,
+  "court_id": "ca4",
+  "dockets": [
+    {
+      "case_name": "Neuhtah Opiotennione v. Bozzuto Management Company",
+      "date_filed": "2022-08-19",
+      "docket_entries": [
+        {
+          "date_filed": "2022-08-19",
+          "description": "CASE CONTINUED FROM TENTATIVE CALENDAR. [1001214884] [21-1919] JLC",
+          "document_number": null,
+          "document_url": "https://ecf.ca4.uscourts.gov/docs1/00409007652?uid=ee31b72c3fff6b7f",
+          "pacer_case_id": "164306",
+          "pacer_doc_id": "00409007652",
+          "pacer_magic_num": "ee31b72c3fff6b7f",
+          "pacer_seq_no": null
+        }
+      ],
+      "docket_number": "21-1919"
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "testing3@gexample.com",
+        "testing3_1@gexample.com",
+        "testing3_2@gexample.com"
+      ],
+      "name": ":"
+    },
+    {
+      "email_addresses": [
+        "testing1@gexample.com"
+      ],
+      "name": ":"
+    },
+    {
+      "email_addresses": [
+        "testing2@gexample.com"
+      ],
+      "name": ":"
+    },
+    {
+      "email_addresses": [
+        "testing4@gexample.com"
+      ],
+      "name": ":"
+    }
+  ]
+}

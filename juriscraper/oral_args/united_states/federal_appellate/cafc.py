@@ -6,54 +6,98 @@ Reviewer: mlr
 History:
  - created by Andrei Chelaru, 18 July 2014
  - Updated/rewritten by mlr, 2016-04-14
+ - Updated by William E. Palin, 2022-05-17
 """
+from datetime import date, timedelta
 
-from datetime import date
+from dateutil.rrule import MONTHLY, rrule
 
-from dateutil.rrule import DAILY, rrule
-
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OralArgumentSite import OralArgumentSite
+from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
-class Site(OralArgumentSite):
+class Site(OralArgumentSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        d = date.today()
-        self.url = "http://www.cafc.uscourts.gov/oral-argument-recordings?field_date_value2[value][date]={date}".format(
-            date=d.strftime("%Y-%m-%d")
-        )
+        self.url = "https://cafc.uscourts.gov/wp-admin/admin-ajax.php?action=get_wdtable&table_id=8"
+        self.method = "POST"
+        self._set_parameters()
+        self.today = date.today().strftime("%m/%d/%Y")
+        self.earlier = (date.today() - timedelta(days=30)).strftime("%m/%d/%Y")
+        self.parameters[
+            "columns[0][search][value]"
+        ] = f"{self.earlier}|{self.today}"
         self.back_scrape_iterable = [
             i.date()
             for i in rrule(
-                DAILY,
-                interval=1,  # Every day
-                dtstart=date(2015, 7, 10),
-                until=date(2016, 4, 14),
+                MONTHLY,
+                dtstart=date(2021, 10, 8),
+                until=date(2022, 5, 17),
             )
         ]
 
-    def _get_download_urls(self):
-        path = "//td[contains(@class,'views-field-field-filename')]//@href"
-        return list(self.html.xpath(path))
+    def _set_parameters(self) -> None:
+        """Set the parameters for the request.
 
-    def _get_case_names(self):
-        path = "//td[contains(@class,'views-field-title')]//text()"
-        return [" ".join(s.split()) for s in self.html.xpath(path)]
+        :return:None
+        """
+        self.parameters = {
+            "draw": "4",
+            "columns[0][data]": "0",
+            "columns[0][name]": "Arg_Date",
+            "columns[0][searchable]": "true",
+            "columns[0][orderable]": "true",
+            "columns[0][search][regex]": "false",
+            "columns[1][data]": "1",
+            "columns[1][name]": "Appeal_Number",
+            "columns[1][searchable]": "true",
+            "columns[1][orderable]": "true",
+            "columns[1][search][value]": "",
+            "columns[1][search][regex]": "false",
+            "columns[2][data]": "2",
+            "columns[2][name]": "Arg_Link",
+            "columns[2][searchable]": "true",
+            "columns[2][orderable]": "true",
+            "columns[2][search][value]": "",
+            "columns[2][search][regex]": "false",
+            "order[0][column]": "0",
+            "order[0][dir]": "desc",
+            "start": "0",
+            "length": "1000",
+            "search[value]": "",
+            "search[regex]": "false",
+            "wdtNonce": "6a2284f635",
+            "sRangeSeparator": "|",
+        }
 
-    def _get_case_dates(self):
-        path = "//span[@class='date-display-single']/@content"
-        return [convert_date_string(s.strip()) for s in self.html.xpath(path)]
+    def _process_html(self) -> None:
+        """Extract content from JSON response
 
-    def _get_docket_numbers(self):
-        path = "//td[contains(@class,'views-field-field-case-number')]//text()"
-        return [s.strip() for s in self.html.xpath(path)]
+        Each row in the json returns a list of values, see example below.
+        [
+          "05/06/2022",
+          "21-2084",
+          "<a sort=\"Best Medical International, Inc. v. Elekta Inc.\"
+          href=\"https://oralarguments.cafc.uscourts.gov/default.aspx?fl=21-2084_05062022.mp3\"
+          download>Best Medical International, Inc. v. Elekta Inc. (mp3)</a>"
+        ]
+        :return: None
+        """
+        for row in self.request["response"].json()["data"]:
+            _, name, _, url, _ = row[2].split('"')
+            self.cases.append(
+                {"date": row[0], "docket": row[1], "name": name, "url": url}
+            )
 
-    def _download_backwards(self, d):
-        self.url = (
-            self.url
-        ) = "http://www.cafc.uscourts.gov/oral-argument-recordings?field_date_value2[value][date]={date}".format(
-            date=d.strftime("%Y-%m-%d")
-        )
+    def _download_backwards(self, d: date) -> None:
+        """Download a months' worth of oral arguments.
+
+        :param d: Date to download arguments starting from
+        :return: None
+        """
+        self.end = (d + timedelta(days=31)).strftime("%m/%d/%Y")
+        self.parameters[
+            "columns[0][search][value]"
+        ] = f'{d.strftime("%m/%d/%Y")}|{self.end}'
         self.html = self._download()
+        self._process_html()

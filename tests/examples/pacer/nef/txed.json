@@ -1,20 +1,26 @@
 {
-  "case_name": "Alexander v. Clean Shot, LLC",
+  "appellate": false,
+  "contains_attachments": true,
   "court_id": "txed",
-  "date_filed": "2021-06-10",
-  "docket_entries": [
+  "dockets": [
     {
+      "case_name": "Alexander v. Clean Shot, LLC",
       "date_filed": "2021-06-10",
-      "description": "Joint MOTION for Extension of Time to File",
-      "document_number": "9",
-      "document_url": "https://ecf.txed.uscourts.gov/doc1/175011894066?caseid=204173&de_seq_num=37&magic_num=11505292",
-      "pacer_case_id": "204173",
-      "pacer_doc_id": "175011894066",
-      "pacer_magic_num": "11505292",
-      "pacer_seq_no": "37"
+      "docket_entries": [
+        {
+          "date_filed": "2021-06-10",
+          "description": "Joint MOTION for Extension of Time to File Settlement/Dismissal Documents by Mark Henderson. (Attachments: (1) Text of Proposed Order)(Neill, Erika)",
+          "document_number": "9",
+          "document_url": "https://ecf.txed.uscourts.gov/doc1/175011894066?caseid=204173&de_seq_num=37&magic_num=11505292",
+          "pacer_case_id": "204173",
+          "pacer_doc_id": "175011894066",
+          "pacer_magic_num": "11505292",
+          "pacer_seq_no": "37"
+        }
+      ],
+      "docket_number": "9:21-cv-00029"
     }
   ],
-  "docket_number": "9:21-cv-00029",
   "email_recipients": [
     {
       "email_addresses": [

@@ -1,0 +1,88 @@
+Return-Path: <ecf_help@ca11.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 7n68id1q0b33fouf2i492gqib2sgejn52n45mp81
+ for recipient@example.com;
+ Mon, 22 Aug 2022 16:26:53 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ca11.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=ecf_help@ca11.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ca11.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=ecf_help@ca11.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=ca11.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHZ2NKOEU5bDFpbWh3MVBZUlowSVlhRnZmV3FEaWNSazMvWDZlcDZNZUJrWk45VUlibzNpdkhUdkYxR3BrS0lJU0FZRjJnU0R1amdoYU9MODJPVFk4UmFXNzJIeWVLcXVxTGlsRUtEcFREdkdOQUFqMkpEakh3OThjZlRxZTc0Q0NjTnV3NExNeUkyOHR6KzBtSjJvMkZHRW15a0JESHFHYmF1WFNNamJXaFBHK0tqTVU4SEU5VDB5cncrVm1mRFpTNnErbXVONjBSM1NDWHZhODREd2RwZEQrZlNxRnhQNVc0eFBKN3M1YndvR1NGR25Eay9OMXZWS1RHMGxTRWQ3WDJMa1lkaWNlS3l2VFBlRzdqZjdpTTd2THNJNysxNXFBbUpuVmt3bzlvdUE9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=erCRkcCbJkdeiadZypqkhH1zRTdNunc6sRQ/4g5cLB3mDXpsygwAbjAiPNQIRDesvc3iJ2HoMZy3IQr3xtHrjNIhwGnm2DpYHsnZ4k/wIse2n8EcRTG8BXe4YQUTPzAXXSXMsHm2edzX4aN61DoKHxF5+RxK87iajyKyrSA7KQA=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1661185614; v=1; bh=DSEzMCWm91T5Tvuy2OWhhp4KgBryoSCZCgTPRxwjJGY=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.227
+Received: from ca11db.ca11.gtwy.dcn ([156.119.190.227])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 22 Aug 2022 12:26:53 -0400
+Received: from ca11db.ca11.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by ca11db.ca11.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 27MGQqWJ075812
+	for <recipient@example.com>; Mon, 22 Aug 2022 12:26:52 -0400
+Date: Mon, 22 Aug 2022 12:26:52 -0400 (EDT)
+From: ecf_help@ca11.uscourts.gov
+To: recipient@example.com
+Message-ID: <912456404.1449.1661185612646@ca11db.ca11.gtwy.dcn>
+Subject: 22-11299-JJ Marjorie Taylor Greene v. Secretary of State for the
+ State of Georgia, et al "Court Order Filed Granted by Court Withdraw as
+ Counsel" (1:22-cv-01294-AT)
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
+w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; charset=3Dutf-8"><T=
+ITLE>22-11299-JJ Marjorie Taylor Greene v. Secretary of State for the State=
+ of Georgia, et al "Court Order Filed Granted by Court Withdraw as Counsel"=
+ (1:22-cv-01294-AT)</TITLE>
+</HEAD>
+<BODY BGCOLOR=3D"#FFFFCC" TEXT=3D"#000000" LINK=3D"#0000ff" VLINK=3D"#551a8=
+b" ALINK=3D"#ff0000">=20
+<P><STRONG>
+***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States =
+policy permits attorneys of record and parties in a case (including pro se =
+litigants) to receive one free electronic copy of all documents filed elect=
+ronically, if receipt is required by law or directed by the filer.  PACER a=
+ccess fees apply to all other users.  To avoid later charges, download a co=
+py of each document during this first viewing.</STRONG><BR>
+<P><CENTER><STRONG>United States Court of Appeals for the Eleventh Circuit<=
+/STRONG></CENTER>
+<P><STRONG>Notice of Docket Activity</STRONG><BR>
+<BR>
+The following transaction was filed on 08/22/2022
+<TABLE BORDER=3D0 CELLSPACING=3D3>
+<TR><TD><STRONG>Case Name:</STRONG></TD>
+<TD colspan=3D'2'>Marjorie Taylor Greene v. Secretary of State for the Stat=
+e of Georgia, et al<BR>
+</TD></TR>
+<TR><TD><STRONG>Case Number:&nbsp;&nbsp;</STRONG></TD>
+<TD><A HREF=3D"https://ecf.ca11.uscourts.gov/n/beam/servlet/TransportRoom?s=
+ervlet=3DDocketReportFilter.jsp&caseId=3D78099">22-11299</A></TD></TR>
+<TR><TD><STRONG>Document(s):</STRONG></TD>
+<TD><A HREF=3D"https://ecf.ca11.uscourts.gov/docs1/011012430127?uid=3D68970=
+5320460ce5c">Document(s)</A></TD></TR>
+</TABLE><BR>
+<P><STRONG>Docket Text:</STRONG><BR>
+<font color =3D Green>ORDER: Benjamin Horton=E2=80=99s motion to withdraw a=
+s counsel for Intervenor Defendants-Appellees
+is GRANTED. ENTERED FOR THE COURT-BY DIRECTION. [9740726-2] </font><BR>
+<BR>
+<STRONG>Notice will be electronically mailed to:</STRONG><BR><BR>
+Recipient User Test 1<BR>
+Recipient User Test 2<BR>
+Recipient U. Test 3<BR>
+Recipient U. Test 4<BR>
+Recipient U. Test 5<BR>
+Recipient U. Test<BR>
+<BR><BR>
+The following document(s) are associated with this transaction:<BR>
+<STRONG>Document Description: </STRONG>Court Order Filed<BR>
+<STRONG>Original Filename: </STRONG>22-11299+order.pdf<BR>
+<STRONG>Electronic Document Stamp:</STRONG><BR>
+[STAMP acecfStamp_ID=3D1160056652 [Date=3D08/22/2022] [FileNumber=3D9742970=
+-0] [0ea474df38d952168ee2be273f5bf7ee9e40ae627cf771c7a2ed9fe26ef7f1f8aea978=
+00e6c850cecfd9c085b8f9c416e8c358dac6853107e4aa1f8ea40135b6]]<BR>
+<BR>
+</BODY></HTML>

@@ -1,0 +1,63 @@
+{
+  "appellate": false,
+  "contains_attachments": true,
+  "court_id": "ohnd",
+  "dockets": [
+    {
+      "case_name": "In Re: Sonic Corp. Customer Data Security Breach",
+      "date_filed": "2022-08-08",
+      "docket_entries": [
+        {
+          "date_filed": "2022-08-08",
+          "description": "Motion for attorney fees Reimbursement of Costs and Expenses, and Service Payments for Class Representatives by Brian C. Gudmundson filed by MDL Notice Only American Airlines Federal Credit Union, Arkansas Federal Credit Union, Redstone Federal Credit Union. (Attachments: (1) Brief in Support, (2) Declaration of Brian C. Gudmundson, (3) Exhibit 1, (4) Exhibit 2)(Gudmundson, Brian)",
+          "document_number": "522",
+          "document_url": "https://ecf.ohnd.uscourts.gov/doc1/141012215024?caseid=238517&de_seq_num=2123&magic_num=33122478",
+          "pacer_case_id": "238517",
+          "pacer_doc_id": "141012215024",
+          "pacer_magic_num": "33122478",
+          "pacer_seq_no": "2123"
+        }
+      ],
+      "docket_number": "1:17-md-02807"
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "testing_a@gexample.com",
+        "testing_a_a@gexample.com"
+      ],
+      "name": "Recipient Test A"
+    },
+    {
+      "email_addresses": [
+        "testing_b@gexample.com"
+      ],
+      "name": "Recipient Test B"
+    },
+    {
+      "email_addresses": [
+        "testing_c@gexample.com",
+        "testing_c_c@gexample.com"
+      ],
+      "name": "Recipient Test C"
+    },
+    {
+      "email_addresses": [
+        "testing_d@gexample.com",
+        "testing_d_d@gexample.com",
+        "testing_d_d_d@gexample.com",
+        "testing_d_d_d_d@gexample.com",
+        "testing_d_d_d_d_d@gexample.com"
+      ],
+      "name": "Recipient Test D"
+    },
+    {
+      "email_addresses": [
+        "testing_f@gexample.com",
+        "testing_f_f@gexample.com"
+      ],
+      "name": "Recipient Test F"
+    }
+  ]
+}

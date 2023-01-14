@@ -1,4 +1,5 @@
 import re
+from typing import Optional
 
 import requests
 import tldextract
@@ -59,9 +60,19 @@ def get_pacer_case_id_from_doc1_url(url):
         return None
 
 
-def get_pacer_magic_num_from_doc1_url(url):
-    """Extract the caseid from the doc1 URL."""
-    match = re.search(r"magic_num=(\d+)", url)
+def get_pacer_magic_num_from_doc1_url(
+    url: str,
+    appellate: bool = False,
+) -> Optional[str]:
+    """Extract the magic number from the doc1 URL."""
+    if appellate:
+        # NDA free look link format is:
+        # https://ecf.ca2.uscourts.gov/docs1/00208721516?uid=b775e9908ad79ce2
+        match = re.search(r"uid=(\w+)", url)
+    else:
+        # NEF free look link format is:
+        # https://ecf.almd.uscourts.gov/doc1/01713718205?caseid=75736&de_seq_num=30&magic_num=77910494
+        match = re.search(r"magic_num=(\d+)", url)
     if match:
         return match.group(1)
     else:
@@ -173,6 +184,20 @@ def make_doc1_url(court_id, pacer_doc_id, skip_attachment_page):
         # If the fourth digit is a 0, replace it with a 1
         pacer_doc_id = f"{pacer_doc_id[:3]}1{pacer_doc_id[4:]}"
     return f"https://ecf.{court_id}.uscourts.gov/doc1/{pacer_doc_id}"
+
+
+def make_docs1_url(
+    court_id: str, pacer_doc_id: str, skip_attachment_page
+) -> str:
+    """Make a docs1 URL for NDAs free look downloads.
+
+    :param court_id: The court ID.
+    :param pacer_doc_id: The PACER document ID.
+    """
+    if skip_attachment_page and pacer_doc_id[3] == "0":
+        # If the fourth digit is a 0, replace it with a 1
+        pacer_doc_id = f"{pacer_doc_id[:3]}1{pacer_doc_id[4:]}"
+    return f"https://ecf.{court_id}.uscourts.gov/docs1/{pacer_doc_id}"
 
 
 def is_pdf(response):

@@ -1,20 +1,26 @@
 {
-  "case_name": "Johnson v. Ozark Mountain Poultry, Inc.",
+  "appellate": false,
+  "contains_attachments": false,
   "court_id": "arwd",
-  "date_filed": "2021-07-08",
-  "docket_entries": [
+  "dockets": [
     {
+      "case_name": "Johnson v. Ozark Mountain Poultry, Inc.",
       "date_filed": "2021-07-08",
-      "description": "FINAL SCHEDULING ORDER, as set forth. Jury Trial set for 6/20/2022 09:00 AM in Fayetteville - 2nd flr (Rm 210) before Honorable P. K. Holmes III. Signed by Jane Ann Short, Courtroom Deputy for Honorable P. K. Holmes III on July 8, 2021. (jas)",
-      "document_number": "12",
-      "document_url": "https://ecf.arwd.uscourts.gov/doc1/02912299302?caseid=62641&de_seq_num=34&magic_num=47155571",
-      "pacer_case_id": "62641",
-      "pacer_doc_id": "02902299302",
-      "pacer_magic_num": "47155571",
-      "pacer_seq_no": "34"
+      "docket_entries": [
+        {
+          "date_filed": "2021-07-08",
+          "description": "FINAL SCHEDULING ORDER, as set forth. Jury Trial set for 6/20/2022 09:00 AM in Fayetteville - 2nd flr (Rm 210) before Honorable P. K. Holmes III. Signed by Jane Ann Short, Courtroom Deputy for Honorable P. K. Holmes III on July 8, 2021. (jas)",
+          "document_number": "12",
+          "document_url": "https://ecf.arwd.uscourts.gov/doc1/02912299302?caseid=62641&de_seq_num=34&magic_num=47155571",
+          "pacer_case_id": "62641",
+          "pacer_doc_id": "02902299302",
+          "pacer_magic_num": "47155571",
+          "pacer_seq_no": "34"
+        }
+      ],
+      "docket_number": "5:21-cv-05075"
     }
   ],
-  "docket_number": "5:21-cv-05075",
   "email_recipients": [
     {
       "email_addresses": [

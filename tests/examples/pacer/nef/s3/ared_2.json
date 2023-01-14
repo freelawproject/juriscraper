@@ -1,20 +1,26 @@
 {
-  "case_name": "Taylor v. Envolve Community Management LLC",
+  "appellate": false,
+  "contains_attachments": false,
   "court_id": "ared",
-  "date_filed": "2021-06-28",
-  "docket_entries": [
+  "dockets": [
     {
+      "case_name": "Taylor v. Envolve Community Management LLC",
       "date_filed": "2021-06-28",
-      "description": "NOTICE of Appearance by Harold Wayne Young, Jr on behalf of Envolve Community Management LLC (Young, Harold)",
-      "document_number": "9",
-      "document_url": "https://ecf.ared.uscourts.gov/doc1/02715225295?caseid=123862&de_seq_num=25&magic_num=44035396",
-      "pacer_case_id": "123862",
-      "pacer_doc_id": "02705225295",
-      "pacer_magic_num": "44035396",
-      "pacer_seq_no": "25"
+      "docket_entries": [
+        {
+          "date_filed": "2021-06-28",
+          "description": "NOTICE of Appearance by Harold Wayne Young, Jr on behalf of Envolve Community Management LLC (Young, Harold)",
+          "document_number": "9",
+          "document_url": "https://ecf.ared.uscourts.gov/doc1/02715225295?caseid=123862&de_seq_num=25&magic_num=44035396",
+          "pacer_case_id": "123862",
+          "pacer_doc_id": "02705225295",
+          "pacer_magic_num": "44035396",
+          "pacer_seq_no": "25"
+        }
+      ],
+      "docket_number": "4:20-cv-01091"
     }
   ],
-  "docket_number": "4:20-cv-01091",
   "email_recipients": [
     {
       "email_addresses": [

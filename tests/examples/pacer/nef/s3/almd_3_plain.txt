@@ -1,0 +1,171 @@
+From SRS0=YWuZ=RS=dcd.uscourts.gov=DCD_ECFNotice@alum.mit.edu Fri Mar 15 09:54:26 2019
+Delivered-To: john.hawkinson@gmail.com
+Received: by 2002:a6b:ee14:0:0:0:0:0 with SMTP id i20csp2558921ioh;
+        Fri, 15 Mar 2019 06:54:26 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqzDvgyeGQYtVh08uRVIyO2Iyg5PUFIoiBfq0drnMhDUEwWty7ot0s5q9DwjqL5sIP9t1xiG
+X-Received: by 2002:a25:20d7:: with SMTP id g206mr3044354ybg.344.1552658066297;
+        Fri, 15 Mar 2019 06:54:26 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1552658066; cv=none;
+        d=google.com; s=arc-20160816;
+        b=hcLrKsfF5epeaUYd+S5ERQHUQi9fXK7EYcvgpfhp3w97knesVRh/z9NcDcnQEXIGMG
+         ls02IyfYqjP7SQ2psH1RjHl6oteYAAhWBoKmWp78scjQECIwOg7CmO+D2OucHFiUQ/Yt
+         dkh286ws3NOw1PQBjh8VeYsuGJYV2oRFPQK9cKB7ufL1pt1PWUL0W+J0fHoj7muuDnlF
+         ERXmkmHiS0m+J8E3gs+9S4xWX+UUAICRqKleCNQBk+iaOr54Ead0Ytws668SYuVt5jJN
+         ahALn4zf/98HW4j4Qk3lvj+6FOV+RQ38D/qLmlZwlBTmPnPzDXTKO9zj2igZXl0MLkaS
+         dVCw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=subject:message-id:to:from:mime-version:date;
+        bh=TVbB5EoomhuVz9Wkdl545HJ9aLR9gp2KJUeUMLaN76c=;
+        b=CRYa2HTvat6frvMTKDTru9KkixNcAaA3rLP9tBillRN4IeVcHvApdMBbdeCy5bZb/C
+         vDxD288Fhqu9EsML1nutvcTH4Cg/p9wTeoDPUPR75jFqw4/QnGbQZDRlEExwXPDo4KCI
+         e70z6ryR+snyybKaqtHBMVEJ6Gd9D9TfF8k+oafzakThxGnpvrIPPx/NiuywEbWTf/5j
+         YyFf74S9C38YOphs9BB5tkj0KlvSDRwe0swjqLfpzdPKkKjjVgJ3L0V4x7CUmGB+bOiM
+         hCqCkiofvQ5d0fegh2lyMuk5Otrxkz8ysyFJqtLEPAkqqHcLkeXDRmuYSpeEyZD+rl1w
+         0DhA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of srs0=ywuz=rs=dcd.uscourts.gov=dcd_ecfnotice@alum.mit.edu designates 18.7.68.26 as permitted sender) smtp.mailfrom="SRS0=YWuZ=RS=dcd.uscourts.gov=DCD_ECFNotice@alum.mit.edu";
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=uscourts.gov
+Return-Path: <SRS0=YWuZ=RS=dcd.uscourts.gov=DCD_ECFNotice@alum.mit.edu>
+Received: from alum-mailsec-relay-6.mit.edu (alum-mailsec-relay-6.mit.edu. [18.7.68.26])
+        by mx.google.com with ESMTPS id y138si521241ywy.381.2019.03.15.06.54.25
+        for <john.hawkinson@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 15 Mar 2019 06:54:26 -0700 (PDT)
+Received-SPF: pass (google.com: domain of srs0=ywuz=rs=dcd.uscourts.gov=dcd_ecfnotice@alum.mit.edu designates 18.7.68.26 as permitted sender) client-ip=18.7.68.26;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of srs0=ywuz=rs=dcd.uscourts.gov=dcd_ecfnotice@alum.mit.edu designates 18.7.68.26 as permitted sender) smtp.mailfrom="SRS0=YWuZ=RS=dcd.uscourts.gov=DCD_ECFNotice@alum.mit.edu";
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=uscourts.gov
+Received: from NAM04-SN1-obe.outbound.protection.outlook.com (mail-sn1nam04lp2051.outbound.protection.outlook.com [104.47.44.51])
+	by alum-mailsec-relay-6.mit.edu (8.14.7/8.12.8) with ESMTP id x2FDsL13031577
+	(version=TLSv1/SSLv3 cipher=AES256-SHA256 bits=256 verify=NOT)
+	for <jhawk@alum.mit.edu>; Fri, 15 Mar 2019 09:54:24 -0400
+Received: from MWHPR12CA0040.namprd12.prod.outlook.com (2603:10b6:301:2::26)
+ by MWHPR12MB1504.namprd12.prod.outlook.com (2603:10b6:301:f::21) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1709.14; Fri, 15 Mar
+ 2019 13:54:20 +0000
+Received: from BL2NAM02FT027.eop-nam02.prod.protection.outlook.com
+ (2a01:111:f400:7e46::201) by MWHPR12CA0040.outlook.office365.com
+ (2603:10b6:301:2::26) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1709.13 via Frontend
+ Transport; Fri, 15 Mar 2019 13:54:20 +0000
+Authentication-Results: spf=pass (sender IP is 32.66.205.22)
+ smtp.mailfrom=dcd.uscourts.gov; alum.mit.edu; dkim=none (message not signed)
+ header.d=none;alum.mit.edu; dmarc=pass action=none
+ header.from=dcd.uscourts.gov;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of dcd.uscourts.gov
+ designates 32.66.205.22 as permitted sender) receiver=protection.outlook.com;
+ client-ip=32.66.205.22; helo=icmecf101.gtwy.uscourts.gov;
+Received: from icmecf101.gtwy.uscourts.gov (32.66.205.22) by
+ BL2NAM02FT027.mail.protection.outlook.com (10.152.77.160) with Microsoft SMTP
+ Server id 15.20.1709.13 via Frontend Transport; Fri, 15 Mar 2019 13:54:20
+ +0000
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.49
+Received: from dcddb.dcd.gtwy.dcn ([156.119.190.49])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 15 Mar 2019 09:54:20 -0400
+Received: from dcddb.dcd.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by dcddb.dcd.gtwy.dcn (8.14.4/8.14.4) with ESMTP id x2FDrZqF014809;
+	Fri, 15 Mar 2019 09:53:35 -0400
+Received: (from ecf_web@localhost)
+	by dcddb.dcd.gtwy.dcn (8.14.4/8.14.4/Submit) id x2FDqxsn014203;
+	Fri, 15 Mar 2019 09:52:59 -0400
+Date: Fri, 15 Mar 2019 09:52:59 -0400
+X-Authentication-Warning: dcddb.dcd.gtwy.dcn: ecf_web set sender to DCD_ECFNotice@dcd.uscourts.gov using -f
+MIME-Version: 1.0
+From: <DCD_ECFNotice@dcd.uscourts.gov>
+To: <DCD_ECFNotice@dcd.uscourts.gov>
+Message-ID: <5919797@dcd.uscourts.gov>
+Subject: Activity in Case 1:17-cr-00201-ABJ USA v. MANAFORT et al Status Report
+Content-Type: text/plain
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 3326b102-c043-408b-a990-b89e477d582f:0
+X-Forefront-Antispam-Report:
+ CIP:32.66.205.22;IPV:CAL;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(2980300002)(199004)(189003)(8212001)(2616005)(336012)(68736007)(1096003)(47776003)(97336004)(6306002)(86152003)(26005)(51416003)(86362001)(14003)(37786003)(14444005)(19627235002)(6862004)(97736004)(53936002)(98106002)(2876002)(66574012)(16586007)(37006003)(42186006)(81156014)(106002)(8676002)(72206003)(2351001)(81166006)(26826003)(6200100001)(966005)(305945005)(87636003)(106466001)(50466002)(486006)(356004)(48376002)(126002)(74826001)(476003);DIR:INB;SFP:;SCL:1;SRVR:MWHPR12MB1504;H:icmecf101.gtwy.uscourts.gov;FPR:;SPF:Pass;LANG:en;PTR:InfoDomainNonexistent;A:0;MX:1;
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 4d0a5e8c-ca42-4150-e0f4-08d6a94db926
+X-Microsoft-Antispam:
+ BCL:1;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600127)(711020)(4605104)(4608103)(4709054)(1401299)(1421009)(1402095)(71702078);SRVR:MWHPR12MB1504;
+X-MS-TrafficTypeDiagnostic: MWHPR12MB1504:|MWHPR12MB1504:
+X-MS-Exchange-PUrlCount: 2
+X-Microsoft-Antispam-Message-Info:
+ 5OAX8A6Zj/T3qT6dwlNUn10zrndho38LS5wRvsO5xtZNSUreZnXaCVRjaux6no2IO2Fk6vUJ+fgwudnEF4+MZt/IPJNQ4Dhh0JhjiHz9YO0m8ZwA0GJKRmmba74PD2DeKpfzj0F0kY+ifKEjtcOD9P/qdAj1Fx/6XM2Qjx/gJ43hwwtBFm02HgTvk83zjcS49uDgOzgjrWz9I1fxGUVNjauPEdQwZrlr6+8mI5BfnBxIeWaZUp+NVdRzxReSQiLF9F6K33sCd0Jez3VBt6FCvvYc0xS8mhnLuaeehM2Z5+IXTtc3K7/C9b7VQRPS7KMDrEYpBLVMMaCmJPIKug5pVQBuK1TnQ0Eu6TzIAb2TrhAeGaTvi9R4AGgigFcCB3Ji79eOnwkbVOSlJwNJp5IgVQ6P6xUiMfJaXjjSEPWYoG6T5Kxe2U6U/8fTu8X2rn1FFhgILfE0oS0BH4/KbzCxy5UKuCXsJEaZKQUWR9tQ9peJlfDKK/YmXoMsccXmrfM/XPt/QWAyDLess1dhVJseTKciaqESTbxWiIyLn+vvJMFDge5ALh/JGeGbvU+/ojsMymBX8wi5OFsT5z+ZwjPHk653wTyq6l++Xzr0+4P0etMOcCagyg24j7Q8m/vPqefUjOj4rigm38G0Rb/n2BdP/bHo/G2ZT7oE0PPxSnnDxyewjadq0y0/n6lRlq9AK4lyRfMst9GLihk0DVZy8rK9HPAQ/DR+bVUuQhlELQpWNylwJkFXBmZYVanHreKPXfnwW3BpcPff94CRkOqjysiPQ6N3UdJJRZ1GvsLtJHO680Y=
+X-MS-Exchange-Inbox-Rules-Loop: jhawk@alum.mit.edu
+X-LD-Processed: 3326b102-c043-408b-a990-b89e477d582f,ExtAddr
+X-OriginatorOrg: mitalumprod.onmicrosoft.com
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 15 Mar 2019 13:54:20.2872
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 4d0a5e8c-ca42-4150-e0f4-08d6a94db926
+X-MS-Exchange-CrossTenant-Id: 3326b102-c043-408b-a990-b89e477d582f
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MWHPR12MB1504
+X-MS-Exchange-CrossPremises-OriginalClientIPAddress: 32.66.205.22
+X-MS-Exchange-CrossPremises-AuthSource: BL2NAM02FT027.eop-nam02.prod.protection.outlook.com
+X-MS-Exchange-CrossPremises-AuthAs: Anonymous
+X-MS-Exchange-CrossPremises-TransportTrafficType: Email
+X-MS-Exchange-CrossPremises-TransportTrafficSubType:
+X-MS-Exchange-CrossPremises-SCL: 1
+X-MS-Exchange-CrossPremises-Antispam-ScanContext: DIR:Incoming;SFV:NSPM;SKIP:0;
+X-MS-Exchange-CrossPremises-AutoForwarded: true
+X-MS-Exchange-CrossPremises-Processed-By-Journaling: Journal Agent
+X-OrganizationHeadersPreserved: MWHPR12MB1504.namprd12.prod.outlook.com
+Status: RO
+Content-Length: 3152
+Lines: 84
+
+This is an automatic e-mail message generated by the CM/ECF system.
+Please DO NOT RESPOND to this e-mail because the mail box is unattended.
+***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30 page limit do not apply.
+
+U.S. District Court
+District of Columbia
+
+Notice of Electronic Filing
+The following transaction was entered  by Weissmann, Andrew  on 3/15/2019
+9:52 AM  and filed on 3/15/2019
+
+
+Case Name: USA v. MANAFORT et al
+
+Case Number: 1:17-cr-00201-ABJ https://ecf.dcd.uscourts.gov/cgi-bin/DktRpt.pl?190596
+
+Filer:  USA
+
+
+Document Number: 551
+
+
+Copy the URL address from the line below into the location bar
+of your Web browser to view the document:
+https://ecf.dcd.uscourts.gov/doc1/04517059984?caseid=20190598&de_seq_num=2335&magic_num=34532
+
+
+Docket Text:
+Joint  STATUS REPORT <i></i>   by USA
+as to RICHARD W. GATES, III (Weissmann, Andrew)
+
+
+
+1:17-cr-00201-ABJ-2 Notice has been electronically mailed to:
+Adam                 C. Jed
+   ACJ@usdoj.gov
+
+Andrew               Weissmann
+aaw@usdoj.gov, ees@usdoj.gov
+
+Elizabeth            Barchas Prelogar
+        EBP@usdoj.gov
+
+
+1:17-cr-00201-ABJ-2 Notice will be delivered by other means to::
+
+
+
+The following document(s) are associated with this transaction:
+Document description: Main Document
+ Original filename: suppressed
+ Electronic document Stamp:
+ [STAMP dcecfStamp_ID=973800458 [Date=3/15/2019] [FileNumber=5919796-0] [717bcae4fd13b40a3b62bca1ad6ea5dbd5646af9111fc1ed5a689cc000861edb09a3792ba796791f060e277a1399ce9af46cd936b516f2234c67bcae4154f601]]
+
+
+

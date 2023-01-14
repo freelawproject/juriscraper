@@ -29,6 +29,10 @@ class CaseQuery(BaseDocketReport, BaseReport):
 
     ERROR_STRINGS = BaseReport.ERROR_STRINGS + [
         r"Case not found\.",
+        r"Only applications for admission to practice",
+        r"Only requests for a Certificate of Good Standing",
+        r"DO NOT POST IN THIS CASE",
+        r"Control F",
     ]
 
     def __init__(self, court_id, pacer_session=None):

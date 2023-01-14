@@ -364,6 +364,27 @@ class DocketReport(BaseDocketReport, BaseReport):
         self._parties = None
         self._docket_entries = None
 
+    @property
+    def docket_report_has_content(self) -> bool:
+        """Checks if the docket report has content.
+
+        :return: True if is the docket report is not blank, otherwise False.
+        """
+        rows = self.tree.xpath("//tr")
+        valid_content = False
+        for row in rows:
+            if row.getchildren():
+                valid_content = True
+                break
+        return valid_content
+
+    @property
+    def data(self):
+        """Get all the data back from this endpoint after validations."""
+        if self.is_valid is False or self.docket_report_has_content is False:
+            return {}
+        return super().data
+
     def parse(self):
         """Parse the item, but be sure to clear the cache before you do so.
 
@@ -956,13 +977,17 @@ class DocketReport(BaseDocketReport, BaseReport):
         for row in docket_entry_rows:
             de = {}
             cells = row.xpath("./td[not(./input)]")
+            if len(cells) == 0:
+                # In some instances, the document entry table has an empty row
+                # <tr></tr>. See docket bankruptcy wiwb examples.
+                continue
             if len(cells) == 4:
                 # In some instances, the document entry table has an extra
                 # column. See almb, 92-04963
                 del cells[1]
 
             date_filed_str = force_unicode(cells[0].text_content())
-            if not date_filed_str:
+            if not date_filed_str.strip():
                 # Some older dockets have missing dates. Press on.
                 continue
             de["date_filed"] = convert_date_string(date_filed_str)
