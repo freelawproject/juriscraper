@@ -1,0 +1,128 @@
+<head><link rel="shortcut icon" href="/favicon.ico"><title>WIWB CM/ECF live (v1.5.3) Database</title>
+<script type="text/javascript">document.cookie = "PRTYPE=aty; path=/;"</script> <script>var default_base_path = "/"; </script> <link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript" src="/lib/DisableAJTALinks.js"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script><script>var default_base_path = "/"; </script><script type="text/javascript" src="/cgi-bin/menu.pl?id=331382"></script></head><body bgcolor="#f2f2ff" text="#000000" onload="SetFocus()"><iframe id="_yuiResizeMonitor" title="Text Resize Monitor" style="position: absolute; visibility: visible; width: 2em; height: 2em; top: -33px; left: 0px; border-width: 0px;"></iframe>
+				<div class="noprint">
+				<div id="topmenu" class="yuimenubar yui-module yui-overlay visible" style="z-index: 2; position: static; display: block; visibility: visible;"><div class="bd">
+				<img id="cmecfLogo" class="cmecfLogo" src="/graphics/logo-cmecf-sm.png" alt="CM/ECF" title="" onclick="CMECF.MainMenu.showCourtInformation(); return false">
+				<ul class="first-of-type">
+
+<li class="yuimenubaritem first-of-type yuimenubaritem-hassubmenu" id="yui-gen0" groupindex="0" index="0"><a class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu" href="/cgi-bin/DisplayMenu.pl?BankruptcyEvents&amp;id=331382">Ba<u>n</u>kruptcy <div class="spritedownarrow"></div></a></li>
+<li class="yuimenubaritem yuimenubaritem-hassubmenu" id="yui-gen1" groupindex="0" index="1"><a class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu" href="/cgi-bin/DisplayMenu.pl?AdversaryEvents&amp;id=331382"><u>A</u>dversary <div class="spritedownarrow"></div></a></li>
+<li class="yuimenubaritem" id="yui-gen2" groupindex="0" index="2"><a class="yuimenubaritemlabel" href="/cgi-bin/iquery.pl"><u>Q</u>uery</a></li>
+<li class="yuimenubaritem yuimenubaritem-hassubmenu" id="yui-gen3" groupindex="0" index="3"><a class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu" href="/cgi-bin/DisplayMenu.pl?Reports&amp;id=331382"><u>R</u>eports <div class="spritedownarrow"></div></a></li>
+<li class="yuimenubaritem yuimenubaritem-hassubmenu" id="yui-gen4" groupindex="0" index="4"><a class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu" href="/cgi-bin/DisplayMenu.pl?Utilities&amp;id=331382"><u>U</u>tilities <div class="spritedownarrow"></div></a></li>
+<li class="yuimenubaritem" id="yui-gen5" groupindex="0" index="5"><a class="yuimenubaritemlabel" href="javascript: CMECF.MainMenu.searchPrompt();">Sear<u>c</u>h</a></li>
+<li class="yuimenubaritem" id="yui-gen6" groupindex="0" index="6"><a class="yuimenubaritemlabel" onclick="CMECF.MainMenu.showHelpPage(''); return false">Help</a></li>
+<li class="yuimenubaritem" id="yui-gen7" groupindex="0" index="7"><a class="yuimenubaritemlabel" href="/cgi-bin/login.pl?logout">Log Out</a></li><li class="yuimenubaritem" id="placeholderForAlertsIcon" groupindex="0" index="8"></li>
+<li class="yuimenubaritem" id="yui-gen8" groupindex="0" index="9"> <a href="https://ecf.wiwb.uscourts.gov/wiwb/webhelp/ecf_atty_manual.htm" target="_blank" class="yuimenubaritemlabel"><font color="red">User Manual</font></a> </li>
+
+				</ul></div>
+				<hr class="hrmenuseparator"></div></div>
+
+			<script type="text/javascript">
+callCreateMenu=function(){
+				var fn = "CMECF.MainMenu.createMenu";
+				if(typeof CMECF.MainMenu.createMenu == 'function') {
+					CMECF.MainMenu.createMenu();
+				}
+                        }
+if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout( function(){ callCreateMenu(); }, 1);}else{CMECF.util.Event.addListener(window, "load",  callCreateMenu());}</script> <div id="cmecfMainContent" style="height: 824px;"><input type="hidden" id="cmecfMainContentScroll" value="0"><script language="JavaScript">
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;
+					while(document.forms[0].elements[Cnt] != null) {
+						try {
+							if(document.forms[0].elements[Cnt].type != "hidden" &&
+									!document.forms[0].elements[Cnt].disabled &&
+									!document.forms[0].elements[Cnt].readOnly) {
+								document.forms[0].elements[Cnt].focus();
+								break;
+							}
+						}
+						catch(e) {}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</script>
+<script type="text/JavaScript">
+document.cookie="PDFHeaderReferer=142440341786024; path=/";
+</script>
+		<script type="text/javascript" src="/lib/widgits.js"></script>
+		<script>
+		var debtorPanel = null;
+
+		function create_panel(clid, message) {
+		    if (!debtorPanel) {
+		        debtorPanel = new CMECF.widget.Panel('debtorPanel', {
+				close:true,
+				draggable:false,
+				context:[clid, 'tl', 'br'],
+				width: "250" + "px",
+				height: "110" + "px",
+				constraintoviewport:true
+			});
+			debtorPanel.setHeader("Barred Debtor Information");
+			debtorPanel.setBody(message);
+			debtorPanel.body.style.height = "8em";
+			debtorPanel.render(document.body);
+		    } else {
+		        debtorPanel.show();
+		    }
+		}
+
+		function close_panel() {
+		    if (debtorPanel) {
+		        debtorPanel.destroy();
+		        debtorPanel = null;
+		    }
+		}
+		</script>
+		<center><b><font size="+1">U.S. Bankruptcy Court<br>Western District of Wisconsin www.wiwb.uscourts.gov (Eau Claire)<br>Bankruptcy Petition #: 1-12-10572-tsu</font></b></center><center><b><font size="+1"><a href="/cgi-bin/MailList.pl?144095" target="_blank">Mail Info for case</a></font></b></center><table class="DktRpt" width="100%" border="0" cellspacing="1"><tbody><tr><a id="recap-alert-button" role="button" aria-disabled="false" class="disabled" href="https://www.courtlistener.com/alert/docket/new/?pacer_case_id=144095&amp;court_id=wiwb"><img src="chrome-extension://oiillickanjlaeghobeeknbddaonmjnc/assets/images/grey-16.png"> Alerts not yet Supported for this Docket</a></tr><tr>	<td valign="top" nowrap="true" width="50%"><font size="+0"><br><i>341 Meeting Location:</i> Superior<br><i>Assigned to:</i>       Thomas S. Utschig<br>Chapter          7<br>Voluntary<br>No asset<br><br><br><i>Debtor disposition:</i>&nbsp;&nbsp;Standard Discharge	</font></td>
+	<td valign="top" nowrap="true" width="50%" align="right"><font size="+0"><table class="DktRpt" border="0" cellspacing="0" cellpadding="0" align="center"><tbody><tr><td align="right" valign="top"><i>Date filed:</i></td><td align="left" valign="top">&nbsp;&nbsp;02/03/2012</td></tr><tr><td align="right" valign="top"><i>Date terminated:</i></td><td align="left" valign="top">&nbsp;&nbsp;07/30/2012</td></tr><tr><td align="right" valign="top"><i>Debtor discharged:</i></td><td align="left" valign="top">&nbsp;&nbsp;07/24/2012</td></tr><tr><td align="right" valign="top"><i>341 meeting:</i></td><td align="left" valign="top">&nbsp;&nbsp;06/07/2012</td></tr><tr><td align="right" valign="top"><i>Deadline for objecting to discharge:</i></td><td align="left" valign="top">&nbsp;&nbsp;04/30/2012  </td></tr><tr><td align="right" valign="top"><i>Deadline for financial mgmt. course:</i></td><td align="left" valign="top">&nbsp;&nbsp;04/30/2012  </td></tr></tbody></table>	</font></td>
+</tr>
+</tbody></table><br><font size="5"><b></b>
+		</font><table class="DktRpt" width="100%" border="0" cellspacing="1"><tbody><tr></tr><tr>	<td valign="top" width="50%"><font size="+0"><i><b>Debtor</b></i><br><b>Hossain Khoroosi</b>
+<br>P.O. Box 846
+<br>Superior, WI 54880
+<br>DOUGLAS-WI
+<br>SSN / ITIN: xxx-xx-4080<br><br>	</font></td>
+	<td valign="top" nowrap="true" align="right"><font size="+0">represented by	</font></td>
+<td valign="top" width="40%">
+  						<font size="+0"><b>Hossain Khoroosi</b>
+<br>PRO SE<br>
+<br><br><br></font></td></tr><tr>	<td valign="top" width="50%"><font size="+0"><i><b>Trustee</b></i><br><b>Michael C. Koehn</b>
+<br>131 South Barstow St., Ste 201
+<br>P.O. Box 92
+<br>Eau Claire, WI 54702
+<br>715/832-5074<br><br>	</font></td>
+	<td valign="top" nowrap="true" width="20%" align="right"><font size="+0">&nbsp;	</font></td>
+<td valign="top" width="40%" nowrap="">
+  						<font size="+0">&nbsp;</font></td></tr><tr>	<td valign="top" nowrap="true" width="50%"><font size="+0"><i><b>U.S. Trustee</b></i><br><b>U.S. Trustee's Office</b>
+<br>780 Regent Street, Suite 304
+<br>Madison, WI 53715	</font></td>
+	<td valign="top" nowrap="true" width="20%" align="right"><font size="+0">&nbsp;	</font></td>
+	<td valign="top" nowrap="true" width="40%"><font size="+0">&nbsp;	</font></td>
+</tr></tbody></table><br><table class="DktRpt" border="1" cellpadding="10" width="100%" cellspacing="0"><tbody><tr></tr><tr><th width="94" nowrap="">Filing Date</th>
+<th colspan="2" align="center">#</th><th align="center">Docket Text</th></tr>
+<tr><td width="94" nowrap="" valign="bottom">02/03/2012</td><td width="74" valign="top" align="right" style="border-right:0;padding-right:1px;padding-left:2px;white-space:nowrap"><nobr>  &nbsp;</nobr></td><td width="30" valign="top" align="left" style="border-left:0;padding-left:1px"><a href="/doc1/20405509194" oncontextmenu="this.href=&quot;https://ecf.wiwb.uscourts.gov/doc1/20405509194&quot;">1</a> <br><nobr>(10&nbsp;pgs)</nobr></td><td valign="bottom">  Chapter 7 Voluntary Petition [Receipt Number INSTALLMENTS, Fee Amount $ 306] filed by Hossain Khoroosi . Section 316 Incomplete Filings due 3/19/2012. Summary of Schedules due 2/17/2012. Schedules A-J due 2/17/2012. Statement of Financial Affairs due 2/17/2012. Means Test due 2/17/2012. Employee Income Records due 2/17/2012. (Eau Claire, Monica) (Entered: 02/03/2012)</td></tr>
+</tbody></table><b>Case #: 1-12-10572-tsu - Hossain Khoroosi                                  </b><br><br><br><br>
+			<script type="text/javascript">
+				document.cookie = 'RECENT_CASES=' + "144095^26735;";
+			</script>
+		<hr><center><table border="1" bgcolor="white" width="400"><tbody><tr><th colspan="4"><font size="+1" color="DARKRED">PACER Service Center </font></th></tr><tr><th colspan="4"><font color="DARKBLUE">Transaction Receipt </font></th></tr><tr></tr><tr></tr><tr><td colspan="4" align="CENTER"><font size="-1" color="DARKBLUE">10/13/2022 09:47:00</font></td></tr><tr><th align="LEFT"><font size="-1" color="DARKBLUE"> PACER Login: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> petergreenlee </font></td><th align="LEFT"><font size="-1" color="DARKBLUE"> Client Code: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE">  </font></td></tr><tr><th align="LEFT"><font size="-1" color="DARKBLUE"> Description: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> Docket Report </font></td><th align="LEFT"><font size="-1" color="DARKBLUE"> Search Criteria: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> 1-12-10572-tsu Fil or Ent: filed   Doc From: 0 Doc To: 99999999   Headers: included  Format: html Page counts for documents: included </font></td></tr><tr><th align="LEFT"><font size="-1" color="DARKBLUE"> Billable Pages: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> 4 </font></td><th align="LEFT"><font size="-1" color="DARKBLUE"> Cost: </font></th><td align="LEFT"><font size="-1" color="DARKBLUE"> 0.40 </font></td></tr><tr></tr><tr></tr></tbody></table></center><br><br></div></body>

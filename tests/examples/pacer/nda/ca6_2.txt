@@ -1,0 +1,73 @@
+Return-Path: <ca06-ecf-noticedesk@ca6.uscourts.gov>
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id frjmi830qhhah7l6u0qde9ciosj9heh12e902fo1
+ for recipient@example.com;
+ Wed, 17 Aug 2022 19:38:06 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ca6.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=ca06-ecf-noticedesk@ca6.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ca6.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=ca06-ecf-noticedesk@ca6.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+ dmarc=none header.from=ca6.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFIKy9kNHg1U0pBaUJ4RFNsdXM4U3NEcXBFVndqa1JqYXpDa25ZUStvKzZXcThONzJ6cHhpejBid09HK0pkRWszdXFJaVhsMjQyR3NMbTdad3VXWW5vNlVJTnhReUVXdk5WUUVUZEgwL0RnYmZrYXZ5dlM3NjVwcENOZGJQdmh1L1VXQklRZ0czTCsrVEFOS1dFaVFPSHBybEN1WWZRR01Obzd0WnpkSXRLWHJ2RmRzU2tzL3FYTmc2bkkrd3NkOHphekljbCtTbCs3NGxyQTJiOGQ3c2lhV1RSZjJNRGlqemNxSS9FQ2ZkTWMxZGg3dWRGNXpJZFhTZ21aTlBPZlBXcWFSQ3ZYNUNlMFZvS1lsbFZMWHRTVGhmZlhvbHMyMVBZcjZGWFI1NnVxc0VJcE40ZVNiM0ZtakRwdGhEb084eE09
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=Tx6U4a8eha3SVJoM27sZlQMsQH5vFTL80+a76oA+kxToLx26CwoXpXr6F+PQs7xeXfhe56Qq0zeToZf4qqebn1pJ3+L0x6invnl+j5dhlwfRBXEGUY6GWxOxfJ5PfRFytnI3X3giVt31k0FNnCzv3oHdgabYtozbw7gCXM3y9/E=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1660765087; v=1; bh=fv1bh4vW8AtCxYlmwJAwtNf/jTsAr63QAyQv0kfFvNY=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.128
+Received: from ca6db.ca6.gtwy.dcn ([156.119.190.128])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 17 Aug 2022 15:38:05 -0400
+Received: from ca6db.ca6.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by ca6db.ca6.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 27HJbMGc092507
+	for <recipient@example.com>; Wed, 17 Aug 2022 15:37:22 -0400
+Date: Wed, 17 Aug 2022 15:37:22 -0400 (EDT)
+From: ca06-ecf-noticedesk@ca6.uscourts.gov
+To: recipient@example.com
+Message-ID: <1906273915.1457.1660765042406@ca6db.ca6.gtwy.dcn>
+Subject: 22-1458 Anthony Eid v. Wayne State University, et al "ruling letter
+ sent"
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><TITLE>22-1458 Anthony Eid v. Wayne State University, et al "ruling letter sent"</TITLE>
+</HEAD>
+<BODY BGCOLOR="#CCCCFF" TEXT="#000000" LINK="#0000ff" VLINK="#551a8b" ALINK="#ff0000">
+<P><STRONG>
+***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer.  PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing.</STRONG><BR>
+<P><CENTER><STRONG>United States Court of Appeals for the Sixth Circuit</STRONG></CENTER>
+<P><STRONG>Notice of Docket Activity</STRONG><BR>
+<BR>
+The following transaction was filed on 08/17/2022
+<TABLE BORDER=0 CELLSPACING=3>
+<TR><TD><STRONG>Case Name:</STRONG></TD>
+<TD colspan='2'>Anthony Eid v. Wayne State University, et al<BR>
+</TD></TR>
+<TR><TD><STRONG>Case Number:&nbsp;&nbsp;</STRONG></TD>
+<TD><A HREF="https://ecf.ca6.uscourts.gov/n/beam/servlet/TransportRoom?servlet=DocketReportFilter.jsp&caseId=144305">22-1458</A></TD></TR>
+<TR><TD><STRONG>Document(s):</STRONG></TD>
+<TD><A HREF="https://ecf.ca6.uscourts.gov/docs1/006014769961?uid=271f3379c94d3ba7">Document(s)</A></TD></TR>
+</TABLE><BR>
+<P><STRONG>Docket Text:</STRONG><BR>
+RULING LETTER SENT granting motion to extend time to file brief [18] filed by Mr. David Andrew Porter. 30 day extension of time granted. Resetting briefing schedule: appellee brief now due 10/19/2022. (REO)<BR>
+<BR>
+<STRONG>Notice will be electronically mailed to:</STRONG><BR><BR>
+<a name="R0">Recipient User Test 1</a>: testing3@gexample.com, testing3_1@gexample.com, testing3_2@gexample.com<BR>
+<a name="R1">Recipient User Test 2</a>: testing1@gexample.com<BR>
+<a name="R2">Recipient User Test 3</a>: testing2@gexample.com<BR>
+<a name="R4">Recipient User Test 4</a>: testing4@gexample.com<BR>
+<BR><BR>
+The following document(s) are associated with this transaction:<BR>
+<STRONG>Document Description: </STRONG>Reset Briefing Schedule Letter<BR>
+<STRONG>Original Filename: </STRONG>/opt/ACECF/live/forms/RyanOrme_221458_6852669_ResetBriefingScheduleLetterECF.pdf<BR>
+<STRONG>Electronic Document Stamp:</STRONG><BR>
+[STAMP acecfStamp_ID=1105031299 [Date=08/17/2022] [FileNumber=6852669-0] [a7824fdf4358d8d83e2649fcbcff0d2360f4cb5a24686df127f0572783af63bdecb98813a93468c78d360dc93890f48103fa0f980c5a146689b55a6efbf7848c]]<BR>
+<STRONG>Recipients: </STRONG><UL>
+<LI><a href="#R0">Recipient User Test 1</a>
+<LI><a href="#R1">Recipient User Test 2</a>
+<LI><a href="#R2">Recipient User Test 3</a>
+<LI><a href="#R4">Recipient User Test 4</a>
+</UL>
+
+</BODY></HTML>

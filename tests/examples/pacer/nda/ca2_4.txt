@@ -1,0 +1,73 @@
+Return-Path: <cmecf@ca2.uscourts.gov>
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id odsh4lcfklchpcme9irl80uqamqfea2a8641m981
+ for recipient@example.com;
+ Thu, 03 Mar 2022 16:42:14 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ca2.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=cmecf@ca2.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ca2.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=cmecf@ca2.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+ dmarc=pass header.from=ca2.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHNnZIaHRzcnpPYjV1TkF0MHM3UXczR09xQ3FZT3FyOThHdHpQaE03bXV5b2ZEN01ZNEw0bDFrbEZlT243cktiTW55OGh4cUlZTFIrVktpMDRBQVJoSzA0UFRsUjVTcE5DdnBLV0hsYjE3WlQxeVpqbE5mRUdTNFE0R3VYdDM2TFg4THVMb0prZ2M2ZTkxK3d5UmdsTE80R25URGV3MUUvMGpmcDFWRVFwd29UUXdFeSt4VjM3U1dZUHgyUUEvWXFhQmJ3MG5pR1V2VXU0dzJxalZiNWFlTU1IeEIzN2JCNVBNTWNyNlM4UlpHYVFYVy9rajNWbjJ1b3Z5V2lvT0t3VUc1YUlabmZTOFc2eTFTUFMrTG94RjloUmkrSm5XbW9wMktRcnZNN0xtN3c9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=Ph3vZmug7sECDWLbSIbTjJmijSx3EhcC5P7iHzjC4AK1ck3WmEPRfYQaugTnb/kFGQVEyft9lyCLL7SZ3xflQWG2v60aisk47NuUvI4fSFkHSZdzgnsSBlarg7Q2fc85INbUPVvYi36HWzs+iM1y96ZU5zuYqr0m8DleCrJLAxQ=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1646325735; v=1; bh=A3brBleyeTehjvYyH/WNqxOcqT4pjPWl7BJgf1cH3jg=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.45
+Received: from ca2db.ca2.gtwy.dcn ([156.119.190.45])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 03 Mar 2022 11:42:13 -0500
+Received: from ca2db.ca2.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by ca2db.ca2.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 223GfUD4042968
+	for <recipient@example.com>; Thu, 3 Mar 2022 11:41:30 -0500
+Date: Thu, 3 Mar 2022 11:41:30 -0500
+From: cmecf@ca2.uscourts.gov
+To: recipient@example.com
+Message-ID: <1809663459.1502.1646325690288.JavaMail.ecf_web@ca2db.ca2.gtwy.dcn>
+Subject: 21-1975 New York State Telecommunicati v. James "Defective Document
+ FILED"
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><TITLE>21-1975 New York State Telecommunicati v. James "Defective Document FILED"</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFDA" TEXT="#000000" LINK="#0000ff" VLINK="#551a8b" ALINK="#ff0000">
+<P><STRONG>
+***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer.  PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing.</STRONG><BR>
+<P><CENTER><STRONG>Court of Appeals, 2nd Circuit</STRONG></CENTER>
+<P><STRONG>Notice of Docket Activity</STRONG><BR>
+<BR>
+The following transaction was filed on 03/03/2022
+<TABLE BORDER=0 CELLSPACING=3>
+<TR><TD><STRONG>Case Name:</STRONG></TD>
+<TD colspan='2'>New York State Telecommunicati v. James<BR>
+</TD></TR>
+<TR><TD><STRONG>Case Number:&nbsp;&nbsp;</STRONG></TD>
+<TD><A HREF="https://ecf.ca2.uscourts.gov/n/beam/servlet/TransportRoom?servlet=DocketReportFilter.jsp&caseId=55129">21-1975</A></TD></TR>
+<TR><TD><STRONG>Document(s):</STRONG></TD>
+<TD><A HREF="https://ecf.ca2.uscourts.gov/docs1/00208721516?uid=b775e9908ad79ce2">Document(s)</A></TD></TR>
+</TABLE><BR>
+<P><STRONG>Docket Text:</STRONG><BR>
+DEFECTIVE DOCUMENT,Amicus Brief,  [166], on behalf of Amicus Curiae Muticultural Media, Telecom, and Internet Council, and Allvanza, FILED.[3270986] [21-1975]<BR>
+<BR>
+<STRONG>Notice will be electronically mailed to:</STRONG><BR><BR>
+<a name="R0">Recipient User Test 1, -</a>: testing3@gexample.com, testing3_1@gexample.com, testing3_2@gexample.com<BR>
+<a name="R1">Recipient User Test 2, Counsel</a>: testing1@gexample.com<BR>
+<a name="R2">Recipient User Test 3, -</a>: testing2@gexample.com<BR>
+<a name="R4">Recipient User Test 4, -</a>: testing4@gexample.com<BR>
+<BR><BR>
+The following document(s) are associated with this transaction:<BR>
+<STRONG>Document Description: </STRONG>Defective_Document_Notice<BR>
+<STRONG>Original Filename: </STRONG>/opt/ACECF/live/forms/WilsonDudley_211975_3270986_Defective_Document_Notice_142.pdf<BR>
+<STRONG>Electronic Document Stamp:</STRONG><BR>
+[STAMP acecfStamp_ID=1161632333 [Date=03/03/2022] [FileNumber=3270986-0] [0ef250a712db8a82ce9998e0775fde363a3ed603a231dda5403b0d00306ba1f444588dbf1fead21da7024ef8a5372e666fedb7afd3acaa1ee68ddb80b2d7d7f3]]<BR>
+<STRONG>Recipients: </STRONG><UL>
+<LI><a href="#R0">Recipient User Test 1, -</a>
+<LI><a href="#R1">Recipient User Test 2, Counsel</a>
+<LI><a href="#R2">Recipient User Test 3, -</a>
+<LI><a href="#R4">Recipient User Test 4, -</a>
+</UL>
+
+</BODY></HTML>

@@ -1,3 +1,5 @@
+import datetime
+
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OpinionSite import OpinionSite
@@ -103,3 +105,22 @@ class Site(OpinionSite):
             else:
                 suffix = f"{type}/{suffix}"
         return f"{self.base_url}/opinions/{suffix}"
+
+    def _post_parse(self):
+        """This will remove the cases without a future case date"""
+        to_be_removed = [
+            index
+            for index, case_date in enumerate(self.case_dates)
+            if case_date > datetime.date.today()
+        ]
+        for attr in self._all_attrs:
+            item = getattr(self, attr)
+            if item is not None:
+                new_item = self.remove_elements(item, to_be_removed)
+                self.__setattr__(attr, new_item)
+
+    @staticmethod
+    def remove_elements(list_, indexes_to_be_removed):
+        return [
+            i for j, i in enumerate(list_) if j not in indexes_to_be_removed
+        ]

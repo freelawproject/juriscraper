@@ -1,0 +1,70 @@
+Return-Path: <cmecf_caseprocessing@ca5.uscourts.gov>
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 4ahb8helrkdlpp7i3p67vvho8iihmcu7jmd0ido1
+ for recipient@example.com;
+ Tue, 16 Aug 2022 15:21:59 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ca5.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=cmecf_caseprocessing@ca5.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ca5.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=cmecf_caseprocessing@ca5.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+ dmarc=none header.from=ca5.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHNHJlc0lFV3dkcWlUMU1TOEovY3FVOXdJSW9HaUplaUI2Y2t5eEdYTFVzVjFNVWVWaWxWWDNRQUJnRUxGTytwM21aOHhxVXlZUUdpdklZcy80cTgxZExTU2hoeHJRUEdkR0V5R3VKRVVvTDBNZVl6Mk9ZbjFBUk1UbFBuVGN4ZDFXWlZ3TlJzMTd3WVFXcFNLNldLWThaRUNrd1Axcy9YaVVhWGc5M3lqOXhadFVra2NtTnNUZWk3OGtSQkNmWXpMVEJoYzUyd05mb0tuUm13dGx2S2hFOTg3bzE1RmNnOTlKeVRzdUhXY2h2bmZZR3U4U1RzYnFadGN6MWVjSEhKbVBHcDI0TGsxR0JCQWZ4ZFFDMGtnU2NCS2RJWEFubjh4ZVFodGVWY3lTOXhXY2NubkI3T1NqRmJBTDhqd0U1RWs9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=GGy2+j8LpIE76oa2v6gbeEcIhHiFv3LGcDhyuy6dz9ZiQRKUPDFEinc/ClJwi/2RH5dH3FHHFc1jlZg112/CUhBs2NDR1xH7Cv03UvdJ2lpU2PeleubQL2F9aDIvj/pKuExOz1vZxFiFbpwuQnM3K+b+dinSfywyqpZEUwfpkb8=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1660663319; v=1; bh=nrcYy2xamooM+GpbEZyWa0NRVF44lFK1a8oIB3kYQqs=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.85
+Received: from ca5db.ca5.gtwy.dcn ([156.119.56.85])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 16 Aug 2022 11:21:58 -0400
+Received: from ca5db.ca5.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by ca5db.ca5.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 27GFLPoU121329
+	for <recipient@example.com>; Tue, 16 Aug 2022 10:21:25 -0500
+Date: Tue, 16 Aug 2022 10:21:25 -0500 (CDT)
+From: cmecf_caseprocessing@ca5.uscourts.gov
+To: recipient@example.com
+Message-ID: <1803106173.981.1660663285411@ca5db.ca5.gtwy.dcn>
+Subject: 22-30371 Certain Underwriters v. Cox Operating "Record Excerpts
+ Filed"
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><TITLE>22-30371 Certain Underwriters v. Cox Operating "Record Excerpts Filed"</TITLE>
+</HEAD>
+<BODY BGCOLOR="#DAF4F0" TEXT="#000000" LINK="#0000ff" VLINK="#551a8b" ALINK="#ff0000">
+<P><STRONG>
+***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer.  PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing.</STRONG><BR>
+</STRONG><BR>
+<P><STRONG>
+PLEASE DO NOT REPLY TO THIS EMAIL AS IT ORIGINATES FROM AN UNATTENDED EMAIL ADDRESS.<P><CENTER><STRONG>United States Court of Appeals for the Fifth Circuit</STRONG></CENTER>
+<P><STRONG>Notice of Docket Activity</STRONG><BR>
+<BR>
+The following transaction was entered on 08/16/2022 at 10:21:24 AM Central Daylight Time and filed on 08/16/2022
+<TABLE BORDER=0 CELLSPACING=3>
+<TR><TD><STRONG>Case Name:</STRONG></TD>
+<TD colspan='2'>Certain Underwriters v. Cox Operating<BR>
+</TD></TR>
+<TR><TD><STRONG>Case Number:&nbsp;&nbsp;</STRONG></TD>
+<TD><A HREF="https://ecf.ca5.uscourts.gov/n/beam/servlet/TransportRoom?servlet=DocketReportFilter.jsp&caseId=208667">22-30371</A></TD></TR>
+<TR><TD><STRONG>Document(s):</STRONG></TD>
+<TD><A HREF="https://ecf.ca5.uscourts.gov/docs1/00506433781?uid=12e61e2debdbca3f">Document(s)</A></TD></TR>
+</TABLE><BR>
+<P><STRONG>Docket Text:</STRONG><BR>
+RECORD EXCERPTS FILED by Appellant Certain Underwriters at Lloyds London. Date of service: 08/16/2022 via email - Attorney for Appellants: Bohman, Morse; Attorney for Appellees: Lowe, Shipman [22-30371] (Harry E. Morse )<BR>
+<BR>
+<STRONG>Notice will be electronically mailed to:</STRONG><BR><BR>
+Recipient User Test 1: testing1@gexample.com, testing1_1@gexample.com<BR>
+Recipient User Test 2: testing2@gexample.com, testing2_1@gexample.com<BR>
+Recipient User Test 3: testing3@gexample.com, testing3_1@gexample.com<BR>
+Recipient User Test 4: testing4@gexample.com, testing4_1@gexample.com, testing4_1@gexample.com<BR>
+Recipient User Test 5: testing5@gexample.com, testing5_1@gexample.com, testing5_1@gexample.com<BR>
+<BR><BR>
+The following document(s) are associated with this transaction:<BR>
+<STRONG>Document Description: </STRONG>Record Excerpts Filed<BR>
+<STRONG>Original Filename: </STRONG>2022.08.16_RECORD EXCERPTS by Appellant.pdf<BR>
+<STRONG>Electronic Document Stamp:</STRONG><BR>
+[STAMP acecfStamp_ID=1105048708 [Date=08/16/2022] [FileNumber=9916826-0] [5f8402f042a386c355d9e8365b067f818b65469c403b9489e634dfdf9e91859d4d24ba8e12645f6d8522a576a8b01fcbf23402ed556f12252c4b0a3e8ad3b532]]<BR>
+<BR>
+</BODY></HTML>

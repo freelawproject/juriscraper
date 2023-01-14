@@ -1,20 +1,26 @@
 {
-  "case_name": "Kelvin Hernandez Roman v. Chad F. Wolf",
+  "appellate": false,
+  "contains_attachments": true,
   "court_id": "cacd",
-  "date_filed": "2021-04-19",
-  "docket_entries": [
+  "dockets": [
     {
+      "case_name": "Kelvin Hernandez Roman v. Chad F. Wolf",
       "date_filed": "2021-04-19",
-      "description": "SEALED DOCUMENT",
-      "document_number": "1083",
-      "document_url": "https://ecf.cacd.uscourts.gov/doc1/031035341704?caseid=779377&de_seq_num=3644&magic_num=",
-      "pacer_case_id": "779377",
-      "pacer_doc_id": "031035341704",
-      "pacer_magic_num": null,
-      "pacer_seq_no": "3644"
+      "docket_entries": [
+        {
+          "date_filed": "2021-04-19",
+          "description": "SEALED DOCUMENT Bail Spreadsheet re Order[124] filed by Respondents Matthew T. Albence, James Janecka, David Marin, Chad F. Wolf. (Attachments: (1) Unredacted Document)(Mercado-Santana, Victor)",
+          "document_number": "1083",
+          "document_url": "https://ecf.cacd.uscourts.gov/doc1/031035341704?caseid=779377&de_seq_num=3644&magic_num=",
+          "pacer_case_id": "779377",
+          "pacer_doc_id": "031035341704",
+          "pacer_magic_num": null,
+          "pacer_seq_no": "3644"
+        }
+      ],
+      "docket_number": "5:20-cv-00768"
     }
   ],
-  "docket_number": "5:20-cv-00768",
   "email_recipients": [
     {
       "email_addresses": [

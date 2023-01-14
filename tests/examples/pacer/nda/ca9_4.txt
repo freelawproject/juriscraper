@@ -1,0 +1,62 @@
+Return-Path: <ca9_ecfnoticing@ca9.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 439p0i284ss1469e8dneefeivgeq6kji8cf8rco1
+ for recipient@example.com;
+ Mon, 08 Aug 2022 19:25:14 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ca9.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=ca9_ecfnoticing@ca9.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ca9.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=ca9_ecfnoticing@ca9.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=ca9.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFaHBkd1N4a3pPbzNLOWFVbDltaHExT3JqeEM5RzdCK3N2M0JpdHFoWkVTd2pPQkg1eUFqY0FKOGZ1dlBLM1BqbGZSR3EvVk1QRmRyU3c3UXlRaWhMaHUxSkJEWmZNT0xHNVduUWZnRkNUbHZSdEpWbnlBUHRVQkVXSisxMTdLQW56S1h4djBpOUQwZjdFVHNZYWxiUFhwZkNxcS9yZTI0MnprTFhyS0FVQ0FYT0FPZXVDWE9mUmo1b0d5MEhBbU5HM0lZdjdkSFRCQWtUYXM1UW42bTFjUjR0Mk42ZXlOaDU3VEtoclYyOWNuT0hTNkdPZWFIeUFMNmVLWlIyQ3dmbEtVb3pwNFBYZElyWmFKdXZQRThkaDRsa1NHVDIwQThuT3NXMnhDWlZWdHB4bWYrMmsraW1OYklUZjZIRGJxWU09
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=CyxNzZrjMaaGthwDiCwt0mG7FFXfZZLapVxzfWVhS5CV6km4mLmuLIMtDlAF+IAR7jNovTtkyKl23/+wKkp9oAeszsWwR62cB2FZ6zIepGGaaZ8XfNhBD0OhxI0TYu67SIo5GsMGs/0G6TsAHYrJNjcDas7X4QSvEp0QBM773Ng=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1659986715; v=1; bh=82CcWY1a7REAp4N7phtCbsBh6YyV4q+9ra3in7rDFc4=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.100
+Received: from ca9db.ca9.gtwy.dcn ([156.119.56.100])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 08 Aug 2022 15:25:14 -0400
+Received: from ca9db.ca9.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by ca9db.ca9.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 278JOno4065824
+	for <recipient@example.com>; Mon, 8 Aug 2022 12:24:49 -0700
+Date: Mon, 8 Aug 2022 12:24:49 -0700 (PDT)
+From: ca9_ecfnoticing@ca9.uscourts.gov
+To: recipient@example.com
+Message-ID: <1037275041.4166.1659986689643@ca9db.ca9.gtwy.dcn>
+Subject: Re-send: 20-15568 Mackenzie  Brown, et al v. State of Arizona, et
+ al "Deleted Entry"
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><TITLE>Re-send: 20-15568 Mackenzie  Brown, et al v. State of Arizona, et al "Deleted Entry"</TITLE>
+</HEAD>
+<BODY BGCOLOR="#F8F8F8" TEXT="#000000" LINK="#0000ff" VLINK="#551a8b" ALINK="#ff0000">
+<P><STRONG>
+***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer.  PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing.</STRONG><BR>
+<P><CENTER><STRONG>United States Court of Appeals for the Ninth Circuit</STRONG></CENTER>
+<P><STRONG>Amended 08/08/2022 12:24:49: Notice of Docket Activity</STRONG><BR>
+<BR>
+The following transaction was entered on 08/08/2022 at 12:08:21 PM Pacific Daylight Time and filed on 08/08/2022
+<TABLE BORDER=0 CELLSPACING=3>
+<TR><TD><STRONG>Case Name:</STRONG></TD>
+<TD colspan='2'>Mackenzie  Brown, et al v. State of Arizona, et al<BR>
+</TD></TR>
+<TR><TD><STRONG>Case Number:&nbsp;&nbsp;</STRONG></TD>
+<TD><A HREF="https://ecf.ca9.uscourts.gov/n/beam/servlet/TransportRoom?servlet=DocketReportFilter.jsp&caseId=320925">20-15568</A></TD></TR>
+</TABLE><BR>
+<P><STRONG>Docket Text:</STRONG><BR>
+COURT DELETED INCORRECT ENTRY. Entered in error (already listed on docket).Notice about deletion sent to case participants registered for electronic filing. Original Text:
+Entered appearance of Amicus Curiae USA. [12511871] (SML)<BR>
+<BR>
+<STRONG>Notice will be electronically mailed to:</STRONG><BR><BR>
+Recipient User Test 1: testing1@gexample.com, testing1_1@gexample.com<BR>
+Recipient User Test 2: testing2@gexample.com, testing2_1@gexample.com<BR>
+Recipient User Test 3: testing3@gexample.com, testing3_1@gexample.com<BR>
+Recipient User Test 4: testing4@gexample.com, testing4_1@gexample.com, testing4_1@gexample.com<BR>
+Recipient User Test 5: testing5@gexample.com, testing5_1@gexample.com, testing5_1@gexample.com<BR>
+<BR><BR>
+
+</BODY></HTML>

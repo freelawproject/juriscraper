@@ -1,0 +1,59 @@
+{
+  "appellate": true,
+  "contains_attachments": false,
+  "court_id": "cafc",
+  "dockets": [
+    {
+      "case_name": "Corephotonics, Ltd. v. Apple Inc.",
+      "date_filed": "2022-08-22",
+      "docket_entries": [
+        {
+          "date_filed": "2022-08-22",
+          "description": "TEXT ONLY ORDER granting motion to extend time to file brief [18] filed by Appellee Apple Inc. The response brief is due 10/28/2022. Service as of this date by the Clerk of Court. This order has been issued without an attached document and is official and binding. [867470] [EKD]",
+          "document_number": null,
+          "document_url": null,
+          "pacer_case_id": "18362",
+          "pacer_doc_id": null,
+          "pacer_magic_num": null,
+          "pacer_seq_no": null
+        }
+      ],
+      "docket_number": "22-1455"
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "testing1@gexample.com"
+      ],
+      "name": "Recipient User Test 1, -:"
+    },
+    {
+      "email_addresses": [
+        "testing2@gexample.com"
+      ],
+      "name": "Recipient User Test 2, -:"
+    },
+    {
+      "email_addresses": [
+        "testing3@gexample.com",
+        "testing3_1@gexample.com"
+      ],
+      "name": "Recipient User Test 3, -:"
+    },
+    {
+      "email_addresses": [
+        "testing4@gexample.com",
+        "testing4_1@gexample.com",
+        "testing4_2@gexample.com"
+      ],
+      "name": "Recipient User Test 4, -:"
+    },
+    {
+      "email_addresses": [
+        "Testing5@gexample.com"
+      ],
+      "name": "Recipient User Test 5, Deputy Clerk:"
+    }
+  ]
+}

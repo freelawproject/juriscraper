@@ -1,0 +1,71 @@
+Return-Path: <cmecf@ca2.uscourts.gov>
+Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov [63.241.40.204])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id il9pann4hu1g13rgbeuo0oc3dm6cvu3h8hgv5j01
+ for recipient@example.com;
+ Wed, 23 Mar 2022 19:30:17 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ca2.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=cmecf@ca2.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ca2.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=cmecf@ca2.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+ dmarc=none header.from=ca2.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFIanhUYXFYNSt4QllYUUhBNEpDS04wQ3FvRmZnTzBzcDlLRTYrOThOdmF5RVNlKzdNbkc5VE9VZlB2SzY4VUgyWjFPbGFOZmp0cXNQMm52WTRxRmlaUDJNdWJSbmNMZkZEWDhuTHU5cElkbWwrSld5NnBTNUZpLzd5SVRSMVVpS09hZFk2WmJwUmxoanB4QitKZmNxbzZoeW9yL2QzYWhNWEtzcldKZGk1ekJIMVJtNE1Nb1pFbUN0aDJkNk9HMENub3ZNRzNud0hRMEtkSXlpdi9IMHZCdDlwUXp3YU8wUE41K0pLa1FtSFYzWXRmMmNOZFlmL2FiTDY0Y2FwM1hlcWJXZXNlU01jYkhzUHFUSGNienhZV3h1aHlyQkUrYUEvOVFRK3lZWDFSblE9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=G5ez+FlAnXM5Nl3BCggLlIu2pRd79IYfBA8sLTOC8AUlCQEUeW2G6VkcSAN1eP6cdB7BzL7knRHPvi0psR5JLenEYuOxgwfxLugp8m4u5q3SqVSlXlpHyKuMTieTAsZdDOdh2WSD9VKvOusqKgOnMi9E1gCqdeV1UvsyEz9xA1M=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1648063817; v=1; bh=9OoOp1rIWNQo4hRQsB4RKdMSY9xXaFGvoNrqSxXZp0Y=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.45
+Received: from ca2db.ca2.gtwy.dcn ([156.119.190.45])
+  by icmecf201.gtwy.uscourts.gov with ESMTP; 23 Mar 2022 15:30:16 -0400
+Received: from ca2db.ca2.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by ca2db.ca2.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 22NJTLXK061043
+	for <recipient@example.com>; Wed, 23 Mar 2022 15:29:21 -0400
+Date: Wed, 23 Mar 2022 15:29:21 -0400
+From: cmecf@ca2.uscourts.gov
+To: recipient@example.com
+Message-ID: <1777006619.4225.1648063761372.JavaMail.ecf_web@ca2db.ca2.gtwy.dcn>
+Subject: 21-1975 New York State Telecommunicati v. James
+ "Appellant/Petitioner Reply Brief FILED"
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><TITLE>21-1975 New York State Telecommunicati v. James "Appellant/Petitioner Reply Brief FILED"</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFDA" TEXT="#000000" LINK="#0000ff" VLINK="#551a8b" ALINK="#ff0000">
+<P><STRONG>
+***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer.  PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing.</STRONG><BR>
+<P><CENTER><STRONG>Court of Appeals, 2nd Circuit</STRONG></CENTER>
+<P><STRONG>Notice of Docket Activity</STRONG><BR>
+<BR>
+The following transaction was filed on 03/23/2022
+<TABLE BORDER=0 CELLSPACING=3>
+<TR><TD><STRONG>Case Name:</STRONG></TD>
+<TD colspan='2'>New York State Telecommunicati v. James<BR>
+</TD></TR>
+<TR><TD><STRONG>Case Number:&nbsp;&nbsp;</STRONG></TD>
+<TD><A HREF="https://ecf.ca2.uscourts.gov/n/beam/servlet/TransportRoom?servlet=DocketReportFilter.jsp&caseId=55129">21-1975</A></TD></TR>
+<TR><TD><STRONG>Document(s):</STRONG></TD>
+<TD><A HREF="https://ecf.ca2.uscourts.gov/docs1/00208754210?uid=59a7f7615f78153b">Document(s)</A></TD></TR>
+</TABLE><BR>
+<P><STRONG>Docket Text:</STRONG><BR>
+REPLY BRIEF, on behalf of Appellant Letitia A. James, FILED. Service date 03/23/2022 by CM/ECF. [3283515] [21-1975]<BR>
+<BR>
+<STRONG>Notice will be electronically mailed to:</STRONG><BR><BR>
+Recipient User Test A, -: testinga@gexample.com<BR>
+Recipient User Test B, -: testingb@gexample.com<BR>
+Recipient User Test C, -: testingc@gexample.com, testingcc@gexample.com<BR>
+Recipient User Test D, -: testingd@gexample.com, testingdd@gexample.com, testingddd@gexample.com<BR>
+Recipient User Test F, Deputy Clerk: Testingf@gexample.com<BR>
+<BR><BR><BR><STRONG>Notice will be stored in the notice cart for:</STRONG><BR><BR>
+Wilson Dudley, Deputy Clerk<BR>
+Quality Control 1<BR>
+<BR>
+The following document(s) are associated with this transaction:<BR>
+<STRONG>Document Description: </STRONG>Appellant/Petitioner Reply Brief FILED<BR>
+<STRONG>Original Filename: </STRONG>21-1975_NYS Telecomms. Ass'n v. James_Reply Br. for Appellant.pdf<BR>
+<STRONG>Electronic Document Stamp:</STRONG><BR>
+[STAMP acecfStamp_ID=1161632333 [Date=03/23/2022] [FileNumber=3283515-0] [2ae719217bd3c10af0d9bf4fe58b5483ce7ba2805d096e03c023d784301b9c8c6ef41d715570f014f33776b75e9fe815bd9b207dabca4855c15fb81af7afd906]]<BR>
+<BR>
+</BODY></HTML>

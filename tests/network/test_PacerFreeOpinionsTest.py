@@ -11,7 +11,7 @@ import jsondate3 as json
 from requests import ConnectionError
 
 from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.pacer import FreeOpinionReport
+from juriscraper.pacer import DownloadConfirmationPage, FreeOpinionReport
 from juriscraper.pacer.http import PacerSession
 from juriscraper.pacer.utils import get_court_id_from_url, get_courts_from_json
 from tests import JURISCRAPER_ROOT, TESTS_ROOT_EXAMPLES_PACER
@@ -103,7 +103,7 @@ class PacerFreeOpinionsTest(unittest.TestCase):
                         )
 
                 # Can we download one item from each court?
-                r = report.download_pdf(
+                r, msg = report.download_pdf(
                     results[0]["pacer_case_id"], results[0]["pacer_doc_id"]
                 )
                 if r is None:
@@ -115,14 +115,21 @@ class PacerFreeOpinionsTest(unittest.TestCase):
     def test_download_simple_pdf(self):
         """Can we download a PDF document returned directly?"""
         report = self.reports["alnb"]
-        r = report.download_pdf("602431", "018129511556")
+        r, msg = report.download_pdf("602431", "018129511556")
+        self.assertEqual(r.headers["Content-Type"], "application/pdf")
+
+    @SKIP_IF_NO_PACER_LOGIN
+    def test_download_redirected_pdf(self):
+        """Can we download a PDF document returned after a redirection?"""
+        report = self.reports["azd"]
+        r, msg = report.download_pdf("1311031", "025125636132")
         self.assertEqual(r.headers["Content-Type"], "application/pdf")
 
     @SKIP_IF_NO_PACER_LOGIN
     def test_download_iframed_pdf(self):
         """Can we download a PDF document returned in IFrame?"""
         report = self.reports["vib"]
-        r = report.download_pdf("1507", "1921141093")
+        r, msg = report.download_pdf("1507", "1921141093")
         self.assertEqual(r.headers["Content-Type"], "application/pdf")
 
     @SKIP_IF_NO_PACER_LOGIN
@@ -130,8 +137,9 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         """Do we throw an error if the item is unavailable?"""
         # 5:11-cr-40057-JAR, document 3
         report = self.reports["ksd"]
-        r = report.download_pdf("81531", "07902639735")
+        r, msg = report.download_pdf("81531", "07902639735")
         self.assertIsNone(r)
+        self.assertIn("Document not available in case", msg)
 
     @SKIP_IF_NO_PACER_LOGIN
     def test_query_can_get_multiple_results(self):
@@ -191,3 +199,119 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         self.assertFalse(
             mock_session.post.called, msg="should not trigger a POST query"
         )
+
+
+@mock.patch("juriscraper.pacer.reports.logger")
+class PacerMagicLinkTest(unittest.TestCase):
+    """Test related to PACER magic link free download"""
+
+    def setUp(self):
+        pacer_session = PacerSession()
+        if pacer_credentials_are_defined():
+            # CAND chosen at random
+            pacer_session = get_pacer_session()
+            pacer_session.login()
+
+        self.reports = {}
+        court_id = "nysd"
+        court_id_nda = "ca3"
+        self.reports[court_id] = FreeOpinionReport(court_id, pacer_session)
+        self.reports[court_id_nda] = FreeOpinionReport(
+            court_id_nda, pacer_session
+        )
+
+    def test_download_simple_pdf_magic_link_fails(self, mock_logger):
+        """Can we download a PACER document with an invalid or expired
+        magic link? land on a login page and returns an error.
+        """
+        report = self.reports["nysd"]
+        url = "https://ecf.nysd.uscourts.gov/doc1/127130869087"
+        pacer_case_id = "568350"
+        pacer_doc_id = "127130869087"
+        pacer_magic_num = "46253052"
+        r, msg = report.download_pdf(
+            pacer_case_id, pacer_doc_id, pacer_magic_num
+        )
+        mock_logger.warning.assert_called_with(
+            "Document not available via magic link in case: "
+            f"caseid: {pacer_case_id}, magic_num: {pacer_magic_num}, "
+            f"URL: {url}"
+        )
+        # No PDF should be returned
+        self.assertEqual(r, None)
+
+    def test_download_nda_pdf_magic_link(self, mock_logger):
+        """Can we download a NDA PACER document with an invalid or expired
+        magic link? land on a login page and returns an error.
+        """
+        report = self.reports["ca3"]
+        url = "https://ecf.ca3.uscourts.gov/docs1/003114193380"
+        pacer_case_id = "21-1832"
+        pacer_doc_id = "003014193380"
+        pacer_magic_num = "3594681a19879633"
+        appellate = True
+        r, msg = report.download_pdf(
+            pacer_case_id, pacer_doc_id, pacer_magic_num, appellate
+        )
+        mock_logger.warning.assert_called_with(
+            "Document not available via magic link in case: "
+            f"caseid: {pacer_case_id}, magic_num: {pacer_magic_num}, "
+            f"URL: {url}"
+        )
+        # No PDF should be returned
+        self.assertEqual(r, None)
+
+
+class PacerDownloadConfirmationPageTest(unittest.TestCase):
+    """A variety of tests for the download confirmation page"""
+
+    def setUp(self):
+        self.session = get_pacer_session()
+        self.session.login()
+        self.report = DownloadConfirmationPage("ca8", self.session)
+        self.report_att = DownloadConfirmationPage("ca5", self.session)
+        self.report_pdf = DownloadConfirmationPage("ca11", self.session)
+        self.pacer_doc_id = "00812590792"
+        self.no_confirmation_page_pacer_doc_id = "00802251695"
+        self.pacer_doc_id_att = "00506470276"
+        self.pacer_doc_id_pdf = "011012534985"
+
+    @SKIP_IF_NO_PACER_LOGIN
+    def test_get_document_number(self):
+        """Can we get the PACER document number from a download confirmation
+        page?"""
+        self.report.query(self.pacer_doc_id)
+        data_report = self.report.data
+        self.assertEqual(data_report["document_number"], "00812590792")
+        self.assertEqual(data_report["docket_number"], "14-3066")
+        self.assertEqual(data_report["cost"], "0.30")
+        self.assertEqual(data_report["billable_pages"], "3")
+        self.assertEqual(data_report["document_description"], "PDF Document")
+
+    @SKIP_IF_NO_PACER_LOGIN
+    def test_get_document_number_skipping_attachment_page(self):
+        """Can we get the PACER document number from a download confirmation
+        page skipping the attachment page?"""
+        self.report_att.query(self.pacer_doc_id_att)
+        data_report = self.report_att.data
+        self.assertEqual(data_report["document_number"], "00516470276")
+        self.assertEqual(data_report["docket_number"], "22-30311")
+        self.assertEqual(data_report["cost"], "1.50")
+        self.assertEqual(data_report["billable_pages"], "15")
+        self.assertEqual(data_report["document_description"], "PDF Document")
+
+    @SKIP_IF_NO_PACER_LOGIN
+    def test_no_confirmation_page(self):
+        """If the download confirmation page is not available an empty
+        dictionary is returned"""
+        self.report.query(self.no_confirmation_page_pacer_doc_id)
+        data_report = self.report.data
+        self.assertEqual(data_report, {})
+
+    @SKIP_IF_NO_PACER_LOGIN
+    def test_no_confirmation_page_pdf_returned(self):
+        """If the download confirmation page is not available when the PDF is
+        returned directly, no valid page to parse."""
+        self.report_pdf.query(self.pacer_doc_id_pdf)
+        data_report = self.report_pdf.data
+        self.assertEqual(data_report, {})

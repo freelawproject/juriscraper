@@ -16,7 +16,7 @@ from typing import List
 from urllib.parse import quote
 
 from juriscraper.lib.string_utils import convert_date_string, titlecase
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteLinear import OpinionSite
 
 
 class Site(OpinionSite):
@@ -27,17 +27,16 @@ class Site(OpinionSite):
         self.year = None
 
     def _get_download_urls(self) -> List[str]:
-        return [
-            quote(url.get("href"), safe=":/")
-            for url in self.html.xpath(
-                f'//*[@id="{self.year}"]/../following-sibling::section/table/tbody/tr//td[2]/a[1]'
-            )
-        ]
+        links = self.html.xpath(
+            f'//*[@id="{self.year}"]/../following-sibling::section/table//tr/td[2]/a'
+        )
+        return [row.get("href") for row in links]
 
     def _get_docket_numbers(self) -> List[str]:
-        return self.html.xpath(
-            f'//*[@id="{self.year}"]/../following-sibling::section/table/tbody/tr//td[2]/a[1]/text()'
+        links = self.html.xpath(
+            f'//*[@id="{self.year}"]/../following-sibling::section/table//tr/td[2]/a'
         )
+        return [row.text for row in links]
 
     def _get_case_names(self) -> List[str]:
         return [

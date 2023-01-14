@@ -1,6 +1,6 @@
-"""Scraper for the 1st District Court of Appeals
-CourtID: ohio
-Court Short Name: Ohio
+"""Scraper for the Ohio Ct of Claims
+CourtID: ohioctcl
+Court Short Name: Ohio Ct of Cl
 Author: Andrei Chelaru
 """
 

@@ -137,8 +137,14 @@ class AttachmentPage(BaseReport):
         """Get the description from the row"""
         if not self.is_bankruptcy:
             index = 2
+            # Some NEFs attachment pages for some courts have an extra column
+            # (see nyed_123019137279), use index 3 to get the description
+            columns_in_row = row.xpath(f"./td")
+            if len(columns_in_row) == 5:
+                index = 3
         else:
             index = 3
+
         description_text_nodes = row.xpath(f"./td[{index}]//text()")
         if not description_text_nodes:
             # No text in the cell.

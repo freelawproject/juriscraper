@@ -70,3 +70,6 @@ class OpinionSiteLinear(OpinionSite):
 
     def _get_summaries(self):
         return self._get_optional_field_by_id("summary")
+
+    def _get_lower_courts(self):
+        return self._get_optional_field_by_id("lower_court")

@@ -12,14 +12,478 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
- - Drop Neutral, West and West State citations and Add generic citation and parallel citation.
+ - N/A
 
 ## Current
 
-- 2.3.29, 2021-01-03 - Update GA Supremes, MDAG
+**2.5.33 - 2022-01-13**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Fix the CA9 Published/Unpublished II
 
 ## Past
 
+
+**2.5.32 - 2022-01-13**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Fix the CA9 Published/Unpublished
+
+**2.5.31 - 2022-01-13**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Fix the four Kansas Scrapers for updated website.
+
+**2.5.30 - 2022-01-11**
+
+Features:
+
+- Disabled scrapers for
+  - ME
+
+Changes:
+
+- N/A
+
+**2.5.29 - 2022-01-06**
+
+Features:
+
+- Added scrapers for
+  - Alabama Supreme Court
+  - Alabama Court of Civil Appeals
+  - Alabama Court of Criminal Appeals
+  - Colorado Supreme Court
+  - Colorado Court of Appeals
+
+Changes:
+
+- N/A
+
+
+**2.5.28 - 2022-12-22**
+
+Features:
+
+- Added scraper for WVA CT APP
+
+Changes:
+
+- Fix docket report parsing when there is no valid content and if there is
+  bad script content.
+- Fix avoid parsing the download confirmation page if a PDF binary is returned.
+- Fix parsing text/plain content multipart email notifications.
+
+**2.5.27 - 2022-12-13**
+
+Features:
+
+ - Added AppellateAttachmentPage report to parse appellate attachment pages.
+
+Changes:
+
+- N/A
+
+
+**2.5.26 - 2022-11-15**
+
+Features:
+
+ - N/A
+
+Changes:
+
+- Fix download PDF documents returned after a redirection.
+
+**2.5.25 - 2022-11-07**
+
+Features:
+
+ - N/A
+
+Changes:
+
+- Update to support J. Jackson
+
+**2.5.24 - 2022-11-02**
+
+Features:
+
+ - N/A
+
+Changes:
+
+- Added support for parsing multi-docket NEFs
+
+**2.5.23 - 2022-10-26**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix docket report entries table parsing for wiwb.
+ - Ignore claims filings notifications for email report.
+ - Fix UnicodeEncodeError when parsing a docket report.
+
+**2.5.22 - 2022-10-12**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix email report decoding.
+
+**2.5.21 - 2022-10-11**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix NEFs description parsing for cacb.
+
+**2.5.20 - 2022-10-06**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix regression caught in COURTLISTENER-36Q, to properly handle
+   window.location redirects on weird PACER sites.
+
+
+**2.5.19 - 2022-09-29**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix performance when downloading large PDFs (see #564)
+
+**2.5.18 - 2022-09-29**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Skip appellate attachment page when querying the download confirmation page
+ - Skip appellate attachment page when downloading the free document
+ - Fix getting filed date on email notifications
+
+**2.5.17 - 2022-09-28**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Added DownloadConfirmationPage report to parse the PACER download
+ confirmation page and get the following data:
+  - document_number
+  - docket_number
+  - cost
+  - billable_pages
+  - document_description
+  - transaction_date
+
+**2.5.16 - 2022-09-11**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix for OA CA1
+
+**2.5.15 - 2022-09-06**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Update Selenium version 4.0.0.a7
+
+
+**2.5.14 - 2022-09-02**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Update Selenium version
+
+**2.5.13 - 2022-08-24**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Added support to get attached documents from NEFs.
+
+**2.5.12 - 2022-08-12**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Added support to parse NDAs and download their free documents.
+
+**2.5.11 - 2022-07-29**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix Tax Scraper
+
+**2.5.10 - 2022-07-28**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Bug fix
+
+**2.5.9 - 2022-07-28**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix CA4
+
+**2.5.8 - 2022-07-26**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix Michigan Supreme Court
+
+**2.5.7 - 2022-06-29**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Added support for more PACER download document errors messages
+ - Update thomas name in test files
+ - Drop future opinions
+ - Update url pattern for Wyoming
+ - Fix all failing Illinois Oral Argument Scrapers
+
+**2.5.6 - 2022-05-17**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix Mass Land Court scraper
+
+**2.5.5 - 2022-05-17**
+
+Features:
+
+ - N/A
+
+Changes:
+
+ - Fix failing CAFC Oral Argument Scraper and Back Scraper.
+
+**2.5.4 - 2022-05-13**
+
+Features:
+
+ - Fix Rhode Island scraper
+
+Changes:
+
+ - Update to Rhode island Published and Unpublished opinions.
+
+**2.5.1 - 2022-04-25**
+
+Features:
+
+ - The `download_pdf` function used by PACER reports now returns a two-tuple
+   containing the response object or None and a str. If there is an error,
+   the response object will be None and the str will have the error message. If
+   not, the response object will be populated and the str will be empty.
+
+    To adapt to the new version you can change old code like this:
+
+        r = report.download_pdf(...)
+
+    To something like:
+
+        r, _ = report.download_pdf(...)
+
+    If you wish, you could instead capture errors with something like:
+
+        r, msg = report.download_pdf(...)
+        if msg:
+            do_something()
+
+Changes:
+
+ - Python 3.7 is no longer supported.
+
+ - See notes re features.
+
+
+**2.4.11 - 2022-04-22**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Add MIME parser to parse PACER emails notifications
+- Small fix to fetch free PACER documents using magic links
+
+**2.4.10 - 2022-02-08**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Small fix for NM
+
+**2.4.9 - 2022-02-08**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Updates Ark, ArkCtApp, NM, NMCtApp to self throttle. Add login HTTP validation for PACER
+
+**2.4.8 - 2022-02-02**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Fixes for CGCCA, Conn, Conn App Ct.  Added pacer case_queries examples
+
+**2.4.7 - 2022-01-21**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Fix tax court. Fixes for Illinois Supreme and Illinois Appeals.
+
+**2.4.6 - 2022-01-19**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Update the site_yielder method for backscraping to reset the site object after each iterable.
+
+**2.4.5 - 2022-01-18**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Update OLC backscraper to function with CL more reliably.
+
+**2.4.4 - 2022-01-14**
+
+Features:
+
+- Add DOJ Office of Legal Counsel Opinions (OLC)
+
+Changes:
+
+- Typo fixes
+
+**2.4.3 - 2022-01-05**
+
+Features:
+
+- None
+
+Changes:
+
+- Add init file for admin agency backscrapers. This was missing and causing a failure for tools to find the file.
+
+**2.4.0 - 2022-01-05**
+
+Features:
+
+- Updated citation parsing for websites.
+- Drop Neutral, West and West_state citations.
+- Add citation and parallel citation
+
+Changes:
+
+- This version is a major release. Updated Opinion Sites to drop support for specific citation formats.  Instead, we now let the user or more generally eyecite determine the specific citation format.
+- Selenium support for Texas Court scrapers is removed.  This is part of removing selenium from all scrapers.
+- Also includes a small fix for the Board of Immigration Appeals docket numbers.  
+
+- 2.3.29, 2022-01-03 - Update GA Supremes, MDAG
 - 2.3.28, 2021-12-30 - Add Board of Immigration Appeals (BIA), updates OA CA9, Fix NH
 - 2.3.27, 2021-12-29 - Add cadc_pi, massappct_u, lactapp_1, cgcca
 - 2.3.26, 2021-12-20 - Add Guam, Utah Ct App, Fix Ariz Ct App. Dist 2, Fix Ga Ct. App
