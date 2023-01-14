@@ -73,7 +73,7 @@ class Site(OpinionSiteLinear):
         # ie. 123413/03 vs. 51706 vs. 2003-718 Q C or 2003-1288 K C
 
         dockets = re.findall(
-            r"^(\d+\/\d+)|^(\d{5,})|^(\d+-\d+ \w+\s\w+)", scraped_text
+            r"(\d+\/\d+)|^(\d{5,})|^(\d+-\d+ \w+\s\w+)", scraped_text
         )
         dockets = [list(filter(None, x)) for x in dockets]
         metadata = {
