@@ -15,6 +15,7 @@
 #  - 2015-08-19: Updated by Andrei Chelaru to add backwards scraping support.
 #  - 2015-08-27: Updated by Andrei Chelaru to add explicit waits
 #  - 2021-12-28: Updated by flooie to remove selenium.
+
 from datetime import date, timedelta
 from typing import Optional
 
@@ -92,12 +93,10 @@ class Site(OpinionSiteLinear):
         for row in self.html.xpath("//table[@class='rgMasterTable']/tbody/tr"):
             # In texas we also have to ping the case page to get the name
             # this is unfortunately part of the process.
-            # self.url = row.xpath(".//a")[2].get("href")
-            # self.seeds.append(self.url)
             self.cases.append(
                 {
                     "date": row.xpath(f".//td[2]")[0].text_content(),
-                    "docket": row.xpath(f".//td[5]")[0].text_content(),
+                    "docket": row.xpath(f".//td[5]")[0].text_content().strip(),
                     "url": row.xpath(".//a")[1].get("href"),
                 }
             )
