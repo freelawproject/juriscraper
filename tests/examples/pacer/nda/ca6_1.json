@@ -1,0 +1,47 @@
+{
+  "appellate": true,
+  "contains_attachments": false,
+  "court_id": "ca6",
+  "dockets": [
+    {
+      "case_name": "Andrea Goldblum v. UC",
+      "date_filed": "2022-08-15",
+      "docket_entries": [
+        {
+          "date_filed": "2022-08-15",
+          "description": "MOTION filed by Ms. Marissa J. Palumbo for UC to extend time to file brief. Certificate of Service: 08/15/2022. [22-3289] (MJP)",
+          "document_number": null,
+          "document_url": "https://ecf.ca6.uscourts.gov/docs1/006014767502?uid=e957a05e64b3113b",
+          "pacer_case_id": "143725",
+          "pacer_doc_id": "006014767502",
+          "pacer_magic_num": "e957a05e64b3113b",
+          "pacer_seq_no": null
+        }
+      ],
+      "docket_number": "22-3289"
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "testing1@gexample.com",
+        "testing1_1@gexample.com"
+      ],
+      "name": "Recipient User Test 1:"
+    },
+    {
+      "email_addresses": [
+        "testing2@gexample.com",
+        "testing2_1@gexample.com"
+      ],
+      "name": "Recipient User Test 2:"
+    },
+    {
+      "email_addresses": [
+        "testing3@gexample.com",
+        "testing3_1@gexample.com"
+      ],
+      "name": "Recipient User Test 3:"
+    }
+  ]
+}

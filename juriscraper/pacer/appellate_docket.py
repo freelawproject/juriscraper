@@ -343,7 +343,9 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             "case_name": self._get_case_name(),
             "panel": self._get_panel(),
             "nature_of_suit": self._get_tail_by_regex("Nature of Suit"),
-            "appeal_from": self._get_tail_by_regex("Appeal From"),
+            "appeal_from": self._get_appeal_from(
+                self._get_tail_by_regex("Appeal From")
+            ),
             "fee_status": self._get_tail_by_regex("Fee Status"),
             "date_filed": self._get_tail_by_regex("Docketed", True),
             "date_terminated": self._get_tail_by_regex("Termed", True),
@@ -640,7 +642,9 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         case_info = []
         for node in bold_nodes:
             tail = str(node.tail).strip()
-            if not any([tail == "None", tail == "null", tail == "-"]):
+            if not any(
+                [tail == "None", tail == "null", tail == "-", tail == ""]
+            ):
                 case_info.append(node.tail)
         return ", ".join(case_info)
 
@@ -651,6 +655,14 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 '//*[re:match(text(), "Originating Court Information")]/ancestor::table[1]'  # noqa
             )[0]
         except IndexError:
+            # No originating court info.
+            return {}
+
+        td_is_none = ogc_table.re_xpath(
+            './/*[re:match(text(), "None")]/ancestor::td[1]'
+        )
+        originating_court_rows = ogc_table.xpath(".//tr")
+        if len(originating_court_rows) == 2 and td_is_none:
             # No originating court info.
             return {}
 
@@ -744,6 +756,12 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             if cast_to_date:
                 return convert_date_string(tail)
             return tail
+
+    def _get_appeal_from(self, appeal_from: str) -> str:
+        """Get the appeal from information"""
+        if appeal_from == "null":
+            return ""
+        return appeal_from
 
 
 def _main():

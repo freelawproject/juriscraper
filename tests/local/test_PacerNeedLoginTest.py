@@ -31,9 +31,9 @@ class PacerNeedLoginTest(unittest.TestCase):
             json_path = os.path.join(dirname, f"{filename_sans_ext}.json")
 
             with open(path, "rb") as f:
-                text = f.read()
+                content = f.read()
 
-            result = check_if_logged_in_page(text)
+            result = check_if_logged_in_page(content)
 
             if not os.path.exists(json_path):
                 with open(json_path, "w") as f:

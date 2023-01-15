@@ -1,20 +1,26 @@
 {
-  "case_name": "Sanchez v. Palacios",
+  "appellate": false,
+  "contains_attachments": false,
   "court_id": "txnd",
-  "date_filed": "2021-06-10",
-  "docket_entries": [
+  "dockets": [
     {
+      "case_name": "Sanchez v. Palacios",
       "date_filed": "2021-06-10",
-      "description": "MEDIATION ORDER. The court appoints Dennis A Clifford as mediator.",
-      "document_number": "20",
-      "document_url": "https://ecf.txnd.uscourts.gov/doc1/177114286449?caseid=343024&de_seq_num=47&magic_num=79356691",
-      "pacer_case_id": "343024",
-      "pacer_doc_id": "177014286449",
-      "pacer_magic_num": "79356691",
-      "pacer_seq_no": "47"
+      "docket_entries": [
+        {
+          "date_filed": "2021-06-10",
+          "description": "MEDIATION ORDER. The court appoints Dennis A Clifford as mediator. Alternative Dispute Resolution Summary form provided electronically or by US Mail as appropriate. Deadline for mediation is on or before 2/11/2022. (Ordered by Judge Jane J. Boyle on 6/10/2021) (svc)",
+          "document_number": "20",
+          "document_url": "https://ecf.txnd.uscourts.gov/doc1/177114286449?caseid=343024&de_seq_num=47&magic_num=79356691",
+          "pacer_case_id": "343024",
+          "pacer_doc_id": "177014286449",
+          "pacer_magic_num": "79356691",
+          "pacer_seq_no": "47"
+        }
+      ],
+      "docket_number": "3:21-cv-00071"
     }
   ],
-  "docket_number": "3:21-cv-00071",
   "email_recipients": [
     {
       "email_addresses": [

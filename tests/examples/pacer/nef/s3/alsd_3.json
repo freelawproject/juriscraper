@@ -1,20 +1,26 @@
 {
-  "case_name": "Autrey v. Harrigan Lumber Co., Inc.",
+  "appellate": false,
+  "contains_attachments": false,
   "court_id": "alsd",
-  "date_filed": "2021-08-11",
-  "docket_entries": [
+  "dockets": [
     {
+      "case_name": "Autrey v. Harrigan Lumber Co., Inc.",
       "date_filed": "2021-08-11",
-      "description": "NOTICE of Settlement",
-      "document_number": "24",
-      "document_url": "https://ecf.alsd.uscourts.gov/doc1/02113212100?caseid=67619&de_seq_num=99&magic_num=95052604",
-      "pacer_case_id": "67619",
-      "pacer_doc_id": "02103212100",
-      "pacer_magic_num": "95052604",
-      "pacer_seq_no": "99"
+      "docket_entries": [
+        {
+          "date_filed": "2021-08-11",
+          "description": "NOTICE of Settlement , Joint by Ethan Autrey (Lowery, Courtney)",
+          "document_number": "24",
+          "document_url": "https://ecf.alsd.uscourts.gov/doc1/02113212100?caseid=67619&de_seq_num=99&magic_num=95052604",
+          "pacer_case_id": "67619",
+          "pacer_doc_id": "02103212100",
+          "pacer_magic_num": "95052604",
+          "pacer_seq_no": "99"
+        }
+      ],
+      "docket_number": "1:20-cv-00572"
     }
   ],
-  "docket_number": "1:20-cv-00572",
   "email_recipients": [
     {
       "email_addresses": [

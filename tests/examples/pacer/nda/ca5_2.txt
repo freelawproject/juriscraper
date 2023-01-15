@@ -1,0 +1,76 @@
+Return-Path: <cmecf_caseprocessing@ca5.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id p7f0gmbed5lt5l99njrd6nk4i1ossfft7hsenl81
+ for recipient@example.com;
+ Mon, 26 Sep 2022 23:04:52 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ca5.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=cmecf_caseprocessing@ca5.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ca5.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=cmecf_caseprocessing@ca5.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=ca5.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFGdURXR0lrMFVjb0ZCWDRidlF6djdNYmo1dkpLbzRNRlU1WjNROFNINFRPNGc0Y0JPM3BwWC9tdU1IOThGMXFZK0N5aFZkWERIQ3cyamVOQXFQTDRTMWk5TlBNdmQzYkJ6RWErQUVjVkFXUzNYcGYrYUp1N3k4V1ByVWNsbU9BZkg2OGxuNDRuaWhLR0hDTy9hOSt1cTQ4RlRJaDU0T05hMXEwSWZnR1R0cUtPUkRyNy9ONFN0Z2swa3dZeU1JTkFSMzlnQnpmaVlubW8wUVNoT0VrTVdCeTB0Q29YQ01CZzI0SEZldkM0RnRjRXRGaXFVckpsSUlWa0RjU0c1VnliL3Z1Ymh6ZmJQeldCVWFIWmFDMFFURlNGU3RKSGxPcGNvOFFEM2hHYjRmV1hUQ003amc3UVY0dGE3clpMMHNBblU9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=FOLXSrIMrB4emA56+eDFTjASYQ24XZLsCE+a1QHSsHzgegN7ajau2l4ZYtbLwTwq7qZ+1m/v7f/HwTymPpjFst5IjTxBM4xZKsrPiPCtFwRtFVqawOVehXq8Ez7Lny4PCT1+vtZDDHm6rDYlLp1w4x3gPscTddVGKO7uIZTuPvM=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1664233493; v=1; bh=8vgnQr1XSX/wSPmYI6Aqw5M+9qV+S2ssj6CjRMxHmV4=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.85
+Received: from ca5db.ca5.gtwy.dcn ([156.119.56.85])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 26 Sep 2022 19:04:51 -0400
+Received: from ca5db.ca5.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by ca5db.ca5.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 28QN4kXb040821
+	for <recipient@example.com>; Mon, 26 Sep 2022 18:04:46 -0500
+Date: Mon, 26 Sep 2022 18:04:46 -0500 (CDT)
+From: cmecf_caseprocessing@ca5.uscourts.gov
+To: recipient@example.com
+Message-ID: <897970277.3282.1664233486595@ca5db.ca5.gtwy.dcn>
+Subject: 22-30311 Kenai Ironclad v. CP Marine Services "Motion Filed on
+ Behalf of Party leave to file document"
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><TITLE>22-30311 Kenai Ironclad v. CP Marine Services "Motion Filed on Behalf of Party leave to file document"</TITLE>
+</HEAD>
+<BODY BGCOLOR="#DAF4F0" TEXT="#000000" LINK="#0000ff" VLINK="#551a8b" ALINK="#ff0000">
+<P><STRONG>
+***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer.  PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing.</STRONG><BR>
+</STRONG><BR>
+<P><STRONG>
+PLEASE DO NOT REPLY TO THIS EMAIL AS IT ORIGINATES FROM AN UNATTENDED EMAIL ADDRESS.<P><CENTER><STRONG>United States Court of Appeals for the Fifth Circuit</STRONG></CENTER>
+<P><STRONG>Notice of Docket Activity</STRONG><BR>
+<BR>
+The following transaction was entered on 09/26/2022 at 6:04:44 PM Central Daylight Time and filed on 09/26/2022
+<TABLE BORDER=0 CELLSPACING=3>
+<TR><TD><STRONG>Case Name:</STRONG></TD>
+<TD colspan='2'>Kenai Ironclad v. CP Marine Services<BR>
+</TD></TR>
+<TR><TD><STRONG>Case Number:&nbsp;&nbsp;</STRONG></TD>
+<TD><A HREF="https://ecf.ca5.uscourts.gov/n/beam/servlet/TransportRoom?servlet=DocketReportFilter.jsp&caseId=208282">22-30311</A></TD></TR>
+<TR><TD><STRONG>Document(s):</STRONG></TD>
+<TD><A HREF="https://ecf.ca5.uscourts.gov/docs1/00506485029?uid=c0adda9683f9e753">Document(s)</A></TD></TR>
+</TABLE><BR>
+<P><STRONG>Docket Text:</STRONG><BR>
+OPPOSED MOTION filed by Appellants CP Marine Services, L.L.C. and Ten Mile Exchange, L.L.C. for leave to file document [9947188-2]. Date of service: 09/26/2022 via email - Attorney for Appellees: Bohman, Morse; Attorney for Appellant: Rufty [22-30311] (Alfred Jackson Rufty III)<BR>
+<BR>
+<STRONG>Notice will be electronically mailed to:</STRONG><BR><BR>
+Recipient User Test 1: testing1@gexample.com, testing1_1@gexample.com<BR>
+Recipient User Test 2: testing2@gexample.com, testing2_1@gexample.com<BR>
+Recipient User Test 3: testing3@gexample.com, testing3_1@gexample.com<BR>
+<BR><BR>
+The following document(s) are associated with this transaction:<BR>
+<STRONG>Document Description: </STRONG>Motion Filed on Behalf of Party<BR>
+<STRONG>Original Filename: </STRONG>CP and Ten Mile - Motion Leave to Allow Filing of Co(100678103.1).pdf<BR>
+<STRONG>Electronic Document Stamp:</STRONG><BR>
+[STAMP acecfStamp_ID=1105048708 [Date=09/26/2022] [FileNumber=9947188-0] [07ba6703be33cbc1287f2c5ca78b581b65096deb47a150673e5606e6d60a11645faf7c5fea4af38fc69f3b9e8f04b721802c9237d495efdffd10519a995e33f0]]<BR>
+<BR><STRONG>Document Description: </STRONG>Describe Attachment<BR>
+<STRONG>Original Filename: </STRONG>Original Appellant Brief of CP Marine and Ten (ajr final).pdf<BR>
+<STRONG>Electronic Document Stamp:</STRONG><BR>
+[STAMP acecfStamp_ID=1105048708 [Date=09/26/2022] [FileNumber=9947188-1] [45120dde5a216f7b0c3336618b55efc769bc55a6ed8b56b3a62da97df114ee7f4db74766ed1d5834434ec96f8f4f9e474f8344cc4ee94f48db838a536e482a66]]<BR>
+<BR><STRONG>Document Description: </STRONG>Describe Attachment<BR>
+<STRONG>Original Filename: </STRONG>Record Excerpts.pdf<BR>
+<STRONG>Electronic Document Stamp:</STRONG><BR>
+[STAMP acecfStamp_ID=1105048708 [Date=09/26/2022] [FileNumber=9947188-2] [3c26132c34b69605899294d06e927505e78acb26e8be39df529130c4afe0cffdb775ba0afb04139098e7cedf7d2cee341e6f96d233e727c7fc50ed52cc9d602b]]<BR>
+<BR>
+</BODY></HTML>

@@ -1,0 +1,47 @@
+{
+  "appellate": true,
+  "contains_attachments": false,
+  "court_id": "ca5",
+  "dockets": [
+    {
+      "case_name": "Kenai Ironclad v. CP Marine Services",
+      "date_filed": "2022-09-26",
+      "docket_entries": [
+        {
+          "date_filed": "2022-09-26",
+          "description": "OPPOSED MOTION filed by Appellants CP Marine Services, L.L.C. and Ten Mile Exchange, L.L.C. for leave to file document [9947188-2]. Date of service: 09/26/2022 via email - Attorney for Appellees: Bohman, Morse Attorney for Appellant: Rufty [22-30311] (Alfred Jackson Rufty III)",
+          "document_number": null,
+          "document_url": "https://ecf.ca5.uscourts.gov/docs1/00506485029?uid=c0adda9683f9e753",
+          "pacer_case_id": "208282",
+          "pacer_doc_id": "00506485029",
+          "pacer_magic_num": "c0adda9683f9e753",
+          "pacer_seq_no": null
+        }
+      ],
+      "docket_number": "22-30311"
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "testing1@gexample.com",
+        "testing1_1@gexample.com"
+      ],
+      "name": "Recipient User Test 1:"
+    },
+    {
+      "email_addresses": [
+        "testing2@gexample.com",
+        "testing2_1@gexample.com"
+      ],
+      "name": "Recipient User Test 2:"
+    },
+    {
+      "email_addresses": [
+        "testing3@gexample.com",
+        "testing3_1@gexample.com"
+      ],
+      "name": "Recipient User Test 3:"
+    }
+  ]
+}
