@@ -91,6 +91,12 @@ class ScraperExtractFromText(unittest.TestCase):
                 {"Docket": {"docket_number": "154867/2022"}},
             ),
         ],
+        "juriscraper.opinions.united_states.state.sd": [
+            (
+                """#30018-a-MES\n2023 S.D. 4""",
+                {"Docket": {"docket_number": "#30018-a-MES"}},
+            ),
+        ],
     }
 
     def test_extract_from_text(self):
