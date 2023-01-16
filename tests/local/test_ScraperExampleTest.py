@@ -204,3 +204,8 @@ class ScraperExampleTest(unittest.TestCase):
 
     def test_scrape_oral_arg_example_files(self):
         self.run_tests_on_module_str("juriscraper.oral_args")
+
+    def test_scrape_opinion_territories_example_files(self):
+        self.run_tests_on_module_str(
+            "juriscraper.opinions.united_states.territories"
+        )
