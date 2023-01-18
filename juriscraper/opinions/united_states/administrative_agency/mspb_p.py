@@ -6,6 +6,7 @@ Reviewer: mlr
 Date created: 1 Sep 2014
 Type: Precedential
 """
+import json
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -19,6 +20,10 @@ class Site(OpinionSiteLinear):
         self.base = "https://www.mspb.gov/decisions/precedential"
 
     def _process_html(self):
+        if self.test_mode_enabled():
+            print(self.url, "--------")
+            self.html = json.load(open(self.url))
+            print(self.html["data"][0])
         for row in self.html["data"]:
             url = row["FILE_NAME"]
             name = f"{row['APL_FIRST_NAME']} {row['APL_LAST_NAME']} v. {row['AGENCY']}"
