@@ -21,9 +21,7 @@ class Site(OpinionSiteLinear):
 
     def _process_html(self):
         if self.test_mode_enabled():
-            print(self.url, "--------")
             self.html = json.load(open(self.url))
-            print(self.html["data"][0])
         for row in self.html["data"]:
             url = row["FILE_NAME"]
             name = f"{row['APL_FIRST_NAME']} {row['APL_LAST_NAME']} v. {row['AGENCY']}"
