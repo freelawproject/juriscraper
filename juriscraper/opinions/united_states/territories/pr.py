@@ -2,8 +2,8 @@
 Author: William Palin
 Date created: 2023-01-16
 Scraper for the Decisiones del Tribunal Supremo
-CourtID: ariz
-Court Short Name: PR.
+CourtID: pr
+Court Short Name: Puerto Rico
 """
 
 from datetime import date, datetime
