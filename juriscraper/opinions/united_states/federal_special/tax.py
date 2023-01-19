@@ -14,7 +14,8 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "https://public-api-blue.dawson.ustaxcourt.gov/public-api/opinion-search"
+        self.base = "https://public-api-green.dawson.ustaxcourt.gov/public-api"
+        self.url = f"{self.base}/opinion-search"
         self.court_id = self.__module__
         self.td = date.today()
         today = self.td.strftime("%m/%d/%Y")
@@ -29,7 +30,6 @@ class Site(OpinionSiteLinear):
         }
 
     def _download(self, request_dict={}):
-        print(self.url)
         if self.test_mode_enabled():
             self.json = json.load(open(self.url))
         else:
@@ -73,7 +73,7 @@ class Site(OpinionSiteLinear):
         param docketEntryId: The docket entry id
         return: The URL to the PDF
         """
-        self.url = f"https://public-api-blue.dawson.ustaxcourt.gov/public-api/{docket_number}/{docketEntryId}/public-document-download-url"
+        self.url = f"{self.base}/{docket_number}/{docketEntryId}/public-document-download-url"
         if self.test_mode_enabled():
             # Don't fetch urls when running tests.  Because it requires
             # a second api request.

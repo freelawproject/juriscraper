@@ -14,13 +14,6 @@ class Site(mspb_p.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.type = "Nonprecedential"
-        self.display = 60414
-        self.column_diff = -1
-        self.set_url()
-
-    def _get_precedential_statuses(self):
-        return ["Unpublished"] * len(self.case_dates)
-
-    def _get_citations(self):
-        return None
+        self.status = "Unpublished"
+        self.url = "https://www.mspb.gov/decisions/nonprecedential/NonPrecedentialDecisions_Manifest_Table.json"
+        self.base = "https://www.mspb.gov/decisions/nonprecedential/"

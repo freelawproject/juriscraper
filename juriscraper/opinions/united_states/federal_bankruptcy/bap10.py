@@ -10,71 +10,46 @@ History:
                 into the _get_case_dates function.
 """
 
-from datetime import datetime
+from datetime import date, timedelta
+from urllib.parse import urlencode
 
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "http://www.bap10.uscourts.gov/opinions/new/opinion.txt"
+        self.url = "https://www.bap10.uscourts.gov/opinion/search/results"
         self.court_id = self.__module__
-        self.my_case_names = []
-        self.my_download_urls = []
-        self.my_docket_numbers = []
+        today = date.today()
+        params = urlencode(
+            {
+                "keywords": "",
+                "parties": "",
+                "judges": "",
+                "field_opinion_date_value[min][date]": (
+                    today - timedelta(30)
+                ).strftime("%m/%d/%Y"),
+                "field_opinion_date_value[max][date]": today.strftime(
+                    "%m/%d/%Y"
+                ),
+                "exclude": "",
+            }
+        )
+        self.url = (
+            f"https://www.bap10.uscourts.gov/opinion/search/results?{params}"
+        )
 
-    def _clean_text(self, text):
-        """This page is a txt file, so here we convert it to something that
-        can be easily ingested by lxml.
-
-        Lines like:
-          13-94.pdf|13|94|08/25/2014|Steve Christensen|Raymond Madsen|United States Bankruptcy Court for the District of Utah
-        """
-        # Nuke duplicates
-        lines = {line for line in text.split("\n") if line}
-
-        # Build an XML tree.
-        xml_text = "<rows>\n"
-        for line in lines:
-            values = line.split("|")
-            xml_text += "  <row>\n"
-            for value in values:
-                xml_text += f"    <value>{value}</value>\n"
-            xml_text += "  </row>\n"
-        xml_text += "</rows>\n"
-        return xml_text
-
-    def _get_case_dates(self):
-        path = "//row/value[4]/text()"
-        return [
-            datetime.strptime(date_string, "%m/%d/%Y").date()
-            for date_string in self.html.xpath(path)
-        ]
-
-    def _get_case_names(self):
-        plaintiffs = self.html.xpath("//row/value[6]/text()")
-        defendants = self.html.xpath("//row/value[7]/text()")
-        case_names = []
-        for p, d in zip(plaintiffs, defendants):
-            case_names.append(f"{p} v. {d}")
-        return case_names
-
-    def _get_download_urls(self):
-        years = self.html.xpath("//row/value[2]/text()")
-        file_names = self.html.xpath("//row/value[1]/text()")
-        urls = []
-        for y, f_n in zip(years, file_names):
-            urls.append(f"http://www.bap10.uscourts.gov/opinions/{y}/{f_n}")
-        return urls
-
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_dates)
-
-    def _get_docket_numbers(self):
-        years = self.html.xpath("//row/value[2]/text()")
-        numbers = self.html.xpath("//row/value[3]/text()")
-        docket_numbers = []
-        for y, n in zip(years, numbers):
-            docket_numbers.append(f"{y}-{n}")
-        return docket_numbers
+    def _process_html(self):
+        for row in self.html.xpath(".//tr"):
+            if not row.xpath(".//td"):
+                continue
+            self.cases.append(
+                {
+                    "docket": row.xpath(".//td")[0].text_content().strip(),
+                    "name": row.xpath(".//td")[1].text_content().strip(),
+                    "date": row.xpath(".//td")[2].text_content().strip(),
+                    "url": row.xpath(".//a/@href")[0],
+                    "status": "Published",
+                }
+            )
