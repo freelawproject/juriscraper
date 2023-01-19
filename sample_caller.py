@@ -87,6 +87,12 @@ def scrape_court(site, binaries=False):
                 v_print(1, f"    {k}: {v}")
 
     v_print(3, f"\n{site.court_id}: Successfully crawled {len(site)} items.")
+
+    with open("/Users/Palin/Code/juriscraper/xutput.txt", "a") as f:
+        if len(site) == 0:
+            f.writelines(
+                f"{site.court_id}: Unsuccessfully crawled {len(site)} items.\n"
+            )
     return {"count": len(site), "exceptions": exceptions}
 
 
@@ -250,6 +256,13 @@ def main():
                 v_print(3, "*************!! ACTION NEEDED !!***************")
                 v_print(3, traceback.format_exc())
                 i += 1
+                with open(
+                    "/Users/Palin/Code/juriscraper/xutput.txt", "a"
+                ) as f:
+                    f.writelines(
+                        f"{site.court_id}: Unsuccessfully crawled parsed \n"
+                    )
+
                 continue
 
             last_court_in_list = i == (num_courts - 1)
