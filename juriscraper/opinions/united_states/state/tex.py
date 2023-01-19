@@ -14,298 +14,125 @@
 #  - 2014-12-09: Updated by mlr to make the date range wider and more thorough.
 #  - 2015-08-19: Updated by Andrei Chelaru to add backwards scraping support.
 #  - 2015-08-27: Updated by Andrei Chelaru to add explicit waits
+#  - 2021-12-28: Updated by flooie to remove selenium.
 
-
-from datetime import date, datetime, timedelta
-
-from dateutil.rrule import WEEKLY, rrule
-from lxml import html
-from selenium.webdriver import ActionChains
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
+from datetime import date, timedelta
+from typing import Optional
 
 from juriscraper.AbstractSite import logger
 from juriscraper.DeferringList import DeferringList
 from juriscraper.lib.string_utils import titlecase
-from juriscraper.OpinionSiteWebDriven import OpinionSiteWebDriven
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteWebDriven):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.case_date = date.today()
-        self.backwards_days = 7
-        self.records_nr = 0
-        self.courts = {
-            "sc": 0,
-            "ccrimapp": 1,
-            "capp_1": 2,
-            "capp_2": 3,
-            "capp_3": 4,
-            "capp_4": 5,
-            "capp_5": 6,
-            "capp_6": 7,
-            "capp_7": 8,
-            "capp_8": 9,
-            "capp_9": 10,
-            "capp_10": 11,
-            "capp_11": 12,
-            "capp_12": 13,
-            "capp_13": 14,
-            "capp_14": 15,
-        }
-        self.court_name = "sc"
-        self.url = (
-            "http://www.search.txcourts.gov/CaseSearch.aspx?coa=cossup&d=1"
+        self.checkbox = 0
+        self.status = "Published"
+        self.url = "https://search.txcourts.gov/CaseSearch.aspx?coa=cossup"
+
+    def _set_parameters(
+        self,
+        view_state: str,
+    ) -> None:
+        """Set ASPX post parameters
+
+        This method - chooses the court and date parameters.
+        ctl00$ContentPlaceHolder1$chkListCourts$[KEY] is what selects a ct
+
+         0: Supreme
+         1: Court of Criminal Appeals
+         2: 1st District Court of Appeals
+         3: 2nd District Court of Appeals
+         ...etc
+
+        :param view_state: view state of the page
+        :return: None
+        """
+        today = date.today()
+        last_month = today - timedelta(days=30)
+        last_month_str = last_month.strftime("%m/%d/%Y")
+        today_str = today.strftime("%m/%d/%Y")
+
+        date_param = (
+            '{"enabled":true,"emptyMessage":"",'
+            f'"validationText":"{last_month}-00-00-00",'
+            f'"valueAsString":"{last_month}-00-00-00",'
+            '"minDateStr":"1900-01-01-00-00-00",'
+            '"maxDateStr":"2099-12-31-00-00-00",'
+            f'"lastSetTextBoxValue":"{last_month_str}"'
+            "}"
         )
-        self.back_scrape_iterable = [
-            i.date()
-            for i in rrule(
-                WEEKLY,  # YEARLY will result in timeouts
-                dtstart=date(2015, 1, 1),
-                until=date(2015, 12, 31),
+
+        # The parameters required to filter in Texas
+        self.parameters = {
+            "ctl00$ContentPlaceHolder1$SearchType": "rbSearchByDocument",
+            "ctl00$ContentPlaceHolder1$dtDocumentFrom": str(last_month),
+            "ctl00$ContentPlaceHolder1$dtDocumentFrom$dateInput": last_month_str,
+            "ctl00_ContentPlaceHolder1_dtDocumentFrom_dateInput_ClientState": date_param,
+            "ctl00$ContentPlaceHolder1$dtDocumentTo": str(today),
+            "ctl00$ContentPlaceHolder1$dtDocumentTo$dateInput": today_str,
+            "ctl00$ContentPlaceHolder1$chkListDocTypes$0": "on",
+            "ctl00$ContentPlaceHolder1$btnSearchText": "Search",
+            "__VIEWSTATE": view_state,
+            f"ctl00$ContentPlaceHolder1$chkListCourts${self.checkbox}": "on",
+        }
+
+    def _process_html(self) -> None:
+        if not self.test_mode_enabled():
+            # Make our post request to get our data
+            self.method = "POST"
+            view_state = self.html.xpath("//input[@id='__VIEWSTATE']")[0].get(
+                "value"
             )
-        ]
+            self._set_parameters(view_state)
+            self.html = super()._download()
 
-        self.uses_selenium = True
-
-    def _download(self, request_dict={}):
-        self.request_dict = request_dict
-        if self.test_mode_enabled():
-            html_tree_list = [super()._download(request_dict=request_dict)]
-            self.records_nr = len(
-                html_tree_list[0].xpath(
-                    "//tr[@class='rgRow' or @class='rgAltRow']"
-                )
-            )
-            return html_tree_list
-        else:
-            logger.info("Running Selenium browser...")
-            self.initiate_webdriven_session()
-            if self.court_name == "sc":
-                # Supreme Court is checked by default, so we don't want to
-                # check it again.
-                pass
-            else:
-                search_supreme_court = self.find_element_by_xpath(
-                    "//*[@id='ctl00_ContentPlaceHolder1_chkListCourts_{court_nr}']".format(
-                        court_nr=self.courts["sc"]
-                    )
-                )
-                if search_supreme_court.is_selected():
-                    ActionChains(self.webdriver).click(
-                        search_supreme_court
-                    ).perform()
-
-                search_court_type = self.find_element_by_id(
-                    "ctl00_ContentPlaceHolder1_chkListCourts_{court_nr}".format(
-                        court_nr=self.courts[self.court_name]
-                    )
-                )
-                ActionChains(self.webdriver).click(search_court_type).perform()
-
-            search_opinions = self.find_element_by_id(
-                "ctl00_ContentPlaceHolder1_chkListDocTypes_0"
-            )
-            search_opinions.click()
-
-            search_orders = self.find_element_by_id(
-                "ctl00_ContentPlaceHolder1_chkListDocTypes_1"
-            )
-            search_orders.click()
-
-            start_date = self.find_element_by_id(
-                "ctl00_ContentPlaceHolder1_dtDocumentFrom_dateInput"
-            )
-            start_date.send_keys(
-                (
-                    self.case_date - timedelta(days=self.backwards_days)
-                ).strftime("%m/%d/%Y")
+        for row in self.html.xpath("//table[@class='rgMasterTable']/tbody/tr"):
+            # In texas we also have to ping the case page to get the name
+            # this is unfortunately part of the process.
+            self.cases.append(
+                {
+                    "date": row.xpath(f".//td[2]")[0].text_content(),
+                    "docket": row.xpath(f".//td[5]")[0].text_content().strip(),
+                    "url": row.xpath(".//a")[1].get("href"),
+                }
             )
 
-            end_date = self.find_element_by_id(
-                "ctl00_ContentPlaceHolder1_dtDocumentTo_dateInput"
-            )
-            end_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
-            # self.take_screenshot()
+    def _get_case_names(self) -> DeferringList:
+        """Get case names using a deferring list."""
+        seeds = []
+        for row in self.html.xpath("//table[@class='rgMasterTable']/tbody/tr"):
+            # In texas we also have to ping the case page to get the name
+            # this is unfortunately part of the process.
+            seeds.append(row.xpath(".//a")[2].get("href"))
 
-            submit = self.find_element_by_id(
-                "ctl00_ContentPlaceHolder1_btnSearchText"
-            )
-            submit.click()
-
-            WebDriverWait(self.webdriver, 30).until(
-                EC.presence_of_element_located(
-                    (By.ID, "ctl00_ContentPlaceHolder1_grdDocuments")
-                )
-            )
-            self.status = 200
-            # self.take_screenshot()
-
-            nr_of_pages = self.find_element_by_xpath(
-                '//thead//*[contains(concat(" ", normalize-space(@class), " "), " rgInfoPart ")]/strong[2]'
-            )
-            records_nr = self.find_element_by_xpath(
-                '//thead//*[contains(concat(" ", normalize-space(@class), " "), " rgInfoPart ")]/strong[1]'
-            )
-            html_pages = []
-            if records_nr:
-                self.records_nr = int(records_nr.text)
-            if nr_of_pages:
-                if nr_of_pages.text == "1":
-                    text = self.webdriver.page_source
-                    self.webdriver.quit()
-
-                    html_tree = html.fromstring(text)
-                    html_tree.make_links_absolute(self.url)
-
-                    remove_anchors = lambda url: url.split("#")[0]
-                    html_tree.rewrite_links(remove_anchors)
-                    html_pages.append(html_tree)
-                else:
-                    logger.info(
-                        "Paginating through %s pages of results."
-                        % nr_of_pages.text
-                    )
-                    logger.info("  Getting page 1")
-                    text = self.webdriver.page_source
-
-                    html_tree = html.fromstring(text)
-                    html_tree.make_links_absolute(self.url)
-
-                    remove_anchors = lambda url: url.split("#")[0]
-                    html_tree.rewrite_links(remove_anchors)
-                    html_pages.append(html_tree)
-
-                    for i in range(int(nr_of_pages.text) - 1):
-                        logger.info(f"  Getting page {i + 2}")
-                        next_page = self.find_element_by_class_name(
-                            "rgPageNext"
-                        )
-                        next_page.click()
-                        self.webdriver.implicitly_wait(5)
-
-                        text = self.webdriver.page_source
-
-                        html_tree = html.fromstring(text)
-                        html_tree.make_links_absolute(self.url)
-
-                        remove_anchors = lambda url: url.split("#")[0]
-                        html_tree.rewrite_links(remove_anchors)
-                        html_pages.append(html_tree)
-                    self.webdriver.quit()
-            return html_pages
-
-    def _get_case_names(self):
-        def fetcher(url):
+        def get_name(link: str) -> Optional[str]:
+            """Abstract out the case name from the case page."""
             if self.test_mode_enabled():
                 return "No case names fetched during tests."
-            else:
-                html_tree = self._get_html_tree_by_url(url, self.request_dict)
-                plaintiff = ""
-                defendant = ""
-                try:
-                    plaintiff = html_tree.xpath(
-                        "//text()[contains(., 'Style:')]/ancestor::div[@class='span2']/following-sibling::div/text()"
-                    )[0]
-                    defendant = html_tree.xpath(
-                        "//text()[contains(., 'v.:')]/ancestor::div[@class='span2']/following-sibling::div/text()"
-                    )[0]
-                except IndexError:
-                    logger.warning(f"No title or defendant found for {url}")
+            html = self._get_html_tree_by_url(link)
+            try:
+                plaintiff = html.xpath(
+                    '//label[contains(text(), "Style:")]/parent::div/following-sibling::div/text()'
+                )[0].strip()
+                defendant = html.xpath(
+                    '//label[contains(text(), "v.:")]/parent::div/following-sibling::div/text()'
+                )[0].strip()
 
-                if defendant.strip():
-                    # If there's a defendant
+                # In many cases the court leaves off the plaintiff (The State of Texas).  But
+                # in some of these cases the appellant is ex parte.  So we need to
+                # add the state of texas in some cases but not others.
+                if defendant:
                     return titlecase(f"{plaintiff} v. {defendant}")
+                elif "WR-" not in link:
+                    return titlecase(f"{plaintiff} v. The State of Texas")
                 else:
-                    return titlecase(plaintiff)
+                    return titlecase(f"{plaintiff}")
+            except IndexError:
+                logger.warning(f"No title or defendant found for {self.url}")
+                return None
 
-        seed_urls = []
-        for html_tree in self.html:
-            page_records_count = self._get_opinion_count(html_tree)
-            for record in range(page_records_count):
-                path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[5]//@href".format(
-                    n=record
-                )
-                seed_urls.append(html_tree.xpath(path)[0])
-        if seed_urls:
-            return DeferringList(seed=seed_urls, fetcher=fetcher)
-        else:
-            return []
-
-    def _get_case_dates(self):
-        for html_tree in self.html:
-            page_records_count = self._get_opinion_count(html_tree)
-            for record in range(page_records_count):
-                path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[2]/text()".format(
-                    n=record
-                )
-                yield datetime.strptime(html_tree.xpath(path)[0], "%m/%d/%Y")
-
-    def _get_precedential_statuses(self):
-        return ["Published"] * self.records_nr
-
-    def _get_download_urls(self):
-        for html_tree in self.html:
-            page_records_count = self._get_opinion_count(html_tree)
-            for record in range(page_records_count):
-                path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[4]//@href".format(
-                    n=record
-                )
-                yield html_tree.xpath(path)[0]
-
-    def _get_docket_numbers(self):
-        for html_tree in self.html:
-            page_records_count = self._get_opinion_count(html_tree)
-            for record in range(page_records_count):
-                path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[5]//text()[contains(., '-')]".format(
-                    n=record
-                )
-                yield html_tree.xpath(path)[0]
-
-    @staticmethod
-    def _get_opinion_count(html_tree):
-        return int(
-            html_tree.xpath(
-                "count(id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00')"
-                "//tr[contains(., 'Opinion') or contains(., 'Order')])"
-            )
-        )
-
-    def _download_backwards(self, d):
-        self.backwards_days = 7
-        self.case_date = d
-        logger.info(
-            "Running backscraper with date range: %s to %s"
-            % (
-                self.case_date - timedelta(days=self.backwards_days),
-                self.case_date,
-            )
-        )
-        self.html = self._download()
-        if self.html is not None:
-            # Setting status is important because it prevents the download
-            # function from being run a second time by the parse method.
-            self.status = 200
-
-    def _post_parse(self):
-        """This will remove the cases without a case name"""
-        to_be_removed = [
-            index
-            for index, case_name in enumerate(self.case_names)
-            if not case_name
-        ]
-
-        for attr in self._all_attrs:
-            item = getattr(self, attr)
-            if item is not None:
-                new_item = self.remove_elements(item, to_be_removed)
-                self.__setattr__(attr, new_item)
-
-    @staticmethod
-    def remove_elements(list_, indexes_to_be_removed):
-        return [
-            i for j, i in enumerate(list_) if j not in indexes_to_be_removed
-        ]
+        return DeferringList(seed=seeds, fetcher=get_name)
