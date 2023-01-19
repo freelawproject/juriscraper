@@ -8,54 +8,30 @@ History:
 
 from datetime import date
 
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.back_scrape_iterable = list(range(2013, 2002 - 1, -1))
         self.url_base = "http://afcca.law.af.mil/content/opinions_date_%d.html"
         self.url = self.url_base % date.today().year
-        self.table_cell_path = '//table[@width="800"][@align="center"]/tr[position() > 2]/td[%d]%s'
-
-        # HTTPS certificate is bad, but hopefully they'll fix it and we can remove the line below
         self.disable_certificate_verification()
 
-    def cell_path(self, cell, substring=""):
-        return self.table_cell_path % (cell, substring)
-
-    def _get_case_dates(self):
-        path = self.cell_path(5)
-        return [
-            convert_date_string(cell.text_content())
-            for cell in self.html.xpath(path)
-        ]
-
-    def _get_case_names(self):
-        path = self.cell_path(2, "/a")
-        return [cell.text_content() for cell in self.html.xpath(path)]
-
-    def _get_download_urls(self):
-        path = self.cell_path(2, "/a/@href")
-        return [href for href in self.html.xpath(path)]
-
-    def _get_docket_numbers(self):
-        path = self.cell_path(3)
-        return [f"ACM {cell.text_content()}" for cell in self.html.xpath(path)]
-
-    def _get_precedential_statuses(self):
-        statuses = []
-        path = self.cell_path(4)
-        for cell in self.html.xpath(path):
-            text = cell.text_content()
-            statuses.append(
-                "Published" if "Published" in text else "Unpublished"
+    def _process_html(self):
+        for row in self.html.xpath(".//img[contains(@src, 'pdf.gif')]/../..")[
+            :-1
+        ]:
+            status = row.xpath(".//td")[3].text_content()
+            if status != "Published":
+                status = "Unpublished"
+            self.cases.append(
+                {
+                    "url": row.xpath(".//td/a/@href")[0],
+                    "docket": row.xpath(".//td")[2].text_content(),
+                    "name": row.xpath(".//td/a")[0].text_content(),
+                    "date": row.xpath(".//td")[4].text_content(),
+                    "status": status,
+                }
             )
-        return statuses
-
-    def _download_backwards(self, year):
-        self.url = self.url_base % year
-        self.html = self._download()

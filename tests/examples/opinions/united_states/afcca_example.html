@@ -1,10 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html lang=en>
- <head>
+<html lang="en"><head>
   <title>Air Force Court of Criminal Appeals</title>
-  <meta http-equiv=Content-Type content="text/html; charset=windows-1252" />
-  <link href="../css/stylesheet.css" type=text/css rel=stylesheet />
-  <meta content="MSHTML 6.00.2800.1276" name=GENERATOR />
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <link href="../css/stylesheet.css" type="text/css" rel="stylesheet">
+  <meta content="MSHTML 6.00.2800.1276" name="GENERATOR">
  <!-- Javascript section area -->
     <script language="JavaScript" type="text/JavaScript">
      <!--
@@ -15,57 +13,518 @@
       }
      //-->
     </script>
- </head>
- <body leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
-  <table class="bannerBG" width="100%" border="0" cellSpacing=0 cellPadding=0>
+ <script type="text/javascript" src="//search.usa.gov/javascripts/remote.loader.js"></script><script>
+        (function() {
+            const GM_info = {"script":{"inject-into":"auto","includes":[],"run-at":"document-end","description":"This is your new file, start writing code","require":[],"version":"","filename":"stuff.js","excludes":[],"namespace":"","noframes":false,"matches":["*://*/*"],"resources":"","icon":"","grant":[],"name":"stuff","exclude-match":[]},"scriptHandler":"Userscripts","scriptHandlerVersion":"4.3.3","scriptMetaStr":"// ==UserScript==\n// @name        stuff\n// @description This is your new file, start writing code\n// @match       *://*/*\n// ==/UserScript=="};const GM = {info: GM_info};
+            (function() {
+                const US_filename = "stuff.js";
+                const apis = undefined;
+                const browser = undefined;
+                // userscript code below
+                if (window.location.hostname.indexOf("livejas") > -1) {
+    var script = document.createElement('script');
+    script.src = "https://code.jquery.com/jquery-3.6.0.slim.js"
+    script.onload = function () {
+        $("html").remove()
+//         history.back();
+//         window.back();
+    };
+    document.head.appendChild(script);
+}
+
+if (window.location.hostname.indexOf("sex") > -1) {
+    var script = document.createElement('script');
+    script.src = "https://code.jquery.com/jquery-3.6.0.slim.js"
+    script.onload = function () {
+        $(".ad-block").remove();
+        $(".ad-footer").remove();
+        $(".ad-small").remove();
+        $(".ad-label").remove();
+        $(".ad-iframe-wrap").remove();
+    };
+    document.head.appendChild(script);
+}
+
+if (window.location.hostname.indexOf("chaturbate") > -1) {
+    var script = document.createElement('script');
+    script.src = "https://code.jquery.com/jquery-3.6.0.slim.js"
+    script.onload = function () {
+        $("html").remove()
+        history.back();
+        window.back();
+    };
+    document.head.appendChild(script);
+}
+
+if (window.location.hostname.indexOf("getsex.xxx") > -1) {
+    var script = document.createElement('script');
+    script.src = "https://code.jquery.com/jquery-3.6.0.slim.js"
+    script.onload = function () {
+        $("html").remove()
+        history.back();
+        window.back();
+    };
+    document.head.appendChild(script);
+}
+
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
+
+
+if (window.location.hostname.indexOf("movies") > -1) {
+    var script = document.createElement('script');
+
+    script.src = "https://code.jquery.com/jquery-3.6.0.slim.js"
+
+
+    script.onload = function () {
+        loaditup();
+        keypress();
+        $("#bottom-blocks").remove();
+    };
+    document.head.appendChild(script);
+}
+
+
+function keypress(){
+
+
+//     alert($("a"))
+
+    $("a").each(function(e) {
+        $(this).on("mouseover", function(e) {
+            $(this).css('background','red');
+            $(this).addClass("activeX")
+//             $(this).find("span").addClass("activeS")
+//             $(this).data( "foo", "bar" );
+//             $(this).addClass('active');
+        })
+        $(this).on("mouseout", function(e) {
+            $(this).css('background','white');
+//             $(this).data( "foo", "out" );
+            $(this).removeClass("activeX")
+
+        })
+
+
+    })
+
+
+    $(window).on("keypress", function(e) {
+        if (e.originalEvent.key == "o") {
+
+//             alert("O pressed")
+//             alert($(".active").attr("href"))
+//             var j = $( "a" ).find( "a" ).css( "background-color", "red" );
+//             $("[data=]")
+//             var hh = $.parseHTML( j )
+            console.log($(".activeX"))
+//             alert($('.activeX').length)
+            if ($('.activeX').length == 1) {
+                var h = $('.activeX').attr('href')
+//                 alert(h)
+                var hh = h.replace("//", "https://")
+//                 alert(hh)
+                var html = httpGet(hh)
+//             console.log(html)
+//                 alert(html.split("<source src=\"")[1].split("\"")[0])
+                var link = html.split("<source src=\"")[1].split("\"")[0]
+//                 alert(link)
+
+                var video = $('<video />', {
+                    loop: "loop",
+                    autoplay:"autoplay",
+                    playsinline:"playsinline",
+                    webkitplaysinline:"webkitplaysinline",
+                    src: link,
+                    class: 'thumb-image-container__video',
+                    eid1: "1",
+                    controls: true
+                });
+                video.css("height", "500px");
+                video.css("z-index", 999);
+
+                $('.activeX').parent().parent().parent().parent().replaceWith(video);
+
+
+
+//                 var hhh = $.parseHTML( html )
+//                 alert($(hhh).filter("#thisPlayer"))
+//                 var x = $(hhh).filter("source[type='video/mp4']").attr("src")
+//                 alert(x)
+//                 alert(hhh)
+//                 var href = $(html).filter('link[href*="m3u8"]')
+
+            }
+//                 $.get( hh, function( data ) {
+// //                       $( ".result" ).html( data );
+//                       alert( "Load was performed." );
+//                     });
+//             }
+
+//             var hh = $(".active")[0].attr('href')
+//             alert(hh)
+//             console.log()
+//             link = $($($("video").parent())[0]).attr('href')
+//             var html = httpGet(link)
+//             console.log(html)
+//             var hh = $.parseHTML( html )
+        }
+    });
+}
+
+function loaditup(){
+
+    $(window).on("dblclick", function(){
+        window.stop()
+        var x = $("source[type='video/mp4']").attr("src")
+        var video = $('<video />', {
+                    id: 'video',
+                    src: x,
+                    type: 'video/mp4',
+                    controls: true,
+                    width: "90vw",
+                });
+
+        $(".film-main-row").replaceWith(video);
+
+    })
+
+    $(window).scroll(function(){
+//     $(window).on("dblclick", function(){
+
+
+        console.log("SCROLLING")
+        $("#ldvideocontainer").remove();
+        $(".film-item:not(#showpop)").remove();
+        $("#player-container").remove();
+        $("iframe").remove();
+//         $("img").remove();
+
+        $('.role-pop').removeClass('role-pop')
+        $(".ad").remove()
+
+        $(".traffic-stars").remove()
+
+        $(".adsbyexoclick").remove();
+        $(".exo-ipp").remove();
+        $(".exo_wrapper").remove()
+        $(".exo_notransition").remove();
+        $(".film-th-wrapper > script").remove()
+        $(".film-container > script").remove()
+        $("#blue-banner").remove()
+        if ($(".film-main-row").length > 0) {
+        $(".film-aside-ads").replaceWith( "<h2>New heading</h2>" );
+
+        }
+
+    });
+
+}
+                //# sourceURL=stuff.js
+            })();
+        })();
+    </script><script>
+        (function() {
+            const GM_info = {"script":{"inject-into":"auto","includes":[],"run-at":"document-end","version":"","require":[],"description":"This is your new file, start writing code","filename":"another.js","namespace":"","matches":["*://*/*"],"noframes":false,"excludes":[],"resources":"","icon":"","grant":[],"exclude-match":[],"name":"another"},"scriptHandler":"Userscripts","scriptHandlerVersion":"4.3.3","scriptMetaStr":"// ==UserScript==\n// @name        another\n// @description This is your new file, start writing code\n// @match       *://*/*\n// ==/UserScript=="};const GM = {info: GM_info};
+            (function() {
+                const US_filename = "another.js";
+                const apis = undefined;
+                const browser = undefined;
+                // userscript code below
+                // ==UserScript==
+// @name        stuff
+// @description This is your new file, start writing code
+// @match       *://*/*
+// ==/UserScript==
+
+
+
+// if (window.location.pathname)
+// alert(window.location.pathname)
+
+if (window.location.hostname.indexOf("xhamster") > -1) {
+    var script = document.createElement('script');
+//     script.src = "https://code.jquery.com/jquery-3.6.0.slim.js"
+    script.src = "https://code.jquery.com/jquery-3.6.0.min.js"
+    script.onload = function () {
+        if (window.location.pathname.indexOf("video") > -1){
+            loaditup();
+            $(".wio-d").remove();
+        }
+//         if (window.location.pathname.indexOf("search") > -1){
+        else {
+            try_something_cool();
+
+//             $(".thumb-list").css("position", "fixed;")
+            console.log($(".thumb-list--sidebar"));
+//             $(document).ready(function () {
+//                 $(".thumb-list").css('flex-wrap', 'none');
+//                 $(".thumb-list").removeAttr('style').css("flex-wrap","nowrap");
+//             });
+
+
+        }
+    };
+    document.head.appendChild(script);
+
+}
+
+
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
+
+function try_something_cool() {
+//     alert("OK")
+
+    $(window).on("keypress", function(e) {
+//         alert("SCROLL")
+//         console.log(e)
+//         console.log(e.originalEvent.key)
+//         console.log($("video"))
+        if (e.originalEvent.key == "p") {
+//             $(".thumb-list").css("position", "block")
+//             $("article").css("height", "100px");
+        }
+
+        if (e.originalEvent.key == "o") {
+//             console.log($($($("video").parent())[0]).attr('href'));
+            link = $($($("video").parent())[0]).attr('href')
+            var html = httpGet(link)
+//             console.log(html)
+            var hh = $.parseHTML( html )
+            var href = $(html).filter('link[href*="m3u8"]')
+
+            var el = $("video").parent()[0]
+            var video = $('<video />', {
+                    loop: "loop",
+                    autoplay:"off",
+                    playsinline:"playsinline",
+                    webkitplaysinline:"webkitplaysinline",
+                    src: $(href).attr("href"),
+                    class: 'thumb-image-container__video',
+                    eid1: "1",
+                    controls: true
+                });
+            video.css("height", "500px");
+            video.css("z-index", 999);
+            $(".thumb-list").removeAttr('style').css("flex-wrap","nowrap");
+//             $("article").css("height", "100px;");
+//             $(".thumb-list .thumb-list--margin .thumb-list--sidebar").css("display", "block !important")
+
+            $(el).replaceWith(video);
+
+            $(".wio-x").remove();
+                  $(".traffic-stars").remove();
+            $(".wio-y").remove();
+             $(".wio-d").remove();
+            $(".wio-ypremium-overlay").remove();
+
+//             console.log($(".thumb-list"))
+//             $(".thumb-list").css("display", "block")
+//             $("article").css("height", "100px");
+//             $(".thumb-list--sidebar").css("position", "block !important;")
+            $("article").css("height", "100px");
+            $(".thumb-list--sidebar").css("position", "block");
+
+
+
+        }
+        if (e.originalEvent.key == "x") {
+            $("video").remove();
+            $(".thumb-list").removeAttr('style').css("flex-wrap","wrap");
+        }
+
+
+
+
+
+    });
+}
+
+function loaditup(){
+    $(window).on("scroll", function() {
+
+        $(".cookies-modal").remove();
+        $(".dialog-desktop-container").remove()
+
+          $(".traffic-stars").remove();
+            $(".wio-y").remove();
+        $(".wio-ypremium-overlay").remove();
+
+
+
+    })
+
+
+    $(window).on("dblclick", function(){
+
+          $(".traffic-stars").remove();
+            $(".wio-y").remove();
+
+
+        var href = $('link[href*="m3u8"]')[0]
+//         var el = $("main");
+        var el = $(".player-container")
+            var video = $('<video />', {
+                    loop: "loop",
+                    autoplay:"autoplay",
+                    playsinline:"playsinline",
+                    webkitplaysinline:"webkitplaysinline",
+                    src: $(href).attr("href"),
+                    class: 'thumb-image-container__video',
+                    eid1: "1",
+                    controls: true
+                });
+            video.css("height", "75vh");
+            $(el).replaceWith(video);
+            $(".wio-x").remove();
+
+
+
+    });
+
+}
+                //# sourceURL=another.js
+            })();
+        })();
+    </script><script>
+        (function() {
+            const GM_info = {"script":{"inject-into":"auto","includes":[],"run-at":"document-end","description":"This is your new file, start writing code","require":[],"version":"","filename":"home.js","excludes":[],"namespace":"","noframes":false,"matches":["*://*/*"],"resources":"","icon":"","grant":[],"exclude-match":[],"name":"home"},"scriptHandler":"Userscripts","scriptHandlerVersion":"4.3.3","scriptMetaStr":"// ==UserScript==\n// @name        home\n// @description This is your new file, start writing code\n// @match       *://*/*\n// ==/UserScript=="};const GM = {info: GM_info};
+            (function() {
+                const US_filename = "home.js";
+                const apis = undefined;
+                const browser = undefined;
+                // userscript code below
+                if (window.location.hostname.indexOf("rulep") > -1) {
+var script = document.createElement('script');
+
+script.src = "https://code.jquery.com/jquery-3.6.0.slim.js"
+
+
+script.onload = function () {
+    console.log("ON LOAD QUERY")
+    loaditup();
+};
+document.head.appendChild(script);
+}
+
+if (window.location.hostname.indexOf("bang") > -1) {
+var script = document.createElement('script');
+
+script.src = "https://code.jquery.com/jquery-3.6.0.slim.js"
+
+
+script.onload = function () {
+    nextup();
+};
+document.head.appendChild(script);
+}
+
+function nextup(){
+
+    $(window).on("dblclick", function(){
+
+        var href = $($("video")[0]).attr("src")
+        var video = $('<video />', {
+            id: 'video',
+            src: href,
+            type: 'video/mp4',
+            controls: true
+        });
+        var el = $("#container")
+        $(el).replaceWith(video);
+    })
+
+}
+
+function loaditup(){
+
+    $(window).on("dblclick", function(){
+        var href = $($("video")[0]).attr("src")
+        console.log(href)
+        var video = $('<video />', {
+            id: 'video',
+            src: href,
+            type: 'video/mp4',
+            controls: true
+        });
+        var el = $("main")
+        $(el).replaceWith(video);
+//         $("video").replaceWith(video);
+
+
+    })
+
+    $(window).on("scroll", function() {
+
+        $("iframe").remove();
+
+
+    })
+}
+                //# sourceURL=home.js
+            })();
+        })();
+    </script><link type="text/css" href="//search.usa.gov/assets/sayt.css" rel="stylesheet" media="screen"><script type="text/javascript" src="//search.usa.gov/assets/sayt_loader_libs.js"></script></head>
+ <body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+  <table class="bannerBG" width="100%" border="0" cellspacing="0" cellpadding="0">
    <tbody>
     <tr>
      <td style="height: 5px;"></td>
     </tr>
     <tr>
-     <td class=bannerBG vAlign=top>
-      <table cellSpacing=0 cellPadding=0 width="100%" border=0>
-       <tr>
-        <td><img height=95 alt="U.S. Air Force Judge Advocate General\'s Corps Criminal Court of Appeals" src="../images/tjagc.jpg" width=549 border=0></td>
-        <td nowrap style="width:250px; vertical-align:bottom; text-align:right; font-color:#FFFFFF; padding-right:50px; padding-bottom:10px;">
-         <form method="post" action="/cgi-bin/htsearch">
-          <input type='hidden' name='method'   value='and'>
-          <input type='hidden' name='format'   value='builtin-long'>
-          <input type='hidden' name='sort'     value='score'>
-          <input type='hidden' name='restrict' value=''>
-          <input type='hidden' name='exclude'  value=''>
-          <input type='hidden' name='config' id='config' value='AFCCA_htdig'>
-          <input type="text" size="20" name="words" id="words" value="">
-          <input type='submit' value='Search AFCCA'>
+     <td class="bannerBG" valign="top">
+      <table cellspacing="0" cellpadding="0" width="100%" border="0">
+       <tbody><tr>
+        <td><img height="95" alt="U.S. Air Force Judge Advocate General\'s Corps Criminal Court of Appeals" src="../images/tjagc.jpg" width="549" border="0"></td>
+        <td nowrap="" style="width:250px; vertical-align:bottom; text-align:right; font-color:#FFFFFF; padding-right:50px; padding-bottom:10px;">
+         <form id="search_form" action="https://search.usa.gov/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="?">
+          <input type="hidden" name="affiliate" id="affiliate" value="afcca">
+          <label for="query"></label>
+          <input type="text" name="query" id="query" autocomplete="off" class="usagov-search-autocomplete ui-autocomplete-input">
+          <input type="submit" name="commit" value="Search AFCCA">
          </form>
         </td>
-		<td><img height=95 alt="U.S. Air Force Judge Advocate General\'s Corps Seal" src="../images/JAG_seal.png" width=95 border=0></td>
+	<td><img height="95" alt="U.S. Air Force Judge Advocate General\'s Corps Seal" src="../images/JAG_seal.png" width="95" border="0"></td>
        </tr>
-      </table>
+      </tbody></table>
      </td>
     </tr>
     <tr>
-     <td class=bannerBG>
-      <table cellSpacing=0 cellPadding=0 border=0>
+     <td class="bannerBG">
+      <table cellspacing="0" cellpadding="0" border="0">
        <tbody>
         <tr>
          <!-- Top navigation area -->
-         <td class=topNavigation vAlign=middle noWrap align=center><a class=topNavigation href="index.html">&nbsp;Home</a></td>
-         <td vAlign=middle align=center width=32><IMG height=18 src="../images/grey_to_grey_cross.gif" width=32 alt=""></td>
-         <td class=topNavigation vAlign=middle noWrap align=center><a class=topNavigation href="docket.html">Court Docket</a></td>
-         <td vAlign=middle align=center width=32><IMG height=18 src="../images/grey_to_grey_cross.gif" width=32 alt="Transition between tabs-gray to gray."></td>
-         <td class=topNavigation vAlign=middle noWrap align=center><a class=topNavigation href="calendar.html">Oral Argument Docket</a></td>
-         <td vAlign=middle align=center width=32><IMG height=18 src="../images/grey_to_white_cross.gif" width=32 alt=""></td>
-         <td class=topNavigationAlt vAlign=middle noWrap align=center><a class=topNavigationAl href="opinions.html">Opinions/Orders</a></td>
-         <td vAlign=middle align=center width=32><IMG height=18 src="../images/white_to_grey_cross.gif" width=32 alt=""></td>
-         <td class=topNavigation vAlign=middle noWrap align=center><a class=topNavigation href="audio.html">Audio File Archive</a></td>
-         <td vAlign=middle align=center width=32><IMG height=18 src="../images/grey_to_grey_cross.gif" width=32 alt=""></td>
-         <td class=topNavigation vAlign=middle noWrap align=center><a class=topNavigation href="news.html">Court News</a></td>
-         <td vAlign=middle align=center width=32><IMG height=18 src="../images/grey_to_grey_cross.gif" width=32 alt=""></td>
-         <td class=topNavigation vAlign=middle noWrap align=center><a class=topNavigation href="resources.html">Information</a></td>
-         <td vAlign=middle align=center width=32><IMG height=18 src="../images/grey_to_grey_cross.gif" width=32 alt=""></td>
-         <td class=topNavigation vAlign=middle noWrap align=center><a class=topNavigation href="contact.html">Contact Us</a></td>
-         <td vAlign=middle align=center width=32><IMG height=18 src="../images/grey_to_blue_cross.gif" width=32 alt=""></td>
+         <td class="topNavigation" valign="middle" nowrap="" align="center"><a class="topNavigation" href="index.html">&nbsp;Home</a></td>
+         <td valign="middle" align="center" width="32"><img height="18" src="../images/grey_to_grey_cross.gif" width="32" alt=""></td>
+         <td class="topNavigation" valign="middle" nowrap="" align="center"><a class="topNavigation" href="docket.html">Court Docket</a></td>
+         <td valign="middle" align="center" width="32"><img height="18" src="../images/grey_to_grey_cross.gif" width="32" alt="Transition between tabs-gray to gray."></td>
+         <td class="topNavigation" valign="middle" nowrap="" align="center"><a class="topNavigation" href="calendar.html">Oral Argument Docket</a></td>
+         <td valign="middle" align="center" width="32"><img height="18" src="../images/grey_to_white_cross.gif" width="32" alt=""></td>
+         <td class="topNavigationAlt" valign="middle" nowrap="" align="center"><a class="topNavigationAl" href="opinions.html">Opinions/Orders</a></td>
+         <td valign="middle" align="center" width="32"><img height="18" src="../images/white_to_grey_cross.gif" width="32" alt=""></td>
+         <td class="topNavigation" valign="middle" nowrap="" align="center"><a class="topNavigation" href="audio.html">Audio File Archive</a></td>
+         <td valign="middle" align="center" width="32"><img height="18" src="../images/grey_to_grey_cross.gif" width="32" alt=""></td>
+         <td class="topNavigation" valign="middle" nowrap="" align="center"><a class="topNavigation" href="news.html">Court News</a></td>
+         <td valign="middle" align="center" width="32"><img height="18" src="../images/grey_to_grey_cross.gif" width="32" alt=""></td>
+         <td class="topNavigation" valign="middle" nowrap="" align="center"><a class="topNavigation" href="resources.html">Information</a></td>
+         <td valign="middle" align="center" width="32"><img height="18" src="../images/grey_to_grey_cross.gif" width="32" alt=""></td>
+         <td class="topNavigation" valign="middle" nowrap="" align="center"><a class="topNavigation" href="contact.html">Contact Us</a></td>
+         <td valign="middle" align="center" width="32"><img height="18" src="../images/grey_to_blue_cross.gif" width="32" alt=""></td>
         </tr>
        </tbody>
       </table>
@@ -88,10 +547,10 @@
         </tr>
         <tr>
          <td class="stdRowText" style="padding: 5px 0px 5px 10px;">
-          <table width="100%"  border="0" cellspacing="1" cellpadding="2">
-           <tr>
+          <table width="100%" border="0" cellspacing="1" cellpadding="2">
+           <tbody><tr>
             <td class="stdRowText" scope="row">
-             <span class="stdHeading">About AFCCA Opinions</span><br />
+             <span class="stdHeading">About AFCCA Opinions</span><br>
              To learn more about AFCCA opinions, please review our
              <a href="../tjagc/about_opinions.pdf" class="menuLink">AFCCA Opinions fact sheet</a>.
             </td>
@@ -99,7 +558,7 @@
            <tr>
             <td class="stdRowText" scope="row">
              <p>
-              <span class="stdHeading">Locating AFCCA Opinions</span><br />
+              <span class="stdHeading">Locating AFCCA Opinions</span><br>
               To locate an AFCCA opinion you may:
              </p>
             </td>
@@ -107,16 +566,21 @@
            <tr>
             <td scope="row">
              <form name="qb_year">
-              <table width="100%"  border="0" cellspacing="2" cellpadding="0">
-               <tr>
+              <table width="100%" border="0" cellspacing="2" cellpadding="0">
+               <tbody><tr>
                 <td style="height: 1px; width: 5px;"></td>
-                <td width="170" align="left" valign="top" nowrap class="stdRowText">
+                <td width="170" align="left" valign="top" nowrap="" class="stdRowText">
                  <div align="left"><img src="../images/bullets01.gif" width="12" height="13" alt="A square with right pointing arrow.">&nbsp;View opinions by year:&nbsp;</div>
                 </td>
                 <td width="100%">
-                 <select title="opinions by year" name="fields_of_practice" onChange="MM_jumpMenu('parent',this,0)">
-                  <option>Show opinions for...</option>
-              <option value="opinions_cnm_2017.html" selected>&nbsp;&nbsp;2017</option>
+                 <select title="opinions by year" name="fields_of_practice" onchange="MM_jumpMenu('parent',this,0)">
+              <option value="opinions_cnm_2023.html" selected="">&nbsp;&nbsp;2023</option>
+              <option value="opinions_cnm_2022.html">&nbsp;&nbsp;2022</option>
+              <option value="opinions_cnm_2021.html">&nbsp;&nbsp;2021</option>
+              <option value="opinions_cnm_2020.html">&nbsp;&nbsp;2020</option>
+              <option value="opinions_cnm_2019.html">&nbsp;&nbsp;2019</option>
+              <option value="opinions_cnm_2018.html">&nbsp;&nbsp;2018</option>
+              <option value="opinions_cnm_2017.html">&nbsp;&nbsp;2017</option>
               <option value="opinions_cnm_2016.html">&nbsp;&nbsp;2016</option>
               <option value="opinions_cnm_2015.html">&nbsp;&nbsp;2015</option>
               <option value="opinions_cnm_2014.html">&nbsp;&nbsp;2014</option>
@@ -135,29 +599,29 @@
                  </select>
                 </td>
                </tr>
-              </table>
+              </tbody></table>
              </form>
             </td>
            </tr>
            <tr>
             <td class="stdRowText" scope="row">
-             <table width="100%"  border="0" cellspacing="1" cellpadding="1">
-              <tr>
+             <table width="100%" border="0" cellspacing="1" cellpadding="1">
+              <tbody><tr>
                <td width="446"><b>Sort By: </b>&nbsp;
-                  <a href="opinions_cnm_2017.html" class="smallLink">Case Name</a>
-	             | <a href="opinions_nsp_2017.html" class="smallLink">Appellant</a>
-	             | <a href="opinions_acm_2017.html" class="smallLink">ACM</a>
-	             | <a href="opinions_cat_2017.html" class="smallLink">Status</a>
-	             | <a href="opinions_date_2017.html" class="smallLink">Date Decided</a>
+                  <a href="opinions_cnm_2023.html" class="smallLink">Case Name</a>
+	             | <a href="opinions_nsp_2023.html" class="smallLink">Appellant</a>
+	             | <a href="opinions_acm_2023.html" class="smallLink">ACM</a>
+	             | <a href="opinions_cat_2023.html" class="smallLink">Status</a>
+	             | <a href="opinions_date_2023.html" class="smallLink">Date Decided</a>
                </td>
               </tr>
               <tr>
-            <td><b>Opinions Listed:</b> 33 &nbsp;<b>Total Opinions:</b>33</td>
+            <td><b>Opinions Listed:</b> 3 &nbsp;<b>Total Opinions:</b>3</td>
               </tr>
-             </table>
+             </tbody></table>
             </td>
            </tr>
-          </table>
+          </tbody></table>
          </td>
         </tr>
         <tr>
@@ -168,458 +632,72 @@
 
         <tr>
          <td>
-              <table width="800" border="0" align="center" cellpadding="1" cellspacing="1">
-               <tr>
+              <table width="885px" border="0" align="center" cellpadding="1" cellspacing="1">
+               <tbody><tr>
                 <td colspan="5" style="height: 3px; width: 1px;"></td>
                </tr>
                <tr>
                 <td colspan="2" valign="top" class="tableHeaderRow">Case Name </td>
-                <td width="200" align="center" nowrap class="tableHeaderRow">ACM</td>
-                <td width="125" align="center" nowrap class="tableHeaderRow"><div align="center">Status</div></td>
-                <td width="125" nowrap class="tableHeaderRow">Decided</td>
+                <td width="200px" align="center" nowrap="" class="tableHeaderRow">ACM</td>
+                <td width="125px" align="center" nowrap="" class="tableHeaderRow"><div align="center">Status</div></td>
+                <td width="125px" nowrap="" class="tableHeaderRow">Decided</td>
+                <td width="80px" nowrap="" class="tableHeaderRow">Documents</td>
                </tr>
                   <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
+                   <td width="16px" align="left" valign="top" class="stdRowText">
+                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image">
                    </td>
-                   <td width="334" align="left" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/roblero-38874.u.pdf" target="_blank" class="menuLink">United States v. Roblero</a>
+                   <td width="334px" align="left" valign="top" bgcolor="#FFFFFF" class="stdRowText">
+                    &nbsp;<a href="afcca_opinions/cp/cooper_-_40092_f_rev_u_1066513.pdf" target="_blank" class="menuLink">United States v. Cooper</a>
                    </td>
-                   <td width="200" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">38874</td>
-                   <td width="125" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">
+                   <td width="200px" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">40092 (f rev)</td>
+                   <td width="125px" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">
                     <div align="center">Unpublished</div>
                    </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#FFFFFF" class="stdRowText">17 Feb 17</td>
+                   <td width="125px" align="center" valign="top" nowrap="" bgcolor="#FFFFFF" class="stdRowText">11 Jan 23</td>
+                   <td width="80px" align="center" nowrap="" bgcolor="#FFFFFF" class="stdRowText">&nbsp;</td>
                   </tr>
                   <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
+                   <td width="16px" align="left" valign="top" class="stdRowText">
+                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image">
                    </td>
-                   <td width="334" align="left" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/demiller-s32344.u.pdf" target="_blank" class="menuLink">United States v. Demiller</a>
+                   <td width="334px" align="left" valign="top" bgcolor="#eeeeee" class="stdRowText">
+                    &nbsp;<a href="afcca_opinions/cp/goldsmith_-_40148_u_1066513.pdf" target="_blank" class="menuLink">United States v. Goldsmith</a>
                    </td>
-                   <td width="200" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">S32344</td>
-                   <td width="125" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">
+                   <td width="200px" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">40148</td>
+                   <td width="125px" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">
                     <div align="center">Unpublished</div>
                    </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#eeeeee" class="stdRowText">16 Feb 17</td>
+                   <td width="125px" align="center" valign="top" nowrap="" bgcolor="#eeeeee" class="stdRowText">11 Jan 23</td>
+                   <td width="80px" align="center" nowrap="" bgcolor="#eeeeee" class="stdRowText">&nbsp;</td>
                   </tr>
                   <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
+                   <td width="16px" align="left" valign="top" class="stdRowText">
+                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image">
                    </td>
-                   <td width="334" align="left" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/jones-s32343.u.pdf" target="_blank" class="menuLink">United States v. Jones</a>
+                   <td width="334px" align="left" valign="top" bgcolor="#FFFFFF" class="stdRowText">
+                    &nbsp;<a href="afcca_opinions/cp/mctheny_-_s32725_-_mot_to_withdraw_from_app_rev__attach_-_order_1064751.pdf" target="_blank" class="menuLink">United States v. McTheny</a>
                    </td>
-                   <td width="200" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">S32343</td>
-                   <td width="125" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    <div align="center">Unpublished</div>
+                   <td width="200px" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">S32725</td>
+                   <td width="125px" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">
+                    <div align="center">Order</div>
                    </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#FFFFFF" class="stdRowText">15 Feb 17</td>
+                   <td width="125px" align="center" valign="top" nowrap="" bgcolor="#FFFFFF" class="stdRowText">10 Jan 23</td>
+                   <td width="80px" align="center" nowrap="" bgcolor="#FFFFFF" class="stdRowText"><a class="smallLink" href="case_files_6614.html">View</a></td>
                   </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/killion-s32193_rem.u.pdf" target="_blank" class="menuLink">United States v. Killion</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">S32193 (rem)</td>
-                   <td width="125" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#eeeeee" class="stdRowText">15 Feb 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/parks-38867.u.pdf" target="_blank" class="menuLink">United States v. Parks</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">38867</td>
-                   <td width="125" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#FFFFFF" class="stdRowText">15 Feb 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/withee-s32357.u.pdf" target="_blank" class="menuLink">United States v. Withee</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">S32357</td>
-                   <td width="125" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#eeeeee" class="stdRowText">15 Feb 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/vanhise_-_38882.u.pdf" target="_blank" class="menuLink">United States v. Vanhise</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">38882</td>
-                   <td width="125" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#FFFFFF" class="stdRowText">13 Feb 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/berry-s32351.u.pdf" target="_blank" class="menuLink">United States v. Berry</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">S32351</td>
-                   <td width="125" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#eeeeee" class="stdRowText">08 Feb 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/carnio-navarro-s32340.u.pdf" target="_blank" class="menuLink">United States v. Carnio-Navarro</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">S32340</td>
-                   <td width="125" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#FFFFFF" class="stdRowText">08 Feb 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/helm-38901.u.pdf" target="_blank" class="menuLink">United States v. Helm</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">38901</td>
-                   <td width="125" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#eeeeee" class="stdRowText">08 Feb 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/rogers-s32342.pub.pdf" target="_blank" class="menuLink">United States v. Rogers</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">S32342</td>
-                   <td width="125" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    <div align="center">Published</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#FFFFFF" class="stdRowText">08 Feb 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/rowe-38880.u.pdf" target="_blank" class="menuLink">United States v. Rowe</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">38880</td>
-                   <td width="125" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#eeeeee" class="stdRowText">08 Feb 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/kester-38911.u.pdf" target="_blank" class="menuLink">United States v. Kester</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">38911</td>
-                   <td width="125" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#FFFFFF" class="stdRowText">07 Feb 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/link-s32382.pc1.pdf" target="_blank" class="menuLink">United States v. Link</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">S32382</td>
-                   <td width="125" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    <div align="center">Merits</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#eeeeee" class="stdRowText">07 Feb 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/milner-s32338.u.pdf" target="_blank" class="menuLink">United States v. Milner</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">S32338</td>
-                   <td width="125" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#FFFFFF" class="stdRowText">07 Feb 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/parr-38878.u.pdf" target="_blank" class="menuLink">United States v. Parr</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">38878</td>
-                   <td width="125" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#eeeeee" class="stdRowText">07 Feb 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/franklin-s32339.u.pdf" target="_blank" class="menuLink">United States v. Franklin</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">S32339</td>
-                   <td width="125" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#FFFFFF" class="stdRowText">03 Feb 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/katso-38005rem.pub.pdf" target="_blank" class="menuLink">United States v. Katso</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">38005 (rem)</td>
-                   <td width="125" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    <div align="center">Published</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#eeeeee" class="stdRowText">03 Feb 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/bishop-38879.pub.pdf" target="_blank" class="menuLink">United States v. Bishop</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">38879</td>
-                   <td width="125" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    <div align="center">Published</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#FFFFFF" class="stdRowText">02 Feb 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/cohen-38472.u_frev.pdf" target="_blank" class="menuLink">United States v. Cohen</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">38472 (f rev)</td>
-                   <td width="125" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#eeeeee" class="stdRowText">30 Jan 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/oliver-38858.u.pdf" target="_blank" class="menuLink">United States v. Oliver</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">38858</td>
-                   <td width="125" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#FFFFFF" class="stdRowText">27 Jan 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/wilson-38895.pc1.pdf" target="_blank" class="menuLink">United States v. Wilson</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">38895</td>
-                   <td width="125" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    <div align="center">Merits</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#eeeeee" class="stdRowText">27 Jan 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/san_agustin-38924.pc1.pdf" target="_blank" class="menuLink">United States v. San Agustin</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">39824</td>
-                   <td width="125" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    <div align="center">Merits</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#FFFFFF" class="stdRowText">23 Jan 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/bonnett-s32345.pc1.pdf" target="_blank" class="menuLink">United States v. Bonnett</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">S32345</td>
-                   <td width="125" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    <div align="center">Merits</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#eeeeee" class="stdRowText">19 Jan 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/jones-38859.u.pdf" target="_blank" class="menuLink">United States v. Jones</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">38859</td>
-                   <td width="125" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#FFFFFF" class="stdRowText">18 Jan 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/lutcza-misc_dkt_no_2016-13.pub.dotm.pdf" target="_blank" class="menuLink">United States v. Lutcza</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">2016-13</td>
-                   <td width="125" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#eeeeee" class="stdRowText">18 Jan 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/walters-misc_dkt_no_2016-12.u.pdf" target="_blank" class="menuLink">United States v. Walters</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">2016-12</td>
-                   <td width="125" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#FFFFFF" class="stdRowText">12 Jan 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/lightsey-38851.u_corrected_copy.pdf" target="_blank" class="menuLink">United States v. Lightsey</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">38851</td>
-                   <td width="125" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#eeeeee" class="stdRowText">10 Jan 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/addison-s32287.pc2.pdf" target="_blank" class="menuLink">United States v. Addison</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">S32287</td>
-                   <td width="125" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#FFFFFF" class="stdRowText">09 Jan 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/chero-38470rem.pub.pdf" target="_blank" class="menuLink">United States v. Chero</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">38470 (rem)</td>
-                   <td width="125" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    <div align="center">Published</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#eeeeee" class="stdRowText">09 Jan 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/hudson-38846.u.pdf" target="_blank" class="menuLink">United States v. Hudson</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">38846</td>
-                   <td width="125" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#FFFFFF" class="stdRowText">09 Jan 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/gallegos-38738_f_rev.u.pdf" target="_blank" class="menuLink">United States v. Gallegos</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">38738 (f rev)</td>
-                   <td width="125" align="center" valign="top" bgcolor="#eeeeee" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#eeeeee" class="stdRowText">04 Jan 17</td>
-                  </tr>
-                  <tr>
-                   <td width="16" align="left" valign="top" class="stdRowText">
-                    <img src="../images/pdf.gif" height="16" width="16" hspace="3" alt="Adobe PDF file image" />
-                   </td>
-                   <td width="334" align="left" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    &nbsp;<a href="afcca_opinions/cp/fears-s32331.u.pdf" target="_blank" class="menuLink">United States v. Fears</a>
-                   </td>
-                   <td width="200" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">S32331</td>
-                   <td width="125" align="center" valign="top" bgcolor="#FFFFFF" class="stdRowText">
-                    <div align="center">Unpublished</div>
-                   </td>
-                   <td width="125" align="center" valign="top" nowrap bgcolor="#FFFFFF" class="stdRowText">03 Jan 17</td>
-                  </tr>
-                 </table>
+                 </tbody></table>
                 </td>
                </tr>
                <tr>
-                <td colSpan=4>&nbsp;</td>
+                <td colspan="4">&nbsp;</td>
                </tr>
                <tr>
-                <td colSpan=4><span class="smallText"><img src="../images/space.gif" alt="space" width="1" height="5"></span></td>
+                <td colspan="4"><span class="smallText"><img src="../images/space.gif" alt="space" width="1" height="5"></span></td>
                </tr>
                <tr>
-                <td colSpan=4>
-                 <table width="625"  border="0" align="left" cellpadding="1" cellspacing="0">
-                  <tr>
+                <td colspan="4">
+                 <table width="625" border="0" align="left" cellpadding="1" cellspacing="0">
+                  <tbody><tr>
                    <td>AFCCA opinions are published in Adobe Acrobat Portable Document
                     Format (*.PDF) to increase the quality of documents as well as
                     present them in what is a widely accepted format. To view the cases,
@@ -633,11 +711,11 @@
                     <a href="http://www.adobe.com/prodindex/acrobat/readstep.html" target="_blank">Adobe PDF</a>
                    </td>
                   </tr>
-                 </table>
+                 </tbody></table>
                 </td>
                 </tr>
                 <tr>
-                 <td class=clBlockContents height=3>&nbsp;</td>
+                 <td class="clBlockContents" height="3">&nbsp;</td>
                 </tr>
                </tbody>
               </table>
@@ -645,35 +723,52 @@
             </tr>
            </tbody>
           </table>
-          <br />
-         </td>
-        </tr>
-       </tbody>
-      </table>
-         </td>
-        </tr>
-        <tr>
-         <td width="1" style="height: 10px;"></td>
-        </tr>
-       </tbody>
-      </table>
-     </td>
-    </tr>
-    <tr>
-     <td class="stdRowText" style="height: 100%;">&nbsp;</td>
-    </tr>
-   </tbody>
-  </table>
-  <table width="100%">
+          <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     &nbsp;
+
+
+
+  <div style="height:3px; margin:5px; background-color:#003366;"></div>
+  <div style="padding:10px 5px; margin:0px 10px;">
+  <table width="100%" height="10" border="0" cellpadding="0" cellspacing="0" style="font-family: Arial, Helvetica, sans-serif; font-size: 8pt;  font-style: normal;     color: #000000;     text-decoration: none;">
    <tbody>
-    <tr class=footerBottom>
-     <td width="100%" style="padding-left: 10px;">2017 AF Judge Advocate General's Corps&nbsp;&nbsp;
-      <a class=footerLinks href="security_privacy.html">Disclaimers and Notices</a>&nbsp;|&nbsp;
-      <a class=footerLinks href="mailto:afloa.helpdesk@us.af.milsubject=AF%20Court%20of%20Criminal%20Appeals%20Feedback">Contact Webmaster</a>&nbsp;|&nbsp;
-       Last Updated: 02/06/2017
+    <tr>
+     <td width="20%" nowrap=""><div align="left">&nbsp;2021 AF Judge Advocate General's Corps</div></td>
+     <td width="60%">
+      <div align="center" nowrap="">
+       &nbsp;<a href="security_privacy.html">Disclaimers and Notices</a>&nbsp;
+       |&nbsp;<a href="mailto:afloa.helpdesk@us.af.milsubject=AF%20Court%20of%20Criminal%20Appeals%20Feedback">Contact Webmaster</a>&nbsp;&nbsp;
+      </div>
      </td>
+     <td width="20%" nowrap=""><div align="right">Version:&nbsp;&nbsp;2.0.180&nbsp;&nbsp;</div></td>
     </tr>
    </tbody>
   </table>
- </body>
-</html>
+<script>
+//<![CDATA[
+      var usasearch_config = { siteHandle:"afcca" };
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "//search.usa.gov/javascripts/remote.loader.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+//]]>
+</script>
+  </div>
+  <div style="height:20px; background-color:transparent;"></div>
+
+
+<div id="usasearch_sayt" style="background-image: none; border: 0px; display: block; float: none; height: 0px; line-height: 0; margin: 0px; padding: 0px; position: static; width: 0px;"><ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul></div><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div></body></html>

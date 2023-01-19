@@ -84,7 +84,6 @@ class Site(OpinionSiteLinear):
                     "status": "Unknown",
                 }
             )
-        print(self.cases[0])
 
     def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
         """Pass scraped text into function and return precedential status

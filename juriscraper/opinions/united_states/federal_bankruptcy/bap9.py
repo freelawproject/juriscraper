@@ -11,9 +11,8 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "http://www.ca9.uscourts.gov/bap/"
+        self.url = "https://www.ca9.uscourts.gov/bap/"
         self.court_id = self.__module__
-        self.method = "POST"
         self.parameters = {
             "c_mode": "view",
             "c_page_size": "500",
