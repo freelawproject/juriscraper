@@ -6,76 +6,31 @@ Reviewer: mlr
 Date created: 1 Sep 2014
 Type: Precedential
 """
+import json
 
-import random
-from datetime import datetime
-
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.column_diff = 0
-        # Something fishy is going on with this court's site. They
-        # seem to be blocking/hiding results based on our regular
-        # 'juriscraper' User-Agent header. We contacted the
-        # court multiple times to work work with them on exploring
-        # and resolving this issue, but they were virtually worthless
-        # in that email exchange. Since they have been unhelpful, cannot
-        # provide more information, and don't seem to care, we will
-        # utilize this workaround and sacrifice the courtesy of
-        # identifying ourselves with the 'juriscraper' UA. The below
-        # workaround is required to shows results for this scraper,
-        # and also to show results (and prevent timeout) for mspb_u child.
-        self.request["headers"] = {
-            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
-        }
-        self.type = "Precedential"
-        self.display = 2368396
-        self.set_url()
+        self.status = "Published"
+        self.url = "https://www.mspb.gov/decisions/precedential/PrecedentialDecisions_Manifest_Table.json"
+        self.base = "https://www.mspb.gov/decisions/precedential"
 
-    def set_url(self):
-        cache_key = f"a{str(random.randrange(1, 100000000))}"
-        pattern = (
-            "https://www.mspb.gov/MSPBSEARCH/decisiondisplay_2011.aspx?timelapse=12&displaytype=%d&description=%s+Decisions&cachename="
-            + cache_key
-        )
-        self.url = pattern % (self.display, self.type)
-
-    def _get_download_urls(self):
-        """Example: http://www.mspb.gov/netsearch/viewdocs.aspx?docnumber=1075720&version=1080035&application=ACROBAT"""
-        path = f"//tr[@class='ITEMS']/td[{3 + self.column_diff}]/a/@href"
-        return list(self.html.xpath(path))
-
-    def _get_case_names(self):
-        """Example: {Appellant} v. {Agency}"""
-        path = f"//tr[@class='ITEMS']/td[{3 + self.column_diff}]/a/text()"
-        appellants = self.html.xpath(path)
-        path = f"//tr[@class='ITEMS']/td[{4 + self.column_diff}]/text()"
-        agencies = self.html.xpath(path)
-        return [
-            f"{appellant} v. {agency}"
-            for (appellant, agency) in zip(appellants, agencies)
-        ]
-
-    def _get_case_dates(self):
-        """Example: Aug 06, 2014"""
-        path = "//tr[@class='ITEMS']/td[1]/span/text()"
-        return [
-            datetime.strptime(date_string, "%b %d, %Y").date()
-            for date_string in self.html.xpath(path)
-        ]
-
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_dates)
-
-    def _get_citations(self):
-        """Example: 2014 MSPB 68"""
-        path = "//tr[@class='ITEMS']/td[2]/text()"
-        return [s.replace("\\u00A0", " ") for s in self.html.xpath(path)]
-
-    def _get_case_name_shorts(self):
-        # We don't (yet) support short case names for administrative bodies.
-        return None
+    def _process_html(self):
+        if self.test_mode_enabled():
+            self.html = json.load(open(self.url))
+        for row in self.html["data"]:
+            url = row["FILE_NAME"]
+            name = f"{row['APL_FIRST_NAME']} {row['APL_LAST_NAME']} v. {row['AGENCY']}"
+            self.cases.append(
+                {
+                    "citation": row["DECISION_NUMBER"],
+                    "url": f"{self.base}/{url}",
+                    "docket": row["DOCKET_NBR"],
+                    "name": name,
+                    "date": row["ISSUED_DATE"].replace("/", "-"),
+                }
+            )
