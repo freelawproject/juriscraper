@@ -5,7 +5,7 @@ Author: William Edward Palin
 History:
   2023-01-21: Created by William Palin
 """
-
+import urllib.parse
 from datetime import date, timedelta
 
 from juriscraper.lib.string_utils import convert_date_string
@@ -33,12 +33,14 @@ class Site(OpinionSiteLinear):
             dt = convert_date_string(cells[1].text_content())
             if dt < self.last_month:
                 continue
+            u = s.xpath(".//td/a/@href")[0]
+            url = urllib.parse.quote(u, safe="/:")
             self.cases.append(
                 {
                     "name": cells[0].text_content(),
                     "date": cells[1].text_content(),
                     "docket": cells[2].text_content(),
                     "judges": judges,
-                    "url": s.xpath(".//td/a/@href")[0],
+                    "url": url,
                 }
             )
