@@ -1,7 +1,7 @@
 [
   {
     "case_dates": "2022-12-31",
-    "case_names": "No case names fetched during tests.",
+    "case_names": "Case name extracted from text",
     "download_urls": "tests/examples/opinions/united_states/documents/PrewittGD_22-3306.pdf",
     "precedential_statuses": "Published",
     "blocked_statuses": false,
@@ -11,7 +11,7 @@
   },
   {
     "case_dates": "2022-12-27",
-    "case_names": "No case names fetched during tests.",
+    "case_names": "Case name extracted from text",
     "download_urls": "tests/examples/opinions/united_states/documents/AtilanoJG_17-1428_2.pdf",
     "precedential_statuses": "Published",
     "blocked_statuses": false,

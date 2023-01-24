@@ -8,10 +8,11 @@ History:
 """
 
 import datetime
+import re
 from datetime import date
-from typing import Optional
+from typing import Any, Dict
 
-from juriscraper.DeferringList import DeferringList
+from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -20,11 +21,7 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.url = "http://www.uscourts.cavc.gov/opinions.php"
         self.court_id = self.__module__
-        self.base = (
-            "https://efiling.uscourts.cavc.gov/cmecf/servlet/TransportRoom"
-        )
-        self.seeds = []
-        self.last_month = date.today() - datetime.timedelta(days=31)
+        self.last_month = date.today() - datetime.timedelta(weeks=4)
         self.status = "Published"
 
     def _process_html(self):
@@ -35,38 +32,52 @@ class Site(OpinionSiteLinear):
         cases = self.html.xpath(".//tbody/tr/td/a/parent::td/parent::tr")
         for case in cases:
             try:
-                name, date = case.xpath(".//td/text()")
-                docket = case.xpath(".//a/text()")[0]
-                document_url = case.xpath(".//a/@href")[0]
+                _, date = case.xpath(".//td/text()")
                 clean_date = datetime.datetime.strptime(date, "%d%b%y")
                 if self.last_month > clean_date.date():
                     break
-                clean_date_string = clean_date.strftime("%m/%d/%Y")
-                url = f"{self.base}?servlet=CaseSummary.jsp&caseNum={docket}&incOrigDkt=Y&incDktEntries=Y"
-                self.seeds.append(url)
                 self.cases.append(
                     {
-                        "url": document_url,
-                        "date": clean_date_string,
-                        "docket": docket,
+                        "url": case.xpath(".//a/@href")[0],
+                        "date": clean_date.strftime("%m/%d/%Y"),
+                        "docket": case.xpath(".//a/text()")[0],
+                        "name": "Case name extracted from text",
                     }
                 )
             except ValueError:
-                # An opinion was malformed. I'd rather skip it for now
+                # The table has a malformed row
                 continue
 
-    def _get_case_names(self) -> DeferringList:
-        """Get case names using a deferring list."""
+    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+        """Can we extract the case name and clean it up?
 
-        def get_name(url) -> Optional[str]:
-            # """Abstract out the case name from the case page."""
-            if self.test_mode_enabled():
-                return "No case names fetched during tests."
-            self.url = url
-            self.html = self._download()
-            case_name = self.html.xpath('.//tr[contains(., " v. ")]')[
-                -1
-            ].text_content()
-            return case_name
+        This method is a bit ... ugly.  Mostly due to bad PDFs that occur
+        not often. This means weird whitespacing that makes this the most
+        efficient method for name extraction
 
-        return DeferringList(seed=self.seeds, fetcher=get_name)
+        :param scraped_text: The content of the document downloaded
+        :return: Metadata to be added to the case
+        """
+        keepers = []
+        start = False
+        for row in scraped_text.split("\n"):
+            if re.findall(r"N[oO]\s?\.\s\d+-\d+", row):
+                start = True
+                continue
+            if not start:
+                continue
+            if "SECRETARY" in row or "VETERANS AFFAIRS" in row:
+                break
+            if not row.strip():
+                continue
+            if "JR" not in row:
+                keepers.append(row.split(",", 1)[0].strip())
+            else:
+                keepers.append(row[: row.index("JR.") + 3].strip())
+        case_name = titlecase(" ".join(keepers))
+        metadata = {
+            "OpinionCluster": {
+                "case_name": case_name,
+            },
+        }
+        return metadata
