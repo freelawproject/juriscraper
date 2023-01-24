@@ -97,6 +97,32 @@ class ScraperExtractFromText(unittest.TestCase):
                 {"Docket": {"docket_number": "#30018-a-MES"}},
             ),
         ],
+        "juriscraper.opinions.united_states.federal_special.cavc": [
+            (
+                """           UNITED STATES COURT OF APPEALS FOR VETERANS CLAIMS\n\n                                             NO. 22-3306\n\n                               GEORGE D. PREWITT, JR., PETITIONER,\n\n                                                  V.\n\n                                     DENIS MCDONOUGH,\n                         SECRETARY OF VETERANS AFFAIRS, RESPONDENT.\n\n                       Before""",
+                {
+                    "OpinionCluster": {
+                        "case_name": "George D. Prewitt, Jr. v. Denis McDonough"
+                    }
+                },
+            ),
+            (
+                """          UNITED STATES COURT OF APPEALS FOR VETERANS CLAIMS\n\n                                            No. 17-1428\n\n                                  JESUS G. ATILANO, APPELLANT,\n\n                                                 V.\n\n                                    DENIS MCDONOUGH,\n                          SECRETARY OF VETERANS AFFAIRS, APPELLEE.\n\n               On Remand""",
+                {
+                    "OpinionCluster": {
+                        "case_name": "Jesus G. Atilano v. Denis McDonough"
+                    }
+                },
+            ),
+            (
+                """                UNITED STATES COURT OF APPEALS FOR VETERANS CLAIMS\n\nNO. 20-4372\n\nSHERRY CRAIG-DAVIDSON,                                                            APPELLANT,\n\n         V.\n\nDENIS MCDONOUGH,\nSECRETARY OF VETERANS AFFAIRS,                                                    APPELLEE.\n\n                      Before GREENBERG, MEREDITH, and LAURER, Judges.""",
+                {
+                    "OpinionCluster": {
+                        "case_name": "Sherry Craig-Davidson v. Denis McDonough"
+                    }
+                },
+            ),
+        ],
     }
 
     def test_extract_from_text(self):
