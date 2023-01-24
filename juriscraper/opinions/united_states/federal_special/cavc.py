@@ -21,7 +21,7 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.url = "http://www.uscourts.cavc.gov/opinions.php"
         self.court_id = self.__module__
-        self.last_month = date.today() - datetime.timedelta(weeks=1020)
+        self.last_month = date.today() - datetime.timedelta(weeks=4)
         self.status = "Published"
 
     def _process_html(self):
