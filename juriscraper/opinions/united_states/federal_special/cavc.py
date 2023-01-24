@@ -21,7 +21,7 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.url = "http://www.uscourts.cavc.gov/opinions.php"
         self.court_id = self.__module__
-        self.last_month = date.today() - datetime.timedelta(weeks=4)
+        self.last_month = date.today() - datetime.timedelta(weeks=1020)
         self.status = "Published"
 
     def _process_html(self):
@@ -61,12 +61,15 @@ class Site(OpinionSiteLinear):
         keepers = []
         start = False
         for row in scraped_text.split("\n"):
-            if re.findall(r"N[oO]\s?\.\s\d+-\d+", row):
+            check_row = re.sub(r"\s", "", row.upper())
+            if re.findall(r"NOS?\.?\d+-\d+", check_row):
                 start = True
                 continue
             if not start:
                 continue
-            if "SECRETARY" in row or "VETERANS AFFAIRS" in row:
+            if "SECRETARY" in row.upper() or "VETERANS AFFAIRS" in row.upper():
+                break
+            if "Before" in row:
                 break
             if not row.strip():
                 continue
