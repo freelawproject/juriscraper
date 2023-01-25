@@ -36,7 +36,7 @@ class Site(OpinionSiteLinear):
         The tax court switches between blue and green deploys so we need to
         check which one is current before we continue
 
-        :param request_dict:
+        :param request_dict: An empty dictionary.
         :return: None
         """
         if not self.set_blue_green and not self.test_mode_enabled():
