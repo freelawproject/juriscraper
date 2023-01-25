@@ -29,6 +29,8 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
+        if self.test_mode_enabled():
+            self.last_month = datetime.datetime(2022, 12, 27).date()
         cases = self.html.xpath(".//tbody/tr/td/a/parent::td/parent::tr")
         for case in cases:
             try:
