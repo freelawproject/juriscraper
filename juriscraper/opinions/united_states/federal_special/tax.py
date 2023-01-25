@@ -14,6 +14,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self.set_blue_green = None
         self.base = "https://public-api-green.dawson.ustaxcourt.gov/public-api"
         self.url = f"{self.base}/opinion-search"
         self.court_id = self.__module__
@@ -30,6 +31,22 @@ class Site(OpinionSiteLinear):
         }
 
     def _download(self, request_dict={}):
+        """Download from api
+
+        The tax court switches between blue and green deploys so we need to
+        check which one is current before we continue
+
+        :param request_dict:
+        :return: None
+        """
+        if not self.set_blue_green and not self.test_mode_enabled():
+            check = self.request["session"].get(self.url)
+            if check.status_code != 200:
+                self.base = (
+                    "https://public-api-blue.dawson.ustaxcourt.gov/public-api"
+                )
+                self.url = f"{self.base}/opinion-search"
+            self.set_blue_green = True
         if self.test_mode_enabled():
             self.json = json.load(open(self.url))
         else:
