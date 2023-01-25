@@ -123,6 +123,7 @@ class PacerSession(requests.Session):
         self.username = username
         self.password = password
         self.client_code = client_code
+        self.additional_request_done = False
 
     def get(self, url, auto_login=True, **kwargs):
         """Overrides request.Session.get with session retry logic.
@@ -148,7 +149,9 @@ class PacerSession(requests.Session):
             updated = self._login_again(r)
             if updated:
                 # Re-do the request with the new session.
-                return super().get(url, **kwargs)
+                r = super().get(url, **kwargs)
+                # Do an additional check of the content returned.
+                self._login_again(r)
         return r
 
     def post(self, url, data=None, json=None, auto_login=True, **kwargs):
@@ -356,6 +359,20 @@ class PacerSession(requests.Session):
         self.cookies = session_cookies
         logger.info("New PACER session established.")
 
+    def _do_additional_request(self, r: requests.Response) -> bool:
+        """Check if we should do an additional request to PACER, sometimes
+        PACER returns the login page even though cookies are still valid.
+        Do an additional GET request if we haven't done it previously.
+        See https://github.com/freelawproject/courtlistener/issues/2160.
+
+        :param r: The requests Response object.
+        :return: True if an additional request should be done, otherwise False.
+        """
+        if r.request.method == "GET" and self.additional_request_done is False:
+            self.additional_request_done = True
+            return True
+        return False
+
     def _login_again(self, r):
         """Log into PACER if the session has credentials and the session has
         expired.
@@ -382,6 +399,8 @@ class PacerSession(requests.Session):
             self.login()
             return True
         else:
+            if self._do_additional_request(r):
+                return True
             raise PacerLoginException(
                 "Invalid/expired PACER session and do not have credentials "
                 "for re-login."

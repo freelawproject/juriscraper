@@ -294,7 +294,7 @@ class PacerDownloadConfirmationPageTest(unittest.TestCase):
         page skipping the attachment page?"""
         self.report_att.query(self.pacer_doc_id_att)
         data_report = self.report_att.data
-        self.assertEqual(data_report["document_number"], "00516470276")
+        self.assertEqual(data_report["document_number"], "45-1")
         self.assertEqual(data_report["docket_number"], "22-30311")
         self.assertEqual(data_report["cost"], "1.50")
         self.assertEqual(data_report["billable_pages"], "15")
