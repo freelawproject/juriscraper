@@ -18,7 +18,6 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         year = str(date.today().year)[-2:]
-        year = 22
         self.url = f"https://www.cnmilaw.org/spm{year}.php#gsc.tab=0"
         self.status = "Published"
 
