@@ -7,6 +7,7 @@ History:
  - created by Andrei Chelaru, 18 July 2014
  - Updated/rewritten by mlr, 2016-04-14
  - Updated by William E. Palin, 2022-05-17
+ - Updated by William E. Palin, 2023-01-26
 """
 from datetime import date, timedelta
 
@@ -19,14 +20,7 @@ class Site(OralArgumentSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "https://cafc.uscourts.gov/wp-admin/admin-ajax.php?action=get_wdtable&table_id=8"
-        self.method = "POST"
-        self._set_parameters()
-        self.today = date.today().strftime("%m/%d/%Y")
-        self.earlier = (date.today() - timedelta(days=30)).strftime("%m/%d/%Y")
-        self.parameters[
-            "columns[0][search][value]"
-        ] = f"{self.earlier}|{self.today}"
+        self.url = "https://cafc.uscourts.gov/home/oral-argument/listen-to-oral-arguments/"
         self.back_scrape_iterable = [
             i.date()
             for i in rrule(
@@ -35,6 +29,17 @@ class Site(OralArgumentSiteLinear):
                 until=date(2022, 5, 17),
             )
         ]
+
+    def _download(self, request_dict={}):
+        """Download from cafc
+
+        :param request_dict: Nothing
+        :return: none
+        """
+        if self.method == "GET":
+            return super()._download(request_dict)
+        else:
+            self.html = super()._download(request_dict)
 
     def _set_parameters(self) -> None:
         """Set the parameters for the request.
@@ -66,9 +71,29 @@ class Site(OralArgumentSiteLinear):
             "length": "1000",
             "search[value]": "",
             "search[regex]": "false",
-            "wdtNonce": "6a2284f635",
+            "wdtNonce": self.html.xpath(
+                ".//input[@id='wdtNonceFrontendEdit_8']/@value"
+            ),
             "sRangeSeparator": "|",
         }
+        self.today = date.today().strftime("%m/%d/%Y")
+        self.earlier = (date.today() - timedelta(days=30)).strftime("%m/%d/%Y")
+        self.parameters[
+            "columns[0][search][value]"
+        ] = f"{self.earlier}|{self.today}"
+
+    def _fetch_json(self):
+        """Update parameters and fetch json
+
+        Switch to POST set params and download JSON
+
+        :return: None
+        """
+        # Fetch the JSON api endpoint
+        self.method = "POST"
+        self._set_parameters()
+        self.url = "https://cafc.uscourts.gov/wp-admin/admin-ajax.php?action=get_wdtable&table_id=8"
+        self._download()
 
     def _process_html(self) -> None:
         """Extract content from JSON response
@@ -83,6 +108,8 @@ class Site(OralArgumentSiteLinear):
         ]
         :return: None
         """
+        if not self.test_mode_enabled():
+            self._fetch_json()
         for row in self.request["response"].json()["data"]:
             _, name, _, url, _ = row[2].split('"')
             self.cases.append(
