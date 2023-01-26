@@ -1,5 +1,5 @@
 """Scraper for Supreme Court of Northern Mariana Islands
-CourtID: mp
+CourtID: nmi
 Court Short Name: NMI
 Author: William Edward Palin
 History:

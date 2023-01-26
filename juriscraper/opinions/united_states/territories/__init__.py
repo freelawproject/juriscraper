@@ -1,6 +1,6 @@
 __all__ = [
     "guam",
-    "mp",
+    "nmi",
     "pr",
     "prapp",
     "vi",
