@@ -7,9 +7,13 @@ import os
 import sys
 import time
 import unittest
+from unittest import mock
 
-from juriscraper.lib.test_utils import warn_or_crash_slow_parser
-from juriscraper.pacer.http import check_if_logged_in_page
+from requests import Request
+
+from juriscraper.lib.exceptions import PacerLoginException
+from juriscraper.lib.test_utils import MockResponse, warn_or_crash_slow_parser
+from juriscraper.pacer.http import PacerSession, check_if_logged_in_page
 from tests import TESTS_ROOT_EXAMPLES_PACER
 
 
@@ -54,3 +58,73 @@ class PacerNeedLoginTest(unittest.TestCase):
             TESTS_ROOT_EXAMPLES_PACER, "authentication_samples"
         )
         self.parse_files(path_root, "*.html")
+
+    @mock.patch(
+        "juriscraper.pacer.http.requests.Session.get",
+        side_effect=lambda *args, **kwargs: MockResponse(
+            200,
+            b"",
+            headers={"content-type": "text/html"},
+            request=Request(method="GET"),
+        ),
+    )
+    @mock.patch(
+        "juriscraper.pacer.http.check_if_logged_in_page",
+        side_effect=lambda x: False,
+    )
+    def test_do_an_additional_get_request(
+        self, mock_get, mock_check_if_logged_in
+    ):
+        """Test if we can do an additional GET request after check_if_logged_in
+        returned False, check_if_logged_in_page should be called 2 times and
+        raise a PacerLoginException afterwards.
+        """
+        session = PacerSession(username="", password="")
+        with self.assertRaises(PacerLoginException):
+            session.get("https://example.com")
+
+        self.assertEqual(mock_check_if_logged_in.call_count, 2)
+
+    @mock.patch(
+        "juriscraper.pacer.http.requests.Session.post",
+        side_effect=lambda *args, **kwargs: MockResponse(
+            200,
+            b"",
+            headers={"content-type": "text/html"},
+            request=Request(method="POST"),
+        ),
+    )
+    @mock.patch(
+        "juriscraper.pacer.http.check_if_logged_in_page",
+        side_effect=lambda x: False,
+    )
+    def test_avoid_an_additional_post_request(
+        self, mock_get, mock_check_if_logged_in
+    ):
+        """Test if we can avoid an additional POST request after
+        check_if_logged_in returned False, check_if_logged_in_page should be
+        called 1 time and raise a PacerLoginException afterwards.
+        """
+        session = PacerSession(username="", password="")
+        with self.assertRaises(PacerLoginException):
+            session.post("https://example.com")
+        self.assertEqual(mock_check_if_logged_in.call_count, 1)
+
+    @mock.patch("juriscraper.pacer.http.requests.Session.get")
+    @mock.patch(
+        "juriscraper.pacer.http.check_if_logged_in_page",
+        side_effect=lambda x: False,
+    )
+    @mock.patch(
+        "juriscraper.pacer.http.is_pdf",
+        side_effect=lambda x: True,
+    )
+    def test_avoid_an_additional_get_request_pdf(
+        self, mock_get, mock_check_if_logged_in, mock_is_pdf
+    ):
+        """Test if we can avoid an additional GET requests if a PDF binary is
+        returned, check_if_logged_in_page shouldn't be called.
+        """
+        session = PacerSession(username="", password="")
+        session.get("https://example.com")
+        self.assertEqual(mock_check_if_logged_in.call_count, 0)

@@ -85,3 +85,13 @@ def warn_or_crash_slow_parser(duration, warn_duration=1, max_duration=15):
 def warn_generated_compare_file(path_to_compare_file):
     warning = f"WARNING: GENERATED COMPARE FILE: {path_to_compare_file}"
     warnings.warn(warning, CompareFileGeneratedWarning)
+
+
+class MockResponse(Response):
+    """Mock a Request Response"""
+
+    def __init__(self, status_code, content=None, headers=None, request=None):
+        self.status_code = status_code
+        self._content = content
+        self.headers = headers
+        self.request = request

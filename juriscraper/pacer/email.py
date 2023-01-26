@@ -252,8 +252,15 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         description = ""
         # Paths to look for NEFs description
-        main_path = './following::strong[contains(., "Docket Text:")][1]/following-sibling::'
-        possible_paths = ["font[1]/b//text()", "b[1]/span//text()", "text()"]
+        main_path = (
+            './following::strong[contains(., "Docket Text:")][1]/parent::p/'
+        )
+        possible_paths = [
+            "font[1]/b//text()",
+            "b[1]/span//text()",
+            "text()",
+            "following::font[@face='arial,helvetica']//text()",
+        ]
 
         if self._is_appellate():
             # Paths to look for NDAs description

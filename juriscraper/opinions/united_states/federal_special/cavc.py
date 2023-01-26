@@ -1,80 +1,88 @@
 """Scraper for the United States Court of Appeals for Veterans Claims
 CourtID: cavc
-Court Short Name: Vet.App.
+Court Short Name: Vet. App.
 History:
  - 2012-06-07: Created by Brian Carver
  - 2014-08-06: Updated by mlr.
+ - 2023-01-23: Update by William Palin
 """
 
 import datetime
-import time
+import re
 from datetime import date
+from typing import Any, Dict
 
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = "http://www.uscourts.cavc.gov/opinions.php"
         self.court_id = self.__module__
+        self.last_month = date.today() - datetime.timedelta(weeks=4)
+        self.status = "Published"
 
-    def _get_docket_numbers(self):
-        docket_numbers = []
-        for e in self.html.xpath("//*[@id='oasteps_boxes']//td[2]/a"):
-            s = ", ".join([t.strip() for t in e.xpath("text()") if t.strip()])
-            docket_numbers.append(s)
-        return docket_numbers
+    def _process_html(self):
+        """Process the CAVC website and collect new opinions
 
-    def _get_download_urls(self):
-        return list(self.html.xpath("//*[@id='oasteps_boxes']//td[2]//@href"))
+        :return: None
+        """
+        if self.test_mode_enabled():
+            self.last_month = datetime.datetime(2022, 12, 27).date()
+        cases = self.html.xpath(".//tbody/tr/td/a/parent::td/parent::tr")
+        for case in cases:
+            try:
+                _, date = case.xpath(".//td/text()")
+                clean_date = datetime.datetime.strptime(date, "%d%b%y")
+                if self.last_month > clean_date.date():
+                    break
+                self.cases.append(
+                    {
+                        "url": case.xpath(".//a/@href")[0],
+                        "date": clean_date.strftime("%m/%d/%Y"),
+                        "docket": case.xpath(".//a/text()")[0],
+                        "name": "Case name extracted from text",
+                    }
+                )
+            except ValueError:
+                # The table has a malformed row
+                continue
 
-    def _get_case_dates(self):
-        dates = []
-        for txt in self.html.xpath("//*[@id='oasteps_boxes']//td[3]//text()"):
-            dates.append(
-                date.fromtimestamp(time.mktime(time.strptime(txt, "%d%b%y")))
-            )
-        return dates
+    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+        """Can we extract the case name and clean it up?
 
-    def _get_case_names(self):
-        case_names = []
-        dates = self._get_case_dates()
-        appellants = []
-        for e in self.html.xpath("//*[@id='oasteps_boxes']//td[1]"):
-            app = ", ".join(
-                [t.strip() for t in e.xpath("text()") if t.strip()]
-            )
-            appellants.append(app)
-        for t, d in zip(appellants, dates):
-            # See: http://en.wikipedia.org/wiki/United_States_Secretary_of_Veterans_Affairs
-            if d > datetime.date(2014, 7, 30):
-                case_names.append(f"{t}v. McDonald")
-            elif d > datetime.date(2014, 5, 30):
-                case_names.append(f"{t} v. Gibson")
-            elif d > datetime.date(2009, 1, 20):
-                case_names.append(f"{t} v. Shinseki")
-            elif d > datetime.date(2007, 12, 20):
-                case_names.append(f"{t} v. Peake")
-            elif d > datetime.date(2007, 10, 1):
-                case_names.append(f"{t} v. Mansfield")
-            elif d > datetime.date(2005, 1, 26):
-                case_names.append(f"{t} v. Nicholson")
-            elif d > datetime.date(2001, 1, 23):
-                case_names.append(f"{t} v. Principi")
-            elif d > datetime.date(2000, 7, 25):
-                case_names.append(f"{t} v. Gober")
-            elif d > datetime.date(1998, 1, 2):
-                case_names.append(f"{t} v. West")
-            elif d > datetime.date(1997, 7, 1):
-                case_names.append(f"{t} v. Gober")
-            elif d > datetime.date(1993, 1, 22):
-                case_names.append(f"{t} v. Brown")
-            elif d > datetime.date(1992, 9, 26):
-                case_names.append(f"{t} v. Principi")
+        This method is a bit ... ugly.  Mostly due to bad PDFs that occur
+        not often. This means weird whitespacing that makes this the most
+        efficient method for name extraction
+
+        :param scraped_text: The content of the document downloaded
+        :return: Metadata to be added to the case
+        """
+        keepers = []
+        start = False
+        for row in scraped_text.split("\n"):
+            check_row = re.sub(r"\s", "", row.upper())
+            if re.findall(r"NOS?\.?\d+-\d+", check_row):
+                start = True
+                continue
+            if not start:
+                continue
+            if "SECRETARY" in row.upper() or "VETERANS AFFAIRS" in row.upper():
+                break
+            if "Before" in row:
+                break
+            if not row.strip():
+                continue
+            if "JR" not in row:
+                keepers.append(row.split(",", 1)[0].strip())
             else:
-                case_names.append(f"{t} v. Derwinski")
-        return case_names
-
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
+                keepers.append(row[: row.index("JR.") + 3].strip())
+        case_name = titlecase(" ".join(keepers))
+        metadata = {
+            "OpinionCluster": {
+                "case_name": case_name,
+            },
+        }
+        return metadata
