@@ -1,12 +1,12 @@
 """
 Author: William Palin
 Date created: 2023-01-21
-Scraper for the Decisiones del Tribunal Supremo
+Scraper for the Decisiones del Tribunal Apelaciones
 CourtID: prapp
-Court Short Name: Puerto Rico
+Court Short Name: Puerto Rico Court of Apelaciones
 """
-
-from datetime import date
+import locale
+from datetime import datetime
 
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -14,13 +14,18 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
+        locale.setlocale(locale.LC_TIME, "es_ES.UTF-8")
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        year = date.today().year
         self.url = f"https://poderjudicial.pr/tribunal-apelaciones/decisiones-finales-del-tribunal-de-apelaciones/"
         self.status = "Published"
 
     def _download(self, request_dict={}):
+        """
+
+        :param request_dict:
+        :return:
+        """
         if self.test_mode_enabled():
             return super()._download()
         if not self.html:
@@ -38,12 +43,14 @@ class Site(OpinionSiteLinear):
                 continue
             else:
                 url = maybe_link[0]
+            date_str = cells[2].text_content()
+            date_obj = datetime.strptime(date_str, "%d %b %Y")
 
             self.cases.append(
                 {
                     "name": titlecase(cells[1].text_content()),
                     "url": url,
                     "docket": cells[0].text_content(),
-                    "date": cells[2].text_content(),
+                    "date": str(date_obj.date()),
                 }
             )

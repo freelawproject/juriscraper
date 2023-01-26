@@ -6,6 +6,7 @@ CourtID: pr
 Court Short Name: Puerto Rico
 """
 
+import locale
 from datetime import date, datetime
 from typing import Optional
 
@@ -15,6 +16,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        locale.setlocale(locale.LC_TIME, "es_ES.UTF-8")
         self.court_id = self.__module__
         year = date.today().year
         self.url = f"https://poderjudicial.pr/index.php/tribunal-supremo/decisiones-del-tribunal-supremo/decisiones-del-tribunal-supremo-{year}/"
@@ -23,47 +25,31 @@ class Site(OpinionSiteLinear):
     def handle_spanish_dates(self, cells) -> Optional[str]:
         """Convert dates from spanish to english to process
 
-        :param cells:
+        Using multiple formats and ignore the bad data on the website
+        Parse either of the two spanish formats
+
+        :param cells: Table Cells in the row
         :return:
         """
-        spanish_months = {
-            "enero": "January",
-            "febrero": "February",
-            "marzo": "March",
-            "abril": "April",
-            "mayo": "May",
-            "junio": "June",
-            "julio": "July",
-            "agosto": "August",
-            "septiembre": "September",
-            "octubre": "October",
-            "noviembre": "November",
-            "diciembre": "December",
-        }
         try:
-            date_str = cells[4].text_content()
-            date_str = date_str.replace("\xa0", "")
-            date_str = date_str.replace(" de ", " ")
-            for k, v in spanish_months.items():
-                date_str = date_str.replace(k, v)
-            datetime_str = datetime.strptime(date_str, "%d %B %Y")
-            return str(datetime_str.date())
+            date_str = cells[4].text_content().replace("\xa0", "")
+            try:
+                date_str = datetime.strptime(date_str, "%d de %B de %Y")
+            except:
+                date_str = datetime.strptime(date_str, "%d %B %Y")
+            return str(date_str.date())
         except ValueError:
             return None
 
     def _process_html(self):
-        for row in self.html.xpath(".//table/tbody/tr"):
+        for row in self.html.xpath(".//table/tbody/tr/td/a/@href/../../.."):
             cells = row.xpath(".//td")
             citation = cells[0].text_content()
-            maybe_link = cells[0].xpath(".//a/@href")
-            if not maybe_link:
-                continue
-            else:
-                url = maybe_link[0]
+            url = cells[0].xpath(".//a/@href")[0]
             date_str = self.handle_spanish_dates(cells)
             if not date_str:
+                # This is to handle the junk on the website in one row
                 continue
-
             self.cases.append(
                 {
                     "name": cells[3].text_content(),
