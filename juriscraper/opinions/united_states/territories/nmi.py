@@ -77,7 +77,7 @@ class Site(OpinionSiteLinear):
         match = re.findall(r"Case No\.: (.*)", normalized_content)
         docket_number = match[0] if match else ""
         metadata = {
-            "OpinionCluster": {
+            "Docket": {
                 "docket_number": docket_number,
             },
         }
