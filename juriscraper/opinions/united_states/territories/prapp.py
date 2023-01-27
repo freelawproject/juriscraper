@@ -5,8 +5,7 @@ Scraper for the Decisiones del Tribunal Apelaciones
 CourtID: prapp
 Court Short Name: Puerto Rico Court of Apelaciones
 """
-import locale
-from datetime import datetime
+from dateparser import parse
 
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -14,17 +13,16 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
-        locale.setlocale(locale.LC_TIME, "es_ES.UTF-8")
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = f"https://poderjudicial.pr/tribunal-apelaciones/decisiones-finales-del-tribunal-de-apelaciones/"
         self.status = "Published"
 
     def _download(self, request_dict={}):
-        """
+        """Download websites
 
-        :param request_dict:
-        :return:
+        :param request_dict: Empty dict
+        :return: HTML object
         """
         if self.test_mode_enabled():
             return super()._download()
@@ -43,8 +41,7 @@ class Site(OpinionSiteLinear):
                 continue
             else:
                 url = maybe_link[0]
-            date_str = cells[2].text_content()
-            date_obj = datetime.strptime(date_str, "%d %b %Y")
+            date_obj = parse(cells[2].text_content(), languages=["es"])
 
             self.cases.append(
                 {

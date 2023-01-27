@@ -1,6 +1,5 @@
 import hashlib
 import json
-import locale
 from datetime import date, datetime
 
 import certifi
@@ -35,7 +34,6 @@ class AbstractSite:
 
     def __init__(self, cnt=None):
         super().__init__()
-        locale.setlocale(locale.LC_TIME, "en_US.UTF-8")
 
         # Computed metadata
         self.hash = None
