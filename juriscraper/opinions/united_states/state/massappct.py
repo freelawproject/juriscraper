@@ -6,6 +6,8 @@ Author: Andrei Chelaru
 Court Contact: SJCReporter@sjc.state.ma.us (617) 557-1030
 Reviewer: mlr
 Date: 2014-07-12
+History:
+    - Update 2023-01-28 by William E. Palin
 """
 
 from juriscraper.opinions.united_states.state import mass
@@ -16,4 +18,3 @@ class Site(mass.Site):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.court_identifier = "AC"
-        self.set_local_variables()
