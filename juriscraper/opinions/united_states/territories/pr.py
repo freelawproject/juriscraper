@@ -18,7 +18,6 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         year = date.today().year
-        year = 2022
         self.url = f"https://poderjudicial.pr/index.php/tribunal-supremo/decisiones-del-tribunal-supremo/decisiones-del-tribunal-supremo-{year}/"
         self.status = "Published"
 
