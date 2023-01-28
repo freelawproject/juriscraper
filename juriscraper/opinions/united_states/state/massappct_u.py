@@ -67,7 +67,7 @@ class Site(OpinionSiteLinear):
                     "date": date.strip(),
                     "docket": docket.strip(),
                     "name": name.strip(),
-                    "url": f"{self.base}{path}",
+                    "url": path,
                     "status": "Unpublished",
                 }
             )
