@@ -11,6 +11,7 @@ Date: 2020-02-27
 from datetime import date, timedelta
 from urllib.parse import urlencode
 
+from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -66,8 +67,8 @@ class Site(OpinionSiteLinear):
                 {
                     "date": date.strip(),
                     "docket": docket.strip(),
-                    "name": name.strip(),
-                    "url": f"{self.base}{path}",
+                    "name": titlecase(name.strip()),
+                    "url": path,
                     "status": "Unpublished",
                 }
             )
