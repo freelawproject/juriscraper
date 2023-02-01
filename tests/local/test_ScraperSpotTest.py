@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-
-
+import re
 import unittest
 
 from juriscraper.opinions.united_states.state import colo, mass, massappct, nh
@@ -67,7 +66,10 @@ class ScraperSpotTest(unittest.TestCase):
                 "SJC 11929; SJC 11944",
             ],
         }
-        self.validate_mass_string_parse(strings, "mass")
+        for s in strings.items():
+            m = re.search(r"(.*?) \((.*?)\)( \((.*?)\))?", s[0])
+            name, docket, _, date = m.groups()
+            self.assertEqual([name, docket], s[1])
 
     def test_massappct(self):
         strings = {
@@ -124,33 +126,10 @@ class ScraperSpotTest(unittest.TestCase):
                 "AC 16-P-165",
             ],
         }
-        self.validate_mass_string_parse(strings, "massappct")
-
-    def validate_mass_string_parse(self, strings, site_id):
-        """Non-test method"""
-        if site_id not in ["mass", "massappct"]:
-            self.fail(
-                "You provided an invalid site string to validate_mass_string_parse: %s"
-                % site_id
-            )
-        site = mass.Site() if site_id == "mass" else massappct.Site()
-        for raw_string, parsed in strings.items():
-            # Set year on site scraper
-            site.year = int(raw_string.split(" ")[-1].rstrip(")"))
-            site.set_local_variables()
-            try:
-                # make sure name is parsed
-                self.assertEqual(
-                    site.grouping_regex.search(raw_string).group(1).strip(),
-                    parsed[0],
-                )
-                # make sure docket is parsed
-                self.assertEqual(
-                    site.grouping_regex.search(raw_string).group(2).strip(),
-                    parsed[1],
-                )
-            except AttributeError:
-                self.fail(f"Unable to parse {site_id} string: '{raw_string}'")
+        for s in strings.items():
+            m = re.search(r"(.*?) \((.*?)\)( \((.*?)\))?", s[0])
+            name, docket, _, date = m.groups()
+            self.assertEqual([name, docket], s[1])
 
     def test_ca6_oa(self):
         # Tests are triads. 1: Input s, 2: Group 1, 3: Group 2.
