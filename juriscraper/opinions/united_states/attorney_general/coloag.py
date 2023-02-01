@@ -39,7 +39,7 @@ class Site(OpinionSiteLinear):
         else:
             year = "2021-01-31"
         for row in self.html.xpath(".//li/a[contains(@href, '.pdf')]/.."):
-            url = row.xpath(".//a/@href")[0]
+            url = row.xpath(".//a/@href")[0].replace("http", "https")
             name = row.xpath(".//a/text()")[0]
             self.cases.append(
                 {

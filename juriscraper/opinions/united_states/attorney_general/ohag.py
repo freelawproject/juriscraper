@@ -45,6 +45,9 @@ class Site(OpinionSiteLinear):
         date_str = scraped_text.split("\n")[0]
         date_filed = dt.strptime(date_str, "%B %d, %Y").strftime("%Y-%m-%d")
         metadata = {
-            "OpinionCluster": {"date_filed": date_filed},
+            "OpinionCluster": {
+                "date_filed": date_filed,
+                "date_filed_is_approximate": False,
+            },
         }
         return metadata

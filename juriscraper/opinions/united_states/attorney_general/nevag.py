@@ -34,7 +34,7 @@ class Site(OpinionSiteLinear):
             if self.test_mode_enabled():
                 date = "2023-01-31"
             else:
-                date = (name.split("-")[1],)
+                date = name.split("-")[1]
             self.cases.append(
                 {
                     "url": url,

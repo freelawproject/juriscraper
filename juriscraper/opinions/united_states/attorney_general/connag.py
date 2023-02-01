@@ -57,6 +57,9 @@ class Site(OpinionSiteLinear):
                 match.group(), "%B %d, %Y"
             ).strftime("%Y-%m-%d")
             metadata = {
-                "OpinionCluster": {"date_filed": date_filed},
+                "OpinionCluster": {
+                    "date_filed": date_filed,
+                    "date_filed_is_approximate": False,
+                },
             }
             return metadata
