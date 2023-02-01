@@ -6,6 +6,8 @@ Author: William E. Palin
 History:
  - 2023-01-29: Created.
 """
+import datetime
+import re
 
 from juriscraper.DeferringList import DeferringList
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -29,7 +31,10 @@ class Site(OpinionSiteLinear):
         for row in self.section.xpath(".//a"):
             url = row.xpath(".//@href")[0]
             docket, name = row.text_content().strip().split(":")
-            date = f"20{docket.split()[1][:2]}"
+            if not self.test_mode_enabled():
+                date = f"20{docket.split()[1][:2]}"
+            else:
+                date = "2023-01-31"
             self.cases.append(
                 {
                     "url": url,
@@ -54,3 +59,23 @@ class Site(OpinionSiteLinear):
 
         links = [case["url"] for case in self.cases]
         return DeferringList(seed=links, fetcher=get_download_url)
+
+    def extract_from_text(self, scraped_text):
+        """Extract date from downloaded content
+
+        :param scraped_text: Scraped content
+        :return: Opinion cluster date filed metadata
+        """
+        pattern = re.compile(r"([A-Z][a-z]+ \d{1,2}, \d{4})")
+        match = pattern.search(scraped_text)
+        if match:
+            date_filed = datetime.datetime.strptime(
+                match.group(), "%B %d, %Y"
+            ).strftime("%Y-%m-%d")
+            metadata = {
+                "OpinionCluster": {
+                    "date_filed": date_filed,
+                    "date_filed_is_approximate": False,
+                },
+            }
+            return metadata

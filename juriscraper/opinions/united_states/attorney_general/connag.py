@@ -31,16 +31,25 @@ class Site(OpinionSiteLinear):
             url = row.xpath(".//p/a/@href")[0]
             name = row.xpath(".//p/a/text()")[0]
             docket = name.split()[0]
+            if self.test_mode_enabled():
+                date = "2023-01-31"
+            else:
+                date = (str(self.year),)
             self.cases.append(
                 {
                     "name": name,
                     "docket": docket,
                     "url": url,
-                    "date": str(self.year),
+                    "date": date,
                 }
             )
 
     def extract_from_text(self, scraped_text):
+        """Extract date information from scraped content
+
+        :param scraped_text: Scraped text
+        :return: Metadata containing date filed data
+        """
         pattern = re.compile(r"([A-Z][a-z]+ \d{1,2}, \d{4})")
         match = pattern.search(scraped_text)
         if match:

@@ -6,6 +6,7 @@ Author: William E. Palin
 History:
  - 2023-01-29: Created.
 """
+import datetime
 import re
 
 from lxml.html import tostring
@@ -36,7 +37,7 @@ class Site(OpinionSiteLinear):
             self.url = f"https://coag.gov/attorney-general-opinions/{key}/"
             self.html = super()._download()
         else:
-            year = "2021"
+            year = "2021-01-31"
         for row in self.html.xpath(".//li/a[contains(@href, '.pdf')]/.."):
             url = row.xpath(".//a/@href")[0]
             name = row.xpath(".//a/text()")[0]
@@ -50,3 +51,23 @@ class Site(OpinionSiteLinear):
                     "date_filed_is_approximate": True,
                 }
             )
+
+    def extract_from_text(self, scraped_text):
+        """Extract date info from text
+
+        :param scraped_text: Scraped text
+        :return: The metadata containing date filed
+        """
+        pattern = re.compile(r"([A-Z][a-z]+ \d{1,2}, \d{4})")
+        match = pattern.search(scraped_text)
+        if match:
+            date_filed = datetime.datetime.strptime(
+                match.group(), "%B %d, %Y"
+            ).strftime("%Y-%m-%d")
+            metadata = {
+                "OpinionCluster": {
+                    "date_filed": date_filed,
+                    "date_filed_is_approximate": False,
+                },
+            }
+            return metadata

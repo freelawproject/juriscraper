@@ -6,6 +6,9 @@ Author: William E. Palin
 History:
  - 2023-01-29: Created.
 """
+import datetime
+import re
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -24,13 +27,16 @@ class Site(OpinionSiteLinear):
         for row in self.html.xpath(".//article/div/div/ul/li/a/@href/../.."):
             url = row.xpath(".//a/@href")[0]
             if ".pdf" in url:
-                year = row.text_content().split()[0]
+                if self.test_mode_enabled():
+                    date = "2014-01-31"
+                else:
+                    date = row.text_content().split()[0]
                 self.cases.append(
                     {
                         "url": url,
                         "docket": "",
-                        "name": url.split("/")[-1][-4:],
-                        "date": year,
+                        "name": url.split("/")[-1][:-4],
+                        "date": date,
                         "date_filed_is_approximate": True,
                         "summary": "",
                     }
@@ -61,3 +67,23 @@ class Site(OpinionSiteLinear):
                                 "url": url,
                             }
                         )
+
+    def extract_from_text(self, scraped_text):
+        """
+
+        :param scraped_text:
+        :return:
+        """
+        pattern = re.compile(r"([A-Z][a-z]+ \d{1,2}, \d{4})")
+        match = pattern.search(scraped_text)
+        if match:
+            date_filed = datetime.datetime.strptime(
+                match.group(), "%B %d, %Y"
+            ).strftime("%Y-%m-%d")
+            metadata = {
+                "OpinionCluster": {
+                    "date_filed": date_filed,
+                    "date_filed_is_approximate": False,
+                },
+            }
+            return metadata

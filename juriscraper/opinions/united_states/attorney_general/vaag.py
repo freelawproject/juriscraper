@@ -30,7 +30,10 @@ class Site(OpinionSiteLinear):
                 f".//a[contains(@href, '{self.year}-official-opinions')]/@href"
             )[0]
             self.html = super()._download()
-
+        else:
+            # Assign date for testing purposes, which is collected via extract
+            # from text later
+            self.year = "2023-01-31"
         for row in self.html.xpath(
             ".//tr/td/strong/a[contains(@href, '.pdf')]/../../.."
         ):
@@ -49,6 +52,11 @@ class Site(OpinionSiteLinear):
             )
 
     def extract_from_text(self, scraped_text):
+        """Extact date from pdf
+
+        :param scraped_text:
+        :return:
+        """
         pattern = re.compile(r"([A-Z][a-z]+ \d{1,2}, \d{4})")
         match = pattern.search(scraped_text)
         if match:
@@ -56,6 +64,9 @@ class Site(OpinionSiteLinear):
                 "%Y-%m-%d"
             )
             metadata = {
-                "OpinionCluster": {"date_filed": date_filed},
+                "OpinionCluster": {
+                    "date_filed": date_filed,
+                    "date_filed_is_approximate": False,
+                },
             }
             return metadata

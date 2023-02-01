@@ -30,16 +30,25 @@ class Site(OpinionSiteLinear):
             name = row.text_content().split(docket)[1]
             if "Click" in docket:
                 continue
+            if not self.test_mode_enabled():
+                date = docket.split("-")[0]
+            else:
+                date = "2022-01-31"
             self.cases.append(
                 {
                     "name": name,
                     "docket": docket,
                     "url": url,
-                    "date": docket.split("-")[0],
+                    "date": date,
                 }
             )
 
     def extract_from_text(self, scraped_text):
+        """Extract date from pdf content
+
+        :param scraped_text: The scraped text
+        :return: Metadata containing date information for CL
+        """
         pattern = re.compile(r"([A-Z][a-z]+ \d{1,2}, \d{4})")
         match = pattern.search(scraped_text)
         if match:

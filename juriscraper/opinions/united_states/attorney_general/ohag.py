@@ -23,15 +23,20 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
+
         for row in self.html.xpath(".//h2/a[contains(@href, '.aspx')]/.."):
             url = row.xpath(".//a/@href")[0]
             docket = row.xpath(".//a/text()")[0]
+            if self.test_mode_enabled():
+                date = "2023-01-31"
+            else:
+                date = docket.split("-")[0]
             self.cases.append(
                 {
                     "url": url,
                     "docket": docket,
                     "name": f"Opinion No. {docket}",
-                    "date": docket.split("-")[0],
+                    "date": date,
                 }
             )
 

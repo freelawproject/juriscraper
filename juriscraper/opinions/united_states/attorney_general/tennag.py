@@ -25,6 +25,8 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
+        if self.test_mode_enabled():
+            self.year = "2023-01-31"
         for row in self.html.xpath(".//a[contains(@href, '.pdf')]"):
             url = row.xpath(".//@href")[0]
             name, docket = row.text_content().split(":")
@@ -39,6 +41,11 @@ class Site(OpinionSiteLinear):
             )
 
     def extract_from_text(self, scraped_text):
+        """Extract date from PDF
+
+        :param scraped_text: PDF content
+        :return: Date information extracted for CL
+        """
         pattern = re.compile(r"([A-Z][a-z]+ \d{1,2}, \d{4})")
         match = pattern.search(scraped_text)
         if match:
