@@ -1,4 +1,4 @@
-"""Scraper for the California Attorney General
+"""Scraper for the New York Attorney General
 CourtID: nyag
 Court Short Name: New York Attorney General
 """

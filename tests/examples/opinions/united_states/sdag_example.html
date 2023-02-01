@@ -1,0 +1,515 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+
+<!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79366862-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<meta http-equiv="pragma" CONTENT="no-cache">
+<meta HTTP-equiv="cache-control" CONTENT="no-cache,no-store">
+
+<link rel="icon" type="image/png" href="/img/favicon.png" />
+<script src="/inc/scripts/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="/inc/scripts/jquery.mask.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script language="javascript">
+
+    if (top.frames.length != 0)
+        top.location = self.document.location;
+
+</script>
+<meta charset="utf-8" />
+    <script>
+  (function() {
+    var cx = '012382400048732927914:2b3gl3i78k0';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<!-- BEGIN LivePerson Monitor. -->
+<script type="text/javascript">window.lpTag = window.lpTag || {}, "undefined" == typeof window.lpTag._tagCount ? (window.lpTag = { site: '13646062' || "", section: lpTag.section || "", tagletSection: lpTag.tagletSection || null, autoStart: lpTag.autoStart !== !1, ovr: lpTag.ovr || {}, _v: "1.7.0", _tagCount: 1, protocol: "https:", events: { bind: function (t, e, i) { lpTag.defer(function () { lpTag.events.bind(t, e, i) }, 0) }, trigger: function (t, e, i) { lpTag.defer(function () { lpTag.events.trigger(t, e, i) }, 1) } }, defer: function (t, e) { 0 == e ? (this._defB = this._defB || [], this._defB.push(t)) : 1 == e ? (this._defT = this._defT || [], this._defT.push(t)) : (this._defL = this._defL || [], this._defL.push(t)) }, load: function (t, e, i) { var n = this; setTimeout(function () { n._load(t, e, i) }, 0) }, _load: function (t, e, i) { var n = t; t || (n = this.protocol + "//" + (this.ovr && this.ovr.domain ? this.ovr.domain : "lptag.liveperson.net") + "/tag/tag.js?site=" + this.site); var a = document.createElement("script"); a.setAttribute("charset", e ? e : "UTF-8"), i && a.setAttribute("id", i), a.setAttribute("src", n), document.getElementsByTagName("head").item(0).appendChild(a) }, init: function () { this._timing = this._timing || {}, this._timing.start = (new Date).getTime(); var t = this; window.attachEvent ? window.attachEvent("onload", function () { t._domReady("domReady") }) : (window.addEventListener("DOMContentLoaded", function () { t._domReady("contReady") }, !1), window.addEventListener("load", function () { t._domReady("domReady") }, !1)), "undefined" == typeof window._lptStop && this.load() }, start: function () { this.autoStart = !0 }, _domReady: function (t) { this.isDom || (this.isDom = !0, this.events.trigger("LPT", "DOM_READY", { t: t })), this._timing[t] = (new Date).getTime() }, vars: lpTag.vars || [], dbs: lpTag.dbs || [], ctn: lpTag.ctn || [], sdes: lpTag.sdes || [], ev: lpTag.ev || [] }, lpTag.init()) : window.lpTag._tagCount += 1;</script>
+<!-- END LivePerson Monitor. -->
+
+<script src="/inc/scripts/modernizr.custom.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" href="/inc/styles/styles.css" type="text/css" />
+
+<script>
+    $(document).ready(function(){
+        $('.date').mask('00/00/0000');
+        $('.phoneNum').mask('(000) 000-0000');
+    });
+</script>
+
+<script>
+    //Mobile Toggle
+    $(document).ready(function () {
+        $("#submenu").click(function () {
+            $("#submenu,#sidemenu").toggleClass("open");
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('.date').datepicker();
+    })
+</script>
+
+<script>
+    //FAQ Toggle
+    $(function () {
+        $("#accordion").accordion({ collapsible: true, autoHeight: false, navigation: true, heightStyle: "content" });
+    });
+  </script>
+
+
+<style>
+    header {
+        max-height: 200px;
+    }
+    header #ag {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    header #ag img {
+        margin-left: 65px;
+    }
+    header #ag p {
+        margin: 0;
+        color: #f4bc24;
+        font-size: 1.25em;
+        text-shadow: 3px 3px 3px #000;
+        width: 300px;
+    }
+    @media screen and (max-width: 1300px) {
+        header #ag img {
+            margin-left: 30px;
+        }
+        header #ag p {
+            font-size: 1.15em;
+            width: 300px;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        header #ag {
+            margin-bottom: 0;
+        }
+        header #ag img {
+            margin-left: 30px;
+        }
+        header #ag p {
+            display: none;
+        }
+    }
+</style>
+
+
+    <title>South Dakota Attorney General</title>
+
+</head>
+<body>
+    <section id="main">
+   <header>
+
+       <article id="sm">
+           <a href="https://www.facebook.com/SDATG/" class="fa fa-facebook-square" target="_blank"></a>
+           <a href="https://twitter.com/SDAttorneyGen" class="fa fa-twitter-square" target="_blank"></a>
+           <a href="https://www.instagram.com/agjasonravnsborg/" class="fa fa-instagram" target="_blank"></a>
+           <a href="https://www.youtube.com/user/SDAttorneyGeneral" class="fa fa-youtube-square" target="_blank"></a>
+           <a href="/contact.aspx" class="fa fa-envelope-square"></a>
+
+       </article>
+    <article id="livehelp">
+
+		<div id="LP_DIV_1444027343250"></div>
+
+
+
+    </article>
+       <article id="ag">
+           <img src="/img/atg.png" alt="Attorney General Headshot" />
+           <p>Attorney General Marty Jackley</p>
+       </article>
+       <article id="logo"><a href="/">
+            <span class="big att"><span class="letter">A</span>TTORNEY</span>
+           <span class="small off">OFFICE OF THE</span>
+           <br />
+           <span class="small sd">SOUTH DAKOTA</span>
+           <span class="big gen"><span class="letter">G</span>ENERAL</span></a>
+       </article>
+       <article id="seal">
+           <img src="/img/seal.png" alt="Attorney General Seal" />
+       </article>
+       <article id="search"><gcse:search></gcse:search></article>
+       <article id="menu" class="dl-trigger"><i class="fa fa-bars"></i><br />MENU</article>
+   </header><nav id="dl-menu" class="dl-menuwrapper">
+
+    <ul class="dl-menu">
+        <li><a href="#">Our Office</a>
+            <ul class="dl-submenu">
+                <li><a href="#">Department Links</a>
+                    <ul class="dl-submenu">
+                        <li><a href="/OurOffice/Departments/appellate.aspx">Appellate</a></li>
+                        <li><a href="/OurOffice/Departments/civil.aspx">Civil</a></li>
+                        <li><a href="/OurOffice/Departments/criminal.aspx">Criminal</a></li>
+                        <li><a target="_blank" href="https://consumer.sd.gov">Consumer Protection</a></li>
+                        <li><a href="/OurOffice/Departments/MFCU/default.aspx">Medicaid Fraud Control Unit</a></li>
+                        <li><a href="#">Division of Criminal Investigation</a>
+                            <ul class="dl-submenu">
+                                <li><a href="/LawEnforcement/Training/default.aspx">LET</a></li>
+                                <li><a href="/LawEnforcement/Forensics/default.aspx">Forensic Lab</a></li>
+                                <li><a href="/OurOffice/Departments/DCI/SAC/default.aspx">SAC</a></li>
+                                <li><a href="/LawEnforcement/Identification/default.aspx">ID</a></li>
+                                <li><a href="/OurOffice/Departments/DCI/intel.aspx">Intel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="/OurOffice/employmentopportunities.aspx">Employment Opportunities</a></li>
+                <li><a href="/OurOffice/JohnJusticeProgram.aspx">John R Justice Program </a></li>
+                <li><a href="/OurOffice/bio.aspx">Attorney General Marty Jackley Biography</a></li>
+                <li><a href="/OurOffice/chiefbio.aspx">Chief Deputy Mark Barnett Biography</a></li>
+
+                <li><a href="#">Media</a>
+                    <ul class="dl-submenu">
+                        <li><a href="/OurOffice/Media/pressreleases.aspx">Press Releases</a></li>
+                        <li><a href="/OurOffice/Media/Publications/default.aspx">Publications</a></li>
+                    </ul>
+                </li>
+                <li><a href="/OurOffice/OfficialOpinions/default.aspx">Official Opinions</a></li>
+                <li><a href="/OurOffice/rfp.aspx">Request for Proposals</a></li>
+                <li><a href="/LawEnforcement/CriminalJusticeDirectory/default.aspx">Criminal Justice Directory</a></li>
+                <li><a href="/LawEnforcement/technologycontacts.aspx">Technology Contacts</a></li>
+                <li><a href="/OurOffice/Departments/DCI/DCIHistory.aspx">DCI History</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Legal Resources</a>
+            <ul class="dl-submenu">
+                <li><a href="/OurOffice/OfficialOpinions/default.aspx">Official Opinions</a></li>
+                <li><a href="/Legal/OpenGovernment/default.aspx">Open Government</a></li>
+                <li><a href="/Legal/governmentaccountabilityboard.aspx">Government Accountability Board</a></li>
+                <li><a href="/Legal/OpenGovernment/authorityboardcommission.aspx">State Authorities/Boards/Commissions</a></li>
+                <li><a href="/legal/DUI247/default.aspx">24/7 Sobriety Program</a></li>
+                <li><a href="/Legal/ballotexplanations.aspx">Draft Ballot Explanation</a></li>
+                <li><a target="_blank" href="http://sor.sd.gov/">Sex Offender Registry</a></li>
+                <li><a target="_blank" href="https://sdsos.gov/general-services/concealed-pistol-permits/cc-default.aspx">Concealed Weapon Information</a></li>
+                <li><a target="_blank" href="http://sdlegislature.gov/">Legislative Research Council</a></li>
+                <li><a target="_blank" href="http://sdlegislature.gov/Statutes/Codified_Laws/default.aspx">SDCL</a></li>
+                <li><a target="_blank" href="http://statebarofsouthdakota.com/">SD State Bar</a></li>
+                <li><a target="_blank" href="http://www.justice.gov/usao-sd">US Attorney Office</a></li>
+                <li><a href="/LawEnforcement/CriminalJusticeDirectory/default.aspx">Criminal Justice Directory</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Law Enforcement Resources</a>
+            <ul class="dl-submenu">
+                <li><a href="/LawEnforcement/DrugAssetCivilForfeiture/default.aspx">Drug Asset Civil Forfeiture</a></li>
+                <li><a href="/OurOffice/Departments/DCI/home.aspx">Division of Criminal Investigation</a></li>
+                <li><a href="https://missingpersons.sd.gov/" target="_blank" rel="noreferrer noopener">Missing Person</a></li>
+                <li><a href="/LawEnforcement/Training/calendar.aspx">Law Enforcement Training Calendar</a></li>
+                <li><a href="/OurOffice/Departments/DCI/SAC/default.aspx">Statistical Analysis Center (SAC)</a>
+                    <ul class="dl-submenu">
+                        <li><a href="/LawEnforcement/CriminalJusticeDirectory/default.aspx">Criminal Justice Directory</a></li>
+                        <li><a href="/OurOffice/Departments/DCI/SAC/CrimeinSouthDakota.aspx">Crime in South Dakota publications</a></li>
+                        <li><a href="/OurOffice/Departments/DCI/SAC/PoliceManagementStudy.aspx">Police Management Study publications</a></li>
+                        <li><a href="/OurOffice/Departments/DCI/SAC/SheriffManagementStudy.aspx">Sheriff Management Study publications</a></li>
+                        <li><a href="/OurOffice/Departments/DCI/SAC/NIBRS.aspx">NIBRS</a></li>
+                    </ul>
+                </li>
+                <li><a href="/LawEnforcement/Training/default.aspx">Law Enforcement Training</a></li>
+                <li><a href="/LawEnforcement/Training/schoolsentinel.aspx">School Sentinel Training</a></li>
+                <li><a href="/LawEnforcement/Training/Certification/911telecommunicator.aspx">Telecommunicator Training</a></li>
+                <li><a href="/LawEnforcement/Forensics/default.aspx">Forensic Lab</a></li>
+                <li><a href="/LawEnforcement/Identification/default.aspx">Identification Section</a>
+                    <ul class="dl-submenu">
+                        <li><a href="/LawEnforcement/Identification/backgroundcheckrequirements.aspx">Background Checks</a></li>
+                    </ul>
+                </li>
+                <li><a href="/LawEnforcement/training/commission.aspx">Law Enforcement Standards and Training Commission</a></li>
+                <li><a target="_blank" href="https://sdsos.gov/general-services/concealed-pistol-permits/cc-default.aspx">Concealed Weapon Information</a></li>
+                <li><a href="/LawEnforcement/technologycontacts.aspx">Technology Contacts</a></li>
+                <li><a href="/LawEnforcement/heroeswellnessgrant.aspx ">Heroes Wellness Grant</a></li>
+                <li><a target="_blank" href="http://sor.sd.gov/">Sex Offender Registry</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Victim Resources</a>
+            <ul class="dl-submenu">
+                <li><a href="/victim/crimevictimservices/default.aspx">Crime Victim Services</a></li>
+                <li><a href="/victim/MDT/default.aspx">Interagency Multidisciplinary Teams</a></li>
+                <li><a href="/LawEnforcement/missingpersons/default.aspx">Missing Persons</a></li>
+                <li><a href="/victim/marsyslaw.aspx">Marsy's Law</a></li>
+                <li><a href="/victim/savin/default.aspx">SAVIN</a></li>
+                <li><a href="/victim/seniors/default.aspx">Senior Citizens Resources</a></li>
+                <li><a target="_blank" href="https://dps.sd.gov/victims-services/crime-victims-compensation">Victim Compensation Link</a></li>
+                <li><a target="_blank" href="http://sdlegislature.gov/Statutes/Codified_Laws/DisplayStatute.aspx?Statute=23A-28C&Type=Statute">Victim Bill of Rights</a></li>
+                <li><a href="/LawEnforcement/CriminalJusticeDirectory/default.aspx">Criminal Justice Directory</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Consumer Resources</a>
+            <ul class="dl-submenu">
+                <li><a target="_blank" href="https://consumer.sd.gov">Consumer Protection</a>
+                    <ul class="dl-submenu">
+                        <li><a target="_blank" href="https://consumer.sd.gov/complaintform.aspx">Consumer Complaint Form</a></li>
+                    </ul>
+                </li>
+                <li><a href="/OurOffice/Departments/MFCU/default.aspx">Medicaid Fraud Control Unit</a>
+                    <ul class="dl-submenu">
+                        <li><a href="/OurOffice/Departments/MFCU/complaintform.aspx">Complaint Form</a></li>
+                    </ul>
+                </li>
+                <li><a target="_blank" href="https://consumer.sd.gov/resources.aspx">Senior Citizens Resources</a>
+                    <ul class="dl-submenu">
+                        <li><a target="_blank" href="https://consumer.sd.gov/docs/SeniorHandbook.pdf">Senior Handbook</a></li>
+                    </ul>
+                </li>
+                <li><a target="_blank" href="#">Insurance Fraud Prevention Unit</a>
+                    <ul class="dl-submenu">
+                        <li><a target="_blank" href="https://atglaserfiche.sd.gov/Forms/SuspectedFraudulentClaimReport">Suspected Fraudulent Claim Report</a></li>
+                        <li><a target="_blank" href="https://atglaserfiche.sd.gov/Forms/InsuranceFraudComplaint">Insurance Fraud Consumer Complaint Form</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="https://missingpersons.sd.gov/" target="_blank" rel="noreferrer noopener">Missing Persons</a></li>
+    </ul>
+</nav>
+
+        <section id="content">
+           <div id="breadcrumb"><a href="/">Home</a> >> <a href="/OurOffice/">Our Office</a> >> Official Opinions</div>
+            <article class="cke_focus" id="maincontent" style="position: relative;" >
+
+                 <div id="sidemenu">
+
+</div>
+
+
+
+<article id="secondarycontent" >
+
+<h1>Opinions</h1>
+    <form method="post" action="./opinions.aspx" id="ctl00">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUINjkzMDY2ODYPZBYCAggPZBYEAgEPEGQPFjlmAgECAgIDAgQCBQIGAgcCCAIJAgoCCwIMAg0CDgIPAhACEQISAhMCFAIVAhYCFwIYAhkCGgIbAhwCHQIeAh8CIAIhAiICIwIkAiUCJgInAigCKQIqAisCLAItAi4CLwIwAjECMgIzAjQCNQI2AjcCOBY5EGUFATBnEAUEMjAyMwUEMjAyM2cQBQQyMDIyBQQyMDIyZxAFBDIwMjEFBDIwMjFnEAUEMjAyMAUEMjAyMGcQBQQyMDE5BQQyMDE5ZxAFBDIwMTgFBDIwMThnEAUEMjAxNwUEMjAxN2cQBQQyMDE2BQQyMDE2ZxAFBDIwMTUFBDIwMTVnEAUEMjAxNAUEMjAxNGcQBQQyMDEzBQQyMDEzZxAFBDIwMTIFBDIwMTJnEAUEMjAxMQUEMjAxMWcQBQQyMDEwBQQyMDEwZxAFBDIwMDkFBDIwMDlnEAUEMjAwOAUEMjAwOGcQBQQyMDA3BQQyMDA3ZxAFBDIwMDYFBDIwMDZnEAUEMjAwNQUEMjAwNWcQBQQyMDA0BQQyMDA0ZxAFBDIwMDMFBDIwMDNnEAUEMjAwMgUEMjAwMmcQBQQyMDAxBQQyMDAxZxAFBDIwMDAFBDIwMDBnEAUEMTk5OQUEMTk5OWcQBQQxOTk4BQQxOTk4ZxAFBDE5OTcFBDE5OTdnEAUEMTk5NgUEMTk5NmcQBQQxOTk1BQQxOTk1ZxAFBDE5OTQFBDE5OTRnEAUEMTk5MwUEMTk5M2cQBQQxOTkyBQQxOTkyZxAFBDE5OTEFBDE5OTFnEAUEMTk5MAUEMTk5MGcQBQQxOTg5BQQxOTg5ZxAFBDE5ODgFBDE5ODhnEAUEMTk4NwUEMTk4N2cQBQQxOTg2BQQxOTg2ZxAFBDE5ODUFBDE5ODVnEAUEMTk4NAUEMTk4NGcQBQQxOTgzBQQxOTgzZxAFBDE5ODIFBDE5ODJnEAUEMTk4MQUEMTk4MWcQBQQxOTgwBQQxOTgwZxAFBDE5NzkFBDE5NzlnEAUEMTk3OAUEMTk3OGcQBQQxOTc3BQQxOTc3ZxAFBDE5NzYFBDE5NzZnEAUEMTk3NQUEMTk3NWcQBQQxOTc0BQQxOTc0ZxAFBDE5NzMFBDE5NzNnEAUEMTk3MgUEMTk3MmcQBQQxOTcxBQQxOTcxZxAFBDE5NzAFBDE5NzBnEAUEMTk2OQUEMTk2OWcQBQQxOTY4BQQxOTY4ZxYBZmQCBw8PFgIeBFRleHQF5g48dGFibGU+PHRyPjx0aD5PcGluaW9uIE51bWJlcjwvdGg+PHRoPlRpdGxlPC90aD48dGg+SHRtbCBWZXJzaW9uPC90aD48dGg+UERGIFZlcnNpb248L3RoPjwvdHI+PHRyPjx0ZD4yMi0wMjwvdGQ+PHRkPk9GRklDSUFMIE9QSU5JT04gTm8uIDIyLTAyPC90ZD48dGQ+PGEgaHJlZj0nL091ck9mZmljZS9PZmZpY2lhbE9waW5pb25zL29waW5pb25odG1sLmFzcHg/aWQ9MTc1OCc+PGltZyB3aWR0aD0nMzBweCcgc3JjPScvaW1nL2h0bWwtaWNvbi5wbmcnIGFsdD0nSFRNTCBJY29uJy8+PC9hPjwvdGQ+PHRkPjxhIGhyZWY9Jy9PZmZpY2lhbE9waW5pb25zL2x0ci5WYXJnbyBPZmZpY2lhbCBPcGluaW9uIE5vIDIyLTAyLnBkZic+PGltZyB3aWR0aD0nMzBweCcgc3JjPScvaW1nL3BkZi1pY29uLnBuZycgYWx0PSdQREYgSWNvbicvPjwvYT48L3RkPjwvdHI+PHRyPjx0ZD4yMi0wMTwvdGQ+PHRkPk9GRklDSUFMIE9QSU5JT04gTm8uIDIyLTAxPC90ZD48dGQ+PGEgaHJlZj0nL091ck9mZmljZS9PZmZpY2lhbE9waW5pb25zL29waW5pb25odG1sLmFzcHg/aWQ9MTcwNCc+PGltZyB3aWR0aD0nMzBweCcgc3JjPScvaW1nL2h0bWwtaWNvbi5wbmcnIGFsdD0nSFRNTCBJY29uJy8+PC9hPjwvdGQ+PHRkPjxhIGhyZWY9Jy9PZmZpY2lhbE9waW5pb25zL0FHIE9mZmljaWFsIE9waW5pb24gTWF5IDQgMjAyMi5wZGYnPjxpbWcgd2lkdGg9JzMwcHgnIHNyYz0nL2ltZy9wZGYtaWNvbi5wbmcnIGFsdD0nUERGIEljb24nLz48L2E+PC90ZD48L3RyPjx0cj48dGQ+MjEtMDI8L3RkPjx0ZD5PRkZJQ0lBTCBPUElOSU9OIE5vLiAyMS0wMiBQb3RlbnRpYWwgRGl2aXNpb24gb2YgSmVmZmVyc29uIFRvd25zaGlwIGluIFVuaW9uIENvdW50eSAgIDwvdGQ+PHRkPjxhIGhyZWY9Jy9PdXJPZmZpY2UvT2ZmaWNpYWxPcGluaW9ucy9vcGluaW9uaHRtbC5hc3B4P2lkPTE3MDMnPjxpbWcgd2lkdGg9JzMwcHgnIHNyYz0nL2ltZy9odG1sLWljb24ucG5nJyBhbHQ9J0hUTUwgSWNvbicvPjwvYT48L3RkPjx0ZD48YSBocmVmPScvT2ZmaWNpYWxPcGluaW9ucy9PZmZpY2lhbCBPcGluaW9uIDIxLTAyLnBkZic+PGltZyB3aWR0aD0nMzBweCcgc3JjPScvaW1nL3BkZi1pY29uLnBuZycgYWx0PSdQREYgSWNvbicvPjwvYT48L3RkPjwvdHI+PHRyPjx0ZD4yMS0wMTwvdGQ+PHRkPk9mZmljaWFsIE9waW5pb24gTm8uIDIxLTAxIEFub255bWl0eSBvZiBTZXh1YWwgQXNzYXVsdCBWaWN0aW1zIGFuZCBNYW5kYXRvcnkgUmVwb3J0aW5nIDwvdGQ+PHRkPjxhIGhyZWY9Jy9PdXJPZmZpY2UvT2ZmaWNpYWxPcGluaW9ucy9vcGluaW9uaHRtbC5hc3B4P2lkPTE3MDInPjxpbWcgd2lkdGg9JzMwcHgnIHNyYz0nL2ltZy9odG1sLWljb24ucG5nJyBhbHQ9J0hUTUwgSWNvbicvPjwvYT48L3RkPjx0ZD48YSBocmVmPScvT2ZmaWNpYWxPcGluaW9ucy9KYW51YXJ5IDI1IDIwMjEgT2YuIE9wLnBkZic+PGltZyB3aWR0aD0nMzBweCcgc3JjPScvaW1nL3BkZi1pY29uLnBuZycgYWx0PSdQREYgSWNvbicvPjwvYT48L3RkPjwvdHI+PHRyPjx0ZD4yMC0wMTwvdGQ+PHRkPk9mZmljaWFsIE9waW5pb24gTm8uIDIwLTAxIE9wZW4gRW5yb2xsbWVudCBvZiBTcGVjaWFsIEVkdWNhdGlvbiBTdHVkZW50cyAgPC90ZD48dGQ+PGEgaHJlZj0nL091ck9mZmljZS9PZmZpY2lhbE9waW5pb25zL29waW5pb25odG1sLmFzcHg/aWQ9MTcwMSc+PGltZyB3aWR0aD0nMzBweCcgc3JjPScvaW1nL2h0bWwtaWNvbi5wbmcnIGFsdD0nSFRNTCBJY29uJy8+PC9hPjwvdGQ+PHRkPjxhIGhyZWY9Jy9PZmZpY2lhbE9waW5pb25zL09GRklDSUFMIE9QSU5JT04gMjAyMC4wMS5wZGYnPjxpbWcgd2lkdGg9JzMwcHgnIHNyYz0nL2ltZy9wZGYtaWNvbi5wbmcnIGFsdD0nUERGIEljb24nLz48L2E+PC90ZD48L3RyPjwvdGFibGU+ZGRk1l2TIUXebLED8iwXXbboC9o7DVI=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="BCDE3DBB" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdADwdPjkC7/PkqDYkM/ezwS8+dHhWyc6LfdLhpjHcUD3B644RZZGMu0JducFK5sx5c82lJ6IWyvxl/Xqo/sm4GfiYm9BiRYqbfvbxzxEfHsl0HVbz/KTY3UaoKuhbtgzrMOFthePYPc8jf9o6bBI5Re0FbTh5csG5u1jE75jX1+SG3LdM2qTUclSf7QPnWJ/oOWP7GT3a0MNTY12ecr0WqDDpw8TGmGuB/a3oKXfQ2jqMKRUwQim9VzxLAdnmTUJuBRkyuqirMEW8jzxISoNSuI3ikvl8Ft17NaqoF4QPSviGttSRlkNBWF6ajCQW2yqiyUxCVLFricJhSPeBDtJsmsVEmtvxOL/FmF0Bb5lc2LphGDko6kMCbEIFLj75krbx0hdGFobacSm55ThyDnu8kMoBPrG0VeR8xd86/vkHgKuml4nbD4NbE5scuMXwS83MxiGy+k+pCr45phFtmntGzJZ79dka34W46tym6fa7+8IBw2mb8JffrK8r5wYNVHAzpFaBlbgbzN3i5Tiw7Zo4juSe3F+CEfg7LGz10lq73+hKTpTvi+VLqoDfUxawC89tKZoQZvEVq2+TeLNkOidlvabWJWzYHM8X4ZrUXGEHagRZ0UtxGPOInc5M7nSE9krd4UHl/t4s0RhWRQPITklsqUUf9eSKF6PF+y0w4IzqU5tKfgHszWkKFtzlRYjh9IpI1kuS5/aCOOatxqV7DfzNqckQ2LwGTaLzXAX2Lvd0Z9fkqE1m0gJLsZHp5VjHy+BRgcCNfRbOZOZBb/iD8Dv6KhEitQ/I8T+L3VpEVgoL5hOEbAPzUDHqAFcMO+qr92syw5DoRRqhdQGTP11XBYolCtrwi0TqcJ68r+aADNS/NI5HuBIc2FL/97v0+HXETbB+Zj5C1ZVfI+cz/J16rOu4y+cvpIzYap+Hc9UERWiWobiRezJzO3jgUpNKy2k4NbAhZikIK9xlax1WqHR2ZjpIHZ2T6P3xciYb1fygVQ4NCb4oIb2ubRyHeGFCQP9aRG4z4bhP/9OQsRoQfI5UmPZOPlI4mAMxoZR6e8byWINJCYwyW/pwp1Vyhd8+5y9dgsbg2d1IjQEBvbGFDxFjDmjJN/hsEQNizpDZ6aVw7+gVqR3iTvGYAO/eZdv8tFkqgu2Z4YHJmuTNg45LwHsbghxOMAcbVUVLlFaCGjK+nFQ3RPjmNO9yWSyBPv8ZoPcDkyuQX3bAHODyn/2Hmq5OWwn7ognhR3ESDsj5GbMGA4L/ctT1MrsCdCov+1FPMh8ojWXysH+Os40q4PhuqrQ5gemlUyPkK57zTg==" />
+    Search By Year: <select name="dll_Years" id="dll_Years">
+	<option selected="selected" value="0"></option>
+	<option value="2023">2023</option>
+	<option value="2022">2022</option>
+	<option value="2021">2021</option>
+	<option value="2020">2020</option>
+	<option value="2019">2019</option>
+	<option value="2018">2018</option>
+	<option value="2017">2017</option>
+	<option value="2016">2016</option>
+	<option value="2015">2015</option>
+	<option value="2014">2014</option>
+	<option value="2013">2013</option>
+	<option value="2012">2012</option>
+	<option value="2011">2011</option>
+	<option value="2010">2010</option>
+	<option value="2009">2009</option>
+	<option value="2008">2008</option>
+	<option value="2007">2007</option>
+	<option value="2006">2006</option>
+	<option value="2005">2005</option>
+	<option value="2004">2004</option>
+	<option value="2003">2003</option>
+	<option value="2002">2002</option>
+	<option value="2001">2001</option>
+	<option value="2000">2000</option>
+	<option value="1999">1999</option>
+	<option value="1998">1998</option>
+	<option value="1997">1997</option>
+	<option value="1996">1996</option>
+	<option value="1995">1995</option>
+	<option value="1994">1994</option>
+	<option value="1993">1993</option>
+	<option value="1992">1992</option>
+	<option value="1991">1991</option>
+	<option value="1990">1990</option>
+	<option value="1989">1989</option>
+	<option value="1988">1988</option>
+	<option value="1987">1987</option>
+	<option value="1986">1986</option>
+	<option value="1985">1985</option>
+	<option value="1984">1984</option>
+	<option value="1983">1983</option>
+	<option value="1982">1982</option>
+	<option value="1981">1981</option>
+	<option value="1980">1980</option>
+	<option value="1979">1979</option>
+	<option value="1978">1978</option>
+	<option value="1977">1977</option>
+	<option value="1976">1976</option>
+	<option value="1975">1975</option>
+	<option value="1974">1974</option>
+	<option value="1973">1973</option>
+	<option value="1972">1972</option>
+	<option value="1971">1971</option>
+	<option value="1970">1970</option>
+	<option value="1969">1969</option>
+	<option value="1968">1968</option>
+
+</select>
+    Search by Keyword: <input name="tb_Search" type="text" id="tb_Search" />
+        <input type="submit" name="btn_Search" value="Search" id="btn_Search" />
+        <br />
+        <a href="opinions.aspx">New Search</a><br />
+    <br /><span id="lbl_Opinions"><table><tr><th>Opinion Number</th><th>Title</th><th>Html Version</th><th>PDF Version</th></tr><tr><td>22-02</td><td>OFFICIAL OPINION No. 22-02</td><td><a href='/OurOffice/OfficialOpinions/opinionhtml.aspx?id=1758'><img width='30px' src='/img/html-icon.png' alt='HTML Icon'/></a></td><td><a href='/OfficialOpinions/ltr.Vargo Official Opinion No 22-02.pdf'><img width='30px' src='/img/pdf-icon.png' alt='PDF Icon'/></a></td></tr><tr><td>22-01</td><td>OFFICIAL OPINION No. 22-01</td><td><a href='/OurOffice/OfficialOpinions/opinionhtml.aspx?id=1704'><img width='30px' src='/img/html-icon.png' alt='HTML Icon'/></a></td><td><a href='/OfficialOpinions/AG Official Opinion May 4 2022.pdf'><img width='30px' src='/img/pdf-icon.png' alt='PDF Icon'/></a></td></tr><tr><td>21-02</td><td>OFFICIAL OPINION No. 21-02 Potential Division of Jefferson Township in Union County   </td><td><a href='/OurOffice/OfficialOpinions/opinionhtml.aspx?id=1703'><img width='30px' src='/img/html-icon.png' alt='HTML Icon'/></a></td><td><a href='/OfficialOpinions/Official Opinion 21-02.pdf'><img width='30px' src='/img/pdf-icon.png' alt='PDF Icon'/></a></td></tr><tr><td>21-01</td><td>Official Opinion No. 21-01 Anonymity of Sexual Assault Victims and Mandatory Reporting </td><td><a href='/OurOffice/OfficialOpinions/opinionhtml.aspx?id=1702'><img width='30px' src='/img/html-icon.png' alt='HTML Icon'/></a></td><td><a href='/OfficialOpinions/January 25 2021 Of. Op.pdf'><img width='30px' src='/img/pdf-icon.png' alt='PDF Icon'/></a></td></tr><tr><td>20-01</td><td>Official Opinion No. 20-01 Open Enrollment of Special Education Students  </td><td><a href='/OurOffice/OfficialOpinions/opinionhtml.aspx?id=1701'><img width='30px' src='/img/html-icon.png' alt='HTML Icon'/></a></td><td><a href='/OfficialOpinions/OFFICIAL OPINION 2020.01.pdf'><img width='30px' src='/img/pdf-icon.png' alt='PDF Icon'/></a></td></tr></table></span>
+
+    </form>
+</article>
+                </article>
+        </section>
+       <div> <footer style="position: relative;" ><article id="bar">&nbsp;</article>
+
+<p><a href="/Contact.aspx">Contact Us</a> | <a target="_blank" href="http://sd.gov/disclaim.aspx">Site Disclaimer</a> | <a target="_blank" href="http://sd.gov/privacy.aspx">Privacy Policy</a> | <a target="_blank" href="http://sd.gov" target="_blank">State of South Dakota Home Page </a><br>
+<br>
+<a target="_blank" href="http://www.cwagweb.org/">Conference of Western Attorneys General</a> | <a target="_blank" href="http://www.naag.org/">National Association of Attorneys General</a></p>
+</footer></div>
+
+
+      <script src="/inc/scripts/owl.carousel.js"></script>
+
+        <script src="/inc/scripts/flowtype.js"></script>
+
+<script src="/inc/scripts/jquery.dlmenu.min.js"></script>
+
+        <script type="text/javascript">
+
+
+
+                 widthchange();
+
+
+
+                 $(window).resize(function () {
+
+                    widthchange();
+                });
+
+                function widthchange() {
+
+                        var width = $(window).width();
+
+                        if (width >= 700) {
+                            $('nav').show();
+                        $("nav > ul > li").hover(function () {
+                            $(this).children("ul").addClass("openl1");
+                        },
+                        function() {
+                            $(this).children("ul").removeClass("openl1");
+                        }
+                        );
+
+                        $("nav > ul > li > ul > li").hover(function () {
+                            $(this).children("ul").addClass("openl2");
+                        },
+                        function () {
+                            $(this).children("ul").removeClass("openl2");
+                        }
+                        );
+
+                        $("nav > ul > li > ul > li > ul > li").hover(function () {
+                            $(this).children("ul").addClass("openl3");
+                        },
+                        function () {
+                            $(this).children("ul").removeClass("openl3");
+                        }
+                        );
+
+                        }
+                        else {
+                            //$('nav').hide();
+
+                            $('nav > ul > li').unbind('mouseenter mouseleave');
+
+
+                            menu();
+
+                        }
+
+                }
+
+
+                function menu() {
+                    if (!menu.isRunning) {
+                        $('#dl-menu').dlmenu();
+                        menu.isRunning = true;
+                    }
+
+                }
+
+
+                $("#menu").click(function () {
+                    $("nav#dl-menu").toggle();
+                    $(this).addClass("dl-active");
+                    $("ul.dl-menu").addClass("dl-menuopen");
+                });
+
+
+
+                $("#owl-demo").owlCarousel({
+
+                    navigation: true,
+                    slideSpeed: 300,
+                    paginationSpeed: 400,
+                    singleItem: true,
+                    autoPlay: true,
+                    stopOnHover: true,
+                    pagination: false,
+                    navigationText: ["<", ">"]
+
+                });
+                $('#logo').flowtype({
+                    minimum: 250,
+                    maximum: 1500,
+                    minFont: 5,
+                    maxFont: 16,
+                    fontRatio: 35
+                });
+
+                $("#sidemenu ul li").click(function () {
+                    $(this).children("ul").toggle("slow", function () { });
+
+                    if ($(this).hasClass("sideopen")) {
+                        $(this).removeClass("sideopen");
+                    }
+                    else {
+                        $(this).addClass("sideopen");
+                    }
+
+                });
+
+        </script>
+
+
+    </section></body>
+</html>

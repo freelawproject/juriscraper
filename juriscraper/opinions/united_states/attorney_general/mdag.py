@@ -41,6 +41,10 @@ class Site(OpinionSiteLinear):
             )
 
     def _process_html(self):
+        """Process json really
+
+        :return: None
+        """
         for row in self.json["Row"]:
             url_path = row["FileRef.urlencodeasurl"]
 

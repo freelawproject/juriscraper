@@ -17,6 +17,10 @@ class Site(OpinionSiteLinear):
         self.url = "https://texasattorneygeneral.gov/opinions"
 
     def _process_html(self):
+        """Process html
+
+        :return: None
+        """
         cases = self.html.xpath("//div[@class='sidebar-ag-opinion-content']")
         for case in cases:
             docket = case.xpath(".//h4")[0].text_content().strip()

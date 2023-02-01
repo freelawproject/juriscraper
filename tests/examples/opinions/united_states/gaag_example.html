@@ -1,0 +1,1680 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["gov-bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"5360c08ecf",applicationID:"99788210"};;(()=>{var __webpack_modules__={507:(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{"use strict";function detectPolyfillFeatures(){const featureStatus={};return checkAndAddFeature("Promise","PROMISE"),checkAndAddFeature("Array.prototype.includes","ARRAY_INCLUDES"),checkAndAddFeature("Object.assign","OBJECT_ASSIGN"),checkAndAddFeature("Object.entries","OBJECT_ENTRIES"),featureStatus;function checkAndAddFeature(funcString,featName){try{let func=eval("self."+funcString);-1!==func.toString().indexOf("[native code]")?featureStatus[featName]=Status.NATIVE:featureStatus[featName]=Status.CHANGED}catch{featureStatus[featName]=Status.UNAVAIL}}}__webpack_require__.d(__webpack_exports__,{n:()=>detectPolyfillFeatures});const Status={UNAVAIL:"NotSupported",NATIVE:"Detected",CHANGED:"Modified"}},2687:(e,t,r)=>{"use strict";r.d(t,{Z:()=>n});const n=(0,r(2141).ky)(16)},1719:(e,t,r)=>{"use strict";r.d(t,{I:()=>n});var n=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(n=+i[1])},3524:(e,t,r)=>{"use strict";let n;if(r.d(t,{H:()=>i}),r(8438).il){const e=document.createElement("div");e.innerHTML="\x3c!--[if lte IE 6]><div></div><![endif]--\x3e\x3c!--[if lte IE 7]><div></div><![endif]--\x3e\x3c!--[if lte IE 8]><div></div><![endif]--\x3e\x3c!--[if lte IE 9]><div></div><![endif]--\x3e",n=e.getElementsByTagName("div").length}var i;i=4===n?6:3===n?7:2===n?8:1===n?9:0},5970:(e,t,r)=>{"use strict";r.d(t,{Mt:()=>_,C5:()=>s,OP:()=>j,Yu:()=>g,Dg:()=>f,CX:()=>u,GE:()=>b,sU:()=>I});var n={};r.r(n),r.d(n,{agent:()=>m,match:()=>x,version:()=>y});var i=r(4580);class o{constructor(e,t){return e&&"object"==typeof e?t&&"object"==typeof t?(Object.assign(this,t),void Object.entries(e).forEach((e=>{let[t,r]=e;this[t]=r}))):console.error("setting a Configurable requires a model to set its initial properties"):console.error("setting a Configurable requires an object as input")}}const a={beacon:i.ce.beacon,errorBeacon:i.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},c={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!c[e])throw new Error(`Info for ${e} was never set`);return c[e]}function u(e,t){if(!e)throw new Error("All info objects require an agent identifier!");c[e]=new o(t,a),(0,i.Qy)(e,c[e],"info")}const d={allow_bfcache:!1,privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,enabled:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0},metrics:{enabled:!0},page_action:{enabled:!0},page_view_event:{enabled:!0},page_view_timing:{enabled:!0},session_trace:{enabled:!0},spa:{enabled:!0}},l={};function f(e,t){if(!e)throw new Error("All configuration objects require an agent identifier!");l[e]=new o(t,d),(0,i.Qy)(e,l[e],"config")}function _(e,t){if(!e)throw new Error("All configuration objects require an agent identifier!");var r=function(e){if(!e)throw new Error("All configuration objects require an agent identifier!");if(!l[e])throw new Error(`Configuration for ${e} was never set`);return l[e]}(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const p={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},v={};function b(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");v[e]=new o(t,p),(0,i.Qy)(e,v[e],"loader_config")}const g=(0,i.mF)().o;var h=r(3524),w=r(9206),m=null,y=null;if(navigator.userAgent){var k=navigator.userAgent,P=k.match(/Version\/(\S+)\s+Safari/);P&&-1===k.indexOf("Chrome")&&-1===k.indexOf("Chromium")&&(m="Safari",y=P[1])}function x(e,t){if(!m)return!1;if(e!==m)return!1;if(!t)return!0;if(!y)return!1;for(var r=y.split("."),n=t.split("."),i=0;i<n.length;i++)if(n[i]!==r[i])return!1;return!0}var E=r(2141),S=r(8438);const O="NRBA_SESSION_ID";function A(){if(!S.il)return null;try{let e;return null===(e=window.sessionStorage.getItem(O))&&(e=(0,E.ky)(16),window.sessionStorage.setItem(O,e)),e}catch(e){return null}}var q=S.ZP?.XMLHttpRequest,C=q&&q.prototype;const T={};function j(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!T[e])throw new Error(`Runtime for ${e} was never set`);return T[e]}function I(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");var r;T[e]=new o(t,(r=e,{customTransaction:void 0,disabled:!1,features:{},loaderType:void 0,maxBytes:6===h.H?2e3:3e4,offset:(0,w.yf)(),onerror:void 0,origin:""+S.ZP?.location,ptid:void 0,releaseIds:{},sessionId:1==_(r,"privacy.cookies_enabled")?A():null,xhrWrappable:q&&C&&C.addEventListener&&!/CriOS/.test(navigator.userAgent),userAgent:n})),(0,i.Qy)(e,T[e],"runtime")}},8873:(e,t,r)=>{"use strict";r.d(t,{q:()=>n});const n=["1222","PROD"].filter((e=>e)).join(".")},1925:(e,t,r)=>{"use strict";r.d(t,{w:()=>i});const n={agentIdentifier:""};class i{constructor(e){if("object"!=typeof e)return console.error("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,n),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(n).includes(t)&&(this.sharedContext[t]=r)}))}}},2071:(e,t,r)=>{"use strict";r.d(t,{ee:()=>s});var n=r(4580),i=r(9010),o=r(9599),a="nr@context";let c=(0,n.fP)();var s;function u(){}function d(){return new u}function l(){(s.backlog.api||s.backlog.feature)&&(s.aborted=!0,s.backlog={})}c.ee?s=c.ee:(s=function e(t,r){var n={},c={},f={},_={on:b,addEventListener:b,removeEventListener:g,emit:v,get:w,listeners:h,context:p,buffer:m,abort:l,aborted:!1,isBuffering:y,debugId:r,backlog:t&&t.backlog?t.backlog:{}};return _;function p(e){return e&&e instanceof u?e:e?(0,i.X)(e,a,d):d()}function v(e,r,n,i,o){if(!1!==o&&(o=!0),!s.aborted||i){t&&o&&t.emit(e,r,n);for(var a=p(n),u=h(e),d=u.length,l=0;l<d;l++)u[l].apply(a,r);var f=k()[c[e]];return f&&f.push([_,e,r,a]),a}}function b(e,t){n[e]=h(e).concat(t)}function g(e,t){var r=n[e];if(r)for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)}function h(e){return n[e]||[]}function w(t){return f[t]=f[t]||e(_,t)}function m(e,t){var r=k();_.aborted||(0,o.D)(e,(function(e,n){t=t||"feature",c[n]=t,t in r||(r[t]=[])}))}function y(e){return!!k()[c[e]]}function k(){return _.backlog}}(void 0,"globalEE"),c.ee=s)},3195:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(2071).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4539:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(3195);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3585:(e,t,r)=>{"use strict";r.d(t,{bP:()=>c,iz:()=>s,m$:()=>a});var n=r(8438),i=!1;try{var o=Object.defineProperty({},"passive",{get:function(){i=!0}});n.ZP?.addEventListener("testPassive",null,o),n.ZP?.removeEventListener("testPassive",null,o)}catch(e){}function a(e){return i?{passive:!0,capture:!!e}:!!e}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];window.addEventListener(e,t,a(r))}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];document.addEventListener(e,t,a(r))}},2141:(e,t,r)=>{"use strict";r.d(t,{Rl:()=>i,ky:()=>o});var n=r(8438);function i(){var e=null,t=0,r=n.ZP?.crypto||n.ZP?.msCrypto;function i(){return e?15&e[t++]:16*Math.random()|0}r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,a="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",c="",s=0;s<a.length;s++)c+="x"===(o=a[s])?i().toString(16):"y"===o?(o=3&i()|8).toString(16):o;return c}function o(e){var t=null,r=0,n=self.crypto||self.msCrypto;n&&n.getRandomValues&&Uint8Array&&(t=n.getRandomValues(new Uint8Array(31)));for(var i=[],o=0;o<e;o++)i.push(a().toString(16));return i.join("");function a(){return t?15&t[r++]:16*Math.random()|0}}},9206:(e,t,r)=>{"use strict";r.d(t,{nb:()=>s,os:()=>u,yf:()=>c,zO:()=>a});var n=r(1209),i=(new Date).getTime(),o=i;function a(){return n.G&&performance.now?Math.round(performance.now()):(i=Math.max((new Date).getTime(),i))-o}function c(){return i}function s(e){o=e}function u(){return o}},1209:(e,t,r)=>{"use strict";r.d(t,{G:()=>n});const n=void 0!==r(8438).ZP?.performance?.timing?.navigationStart},745:(e,t,r)=>{"use strict";r.d(t,{s:()=>s,v:()=>u});var n=r(7036),i=r(1719),o=r(9206),a=r(1209),c=r(8438);let s=!0;function u(e){var t=function(){if(i.I&&i.I<9)return;if(a.G)return s=!1,c.ZP?.performance?.timing?.navigationStart}();t&&((0,n.B)(e,"starttime",t),(0,o.nb)(t))}},7036:(e,t,r)=>{"use strict";r.d(t,{B:()=>o,L:()=>a});var n=r(9206),i={};function o(e,t,r){void 0===r&&(r=(0,n.zO)()+(0,n.os)()),i[e]=i[e]||{},i[e][t]=r}function a(e,t,r,n){const o=e.sharedContext.agentIdentifier;var a=i[o]?.[r],c=i[o]?.[n];void 0!==a&&void 0!==c&&e.store("measures",t,{value:c-a})}},8547:(e,t,r)=>{"use strict";r.d(t,{T:()=>i});var n=r(8438);const i={isFileProtocol:function(){let e=Boolean("file:"===(0,n.lW)()?.location?.protocol);e&&(i.supportabilityMetricSent=!0);return e},supportabilityMetricSent:!1}},9011:(e,t,r)=>{"use strict";r.d(t,{K:()=>o});var n=r(5970);const i=["ajax","jserrors","metrics","page_action","page_view_event","page_view_timing","session_trace","spa"];function o(e){const t={};return i.forEach((r=>{t[r]=function(e,t){return!0!==(0,n.OP)(t).disabled&&!1!==(0,n.Mt)(t,`${e}.enabled`)}(r,e)})),t}},8025:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(2071);class i{constructor(e,t){let r=arguments.length>2&&void 0!==arguments[2]?arguments[2]:[];this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.externalFeatures=r,this.blocked=!1}}},9010:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},8438:(e,t,r)=>{"use strict";r.d(t,{ZP:()=>a,il:()=>n,lW:()=>c,v6:()=>i});const n=Boolean("undefined"!=typeof window&&window.document),i=Boolean("undefined"!=typeof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator);let o=(()=>{if(n)return window;if(i){if("undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope)return globalThis;if(self instanceof WorkerGlobalScope)return self}throw new Error("New Relic browser agent shutting down due to error: Unable to locate global scope. This is possibly due to code redefining browser global variables like `self` and `window`.")})();const a=o;function c(){return o}},9599:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t){var r=[],i="",o=0;for(i in e)n.call(e,i)&&(r[o]=t(i,e[i]),o+=1);return r}},248:(e,t,r)=>{"use strict";r.d(t,{$c:()=>s,Ng:()=>u,RR:()=>c});var n=r(5970),i=r(1925),o=r(8547),a={regex:/^file:\/\/(.*)/,replacement:"file://OBFUSCATED"};class c extends i.w{constructor(e){super(e)}shouldObfuscate(){return s(this.sharedContext.agentIdentifier).length>0}obfuscateString(e){if(!e||"string"!=typeof e)return e;for(var t=s(this.sharedContext.agentIdentifier),r=e,n=0;n<t.length;n++){var i=t[n].regex,o=t[n].replacement||"*";r=r.replace(i,o)}return r}}function s(e){var t=[],r=(0,n.Mt)(e,"obfuscate")||[];return t=t.concat(r),o.T.isFileProtocol()&&t.push(a),t}function u(e){for(var t=!1,r=!1,n=0;n<e.length;n++){"regex"in e[n]?"string"!=typeof e[n].regex&&e[n].regex.constructor!==RegExp&&(console&&console.warn&&console.warn('An obfuscation replacement rule contains a "regex" value with an invalid type (must be a string or RegExp)'),r=!0):(console&&console.warn&&console.warn('An obfuscation replacement rule was detected missing a "regex" value.'),r=!0);var i=e[n].replacement;i&&"string"!=typeof i&&(console&&console.warn&&console.warn('An obfuscation replacement rule contains a "replacement" value with an invalid type (must be a string)'),t=!0)}return!t&&!r}},4580:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>u,Qy:()=>s,ce:()=>o,fP:()=>a,gG:()=>d,mF:()=>c});var n=r(9206),i=r(8438);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return i.ZP?.NREUM||(i.ZP.NREUM={}),void 0===i.ZP?.newrelic&&(i.ZP.newrelic=i.ZP.NREUM),i.ZP.NREUM}function c(){let e=a();if(!e.o){var t=self,r=t.XMLHttpRequest;e.o={ST:setTimeout,SI:t.setImmediate,CT:clearTimeout,XHR:r,REQ:t.Request,EV:t.Event,PR:t.Promise,MO:t.MutationObserver,FETCH:t.fetch}}return e}function s(e,t,r){let i=a();const o=i.initializedAgents||{},c=o[e]||{};return Object.keys(c).length||(c.initializedAt={ms:(0,n.zO)(),date:new Date}),i.initializedAgents={...o,[e]:{...c,[r]:t}},i}function u(e,t){a()[e]=t}function d(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),c(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},584:(e,t,r)=>{"use strict";r.d(t,{N:()=>i,e:()=>o});var n=r(3585);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return void(0,n.iz)("visibilitychange",r);function r(){if(t){if("hidden"!=document.visibilityState)return;e()}e(document.visibilityState)}}function o(){return"hidden"===document.visibilityState?-1:1/0}},8539:e=>{e.exports=function(e,t,r){t||(t=0),void 0===r&&(r=e?e.length:0);for(var n=-1,i=r-t||0,o=Array(i<0?0:i);++n<i;)o[n]=e[t+n];return o}}},__webpack_module_cache__={},inProgress,dataWebpackPrefix;function __webpack_require__(e){var t=__webpack_module_cache__[e];if(void 0!==t)return t.exports;var r=__webpack_module_cache__[e]={exports:{}};return __webpack_modules__[e](r,r.exports,__webpack_require__),r.exports}__webpack_require__.m=__webpack_modules__,__webpack_require__.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return __webpack_require__.d(t,{a:t}),t},__webpack_require__.d=(e,t)=>{for(var r in t)__webpack_require__.o(t,r)&&!__webpack_require__.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},__webpack_require__.f={},__webpack_require__.e=e=>Promise.all(Object.keys(__webpack_require__.f).reduce(((t,r)=>(__webpack_require__.f[r](e,t),t)),[])),__webpack_require__.u=e=>e+"."+__webpack_require__.h().slice(0,8)+"-1222.js",__webpack_require__.h=()=>"95d4308d836c4fa71ea6",__webpack_require__.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),inProgress={},dataWebpackPrefix="NRBA:",__webpack_require__.l=(e,t,r,n)=>{if(inProgress[e])inProgress[e].push(t);else{var i,o;if(void 0!==r)for(var a=document.getElementsByTagName("script"),c=0;c<a.length;c++){var s=a[c];if(s.getAttribute("src")==e||s.getAttribute("data-webpack")==dataWebpackPrefix+r){i=s;break}}i||(o=!0,(i=document.createElement("script")).charset="utf-8",i.timeout=120,__webpack_require__.nc&&i.setAttribute("nonce",__webpack_require__.nc),i.setAttribute("data-webpack",dataWebpackPrefix+r),i.src=e),inProgress[e]=[t];var u=(t,r)=>{i.onerror=i.onload=null,clearTimeout(d);var n=inProgress[e];if(delete inProgress[e],i.parentNode&&i.parentNode.removeChild(i),n&&n.forEach((e=>e(r))),t)return t(r)},d=setTimeout(u.bind(null,void 0,{type:"timeout",target:i}),12e4);i.onerror=u.bind(null,i.onerror),i.onload=u.bind(null,i.onload),o&&document.head.appendChild(i)}},__webpack_require__.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},__webpack_require__.p="https://js-agent.newrelic.com/",(()=>{var e={783:0,519:0};__webpack_require__.f.j=(t,r)=>{var n=__webpack_require__.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var i=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=i);var o=__webpack_require__.p+__webpack_require__.u(t),a=new Error;__webpack_require__.l(o,(r=>{if(__webpack_require__.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var i=r&&("load"===r.type?"missing":r.type),o=r&&r.target&&r.target.src;a.message="Loading chunk "+t+" failed.\n("+i+": "+o+")",a.name="ChunkLoadError",a.type=i,a.request=o,n[1](a)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,i,[o,a,c]=r,s=0;if(o.some((t=>0!==e[t]))){for(n in a)__webpack_require__.o(a,n)&&(__webpack_require__.m[n]=a[n]);if(c)c(__webpack_require__)}for(t&&t(r);s<o.length;s++)i=o[s],__webpack_require__.o(e,i)&&e[i]&&e[i][0](),e[i]=0},r=window.webpackChunkNRBA=window.webpackChunkNRBA||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})();var __webpack_exports__={};(()=>{"use strict";__webpack_require__.r(__webpack_exports__);var e=__webpack_require__(507),t=__webpack_require__(2687),r=__webpack_require__(3585);function n(e){if(!document||"complete"===document.readyState)return e()||!0}function i(e){n(e)||(0,r.bP)("load",e)}function o(e){n(e)||(0,r.iz)("DOMContentLoaded",e)}var a=__webpack_require__(8438),c=__webpack_require__(2071);let s=0;function u(e){(async()=>{if(!s++)try{const{aggregator:t}=await __webpack_require__.e(859).then(__webpack_require__.bind(__webpack_require__,7859));await t(e)}catch(e){console.error("Failed to successfully load all aggregators. Aborting...\n",e),c.ee.abort()}})()}var d=__webpack_require__(8539),l=__webpack_require__.n(d),f=__webpack_require__(4580),_=__webpack_require__(5970),p=__webpack_require__(3195),v=__webpack_require__(9599),b=__webpack_require__(9206);let g=!1;var h=__webpack_require__(7036),w=__webpack_require__(745),m=__webpack_require__(8025);class y extends m.W{constructor(e){super(e),a.il&&((0,w.v)(e),(0,h.B)(e,"firstbyte",(0,b.yf)()),i((()=>this.measureWindowLoaded())),o((()=>this.measureDomContentLoaded())))}measureWindowLoaded(){var e=(0,b.zO)();(0,h.B)(this.agentIdentifier,"onload",e+(0,b.os)()),(0,p.p)("timing",["load",e],void 0,void 0,this.ee)}measureDomContentLoaded(){(0,h.B)(this.agentIdentifier,"domContent",(0,b.zO)()+(0,b.os)())}}var k=__webpack_require__(584);class P extends m.W{constructor(e){var t;if(super(e),t=this,this.isEnabled()&&a.il){if(this.pageHiddenTime=(0,k.e)(),this.performanceObserver,this.lcpPerformanceObserver,this.clsPerformanceObserver,this.fiRecorded=!1,"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){this.performanceObserver=new PerformanceObserver((function(){return t.perfObserver(...arguments)}));try{this.performanceObserver.observe({entryTypes:["paint"]})}catch(e){}this.lcpPerformanceObserver=new PerformanceObserver((function(){return t.lcpObserver(...arguments)}));try{this.lcpPerformanceObserver.observe({entryTypes:["largest-contentful-paint"]})}catch(e){}this.clsPerformanceObserver=new PerformanceObserver((function(){return t.clsObserver(...arguments)}));try{this.clsPerformanceObserver.observe({type:"layout-shift",buffered:!0})}catch(e){}}this.fiRecorded=!1;["click","keydown","mousedown","pointerdown","touchstart"].forEach((e=>{(0,r.iz)(e,(function(){return t.captureInteraction(...arguments)}))})),(0,k.N)((()=>{this.pageHiddenTime=(0,b.zO)(),(0,p.p)("docHidden",[this.pageHiddenTime],void 0,void 0,this.ee)}),!0),(0,r.bP)("pagehide",(()=>(0,p.p)("winPagehide",[(0,b.zO)()],void 0,void 0,this.ee)))}}isEnabled(){return!1!==(0,_.Mt)(this.agentIdentifier,"page_view_timing.enabled")}perfObserver(e,t){e.getEntries().forEach((e=>{"first-paint"===e.name?(0,p.p)("timing",["fp",Math.floor(e.startTime)],void 0,void 0,this.ee):"first-contentful-paint"===e.name&&(0,p.p)("timing",["fcp",Math.floor(e.startTime)],void 0,void 0,this.ee)}))}lcpObserver(e,t){var r=e.getEntries();if(r.length>0){var n=r[r.length-1];if(this.pageHiddenTime<n.startTime)return;var i=[n],o=this.addConnectionAttributes({});o&&i.push(o),(0,p.p)("lcp",i,void 0,void 0,this.ee)}}clsObserver(e){e.getEntries().forEach((e=>{e.hadRecentInput||(0,p.p)("cls",[e],void 0,void 0,this.ee)}))}addConnectionAttributes(e){var t=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(t)return t.type&&(e["net-type"]=t.type),t.effectiveType&&(e["net-etype"]=t.effectiveType),t.rtt&&(e["net-rtt"]=t.rtt),t.downlink&&(e["net-dlink"]=t.downlink),e}captureInteraction(e){if(e instanceof _.Yu.EV&&!this.fiRecorded){var t=Math.round(e.timeStamp),r={type:e.type};this.addConnectionAttributes(r),t<=(0,b.zO)()?r.fid=(0,b.zO)()-t:t>(0,b.os)()&&t<=Date.now()?(t-=(0,b.os)(),r.fid=(0,b.zO)()-t):t=(0,b.zO)(),this.fiRecorded=!0,(0,p.p)("timing",["fi",t,r],void 0,void 0,this.ee)}}}var x=__webpack_require__(4539),E="React",S="Angular",O="AngularJS",A="Backbone",q="Ember",C="Vue",T="Meteor",j="Zepto",I="Jquery";function R(){if(!a.il)return[];var e=[];try{(function(){try{if(window.React||window.ReactDOM||window.ReactRedux)return!0;if(document.querySelector("[data-reactroot], [data-reactid]"))return!0;for(var e=document.querySelectorAll("body > div"),t=0;t<e.length;t++)if(Object.keys(e[t]).indexOf("_reactRootContainer")>=0)return!0;return!1}catch(e){return!1}})()&&e.push(E),function(){try{return!!window.angular||(!!document.querySelector(".ng-binding, [ng-app], [data-ng-app], [ng-controller], [data-ng-controller], [ng-repeat], [data-ng-repeat]")||!!document.querySelector('script[src*="angular.js"], script[src*="angular.min.js"]'))}catch(e){return!1}}()&&e.push(O),function(){try{return!!(window.hasOwnProperty("ng")&&window.ng.hasOwnProperty("coreTokens")&&window.ng.coreTokens.hasOwnProperty("NgZone"))||!!document.querySelectorAll("[ng-version]").length}catch(e){return!1}}()&&e.push(S),window.Backbone&&e.push(A),window.Ember&&e.push(q),window.Vue&&e.push(C),window.Meteor&&e.push(T),window.Zepto&&e.push(j),window.jQuery&&e.push(I)}catch(e){}return e}var N=__webpack_require__(8547),M=__webpack_require__(248),Z=__webpack_require__(8873);const B=Boolean(a.ZP?.Worker),D=Boolean(a.ZP?.SharedWorker),W=Boolean(a.ZP?.navigator?.serviceWorker);let F,z,G;class L extends m.W{constructor(e){var t;let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};super(e),t=this,this.PfFeatStatusEnum=r,this.singleChecks(),this.eachSessionChecks(),(0,x.X)("record-supportability",(function(){return t.recordSupportability(...arguments)}),void 0,this.ee),(0,x.X)("record-custom",(function(){return t.recordCustom(...arguments)}),void 0,this.ee)}recordSupportability(e,t){var r=["sm",e,{name:e},t];return(0,p.p)("storeMetric",r,null,void 0,this.ee),r}recordCustom(e,t){var r=["cm",e,{name:e},t];return(0,p.p)("storeEventMetrics",r,null,void 0,this.ee),r}singleChecks(){this.recordSupportability(`Generic/Version/${Z.q}/Detected`);const{loaderType:e}=(0,_.OP)(this.agentIdentifier);e&&this.recordSupportability(`Generic/LoaderType/${e}/Detected`),a.il&&o((()=>{R().forEach((e=>{this.recordSupportability("Framework/"+e+"/Detected")}))})),N.T.isFileProtocol()&&(this.recordSupportability("Generic/FileProtocol/Detected"),N.T.supportabilityMetricSent=!0);const t=(0,M.$c)(this.agentIdentifier);t.length>0&&this.recordSupportability("Generic/Obfuscate/Detected"),t.length>0&&!(0,M.Ng)(t)&&this.recordSupportability("Generic/Obfuscate/Invalid"),a.il&&this.reportPolyfillsNeeded(),function(e){if(!F){if(B){F=Worker;try{a.ZP.Worker=r(F,"Dedicated")}catch(e){o(e,"Dedicated")}if(D){z=SharedWorker;try{a.ZP.SharedWorker=r(z,"Shared")}catch(e){o(e,"Shared")}}else n("Shared");if(W){G=navigator.serviceWorker.register;try{a.ZP.navigator.serviceWorker.register=(t=G,function(){for(var e=arguments.length,r=new Array(e),n=0;n<e;n++)r[n]=arguments[n];return i("Service",r[1]?.type),t.apply(navigator.serviceWorker,r)})}catch(e){o(e,"Service")}}else n("Service");var t;return}n("All")}function r(e,t){return new Proxy(e,{construct:(e,r)=>(i(t,r[1]?.type),new e(...r))})}function n(t){a.v6||e(`Workers/${t}/Unavailable`)}function i(t,r){e("module"===r?`Workers/${t}/Module`:`Workers/${t}/Classic`)}function o(t,r){e(`Workers/${r}/SM/Unsupported`),console.warn(`NR Agent: Unable to capture ${r} workers.`,t)}}(this.recordSupportability.bind(this))}reportPolyfillsNeeded(){this.recordSupportability(`Generic/Polyfill/Promise/${this.PfFeatStatusEnum.PROMISE}`),this.recordSupportability(`Generic/Polyfill/ArrayIncludes/${this.PfFeatStatusEnum.ARRAY_INCLUDES}`),this.recordSupportability(`Generic/Polyfill/ObjectAssign/${this.PfFeatStatusEnum.OBJECT_ASSIGN}`),this.recordSupportability(`Generic/Polyfill/ObjectEntries/${this.PfFeatStatusEnum.OBJECT_ENTRIES}`)}eachSessionChecks(){a.il&&(0,r.bP)("pageshow",(e=>{e.persisted&&this.recordCustom("Custom/BFCache/PageRestored")}))}}var U=__webpack_require__(9011);const $=(0,e.n)(),H="lite";try{!function(e){if(g)return;const r=(0,f.gG)();a.v6&&(r.info.jsAttributes={...r.info.jsAttributes,isWorker:!0});try{(0,_.CX)(t.Z,r.info),(0,_.Dg)(t.Z,r.init),(0,_.GE)(t.Z,r.loader_config),(0,_.sU)(t.Z,{loaderType:e}),function(e){var t=(0,f.fP)(),r=c.ee.get(e),n=r.get("tracer"),i="api-",o=i+"ixn-";function a(){}(0,v.D)(["setErrorHandler","finished","addToTrace","inlineHit","addRelease"],(function(e,r){t[r]=u(i,r,!0,"api")})),t.addPageAction=u(i,"addPageAction",!0),t.setCurrentRouteName=u(i,"routeName",!0),t.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,_.OP)(e).customTransaction=(r||"http://custom.transaction")+t,u(i,"setPageViewName",!0,"api")()},t.setCustomAttribute=function(t,r){const n=(0,_.C5)(e);return(0,_.CX)(e,{...n,jsAttributes:{...n.jsAttributes,[t]:r}}),u(i,"setCustomAttribute",!0,"api")()},t.interaction=function(){return(new a).get()};var s=a.prototype={createTracer:function(e,t){var i={},a=this,c="function"==typeof t;return(0,p.p)(o+"tracer",[(0,b.zO)(),e,i],a,void 0,r),function(){if(n.emit((c?"":"no-")+"fn-start",[(0,b.zO)(),a,c],i),c)try{return t.apply(this,arguments)}catch(e){throw n.emit("fn-err",[arguments,this,"string"==typeof e?new Error(e):e],i),e}finally{n.emit("fn-end",[(0,b.zO)()],i)}}}};function u(e,t,n,i){return function(){return(0,p.p)("record-supportability",["API/"+t+"/called"],void 0,void 0,r),(0,p.p)(e+t,[(0,b.zO)()].concat(l()(arguments)),n?null:this,i,r),n?void 0:this}}(0,v.D)("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),(function(e,t){s[t]=u(o,t)})),t.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),(0,p.p)("record-supportability",["API/noticeError/called"],void 0,void 0,r),(0,p.p)("err",[e,(0,b.zO)(),!1,t],void 0,void 0,r)}}(t.Z),g=!0}catch(e){}}(H);const e=(0,U.K)(t.Z);e.page_view_event&&new y(t.Z),e.page_view_timing&&new P(t.Z),e.metrics&&new L(t.Z,$),function(e,t){let r=arguments.length>2&&void 0!==arguments[2]?arguments[2]:1e3;t?setTimeout((()=>u(e)),r):a.il?i((()=>u(e))):u(e)}(H)}catch(e){a.ZP?.newrelic?.ee?.abort&&a.ZP.newrelic.ee.abort()}})(),window.NRBA=__webpack_exports__})();</script>
+<noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>
+</noscript><script async src="https://www.googletagmanager.com/gtag/js?id=UA-24934600-1"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "UA-24934600-1", {"groups":"default","anonymize_ip":true,"page_placeholder":"PLACEHOLDER_page_path"});gtag("config", "UA-24934301-1", {"groups":"default","anonymize_ip":true});</script>
+<link rel="canonical" href="https://law.georgia.gov/opinions/official" />
+<link rel="shortlink" href="https://law.georgia.gov/opinions/official" />
+<meta name="description" content="Office of Attorney General of Georgia Chris Carr Official Opinions." />
+<meta property="og:site_name" content="Office of Attorney General of Georgia Chris Carr" />
+<meta property="og:url" content="https://law.georgia.gov/opinions/official" />
+<meta property="og:title" content="Official Opinions" />
+<meta property="og:description" content="Office of Attorney General of Georgia Chris Carr Official Opinions." />
+<meta property="og:image" content="https://law.georgia.gov/themes/custom/ga_forest/assets/images/social/pillars-placeholder-wide-stars-stripes-1.png" />
+<meta property="og:image:width" content="1201" />
+<meta property="og:image:height" content="629" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@georgia_ag" />
+<meta name="twitter:description" content="Office of Attorney General of Georgia Chris Carr Official Opinions." />
+<meta name="twitter:title" content="Official Opinions" />
+<meta name="twitter:url" content="https://law.georgia.gov/opinions/official" />
+<meta name="twitter:image" content="https://law.georgia.gov/themes/custom/ga_forest/assets/images/social/pillars-placeholder-wide-stars-stripes-1.png" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "url": "https://law.georgia.gov/opinions/2022-1"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "url": "https://law.georgia.gov/opinions/2021-1"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "url": "https://law.georgia.gov/opinions/2020-4"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "url": "https://law.georgia.gov/opinions/2020-3"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "url": "https://law.georgia.gov/opinions/2020-2"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "url": "https://law.georgia.gov/opinions/2020-1"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 7,
+                    "url": "https://law.georgia.gov/opinions/2019-3"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 8,
+                    "url": "https://law.georgia.gov/opinions/2019-2"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 9,
+                    "url": "https://law.georgia.gov/opinions/2019-1"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 10,
+                    "url": "https://law.georgia.gov/opinions/2018-3"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 11,
+                    "url": "https://law.georgia.gov/opinions/2018-2"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 12,
+                    "url": "https://law.georgia.gov/opinions/2018-1"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 13,
+                    "url": "https://law.georgia.gov/opinions/2017-5"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 14,
+                    "url": "https://law.georgia.gov/opinions/2017-4"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 15,
+                    "url": "https://law.georgia.gov/opinions/2017-3"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 16,
+                    "url": "https://law.georgia.gov/opinions/2017-2"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 17,
+                    "url": "https://law.georgia.gov/opinions/2017-1"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 18,
+                    "url": "https://law.georgia.gov/opinions/2016-7"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 19,
+                    "url": "https://law.georgia.gov/opinions/2016-6"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 20,
+                    "url": "https://law.georgia.gov/opinions/2016-5"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 21,
+                    "url": "https://law.georgia.gov/opinions/2016-4"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 22,
+                    "url": "https://law.georgia.gov/opinions/2016-3"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 23,
+                    "url": "https://law.georgia.gov/opinions/2016-2"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 24,
+                    "url": "https://law.georgia.gov/opinions/2016-1-0"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 25,
+                    "url": "https://law.georgia.gov/opinions/2015-2"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 26,
+                    "url": "https://law.georgia.gov/opinions/2015-1"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 27,
+                    "url": "https://law.georgia.gov/opinions/2014-2-0"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 28,
+                    "url": "https://law.georgia.gov/opinions/2014-1-0"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 29,
+                    "url": "https://law.georgia.gov/opinions/2013-4"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 30,
+                    "url": "https://law.georgia.gov/opinions/2013-3"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 31,
+                    "url": "https://law.georgia.gov/opinions/2013-2"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 32,
+                    "url": "https://law.georgia.gov/opinions/2013-1"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 33,
+                    "url": "https://law.georgia.gov/opinions/2012-7"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 34,
+                    "url": "https://law.georgia.gov/opinions/2012-6"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 35,
+                    "url": "https://law.georgia.gov/opinions/2012-5"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 36,
+                    "url": "https://law.georgia.gov/opinions/2012-4"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 37,
+                    "url": "https://law.georgia.gov/opinions/2012-3"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 38,
+                    "url": "https://law.georgia.gov/opinions/2012-2"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 39,
+                    "url": "https://law.georgia.gov/opinions/2012-1"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 40,
+                    "url": "https://law.georgia.gov/opinions/2011-5"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 41,
+                    "url": "https://law.georgia.gov/opinions/2011-4"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 42,
+                    "url": "https://law.georgia.gov/opinions/2011-3"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 43,
+                    "url": "https://law.georgia.gov/opinions/2011-2"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 44,
+                    "url": "https://law.georgia.gov/opinions/2011-1"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 45,
+                    "url": "https://law.georgia.gov/opinions/2010-6"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 46,
+                    "url": "https://law.georgia.gov/opinions/2010-5"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 47,
+                    "url": "https://law.georgia.gov/opinions/2010-4"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 48,
+                    "url": "https://law.georgia.gov/opinions/2010-3"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 49,
+                    "url": "https://law.georgia.gov/opinions/2010-2"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 50,
+                    "url": "https://law.georgia.gov/opinions/2010-1"
+                }
+            ],
+            "mainEntityOfPage": "https://law.georgia.gov/opinions/official"
+        },
+        {
+            "@type": "WebPage",
+            "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://law.georgia.gov/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Opinions",
+                        "item": "https://law.georgia.gov/opinions"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Official Opinions",
+                        "item": "https://law.georgia.gov/opinions/official"
+                    }
+                ]
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Office of Attorney General of Georgia Chris Carr",
+                "url": "https://law.georgia.gov/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://law.georgia.gov/themes/custom/ga_forest/assets/images/icons/logo/ga-logo--gold.svg",
+                    "width": "80",
+                    "height": "90"
+                }
+            }
+        }
+    ]
+}</script>
+<link rel="icon" href="/themes/custom/ga_forest/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Official Opinions</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Font preload -->
+    <link rel="preload" href="/themes/custom/ga_forest/assets/fonts/proxima-nova/3786F2_0_0.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/themes/custom/ga_forest/assets/fonts/proxima-nova/3786F2_1_0.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/themes/custom/ga_forest/assets/fonts/source-serif-pro/var/SourceSerifVariable-Roman.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/themes/custom/ga_forest/assets/fonts/source-serif-pro/var/SourceSerifVariable-Italic.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Inline font styles -->
+    <style type="text/css">
+      @font-face{font-family:"Proxima Nova";font-weight:400;font-style:normal;src:url("/themes/custom/ga_forest/assets/fonts/proxima-nova/3786F2_0_0.woff2") format("woff2"),url("/themes/custom/ga_forest/assets/fonts/proxima-nova/3786F2_0_0.woff") format("woff")}@font-face{font-family:"Proxima Nova";font-weight:600;font-style:normal;src:url("/themes/custom/ga_forest/assets/fonts/proxima-nova/3786F2_1_0.woff2") format("woff2"),url("/themes/custom/ga_forest/assets/fonts/proxima-nova/3786F2_1_0.woff") format("woff")}@font-face{font-family:"Source Serif Pro";font-weight:200;font-style:normal;font-stretch:normal;src:url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff2/SourceSerifPro-ExtraLight.woff2") format("woff2"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff/SourceSerifPro-ExtraLight.woff") format("woff"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/ttf/SourceSerifPro-ExtraLight.ttf") format("truetype")}@font-face{font-family:"Source Serif Pro";font-weight:200;font-style:italic;font-stretch:normal;src:url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff2/SourceSerifPro-ExtraLightIt.woff2") format("woff2"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff/SourceSerifPro-ExtraLightIt.woff") format("woff"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/ttf/SourceSerifPro-ExtraLightIt.ttf") format("truetype")}@font-face{font-family:"Source Serif Pro";font-weight:300;font-style:normal;font-stretch:normal;src:url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff2/SourceSerifPro-Light.woff2") format("woff2"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff/SourceSerifPro-Light.woff") format("woff"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/ttf/SourceSerifPro-Light.ttf") format("truetype")}@font-face{font-family:"Source Serif Pro";font-weight:300;font-style:italic;font-stretch:normal;src:url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff2/SourceSerifPro-LightIt.woff2") format("woff2"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff/SourceSerifPro-LightIt.woff") format("woff"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/ttf/SourceSerifPro-LightIt.ttf") format("truetype")}@font-face{font-family:"Source Serif Pro";font-weight:400;font-style:normal;font-stretch:normal;src:url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff2/SourceSerifPro-Regular.woff2") format("woff2"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff/SourceSerifPro-Regular.woff") format("woff"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/ttf/SourceSerifPro-Regular.ttf") format("truetype")}@font-face{font-family:"Source Serif Pro";font-weight:400;font-style:italic;font-stretch:normal;src:url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff2/SourceSerifPro-It.woff2") format("woff2"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff/SourceSerifPro-It.woff") format("woff"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/ttf/SourceSerifPro-It.ttf") format("truetype")}@font-face{font-family:"Source Serif Pro";font-weight:600;font-style:normal;font-stretch:normal;src:url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff2/SourceSerifPro-Semibold.woff2") format("woff2"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff/SourceSerifPro-Semibold.woff") format("woff"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/ttf/SourceSerifPro-Semibold.ttf") format("truetype")}@font-face{font-family:"Source Serif Pro";font-weight:600;font-style:italic;font-stretch:normal;src:url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff2/SourceSerifPro-SemiboldIt.woff2") format("woff2"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff/SourceSerifPro-SemiboldIt.woff") format("woff"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/ttf/SourceSerifPro-SemiboldIt.ttf") format("truetype")}@font-face{font-family:"Source Serif Pro";font-weight:700;font-style:normal;font-stretch:normal;src:url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff2/SourceSerifPro-Bold.woff2") format("woff2"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff/SourceSerifPro-Bold.woff") format("woff"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/ttf/SourceSerifPro-Bold.ttf") format("truetype")}@font-face{font-family:"Source Serif Pro";font-weight:700;font-style:italic;font-stretch:normal;src:url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff2/SourceSerifPro-BoldIt.woff2") format("woff2"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff/SourceSerifPro-BoldIt.woff") format("woff"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/ttf/SourceSerifPro-BoldIt.ttf") format("truetype")}@font-face{font-family:"Source Serif Pro";font-weight:900;font-style:normal;font-stretch:normal;src:url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff2/SourceSerifPro-Black.woff2") format("woff2"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff/SourceSerifPro-Black.woff") format("woff"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/ttf/SourceSerifPro-Black.ttf") format("truetype")}@font-face{font-family:"Source Serif Pro";font-weight:900;font-style:italic;font-stretch:normal;src:url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff2/SourceSerifPro-BlackIt.woff2") format("woff2"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/woff/SourceSerifPro-BlackIt.woff") format("woff"),url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/ttf/SourceSerifPro-BlackIt.ttf") format("truetype")}@font-face{font-family:"Source Serif Pro VF";font-weight:200 900;font-style:normal;font-stretch:normal;src:url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/var/SourceSerifVariable-Roman.woff2") format("woff2-variations")}@font-face{font-family:"Source Serif Pro VF";font-weight:200 900;font-style:italic;font-stretch:normal;src:url("/themes/custom/ga_forest/assets/fonts/source-serif-pro/var/SourceSerifVariable-Italic.woff2") format("woff2-variations")}    </style>
+
+    <link rel="stylesheet" media="all" href="/sites/law.georgia.gov/files/css/css_zJXYEfTBv1iacBv7vTvcFI7ZiFWnT2Hvgy0CEHEX0dA.css" />
+<link rel="stylesheet" media="all" href="//cloud.typenetwork.com/projects/2738/fontface.css" />
+<link rel="stylesheet" media="all" href="/sites/law.georgia.gov/files/css/css_OWcXqyOqDYYm-_Hahg_47kBSPbmkHBDGV5SLAr-pwRI.css" />
+
+
+    <!-- Inline preferred font loader js -->
+    <script>
+      "use strict";!function(e){function o(){s.add("fonts-active"),s.remove("fonts-inactive")}var t,s=e.documentElement.classList;s.add("fonts-inactive"),sessionStorage.gaFontsLoaded?o():"fonts"in e?Promise.all([e.fonts.load("389 1em 'Source Serif Pro VF'"),e.fonts.load("italic 389 1em 'Source Serif Pro VF'"),e.fonts.load("400 1em 'Proxima Nova'"),e.fonts.load("600 1em 'Proxima Nova'")]).then(function(){o(),sessionStorage.gaFontsLoaded=!0}):(t=e.getElementsByTagName("script")[0],(e=e.createElement("script")).src="/themes/custom/ga_forest/dist/js/ga-font-loader-fallback.min.js",e.async=!0,t.parentNode.insertBefore(e,t))}(document);    </script>
+
+
+  </head>
+  <body class="mq-breakpoints--hide path-opinions u-palette--stars-stripes">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+
+
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="page js-menu-screen-overlay">
+  <div class="page__header">
+          <header class="header__wrapper">
+  <div class="header-top-hat" data-swatch-role="header-top-hat" data-swatch-type="global" data-swatch-text-type="light-text">
+  <div class="header-top-hat__inner">
+    <div class="header-official-site">
+  <div class="header-official-site__description">
+    <span class="header-official-site__description-icon">
+      <img class="header-official-site__description-icon-image" src="/themes/custom/ga_forest/assets/images/icons/flag/ga-flag.svg" alt="Georgia State Flag" />
+    </span>
+    <p class="header-official-site__description-text">
+      <span class="header-official-site__description-text-content">An official website of the State of Georgia.</span>
+      <a href="#" class="header-official-site__link">
+        <span class="header-official-site__link-text">How you know</span><img class="header-official-site__link-image" src="/themes/custom/ga_forest/assets/images/icons/arrows/short-down/arrow-short-down--white.svg" alt="" />
+      </a>
+    </p>
+  </div>
+</div>
+    <div class="header-utility-wide">
+
+    <a id="block-googletranslator" href="#" class="notranslate google-translator-switch header-utility-wide__language-selector">
+  <span class="header-utility-wide__language-selector-image">
+    <?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="19px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-labelledby="title">
+  <title id="title" lang="en">Translate website</title>
+  <g>
+    <path d="M24.33,4.17 C24.994621,4.83810223 25.5940018,5.56807445 26.12,6.35 C26.6350967,7.12058729 27.0706615,7.94145943 27.42,8.8 C27.7723373,9.6560377 28.0435272,10.5432641 28.23,11.45 C28.6033333,13.298 28.6033333,15.202 28.23,17.05 C28.0435272,17.9567359 27.7723373,18.8439623 27.42,19.7 C27.0688291,20.5576831 26.6333593,21.3783761 26.12,22.15 C25.5964154,22.9306385 24.9968239,23.6575175 24.33,24.32 C23.6653853,24.9844812 22.9387439,25.5838766 22.16,26.11 C21.3884495,26.6262553 20.5678002,27.0650515 19.71,27.42 C18.8513525,27.7722346 17.9604959,28.0401614 17.05,28.22 C15.200699,28.5800881 13.299301,28.5800881 11.45,28.22 C10.5424078,28.0415302 9.65473659,27.773554 8.8,27.42 C7.94119967,27.0671701 7.12034398,26.6282636 6.35,26.11 C5.56807445,25.5840018 4.83810223,24.984621 4.17,24.32 C2.84714532,22.9974145 1.79723365,21.4276437 1.08,19.7 C0.718670596,18.8472053 0.447204201,17.9590745 0.27,17.05 C-0.0900880855,15.200699 -0.0900880855,13.299301 0.27,11.45 C0.447204201,10.5409255 0.718670596,9.65279471 1.08,8.8 C1.43282993,7.94119967 1.87173644,7.12034398 2.39,6.35 C3.43726264,4.75837677 4.79837677,3.39726264 6.39,2.35 C7.14931404,1.8479359 7.95660835,1.42251525 8.8,1.08 C9.65279471,0.718670596 10.5409255,0.447204201 11.45,0.27 C13.299301,-0.0900880855 15.200699,-0.0900880855 17.05,0.27 C17.9619779,0.448547171 18.8532883,0.719961226 19.71,1.08 C20.5678002,1.43494852 21.3884495,1.87374468 22.16,2.39 C22.9385594,2.91261692 23.6652175,3.50867747 24.33,4.17 Z M6,13.49 C6,13.09 6,12.69 6.07,12.3 C6.14,11.91 6.14,11.51 6.19,11.13 C6.24,10.75 6.29,10.36 6.36,9.98 C6.43,9.6 6.5,9.24 6.58,8.88 C6.32,8.98 6.06,9.1 5.81,9.22 L5.06,9.59 C4.59659888,9.85181405 4.1521707,10.1458718 3.73,10.47 C3.36739089,10.7543498 3.03255923,11.0724398 2.73,11.42 C2.45354158,11.7278426 2.20896107,12.0628844 2,12.42 C1.81704945,12.7525654 1.68236546,13.109478 1.6,13.48 L6,13.49 Z M6,15 L1.58,15 C1.66745432,15.3719573 1.80895844,15.7290867 2,16.06 C2.2093581,16.4168554 2.45391047,16.7518586 2.73,17.06 C3.03013691,17.4249543 3.36504573,17.7598631 3.73,18.06 C4.15482515,18.377354 4.59901984,18.6679174 5.06,18.93 C5.3,19.06 5.55,19.19 5.81,19.31 C6.07,19.43 6.32,19.54 6.58,19.64 C6.5,19.28 6.43,18.91 6.36,18.54 C6.29,18.17 6.24,17.78 6.19,17.4 C6.14,17.02 6.1,16.62 6.07,16.22 C6.04,15.82 6,15.4 6,15 Z M9.67,2.34 C8.84033725,2.67551895 8.04358997,3.0872833 7.29,3.57 C6.57186518,4.06195986 5.90217943,4.62114745 5.29,5.24 C4.00678407,6.48932675 3.00749019,8.00020453 2.36,9.67 C2.649323,9.40557476 2.95673549,9.16164963 3.28,8.94 C3.6218041,8.70506997 3.97561708,8.48810919 4.34,8.29 C4.76,8.06 5.2,7.84 5.66,7.64 C6.12,7.44 6.6,7.26 7.09,7.09 C7.26,6.59 7.44,6.09 7.64,5.65 C7.84,5.21 8.06,4.76 8.29,4.34 C8.52,3.92 8.73,3.6 9,3.27 C9.20512929,2.94728285 9.42883976,2.63675937 9.67,2.34 Z M2.36,18.82 C2.67845382,19.6537044 3.08403492,20.4514589 3.57,21.2 C4.0541328,21.9424231 4.61377888,22.632765 5.24,23.26 C5.86535309,23.8842795 6.55217343,24.4437868 7.29,24.93 C8.03714743,25.4210794 8.83509844,25.8301131 9.67,26.15 C9.42883976,25.8532406 9.20512929,25.5427172 9,25.22 C8.77,24.89 8.55,24.54 8.33,24.16 C8.11,23.78 7.88,23.3 7.68,22.84 C7.48,22.38 7.3,21.9 7.13,21.4 C6.64,21.24 6.13,21.05 5.7,20.85 C5.27,20.65 4.8,20.43 4.38,20.2 C4.0135253,20.0055315 3.65950779,19.7884453 3.32,19.55 C2.98298199,19.3298983 2.66216121,19.0859408 2.36,18.82 Z M13.51,7.51 C13.04,7.51 12.58,7.51 12.13,7.59 C11.68,7.67 11.24,7.68 10.8,7.75 L9.52,8 C9.1,8.09 8.69,8.19 8.29,8.31 C8.17,8.71 8.07,9.12 7.98,9.54 C7.89,9.96 7.82,10.39 7.76,10.82 C7.7,11.25 7.64,11.7 7.6,12.15 C7.56,12.6 7.52,13.05 7.51,13.51 L13.51,13.51 L13.51,7.51 Z M7.51,15 C7.51,15.46 7.51,15.91 7.6,16.36 C7.69,16.81 7.69,17.25 7.76,17.69 C7.83,18.13 7.9,18.55 8,19 C8.1,19.45 8.19,19.83 8.31,20.23 C8.71,20.35 9.12,20.45 9.54,20.54 C9.96,20.63 10.39,20.7 10.82,20.77 C11.25,20.84 11.7,20.89 12.15,20.93 C12.6,20.97 13,21 13.51,21 L13.51,15 L7.51,15 Z M13.51,1.58 C13.1360334,1.66145587 12.7756931,1.79616251 12.44,1.98 C12.075362,2.17322533 11.7389029,2.4154759 11.44,2.7 C11.0951346,3.00536194 10.7772869,3.3399385 10.49,3.7 C10.1657153,4.11784508 9.87798731,4.56281976 9.63,5.03 C9.48609545,5.26908443 9.35588578,5.51614893 9.24,5.77 C9.12,6.03 9,6.29 8.9,6.55 C9.26,6.46 9.63,6.39 10,6.32 L11.15,6.16 L12.32,6.03 C12.72,6.03 13.12,5.98 13.53,5.97 L13.51,1.58 Z M13.51,22.49 C13.1,22.49 12.7,22.49 12.3,22.43 C11.9,22.37 11.52,22.36 11.13,22.31 C10.74,22.26 10.36,22.2 9.98,22.13 C9.6,22.06 9.24,21.99 8.88,21.9 C8.98,22.17 9.1,22.44 9.22,22.69 C9.34,22.94 9.47,23.19 9.61,23.42 C9.85327538,23.8930716 10.1412541,24.3417826 10.47,24.76 C10.7547985,25.1222212 11.0728502,25.4570125 11.42,25.76 C11.7216725,26.0383666 12.0577368,26.2769723 12.42,26.47 C12.7556931,26.6538375 13.1160334,26.7885441 13.49,26.87 L13.51,22.49 Z M15,6 C15.4,6 15.8,6 16.19,6.06 L17.37,6.19 L18.51,6.35 C18.88,6.42 19.26,6.49 19.63,6.58 C19.51,6.32 19.39,6.06 19.28,5.8 C19.17,5.54 19,5.3 18.9,5.07 C18.6282229,4.60820961 18.3276277,4.16399678 18,3.74 C17.6968408,3.37779971 17.3622003,3.04315918 17,2.74 C16.6992706,2.45768605 16.3631213,2.21565858 16,2.02 C15.6889008,1.82725711 15.3522823,1.67914495 15,1.58 L15,6 Z M21,13.48 C21,13.02 21,12.57 20.91,12.12 C20.82,11.67 20.82,11.23 20.76,10.79 C20.7,10.35 20.62,9.93 20.53,9.51 C20.44,9.09 20.33,8.68 20.21,8.28 C19.81,8.16 19.4,8.06 18.99,7.97 L17.7,7.75 C17.26,7.68 16.81,7.63 16.36,7.59 C15.91,7.55 15.46,7.52 15,7.51 L15,13.51 L21,13.48 Z M15,21 C15.46,21 15.91,21 16.36,20.91 C16.81,20.82 17.26,20.82 17.7,20.75 C18.14,20.68 18.56,20.61 18.98,20.52 C19.4,20.43 19.8,20.33 20.2,20.21 C20.32,19.81 20.42,19.4 20.52,18.98 C20.62,18.56 20.69,18.13 20.75,17.7 C20.81,17.27 20.86,16.82 20.9,16.37 C20.94,15.92 21,15.46 21,15 L15,15 L15,21 Z M15,26.92 C15.3708792,26.8388362 15.7279603,26.7040886 16.06,26.52 C16.4207831,26.3245862 16.7565628,26.0861827 17.06,25.81 C17.424535,25.5094012 17.7594012,25.174535 18.06,24.81 C18.3818387,24.3848305 18.672593,23.937002 18.93,23.47 C19.06,23.24 19.19,22.99 19.31,22.74 C19.43,22.49 19.55,22.22 19.66,21.95 C19.29,22.04 18.91,22.12 18.54,22.18 C18.17,22.24 17.78,22.31 17.4,22.36 C17.02,22.41 16.62,22.45 16.22,22.48 C15.82,22.51 15.43,22.53 15.03,22.54 L15,26.92 Z M26.15,9.67 C25.8321531,8.83418947 25.4230084,8.03602186 24.93,7.29 C24.4459563,6.56590536 23.886129,5.8954534 23.26,5.29 C22.6352484,4.64633828 21.9448174,4.06986196 21.2,3.57 C20.453366,3.08737994 19.6632643,2.67558963 18.84,2.34 C19.08,2.63 19.32,2.93 19.55,3.27 C19.7882726,3.61506745 20.0085659,3.97220973 20.21,4.34 C20.44,4.76 20.65,5.2 20.85,5.65 C21.0573339,6.12048603 21.2408986,6.60109186 21.4,7.09 C21.9,7.26 22.4,7.44 22.84,7.64 C23.28,7.84 23.74,8.06 24.16,8.29 C24.5243829,8.48810919 24.8781959,8.70506997 25.22,8.94 C25.5464539,9.16160872 25.8571949,9.40552368 26.15,9.67 Z M18.84,26.15 C20.4955429,25.4992187 21.9999111,24.5155933 23.26,23.26 C23.8891054,22.635367 24.4490096,21.9447068 24.93,21.2 C25.4230084,20.4539781 25.8321531,19.6558105 26.15,18.82 C25.8571949,19.0844763 25.5464539,19.3283913 25.22,19.55 C24.8804922,19.7884453 24.5264747,20.0055315 24.16,20.2 C23.74,20.43 23.3,20.65 22.84,20.85 C22.369514,21.0573339 21.8889081,21.2408986 21.4,21.4 C21.2408986,21.8889081 21.0573339,22.369514 20.85,22.84 C20.65,23.3 20.44,23.74 20.21,24.16 C20.0085449,24.5245479 19.7882467,24.8783601 19.55,25.22 C19.32,25.56 19.08,25.86 18.84,26.15 Z M22.49,13.49 L26.92,13.49 C26.8417217,13.1182717 26.7068157,12.7607708 26.52,12.43 C26.3180033,12.0708848 26.0765044,11.7354697 25.8,11.43 C25.4970125,11.0828502 25.1622212,10.7647985 24.8,10.48 C24.3829563,10.1536121 23.9416826,9.8594296 23.48,9.6 L22.73,9.23 C22.48,9.11 22.21,8.99 21.94,8.89 C22.03,9.25 22.11,9.62 22.17,9.99 C22.23,10.36 22.3,10.75 22.35,11.14 C22.4,11.53 22.44,11.91 22.47,12.31 C22.5,12.71 22.48,13.09 22.49,13.49 Z M22.49,15 C22.49,15.4 22.49,15.8 22.43,16.19 C22.37,16.58 22.36,16.98 22.31,17.37 C22.26,17.76 22.2,18.13 22.13,18.51 C22.06,18.89 21.99,19.25 21.9,19.61 C22.17,19.51 22.44,19.39 22.69,19.28 L23.44,18.9 C23.9001436,18.6306655 24.3411876,18.3299537 24.76,18 C25.124535,17.6994012 25.4594012,17.364535 25.76,17 C26.0361182,16.6942183 26.2775848,16.3588479 26.48,16 C26.6682928,15.669922 26.8032883,15.3121841 26.88,14.94 L22.49,15 Z"></path>
+  </g>
+</svg>
+
+  </span>
+  <span class="header-utility-wide__language-selector-text">English</span>
+</a>
+
+
+
+
+  <a class="header-utility-wide__agency-selector" href="https://georgia.gov/agency-list">
+    <span class="header-utility-wide__agency-selector-image">
+      <?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="19px" viewBox="0 0 29 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M0.617419355,3.59225806 C0.216776503,3.20566764 -0.00660702525,2.67090101 -5.68317041e-13,2.11419355 C-0.0106802799,1.55123316 0.212938939,1.00912596 0.617419355,0.617419355 C1.00912596,0.212938939 1.55123316,-0.0106802799 2.11419355,1.39428399e-16 C2.67090101,-0.00660702525 3.20566764,0.216776503 3.59225806,0.617419355 C3.99673848,1.00912596 4.2203577,1.55123316 4.20967742,2.11419355 C4.21628444,2.67090101 3.99290092,3.20566764 3.59225806,3.59225806 C3.20566764,3.99290092 2.67090101,4.21628444 2.11419355,4.20967742 C1.55123316,4.2203577 1.00912596,3.99673848 0.617419355,3.59225806 Z M0.617419355,10.6083871 C-0.2033369,9.78660882 -0.2033369,8.45532666 0.617419355,7.63354839 C1.00912596,7.22906797 1.55123316,7.00544875 2.11419355,7.01612903 C2.67090101,7.00952201 3.20566764,7.23290554 3.59225806,7.63354839 C4.41301432,8.45532666 4.41301432,9.78660882 3.59225806,10.6083871 C3.20566764,11.0090299 2.67090101,11.2324135 2.11419355,11.2258065 C1.55123316,11.2364867 1.00912596,11.0128675 0.617419355,10.6083871 Z M0.617419355,17.6245161 C-0.2033369,16.8027379 -0.2033369,15.4714557 0.617419355,14.6496774 C1.00912596,14.245197 1.55123316,14.0215778 2.11419355,14.0322581 C2.67090101,14.025651 3.20566764,14.2490346 3.59225806,14.6496774 C4.41301432,15.4714557 4.41301432,16.8027379 3.59225806,17.6245161 C3.20566764,18.025159 2.67090101,18.2485425 2.11419355,18.2419355 C1.55123316,18.2526158 1.00912596,18.0289965 0.617419355,17.6245161 Z M1.55290323,1.59967742 C1.41931181,1.73744669 1.34537146,1.92229758 1.34709677,2.11419355 C1.3476755,2.29738488 1.4218314,2.47266245 1.55290323,2.60064516 C1.69920772,2.7506635 1.9055909,2.82633733 2.11419355,2.80645161 C2.29827569,2.81036931 2.47526917,2.73548745 2.60064516,2.60064516 C2.73548745,2.47526917 2.81036931,2.29827569 2.80645161,2.11419355 C2.81248097,1.92151358 2.73789398,1.73504611 2.60064516,1.59967742 C2.47266245,1.46860559 2.29738488,1.39444969 2.11419355,1.39387097 C1.92229758,1.39214565 1.73744669,1.46608601 1.59967742,1.59967742 L1.55290323,1.59967742 Z M1.55290323,8.61580645 C1.41931181,8.75357573 1.34537146,8.93842661 1.34709677,9.13032258 C1.3476755,9.31351391 1.4218314,9.48879149 1.55290323,9.61677419 C1.68827192,9.75402301 1.87473939,9.82861 2.06741935,9.82258065 C2.25150149,9.82649834 2.42849498,9.75161648 2.55387097,9.61677419 C2.70614804,9.50019665 2.79870255,9.32194352 2.80645161,9.13032258 C2.81248097,8.93764262 2.73789398,8.75117515 2.60064516,8.61580645 C2.47111864,8.48816631 2.29603284,8.41745858 2.11419355,8.41935484 C1.92361093,8.41511543 1.73893664,8.48562743 1.59967742,8.61580645 L1.55290323,8.61580645 Z M1.55290323,15.6319355 C1.41931181,15.7697048 1.34537146,15.9545556 1.34709677,16.1464516 C1.3476755,16.3296429 1.4218314,16.5049205 1.55290323,16.6329032 C1.68827192,16.770152 1.87473939,16.844739 2.06741935,16.8387097 C2.25150149,16.8426274 2.42849498,16.7677455 2.55387097,16.6329032 C2.70614804,16.5163257 2.79870255,16.3380726 2.80645161,16.1464516 C2.81248097,15.9537716 2.73789398,15.7673042 2.60064516,15.6319355 C2.47266245,15.5008637 2.29738488,15.4267078 2.11419355,15.426129 C1.92229758,15.4244037 1.73744669,15.4983441 1.59967742,15.6319355 L1.55290323,15.6319355 Z M6.31451613,2.80645161 C6.13043399,2.81036931 5.95344051,2.73548745 5.82806452,2.60064516 C5.6897622,2.47695514 5.61137492,2.29973173 5.61290323,2.11419355 C5.60687387,1.92151358 5.68146086,1.73504611 5.81870968,1.59967742 C5.94669239,1.46860559 6.12196996,1.39444969 6.30516129,1.39387097 L27.3535484,1.39387097 C27.539565,1.39403473 27.7179031,1.46806187 27.8493548,1.59967742 C27.9866037,1.73504611 28.0611906,1.92151358 28.0551613,2.11419355 C28.059079,2.29827569 27.9841971,2.47526917 27.8493548,2.60064516 C27.7204064,2.7359545 27.5404134,2.81066857 27.3535484,2.80645161 L6.31451613,2.80645161 Z M6.31451613,9.82258065 C5.93065011,9.82261477 5.61802144,9.51415448 5.61290323,9.13032258 C5.60687387,8.93764262 5.68146086,8.75117515 5.81870968,8.61580645 C5.95052102,8.48582921 6.12945195,8.41493205 6.31451613,8.41935484 L27.3629032,8.41935484 C27.5489198,8.4195186 27.727258,8.49354574 27.8587097,8.62516129 C27.9959585,8.76052998 28.0705455,8.94699745 28.0645161,9.13967742 C28.0684338,9.32375956 27.993552,9.50075304 27.8587097,9.62612903 C27.7297612,9.76143837 27.5497682,9.83615245 27.3629032,9.83193548 L6.31451613,9.82258065 Z M6.31451613,16.8387097 C5.93065011,16.8387438 5.61802144,16.5302835 5.61290323,16.1464516 C5.60687387,15.9537716 5.68146086,15.7673042 5.81870968,15.6319355 C5.94669239,15.5008637 6.12196996,15.4267078 6.30516129,15.426129 L27.3535484,15.426129 C27.539565,15.4262928 27.7179031,15.5003199 27.8493548,15.6319355 C27.9866037,15.7673042 28.0611906,15.9537716 28.0551613,16.1464516 C28.059079,16.3305338 27.9841971,16.5075272 27.8493548,16.6329032 C27.7204064,16.7682126 27.5404134,16.8429266 27.3535484,16.8387097 L6.31451613,16.8387097 Z"></path>
+</svg>
+
+    </span>
+    <span class="header-utility-wide__agency-selector-text">Organizations A-Z</span>
+  </a>
+</div>
+  </div>
+
+<div class="header-official-site__information" aria-hidden="true">
+  <div class="header-official-site__information-official">
+    <strong>The .gov means it’s official.</strong>
+    <p>Local, state, and federal government websites often end in .gov. State of Georgia government websites and email systems use “georgia.gov” or “ga.gov” at the end of the address. Before sharing sensitive or personal information, make sure you’re on an official state website.</p>
+  </div>
+  <div class="header-official-site__information-secure">
+    <strong>Still not sure?</strong>
+    <p>Call 1-800-GEORGIA to verify that a website is an official website of the State of Georgia.</p>
+  </div>
+</div>
+</div>
+      <div class="emergency-wrapper emergency-wrapper--law">
+              <div class="alert alert--emergency alert--hidden">
+                <div class="alert__icon-wrapper">
+            <img src="/themes/custom/ga_forest/assets/images/icons/alerts/alert-emergency.svg" class="alert__icon" alt="">
+          </div>
+
+  <div class="alert__inner-wrapper">
+    <div class="alert__inner">
+                  <a href="#" class="alert__link--close">
+            <img src="/themes/custom/ga_forest/assets/images/icons/interaction/close/close--black.svg" class="alert__link--close-icon" alt="Dismiss alert">
+          </a>
+
+
+                <div class="alert__content">
+            <div class="alert__title-wrapper">
+              <div class="alert__type">emergency</div><div class="alert__colon">:</div>
+                          </div>
+
+                          <div class="alert__body">
+
+                                                                </div>
+                      </div>
+
+    </div>
+  </div>
+</div>
+          </div>
+        <div class="header-branding-bar" data-swatch-role="header-branding" data-swatch-type="global" data-swatch-text-type="light-text">
+  <div class="header-branding-bar__inner">
+
+
+
+  <div class="header-branding-lockup header-branding-lockup--law">
+    <a class="header-branding-lockup__link" href="/" title="Office of Attorney General of Georgia Chris Carr">
+      <span class="header-branding-lockup__logo header-branding-lockup__logo--agency header-branding-lockup__logo--law">
+        <img class="header-branding-lockup__logo-image" src="/themes/custom/ga_forest/assets/images/icons/logo/ga-logo--gold.svg" alt="" />
+      </span>
+
+                  <span class="header-branding-lockup__wordmark header-branding-lockup__wordmark--agency header-branding-lockup__wordmark--law">
+  <img class="header-branding-lockup__wordmark-image header-branding-lockup__wordmark-image--light" src="/themes/custom/ga_forest/assets/images/icons/wordmarks/law/law-wordmark--white.svg" alt="Office of the Attorney General" />
+  <img class="header-branding-lockup__wordmark-image header-branding-lockup__wordmark-image--dark-hover-focus header-branding-lockup__wordmark-image--light-active" src="/themes/custom/ga_forest/assets/images/icons/wordmarks/law/law-wordmark--gold.svg" alt="Office of the Attorney General" />
+  <img class="header-branding-lockup__wordmark-image header-branding-lockup__wordmark-image--dark" src="/themes/custom/ga_forest/assets/images/icons/wordmarks/law/law-wordmark--black.svg" alt="Office of the Attorney General" />
+  <img class="header-branding-lockup__wordmark-image header-branding-lockup__wordmark-image--dark-active" src="/themes/custom/ga_forest/assets/images/icons/wordmarks/law/law-wordmark--red.svg" alt="Office of the Attorney General" />
+</span>
+
+    </a>
+  </div>
+              <div class="header-search-trigger">
+  <button class="header-search-trigger__button header-search-trigger__button--open">
+    <span class="header-search-trigger__button-icon">
+      <img class="header-search-trigger__button-image header-search-trigger__button-image--light" src="/themes/custom/ga_forest/assets/images/icons/interaction/search/search--white.svg" alt="" />
+      <img class="header-search-trigger__button-image header-search-trigger__button-image--dark" src="/themes/custom/ga_forest/assets/images/icons/interaction/search/search--black.svg" alt="" />
+      <img class="header-search-trigger__button-image header-search-trigger__button-image--light-active" src="/themes/custom/ga_forest/assets/images/icons/interaction/search/search--gold.svg" alt="" />
+      <img class="header-search-trigger__button-image header-search-trigger__button-image--dark-active" src="/themes/custom/ga_forest/assets/images/icons/interaction/search/search--red.svg" alt="" />
+    </span>
+    <span class="header-search-trigger__button-text">Search</span>
+  </button>
+</div>
+        <div class="header-menu-trigger">
+  <button class="header-menu-trigger__button">
+    <!-- This span is being used to create the menu toggle button. -->
+    <span class="header-menu-trigger__button-icon">
+    </span>
+    <span class="header-menu-trigger__button-text header-menu-trigger__button-text--to-open">Menu</span>
+    <span class="header-menu-trigger__button-text header-menu-trigger__button-text--to-close">Close</span>
+  </button>
+</div>
+
+<div class="js-breakpoint-indicators"></div>
+  </div>
+</div>
+              <div class="header-search-bar" data-swatch-role="header-search-bar" data-swatch-type="global" data-swatch-text-type="dark-text">
+  <div class="header-search-bar__inner">
+        <div class="header-search-form">
+  <div class="header-search-form__button-wrapper">
+    <h2 class="header-search-form__header">Search this site</h2>
+  </div>
+    <div>
+    <div id="block-federatedsearchpageformblock">
+
+
+      <form class="federated-search-page-block-form header-search-form__form" data-drupal-selector="federated-search-page-block-form" novalidate="novalidate" action="/search" method="get" id="federated-search-page-block-form" accept-charset="UTF-8">
+  <div class="header-search-form__form-input-wrapper">
+    <label for="edit-search" class="visually-hidden">Search</label>
+<input title="Enter the terms you wish to search for." placeholder="" autocomplete="off" data-drupal-selector="edit-search" type="search" id="edit-search" name="search" value="" size="15" maxlength="128" class="form-search header-search-form__text-input" />
+
+<input data-drupal-selector="edit-sm-site-name" type="hidden" name="sm_site_name" value="law" />
+<button data-drupal-selector="edit-submit" type="submit" id="search-submit" value="Search" class="js-form-submit form-submit header-search-form__submit"
+  aria-label="Search" />
+
+</div>
+
+</form>
+
+
+  </div>
+
+  </div>
+
+  <div class="header-search-trigger header-search-trigger--close">
+    <button class="header-search-trigger__button header-search-trigger__button--close" tabindex="-1">
+      <span class="header-search-trigger__button-icon header-search-trigger__button-icon--close"></span>
+      <span class="header-search-trigger__button-text">Close</span>
+    </button>
+  </div>
+  <div class="header-search-form__popular-choice">
+    <h3 class="header-search-form__popular-choice-header">Popular searches</h3>
+    <ul class="header-search-form__popular-choice-list-items">
+      <li class="header-search-form__popular-choice-list-item"><a href="#" class="header-search-form__popular-choice-link">Mission Statement</a></li>
+      <li class="header-search-form__popular-choice-list-item"><a href="#" class="header-search-form__popular-choice-link">Organization of the office</a></li>
+      <li class="header-search-form__popular-choice-list-item"><a href="#" class="header-search-form__popular-choice-link">History</a></li>
+      <li class="header-search-form__popular-choice-list-item"><a href="#" class="header-search-form__popular-choice-link">Meeting Requests</a></li>
+      <li class="header-search-form__popular-choice-list-item"><a href="#" class="header-search-form__popular-choice-link">Key Staff</a></li>
+      <li class="header-search-form__popular-choice-list-item"><a href="#" class="header-search-form__popular-choice-link">Duties of the Office</a></li>
+      <li class="header-search-form__popular-choice-list-item"><a href="#" class="header-search-form__popular-choice-link">Event Requests</a></li>
+      <li class="header-search-form__popular-choice-list-item"><a href="#" class="header-search-form__popular-choice-link">Contact</a></li>
+    </ul>
+  </div>
+</div>
+  </div>
+</div>
+        <div class="header-site-nav-bar" data-swatch-role="header-site-nav" data-swatch-type="global" data-swatch-text-type="light-text">
+  <div class="header-site-nav-bar__inner">
+
+
+
+
+
+        <nav class="header-site-nav" role="navigation" aria-label="Main">
+        <ul class="header-site-nav__menu-item-list header-site-nav__menu-item-list--level-0">
+              <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-0
+      header-site-nav__menu-item--has-dropdown " aria-haspopup="true">
+
+                  <span class="menu-toggle--mobile">X</span>
+
+        <a class="header-site-nav__menu-item-link" href="/about-us">
+          <span class="header-site-nav__menu-item-link-text">
+            About the Office
+          </span>
+        </a>
+
+          <ul class="header-site-nav__menu-item-list
+      header-site-nav__menu-item-list--level-1 header-site-nav__menu-item-list--medium" >
+              <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/biography-attorney-general">
+          <span class="header-site-nav__menu-item-link-text">
+            Attorney General Chris Carr
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/about-us/duties">
+          <span class="header-site-nav__menu-item-link-text">
+            Duties
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/about-us/history">
+          <span class="header-site-nav__menu-item-link-text">
+            History
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/about-us/key-staff">
+          <span class="header-site-nav__menu-item-link-text">
+            Key Staff
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/about-us/organization-office">
+          <span class="header-site-nav__menu-item-link-text">
+            Organization of the Office
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/about-us/event-requests">
+          <span class="header-site-nav__menu-item-link-text">
+            Event Requests
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/about-us/meeting-request">
+          <span class="header-site-nav__menu-item-link-text">
+            Meeting Request
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/contact-us">
+          <span class="header-site-nav__menu-item-link-text">
+            Contact Us
+          </span>
+        </a>
+              </li>
+          </ul>
+
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-0
+      header-site-nav__menu-item--has-dropdown " aria-haspopup="true">
+
+                  <span class="menu-toggle--mobile">X</span>
+
+        <a class="header-site-nav__menu-item-link" href="/key-issues">
+          <span class="header-site-nav__menu-item-link-text">
+            Key Issues
+          </span>
+        </a>
+
+          <ul class="header-site-nav__menu-item-list
+      header-site-nav__menu-item-list--level-1 header-site-nav__menu-item-list--medium" >
+              <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/key-issues/gang-activity">
+          <span class="header-site-nav__menu-item-link-text">
+            Gang Activity
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/key-issues/consumer-protection">
+          <span class="header-site-nav__menu-item-link-text">
+            Consumer Protection
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/key-issues/human-trafficking">
+          <span class="header-site-nav__menu-item-link-text">
+            Human Trafficking
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/key-issues/open-government">
+          <span class="header-site-nav__menu-item-link-text">
+            Open Government
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/key-issues/opioid-abuse">
+          <span class="header-site-nav__menu-item-link-text">
+            Opioid Abuse
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/key-issues/elder-abuse">
+          <span class="header-site-nav__menu-item-link-text">
+            Elder Abuse
+          </span>
+        </a>
+              </li>
+          </ul>
+
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-0
+      header-site-nav__menu-item--has-dropdown " aria-haspopup="true">
+
+                  <span class="menu-toggle--mobile">X</span>
+
+        <a class="header-site-nav__menu-item-link" href="/resources">
+          <span class="header-site-nav__menu-item-link-text">
+            Resources
+          </span>
+        </a>
+
+          <ul class="header-site-nav__menu-item-list
+      header-site-nav__menu-item-list--level-1 header-site-nav__menu-item-list--wide" >
+              <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/resources/vaccine-mandate-litigation">
+          <span class="header-site-nav__menu-item-link-text">
+            Vaccine Mandate Litigation
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/resources/court-reform-council">
+          <span class="header-site-nav__menu-item-link-text">
+            Court Reform Council
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/resources/crime-crime-victims">
+          <span class="header-site-nav__menu-item-link-text">
+            Crime &amp; Crime Victims
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/resources/states-which-recognize-georgia-weapons-carry-license">
+          <span class="header-site-nav__menu-item-link-text">
+            Georgia Weapons Carry License Information
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/resources/immigration-reports">
+          <span class="header-site-nav__menu-item-link-text">
+            Immigration Reports
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/resources/medicaid-fraud-division">
+          <span class="header-site-nav__menu-item-link-text">
+            Medicaid Fraud Control
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/resources/mortgage-and-foreclosure-information">
+          <span class="header-site-nav__menu-item-link-text">
+            Mortgage and Foreclosure Information
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/resources/outside-counsel-fee-information">
+          <span class="header-site-nav__menu-item-link-text">
+            Outside Counsel Fee Information
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/resources/lactation-room-rules-and-participation-agreement">
+          <span class="header-site-nav__menu-item-link-text">
+            Lactation Room Rules and Participation Agreement
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/resources/legal-resources">
+          <span class="header-site-nav__menu-item-link-text">
+            Legal Resources
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/resources/election-fraud-complaint-hotline">
+          <span class="header-site-nav__menu-item-link-text">
+            Election Fraud Complaint Hotline
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/resources/settlements">
+          <span class="header-site-nav__menu-item-link-text">
+            Settlements
+          </span>
+        </a>
+              </li>
+          </ul>
+
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-0
+      header-site-nav__menu-item--has-dropdown header-site-nav__menu-item--active-trail" aria-haspopup="true">
+
+                  <span class="menu-toggle--mobile">X</span>
+
+        <a class="header-site-nav__menu-item-link" href="/opinions">
+          <span class="header-site-nav__menu-item-link-text">
+            Opinions
+          </span>
+        </a>
+
+          <ul class="header-site-nav__menu-item-list
+      header-site-nav__menu-item-list--level-1 header-site-nav__menu-item-list--narrow" >
+              <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 header-site-nav__menu-item--active-trail" >
+
+
+        <a class="header-site-nav__menu-item-link" href="/opinions/official">
+          <span class="header-site-nav__menu-item-link-text">
+            Official Opinions
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/opinions/unofficial">
+          <span class="header-site-nav__menu-item-link-text">
+            Unofficial Opinions
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/opinions/obsolete-and-modified-opinions">
+          <span class="header-site-nav__menu-item-link-text">
+            Obsolete and Modified Opinions
+          </span>
+        </a>
+              </li>
+          </ul>
+
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-0
+      header-site-nav__menu-item--has-dropdown " aria-haspopup="true">
+
+                  <span class="menu-toggle--mobile">X</span>
+
+        <a class="header-site-nav__menu-item-link" href="/press-releases">
+          <span class="header-site-nav__menu-item-link-text">
+            Press Room
+          </span>
+        </a>
+
+          <ul class="header-site-nav__menu-item-list
+      header-site-nav__menu-item-list--level-1 header-site-nav__menu-item-list--narrow" >
+              <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/press-releases/2023">
+          <span class="header-site-nav__menu-item-link-text">
+            Current
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/press-releases">
+          <span class="header-site-nav__menu-item-link-text">
+            Archived Releases
+          </span>
+        </a>
+              </li>
+          </ul>
+
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-0
+      header-site-nav__menu-item--has-dropdown " aria-haspopup="true">
+
+                  <span class="menu-toggle--mobile">X</span>
+
+        <a class="header-site-nav__menu-item-link" href="/careers">
+          <span class="header-site-nav__menu-item-link-text">
+            Careers
+          </span>
+        </a>
+
+          <ul class="header-site-nav__menu-item-list
+      header-site-nav__menu-item-list--level-1 header-site-nav__menu-item-list--medium" >
+              <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/careers/honors-fellowship-program">
+          <span class="header-site-nav__menu-item-link-text">
+            Honors Fellowship Program
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/careers/vacancies">
+          <span class="header-site-nav__menu-item-link-text">
+            Vacancies
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/careers/application-forms">
+          <span class="header-site-nav__menu-item-link-text">
+            Application Forms
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/careers/summer-internship-program">
+          <span class="header-site-nav__menu-item-link-text">
+            Internship Program
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/careers/externship-program">
+          <span class="header-site-nav__menu-item-link-text">
+            Externship Program
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+
+
+        <a class="header-site-nav__menu-item-link" href="/careers/e-verify">
+          <span class="header-site-nav__menu-item-link-text">
+            E-Verify
+          </span>
+        </a>
+              </li>
+          </ul>
+
+              </li>
+          </ul>
+          </nav>
+
+
+
+
+    <div class="header-utility-narrow">Header Utility Narrow</div>
+  </div>
+</div>
+  </header>
+      </div>
+  <div class="page__content" id="main-content">
+
+              <div class="content-page" data-swatch-role="lighter-bg" data-swatch-type="functional" data-swatch-text-type="dark-text">
+
+	<div class="content-page__messages">
+					  <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+			</div>
+
+	<div class="content-page__top">
+
+
+
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <h2 class="breadcrumb__title visually-hidden">Breadcrumb</h2>
+  <ul class="breadcrumb__items">
+          <li class="breadcrumb__item" >
+                              <a href="/" class="breadcrumb__link">
+              <span class="visually-hidden">Home</span>
+
+                            <?xml version="1.0" encoding="UTF-8"?>
+              <svg class="breadcrumb__icon-image" width="29px" height="28px" fill="#000300" viewBox="0 0 29 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="M24.610423,27.7469443 L18.0961373,27.7469443 C17.5076201,27.7392503 17.0324028,27.264033 17.0247088,26.6755158 L17.0247088,20.6040872 L12.0247088,20.6040872 L12.0247088,26.6755158 C12.0170147,27.264033 11.5417974,27.7392503 10.9532802,27.7469443 L4.45328019,27.7469443 C3.86476295,27.7392503 3.38954563,27.264033 3.38185162,26.6755158 L3.38185162,16.5898015 C3.38185162,15.9980678 3.86154653,15.5183729 4.45328019,15.5183729 C5.04501385,15.5183729 5.52470876,15.9980678 5.52470876,16.5898015 L5.52470876,25.6040872 L9.88185162,25.6040872 L9.88185162,19.5326586 C9.88954563,18.9441414 10.364763,18.4689241 10.9532802,18.4612301 L18.0961373,18.4612301 C18.6846546,18.4689241 19.1598719,18.9441414 19.1675659,19.5326586 L19.1675659,25.6040872 L23.5389945,25.6040872 L23.5389945,16.5898015 C23.5389945,15.9980678 24.0186894,15.5183729 24.610423,15.5183729 C25.2021567,15.5183729 25.6818516,15.9980678 25.6818516,16.5898015 L25.6818516,26.6755158 C25.6741576,27.264033 25.1989403,27.7392503 24.610423,27.7469443 Z"></path>
+                <path d="M27.8961373,15.9469443 C27.5979319,15.9469805 27.3132027,15.822735 27.110423,15.6040872 L14.4675659,2.08980149 L1.95328019,15.6040872 C1.71635142,15.9473884 1.30171889,16.1219776 0.890584114,16.0515562 C0.479449342,15.9811349 0.146557289,15.6785058 0.03738749,15.2759229 C-0.0717823086,14.8733401 0.0626173909,14.4439938 0.381851615,14.1755158 L13.0247088,0.63265863 C13.4246143,0.227841413 13.969959,-3.46944695e-17 14.5389945,0 C15.10803,3.46944695e-17 15.6533746,0.227841413 16.0532802,0.63265863 L28.6675659,14.1469443 C28.8824183,14.3518353 29.0039948,14.6357717 29.0039948,14.9326586 C29.0039948,15.2295456 28.8824183,15.513482 28.6675659,15.7183729 C28.449185,15.8905469 28.1730635,15.9723607 27.8961373,15.9469443 Z"></path>
+              </svg>
+            </a>
+                        </li>
+          <li class="breadcrumb__item" >
+                              <a href="/opinions" class="breadcrumb__link">Opinions</a>
+                        </li>
+          <li class="breadcrumb__item" aria-current="page">
+                  Official Opinions
+              </li>
+      </ul>
+</nav>
+
+
+
+			</div>
+
+	<div class="content-page__mid">
+		<div
+			class="content-page__mid-main">
+
+
+			<div class="content-page__main-primary ">
+
+				<div class="content-page__main-top">
+
+
+
+  <div class="page-top--news page-top--news-offset">
+  <h1 class="page-top__title--news">Official Opinions</h1>
+    </div>
+
+
+
+
+									</div>
+
+				<main class="content-page__main" role="main">
+
+
+  <div class="views-element-container">
+<div class="body-content body-content--offset">
+      <div class="js-view-dom-id-e2ac971d66d87f807e0f6422cade41e365d6976a0b120106963e3d1bcec4e641">
+
+
+
+
+
+
+<form class="views-exposed-form opinions--form opinions__page--form" novalidate="novalidate" data-drupal-selector="views-exposed-form-opinions-official-opinions-page" action="/opinions/official" method="get" id="views-exposed-form-opinions-official-opinions-page" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-item-title js-form-item-title">
+      <label for="edit-title">Opinion Number</label>
+        <input data-drupal-selector="edit-title" type="text" id="edit-title" name="title" value="" size="30" maxlength="128" class="form-text" />
+
+        </div>
+<div class="js-form-item form-item js-form-type-textfield form-item-body-value js-form-item-body-value">
+      <label for="edit-body-value">Body</label>
+        <input data-drupal-selector="edit-body-value" type="text" id="edit-body-value" name="body_value" value="" size="30" maxlength="128" class="form-text" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit-opinions" type="submit" id="edit-submit-opinions" value="Apply" class="button js-form-submit form-submit" />
+</div>
+
+
+</form>
+
+
+
+
+<div class="body-content body-content--offset">
+    <table class="stacked-row-plus cols-2">
+              <thead>
+        <tr>
+                                                            <th id="view-title-table-column" class="views-field views-field-title" scope="col">Opinion</th>
+                                                            <th id="view-field-re-table-column" class="views-field views-field-field-re" scope="col">In Reference To</th>
+                  </tr>
+      </thead>
+        <tbody>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2022-1" hreflang="en">2022-1</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p><span><span>The State, as owner of the Project Site, and Rivian Automotive, LLC, as the developer and operator of the Project site owned by the State, are exempt from local zoning ordinances.   </span></span></p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2021-1" hreflang="en">2021-1</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p><span><span>2021 Update of Crimes and Offenses for Which the Georgia Crime Information Center is Authorized to Collect and File Fingerprints</span></span></p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2020-4" hreflang="en">2020-4</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>2020 update of crimes and offenses for which the Georgia Crime Information Center is authorized to collect and file fingerprints.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2020-3" hreflang="en">2020-3</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>The Ethics in Government Act limits the authority of the Commission as to which offices may have their contribution limits adjusted in a particular year.  The Commission may raise or lower contribution limits only in set increments of $100, depending on the inflation or deflation rates of the Consumer Price Index. The Commission must adjust Contribution limits for primaries, primary run-offs, general elections, and general election run-offs, only after the conclusion of the election cycle for that particular office. For special elections, special election run-offs, and recall elections, the Commission may adjust those limits only once every four years.  The Commission cannot delegate its authority to set contribution limits to commission staff.  Finally, the Commission is not authorized to increase or decrease the contribution limits applicable to a particular election for a particular office more than once during the election cycle for that particular office, whether the office be state-wide, county, or municipal.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2020-2" hreflang="en">2020-2</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>The term “state” as used specifically in O.C.G.A. § 40-5-27(a)(3)(A) includes territories of the United States such that persons from the territories who are applying for a driver’s license and who otherwise satisfy the conditions of the statute may be exempted from the on-the-road driving test and the knowledge test.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2020-1" hreflang="en">2020-1</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>Supplemental 2019 update of crimes and offenses for which the Georgia Crime Information Center is authorized to collect and file fingerprints.</p>
+
+<p> </p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2019-3" hreflang="en">2019-3</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>2019 update of crimes and offenses for which the Georgia Crime Information Center is authorized to collect and file fingerprints.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2019-2" hreflang="en">2019-2</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>The provisions of the City of Canton’s ordinance that prohibit the sale of dogs and cats, among other things, conflict with and are preempted by the Georgia Animal Protection Act and the rules promulgated thereunder.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2019-1" hreflang="en">2019-1</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>The Department of Public Safety is not authorized to establish maximum rates for the removal and storage of motor vehicles pursuant to the Abandoned Motor Vehicle Act beyond its regulatory authority as set forth in O.C.G.A. § 44-1-13</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2018-3" hreflang="en">2018-3</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>2018 update of crimes and offenses for which the Georgia Crime Information Center is authorized to collect and file fingerprints.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2018-2" hreflang="en">2018-2</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>The Georgia National Guard is a law enforcement agency eligible to share in proceeds of drug‑related forfeitures and 1995 Op. Att’y Gen. 95‑29 describing the legal authority to do so is modified to reflect changes and current Georgia law, including the adoption of the “Georgia Uniform Civil Forfeiture Procedure Act.”</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2018-1" hreflang="en">2018-1</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>After July 1, 2018, only persons who are licensed as "lactation consultants" in Georgia or who meet one of the Georgia Lactation Consultant Practice Act's exceptions to licensure may provide "lactation care and services" as that term is defined by the Act.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2017-5" hreflang="en">2017-5</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>While Georgia law permits certain law enforcement personnel and others to carry firearms into a courthouse building, a judge may still control who may enter and carry firearms within his or her own courtroom.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2017-4" hreflang="en">2017-4</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>Convictions for violations of O.C.G.A. §§ 40‑6‑391(2), (4), (6), and 40‑5‑151 (2016) should be reported by the Clerk to the Department of Driver Services (“DDS”).  Convictions for violations of O.C.G.A. §§ 16‑13‑30(b), 16‑13‑31, and 16‑13‑31.1 (2016) should be reported to DDS only upon the clerk’s determination that the conviction meets the mandate of O.C.G.A. § 40‑5‑54(a)(2).</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2017-3" hreflang="en">2017-3</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>Updating of crimes and offenses for which the Georgia Crime Information Center is authorized to collect and file fingerprints.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2017-2" hreflang="en">2017-2</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>There is no conflict between O.C.G.A. § 31‑12‑12(c) (Supp. 2016), which prohibits dispensing contact lenses or spectacles without a prescription, and O.C.G.A. § 43‑29‑14(b) (2016), which authorizes a licensed dispensing optician to duplicate lenses without a prescription, and a licensed dispensing optician still has the authority to duplicate and dispense lenses without a prescription.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2017-1" hreflang="en">2017-1</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>Updating of crimes and offenses for which the Georgia Crime Information Center is authorized to collect and file fingerprints</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2016-7" hreflang="en">2016-7</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>Registered nurses and licensed practical nurses do not have access to the GAPDMP database specifically as dispensers or as individuals authorized to dispense prescriptions for controlled substances, but may be able to access the GAPDMP database as delegates of physicians who have the authority to prescribe or dispense.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2016-6" hreflang="en">2016-6</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>A physician licensed by the Georgia Composite Medical Board is required to report to the Board a payment made as a result of a high-low agreement in a medical malpractice case, even if there is a judgment in favor of the physician.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2016-5" hreflang="en">2016-5</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>Because neither the Constitution nor the Act’s provisions authorize or contemplate a cap on assistance grants based on the total exemption value of forest land conservation use property, the Department of Revenue would not be authorized to impose an administrative cap on assistance grants issued pursuant to the Forest Land Protection Act of 2008 in the manner proposed.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2016-4" hreflang="en">2016-4</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>The Secretary of State and the Georgia Board of Nursing have related but separate, distinguishable roles with respect to the selection of the executive director of the Board.  The Secretary of State has the authority to select which qualified candidate or candidates to submit to the Board for its approval, and the Board has the authority to approve from the submitted candidate or candidates who may be appointed to serve as its executive director.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2016-3" hreflang="en">2016-3</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>To the extent 2002 Op. Att’y Gen. 2002-5 is inconsistent with O.C.G.A. § 9‑16‑21, it is withdrawn.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2016-2" hreflang="en">2016-2</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>The mere possession of another voter’s absentee ballot does not constitute unlawful possession of an absentee ballot under either O.C.G.A. § 21‑2‑385(a) or § 21‑2‑574.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2016-1-0" hreflang="en">2016-1</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>County and municipal governments may issue notices of fees due for statutory late filings by candidates and committees under the Georgia Government Transparency and Campaign Finance Act of 2010, but those governments are not authorized otherwise to enforce the provisions of the Act or to retain any portion of the late fees imposed under the Act.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2015-2" hreflang="en">2015-2</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>Updating of crimes and offenses for which the Georgia Crime Information Center is authorized to collect and file fingerprints.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2015-1" hreflang="en">2015-1</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>Both federal law and the State’s agreement to act as the state refugee resettlement coordinator prevent the State from denying federally-funded benefits to Syrian refugees lawfully admitted into the United States.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2014-2-0" hreflang="en">2014-2</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>Updating of crimes and offenses for which the Georgia Crime Information Center is authorized to collect and file fingerprints.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2014-1-0" hreflang="en">2014-1</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>Only the Governor has the authority to fill the temporary vacancy created by the suspension of a Harris County commissioner pursuant to O.C.G.A. § 45‑5‑6.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2013-4" hreflang="en">2013-4</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>Fingerprintable Offense Designation</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2013-3" hreflang="en">2013-3</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>The state, its departments, agencies, and authorities, including the Georgia State Financing and Investment Commission and its construction projects,[1] are not required to seek and obtain permits for post-development stormwater handling or to enter stormwater facility maintenance agreements; neither the issuance of land-disturbance permits nor connection to the local storm sewer may be conditioned on the state’s compliance with local post-development stormwater requirements.  Local governments may require payment by the state of a tap or impact fee as a condition of connecting the local storm sewer.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2013-2" hreflang="en">2013-2</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>Based on the relevant statutory language, the Jekyll Island State Park Authority does not have discretion to adopt the “65/35 Task Force” Recommendation to the extent that it uses a measurement reference point other than Mean High Tide.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2013-1" hreflang="en">2013-1</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p><span>While the Immigration Enforcement Review Board should act with due diligence and hold hearings within a reasonable period of time from the date that a complaint is received by the Board, the Board is under no statutory deadline to hold a hearing on the merits of a complaint filed pursuant to O.C.G.A. § 50‑36‑3 within a specified period of time from the date that the complaint is received.</span></p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2012-7" hreflang="en">2012-7</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>Intergovernmental agreements for the provision of misdemeanor probation services</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2012-6" hreflang="en">2012-6</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>Updating of crimes and offenses for which the Georgia Crime Information Center is authorized to collect and file fingerprints.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2012-5" hreflang="en">2012-5</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>The images and data in the Georgia Superior Court Clerks’ Cooperative Authority’s statewide online information system for deeds, liens, and plats are subject to disclosure under the Open Records Act, but the Authority may charge fees in accordance with a fee schedule adopted pursuant to O.C.G.A. § 15‑6‑94.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2012-4" hreflang="en">2012-4</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>Inmate firefighters should be considered volunteer firefighters as defined in O.C.G.A. §　25-4-3(9) (Supp. 2011) and not a separate category. The Georgia Firefighter Standards and Training Council has the authority to set minimum requirements for volunteer firefighters, the category to which inmates belong, serving as firefighters on fire departments as defined in O.C.G.A. §　25-3-21(2)(B) and to establish and modify by rule and regulation minimum requirements for such fire departments generally, regardless of whether they are staffed solely or partially with inmate firefighters.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2012-3" hreflang="en">2012-3</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>Investigators of the Enforcement Division who are certified as peace officers may enforce the new statute of aggravated identity fraud, O.C.G.A. §　16-9-121.1, by arrest and the execution of search warrants provided that it is the result of a criminal investigation of an alleged violation of the workers’ compensation laws of Chapter 9 of Title 34.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2012-2" hreflang="en">2012-2</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>The five percent limitation on alternative investments for the Georgia Firefighters’ Pension Fund is to be based upon the assets’ aggregate historical cost.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2012-1" hreflang="en">2012-1</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re">In compliance with applicable statutes and the policies of the State Depository Board, the Office of the State Treasurer is empowered to enter into repurchase agreements and reverse repurchase agreements in connection with fulfilling its role related to managing the investment and liquidity needs of the State.
+
+ <p></p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2011-5" hreflang="en">2011-5</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>Updating of crimes and offenses for which the Georgia Crime Information Center is authorized to collect and file fingerprints.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2011-4" hreflang="en">2011-4</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>A member of the Georgia Government Transparency and Campaign Finance Commission may serve no more than one complete four year term of office, as set by law, and may for a period of less than a complete term hold over in office until his successor is duly appointed and properly takes office.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2011-3" hreflang="en">2011-3</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>The Georgia Aviation Authority is not a law enforcement agency within the meaning of O.C.G.A. § 16‑13‑49 for the purpose of sharing in forfeiture funds</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2011-2" hreflang="en">2011-2</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re">Regional and county library employees paid solely with local funds are required to be members of the Teachers Retirement System.            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2011-1" hreflang="en">2011-1</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>Supplementation of crimes and offenses for which the Georgia Crime Information Center is authorized to collect and file fingerprints.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2010-6" hreflang="en">2010-6</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>Updating of crimes and offenses for which the Georgia Crime Information Center is authorized to collect and file fingerprints.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2010-5" hreflang="en">2010-5</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>Unless and until the General Assembly adopts clarifying legislation, it is within the sound discretion of the TRS Board of Trustees to determine whether teachers who are employed not less than half-time by commission charter schools must be members of the Teachers Retirement System.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2010-4" hreflang="en">2010-4</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re">Investigators employed by the Georgia Forestry Commission and by the Georgia Department of Agriculture are not eligible for membership in the Peace Officers Annuity and Benefit Fund.            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2010-3" hreflang="en">2010-3</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>The judicial operations fund fee imposed by O.C.G.A. § 15-21A-6.1(a) applies to the fee to be remitted to clerks of superior court for the issuance of certificates of appointment and reappointment to notaries public.</p>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2010-2" hreflang="en">2010-2</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re">Updating of crimes and offenses for which the Georgia Crime Information Center is authorized to collect and file fingerprints.            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td headers="view-title-table-column" class="views-field views-field-title"><a href="/opinions/2010-1" hreflang="en">2010-1</a>            </td>
+                                                                                                        <td headers="view-field-re-table-column" class="views-field views-field-field-re"><p>When the General Assembly extends a sunset date in subsection (h) of Code section 48-8-67 in the manner of 2009 Ga. Laws 723, the extended authority to process unidentifiable sales tax proceeds pursuant to the Code section applies to undisbursed, unidentifiable proceeds of a preceding period of time, which began with the earlier sunset date and ended with its extension (the ¨gap period¨).</p>            </td>
+                  </tr>
+          </tbody>
+  </table>
+
+</div>
+
+
+
+  <nav class="pager" role="navigation" aria-labelledby="pagination-heading">
+    <h4 id="pagination-heading" class="visually-hidden">Pagination</h4>
+    <ul class="pager__items js-pager__items">
+              <li class="pager__item pager__item--first element-invisible">
+                <a class="pager__item-link pager__item-link--nav" title="Go to first page" aria-label="Go to first page"
+             href="">first</a>
+        </li>
+
+              <li class="pager__item pager__item--previous element-invisible">
+                <a class="pager__item-link pager__item-link--nav" title="Go to previous page" aria-label="Go to previous page"
+             href="">previous</a>
+        </li>
+
+                    <li class="pager__item pager__item--ellipsis pre-ellipsis element-invisible" role="presentation">&hellip;</li>
+
+                        <li class="pager__item pager__item--current">
+            1
+          </li>
+                                <li class="pager__item pager__item--page">
+            <a class="pager__item-link pager__item-link--number" title="Go to page 2"
+               aria-label="Go to page 2" href="?title=&amp;body_value=&amp;page=1">2</a>
+          </li>
+                                <li class="pager__item pager__item--page">
+            <a class="pager__item-link pager__item-link--number" title="Go to page 3"
+               aria-label="Go to page 3" href="?title=&amp;body_value=&amp;page=2">3</a>
+          </li>
+                                <li class="pager__item pager__item--page">
+            <a class="pager__item-link pager__item-link--number" title="Go to page 4"
+               aria-label="Go to page 4" href="?title=&amp;body_value=&amp;page=3">4</a>
+          </li>
+                                <li class="pager__item pager__item--page">
+            <a class="pager__item-link pager__item-link--number" title="Go to page 5"
+               aria-label="Go to page 5" href="?title=&amp;body_value=&amp;page=4">5</a>
+          </li>
+
+                    <li class="pager__item pager__item--ellipsis next-ellipsis" role="presentation">&hellip;</li>
+
+              <li class="pager__item pager__item--next">
+                <a class="pager__item-link pager__item-link--nav" title="Go to next page" aria-label="Go to next page"
+             href="?title=&amp;body_value=&amp;page=1">next</a>
+        </li>
+
+              <li class="pager__item pager__item--last">
+                <a class="pager__item-link pager__item-link--nav" title="Go to last page" aria-label="Go to last page"
+             href="?title=&amp;body_value=&amp;page=6">last</a>
+        </li>
+    </ul>
+  </nav>
+
+
+
+
+
+
+
+
+
+  </div>
+
+</div>
+</div>
+
+
+
+									</main>
+
+
+			</div>
+
+								</div>
+		<div class="content-page__mid-side">
+							  <div>
+
+      <nav class="side-nav" data-swatch-role="light-bg" data-swatch-type="functional" data-swatch-text-type="dark-text" aria-label="Side Nav">
+    <div class="side-nav__section-title-wrapper" data-swatch-role="dark-bg" data-swatch-type="functional" data-swatch-text-type="light-text">
+      <a class="side-nav__section-title" href="/opinions">Opinions</a>
+      <button class="side-nav__toggle" aria-expanded="false">
+        <span>
+          <img src="/themes/custom/ga_forest/assets/images/icons/interaction/close/close--white.svg" alt="Side nav toggle button" />
+        </span>
+      </button>
+    </div>
+
+
+
+
+
+            <ul class="side-nav__menu">
+              <li class="side-nav__item side-nav__item--active">
+                <a href="/opinions/official" class="side-nav__link side-nav__link--active" tabindex="0">Official Opinions</a>
+              </li>
+          <li class="side-nav__item">
+                <a href="/opinions/unofficial" class="side-nav__link" tabindex="0">Unofficial Opinions</a>
+              </li>
+          <li class="side-nav__item">
+                <a href="/opinions/obsolete-and-modified-opinions" class="side-nav__link" tabindex="0">Obsolete and Modified Opinions</a>
+              </li>
+        </ul>
+
+
+
+
+      </nav>
+
+
+  </div>
+
+					</div>
+	</div>
+
+
+</div>
+
+    </div>
+  <div class="page__footer">
+
+
+
+
+
+
+<footer>
+  <div class="footer-top" data-swatch-role="footer-top" data-swatch-type="global" data-swatch-text-type="light-text">
+  <div class="footer-top__inner">
+
+
+
+  <div class="footer-brand">
+    <div class="footer-branding-lockup footer-branding-lockup--law">
+      <a class="footer-branding-lockup__link" href="/" title="Office of Attorney General of Georgia Chris Carr">
+        <span class="footer-branding-lockup__logo footer-branding-lockup__logo--agency footer-branding-lockup__logo--law">
+          <img class="footer-branding-lockup__logo-image" src="/themes/custom/ga_forest/assets/images/icons/logo/ga-logo--gold.svg" alt="" />
+        </span>
+
+                <span class="footer-branding-lockup__wordmark footer-branding-lockup__wordmark--agency footer-branding-lockup__wordmark--law">
+  <img class="footer-branding-lockup__wordmark-image footer-branding-lockup__wordmark-image--light" src="/themes/custom/ga_forest/assets/images/icons/wordmarks/law/law-wordmark--white.svg" alt="Office of the Attorney General" />
+  <img class="footer-branding-lockup__wordmark-image footer-branding-lockup__wordmark-image--dark-hover-focus footer-branding-lockup__wordmark-image--light-active" src="/themes/custom/ga_forest/assets/images/icons/wordmarks/law/law-wordmark--gold.svg" alt="Office of the Attorney General" />
+  <img class="footer-branding-lockup__wordmark-image footer-branding-lockup__wordmark-image--dark" src="/themes/custom/ga_forest/assets/images/icons/wordmarks/law/law-wordmark--black.svg" alt="Office of the Attorney General" />
+  <img class="footer-branding-lockup__wordmark-image footer-branding-lockup__wordmark-image--dark-active" src="/themes/custom/ga_forest/assets/images/icons/wordmarks/law/law-wordmark--red.svg" alt="Office of the Attorney General" />
+</span>
+
+      </a>
+    </div>
+  </div>
+          <div class="footer-social">
+                                                                                    <ul class="footer-social__items">
+                        <li class="footer-social__item">
+            <a href="https://www.facebook.com/GeorgiaAttorneyGeneral" class="footer-social__icon-link" title="Facebook page for Office of Attorney General of Georgia Chris Carr">
+              <span class="visually-hidden">Facebook page for Office of Attorney General of Georgia Chris Carr</span>
+                            <?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="28px" viewBox="0 0 14 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g fill="#FFFFFF" transform="translate(-13.000000, -6.000000)" >
+    <path d="M22.3090335,33.8514589 L22.3090335,19.9240988 L26.4506166,19.9240988 L26.9994658,15.1246534 L22.3090335,15.1246534 L22.31607,12.7224848 C22.31607,11.4707155 22.4441934,10.7999889 24.3809978,10.7999889 L26.9701469,10.7999889 L26.9701469,6 L22.8279774,6 C17.8525657,6 16.1013498,8.32824738 16.1013498,12.2436273 L16.1013498,15.125197 L13,15.125197 L13,19.9246424 L16.1013498,19.9246424 L16.1013498,33.8514589 L22.3090335,33.8514589 Z"></path>
+  </g>
+</svg>
+
+            </a>
+          </li>
+                                <li class="footer-social__item">
+            <a href="https://www.twitter.com/georgia_ag" class="footer-social__icon-link" title="Twitter page for Office of Attorney General of Georgia Chris Carr">
+              <span class="visually-hidden">Twitter page for Office of Attorney General of Georgia Chris Carr</span>
+                            <?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="26px" viewBox="0 0 31 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g fill="#FFFFFF" transform="translate(-5.000000, -7.000000)" >
+    <g transform="translate(0.068056, 0.000000)">
+      <path d="M19.9011776,13.9070157 L19.9677007,15.0300621 L18.8589822,14.8925462 C14.8232466,14.365402 11.2975215,12.5776956 8.30398135,9.5752656 L6.84047283,8.08551026 L6.46350852,9.18563728 C5.66523114,11.6380038 6.17524169,14.2278861 7.83831955,15.9697539 C8.7252944,16.932365 8.52572506,17.0698809 6.99569343,16.4968981 C6.46350852,16.3135436 5.99784672,16.1760277 5.95349797,16.2447857 C5.79827737,16.4052208 6.33046229,18.4908783 6.75177535,19.3159736 C7.328309,20.4619392 8.50355069,21.5849856 9.78966423,22.2496456 L10.8762084,22.7767898 L9.59009489,22.7997092 C8.34833009,22.7997092 8.30398135,22.8226285 8.43702758,23.303934 C8.88051501,24.7936894 10.6322904,26.375122 12.583635,27.0627014 L13.9584461,27.5440069 L12.76103,28.2774249 C10.9870803,29.3317133 8.90268938,29.9276155 6.81829846,29.9734541 C5.82045174,29.9963734 5,30.0880507 5,30.1568086 C5,30.3860017 7.70527332,31.6694833 9.27965369,32.1737081 C14.0027948,33.6634635 19.6129108,33.0217227 23.8260414,30.477679 C26.8195815,28.6670533 29.8131217,25.0687211 31.2101071,21.5849856 C31.9640357,19.7285212 32.7179643,16.3364629 32.7179643,14.7091917 C32.7179643,13.6549033 32.7844874,13.5173874 34.0262522,12.2568252 C34.7580065,11.5234072 35.445412,10.7212312 35.5784582,10.4920381 C35.800202,10.0565712 35.7780276,10.0565712 34.6471346,10.4461995 C32.7623131,11.1337789 32.4962206,11.0421016 33.4275442,10.0107325 C34.1149497,9.27731453 34.9354015,7.94799438 34.9354015,7.55836606 C34.9354015,7.48960812 34.6027859,7.60420469 34.2258216,7.8104785 C33.8266829,8.03967163 32.939708,8.38346133 32.2744769,8.58973514 L31.0770608,8.97936346 L29.9905166,8.22302613 C29.3918086,7.8104785 28.5491825,7.35209224 28.1056951,7.21457637 C26.9748021,6.89370598 25.2452011,6.93954461 24.2251801,7.30625362 C21.4533836,8.3376227 19.7016083,10.996263 19.9011776,13.9070157 Z"></path>
+    </g>
+  </g>
+</svg>
+
+            </a>
+          </li>
+                                                                                                                    </ul>
+  </div>
+      </div>
+</div>
+  <div class="footer-mid footer-mid--with-secondary" data-swatch-role="footer-bottom" data-swatch-type="global" data-swatch-text-type="light-text">
+  <div class="footer-mid__inner">
+    <div class="footer-contact">
+  <h3 class="footer-contact__title">How can we help?</h3>
+      <div class="footer-contact__list">
+              <ul class="footer-contact-info__list">
+
+<li class="footer-contact-info__item">
+    <div class="footer-contact-info__icon-wrapper">
+      <img class="footer-contact-info__icon footer-contact-info__icon--light-text" src="/themes/custom/ga_forest/assets/images/icons/monoline/phone/monoline-phone--white.svg" alt="" />
+      <img class="footer-contact-info__icon footer-contact-info__icon--dark-text" src="/themes/custom/ga_forest/assets/images/icons/monoline/phone/monoline-phone--black.svg" alt="" />
+    </div>
+    <div class="footer-contact-info__wrapper">
+              <div class="footer-contact-info__title">Call Us</div>
+                          <div class="footer-contact-info__phone">
+                    <div class="footer-contact-info__phone-number"><strong>Primary:</strong> <a href="tel:+1-404-458-3600">(404) 458-3600</a></div>
+        </div>
+                </div>
+</li>
+
+<li class="footer-contact-info__item">
+    <div class="footer-contact-info__icon-wrapper">
+      <img class="footer-contact-info__icon footer-contact-info__icon--light-text" src="/themes/custom/ga_forest/assets/images/icons/monoline/location/monoline-location--white.svg" alt="" />
+      <img class="footer-contact-info__icon footer-contact-info__icon--dark-text" src="/themes/custom/ga_forest/assets/images/icons/monoline/location/monoline-location--black.svg" alt="" />
+    </div>
+    <div class="footer-contact-info__wrapper">
+              <div class="footer-contact-info__title"><strong>Visit</strong><br /></div>
+                    <div class="footer-contact-info__address">40 Capitol Square, SW<br />ATLANTA, GA 30334</div>
+                          <div class="footer-contact-info__link"></div>
+              <div class="footer-contact-info__link"></div>
+          </div>
+</li>
+  </ul>
+          </div>
+      <div class="footer-contact__hours">
+<div class="hourbox">
+  <div class="hourbox__section">
+    <img class="hourbox__icon" src="/themes/custom/ga_forest/assets/images/icons/monoline/calendar/monoline-calendar--black.svg" alt="Calendar icon">
+    <div class="hourbox__wrapper">
+
+<ul class="hourbox-schedule">
+            <li class="hourbox-schedule__item">
+  <span class="hourbox-schedule__day">Monday to Friday, &nbsp;</span>
+  <span class="hourbox-schedule__time">08:00 a.m. - 05:00 p.m.</span>
+</li>
+      </ul>
+
+          </div>
+  </div>
+    <div class="hourbox__section">
+    <div class="hourbox__icon"></div>
+    <div class="hourbox__note">All in Eastern Time Zone</div>
+  </div>
+  </div>
+</div>
+  </div>
+          <div class="footer-mid__menus">
+        <div class="footer-secondary">
+      <div class="footer-link-group">
+  <h3 class="footer-link-group__title">About Us</h3>
+  <ul class="footer-link-group__list">
+          <li class="footer-link-group__list-item">
+        <a class="footer-link-group__list-item-link" href="/about-us">
+          About the Office
+        </a>
+      </li>
+          <li class="footer-link-group__list-item">
+        <a class="footer-link-group__list-item-link" href="/biography-attorney-general">
+          Biography of the Attorney General
+        </a>
+      </li>
+      </ul>
+</div>
+      <div class="footer-link-group">
+  <h3 class="footer-link-group__title">Careers</h3>
+  <ul class="footer-link-group__list">
+          <li class="footer-link-group__list-item">
+        <a class="footer-link-group__list-item-link" href="/careers/application-forms">
+          Application Forms
+        </a>
+      </li>
+      </ul>
+</div>
+  </div>
+        <div class="footer-primary">
+      <div class="footer-link-group">
+  <h3 class="footer-link-group__title">Your Government</h3>
+  <ul class="footer-link-group__list">
+          <li class="footer-link-group__list-item">
+        <a class="footer-link-group__list-item-link" href="https://georgia.gov/state-organizations">
+          State Organizations
+        </a>
+      </li>
+          <li class="footer-link-group__list-item">
+        <a class="footer-link-group__list-item-link" href="https://georgia.gov/elected-officials">
+          Elected Officials
+        </a>
+      </li>
+          <li class="footer-link-group__list-item">
+        <a class="footer-link-group__list-item-link" href="https://dol.georgia.gov/state-local-and-federal-government-jobs">
+          State Jobs
+        </a>
+      </li>
+      </ul>
+</div>
+  </div>
+      </div>
+      </div>
+</div>
+  <div class="footer-bottom" data-swatch-role="footer-bottom" data-swatch-type="global" data-swatch-text-type="light-text">
+  <div class="footer-bottom__inner">
+    <div class="footer-copyright">© Georgia.gov</div>
+
+<div class="footer-meta">
+  <ul class="footer-meta__items">
+          <li class="footer-meta__item"><a href="/sitemap">Site Map</a></li>
+          <li class="footer-meta__item"><a href="https://georgia.gov/accessibility ">Accessibility</a></li>
+          <li class="footer-meta__item"><a href="https://georgia.gov/privacysecurity">Privacy/Security</a></li>
+          <li class="footer-meta__item"><a href="https://gbi.georgia.gov/human-trafficking-notice">Human Trafficking Notice</a></li>
+      </ul>
+</div>
+  </div>
+</div>
+</footer>
+  </div>
+</div>
+
+  </div>
+
+
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"opinions\/official","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"ga_emergency\/ga_emergency,ga_forest\/global,ga_forest\/palette-stars-stripes,ga_media_download\/document_link,ga_search\/analytics,genpass\/genpass,google_analytics\/google_analytics,google_translator\/disclaimer,google_translator\/element,social_media_links\/social_media_links.theme,system\/base,views\/views.ajax,views\/views.module","theme":"ga_forest","theme_token":null},"ajaxTrustedUrl":{"\/opinions\/official":true,"\/search":true},"google_analytics":{"account":"UA-24934600-1","trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"gaEmergency":{"endpoint":"https:\/\/trunk.georgia.gov\/api\/v1\/node\/emergency?filter[status][value]=1\u0026sort=-changed","auth":"Og=="},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:e2ac971d66d87f807e0f6422cade41e365d6976a0b120106963e3d1bcec4e641":{"view_name":"opinions","view_display_id":"official_opinions_page","view_args":"","view_path":"\/opinions\/official","view_query":null,"view_base_path":"opinions\/official","view_dom_id":"e2ac971d66d87f807e0f6422cade41e365d6976a0b120106963e3d1bcec4e641","pager_element":0}}},"googleTranslatorDisclaimer":{"selector":".google-translator-switch","displayMode":"SIMPLE","disclaimerTitle":"Automatic translation disclaimer","disclaimer":"The State of Georgia provides automatic translation for georgia.gov into twelve languages, courtesy of Google Translate. Please remember, though, that the English language version is considered the most accurate. In the event of a disagreement or discrepancy between the translation and the original English version of this web site or any notice or disclaimer, the original version will prevail.","acceptText":"Accept","dontAcceptText":"Do Not Accept","element":"\u003Cspan id=\u0022google_translator_element\u0022\u003E\u003C\/span\u003E\n\u003Cscript src=\u0022\/\/translate.google.com\/translate_a\/element.js?cb=Drupal.behaviors.googleTranslatorElement.init\u0022\u003E\u003C\/script\u003E\n"},"googleTranslatorElement":{"id":"google_translator_element","languages":"ar,zh-CN,fr,gu,hi,ja,ko,fa,pt,ru,es,vi","displayMode":"SIMPLE"},"user":{"uid":0,"permissionsHash":"b8c06a05ab4a7902532a2089fe01e48fb82b7e431f0029469a04e9e853419c06"}}</script>
+<script src="/sites/law.georgia.gov/files/js/js_JoOtCS__4w94W81a2uU7XmShU9jJYmSMCI70RhmBqi4.js"></script>
+<script src="//cdn.jsdelivr.net/npm/css-vars-ponyfill@1"></script>
+<script src="/sites/law.georgia.gov/files/js/js_SG0xSAfthUqAWOj9gOlIItrHyUNRvcX80h_7jcXyL7k.js"></script>
+
+    <script type="text/javascript" src="//hello.myfonts.net/count/3786f2" async defer></script>
+    <script type="text/javascript">
+        /*<![CDATA[*/
+        (function() {
+            var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+            sz.src = '//siteimproveanalytics.com/js/siteanalyze_637444.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+        })();
+        /*]]>*/
+    </script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"gov-bam.nr-data.net","licenseKey":"5360c08ecf","applicationID":"99788210,308637395","transactionName":"NQFQMhAADBZRUBFYCwxLZxQLTgsLVFYdHxQKFA==","queueTime":0,"applicationTime":678,"atts":"GUZTRFgaHxg=","errorBeacon":"gov-bam.nr-data.net","agent":""}</script></body>
+</html>
