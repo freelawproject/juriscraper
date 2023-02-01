@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<base href="/">
+	<title>Arkansas Attorney General</title>
+
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+
+	<meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://use.typekit.net/zeb2brn.js"></script>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script async src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script>try {
+            Typekit.load({async: true});
+        } catch (e) {
+        }</script>
+
+	<style>
+        body {
+            margin-top: 60px;
+            font-family: "acumin-pro", sans-serif;
+            background-color: #F0F0F2;
+        }
+	</style>
+</head>
+<body>
+
+<div class="container">
+    <form id="search-form-toggle">
+        Search By
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="toggle-search-type" data-target="#search-form-fulltext" id="toggle-search-type-fulltext" value="fulltext">
+            <label class="form-check-label" for="toggle-search-type-fulltext">Full Text</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input  class="form-check-input" type="radio" name="toggle-search-type" data-target="#search-form-requester" id="toggle-search-type-requester" value="requester">
+            <label class="form-check-label" for="toggle-search-type-requester">Requester</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input  class="form-check-input" type="radio" name="toggle-search-type" data-target="#search-form-number" id="toggle-search-type-number" value="number">
+            <label class="form-check-label" for="toggle-search-type-number">Opinion Number</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input  class="form-check-input" type="radio" name="toggle-search-type" data-target="#search-form-year" id="toggle-search-type-year" value="year">
+            <label class="form-check-label" for="toggle-search-type-year">Year</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input  class="form-check-input" type="radio" name="toggle-search-type" data-target="#search-form-recent" id="toggle-search-type-recent" value="recent">
+            <label class="form-check-label" for="toggle-search-type-recent">Recent</label>
+        </div>
+    </form>
+    <div id="search-form-requester" style="display:none">
+        <form method="GET">
+            <legend>Search By Requester</legend>
+            <input type="hidden" name="type" value="requester" />
+
+            <div class="form-group">
+                <label for="q">Requester Name</label>
+                <input class="form-control" type="text" id="q" name="q" value=""/>
+                <small id="passwordHelpBlock" class="form-text text-muted">
+                    Enter part of the Requester Name. You don't need to enter the full name exactly as it was submitted.
+                </small>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="search-form-number" style="display:none">
+        <form method="GET">
+            <input type="hidden" name="type" value="number" />
+            <legend>Search by Opinion Number</legend>
+
+            <div class="form-group">
+                <label for="q">Opinion Number</label>
+                <input class="form-control" type="text" id="q" name="q" value="" />
+                <small id="passwordHelpBlock" class="form-text text-muted">
+                    Example: 2020-031
+                </small>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="search-form-year" style="display:none">
+        <form method="GET">
+            <input type="hidden" name="type" value="year" />
+            <legend>Search By Year</legend>
+
+            <div class="form-group">
+                <label for="q">Choose Year</label>
+                <select name="q" class="form-control">
+                                                            <option  value="2023">2023</option>
+                                                            <option  value="2022">2022</option>
+                                                            <option  value="2021">2021</option>
+                                                            <option  value="2020">2020</option>
+                                                            <option  value="2019">2019</option>
+                                                            <option  value="2018">2018</option>
+                                                            <option  value="2017">2017</option>
+                                                            <option  value="2016">2016</option>
+                                                            <option  value="2015">2015</option>
+                                                            <option  value="2014">2014</option>
+                                                            <option  value="2013">2013</option>
+                                                            <option  value="2012">2012</option>
+                                                            <option  value="2011">2011</option>
+                                                            <option  value="2010">2010</option>
+                                                            <option  value="2009">2009</option>
+                                                            <option  value="2008">2008</option>
+                                                            <option  value="2007">2007</option>
+                                                            <option  value="2006">2006</option>
+                                                            <option  value="2005">2005</option>
+                                                            <option  value="2004">2004</option>
+                                                            <option  value="2003">2003</option>
+                                                            <option  value="2002">2002</option>
+                                                            <option  value="2001">2001</option>
+                                                            <option  value="2000">2000</option>
+                                                            <option  value="1999">1999</option>
+                                                            <option  value="1998">1998</option>
+                                                            <option  value="1997">1997</option>
+                                                            <option  value="1996">1996</option>
+                                                            <option  value="1995">1995</option>
+                                                            <option  value="1994">1994</option>
+                                                            <option  value="1993">1993</option>
+                                                            <option  value="1992">1992</option>
+                                                            <option  value="1991">1991</option>
+                                                            <option  value="1990">1990</option>
+                                                            <option  value="1989">1989</option>
+                                                            <option  value="1988">1988</option>
+                                                            <option  value="1987">1987</option>
+                                                            <option  value="1986">1986</option>
+                                                            <option  value="1985">1985</option>
+                                                            <option  value="1984">1984</option>
+                                        </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="search-form-fulltext">
+        <form method="GET">
+            <input type="hidden" name="type" value="fulltext" />
+            <legend>Full Text Search</legend>
+
+            <div class="form-group">
+                <label for="q">Enter Search Terms</label>
+                <input maxlength="128" class="form-control" type="text" id="q" name="q" value="" />
+
+                <small id="passwordHelpBlock" class="form-text text-muted d-none">
+                    You can use quoted phrases, AND, OR, +, - in the full text search.<br />
+                    Example: "lorem ipsum" AND (dolor OR sit) -amet<br />
+                    This would return opinions that matched the exact phrase "lorem ipsum" and also contained either "dolor" OR "sit". It would exclude any results that matched the word "amet".</p>
+                </small>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+
+        </form>
+    </div>
+
+    <div id="search-form-recent" style="display:none">
+        <form method="GET">
+            <input type="hidden" name="type" value="recent" />
+            <legend>View Recent Opinions</legend>
+
+            <div class="form-group">
+                <label for="q">Choose Period</label>
+                <select name="q" class="form-control">
+                    											                        <option  value="30">30 Days</option>
+											                        <option  value="60">60 Days</option>
+											                        <option selected="selected" value="90">90 Days</option>
+					                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </form>
+    </div>
+
+
+
+        <nav aria-label="Page navigation example">
+	<p>Found 8 Results. Displaying 1 - 8.</p>
+	<ul class="pagination">
+
+
+
+	</ul>
+</nav>
+            <div class="container" style="margin-bottom: 20px">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Opinion 2023-001</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Requested by Ballard, Lauren  Esq.</h6>
+                    <p class="card-text">Is the decision of the state Office of Personnel Management to release records with information of state employees including their full legal names, titles, departments or agencies, race, gender, full-time or part-time status, location, hire date, termination date, gross annual salaries, and birth dates consistent with the Freedom of Information Act (FOIA)? RESPONSE: In my opinion, the custodian's decisions to release records with the requested information but to withhold the employees' birth dates are consistent with the FOIA.</p>
+					                                Read Full Opinion:
+						                                          <a target="_blank" href="https://ag-opinions.s3.amazonaws.com/uploads/2023-001.html">HTML</a>
+
+						                                          <a style="padding-left: 20px" target="_blank" href="https://ag-opinions.s3.amazonaws.com/uploads/2023-001.pdf">PDF</a>
+						              					                        </div>
+            </div>
+        </div>
+            <div class="container" style="margin-bottom: 20px">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Opinion 2022-038</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Requested by Penzo, Clint  Honorable</h6>
+                    <p class="card-text">Q1) Does Ark. Code Ann. ? 14-42-106, or any other applicable statute, require an appointed member of the city council to execute and file a duplicate oath of office in the same fashion as a state officer who is commissioned by the Governor per Ark. Code Ann. ? 21-2-101 et seq.?  RESPONSE:  No.  The Arkansas Code contains no provision directing a city council member to execute and file a duplicate oath of office.  And the Arkansas Constitution does not address the filing of the oath.</p>
+					                                Read Full Opinion:
+						                                          <a target="_blank" href="https://ag-opinions.s3.amazonaws.com/uploads/2022-038.html">HTML</a>
+
+						                                          <a style="padding-left: 20px" target="_blank" href="https://ag-opinions.s3.amazonaws.com/uploads/2022-038.pdf">PDF</a>
+						              					                        </div>
+            </div>
+        </div>
+            <div class="container" style="margin-bottom: 20px">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Opinion 2022-037</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Requested by Smith, Brandt  (Curtis)  The Honorable</h6>
+                    <p class="card-text">Is a voted ballot subject to the Arkansas Freedom of Information Act (FOIA)?  RESPONSE:  No, a voted ballot is not open to the public for inspection and copying under the provisions of the FOIA.</p>
+					                                Read Full Opinion:
+						                                          <a target="_blank" href="https://ag-opinions.s3.amazonaws.com/uploads/2022-037.html">HTML</a>
+
+						                                          <a style="padding-left: 20px" target="_blank" href="https://ag-opinions.s3.amazonaws.com/uploads/2022-037.pdf">PDF</a>
+						              					                        </div>
+            </div>
+        </div>
+            <div class="container" style="margin-bottom: 20px">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Opinion 2022-041</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Requested by Hammer, Kim D</h6>
+                    <p class="card-text">Q1) Does the utility commission have to be [composed] of five commissioners?  Q2) Can a city, by ordinance, add two additional members to the utility commission for a total of seven commissioners? RESPONSE: I take it that your questions involve a utility commission created to operate a city's waterworks and/or electric light plant systems pursuant to Ark. Code Ann. sec. 14-201-101 et seq. With that understanding, the answer to your first question is "yes," such a commission must have five, and only five, commissioners. Accordingly, the answer to your second question is "no."</p>
+					                                Read Full Opinion:
+						                                          <a target="_blank" href="https://ag-opinions.s3.amazonaws.com/uploads/2022-041.html">HTML</a>
+
+						                                          <a style="padding-left: 20px" target="_blank" href="https://ag-opinions.s3.amazonaws.com/uploads/2022-041.pdf">PDF</a>
+						              					                        </div>
+            </div>
+        </div>
+            <div class="container" style="margin-bottom: 20px">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Opinion 2022-040</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Requested by Anderson, Doris  Ms.</h6>
+                    <p class="card-text">Is the custodian's decision to release certain employment-related records, in response to a Freedom of Information Act (FOIA) consistent with the FOIA, Ark. Code Ann. sec. 25-19-101 et seq.? RESPONSE: Because I have not seen any records that would be responsive to the FOIA request, I cannot opine about the releasability of any specific document or the need to redact any specific piece of information from an otherwise disclosable document. However, it is my opinion that your specific objection about the age of the records at issue is not a legally cognizable exemption to prevent the records' disclosure under the FOIA. Moreover, it has been the general stance of this office that there is no clear basis under the test regarding personnel records to require the redaction of images of public employees' signatures. Under the limited facts before me, I can see no reason to deviate from that general rule in this instance.</p>
+					                                Read Full Opinion:
+						                                          <a target="_blank" href="https://ag-opinions.s3.amazonaws.com/uploads/2022-040.html">HTML</a>
+
+						                                          <a style="padding-left: 20px" target="_blank" href="https://ag-opinions.s3.amazonaws.com/uploads/2022-040.pdf">PDF</a>
+						              					                        </div>
+            </div>
+        </div>
+            <div class="container" style="margin-bottom: 20px">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Opinion 2022-034</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Requested by Bentley, Mary  The Honorable</h6>
+                    <p class="card-text">Can the Perry County Quorum Court access and utilize the funds from this sales and use tax to pay its 911 dispatchers?  RESPONSE:  The answer to your question depends upon the language of the ordinance by which the sales and use tax was levied and the ballot title by which it was presented to the electorate.  These matters are local in nature and must be resolved on the local level.  I cannot construe or interpret such documents and I consequently cannot opine on the legality of the proposed use of the tax proceeds.  I will, however, briefly address the basic legal framework that guides the review.</p>
+					                                Read Full Opinion:
+						                                          <a target="_blank" href="https://ag-opinions.s3.amazonaws.com/uploads/2022-034.html">HTML</a>
+
+						                                          <a style="padding-left: 20px" target="_blank" href="https://ag-opinions.s3.amazonaws.com/uploads/2022-034.pdf">PDF</a>
+						              					                        </div>
+            </div>
+        </div>
+            <div class="container" style="margin-bottom: 20px">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Opinion 2022-029</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Requested by Ingram, Keith M The Honorable</h6>
+                    <p class="card-text">Q1) Since the HWHSD Board of Directors no longer has any authority for personnel matters, they cannot consider hiring, firing, promotion, or demotion. Since [the school boards lacks] this authority does that remove [its] legal authority to go into executive session where discussions of those matters had traditionally taken place? Q2) Are there any circumstances, while the HWHSD remains Level V, in which the Board of Directors can go into executive session? Q3) If the answer to question 2 is yes, what are those circumstances and what is the subject matter in those circumstances that the Board of Directors could discuss out of public view? RESPONSE: Q1-3) If a governing body lacks authority to consider any of the personnel matters that may properly be considered in executive session, then it cannot legally hold a closed meeting pursuant to the FOIA's personnel exemption.  But as I do not act as a factfinder in issuing opinions, I cannot address any factual questions that your background statements might invite.  I consequently cannot opine on your remaining questions, as they depend largely upon the specific surrounding facts.</p>
+					                                Read Full Opinion:
+						                                          <a target="_blank" href="https://ag-opinions.s3.amazonaws.com/uploads/2022-029.html">HTML</a>
+
+						                                          <a style="padding-left: 20px" target="_blank" href="https://ag-opinions.s3.amazonaws.com/uploads/2022-029.pdf">PDF</a>
+						              					                        </div>
+            </div>
+        </div>
+            <div class="container" style="margin-bottom: 20px">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Opinion 2022-039</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Requested by Ballard, Lauren  Esq.</h6>
+                    <p class="card-text">Is the decision of the state Office of Personnel Management to release records with information on state employees including their full legal names, titles, departments or agencies, race, gender, full-time or part-time status, location, hire date, termination date, and gross annual salaries, but not their personnel numbers, consistent with the Freedom of Information Act (FOIA)?  RESPONSE:  The custodian's decision is consistent with the FOIA, in my opinion.</p>
+					                                Read Full Opinion:
+						                                          <a target="_blank" href="https://ag-opinions.s3.amazonaws.com/uploads/2022-039.html">HTML</a>
+
+						                                          <a style="padding-left: 20px" target="_blank" href="https://ag-opinions.s3.amazonaws.com/uploads/2022-039.pdf">PDF</a>
+						              					                        </div>
+            </div>
+        </div>
+
+			<nav aria-label="Page navigation example">
+	<p>Found 8 Results. Displaying 1 - 8.</p>
+	<ul class="pagination">
+
+
+
+	</ul>
+</nav>
+</div>
+<script>
+    function toggleSearch(active_element)
+    {
+        $('#search-form-requester').hide();
+        $('#search-form-fulltext').hide();
+        $('#search-form-year').hide();
+        $('#search-form-number').hide();
+        $('#search-form-recent').hide();
+        $(active_element).show();
+    }
+
+    $(function () {
+        $("#search-form-toggle input").change(function () {
+            toggleSearch($(this).attr('data-target'));
+        });
+
+        $('#toggle-search-type-recent').prop('checked', true);
+        toggleSearch('#search-form-recent');
+    });
+/*
+* Replace single ' with " to avoid the WAF Flag
+*/
+var cleanSingleQuotes = debounce(function(e) {
+    var dirtyString = $(e.target).val();
+    var string = dirtyString.replace(/'/g, '"');
+    $(e.target).val(string);
+}, 500);
+
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function executedFunction() {
+      var context = this;
+      var args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+};
+//Set event listeners
+$('#search-form-fulltext input').bind("keyup", cleanSingleQuotes);
+$('#search-form-requester input').bind("keyup", cleanSingleQuotes);
+$('#search-form-number input').bind("keyup", cleanSingleQuotes);
+
+</script>
+</body>
+</html>

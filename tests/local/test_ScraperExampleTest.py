@@ -209,3 +209,8 @@ class ScraperExampleTest(unittest.TestCase):
         self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.territories"
         )
+
+    def test_scrape_opinion_ag_example_files(self):
+        self.run_tests_on_module_str(
+            "juriscraper.opinions.united_states.attorney_general"
+        )

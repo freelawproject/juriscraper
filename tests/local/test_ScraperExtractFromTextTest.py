@@ -97,6 +97,42 @@ class ScraperExtractFromText(unittest.TestCase):
                 {"Docket": {"docket_number": "#30018-a-MES"}},
             ),
         ],
+        "juriscraper.opinions.united_states.attorney_general.connag": [
+            (
+                """OFFICE OF THE ATTORNEY GENERAL\nCONNECTICUT\n\nwilliam tong\nattorney general\n\nJanuary 24, 2023\nBy Email""",
+                {"OpinionCluster": {"date_filed": "2023-01-24"}},
+            ),
+        ],
+        "juriscraper.opinions.united_states.attorney_general.indianaag": [
+            (
+                """STATE OF INDIANA\n\nOFFICE OF THE ATTORNEY GENERAL\n\nTODD ROKITA\nINDIANA ATTORNEY GENERAL\n\nINDIANA GOVERNMENT CENTER SOUTH, FIFTH FLOOR\n302 WEST WASHINGTON STREET, INDIANAPOLIS, IN 46204-2770\nwww.AttorneyGeneral.IN.gov\n\nTELEPHONE: 317.232.6201\nFAX: 317.232.7979\n\nFebruary 23, 2022\nOFFICIAL OPINION 2022-1""",
+                {"OpinionCluster": {"date_filed": "2022-02-23"}},
+            ),
+        ],
+        "juriscraper.opinions.united_states.attorney_general.ohag": [
+            (
+                """January 11, 2023\n\nThe Honorable Bradford W. Bailey\nHardin County Prosecuting Attorney\nOne Courthouse Square, Suite 50""",
+                {"OpinionCluster": {"date_filed": "2023-01-11"}},
+            ),
+        ],
+        "juriscraper.opinions.united_states.attorney_general.paag": [
+            (
+                """COMMONWEALTH OF PENNSYLVANIA\nOFFICE OF ATTORNEY GENERAL 16TH FLOOR\n\nSTRAWBERRY SQUARE\nJosH SHAPIRO HarrisBurs, PA 17120\n\nATTORNEY GENERAL (717) 787-3391\n\nHARRISBURG, PA 17120\n\nDecember 16, 2019\n\nColonel Robert Evanchick\nCommissioner\nPennsylvania State Police\n1800 Elmerton Avenue""",
+                {"OpinionCluster": {"date_filed": "2019-12-16"}},
+            ),
+        ],
+        "juriscraper.opinions.united_states.attorney_general.vaag": [
+            (
+                """COMMONWEALTH of VIRGINIA\n\nOffice of the Attorney General\nJason S. Miyares 202 North Ninth Street\nAttorney General Richmond, Virginia 23219\n804-786-2071\nFax 804-786-1991\nVirginia Relay Services\n\n800-828-1120\nJanuary 26, 2023 Tl-1\n\nThe Honorable James A. Leftwich, Jr.\nMember, """,
+                {"OpinionCluster": {"date_filed": "2023-01-26"}},
+            ),
+        ],
+        "juriscraper.opinions.united_states.attorney_general.tennag": [
+            (
+                """STATE OF TENNESSEE\n\nOFFICE OF THE ATTORNEY GENERAL\nJanuary 19, 2023\nOpinion No. 23-001\nElected School""",
+                {"OpinionCluster": {"date_filed": "2023-01-19"}},
+            ),
+        ],
         "juriscraper.opinions.united_states.federal_special.cavc": [
             (
                 """           UNITED STATES COURT OF APPEALS FOR VETERANS CLAIMS\n\n                                             NO. 22-3306\n\n                               GEORGE D. PREWITT, JR., PETITIONER,\n\n                                                  V.\n\n                                     DENIS MCDONOUGH,\n                         SECRETARY OF VETERANS AFFAIRS, RESPONDENT.\n\n                       Before""",

@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6 ie" lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 ie" lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 ie" lang="en" dir="ltr"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]> <!--> <html class="not-ie" lang="en" dir="ltr"> <!--<![endif]-->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-8fcad690fd93123ec5e",applicationID:"1526168629"};;(()=>{var __webpack_modules__={507:(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{"use strict";function detectPolyfillFeatures(){const featureStatus={};return checkAndAddFeature("Promise","PROMISE"),checkAndAddFeature("Array.prototype.includes","ARRAY_INCLUDES"),checkAndAddFeature("Object.assign","OBJECT_ASSIGN"),checkAndAddFeature("Object.entries","OBJECT_ENTRIES"),featureStatus;function checkAndAddFeature(funcString,featName){try{let func=eval("self."+funcString);-1!==func.toString().indexOf("[native code]")?featureStatus[featName]=Status.NATIVE:featureStatus[featName]=Status.CHANGED}catch{featureStatus[featName]=Status.UNAVAIL}}}__webpack_require__.d(__webpack_exports__,{n:()=>detectPolyfillFeatures});const Status={UNAVAIL:"NotSupported",NATIVE:"Detected",CHANGED:"Modified"}},2687:(e,t,r)=>{"use strict";r.d(t,{Z:()=>n});const n=(0,r(2141).ky)(16)},1719:(e,t,r)=>{"use strict";r.d(t,{I:()=>n});var n=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(n=+i[1])},3524:(e,t,r)=>{"use strict";let n;if(r.d(t,{H:()=>i}),r(8438).il){const e=document.createElement("div");e.innerHTML="\x3c!--[if lte IE 6]><div></div><![endif]--\x3e\x3c!--[if lte IE 7]><div></div><![endif]--\x3e\x3c!--[if lte IE 8]><div></div><![endif]--\x3e\x3c!--[if lte IE 9]><div></div><![endif]--\x3e",n=e.getElementsByTagName("div").length}var i;i=4===n?6:3===n?7:2===n?8:1===n?9:0},5970:(e,t,r)=>{"use strict";r.d(t,{Mt:()=>_,C5:()=>s,OP:()=>j,Yu:()=>g,Dg:()=>f,CX:()=>u,GE:()=>b,sU:()=>I});var n={};r.r(n),r.d(n,{agent:()=>m,match:()=>x,version:()=>y});var i=r(4580);class o{constructor(e,t){return e&&"object"==typeof e?t&&"object"==typeof t?(Object.assign(this,t),void Object.entries(e).forEach((e=>{let[t,r]=e;this[t]=r}))):console.error("setting a Configurable requires a model to set its initial properties"):console.error("setting a Configurable requires an object as input")}}const a={beacon:i.ce.beacon,errorBeacon:i.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},c={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!c[e])throw new Error(`Info for ${e} was never set`);return c[e]}function u(e,t){if(!e)throw new Error("All info objects require an agent identifier!");c[e]=new o(t,a),(0,i.Qy)(e,c[e],"info")}const d={allow_bfcache:!1,privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,enabled:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0},metrics:{enabled:!0},page_action:{enabled:!0},page_view_event:{enabled:!0},page_view_timing:{enabled:!0},session_trace:{enabled:!0},spa:{enabled:!0}},l={};function f(e,t){if(!e)throw new Error("All configuration objects require an agent identifier!");l[e]=new o(t,d),(0,i.Qy)(e,l[e],"config")}function _(e,t){if(!e)throw new Error("All configuration objects require an agent identifier!");var r=function(e){if(!e)throw new Error("All configuration objects require an agent identifier!");if(!l[e])throw new Error(`Configuration for ${e} was never set`);return l[e]}(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const p={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},v={};function b(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");v[e]=new o(t,p),(0,i.Qy)(e,v[e],"loader_config")}const g=(0,i.mF)().o;var h=r(3524),w=r(9206),m=null,y=null;if(navigator.userAgent){var k=navigator.userAgent,P=k.match(/Version\/(\S+)\s+Safari/);P&&-1===k.indexOf("Chrome")&&-1===k.indexOf("Chromium")&&(m="Safari",y=P[1])}function x(e,t){if(!m)return!1;if(e!==m)return!1;if(!t)return!0;if(!y)return!1;for(var r=y.split("."),n=t.split("."),i=0;i<n.length;i++)if(n[i]!==r[i])return!1;return!0}var E=r(2141),S=r(8438);const O="NRBA_SESSION_ID";function A(){if(!S.il)return null;try{let e;return null===(e=window.sessionStorage.getItem(O))&&(e=(0,E.ky)(16),window.sessionStorage.setItem(O,e)),e}catch(e){return null}}var q=S.ZP?.XMLHttpRequest,C=q&&q.prototype;const T={};function j(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!T[e])throw new Error(`Runtime for ${e} was never set`);return T[e]}function I(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");var r;T[e]=new o(t,(r=e,{customTransaction:void 0,disabled:!1,features:{},loaderType:void 0,maxBytes:6===h.H?2e3:3e4,offset:(0,w.yf)(),onerror:void 0,origin:""+S.ZP?.location,ptid:void 0,releaseIds:{},sessionId:1==_(r,"privacy.cookies_enabled")?A():null,xhrWrappable:q&&C&&C.addEventListener&&!/CriOS/.test(navigator.userAgent),userAgent:n})),(0,i.Qy)(e,T[e],"runtime")}},8873:(e,t,r)=>{"use strict";r.d(t,{q:()=>n});const n=["1222","PROD"].filter((e=>e)).join(".")},1925:(e,t,r)=>{"use strict";r.d(t,{w:()=>i});const n={agentIdentifier:""};class i{constructor(e){if("object"!=typeof e)return console.error("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,n),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(n).includes(t)&&(this.sharedContext[t]=r)}))}}},2071:(e,t,r)=>{"use strict";r.d(t,{ee:()=>s});var n=r(4580),i=r(9010),o=r(9599),a="nr@context";let c=(0,n.fP)();var s;function u(){}function d(){return new u}function l(){(s.backlog.api||s.backlog.feature)&&(s.aborted=!0,s.backlog={})}c.ee?s=c.ee:(s=function e(t,r){var n={},c={},f={},_={on:b,addEventListener:b,removeEventListener:g,emit:v,get:w,listeners:h,context:p,buffer:m,abort:l,aborted:!1,isBuffering:y,debugId:r,backlog:t&&t.backlog?t.backlog:{}};return _;function p(e){return e&&e instanceof u?e:e?(0,i.X)(e,a,d):d()}function v(e,r,n,i,o){if(!1!==o&&(o=!0),!s.aborted||i){t&&o&&t.emit(e,r,n);for(var a=p(n),u=h(e),d=u.length,l=0;l<d;l++)u[l].apply(a,r);var f=k()[c[e]];return f&&f.push([_,e,r,a]),a}}function b(e,t){n[e]=h(e).concat(t)}function g(e,t){var r=n[e];if(r)for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)}function h(e){return n[e]||[]}function w(t){return f[t]=f[t]||e(_,t)}function m(e,t){var r=k();_.aborted||(0,o.D)(e,(function(e,n){t=t||"feature",c[n]=t,t in r||(r[t]=[])}))}function y(e){return!!k()[c[e]]}function k(){return _.backlog}}(void 0,"globalEE"),c.ee=s)},3195:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(2071).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4539:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(3195);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3585:(e,t,r)=>{"use strict";r.d(t,{bP:()=>c,iz:()=>s,m$:()=>a});var n=r(8438),i=!1;try{var o=Object.defineProperty({},"passive",{get:function(){i=!0}});n.ZP?.addEventListener("testPassive",null,o),n.ZP?.removeEventListener("testPassive",null,o)}catch(e){}function a(e){return i?{passive:!0,capture:!!e}:!!e}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];window.addEventListener(e,t,a(r))}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];document.addEventListener(e,t,a(r))}},2141:(e,t,r)=>{"use strict";r.d(t,{Rl:()=>i,ky:()=>o});var n=r(8438);function i(){var e=null,t=0,r=n.ZP?.crypto||n.ZP?.msCrypto;function i(){return e?15&e[t++]:16*Math.random()|0}r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,a="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",c="",s=0;s<a.length;s++)c+="x"===(o=a[s])?i().toString(16):"y"===o?(o=3&i()|8).toString(16):o;return c}function o(e){var t=null,r=0,n=self.crypto||self.msCrypto;n&&n.getRandomValues&&Uint8Array&&(t=n.getRandomValues(new Uint8Array(31)));for(var i=[],o=0;o<e;o++)i.push(a().toString(16));return i.join("");function a(){return t?15&t[r++]:16*Math.random()|0}}},9206:(e,t,r)=>{"use strict";r.d(t,{nb:()=>s,os:()=>u,yf:()=>c,zO:()=>a});var n=r(1209),i=(new Date).getTime(),o=i;function a(){return n.G&&performance.now?Math.round(performance.now()):(i=Math.max((new Date).getTime(),i))-o}function c(){return i}function s(e){o=e}function u(){return o}},1209:(e,t,r)=>{"use strict";r.d(t,{G:()=>n});const n=void 0!==r(8438).ZP?.performance?.timing?.navigationStart},745:(e,t,r)=>{"use strict";r.d(t,{s:()=>s,v:()=>u});var n=r(7036),i=r(1719),o=r(9206),a=r(1209),c=r(8438);let s=!0;function u(e){var t=function(){if(i.I&&i.I<9)return;if(a.G)return s=!1,c.ZP?.performance?.timing?.navigationStart}();t&&((0,n.B)(e,"starttime",t),(0,o.nb)(t))}},7036:(e,t,r)=>{"use strict";r.d(t,{B:()=>o,L:()=>a});var n=r(9206),i={};function o(e,t,r){void 0===r&&(r=(0,n.zO)()+(0,n.os)()),i[e]=i[e]||{},i[e][t]=r}function a(e,t,r,n){const o=e.sharedContext.agentIdentifier;var a=i[o]?.[r],c=i[o]?.[n];void 0!==a&&void 0!==c&&e.store("measures",t,{value:c-a})}},8547:(e,t,r)=>{"use strict";r.d(t,{T:()=>i});var n=r(8438);const i={isFileProtocol:function(){let e=Boolean("file:"===(0,n.lW)()?.location?.protocol);e&&(i.supportabilityMetricSent=!0);return e},supportabilityMetricSent:!1}},9011:(e,t,r)=>{"use strict";r.d(t,{K:()=>o});var n=r(5970);const i=["ajax","jserrors","metrics","page_action","page_view_event","page_view_timing","session_trace","spa"];function o(e){const t={};return i.forEach((r=>{t[r]=function(e,t){return!0!==(0,n.OP)(t).disabled&&!1!==(0,n.Mt)(t,`${e}.enabled`)}(r,e)})),t}},8025:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(2071);class i{constructor(e,t){let r=arguments.length>2&&void 0!==arguments[2]?arguments[2]:[];this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.externalFeatures=r,this.blocked=!1}}},9010:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},8438:(e,t,r)=>{"use strict";r.d(t,{ZP:()=>a,il:()=>n,lW:()=>c,v6:()=>i});const n=Boolean("undefined"!=typeof window&&window.document),i=Boolean("undefined"!=typeof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator);let o=(()=>{if(n)return window;if(i){if("undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope)return globalThis;if(self instanceof WorkerGlobalScope)return self}throw new Error("New Relic browser agent shutting down due to error: Unable to locate global scope. This is possibly due to code redefining browser global variables like `self` and `window`.")})();const a=o;function c(){return o}},9599:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t){var r=[],i="",o=0;for(i in e)n.call(e,i)&&(r[o]=t(i,e[i]),o+=1);return r}},248:(e,t,r)=>{"use strict";r.d(t,{$c:()=>s,Ng:()=>u,RR:()=>c});var n=r(5970),i=r(1925),o=r(8547),a={regex:/^file:\/\/(.*)/,replacement:"file://OBFUSCATED"};class c extends i.w{constructor(e){super(e)}shouldObfuscate(){return s(this.sharedContext.agentIdentifier).length>0}obfuscateString(e){if(!e||"string"!=typeof e)return e;for(var t=s(this.sharedContext.agentIdentifier),r=e,n=0;n<t.length;n++){var i=t[n].regex,o=t[n].replacement||"*";r=r.replace(i,o)}return r}}function s(e){var t=[],r=(0,n.Mt)(e,"obfuscate")||[];return t=t.concat(r),o.T.isFileProtocol()&&t.push(a),t}function u(e){for(var t=!1,r=!1,n=0;n<e.length;n++){"regex"in e[n]?"string"!=typeof e[n].regex&&e[n].regex.constructor!==RegExp&&(console&&console.warn&&console.warn('An obfuscation replacement rule contains a "regex" value with an invalid type (must be a string or RegExp)'),r=!0):(console&&console.warn&&console.warn('An obfuscation replacement rule was detected missing a "regex" value.'),r=!0);var i=e[n].replacement;i&&"string"!=typeof i&&(console&&console.warn&&console.warn('An obfuscation replacement rule contains a "replacement" value with an invalid type (must be a string)'),t=!0)}return!t&&!r}},4580:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>u,Qy:()=>s,ce:()=>o,fP:()=>a,gG:()=>d,mF:()=>c});var n=r(9206),i=r(8438);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return i.ZP?.NREUM||(i.ZP.NREUM={}),void 0===i.ZP?.newrelic&&(i.ZP.newrelic=i.ZP.NREUM),i.ZP.NREUM}function c(){let e=a();if(!e.o){var t=self,r=t.XMLHttpRequest;e.o={ST:setTimeout,SI:t.setImmediate,CT:clearTimeout,XHR:r,REQ:t.Request,EV:t.Event,PR:t.Promise,MO:t.MutationObserver,FETCH:t.fetch}}return e}function s(e,t,r){let i=a();const o=i.initializedAgents||{},c=o[e]||{};return Object.keys(c).length||(c.initializedAt={ms:(0,n.zO)(),date:new Date}),i.initializedAgents={...o,[e]:{...c,[r]:t}},i}function u(e,t){a()[e]=t}function d(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),c(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},584:(e,t,r)=>{"use strict";r.d(t,{N:()=>i,e:()=>o});var n=r(3585);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return void(0,n.iz)("visibilitychange",r);function r(){if(t){if("hidden"!=document.visibilityState)return;e()}e(document.visibilityState)}}function o(){return"hidden"===document.visibilityState?-1:1/0}},8539:e=>{e.exports=function(e,t,r){t||(t=0),void 0===r&&(r=e?e.length:0);for(var n=-1,i=r-t||0,o=Array(i<0?0:i);++n<i;)o[n]=e[t+n];return o}}},__webpack_module_cache__={},inProgress,dataWebpackPrefix;function __webpack_require__(e){var t=__webpack_module_cache__[e];if(void 0!==t)return t.exports;var r=__webpack_module_cache__[e]={exports:{}};return __webpack_modules__[e](r,r.exports,__webpack_require__),r.exports}__webpack_require__.m=__webpack_modules__,__webpack_require__.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return __webpack_require__.d(t,{a:t}),t},__webpack_require__.d=(e,t)=>{for(var r in t)__webpack_require__.o(t,r)&&!__webpack_require__.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},__webpack_require__.f={},__webpack_require__.e=e=>Promise.all(Object.keys(__webpack_require__.f).reduce(((t,r)=>(__webpack_require__.f[r](e,t),t)),[])),__webpack_require__.u=e=>e+"."+__webpack_require__.h().slice(0,8)+"-1222.js",__webpack_require__.h=()=>"95d4308d836c4fa71ea6",__webpack_require__.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),inProgress={},dataWebpackPrefix="NRBA:",__webpack_require__.l=(e,t,r,n)=>{if(inProgress[e])inProgress[e].push(t);else{var i,o;if(void 0!==r)for(var a=document.getElementsByTagName("script"),c=0;c<a.length;c++){var s=a[c];if(s.getAttribute("src")==e||s.getAttribute("data-webpack")==dataWebpackPrefix+r){i=s;break}}i||(o=!0,(i=document.createElement("script")).charset="utf-8",i.timeout=120,__webpack_require__.nc&&i.setAttribute("nonce",__webpack_require__.nc),i.setAttribute("data-webpack",dataWebpackPrefix+r),i.src=e),inProgress[e]=[t];var u=(t,r)=>{i.onerror=i.onload=null,clearTimeout(d);var n=inProgress[e];if(delete inProgress[e],i.parentNode&&i.parentNode.removeChild(i),n&&n.forEach((e=>e(r))),t)return t(r)},d=setTimeout(u.bind(null,void 0,{type:"timeout",target:i}),12e4);i.onerror=u.bind(null,i.onerror),i.onload=u.bind(null,i.onload),o&&document.head.appendChild(i)}},__webpack_require__.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},__webpack_require__.p="https://js-agent.newrelic.com/",(()=>{var e={783:0,519:0};__webpack_require__.f.j=(t,r)=>{var n=__webpack_require__.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var i=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=i);var o=__webpack_require__.p+__webpack_require__.u(t),a=new Error;__webpack_require__.l(o,(r=>{if(__webpack_require__.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var i=r&&("load"===r.type?"missing":r.type),o=r&&r.target&&r.target.src;a.message="Loading chunk "+t+" failed.\n("+i+": "+o+")",a.name="ChunkLoadError",a.type=i,a.request=o,n[1](a)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,i,[o,a,c]=r,s=0;if(o.some((t=>0!==e[t]))){for(n in a)__webpack_require__.o(a,n)&&(__webpack_require__.m[n]=a[n]);if(c)c(__webpack_require__)}for(t&&t(r);s<o.length;s++)i=o[s],__webpack_require__.o(e,i)&&e[i]&&e[i][0](),e[i]=0},r=window.webpackChunkNRBA=window.webpackChunkNRBA||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})();var __webpack_exports__={};(()=>{"use strict";__webpack_require__.r(__webpack_exports__);var e=__webpack_require__(507),t=__webpack_require__(2687),r=__webpack_require__(3585);function n(e){if(!document||"complete"===document.readyState)return e()||!0}function i(e){n(e)||(0,r.bP)("load",e)}function o(e){n(e)||(0,r.iz)("DOMContentLoaded",e)}var a=__webpack_require__(8438),c=__webpack_require__(2071);let s=0;function u(e){(async()=>{if(!s++)try{const{aggregator:t}=await __webpack_require__.e(859).then(__webpack_require__.bind(__webpack_require__,7859));await t(e)}catch(e){console.error("Failed to successfully load all aggregators. Aborting...\n",e),c.ee.abort()}})()}var d=__webpack_require__(8539),l=__webpack_require__.n(d),f=__webpack_require__(4580),_=__webpack_require__(5970),p=__webpack_require__(3195),v=__webpack_require__(9599),b=__webpack_require__(9206);let g=!1;var h=__webpack_require__(7036),w=__webpack_require__(745),m=__webpack_require__(8025);class y extends m.W{constructor(e){super(e),a.il&&((0,w.v)(e),(0,h.B)(e,"firstbyte",(0,b.yf)()),i((()=>this.measureWindowLoaded())),o((()=>this.measureDomContentLoaded())))}measureWindowLoaded(){var e=(0,b.zO)();(0,h.B)(this.agentIdentifier,"onload",e+(0,b.os)()),(0,p.p)("timing",["load",e],void 0,void 0,this.ee)}measureDomContentLoaded(){(0,h.B)(this.agentIdentifier,"domContent",(0,b.zO)()+(0,b.os)())}}var k=__webpack_require__(584);class P extends m.W{constructor(e){var t;if(super(e),t=this,this.isEnabled()&&a.il){if(this.pageHiddenTime=(0,k.e)(),this.performanceObserver,this.lcpPerformanceObserver,this.clsPerformanceObserver,this.fiRecorded=!1,"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){this.performanceObserver=new PerformanceObserver((function(){return t.perfObserver(...arguments)}));try{this.performanceObserver.observe({entryTypes:["paint"]})}catch(e){}this.lcpPerformanceObserver=new PerformanceObserver((function(){return t.lcpObserver(...arguments)}));try{this.lcpPerformanceObserver.observe({entryTypes:["largest-contentful-paint"]})}catch(e){}this.clsPerformanceObserver=new PerformanceObserver((function(){return t.clsObserver(...arguments)}));try{this.clsPerformanceObserver.observe({type:"layout-shift",buffered:!0})}catch(e){}}this.fiRecorded=!1;["click","keydown","mousedown","pointerdown","touchstart"].forEach((e=>{(0,r.iz)(e,(function(){return t.captureInteraction(...arguments)}))})),(0,k.N)((()=>{this.pageHiddenTime=(0,b.zO)(),(0,p.p)("docHidden",[this.pageHiddenTime],void 0,void 0,this.ee)}),!0),(0,r.bP)("pagehide",(()=>(0,p.p)("winPagehide",[(0,b.zO)()],void 0,void 0,this.ee)))}}isEnabled(){return!1!==(0,_.Mt)(this.agentIdentifier,"page_view_timing.enabled")}perfObserver(e,t){e.getEntries().forEach((e=>{"first-paint"===e.name?(0,p.p)("timing",["fp",Math.floor(e.startTime)],void 0,void 0,this.ee):"first-contentful-paint"===e.name&&(0,p.p)("timing",["fcp",Math.floor(e.startTime)],void 0,void 0,this.ee)}))}lcpObserver(e,t){var r=e.getEntries();if(r.length>0){var n=r[r.length-1];if(this.pageHiddenTime<n.startTime)return;var i=[n],o=this.addConnectionAttributes({});o&&i.push(o),(0,p.p)("lcp",i,void 0,void 0,this.ee)}}clsObserver(e){e.getEntries().forEach((e=>{e.hadRecentInput||(0,p.p)("cls",[e],void 0,void 0,this.ee)}))}addConnectionAttributes(e){var t=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(t)return t.type&&(e["net-type"]=t.type),t.effectiveType&&(e["net-etype"]=t.effectiveType),t.rtt&&(e["net-rtt"]=t.rtt),t.downlink&&(e["net-dlink"]=t.downlink),e}captureInteraction(e){if(e instanceof _.Yu.EV&&!this.fiRecorded){var t=Math.round(e.timeStamp),r={type:e.type};this.addConnectionAttributes(r),t<=(0,b.zO)()?r.fid=(0,b.zO)()-t:t>(0,b.os)()&&t<=Date.now()?(t-=(0,b.os)(),r.fid=(0,b.zO)()-t):t=(0,b.zO)(),this.fiRecorded=!0,(0,p.p)("timing",["fi",t,r],void 0,void 0,this.ee)}}}var x=__webpack_require__(4539),E="React",S="Angular",O="AngularJS",A="Backbone",q="Ember",C="Vue",T="Meteor",j="Zepto",I="Jquery";function R(){if(!a.il)return[];var e=[];try{(function(){try{if(window.React||window.ReactDOM||window.ReactRedux)return!0;if(document.querySelector("[data-reactroot], [data-reactid]"))return!0;for(var e=document.querySelectorAll("body > div"),t=0;t<e.length;t++)if(Object.keys(e[t]).indexOf("_reactRootContainer")>=0)return!0;return!1}catch(e){return!1}})()&&e.push(E),function(){try{return!!window.angular||(!!document.querySelector(".ng-binding, [ng-app], [data-ng-app], [ng-controller], [data-ng-controller], [ng-repeat], [data-ng-repeat]")||!!document.querySelector('script[src*="angular.js"], script[src*="angular.min.js"]'))}catch(e){return!1}}()&&e.push(O),function(){try{return!!(window.hasOwnProperty("ng")&&window.ng.hasOwnProperty("coreTokens")&&window.ng.coreTokens.hasOwnProperty("NgZone"))||!!document.querySelectorAll("[ng-version]").length}catch(e){return!1}}()&&e.push(S),window.Backbone&&e.push(A),window.Ember&&e.push(q),window.Vue&&e.push(C),window.Meteor&&e.push(T),window.Zepto&&e.push(j),window.jQuery&&e.push(I)}catch(e){}return e}var N=__webpack_require__(8547),M=__webpack_require__(248),Z=__webpack_require__(8873);const B=Boolean(a.ZP?.Worker),D=Boolean(a.ZP?.SharedWorker),W=Boolean(a.ZP?.navigator?.serviceWorker);let F,z,G;class L extends m.W{constructor(e){var t;let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};super(e),t=this,this.PfFeatStatusEnum=r,this.singleChecks(),this.eachSessionChecks(),(0,x.X)("record-supportability",(function(){return t.recordSupportability(...arguments)}),void 0,this.ee),(0,x.X)("record-custom",(function(){return t.recordCustom(...arguments)}),void 0,this.ee)}recordSupportability(e,t){var r=["sm",e,{name:e},t];return(0,p.p)("storeMetric",r,null,void 0,this.ee),r}recordCustom(e,t){var r=["cm",e,{name:e},t];return(0,p.p)("storeEventMetrics",r,null,void 0,this.ee),r}singleChecks(){this.recordSupportability(`Generic/Version/${Z.q}/Detected`);const{loaderType:e}=(0,_.OP)(this.agentIdentifier);e&&this.recordSupportability(`Generic/LoaderType/${e}/Detected`),a.il&&o((()=>{R().forEach((e=>{this.recordSupportability("Framework/"+e+"/Detected")}))})),N.T.isFileProtocol()&&(this.recordSupportability("Generic/FileProtocol/Detected"),N.T.supportabilityMetricSent=!0);const t=(0,M.$c)(this.agentIdentifier);t.length>0&&this.recordSupportability("Generic/Obfuscate/Detected"),t.length>0&&!(0,M.Ng)(t)&&this.recordSupportability("Generic/Obfuscate/Invalid"),a.il&&this.reportPolyfillsNeeded(),function(e){if(!F){if(B){F=Worker;try{a.ZP.Worker=r(F,"Dedicated")}catch(e){o(e,"Dedicated")}if(D){z=SharedWorker;try{a.ZP.SharedWorker=r(z,"Shared")}catch(e){o(e,"Shared")}}else n("Shared");if(W){G=navigator.serviceWorker.register;try{a.ZP.navigator.serviceWorker.register=(t=G,function(){for(var e=arguments.length,r=new Array(e),n=0;n<e;n++)r[n]=arguments[n];return i("Service",r[1]?.type),t.apply(navigator.serviceWorker,r)})}catch(e){o(e,"Service")}}else n("Service");var t;return}n("All")}function r(e,t){return new Proxy(e,{construct:(e,r)=>(i(t,r[1]?.type),new e(...r))})}function n(t){a.v6||e(`Workers/${t}/Unavailable`)}function i(t,r){e("module"===r?`Workers/${t}/Module`:`Workers/${t}/Classic`)}function o(t,r){e(`Workers/${r}/SM/Unsupported`),console.warn(`NR Agent: Unable to capture ${r} workers.`,t)}}(this.recordSupportability.bind(this))}reportPolyfillsNeeded(){this.recordSupportability(`Generic/Polyfill/Promise/${this.PfFeatStatusEnum.PROMISE}`),this.recordSupportability(`Generic/Polyfill/ArrayIncludes/${this.PfFeatStatusEnum.ARRAY_INCLUDES}`),this.recordSupportability(`Generic/Polyfill/ObjectAssign/${this.PfFeatStatusEnum.OBJECT_ASSIGN}`),this.recordSupportability(`Generic/Polyfill/ObjectEntries/${this.PfFeatStatusEnum.OBJECT_ENTRIES}`)}eachSessionChecks(){a.il&&(0,r.bP)("pageshow",(e=>{e.persisted&&this.recordCustom("Custom/BFCache/PageRestored")}))}}var U=__webpack_require__(9011);const $=(0,e.n)(),H="lite";try{!function(e){if(g)return;const r=(0,f.gG)();a.v6&&(r.info.jsAttributes={...r.info.jsAttributes,isWorker:!0});try{(0,_.CX)(t.Z,r.info),(0,_.Dg)(t.Z,r.init),(0,_.GE)(t.Z,r.loader_config),(0,_.sU)(t.Z,{loaderType:e}),function(e){var t=(0,f.fP)(),r=c.ee.get(e),n=r.get("tracer"),i="api-",o=i+"ixn-";function a(){}(0,v.D)(["setErrorHandler","finished","addToTrace","inlineHit","addRelease"],(function(e,r){t[r]=u(i,r,!0,"api")})),t.addPageAction=u(i,"addPageAction",!0),t.setCurrentRouteName=u(i,"routeName",!0),t.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,_.OP)(e).customTransaction=(r||"http://custom.transaction")+t,u(i,"setPageViewName",!0,"api")()},t.setCustomAttribute=function(t,r){const n=(0,_.C5)(e);return(0,_.CX)(e,{...n,jsAttributes:{...n.jsAttributes,[t]:r}}),u(i,"setCustomAttribute",!0,"api")()},t.interaction=function(){return(new a).get()};var s=a.prototype={createTracer:function(e,t){var i={},a=this,c="function"==typeof t;return(0,p.p)(o+"tracer",[(0,b.zO)(),e,i],a,void 0,r),function(){if(n.emit((c?"":"no-")+"fn-start",[(0,b.zO)(),a,c],i),c)try{return t.apply(this,arguments)}catch(e){throw n.emit("fn-err",[arguments,this,"string"==typeof e?new Error(e):e],i),e}finally{n.emit("fn-end",[(0,b.zO)()],i)}}}};function u(e,t,n,i){return function(){return(0,p.p)("record-supportability",["API/"+t+"/called"],void 0,void 0,r),(0,p.p)(e+t,[(0,b.zO)()].concat(l()(arguments)),n?null:this,i,r),n?void 0:this}}(0,v.D)("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),(function(e,t){s[t]=u(o,t)})),t.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),(0,p.p)("record-supportability",["API/noticeError/called"],void 0,void 0,r),(0,p.p)("err",[e,(0,b.zO)(),!1,t],void 0,void 0,r)}}(t.Z),g=!0}catch(e){}}(H);const e=(0,U.K)(t.Z);e.page_view_event&&new y(t.Z),e.page_view_timing&&new P(t.Z),e.metrics&&new L(t.Z,$),function(e,t){let r=arguments.length>2&&void 0!==arguments[2]?arguments[2]:1e3;t?setTimeout((()=>u(e)),r):a.il?i((()=>u(e))):u(e)}(H)}catch(e){a.ZP?.newrelic?.ee?.abort&&a.ZP.newrelic.ee.abort()}})(),window.NRBA=__webpack_exports__})();</script>
+<link rel="shortcut icon" href="https://agportal-s3bucket.s3.amazonaws.com/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style type='text/css'>body {background: #f7fcff;}</style> <meta name="generator" content="Drupal 7 (https://www.drupal.org)" />
+<link rel="canonical" href="https://www.atg.wa.gov/ago-opinions/year/2020" />
+<link rel="shortlink" href="https://www.atg.wa.gov/ago-opinions/year/2020" />
+<title>AG Opinion Archives 2020 | Washington State</title>
+<link href="/sites/all/themes/riley/css/bootstrap.css" rel="stylesheet">
+ <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<link type="text/css" rel="stylesheet" href="https://www.atg.wa.gov/sites/default/files/css/css_rEI_5cK_B9hB4So2yZUtr5weuEV3heuAllCDE6XsIkI.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.atg.wa.gov/sites/default/files/css/css_FennmYwovROHRgb_AdlLTp7o2zblx3HGcvGoBAQTox8.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.atg.wa.gov/sites/default/files/css/css_jrqdtNeDE6bm1xAhUoGvZP_T8IUq3X3jTx8KZqOCAzo.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.atg.wa.gov/sites/default/files/css/css_PMpjUtcVB2nTfwDa3CYXK9rveUQF4mM0-GDBqa0eUYY.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.atg.wa.gov/sites/default/files/css/css_qItRWNNJHDeB6CgjDoLN-3Ibcvn1_vTXYSMPB72bE7o.css" media="all" />
+<script type="text/javascript" src="https://www.atg.wa.gov/sites/default/files/js/js_XexEZhbTmj1BHeajKr2rPfyR8Y68f4rm0Nv3Vj5_dSI.js"></script>
+<script type="text/javascript" src="https://www.atg.wa.gov/sites/default/files/js/js_6ffqwjJm_e19NpMgY5TM_pIuTKilE0vbXIvN0QJLy7I.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var switchTo5x = true;var __st_loadLate = true;var useFastShare = true;
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+if (typeof stLight !== 'undefined') { stLight.options({"publisher":"7f3554bc-2f0d-4f06-bf8a-1c9e70a02b1f","version":"5x","lang":"en"}); }
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.atg.wa.gov/sites/default/files/js/js_NmdCJlMQ8yZOwwurWYsXIONQvgP_K8bqWthuM8tteVQ.js"></script>
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-5071200-2"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("config", "UA-5071200-2", {"groups":"default","anonymize_ip":true});gtag("config", "G-38Q1VK95B6", {"groups":"default","anonymize_ip":true});
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.atg.wa.gov/sites/default/files/js/js_9V_lgW5i0VloUntjWbIc8K1hwDcE1Z4fE6-uqrjbMrQ.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"riley","theme_token":"dnqqKtQGIyVL8vHQQKU7fU7roRjs9GCO2GZ9mlEof1U","js":{"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/contrib\/custom_search\/js\/custom_search.js":1,"0":1,"https:\/\/ws.sharethis.com\/button\/buttons.js":1,"1":1,"sites\/all\/modules\/contrib\/tb_megamenu\/js\/tb-megamenu-frontend.js":1,"sites\/all\/modules\/contrib\/tb_megamenu\/js\/tb-megamenu-touch.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"https:\/\/www.googletagmanager.com\/gtag\/js?id=UA-5071200-2":1,"2":1,"sites\/all\/themes\/riley\/js\/html5shiv.js":1,"sites\/all\/themes\/riley\/js\/respond.min.js":1,"sites\/all\/themes\/riley\/js\/modernizr.js":1,"sites\/all\/themes\/riley\/js\/bootstrap.js":1,"sites\/all\/themes\/riley\/js\/jquery.easing.js":1,"sites\/all\/themes\/riley\/js\/jquery.sticky.js":1,"sites\/all\/themes\/riley\/js\/tinynav.min.js":1,"sites\/all\/themes\/riley\/js\/animate.js":1,"sites\/all\/themes\/riley\/js\/jquery.parallax-1.1.3.js":1,"sites\/all\/themes\/riley\/js\/jquery.flexslider-min.js":1,"sites\/all\/themes\/riley\/js\/functions.js":1,"sites\/all\/themes\/riley\/js\/custom_script.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.messages.css":1,"modules\/aggregator\/aggregator.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/contrib\/quiz\/quiz.css":1,"modules\/search\/search.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/font-awesome\/4.4.0\/css\/font-awesome.min.css":1,"sites\/all\/modules\/contrib\/tb_megamenu\/css\/bootstrap.css":1,"sites\/all\/modules\/contrib\/tb_megamenu\/css\/base.css":1,"sites\/all\/modules\/contrib\/tb_megamenu\/css\/default.css":1,"sites\/all\/modules\/contrib\/tb_megamenu\/css\/compatibility.css":1,"sites\/all\/modules\/contrib\/custom_search\/custom_search.css":1,"sites\/all\/modules\/contrib\/print\/print_ui\/css\/print_ui.theme.css":1,"sites\/all\/themes\/riley\/css\/styles.css":1,"sites\/all\/themes\/riley\/css\/flexslider.css":1,"sites\/all\/themes\/riley\/css\/animate.css":1,"sites\/all\/themes\/riley\/css\/entypo.css":1,"sites\/all\/themes\/riley\/css\/typicons.min.css":1,"sites\/all\/themes\/riley\/css\/custom_designer_style.css":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px","file_public_path":"\/sites\/default\/files","specificPagesDefaultValue":"admin*\nimagebrowser*\nimg_assist*\nimce*\nnode\/add\/*\nnode\/*\/edit\nprint\/*\nprintpdf\/*\nsystem\/ajax\nsystem\/ajax\/*"},"custom_search":{"form_target":"_self","solr":0},"googleanalytics":{"account":["UA-5071200-2","G-38Q1VK95B6"],"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":1},"urlIsAjaxTrusted":{"\/ago-opinions\/year\/2020":true}});
+//--><!]]>
+</script>
+
+
+  <!-- Web Fonts -->
+  <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,300,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>-->
+
+<!-- User defined CSS --><style type='text/css'></style><!-- End user defined CSS -->
+<!--<script>
+	var options = {
+		"url": "/css/twitter-styles.css"
+	};
+	CustomizeTwitterWidget(options);
+</script>-->
+
+</head>
+
+<body class="html not-front not-logged-in no-sidebars page-ago-opinions page-ago-opinions-year page-ago-opinions-year- page-ago-opinions-year-2020 color-1 " >
+
+<!-- Header -->
+<header class="header page-tpl-php">
+	    <div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="top-container">
+					<div class="top-left">
+						<!-- Logo -->
+													<a href="/" title="Home" rel="home" class="logo">
+								<img src="https://agportal-s3bucket.s3.amazonaws.com/AGO_logo.png" alt="Home" />
+							</a>
+
+													<div id="name-and-slogan">
+																	<h2 id="site-name">
+										<a href="/" title="Home" rel="home"><span>Washington State</span></a>
+									</h2>
+
+																	<div id="site-slogan">
+										Office of the Attorney General									</div>
+															</div> <!-- /#name-and-slogan -->
+
+						  <div id="block-block-13" class="block block-block" >
+				<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Attorney General</h1>
+				</div>
+			</div>
+		</div>
+		<div class="space20"></div>
+
+
+			<p>Bob Ferguson</p>
+	</div>
+						<!-- Top Items -->
+
+						<!-- Top Items End -->
+					</div>
+					<div class="top-right">
+						<div class="topRInner">
+							<div class="siteLanguage">
+								<!-- GTranslate <div class="translate">
+									<div class="selectWrap">
+																																									<span class="holder">Translate</span>
+									</div>
+								</div>	-->
+								<div class="multiLan">
+																		<ul>
+									<li>
+										  <a href="/ago-accessibility-policy" title="ADA Accessibility">ADA Accessibility</a>
+										</li>
+										<li>
+										  <a href="/languages" title="Languages"><img src="/sites/all/themes/riley/img/globe.png" alt="Language Globe" style="margin-right:5px;"></img>Other Languages</a>
+										</li>
+
+
+								  </ul>
+																	</div>
+							</div>
+
+                            <div class="mobSearch"></div>
+							<div class="mobClick"></div>
+															  <div id="block-search-form" class="block block-search" >
+
+
+			<form class="search-form" role="search" onsubmit="if(this.search_block_form.value==&#039;&#039;){ alert(&#039;Please enter a search&#039;); return false; }" action="/ago-opinions/year/2020" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." class="custom-search-box form-text" placeholder="How may we help you?" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="40" maxlength="128" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><button type="submit" class="submit-search"><i class="fa fa-search"></i><input type="submit" id="edit-submit" name="op" value="" class="button default form-submit" /></button></div><input type="hidden" name="form_build_id" value="form-upH8gYp2TeHHQdZqTF812DTPRidYHPrtdLmZqa0qb00" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>	</div>													</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+
+    <!-- Nav -->
+    <nav class="navbar" role="navigation">
+		<div class="navbar-inner">
+			<div class="container">
+				<!-- Menu -->
+											  <div id="block-tb-megamenu-main-menu" class="block block-tb-megamenu" >
+
+
+			<div  class="tb-megamenu tb-megamenu-main-menu" role="navigation" aria-label="Main navigation">
+      <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar tb-megamenu-button" type="button">
+      <i class="fa fa-reorder"></i>
+    </button>
+    <div class="nav-collapse  always-show">
+    <ul  class="tb-megamenu-nav nav level-0 items-8">
+    <li  data-id="221" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-1 mega">
+          <a href="/"  title="Home">
+                Home                      </a>
+          </li>
+
+  <li  data-id="584" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-1 mega dropdown">
+          <a href="/news"  class="dropdown-toggle" title="News">
+                News                  <span class="caret"></span>
+                      </a>
+        <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="6" data-hidewcol="0" id="tb-megamenu-column-1" class="tb-megamenu-column span6  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-2">
+    <li  data-id="1449" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/media-contacts"  title="Media Contacts">
+                Media Contacts                      </a>
+          </li>
+
+  <li  data-id="801" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/pressrelease.aspx"  title="News Releases">
+                News Releases                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+
+<div  data-class="" data-width="6" data-hidewcol="0" id="tb-megamenu-column-2" class="tb-megamenu-column span6  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-2">
+    <li  data-id="1280" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/news/ferguson-file"  title="Ferguson File">
+                Ferguson File                      </a>
+          </li>
+
+  <li  data-id="805" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/social-media"  title="Social Media">
+                Social Media                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+  </li>
+
+  <li  data-id="581" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-1 mega dropdown">
+          <a href="/office-information"  class="dropdown-toggle">
+                Office Information                  <span class="caret"></span>
+                      </a>
+        <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="6" data-hidewcol="0" id="tb-megamenu-column-3" class="tb-megamenu-column span6  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-11">
+    <li  data-id="708" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/about-bob-ferguson" >
+                About Bob Ferguson                      </a>
+          </li>
+
+  <li  data-id="809" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/mission-vision-values" >
+                Mission, Vision &amp; Values                      </a>
+          </li>
+
+  <li  data-id="5975" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/environmental-policies" >
+                AGO Environmental Policies                      </a>
+          </li>
+
+  <li  data-id="798" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/contactus.aspx" >
+                Contact Us                      </a>
+          </li>
+
+  <li  data-id="1863" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/office-divisions" >
+                Office Divisions                      </a>
+          </li>
+
+  <li  data-id="1489" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/office-locations" >
+                Office Locations                      </a>
+          </li>
+
+  <li  data-id="812" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/annual-reports" >
+                Annual Reports                      </a>
+          </li>
+
+  <li  data-id="810" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/budget" >
+                Budget                      </a>
+          </li>
+
+  <li  data-id="808" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/brief-history-office-attorney-general" >
+                History                      </a>
+          </li>
+
+  <li  data-id="3457" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/washingtons-attorneys-general-past-and-present" >
+                Washington&#039;s Attorneys General - Past and Present                      </a>
+          </li>
+
+  <li  data-id="1136" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/roles-office"  title="What the Office Does">
+                Roles of the Office                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+
+<div  data-class="" data-width="6" data-hidewcol="" id="tb-megamenu-column-4" class="tb-megamenu-column span6  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-7">
+    <li  data-id="822" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/task-forces" >
+                Task Forces                      </a>
+          </li>
+
+  <li  data-id="821" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/frequently-asked-questions-faqs" >
+                FAQs                      </a>
+          </li>
+
+  <li  data-id="3465" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/contracts" >
+                Procurements &amp; Contracts                      </a>
+          </li>
+
+  <li  data-id="6270" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/technology" >
+                Technology                      </a>
+          </li>
+
+  <li  data-id="823" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/privacy-notice" >
+                Privacy Notice                      </a>
+          </li>
+
+  <li  data-id="816" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/rulemaking-activity" >
+                Rulemaking Activity                      </a>
+          </li>
+
+  <li  data-id="5891" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/tribal-consent-consultation-policy" >
+                Tribal Consent &amp; Consultation Policy                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+  </li>
+
+  <li  data-id="5156" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-1 mega dropdown">
+          <a href="#" class="tb_nolink ">
+                Serve The People      </a>
+        <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="4" data-hidewcol="0" id="tb-megamenu-column-8" class="tb-megamenu-column span4  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-8">
+    <li  data-id="5157" data-level="2" data-type="menu_item" data-class="menu-header" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega menu-header">
+          <a href="#" class="tb_nolink ">
+                Economic Justice &amp; Consumer Protection      </a>
+          </li>
+
+  <li  data-id="1661" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/safeguarding-consumers" >
+                Safeguarding Consumers                      </a>
+          </li>
+
+  <li  data-id="2881" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/antitrustunfair-trade-practices" >
+                Antitrust/Unfair Trade Practices                      </a>
+          </li>
+
+  <li  data-id="1283" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/medicaid-fraud"  title="Medicaid Fraud">
+                Medicaid Fraud Control                      </a>
+          </li>
+
+  <li  data-id="5181" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega dropdown-submenu">
+          <a href="/lemon-law-0"  class="dropdown-toggle">
+                Lemon Law                  <span class="caret"></span>
+                      </a>
+        <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-7" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-2 items-3">
+    <li  data-id="1362" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="/eligibility"  title="Eligibility">
+                Eligibility                      </a>
+          </li>
+
+  <li  data-id="1363" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega dropdown-submenu">
+          <a href="/general-lemon-law"  class="dropdown-toggle" title="General Lemon Law">
+                General Lemon Law                  <span class="caret"></span>
+                      </a>
+        <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-5" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-3 items-6">
+    <li  data-id="1795" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-4 mega">
+          <a href="/requesting-arbitration-0" >
+                Before Requesting Arbitration                      </a>
+          </li>
+
+  <li  data-id="1590" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-4 mega">
+          <a href="/submitting-your-request-arbitration-0"  title="Submitting Your Request for Arbitration">
+                Submitting Your Request for Arbitration                      </a>
+          </li>
+
+  <li  data-id="1589" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-4 mega">
+          <a href="/replacement-or-repurchase-0"  title="Replacement or Repurchase?">
+                Replacement or Repurchase?                      </a>
+          </li>
+
+  <li  data-id="1588" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-4 mega">
+          <a href="/after-requesting-arbitration-0"  title="After Requesting Arbitration">
+                After Requesting Arbitration                      </a>
+          </li>
+
+  <li  data-id="1587" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-4 mega">
+          <a href="/arbitration-process-0"  title="Arbitration Process">
+                Arbitration Process                      </a>
+          </li>
+
+  <li  data-id="1591" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-4 mega">
+          <a href="/arbitration-decision-0"  title="Arbitration Decision">
+                Arbitration Decision                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+  </li>
+
+  <li  data-id="1364" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega dropdown-submenu">
+          <a href="/motor-home-lemon-law"  class="dropdown-toggle" title="Motor Home Lemon Law">
+                Motor Home Lemon Law                  <span class="caret"></span>
+                      </a>
+        <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-6" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-3 items-6">
+    <li  data-id="1582" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-4 mega">
+          <a href="/requesting-arbitration"  title="Before Requesting Arbitration">
+                Before Requesting Arbitration                      </a>
+          </li>
+
+  <li  data-id="1583" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-4 mega">
+          <a href="/submitting-your-request-arbitration"  title="Submitting Your Request for Arbitration">
+                Submitting Your Motor Home Request for Arbitration                      </a>
+          </li>
+
+  <li  data-id="1584" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-4 mega">
+          <a href="/replacement-or-repurchase"  title="Replacement or Repurchase?">
+                Replacement or Repurchase?                      </a>
+          </li>
+
+  <li  data-id="1585" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-4 mega">
+          <a href="/arbitration-decision"  title="Arbitration Decision">
+                Arbitration Decision                      </a>
+          </li>
+
+  <li  data-id="1586" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-4 mega">
+          <a href="/after-requesting-arbitration"  title="After Requesting Arbitration">
+                After Requesting Arbitration                      </a>
+          </li>
+
+  <li  data-id="1799" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-4 mega">
+          <a href="/arbitration-process" >
+                Arbitration Process                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+  </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+  </li>
+
+  <li  data-id="659" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/utilities-regulated"  title="Utilities (Regulated)">
+                Protecting Ratepayers - Public Counsel                      </a>
+          </li>
+
+  <li  data-id="576" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/protecting-youth"  title="Protecting Youth">
+                Protecting Youth                      </a>
+          </li>
+
+  <li  data-id="579" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/protecting-seniors"  title="Protecting Seniors">
+                Protecting Seniors                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+
+<div  data-class="" data-width="4" data-hidewcol="" id="tb-megamenu-column-9" class="tb-megamenu-column span4  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-6">
+    <li  data-id="5158" data-level="2" data-type="menu_item" data-class="menu-header" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega menu-header">
+          <a href="#" class="tb_nolink ">
+                Social Justice &amp; Civil Rights      </a>
+          </li>
+
+  <li  data-id="5548" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/wing-luke-civil-rights-division" >
+                Civil Rights Division                      </a>
+          </li>
+
+  <li  data-id="5183" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/environmental-protection-division" >
+                Environmental Protection Division                      </a>
+          </li>
+
+  <li  data-id="2575" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/veteran-and-military-resources" >
+                Veteran and Military Resources                      </a>
+          </li>
+
+  <li  data-id="5180" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/hanford" >
+                Hanford Litigation                      </a>
+          </li>
+
+  <li  data-id="4857" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/enforcement-campaign-finance-laws" >
+                Campaign Finance Law Enforcement                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+
+<div  data-class="" data-width="4" data-hidewcol="" id="tb-megamenu-column-10" class="tb-megamenu-column span4  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-6">
+    <li  data-id="5159" data-level="2" data-type="menu_item" data-class="menu-header" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega menu-header">
+          <a href="#" class="tb_nolink ">
+                Criminal Justice &amp; Public Safety      </a>
+          </li>
+
+  <li  data-id="5182" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/criminal-justice" >
+                Criminal Justice                      </a>
+          </li>
+
+  <li  data-id="749" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/sexually-violent-predators"  title="Sexually Violent Predators">
+                Sexually Violent Predators                      </a>
+          </li>
+
+  <li  data-id="735" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/homicide-investigation-tracking-system-hits" >
+                Homicide Investigation Tracking System (HITS)                      </a>
+          </li>
+
+  <li  data-id="712" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/financial-crimes-unit"  title="Financial Crimes Unit">
+                Financial Crimes Unit                      </a>
+          </li>
+
+  <li  data-id="3644" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/firearms" >
+                Firearms                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+  </li>
+
+  <li  data-id="5160" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-1 mega dropdown">
+          <a href="#" class="tb_nolink ">
+                Initiatives      </a>
+        <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="4" data-hidewcol="0" id="tb-megamenu-column-11" class="tb-megamenu-column span4  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-7">
+    <li  data-id="796" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/open-government" >
+                Open Government                      </a>
+          </li>
+
+  <li  data-id="3645" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/wing-luke-civil-rights-division" >
+                Wing Luke Civil Rights Division                      </a>
+          </li>
+
+  <li  data-id="4204" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/environmental-justice-initiative" >
+                Environmental Justice                      </a>
+          </li>
+
+  <li  data-id="737" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/human-trafficking"  title="Human Trafficking">
+                Human Trafficking                      </a>
+          </li>
+
+  <li  data-id="5905" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/sexual-assault-kit-initiative" >
+                Sexual Assault Kit Initiative                      </a>
+          </li>
+
+  <li  data-id="5163" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/enforcement-campaign-finance-laws" >
+                Combating Dark Money/Campaign Finance Unit                      </a>
+          </li>
+
+  <li  data-id="5164" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/2017-opioid-summit" >
+                Opioid Epidemic                       </a>
+          </li>
+</ul>
+  </div>
+</div>
+
+<div  data-class="" data-width="4" data-hidewcol="" id="tb-megamenu-column-15" class="tb-megamenu-column span4  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-5">
+    <li  data-id="5165" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/veteran-and-military-resources" >
+                Veterans Advocacy                      </a>
+          </li>
+
+  <li  data-id="6889" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/2023-legislative-agenda" >
+                2023 Legislative Agenda                      </a>
+          </li>
+
+  <li  data-id="5166" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/studentloanresources" >
+                Student Loans/Debt Adjustment and Collection                      </a>
+          </li>
+
+  <li  data-id="5167" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/immigration-services" >
+                Immigration Services Fraud                      </a>
+          </li>
+
+  <li  data-id="5168" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega dropdown-submenu">
+          <a href="/vulnerable-adult-abuse"  class="dropdown-toggle">
+                Vulnerable Adult Abuse                  <span class="caret"></span>
+                      </a>
+        <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-14" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-2 items-2">
+    <li  data-id="1442" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega dropdown-submenu">
+          <a href="/vulnerable-adult-initiative-2008-final-report"  class="dropdown-toggle" title="Vulnerable Adult Report">
+                Vulnerable Adult Report                  <span class="caret"></span>
+                      </a>
+        <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-13" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-3 items-3">
+    <li  data-id="1558" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-4 mega">
+          <a href="/vulnerable-adults-summit-overview"  title="Summit Overview">
+                Summit Overview                      </a>
+          </li>
+
+  <li  data-id="1559" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-4 mega dropdown-submenu">
+          <a href="/vulnerable-adult-initiative-work-groups"  class="dropdown-toggle" title="Work Groups">
+                Work Groups                  <span class="caret"></span>
+                      </a>
+        <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-12" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-4 items-2">
+    <li  data-id="1869" data-level="5" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-5 mega">
+          <a href="/professional-coordination-communication-work-group" >
+                Professional Coordination &amp; Communication Work Group                      </a>
+          </li>
+
+  <li  data-id="1870" data-level="5" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-5 mega">
+          <a href="/protection-subgroup-dshsaps" >
+                Protection Subgroup: DSHS/APS                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+  </li>
+
+  <li  data-id="1560" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-4 mega">
+          <a href="/next-steps-protect-vulnerable-adults"  title="The Next Steps">
+                The Next Steps                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+  </li>
+
+  <li  data-id="1444" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="/spotting-financial-exploitation"  title="Training to Spot Financial Exploitation">
+                Training to Spot Financial Exploitation                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+  </li>
+</ul>
+  </div>
+</div>
+
+<div  data-class="" data-width="4" data-hidewcol="" id="tb-megamenu-column-16" class="tb-megamenu-column span4  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-2">
+    <li  data-id="6765" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/robocall-and-telemarketing-scams" >
+                Robocall and Telemarketing Scams                      </a>
+          </li>
+
+  <li  data-id="5184" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/federal-litigation" >
+                Federal Litigation                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+  </li>
+
+  <li  data-id="5169" data-level="1" data-type="menu_item" data-class="align-submenu" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-1 mega align-submenu dropdown">
+          <a href="/publications-reports"  class="dropdown-toggle">
+                Resources                  <span class="caret"></span>
+                      </a>
+        <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-22" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-13">
+    <li  data-id="5170" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega dropdown-submenu">
+          <a href="/scam-alerts"  class="dropdown-toggle">
+                Consumer Scam Alerts                  <span class="caret"></span>
+                      </a>
+        <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-17" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-2 items-8">
+    <li  data-id="3015" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="/foreign-lottery" >
+                Foreign Lottery                      </a>
+          </li>
+
+  <li  data-id="4453" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="/news/news-releases/Consumer%20Alert" >
+                Consumer Alerts                      </a>
+          </li>
+
+  <li  data-id="3013" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="/relative-need-or-grandparent-scam" >
+                Relative in Need or &quot;Grandparent&quot; Scam                      </a>
+          </li>
+
+  <li  data-id="3016" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="/home-improvement-scams" >
+                Home Improvement Scams                      </a>
+          </li>
+
+  <li  data-id="3018" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="/investment-scams" >
+                Investment Scams                      </a>
+          </li>
+
+  <li  data-id="3019" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="/living-trust-scams" >
+                Living Trust Scams                      </a>
+          </li>
+
+  <li  data-id="3020" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="/sweepstakes-scams" >
+                Sweepstakes Scams                      </a>
+          </li>
+
+  <li  data-id="3021" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="/travel-sweepstakes-scams" >
+                Travel Scams                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+  </li>
+
+  <li  data-id="5171" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega dropdown-submenu">
+          <a href="/file-complaint"  class="dropdown-toggle">
+                File a Complaint                  <span class="caret"></span>
+                      </a>
+        <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-18" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-2 items-7">
+    <li  data-id="1351" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="https://fortress.wa.gov/atg/formhandler/ago/ComplaintForm.aspx"  title="File a Complaint Online">
+                File a Complaint Online                      </a>
+          </li>
+
+  <li  data-id="6829" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="https://fortress.wa.gov/atg/formhandler/ago/robocallForm.aspx" >
+                File a Robocall Complaint                      </a>
+          </li>
+
+  <li  data-id="1352" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="https://fortress.wa.gov/atg/formhandler/ago/MHLTComplaintForm.aspx"  title="File a Manufactured Housing Dispute Resolution Request Online">
+                File a Manufactured Housing Dispute Resolution Request Online                      </a>
+          </li>
+
+  <li  data-id="1353" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="/top-consumer-complaints" >
+                Top Consumer Complaints                      </a>
+          </li>
+
+  <li  data-id="1354" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="https://fortress.wa.gov/atg/formhandler/ago/complaintform_es.aspx"  title="Hacer llegar su queja">
+                Hacer llegar su queja                      </a>
+          </li>
+
+  <li  data-id="4205" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="https://fortress.wa.gov/atg/formhandler/ago/EnvironmentalCrimeReportForm.aspx"  title="Report an Environmental Crime">
+                Report an Environmental Crime                      </a>
+          </li>
+
+  <li  data-id="3017" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="/tech-support-scam" >
+                Tech Scams                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+  </li>
+
+  <li  data-id="813" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="http://www.ethics.wa.gov/index.htm" >
+                Executive Ethics Board                      </a>
+          </li>
+
+  <li  data-id="5172" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="http://atg.us10.list-manage1.com/subscribe?u=28a64d02479d9d79402df2b20&amp;id=ae281aef5b" >
+                Sign up for Newsletter Emails                      </a>
+          </li>
+
+  <li  data-id="820" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/avoiding-unconstitutional-takings-private-property" >
+                Avoiding Unconstitutional Taking                      </a>
+          </li>
+
+  <li  data-id="5173" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/publications-reports" >
+                Publications &amp; Reports                      </a>
+          </li>
+
+  <li  data-id="5174" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/studentloanresources" >
+                Student Loan Survival Guide                      </a>
+          </li>
+
+  <li  data-id="5175" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega dropdown-submenu">
+          <a href="/veteran-and-military-resources"  class="dropdown-toggle">
+                Veteran and Military Resources                  <span class="caret"></span>
+                      </a>
+        <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="" data-hidewcol="0" id="tb-megamenu-column-20" class="tb-megamenu-column span  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-2 items-4">
+    <li  data-id="1552" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="/legal-assistance-veterans-military-personnel"  title="Legal Help for Veterans &amp;amp; Military Personnel">
+                Legal Assistance                      </a>
+          </li>
+
+  <li  data-id="5892" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="/volunteer-opportunities" >
+                Volunteer Opportunities                      </a>
+          </li>
+
+  <li  data-id="5893" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega dropdown-submenu">
+          <a href="/benefits-protections-veterans-military-personnel"  class="dropdown-toggle">
+                Benefits &amp; Protections for Veterans &amp; Military Personnel                  <span class="caret"></span>
+                      </a>
+        <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-19" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-3 items-3">
+    <li  data-id="5894" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-4 mega">
+          <a href="/consumer-protections-veterans-military-personnel" >
+                Consumer Protections                      </a>
+          </li>
+
+  <li  data-id="5895" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-4 mega">
+          <a href="/employment-protections-veterans-military-personnel" >
+                Employment Protections                      </a>
+          </li>
+
+  <li  data-id="5896" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-4 mega">
+          <a href="/other-benefits-legal-protections-veterans-military-personnel" >
+                Other Benefits &amp; Legal Protections                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+  </li>
+
+  <li  data-id="6271" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="/omvla-advisory-committee" >
+                OMVLA Advisory Committee Meetings                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+  </li>
+
+  <li  data-id="5547" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/wing-luke-civil-rights-division" >
+                Civil Rights Resource Guide                      </a>
+          </li>
+
+  <li  data-id="5177" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/immigrationguidance" >
+                Immigration Guidance                      </a>
+          </li>
+
+  <li  data-id="5178" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega dropdown-submenu">
+          <a href="/open-government-resource-manual"  class="dropdown-toggle">
+                Open Government Resource Manual                  <span class="caret"></span>
+                      </a>
+        <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-21" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-2 items-5">
+    <li  data-id="4859" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="/table-contents" >
+                Table of Contents                      </a>
+          </li>
+
+  <li  data-id="4206" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="/Open-Government-Resource-Manual/Introduction" >
+                Introduction                      </a>
+          </li>
+
+  <li  data-id="1843" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="/Open-Government-Resource-Manual/Chapter-1" >
+                Chapter 1                      </a>
+          </li>
+
+  <li  data-id="1844" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="/Open-Government-Resource-Manual/Chapter-2" >
+                Chapter 2                      </a>
+          </li>
+
+  <li  data-id="1846" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="/Open-Government-Resource-Manual/Chapter-3" >
+                Chapter 3                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+  </li>
+
+  <li  data-id="5192" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="https://agportal-s3bucket.s3.amazonaws.com/2021%20Data%20Breach%20Report.pdf" >
+                Data Breach Report                      </a>
+          </li>
+
+  <li  data-id="5972" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/keep-washington-working-act-faq-law-enforcement" >
+                Keep Washington Working Act FAQ for Law Enforcement                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+  </li>
+
+  <li  data-id="1247" data-level="1" data-type="menu_item" data-class="align-submenu" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-1 mega align-submenu dropdown">
+          <a href="/AGOopinions/opinion"  class="dropdown-toggle">
+                AG Opinions                  <span class="caret"></span>
+                      </a>
+        <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-23" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-3">
+    <li  data-id="978" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/ago-opinions-year" >
+                Opinions by Year                      </a>
+          </li>
+
+  <li  data-id="1656" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/ago-opinion/glossary" >
+                Opinions by Topic                      </a>
+          </li>
+
+  <li  data-id="1594" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/pending-attorney-generals-opinions"  title="Pending Attorney General&#039;s Opinions">
+                Opinion Requests                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+  </li>
+
+  <li  data-id="1427" data-level="1" data-type="menu_item" data-class="align-submenu" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-1 mega align-submenu dropdown">
+          <a href="/employment"  class="dropdown-toggle" title="Employment">
+                Employment                  <span class="caret"></span>
+                      </a>
+        <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-24" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-9">
+    <li  data-id="5904" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/experience-excellence" >
+                Experience Excellence                      </a>
+          </li>
+
+  <li  data-id="1435" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/employee-testimonials"  title="Employee Testimonials">
+                Employee Testimonials                      </a>
+          </li>
+
+  <li  data-id="1441" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/attorneys-and-law-clerk-careers"  title="Attorneys / Law Clerks">
+                Attorneys &amp; Law Clerks                      </a>
+          </li>
+
+  <li  data-id="4325" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/general-employment-opportunities" >
+                General Employment Opportunities                      </a>
+          </li>
+
+  <li  data-id="1454" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/exempt-positions"  title="Exempt Positions">
+                Exempt Positions                      </a>
+          </li>
+
+  <li  data-id="1457" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/wa-management-service-exempts"  title="WA Management Service">
+                WA Management Service                      </a>
+          </li>
+
+  <li  data-id="1458" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/volunteer-and-internship-opportunities"  title="Volunteer and Internship Opportunities">
+                Volunteer and Internship Opportunities                      </a>
+          </li>
+
+  <li  data-id="1459" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/diversity"  title="Diversity">
+                Diversity                      </a>
+          </li>
+
+  <li  data-id="1464" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/office-locations"  title="Office Locations">
+                Office Locations                      </a>
+          </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+  </li>
+</ul>
+      </div>
+  </div>
+	</div>									<!-- Menu End -->
+
+				<!-- Social Top -->
+									<!-- Social Top End -->
+			</div>
+		</div>
+    </nav>
+    <!-- Nav End -->
+
+</header>
+<!-- Header End -->
+<section class="innerWrapper">
+			<div class="breadcrumb-container">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+																					<ol class="breadcrumb"><li><a href="/">Home</a></li><li><a href="/ago-opinions">AG Opinions</a></li><li><a href="/ago-opinions/year">AG Opinions By Year</a></li><li class="active">AG Opinion Archives 2020</li></ol>																			<h1 class="pageTitle">
+							AGO Opinion Year: 2020                        </h1>
+
+                        <span class="print_html"><a href="https://www.atg.wa.gov/print/ago-opinions/year/2020" title="Display a printer-friendly version of this page." class="print-page" rel="nofollow"><img class="print-icon" typeof="foaf:Image" src="https://www.atg.wa.gov/sites/all/modules/contrib/print/icons/print_icon.png" width="16px" height="16px" alt="Printer-friendly version" title="Printer-friendly version" /></a></span>                        <!-- Social Top Right-->
+						  <div id="block-sharethis-sharethis-block" class="block block-sharethis" >
+
+
+			<div class="sharethis-wrapper"><span st_url="https://www.atg.wa.gov/ago-opinions/year/2020" st_title="AG Opinion Archives 2020" class="st_facebook"></span>
+<span st_url="https://www.atg.wa.gov/ago-opinions/year/2020" st_title="AG Opinion Archives 2020" class="st_twitter" st_via="" st_username=""></span>
+<span st_url="https://www.atg.wa.gov/ago-opinions/year/2020" st_title="AG Opinion Archives 2020" class="st_email" st_via="" st_username=""></span>
+<span st_url="https://www.atg.wa.gov/ago-opinions/year/2020" st_title="AG Opinion Archives 2020" class="st_sharethis" st_via="" st_username=""></span>
+</div>	</div>						<!-- Social Top Right End -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="innerBanner">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="content">
+			<div class="container">
+			<div class="blog-container">
+				<div class="row">
+					<div class="col-md-9 blog-content">
+
+
+
+
+
+													  <div id="block-system-main" class="block block-system" >
+
+
+			<div class="view view-opinion-year view-id-opinion_year view-display-id-page_1 view-dom-id-74a9e4647ff8b1468517a19e3dd62ec6">
+
+
+
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+
+  <div class="views-field views-field-field-opinion-date">        <div class="field-content">AGO <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2020-04-21T00:00:00-07:00">2020</span> NO. 1  > <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2020-04-21T00:00:00-07:00">Apr 21 2020</span> </div>  </div>
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/ago-opinions/school-district-contracts-acquire-construction-management-services-value-engineering">School District Contracts To Acquire Construction Management Services, Value Engineering Reviews, Constructability Reviews, Or Building Commissioning</a></span>  </div>
+  <div class="views-field views-field-body">        <span class="field-content">SCHOOLS—SCHOOL PROPERTY—DISTRICT, SCHOOL—EDUCATION—COMPETITIVE BIDDING—CONTRACTS—INTERLOCAL COOPERATION ACT—PUBLIC WORKS AND IMPROVEMENTS—School District Contracts To Acquire Construction Management Services, Value Engineering Reviews, Constructability Reviews, Or Building Commissioning
+
+School</span>  </div>
+  <div class="views-field views-field-view-node">        <span class="field-content"><a href="/ago-opinions/school-district-contracts-acquire-construction-management-services-value-engineering">Click here to read the full AGO Opinion...</a></span>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+
+  <div class="views-field views-field-field-opinion-date">        <div class="field-content">AGO <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2020-09-02T00:00:00-07:00">2020</span> NO. 2  > <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2020-09-02T00:00:00-07:00">Sep 2 2020</span> </div>  </div>
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/ago-opinions/access-legal-aid-representatives-private-property-where-migrant-workers-are-housed">Access By Legal Aid Representatives To Private Property Where Migrant Workers Are Housed</a></span>  </div>
+  <div class="views-field views-field-body">        <span class="field-content">FARM AND AGRICULTURAL LAND—LABOR—ATTORNEYS—PROPERTY—Access By Legal Aid Representatives To Private Property Where Migrant Workers Are Housed
+
+Representatives of legal aid organizations generally do not require a prior invitation to enter onto private property where migrant agricultural workers are</span>  </div>
+  <div class="views-field views-field-view-node">        <span class="field-content"><a href="/ago-opinions/access-legal-aid-representatives-private-property-where-migrant-workers-are-housed">Click here to read the full AGO Opinion...</a></span>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+
+  <div class="views-field views-field-field-opinion-date">        <div class="field-content">AGO <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2020-10-05T00:00:00-07:00">2020</span> NO. 3  > <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2020-10-05T00:00:00-07:00">Oct 5 2020</span> </div>  </div>
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/ago-opinions/meaning-federally-licensed-gunsmith-background-check-statute">Meaning of “Federally Licensed Gunsmith” In Background Check Statute</a></span>  </div>
+  <div class="views-field views-field-body">        <span class="field-content">FIREARMS—STATUTES—Meaning of “Federally Licensed Gunsmith” In Background Check Statute
+A person licensed as a “dealer” under 18 U.S.C. § 923(a) is a “federally licensed gunsmith” when engaged in the business of repairing or modifying firearms, and a person licensed as a “manufacturer” or an “</span>  </div>
+  <div class="views-field views-field-view-node">        <span class="field-content"><a href="/ago-opinions/meaning-federally-licensed-gunsmith-background-check-statute">Click here to read the full AGO Opinion...</a></span>  </div>  </div>
+  <div class="views-row views-row-4 views-row-even">
+
+  <div class="views-field views-field-field-opinion-date">        <div class="field-content">AGO <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2020-12-14T00:00:00-08:00">2020</span> NO. 4  > <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2020-12-14T00:00:00-08:00">Dec 14 2020</span> </div>  </div>
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/ago-opinions/practice-pharmacy-under-collaborative-drug-therapy-agreements">Practice Of Pharmacy Under Collaborative Drug Therapy Agreements</a></span>  </div>
+  <div class="views-field views-field-body">        <span class="field-content">PHARMACY QUALITY ASSURANCE COMMISSION—MEDICINE—PROFESSIONAL SERVICES—Practice Of Pharmacy Under Collaborative Drug Therapy Agreements
+1.         A pharmacist’s application of guidelines or protocols previously established in a collaborative drug therapy agreement is statutorily authorized, even if</span>  </div>
+  <div class="views-field views-field-view-node">        <span class="field-content"><a href="/ago-opinions/practice-pharmacy-under-collaborative-drug-therapy-agreements">Click here to read the full AGO Opinion...</a></span>  </div>  </div>
+  <div class="views-row views-row-5 views-row-odd views-row-last">
+
+  <div class="views-field views-field-field-opinion-date">        <div class="field-content">AGO <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2020-12-16T00:00:00-08:00">2020</span> NO. 5  > <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2020-12-16T00:00:00-08:00">Dec 16 2020</span> </div>  </div>
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/ago-opinions/whether-physical-therapists-and-occupational-therapists-may-share-ownership-interest">Whether Physical Therapists And Occupational Therapists May Share An Ownership Interest In A Health Care Practice</a></span>  </div>
+  <div class="views-field views-field-body">        <span class="field-content">PROFESSIONAL SERVICES—HEALTH CARE SERVICES—PHYSICAL THERAPISTS—OCCUPATIONAL THERAPISTS—Whether Physical Therapists And Occupational Therapists May Share An Ownership Interest In A Health Care Practice
+Physical therapists and occupational therapists may not share an ownership interest in a health</span>  </div>
+  <div class="views-field views-field-view-node">        <span class="field-content"><a href="/ago-opinions/whether-physical-therapists-and-occupational-therapists-may-share-ownership-interest">Click here to read the full AGO Opinion...</a></span>  </div>  </div>
+    </div>
+
+
+
+
+
+
+</div>	</div>											</div>
+					<div class="col-md-3 blog-right-sidebar">
+						  <div id="block-custom-search-blocks-1" class="block block-custom-search-blocks custom-search-block" >
+
+
+	<form class="search-form" role="search" action="/ago-opinions/year/2020" method="post" id="custom-search-blocks-form-1" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-custom-search-blocks-form-1">
+  <label for="edit-custom-search-blocks-form-1--2">Opinion Search </label>
+ <input title="Enter the terms you wish to search for" class="custom-search-box form-text" placeholder="Search for Opinions" type="text" id="edit-custom-search-blocks-form-1--2" name="custom_search_blocks_form_1" value="" size="15" maxlength="128" />
+</div>
+<input class="custom-search-selector custom-search-types" type="hidden" name="custom_search_types" value="c-opinion" />
+<input type="hidden" name="delta" value="1" />
+<input type="hidden" name="form_build_id" value="form-kBrqtLi--75ZD4KMuKE37t80ZjKO0SihPiI77ssEffg" />
+<input type="hidden" name="form_id" value="custom_search_blocks_form_1" />
+<div class="form-actions form-wrapper" id="edit-actions--2"><input type="submit" id="edit-submit--2" name="op" value="Submit" class="button default form-submit" /></div></div></form>	<div class="space40"></div>
+</div>
+<div id="block-menu-menu-opinion-year-menu" class="block block-menu" >
+				<h4>Opinions by Year</h4>
+
+
+	<ul class="menu"><li class="first leaf"><a href="/ago-opinions/year/2023">2023</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2022">2022</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2021">2021</a></li>
+<li class="leaf active-trail"><a href="/ago-opinions/year/2020" class="active-trail active">2020</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2019">2019</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2018">2018</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2017">2017</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2016">2016</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2015">2015</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2014" title="ago-opinions/year/2014">2014</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2013" title="2013">2013</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2012">2012</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2011">2011</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2010">2010</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2009">2009</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2008">2008</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2007">2007</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2006">2006</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2005">2005</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2004">2004</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2003">2003</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2002">2002</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2001">2001</a></li>
+<li class="leaf"><a href="/ago-opinions/year/2000">2000</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1999">1999</a></li>
+<li class="collapsed"><a href="/ago-opinions/year/1998">1998</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1997">1997</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1996">1996</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1995">1995</a></li>
+<li class="collapsed"><a href="/ago-opinions/year/1994">1994</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1993">1993</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1992">1992</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1991">1991</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1990">1990</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1989">1989</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1988">1988</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1987">1987</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1986">1986</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1985">1985</a></li>
+<li class="collapsed"><a href="/ago-opinions/year/1984">1984</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1983">1983</a></li>
+<li class="leaf"><a href="/ago-opinions/year/ago/1982">1982</a></li>
+<li class="collapsed"><a href="/ago-opinions/year/ago/1981">1981</a></li>
+<li class="leaf"><a href="/ago-opinions/year/ago/1980">1980</a></li>
+<li class="leaf"><a href="/ago-opinions/year/ago/1979">1979</a></li>
+<li class="collapsed"><a href="/ago-opinions/year/ago/1978">1978</a></li>
+<li class="leaf"><a href="/ago-opinions/year/ago/1977">1977</a></li>
+<li class="leaf"><a href="/ago-opinions/year/ago/1976">1976</a></li>
+<li class="leaf"><a href="/ago-opinions/year/ago/1975">1975</a></li>
+<li class="leaf"><a href="/ago-opinions/year/ago/1974">1974</a></li>
+<li class="leaf"><a href="/ago-opinions/year/ago/1973">1973</a></li>
+<li class="collapsed"><a href="/ago-opinions/year/ago/1972">1972</a></li>
+<li class="leaf"><a href="/ago-opinions/year/ago/1971">1971</a></li>
+<li class="leaf"><a href="/ago-opinions/year/ago/1970">1970</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1969">1969</a></li>
+<li class="collapsed"><a href="/ago-opinions/year/1968">1968</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1967">1967</a></li>
+<li class="collapsed"><a href="/ago-opinions/year/1966">1966</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1965">1965</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1964">1964</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1963">1963</a></li>
+<li class="collapsed"><a href="/ago-opinions/year/1962">1962</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1961">1961</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1960">1960</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1959">1959</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1958">1958</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1957">1957</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1956">1956</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1955">1955</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1954">1954</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1953">1953</a></li>
+<li class="collapsed"><a href="/ago-opinions/year/1952">1952</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1951">1951</a></li>
+<li class="leaf"><a href="/ago-opinions/year/1950">1950</a></li>
+<li class="last collapsed"><a href="/ago-opinions/year/1949">1949</a></li>
+</ul>	<div class="space40"></div>
+</div>
+<div id="block-menu-menu-1970-1982-aglo" class="block block-menu" >
+				<h4>1970-1982 AGLO</h4>
+
+
+	<ul class="menu"><li class="first leaf"><a href="/ago-opinions/year/aglo/1970">1970</a></li>
+<li class="leaf"><a href="/ago-opinions/year/aglo/1971">1971</a></li>
+<li class="leaf"><a href="/ago-opinions/year/aglo/1972">1972</a></li>
+<li class="leaf"><a href="/ago-opinions/year/aglo/1973">1973</a></li>
+<li class="leaf"><a href="/ago-opinions/year/aglo/1974">1974</a></li>
+<li class="leaf"><a href="/ago-opinions/year/aglo/1975">1975</a></li>
+<li class="leaf"><a href="/ago-opinions/year/aglo/1976">1976</a></li>
+<li class="leaf"><a href="/ago-opinions/year/aglo/1977">1977</a></li>
+<li class="leaf"><a href="/ago-opinions/year/aglo/1978">1978</a></li>
+<li class="leaf"><a href="/ago-opinions/year/aglo/1979">1979</a></li>
+<li class="leaf"><a href="/ago-opinions/year/aglo/1980">1980</a></li>
+<li class="leaf"><a href="/ago-opinions/year/aglo/1981">1981</a></li>
+<li class="last leaf"><a href="/ago-opinions/year/aglo/1982">1982</a></li>
+</ul>	<div class="space40"></div>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <!-- Parallax -->
+		    <!-- Parallax End -->
+
+    <div class="footer-info">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-sm-6">
+											  <div id="block-menu-block-7" class="block block-menu-block" >
+				<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>News</h1>
+				</div>
+			</div>
+		</div>
+		<div class="space20"></div>
+
+
+			<div class="menu-block-wrapper menu-block-7 menu-name-main-menu parent-mlid-584 menu-level-1">
+
+	<div class="navbar-header">
+        <button class="navbar-toggle collapsed" data-target="#nav" data-toggle="collapse" type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+    </div>
+	<ul class="nav navbar-nav" id="nav"><li><a href="/media-contacts" title="Media Contacts">Media Contacts</a></li>
+<li><a href="/pressrelease.aspx" title="News Releases">News Releases</a></li>
+<li><a href="/news/ferguson-file" title="Ferguson File">Ferguson File</a></li>
+<li><a href="/social-media" title="Social Media">Social Media</a></li>
+</ul></div>
+	</div><div id="block-menu-block-5" class="block block-menu-block" >
+				<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Office Information</h1>
+				</div>
+			</div>
+		</div>
+		<div class="space20"></div>
+
+
+			<div class="menu-block-wrapper menu-block-5 menu-name-main-menu parent-mlid-581 menu-level-1">
+
+	<div class="navbar-header">
+        <button class="navbar-toggle collapsed" data-target="#nav" data-toggle="collapse" type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+    </div>
+	<ul class="nav navbar-nav" id="nav"><li><a href="/about-bob-ferguson">About Bob Ferguson</a></li>
+<li><a href="/environmental-policies">AGO Environmental Policies</a></li>
+<li><a href="/mission-vision-values">Mission, Vision &amp; Values</a></li>
+<li><a href="/contactus.aspx">Contact Us</a></li>
+<li><a href="/office-divisions">Office Divisions</a></li>
+<li><a href="/office-locations">Office Locations</a></li>
+<li><a href="/annual-reports">Annual Reports</a></li>
+<li><a href="/budget">Budget</a></li>
+<li><a href="/brief-history-office-attorney-general">History</a></li>
+<li><a href="/washingtons-attorneys-general-past-and-present">Washington&#039;s Attorneys General - Past and Present</a></li>
+<li><a href="/roles-office" title="What the Office Does">Roles of the Office</a></li>
+<li><a href="/task-forces">Task Forces</a></li>
+<li><a href="/frequently-asked-questions-faqs">FAQs</a></li>
+<li><a href="/contracts">Procurements &amp; Contracts</a></li>
+<li><a href="/technology">Technology</a></li>
+<li><a href="/privacy-notice">Privacy Notice</a></li>
+<li><a href="/rulemaking-activity">Rulemaking Activity</a></li>
+<li><a href="/tribal-consent-consultation-policy">Tribal Consent &amp; Consultation Policy</a></li>
+</ul></div>
+	</div>									</div>
+				<div class="col-md-3 col-sm-6">
+											  <div id="block-menu-block-1" class="block block-menu-block" >
+				<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Serve The People</h1>
+				</div>
+			</div>
+		</div>
+		<div class="space20"></div>
+
+
+			<div class="menu-block-wrapper menu-block-1 menu-name-main-menu parent-mlid-5156 menu-level-1">
+
+	<div class="navbar-header">
+        <button class="navbar-toggle collapsed" data-target="#nav" data-toggle="collapse" type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+    </div>
+	<ul class="nav navbar-nav" id="nav"><li><span class="nolink" tabindex="0">Economic Justice &amp; Consumer Protection</span></li>
+<li><a href="/safeguarding-consumers">Safeguarding Consumers</a></li>
+<li><a href="/antitrustunfair-trade-practices">Antitrust/Unfair Trade Practices</a></li>
+<li><a href="/medicaid-fraud" title="Medicaid Fraud">Medicaid Fraud Control</a></li>
+<li><a href="/lemon-law-0">Lemon Law</a></li>
+<li><a href="/utilities-regulated" title="Utilities (Regulated)">Protecting Ratepayers - Public Counsel</a></li>
+<li><a href="/protecting-youth" title="Protecting Youth">Protecting Youth</a></li>
+<li><a href="/protecting-seniors" title="Protecting Seniors">Protecting Seniors</a></li>
+<li><span class="nolink" tabindex="0">Social Justice &amp; Civil Rights</span></li>
+<li><a href="/wing-luke-civil-rights-division">Civil Rights Division</a></li>
+<li><a href="/environmental-protection-division">Environmental Protection Division</a></li>
+<li><a href="/hanford">Hanford Litigation</a></li>
+<li><a href="/veteran-and-military-resources">Veteran and Military Resources</a></li>
+<li><a href="/enforcement-campaign-finance-laws">Campaign Finance Law Enforcement</a></li>
+<li><span class="nolink" tabindex="0">Criminal Justice &amp; Public Safety</span></li>
+<li><a href="/criminal-justice">Criminal Justice</a></li>
+<li><a href="/sexually-violent-predators" title="Sexually Violent Predators">Sexually Violent Predators</a></li>
+<li><a href="/homicide-investigation-tracking-system-hits">Homicide Investigation Tracking System (HITS)</a></li>
+<li><a href="/financial-crimes-unit" title="Financial Crimes Unit">Financial Crimes Unit</a></li>
+<li><a href="/firearms">Firearms</a></li>
+</ul></div>
+	</div><div id="block-menu-block-4" class="block block-menu-block" >
+				<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Initiatives</h1>
+				</div>
+			</div>
+		</div>
+		<div class="space20"></div>
+
+
+			<div class="menu-block-wrapper menu-block-4 menu-name-main-menu parent-mlid-5160 menu-level-1">
+
+	<div class="navbar-header">
+        <button class="navbar-toggle collapsed" data-target="#nav" data-toggle="collapse" type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+    </div>
+	<ul class="nav navbar-nav" id="nav"><li><a href="/open-government">Open Government</a></li>
+<li><a href="/wing-luke-civil-rights-division">Wing Luke Civil Rights Division</a></li>
+<li><a href="/environmental-justice-initiative">Environmental Justice</a></li>
+<li><a href="/human-trafficking" title="Human Trafficking">Human Trafficking</a></li>
+<li><a href="/sexual-assault-kit-initiative">Sexual Assault Kit Initiative</a></li>
+<li><a href="/enforcement-campaign-finance-laws">Combating Dark Money/Campaign Finance Unit</a></li>
+<li><a href="/2017-opioid-summit">Opioid Epidemic </a></li>
+<li><a href="/veteran-and-military-resources">Veterans Advocacy</a></li>
+<li><a href="/2023-legislative-agenda">2023 Legislative Agenda</a></li>
+<li><a href="/studentloanresources">Student Loans/Debt Adjustment and Collection</a></li>
+<li><a href="/immigration-services">Immigration Services Fraud</a></li>
+<li><a href="/vulnerable-adult-abuse">Vulnerable Adult Abuse</a></li>
+<li><a href="/robocall-and-telemarketing-scams">Robocall and Telemarketing Scams</a></li>
+<li><a href="/federal-litigation">Federal Litigation</a></li>
+</ul></div>
+	</div>									</div>
+				<div class="col-md-3 col-sm-6">
+											  <div id="block-menu-block-3" class="block block-menu-block" >
+				<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Resources</h1>
+				</div>
+			</div>
+		</div>
+		<div class="space20"></div>
+
+
+			<div class="menu-block-wrapper menu-block-3 menu-name-main-menu parent-mlid-5169 menu-level-1">
+
+	<div class="navbar-header">
+        <button class="navbar-toggle collapsed" data-target="#nav" data-toggle="collapse" type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+    </div>
+	<ul class="nav navbar-nav" id="nav"><li><a href="/scam-alerts">Consumer Scam Alerts</a></li>
+<li><a href="/file-complaint">File a Complaint</a></li>
+<li><a href="http://www.ethics.wa.gov/index.htm">Executive Ethics Board</a></li>
+<li><a href="http://atg.us10.list-manage1.com/subscribe?u=28a64d02479d9d79402df2b20&amp;id=ae281aef5b">Sign up for Newsletter Emails</a></li>
+<li><a href="/avoiding-unconstitutional-takings-private-property">Avoiding Unconstitutional Taking</a></li>
+<li><a href="/publications-reports">Publications &amp; Reports</a></li>
+<li><a href="/studentloanresources">Student Loan Survival Guide</a></li>
+<li><a href="/veteran-and-military-resources">Veteran and Military Resources</a></li>
+<li><a href="/wing-luke-civil-rights-division">Civil Rights Resource Guide</a></li>
+<li><a href="/immigrationguidance">Immigration Guidance</a></li>
+<li><a href="/open-government-resource-manual">Open Government Resource Manual</a></li>
+<li><a href="https://agportal-s3bucket.s3.amazonaws.com/2021%20Data%20Breach%20Report.pdf">Data Breach Report</a></li>
+<li><a href="/keep-washington-working-act-faq-law-enforcement">Keep Washington Working Act FAQ for Law Enforcement</a></li>
+</ul></div>
+	</div><div id="block-menu-block-6" class="block block-menu-block" >
+				<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>AG Opinions</h1>
+				</div>
+			</div>
+		</div>
+		<div class="space20"></div>
+
+
+			<div class="menu-block-wrapper menu-block-6 menu-name-main-menu parent-mlid-1247 menu-level-1">
+
+	<div class="navbar-header">
+        <button class="navbar-toggle collapsed" data-target="#nav" data-toggle="collapse" type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+    </div>
+	<ul class="nav navbar-nav" id="nav"><li><a href="/ago-opinions-year">Opinions by Year</a></li>
+<li><a href="/ago-opinion/glossary">Opinions by Topic</a></li>
+<li><a href="/pending-attorney-generals-opinions" title="Pending Attorney General&#039;s Opinions">Opinion Requests</a></li>
+</ul></div>
+	</div>									</div>
+				<div class="col-md-3 col-sm-6">
+											  <div id="block-menu-block-8" class="block block-menu-block" >
+				<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Employment</h1>
+				</div>
+			</div>
+		</div>
+		<div class="space20"></div>
+
+
+			<div class="menu-block-wrapper menu-block-8 menu-name-main-menu parent-mlid-1427 menu-level-1">
+
+	<div class="navbar-header">
+        <button class="navbar-toggle collapsed" data-target="#nav" data-toggle="collapse" type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+    </div>
+	<ul class="nav navbar-nav" id="nav"><li><a href="/experience-excellence">Experience Excellence</a></li>
+<li><a href="/employee-testimonials" title="Employee Testimonials">Employee Testimonials</a></li>
+<li><a href="/attorneys-and-law-clerk-careers" title="Attorneys / Law Clerks">Attorneys &amp; Law Clerks</a></li>
+<li><a href="/general-employment-opportunities">General Employment Opportunities</a></li>
+<li><a href="/exempt-positions" title="Exempt Positions">Exempt Positions</a></li>
+<li><a href="/wa-management-service-exempts" title="WA Management Service">WA Management Service</a></li>
+<li><a href="/volunteer-and-internship-opportunities" title="Volunteer and Internship Opportunities">Volunteer and Internship Opportunities</a></li>
+<li><a href="/diversity" title="Diversity">Diversity</a></li>
+<li><a href="/office-locations" title="Office Locations">Office Locations</a></li>
+</ul></div>
+	</div>									</div>
+			</div>
+		</div>
+    </div>
+
+    <div class="copyright">
+		<div class="container">
+			<div class="row">
+									  <div id="block-menu-menu-footer-menu" class="block block-menu" >
+
+
+			<ul class="menu"><li class="first leaf"><a href="/contactus.aspx" title="Contact us">Contact Us</a></li>
+<li class="leaf"><a href="/privacy-notice" title="Privacy notice">Privacy Notice</a></li>
+<li class="leaf"><a href="/ago-accessibility-policy" title="Accessibility policy">Accessibility Policy</a></li>
+<li class="leaf"><a href="/employee-resources">Employee Resources</a></li>
+<li class="leaf"><a href="/rulemaking-activity" title="Rulemaking activity">Rulemaking Activity</a></li>
+<li class="leaf"><a href="/sitemap" title="Sitemap">Sitemap</a></li>
+<li class="leaf"><a href="http://access.wa.gov" title="Access Washington">Access Washington</a></li>
+<li class="last leaf"><a href="https://fortress.wa.gov/atg/formhandler/ago/WebmasterContactForm.aspx">Contact Webmaster</a></li>
+</ul>	</div><div id="block-block-7" class="block block-block" >
+
+
+			<p><a href="/employee-resources-page"><img alt="Link to AGO Employee Resources" src="https://agportal-s3bucket.s3.amazonaws.com/uploadedImages/Footer_logo.png" style="width: 35px; height: 35px;" /></a>1125 Washington St SE • PO Box 40100 • Olympia, WA 98504 • (360) 753-6200<br />
+OFFICE HOURS: 8:00 AM - 5:00 PM Monday - Friday  Closed Weekends &amp; State Holidays</p>
+	</div>							</div>
+		</div>
+    </div>
+</footer>
+  <!-- Footer End -->
+
+<a href="#" alt="Back to Top" class="back-to-top"><span title="Back to Top Image"></span></a> <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-8fcad690fd93123ec5e","applicationID":"1526168629","transactionName":"ZlcGYxZTWEtWVU0KDF8dJVQQW1lWGEBQBhRCbRRWA1c=","queueTime":0,"applicationTime":375,"atts":"ShAFFV5JS0U=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
