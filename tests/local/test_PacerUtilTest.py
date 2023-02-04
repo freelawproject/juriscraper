@@ -2,7 +2,7 @@
 
 
 import unittest
-from datetime import date
+from datetime import date, timedelta
 
 from juriscraper.lib.utils import clean_court_object
 from juriscraper.pacer.utils import (
@@ -13,6 +13,7 @@ from juriscraper.pacer.utils import (
     get_pacer_magic_num_from_doc1_url,
     get_pacer_seq_no_from_doc1_url,
     make_doc1_url,
+    parse_datetime_for_us_timezone,
     reverse_goDLS_function,
 )
 
@@ -192,3 +193,29 @@ class PacerUtilTest(unittest.TestCase):
         )
         for test in tests:
             self.assertEqual(clean_court_object(test["q"]), test["a"])
+
+    def test_parse_datetime_for_us_timezone(self):
+        """Can we properly parse standard and DST datetimes for US timezones?"""
+
+        datetime_tests = [
+            ("2023-02-01 10:00:00 PST", -8),
+            ("2022-08-01 10:00:00 PDT", -7),
+            ("2023-02-01 10:00:00 AKST", -9),
+            ("2022-08-01 10:00:00 AKDT", -8),
+            ("2023-02-01 10:00:00 HST", -10),
+            (
+                "2022-08-01 10:00:00 HDT",
+                -10,
+            ),  # Pacific/Honolulu doesn't observe DST
+            ("2023-02-01 10:00:00 EST", -5),
+            ("2022-08-01 10:00:00 EDT", -4),
+            ("2023-02-01 10:00:00 CST", -6),
+            ("2022-08-01 10:00:00 CDT", -5),
+            ("2023-02-01 10:00:00 MST", -7),
+            ("2022-08-01 10:00:00 MDT", -6),
+        ]
+
+        for datetime_str, offset in datetime_tests:
+            dt = parse_datetime_for_us_timezone(datetime_str)
+
+            self.assertEqual(dt.utcoffset(), timedelta(hours=offset))

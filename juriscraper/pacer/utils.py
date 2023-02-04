@@ -1,8 +1,11 @@
 import re
+from datetime import datetime
 from typing import Optional
 
 import requests
 import tldextract
+from dateutil import parser
+from dateutil.tz import gettz
 from lxml import html
 
 from ..lib.exceptions import ParsingException
@@ -296,3 +299,32 @@ def get_pdf_url(court, pacer_case_id, document_number, attachment_number):
             court, pacer_case_id, document_number, attachment_number
         ),
     )
+
+
+def parse_datetime_for_us_timezone(datetime_str: str) -> datetime:
+    """Parse a datetime from a string that contains a US timezone.
+
+    :param datetime_str: The str datetime to parse.
+    :return: A datetime object with UTC timezone offset.
+    """
+
+    # Supported US timezones.
+    tzinfos = {
+        # US standard timezones
+        "EST": gettz("America/New_York"),
+        "CST": gettz("America/Chicago"),
+        "MST": gettz("America/Denver"),
+        "PST": gettz("America/Los_Angeles"),
+        "AKST": gettz("America/Anchorage"),
+        "HST": gettz("Pacific/Honolulu"),
+        # US daylight saving time timezones
+        "EDT": gettz("America/New_York"),
+        "CDT": gettz("America/Chicago"),
+        "MDT": gettz("America/Denver"),
+        "PDT": gettz("America/Los_Angeles"),
+        "AKDT": gettz("America/Anchorage"),
+        "HDT": gettz(
+            "Pacific/Honolulu"
+        ),  # Pacific/Honolulu doesn't observe DST
+    }
+    return parser.parse(datetime_str, tzinfos=tzinfos)
