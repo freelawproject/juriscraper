@@ -97,6 +97,12 @@ class ScraperExtractFromText(unittest.TestCase):
                 {"Docket": {"docket_number": "#30018-a-MES"}},
             ),
         ],
+        "juriscraper.opinions.united_states.territories.nmi": [
+            (
+                """#E-FILED\nCNMI SUPREME COURT\nE-filed: Apr 18 2022 06:53AM\nClerk Review: Apr 18 2022 06:54AM Filing ID: 67483376\nCase No.: 2021-SCC-0017-CIV\nJudy Aldan""",
+                {"Docket": {"docket_number": "2021-SCC-0017-CIV"}},
+            ),
+        ],
         "juriscraper.opinions.united_states.federal_special.cavc": [
             (
                 """           UNITED STATES COURT OF APPEALS FOR VETERANS CLAIMS\n\n                                             NO. 22-3306\n\n                               GEORGE D. PREWITT, JR., PETITIONER,\n\n                                                  V.\n\n                                     DENIS MCDONOUGH,\n                         SECRETARY OF VETERANS AFFAIRS, RESPONDENT.\n\n                       Before""",
