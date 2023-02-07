@@ -45,6 +45,7 @@ class BaseDocketReport:
     )
     docket_number_bankr_regex = re.compile(r"(?:#:\s+)?((\d-)?\d\d-\d*)")
     docket_number_jpml = re.compile(r"(MDL No.\s+\d*)")
+    docket_number_appellate_regex = re.compile(r"(\d\d-\d+)")
 
     def __init__(self, court_id):
         self.court_id = court_id

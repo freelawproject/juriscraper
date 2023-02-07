@@ -1,5 +1,6 @@
 import re
-from typing import Optional
+from datetime import date, datetime
+from typing import Dict, Optional, Union
 
 import requests
 import tldextract
@@ -296,3 +297,23 @@ def get_pdf_url(court, pacer_case_id, document_number, attachment_number):
             court, pacer_case_id, document_number, attachment_number
         ),
     )
+
+
+def set_pacer_doc_id_as_appellate_document_number(
+    de: Dict[str, Union[str, date, datetime]]
+) -> None:
+    """For appellate courts that don't use numbers, if available set the
+    pacer_doc_id as document number.
+
+    :param de: The docket entry dict to set the document number.
+    :return: None, the dict is modified in place.
+    """
+    if not de["document_number"]:
+        if de["pacer_doc_id"]:
+            # If we lack the document number, but have
+            # the pacer doc ID, use it.
+            de["document_number"] = de["pacer_doc_id"]
+        else:
+            # We lack both the document number and the pacer doc ID.
+            # Probably a minute order. No need to set either.
+            pass

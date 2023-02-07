@@ -5,8 +5,8 @@ import re
 import sys
 from html import unescape
 
+import dateparser
 import feedparser
-from dateutil import parser
 from requests import Session
 
 from ..lib.log_tools import make_default_logger
@@ -17,6 +17,7 @@ from .utils import (
     get_pacer_case_id_from_nonce_url,
     get_pacer_doc_id_from_doc1_url,
     get_pacer_seq_no_from_doc1_url,
+    set_pacer_doc_id_as_appellate_document_number,
 )
 
 logger = make_default_logger()
@@ -118,6 +119,7 @@ class PacerRssFeed(DocketReport):
     # We use three simple matches rather than a complex one with three groups.
     document_number_regex = re.compile(r"[\"|\'] ?>(\d+)</a>")
     doc1_url_regex = re.compile(r"href=[\"|\'](.*/doc1/.*)[\"|\']")
+    docs1_url_regex = re.compile(r"href=[\"|\'](.*/docs1/.*)[\"|\']")
     short_desc_regex = re.compile(r"\[(.*?)\]")  # Matches 'foo': [ foo ] (
 
     PATH = "cgi-bin/rss_outside.pl"
@@ -130,7 +132,13 @@ class PacerRssFeed(DocketReport):
         self._data = None
         self.session = Session()
         self.is_valid = True
-
+        self.is_appellate = False
+        if self.court_id[-1].isdigit() or self.court_id in [
+            "cadc",
+            "cafc",
+            "cavc",
+        ]:
+            self.is_appellate = True
         if self.court_id.endswith("b"):
             self.is_bankruptcy = True
         else:
@@ -155,6 +163,8 @@ class PacerRssFeed(DocketReport):
             # from their homepage. Their default one is limited to orders and
             # opinions, but this one has "All Docket Entries".
             return "https://ecf.ared.uscourts.gov/cgi-bin/rss_outside4.pl"
+        elif self.is_appellate:
+            return f"https://ecf.{self.court_id}.uscourts.gov/n/beam/servlet/TransportRoom?servlet=RSSGenerator"
         else:
             return f"https://ecf.{self.court_id}.uscourts.gov/{self.PATH}"
 
@@ -229,7 +239,9 @@ class PacerRssFeed(DocketReport):
 
         data = {
             "court_id": self.court_id,
-            "pacer_case_id": get_pacer_case_id_from_nonce_url(entry.link),
+            "pacer_case_id": get_pacer_case_id_from_nonce_url(entry.link)
+            if not self.is_appellate
+            else None,
             "docket_number": self._get_docket_number(entry.title),
             "case_name": self._get_case_name(entry.title),
             # Filing date is not available. Also the case for free opinions.
@@ -263,7 +275,7 @@ class PacerRssFeed(DocketReport):
         Although there is only one, return it as a list.
         """
         de = {
-            "date_filed": parser.parse(entry.published),
+            "date_filed": dateparser.parse(entry.published),
             "description": "",
             "document_number": self._get_value(
                 self.document_number_regex, entry.summary
@@ -274,16 +286,24 @@ class PacerRssFeed(DocketReport):
             ),
         }
 
+        # District and bankruptcy doc URL
         doc1_url = self._get_value(self.doc1_url_regex, entry.summary)
+        # Appellate doc URL
+        docs1_url = self._get_value(self.docs1_url_regex, entry.summary)
         if doc1_url:
             de["pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(doc1_url)
             de["pacer_seq_no"] = get_pacer_seq_no_from_doc1_url(doc1_url)
+        elif docs1_url:
+            de["pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(docs1_url)
         else:
             # Some courts, in particular, NYED do not provide doc1 links and
             # instead provide show_case_doc links. Some docket entries don't
             # provide links. In either case, we can't provide pacer_doc_id.
             de["pacer_doc_id"] = ""
             de["pacer_seq_no"] = None
+
+        if self.is_appellate:
+            set_pacer_doc_id_as_appellate_document_number(de)
 
         return [de]
 
@@ -314,6 +334,8 @@ class PacerRssFeed(DocketReport):
                 self.docket_number_dist_regex,
                 self.docket_number_bankr_regex,
             ]
+        elif self.is_appellate:
+            regexes = [self.docket_number_appellate_regex]
         else:
             regexes = [self.docket_number_dist_regex]
         for regex in regexes:
