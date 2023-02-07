@@ -5,8 +5,8 @@ import re
 import sys
 from html import unescape
 
+import dateparser
 import feedparser
-from dateutil import parser
 from requests import Session
 
 from ..lib.log_tools import make_default_logger
@@ -17,7 +17,6 @@ from .utils import (
     get_pacer_case_id_from_nonce_url,
     get_pacer_doc_id_from_doc1_url,
     get_pacer_seq_no_from_doc1_url,
-    parse_datetime_for_us_timezone,
     set_pacer_doc_id_as_appellate_document_number,
 )
 
@@ -276,7 +275,7 @@ class PacerRssFeed(DocketReport):
         Although there is only one, return it as a list.
         """
         de = {
-            "date_filed": parse_datetime_for_us_timezone(entry.published),
+            "date_filed": dateparser.parse(entry.published),
             "description": "",
             "document_number": self._get_value(
                 self.document_number_regex, entry.summary
