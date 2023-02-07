@@ -213,6 +213,9 @@ class PacerUtilTest(unittest.TestCase):
             ("2022-08-01 10:00:00 CDT", -5),
             ("2023-02-01 10:00:00 MST", -7),
             ("2022-08-01 10:00:00 MDT", -6),
+            ("2023-02-01 10:00:00 CHST", 10),
+            ("2023-02-01 10:00:00 SST", -11),
+            ("2023-02-01 10:00:00 AST", -4),
         ]
 
         for datetime_str, offset in datetime_tests:

@@ -18,6 +18,7 @@ from .utils import (
     get_pacer_doc_id_from_doc1_url,
     get_pacer_seq_no_from_doc1_url,
     parse_datetime_for_us_timezone,
+    set_pacer_doc_id_as_appellate_document_number,
 )
 
 logger = make_default_logger()
@@ -125,7 +126,6 @@ class PacerRssFeed(DocketReport):
     PATH = "cgi-bin/rss_outside.pl"
 
     CACHE_ATTRS = ["data"]
-    other_appellate_courts = ["cadc", "cafc"]
 
     def __init__(self, court_id):
         super().__init__(court_id)
@@ -134,10 +134,11 @@ class PacerRssFeed(DocketReport):
         self.session = Session()
         self.is_valid = True
         self.is_appellate = False
-        if (
-            self.court_id[-1].isdigit()
-            or self.court_id in self.other_appellate_courts
-        ):
+        if self.court_id[-1].isdigit() or self.court_id in [
+            "cadc",
+            "cafc",
+            "cavc",
+        ]:
             self.is_appellate = True
         if self.court_id.endswith("b"):
             self.is_bankruptcy = True
@@ -302,6 +303,9 @@ class PacerRssFeed(DocketReport):
             de["pacer_doc_id"] = ""
             de["pacer_seq_no"] = None
 
+        if self.is_appellate:
+            set_pacer_doc_id_as_appellate_document_number(de)
+
         return [de]
 
     def _parse_get_trustee_type_office_chapter(self, entry_text):
@@ -332,7 +336,7 @@ class PacerRssFeed(DocketReport):
                 self.docket_number_bankr_regex,
             ]
         elif self.is_appellate:
-            regexes = [self.docket_number_bankr_regex]
+            regexes = [self.docket_number_appellate_regex]
         else:
             regexes = [self.docket_number_dist_regex]
         for regex in regexes:

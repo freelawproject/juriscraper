@@ -1,6 +1,6 @@
 import re
-from datetime import datetime
-from typing import Optional
+from datetime import date, datetime
+from typing import Dict, Optional, Union
 
 import requests
 import tldextract
@@ -317,14 +317,36 @@ def parse_datetime_for_us_timezone(datetime_str: str) -> datetime:
         "PST": gettz("America/Los_Angeles"),
         "AKST": gettz("America/Anchorage"),
         "HST": gettz("Pacific/Honolulu"),
+        "CHST": gettz("Pacific/Guam"),
+        "SST": gettz("Pacific/Samoa"),
+        "AST": gettz("America/Puerto_Rico"),
         # US daylight saving time timezones
         "EDT": gettz("America/New_York"),
         "CDT": gettz("America/Chicago"),
         "MDT": gettz("America/Denver"),
         "PDT": gettz("America/Los_Angeles"),
         "AKDT": gettz("America/Anchorage"),
-        "HDT": gettz(
-            "Pacific/Honolulu"
-        ),  # Pacific/Honolulu doesn't observe DST
+        "HDT": gettz("Pacific/Honolulu"),
+        # CHST, SST and AST, dont' observe DST.
     }
     return parser.parse(datetime_str, tzinfos=tzinfos)
+
+
+def set_pacer_doc_id_as_appellate_document_number(
+    de: Dict[str, Union[str, date, datetime]]
+) -> None:
+    """For appellate courts that don't use numbers, if available set the
+    pacer_doc_id as document number.
+
+    :param de: The docket entry dict to set the document number.
+    :return: None, the dict is modified in place.
+    """
+    if not de["document_number"]:
+        if de["pacer_doc_id"]:
+            # If we lack the document number, but have
+            # the pacer doc ID, use it.
+            de["document_number"] = de["pacer_doc_id"]
+        else:
+            # We lack both the document number and the pacer doc ID.
+            # Probably a minute order. No need to set either.
+            pass
