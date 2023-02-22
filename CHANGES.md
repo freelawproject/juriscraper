@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.34 - 2022-02-21**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Added support for parsing appellate RSS Feeds
+
+## Past
+
 **2.5.33 - 2022-01-13**
 
 Features:
@@ -25,9 +37,6 @@ Features:
 Changes:
 
 - Fix the CA9 Published/Unpublished II
-
-## Past
-
 
 **2.5.32 - 2022-01-13**
 
