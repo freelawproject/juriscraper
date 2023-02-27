@@ -4,8 +4,6 @@
 import unittest
 from datetime import date, timedelta
 
-from dateparser import parse
-
 from juriscraper.lib.utils import clean_court_object
 from juriscraper.pacer.utils import (
     get_court_id_from_url,
@@ -15,6 +13,7 @@ from juriscraper.pacer.utils import (
     get_pacer_magic_num_from_doc1_url,
     get_pacer_seq_no_from_doc1_url,
     make_doc1_url,
+    parse_datetime_for_us_timezone,
     reverse_goDLS_function,
 )
 
@@ -204,7 +203,7 @@ class PacerUtilTest(unittest.TestCase):
             ("2023-02-01 10:00:00 AKST", -9),
             ("2022-08-01 10:00:00 AKDT", -8),
             ("2023-02-01 10:00:00 HST", -10),
-            ("2022-08-01 10:00:00 HDT", -9.5),
+            ("2022-08-01 10:00:00 HDT", -10),
             ("2023-02-01 10:00:00 EST", -5),
             ("2022-08-01 10:00:00 EDT", -4),
             ("2023-02-01 10:00:00 CST", -6),
@@ -214,8 +213,14 @@ class PacerUtilTest(unittest.TestCase):
             ("2023-02-01 10:00:00 CHST", 10),
             ("2023-02-01 10:00:00 SST", -11),
             ("2023-02-01 10:00:00 AST", -4),
+            ("2023-02-01 10:00:00 GMT", 0),
+            ("2023-02-01 10:00:00 AZ", None),
         ]
 
         for datetime_str, offset in datetime_tests:
-            dt = parse(datetime_str)
-            self.assertEqual(dt.utcoffset(), timedelta(hours=offset))
+            if offset is None:
+                with self.assertRaises(NotImplementedError):
+                    dt = parse_datetime_for_us_timezone(datetime_str)
+            else:
+                dt = parse_datetime_for_us_timezone(datetime_str)
+                self.assertEqual(dt.utcoffset(), timedelta(hours=offset))
