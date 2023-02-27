@@ -4,6 +4,8 @@ from typing import Dict, Optional, Union
 
 import requests
 import tldextract
+from dateutil import parser
+from dateutil.tz import gettz
 from lxml import html
 
 from ..lib.exceptions import ParsingException
@@ -317,3 +319,37 @@ def set_pacer_doc_id_as_appellate_document_number(
             # We lack both the document number and the pacer doc ID.
             # Probably a minute order. No need to set either.
             pass
+
+
+def parse_datetime_for_us_timezone(datetime_str: str) -> datetime:
+    """Parse a datetime from a string that contains a US timezone.
+    :param datetime_str: The str datetime to parse.
+    :return: A datetime object with UTC timezone offset.
+    """
+
+    # Supported US timezones.
+    tzinfos = {
+        # US standard timezones
+        "EST": gettz("US/Eastern"),
+        "CST": gettz("US/Central"),
+        "MST": gettz("US/Mountain"),
+        "PST": gettz("US/Pacific"),
+        "AKST": gettz("US/Alaska"),
+        "HST": gettz("US/Hawaii"),
+        "CHST": gettz("Pacific/Guam"),
+        "SST": gettz("US/Samoa"),
+        "AST": gettz("America/Puerto_Rico"),
+        # US daylight saving time timezones
+        "EDT": gettz("US/Eastern"),
+        "CDT": gettz("US/Central"),
+        "MDT": gettz("US/Mountain"),
+        "PDT": gettz("US/Pacific"),
+        "AKDT": gettz("US/Alaska"),
+        "HDT": gettz("US/Hawaii"),
+        # CHST, SST and AST, dont' observe DST.
+    }
+    date_time = parser.parse(datetime_str, tzinfos=tzinfos)
+    if date_time.utcoffset() is None:
+        # Raise an exception if a timezone abbreviation is not specified.
+        raise NotImplementedError(f"Datetime {datetime_str} not understood.")
+    return date_time
