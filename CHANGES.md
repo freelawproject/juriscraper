@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.35 - 2022-02-28**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Improved performance of parsing date-times in RSS feeds.
+
+## Past
+
 **2.5.34 - 2022-02-21**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - Added support for parsing appellate RSS Feeds
-
-## Past
 
 **2.5.33 - 2022-01-13**
 
