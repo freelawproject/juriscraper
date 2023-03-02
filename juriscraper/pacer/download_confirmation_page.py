@@ -4,7 +4,7 @@ from typing import Optional
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import clean_string, convert_date_string, force_unicode
 from .reports import BaseReport
-from .utils import is_pdf, make_docs1_url
+from .utils import is_pdf, make_doc1_url, make_docs1_url
 
 logger = make_default_logger()
 
@@ -16,6 +16,14 @@ class DownloadConfirmationPage(BaseReport):
 
     def __init__(self, court_id, pacer_session=None):
         super().__init__(court_id, pacer_session)
+
+        self.is_appellate = False
+        if self.court_id[-1].isdigit() or self.court_id in [
+            "cadc",
+            "cafc",
+            "cavc",
+        ]:
+            self.is_appellate = True
 
     def query(self, pacer_doc_id):
         """Query the "confirmation download page" endpoint and set the results
@@ -29,8 +37,12 @@ class DownloadConfirmationPage(BaseReport):
             self.session is not None
         ), "session attribute of DownloadConfirmationPage cannot be None."
 
-        # Make the NDA document URL
-        url = make_docs1_url(self.court_id, pacer_doc_id, True)
+        if self.is_appellate:
+            # Make the appellate document URL
+            url = make_docs1_url(self.court_id, pacer_doc_id, True)
+        else:
+            # Make the district/bankruptcy document URL
+            url = make_doc1_url(self.court_id, pacer_doc_id, True)
 
         logger.info("Querying the confirmation page endpoint at URL: %s", url)
         self.response = self.session.get(url)
@@ -59,20 +71,34 @@ class DownloadConfirmationPage(BaseReport):
         if self.is_valid is False:
             return {}
 
-        document_number = self._get_document_number()
-        if document_number is None:
+        if not self._is_a_receipt_page():
             # Abort. If we cannot get a document number return a empy dict.
             # It's not a valid confirmation page.
             return {}
 
         return {
-            "document_number": document_number,
+            "document_number": self._get_document_number(),
             "docket_number": self._get_docket_number(),
             "cost": self._get_document_cost(),
             "billable_pages": self._get_billable_pages(),
             "document_description": self._get_document_description(),
             "transaction_date": self._get_transaction_date(),
         }
+
+    def _is_a_receipt_page(self) -> bool:
+        """Check if this is a valid download confirmation page for a district
+        bankruptcy or appellate court.
+
+        :return: True if is a valid page, otherwise False.
+        """
+
+        try:
+            transaction_str = self.tree.re_xpath(
+                '//*[re:match(text(), "Transaction Receipt")]'
+            )[0]
+        except IndexError:
+            return False
+        return True
 
     def _get_document_number(self) -> Optional[str]:
         """Get the document number for an item.
@@ -107,7 +133,7 @@ class DownloadConfirmationPage(BaseReport):
             return None
 
         if cost_str:
-            return cost_str
+            return clean_string(cost_str)
         return None
 
     def _get_docket_number(self) -> Optional[str]:
@@ -117,16 +143,25 @@ class DownloadConfirmationPage(BaseReport):
         """
 
         try:
-            document_and_case_number = self.tree.xpath(
-                '//strong[contains(., "Document: PDF Document")]'
-            )[0].text_content()
+            if self.is_appellate:
+                document_and_case_number = self.tree.xpath(
+                    '//strong[contains(., "Document: PDF Document")]'
+                )[0].text_content()
+            else:
+                docket_number = self.tree.re_xpath(
+                    '//*[re:match(text(), "Case Number:")]/'
+                    "/ancestor::th[1]/following-sibling::td[1]/font[1]"
+                )[0].text_content()
+
         except IndexError:
             return None
 
-        regex = r"Case:([^\,]*)"
-        docket_number = re.findall(regex, document_and_case_number)
+        if self.is_appellate:
+            regex = r"Case:([^\,]*)"
+            docket_number = re.findall(regex, document_and_case_number)[0]
+
         if docket_number:
-            return clean_string(docket_number[0])
+            return clean_string(docket_number)
         return None
 
     def _get_billable_pages(self) -> Optional[str]:
@@ -143,7 +178,7 @@ class DownloadConfirmationPage(BaseReport):
             return None
 
         if billable_pages_str:
-            return billable_pages_str
+            return clean_string(billable_pages_str)
         return None
 
     def _get_document_description(self) -> Optional[str]:
@@ -160,7 +195,7 @@ class DownloadConfirmationPage(BaseReport):
             return None
 
         if document_description_str:
-            return document_description_str
+            return clean_string(document_description_str)
         return None
 
     def _get_transaction_date(self) -> Optional[str]:
