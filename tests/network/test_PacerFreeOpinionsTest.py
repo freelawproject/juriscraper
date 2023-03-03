@@ -271,10 +271,16 @@ class PacerDownloadConfirmationPageTest(unittest.TestCase):
         self.report = DownloadConfirmationPage("ca8", self.session)
         self.report_att = DownloadConfirmationPage("ca5", self.session)
         self.report_pdf = DownloadConfirmationPage("ca11", self.session)
+        self.report_nef_no_confirmation = DownloadConfirmationPage(
+            "txwd", self.session
+        )
+        self.report_nef = DownloadConfirmationPage("cand", self.session)
         self.pacer_doc_id = "00812590792"
         self.no_confirmation_page_pacer_doc_id = "00802251695"
         self.pacer_doc_id_att = "00506470276"
         self.pacer_doc_id_pdf = "011012534985"
+        self.pacer_doc_id_nef_no_confirmation = "181027895860"
+        self.pacer_doc_id_nef = "035022812318"
 
     @SKIP_IF_NO_PACER_LOGIN
     def test_get_document_number(self):
@@ -314,4 +320,26 @@ class PacerDownloadConfirmationPageTest(unittest.TestCase):
         returned directly, no valid page to parse."""
         self.report_pdf.query(self.pacer_doc_id_pdf)
         data_report = self.report_pdf.data
+        self.assertEqual(data_report, {})
+
+    @SKIP_IF_NO_PACER_LOGIN
+    def test_confirmation_page_pdf_district(self):
+        """Can we get the PACER document number from a district download
+        confirmation page?"""
+        self.report_nef.query(self.pacer_doc_id_nef)
+        data_report = self.report_nef.data
+        self.assertEqual(data_report["document_number"], None)
+        self.assertEqual(data_report["docket_number"], "3:18-cv-04865-EMC")
+        self.assertEqual(data_report["cost"], "0.10")
+        self.assertEqual(data_report["billable_pages"], "1")
+        self.assertEqual(data_report["document_description"], "Image670-0")
+
+    @SKIP_IF_NO_PACER_LOGIN
+    def test_no_confirmation_page_pdf_returned_district(self):
+        """If the district download confirmation page is not available an empty
+        dictionary is returned"""
+        self.report_nef_no_confirmation.query(
+            self.pacer_doc_id_nef_no_confirmation
+        )
+        data_report = self.report_nef_no_confirmation.data
         self.assertEqual(data_report, {})
