@@ -1,0 +1,33 @@
+{
+  "appellate": true,
+  "contains_attachments": false,
+  "court_id": "ca9",
+  "dockets": [
+    {
+      "case_name": "City of Oakland v. BP PLC",
+      "date_filed": "2022-12-05",
+      "docket_entries": [
+        {
+          "date_filed": "2022-12-05",
+          "description": "Added Attorney(s) Thomas G. Hungar for party(s) Appellant Chevron Corporation, in case 22-16810. [12602321] (NAC)",
+          "document_number": null,
+          "document_url": null,
+          "pacer_case_id": "341370",
+          "pacer_doc_id": null,
+          "pacer_magic_num": null,
+          "pacer_seq_no": null
+        }
+      ],
+      "docket_number": "22-16810"
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "testing1@gexample.com",
+        "testing1_1@gexample.com"
+      ],
+      "name": "Recipient User Test 1:"
+    }
+  ]
+}

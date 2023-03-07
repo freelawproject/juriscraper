@@ -10,6 +10,7 @@ from .docket_report import BaseDocketReport
 from .reports import BaseReport
 from .utils import (
     get_pacer_case_id_from_doc1_url,
+    get_pacer_case_id_from_nonce_url,
     get_pacer_doc_id_from_doc1_url,
     get_pacer_magic_num_from_doc1_url,
     get_pacer_seq_no_from_doc1_url,
@@ -225,28 +226,32 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         except IndexError:
             return None
 
-    def _get_appellate_case_anchor(self) -> str:
-        """Safely retrieves the anchor tag for the appellate case
+    def _get_case_anchor(self, current_node: HtmlElement) -> Optional[str]:
+        """Safely retrieves the anchor tag for a case.
 
-        :returns: Anchor tag, if it's found
+        :param current_node: The relative lxml.HtmlElement
+        :returns: Case anchor tag, if it's found
         """
         try:
             path = f"{self._sibling_path('Case Number')}//a"
-            return self.tree.xpath(path)[0]
+            return current_node.xpath(path)[0].xpath("./@href")[0]
         except IndexError:
             return None
 
-    def _get_appellate_pacer_case_id(self) -> str:
-        """Extract the caseid from the appellate case anchor.
+    def _get_case_id_from_case_url(self, case_url) -> Optional[str]:
+        """Extract the caseid from the case anchor.
 
+        :param case_url: The case_url where to look for the case_id.
         :returns: caseID, if it's found
         """
-        document_url = self._get_appellate_case_anchor().xpath("./@href")[0]
-        match = re.search(r"caseId=(\d+)", document_url)
-        if match:
-            return match.group(1)
+
+        if self.appellate:
+            match = re.search(r"caseId=(\d+)", case_url)
+            if match:
+                return match.group(1)
         else:
-            return None
+            return get_pacer_case_id_from_nonce_url(case_url)
+        return None
 
     def _get_description(self, current_node: HtmlElement) -> str:
         """Gets the docket text
@@ -399,6 +404,8 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :param  current_node: The relative lxml.HtmlElement
         :returns: List of docket entry dictionaries
         """
+
+        case_url = None
         if self.content_type == "text/plain":
             description = self._get_description_plain()
             if description is not None:
@@ -410,6 +417,12 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 else:
                     document_url = None
                 document_number = self._get_document_number_plain()
+
+                # Get Case URL for plain text version.
+                regex = r"Case Number: .*? (https?:\/\/\S+)"
+                match = re.search(regex, email_body)
+                if match:
+                    case_url = match.group(1)
         else:
             description = self._get_description(current_node)
             if description is not None:
@@ -421,6 +434,9 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                     document_number = None
                 else:
                     document_number = self._get_document_number(current_node)
+
+                # Get Case URL for HTML version.
+                case_url = self._get_case_anchor(current_node)
 
         if description is not None:
             entries = [
@@ -451,10 +467,13 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                     entries[0][
                         "pacer_seq_no"
                     ] = get_pacer_seq_no_from_doc1_url(document_url)
-            if self._is_appellate():
-                entries[0][
-                    "pacer_case_id"
-                ] = self._get_appellate_pacer_case_id()
+
+            # Fallback on the Case URL to get the pacer_case_id.
+            if not entries[0]["pacer_case_id"] and case_url:
+                entries[0]["pacer_case_id"] = self._get_case_id_from_case_url(
+                    case_url
+                )
+
             return entries
         return []
 

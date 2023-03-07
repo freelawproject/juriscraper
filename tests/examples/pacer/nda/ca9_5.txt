@@ -1,0 +1,56 @@
+Return-Path: <ca9_ecfnoticing@ca9.uscourts.gov>
+Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov [63.241.40.204])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 0cr8vm4n2gvgc2vsr6k4knt1ponpfv0rm3v6qko1
+ for recipient@example.com;
+ Mon, 05 Dec 2022 21:24:07 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ca9.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=ca9_ecfnoticing@ca9.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ca9.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=ca9_ecfnoticing@ca9.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+ dmarc=none header.from=ca9.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFTkFaZHEzS2FTb1QraFlwTDBnUEZSWXZjNlhMMFBaNkVJUHQ3YlRxZ0VOeHJYWkhLVlNUaXJzVWdROXFvaDFZNWtNQkltVE9KUVprMGVCdi9BYjkvU2grM1VPL2xXSFBxNlFNcXdiQ2ZRTzVBZUNnS1hzMlZiZGNSeEg0M1FnbExhTWlldmphcmtKbzMzeXdwQUM5c3VJMGZtblFMTDRIdTR0Rnh2RnRRc2ZtT25VL2d5Z3plTjBhRWlVZHQrRXJKNGdmekJXNWZnd2JEWnBTYVFZcGROYUFtajNjWmdhTHpndkpvNVJVRCtaN1JSaHRCNVdBcHpUTzI4WHc4ZVhxRXV1bjZ1VEdBNzg5R0VKRXk4Y2hadDV0U3BWUG5vR205QmZydUhjeWpBeFFvcUUvUkw3ZlgvM0VpUGYrRWN6a2M9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=P2bnzh5kR5sbZwKRDFjGVsPmG+RSTASCh6Az0XARgHPR/S6eSxhR7nOwv49Z8mVKwvAtJrHZSTRtDWOqduNJ5FHonvod9TgDGYdm0mK36fGXGl86GivshWZlYClg559hAS0f8GxQk+AYY3BSvwL+B1DM7756Kat6ypo8CRzuZHY=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1670275448; v=1; bh=AMKeBHiBev9bTT6uBaKxPZb2/qmOyTHoU9tK3RiLct8=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.100
+Received: from ca9db.ca9.gtwy.dcn ([156.119.56.100])
+  by icmecf201.gtwy.uscourts.gov with ESMTP; 05 Dec 2022 16:24:07 -0500
+Received: from ca9db.ca9.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by ca9db.ca9.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 2B5LNYfE042120
+	for <recipient@example.com>; Mon, 5 Dec 2022 13:23:34 -0800
+Date: Mon, 5 Dec 2022 13:23:34 -0800 (PST)
+From: ca9_ecfnoticing@ca9.uscourts.gov
+To: recipient@example.com
+Message-ID: <1594209095.4854.1670275414764@ca9db.ca9.gtwy.dcn>
+Subject: 22-16810 City of Oakland, et al v. BP PLC, et al "Add Attorney"
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><TITLE>22-16810 City of Oakland, et al v. BP PLC, et al "Add Attorney"</TITLE>
+</HEAD>
+<BODY BGCOLOR="#F8F8F8" TEXT="#000000" LINK="#0000ff" VLINK="#551a8b" ALINK="#ff0000">
+<P><STRONG>
+***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer.  PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing.</STRONG><BR>
+<P><CENTER><STRONG>United States Court of Appeals for the Ninth Circuit</STRONG></CENTER>
+<P><STRONG>Notice of Docket Activity</STRONG><BR>
+<BR>
+The following transaction was entered on 12/05/2022 at 1:23:32 PM Pacific Standard Time and filed on 12/05/2022
+<TABLE BORDER=0 CELLSPACING=3>
+<TR><TD><STRONG>Case Name:</STRONG></TD>
+<TD colspan='2'>City of Oakland, et al v. BP PLC, et al<BR>
+</TD></TR>
+<TR><TD><STRONG>Case Number:&nbsp;&nbsp;</STRONG></TD>
+<TD><A HREF="https://ecf.ca9.uscourts.gov/n/beam/servlet/TransportRoom?servlet=DocketReportFilter.jsp&caseId=341370">22-16810</A></TD></TR>
+</TABLE><BR>
+<P><STRONG>Docket Text:</STRONG><BR>
+Added Attorney(s) Thomas G. Hungar for party(s) Appellant Chevron Corporation, in case 22-16810. [12602321] (NAC)<BR>
+<BR>
+<STRONG>Notice will be electronically mailed to:</STRONG><BR><BR>
+Recipient User Test 1: testing1@gexample.com, testing1_1@gexample.com<BR>
+<BR><BR>
+
+</BODY></HTML>
