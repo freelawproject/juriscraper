@@ -16,6 +16,19 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.37 - 2022-03-07**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Get pacer_case_id from case URL when there is no attached document in a email
+  notification.
+
+## Past
+
 **2.5.36 - 2022-03-03**
 
 Features:
@@ -25,8 +38,6 @@ Features:
 Changes:
 
 - Added support for parsing district/bankruptcy download confirmation pages.
-
-## Past
 
 **2.5.35 - 2022-02-28**
 
