@@ -295,6 +295,7 @@ class PacerRssFeed(DocketReport):
             de["pacer_seq_no"] = get_pacer_seq_no_from_doc1_url(doc1_url)
         elif docs1_url:
             de["pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(docs1_url)
+            de["pacer_seq_no"] = None
         else:
             # Some courts, in particular, NYED do not provide doc1 links and
             # instead provide show_case_doc links. Some docket entries don't
