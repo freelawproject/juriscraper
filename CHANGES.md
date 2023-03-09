@@ -16,6 +16,17 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.38 - 2022-03-09**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Added pacer_seq_no field to appellate RSS feed data.
+## Past
+
 **2.5.37 - 2022-03-07**
 
 Features:
@@ -26,8 +37,6 @@ Changes:
 
 - Get pacer_case_id from case URL when there is no attached document in a email
   notification.
-
-## Past
 
 **2.5.36 - 2022-03-03**
 
