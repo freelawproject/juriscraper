@@ -1,0 +1,103 @@
+Return-Path: <cmecfhelpdesk@cacb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id eipjvcrk1ug51406eka0sgs0och9hlcptotqh5g1
+ for recipient@example.com;
+ Wed, 08 Mar 2023 18:41:39 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of cacb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=cmecfhelpdesk@cacb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of cacb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=cmecfhelpdesk@cacb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=cacb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFIZm01cDhhanp4eVZ0TmlzbGZBZ2NiejludW9wRnNuUFhKcjdma3JYbU14UmRPdnhTKzkzNlptcndZU0gxVDlTVzNGb1R5WWZ6QnBIbzBnT2k3RUplQkZDM3ZhMUswWmUyeW1DTlRPRVRQUjcxdTQ3OGhxQ0ZyREpmcVlYcnAyczZDUWFTbll1UjNXaWFLSnRQSGFNVHI3VWRvdGVYbWE4YW1TYkNDWHNnTi9WbCtKandMQmtPUFY4YXpNVCtHY3lVU0dTbHoyNWFqKzhqZ21CZmVHcHByWDl3MG5Mczd4aGdxNWM0cUZYMmg3a2p1MGROclRKbkZUVk1QVlpwS3RXSmVyUzNsV1pXemNyd0dTbVhpMjcxTXJWRTduZ3dLcFNWTEpRYzBNekhHMkJuWjQxUTRRS1cvY0pTS1ZqQ0Yzcm89
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=Q69oTHpJ4pB5tqlLGZa8FEIyeChsYgDhfYCvx2A02I1mRl43hBDQ4jvvZHb+LB6FK4SlgeuphrMReXUFIvWIDTHrSdBtCX6h8P67VD7XyBBraicv1Ey9QhA/aQRTr0LYD8OxIkczlNhEYP5ojXILeYe/xIa0RR60vU2rioP+zUg=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1678300899; v=1; bh=l+y5/tJ/an0XAuwTs+z24/3OxG7QoPT8SZKDBNr0GN8=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.188
+Received: from cacbdb.cacb.gtwy.dcn ([156.119.56.188])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 08 Mar 2023 13:41:38 -0500
+Received: from cacbdb.cacb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by cacbdb.cacb.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 328IejQK074937;
+	Wed, 8 Mar 2023 10:40:49 -0800
+Received: (from root@localhost)
+	by cacbdb.cacb.gtwy.dcn (8.14.4/8.14.4/Submit) id 328IeQCT074285;
+	Wed, 8 Mar 2023 10:40:26 -0800
+Date: Wed, 8 Mar 2023 10:40:26 -0800
+MIME-Version:1.0
+From:cmecfhelpdesk@cacb.uscourts.gov
+To:Courtmail@cacb.uscourts.gov
+Message-Id:<103835370@cacb.uscourts.gov>
+Subject:6:22-bk-13036-SY Hearing Rescheduled/Continued (Motion) (BK Case - BNC Option)
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Central District of California</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from AutoDocket, CIAO-User entered on 03/08/2023  at 10:18 AM  PST and filed on 03/08/2023 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Lara Fakhoury</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.cacb.uscourts.gov/cgi-bin/DktRpt.pl?1949949>6:22-bk-13036-SY</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Hearing Rescheduled/Continued (Motion) (BK Case - BNC Option) (RE: related document(s) [46] MOTION FOR RELIEF FROM STAY - REAL PROPERTY filed by Wilmington Trust, National Association, not in its individual Capacity but solely as Trustee of MFRA Trust 2015-2) Hearing to be held on 03/29/2023 at 09:30 AM 3420 Twelfth Street Courtroom 302 Riverside, CA 92501 for [46], (SM6)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+6:22-bk-13036-SY Notice will be electronically mailed to:
+</B>
+
+<BR>
+<BR><span class="personName">Test user</span>
+<br>testing_a@gexample.com, testing_a_a@gexample.com
+<BR>
+
+<BR>
+<B>
+6:22-bk-13036-SY Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR>
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>
