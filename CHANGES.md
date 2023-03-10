@@ -16,6 +16,19 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.39 - 2022-03-09**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Fix return null value if there is no document number in email notification.
+- Added support for parsing a new format of email recipients in notifications.
+
+## Past
+
 **2.5.38 - 2022-03-09**
 
 Features:
@@ -25,7 +38,6 @@ Features:
 Changes:
 
 - Added pacer_seq_no field to appellate RSS feed data.
-## Past
 
 **2.5.37 - 2022-03-07**
 
