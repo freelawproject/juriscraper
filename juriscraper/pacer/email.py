@@ -193,7 +193,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         path = self._sibling_path("Document Number")
         node = current_node.xpath(path)[0].text_content()
         text_number = clean_string(node)
-        if text_number == "No document attached":
+        if text_number == "No document attached" or text_number == "":
             return None
         words = re.split(r"\(|\s", text_number)
         return words[0]
@@ -538,9 +538,11 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         recipient_parts = text_content.strip().split(" ")
         email_recipients = []
         for recipient_part in recipient_parts:
-            if not len(email_recipients):
+            if not len(email_recipients) and "@" not in recipient_part:
                 email_recipients.append({"name": recipient_part})
             else:
+                if not len(email_recipients):
+                    email_recipients.append({"name": ""})
                 last_recipient = email_recipients[-1]
                 if "@" in recipient_part:
                     if not last_recipient.get("email_addresses"):
@@ -580,6 +582,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                         'string(//b[contains(., "Notice has been electronically mailed to")]/parent::node())'
                     )
                 )
+        if not recipient_lines:
+            path = '//b[contains(., "Notice will be electronically mailed to")]/following-sibling::'
+            recipient_lines = self.tree.xpath(f"{path}text()")
+
         return self._get_email_recipients_with_links(" ".join(recipient_lines))
 
     def _get_email_recipients_plain(
