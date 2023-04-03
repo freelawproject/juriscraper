@@ -3,6 +3,7 @@ from .appellate_docket import AppellateDocketReport
 from .attachment_page import AttachmentPage
 from .case_query import CaseQuery
 from .case_query_advanced import CaseQueryAdvancedBankruptcy
+from .claims_activity import ClaimsActivity
 from .claims_register import ClaimsRegister
 from .docket_history_report import DocketHistoryReport
 from .docket_report import DocketReport
@@ -21,6 +22,7 @@ __all__ = [
     AppellateAttachmentPage,
     CaseQuery,
     CaseQueryAdvancedBankruptcy,
+    ClaimsActivity,
     ClaimsRegister,
     DocketHistoryReport,
     DocketReport,
