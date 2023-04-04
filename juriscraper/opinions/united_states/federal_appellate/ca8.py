@@ -81,7 +81,6 @@ class Site(OpinionSite):
         return statuses
 
     def _download_backwards(self, d):
-
         self.url = (
             "http://media.ca8.uscourts.gov/cgi-bin/opnByMM.pl?theMM=%02d&theYY=%s&A1=Get+Opinions"
             % (d.month, d.year)

@@ -66,7 +66,6 @@ class Site(OpinionSiteLinear):
             self._set_page_year(year, view_state, event_validation)
             self.html = super()._download()
             while True:
-
                 rows = self.html.xpath(
                     "//div[@id='ContentPlaceHolder1_ChildContent1_UpdatePanel_Opinions']//tbody/tr"
                 )

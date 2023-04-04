@@ -249,7 +249,6 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
     def _get_claim_data_from_anchors(
         self, anchor_nodes: List[HtmlElement]
     ) -> Dict[str, Union[str, List[Dict[str, str]]]]:
-
         """Retrieves claim data from a list of HTML anchor elements.
 
         :param anchor_nodes: A list of HTML anchor elements that contain

@@ -73,7 +73,6 @@ def get_module_by_name(name):
 
 
 def site_yielder(iterable, mod):
-
     for i in iterable:
         site = mod.Site()
         try:

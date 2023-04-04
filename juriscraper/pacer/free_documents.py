@@ -288,7 +288,6 @@ class FreeOpinionRow:
             s = cell.text_content().strip()
 
         if self._column_count == 4 or self.court_id in ["areb", "arwb"]:
-
             # In this case s will be something like:
             #   14-90018 Stewart v. Kauanui
             # Split on the first space, left is docket number, right

@@ -70,7 +70,6 @@ class Site(OpinionSite):
         return ["Published" for _ in range(0, len(self.case_names))]
 
     def _download_backwards(self, d):
-
         self.url = "https://www.cadc.uscourts.gov/internet/opinions.nsf/OpinionsByRDate?OpenView&count=100&SKey={}".format(
             d.strftime("%Y%m")
         )

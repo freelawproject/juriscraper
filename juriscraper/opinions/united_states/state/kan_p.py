@@ -14,7 +14,6 @@ class Site(OpinionSiteLinear):
         self.rows = "preceding" if "_p" in self.court_id else "following"
 
     def _process_html(self):
-
         h2_element = self.html.xpath(f'//h2[@id="{self.xpath}"]')[0]
         ul_elements = h2_element.xpath(f"{self.rows}-sibling::ul")
         for ul in ul_elements:

@@ -72,7 +72,6 @@ class Site(OpinionSite):
         ]
 
     def _download_backwards(self, d):
-
         self.url = "http://www.ca10.uscourts.gov/opinion/search/results?query=%20date%3A{}".format(
             d.strftime("%m/%d/%Y")
         )

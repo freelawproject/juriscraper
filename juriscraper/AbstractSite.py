@@ -30,7 +30,8 @@ class AbstractSite:
     """Contains generic methods for scraping data. Should be extended by all
     scrapers.
 
-    Should not contain lists that can't be sorted by the _date_sort function."""
+    Should not contain lists that can't be sorted by the _date_sort function.
+    """
 
     def __init__(self, cnt=None):
         super().__init__()

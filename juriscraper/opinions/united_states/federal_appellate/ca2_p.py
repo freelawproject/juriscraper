@@ -64,7 +64,6 @@ class Site(OpinionSite):
         return statuses
 
     def _download_backwards(self, d):
-
         self.url = "http://www.ca2.uscourts.gov/decisions?IW_DATABASE=OPN&IW_FIELD_TEXT=*&IW_SORT=-Date&IW_BATCHSIZE=100&IW_FILTER_DATE_BEFORE={before}&IW_FILTER_DATE_After={after}".format(
             before=(d + timedelta(self.interval)).strftime("%Y%m%d"),
             after=d.strftime("%Y%m%d"),
