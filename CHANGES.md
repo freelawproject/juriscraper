@@ -16,7 +16,19 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
-**2.5.39 - 2022-03-09**
+**2.5.40 - 2023-04-04**
+
+Features:
+
+- Added ClaimsActivity report parser.
+
+Changes:
+
+- N/A
+
+## Past
+
+**2.5.39 - 2023-03-09**
 
 Features:
 
@@ -27,9 +39,7 @@ Changes:
 - Fix return null value if there is no document number in email notification.
 - Added support for parsing a new format of email recipients in notifications.
 
-## Past
-
-**2.5.38 - 2022-03-09**
+**2.5.38 - 2023-03-09**
 
 Features:
 
@@ -39,7 +49,7 @@ Changes:
 
 - Added pacer_seq_no field to appellate RSS feed data.
 
-**2.5.37 - 2022-03-07**
+**2.5.37 - 2023-03-07**
 
 Features:
 
@@ -50,7 +60,7 @@ Changes:
 - Get pacer_case_id from case URL when there is no attached document in a email
   notification.
 
-**2.5.36 - 2022-03-03**
+**2.5.36 - 2023-03-03**
 
 Features:
 
@@ -60,7 +70,7 @@ Changes:
 
 - Added support for parsing district/bankruptcy download confirmation pages.
 
-**2.5.35 - 2022-02-28**
+**2.5.35 - 2023-02-28**
 
 Features:
 
@@ -70,7 +80,7 @@ Changes:
 
 - Improved performance of parsing date-times in RSS feeds.
 
-**2.5.34 - 2022-02-21**
+**2.5.34 - 2023-02-21**
 
 Features:
 
@@ -80,7 +90,7 @@ Changes:
 
 - Added support for parsing appellate RSS Feeds
 
-**2.5.33 - 2022-01-13**
+**2.5.33 - 2023-01-13**
 
 Features:
 
@@ -90,7 +100,7 @@ Changes:
 
 - Fix the CA9 Published/Unpublished II
 
-**2.5.32 - 2022-01-13**
+**2.5.32 - 2023-01-13**
 
 Features:
 
@@ -100,7 +110,7 @@ Changes:
 
 - Fix the CA9 Published/Unpublished
 
-**2.5.31 - 2022-01-13**
+**2.5.31 - 2023-01-13**
 
 Features:
 
@@ -110,7 +120,7 @@ Changes:
 
 - Fix the four Kansas Scrapers for updated website.
 
-**2.5.30 - 2022-01-11**
+**2.5.30 - 2023-01-11**
 
 Features:
 
@@ -121,7 +131,7 @@ Changes:
 
 - N/A
 
-**2.5.29 - 2022-01-06**
+**2.5.29 - 2023-01-06**
 
 Features:
 
