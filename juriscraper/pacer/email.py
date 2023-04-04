@@ -664,7 +664,6 @@ class S3NotificationEmail(NotificationEmail):
         """
         message = email.message_from_string(text)
         if message.is_multipart():
-
             # Checks if the email contains an attached image.
             if any(
                 part.get_content_maintype() == "image"

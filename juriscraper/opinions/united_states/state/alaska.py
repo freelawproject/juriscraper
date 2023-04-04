@@ -17,7 +17,6 @@ class Site(OpinionSiteLinear):
             date = table.xpath("./preceding-sibling::h5")[0].text_content()
             for row in table.xpath(".//tr"):
                 if row.text_content().strip():
-
                     # skip rows without PDF links in first column
                     try:
                         url = get_row_column_links(row, 1)

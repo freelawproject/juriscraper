@@ -115,7 +115,6 @@ class Site(OpinionSite):
         return data
 
     def _get_precedential_statuses(self):
-
         data = []
         for html_tree in self.html:
             try:

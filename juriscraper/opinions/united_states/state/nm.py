@@ -44,7 +44,6 @@ class Site(OpinionSiteLinear):
             else:
                 citation = ""
             if metadata:
-
                 status = (
                     "Published"
                     if "Reported" in metadata[-1]

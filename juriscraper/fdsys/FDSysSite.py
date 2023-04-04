@@ -34,7 +34,6 @@ def xpath(tree, query):
 
 class FDSysModsContent:
     def __init__(self, url):
-
         self._all_attrs = [
             "download_url",
             "fdsys_id",

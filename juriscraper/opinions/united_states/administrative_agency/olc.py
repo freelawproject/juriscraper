@@ -23,7 +23,6 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
 
     def _process_html(self):
-
         for row in self.html.xpath(
             ".//tr[contains(@class , 'even')] | .//tr[contains(@class , 'odd')]"
         ):

@@ -31,7 +31,6 @@ class Site(OpinionSite):
         return list(self.html.xpath(self.download_url_path))
 
     def _get_case_names(self):
-
         case_names = [
             " ".join(i.strip() for i in e.xpath(".//text()")).strip()
             for e in self.html.xpath(self.case_name_path)
@@ -39,7 +38,6 @@ class Site(OpinionSite):
         return case_names
 
     def _get_case_dates(self):
-
         if self.year <= 2006:
             case_dates = []
             for e in self.html.xpath(self.case_dates_path):
