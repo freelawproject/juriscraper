@@ -417,5 +417,19 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
             self.court_id,
             params,
         )
-        self.response = self.session.post(f"{self.url}?1-L_1_0-1", data=params)
+
+        if self.court_id == "insb":
+            # The POST param wildcard 1-L_1_0-1 doesn't work for insb.
+            # It throws a 500 error. 1-L_945_0-1 doesn't work either.
+            # The only approach that seems to work is using one of the params
+            # generated in cgi-bin/ClaimsActRpt.pl
+            # Unfortunately this might stop working since it seems to expire
+            # or might be linked to the PACER session.
+            post_param = "124892645626785-L_945_0-1"
+        else:
+            post_param = "1-L_1_0-1"
+
+        self.response = self.session.post(
+            f"{self.url}?{post_param}", data=params
+        )
         self.parse()
