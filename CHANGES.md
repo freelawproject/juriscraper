@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.41 - 2023-04-05**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Fix ClaimsActivity report alternative POST param for insb.
+
+## Past
+
 **2.5.40 - 2023-04-04**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - N/A
-
-## Past
 
 **2.5.39 - 2023-03-09**
 
