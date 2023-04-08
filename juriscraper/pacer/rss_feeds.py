@@ -99,10 +99,15 @@ def append_or_merge_entry(docket_list, new_docket):
         same_doc_id = entry["pacer_doc_id"] == new_entry["pacer_doc_id"]
         if all([same_dn, same_cn, same_date, same_doc_id]):
             # if docket number, pacer_case_id, date filing, and pacer_doc_id
-            # are same, merge.
-            entry[
-                "short_description"
-            ] += f" AND {new_entry['short_description']}"
+            # are same, order short descriptions alphabetically and merge.
+
+            short_descriptions = [
+                desc.strip()
+                for desc in entry["short_description"].split("AND")
+            ]
+            short_descriptions.append(new_entry["short_description"])
+            short_description = " AND ".join(sorted(short_descriptions))
+            entry["short_description"] = short_description
             break
     else:
         # Loop exited without hitting a break; item is distinct; append.
