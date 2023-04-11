@@ -473,6 +473,24 @@ class DocketReport(BaseDocketReport, BaseReport):
                 self.mdl_status_regex, self.metadata_values
             ),
         }
+
+        docket_entry_all_rows = self._get_docket_entry_rows()
+        try:
+            docket_entry_table_headers = docket_entry_all_rows[0]
+            header_cells = docket_entry_table_headers.xpath(
+                "./td[not(./input)] | ./th[not(./input)]"
+            )
+            order = "date_filed"
+            if header_cells[0].text_content() in [
+                "Date Entered",
+                "Docket Date",
+            ]:
+                order = "date_entered"
+            data["ordered_by"] = order
+        except IndexError:
+            pass
+            data["ordered_by"] = None
+
         data = clean_court_object(data)
         self._metadata = data
         return data
@@ -945,11 +963,7 @@ class DocketReport(BaseDocketReport, BaseReport):
 
         return attorneys
 
-    @property
-    def docket_entries(self):
-        if self._docket_entries is not None:
-            return self._docket_entries
-
+    def _get_docket_entry_rows(self):
         # There can be multiple docket entry tables on a single docket page.
         # See https://github.com/freelawproject/courtlistener/issues/762. ∴ we
         # need to identify the first table, and all following tables. The
@@ -961,7 +975,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             'selected documents")])'
         )
         footer_multi_doc = 'not(.//text()[contains(., "Footer format:")])'
-        docket_entry_rows = self.tree.xpath(
+        docket_entry_all_rows = self.tree.xpath(
             "//table"
             "[preceding-sibling::table[{dh}] or {dh}]"
             "[{b_multi_doc}]"
@@ -971,9 +985,16 @@ class DocketReport(BaseDocketReport, BaseReport):
                 b_multi_doc=bankr_multi_doc,
                 footer_multi_doc=footer_multi_doc,
             )
-        )[
-            1:
-        ]  # Skip the first row.
+        )
+        return docket_entry_all_rows
+
+    @property
+    def docket_entries(self):
+        if self._docket_entries is not None:
+            return self._docket_entries
+
+        docket_entry_all_rows = self._get_docket_entry_rows()
+        docket_entry_rows = docket_entry_all_rows[1:]  # Skip the first row.
 
         docket_entries = []
         for row in docket_entry_rows:
