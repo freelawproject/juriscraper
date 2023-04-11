@@ -302,6 +302,9 @@ class DocketReport(BaseDocketReport, BaseReport):
     date_converted_regex = re.compile(
         r"Date [Cc]onverted:\s+(%s)" % date_regex
     )
+    date_entered_regex = re.compile(
+        r"Entered:\s+(%s)" % date_regex
+    )
     # Be careful this does not match "Joint debtor discharged" field.
     date_discharged_regex = re.compile(
         r"(?:Date|Debtor)\s+[Dd]ischarged:\s+(%s)" % date_regex
@@ -998,6 +1001,9 @@ class DocketReport(BaseDocketReport, BaseReport):
             )
             de["pacer_doc_id"], de["pacer_seq_no"] = results[0], results[1]
             de["description"] = self._get_description(cells)
+            de["date_entered"] = self._get_value(
+                self.date_entered_regex, de["description"], cast_to_date=True
+            )
 
             number = de["document_number"]
             if number is not None and not number.isdigit():
