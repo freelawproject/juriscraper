@@ -302,9 +302,7 @@ class DocketReport(BaseDocketReport, BaseReport):
     date_converted_regex = re.compile(
         r"Date [Cc]onverted:\s+(%s)" % date_regex
     )
-    date_entered_regex = re.compile(
-        r"Entered:\s+(%s)" % date_regex
-    )
+    date_entered_regex = re.compile(r"Entered:\s+(%s)" % date_regex)
     # Be careful this does not match "Joint debtor discharged" field.
     date_discharged_regex = re.compile(
         r"(?:Date|Debtor)\s+[Dd]ischarged:\s+(%s)" % date_regex

@@ -31,6 +31,7 @@ class DocketHistoryReport(DocketReport):
     date_filed_and_entered_regex = re.compile(
         r"& Entered:\s+(%s)" % date_regex
     )
+    date_entered_regex = re.compile(r"[eE]ntered:\s+(%s)" % date_regex)
 
     PATH = "cgi-bin/HistDocQry.pl"
 
@@ -174,6 +175,7 @@ class DocketHistoryReport(DocketReport):
                     de["pacer_doc_id"] = None
                     de["pacer_seq_no"] = None
                 de["date_filed"] = self._get_date_filed(cells[1])
+                de["date_entered"] = self._get_date_entered(cells[1])
                 de["short_description"] = force_unicode(
                     cells[2].text_content()
                 )
@@ -202,6 +204,14 @@ class DocketHistoryReport(DocketReport):
     def _get_date_filed(self, cell):
         s = clean_string(cell.text_content())
         regexes = [self.date_filed_regex, self.date_filed_and_entered_regex]
+        for regex in regexes:
+            m = regex.search(s)
+            if m:
+                return convert_date_string(m.group(1))
+
+    def _get_date_entered(self, cell):
+        s = clean_string(cell.text_content())
+        regexes = [self.date_entered_regex, self.date_filed_and_entered_regex]
         for regex in regexes:
             m = regex.search(s)
             if m:
