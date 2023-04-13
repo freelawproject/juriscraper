@@ -13,6 +13,7 @@ from .free_documents import FreeOpinionReport
 from .hidden_api import PossibleCaseNumberApi, ShowCaseDocApi
 from .http import PacerSession
 from .internet_archive import InternetArchive
+from .list_of_creditors import ListOfCreditors
 from .mobile_query import MobileQuery
 from .rss_feeds import PacerRssFeed
 
@@ -29,6 +30,7 @@ __all__ = [
     DownloadConfirmationPage,
     FreeOpinionReport,
     InternetArchive,
+    ListOfCreditors,
     NotificationEmail,
     S3NotificationEmail,
     PacerRssFeed,
