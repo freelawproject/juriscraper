@@ -101,6 +101,7 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
             "all_case_ids": pacer_case_id,
             "case_num": docket_number,
             "typfmt": "rawfrmt",  # Returns raw data.
+            "SMG": "",  # Special mailing group empty.
         }
 
         logger.info(
