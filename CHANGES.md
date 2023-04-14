@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.42 - 2023-04-13**
+
+Features:
+
+- Added ListOfCreditors report parser.
+
+Changes:
+
+- N/A
+
+## Past
+
 **2.5.41 - 2023-04-05**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - Fix ClaimsActivity report alternative POST param for insb.
-
-## Past
 
 **2.5.40 - 2023-04-04**
 
