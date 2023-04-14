@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.43 - 2023-04-14**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Get a valid POST param before requesting the list of creditors.
+
+## Past
+
 **2.5.42 - 2023-04-13**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - N/A
-
-## Past
 
 **2.5.41 - 2023-04-05**
 
