@@ -59,6 +59,17 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
         self._metadata = meta_data
         return meta_data
 
+    def _get_valid_post_param(self) -> str:
+        """Get a valid POST param from the input form.
+        From: /cgi-bin/CredMatrixCase.pl?209635477353597-L_1_0-1
+            "209635477353597-L_1_0-1"
+        return: A valid POST param to query the report.
+        """
+
+        action_value = self.tree.xpath('//form[@method="POST"]/@action')[0]
+        param = action_value.split("?")[1]
+        return param
+
     def download_file(self) -> Optional[Response]:
         """Downloads the formated pipe-limited file using the
         FORMAT_RAW_DATA_SERVICE API.
@@ -97,6 +108,13 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
             self.session is not None
         ), "session attribute of ListOfCreditors cannot be None."
 
+        # To query the report and ensure that the cost is the same as in the
+        # browser, obtain a valid POST param 'x-L_1_0-1' from the input form.
+        logger.info(f"Getting a valid POST param for '{self.court_id}'")
+        self.response = self.session.get(self.url)
+        self.parse()
+
+        post_param = self._get_valid_post_param()
         params = {
             "all_case_ids": pacer_case_id,
             "case_num": docket_number,
@@ -111,9 +129,6 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
             self.court_id,
             params,
         )
-
-        post_param = "1-L_1_0-1"
-
         self.response = self.session.post(
             f"{self.url}?{post_param}", data=params
         )
