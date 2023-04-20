@@ -23,6 +23,8 @@ from .utils import (
 
 logger = make_default_logger()
 
+date_regex = r"[—\d\-–/]+"
+
 
 class AppellateDocketReport(BaseDocketReport, BaseReport):
     """Parse appellate dockets.
@@ -37,6 +39,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     docket_number_dist_regex = re.compile(
         r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})"
     )
+    date_entered_regex = re.compile(r"Entered:\s+(%s)" % date_regex)
 
     CACHE_ATTRS = ["metadata", "docket_entries"]
 
@@ -573,6 +576,9 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                     # Probably a minute order. No need to set either.
                     pass
             de["description"] = force_unicode(cells[2].text_content())
+            de["date_entered"] = self._get_value(
+                self.date_entered_regex, de["description"], cast_to_date=True
+            )
             docket_entries.append(de)
 
         docket_entries = clean_court_object(docket_entries)

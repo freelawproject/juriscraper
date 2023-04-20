@@ -10,6 +10,7 @@
   "demand": "",
   "docket_entries": [
     {
+      "date_entered": null,
       "date_filed": "2010-02-05",
       "description": "Chapter 11 plan filed by Debtor Bon Secour Partners, LLC. (Attachments: # 1 Exhibit A)(Pronske, Gerrit)",
       "document_number": "47",
@@ -17,6 +18,7 @@
       "pacer_seq_no": null
     },
     {
+      "date_entered": null,
       "date_filed": "2010-02-05",
       "description": "Disclosure statement filed by Debtor Bon Secour Partners, LLC. (Attachments: # 1 Exhibit A# 2 Exhibit B# 3 Exhibit C# 4 Exhibit D# 5 Exhibit E)(Pronske, Gerrit)",
       "document_number": "48",
@@ -29,6 +31,7 @@
   "jury_demand": "",
   "mdl_status": "",
   "nature_of_suit": "",
+  "ordered_by": "date_filed",
   "parties": [
     {
       "attorneys": [

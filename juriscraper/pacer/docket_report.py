@@ -2,6 +2,7 @@ import copy
 import pprint
 import re
 import sys
+from typing import List, Optional
 
 from dateutil.tz import gettz
 from lxml import etree
@@ -302,6 +303,7 @@ class DocketReport(BaseDocketReport, BaseReport):
     date_converted_regex = re.compile(
         r"Date [Cc]onverted:\s+(%s)" % date_regex
     )
+    date_entered_regex = re.compile(r"Entered:\s+(%s)" % date_regex)
     # Be careful this does not match "Joint debtor discharged" field.
     date_discharged_regex = re.compile(
         r"(?:Date|Debtor)\s+[Dd]ischarged:\s+(%s)" % date_regex
@@ -471,7 +473,9 @@ class DocketReport(BaseDocketReport, BaseReport):
             "mdl_status": self._get_value(
                 self.mdl_status_regex, self.metadata_values
             ),
+            "ordered_by": self._get_docket_entries_order(),
         }
+
         data = clean_court_object(data)
         self._metadata = data
         return data
@@ -944,11 +948,26 @@ class DocketReport(BaseDocketReport, BaseReport):
 
         return attorneys
 
-    @property
-    def docket_entries(self):
-        if self._docket_entries is not None:
-            return self._docket_entries
+    def _get_docket_entries_order(self) -> Optional[str]:
+        """Get the order of entries in the docket sheet."""
 
+        docket_entry_all_rows = self._get_docket_entry_rows()
+        try:
+            docket_entry_table_headers = docket_entry_all_rows[0]
+            header_cells = docket_entry_table_headers.xpath(
+                "./td[not(./input)] | ./th[not(./input)]"
+            )
+            order = "date_filed"
+            if header_cells[0].text_content() in [
+                "Date Entered",
+                "Docket Date",
+            ]:
+                order = "date_entered"
+        except IndexError:
+            return None
+        return order
+
+    def _get_docket_entry_rows(self) -> List[HtmlElement]:
         # There can be multiple docket entry tables on a single docket page.
         # See https://github.com/freelawproject/courtlistener/issues/762. ∴ we
         # need to identify the first table, and all following tables. The
@@ -960,7 +979,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             'selected documents")])'
         )
         footer_multi_doc = 'not(.//text()[contains(., "Footer format:")])'
-        docket_entry_rows = self.tree.xpath(
+        docket_entry_all_rows = self.tree.xpath(
             "//table"
             "[preceding-sibling::table[{dh}] or {dh}]"
             "[{b_multi_doc}]"
@@ -970,9 +989,16 @@ class DocketReport(BaseDocketReport, BaseReport):
                 b_multi_doc=bankr_multi_doc,
                 footer_multi_doc=footer_multi_doc,
             )
-        )[
-            1:
-        ]  # Skip the first row.
+        )
+        return docket_entry_all_rows
+
+    @property
+    def docket_entries(self):
+        if self._docket_entries is not None:
+            return self._docket_entries
+
+        docket_entry_all_rows = self._get_docket_entry_rows()
+        docket_entry_rows = docket_entry_all_rows[1:]  # Skip the first row.
 
         docket_entries = []
         for row in docket_entry_rows:
@@ -998,6 +1024,9 @@ class DocketReport(BaseDocketReport, BaseReport):
             )
             de["pacer_doc_id"], de["pacer_seq_no"] = results[0], results[1]
             de["description"] = self._get_description(cells)
+            de["date_entered"] = self._get_value(
+                self.date_entered_regex, de["description"], cast_to_date=True
+            )
 
             number = de["document_number"]
             if number is not None and not number.isdigit():
