@@ -2,6 +2,7 @@ import copy
 import pprint
 import re
 import sys
+from typing import List, Optional
 
 from dateutil.tz import gettz
 from lxml import etree
@@ -472,24 +473,8 @@ class DocketReport(BaseDocketReport, BaseReport):
             "mdl_status": self._get_value(
                 self.mdl_status_regex, self.metadata_values
             ),
+            "ordered_by": self._get_docket_entries_order(),
         }
-
-        docket_entry_all_rows = self._get_docket_entry_rows()
-        try:
-            docket_entry_table_headers = docket_entry_all_rows[0]
-            header_cells = docket_entry_table_headers.xpath(
-                "./td[not(./input)] | ./th[not(./input)]"
-            )
-            order = "date_filed"
-            if header_cells[0].text_content() in [
-                "Date Entered",
-                "Docket Date",
-            ]:
-                order = "date_entered"
-            data["ordered_by"] = order
-        except IndexError:
-            pass
-            data["ordered_by"] = None
 
         data = clean_court_object(data)
         self._metadata = data
@@ -963,7 +948,26 @@ class DocketReport(BaseDocketReport, BaseReport):
 
         return attorneys
 
-    def _get_docket_entry_rows(self):
+    def _get_docket_entries_order(self) -> Optional[str]:
+        """Get the order of entries in the docket sheet."""
+
+        docket_entry_all_rows = self._get_docket_entry_rows()
+        try:
+            docket_entry_table_headers = docket_entry_all_rows[0]
+            header_cells = docket_entry_table_headers.xpath(
+                "./td[not(./input)] | ./th[not(./input)]"
+            )
+            order = "date_filed"
+            if header_cells[0].text_content() in [
+                "Date Entered",
+                "Docket Date",
+            ]:
+                order = "date_entered"
+        except IndexError:
+            return None
+        return order
+
+    def _get_docket_entry_rows(self) -> List[HtmlElement]:
         # There can be multiple docket entry tables on a single docket page.
         # See https://github.com/freelawproject/courtlistener/issues/762. ∴ we
         # need to identify the first table, and all following tables. The
