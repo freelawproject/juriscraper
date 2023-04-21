@@ -522,10 +522,14 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         docket_number = self.docket_numbers[0]
         case_name = self.case_names[0]
 
-        if self.court_id == "ctb":
-            # In: 23-20091 Corrected Amendment
-            # Out: Corrected Amendment
+        if self.court_id == "cacb" or self.court_id == "ctb":
+            # In: 6:22-bk-13643-SY Request for courtesy Notice of Electronic Filing (NEF)
+            # Out: Request for courtesy Notice of Electronic Filing (NEF)
             short_description = subject.split(docket_number)[-1]
+
+            # Remove docket number traces "-AAA"
+            regex = r"^-.*?\s"
+            short_description = re.sub(regex, "", short_description)
 
         elif self.court_id == "njb":
             # In: Ch-11 19-27439-MBK Determination of Adjournment Request - Hollister Construc
@@ -556,15 +560,6 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # In: Ch-7 22-20823-GLT U LOCK INC Reply
             # Out: Reply
             short_description = subject.split(case_name)[-1]
-
-        elif self.court_id == "cacb":
-            # In: 6:22-bk-13643-SY Request for courtesy Notice of Electronic Filing (NEF)
-            # Out: Request for courtesy Notice of Electronic Filing (NEF)
-            short_description = subject.split(docket_number)[-1]
-
-            # Remove docket number traces "-AAA"
-            regex = r"^-.*?\s"
-            short_description = re.sub(regex, "", short_description)
 
         return short_description
 
