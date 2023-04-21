@@ -568,6 +568,8 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: The short description of the case.
         """
 
+        if not self.subject:
+            return ""
         subject = clean_string(self.subject)
         for case_name in self.case_names:
             # cases_names is a list of strings that can contain one or multiple
