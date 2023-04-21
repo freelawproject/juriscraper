@@ -210,6 +210,7 @@ class BaseReport:
                 params = {
                     "caseid": pacer_case_id,
                     "magic_num": pacer_magic_num,
+                    "use_magic": "1",  # Bypass the free look confirmation.
                 }
 
             # Add parameters to the PACER base url and make a GET request
