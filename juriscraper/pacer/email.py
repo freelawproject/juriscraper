@@ -121,6 +121,9 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             case_name = self._xpath_text_0(current_node, f"{path}/p")
             if not case_name:
                 case_name = "Unknown Case Title"
+
+        # Cache case_name before harmonizing it. For its use parsing the
+        # short_description.
         self.case_names.append(clean_string(case_name))
         return clean_string(harmonize(case_name))
 
@@ -146,6 +149,8 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         else:
             case_name = "Unknown Case Title"
 
+        # Cache case_name before harmonizing it. For its use parsing the
+        # short_description.
         self.case_names.append(clean_string(case_name))
         return clean_string(harmonize(case_name))
 
@@ -377,11 +382,12 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             docket_number = self._get_docket_number_plain()
             docket = {
                 "case_name": self._get_case_name_plain(),
-                "docket_number": self._get_docket_number_plain(),
+                "docket_number": docket_number,
                 "date_filed": self._get_date_filed(),
                 "docket_entries": self._get_docket_entries(),
             }
             dockets.append(docket)
+            # Cache the docket number for its later use.
             self.docket_numbers.append(docket_number)
         else:
             dockets_table = self.tree.xpath(
@@ -395,8 +401,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 )
             for docket_table in dockets_table:
                 docket_number = self._get_docket_number(docket_table)
-                # Cache the docket number for its later use in
-                # _get_email_recipients_with_links
+                # Cache the docket number and case name for its later use.
                 self.docket_numbers.append(docket_number)
                 docket = {
                     "case_name": self._get_case_name(docket_table),
@@ -407,7 +412,8 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 dockets.append(docket)
 
             if len(dockets) > 1:
-                # Multi docket nef, redo short_description:
+                # Re-do the short description for multi-docket NEFs after
+                # obtaining all possible case names.
                 for docket in dockets:
                     if docket["docket_entries"]:
                         docket["docket_entries"][0][
@@ -518,12 +524,12 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         if self.court_id == "ctb":
             # In: 23-20091 Corrected Amendment
-            # Returns: Corrected Amendment
+            # Out: Corrected Amendment
             short_description = subject.split(docket_number)[-1]
 
         elif self.court_id == "njb":
             # In: Ch-11 19-27439-MBK Determination of Adjournment Request - Hollister Construc
-            # Returns: Determination of Adjournment Request
+            # Out: Determination of Adjournment Request
             short_description = subject.split(docket_number)[-1]
             short_description = short_description.rsplit("-", 1)[0]
 
@@ -533,7 +539,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         elif self.court_id == "nysb":
             # In: 22-22507-cgm Ch13 Affidavit Re: Gerasimos Stefanitsis
-            # Returns: Affidavit
+            # Out: Affidavit
             short_description = subject.split(case_name)[0]
             short_description = short_description.replace("Re:", "")
             short_description = short_description.split(docket_number)[-1]
@@ -548,12 +554,12 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         elif self.court_id == "pawb":
             # In: Ch-7 22-20823-GLT U LOCK INC Reply
-            # Returns: Reply
+            # Out: Reply
             short_description = subject.split(case_name)[-1]
 
         elif self.court_id == "cacb":
             # In: 6:22-bk-13643-SY Request for courtesy Notice of Electronic Filing (NEF)
-            # Returns: Request for courtesy Notice of Electronic Filing (NEF)
+            # Out: Request for courtesy Notice of Electronic Filing (NEF)
             short_description = subject.split(docket_number)[-1]
 
             # Remove docket number traces "-AAA"
@@ -580,8 +586,9 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 break
 
         if self.appellate:
+            # Appellate notification.
             # In: 21-1975 New York State Telecommunicati v. James "Letter RECEIVED"
-            # Returns: Letter RECEIVED
+            # Out: Letter RECEIVED
             short_description = subject_split_case_name[-1]
             match = re.search(r'"(.*?)"', short_description)
             if match:
@@ -589,12 +596,14 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             else:
                 short_description = ""
         elif self.is_bankruptcy:
+            # Bankruptcy notification.
             short_description = self._parse_bankruptcy_short_description(
                 subject
             )
         else:
+            # District notification.
             # In: Activity in Case 1:21-cv-01456-MN CBV, Inc. v. ChanBond, LLC Letter
-            # Returns: Letter
+            # Out: Letter
             short_description = subject_split_case_name[-1].strip()
 
         return clean_string(short_description)
