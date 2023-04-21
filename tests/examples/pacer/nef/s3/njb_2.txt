@@ -1,0 +1,93 @@
+Return-Path: <cmecf_help_desk@njb.uscourts.gov>
+Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov [63.241.40.204])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 3t36arimmoe2kl45q2p9tuoiiprstdtbsbumsk01
+ for recipient@example.com;
+ Sat, 28 Jan 2023 05:26:26 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of njb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=cmecf_help_desk@njb.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of njb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=cmecf_help_desk@njb.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+ dmarc=none header.from=njb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFIR2pjbVR6OHJDS3cvQk5SNVJxNTBTL1Q1MkxnY0JlbUpNaFhUL0wraUJ1K3g2UjZVNzdMcVR6ZGdnK2Z0SmpCc2F0Q1FiRXBxeXdQY0ZnN09KTzJzRThFR0FrV1FKeDRVNEF0cmdWc1dMS3Z3YzZET1djQmdoY0NFSHhiWGtjTmJWTVFyZVQvMjYxSElmTzdRNjBuR0MwTUY1RmRWK0cwWFNnQ1ZqQVlsYWloZFY4bDhvbFBPNExKUlZXM2FROWhmM3V4akhSSm9FT25YU3lwSGEvTTFiRnNWeUhsMkZTOWhrZXpBOUkxZGtNUmcrN0lsY1BjOW41c3hGV0Zsc21FRnhEOGtJWGlzMHpkMGJ3SnZFS0cyaXBLUEJzOXM5SzJ3UUJGSndXd3gvSDc4b09uRElmY2R1SHpjOVEycHdYb2M9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=XPFH0L6lyrK0VYfSuvA+kxBfRa9x7ao2J/x+uwgAcELOgLbz2vpenIE9lnMtmLIGYBMUJGHFnv9hpFyeGirzI07jDv9H3VWR/nR2uZ7SAc7sv/SDBSrGh7OwDwpkI0f9GTTMewTZ2lzTiRQGTXOjyUXreKnzy7DFQpX+ZN2PPaM=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1674883586; v=1; bh=p25ypWmbiZZJDb1BZhCk816aViU3ofPJVzqqtSGHzJw=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.77
+Received: from unknown (HELO njbdb.njb.gtwy.dcn) ([156.119.190.77])
+  by icmecf201.gtwy.uscourts.gov with ESMTP; 28 Jan 2023 00:26:25 -0500
+Received: from njbdb.njb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by njbdb.njb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 30S5Ntpb054070;
+	Sat, 28 Jan 2023 00:25:09 -0500
+Received: (from ecf_web@localhost)
+	by njbdb.njb.gtwy.dcn (8.14.7/8.14.4/Submit) id 30S5NpZ8053631;
+	Sat, 28 Jan 2023 00:23:51 -0500
+Date: Sat, 28 Jan 2023 00:23:51 -0500
+MIME-Version:1.0
+From:cmecf_help_desk@njb.uscourts.gov
+To:no-reply@njb.uscourts.gov
+Message-Id:<60816012@njb.uscourts.gov>
+Subject:Ch-11 19-27439-MBK BNC Certificate of Notice - Order  - Hollister Construc
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of New Jersey</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Admin entered on 01/28/2023  at 00:17 AM EST and filed on 01/27/2023 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Hollister Construction Services, LLC              </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.njb.uscourts.gov/cgi-bin/DktRpt.pl?1051949>19-27439-MBK</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.njb.uscourts.gov/doc1/118064501082?pdf_header=&magic_num=76732728&de_seq_num=7968&caseid=1051949'>1979</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+BNC Certificate of Notice - Order No. of Notices: 78. Notice Date 01/27/2023. (Admin.)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Imaged Certificate of Notice
+<BR><STRONG>Original filename:</STRONG>P31927439orderntc7963.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR>[STAMP bkecfStamp_ID=1002741850 [Date=1/28/2023] [FileNumber=60815138-0] [08c81971bdca2918f0147ec0cc23b5e25238d73a1e80afc9e7f1430e225b14b1ce4f66b704ef8cfbe649d23435c7ce243c1f128d0046bc24b0e775ade212b121]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+19-27439-MBK Notice will be electronically mailed to:
+</B>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>

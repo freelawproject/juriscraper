@@ -1,0 +1,110 @@
+Return-Path: <CTBECF_Courtmail@ctb.uscourts.gov>
+Received: from icmecf202.gtwy.uscourts.gov (icmecf202.gtwy.uscourts.gov [63.241.40.205])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 0m6bkhf4rdlbmok7hlg4cn109alh3gn6ijhn0jg1
+ for recipient@example.com;
+ Fri, 17 Feb 2023 01:13:57 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ctb.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=CTBECF_Courtmail@ctb.uscourts.gov; helo=icmecf202.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ctb.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=CTBECF_Courtmail@ctb.uscourts.gov; helo=icmecf202.gtwy.uscourts.gov;
+ dmarc=none header.from=ctb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFWjBlM3ZTa205aTd2SEN3dlE4QkU0aSszY2xhZDdhd3VVeWRNeEpDeEhCdnNSVGI4NTZiMkFVenNuNEpFektKUVJyN2YrL3VTUSt4V0FzWlhEa2tWOWpTa1BtdGpKNHlYL3VXazVxNVgyNWR2cmEvZSt2RmUvTUt4dEVRY2Erb3VxOUVSQjdwQzJZcVF6RzZrdW9tTStyQk5FR0ZKQUdKQXlYcDFrRnRoVEd3NVFKU3I0eXpXay9XMDZ6S0Y0QTQ4YVBMekZFdlNpaXhsVzcrTXcvOGt2aDl4SVRUUTJPT292bURQSWdYcjFWTUZBYU45THlHaDJhU283Q0RhZ2RpMzN3c1FqZkdFa2dxYmFicjAyVWd2S05BT2VVdjRrcUlMd2xubzc5NUhkb1ZvSllaaWNqMldvMGJhOXdudEY2dFE9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=STzU1nILtQ2/c24v2IjHZ262lSVtivG777dqycem/JF81vtNtrjKnUXaGMCqjzU65apRSj+Bv99IDeDZnIPWO5fKDB6+hSBph/2ACWoJS+k7oTuuZGCBg6j4vxITWyjhJzW5wWQ6A/7KpE95ffwUDm0VTNHd+DV3O+dNo/9ynRw=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1676596438; v=1; bh=esfxUY/36JcbSyjRPK73c0BBSqhFyHzDldqpkaCfPbs=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.191.114
+Received: from ctbdb.ctb.gtwy.dcn ([156.119.191.114])
+  by icmecf202.gtwy.uscourts.gov with ESMTP; 16 Feb 2023 20:13:56 -0500
+Received: from ctbdb.ctb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by ctbdb.ctb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 31H1DpES094270;
+	Thu, 16 Feb 2023 20:13:51 -0500
+Received: (from ecf_web@localhost)
+	by ctbdb.ctb.gtwy.dcn (8.14.7/8.14.4/Submit) id 31H1DR8N092975;
+	Thu, 16 Feb 2023 20:13:27 -0500
+Date: Thu, 16 Feb 2023 20:13:27 -0500
+X-Authentication-Warning: ctbdb.ctb.gtwy.dcn: ecf_web set sender to CTBECF_Courtmail@ctb.uscourts.gov using -f
+MIME-Version:1.0
+From:CTBECF_Courtmail@ctb.uscourts.gov
+To:Courtmail@ctb.uscourts.gov
+Message-Id:<15040081@ctb.uscourts.gov>
+Subject:23-20091 Corrected Amendment
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of Connecticut</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Michael J. Habib entered on 2/16/2023 at 8:13 PM EST and filed on 2/16/2023 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Alan E. Waskowicz                                 </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.ctb.uscourts.gov/cgi-bin/DktRpt.pl?309656>23-20091</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.ctb.uscourts.gov/doc1/040014673506?pdf_header=&magic_num=5573258&de_seq_num=33&caseid=309656'>10</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Corrected Amendment <i>Schedule E/F</i>  Filed by  Michael J. Habib   on behalf of  Alan E. Waskowicz  Debtor,<font color=blue>   (RE: [9] Amended Schedules/Amended List of Creditors filed by Debtor Alan E. Waskowicz).  </font>   (Attachments: # (1)  Certificate of Service) (Habib, Michael)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>Corrected Amended Schedule EF_02.16.23.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1018027260 [Date=2/16/2023] [FileNumber=15040079-
+<BR><TAB>0] [65cd83242d26417153a5e5e93fa5711472ba7db3fcf67ab620c1e73ac6218a6af6
+<BR><TAB>770b40457ab63c40bd4cb9ee43573ceb5b2817073e07a1a725a7070879adf1]]
+<BR>
+<STRONG>Document description:</STRONG> Certificate of Service
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Cert of Srvc_Corrected Amended Schedule EF_Waskowicz_02.16.2023.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1018027260 [Date=2/16/2023] [FileNumber=15040079-
+<BR><TAB>1] [d01d62ff924de034471365dcb2e5806ecbb0f25028dab1a06686eab7c50dee34b7
+<BR><TAB>a5a284825bac415b89ad0285e4ec843620ee8bb579dd608cc022956685c94d]]
+<BR>
+
+</table>
+</div>
+
+
+
+<BR>
+<B>
+23-20091 Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR>
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>

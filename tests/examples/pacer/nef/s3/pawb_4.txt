@@ -1,0 +1,91 @@
+Return-Path: <Courtmail@pawb.uscourts.gov>
+Received: from icmecf202.gtwy.uscourts.gov (icmecf202.gtwy.uscourts.gov [63.241.40.205])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id pie9i27k2qd9u583inovt1puca1jkke2gflnghg1
+ for recipient@example.com;
+ Tue, 24 Jan 2023 15:14:31 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of pawb.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=Courtmail@pawb.uscourts.gov; helo=icmecf202.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of pawb.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=Courtmail@pawb.uscourts.gov; helo=icmecf202.gtwy.uscourts.gov;
+ dmarc=none header.from=pawb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHdXVtdUVrVStQMWlKWFVnb1RZT0ZrRFRVbWQweUdBNDhoenNVaWd3VGdtamwwN1RRYkoxemFsSXZmLzY3U3Rqcm5wbGtWejlKaHdqb2VMVUlQUncwRXhEemNVKzRMaFd5NmFGY0F2YkJMQnErNlduMFJHV0QrMlJIWmlIbWV2b01IWG5NOXpOZDV1L0tsRFFjNzVSa0d3S3BEZmxzTzZnS3JvQXBJVEVKOXhaSm5NdTNoQkV6U3RjSDh4TFBNMHlHNXl5NE5jdkE2MmthQlB5a29ub2JvN0tLVjNSWlo3alZYa3N3bVJIdnRodXlrU0FQaXJxa0ZTam5OckI5OXoxRTVrYzVvdC9jNmwwMVE3cWNtR2pLUW5tWVJNaDVKdVYyVzNIQ0o0V0piK1E9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=VsdLcqVjW21+Ph7vrCjZAuLgzqXqBIUTSD+th3T7gasVw0NTFJnKLFo0onG/EbGXSdUUuFWRQ3Na9af1+c77NyX4P9dP1coLLIoMrlYu+vrsLbxaW6EnmQJp4sSXOo0g+CEqqdlDa8ezn+/m7O92Hkd80qO0kAUeWbSEt/wa3WY=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1674573272; v=1; bh=90uAEPoy+7aVNDlliGMhuhtiTE5OcoFXrtvmP1QKYZU=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.26
+Received: from pawbdb.pawb.gtwy.dcn ([156.119.190.26])
+  by icmecf202.gtwy.uscourts.gov with ESMTP; 24 Jan 2023 10:14:30 -0500
+Received: from pawbdb.pawb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by pawbdb.pawb.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 30OFEKxu008229;
+	Tue, 24 Jan 2023 10:14:20 -0500
+Received: (from ecf_web@localhost)
+	by pawbdb.pawb.gtwy.dcn (8.14.4/8.14.4/Submit) id 30OFDLVi006965;
+	Tue, 24 Jan 2023 10:13:21 -0500
+Date: Tue, 24 Jan 2023 10:13:21 -0500
+X-Authentication-Warning: pawbdb.pawb.gtwy.dcn: ecf_web set sender to Courtmail@pawb.uscourts.gov using -f
+MIME-Version:1.0
+From:Courtmail@pawb.uscourts.gov
+To:Courtmail@pawb.uscourts.gov
+Message-Id:<26960597@pawb.uscourts.gov>
+Subject:Ch-7   23-70022-JAD Moses Dolz         Corrective Entry
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>WESTERN DISTRICT OF PENNSYLVANIA</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from dkam entered on 1/24/2023 at 10:13 AM EST and filed on 1/24/2023 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Moses Dolz</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.pawb.uscourts.gov/cgi-bin/DktRpt.pl?379645>23-70022-JAD</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+12
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+CORRECTIVE ENTRY: COUNSEL MUST REFILE PAWB LOCAL FORM 29 ENSURING TO ATTACH THE MAILING MATRIX UPLOADED INTO CM/ECF. (RE: related document(s): [9] Notice Regarding Filing of Mailing Matrix filed by Debtor Moses  Dolz).    (dkam)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR>
+<B>
+23-70022-JAD Notice will not be electronically mailed to:
+</B>
+
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>

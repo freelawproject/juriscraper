@@ -1,0 +1,94 @@
+Return-Path: <Courtmail@pawb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id nlb6ps3uot6egl1cqm9088ajca1ji8n4vclbj1o1
+ for recipient@example.com;
+ Mon, 27 Feb 2023 18:05:29 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of pawb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=Courtmail@pawb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of pawb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=Courtmail@pawb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=pawb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFT0xHL0FPRFp3WGV5RkxLbFFkSDdOWWxDUHI2SUlOaE9XaXhnM1hCL1JCdUFQM3BHYVVkUlpONjJzRnhhTGxWNmo2QS9HcWIwTytueVVVTjJvSkZWeEd4OW5Wa1g4MmgwMzlYNlpwWVdWZWQ1YmYzOXFRaHlJdlJHcUNValdURmsyVzI2NEg2Nm1aMER1RTJMNFRSMlJURm8zM3liSWZGMmZEeXRpdjdnOFczNkJmVnFuWEp5K1dZWXc2bTNxME1jVWt4dkpXMnQvb2NjOFA2MTJ0Y0JJaE1uSFR0cklyTEFzcWo2aWRpMk9KWnZrWHI0SXI4NUYzeWZ2ZnZwZTdWcXBPbDJTa2M2Vi9TTmRHdGtGcmQ1OVo3QkZkeFI4aWt4RUlsMUwwQ1lpQmc9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=iLU5h83jlOZBr6+zo10z0s7Kfc+r6OpobWT7wJehalXOEnrjubGC8ZEeLO9opiQUaH06K1Gt3Q9c3qWMGlgRjEUYouhaASy82+aUoG6T5jqkJOWR+AUN/NGMOjZ6+bWbji3PgBod+9Webh2LFSrGGRF6Xrg59j8HbyRQ13BK7aU=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1677521129; v=1; bh=Tw++C9dbUoZXG4e+He8QTOy9aZJXDq1zlxPUV+oK5iw=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.26
+Received: from pawbdb.pawb.gtwy.dcn ([156.119.190.26])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 27 Feb 2023 13:05:28 -0500
+Received: from pawbdb.pawb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by pawbdb.pawb.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 31RI51Ju129068;
+	Mon, 27 Feb 2023 13:05:02 -0500
+Received: (from ecf_web@localhost)
+	by pawbdb.pawb.gtwy.dcn (8.14.4/8.14.4/Submit) id 31RI46n4127661;
+	Mon, 27 Feb 2023 13:04:06 -0500
+Date: Mon, 27 Feb 2023 13:04:06 -0500
+X-Authentication-Warning: pawbdb.pawb.gtwy.dcn: ecf_web set sender to Courtmail@pawb.uscourts.gov using -f
+MIME-Version:1.0
+From:Courtmail@pawb.uscourts.gov
+To:Courtmail@pawb.uscourts.gov
+Message-Id:<27022782@pawb.uscourts.gov>
+Subject:Ch-7   23-20396-GLT Daniel J. Adamson  Notice of Additional Filing Deficiencies
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>WESTERN DISTRICT OF PENNSYLVANIA</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from mgut entered on 2/27/2023 at 1:04 PM EST and filed on 2/27/2023 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Daniel J. Adamson</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.pawb.uscourts.gov/cgi-bin/DktRpt.pl?380029>23-20396-GLT</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+3
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Notice of Additional Filing Deficiencies. Assigned Judge: TADDONIO. Appointed Trustee: ZEBLEY. Pursuant to Local Rule  1017-2, the United States Trustee is deemed to have filed a Motion To Dismiss this case, and that Motion will be deemed GRANTED, if any deadline set forth in the first docket entry or any of the following deadlines is not met. Incomplete Filings: CERTIFICATE OF CREDIT COUNSELING AND EMPLOYEE INCOME RECORDS OR A STATEMENT THAT THERE ARE NONE (RE: related document(s): [1] Voluntary Petition Chapter 7 filed by Debtor Daniel J. Adamson).  Incomplete Filings due by 3/10/2023.   (mgut)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+23-20396-GLT Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR>
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>

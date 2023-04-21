@@ -1,0 +1,102 @@
+Return-Path: <nysbinfo@nysb.uscourts.gov>
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id lnku40dkpjle72vnu3o0atq01vn58jr53f7loog1
+ for recipient@example.com;
+ Mon, 27 Feb 2023 21:57:27 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of nysb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=nysbinfo@nysb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of nysb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=nysbinfo@nysb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+ dmarc=none header.from=nysb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFMlJwRldsVCs2M2p4Z3RUenVkd1k3VWk2YlorWGVXSkRyRktlWlgvZGdRMDk1NThjNmlmUWRFbEZWNm9FQmo5QkVTaFE2YTJwbHJhNzRqQml1dmllUHdkQU9vb3FMNG5TYlhyV1JSVDlUNVJRT1hUNjdSbmpjWDZDQngrZWt4cERSNmRJQTY1bHl0bWRMY2tGRStUVmgvZ1dlMVFQRkdSQVN3cXludXFYdnhxSmt1RVBOeEJmSW1sam44VUFVK0tUblloRlBPZXV6cnREcXcxWEFRNUJCQitFVTkranByaGlqN0hnSlpmZXJyYUxlSTRPQ0psZ0NEYjZLSkxOZzJ1VWNvMUkwazRhMldhT2JpTzIzcC8ra1gyeVdBSVZQakVOUTJ1VVU4eG9ta2c9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=VEYuR55mw2zUNWukqeVr5o8+AbAlaYxz4PIJHYJpc2W6JLP8tSKTWeiDNJj4yelaW6xKWxleGj+ZmSsckhPNyAyG/EiUAthh7WzoSpHTcqEzjp36Fdd+8E+CzY5vOfgxjogsi2+c73WGZywY11/XNfLwXkNDzCJtZYF2xi5XZZM=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1677535048; v=1; bh=DY+MoPdr7FvM4EiLcv5A85GTyz8MYAOc0kd03iu1988=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.118
+Received: from nysbdb.nysb.gtwy.dcn ([156.119.190.118])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 27 Feb 2023 16:57:26 -0500
+Received: from nysbdb.nysb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by nysbdb.nysb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 31RLufdw111011;
+	Mon, 27 Feb 2023 16:56:42 -0500
+Received: (from ecf_web@localhost)
+	by nysbdb.nysb.gtwy.dcn (8.14.7/8.14.4/Submit) id 31RLtw18109961;
+	Mon, 27 Feb 2023 16:55:58 -0500
+Date: Mon, 27 Feb 2023 16:55:58 -0500
+X-Authentication-Warning: nysbdb.nysb.gtwy.dcn: ecf_web set sender to nysbinfo@nysb.uscourts.gov using -f
+MIME-Version:1.0
+From:nysbinfo@nysb.uscourts.gov
+To:courtmail@nysb.uscourts.gov
+Message-Id:<20659323@nysb.uscourts.gov>
+Subject:NEF: 22-22507-cgm Ch13 Affidavit Re: Gerasimos Stefanitsis
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Southern District of New York</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Lawrence Morrison entered on 2/27/2023 at 4:55 PM  and filed on 2/27/2023 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Gerasimos Stefanitsis                             </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.nysb.uscourts.gov/cgi-bin/DktRpt.pl?313115>22-22507-cgm</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.nysb.uscourts.gov/doc1/126022597368?pdf_header=&magic_num=73840684&de_seq_num=204&caseid=313115'>55</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Affidavit <i></i>   Filed by  Lawrence  Morrison  on behalf of  Gerasimos  Stefanitsis.  (Morrison, Lawrence)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>Affirmation  02.27.2023 (2).pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP NYSBStamp_ID=842906028 [Date=2/27/2023] [FileNumber=20659321-0]
+<BR><TAB> [7f7ef2c9db9f8523915cb3fb43568b1a2316bd3f725b89110dfd0452b87806c755a3
+<BR><TAB>2e9bf35948c5f629004fdc6dea13f11c5eab94203123e677136d4cb5ebe6]]
+<BR>
+
+</table>
+</div>
+
+
+
+<BR>
+<B>
+22-22507-cgm Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR>
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>
