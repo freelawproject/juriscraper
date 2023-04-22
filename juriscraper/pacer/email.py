@@ -412,8 +412,8 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 dockets.append(docket)
 
             if len(dockets) > 1:
-                # Re-do the short description for multi-docket NEFs after
-                # obtaining all possible case names.
+                # In multi-docket NEFs, the subject refers to only the short
+                # description of the first item.
                 for docket in dockets:
                     if docket["docket_entries"]:
                         docket["docket_entries"][0][
