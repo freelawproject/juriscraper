@@ -563,6 +563,45 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         return short_description
 
+    def _parse_appellate_short_description(self, subject: str) -> str:
+        """Parse the short description of an appellate entry from the subject
+        or from the footer notification, returns the better one.
+
+        :param subject: The subject string from which to parse the short
+        description.
+        :return: The parsed short description
+        """
+
+        # Parse the short description from the notification footer.
+        path = "//strong[contains(text(), 'Document Description: ')]/following-sibling::text()[1]"
+        try:
+            short_description_footer = self.tree.xpath(path)[0]
+        except IndexError:
+            short_description_footer = ""
+
+        # Replace _ with whitespace in strings like Defective_Document_Notice
+        short_description_footer = short_description_footer.replace("_", " ")
+
+        # Sometimes the description in the footer only says "Main document."
+        # Skip it.
+        if short_description_footer == "Main document":
+            short_description_footer = ""
+
+        # Parse the description from the subject as a fallback.
+        # In: 21-1975 New York State Telecommunicati v. James "Letter RECEIVED"
+        # Out: Letter RECEIVED
+        subject_split_case_name = subject.split(self.case_names[0])
+        match = re.search(r'"(.*?)"', subject_split_case_name[-1])
+        short_description_subject = ""
+        if match:
+            short_description_subject = match.group(1)
+
+        # Select the longer short description, either from the subject or footer
+        longer_short_description = max(
+            short_description_subject, short_description_footer, key=len
+        )
+        return longer_short_description
+
     def _get_short_description(self) -> str:
         """Get the short description of a case from the subject string.
 
@@ -582,14 +621,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         if self.appellate:
             # Appellate notification.
-            # In: 21-1975 New York State Telecommunicati v. James "Letter RECEIVED"
-            # Out: Letter RECEIVED
-            short_description = subject_split_case_name[-1]
-            match = re.search(r'"(.*?)"', short_description)
-            if match:
-                short_description = match.group(1)
-            else:
-                short_description = ""
+            short_description = self._parse_appellate_short_description(
+                subject
+            )
+
         elif self.is_bankruptcy:
             # Bankruptcy notification.
             short_description = self._parse_bankruptcy_short_description(
