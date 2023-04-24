@@ -1,0 +1,95 @@
+Return-Path: <Courtmail@pawb.uscourts.gov>
+Received: from icmecf202.gtwy.uscourts.gov (icmecf202.gtwy.uscourts.gov [63.241.40.205])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id khn7insae4slmjj3svo3i5sp3rvkcbb5uu8g4f01
+ for recipient@example.com;
+ Tue, 24 Jan 2023 16:01:41 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of pawb.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=Courtmail@pawb.uscourts.gov; helo=icmecf202.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of pawb.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=Courtmail@pawb.uscourts.gov; helo=icmecf202.gtwy.uscourts.gov;
+ dmarc=none header.from=pawb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFYlhrYUFjV0JkVElUUExBTTdNZXFMdlNSSndNeTFFbS9QMGZ0YWlIVis4NHd1b0NQSzZrYjBnWXBDaExRSHUxeStRNVZmUGhSQ1hvV1pkTlNVS3gvV2xKYXlBVkF4Nlg5L3FkM0k5RmlCR3kwYW1VTXZIamI5c2FIeDlmV1ZzU2pyNFpRelhLRFg4Q3d1eXVyYUc5VFNLM2JuT0lFTnZ1QnRmcktQb1NlNFNmRjZjMlI3bkNqbTZnUnpRRFppV0lQcjZPdmswMW5MTUo2NU1UdjVVTU1QSkEvdDVhOEdlRXZWWTZWR2VVcmNYWDZmTEpoYzI1RGpvZHZrd0ExbDd3N3FjaWtWK0ZiY3A5UkRyMDlRdklCZzQvdnpZQ2czMElFc1FQQVl2OFZKb1E9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=YvpWzQ5luV0euggPNSyiuPWXwtyHkjCJp7SgVnwNeMI1abM+belGhqJR4FbPoSQYJ4m7R7wyl++we++lW6v8Kyr60C4VY4oQKJJpC3wxC5GUjAhC8UEJiTSBCYgSK5jbN4mTtwZ3npuWA0+ufp3SGJjHJcwshWJ0uoj4xgn9CI8=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1674576103; v=1; bh=KSJ5dCTgmu1C27aCL1UNeO3oZHeMybbQti2SR11r/nM=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.26
+Received: from pawbdb.pawb.gtwy.dcn ([156.119.190.26])
+  by icmecf202.gtwy.uscourts.gov with ESMTP; 24 Jan 2023 11:01:41 -0500
+Received: from pawbdb.pawb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by pawbdb.pawb.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 30OG1SrX063633;
+	Tue, 24 Jan 2023 11:01:28 -0500
+Received: (from ecf_web@localhost)
+	by pawbdb.pawb.gtwy.dcn (8.14.4/8.14.4/Submit) id 30OG0xX6063185;
+	Tue, 24 Jan 2023 11:00:59 -0500
+Date: Tue, 24 Jan 2023 11:00:59 -0500
+X-Authentication-Warning: pawbdb.pawb.gtwy.dcn: ecf_web set sender to Courtmail@pawb.uscourts.gov using -f
+MIME-Version:1.0
+From:Courtmail@pawb.uscourts.gov
+To:Courtmail@pawb.uscourts.gov
+Message-Id:<26960780@pawb.uscourts.gov>
+Subject:Ch-7   22-20823-GLT U LOCK INC         Reply
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>WESTERN DISTRICT OF PENNSYLVANIA</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from nsha,   entered on 1/24/2023 at 11:00 AM EST and filed on 1/24/2023 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>U LOCK INC                                        </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.pawb.uscourts.gov/cgi-bin/DktRpt.pl?376948>22-20823-GLT</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.pawb.uscourts.gov/doc1/156029022118?pdf_header=&magic_num=80042011&de_seq_num=1161&caseid=376948'>303</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+  Reply <i>to the Response re: Show Cause</i> Regarding the Hearing on 1/27/2023. Filed by  George  Snyder   (RE: related document(s): [298] Response filed by Creditor Christine  Biros).   (nsha)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>edss-22-20823-reply.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1000342144 [Date=1/24/2023] [FileNumber=26960778-
+<BR><TAB>0] [1414aa5511aab53a12ce0f9cccc8b8d9a1e7fb55163bc413dd7d003adf115f4ea1
+<BR><TAB>1bd6321a26677ec1f4da0ee7d8f23e0aaebc2bd6f7900d312233442e65202f]]
+<BR>
+
+</table>
+</div>
+
+
+<BR><B>
+22-20823-GLT Notice will be electronically mailed to:
+</B>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>

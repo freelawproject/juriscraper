@@ -1,0 +1,102 @@
+Return-Path: <nysbinfo@nysb.uscourts.gov>
+Received: from icmecf202.gtwy.uscourts.gov (icmecf202.gtwy.uscourts.gov [63.241.40.205])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 7grid8fu10m5f7grnu4lcrktg1gtgohlc6agce01
+ for recipient@example.com;
+ Wed, 21 Dec 2022 16:55:11 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of nysb.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=nysbinfo@nysb.uscourts.gov; helo=icmecf202.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of nysb.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=nysbinfo@nysb.uscourts.gov; helo=icmecf202.gtwy.uscourts.gov;
+ dmarc=none header.from=nysb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHYzZtRE1oVDBVdGM5dkY3VFRia3dNZ0tzUk5kKzlJZVp5UnBtcnQ2akMxbllZOW5BWFlSOW1jeU5HMGgzY29POCt1OEtEK0MxZ0w3TzRUK1RlUW8vZVRyYnFzOFAxZ0VVMlJ1RlFKdG5zOFEyNFhKeFU1c0pwZUN1dnU2VjlZbzZxRlI3M3dLQWFadkdsZ3BKalNISjltN05vMWdxY2ZVREpWZm5lSlpGa3RGOXVMUGk0SUVzQTVaSWhxQVJMTks3QStHL2FPcGd5dmh1OE1rUDdkc0NoRkVRd0lpeS9ZQm10cVhHcTRYUWRvS1JGQnNZVkRRbGd4VDBYQ2tpUkM1aHRnK3N0YjgvNDc0TG5FRXlsVTA4MWVjUUllazdyT2wwUzJkbjJKSGpmUUE9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=h4NkCNd1ntYSFWHqR/53WJL/0Krb2D6/hMy62KMT9oLo/BO5jP/CIEuxfKtApXQaJ14jun+Nj1XkyAmISN5jgCKvEHIofAhNm/vxM35+lsImVsKzoLc8ipoAu2EjtkHwJmQ2Ki2SNn5moN83UPfD/CcFpoSV5KJvs+U5wOBOL5E=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1671641712; v=1; bh=Fqr2thLvi8Laz+mWXaQRCuFHLbHbkyojHX87/dORvVg=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.118
+Received: from nysbdb.nysb.gtwy.dcn ([156.119.190.118])
+  by icmecf202.gtwy.uscourts.gov with ESMTP; 21 Dec 2022 11:55:11 -0500
+Received: from nysbdb.nysb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by nysbdb.nysb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 2BLGsLNv091876;
+	Wed, 21 Dec 2022 11:54:22 -0500
+Received: (from ecf_web@localhost)
+	by nysbdb.nysb.gtwy.dcn (8.14.7/8.14.4/Submit) id 2BLGs7L3091634;
+	Wed, 21 Dec 2022 11:54:07 -0500
+Date: Wed, 21 Dec 2022 11:54:07 -0500
+X-Authentication-Warning: nysbdb.nysb.gtwy.dcn: ecf_web set sender to nysbinfo@nysb.uscourts.gov using -f
+MIME-Version:1.0
+From:nysbinfo@nysb.uscourts.gov
+To:courtmail@nysb.uscourts.gov
+Message-Id:<20579366@nysb.uscourts.gov>
+Subject:NEF: 22-22507-cgm Ch13 Affidavit Re: Gerasimos Stefanitsis
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Southern District of New York</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Lawrence Morrison entered on 12/21/2022 at 11:54 AM  and filed on 12/21/2022 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Gerasimos Stefanitsis                             </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.nysb.uscourts.gov/cgi-bin/DktRpt.pl?313115>22-22507-cgm</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.nysb.uscourts.gov/doc1/126022507628?pdf_header=&magic_num=21715953&de_seq_num=193&caseid=313115'>53</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Affidavit <i>/Declaration of Debtor</i>  (related document(s)[50]) Filed by  Lawrence  Morrison  on behalf of  Gerasimos  Stefanitsis.  (Morrison, Lawrence)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>signedstefanitsisdeclaration.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP NYSBStamp_ID=842906028 [Date=12/21/2022] [FileNumber=20579364-0
+<BR><TAB>] [17fac1c3470a3dbf06f669bc796db10d973b74b4cb797379e7093425d341ccc932c
+<BR><TAB>5ddc82ab3e4ee93984eac987b18df4d9d457ecfcde6b3c116d9f98b5b4c07]]
+<BR>
+
+</table>
+</div>
+
+
+
+<BR>
+<B>
+22-22507-cgm Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR>
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>

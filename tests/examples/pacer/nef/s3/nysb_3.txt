@@ -1,0 +1,94 @@
+Return-Path: <nysbinfo@nysb.uscourts.gov>
+Received: from icmecf202.gtwy.uscourts.gov (icmecf202.gtwy.uscourts.gov [63.241.40.205])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id o6qgqpvcdf2j0ffc7lo7su9ok50fh01v131l0rg1
+ for recipient@example.com;
+ Fri, 09 Dec 2022 15:14:55 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of nysb.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=nysbinfo@nysb.uscourts.gov; helo=icmecf202.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of nysb.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=nysbinfo@nysb.uscourts.gov; helo=icmecf202.gtwy.uscourts.gov;
+ dmarc=none header.from=nysb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFNFg1MjZKZUtIRXNZbDI4bk9kRitGUkNZcFBUTUhUTTZIamJMa1ZraXB6K2hsVUxOV05vRmZtd3I2bGdLd1MrMmljSjNYQ1FQVFFuOGg2Vk5xVVFLZlhyckZaajNSQ1V2NldvaUNrY0hSaDlab0J6aWZlMDVIL2dMU082cTlzZ0FzcUdhZFBLSnQ3WHlzNWZma3pqMDZCVm1ZeWt2NFI2WlYrYktIVzd6TVFreWdneC81L0tVNmxXS2FxRllrR1A5UkNUcjB1UFp0MWcvb3FJSkpETGFWbXd6QUV1RmdZd09CRFBVcnQrbzVLVE02enlVRFl4ekFHS1htbkdieWl5RlpiS2ZUZW9QV2UwazN5SWhnbExmdThUUXREVDJ0bzB6WlNidXhWdTVzQkE9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=bqxv7r/CctbT1/QTjwNo/oK6wX4lQB3P71lCZGtowpC3uGUSt5LIv2NHk9d5W/4OKhDP2PbjCy8LOm9FmlNOQHpU+a0XMqI0izCZYCImVfNqHN6t374HF8A5S1Rl10Cvp9RZYjCNDfxZrUzAZxJTPVHIkglSzE7cpJX+By8qaN8=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1670598896; v=1; bh=akc7vsyRUwRbfC3aeGqafAleMcBCNyem0PZEtSenYPk=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.118
+Received: from nysbdb.nysb.gtwy.dcn ([156.119.190.118])
+  by icmecf202.gtwy.uscourts.gov with ESMTP; 09 Dec 2022 10:14:55 -0500
+Received: from nysbdb.nysb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by nysbdb.nysb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 2B9FE90O008626;
+	Fri, 9 Dec 2022 10:14:09 -0500
+Received: (from ecf_web@localhost)
+	by nysbdb.nysb.gtwy.dcn (8.14.7/8.14.4/Submit) id 2B9FE20c008096;
+	Fri, 9 Dec 2022 10:14:02 -0500
+Date: Fri, 9 Dec 2022 10:14:02 -0500
+X-Authentication-Warning: nysbdb.nysb.gtwy.dcn: ecf_web set sender to nysbinfo@nysb.uscourts.gov using -f
+MIME-Version:1.0
+From:nysbinfo@nysb.uscourts.gov
+To:courtmail@nysb.uscourts.gov
+Message-Id:<20563575@nysb.uscourts.gov>
+Subject:NEF: 22-22507-cgm Ch13 Notice of Adjournment of Hearing Re: Gerasimos Stefanitsis
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Southern District of New York</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from DuBois, Linda entered on 12/9/2022 at 10:14 AM  and filed on 12/7/2022 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Gerasimos Stefanitsis                             </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.nysb.uscourts.gov/cgi-bin/DktRpt.pl?313115>22-22507-cgm</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+48
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Notice of Adjournment of Hearing re: Motion to Dismiss Case application and certificate of service filed by Krista M. Preuss on behalf of Krista M. Preuss  (related document(s)[41]);  Motion to Dismiss granted, submit order.  Further hearing on 2016(b) Statement to be held 2/22/2023 at 09:00 AM at Videoconference (ZoomGov) (CGM)  (DuBois, Linda).
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+<BR>
+<B>
+22-22507-cgm Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR>
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>

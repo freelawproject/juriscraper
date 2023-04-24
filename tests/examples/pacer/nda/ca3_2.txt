@@ -1,0 +1,75 @@
+Return-Path: <CMECF_No_Reply@ca3.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 00d5bago6958be9ks75o8q9ffadi4msbuvf4qso1
+ for recipient@example.com;
+ Sat, 28 Jan 2023 02:01:10 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ca3.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=CMECF_No_Reply@ca3.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ca3.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=CMECF_No_Reply@ca3.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=ca3.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFQjFkNTVYUnJZNEpxNjRoUDB5b2xsWjV1SzM5Z3ZXVmFHN0FDT3MzaEZLWWY1UDR1dVJiYVJwR0I0VkZQUlRZZ3JUTWNZdWpOMi9BdjE2VlVGVDg4OGxWcmlCZVl0S0tpZ0x6YldvK2FWUGdUaXVoZDgrRzBsSnFaTUtzUDlEUWNzNG4vbUtBUWozRFp3K1VYK1A0Z25OWEs1aFU3TkozelVLNnB4UkZoOFBrTWNuOUpkNGh6VVVMRGJKc3hXTmFYNHlZNnZla3pyOCtsR0tRV0JpMXd4cnU0aG40aWkwVkVCVitsTUxTeUdIOTk4N2hSWlg1RVJiOVJVL3V2UVlhVFN6VGs3UXYrVTBSdUdKSHRDVUo4SGp1cUFxNzc5OUNOVU9MamFha2U0bGVtYUFTWE9CZG1maXVwaVVLdTRrTXc9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=KI/wYC8spQPtOq1t/Esng68/5tC+qQ5ca32eb6f6aCr+0RdaG982EzkY9+sB70WymCayVQWkumRh0cbSoDQR7aqnfQ+hszqs1N9KU7jSc9g4WMYDIOyvA+2dsnb9CbSXKoF+wdWLQKwKqIbwaXntXjFt+GAs4DO6VooIZoojIRo=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1674871271; v=1; bh=vpHJvNNSHTNDQS1nNROWfJgT1pFrVSEY09w1TZ0421c=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.191.41
+Received: from ca3db.ca3.gtwy.dcn ([156.119.191.41])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 27 Jan 2023 21:01:10 -0500
+Received: from ca3db.ca3.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by ca3db.ca3.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 30S20TeO086943
+	for <recipient@example.com>; Fri, 27 Jan 2023 21:00:29 -0500
+Date: Fri, 27 Jan 2023 21:00:29 -0500 (EST)
+From: CMECF_No_Reply@ca3.uscourts.gov
+To: recipient@example.com
+Message-ID: <1710792256.2332.1674871229551@ca3db.ca3.gtwy.dcn>
+Subject: 23-1094 Port Hamilton Refining and Transportation LLLP v. EPA
+ "Motion(s)"
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><TITLE>23-1094 Port Hamilton Refining and Transportation LLLP v. EPA "Motion(s)"</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFDA" TEXT="#000000" LINK="#0000ff" VLINK="#551a8b" ALINK="#ff0000">
+<P><STRONG>
+***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer.  PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing.</STRONG><BR>
+<P><CENTER><STRONG>Third Circuit Court of Appeals</STRONG></CENTER>
+<P><STRONG>Notice of Docket Activity</STRONG><BR>
+<BR>
+The following transaction was filed on 01/27/2023
+<TABLE BORDER=0 CELLSPACING=3>
+<TR><TD><STRONG>Case Name:</STRONG></TD>
+<TD colspan='2'>Port Hamilton Refining and Transportation LLLP v. EPA<BR>
+</TD></TR>
+<TR><TD><STRONG>Case Number:&nbsp;&nbsp;</STRONG></TD>
+<TD><A HREF="https://ecf.ca3.uscourts.gov/n/beam/servlet/TransportRoom?servlet=DocketReportFilter.jsp&caseId=119235">23-1094</A></TD></TR>
+<TR><TD><STRONG>Document(s):</STRONG></TD>
+<TD><A HREF="https://ecf.ca3.uscourts.gov/docs1/003014326343?uid=eccc1924d7de560d">Document(s)</A></TD></TR>
+</TABLE><BR>
+<P><STRONG>Docket Text:</STRONG><BR>
+ECF FILER: Motion filed by Petitioner Port Hamilton Refining and Transportation LLLP to Expedite Case. Certificate of Service dated 01/27/2023. Service made by ECF. [23-1094] (ACS)<BR>
+<BR>
+<STRONG>Notice will be electronically mailed to:</STRONG><BR><BR>
+<BR><BR>
+The following document(s) are associated with this transaction:<BR>
+<STRONG>Document Description: </STRONG>Motion for expedited proceeding<BR>
+<STRONG>Original Filename: </STRONG>Expedited Briefing Motion FINAL.pdf<BR>
+<STRONG>Electronic Document Stamp:</STRONG><BR>
+[STAMP acecfStamp_ID=1107201326 [Date=01/27/2023] [FileNumber=5049293-0] [34a0715e29b6c750aa7bc76ffc9eda882af625dc7257edc5af0fc8033e87646b90bb789d586369a001f06d83bb20e4258fd2b8c69bb8d42e00fc15c6e4bccbed]]<BR>
+<BR><STRONG>Document Description: </STRONG>Declaration of Charles Chambers<BR>
+<STRONG>Original Filename: </STRONG>Charles Chambers Declaration.pdf<BR>
+<STRONG>Electronic Document Stamp:</STRONG><BR>
+[STAMP acecfStamp_ID=1107201326 [Date=01/27/2023] [FileNumber=5049293-1] [9c2129255e88eee317c663b3cfdc1c5bc2db8ea2ff2c24891b8a40265a42242603acc8b9d4d593098ffd2ea6b255c5ae1f4330422320efbb567214530c8e767c]]<BR>
+<BR><STRONG>Document Description: </STRONG>Eduardo del Valle declaration<BR>
+<STRONG>Original Filename: </STRONG>Eduardo del Valle declaration.pdf<BR>
+<STRONG>Electronic Document Stamp:</STRONG><BR>
+[STAMP acecfStamp_ID=1107201326 [Date=01/27/2023] [FileNumber=5049293-2] [2b3c7148dd6a7eec1db71c10a3672c28da93fca5f630da3d0d280834a7fc99291b4eba362910b75865e5d2cbba4ce836e301c320c8b0e4721a919d7feb06111d]]<BR>
+<BR><STRONG>Document Description: </STRONG>Proposed Briefing Schedule<BR>
+<STRONG>Original Filename: </STRONG>Proposed briefing schedule.pdf<BR>
+<STRONG>Electronic Document Stamp:</STRONG><BR>
+[STAMP acecfStamp_ID=1107201326 [Date=01/27/2023] [FileNumber=5049293-3] [cb0c131c0eb692939a28366edd4abbb4c44e9a4d88d0790e4170d476892f996d3b1f974a79c86d0eec365a287bdf7a91efdcc69350090aa3a50a5b0db5d810e6]]<BR>
+<BR>
+</BODY></HTML>

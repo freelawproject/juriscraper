@@ -53,6 +53,12 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         self.appellate = None
         self.image_attached = False
         self.docket_numbers = []
+        self.subject = None
+        self.case_names = []
+        if self.court_id.endswith("b"):
+            self.is_bankruptcy = True
+        else:
+            self.is_bankruptcy = False
         super().__init__(court_id)
 
     @property
@@ -115,6 +121,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             case_name = self._xpath_text_0(current_node, f"{path}/p")
             if not case_name:
                 case_name = "Unknown Case Title"
+
+        # Cache case_name before harmonizing it. For its use parsing the
+        # short_description.
+        self.case_names.append(clean_string(case_name))
         return clean_string(harmonize(case_name))
 
     def _get_case_name_plain(self) -> str:
@@ -138,6 +148,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             case_name = find_case[0]
         else:
             case_name = "Unknown Case Title"
+
+        # Cache case_name before harmonizing it. For its use parsing the
+        # short_description.
+        self.case_names.append(clean_string(case_name))
         return clean_string(harmonize(case_name))
 
     def _get_docket_number(self, current_node: HtmlElement) -> str:
@@ -365,13 +379,16 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         """
         dockets = []
         if self.content_type == "text/plain":
+            docket_number = self._get_docket_number_plain()
             docket = {
                 "case_name": self._get_case_name_plain(),
-                "docket_number": self._get_docket_number_plain(),
+                "docket_number": docket_number,
                 "date_filed": self._get_date_filed(),
                 "docket_entries": self._get_docket_entries(),
             }
             dockets.append(docket)
+            # Cache the docket number for its later use.
+            self.docket_numbers.append(docket_number)
         else:
             dockets_table = self.tree.xpath(
                 "//table[contains(., 'Case Name:')]"
@@ -384,8 +401,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 )
             for docket_table in dockets_table:
                 docket_number = self._get_docket_number(docket_table)
-                # Cache the docket number for its later use in
-                # _get_email_recipients_with_links
+                # Cache the docket number and case name for its later use.
                 self.docket_numbers.append(docket_number)
                 docket = {
                     "case_name": self._get_case_name(docket_table),
@@ -394,6 +410,15 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                     "docket_entries": self._get_docket_entries(docket_table),
                 }
                 dockets.append(docket)
+
+            if len(dockets) > 1:
+                # In multi-docket NEFs, the subject refers to only the short
+                # description of the first item.
+                for docket in dockets:
+                    if docket["docket_entries"]:
+                        docket["docket_entries"][0][
+                            "short_description"
+                        ] = self._get_short_description()
         return dockets
 
     def _get_docket_entries(
@@ -443,6 +468,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 {
                     "date_filed": self._get_date_filed(),
                     "description": description,
+                    "short_description": self._get_short_description(),
                     "document_url": document_url,
                     "document_number": document_number,
                     "pacer_doc_id": None,
@@ -476,6 +502,141 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
             return entries
         return []
+
+    def _parse_bankruptcy_short_description(self, subject: str) -> str:
+        """Parse the short description of a bankruptcy case from the email
+        subject. Subjects for bankruptcy varies a lot from court to court.
+        This function supports parsing the short description for courts with
+        known examples.
+
+        :param subject: The email subject string.
+        :return: The parsed short description.
+        """
+
+        if len(self.docket_numbers) > 1:
+            # Since we don't have examples for bankruptcy multi docket NEF.
+            # No short_description parsing support yet.
+            return ""
+
+        short_description = ""
+        docket_number = self.docket_numbers[0]
+        case_name = self.case_names[0]
+
+        if self.court_id == "cacb" or self.court_id == "ctb":
+            # In: 6:22-bk-13643-SY Request for courtesy Notice of Electronic Filing (NEF)
+            # Out: Request for courtesy Notice of Electronic Filing (NEF)
+            short_description = subject.split(docket_number)[-1]
+
+            # Remove docket number traces "-AAA"
+            regex = r"^-.*?\s"
+            short_description = re.sub(regex, "", short_description)
+
+        elif self.court_id == "njb":
+            # In: Ch-11 19-27439-MBK Determination of Adjournment Request - Hollister Construc
+            # Out: Determination of Adjournment Request
+            short_description = subject.split(docket_number)[-1]
+            short_description = short_description.rsplit("-", 1)[0]
+
+            # Remove docket number traces "-AAA"
+            regex = r"^-.*?\s"
+            short_description = re.sub(regex, "", short_description)
+
+        elif self.court_id == "nysb":
+            # In: 22-22507-cgm Ch13 Affidavit Re: Gerasimos Stefanitsis
+            # Out: Affidavit
+            short_description = subject.split(case_name)[0]
+            short_description = short_description.replace("Re:", "")
+            short_description = short_description.split(docket_number)[-1]
+
+            # Remove strings starting with "Ch" followed by a number
+            regex = r"\bCh\d+\b"
+            short_description = re.sub(regex, "", short_description)
+
+            # Remove docket number traces "-AAA"
+            regex = r"^-.*?\s"
+            short_description = re.sub(regex, "", short_description)
+
+        elif self.court_id == "pawb":
+            # In: Ch-7 22-20823-GLT U LOCK INC Reply
+            # Out: Reply
+            short_description = subject.split(case_name)[-1]
+
+        return short_description
+
+    def _parse_appellate_short_description(self, subject: str) -> str:
+        """Parse the short description of an appellate entry from the subject
+        or from the footer notification, returns the better one.
+
+        :param subject: The subject string from which to parse the short
+        description.
+        :return: The parsed short description
+        """
+
+        # Parse the short description from the notification footer.
+        path = "//strong[contains(text(), 'Document Description: ')]/following-sibling::text()[1]"
+        try:
+            short_description_footer = self.tree.xpath(path)[0]
+        except IndexError:
+            short_description_footer = ""
+
+        # Replace _ with whitespace in strings like Defective_Document_Notice
+        short_description_footer = short_description_footer.replace("_", " ")
+
+        # Sometimes the description in the footer only says "Main document."
+        # Skip it.
+        if short_description_footer == "Main document":
+            short_description_footer = ""
+
+        # Parse the description from the subject as a fallback.
+        # In: 21-1975 New York State Telecommunicati v. James "Letter RECEIVED"
+        # Out: Letter RECEIVED
+        subject_split_case_name = subject.split(self.case_names[0])
+        match = re.search(r'"(.*?)"', subject_split_case_name[-1])
+        short_description_subject = ""
+        if match:
+            short_description_subject = match.group(1)
+
+        # Select the longer short description, either from the subject or footer
+        longer_short_description = max(
+            short_description_subject, short_description_footer, key=len
+        )
+        return longer_short_description
+
+    def _get_short_description(self) -> str:
+        """Get the short description of a case from the subject string.
+
+        :returns: The short description of the case.
+        """
+
+        if not self.subject:
+            return ""
+        subject = clean_string(self.subject)
+        for case_name in self.case_names:
+            # cases_names is a list of strings that can contain one or multiple
+            # elements in multi-docket NEF where the case_name referenced in the
+            # subject might change. This find the right case_name match.
+            subject_split_case_name = subject.split(case_name)
+            if len(subject_split_case_name) > 1:
+                break
+
+        if self.appellate:
+            # Appellate notification.
+            short_description = self._parse_appellate_short_description(
+                subject
+            )
+
+        elif self.is_bankruptcy:
+            # Bankruptcy notification.
+            short_description = self._parse_bankruptcy_short_description(
+                subject
+            )
+        else:
+            # District notification.
+            # In: Activity in Case 1:21-cv-01456-MN CBV, Inc. v. ChanBond, LLC Letter
+            # Out: Letter
+            short_description = subject_split_case_name[-1].strip()
+
+        return clean_string(short_description)
 
     def _get_emaiL_recipients_without_links(self, recipient_lines):
         """Gets all the email recipients of the notification
@@ -663,6 +824,7 @@ class S3NotificationEmail(NotificationEmail):
         This obtains the email payload decoded as UTF-8.
         """
         message = email.message_from_string(text)
+        self.subject = message.get("Subject")
         if message.is_multipart():
             # Checks if the email contains an attached image.
             if any(

@@ -1,0 +1,98 @@
+Return-Path: <cmecf_help_desk@njb.uscourts.gov>
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id uqrufsbqepfke095ualenafh8qjhsmgsht2tdq01
+ for recipient@example.com;
+ Thu, 19 Jan 2023 19:42:07 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of njb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=cmecf_help_desk@njb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of njb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=cmecf_help_desk@njb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+ dmarc=none header.from=njb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFGWkUydmxWNW1LVWpuQ2Vvb0F4L29MMEtCMS9kZzNDaTZueUFCejkybDB4dncwRWlnUU5vbk8vWUx2SjhkUzRBc1RieUNBSDhqbFY1MGJlNThDRHgrd3dwNGlEc1JuWGxkZzVoK2t4VjlEUFRnOEVRVW9mczZwQUY0QnBlbit5STRpMXZmQjdRQmpMTytnL0xKUUxhZnYvVEVGWlNSQkRVTlkxaGUxQjBEQ0VNVXYrNkV2ZE1HTEtzODJxeHpUVGRCVkVRQnhQbitmUHpTeGUrNFNIMHNNMXhCTmtQam9lTzlpVVpoWlBkRXp5ZHBjanIzblNpY1NxYVJKRHZWNUNVWHdnZngrUDYzK2Z2QzRIbXJ1UEc5Q3VFYlpaR0FSODlpNVdPWkkrMWZiRXoxa2tKTGpWRWF2cFFIVEdOWU4yRVU9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=bOsOvLoFF6HVTufskJaBhDbJHTyK6ZsPX/4/E4c7CWg2sZOZr+7QcpDVPBvnwTIgFTCCKlNdxR9+oPSip0xKrXMe96sl0Upho50KkWSKakTNlvN6sMUk/yfjW0QfDLpkS2TQfqvA6icCLSzWVIBllm/OZRPSzh72hlLIyUySkjM=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1674157328; v=1; bh=Y7q/5NHNciMLews5WJO0fT43fXnu/u26lGLAP7fvzT0=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.77
+Received: from unknown (HELO njbdb.njb.gtwy.dcn) ([156.119.190.77])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 19 Jan 2023 14:42:06 -0500
+Received: from njbdb.njb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by njbdb.njb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 30JJfKFF073730;
+	Thu, 19 Jan 2023 14:41:29 -0500
+Received: (from ecf_web@localhost)
+	by njbdb.njb.gtwy.dcn (8.14.7/8.14.4/Submit) id 30JJf9jw073380;
+	Thu, 19 Jan 2023 14:41:09 -0500
+Date: Thu, 19 Jan 2023 14:41:09 -0500
+MIME-Version:1.0
+From:cmecf_help_desk@njb.uscourts.gov
+To:no-reply@njb.uscourts.gov
+Message-Id:<60769936@njb.uscourts.gov>
+Subject:Ch-11 19-27439-MBK Determination of Adjournment Request - Hollister Construc
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of New Jersey</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from wiq entered on 1/19/2023 at 2:41 PM EST and filed on 1/19/2023 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Hollister Construction Services, LLC              </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.njb.uscourts.gov/cgi-bin/DktRpt.pl?1051949>19-27439-MBK</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.njb.uscourts.gov/doc1/118064451932?pdf_header=&magic_num=77673239&de_seq_num=7960&caseid=1051949'>1977</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Determination of Adjournment Request Granted. Hearing will be adjourned to FEBRUARY 16, 2023 at 10:00 am. The hearing date is Not Peremptory. (related document:[1973] Motion For Entry Of Order (I) Enforcing Confirmation Order And Plan Against Brendan Murray, (II) Enforcing Settlement Agreement By And Between Hollisters Members Against Brendan Murray, (III) Determining That State Court Litigation Violates Plan And Confirmation Order, And (IV) Granting Related Relief  filed by Interested Party Christopher  Johnson)   (wiq)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>19-27439 adj.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1002741850 [Date=1/19/2023] [FileNumber=60769934-
+<BR><TAB>0] [6c2217d57f45ab37954cfbefb29393e2826de3ce01a05d28d3c17ed52490b198db
+<BR><TAB>6c241fd898e2378bb5e965860d9536792e06e8e85131c44b2272b2a660e39b]]
+<BR>
+
+</table>
+</div>
+
+
+
+<BR><B>
+19-27439-MBK Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>
