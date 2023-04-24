@@ -16,6 +16,19 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.44 - 2023-04-24**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Parse short_description from recap email subject.
+- Parse date_entered and ordered_by for docket reports.
+
+## Past
+
 **2.5.43 - 2023-04-14**
 
 Features:
@@ -25,8 +38,6 @@ Features:
 Changes:
 
 - Get a valid POST param before requesting the list of creditors.
-
-## Past
 
 **2.5.42 - 2023-04-13**
 
