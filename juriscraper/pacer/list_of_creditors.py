@@ -49,12 +49,15 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
         if self._metadata is not None:
             return self._metadata
 
-        raw_data = self.tree.xpath(
-            '//form[@name="bnc"]//input[@name="data"]/@value'
-        )
+        try:
+            raw_data = self.tree.xpath(
+                '//form[@name="bnc"]//input[@name="data"]/@value'
+            )[0]
+        except IndexError:
+            raw_data = None
         meta_data = {
             "court_id": self.court_id,
-            "data": raw_data[0],
+            "data": raw_data,
         }
         self._metadata = meta_data
         return meta_data
