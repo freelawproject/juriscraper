@@ -94,10 +94,26 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
             return r
         return None
 
+    def query_post_param(self) -> str:
+        """To query the report and ensure that the cost is the same as in the
+        browser, obtain a valid POST param 'x-L_1_0-1' from the input form.
+
+        :return: A valid query POST param 'x-L_1_0-1'
+        """
+        assert (
+            self.session is not None
+        ), "session attribute of ListOfCreditors cannot be None."
+
+        logger.info(f"Getting a valid POST param for '{self.court_id}'")
+        self.response = self.session.get(self.url)
+        self.parse()
+        return self._get_valid_post_param()
+
     def query(
         self,
         pacer_case_id: str,
         docket_number: str,
+        post_param: str,
     ):
         """Query the List of creditors report and return the results.
 
@@ -111,13 +127,6 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
             self.session is not None
         ), "session attribute of ListOfCreditors cannot be None."
 
-        # To query the report and ensure that the cost is the same as in the
-        # browser, obtain a valid POST param 'x-L_1_0-1' from the input form.
-        logger.info(f"Getting a valid POST param for '{self.court_id}'")
-        self.response = self.session.get(self.url)
-        self.parse()
-
-        post_param = self._get_valid_post_param()
         params = {
             "all_case_ids": pacer_case_id,
             "case_num": docket_number,
