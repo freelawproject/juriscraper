@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.46 - 2023-05-02**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Fix List of creditors query a valid POST param.
+
+## Past
+
 **2.5.45 - 2023-04-28**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - Fix List of creditors parsing error.
-
-## Past
 
 **2.5.44 - 2023-04-24**
 
