@@ -11,8 +11,8 @@ from lxml.html.clean import Cleaner
 from requests import Response
 
 try:
-    # Use cchardet for performance to detect the character encoding.
-    import cchardet as chardet
+    # Use charset-normalizer for performance to detect the character encoding.
+    import charset_normalizer as chardet
 except ImportError:
     import chardet
 
@@ -185,7 +185,7 @@ def get_visible_text(html_content):
 def set_response_encoding(request):
     """Set the encoding if it isn't set already.
 
-    Use cchardet for added performance.
+    Use charset-normalizer for added performance.
     """
     if request:
         # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
@@ -194,12 +194,13 @@ def set_response_encoding(request):
 
         if request.encoding is None:
             # Requests detects the encoding when the item is GET'ed using
-            # HTTP headers, and then when r.text is accessed, if the encoding
-            # hasn't been set by that point. By setting the encoding here, we
-            # ensure that it's done by cchardet, if it hasn't been done with
-            # HTTP headers. This way it is done before r.text is accessed
-            # (which would do it with vanilla chardet). This is a big
-            # performance boon, and can be removed once requests is upgraded
+            # HTTP headers, and then when r.text is accessed, if the
+            # encoding hasn't been set by that point. By setting the
+            # encoding here, we ensure that it's done by charset-normalizer,
+            # if it hasn't been done with HTTP headers. This way it is done
+            # before r.text is accessed (which would do it with vanilla
+            # chardet). This is a big performance boon, and can be removed
+            # once requests is upgraded
             if isinstance(request.content, str):
                 as_bytes = request.content.encode()
                 request.encoding = chardet.detect(as_bytes)["encoding"]
