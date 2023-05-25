@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.48 - 2023-05-25**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Updated version of pinned dependencies.
+
+## Past
+
 **2.5.47 - 2023-05-04**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - Replace unmaintained cchardet with charset-normalizer.
-
-## Past
 
 **2.5.46 - 2023-05-02**
 
