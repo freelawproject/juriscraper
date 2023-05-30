@@ -12,7 +12,7 @@ from ..lib.exceptions import ParsingException
 
 
 def get_pacer_court_info():
-    r = requests.get("https://court-version-scraper.herokuapp.com/courts.json")
+    r = requests.get("https://court-version-scraper.fly.dev/courts.json")
     return r.json()
 
 
