@@ -1000,10 +1000,32 @@ class DocketReport(BaseDocketReport, BaseReport):
         docket_entry_all_rows = self._get_docket_entry_rows()
         docket_entry_rows = docket_entry_all_rows[1:]  # Skip the first row.
 
+        # Detect if the report was generated with "View multiple documents"
+        # option enabled.
+        view_multiple_documents = False
+        view_selected_btn = self.tree.xpath("//input[@value='View Selected']")
+        if view_selected_btn:
+            view_multiple_documents = True
         docket_entries = []
         for row in docket_entry_rows:
             de = {}
             cells = row.xpath("./td[not(./input)]")
+
+            # If view_multiple_documents report, remove the "checkbox" cell on
+            # rows that lack a checkbox, as observed in sealed documents.
+            if view_multiple_documents and len(cells) == 4:
+                # In bankruptcy reports, there is an additional cell preceding
+                # the entry number which will be removed later. For now avoid
+                # removing the entry number in index [2]. See alnb_1.html.
+                cell_2_value = cells[2].text_content().strip()
+                if not cell_2_value:
+                    # This is the empty "checkbox" cell, remove it. See dcd_3.html
+                    del cells[2]
+            if view_multiple_documents and len(cells) == 5:
+                # In bankruptcy reports for entries that do not have a checkbox,
+                #  remove the empty "checkbox" cell. See alnb_1.html.
+                del cells[3]
+
             if len(cells) == 0:
                 # In some instances, the document entry table has an empty row
                 # <tr></tr>. See docket bankruptcy wiwb examples.
