@@ -1004,12 +1004,8 @@ class DocketReport(BaseDocketReport, BaseReport):
         # option enabled.
         view_multiple_documents = False
         view_selected_btn = self.tree.xpath("//input[@value='View Selected']")
-        download_selected_btn = self.tree.xpath(
-            "//input[@value='Download Selected']"
-        )
-        if view_selected_btn and download_selected_btn:
+        if view_selected_btn:
             view_multiple_documents = True
-
         docket_entries = []
         for row in docket_entry_rows:
             de = {}
