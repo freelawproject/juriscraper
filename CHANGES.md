@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.49 - 2023-05-31**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Fix docket report parsing on view multiple documents layout.
+
+## Past
+
 **2.5.48 - 2023-05-25**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - Updated version of pinned dependencies.
-
-## Past
 
 **2.5.47 - 2023-05-04**
 
