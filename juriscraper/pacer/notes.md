@@ -130,7 +130,7 @@ Anyway, the page also provides the docket entry text and file size, which is pot
 
 ### document_link.pl
 
-Now (apparently) deprecated from District CMECF, but possibly still current in Bankruptcy CMECF, an `href` link to a document in a Docket Report or Claims Register may come with an `id` property that encodes various link parameters, with `K` delimiting parameters (`&` function) and `V` delimiting assignments (`=` function). The `CMECF.widget.DocLink()` function (in `dls_url.js`, see below) calls document_link.pl` to rewrite these into `/doc1` URLs which are then bare of such metadata.
+Now (apparently) deprecated from District CMECF, but possibly still current in Bankruptcy CMECF, an `href` link to a document in a Docket Report or Claims Register may come with an `id` property that encodes various link parameters, with `K` delimiting parameters (`&` function) and `V` delimiting assignments (`=` function). The `CMECF.widget.DocLink()` function (in `dls_url.js`, see below) calls `document_link.pl` to rewrite these into `/doc1` URLs which are then bare of such metadata.
 
 For instance:
 
