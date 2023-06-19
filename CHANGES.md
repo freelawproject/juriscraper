@@ -16,6 +16,19 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.50 - 2023-06-19**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Fix INSB bankruptcy docket number parsing.
+
+## Past
+
+
 **2.5.49 - 2023-05-31**
 
 Features:
@@ -25,8 +38,6 @@ Features:
 Changes:
 
 - Fix docket report parsing on view multiple documents layout.
-
-## Past
 
 **2.5.48 - 2023-05-25**
 
