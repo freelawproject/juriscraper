@@ -139,6 +139,19 @@ class CaseQuery(BaseDocketReport, BaseReport):
         )
         # And case caption following the final <b></b> pair.
         case_name_raw = force_unicode(rows[0].find(".//b[last()]").tail or "")
+        if not case_name_raw:
+            # In some courts, such as INSB, the case name is within a font tag.
+            # <b><font size="+1">13-07422-RLM-7A</font></b><font size="+1">
+            #  Cedric Morris and Kateen Nicklondra Morris
+            # </font>
+            try:
+                case_name_raw = force_unicode(
+                    rows[0].xpath(
+                        ".//b[last()]/following-sibling::font[1]/text()"
+                    )[0]
+                )
+            except IndexError:
+                case_name_raw = ""
 
         # Our job as a parser is to return the data, not to filter, clean,
         # amend, or "harmonize" it. However downstream often expects harmonized
@@ -156,6 +169,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
         field_names = {
             "date_of_last_filing": "date_last_filing",
             "judge": "assigned_to_str",
+            "chief_judge": "assigned_to_str",
             "plan_confirmed": "date_plan_confirmed",
             "debtor_discharged": "date_debtor_dismissed",
             "joint_debtor_discharged": "date_joint_debtor_dismissed",
