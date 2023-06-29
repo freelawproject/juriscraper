@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.51 - 2023-06-29**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Fix case_name and judge parsing in case_query pages.
+
+## Past
+
 **2.5.50 - 2023-06-19**
 
 Features:
@@ -25,9 +37,6 @@ Features:
 Changes:
 
 - Fix INSB bankruptcy docket number parsing.
-
-## Past
-
 
 **2.5.49 - 2023-05-31**
 
