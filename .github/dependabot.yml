@@ -18,3 +18,11 @@ updates:
   - dependency-name: '*'
     update-types: ["version-update:semver-patch"]
 
+- package-ecosystem: "github-actions"
+  directory: "/"
+  schedule:
+    interval: monthly
+  groups:
+    core:
+      patterns:
+        - 'actions/*' # The core actions offered by Github
