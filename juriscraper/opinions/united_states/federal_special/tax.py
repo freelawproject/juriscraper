@@ -48,7 +48,8 @@ class Site(OpinionSiteLinear):
                 self.url = f"{self.base}/opinion-search"
             self.set_blue_green = True
         if self.test_mode_enabled():
-            self.json = json.load(open(self.url))
+            with open(self.url) as file:
+                self.json = json.load(file)
         else:
             self.json = (
                 self.request["session"]

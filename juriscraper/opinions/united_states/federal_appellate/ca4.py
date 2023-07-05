@@ -53,7 +53,8 @@ class Site(OpinionSiteLinear):
 
     def _download(self, request_dict={}):
         if self.test_mode_enabled():
-            self.json = json.load(open(self.url))
+            with open(self.url) as file:
+                self.json = json.load(file)
         else:
             self.json = (
                 self.request["session"]
