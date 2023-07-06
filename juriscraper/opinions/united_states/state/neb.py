@@ -28,10 +28,14 @@ class Site(OpinionSiteLinear):
                 if not url:
                     continue
 
+                docket = row.xpath(".//td[1]")[0].text_content().strip()
+                if docket == "A-XX-XXXX":
+                    continue
+
                 self.cases.append(
                     {
                         "date": date,
-                        "docket": row.xpath(".//td[1]")[0].text_content(),
+                        "docket": docket,
                         "name": row.xpath(".//td[3]")[0].text_content(),
                         "citation": row.xpath(".//td[2]")[0].text_content(),
                         "url": url[0],

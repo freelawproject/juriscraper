@@ -1,5 +1,6 @@
 ci:
   autoupdate_schedule: quarterly
+exclude: '^tests/examples/.*\.html$'
 repos:
   - repo: https://github.com/asottile/pyupgrade
     rev: v3.8.0
