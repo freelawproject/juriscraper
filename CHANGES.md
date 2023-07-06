@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.52 - 2023-07-06**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Fix Nebraska/App court to ignore unpublished notes (A-XX-XXXX)
+
+## Past
+
 **2.5.51 - 2023-06-29**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - Fix case_name and judge parsing in case_query pages.
-
-## Past
 
 **2.5.50 - 2023-06-19**
 
