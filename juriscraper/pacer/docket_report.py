@@ -992,6 +992,155 @@ class DocketReport(BaseDocketReport, BaseReport):
         )
         return docket_entry_all_rows
 
+    def _get_attachment_number(self, row):
+        """Return the attachment number for an item.
+
+        In district courts, this can be easily extracted. In bankruptcy courts,
+        you must extract it, then subtract 1 from the value since these are
+        tallied and include the main document.
+        """
+        number = int(row.xpath(".//td/text()")[0].strip())
+        if self.is_bankruptcy:
+            return number - 1
+        return number
+
+    def _get_description_from_tr(self, row):
+        """Get the description from the row"""
+        if not self.is_bankruptcy:
+            index = 2
+            # Some NEFs attachment pages for some courts have an extra column
+            # (see nyed_123019137279), use index 3 to get the description
+            columns_in_row = row.xpath(f"./td")
+            if len(columns_in_row) == 5:
+                index = 3
+        else:
+            index = 3
+
+        description_text_nodes = row.xpath(f"./td[{index}]//text()")
+        if not description_text_nodes:
+            # No text in the cell.
+            return ""
+        description = description_text_nodes[0].strip()
+        return force_unicode(description)
+
+    @staticmethod
+    def _get_page_count_from_tr(tr):
+        """Take a row from the attachment table and return the page count as an
+        int extracted from the cell specified by index.
+        """
+        pg_cnt_str_nodes = tr.xpath('./td[contains(., "page")]/text()')
+        if not pg_cnt_str_nodes:
+            # It's a restricted document without page count information.
+            return None
+
+        for pg_cnt_str_node in pg_cnt_str_nodes:
+            try:
+                pg_cnt_str = pg_cnt_str_node.strip()
+                return int(pg_cnt_str.split()[0])
+            except ValueError:
+                # Happens when the description field contains the
+                # word "page" and gets caught by the xpath. Just
+                # press on.
+                continue
+
+    @staticmethod
+    def _get_file_size_str_from_tr(tr):
+        """Take a row from the attachment table and return the number of bytes
+        as a str.
+        """
+        cells = tr.xpath("./td")
+        last_cell_contents = cells[-1].text_content()
+        units = ["kb", "mb"]
+        if any(unit in last_cell_contents.lower() for unit in units):
+            return last_cell_contents.strip()
+        return ""
+
+    def _get_pacer_doc_id(self, row):
+        """Take in a row from the attachment table and return the pacer_doc_id
+        for the item in that row. Return None if the ID cannot be found.
+        Calculate the doc_id by extracting the first part of the value string
+        which is the doc_id suffix and combining it with the doc_id prefix
+        which is computed using a lookup table from the court_id. Insert a 0
+        between the prefix and suffix to normalize the doc_id to the attachment
+        page variant.
+        """
+        try:
+            input = row.xpath(".//input")[0]
+        except IndexError:
+            # Item exists, but cannot download document. Perhaps it's sealed
+            # or otherwise unavailable in PACER. This is carried over from the
+            # docket report and may not be needed here, but it's a good
+            # precaution.
+            return None
+        else:
+            # initial value string "23515655-90555-2"
+            value = input.xpath("./@value")[0]
+            # after splitting we get our doc_id suffix "23515655"
+            pacer_doc_suffix = value.split("-")[0]
+            # after inserting prefixes our final doc_id is "035023515655"
+            return self.doc_id_prefix + "0" + pacer_doc_suffix
+
+    @staticmethod
+    def _get_pacer_seq_no_from_tr(row):
+        """Take a row of the attachment table, and return the sequence number
+        from the name attribute.
+        """
+        try:
+            input = row.xpath(".//input")[0]
+        except IndexError:
+            # No link in the row. Maybe its sealed.
+            pass
+        else:
+            try:
+                name = input.xpath("./@name")[0]
+            except IndexError:
+                # No onclick on this row.
+                pass
+            else:
+                return name.split("_")[2]
+
+        return None
+
+    def _get_attachments(self, cells):
+        rows = cells.xpath("./table//tr")
+
+        result = []
+        for row in rows:
+            result.append(
+                {
+                    "attachment_number": self._get_attachment_number(row),
+                    "description": self._get_description_from_tr(row),
+                    "page_count": self._get_page_count_from_tr(row),
+                    "file_size_str": self._get_file_size_str_from_tr(row),
+                    "pacer_doc_id": self._get_pacer_doc_id(row),
+                    # It may not be needed to reparse the seq_no
+                    # for each row, but we may as well. So far, it
+                    # has always been the same as the main document.
+                    "pacer_seq_no": self._get_pacer_seq_no_from_tr(row),
+                }
+            )
+        return result
+
+    @staticmethod
+    def _merge_de_with_attachment(de, attachment):
+        """Combines the attachment entry data corresponding with the docket
+        entry data. This should be the attachment with an attachment number
+        of 0. Additionally validates the doc_id and seq_no match before
+        merging the data.
+        """
+        if de["pacer_doc_id"] != attachment["pacer_doc_id"]:
+            raise ValueError(
+                f"docket entry doc_id {de['pacer_doc_id']} does not match "
+                f"attachment 0 doc_id {attachment['pacer_doc_id']}"
+            )
+        if de["pacer_seq_no"] != attachment["pacer_seq_no"]:
+            raise ValueError(
+                f"docket entry seq_no {de['pacer_seq_no']} does not match "
+                f"attachment 0 seq_no {attachment['pacer_seq_no']}"
+            )
+        de["file_size_str"] = attachment["file_size_str"]
+        de["page_count"] = attachment["page_count"]
+
     @property
     def docket_entries(self):
         if self._docket_entries is not None:
@@ -1037,6 +1186,13 @@ class DocketReport(BaseDocketReport, BaseReport):
 
             date_filed_str = force_unicode(cells[0].text_content())
             if not date_filed_str.strip():
+                if view_multiple_documents and len(cells) >= 3:
+                    last_de = docket_entries[-1]
+                    attachments = self._get_attachments(cells[2])
+                    if attachments[0]["attachment_number"] == 0:
+                        de_attachment = attachments.pop(0)
+                        self._merge_de_with_attachment(last_de, de_attachment)
+                    last_de["attachments"] = attachments
                 # Some older dockets have missing dates. Press on.
                 continue
             de["date_filed"] = convert_date_string(date_filed_str)

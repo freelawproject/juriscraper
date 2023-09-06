@@ -16,7 +16,12 @@ from ..lib.html_utils import (
     strip_bad_html_tags_insecure,
 )
 from ..lib.log_tools import make_default_logger
-from .utils import is_pdf, make_doc1_url, make_docs1_url
+from .utils import (
+    get_doc_id_prefix_from_court_id,
+    is_pdf,
+    make_doc1_url,
+    make_docs1_url,
+)
 
 logger = make_default_logger()
 
@@ -53,6 +58,10 @@ class BaseReport:
         self.tree = None
         self.response = None
         self.is_valid = None
+
+    @property
+    def doc_id_prefix(self):
+        return get_doc_id_prefix_from_court_id(self.court_id)
 
     @property
     def url(self):
