@@ -133,20 +133,36 @@ class PacerUtilTest(unittest.TestCase):
         """Can we make good doc1 urls?"""
         qa_pairs = (
             (
-                ("cand", "01712427473", False),
-                "https://ecf.cand.uscourts.gov/doc1/01712427473",
+                ("almd", "01712427473", False),
+                "https://ecf.almd.uscourts.gov/doc1/01712427473",
             ),
             (
-                ("cand", "01702427473", False),
-                "https://ecf.cand.uscourts.gov/doc1/01702427473",
+                ("almd", "01702427473", False),
+                "https://ecf.almd.uscourts.gov/doc1/01702427473",
             ),
             (
-                ("cand", "01712427473", True),
-                "https://ecf.cand.uscourts.gov/doc1/01712427473",
+                ("almd", "01712427473", True),
+                "https://ecf.almd.uscourts.gov/doc1/01712427473",
             ),
             (
-                ("cand", "01702427473", True),
-                "https://ecf.cand.uscourts.gov/doc1/01712427473",
+                ("almd", "01702427473", True),
+                "https://ecf.almd.uscourts.gov/doc1/01712427473",
+            ),
+            (
+                (None, "01712427473", False),
+                "https://ecf.almd.uscourts.gov/doc1/01712427473",
+            ),
+            (
+                (None, "01702427473", False),
+                "https://ecf.almd.uscourts.gov/doc1/01702427473",
+            ),
+            (
+                (None, "01712427473", True),
+                "https://ecf.almd.uscourts.gov/doc1/01712427473",
+            ),
+            (
+                (None, "01702427473", True),
+                "https://ecf.almd.uscourts.gov/doc1/01712427473",
             ),
         )
         for q, a in qa_pairs:
