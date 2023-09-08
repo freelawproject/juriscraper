@@ -5,7 +5,11 @@ import sys
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import force_unicode
 from .reports import BaseReport
-from .utils import get_pacer_doc_id_from_doc1_url, reverse_goDLS_function
+from .utils import (
+    get_court_id_from_doc_id_prefix,
+    get_pacer_doc_id_from_doc1_url,
+    reverse_goDLS_function,
+)
 
 logger = make_default_logger()
 
@@ -66,23 +70,29 @@ class AttachmentPage(BaseReport):
             logger.info("No documents found on attachment page.")
             return {}
 
-        first_row = rows.pop(0)
+        first_num = self._get_name_attachment_number(rows[0])
+        # First row is an attachment
+        if first_num is not None and first_num != 0:
+            first_row = rows[0]
+            first_row_attachment = True
+        else:
+            first_row = rows.pop(0)
+            first_row_attachment = False
         result = {
             "document_number": self._get_document_number(),
-            "page_count": self._get_page_count_from_tr(first_row),
-            "file_size_str": self._get_file_size_str_from_tr(first_row),
             "pacer_doc_id": self._get_pacer_doc_id(first_row),
             "pacer_case_id": self._get_pacer_case_id(),
             "pacer_seq_no": self._get_pacer_seq_no_from_tr(first_row),
             "attachments": [],
         }
-        if result["document_number"] is None and not self.is_bankruptcy:
-            # Abort. Sometimes some attachment pages we receive have a blank
-            # area instead of having a proper document number. When going to
-            # PACER to reproduce this, things look fine, so I don't know why we
-            # get the bad data. In any case, simply give up since we can't do
-            # much without a document number.
-            return {}
+        if first_row_attachment:
+            result["page_count"] = None
+            result["file_size_str"] = ""
+        else:
+            result["page_count"] = self._get_page_count_from_tr(first_row)
+            result["file_size_str"] = self._get_file_size_str_from_tr(
+                first_row
+            )
         for row in rows:
             result["attachments"].append(
                 {
@@ -109,6 +119,26 @@ class AttachmentPage(BaseReport):
         if self.is_bankruptcy:
             return None
 
+        # First try inspecting the input elements
+        input_els = self.tree.xpath("//input")
+        for input_el in input_els:
+            try:
+                name = input_el.xpath("./@name")[0]
+            except IndexError:
+                continue
+            else:
+                split = name.split("_")
+                # Document 16 name field example "document_16_0"
+                if len(split) == 3 and split[0] == "document":
+                    document_string = split[1]
+                    # Any other matches will be invalid if this is empty
+                    if document_string == "":
+                        return None
+                    document_number = int(document_string)
+                    # Ensure document number is valid
+                    if document_number != 0:
+                        return document_number
+
         # There are two styles of attachment menus. Try them both.
         paths = (
             '//tr[contains(., "Document Number")]//a/text()',
@@ -121,6 +151,87 @@ class AttachmentPage(BaseReport):
                 continue
         return None
 
+    def _decrement_attachment_index(self, row):
+        """Return if we need to decrement the attachment index.
+
+        We need to do this for all bankruptcy courts and old attachment pages
+        in some district courts.
+
+        For district courts we need to use a mapping table with the last dlsid
+        that requires a decrement.
+
+        Note that the decrement check must be done for each row in case any
+        attachments in the page have sequences after the changeover as any
+        updated attachments with a dlsid after the changeover should not be
+        decremented.
+        """
+        sub_dlsid = {
+            "akd": 682797,
+            "ared": 1906030,
+            "cacd": 9630188,
+            "ctd": 2414673,
+            "flmd": 7734601,
+            "flnd": 2613796,
+            "gamd": 995021,
+            "gasd": 1159201,
+            "hid": 1078891,
+            "ilnd": 8278610,
+            "iand": 899130,
+            "innd": 1560410,
+            "iasd": 1192972,
+            "kyed": 2087957,
+            "kywd": 1738484,
+            "mad": 3618527,
+            "mied": 4148337,
+            "miwd": 2358030,
+            "moed": 3299716,
+            "msnd": 888190,
+            "mssd": 2476698,
+            "nced": 1868202,
+            "ncmd": 1093535,
+            "ndd": 299419,
+            "ned": 1868173,
+            "nvd": 3153010,
+            "nyed": 6778644,
+            "nynd": 1829022,
+            "nysd": 8012889,
+            "nywd": 1862410,
+            "oked": 388419,
+            "ord": 3322370,
+            "pamd": 3122200,
+            "sdd": 1239147,
+            "txed": 3830781,
+            "txnd": 4975453,
+            "utd": 1745928,
+            "vaed": 1338618,
+            "waed": 1349144,
+            "wawd": 3755107,
+            "wied": 1420356,
+            "wyd": 797428,
+        }
+        if self.is_bankruptcy:
+            return True
+        doc_id = self._get_pacer_doc_id(row)
+        court_id = get_court_id_from_doc_id_prefix(doc_id[:3])
+        if court_id not in sub_dlsid:
+            return False
+        dlsid = int(doc_id[3:])
+        if sub_dlsid[court_id] < dlsid:
+            return False
+        return True
+
+    def _get_name_attachment_number(self, row):
+        try:
+            name = row.xpath(".//input/@name")[0]
+        except IndexError:
+            return None
+        else:
+            split = name.split("_")
+            # Document 16 name field example "document_16_0"
+            if len(split) == 3 and split[0] == "document":
+                return int(split[2])
+        return None
+
     def _get_attachment_number(self, row):
         """Return the attachment number for an item.
 
@@ -128,8 +239,10 @@ class AttachmentPage(BaseReport):
         you must extract it, then subtract 1 from the value since these are
         tallied and include the main document.
         """
-        number = int(row.xpath(".//a/text()")[0].strip())
-        if self.is_bankruptcy:
+        number = self._get_name_attachment_number(row)
+        if number is None:
+            number = int(row.xpath(".//a/text()")[0].strip())
+        if self._decrement_attachment_index(row):
             return number - 1
         return number
 

@@ -1,0 +1,304 @@
+<html><head><link rel="shortcut icon"  href="/favicon.ico"/><title>CM/ECF - USDC Massachusetts - Version  1.7.1.2 as of 7/22/2023</title>
+<script type="text/javascript">var default_base_path = "/"; </script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script><link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><link rel="stylesheet" type="text/css" href="/css/print.css" media="print"><script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script></head><body BGCOLOR=F5F5F5 TEXT=01359B onLoad='SetFocus()'>        <div id="topmenu" class="yuimenubar">
+				<div class="bd"><img src="/graphics/logo-cmecf-sm.png" class="cmecfLogo" id="cmecfLogo" alt="CM/ECF" title="" />
+				<ul class="first-of-type">
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/iquery.pl'><u>Q</u>uery</a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Reports'>Reports <div class='spritedownarrow'></div></a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Utilities'><u>U</u>tilities <div class='spritedownarrow'></div></a></li>
+				<li class="yuimenubaritem">
+				<a class="yuimenubaritemlabel" onClick="CMECF.MainMenu.showHelpPage(); return false" >Help</a></li>
+				
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/login.pl?logout'>Log Out</a></li></ul><hr class="hrmenuseparator"></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.createMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);}</script> <div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript">
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;
+					while(document.forms[0].elements[Cnt] != null) {
+						try {
+							if(document.forms[0].elements[Cnt].type != "hidden" &&
+									!document.forms[0].elements[Cnt].disabled &&
+									!document.forms[0].elements[Cnt].readOnly) {
+								document.forms[0].elements[Cnt].focus();
+								break;
+							}
+						}
+						catch(e) {}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+
+			<p><b style="margin:10px">Document Selection Menu</b></p>
+			
+			<p><span style="margin:10px">Select the document you wish to view.</span></p>
+			
+                <script>
+		function size_mb_or_kb(size){
+			if(size < 1024){return size + ' B'}
+			if(size < 1024000){return (size/1024).toFixed(1) + ' KB'}
+			return (size/1024000).toFixed(1) + ' MB';
+		}
+
+// Code used by a Document Link:
+                                // Reset checkboxes if page is refreshed.
+                                function SetFocus(){//overwrite existing function
+                                }
+
+// Code used by Docket Sheet
+
+                function select_all_documents(checked, plus_minus){
+			var elements = document.forms[0].elements;
+			for (var i = 0; i < elements.length; i++) {
+				var checkbox = elements[i];
+				if (checkbox.name == 'all_documents') {
+					checkbox.checked = checked;
+					select_all_attachments(checkbox, plus_minus);
+				}
+			}
+                        if(checked == false){
+                                clear_totals();
+                        }
+                }
+
+		function select_all_attachments(all, plus_minus){
+			attachments = all.value.split('_');
+
+			var elements = document.forms[0].elements;
+			for(var i=0; i < elements.length; i++){
+				var checkbox = elements[i];
+				if(checkbox.name.match('document_' + attachments[0] + '_' + attachments[1])){
+					if (checkbox.type == "checkbox") {
+						if(checkbox.checked != all.checked){
+							checkbox.checked = all.checked;
+							update_sizes(checkbox);
+						}
+					}
+					else {
+						// Handle things when it is a type = "hidden"
+						update_sizes(checkbox, all.checked);
+					}
+
+					// Special handling for ROA and Appendix
+					if (plus_minus) {
+						var nextTd = checkbox.parentNode.nextSibling;
+						if (nextTd) {
+							if (nextTd.tagName != "TD") {
+								nextTd = nextTd.nextSibling;
+							}
+							if (nextTd) {
+								var input = nextTd.getElementsByTagName("input")[0];
+								if (input) {
+									input.value = "";
+									input.disabled = all.checked;
+								}
+							}
+						}
+
+						if (checkbox.parentNode.tagName == "TD") {
+							if (all.checked) {
+								checkbox.setAttribute("type", "hidden");
+							}
+							else {
+								checkbox.setAttribute("type", "checkbox");
+								checkbox.checked = false;
+							}
+						}
+					}
+
+				}
+			}
+
+			// If ROA, and checkbox is cleared, then also clear the sort order
+			if("" != ""){
+				if(all.checked == false){
+					document.getElementById('de_'+attachments[1]+'_sort').value = '';
+				}
+			}
+		}
+
+		function update_sizes(checkbox, all_checked_value){
+			var total_size_counter = document.getElementById('total_size_counter');
+			var total_page_counter = document.getElementById('total_page_counter');
+			var total_size_display = document.getElementById('total_size_display');
+			var total_page_display = document.getElementById('total_page_display');
+
+			var total_size = parseInt(total_size_counter.value);
+			var total_page = parseInt(total_page_counter.value);
+
+			var info = checkbox.value.split('-');//dm_dls_id - file_size - page_size
+			var size = parseInt(info[1]);
+			var page = parseInt(info[2]);
+
+			var checked = all_checked_value;
+			if (checkbox.type == "checkbox") {
+				checked = checkbox.checked;
+			}
+			if(checked == true){
+				total_size += size;
+				total_page += page;
+			}else{
+				total_size -= size;
+				total_page -= page;
+			}
+
+			var buttons_disabled = true;
+			var file_too_big = true;
+			if(total_size <= 104857600){
+				file_too_big = false;
+				if(total_size > 0){
+					buttons_disabled = false;
+				}
+			}
+
+			document.getElementById('view_button').disabled = buttons_disabled;
+			document.getElementById('download_button').disabled = buttons_disabled;
+			document.getElementById('file_too_big').style.display = file_too_big ? 'block':'none';
+
+			//alert(total_size + ':' + total_page);
+			total_size_counter.value = total_size;
+			total_page_counter.value = total_page;
+			if(total_size_display.type == 'text'){
+				total_size_display.value = Number((total_size/1024000).toFixed(5));
+				total_page_display.value = total_page + ((total_page == 1) ? ' page':' pages');
+			}else{
+				total_size_display.innerHTML = size_mb_or_kb(total_size);
+				total_page_display.innerHTML = total_page + ((total_page == 1) ? ' page':' pages');
+			}
+		}
+
+		function clear_totals(){
+			document.getElementById('total_size_counter').value = 0;
+			document.getElementById('total_page_counter').value = 0;
+			document.getElementById('total_size_display').value = 0;
+			document.getElementById('total_page_display').value = 0;
+  
+			document.getElementById('view_button').disabled = true;
+			document.getElementById('download_button').disabled = true;
+		}
+
+                function select_link_documents(){ // When selected by a link, check all documents.
+                        clear_totals();
+
+			elements = document.forms[0].elements;
+			for(i=0; i < elements.length; i++){
+				checkbox = elements[i];
+				if(checkbox.type == 'checkbox'){
+					checkbox.checked = true;
+					update_sizes(checkbox);
+				}
+			};	
+		}
+
+		function submit_form(zip,url){
+			var include=[];//Docket
+			var exclude=[];//Link
+			var elements = document.forms[0].elements;
+
+			// create a hash of "all_documents" values to "checked" status for dealing with hidden inputs
+			var ad_checked = {};
+			for (var i = 0; i < elements.length; i++) {
+				var checkbox = elements[i];
+				if (checkbox.name == "all_documents") {
+					ad_checked[checkbox.value] = checkbox.checked;
+				}
+			}
+
+			for(var i=0; i < elements.length; i++){
+				var checkbox = elements[i];
+				if(checkbox.name.match(/document_/)){
+					var info = checkbox.value.split('-');//dm_dls_id - file_size - page_size
+					if (checkbox.type == "hidden") {
+						var values = checkbox.name.split('_');
+						var ad_key = values[1] + '_' + values[2];
+						if (ad_checked[ad_key]) {
+							include.push(info[0]);
+						}
+						else {
+							exclude.push(info[0]);
+						}
+					}
+					else {
+						if(checkbox.checked == true){
+							include.push(info[0]);
+						}else{
+							exclude.push(info[0]);
+						}
+					}
+                                }
+                        };
+
+                        if(url){//Link
+                                url += '&exclude_attachments=' + exclude.join(',');
+                                document.location.href = url+'&zipit='+zip;// 0 = Show on screen, 1 = Zip PDF, 2 = Download PDF
+                        }else{
+                                document.getElementsByName('zipit')[0].value = zip;
+                                document.getElementsByName('download_documents')[0].value = include.join(',');
+                                document.view_multi_docs.submit();
+                        }
+                }
+
+                </script>
+	
+			<form><!-- Required for old style javascript, for older browsers. -->
+			<script>CMECF.util.Event.addListener(window, 'pageshow', select_link_documents);</script>
+			<script>CMECF.MainMenu.alternateHelp="////show_multidocs.htm"</script>
+			<table style="table-layout:fixed;word-wrap:break-word;margin: 20px">
+		
+			<tr>
+				<td colspan="2"><b>Document Number:</b></td>
+				<td width="50px"><input type="checkbox" name="document_1_0" onchange="update_sizes(this)" autocomplete="off" value="290550-372216-21" /></td>
+				<td><a href="https://ecf.mad.uscourts.gov/doc1/0951290550" onClick="goDLS('/doc1/0951290550','96751','61','','','1','','','');return(false);">1</a></td>
+				<td>21 pages</td>
+				<td>363.5 KB</td>
+			</tr>
+			<tr height="50px">
+				<td width="150px" colspan="2"><b>Attachment</b></td>
+				<td width="200px" colspan="2"><b>Description</b></td>
+				<td width="100px"><b>Pages</b></td>
+				<td width="100px"><b>Size</b></td>
+			</tr>
+			
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_1_2" onchange="update_sizes(this)" autocomplete="off" value="290554-255497-14" /></td>
+				<td><a href="https://ecf.mad.uscourts.gov/doc1/0951290554" onClick="goDLS('/doc1/0951290554','96751','61','','','1','','','');return(false);">2</a></td>
+				<td colspan="2"></td>
+				<td>14 pages</td>
+				<td>249.5 KB</td>
+			</tr>
+			  
+			<tr>
+				<td colspan="6"><hr></td>
+			</tr>
+			<tr>
+				<td colspan="4">
+			
+				<input type="button" id="view_button" onclick="submit_form(0, '/cgi-bin/show_multidocs.pl?caseid=96751&arr_de_seq_nums=61&magic_num=&pdf_header=&hdr=&psf_report=&pdf_toggle_possible=')" value="View Selected"> or
+				<input type="button" id="download_button" onclick="submit_form(1, '/cgi-bin/show_multidocs.pl?caseid=96751&arr_de_seq_nums=61&magic_num=&pdf_header=&hdr=&psf_report=&pdf_toggle_possible=')" value="Download Selected">
+
+				</td>
+				<input type="hidden" id="total_page_counter" value="0" />
+				<input type="hidden" id="total_size_counter" value="0" />
+				<td id="total_page_display">page</td>
+				<td id="total_size_display">613.0 KB</td>
+				</tr>
+				</table>
+				</form><!-- Required for old style javascript, for older browsers. -->
+
+				<div id="file_too_big"><b>Note</b>: You must view each document individually because the combined PDF would be over the 100 MB size limit.</div>
+			</div></body></html>

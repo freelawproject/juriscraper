@@ -1,0 +1,87 @@
+<html><head><link rel="shortcut icon"  href="/favicon.ico"/><title>MOED - CM/ECF (LIVE)</title>
+<script type="text/javascript">var default_base_path = "/"; </script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script><link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><link rel="stylesheet" type="text/css" href="/css/print.css" media="print"><script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script></head><body BGCOLOR=FFFFF0 TEXT=000000 onLoad='SetFocus()'>        <div id="topmenu" class="yuimenubar">
+				<div class="bd"><img src="/graphics/logo-cmecf-sm.png" class="cmecfLogo" id="cmecfLogo" alt="CM/ECF" title="" />
+				<ul class="first-of-type">
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/iquery.pl'><u>Q</u>uery</a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Reports'>Reports <div class='spritedownarrow'></div></a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Utilities'><u>U</u>tilities <div class='spritedownarrow'></div></a></li>
+				<li class="yuimenubaritem">
+				<a class="yuimenubaritemlabel" onClick="CMECF.MainMenu.showHelpPage(); return false" >Help</a></li>
+				
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/login.pl?logout'>Log Out</a></li></ul><hr class="hrmenuseparator"></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.createMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);}</script> <div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript">
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;
+					while(document.forms[0].elements[Cnt] != null) {
+						try {
+							if(document.forms[0].elements[Cnt].type != "hidden" &&
+									!document.forms[0].elements[Cnt].disabled &&
+									!document.forms[0].elements[Cnt].readOnly) {
+								document.forms[0].elements[Cnt].focus();
+								break;
+							}
+						}
+						catch(e) {}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+
+			<p>&nbsp;&nbsp;<B>Document Selection Menu</B></p>
+		
+			<p>&nbsp;&nbsp;Select the document you wish to view.</p>
+			<script type="text/javascript">CMECF.MainMenu.alternateHelp="////show_multidocs.htm"</script>
+			<table width=700 cellpadding=4 cellspacing=3>
+		<tr><td colspan=2><B>Document Number:</B> <a href="https://ecf.moed.uscourts.gov/doc1/10713199297" onClick="goDLS('/doc1/10713199297','84299','26008','','','1','','','');return(false);">2586</a></td><td width=400>6 pages</td><td width=600>31 kb</td><tr><td>&nbsp;</td><tr><td width=100><B>Attachment</B></TD><TD width=240><B>Description</B></TD>
+				<tr>
+					<td width=100 valign=top><a href="https://ecf.moed.uscourts.gov/doc1/10713199298" onClick="goDLS('/doc1/10713199298','84299','26008','','','1','','','');return(false);">2</a></td>
+					<td width=240>Exhibit A - 2009-11-19 Trial Transcript Vol. 13A Excerpts</td>
+					<td width=400>8 pages</td>
+					<td width=600>62 kb</td>
+				</tr>
+			  
+				<tr>
+					<td width=100 valign=top><a href="https://ecf.moed.uscourts.gov/doc1/10713199299" onClick="goDLS('/doc1/10713199299','84299','26008','','','1','','','');return(false);">3</a></td>
+					<td width=240>Exhibit B - 2009-11-18 Trial Transcript Vol. 12 Excerpts</td>
+					<td width=400>6 pages</td>
+					<td width=600>56 kb</td>
+				</tr>
+			  
+				<tr>
+					<td width=100 valign=top><a href="https://ecf.moed.uscourts.gov/doc1/10713199300" onClick="goDLS('/doc1/10713199300','84299','26008','','','1','','','');return(false);">4</a></td>
+					<td width=240>Exhibit C - Trial Exhibit B-529A</td>
+					<td width=400>44 pages</td>
+					<td width=600>  1.9 mb</td>
+				</tr>
+			  
+				<tr>
+					<td width=100 valign=top><a href="https://ecf.moed.uscourts.gov/doc1/10713199301" onClick="goDLS('/doc1/10713199301','84299','26008','','','1','','','');return(false);">5</a></td>
+					<td width=240>Exhibit D - 2009-11-17 Trial Transcript Vol. 11A Excerpts</td>
+					<td width=400>6 pages</td>
+					<td width=600>55 kb</td>
+				</tr>
+			  
+				<tr>
+					<td width=100 valign=top><a href="https://ecf.moed.uscourts.gov/doc1/10713199302" onClick="goDLS('/doc1/10713199302','84299','26008','','','1','','','');return(false);">6</a></td>
+					<td width=240>Exhibit E - 2009-11-06 Trial Transcript Vol. 5A Excerpts</td>
+					<td width=400>6 pages</td>
+					<td width=600>55 kb</td>
+				</tr>
+			  <tr><td colspan='4'><hr></td></tr><tr><td colspan=2><input type='button' onClick="parent.location='/cgi-bin/show_multidocs.pl?caseid=84299&arr_de_seq_nums=26008&magic_num=&pdf_header=&hdr=&psf_report=&pdf_toggle_possible='" value='View All'>&nbsp;&nbsp;or&nbsp;&nbsp;<input type='button' onClick="parent.location='/cgi-bin/show_multidocs.pl?caseid=84299&arr_de_seq_nums=26008&magic_num=&pdf_header=&hdr=&psf_report=&pdf_toggle_possible=&zipit=1'" value='Download All'></td><td>76 pages</td><td>  2.1 mb</td></tr></table></div></body></html>

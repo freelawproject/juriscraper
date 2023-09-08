@@ -1,0 +1,660 @@
+<html><head><link rel="shortcut icon"  href="/favicon.ico"/><title>SDNY CM/ECF NextGen Version 1.7</title>
+<script type="text/javascript">var default_base_path = "/"; </script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script><link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><link rel="stylesheet" type="text/css" href="/css/print.css" media="print"><script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script></head><body BGCOLOR=ADC1CE TEXT=000000 onLoad='SetFocus()'>        <div id="topmenu" class="yuimenubar">
+				<div class="bd"><img src="/graphics/logo-cmecf-sm.png" class="cmecfLogo" id="cmecfLogo" alt="CM/ECF" title="" />
+				<ul class="first-of-type">
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/iquery.pl'><u>Q</u>uery</a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Reports'>Reports <div class='spritedownarrow'></div></a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Utilities'><u>U</u>tilities <div class='spritedownarrow'></div></a></li>
+				<li class="yuimenubaritem">
+				<a class="yuimenubaritemlabel" onClick="CMECF.MainMenu.showHelpPage(); return false" >Help</a></li>
+				
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/login.pl?logout'>Log Out</a></li></ul><hr class="hrmenuseparator"></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.createMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);}</script> <div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript">
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;
+					while(document.forms[0].elements[Cnt] != null) {
+						try {
+							if(document.forms[0].elements[Cnt].type != "hidden" &&
+									!document.forms[0].elements[Cnt].disabled &&
+									!document.forms[0].elements[Cnt].readOnly) {
+								document.forms[0].elements[Cnt].focus();
+								break;
+							}
+						}
+						catch(e) {}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+
+			<p><b style="margin:10px">Document Selection Menu</b></p>
+			
+			<p><span style="margin:10px">Select the document you wish to view.</span></p>
+			
+                <script>
+		function size_mb_or_kb(size){
+			if(size < 1024){return size + ' B'}
+			if(size < 1024000){return (size/1024).toFixed(1) + ' KB'}
+			return (size/1024000).toFixed(1) + ' MB';
+		}
+
+// Code used by a Document Link:
+                                // Reset checkboxes if page is refreshed.
+                                function SetFocus(){//overwrite existing function
+                                }
+
+// Code used by Docket Sheet
+
+                function select_all_documents(checked){
+			var elements = document.forms[0].elements;
+			for (var i = 0; i < elements.length; i++) {
+				var checkbox = elements[i];
+				if (checkbox.name == 'all_documents') {
+					checkbox.checked = checked;
+					select_all_attachments(checkbox);
+				}
+			}
+                        if(checked == false){
+                                clear_totals();
+                        }
+                }
+
+		function select_all_attachments(all){
+			attachments = all.value.split('_');
+
+			var elements = document.forms[0].elements;
+			for(var i=0; i < elements.length; i++){
+				var checkbox = elements[i];
+				if(checkbox.name.match('document_' + attachments[0] + '_' + attachments[1] + '_')){
+					if (checkbox.type == "checkbox") {
+						if(checkbox.checked != all.checked){
+							checkbox.checked = all.checked;
+							update_sizes(checkbox);
+						}
+					}
+					else {
+						// Handle things when it is a type = "hidden"
+						update_sizes(checkbox, all.checked);
+					}
+				}
+			}
+
+			// If ROA, and checkbox is cleared, then also clear the sort order
+			if("" != ""){
+				if(all.checked == false){
+					document.getElementById('de_'+attachments[1]+'_sort').value = '';
+				}
+			}
+		}
+
+		function update_sizes(checkbox, all_checked_value){
+			var total_size_counter = document.getElementById('total_size_counter');
+			var total_page_counter = document.getElementById('total_page_counter');
+			var total_size_display = document.getElementById('total_size_display');
+			var total_page_display = document.getElementById('total_page_display');
+
+			var total_size = parseInt(total_size_counter.value);
+			var total_page = parseInt(total_page_counter.value);
+
+			var info = checkbox.value.split('-');//dm_dls_id - file_size - page_size
+			var size = parseInt(info[1]);
+			var page = parseInt(info[2]);
+
+			var checked = all_checked_value;
+			if (checkbox.type == "checkbox") {
+				checked = checkbox.checked;
+			}
+			if(checked == true){
+				total_size += size;
+				total_page += page;
+			}else{
+				total_size -= size;
+				total_page -= page;
+			}
+
+			var buttons_disabled = true;
+			var file_too_big = true;
+			if(total_size <= 10590617.6){
+				file_too_big = false;
+				if(total_size > 0){
+					buttons_disabled = false;
+				}
+			}
+
+			document.getElementById('view_button').disabled = buttons_disabled;
+			document.getElementById('download_button').disabled = buttons_disabled;
+			document.getElementById('file_too_big').style.display = file_too_big ? 'block':'none';
+
+			//alert(total_size + ':' + total_page);
+			total_size_counter.value = total_size;
+			total_page_counter.value = total_page;
+			if(total_size_display.type == 'text'){
+				total_size_display.value = Number((total_size/1024000).toFixed(5));
+				total_page_display.value = total_page + ((total_page == 1) ? ' page':' pages');
+			}else{
+				total_size_display.innerHTML = size_mb_or_kb(total_size);
+				total_page_display.innerHTML = total_page + ((total_page == 1) ? ' page':' pages');
+			}
+		}
+
+		function clear_totals(){
+			document.getElementById('total_size_counter').value = 0;
+			document.getElementById('total_page_counter').value = 0;
+			document.getElementById('total_size_display').value = 0;
+			document.getElementById('total_page_display').value = 0;
+  
+			document.getElementById('view_button').disabled = true;
+			document.getElementById('download_button').disabled = true;
+		}
+
+                function select_link_documents(){ // When selected by a link, check all documents.
+                        clear_totals();
+
+			elements = document.forms[0].elements;
+			for(i=0; i < elements.length; i++){
+				checkbox = elements[i];
+				if(checkbox.type == 'checkbox'){
+					checkbox.checked = true;
+					update_sizes(checkbox);
+				}
+			};	
+		}
+
+		function submit_form(zip,url){
+			var include=[];//Docket
+			var exclude=[];//Link
+			var elements = document.forms[0].elements;
+
+			// create a hash of "all_documents" values to "checked" status for dealing with hidden inputs
+			var ad_checked = {};
+			for (var i = 0; i < elements.length; i++) {
+				var checkbox = elements[i];
+				if (checkbox.name == "all_documents") {
+					ad_checked[checkbox.value] = checkbox.checked;
+				}
+			}
+
+			for(var i=0; i < elements.length; i++){
+				var checkbox = elements[i];
+				if(checkbox.name.match(/document_/)){
+					var info = checkbox.value.split('-');//dm_dls_id - file_size - page_size
+					if (checkbox.type == "hidden") {
+						var values = checkbox.name.split('_');
+						var ad_key = values[1] + '_' + values[2];
+						if (ad_checked[ad_key]) {
+							include.push(info[0]);
+						}
+						else {
+							exclude.push(info[0]);
+						}
+					}
+					else {
+						if(checkbox.checked == true){
+							include.push(info[0]);
+						}else{
+							exclude.push(info[0]);
+						}
+					}
+                                }
+                        };
+
+                        if(url){//Link
+                                url += '&exclude_attachments=' + exclude.join(',');
+                                document.location.href = url+'&zipit='+zip;// 0 = Show on screen, 1 = Zip PDF, 2 = Download PDF
+                        }else{
+                                document.getElementsByName('zipit')[0].value = zip;
+                                document.getElementsByName('download_documents')[0].value = include.join(',');
+                                document.view_multi_docs.submit();
+                        }
+                }
+
+                </script>
+	
+			<form><!-- Required for old style javascript, for older browsers. -->
+			<script>CMECF.util.Event.addListener(window, 'pageshow', select_link_documents);</script>
+			<script>CMECF.MainMenu.alternateHelp="////show_multidocs.htm"</script>
+			<table style="table-layout:fixed;word-wrap:break-word;margin: 20px">
+		
+			<tr>
+				<td colspan="2"><b>Document Number:</b></td>
+				<td width="50px"><input type="checkbox" name="document_17_0" onchange="update_sizes(this)" autocomplete="off" value="8012898-29665-7" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012898" onClick="goDLS('/doc1/12718012898','347818','112','','','1','','','');return(false);">17</a></td>
+				<td>7 pages</td>
+				<td>29.0 KB</td>
+			</tr>
+			<tr height="50px">
+				<td width="150px" colspan="2"><b>Attachment</b></td>
+				<td width="200px" colspan="2"><b>Description</b></td>
+				<td width="100px"><b>Pages</b></td>
+				<td width="100px"><b>Size</b></td>
+			</tr>
+			
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_1" onchange="update_sizes(this)" autocomplete="off" value="8012899-2014670-29" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012899" onClick="goDLS('/doc1/12718012899','347818','112','','','1','','','');return(false);">1</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>29 pages</td>
+				<td>  2.0 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_2" onchange="update_sizes(this)" autocomplete="off" value="8012900-278679-7" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012900" onClick="goDLS('/doc1/12718012900','347818','112','','','1','','','');return(false);">2</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>7 pages</td>
+				<td>272.1 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_3" onchange="update_sizes(this)" autocomplete="off" value="8012901-266100-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012901" onClick="goDLS('/doc1/12718012901','347818','112','','','1','','','');return(false);">3</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>259.9 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_4" onchange="update_sizes(this)" autocomplete="off" value="8012902-92574-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012902" onClick="goDLS('/doc1/12718012902','347818','112','','','1','','','');return(false);">4</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>90.4 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_5" onchange="update_sizes(this)" autocomplete="off" value="8012903-100417-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012903" onClick="goDLS('/doc1/12718012903','347818','112','','','1','','','');return(false);">5</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>98.1 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_6" onchange="update_sizes(this)" autocomplete="off" value="8012904-874724-17" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012904" onClick="goDLS('/doc1/12718012904','347818','112','','','1','','','');return(false);">6</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>17 pages</td>
+				<td>854.2 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_7" onchange="update_sizes(this)" autocomplete="off" value="8012905-892609-13" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012905" onClick="goDLS('/doc1/12718012905','347818','112','','','1','','','');return(false);">7</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>13 pages</td>
+				<td>871.7 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_8" onchange="update_sizes(this)" autocomplete="off" value="8012906-247894-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012906" onClick="goDLS('/doc1/12718012906','347818','112','','','1','','','');return(false);">8</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>242.1 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_9" onchange="update_sizes(this)" autocomplete="off" value="8012907-382504-5" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012907" onClick="goDLS('/doc1/12718012907','347818','112','','','1','','','');return(false);">9</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>5 pages</td>
+				<td>373.5 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_10" onchange="update_sizes(this)" autocomplete="off" value="8012908-241151-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012908" onClick="goDLS('/doc1/12718012908','347818','112','','','1','','','');return(false);">10</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>235.5 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_11" onchange="update_sizes(this)" autocomplete="off" value="8012909-158922-3" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012909" onClick="goDLS('/doc1/12718012909','347818','112','','','1','','','');return(false);">11</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>3 pages</td>
+				<td>155.2 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_12" onchange="update_sizes(this)" autocomplete="off" value="8012910-92676-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012910" onClick="goDLS('/doc1/12718012910','347818','112','','','1','','','');return(false);">12</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>90.5 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_13" onchange="update_sizes(this)" autocomplete="off" value="8012911-102781-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012911" onClick="goDLS('/doc1/12718012911','347818','112','','','1','','','');return(false);">13</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>100.4 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_14" onchange="update_sizes(this)" autocomplete="off" value="8012912-101964-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012912" onClick="goDLS('/doc1/12718012912','347818','112','','','1','','','');return(false);">14</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>99.6 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_15" onchange="update_sizes(this)" autocomplete="off" value="8012913-900433-44" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012913" onClick="goDLS('/doc1/12718012913','347818','112','','','1','','','');return(false);">15</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>44 pages</td>
+				<td>879.3 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_16" onchange="update_sizes(this)" autocomplete="off" value="8012914-258295-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012914" onClick="goDLS('/doc1/12718012914','347818','112','','','1','','','');return(false);">16</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>252.2 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_17" onchange="update_sizes(this)" autocomplete="off" value="8012915-204794-3" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012915" onClick="goDLS('/doc1/12718012915','347818','112','','','1','','','');return(false);">17</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>3 pages</td>
+				<td>200.0 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_18" onchange="update_sizes(this)" autocomplete="off" value="8012916-246350-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012916" onClick="goDLS('/doc1/12718012916','347818','112','','','1','','','');return(false);">18</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>240.6 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_19" onchange="update_sizes(this)" autocomplete="off" value="8012917-99406-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012917" onClick="goDLS('/doc1/12718012917','347818','112','','','1','','','');return(false);">19</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>97.1 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_20" onchange="update_sizes(this)" autocomplete="off" value="8012918-87663-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012918" onClick="goDLS('/doc1/12718012918','347818','112','','','1','','','');return(false);">20</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>85.6 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_21" onchange="update_sizes(this)" autocomplete="off" value="8012919-99185-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012919" onClick="goDLS('/doc1/12718012919','347818','112','','','1','','','');return(false);">21</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>96.9 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_22" onchange="update_sizes(this)" autocomplete="off" value="8012920-132083-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012920" onClick="goDLS('/doc1/12718012920','347818','112','','','1','','','');return(false);">22</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>129.0 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_23" onchange="update_sizes(this)" autocomplete="off" value="8012921-509826-9" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012921" onClick="goDLS('/doc1/12718012921','347818','112','','','1','','','');return(false);">23</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>9 pages</td>
+				<td>497.9 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_24" onchange="update_sizes(this)" autocomplete="off" value="8012922-1141126-21" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012922" onClick="goDLS('/doc1/12718012922','347818','112','','','1','','','');return(false);">24</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>21 pages</td>
+				<td>  1.1 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_25" onchange="update_sizes(this)" autocomplete="off" value="8012923-1369486-25" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012923" onClick="goDLS('/doc1/12718012923','347818','112','','','1','','','');return(false);">25</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>25 pages</td>
+				<td>  1.3 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_26" onchange="update_sizes(this)" autocomplete="off" value="8012924-252777-12" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012924" onClick="goDLS('/doc1/12718012924','347818','112','','','1','','','');return(false);">26</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>12 pages</td>
+				<td>246.9 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_27" onchange="update_sizes(this)" autocomplete="off" value="8012925-258076-12" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012925" onClick="goDLS('/doc1/12718012925','347818','112','','','1','','','');return(false);">27</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>12 pages</td>
+				<td>252.0 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_28" onchange="update_sizes(this)" autocomplete="off" value="8012926-250606-12" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012926" onClick="goDLS('/doc1/12718012926','347818','112','','','1','','','');return(false);">28</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>12 pages</td>
+				<td>244.7 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_29" onchange="update_sizes(this)" autocomplete="off" value="8012927-255384-12" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012927" onClick="goDLS('/doc1/12718012927','347818','112','','','1','','','');return(false);">29</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>12 pages</td>
+				<td>249.4 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_30" onchange="update_sizes(this)" autocomplete="off" value="8012928-216627-12" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012928" onClick="goDLS('/doc1/12718012928','347818','112','','','1','','','');return(false);">30</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>12 pages</td>
+				<td>211.5 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_31" onchange="update_sizes(this)" autocomplete="off" value="8012929-250132-12" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012929" onClick="goDLS('/doc1/12718012929','347818','112','','','1','','','');return(false);">31</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>12 pages</td>
+				<td>244.3 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_32" onchange="update_sizes(this)" autocomplete="off" value="8012930-252399-12" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012930" onClick="goDLS('/doc1/12718012930','347818','112','','','1','','','');return(false);">32</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>12 pages</td>
+				<td>246.5 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_33" onchange="update_sizes(this)" autocomplete="off" value="8012931-254307-12" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012931" onClick="goDLS('/doc1/12718012931','347818','112','','','1','','','');return(false);">33</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>12 pages</td>
+				<td>248.3 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_34" onchange="update_sizes(this)" autocomplete="off" value="8012932-95006-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012932" onClick="goDLS('/doc1/12718012932','347818','112','','','1','','','');return(false);">34</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>92.8 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_35" onchange="update_sizes(this)" autocomplete="off" value="8012933-1542267-14" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012933" onClick="goDLS('/doc1/12718012933','347818','112','','','1','','','');return(false);">35</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>14 pages</td>
+				<td>  1.5 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_36" onchange="update_sizes(this)" autocomplete="off" value="8012934-955673-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012934" onClick="goDLS('/doc1/12718012934','347818','112','','','1','','','');return(false);">36</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>933.3 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_37" onchange="update_sizes(this)" autocomplete="off" value="8012935-454363-7" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012935" onClick="goDLS('/doc1/12718012935','347818','112','','','1','','','');return(false);">37</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>7 pages</td>
+				<td>443.7 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_38" onchange="update_sizes(this)" autocomplete="off" value="8012936-121542-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012936" onClick="goDLS('/doc1/12718012936','347818','112','','','1','','','');return(false);">38</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>118.7 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_39" onchange="update_sizes(this)" autocomplete="off" value="8012937-103113-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012937" onClick="goDLS('/doc1/12718012937','347818','112','','','1','','','');return(false);">39</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>100.7 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_40" onchange="update_sizes(this)" autocomplete="off" value="8012938-447203-10" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012938" onClick="goDLS('/doc1/12718012938','347818','112','','','1','','','');return(false);">40</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>10 pages</td>
+				<td>436.7 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_41" onchange="update_sizes(this)" autocomplete="off" value="8012939-232627-5" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012939" onClick="goDLS('/doc1/12718012939','347818','112','','','1','','','');return(false);">41</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>5 pages</td>
+				<td>227.2 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_42" onchange="update_sizes(this)" autocomplete="off" value="8012940-242088-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012940" onClick="goDLS('/doc1/12718012940','347818','112','','','1','','','');return(false);">42</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>236.4 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_43" onchange="update_sizes(this)" autocomplete="off" value="8012941-124809-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012941" onClick="goDLS('/doc1/12718012941','347818','112','','','1','','','');return(false);">43</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>121.9 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_44" onchange="update_sizes(this)" autocomplete="off" value="8012942-177787-7" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012942" onClick="goDLS('/doc1/12718012942','347818','112','','','1','','','');return(false);">44</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>7 pages</td>
+				<td>173.6 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_45" onchange="update_sizes(this)" autocomplete="off" value="8012943-123631-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012943" onClick="goDLS('/doc1/12718012943','347818','112','','','1','','','');return(false);">45</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>120.7 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_46" onchange="update_sizes(this)" autocomplete="off" value="8012944-262338-9" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012944" onClick="goDLS('/doc1/12718012944','347818','112','','','1','','','');return(false);">46</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>9 pages</td>
+				<td>256.2 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_47" onchange="update_sizes(this)" autocomplete="off" value="8012945-121758-2" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012945" onClick="goDLS('/doc1/12718012945','347818','112','','','1','','','');return(false);">47</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>2 pages</td>
+				<td>118.9 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_48" onchange="update_sizes(this)" autocomplete="off" value="8012946-1473135-16" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012946" onClick="goDLS('/doc1/12718012946','347818','112','','','1','','','');return(false);">48</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>16 pages</td>
+				<td>  1.4 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_17_49" onchange="update_sizes(this)" autocomplete="off" value="8012947-498672-26" /></td>
+				<td><a href="https://ecf.nysd.uscourts.gov/doc1/12718012947" onClick="goDLS('/doc1/12718012947','347818','112','','','1','','','');return(false);">49</a></td>
+				<td colspan="2">Exhibit </td>
+				<td>26 pages</td>
+				<td>487.0 KB</td>
+			</tr>
+			  
+			<tr>
+				<td colspan="6"><hr></td>
+			</tr>
+			<tr>
+				<td colspan="4">
+			
+				<input type="button" id="view_button" onclick="submit_form(0, '/cgi-bin/show_multidocs.pl?caseid=347818&arr_de_seq_nums=112&magic_num=&pdf_header=&hdr=&psf_report=&pdf_toggle_possible=')" value="View Selected"> or
+				<input type="button" id="download_button" onclick="submit_form(1, '/cgi-bin/show_multidocs.pl?caseid=347818&arr_de_seq_nums=112&magic_num=&pdf_header=&hdr=&psf_report=&pdf_toggle_possible=')" value="Download Selected">
+
+				</td>
+				<input type="hidden" id="total_page_counter" value="0" />
+				<input type="hidden" id="total_size_counter" value="0" />
+				<td id="total_page_display">page</td>
+				<td id="total_size_display"> 19.4 MB</td>
+				</tr>
+				</table>
+				</form><!-- Required for old style javascript, for older browsers. -->
+
+				<div id="file_too_big"><b>Note</b>: You must view each document individually because the combined PDF would be over the 10.1 MB size limit.</div>
+			</div></body></html>
