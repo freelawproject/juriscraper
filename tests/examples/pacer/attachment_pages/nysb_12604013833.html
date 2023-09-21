@@ -1,0 +1,73 @@
+<html><head><link rel="shortcut icon"  href="/favicon.ico"/><title>New York Southern Live System</title>
+<script type="text/javascript">document.cookie = "PRTYPE=web; path=/;"</script> <script>var default_base_path = "/"; </script> <link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript" src="/lib/autocomplete.js"></script><script type="text/javascript" src="/lib/DisableAJTALinks.js"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script><script>var default_base_path = "/"; </script></head><body BGCOLOR=FFFFF0 TEXT=000000 onLoad='SetFocus()'>
+				<div class="noprint">
+				<div id="topmenu" class="yuimenubar"><div class="bd">
+				<img id="cmecfLogo" class="cmecfLogo" src="/graphics/logo-cmecf-sm.png" alt="CM/ECF" title=""  />
+				<ul class="first-of-type">
+			
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/iquery.pl'>Q</u>uery</a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Reports&id=-1'>R</u>eports <div class='spritedownarrow'></div></a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Utilities&id=-1'>U</u>tilities <div class='spritedownarrow'></div></a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" onClick="CMECF.MainMenu.showHelpPage(''); return false">Help</a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/login.pl?logout'>Log Out</a></li><li class='yuimenubaritem' id='placeholderForAlertsIcon'></li>
+				</ul></div>
+				<hr class="hrmenuseparator"></div></div>
+				
+			<script type="text/javascript">
+callCreateMenu=function(){
+				var fn = "CMECF.MainMenu.renderSimpleMenu";
+				if(typeof CMECF.MainMenu.renderSimpleMenu == 'function') {
+					CMECF.MainMenu.renderSimpleMenu();
+				}
+                        }
+if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout( function(){ callCreateMenu(); }, 1);}else{CMECF.util.Event.addListener(window, "load",  callCreateMenu());}</script> <div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript">
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;
+					while(document.forms[0].elements[Cnt] != null) {
+						try {
+							if(document.forms[0].elements[Cnt].type != "hidden" &&
+									!document.forms[0].elements[Cnt].disabled &&
+									!document.forms[0].elements[Cnt].readOnly) {
+								document.forms[0].elements[Cnt].focus();
+								break;
+							}
+						}
+						catch(e) {}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+
+			<p>Document Selection Menu</p>
+			<p align=center><big>Multiple Documents</big></p>
+		
+			<p>Select the document you wish to view.</p>
+			<table cellpadding=4 cellspacing=3>
+		
+			<tr>
+				<th width=50  align=right>Part</th>
+				<th width=20>&nbsp;</td>
+				<th width=150 align=left>Description</th>
+			</tr>
+		<TR><TD align=right><a href='/doc1/12614025673' onContextMenu='this.href="https://ecf.nysb.uscourts.gov/doc1/12614025673"'>1</a></TD><TD></TD><TD>Main Document  </TD><TD>18 pages</TD></TR>
+<TR><TD align=right><a href='/doc1/12614013833' onContextMenu='this.href="https://ecf.nysb.uscourts.gov/doc1/12614013833"'>2</a></TD><TD></TD><TD> Exhibit A Organizational Chart</TD><TD>1 page</TD></TR>
+<TR><TD align=right><a href='/doc1/12614028047' onContextMenu='this.href="https://ecf.nysb.uscourts.gov/doc1/12614028047"'>3</a></TD><TD></TD><TD> Proposed Order</TD><TD>11 pages</TD></TR>
+<tr><td colspan='4'><hr></td></tr><tr><td colspan=3><input type='button' onClick="parent.location='/cgi-bin/show_multidocs.pl?caseid=137477&arr_de_seq_nums=9&magic_num=MAGIC&pdf_header=&pdf_toggle_value=2'" value='View All'>&nbsp;&nbsp;or&nbsp;&nbsp;<input type='button' onClick="parent.location='/cgi-bin/show_multidocs.pl?caseid=137477&arr_de_seq_nums=9&magic_num=MAGIC&pdf_header=&pdf_toggle_value=2&zipit=1'" value='Download All'></td><td>30 pages</td></tr></table></div></body></html>

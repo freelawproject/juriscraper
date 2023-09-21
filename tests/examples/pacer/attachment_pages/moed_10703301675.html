@@ -1,0 +1,101 @@
+<html><head><link rel="shortcut icon"  href="/favicon.ico"/><title>MOED - CM/ECF (LIVE)</title>
+<script type="text/javascript">var default_base_path = "/"; </script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script><link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><link rel="stylesheet" type="text/css" href="/css/print.css" media="print"><script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script></head><body BGCOLOR=FFFFF0 TEXT=000000 onLoad='SetFocus()'>        <div id="topmenu" class="yuimenubar">
+				<div class="bd"><img src="/graphics/logo-cmecf-sm.png" class="cmecfLogo" id="cmecfLogo" alt="CM/ECF" title="" />
+				<ul class="first-of-type">
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/iquery.pl'><u>Q</u>uery</a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Reports'>Reports <div class='spritedownarrow'></div></a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Utilities'><u>U</u>tilities <div class='spritedownarrow'></div></a></li>
+				<li class="yuimenubaritem">
+				<a class="yuimenubaritemlabel" onClick="CMECF.MainMenu.showHelpPage(); return false" >Help</a></li>
+				
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/login.pl?logout'>Log Out</a></li></ul><hr class="hrmenuseparator"></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.createMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);}</script> <div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript">
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;
+					while(document.forms[0].elements[Cnt] != null) {
+						try {
+							if(document.forms[0].elements[Cnt].type != "hidden" &&
+									!document.forms[0].elements[Cnt].disabled &&
+									!document.forms[0].elements[Cnt].readOnly) {
+								document.forms[0].elements[Cnt].focus();
+								break;
+							}
+						}
+						catch(e) {}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+
+			<p>&nbsp;&nbsp;<B>Document Selection Menu</B></p>
+		
+			<p>&nbsp;&nbsp;Select the document you wish to view.</p>
+			<script type="text/javascript">CMECF.MainMenu.alternateHelp="////show_multidocs.htm"</script>
+			<table width=700 cellpadding=4 cellspacing=3>
+		<tr><td colspan=2><B>Document Number:</B> <a href="https://ecf.moed.uscourts.gov/doc1/10713301669" onClick="goDLS('/doc1/10713301669','106374','5','','','1','','','');return(false);">1</a></td><td width=400>12 pages</td><td width=600>62 kb</td><tr><td>&nbsp;</td><tr><td width=100><B>Attachment</B></TD><TD width=240><B>Description</B></TD>
+				<tr>
+					<td width=100 valign=top><a href="https://ecf.moed.uscourts.gov/doc1/10713301670" onClick="goDLS('/doc1/10713301670','106374','5','','','1','','','');return(false);">1</a></td>
+					<td width=240> Exhibit A - Warranty Claim Form</td>
+					<td width=400>1 page</td>
+					<td width=600>165 kb</td>
+				</tr>
+			  
+				<tr>
+					<td width=100 valign=top><a href="https://ecf.moed.uscourts.gov/doc1/10713301671" onClick="goDLS('/doc1/10713301671','106374','5','','','1','','','');return(false);">2</a></td>
+					<td width=240> Exhibit B - False Warranty Claims</td>
+					<td width=400>8 pages</td>
+					<td width=600>103 kb</td>
+				</tr>
+			  
+				<tr>
+					<td width=100 valign=top><a href="https://ecf.moed.uscourts.gov/doc1/10713301672" onClick="goDLS('/doc1/10713301672','106374','5','','','1','','','');return(false);">3</a></td>
+					<td width=240> Exhibit C - Additional Submitted Warranty Claims</td>
+					<td width=400>22 pages</td>
+					<td width=600>  1.3 mb</td>
+				</tr>
+			  
+				<tr>
+					<td width=100 valign=top><a href="https://ecf.moed.uscourts.gov/doc1/10713301673" onClick="goDLS('/doc1/10713301673','106374','5','','','1','','','');return(false);">4</a></td>
+					<td width=240>Original Filing Form </td>
+					<td width=400>1 page</td>
+					<td width=600>16 kb</td>
+				</tr>
+			  
+				<tr>
+					<td width=100 valign=top><a href="https://ecf.moed.uscourts.gov/doc1/10713301674" onClick="goDLS('/doc1/10713301674','106374','5','','','1','','','');return(false);">5</a></td>
+					<td width=240>Civil Cover Sheet </td>
+					<td width=400>1 page</td>
+					<td width=600>114 kb</td>
+				</tr>
+			  
+				<tr>
+					<td width=100 valign=top><a href="https://ecf.moed.uscourts.gov/doc1/10713301675" onClick="goDLS('/doc1/10713301675','106374','5','','','1','','','');return(false);">6</a></td>
+					<td width=240>Waiver of Service for Mary Haaf</td>
+					<td width=400>2 pages</td>
+					<td width=600>121 kb</td>
+				</tr>
+			  
+				<tr>
+					<td width=100 valign=top><a href="https://ecf.moed.uscourts.gov/doc1/10713301676" onClick="goDLS('/doc1/10713301676','106374','5','','','1','','','');return(false);">7</a></td>
+					<td width=240>Waiver of Service for Herb Haaf Heating & Cooling, Inc.</td>
+					<td width=400>2 pages</td>
+					<td width=600>121 kb</td>
+				</tr>
+			  <tr><td colspan='4'><hr></td></tr><tr><td colspan=2><input type='button' onClick="parent.location='/cgi-bin/show_multidocs.pl?caseid=106374&arr_de_seq_nums=5&magic_num=&pdf_header=&hdr=&psf_report=&pdf_toggle_possible='" value='View All'>&nbsp;&nbsp;or&nbsp;&nbsp;<input type='button' onClick="parent.location='/cgi-bin/show_multidocs.pl?caseid=106374&arr_de_seq_nums=5&magic_num=&pdf_header=&hdr=&psf_report=&pdf_toggle_possible=&zipit=1'" value='Download All'></td><td>49 pages</td><td>  2.0 mb</td></tr></table></div></body></html>

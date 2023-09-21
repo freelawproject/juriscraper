@@ -1,0 +1,652 @@
+<html><head><link rel="shortcut icon"  href="/favicon.ico"/><title>CM/ECF - azd</title>
+<script type="text/javascript">var default_base_path = "/"; </script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script><link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><link rel="stylesheet" type="text/css" href="/css/print.css" media="print"><script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script></head><body BGCOLOR=FFFAFA TEXT=000000 onLoad='SetFocus()'>        <div id="topmenu" class="yuimenubar">
+				<div class="bd"><img src="/graphics/logo-cmecf-sm.png" class="cmecfLogo" id="cmecfLogo" alt="CM/ECF" title="" />
+				<ul class="first-of-type">
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/iquery.pl'><u>Q</u>uery</a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Reports'>Reports <div class='spritedownarrow'></div></a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Utilities'><u>U</u>tilities <div class='spritedownarrow'></div></a></li>
+				<li class="yuimenubaritem">
+				<a class="yuimenubaritemlabel" onClick="CMECF.MainMenu.showHelpPage(); return false" >Help</a></li>
+				
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/login.pl?logout'>Log Out</a></li></ul><hr class="hrmenuseparator"></div></div></div><script type="text/javascript">if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout(CMECF.MainMenu.createMenu, 0);}else{CMECF.util.Event.addListener(window, "load", CMECF.MainMenu.createMenu);}</script> <div id="cmecfMainContent"><input type="hidden" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript">
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;
+					while(document.forms[0].elements[Cnt] != null) {
+						try {
+							if(document.forms[0].elements[Cnt].type != "hidden" &&
+									!document.forms[0].elements[Cnt].disabled &&
+									!document.forms[0].elements[Cnt].readOnly) {
+								document.forms[0].elements[Cnt].focus();
+								break;
+							}
+						}
+						catch(e) {}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+
+			<p><b style="margin:10px">Document Selection Menu</b></p>
+			
+			<p><span style="margin:10px">Select the document you wish to view.</span></p>
+			
+                <script>
+		function size_mb_or_kb(size){
+			if(size < 1024){return size + ' B'}
+			if(size < 1024000){return (size/1024).toFixed(1) + ' KB'}
+			return (size/1024000).toFixed(1) + ' MB';
+		}
+
+// Code used by a Document Link:
+                                // Reset checkboxes if page is refreshed.
+                                function SetFocus(){//overwrite existing function
+                                }
+
+// Code used by Docket Sheet
+
+                function select_all_documents(checked){
+			var elements = document.forms[0].elements;
+			for (var i = 0; i < elements.length; i++) {
+				var checkbox = elements[i];
+				if (checkbox.name == 'all_documents') {
+					checkbox.checked = checked;
+					select_all_attachments(checkbox);
+				}
+			}
+                        if(checked == false){
+                                clear_totals();
+                        }
+                }
+
+		function select_all_attachments(all){
+			attachments = all.value.split('_');
+
+			var elements = document.forms[0].elements;
+			for(var i=0; i < elements.length; i++){
+				var checkbox = elements[i];
+				if(checkbox.name.match('document_' + attachments[0] + '_' + attachments[1] + '_')){
+					if (checkbox.type == "checkbox") {
+						if(checkbox.checked != all.checked){
+							checkbox.checked = all.checked;
+							update_sizes(checkbox);
+						}
+					}
+					else {
+						// Handle things when it is a type = "hidden"
+						update_sizes(checkbox, all.checked);
+					}
+				}
+			}
+
+			// If ROA, and checkbox is cleared, then also clear the sort order
+			if("" != ""){
+				if(all.checked == false){
+					document.getElementById('de_'+attachments[1]+'_sort').value = '';
+				}
+			}
+		}
+
+		function update_sizes(checkbox, all_checked_value){
+			var total_size_counter = document.getElementById('total_size_counter');
+			var total_page_counter = document.getElementById('total_page_counter');
+			var total_size_display = document.getElementById('total_size_display');
+			var total_page_display = document.getElementById('total_page_display');
+
+			var total_size = parseInt(total_size_counter.value);
+			var total_page = parseInt(total_page_counter.value);
+
+			var info = checkbox.value.split('-');//dm_dls_id - file_size - page_size
+			var size = parseInt(info[1]);
+			var page = parseInt(info[2]);
+
+			var checked = all_checked_value;
+			if (checkbox.type == "checkbox") {
+				checked = checkbox.checked;
+			}
+			if(checked == true){
+				total_size += size;
+				total_page += page;
+			}else{
+				total_size -= size;
+				total_page -= page;
+			}
+
+			var buttons_disabled = true;
+			var file_too_big = true;
+			if(total_size <= 52428800){
+				file_too_big = false;
+				if(total_size > 0){
+					buttons_disabled = false;
+				}
+			}
+
+			document.getElementById('view_button').disabled = buttons_disabled;
+			document.getElementById('download_button').disabled = buttons_disabled;
+			document.getElementById('file_too_big').style.display = file_too_big ? 'block':'none';
+
+			//alert(total_size + ':' + total_page);
+			total_size_counter.value = total_size;
+			total_page_counter.value = total_page;
+			if(total_size_display.type == 'text'){
+				total_size_display.value = Number((total_size/1024000).toFixed(5));
+				total_page_display.value = total_page + ((total_page == 1) ? ' page':' pages');
+			}else{
+				total_size_display.innerHTML = size_mb_or_kb(total_size);
+				total_page_display.innerHTML = total_page + ((total_page == 1) ? ' page':' pages');
+			}
+		}
+
+		function clear_totals(){
+			document.getElementById('total_size_counter').value = 0;
+			document.getElementById('total_page_counter').value = 0;
+			document.getElementById('total_size_display').value = 0;
+			document.getElementById('total_page_display').value = 0;
+  
+			document.getElementById('view_button').disabled = true;
+			document.getElementById('download_button').disabled = true;
+		}
+
+                function select_link_documents(){ // When selected by a link, check all documents.
+                        clear_totals();
+
+			elements = document.forms[0].elements;
+			for(i=0; i < elements.length; i++){
+				checkbox = elements[i];
+				if(checkbox.type == 'checkbox'){
+					checkbox.checked = true;
+					update_sizes(checkbox);
+				}
+			};	
+		}
+
+		function submit_form(zip,url){
+			var include=[];//Docket
+			var exclude=[];//Link
+			var elements = document.forms[0].elements;
+
+			// create a hash of "all_documents" values to "checked" status for dealing with hidden inputs
+			var ad_checked = {};
+			for (var i = 0; i < elements.length; i++) {
+				var checkbox = elements[i];
+				if (checkbox.name == "all_documents") {
+					ad_checked[checkbox.value] = checkbox.checked;
+				}
+			}
+
+			for(var i=0; i < elements.length; i++){
+				var checkbox = elements[i];
+				if(checkbox.name.match(/document_/)){
+					var info = checkbox.value.split('-');//dm_dls_id - file_size - page_size
+					if (checkbox.type == "hidden") {
+						var values = checkbox.name.split('_');
+						var ad_key = values[1] + '_' + values[2];
+						if (ad_checked[ad_key]) {
+							include.push(info[0]);
+						}
+						else {
+							exclude.push(info[0]);
+						}
+					}
+					else {
+						if(checkbox.checked == true){
+							include.push(info[0]);
+						}else{
+							exclude.push(info[0]);
+						}
+					}
+                                }
+                        };
+
+                        if(url){//Link
+                                url += '&exclude_attachments=' + exclude.join(',');
+                                document.location.href = url+'&zipit='+zip;// 0 = Show on screen, 1 = Zip PDF, 2 = Download PDF
+                        }else{
+                                document.getElementsByName('zipit')[0].value = zip;
+                                document.getElementsByName('download_documents')[0].value = include.join(',');
+                                document.view_multi_docs.submit();
+                        }
+                }
+
+                </script>
+	
+			<form><!-- Required for old style javascript, for older browsers. -->
+			<script>CMECF.util.Event.addListener(window, 'pageshow', select_link_documents);</script>
+			<script>CMECF.MainMenu.alternateHelp="////show_multidocs.htm"</script>
+			<table style="table-layout:fixed;word-wrap:break-word;margin: 20px">
+		
+			<tr>
+				<td colspan="2"><b>Document Number:</b></td>
+				<td width="50px"><input type="checkbox" name="document_158_0" onchange="update_sizes(this)" autocomplete="off" value="88-54471-12" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025188" onClick="goDLS('/doc1/025188','35290','6885244','','','1','','','');return(false);">158</a></td>
+				<td>12 pages</td>
+				<td>53.2 KB</td>
+			</tr>
+			<tr height="50px">
+				<td width="150px" colspan="2"><b>Attachment</b></td>
+				<td width="200px" colspan="2"><b>Description</b></td>
+				<td width="100px"><b>Pages</b></td>
+				<td width="100px"><b>Size</b></td>
+			</tr>
+			
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_1" onchange="update_sizes(this)" autocomplete="off" value="99-59484-3" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025199" onClick="goDLS('/doc1/025199','35290','6885244','','','1','','','');return(false);">1</a></td>
+				<td colspan="2">Exhibit Exhibit A</td>
+				<td>3 pages</td>
+				<td>58.1 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_2" onchange="update_sizes(this)" autocomplete="off" value="112-103627-5" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/0251112" onClick="goDLS('/doc1/0251112','35290','6885244','','','1','','','');return(false);">2</a></td>
+				<td colspan="2">Exhibit Exhibit B</td>
+				<td>5 pages</td>
+				<td>101.2 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_3" onchange="update_sizes(this)" autocomplete="off" value="29-1395125-44" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025129" onClick="goDLS('/doc1/025129','35290','6885244','','','1','','','');return(false);">3</a></td>
+				<td colspan="2">Exhibit Exhibit C, Part 1</td>
+				<td>44 pages</td>
+				<td>  1.4 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_4" onchange="update_sizes(this)" autocomplete="off" value="117-1372452-52" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/0251117" onClick="goDLS('/doc1/0251117','35290','6885244','','','1','','','');return(false);">4</a></td>
+				<td colspan="2">Exhibit Exhibit C, Part 2</td>
+				<td>52 pages</td>
+				<td>  1.3 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_5" onchange="update_sizes(this)" autocomplete="off" value="91-422584-13" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025191" onClick="goDLS('/doc1/025191','35290','6885244','','','1','','','');return(false);">5</a></td>
+				<td colspan="2">Exhibit Exhibit D</td>
+				<td>13 pages</td>
+				<td>412.7 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_6" onchange="update_sizes(this)" autocomplete="off" value="66-1096385-36" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025166" onClick="goDLS('/doc1/025166','35290','6885244','','','1','','','');return(false);">6</a></td>
+				<td colspan="2">Exhibit Exhibit E</td>
+				<td>36 pages</td>
+				<td>  1.1 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_7" onchange="update_sizes(this)" autocomplete="off" value="26-165297-7" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025126" onClick="goDLS('/doc1/025126','35290','6885244','','','1','','','');return(false);">7</a></td>
+				<td colspan="2">Exhibit Exhibit F</td>
+				<td>7 pages</td>
+				<td>161.4 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_8" onchange="update_sizes(this)" autocomplete="off" value="62-148798-7" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025162" onClick="goDLS('/doc1/025162','35290','6885244','','','1','','','');return(false);">8</a></td>
+				<td colspan="2">Exhibit Exhibit G</td>
+				<td>7 pages</td>
+				<td>145.3 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_9" onchange="update_sizes(this)" autocomplete="off" value="47-123349-5" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025147" onClick="goDLS('/doc1/025147','35290','6885244','','','1','','','');return(false);">9</a></td>
+				<td colspan="2">Exhibit Exhibit H</td>
+				<td>5 pages</td>
+				<td>120.5 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_10" onchange="update_sizes(this)" autocomplete="off" value="23-749276-20" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025123" onClick="goDLS('/doc1/025123','35290','6885244','','','1','','','');return(false);">10</a></td>
+				<td colspan="2">Exhibit Exhibit I</td>
+				<td>20 pages</td>
+				<td>731.7 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_11" onchange="update_sizes(this)" autocomplete="off" value="69-153989-7" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025169" onClick="goDLS('/doc1/025169','35290','6885244','','','1','','','');return(false);">11</a></td>
+				<td colspan="2">Exhibit Exhibit J</td>
+				<td>7 pages</td>
+				<td>150.4 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_12" onchange="update_sizes(this)" autocomplete="off" value="17-37644-3" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025117" onClick="goDLS('/doc1/025117','35290','6885244','','','1','','','');return(false);">12</a></td>
+				<td colspan="2">Exhibit Exhibit K</td>
+				<td>3 pages</td>
+				<td>36.8 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_13" onchange="update_sizes(this)" autocomplete="off" value="110-103669-4" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/0251110" onClick="goDLS('/doc1/0251110','35290','6885244','','','1','','','');return(false);">13</a></td>
+				<td colspan="2">Exhibit Exhibit L</td>
+				<td>4 pages</td>
+				<td>101.2 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_14" onchange="update_sizes(this)" autocomplete="off" value="86-49917-3" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025186" onClick="goDLS('/doc1/025186','35290','6885244','','','1','','','');return(false);">14</a></td>
+				<td colspan="2">Exhibit Exhibit M</td>
+				<td>3 pages</td>
+				<td>48.7 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_15" onchange="update_sizes(this)" autocomplete="off" value="122-247716-8" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/0251122" onClick="goDLS('/doc1/0251122','35290','6885244','','','1','','','');return(false);">15</a></td>
+				<td colspan="2">Exhibit Exhibit N</td>
+				<td>8 pages</td>
+				<td>241.9 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_16" onchange="update_sizes(this)" autocomplete="off" value="21-275466-16" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025121" onClick="goDLS('/doc1/025121','35290','6885244','','','1','','','');return(false);">16</a></td>
+				<td colspan="2">Exhibit Exhibit O</td>
+				<td>16 pages</td>
+				<td>269.0 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_17" onchange="update_sizes(this)" autocomplete="off" value="15-265668-13" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025115" onClick="goDLS('/doc1/025115','35290','6885244','','','1','','','');return(false);">17</a></td>
+				<td colspan="2">Exhibit Exhibit P</td>
+				<td>13 pages</td>
+				<td>259.4 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_18" onchange="update_sizes(this)" autocomplete="off" value="43-234600-13" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025143" onClick="goDLS('/doc1/025143','35290','6885244','','','1','','','');return(false);">18</a></td>
+				<td colspan="2">Errata Exhibit Q</td>
+				<td>13 pages</td>
+				<td>229.1 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_19" onchange="update_sizes(this)" autocomplete="off" value="131-46787-2" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/0251131" onClick="goDLS('/doc1/0251131','35290','6885244','','','1','','','');return(false);">19</a></td>
+				<td colspan="2">Exhibit Exhibit R</td>
+				<td>2 pages</td>
+				<td>45.7 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_20" onchange="update_sizes(this)" autocomplete="off" value="44-48029-3" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025144" onClick="goDLS('/doc1/025144','35290','6885244','','','1','','','');return(false);">20</a></td>
+				<td colspan="2">Exhibit Exhibit 1</td>
+				<td>3 pages</td>
+				<td>46.9 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_21" onchange="update_sizes(this)" autocomplete="off" value="138-405392-9" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/0251138" onClick="goDLS('/doc1/0251138','35290','6885244','','','1','','','');return(false);">21</a></td>
+				<td colspan="2">Exhibit Exhibit 1-A</td>
+				<td>9 pages</td>
+				<td>395.9 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_22" onchange="update_sizes(this)" autocomplete="off" value="108-789043-16" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/0251108" onClick="goDLS('/doc1/0251108','35290','6885244','','','1','','','');return(false);">22</a></td>
+				<td colspan="2">Exhibit Exhibit 1-B</td>
+				<td>16 pages</td>
+				<td>770.5 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_23" onchange="update_sizes(this)" autocomplete="off" value="144-1699083-37" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/0251144" onClick="goDLS('/doc1/0251144','35290','6885244','','','1','','','');return(false);">23</a></td>
+				<td colspan="2">Exhibit Exhibit 1-C, Part 1</td>
+				<td>37 pages</td>
+				<td>  1.7 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_24" onchange="update_sizes(this)" autocomplete="off" value="25-1473751-43" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025125" onClick="goDLS('/doc1/025125','35290','6885244','','','1','','','');return(false);">24</a></td>
+				<td colspan="2">Exhibit Exhibit 1-C, Part 2</td>
+				<td>43 pages</td>
+				<td>  1.4 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_25" onchange="update_sizes(this)" autocomplete="off" value="46-1758473-22" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025146" onClick="goDLS('/doc1/025146','35290','6885244','','','1','','','');return(false);">25</a></td>
+				<td colspan="2">Exhibit Exhibit 1-D, Part 1</td>
+				<td>22 pages</td>
+				<td>  1.7 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_26" onchange="update_sizes(this)" autocomplete="off" value="96-78073-1" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025196" onClick="goDLS('/doc1/025196','35290','6885244','','','1','','','');return(false);">26</a></td>
+				<td colspan="2">Exhibit Exhibit 1-D, Part 2</td>
+				<td>1 page</td>
+				<td>76.2 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_27" onchange="update_sizes(this)" autocomplete="off" value="33-1339686-20" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025133" onClick="goDLS('/doc1/025133','35290','6885244','','','1','','','');return(false);">27</a></td>
+				<td colspan="2">Exhibit Exhibit 1-D, Part 3</td>
+				<td>20 pages</td>
+				<td>  1.3 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_28" onchange="update_sizes(this)" autocomplete="off" value="24-49778-1" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025124" onClick="goDLS('/doc1/025124','35290','6885244','','','1','','','');return(false);">28</a></td>
+				<td colspan="2">Exhibit Exhibit 1-D, Part 4</td>
+				<td>1 page</td>
+				<td>48.6 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_29" onchange="update_sizes(this)" autocomplete="off" value="113-1447889-21" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/0251113" onClick="goDLS('/doc1/0251113','35290','6885244','','','1','','','');return(false);">29</a></td>
+				<td colspan="2">Exhibit Exhibit 1-D, Part 5</td>
+				<td>21 pages</td>
+				<td>  1.4 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_30" onchange="update_sizes(this)" autocomplete="off" value="50-66084-1" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025150" onClick="goDLS('/doc1/025150','35290','6885244','','','1','','','');return(false);">30</a></td>
+				<td colspan="2">Exhibit Exhibit 1-D, Part 6</td>
+				<td>1 page</td>
+				<td>64.5 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_31" onchange="update_sizes(this)" autocomplete="off" value="93-1503722-20" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025193" onClick="goDLS('/doc1/025193','35290','6885244','','','1','','','');return(false);">31</a></td>
+				<td colspan="2">Exhibit Exhibit 1-D, Part 7</td>
+				<td>20 pages</td>
+				<td>  1.5 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_32" onchange="update_sizes(this)" autocomplete="off" value="142-41845-1" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/0251142" onClick="goDLS('/doc1/0251142','35290','6885244','','','1','','','');return(false);">32</a></td>
+				<td colspan="2">Exhibit Exhibit 1-D, Part 8</td>
+				<td>1 page</td>
+				<td>40.9 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_33" onchange="update_sizes(this)" autocomplete="off" value="34-1928164-41" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025134" onClick="goDLS('/doc1/025134','35290','6885244','','','1','','','');return(false);">33</a></td>
+				<td colspan="2">Exhibit Exhibit 1-E, Part 1</td>
+				<td>41 pages</td>
+				<td>  1.9 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_34" onchange="update_sizes(this)" autocomplete="off" value="74-1707155-38" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025174" onClick="goDLS('/doc1/025174','35290','6885244','','','1','','','');return(false);">34</a></td>
+				<td colspan="2">Exhibit Exhibit 1-E, Part 2</td>
+				<td>38 pages</td>
+				<td>  1.7 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_35" onchange="update_sizes(this)" autocomplete="off" value="68-1440364-31" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025168" onClick="goDLS('/doc1/025168','35290','6885244','','','1','','','');return(false);">35</a></td>
+				<td colspan="2">Exhibit Exhibit 1-E, Part 3</td>
+				<td>31 pages</td>
+				<td>  1.4 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_36" onchange="update_sizes(this)" autocomplete="off" value="92-1632881-36" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025192" onClick="goDLS('/doc1/025192','35290','6885244','','','1','','','');return(false);">36</a></td>
+				<td colspan="2">Exhibit Exhibit 1-E, Part 4</td>
+				<td>36 pages</td>
+				<td>  1.6 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_37" onchange="update_sizes(this)" autocomplete="off" value="63-1455291-32" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025163" onClick="goDLS('/doc1/025163','35290','6885244','','','1','','','');return(false);">37</a></td>
+				<td colspan="2">Exhibit Exhibit 1-E, Part 5</td>
+				<td>32 pages</td>
+				<td>  1.4 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_38" onchange="update_sizes(this)" autocomplete="off" value="14-1314734-35" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025114" onClick="goDLS('/doc1/025114','35290','6885244','','','1','','','');return(false);">38</a></td>
+				<td colspan="2">Exhibit Exhibit 1-E, Part 6</td>
+				<td>35 pages</td>
+				<td>  1.3 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_39" onchange="update_sizes(this)" autocomplete="off" value="139-1882497-35" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/0251139" onClick="goDLS('/doc1/0251139','35290','6885244','','','1','','','');return(false);">39</a></td>
+				<td colspan="2">Exhibit Exhibit 1-F, Part 1</td>
+				<td>35 pages</td>
+				<td>  1.8 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_40" onchange="update_sizes(this)" autocomplete="off" value="94-1357358-20" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025194" onClick="goDLS('/doc1/025194','35290','6885244','','','1','','','');return(false);">40</a></td>
+				<td colspan="2">Exhibit Exhibit 1-F, Part 2</td>
+				<td>20 pages</td>
+				<td>  1.3 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_41" onchange="update_sizes(this)" autocomplete="off" value="71-56362-1" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025171" onClick="goDLS('/doc1/025171','35290','6885244','','','1','','','');return(false);">41</a></td>
+				<td colspan="2">Exhibit Exhibit 1-F, Part 3</td>
+				<td>1 page</td>
+				<td>55.0 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_42" onchange="update_sizes(this)" autocomplete="off" value="120-1906695-37" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/0251120" onClick="goDLS('/doc1/0251120','35290','6885244','','','1','','','');return(false);">42</a></td>
+				<td colspan="2">Exhibit Exhibit 1-F, Part 4</td>
+				<td>37 pages</td>
+				<td>  1.9 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_43" onchange="update_sizes(this)" autocomplete="off" value="79-1770670-32" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025179" onClick="goDLS('/doc1/025179','35290','6885244','','','1','','','');return(false);">43</a></td>
+				<td colspan="2">Exhibit Exhibit 1-F, Part 5</td>
+				<td>32 pages</td>
+				<td>  1.7 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_44" onchange="update_sizes(this)" autocomplete="off" value="97-1707907-33" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025197" onClick="goDLS('/doc1/025197','35290','6885244','','','1','','','');return(false);">44</a></td>
+				<td colspan="2">Exhibit Exhibit 1-F, Part 6</td>
+				<td>33 pages</td>
+				<td>  1.7 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_45" onchange="update_sizes(this)" autocomplete="off" value="27-1107386-26" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/025127" onClick="goDLS('/doc1/025127','35290','6885244','','','1','','','');return(false);">45</a></td>
+				<td colspan="2">Exhibit Exhibit 1-F, Part 7</td>
+				<td>26 pages</td>
+				<td>  1.1 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_46" onchange="update_sizes(this)" autocomplete="off" value="107-288029-12" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/0251107" onClick="goDLS('/doc1/0251107','35290','6885244','','','1','','','');return(false);">46</a></td>
+				<td colspan="2">Exhibit Exhibit 2</td>
+				<td>12 pages</td>
+				<td>281.3 KB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_47" onchange="update_sizes(this)" autocomplete="off" value="128-1392395-27" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/0251128" onClick="goDLS('/doc1/0251128','35290','6885244','','','1','','','');return(false);">47</a></td>
+				<td colspan="2">Exhibit Exhibit 3</td>
+				<td>27 pages</td>
+				<td>  1.4 MB</td>
+			</tr>
+			  
+			<tr>
+				<td width="50px"><input type="checkbox" name="document_158_48" onchange="update_sizes(this)" autocomplete="off" value="119-220162-4" /></td>
+				<td><a href="https://ecf.azd.uscourts.gov/doc1/0251119" onClick="goDLS('/doc1/0251119','35290','6885244','','','1','','','');return(false);">48</a></td>
+				<td colspan="2">Errata Exhibit 4</td>
+				<td>4 pages</td>
+				<td>215.0 KB</td>
+			</tr>
+			  
+			<tr>
+				<td colspan="6"><hr></td>
+			</tr>
+			<tr>
+				<td colspan="4">
+			
+				<input type="button" id="view_button" onclick="submit_form(0, '/cgi-bin/show_multidocs.pl?caseid=35290&arr_de_seq_nums=6885244&magic_num=&pdf_header=&hdr=&psf_report=&pdf_toggle_possible=')" value="View Selected"> or
+				<input type="button" id="download_button" onclick="submit_form(1, '/cgi-bin/show_multidocs.pl?caseid=35290&arr_de_seq_nums=6885244&magic_num=&pdf_header=&hdr=&psf_report=&pdf_toggle_possible=')" value="Download Selected">
+
+				</td>
+				<input type="hidden" id="total_page_counter" value="0" />
+				<input type="hidden" id="total_size_counter" value="0" />
+				<td id="total_page_display">page</td>
+				<td id="total_size_display"> 38.1 MB</td>
+				</tr>
+				</table>
+				</form><!-- Required for old style javascript, for older browsers. -->
+
+				<div id="file_too_big"><b>Note</b>: You must view each document individually because the combined PDF would be over the 50 MB size limit.</div>
+			</div></body></html>
