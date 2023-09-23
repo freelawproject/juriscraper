@@ -1024,10 +1024,32 @@ class DocketReport(BaseDocketReport, BaseReport):
         return force_unicode(description)
 
     @staticmethod
+    def _get_page_count_from_tr_input_value(tr):
+        """Take a row from the attachment table and return the page count as an
+        int extracted from the input value.
+        """
+        try:
+            input = tr.xpath(".//input")[0]
+        except IndexError:
+            return None
+        else:
+            # initial value string "23515655-90555-2"
+            # "90555" is size in bytes "2" is pages
+            value = input.xpath("./@value")[0]
+            split_value = value.split("-")
+            if len(split_value) != 3:
+                return None
+            # after splitting we get our page count value "2"
+            return int(split_value[2])
+
+    @staticmethod
     def _get_page_count_from_tr(tr):
         """Take a row from the attachment table and return the page count as an
         int extracted from the cell specified by index.
         """
+        pg_cnt_input = DocketReport._get_page_count_from_tr_input_value(tr)
+        if pg_cnt_input:
+            return pg_cnt_input
         pg_cnt_str_nodes = tr.xpath('./td[contains(., "page")]/text()')
         if not pg_cnt_str_nodes:
             # It's a restricted document without page count information.
@@ -1042,6 +1064,25 @@ class DocketReport(BaseDocketReport, BaseReport):
                 # word "page" and gets caught by the xpath. Just
                 # press on.
                 continue
+
+    @staticmethod
+    def _get_file_size_bytes_from_tr(tr):
+        """Take a row from the attachment table and return the number of bytes
+        as an int.
+        """
+        try:
+            input = tr.xpath(".//input")[0]
+        except IndexError:
+            return None
+        else:
+            # initial value string "23515655-90555-2"
+            # "90555" is size in bytes "2" is pages
+            value = input.xpath("./@value")[0]
+            split_value = value.split("-")
+            if len(split_value) != 3:
+                return None
+            # after splitting we get our size in bytes "90555"
+            return int(split_value[1])
 
     @staticmethod
     def _get_file_size_str_from_tr(tr):
@@ -1074,9 +1115,13 @@ class DocketReport(BaseDocketReport, BaseReport):
             return None
         else:
             # initial value string "23515655-90555-2"
+            # "90555" is size in bytes "2" is pages
             value = input.xpath("./@value")[0]
+            split_value = value.split("-")
+            if len(split_value) != 3:
+                return None
             # after splitting we get our doc_id suffix "23515655"
-            pacer_doc_suffix = value.split("-")[0]
+            pacer_doc_suffix = split_value[0]
             # after inserting prefixes our final doc_id is "035023515655"
             return self.doc_id_prefix + "0" + pacer_doc_suffix
 
@@ -1106,19 +1151,21 @@ class DocketReport(BaseDocketReport, BaseReport):
 
         result = []
         for row in rows:
-            result.append(
-                {
-                    "attachment_number": self._get_attachment_number(row),
-                    "description": self._get_description_from_tr(row),
-                    "page_count": self._get_page_count_from_tr(row),
-                    "file_size_str": self._get_file_size_str_from_tr(row),
-                    "pacer_doc_id": self._get_pacer_doc_id(row),
-                    # It may not be needed to reparse the seq_no
-                    # for each row, but we may as well. So far, it
-                    # has always been the same as the main document.
-                    "pacer_seq_no": self._get_pacer_seq_no_from_tr(row),
-                }
-            )
+            attachment = {
+                "attachment_number": self._get_attachment_number(row),
+                "description": self._get_description_from_tr(row),
+                "page_count": self._get_page_count_from_tr(row),
+                "file_size_str": self._get_file_size_str_from_tr(row),
+                "pacer_doc_id": self._get_pacer_doc_id(row),
+                # It may not be needed to reparse the seq_no
+                # for each row, but we may as well. So far, it
+                # has always been the same as the main document.
+                "pacer_seq_no": self._get_pacer_seq_no_from_tr(row),
+            }
+            file_size_bytes = self._get_file_size_bytes_from_tr(row)
+            if file_size_bytes is not None:
+                attachment["file_size_bytes"] = file_size_bytes
+            result.append(attachment)
         return result
 
     @staticmethod
@@ -1138,6 +1185,7 @@ class DocketReport(BaseDocketReport, BaseReport):
                 f"docket entry seq_no {de['pacer_seq_no']} does not match "
                 f"attachment 0 seq_no {attachment['pacer_seq_no']}"
             )
+        de["file_size_bytes"] = attachment["file_size_bytes"]
         de["file_size_str"] = attachment["file_size_str"]
         de["page_count"] = attachment["page_count"]
 
