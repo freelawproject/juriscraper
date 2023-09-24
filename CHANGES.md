@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.53 - 2023-09-23**
+
+Features:
+
+- Parse attachments from dockets
+
+Changes:
+
+- Fix attachment page numbers for old district court attachments
+
+## Past
+
 **2.5.52 - 2023-07-06**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - Fix Nebraska/App court to ignore unpublished notes (A-XX-XXXX)
-
-## Past
 
 **2.5.51 - 2023-06-29**
 
