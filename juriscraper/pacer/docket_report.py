@@ -1024,9 +1024,9 @@ class DocketReport(BaseDocketReport, BaseReport):
         return force_unicode(description)
 
     @staticmethod
-    def _get_page_count_from_tr_input_value(tr):
-        """Take a row from the attachment table and return the page count as an
-        int extracted from the input value.
+    def _get_input_value_from_tr(tr, idx):
+        """Take a row from the attachment table and return the input value by
+        index.
         """
         try:
             input = tr.xpath(".//input")[0]
@@ -1039,8 +1039,16 @@ class DocketReport(BaseDocketReport, BaseReport):
             split_value = value.split("-")
             if len(split_value) != 3:
                 return None
-            # after splitting we get our page count value "2"
-            return int(split_value[2])
+            return split_value[idx]
+
+    @staticmethod
+    def _get_page_count_from_tr_input_value(tr):
+        """Take a row from the attachment table and return the page count as an
+        int extracted from the input value.
+        """
+        count = DocketReport._get_input_value_from_tr(tr, 2)
+        if count is not None:
+            return int(count)
 
     @staticmethod
     def _get_page_count_from_tr(tr):
@@ -1070,19 +1078,13 @@ class DocketReport(BaseDocketReport, BaseReport):
         """Take a row from the attachment table and return the number of bytes
         as an int.
         """
-        try:
-            input = tr.xpath(".//input")[0]
-        except IndexError:
+        file_size_str = DocketReport._get_input_value_from_tr(tr, 1)
+        if file_size_str is None:
             return None
-        else:
-            # initial value string "23515655-90555-2"
-            # "90555" is size in bytes "2" is pages
-            value = input.xpath("./@value")[0]
-            split_value = value.split("-")
-            if len(split_value) != 3:
-                return None
-            # after splitting we get our size in bytes "90555"
-            return int(split_value[1])
+        file_size = int(file_size_str)
+        if file_size == 0:
+            return None
+        return file_size
 
     @staticmethod
     def _get_file_size_str_from_tr(tr):
@@ -1105,25 +1107,10 @@ class DocketReport(BaseDocketReport, BaseReport):
         between the prefix and suffix to normalize the doc_id to the attachment
         page variant.
         """
-        try:
-            input = row.xpath(".//input")[0]
-        except IndexError:
-            # Item exists, but cannot download document. Perhaps it's sealed
-            # or otherwise unavailable in PACER. This is carried over from the
-            # docket report and may not be needed here, but it's a good
-            # precaution.
-            return None
-        else:
-            # initial value string "23515655-90555-2"
-            # "90555" is size in bytes "2" is pages
-            value = input.xpath("./@value")[0]
-            split_value = value.split("-")
-            if len(split_value) != 3:
-                return None
-            # after splitting we get our doc_id suffix "23515655"
-            pacer_doc_suffix = split_value[0]
-            # after inserting prefixes our final doc_id is "035023515655"
-            return self.doc_id_prefix + "0" + pacer_doc_suffix
+        # we get our doc_id suffix "23515655"
+        pacer_doc_suffix = DocketReport._get_input_value_from_tr(row, 0)
+        # after inserting prefixes our final doc_id is "035023515655"
+        return self.doc_id_prefix + "0" + pacer_doc_suffix
 
     @staticmethod
     def _get_pacer_seq_no_from_tr(row):
