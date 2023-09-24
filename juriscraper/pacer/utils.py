@@ -13,6 +13,9 @@ from ..lib.exceptions import ParsingException
 
 def get_court_id_from_doc_id_prefix(prefix):
     prefix_to_cid_map = {
+        "012": "cavc",
+        "014": "cit",
+        "015": "cofc",
         "016": "almb",
         "017": "almd",
         "018": "alnb",
@@ -108,7 +111,7 @@ def get_court_id_from_doc_id_prefix(prefix):
         "109": "mowd",
         "110": "mtb",
         "111": "mtd",
-        "112": "nebraskab",
+        "112": "neb",
         "113": "ned",
         "114": "nvb",
         "115": "nvd",
@@ -200,6 +203,7 @@ def get_court_id_from_doc_id_prefix(prefix):
         "205": "wiwd",
         "206": "wyb",
         "207": "wyd",
+        "850": "jpml",
         "973": "cacb",
     }
     return prefix_to_cid_map[prefix]
@@ -229,8 +233,11 @@ def get_doc_id_prefix_from_court_id(court_id):
         "cand": "035",
         "casb": "036",
         "casd": "037",
+        "cavc": "012",
+        "cit": "014",
         "cob": "038",
         "cod": "039",
+        "cofc": "015",
         "ctb": "040",
         "ctd": "041",
         "dcb": "044",
@@ -269,6 +276,7 @@ def get_doc_id_prefix_from_court_id(court_id):
         "innd": "071",
         "insb": "072",
         "insd": "073",
+        "jpml": "850",
         "ksb": "078",
         "ksd": "079",
         "kyeb": "080",
@@ -311,7 +319,7 @@ def get_doc_id_prefix_from_court_id(court_id):
         "ncwd": "135",
         "ndb": "136",
         "ndd": "137",
-        "nebraskab": "112",
+        "neb": "112",
         "ned": "113",
         "nhb": "116",
         "nhd": "117",
