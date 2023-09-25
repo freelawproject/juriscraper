@@ -25,6 +25,7 @@ Features:
 Changes:
 
 - Fix attachment page numbers for old district court attachments
+- Add missing prefix maps for special courts
 
 ## Past
 
