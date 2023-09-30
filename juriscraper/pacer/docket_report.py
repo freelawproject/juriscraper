@@ -341,7 +341,6 @@ class DocketReport(BaseDocketReport, BaseReport):
         "Incomplete request. Please try your query again by choosing the "
         "Query or Reports option",
         "To accept charges shown below, click on the 'View Report' button",
-        "Unable to create PDF file.",
         "This case was administratively closed",
         "The start date must be less than or equal to the end date",
         "The starting document number must be less than or equal to the "
