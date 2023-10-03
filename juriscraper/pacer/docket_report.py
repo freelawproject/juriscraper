@@ -1109,7 +1109,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         # we get our doc_id suffix "23515655"
         pacer_doc_suffix = DocketReport._get_input_value_from_tr(row, 0)
         # after inserting prefixes our final doc_id is "035023515655"
-        return self.doc_id_prefix + "0" + pacer_doc_suffix
+        return f"{self.doc_id_prefix}0{pacer_doc_suffix}"
 
     @staticmethod
     def _get_pacer_seq_no_from_tr(row):
