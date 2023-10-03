@@ -3,7 +3,7 @@ ci:
 exclude: '^tests/examples/.*\.html$'
 repos:
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.8.0
+    rev: v3.14.0
     hooks:
      - id: pyupgrade
        args: [--py37-plus]
@@ -26,13 +26,13 @@ repos:
        exclude: ^tests/examples/pacer/nef/s3/.*\.txt$
 
   - repo: https://github.com/ikamensh/flynt/
-    rev: '0.78'
+    rev: '1.0.1'
     hooks:
      - id: flynt
        args: [--line-length=79, --transform-concats]
 
   - repo: https://github.com/psf/black
-    rev: 23.3.0
+    rev: 23.9.1
     hooks:
      - id: black
        additional_dependencies: ['click==8.0.4']
