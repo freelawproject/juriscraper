@@ -24,7 +24,7 @@ def get_court_id_from_doc_id_prefix(prefix):
         "009": "ca9",
         "010": "ca10",
         "011": "ca11",
-        "012": "cavc",
+        "012": "cadc",
         "014": "cit",
         "015": "cofc",
         "016": "almb",
@@ -249,6 +249,7 @@ def get_doc_id_prefix_from_court_id(court_id):
         "ca11": "011",
         "cacb": "973",
         "cacd": "031",
+        "cadc": "012",
         "caeb": "032",
         "caed": "033",
         "canb": "034",
@@ -605,8 +606,16 @@ def make_doc1_url(court_id, pacer_doc_id, skip_attachment_page):
         # If the fourth digit is a 0, replace it with a 1
         pacer_doc_id = f"{pacer_doc_id[:3]}1{pacer_doc_id[4:]}"
     doc_id_cid = get_court_id_from_doc_id_prefix(pacer_doc_id[:3])
-    if court_id is None:
+    # The cadc/cavc courts use the same doc1 prefix so we need a court_id.
+    if court_id is None and doc_id_cid == "cadc":
+        raise ValueError(
+            f"pacer_doc_id {pacer_doc_id} prefix has court_id cadc or cavc, "
+            f"correct court_id must be passed explicitly"
+        )
+    elif court_id is None:
         court_id = doc_id_cid
+    elif court_id == "cavc" and doc_id_cid == "cadc":
+        pass
     elif court_id != doc_id_cid:
         raise ValueError(
             f"pacer_doc_id {pacer_doc_id} prefix has court_id {doc_id_cid}, "
@@ -627,8 +636,16 @@ def make_docs1_url(
         # If the fourth digit is a 0, replace it with a 1
         pacer_doc_id = f"{pacer_doc_id[:3]}1{pacer_doc_id[4:]}"
     doc_id_cid = get_court_id_from_doc_id_prefix(pacer_doc_id[:3])
-    if court_id is None:
+    # The cadc/cavc courts use the same doc1 prefix so we need a court_id.
+    if court_id is None and doc_id_cid == "cadc":
+        raise ValueError(
+            f"pacer_doc_id {pacer_doc_id} prefix has court_id cadc or cavc, "
+            f"correct court_id must be passed explicitly"
+        )
+    elif court_id is None:
         court_id = doc_id_cid
+    elif court_id == "cavc" and doc_id_cid == "cadc":
+        pass
     elif court_id != doc_id_cid:
         raise ValueError(
             f"pacer_doc_id {pacer_doc_id} prefix has court_id {doc_id_cid}, "
