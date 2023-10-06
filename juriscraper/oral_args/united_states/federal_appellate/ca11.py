@@ -43,7 +43,7 @@ class Site(OralArgumentSiteLinear):
                 {"name": name, "url": url, "date": date, "docket": docket}
             )
 
-    def _download_backwards(self, i):
+    async def _download_backwards(self, i):
         self.url = f"{self.base_url}?page={i}"
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()

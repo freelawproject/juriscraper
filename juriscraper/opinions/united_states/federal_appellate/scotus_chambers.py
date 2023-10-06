@@ -63,12 +63,11 @@ class Site(OpinionSite):
         else:
             return today.strftime("%y")
 
-    def _download(self, request_dict=None):
+    async def _download(self, request_dict=None):
         if request_dict is None:
             request_dict = {}
-        if not self.test_mode_enabled():
-            self.set_url()
-        html = super()._download(request_dict)
+        self.set_url()
+        html = await super()._download(request_dict)
         self.extract_cases_from_html(html)
         return html
 
@@ -149,7 +148,7 @@ class Site(OpinionSite):
     def _get_precedential_statuses(self):
         return [self.precedential] * len(self.cases)
 
-    def _download_backwards(self, d):
+    async def _download_backwards(self, d):
         self.yy = str(d if d >= 10 else f"0{d}")
         logger.info(f"Running backscraper for year: 20{self.yy}")
-        self.html = self._download()
+        self.html = await self._download()

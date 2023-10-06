@@ -52,11 +52,11 @@ class Site(OpinionSiteLinear):
             "User-Agent": "Juriscraper",
         }
 
-    def _download(self, request_dict=None):
+    async def _download(self, request_dict=None):
         if self.test_mode_enabled():
-            return super()._download(request_dict)
+            return await super()._download(request_dict)
 
-        self._request_url_post(self.url)
+        await self._request_url_post(self.url)
         self._post_process_response()
         return self._return_response_text_object()
 
