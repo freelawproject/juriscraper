@@ -2,9 +2,9 @@ import os
 from typing import Optional
 from urllib.parse import urljoin
 
-import requests
+import httpx
+from httpx import AsyncClient, Response, Timeout
 from lxml import html
-from requests import Response, Session, Timeout
 
 from juriscraper.lib.log_tools import make_default_logger
 
@@ -16,14 +16,16 @@ MICROSERVICE_URLS = {
 logger = make_default_logger()
 
 
-def test_for_meta_redirections(r: Response) -> tuple[bool, Optional[str]]:
+async def test_for_meta_redirections(
+    r: Response,
+) -> tuple[bool, Optional[str]]:
     """Test for meta data redirections
 
     :param r: A response object
     :return:  A boolean and value
     """
     try:
-        extension = get_extension(r.content)
+        extension = await get_extension(r.content)
     except Timeout as e:
         # Transient network issues - don't send to Sentry
         logger.warning(
@@ -59,19 +61,19 @@ def test_for_meta_redirections(r: Response) -> tuple[bool, Optional[str]]:
     return False, None
 
 
-def follow_redirections(r: Response, s: Session) -> Response:
+async def follow_redirections(r: Response, s: AsyncClient) -> Response:
     """
     Parse and recursively follow meta refresh redirections if they exist until
     there are no more.
     """
-    redirected, url = test_for_meta_redirections(r)
+    redirected, url = await test_for_meta_redirections(r)
     if redirected:
         logger.info(f"Following a meta redirection to: {url.encode()}")
-        r = follow_redirections(s.get(url), s)
+        r = follow_redirections(await s.get(url), s)
     return r
 
 
-def get_extension(content: bytes) -> str:
+async def get_extension(content: bytes) -> str:
     """
     Get the extension of a file using a microservice.
 
@@ -81,9 +83,10 @@ def get_extension(content: bytes) -> str:
     # Get the file type from the document's raw content
     doctor_host = os.environ.get("DOCTOR_HOST", "http://cl-doctor:5050")
     extension_url = MICROSERVICE_URLS["buffer-extension"].format(doctor_host)
-    extension_response = requests.post(
-        extension_url, files={"file": ("filename", content)}, timeout=30
-    )
+    async with httpx.AsyncClient() as client:
+        extension_response = await client.post(
+            extension_url, files={"file": ("filename", content)}, timeout=30
+        )
     extension_response.raise_for_status()
     extension = extension_response.text
 
