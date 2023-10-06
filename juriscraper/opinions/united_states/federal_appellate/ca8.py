@@ -58,7 +58,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _download_backwards(self, d):
+    async def _download_backwards(self, d):
         """
         If an updated backscraper is needed in the future, this court
         updates the HTML with new values with a 4/5 months lag.
@@ -69,5 +69,5 @@ class Site(OpinionSiteLinear):
             "http://media.ca8.uscourts.gov/cgi-bin/opnByMM.pl?theMM=%02d&theYY=%s&A1=Get+Opinions"
             % (d.month, d.year)
         )
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()

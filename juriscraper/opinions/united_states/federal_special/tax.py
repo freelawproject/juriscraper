@@ -36,7 +36,7 @@ class Site(OpinionSiteLinear):
         }
         self.make_backscrape_iterable(kwargs)
 
-    def _download(self, request_dict={}):
+    async def _download(self, request_dict={}):
         """Download from api
 
         The tax court switches between blue and green deploys so we need to
@@ -46,7 +46,7 @@ class Site(OpinionSiteLinear):
         :return: None
         """
         if self.test_mode_enabled():
-            return super()._download()
+            return await super()._download()
 
         if not self.set_blue_green:
             check = self.request["session"].get(self.url)
@@ -57,9 +57,9 @@ class Site(OpinionSiteLinear):
                 self.url = f"{self.base_url}/opinion-search"
             self.set_blue_green = True
 
-        return super()._download()
+        return await super()._download()
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         """Process the JSON response
 
         Iterate over each item on the page collecting our data.
@@ -68,7 +68,9 @@ class Site(OpinionSiteLinear):
         self.json = self.html
 
         for case in self.json:
-            url = self._get_url(case["docketNumber"], case["docketEntryId"])
+            url = await self._get_url(
+                case["docketNumber"], case["docketEntryId"]
+            )
             status = (
                 "Published"
                 if case["documentType"] == "T.C. Opinion"
@@ -87,7 +89,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _get_url(self, docket_number: str, docketEntryId: str) -> str:
+    async def _get_url(self, docket_number: str, docketEntryId: str) -> str:
         """Fetch the PDF URL with AWS API key
 
         param docket_number: The docket number
@@ -100,10 +102,11 @@ class Site(OpinionSiteLinear):
             # a second api request.
             return self.url
 
-        pdf_url = super()._download()["url"]
+        html = await super()._download()
+        pdf_url = html["url"]
         return pdf_url
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    async def _download_backwards(self, dates: Tuple[date]) -> None:
         """Make custom date range request to the API
 
         Note that the API returns 100 results or less, so the
@@ -114,7 +117,7 @@ class Site(OpinionSiteLinear):
         """
         self.params["startDate"] = dates[0].strftime("%m/%d/%Y")
         self.params["endDate"] = dates[1].strftime("%m/%d/%Y")
-        self._download()
+        await self._download()
         logger.info(
             "Backscraping for range %s %s\n%s cases found",
             *dates,

@@ -51,12 +51,12 @@ class Site(OpinionSiteLinear):
         }
         self.make_backscrape_iterable(kwargs)
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         """Process the html and extract out the opinions
 
         :return: None
         """
-        self.html = self._download({"params": self.params})
+        self.html = await self._download({"params": self.params})
 
         # This warning is useful for backscraping
         results_number = self.html.xpath(

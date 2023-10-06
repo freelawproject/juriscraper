@@ -24,6 +24,8 @@ class Site(OpinionSiteLinear):
     days_interval = (datetime.today() - first_opinion_date).days + 2
 
     def __init__(self, *args, **kwargs):
+        cipher = "AES128-SHA"
+        kwargs.setdefault("verify", self.set_custom_adapter(cipher))
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         page_size = 50
@@ -37,8 +39,7 @@ class Site(OpinionSiteLinear):
         # (Unpublished cases have "Not Designated For Publication" on
         # the cover page.)
         self.status = "Unknown"
-        self.cipher = "AES128-SHA"
-        self.set_custom_adapter(self.cipher)
+        self.cipher = cipher
 
     def _process_html(self):
         for row in self.html.cssselect("#opinion_contentTable tbody tr"):

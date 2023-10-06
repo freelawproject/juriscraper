@@ -74,14 +74,14 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    async def _download_backwards(self, dates: Tuple[date]) -> None:
         """Make custom date range request
         :param dates: (start_date, end_date) tuple
         :return None
         """
         logger.info("Backscraping for range %s %s", *dates)
         self.set_url(*dates)
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def set_url(
