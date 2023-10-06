@@ -100,7 +100,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _download_backwards(self, target_date: date) -> None:
+    async def _download_backwards(self, target_date: date) -> None:
         """Method used by backscraper to download historical records
 
         :param target_date: an element of self.back_scrape_iterable

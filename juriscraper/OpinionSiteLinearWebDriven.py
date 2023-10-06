@@ -7,6 +7,8 @@ class OpinionSiteLinearWebDriven(OpinionSiteLinear, WebDriven):
         super().__init__(*args, **kwargs)
         WebDriven.__init__(self, args, kwargs)
 
+    async def __aexit__(self):
+        await self.close_session()
+
     def __del__(self):
-        self.close_session()
         self.close_webdriver_session()

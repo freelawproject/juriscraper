@@ -67,8 +67,8 @@ class Site(OpinionSiteLinear):
         else:
             self.back_scrape_iterable = list(range(int(start), int(end)))
 
-    def _download_backwards(self, d: int):
+    async def _download_backwards(self, d: int):
         logger.info("Backscraping for year %s", d)
         self.url = self.url_template.format(d, self.crt_level, self.pub_status)
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
