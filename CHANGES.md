@@ -16,6 +16,19 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.54 - 2023-10-06**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Add missing ca prefix mappings
+- Handle cadc/cavc docid prefix collision
+
+## Past
+
 **2.5.53 - 2023-09-23**
 
 Features:
@@ -26,8 +39,6 @@ Changes:
 
 - Fix attachment page numbers for old district court attachments
 - Add missing prefix maps for special courts
-
-## Past
 
 **2.5.52 - 2023-07-06**
 
