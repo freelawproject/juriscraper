@@ -40,7 +40,7 @@ class Site(OpinionSiteLinear):
         self.url = f"{self.base_url}{urlencode(self.params)}"
         self.make_backscrape_iterable(kwargs)
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         """Parses data into case dictionaries
 
         Note that pages returned have no pagination
@@ -88,8 +88,8 @@ class Site(OpinionSiteLinear):
             logger.info("Paginating to page %s", next_page)
             self.params["pageNumber"] = next_page
             self.url = f"{self.base_url}{urlencode(self.params)}"
-            self.html = self._download()
-            self._process_html()
+            self.html = await self._download()
+            await self._process_html()
 
     def parse_case_title(self, title: str) -> tuple[str, str]:
         """Separates case_name and docket_number from case string
@@ -161,7 +161,7 @@ class Site(OpinionSiteLinear):
 
         return result
 
-    def _download_backwards(self, dates: tuple[date]) -> None:
+    async def _download_backwards(self, dates: tuple[date]) -> None:
         """Modify GET querystring for desired date range
 
         :param dates: (start_date, end_date) tuple
@@ -172,5 +172,5 @@ class Site(OpinionSiteLinear):
         self.params["endDate"] = end.strftime(self.api_dt_format)
         self.url = f"{self.base_url}{urlencode(self.params)}"
         logger.info("Backscraping for range %s %s", *dates)
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()

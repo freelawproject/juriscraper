@@ -18,7 +18,8 @@ Features:
 -
 
 Changes:
--
+- Migrate from requests to httpx AsyncClient client. #739
+- Migrate sync calls to async. #739
 
 Fixes:
 - fix `alaska` scraper to skip header rows and prevent IndexError in table parsing #1674
