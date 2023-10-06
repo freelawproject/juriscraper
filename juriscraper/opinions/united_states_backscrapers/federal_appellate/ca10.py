@@ -58,12 +58,12 @@ class Site(OpinionSite):
     def _get_lower_courts(self):
         return list(self.html.xpath(f"{self.base}/td[@class='origin']/text()"))
 
-    def _download_backwards(self, d):
+    async def _download_backwards(self, d):
         self.url = "http://www.ca10.uscourts.gov/opinion/search/results?query=%20date%3A{}".format(
             d.strftime("%m/%d/%Y")
         )
 
-        self.html = self._download()
+        self.html = await self._download()
         if self.html is not None:
             # Setting status is important because it prevents the download
             # function from being run a second time by the parse method.
