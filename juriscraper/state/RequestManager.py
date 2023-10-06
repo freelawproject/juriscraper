@@ -3,7 +3,14 @@
 import asyncio
 import time
 from abc import ABC, abstractmethod
-from collections.abc import AsyncIterable, Iterable, Mapping, Sequence
+from collections.abc import (
+    AsyncIterable,
+    Awaitable,
+    Iterable,
+    Mapping,
+    Sequence,
+)
+from contextvars import ContextVar
 from dataclasses import dataclass, field
 from http.cookiejar import CookieJar
 from types import TracebackType
@@ -34,6 +41,40 @@ USER_AGENT: str = "Juriscraper (Free Law Project)"
 PrimitiveData = str | int | float | bool | None
 CookieType = Cookies | CookieJar | dict[str, str] | list[tuple[str, str]]
 RequestContentType = str | bytes | Iterable[bytes] | AsyncIterable[bytes]
+
+
+async def _wait_for_cleanup(future: asyncio.Future[Any]) -> None:
+    """Finish cleanup before propagating cancellation, including repeated cancels."""
+    cancelled = None
+    while not future.done():
+        try:
+            await asyncio.shield(future)
+        except asyncio.CancelledError as exc:
+            cancelled = exc
+    future.result()
+    if cancelled is not None:
+        raise cancelled
+
+
+async def _cancel_and_wait(futures: Iterable[asyncio.Future[Any]]) -> None:
+    futures = tuple(futures)
+    for future in futures:
+        if not future.done():
+            future.cancel()
+    await _wait_for_cleanup(asyncio.gather(*futures, return_exceptions=True))
+
+
+async def _run_tasks(*awaitables: Awaitable[Any]) -> None:
+    futures = [asyncio.ensure_future(awaitable) for awaitable in awaitables]
+    group = asyncio.gather(*futures)
+    try:
+        # Cancel children once, in cleanup, rather than through both gathers.
+        await asyncio.shield(group)
+    finally:
+        try:
+            await _cancel_and_wait(futures)
+        finally:
+            group.exception()
 
 
 class ScheduledRequest(Request):
@@ -96,7 +137,10 @@ class ScheduledRequest(Request):
 
 
 class RequestHandler:
-    """Base class for request handlers."""
+    """Base class for request handlers.
+
+    Handlers must not close their manager; its caller owns shutdown.
+    """
 
     async def before_send(
         self, manager: "RequestManager", request: ScheduledRequest
@@ -126,7 +170,7 @@ class RetryHandler(ABC):
         self, request: ScheduledRequest, exc: Exception
     ) -> bool:
         """Whether or not a request should be retried based on the exception it raised. Once `True` is
-        returned, the request will be immediately re-queued so handlers wishing to implement backoff
+        returned, the request will be scheduled again so handlers wishing to implement backoff
         logic should call `asyncio.sleep`.
 
         Args:
@@ -245,6 +289,7 @@ class RequestManager(AsyncClient):
             headers=headers,
             cookies=cookies,
             timeout=timeout,
+            http2=True,
             follow_redirects=follow_redirects,
             base_url=base_url,
             default_encoding=default_encoding,
@@ -252,68 +297,79 @@ class RequestManager(AsyncClient):
         if handlers is None:
             handlers = []
         self._retry_handler: RetryHandler = retry
-        self._queue: asyncio.Queue[ScheduledRequest] = asyncio.Queue[
-            ScheduledRequest
-        ]()
         self.handlers: list[RequestHandler] = list(handlers)
-        self._loop_task: asyncio.Task[None] | None = None
+        self._send_lock = asyncio.Lock()
+        self._requests: dict[ScheduledRequest, asyncio.Task[Response]] = {}
+        self._close_task: asyncio.Task[None] | None = None
+        self._in_request: ContextVar[bool] = ContextVar(
+            "request_manager_in_request", default=False
+        )
 
-    async def _loop(self, queue: asyncio.Queue[ScheduledRequest]) -> None:
-        """Pull requests from the queue and handles them.
+    async def _send_request(self, request: ScheduledRequest) -> None:
+        try:
+            while not request.response.done():
+                async with self._send_lock:
+                    self._check_open()
+                    if request.response.done():
+                        break
+                    await _run_tasks(
+                        *(h.before_send(self, request) for h in self.handlers)
+                    )
+                    await self.send(request)
+        except Exception as exc:
+            if not request.response.done():
+                request.response.set_exception(exc)
+            raise
 
-        Args:
-            queue: The queue to pull requests from. Should be `self._queue`"""
-        while True:
-            logger.debug("Waiting for request.")
-            request = await queue.get()
-            logger.debug(
-                "Got request: %s. Waiting for before_send to complete.",
-                request.url,
+    def _check_open(self) -> None:
+        if self._close_task is not None or self.is_closed:
+            raise RuntimeError(
+                "Cannot send a request, as the client is closed."
             )
-            _ = await asyncio.gather(
-                *[
-                    handler.before_send(self, request)
-                    for handler in self.handlers
-                ]
-            )
-            logger.debug(
-                "Handlers finished. Sending request: %s",
-                request.url,
-            )
-            _ = await self.send(request)
-            logger.debug(
-                "Request sent: %s. Marking task as done.",
-                request.url,
-            )
-            queue.task_done()
+
+    async def _close(self) -> None:
+        try:
+            await _cancel_and_wait(self._requests.values())
+        finally:
+            await super().aclose()
 
     @override
     async def aclose(self) -> None:
         """Close the request manager and its underlying client."""
-        if self._loop_task:
-            _ = self._loop_task.cancel()
-        await super().aclose()
+        if self._in_request.get():
+            raise RuntimeError("Request handlers cannot close their manager.")
+        if self._close_task is None:
+            self._close_task = asyncio.create_task(self._close())
+        await _wait_for_cleanup(self._close_task)
 
-    async def _ensure_loop(self) -> None:
-        """Start the request loop if it's not already running."""
-        if not self._loop_task or self._loop_task.done():
-            logger.debug("Request loop not running. Starting.")
-            self._loop_task = asyncio.create_task(self._loop(self._queue))
+    def _schedule_request(
+        self, request: ScheduledRequest, *, listen: bool = False
+    ) -> asyncio.Task[Response]:
+        self._check_open()
+        request.attempt += 1
+        if request not in self._requests:
+            task = asyncio.create_task(self._request(request, listen=listen))
+            self._requests[request] = task
+
+            def finished(task: asyncio.Task[Response]) -> None:
+                self._requests.pop(request, None)
+                request.response.cancel()
+                if not request.response.cancelled():
+                    request.response.exception()
+                if not task.cancelled():
+                    task.exception()
+
+            task.add_done_callback(finished)
+        return self._requests[request]
 
     async def enqueue_request(self, request: ScheduledRequest) -> None:
-        """Push a request onto the queue to be processed.
+        """Schedule a request without waiting for its response.
 
-        Increments the request's attempt count and adds it to the queue.
+        Increments the attempt count. An active request retries in its own task.
 
         Args:
             request: The request to schedule."""
-        await self._ensure_loop()
-        request.attempt += 1
-        logger.debug(
-            "Queueing request: %s",
-            request.url,
-        )
-        await self._queue.put(request)
+        self._schedule_request(request)
 
     @override
     async def request(
@@ -336,7 +392,7 @@ class RequestManager(AsyncClient):
 
         Parameters are passed directly to `httpx.AsyncClient.send`.
 
-        Requests will not be sent until the `before_queue` method has exited on
+        Requests will not be sent until the `before_send` method has exited on
         all handlers, and Responses will not be returned until the `listen`
         method has exited on all handlers.
 
@@ -355,6 +411,7 @@ class RequestManager(AsyncClient):
 
         Return:
             The response to the dispatched request after handler interference."""
+        self._check_open()
         logger.debug("Requesting %s %s", method, url)
         request = self.build_request(
             method,
@@ -369,22 +426,33 @@ class RequestManager(AsyncClient):
             timeout=timeout,
         )
 
-        tasks = {
-            asyncio.create_task(h.listen(self, request)) for h in self.handlers
-        }
-        logger.debug("Handlers listening: %s", request.url)
-        _ = await self.enqueue_request(request)
+        task = self._schedule_request(request, listen=True)
+        try:
+            return await asyncio.shield(task)
+        finally:
+            await _cancel_and_wait((task,))
 
-        logger.debug(
-            "Request %s queued. Waiting for listen handlers to finish.",
-            request.url,
-        )
-        _ = await asyncio.gather(*tasks)
-        logger.debug(
-            "Request queued and handlers finished. Waiting for response: %s",
-            request.url,
-        )
-        return await request.response
+    async def _request(
+        self, request: ScheduledRequest, *, listen: bool
+    ) -> Response:
+        async def wait_for_response() -> None:
+            try:
+                await request.response
+            except Exception:
+                # Raise request errors below, after listeners finish handling them.
+                pass
+
+        token = self._in_request.set(True)
+        try:
+            await _run_tasks(
+                wait_for_response(),
+                *(h.listen(self, request) for h in self.handlers if listen),
+                self._send_request(request),
+            )
+            return request.response.result()
+        finally:
+            request.response.cancel()
+            self._in_request.reset(token)
 
     @override
     async def send(
@@ -409,6 +477,7 @@ class RequestManager(AsyncClient):
             if exc:
                 return None
             return request.response.result()
+        self._check_open()
         response = None
         logger.debug("Sending request: %s", request.url)
         try:
@@ -418,14 +487,19 @@ class RequestManager(AsyncClient):
             )
             _ = response.raise_for_status()
         except Exception as e:
+            if request.response.done():
+                return response
             if await self._retry_handler.should_retry(request, e):
-                await self.enqueue_request(request)
+                if not request.response.done():
+                    await self.enqueue_request(request)
                 return None
             logger.warning("Request failed: %s (%s)", request.url, repr(e))
-            request.response.set_exception(e)
+            if not request.response.done():
+                request.response.set_exception(e)
         else:
             logger.debug("Request succeeded: %s", request.url)
-            request.response.set_result(response)
+            if not request.response.done():
+                request.response.set_result(response)
 
         return response
 
@@ -445,8 +519,8 @@ class RequestManager(AsyncClient):
     @override
     async def __aenter__(self) -> "RequestManager":
         """Allows the client to be used as an async context manager."""
+        self._check_open()
         _ = await super().__aenter__()
-        await self._ensure_loop()
         return self
 
     @override
@@ -456,9 +530,7 @@ class RequestManager(AsyncClient):
         exc_value: BaseException | None = None,
         traceback: TracebackType | None = None,
     ) -> None:
-        if self._loop_task:
-            _ = self._loop_task.cancel()
-        await super().__aexit__()
+        await self.aclose()
 
 
 class RateLimit(RequestHandler):
