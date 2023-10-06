@@ -4,9 +4,9 @@ import sys
 from collections import OrderedDict
 from typing import Any, Optional
 
+from httpx import Response
 from lxml import html
 from lxml.etree import _ElementUnicodeResult
-from requests import Response
 
 from juriscraper.lib.judge_parsers import normalize_judge_string
 from juriscraper.lib.log_tools import make_default_logger
@@ -88,7 +88,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 "n/beam/servlet/TransportRoom" % self.court_id
             )
 
-    def query(
+    async def query(
         self,
         docket_number,
         show_docket_entries=False,
@@ -249,7 +249,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             docket_number,
             query_params,
         )
-        self.response = self.session.get(self.url, params=query_params)
+        self.response = await self.session.get(self.url, params=query_params)
         self.parse()
 
     def parse(self):
@@ -261,7 +261,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         self._clear_caches()
         super().parse()
 
-    def download_pdf(
+    async def download_pdf(
         self, pacer_doc_id, pacer_case_id=None
     ) -> tuple[Optional[Response], str]:
         """Download a PDF from an appellate court.
@@ -327,7 +327,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         logger.info(
             "GETting PDF at URL: %s with params: %s", self.url, query_params
         )
-        r = self.session.get(self.url, params=query_params)
+        r = await self.session.get(self.url, params=query_params)
         r.raise_for_status()
 
         if b"Documents are attached to this filing" in r.content:
