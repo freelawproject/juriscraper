@@ -92,7 +92,7 @@ class Site(OpinionSiteLinear):
             )
         ]
 
-    def _download_backwards(self, d: date) -> None:
+    async def _download_backwards(self, d: date) -> None:
         """
         If an updated backscraper is needed in the future, this court
         updates the HTML with new values with a 4/5 months lag.
@@ -104,5 +104,5 @@ class Site(OpinionSiteLinear):
             % (d.month, d.year)
         )
         logger.info("Backscraping %s-%s", d.year, d.month)
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
