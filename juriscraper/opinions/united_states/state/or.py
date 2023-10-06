@@ -27,7 +27,7 @@ class Site(OpinionSiteLinear):
         self.url = self.format_url(today - timedelta(15), today)
         self.make_backscrape_iterable(kwargs)
 
-    def _process_html(self):
+    async def _process_html(self):
         for row in self.html["items"]:
             docket, name, citation, date = (
                 x["value"] for x in row["metadataFields"]
@@ -38,9 +38,12 @@ class Site(OpinionSiteLinear):
                 logger.info("Skipping row '%s'", docket)
                 continue
 
-            judge, disposition, status, lower_court_number = self.get_details(
-                row
-            )
+            (
+                judge,
+                disposition,
+                status,
+                lower_court_number,
+            ) = await self.get_details(row)
             per_curiam = False
             if judge and judge == "PC" or "per curiam" in judge.lower():
                 per_curiam = True
@@ -61,7 +64,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def get_details(self, row: dict) -> tuple[str, str, str, str]:
+    async def get_details(self, row: dict) -> tuple[str, str, str, str]:
         """Makes a secondary request to get details for a single
         opinion
 
@@ -87,7 +90,7 @@ class Site(OpinionSiteLinear):
             item_id = row["itemId"]
             url = f"https://cdm17027.contentdm.oclc.org/digital/api/collections/{self.court_code}/items/{item_id}/false"
             logger.debug("Getting detail JSON from %s", url)
-            self._request_url_get(url)
+            await self._request_url_get(url)
             json = self.request["response"].json()
 
         if len(json["fields"]) == 1:
@@ -120,11 +123,13 @@ class Site(OpinionSiteLinear):
 
         return judge, disposition, status, lower_court_number
 
-    def _download_backwards(self, dates: tuple[datetime, datetime]) -> None:
+    async def _download_backwards(
+        self, dates: tuple[datetime, datetime]
+    ) -> None:
         logger.info("Backscraping for range %s %s", *dates)
         self.url = self.format_url(*dates)
-        self.html = self._download()
-        self._process_html()
+        self.html = await self._download()
+        await self._process_html()
 
     def format_url(self, start_date: datetime, end_date: datetime) -> str:
         """
