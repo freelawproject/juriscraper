@@ -360,7 +360,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             history_rows.append(row)
         return history_rows
 
-    def query(
+    async def query(
         self, pacer_case_id, docket_number, date_start=None, date_end=None
     ):
         """Query the claims register and return the results.
@@ -408,5 +408,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             self.court_id,
             params,
         )
-        self.response = self.session.post(f"{self.url}?1-L_1_0-1", data=params)
+        self.response = await self.session.post(
+            f"{self.url}?1-L_1_0-1", data=params
+        )
         self.parse()

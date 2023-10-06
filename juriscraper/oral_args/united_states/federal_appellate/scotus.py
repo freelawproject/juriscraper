@@ -46,8 +46,8 @@ class Site(OralArgumentSite):
         path = "id('list')//tr//a/text()"
         return list(self.html.xpath(path))
 
-    def _download_backwards(self, year):
+    async def _download_backwards(self, year):
         self.url = (
             f"http://www.supremecourt.gov/oral_arguments/argument_audio/{year}"
         )
-        self.html = self._download()
+        self.html = await self._download()
